@@ -186,8 +186,25 @@ function updateBookNames() {
     });
 }
 
+// Show/hide loader
+function showLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.add('active');
+    }
+}
+
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.classList.remove('active');
+    }
+}
+
 // Load a book
 async function loadBook(bookIndex, chapter) {
+    showLoader();
+    
     currentBook = bookIndex;
     currentChapter = chapter;
     
@@ -225,11 +242,13 @@ async function loadBook(bookIndex, chapter) {
                 currentData = window[dataVarName];
                 if (currentData && currentTamilData) {
                     updateUI();
+                    hideLoader();
                 }
             };
             
             englishScript.onerror = () => {
                 console.error(`Failed to load ${englishScriptPath}`);
+                hideLoader();
             };
             
             document.body.appendChild(englishScript);
@@ -237,6 +256,7 @@ async function loadBook(bookIndex, chapter) {
         
         tamilScript.onerror = () => {
             console.error(`Failed to load ${tamilScriptPath}`);
+            hideLoader();
         };
         
         document.body.appendChild(tamilScript);
@@ -263,12 +283,15 @@ async function loadBook(bookIndex, chapter) {
             
             if (currentData) {
                 updateUI();
+                hideLoader();
             } else {
                 console.error('Failed to load Bible data');
+                hideLoader();
             }
         };
         script.onerror = () => {
             console.error(`Failed to load ${scriptPath}`);
+            hideLoader();
         };
         
         document.body.appendChild(script);
