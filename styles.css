@@ -424,6 +424,9 @@ body:not(.dark-theme) .moon-icon {
     margin-right: -0.5rem;
     border-radius: 4px;
     cursor: pointer;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .verse-line:hover {
@@ -454,13 +457,23 @@ body:not(.dark-theme) .moon-icon {
     margin-top: 0.5rem;
 }
 
+/* Special text highlighting */
+.jesus-name {
+    color: #c94e4e;
+    font-weight: 500;
+}
+
+body.dark-theme .jesus-name {
+    color: #e88888;
+}
+
 /* Bottom Navigation */
 .bottom-nav {
     position: fixed;
     bottom: 0;
     left: 300px;
     right: 0;
-    height: 50px;
+    height: 3.75rem;
     background-color: #ffffff;
     border-top: 1px solid #e0e0e0;
     display: flex;
@@ -685,6 +698,15 @@ body:not(.dark-theme) .moon-icon {
         overflow: auto;
     }
     
+    /* Fix top bar position on mobile */
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+    }
+    
     /* Show mobile menu button and drawer header */
     .mobile-only {
         display: flex !important;
@@ -734,6 +756,7 @@ body:not(.dark-theme) .moon-icon {
         height: auto;
         min-height: calc(100vh - 60px);
         overflow: visible;
+        margin-top: 60px;
     }
     
     /* Hide sidebars by default on mobile */
@@ -750,7 +773,7 @@ body:not(.dark-theme) .moon-icon {
     }
     
     .books-sidebar {
-        width: 40%;
+        width: 50%;
         max-height: none;
         height: calc(100vh - 60px);
         border-right: 1px solid #e0e0e0;
@@ -760,14 +783,14 @@ body:not(.dark-theme) .moon-icon {
     
     .chapters-column {
         display: block;
-        width: 30%;
+        width: 25%;
         background-color: #ffffff;
         border-right: 1px solid #e0e0e0;
     }
     
     .verses-column {
         display: block;
-        width: 30%;
+        width: 25%;
         background-color: #ffffff;
     }
     
@@ -777,11 +800,11 @@ body:not(.dark-theme) .moon-icon {
     }
     
     .chapters-column.drawer-open {
-        left: 40%;
+        left: 50%;
     }
     
     .verses-column.drawer-open {
-        left: 70%;
+        left: 75%;
     }
     
     /* Mobile drawer scrollbars - always visible */
@@ -837,9 +860,21 @@ body:not(.dark-theme) .moon-icon {
     /* Bottom nav adjustments for mobile */
     .bottom-nav {
         position: fixed;
+        bottom: 0;
         left: 0;
         right: 0;
         padding: 0 1rem;
+        z-index: 1000;
+    }
+    
+    .current-chapter {
+        cursor: pointer;
+        user-select: none;
+        transition: opacity 0.2s ease;
+    }
+    
+    .current-chapter:active {
+        opacity: 0.7;
     }
 }
 
@@ -857,7 +892,7 @@ body:not(.dark-theme) .moon-icon {
     }
     
     .current-chapter {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -998,7 +1033,7 @@ body.dark-theme .english-text {
 }
 
 body.dark-theme .bottom-nav {
-    background-color: #292a2d;
+    background-color: #202124;
     border-top: 1px solid #3c4043;
 }
 

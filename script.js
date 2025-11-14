@@ -191,6 +191,9 @@ function updateBookNames() {
             }
         }
     });
+    
+    // Ensure correct book selection is maintained
+    updateBookSelection();
 }
 
 // Show/hide loader
@@ -430,6 +433,15 @@ function updateVerses() {
     });
 }
 
+// Highlight special text
+function highlightSpecialText(text, language) {
+    if (language === 'english' || language === 'both-english') {
+        // Highlight "Jesus" in soft red
+        text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
+    }
+    return text;
+}
+
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
@@ -454,8 +466,12 @@ function displayChapter() {
         
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
-            const tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
-            const englishText = chapterData[verseKey];
+            let tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
+            let englishText = chapterData[verseKey];
+            
+            // Apply highlighting
+            tamilText = highlightSpecialText(tamilText, 'both-tamil');
+            englishText = highlightSpecialText(englishText, 'both-english');
             
             html += `<p class="verse-line" data-verse="${verseNum}">
                 <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
@@ -466,7 +482,11 @@ function displayChapter() {
         // Display single language
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
-            const verseText = chapterData[verseKey];
+            let verseText = chapterData[verseKey];
+            
+            // Apply highlighting based on current language
+            verseText = highlightSpecialText(verseText, currentLanguage);
+            
             html += `<p class="verse-line" data-verse="${verseNum}"><sup class="v-num">${verseNum}</sup>${verseText}</p>`;
         });
     }
@@ -497,7 +517,23 @@ function displayChapter() {
     // Update navigation text
     const currentChapterText = document.querySelector('.current-chapter');
     if (currentChapterText) {
-        currentChapterText.textContent = `${bibleBooks[currentBook].name} ${currentChapter}`;
+        const book = bibleBooks[currentBook];
+        let bookName;
+        
+        if (currentLanguage === 'tamil') {
+            bookName = book.tamilName;
+        } else if (currentLanguage === 'both') {
+            // On mobile, show only English name for space
+            if (window.innerWidth <= 768) {
+                bookName = book.name;
+            } else {
+                bookName = `${book.name} / ${book.tamilName}`;
+            }
+        } else {
+            bookName = book.name;
+        }
+        
+        currentChapterText.textContent = `${bookName} ${currentChapter}`;
     }
     
     // Scroll to top
@@ -533,6 +569,24 @@ function scrollToVerse(verseNum) {
 
 // Navigation buttons
 document.addEventListener('click', (e) => {
+    // Current chapter text - open drawer on mobile
+    if (e.target.closest('.current-chapter')) {
+        if (window.innerWidth <= 768) {
+            const drawerOverlay = document.querySelector('.drawer-overlay');
+            const drawerHeader = document.querySelector('.drawer-header');
+            const booksSidebar = document.querySelector('.books-sidebar');
+            const chaptersColumn = document.querySelector('.chapters-column');
+            const versesColumn = document.querySelector('.verses-column');
+            
+            drawerOverlay.classList.add('active');
+            drawerHeader.classList.add('drawer-open');
+            booksSidebar.classList.add('drawer-open');
+            chaptersColumn.classList.add('drawer-open');
+            versesColumn.classList.add('drawer-open');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
     // Previous chapter
     if (e.target.closest('.nav-btn[aria-label="Previous"]')) {
         if (currentChapter > 1) {
