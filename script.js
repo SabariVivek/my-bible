@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeBookList();
     initializeMobileDrawer();
     initializeLanguageSelector();
+    initializeSiteTitle();
     loadBook(currentBook, currentChapter);
 });
 
@@ -177,27 +178,45 @@ function updateBookNames() {
         const bookNameSpan = item.querySelector('.book-name');
         if (bookNameSpan && book) {
             if (currentLanguage === 'tamil') {
-                bookNameSpan.textContent = book.tamilName;
+                bookNameSpan.innerHTML = `${book.tamilName}`;
+                bookNameSpan.classList.add('tamil-only');
+            } else if (currentLanguage === 'english') {
+                // Show only English name
+                bookNameSpan.innerHTML = `${book.name}`;
+                bookNameSpan.classList.remove('tamil-only');
             } else {
-                // For 'english' and 'both', show English names
-                bookNameSpan.textContent = book.name;
+                // 'both' mode - Show English name with Tamil name in smaller text below
+                bookNameSpan.innerHTML = `${book.name}<span class="tamil-name">${book.tamilName}</span>`;
+                bookNameSpan.classList.remove('tamil-only');
             }
         }
     });
 }
 
 // Show/hide loader
+let loaderStartTime = 0;
+
 function showLoader() {
     const loader = document.getElementById('loader');
     if (loader) {
         loader.classList.add('active');
+        loaderStartTime = Date.now();
     }
 }
 
 function hideLoader() {
     const loader = document.getElementById('loader');
     if (loader) {
-        loader.classList.remove('active');
+        const elapsedTime = Date.now() - loaderStartTime;
+        const minDisplayTime = 500; // minimum 500ms display
+        
+        if (elapsedTime < minDisplayTime) {
+            setTimeout(() => {
+                loader.classList.remove('active');
+            }, minDisplayTime - elapsedTime);
+        } else {
+            loader.classList.remove('active');
+        }
     }
 }
 
@@ -654,4 +673,18 @@ function initializeLanguageSelector() {
     }
     updateVisibleOptions();
     updateBookNames(); // Initialize book names based on default language
+}
+
+// Site title click to navigate to John 1:1
+function initializeSiteTitle() {
+    const siteTitle = document.querySelector('.site-title');
+    if (siteTitle) {
+        siteTitle.addEventListener('click', () => {
+            // Find John's index in bibleBooks array
+            const johnIndex = bibleBooks.findIndex(book => book.name === 'John');
+            if (johnIndex !== -1) {
+                loadBook(johnIndex, 1);
+            }
+        });
+    }
 }
