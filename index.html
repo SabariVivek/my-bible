@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bible</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo-container">
+            <button class="icon-btn menu-btn mobile-only" aria-label="Menu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 class="site-title">My Bible</h1>
+        </div>
+        <div class="header-controls">
+            <div class="language-selector">
+                <span class="lang-label">Tamil</span>
+                <svg class="lang-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+                <div class="language-dropdown">
+                    <div class="lang-option" data-lang="english">English</div>
+                    <div class="lang-option" data-lang="tamil">Tamil</div>
+                    <div class="lang-option" data-lang="both">Both</div>
+                </div>
+            </div>
+            <button class="icon-btn theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+
+    <div class="main-layout">
+        <!-- Mobile Drawer Overlay -->
+        <div class="drawer-overlay"></div>
+        
+        <!-- Mobile Drawer Header -->
+        <div class="drawer-header">
+            <button class="drawer-close-btn" aria-label="Close">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <span class="drawer-title">My Bible</span>
+            <div class="drawer-header-controls">
+                <button class="icon-btn drawer-search-btn" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="icon-btn drawer-theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Left Sidebar - Books -->
+        <aside class="books-sidebar">
+            <div class="book-item active">
+                <span class="book-name">Genesis</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Exodus</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Leviticus</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Numbers</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Deuteronomy</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Joshua</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Judges</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ruth</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Samuel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Samuel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Kings</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Kings</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Chronicles</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Chronicles</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ezra</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Nehemiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Esther</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Job</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Psalms</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Proverbs</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ecclesiastes</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Song of Solomon</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Isaiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Jeremiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Lamentations</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ezekiel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Daniel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Hosea</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Joel</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Amos</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Obadiah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Jonah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Micah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Nahum</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Habakkuk</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Zephaniah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Haggai</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Zechariah</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Malachi</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Matthew</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Mark</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Luke</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Acts</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Romans</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Corinthians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Corinthians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Galatians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Ephesians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Philippians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Colossians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Thessalonians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Thessalonians</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Timothy</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Timothy</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Titus</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Philemon</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Hebrews</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">James</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I Peter</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II Peter</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">I John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">II John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">III John</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Jude</span>
+            </div>
+            <div class="book-item">
+                <span class="book-name">Revelation</span>
+            </div>
+        </aside>
+
+        <!-- Middle Column - Chapters -->
+        <aside class="chapters-column">
+            <div class="number-item active">1</div>
+            <div class="number-item">2</div>
+            <div class="number-item">3</div>
+            <div class="number-item">4</div>
+            <div class="number-item">5</div>
+            <div class="number-item">6</div>
+            <div class="number-item">7</div>
+            <div class="number-item">8</div>
+            <div class="number-item">9</div>
+            <div class="number-item">10</div>
+            <div class="number-item">11</div>
+            <div class="number-item">12</div>
+            <div class="number-item">13</div>
+            <div class="number-item">14</div>
+            <div class="number-item">15</div>
+            <div class="number-item">16</div>
+            <div class="number-item">17</div>
+            <div class="number-item">18</div>
+            <div class="number-item">19</div>
+            <div class="number-item">20</div>
+            <div class="number-item">21</div>
+            <div class="number-item">22</div>
+        </aside>
+
+        <!-- Verses Column -->
+        <aside class="verses-column">
+            <div class="number-item active">1</div>
+            <div class="number-item">2</div>
+            <div class="number-item">3</div>
+            <div class="number-item">4</div>
+            <div class="number-item">5</div>
+            <div class="number-item">6</div>
+            <div class="number-item">7</div>
+            <div class="number-item">8</div>
+            <div class="number-item">9</div>
+            <div class="number-item">10</div>
+            <div class="number-item">11</div>
+            <div class="number-item">12</div>
+            <div class="number-item">13</div>
+            <div class="number-item">14</div>
+            <div class="number-item">15</div>
+            <div class="number-item">16</div>
+            <div class="number-item">17</div>
+            <div class="number-item">18</div>
+            <div class="number-item">19</div>
+            <div class="number-item">20</div>
+            <div class="number-item">21</div>
+            <div class="number-item">22</div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div class="scripture-text">
+                <p class="verse-line">
+                    <sup class="v-num">1</sup>In the beginning Elohim created the heaven and the earth.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">2</sup>And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of Elohim moved upon the face of the waters.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">3</sup>And Elohim said, Let there be light: and there was light.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">4</sup>And Elohim saw the light, that it was good: and Elohim divided the light from the darkness.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">5</sup>And Elohim called the light Day, and the darkness he called Night. And the evening and the morning were the first day.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">6</sup>And Elohim said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">7</sup>And Elohim made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.
+                </p>
+                
+                <p class="verse-line">
+                    <sup class="v-num">8</sup>And Elohim called the firmament Heaven. And the evening and the morning were the second day.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">9</sup>And Elohim said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">10</sup>And Elohim called the dry land Earth; and the gathering together of the waters called he Seas: and Elohim saw that it was good.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">11</sup>And Elohim said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">12</sup>And Elohim brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and Elohim saw that it was good.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">13</sup>And the evening and the morning were the third day.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">14</sup>And Elohim said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">15</sup>And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">16</sup>And Elohim made two great lights; the greater light to rule the day, and the lesser light to rule the night: he made the stars also.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">17</sup>And Elohim set them in the firmament of the heaven to give light upon the earth,
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">18</sup>And to rule over the day and over the night, and to divide the light from the darkness: and Elohim saw that it was good.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">19</sup>And the evening and the morning were the fourth day.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">20</sup>And Elohim said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">21</sup>And Elohim created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and Elohim saw that it was good.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">22</sup>And Elohim blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">23</sup>And the evening and the morning were the fifth day.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">24</sup>And Elohim said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">25</sup>And Elohim made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and Elohim saw that it was good.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">26</sup>And Elohim said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">27</sup>So Elohim created man in his own image, in the image of Elohim created he him; male and female created he them.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">28</sup>And Elohim blessed them, and Elohim said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">29</sup>And Elohim said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, which is the fruit of a tree yielding seed; to you it shall be for meat.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">30</sup>And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so.
+                </p>
+
+                <p class="verse-line">
+                    <sup class="v-num">31</sup>And Elohim saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <button class="nav-btn" aria-label="Previous">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        
+        <div class="current-chapter">Genesis 1</div>
+        
+        <button class="nav-btn" aria-label="Next">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
