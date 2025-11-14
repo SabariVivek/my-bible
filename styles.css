@@ -681,6 +681,10 @@ body:not(.dark-theme) .moon-icon {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    
     /* Show mobile menu button and drawer header */
     .mobile-only {
         display: flex !important;
@@ -727,6 +731,9 @@ body:not(.dark-theme) .moon-icon {
         position: relative;
         display: flex;
         flex-direction: row;
+        height: auto;
+        min-height: calc(100vh - 60px);
+        overflow: visible;
     }
     
     /* Hide sidebars by default on mobile */
@@ -807,7 +814,10 @@ body:not(.dark-theme) .moon-icon {
     .content-area {
         width: 100%;
         padding: 1.5rem;
-        padding-bottom: 70px;
+        padding-bottom: 100px;
+        overflow: visible;
+        height: auto;
+        min-height: calc(100vh - 60px);
     }
     
     .scripture-text {
