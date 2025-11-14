@@ -409,6 +409,22 @@ function updateVerses() {
             // Add active class to clicked verse
             item.classList.add('active');
             
+            // Close drawer on mobile after verse selection
+            if (window.innerWidth <= 768) {
+                const drawerOverlay = document.querySelector('.drawer-overlay');
+                const drawerHeader = document.querySelector('.drawer-header');
+                const booksSidebar = document.querySelector('.books-sidebar');
+                const chaptersColumn = document.querySelector('.chapters-column');
+                const versesColumn = document.querySelector('.verses-column');
+                
+                drawerOverlay.classList.remove('active');
+                drawerHeader.classList.remove('drawer-open');
+                booksSidebar.classList.remove('drawer-open');
+                chaptersColumn.classList.remove('drawer-open');
+                versesColumn.classList.remove('drawer-open');
+                document.body.style.overflow = '';
+            }
+            
             scrollToVerse(verse);
         });
     });
