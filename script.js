@@ -497,7 +497,21 @@ function scrollToVerse(verseNum) {
     if (verseLine) {
         // Add highlight to selected verse
         verseLine.classList.add('highlighted');
-        verseLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // On mobile/tablet, scroll with offset to keep top nav visible
+        if (window.innerWidth <= 1024) {
+            const topNavHeight = 60; // height of top bar
+            const versePosition = verseLine.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = versePosition - topNavHeight - 20; // 20px extra padding
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        } else {
+            // Desktop: use scrollIntoView on content-area
+            verseLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
     }
 }
 
