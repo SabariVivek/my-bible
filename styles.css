@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+/* Remove blue focus outline on buttons and clickable elements */
+button:focus,
+button:active,
+.chapter-btn:focus,
+.chapter-btn:active,
+.book-item:focus,
+.book-item:active,
+.verse-line:focus,
+.verse-line:active {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     font-family: Georgia, 'Times New Roman', serif;
     background-color: #ffffff;
