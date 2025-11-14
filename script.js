@@ -71,11 +71,11 @@ const bibleBooks = [
 ];
 
 // Current state
-let currentBook = 0; // Genesis
-let currentChapter = 1;
+let currentBook = parseInt(localStorage.getItem('currentBook')) || 0; // Genesis
+let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
-let currentLanguage = 'tamil'; // 'english' or 'tamil' or 'both'
+let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -230,6 +230,10 @@ async function loadBook(bookIndex, chapter) {
     currentBook = bookIndex;
     currentChapter = chapter;
     
+    // Save to localStorage
+    localStorage.setItem('currentBook', bookIndex);
+    localStorage.setItem('currentChapter', chapter);
+    
     const book = bibleBooks[bookIndex];
     const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
     
@@ -359,6 +363,8 @@ function updateChapters() {
             const chapter = parseInt(item.dataset.chapter);
             if (chapter !== currentChapter) {
                 currentChapter = chapter;
+                localStorage.setItem('currentChapter', chapter);
+                localStorage.setItem('currentChapter', chapter);
                 updateUI();
                 
                 // Close drawer on mobile after selecting chapter
@@ -722,6 +728,7 @@ function initializeLanguageSelector() {
             
             const selectedLang = option.dataset.lang;
             currentLanguage = selectedLang;
+            localStorage.setItem('currentLanguage', selectedLang);
             
             // Update label based on selection
             if (selectedLang === 'english') {
