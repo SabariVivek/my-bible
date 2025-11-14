@@ -442,7 +442,8 @@ function updateVerses() {
 // Highlight special text
 function highlightSpecialText(text, language) {
     if (language === 'english' || language === 'both-english') {
-        // Highlight "Jesus" in soft red
+        // Highlight "Jesus Christ" and "Jesus" in soft red
+        text = text.replace(/\bJesus Christ\b/g, '<span class="jesus-name">Jesus Christ</span>');
         text = text.replace(/\bJesus\b/g, '<span class="jesus-name">Jesus</span>');
     }
     return text;
@@ -597,6 +598,7 @@ document.addEventListener('click', (e) => {
     if (e.target.closest('.nav-btn[aria-label="Previous"]')) {
         if (currentChapter > 1) {
             currentChapter--;
+            localStorage.setItem('currentChapter', currentChapter);
             updateUI();
         } else if (currentBook > 0) {
             currentBook--;
@@ -610,6 +612,7 @@ document.addEventListener('click', (e) => {
         const book = bibleBooks[currentBook];
         if (currentChapter < book.chapters) {
             currentChapter++;
+            localStorage.setItem('currentChapter', currentChapter);
             updateUI();
         } else if (currentBook < bibleBooks.length - 1) {
             currentBook++;

@@ -27,7 +27,7 @@ body {
 
 /* Loader Styles */
 .loader-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,7 +36,7 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
     backdrop-filter: blur(4px);
 }
 
@@ -525,6 +525,13 @@ body.dark-theme .jesus-name {
 
 .nav-btn:active {
     transform: scale(0.98);
+}
+
+/* Mobile tap feedback animation */
+@media (max-width: 768px) {
+    .nav-btn:active {
+        animation: buttonPress 1s ease forwards;
+    }
 }
 
 .current-chapter {
