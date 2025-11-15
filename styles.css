@@ -736,8 +736,29 @@ body.dark-theme .jesus-name {
         display: flex !important;
     }
     
+    /* Transform menu icon to close (X) when drawer is active */
+    .menu-btn svg line {
+        transition: all 0.3s ease;
+    }
+    
+    .menu-btn.drawer-active {
+        z-index: 1003;
+    }
+    
+    .menu-btn.drawer-active svg line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-btn.drawer-active svg line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-btn.drawer-active svg line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
     .drawer-header {
-        display: flex;
+        display: none;
     }
     
     /* Smaller language selector on mobile */
@@ -821,14 +842,35 @@ body.dark-theme .jesus-name {
     /* Show drawer when active */
     .books-sidebar.drawer-open {
         left: 0;
+        top: 0;
+        padding-top: 60px;
+        overflow-y: auto;
+        height: 100vh;
+        padding-bottom: 0;
     }
     
     .chapters-column.drawer-open {
         left: 50%;
+        top: 0;
+        padding-top: 60px;
+        overflow-y: auto;
+        height: 100vh;
+        padding-bottom: 0;
     }
     
     .verses-column.drawer-open {
         left: 75%;
+        top: 0;
+        padding-top: 60px;
+        overflow-y: auto;
+        height: 100vh;
+        padding-bottom: 0;
+    }
+    
+    /* Hide bottom nav when drawer is open */
+    .drawer-overlay.active ~ * ~ .bottom-nav,
+    body:has(.drawer-overlay.active) .bottom-nav {
+        display: none !important;
     }
     
     /* Mobile drawer scrollbars - always visible */

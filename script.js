@@ -131,11 +131,12 @@ function initializeMobileDrawer() {
     
     // Close drawer
     function closeDrawer() {
+        const menuBtn = document.querySelector('.mobile-only');
         drawerOverlay.classList.remove('active');
-        drawerHeader.classList.remove('drawer-open');
         booksSidebar.classList.remove('drawer-open');
         chaptersColumn.classList.remove('drawer-open');
         versesColumn.classList.remove('drawer-open');
+        if (menuBtn) menuBtn.classList.remove('drawer-active');
         document.body.style.overflow = '';
     }
     
@@ -370,16 +371,16 @@ function updateChapters() {
                 // Close drawer on mobile after selecting chapter
                 if (window.innerWidth <= 768) {
                     const drawerOverlay = document.querySelector('.drawer-overlay');
-                    const drawerHeader = document.querySelector('.drawer-header');
                     const booksSidebar = document.querySelector('.books-sidebar');
                     const chaptersCol = document.querySelector('.chapters-column');
                     const versesCol = document.querySelector('.verses-column');
+                    const menuBtn = document.querySelector('.mobile-only');
                     
                     drawerOverlay.classList.remove('active');
-                    drawerHeader.classList.remove('drawer-open');
                     booksSidebar.classList.remove('drawer-open');
                     chaptersCol.classList.remove('drawer-open');
                     versesCol.classList.remove('drawer-open');
+                    menuBtn.classList.remove('drawer-active');
                     document.body.style.overflow = '';
                 }
             }
@@ -418,19 +419,19 @@ function updateVerses() {
             // Add active class to clicked verse
             item.classList.add('active');
             
-            // Close drawer on mobile after verse selection
+            // Close drawer on mobile after selecting verse
             if (window.innerWidth <= 768) {
                 const drawerOverlay = document.querySelector('.drawer-overlay');
-                const drawerHeader = document.querySelector('.drawer-header');
                 const booksSidebar = document.querySelector('.books-sidebar');
                 const chaptersColumn = document.querySelector('.chapters-column');
                 const versesColumn = document.querySelector('.verses-column');
+                const menuBtn = document.querySelector('.mobile-only');
                 
                 drawerOverlay.classList.remove('active');
-                drawerHeader.classList.remove('drawer-open');
                 booksSidebar.classList.remove('drawer-open');
                 chaptersColumn.classList.remove('drawer-open');
                 versesColumn.classList.remove('drawer-open');
+                menuBtn.classList.remove('drawer-active');
                 document.body.style.overflow = '';
             }
             
@@ -580,16 +581,16 @@ document.addEventListener('click', (e) => {
     if (e.target.closest('.current-chapter')) {
         if (window.innerWidth <= 768) {
             const drawerOverlay = document.querySelector('.drawer-overlay');
-            const drawerHeader = document.querySelector('.drawer-header');
             const booksSidebar = document.querySelector('.books-sidebar');
             const chaptersColumn = document.querySelector('.chapters-column');
             const versesColumn = document.querySelector('.verses-column');
+            const menuBtn = document.querySelector('.mobile-only');
             
             drawerOverlay.classList.add('active');
-            drawerHeader.classList.add('drawer-open');
             booksSidebar.classList.add('drawer-open');
             chaptersColumn.classList.add('drawer-open');
             versesColumn.classList.add('drawer-open');
+            menuBtn.classList.add('drawer-active');
             document.body.style.overflow = 'hidden';
         }
     }
@@ -760,11 +761,21 @@ function initializeLanguageSelector() {
         });
     });
     
-    // Set initial active state (Tamil by default)
-    const tamilOption = Array.from(langOptions).find(opt => opt.dataset.lang === 'tamil');
-    if (tamilOption) {
-        tamilOption.classList.add('active');
+    // Set initial active state based on currentLanguage from localStorage
+    const initialOption = Array.from(langOptions).find(opt => opt.dataset.lang === currentLanguage);
+    if (initialOption) {
+        initialOption.classList.add('active');
     }
+    
+    // Update label based on current language
+    if (currentLanguage === 'english') {
+        langLabel.textContent = 'English';
+    } else if (currentLanguage === 'tamil') {
+        langLabel.textContent = 'Tamil';
+    } else if (currentLanguage === 'both') {
+        langLabel.textContent = 'Both';
+    }
+    
     updateVisibleOptions();
     updateBookNames(); // Initialize book names based on default language
 }
