@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize mobile drawer
 function initializeMobileDrawer() {
     const menuBtn = document.querySelector('.mobile-only');
+    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+    const closeIcon = menuBtn.querySelector('.close-icon');
     const drawerOverlay = document.querySelector('.drawer-overlay');
     const booksSidebar = document.querySelector('.books-sidebar');
     const chaptersColumn = document.querySelector('.chapters-column');
@@ -112,7 +114,8 @@ function initializeMobileDrawer() {
                 booksSidebar.classList.remove('drawer-open');
                 chaptersColumn.classList.remove('drawer-open');
                 versesColumn.classList.remove('drawer-open');
-                menuBtn.classList.remove('drawer-active');
+                hamburgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
                 document.body.style.overflow = '';
             } else {
                 // Open drawer
@@ -120,7 +123,8 @@ function initializeMobileDrawer() {
                 booksSidebar.classList.add('drawer-open');
                 chaptersColumn.classList.add('drawer-open');
                 versesColumn.classList.add('drawer-open');
-                menuBtn.classList.add('drawer-active');
+                hamburgerIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
                 document.body.style.overflow = 'hidden';
             }
         } else {
@@ -143,11 +147,14 @@ function initializeMobileDrawer() {
     // Close drawer
     function closeDrawer() {
         const menuBtn = document.querySelector('.mobile-only');
+        const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+        const closeIcon = menuBtn.querySelector('.close-icon');
         drawerOverlay.classList.remove('active');
         booksSidebar.classList.remove('drawer-open');
         chaptersColumn.classList.remove('drawer-open');
         versesColumn.classList.remove('drawer-open');
-        if (menuBtn) menuBtn.classList.remove('drawer-active');
+        hamburgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
         document.body.style.overflow = '';
     }
     

@@ -263,11 +263,11 @@ body.dark-theme .book-loader {
 }
 
 .menu-btn {
-    color: #202124 !important;
+    color: #202124;
 }
 
-.menu-btn svg line {
-    stroke: #202124 !important;
+.menu-btn svg {
+    stroke: #202124;
     stroke-width: 2;
 }
 
@@ -759,22 +759,6 @@ body.dark-theme .jesus-name {
         stroke: #5f6368;
     }
     
-    .menu-btn.drawer-active {
-        z-index: 1003;
-    }
-    
-    .menu-btn.drawer-active svg line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .menu-btn.drawer-active svg line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .menu-btn.drawer-active svg line:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-    
     .drawer-header {
         display: none;
     }
@@ -1001,12 +985,11 @@ body.dark-theme .icon-btn {
 }
 
 body.dark-theme .menu-btn {
-    color: #e8eaed !important;
+    color: #e8eaed;
 }
 
-body.dark-theme .menu-btn svg line {
-    stroke: #e8eaed !important;
-    stroke-width: 2;
+body.dark-theme .menu-btn svg {
+    stroke: #e8eaed;
 }
 
 body.dark-theme .icon-btn:hover {
