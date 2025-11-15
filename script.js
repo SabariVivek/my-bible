@@ -167,16 +167,6 @@ function initializeMobileDrawer() {
     if (drawerCloseBtn) {
         drawerCloseBtn.addEventListener('click', closeDrawer);
     }
-    
-    // Close drawer when book is selected on mobile
-    const bookItems = document.querySelectorAll('.book-item');
-    bookItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                closeDrawer();
-            }
-        });
-    });
 }
 
 // Initialize book list with click handlers
@@ -385,22 +375,6 @@ function updateChapters() {
                 localStorage.setItem('currentChapter', chapter);
                 localStorage.setItem('currentChapter', chapter);
                 updateUI();
-                
-                // Close drawer on mobile after selecting chapter
-                if (window.innerWidth <= 768) {
-                    const drawerOverlay = document.querySelector('.drawer-overlay');
-                    const booksSidebar = document.querySelector('.books-sidebar');
-                    const chaptersCol = document.querySelector('.chapters-column');
-                    const versesCol = document.querySelector('.verses-column');
-                    const menuBtn = document.querySelector('.mobile-only');
-                    
-                    drawerOverlay.classList.remove('active');
-                    booksSidebar.classList.remove('drawer-open');
-                    chaptersCol.classList.remove('drawer-open');
-                    versesCol.classList.remove('drawer-open');
-                    menuBtn.classList.remove('drawer-active');
-                    document.body.style.overflow = '';
-                }
             }
         });
     });
@@ -444,12 +418,15 @@ function updateVerses() {
                 const chaptersColumn = document.querySelector('.chapters-column');
                 const versesColumn = document.querySelector('.verses-column');
                 const menuBtn = document.querySelector('.mobile-only');
+                const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+                const closeIcon = menuBtn.querySelector('.close-icon');
                 
                 drawerOverlay.classList.remove('active');
                 booksSidebar.classList.remove('drawer-open');
                 chaptersColumn.classList.remove('drawer-open');
                 versesColumn.classList.remove('drawer-open');
-                menuBtn.classList.remove('drawer-active');
+                hamburgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
                 document.body.style.overflow = '';
             }
             
