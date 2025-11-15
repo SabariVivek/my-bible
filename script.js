@@ -76,6 +76,7 @@ let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
+let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -163,7 +164,8 @@ function initializeMobileDrawer() {
         drawerOverlay.addEventListener('click', closeDrawer);
     }
     
-    // Close button in drawer header
+    // Close button in drawer header (if it exists)
+    const drawerCloseBtn = document.querySelector('.drawer-close');
     if (drawerCloseBtn) {
         drawerCloseBtn.addEventListener('click', closeDrawer);
     }
@@ -370,12 +372,23 @@ function updateChapters() {
     chaptersColumn.querySelectorAll('.number-item').forEach(item => {
         item.addEventListener('click', () => {
             const chapter = parseInt(item.dataset.chapter);
-            if (chapter !== currentChapter) {
-                currentChapter = chapter;
-                localStorage.setItem('currentChapter', chapter);
-                localStorage.setItem('currentChapter', chapter);
-                updateUI();
+            currentChapter = chapter;
+            localStorage.setItem('currentChapter', chapter);
+            
+            // Remove active class from all chapter items
+            chaptersColumn.querySelectorAll('.number-item').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked chapter
+            item.classList.add('active');
+            
+            updateUI();
+            
+            // Scroll to top of content
+            const contentArea = document.querySelector('.content-area');
+            if (contentArea) {
+                contentArea.scrollTop = 0;
             }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
 }
@@ -383,6 +396,12 @@ function updateChapters() {
 // Update verses list
 function updateVerses() {
     const versesColumn = document.querySelector('.verses-column');
+    
+    if (!versesColumn) {
+        console.error('Verses column not found');
+        return;
+    }
+    
     const chapterKey = `chapter_${currentChapter}`;
     const chapterData = currentData[chapterKey];
     
@@ -403,6 +422,8 @@ function updateVerses() {
     // Add click handlers for scrolling to verse
     versesColumn.querySelectorAll('.number-item').forEach(item => {
         item.addEventListener('click', () => {
+            hasUserInteracted = true;
+            localStorage.setItem('hasUserInteracted', 'true');
             const verse = parseInt(item.dataset.verse);
             
             // Remove active class from all verse items
@@ -416,20 +437,24 @@ function updateVerses() {
                 const drawerOverlay = document.querySelector('.drawer-overlay');
                 const booksSidebar = document.querySelector('.books-sidebar');
                 const chaptersColumn = document.querySelector('.chapters-column');
-                const versesColumn = document.querySelector('.verses-column');
+                const versesCol = document.querySelector('.verses-column');
                 const menuBtn = document.querySelector('.mobile-only');
-                const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
-                const closeIcon = menuBtn.querySelector('.close-icon');
                 
-                drawerOverlay.classList.remove('active');
-                booksSidebar.classList.remove('drawer-open');
-                chaptersColumn.classList.remove('drawer-open');
-                versesColumn.classList.remove('drawer-open');
-                hamburgerIcon.style.display = 'block';
-                closeIcon.style.display = 'none';
-                document.body.style.overflow = '';
+                if (drawerOverlay && menuBtn) {
+                    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+                    const closeIcon = menuBtn.querySelector('.close-icon');
+                    
+                    drawerOverlay.classList.remove('active');
+                    booksSidebar.classList.remove('drawer-open');
+                    chaptersColumn.classList.remove('drawer-open');
+                    versesCol.classList.remove('drawer-open');
+                    hamburgerIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
             }
             
+            // Always scroll to verse, even if already selected
             scrollToVerse(verse);
         });
     });
@@ -694,6 +719,12 @@ function initializeLanguageSelector() {
     
     if (!languageSelector || !langLabel) return;
     
+    // Ensure currentLanguage is properly initialized
+    if (!currentLanguage || !['english', 'tamil', 'both'].includes(currentLanguage)) {
+        currentLanguage = 'tamil';
+        localStorage.setItem('currentLanguage', 'tamil');
+    }
+    
     // Function to update visible options
     function updateVisibleOptions() {
         langOptions.forEach(option => {
@@ -709,6 +740,7 @@ function initializeLanguageSelector() {
     // Toggle dropdown
     languageSelector.addEventListener('click', (e) => {
         e.stopPropagation();
+        console.log('Language selector clicked, current:', currentLanguage);
         updateVisibleOptions();
         languageSelector.classList.toggle('open');
     });
@@ -724,6 +756,7 @@ function initializeLanguageSelector() {
     langOptions.forEach(option => {
         option.addEventListener('click', (e) => {
             e.stopPropagation();
+            console.log('Language option clicked:', option.dataset.lang);
             
             const selectedLang = option.dataset.lang;
             currentLanguage = selectedLang;
