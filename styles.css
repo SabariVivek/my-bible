@@ -259,10 +259,7 @@ body.dark-theme .book-loader {
 }
 
 .icon-btn:hover {
-    background-color: #e8f0fe;
-    color: #1a73e8;
-    transform: scale(1.05);
-    box-shadow: 0 1px 4px rgba(26, 115, 232, 0.15);
+    /* Removed hover effects to keep minimal */
 }
 
 .icon-btn:active {
@@ -279,15 +276,22 @@ body.dark-theme .book-loader {
     transition: all 0.3s ease;
 }
 
-.theme-toggle:hover {
-    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(255, 216, 155, 0.4);
+/* Minimal indicator - small underline that persists */
+.theme-toggle::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 2px;
+    background-color: #1a73e8;
+    border-radius: 2px;
+    opacity: 0.6;
 }
 
-body.dark-theme .theme-toggle:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+body.dark-theme .theme-toggle::after {
+    background-color: #8ab4f8;
 }
 
 body.dark-theme .sun-icon {
@@ -937,10 +941,7 @@ body.dark-theme .icon-btn {
 }
 
 body.dark-theme .icon-btn:hover {
-    background-color: #3c4043;
-    color: #8ab4f8;
-    transform: scale(1.05);
-    box-shadow: 0 1px 4px rgba(138, 180, 248, 0.15);
+    /* Removed hover effects to keep minimal */
 }
 
 body.dark-theme .language-selector {
@@ -978,12 +979,6 @@ body.dark-theme .lang-option:hover {
 body.dark-theme .lang-option.active {
     background-color: #3c4043;
     color: #e8eaed;
-}
-
-body.dark-theme .theme-toggle:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
 body.dark-theme .books-sidebar {
