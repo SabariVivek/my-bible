@@ -258,6 +258,19 @@ body.dark-theme .book-loader {
     justify-content: center;
 }
 
+.icon-btn svg {
+    stroke: currentColor;
+}
+
+.menu-btn {
+    color: #202124 !important;
+}
+
+.menu-btn svg line {
+    stroke: #202124 !important;
+    stroke-width: 2;
+}
+
 .icon-btn:hover {
     /* Removed hover effects to keep minimal */
 }
@@ -737,8 +750,13 @@ body.dark-theme .jesus-name {
     }
     
     /* Transform menu icon to close (X) when drawer is active */
+    .menu-btn {
+        color: #5f6368;
+    }
+    
     .menu-btn svg line {
         transition: all 0.3s ease;
+        stroke: #5f6368;
     }
     
     .menu-btn.drawer-active {
@@ -980,6 +998,15 @@ body.dark-theme .site-title {
 
 body.dark-theme .icon-btn {
     color: #9aa0a6;
+}
+
+body.dark-theme .menu-btn {
+    color: #e8eaed !important;
+}
+
+body.dark-theme .menu-btn svg line {
+    stroke: #e8eaed !important;
+    stroke-width: 2;
 }
 
 body.dark-theme .icon-btn:hover {

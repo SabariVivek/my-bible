@@ -92,42 +92,53 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeMobileDrawer() {
     const menuBtn = document.querySelector('.mobile-only');
     const drawerOverlay = document.querySelector('.drawer-overlay');
-    const drawerHeader = document.querySelector('.drawer-header');
-    const drawerCloseBtn = document.querySelector('.drawer-close-btn');
     const booksSidebar = document.querySelector('.books-sidebar');
     const chaptersColumn = document.querySelector('.chapters-column');
     const versesColumn = document.querySelector('.verses-column');
     const bottomNav = document.querySelector('.bottom-nav');
     
+    if (!menuBtn || !drawerOverlay) return;
+    
     // Open/toggle drawer
-    if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-            // Check if on mobile or desktop
-            if (window.innerWidth <= 768) {
-                // Mobile: open drawer overlay
+    menuBtn.addEventListener('click', () => {
+        // Check if on mobile or desktop
+        if (window.innerWidth <= 768) {
+            // Mobile: toggle drawer overlay
+            const isOpen = drawerOverlay.classList.contains('active');
+            
+            if (isOpen) {
+                // Close drawer
+                drawerOverlay.classList.remove('active');
+                booksSidebar.classList.remove('drawer-open');
+                chaptersColumn.classList.remove('drawer-open');
+                versesColumn.classList.remove('drawer-open');
+                menuBtn.classList.remove('drawer-active');
+                document.body.style.overflow = '';
+            } else {
+                // Open drawer
                 drawerOverlay.classList.add('active');
-                drawerHeader.classList.add('drawer-open');
                 booksSidebar.classList.add('drawer-open');
                 chaptersColumn.classList.add('drawer-open');
                 versesColumn.classList.add('drawer-open');
+                menuBtn.classList.add('drawer-active');
                 document.body.style.overflow = 'hidden';
-            } else {
-                // Desktop: toggle sidebar visibility
-                const isHidden = booksSidebar.classList.toggle('hidden');
-                chaptersColumn.classList.toggle('hidden');
-                versesColumn.classList.toggle('hidden');
-                
-                // Expand bottom nav when sidebars are hidden
-                if (bottomNav) {
-                    if (isHidden) {
-                        bottomNav.classList.add('expanded');
-                    } else {
-                        bottomNav.classList.remove('expanded');
-                    }
+            }
+        } else {
+            // Desktop: toggle sidebar visibility
+            const isHidden = booksSidebar.classList.toggle('hidden');
+            chaptersColumn.classList.toggle('hidden');
+            versesColumn.classList.toggle('hidden');
+            
+            // Expand bottom nav when sidebars are hidden
+            if (bottomNav) {
+                if (isHidden) {
+                    bottomNav.classList.add('expanded');
+                } else {
+                    bottomNav.classList.remove('expanded');
                 }
             }
-        });
-    }
+        }
+    });
     
     // Close drawer
     function closeDrawer() {
