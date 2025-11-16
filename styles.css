@@ -1141,6 +1141,21 @@ body:not(.dark-theme) .moon-icon {
     font-weight: 600;
 }
 
+/* Star indicator for memory verses on verse numbers */
+.verses-column .number-item.has-memory-verse::after {
+    content: "★";
+    font-size: 0.5rem;
+    color: #d4a04c;
+    margin-left: 0.15rem;
+    vertical-align: super;
+    line-height: 0;
+}
+
+/* Chapter numbers with memory verses - color instead of star */
+.chapters-column .number-item.has-memory-verse {
+    color: #d4a04c;
+}
+
 /* Content Area */
 .content-area {
     flex: 1;
@@ -1186,6 +1201,28 @@ body:not(.dark-theme) .moon-icon {
     font-size: 0.875rem;
     color: #8a8a8a;
     margin-right: 0.4rem;
+}
+
+/* Memory verse - light theme */
+.verse-line.memory-verse .v-num {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: #fef4e4;
+    color: #d4a04c;
+    border: 1px solid #d4a04c;
+    font-weight: bold;
+    font-size: 0.7rem;
+    opacity: 0;
+    animation: fadeBadge 0.8s ease-out forwards;
+}
+
+@keyframes fadeBadge {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
 }
 
 /* Bilingual mode styles */
@@ -1721,10 +1758,6 @@ body.dark-theme .menu-btn svg {
     stroke: #e8eaed;
 }
 
-body.dark-theme .icon-btn:hover {
-    /* Removed hover effects to keep minimal */
-}
-
 /* Dark theme for language modal */
 body.dark-theme .language-modal-overlay {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 100%);
@@ -2115,6 +2148,32 @@ body.dark-theme .verse-line.highlighted {
 
 body.dark-theme .v-num {
     color: #9a9a9a;
+}
+
+/* Memory verse - dark theme */
+body.dark-theme .verse-line.memory-verse .v-num {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background: #4f3b1f;
+    color: #ffe9b3;
+    border: 1px solid #b28b46;
+    font-weight: bold;
+    font-size: 0.7rem;
+    opacity: 0;
+    animation: fadeBadge 0.8s ease-out forwards;
+}
+
+/* Star indicator for memory verses on verse numbers - dark theme */
+body.dark-theme .verses-column .number-item.has-memory-verse::after {
+    color: #ffd27f;
+}
+
+body.dark-theme .chapters-column .number-item.has-memory-verse {
+    color: #ffd27f;
 }
 
 body.dark-theme .english-text {

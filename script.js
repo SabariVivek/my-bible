@@ -79,6 +79,58 @@ let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'en
 let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
 let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
 
+// Helper function to normalize book names for comparison
+function normalizeBookName(bookName) {
+    if (!bookName || typeof bookName !== 'string') return '';
+    // Convert roman numerals to numbers for consistency
+    return bookName
+        .replace(/^I\s+/, '1 ')
+        .replace(/^II\s+/, '2 ')
+        .replace(/^III\s+/, '3 ')
+        .replace(/^Psalms$/, 'Psalm'); // Handle Psalm/Psalms difference
+}
+
+// Helper function to check if a chapter has any memory verses
+function chapterHasMemoryVerses(bookName, chapter) {
+    if (typeof memoryVerses === 'undefined') return false;
+    
+    const normalizedBookName = normalizeBookName(bookName);
+    
+    return memoryVerses.some(memVerse => {
+        const [book, range] = memVerse.split(/\s+(?=\d)/);
+        if (!range) return false;
+        const normalizedMemBook = normalizeBookName(book);
+        const [chapterPart] = range.split(':');
+        return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter;
+    });
+}
+
+// Helper function to check if a verse is a memory verse
+function isMemoryVerse(bookName, chapter, verse) {
+    if (typeof memoryVerses === 'undefined') return false;
+    
+    const normalizedBookName = normalizeBookName(bookName);
+    
+    return memoryVerses.some(memVerse => {
+        // Handle verse ranges like "Isaiah 12:1–6" or "Ephesians 2:8–9"
+        if (memVerse.includes('–') || memVerse.includes('-')) {
+            const [book, range] = memVerse.split(/\s+(?=\d)/);
+            const normalizedMemBook = normalizeBookName(book);
+            const [chapterPart, versePart] = range.split(':');
+            const verseRange = versePart.split(/[–-]/);
+            const startVerse = parseInt(verseRange[0]);
+            const endVerse = parseInt(verseRange[1]);
+            return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter && verse >= startVerse && verse <= endVerse;
+        }
+        // Handle single verse like "John 3:16"
+        const [book, range] = memVerse.split(/\s+(?=\d)/);
+        if (!range) return false; // Invalid format
+        const normalizedMemBook = normalizeBookName(book);
+        const [chapterPart, versePart] = range.split(':');
+        return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter && parseInt(versePart) === verse;
+    });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initializeScrollbar();
@@ -365,11 +417,13 @@ function updateBookSelection() {
 function updateChapters() {
     const chaptersColumn = document.querySelector('.chapters-column');
     const book = bibleBooks[currentBook];
+    const bookName = book.name;
     
     let html = '';
     for (let i = 1; i <= book.chapters; i++) {
         const activeClass = i === currentChapter ? 'active' : '';
-        html += `<div class="number-item ${activeClass}" data-chapter="${i}">${i}</div>`;
+        const hasMemoryVerse = chapterHasMemoryVerses(bookName, i) ? ' has-memory-verse' : '';
+        html += `<div class="number-item ${activeClass}${hasMemoryVerse}" data-chapter="${i}">${i}</div>`;
     }
     
     chaptersColumn.innerHTML = html;
@@ -432,10 +486,12 @@ function updateVerses() {
     }
     
     const verseCount = Object.keys(chapterData).length;
+    const bookName = bibleBooks[currentBook].name;
     let html = '';
     
     for (let i = 1; i <= verseCount; i++) {
-        html += `<div class="number-item" data-verse="${i}">${i}</div>`;
+        const hasMemoryVerse = isMemoryVerse(bookName, currentChapter, i) ? ' has-memory-verse' : '';
+        html += `<div class="number-item${hasMemoryVerse}" data-verse="${i}">${i}</div>`;
     }
     
     versesColumn.innerHTML = html;
@@ -517,6 +573,8 @@ function displayChapter() {
         return numA - numB;
     });
     
+    const bookName = bibleBooks[currentBook].name;
+    
     if (currentLanguage === 'both' && currentTamilData) {
         // Display both Tamil and English
         const tamilChapterData = currentTamilData[chapterKey];
@@ -530,7 +588,9 @@ function displayChapter() {
             tamilText = highlightSpecialText(tamilText, 'both-tamil');
             englishText = highlightSpecialText(englishText, 'both-english');
             
-            html += `<p class="verse-line" data-verse="${verseNum}">
+            const memoryVerseClass = isMemoryVerse(bookName, currentChapter, parseInt(verseNum)) ? ' memory-verse' : '';
+            
+            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}">
                 <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
                 <span class="english-text ${englishTextColor}">${englishText}</span>
             </p>`;
@@ -544,7 +604,9 @@ function displayChapter() {
             // Apply highlighting based on current language
             verseText = highlightSpecialText(verseText, currentLanguage);
             
-            html += `<p class="verse-line" data-verse="${verseNum}"><sup class="v-num">${verseNum}</sup>${verseText}</p>`;
+            const memoryVerseClass = isMemoryVerse(bookName, currentChapter, parseInt(verseNum)) ? ' memory-verse' : '';
+            
+            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"><sup class="v-num">${verseNum}</sup>${verseText}</p>`;
         });
     }
     
