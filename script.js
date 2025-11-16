@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeBookList();
     initializeMobileDrawer();
     initializeMobileLanguageModal();
+    initializeSearch();
     initializeSiteTitle();
     loadBook(currentBook, currentChapter);
 });
@@ -839,6 +840,366 @@ function initializeMobileLanguageModal() {
     // Initialize active states
     updateModalActiveState();
     updateColorActiveState();
+}
+
+// Search functionality
+function initializeSearch() {
+    const searchBtn = document.getElementById('search-btn');
+    const backBtn = document.getElementById('back-from-search');
+    const searchBar = document.getElementById('search-bar');
+    const scriptureText = document.getElementById('scripture-text');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchResultsInfo = document.getElementById('search-results-info');
+    const resultsCount = document.getElementById('results-count');
+    
+    let searchTimeout = null;
+    let isSearchActive = false;
+    
+    // Detect if text is Tamil or English
+    function isTamilText(text) {
+        // Tamil Unicode range: \u0B80-\u0BFF
+        const tamilRegex = /[\u0B80-\u0BFF]/;
+        return tamilRegex.test(text);
+    }
+    
+    // Toggle search view
+    function openSearch() {
+        isSearchActive = true;
+        
+        const booksSidebar = document.querySelector('.books-sidebar');
+        const chaptersColumn = document.querySelector('.chapters-column');
+        const versesColumn = document.querySelector('.verses-column');
+        const bottomNav = document.querySelector('.bottom-nav');
+        
+        // Show search bar
+        searchBar.style.display = 'flex';
+        
+        // Show search results area, hide only sidebars and scripture
+        scriptureText.style.display = 'none';
+        searchResults.style.display = 'block';
+        searchResults.classList.add('active');
+        booksSidebar.style.display = 'none';
+        chaptersColumn.style.display = 'none';
+        versesColumn.style.display = 'none';
+        if (bottomNav) bottomNav.style.display = 'none';
+        searchInput.focus();
+    }
+    
+    function closeSearch() {
+        isSearchActive = false;
+        
+        const booksSidebar = document.querySelector('.books-sidebar');
+        const chaptersColumn = document.querySelector('.chapters-column');
+        const versesColumn = document.querySelector('.verses-column');
+        const bottomNav = document.querySelector('.bottom-nav');
+        
+        // Hide search bar
+        searchBar.style.display = 'none';
+        
+        // Hide search, show everything
+        searchResults.style.display = 'none';
+        searchResults.classList.remove('active');
+        scriptureText.style.display = 'block';
+        booksSidebar.style.display = 'flex';
+        chaptersColumn.style.display = 'flex';
+        versesColumn.style.display = 'flex';
+        if (bottomNav) bottomNav.style.display = 'flex';
+        searchInput.value = '';
+        searchResultsInfo.style.display = 'none';
+        showEmptyState();
+        
+        // Force refresh book names display after sidebar is visible
+        setTimeout(() => {
+            updateBookNames();
+        }, 0);
+    }
+    
+    searchBtn.addEventListener('click', openSearch);
+    backBtn.addEventListener('click', closeSearch);
+    
+    // Show/hide clear button based on input
+    searchInput.addEventListener('input', (e) => {
+        const value = e.target.value.trim();
+        
+        // Debounce search
+        clearTimeout(searchTimeout);
+        
+        if (!value) {
+            searchResultsInfo.style.display = 'none';
+            showEmptyState();
+            return;
+        }
+        
+        showLoadingState();
+        
+        searchTimeout = setTimeout(() => {
+            console.log('Starting search for:', value);
+            performSearch(value);
+        }, 500);
+    });
+    
+    // Show empty state
+    function showEmptyState() {
+        searchResults.innerHTML = `
+            <div class="search-empty-state">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <p>Search for verses in Tamil or English</p>
+            </div>
+        `;
+    }
+    
+    // Show loading state
+    function showLoadingState() {
+        searchResults.innerHTML = `
+            <div class="search-loading">
+                <p>Searching...</p>
+            </div>
+        `;
+    }
+    
+    // Show no results state
+    function showNoResults() {
+        searchResults.innerHTML = `
+            <div class="search-no-results">
+                <p>No verses found</p>
+            </div>
+        `;
+    }
+    
+    // Perform search
+    async function performSearch(query) {
+        console.log('performSearch called with:', query);
+        const isTamil = isTamilText(query);
+        console.log('Is Tamil:', isTamil);
+        const results = [];
+        const searchLower = query.toLowerCase();
+        
+        // Search through all books
+        for (let bookIndex = 0; bookIndex < bibleBooks.length; bookIndex++) {
+            const book = bibleBooks[bookIndex];
+            const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+            const language = isTamil ? 'tamil' : 'easy-english';
+            
+            try {
+                // Load book data using script tag (same as loadBook function)
+                const scriptPath = `Bible/${language}/${testament}/${book.file}.js`;
+                
+                // Create a promise to wait for script load
+                await new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    script.src = scriptPath;
+                    script.id = `search-script-${bookIndex}`;
+                    
+                    script.onload = () => {
+                        resolve();
+                    };
+                    
+                    script.onerror = () => {
+                        reject(new Error(`Failed to load ${scriptPath}`));
+                    };
+                    
+                    document.body.appendChild(script);
+                });
+                
+                // Get the data from window
+                const dataVarName = `${book.file}_data`;
+                const bookData = window[dataVarName];
+                
+                if (!bookData) {
+                    console.error(`No data found for ${book.name}`);
+                    continue;
+                }
+                
+                // Search through chapters
+                for (let chapterNum = 1; chapterNum <= book.chapters; chapterNum++) {
+                    const chapterKey = `chapter_${chapterNum}`;
+                    const chapterData = bookData[chapterKey];
+                    
+                    if (!chapterData) continue;
+                    
+                    // Search through verses
+                    for (const verseKey in chapterData) {
+                        const verseText = chapterData[verseKey];
+                        const verseNum = verseKey.replace('verse_', '');
+                        
+                        // Check if verse contains search query matching word boundaries
+                        let isMatch = false;
+                        let matchPosition = -1;
+                        
+                        if (isTamil) {
+                            // For Tamil, do direct substring match (word boundaries don't work well with Tamil Unicode)
+                            matchPosition = verseText.indexOf(query);
+                            isMatch = matchPosition !== -1;
+                        } else {
+                            // For English, match at word boundaries only (case-insensitive)
+                            const regex = new RegExp(`\\b${escapeRegExp(query)}`, 'gi');
+                            const match = verseText.match(regex);
+                            if (match) {
+                                isMatch = true;
+                                matchPosition = verseText.toLowerCase().search(regex);
+                            }
+                        }
+                        
+                        if (isMatch) {
+                            results.push({
+                                bookIndex,
+                                bookName: isTamil ? book.tamilName : book.name,
+                                chapter: chapterNum,
+                                verse: verseNum,
+                                text: verseText,
+                                query: query,
+                                matchPosition: matchPosition  // Store position for sorting
+                            });
+                            
+                            // Limit to 100 results for performance
+                            if (results.length >= 100) {
+                                console.log('Found 100 results, stopping search');
+                                // Clean up search scripts
+                                cleanupSearchScripts();
+                                displayResults(results);
+                                return;
+                            }
+                        }
+                    }
+                }
+                
+                // Remove the script after processing
+                const scriptToRemove = document.getElementById(`search-script-${bookIndex}`);
+                if (scriptToRemove) {
+                    scriptToRemove.remove();
+                }
+                
+            } catch (error) {
+                console.error(`Error loading ${book.name}:`, error);
+            }
+        }
+        
+        console.log('Search complete. Total results:', results.length);
+        
+        // Sort results: prioritize matches at the beginning
+        results.sort((a, b) => {
+            // First, sort by match position (earlier matches first)
+            if (a.matchPosition !== b.matchPosition) {
+                return a.matchPosition - b.matchPosition;
+            }
+            // If same position, maintain book order
+            if (a.bookIndex !== b.bookIndex) {
+                return a.bookIndex - b.bookIndex;
+            }
+            // If same book, sort by chapter
+            if (a.chapter !== b.chapter) {
+                return a.chapter - b.chapter;
+            }
+            // If same chapter, sort by verse
+            return a.verse - b.verse;
+        });
+        
+        cleanupSearchScripts();
+        displayResults(results);
+    }
+    
+    // Clean up all search scripts
+    function cleanupSearchScripts() {
+        const searchScripts = document.querySelectorAll('[id^="search-script-"]');
+        searchScripts.forEach(script => script.remove());
+    }
+    
+    // Display search results
+    function displayResults(results) {
+        if (results.length === 0) {
+            searchResultsInfo.style.display = 'none';
+            showNoResults();
+            return;
+        }
+        
+        // Show results count
+        searchResultsInfo.style.display = 'block';
+        resultsCount.textContent = results.length;
+        
+        let html = '';
+        
+        results.forEach(result => {
+            // Highlight matching text
+            const highlightedText = highlightMatch(result.text, result.query);
+            
+            html += `
+                <div class="search-result-item" data-book="${result.bookIndex}" data-chapter="${result.chapter}" data-verse="${result.verse}">
+                    <div class="search-result-reference">${result.bookName} ${result.chapter}:${result.verse}</div>
+                    <div class="search-result-text">${highlightedText}</div>
+                </div>
+            `;
+        });
+        
+        searchResults.innerHTML = html;
+        
+        // Add click listeners to results
+        document.querySelectorAll('.search-result-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const bookIndex = parseInt(item.getAttribute('data-book'));
+                const chapter = parseInt(item.getAttribute('data-chapter'));
+                const verse = parseInt(item.getAttribute('data-verse'));
+                
+                const booksSidebar = document.querySelector('.books-sidebar');
+                const chaptersColumn = document.querySelector('.chapters-column');
+                const versesColumn = document.querySelector('.verses-column');
+                const bottomNav = document.querySelector('.bottom-nav');
+                
+                // Hide search bar
+                searchBar.style.display = 'none';
+                
+                // Hide search, show everything
+                searchResults.style.display = 'none';
+                searchResults.classList.remove('active');
+                searchResultsInfo.style.display = 'none';
+                searchInput.value = '';
+                scriptureText.style.display = 'block';
+                booksSidebar.style.display = 'flex';
+                chaptersColumn.style.display = 'flex';
+                versesColumn.style.display = 'flex';
+                if (bottomNav) bottomNav.style.display = 'flex';
+                isSearchActive = false;
+                
+                // Force refresh book names display after sidebar is visible
+                setTimeout(() => {
+                    updateBookNames();
+                }, 0);
+                
+                // Navigate to verse
+                loadBook(bookIndex, chapter).then(() => {
+                    // Scroll to verse after loading
+                    setTimeout(() => {
+                        const verseElement = document.querySelector(`[data-verse="${verse}"]`);
+                        if (verseElement) {
+                            verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            // Highlight verse briefly
+                            verseElement.style.backgroundColor = 'rgba(95, 99, 104, 0.1)';
+                            setTimeout(() => {
+                                verseElement.style.backgroundColor = '';
+                            }, 2000);
+                        }
+                    }, 500);
+                });
+            });
+        });
+    }
+    
+    // Highlight matching text
+    function highlightMatch(text, query) {
+        const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+        return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+    }
+    
+    // Escape special regex characters
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+    
+    // Initialize with empty state
+    showEmptyState();
 }
 
 // Site title click to navigate to John 1:1
