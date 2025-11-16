@@ -847,7 +847,14 @@ function initializeSearch() {
     const searchBtn = document.getElementById('search-btn');
     const backBtn = document.getElementById('back-from-search');
     const clearBtn = document.getElementById('clear-search');
+    const filterBtn = document.getElementById('filter-btn');
+    const closeFilterBtn = document.getElementById('close-filter');
+    const applyFilterBtn = document.getElementById('apply-filter');
+    const clearFilterBtn = document.getElementById('clear-filter');
     const searchBar = document.getElementById('search-bar');
+    const advancedFilter = document.getElementById('advanced-filter');
+    const filterBook = document.getElementById('filter-book');
+    const filterChapter = document.getElementById('filter-chapter');
     const scriptureText = document.getElementById('scripture-text');
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
@@ -856,6 +863,52 @@ function initializeSearch() {
     
     let searchTimeout = null;
     let isSearchActive = false;
+    let isFilterVisible = false;
+    
+    // Populate book dropdown
+    function populateBookDropdown() {
+        filterBook.innerHTML = '<option value="">All Books</option>';
+        bibleBooks.forEach((book, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = book.name;
+            filterBook.appendChild(option);
+        });
+    }
+    
+    // Toggle filter visibility
+    function toggleFilter() {
+        isFilterVisible = !isFilterVisible;
+        advancedFilter.style.display = isFilterVisible ? 'block' : 'none';
+        
+        if (isFilterVisible && filterBook.options.length === 1) {
+            populateBookDropdown();
+        }
+    }
+    
+    // Close filter popup
+    function closeFilter() {
+        isFilterVisible = false;
+        advancedFilter.style.display = 'none';
+    }
+    
+    // Apply filter and trigger search
+    function applyFilter() {
+        closeFilter();
+        const query = searchInput.value.trim();
+        if (query) {
+            showLoadingState();
+            clearTimeout(searchTimeout);
+            performSearch(query);
+        }
+    }
+    
+    // Clear filter values
+    function clearFilterValues() {
+        filterBook.value = '';
+        filterChapter.value = '';
+        applyFilter();
+    }
     
     // Detect if text is Tamil or English
     function isTamilText(text) {
@@ -897,6 +950,8 @@ function initializeSearch() {
         
         // Hide search bar
         searchBar.style.display = 'none';
+        advancedFilter.style.display = 'none';
+        isFilterVisible = false;
         
         // Hide search, show everything
         searchResults.style.display = 'none';
@@ -909,6 +964,8 @@ function initializeSearch() {
         searchInput.value = '';
         clearBtn.style.display = 'none';
         searchResultsInfo.style.display = 'none';
+        filterBook.value = '';
+        filterChapter.value = '';
         showEmptyState();
         
         // Force refresh book names display after sidebar is visible
@@ -928,6 +985,19 @@ function initializeSearch() {
     searchBtn.addEventListener('click', openSearch);
     backBtn.addEventListener('click', closeSearch);
     clearBtn.addEventListener('click', clearSearch);
+    filterBtn.addEventListener('click', toggleFilter);
+    closeFilterBtn.addEventListener('click', closeFilter);
+    applyFilterBtn.addEventListener('click', applyFilter);
+    clearFilterBtn.addEventListener('click', clearFilterValues);
+    
+    // Close filter when clicking outside
+    document.addEventListener('click', (e) => {
+        if (isFilterVisible && 
+            !advancedFilter.contains(e.target) && 
+            !filterBtn.contains(e.target)) {
+            closeFilter();
+        }
+    });
     
     // Show/hide clear button based on input
     searchInput.addEventListener('input', (e) => {
@@ -957,7 +1027,7 @@ function initializeSearch() {
     function showEmptyState() {
         searchResults.innerHTML = `
             <div class="search-empty-state">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
@@ -995,13 +1065,23 @@ function initializeSearch() {
         const searchLower = query.toLowerCase();
         const batchSize = 5; // Load 5 books at a time
         
+        // Get filter values
+        const selectedBookIndex = filterBook.value;
+        const selectedChapter = filterChapter.value.trim();
+        
+        // Determine which books to search
+        let booksToSearch = bibleBooks;
+        if (selectedBookIndex !== '') {
+            booksToSearch = [bibleBooks[parseInt(selectedBookIndex)]];
+        }
+        
         // Process books in batches for better performance
-        for (let i = 0; i < bibleBooks.length; i += batchSize) {
-            const batch = bibleBooks.slice(i, i + batchSize);
+        for (let i = 0; i < booksToSearch.length; i += batchSize) {
+            const batch = booksToSearch.slice(i, i + batchSize);
             
             // Load batch of books in parallel
             await Promise.all(batch.map(async (book, batchIndex) => {
-                const bookIndex = i + batchIndex;
+                const bookIndex = booksToSearch.indexOf(book);
                 const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
                 const language = isTamil ? 'tamil' : 'easy-english';
                 
@@ -1031,6 +1111,11 @@ function initializeSearch() {
                     
                     // Search through chapters
                     for (let chapterNum = 1; chapterNum <= book.chapters; chapterNum++) {
+                        // Apply chapter filter if specified
+                        if (selectedChapter !== '' && chapterNum !== parseInt(selectedChapter)) {
+                            continue;
+                        }
+                        
                         const chapterKey = `chapter_${chapterNum}`;
                         const chapterData = bookData[chapterKey];
                         

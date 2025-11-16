@@ -85,6 +85,44 @@
                 </svg>
             </button>
         </div>
+        <div class="filter-btn-wrapper">
+            <button id="filter-btn" class="icon-btn filter-btn" aria-label="Filter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+            </button>
+            
+            <!-- Advanced Filter Popup -->
+            <div id="advanced-filter" class="filter-popup" style="display: none;">
+                <div class="filter-popup-content">
+                    <div class="filter-popup-header">
+                        <h3>Filter Search</h3>
+                        <button id="close-filter" class="icon-btn" aria-label="Close">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="filter-fields">
+                    <div class="filter-field">
+                        <label for="filter-book">Book</label>
+                        <select id="filter-book" class="filter-select">
+                            <option value="">All Books</option>
+                        </select>
+                    </div>
+                    <div class="filter-field">
+                        <label for="filter-chapter">Chapter</label>
+                        <input id="filter-chapter" type="number" class="filter-input" placeholder="Any" min="1">
+                    </div>
+                </div>
+                <div class="filter-actions">
+                    <button id="clear-filter" class="filter-btn-secondary">Clear</button>
+                    <button id="apply-filter" class="filter-btn-primary">Apply</button>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 
     <!-- Language Modal for Mobile -->
