@@ -23,31 +23,52 @@ class OfflineManager {
             return cachedBook.data;
         }
 
-        // If not in IndexedDB and online, load from network
-        if (this.isOnline()) {
-            try {
-                const scriptPath = `Bible/${language}/${testament}/${bookFile}.js`;
-                const response = await fetch(scriptPath);
-                const scriptText = await response.text();
-                
-                // Execute the script to get the data
+        // If not in IndexedDB, try loading via script tag (works both locally and on server)
+        try {
+            const data = await this.loadBookViaScript(bookFile, language, testament);
+            
+            // Save to IndexedDB for offline use
+            await bibleDB.saveBook(bookFile, language, testament, data);
+            console.log(`Loaded ${bookFile} (${language}) from network and cached`);
+            
+            return data;
+        } catch (error) {
+            console.error(`Failed to load ${bookFile}:`, error);
+            throw error;
+        }
+    }
+
+    // Load book using script tag (works with file:// protocol)
+    loadBookViaScript(bookFile, language, testament) {
+        return new Promise((resolve, reject) => {
+            const scriptPath = `Bible/${language}/${testament}/${bookFile}.js`;
+            const tempScriptId = `temp-book-load-${Date.now()}`;
+            const script = document.createElement('script');
+            
+            script.id = tempScriptId;
+            script.src = scriptPath;
+            
+            script.onload = () => {
                 const dataVarName = `${bookFile}_data`;
-                eval(scriptText);
                 const data = window[dataVarName];
                 
-                // Save to IndexedDB for offline use
-                await bibleDB.saveBook(bookFile, language, testament, data);
-                console.log(`Loaded ${bookFile} (${language}) from network and cached`);
+                // Clean up
+                script.remove();
                 
-                return data;
-            } catch (error) {
-                console.error(`Failed to load ${bookFile}:`, error);
-                throw error;
-            }
-        }
-
-        // Offline and not cached
-        throw new Error('Book not available offline');
+                if (data) {
+                    resolve(data);
+                } else {
+                    reject(new Error(`Data variable ${dataVarName} not found`));
+                }
+            };
+            
+            script.onerror = () => {
+                script.remove();
+                reject(new Error(`Failed to load script: ${scriptPath}`));
+            };
+            
+            document.body.appendChild(script);
+        });
     }
 
     // Download all books for offline use
@@ -101,14 +122,8 @@ class OfflineManager {
 
     // Download a single book
     async downloadBook(bookFile, language, testament) {
-        const scriptPath = `Bible/${language}/${testament}/${bookFile}.js`;
-        const response = await fetch(scriptPath);
-        const scriptText = await response.text();
-        
-        // Execute the script to get the data
-        const dataVarName = `${bookFile}_data`;
-        eval(scriptText);
-        const data = window[dataVarName];
+        // Use the script loading method instead of fetch
+        const data = await this.loadBookViaScript(bookFile, language, testament);
         
         // Save to IndexedDB
         await bibleDB.saveBook(bookFile, language, testament, data);
