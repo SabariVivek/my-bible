@@ -1113,10 +1113,22 @@ body:not(.dark-theme) .moon-icon {
 }
 
 .number-item:hover {
-    background-color: #f1f3f4;
+    background-color: #f1f3f4 !important;
 }
 
 .number-item.active {
+    background-color: #f1f3f4 !important;
+    color: #000000;
+    font-weight: 600;
+}
+
+.chapters-column .number-item:hover,
+.verses-column .number-item:hover {
+    background-color: #f1f3f4;
+}
+
+.chapters-column .number-item.active,
+.verses-column .number-item.active {
     background-color: #f1f3f4;
     color: #000000;
     font-weight: 600;
