@@ -633,11 +633,11 @@ body.dark-theme .book-loader {
 }
 
 .search-highlight {
-    background: #6b5b00;
+    background: #ffd54f;
     font-weight: 600;
     padding: 0.125rem 0.25rem;
     border-radius: 3px;
-    color: #fff;
+    color: #000;
 }
 
 .icon-btn {
@@ -1191,7 +1191,8 @@ body.dark-theme .jesus-name {
         height: auto;
         min-height: calc(100vh - 60px);
         overflow: visible;
-        margin-top: 60px;
+        padding-top: 30px;
+        background-color: rgb(248, 249, 250);
     }
     
     /* Hide sidebars by default on mobile */
@@ -1537,11 +1538,13 @@ body:not(.dark-theme) .search-results-info {
 }
 
 body:not(.dark-theme) .search-result-item {
-    background: rgba(0, 0, 0, 0.02);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
 }
 
 body:not(.dark-theme) .search-result-item:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: #f8f9fa;
+    border-color: #dadce0;
 }
 
 body:not(.dark-theme) .search-result-reference {
@@ -1550,6 +1553,11 @@ body:not(.dark-theme) .search-result-reference {
 
 body:not(.dark-theme) .search-result-text {
     color: #5f6368;
+}
+
+body:not(.dark-theme) .search-highlight {
+    background: #fff176;
+    color: #000;
 }
 
 body.dark-theme .search-result-reference {
@@ -1567,8 +1575,8 @@ body.dark-theme .search-no-results p {
 }
 
 body.dark-theme .search-highlight {
-    background: #6b5b00;
-    color: #fff;
+    background: #ffd54f;
+    color: #000;
 }
 
 body.dark-theme .color-option.active .color-circle {
@@ -1785,5 +1793,9 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     body.dark-theme .verses-column .number-item.active {
         background-color: #3c4043;
         color: #e8eaed;
+    }
+    
+    body.dark-theme .main-layout {
+        background-color: #202124;
     }
 }
