@@ -700,7 +700,7 @@ function initializeScrollbar() {
     });
 }
 
-// Dark theme toggle
+// Dark theme toggle with animation
 function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
     const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
@@ -710,10 +710,56 @@ function initializeTheme() {
         document.body.classList.add('dark-theme');
     }
     
-    function toggleTheme() {
-        document.body.classList.toggle('dark-theme');
-        const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
+    async function toggleTheme(event) {
+        const clickedButton = event.currentTarget;
+        
+        // Check if View Transition API is supported and user doesn't prefer reduced motion
+        if (
+            !document.startViewTransition ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ) {
+            // Fallback: toggle without animation
+            document.body.classList.toggle('dark-theme');
+            const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            return;
+        }
+        
+        // Start view transition
+        const transition = document.startViewTransition(() => {
+            document.body.classList.toggle('dark-theme');
+            const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+        
+        // Wait for transition to be ready
+        await transition.ready;
+        
+        // Get button position for circular reveal effect
+        const { top, left, width, height } = clickedButton.getBoundingClientRect();
+        const x = left + width / 2;
+        const y = top + height / 2;
+        const right = window.innerWidth - left;
+        const bottom = window.innerHeight - top;
+        const maxRadius = Math.hypot(
+            Math.max(left, right),
+            Math.max(top, bottom)
+        );
+        
+        // Animate the circular reveal
+        document.documentElement.animate(
+            {
+                clipPath: [
+                    `circle(0px at ${x}px ${y}px)`,
+                    `circle(${maxRadius}px at ${x}px ${y}px)`
+                ]
+            },
+            {
+                duration: 500,
+                easing: 'ease-in-out',
+                pseudoElement: '::view-transition-new(root)'
+            }
+        );
     }
 
     if (themeToggle) {

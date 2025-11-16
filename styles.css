@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+/* View Transition API styles for theme switching animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
 /* Remove blue focus outline on buttons and clickable elements */
 button:focus,
 button:active,
