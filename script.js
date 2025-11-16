@@ -351,6 +351,10 @@ function updateBookSelection() {
     bookItems.forEach((item, index) => {
         if (index === currentBook) {
             item.classList.add('active');
+            // Scroll the active book into view
+            setTimeout(() => {
+                item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
         } else {
             item.classList.remove('active');
         }
@@ -369,6 +373,14 @@ function updateChapters() {
     }
     
     chaptersColumn.innerHTML = html;
+    
+    // Scroll to active chapter
+    setTimeout(() => {
+        const activeChapter = chaptersColumn.querySelector('.number-item.active');
+        if (activeChapter) {
+            activeChapter.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, 100);
     
     // Add click handlers
     chaptersColumn.querySelectorAll('.number-item').forEach(item => {
@@ -1268,6 +1280,9 @@ function initializeSearch() {
                 const versesColumn = document.querySelector('.verses-column');
                 const bottomNav = document.querySelector('.bottom-nav');
                 
+                // Remove active class from search button
+                searchBtn.classList.remove('active');
+                
                 // Hide search bar
                 searchBar.style.display = 'none';
                 
@@ -1292,14 +1307,25 @@ function initializeSearch() {
                 loadBook(bookIndex, chapter).then(() => {
                     // Scroll to verse after loading
                     setTimeout(() => {
-                        const verseElement = document.querySelector(`[data-verse="${verse}"]`);
+                        // Scroll to verse in the verse column
+                        const versesColumn = document.querySelector('.verses-column');
+                        const verseItem = versesColumn ? versesColumn.querySelector(`[data-verse="${verse}"]`) : null;
+                        if (verseItem) {
+                            verseItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            // Add active class
+                            versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
+                            verseItem.classList.add('active');
+                        }
+                        
+                        // Scroll to verse in the content area and highlight it
+                        // Remove highlight from all verses
+                        document.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+                        
+                        const verseElement = document.querySelector(`.verse-line[data-verse="${verse}"]`);
                         if (verseElement) {
                             verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            // Highlight verse briefly
-                            verseElement.style.backgroundColor = 'rgba(95, 99, 104, 0.1)';
-                            setTimeout(() => {
-                                verseElement.style.backgroundColor = '';
-                            }, 2000);
+                            // Add highlight class
+                            verseElement.classList.add('highlighted');
                         }
                     }, 500);
                 });
