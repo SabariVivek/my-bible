@@ -250,41 +250,90 @@ async function loadBook(bookIndex, chapter) {
     const book = bibleBooks[bookIndex];
     const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
     
-    try {
-        if (currentLanguage === 'both') {
-            // Load both Tamil and English
-            currentTamilData = await offlineManager.loadBookData(book.file, 'tamil', testament);
-            currentData = await offlineManager.loadBookData(book.file, 'easy-english', testament);
+    if (currentLanguage === 'both') {
+        // Load both Tamil and English
+        currentTamilData = null;
+        currentData = null;
+        
+        // Load Tamil first
+        const tamilScriptPath = `Bible/tamil/${testament}/${book.file}.js`;
+        const tamilScript = document.createElement('script');
+        tamilScript.id = 'bible-data-script-tamil';
+        tamilScript.src = tamilScriptPath;
+        
+        // Remove old scripts
+        const oldTamilScript = document.getElementById('bible-data-script-tamil');
+        if (oldTamilScript) oldTamilScript.remove();
+        const oldEnglishScript = document.getElementById('bible-data-script');
+        if (oldEnglishScript) oldEnglishScript.remove();
+        
+        tamilScript.onload = () => {
+            const dataVarName = `${book.file}_data`;
+            currentTamilData = window[dataVarName];
             
-            if (currentData && currentTamilData) {
-                updateUI();
+            // Now load English
+            const englishScriptPath = `Bible/easy-english/${testament}/${book.file}.js`;
+            const englishScript = document.createElement('script');
+            englishScript.id = 'bible-data-script';
+            englishScript.src = englishScriptPath;
+            
+            englishScript.onload = () => {
+                currentData = window[dataVarName];
+                if (currentData && currentTamilData) {
+                    updateUI();
+                    hideLoader();
+                }
+            };
+            
+            englishScript.onerror = () => {
+                console.error(`Failed to load ${englishScriptPath}`);
                 hideLoader();
-            } else {
-                throw new Error('Failed to load Bible data');
-            }
-        } else {
-            // Single language mode
-            let languageFolder = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
-            currentData = await offlineManager.loadBookData(book.file, languageFolder, testament);
+            };
+            
+            document.body.appendChild(englishScript);
+        };
+        
+        tamilScript.onerror = () => {
+            console.error(`Failed to load ${tamilScriptPath}`);
+            hideLoader();
+        };
+        
+        document.body.appendChild(tamilScript);
+        
+    } else {
+        // Single language mode
+        let languageFolder = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
+        const scriptPath = `Bible/${languageFolder}/${testament}/${book.file}.js`;
+        
+        // Remove previous scripts
+        const oldScript = document.getElementById('bible-data-script');
+        if (oldScript) oldScript.remove();
+        const oldTamilScript = document.getElementById('bible-data-script-tamil');
+        if (oldTamilScript) oldTamilScript.remove();
+        
+        // Load new script
+        const script = document.createElement('script');
+        script.id = 'bible-data-script';
+        script.src = scriptPath;
+        script.onload = () => {
+            const dataVarName = `${book.file}_data`;
+            currentData = window[dataVarName];
             currentTamilData = null;
             
             if (currentData) {
                 updateUI();
                 hideLoader();
             } else {
-                throw new Error('Failed to load Bible data');
+                console.error('Failed to load Bible data');
+                hideLoader();
             }
-        }
-    } catch (error) {
-        console.error('Failed to load book:', error);
-        hideLoader();
+        };
+        script.onerror = () => {
+            console.error(`Failed to load ${scriptPath}`);
+            hideLoader();
+        };
         
-        // Show error message to user
-        if (!navigator.onLine) {
-            offlineManager.showNotification('This book is not available offline. Please download it first or connect to internet.', 'error');
-        } else {
-            offlineManager.showNotification('Failed to load book. Please try again.', 'error');
-        }
+        document.body.appendChild(script);
     }
 }
 
