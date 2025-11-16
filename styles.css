@@ -1235,27 +1235,33 @@ body.dark-theme .jesus-name {
         left: 0;
         top: 60px;
         padding-top: 0;
-        overflow-y: auto;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
         height: calc(100vh - 60px);
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
+        max-height: calc(100vh - 60px);
     }
     
     .chapters-column.drawer-open {
         left: 50%;
         top: 60px;
         padding-top: 0;
-        overflow-y: auto;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
         height: calc(100vh - 60px);
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
+        max-height: calc(100vh - 60px);
     }
     
     .verses-column.drawer-open {
         left: 75%;
         top: 60px;
         padding-top: 0;
-        overflow-y: auto;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
         height: calc(100vh - 60px);
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
+        max-height: calc(100vh - 60px);
     }
     
     /* Hide bottom nav when drawer is open */
