@@ -1035,7 +1035,7 @@ body:not(.dark-theme) .moon-icon {
     width: 0;
     min-width: 0;
     overflow: hidden;
-    border-right: none;
+    border-right: none !important;
 }
 
 .book-item {
@@ -1083,7 +1083,6 @@ body:not(.dark-theme) .moon-icon {
     width: 60px;
     min-width: 0;
     background-color: #f8f9fa;
-    border-right: 1px solid #e0e0e0 !important;
     overflow-y: auto;
     overflow-x: hidden;
     flex-shrink: 0;
@@ -1092,12 +1091,20 @@ body:not(.dark-theme) .moon-icon {
     flex-direction: column;
 }
 
+.chapters-column {
+    border-right: 1px solid #e0e0e0 !important;
+}
+
+.verses-column {
+    border-right: 1px solid #e0e0e0 !important;
+}
+
 .chapters-column.hidden,
 .verses-column.hidden {
     width: 0;
     min-width: 0;
     overflow: hidden;
-    border-right: none;
+    border-right: none !important;
 }
 
 .number-item {
@@ -1286,7 +1293,7 @@ body.dark-theme .jesus-name {
 .chapters-column::-webkit-scrollbar,
 .verses-column::-webkit-scrollbar,
 .content-area::-webkit-scrollbar {
-    width: 10px;
+    width: 10px !important;
 }
 
 .books-sidebar::-webkit-scrollbar-track,
@@ -1302,7 +1309,7 @@ body.dark-theme .jesus-name {
 .content-area::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: 10px;
-    border: 2px solid transparent;
+    border: none;
     background-clip: padding-box;
     transition: background 0.3s ease;
 }
@@ -1518,6 +1525,7 @@ body.dark-theme .jesus-name {
         border-right: 1px solid #e0e0e0 !important;
         border-bottom: none;
         background-color: #ffffff;
+        box-sizing: border-box;
     }
     
     .chapters-column {
@@ -1525,12 +1533,15 @@ body.dark-theme .jesus-name {
         width: 25%;
         background-color: #ffffff;
         border-right: 1px solid #e0e0e0 !important;
+        box-sizing: border-box;
     }
     
     .verses-column {
         display: block;
         width: 25%;
         background-color: #ffffff;
+        box-sizing: border-box;
+        border-right: none !important;
     }
     
     /* Show drawer when active */
@@ -1544,6 +1555,8 @@ body.dark-theme .jesus-name {
         padding-bottom: 6rem;
         max-height: 100vh;
         background-color: #f8f9fa;
+        border-right: 1px solid #e0e0e0 !important;
+        box-sizing: border-box;
     }
     
     .chapters-column.drawer-open {
@@ -1556,6 +1569,8 @@ body.dark-theme .jesus-name {
         padding-bottom: 6rem;
         max-height: 100vh;
         background-color: #fafafa;
+        border-right: 1px solid #e0e0e0 !important;
+        box-sizing: border-box;
     }
     
     .verses-column.drawer-open {
@@ -1568,6 +1583,8 @@ body.dark-theme .jesus-name {
         padding-bottom: 6rem;
         max-height: 100vh;
         background-color: #fafafa;
+        border-right: none !important;
+        box-sizing: border-box;
     }
     
     /* Hide bottom nav when drawer is open */
@@ -1576,11 +1593,17 @@ body.dark-theme .jesus-name {
         display: none !important;
     }
     
-    /* Mobile drawer scrollbars - always visible */
+    /* Mobile drawer scrollbars - overlay style */
+    .books-sidebar,
+    .chapters-column,
+    .verses-column {
+        scrollbar-gutter: stable;
+    }
+    
     .books-sidebar::-webkit-scrollbar,
     .chapters-column::-webkit-scrollbar,
     .verses-column::-webkit-scrollbar {
-        width: 6px;
+        width: 0px !important;
     }
     
     .books-sidebar::-webkit-scrollbar-track,
@@ -1592,14 +1615,15 @@ body.dark-theme .jesus-name {
     .books-sidebar::-webkit-scrollbar-thumb,
     .chapters-column::-webkit-scrollbar-thumb,
     .verses-column::-webkit-scrollbar-thumb {
-        background-color: #5f6368;
-        border-radius: 3px;
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
     }
     
     .books-sidebar::-webkit-scrollbar-thumb:hover,
     .chapters-column::-webkit-scrollbar-thumb:hover,
     .verses-column::-webkit-scrollbar-thumb:hover {
-        background-color: #80868b;
+        background-color: transparent;
     }
     
     /* Content area takes full width on mobile */
@@ -2033,7 +2057,7 @@ body.dark-theme .color-option.active span {
 
 body.dark-theme .books-sidebar {
     background-color: #292a2d;
-    border-right: 1px solid #3c4043;
+    border-right: 1px solid #3c4043 !important;
 }
 
 body.dark-theme .book-item:hover {
@@ -2056,7 +2080,7 @@ body.dark-theme .book-item.active .book-name {
 body.dark-theme .chapters-column,
 body.dark-theme .verses-column {
     background-color: #292a2d;
-    border-right: 1px solid #3c4043;
+    border-right: 1px solid #3c4043 !important;
 }
 
 body.dark-theme .number-item {
@@ -2192,10 +2216,14 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
         border-right: 1px solid #3c4043 !important;
     }
     
-    body.dark-theme .chapters-column,
-    body.dark-theme .verses-column {
+    body.dark-theme .chapters-column {
         background-color: #292a2d;
         border-right: 1px solid #3c4043 !important;
+    }
+    
+    body.dark-theme .verses-column {
+        background-color: #292a2d;
+        border-right: none !important;
     }
     
     body.dark-theme .books-sidebar .book-item {
@@ -2240,10 +2268,16 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     
     body.dark-theme .books-sidebar.drawer-open {
         background-color: #292a2d;
+        border-right: 1px solid #3c4043 !important;
     }
     
-    body.dark-theme .chapters-column.drawer-open,
+    body.dark-theme .chapters-column.drawer-open {
+        background-color: #292a2d;
+        border-right: 1px solid #3c4043 !important;
+    }
+    
     body.dark-theme .verses-column.drawer-open {
         background-color: #292a2d;
+        border-right: none !important;
     }
 }
