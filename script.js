@@ -367,6 +367,13 @@ function updateVerses() {
         return;
     }
     
+    // Safety check: if currentData is not loaded yet, skip update
+    if (!currentData) {
+        console.log('Waiting for data to load...');
+        versesColumn.innerHTML = '';
+        return;
+    }
+    
     const chapterKey = `chapter_${currentChapter}`;
     const chapterData = currentData[chapterKey];
     
@@ -438,6 +445,14 @@ function highlightSpecialText(text, language) {
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
+    
+    // Safety check: if currentData is not loaded yet, skip display
+    if (!currentData) {
+        console.log('Waiting for data to load...');
+        contentArea.innerHTML = '<p>Loading...</p>';
+        return;
+    }
+    
     const chapterKey = `chapter_${currentChapter}`;
     const chapterData = currentData[chapterKey];
     
