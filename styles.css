@@ -1233,28 +1233,28 @@ body.dark-theme .jesus-name {
     /* Show drawer when active */
     .books-sidebar.drawer-open {
         left: 0;
-        top: 0;
-        padding-top: 60px;
+        top: 60px;
+        padding-top: 0;
         overflow-y: auto;
-        height: 100vh;
+        height: calc(100vh - 60px);
         padding-bottom: 2rem;
     }
     
     .chapters-column.drawer-open {
         left: 50%;
-        top: 0;
-        padding-top: 60px;
+        top: 60px;
+        padding-top: 0;
         overflow-y: auto;
-        height: 100vh;
+        height: calc(100vh - 60px);
         padding-bottom: 2rem;
     }
     
     .verses-column.drawer-open {
         left: 75%;
-        top: 0;
-        padding-top: 60px;
+        top: 60px;
+        padding-top: 0;
         overflow-y: auto;
-        height: 100vh;
+        height: calc(100vh - 60px);
         padding-bottom: 2rem;
     }
     
