@@ -895,6 +895,14 @@ function initializeSearch() {
     // Apply filter and trigger search
     function applyFilter() {
         closeFilter();
+        
+        // Update filter button active state
+        if (filterBook.value !== '' || filterChapter.value !== '') {
+            filterBtn.classList.add('active');
+        } else {
+            filterBtn.classList.remove('active');
+        }
+        
         const query = searchInput.value.trim();
         if (query) {
             showLoadingState();
@@ -907,6 +915,7 @@ function initializeSearch() {
     function clearFilterValues() {
         filterBook.value = '';
         filterChapter.value = '';
+        filterBtn.classList.remove('active');
         applyFilter();
     }
     
@@ -966,6 +975,7 @@ function initializeSearch() {
         searchResultsInfo.style.display = 'none';
         filterBook.value = '';
         filterChapter.value = '';
+        filterBtn.classList.remove('active');
         showEmptyState();
         
         // Force refresh book names display after sidebar is visible
