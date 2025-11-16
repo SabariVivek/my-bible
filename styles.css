@@ -845,6 +845,7 @@ body:not(.dark-theme) .moon-icon {
     max-width: 100%;
     margin: 0;
     padding-bottom: 60px;
+    padding-top: 1rem;
 }
 
 .verse-line {
@@ -1240,6 +1241,7 @@ body.dark-theme .jesus-name {
         height: 100vh;
         padding-bottom: 6rem;
         max-height: 100vh;
+        background-color: #f8f9fa;
     }
     
     .chapters-column.drawer-open {
@@ -1251,6 +1253,7 @@ body.dark-theme .jesus-name {
         height: 100vh;
         padding-bottom: 6rem;
         max-height: 100vh;
+        background-color: #fafafa;
     }
     
     .verses-column.drawer-open {
@@ -1262,6 +1265,7 @@ body.dark-theme .jesus-name {
         height: 100vh;
         padding-bottom: 6rem;
         max-height: 100vh;
+        background-color: #fafafa;
     }
     
     /* Hide bottom nav when drawer is open */
@@ -1803,5 +1807,14 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     
     body.dark-theme .main-layout {
         background-color: #202124;
+    }
+    
+    body.dark-theme .books-sidebar.drawer-open {
+        background-color: #292a2d;
+    }
+    
+    body.dark-theme .chapters-column.drawer-open,
+    body.dark-theme .verses-column.drawer-open {
+        background-color: #292a2d;
     }
 }
