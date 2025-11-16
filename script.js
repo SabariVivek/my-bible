@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
     initializeBookList();
     initializeMobileDrawer();
-    initializeLanguageSelector();
+    initializeMobileLanguageModal();
     initializeSiteTitle();
     loadBook(currentBook, currentChapter);
 });
@@ -711,13 +711,16 @@ function initializeTheme() {
     }
 }
 
-// Initialize language selector
-function initializeLanguageSelector() {
-    const languageSelector = document.querySelector('.language-selector');
-    const langLabel = document.querySelector('.lang-label');
-    const langOptions = document.querySelectorAll('.lang-option');
+
+
+// Initialize mobile language modal
+function initializeMobileLanguageModal() {
+    const langBtn = document.querySelector('.lang-btn');
+    const modalOverlay = document.querySelector('.language-modal-overlay');
+    const modalCloseBtn = document.querySelector('.modal-close-btn');
+    const modalOptions = document.querySelectorAll('.language-modal-option');
     
-    if (!languageSelector || !langLabel) return;
+    if (!langBtn || !modalOverlay) return;
     
     // Ensure currentLanguage is properly initialized
     if (!currentLanguage || !['english', 'tamil', 'both'].includes(currentLanguage)) {
@@ -725,87 +728,63 @@ function initializeLanguageSelector() {
         localStorage.setItem('currentLanguage', 'tamil');
     }
     
-    // Function to update visible options
-    function updateVisibleOptions() {
-        langOptions.forEach(option => {
-            const optionLang = option.dataset.lang;
-            if (optionLang === currentLanguage) {
-                option.style.display = 'none';
+    // Update active state based on current language
+    function updateModalActiveState() {
+        modalOptions.forEach(option => {
+            if (option.dataset.lang === currentLanguage) {
+                option.classList.add('active');
             } else {
-                option.style.display = 'block';
+                option.classList.remove('active');
             }
         });
     }
     
-    // Toggle dropdown
-    languageSelector.addEventListener('click', (e) => {
+    // Open modal
+    langBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log('Language selector clicked, current:', currentLanguage);
-        updateVisibleOptions();
-        languageSelector.classList.toggle('open');
+        updateModalActiveState();
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
     
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!languageSelector.contains(e.target)) {
-            languageSelector.classList.remove('open');
+    // Close modal
+    function closeModal() {
+        modalOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    modalCloseBtn.addEventListener('click', closeModal);
+    
+    // Close when clicking overlay
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
         }
     });
     
-    // Handle language option selection
-    langOptions.forEach(option => {
-        option.addEventListener('click', (e) => {
-            e.stopPropagation();
-            console.log('Language option clicked:', option.dataset.lang);
-            
+    // Handle language selection
+    modalOptions.forEach(option => {
+        option.addEventListener('click', () => {
             const selectedLang = option.dataset.lang;
             currentLanguage = selectedLang;
             localStorage.setItem('currentLanguage', selectedLang);
             
-            // Update label based on selection
-            if (selectedLang === 'english') {
-                langLabel.textContent = 'English';
-            } else if (selectedLang === 'tamil') {
-                langLabel.textContent = 'Tamil';
-            } else if (selectedLang === 'both') {
-                langLabel.textContent = 'Both';
-            }
-            
             // Update active state
-            langOptions.forEach(opt => opt.classList.remove('active'));
-            option.classList.add('active');
-            
-            // Update visible options
-            updateVisibleOptions();
+            updateModalActiveState();
             
             // Update book names in sidebar
             updateBookNames();
             
-            // Close dropdown
-            languageSelector.classList.remove('open');
+            // Close modal
+            closeModal();
             
             // Reload current book with new language
             loadBook(currentBook, currentChapter);
         });
     });
     
-    // Set initial active state based on currentLanguage from localStorage
-    const initialOption = Array.from(langOptions).find(opt => opt.dataset.lang === currentLanguage);
-    if (initialOption) {
-        initialOption.classList.add('active');
-    }
-    
-    // Update label based on current language
-    if (currentLanguage === 'english') {
-        langLabel.textContent = 'English';
-    } else if (currentLanguage === 'tamil') {
-        langLabel.textContent = 'Tamil';
-    } else if (currentLanguage === 'both') {
-        langLabel.textContent = 'Both';
-    }
-    
-    updateVisibleOptions();
-    updateBookNames(); // Initialize book names based on default language
+    // Initialize active state
+    updateModalActiveState();
 }
 
 // Site title click to navigate to John 1:1

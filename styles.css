@@ -142,106 +142,117 @@ body.dark-theme .book-loader {
     align-items: center;
 }
 
-/* Language Selector */
-.language-selector {
-    position: relative;
+/* Language Modal for Mobile */
+.language-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    animation: fadeIn 0.2s ease;
+}
+
+.language-modal-overlay.active {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 0.375rem;
-    padding: 0.5rem 0.75rem;
-    background-color: transparent;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-    user-select: none;
-    width: 130px;
+    justify-content: center;
 }
 
-.language-selector:hover {
-    background-color: #e8eaed;
-    border-color: #e0e0e0;
-}
-
-.language-selector.open {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background-color: #e8eaed;
-    border-color: #e0e0e0;
-}
-
-.lang-label {
-    font-size: 0.875rem;
-    color: #5f6368;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    flex: 1;
-    text-align: left;
-}
-
-.lang-icon {
-    width: 14px;
-    height: 14px;
-    stroke: #5f6368;
-    transition: transform 0.2s ease;
-}
-
-.language-selector:hover .lang-icon {
-    transform: translateY(1px);
-}
-
-.language-selector.open .lang-icon {
-    transform: rotate(180deg);
-}
-
-/* Language Dropdown */
-.language-dropdown {
-    position: absolute;
-    top: 100%;
-    left: -1px;
-    right: -1px;
+.language-modal {
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-top: none;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px);
-    transition: all 0.2s ease;
-    z-index: 1000;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 320px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease;
 }
 
-.language-selector.open .language-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.language-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.lang-option {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.875rem;
-    color: #5f6368;
+.language-modal-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
     cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
     transition: background-color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    background-color: #f1f3f4;
+}
+
+.modal-close-btn svg {
+    color: #5f6368;
+}
+
+.language-modal-options {
+    padding: 0.5rem;
+}
+
+.language-modal-option {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    margin: 0.25rem 0;
+    background: none;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.2s ease;
     text-align: left;
 }
 
-.lang-option:hover {
-    background-color: #e8eaed;
+.language-modal-option:hover {
+    background-color: #f1f3f4;
+    border-color: #5f6368;
 }
 
-.lang-option:last-child {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+.language-modal-option.active {
+    background-color: #e8f0fe;
+    border-color: #1a73e8;
+    color: #1a73e8;
 }
 
-.lang-option.active {
-    background-color: #e8eaed;
-    color: #000000;
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .icon-btn {
@@ -763,39 +774,6 @@ body.dark-theme .jesus-name {
         display: none;
     }
     
-    /* Smaller language selector on mobile */
-    .language-selector {
-        padding: 0.375rem 0.5rem;
-        gap: 0.25rem;
-        border-radius: 6px;
-        width: 75px;
-    }
-    
-    .lang-label {
-        font-size: 0.75rem;
-        letter-spacing: 0.2px;
-    }
-    
-    .lang-icon {
-        width: 12px;
-        height: 12px;
-    }
-    
-    .language-dropdown {
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-    }
-    
-    .lang-option {
-        padding: 0.375rem 0.5rem;
-        font-size: 0.75rem;
-    }
-    
-    .lang-option:last-child {
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-    }
-    
     .main-layout {
         position: relative;
         display: flex;
@@ -996,41 +974,45 @@ body.dark-theme .icon-btn:hover {
     /* Removed hover effects to keep minimal */
 }
 
-body.dark-theme .language-selector {
-    border-color: #3c4043;
+/* Dark theme for language modal */
+body.dark-theme .language-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-body.dark-theme .language-selector:hover,
-body.dark-theme .language-selector.open {
-    background-color: #3c4043;
-    border-color: #3c4043;
-}
-
-body.dark-theme .lang-label {
-    color: #9aa0a6;
-}
-
-body.dark-theme .lang-icon {
-    stroke: #9aa0a6;
-}
-
-body.dark-theme .language-dropdown {
+body.dark-theme .language-modal {
     background-color: #292a2d;
-    border-color: #3c4043;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-theme .lang-option {
+body.dark-theme .language-modal-header {
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .language-modal-header h3 {
+    color: #e8eaed;
+}
+
+body.dark-theme .modal-close-btn:hover {
+    background-color: #3c4043;
+}
+
+body.dark-theme .modal-close-btn svg {
     color: #9aa0a6;
 }
 
-body.dark-theme .lang-option:hover {
-    background-color: #3c4043;
+body.dark-theme .language-modal-option {
+    color: #e8eaed;
+    border-color: #3c4043;
 }
 
-body.dark-theme .lang-option.active {
+body.dark-theme .language-modal-option:hover {
     background-color: #3c4043;
-    color: #e8eaed;
+    border-color: #5f6368;
+}
+
+body.dark-theme .language-modal-option.active {
+    background-color: #1a3a52;
+    border-color: #1a73e8;
+    color: #8ab4f8;
 }
 
 body.dark-theme .books-sidebar {
