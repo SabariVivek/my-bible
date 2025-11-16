@@ -1022,7 +1022,7 @@ body:not(.dark-theme) .moon-icon {
     width: 180px;
     min-width: 0;
     background-color: #f8f9fa;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0 !important;
     overflow-y: auto;
     overflow-x: hidden;
     flex-shrink: 0;
@@ -1083,7 +1083,7 @@ body:not(.dark-theme) .moon-icon {
     width: 60px;
     min-width: 0;
     background-color: #f8f9fa;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0 !important;
     overflow-y: auto;
     overflow-x: hidden;
     flex-shrink: 0;
@@ -1113,23 +1113,23 @@ body:not(.dark-theme) .moon-icon {
 }
 
 .number-item:hover {
-    background-color: #f1f3f4 !important;
+    background-color: #e8eaed !important;
 }
 
 .number-item.active {
-    background-color: #f1f3f4 !important;
+    background-color: #e8eaed !important;
     color: #000000;
     font-weight: 600;
 }
 
 .chapters-column .number-item:hover,
 .verses-column .number-item:hover {
-    background-color: #f1f3f4;
+    background-color: #e8eaed;
 }
 
 .chapters-column .number-item.active,
 .verses-column .number-item.active {
-    background-color: #f1f3f4;
+    background-color: #e8eaed !important;
     color: #000000;
     font-weight: 600;
 }
@@ -1515,7 +1515,7 @@ body.dark-theme .jesus-name {
         width: 50%;
         max-height: none;
         height: calc(100vh - 60px);
-        border-right: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0 !important;
         border-bottom: none;
         background-color: #ffffff;
     }
@@ -1524,7 +1524,7 @@ body.dark-theme .jesus-name {
         display: block;
         width: 25%;
         background-color: #ffffff;
-        border-right: 1px solid #e0e0e0;
+        border-right: 1px solid #e0e0e0 !important;
     }
     
     .verses-column {
@@ -2068,7 +2068,7 @@ body.dark-theme .number-item:hover {
 }
 
 body.dark-theme .number-item.active {
-    background-color: #3c4043;
+    background-color: #3c4043 !important;
     color: #e8eaed;
     font-weight: 600;
 }
@@ -2189,13 +2189,13 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
 @media (max-width: 768px) {
     body.dark-theme .books-sidebar {
         background-color: #292a2d;
-        border-right: 1px solid #3c4043;
+        border-right: 1px solid #3c4043 !important;
     }
     
     body.dark-theme .chapters-column,
     body.dark-theme .verses-column {
         background-color: #292a2d;
-        border-right: 1px solid #3c4043;
+        border-right: 1px solid #3c4043 !important;
     }
     
     body.dark-theme .books-sidebar .book-item {
@@ -2230,7 +2230,7 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     
     body.dark-theme .chapters-column .number-item.active,
     body.dark-theme .verses-column .number-item.active {
-        background-color: #3c4043;
+        background-color: #3c4043 !important;
         color: #e8eaed;
     }
     
