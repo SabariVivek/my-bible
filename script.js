@@ -846,6 +846,7 @@ function initializeMobileLanguageModal() {
 function initializeSearch() {
     const searchBtn = document.getElementById('search-btn');
     const backBtn = document.getElementById('back-from-search');
+    const clearBtn = document.getElementById('clear-search');
     const searchBar = document.getElementById('search-bar');
     const scriptureText = document.getElementById('scripture-text');
     const searchInput = document.getElementById('search-input');
@@ -906,6 +907,7 @@ function initializeSearch() {
         versesColumn.style.display = 'flex';
         if (bottomNav) bottomNav.style.display = 'flex';
         searchInput.value = '';
+        clearBtn.style.display = 'none';
         searchResultsInfo.style.display = 'none';
         showEmptyState();
         
@@ -915,12 +917,24 @@ function initializeSearch() {
         }, 0);
     }
     
+    function clearSearch() {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchResultsInfo.style.display = 'none';
+        showEmptyState();
+        searchInput.focus();
+    }
+    
     searchBtn.addEventListener('click', openSearch);
     backBtn.addEventListener('click', closeSearch);
+    clearBtn.addEventListener('click', clearSearch);
     
     // Show/hide clear button based on input
     searchInput.addEventListener('input', (e) => {
         const value = e.target.value.trim();
+        
+        // Show/hide clear button
+        clearBtn.style.display = value ? 'flex' : 'none';
         
         // Debounce search
         clearTimeout(searchTimeout);
@@ -954,8 +968,10 @@ function initializeSearch() {
     
     // Show loading state
     function showLoadingState() {
+        searchResultsInfo.style.display = 'none';
         searchResults.innerHTML = `
             <div class="search-loading">
+                <div class="book-loader"></div>
                 <p>Searching...</p>
             </div>
         `;
@@ -977,104 +993,101 @@ function initializeSearch() {
         console.log('Is Tamil:', isTamil);
         const results = [];
         const searchLower = query.toLowerCase();
+        const batchSize = 5; // Load 5 books at a time
         
-        // Search through all books
-        for (let bookIndex = 0; bookIndex < bibleBooks.length; bookIndex++) {
-            const book = bibleBooks[bookIndex];
-            const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
-            const language = isTamil ? 'tamil' : 'easy-english';
+        // Process books in batches for better performance
+        for (let i = 0; i < bibleBooks.length; i += batchSize) {
+            const batch = bibleBooks.slice(i, i + batchSize);
             
-            try {
-                // Load book data using script tag (same as loadBook function)
-                const scriptPath = `Bible/${language}/${testament}/${book.file}.js`;
+            // Load batch of books in parallel
+            await Promise.all(batch.map(async (book, batchIndex) => {
+                const bookIndex = i + batchIndex;
+                const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+                const language = isTamil ? 'tamil' : 'easy-english';
                 
-                // Create a promise to wait for script load
-                await new Promise((resolve, reject) => {
-                    const script = document.createElement('script');
-                    script.src = scriptPath;
-                    script.id = `search-script-${bookIndex}`;
+                try {
+                    // Load book data using script tag
+                    const scriptPath = `Bible/${language}/${testament}/${book.file}.js`;
                     
-                    script.onload = () => {
-                        resolve();
-                    };
-                    
-                    script.onerror = () => {
-                        reject(new Error(`Failed to load ${scriptPath}`));
-                    };
-                    
-                    document.body.appendChild(script);
-                });
-                
-                // Get the data from window
-                const dataVarName = `${book.file}_data`;
-                const bookData = window[dataVarName];
-                
-                if (!bookData) {
-                    console.error(`No data found for ${book.name}`);
-                    continue;
-                }
-                
-                // Search through chapters
-                for (let chapterNum = 1; chapterNum <= book.chapters; chapterNum++) {
-                    const chapterKey = `chapter_${chapterNum}`;
-                    const chapterData = bookData[chapterKey];
-                    
-                    if (!chapterData) continue;
-                    
-                    // Search through verses
-                    for (const verseKey in chapterData) {
-                        const verseText = chapterData[verseKey];
-                        const verseNum = verseKey.replace('verse_', '');
+                    await new Promise((resolve, reject) => {
+                        const script = document.createElement('script');
+                        script.src = scriptPath;
+                        script.id = `search-script-${bookIndex}`;
                         
-                        // Check if verse contains search query matching word boundaries
-                        let isMatch = false;
-                        let matchPosition = -1;
+                        script.onload = () => resolve();
+                        script.onerror = () => reject(new Error(`Failed to load ${scriptPath}`));
                         
-                        if (isTamil) {
-                            // For Tamil, do direct substring match (word boundaries don't work well with Tamil Unicode)
-                            matchPosition = verseText.indexOf(query);
-                            isMatch = matchPosition !== -1;
-                        } else {
-                            // For English, match at word boundaries only (case-insensitive)
-                            const regex = new RegExp(`\\b${escapeRegExp(query)}`, 'gi');
-                            const match = verseText.match(regex);
-                            if (match) {
-                                isMatch = true;
-                                matchPosition = verseText.toLowerCase().search(regex);
-                            }
-                        }
+                        document.body.appendChild(script);
+                    });
+                    
+                    // Get the data from window
+                    const dataVarName = `${book.file}_data`;
+                    const bookData = window[dataVarName];
+                    
+                    if (!bookData) {
+                        console.error(`No data found for ${book.name}`);
+                        return;
+                    }
+                    
+                    // Search through chapters
+                    for (let chapterNum = 1; chapterNum <= book.chapters; chapterNum++) {
+                        const chapterKey = `chapter_${chapterNum}`;
+                        const chapterData = bookData[chapterKey];
                         
-                        if (isMatch) {
-                            results.push({
-                                bookIndex,
-                                bookName: isTamil ? book.tamilName : book.name,
-                                chapter: chapterNum,
-                                verse: verseNum,
-                                text: verseText,
-                                query: query,
-                                matchPosition: matchPosition  // Store position for sorting
-                            });
+                        if (!chapterData) continue;
+                        
+                        // Search through verses
+                        for (const verseKey in chapterData) {
+                            const verseText = chapterData[verseKey];
+                            const verseNum = verseKey.replace('verse_', '');
                             
-                            // Limit to 100 results for performance
-                            if (results.length >= 100) {
-                                console.log('Found 100 results, stopping search');
-                                // Clean up search scripts
-                                cleanupSearchScripts();
-                                displayResults(results);
-                                return;
+                            // Check if verse contains search query
+                            let isMatch = false;
+                            let matchPosition = -1;
+                            
+                            if (isTamil) {
+                                matchPosition = verseText.indexOf(query);
+                                isMatch = matchPosition !== -1;
+                            } else {
+                                const regex = new RegExp(`\\b${escapeRegExp(query)}`, 'gi');
+                                const match = verseText.match(regex);
+                                if (match) {
+                                    isMatch = true;
+                                    matchPosition = verseText.toLowerCase().search(regex);
+                                }
+                            }
+                            
+                            if (isMatch) {
+                                results.push({
+                                    bookIndex,
+                                    bookName: isTamil ? book.tamilName : book.name,
+                                    chapter: chapterNum,
+                                    verse: verseNum,
+                                    text: verseText,
+                                    query: query,
+                                    matchPosition: matchPosition
+                                });
                             }
                         }
                     }
+                    
+                    // Remove the script after processing
+                    const scriptToRemove = document.getElementById(`search-script-${bookIndex}`);
+                    if (scriptToRemove) {
+                        scriptToRemove.remove();
+                    }
+                    
+                } catch (error) {
+                    console.error(`Error loading ${book.name}:`, error);
                 }
-                
-                // Remove the script after processing
-                const scriptToRemove = document.getElementById(`search-script-${bookIndex}`);
-                if (scriptToRemove) {
-                    scriptToRemove.remove();
-                }
-                
-            } catch (error) {
-                console.error(`Error loading ${book.name}:`, error);
+            }));
+            
+            // Stop if we have 100 results
+            if (results.length >= 100) {
+                console.log('Found 100 results, stopping search');
+                cleanupSearchScripts();
+                displayResults(results.slice(0, 100));
+                return;
             }
         }
         
@@ -1116,9 +1129,9 @@ function initializeSearch() {
             return;
         }
         
-        // Show results count
+        // Show results count - display "100+" if 100 or more, else exact count
         searchResultsInfo.style.display = 'block';
-        resultsCount.textContent = results.length;
+        resultsCount.textContent = results.length >= 100 ? '100+' : results.length;
         
         let html = '';
         

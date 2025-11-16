@@ -437,7 +437,7 @@ body.dark-theme .book-loader {
 
 .search-bar .search-input {
     width: 100%;
-    padding: 0.75rem 1rem 0.75rem 3rem;
+    padding: 0.75rem 3rem 0.75rem 3rem;
     border: none;
     background: #383838;
     color: #e8eaed;
@@ -453,6 +453,20 @@ body.dark-theme .book-loader {
 
 .search-bar .search-input::placeholder {
     color: #9aa0a6;
+}
+
+.search-bar .clear-search-btn {
+    position: absolute;
+    right: 0.5rem;
+    padding: 0.375rem;
+    color: #9aa0a6;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+}
+
+.search-bar .clear-search-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e8eaed;
 }
 
 /* Search input in header */
@@ -590,11 +604,16 @@ body.dark-theme .book-loader {
     padding: 4rem 2rem;
     color: #9aa0a6;
     text-align: center;
+    min-height: 50vh;
 }
 
 .search-empty-state svg {
     margin-bottom: 1.5rem;
     opacity: 0.5;
+}
+
+.search-loading .book-loader {
+    margin-bottom: 1rem;
 }
 
 .search-empty-state p,
@@ -1546,6 +1565,15 @@ body:not(.dark-theme) .search-bar .search-input::placeholder {
 
 body:not(.dark-theme) .search-bar .search-input-icon {
     color: #5f6368;
+}
+
+body:not(.dark-theme) .search-bar .clear-search-btn {
+    color: #5f6368;
+}
+
+body:not(.dark-theme) .search-bar .clear-search-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #202124;
 }
 
 body:not(.dark-theme) .search-results-info {
