@@ -1233,35 +1233,35 @@ body.dark-theme .jesus-name {
     /* Show drawer when active */
     .books-sidebar.drawer-open {
         left: 0;
-        top: 60px;
-        padding-top: 0;
+        top: 0;
+        padding-top: 60px;
         overflow-y: scroll !important;
         overflow-x: hidden;
-        height: calc(100vh - 60px);
-        padding-bottom: 4rem;
-        max-height: calc(100vh - 60px);
+        height: 100vh;
+        padding-bottom: 6rem;
+        max-height: 100vh;
     }
     
     .chapters-column.drawer-open {
         left: 50%;
-        top: 60px;
-        padding-top: 0;
+        top: 0;
+        padding-top: 60px;
         overflow-y: scroll !important;
         overflow-x: hidden;
-        height: calc(100vh - 60px);
-        padding-bottom: 4rem;
-        max-height: calc(100vh - 60px);
+        height: 100vh;
+        padding-bottom: 6rem;
+        max-height: 100vh;
     }
     
     .verses-column.drawer-open {
         left: 75%;
-        top: 60px;
-        padding-top: 0;
+        top: 0;
+        padding-top: 60px;
         overflow-y: scroll !important;
         overflow-x: hidden;
-        height: calc(100vh - 60px);
-        padding-bottom: 4rem;
-        max-height: calc(100vh - 60px);
+        height: 100vh;
+        padding-bottom: 6rem;
+        max-height: 100vh;
     }
     
     /* Hide bottom nav when drawer is open */
