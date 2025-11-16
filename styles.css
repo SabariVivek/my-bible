@@ -1021,7 +1021,7 @@ body:not(.dark-theme) .moon-icon {
 .books-sidebar {
     width: 180px;
     min-width: 0;
-    background-color: #f8f9fa;
+    background-color: #fafafa;
     border-right: 1px solid #e0e0e0;
     overflow-y: auto;
     overflow-x: hidden;
