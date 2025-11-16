@@ -1014,14 +1014,14 @@ body:not(.dark-theme) .moon-icon {
     height: calc(100vh - 60px);
     overflow: hidden;
     position: relative;
-    background-color: #fafafa;
+    background-color: #f8f9fa;
 }
 
 /* Books Sidebar */
 .books-sidebar {
     width: 180px;
     min-width: 0;
-    background-color: #fafafa;
+    background-color: #f8f9fa;
     border-right: 1px solid #e0e0e0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -1082,7 +1082,7 @@ body:not(.dark-theme) .moon-icon {
 .verses-column {
     width: 60px;
     min-width: 0;
-    background-color: #fafafa;
+    background-color: #f8f9fa;
     border-right: 1px solid #e0e0e0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -1531,7 +1531,7 @@ body.dark-theme .jesus-name {
         height: 100vh;
         padding-bottom: 6rem;
         max-height: 100vh;
-        background-color: #fafafa;
+        background-color: #f8f9fa;
     }
     
     .chapters-column.drawer-open {
