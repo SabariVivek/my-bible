@@ -935,6 +935,9 @@ function initializeSearch() {
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
         
+        // Add active class to search button
+        searchBtn.classList.add('active');
+        
         // Show search bar
         searchBar.style.display = 'flex';
         
@@ -956,6 +959,9 @@ function initializeSearch() {
         const chaptersColumn = document.querySelector('.chapters-column');
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
+        
+        // Remove active class from search button
+        searchBtn.classList.remove('active');
         
         // Hide search bar
         searchBar.style.display = 'none';
@@ -992,7 +998,13 @@ function initializeSearch() {
         searchInput.focus();
     }
     
-    searchBtn.addEventListener('click', openSearch);
+    searchBtn.addEventListener('click', () => {
+        if (isSearchActive) {
+            closeSearch();
+        } else {
+            openSearch();
+        }
+    });
     backBtn.addEventListener('click', closeSearch);
     clearBtn.addEventListener('click', clearSearch);
     filterBtn.addEventListener('click', toggleFilter);

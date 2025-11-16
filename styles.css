@@ -491,8 +491,13 @@ body.dark-theme .book-loader {
     transform: translateX(-50%);
     width: 20px;
     height: 2px;
-    background: #8ab4f8;
-    border-radius: 1px;
+    background-color: #1a73e8;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+body.dark-theme .search-bar .filter-btn.active::after {
+    background-color: #8ab4f8;
 }
 
 .filter-btn-wrapper {
@@ -930,10 +935,6 @@ body.dark-theme .book-loader {
     stroke-width: 2;
 }
 
-.icon-btn:hover {
-    /* Removed hover effects to keep minimal */
-}
-
 .icon-btn:active {
     transform: scale(0.98);
 }
@@ -955,7 +956,7 @@ body.dark-theme .book-loader {
     bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
-    width: 16px;
+    width: 20px;
     height: 2px;
     background-color: #1a73e8;
     border-radius: 2px;
@@ -963,6 +964,24 @@ body.dark-theme .book-loader {
 }
 
 body.dark-theme .theme-toggle::after {
+    background-color: #8ab4f8;
+}
+
+/* Search button active indicator */
+#search-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #1a73e8;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+body.dark-theme #search-btn.active::after {
     background-color: #8ab4f8;
 }
 
@@ -1830,7 +1849,7 @@ body:not(.dark-theme) .search-bar .filter-btn:hover {
 
 /* Light theme filter button active indicator */
 body:not(.dark-theme) .search-bar .filter-btn.active::after {
-    background: #0052cc;
+    background-color: #1a73e8;
 }
 
 /* Light theme filter popup */
