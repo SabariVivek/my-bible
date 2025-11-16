@@ -1113,11 +1113,11 @@ body:not(.dark-theme) .moon-icon {
 }
 
 .number-item:hover {
-    background-color: #e8eaed;
+    background-color: #f1f3f4;
 }
 
 .number-item.active {
-    background-color: #e8eaed;
+    background-color: #f1f3f4;
     color: #000000;
     font-weight: 600;
 }
