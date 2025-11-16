@@ -2088,7 +2088,7 @@ body.dark-theme .number-item {
 }
 
 body.dark-theme .number-item:hover {
-    background-color: #3c4043;
+    background-color: #3c4043 !important;
 }
 
 body.dark-theme .number-item.active {
@@ -2253,7 +2253,7 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     
     body.dark-theme .chapters-column .number-item:hover,
     body.dark-theme .verses-column .number-item:hover {
-        background-color: #3c4043;
+        background-color: #3c4043 !important;
     }
     
     body.dark-theme .chapters-column .number-item.active,
