@@ -76,6 +76,7 @@ let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
+let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
 let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
 
 // Initialize
@@ -503,7 +504,7 @@ function displayChapter() {
             
             html += `<p class="verse-line" data-verse="${verseNum}">
                 <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
-                <span class="english-text">${englishText}</span>
+                <span class="english-text ${englishTextColor}">${englishText}</span>
             </p>`;
         });
     } else {
@@ -719,6 +720,8 @@ function initializeMobileLanguageModal() {
     const modalOverlay = document.querySelector('.language-modal-overlay');
     const modalCloseBtn = document.querySelector('.modal-close-btn');
     const modalOptions = document.querySelectorAll('.language-modal-option');
+    const colorPaletteSection = document.querySelector('.color-palette-section');
+    const colorOptions = document.querySelectorAll('.color-option');
     
     if (!langBtn || !modalOverlay) return;
     
@@ -728,10 +731,34 @@ function initializeMobileLanguageModal() {
         localStorage.setItem('currentLanguage', 'tamil');
     }
     
+    // Ensure englishTextColor is properly initialized
+    if (!englishTextColor || !['default', 'blue', 'red'].includes(englishTextColor)) {
+        englishTextColor = 'default';
+        localStorage.setItem('englishTextColor', 'default');
+    }
+    
     // Update active state based on current language
     function updateModalActiveState() {
         modalOptions.forEach(option => {
             if (option.dataset.lang === currentLanguage) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+        
+        // Show/hide color palette based on 'both' selection
+        if (currentLanguage === 'both') {
+            colorPaletteSection.classList.add('visible');
+        } else {
+            colorPaletteSection.classList.remove('visible');
+        }
+    }
+    
+    // Update color option active state
+    function updateColorActiveState() {
+        colorOptions.forEach(option => {
+            if (option.dataset.color === englishTextColor) {
                 option.classList.add('active');
             } else {
                 option.classList.remove('active');
@@ -772,19 +799,46 @@ function initializeMobileLanguageModal() {
             // Update active state
             updateModalActiveState();
             
+            // Close modal and reload for all language selections
+            // Color palette shows but doesn't block - user can close modal anytime
+            updateBookNames();
+            
+            // If 'both' is selected and color already chosen, close immediately
+            if (selectedLang === 'both' && localStorage.getItem('englishTextColor')) {
+                closeModal();
+                loadBook(currentBook, currentChapter);
+            } else if (selectedLang !== 'both') {
+                closeModal();
+                loadBook(currentBook, currentChapter);
+            }
+            // If 'both' selected but no color chosen yet, keep modal open for first-time selection
+        });
+    });
+    
+    // Handle color selection
+    colorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedColor = option.dataset.color;
+            englishTextColor = selectedColor;
+            localStorage.setItem('englishTextColor', selectedColor);
+            
+            // Update active state
+            updateColorActiveState();
+            
             // Update book names in sidebar
             updateBookNames();
             
             // Close modal
             closeModal();
             
-            // Reload current book with new language
+            // Reload current book with new color
             loadBook(currentBook, currentChapter);
         });
     });
     
-    // Initialize active state
+    // Initialize active states
     updateModalActiveState();
+    updateColorActiveState();
 }
 
 // Site title click to navigate to John 1:1
