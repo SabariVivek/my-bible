@@ -988,13 +988,7 @@ function initializeSearch() {
         chaptersColumn.style.display = 'flex';
         versesColumn.style.display = 'flex';
         if (bottomNav) bottomNav.style.display = 'flex';
-        searchInput.value = '';
-        clearBtn.style.display = 'none';
-        searchResultsInfo.style.display = 'none';
-        filterBook.value = '';
-        filterChapter.value = '';
-        filterBtn.classList.remove('active');
-        showEmptyState();
+        // Don't clear search input, filters, or results - preserve them
         
         // Force refresh book names display after sidebar is visible
         setTimeout(() => {
@@ -1286,11 +1280,10 @@ function initializeSearch() {
                 // Hide search bar
                 searchBar.style.display = 'none';
                 
-                // Hide search, show everything
+                // Hide search, show everything (preserve search query and results)
                 searchResults.style.display = 'none';
                 searchResults.classList.remove('active');
                 searchResultsInfo.style.display = 'none';
-                searchInput.value = '';
                 scriptureText.style.display = 'block';
                 booksSidebar.style.display = 'flex';
                 chaptersColumn.style.display = 'flex';
