@@ -1854,32 +1854,8 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
                             — ${verseReference}
                         </div>
                     </div>
-                    
-                    <div style="display: flex; justify-content: center; max-width: 700px; width: 100%;">
-                        <div class="action-card" id="read-bible-card">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                            </svg>
-                            <div>
-                                <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Read Bible</div>
-                                <div style="font-size: 0.9rem; opacity: 0.8;">Start reading the scriptures</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             `;
-            
-            // Add click handler for read bible card
-            setTimeout(() => {
-                const readBibleCard = document.getElementById('read-bible-card');
-                
-                if (readBibleCard) {
-                    readBibleCard.addEventListener('click', () => {
-                        loadBook(currentBook, currentChapter);
-                    });
-                }
-            }, 0);
         } else {
             scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Verse not found</div>';
         }
