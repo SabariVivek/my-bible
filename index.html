@@ -36,10 +36,13 @@
                 </svg>
             </button>
             <button class="icon-btn lang-btn" aria-label="Language">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"></circle>
                     <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
                 </svg>
             </button>
             <button class="icon-btn theme-toggle" aria-label="Toggle theme">
@@ -66,19 +69,22 @@
     <!-- Search Bar (shown below header when active) -->
     <div id="search-bar" class="search-bar" style="display: none;">
         <button id="back-from-search" class="icon-btn back-btn" aria-label="Back">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
         </button>
         <div class="search-input-wrapper">
-            <svg class="search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <svg class="search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.35-4.35"></path>
             </svg>
             <input id="search-input" type="text" class="search-input" placeholder="Search Bible" autocomplete="off">
             <button id="clear-search" class="icon-btn clear-search-btn" aria-label="Clear" style="display: none;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"></circle>
                     <line x1="15" y1="9" x2="9" y2="15"></line>
                     <line x1="9" y1="9" x2="15" y2="15"></line>
@@ -87,41 +93,43 @@
         </div>
         <div class="filter-btn-wrapper">
             <button id="filter-btn" class="icon-btn filter-btn" aria-label="Filter">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                 </svg>
             </button>
-            
+
             <!-- Advanced Filter Popup -->
             <div id="advanced-filter" class="filter-popup" style="display: none;">
                 <div class="filter-popup-content">
                     <div class="filter-popup-header">
                         <h3>Filter Search</h3>
                         <button id="close-filter" class="icon-btn" aria-label="Close">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div class="filter-fields">
-                    <div class="filter-field">
-                        <label for="filter-book">Book</label>
-                        <select id="filter-book" class="filter-select">
-                            <option value="">All Books</option>
-                        </select>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="filter-field">
-                        <label for="filter-chapter">Chapter</label>
-                        <input id="filter-chapter" type="number" class="filter-input" placeholder="Any" min="1">
+                    <div class="filter-fields">
+                        <div class="filter-field">
+                            <label for="filter-book">Book</label>
+                            <select id="filter-book" class="filter-select">
+                                <option value="">All Books</option>
+                            </select>
+                        </div>
+                        <div class="filter-field">
+                            <label for="filter-chapter">Chapter</label>
+                            <input id="filter-chapter" type="number" class="filter-input" placeholder="Any" min="1">
+                        </div>
                     </div>
-                </div>
-                <div class="filter-actions">
-                    <button id="clear-filter" class="filter-btn-secondary">Clear</button>
-                    <button id="apply-filter" class="filter-btn-primary">Apply</button>
+                    <div class="filter-actions">
+                        <button id="clear-filter" class="filter-btn-secondary">Clear</button>
+                        <button id="apply-filter" class="filter-btn-primary">Apply</button>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 
@@ -131,7 +139,8 @@
             <div class="language-modal-header">
                 <h3>Select Language</h3>
                 <button class="modal-close-btn" aria-label="Close">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
@@ -476,7 +485,8 @@
             <!-- Search Results -->
             <div id="search-results" class="search-results" style="display: none;">
                 <div class="search-empty-state">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
@@ -485,165 +495,7 @@
             </div>
 
             <!-- Scripture Text (Bible Content) -->
-            <div class="scripture-text" id="scripture-text">
-                <p class="verse-line">
-                    <sup class="v-num">1</sup>In the beginning Elohim created the heaven and the earth.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">2</sup>And the earth was without form, and void; and darkness was upon the face
-                    of the deep. And the Spirit of Elohim moved upon the face of the waters.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">3</sup>And Elohim said, Let there be light: and there was light.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">4</sup>And Elohim saw the light, that it was good: and Elohim divided the light
-                    from the darkness.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">5</sup>And Elohim called the light Day, and the darkness he called Night. And the
-                    evening and the morning were the first day.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">6</sup>And Elohim said, Let there be a firmament in the midst of the waters, and
-                    let it divide the waters from the waters.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">7</sup>And Elohim made the firmament, and divided the waters which were under the
-                    firmament from the waters which were above the firmament: and it was so.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">8</sup>And Elohim called the firmament Heaven. And the evening and the morning
-                    were the second day.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">9</sup>And Elohim said, Let the waters under the heaven be gathered together unto
-                    one place, and let the dry land appear: and it was so.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">10</sup>And Elohim called the dry land Earth; and the gathering together of the
-                    waters called he Seas: and Elohim saw that it was good.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">11</sup>And Elohim said, Let the earth bring forth grass, the herb yielding seed,
-                    and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it
-                    was so.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">12</sup>And Elohim brought forth grass, and herb yielding seed after his kind,
-                    and the tree yielding fruit, whose seed was in itself, after his kind: and Elohim saw that it was
-                    good.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">13</sup>And the evening and the morning were the third day.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">14</sup>And Elohim said, Let there be lights in the firmament of the heaven to
-                    divide the day from the night; and let them be for signs, and for seasons, and for days, and years:
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">15</sup>And let them be for lights in the firmament of the heaven to give light
-                    upon the earth: and it was so.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">16</sup>And Elohim made two great lights; the greater light to rule the day, and
-                    the lesser light to rule the night: he made the stars also.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">17</sup>And Elohim set them in the firmament of the heaven to give light upon the
-                    earth,
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">18</sup>And to rule over the day and over the night, and to divide the light from
-                    the darkness: and Elohim saw that it was good.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">19</sup>And the evening and the morning were the fourth day.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">20</sup>And Elohim said, Let the waters bring forth abundantly the moving
-                    creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">21</sup>And Elohim created great whales, and every living creature that moveth,
-                    which the waters brought forth abundantly, after their kind, and every winged fowl after his kind:
-                    and Elohim saw that it was good.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">22</sup>And Elohim blessed them, saying, Be fruitful, and multiply, and fill the
-                    waters in the seas, and let fowl multiply in the earth.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">23</sup>And the evening and the morning were the fifth day.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">24</sup>And Elohim said, Let the earth bring forth the living creature after his
-                    kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">25</sup>And Elohim made the beast of the earth after his kind, and cattle after
-                    their kind, and every thing that creepeth upon the earth after his kind: and Elohim saw that it was
-                    good.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">26</sup>And Elohim said, Let us make man in our image, after our likeness: and
-                    let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle,
-                    and over all the earth, and over every creeping thing that creepeth upon the earth.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">27</sup>So Elohim created man in his own image, in the image of Elohim created he
-                    him; male and female created he them.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">28</sup>And Elohim blessed them, and Elohim said unto them, Be fruitful, and
-                    multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and
-                    over the fowl of the air, and over every living thing that moveth upon the earth.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">29</sup>And Elohim said, Behold, I have given you every herb bearing seed, which
-                    is upon the face of all the earth, and every tree, which is the fruit of a tree yielding seed; to
-                    you it shall be for meat.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">30</sup>And to every beast of the earth, and to every fowl of the air, and to
-                    every thing that creepeth upon the earth, wherein there is life, I have given every green herb for
-                    meat: and it was so.
-                </p>
-
-                <p class="verse-line">
-                    <sup class="v-num">31</sup>And Elohim saw every thing that he had made, and, behold, it was very
-                    good. And the evening and the morning were the sixth day.
-                </p>
-            </div>
+            <div class="scripture-text" id="scripture-text"></div>
         </main>
     </div>
 
@@ -658,13 +510,56 @@
 
         <div class="current-chapter">Genesis 1</div>
 
-        <button class="nav-btn home-btn" aria-label="Home">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-        </button>
+        <div class="home-wrapper">
+            <!-- Home Options Card -->
+            <div class="home-options-card" id="home-options-card">
+                <div class="home-option" data-action="home">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <span>Home</span>
+                </div>
+                <div class="home-option" data-action="summary">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                    <span>Chapter Summary</span>
+                </div>
+                <div class="home-option" data-action="timeline">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Chapter Timeline</span>
+                </div>
+                <div class="home-option" data-action="characters">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span>Chapter Characters</span>
+                </div>
+            </div>
+            
+            <button class="nav-btn home-btn" aria-label="Home">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+            </button>
+        </div>
 
         <button class="nav-btn" aria-label="Next">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"

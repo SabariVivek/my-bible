@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeMobileLanguageModal();
     initializeSearch();
     initializeSiteTitle();
+    initializeHomeOptions();
     loadBook(currentBook, currentChapter);
 });
 
@@ -768,14 +769,6 @@ document.addEventListener('click', (e) => {
             currentBook++;
             currentChapter = 1;
             loadBook(currentBook, currentChapter);
-        }
-    }
-    
-    // Home button - navigate to John 1:1
-    if (e.target.closest('.nav-btn[aria-label="Home"]')) {
-        const johnIndex = bibleBooks.findIndex(book => book.name === 'John');
-        if (johnIndex !== -1) {
-            loadBook(johnIndex, 1);
         }
     }
 });
@@ -1522,4 +1515,53 @@ function initializeSiteTitle() {
             }
         });
     }
+}
+
+// Initialize home options card
+function initializeHomeOptions() {
+    const homeBtn = document.querySelector('.home-btn');
+    const homeOptionsCard = document.getElementById('home-options-card');
+    const homeOptions = document.querySelectorAll('.home-option');
+    
+    if (!homeBtn || !homeOptionsCard) return;
+    
+    // Toggle home options card
+    homeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        homeOptionsCard.classList.toggle('active');
+    });
+    
+    // Close card when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!homeOptionsCard.contains(e.target) && !homeBtn.contains(e.target)) {
+            homeOptionsCard.classList.remove('active');
+        }
+    });
+    
+    // Handle option clicks
+    homeOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const action = option.getAttribute('data-action');
+            homeOptionsCard.classList.remove('active');
+            
+            switch(action) {
+                case 'home':
+                    // Navigate to Genesis 1 or default home
+                    loadBook(0, 1);
+                    break;
+                case 'summary':
+                    // Placeholder for Chapter Summary feature
+                    alert('Chapter Summary - Coming Soon!');
+                    break;
+                case 'timeline':
+                    // Placeholder for Chapter Timeline feature
+                    alert('Chapter Timeline - Coming Soon!');
+                    break;
+                case 'characters':
+                    // Placeholder for Chapter Characters feature
+                    alert('Chapter Characters - Coming Soon!');
+                    break;
+            }
+        });
+    });
 }
