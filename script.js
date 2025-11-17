@@ -1509,15 +1509,34 @@ function initializeSearch() {
     showEmptyState();
 }
 
-// Site title click to navigate to John 1:1
+// Site title click to show secret icon after 5 clicks
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
+    const secretIcon = document.getElementById('secret-icon');
+    let clickCount = 0;
+    let clickTimer = null;
+    
     if (siteTitle) {
         siteTitle.addEventListener('click', () => {
-            // Find John's index in bibleBooks array
-            const johnIndex = bibleBooks.findIndex(book => book.name === 'John');
-            if (johnIndex !== -1) {
-                loadBook(johnIndex, 1);
+            clickCount++;
+            
+            // Clear existing timer
+            if (clickTimer) {
+                clearTimeout(clickTimer);
+            }
+            
+            // Check if 5 clicks reached
+            if (clickCount >= 5) {
+                // Show secret icon
+                if (secretIcon) {
+                    secretIcon.style.display = 'flex';
+                }
+                clickCount = 0; // Reset counter
+            } else {
+                // Reset counter after 2 seconds of no clicks
+                clickTimer = setTimeout(() => {
+                    clickCount = 0;
+                }, 2000);
             }
         });
     }
@@ -1531,9 +1550,10 @@ function initializeHomeOptions() {
     
     if (!homeBtn || !homeOptionsCard) return;
     
-    // Toggle home options card
+    // Toggle home options card and update available options
     homeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
+        updateAvailableHomeOptions();
         homeOptionsCard.classList.toggle('active');
     });
     
@@ -1570,6 +1590,103 @@ function initializeHomeOptions() {
             }
         });
     });
+}
+
+// Check and update available home options based on data availability
+function updateAvailableHomeOptions() {
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    
+    // Get file paths
+    const summaryPath = getSummaryPath(bookName);
+    const timelinePath = getTimelinePath(bookName);
+    const charactersPath = getCharactersPath(bookName);
+    
+    // Get option elements
+    const summaryOption = document.querySelector('.home-option[data-action="summary"]');
+    const timelineOption = document.querySelector('.home-option[data-action="timeline"]');
+    const charactersOption = document.querySelector('.home-option[data-action="characters"]');
+    
+    // Check availability for each type
+    const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
+    
+    // Load scripts and check data availability
+    const checkPromises = [];
+    
+    // Check summary
+    if (summaryPath) {
+        const promise = new Promise((resolve) => {
+            if (window[summaryVarName] && window[summaryVarName][chapterNum]) {
+                resolve(true);
+            } else if (!document.querySelector(`script[src="${summaryPath}"]`)) {
+                const script = document.createElement('script');
+                script.src = summaryPath;
+                script.onload = () => {
+                    resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
+                };
+                script.onerror = () => resolve(false);
+                document.body.appendChild(script);
+            } else {
+                resolve(window[summaryVarName] && window[summaryVarName][chapterNum]);
+            }
+        });
+        checkPromises.push(promise.then(hasSummary => {
+            if (summaryOption) summaryOption.style.display = hasSummary ? 'flex' : 'none';
+        }));
+    } else {
+        if (summaryOption) summaryOption.style.display = 'none';
+    }
+    
+    // Check timeline
+    if (timelinePath) {
+        const promise = new Promise((resolve) => {
+            if (window[timelineVarName] && window[timelineVarName][chapterNum]) {
+                resolve(true);
+            } else if (!document.querySelector(`script[src="${timelinePath}"]`)) {
+                const script = document.createElement('script');
+                script.src = timelinePath;
+                script.onload = () => {
+                    resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
+                };
+                script.onerror = () => resolve(false);
+                document.body.appendChild(script);
+            } else {
+                resolve(window[timelineVarName] && window[timelineVarName][chapterNum]);
+            }
+        });
+        checkPromises.push(promise.then(hasTimeline => {
+            if (timelineOption) timelineOption.style.display = hasTimeline ? 'flex' : 'none';
+        }));
+    } else {
+        if (timelineOption) timelineOption.style.display = 'none';
+    }
+    
+    // Check characters
+    if (charactersPath) {
+        const promise = new Promise((resolve) => {
+            if (window[charactersVarName] && window[charactersVarName][chapterNum]) {
+                resolve(true);
+            } else if (!document.querySelector(`script[src="${charactersPath}"]`)) {
+                const script = document.createElement('script');
+                script.src = charactersPath;
+                script.onload = () => {
+                    resolve(window[charactersVarName] && window[charactersVarName][chapterNum]);
+                };
+                script.onerror = () => resolve(false);
+                document.body.appendChild(script);
+            } else {
+                resolve(window[charactersVarName] && window[charactersVarName][chapterNum]);
+            }
+        });
+        checkPromises.push(promise.then(hasCharacters => {
+            if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
+        }));
+    } else {
+        if (charactersOption) charactersOption.style.display = 'none';
+    }
 }
 
 // Show chapter summary
@@ -1721,32 +1838,120 @@ function updateDrawerContent() {
     
     const bookName = bibleBooks[currentBook].name;
     const chapterNum = currentChapter;
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
     
     // Refresh content based on current drawer type
     if (currentDrawerType === 'Chapter Summary') {
         const summaryPath = getSummaryPath(bookName);
+        const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+        
         if (summaryPath) {
-            loadSummaryScript(summaryPath, bookName, chapterNum);
+            // Load script and check if data exists for this chapter
+            loadSummaryScriptAndCheck(summaryPath, bookName, chapterNum, summaryVarName);
         } else {
-            summaryDrawer.classList.remove('active');
-            document.body.classList.remove('summary-drawer-open');
+            closeSummaryDrawer();
         }
     } else if (currentDrawerType === 'Chapter Timeline') {
         const timelinePath = getTimelinePath(bookName);
+        const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+        
         if (timelinePath) {
-            loadTimelineScript(timelinePath, bookName, chapterNum);
+            // Load script and check if data exists for this chapter
+            loadTimelineScriptAndCheck(timelinePath, bookName, chapterNum, timelineVarName);
         } else {
-            summaryDrawer.classList.remove('active');
-            document.body.classList.remove('summary-drawer-open');
+            closeSummaryDrawer();
         }
     } else if (currentDrawerType === 'Chapter Characters') {
         const charactersPath = getCharactersPath(bookName);
+        const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
+        
         if (charactersPath) {
-            loadCharactersScript(charactersPath, bookName, chapterNum);
+            // Load script and check if data exists for this chapter
+            loadCharactersScriptAndCheck(charactersPath, bookName, chapterNum, charactersVarName);
         } else {
-            summaryDrawer.classList.remove('active');
-            document.body.classList.remove('summary-drawer-open');
+            closeSummaryDrawer();
         }
+    }
+}
+
+// Load summary script and check if chapter data exists
+function loadSummaryScriptAndCheck(path, bookName, chapterNum, varName) {
+    if (window[varName]) {
+        // Already loaded, check if chapter data exists
+        if (window[varName][chapterNum]) {
+            displaySummary(bookName, chapterNum);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            if (window[varName] && window[varName][chapterNum]) {
+                displaySummary(bookName, chapterNum);
+            } else {
+                closeSummaryDrawer();
+            }
+        };
+        script.onerror = () => {
+            closeSummaryDrawer();
+        };
+        document.body.appendChild(script);
+    }
+}
+
+// Load timeline script and check if chapter data exists
+function loadTimelineScriptAndCheck(path, bookName, chapterNum, varName) {
+    if (window[varName]) {
+        // Already loaded, check if chapter data exists
+        if (window[varName][chapterNum]) {
+            displayTimeline(bookName, chapterNum);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            if (window[varName] && window[varName][chapterNum]) {
+                displayTimeline(bookName, chapterNum);
+            } else {
+                closeSummaryDrawer();
+            }
+        };
+        script.onerror = () => {
+            closeSummaryDrawer();
+        };
+        document.body.appendChild(script);
+    }
+}
+
+// Load characters script and check if chapter data exists
+function loadCharactersScriptAndCheck(path, bookName, chapterNum, varName) {
+    if (window[varName]) {
+        // Already loaded, check if chapter data exists
+        if (window[varName][chapterNum]) {
+            displayCharacters(bookName, chapterNum);
+        } else {
+            closeSummaryDrawer();
+        }
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            if (window[varName] && window[varName][chapterNum]) {
+                displayCharacters(bookName, chapterNum);
+            } else {
+                closeSummaryDrawer();
+            }
+        };
+        script.onerror = () => {
+            closeSummaryDrawer();
+        };
+        document.body.appendChild(script);
     }
 }
 
