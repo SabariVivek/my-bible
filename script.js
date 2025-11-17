@@ -1675,19 +1675,6 @@ function initializeSummaryDrawer() {
     if (closeSummaryBtn) {
         closeSummaryBtn.addEventListener('click', closeSummaryDrawer);
     }
-    
-    // Add scroll behavior for hiding scrollbar
-    const summaryContent = document.querySelector('.summary-drawer-content');
-    if (summaryContent) {
-        let scrollTimeout;
-        summaryContent.addEventListener('scroll', function() {
-            summaryContent.classList.add('scrolling');
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(() => {
-                summaryContent.classList.remove('scrolling');
-            }, 1000);
-        });
-    }
 }
 
 function closeSummaryDrawer() {

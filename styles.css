@@ -1345,21 +1345,39 @@ body.dark-theme .jesus-name {
 }
 
 /* Scrollbar Styling */
-.books-sidebar::-webkit-scrollbar,
+/* Left pane scrollbar - hidden by default, shows on hover */
+.books-sidebar::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+.books-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.books-sidebar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+    border: none;
+    background-clip: padding-box;
+}
+
+.books-sidebar:hover::-webkit-scrollbar-thumb {
+    background: rgba(95, 99, 104, 0.4);
+}
+
+/* Other panes scrollbar - always visible */
 .chapters-column::-webkit-scrollbar,
 .verses-column::-webkit-scrollbar,
 .content-area::-webkit-scrollbar {
     width: 10px !important;
 }
 
-.books-sidebar::-webkit-scrollbar-track,
 .chapters-column::-webkit-scrollbar-track,
 .verses-column::-webkit-scrollbar-track,
 .content-area::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.books-sidebar::-webkit-scrollbar-thumb,
 .chapters-column::-webkit-scrollbar-thumb,
 .verses-column::-webkit-scrollbar-thumb,
 .content-area::-webkit-scrollbar-thumb {
@@ -2501,28 +2519,12 @@ body.summary-drawer-open .bottom-nav {
 }
 
 .summary-drawer-content::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    border-radius: 3px;
-    transition: background-color 0.3s ease 1s;
-}
-
-.summary-drawer-content:hover::-webkit-scrollbar-thumb,
-.summary-drawer-content.scrolling::-webkit-scrollbar-thumb {
     background-color: rgba(95, 99, 104, 0.4);
-    transition-delay: 0s;
+    border-radius: 3px;
 }
 
-.summary-drawer-content::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(95, 99, 104, 0.6);
-}
-
-body.dark-theme .summary-drawer-content:hover::-webkit-scrollbar-thumb,
-body.dark-theme .summary-drawer-content.scrolling::-webkit-scrollbar-thumb {
+body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb {
     background-color: rgba(154, 160, 166, 0.4);
-}
-
-body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(154, 160, 166, 0.6);
 }
 
 .summary-chapter-title {
