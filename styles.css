@@ -1293,7 +1293,7 @@ body.dark-theme .jesus-name {
     justify-content: space-around;
     padding: 0 1rem;
     box-sizing: border-box;
-    z-index: 10;
+    z-index: 15;
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1363,26 +1363,9 @@ body.dark-theme .jesus-name {
 .chapters-column::-webkit-scrollbar-thumb,
 .verses-column::-webkit-scrollbar-thumb,
 .content-area::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: rgba(95, 99, 104, 0.4);
     border-radius: 10px;
     border: none;
-    background-clip: padding-box;
-    transition: background 0.3s ease;
-}
-
-.books-sidebar:hover::-webkit-scrollbar-thumb,
-.chapters-column:hover::-webkit-scrollbar-thumb,
-.verses-column:hover::-webkit-scrollbar-thumb,
-.content-area:hover::-webkit-scrollbar-thumb {
-    background: #bdc1c6;
-    background-clip: padding-box;
-}
-
-.books-sidebar::-webkit-scrollbar-thumb:hover,
-.chapters-column::-webkit-scrollbar-thumb:hover,
-.verses-column::-webkit-scrollbar-thumb:hover,
-.content-area::-webkit-scrollbar-thumb:hover {
-    background: #9aa0a6 !important;
     background-clip: padding-box;
 }
 
@@ -1391,24 +1374,8 @@ body.dark-theme .jesus-name {
 .chapters-column,
 .verses-column,
 .content-area {
-    scrollbar-color: transparent transparent;
+    scrollbar-color: rgba(95, 99, 104, 0.4) transparent;
     scrollbar-width: thin;
-    transition: scrollbar-color 0.3s ease;
-}
-
-.books-sidebar:hover,
-.chapters-column:hover,
-.verses-column:hover,
-.content-area:hover {
-    scrollbar-color: #bdc1c6 transparent;
-}
-
-.books-sidebar.scrolling::-webkit-scrollbar-thumb,
-.chapters-column.scrolling::-webkit-scrollbar-thumb,
-.verses-column.scrolling::-webkit-scrollbar-thumb,
-.content-area.scrolling::-webkit-scrollbar-thumb {
-    background: #bdc1c6;
-    background-clip: padding-box;
 }
 
 /* Drawer overlay for mobile */
@@ -2240,27 +2207,11 @@ body.dark-theme .current-chapter {
     color: #e8eaed;
 }
 
-body.dark-theme .books-sidebar:hover::-webkit-scrollbar-thumb,
-body.dark-theme .chapters-column:hover::-webkit-scrollbar-thumb,
-body.dark-theme .verses-column:hover::-webkit-scrollbar-thumb,
-body.dark-theme .content-area:hover::-webkit-scrollbar-thumb {
-    background: #5f6368;
-    background-clip: padding-box;
-}
-
-body.dark-theme .books-sidebar::-webkit-scrollbar-thumb:hover,
-body.dark-theme .chapters-column::-webkit-scrollbar-thumb:hover,
-body.dark-theme .verses-column::-webkit-scrollbar-thumb:hover,
-body.dark-theme .content-area::-webkit-scrollbar-thumb:hover {
-    background: #80868b !important;
-    background-clip: padding-box;
-}
-
-body.dark-theme .books-sidebar.scrolling,
-body.dark-theme .chapters-column.scrolling,
-body.dark-theme .verses-column.scrolling,
-body.dark-theme .content-area.scrolling {
-    scrollbar-color: #5f6368 transparent;
+body.dark-theme .books-sidebar,
+body.dark-theme .chapters-column,
+body.dark-theme .verses-column,
+body.dark-theme .content-area {
+    scrollbar-color: rgba(154, 160, 166, 0.4) transparent;
 }
 
 /* Dark theme drawer overlay */
@@ -2479,12 +2430,12 @@ body.dark-theme .home-option:hover span {
     top: 3.75rem;
     right: -450px;
     width: 450px;
-    height: calc(100vh - 3.75rem - 3.75rem);
-    bottom: 3.75rem;
+    height: calc(100vh - 3.75rem);
+    bottom: 0;
     background: #ffffff;
     border-left: 1px solid #e0e0e0;
     transition: right 0.3s ease;
-    z-index: 100;
+    z-index: 5;
     display: flex;
     flex-direction: column;
 }
@@ -2499,7 +2450,7 @@ body.summary-drawer-open .content-area {
 }
 
 body.summary-drawer-open .bottom-nav {
-    right: 450px;
+    width: calc(100% - 310px - 450px);
 }
 
 .summary-drawer-header {
@@ -2514,7 +2465,7 @@ body.summary-drawer-open .bottom-nav {
 .summary-drawer-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #202124;
+    color: #5f6368;
     margin: 0;
 }
 
@@ -2550,15 +2501,23 @@ body.summary-drawer-open .bottom-nav {
 }
 
 .summary-drawer-content::-webkit-scrollbar-thumb {
-    background-color: rgba(95, 99, 104, 0.4);
+    background-color: transparent;
     border-radius: 3px;
+    transition: background-color 0.3s ease 1s;
+}
+
+.summary-drawer-content:hover::-webkit-scrollbar-thumb,
+.summary-drawer-content.scrolling::-webkit-scrollbar-thumb {
+    background-color: rgba(95, 99, 104, 0.4);
+    transition-delay: 0s;
 }
 
 .summary-drawer-content::-webkit-scrollbar-thumb:hover {
     background-color: rgba(95, 99, 104, 0.6);
 }
 
-body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb {
+body.dark-theme .summary-drawer-content:hover::-webkit-scrollbar-thumb,
+body.dark-theme .summary-drawer-content.scrolling::-webkit-scrollbar-thumb {
     background-color: rgba(154, 160, 166, 0.4);
 }
 
@@ -2577,8 +2536,24 @@ body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb:hover {
     margin-bottom: 1.25rem;
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #3c4043;
+    color: #b8b8b8;
     text-align: justify;
+    position: relative;
+    padding-left: 20px;
+}
+
+.summary-paragraph::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #5f6368;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+body.dark-theme .summary-paragraph::before {
+    color: #9aa0a6;
 }
 
 /* Dark theme for summary drawer */
@@ -2609,6 +2584,74 @@ body.dark-theme .summary-chapter-title {
 
 body.dark-theme .summary-paragraph {
     color: #bdc1c6;
+}
+
+/* Timeline Styles */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 65px;
+    line-height: 1.6;
+}
+
+.timeline-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #5f6368;
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    color: #5f6368;
+    font-weight: bold;
+}
+
+.timeline-list li::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    bottom: -56px;
+    width: 1px;
+    background-color: #e0e0e0;
+}
+
+.timeline-list li:last-child::after {
+    display: none;
+}
+
+.timeline-event {
+    font-weight: 400;
+    color: #b8b8b8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Dark theme for timeline */
+body.dark-theme .timeline-list li::before {
+    border-color: #9aa0a6;
+    color: #9aa0a6;
+}
+
+body.dark-theme .timeline-list li::after {
+    background-color: #5f6368;
+}
+
+body.dark-theme .timeline-event {
+    color: #b8b8b8;
 }
 
 /* Mobile styles for summary drawer */

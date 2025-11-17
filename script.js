@@ -1555,8 +1555,8 @@ function initializeHomeOptions() {
                     showChapterSummary();
                     break;
                 case 'timeline':
-                    // Placeholder for Chapter Timeline feature
-                    alert('Chapter Timeline - Coming Soon!');
+                    // Show Chapter Timeline
+                    showChapterTimeline();
                     break;
                 case 'characters':
                     // Placeholder for Chapter Characters feature
@@ -1648,10 +1648,14 @@ function displaySummary(bookName, chapterNum) {
         const summaryDrawerContent = document.getElementById('summary-drawer-content');
         const summary = summaryData[chapterNum];
         
-        // Format the summary with proper styling
+        // Format the summary with proper styling and highlight verses
         const formattedSummary = summary
             .split('\n\n')
-            .map(para => `<p class="summary-paragraph">${para}</p>`)
+            .map(para => {
+                // Replace quoted verses with card format
+                const processed = para.replace(/"([^"]+)"/g, '<span class="verse-card">$1</span>');
+                return `<p class="summary-paragraph">${processed}</p>`;
+            })
             .join('');
         
         summaryDrawerContent.innerHTML = formattedSummary;
@@ -1671,10 +1675,123 @@ function initializeSummaryDrawer() {
     if (closeSummaryBtn) {
         closeSummaryBtn.addEventListener('click', closeSummaryDrawer);
     }
+    
+    // Add scroll behavior for hiding scrollbar
+    const summaryContent = document.querySelector('.summary-drawer-content');
+    if (summaryContent) {
+        let scrollTimeout;
+        summaryContent.addEventListener('scroll', function() {
+            summaryContent.classList.add('scrolling');
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                summaryContent.classList.remove('scrolling');
+            }, 1000);
+        });
+    }
 }
 
 function closeSummaryDrawer() {
     const summaryDrawer = document.getElementById('summary-drawer');
     summaryDrawer.classList.remove('active');
     document.body.classList.remove('summary-drawer-open');
+}
+
+// Show chapter timeline
+function showChapterTimeline() {
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    
+    // Map book names to timeline file paths
+    const timelinePath = getTimelinePath(bookName);
+    
+    if (!timelinePath) {
+        alert('Timeline not available for this book yet.');
+        return;
+    }
+    
+    // Load the timeline dynamically
+    loadTimelineScript(timelinePath, bookName, chapterNum);
+}
+
+// Get timeline file path based on book name
+function getTimelinePath(bookName) {
+    // New Testament books
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
+        'II John', 'III John', 'Jude', 'Revelation'];
+    
+    // Old Testament books
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
+        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+    
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    
+    if (newTestamentBooks.includes(bookName)) {
+        return `resources/timeline/new-testament/${fileName}.js`;
+    } else if (oldTestamentBooks.includes(bookName)) {
+        return `resources/timeline/old-testament/${fileName}.js`;
+    }
+    
+    return null;
+}
+
+// Load and display timeline
+function loadTimelineScript(path, bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    
+    // Check if timeline is already loaded
+    if (window[timelineVarName]) {
+        displayTimeline(bookName, chapterNum);
+        return;
+    }
+    
+    const script = document.createElement('script');
+    script.src = path;
+    script.onload = () => {
+        displayTimeline(bookName, chapterNum);
+    };
+    script.onerror = () => {
+        alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+    };
+    
+    document.body.appendChild(script);
+}
+
+// Display the timeline in the drawer
+function displayTimeline(bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    
+    // Try to access the timeline object
+    const timelineData = window[timelineVarName];
+    
+    if (timelineData && timelineData[chapterNum]) {
+        const summaryDrawer = document.getElementById('summary-drawer');
+        const summaryDrawerContent = document.getElementById('summary-drawer-content');
+        const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+        const timeline = timelineData[chapterNum];
+        
+        // Update drawer title
+        summaryDrawerTitle.textContent = 'Chapter Timeline';
+        
+        // Format the timeline with proper styling
+        const formattedTimeline = timeline
+            .map(event => `<li><div class="timeline-event">${event}</div></li>`)
+            .join('');
+        
+        summaryDrawerContent.innerHTML = `<ul class="timeline-list">${formattedTimeline}</ul>`;
+        
+        // Show the drawer
+        summaryDrawer.classList.add('active');
+        document.body.classList.add('summary-drawer-open');
+    } else {
+        alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+    }
 }
