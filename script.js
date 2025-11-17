@@ -1582,8 +1582,21 @@ function initializeHomeOptions() {
     // Toggle home options card and update available options
     homeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        updateAvailableHomeOptions();
-        homeOptionsCard.classList.toggle('active');
+        
+        // Show loader
+        const loader = document.createElement('div');
+        loader.className = 'home-options-loader';
+        loader.innerHTML = '<div class="spinner"></div>';
+        homeBtn.parentElement.insertBefore(loader, homeBtn);
+        
+        // Update options and show card
+        updateAvailableHomeOptions().then(() => {
+            // Remove loader
+            if (loader && loader.parentElement) {
+                loader.remove();
+            }
+            homeOptionsCard.classList.toggle('active');
+        });
     });
     
     // Close card when clicking outside
@@ -1904,19 +1917,20 @@ function parseVerseReference(reference) {
 
 // Check and update available home options based on data availability
 function updateAvailableHomeOptions() {
-    const bookName = bibleBooks[currentBook].name;
-    const chapterNum = currentChapter;
-    const fileName = bookName.toLowerCase().replace(/ /g, '_');
-    
-    // Get file paths
-    const summaryPath = getSummaryPath(bookName);
-    const timelinePath = getTimelinePath(bookName);
-    const charactersPath = getCharactersPath(bookName);
-    
-    // Get option elements
-    const summaryOption = document.querySelector('.home-option[data-action="summary"]');
-    const timelineOption = document.querySelector('.home-option[data-action="timeline"]');
-    const charactersOption = document.querySelector('.home-option[data-action="characters"]');
+    return new Promise((mainResolve) => {
+        const bookName = bibleBooks[currentBook].name;
+        const chapterNum = currentChapter;
+        const fileName = bookName.toLowerCase().replace(/ /g, '_');
+        
+        // Get file paths
+        const summaryPath = getSummaryPath(bookName);
+        const timelinePath = getTimelinePath(bookName);
+        const charactersPath = getCharactersPath(bookName);
+        
+        // Get option elements
+        const summaryOption = document.querySelector('.home-option[data-action="summary"]');
+        const timelineOption = document.querySelector('.home-option[data-action="timeline"]');
+        const charactersOption = document.querySelector('.home-option[data-action="characters"]');
     
     // Check availability for each type
     const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
@@ -1997,6 +2011,12 @@ function updateAvailableHomeOptions() {
     } else {
         if (charactersOption) charactersOption.style.display = 'none';
     }
+    
+    // Wait for all checks to complete
+    Promise.all(checkPromises).then(() => {
+        mainResolve();
+    });
+});
 }
 
 // Show chapter summary

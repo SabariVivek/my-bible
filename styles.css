@@ -232,30 +232,31 @@ body.dark-theme .book-loader {
 .language-modal-option {
     width: 100%;
     padding: 0.75rem 0.875rem;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border: 2px solid transparent;
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
     border-radius: 10px;
     font-size: 0.95rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #1a1a1a;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: relative;
 }
 
 .language-modal-option:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    border-color: rgba(108, 117, 125, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #999999;
+    background: #f8f9fa;
 }
 
 .language-modal-option.active {
-    background: linear-gradient(135deg, #e8eaed 0%, #f1f3f4 100%);
-    border-color: #dadce0;
-    color: #000000;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #e3f2fd;
+    border-color: #2196F3;
+    color: #1565c0;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
 }
 
 /* Color Palette Section */
@@ -2494,6 +2495,42 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
 }
 
 /* Home Options Card */
+/* Home options loader */
+.home-options-loader {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    animation: fadeIn 0.2s ease;
+}
+
+.home-options-loader .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+body.dark-theme .home-options-loader {
+    background: #292a2d;
+}
+
+body.dark-theme .home-options-loader .spinner {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-top-color: #e0e0e0;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
 .home-options-card {
     position: absolute;
     bottom: calc(100% + 20px);
