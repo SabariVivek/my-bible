@@ -159,7 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeHomeOptions();
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
-    loadBook(currentBook, currentChapter);
+    
+    // Check if user was on home page before reload
+    const isOnHomePage = localStorage.getItem('isOnHomePage') === 'true';
+    if (isOnHomePage) {
+        showHomePage();
+    } else {
+        loadBook(currentBook, currentChapter);
+    }
 });
 
 // Initialize mobile drawer
@@ -1807,15 +1814,17 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
         if (verseText) {
             scriptureText.style.display = 'block';
             scriptureText.innerHTML = `
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-                    <div style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); opacity: 0.7; margin-bottom: 24px;">
-                        Verse of the Day
-                    </div>
-                    <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px; position: relative; padding: 0 20px;">
-                        <sup style="font-size: 1.5rem; color: var(--text-secondary); opacity: 0.4; vertical-align: super; margin-right: 4px;">"</sup>${verseText}<sup style="font-size: 1.5rem; color: var(--text-secondary); opacity: 0.4; vertical-align: super; margin-left: 4px;">"</sup>
-                    </div>
-                    <div style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); text-align: center;">
-                        — ${verseReference}
+                <div style="display: flex; align-items: center; justify-content: center; min-height: 100%; padding: 20px;">
+                    <div class="verse-card" style="background: var(--bg-secondary); border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); padding: 32px 28px; max-width: 700px; width: 100%; border: 1px solid var(--border-color);">
+                        <div style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); opacity: 0.8; margin-bottom: 24px; text-align: center;">
+                            Verse of the Day
+                        </div>
+                        <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px; position: relative; padding: 0 20px;">
+                            ${verseText}
+                        </div>
+                        <div style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); text-align: center;">
+                            — ${verseReference}
+                        </div>
                     </div>
                 </div>
             `;

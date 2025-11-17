@@ -1746,6 +1746,23 @@ body.dark-theme .main-layout {
     background-color: #202124;
 }
 
+/* Verse card styling for dark theme */
+body.dark-theme .verse-card {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-theme .verse-card div:first-child {
+    color: #b0b0b0 !important;
+}
+
+body.dark-theme .verse-card div:nth-child(2) {
+    color: #e8e8e8 !important;
+}
+
+body.dark-theme .verse-card div:last-child {
+    color: #b0b0b0 !important;
+}
+
 body.dark-theme .top-bar {
     background-color: #202124;
     border-bottom: 1px solid #3c4043;
