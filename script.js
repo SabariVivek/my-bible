@@ -306,7 +306,7 @@ function updateBookNames() {
                 bookNameSpan.classList.remove('tamil-only');
             } else {
                 // 'both' mode - Show English name with Tamil name in smaller text below
-                bookNameSpan.innerHTML = `${book.name}<span class="tamil-name">${book.tamilName}</span>`;
+                bookNameSpan.innerHTML = `<span class="english-name">${book.name}</span><span class="tamil-name">${book.tamilName}</span>`;
                 bookNameSpan.classList.remove('tamil-only');
             }
         }

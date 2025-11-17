@@ -1066,6 +1066,14 @@ body:not(.dark-theme) .moon-icon {
     font-size: 0.8rem;
 }
 
+.book-name {
+    position: relative;
+}
+
+.book-name .english-name {
+    display: inline;
+}
+
 .book-name .tamil-name {
     display: block;
     font-size: 0.65rem;
@@ -1079,12 +1087,26 @@ body:not(.dark-theme) .moon-icon {
 }
 
 /* Book items with memory verses - star indicator */
+.book-item.has-memory-verse .book-name .english-name::after {
+    content: "★";
+    font-size: 0.5rem;
+    color: #c4911a;
+    margin-left: 0.2rem;
+    vertical-align: super;
+}
+
+/* Star for single language modes (no .english-name span) */
 .book-item.has-memory-verse .book-name::after {
     content: "★";
     font-size: 0.5rem;
     color: #c4911a;
     margin-left: 0.2rem;
     vertical-align: super;
+}
+
+/* Hide double star when english-name span exists */
+.book-item.has-memory-verse .book-name:has(.english-name)::after {
+    content: none;
 }
 
 /* Chapters Column */
