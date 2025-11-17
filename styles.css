@@ -2383,7 +2383,7 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
 /* Home Options Card */
 .home-options-card {
     position: absolute;
-    bottom: calc(100% + 10px);
+    bottom: calc(100% + 20px);
     left: 50%;
     transform: translateX(-50%) translateY(10px) scale(0.95);
     background: #ffffff;
