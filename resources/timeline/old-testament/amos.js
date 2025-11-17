@@ -1,0 +1,4 @@
+﻿// amos Timeline
+window.amosTimeline = {
+
+};

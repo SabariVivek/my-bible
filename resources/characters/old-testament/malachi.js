@@ -1,0 +1,4 @@
+﻿// malachi Characters
+window.malachiCharacters = {
+
+};

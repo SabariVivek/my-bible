@@ -1,0 +1,4 @@
+﻿// ecclesiastes Summary
+window.ecclesiastesSummary = {
+
+};

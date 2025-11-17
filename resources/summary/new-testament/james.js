@@ -1,0 +1,4 @@
+﻿// james Summary
+window.jamesSummary = {
+
+};

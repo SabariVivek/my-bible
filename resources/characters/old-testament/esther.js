@@ -1,0 +1,4 @@
+﻿// esther Characters
+window.estherCharacters = {
+
+};

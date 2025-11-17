@@ -1,0 +1,4 @@
+﻿// hebrews Characters
+window.hebrewsCharacters = {
+
+};

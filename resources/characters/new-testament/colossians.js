@@ -1,0 +1,4 @@
+﻿// colossians Characters
+window.colossiansCharacters = {
+
+};

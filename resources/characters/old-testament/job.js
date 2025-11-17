@@ -1,0 +1,4 @@
+﻿// job Characters
+window.jobCharacters = {
+
+};

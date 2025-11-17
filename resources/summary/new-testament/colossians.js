@@ -1,0 +1,4 @@
+﻿// colossians Summary
+window.colossiansSummary = {
+
+};

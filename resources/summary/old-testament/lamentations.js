@@ -1,0 +1,4 @@
+﻿// lamentations Summary
+window.lamentationsSummary = {
+
+};

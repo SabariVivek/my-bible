@@ -1,0 +1,4 @@
+﻿// ruth Timeline
+window.ruthTimeline = {
+
+};

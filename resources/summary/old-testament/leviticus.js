@@ -1,0 +1,4 @@
+﻿// leviticus Summary
+window.leviticusSummary = {
+
+};

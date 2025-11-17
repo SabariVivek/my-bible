@@ -1,0 +1,4 @@
+﻿// zechariah Characters
+window.zechariahCharacters = {
+
+};

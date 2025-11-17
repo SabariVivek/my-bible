@@ -1,0 +1,4 @@
+﻿// daniel Summary
+window.danielSummary = {
+
+};

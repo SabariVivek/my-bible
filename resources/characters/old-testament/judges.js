@@ -1,0 +1,4 @@
+﻿// judges Characters
+window.judgesCharacters = {
+
+};

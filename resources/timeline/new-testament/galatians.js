@@ -1,0 +1,4 @@
+﻿// galatians Timeline
+window.galatiansTimeline = {
+
+};

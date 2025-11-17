@@ -1,0 +1,4 @@
+﻿// micah Characters
+window.micahCharacters = {
+
+};

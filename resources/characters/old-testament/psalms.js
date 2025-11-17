@@ -1,0 +1,4 @@
+﻿// psalms Characters
+window.psalmsCharacters = {
+
+};

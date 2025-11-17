@@ -1,0 +1,4 @@
+﻿// haggai Characters
+window.haggaiCharacters = {
+
+};

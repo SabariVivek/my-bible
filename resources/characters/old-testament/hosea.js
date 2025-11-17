@@ -1,0 +1,4 @@
+﻿// hosea Characters
+window.hoseaCharacters = {
+
+};

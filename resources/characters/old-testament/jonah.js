@@ -1,0 +1,4 @@
+﻿// jonah Characters
+window.jonahCharacters = {
+
+};

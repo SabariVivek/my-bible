@@ -1,0 +1,4 @@
+﻿// nehemiah Characters
+window.nehemiahCharacters = {
+
+};

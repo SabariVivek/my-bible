@@ -1,0 +1,4 @@
+﻿// haggai Summary
+window.haggaiSummary = {
+
+};

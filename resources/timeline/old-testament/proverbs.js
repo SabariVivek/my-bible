@@ -1,0 +1,4 @@
+﻿// proverbs Timeline
+window.proverbsTimeline = {
+
+};

@@ -1,0 +1,4 @@
+﻿// philippians Summary
+window.philippiansSummary = {
+
+};

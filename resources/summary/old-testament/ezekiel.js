@@ -1,0 +1,4 @@
+﻿// ezekiel Summary
+window.ezekielSummary = {
+
+};

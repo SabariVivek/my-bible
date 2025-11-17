@@ -1,0 +1,4 @@
+﻿// daniel Characters
+window.danielCharacters = {
+
+};

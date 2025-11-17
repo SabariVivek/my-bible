@@ -1,0 +1,4 @@
+﻿// psalms Summary
+window.psalmsSummary = {
+
+};

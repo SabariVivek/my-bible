@@ -1,0 +1,4 @@
+﻿// judges Summary
+window.judgesSummary = {
+
+};

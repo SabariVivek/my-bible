@@ -1,0 +1,4 @@
+﻿// hosea Summary
+window.hoseaSummary = {
+
+};

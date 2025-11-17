@@ -1,0 +1,4 @@
+﻿// ezra Characters
+window.ezraCharacters = {
+
+};

@@ -1,0 +1,4 @@
+﻿// nahum Characters
+window.nahumCharacters = {
+
+};

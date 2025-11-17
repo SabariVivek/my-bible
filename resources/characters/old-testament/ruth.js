@@ -1,0 +1,4 @@
+﻿// ruth Characters
+window.ruthCharacters = {
+
+};

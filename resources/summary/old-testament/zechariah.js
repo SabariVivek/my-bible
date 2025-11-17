@@ -1,0 +1,4 @@
+﻿// zechariah Summary
+window.zechariahSummary = {
+
+};

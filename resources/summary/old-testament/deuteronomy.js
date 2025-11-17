@@ -1,0 +1,4 @@
+﻿// deuteronomy Summary
+window.deuteronomySummary = {
+
+};

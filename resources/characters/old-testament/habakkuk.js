@@ -1,0 +1,4 @@
+﻿// habakkuk Characters
+window.habakkukCharacters = {
+
+};

@@ -1,0 +1,4 @@
+﻿// jude Summary
+window.judeSummary = {
+
+};

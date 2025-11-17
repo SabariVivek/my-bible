@@ -1,0 +1,4 @@
+﻿// isaiah Summary
+window.isaiahSummary = {
+
+};

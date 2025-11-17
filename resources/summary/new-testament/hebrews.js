@@ -1,0 +1,4 @@
+﻿// hebrews Summary
+window.hebrewsSummary = {
+
+};

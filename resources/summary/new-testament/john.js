@@ -1,0 +1,4 @@
+﻿// john Summary
+window.johnSummary = {
+
+};

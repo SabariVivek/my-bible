@@ -1,0 +1,4 @@
+﻿// isaiah Characters
+window.isaiahCharacters = {
+
+};

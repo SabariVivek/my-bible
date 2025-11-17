@@ -1,0 +1,4 @@
+﻿// nahum Summary
+window.nahumSummary = {
+
+};

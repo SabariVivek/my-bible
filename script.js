@@ -431,6 +431,7 @@ function updateUI() {
     updateChapters();
     updateVerses();
     displayChapter();
+    updateDrawerContent();
 }
 
 // Update book selection
@@ -1563,8 +1564,8 @@ function initializeHomeOptions() {
                     showChapterTimeline();
                     break;
                 case 'characters':
-                    // Placeholder for Chapter Characters feature
-                    alert('Chapter Characters - Coming Soon!');
+                    // Show Chapter Characters
+                    showChapterCharacters();
                     break;
             }
         });
@@ -1704,6 +1705,49 @@ function closeSummaryDrawer() {
     const summaryDrawer = document.getElementById('summary-drawer');
     summaryDrawer.classList.remove('active');
     document.body.classList.remove('summary-drawer-open');
+}
+
+// Update drawer content when chapter changes
+function updateDrawerContent() {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    
+    // Only update if drawer is open
+    if (!summaryDrawer.classList.contains('active')) {
+        return;
+    }
+    
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    const currentDrawerType = summaryDrawerTitle.textContent;
+    
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    
+    // Refresh content based on current drawer type
+    if (currentDrawerType === 'Chapter Summary') {
+        const summaryPath = getSummaryPath(bookName);
+        if (summaryPath) {
+            loadSummaryScript(summaryPath, bookName, chapterNum);
+        } else {
+            summaryDrawer.classList.remove('active');
+            document.body.classList.remove('summary-drawer-open');
+        }
+    } else if (currentDrawerType === 'Chapter Timeline') {
+        const timelinePath = getTimelinePath(bookName);
+        if (timelinePath) {
+            loadTimelineScript(timelinePath, bookName, chapterNum);
+        } else {
+            summaryDrawer.classList.remove('active');
+            document.body.classList.remove('summary-drawer-open');
+        }
+    } else if (currentDrawerType === 'Chapter Characters') {
+        const charactersPath = getCharactersPath(bookName);
+        if (charactersPath) {
+            loadCharactersScript(charactersPath, bookName, chapterNum);
+        } else {
+            summaryDrawer.classList.remove('active');
+            document.body.classList.remove('summary-drawer-open');
+        }
+    }
 }
 
 // Initialize scrollbar auto-hide behavior
@@ -1860,5 +1904,128 @@ function displayTimeline(bookName, chapterNum) {
         document.body.classList.add('summary-drawer-open');
     } else {
         alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+    }
+}
+
+// Show chapter characters
+function showChapterCharacters() {
+    // Close mobile drawer if open
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    
+    if (drawerOverlay && drawerOverlay.classList.contains('active')) {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        document.body.style.overflow = '';
+        
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+    }
+    
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    
+    // Map book names to characters file paths
+    const charactersPath = getCharactersPath(bookName);
+    
+    if (!charactersPath) {
+        alert('Characters not available for this book yet.');
+        return;
+    }
+    
+    // Load the characters dynamically
+    loadCharactersScript(charactersPath, bookName, chapterNum);
+}
+
+// Get characters file path based on book name
+function getCharactersPath(bookName) {
+    // New Testament books
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
+        'II John', 'III John', 'Jude', 'Revelation'];
+    
+    // Old Testament books
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
+        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+    
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    
+    if (newTestamentBooks.includes(bookName)) {
+        return `resources/characters/new-testament/${fileName}.js`;
+    } else if (oldTestamentBooks.includes(bookName)) {
+        return `resources/characters/old-testament/${fileName}.js`;
+    }
+    
+    return null;
+}
+
+// Load characters script dynamically
+function loadCharactersScript(path, bookName, chapterNum) {
+    // Check if script is already loaded
+    const existingScript = document.querySelector(`script[src="${path}"]`);
+    
+    if (existingScript) {
+        // Script already loaded, display characters
+        displayCharacters(bookName, chapterNum);
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            displayCharacters(bookName, chapterNum);
+        };
+        script.onerror = () => {
+            alert(`Failed to load characters for ${bookName}.`);
+        };
+        document.body.appendChild(script);
+    }
+}
+
+// Display characters in the drawer
+function displayCharacters(bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
+    
+    // Try to access the characters object
+    const charactersData = window[charactersVarName];
+    
+    if (charactersData && charactersData[chapterNum]) {
+        const summaryDrawer = document.getElementById('summary-drawer');
+        const summaryDrawerContent = document.getElementById('summary-drawer-content');
+        const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+        const characters = charactersData[chapterNum];
+        
+        // Update drawer title
+        summaryDrawerTitle.textContent = 'Chapter Characters';
+        
+        // Format the characters with proper styling
+        const formattedCharacters = characters
+            .map((character, index) => `
+                <div class="character-item">
+                    <div class="character-number">${index + 1}. ${character.name}</div>
+                    <div class="character-description">${character.description}</div>
+                </div>
+            `)
+            .join('');
+        
+        summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
+        
+        // Show the drawer
+        summaryDrawer.classList.add('active');
+        document.body.classList.add('summary-drawer-open');
+    } else {
+        alert(`Characters not available for ${bookName} ${chapterNum} yet.`);
     }
 }

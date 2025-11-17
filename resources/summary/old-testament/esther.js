@@ -1,0 +1,4 @@
+﻿// esther Summary
+window.estherSummary = {
+
+};

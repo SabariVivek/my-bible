@@ -1,0 +1,4 @@
+﻿// galatians Summary
+window.galatiansSummary = {
+
+};

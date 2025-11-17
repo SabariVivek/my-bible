@@ -1,0 +1,4 @@
+﻿// ecclesiastes Timeline
+window.ecclesiastesTimeline = {
+
+};

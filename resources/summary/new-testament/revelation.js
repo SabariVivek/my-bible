@@ -1,0 +1,4 @@
+﻿// revelation Summary
+window.revelationSummary = {
+
+};

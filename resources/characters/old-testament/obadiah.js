@@ -1,0 +1,4 @@
+﻿// obadiah Characters
+window.obadiahCharacters = {
+
+};

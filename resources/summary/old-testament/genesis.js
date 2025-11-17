@@ -1,0 +1,4 @@
+﻿// genesis Summary
+window.genesisSummary = {
+
+};

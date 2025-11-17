@@ -1,0 +1,4 @@
+﻿// ecclesiastes Characters
+window.ecclesiastesCharacters = {
+
+};

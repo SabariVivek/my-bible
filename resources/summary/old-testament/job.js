@@ -1,0 +1,4 @@
+﻿// job Summary
+window.jobSummary = {
+
+};

@@ -1,0 +1,4 @@
+﻿// amos Summary
+window.amosSummary = {
+
+};

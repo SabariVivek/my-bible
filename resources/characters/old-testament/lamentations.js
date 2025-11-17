@@ -1,0 +1,4 @@
+﻿// lamentations Characters
+window.lamentationsCharacters = {
+
+};

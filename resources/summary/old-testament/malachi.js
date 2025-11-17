@@ -1,0 +1,4 @@
+﻿// malachi Summary
+window.malachiSummary = {
+
+};

@@ -1,0 +1,4 @@
+﻿// james Characters
+window.jamesCharacters = {
+
+};

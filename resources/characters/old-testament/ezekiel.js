@@ -1,0 +1,4 @@
+﻿// ezekiel Characters
+window.ezekielCharacters = {
+
+};

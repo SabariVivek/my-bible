@@ -1,0 +1,4 @@
+﻿// proverbs Summary
+window.proverbsSummary = {
+
+};

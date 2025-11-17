@@ -1,0 +1,4 @@
+﻿// micah Summary
+window.micahSummary = {
+
+};

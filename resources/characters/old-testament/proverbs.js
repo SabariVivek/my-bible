@@ -1,0 +1,4 @@
+﻿// proverbs Characters
+window.proverbsCharacters = {
+
+};

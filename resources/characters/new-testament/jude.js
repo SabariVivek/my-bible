@@ -1,0 +1,4 @@
+﻿// jude Characters
+window.judeCharacters = {
+
+};

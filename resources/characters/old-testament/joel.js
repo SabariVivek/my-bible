@@ -1,0 +1,4 @@
+﻿// joel Characters
+window.joelCharacters = {
+
+};

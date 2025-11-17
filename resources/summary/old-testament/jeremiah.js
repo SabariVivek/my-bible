@@ -1,0 +1,4 @@
+﻿// jeremiah Summary
+window.jeremiahSummary = {
+
+};

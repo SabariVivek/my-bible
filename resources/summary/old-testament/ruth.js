@@ -1,0 +1,4 @@
+﻿// ruth Summary
+window.ruthSummary = {
+
+};

@@ -1,0 +1,4 @@
+﻿// amos Characters
+window.amosCharacters = {
+
+};
