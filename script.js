@@ -1540,6 +1540,13 @@ function initializeSiteTitle() {
             }
         });
     }
+    
+    // Add click handler for secret icon
+    if (secretIcon) {
+        secretIcon.addEventListener('click', () => {
+            window.location.href = 'secret.html';
+        });
+    }
 }
 
 // Initialize home options card
