@@ -1856,12 +1856,15 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
                     </div>
                     
                     <div style="display: flex; justify-content: center; max-width: 700px; width: 100%;">
-                        <div class="action-card" id="read-bible-card" style="display: flex; flex-direction: row; align-items: center; gap: 12px; background: linear-gradient(135deg, #ffd700 0%, #ffb800 100%); border-radius: 12px; padding: 16px 32px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3); border: none;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <div class="action-card" id="read-bible-card">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                             </svg>
-                            <div style="font-size: 1rem; font-weight: 600; color: #2a2a2a;">Read Bible</div>
+                            <div>
+                                <div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 4px;">Read Bible</div>
+                                <div style="font-size: 0.9rem; opacity: 0.8;">Start reading the scriptures</div>
+                            </div>
                         </div>
                     </div>
                 </div>
