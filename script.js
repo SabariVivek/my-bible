@@ -1,74 +1,76 @@
 // Bible book configuration
 const bibleBooks = [
     // Old Testament
-    { name: 'Genesis', tamilName: 'ஆதியாகமம்', file: 'genesis', testament: 'old', chapters: 50 },
-    { name: 'Exodus', tamilName: 'யாத்திராகமம்', file: 'exodus', testament: 'old', chapters: 40 },
-    { name: 'Leviticus', tamilName: 'லேவியராகமம்', file: 'leviticus', testament: 'old', chapters: 27 },
-    { name: 'Numbers', tamilName: 'எண்ணாகமம்', file: 'numbers', testament: 'old', chapters: 36 },
-    { name: 'Deuteronomy', tamilName: 'உபாகமம்', file: 'deuteronomy', testament: 'old', chapters: 34 },
-    { name: 'Joshua', tamilName: 'யோசுவா', file: 'joshua', testament: 'old', chapters: 24 },
-    { name: 'Judges', tamilName: 'நியாயாதிபதிகள்', file: 'judges', testament: 'old', chapters: 21 },
-    { name: 'Ruth', tamilName: 'ரூத்', file: 'ruth', testament: 'old', chapters: 4 },
-    { name: 'I Samuel', tamilName: '1 சாமுவேல்', file: 'i_samuel', testament: 'old', chapters: 31 },
-    { name: 'II Samuel', tamilName: '2 சாமுவேல்', file: 'ii_samuel', testament: 'old', chapters: 24 },
-    { name: 'I Kings', tamilName: '1 இராஜாக்கள்', file: 'i_kings', testament: 'old', chapters: 22 },
-    { name: 'II Kings', tamilName: '2 இராஜாக்கள்', file: 'ii_kings', testament: 'old', chapters: 25 },
-    { name: 'I Chronicles', tamilName: '1 நாளாகமம்', file: 'i_chronicles', testament: 'old', chapters: 29 },
-    { name: 'II Chronicles', tamilName: '2 நாளாகமம்', file: 'ii_chronicles', testament: 'old', chapters: 36 },
-    { name: 'Ezra', tamilName: 'எஸ்றா', file: 'ezra', testament: 'old', chapters: 10 },
-    { name: 'Nehemiah', tamilName: 'நெகேமியா', file: 'nehemiah', testament: 'old', chapters: 13 },
-    { name: 'Esther', tamilName: 'எஸ்தர்', file: 'esther', testament: 'old', chapters: 10 },
-    { name: 'Job', tamilName: 'யோபு', file: 'job', testament: 'old', chapters: 42 },
-    { name: 'Psalms', tamilName: 'சங்கீதம்', file: 'psalms', testament: 'old', chapters: 150 },
-    { name: 'Proverbs', tamilName: 'நீதிமொழிகள்', file: 'proverbs', testament: 'old', chapters: 31 },
-    { name: 'Ecclesiastes', tamilName: 'பிரசங்கி', file: 'ecclesiastes', testament: 'old', chapters: 12 },
-    { name: 'Song of Solomon', tamilName: 'உன்னதப்பாட்டு', file: 'song_of_solomon', testament: 'old', chapters: 8 },
-    { name: 'Isaiah', tamilName: 'ஏசாயா', file: 'isaiah', testament: 'old', chapters: 66 },
-    { name: 'Jeremiah', tamilName: 'எரேமியா', file: 'jeremiah', testament: 'old', chapters: 52 },
-    { name: 'Lamentations', tamilName: 'புலம்பல்', file: 'lamentations', testament: 'old', chapters: 5 },
-    { name: 'Ezekiel', tamilName: 'எசேக்கியேல்', file: 'ezekiel', testament: 'old', chapters: 48 },
-    { name: 'Daniel', tamilName: 'தானியேல்', file: 'daniel', testament: 'old', chapters: 12 },
-    { name: 'Hosea', tamilName: 'ஓசியா', file: 'hosea', testament: 'old', chapters: 14 },
-    { name: 'Joel', tamilName: 'யோவேல்', file: 'joel', testament: 'old', chapters: 3 },
-    { name: 'Amos', tamilName: 'ஆமோஸ்', file: 'amos', testament: 'old', chapters: 9 },
-    { name: 'Obadiah', tamilName: 'ஒபதியா', file: 'obadiah', testament: 'old', chapters: 1 },
-    { name: 'Jonah', tamilName: 'யோனா', file: 'jonah', testament: 'old', chapters: 4 },
-    { name: 'Micah', tamilName: 'மீகா', file: 'micah', testament: 'old', chapters: 7 },
-    { name: 'Nahum', tamilName: 'நாகூம்', file: 'nahum', testament: 'old', chapters: 3 },
-    { name: 'Habakkuk', tamilName: 'ஆபகூக்', file: 'habakkuk', testament: 'old', chapters: 3 },
-    { name: 'Zephaniah', tamilName: 'செப்பனியா', file: 'zephaniah', testament: 'old', chapters: 3 },
-    { name: 'Haggai', tamilName: 'ஆகாய்', file: 'haggai', testament: 'old', chapters: 2 },
-    { name: 'Zechariah', tamilName: 'சகரியா', file: 'zechariah', testament: 'old', chapters: 14 },
-    { name: 'Malachi', tamilName: 'மல்கியா', file: 'malachi', testament: 'old', chapters: 4 },
+    { name: 'Genesis', shortName: 'Gen', tamilName: 'ஆதியாகமம்', tamilShortName: 'ஆதி', file: 'genesis', testament: 'old', chapters: 50 },
+    { name: 'Exodus', shortName: 'Exod', tamilName: 'யாத்திராகமம்', tamilShortName: 'யாத்', file: 'exodus', testament: 'old', chapters: 40 },
+    { name: 'Leviticus', shortName: 'Lev', tamilName: 'லேவியராகமம்', tamilShortName: 'லேவி', file: 'leviticus', testament: 'old', chapters: 27 },
+    { name: 'Numbers', shortName: 'Num', tamilName: 'எண்ணாகமம்', tamilShortName: 'எண்', file: 'numbers', testament: 'old', chapters: 36 },
+    { name: 'Deuteronomy', shortName: 'Deut', tamilName: 'உபாகமம்', tamilShortName: 'உபா', file: 'deuteronomy', testament: 'old', chapters: 34 },
+    { name: 'Joshua', shortName: 'Josh', tamilName: 'யோசுவா', tamilShortName: 'யோசு', file: 'joshua', testament: 'old', chapters: 24 },
+    { name: 'Judges', shortName: 'Judg', tamilName: 'நியாயாதிபதிகள்', tamilShortName: 'நியா', file: 'judges', testament: 'old', chapters: 21 },
+    { name: 'Ruth', shortName: 'Ruth', tamilName: 'ரூத்', tamilShortName: 'ரூத்', file: 'ruth', testament: 'old', chapters: 4 },
+    { name: 'I Samuel', shortName: '1 Sam', tamilName: '1 சாமுவேல்', tamilShortName: '1 சாமு', file: 'i_samuel', testament: 'old', chapters: 31 },
+    { name: 'II Samuel', shortName: '2 Sam', tamilName: '2 சாமுவேல்', tamilShortName: '2 சாமு', file: 'ii_samuel', testament: 'old', chapters: 24 },
+    { name: 'I Kings', shortName: '1 Kgs', tamilName: '1 இராஜாக்கள்', tamilShortName: '1 இரா', file: 'i_kings', testament: 'old', chapters: 22 },
+    { name: 'II Kings', shortName: '2 Kgs', tamilName: '2 இராஜாக்கள்', tamilShortName: '2 இரா', file: 'ii_kings', testament: 'old', chapters: 25 },
+    { name: 'I Chronicles', shortName: '1 Chr', tamilName: '1 நாளாகமம்', tamilShortName: '1 நாளா', file: 'i_chronicles', testament: 'old', chapters: 29 },
+    { name: 'II Chronicles', shortName: '2 Chr', tamilName: '2 நாளாகமம்', tamilShortName: '2 நாளா', file: 'ii_chronicles', testament: 'old', chapters: 36 },
+    { name: 'Ezra', shortName: 'Ezra', tamilName: 'எஸ்றா', tamilShortName: 'எஸ்றா', file: 'ezra', testament: 'old', chapters: 10 },
+    { name: 'Nehemiah', shortName: 'Neh', tamilName: 'நெகேமியா', tamilShortName: 'நெகே', file: 'nehemiah', testament: 'old', chapters: 13 },
+    { name: 'Esther', shortName: 'Esth', tamilName: 'எஸ்தர்', tamilShortName: 'எஸ்தர்', file: 'esther', testament: 'old', chapters: 10 },
+    { name: 'Job', shortName: 'Job', tamilName: 'யோபு', tamilShortName: 'யோபு', file: 'job', testament: 'old', chapters: 42 },
+    { name: 'Psalms', shortName: 'Ps', tamilName: 'சங்கீதம்', tamilShortName: 'சங்கீ', file: 'psalms', testament: 'old', chapters: 150 },
+    { name: 'Proverbs', shortName: 'Prov', tamilName: 'நீதிமொழிகள்', tamilShortName: 'நீதி', file: 'proverbs', testament: 'old', chapters: 31 },
+    { name: 'Ecclesiastes', shortName: 'Eccl', tamilName: 'பிரசங்கி', tamilShortName: 'பிர', file: 'ecclesiastes', testament: 'old', chapters: 12 },
+    { name: 'Song of Solomon', shortName: 'Song', tamilName: 'உன்னதப்பாட்டு', tamilShortName: 'உன்ன', file: 'song_of_solomon', testament: 'old', chapters: 8 },
+    { name: 'Isaiah', shortName: 'Isa', tamilName: 'ஏசாயா', tamilShortName: 'ஏசா', file: 'isaiah', testament: 'old', chapters: 66 },
+    { name: 'Jeremiah', shortName: 'Jer', tamilName: 'எரேமியா', tamilShortName: 'எரே', file: 'jeremiah', testament: 'old', chapters: 52 },
+    { name: 'Lamentations', shortName: 'Lam', tamilName: 'புலம்பல்', tamilShortName: 'புல', file: 'lamentations', testament: 'old', chapters: 5 },
+    { name: 'Ezekiel', shortName: 'Ezek', tamilName: 'எசேக்கியேல்', tamilShortName: 'எசே', file: 'ezekiel', testament: 'old', chapters: 48 },
+    { name: 'Daniel', shortName: 'Dan', tamilName: 'தானியேல்', tamilShortName: 'தானி', file: 'daniel', testament: 'old', chapters: 12 },
+    { name: 'Hosea', shortName: 'Hos', tamilName: 'ஓசியா', tamilShortName: 'ஓசி', file: 'hosea', testament: 'old', chapters: 14 },
+    { name: 'Joel', shortName: 'Joel', tamilName: 'யோவேல்', tamilShortName: 'யோவே', file: 'joel', testament: 'old', chapters: 3 },
+    { name: 'Amos', shortName: 'Amos', tamilName: 'ஆமோஸ்', tamilShortName: 'ஆமோ', file: 'amos', testament: 'old', chapters: 9 },
+    { name: 'Obadiah', shortName: 'Obad', tamilName: 'ஒபதியா', tamilShortName: 'ஒபதி', file: 'obadiah', testament: 'old', chapters: 1 },
+    { name: 'Jonah', shortName: 'Jonah', tamilName: 'யோனா', tamilShortName: 'யோனா', file: 'jonah', testament: 'old', chapters: 4 },
+    { name: 'Micah', shortName: 'Mic', tamilName: 'மீகா', tamilShortName: 'மீகா', file: 'micah', testament: 'old', chapters: 7 },
+    { name: 'Nahum', shortName: 'Nah', tamilName: 'நாகூம்', tamilShortName: 'நாகூ', file: 'nahum', testament: 'old', chapters: 3 },
+    { name: 'Habakkuk', shortName: 'Hab', tamilName: 'ஆபகூக்', tamilShortName: 'ஆப', file: 'habakkuk', testament: 'old', chapters: 3 },
+    { name: 'Zephaniah', shortName: 'Zeph', tamilName: 'செப்பனியா', tamilShortName: 'செப்', file: 'zephaniah', testament: 'old', chapters: 3 },
+    { name: 'Haggai', shortName: 'Hag', tamilName: 'ஆகாய்', tamilShortName: 'ஆகாய்', file: 'haggai', testament: 'old', chapters: 2 },
+    { name: 'Zechariah', shortName: 'Zech', tamilName: 'சகரியா', tamilShortName: 'சகரி', file: 'zechariah', testament: 'old', chapters: 14 },
+    { name: 'Malachi', shortName: 'Mal', tamilName: 'மல்கியா', tamilShortName: 'மல்கி', file: 'malachi', testament: 'old', chapters: 4 },
+
     // New Testament
-    { name: 'Matthew', tamilName: 'மத்தேயு', file: 'matthew', testament: 'new', chapters: 28 },
-    { name: 'Mark', tamilName: 'மாற்கு', file: 'mark', testament: 'new', chapters: 16 },
-    { name: 'Luke', tamilName: 'லூக்கா', file: 'luke', testament: 'new', chapters: 24 },
-    { name: 'John', tamilName: 'யோவான்', file: 'john', testament: 'new', chapters: 21 },
-    { name: 'Acts', tamilName: 'அப்போஸ்தலர்', file: 'acts', testament: 'new', chapters: 28 },
-    { name: 'Romans', tamilName: 'ரோமர்', file: 'romans', testament: 'new', chapters: 16 },
-    { name: 'I Corinthians', tamilName: '1 கொரிந்தியர்', file: 'i_corinthians', testament: 'new', chapters: 16 },
-    { name: 'II Corinthians', tamilName: '2 கொரிந்தியர்', file: 'ii_corinthians', testament: 'new', chapters: 13 },
-    { name: 'Galatians', tamilName: 'கலாத்தியர்', file: 'galatians', testament: 'new', chapters: 6 },
-    { name: 'Ephesians', tamilName: 'எபேசியர்', file: 'ephesians', testament: 'new', chapters: 6 },
-    { name: 'Philippians', tamilName: 'பிலிப்பியர்', file: 'philippians', testament: 'new', chapters: 4 },
-    { name: 'Colossians', tamilName: 'கொலோசெயர்', file: 'colossians', testament: 'new', chapters: 4 },
-    { name: 'I Thessalonians', tamilName: '1 தெசலோனிக்கேயர்', file: 'i_thessalonians', testament: 'new', chapters: 5 },
-    { name: 'II Thessalonians', tamilName: '2 தெசலோனிக்கேயர்', file: 'ii_thessalonians', testament: 'new', chapters: 3 },
-    { name: 'I Timothy', tamilName: '1 தீமோத்தேயு', file: 'i_timothy', testament: 'new', chapters: 6 },
-    { name: 'II Timothy', tamilName: '2 தீமோத்தேயு', file: 'ii_timothy', testament: 'new', chapters: 4 },
-    { name: 'Titus', tamilName: 'தீத்து', file: 'titus', testament: 'new', chapters: 3 },
-    { name: 'Philemon', tamilName: 'பிலேமோன்', file: 'philemon', testament: 'new', chapters: 1 },
-    { name: 'Hebrews', tamilName: 'எபிரெயர்', file: 'hebrews', testament: 'new', chapters: 13 },
-    { name: 'James', tamilName: 'யாக்கோபு', file: 'james', testament: 'new', chapters: 5 },
-    { name: 'I Peter', tamilName: '1 பேதுரு', file: 'i_peter', testament: 'new', chapters: 5 },
-    { name: 'II Peter', tamilName: '2 பேதுரு', file: 'ii_peter', testament: 'new', chapters: 3 },
-    { name: 'I John', tamilName: '1 யோவான்', file: 'i_john', testament: 'new', chapters: 5 },
-    { name: 'II John', tamilName: '2 யோவான்', file: 'ii_john', testament: 'new', chapters: 1 },
-    { name: 'III John', tamilName: '3 யோவான்', file: 'iii_john', testament: 'new', chapters: 1 },
-    { name: 'Jude', tamilName: 'யூதா', file: 'jude', testament: 'new', chapters: 1 },
-    { name: 'Revelation', tamilName: 'வெளிப்படுத்தல்', file: 'revelation', testament: 'new', chapters: 22 }
+    { name: 'Matthew', shortName: 'Matt', tamilName: 'மத்தேயு', tamilShortName: 'மத்', file: 'matthew', testament: 'new', chapters: 28 },
+    { name: 'Mark', shortName: 'Mark', tamilName: 'மாற்கு', tamilShortName: 'மாற்', file: 'mark', testament: 'new', chapters: 16 },
+    { name: 'Luke', shortName: 'Luke', tamilName: 'லூக்கா', tamilShortName: 'லூக்', file: 'luke', testament: 'new', chapters: 24 },
+    { name: 'John', shortName: 'John', tamilName: 'யோவான்', tamilShortName: 'யோ', file: 'john', testament: 'new', chapters: 21 },
+    { name: 'Acts', shortName: 'Acts', tamilName: 'அப்போஸ்தலர்', tamilShortName: 'அப்போ', file: 'acts', testament: 'new', chapters: 28 },
+    { name: 'Romans', shortName: 'Rom', tamilName: 'ரோமர்', tamilShortName: 'ரோமர்', file: 'romans', testament: 'new', chapters: 16 },
+    { name: 'I Corinthians', shortName: '1 Cor', tamilName: '1 கொரிந்தியர்', tamilShortName: '1 கொரி', file: 'i_corinthians', testament: 'new', chapters: 16 },
+    { name: 'II Corinthians', shortName: '2 Cor', tamilName: '2 கொரிந்தியர்', tamilShortName: '2 கொரி', file: 'ii_corinthians', testament: 'new', chapters: 13 },
+    { name: 'Galatians', shortName: 'Gal', tamilName: 'கலாத்தியர்', tamilShortName: 'கலா', file: 'galatians', testament: 'new', chapters: 6 },
+    { name: 'Ephesians', shortName: 'Eph', tamilName: 'எபேசியர்', tamilShortName: 'எபே', file: 'ephesians', testament: 'new', chapters: 6 },
+    { name: 'Philippians', shortName: 'Phil', tamilName: 'பிலிப்பியர்', tamilShortName: 'பிலி', file: 'philippians', testament: 'new', chapters: 4 },
+    { name: 'Colossians', shortName: 'Col', tamilName: 'கொலோசெயர்', tamilShortName: 'கொலோ', file: 'colossians', testament: 'new', chapters: 4 },
+    { name: 'I Thessalonians', shortName: '1 Thess', tamilName: '1 தெசலோனிக்கேயர்', tamilShortName: '1 தெச', file: 'i_thessalonians', testament: 'new', chapters: 5 },
+    { name: 'II Thessalonians', shortName: '2 Thess', tamilName: '2 தெசலோனிக்கேயர்', tamilShortName: '2 தெச', file: 'ii_thessalonians', testament: 'new', chapters: 3 },
+    { name: 'I Timothy', shortName: '1 Tim', tamilName: '1 தீமோத்தேயு', tamilShortName: '1 தீமோ', file: 'i_timothy', testament: 'new', chapters: 6 },
+    { name: 'II Timothy', shortName: '2 Tim', tamilName: '2 தீமோத்தேயு', tamilShortName: '2 தீமோ', file: 'ii_timothy', testament: 'new', chapters: 4 },
+    { name: 'Titus', shortName: 'Titus', tamilName: 'தீத்து', tamilShortName: 'தீத்து', file: 'titus', testament: 'new', chapters: 3 },
+    { name: 'Philemon', shortName: 'Phlm', tamilName: 'பிலேமோன்', tamilShortName: 'பிலே', file: 'philemon', testament: 'new', chapters: 1 },
+    { name: 'Hebrews', shortName: 'Heb', tamilName: 'எபிரெயர்', tamilShortName: 'எபி', file: 'hebrews', testament: 'new', chapters: 13 },
+    { name: 'James', shortName: 'Jas', tamilName: 'யாக்கோபு', tamilShortName: 'யாக்', file: 'james', testament: 'new', chapters: 5 },
+    { name: 'I Peter', shortName: '1 Pet', tamilName: '1 பேதுரு', tamilShortName: '1 பேதுரு', file: 'i_peter', testament: 'new', chapters: 5 },
+    { name: 'II Peter', shortName: '2 Pet', tamilName: '2 பேதுரு', tamilShortName: '2 பேதுரு', file: 'ii_peter', testament: 'new', chapters: 3 },
+    { name: 'I John', shortName: '1 John', tamilName: '1 யோவான்', tamilShortName: '1 யோ', file: 'i_john', testament: 'new', chapters: 5 },
+    { name: 'II John', shortName: '2 John', tamilName: '2 யோவான்', tamilShortName: '2 யோ', file: 'ii_john', testament: 'new', chapters: 1 },
+    { name: 'III John', shortName: '3 John', tamilName: '3 யோவான்', tamilShortName: '3 யோ', file: 'iii_john', testament: 'new', chapters: 1 },
+    { name: 'Jude', shortName: 'Jude', tamilName: 'யூதா', tamilShortName: 'யூதா', file: 'jude', testament: 'new', chapters: 1 },
+    { name: 'Revelation', shortName: 'Rev', tamilName: 'வெளிப்படுத்தல்', tamilShortName: 'வெளி', file: 'revelation', testament: 'new', chapters: 22 }
 ];
+
 
 // Current state
 let currentBook = parseInt(localStorage.getItem('currentBook')) || 0; // Genesis
@@ -88,6 +90,19 @@ function normalizeBookName(bookName) {
         .replace(/^II\s+/, '2 ')
         .replace(/^III\s+/, '3 ')
         .replace(/^Psalms$/, 'Psalm'); // Handle Psalm/Psalms difference
+}
+
+// Helper function to check if a book has any memory verses
+function bookHasMemoryVerses(bookName) {
+    if (typeof memoryVerses === 'undefined') return false;
+    
+    const normalizedBookName = normalizeBookName(bookName);
+    
+    return memoryVerses.some(memVerse => {
+        const [book] = memVerse.split(/\s+(?=\d)/);
+        const normalizedMemBook = normalizeBookName(book);
+        return normalizedMemBook === normalizedBookName;
+    });
 }
 
 // Helper function to check if a chapter has any memory verses
@@ -232,6 +247,20 @@ function initializeBookList() {
         item.addEventListener('click', () => {
             loadBook(index, 1);
         });
+    });
+    
+    // Add has-memory-verse class to books with memory verses
+    markBooksWithMemoryVerses();
+}
+
+// Mark books that contain memory verses
+function markBooksWithMemoryVerses() {
+    const bookItems = document.querySelectorAll('.book-item');
+    bookItems.forEach((item, index) => {
+        const book = bibleBooks[index];
+        if (book && bookHasMemoryVerses(book.name)) {
+            item.classList.add('has-memory-verse');
+        }
     });
 }
 
@@ -640,16 +669,18 @@ function displayChapter() {
         let bookName;
         
         if (currentLanguage === 'tamil') {
-            bookName = book.tamilName;
+            // Use short Tamil name on mobile if available
+            bookName = window.innerWidth <= 768 ? (book.tamilShortName || book.tamilName) : book.tamilName;
         } else if (currentLanguage === 'both') {
-            // On mobile, show only English name for space
+            // On mobile, use short English name for space
             if (window.innerWidth <= 768) {
-                bookName = book.name;
+                bookName = book.shortName || book.name;
             } else {
                 bookName = `${book.name} / ${book.tamilName}`;
             }
         } else {
-            bookName = book.name;
+            // Use short name on mobile, full name on desktop
+            bookName = window.innerWidth <= 768 ? (book.shortName || book.name) : book.name;
         }
         
         currentChapterText.textContent = `${bookName} ${currentChapter}`;
@@ -730,6 +761,14 @@ document.addEventListener('click', (e) => {
             currentBook++;
             currentChapter = 1;
             loadBook(currentBook, currentChapter);
+        }
+    }
+    
+    // Home button - navigate to John 1:1
+    if (e.target.closest('.nav-btn[aria-label="Home"]')) {
+        const johnIndex = bibleBooks.findIndex(book => book.name === 'John');
+        if (johnIndex !== -1) {
+            loadBook(johnIndex, 1);
         }
     }
 });
