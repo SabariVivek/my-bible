@@ -1156,6 +1156,11 @@ body:not(.dark-theme) .moon-icon {
     color: #d4a04c;
 }
 
+/* Keep gold color even when chapter is active */
+.chapters-column .number-item.has-memory-verse.active {
+    color: #d4a04c !important;
+}
+
 /* Content Area */
 .content-area {
     flex: 1;
@@ -2174,6 +2179,10 @@ body.dark-theme .verses-column .number-item.has-memory-verse::after {
 
 body.dark-theme .chapters-column .number-item.has-memory-verse {
     color: #ffd27f;
+}
+
+body.dark-theme .chapters-column .number-item.has-memory-verse.active {
+    color: #ffd27f !important;
 }
 
 body.dark-theme .english-text {
