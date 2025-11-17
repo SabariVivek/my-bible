@@ -1019,7 +1019,7 @@ body:not(.dark-theme) .moon-icon {
 
 /* Books Sidebar */
 .books-sidebar {
-    width: 180px;
+    width: 190px;
     min-width: 0;
     background-color: #f8f9fa;
     border-right: 1px solid #e0e0e0 !important;
@@ -1282,7 +1282,7 @@ body.dark-theme .jesus-name {
 .bottom-nav {
     position: fixed;
     bottom: 0;
-    left: 300px;
+    left: 310px;
     right: 0;
     height: 3.75rem;
     background-color: #ffffff;
