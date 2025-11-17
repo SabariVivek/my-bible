@@ -73,7 +73,7 @@ window.leviticusCharacters = {
 	19: [
 		{ name: "A Reaper (Example)", description: "Left the edges for the poor." },
 		{ name: "A Hired Worker (Example)", description: "Not oppressed or robbed." }
-	]
+	],
 	20: [
 		{ name: "A Man (Example)", description: "Faced penalties for forbidden acts." }
 	],
