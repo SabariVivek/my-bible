@@ -2794,7 +2794,7 @@ body.dark-theme .timeline-event {
 .character-number {
     font-size: 1rem;
     font-weight: 600;
-    color: #5f6368;
+    color: #c4911a;
     margin-bottom: 0.5rem;
 }
 
@@ -2810,7 +2810,7 @@ body.dark-theme .character-item {
 }
 
 body.dark-theme .character-number {
-    color: #8ab4f8;
+    color: #c4911a;
 }
 
 body.dark-theme .character-description {
