@@ -162,13 +162,22 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
-    if (isOnHomePage === null || isOnHomePage === 'true') {
-        showHomePage();
-        if (isOnHomePage === null) {
-            localStorage.setItem('isOnHomePage', 'true');
-        }
-    } else {
+    const isMobile = window.innerWidth <= 768;
+    
+    // On mobile, always show Bible directly. On desktop/tablet, show home page by default
+    if (isMobile) {
+        // Mobile: Load Bible directly
         loadBook(currentBook, currentChapter);
+    } else {
+        // Desktop/Tablet: Show home page by default or based on saved state
+        if (isOnHomePage === null || isOnHomePage === 'true') {
+            showHomePage();
+            if (isOnHomePage === null) {
+                localStorage.setItem('isOnHomePage', 'true');
+            }
+        } else {
+            loadBook(currentBook, currentChapter);
+        }
     }
 });
 
