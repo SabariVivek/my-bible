@@ -328,12 +328,16 @@ function hideLoader() {
 async function loadBook(bookIndex, chapter) {
     showLoader();
     
+    // Restore UI elements if coming from home page
+    restoreUIFromHomePage();
+    
     currentBook = bookIndex;
     currentChapter = chapter;
     
     // Save to localStorage
     localStorage.setItem('currentBook', bookIndex);
     localStorage.setItem('currentChapter', chapter);
+    localStorage.removeItem('isOnHomePage');
     
     const book = bibleBooks[bookIndex];
     const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
@@ -477,6 +481,10 @@ function updateChapters() {
     // Add click handlers
     chaptersColumn.querySelectorAll('.number-item').forEach(item => {
         item.addEventListener('click', () => {
+            // Restore UI elements if coming from home page
+            restoreUIFromHomePage();
+            localStorage.removeItem('isOnHomePage');
+            
             const chapter = parseInt(item.dataset.chapter);
             currentChapter = chapter;
             localStorage.setItem('currentChapter', chapter);
@@ -538,6 +546,10 @@ function updateVerses() {
     // Add click handlers for scrolling to verse
     versesColumn.querySelectorAll('.number-item').forEach(item => {
         item.addEventListener('click', () => {
+            // Restore UI elements if coming from home page
+            restoreUIFromHomePage();
+            localStorage.removeItem('isOnHomePage');
+            
             hasUserInteracted = true;
             localStorage.setItem('hasUserInteracted', 'true');
             const verse = parseInt(item.dataset.verse);
@@ -1579,8 +1591,8 @@ function initializeHomeOptions() {
             
             switch(action) {
                 case 'home':
-                    // Navigate to Genesis 1 or default home
-                    loadBook(0, 1);
+                    // Navigate to home page
+                    showHomePage();
                     break;
                 case 'summary':
                     // Show Chapter Summary
@@ -1597,6 +1609,234 @@ function initializeHomeOptions() {
             }
         });
     });
+}
+
+// Restore UI elements after leaving home page
+function restoreUIFromHomePage() {
+    // Show all sidebars and columns
+    document.querySelector('.books-sidebar').style.display = '';
+    document.querySelector('.chapters-column').style.display = '';
+    document.querySelector('.verses-column').style.display = '';
+    
+    // Show language and search buttons in header
+    const langBtn = document.querySelector('.lang-btn');
+    const searchBtn = document.getElementById('search-btn');
+    if (langBtn) langBtn.style.display = '';
+    if (searchBtn) searchBtn.style.display = '';
+    
+    // Show bottom navigation
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (bottomNav) bottomNav.style.display = '';
+    
+    // Restore menu button (remove bible image if exists)
+    const menuBtn = document.querySelector('.menu-btn');
+    const logoContainer = document.querySelector('.logo-container');
+    const existingBibleImg = logoContainer?.querySelector('.home-bible-img');
+    if (existingBibleImg) existingBibleImg.remove();
+    if (menuBtn) menuBtn.style.display = '';
+}
+
+// Show home page with just the title
+function showHomePage() {
+    // Hide all sidebars and columns
+    document.querySelector('.books-sidebar').style.display = 'none';
+    document.querySelector('.chapters-column').style.display = 'none';
+    document.querySelector('.verses-column').style.display = 'none';
+    
+    // Hide search bar if visible
+    const searchBar = document.getElementById('search-bar');
+    if (searchBar) searchBar.style.display = 'none';
+    
+    // Hide search results
+    const searchResults = document.getElementById('search-results');
+    if (searchResults) searchResults.style.display = 'none';
+    
+    const searchResultsInfo = document.getElementById('search-results-info');
+    if (searchResultsInfo) searchResultsInfo.style.display = 'none';
+    
+    // Hide language and search buttons in header
+    const langBtn = document.querySelector('.lang-btn');
+    const searchBtn = document.getElementById('search-btn');
+    if (langBtn) langBtn.style.display = 'none';
+    if (searchBtn) searchBtn.style.display = 'none';
+    
+    // Hide bottom navigation
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (bottomNav) bottomNav.style.display = 'none';
+    
+    // Replace menu button with bible.png
+    const menuBtn = document.querySelector('.menu-btn');
+    const logoContainer = document.querySelector('.logo-container');
+    if (logoContainer) {
+        // Force hide menu button with !important via style attribute
+        if (menuBtn) {
+            menuBtn.style.cssText = 'display: none !important;';
+        }
+        
+        // Check if bible image already exists
+        let bibleImg = logoContainer.querySelector('.home-bible-img');
+        if (!bibleImg) {
+            bibleImg = document.createElement('img');
+            bibleImg.src = 'resources/icons/bible.png';
+            bibleImg.alt = 'Bible';
+            bibleImg.className = 'home-bible-img';
+            bibleImg.style.cssText = 'width: 25px; height: 25px; margin-right: 4px; display: block;';
+            logoContainer.insertBefore(bibleImg, logoContainer.firstChild);
+        } else {
+            bibleImg.style.cssText = 'width: 25px; height: 25px; margin-right: 4px; display: block;';
+        }
+    }
+    
+    // Load and display a random memory verse
+    loadRandomMemoryVerse();
+    
+    // Store home state
+    localStorage.setItem('isOnHomePage', 'true');
+}
+
+// Function to load and display a random memory verse
+function loadRandomMemoryVerse() {
+    const scriptureText = document.getElementById('scripture-text');
+    if (!scriptureText) {
+        return;
+    }
+    
+    // Show loading state
+    scriptureText.style.display = 'block';
+    scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 1.2rem; color: var(--text-secondary);">Loading verse...</div>';
+    
+    if (typeof memoryVerses === 'undefined' || memoryVerses.length === 0) {
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 2rem; color: var(--text-secondary);">Welcome to My Bible</div>';
+        return;
+    }
+    
+    // Pick a random memory verse
+    const randomIndex = Math.floor(Math.random() * memoryVerses.length);
+    const verseReference = memoryVerses[randomIndex];
+    
+    // Parse the verse reference (e.g., "John 3:16" or "Isaiah 12:1–6")
+    const verseData = parseVerseReference(verseReference);
+    if (!verseData) {
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Welcome to My Bible</div>';
+        return;
+    }
+    
+    // Find the book index - normalize book names for comparison
+    const bookIndex = bibleBooks.findIndex(book => {
+        const normalizedBookName = verseData.bookName.toLowerCase()
+            .replace(/^1\s+/, 'i ')
+            .replace(/^2\s+/, 'ii ')
+            .replace(/^3\s+/, 'iii ')
+            .replace(/^psalm$/, 'psalms'); // Handle Psalm -> Psalms
+        const normalizedName = book.name.toLowerCase();
+        const normalizedShortName = book.shortName.toLowerCase();
+        
+        return normalizedName === normalizedBookName || 
+               normalizedShortName === normalizedBookName ||
+               normalizedName === verseData.bookName.toLowerCase() ||
+               normalizedShortName === verseData.bookName.toLowerCase() ||
+               (normalizedName === 'psalms' && verseData.bookName.toLowerCase() === 'psalm');
+    });
+    
+    if (bookIndex === -1) {
+        scriptureText.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Book not found: ${verseData.bookName}</div>`;
+        return;
+    }
+    
+    const book = bibleBooks[bookIndex];
+    const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+    
+    // Load the book data
+    const languageFolder = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
+    const scriptPath = `Bible/${languageFolder}/${testament}/${book.file}.js`;
+    const dataVarName = `${book.file}_data`;
+    
+    // Check if data is already loaded
+    if (window[dataVarName]) {
+        displayVerseContent(window[dataVarName], verseData, verseReference, scriptureText);
+        return;
+    }
+    
+    // Remove any existing script with the same ID
+    const existingScript = document.getElementById('home-verse-script');
+    if (existingScript) existingScript.remove();
+    
+    // Create script element to load the book
+    const script = document.createElement('script');
+    script.id = 'home-verse-script';
+    script.src = scriptPath;
+    script.onload = () => {
+        const bookData = window[dataVarName];
+        displayVerseContent(bookData, verseData, verseReference, scriptureText);
+    };
+    
+    script.onerror = () => {
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
+    };
+    
+    document.body.appendChild(script);
+}
+
+// Helper function to display verse content
+function displayVerseContent(bookData, verseData, verseReference, scriptureText) {
+    // Try both formats: numeric keys and string keys with "chapter_" prefix
+    const chapterKey = `chapter_${verseData.chapter}`;
+    const chapterData = bookData[verseData.chapter] || bookData[chapterKey];
+    
+    if (bookData && chapterData) {
+        let verseText = '';
+        
+        if (verseData.verseEnd) {
+            // Range of verses
+            for (let v = verseData.verseStart; v <= verseData.verseEnd; v++) {
+                const verseKey = `verse_${v}`;
+                const verse = chapterData[v] || chapterData[verseKey];
+                if (verse) {
+                    verseText += `<sup>${v}</sup> ${verse} `;
+                }
+            }
+        } else {
+            // Single verse
+            const verseKey = `verse_${verseData.verseStart}`;
+            const verse = chapterData[verseData.verseStart] || chapterData[verseKey];
+            if (verse) {
+                verseText = `<sup>${verseData.verseStart}</sup> ${verse}`;
+            }
+        }
+        
+        if (verseText) {
+            scriptureText.style.display = 'block';
+            scriptureText.innerHTML = `
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 40px 20px; max-width: 800px; margin: 0 auto;">
+                    <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px;">
+                        ${verseText}
+                    </div>
+                    <div style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); text-align: center;">
+                        — ${verseReference}
+                    </div>
+                </div>
+            `;
+        } else {
+            scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Verse not found</div>';
+        }
+    } else {
+        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Chapter not found</div>';
+    }
+}
+
+// Helper function to parse verse reference
+function parseVerseReference(reference) {
+    // Handle formats like "John 3:16", "Isaiah 12:1–6", "Genesis 1:1", "1 John 3:16", "2 Timothy 1:7"
+    // Match book name (can include numbers and spaces), chapter:verse or chapter:verse–verse
+    const match = reference.match(/^([\d\s\w]+?)\s+(\d+):(\d+)(?:[–—-](\d+))?$/);
+    if (!match) return null;
+    
+    return {
+        bookName: match[1].trim(),
+        chapter: parseInt(match[2]),
+        verseStart: parseInt(match[3]),
+        verseEnd: match[4] ? parseInt(match[4]) : null
+    };
 }
 
 // Check and update available home options based on data availability
