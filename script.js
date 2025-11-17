@@ -1814,7 +1814,7 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
         if (verseText) {
             scriptureText.style.display = 'block';
             scriptureText.innerHTML = `
-                <div style="display: flex; align-items: center; justify-content: center; min-height: 100%; padding: 20px;">
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; padding: 20px; gap: 20px;">
                     <div class="verse-card" style="border-radius: 16px; padding: 32px 28px; max-width: 700px; width: 100%;">
                         <div class="verse-label" style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 24px; text-align: center;">
                             Verse of the Day
@@ -1826,8 +1826,30 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
                             — ${verseReference}
                         </div>
                     </div>
+                    
+                    <div style="display: flex; justify-content: center; max-width: 700px; width: 100%;">
+                        <div class="action-card verse-card" id="read-bible-card" style="max-width: 300px; width: 100%; border-radius: 12px; padding: 24px 20px; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 12px; opacity: 0.8;">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                            <div class="verse-text" style="font-size: 1rem; font-weight: 600; margin-bottom: 8px;">Read Bible</div>
+                            <div class="verse-reference" style="font-size: 0.85rem; opacity: 0.7;">Continue your reading journey</div>
+                        </div>
+                    </div>
                 </div>
             `;
+            
+            // Add click handler for read bible card
+            setTimeout(() => {
+                const readBibleCard = document.getElementById('read-bible-card');
+                
+                if (readBibleCard) {
+                    readBibleCard.addEventListener('click', () => {
+                        loadBook(currentBook, currentChapter);
+                    });
+                }
+            }, 0);
         } else {
             scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Verse not found</div>';
         }
