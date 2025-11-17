@@ -1180,6 +1180,7 @@ body:not(.dark-theme) .moon-icon {
     padding: 2rem 1rem 2rem 2rem;
     background-color: #fefefe;
     position: relative;
+    transition: margin-right 0.3s ease;
 }
 
 .scripture-text {
@@ -2391,6 +2392,8 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     padding: 8px;
     min-width: 220px;
+    max-width: calc(100vw - 32px);
+    width: max-content;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -2427,8 +2430,8 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
 
 .home-option span {
     font-size: 14px;
-    font-weight: 500;
-    color: #202124;
+    font-weight: 400;
+    color: #3c4043;
 }
 
 .home-option:hover .option-icon {
@@ -2454,7 +2457,7 @@ body.dark-theme .home-option .option-icon {
 }
 
 body.dark-theme .home-option span {
-    color: #e8eaed;
+    color: #bdc1c6;
 }
 
 body.dark-theme .home-option:hover .option-icon {
@@ -2463,4 +2466,155 @@ body.dark-theme .home-option:hover .option-icon {
 
 body.dark-theme .home-option:hover span {
     color: #8ab4f8;
+}
+
+/* Summary Drawer Overlay */
+.summary-drawer-overlay {
+    display: none;
+}
+
+/* Summary Drawer */
+.summary-drawer {
+    position: fixed;
+    top: 3.75rem;
+    right: -450px;
+    width: 450px;
+    height: calc(100vh - 3.75rem - 3.75rem);
+    bottom: 3.75rem;
+    background: #ffffff;
+    border-left: 1px solid #e0e0e0;
+    transition: right 0.3s ease;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-drawer.active {
+    right: 0;
+}
+
+/* Adjust main content when drawer is open */
+body.summary-drawer-open .content-area {
+    margin-right: 450px;
+}
+
+body.summary-drawer-open .bottom-nav {
+    right: 450px;
+}
+
+.summary-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.summary-drawer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #202124;
+    margin: 0;
+}
+
+.close-summary-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5f6368;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.close-summary-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.summary-drawer-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+.summary-drawer-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.summary-drawer-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.summary-drawer-content::-webkit-scrollbar-thumb {
+    background-color: rgba(95, 99, 104, 0.4);
+    border-radius: 3px;
+}
+
+.summary-drawer-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(95, 99, 104, 0.6);
+}
+
+body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb {
+    background-color: rgba(154, 160, 166, 0.4);
+}
+
+body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(154, 160, 166, 0.6);
+}
+
+.summary-chapter-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a73e8;
+    margin-bottom: 1.25rem;
+}
+
+.summary-paragraph {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #3c4043;
+    text-align: justify;
+}
+
+/* Dark theme for summary drawer */
+body.dark-theme .summary-drawer {
+    background: #292a2d;
+    border-left-color: #3c4043;
+}
+
+body.dark-theme .summary-drawer-header {
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .summary-drawer-title {
+    color: #e8eaed;
+}
+
+body.dark-theme .close-summary-btn {
+    color: #9aa0a6;
+}
+
+body.dark-theme .close-summary-btn:hover {
+    background-color: #3c4043;
+}
+
+body.dark-theme .summary-chapter-title {
+    color: #8ab4f8;
+}
+
+body.dark-theme .summary-paragraph {
+    color: #bdc1c6;
+}
+
+/* Mobile styles for summary drawer */
+@media (max-width: 768px) {
+    .summary-drawer {
+        width: 100%;
+        right: -100%;
+    }
 }

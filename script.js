@@ -157,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSearch();
     initializeSiteTitle();
     initializeHomeOptions();
+    initializeSummaryDrawer();
     loadBook(currentBook, currentChapter);
 });
 
@@ -1550,8 +1551,8 @@ function initializeHomeOptions() {
                     loadBook(0, 1);
                     break;
                 case 'summary':
-                    // Placeholder for Chapter Summary feature
-                    alert('Chapter Summary - Coming Soon!');
+                    // Show Chapter Summary
+                    showChapterSummary();
                     break;
                 case 'timeline':
                     // Placeholder for Chapter Timeline feature
@@ -1564,4 +1565,116 @@ function initializeHomeOptions() {
             }
         });
     });
+}
+
+// Show chapter summary
+function showChapterSummary() {
+    const bookName = bibleBooks[currentBook].name;
+    const chapterNum = currentChapter;
+    
+    // Map book names to summary file paths
+    const summaryPath = getSummaryPath(bookName);
+    
+    if (!summaryPath) {
+        alert('Summary not available for this book yet.');
+        return;
+    }
+    
+    // Load the summary dynamically
+    loadSummaryScript(summaryPath, bookName, chapterNum);
+}
+
+// Get summary file path based on book name
+function getSummaryPath(bookName) {
+    // New Testament books
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
+        'II John', 'III John', 'Jude', 'Revelation'];
+    
+    // Old Testament books
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
+        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+    
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    
+    if (newTestamentBooks.includes(bookName)) {
+        return `resources/summary/new-testament/${fileName}.js`;
+    } else if (oldTestamentBooks.includes(bookName)) {
+        return `resources/summary/old-testament/${fileName}.js`;
+    }
+    
+    return null;
+}
+
+// Load and display summary
+function loadSummaryScript(path, bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+    
+    // Check if summary is already loaded
+    if (window[summaryVarName]) {
+        displaySummary(bookName, chapterNum);
+        return;
+    }
+    
+    const script = document.createElement('script');
+    script.src = path;
+    script.onload = () => {
+        displaySummary(bookName, chapterNum);
+    };
+    script.onerror = () => {
+        alert(`Summary not available for ${bookName} ${chapterNum} yet.`);
+    };
+    
+    document.body.appendChild(script);
+}
+
+// Display the summary in the drawer
+function displaySummary(bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
+    
+    // Try to access the summary object
+    const summaryData = window[summaryVarName];
+    
+    if (summaryData && summaryData[chapterNum]) {
+        const summaryDrawer = document.getElementById('summary-drawer');
+        const summaryDrawerContent = document.getElementById('summary-drawer-content');
+        const summary = summaryData[chapterNum];
+        
+        // Format the summary with proper styling
+        const formattedSummary = summary
+            .split('\n\n')
+            .map(para => `<p class="summary-paragraph">${para}</p>`)
+            .join('');
+        
+        summaryDrawerContent.innerHTML = formattedSummary;
+        
+        // Show the drawer
+        summaryDrawer.classList.add('active');
+        document.body.classList.add('summary-drawer-open');
+    } else {
+        alert(`Summary not available for ${bookName} ${chapterNum} yet.`);
+    }
+}
+
+// Initialize summary drawer close handlers
+function initializeSummaryDrawer() {
+    const closeSummaryBtn = document.getElementById('close-summary-btn');
+    
+    if (closeSummaryBtn) {
+        closeSummaryBtn.addEventListener('click', closeSummaryDrawer);
+    }
+}
+
+function closeSummaryDrawer() {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    summaryDrawer.classList.remove('active');
+    document.body.classList.remove('summary-drawer-open');
 }
