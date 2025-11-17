@@ -1701,6 +1701,34 @@ function showHomePage() {
     localStorage.setItem('isOnHomePage', 'true');
 }
 
+// Function to get today's date as a string (YYYY-MM-DD)
+function getTodayDateString() {
+    const today = new Date();
+    return `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+}
+
+// Function to get verse index for today (deterministic based on date)
+function getTodayVerseIndex() {
+    const today = getTodayDateString();
+    const savedDate = localStorage.getItem('verseOfTheDayDate');
+    const savedIndex = localStorage.getItem('verseOfTheDayIndex');
+    
+    // If it's the same day and we have a saved index, use it
+    if (savedDate === today && savedIndex !== null) {
+        return parseInt(savedIndex);
+    }
+    
+    // Generate a consistent index based on the date
+    const dateHash = today.split('-').reduce((hash, part) => hash + parseInt(part), 0);
+    const verseIndex = dateHash % memoryVerses.length;
+    
+    // Save for today
+    localStorage.setItem('verseOfTheDayDate', today);
+    localStorage.setItem('verseOfTheDayIndex', verseIndex.toString());
+    
+    return verseIndex;
+}
+
 // Function to load and display a random memory verse
 function loadRandomMemoryVerse() {
     const scriptureText = document.getElementById('scripture-text');
@@ -1717,9 +1745,9 @@ function loadRandomMemoryVerse() {
         return;
     }
     
-    // Pick a random memory verse
-    const randomIndex = Math.floor(Math.random() * memoryVerses.length);
-    const verseReference = memoryVerses[randomIndex];
+    // Get today's verse (same verse throughout the day)
+    const verseIndex = getTodayVerseIndex();
+    const verseReference = memoryVerses[verseIndex];
     
     // Parse the verse reference (e.g., "John 3:16" or "Isaiah 12:1–6")
     const verseData = parseVerseReference(verseReference);
