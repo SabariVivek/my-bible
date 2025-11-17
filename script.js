@@ -160,10 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
     
-    // Check if user was on home page before reload
-    const isOnHomePage = localStorage.getItem('isOnHomePage') === 'true';
-    if (isOnHomePage) {
+    // Check if user was on home page before reload, or load home page by default on first visit
+    const isOnHomePage = localStorage.getItem('isOnHomePage');
+    if (isOnHomePage === null || isOnHomePage === 'true') {
         showHomePage();
+        if (isOnHomePage === null) {
+            localStorage.setItem('isOnHomePage', 'true');
+        }
     } else {
         loadBook(currentBook, currentChapter);
     }
