@@ -2686,7 +2686,7 @@ body.dark-theme .summary-drawer-header {
 }
 
 body.dark-theme .summary-drawer-title {
-    color: #e8eaed;
+    color: #bdc1c6;
 }
 
 body.dark-theme .close-summary-btn {
@@ -2794,7 +2794,7 @@ body.dark-theme .timeline-event {
 .character-number {
     font-size: 1rem;
     font-weight: 600;
-    color: #c4911a;
+    color: #9a7515;
     margin-bottom: 0.5rem;
 }
 
