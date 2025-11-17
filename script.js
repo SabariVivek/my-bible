@@ -192,6 +192,9 @@ function initializeMobileDrawer() {
                 closeIcon.style.display = 'none';
                 document.body.style.overflow = '';
             } else {
+                // Close summary drawer if open
+                closeSummaryDrawer();
+                
                 // Open drawer
                 drawerOverlay.classList.add('active');
                 booksSidebar.classList.add('drawer-open');
@@ -1570,6 +1573,25 @@ function initializeHomeOptions() {
 
 // Show chapter summary
 function showChapterSummary() {
+    // Close mobile drawer if open
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    
+    if (drawerOverlay && drawerOverlay.classList.contains('active')) {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        document.body.style.overflow = '';
+        
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+    }
+    
     const bookName = bibleBooks[currentBook].name;
     const chapterNum = currentChapter;
     
@@ -1724,6 +1746,25 @@ function initializeScrollbarBehavior() {
 
 // Show chapter timeline
 function showChapterTimeline() {
+    // Close mobile drawer if open
+    const drawerOverlay = document.querySelector('.drawer-overlay');
+    const booksSidebar = document.querySelector('.books-sidebar');
+    const chaptersColumn = document.querySelector('.chapters-column');
+    const versesColumn = document.querySelector('.verses-column');
+    
+    if (drawerOverlay && drawerOverlay.classList.contains('active')) {
+        drawerOverlay.classList.remove('active');
+        booksSidebar.classList.remove('drawer-open');
+        chaptersColumn.classList.remove('drawer-open');
+        versesColumn.classList.remove('drawer-open');
+        document.body.style.overflow = '';
+        
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+    }
+    
     const bookName = bibleBooks[currentBook].name;
     const chapterNum = currentChapter;
     

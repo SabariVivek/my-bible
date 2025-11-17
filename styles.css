@@ -2507,6 +2507,84 @@ body.summary-drawer-open .bottom-nav {
     width: calc(100% - 310px - 450px);
 }
 
+/* Hide left sidebar on smaller screens when drawer is open */
+@media (max-width: 1200px) and (min-width: 769px) {
+    body.summary-drawer-open .books-sidebar,
+    body.summary-drawer-open .chapters-column,
+    body.summary-drawer-open .verses-column {
+        display: none;
+    }
+    
+    body.summary-drawer-open .content-area {
+        margin-left: 0;
+        margin-right: 450px;
+        width: calc(100vw - 450px);
+        flex: 1;
+    }
+    
+    body.summary-drawer-open .bottom-nav {
+        left: 0;
+        width: calc(100% - 450px);
+    }
+    
+    body.summary-drawer-open .summary-drawer {
+        z-index: 50;
+    }
+}
+
+@media (max-width: 768px) {
+    body.summary-drawer-open .books-sidebar,
+    body.summary-drawer-open .chapters-column,
+    body.summary-drawer-open .verses-column {
+        position: fixed;
+        left: -100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: left 0.3s ease, opacity 0.3s ease;
+    }
+    
+    body.summary-drawer-open .content-area {
+        margin-left: 0;
+        margin-right: 450px;
+        width: calc(100vw - 450px);
+        flex: 1;
+    }
+    
+    body.summary-drawer-open .bottom-nav {
+        left: 0;
+        width: calc(100% - 450px);
+    }
+    
+    body.summary-drawer-open .summary-drawer {
+        z-index: 50;
+    }
+    
+    /* Allow drawer to be opened even when summary drawer is open */
+    body.summary-drawer-open .books-sidebar.drawer-open,
+    body.summary-drawer-open .chapters-column.drawer-open,
+    body.summary-drawer-open .verses-column.drawer-open {
+        position: fixed !important;
+        left: 0 !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        z-index: 1000 !important;
+        transform: translateX(0) !important;
+    }
+    
+    body.summary-drawer-open .chapters-column.drawer-open {
+        left: 50% !important;
+    }
+    
+    body.summary-drawer-open .verses-column.drawer-open {
+        left: 75% !important;
+    }
+    
+    /* Ensure drawer overlay appears above summary drawer */
+    body.summary-drawer-open .drawer-overlay.active {
+        z-index: 999 !important;
+    }
+}
+
 .summary-drawer-header {
     display: flex;
     align-items: center;
