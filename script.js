@@ -1815,14 +1815,14 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
             scriptureText.style.display = 'block';
             scriptureText.innerHTML = `
                 <div style="display: flex; align-items: center; justify-content: center; min-height: 100%; padding: 20px;">
-                    <div class="verse-card" style="background: var(--bg-secondary); border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); padding: 32px 28px; max-width: 700px; width: 100%; border: 1px solid var(--border-color);">
-                        <div style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); opacity: 0.8; margin-bottom: 24px; text-align: center;">
+                    <div class="verse-card" style="border-radius: 16px; padding: 32px 28px; max-width: 700px; width: 100%;">
+                        <div class="verse-label" style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 24px; text-align: center;">
                             Verse of the Day
                         </div>
-                        <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px; position: relative; padding: 0 20px;">
+                        <div class="verse-text" style="font-size: 1.2rem; line-height: 1.8; text-align: center; margin-bottom: 20px; position: relative; padding: 0 20px;">
                             ${verseText}
                         </div>
-                        <div style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); text-align: center;">
+                        <div class="verse-reference" style="font-size: 1rem; font-weight: 600; text-align: center;">
                             — ${verseReference}
                         </div>
                     </div>
