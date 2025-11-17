@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSiteTitle();
     initializeHomeOptions();
     initializeSummaryDrawer();
+    initializeScrollbarBehavior();
     loadBook(currentBook, currentChapter);
 });
 
@@ -1681,6 +1682,44 @@ function closeSummaryDrawer() {
     const summaryDrawer = document.getElementById('summary-drawer');
     summaryDrawer.classList.remove('active');
     document.body.classList.remove('summary-drawer-open');
+}
+
+// Initialize scrollbar auto-hide behavior
+function initializeScrollbarBehavior() {
+    const scrollableElements = [
+        document.querySelector('.books-sidebar'),
+        document.querySelector('.chapters-column'),
+        document.querySelector('.verses-column'),
+        document.querySelector('.content-area')
+    ];
+    
+    scrollableElements.forEach(element => {
+        if (element) {
+            let hideTimeout;
+            
+            // Handle scroll events
+            element.addEventListener('scroll', function() {
+                element.classList.add('scrolling');
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    element.classList.remove('scrolling');
+                }, 1000);
+            });
+            
+            // Handle mouse hover events
+            element.addEventListener('mouseenter', function() {
+                element.classList.add('scrolling');
+                clearTimeout(hideTimeout);
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    element.classList.remove('scrolling');
+                }, 1000);
+            });
+        }
+    });
 }
 
 // Show chapter timeline

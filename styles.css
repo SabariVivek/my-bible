@@ -1345,46 +1345,41 @@ body.dark-theme .jesus-name {
 }
 
 /* Scrollbar Styling */
-/* Left pane scrollbar - hidden by default, shows on hover */
-.books-sidebar::-webkit-scrollbar {
-    width: 10px !important;
-}
-
-.books-sidebar::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.books-sidebar::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 10px;
-    border: none;
-    background-clip: padding-box;
-}
-
-.books-sidebar:hover::-webkit-scrollbar-thumb {
-    background: rgba(95, 99, 104, 0.4);
-}
-
-/* Other panes scrollbar - always visible */
+/* All scrollbars - hidden by default, shows on hover */
+.books-sidebar::-webkit-scrollbar,
 .chapters-column::-webkit-scrollbar,
 .verses-column::-webkit-scrollbar,
 .content-area::-webkit-scrollbar {
     width: 10px !important;
 }
 
+.books-sidebar::-webkit-scrollbar-track,
 .chapters-column::-webkit-scrollbar-track,
 .verses-column::-webkit-scrollbar-track,
 .content-area::-webkit-scrollbar-track {
     background: transparent;
 }
 
+.books-sidebar::-webkit-scrollbar-thumb,
 .chapters-column::-webkit-scrollbar-thumb,
 .verses-column::-webkit-scrollbar-thumb,
 .content-area::-webkit-scrollbar-thumb {
-    background: rgba(95, 99, 104, 0.4);
+    background: transparent;
     border-radius: 10px;
     border: none;
     background-clip: padding-box;
+    transition: background-color 0.5s ease;
+}
+
+.books-sidebar:hover::-webkit-scrollbar-thumb,
+.chapters-column:hover::-webkit-scrollbar-thumb,
+.verses-column:hover::-webkit-scrollbar-thumb,
+.content-area:hover::-webkit-scrollbar-thumb,
+.books-sidebar.scrolling::-webkit-scrollbar-thumb,
+.chapters-column.scrolling::-webkit-scrollbar-thumb,
+.verses-column.scrolling::-webkit-scrollbar-thumb,
+.content-area.scrolling::-webkit-scrollbar-thumb {
+    background: rgba(95, 99, 104, 0.4);
 }
 
 /* Scrollbar visibility classes */
@@ -1392,8 +1387,19 @@ body.dark-theme .jesus-name {
 .chapters-column,
 .verses-column,
 .content-area {
-    scrollbar-color: rgba(95, 99, 104, 0.4) transparent;
+    scrollbar-color: transparent transparent;
     scrollbar-width: thin;
+}
+
+.books-sidebar:hover,
+.chapters-column:hover,
+.verses-column:hover,
+.content-area:hover,
+.books-sidebar.scrolling,
+.chapters-column.scrolling,
+.verses-column.scrolling,
+.content-area.scrolling {
+    scrollbar-color: rgba(95, 99, 104, 0.4) transparent;
 }
 
 /* Drawer overlay for mobile */
@@ -2229,7 +2235,37 @@ body.dark-theme .books-sidebar,
 body.dark-theme .chapters-column,
 body.dark-theme .verses-column,
 body.dark-theme .content-area {
+    scrollbar-color: transparent transparent;
+}
+
+body.dark-theme .books-sidebar:hover,
+body.dark-theme .chapters-column:hover,
+body.dark-theme .verses-column:hover,
+body.dark-theme .content-area:hover,
+body.dark-theme .books-sidebar.scrolling,
+body.dark-theme .chapters-column.scrolling,
+body.dark-theme .verses-column.scrolling,
+body.dark-theme .content-area.scrolling {
     scrollbar-color: rgba(154, 160, 166, 0.4) transparent;
+}
+
+body.dark-theme .books-sidebar::-webkit-scrollbar-thumb,
+body.dark-theme .chapters-column::-webkit-scrollbar-thumb,
+body.dark-theme .verses-column::-webkit-scrollbar-thumb,
+body.dark-theme .content-area::-webkit-scrollbar-thumb {
+    background: transparent;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-theme .books-sidebar:hover::-webkit-scrollbar-thumb,
+body.dark-theme .chapters-column:hover::-webkit-scrollbar-thumb,
+body.dark-theme .verses-column:hover::-webkit-scrollbar-thumb,
+body.dark-theme .content-area:hover::-webkit-scrollbar-thumb,
+body.dark-theme .books-sidebar.scrolling::-webkit-scrollbar-thumb,
+body.dark-theme .chapters-column.scrolling::-webkit-scrollbar-thumb,
+body.dark-theme .verses-column.scrolling::-webkit-scrollbar-thumb,
+body.dark-theme .content-area.scrolling::-webkit-scrollbar-thumb {
+    background: rgba(154, 160, 166, 0.4);
 }
 
 /* Dark theme drawer overlay */
