@@ -1225,9 +1225,10 @@ body:not(.dark-theme) .moon-icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 1.1rem;
+    min-width: 1.1rem;
     height: 1.1rem;
-    border-radius: 50%;
+    padding: 0 0.25rem;
+    border-radius: 0.55rem;
     background: #fef4e4;
     color: #d4a04c;
     border: 1px solid #d4a04c;
@@ -2172,9 +2173,10 @@ body.dark-theme .verse-line.memory-verse .v-num {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 1.1rem;
+    min-width: 1.1rem;
     height: 1.1rem;
-    border-radius: 50%;
+    padding: 0 0.25rem;
+    border-radius: 0.55rem;
     background: #4f3b1f;
     color: #ffe9b3;
     border: 1px solid #b28b46;
