@@ -151,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollbar();
     initializeTheme();
     initializeBookList();
+    updateBookNames(); // Update book names based on saved language preference
     initializeMobileDrawer();
     initializeMobileLanguageModal();
     initializeSearch();
