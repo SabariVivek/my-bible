@@ -1184,11 +1184,52 @@ body:not(.dark-theme) .moon-icon {
     transition: margin-right 0.3s ease;
 }
 
+/* Mobile Chapter Header */
+.mobile-chapter-header {
+    display: none;
+    background: var(--background-color);
+    text-align: center;
+    padding: 20px 16px 24px;
+    margin-bottom: 24px;
+}
+
+.mobile-chapter-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.mobile-chapter-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+body.dark-theme .mobile-chapter-header {
+    background: #202124;
+    border-bottom-color: #3c4043;
+}
+
+@media (max-width: 768px) {
+    .mobile-chapter-header {
+        display: block;
+    }
+}
+
 .scripture-text {
     max-width: 100%;
     margin: 0;
     padding-bottom: 60px;
     padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .scripture-text {
+        padding-top: 0;
+    }
 }
 
 .verse-line {

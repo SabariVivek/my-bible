@@ -612,6 +612,9 @@ function highlightSpecialText(text, language) {
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
     
+    // Update mobile chapter header
+    updateMobileChapterHeader();
+    
     // Safety check: if currentData is not loaded yet, skip display
     if (!currentData) {
         console.log('Waiting for data to load...');
@@ -698,6 +701,9 @@ function displayChapter() {
         });
     });
     
+    // Update mobile chapter header
+    updateMobileChapterHeader();
+    
     // Update navigation text
     const currentChapterText = document.querySelector('.current-chapter');
     if (currentChapterText) {
@@ -724,6 +730,29 @@ function displayChapter() {
     
     // Scroll to top
     document.querySelector('.content-area').scrollTop = 0;
+}
+
+// Update mobile chapter header
+function updateMobileChapterHeader() {
+    const mobileHeader = document.getElementById('mobile-chapter-header');
+    if (!mobileHeader) return;
+    
+    const book = bibleBooks[currentBook];
+    const titleElement = mobileHeader.querySelector('.mobile-chapter-title');
+    const numberElement = mobileHeader.querySelector('.mobile-chapter-number');
+    
+    if (titleElement && numberElement) {
+        // Set book name based on language
+        let bookName = book.name;
+        if (currentLanguage === 'tamil') {
+            bookName = book.tamilName;
+        } else if (currentLanguage === 'both') {
+            bookName = book.name; // Use English for "both" mode
+        }
+        
+        titleElement.textContent = bookName;
+        numberElement.textContent = currentChapter;
+    }
 }
 
 // Scroll to specific verse
