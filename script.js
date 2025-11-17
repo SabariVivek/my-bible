@@ -1808,8 +1808,13 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
             scriptureText.style.display = 'block';
             scriptureText.innerHTML = `
                 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 40px 20px; max-width: 800px; margin: 0 auto;">
-                    <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px;">
+                    <div style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); opacity: 0.7; margin-bottom: 24px;">
+                        Verse of the Day
+                    </div>
+                    <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px; position: relative;">
+                        <div style="position: absolute; top: -10px; left: -10px; font-size: 3rem; color: var(--text-secondary); opacity: 0.15; font-family: Georgia, serif;">"</div>
                         ${verseText}
+                        <div style="position: absolute; bottom: -20px; right: -10px; font-size: 3rem; color: var(--text-secondary); opacity: 0.15; font-family: Georgia, serif;">"</div>
                     </div>
                     <div style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); text-align: center;">
                         — ${verseReference}
