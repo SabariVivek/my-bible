@@ -2574,7 +2574,7 @@ body.dark-theme .summary-drawer-content::-webkit-scrollbar-thumb {
     margin-bottom: 1.25rem;
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #b8b8b8;
+    color: #6b6b6b;
     text-align: justify;
     position: relative;
     padding-left: 20px;
@@ -2673,7 +2673,7 @@ body.dark-theme .summary-paragraph {
 
 .timeline-event {
     font-weight: 400;
-    color: #b8b8b8;
+    color: #6b6b6b;
     font-size: 14px;
     line-height: 1.7;
 }
