@@ -1951,21 +1951,23 @@ body.dark-theme .modal-close-btn svg {
 }
 
 body.dark-theme .language-modal-option {
-    background: linear-gradient(135deg, #333333 0%, #2a2a2a 100%);
+    background: #2a2a2a;
     color: #e0e0e0;
+    border-color: #404040;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-theme .language-modal-option:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-color: #555555;
 }
 
 body.dark-theme .language-modal-option.active {
-    background: linear-gradient(135deg, #3c4043 0%, #333333 100%);
-    border-color: #5f6368;
-    color: #e8eaed;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    background: #1a73e8;
+    border-color: #1a73e8;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
 }
 
 /* Dark theme for color palette */
