@@ -1811,10 +1811,8 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
                     <div style="font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); opacity: 0.7; margin-bottom: 24px;">
                         Verse of the Day
                     </div>
-                    <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px; position: relative;">
-                        <div style="position: absolute; top: -10px; left: -10px; font-size: 3rem; color: var(--text-secondary); opacity: 0.15; font-family: Georgia, serif;">"</div>
-                        ${verseText}
-                        <div style="position: absolute; bottom: -20px; right: -10px; font-size: 3rem; color: var(--text-secondary); opacity: 0.15; font-family: Georgia, serif;">"</div>
+                    <div style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: var(--text-primary); margin-bottom: 20px; position: relative; padding: 0 20px;">
+                        <sup style="font-size: 1.5rem; color: var(--text-secondary); opacity: 0.4; vertical-align: super; margin-right: 4px;">"</sup>${verseText}<sup style="font-size: 1.5rem; color: var(--text-secondary); opacity: 0.4; vertical-align: super; margin-left: 4px;">"</sup>
                     </div>
                     <div style="font-size: 1rem; font-weight: 600; color: var(--text-secondary); text-align: center;">
                         — ${verseReference}
