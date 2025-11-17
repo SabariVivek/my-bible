@@ -521,7 +521,10 @@ function updateChapters() {
             if (contentArea) {
                 contentArea.scrollTop = 0;
             }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Only scroll window on desktop (tablets and mobile have fixed headers)
+            if (window.innerWidth > 1024) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         });
     });
 }

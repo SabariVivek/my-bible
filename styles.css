@@ -1570,6 +1570,21 @@ body.dark-theme .jesus-name {
     .content-area {
         padding: 1.5rem 2rem;
     }
+
+    /* Fix top bar position on tablets and mobile */
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1001;
+    }
+
+    /* Adjust main layout to account for fixed header */
+    .main-layout {
+        margin-top: 60px;
+        height: calc(100vh - 60px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -2714,6 +2729,14 @@ body.summary-drawer-open .content-area {
 
 body.summary-drawer-open .bottom-nav {
     width: calc(100% - 310px - 450px);
+}
+
+/* Adjust summary drawer for tablets with fixed header */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .summary-drawer {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
 }
 
 /* Hide left sidebar on smaller screens when drawer is open */
