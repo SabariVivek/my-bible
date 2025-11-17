@@ -2545,18 +2545,21 @@ body.summary-drawer-open .bottom-nav {
     
     body.summary-drawer-open .content-area {
         margin-left: 0;
-        margin-right: 450px;
-        width: calc(100vw - 450px);
+        margin-right: 0;
+        width: 100vw;
         flex: 1;
     }
     
     body.summary-drawer-open .bottom-nav {
-        left: 0;
-        width: calc(100% - 450px);
+        display: none;
     }
     
     body.summary-drawer-open .summary-drawer {
         z-index: 50;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        padding-top: 3.75rem;
     }
     
     /* Allow drawer to be opened even when summary drawer is open */
