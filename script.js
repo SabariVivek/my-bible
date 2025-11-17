@@ -452,7 +452,8 @@ function updateChapters() {
     let html = '';
     for (let i = 1; i <= book.chapters; i++) {
         const activeClass = i === currentChapter ? 'active' : '';
-        const hasMemoryVerse = chapterHasMemoryVerses(bookName, i) ? ' has-memory-verse' : '';
+        const hasMemVerse = chapterHasMemoryVerses(bookName, i);
+        const hasMemoryVerse = hasMemVerse ? ' has-memory-verse' : '';
         html += `<div class="number-item ${activeClass}${hasMemoryVerse}" data-chapter="${i}">${i}</div>`;
     }
     
@@ -520,7 +521,8 @@ function updateVerses() {
     let html = '';
     
     for (let i = 1; i <= verseCount; i++) {
-        const hasMemoryVerse = isMemoryVerse(bookName, currentChapter, i) ? ' has-memory-verse' : '';
+        const isMemVerse = isMemoryVerse(bookName, currentChapter, i);
+        const hasMemoryVerse = isMemVerse ? ' has-memory-verse' : '';
         html += `<div class="number-item${hasMemoryVerse}" data-verse="${i}">${i}</div>`;
     }
     
@@ -618,9 +620,11 @@ function displayChapter() {
             tamilText = highlightSpecialText(tamilText, 'both-tamil');
             englishText = highlightSpecialText(englishText, 'both-english');
             
-            const memoryVerseClass = isMemoryVerse(bookName, currentChapter, parseInt(verseNum)) ? ' memory-verse' : '';
+            const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
+            const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
+            const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
             
-            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}">
+            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
                 <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
                 <span class="english-text ${englishTextColor}">${englishText}</span>
             </p>`;
@@ -634,9 +638,11 @@ function displayChapter() {
             // Apply highlighting based on current language
             verseText = highlightSpecialText(verseText, currentLanguage);
             
-            const memoryVerseClass = isMemoryVerse(bookName, currentChapter, parseInt(verseNum)) ? ' memory-verse' : '';
+            const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
+            const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
+            const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
             
-            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"><sup class="v-num">${verseNum}</sup>${verseText}</p>`;
+            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>`;
         });
     }
     
