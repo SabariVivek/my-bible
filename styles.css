@@ -1081,7 +1081,7 @@ body:not(.dark-theme) .moon-icon {
 .book-item.has-memory-verse .book-name::after {
     content: "★";
     font-size: 0.5rem;
-    color: #d4a04c;
+    color: #c4911a;
     margin-left: 0.2rem;
     vertical-align: super;
 }
@@ -1152,21 +1152,25 @@ body:not(.dark-theme) .moon-icon {
 
 /* Verse numbers with memory verses - color instead of star */
 .verses-column .number-item.has-memory-verse {
-    color: #d4a04c;
+    color: #c4911a;
+    font-weight: 500;
 }
 
 .verses-column .number-item.has-memory-verse.active {
-    color: #d4a04c !important;
+    color: #c4911a !important;
+    font-weight: 600;
 }
 
 /* Chapter numbers with memory verses - color instead of star */
 .chapters-column .number-item.has-memory-verse {
-    color: #d4a04c;
+    color: #c4911a;
+    font-weight: 500;
 }
 
 /* Keep gold color even when chapter is active */
 .chapters-column .number-item.has-memory-verse.active {
-    color: #d4a04c !important;
+    color: #c4911a !important;
+    font-weight: 600;
 }
 
 /* Content Area */
