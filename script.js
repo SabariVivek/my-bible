@@ -170,12 +170,25 @@ document.addEventListener('DOMContentLoaded', () => {
     loadNotesFromGitHub(); // Load shared notes from GitHub
     updateAdminUI(); // Initialize admin UI based on saved state
     
-    // Show admin toggle and secret icon if admin mode was previously activated
+    // Show admin toggle and admin menu wrapper if admin mode was previously activated
     const adminToggle = document.getElementById('admin-toggle');
     const secretIcon = document.getElementById('secret-icon');
+    const notesIcon = document.getElementById('notes-icon');
+    const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
+    const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+    const isMobile = window.innerWidth <= 768;
+    let isFadingOut = false; // Flag to prevent re-showing during fade
+    
     if (isAdmin()) {
-        if (adminToggle) adminToggle.style.display = 'flex';
-        if (secretIcon) secretIcon.style.display = 'flex';
+        if (isMobile) {
+            // On mobile, show admin menu wrapper and toggle
+            if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        } else {
+            // On desktop, show admin menu wrapper and toggle
+            if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        }
     }
     
     // Admin toggle button click handler
@@ -183,11 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
         adminToggle.addEventListener('click', () => {
             const currentState = isAdmin();
             const newState = !currentState;
-            localStorage.setItem('isAdmin', newState.toString());
-            updateAdminUI();
             
             // Show notification
-            const message = newState ? 'Admin mode activated' : 'Admin mode deactivated';
+            const message = newState ? 'Admin mode activated' : 'Admin mode ended';
             const isMobile = window.innerWidth <= 768;
             if (isMobile) {
                 showToast(message, 'success');
@@ -197,31 +208,162 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // If turning off admin mode, hide icons with fade animation
             if (!newState) {
+                // Set fading flag and update localStorage immediately
+                isFadingOut = true;
+                localStorage.setItem('isAdmin', 'false');
+                
+                // Fade out animations with pointer-events disabled
                 if (adminToggle) {
+                    adminToggle.style.pointerEvents = 'none';
                     adminToggle.style.opacity = '0';
                     adminToggle.style.transition = 'opacity 2s ease';
                     setTimeout(() => {
                         adminToggle.style.display = 'none';
                         adminToggle.style.opacity = '1';
                         adminToggle.style.transition = '';
+                        adminToggle.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (notesIcon) {
+                    notesIcon.style.pointerEvents = 'none';
+                    notesIcon.style.opacity = '0';
+                    notesIcon.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        notesIcon.style.display = 'none';
+                        notesIcon.style.opacity = '1';
+                        notesIcon.style.transition = '';
+                        notesIcon.style.pointerEvents = '';
                     }, 2000);
                 }
                 if (secretIcon) {
+                    secretIcon.style.pointerEvents = 'none';
                     secretIcon.style.opacity = '0';
                     secretIcon.style.transition = 'opacity 2s ease';
                     setTimeout(() => {
                         secretIcon.style.display = 'none';
                         secretIcon.style.opacity = '1';
                         secretIcon.style.transition = '';
+                        secretIcon.style.pointerEvents = '';
                     }, 2000);
                 }
+                if (mobileAdminMenuWrapper) {
+                    mobileAdminMenuWrapper.style.pointerEvents = 'none';
+                    mobileAdminMenuWrapper.style.opacity = '0';
+                    mobileAdminMenuWrapper.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        mobileAdminMenuWrapper.style.setProperty('display', 'none', 'important');
+                        mobileAdminMenuWrapper.style.opacity = '1';
+                        mobileAdminMenuWrapper.style.transition = '';
+                        mobileAdminMenuWrapper.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (desktopAdminMenuWrapper) {
+                    desktopAdminMenuWrapper.style.pointerEvents = 'none';
+                    desktopAdminMenuWrapper.style.opacity = '0';
+                    desktopAdminMenuWrapper.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        desktopAdminMenuWrapper.style.setProperty('display', 'none', 'important');
+                        desktopAdminMenuWrapper.style.opacity = '1';
+                        desktopAdminMenuWrapper.style.transition = '';
+                        desktopAdminMenuWrapper.style.pointerEvents = '';
+                    }, 2000);
+                }
+                
+                // Update UI and reset flag after fade completes
+                setTimeout(() => {
+                    updateAdminUI();
+                    isFadingOut = false;
+                }, 2000);
+            } else {
+                // If activating admin mode, update immediately
+                isFadingOut = false;
+                localStorage.setItem('isAdmin', 'true');
+                updateAdminUI();
             }
         });
     }
     
+    // Mobile admin menu handlers
+    const mobileAdminMenuBtn = document.getElementById('mobile-admin-menu-btn');
+    const mobileAdminDropdown = document.getElementById('mobile-admin-dropdown');
+    const mobileCultOption = document.getElementById('mobile-cult-option');
+    const mobileNotesOption = document.getElementById('mobile-notes-option');
+    
+    if (mobileAdminMenuBtn && mobileAdminDropdown) {
+        mobileAdminMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log('Mobile admin menu clicked, toggling dropdown');
+            mobileAdminDropdown.classList.toggle('active');
+            mobileAdminMenuBtn.classList.toggle('active');
+            console.log('Dropdown active:', mobileAdminDropdown.classList.contains('active'));
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileAdminMenuWrapper.contains(e.target)) {
+                mobileAdminDropdown.classList.remove('active');
+                mobileAdminMenuBtn.classList.remove('active');
+            }
+        });
+        
+        // Handle cult option click
+        if (mobileCultOption) {
+            mobileCultOption.addEventListener('click', () => {
+                window.location.href = 'secret.html';
+            });
+        }
+        
+        // Handle notes option click (currently just info, can be extended)
+        if (mobileNotesOption) {
+            mobileNotesOption.addEventListener('click', () => {
+                mobileAdminDropdown.classList.remove('active');
+                mobileAdminMenuBtn.classList.remove('active');
+                // Notes functionality is already available via verse interactions
+                alert('To add notes: Double-click any verse or long-press on mobile');
+            });
+        }
+    }
+
+    // Desktop admin menu handlers
+    const desktopAdminMenuBtn = document.getElementById('desktop-admin-menu-btn');
+    const desktopAdminDropdown = document.getElementById('desktop-admin-dropdown');
+    const desktopCultOption = document.getElementById('desktop-cult-option');
+    const desktopNotesOption = document.getElementById('desktop-notes-option');
+    
+    if (desktopAdminMenuBtn && desktopAdminDropdown) {
+        desktopAdminMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            desktopAdminDropdown.classList.toggle('active');
+            desktopAdminMenuBtn.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (desktopAdminMenuWrapper && !desktopAdminMenuWrapper.contains(e.target)) {
+                desktopAdminDropdown.classList.remove('active');
+                desktopAdminMenuBtn.classList.remove('active');
+            }
+        });
+        
+        // Handle cult option click
+        if (desktopCultOption) {
+            desktopCultOption.addEventListener('click', () => {
+                window.location.href = 'secret.html';
+            });
+        }
+        
+        // Handle notes option click
+        if (desktopNotesOption) {
+            desktopNotesOption.addEventListener('click', () => {
+                desktopAdminDropdown.classList.remove('active');
+                desktopAdminMenuBtn.classList.remove('active');
+                alert('To add notes: Double-click any verse');
+            });
+        }
+    }
+    
     // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
-    const isMobile = window.innerWidth <= 768;
     
     // On mobile, always show Bible directly. On desktop/tablet, show home page by default
     if (isMobile) {
@@ -1683,6 +1825,11 @@ function initializeSiteTitle() {
     
     if (siteTitle) {
         siteTitle.addEventListener('click', () => {
+            // Don't count clicks if admin mode is already active
+            if (isAdmin()) {
+                return;
+            }
+            
             clickCount++;
             
             // Clear existing timer
@@ -1698,13 +1845,19 @@ function initializeSiteTitle() {
             // Check click count
             if (clickCount >= 5) {
                 const adminToggle = document.getElementById('admin-toggle');
+                const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
+                const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+                const isMobile = window.innerWidth <= 768;
                 
-                // Show secret icon and admin toggle
-                if (secretIcon) {
-                    secretIcon.style.display = 'flex';
-                }
-                if (adminToggle) {
-                    adminToggle.style.display = 'flex';
+                // Show appropriate admin UI based on device
+                if (isMobile) {
+                    // On mobile, show admin menu wrapper and toggle
+                    if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+                    if (adminToggle) adminToggle.style.display = 'flex';
+                } else {
+                    // On desktop, show admin menu wrapper and toggle
+                    if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+                    if (adminToggle) adminToggle.style.display = 'flex';
                 }
                 
                 // Activate admin mode

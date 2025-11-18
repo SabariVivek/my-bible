@@ -4062,3 +4062,218 @@ body.dark-theme .character-description {
 body.dark-theme #search-btn-mobile.active::after {
     background-color: #8ab4f8;
 }
+
+/* Mobile admin menu */
+.mobile-admin-menu-wrapper {
+    position: relative;
+}
+
+.mobile-admin-menu-btn {
+    position: relative;
+}
+
+.mobile-admin-dropdown.active ~ .mobile-admin-menu-btn::after,
+.mobile-admin-menu-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #1a73e8;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+body.dark-theme .mobile-admin-dropdown.active ~ .mobile-admin-menu-btn::after,
+body.dark-theme .mobile-admin-menu-btn.active::after {
+    background-color: #8ab4f8;
+}
+
+.mobile-admin-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 16px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 8px;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+}
+
+.mobile-admin-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.mobile-admin-option {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3c4043;
+    text-align: left;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.mobile-admin-option:hover {
+    background-color: #f3f4f6;
+}
+
+.mobile-admin-option svg {
+    flex-shrink: 0;
+    color: #5f6368;
+}
+
+.mobile-admin-option:hover svg {
+    color: #1a73e8;
+}
+
+body.dark-theme .mobile-admin-dropdown {
+    background: #292a2d;
+    border-color: #3c4043;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .mobile-admin-option {
+    color: #e8eaed;
+}
+
+body.dark-theme .mobile-admin-option svg {
+    color: #9aa0a6;
+}
+
+body.dark-theme .mobile-admin-option:hover {
+    background-color: #3c4043;
+}
+
+body.dark-theme .mobile-admin-option:hover svg {
+    color: #8ab4f8;
+}
+
+@media (min-width: 769px) {
+    .mobile-admin-menu-wrapper {
+        display: none !important;
+    }
+}
+
+/* Desktop admin menu */
+.desktop-admin-menu-wrapper {
+    position: relative;
+}
+
+.desktop-admin-menu-btn {
+    position: relative;
+}
+
+.desktop-admin-menu-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #1a73e8;
+    border-radius: 2px;
+    opacity: 0.6;
+}
+
+body.dark-theme .desktop-admin-menu-btn.active::after {
+    background-color: #8ab4f8;
+}
+
+.desktop-admin-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 16px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 8px;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9999;
+}
+
+.desktop-admin-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.desktop-admin-option {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3c4043;
+    text-align: left;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.desktop-admin-option:hover {
+    background-color: #f3f4f6;
+}
+
+.desktop-admin-option svg {
+    flex-shrink: 0;
+    color: #5f6368;
+}
+
+.desktop-admin-option:hover svg {
+    color: #1a73e8;
+}
+
+body.dark-theme .desktop-admin-dropdown {
+    background: #292a2d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .desktop-admin-option {
+    color: #e8eaed;
+}
+
+body.dark-theme .desktop-admin-option svg {
+    color: #9aa0a6;
+}
+
+body.dark-theme .desktop-admin-option:hover {
+    background-color: #3c4043;
+}
+
+body.dark-theme .desktop-admin-option:hover svg {
+    color: #8ab4f8;
+}
+
+@media (max-width: 768px) {
+    .desktop-admin-menu-wrapper {
+        display: none !important;
+    }
+}
