@@ -7,31 +7,7 @@
       "chapter": 1,
       "verse": 1,
       "timestamp": "2025-11-18T07:08:36.070Z"
-    },
-    "romans_10_1": {
-      "text": "Test",
-      "color": "green",
-      "book": "Romans",
-      "chapter": 10,
-      "verse": 1,
-      "timestamp": "2025-11-18T07:15:56.093Z"
-    },
-    "romans_10_2": {
-      "text": "Test",
-      "color": "green",
-      "book": "Romans",
-      "chapter": 10,
-      "verse": 2,
-      "timestamp": "2025-11-18T07:16:03.115Z"
-    },
-    "romans_10_3": {
-      "text": "Test",
-      "color": "gray",
-      "book": "Romans",
-      "chapter": 10,
-      "verse": 3,
-      "timestamp": "2025-11-18T07:16:08.101Z"
     }
   },
-  "lastUpdated": "2025-11-18T07:16:08.681Z"
+  "lastUpdated": "2025-11-18T07:19:55.557Z"
 }
