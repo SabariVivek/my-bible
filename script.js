@@ -1273,6 +1273,7 @@ function initializeSearch() {
         const chaptersColumn = document.querySelector('.chapters-column');
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
+        const chapterHeader = document.getElementById('mobile-chapter-header');
         
         // Add active class to search buttons
         if (searchBtn) searchBtn.classList.add('active');
@@ -1289,6 +1290,7 @@ function initializeSearch() {
         chaptersColumn.style.display = 'none';
         versesColumn.style.display = 'none';
         if (bottomNav) bottomNav.style.display = 'none';
+        if (chapterHeader) chapterHeader.style.display = 'none';
         searchInput.focus();
     }
     
@@ -1299,6 +1301,7 @@ function initializeSearch() {
         const chaptersColumn = document.querySelector('.chapters-column');
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
+        const chapterHeader = document.getElementById('mobile-chapter-header');
         
         // Remove active class from search buttons
         if (searchBtn) searchBtn.classList.remove('active');
@@ -1317,6 +1320,7 @@ function initializeSearch() {
         chaptersColumn.style.display = 'flex';
         versesColumn.style.display = 'flex';
         if (bottomNav) bottomNav.style.display = 'flex';
+        if (chapterHeader) chapterHeader.style.display = 'block';
         // Don't clear search input, filters, or results - preserve them
         
         // Force refresh book names display after sidebar is visible
