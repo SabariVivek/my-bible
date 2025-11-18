@@ -2754,18 +2754,13 @@ async function loadNotesFromGitHub() {
 }
 
 async function saveNotesToGitHub() {
+    // Save to localStorage immediately so notes appear right away
+    localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+    
     if (!GITHUB_CONFIG.token) {
-        // Prompt user to enter token
-        const token = prompt('To share notes with everyone, enter your GitHub Personal Access Token:\n\nGet one from: https://github.com/settings/tokens\nRequired scope: repo\n\nLeave empty to save locally only.');
-        
-        if (token && token.trim()) {
-            localStorage.setItem('github_token', token.trim());
-            GITHUB_CONFIG.token = token.trim();
-        } else {
-            alert('No token provided. Notes saved locally only.');
-            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
-            return false;
-        }
+        // No token available, already saved locally
+        console.log('No GitHub token found. Notes saved locally only.');
+        return false;
     }
     
     try {
@@ -2809,19 +2804,16 @@ async function saveNotesToGitHub() {
         
         if (updateResponse.ok) {
             console.log('✓ Notes saved to GitHub successfully');
-            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             return true;
         } else {
             const error = await updateResponse.json();
             console.error('Failed to save to GitHub:', error);
-            alert('Failed to save notes to GitHub. Saved locally only.');
-            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            alert('Failed to save notes to GitHub. Already saved locally.');
             return false;
         }
     } catch (error) {
         console.error('Error saving to GitHub:', error);
-        alert('Error saving notes to GitHub. Saved locally only.');
-        localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+        alert('Error saving notes to GitHub. Already saved locally.');
         return false;
     }
 }
