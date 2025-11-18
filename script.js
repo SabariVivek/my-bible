@@ -2912,11 +2912,22 @@ function showNoteViewer(verseNum, note) {
     const popup = document.getElementById('note-viewer-popup');
     const ref = document.getElementById('note-viewer-ref');
     const content = document.getElementById('note-viewer-content');
+    const modal = document.querySelector('.note-viewer-modal');
     
     if (!popup) return;
     
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     content.textContent = note.text;
+    
+    // Reset modal height to default
+    if (modal) {
+        modal.style.height = '';
+        modal.style.transform = '';
+    }
+    
+    // Prevent body scroll
+    document.body.classList.add('modal-open');
+    
     popup.style.display = 'block';
     
     // Store current viewing verse for edit button
@@ -2926,12 +2937,17 @@ function showNoteViewer(verseNum, note) {
 function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
     const modal = document.querySelector('.note-viewer-modal');
+    
+    // Allow body scroll
+    document.body.classList.remove('modal-open');
+    
     if (popup) {
         popup.style.display = 'none';
     }
     if (modal) {
         modal.style.transform = '';
         modal.style.transition = '';
+        modal.style.height = '';
     }
 }
 
@@ -3020,6 +3036,14 @@ function initializeNotesModal() {
     let isDragging = false;
     let initialHeight = 0;
 
+    // Reset modal height to default when opening
+    function resetModalHeight() {
+        if (noteViewerModal && window.innerWidth <= 768) {
+            noteViewerModal.style.height = '';
+            noteViewerModal.style.transform = '';
+        }
+    }
+
     if (noteViewerHeader && window.innerWidth <= 768) {
         noteViewerHeader.addEventListener('touchstart', (e) => {
             startY = e.touches[0].clientY;
@@ -3073,4 +3097,7 @@ function initializeNotesModal() {
             }
         });
     }
+
+    // Call resetModalHeight when note viewer is shown
+    const originalShowNoteViewer = window.showNoteViewer;
 }
