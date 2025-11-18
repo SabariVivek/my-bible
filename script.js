@@ -3012,17 +3012,19 @@ function initializeNotesModal() {
         }
     });
 
-    // Mobile swipe down to close functionality
+    // Mobile drag functionality - expand/collapse bottom sheet
     const noteViewerModal = document.querySelector('.note-viewer-modal');
     const noteViewerHeader = document.querySelector('.note-viewer-header');
     let startY = 0;
     let currentY = 0;
     let isDragging = false;
+    let initialHeight = 0;
 
     if (noteViewerHeader && window.innerWidth <= 768) {
         noteViewerHeader.addEventListener('touchstart', (e) => {
             startY = e.touches[0].clientY;
             isDragging = true;
+            initialHeight = noteViewerModal.offsetHeight;
             noteViewerModal.style.transition = 'none';
         });
 
@@ -3030,31 +3032,43 @@ function initializeNotesModal() {
             if (!isDragging) return;
             currentY = e.touches[0].clientY;
             const deltaY = currentY - startY;
-
-            // Only allow dragging down
-            if (deltaY > 0) {
-                noteViewerModal.style.transform = `translateY(${deltaY}px)`;
+            
+            // Calculate new height based on drag direction
+            const newHeight = initialHeight - deltaY;
+            const maxHeight = window.innerHeight * 0.95;
+            const minHeight = window.innerHeight * 0.3;
+            
+            // Allow dragging in both directions within bounds
+            if (newHeight >= minHeight && newHeight <= maxHeight) {
+                noteViewerModal.style.height = `${newHeight}px`;
+            } else if (deltaY > 0 && newHeight < minHeight) {
+                // Dragging down below minimum - prepare to close
+                const excess = minHeight - newHeight;
+                noteViewerModal.style.transform = `translateY(${excess}px)`;
             }
         });
 
         noteViewerHeader.addEventListener('touchend', () => {
             if (!isDragging) return;
             isDragging = false;
-            noteViewerModal.style.transition = 'transform 0.3s ease';
+            noteViewerModal.style.transition = 'transform 0.3s ease, height 0.2s ease';
 
             const deltaY = currentY - startY;
+            const newHeight = initialHeight - deltaY;
+            const minHeight = window.innerHeight * 0.3;
 
-            // If dragged down more than 100px, close the modal
-            if (deltaY > 100) {
+            // If dragged down significantly below minimum, close the modal
+            if (newHeight < minHeight - 50) {
                 noteViewerModal.classList.add('closing');
                 setTimeout(() => {
                     hideNoteViewer();
                     noteViewerModal.classList.remove('closing');
                     noteViewerModal.style.transform = '';
                     noteViewerModal.style.transition = '';
+                    noteViewerModal.style.height = '';
                 }, 300);
             } else {
-                // Snap back to original position
+                // Snap back to valid height
                 noteViewerModal.style.transform = '';
             }
         });

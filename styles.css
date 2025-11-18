@@ -2917,13 +2917,14 @@ body.dark-theme .note-viewer-edit-btn svg {
         right: 0;
         width: 100%;
         max-width: 100%;
-        height: auto;
-        max-height: 85vh;
-        min-height: 200px;
+        height: 50vh;
+        max-height: 95vh;
+        min-height: 30vh;
         border-radius: 24px 24px 0 0;
         box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
         animation: slideUpFromBottom 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
         overflow: hidden;
+        transition: height 0.2s ease;
     }
 
     /* Slide up animation */
@@ -2953,9 +2954,11 @@ body.dark-theme .note-viewer-edit-btn svg {
     /* Header with drag handle */
     .note-viewer-header {
         position: relative;
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        padding: 8px 20px 16px;
+        justify-content: space-between;
+        padding: 12px 20px 16px;
         border-radius: 24px 24px 0 0;
         border-bottom: 1px solid #e0e0e0;
         cursor: grab;
@@ -2968,30 +2971,13 @@ body.dark-theme .note-viewer-edit-btn svg {
         cursor: grabbing;
     }
 
-    /* Drag handle indicator */
-    .note-viewer-header::before {
-        content: '';
-        position: relative;
-        display: block;
-        width: 40px;
-        height: 4px;
-        margin: 8px auto 12px;
-        background-color: #d1d5db;
-        border-radius: 2px;
-        align-self: center;
-    }
-
-    body.dark-theme .note-viewer-header::before {
-        background-color: #4b5563;
-    }
-
-    /* Verse reference inline with edit icon */
+    /* Verse reference on left */
     .note-viewer-ref {
         font-size: 15px;
         font-weight: 600;
         color: #202124;
-        display: inline;
-        text-align: center;
+        flex: 1;
+        text-align: left;
     }
 
     body.dark-theme .note-viewer-ref {
@@ -3003,27 +2989,34 @@ body.dark-theme .note-viewer-edit-btn svg {
         display: none;
     }
 
-    /* Blue pen icon right after title */
+    /* Edit button icon only */
     .note-viewer-header .note-viewer-edit-btn {
         position: static;
-        display: inline-flex;
-        width: 24px;
-        height: 24px;
-        min-width: 24px;
-        min-height: 24px;
-        padding: 4px;
-        margin-left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        min-width: auto;
         background: transparent;
         border: none;
-        vertical-align: middle;
+        color: #5f6368;
+        cursor: pointer;
     }
 
     .note-viewer-header .note-viewer-edit-btn svg {
-        color: #1a73e8;
+        width: 15px;
+        height: 15px;
+        color: #5f6368;
+    }
+
+    body.dark-theme .note-viewer-header .note-viewer-edit-btn {
+        color: #9aa0a6;
     }
 
     body.dark-theme .note-viewer-header .note-viewer-edit-btn svg {
-        color: #8ab4f8;
+        color: #9aa0a6;
     }
 
     /* Content area */
@@ -3031,7 +3024,8 @@ body.dark-theme .note-viewer-edit-btn svg {
         padding: 16px 24px;
         font-size: 15px;
         line-height: 1.65;
-        max-height: calc(85vh - 140px);
+        flex: 1;
+        min-height: 0;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
