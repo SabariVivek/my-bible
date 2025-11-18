@@ -47,7 +47,15 @@
       "chapter": 1,
       "verse": 2,
       "timestamp": "2025-11-18T07:56:00.219Z"
+    },
+    "numbers_1_3": {
+      "text": "Test",
+      "color": "burgundy",
+      "book": "Numbers",
+      "chapter": 1,
+      "verse": 3,
+      "timestamp": "2025-11-18T08:10:48.281Z"
     }
   },
-  "lastUpdated": "2025-11-18T07:56:00.920Z"
+  "lastUpdated": "2025-11-18T08:10:48.967Z"
 }
