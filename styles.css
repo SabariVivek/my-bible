@@ -5,6 +5,82 @@
     box-sizing: border-box;
 }
 
+/* Admin Mode Notifications */
+/* Toast message for mobile */
+.toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #22c55e;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast.toast-success {
+    background: #22c55e;
+}
+
+/* Desktop notification (Jira-style) */
+.admin-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: #172b4d;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-notification.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.admin-notification svg {
+    color: #22c55e;
+    flex-shrink: 0;
+}
+
+body.dark-theme .admin-notification {
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+    .admin-notification {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .toast {
+        display: none;
+    }
+}
+
 /* View Transition API styles for theme switching animation */
 ::view-transition-old(root),
 ::view-transition-new(root) {
@@ -2851,7 +2927,7 @@ body.dark-theme .note-viewer-ref {
     padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
-    display: flex;
+    display: none; /* Hidden by default, shown only in admin mode */
     align-items: center;
     gap: 8px;
     font-size: 14px;
@@ -2998,6 +3074,11 @@ body.dark-theme .note-viewer-edit-btn svg {
         display: none;
     }
 
+    /* Hide edit button by default (shown only in admin mode) */
+    .note-viewer-header .note-viewer-edit-btn {
+        display: none;
+    }
+
     .note-viewer-header .note-viewer-edit-btn svg {
         width: 15px;
         height: 15px;
@@ -3042,7 +3123,7 @@ body.dark-theme .note-viewer-edit-btn svg {
         min-height: 36px;
         padding: 8px;
         font-size: 0;
-        display: flex;
+        display: none; /* Hidden by default, shown only in admin mode */
         justify-content: center;
         align-items: center;
         border-radius: 50%;

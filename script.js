@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollbarBehavior();
     initializeNotesModal();
     loadNotesFromGitHub(); // Load shared notes from GitHub
+    updateAdminUI(); // Initialize admin UI based on session state
     
     // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
@@ -1656,6 +1657,12 @@ function initializeSiteTitle() {
                 if (notesIcon) {
                     notesIcon.style.display = 'none';
                 }
+                
+                // Activate admin mode
+                sessionStorage.setItem('isAdmin', 'true');
+                updateAdminUI();
+                showAdminNotification();
+                
                 clickCount = 0; // Reset counter
                 clearTimeout(clickTimer); // Clear timer after completion
             }
@@ -2779,6 +2786,11 @@ async function saveNotesToGitHub() {
 
 // Notes functionality
 function openNotesModal(verseNum = null) {
+    // Check admin mode
+    if (!isAdmin()) {
+        return; // Silently prevent opening in non-admin mode
+    }
+    
     const modal = document.querySelector('.notes-modal-overlay');
     const textarea = document.getElementById('notes-textarea');
     const verseRef = document.getElementById('notes-verse-ref');
@@ -2937,6 +2949,9 @@ function showNoteViewer(verseNum, note) {
     
     popup.style.display = 'block';
     
+    // Update admin UI to show/hide edit button
+    updateAdminUI();
+    
     // Store current viewing verse for edit button
     popup.dataset.verse = verseNum;
 }
@@ -2956,6 +2971,70 @@ function hideNoteViewer() {
         modal.style.transition = '';
         modal.style.height = '';
     }
+}
+
+// Admin Mode Functions
+function isAdmin() {
+    return sessionStorage.getItem('isAdmin') === 'true';
+}
+
+function updateAdminUI() {
+    const editButtons = document.querySelectorAll('.note-viewer-edit-btn');
+    const isAdminMode = isAdmin();
+    
+    editButtons.forEach(btn => {
+        btn.style.display = isAdminMode ? 'flex' : 'none';
+    });
+}
+
+function showAdminNotification() {
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // Show toast message on mobile
+        showToast('You are admin now', 'success');
+    } else {
+        // Show Jira-style popup on desktop
+        showDesktopNotification('You are admin now');
+    }
+}
+
+function showToast(message, type = 'success') {
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    // Trigger animation
+    setTimeout(() => toast.classList.add('show'), 10);
+    
+    // Remove after 2 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
+}
+
+function showDesktopNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'admin-notification';
+    notification.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span>${message}</span>
+    `;
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 10);
+    
+    // Remove after 2 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 2000);
 }
 
 // Initialize notes modal
