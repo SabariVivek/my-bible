@@ -2820,11 +2820,18 @@ function openNotesModal(verseNum = null) {
         btn.classList.toggle('active', btn.dataset.color === currentNoteColor);
     });
     
+    // Prevent body scroll
+    document.body.classList.add('modal-open');
+    
     modal.style.display = 'flex';
 }
 
 function closeNotesModal() {
     const modal = document.querySelector('.notes-modal-overlay');
+    
+    // Allow body scroll
+    document.body.classList.remove('modal-open');
+    
     if (modal) {
         modal.style.display = 'none';
     }
