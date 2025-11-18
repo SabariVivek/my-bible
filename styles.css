@@ -1022,6 +1022,20 @@ body.dark-theme .search-bar .filter-btn.active::after {
     transform: scale(0.98);
 }
 
+/* Admin toggle button styling */
+.admin-toggle {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.admin-toggle.active {
+    color: #22c55e;
+}
+
+.admin-toggle.active:hover {
+    background-color: rgba(34, 197, 94, 0.1);
+}
+
 /* Theme toggle special styling */
 .theme-toggle {
     position: relative;
@@ -2022,6 +2036,14 @@ body.dark-theme .site-title {
 
 body.dark-theme .icon-btn {
     color: #9aa0a6;
+}
+
+body.dark-theme .admin-toggle.active {
+    color: #34d399;
+}
+
+body.dark-theme .admin-toggle.active:hover {
+    background-color: rgba(52, 211, 153, 0.15);
 }
 
 body.dark-theme .menu-btn {

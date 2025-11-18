@@ -168,7 +168,34 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollbarBehavior();
     initializeNotesModal();
     loadNotesFromGitHub(); // Load shared notes from GitHub
-    updateAdminUI(); // Initialize admin UI based on session state
+    updateAdminUI(); // Initialize admin UI based on saved state
+    
+    // Show admin toggle and secret icon if admin mode was previously activated
+    const adminToggle = document.getElementById('admin-toggle');
+    const secretIcon = document.getElementById('secret-icon');
+    if (isAdmin()) {
+        if (adminToggle) adminToggle.style.display = 'flex';
+        if (secretIcon) secretIcon.style.display = 'flex';
+    }
+    
+    // Admin toggle button click handler
+    if (adminToggle) {
+        adminToggle.addEventListener('click', () => {
+            const currentState = isAdmin();
+            const newState = !currentState;
+            localStorage.setItem('isAdmin', newState.toString());
+            updateAdminUI();
+            
+            // Show notification
+            const message = newState ? 'Admin mode activated' : 'Admin mode deactivated';
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                showToast(message, 'success');
+            } else {
+                showDesktopNotification(message);
+            }
+        });
+    }
     
     // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
@@ -1641,13 +1668,18 @@ function initializeSiteTitle() {
             
             // Check click count
             if (clickCount >= 5) {
-                // Show secret icon
+                const adminToggle = document.getElementById('admin-toggle');
+                
+                // Show secret icon and admin toggle
                 if (secretIcon) {
                     secretIcon.style.display = 'flex';
                 }
+                if (adminToggle) {
+                    adminToggle.style.display = 'flex';
+                }
                 
                 // Activate admin mode
-                sessionStorage.setItem('isAdmin', 'true');
+                localStorage.setItem('isAdmin', 'true');
                 updateAdminUI();
                 showAdminNotification();
                 
@@ -2975,16 +3007,29 @@ function hideNoteViewer() {
 
 // Admin Mode Functions
 function isAdmin() {
-    return sessionStorage.getItem('isAdmin') === 'true';
+    return localStorage.getItem('isAdmin') === 'true';
 }
 
 function updateAdminUI() {
     const editButtons = document.querySelectorAll('.note-viewer-edit-btn');
     const isAdminMode = isAdmin();
+    const adminToggle = document.getElementById('admin-toggle');
+    const adminCheck = adminToggle?.querySelector('.admin-check');
     
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
     });
+    
+    // Update admin toggle button state
+    if (adminToggle) {
+        if (isAdminMode) {
+            adminToggle.classList.add('active');
+            if (adminCheck) adminCheck.style.display = 'block';
+        } else {
+            adminToggle.classList.remove('active');
+            if (adminCheck) adminCheck.style.display = 'none';
+        }
+    }
 }
 
 function showAdminNotification() {
