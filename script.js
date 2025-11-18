@@ -2833,40 +2833,59 @@ function closeNotesModal() {
 async function saveNote() {
     const textarea = document.getElementById('notes-textarea');
     const noteText = textarea.value.trim();
+    const loadingEl = document.getElementById('notes-loading');
     
     if (!currentNoteVerse) return;
     
-    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+    // Show loading
+    if (loadingEl) loadingEl.classList.add('active');
     
-    if (noteText) {
-        verseNotes[noteKey] = {
-            text: noteText,
-            color: currentNoteColor,
-            book: bibleBooks[currentBook].name,
-            chapter: currentChapter,
-            verse: currentNoteVerse,
-            timestamp: new Date().toISOString()
-        };
-    } else {
-        delete verseNotes[noteKey];
+    try {
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+        
+        if (noteText) {
+            verseNotes[noteKey] = {
+                text: noteText,
+                color: currentNoteColor,
+                book: bibleBooks[currentBook].name,
+                chapter: currentChapter,
+                verse: currentNoteVerse,
+                timestamp: new Date().toISOString()
+            };
+        } else {
+            delete verseNotes[noteKey];
+        }
+        
+        // Save to GitHub (will also save locally as fallback)
+        await saveNotesToGitHub();
+        updateVerseNoteDisplay(currentNoteVerse);
+        closeNotesModal();
+    } finally {
+        // Hide loading
+        if (loadingEl) loadingEl.classList.remove('active');
     }
-    
-    // Save to GitHub (will also save locally as fallback)
-    await saveNotesToGitHub();
-    updateVerseNoteDisplay(currentNoteVerse);
-    closeNotesModal();
 }
 
 async function deleteNote() {
     if (!currentNoteVerse) return;
     
-    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
-    delete verseNotes[noteKey];
+    const loadingEl = document.getElementById('notes-loading');
     
-    // Save to GitHub (will also save locally as fallback)
-    await saveNotesToGitHub();
-    updateVerseNoteDisplay(currentNoteVerse);
-    closeNotesModal();
+    // Show loading
+    if (loadingEl) loadingEl.classList.add('active');
+    
+    try {
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+        delete verseNotes[noteKey];
+        
+        // Save to GitHub (will also save locally as fallback)
+        await saveNotesToGitHub();
+        updateVerseNoteDisplay(currentNoteVerse);
+        closeNotesModal();
+    } finally {
+        // Hide loading
+        if (loadingEl) loadingEl.classList.remove('active');
+    }
 }
 
 function updateVerseNoteDisplay(verseNum) {
@@ -2928,7 +2947,7 @@ function showNoteViewer(verseNum, note) {
     // Prevent body scroll
     document.body.classList.add('modal-open');
     
-    popup.style.display = 'block';
+    popup.style.display = 'flex';
     
     // Update admin UI to show/hide edit button
     updateAdminUI();
