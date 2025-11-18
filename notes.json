@@ -9,29 +9,13 @@
       "timestamp": "2025-11-18T07:08:36.070Z"
     },
     "romans_10_1": {
-      "text": "Test",
-      "color": "rose",
+      "text": "saDASD",
+      "color": "olive",
       "book": "Romans",
       "chapter": 10,
       "verse": 1,
-      "timestamp": "2025-11-18T07:22:24.363Z"
-    },
-    "romans_10_3": {
-      "text": "df",
-      "color": "slate",
-      "book": "Romans",
-      "chapter": 10,
-      "verse": 3,
-      "timestamp": "2025-11-18T07:22:36.435Z"
-    },
-    "romans_10_5": {
-      "text": "sddsdf",
-      "color": "teal",
-      "book": "Romans",
-      "chapter": 10,
-      "verse": 5,
-      "timestamp": "2025-11-18T07:22:43.045Z"
+      "timestamp": "2025-11-18T07:24:10.316Z"
     }
   },
-  "lastUpdated": "2025-11-18T07:22:43.631Z"
+  "lastUpdated": "2025-11-18T07:24:11.110Z"
 }
