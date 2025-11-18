@@ -79,7 +79,15 @@
       "chapter": 1,
       "verse": 5,
       "timestamp": "2025-11-18T14:49:28.004Z"
+    },
+    "genesis_1_2": {
+      "text": "Test",
+      "color": "burgundy",
+      "book": "Genesis",
+      "chapter": 1,
+      "verse": 2,
+      "timestamp": "2025-11-18T14:58:43.130Z"
     }
   },
-  "lastUpdated": "2025-11-18T14:49:28.719Z"
+  "lastUpdated": "2025-11-18T14:58:44.759Z"
 }
