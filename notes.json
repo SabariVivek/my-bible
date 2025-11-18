@@ -41,12 +41,12 @@
       "timestamp": "2025-11-18T07:52:14.267Z"
     },
     "numbers_1_2": {
-      "text": "background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);\n\nbackground-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);",
+      "text": "background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);background-color: #3a3a2a;\n    border-left: 4px solid #d4a84f;\n    padding-left: calc(0.5rem - 4px);\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);",
       "color": "teal",
       "book": "Numbers",
       "chapter": 1,
       "verse": 2,
-      "timestamp": "2025-11-18T08:16:24.415Z"
+      "timestamp": "2025-11-18T08:16:55.982Z"
     },
     "numbers_1_3": {
       "text": "Test",
@@ -65,5 +65,5 @@
       "timestamp": "2025-11-18T08:10:59.093Z"
     }
   },
-  "lastUpdated": "2025-11-18T08:16:25.199Z"
+  "lastUpdated": "2025-11-18T08:16:56.689Z"
 }
