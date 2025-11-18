@@ -15,7 +15,15 @@
       "chapter": 10,
       "verse": 1,
       "timestamp": "2025-11-18T07:22:24.363Z"
+    },
+    "romans_10_3": {
+      "text": "df",
+      "color": "slate",
+      "book": "Romans",
+      "chapter": 10,
+      "verse": 3,
+      "timestamp": "2025-11-18T07:22:36.435Z"
     }
   },
-  "lastUpdated": "2025-11-18T07:22:24.994Z"
+  "lastUpdated": "2025-11-18T07:22:36.998Z"
 }
