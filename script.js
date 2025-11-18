@@ -84,7 +84,7 @@ let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; //
 // Notes storage
 let verseNotes = {};
 let currentNoteVerse = null;
-let currentNoteColor = 'yellow';
+let currentNoteColor = 'burgundy';
 let githubNotesLoaded = false;
 let notesSha = null; // Required for updating GitHub file
 
@@ -722,6 +722,36 @@ function displayChapter() {
             
             // Show note viewer if verse has a note
             showNoteViewerIfExists(verseNum);
+        });
+
+        // Add double-click handler for desktop/tablet
+        verseLine.addEventListener('dblclick', () => {
+            const verseNum = parseInt(verseLine.dataset.verse);
+            openNotesModal(verseNum);
+        });
+
+        // Add right-click handler for desktop/tablet
+        verseLine.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            const verseNum = parseInt(verseLine.dataset.verse);
+            openNotesModal(verseNum);
+        });
+
+        // Add long-press handler for mobile
+        let pressTimer;
+        verseLine.addEventListener('touchstart', (e) => {
+            const verseNum = parseInt(verseLine.dataset.verse);
+            pressTimer = setTimeout(() => {
+                openNotesModal(verseNum);
+            }, 500); // 500ms for long press
+        });
+
+        verseLine.addEventListener('touchend', () => {
+            clearTimeout(pressTimer);
+        });
+
+        verseLine.addEventListener('touchmove', () => {
+            clearTimeout(pressTimer);
         });
     });
     
@@ -2777,11 +2807,11 @@ function openNotesModal(verseNum = null) {
     // Load existing note if available
     if (existingNote) {
         textarea.value = existingNote.text;
-        currentNoteColor = existingNote.color || 'yellow';
+        currentNoteColor = existingNote.color || 'burgundy';
         deleteBtn.style.display = 'block';
     } else {
         textarea.value = '';
-        currentNoteColor = 'yellow';
+        currentNoteColor = 'burgundy';
         deleteBtn.style.display = 'none';
     }
     
@@ -2895,8 +2925,13 @@ function showNoteViewer(verseNum, note) {
 
 function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
+    const modal = document.querySelector('.note-viewer-modal');
     if (popup) {
         popup.style.display = 'none';
+    }
+    if (modal) {
+        modal.style.transform = '';
+        modal.style.transition = '';
     }
 }
 
@@ -2937,15 +2972,22 @@ function initializeNotesModal() {
         });
     });
     
-    // Add long-press handler to verses for notes
-    document.addEventListener('contextmenu', (e) => {
-        const verseLine = e.target.closest('.verse-line');
-        if (verseLine) {
-            e.preventDefault();
-            const verseNum = parseInt(verseLine.dataset.verse);
-            openNotesModal(verseNum);
-        }
-    });
+    // Color navigation buttons
+    const colorPrev = document.querySelector('.notes-color-prev');
+    const colorNext = document.querySelector('.notes-color-next');
+    const colorOptions = document.querySelector('.notes-color-options');
+    
+    if (colorPrev && colorNext && colorOptions) {
+        colorPrev.addEventListener('click', () => {
+            colorOptions.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+        
+        colorNext.addEventListener('click', () => {
+            colorOptions.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    }
+    
+
     
     // Note viewer buttons
     const noteViewerEditBtn = document.getElementById('note-viewer-edit-btn');
@@ -2962,12 +3004,59 @@ function initializeNotesModal() {
     
     noteViewerCloseBtn?.addEventListener('click', hideNoteViewer);
     
-    // Close note viewer when clicking outside
-    document.addEventListener('click', (e) => {
-        const popup = document.getElementById('note-viewer-popup');
-        const verseLine = e.target.closest('.verse-line');
-        if (popup && popup.style.display === 'block' && !popup.contains(e.target) && !verseLine) {
+    // Close note viewer when clicking on overlay background
+    const noteViewerOverlay = document.getElementById('note-viewer-popup');
+    noteViewerOverlay?.addEventListener('click', (e) => {
+        if (e.target === noteViewerOverlay) {
             hideNoteViewer();
         }
     });
+
+    // Mobile swipe down to close functionality
+    const noteViewerModal = document.querySelector('.note-viewer-modal');
+    const noteViewerHeader = document.querySelector('.note-viewer-header');
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    if (noteViewerHeader && window.innerWidth <= 768) {
+        noteViewerHeader.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+            isDragging = true;
+            noteViewerModal.style.transition = 'none';
+        });
+
+        noteViewerHeader.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentY = e.touches[0].clientY;
+            const deltaY = currentY - startY;
+
+            // Only allow dragging down
+            if (deltaY > 0) {
+                noteViewerModal.style.transform = `translateY(${deltaY}px)`;
+            }
+        });
+
+        noteViewerHeader.addEventListener('touchend', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            noteViewerModal.style.transition = 'transform 0.3s ease';
+
+            const deltaY = currentY - startY;
+
+            // If dragged down more than 100px, close the modal
+            if (deltaY > 100) {
+                noteViewerModal.classList.add('closing');
+                setTimeout(() => {
+                    hideNoteViewer();
+                    noteViewerModal.classList.remove('closing');
+                    noteViewerModal.style.transform = '';
+                    noteViewerModal.style.transition = '';
+                }, 300);
+            } else {
+                // Snap back to original position
+                noteViewerModal.style.transform = '';
+            }
+        });
+    }
 }

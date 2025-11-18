@@ -188,26 +188,29 @@
         </div>
     </div>
 
-    <!-- Note Viewer Popup -->
-    <div class="note-viewer-popup" id="note-viewer-popup" style="display: none;">
-        <div class="note-viewer-header">
-            <span class="note-viewer-ref" id="note-viewer-ref"></span>
-            <div class="note-viewer-actions">
-                <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit note">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </button>
+    <!-- Note Viewer Modal -->
+    <div class="note-viewer-overlay" id="note-viewer-popup" style="display: none;">
+        <div class="note-viewer-modal">
+            <div class="note-viewer-header">
+                <span class="note-viewer-ref" id="note-viewer-ref"></span>
                 <button class="note-viewer-close-btn" id="note-viewer-close-btn" title="Close">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
+            <div class="note-viewer-content" id="note-viewer-content"></div>
+            <div class="note-viewer-footer">
+                <button class="note-viewer-edit-btn" id="note-viewer-edit-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    Edit Note
+                </button>
+            </div>
         </div>
-        <div class="note-viewer-content" id="note-viewer-content"></div>
     </div>
 
     <!-- Notes Modal -->
@@ -228,13 +231,29 @@
                 <textarea id="notes-textarea" class="notes-textarea" placeholder="Type your note here..."></textarea>
                 <div class="notes-color-section">
                     <h4>Note Color</h4>
-                    <div class="notes-color-options">
-                        <button class="note-color-btn active" data-color="yellow" style="background-color: #fff59d;" aria-label="Yellow"></button>
-                        <button class="note-color-btn" data-color="green" style="background-color: #a5d6a7;" aria-label="Green"></button>
-                        <button class="note-color-btn" data-color="blue" style="background-color: #90caf9;" aria-label="Blue"></button>
-                        <button class="note-color-btn" data-color="pink" style="background-color: #f48fb1;" aria-label="Pink"></button>
-                        <button class="note-color-btn" data-color="orange" style="background-color: #ffcc80;" aria-label="Orange"></button>
-                        <button class="note-color-btn" data-color="purple" style="background-color: #ce93d8;" aria-label="Purple"></button>
+                    <div class="notes-color-wrapper">
+                        <button class="notes-color-nav notes-color-prev" aria-label="Previous colors">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="notes-color-options">
+                            <button class="note-color-btn active" data-color="burgundy" style="background-color: #8b4c5c;" aria-label="Burgundy"></button>
+                            <button class="note-color-btn" data-color="forest" style="background-color: #5a7361;" aria-label="Forest"></button>
+                            <button class="note-color-btn" data-color="navy" style="background-color: #4a5d7a;" aria-label="Navy"></button>
+                            <button class="note-color-btn" data-color="amber" style="background-color: #c99a5c;" aria-label="Amber"></button>
+                            <button class="note-color-btn" data-color="violet" style="background-color: #7a5c8b;" aria-label="Violet"></button>
+                            <button class="note-color-btn" data-color="teal" style="background-color: #4a7a7a;" aria-label="Teal"></button>
+                            <button class="note-color-btn" data-color="rust" style="background-color: #a66b4a;" aria-label="Rust"></button>
+                            <button class="note-color-btn" data-color="olive" style="background-color: #7a7a4a;" aria-label="Olive"></button>
+                            <button class="note-color-btn" data-color="indigo" style="background-color: #5c5c8b;" aria-label="Indigo"></button>
+                            <button class="note-color-btn" data-color="slate" style="background-color: #5a6673;" aria-label="Slate"></button>
+                        </div>
+                        <button class="notes-color-nav notes-color-next" aria-label="Next colors">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="notes-modal-actions">
