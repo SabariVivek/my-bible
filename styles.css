@@ -2696,6 +2696,410 @@ body.dark-theme .home-option:hover span {
     color: #8ab4f8;
 }
 
+/* Hide homepage option on mobile devices only */
+@media (max-width: 768px) {
+    .home-option[data-action="home"] {
+        display: none;
+    }
+}
+
+/* Note Viewer Popup */
+.note-viewer-popup {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    max-width: calc(100vw - 40px);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 900;
+    animation: slideUpFade 0.3s ease;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.note-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    border-radius: 12px 12px 0 0;
+}
+
+.note-viewer-ref {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+.note-viewer-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.note-viewer-edit-btn,
+.note-viewer-close-btn {
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.note-viewer-edit-btn:hover,
+.note-viewer-close-btn:hover {
+    background-color: #e8eaed;
+}
+
+.note-viewer-edit-btn svg,
+.note-viewer-close-btn svg {
+    color: #5f6368;
+}
+
+.note-viewer-content {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #202124;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Dark theme for note viewer */
+body.dark-theme .note-viewer-popup {
+    background: #292a2d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .note-viewer-header {
+    background-color: #1f2023;
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .note-viewer-ref {
+    color: #8ab4f8;
+}
+
+body.dark-theme .note-viewer-edit-btn:hover,
+body.dark-theme .note-viewer-close-btn:hover {
+    background-color: #3c4043;
+}
+
+body.dark-theme .note-viewer-edit-btn svg,
+body.dark-theme .note-viewer-close-btn svg {
+    color: #9aa0a6;
+}
+
+body.dark-theme .note-viewer-content {
+    color: #e8eaed;
+}
+
+@media (max-width: 768px) {
+    .note-viewer-popup {
+        bottom: 70px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+}
+
+/* Notes Modal */
+.notes-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.notes-modal {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.notes-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.notes-modal-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #202124;
+    margin: 0;
+}
+
+.notes-modal-close-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.notes-modal-close-btn:hover {
+    background-color: #f1f3f4;
+}
+
+.notes-modal-close-btn svg {
+    color: #5f6368;
+}
+
+.notes-modal-content {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.notes-verse-ref {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a73e8;
+    margin-bottom: 16px;
+    padding: 8px 12px;
+    background-color: #e8f0fe;
+    border-radius: 6px;
+}
+
+.notes-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #202124;
+    resize: vertical;
+    margin-bottom: 20px;
+    transition: border-color 0.2s ease;
+}
+
+.notes-textarea:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+.notes-color-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5f6368;
+    margin: 0 0 12px 0;
+}
+
+.notes-color-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.note-color-btn {
+    width: 40px;
+    height: 40px;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-color-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.note-color-btn.active {
+    border-color: #1a73e8;
+    transform: scale(1.05);
+}
+
+.notes-modal-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.notes-btn-save,
+.notes-btn-delete {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notes-btn-save {
+    background-color: #1a73e8;
+    color: #ffffff;
+}
+
+.notes-btn-save:hover {
+    background-color: #1557b0;
+}
+
+.notes-btn-delete {
+    background-color: #ea4335;
+    color: #ffffff;
+}
+
+.notes-btn-delete:hover {
+    background-color: #c5221f;
+}
+
+/* Verse with note indicator */
+.verse-line.has-note {
+    position: relative;
+    padding-left: 8px;
+    border-left: 4px solid;
+}
+
+.verse-line.has-note.note-yellow {
+    border-left-color: #f9a825;
+    background-color: rgba(255, 245, 157, 0.15);
+}
+
+.verse-line.has-note.note-green {
+    border-left-color: #43a047;
+    background-color: rgba(165, 214, 167, 0.15);
+}
+
+.verse-line.has-note.note-blue {
+    border-left-color: #1e88e5;
+    background-color: rgba(144, 202, 249, 0.15);
+}
+
+.verse-line.has-note.note-pink {
+    border-left-color: #e91e63;
+    background-color: rgba(244, 143, 177, 0.15);
+}
+
+.verse-line.has-note.note-orange {
+    border-left-color: #fb8c00;
+    background-color: rgba(255, 204, 128, 0.15);
+}
+
+.verse-line.has-note.note-purple {
+    border-left-color: #8e24aa;
+    background-color: rgba(206, 147, 216, 0.15);
+}
+
+.verse-line .note-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Dark theme for notes modal */
+body.dark-theme .notes-modal {
+    background: #292a2d;
+}
+
+body.dark-theme .notes-modal-header {
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .notes-modal-header h3 {
+    color: #e8eaed;
+}
+
+body.dark-theme .notes-modal-close-btn:hover {
+    background-color: #3c4043;
+}
+
+body.dark-theme .notes-modal-close-btn svg {
+    color: #9aa0a6;
+}
+
+body.dark-theme .notes-verse-ref {
+    background-color: #1e3a5f;
+    color: #8ab4f8;
+}
+
+body.dark-theme .notes-textarea {
+    background-color: #202124;
+    border-color: #3c4043;
+    color: #e8eaed;
+}
+
+body.dark-theme .notes-textarea:focus {
+    border-color: #8ab4f8;
+}
+
+body.dark-theme .notes-color-section h4 {
+    color: #9aa0a6;
+}
+
+body.dark-theme .note-color-btn.active {
+    border-color: #8ab4f8;
+}
+
+body.dark-theme .verse-line.has-note.note-yellow {
+    background-color: rgba(255, 245, 157, 0.08);
+}
+
+body.dark-theme .verse-line.has-note.note-green {
+    background-color: rgba(165, 214, 167, 0.08);
+}
+
+body.dark-theme .verse-line.has-note.note-blue {
+    background-color: rgba(144, 202, 249, 0.08);
+}
+
+body.dark-theme .verse-line.has-note.note-pink {
+    background-color: rgba(244, 143, 177, 0.08);
+}
+
+body.dark-theme .verse-line.has-note.note-orange {
+    background-color: rgba(255, 204, 128, 0.08);
+}
+
+body.dark-theme .verse-line.has-note.note-purple {
+    background-color: rgba(206, 147, 216, 0.08);
+}
+
 /* Summary Drawer Overlay */
 .summary-drawer-overlay {
     display: none;

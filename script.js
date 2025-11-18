@@ -81,6 +81,11 @@ let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'en
 let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
 let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
 
+// Notes storage
+let verseNotes = JSON.parse(localStorage.getItem('verseNotes')) || {};
+let currentNoteVerse = null;
+let currentNoteColor = 'yellow';
+
 // Helper function to normalize book names for comparison
 function normalizeBookName(bookName) {
     if (!bookName || typeof bookName !== 'string') return '';
@@ -159,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeHomeOptions();
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
+    initializeNotesModal();
     
     // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
@@ -710,8 +716,14 @@ function displayChapter() {
             if (verseItem) {
                 verseItem.classList.add('active');
             }
+            
+            // Show note viewer if verse has a note
+            showNoteViewerIfExists(verseNum);
         });
     });
+    
+    // Apply note displays to verses
+    applyAllNoteDisplays();
     
     // Update mobile chapter header
     updateMobileChapterHeader();
@@ -1572,9 +1584,10 @@ function initializeSearch() {
     showEmptyState();
 }
 
-// Site title click to show secret icon after 5 clicks
+// Site title click to show notes icon after 3 clicks and secret icon after 5 clicks
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
+    const notesIcon = document.getElementById('notes-icon');
     const secretIcon = document.getElementById('secret-icon');
     let clickCount = 0;
     let clickTimer = null;
@@ -1588,19 +1601,38 @@ function initializeSiteTitle() {
                 clearTimeout(clickTimer);
             }
             
-            // Check if 5 clicks reached
-            if (clickCount >= 5) {
-                // Show secret icon
+            // Set timer to reset counter if no click within 2 seconds
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+            }, 2000);
+            
+            // Check click count
+            if (clickCount === 3) {
+                // Show notes icon, hide secret icon
+                if (notesIcon) {
+                    notesIcon.style.display = 'flex';
+                }
+                if (secretIcon) {
+                    secretIcon.style.display = 'none';
+                }
+            } else if (clickCount >= 5) {
+                // Show secret icon, hide notes icon
                 if (secretIcon) {
                     secretIcon.style.display = 'flex';
                 }
+                if (notesIcon) {
+                    notesIcon.style.display = 'none';
+                }
                 clickCount = 0; // Reset counter
-            } else {
-                // Reset counter after 2 seconds of no clicks
-                clickTimer = setTimeout(() => {
-                    clickCount = 0;
-                }, 2000);
+                clearTimeout(clickTimer); // Clear timer after completion
             }
+        });
+    }
+    
+    // Add click handler for notes icon
+    if (notesIcon) {
+        notesIcon.addEventListener('click', () => {
+            openNotesModal();
         });
     }
     
@@ -2604,4 +2636,225 @@ function displayCharacters(bookName, chapterNum) {
     } else {
         alert(`Characters not available for ${bookName} ${chapterNum} yet.`);
     }
+}
+
+// Notes functionality
+function openNotesModal(verseNum = null) {
+    const modal = document.querySelector('.notes-modal-overlay');
+    const textarea = document.getElementById('notes-textarea');
+    const verseRef = document.getElementById('notes-verse-ref');
+    const deleteBtn = document.getElementById('delete-note-btn');
+    
+    if (!modal) return;
+    
+    // If verseNum provided, use it, otherwise check for highlighted verse
+    if (verseNum === null) {
+        const highlightedVerse = document.querySelector('.verse-line.highlighted');
+        if (highlightedVerse) {
+            verseNum = parseInt(highlightedVerse.dataset.verse);
+        } else {
+            alert('Please select a verse first');
+            return;
+        }
+    }
+    
+    currentNoteVerse = verseNum;
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const existingNote = verseNotes[noteKey];
+    
+    // Set verse reference
+    verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    
+    // Load existing note if available
+    if (existingNote) {
+        textarea.value = existingNote.text;
+        currentNoteColor = existingNote.color || 'yellow';
+        deleteBtn.style.display = 'block';
+    } else {
+        textarea.value = '';
+        currentNoteColor = 'yellow';
+        deleteBtn.style.display = 'none';
+    }
+    
+    // Update active color button
+    document.querySelectorAll('.note-color-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.color === currentNoteColor);
+    });
+    
+    modal.style.display = 'flex';
+}
+
+function closeNotesModal() {
+    const modal = document.querySelector('.notes-modal-overlay');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function saveNote() {
+    const textarea = document.getElementById('notes-textarea');
+    const noteText = textarea.value.trim();
+    
+    if (!currentNoteVerse) return;
+    
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+    
+    if (noteText) {
+        verseNotes[noteKey] = {
+            text: noteText,
+            color: currentNoteColor,
+            book: bibleBooks[currentBook].name,
+            chapter: currentChapter,
+            verse: currentNoteVerse
+        };
+    } else {
+        delete verseNotes[noteKey];
+    }
+    
+    localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+    updateVerseNoteDisplay(currentNoteVerse);
+    closeNotesModal();
+}
+
+function deleteNote() {
+    if (!currentNoteVerse) return;
+    
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
+    delete verseNotes[noteKey];
+    localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+    updateVerseNoteDisplay(currentNoteVerse);
+    closeNotesModal();
+}
+
+function updateVerseNoteDisplay(verseNum) {
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    
+    if (!verseLine) return;
+    
+    // Remove all note classes
+    verseLine.classList.remove('has-note', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
+    
+    // Add note classes if note exists
+    if (verseNotes[noteKey]) {
+        verseLine.classList.add('has-note', `note-${verseNotes[noteKey].color}`);
+    }
+}
+
+function applyAllNoteDisplays() {
+    const verses = document.querySelectorAll('.verse-line');
+    verses.forEach(verseLine => {
+        const verseNum = parseInt(verseLine.dataset.verse);
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+        
+        if (verseNotes[noteKey]) {
+            verseLine.classList.add('has-note', `note-${verseNotes[noteKey].color}`);
+        }
+    });
+}
+
+// Show note viewer for a verse if it has a note
+function showNoteViewerIfExists(verseNum) {
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const note = verseNotes[noteKey];
+    
+    if (note) {
+        showNoteViewer(verseNum, note);
+    } else {
+        hideNoteViewer();
+    }
+}
+
+function showNoteViewer(verseNum, note) {
+    const popup = document.getElementById('note-viewer-popup');
+    const ref = document.getElementById('note-viewer-ref');
+    const content = document.getElementById('note-viewer-content');
+    
+    if (!popup) return;
+    
+    ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    content.textContent = note.text;
+    popup.style.display = 'block';
+    
+    // Store current viewing verse for edit button
+    popup.dataset.verse = verseNum;
+}
+
+function hideNoteViewer() {
+    const popup = document.getElementById('note-viewer-popup');
+    if (popup) {
+        popup.style.display = 'none';
+    }
+}
+
+// Initialize notes modal
+function initializeNotesModal() {
+    const modal = document.querySelector('.notes-modal-overlay');
+    const closeBtn = document.querySelector('.notes-modal-close-btn');
+    const saveBtn = document.getElementById('save-note-btn');
+    const deleteBtn = document.getElementById('delete-note-btn');
+    const colorBtns = document.querySelectorAll('.note-color-btn');
+    
+    if (!modal) return;
+    
+    // Close modal handlers
+    closeBtn?.addEventListener('click', closeNotesModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeNotesModal();
+        }
+    });
+    
+    // Save note
+    saveBtn?.addEventListener('click', saveNote);
+    
+    // Delete note
+    deleteBtn?.addEventListener('click', () => {
+        if (confirm('Are you sure you want to delete this note?')) {
+            deleteNote();
+        }
+    });
+    
+    // Color selection
+    colorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            colorBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentNoteColor = btn.dataset.color;
+        });
+    });
+    
+    // Add long-press handler to verses for notes
+    document.addEventListener('contextmenu', (e) => {
+        const verseLine = e.target.closest('.verse-line');
+        if (verseLine) {
+            e.preventDefault();
+            const verseNum = parseInt(verseLine.dataset.verse);
+            openNotesModal(verseNum);
+        }
+    });
+    
+    // Note viewer buttons
+    const noteViewerEditBtn = document.getElementById('note-viewer-edit-btn');
+    const noteViewerCloseBtn = document.getElementById('note-viewer-close-btn');
+    
+    noteViewerEditBtn?.addEventListener('click', () => {
+        const popup = document.getElementById('note-viewer-popup');
+        const verseNum = parseInt(popup.dataset.verse);
+        if (verseNum) {
+            hideNoteViewer();
+            openNotesModal(verseNum);
+        }
+    });
+    
+    noteViewerCloseBtn?.addEventListener('click', hideNoteViewer);
+    
+    // Close note viewer when clicking outside
+    document.addEventListener('click', (e) => {
+        const popup = document.getElementById('note-viewer-popup');
+        const verseLine = e.target.closest('.verse-line');
+        if (popup && popup.style.display === 'block' && !popup.contains(e.target) && !verseLine) {
+            hideNoteViewer();
+        }
+    });
 }
