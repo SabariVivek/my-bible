@@ -88,14 +88,6 @@
       "verse": 3,
       "timestamp": "2025-11-18T15:02:32.240Z"
     },
-    "genesis_1_2": {
-      "text": "Test",
-      "color": "burgundy",
-      "book": "Genesis",
-      "chapter": 1,
-      "verse": 2,
-      "timestamp": "2025-11-18T15:30:01.183Z"
-    },
     "genesis_1_4": {
       "text": "Test",
       "color": "burgundy",
@@ -105,5 +97,5 @@
       "timestamp": "2025-11-18T15:41:15.851Z"
     }
   },
-  "lastUpdated": "2025-11-18T15:41:22.846Z"
+  "lastUpdated": "2025-11-18T16:16:23.258Z"
 }
