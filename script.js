@@ -82,9 +82,11 @@ let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; //
 let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
 
 // Notes storage
-let verseNotes = JSON.parse(localStorage.getItem('verseNotes')) || {};
+let verseNotes = {};
 let currentNoteVerse = null;
 let currentNoteColor = 'yellow';
+let githubNotesLoaded = false;
+let notesSha = null; // Required for updating GitHub file
 
 // Helper function to normalize book names for comparison
 function normalizeBookName(bookName) {
@@ -165,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
     initializeNotesModal();
+    loadNotesFromGitHub(); // Load shared notes from GitHub
     
     // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
@@ -2638,6 +2641,112 @@ function displayCharacters(bookName, chapterNum) {
     }
 }
 
+// GitHub Backend for Notes
+async function loadNotesFromGitHub() {
+    try {
+        // First try to load from GitHub
+        const response = await fetch(GITHUB_CONFIG.getRawUrl(), {
+            cache: 'no-cache'
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            verseNotes = data.notes || {};
+            githubNotesLoaded = true;
+            console.log('✓ Notes loaded from GitHub:', Object.keys(verseNotes).length, 'notes');
+            
+            // Apply notes to current chapter if loaded
+            applyAllNoteDisplays();
+        } else {
+            console.log('Notes file not found on GitHub, starting fresh');
+            verseNotes = {};
+        }
+    } catch (error) {
+        console.warn('Could not load notes from GitHub:', error.message);
+        verseNotes = {};
+    }
+    
+    // Also keep local backup
+    const localNotes = localStorage.getItem('verseNotes');
+    if (localNotes && Object.keys(verseNotes).length === 0) {
+        verseNotes = JSON.parse(localNotes);
+        console.log('Loaded notes from local storage as fallback');
+    }
+}
+
+async function saveNotesToGitHub() {
+    if (!GITHUB_CONFIG.token) {
+        // Prompt user to enter token
+        const token = prompt('To share notes with everyone, enter your GitHub Personal Access Token:\n\nGet one from: https://github.com/settings/tokens\nRequired scope: repo\n\nLeave empty to save locally only.');
+        
+        if (token && token.trim()) {
+            localStorage.setItem('github_token', token.trim());
+            GITHUB_CONFIG.token = token.trim();
+        } else {
+            alert('No token provided. Notes saved locally only.');
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            return false;
+        }
+    }
+    
+    try {
+        // First, get the current file to get its SHA
+        const getResponse = await fetch(GITHUB_CONFIG.getFileUrl(), {
+            headers: {
+                'Authorization': `token ${GITHUB_CONFIG.token}`,
+                'Accept': 'application/vnd.github.v3+json'
+            }
+        });
+        
+        let sha = null;
+        if (getResponse.ok) {
+            const fileData = await getResponse.json();
+            sha = fileData.sha;
+        }
+        
+        // Prepare the new content
+        const content = {
+            notes: verseNotes,
+            lastUpdated: new Date().toISOString()
+        };
+        
+        const encodedContent = btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))));
+        
+        // Update or create the file
+        const updateResponse = await fetch(GITHUB_CONFIG.getFileUrl(), {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${GITHUB_CONFIG.token}`,
+                'Accept': 'application/vnd.github.v3+json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: 'Update Bible notes',
+                content: encodedContent,
+                sha: sha,
+                branch: GITHUB_CONFIG.branch
+            })
+        });
+        
+        if (updateResponse.ok) {
+            console.log('✓ Notes saved to GitHub successfully');
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            return true;
+        } else {
+            const error = await updateResponse.json();
+            console.error('Failed to save to GitHub:', error);
+            alert('Failed to save notes to GitHub. Saved locally only.');
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            return false;
+        }
+    } catch (error) {
+        console.error('Error saving to GitHub:', error);
+        alert('Error saving notes to GitHub. Saved locally only.');
+        localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+        return false;
+    }
+}
+
 // Notes functionality
 function openNotesModal(verseNum = null) {
     const modal = document.querySelector('.notes-modal-overlay');
@@ -2691,7 +2800,7 @@ function closeNotesModal() {
     }
 }
 
-function saveNote() {
+async function saveNote() {
     const textarea = document.getElementById('notes-textarea');
     const noteText = textarea.value.trim();
     
@@ -2705,23 +2814,27 @@ function saveNote() {
             color: currentNoteColor,
             book: bibleBooks[currentBook].name,
             chapter: currentChapter,
-            verse: currentNoteVerse
+            verse: currentNoteVerse,
+            timestamp: new Date().toISOString()
         };
     } else {
         delete verseNotes[noteKey];
     }
     
-    localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+    // Save to GitHub (will also save locally as fallback)
+    await saveNotesToGitHub();
     updateVerseNoteDisplay(currentNoteVerse);
     closeNotesModal();
 }
 
-function deleteNote() {
+async function deleteNote() {
     if (!currentNoteVerse) return;
     
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
     delete verseNotes[noteKey];
-    localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+    
+    // Save to GitHub (will also save locally as fallback)
+    await saveNotesToGitHub();
     updateVerseNoteDisplay(currentNoteVerse);
     closeNotesModal();
 }

@@ -1,0 +1,14 @@
+# Ignore local configuration files with tokens
+config.local.js
+.env
+.env.local
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
