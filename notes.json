@@ -55,7 +55,15 @@
       "chapter": 1,
       "verse": 3,
       "timestamp": "2025-11-18T08:10:48.281Z"
+    },
+    "numbers_1_6": {
+      "text": "Test",
+      "color": "burgundy",
+      "book": "Numbers",
+      "chapter": 1,
+      "verse": 6,
+      "timestamp": "2025-11-18T08:10:59.093Z"
     }
   },
-  "lastUpdated": "2025-11-18T08:10:48.967Z"
+  "lastUpdated": "2025-11-18T08:10:59.654Z"
 }
