@@ -2985,12 +2985,12 @@ body.dark-theme .note-viewer-edit-btn svg {
         background-color: #4b5563;
     }
 
-    /* Verse reference centered with edit icon */
+    /* Verse reference inline with edit icon */
     .note-viewer-ref {
         font-size: 15px;
         font-weight: 600;
         color: #202124;
-        width: 100%;
+        display: inline;
         text-align: center;
     }
 
@@ -3003,17 +3003,27 @@ body.dark-theme .note-viewer-edit-btn svg {
         display: none;
     }
 
-    /* Edit button inline with heading */
+    /* Blue pen icon right after title */
     .note-viewer-header .note-viewer-edit-btn {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 28px;
-        height: 28px;
-        min-width: 28px;
-        min-height: 28px;
-        padding: 6px;
+        position: static;
+        display: inline-flex;
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+        padding: 4px;
+        margin-left: 8px;
+        background: transparent;
+        border: none;
+        vertical-align: middle;
+    }
+
+    .note-viewer-header .note-viewer-edit-btn svg {
+        color: #1a73e8;
+    }
+
+    body.dark-theme .note-viewer-header .note-viewer-edit-btn svg {
+        color: #8ab4f8;
     }
 
     /* Content area */
