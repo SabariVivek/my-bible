@@ -194,6 +194,28 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 showDesktopNotification(message);
             }
+            
+            // If turning off admin mode, hide icons with fade animation
+            if (!newState) {
+                if (adminToggle) {
+                    adminToggle.style.opacity = '0';
+                    adminToggle.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        adminToggle.style.display = 'none';
+                        adminToggle.style.opacity = '1';
+                        adminToggle.style.transition = '';
+                    }, 2000);
+                }
+                if (secretIcon) {
+                    secretIcon.style.opacity = '0';
+                    secretIcon.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        secretIcon.style.display = 'none';
+                        secretIcon.style.opacity = '1';
+                        secretIcon.style.transition = '';
+                    }, 2000);
+                }
+            }
         });
     }
     
@@ -1161,6 +1183,7 @@ function initializeMobileLanguageModal() {
 // Search functionality
 function initializeSearch() {
     const searchBtn = document.getElementById('search-btn');
+    const searchBtnMobile = document.getElementById('search-btn-mobile');
     const backBtn = document.getElementById('back-from-search');
     const clearBtn = document.getElementById('clear-search');
     const filterBtn = document.getElementById('filter-btn');
@@ -1251,8 +1274,9 @@ function initializeSearch() {
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
         
-        // Add active class to search button
-        searchBtn.classList.add('active');
+        // Add active class to search buttons
+        if (searchBtn) searchBtn.classList.add('active');
+        if (searchBtnMobile) searchBtnMobile.classList.add('active');
         
         // Show search bar
         searchBar.style.display = 'flex';
@@ -1276,8 +1300,9 @@ function initializeSearch() {
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
         
-        // Remove active class from search button
-        searchBtn.classList.remove('active');
+        // Remove active class from search buttons
+        if (searchBtn) searchBtn.classList.remove('active');
+        if (searchBtnMobile) searchBtnMobile.classList.remove('active');
         
         // Hide search bar
         searchBar.style.display = 'none';

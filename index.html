@@ -687,6 +687,14 @@
             </button>
         </div>
 
+        <button id="search-btn-mobile" class="nav-btn mobile-only" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+
         <button class="nav-btn" aria-label="Next">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -698,6 +706,18 @@
     <script src="resources/memory-verses.js"></script>
     <script src="config.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Mobile search button handler
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBtnMobile = document.getElementById('search-btn-mobile');
+            const searchBtn = document.getElementById('search-btn');
+            if (searchBtnMobile && searchBtn) {
+                searchBtnMobile.addEventListener('click', () => {
+                    searchBtn.click();
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
