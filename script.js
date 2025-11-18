@@ -1618,10 +1618,9 @@ function initializeSearch() {
     showEmptyState();
 }
 
-// Site title click to show notes icon after 3 clicks and secret icon after 5 clicks
+// Site title click to show secret icon after 5 clicks and activate admin mode
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
-    const notesIcon = document.getElementById('notes-icon');
     const secretIcon = document.getElementById('secret-icon');
     let clickCount = 0;
     let clickTimer = null;
@@ -1641,21 +1640,10 @@ function initializeSiteTitle() {
             }, 2000);
             
             // Check click count
-            if (clickCount === 3) {
-                // Show notes icon, hide secret icon
-                if (notesIcon) {
-                    notesIcon.style.display = 'flex';
-                }
-                if (secretIcon) {
-                    secretIcon.style.display = 'none';
-                }
-            } else if (clickCount >= 5) {
-                // Show secret icon, hide notes icon
+            if (clickCount >= 5) {
+                // Show secret icon
                 if (secretIcon) {
                     secretIcon.style.display = 'flex';
-                }
-                if (notesIcon) {
-                    notesIcon.style.display = 'none';
                 }
                 
                 // Activate admin mode
@@ -1666,13 +1654,6 @@ function initializeSiteTitle() {
                 clickCount = 0; // Reset counter
                 clearTimeout(clickTimer); // Clear timer after completion
             }
-        });
-    }
-    
-    // Add click handler for notes icon
-    if (notesIcon) {
-        notesIcon.addEventListener('click', () => {
-            openNotesModal();
         });
     }
     
