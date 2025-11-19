@@ -424,6 +424,9 @@ function setupEventListeners() {
     const headingSelect = document.getElementById('heading-select');
     if (headingSelect) headingSelect.addEventListener('change', formatHeading);
     
+    // Color picker
+    setupColorPicker();
+    
     // Image upload
     const imageUpload = document.getElementById('image-upload');
     if (imageUpload) imageUpload.addEventListener('change', handleImageUpload);
@@ -1082,6 +1085,9 @@ function executeCommand(command) {
         case 'insertCode':
             insertCodeBlock();
             break;
+        case 'insertHorizontalRule':
+            document.execCommand('insertHorizontalRule', false, null);
+            break;
     }
 }
 
@@ -1097,6 +1103,62 @@ function formatHeading() {
     }
     
     select.value = 'p';
+}
+
+function setupColorPicker() {
+    const colorPickerBtn = document.getElementById('color-picker-btn');
+    const colorPickerDropdown = document.getElementById('color-picker-dropdown');
+    const removeColorBtn = document.getElementById('remove-color-btn');
+    
+    if (!colorPickerBtn || !colorPickerDropdown) return;
+    
+    // Toggle dropdown
+    colorPickerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isVisible = colorPickerDropdown.style.display === 'block';
+        colorPickerDropdown.style.display = isVisible ? 'none' : 'block';
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.color-picker-container')) {
+            colorPickerDropdown.style.display = 'none';
+        }
+    });
+    
+    // Handle color button clicks
+    colorPickerDropdown.querySelectorAll('.color-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const type = btn.dataset.type;
+            const color = btn.dataset.color;
+            
+            if (color === 'reset') {
+                if (type === 'text') {
+                    document.execCommand('removeFormat', false, null);
+                } else {
+                    document.execCommand('removeFormat', false, null);
+                }
+            } else {
+                if (type === 'text') {
+                    document.execCommand('foreColor', false, color);
+                } else {
+                    document.execCommand('hiliteColor', false, color);
+                }
+            }
+            
+            colorPickerDropdown.style.display = 'none';
+        });
+    });
+    
+    // Remove color button
+    if (removeColorBtn) {
+        removeColorBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.execCommand('removeFormat', false, null);
+            colorPickerDropdown.style.display = 'none';
+        });
+    }
 }
 
 function insertLink() {
@@ -1479,6 +1541,9 @@ function showToast(message, type = 'success') {
 // Drag and Drop
 // ===================================
 function initializeDragAndDrop() {
+    // Disable drag and drop on mobile
+    if (window.innerWidth <= 768) return;
+    
     const pageTree = document.getElementById('page-tree');
     if (!pageTree || typeof Sortable === 'undefined') return;
     
@@ -1520,25 +1585,41 @@ function initializeDragAndDrop() {
 function updateTreeStructure() {
     // Rebuild the pages array from the DOM structure
     const newPages = [];
+    const processedItems = new Set();
     
     function buildTreeFromDom(container, parentArray) {
-        const items = container.children;
+        const items = Array.from(container.children);
         
         for (let item of items) {
             const itemId = item.dataset.itemId;
+            if (!itemId || processedItems.has(itemId)) continue;
+            
             const pageItem = findPageById(itemId);
             
             if (pageItem) {
-                // Clear children, will be rebuilt
-                pageItem.children = [];
+                processedItems.add(itemId);
+                
+                // Create a fresh copy to avoid reference issues
+                const newItem = {
+                    id: pageItem.id,
+                    type: pageItem.type,
+                    title: pageItem.title,
+                    children: [],
+                    createdAt: pageItem.createdAt,
+                    updatedAt: pageItem.updatedAt
+                };
+                
+                if (pageItem.type === 'page') {
+                    newItem.content = pageItem.content;
+                }
                 
                 // Check if this item has nested children
                 const childrenUl = item.querySelector(`#children-${itemId}`);
                 if (childrenUl && childrenUl.children.length > 0) {
-                    buildTreeFromDom(childrenUl, pageItem.children);
+                    buildTreeFromDom(childrenUl, newItem.children);
                 }
                 
-                parentArray.push(pageItem);
+                parentArray.push(newItem);
             }
         }
     }

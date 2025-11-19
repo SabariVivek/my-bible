@@ -174,6 +174,63 @@
                             <option value="h5">Heading 5</option>
                             <option value="h6">Heading 6</option>
                         </select>
+                        <div class="color-picker-container">
+                            <button class="toolbar-btn color-picker-btn" id="color-picker-btn" title="Text & Highlight Color">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                                </svg>
+                            </button>
+                            <div class="color-picker-dropdown" id="color-picker-dropdown" style="display: none;">
+                                <div class="color-picker-section">
+                                    <div class="color-picker-label">Text color</div>
+                                    <div class="color-grid">
+                                        <button class="color-btn" data-type="text" data-color="reset" title="Default">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                                            </svg>
+                                        </button>
+                                        <button class="color-btn" data-type="text" data-color="#1a73e8" style="background-color: #1a73e8;" title="Blue"></button>
+                                        <button class="color-btn" data-type="text" data-color="#0d652d" style="background-color: #0d652d;" title="Green"></button>
+                                        <button class="color-btn" data-type="text" data-color="#188038" style="background-color: #188038;" title="Green"></button>
+                                        <button class="color-btn" data-type="text" data-color="#e37400" style="background-color: #e37400;" title="Orange"></button>
+                                        <button class="color-btn" data-type="text" data-color="#d93025" style="background-color: #d93025;" title="Red"></button>
+                                        <button class="color-btn" data-type="text" data-color="#9334e6" style="background-color: #9334e6;" title="Purple"></button>
+                                    </div>
+                                    <div class="color-grid">
+                                        <button class="color-btn" data-type="text" data-color="#5f6368" style="background-color: #5f6368;" title="Gray"></button>
+                                        <button class="color-btn" data-type="text" data-color="#4285f4" style="background-color: #4285f4;" title="Light Blue"></button>
+                                        <button class="color-btn" data-type="text" data-color="#00acc1" style="background-color: #00acc1;" title="Cyan"></button>
+                                        <button class="color-btn" data-type="text" data-color="#00897b" style="background-color: #00897b;" title="Teal"></button>
+                                        <button class="color-btn" data-type="text" data-color="#fb8c00" style="background-color: #fb8c00;" title="Orange"></button>
+                                        <button class="color-btn" data-type="text" data-color="#e53935" style="background-color: #e53935;" title="Red"></button>
+                                        <button class="color-btn" data-type="text" data-color="#ab47bc" style="background-color: #ab47bc;" title="Purple"></button>
+                                    </div>
+                                    <div class="color-grid">
+                                        <button class="color-btn" data-type="text" data-color="#ffffff" style="background-color: #ffffff; border: 1px solid #e0e0e0;" title="White"></button>
+                                        <button class="color-btn" data-type="text" data-color="#bbdefb" style="background-color: #bbdefb;" title="Light Blue"></button>
+                                        <button class="color-btn" data-type="text" data-color="#b2ebf2" style="background-color: #b2ebf2;" title="Light Cyan"></button>
+                                        <button class="color-btn" data-type="text" data-color="#b2dfdb" style="background-color: #b2dfdb;" title="Light Teal"></button>
+                                        <button class="color-btn" data-type="text" data-color="#fff9c4" style="background-color: #fff9c4;" title="Light Yellow"></button>
+                                        <button class="color-btn" data-type="text" data-color="#ffccbc" style="background-color: #ffccbc;" title="Light Orange"></button>
+                                        <button class="color-btn" data-type="text" data-color="#e1bee7" style="background-color: #e1bee7;" title="Light Purple"></button>
+                                    </div>
+                                </div>
+                                <div class="color-picker-section">
+                                    <div class="color-picker-label">Highlight color</div>
+                                    <div class="color-grid">
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="reset" title="No highlight">A</button>
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="#fce5cd" style="background-color: #fce5cd;" title="Orange">A</button>
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="#fce5cd" style="background-color: #fce5cd;" title="Orange">A</button>
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="#fff2cc" style="background-color: #fff2cc;" title="Yellow">A</button>
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="#fff2cc" style="background-color: #fff2cc;" title="Yellow">A</button>
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="#d9ead3" style="background-color: #d9ead3;" title="Green">A</button>
+                                        <button class="color-btn highlight-btn" data-type="highlight" data-color="#d0e0e3" style="background-color: #d0e0e3;" title="Cyan">A</button>
+                                    </div>
+                                </div>
+                                <button class="remove-color-btn" id="remove-color-btn">Remove color</button>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="toolbar-separator"></div>
@@ -230,6 +287,11 @@
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="16 18 22 12 16 6"></polyline>
                                 <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </button>
+                        <button class="toolbar-btn" data-action="insertHorizontalRule" title="Horizontal Line">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="3" y1="12" x2="21" y2="12"></line>
                             </svg>
                         </button>
                     </div>

@@ -1348,6 +1348,7 @@ body.dark-theme .mobile-chapter-header {
     line-height: 2;
     font-size: 1.375rem;
     color: #6b6b6b;
+    background-color: #f8f9fa;
     transition: background-color 0.2s ease;
     padding: 0.5rem;
     margin-left: -0.5rem;
