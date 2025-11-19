@@ -127,6 +127,38 @@ function chapterHasMemoryVerses(bookName, chapter) {
     });
 }
 
+// Helper function to check if a specific verse is a memory verse (for verse column indicators)
+function verseHasMemoryVerse(bookName, chapter, verse) {
+    if (typeof memoryVerses === 'undefined') return false;
+    
+    const normalizedBookName = normalizeBookName(bookName);
+    
+    return memoryVerses.some(memVerse => {
+        const [book, range] = memVerse.split(/\s+(?=\d)/);
+        if (!range) return false;
+        const normalizedMemBook = normalizeBookName(book);
+        
+        // Check if it's a range or single verse
+        if (range.includes(':')) {
+            const [chapterPart, versePart] = range.split(':');
+            if (versePart.includes('–') || versePart.includes('-')) {
+                // Range like "12:1-6"
+                const [startVerse, endVerse] = versePart.split(/[–-]/);
+                return normalizedMemBook === normalizedBookName && 
+                       parseInt(chapterPart) === chapter && 
+                       verse >= parseInt(startVerse) && 
+                       verse <= parseInt(endVerse);
+            } else {
+                // Single verse like "3:16"
+                return normalizedMemBook === normalizedBookName && 
+                       parseInt(chapterPart) === chapter && 
+                       parseInt(versePart) === verse;
+            }
+        }
+        return false;
+    });
+}
+
 // Helper function to check if a verse is a memory verse
 function isMemoryVerse(bookName, chapter, verse) {
     if (typeof memoryVerses === 'undefined') return false;
@@ -486,6 +518,40 @@ function markBooksWithMemoryVerses() {
         const book = bibleBooks[index];
         if (book && bookHasMemoryVerses(book.name)) {
             item.classList.add('has-memory-verse');
+        } else {
+            item.classList.remove('has-memory-verse');
+        }
+    });
+    
+    // Also update chapter and verse indicators if we're in a book view
+    if (typeof currentBook !== 'undefined') {
+        updateChapterMemoryVerseIndicators();
+        updateVerseMemoryVerseIndicators();
+    }
+}
+
+// Update chapter memory verse indicators
+function updateChapterMemoryVerseIndicators() {
+    const chapterItems = document.querySelectorAll('.chapters-column .number-item');
+    chapterItems.forEach(item => {
+        const chapter = parseInt(item.dataset.chapter);
+        if (chapterHasMemoryVerses(bibleBooks[currentBook].name, chapter)) {
+            item.classList.add('has-memory-verse');
+        } else {
+            item.classList.remove('has-memory-verse');
+        }
+    });
+}
+
+// Update verse memory verse indicators
+function updateVerseMemoryVerseIndicators() {
+    const verseItems = document.querySelectorAll('.verses-column .number-item');
+    verseItems.forEach(item => {
+        const verse = parseInt(item.dataset.verse);
+        if (verseHasMemoryVerse(bibleBooks[currentBook].name, currentChapter, verse)) {
+            item.classList.add('has-memory-verse');
+        } else {
+            item.classList.remove('has-memory-verse');
         }
     });
 }
@@ -3014,7 +3080,8 @@ async function saveMemoryVersesToSupabase() {
     
     try {
         // Delete all existing rows first
-        await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
+        // Using id>=0 to match all rows (since id is auto-increment starting from 1)
+        const deleteResponse = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?id=gte.0`, {
             method: 'DELETE',
             headers: {
                 'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
@@ -3024,32 +3091,93 @@ async function saveMemoryVersesToSupabase() {
             }
         });
         
-        // Insert all verses as individual rows
-        const rows = memoryVerses.map(verse => ({
-            verse_reference: verse
-        }));
-        
-        const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
-            method: 'POST',
-            headers: {
-                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
-                'Content-Type': 'application/json',
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify(rows)
-        });
-        
-        if (response.ok) {
-            console.log('✓ Memory verses saved to Supabase successfully');
-            return true;
+        if (!deleteResponse.ok) {
+            const errorText = await deleteResponse.text();
+            console.warn('Failed to clear existing memory verses:', errorText);
         } else {
-            const error = await response.text();
-            console.error('Failed to save memory verses to Supabase:', error);
-            return false;
+            console.log('✓ Cleared all existing memory verses from database');
+        }
+        
+        // Only insert if we have verses to save
+        if (memoryVerses && memoryVerses.length > 0) {
+            // Insert all verses as individual rows
+            const rows = memoryVerses.map(verse => ({
+                verse_reference: verse
+            }));
+            
+            const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
+                method: 'POST',
+                headers: {
+                    'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(rows)
+            });
+            
+            if (response.ok) {
+                console.log('✓ Memory verses saved to Supabase:', memoryVerses.length, 'verses');
+                return true;
+            } else {
+                const error = await response.text();
+                console.error('Failed to save memory verses to Supabase:', error);
+                return false;
+            }
+        } else {
+            console.log('✓ Memory verses cleared in Supabase (no verses to save)');
+            return true;
         }
     } catch (error) {
         console.error('Error saving memory verses to Supabase:', error);
+        return false;
+    }
+}
+
+// Clean up duplicate memory verses in Supabase
+async function cleanupDuplicateMemoryVerses() {
+    try {
+        console.log('🔧 Starting cleanup of duplicate memory verses...');
+        
+        // Fetch all rows from Supabase
+        const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
+            method: 'GET',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            console.log(`Found ${data.length} total rows in database`);
+            
+            // Extract verse references and remove duplicates
+            const allVerses = data.map(row => row.verse_reference).filter(ref => ref);
+            const uniqueVerses = [...new Set(allVerses)];
+            
+            console.log(`Found ${uniqueVerses.length} unique verses (removed ${allVerses.length - uniqueVerses.length} duplicates)`);
+            
+            // Update global memoryVerses with unique list
+            window.memoryVerses = uniqueVerses;
+            
+            // Save back to Supabase (this will delete all and re-insert unique ones)
+            await saveMemoryVersesToSupabase();
+            
+            console.log('✓ Cleanup complete! Duplicates removed.');
+            showToast(`Cleaned up ${allVerses.length - uniqueVerses.length} duplicate verses`, 3000);
+            
+            // Update UI
+            markBooksWithMemoryVerses();
+            
+            return true;
+        } else {
+            console.error('Failed to fetch memory verses for cleanup');
+            return false;
+        }
+    } catch (error) {
+        console.error('Error during cleanup:', error);
         return false;
     }
 }
@@ -3085,6 +3213,19 @@ function openNotesModal(verseNum = null) {
     
     // Set verse reference
     verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    
+    // Initialize memory verse toggle button
+    const memoryVerseToggle = document.getElementById('memory-verse-toggle');
+    const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    
+    // Check if verse is already a memory verse
+    if (typeof memoryVerses !== 'undefined' && memoryVerses.includes(verseReference)) {
+        memoryVerseToggle.classList.add('active');
+        memoryVerseToggle.title = 'Remove from Memory Verses';
+    } else {
+        memoryVerseToggle.classList.remove('active');
+        memoryVerseToggle.title = 'Add to Memory Verses';
+    }
     
     // Load existing note if available
     if (existingNote) {
@@ -3345,6 +3486,7 @@ function initializeNotesModal() {
     const closeBtn = document.querySelector('.notes-modal-close-btn');
     const saveBtn = document.getElementById('save-note-btn');
     const deleteBtn = document.getElementById('delete-note-btn');
+    const memoryVerseToggle = document.getElementById('memory-verse-toggle');
     const colorBtns = document.querySelectorAll('.note-color-btn');
     
     if (!modal) return;
@@ -3354,6 +3496,60 @@ function initializeNotesModal() {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeNotesModal();
+        }
+    });
+    
+    // Memory verse toggle handler
+    memoryVerseToggle?.addEventListener('click', async () => {
+        if (!currentNoteVerse) return;
+        
+        const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${currentNoteVerse}`;
+        
+        // Initialize memoryVerses if it doesn't exist
+        if (typeof memoryVerses === 'undefined') {
+            window.memoryVerses = [];
+        }
+        
+        // Toggle memory verse status
+        const isMemoryVerse = memoryVerses.includes(verseReference);
+        
+        if (isMemoryVerse) {
+            // Remove from memory verses
+            window.memoryVerses = memoryVerses.filter(v => v !== verseReference);
+            memoryVerseToggle.classList.remove('active');
+            memoryVerseToggle.title = 'Add to Memory Verses';
+        } else {
+            // Add to memory verses
+            memoryVerses.push(verseReference);
+            memoryVerseToggle.classList.add('active');
+            memoryVerseToggle.title = 'Remove from Memory Verses';
+        }
+        
+        // Save to Supabase and localStorage
+        console.log('Saving memory verses to Supabase...', memoryVerses);
+        const saved = await saveMemoryVersesToSupabase();
+        
+        if (saved) {
+            if (isMemoryVerse) {
+                showToast(`Removed from memory verses`, 2000);
+            } else {
+                showToast(`✓ Added to memory verses`, 2000);
+            }
+        } else {
+            showToast(`Failed to save. Check console.`, 2000);
+        }
+        
+        // Update UI - mark the book/chapter/verse with memory verse indicator
+        markBooksWithMemoryVerses();
+        
+        // Update the verse line class
+        const verseLine = document.querySelector(`.verse-line[data-verse="${currentNoteVerse}"]`);
+        if (verseLine) {
+            if (isMemoryVerse) {
+                verseLine.classList.remove('memory-verse');
+            } else {
+                verseLine.classList.add('memory-verse');
+            }
         }
     });
     

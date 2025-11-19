@@ -3353,14 +3353,56 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     background-color: #80868b;
 }
 
+.notes-verse-ref-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
 .notes-verse-ref {
+    flex: 1;
     font-size: 14px;
     font-weight: 600;
     color: #1a73e8;
-    margin-bottom: 16px;
     padding: 8px 12px;
     background-color: #e8f0fe;
     border-radius: 6px;
+    margin-bottom: 0;
+}
+
+.memory-verse-toggle {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d4a04c;
+    background-color: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #d4a04c;
+}
+
+.memory-verse-toggle:hover {
+    background-color: #fef4e4;
+    transform: scale(1.05);
+}
+
+.memory-verse-toggle.active {
+    background-color: #d4a04c;
+    color: white;
+}
+
+.memory-verse-toggle.active svg {
+    fill: white;
+}
+
+.memory-verse-toggle svg {
+    transition: fill 0.2s ease;
 }
 
 .notes-textarea {
@@ -3596,6 +3638,20 @@ body.dark-theme .notes-modal-close-btn svg {
 body.dark-theme .notes-verse-ref {
     background-color: #1e3a5f;
     color: #8ab4f8;
+}
+
+body.dark-theme .memory-verse-toggle {
+    border-color: #d4a04c;
+    color: #d4a04c;
+}
+
+body.dark-theme .memory-verse-toggle:hover {
+    background-color: rgba(212, 160, 76, 0.15);
+}
+
+body.dark-theme .memory-verse-toggle.active {
+    background-color: #d4a04c;
+    color: white;
 }
 
 body.dark-theme .notes-textarea {

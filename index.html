@@ -295,7 +295,14 @@
                 </button>
             </div>
             <div class="notes-modal-content">
-                <div class="notes-verse-ref" id="notes-verse-ref"></div>
+                <div class="notes-verse-ref-wrapper">
+                    <div class="notes-verse-ref" id="notes-verse-ref"></div>
+                    <button id="memory-verse-toggle" class="memory-verse-toggle" aria-label="Toggle Memory Verse" title="Add to Memory Verses">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                </div>
                 <textarea id="notes-textarea" class="notes-textarea" placeholder="Type your note here..."></textarea>
                 <div class="notes-color-section">
                     <h4>Note Color</h4>
@@ -767,7 +774,7 @@
 
     <script src="config.local.js"></script>
     <script src="config.js"></script>
-    <script src="script.js?v=20251119-05"></script>
+    <script src="script.js?v=20251119-11"></script>
     <script>
         // Mobile search button handler
         document.addEventListener('DOMContentLoaded', () => {

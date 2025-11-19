@@ -694,8 +694,8 @@ body.dark-theme .page-content h6 {
     color: #e3e3e3;
 }
 
-.page-content h1 { font-size: 32px; }
-.page-content h2 { font-size: 28px; }
+.page-content h1 { font-size: 24px; }
+.page-content h2 { font-size: 24px; }
 .page-content h3 { font-size: 24px; }
 .page-content h4 { font-size: 20px; }
 .page-content h5 { font-size: 18px; }
