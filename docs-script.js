@@ -312,6 +312,11 @@ async function toggleTheme(event) {
         document.body.classList.toggle('dark-theme');
         theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
         localStorage.setItem('bible-theme', theme);
+        // Update theme color
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#ffffff');
+        }
         return;
     }
     
@@ -320,6 +325,11 @@ async function toggleTheme(event) {
         document.body.classList.toggle('dark-theme');
         theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
         localStorage.setItem('bible-theme', theme);
+        // Update theme color
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#ffffff');
+        }
     });
     
     // Wait for transition to be ready

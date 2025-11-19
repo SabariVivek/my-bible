@@ -1319,6 +1319,8 @@ function initializeTheme() {
             document.body.classList.toggle('dark-theme');
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
+            // Update theme color meta tag
+            updateThemeColor();
             return;
         }
         
@@ -1327,6 +1329,8 @@ function initializeTheme() {
             document.body.classList.toggle('dark-theme');
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
+            // Update theme color meta tag
+            updateThemeColor();
         });
         
         // Wait for transition to be ready
