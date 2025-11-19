@@ -223,6 +223,31 @@ body.dark-theme .leave-btn {
     flex-direction: column;
     flex-shrink: 0;
     transition: transform 0.3s ease;
+    position: relative;
+    min-width: 200px;
+    max-width: 600px;
+}
+
+.sidebar-resizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: col-resize;
+    background-color: transparent;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-resizer:hover,
+.sidebar-resizer.resizing {
+    background-color: #1a73e8;
+}
+
+body.dark-theme .sidebar-resizer:hover,
+body.dark-theme .sidebar-resizer.resizing {
+    background-color: #8ab4f8;
 }
 
 body.dark-theme .sidebar {

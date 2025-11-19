@@ -355,7 +355,81 @@ async function toggleTheme(event) {
 // ===================================
 // Event Listeners
 // ===================================
+
+// Initialize sidebar resizer functionality
+function initializeSidebarResizer() {
+    // Skip on mobile devices
+    if (window.innerWidth <= 768) return;
+    
+    const sidebar = document.querySelector('.sidebar');
+    const resizer = document.getElementById('sidebar-resizer');
+    
+    if (!sidebar || !resizer) return;
+    
+    // Load saved width from localStorage
+    const savedWidth = localStorage.getItem('sidebar-width');
+    if (savedWidth) {
+        sidebar.style.width = savedWidth + 'px';
+    }
+    
+    let isResizing = false;
+    let startX = 0;
+    let startWidth = 0;
+    
+    // Start resize
+    resizer.addEventListener('mousedown', (e) => {
+        isResizing = true;
+        startX = e.clientX;
+        startWidth = sidebar.offsetWidth;
+        
+        // Add resizing class for visual feedback
+        document.body.style.cursor = 'col-resize';
+        resizer.style.backgroundColor = '#1a73e8';
+        
+        // Prevent text selection during resize
+        e.preventDefault();
+    });
+    
+    // Handle resize
+    document.addEventListener('mousemove', (e) => {
+        if (!isResizing) return;
+        
+        const deltaX = e.clientX - startX;
+        let newWidth = startWidth + deltaX;
+        
+        // Apply constraints (min 200px, max 600px)
+        newWidth = Math.max(200, Math.min(600, newWidth));
+        
+        sidebar.style.width = newWidth + 'px';
+    });
+    
+    // End resize
+    document.addEventListener('mouseup', () => {
+        if (!isResizing) return;
+        
+        isResizing = false;
+        
+        // Remove visual feedback
+        document.body.style.cursor = '';
+        resizer.style.backgroundColor = '';
+        
+        // Save width to localStorage
+        localStorage.setItem('sidebar-width', sidebar.offsetWidth);
+    });
+    
+    // Handle window resize to disable on mobile
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            sidebar.style.width = '';
+            localStorage.removeItem('sidebar-width');
+        }
+    });
+}
+
 function setupEventListeners() {
+    // Sidebar resizer
+    initializeSidebarResizer();
+    
     // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
     if (themeToggle) {
@@ -696,10 +770,14 @@ function createTreeItem(item, level = 0) {
     
     const hasChildren = item.children && item.children.length > 0;
     
+    // Check if this folder should be expanded from localStorage
+    const expandedFolders = JSON.parse(localStorage.getItem('expanded-folders') || '[]');
+    const shouldBeExpanded = expandedFolders.includes(item.id);
+    
     // Toggle arrow or dot
     if (hasChildren) {
         const toggle = document.createElement('div');
-        toggle.className = 'tree-toggle';
+        toggle.className = shouldBeExpanded ? 'tree-toggle expanded' : 'tree-toggle';
         toggle.innerHTML = `
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <polyline points="9 18 15 12 9 6"></polyline>
@@ -806,7 +884,7 @@ function createTreeItem(item, level = 0) {
     // Children
     if (hasChildren) {
         const childrenUl = document.createElement('ul');
-        childrenUl.className = 'tree-children';
+        childrenUl.className = shouldBeExpanded ? 'tree-children expanded' : 'tree-children';
         childrenUl.id = `children-${item.id}`;
         
         item.children.forEach(child => {
@@ -824,7 +902,21 @@ function toggleTreeChildren(itemId) {
     const toggle = document.querySelector(`[data-item-id="${itemId}"] .tree-toggle`);
     
     if (childrenUl) {
-        childrenUl.classList.toggle('expanded');
+        const isExpanded = childrenUl.classList.toggle('expanded');
+        
+        // Save expanded state to localStorage
+        const expandedFolders = JSON.parse(localStorage.getItem('expanded-folders') || '[]');
+        if (isExpanded) {
+            if (!expandedFolders.includes(itemId)) {
+                expandedFolders.push(itemId);
+            }
+        } else {
+            const index = expandedFolders.indexOf(itemId);
+            if (index > -1) {
+                expandedFolders.splice(index, 1);
+            }
+        }
+        localStorage.setItem('expanded-folders', JSON.stringify(expandedFolders));
     }
     if (toggle) {
         toggle.classList.toggle('expanded');
