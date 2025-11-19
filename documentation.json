@@ -10,14 +10,6 @@
       "content": "Who are you to say this"
     },
     {
-      "id": "item_1763537401601_7873pxua7",
-      "type": "folder",
-      "title": "Sabari",
-      "children": [],
-      "createdAt": "2025-11-19T07:30:01.601Z",
-      "updatedAt": "2025-11-19T07:30:01.601Z"
-    },
-    {
       "id": "item_1763537404764_yknunmlqr",
       "type": "folder",
       "title": "Sabari",
@@ -26,5 +18,5 @@
       "updatedAt": "2025-11-19T07:30:04.764Z"
     }
   ],
-  "lastUpdated": "2025-11-19T08:48:17.750Z"
+  "lastUpdated": "2025-11-19T08:48:21.535Z"
 }
