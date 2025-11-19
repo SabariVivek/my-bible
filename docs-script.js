@@ -68,7 +68,7 @@ function savePages() {
         // Also save to GitHub in background (only if admin mode is active)
         const isAdminMode = localStorage.getItem('isAdmin') === 'true';
         if (isAdminMode) {
-            savePagesToGitHub();
+            debouncedGitHubSync();
         }
     } catch (e) {
         console.error('Error saving pages:', e);
@@ -76,11 +76,35 @@ function savePages() {
     }
 }
 
+// Debounced GitHub sync - waits 3 seconds after last change before syncing
+function debouncedGitHubSync() {
+    // Clear any existing timeout
+    if (githubSyncTimeout) {
+        clearTimeout(githubSyncTimeout);
+    }
+    
+    // Set new timeout
+    githubSyncTimeout = setTimeout(async () => {
+        // Wait if sync is already in progress
+        if (githubSyncInProgress) {
+            console.log('GitHub sync in progress, will retry...');
+            debouncedGitHubSync(); // Retry after current sync completes
+            return;
+        }
+        
+        githubSyncInProgress = true;
+        await savePagesToGitHub();
+        githubSyncInProgress = false;
+    }, 3000); // Wait 3 seconds after last change
+}
+
 // ===================================
 // GitHub Backend for Documentation
 // ===================================
 let githubDocsLoaded = false;
 let docsSha = null; // Required for updating GitHub file
+let githubSyncTimeout = null; // For debouncing
+let githubSyncInProgress = false; // Track if sync is ongoing
 
 async function loadPagesFromGitHub() {
     try {
