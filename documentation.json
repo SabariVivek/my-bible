@@ -1,15 +1,6 @@
 {
   "pages": [
     {
-      "id": "item_1763536370493_6dcbz257m",
-      "type": "page",
-      "title": "Test",
-      "children": [],
-      "createdAt": "2025-11-19T07:12:50.493Z",
-      "updatedAt": "2025-11-19T08:57:50.105Z",
-      "content": "Nothing to say"
-    },
-    {
       "id": "item_1763537404764_yknunmlqr",
       "type": "folder",
       "title": "Sabari",
@@ -18,5 +9,5 @@
       "updatedAt": "2025-11-19T07:30:04.764Z"
     }
   ],
-  "lastUpdated": "2025-11-19T09:01:08.181Z"
+  "lastUpdated": "2025-11-19T09:01:10.923Z"
 }
