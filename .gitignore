@@ -1,5 +1,4 @@
 # Ignore local configuration files with tokens
-config.local.js
 .env
 .env.local
 
