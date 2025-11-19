@@ -245,6 +245,12 @@ function initializeHistoryManagement() {
     
     // Handle browser back button
     window.addEventListener('popstate', (event) => {
+        // Skip admin pages in history
+        if (event.state && event.state.adminPage) {
+            history.back();
+            return;
+        }
+        
         if (event.state && event.state.page === 'bible') {
             // If already on bible page, show exit confirmation
             if (isOnBiblePage) {
@@ -455,14 +461,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (mobileCultOption) {
             mobileCultOption.addEventListener('click', () => {
-                window.location.replace('secret.html');
+                window.location.href = 'secret.html';
             });
         }
         
         // Handle notes option click
         if (mobileNotesOption) {
             mobileNotesOption.addEventListener('click', () => {
-                window.location.replace('docs.html');
+                window.location.href = 'docs.html';
             });
         }
     }
@@ -491,14 +497,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (desktopCultOption) {
             desktopCultOption.addEventListener('click', () => {
-                window.location.replace('secret.html');
+                window.location.href = 'secret.html';
             });
         }
         
         // Handle notes option click
         if (desktopNotesOption) {
             desktopNotesOption.addEventListener('click', () => {
-                window.location.replace('docs.html');
+                window.location.href = 'docs.html';
             });
         }
     }
