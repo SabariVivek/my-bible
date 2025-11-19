@@ -233,7 +233,7 @@ body.dark-theme .leave-btn {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 5px;
+    width: 2px;
     cursor: col-resize;
     background-color: transparent;
     z-index: 10;
@@ -1758,8 +1758,8 @@ body.dark-theme .context-menu-item:hover {
    Scrollbar Styles
    =================================== */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
