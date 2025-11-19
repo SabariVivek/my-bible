@@ -199,7 +199,46 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Network status detection
+function checkNetworkStatus() {
+    if (!navigator.onLine) {
+        showOfflineMessage();
+    }
+}
+
+function showOfflineMessage() {
+    const existingMessage = document.querySelector('.offline-message');
+    if (existingMessage) return;
+
+    const offlineDiv = document.createElement('div');
+    offlineDiv.className = 'offline-message';
+    offlineDiv.innerHTML = `
+        <div class="offline-content">
+            <span class="offline-icon">📡</span>
+            <div class="offline-text">
+                <strong>No Internet Connection</strong>
+                <p>Please connect to a network to use this app</p>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(offlineDiv);
+}
+
+function hideOfflineMessage() {
+    const offlineDiv = document.querySelector('.offline-message');
+    if (offlineDiv) {
+        offlineDiv.remove();
+    }
+}
+
+// Listen for online/offline events
+window.addEventListener('offline', showOfflineMessage);
+window.addEventListener('online', hideOfflineMessage);
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Check network status immediately
+    checkNetworkStatus();
+    
     initializeScrollbar();
     initializeTheme();
     initializeBookList();

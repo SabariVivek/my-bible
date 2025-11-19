@@ -5,6 +5,72 @@
     box-sizing: border-box;
 }
 
+/* Offline Message Overlay */
+.offline-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    animation: fadeIn 0.3s ease;
+}
+
+.offline-content {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
+}
+
+.offline-icon {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.offline-text strong {
+    display: block;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.offline-text p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Admin Mode Notifications */
 /* Toast message for mobile */
 .toast {
