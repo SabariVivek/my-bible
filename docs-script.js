@@ -9,28 +9,38 @@ let theme = localStorage.getItem('bible-theme') || 'light';
 
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
-    await loadPages();
-    loadTheme();
-    setupEventListeners();
-    renderPageTree();
-    initializeDragAndDrop();
-    
-    if (pages.length === 0) {
-        showWelcomeScreen();
-    } else {
-        const lastPageId = localStorage.getItem('last-viewed-page');
-        const lastPage = lastPageId ? findPageById(lastPageId) : null;
+    try {
+        await loadPages();
+        loadTheme();
+        setupEventListeners();
+        renderPageTree();
+        initializeDragAndDrop();
         
-        if (lastPage && lastPage.type === 'page') {
-            viewPage(lastPageId);
+        if (pages.length === 0) {
+            showWelcomeScreen();
         } else {
-            const firstPage = findFirstPage(pages);
-            if (firstPage) {
-                viewPage(firstPage.id);
+            const lastPageId = localStorage.getItem('last-viewed-page');
+            const lastPage = lastPageId ? findPageById(lastPageId) : null;
+            
+            if (lastPage && lastPage.type === 'page') {
+                viewPage(lastPageId);
             } else {
-                showWelcomeScreen();
+                const firstPage = findFirstPage(pages);
+                if (firstPage) {
+                    viewPage(firstPage.id);
+                } else {
+                    showWelcomeScreen();
+                }
             }
         }
+    } catch (error) {
+        console.error('Error initializing app:', error);
+        // Still setup event listeners even if loading fails
+        loadTheme();
+        setupEventListeners();
+        renderPageTree();
+        initializeDragAndDrop();
+        showWelcomeScreen();
     }
 });
 
