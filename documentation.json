@@ -4,26 +4,7 @@
       "id": "item_1763535208049_s7xvz2quj",
       "type": "folder",
       "title": "Jesus Christ",
-      "children": [
-        {
-          "id": "item_1763537955201_86j9j05zg",
-          "type": "folder",
-          "title": "Test",
-          "children": [
-            {
-              "id": "item_1763537959109_fcrsw3h7y",
-              "type": "page",
-              "title": "Test",
-              "children": [],
-              "createdAt": "2025-11-19T07:39:19.109Z",
-              "updatedAt": "2025-11-19T07:39:58.552Z",
-              "content": "<!--StartFragment--><h2><strong>📌 DELIVERABLES</strong></h2>\n<ul>\n<li>\n<p>Full frontend code</p>\n</li>\n<li>\n<p>Full backend code</p>\n</li>\n<li>\n<p>DB models and schema</p>\n</li>\n<li>\n<p>All UI components</p>\n</li>\n<li>\n<p>Page &amp; folder tree logic</p>\n</li>\n<li>\n<p>Drag-drop implementation</p>\n</li>\n<li>\n<p>Upload handling</p>\n</li>\n<li>\n<p>Search implementation</p>\n</li>\n<li>\n<p>Mini documentation + setup instructions</p>\n</li>\n<li>\n<p>The final UI should look and behave like Confluence but matching <strong>my theme</strong> entirely.</p>\n</li>\n</ul>\n<p>Build the complete system and folder structure with all files and code.</p><!--EndFragment-->"
-            }
-          ],
-          "createdAt": "2025-11-19T07:39:15.201Z",
-          "updatedAt": "2025-11-19T07:39:15.201Z"
-        }
-      ],
+      "children": [],
       "createdAt": "2025-11-19T06:53:28.049Z",
       "updatedAt": "2025-11-19T07:35:29.479Z"
     },
@@ -80,5 +61,5 @@
       "updatedAt": "2025-11-19T07:30:04.764Z"
     }
   ],
-  "lastUpdated": "2025-11-19T07:52:46.697Z"
+  "lastUpdated": "2025-11-19T07:52:53.449Z"
 }
