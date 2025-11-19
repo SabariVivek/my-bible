@@ -189,7 +189,7 @@ function isMemoryVerse(bookName, chapter, verse) {
 // Register service worker for PWA
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('/my-bible/service-worker.js')
             .then(registration => {
                 console.log('ServiceWorker registered:', registration);
             })
