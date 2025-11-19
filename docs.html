@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
+    <script>
+        // Set theme color BEFORE meta tag is parsed
+        document.write('<meta name="theme-color" content="' + (localStorage.getItem('bible-theme') === 'dark' ? '#1a1a1a' : '#ffffff') + '" id="theme-color-meta">');
+    </script>
     <title>Bible Notes</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png">
     <link rel="stylesheet" href="docs-styles.css">
-    <script>
-        // Update theme color based on theme preference (using correct key 'bible-theme')
-        if (localStorage.getItem('bible-theme') === 'dark') {
-            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-            if (metaThemeColor) metaThemeColor.setAttribute('content', '#1a1a1a');
-        }
-    </script>
     <!-- Highlight.js for syntax highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" media="(prefers-color-scheme: dark)" crossorigin="anonymous">
