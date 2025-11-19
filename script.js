@@ -3186,6 +3186,7 @@ async function loadMemoryVersesFromSupabase() {
                     console.log('✓ Memory verses loaded from Supabase:', window.memoryVerses.length, 'verses');
                     markBooksWithMemoryVerses();
                     updateVerseMemoryVerseIndicators();
+                    displayChapter(); // Refresh chapter display to show memory verse styling
                     return true;
                 }
             }
@@ -3201,6 +3202,7 @@ async function loadMemoryVersesFromSupabase() {
             console.log('Loaded memory verses from local storage as fallback');
             markBooksWithMemoryVerses();
             updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to show memory verse styling
         }
         return false;
     } catch (error) {
@@ -3213,6 +3215,7 @@ async function loadMemoryVersesFromSupabase() {
             console.log('Loaded memory verses from local storage as fallback');
             markBooksWithMemoryVerses();
             updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to show memory verse styling
         }
         return false;
     }
@@ -3314,6 +3317,8 @@ async function cleanupDuplicateMemoryVerses() {
             
             // Update UI
             markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to update memory verse styling
             
             return true;
         } else {
@@ -3687,9 +3692,9 @@ function initializeNotesModal() {
         
         if (saved) {
             if (isMemoryVerse) {
-                showToast(`Removed from memory verses`, 2000);
+                showToast(`Removed memory verse`, 2000);
             } else {
-                showToast(`✓ Added to memory verses`, 2000);
+                showToast(`Added memory verse`, 2000);
             }
         } else {
             showToast(`Failed to save. Check console.`, 2000);
