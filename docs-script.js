@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Data Management
 // ===================================
 async function loadPages() {
-    // Always try loading from GitHub first for cross-device sync
-    const loadedFromGitHub = await loadPagesFromGitHub();
+    // Always try loading from Supabase first for cross-device sync
+    const loadedFromSupabase = await loadPagesFromSupabase();
     
-    if (!loadedFromGitHub) {
-        // Fallback to localStorage if GitHub load fails
+    if (!loadedFromSupabase) {
+        // Fallback to localStorage if Supabase load fails
         const stored = localStorage.getItem('bible-notes-pages');
         if (stored) {
             try {
@@ -75,143 +75,103 @@ function savePages() {
     }
 }
 
-// Debounced GitHub sync - waits 3 seconds after last change before syncing
-function debouncedGitHubSync() {
+// Debounced Supabase sync - waits 2 seconds after last change before syncing
+function debouncedSupabaseSync() {
     // Clear any existing timeout
-    if (githubSyncTimeout) {
-        clearTimeout(githubSyncTimeout);
+    if (syncTimeout) {
+        clearTimeout(syncTimeout);
     }
     
     // Set new timeout
-    githubSyncTimeout = setTimeout(async () => {
+    syncTimeout = setTimeout(async () => {
         // Wait if sync is already in progress
-        if (githubSyncInProgress) {
-            console.log('GitHub sync in progress, will retry in 2 seconds...');
-            setTimeout(() => debouncedGitHubSync(), 2000); // Retry after 2 seconds
+        if (syncInProgress) {
+            console.log('Supabase sync in progress, will retry in 1 second...');
+            setTimeout(() => debouncedSupabaseSync(), 1000); // Retry after 1 second
             return;
         }
         
-        githubSyncInProgress = true;
-        const success = await savePagesToGitHub();
-        githubSyncInProgress = false;
+        syncInProgress = true;
+        const success = await savePagesToSupabase();
+        syncInProgress = false;
         
         if (success) {
-            console.log('✓ Auto-synced to GitHub');
+            console.log('✓ Auto-synced to Supabase');
         } else {
-            console.log('⚠ GitHub sync failed, will retry on next change');
+            console.log('⚠ Supabase sync failed, will retry on next change');
         }
-    }, 3000); // Wait 3 seconds after last change
+    }, 2000); // Wait 2 seconds after last change (faster than GitHub)
 }
 
 // ===================================
-// GitHub Backend for Documentation
+// Supabase Backend for Documentation
 // ===================================
-let githubDocsLoaded = false;
-let docsSha = null; // Required for updating GitHub file
-let githubSyncTimeout = null; // For debouncing
-let githubSyncInProgress = false; // Track if sync is ongoing
+let supabaseDocsLoaded = false;
+let syncTimeout = null; // For debouncing
+let syncInProgress = false; // Track if sync is ongoing
 
-async function loadPagesFromGitHub() {
+async function loadPagesFromSupabase() {
     try {
-        // First try to load from GitHub
-        const response = await fetch(DOCS_GITHUB_CONFIG.getRawUrl(), {
-            cache: 'no-cache'
+        const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${SUPABASE_CONFIG.tableName}?id=eq.main`, {
+            headers: {
+                'apikey': SUPABASE_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`
+            }
         });
         
         if (response.ok) {
             const data = await response.json();
-            pages = data.pages || getDefaultPages();
-            githubDocsLoaded = true;
-            console.log('✓ Documentation pages loaded from GitHub:', pages.length, 'top-level items');
-            return true;
-        } else {
-            console.log('Documentation file not found on GitHub, starting fresh');
-            pages = getDefaultPages();
-            return false;
+            if (data && data.length > 0) {
+                pages = data[0].pages || getDefaultPages();
+                supabaseDocsLoaded = true;
+                console.log('✓ Documentation pages loaded from Supabase:', pages.length, 'top-level items');
+                return true;
+            }
         }
+        
+        console.log('No documentation found in Supabase, starting fresh');
+        pages = getDefaultPages();
+        return false;
     } catch (error) {
-        console.warn('Could not load documentation from GitHub:', error.message);
+        console.warn('Could not load documentation from Supabase:', error.message);
         pages = getDefaultPages();
         return false;
     }
 }
 
-async function savePagesToGitHub() {
-    if (!DOCS_GITHUB_CONFIG.token) {
-        // No token available, already saved locally
-        console.log('No GitHub token found. Documentation saved locally only.');
-        return false;
-    }
-    
+async function savePagesToSupabase() {
     try {
-        // First, get the current file to get its SHA
-        const getResponse = await fetch(DOCS_GITHUB_CONFIG.getFileUrl(), {
+        const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${SUPABASE_CONFIG.tableName}?id=eq.main`, {
+            method: 'PATCH',
             headers: {
-                'Authorization': `token ${DOCS_GITHUB_CONFIG.token}`,
-                'Accept': 'application/vnd.github.v3+json'
-            }
-        });
-        
-        let sha = null;
-        if (getResponse.ok) {
-            const fileData = await getResponse.json();
-            sha = fileData.sha;
-        }
-        
-        // Prepare the new content
-        const content = {
-            pages: pages,
-            lastUpdated: new Date().toISOString()
-        };
-        
-        const encodedContent = btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))));
-        
-        // Update or create the file
-        const updateResponse = await fetch(DOCS_GITHUB_CONFIG.getFileUrl(), {
-            method: 'PUT',
-            headers: {
-                'Authorization': `token ${DOCS_GITHUB_CONFIG.token}`,
-                'Accept': 'application/vnd.github.v3+json',
-                'Content-Type': 'application/json'
+                'apikey': SUPABASE_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
             },
             body: JSON.stringify({
-                message: 'Update Bible documentation',
-                content: encodedContent,
-                sha: sha,
-                branch: DOCS_GITHUB_CONFIG.branch
+                pages: pages,
+                last_updated: new Date().toISOString()
             })
         });
         
-        if (updateResponse.ok) {
-            console.log('✓ Documentation saved to GitHub successfully');
+        if (response.ok) {
+            console.log('✓ Documentation saved to Supabase successfully');
             return true;
         } else {
-            const error = await updateResponse.json();
-            console.error('Failed to save to GitHub:', error);
+            const error = await response.text();
+            console.error('Failed to save to Supabase:', error);
             return false;
         }
     } catch (error) {
-        console.error('Error saving to GitHub:', error);
+        console.error('Error saving to Supabase:', error);
         return false;
     }
 }
 
-async function manualSyncWithGitHub() {
+async function manualSyncWithSupabase() {
     const syncBtn = document.getElementById('sync-btn');
     if (!syncBtn) return;
-    
-    // Check admin mode
-    const isAdminMode = localStorage.getItem('isAdmin') === 'true';
-    if (!isAdminMode) {
-        showToast('GitHub sync is only available in admin mode', 'error');
-        return;
-    }
-    
-    // Check if token exists
-    if (!DOCS_GITHUB_CONFIG.token) {
-        showToast('GitHub token not configured. Please add your encrypted token to docs-config.js', 'error');
-        return;
-    }
     
     // Show loading state
     syncBtn.disabled = true;
@@ -226,11 +186,18 @@ async function manualSyncWithGitHub() {
     `;
     
     try {
-        // Save current local state to GitHub
-        const saveSuccess = await savePagesToGitHub();
-        if (saveSuccess) {
-            showToast('Synced to GitHub successfully', 'success');
-        } else {
+        // First load from Supabase
+        const loadSuccess = await loadPagesFromSupabase();
+        if (loadSuccess) {
+            renderPageTree();
+            showToast('Synced from cloud successfully', 'success');
+        }
+        
+        // Then save current state to Supabase
+        const saveSuccess = await savePagesToSupabase();
+        if (saveSuccess && !loadSuccess) {
+            showToast('Synced to cloud successfully', 'success');
+        } else if (!saveSuccess && !loadSuccess) {
             showToast('Sync failed. Check console for details.', 'error');
         }
     } catch (error) {
@@ -385,7 +352,7 @@ function setupEventListeners() {
     // Sync button
     const syncBtn = document.getElementById('sync-btn');
     if (syncBtn) {
-        syncBtn.addEventListener('click', manualSyncWithGitHub);
+        syncBtn.addEventListener('click', manualSyncWithSupabase);
     }
     
     // Mobile menu toggle

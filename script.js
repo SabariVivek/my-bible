@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
     initializeNotesModal();
-    loadNotesFromGitHub(); // Load shared notes from GitHub
+    loadNotesFromSupabase(); // Load shared notes from Supabase
     updateAdminUI(); // Initialize admin UI based on saved state
     
     // Show admin toggle and admin menu wrapper if admin mode was previously activated
@@ -2869,99 +2869,74 @@ function displayCharacters(bookName, chapterNum) {
 }
 
 // GitHub Backend for Notes
-async function loadNotesFromGitHub() {
+async function loadNotesFromSupabase() {
     try {
-        // First try to load from GitHub
-        const response = await fetch(GITHUB_CONFIG.getRawUrl(), {
-            cache: 'no-cache'
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`
+            }
         });
         
         if (response.ok) {
             const data = await response.json();
-            verseNotes = data.notes || {};
-            githubNotesLoaded = true;
-            console.log('✓ Notes loaded from GitHub:', Object.keys(verseNotes).length, 'notes');
-            
-            // Apply notes to current chapter if loaded
-            applyAllNoteDisplays();
+            if (data && data.length > 0) {
+                verseNotes = data[0].notes || {};
+                console.log('✓ Notes loaded from Supabase:', Object.keys(verseNotes).length, 'notes');
+                
+                // Apply notes to current chapter if loaded
+                applyAllNoteDisplays();
+                return true;
+            }
+        }
+        
+        console.log('No notes found in Supabase, starting fresh');
+        verseNotes = {};
+        return false;
+    } catch (error) {
+        console.warn('Could not load notes from Supabase:', error.message);
+        
+        // Fallback to localStorage
+        const localNotes = localStorage.getItem('verseNotes');
+        if (localNotes) {
+            verseNotes = JSON.parse(localNotes);
+            console.log('Loaded notes from local storage as fallback');
         } else {
-            console.log('Notes file not found on GitHub, starting fresh');
             verseNotes = {};
         }
-    } catch (error) {
-        console.warn('Could not load notes from GitHub:', error.message);
-        verseNotes = {};
-    }
-    
-    // Also keep local backup
-    const localNotes = localStorage.getItem('verseNotes');
-    if (localNotes && Object.keys(verseNotes).length === 0) {
-        verseNotes = JSON.parse(localNotes);
-        console.log('Loaded notes from local storage as fallback');
+        return false;
     }
 }
 
-async function saveNotesToGitHub() {
+async function saveNotesToSupabase() {
     // Save to localStorage immediately so notes appear right away
     localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
     
-    if (!GITHUB_CONFIG.token) {
-        // No token available, already saved locally
-        console.log('No GitHub token found. Notes saved locally only.');
-        return false;
-    }
-    
     try {
-        // First, get the current file to get its SHA
-        const getResponse = await fetch(GITHUB_CONFIG.getFileUrl(), {
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
+            method: 'PATCH',
             headers: {
-                'Authorization': `token ${GITHUB_CONFIG.token}`,
-                'Accept': 'application/vnd.github.v3+json'
-            }
-        });
-        
-        let sha = null;
-        if (getResponse.ok) {
-            const fileData = await getResponse.json();
-            sha = fileData.sha;
-        }
-        
-        // Prepare the new content
-        const content = {
-            notes: verseNotes,
-            lastUpdated: new Date().toISOString()
-        };
-        
-        const encodedContent = btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2))));
-        
-        // Update or create the file
-        const updateResponse = await fetch(GITHUB_CONFIG.getFileUrl(), {
-            method: 'PUT',
-            headers: {
-                'Authorization': `token ${GITHUB_CONFIG.token}`,
-                'Accept': 'application/vnd.github.v3+json',
-                'Content-Type': 'application/json'
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
             },
             body: JSON.stringify({
-                message: 'Update Bible notes',
-                content: encodedContent,
-                sha: sha,
-                branch: GITHUB_CONFIG.branch
+                notes: verseNotes,
+                last_updated: new Date().toISOString()
             })
         });
         
-        if (updateResponse.ok) {
-            console.log('✓ Notes saved to GitHub successfully');
+        if (response.ok) {
+            console.log('✓ Notes saved to Supabase successfully');
             return true;
         } else {
-            const error = await updateResponse.json();
-            console.error('Failed to save to GitHub:', error);
-            alert('Failed to save notes to GitHub. Already saved locally.');
+            const error = await response.text();
+            console.error('Failed to save to Supabase:', error);
             return false;
         }
     } catch (error) {
-        console.error('Error saving to GitHub:', error);
-        alert('Error saving notes to GitHub. Already saved locally.');
+        console.error('Error saving to Supabase:', error);
         return false;
     }
 }
@@ -3057,8 +3032,8 @@ async function saveNote() {
             delete verseNotes[noteKey];
         }
         
-        // Save to GitHub (will also save locally as fallback)
-        await saveNotesToGitHub();
+        // Save to Supabase (will also save locally as fallback)
+        await saveNotesToSupabase();
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
     } finally {
@@ -3079,8 +3054,8 @@ async function deleteNote() {
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
         delete verseNotes[noteKey];
         
-        // Save to GitHub (will also save locally as fallback)
-        await saveNotesToGitHub();
+        // Save to Supabase (will also save locally as fallback)
+        await saveNotesToSupabase();
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
     } finally {
