@@ -5,9 +5,8 @@ const GITHUB_CONFIG = {
     branch: 'main',
     notesFile: 'notes.json',
     // Encrypted token (base64 encoded) - only accessible in admin mode
-    // Replace this with your base64 encoded GitHub token: btoa('your_github_token_here')
-    // IMPORTANT: Add your token locally - DO NOT commit actual tokens!
-    _encryptedToken: '', // Paste your base64 encoded token here
+    // Token loaded from config.local.js (not tracked by git)
+    _encryptedToken: typeof LOCAL_CONFIG !== 'undefined' ? LOCAL_CONFIG.encryptedToken : '',
     
     get token() {
         // Only decrypt token if user is in admin mode
