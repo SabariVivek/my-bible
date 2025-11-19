@@ -235,9 +235,67 @@ function hideOfflineMessage() {
 window.addEventListener('offline', showOfflineMessage);
 window.addEventListener('online', hideOfflineMessage);
 
+// History and back button management
+let currentPage = 'bible'; // 'bible', 'search', or other pages
+let isOnBiblePage = true;
+
+function initializeHistoryManagement() {
+    // Initialize with bible page state
+    history.replaceState({ page: 'bible' }, '', window.location.href);
+    
+    // Handle browser back button
+    window.addEventListener('popstate', (event) => {
+        if (event.state && event.state.page === 'bible') {
+            // If already on bible page, show exit confirmation
+            if (isOnBiblePage) {
+                if (confirm('Do you want to exit the app?')) {
+                    window.history.back();
+                } else {
+                    // Stay on current page
+                    history.pushState({ page: 'bible' }, '', window.location.href);
+                }
+            } else {
+                // Navigate back to bible page
+                navigateToBiblePage();
+            }
+        }
+    });
+}
+
+function navigateToBiblePage() {
+    // Close any open modals or pages
+    const searchModal = document.querySelector('.search-modal');
+    const summaryDrawer = document.querySelector('.summary-drawer');
+    const notesModal = document.querySelector('.notes-modal');
+    
+    if (searchModal && searchModal.classList.contains('active')) {
+        searchModal.classList.remove('active');
+    }
+    if (summaryDrawer && summaryDrawer.classList.contains('active')) {
+        summaryDrawer.classList.remove('active');
+    }
+    if (notesModal && notesModal.style.display === 'flex') {
+        notesModal.style.display = 'none';
+    }
+    
+    isOnBiblePage = true;
+    currentPage = 'bible';
+}
+
+function navigateToPage(pageName) {
+    if (pageName !== 'bible') {
+        isOnBiblePage = false;
+        currentPage = pageName;
+        history.pushState({ page: pageName }, '', window.location.href);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Check network status immediately
     checkNetworkStatus();
+    
+    // Initialize history management
+    initializeHistoryManagement();
     
     initializeScrollbar();
     initializeTheme();
@@ -397,14 +455,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (mobileCultOption) {
             mobileCultOption.addEventListener('click', () => {
-                window.location.href = 'secret.html';
+                window.location.replace('secret.html');
             });
         }
         
         // Handle notes option click
         if (mobileNotesOption) {
             mobileNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs.html';
+                window.location.replace('docs.html');
             });
         }
     }
@@ -433,14 +491,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (desktopCultOption) {
             desktopCultOption.addEventListener('click', () => {
-                window.location.href = 'secret.html';
+                window.location.replace('secret.html');
             });
         }
         
         // Handle notes option click
         if (desktopNotesOption) {
             desktopNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs.html';
+                window.location.replace('docs.html');
             });
         }
     }
@@ -1538,6 +1596,9 @@ function initializeSearch() {
         if (searchBtn) searchBtn.classList.add('active');
         if (searchBtnMobile) searchBtnMobile.classList.add('active');
         
+        // Track navigation
+        navigateToPage('search');
+        
         // Show search bar
         searchBar.style.display = 'flex';
         
@@ -1581,6 +1642,9 @@ function initializeSearch() {
         if (bottomNav) bottomNav.style.display = 'flex';
         if (chapterHeader) chapterHeader.style.display = 'block';
         // Don't clear search input, filters, or results - preserve them
+        
+        // Track navigation back to bible page
+        navigateToBiblePage();
         
         // Force refresh book names display after sidebar is visible
         setTimeout(() => {
@@ -2566,6 +2630,9 @@ function displaySummary(bookName, chapterNum) {
         
         summaryDrawerContent.innerHTML = formattedSummary;
         
+        // Track navigation
+        navigateToPage('summary');
+        
         // Show the drawer
         summaryDrawer.classList.add('active');
         document.body.classList.add('summary-drawer-open');
@@ -2587,6 +2654,9 @@ function closeSummaryDrawer() {
     const summaryDrawer = document.getElementById('summary-drawer');
     summaryDrawer.classList.remove('active');
     document.body.classList.remove('summary-drawer-open');
+    
+    // Track navigation back to bible page
+    navigateToBiblePage();
 }
 
 // Update drawer content when chapter changes
@@ -2869,6 +2939,9 @@ function displayTimeline(bookName, chapterNum) {
         
         summaryDrawerContent.innerHTML = `<ul class="timeline-list">${formattedTimeline}</ul>`;
         
+        // Track navigation
+        navigateToPage('timeline');
+        
         // Show the drawer
         summaryDrawer.classList.add('active');
         document.body.classList.add('summary-drawer-open');
@@ -2991,6 +3064,9 @@ function displayCharacters(bookName, chapterNum) {
             .join('');
         
         summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
+        
+        // Track navigation
+        navigateToPage('characters');
         
         // Show the drawer
         summaryDrawer.classList.add('active');
@@ -3298,6 +3374,9 @@ function openNotesModal(verseNum = null) {
     // Prevent body scroll
     document.body.classList.add('modal-open');
     
+    // Track navigation
+    navigateToPage('notes');
+    
     modal.style.display = 'flex';
 }
 
@@ -3310,6 +3389,9 @@ function closeNotesModal() {
     if (modal) {
         modal.style.display = 'none';
     }
+    
+    // Track navigation back to bible page
+    navigateToBiblePage();
 }
 
 async function saveNote() {
