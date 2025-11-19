@@ -7,7 +7,7 @@
       "tags": [],
       "parentId": null,
       "createdAt": "2025-11-19T06:29:15.983Z",
-      "updatedAt": "2025-11-19T07:50:24.852Z",
+      "updatedAt": "2025-11-19T07:32:01.038Z",
       "author": "Guest User",
       "history": [
         {
@@ -98,16 +98,7 @@
       "children": [],
       "createdAt": "2025-11-19T07:30:04.764Z",
       "updatedAt": "2025-11-19T07:30:04.764Z"
-    },
-    {
-      "id": "item_1763538443104_t02tvs07s",
-      "type": "page",
-      "title": "Sabari Notes d",
-      "children": [],
-      "createdAt": "2025-11-19T07:47:23.104Z",
-      "updatedAt": "2025-11-19T07:47:53.070Z",
-      "content": "Nothing is there to display for Sabari..."
     }
   ],
-  "lastUpdated": "2025-11-19T07:50:25.456Z"
+  "lastUpdated": "2025-11-19T07:52:42.261Z"
 }
