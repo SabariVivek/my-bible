@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         const isMobile = window.innerWidth <= 768;
         
         if (isMobile) {
-            // On mobile, show sidebar by default (no welcome screen)
+            // On mobile, show sidebar and welcome screen
             const sidebar = document.getElementById('sidebar');
             if (sidebar) sidebar.classList.add('open');
+            showWelcomeScreen();
         } else {
             // On desktop, auto-load last viewed page or hide welcome screen
             if (pages.length > 0) {

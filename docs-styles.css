@@ -555,10 +555,10 @@ body.dark-theme .content-area {
 }
 
 .welcome-content h1 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
     color: #000000;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 body.dark-theme .welcome-content h1 {
@@ -864,6 +864,7 @@ body.dark-theme .page-content hr {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    position: relative;
 }
 
 .edit-header {
@@ -1127,9 +1128,11 @@ body.dark-theme .editor th {
     padding: 16px;
     border-top: 1px solid #e0e0e0;
     background-color: #ffffff;
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 body.dark-theme .mobile-bottom-actions {
@@ -1506,6 +1509,8 @@ body.dark-theme .btn-secondary:hover {
     .editor-container {
         padding: 16px;
         padding-bottom: 80px;
+        overflow-y: visible;
+        flex: 1;
     }
 
     .title-input {
