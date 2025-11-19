@@ -9,8 +9,8 @@
     <link rel="icon" type="image/png" href="resources/icons/bible.png">
     <link rel="stylesheet" href="docs-styles.css">
     <script>
-        // Update theme color based on theme preference
-        if (localStorage.getItem('docsTheme') === 'dark') {
+        // Update theme color based on theme preference (using correct key 'bible-theme')
+        if (localStorage.getItem('bible-theme') === 'dark') {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             if (metaThemeColor) metaThemeColor.setAttribute('content', '#1a1a1a');
         }

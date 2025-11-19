@@ -252,16 +252,8 @@ function initializeHistoryManagement() {
         }
         
         if (event.state && event.state.page === 'bible') {
-            // If already on bible page, show exit confirmation
-            if (isOnBiblePage) {
-                if (confirm('Do you want to exit the app?')) {
-                    window.history.back();
-                } else {
-                    // Stay on current page
-                    history.pushState({ page: 'bible' }, '', window.location.href);
-                }
-            } else {
-                // Navigate back to bible page
+            // Navigate back to bible page or do nothing if already there
+            if (!isOnBiblePage) {
                 navigateToBiblePage();
             }
         }
@@ -1326,7 +1318,10 @@ function initializeTheme() {
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
             // Update theme color meta tag
-            updateThemeColor();
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#202124' : '#ffffff');
+            }
             return;
         }
         
@@ -1336,7 +1331,10 @@ function initializeTheme() {
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
             // Update theme color meta tag
-            updateThemeColor();
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#202124' : '#ffffff');
+            }
         });
         
         // Wait for transition to be ready
@@ -3161,6 +3159,11 @@ async function saveNotesToSupabase() {
 
 // Memory Verses - Load from Supabase
 async function loadMemoryVersesFromSupabase() {
+    // Initialize memoryVerses if undefined
+    if (typeof window.memoryVerses === 'undefined') {
+        window.memoryVerses = [];
+    }
+    
     try {
         // Fetch all rows - each row contains one verse_reference
         const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
@@ -3356,8 +3359,14 @@ function openNotesModal(verseNum = null) {
     const memoryVerseToggle = document.getElementById('memory-verse-toggle');
     const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     
+    // Initialize memoryVerses if undefined
+    if (typeof window.memoryVerses === 'undefined') {
+        window.memoryVerses = [];
+    }
+    
     // Check if verse is already a memory verse
-    if (typeof memoryVerses !== 'undefined' && memoryVerses.includes(verseReference)) {
+    const isMemoryVerse = Array.isArray(memoryVerses) && memoryVerses.includes(verseReference);
+    if (isMemoryVerse) {
         memoryVerseToggle.classList.add('active');
         memoryVerseToggle.title = 'Remove from Memory Verses';
     } else {
