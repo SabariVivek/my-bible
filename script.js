@@ -313,13 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
         
-        // Handle notes option click (currently just info, can be extended)
+        // Handle notes option click
         if (mobileNotesOption) {
             mobileNotesOption.addEventListener('click', () => {
-                mobileAdminDropdown.classList.remove('active');
-                mobileAdminMenuBtn.classList.remove('active');
-                // Notes functionality is already available via verse interactions
-                alert('To add notes: Double-click any verse or long-press on mobile');
+                window.location.href = 'docs.html';
             });
         }
     }
@@ -355,9 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle notes option click
         if (desktopNotesOption) {
             desktopNotesOption.addEventListener('click', () => {
-                desktopAdminDropdown.classList.remove('active');
-                desktopAdminMenuBtn.classList.remove('active');
-                alert('To add notes: Double-click any verse');
+                window.location.href = 'docs.html';
             });
         }
     }
