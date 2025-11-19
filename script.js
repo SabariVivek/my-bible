@@ -168,6 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollbarBehavior();
     initializeNotesModal();
     loadNotesFromSupabase(); // Load shared notes from Supabase
+    
+    // Load memory verses from Supabase
+    loadMemoryVersesFromSupabase();
+    
     updateAdminUI(); // Initialize admin UI based on saved state
     
     // Show admin toggle and admin menu wrapper if admin mode was previously activated
@@ -2014,7 +2018,17 @@ function showHomePage() {
     }
     
     // Load and display a random memory verse
-    loadRandomMemoryVerse();
+    // If memory verses haven't loaded yet, wait for them
+    if (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0) {
+        loadRandomMemoryVerse();
+    } else {
+        // Wait for memory verses to load then display
+        loadMemoryVersesFromSupabase().then(() => {
+            if (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0) {
+                loadRandomMemoryVerse();
+            }
+        });
+    }
     
     // Store home state
     localStorage.setItem('isOnHomePage', 'true');
@@ -2937,6 +2951,105 @@ async function saveNotesToSupabase() {
         }
     } catch (error) {
         console.error('Error saving to Supabase:', error);
+        return false;
+    }
+}
+
+// Memory Verses - Load from Supabase
+async function loadMemoryVersesFromSupabase() {
+    try {
+        // Fetch all rows - each row contains one verse_reference
+        const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
+            method: 'GET',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            if (data && data.length > 0) {
+                // Extract verse_reference from each row to create array of strings
+                window.memoryVerses = data.map(row => row.verse_reference).filter(ref => ref);
+                
+                if (window.memoryVerses && window.memoryVerses.length > 0) {
+                    console.log('✓ Memory verses loaded from Supabase:', window.memoryVerses.length, 'verses');
+                    markBooksWithMemoryVerses();
+                    return true;
+                }
+            }
+        } else {
+            const errorText = await response.text();
+            console.error('Failed to load memory verses from Supabase:', response.status, errorText);
+        }
+        
+        // Fallback to localStorage
+        const localVerses = localStorage.getItem('memoryVerses');
+        if (localVerses) {
+            window.memoryVerses = JSON.parse(localVerses);
+            console.log('Loaded memory verses from local storage as fallback');
+            markBooksWithMemoryVerses();
+        }
+        return false;
+    } catch (error) {
+        console.error('Error loading memory verses from Supabase:', error);
+        
+        // Fallback to localStorage
+        const localVerses = localStorage.getItem('memoryVerses');
+        if (localVerses) {
+            window.memoryVerses = JSON.parse(localVerses);
+            console.log('Loaded memory verses from local storage as fallback');
+            markBooksWithMemoryVerses();
+        }
+        return false;
+    }
+}
+
+async function saveMemoryVersesToSupabase() {
+    // Save to localStorage immediately
+    localStorage.setItem('memoryVerses', JSON.stringify(memoryVerses));
+    
+    try {
+        // Delete all existing rows first
+        await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
+            method: 'DELETE',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            }
+        });
+        
+        // Insert all verses as individual rows
+        const rows = memoryVerses.map(verse => ({
+            verse_reference: verse
+        }));
+        
+        const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_MEMORY_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_MEMORY_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify(rows)
+        });
+        
+        if (response.ok) {
+            console.log('✓ Memory verses saved to Supabase successfully');
+            return true;
+        } else {
+            const error = await response.text();
+            console.error('Failed to save memory verses to Supabase:', error);
+            return false;
+        }
+    } catch (error) {
+        console.error('Error saving memory verses to Supabase:', error);
         return false;
     }
 }
