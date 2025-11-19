@@ -38,28 +38,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Data Management
 // ===================================
 async function loadPages() {
-    // First check if we have local data
-    const stored = localStorage.getItem('bible-notes-pages');
+    // Always try loading from GitHub first for cross-device sync
+    const loadedFromGitHub = await loadPagesFromGitHub();
     
-    if (stored) {
-        try {
-            pages = JSON.parse(stored);
-            console.log('Loaded documentation from local storage');
-        } catch (e) {
-            console.error('Error loading pages:', e);
+    if (!loadedFromGitHub) {
+        // Fallback to localStorage if GitHub load fails
+        const stored = localStorage.getItem('bible-notes-pages');
+        if (stored) {
+            try {
+                pages = JSON.parse(stored);
+                console.log('Loaded documentation from local storage as fallback');
+            } catch (e) {
+                console.error('Error loading pages:', e);
+                pages = getDefaultPages();
+            }
+        } else {
             pages = getDefaultPages();
         }
-    } else {
-        // No local data, try loading from GitHub
-        const loadedFromGitHub = await loadPagesFromGitHub();
-        
-        if (!loadedFromGitHub) {
-            pages = getDefaultPages();
-        }
-        
-        // Save to localStorage
-        localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
     }
+    
+    // Always keep local backup
+    localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
 }
 
 function savePages() {
@@ -87,14 +86,20 @@ function debouncedGitHubSync() {
     githubSyncTimeout = setTimeout(async () => {
         // Wait if sync is already in progress
         if (githubSyncInProgress) {
-            console.log('GitHub sync in progress, will retry...');
-            debouncedGitHubSync(); // Retry after current sync completes
+            console.log('GitHub sync in progress, will retry in 2 seconds...');
+            setTimeout(() => debouncedGitHubSync(), 2000); // Retry after 2 seconds
             return;
         }
         
         githubSyncInProgress = true;
-        await savePagesToGitHub();
+        const success = await savePagesToGitHub();
         githubSyncInProgress = false;
+        
+        if (success) {
+            console.log('✓ Auto-synced to GitHub');
+        } else {
+            console.log('⚠ GitHub sync failed, will retry on next change');
+        }
     }, 3000); // Wait 3 seconds after last change
 }
 
