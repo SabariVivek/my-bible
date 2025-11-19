@@ -1,13 +1,30 @@
 {
   "pages": [
     {
+      "id": "item_1763535629340_swpju4skw",
+      "type": "page",
+      "title": "You",
+      "children": [],
+      "createdAt": "2025-11-19T07:00:29.340Z",
+      "updatedAt": "2025-11-19T07:42:59.584Z",
+      "content": "<h1>✅ Quick Summary (Copy-Friendly)</h1><h6><!--StartFragment-->\n<p><strong>Left Pane Functionalities:</strong></p>\n</h6><h3><strong>Create</strong></h3><h6>\n<ul>\n<li>\n<p>Create page</p>\n</li>\n<li>\n<p>Create folder</p>\n</li>\n<li>\n<p>Insert at the correct hierarchy</p>\n</li>\n<li>\n<p>Auto-select new item</p>\n</li>\n<li>\n<p>Dropdown menu: \"New Page / New Folder\"</p>\n</li>\n</ul>\n</h6><h3><strong>Folder</strong></h3><h6>\n<ul>\n<li>\n<p>Add folder</p>\n</li>\n<li>\n<p>Expand/collapse</p>\n</li>\n<li>\n<p>Rename</p>\n</li>\n<li>\n<p>Delete</p>\n</li>\n<li>\n<p>Drag &amp; drop support</p>\n</li>\n<li>\n<p>Contains nested pages/folders</p>\n</li>\n</ul>\n</h6><h3><strong>Page</strong></h3><h6>\n<ul>\n<li>\n<p>Add page</p>\n</li>\n<li>\n<p>Rename</p>\n</li>\n<li>\n<p>Delete</p>\n</li>\n<li>\n<p>Open &amp; edit</p>\n</li>\n<li>\n<p>Drag &amp; drop to reorder or move</p>\n</li>\n<li>\n<p>Auto-highlight active page</p>\n</li>\n</ul>\n</h6><h3><strong>Move</strong></h3><h6>\n<ul>\n<li>\n<p>Drag &amp; drop pages/folders</p>\n</li>\n<li>\n<p>Move inside folders or to root</p>\n</li>\n<li>\n<p>Instant tree refresh</p>\n</li>\n<li>\n<p>Visual drop feedback</p>\n</li>\n<li>\n<p>Persist updated structure</p>\n</li>\n</ul>\n<hr>\n<p>If you want, I can also prepare:</p>\n<p>📌 <strong>A complete folder-page tree JSON structure</strong><br>\n📌 <strong>UI layout for these features</strong><br>\n📌 <strong>React component architecture for the left pane</strong><br>\n📌 <strong>Drag &amp; drop logic using React DnD or DndKit</strong><br>\n📌 <strong>Database schema for pages/folders</strong></p><!--EndFragment--></h6><h1><!--EndFragment--></h1><h6><!--EndFragment--></h6>"
+    },
+    {
       "id": "item_1763536370493_6dcbz257m",
       "type": "page",
       "title": "Test",
       "children": [],
       "createdAt": "2025-11-19T07:12:50.493Z",
-      "updatedAt": "2025-11-19T07:13:06.320Z",
+      "updatedAt": "2025-11-19T08:48:56.657Z",
       "content": "Who are you to say this"
+    },
+    {
+      "id": "item_1763537401601_7873pxua7",
+      "type": "folder",
+      "title": "Sabari",
+      "children": [],
+      "createdAt": "2025-11-19T07:30:01.601Z",
+      "updatedAt": "2025-11-19T07:30:01.601Z"
     },
     {
       "id": "item_1763537404764_yknunmlqr",
@@ -16,7 +33,15 @@
       "children": [],
       "createdAt": "2025-11-19T07:30:04.764Z",
       "updatedAt": "2025-11-19T07:30:04.764Z"
+    },
+    {
+      "id": "item_1763535208049_s7xvz2quj",
+      "type": "folder",
+      "title": "Jesus Christ",
+      "children": [],
+      "createdAt": "2025-11-19T06:53:28.049Z",
+      "updatedAt": "2025-11-19T07:35:29.479Z"
     }
   ],
-  "lastUpdated": "2025-11-19T08:48:21.535Z"
+  "lastUpdated": "2025-11-19T08:48:57.321Z"
 }
