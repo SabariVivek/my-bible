@@ -19,15 +19,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         const isMobile = window.innerWidth <= 768;
         
         if (isMobile) {
-            // On mobile, show sidebar by default and welcome screen
+            // On mobile, show sidebar by default (no welcome screen)
             const sidebar = document.getElementById('sidebar');
             if (sidebar) sidebar.classList.add('open');
-            showWelcomeScreen();
         } else {
-            // On desktop, auto-load last viewed page
-            if (pages.length === 0) {
-                showWelcomeScreen();
-            } else {
+            // On desktop, auto-load last viewed page or hide welcome screen
+            if (pages.length > 0) {
                 const lastPageId = localStorage.getItem('last-viewed-page');
                 const lastPage = lastPageId ? findPageById(lastPageId) : null;
                 
@@ -37,8 +34,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const firstPage = findFirstPage(pages);
                     if (firstPage) {
                         viewPage(firstPage.id);
-                    } else {
-                        showWelcomeScreen();
                     }
                 }
             }
