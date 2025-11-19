@@ -16,20 +16,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderPageTree();
         initializeDragAndDrop();
         
-        if (pages.length === 0) {
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            // On mobile, show sidebar by default and welcome screen
+            const sidebar = document.getElementById('sidebar');
+            if (sidebar) sidebar.classList.add('open');
             showWelcomeScreen();
         } else {
-            const lastPageId = localStorage.getItem('last-viewed-page');
-            const lastPage = lastPageId ? findPageById(lastPageId) : null;
-            
-            if (lastPage && lastPage.type === 'page') {
-                viewPage(lastPageId);
+            // On desktop, auto-load last viewed page
+            if (pages.length === 0) {
+                showWelcomeScreen();
             } else {
-                const firstPage = findFirstPage(pages);
-                if (firstPage) {
-                    viewPage(firstPage.id);
+                const lastPageId = localStorage.getItem('last-viewed-page');
+                const lastPage = lastPageId ? findPageById(lastPageId) : null;
+                
+                if (lastPage && lastPage.type === 'page') {
+                    viewPage(lastPageId);
                 } else {
-                    showWelcomeScreen();
+                    const firstPage = findFirstPage(pages);
+                    if (firstPage) {
+                        viewPage(firstPage.id);
+                    } else {
+                        showWelcomeScreen();
+                    }
                 }
             }
         }
@@ -378,6 +388,22 @@ function setupEventListeners() {
     // Edit button
     const editBtn = document.getElementById('edit-btn');
     if (editBtn) editBtn.addEventListener('click', enterEditMode);
+    
+    // Title inputs - update page title in real-time
+    const titleInputDesktop = document.getElementById('title-input');
+    const titleInputMobile = document.getElementById('title-input-mobile');
+    if (titleInputDesktop) {
+        titleInputDesktop.addEventListener('input', (e) => {
+            const pageTitle = document.getElementById('page-title');
+            if (pageTitle) pageTitle.textContent = e.target.value || 'Untitled';
+        });
+    }
+    if (titleInputMobile) {
+        titleInputMobile.addEventListener('input', (e) => {
+            const pageTitle = document.getElementById('page-title');
+            if (pageTitle) pageTitle.textContent = e.target.value || 'Untitled';
+        });
+    }
     
     // Save buttons
     const saveBtnDesktop = document.getElementById('save-btn-desktop');
@@ -950,7 +976,7 @@ function enterEditMode() {
     if (pageEdit) pageEdit.style.display = 'flex';
     
     // Populate editor
-    const titleInputDesktop = document.getElementById('title-input-desktop');
+    const titleInputDesktop = document.getElementById('title-input');
     const titleInputMobile = document.getElementById('title-input-mobile');
     const editor = document.getElementById('editor');
     
@@ -968,11 +994,31 @@ function savePage() {
     const page = findPageById(currentPageId);
     if (!page || page.type !== 'page') return;
     
-    const titleInputDesktop = document.getElementById('title-input-desktop');
+    const titleInputDesktop = document.getElementById('title-input');
     const titleInputMobile = document.getElementById('title-input-mobile');
     const editor = document.getElementById('editor');
     
-    const newTitle = (titleInputDesktop?.value || titleInputMobile?.value || '').trim();
+    console.log('Desktop input:', titleInputDesktop ? titleInputDesktop.value : 'not found');
+    console.log('Mobile input:', titleInputMobile ? titleInputMobile.value : 'not found');
+    console.log('Desktop visible:', titleInputDesktop ? window.getComputedStyle(titleInputDesktop.parentElement).display : 'N/A');
+    console.log('Mobile visible:', titleInputMobile ? window.getComputedStyle(titleInputMobile.parentElement).display : 'N/A');
+    
+    // Get title from the visible input
+    let newTitle = '';
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile && titleInputMobile) {
+        newTitle = titleInputMobile.value.trim();
+        console.log('Using mobile input:', newTitle);
+    } else if (!isMobile && titleInputDesktop) {
+        newTitle = titleInputDesktop.value.trim();
+        console.log('Using desktop input:', newTitle);
+    } else {
+        // Fallback: try both
+        newTitle = (titleInputDesktop?.value || titleInputMobile?.value || '').trim();
+        console.log('Using fallback:', newTitle);
+    }
+    
     const newContent = editor?.innerHTML || '';
     
     if (!newTitle) {
@@ -980,9 +1026,14 @@ function savePage() {
         return;
     }
     
+    console.log('Saving page with title:', newTitle);
+    console.log('Old title was:', page.title);
+    
     page.title = newTitle;
     page.content = newContent;
     page.updatedAt = new Date().toISOString();
+    
+    console.log('Updated page object:', page);
     
     savePages();
     renderPageTree();
