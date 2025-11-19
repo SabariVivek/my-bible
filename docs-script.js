@@ -1639,38 +1639,32 @@ function initializeDragAndDrop() {
     const pageTree = document.getElementById('page-tree');
     if (!pageTree || typeof Sortable === 'undefined') return;
     
-    // Initialize sortable on root level
-    new Sortable(pageTree, {
-        group: 'nested',
+    const sortableOptions = {
+        group: {
+            name: 'nested',
+            pull: true,
+            put: true
+        },
         animation: 150,
         fallbackOnBody: true,
         swapThreshold: 0.65,
         ghostClass: 'sortable-ghost',
         dragClass: 'sortable-drag',
         chosenClass: 'sortable-chosen',
-        handle: '.tree-item-header',
+        handle: '.tree-name',
+        draggable: '.tree-item',
         
         onEnd: function(evt) {
             updateTreeStructure();
         }
-    });
+    };
+    
+    // Initialize sortable on root level
+    new Sortable(pageTree, sortableOptions);
     
     // Initialize sortable on all nested lists
     document.querySelectorAll('.tree-children').forEach(childrenUl => {
-        new Sortable(childrenUl, {
-            group: 'nested',
-            animation: 150,
-            fallbackOnBody: true,
-            swapThreshold: 0.65,
-            ghostClass: 'sortable-ghost',
-            dragClass: 'sortable-drag',
-            chosenClass: 'sortable-chosen',
-            handle: '.tree-item-header',
-            
-            onEnd: function(evt) {
-                updateTreeStructure();
-            }
-        });
+        new Sortable(childrenUl, sortableOptions);
     });
 }
 
