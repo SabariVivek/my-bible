@@ -1,15 +1,6 @@
 {
   "pages": [
     {
-      "id": "item_1763535540415_murpz1vws",
-      "type": "page",
-      "title": "You are my child",
-      "children": [],
-      "createdAt": "2025-11-19T06:59:00.415Z",
-      "updatedAt": "2025-11-19T06:59:00.415Z",
-      "content": ""
-    },
-    {
       "id": "item_1763535629340_swpju4skw",
       "type": "page",
       "title": "You",
@@ -47,29 +38,10 @@
       "id": "item_1763535208049_s7xvz2quj",
       "type": "folder",
       "title": "Jesus Christ",
-      "children": [
-        {
-          "id": "item_1763539367644_m54acf44l",
-          "type": "folder",
-          "title": "Test",
-          "children": [
-            {
-              "id": "item_1763539373097_dqxlqt2pq",
-              "type": "page",
-              "title": "You are",
-              "children": [],
-              "createdAt": "2025-11-19T08:02:53.097Z",
-              "updatedAt": "2025-11-19T08:20:07.989Z",
-              "content": ""
-            }
-          ],
-          "createdAt": "2025-11-19T08:02:47.644Z",
-          "updatedAt": "2025-11-19T08:02:47.644Z"
-        }
-      ],
+      "children": [],
       "createdAt": "2025-11-19T06:53:28.049Z",
       "updatedAt": "2025-11-19T07:35:29.479Z"
     }
   ],
-  "lastUpdated": "2025-11-19T08:32:15.189Z"
+  "lastUpdated": "2025-11-19T08:49:02.504Z"
 }
