@@ -1,9 +1,9 @@
-// GitHub Configuration for Notes Backend
-const GITHUB_CONFIG = {
+// GitHub Configuration for Documentation Backend
+const DOCS_GITHUB_CONFIG = {
     owner: 'SabariVivek',
     repo: 'my-bible',
     branch: 'main',
-    notesFile: 'notes.json',
+    docsFile: 'documentation.json',
     // Encrypted token (base64 encoded) - only accessible in admin mode
     // Replace this with your base64 encoded GitHub token: btoa('your_github_token_here')
     // IMPORTANT: Add your token locally - DO NOT commit actual tokens!
@@ -24,9 +24,9 @@ const GITHUB_CONFIG = {
     
     // API endpoints
     getFileUrl() {
-        return `https://api.github.com/repos/${this.owner}/${this.repo}/contents/${this.notesFile}?ref=${this.branch}`;
+        return `https://api.github.com/repos/${this.owner}/${this.repo}/contents/${this.docsFile}?ref=${this.branch}`;
     },
     getRawUrl() {
-        return `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${this.branch}/${this.notesFile}`;
+        return `https://raw.githubusercontent.com/${this.owner}/${this.repo}/${this.branch}/${this.docsFile}`;
     }
 };
