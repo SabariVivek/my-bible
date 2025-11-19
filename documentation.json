@@ -38,29 +38,10 @@
       "id": "item_1763535208049_s7xvz2quj",
       "type": "folder",
       "title": "Jesus Christ",
-      "children": [
-        {
-          "id": "item_1763539367644_m54acf44l",
-          "type": "folder",
-          "title": "Test",
-          "children": [
-            {
-              "id": "item_1763539373097_dqxlqt2pq",
-              "type": "page",
-              "title": "You are God child, no need to worry",
-              "children": [],
-              "createdAt": "2025-11-19T08:02:53.097Z",
-              "updatedAt": "2025-11-19T08:45:52.193Z",
-              "content": ""
-            }
-          ],
-          "createdAt": "2025-11-19T08:02:47.644Z",
-          "updatedAt": "2025-11-19T08:02:47.644Z"
-        }
-      ],
+      "children": [],
       "createdAt": "2025-11-19T06:53:28.049Z",
       "updatedAt": "2025-11-19T07:35:29.479Z"
     }
   ],
-  "lastUpdated": "2025-11-19T08:45:52.904Z"
+  "lastUpdated": "2025-11-19T08:46:02.355Z"
 }
