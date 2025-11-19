@@ -373,11 +373,9 @@ function setupEventListeners() {
     
     // Create buttons
     const createBtnDesktop = document.getElementById('create-btn-desktop');
-    const createBtnMobileHeader = document.getElementById('create-btn-mobile-header');
     const welcomeCreateBtn = document.getElementById('welcome-create-btn');
     
     if (createBtnDesktop) createBtnDesktop.addEventListener('click', showCreateModal);
-    if (createBtnMobileHeader) createBtnMobileHeader.addEventListener('click', showCreateModal);
     if (welcomeCreateBtn) welcomeCreateBtn.addEventListener('click', showCreateModal);
     
     // Edit button
@@ -1400,7 +1398,28 @@ function showToast(message, type = 'success') {
         document.body.appendChild(toast);
     }
     
-    toast.textContent = message;
+    // Shorten message for mobile
+    const isMobile = window.innerWidth <= 768;
+    let displayMessage = message;
+    
+    if (isMobile) {
+        // Short messages for mobile
+        const mobileMessages = {
+            'GitHub sync is only available in admin mode': 'Admin mode required',
+            'GitHub token not configured. Please add your encrypted token to docs-config.js': 'Token not configured',
+            'Synced from GitHub successfully': 'Synced from GitHub',
+            'Synced to GitHub successfully': 'Synced to GitHub',
+            'Sync failed. Check console for details.': 'Sync failed',
+            'Admin mode activated! GitHub sync enabled.': 'Admin mode on',
+            'Admin mode deactivated. Local mode only.': 'Admin mode off',
+            'Renamed successfully': 'Renamed',
+            'Deleted successfully': 'Deleted'
+        };
+        
+        displayMessage = mobileMessages[message] || message;
+    }
+    
+    toast.textContent = displayMessage;
     toast.className = `toast ${type}`;
     
     toast.offsetHeight;
