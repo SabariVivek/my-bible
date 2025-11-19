@@ -104,14 +104,14 @@
       "verse": 2,
       "timestamp": "2025-11-19T06:03:05.475Z"
     },
-    "genesis_1_13": {
+    "genesis_1_14": {
       "text": "Test",
-      "color": "forest",
+      "color": "burgundy",
       "book": "Genesis",
       "chapter": 1,
-      "verse": 13,
-      "timestamp": "2025-11-19T06:07:05.118Z"
+      "verse": 14,
+      "timestamp": "2025-11-19T06:09:22.497Z"
     }
   },
-  "lastUpdated": "2025-11-19T06:07:05.986Z"
+  "lastUpdated": "2025-11-19T06:09:32.174Z"
 }
