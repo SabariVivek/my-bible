@@ -774,8 +774,8 @@ function createTreeItem(item, level = 0) {
     const expandedFolders = JSON.parse(localStorage.getItem('expanded-folders') || '[]');
     const shouldBeExpanded = expandedFolders.includes(item.id);
     
-    // Toggle arrow or dot
-    if (hasChildren) {
+    // Toggle arrow for folders, spacer for pages
+    if (item.type === 'folder') {
         const toggle = document.createElement('div');
         toggle.className = shouldBeExpanded ? 'tree-toggle expanded' : 'tree-toggle';
         toggle.innerHTML = `
@@ -789,7 +789,7 @@ function createTreeItem(item, level = 0) {
         });
         header.appendChild(toggle);
     } else {
-        // No bullet point for leaf items, just spacing
+        // No bullet point for page items, just spacing
         const spacer = document.createElement('div');
         spacer.style.width = '12px';
         spacer.style.height = '12px';
@@ -881,15 +881,17 @@ function createTreeItem(item, level = 0) {
     
     li.appendChild(header);
     
-    // Children
-    if (hasChildren) {
+    // Children - always create container for folders (even if empty) to allow dropping
+    if (item.type === 'folder') {
         const childrenUl = document.createElement('ul');
         childrenUl.className = shouldBeExpanded ? 'tree-children expanded' : 'tree-children';
         childrenUl.id = `children-${item.id}`;
         
-        item.children.forEach(child => {
-            childrenUl.appendChild(createTreeItem(child, level + 1));
-        });
+        if (item.children && item.children.length > 0) {
+            item.children.forEach(child => {
+                childrenUl.appendChild(createTreeItem(child, level + 1));
+            });
+        }
         
         li.appendChild(childrenUl);
     }
@@ -1654,7 +1656,34 @@ function initializeDragAndDrop() {
         handle: '.tree-name',
         draggable: '.tree-item',
         
+        onStart: function(evt) {
+            document.body.classList.add('dragging');
+        },
+        
+        // Allow dropping on folder headers
+        onMove: function(evt) {
+            const draggedItem = evt.dragged;
+            const relatedItem = evt.related;
+            
+            // If hovering over a folder, auto-expand it and allow drop into it
+            if (relatedItem && relatedItem.dataset.itemType === 'folder') {
+                const folderId = relatedItem.dataset.itemId;
+                const childrenUl = document.getElementById(`children-${folderId}`);
+                
+                if (childrenUl && !childrenUl.classList.contains('expanded')) {
+                    // Auto-expand folder when dragging over it
+                    setTimeout(() => {
+                        const toggle = relatedItem.querySelector('.tree-toggle');
+                        if (toggle && !toggle.classList.contains('expanded')) {
+                            toggleTreeChildren(folderId);
+                        }
+                    }, 500);
+                }
+            }
+        },
+        
         onEnd: function(evt) {
+            document.body.classList.remove('dragging');
             updateTreeStructure();
         }
     };
@@ -1662,7 +1691,7 @@ function initializeDragAndDrop() {
     // Initialize sortable on root level
     new Sortable(pageTree, sortableOptions);
     
-    // Initialize sortable on all nested lists
+    // Initialize sortable on all nested lists (including empty ones)
     document.querySelectorAll('.tree-children').forEach(childrenUl => {
         new Sortable(childrenUl, sortableOptions);
     });

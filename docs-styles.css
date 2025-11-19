@@ -543,6 +543,29 @@ body.dark-theme .tree-add-btn {
 
 .tree-children.expanded {
     display: block;
+    min-height: 24px; /* Ensure empty folders have a drop zone */
+}
+
+/* Empty folder drop zone styling */
+.tree-children.expanded:empty::before {
+    content: 'Drop here';
+    display: block;
+    padding: 8px;
+    color: #9aa0a6;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+body.dark-theme .tree-children.expanded:empty::before {
+    color: #9aa0a6;
+}
+
+/* Show drop hint when dragging */
+body.dragging .tree-children.expanded:empty::before {
+    opacity: 1;
 }
 
 /* ===================================
