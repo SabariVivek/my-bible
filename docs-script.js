@@ -38,27 +38,28 @@ document.addEventListener('DOMContentLoaded', async () => {
 // Data Management
 // ===================================
 async function loadPages() {
-    // Try loading from GitHub first
-    const loadedFromGitHub = await loadPagesFromGitHub();
+    // First check if we have local data
+    const stored = localStorage.getItem('bible-notes-pages');
     
-    if (!loadedFromGitHub) {
-        // Fallback to localStorage if GitHub load fails
-        const stored = localStorage.getItem('bible-notes-pages');
-        if (stored) {
-            try {
-                pages = JSON.parse(stored);
-                console.log('Loaded documentation from local storage as fallback');
-            } catch (e) {
-                console.error('Error loading pages:', e);
-                pages = getDefaultPages();
-            }
-        } else {
+    if (stored) {
+        try {
+            pages = JSON.parse(stored);
+            console.log('Loaded documentation from local storage');
+        } catch (e) {
+            console.error('Error loading pages:', e);
             pages = getDefaultPages();
         }
+    } else {
+        // No local data, try loading from GitHub
+        const loadedFromGitHub = await loadPagesFromGitHub();
+        
+        if (!loadedFromGitHub) {
+            pages = getDefaultPages();
+        }
+        
+        // Save to localStorage
+        localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
     }
-    
-    // Also keep local backup
-    localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
 }
 
 function savePages() {
@@ -196,18 +197,11 @@ async function manualSyncWithGitHub() {
     `;
     
     try {
-        // First load from GitHub to merge any remote changes
-        const loadSuccess = await loadPagesFromGitHub();
-        if (loadSuccess) {
-            renderPageTree();
-            showToast('Synced from GitHub successfully', 'success');
-        }
-        
-        // Then save current state to GitHub
+        // Save current local state to GitHub
         const saveSuccess = await savePagesToGitHub();
         if (saveSuccess) {
             showToast('Synced to GitHub successfully', 'success');
-        } else if (!loadSuccess) {
+        } else {
             showToast('Sync failed. Check console for details.', 'error');
         }
     } catch (error) {
