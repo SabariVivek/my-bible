@@ -3185,6 +3185,7 @@ async function loadMemoryVersesFromSupabase() {
                 if (window.memoryVerses && window.memoryVerses.length > 0) {
                     console.log('✓ Memory verses loaded from Supabase:', window.memoryVerses.length, 'verses');
                     markBooksWithMemoryVerses();
+                    updateVerseMemoryVerseIndicators();
                     return true;
                 }
             }
@@ -3199,6 +3200,7 @@ async function loadMemoryVersesFromSupabase() {
             window.memoryVerses = JSON.parse(localVerses);
             console.log('Loaded memory verses from local storage as fallback');
             markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
         }
         return false;
     } catch (error) {
@@ -3210,6 +3212,7 @@ async function loadMemoryVersesFromSupabase() {
             window.memoryVerses = JSON.parse(localVerses);
             console.log('Loaded memory verses from local storage as fallback');
             markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
         }
         return false;
     }
@@ -3694,6 +3697,7 @@ function initializeNotesModal() {
         
         // Update UI - mark the book/chapter/verse with memory verse indicator
         markBooksWithMemoryVerses();
+        updateVerseMemoryVerseIndicators();
         
         // Update the verse line class
         const verseLine = document.querySelector(`.verse-line[data-verse="${currentNoteVerse}"]`);
