@@ -207,13 +207,13 @@ async function manualSyncWithSupabase() {
         const loadSuccess = await loadPagesFromSupabase();
         if (loadSuccess) {
             renderPageTree();
-            showToast('Synced from cloud successfully', 'success');
+            showToast('Synced from cloud', 'success');
         }
         
         // Then save current state to Supabase
         const saveSuccess = await savePagesToSupabase();
         if (saveSuccess && !loadSuccess) {
-            showToast('Synced to cloud successfully', 'success');
+            showToast('Synced to cloud', 'success');
         } else if (!saveSuccess && !loadSuccess) {
             showToast('Sync failed. Check console for details.', 'error');
         }
@@ -586,7 +586,7 @@ function setupDeleteModal() {
                 }
                 
                 renderPageTree();
-                showToast('Deleted successfully');
+                showToast('Deleted');
             }
             closeModal(deleteModal);
         });
@@ -1038,7 +1038,7 @@ function savePage() {
     savePages();
     renderPageTree();
     viewPage(currentPageId);
-    showToast('Page saved successfully');
+    showToast('Saved');
 }
 
 function cancelEdit() {
@@ -1268,7 +1268,7 @@ function createNewItem(type, name, parentId = null) {
         }
     }, 100);
     
-    showToast(`${type === 'folder' ? 'Folder' : 'Page'} created successfully`);
+    showToast(`${type === 'folder' ? 'Folder' : 'Page'} created`);
 }
 
 // ===================================
@@ -1358,7 +1358,7 @@ function confirmRename() {
             if (pageTitle) pageTitle.textContent = newName;
         }
         
-        showToast('Renamed successfully');
+        showToast('Renamed');
     }
     
     closeModal(modal);
