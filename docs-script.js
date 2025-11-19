@@ -74,11 +74,8 @@ async function loadPages() {
 function savePages() {
     try {
         localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
-        // Also save to GitHub in background (only if admin mode is active)
-        const isAdminMode = localStorage.getItem('isAdmin') === 'true';
-        if (isAdminMode) {
-            debouncedGitHubSync();
-        }
+        // Auto-save to Supabase (no admin mode required)
+        debouncedSupabaseSync();
     } catch (e) {
         console.error('Error saving pages:', e);
         showToast('Error saving pages', 'error');
