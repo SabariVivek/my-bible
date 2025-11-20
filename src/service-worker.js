@@ -7,10 +7,10 @@ const STATIC_CACHE_NAME = 'my-bible-static-v2';
 const STATIC_ASSETS = [
   '/my-bible/',
   '/my-bible/index.html',
-  '/my-bible/styles.css',
-  '/my-bible/script.js',
-  '/my-bible/config.js',
-  '/my-bible/bible-data-manager.js',
+  '/my-bible/src/styles.css',
+  '/my-bible/src/script.js',
+  '/my-bible/config/config.js',
+  '/my-bible/src/bible-data-manager.js',
   '/my-bible/manifest.json',
   '/my-bible/resources/icons/bible.png'
 ];

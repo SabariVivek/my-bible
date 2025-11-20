@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" href="/my-bible/resources/icons/bible.png">
     <link rel="manifest" href="/my-bible/manifest.json">
     <link rel="apple-touch-icon" href="/my-bible/resources/icons/bible.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/styles.css">
     <script>
         // Apply dark theme class immediately
         if (localStorage.getItem('theme') === 'dark') {
@@ -788,10 +788,10 @@
     <!-- Supabase Client Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
-    <script src="config.local.js"></script>
-    <script src="config.js"></script>
-    <script src="bible-data-manager.js"></script>
-    <script src="script.js?v=20251120-1"></script>
+    <script src="config/config.local.js"></script>
+    <script src="config/config.js"></script>
+    <script src="src/bible-data-manager.js"></script>
+    <script src="src/script.js?v=20251120-2"></script>
     <script>
         // Mobile search button handler
         document.addEventListener('DOMContentLoaded', () => {
