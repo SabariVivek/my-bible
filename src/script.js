@@ -2187,7 +2187,7 @@ function showHomePage() {
         let bibleImg = logoContainer.querySelector('.home-bible-img');
         if (!bibleImg) {
             bibleImg = document.createElement('img');
-            bibleImg.src = 'resources/icons/bible.png';
+            bibleImg.src = '../resources/icons/bible.png';
             bibleImg.alt = 'Bible';
             bibleImg.className = 'home-bible-img';
             bibleImg.style.cssText = 'width: 25px; height: 25px; margin-right: 4px; display: block;';
