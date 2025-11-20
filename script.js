@@ -733,97 +733,96 @@ async function loadBook(bookIndex, chapter) {
     localStorage.removeItem('isOnHomePage');
     
     const book = bibleBooks[bookIndex];
-    const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
     
-    if (currentLanguage === 'both') {
-        // Load both Tamil and English
-        currentTamilData = null;
-        currentData = null;
-        
-        // Load Tamil first
-        const tamilScriptPath = `Bible/tamil/${testament}/${book.file}.js`;
-        const tamilScript = document.createElement('script');
-        tamilScript.id = 'bible-data-script-tamil';
-        tamilScript.src = tamilScriptPath;
-        
-        // Remove old scripts
-        const oldTamilScript = document.getElementById('bible-data-script-tamil');
-        if (oldTamilScript) oldTamilScript.remove();
-        const oldEnglishScript = document.getElementById('bible-data-script');
-        if (oldEnglishScript) oldEnglishScript.remove();
-        
-        tamilScript.onload = () => {
-            const dataVarName = `${book.file}_data`;
-            currentTamilData = window[dataVarName];
+    try {
+        if (currentLanguage === 'both') {
+            // Load both Tamil and English from Supabase
+            const [tamilData, englishData] = await Promise.all([
+                bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
+                bibleDataManager.getChapterData(book.file, chapter, 'english')
+            ]);
             
-            // Now load English
-            const englishScriptPath = `Bible/easy-english/${testament}/${book.file}.js`;
-            const englishScript = document.createElement('script');
-            englishScript.id = 'bible-data-script';
-            englishScript.src = englishScriptPath;
-            
-            englishScript.onload = () => {
-                currentData = window[dataVarName];
-                if (currentData && currentTamilData) {
-                    updateUI();
-                    hideLoader();
-                }
-            };
-            
-            englishScript.onerror = () => {
-                console.error(`Failed to load ${englishScriptPath}`);
-                hideLoader();
-            };
-            
-            document.body.appendChild(englishScript);
-        };
-        
-        tamilScript.onerror = () => {
-            console.error(`Failed to load ${tamilScriptPath}`);
-            hideLoader();
-        };
-        
-        document.body.appendChild(tamilScript);
-        
-    } else {
-        // Single language mode
-        let languageFolder = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
-        const scriptPath = `Bible/${languageFolder}/${testament}/${book.file}.js`;
-        
-        // Remove previous scripts
-        const oldScript = document.getElementById('bible-data-script');
-        if (oldScript) oldScript.remove();
-        const oldTamilScript = document.getElementById('bible-data-script-tamil');
-        if (oldTamilScript) oldTamilScript.remove();
-        
-        // Load new script
-        const script = document.createElement('script');
-        script.id = 'bible-data-script';
-        script.src = scriptPath;
-        script.onload = () => {
-            const dataVarName = `${book.file}_data`;
-            currentData = window[dataVarName];
-            currentTamilData = null;
-            
-            if (currentData) {
+            if (tamilData && englishData) {
+                // Wrap in chapter object to match existing format
+                currentTamilData = { [`chapter_${chapter}`]: tamilData };
+                currentData = { [`chapter_${chapter}`]: englishData };
+                
                 updateUI();
-                hideLoader();
+                
+                // Preload adjacent chapters in background
+                bibleDataManager.preloadAdjacentChapters(book.file, chapter, 'tamil', book.chapters);
+                bibleDataManager.preloadAdjacentChapters(book.file, chapter, 'english', book.chapters);
             } else {
-                console.error('Failed to load Bible data');
-                hideLoader();
+                console.error('Failed to load Bible data from Supabase');
             }
-        };
-        script.onerror = () => {
-            console.error(`Failed to load ${scriptPath}`);
-            hideLoader();
-        };
-        
-        document.body.appendChild(script);
+        } else {
+            // Single language mode
+            const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+            const chapterData = await bibleDataManager.getChapterData(book.file, chapter, language);
+            
+            if (chapterData) {
+                // Wrap in chapter object to match existing format
+                currentData = { [`chapter_${chapter}`]: chapterData };
+                currentTamilData = null;
+                
+                updateUI();
+                
+                // Preload adjacent chapters in background
+                bibleDataManager.preloadAdjacentChapters(book.file, chapter, language, book.chapters);
+            } else {
+                console.error('Failed to load Bible data from Supabase');
+            }
+        }
+    } catch (error) {
+        console.error('Error loading Bible data:', error);
+    } finally {
+        hideLoader();
     }
 }
 
 // Update UI with loaded data
-function updateUI() {
+async function updateUI() {
+    const book = bibleBooks[currentBook];
+    
+    // Check if we need to load new chapter data
+    const needsDataLoad = !currentData || !currentData[`chapter_${currentChapter}`];
+    
+    if (needsDataLoad) {
+        showLoader();
+        try {
+            if (currentLanguage === 'both') {
+                const [tamilData, englishData] = await Promise.all([
+                    bibleDataManager.getChapterData(book.file, currentChapter, 'tamil'),
+                    bibleDataManager.getChapterData(book.file, currentChapter, 'english')
+                ]);
+                
+                if (tamilData && englishData) {
+                    currentTamilData = { [`chapter_${currentChapter}`]: tamilData };
+                    currentData = { [`chapter_${currentChapter}`]: englishData };
+                    
+                    // Preload adjacent chapters
+                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, 'tamil', book.chapters);
+                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, 'english', book.chapters);
+                }
+            } else {
+                const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+                const chapterData = await bibleDataManager.getChapterData(book.file, currentChapter, language);
+                
+                if (chapterData) {
+                    currentData = { [`chapter_${currentChapter}`]: chapterData };
+                    currentTamilData = null;
+                    
+                    // Preload adjacent chapters
+                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, language, book.chapters);
+                }
+            }
+        } catch (error) {
+            console.error('Error loading chapter data:', error);
+        } finally {
+            hideLoader();
+        }
+    }
+    
     updateBookSelection();
     updateChapters();
     updateVerses();

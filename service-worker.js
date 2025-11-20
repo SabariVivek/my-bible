@@ -1,38 +1,118 @@
-// Minimal service worker for PWA installation
-// No offline caching - app requires internet connection
+// Service worker for PWA with Supabase API caching
+const CACHE_NAME = 'my-bible-v2';
+const API_CACHE_NAME = 'my-bible-api-v2';
+const STATIC_CACHE_NAME = 'my-bible-static-v2';
 
-const CACHE_NAME = 'my-bible-v1';
+// Static assets to cache
+const STATIC_ASSETS = [
+  '/my-bible/',
+  '/my-bible/index.html',
+  '/my-bible/styles.css',
+  '/my-bible/script.js',
+  '/my-bible/config.js',
+  '/my-bible/bible-data-manager.js',
+  '/my-bible/manifest.json',
+  '/my-bible/resources/icons/bible.png'
+];
 
-// Install event - minimal setup
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installed');
-  self.skipWaiting();
+  console.log('Service Worker: Installing...');
+  event.waitUntil(
+    caches.open(STATIC_CACHE_NAME)
+      .then(cache => {
+        console.log('Service Worker: Caching static assets');
+        return cache.addAll(STATIC_ASSETS).catch(err => {
+          console.log('Service Worker: Some static assets failed to cache', err);
+        });
+      })
+      .then(() => self.skipWaiting())
+  );
 });
 
-// Activate event
+// Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activated');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
+          if (cache !== CACHE_NAME && cache !== API_CACHE_NAME && cache !== STATIC_CACHE_NAME) {
+            console.log('Service Worker: Deleting old cache:', cache);
             return caches.delete(cache);
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
-  return self.clients.claim();
 });
 
-// Fetch event - always fetch from network (online-only)
+// Fetch event - network first for Supabase API, cache first for static assets
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    fetch(event.request).catch(() => {
-      // If offline, return an offline page
-      if (event.request.mode === 'navigate') {
-        return new Response(`
+  const url = new URL(event.request.url);
+  
+  // Handle Supabase API requests (cache after fetch)
+  if (url.origin.includes('supabase.co')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          // Clone the response
+          const responseClone = response.clone();
+          
+          // Cache the successful response
+          if (response.status === 200) {
+            caches.open(API_CACHE_NAME).then(cache => {
+              cache.put(event.request, responseClone);
+            });
+          }
+          
+          return response;
+        })
+        .catch(() => {
+          // If network fails, try to serve from cache
+          return caches.match(event.request).then(cachedResponse => {
+            if (cachedResponse) {
+              console.log('Service Worker: Serving API from cache:', event.request.url);
+              return cachedResponse;
+            }
+            // Return offline message if no cache available
+            return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
+              headers: { 'Content-Type': 'application/json' }
+            });
+          });
+        })
+    );
+    return;
+  }
+  
+  // Handle static assets (cache first)
+  if (event.request.destination === 'document' || 
+      event.request.destination === 'script' || 
+      event.request.destination === 'style' ||
+      event.request.destination === 'image') {
+    event.respondWith(
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        
+        return fetch(event.request).then(response => {
+          // Don't cache if not a success response
+          if (!response || response.status !== 200) {
+            return response;
+          }
+          
+          const responseClone = response.clone();
+          caches.open(STATIC_CACHE_NAME).then(cache => {
+            cache.put(event.request, responseClone);
+          });
+          
+          return response;
+        });
+      }).catch(() => {
+        // If both cache and network fail, show offline page
+        if (event.request.mode === 'navigate') {
+          return new Response(`
           <!DOCTYPE html>
           <html>
           <head>

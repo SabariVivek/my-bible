@@ -1,6 +1,14 @@
 # Ignore local configuration files with tokens
 .env
 .env.local
+config.local.js
+
+# Ignore migration script with sensitive keys (create local copy)
+migrate-to-supabase.local.js
+
+# Ignore node modules
+node_modules/
+package-lock.json
 
 # Ignore OS files
 .DS_Store
