@@ -1512,7 +1512,7 @@ body.dark-theme .jesus-name {
 .bottom-nav {
     position: fixed;
     bottom: 0;
-    left: 310px;
+    left: 350px; /* Books sidebar (190px) + Chapters (80px) + Verses (80px) */
     right: 0;
     height: 3.75rem;
     background-color: #ffffff;
@@ -1526,7 +1526,38 @@ body.dark-theme .jesus-name {
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.books-sidebar.hidden ~ .content-area .bottom-nav,
+/* Adjust bottom nav when sidebar is hidden */
+.books-sidebar.hidden ~ .content-area .bottom-nav {
+    left: 160px; /* Chapters (80px) + Verses (80px) */
+}
+
+/* Adjust bottom nav when chapters column is hidden */
+.chapters-column.hidden ~ * .bottom-nav {
+    left: 270px; /* Books sidebar (190px) + Verses (80px) */
+}
+
+/* Adjust bottom nav when verses column is hidden */
+.verses-column.hidden ~ * .bottom-nav {
+    left: 270px; /* Books sidebar (190px) + Chapters (80px) */
+}
+
+/* Adjust bottom nav when both sidebar and chapters are hidden */
+.books-sidebar.hidden ~ .content-area .chapters-column.hidden ~ * .bottom-nav {
+    left: 80px; /* Only verses column (80px) */
+}
+
+/* Adjust bottom nav when both sidebar and verses are hidden */
+.books-sidebar.hidden ~ .content-area .verses-column.hidden ~ * .bottom-nav {
+    left: 80px; /* Only chapters column (80px) */
+}
+
+/* Adjust bottom nav when both columns are hidden */
+.chapters-column.hidden ~ * .verses-column.hidden ~ * .bottom-nav {
+    left: 190px; /* Only books sidebar (190px) */
+}
+
+/* Full expansion - all sidebars hidden or explicit expansion */
+.books-sidebar.hidden ~ .content-area .chapters-column.hidden ~ * .verses-column.hidden ~ * .bottom-nav,
 .bottom-nav.expanded {
     left: 0;
 }
@@ -3836,11 +3867,10 @@ body.dark-theme .verse-line.has-note.note-slate {
 /* Adjust main content when drawer is open */
 body.summary-drawer-open .content-area {
     margin-right: 450px;
-    overflow-y: hidden;
 }
 
 body.summary-drawer-open .bottom-nav {
-    width: calc(100% - 310px - 450px);
+    right: 450px; /* Make space for the summary drawer */
 }
 
 /* Adjust summary drawer for tablets with fixed header */
@@ -3864,12 +3894,11 @@ body.summary-drawer-open .bottom-nav {
         margin-right: 450px;
         width: calc(100vw - 450px);
         flex: 1;
-        overflow-y: hidden;
     }
     
     body.summary-drawer-open .bottom-nav {
         left: 0;
-        width: calc(100% - 450px);
+        right: 450px; /* Make space for the summary drawer */
     }
     
     body.summary-drawer-open .summary-drawer {
@@ -3893,7 +3922,6 @@ body.summary-drawer-open .bottom-nav {
         margin-right: 0;
         width: 100vw;
         flex: 1;
-        overflow-y: hidden;
     }
     
     body.summary-drawer-open .bottom-nav {

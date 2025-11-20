@@ -1751,191 +1751,153 @@ function initializeSearch() {
     async function performSearch(query) {
         console.log('performSearch called with:', query);
         
-        // TODO: Refactor search to use Supabase instead of local Bible files
-        searchResults.innerHTML = `
-            <div class="search-empty-state">
-                <p style="color: var(--accent-color);">Search feature is being updated to use the new database.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Please use the navigation to browse verses for now.</p>
-            </div>
-        `;
-        searchResultsInfo.style.display = 'none';
-        return;
+        if (!query.trim()) {
+            searchResults.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Search for verses in Tamil or English</p>
+                </div>
+            `;
+            searchResultsInfo.style.display = 'none';
+            return;
+        }
         
         const isTamil = isTamilText(query);
         console.log('Is Tamil:', isTamil);
         const results = [];
-        const searchLower = query.toLowerCase();
-        const batchSize = 5; // Load 5 books at a time
         
         // Get filter values
         const selectedBookIndex = filterBook.value;
         const selectedChapter = filterChapter.value.trim();
         
-        // Determine which books to search
-        let booksToSearch = bibleBooks;
-        if (selectedBookIndex !== '') {
-            booksToSearch = [bibleBooks[parseInt(selectedBookIndex)]];
-        }
-        
-        // Process books in batches for better performance
-        for (let i = 0; i < booksToSearch.length; i += batchSize) {
-            const batch = booksToSearch.slice(i, i + batchSize);
+        try {
+            // Build Supabase query
+            let supabaseQuery = bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('book_file, chapter, verse, tamil_text, english_text')
+                .order('book_file')
+                .order('chapter')
+                .order('verse');
             
-            // Load batch of books in parallel
-            await Promise.all(batch.map(async (book, batchIndex) => {
-                const bookIndex = booksToSearch.indexOf(book);
-                const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
-                const language = isTamil ? 'tamil' : 'easy-english';
-                
-                try {
-                    // Load book data using script tag
-                    const scriptPath = `Bible/${language}/${testament}/${book.file}.js`;
+            // Apply text search based on language
+            if (isTamil) {
+                supabaseQuery = supabaseQuery.ilike('tamil_text', `%${query}%`);
+            } else {
+                supabaseQuery = supabaseQuery.ilike('english_text', `%${query}%`);
+            }
+            
+            // Apply book filter if specified
+            if (selectedBookIndex !== '') {
+                const selectedBook = bibleBooks[parseInt(selectedBookIndex)];
+                supabaseQuery = supabaseQuery.eq('book_file', selectedBook.file);
+            }
+            
+            // Apply chapter filter if specified
+            if (selectedChapter !== '') {
+                supabaseQuery = supabaseQuery.eq('chapter', parseInt(selectedChapter));
+            }
+            
+            // Limit results to prevent overwhelming
+            supabaseQuery = supabaseQuery.limit(200);
+            
+            const { data, error } = await supabaseQuery;
+            
+            if (error) {
+                throw error;
+            }
+            
+            // Process results
+            if (data && data.length > 0) {
+                data.forEach(verse => {
+                    // Find the book info
+                    const book = bibleBooks.find(b => b.file === verse.book_file);
+                    if (!book) return;
                     
-                    await new Promise((resolve, reject) => {
-                        const script = document.createElement('script');
-                        script.src = scriptPath;
-                        script.id = `search-script-${bookIndex}`;
-                        
-                        script.onload = () => resolve();
-                        script.onerror = () => reject(new Error(`Failed to load ${scriptPath}`));
-                        
-                        document.body.appendChild(script);
+                    const verseText = isTamil ? verse.tamil_text : verse.english_text;
+                    const bookName = isTamil ? book.tamilName : book.name;
+                    const bookIndex = bibleBooks.indexOf(book);
+                    
+                    // Create highlighted text
+                    let highlightedText = verseText;
+                    if (isTamil) {
+                        const index = verseText.indexOf(query);
+                        if (index !== -1) {
+                            highlightedText = verseText.substring(0, index) + 
+                                           `<span class="search-highlight">${query}</span>` + 
+                                           verseText.substring(index + query.length);
+                        }
+                    } else {
+                        const regex = new RegExp(`\\b(${escapeRegExp(query)})`, 'gi');
+                        highlightedText = verseText.replace(regex, '<span class="search-highlight">$1</span>');
+                    }
+                    
+                    results.push({
+                        bookIndex,
+                        bookName,
+                        chapter: verse.chapter,
+                        verse: verse.verse,
+                        text: highlightedText,
+                        originalText: verseText
                     });
-                    
-                    // Get the data from window
-                    const dataVarName = `${book.file}_data`;
-                    const bookData = window[dataVarName];
-                    
-                    if (!bookData) {
-                        console.error(`No data found for ${book.name}`);
-                        return;
-                    }
-                    
-                    // Search through chapters
-                    for (let chapterNum = 1; chapterNum <= book.chapters; chapterNum++) {
-                        // Apply chapter filter if specified
-                        if (selectedChapter !== '' && chapterNum !== parseInt(selectedChapter)) {
-                            continue;
-                        }
-                        
-                        const chapterKey = `chapter_${chapterNum}`;
-                        const chapterData = bookData[chapterKey];
-                        
-                        if (!chapterData) continue;
-                        
-                        // Search through verses
-                        for (const verseKey in chapterData) {
-                            const verseText = chapterData[verseKey];
-                            const verseNum = verseKey.replace('verse_', '');
-                            
-                            // Check if verse contains search query
-                            let isMatch = false;
-                            let matchPosition = -1;
-                            
-                            if (isTamil) {
-                                matchPosition = verseText.indexOf(query);
-                                isMatch = matchPosition !== -1;
-                            } else {
-                                const regex = new RegExp(`\\b${escapeRegExp(query)}`, 'gi');
-                                const match = verseText.match(regex);
-                                if (match) {
-                                    isMatch = true;
-                                    matchPosition = verseText.toLowerCase().search(regex);
-                                }
-                            }
-                            
-                            if (isMatch) {
-                                results.push({
-                                    bookIndex,
-                                    bookName: isTamil ? book.tamilName : book.name,
-                                    chapter: chapterNum,
-                                    verse: verseNum,
-                                    text: verseText,
-                                    query: query,
-                                    matchPosition: matchPosition
-                                });
-                            }
-                        }
-                    }
-                    
-                    // Remove the script after processing
-                    const scriptToRemove = document.getElementById(`search-script-${bookIndex}`);
-                    if (scriptToRemove) {
-                        scriptToRemove.remove();
-                    }
-                    
-                } catch (error) {
-                    console.error(`Error loading ${book.name}:`, error);
-                }
-            }));
+                });
+            }
             
-            // Stop if we have 100 results
-            if (results.length >= 100) {
-                console.log('Found 100 results, stopping search');
-                cleanupSearchScripts();
-                displayResults(results.slice(0, 100));
-                return;
-            }
+            // Display results
+            displaySearchResults(results, query);
+            
+        } catch (error) {
+            console.error('Search error:', error);
+            searchResults.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>Error searching verses. Please try again.</p>
+                </div>
+            `;
+            searchResultsInfo.style.display = 'none';
         }
-        
-        console.log('Search complete. Total results:', results.length);
-        
-        // Sort results: prioritize matches at the beginning
-        results.sort((a, b) => {
-            // First, sort by match position (earlier matches first)
-            if (a.matchPosition !== b.matchPosition) {
-                return a.matchPosition - b.matchPosition;
-            }
-            // If same position, maintain book order
-            if (a.bookIndex !== b.bookIndex) {
-                return a.bookIndex - b.bookIndex;
-            }
-            // If same book, sort by chapter
-            if (a.chapter !== b.chapter) {
-                return a.chapter - b.chapter;
-            }
-            // If same chapter, sort by verse
-            return a.verse - b.verse;
-        });
-        
-        cleanupSearchScripts();
-        displayResults(results);
     }
-    
-    // Clean up all search scripts
-    function cleanupSearchScripts() {
-        const searchScripts = document.querySelectorAll('[id^="search-script-"]');
-        searchScripts.forEach(script => script.remove());
-    }
-    
+
     // Display search results
-    function displayResults(results) {
+    function displaySearchResults(results, query) {
         if (results.length === 0) {
             searchResultsInfo.style.display = 'none';
-            showNoResults();
+            searchResults.innerHTML = `
+                <div class="search-empty-state">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <p>No verses found for "${query}"</p>
+                </div>
+            `;
             return;
         }
-        
-        // Show results count - display "100+" if 100 or more, else exact count
+
+        // Show results count
         searchResultsInfo.style.display = 'block';
-        resultsCount.textContent = results.length >= 100 ? '100+' : results.length;
-        
+        resultsCount.textContent = results.length >= 200 ? '200+' : results.length;
+
         let html = '';
-        
         results.forEach(result => {
-            // Highlight matching text
-            const highlightedText = highlightMatch(result.text, result.query);
-            
             html += `
                 <div class="search-result-item" data-book="${result.bookIndex}" data-chapter="${result.chapter}" data-verse="${result.verse}">
                     <div class="search-result-reference">${result.bookName} ${result.chapter}:${result.verse}</div>
-                    <div class="search-result-text">${highlightedText}</div>
+                    <div class="search-result-text">${result.text}</div>
                 </div>
             `;
         });
-        
+
         searchResults.innerHTML = html;
-        
+
         // Add click listeners to results
         document.querySelectorAll('.search-result-item').forEach(item => {
             item.addEventListener('click', () => {
@@ -1943,76 +1905,35 @@ function initializeSearch() {
                 const chapter = parseInt(item.getAttribute('data-chapter'));
                 const verse = parseInt(item.getAttribute('data-verse'));
                 
-                const booksSidebar = document.querySelector('.books-sidebar');
-                const chaptersColumn = document.querySelector('.chapters-column');
-                const versesColumn = document.querySelector('.verses-column');
-                const bottomNav = document.querySelector('.bottom-nav');
-                
-                // Remove active class from search button
-                searchBtn.classList.remove('active');
-                
-                // Hide search bar
-                searchBar.style.display = 'none';
-                
-                // Hide search, show everything (preserve search query and results)
-                searchResults.style.display = 'none';
-                searchResults.classList.remove('active');
-                searchResultsInfo.style.display = 'none';
-                scriptureText.style.display = 'block';
-                booksSidebar.style.display = 'flex';
-                chaptersColumn.style.display = 'flex';
-                versesColumn.style.display = 'flex';
-                if (bottomNav) bottomNav.style.display = 'flex';
-                isSearchActive = false;
-                
-                // Force refresh book names display after sidebar is visible
-                setTimeout(() => {
-                    updateBookNames();
-                }, 0);
-                
-                // Navigate to verse
+                // Close search and navigate to verse
+                closeSearch();
                 loadBook(bookIndex, chapter).then(() => {
                     // Scroll to verse after loading
                     setTimeout(() => {
-                        // Scroll to verse in the verse column
                         const versesColumn = document.querySelector('.verses-column');
                         const verseItem = versesColumn ? versesColumn.querySelector(`[data-verse="${verse}"]`) : null;
                         if (verseItem) {
                             verseItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            // Add active class
                             versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
                             verseItem.classList.add('active');
                         }
-                        
-                        // Scroll to verse in the content area and highlight it
-                        // Remove highlight from all verses
-                        document.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
-                        
+
                         const verseElement = document.querySelector(`.verse-line[data-verse="${verse}"]`);
                         if (verseElement) {
                             verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            // Add highlight class
+                            document.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
                             verseElement.classList.add('highlighted');
                         }
-                    }, 500);
+                    }, 300);
                 });
             });
         });
     }
     
-    // Highlight matching text
-    function highlightMatch(text, query) {
-        const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
-        return text.replace(regex, '<mark class="search-highlight">$1</mark>');
-    }
-    
-    // Escape special regex characters
+    // Helper function for escaping regex
     function escapeRegExp(string) {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
-    
-    // Initialize with empty state
-    showEmptyState();
 }
 
 // Site title click to show secret icon after 5 clicks and activate admin mode
