@@ -2445,7 +2445,16 @@ function updateAvailableHomeOptions() {
         const timelineOption = document.querySelector('.home-option[data-action="timeline"]');
         const charactersOption = document.querySelector('.home-option[data-action="characters"]');
     
-    // Check availability for each type
+        // If admin mode, show all options
+        if (isAdmin()) {
+            if (summaryOption) summaryOption.style.display = 'flex';
+            if (timelineOption) timelineOption.style.display = 'flex';
+            if (charactersOption) charactersOption.style.display = 'flex';
+            mainResolve();
+            return;
+        }
+    
+    // Check availability for each type (non-admin mode)
     const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
     const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
     
