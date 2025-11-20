@@ -704,16 +704,7 @@ function showLoader() {
 function hideLoader() {
     const loader = document.getElementById('loader');
     if (loader) {
-        const elapsedTime = Date.now() - loaderStartTime;
-        const minDisplayTime = 500; // minimum 500ms display
-        
-        if (elapsedTime < minDisplayTime) {
-            setTimeout(() => {
-                loader.classList.remove('active');
-            }, minDisplayTime - elapsedTime);
-        } else {
-            loader.classList.remove('active');
-        }
+        loader.classList.remove('active');
     }
 }
 
