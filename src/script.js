@@ -5465,7 +5465,7 @@ function toggleTimelineEditMode() {
         // Wait for all saves to complete
         if (savePromises.length > 0) {
             console.log(`Attempting to save ${savePromises.length} changes...`);
-            showLoadingIndicator(); // Show loading during save
+            showLoader(); // Show loading during save
             Promise.all(savePromises).then(() => {
                 console.log('All timeline changes saved successfully');
                 const deletedCount = deletedTimelineItems.length;
@@ -5481,11 +5481,11 @@ function toggleTimelineEditMode() {
                 
                 // Refresh the timeline to show updated data
                 showChapterTimeline();
-                hideLoadingIndicator(); // Hide loading after save
+                hideLoader(); // Hide loading after save
             }).catch(error => {
                 console.error('Error saving some timeline changes:', error);
                 showToast('Save failed', 'error');
-                hideLoadingIndicator(); // Hide loading on error
+                hideLoader(); // Hide loading on error
             });
         } else {
             console.log('No changes to save');
