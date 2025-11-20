@@ -2426,7 +2426,6 @@ function updateAvailableHomeOptions() {
         // Get file paths
         const summaryPath = getSummaryPath(bookName);
         const timelinePath = getTimelinePath(bookName);
-        const charactersPath = getCharactersPath(bookName);
         
         // Get option elements
         const summaryOption = document.querySelector('.home-option[data-action="summary"]');
@@ -2436,7 +2435,6 @@ function updateAvailableHomeOptions() {
     // Check availability for each type
     const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
     const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
-    const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
     
     // Load scripts and check data availability
     const checkPromises = [];
@@ -2489,29 +2487,25 @@ function updateAvailableHomeOptions() {
         if (timelineOption) timelineOption.style.display = 'none';
     }
     
-    // Check characters
-    if (charactersPath) {
-        const promise = new Promise((resolve) => {
-            if (window[charactersVarName] && window[charactersVarName][chapterNum]) {
-                resolve(true);
-            } else if (!document.querySelector(`script[src="${charactersPath}"]`)) {
-                const script = document.createElement('script');
-                script.src = charactersPath;
-                script.onload = () => {
-                    resolve(window[charactersVarName] && window[charactersVarName][chapterNum]);
-                };
-                script.onerror = () => resolve(false);
-                document.body.appendChild(script);
-            } else {
-                resolve(window[charactersVarName] && window[charactersVarName][chapterNum]);
-            }
-        });
-        checkPromises.push(promise.then(hasCharacters => {
-            if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
-        }));
-    } else {
-        if (charactersOption) charactersOption.style.display = 'none';
-    }
+    // Check characters from Supabase
+    const charactersPromise = (async () => {
+        try {
+            const { data, error, count } = await bibleDataManager.supabaseClient
+                .from('bible_characters')
+                .select('id', { count: 'exact', head: true })
+                .eq('book_file', bibleBooks[currentBook].file)
+                .eq('chapter', chapterNum);
+            
+            return !error && count > 0;
+        } catch (error) {
+            console.error('Error checking characters availability:', error);
+            return false;
+        }
+    })();
+    
+    checkPromises.push(charactersPromise.then(hasCharacters => {
+        if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
+    }));
     
     // Wait for all checks to complete
     Promise.all(checkPromises).then(() => {
@@ -2953,7 +2947,7 @@ function displayTimeline(bookName, chapterNum) {
 }
 
 // Show chapter characters
-function showChapterCharacters() {
+async function showChapterCharacters() {
     // Close mobile drawer if open
     const drawerOverlay = document.querySelector('.drawer-overlay');
     const booksSidebar = document.querySelector('.books-sidebar');
@@ -2973,109 +2967,69 @@ function showChapterCharacters() {
         if (closeIcon) closeIcon.style.display = 'none';
     }
     
-    const bookName = bibleBooks[currentBook].name;
+    const book = bibleBooks[currentBook];
     const chapterNum = currentChapter;
     
-    // Map book names to characters file paths
-    const charactersPath = getCharactersPath(bookName);
-    
-    if (!charactersPath) {
-        alert('Characters not available for this book yet.');
-        return;
-    }
-    
-    // Load the characters dynamically
-    loadCharactersScript(charactersPath, bookName, chapterNum);
+    // Load characters from Supabase
+    await loadCharactersFromSupabase(book.file, chapterNum);
 }
 
-// Get characters file path based on book name
-function getCharactersPath(bookName) {
-    // New Testament books
-    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
-        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
-        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
-        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
-        'II John', 'III John', 'Jude', 'Revelation'];
-    
-    // Old Testament books
-    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
-        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
-        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
-        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
-        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
-        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
-    
-    const fileName = bookName.toLowerCase().replace(/ /g, '_');
-    
-    if (newTestamentBooks.includes(bookName)) {
-        return `resources/characters/new-testament/${fileName}.js`;
-    } else if (oldTestamentBooks.includes(bookName)) {
-        return `resources/characters/old-testament/${fileName}.js`;
-    }
-    
-    return null;
-}
-
-// Load characters script dynamically
-function loadCharactersScript(path, bookName, chapterNum) {
-    // Check if script is already loaded
-    const existingScript = document.querySelector(`script[src="${path}"]`);
-    
-    if (existingScript) {
-        // Script already loaded, display characters
-        displayCharacters(bookName, chapterNum);
-    } else {
-        // Load the script
-        const script = document.createElement('script');
-        script.src = path;
-        script.onload = () => {
-            displayCharacters(bookName, chapterNum);
-        };
-        script.onerror = () => {
-            alert(`Failed to load characters for ${bookName}.`);
-        };
-        document.body.appendChild(script);
+// Load characters from Supabase
+async function loadCharactersFromSupabase(bookFile, chapter) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_characters')
+            .select('name, description')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .order('id', { ascending: true });
+        
+        if (error) {
+            console.error('Error loading characters:', error);
+            alert('Failed to load characters. Please try again.');
+            return;
+        }
+        
+        if (!data || data.length === 0) {
+            alert('Characters not available for this chapter yet.');
+            return;
+        }
+        
+        displayCharacters(data);
+        
+    } catch (error) {
+        console.error('Error loading characters:', error);
+        alert('Failed to load characters. Please try again.');
     }
 }
 
 // Display characters in the drawer
-function displayCharacters(bookName, chapterNum) {
-    const fileName = bookName.toLowerCase().replace(/ /g, '_');
-    const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
+function displayCharacters(characters) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
     
-    // Try to access the characters object
-    const charactersData = window[charactersVarName];
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Characters';
     
-    if (charactersData && charactersData[chapterNum]) {
-        const summaryDrawer = document.getElementById('summary-drawer');
-        const summaryDrawerContent = document.getElementById('summary-drawer-content');
-        const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
-        const characters = charactersData[chapterNum];
-        
-        // Update drawer title
-        summaryDrawerTitle.textContent = 'Chapter Characters';
-        
-        // Format the characters with proper styling
-        const formattedCharacters = characters
-            .map((character, index) => `
-                <div class="character-item">
-                    <div class="character-number">${index + 1}. ${character.name}</div>
-                    <div class="character-description">${character.description}</div>
-                </div>
-            `)
-            .join('');
-        
-        summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
-        
-        // Track navigation
-        navigateToPage('characters');
-        
-        // Show the drawer
-        summaryDrawer.classList.add('active');
-        document.body.classList.add('summary-drawer-open');
-    } else {
-        alert(`Characters not available for ${bookName} ${chapterNum} yet.`);
-    }
+    // Format the characters with proper styling
+    const formattedCharacters = characters
+        .map((character, index) => `
+            <div class="character-item">
+                <div class="character-number">${index + 1}. ${character.name}</div>
+                <div class="character-description">${character.description}</div>
+            </div>
+        `)
+        .join('');
+    
+    summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
+    
+    // Track navigation
+    navigateToPage('characters');
+    
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
 }
 
 // GitHub Backend for Notes
