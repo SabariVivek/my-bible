@@ -4126,12 +4126,20 @@ body.dark-theme .timeline-event {
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 .character-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+}
+
+.character-content {
+    flex: 1;
 }
 
 .character-number {
@@ -4147,7 +4155,55 @@ body.dark-theme .timeline-event {
     color: #6b6b6b;
 }
 
-/* Dark theme for characters */
+.character-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.edit-character-btn,
+.delete-character-btn {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.edit-character-btn {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.edit-character-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-character-btn {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.delete-character-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.add-character-container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Dark theme for character actions */
 body.dark-theme .character-item {
     border-bottom-color: #3c4043;
 }
@@ -4158,6 +4214,36 @@ body.dark-theme .character-number {
 
 body.dark-theme .character-description {
     color: #bdc1c6;
+}
+
+body.dark-theme .edit-character-btn,
+body.dark-theme .delete-character-btn {
+    border-color: #5f6368;
+    background-color: transparent;
+}
+
+body.dark-theme .edit-character-btn {
+    color: #8ab4f8;
+    border-color: #8ab4f8;
+}
+
+body.dark-theme .edit-character-btn:hover {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+body.dark-theme .delete-character-btn {
+    color: #f28b82;
+    border-color: #f28b82;
+}
+
+body.dark-theme .delete-character-btn:hover {
+    background-color: #f28b82;
+    color: #202124;
+}
+
+body.dark-theme .add-character-container {
+    border-top-color: #3c4043;
 }
 
 /* Mobile styles for summary drawer */
@@ -4413,9 +4499,9 @@ body.dark-theme .desktop-admin-option:hover svg {
     width: 100%;
     padding: 12px;
     margin-top: 16px;
-    background: #1a73e8;
-    color: white;
-    border: none;
+    background: var(--button-bg, #dcdfe3);
+    color: var(--button-text, #5f6368);
+    border: 1px solid var(--border-color, #a4a7ae);
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
@@ -4424,20 +4510,23 @@ body.dark-theme .desktop-admin-option:hover svg {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .add-character-btn:hover {
-    background: #1557b0;
+    background: var(--button-hover-bg, #e8eaed);
+    border-color: var(--button-hover-border, #bdc1c6);
 }
 
 body.dark-theme .add-character-btn {
-    background: #8ab4f8;
-    color: #202124;
+    background: #3c4043;
+    color: #e8eaed;
+    border-color: #5f6368;
 }
 
 body.dark-theme .add-character-btn:hover {
-    background: #aecbfa;
+    background: #5f6368;
+    border-color: #80868b;
 }
 
 /* Character Modal */
@@ -4548,7 +4637,8 @@ body.dark-theme .add-character-btn:hover {
     box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
 }
 
-.form-actions {
+.form-actions,
+.form-buttons {
     display: flex;
     gap: 12px;
     justify-content: flex-end;
@@ -4591,6 +4681,26 @@ body.dark-theme .add-character-btn:hover {
     cursor: not-allowed;
 }
 
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover:not(:disabled) {
+    background: #c82333;
+}
+
+.delete-modal {
+    max-width: 400px;
+}
+
+.delete-message {
+    margin: 0 0 20px 0;
+    color: #5f6368;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
 /* Dark theme character modal */
 body.dark-theme .character-modal {
     background: #292a2d;
@@ -4629,7 +4739,8 @@ body.dark-theme .form-group textarea:focus {
     box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.2);
 }
 
-body.dark-theme .form-actions {
+body.dark-theme .form-actions,
+body.dark-theme .form-buttons {
     border-top-color: #3c4043;
 }
 
@@ -4656,6 +4767,19 @@ body.dark-theme .save-btn:disabled {
     color: #5f6368;
 }
 
+body.dark-theme .delete-btn {
+    background: #d93025;
+    color: white;
+}
+
+body.dark-theme .delete-btn:hover {
+    background: #ea4335;
+}
+
+body.dark-theme .delete-message {
+    color: #e8eaed;
+}
+
 @media (max-width: 480px) {
     .character-modal {
         margin: 10px;
@@ -4666,12 +4790,26 @@ body.dark-theme .save-btn:disabled {
         padding: 16px;
     }
     
-    .form-actions {
+    .form-actions,
+    .form-buttons {
         flex-direction: column;
+    }
+    
+    /* Keep delete modal buttons in same row */
+    .delete-modal .form-buttons {
+        flex-direction: row;
+        gap: 12px;
     }
     
     .cancel-btn,
     .save-btn {
         width: 100%;
+    }
+    
+    /* Delete modal buttons should not be full width */
+    .delete-modal .cancel-btn,
+    .delete-modal .delete-btn {
+        width: auto;
+        flex: 1;
     }
 }

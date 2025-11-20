@@ -2333,36 +2333,6 @@ function loadRandomMemoryVerse() {
     
     // Load verse data from Supabase using BibleDataManager
     loadVerseFromSupabase(book, verseData, verseReference, scriptureText);
-    
-    // Load the book data
-    const languageFolder = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
-    const scriptPath = `Bible/${languageFolder}/${testament}/${book.file}.js`;
-    const dataVarName = `${book.file}_data`;
-    
-    // Check if data is already loaded
-    if (window[dataVarName]) {
-        displayVerseContent(window[dataVarName], verseData, verseReference, scriptureText);
-        return;
-    }
-    
-    // Remove any existing script with the same ID
-    const existingScript = document.getElementById('home-verse-script');
-    if (existingScript) existingScript.remove();
-    
-    // Create script element to load the book
-    const script = document.createElement('script');
-    script.id = 'home-verse-script';
-    script.src = scriptPath;
-    script.onload = () => {
-        const bookData = window[dataVarName];
-        displayVerseContent(bookData, verseData, verseReference, scriptureText);
-    };
-    
-    script.onerror = () => {
-        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
-    };
-    
-    document.body.appendChild(script);
 }
 
 // Load verse from Supabase and display
@@ -3054,19 +3024,19 @@ async function loadCharactersFromSupabase(bookFile, chapter) {
     try {
         const { data, error } = await bibleDataManager.supabaseClient
             .from('bible_characters')
-            .select('name, description')
+            .select('id, name, description')
             .eq('book_file', bookFile)
             .eq('chapter', chapter)
             .order('id', { ascending: true });
         
         if (error) {
             console.error('Error loading characters:', error);
-            alert('Failed to load characters. Please try again.');
+            showToast('Failed to load characters. Please try again.', 'error');
             return;
         }
         
         if (!data || data.length === 0) {
-            alert('Characters not available for this chapter yet.');
+            showToast('Characters not available for this chapter yet.', 'info');
             return;
         }
         
@@ -3074,7 +3044,7 @@ async function loadCharactersFromSupabase(bookFile, chapter) {
         
     } catch (error) {
         console.error('Error loading characters:', error);
-        alert('Failed to load characters. Please try again.');
+        showToast('Failed to load characters. Please try again.', 'error');
     }
 }
 
@@ -3087,24 +3057,49 @@ function displayCharacters(characters) {
     // Update drawer title
     summaryDrawerTitle.textContent = 'Chapter Characters';
     
-    // Format the characters with proper styling and add character button for admins
+    // Format the characters with proper styling and admin action buttons
     const formattedCharacters = characters
-        .map((character, index) => `
-            <div class="character-item">
-                <div class="character-number">${index + 1}. ${character.name}</div>
-                <div class="character-description">${character.description}</div>
-            </div>
-        `)
+        .map((character, index) => {
+            const actionButtons = isAdmin() ? `
+                <div class="character-actions">
+                    <button class="edit-character-btn" onclick="editCharacter(${character.id}, '${character.name.replace(/'/g, "\\'")}', '${character.description.replace(/'/g, "\\'")}')"
+                        title="Edit character">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                    </button>
+                    <button class="delete-character-btn" onclick="deleteCharacter(${character.id}, '${character.name.replace(/'/g, "\\'")}')"
+                        title="Delete character">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3,6 5,6 21,6"></polyline>
+                            <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2-2h4a2,2 0 0,1,2,2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+            ` : '';
+            
+            return `
+                <div class="character-item">
+                    <div class="character-content">
+                        <div class="character-number">${index + 1}. ${character.name}</div>
+                        <div class="character-description">${character.description}</div>
+                    </div>
+                    ${actionButtons}
+                </div>
+            `;
+        })
         .join('');
     
     const addCharacterButton = isAdmin() ? `
-        <button class="add-character-btn" onclick="showAddCharacterModal()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-            Add Character
-        </button>
+        <div class="add-character-container">
+            <button class="add-character-btn" onclick="showAddCharacterModal()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add Character
+            </button>
+        </div>
     ` : '';
     
     summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>${addCharacterButton}`;
@@ -3170,6 +3165,187 @@ function closeAddCharacterModal() {
     }
 }
 
+// Edit character function
+async function editCharacter(characterId, currentName, currentDescription) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to edit characters.', 'error');
+        return;
+    }
+    
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Edit Character</h3>
+                <button class="close-character-modal" onclick="closeEditCharacterModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="edit-character-form">
+                    <div class="form-group">
+                        <label for="edit-character-name">Character Name *</label>
+                        <input type="text" id="edit-character-name" name="name" required maxlength="100" value="${currentName}" placeholder="Enter character name">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-character-description">Character Description *</label>
+                        <textarea id="edit-character-description" name="description" required maxlength="500" rows="4" placeholder="Describe the character...">${currentDescription}</textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeEditCharacterModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Update Character</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Handle form submission
+    const form = document.getElementById('edit-character-form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const name = formData.get('name').trim();
+        const description = formData.get('description').trim();
+        
+        if (!name || !description) {
+            showToast('Please fill in all required fields.', 'error');
+            return;
+        }
+        
+        try {
+            await updateCharacterInSupabase(characterId, name, description);
+            closeEditCharacterModal();
+            
+            // Reload characters
+            const book = bibleBooks[currentBook];
+            await loadCharactersFromSupabase(book.file, currentChapter);
+            
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Updated!' : 'Character updated successfully!', 'success');
+        } catch (error) {
+            console.error('Error updating character:', error);
+            showToast('Error updating character: ' + error.message, 'error');
+        }
+    });
+}
+
+// Delete character function
+async function deleteCharacter(characterId, characterName) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to delete characters.', 'error');
+        return;
+    }
+    
+    // Show custom delete confirmation popup
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal delete-modal">
+            <div class="character-modal-header">
+                <h3>Delete Character</h3>
+            </div>
+            <div class="character-modal-body">
+                <p class="delete-message">Are you sure you want to delete "${characterName}"?</p>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeDeleteModal()" class="cancel-btn">Cancel</button>
+                    <button type="button" onclick="confirmDeleteCharacter(${characterId})" class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Store modal reference globally for cleanup
+    window.currentDeleteModal = modal;
+}
+
+// Close delete modal
+function closeDeleteModal() {
+    const modal = window.currentDeleteModal;
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+        window.currentDeleteModal = null;
+    }
+}
+
+// Confirm delete character
+async function confirmDeleteCharacter(characterId) {
+    try {
+        await deleteCharacterFromSupabase(characterId);
+        
+        // Close modal
+        closeDeleteModal();
+        
+        // Reload characters
+        const book = bibleBooks[currentBook];
+        await loadCharactersFromSupabase(book.file, currentChapter);
+        
+        const isMobile = window.innerWidth <= 768;
+        showToast(isMobile ? 'Deleted!' : 'Character deleted successfully!', 'success');
+    } catch (error) {
+        console.error('Error deleting character:', error);
+        showToast('Error deleting character: ' + error.message, 'error');
+    }
+}
+
+// Close edit modal
+function closeEditCharacterModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+// Update character in Supabase
+async function updateCharacterInSupabase(characterId, name, description) {
+    const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/bible_characters?id=eq.${characterId}`, {
+        method: 'PATCH',
+        headers: {
+            'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+            'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+            name: name,
+            description: description
+        })
+    });
+    
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to update character: ${errorText}`);
+    }
+}
+
+// Delete character from Supabase
+async function deleteCharacterFromSupabase(characterId) {
+    const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/bible_characters?id=eq.${characterId}`, {
+        method: 'DELETE',
+        headers: {
+            'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+            'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+            'Content-Type': 'application/json'
+        }
+    });
+    
+    if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Failed to delete character: ${errorText}`);
+    }
+}
+
 // Handle adding new character
 async function handleAddCharacter(e) {
     e.preventDefault();
@@ -3177,12 +3353,10 @@ async function handleAddCharacter(e) {
     const name = document.getElementById('character-name').value.trim();
     const description = document.getElementById('character-description').value.trim();
     
-    if (!name || !description) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-    
-    const saveBtn = document.querySelector('.save-btn');
+        if (!name || !description) {
+            showToast('Please fill in all required fields.', 'error');
+            return;
+        }    const saveBtn = document.querySelector('.save-btn');
     saveBtn.disabled = true;
     saveBtn.textContent = 'Saving...';
     
@@ -3198,14 +3372,20 @@ async function handleAddCharacter(e) {
             // Show success message
             const isMobile = window.innerWidth <= 768;
             if (isMobile) {
-                showToast('Character added successfully!', 'success');
+                showToast('Added!', 'success');
             } else {
                 showDesktopNotification('Character added successfully!');
             }
         }
     } catch (error) {
         console.error('Error adding character:', error);
-        alert('Failed to add character. Please try again.');
+        
+        // Show specific error message for RLS issues
+        if (error.message && error.message.includes('Permission denied')) {
+            showToast(error.message, 'error');
+        } else {
+            showToast('Failed to add character. Please try again.', 'error');
+        }
     } finally {
         saveBtn.disabled = false;
         saveBtn.textContent = 'Save Character';
@@ -3213,27 +3393,63 @@ async function handleAddCharacter(e) {
 }
 
 // Save character to Supabase
+// Save character to Supabase
 async function saveCharacterToSupabase(bookFile, chapter, name, description) {
     try {
-        const { data, error } = await bibleDataManager.supabaseClient
-            .from('bible_characters')
-            .insert({
+        // Check if user is in admin mode
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to add characters.');
+        }
+
+        // Find the book to get testament information
+        const book = bibleBooks.find(b => b.file === bookFile);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        
+        // Use the testament format that matches the database constraint
+        const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+        
+        console.log(`Attempting to save character with testament: "${testament}"`);
+        
+        // Use direct fetch approach to create the character
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/bible_characters`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
                 book_file: bookFile,
                 chapter: chapter,
                 name: name,
-                description: description
-            });
+                description: description,
+                testament: testament,
+                created_at: new Date().toISOString()
+            })
+        });
         
-        if (error) {
-            console.error('Error saving character:', error);
-            return false;
+        if (response.ok) {
+            console.log('✓ Character saved successfully');
+            return true;
+        } else {
+            const errorText = await response.text();
+            console.error('Failed to save character:', response.status, errorText);
+            
+            if (response.status === 401 || response.status === 403) {
+                throw new Error('Permission denied. The RLS policy may not be working correctly.');
+            } else if (response.status === 400 && errorText.includes('testament')) {
+                throw new Error('Invalid testament value. Please check the database constraints.');
+            } else {
+                throw new Error(`Database error (${response.status}): ${errorText}`);
+            }
         }
         
-        console.log('✓ Character saved successfully');
-        return true;
     } catch (error) {
         console.error('Error saving character:', error);
-        return false;
+        throw error;
     }
 }
 
