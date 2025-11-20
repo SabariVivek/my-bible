@@ -458,14 +458,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (mobileCultOption) {
             mobileCultOption.addEventListener('click', () => {
-                window.location.href = 'secret.html';
+                window.location.href = 'config/secret.html';
             });
         }
         
         // Handle notes option click
         if (mobileNotesOption) {
             mobileNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs.html';
+                window.location.href = 'docs/docs.html';
             });
         }
     }
@@ -3087,7 +3087,7 @@ function displayCharacters(characters) {
     // Update drawer title
     summaryDrawerTitle.textContent = 'Chapter Characters';
     
-    // Format the characters with proper styling
+    // Format the characters with proper styling and add character button for admins
     const formattedCharacters = characters
         .map((character, index) => `
             <div class="character-item">
@@ -3097,7 +3097,17 @@ function displayCharacters(characters) {
         `)
         .join('');
     
-    summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
+    const addCharacterButton = isAdmin() ? `
+        <button class="add-character-btn" onclick="showAddCharacterModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add Character
+        </button>
+    ` : '';
+    
+    summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>${addCharacterButton}`;
     
     // Track navigation
     navigateToPage('characters');
@@ -3105,6 +3115,126 @@ function displayCharacters(characters) {
     // Show the drawer
     summaryDrawer.classList.add('active');
     document.body.classList.add('summary-drawer-open');
+}
+
+// Show modal to add new character
+function showAddCharacterModal() {
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Add New Character</h3>
+                <button class="close-character-modal" onclick="closeAddCharacterModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="add-character-form">
+                    <div class="form-group">
+                        <label for="character-name">Character Name *</label>
+                        <input type="text" id="character-name" name="name" required maxlength="100" placeholder="Enter character name">
+                    </div>
+                    <div class="form-group">
+                        <label for="character-description">Description *</label>
+                        <textarea id="character-description" name="description" required maxlength="500" placeholder="Enter character description..." rows="4"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" onclick="closeAddCharacterModal()">Cancel</button>
+                        <button type="submit" class="save-btn">Save Character</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+    
+    // Handle form submission
+    document.getElementById('add-character-form').addEventListener('submit', handleAddCharacter);
+    
+    // Focus on name input
+    setTimeout(() => document.getElementById('character-name').focus(), 100);
+}
+
+// Close character modal
+function closeAddCharacterModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+// Handle adding new character
+async function handleAddCharacter(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('character-name').value.trim();
+    const description = document.getElementById('character-description').value.trim();
+    
+    if (!name || !description) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    const saveBtn = document.querySelector('.save-btn');
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Saving...';
+    
+    try {
+        const book = bibleBooks[currentBook];
+        const success = await saveCharacterToSupabase(book.file, currentChapter, name, description);
+        
+        if (success) {
+            closeAddCharacterModal();
+            // Reload characters to show the new one
+            await loadCharactersFromSupabase(book.file, currentChapter);
+            
+            // Show success message
+            const isMobile = window.innerWidth <= 768;
+            if (isMobile) {
+                showToast('Character added successfully!', 'success');
+            } else {
+                showDesktopNotification('Character added successfully!');
+            }
+        }
+    } catch (error) {
+        console.error('Error adding character:', error);
+        alert('Failed to add character. Please try again.');
+    } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = 'Save Character';
+    }
+}
+
+// Save character to Supabase
+async function saveCharacterToSupabase(bookFile, chapter, name, description) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_characters')
+            .insert({
+                book_file: bookFile,
+                chapter: chapter,
+                name: name,
+                description: description
+            });
+        
+        if (error) {
+            console.error('Error saving character:', error);
+            return false;
+        }
+        
+        console.log('✓ Character saved successfully');
+        return true;
+    } catch (error) {
+        console.error('Error saving character:', error);
+        return false;
+    }
 }
 
 // GitHub Backend for Notes

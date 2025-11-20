@@ -433,6 +433,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileCultOption = document.getElementById('mobile-cult-option');
     const mobileNotesOption = document.getElementById('mobile-notes-option');
     
+    console.log('Mobile admin elements found:', {
+        mobileAdminMenuBtn: !!mobileAdminMenuBtn,
+        mobileAdminDropdown: !!mobileAdminDropdown,
+        mobileCultOption: !!mobileCultOption,
+        mobileNotesOption: !!mobileNotesOption,
+        mobileAdminMenuWrapper: !!mobileAdminMenuWrapper
+    });
+    
     if (mobileAdminMenuBtn && mobileAdminDropdown) {
         mobileAdminMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -453,14 +461,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (mobileCultOption) {
             mobileCultOption.addEventListener('click', () => {
-                window.location.href = 'secret.html';
+                console.log('Mobile cult option clicked, navigating to config/secret.html');
+                window.location.href = './config/secret.html';
             });
         }
         
         // Handle notes option click
         if (mobileNotesOption) {
             mobileNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs.html';
+                console.log('Mobile notes option clicked, navigating to docs/docs.html');
+                window.location.href = './docs/docs.html';
             });
         }
     }
@@ -489,14 +499,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (desktopCultOption) {
             desktopCultOption.addEventListener('click', () => {
-                window.location.href = 'secret.html';
+                window.location.href = './config/secret.html';
             });
         }
         
         // Handle notes option click
         if (desktopNotesOption) {
             desktopNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs.html';
+                window.location.href = './docs/docs.html';
             });
         }
     }
