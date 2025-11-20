@@ -3526,7 +3526,13 @@ function hideNoteViewer() {
 
 // Admin Mode Functions
 function isAdmin() {
-    return localStorage.getItem('isAdmin') === 'true';
+    // If isAdmin hasn't been set, default to false
+    const adminStatus = localStorage.getItem('isAdmin');
+    if (adminStatus === null) {
+        localStorage.setItem('isAdmin', 'false');
+        return false;
+    }
+    return adminStatus === 'true';
 }
 
 function updateAdminUI() {
