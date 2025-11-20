@@ -1140,8 +1140,8 @@ function displayChapter() {
         currentChapterText.textContent = `${bookName} ${currentChapter}`;
     }
     
-    // Scroll to top
-    document.querySelector('.content-area').scrollTop = 0;
+    // Note: Scroll to top is now handled by updateUI() and navigation buttons only
+    // Don't scroll here to prevent jumping when interacting with verses or adding notes
 }
 
 // Update mobile chapter header
@@ -3392,7 +3392,9 @@ function openNotesModal(verseNum = null) {
         btn.classList.toggle('active', btn.dataset.color === currentNoteColor);
     });
     
-    // Prevent body scroll
+    // Save current scroll position before preventing body scroll
+    const scrollY = window.scrollY;
+    document.body.style.top = `-${scrollY}px`;
     document.body.classList.add('modal-open');
     
     // Track navigation
@@ -3404,8 +3406,11 @@ function openNotesModal(verseNum = null) {
 function closeNotesModal() {
     const modal = document.querySelector('.notes-modal-overlay');
     
-    // Allow body scroll
+    // Restore scroll position
+    const scrollY = document.body.style.top;
     document.body.classList.remove('modal-open');
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     
     if (modal) {
         modal.style.display = 'none';
@@ -3529,7 +3534,9 @@ function showNoteViewer(verseNum, note) {
         modal.style.transform = '';
     }
     
-    // Prevent body scroll
+    // Save current scroll position before preventing body scroll
+    const scrollY = window.scrollY;
+    document.body.style.top = `-${scrollY}px`;
     document.body.classList.add('modal-open');
     
     popup.style.display = 'flex';
@@ -3545,8 +3552,11 @@ function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
     const modal = document.querySelector('.note-viewer-modal');
     
-    // Allow body scroll
+    // Restore scroll position
+    const scrollY = document.body.style.top;
     document.body.classList.remove('modal-open');
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     
     if (popup) {
         popup.style.display = 'none';
