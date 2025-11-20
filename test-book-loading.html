@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Book Loading</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <h1>Book-Level Loading Test</h1>
+    <div id="results"></div>
+    <button onclick="testGenesisLoad()">Test Genesis Load</button>
+    <button onclick="testChapterNavigation()">Test Chapter Navigation</button>
+    <button onclick="testBookSwitch()">Test Book Switch</button>
+    <button onclick="checkCacheStatus()">Check Cache Status</button>
+
+    <script src="src/bible-data-manager.js"></script>
+    <script>
+        const results = document.getElementById('results');
+        
+        function log(message) {
+            const p = document.createElement('p');
+            p.textContent = `${new Date().toLocaleTimeString()}: ${message}`;
+            results.appendChild(p);
+        }
+
+        async function testGenesisLoad() {
+            log('Testing Genesis load...');
+            const start = performance.now();
+            
+            const chapter1 = await bibleDataManager.getChapterData('genesis', 1, 'easy-english');
+            const end = performance.now();
+            
+            log(`✓ Genesis Chapter 1 loaded in ${(end - start).toFixed(2)}ms`);
+            log(`  Verses in chapter: ${Object.keys(chapter1).length}`);
+            
+            // Check if entire book is cached
+            const bookCacheKey = bibleDataManager.getBookCacheKey('genesis', 'easy-english');
+            const isCached = bibleDataManager.bookCache.has(bookCacheKey);
+            log(`  Entire book cached: ${isCached ? '✓ YES' : '✗ NO'}`);
+        }
+
+        async function testChapterNavigation() {
+            log('Testing rapid chapter navigation within Genesis...');
+            
+            for (let chapter = 1; chapter <= 5; chapter++) {
+                const start = performance.now();
+                const data = await bibleDataManager.getChapterData('genesis', chapter, 'easy-english');
+                const end = performance.now();
+                log(`  Chapter ${chapter}: ${(end - start).toFixed(2)}ms (${Object.keys(data).length} verses)`);
+            }
+        }
+
+        async function testBookSwitch() {
+            log('Testing switch from Genesis to Matthew...');
+            
+            // Load Genesis first
+            await bibleDataManager.getChapterData('genesis', 1, 'easy-english');
+            log('  Genesis loaded');
+            
+            // Switch to Matthew
+            const start = performance.now();
+            const matthew1 = await bibleDataManager.getChapterData('matthew', 1, 'easy-english');
+            const end = performance.now();
+            log(`  Matthew loaded in ${(end - start).toFixed(2)}ms`);
+            
+            // Navigate within Matthew (should be fast)
+            const start2 = performance.now();
+            const matthew2 = await bibleDataManager.getChapterData('matthew', 2, 'easy-english');
+            const end2 = performance.now();
+            log(`  Matthew Chapter 2: ${(end2 - start2).toFixed(2)}ms (should be instant)`);
+        }
+
+        function checkCacheStatus() {
+            log('Cache Status:');
+            log(`  Memory - Chapter cache: ${bibleDataManager.cache.size} entries`);
+            log(`  Memory - Book cache: ${bibleDataManager.bookCache.size} books`);
+            
+            const localStorageBooks = Object.keys(localStorage).filter(k => k.startsWith('bible_book_')).length;
+            const localStorageChapters = Object.keys(localStorage).filter(k => k.startsWith('bible_cache_')).length;
+            log(`  LocalStorage - Books: ${localStorageBooks}`);
+            log(`  LocalStorage - Chapters: ${localStorageChapters}`);
+        }
+    </script>
+</body>
+</html>
