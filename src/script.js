@@ -597,7 +597,6 @@ function initializeMobileDrawer() {
         hamburgerIcon.style.display = 'block';
         closeIcon.style.display = 'none';
         document.body.style.overflow = '';
-        document.body.classList.remove('drawer-open');
     }
     
     // Close on overlay click

@@ -1272,7 +1272,7 @@ body:not(.dark-theme) .moon-icon {
 /* Chapters Column */
 .chapters-column,
 .verses-column {
-    width: 60px;
+    width: 80px;
     min-width: 0;
     background-color: #f8f9fa;
     overflow-y: auto;
@@ -5574,24 +5574,6 @@ body.dark-theme ::-webkit-scrollbar-corner {
 
 body.dark-theme * {
     scrollbar-color: #4a5568 #2d3748;
-}
-
-/* ========================= MOBILE SCROLL LOCK ========================= */
-
-.drawer-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 768px) {
-    .drawer-open {
-        overflow: hidden !important;
-        position: fixed !important;
-        width: 100% !important;
-        height: 100% !important;
-    }
 }
 
 body.dark-theme .add-timeline-btn {
