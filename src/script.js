@@ -526,31 +526,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    // Check if user was on home page before reload
-    const isOnHomePage = localStorage.getItem('isOnHomePage');
-    
-    // On mobile, always show Bible directly. On desktop/tablet, show home page by default
-    if (isMobile) {
-        // Mobile: Load Bible directly
-        loadBook(currentBook, currentChapter);
-    } else {
-        // Desktop/Tablet: Show home page by default or based on saved state
-        if (isOnHomePage === null || isOnHomePage === 'true') {
-            // Ensure any open drawers are closed before showing homepage
-            const summaryDrawer = document.getElementById('summary-drawer');
-            if (summaryDrawer) {
-                summaryDrawer.classList.remove('active');
-            }
-            document.body.classList.remove('summary-drawer-open');
-            
-            showHomePage();
-            if (isOnHomePage === null) {
-                localStorage.setItem('isOnHomePage', 'true');
-            }
-        } else {
-            loadBook(currentBook, currentChapter);
-        }
-    }
+    // Always load Bible directly on all devices (mobile, tablet, desktop)
+    loadBook(currentBook, currentChapter);
 });
 
 // Initialize mobile drawer
@@ -2074,10 +2051,6 @@ function initializeHomeOptions() {
             homeOptionsCard.classList.remove('active');
             
             switch(action) {
-                case 'home':
-                    // Navigate to home page
-                    showHomePage();
-                    break;
                 case 'summary':
                     // Show Chapter Summary
                     showChapterSummary();

@@ -4545,9 +4545,9 @@ body.dark-theme .no-characters {
 .add-timeline-btn {
     width: 100%;
     padding: 12px;
-    background: var(--button-bg, #dcdfe3);
-    color: var(--button-text, #5f6368);
-    border: 1px solid var(--border-color, #a4a7ae);
+    background: #28a745;
+    color: white;
+    border: none;
     border-radius: 12px;
     font-size: 14px;
     font-weight: 500;
@@ -4566,8 +4566,8 @@ body.dark-theme .no-characters {
 }
 
 .add-timeline-btn:hover {
-    background: var(--button-hover-bg, #e8eaed);
-    border-color: var(--button-hover-border, #bdc1c6);
+    background: #218838;
+    transform: translateY(-1px) scale(1);
 }
 
 /* Dark theme for summary and timeline */
@@ -4581,17 +4581,24 @@ body.dark-theme .timeline-bottom-section {
     background: #292a2d;
 }
 
-body.dark-theme .add-summary-btn,
-body.dark-theme .add-timeline-btn {
+body.dark-theme .add-summary-btn {
     background: #3c4043;
     color: #e8eaed;
     border-color: #5f6368;
 }
 
-body.dark-theme .add-summary-btn:hover,
-body.dark-theme .add-timeline-btn:hover {
+body.dark-theme .add-summary-btn:hover {
     background: #5f6368;
     border-color: #80868b;
+}
+
+body.dark-theme .add-timeline-btn {
+    background: #198754;
+    color: white;
+}
+
+body.dark-theme .add-timeline-btn:hover {
+    background: #157347;
 }
 
 body.dark-theme .timeline-item {
