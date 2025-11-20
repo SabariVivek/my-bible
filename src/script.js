@@ -3506,11 +3506,13 @@ function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
     const modal = document.querySelector('.note-viewer-modal');
     
-    // Restore scroll position
-    const scrollY = document.body.style.top;
-    document.body.classList.remove('modal-open');
-    document.body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    // Only restore scroll position if modal was actually open
+    if (document.body.classList.contains('modal-open')) {
+        const scrollY = document.body.style.top;
+        document.body.classList.remove('modal-open');
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
     
     if (popup) {
         popup.style.display = 'none';
