@@ -5,10 +5,13 @@
 let pages = [];
 let currentPageId = null;
 let editMode = false;
-let theme = localStorage.getItem('bible-theme') || 'light';
+let theme = localStorage.getItem('theme') || 'light';
 
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
+    // Hide page loader after a short delay to ensure theme is applied
+    const pageLoader = document.getElementById('page-loader');
+    
     try {
         await loadPages();
         loadTheme();
@@ -47,6 +50,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderPageTree();
         initializeDragAndDrop();
         showWelcomeScreen();
+    } finally {
+        // Hide loader after everything is ready
+        setTimeout(() => {
+            if (pageLoader) {
+                pageLoader.classList.add('hidden');
+                setTimeout(() => pageLoader.style.display = 'none', 300);
+            }
+        }, 100);
     }
 });
 
@@ -311,7 +322,7 @@ async function toggleTheme(event) {
         // Fallback: toggle without animation
         document.body.classList.toggle('dark-theme');
         theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-        localStorage.setItem('bible-theme', theme);
+        localStorage.setItem('theme', theme);
         // Update theme color
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         if (metaThemeColor) {
@@ -324,7 +335,7 @@ async function toggleTheme(event) {
     const transition = document.startViewTransition(() => {
         document.body.classList.toggle('dark-theme');
         theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-        localStorage.setItem('bible-theme', theme);
+        localStorage.setItem('theme', theme);
         // Update theme color
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         if (metaThemeColor) {

@@ -290,6 +290,11 @@ body.dark-theme .book-loader {
     align-items: center;
 }
 
+/* Read Bible button - hidden by default, shown on home page via JS */
+.read-bible-nav-btn {
+    display: none !important;
+}
+
 /* Language Modal for Mobile */
 .language-modal-overlay {
     display: none;

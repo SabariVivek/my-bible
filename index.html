@@ -7,12 +7,15 @@
     <script>
         // Set theme color BEFORE meta tag is parsed
         document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#202124' : '#ffffff') + '" id="theme-color-meta">');
+        // Only load manifest on http/https, not file://
+        if (window.location.protocol !== 'file:') {
+            document.write('<link rel="manifest" href="manifest.json">');
+        }
     </script>
     <meta name="description" content="Read the Bible in Tamil and Easy English">
     <title>My Bible</title>
-    <link rel="icon" type="image/png" href="/my-bible/resources/icons/bible.png">
-    <link rel="manifest" href="/my-bible/manifest.json">
-    <link rel="apple-touch-icon" href="/my-bible/resources/icons/bible.png">
+    <link rel="icon" type="image/png" href="resources/icons/bible.png">
+    <link rel="apple-touch-icon" href="resources/icons/bible.png">
     <link rel="stylesheet" href="src/styles.css">
     <script>
         // Apply dark theme class immediately
@@ -127,6 +130,13 @@
                     </button>
                 </div>
             </div>
+            <!-- Read Bible button (desktop only, shown on home page) -->
+            <button id="read-bible-nav-btn" class="icon-btn read-bible-nav-btn desktop-only" aria-label="Read Bible" title="Read Bible">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+            </button>
             <!-- Search button -->
             <button id="search-btn" class="icon-btn search-btn" aria-label="Search">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"

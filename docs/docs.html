@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script>
         // Set theme color BEFORE meta tag is parsed
-        document.write('<meta name="theme-color" content="' + (localStorage.getItem('bible-theme') === 'dark' ? '#1a1a1a' : '#ffffff') + '" id="theme-color-meta">');
+        document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#1a1a1a' : '#ffffff') + '" id="theme-color-meta">');
     </script>
     <title>Bible Notes</title>
     <link rel="icon" type="image/png" href="../resources/icons/bible.png">
@@ -20,6 +20,22 @@
 </head>
 
 <body>
+    <script>
+        // Apply theme immediately based on localStorage before any content renders
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
+    
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-container">
+            <div class="book-loader"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+    
     <script>
         // Mark this page as admin page in history
         history.replaceState({ adminPage: true }, '', window.location.href);

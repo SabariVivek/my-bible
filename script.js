@@ -186,15 +186,10 @@ function isMemoryVerse(bookName, chapter, verse) {
 }
 
 // Initialize
-// Register service worker for PWA (only on http/https, not file://)
-if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+// Register service worker for PWA
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        // Use relative path for service worker to work both locally and on GitHub Pages
-        const swPath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-            ? 'src/service-worker.js'
-            : '/my-bible/src/service-worker.js';
-        
-        navigator.serviceWorker.register(swPath)
+        navigator.serviceWorker.register('/my-bible/service-worker.js')
             .then(registration => {
                 console.log('ServiceWorker registered:', registration);
             })
@@ -494,19 +489,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle cult option click
         if (desktopCultOption) {
             desktopCultOption.addEventListener('click', () => {
-                window.location.href = 'config/secret.html';
+                window.location.href = 'secret.html';
             });
         }
         
         // Handle notes option click
         if (desktopNotesOption) {
             desktopNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs/docs.html';
+                window.location.href = 'docs.html';
             });
         }
     }
     
-    // Check if user was on home page before reload
+    // Read Bible button click handler (desktop only, shown on home page)
+    const readBibleNavBtn = document.getElementById('read-bible-nav-btn');
+    if (readBibleNavBtn) {
+        readBibleNavBtn.addEventListener('click', () => {
+            // Load the saved book/chapter or default to Genesis 1
+            const savedBook = parseInt(localStorage.getItem('currentBook')) || 0;
+            const savedChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
+            loadBook(savedBook, savedChapter);
+        });
+    }
+    
+    // Check if user was on home page before reload, or load home page by default on first visit
     const isOnHomePage = localStorage.getItem('isOnHomePage');
     
     // On mobile, always show Bible directly. On desktop/tablet, show home page by default
@@ -709,7 +715,16 @@ function showLoader() {
 function hideLoader() {
     const loader = document.getElementById('loader');
     if (loader) {
-        loader.classList.remove('active');
+        const elapsedTime = Date.now() - loaderStartTime;
+        const minDisplayTime = 500; // minimum 500ms display
+        
+        if (elapsedTime < minDisplayTime) {
+            setTimeout(() => {
+                loader.classList.remove('active');
+            }, minDisplayTime - elapsedTime);
+        } else {
+            loader.classList.remove('active');
+        }
     }
 }
 
@@ -1145,8 +1160,8 @@ function displayChapter() {
         currentChapterText.textContent = `${bookName} ${currentChapter}`;
     }
     
-    // Note: Scroll to top is now handled by updateUI() and navigation buttons only
-    // Don't scroll here to prevent jumping when interacting with verses or adding notes
+    // Scroll to top
+    document.querySelector('.content-area').scrollTop = 0;
 }
 
 // Update mobile chapter header
@@ -1225,12 +1240,10 @@ document.addEventListener('click', (e) => {
             currentChapter--;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (currentBook > 0) {
             currentBook--;
             currentChapter = bibleBooks[currentBook].chapters;
             loadBook(currentBook, currentChapter);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
     
@@ -1241,12 +1254,10 @@ document.addEventListener('click', (e) => {
             currentChapter++;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (currentBook < bibleBooks.length - 1) {
             currentBook++;
             currentChapter = 1;
             loadBook(currentBook, currentChapter);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 });
@@ -1750,17 +1761,6 @@ function initializeSearch() {
     // Perform search
     async function performSearch(query) {
         console.log('performSearch called with:', query);
-        
-        // TODO: Refactor search to use Supabase instead of local Bible files
-        searchResults.innerHTML = `
-            <div class="search-empty-state">
-                <p style="color: var(--accent-color);">Search feature is being updated to use the new database.</p>
-                <p style="margin-top: 10px; font-size: 14px;">Please use the navigation to browse verses for now.</p>
-            </div>
-        `;
-        searchResultsInfo.style.display = 'none';
-        return;
-        
         const isTamil = isTamilText(query);
         console.log('Is Tamil:', isTamil);
         const results = [];
@@ -2073,7 +2073,7 @@ function initializeSiteTitle() {
     // Add click handler for secret icon
     if (secretIcon) {
         secretIcon.addEventListener('click', () => {
-            window.location.href = 'config/secret.html';
+            window.location.href = 'secret.html';
         });
     }
 }
@@ -2154,6 +2154,10 @@ function restoreUIFromHomePage() {
     if (langBtn) langBtn.style.display = '';
     if (searchBtn) searchBtn.style.display = '';
     
+    // Hide Read Bible button
+    const readBibleNavBtn = document.getElementById('read-bible-nav-btn');
+    if (readBibleNavBtn) readBibleNavBtn.style.setProperty('display', 'none', 'important');
+    
     // Show bottom navigation
     const bottomNav = document.querySelector('.bottom-nav');
     if (bottomNav) bottomNav.style.display = '';
@@ -2168,10 +2172,6 @@ function restoreUIFromHomePage() {
 
 // Show home page with just the title
 function showHomePage() {
-    // Show page loader
-    const loader = document.getElementById('loader');
-    if (loader) loader.classList.add('active');
-    
     // Hide all sidebars and columns
     document.querySelector('.books-sidebar').style.display = 'none';
     document.querySelector('.chapters-column').style.display = 'none';
@@ -2193,6 +2193,12 @@ function showHomePage() {
     const searchBtn = document.getElementById('search-btn');
     if (langBtn) langBtn.style.display = 'none';
     if (searchBtn) searchBtn.style.display = 'none';
+    
+    // Show Read Bible button on desktop
+    const readBibleNavBtn = document.getElementById('read-bible-nav-btn');
+    if (readBibleNavBtn && window.innerWidth > 768) {
+        readBibleNavBtn.style.setProperty('display', 'flex', 'important');
+    }
     
     // Hide bottom navigation
     const bottomNav = document.querySelector('.bottom-nav');
@@ -2273,15 +2279,11 @@ function loadRandomMemoryVerse() {
         return;
     }
     
-    // Keep scripture text hidden while loading (page loader handles the loading state)
-    scriptureText.style.display = 'none';
+    // Show loading state
+    scriptureText.style.display = 'block';
+    scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 1.2rem; color: var(--text-secondary);">Loading verse...</div>';
     
     if (typeof memoryVerses === 'undefined' || memoryVerses.length === 0) {
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
-        scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 2rem; color: var(--text-secondary);">Welcome to My Bible</div>';
         return;
     }
@@ -2293,11 +2295,6 @@ function loadRandomMemoryVerse() {
     // Parse the verse reference (e.g., "John 3:16" or "Isaiah 12:1–6")
     const verseData = parseVerseReference(verseReference);
     if (!verseData) {
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
-        scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Welcome to My Bible</div>';
         return;
     }
@@ -2320,19 +2317,12 @@ function loadRandomMemoryVerse() {
     });
     
     if (bookIndex === -1) {
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
-        scriptureText.style.display = 'block';
         scriptureText.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Book not found: ${verseData.bookName}</div>`;
         return;
     }
     
     const book = bibleBooks[bookIndex];
-    
-    // Load verse data from Supabase using BibleDataManager
-    loadVerseFromSupabase(book, verseData, verseReference, scriptureText);
+    const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
     
     // Load the book data
     const languageFolder = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
@@ -2363,43 +2353,6 @@ function loadRandomMemoryVerse() {
     };
     
     document.body.appendChild(script);
-}
-
-// Load verse from Supabase and display
-async function loadVerseFromSupabase(book, verseData, verseReference, scriptureText) {
-    try {
-        // Get language
-        const language = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
-        
-        // Load chapter data from BibleDataManager
-        const chapterData = await bibleDataManager.getChapterData(book.file, verseData.chapter, language);
-        
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
-        if (!chapterData) {
-            scriptureText.style.display = 'block';
-            scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
-            return;
-        }
-        
-        // Convert to the old format expected by displayVerseContent
-        const bookData = {
-            [`chapter_${verseData.chapter}`]: chapterData
-        };
-        
-        displayVerseContent(bookData, verseData, verseReference, scriptureText);
-    } catch (error) {
-        console.error('Error loading verse:', error);
-        
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
-        scriptureText.style.display = 'block';
-        scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
-    }
 }
 
 // Helper function to display verse content
@@ -2467,11 +2420,9 @@ function displayVerseContent(bookData, verseData, verseReference, scriptureText)
                 }
             }, 0);
         } else {
-            scriptureText.style.display = 'block';
             scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Verse not found</div>';
         }
     } else {
-        scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Chapter not found</div>';
     }
 }
@@ -2501,6 +2452,7 @@ function updateAvailableHomeOptions() {
         // Get file paths
         const summaryPath = getSummaryPath(bookName);
         const timelinePath = getTimelinePath(bookName);
+        const charactersPath = getCharactersPath(bookName);
         
         // Get option elements
         const summaryOption = document.querySelector('.home-option[data-action="summary"]');
@@ -2510,6 +2462,7 @@ function updateAvailableHomeOptions() {
     // Check availability for each type
     const summaryVarName = `${fileName.replace(/_/g, '')}Summary`;
     const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
     
     // Load scripts and check data availability
     const checkPromises = [];
@@ -2562,25 +2515,29 @@ function updateAvailableHomeOptions() {
         if (timelineOption) timelineOption.style.display = 'none';
     }
     
-    // Check characters from Supabase
-    const charactersPromise = (async () => {
-        try {
-            const { data, error, count } = await bibleDataManager.supabaseClient
-                .from('bible_characters')
-                .select('id', { count: 'exact', head: true })
-                .eq('book_file', bibleBooks[currentBook].file)
-                .eq('chapter', chapterNum);
-            
-            return !error && count > 0;
-        } catch (error) {
-            console.error('Error checking characters availability:', error);
-            return false;
-        }
-    })();
-    
-    checkPromises.push(charactersPromise.then(hasCharacters => {
-        if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
-    }));
+    // Check characters
+    if (charactersPath) {
+        const promise = new Promise((resolve) => {
+            if (window[charactersVarName] && window[charactersVarName][chapterNum]) {
+                resolve(true);
+            } else if (!document.querySelector(`script[src="${charactersPath}"]`)) {
+                const script = document.createElement('script');
+                script.src = charactersPath;
+                script.onload = () => {
+                    resolve(window[charactersVarName] && window[charactersVarName][chapterNum]);
+                };
+                script.onerror = () => resolve(false);
+                document.body.appendChild(script);
+            } else {
+                resolve(window[charactersVarName] && window[charactersVarName][chapterNum]);
+            }
+        });
+        checkPromises.push(promise.then(hasCharacters => {
+            if (charactersOption) charactersOption.style.display = hasCharacters ? 'flex' : 'none';
+        }));
+    } else {
+        if (charactersOption) charactersOption.style.display = 'none';
+    }
     
     // Wait for all checks to complete
     Promise.all(checkPromises).then(() => {
@@ -3022,7 +2979,7 @@ function displayTimeline(bookName, chapterNum) {
 }
 
 // Show chapter characters
-async function showChapterCharacters() {
+function showChapterCharacters() {
     // Close mobile drawer if open
     const drawerOverlay = document.querySelector('.drawer-overlay');
     const booksSidebar = document.querySelector('.books-sidebar');
@@ -3042,69 +2999,109 @@ async function showChapterCharacters() {
         if (closeIcon) closeIcon.style.display = 'none';
     }
     
-    const book = bibleBooks[currentBook];
+    const bookName = bibleBooks[currentBook].name;
     const chapterNum = currentChapter;
     
-    // Load characters from Supabase
-    await loadCharactersFromSupabase(book.file, chapterNum);
+    // Map book names to characters file paths
+    const charactersPath = getCharactersPath(bookName);
+    
+    if (!charactersPath) {
+        alert('Characters not available for this book yet.');
+        return;
+    }
+    
+    // Load the characters dynamically
+    loadCharactersScript(charactersPath, bookName, chapterNum);
 }
 
-// Load characters from Supabase
-async function loadCharactersFromSupabase(bookFile, chapter) {
-    try {
-        const { data, error } = await bibleDataManager.supabaseClient
-            .from('bible_characters')
-            .select('name, description')
-            .eq('book_file', bookFile)
-            .eq('chapter', chapter)
-            .order('id', { ascending: true });
-        
-        if (error) {
-            console.error('Error loading characters:', error);
-            alert('Failed to load characters. Please try again.');
-            return;
-        }
-        
-        if (!data || data.length === 0) {
-            alert('Characters not available for this chapter yet.');
-            return;
-        }
-        
-        displayCharacters(data);
-        
-    } catch (error) {
-        console.error('Error loading characters:', error);
-        alert('Failed to load characters. Please try again.');
+// Get characters file path based on book name
+function getCharactersPath(bookName) {
+    // New Testament books
+    const newTestamentBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', 
+        'I Corinthians', 'II Corinthians', 'Galatians', 'Ephesians', 'Philippians', 
+        'Colossians', 'I Thessalonians', 'II Thessalonians', 'I Timothy', 'II Timothy', 
+        'Titus', 'Philemon', 'Hebrews', 'James', 'I Peter', 'II Peter', 'I John', 
+        'II John', 'III John', 'Jude', 'Revelation'];
+    
+    // Old Testament books
+    const oldTestamentBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 
+        'Joshua', 'Judges', 'Ruth', 'I Samuel', 'II Samuel', 'I Kings', 'II Kings', 
+        'I Chronicles', 'II Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 
+        'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 
+        'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 
+        'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+    
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    
+    if (newTestamentBooks.includes(bookName)) {
+        return `resources/characters/new-testament/${fileName}.js`;
+    } else if (oldTestamentBooks.includes(bookName)) {
+        return `resources/characters/old-testament/${fileName}.js`;
+    }
+    
+    return null;
+}
+
+// Load characters script dynamically
+function loadCharactersScript(path, bookName, chapterNum) {
+    // Check if script is already loaded
+    const existingScript = document.querySelector(`script[src="${path}"]`);
+    
+    if (existingScript) {
+        // Script already loaded, display characters
+        displayCharacters(bookName, chapterNum);
+    } else {
+        // Load the script
+        const script = document.createElement('script');
+        script.src = path;
+        script.onload = () => {
+            displayCharacters(bookName, chapterNum);
+        };
+        script.onerror = () => {
+            alert(`Failed to load characters for ${bookName}.`);
+        };
+        document.body.appendChild(script);
     }
 }
 
 // Display characters in the drawer
-function displayCharacters(characters) {
-    const summaryDrawer = document.getElementById('summary-drawer');
-    const summaryDrawerContent = document.getElementById('summary-drawer-content');
-    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+function displayCharacters(bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const charactersVarName = `${fileName.replace(/_/g, '')}Characters`;
     
-    // Update drawer title
-    summaryDrawerTitle.textContent = 'Chapter Characters';
+    // Try to access the characters object
+    const charactersData = window[charactersVarName];
     
-    // Format the characters with proper styling
-    const formattedCharacters = characters
-        .map((character, index) => `
-            <div class="character-item">
-                <div class="character-number">${index + 1}. ${character.name}</div>
-                <div class="character-description">${character.description}</div>
-            </div>
-        `)
-        .join('');
-    
-    summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
-    
-    // Track navigation
-    navigateToPage('characters');
-    
-    // Show the drawer
-    summaryDrawer.classList.add('active');
-    document.body.classList.add('summary-drawer-open');
+    if (charactersData && charactersData[chapterNum]) {
+        const summaryDrawer = document.getElementById('summary-drawer');
+        const summaryDrawerContent = document.getElementById('summary-drawer-content');
+        const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+        const characters = charactersData[chapterNum];
+        
+        // Update drawer title
+        summaryDrawerTitle.textContent = 'Chapter Characters';
+        
+        // Format the characters with proper styling
+        const formattedCharacters = characters
+            .map((character, index) => `
+                <div class="character-item">
+                    <div class="character-number">${index + 1}. ${character.name}</div>
+                    <div class="character-description">${character.description}</div>
+                </div>
+            `)
+            .join('');
+        
+        summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>`;
+        
+        // Track navigation
+        navigateToPage('characters');
+        
+        // Show the drawer
+        summaryDrawer.classList.add('active');
+        document.body.classList.add('summary-drawer-open');
+    } else {
+        alert(`Characters not available for ${bookName} ${chapterNum} yet.`);
+    }
 }
 
 // GitHub Backend for Notes
@@ -3421,9 +3418,7 @@ function openNotesModal(verseNum = null) {
         btn.classList.toggle('active', btn.dataset.color === currentNoteColor);
     });
     
-    // Save current scroll position before preventing body scroll
-    const scrollY = window.scrollY;
-    document.body.style.top = `-${scrollY}px`;
+    // Prevent body scroll
     document.body.classList.add('modal-open');
     
     // Track navigation
@@ -3435,11 +3430,8 @@ function openNotesModal(verseNum = null) {
 function closeNotesModal() {
     const modal = document.querySelector('.notes-modal-overlay');
     
-    // Restore scroll position
-    const scrollY = document.body.style.top;
+    // Allow body scroll
     document.body.classList.remove('modal-open');
-    document.body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
     
     if (modal) {
         modal.style.display = 'none';
@@ -3563,9 +3555,7 @@ function showNoteViewer(verseNum, note) {
         modal.style.transform = '';
     }
     
-    // Save current scroll position before preventing body scroll
-    const scrollY = window.scrollY;
-    document.body.style.top = `-${scrollY}px`;
+    // Prevent body scroll
     document.body.classList.add('modal-open');
     
     popup.style.display = 'flex';
@@ -3581,13 +3571,8 @@ function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
     const modal = document.querySelector('.note-viewer-modal');
     
-    // Only restore scroll position if modal was actually open
-    if (document.body.classList.contains('modal-open')) {
-        const scrollY = document.body.style.top;
-        document.body.classList.remove('modal-open');
-        document.body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    }
+    // Allow body scroll
+    document.body.classList.remove('modal-open');
     
     if (popup) {
         popup.style.display = 'none';
@@ -3601,13 +3586,7 @@ function hideNoteViewer() {
 
 // Admin Mode Functions
 function isAdmin() {
-    // If isAdmin hasn't been set, default to false
-    const adminStatus = localStorage.getItem('isAdmin');
-    if (adminStatus === null) {
-        localStorage.setItem('isAdmin', 'false');
-        return false;
-    }
-    return adminStatus === 'true';
+    return localStorage.getItem('isAdmin') === 'true';
 }
 
 function updateAdminUI() {
