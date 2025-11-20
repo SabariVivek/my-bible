@@ -1220,10 +1220,12 @@ document.addEventListener('click', (e) => {
             currentChapter--;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (currentBook > 0) {
             currentBook--;
             currentChapter = bibleBooks[currentBook].chapters;
             loadBook(currentBook, currentChapter);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
     
@@ -1234,10 +1236,12 @@ document.addEventListener('click', (e) => {
             currentChapter++;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (currentBook < bibleBooks.length - 1) {
             currentBook++;
             currentChapter = 1;
             loadBook(currentBook, currentChapter);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 });
