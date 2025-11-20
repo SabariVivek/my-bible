@@ -298,20 +298,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryDrawer = document.getElementById('summary-drawer');
     if (summaryDrawer) {
         summaryDrawer.classList.remove('active');
-        // Force position off-screen
-        summaryDrawer.style.right = '-450px';
+        // Remove any inline styles that might interfere
+        summaryDrawer.style.right = '';
     }
     document.body.classList.remove('summary-drawer-open');
     
     // Reset content area margin and bottom nav positioning
     const contentArea = document.querySelector('.content-area');
     if (contentArea) {
-        contentArea.style.marginRight = '0';
+        contentArea.style.marginRight = '';
     }
     
     const bottomNav = document.querySelector('.bottom-nav');
     if (bottomNav) {
-        bottomNav.style.right = '0';
+        bottomNav.style.right = '';
     }
     
     // Check network status immediately
