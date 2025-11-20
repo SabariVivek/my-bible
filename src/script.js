@@ -294,6 +294,26 @@ function navigateToPage(pageName) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Force close any drawers immediately on page load
+    const summaryDrawer = document.getElementById('summary-drawer');
+    if (summaryDrawer) {
+        summaryDrawer.classList.remove('active');
+        // Force position off-screen
+        summaryDrawer.style.right = '-450px';
+    }
+    document.body.classList.remove('summary-drawer-open');
+    
+    // Reset content area margin and bottom nav positioning
+    const contentArea = document.querySelector('.content-area');
+    if (contentArea) {
+        contentArea.style.marginRight = '0';
+    }
+    
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (bottomNav) {
+        bottomNav.style.right = '0';
+    }
+    
     // Check network status immediately
     checkNetworkStatus();
     
@@ -516,6 +536,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         // Desktop/Tablet: Show home page by default or based on saved state
         if (isOnHomePage === null || isOnHomePage === 'true') {
+            // Ensure any open drawers are closed before showing homepage
+            const summaryDrawer = document.getElementById('summary-drawer');
+            if (summaryDrawer) {
+                summaryDrawer.classList.remove('active');
+            }
+            document.body.classList.remove('summary-drawer-open');
+            
             showHomePage();
             if (isOnHomePage === null) {
                 localStorage.setItem('isOnHomePage', 'true');
@@ -1225,11 +1252,14 @@ document.addEventListener('click', (e) => {
             currentChapter--;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
+            refreshOpenSummaryDrawer();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (currentBook > 0) {
             currentBook--;
             currentChapter = bibleBooks[currentBook].chapters;
-            loadBook(currentBook, currentChapter);
+            loadBook(currentBook, currentChapter).then(() => {
+                refreshOpenSummaryDrawer();
+            });
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
@@ -1241,11 +1271,14 @@ document.addEventListener('click', (e) => {
             currentChapter++;
             localStorage.setItem('currentChapter', currentChapter);
             updateUI();
+            refreshOpenSummaryDrawer();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else if (currentBook < bibleBooks.length - 1) {
             currentBook++;
             currentChapter = 1;
-            loadBook(currentBook, currentChapter);
+            loadBook(currentBook, currentChapter).then(() => {
+                refreshOpenSummaryDrawer();
+            });
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
@@ -1778,17 +1811,17 @@ function initializeSearch() {
             // Build Supabase query
             let supabaseQuery = bibleDataManager.supabaseClient
                 .from('bible_verses')
-                .select('book_file, chapter, verse, tamil_text, english_text')
+                .select('book_file, chapter, verse, text, language')
                 .order('book_file')
                 .order('chapter')
                 .order('verse');
             
-            // Apply text search based on language
-            if (isTamil) {
-                supabaseQuery = supabaseQuery.ilike('tamil_text', `%${query}%`);
-            } else {
-                supabaseQuery = supabaseQuery.ilike('english_text', `%${query}%`);
-            }
+            // Apply language filter
+            const searchLanguage = isTamil ? 'tamil' : 'english';
+            supabaseQuery = supabaseQuery.eq('language', searchLanguage);
+            
+            // Apply text search
+            supabaseQuery = supabaseQuery.ilike('text', `%${query}%`);
             
             // Apply book filter if specified
             if (selectedBookIndex !== '') {
@@ -1817,7 +1850,7 @@ function initializeSearch() {
                     const book = bibleBooks.find(b => b.file === verse.book_file);
                     if (!book) return;
                     
-                    const verseText = isTamil ? verse.tamil_text : verse.english_text;
+                    const verseText = verse.text;
                     const bookName = isTamil ? book.tamilName : book.name;
                     const bookIndex = bibleBooks.indexOf(book);
                     
@@ -2125,25 +2158,22 @@ async function loadCharacterData() {
 
 // Show home page with just the title
 function showHomePage() {
+    // Show loader immediately
+    const loader = document.getElementById('loader');
+    if (loader) loader.classList.add('active');
+    
     // Preload all data immediately when home is first shown
-    if (!window.homeDataPreloaded) {
-        // Show page loader only on first load
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.add('active');
-        
-        Promise.all([
+    const dataLoadingPromise = !window.homeDataPreloaded 
+        ? Promise.all([
             loadSummaryData(),
             loadTimelineData(), 
             loadCharacterData()
         ]).then(() => {
             window.homeDataPreloaded = true;
-            if (loader) loader.classList.remove('active');
         }).catch(error => {
             console.error('Error preloading home data:', error);
-            if (loader) loader.classList.remove('active');
-        });
-    }
-    // If data already preloaded, no loading needed
+        })
+        : Promise.resolve(); // If already preloaded, resolve immediately
     
     // Hide all sidebars and columns
     document.querySelector('.books-sidebar').style.display = 'none';
@@ -2171,6 +2201,13 @@ function showHomePage() {
     const bottomNav = document.querySelector('.bottom-nav');
     if (bottomNav) bottomNav.style.display = 'none';
     
+    // Close any open summary drawers (Timeline, Characters, Summary)
+    const summaryDrawer = document.getElementById('summary-drawer');
+    if (summaryDrawer && summaryDrawer.classList.contains('active')) {
+        summaryDrawer.classList.remove('active');
+        document.body.classList.remove('summary-drawer-open');
+    }
+    
     // Replace menu button with bible.png
     const menuBtn = document.querySelector('.menu-btn');
     const logoContainer = document.querySelector('.logo-container');
@@ -2195,17 +2232,22 @@ function showHomePage() {
     }
     
     // Load and display a random memory verse
-    // If memory verses haven't loaded yet, wait for them
-    if (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0) {
-        loadRandomMemoryVerse();
-    } else {
-        // Wait for memory verses to load then display
-        loadMemoryVersesFromSupabase().then(() => {
+    // Wait for both data preloading and verse loading before hiding loader
+    const verseLoadingPromise = (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0)
+        ? Promise.resolve().then(() => loadRandomMemoryVerse())
+        : loadMemoryVersesFromSupabase().then(() => {
             if (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0) {
                 loadRandomMemoryVerse();
             }
         });
-    }
+    
+    // Hide loader only after both data preloading and verse loading are complete
+    Promise.all([dataLoadingPromise, verseLoadingPromise]).then(() => {
+        if (loader) loader.classList.remove('active');
+    }).catch(error => {
+        console.error('Error loading home page:', error);
+        if (loader) loader.classList.remove('active');
+    });
     
     // Store home state
     localStorage.setItem('isOnHomePage', 'true');
@@ -2250,10 +2292,6 @@ function loadRandomMemoryVerse() {
     scriptureText.style.display = 'none';
     
     if (typeof memoryVerses === 'undefined' || memoryVerses.length === 0) {
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
         scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 2rem; color: var(--text-secondary);">Welcome to My Bible</div>';
         return;
@@ -2266,10 +2304,6 @@ function loadRandomMemoryVerse() {
     // Parse the verse reference (e.g., "John 3:16" or "Isaiah 12:1–6")
     const verseData = parseVerseReference(verseReference);
     if (!verseData) {
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
         scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Welcome to My Bible</div>';
         return;
@@ -2293,10 +2327,6 @@ function loadRandomMemoryVerse() {
     });
     
     if (bookIndex === -1) {
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
         scriptureText.style.display = 'block';
         scriptureText.innerHTML = `<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Book not found: ${verseData.bookName}</div>`;
         return;
@@ -2317,10 +2347,6 @@ async function loadVerseFromSupabase(book, verseData, verseReference, scriptureT
         // Load chapter data from BibleDataManager
         const chapterData = await bibleDataManager.getChapterData(book.file, verseData.chapter, language);
         
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
-        
         if (!chapterData) {
             scriptureText.style.display = 'block';
             scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
@@ -2335,10 +2361,6 @@ async function loadVerseFromSupabase(book, verseData, verseReference, scriptureT
         displayVerseContent(bookData, verseData, verseReference, scriptureText);
     } catch (error) {
         console.error('Error loading verse:', error);
-        
-        // Hide page loader
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.remove('active');
         
         scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
@@ -2663,6 +2685,29 @@ function closeSummaryDrawer() {
     
     // Track navigation back to bible page
     navigateToBiblePage();
+}
+
+// Refresh the content of an open summary drawer when chapter changes
+function refreshOpenSummaryDrawer() {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    if (!summaryDrawer || !summaryDrawer.classList.contains('active')) {
+        return; // Drawer not open, nothing to refresh
+    }
+    
+    // Check which type of drawer is open by examining the title
+    const drawerTitle = document.querySelector('.summary-drawer-title');
+    if (!drawerTitle) return;
+    
+    const titleText = drawerTitle.textContent;
+    
+    // Refresh based on the exact drawer type
+    if (titleText === 'Chapter Summary') {
+        showChapterSummary();
+    } else if (titleText === 'Chapter Timeline') {
+        showChapterTimeline();
+    } else if (titleText === 'Chapter Characters') {
+        showChapterCharacters();
+    }
 }
 
 // Update drawer content when chapter changes
