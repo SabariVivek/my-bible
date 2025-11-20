@@ -4805,24 +4805,18 @@ body.dark-theme .delete-message {
     
     .form-actions,
     .form-buttons {
-        flex-direction: column;
-    }
-    
-    /* Keep delete modal buttons in same row */
-    .delete-modal .form-buttons {
         flex-direction: row;
         gap: 12px;
     }
     
     .cancel-btn,
     .save-btn {
-        width: 100%;
+        flex: 1;
     }
     
-    /* Delete modal buttons should not be full width */
+    /* Delete modal buttons styling */
     .delete-modal .cancel-btn,
     .delete-modal .delete-btn {
-        width: auto;
         flex: 1;
     }
 }
