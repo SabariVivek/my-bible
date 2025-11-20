@@ -597,6 +597,7 @@ function initializeMobileDrawer() {
         hamburgerIcon.style.display = 'block';
         closeIcon.style.display = 'none';
         document.body.style.overflow = '';
+        document.body.classList.remove('drawer-open');
     }
     
     // Close on overlay click
@@ -2166,11 +2167,63 @@ function restoreUIFromHomePage() {
     if (menuBtn) menuBtn.style.display = '';
 }
 
+// Load summary data for home preloading
+async function loadSummaryData() {
+    try {
+        // Preload summary for current book/chapter if available
+        if (currentBook && currentChapter) {
+            await showChapterSummary();
+        }
+    } catch (error) {
+        console.error('Error loading summary data:', error);
+    }
+}
+
+// Load timeline data for home preloading  
+async function loadTimelineData() {
+    try {
+        // Preload timeline for current book/chapter if available
+        if (currentBook && currentChapter) {
+            await showChapterTimeline();
+        }
+    } catch (error) {
+        console.error('Error loading timeline data:', error);
+    }
+}
+
+// Load character data for home preloading
+async function loadCharacterData() {
+    try {
+        // Preload character data if available
+        if (typeof loadCharacters === 'function') {
+            await loadCharacters();
+        }
+    } catch (error) {
+        console.error('Error loading character data:', error);
+    }
+}
+
 // Show home page with just the title
 function showHomePage() {
-    // Show page loader
-    const loader = document.getElementById('loader');
-    if (loader) loader.classList.add('active');
+    // Preload all data immediately when home is first shown
+    if (!window.homeDataPreloaded) {
+        // Show page loader only on first load
+        const loader = document.getElementById('loader');
+        if (loader) loader.classList.add('active');
+        
+        Promise.all([
+            loadSummaryData(),
+            loadTimelineData(), 
+            loadCharacterData()
+        ]).then(() => {
+            window.homeDataPreloaded = true;
+            if (loader) loader.classList.remove('active');
+        }).catch(error => {
+            console.error('Error preloading home data:', error);
+            if (loader) loader.classList.remove('active');
+        });
+    }
+    // If data already preloaded, no loading needed
     
     // Hide all sidebars and columns
     document.querySelector('.books-sidebar').style.display = 'none';
@@ -3058,7 +3111,7 @@ function displayTimeline(bookName, chapterNum, databaseEvents = []) {
                             ${verseDisplay}
                             <div class="timeline-event">${event.description}</div>
                             ${!event.isFromFile && isAdmin() ? `
-                                <button class="delete-timeline-item-btn" onclick="deleteTimelineItem('${event.id}')" title="Delete this timeline entry">
+                                <button class="delete-timeline-item-btn" onclick="markTimelineForDeletion('${event.id}')" title="Mark this timeline entry for deletion" style="display: none;">
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <polyline points="3,6 5,6 21,6"></polyline>
                                         <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2,2v2"></path>
@@ -3080,7 +3133,7 @@ function displayTimeline(bookName, chapterNum, databaseEvents = []) {
                         </svg>
                         <span class="edit-mode-text">Edit</span>
                     </button>
-                    <button class="add-timeline-btn" id="timeline-add-btn" onclick="addTimelineInline()">
+                    <button class="add-timeline-btn" id="timeline-add-btn" onclick="addTimelineInline()" style="display: none;">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="12" y1="5" x2="12" y2="19"></line>
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -5297,6 +5350,7 @@ function displayTimelineFromDB(timelineData) {
 // ========================= TIMELINE EDITING FUNCTIONS =========================
 
 let timelineEditMode = false;
+let deletedTimelineItems = []; // Track items marked for deletion
 
 // Toggle timeline edit mode
 function toggleTimelineEditMode() {
@@ -5308,13 +5362,19 @@ function toggleTimelineEditMode() {
     if (timelineEditMode) {
         editText.textContent = 'Save';
         editBtn.classList.add('edit-mode-active');
-        editBtn.style.background = '#28a745'; // Green for save
+        editBtn.style.background = '#007bff'; // Blue for save (different from green Add)
         
-        // Hide the Add button during edit mode
+        // Show Add button during edit mode
         const addBtn = document.getElementById('timeline-add-btn');
         if (addBtn) {
-            addBtn.style.display = 'none';
+            addBtn.style.display = 'flex';
         }
+        
+        // Show delete buttons for all timeline items
+        const deleteButtons = document.querySelectorAll('.delete-timeline-item-btn');
+        deleteButtons.forEach(btn => {
+            btn.style.display = 'block';
+        });
         
         // Convert ALL timeline items to editable textboxes
         timelineItems.forEach(item => {
@@ -5339,14 +5399,44 @@ function toggleTimelineEditMode() {
         editBtn.classList.remove('edit-mode-active');
         editBtn.style.background = '#007bff'; // Blue for edit
         
-        // Show the Add button again when exiting edit mode
+        // Hide Add button when exiting edit mode
         const addBtn = document.getElementById('timeline-add-btn');
         if (addBtn) {
-            addBtn.style.display = 'flex';
+            addBtn.style.display = 'none';
         }
+        
+        // Hide delete buttons
+        const deleteButtons = document.querySelectorAll('.delete-timeline-item-btn');
+        deleteButtons.forEach(btn => {
+            btn.style.display = 'none';
+        });
         
         // Save ALL changes and convert back to normal display
         const savePromises = [];
+        
+        // Process deleted items
+        if (deletedTimelineItems.length > 0) {
+            deletedTimelineItems.forEach(eventId => {
+                savePromises.push(deleteTimelineFromDatabase(eventId));
+            });
+            deletedTimelineItems = []; // Clear the deletion list
+        }
+        
+        // Process new timeline items
+        const newItems = document.querySelectorAll('.timeline-item[data-is-new="true"]');
+        newItems.forEach(item => {
+            const textarea = item.querySelector('.timeline-add-textarea');
+            if (textarea && textarea.value.trim() !== '') {
+                const description = textarea.value.trim();
+                // Add to save promises
+                savePromises.push(saveNewTimelineToDatabase(description));
+                // Remove the new item from DOM since it will be reloaded
+                item.remove();
+            } else {
+                // Remove empty new items
+                item.remove();
+            }
+        });
         
         timelineItems.forEach(item => {
             const textarea = item.querySelector('.timeline-edit-textarea');
@@ -5375,14 +5465,27 @@ function toggleTimelineEditMode() {
         // Wait for all saves to complete
         if (savePromises.length > 0) {
             console.log(`Attempting to save ${savePromises.length} changes...`);
+            showLoadingIndicator(); // Show loading during save
             Promise.all(savePromises).then(() => {
                 console.log('All timeline changes saved successfully');
-                showToast('Timeline changes saved successfully!', 'success');
+                const deletedCount = deletedTimelineItems.length;
+                const editCount = savePromises.length - deletedCount;
+                
+                if (deletedCount > 0 && editCount > 0) {
+                    showToast('Timeline updated', 'success');
+                } else if (deletedCount > 0) {
+                    showToast('Timeline updated', 'success');
+                } else if (editCount > 0) {
+                    showToast('Timeline updated', 'success');
+                }
+                
                 // Refresh the timeline to show updated data
                 showChapterTimeline();
+                hideLoadingIndicator(); // Hide loading after save
             }).catch(error => {
                 console.error('Error saving some timeline changes:', error);
-                showToast('Error saving some changes. Please try again.', 'error');
+                showToast('Save failed', 'error');
+                hideLoadingIndicator(); // Hide loading on error
             });
         } else {
             console.log('No changes to save');
@@ -5717,25 +5820,34 @@ function addTimelineInline() {
         return;
     }
     
+    // Check if there's already a new item being added
+    const existingNew = document.querySelector('.timeline-item-new');
+    if (existingNew) {
+        showToast('Complete current addition first', 'warning');
+        return;
+    }
+    
     const timelineContainer = document.querySelector('.timeline-list');
     if (!timelineContainer) return;
     
-    // Create new inline timeline item with textarea
+    // Disable the Add button during creation
+    const addBtn = document.getElementById('timeline-add-btn');
+    if (addBtn) {
+        addBtn.disabled = true;
+        addBtn.style.opacity = '0.6';
+    }
+    
+    // Create new inline timeline item with textarea and normal timeline styling
     const newItemHtml = `
-        <li class="timeline-item timeline-item-new" data-is-new="true">
+        <li class="timeline-item" data-is-new="true" style="border-color: #28a745;">
             <div class="timeline-content">
                 <div class="timeline-event">
                     <textarea class="timeline-add-textarea" 
                               placeholder="Enter new timeline event..." 
-                              rows="3"></textarea>
+                              rows="3"
+                              oninput="checkTimelineInput(this)"></textarea>
                 </div>
                 <div class="timeline-add-actions">
-                    <button class="timeline-save-btn" onclick="saveNewTimelineItem(this)">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="20,6 9,17 4,12"></polyline>
-                        </svg>
-                        Save
-                    </button>
                     <button class="timeline-cancel-btn" onclick="cancelNewTimelineItem(this)">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -5757,6 +5869,25 @@ function addTimelineInline() {
     
     const textarea = newItem.querySelector('.timeline-add-textarea');
     setTimeout(() => textarea.focus(), 300); // Wait for scroll to complete
+}
+
+// Check timeline input and enable Add button when text is entered
+function checkTimelineInput(textarea) {
+    const addBtn = document.getElementById('timeline-add-btn');
+    
+    if (textarea.value.trim().length > 0) {
+        // Re-enable add button since user has started typing
+        if (addBtn) {
+            addBtn.disabled = false;
+            addBtn.style.opacity = '1';
+        }
+    } else {
+        // Keep add button disabled until text is entered
+        if (addBtn) {
+            addBtn.disabled = true;
+            addBtn.style.opacity = '0.6';
+        }
+    }
 }
 
 // Save new timeline item
@@ -5804,12 +5935,24 @@ async function saveNewTimelineItem(button) {
             showToast('Failed to add timeline event. Please try again.', 'error');
         } else {
             showToast('Timeline event added successfully!', 'success');
+            // Re-enable the Add button
+            const addBtn = document.getElementById('timeline-add-btn');
+            if (addBtn) {
+                addBtn.disabled = false;
+                addBtn.style.opacity = '1';
+            }
             // Refresh timeline display
             showChapterTimeline();
         }
     } catch (error) {
         console.error('Error adding timeline event:', error);
         showToast('Failed to add timeline event. Please try again.', 'error');
+        // Re-enable the Add button on error
+        const addBtn = document.getElementById('timeline-add-btn');
+        if (addBtn) {
+            addBtn.disabled = false;
+            addBtn.style.opacity = '1';
+        }
     }
 }
 
@@ -5817,19 +5960,101 @@ async function saveNewTimelineItem(button) {
 function cancelNewTimelineItem(button) {
     const item = button.closest('.timeline-item');
     item.remove();
+    
+    // Re-enable the Add button
+    const addBtn = document.getElementById('timeline-add-btn');
+    if (addBtn) {
+        addBtn.disabled = false;
+        addBtn.style.opacity = '1';
+    }
 }
 
-// Delete timeline item
-async function deleteTimelineItem(eventId) {
+// Mark timeline item for deletion with animation
+function markTimelineForDeletion(eventId) {
     if (!isAdmin()) {
         console.log('Admin access required');
         return;
     }
     
-    if (!confirm('Are you sure you want to delete this timeline event?')) {
+    // Find the timeline item and mark it for deletion
+    const timelineItem = document.querySelector(`[data-event-id="${eventId}"]`);
+    if (!timelineItem) return;
+    
+    // Add to deleted items list
+    if (!deletedTimelineItems.includes(eventId)) {
+        deletedTimelineItems.push(eventId);
+    }
+    
+    // Style the item like the add card but in red
+    timelineItem.style.borderColor = '#dc3545'; // Red border like green add card
+    timelineItem.style.transition = 'all 0.3s ease';
+    
+    // Replace the timeline content with deletion interface (similar to add interface)
+    const timelineContent = timelineItem.querySelector('.timeline-content');
+    const originalContent = timelineContent.innerHTML;
+    
+    timelineContent.innerHTML = `
+        <div class="timeline-event">
+            <div class="timeline-delete-message">This timeline event will be deleted when you save.</div>
+        </div>
+        <div class="timeline-add-actions">
+            <button class="timeline-cancel-btn" onclick="undoTimelineDeletion('${eventId}')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Undo
+            </button>
+        </div>
+    `;
+    
+    // Store original content for restoration
+    timelineItem.setAttribute('data-original-content', originalContent);
+    
+    // Disable the delete button for this item
+    const deleteBtn = timelineItem.querySelector('.delete-timeline-item-btn');
+    if (deleteBtn) {
+        deleteBtn.style.display = 'none';
+    }
+}
+
+// Undo timeline deletion
+function undoTimelineDeletion(eventId) {
+    if (!isAdmin()) {
+        console.log('Admin access required');
         return;
     }
     
+    // Find the timeline item
+    const timelineItem = document.querySelector(`[data-event-id="${eventId}"]`);
+    if (!timelineItem) return;
+    
+    // Remove from deleted items list
+    const index = deletedTimelineItems.indexOf(eventId);
+    if (index > -1) {
+        deletedTimelineItems.splice(index, 1);
+    }
+    
+    // Restore original styling
+    timelineItem.style.borderColor = '';
+    
+    // Restore original content
+    const originalContent = timelineItem.getAttribute('data-original-content');
+    if (originalContent) {
+        const timelineContent = timelineItem.querySelector('.timeline-content');
+        timelineContent.innerHTML = originalContent;
+        timelineItem.removeAttribute('data-original-content');
+    }
+    
+    // Show the delete button again
+    const deleteBtn = timelineItem.querySelector('.delete-timeline-item-btn');
+    if (deleteBtn && timelineEditMode) {
+        deleteBtn.style.display = 'block';
+    }
+}
+
+// Actually delete timeline item from database
+async function deleteTimelineFromDatabase(eventId) {
     try {
         const { error } = await bibleDataManager.supabaseClient
             .from('chapter_timeline')
@@ -5838,14 +6063,53 @@ async function deleteTimelineItem(eventId) {
         
         if (error) {
             console.error('Error deleting timeline event:', error);
-            showToast('Failed to delete timeline event. Please try again.', 'error');
-        } else {
-            showToast('Timeline event deleted successfully!', 'success');
-            // Refresh timeline display
-            showChapterTimeline();
+            throw error;
         }
     } catch (error) {
         console.error('Error deleting timeline event:', error);
-        showToast('Failed to delete timeline event. Please try again.', 'error');
+        throw error;
+    }
+}
+
+// Save new timeline item to database
+async function saveNewTimelineToDatabase(description) {
+    try {
+        const book = bibleBooks[currentBook];
+        const chapterNum = currentChapter;
+        
+        // Get the highest order_index for this chapter
+        const { data: existingEvents } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: false })
+            .limit(1);
+        
+        let newOrderIndex = 10; // Default starting index
+        if (existingEvents && existingEvents.length > 0) {
+            newOrderIndex = existingEvents[0].order_index + 10;
+        }
+        
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert({
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: '',
+                testament: book.testament,
+                order_index: newOrderIndex
+            });
+        
+        if (error) {
+            console.error('Error adding timeline event:', error);
+            throw error;
+        }
+        
+        showToast('Timeline updated', 'success');
+    } catch (error) {
+        console.error('Error adding timeline event:', error);
+        throw error;
     }
 }
