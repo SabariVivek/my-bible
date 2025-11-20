@@ -3836,6 +3836,7 @@ body.dark-theme .verse-line.has-note.note-slate {
 /* Adjust main content when drawer is open */
 body.summary-drawer-open .content-area {
     margin-right: 450px;
+    overflow-y: hidden;
 }
 
 body.summary-drawer-open .bottom-nav {
@@ -3863,6 +3864,7 @@ body.summary-drawer-open .bottom-nav {
         margin-right: 450px;
         width: calc(100vw - 450px);
         flex: 1;
+        overflow-y: hidden;
     }
     
     body.summary-drawer-open .bottom-nav {
@@ -3891,6 +3893,7 @@ body.summary-drawer-open .bottom-nav {
         margin-right: 0;
         width: 100vw;
         flex: 1;
+        overflow-y: hidden;
     }
     
     body.summary-drawer-open .bottom-nav {
@@ -3966,8 +3969,9 @@ body.summary-drawer-open .bottom-nav {
 
 .summary-drawer-content {
     flex: 1;
-    overflow-y: auto;
-    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .summary-drawer-content::-webkit-scrollbar {
@@ -4058,8 +4062,9 @@ body.dark-theme .summary-paragraph {
 .timeline-list li {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 65px;
+    margin-bottom: 2rem;
     line-height: 1.6;
+    min-height: 40px;
 }
 
 .timeline-list li::before {
@@ -4086,9 +4091,11 @@ body.dark-theme .summary-paragraph {
     position: absolute;
     left: 5px;
     top: 20px;
-    bottom: -56px;
+    height: calc(100% - 10px);
     width: 1px;
     background-color: #e0e0e0;
+    min-height: 20px;
+    max-height: calc(100% + 10px);
 }
 
 .timeline-list li:last-child::after {
@@ -4116,10 +4123,59 @@ body.dark-theme .timeline-event {
     color: #b8b8b8;
 }
 
+/* Dark theme for timeline management */
+body.dark-theme .timeline-item::before {
+    border-color: #9aa0a6;
+    background-color: #1a1a1a;
+}
+
+body.dark-theme .timeline-item::after {
+    background-color: #5f6368;
+}
+
+body.dark-theme .timeline-verse {
+    color: #64b5f6;
+}
+
+body.dark-theme .timeline-description {
+    color: #b8b8b8;
+}
+
 /* Characters Styles */
+.characters-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.characters-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.characters-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.characters-scroll-area::-webkit-scrollbar-thumb {
+    background-color: rgba(95, 99, 104, 0.4);
+    border-radius: 3px;
+}
+
+body.dark-theme .characters-scroll-area::-webkit-scrollbar-thumb {
+    background-color: rgba(154, 160, 166, 0.4);
+}
+
 .characters-list {
     padding: 0;
     margin: 0;
+}
+
+.no-characters {
+    text-align: center;
+    color: #9aa0a6;
+    padding: 2rem 1rem;
+    font-style: italic;
 }
 
 .character-item {
@@ -4197,15 +4253,334 @@ body.dark-theme .timeline-event {
     color: white;
 }
 
-.add-character-container {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
+.characters-bottom-section {
     border-top: 1px solid #e0e0e0;
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.add-character-container {
+    margin: 0;
+    padding: 0;
 }
 
 /* Dark theme for character actions */
 body.dark-theme .character-item {
     border-bottom-color: #3c4043;
+}
+
+body.dark-theme .characters-bottom-section {
+    border-top-color: #3c4043;
+    background: #292a2d;
+}
+
+body.dark-theme .no-characters {
+    color: #9aa0a6;
+}
+
+/* Summary Management Styles */
+.summary-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.summary-content {
+    padding: 1rem 0;
+}
+
+.summary-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #3c4043;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+}
+
+.summary-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.edit-summary-btn {
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-summary-btn:hover {
+    background: #1565c0;
+}
+
+.no-summary {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.no-summary-message {
+    color: #9aa0a6;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.summary-bottom-section {
+    border-top: 1px solid #e0e0e0;
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.add-summary-container {
+    margin: 0;
+    padding: 0;
+}
+
+.add-summary-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-bg, #dcdfe3);
+    color: var(--button-text, #5f6368);
+    border: 1px solid var(--border-color, #a4a7ae);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    transform: scale(1);
+}
+
+.add-summary-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+.add-summary-btn:hover {
+    background: var(--button-hover-bg, #e8eaed);
+    border-color: var(--button-hover-border, #bdc1c6);
+}
+
+/* Timeline Management Styles */
+.timeline-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    padding-bottom: 0;
+}
+
+.timeline-list {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0rem;
+    position: relative;
+    min-height: 50px;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #1976d2;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -1.1rem;
+    top: 20px;
+    height: calc(100% - 5px);
+    width: 1px;
+    background-color: #e0e0e0;
+    min-height: 15px;
+}
+
+.timeline-item:last-child::after {
+    display: none;
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-verse {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #6b6b6b;
+}
+
+.timeline-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.edit-timeline-btn,
+.delete-timeline-btn {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.edit-timeline-btn {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.edit-timeline-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-timeline-btn {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.delete-timeline-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.no-timeline {
+    text-align: center;
+    color: #9aa0a6;
+    padding: 2rem 1rem;
+    font-style: italic;
+}
+
+.timeline-bottom-section {
+    border-top: 1px solid #e0e0e0;
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.add-timeline-container {
+    margin: 0;
+    padding: 0;
+}
+
+.add-timeline-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-bg, #dcdfe3);
+    color: var(--button-text, #5f6368);
+    border: 1px solid var(--border-color, #a4a7ae);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    transform: scale(1);
+}
+
+.add-timeline-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+.add-timeline-btn:hover {
+    background: var(--button-hover-bg, #e8eaed);
+    border-color: var(--button-hover-border, #bdc1c6);
+}
+
+/* Dark theme for summary and timeline */
+body.dark-theme .summary-text {
+    color: #e8eaed;
+}
+
+body.dark-theme .summary-bottom-section,
+body.dark-theme .timeline-bottom-section {
+    border-top-color: #3c4043;
+    background: #292a2d;
+}
+
+body.dark-theme .add-summary-btn,
+body.dark-theme .add-timeline-btn {
+    background: #3c4043;
+    color: #e8eaed;
+    border-color: #5f6368;
+}
+
+body.dark-theme .add-summary-btn:hover,
+body.dark-theme .add-timeline-btn:hover {
+    background: #5f6368;
+    border-color: #80868b;
+}
+
+body.dark-theme .timeline-item {
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .timeline-verse {
+    color: #8ab4f8;
+}
+
+body.dark-theme .timeline-description {
+    color: #b8b8b8;
+}
+
+body.dark-theme .no-summary-message,
+body.dark-theme .no-timeline {
+    color: #9aa0a6;
 }
 
 body.dark-theme .character-number {
@@ -4498,7 +4873,6 @@ body.dark-theme .desktop-admin-option:hover svg {
 .add-character-btn {
     width: 100%;
     padding: 12px;
-    margin-top: 16px;
     background: var(--button-bg, #dcdfe3);
     color: var(--button-text, #5f6368);
     border: 1px solid var(--border-color, #a4a7ae);
@@ -4773,6 +5147,274 @@ body.dark-theme .save-btn {
 
 body.dark-theme .save-btn:hover:not(:disabled) {
     background: #aecbfa;
+}
+
+/* ========================= TIMELINE EDITING STYLES ========================= */
+
+/* Timeline bottom buttons */
+.timeline-bottom-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 0.75rem 0;
+}
+
+.edit-mode-btn {
+    background: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 120px;
+    justify-content: center;
+}
+
+.edit-mode-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+.edit-mode-btn.edit-mode-active {
+    background: #28a745;
+}
+
+.edit-mode-btn.edit-mode-active:hover {
+    background: #1e7e34;
+}
+
+.add-timeline-btn {
+    background: #28a745;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 120px;
+    justify-content: center;
+}
+
+.add-timeline-btn:hover {
+    background: #1e7e34;
+    transform: translateY(-1px);
+}
+
+/* Timeline edit textarea */
+.timeline-edit-textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 0.75rem;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background: #f8f9fa;
+}
+
+.timeline-edit-textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Dark theme for timeline editing */
+body.dark-theme .edit-mode-btn {
+    background: #1976d2;
+}
+
+body.dark-theme .edit-mode-btn:hover {
+    background: #1565c0;
+}
+
+body.dark-theme .edit-mode-btn.edit-mode-active {
+    background: #4caf50;
+}
+
+body.dark-theme .edit-mode-btn.edit-mode-active:hover {
+    background: #388e3c;
+}
+
+/* ========================= INLINE TIMELINE STYLES ========================= */
+
+/* Delete button for timeline items */
+.delete-timeline-item-btn {
+    background: #dc3545;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 4px 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.timeline-item:hover .delete-timeline-item-btn {
+    opacity: 1;
+}
+
+.delete-timeline-item-btn:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+.timeline-content {
+    position: relative;
+}
+
+/* New timeline item styles */
+.timeline-item-new {
+    background: #f8f9fa;
+    border: 2px dashed #28a745;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.timeline-add-textarea {
+    width: 100%;
+    border: 2px solid #28a745;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background: white;
+}
+
+.timeline-add-textarea:focus {
+    border-color: #1e7e34;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+.timeline-add-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.timeline-save-btn {
+    background: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.timeline-save-btn:hover {
+    background: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.timeline-cancel-btn {
+    background: #6c757d;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.timeline-cancel-btn:hover {
+    background: #545b62;
+    transform: translateY(-1px);
+}
+
+/* Dark theme for new timeline functionality */
+body.dark-theme .timeline-item-new {
+    background: #2d3748;
+    border-color: #48bb78;
+}
+
+body.dark-theme .timeline-add-textarea {
+    background: #1a202c;
+    border-color: #48bb78;
+    color: #e2e8f0;
+}
+
+body.dark-theme .timeline-add-textarea:focus {
+    border-color: #68d391;
+}
+
+body.dark-theme .delete-timeline-item-btn {
+    background: #e53e3e;
+}
+
+body.dark-theme .delete-timeline-item-btn:hover {
+    background: #c53030;
+}
+
+body.dark-theme .add-timeline-btn {
+    background: #4caf50;
+}
+
+body.dark-theme .add-timeline-btn:hover {
+    background: #388e3c;
+}
+
+body.dark-theme .timeline-edit-textarea {
+    background: #2d3748;
+    border-color: #4299e1;
+    color: #e2e8f0;
+}
+
+body.dark-theme .timeline-edit-textarea:focus {
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+/* Responsive design for timeline buttons */
+@media (max-width: 768px) {
+    .timeline-bottom-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .edit-mode-btn,
+    .add-timeline-btn {
+        flex: 1;
+        max-width: 120px;
+        justify-content: center;
+    }
 }
 
 body.dark-theme .save-btn:disabled {

@@ -2583,16 +2583,8 @@ function showChapterSummary() {
     const bookName = bibleBooks[currentBook].name;
     const chapterNum = currentChapter;
     
-    // Map book names to summary file paths
-    const summaryPath = getSummaryPath(bookName);
-    
-    if (!summaryPath) {
-        alert('Summary not available for this book yet.');
-        return;
-    }
-    
-    // Load the summary dynamically
-    loadSummaryScript(summaryPath, bookName, chapterNum);
+    // Load summary from database
+    loadSummaryFromSupabase(bibleBooks[currentBook].file, chapterNum);
 }
 
 // Get summary file path based on book name
@@ -2893,16 +2885,69 @@ function showChapterTimeline() {
     const bookName = bibleBooks[currentBook].name;
     const chapterNum = currentChapter;
     
-    // Map book names to timeline file paths
+    // Try to load from existing timeline files first, then fallback to database
     const timelinePath = getTimelinePath(bookName);
     
-    if (!timelinePath) {
-        alert('Timeline not available for this book yet.');
+    if (timelinePath) {
+        // Load the timeline dynamically and check for database content
+        loadTimelineScriptWithDatabase(timelinePath, bookName, chapterNum);
+    } else {
+        // If no timeline file, load directly from database
+        loadTimelineFromSupabase(bibleBooks[currentBook].file, chapterNum);
+    }
+}
+
+// Load timeline script with database integration
+async function loadTimelineScriptWithDatabase(path, bookName, chapterNum) {
+    const fileName = bookName.toLowerCase().replace(/ /g, '_');
+    const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
+    
+    // Load database events first
+    let databaseEvents = [];
+    try {
+        const bookFile = bibleBooks[currentBook].file;
+        
+        // First check if table exists and test connection
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id, book_file, chapter, event_description, verse_reference, testament, order_index')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: true })
+            .order('id', { ascending: true });
+        
+        if (error) {
+            console.error('Database error:', error);
+            // If table doesn't exist or has permission issues, continue with file data only
+        } else {
+            databaseEvents = data || [];
+            console.log('Loaded timeline data from database:', databaseEvents);
+            
+            // Uncomment the line below to push Matthew 1 data (run once as admin)
+            // pushMatthew1TimelineData();
+        }
+    } catch (error) {
+        console.error('Error loading database timeline:', error);
+    }
+    
+    // Check if timeline is already loaded
+    if (window[timelineVarName]) {
+        displayTimeline(bookName, chapterNum, databaseEvents);
         return;
     }
     
-    // Load the timeline dynamically
-    loadTimelineScript(timelinePath, bookName, chapterNum);
+    // Load the timeline script
+    const script = document.createElement('script');
+    script.src = path;
+    script.onload = () => {
+        displayTimeline(bookName, chapterNum, databaseEvents);
+    };
+    script.onerror = () => {
+        // If script fails to load, just show database events
+        displayTimeline(bookName, chapterNum, databaseEvents);
+    };
+    
+    document.head.appendChild(script);
 }
 
 // Get timeline file path based on book name
@@ -2957,28 +3002,122 @@ function loadTimelineScript(path, bookName, chapterNum) {
 }
 
 // Display the timeline in the drawer
-function displayTimeline(bookName, chapterNum) {
+function displayTimeline(bookName, chapterNum, databaseEvents = []) {
     const fileName = bookName.toLowerCase().replace(/ /g, '_');
     const timelineVarName = `${fileName.replace(/_/g, '')}Timeline`;
     
-    // Try to access the timeline object
+    // Try to access the timeline object from JS files
     const timelineData = window[timelineVarName];
+    let timelineEvents = [];
     
+    // Combine file-based timeline with database events
     if (timelineData && timelineData[chapterNum]) {
+        timelineEvents = timelineData[chapterNum].map(event => ({
+            id: `file_${Math.random()}`,
+            event_description: event,
+            verse_reference: '',
+            isFromFile: true
+        }));
+    }
+    
+    // Add database events
+    if (databaseEvents && databaseEvents.length > 0) {
+        const dbEvents = databaseEvents.map(event => ({
+            ...event,
+            isFromFile: false
+        }));
+        timelineEvents = [...dbEvents]; // Only use database events, not both
+    }
+    
+    if (timelineEvents.length > 0) {
+        // Normalize all events to have consistent structure
+        timelineEvents = timelineEvents.map(event => ({
+            id: event.id,
+            description: event.event_description || event.description || event,
+            verse_reference: event.verse_reference || '',
+            isFromFile: event.isFromFile || false,
+            order_index: event.order_index || 0
+        }));
+        
         const summaryDrawer = document.getElementById('summary-drawer');
         const summaryDrawerContent = document.getElementById('summary-drawer-content');
         const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
-        const timeline = timelineData[chapterNum];
         
         // Update drawer title
         summaryDrawerTitle.textContent = 'Chapter Timeline';
         
-        // Format the timeline with proper styling
-        const formattedTimeline = timeline
-            .map(event => `<li><div class="timeline-event">${event}</div></li>`)
+        // Format the timeline with proper styling and admin controls
+        const formattedTimeline = timelineEvents
+            .map((event, index) => {
+                const verseDisplay = event.verse_reference ? `<div class="timeline-verse">${event.verse_reference}</div>` : '';
+                const eventClass = event.isFromFile ? 'timeline-event-file' : 'timeline-event-db';
+                
+                return `
+                    <li class="timeline-item ${eventClass}" data-event-id="${event.id || ''}" data-is-file="${event.isFromFile}">
+                        <div class="timeline-content">
+                            ${verseDisplay}
+                            <div class="timeline-event">${event.description}</div>
+                            ${!event.isFromFile && isAdmin() ? `
+                                <button class="delete-timeline-item-btn" onclick="deleteTimelineItem('${event.id}')" title="Delete this timeline entry">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="3,6 5,6 21,6"></polyline>
+                                        <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2,2v2"></path>
+                                    </svg>
+                                </button>
+                            ` : ''}
+                        </div>
+                    </li>
+                `;
+            })
             .join('');
         
-        summaryDrawerContent.innerHTML = `<ul class="timeline-list">${formattedTimeline}</ul>`;
+        const timelineBottomButtons = isAdmin() ? `
+            <div class="timeline-bottom-section">
+                <div class="timeline-bottom-buttons">
+                    <button class="edit-mode-btn" id="timeline-edit-btn" onclick="toggleTimelineEditMode()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                        <span class="edit-mode-text">Edit</span>
+                    </button>
+                    <button class="add-timeline-btn" id="timeline-add-btn" onclick="addTimelineInline()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Add
+                    </button>
+                </div>
+            </div>
+        ` : '';
+        
+        // Use the scrollable structure for consistency
+        summaryDrawerContent.innerHTML = `
+            <div class="timeline-scroll-area">
+                <ul class="timeline-list">${formattedTimeline}</ul>
+            </div>
+            ${timelineBottomButtons}
+        `;
+        
+        // Add event listeners for timeline buttons (since we're using data attributes instead of onclick)
+        setTimeout(() => {
+            document.querySelectorAll('.edit-timeline-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const eventId = e.currentTarget.getAttribute('data-event-id');
+                    const description = e.currentTarget.getAttribute('data-description');
+                    const verse = e.currentTarget.getAttribute('data-verse') || '';
+                    editTimelineEvent(eventId, description, verse);
+                });
+            });
+            
+            document.querySelectorAll('.delete-timeline-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const eventId = e.currentTarget.getAttribute('data-event-id');
+                    const description = e.currentTarget.getAttribute('data-description');
+                    deleteTimelineEvent(eventId, description);
+                });
+            });
+        }, 100);
         
         // Track navigation
         navigateToPage('timeline');
@@ -2987,8 +3126,57 @@ function displayTimeline(bookName, chapterNum) {
         summaryDrawer.classList.add('active');
         document.body.classList.add('summary-drawer-open');
     } else {
-        alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+        // Show empty state with add button for admins
+        if (isAdmin()) {
+            displayEmptyTimelineForAdmin(bookName, chapterNum);
+        } else {
+            alert(`Timeline not available for ${bookName} ${chapterNum} yet.`);
+        }
     }
+}
+
+// Display empty timeline state for admin users
+function displayEmptyTimelineForAdmin(bookName, chapterNum) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Timeline';
+    
+    // Show empty state with add button
+    summaryDrawerContent.innerHTML = `
+        <div class="timeline-scroll-area">
+            <div class="no-timeline">
+                <div class="no-timeline-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
+                    </svg>
+                </div>
+                <h3>No Timeline Events</h3>
+                <p>No timeline events available for ${bookName} Chapter ${chapterNum} yet.</p>
+            </div>
+        </div>
+        <div class="timeline-bottom-section">
+            <div class="add-timeline-container">
+                <button class="add-timeline-btn" onclick="showAddTimelineModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Timeline Event
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Track navigation
+    navigateToPage('timeline');
+    
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
 }
 
 // Show chapter characters
@@ -3036,7 +3224,12 @@ async function loadCharactersFromSupabase(bookFile, chapter) {
         }
         
         if (!data || data.length === 0) {
-            showToast('Characters not available for this chapter yet.', 'info');
+            if (isAdmin()) {
+                // Show empty state with add button for admins
+                displayCharacters([]);
+            } else {
+                showToast('Characters not available for this chapter yet.', 'info');
+            }
             return;
         }
         
@@ -3102,7 +3295,17 @@ function displayCharacters(characters) {
         </div>
     ` : '';
     
-    summaryDrawerContent.innerHTML = `<div class="characters-list">${formattedCharacters}</div>${addCharacterButton}`;
+    // Restructure with scrollable content area and fixed bottom button
+    summaryDrawerContent.innerHTML = `
+        <div class="characters-scroll-area">
+            <div class="characters-list">
+                ${formattedCharacters || '<div class="no-characters">No characters available for this chapter yet.</div>'}
+            </div>
+        </div>
+        <div class="characters-bottom-section">
+            ${addCharacterButton}
+        </div>
+    `;
     
     // Track navigation
     navigateToPage('characters');
@@ -4233,4 +4436,1416 @@ function initializeNotesModal() {
 
     // Call resetModalHeight when note viewer is shown
     const originalShowNoteViewer = window.showNoteViewer;
+}
+
+// ========================= SUMMARY MANAGEMENT =========================
+
+async function loadSummaryFromSupabase(bookFile, chapter) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('chapter_summaries')
+            .select('id, content')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .single();
+        
+        if (error && error.code !== 'PGRST116') { // PGRST116 means no rows returned
+            console.error('Error loading summary:', error);
+            showToast('Failed to load summary. Please try again.', 'error');
+            return;
+        }
+        
+        displaySummary(data ? [data] : []);
+        
+    } catch (error) {
+        console.error('Error loading summary:', error);
+        showToast('Failed to load summary. Please try again.', 'error');
+    }
+}
+
+function displaySummary(summaryData) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Summary';
+    
+    const summary = summaryData.length > 0 ? summaryData[0] : null;
+    
+    const summaryContent = summary ? `
+        <div class="summary-content">
+            <div class="summary-text">${summary.content}</div>
+            ${isAdmin() ? `
+                <div class="summary-actions">
+                    <button class="edit-summary-btn" onclick="editSummary(${summary.id}, '${summary.content.replace(/'/g, "\\'")}')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                        Edit
+                    </button>
+                </div>
+            ` : ''}
+        </div>
+    ` : `
+        <div class="no-summary">
+            <div class="no-summary-message">No summary available for this chapter yet.</div>
+        </div>
+    `;
+    
+    const addSummaryButton = isAdmin() && !summary ? `
+        <div class="summary-bottom-section">
+            <div class="add-summary-container">
+                <button class="add-summary-btn" onclick="showAddSummaryModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Summary
+                </button>
+            </div>
+        </div>
+    ` : '';
+    
+    // Restructure with scrollable content area and fixed bottom button
+    summaryDrawerContent.innerHTML = `
+        <div class="summary-scroll-area">
+            ${summaryContent}
+        </div>
+        ${addSummaryButton}
+    `;
+    
+    // Track navigation
+    navigateToPage('summary');
+    
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
+}
+
+// Summary CRUD Functions
+function showAddSummaryModal() {
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Add Chapter Summary</h3>
+                <button class="close-character-modal" onclick="closeAddSummaryModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="add-summary-form">
+                    <div class="form-group">
+                        <label for="summary-content">Summary Content *</label>
+                        <textarea id="summary-content" name="content" required maxlength="2000" rows="8" placeholder="Enter chapter summary..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeAddSummaryModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save Summary</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+    
+    // Handle form submission
+    document.getElementById('add-summary-form').addEventListener('submit', handleAddSummary);
+    
+    // Focus on content input
+    setTimeout(() => document.getElementById('summary-content').focus(), 100);
+}
+
+async function saveSummaryToSupabase(bookFile, chapter, content) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to add summary.');
+        }
+
+        const book = bibleBooks.find(b => b.file === bookFile);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        
+        const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+        
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/chapter_summaries`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                book_file: bookFile,
+                chapter: chapter,
+                content: content,
+                testament: testament,
+                created_at: new Date().toISOString()
+            })
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`Failed to save summary: ${response.status} ${errorData}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error('Error saving summary:', error);
+        throw error;
+    }
+}
+
+function closeAddSummaryModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+async function handleAddSummary(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const content = formData.get('content').trim();
+    
+    if (!content) {
+        showToast('Summary content is required.', 'error');
+        return;
+    }
+    
+    try {
+        const book = bibleBooks[currentBook];
+        const success = await saveSummaryToSupabase(book.file, currentChapter, content);
+        
+        if (success) {
+            closeAddSummaryModal();
+            await loadSummaryFromSupabase(book.file, currentChapter);
+            
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Summary added!' : 'Summary added successfully!', 'success');
+        }
+    } catch (error) {
+        console.error('Error adding summary:', error);
+        showToast('Error adding summary: ' + error.message, 'error');
+    }
+}
+
+async function editSummary(summaryId, currentContent) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to edit summary.', 'error');
+        return;
+    }
+    
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Edit Summary</h3>
+                <button class="close-character-modal" onclick="closeEditSummaryModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="edit-summary-form">
+                    <div class="form-group">
+                        <label for="edit-summary-content">Summary Content *</label>
+                        <textarea id="edit-summary-content" name="content" required maxlength="2000" rows="8" placeholder="Enter chapter summary...">${currentContent}</textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeEditSummaryModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Update Summary</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Handle form submission
+    document.getElementById('edit-summary-form').addEventListener('submit', async (event) => {
+        await handleEditSummary(event, summaryId);
+    });
+    
+    // Focus and select content
+    setTimeout(() => {
+        const textarea = document.getElementById('edit-summary-content');
+        textarea.focus();
+        textarea.select();
+    }, 100);
+}
+
+function closeEditSummaryModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+async function handleEditSummary(event, summaryId) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const content = formData.get('content').trim();
+    
+    if (!content) {
+        showToast('Summary content is required.', 'error');
+        return;
+    }
+    
+    try {
+        const success = await updateSummaryInSupabase(summaryId, content);
+        
+        if (success) {
+            closeEditSummaryModal();
+            const book = bibleBooks[currentBook];
+            await loadSummaryFromSupabase(book.file, currentChapter);
+            
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Summary updated!' : 'Summary updated successfully!', 'success');
+        }
+    } catch (error) {
+        console.error('Error updating summary:', error);
+        showToast('Error updating summary: ' + error.message, 'error');
+    }
+}
+
+async function updateSummaryInSupabase(summaryId, content) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to update summary.');
+        }
+        
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_summaries')
+            .update({ 
+                content: content,
+                updated_at: new Date().toISOString()
+            })
+            .eq('id', summaryId);
+        
+        if (error) {
+            throw new Error(`Failed to update summary: ${error.message}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error('Error updating summary:', error);
+        throw error;
+    }
+}
+
+// ========================= TIMELINE CRUD FUNCTIONS =========================
+
+function showAddTimelineModal() {
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Add Timeline Event</h3>
+                <button class="close-character-modal" onclick="closeAddTimelineModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="add-timeline-form">
+                    <div class="form-group">
+                        <label for="timeline-verse">Verse Reference *</label>
+                        <input type="text" id="timeline-verse" name="verse" required maxlength="50" placeholder="e.g., v. 1-5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline-description">Event Description *</label>
+                        <textarea id="timeline-description" name="description" required maxlength="500" rows="4" placeholder="Describe the timeline event..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeAddTimelineModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Save Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    modal.classList.add('active');
+    
+    // Handle form submission
+    document.getElementById('add-timeline-form').addEventListener('submit', handleAddTimeline);
+    
+    // Focus on verse input
+    setTimeout(() => document.getElementById('timeline-verse').focus(), 100);
+}
+
+function closeAddTimelineModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+async function handleAddTimeline(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const verse = formData.get('verse').trim();
+    const description = formData.get('description').trim();
+    
+    if (!verse || !description) {
+        showToast('All fields are required.', 'error');
+        return;
+    }
+    
+    try {
+        const book = bibleBooks[currentBook];
+        const success = await saveTimelineToSupabase(book.file, currentChapter, verse, description);
+        
+        if (success) {
+            closeAddTimelineModal();
+            await loadTimelineFromSupabase(book.file, currentChapter);
+            
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Event added!' : 'Timeline event added successfully!', 'success');
+        }
+    } catch (error) {
+        console.error('Error adding timeline event:', error);
+        showToast('Error adding timeline event: ' + error.message, 'error');
+    }
+}
+
+async function editTimelineEvent(eventId, currentDescription, currentVerse) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to edit timeline events.', 'error');
+        return;
+    }
+    
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal">
+            <div class="character-modal-header">
+                <h3>Edit Timeline Event</h3>
+                <button class="close-character-modal" onclick="closeEditTimelineModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="character-modal-body">
+                <form id="edit-timeline-form">
+                    <div class="form-group">
+                        <label for="edit-timeline-verse">Verse Reference *</label>
+                        <input type="text" id="edit-timeline-verse" name="verse" required maxlength="50" value="${currentVerse}" placeholder="e.g., v. 1-5" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-timeline-description">Event Description *</label>
+                        <textarea id="edit-timeline-description" name="description" required maxlength="500" rows="4" placeholder="Describe the timeline event...">${currentDescription}</textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" onclick="closeEditTimelineModal()" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="save-btn">Update Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Handle form submission
+    document.getElementById('edit-timeline-form').addEventListener('submit', async (event) => {
+        await handleEditTimeline(event, eventId);
+    });
+    
+    // Focus on verse input
+    setTimeout(() => {
+        const input = document.getElementById('edit-timeline-verse');
+        input.focus();
+        input.select();
+    }, 100);
+}
+
+function closeEditTimelineModal() {
+    const modal = document.querySelector('.character-modal-overlay');
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+    }
+}
+
+async function handleEditTimeline(event, eventId) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const verse = formData.get('verse').trim();
+    const description = formData.get('description').trim();
+    
+    if (!verse || !description) {
+        showToast('All fields are required.', 'error');
+        return;
+    }
+    
+    try {
+        const success = await updateTimelineInSupabase(eventId, verse, description);
+        
+        if (success) {
+            closeEditTimelineModal();
+            const book = bibleBooks[currentBook];
+            await loadTimelineFromSupabase(book.file, currentChapter);
+            
+            const isMobile = window.innerWidth <= 768;
+            showToast(isMobile ? 'Event updated!' : 'Timeline event updated successfully!', 'success');
+        }
+    } catch (error) {
+        console.error('Error updating timeline event:', error);
+        showToast('Error updating timeline event: ' + error.message, 'error');
+    }
+}
+
+async function deleteTimelineEvent(eventId, eventDescription) {
+    if (!isAdmin()) {
+        showToast('Admin privileges required to delete timeline events.', 'error');
+        return;
+    }
+    
+    // Show custom delete confirmation popup
+    const modal = document.createElement('div');
+    modal.className = 'character-modal-overlay active';
+    modal.innerHTML = `
+        <div class="character-modal delete-modal">
+            <div class="character-modal-header">
+                <h3>Delete Timeline Event</h3>
+            </div>
+            <div class="character-modal-body">
+                <p class="delete-message">Are you sure you want to delete this timeline event?</p>
+                <div class="form-buttons">
+                    <button type="button" onclick="closeDeleteTimelineModal()" class="cancel-btn">Cancel</button>
+                    <button type="button" onclick="confirmDeleteTimelineEvent(${eventId})" class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Store modal reference globally for cleanup
+    window.currentDeleteTimelineModal = modal;
+}
+
+function closeDeleteTimelineModal() {
+    const modal = window.currentDeleteTimelineModal;
+    if (modal) {
+        modal.classList.remove('active');
+        setTimeout(() => modal.remove(), 300);
+        window.currentDeleteTimelineModal = null;
+    }
+}
+
+async function confirmDeleteTimelineEvent(eventId) {
+    try {
+        await deleteTimelineFromSupabase(eventId);
+        
+        // Close modal
+        closeDeleteTimelineModal();
+        
+        // Reload timeline
+        const book = bibleBooks[currentBook];
+        await loadTimelineFromSupabase(book.file, currentChapter);
+        
+        const isMobile = window.innerWidth <= 768;
+        showToast(isMobile ? 'Deleted!' : 'Timeline event deleted successfully!', 'success');
+    } catch (error) {
+        console.error('Error deleting timeline event:', error);
+        showToast('Error deleting timeline event: ' + error.message, 'error');
+    }
+}
+
+async function saveTimelineToSupabase(bookFile, chapter, verse, description) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to add timeline events.');
+        }
+
+        const book = bibleBooks.find(b => b.file === bookFile);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        
+        const testament = book.testament === 'old' ? 'old-testament' : 'new-testament';
+        
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/chapter_timeline`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                book_file: bookFile,
+                chapter: chapter,
+                description: description,
+                verse_reference: verse,
+                testament: testament,
+                created_at: new Date().toISOString()
+            })
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.text();
+            throw new Error(`Failed to save timeline event: ${response.status} ${errorData}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error('Error saving timeline event:', error);
+        throw error;
+    }
+}
+
+async function updateTimelineInSupabase(eventId, verse, description) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to update timeline events.');
+        }
+        
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .update({ 
+                event_description: description,
+                verse_reference: verse,
+                updated_at: new Date().toISOString()
+            })
+            .eq('id', eventId);
+        
+        if (error) {
+            throw new Error(`Failed to update timeline event: ${error.message}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error('Error updating timeline event:', error);
+        throw error;
+    }
+}
+
+async function deleteTimelineFromSupabase(eventId) {
+    try {
+        if (!isAdmin()) {
+            throw new Error('Admin privileges required to delete timeline events.');
+        }
+        
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .delete()
+            .eq('id', eventId);
+        
+        if (error) {
+            throw new Error(`Failed to delete timeline event: ${error.message}`);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error('Error deleting timeline event:', error);
+        throw error;
+    }
+}
+
+function setupTimelineDragAndDrop() {
+    const timelineItems = document.querySelectorAll('.draggable-timeline');
+    
+    timelineItems.forEach(item => {
+        item.addEventListener('dragstart', handleTimelineDragStart);
+        item.addEventListener('dragover', handleTimelineDragOver);
+        item.addEventListener('drop', handleTimelineDrop);
+        item.addEventListener('dragend', handleTimelineDragEnd);
+    });
+}
+
+function handleTimelineDragStart(e) {
+    draggedElement = e.target.closest('.timeline-item');
+    draggedPosition = parseInt(draggedElement.dataset.position);
+    
+    // Add visual feedback
+    draggedElement.classList.add('character-dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', draggedElement.outerHTML);
+}
+
+function handleTimelineDragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    
+    const targetElement = e.target.closest('.timeline-item');
+    if (!targetElement || targetElement === draggedElement) return;
+    
+    // Add drop indicator
+    targetElement.classList.add('drop-target');
+    
+    // Remove drop indicator from other elements
+    document.querySelectorAll('.drop-target').forEach(el => {
+        if (el !== targetElement) {
+            el.classList.remove('drop-target');
+        }
+    });
+}
+
+function handleTimelineDrop(e) {
+    e.preventDefault();
+    
+    const targetElement = e.target.closest('.timeline-item');
+    if (!targetElement || targetElement === draggedElement) return;
+    
+    const targetPosition = parseInt(targetElement.dataset.position);
+    const container = targetElement.parentNode;
+    
+    // Remove drop indicators
+    document.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
+    
+    // Determine drop position
+    if (draggedPosition < targetPosition) {
+        // Moving down - insert after target
+        container.insertBefore(draggedElement, targetElement.nextSibling);
+    } else {
+        // Moving up - insert before target
+        container.insertBefore(draggedElement, targetElement);
+    }
+    
+    // Update timeline positions (using localStorage like characters)
+    updateTimelinePositions();
+}
+
+function handleTimelineDragEnd(e) {
+    // Clean up visual feedback
+    document.querySelectorAll('.character-dragging, .drop-target').forEach(el => {
+        el.classList.remove('character-dragging', 'drop-target');
+    });
+    
+    draggedElement = null;
+    draggedPosition = null;
+}
+
+async function updateTimelinePositions() {
+    const timelineItems = document.querySelectorAll('.draggable-timeline');
+    const timelineIds = [];
+    
+    // Get the new order of timeline IDs
+    timelineItems.forEach((item, index) => {
+        const timelineId = parseInt(item.dataset.timelineId);
+        timelineIds.push(timelineId);
+        
+        // Update dataset
+        item.dataset.position = index;
+    });
+    
+    // Store the custom order in localStorage for this session
+    const book = bibleBooks[currentBook];
+    const orderKey = `timeline_order_${book.file}_${currentChapter}`;
+    localStorage.setItem(orderKey, JSON.stringify(timelineIds));
+    
+    const isMobile = window.innerWidth <= 768;
+    showToast(isMobile ? 'Order updated!' : 'Timeline order updated for this session!', 'success');
+}
+
+// ========================= TIMELINE MANAGEMENT =========================
+
+async function loadTimelineFromSupabase(bookFile, chapter) {
+    try {
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id, book_file, chapter, event_description, verse_reference, testament, order_index')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .order('order_index', { ascending: true })
+            .order('id', { ascending: true });
+        
+        if (error) {
+            console.error('Error loading timeline:', error);
+            showToast('Failed to load timeline. Please try again.', 'error');
+            return;
+        }
+        
+        displayTimelineFromDB(data || []);
+        
+    } catch (error) {
+        console.error('Error loading timeline:', error);
+        showToast('Failed to load timeline. Please try again.', 'error');
+    }
+}
+
+function displayTimelineFromDB(timelineData) {
+    const summaryDrawer = document.getElementById('summary-drawer');
+    const summaryDrawerContent = document.getElementById('summary-drawer-content');
+    const summaryDrawerTitle = document.querySelector('.summary-drawer-title');
+    
+    // Update drawer title
+    summaryDrawerTitle.textContent = 'Chapter Timeline';
+    
+    // Format the timeline events with proper styling and admin action buttons
+    const formattedTimeline = timelineData
+        .map((event, index) => {
+            const actionButtons = isAdmin() ? `
+                <div class="timeline-actions">
+                    <button class="edit-timeline-btn" onclick="editTimelineEvent(${event.id}, '${event.description.replace(/'/g, "\\'")}', '${event.verse_reference.replace(/'/g, "\\'")}')"
+                        title="Edit event">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m18 2 4 4L12 16l-4 4-4-4L14 6z"></path>
+                        </svg>
+                    </button>
+                    <button class="delete-timeline-btn" onclick="deleteTimelineEvent(${event.id}, '${event.description.replace(/'/g, "\\'")}')"
+                        title="Delete event">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3,6 5,6 21,6"></polyline>
+                            <path d="m19,6v14a2,2 0 0,1-2,2H7a2,2 0 0,1-2-2V6m3,0V4a2,2 0 0,1,2,2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+            ` : '';
+            
+            const dragAttributes = isAdmin() ? `draggable="true" data-timeline-id="${event.id}" data-position="${index}"` : '';
+            const dragClass = isAdmin() ? ' draggable-timeline' : '';
+            
+            return `
+                <div class="timeline-item${dragClass}" ${dragAttributes}>
+                    <div class="timeline-content">
+                        <div class="timeline-verse">${event.verse_reference}</div>
+                        <div class="timeline-description">${event.event_description}</div>
+                    </div>
+                    ${actionButtons}
+                </div>
+            `;
+        })
+        .join('');
+    
+    const addTimelineButton = isAdmin() ? `
+        <div class="timeline-bottom-section">
+            <div class="add-timeline-container">
+                <button class="add-timeline-btn" onclick="showAddTimelineModal()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Timeline Event
+                </button>
+            </div>
+        </div>
+    ` : '';
+    
+    // Restructure with scrollable content area and fixed bottom button
+    summaryDrawerContent.innerHTML = `
+        <div class="timeline-scroll-area">
+            <div class="timeline-list">
+                ${formattedTimeline || '<div class="no-timeline">No timeline events available for this chapter yet.</div>'}
+            </div>
+        </div>
+        ${addTimelineButton}
+    `;
+    
+    // Add event listeners for timeline buttons (since we're using data attributes instead of onclick)
+    setTimeout(() => {
+        document.querySelectorAll('.edit-timeline-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const eventId = e.currentTarget.getAttribute('data-event-id');
+                const description = e.currentTarget.getAttribute('data-description');
+                const verse = e.currentTarget.getAttribute('data-verse') || '';
+                editTimelineEvent(eventId, description, verse);
+            });
+        });
+        
+        document.querySelectorAll('.delete-timeline-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const eventId = e.currentTarget.getAttribute('data-event-id');
+                const description = e.currentTarget.getAttribute('data-description');
+                deleteTimelineEvent(eventId, description);
+            });
+        });
+    }, 100);
+    
+    // Add drag and drop event listeners for admin users
+    if (isAdmin() && timelineData.length > 0) {
+        setupTimelineDragAndDrop();
+    }
+    
+    // Track navigation
+    navigateToPage('timeline');
+    
+    // Show the drawer
+    summaryDrawer.classList.add('active');
+    document.body.classList.add('summary-drawer-open');
+}
+// ========================= TIMELINE EDITING FUNCTIONS =========================
+
+let timelineEditMode = false;
+
+// Toggle timeline edit mode
+function toggleTimelineEditMode() {
+    timelineEditMode = !timelineEditMode;
+    const editBtn = document.getElementById('timeline-edit-btn');
+    const editText = editBtn.querySelector('.edit-mode-text');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    if (timelineEditMode) {
+        editText.textContent = 'Save';
+        editBtn.classList.add('edit-mode-active');
+        editBtn.style.background = '#28a745'; // Green for save
+        
+        // Hide the Add button during edit mode
+        const addBtn = document.getElementById('timeline-add-btn');
+        if (addBtn) {
+            addBtn.style.display = 'none';
+        }
+        
+        // Convert ALL timeline items to editable textboxes
+        timelineItems.forEach(item => {
+            const eventElement = item.querySelector('.timeline-event');
+            if (eventElement) {
+                const currentText = eventElement.textContent.trim();
+                const isFromFile = item.getAttribute('data-is-file') === 'true';
+                const eventId = item.getAttribute('data-event-id');
+                
+                eventElement.innerHTML = `
+                    <textarea class="timeline-edit-textarea" 
+                              data-original-text="${currentText}"
+                              data-event-id="${eventId || ''}"
+                              data-is-file="${isFromFile}"
+                              placeholder="Enter timeline event..."
+                              rows="3">${currentText}</textarea>
+                `;
+            }
+        });
+    } else {
+        editText.textContent = 'Edit';
+        editBtn.classList.remove('edit-mode-active');
+        editBtn.style.background = '#007bff'; // Blue for edit
+        
+        // Show the Add button again when exiting edit mode
+        const addBtn = document.getElementById('timeline-add-btn');
+        if (addBtn) {
+            addBtn.style.display = 'flex';
+        }
+        
+        // Save ALL changes and convert back to normal display
+        const savePromises = [];
+        
+        timelineItems.forEach(item => {
+            const textarea = item.querySelector('.timeline-edit-textarea');
+            if (textarea) {
+                const newText = textarea.value.trim();
+                const originalText = textarea.getAttribute('data-original-text');
+                const eventId = textarea.getAttribute('data-event-id');
+                const isFromFile = textarea.getAttribute('data-is-file') === 'true';
+                const eventElement = item.querySelector('.timeline-event');
+                
+                // Only save if text changed and it's not empty
+                if (newText !== originalText && newText !== '') {
+                    if (eventId && !isFromFile && eventId !== '') {
+                        // Save database events
+                        console.log('Saving event:', eventId, newText);
+                        savePromises.push(updateTimelineEvent(eventId, newText));
+                    }
+                    // File-based events would need different handling
+                }
+                
+                // Restore normal display
+                eventElement.textContent = newText || originalText;
+            }
+        });
+        
+        // Wait for all saves to complete
+        if (savePromises.length > 0) {
+            console.log(`Attempting to save ${savePromises.length} changes...`);
+            Promise.all(savePromises).then(() => {
+                console.log('All timeline changes saved successfully');
+                showToast('Timeline changes saved successfully!', 'success');
+                // Refresh the timeline to show updated data
+                showChapterTimeline();
+            }).catch(error => {
+                console.error('Error saving some timeline changes:', error);
+                showToast('Error saving some changes. Please try again.', 'error');
+            });
+        } else {
+            console.log('No changes to save');
+        }
+    }
+}
+
+// Update timeline event in database
+async function updateTimelineEvent(eventId, newDescription) {
+    try {
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .update({ event_description: newDescription })
+            .eq('id', eventId);
+        
+        if (error) {
+            console.error('Error updating timeline event:', error);
+            showToast('Failed to update timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event updated successfully!', 'success');
+        }
+    } catch (error) {
+        console.error('Error updating timeline event:', error);
+        showToast('Failed to update timeline event. Please try again.', 'error');
+    }
+}
+
+// Show add timeline modal
+function showAddTimelineModal() {
+    const book = bibleBooks[currentBook];
+    const chapterNum = currentChapter;
+    
+    const modalHtml = `
+        <div class="modal-overlay" id="add-timeline-modal">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3>Add Timeline Event</h3>
+                    <button class="modal-close-btn" onclick="closeAddTimelineModal()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-field">
+                        <label for="timeline-event-description">Timeline Event</label>
+                        <textarea id="timeline-event-description" 
+                                  placeholder="Describe what happened in this chapter..." 
+                                  rows="4"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label for="timeline-verse-reference">Verse Reference (Optional)</label>
+                        <input type="text" 
+                               id="timeline-verse-reference" 
+                               placeholder="e.g., Matthew 1:1-17">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeAddTimelineModal()">Cancel</button>
+                    <button class="btn btn-primary" onclick="addTimelineEvent()">Add Event</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    document.body.classList.add('modal-open');
+    
+    // Focus on description field
+    setTimeout(() => {
+        document.getElementById('timeline-event-description').focus();
+    }, 100);
+}
+
+// Close add timeline modal
+function closeAddTimelineModal() {
+    const modal = document.getElementById('add-timeline-modal');
+    if (modal) {
+        modal.remove();
+        document.body.classList.remove('modal-open');
+    }
+}
+
+// Add timeline event to database
+async function addTimelineEvent() {
+    const description = document.getElementById('timeline-event-description').value.trim();
+    const verseReference = document.getElementById('timeline-verse-reference').value.trim();
+    
+    if (!description) {
+        showToast('Please enter a timeline event description.', 'error');
+        return;
+    }
+    
+    const book = bibleBooks[currentBook];
+    const chapterNum = currentChapter;
+    
+    // Map testament
+    const testament = currentBook < 39 ? 'old' : 'new';
+    
+    try {
+        // Get the maximum order_index for this chapter to append at the end
+        const { data: maxOrderData } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: false })
+            .limit(1);
+        
+        const nextOrderIndex = maxOrderData && maxOrderData.length > 0 
+            ? maxOrderData[0].order_index + 10 
+            : 10;
+        
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert([{
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: verseReference,
+                testament: testament,
+                order_index: nextOrderIndex
+            }]);
+        
+        if (error) {
+            console.error('Error adding timeline event:', error);
+            showToast('Failed to add timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event added successfully!', 'success');
+            closeAddTimelineModal();
+            
+            // Refresh timeline display
+            showChapterTimeline();
+        }
+    } catch (error) {
+        console.error('Error adding timeline event:', error);
+        showToast('Failed to add timeline event. Please try again.', 'error');
+    }
+}
+
+// ========================= PUSH MATTHEW 1 TIMELINE DATA =========================
+
+// Function to push Matthew 1 timeline data to Supabase
+async function pushMatthew1TimelineData() {
+    if (!isAdmin()) {
+        console.log('Admin access required to push timeline data');
+        return;
+    }
+    
+    const matthew1Timeline = [
+        "Matthew begins with the genealogy of Jesus, tracing His family history to show He is the promised Messiah.",
+        "The lineage starts with Abraham, the man through whom God began His covenant nation.",
+        "From Abraham it continues to Isaac, then to Jacob.",
+        "Jacob becomes the father of Judah, beginning the royal tribe.",
+        "The family line moves through generations until it reaches King David, confirming Jesus' royal right.",
+        "From David, the genealogy continues through Solomon and the kings of Judah, showing the royal line God preserved.",
+        "The timeline reaches the period of the Babylonian exile, marking a major turning point in Israel's history.",
+        "After the exile, the line continues through several generations until it reaches Jacob, the father of Joseph.",
+        "Joseph is introduced as the husband of Mary, through whom Jesus was born, completing the genealogy.",
+        "Matthew then explains how the birth of Jesus took place, shifting from genealogy to the story.",
+        "Mary is found to be pregnant, though she and Joseph had not come together.",
+        "Her pregnancy is from the Holy Spirit, a miraculous act of God.",
+        "Joseph, being righteous, does not want to make Mary a public example.",
+        "He plans to quietly end the engagement, trying to protect her from shame.",
+        "An angel appears to Joseph in a dream, interrupting his plan.",
+        "The angel tells him not to fear taking Mary as his wife, because the child is from the Holy Spirit.",
+        "Joseph is instructed to name the child \"Jesus\", because He will save His people from their sins.",
+        "Matthew explains that this fulfills Isaiah's prophecy about a virgin conceiving and giving birth to a son.",
+        "The prophecy states that the virgin will give birth to Immanuel, meaning \"God with us\".",
+        "Joseph obeys the angel's command and takes Mary as his wife.",
+        "He does not have relations with her until after Jesus is born, preserving her virginity.",
+        "When Jesus is born, Joseph names Him \"Jesus\" as the angel commanded, completing the chapter."
+    ];
+    
+    console.log('Pushing Matthew 1 timeline data to Supabase...');
+    
+    try {
+        // First check if data already exists
+        const { data: existingData, error: checkError } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id')
+            .eq('book_file', 'matthew')
+            .eq('chapter', 1);
+        
+        if (checkError) {
+            console.error('Error checking existing data:', checkError);
+            return;
+        }
+        
+        if (existingData && existingData.length > 0) {
+            console.log('Matthew 1 timeline data already exists in database');
+            showToast('Matthew 1 timeline data already exists!', 'info');
+            return;
+        }
+        
+        // Prepare timeline events for insertion
+        const timelineEvents = matthew1Timeline.map((event, index) => ({
+            book_file: 'matthew',
+            chapter: 1,
+            event_description: event,
+            verse_reference: '', // No specific verse references in the original data
+            testament: 'new',
+            order_index: (index + 1) * 10 // Use increments of 10 for easy insertion
+        }));
+        
+        // Insert data
+        const { error: insertError } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert(timelineEvents);
+        
+        if (insertError) {
+            console.error('Error inserting timeline data:', insertError);
+            showToast('Failed to push timeline data. Please try again.', 'error');
+        } else {
+            console.log('Matthew 1 timeline data successfully pushed to Supabase');
+            showToast(`Successfully added ${matthew1Timeline.length} timeline events for Matthew 1!`, 'success');
+        }
+    } catch (error) {
+        console.error('Error pushing timeline data:', error);
+        showToast('Failed to push timeline data. Please try again.', 'error');
+    }
+}
+
+// ========================= TIMELINE ORDERING FUNCTIONS =========================
+
+// Insert timeline event at specific position
+async function insertTimelineEventAt(position, description, verseReference = '') {
+    if (!isAdmin()) {
+        console.log('Admin access required');
+        return;
+    }
+    
+    try {
+        const book = bibleBooks[currentBook];
+        const chapterNum = parseInt(document.getElementById('chapter-selector').value);
+        const testament = book.testament || 'new';
+        
+        // Get all events for this chapter ordered by order_index
+        const { data: existingEvents } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id, order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: true });
+        
+        let newOrderIndex;
+        if (position === 0) {
+            // Insert at beginning
+            newOrderIndex = existingEvents.length > 0 ? existingEvents[0].order_index - 10 : 10;
+        } else if (position >= existingEvents.length) {
+            // Insert at end
+            newOrderIndex = existingEvents.length > 0 
+                ? existingEvents[existingEvents.length - 1].order_index + 10 
+                : 10;
+        } else {
+            // Insert between existing items
+            const prevOrderIndex = existingEvents[position - 1].order_index;
+            const nextOrderIndex = existingEvents[position].order_index;
+            newOrderIndex = Math.floor((prevOrderIndex + nextOrderIndex) / 2);
+            
+            // If there's no space between orders, reindex the timeline
+            if (newOrderIndex <= prevOrderIndex) {
+                await reindexTimeline(book.file, chapterNum);
+                // Recalculate after reindexing
+                newOrderIndex = (position * 10) + 5;
+            }
+        }
+        
+        // Insert the new event
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert([{
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: verseReference,
+                testament: testament,
+                order_index: newOrderIndex
+            }]);
+        
+        if (error) {
+            console.error('Error inserting timeline event:', error);
+            return false;
+        }
+        
+        showToast('Timeline event inserted successfully!', 'success');
+        showChapterTimeline(); // Refresh display
+        return true;
+        
+    } catch (error) {
+        console.error('Error inserting timeline event:', error);
+        return false;
+    }
+}
+
+// Reindex timeline order_index values to create proper spacing
+async function reindexTimeline(bookFile, chapter) {
+    try {
+        const { data: events } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('id')
+            .eq('book_file', bookFile)
+            .eq('chapter', chapter)
+            .order('order_index', { ascending: true })
+            .order('id', { ascending: true });
+        
+        if (!events || events.length === 0) return;
+        
+        // Update each event with new order_index (increments of 10)
+        const updates = events.map((event, index) => 
+            bibleDataManager.supabaseClient
+                .from('chapter_timeline')
+                .update({ order_index: (index + 1) * 10 })
+                .eq('id', event.id)
+        );
+        
+        await Promise.all(updates);
+        console.log('Timeline reindexed successfully');
+        
+    } catch (error) {
+        console.error('Error reindexing timeline:', error);
+    }
+}
+
+// ========================= INLINE TIMELINE FUNCTIONS =========================
+
+// Add timeline entry inline (no modal)
+function addTimelineInline() {
+    if (!isAdmin()) {
+        console.log('Admin access required');
+        return;
+    }
+    
+    const timelineContainer = document.querySelector('.timeline-list');
+    if (!timelineContainer) return;
+    
+    // Create new inline timeline item with textarea
+    const newItemHtml = `
+        <li class="timeline-item timeline-item-new" data-is-new="true">
+            <div class="timeline-content">
+                <div class="timeline-event">
+                    <textarea class="timeline-add-textarea" 
+                              placeholder="Enter new timeline event..." 
+                              rows="3"></textarea>
+                </div>
+                <div class="timeline-add-actions">
+                    <button class="timeline-save-btn" onclick="saveNewTimelineItem(this)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="timeline-cancel-btn" onclick="cancelNewTimelineItem(this)">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </li>
+    `;
+    
+    // Add to the end of timeline
+    timelineContainer.insertAdjacentHTML('beforeend', newItemHtml);
+    
+    // Scroll to the new item and focus on textarea
+    const newItem = timelineContainer.lastElementChild;
+    newItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    
+    const textarea = newItem.querySelector('.timeline-add-textarea');
+    setTimeout(() => textarea.focus(), 300); // Wait for scroll to complete
+}
+
+// Save new timeline item
+async function saveNewTimelineItem(button) {
+    const item = button.closest('.timeline-item');
+    const textarea = item.querySelector('.timeline-add-textarea');
+    const description = textarea.value.trim();
+    
+    if (!description) {
+        showToast('Please enter a timeline event', 'error');
+        return;
+    }
+    
+    try {
+        const book = bibleBooks[currentBook];
+        const chapterNum = parseInt(document.getElementById('chapter-selector').value);
+        const testament = book.testament || 'new';
+        
+        // Get the maximum order_index for this chapter to append at the end
+        const { data: maxOrderData } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .select('order_index')
+            .eq('book_file', book.file)
+            .eq('chapter', chapterNum)
+            .order('order_index', { ascending: false })
+            .limit(1);
+        
+        const nextOrderIndex = maxOrderData && maxOrderData.length > 0 
+            ? maxOrderData[0].order_index + 10 
+            : 10;
+        
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .insert([{
+                book_file: book.file,
+                chapter: chapterNum,
+                event_description: description,
+                verse_reference: '',
+                testament: testament,
+                order_index: nextOrderIndex
+            }]);
+        
+        if (error) {
+            console.error('Error adding timeline event:', error);
+            showToast('Failed to add timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event added successfully!', 'success');
+            // Refresh timeline display
+            showChapterTimeline();
+        }
+    } catch (error) {
+        console.error('Error adding timeline event:', error);
+        showToast('Failed to add timeline event. Please try again.', 'error');
+    }
+}
+
+// Cancel new timeline item
+function cancelNewTimelineItem(button) {
+    const item = button.closest('.timeline-item');
+    item.remove();
+}
+
+// Delete timeline item
+async function deleteTimelineItem(eventId) {
+    if (!isAdmin()) {
+        console.log('Admin access required');
+        return;
+    }
+    
+    if (!confirm('Are you sure you want to delete this timeline event?')) {
+        return;
+    }
+    
+    try {
+        const { error } = await bibleDataManager.supabaseClient
+            .from('chapter_timeline')
+            .delete()
+            .eq('id', eventId);
+        
+        if (error) {
+            console.error('Error deleting timeline event:', error);
+            showToast('Failed to delete timeline event. Please try again.', 'error');
+        } else {
+            showToast('Timeline event deleted successfully!', 'success');
+            // Refresh timeline display
+            showChapterTimeline();
+        }
+    } catch (error) {
+        console.error('Error deleting timeline event:', error);
+        showToast('Failed to delete timeline event. Please try again.', 'error');
+    }
 }
