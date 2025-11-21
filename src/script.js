@@ -1661,6 +1661,7 @@ function initializeSearch() {
         // Hide search, show everything
         searchResults.style.display = 'none';
         searchResults.classList.remove('active');
+        searchResultsInfo.style.display = 'none';
         scriptureText.style.display = 'block';
         booksSidebar.style.display = 'flex';
         chaptersColumn.style.display = 'flex';
