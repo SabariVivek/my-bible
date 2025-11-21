@@ -19,6 +19,12 @@
     }
 }
 
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Admin Mode Notifications */
 /* Toast message for mobile */
 .toast {

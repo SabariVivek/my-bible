@@ -22,13 +22,11 @@ const STATIC_ASSETS = [
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker: Installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE_NAME)
       .then(cache => {
-        console.log('Service Worker: Caching static assets');
         return cache.addAll(STATIC_ASSETS).catch(err => {
-          console.log('Service Worker: Some static assets failed to cache', err);
+          // Failed to cache some assets, continue anyway
         });
       })
       .then(() => self.skipWaiting())
@@ -37,7 +35,6 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches BUT keep persistent API cache
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker: Activated');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -49,10 +46,7 @@ self.addEventListener('activate', (event) => {
                            cache === PERSISTENT_API_CACHE;
           
           if (!shouldKeep) {
-            console.log('Service Worker: Deleting old cache:', cache);
             return caches.delete(cache);
-          } else {
-            console.log('Service Worker: Keeping cache:', cache);
           }
         })
       );
@@ -91,7 +85,6 @@ self.addEventListener('fetch', (event) => {
           return caches.match(event.request, { cacheName: PERSISTENT_API_CACHE })
             .then(persistentCache => {
               if (persistentCache) {
-                console.log('Service Worker: Serving API from persistent cache:', event.request.url);
                 return persistentCache;
               }
               // Try regular cache
@@ -99,7 +92,6 @@ self.addEventListener('fetch', (event) => {
             })
             .then(cachedResponse => {
               if (cachedResponse) {
-                console.log('Service Worker: Serving API from cache:', event.request.url);
                 return cachedResponse;
               }
               // Return offline message if no cache available
@@ -136,6 +128,7 @@ self.addEventListener('fetch', (event) => {
           
           return response;
         });
+      }).catch(() => {
       }).catch(() => {
         // If both cache and network fail, show offline page
         if (event.request.mode === 'navigate') {
@@ -210,11 +203,12 @@ self.addEventListener('fetch', (event) => {
         `, {
           headers: { 'Content-Type': 'text/html' }
         });
-      }
-      return new Response('Network error', {
-        status: 503,
-        headers: { 'Content-Type': 'text/plain' }
-      });
-    })
-  );
+        }
+        return new Response('Network error', {
+          status: 503,
+          headers: { 'Content-Type': 'text/plain' }
+        });
+      })
+    );
+  }
 });

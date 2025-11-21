@@ -368,12 +368,13 @@ class BibleDataManager {
         }
     }
 
-    // Preload all books in background (silent, non-blocking)
-    async preloadAllBooks(bibleBooks, language) {
+    // Preload all books in background (with progress callback)
+    async preloadAllBooks(bibleBooks, language, progressCallback = null) {
         const preloadKey = `preload_complete_${language}`;
         
         // Check if already preloaded
         if (localStorage.getItem(preloadKey) === 'true') {
+            if (progressCallback) progressCallback(bibleBooks.length, bibleBooks.length, true);
             return;
         }
 
@@ -395,15 +396,29 @@ class BibleDataManager {
                     await this.loadEntireBook(book.file, language);
                     loaded++;
                     
+                    // Update progress
+                    if (progressCallback) {
+                        progressCallback(i + 1, total, false);
+                    }
+                    
                     // Small delay to avoid API rate limits
                     await new Promise(resolve => setTimeout(resolve, 100));
+                } else {
+                    // Book already cached, still update progress
+                    if (progressCallback) {
+                        progressCallback(i + 1, total, false);
+                    }
                 }
             } catch (error) {
+                // Continue even if one book fails
             }
         }
 
         // Mark as complete
         localStorage.setItem(preloadKey, 'true');
+        if (progressCallback) {
+            progressCallback(total, total, true);
+        }
     }
 
     // Check preload status
