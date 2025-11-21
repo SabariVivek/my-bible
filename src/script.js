@@ -101,11 +101,11 @@ function normalizeBookName(bookName) {
 
 // Helper function to check if a book has any memory verses
 function bookHasMemoryVerses(bookName) {
-    if (typeof memoryVerses === 'undefined') return false;
+    if (typeof window.memoryVerses === 'undefined') return false;
     
     const normalizedBookName = normalizeBookName(bookName);
     
-    return memoryVerses.some(memVerse => {
+    return window.memoryVerses.some(memVerse => {
         const [book] = memVerse.split(/\s+(?=\d)/);
         const normalizedMemBook = normalizeBookName(book);
         return normalizedMemBook === normalizedBookName;
@@ -114,11 +114,11 @@ function bookHasMemoryVerses(bookName) {
 
 // Helper function to check if a chapter has any memory verses
 function chapterHasMemoryVerses(bookName, chapter) {
-    if (typeof memoryVerses === 'undefined') return false;
+    if (typeof window.memoryVerses === 'undefined') return false;
     
     const normalizedBookName = normalizeBookName(bookName);
     
-    return memoryVerses.some(memVerse => {
+    return window.memoryVerses.some(memVerse => {
         const [book, range] = memVerse.split(/\s+(?=\d)/);
         if (!range) return false;
         const normalizedMemBook = normalizeBookName(book);
@@ -129,11 +129,11 @@ function chapterHasMemoryVerses(bookName, chapter) {
 
 // Helper function to check if a specific verse is a memory verse (for verse column indicators)
 function verseHasMemoryVerse(bookName, chapter, verse) {
-    if (typeof memoryVerses === 'undefined') return false;
+    if (typeof window.memoryVerses === 'undefined') return false;
     
     const normalizedBookName = normalizeBookName(bookName);
     
-    return memoryVerses.some(memVerse => {
+    return window.memoryVerses.some(memVerse => {
         const [book, range] = memVerse.split(/\s+(?=\d)/);
         if (!range) return false;
         const normalizedMemBook = normalizeBookName(book);
@@ -161,11 +161,11 @@ function verseHasMemoryVerse(bookName, chapter, verse) {
 
 // Helper function to check if a verse is a memory verse
 function isMemoryVerse(bookName, chapter, verse) {
-    if (typeof memoryVerses === 'undefined') return false;
+    if (typeof window.memoryVerses === 'undefined') return false;
     
     const normalizedBookName = normalizeBookName(bookName);
     
-    return memoryVerses.some(memVerse => {
+    return window.memoryVerses.some(memVerse => {
         // Handle verse ranges like "Isaiah 12:1–6" or "Ephesians 2:8–9"
         if (memVerse.includes('–') || memVerse.includes('-')) {
             const [book, range] = memVerse.split(/\s+(?=\d)/);
@@ -2206,10 +2206,10 @@ function showHomePage() {
     
     // Load and display a random memory verse
     // Wait for both data preloading and verse loading before hiding loader
-    const verseLoadingPromise = (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0)
+    const verseLoadingPromise = (typeof window.memoryVerses !== 'undefined' && window.memoryVerses.length > 0)
         ? Promise.resolve().then(() => loadRandomMemoryVerse())
         : loadMemoryVersesFromSupabase().then(() => {
-            if (typeof memoryVerses !== 'undefined' && memoryVerses.length > 0) {
+            if (typeof window.memoryVerses !== 'undefined' && window.memoryVerses.length > 0) {
                 loadRandomMemoryVerse();
             }
         });
@@ -2264,7 +2264,7 @@ function loadRandomMemoryVerse() {
     // Keep scripture text hidden while loading (page loader handles the loading state)
     scriptureText.style.display = 'none';
     
-    if (typeof memoryVerses === 'undefined' || memoryVerses.length === 0) {
+    if (typeof window.memoryVerses === 'undefined' || window.memoryVerses.length === 0) {
         scriptureText.style.display = 'block';
         scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 2rem; color: var(--text-secondary);">Welcome to My Bible</div>';
         return;
@@ -2272,7 +2272,7 @@ function loadRandomMemoryVerse() {
     
     // Get today's verse (same verse throughout the day)
     const verseIndex = getTodayVerseIndex();
-    const verseReference = memoryVerses[verseIndex];
+    const verseReference = window.memoryVerses[verseIndex];
     
     // Parse the verse reference (e.g., "John 3:16" or "Isaiah 12:1–6")
     const verseData = parseVerseReference(verseReference);
@@ -3944,9 +3944,10 @@ function openNotesModal(verseNum = null) {
         window.memoryVerses = [];
     }
     
-    // Check if verse is already a memory verse
-    const isMemoryVerse = Array.isArray(memoryVerses) && memoryVerses.includes(verseReference);
-    if (isMemoryVerse) {
+    // Check if verse is already a memory verse using the same logic as isMemoryVerse()
+    const checkIsMemoryVerse = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
+    
+    if (checkIsMemoryVerse) {
         memoryVerseToggle.classList.add('active');
         memoryVerseToggle.title = 'Remove from Memory Verses';
     } else {
@@ -4257,27 +4258,27 @@ function initializeNotesModal() {
         const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${currentNoteVerse}`;
         
         // Initialize memoryVerses if it doesn't exist
-        if (typeof memoryVerses === 'undefined') {
+        if (typeof window.memoryVerses === 'undefined') {
             window.memoryVerses = [];
         }
         
         // Toggle memory verse status
-        const isMemoryVerse = memoryVerses.includes(verseReference);
+        const isMemoryVerse = window.memoryVerses.includes(verseReference);
         
         if (isMemoryVerse) {
             // Remove from memory verses
-            window.memoryVerses = memoryVerses.filter(v => v !== verseReference);
+            window.memoryVerses = window.memoryVerses.filter(v => v !== verseReference);
             memoryVerseToggle.classList.remove('active');
             memoryVerseToggle.title = 'Add to Memory Verses';
         } else {
             // Add to memory verses
-            memoryVerses.push(verseReference);
+            window.memoryVerses.push(verseReference);
             memoryVerseToggle.classList.add('active');
             memoryVerseToggle.title = 'Remove from Memory Verses';
         }
         
         // Save to Supabase and localStorage
-        console.log('Saving memory verses to Supabase...', memoryVerses);
+        console.log('Saving memory verses to Supabase...', window.memoryVerses);
         const saved = await saveMemoryVersesToSupabase();
         
         if (saved) {
