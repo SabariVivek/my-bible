@@ -1814,19 +1814,10 @@ function initializeSearch() {
                     const bookName = isTamil ? book.tamilName : book.name;
                     const bookIndex = bibleBooks.indexOf(book);
                     
-                    // Create highlighted text
+                    // Create highlighted text - highlight all occurrences (case-insensitive)
                     let highlightedText = verseText;
-                    if (isTamil) {
-                        const index = verseText.indexOf(query);
-                        if (index !== -1) {
-                            highlightedText = verseText.substring(0, index) + 
-                                           `<span class="search-highlight">${query}</span>` + 
-                                           verseText.substring(index + query.length);
-                        }
-                    } else {
-                        const regex = new RegExp(`\\b(${escapeRegExp(query)})`, 'gi');
-                        highlightedText = verseText.replace(regex, '<span class="search-highlight">$1</span>');
-                    }
+                    const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+                    highlightedText = verseText.replace(regex, '<span class="search-highlight">$1</span>');
                     
                     results.push({
                         bookIndex,
