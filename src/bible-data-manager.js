@@ -112,14 +112,8 @@ class BibleDataManager {
             }
         }
 
-        // Load entire book (will cache all chapters)
-        const bookData = await this.loadEntireBook(bookFile, language);
-        if (bookData && bookData[chapter]) {
-            return bookData[chapter];
-        }
-
-        // Fallback to single chapter load if book load failed
-        console.log(`Fallback: Fetching single chapter from API: ${cacheKey}`);
+        // Load single chapter first for faster initial load
+        console.log(`Fetching single chapter from API: ${cacheKey}`);
         
         try {
             const { data, error } = await this.supabaseClient
@@ -146,6 +140,8 @@ class BibleDataManager {
             
             // Store in localStorage for persistence
             this.saveToLocalStorage(cacheKey, chapterData);
+            
+            console.log(`✅ Chapter ${chapter} loaded successfully`);
 
             return chapterData;
         } catch (error) {
@@ -156,15 +152,25 @@ class BibleDataManager {
         }
     }
 
-    // Preload adjacent chapters (less necessary now since entire book is loaded)
-    // Kept for backward compatibility, but now it just ensures the book is loaded
+    // Preload adjacent chapters in background for smooth navigation
     async preloadAdjacentChapters(bookFile, currentChapter, language, totalChapters) {
-        // With book-level loading, just ensure the current book is loaded
-        // All chapters will already be available
-        const bookCacheKey = this.getBookCacheKey(bookFile, language);
-        if (!this.bookCache.has(bookCacheKey)) {
-            await this.loadEntireBook(bookFile, language);
+        // Preload next 2 and previous 2 chapters
+        const chaptersToPreload = [];
+        
+        for (let i = -2; i <= 2; i++) {
+            if (i === 0) continue; // Skip current chapter
+            const chapter = currentChapter + i;
+            if (chapter >= 1 && chapter <= totalChapters) {
+                chaptersToPreload.push(chapter);
+            }
         }
+
+        // Load chapters in background without waiting
+        Promise.all(
+            chaptersToPreload.map(chapter => 
+                this.getChapterData(bookFile, chapter, language)
+            )
+        ).catch(err => console.error('Background preload error:', err));
     }
 
     // Save individual chapter to localStorage (for fallback single-chapter loads)

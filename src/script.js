@@ -204,41 +204,7 @@ if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
     });
 }
 
-// Network status detection
-function checkNetworkStatus() {
-    if (!navigator.onLine) {
-        showOfflineMessage();
-    }
-}
-
-function showOfflineMessage() {
-    const existingMessage = document.querySelector('.offline-message');
-    if (existingMessage) return;
-
-    const offlineDiv = document.createElement('div');
-    offlineDiv.className = 'offline-message';
-    offlineDiv.innerHTML = `
-        <div class="offline-content">
-            <span class="offline-icon">📡</span>
-            <div class="offline-text">
-                <strong>No Internet Connection</strong>
-                <p>Please connect to a network to use this app</p>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(offlineDiv);
-}
-
-function hideOfflineMessage() {
-    const offlineDiv = document.querySelector('.offline-message');
-    if (offlineDiv) {
-        offlineDiv.remove();
-    }
-}
-
-// Listen for online/offline events
-window.addEventListener('offline', showOfflineMessage);
-window.addEventListener('online', hideOfflineMessage);
+// Network status detection removed - app now works offline with cached data
 
 // History and back button management
 let currentPage = 'bible'; // 'bible', 'search', or other pages
@@ -313,9 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bottomNav) {
         bottomNav.style.right = '';
     }
-    
-    // Check network status immediately
-    checkNetworkStatus();
     
     // Initialize history management
     initializeHistoryManagement();
@@ -736,39 +699,39 @@ async function loadBook(bookIndex, chapter) {
     
     try {
         if (currentLanguage === 'both') {
-            // Load both Tamil and English from Supabase
+            // Load entire book for both languages
+            console.log(`Loading entire book: ${book.name}`);
+            await Promise.all([
+                bibleDataManager.loadEntireBook(book.file, 'tamil'),
+                bibleDataManager.loadEntireBook(book.file, 'english')
+            ]);
+            
+            // Get current chapter data from cache
             const [tamilData, englishData] = await Promise.all([
                 bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
                 bibleDataManager.getChapterData(book.file, chapter, 'english')
             ]);
             
             if (tamilData && englishData) {
-                // Wrap in chapter object to match existing format
                 currentTamilData = { [`chapter_${chapter}`]: tamilData };
                 currentData = { [`chapter_${chapter}`]: englishData };
-                
                 updateUI();
-                
-                // Preload adjacent chapters in background
-                bibleDataManager.preloadAdjacentChapters(book.file, chapter, 'tamil', book.chapters);
-                bibleDataManager.preloadAdjacentChapters(book.file, chapter, 'english', book.chapters);
             } else {
                 console.error('Failed to load Bible data from Supabase');
             }
         } else {
-            // Single language mode
+            // Single language mode - load entire book
             const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+            console.log(`Loading entire book: ${book.name} (${language})`);
+            await bibleDataManager.loadEntireBook(book.file, language);
+            
+            // Get current chapter data from cache
             const chapterData = await bibleDataManager.getChapterData(book.file, chapter, language);
             
             if (chapterData) {
-                // Wrap in chapter object to match existing format
                 currentData = { [`chapter_${chapter}`]: chapterData };
                 currentTamilData = null;
-                
                 updateUI();
-                
-                // Preload adjacent chapters in background
-                bibleDataManager.preloadAdjacentChapters(book.file, chapter, language, book.chapters);
             } else {
                 console.error('Failed to load Bible data from Supabase');
             }
@@ -872,7 +835,7 @@ function updateChapters() {
     
     // Add click handlers
     chaptersColumn.querySelectorAll('.number-item').forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', async () => {
             // Restore UI elements if coming from home page
             restoreUIFromHomePage();
             localStorage.removeItem('isOnHomePage');
@@ -886,6 +849,26 @@ function updateChapters() {
             
             // Add active class to clicked chapter
             item.classList.add('active');
+            
+            // Get chapter data from cache (already loaded)
+            const book = bibleBooks[currentBook];
+            if (currentLanguage === 'both') {
+                const [tamilData, englishData] = await Promise.all([
+                    bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
+                    bibleDataManager.getChapterData(book.file, chapter, 'english')
+                ]);
+                if (tamilData && englishData) {
+                    currentTamilData = { [`chapter_${chapter}`]: tamilData };
+                    currentData = { [`chapter_${chapter}`]: englishData };
+                }
+            } else {
+                const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+                const chapterData = await bibleDataManager.getChapterData(book.file, chapter, language);
+                if (chapterData) {
+                    currentData = { [`chapter_${chapter}`]: chapterData };
+                    currentTamilData = null;
+                }
+            }
             
             updateUI();
             
