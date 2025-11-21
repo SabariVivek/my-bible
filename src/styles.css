@@ -1288,7 +1288,7 @@ body:not(.dark-theme) .moon-icon {
 }
 
 .verses-column {
-    border-right: none !important;
+    border-right: 1px solid #e0e0e0 !important;
 }
 
 .chapters-column.hidden,
@@ -3656,7 +3656,7 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 .verse-line.has-note {
     position: relative;
     padding-left: 8px;
-    border-left: 4px solid;
+    /* border-left: 4px solid; */
 }
 
 .verse-line.has-note.note-burgundy {
