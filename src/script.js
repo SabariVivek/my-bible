@@ -260,6 +260,24 @@ function navigateToPage(pageName) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Request persistent storage to prevent data deletion
+    if (navigator.storage && navigator.storage.persist) {
+        navigator.storage.persist().then(persistent => {
+            if (persistent) {
+                console.log('✅ Storage will persist and not be cleared');
+            } else {
+                console.warn('⚠️ Storage may be cleared by the browser');
+            }
+        });
+    }
+    
+    // Check if storage is already persistent
+    if (navigator.storage && navigator.storage.persisted) {
+        navigator.storage.persisted().then(isPersisted => {
+            console.log('Storage persisted status:', isPersisted);
+        });
+    }
+    
     // Force close any drawers immediately on page load
     const summaryDrawer = document.getElementById('summary-drawer');
     if (summaryDrawer) {
@@ -489,8 +507,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Initialize voice command functionality
+    initializeVoiceCommand();
+    
     // Always load Bible directly on all devices (mobile, tablet, desktop)
     loadBook(currentBook, currentChapter);
+    
+    // Start background preload after initial load (non-blocking, silent)
+    setTimeout(() => {
+        startBackgroundPreload();
+    }, 3000); // Wait 3 seconds after page load to start preloading
 });
 
 // Initialize mobile drawer
@@ -6033,5 +6059,223 @@ async function saveNewTimelineToDatabase(description) {
     } catch (error) {
         console.error('Error adding timeline event:', error);
         throw error;
+    }
+}
+
+// ========================================
+// Voice Command Integration
+// ========================================
+
+let voiceCommandManager = null;
+
+/**
+ * Initialize voice command functionality
+ */
+function initializeVoiceCommand() {
+    // Check if VoiceCommandManager is available
+    if (typeof VoiceCommandManager === 'undefined') {
+        console.error('VoiceCommandManager not loaded');
+        return;
+    }
+
+    // Initialize the voice command manager
+    voiceCommandManager = new VoiceCommandManager(bibleBooks);
+
+    // Get UI elements
+    const voiceBtn = document.getElementById('voice-btn');
+    const voiceStatus = document.getElementById('voice-status');
+    const voiceStatusText = voiceStatus.querySelector('.voice-status-text');
+
+    if (!voiceBtn) {
+        console.error('Voice button not found');
+        return;
+    }
+
+    // Set up callbacks
+    voiceCommandManager.onListeningChange = (isListening) => {
+        if (isListening) {
+            voiceBtn.classList.add('listening');
+            showVoiceStatus('🎤 Listening... Speak clearly and loud enough', 'listening');
+        } else {
+            voiceBtn.classList.remove('listening');
+            hideVoiceStatus();
+        }
+    };
+    
+    voiceCommandManager.onInterimResult = (transcript) => {
+        // Show what's being heard in real-time
+        showVoiceStatus(`Hearing: "${transcript}"`, 'listening');
+    };
+
+    voiceCommandManager.onCommandParsed = async (command) => {
+        console.log('Voice command parsed:', command);
+        
+        // Validate the command first
+        const validation = voiceCommandManager.validateCommand(command);
+        if (!validation.valid) {
+            showVoiceStatus(validation.error, 'error');
+            setTimeout(() => hideVoiceStatus(), 3000);
+            return;
+        }
+        
+        // Get the display name based on current UI language (independent of voice command language)
+        let displayBookName = command.book; // Default to English
+        if (command.bookObject) {
+            if (currentLanguage === 'tamil') {
+                displayBookName = command.bookObject.tamilName || command.book;
+            } else if (currentLanguage === 'both') {
+                // For 'both' mode, show both names
+                displayBookName = `${command.book} / ${command.bookObject.tamilName}`;
+            }
+            // For 'english', use command.book (English name)
+        }
+        
+        // Show success status and start navigation immediately
+        showVoiceStatus(`Opening ${displayBookName} ${command.chapter}${command.verse ? ':' + command.verse : ''}...`, 'success');
+        
+        // Navigate to the book and chapter immediately
+        try {
+            await navigateViaVoice(command);
+            
+            // Update status to show completion
+            showVoiceStatus(`✓ ${displayBookName} ${command.chapter}${command.verse ? ':' + command.verse : ''}`, 'success');
+            
+            // Hide status after successful navigation
+            setTimeout(() => {
+                hideVoiceStatus();
+            }, 1500);
+        } catch (error) {
+            console.error('Navigation error:', error);
+            showVoiceStatus('Error navigating to verse', 'error');
+            setTimeout(() => hideVoiceStatus(), 3000);
+        }
+    };
+
+    voiceCommandManager.onError = (errorMessage) => {
+        console.error('Voice command error:', errorMessage);
+        showVoiceStatus(errorMessage, 'error');
+        
+        // Hide error after 3 seconds
+        setTimeout(() => {
+            hideVoiceStatus();
+        }, 3000);
+    };
+
+    // Voice button click handler
+    voiceBtn.addEventListener('click', () => {
+        if (voiceCommandManager.isListening) {
+            voiceCommandManager.stopListening();
+        } else {
+            // Match voice recognition language to UI language setting
+            // Tamil UI → Tamil voice only
+            // English UI → English voice only
+            // Both UI → English voice only (for now)
+            let voiceLang = 'en'; // default
+            if (currentLanguage === 'tamil') {
+                voiceLang = 'ta';
+            } else if (currentLanguage === 'english') {
+                voiceLang = 'en';
+            } else { // 'both'
+                voiceLang = 'en'; // Use English for 'both' mode
+            }
+            voiceCommandManager.startListening(voiceLang);
+        }
+    });
+}
+
+/**
+ * Navigate to book/chapter/verse based on voice command
+ */
+async function navigateViaVoice(command) {
+    const { bookIndex, chapter, verse } = command;
+
+    // If we're not already on the right book or chapter, load it
+    if (currentBook !== bookIndex || currentChapter !== chapter) {
+        await loadBook(bookIndex, chapter);
+    }
+
+    // If verse is specified, scroll to it after a short delay to ensure rendering
+    if (verse) {
+        // Use shorter delay for faster response
+        setTimeout(() => {
+            scrollToVerse(verse);
+        }, 300);
+    }
+}
+
+/**
+ * Show voice status notification
+ */
+function showVoiceStatus(message, type = 'listening') {
+    const voiceStatus = document.getElementById('voice-status');
+    const voiceStatusText = voiceStatus.querySelector('.voice-status-text');
+    
+    if (!voiceStatus || !voiceStatusText) return;
+
+    // Update text
+    voiceStatusText.textContent = message;
+    
+    // Remove previous type classes
+    voiceStatus.classList.remove('error', 'success', 'listening');
+    
+    // Add current type class
+    if (type !== 'listening') {
+        voiceStatus.classList.add(type);
+    }
+    
+    // Show the status
+    voiceStatus.style.display = 'block';
+    setTimeout(() => {
+        voiceStatus.classList.add('show');
+    }, 10);
+}
+
+/**
+ * Hide voice status notification
+ */
+function hideVoiceStatus() {
+    const voiceStatus = document.getElementById('voice-status');
+    if (!voiceStatus) return;
+
+    voiceStatus.classList.remove('show');
+    setTimeout(() => {
+        voiceStatus.style.display = 'none';
+    }, 300);
+}
+
+/**
+ * Start background preload of all Bible books
+ * This runs silently in the background without blocking the UI
+ */
+async function startBackgroundPreload() {
+    console.log('🔄 Starting background preload...');
+    
+    // Determine which languages to preload based on current UI language
+    const languagesToPreload = [];
+    
+    if (currentLanguage === 'both') {
+        languagesToPreload.push('tamil', 'english');
+    } else if (currentLanguage === 'tamil') {
+        languagesToPreload.push('tamil');
+    } else {
+        languagesToPreload.push('english');
+    }
+    
+    // Preload all books for each language
+    for (const language of languagesToPreload) {
+        // Check if already preloaded
+        if (bibleDataManager.isPreloadComplete(language)) {
+            console.log(`✅ ${language} books already preloaded`);
+            continue;
+        }
+        
+        // Start preloading (non-blocking)
+        bibleDataManager.preloadAllBooks(bibleBooks, language)
+            .then(() => {
+                console.log(`✅ Completed preloading all books in ${language}`);
+            })
+            .catch(error => {
+                console.error(`❌ Error preloading ${language} books:`, error);
+            });
     }
 }

@@ -1,7 +1,12 @@
 // Service worker for PWA with Supabase API caching
-const CACHE_NAME = 'my-bible-v2';
-const API_CACHE_NAME = 'my-bible-api-v2';
-const STATIC_CACHE_NAME = 'my-bible-static-v2';
+// IMPORTANT: Only increment version when you want to force cache clearing
+const CACHE_VERSION = 'v3';
+const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
+const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
+const STATIC_CACHE_NAME = `my-bible-static-${CACHE_VERSION}`;
+
+// Persistent API cache that survives updates
+const PERSISTENT_API_CACHE = 'my-bible-api-persistent';
 
 // Static assets to cache
 const STATIC_ASSETS = [
@@ -30,16 +35,24 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate event - clean up old caches
+// Activate event - clean up old caches BUT keep persistent API cache
 self.addEventListener('activate', (event) => {
   console.log('Service Worker: Activated');
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME && cache !== API_CACHE_NAME && cache !== STATIC_CACHE_NAME) {
+          // Keep current caches AND persistent API cache
+          const shouldKeep = cache === CACHE_NAME || 
+                           cache === API_CACHE_NAME || 
+                           cache === STATIC_CACHE_NAME ||
+                           cache === PERSISTENT_API_CACHE;
+          
+          if (!shouldKeep) {
             console.log('Service Worker: Deleting old cache:', cache);
             return caches.delete(cache);
+          } else {
+            console.log('Service Worker: Keeping cache:', cache);
           }
         })
       );
@@ -51,7 +64,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   
-  // Handle Supabase API requests (cache after fetch)
+  // Handle Supabase API requests (cache after fetch with persistent storage)
   if (url.origin.includes('supabase.co')) {
     event.respondWith(
       fetch(event.request)
@@ -59,8 +72,13 @@ self.addEventListener('fetch', (event) => {
           // Clone the response
           const responseClone = response.clone();
           
-          // Cache the successful response
+          // Cache the successful response in BOTH caches
           if (response.status === 200) {
+            // Store in persistent cache that survives updates
+            caches.open(PERSISTENT_API_CACHE).then(cache => {
+              cache.put(event.request, responseClone.clone());
+            });
+            // Also store in version-specific cache for this session
             caches.open(API_CACHE_NAME).then(cache => {
               cache.put(event.request, responseClone);
             });
@@ -69,17 +87,26 @@ self.addEventListener('fetch', (event) => {
           return response;
         })
         .catch(() => {
-          // If network fails, try to serve from cache
-          return caches.match(event.request).then(cachedResponse => {
-            if (cachedResponse) {
-              console.log('Service Worker: Serving API from cache:', event.request.url);
-              return cachedResponse;
-            }
-            // Return offline message if no cache available
-            return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
-              headers: { 'Content-Type': 'application/json' }
+          // If network fails, try persistent cache first, then regular cache
+          return caches.match(event.request, { cacheName: PERSISTENT_API_CACHE })
+            .then(persistentCache => {
+              if (persistentCache) {
+                console.log('Service Worker: Serving API from persistent cache:', event.request.url);
+                return persistentCache;
+              }
+              // Try regular cache
+              return caches.match(event.request);
+            })
+            .then(cachedResponse => {
+              if (cachedResponse) {
+                console.log('Service Worker: Serving API from cache:', event.request.url);
+                return cachedResponse;
+              }
+              // Return offline message if no cache available
+              return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
+                headers: { 'Content-Type': 'application/json' }
+              });
             });
-          });
         })
     );
     return;

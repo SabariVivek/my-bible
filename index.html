@@ -137,6 +137,21 @@
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
             </button>
+            <!-- Voice Command button - HIDDEN FOR NOW -->
+            <button id="voice-btn" class="icon-btn voice-btn" aria-label="Voice Command" title="Voice Command" style="display: none;">
+                <svg class="mic-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+                <svg class="mic-listening-icon" width="18" height="18" viewBox="0 0 24 24" fill="#ff4444" stroke="#ff4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+            </button>
             <!-- Search button -->
             <button id="search-btn" class="icon-btn search-btn" aria-label="Search">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
@@ -363,6 +378,19 @@
             <div class="notes-loading" id="notes-loading">
                 <div class="notes-spinner"></div>
             </div>
+        </div>
+    </div>
+
+    <!-- Voice Command Status -->
+    <div id="voice-status" class="voice-status" style="display: none;">
+        <div class="voice-status-content">
+            <svg class="voice-status-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+            </svg>
+            <span class="voice-status-text">Listening...</span>
         </div>
     </div>
 
@@ -793,6 +821,7 @@
     <script src="config/config.local.js"></script>
     <script src="config/config.js"></script>
     <script src="src/bible-data-manager.js"></script>
+    <script src="src/voice-command.js"></script>
     <script src="src/script.js?v=20251120-16"></script>
     <script>
         // Mobile search button handler

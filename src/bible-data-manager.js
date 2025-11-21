@@ -11,18 +11,52 @@ class BibleDataManager {
         this.cache = new Map(); // In-memory cache
         this.bookCache = new Map(); // Cache for entire books
         this.supabaseClient = null;
+        this.db = null; // IndexedDB instance
+        this.dbReady = false;
         this.initSupabase();
+        this.initIndexedDB();
     }
 
     initSupabase() {
         if (typeof supabase === 'undefined') {
-            console.error('Supabase library not loaded');
             return;
         }
         this.supabaseClient = supabase.createClient(
             SUPABASE_BIBLE_CONFIG.url,
             SUPABASE_BIBLE_CONFIG.anonKey
         );
+    }
+
+    // Initialize IndexedDB for large data storage
+    async initIndexedDB() {
+        return new Promise((resolve, reject) => {
+            const request = indexedDB.open('MyBibleDB', 1);
+
+            request.onerror = () => {
+                reject(request.error);
+            };
+
+            request.onsuccess = () => {
+                this.db = request.result;
+                this.dbReady = true;
+                resolve(this.db);
+            };
+
+            request.onupgradeneeded = (event) => {
+                const db = event.target.result;
+                
+                // Create object store for books
+                if (!db.objectStoreNames.contains('books')) {
+                    const bookStore = db.createObjectStore('books', { keyPath: 'key' });
+                    bookStore.createIndex('language', 'language', { unique: false });
+                }
+
+                // Create object store for preload status
+                if (!db.objectStoreNames.contains('settings')) {
+                    db.createObjectStore('settings', { keyPath: 'key' });
+                }
+            };
+        });
     }
 
     // Generate cache key for chapter
@@ -39,14 +73,27 @@ class BibleDataManager {
     async loadEntireBook(bookFile, language) {
         const bookCacheKey = this.getBookCacheKey(bookFile, language);
         
-        // Check if book is already cached
+        // Check if book is already cached in memory
         if (this.bookCache.has(bookCacheKey)) {
-            console.log(`Book cache hit: ${bookFile} (${language})`);
             return this.bookCache.get(bookCacheKey);
         }
 
-        console.log(`Loading entire book from API: ${bookFile} (${language})`);
-        
+        // Try to load from IndexedDB/localStorage first (offline-first approach)
+        const cachedBook = await this.loadBookFromLocalStorage(bookCacheKey);
+        if (cachedBook) {
+            // Cache in memory for faster access
+            this.bookCache.set(bookCacheKey, cachedBook);
+            
+            // Also cache individual chapters
+            Object.keys(cachedBook).forEach(chapter => {
+                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
+                this.cache.set(chapterKey, cachedBook[chapter]);
+            });
+            
+            return cachedBook;
+        }
+
+        // Only fetch from API if not in cache (first time)
         try {
             // Fetch ALL chapters of the book at once
             const { data, error } = await this.supabaseClient
@@ -57,9 +104,7 @@ class BibleDataManager {
                 .order('chapter', { ascending: true })
                 .order('verse', { ascending: true });
 
-            if (error) {
-                console.error('Supabase error:', error);
-                return null;
+            if (error) {return null;
             }
 
             // Organize data by chapter
@@ -80,13 +125,12 @@ class BibleDataManager {
                 this.cache.set(chapterKey, bookData[chapter]);
             });
 
-            // Store in localStorage
+            // Store in IndexedDB/localStorage
             this.saveBookToLocalStorage(bookCacheKey, bookData);
 
-            console.log(`✅ Loaded ${Object.keys(bookData).length} chapters for ${bookFile}`);
             return bookData;
         } catch (error) {
-            console.error('Error loading entire book:', error);
+            // Network error - try cache again as fallback
             return this.loadBookFromLocalStorage(bookCacheKey);
         }
     }
@@ -97,7 +141,6 @@ class BibleDataManager {
         
         // Check chapter cache first
         if (this.cache.has(cacheKey)) {
-            console.log(`Cache hit: ${cacheKey}`);
             return this.cache.get(cacheKey);
         }
 
@@ -112,9 +155,6 @@ class BibleDataManager {
             }
         }
 
-        // Load single chapter first for faster initial load
-        console.log(`Fetching single chapter from API: ${cacheKey}`);
-        
         try {
             const { data, error } = await this.supabaseClient
                 .from(SUPABASE_BIBLE_CONFIG.tableName)
@@ -125,7 +165,6 @@ class BibleDataManager {
                 .order('verse', { ascending: true });
 
             if (error) {
-                console.error('Supabase error:', error);
                 return null;
             }
 
@@ -140,14 +179,9 @@ class BibleDataManager {
             
             // Store in localStorage for persistence
             this.saveToLocalStorage(cacheKey, chapterData);
-            
-            console.log(`✅ Chapter ${chapter} loaded successfully`);
 
             return chapterData;
         } catch (error) {
-            console.error('Error fetching chapter data:', error);
-            
-            // Try to load from localStorage as fallback
             return this.loadFromLocalStorage(cacheKey);
         }
     }
@@ -170,7 +204,7 @@ class BibleDataManager {
             chaptersToPreload.map(chapter => 
                 this.getChapterData(bookFile, chapter, language)
             )
-        ).catch(err => console.error('Background preload error:', err));
+        ).catch(err => {});
     }
 
     // Save individual chapter to localStorage (for fallback single-chapter loads)
@@ -178,90 +212,215 @@ class BibleDataManager {
         try {
             localStorage.setItem(`bible_cache_${key}`, JSON.stringify(data));
         } catch (e) {
-            // Quota exceeded - clear old cache
-            console.warn('LocalStorage quota exceeded, clearing old cache');
             this.clearOldCache();
             try {
                 localStorage.setItem(`bible_cache_${key}`, JSON.stringify(data));
             } catch (e2) {
-                console.error('Failed to save to localStorage even after clearing cache');
             }
         }
     }
 
-    // Save entire book to localStorage
-    saveBookToLocalStorage(key, bookData) {
-        try {
-            localStorage.setItem(`bible_book_${key}`, JSON.stringify(bookData));
-            console.log(`Saved entire book to localStorage: ${key}`);
-        } catch (e) {
-            // Book data might be too large, clear old cache and try again
-            console.warn('LocalStorage quota exceeded for book, clearing old cache');
-            this.clearOldCache();
+    // Save entire book to IndexedDB (replaces localStorage for large data)
+    async saveBookToIndexedDB(key, bookData, language) {
+        if (!this.dbReady) {
             try {
-                localStorage.setItem(`bible_book_${key}`, JSON.stringify(bookData));
-            } catch (e2) {
-                console.error('Failed to save book to localStorage even after clearing cache');
+                await this.initIndexedDB();
+            } catch (error) {
+                return; // Fail silently if IndexedDB not available
             }
+        }
+
+        if (!this.db) {
+            return; // DB not available
+        }
+
+        return new Promise((resolve, reject) => {
+            try {
+                const transaction = this.db.transaction(['books'], 'readwrite');
+                const store = transaction.objectStore('books');
+                
+                const data = {
+                    key: key,
+                    language: language,
+                    bookData: bookData,
+                    timestamp: Date.now()
+                };
+
+                const request = store.put(data);
+
+                request.onsuccess = () => {
+                    resolve();
+                };
+
+                request.onerror = () => {
+                    resolve(); // Resolve instead of reject to prevent errors
+                };
+            } catch (error) {
+                resolve(); // Fail silently
+            }
+        });
+    }
+
+    // Load entire book from IndexedDB
+    async loadBookFromIndexedDB(key) {
+        if (!this.dbReady) {
+            try {
+                await this.initIndexedDB();
+            } catch (error) {
+                return null; // DB not available
+            }
+        }
+
+        if (!this.db) {
+            return null; // DB not available
+        }
+
+        return new Promise((resolve) => {
+            try {
+                const transaction = this.db.transaction(['books'], 'readonly');
+                const store = transaction.objectStore('books');
+                const request = store.get(key);
+
+                request.onsuccess = () => {
+                    if (request.result) {
+                        resolve(request.result.bookData);
+                    } else {
+                        resolve(null);
+                    }
+                };
+
+                request.onerror = () => {
+                    resolve(null);
+                };
+            } catch (error) {
+                resolve(null);
+            }
+        });
+    }
+
+    // Save entire book (use IndexedDB for better storage)
+    async saveBookToLocalStorage(key, bookData) {
+        const language = key.includes('tamil') ? 'tamil' : 'english';
+        try {
+            await this.saveBookToIndexedDB(key, bookData, language);
+        } catch (e) {
+            // Fail silently - app will still work with in-memory cache
         }
     }
 
-    // Load individual chapter from localStorage
+    // Load individual chapter from localStorage (small data, still use localStorage)
     loadFromLocalStorage(key) {
         try {
             const data = localStorage.getItem(`bible_cache_${key}`);
             return data ? JSON.parse(data) : null;
         } catch (e) {
-            console.error('Error loading from localStorage:', e);
             return null;
         }
     }
 
-    // Load entire book from localStorage
-    loadBookFromLocalStorage(key) {
+    // Load entire book (try IndexedDB first, fallback to localStorage)
+    async loadBookFromLocalStorage(key) {
         try {
-            const data = localStorage.getItem(`bible_book_${key}`);
+            // Try IndexedDB first
+            const data = await this.loadBookFromIndexedDB(key);
             if (data) {
-                const bookData = JSON.parse(data);
-                console.log(`Loaded entire book from localStorage: ${key}`);
+                return data;
+            }
+
+            // Fallback to localStorage for backward compatibility
+            const localData = localStorage.getItem(`bible_book_${key}`);
+            if (localData) {
+                const bookData = JSON.parse(localData);
+                // Migrate to IndexedDB
+                const language = key.includes('tamil') ? 'tamil' : 'english';
+                await this.saveBookToIndexedDB(key, bookData, language);
+                // Remove from localStorage to free space
+                localStorage.removeItem(`bible_book_${key}`);
                 return bookData;
             }
             return null;
         } catch (e) {
-            console.error('Error loading book from localStorage:', e);
             return null;
         }
     }
 
-    // Clear old cache entries (keep only recent 5 books and 10 individual chapters)
+    // DISABLED: Don't auto-clear cache anymore - keep everything until manual clear
     clearOldCache() {
-        // Clear old individual chapter caches
-        const chapterKeys = Object.keys(localStorage).filter(k => k.startsWith('bible_cache_'));
-        if (chapterKeys.length > 10) {
-            chapterKeys.slice(0, chapterKeys.length - 10).forEach(k => {
-                localStorage.removeItem(k);
-                console.log(`Removed old chapter cache: ${k}`);
-            });
-        }
+        // No longer auto-clearing old cache
+        // Data persists until user manually clears it
+    }
 
-        // Clear old book caches
-        const bookKeys = Object.keys(localStorage).filter(k => k.startsWith('bible_book_'));
-        if (bookKeys.length > 5) {
-            bookKeys.slice(0, bookKeys.length - 5).forEach(k => {
-                localStorage.removeItem(k);
-                console.log(`Removed old book cache: ${k}`);
-            });
+    // Clear all cache (memory, localStorage, and IndexedDB)
+    async clearCache() {
+        this.cache.clear();
+        this.bookCache.clear();
+        
+        // Clear localStorage
+        Object.keys(localStorage)
+            .filter(k => k.startsWith('bible_cache_') || k.startsWith('bible_book_') || k.startsWith('preload_complete_'))
+            .forEach(k => localStorage.removeItem(k));
+        
+        // Clear IndexedDB
+        if (this.dbReady) {
+            const transaction = this.db.transaction(['books', 'settings'], 'readwrite');
+            await transaction.objectStore('books').clear();
+            await transaction.objectStore('settings').clear();
         }
     }
 
-    // Clear all cache (both memory and localStorage)
-    clearCache() {
-        this.cache.clear();
-        this.bookCache.clear();
-        Object.keys(localStorage)
-            .filter(k => k.startsWith('bible_cache_') || k.startsWith('bible_book_'))
-            .forEach(k => localStorage.removeItem(k));
-        console.log('All caches cleared');
+    // Preload all books in background (silent, non-blocking)
+    async preloadAllBooks(bibleBooks, language) {
+        const preloadKey = `preload_complete_${language}`;
+        
+        // Check if already preloaded
+        if (localStorage.getItem(preloadKey) === 'true') {
+            return;
+        }
+
+        // Track progress
+        let loaded = 0;
+        const total = bibleBooks.length;
+
+        // Load books one by one in background (to avoid overwhelming the API)
+        for (let i = 0; i < bibleBooks.length; i++) {
+            const book = bibleBooks[i];
+            
+            try {
+                // Check if book already cached (use await for IndexedDB)
+                const bookCacheKey = this.getBookCacheKey(book.file, language);
+                const cachedBook = await this.loadBookFromLocalStorage(bookCacheKey);
+                
+                if (!cachedBook) {
+                    // Load book if not cached
+                    await this.loadEntireBook(book.file, language);
+                    loaded++;
+                    
+                    // Small delay to avoid API rate limits
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                }
+            } catch (error) {
+            }
+        }
+
+        // Mark as complete
+        localStorage.setItem(preloadKey, 'true');
+    }
+
+    // Check preload status
+    isPreloadComplete(language) {
+        return localStorage.getItem(`preload_complete_${language}`) === 'true';
+    }
+
+    // Reset preload flag (for manual cache clear)
+    resetPreloadFlag(language = null) {
+        if (language) {
+            localStorage.removeItem(`preload_complete_${language}`);
+        } else {
+            // Clear all preload flags
+            Object.keys(localStorage)
+                .filter(k => k.startsWith('preload_complete_'))
+                .forEach(k => localStorage.removeItem(k));
+        }
     }
 }
 
