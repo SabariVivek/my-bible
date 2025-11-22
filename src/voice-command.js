@@ -1216,11 +1216,45 @@ class VoiceCommandManager {
             'நூறு': 100, 'நூறாம்': 100
         };
 
-        // First, replace simple Tamil Unicode and Tanglish number words with digits
+        console.log('🔧 Before Tamil number conversion:', text);
+        
+        // FIRST: Handle compound Tamil numbers with or without spaces
+        // Pattern: "இருபத்தி இரண்டாம்" (with space), "இருபத்திமூன்றாம்" (no space), "இருபத்திரெண்டாம்" (merged)
+        // Pattern: tens + "த்தி" + optional space + units + optional "ஆம்" suffix
+        text = text.replace(/(இருபத்தி|முப்பத்தி|நாற்பத்தி|ஐம்பத்தி|அறுபத்தி|எழுபத்தி|எண்பத்தி|தொண்ணூற்றி)\s?(ஒன்று|இரண்டு|மூன்று|நான்கு|ஐந்து|ஆறு|ஏழு|எட்டு|ஒன்பது)(ஆம்|ம்)?/gi, (match) => {
+            console.log('🔧 Found compound Tamil number:', match);
+            
+            // Extract tens and units
+            let total = 0;
+            if (match.includes('இருபு') || match.includes('இருபத்')) total += 20;
+            else if (match.includes('முப்பு') || match.includes('முப்பத்')) total += 30;
+            else if (match.includes('நாற்பு') || match.includes('நாற்பத்')) total += 40;
+            else if (match.includes('ஐம்பு') || match.includes('ஐம்பத்')) total += 50;
+            else if (match.includes('அறுபு') || match.includes('அறுபத்')) total += 60;
+            else if (match.includes('எழுபு') || match.includes('எழுபத்')) total += 70;
+            else if (match.includes('எண்பு') || match.includes('எண்பத்')) total += 80;
+            else if (match.includes('தொண்ணூறு')) total += 90;
+            
+            if (match.includes('ஒன்று')) total += 1;
+            else if (match.includes('இரண்டு')) total += 2;
+            else if (match.includes('மூன்று')) total += 3;
+            else if (match.includes('நான்கு')) total += 4;
+            else if (match.includes('ஐந்து')) total += 5;
+            else if (match.includes('ஆறு')) total += 6;
+            else if (match.includes('ஏழு')) total += 7;
+            else if (match.includes('எட்டு')) total += 8;
+            else if (match.includes('ஒன்பது')) total += 9;
+            
+            console.log('🔧 Converted compound number to:', total);
+            return total.toString();
+        });
+        
+        console.log('🔧 After compound number conversion:', text);
+        
+        // SECOND: Replace simple Tamil Unicode and Tanglish number words with digits
         // Create combined mapping
         const allNumbers = { ...units, ...tens, ...hundreds };
         
-        console.log('🔧 Before Tamil number conversion:', text);
         console.log('🔧 Total number words in dictionary:', Object.keys(allNumbers).length);
         
         // Sort by length (longest first) to avoid partial matches
@@ -1340,9 +1374,17 @@ class VoiceCommandManager {
             }
         }
 
-        // Pattern 4: "BookName X Y" (numbers without keywords)
+        // Pattern 4a: "BookName X [anything] Y" (extract first and last numbers, ignore words in between)
+        match = cleaned.match(/^(.+?)\s+(\d+)\s+.+?\s+(\d+)$/);
+        if (match) {
+            console.log('🔧 Tamil Pattern 4a matched (flexible - ignoring middle words):', match);
+            return this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[3]));
+        }
+        
+        // Pattern 4b: "BookName X Y" (numbers without keywords, directly adjacent)
         match = cleaned.match(/^(.+?)\s+(\d+)\s+(\d+)$/);
         if (match) {
+            console.log('🔧 Tamil Pattern 4b matched (direct numbers):', match);
             return this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[3]));
         }
 
