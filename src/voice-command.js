@@ -167,6 +167,9 @@ class VoiceCommandManager {
 
             // Add common aliases and misspellings
             this.addBookAliases(book);
+            
+            // Add automatic Tanglish variations as backup
+            this.addTanglishVariations(book);
         });
     }
 
@@ -258,7 +261,45 @@ class VoiceCommandManager {
             'Haggai': ['aakaai', 'hagai', 'aagai', 'haggai'],
             'Zechariah': ['sakariya', 'zachariya', 'zechariya', 'sechariya'],
             'Malachi': ['malaaki', 'malachi', 'malaki'],
-            'Matthew': ['mattheyu', 'matheyu', 'mathew', 'mathayu', 'matthayu', 'matthayoo'],
+            'Matthew': [
+                // Comprehensive Matthew/மத்தேயு variants for Tamil/Tanglish/STT variations
+                'mathayu', 'matthayu', 'matteyu', 'matte you', 'matheyu', 'mathe you', 'matha yu',
+                'matha you', 'mathayoo', 'mathay u', 'matthaiu', 'matthai yu', 'matthai you',
+                'mattaiu', 'mattai you', 'matthai yo', 'matthayoo', 'matthay u', 'matthay you',
+                'mattheyu', 'matthe you', 'matthe u', 'matte u', 'matte oo', 'matte o', 'matteyo',
+                'matte yo', 'matteyou', 'matteyouu', 'matteyouo', 'matteyoo', 'mattey u',
+                // Broken STT-style spaced forms
+                'matha au', 'matha u', 'matta au', 'matta u', 'matt he yu', 'matt he you',
+                'mat the you', 'mat the u', 'mat the yu', 'ma the yu', 'ma the you', 'ma tte you',
+                'ma tte yu', 'ma tte u', 'ma tte ao', 'ma t he yo', 'm a t t h e y u', 'm a t h a y u',
+                'm a t h a u',
+                // Vowel swaps and duplicates
+                'maathayu', 'maathheyu', 'maathaiu', 'maathai you', 'maathai yu', 'maathaiyo',
+                'maathayo', 'maatthayu', 'maatheyu', 'maathey oo', 'maakthayu', 'mathayo',
+                'mathayoo', 'mathayou', 'mathaiyo', 'mathiyu', 'mathiyo', 'mathiu',
+                // Common mishearings
+                'matthewu', 'mathew', 'mathewu', 'mathew you', 'mathew yo', 'mathew y',
+                'matthew you', 'matew', 'mathe w', 'matheu', 'mathe u', 'matthe w', 'mattyu',
+                'matty you', 'mattew', 'matte w',
+                // With puthagam/book
+                'mathayu puthagam', 'mattheu puthagam', 'matheyu book', 'matha you book',
+                'matta you book', 'mattayu book', 'mattayu puthagam',
+                // More phonetic mistakes
+                'matheyu', 'matheayu', 'mathaeu', 'mathaiyu', 'mathai you', 'mathey you',
+                'matheyoo', 'mattiyu', 'mattiyo', 'mattiyoo', 'matayu', 'matayo', 'mattayo',
+                'mattaiyo', 'matthiyo', 'matthiyoo', 'matthi u', 'matthi you',
+                // Extra noisy
+                'mat th e yu', 'mat th e you', 'm a t h e y u', 'ma t he yu', 'ma th a yu',
+                'ma th a you', 'mat he you',
+                // Creative STT outputs
+                'mathieu', 'mathyo', 'matheu', 'mattiu', 'matteyo', 'matio', 'mathu', 'matthu',
+                'matthoo', 'matthey', 'mathheu', 'mathhey', 'matteiu',
+                // With chapter/verse
+                'mathayu chapter', 'matthayu chapter', 'matthew chapter',
+                // Extremely noisy
+                'mathaau', 'mattaau', 'mathaauu', 'mathau', 'mathauu', 'mattha u', 'matthaou',
+                'mattha yoo', 'matha yuu', 'matha yu'
+            ],
             'Mark': ['marku', 'mark', 'marrku'],
             'Luke': ['lukaa', 'luka', 'lukas'],
             'John': ['yovaan', 'yohaan', 'yovan', 'johan'],
@@ -580,7 +621,10 @@ class VoiceCommandManager {
                 'mmatthew', 'atthew', 'matthew', 'metthew', 'mitthew', 'motthew', 'mutthew',
                 'maatthew', 'mtthew', 'madthew', 'mattthew', 'mathew', 'matdhew', 'mattew',
                 'matthhew', 'matthaw', 'matthiw', 'matthow', 'matthuw', 'mattheew', 'matthw',
-                'matthe', 'mattheww'
+                'matthe', 'mattheww', 
+                // Tamil Unicode variants and common STT mistakes
+                'மேத்யூ', 'மத்திய', 'மேத்தியூ', 'மத்தியூ', 'மத்திய யு', 'மத்தேயூ', 'ஏயு பத்தா யு',
+                'தி வியூ', 'தெரியு', 'டேய்', 'மத்தியயோ', 'தையோ', 'மத்த யு', 'த்தையும்'
             ],
 
             Mark: [
@@ -1057,17 +1101,40 @@ class VoiceCommandManager {
             return this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[3]));
         }
 
-        // Pattern 6: "BookName XY" where XY is a 2-digit number that should be split into chapter X verse Y
-        // This handles cases like "Exodus 98" which should be "Exodus 9:8"
-        match = cleaned.match(/^(.+?)\s+(\d{2})$/);
+        // Pattern 6: "BookName XXYY" where XXYY is a multi-digit number (smart split into chapter:verse)
+        match = cleaned.match(/^(.+?)\s+(\d{2,})$/);
         if (match) {
             const num = match[2];
-            const chapter = parseInt(num[0]);
-            const verse = parseInt(num[1]);
-            // Only split if both digits are valid (not starting with 0)
-            if (chapter > 0 && verse >= 0) {
-                console.log(`🔄 Split ${num} into chapter ${chapter} verse ${verse}`);
-                return this.buildCommandResult(match[1], chapter, verse);
+            const bookName = match[1];
+            
+            // Try to intelligently split the number based on book's chapter count
+            const book = this.findBook(bookName);
+            if (book && num.length >= 2) {
+                // Try different split positions
+                // For "2814": try 28:14, then 2:814
+                // For "514": try 5:14, then 51:4
+                for (let splitPos = 1; splitPos < num.length; splitPos++) {
+                    const chapterStr = num.substring(0, splitPos);
+                    const verseStr = num.substring(splitPos);
+                    const chapter = parseInt(chapterStr);
+                    const verse = parseInt(verseStr);
+                    
+                    // Check if this split makes sense for this book
+                    if (chapter > 0 && chapter <= book.chapters && verse >= 0) {
+                        console.log(`🔄 English: Smart split ${num} into chapter ${chapter} verse ${verse} for ${book.name}`);
+                        return this.buildCommandResult(bookName, chapter, verse);
+                    }
+                }
+                
+                // If no valid split found, try basic 2-digit split (XY → X:Y)
+                if (num.length === 2) {
+                    const chapter = parseInt(num[0]);
+                    const verse = parseInt(num[1]);
+                    if (chapter > 0 && verse >= 0) {
+                        console.log(`🔄 English: Basic split ${num} into chapter ${chapter} verse ${verse}`);
+                        return this.buildCommandResult(bookName, chapter, verse);
+                    }
+                }
             }
         }
 
@@ -1153,6 +1220,9 @@ class VoiceCommandManager {
         // Create combined mapping
         const allNumbers = { ...units, ...tens, ...hundreds };
         
+        console.log('🔧 Before Tamil number conversion:', text);
+        console.log('🔧 Total number words in dictionary:', Object.keys(allNumbers).length);
+        
         // Sort by length (longest first) to avoid partial matches
         const sortedKeys = Object.keys(allNumbers).sort((a, b) => b.length - a.length);
         
@@ -1162,7 +1232,12 @@ class VoiceCommandManager {
             if (isTamil) {
                 // For Tamil Unicode, match the word with surrounding spaces or start/end of string
                 const regex = new RegExp('(^|\\s)' + word + '($|\\s)', 'gi');
+                const matches = text.match(regex);
+                if (matches) {
+                    console.log('🔧 Found Tamil word:', word, '→', allNumbers[word], 'Matches:', matches);
+                }
                 text = text.replace(regex, (match, before, after) => {
+                    console.log('🔧 Replacing Tamil:', match, '→', allNumbers[word]);
                     return before + allNumbers[word].toString() + after;
                 });
             } else {
@@ -1271,15 +1346,40 @@ class VoiceCommandManager {
             return this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[3]));
         }
 
-        // Pattern 5: "BookName XY" where XY is a 2-digit number (split into chapter:verse)
-        match = cleaned.match(/^(.+?)\s+(\d{2})$/);
+        // Pattern 5: "BookName XXYY" where XXYY is a multi-digit number (smart split into chapter:verse)
+        match = cleaned.match(/^(.+?)\s+(\d{2,})$/);
         if (match) {
             const num = match[2];
-            const chapter = parseInt(num[0]);
-            const verse = parseInt(num[1]);
-            if (chapter > 0 && verse >= 0) {
-                console.log(`🔄 Tamil: Split ${num} into chapter ${chapter} verse ${verse}`);
-                return this.buildCommandResult(match[1], chapter, verse);
+            const bookName = match[1];
+            
+            // Try to intelligently split the number based on book's chapter count
+            const book = this.findBook(bookName);
+            if (book && num.length >= 2) {
+                // Try different split positions
+                // For "2814": try 28:14, then 2:814
+                // For "514": try 5:14, then 51:4
+                for (let splitPos = 1; splitPos < num.length; splitPos++) {
+                    const chapterStr = num.substring(0, splitPos);
+                    const verseStr = num.substring(splitPos);
+                    const chapter = parseInt(chapterStr);
+                    const verse = parseInt(verseStr);
+                    
+                    // Check if this split makes sense for this book
+                    if (chapter > 0 && chapter <= book.chapters && verse >= 0) {
+                        console.log(`🔄 Tamil: Smart split ${num} into chapter ${chapter} verse ${verse} for ${book.name}`);
+                        return this.buildCommandResult(bookName, chapter, verse);
+                    }
+                }
+                
+                // If no valid split found, try basic 2-digit split (XY → X:Y)
+                if (num.length === 2) {
+                    const chapter = parseInt(num[0]);
+                    const verse = parseInt(num[1]);
+                    if (chapter > 0 && verse >= 0) {
+                        console.log(`🔄 Tamil: Basic split ${num} into chapter ${chapter} verse ${verse}`);
+                        return this.buildCommandResult(bookName, chapter, verse);
+                    }
+                }
             }
         }
 
