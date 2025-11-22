@@ -75,6 +75,8 @@ async function loadPages() {
             try {
                 pages = JSON.parse(stored);
                 console.log('Loaded documentation from local storage as fallback');
+                // Try to save to Supabase if we loaded from localStorage
+                setTimeout(() => savePagesToSupabase(), 1000);
             } catch (e) {
                 console.error('Error loading pages:', e);
                 pages = getDefaultPages();
@@ -84,14 +86,18 @@ async function loadPages() {
         }
     }
     
-    // Always keep local backup
-    localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
+    // Don't keep localStorage backup - Supabase is primary storage
+    // Only clear old localStorage data to free up space
+    try {
+        localStorage.removeItem('bible-notes-pages');
+    } catch (e) {
+        console.warn('Could not clear old localStorage backup:', e);
+    }
 }
 
 function savePages() {
     try {
-        localStorage.setItem('bible-notes-pages', JSON.stringify(pages));
-        // Auto-save to Supabase (no admin mode required)
+        // Save only to Supabase - primary storage
         debouncedSupabaseSync();
     } catch (e) {
         console.error('Error saving pages:', e);
@@ -121,8 +127,10 @@ function debouncedSupabaseSync() {
         
         if (success) {
             console.log('✓ Auto-synced to Supabase');
+            showToast('Saved to cloud', 'success');
         } else {
             console.log('⚠ Supabase sync failed, will retry on next change');
+            showToast('Save failed - will retry', 'warning');
         }
     }, 2000); // Wait 2 seconds after last change (faster than GitHub)
 }
