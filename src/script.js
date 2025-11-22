@@ -1209,6 +1209,9 @@ function scrollToVerse(verseNum) {
             // Desktop: use scrollIntoView on content-area
             verseLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+    } else {
+        // Verse doesn't exist in this chapter - silently ignore
+        console.log(`⚠️ Verse ${verseNum} not found in current chapter. Opening chapter only.`);
     }
 }
 
@@ -4166,10 +4169,16 @@ function updateAdminUI() {
     const isAdminMode = isAdmin();
     const adminToggle = document.getElementById('admin-toggle');
     const adminCheck = adminToggle?.querySelector('.admin-check');
+    const voiceBtn = document.getElementById('voice-btn');
     
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
     });
+    
+    // Update voice button visibility
+    if (voiceBtn) {
+        voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
+    }
     
     // Update admin toggle button state
     if (adminToggle) {
@@ -6092,6 +6101,9 @@ function initializeVoiceCommand() {
         return;
     }
 
+    // Hide voice button by default, show only in admin mode
+    voiceBtn.style.display = isAdmin() ? 'flex' : 'none';
+
     // Set up callbacks
     voiceCommandManager.onListeningChange = (isListening) => {
         if (isListening) {
@@ -6111,7 +6123,7 @@ function initializeVoiceCommand() {
     voiceCommandManager.onCommandParsed = async (command) => {
         console.log('Voice command parsed:', command);
         
-        // Validate the command first
+        // Validate and auto-correct the command
         const validation = voiceCommandManager.validateCommand(command);
         if (!validation.valid) {
             showVoiceStatus(validation.error, 'error');
@@ -6188,15 +6200,22 @@ function initializeVoiceCommand() {
  * Navigate to book/chapter/verse based on voice command
  */
 async function navigateViaVoice(command) {
+    console.log('🎯 navigateViaVoice called with command:', command);
     const { bookIndex, chapter, verse } = command;
+    console.log('🎯 Extracted values - bookIndex:', bookIndex, 'chapter:', chapter, 'verse:', verse);
+    console.log('🎯 Current state - currentBook:', currentBook, 'currentChapter:', currentChapter);
 
     // If we're not already on the right book or chapter, load it
     if (currentBook !== bookIndex || currentChapter !== chapter) {
+        console.log('🎯 Loading book:', bookIndex, 'chapter:', chapter);
         await loadBook(bookIndex, chapter);
+    } else {
+        console.log('🎯 Already on correct book/chapter, skipping load');
     }
 
     // If verse is specified, scroll to it after a short delay to ensure rendering
     if (verse) {
+        console.log('🎯 Scrolling to verse:', verse);
         // Use shorter delay for faster response
         setTimeout(() => {
             scrollToVerse(verse);

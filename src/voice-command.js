@@ -932,18 +932,32 @@ class VoiceCommandManager {
         let cleaned = this.removeFillerWords(processedText);
         console.log('🧹 After removing fillers:', cleaned);
 
-        // Try English parsing first
+        // Check if text contains Tamil keywords - if so, try Tamil parsing first
+        const hasTamilKeywords = /அதிகாரம்|வசனம்|அசாம்/.test(cleaned);
+        
+        if (hasTamilKeywords) {
+            // Try Tamil parsing first if Tamil keywords detected
+            let result = this.parseTamilCommand(cleaned);
+            if (result) {
+                console.log('✅ Parsed as Tamil:', result);
+                return result;
+            }
+        }
+
+        // Try English parsing
         let result = this.parseEnglishCommand(cleaned);
         if (result) {
             console.log('✅ Parsed as English:', result);
             return result;
         }
 
-        // Try Tamil parsing
-        result = this.parseTamilCommand(cleaned);
-        if (result) {
-            console.log('✅ Parsed as Tamil:', result);
-            return result;
+        // Try Tamil parsing (if not already tried)
+        if (!hasTamilKeywords) {
+            result = this.parseTamilCommand(cleaned);
+            if (result) {
+                console.log('✅ Parsed as Tamil:', result);
+                return result;
+            }
         }
 
         // Try mixed parsing (Tamil book name with English keywords)
@@ -1007,18 +1021,16 @@ class VoiceCommandManager {
             .trim();
         console.log('🔧 Cleaned for parsing:', cleaned);
 
-        // Pattern 0: Check if the entire text is a book name (including numbered books like "1 john")
-        // This must come first before trying to parse numbers as chapters
-        let bookResult = this.buildCommandResult(cleaned, 1, null);
-        if (bookResult) {
-            console.log(`🔄 English: Found book directly: "${cleaned}" -> ${bookResult.book}`);
-            return bookResult;
-        }
-
         // Pattern 1: "BookName chapter X verse Y" (handles commas, periods, multiple spaces)
         let match = cleaned.match(/^(.+?)\s+chapter\s+(\d+)\s+verse\s+(\d+)$/i);
         if (match) {
-            return this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[3]));
+            console.log('🔧 Pattern 1 matched:', match);
+            console.log('🔧 Book:', match[1], 'Chapter:', match[2], 'Verse:', match[3]);
+            const result = this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[3]));
+            if (result) {
+                console.log('🔧 Pattern 1 result:', result);
+                return result;
+            }
         }
 
         // Pattern 2: "BookName chapter X" (handles commas, periods)
@@ -1065,22 +1077,27 @@ class VoiceCommandManager {
             return this.buildCommandResult(match[1], parseInt(match[2]), null);
         }
 
-        // Pattern 8: Just book name (fallback, should have been caught by Pattern 0)
-        match = cleaned.match(/^(.+?)$/);
-        if (match && !match[1].match(/\d/)) { // Only if no digits in the text
-            return this.buildCommandResult(match[1], 1, null); // Default to chapter 1
+        // Pattern 8: Just book name (only as last resort fallback)
+        // Only match if there are NO digits at all in the text
+        if (!cleaned.match(/\d/)) {
+            const bookResult = this.buildCommandResult(cleaned, 1, null);
+            if (bookResult) {
+                console.log(`🔄 English: Found book only (no chapter/verse specified): "${cleaned}" -> ${bookResult.book}`);
+                return bookResult;
+            }
         }
 
         return null;
     }
 
     /**
-     * Convert Tamil number words to digits (Tanglish only)
+     * Convert Tamil number words to digits (Tanglish and Tamil Unicode)
      * Handles complex forms like "noothi irubathi moondraam" (123), "நூறு இருபது மூன்றாம்" (123)
      */
     convertTamilNumberWords(text) {
-        // Define number mappings (Tanglish only)
+        // Define number mappings (Tanglish and Tamil Unicode)
         const units = {
+            // Tanglish
             'oru': 1, 'ondru': 1, 'onraam': 1, 'onnu': 1,
             'irandu': 2, 'rendu': 2, 'irandaam': 2,
             'moondru': 3, 'munu': 3, 'moondraam': 3,
@@ -1089,10 +1106,21 @@ class VoiceCommandManager {
             'aaru': 6, 'aaraam': 6,
             'ezhu': 7, 'ezhaam': 7, 'yezhaam': 7,
             'ettu': 8, 'ettaam': 8,
-            'onbadhu': 9, 'ombadhu': 9, 'onbadhaam': 9
+            'onbadhu': 9, 'ombadhu': 9, 'onbadhaam': 9,
+            // Tamil Unicode
+            'ஒன்று': 1, 'ஒன்றாம்': 1, 'ஒருவது': 1,
+            'இரண்டு': 2, 'இரண்டாம்': 2,
+            'மூன்று': 3, 'மூன்றாம்': 3,
+            'நான்கு': 4, 'நான்காம்': 4,
+            'ஐந்து': 5, 'ஐந்தாம்': 5,
+            'ஆறு': 6, 'ஆறாம்': 6,
+            'ஏழு': 7, 'ஏழாம்': 7,
+            'எட்டு': 8, 'எட்டாம்': 8,
+            'ஒன்பது': 9, 'ஒன்பதாம்': 9
         };
         
         const tens = {
+            // Tanglish
             'paththu': 10, 'pathu': 10, 'paththaam': 10, 'pathaam': 10, 'patthu': 10,
             'irupadhu': 20, 'irubathi': 20, 'irupathi': 20, 'irupadhaam': 20, 'irubathu': 20, 'irupathaam': 20,
             'muppadhu': 30, 'muppathi': 30, 'muppadhaam': 30, 'muppathaam': 30, 'mupathu': 30,
@@ -1101,14 +1129,52 @@ class VoiceCommandManager {
             'arupadhu': 60, 'arupathi': 60, 'arupadhaam': 60, 'arupathaam': 60, 'arupathu': 60, 'arubathu': 60,
             'ezhupadhu': 70, 'ezhubathi': 70, 'elubathi': 70, 'ezhupadhaam': 70, 'ezhupathaam': 70, 'ezhupathu': 70, 'elubathaam': 70, 'elupathu': 70,
             'enpadhu': 80, 'embathi': 80, 'enbathi': 80, 'enpadhaam': 80, 'enpathaam': 80, 'enpathu': 80, 'embathaam': 80,
-            'thonnooru': 90, 'thonnooraam': 90, 'thonnuru': 90, 'tonnuru': 90, 'thonnuthu': 90, 'tonnuthaam': 90
+            'thonnooru': 90, 'thonnooraam': 90, 'thonnuru': 90, 'tonnuru': 90, 'thonnuthu': 90, 'tonnuthaam': 90,
+            // Tamil Unicode
+            'பத்து': 10, 'பத்தாம்': 10,
+            'இருபது': 20, 'இருபதாம்': 20,
+            'முப்பது': 30, 'முப்பதாம்': 30,
+            'நாற்பது': 40, 'நாற்பதாம்': 40,
+            'ஐம்பது': 50, 'ஐம்பதாம்': 50,
+            'அறுபது': 60, 'அறுபதாம்': 60,
+            'எழுபது': 70, 'எழுபதாம்': 70,
+            'எண்பது': 80, 'எண்பதாம்': 80,
+            'தொண்ணூறு': 90, 'தொண்ணூறாம்': 90
         };
         
         const hundreds = {
-            'nooru': 100, 'noothu': 100, 'nootri': 100, 'noothi': 100, 'nooraam': 100
+            // Tanglish
+            'nooru': 100, 'noothu': 100, 'nootri': 100, 'noothi': 100, 'nooraam': 100,
+            // Tamil Unicode
+            'நூறு': 100, 'நூறாம்': 100
         };
 
-        // Convert complex number phrases (Tanglish only)
+        // First, replace simple Tamil Unicode and Tanglish number words with digits
+        // Create combined mapping
+        const allNumbers = { ...units, ...tens, ...hundreds };
+        
+        // Sort by length (longest first) to avoid partial matches
+        const sortedKeys = Object.keys(allNumbers).sort((a, b) => b.length - a.length);
+        
+        for (const word of sortedKeys) {
+            // Use word boundaries for English/Tanglish, but not for Tamil Unicode
+            const isTamil = /[\u0B80-\u0BFF]/.test(word);
+            if (isTamil) {
+                // For Tamil Unicode, match the word with surrounding spaces or start/end of string
+                const regex = new RegExp('(^|\\s)' + word + '($|\\s)', 'gi');
+                text = text.replace(regex, (match, before, after) => {
+                    return before + allNumbers[word].toString() + after;
+                });
+            } else {
+                // For English/Tanglish, use word boundaries
+                const regex = new RegExp('\\b' + word + '\\b', 'gi');
+                text = text.replace(regex, allNumbers[word].toString());
+            }
+        }
+
+        console.log('🔧 After number word conversion:', text);
+
+        // Convert complex number phrases (Tanglish only) - for compound numbers
         // Pattern: (hundred)? (tens)? (units)?
         const numberPattern = /(nooru|noothu|nootri|noothi|nooraam)?\s*(thonnooru|thonnooraam|thonnuru|tonnuru|thonnuthu|tonnuthaam|irupadhu|irubathi|irupathi|irubathu|irupathaam|muppadhu|muppathi|muppadhaam|muppathaam|mupathu|narupadhu|narupathi|narpathi|narupadhaam|narpathaam|narpathu|nalubathu|nalupathaam|aimpadhu|aimpathi|aimpadhaam|aimpathaam|aimpathu|ambadhu|ambathaam|arupadhu|arupathi|arupadhaam|arupathaam|arupathu|arubathu|ezhupadhu|ezhubathi|elubathi|ezhupadhaam|ezhupathaam|ezhupathu|elubathaam|elupathu|enpadhu|embathi|enbathi|enpadhaam|enpathaam|enpathu|embathaam|paththu|pathu|patthu|pathaam|paththaam)?\s*(oru|ondru|onraam|onnu|irandu|rendu|irandaam|moondru|munu|moondraam|naangu|naalu|naangaam|nalaam|ainthu|anju|ainthaam|anjaam|aaru|aaraam|ezhu|ezhaam|yezhaam|ettu|ettaam|onbadhu|ombadhu|onbadhaam)?/gi;
 
@@ -1125,6 +1191,7 @@ class VoiceCommandManager {
             return match; // Return original if no match
         });
 
+        console.log('🔧 After compound number conversion:', text);
         return text;
     }
 
@@ -1141,31 +1208,61 @@ class VoiceCommandManager {
 
         // Remove periods and clean up punctuation
         const cleaned = text.replace(/\.$/, '').replace(/,\s*/g, ' ').trim();
+        console.log('🔧 Tamil cleaned for parsing:', cleaned);
 
-        // Pattern 0: Check if the entire text is a book name (including numbered books like "1 yovaan")
-        // This must come first before trying to parse numbers as chapters
-        let bookResult = this.buildCommandResult(cleaned, 1, null);
-        if (bookResult) {
-            console.log(`🔄 Tamil: Found book directly: "${cleaned}" -> ${bookResult.book}`);
-            return bookResult;
+        // Pattern 1a: "BookName X அதிகாரம் Y வசனம்" (number BEFORE keyword - converted from Tamil ordinals)
+        let match = cleaned.match(/^(.+?)\s+(\d+)\s+(அதிகாரம்|athigaram|adhigaram|athikaram|adhikaram)\s+(\d+)\s+(வசனம்|அசாம்|vasanam|vasnam|vesanam|asaam)$/i);
+        if (match) {
+            console.log('🔧 Tamil Pattern 1a matched (number before keyword):', match);
+            const result = this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[4]));
+            if (result) {
+                console.log('🔧 Tamil Pattern 1a result:', result);
+                return result;
+            }
         }
 
-        // Pattern 1: "BookName athigaram X vasanam Y" (Tanglish only)
-        let match = cleaned.match(/^(.+?)\s+(athigaram|adhigaram|athikaram|adhikaram)\s+(\d+)\s+(vasanam|vasnam|vesanam)\s+(\d+)$/i);
+        // Pattern 1b: "BookName அதிகாரம் X வசனம் Y" (keyword BEFORE number - original pattern)
+        match = cleaned.match(/^(.+?)\s+(அதிகாரம்|athigaram|adhigaram|athikaram|adhikaram)\s+(\d+)\s+(வசனம்|அசாம்|vasanam|vasnam|vesanam|asaam)\s+(\d+)$/i);
         if (match) {
-            return this.buildCommandResult(match[1], parseInt(match[3]), parseInt(match[5]));
+            console.log('🔧 Tamil Pattern 1b matched (keyword before number):', match);
+            const result = this.buildCommandResult(match[1], parseInt(match[3]), parseInt(match[5]));
+            if (result) {
+                console.log('🔧 Tamil Pattern 1b result:', result);
+                return result;
+            }
         }
 
-        // Pattern 2: "BookName athigaram X" (Tanglish only)
-        match = cleaned.match(/^(.+?)\s+(athigaram|adhigaram|athikaram|adhikaram)\s+(\d+)$/i);
+        // Pattern 2a: "BookName X அதிகாரம்" (number BEFORE keyword)
+        match = cleaned.match(/^(.+?)\s+(\d+)\s+(அதிகாரம்|athigaram|adhigaram|athikaram|adhikaram)$/i);
         if (match) {
-            return this.buildCommandResult(match[1], parseInt(match[3]), null);
+            console.log('🔧 Tamil Pattern 2a matched (number before keyword):', match);
+            const result = this.buildCommandResult(match[1], parseInt(match[2]), null);
+            if (result) {
+                console.log('🔧 Tamil Pattern 2a result:', result);
+                return result;
+            }
         }
 
-        // Pattern 3: "BookName X vasanam Y" (Tanglish only)
-        match = cleaned.match(/^(.+?)\s+(\d+)\s+(vasanam|vasnam|vesanam)\s+(\d+)$/i);
+        // Pattern 2b: "BookName அதிகாரம் X" (keyword BEFORE number)
+        match = cleaned.match(/^(.+?)\s+(அதிகாரம்|athigaram|adhigaram|athikaram|adhikaram)\s+(\d+)$/i);
         if (match) {
-            return this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[4]));
+            console.log('🔧 Tamil Pattern 2b matched (keyword before number):', match);
+            const result = this.buildCommandResult(match[1], parseInt(match[3]), null);
+            if (result) {
+                console.log('🔧 Tamil Pattern 2b result:', result);
+                return result;
+            }
+        }
+
+        // Pattern 3: "BookName X வசனம்/vasanam Y" (Tamil Unicode and Tanglish)
+        match = cleaned.match(/^(.+?)\s+(\d+)\s+(வசனம்|அசாம்|vasanam|vasnam|vesanam|asaam)\s+(\d+)$/i);
+        if (match) {
+            console.log('🔧 Tamil Pattern 3 matched:', match);
+            const result = this.buildCommandResult(match[1], parseInt(match[2]), parseInt(match[4]));
+            if (result) {
+                console.log('🔧 Tamil Pattern 3 result:', result);
+                return result;
+            }
         }
 
         // Pattern 4: "BookName X Y" (numbers without keywords)
@@ -1192,10 +1289,14 @@ class VoiceCommandManager {
             return this.buildCommandResult(match[1], parseInt(match[2]), null);
         }
 
-        // Pattern 7: Just book name (fallback, should have been caught by Pattern 0)
-        match = cleaned.match(/^(.+?)$/);
-        if (match) {
-            return this.buildCommandResult(match[1], 1, null);
+        // Pattern 7: Just book name (only as last resort fallback)
+        // Only match if there are NO digits at all in the text
+        if (!cleaned.match(/\d/)) {
+            const bookResult = this.buildCommandResult(cleaned, 1, null);
+            if (bookResult) {
+                console.log(`🔄 Tamil: Found book only (no chapter/verse specified): "${cleaned}" -> ${bookResult.book}`);
+                return bookResult;
+            }
         }
 
         return null;
@@ -1562,18 +1663,20 @@ class VoiceCommandManager {
             return { valid: false, error: `Book "${command.book}" not found` };
         }
 
-        // Validate chapter
+        let corrected = false;
+
+        // Auto-correct invalid chapter - default to chapter 1
         if (command.chapter < 1 || command.chapter > book.chapters) {
-            return {
-                valid: false,
-                error: `${book.name} only has ${book.chapters} chapter${book.chapters > 1 ? 's' : ''}`
-            };
+            console.log(`⚠️ Invalid chapter ${command.chapter} for ${book.name} (max: ${book.chapters}). Auto-correcting to chapter 1.`);
+            command.chapter = 1;
+            command.verse = null; // Clear verse if chapter was invalid
+            corrected = true;
         }
 
-        // Verse validation would require loading chapter data
-        // This can be done in the main application when navigating
+        // Note: Verse validation requires chapter data, so we'll handle it during navigation
+        // Invalid verses will simply not scroll/highlight
 
-        return { valid: true };
+        return { valid: true, corrected: corrected };
     }
 }
 
