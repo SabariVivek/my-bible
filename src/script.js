@@ -357,6 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const notesIcon = document.getElementById('notes-icon');
     const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
     const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+    const rightMenuBtn = document.getElementById('right-menu-btn');
     const isMobile = window.innerWidth <= 768;
     let isFadingOut = false; // Flag to prevent re-showing during fade
     
@@ -365,10 +366,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // On mobile, show admin menu wrapper and toggle
             if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
             if (adminToggle) adminToggle.style.display = 'flex';
+            if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
         } else {
             // On desktop, show admin menu wrapper and toggle
             if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
             if (adminToggle) adminToggle.style.display = 'flex';
+            if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
         }
     }
     
@@ -449,6 +452,24 @@ document.addEventListener('DOMContentLoaded', () => {
                         desktopAdminMenuWrapper.style.pointerEvents = '';
                     }, 2000);
                 }
+                if (rightMenuBtn) {
+                    rightMenuBtn.style.pointerEvents = 'none';
+                    rightMenuBtn.style.opacity = '0';
+                    rightMenuBtn.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightMenuBtn.style.display = 'none';
+                        rightMenuBtn.style.opacity = '1';
+                        rightMenuBtn.style.transition = '';
+                        rightMenuBtn.style.pointerEvents = '';
+                    }, 2000);
+                }
+                
+                // Close right sidebar if open
+                const rightSidebar = document.querySelector('.right-sidebar');
+                if (rightSidebar && !rightSidebar.classList.contains('hidden')) {
+                    rightSidebar.classList.add('hidden');
+                    rightSidebar.classList.remove('drawer-open');
+                }
                 
                 // Update UI and reset flag after fade completes
                 setTimeout(() => {
@@ -462,44 +483,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateAdminUI();
             }
         });
-    }
-    
-    // Mobile admin menu handlers
-    const mobileAdminMenuBtn = document.getElementById('mobile-admin-menu-btn');
-    const mobileAdminDropdown = document.getElementById('mobile-admin-dropdown');
-    const mobileCultOption = document.getElementById('mobile-cult-option');
-    const mobileNotesOption = document.getElementById('mobile-notes-option');
-    
-    if (mobileAdminMenuBtn && mobileAdminDropdown) {
-        mobileAdminMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            console.log('Mobile admin menu clicked, toggling dropdown');
-            mobileAdminDropdown.classList.toggle('active');
-            mobileAdminMenuBtn.classList.toggle('active');
-            console.log('Dropdown active:', mobileAdminDropdown.classList.contains('active'));
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileAdminMenuWrapper.contains(e.target)) {
-                mobileAdminDropdown.classList.remove('active');
-                mobileAdminMenuBtn.classList.remove('active');
-            }
-        });
-        
-        // Handle cult option click
-        if (mobileCultOption) {
-            mobileCultOption.addEventListener('click', () => {
-                window.location.href = 'config/secret.html';
-            });
-        }
-        
-        // Handle notes option click
-        if (mobileNotesOption) {
-            mobileNotesOption.addEventListener('click', () => {
-                window.location.href = 'docs/docs.html';
-            });
-        }
     }
 
     // Desktop admin menu handlers
@@ -4229,6 +4212,7 @@ function updateAdminUI() {
     const adminToggle = document.getElementById('admin-toggle');
     const adminCheck = adminToggle?.querySelector('.admin-check');
     const voiceBtn = document.getElementById('voice-btn');
+    const rightMenuBtn = document.getElementById('right-menu-btn');
     
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
@@ -4237,6 +4221,11 @@ function updateAdminUI() {
     // Update voice button visibility
     if (voiceBtn) {
         voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    
+    // Update right menu button visibility
+    if (rightMenuBtn) {
+        rightMenuBtn.style.display = isAdminMode ? 'flex' : 'none';
     }
     
     // Update admin toggle button state
@@ -6389,3 +6378,108 @@ console.log('  - debugBible.checkPreloadStatus()');
 console.log('  - debugBible.forceReload("tamil")');
 console.log('  - debugBible.clearCache()');
 console.log('  - debugBible.verifyBook("genesis", "tamil")');
+
+// Right Sidebar Menu Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const rightMenuBtn = document.getElementById('right-menu-btn');
+    const rightSidebar = document.querySelector('.right-sidebar');
+    const bibleReadingPage = document.getElementById('bible-reading-page');
+    const exitBibleReading = document.getElementById('exit-bible-reading');
+    
+    // Right menu options
+    const bibleReadingOption = document.getElementById('bible-reading-option');
+    const rightNotesOption = document.getElementById('right-notes-option');
+    const rightCultOption = document.getElementById('right-cult-option');
+    
+    // Initialize right sidebar and button visibility based on admin mode
+    if (rightSidebar) {
+        rightSidebar.classList.add('hidden');
+    }
+    if (rightMenuBtn) {
+        rightMenuBtn.style.display = isAdmin() ? 'flex' : 'none';
+    }
+    
+    // Toggle right sidebar
+    if (rightMenuBtn && rightSidebar) {
+        rightMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            if (window.innerWidth <= 768) {
+                // Mobile: use drawer behavior
+                const isOpen = rightSidebar.classList.contains('drawer-open');
+                if (isOpen) {
+                    rightSidebar.classList.remove('drawer-open');
+                    rightSidebar.classList.add('hidden');
+                } else {
+                    rightSidebar.classList.remove('hidden');
+                    rightSidebar.classList.add('drawer-open');
+                }
+            } else {
+                // Desktop: simple toggle
+                rightSidebar.classList.toggle('hidden');
+            }
+        });
+    }
+    
+    // Close right sidebar when clicking outside (both mobile and desktop)
+    document.addEventListener('click', (e) => {
+        if (rightSidebar && rightMenuBtn) {
+            const isSidebarOpen = window.innerWidth <= 768 
+                ? rightSidebar.classList.contains('drawer-open')
+                : !rightSidebar.classList.contains('hidden');
+            
+            if (isSidebarOpen && 
+                !rightSidebar.contains(e.target) && 
+                !rightMenuBtn.contains(e.target)) {
+                rightSidebar.classList.add('hidden');
+                rightSidebar.classList.remove('drawer-open');
+            }
+        }
+    });
+    
+    // Bible Reading option - navigate to Bible Reading page
+    if (bibleReadingOption && bibleReadingPage) {
+        bibleReadingOption.addEventListener('click', () => {
+            // Hide main content
+            document.querySelector('.main-layout').style.display = 'none';
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('.bottom-nav').style.display = 'none';
+            
+            // Show Bible Reading page
+            bibleReadingPage.style.display = 'block';
+            
+            // Close right sidebar
+            rightSidebar.classList.add('hidden');
+            if (window.innerWidth <= 768) {
+                rightSidebar.classList.remove('drawer-open');
+            }
+        });
+    }
+    
+    // Exit Bible Reading page
+    if (exitBibleReading && bibleReadingPage) {
+        exitBibleReading.addEventListener('click', () => {
+            // Hide Bible Reading page
+            bibleReadingPage.style.display = 'none';
+            
+            // Show main content
+            document.querySelector('.main-layout').style.display = 'flex';
+            document.querySelector('header').style.display = 'flex';
+            document.querySelector('.bottom-nav').style.display = 'flex';
+        });
+    }
+    
+    // Bible Notes option - navigate to docs
+    if (rightNotesOption) {
+        rightNotesOption.addEventListener('click', () => {
+            window.location.href = 'docs/docs.html';
+        });
+    }
+    
+    // WMSCOG Cult option - navigate to secret page
+    if (rightCultOption) {
+        rightCultOption.addEventListener('click', () => {
+            window.location.href = 'config/secret.html';
+        });
+    }
+});
