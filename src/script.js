@@ -73,7 +73,7 @@ const bibleBooks = [
 
 
 // Current state
-let currentBook = parseInt(localStorage.getItem('currentBook')) || 0; // Genesis
+let currentBook = parseInt(localStorage.getItem('currentBook')) || 39; // Matthew (New Testament starts at index 39)
 let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
@@ -780,14 +780,6 @@ async function loadBook(bookIndex, chapter) {
             } else {
                 console.error('Failed to load Bible data - not in cache');
                 hideLoader();
-                const message = document.createElement('div');
-                message.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); max-width: 400px; text-align: center; z-index: 10000;';
-                message.innerHTML = `
-                    <h3 style="margin: 0 0 15px 0; color: #333;">📱 First Time Setup Required</h3>
-                    <p style="margin: 0 0 20px 0; color: #666; line-height: 1.5;">This app needs to download Bible data on first use. Please connect to the internet and reload the page.</p>
-                    <button onclick="location.reload()" style="background: #4285f4; color: white; border: none; padding: 12px 30px; border-radius: 6px; font-size: 16px; cursor: pointer;">Reload</button>
-                `;
-                document.body.appendChild(message);
             }
         } else {
             // Single language mode - load entire book
@@ -805,14 +797,6 @@ async function loadBook(bookIndex, chapter) {
             } else {
                 console.error('Failed to load Bible data - not in cache');
                 hideLoader();
-                const message = document.createElement('div');
-                message.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); max-width: 400px; text-align: center; z-index: 10000;';
-                message.innerHTML = `
-                    <h3 style="margin: 0 0 15px 0; color: #333;">📱 First Time Setup Required</h3>
-                    <p style="margin: 0 0 20px 0; color: #666; line-height: 1.5;">This app needs to download Bible data on first use. Please connect to the internet and reload the page.</p>
-                    <button onclick="location.reload()" style="background: #4285f4; color: white; border: none; padding: 12px 30px; border-radius: 6px; font-size: 16px; cursor: pointer;">Reload</button>
-                `;
-                document.body.appendChild(message);
             }
         }
     } catch (error) {
