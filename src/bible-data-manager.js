@@ -64,13 +64,44 @@ class BibleDataManager {
 
     // Load Bible data from local JS files (bundled with app)
     // Files should export data as: window.bibleData_<bookFile>_<language> = {...}
-    loadFromLocalFile(bookFile, language) {
+    async loadFromLocalFile(bookFile, language) {
         const varName = `bibleData_${bookFile}_${language}`;
+        
+        // Check if already loaded
         if (window[varName]) {
-            console.log(`📁 Loaded ${bookFile} (${language}) from bundled data`);
+            console.log(`📁 Loaded ${bookFile} (${language}) from bundled data (already in memory)`);
             return window[varName];
         }
-        console.log(`📁 No bundled data for ${bookFile} (${language})`);
+        
+        // Try to load the specific file dynamically
+        console.log(`📁 Attempting to load ${bookFile} (${language}) from bundled file...`);
+        try {
+            await new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = `./data/bible/${language}/${bookFile}.js`;
+                script.onload = () => {
+                    console.log(`✅ Loaded script: ${bookFile} (${language})`);
+                    resolve();
+                };
+                script.onerror = () => {
+                    console.log(`❌ Failed to load script: ${bookFile} (${language})`);
+                    reject();
+                };
+                document.head.appendChild(script);
+                
+                // Timeout after 5 seconds
+                setTimeout(() => reject(new Error('Timeout')), 5000);
+            });
+            
+            // Check if data is now available
+            if (window[varName]) {
+                console.log(`📁 Successfully loaded ${bookFile} (${language}) from bundled data`);
+                return window[varName];
+            }
+        } catch (error) {
+            console.log(`📁 Could not load bundled data for ${bookFile} (${language}):`, error.message);
+        }
+        
         return null;
     }
 
@@ -188,7 +219,7 @@ class BibleDataManager {
 
         // PRIORITY 2: Try bundled local JS files (offline fallback)
         console.log(`📁 Trying bundled data for ${bookFile} (${language})...`);
-        const localData = this.loadFromLocalFile(bookFile, language);
+        const localData = await this.loadFromLocalFile(bookFile, language);
         if (localData) {
             console.log(`📁 Using bundled ${bookFile} (${language})`);
             this.bookCache.set(bookCacheKey, localData);

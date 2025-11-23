@@ -785,7 +785,13 @@ async function loadBook(bookIndex, chapter) {
             // Single language mode - load entire book
             const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
             console.log(`Loading entire book: ${book.name} (${language})`);
-            await bibleDataManager.loadEntireBook(book.file, language);
+            const bookData = await bibleDataManager.loadEntireBook(book.file, language);
+            
+            if (!bookData) {
+                console.error(`❌ Could not load ${book.name} - tried API, bundled files, and cache`);
+                hideLoader();
+                return;
+            }
             
             // Get current chapter data from cache
             const chapterData = await bibleDataManager.getChapterData(book.file, chapter, language);
