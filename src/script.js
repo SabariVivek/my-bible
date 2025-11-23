@@ -4342,12 +4342,19 @@ function initializeNotesModal() {
         }
     });
     
-    // Color selection
+    // Color selection - allow toggle on/off
     colorBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            colorBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            currentNoteColor = btn.dataset.color;
+            // If clicking the already active button, deselect it
+            if (btn.classList.contains('active')) {
+                btn.classList.remove('active');
+                currentNoteColor = null;
+            } else {
+                // Otherwise, select this color and deselect others
+                colorBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentNoteColor = btn.dataset.color;
+            }
         });
     });
     

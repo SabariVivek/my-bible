@@ -3505,7 +3505,7 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     scrollbar-width: none;
     -ms-overflow-style: none;
     flex: 1;
-    padding: 4px 0;
+    padding: 4px 5px;
 }
 
 .notes-color-options::-webkit-scrollbar {
