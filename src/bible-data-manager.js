@@ -76,12 +76,14 @@ class BibleDataManager {
         
         // Check if book is already cached in memory
         if (this.bookCache.has(bookCacheKey)) {
+            console.log(`📖 Loaded ${bookFile} (${language}) from MEMORY cache`);
             return this.bookCache.get(bookCacheKey);
         }
 
         // Try to load from IndexedDB/localStorage first (offline-first approach)
         const cachedBook = await this.loadBookFromLocalStorage(bookCacheKey);
         if (cachedBook) {
+            console.log(`💾 Loaded ${bookFile} (${language}) from IndexedDB/localStorage`);
             // Cache in memory for faster access
             this.bookCache.set(bookCacheKey, cachedBook);
             
@@ -95,6 +97,7 @@ class BibleDataManager {
         }
 
         // Only fetch from API if not in cache (first time)
+        console.log(`🌐 Fetching ${bookFile} (${language}) from Supabase API...`);
         try {
             // Fetch ALL chapters of the book at once
             const { data, error } = await this.supabaseClient
@@ -105,7 +108,9 @@ class BibleDataManager {
                 .order('chapter', { ascending: true })
                 .order('verse', { ascending: true });
 
-            if (error) {return null;
+            if (error) {
+                console.error(`❌ API Error for ${bookFile}:`, error);
+                return null;
             }
 
             // Organize data by chapter
@@ -127,10 +132,12 @@ class BibleDataManager {
             });
 
             // Store in IndexedDB/localStorage
-            this.saveBookToLocalStorage(bookCacheKey, bookData);
+            await this.saveBookToLocalStorage(bookCacheKey, bookData);
+            console.log(`✅ Saved ${bookFile} (${language}) to IndexedDB - ${Object.keys(bookData).length} chapters`);
 
             return bookData;
         } catch (error) {
+            console.error(`❌ Network error for ${bookFile}:`, error);
             // Network error - try cache again as fallback
             return this.loadBookFromLocalStorage(bookCacheKey);
         }
@@ -142,6 +149,7 @@ class BibleDataManager {
         
         // Check chapter cache first
         if (this.cache.has(cacheKey)) {
+            console.log(`📖 Loaded ${bookFile} ch.${chapter} (${language}) from MEMORY cache`);
             return this.cache.get(cacheKey);
         }
 
@@ -151,11 +159,21 @@ class BibleDataManager {
             const bookData = this.bookCache.get(bookCacheKey);
             const chapterData = bookData[chapter];
             if (chapterData) {
+                console.log(`📖 Loaded ${bookFile} ch.${chapter} (${language}) from BOOK cache`);
                 this.cache.set(cacheKey, chapterData);
                 return chapterData;
             }
         }
 
+        // Try loading from localStorage/IndexedDB before API
+        const storedChapterData = this.loadFromLocalStorage(cacheKey);
+        if (storedChapterData) {
+            console.log(`💾 Loaded ${bookFile} ch.${chapter} (${language}) from localStorage`);
+            this.cache.set(cacheKey, storedChapterData);
+            return storedChapterData;
+        }
+
+        console.log(`🌐 Fetching ${bookFile} ch.${chapter} (${language}) from API...`);
         try {
             const { data, error } = await this.supabaseClient
                 .from(SUPABASE_BIBLE_CONFIG.tableName)
@@ -166,6 +184,7 @@ class BibleDataManager {
                 .order('verse', { ascending: true });
 
             if (error) {
+                console.error(`❌ API error for ${bookFile} ch.${chapter}:`, error);
                 return null;
             }
 
@@ -180,10 +199,17 @@ class BibleDataManager {
             
             // Store in localStorage for persistence
             this.saveToLocalStorage(cacheKey, chapterData);
+            console.log(`✅ Saved ${bookFile} ch.${chapter} (${language}) to localStorage`);
 
             return chapterData;
         } catch (error) {
-            return this.loadFromLocalStorage(cacheKey);
+            console.error(`❌ Network error for ${bookFile} ch.${chapter}:`, error);
+            // Try loading from localStorage as fallback
+            const fallbackData = this.loadFromLocalStorage(cacheKey);
+            if (fallbackData) {
+                console.log(`💾 Loaded ${bookFile} ch.${chapter} (${language}) from localStorage (fallback)`);
+            }
+            return fallbackData;
         }
     }
 
@@ -373,14 +399,27 @@ class BibleDataManager {
     async preloadAllBooks(bibleBooks, language, progressCallback = null) {
         const preloadKey = `preload_complete_${language}`;
         
-        // Check if already preloaded
-        if (localStorage.getItem(preloadKey) === 'true') {
-            if (progressCallback) progressCallback(bibleBooks.length, bibleBooks.length, true);
-            return;
+        // DON'T skip if marked complete - verify actual data exists
+        const shouldVerify = localStorage.getItem(preloadKey) === 'true';
+        if (shouldVerify) {
+            console.log(`🔍 Verifying ${language} preload integrity...`);
+            // Check if first and last books are actually cached
+            const firstBook = await this.loadBookFromLocalStorage(this.getBookCacheKey(bibleBooks[0].file, language));
+            const lastBook = await this.loadBookFromLocalStorage(this.getBookCacheKey(bibleBooks[bibleBooks.length - 1].file, language));
+            
+            if (firstBook && lastBook) {
+                console.log(`✅ ${language} preload verified - data exists`);
+                if (progressCallback) progressCallback(bibleBooks.length, bibleBooks.length, true);
+                return;
+            } else {
+                console.log(`⚠️ ${language} preload marked complete but data missing - re-downloading`);
+                localStorage.removeItem(preloadKey);
+            }
         }
 
         // Track progress
         let loaded = 0;
+        let failed = 0;
         const total = bibleBooks.length;
 
         // Load books one by one in background (to avoid overwhelming the API)
@@ -394,8 +433,15 @@ class BibleDataManager {
                 
                 if (!cachedBook) {
                     // Load book if not cached
-                    await this.loadEntireBook(book.file, language);
-                    loaded++;
+                    const bookData = await this.loadEntireBook(book.file, language);
+                    
+                    if (bookData) {
+                        loaded++;
+                        console.log(`✅ [${i + 1}/${total}] Cached ${book.file} (${language})`);
+                    } else {
+                        failed++;
+                        console.error(`❌ [${i + 1}/${total}] Failed to load ${book.file} (${language})`);
+                    }
                     
                     // Update progress
                     if (progressCallback) {
@@ -405,18 +451,26 @@ class BibleDataManager {
                     // Small delay to avoid API rate limits
                     await new Promise(resolve => setTimeout(resolve, 100));
                 } else {
+                    console.log(`✓ [${i + 1}/${total}] ${book.file} (${language}) already cached`);
                     // Book already cached, still update progress
                     if (progressCallback) {
                         progressCallback(i + 1, total, false);
                     }
                 }
             } catch (error) {
-                // Continue even if one book fails
+                failed++;
+                console.error(`❌ [${i + 1}/${total}] Error loading ${book.file}:`, error);
             }
         }
 
-        // Mark as complete
-        localStorage.setItem(preloadKey, 'true');
+        // Only mark as complete if ALL books were successfully loaded
+        if (failed === 0) {
+            localStorage.setItem(preloadKey, 'true');
+            console.log(`✅ Preload complete for ${language} - All ${total} books cached`);
+        } else {
+            console.error(`⚠️ Preload incomplete for ${language} - ${failed} books failed`);
+        }
+        
         if (progressCallback) {
             progressCallback(total, total, true);
         }
@@ -424,7 +478,9 @@ class BibleDataManager {
 
     // Check preload status
     isPreloadComplete(language) {
-        return localStorage.getItem(`preload_complete_${language}`) === 'true';
+        const isComplete = localStorage.getItem(`preload_complete_${language}`) === 'true';
+        console.log(`🔍 Preload status for ${language}: ${isComplete ? '✅ Complete' : '❌ Incomplete'}`);
+        return isComplete;
     }
 
     // Reset preload flag (for manual cache clear)

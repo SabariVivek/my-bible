@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Only increment version when you want to force cache clearing
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
 const STATIC_CACHE_NAME = `my-bible-static-${CACHE_VERSION}`;
@@ -58,36 +58,49 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   
-  // Handle Supabase API requests (cache-first with network fallback for persistent offline)
+  // Handle Supabase API requests (cache-first with timeout for offline)
   if (url.origin.includes('supabase.co')) {
     event.respondWith(
-      // Try cache first for instant loading
-      caches.open(PERSISTENT_API_CACHE).then(cache => {
-        return cache.match(event.request).then(cachedResponse => {
-          // Fetch from network in background and update cache
-          const fetchPromise = fetch(event.request).then(networkResponse => {
-            // Only cache successful responses
+      caches.match(event.request).then(cachedResponse => {
+        // If we have cache, return it immediately
+        if (cachedResponse) {
+          console.log('✅ Serving from cache:', event.request.url);
+          
+          // Update cache in background (don't wait)
+          fetch(event.request).then(networkResponse => {
             if (networkResponse && networkResponse.status === 200) {
-              // Clone before caching
               const responseClone = networkResponse.clone();
-              
-              // Update both caches
-              cache.put(event.request, responseClone.clone());
-              caches.open(API_CACHE_NAME).then(versionCache => {
-                versionCache.put(event.request, responseClone);
+              caches.open(PERSISTENT_API_CACHE).then(cache => {
+                cache.put(event.request, responseClone);
               });
             }
-            return networkResponse;
-          }).catch(() => {
-            // Network failed, return cached response if available
-            return cachedResponse || new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
-              headers: { 'Content-Type': 'application/json' },
-              status: 503
-            });
-          });
+          }).catch(() => {}); // Fail silently if offline
           
-          // Return cached response immediately if available, otherwise wait for network
-          return cachedResponse || fetchPromise;
+          return cachedResponse;
+        }
+        
+        // No cache - try network with timeout
+        console.log('🌐 No cache, fetching from network:', event.request.url);
+        return Promise.race([
+          fetch(event.request).then(response => {
+            if (response && response.status === 200) {
+              const responseClone = response.clone();
+              caches.open(PERSISTENT_API_CACHE).then(cache => {
+                cache.put(event.request, responseClone);
+              });
+            }
+            return response;
+          }),
+          // Timeout after 5 seconds
+          new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Network timeout')), 5000)
+          )
+        ]).catch(error => {
+          console.error('❌ Network failed:', error.message);
+          return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
+            headers: { 'Content-Type': 'application/json' },
+            status: 503
+          });
         });
       })
     );

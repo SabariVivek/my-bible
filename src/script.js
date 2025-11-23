@@ -6322,3 +6322,34 @@ async function startBackgroundPreload() {
             });
     }
 }
+
+// Debug helper - expose to console for troubleshooting
+window.debugBible = {
+    checkPreloadStatus: () => {
+        console.log('📊 Preload Status:');
+        console.log('  Tamil:', localStorage.getItem('preload_complete_tamil') === 'true' ? '✅ Complete' : '❌ Incomplete');
+        console.log('  English:', localStorage.getItem('preload_complete_english') === 'true' ? '✅ Complete' : '❌ Incomplete');
+    },
+    forceReload: async (language = 'tamil') => {
+        console.log(`🔄 Forcing reload for ${language}...`);
+        bibleDataManager.resetPreloadFlag(language);
+        await startBackgroundPreload();
+    },
+    clearCache: async () => {
+        console.log('🗑️ Clearing all cache...');
+        await bibleDataManager.clearCache();
+        console.log('✅ Cache cleared. Reload the page to start fresh.');
+    },
+    verifyBook: async (bookFile, language = 'tamil') => {
+        const bookCacheKey = bibleDataManager.getBookCacheKey(bookFile, language);
+        const data = await bibleDataManager.loadBookFromLocalStorage(bookCacheKey);
+        console.log(`📖 ${bookFile} (${language}):`, data ? `✅ Cached (${Object.keys(data).length} chapters)` : '❌ Not found');
+        return data;
+    }
+};
+
+console.log('🛠️ Debug tools available: window.debugBible');
+console.log('  - debugBible.checkPreloadStatus()');
+console.log('  - debugBible.forceReload("tamil")');
+console.log('  - debugBible.clearCache()');
+console.log('  - debugBible.verifyBook("genesis", "tamil")');
