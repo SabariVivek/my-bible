@@ -6401,12 +6401,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Toggle right sidebar
     if (rightMenuBtn && rightSidebar) {
+        console.log('Right menu button found, attaching click handler');
         rightMenuBtn.addEventListener('click', (e) => {
+            console.log('Right menu button clicked');
+            e.preventDefault();
             e.stopPropagation();
             
             if (window.innerWidth <= 768) {
                 // Mobile: use drawer behavior
                 const isOpen = rightSidebar.classList.contains('drawer-open');
+                console.log('Mobile - drawer open:', isOpen);
                 if (isOpen) {
                     rightSidebar.classList.remove('drawer-open');
                     rightSidebar.classList.add('hidden');
@@ -6416,9 +6420,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } else {
                 // Desktop: simple toggle
+                const isHidden = rightSidebar.classList.contains('hidden');
+                console.log('Desktop - sidebar hidden:', isHidden);
                 rightSidebar.classList.toggle('hidden');
             }
-        });
+        }, true);
+    } else {
+        console.log('Right menu button or sidebar not found', {rightMenuBtn, rightSidebar});
     }
     
     // Close right sidebar when clicking outside (both mobile and desktop)
