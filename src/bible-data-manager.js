@@ -14,32 +14,81 @@ class BibleDataManager {
         this.db = null; // IndexedDB instance
         this.dbReady = false;
         this.dbInitPromise = null;
+        this.isOfflineMode = false; // Track if we're in offline mode
+        this.apiTimeout = 5000; // 5 second timeout for API calls
         this.initSupabase();
         this.dbInitPromise = this.initIndexedDB();
     }
 
+    // Check if network is available by testing if we can reach the API
+    async checkNetworkConnectivity() {
+        if (!this.supabaseClient || !navigator.onLine) {
+            return false;
+        }
+        
+        try {
+            // Quick test query with timeout
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 2000);
+            
+            const { error } = await this.supabaseClient
+                .from(SUPABASE_BIBLE_CONFIG.tableName)
+                .select('chapter', { count: 'exact', head: true })
+                .limit(1)
+                .abortSignal(controller.signal);
+            
+            clearTimeout(timeoutId);
+            return !error;
+        } catch (error) {
+            return false;
+        }
+    }
+
     initSupabase() {
         if (typeof supabase === 'undefined') {
+            console.warn('⚠️ Supabase library not loaded - app will work in offline-only mode');
+            this.supabaseClient = null;
             return;
         }
-        this.supabaseClient = supabase.createClient(
-            SUPABASE_BIBLE_CONFIG.url,
-            SUPABASE_BIBLE_CONFIG.anonKey
-        );
+        try {
+            this.supabaseClient = supabase.createClient(
+                SUPABASE_BIBLE_CONFIG.url,
+                SUPABASE_BIBLE_CONFIG.anonKey
+            );
+            console.log('✅ Supabase client initialized');
+        } catch (error) {
+            console.error('❌ Failed to initialize Supabase:', error);
+            this.supabaseClient = null;
+        }
+    }
+
+    // Load Bible data from local JS files (bundled with app)
+    // Files should export data as: window.bibleData_<bookFile>_<language> = {...}
+    loadFromLocalFile(bookFile, language) {
+        const varName = `bibleData_${bookFile}_${language}`;
+        if (window[varName]) {
+            console.log(`📁 Loaded ${bookFile} (${language}) from bundled data`);
+            return window[varName];
+        }
+        console.log(`📁 No bundled data for ${bookFile} (${language})`);
+        return null;
     }
 
     // Initialize IndexedDB for large data storage
     async initIndexedDB() {
+        console.log('🔧 Initializing IndexedDB...');
         return new Promise((resolve, reject) => {
-            const request = indexedDB.open('MyBibleDB', 1);
+            const request = indexedDB.open('MyBibleDB', 2); // Version 2 for compatibility
 
             request.onerror = () => {
+                console.error('❌ IndexedDB initialization failed:', request.error);
                 reject(request.error);
             };
 
             request.onsuccess = () => {
                 this.db = request.result;
                 this.dbReady = true;
+                console.log('✅ IndexedDB initialized successfully');
                 resolve(this.db);
             };
 
@@ -80,10 +129,84 @@ class BibleDataManager {
             return this.bookCache.get(bookCacheKey);
         }
 
-        // Try to load from IndexedDB/localStorage first (offline-first approach)
+        // PRIORITY 1: If online, try Supabase API first
+        if (this.supabaseClient && navigator.onLine) {
+            console.log(`🌐 Fetching ${bookFile} (${language}) from Supabase API...`);
+            try {
+                // Create abort controller for timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), this.apiTimeout);
+                
+                // Fetch ALL chapters of the book at once
+                const { data, error } = await this.supabaseClient
+                    .from(SUPABASE_BIBLE_CONFIG.tableName)
+                    .select('chapter, verse, text')
+                    .eq('book_file', bookFile)
+                    .eq('language', language)
+                    .order('chapter', { ascending: true })
+                    .order('verse', { ascending: true })
+                    .abortSignal(controller.signal);
+
+                clearTimeout(timeoutId);
+
+                if (error) {
+                    console.error(`❌ API Error for ${bookFile}:`, error);
+                } else {
+                    // Organize data by chapter
+                    const bookData = {};
+                    data.forEach(row => {
+                        if (!bookData[row.chapter]) {
+                            bookData[row.chapter] = {};
+                        }
+                        bookData[row.chapter][`verse_${row.verse}`] = row.text;
+                    });
+
+                    // Cache entire book
+                    this.bookCache.set(bookCacheKey, bookData);
+                    
+                    // Also cache individual chapters for quick access
+                    Object.keys(bookData).forEach(chapter => {
+                        const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
+                        this.cache.set(chapterKey, bookData[chapter]);
+                    });
+
+                    // Store in IndexedDB/localStorage
+                    await this.saveBookToLocalStorage(bookCacheKey, bookData);
+                    console.log(`✅ Loaded ${bookFile} (${language}) from Supabase - ${Object.keys(bookData).length} chapters`);
+
+                    return bookData;
+                }
+            } catch (error) {
+                // Handle timeout or network errors
+                if (error.name === 'AbortError') {
+                    console.error(`⏱️ Request timeout for ${bookFile} - trying offline sources`);
+                } else {
+                    console.error(`❌ Network error for ${bookFile}:`, error);
+                }
+            }
+        }
+
+        // PRIORITY 2: Try bundled local JS files (offline fallback)
+        console.log(`📁 Trying bundled data for ${bookFile} (${language})...`);
+        const localData = this.loadFromLocalFile(bookFile, language);
+        if (localData) {
+            console.log(`📁 Using bundled ${bookFile} (${language})`);
+            this.bookCache.set(bookCacheKey, localData);
+            
+            // Also cache individual chapters
+            Object.keys(localData).forEach(chapter => {
+                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
+                this.cache.set(chapterKey, localData[chapter]);
+            });
+            
+            return localData;
+        }
+
+        // PRIORITY 3: Try IndexedDB/localStorage cache as last resort
+        console.log(`🔍 Checking IndexedDB cache for ${bookCacheKey}...`);
         const cachedBook = await this.loadBookFromLocalStorage(bookCacheKey);
         if (cachedBook) {
-            console.log(`💾 Loaded ${bookFile} (${language}) from IndexedDB/localStorage`);
+            console.log(`💾 Loaded ${bookFile} (${language}) from IndexedDB - ${Object.keys(cachedBook).length} chapters found`);
             // Cache in memory for faster access
             this.bookCache.set(bookCacheKey, cachedBook);
             
@@ -96,51 +219,8 @@ class BibleDataManager {
             return cachedBook;
         }
 
-        // Only fetch from API if not in cache (first time)
-        console.log(`🌐 Fetching ${bookFile} (${language}) from Supabase API...`);
-        try {
-            // Fetch ALL chapters of the book at once
-            const { data, error } = await this.supabaseClient
-                .from(SUPABASE_BIBLE_CONFIG.tableName)
-                .select('chapter, verse, text')
-                .eq('book_file', bookFile)
-                .eq('language', language)
-                .order('chapter', { ascending: true })
-                .order('verse', { ascending: true });
-
-            if (error) {
-                console.error(`❌ API Error for ${bookFile}:`, error);
-                return null;
-            }
-
-            // Organize data by chapter
-            const bookData = {};
-            data.forEach(row => {
-                if (!bookData[row.chapter]) {
-                    bookData[row.chapter] = {};
-                }
-                bookData[row.chapter][`verse_${row.verse}`] = row.text;
-            });
-
-            // Cache entire book
-            this.bookCache.set(bookCacheKey, bookData);
-            
-            // Also cache individual chapters for quick access
-            Object.keys(bookData).forEach(chapter => {
-                const chapterKey = this.getCacheKey(bookFile, parseInt(chapter), language);
-                this.cache.set(chapterKey, bookData[chapter]);
-            });
-
-            // Store in IndexedDB/localStorage
-            await this.saveBookToLocalStorage(bookCacheKey, bookData);
-            console.log(`✅ Saved ${bookFile} (${language}) to IndexedDB - ${Object.keys(bookData).length} chapters`);
-
-            return bookData;
-        } catch (error) {
-            console.error(`❌ Network error for ${bookFile}:`, error);
-            // Network error - try cache again as fallback
-            return this.loadBookFromLocalStorage(bookCacheKey);
-        }
+        console.error(`❌ No data found for ${bookFile} (${language}) - not in API, bundled files, or cache`);
+        return null;
     }
 
     // Get chapter data (will load entire book if not cached)
@@ -173,18 +253,32 @@ class BibleDataManager {
             return storedChapterData;
         }
 
+        // Check if we're offline or no Supabase client
+        if (!this.supabaseClient || !navigator.onLine) {
+            console.warn(`⚠️ Offline mode - cannot fetch ${bookFile} ch.${chapter} (${language})`);
+            return null;
+        }
+
         console.log(`🌐 Fetching ${bookFile} ch.${chapter} (${language}) from API...`);
         try {
+            // Create abort controller for timeout
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), this.apiTimeout);
+            
             const { data, error } = await this.supabaseClient
                 .from(SUPABASE_BIBLE_CONFIG.tableName)
                 .select('verse, text')
                 .eq('book_file', bookFile)
                 .eq('chapter', chapter)
                 .eq('language', language)
-                .order('verse', { ascending: true });
+                .order('verse', { ascending: true })
+                .abortSignal(controller.signal);
+
+            clearTimeout(timeoutId);
 
             if (error) {
                 console.error(`❌ API error for ${bookFile} ch.${chapter}:`, error);
+                this.isOfflineMode = true;
                 return null;
             }
 
@@ -294,11 +388,13 @@ class BibleDataManager {
             try {
                 await this.dbInitPromise;
             } catch (error) {
+                console.warn('⚠️ IndexedDB not ready:', error);
                 return null; // DB not available
             }
         }
 
         if (!this.db) {
+            console.warn('⚠️ IndexedDB not available');
             return null; // DB not available
         }
 
@@ -404,15 +500,23 @@ class BibleDataManager {
         if (shouldVerify) {
             console.log(`🔍 Verifying ${language} preload integrity...`);
             // Check if first and last books are actually cached
-            const firstBook = await this.loadBookFromLocalStorage(this.getBookCacheKey(bibleBooks[0].file, language));
-            const lastBook = await this.loadBookFromLocalStorage(this.getBookCacheKey(bibleBooks[bibleBooks.length - 1].file, language));
+            const firstBookKey = this.getBookCacheKey(bibleBooks[0].file, language);
+            const lastBookKey = this.getBookCacheKey(bibleBooks[bibleBooks.length - 1].file, language);
+            
+            console.log(`   Checking first book: ${firstBookKey}`);
+            const firstBook = await this.loadBookFromLocalStorage(firstBookKey);
+            console.log(`   First book result: ${firstBook ? 'Found' : 'Missing'}`);
+            
+            console.log(`   Checking last book: ${lastBookKey}`);
+            const lastBook = await this.loadBookFromLocalStorage(lastBookKey);
+            console.log(`   Last book result: ${lastBook ? 'Found' : 'Missing'}`);
             
             if (firstBook && lastBook) {
                 console.log(`✅ ${language} preload verified - data exists`);
                 if (progressCallback) progressCallback(bibleBooks.length, bibleBooks.length, true);
                 return;
             } else {
-                console.log(`⚠️ ${language} preload marked complete but data missing - re-downloading`);
+                console.log(`⚠️ ${language} preload marked complete but data missing - re-downloading all books`);
                 localStorage.removeItem(preloadKey);
             }
         }

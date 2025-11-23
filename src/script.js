@@ -204,7 +204,21 @@ if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
     });
 }
 
-// Network status detection removed - app now works offline with cached data
+// Network status detection (silent - no UI indicator)
+let isOnline = navigator.onLine;
+
+function updateOnlineStatus() {
+    isOnline = navigator.onLine;
+    if (!isOnline) {
+        console.log('📵 App is offline - using cached data only');
+    } else {
+        console.log('🌐 App is online');
+    }
+}
+
+// Listen for online/offline events
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
 
 // History and back button management
 let currentPage = 'bible'; // 'bible', 'search', or other pages
@@ -260,21 +274,38 @@ function navigateToPage(pageName) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Check online status on load (silent)
+    updateOnlineStatus();
+    
     // Request persistent storage to prevent data deletion
     if (navigator.storage && navigator.storage.persist) {
         navigator.storage.persist().then(persistent => {
             if (persistent) {
-                console.log('✅ Storage will persist and not be cleared');
+                console.log('✅ Storage will persist and not be cleared automatically');
             } else {
-                console.warn('⚠️ Storage may be cleared by the browser');
+                console.warn('⚠️ Storage may be cleared by the browser under storage pressure');
+                console.log('💡 Tip: Install app to home screen for guaranteed persistence');
             }
+        });
+    }
+    
+    // Check current storage status and estimate quota
+    if (navigator.storage && navigator.storage.estimate) {
+        navigator.storage.estimate().then(estimate => {
+            const usedMB = (estimate.usage / (1024 * 1024)).toFixed(2);
+            const quotaMB = (estimate.quota / (1024 * 1024)).toFixed(2);
+            const percentUsed = ((estimate.usage / estimate.quota) * 100).toFixed(1);
+            console.log(`💾 Storage: ${usedMB}MB / ${quotaMB}MB (${percentUsed}% used)`);
         });
     }
     
     // Check if storage is already persistent
     if (navigator.storage && navigator.storage.persisted) {
         navigator.storage.persisted().then(isPersisted => {
-            console.log('Storage persisted status:', isPersisted);
+            console.log('📌 Storage persisted status:', isPersisted ? '✅ Yes' : '❌ No');
+            if (!isPersisted) {
+                console.log('💡 To make storage persistent: Install app to home screen or bookmark it');
+            }
         });
     }
     
@@ -515,6 +546,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Start background preload after initial load (non-blocking, silent)
     setTimeout(() => {
+        console.log('⏰ 3 seconds passed, starting background preload...');
+        console.log('📊 Current preload flags:');
+        console.log('  Tamil:', localStorage.getItem('preload_complete_tamil'));
+        console.log('  English:', localStorage.getItem('preload_complete_english'));
         startBackgroundPreload();
     }, 3000); // Wait 3 seconds after page load to start preloading
 });
@@ -743,7 +778,16 @@ async function loadBook(bookIndex, chapter) {
                 currentData = { [`chapter_${chapter}`]: englishData };
                 updateUI();
             } else {
-                console.error('Failed to load Bible data from Supabase');
+                console.error('Failed to load Bible data - not in cache');
+                hideLoader();
+                const message = document.createElement('div');
+                message.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); max-width: 400px; text-align: center; z-index: 10000;';
+                message.innerHTML = `
+                    <h3 style="margin: 0 0 15px 0; color: #333;">📱 First Time Setup Required</h3>
+                    <p style="margin: 0 0 20px 0; color: #666; line-height: 1.5;">This app needs to download Bible data on first use. Please connect to the internet and reload the page.</p>
+                    <button onclick="location.reload()" style="background: #4285f4; color: white; border: none; padding: 12px 30px; border-radius: 6px; font-size: 16px; cursor: pointer;">Reload</button>
+                `;
+                document.body.appendChild(message);
             }
         } else {
             // Single language mode - load entire book
@@ -759,7 +803,16 @@ async function loadBook(bookIndex, chapter) {
                 currentTamilData = null;
                 updateUI();
             } else {
-                console.error('Failed to load Bible data from Supabase');
+                console.error('Failed to load Bible data - not in cache');
+                hideLoader();
+                const message = document.createElement('div');
+                message.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); max-width: 400px; text-align: center; z-index: 10000;';
+                message.innerHTML = `
+                    <h3 style="margin: 0 0 15px 0; color: #333;">📱 First Time Setup Required</h3>
+                    <p style="margin: 0 0 20px 0; color: #666; line-height: 1.5;">This app needs to download Bible data on first use. Please connect to the internet and reload the page.</p>
+                    <button onclick="location.reload()" style="background: #4285f4; color: white; border: none; padding: 12px 30px; border-radius: 6px; font-size: 16px; cursor: pointer;">Reload</button>
+                `;
+                document.body.appendChild(message);
             }
         }
     } catch (error) {
@@ -6293,33 +6346,26 @@ function hideVoiceStatus() {
 async function startBackgroundPreload() {
     console.log('🔄 Starting background preload...');
     
-    // Determine which languages to preload based on current UI language
-    const languagesToPreload = [];
-    
-    if (currentLanguage === 'both') {
-        languagesToPreload.push('tamil', 'english');
-    } else if (currentLanguage === 'tamil') {
-        languagesToPreload.push('tamil');
-    } else {
-        languagesToPreload.push('english');
-    }
+    // Always preload BOTH Tamil and English on first load for complete offline access
+    const languagesToPreload = ['tamil', 'english'];
     
     // Preload all books for each language
+    // Always verify and re-download if needed (preloadAllBooks will check integrity)
     for (const language of languagesToPreload) {
-        // Check if already preloaded
-        if (bibleDataManager.isPreloadComplete(language)) {
-            console.log(`✅ ${language} books already preloaded`);
-            continue;
-        }
+        const isComplete = localStorage.getItem(`preload_complete_${language}`) === 'true';
         
-        // Start preloading (non-blocking)
-        bibleDataManager.preloadAllBooks(bibleBooks, language)
-            .then(() => {
-                console.log(`✅ Completed preloading all books in ${language}`);
-            })
-            .catch(error => {
-                console.error(`❌ Error preloading ${language} books:`, error);
-            });
+        if (isComplete) {
+            console.log(`✅ ${language} already marked as complete - skipping download`);
+            // Data should be available, preloadAllBooks will verify if needed
+        } else if (navigator.onLine) {
+            // Not complete and online - start download
+            console.log(`📥 Downloading all ${language} books in background...`);
+            bibleDataManager.preloadAllBooks(bibleBooks, language)
+                .then(() => console.log(`✅ Completed preloading all ${language} books`))
+                .catch(error => console.error(`❌ Error preloading ${language}:`, error));
+        } else {
+            console.warn(`⚠️ ${language} not yet downloaded and offline - limited functionality`);
+        }
     }
 }
 
