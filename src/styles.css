@@ -3609,58 +3609,62 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 /* Verse with note indicator */
 .verse-line.has-note {
     position: relative;
-    padding-left: 8px;
-    /* border-left: 4px solid; */
 }
 
+/* Green note icon at end of verse - only show if verse has text note */
+.verse-line.has-note.has-text::after {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    background-image: url('../resources/icons/note.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    vertical-align: middle;
+}
+
+/* Colored note backgrounds based on category */
 .verse-line.has-note.note-burgundy {
-    border-left-color: #6b3344;
-    background-color: rgba(139, 76, 92, 0.25);
+    background-color: rgba(255, 215, 0, 0.25); /* Gold - Promises */
 }
 
 .verse-line.has-note.note-forest {
-    border-left-color: #3d4f44;
-    background-color: rgba(90, 115, 97, 0.25);
+    background-color: rgba(50, 205, 50, 0.25); /* Lime Green - Commands */
 }
 
 .verse-line.has-note.note-navy {
-    border-left-color: #2f3d52;
-    background-color: rgba(74, 93, 122, 0.25);
+    background-color: rgba(65, 105, 225, 0.25); /* Royal Blue - God's nature */
 }
 
 .verse-line.has-note.note-amber {
-    border-left-color: #9e7a41;
-    background-color: rgba(201, 154, 92, 0.25);
+    background-color: rgba(147, 112, 219, 0.25); /* Medium Purple - Prophecy */
 }
 
 .verse-line.has-note.note-violet {
-    border-left-color: #5c3d6b;
-    background-color: rgba(122, 92, 139, 0.25);
+    background-color: rgba(255, 99, 71, 0.25); /* Tomato Red - Warnings */
 }
 
 .verse-line.has-note.note-teal {
-    border-left-color: #2f5252;
-    background-color: rgba(74, 122, 122, 0.25);
+    background-color: rgba(255, 105, 180, 0.25); /* Hot Pink - Encouragement */
 }
 
 .verse-line.has-note.note-rust {
-    border-left-color: #804d2f;
-    background-color: rgba(166, 107, 74, 0.25);
+    background-color: rgba(32, 178, 170, 0.25); /* Light Sea Green - Hope */
 }
 
 .verse-line.has-note.note-olive {
-    border-left-color: #5c5c2f;
-    background-color: rgba(122, 122, 74, 0.25);
+    background-color: rgba(255, 165, 0, 0.25); /* Orange - Covenants */
 }
 
 .verse-line.has-note.note-indigo {
-    border-left-color: #3d3d6b;
-    background-color: rgba(92, 92, 139, 0.25);
+    background-color: rgba(135, 206, 235, 0.25); /* Sky Blue - Wisdom */
 }
 
 .verse-line.has-note.note-slate {
-    border-left-color: #3d4652;
-    background-color: rgba(90, 102, 115, 0.25);
+    background-color: rgba(221, 160, 221, 0.25); /* Plum - Background / Notes */
 }
 
 .verse-line .note-indicator {
@@ -3743,54 +3747,50 @@ body.dark-theme .notes-color-nav svg {
     color: #9aa0a6;
 }
 
+/* Dark theme - note icon (brightness adjustment if needed) */
+body.dark-theme .verse-line.has-note.has-text::after {
+    filter: brightness(1.1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Dark theme colored note backgrounds */
 body.dark-theme .verse-line.has-note.note-burgundy {
-    border-left-color: #c97a8f;
-    background-color: rgba(139, 76, 92, 0.12);
+    background-color: rgba(255, 215, 0, 0.15); /* Gold - Promises */
 }
 
 body.dark-theme .verse-line.has-note.note-forest {
-    border-left-color: #8fb39d;
-    background-color: rgba(90, 115, 97, 0.12);
+    background-color: rgba(50, 205, 50, 0.15); /* Lime Green - Commands */
 }
 
 body.dark-theme .verse-line.has-note.note-navy {
-    border-left-color: #7a93b8;
-    background-color: rgba(74, 93, 122, 0.12);
+    background-color: rgba(65, 105, 225, 0.15); /* Royal Blue - God's nature */
 }
 
 body.dark-theme .verse-line.has-note.note-amber {
-    border-left-color: #e0b87a;
-    background-color: rgba(201, 154, 92, 0.12);
+    background-color: rgba(147, 112, 219, 0.15); /* Medium Purple - Prophecy */
 }
 
 body.dark-theme .verse-line.has-note.note-violet {
-    border-left-color: #b88fc9;
-    background-color: rgba(122, 92, 139, 0.12);
+    background-color: rgba(255, 99, 71, 0.15); /* Tomato Red - Warnings */
 }
 
 body.dark-theme .verse-line.has-note.note-teal {
-    border-left-color: #7ab8b8;
-    background-color: rgba(74, 122, 122, 0.12);
+    background-color: rgba(255, 105, 180, 0.15); /* Hot Pink - Encouragement */
 }
 
 body.dark-theme .verse-line.has-note.note-rust {
-    border-left-color: #cc9970;
-    background-color: rgba(166, 107, 74, 0.12);
+    background-color: rgba(32, 178, 170, 0.15); /* Light Sea Green - Hope */
 }
 
 body.dark-theme .verse-line.has-note.note-olive {
-    border-left-color: #b8b87a;
-    background-color: rgba(122, 122, 74, 0.12);
+    background-color: rgba(255, 165, 0, 0.15); /* Orange - Covenants */
 }
 
 body.dark-theme .verse-line.has-note.note-indigo {
-    border-left-color: #8f8fc9;
-    background-color: rgba(92, 92, 139, 0.12);
+    background-color: rgba(135, 206, 235, 0.15); /* Sky Blue - Wisdom */
 }
 
 body.dark-theme .verse-line.has-note.note-slate {
-    border-left-color: #8f9fb3;
-    background-color: rgba(90, 102, 115, 0.12);
+    background-color: rgba(221, 160, 221, 0.15); /* Plum - Background / Notes */
 }
 
 /* Summary Drawer Overlay */

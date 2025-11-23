@@ -84,7 +84,7 @@ let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; //
 // Notes storage
 let verseNotes = {};
 let currentNoteVerse = null;
-let currentNoteColor = 'burgundy';
+let currentNoteColor = null;
 let githubNotesLoaded = false;
 let notesSha = null; // Required for updating GitHub file
 
@@ -3962,11 +3962,11 @@ function openNotesModal(verseNum = null) {
     // Load existing note if available
     if (existingNote) {
         textarea.value = existingNote.text;
-        currentNoteColor = existingNote.color || 'burgundy';
+        currentNoteColor = existingNote.color || null;
         deleteBtn.style.display = 'block';
     } else {
         textarea.value = '';
-        currentNoteColor = 'burgundy';
+        currentNoteColor = null;
         deleteBtn.style.display = 'none';
     }
     
@@ -4016,7 +4016,8 @@ async function saveNote() {
     try {
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
         
-        if (noteText) {
+        // Allow saving if there's text OR a color is selected
+        if (noteText || currentNoteColor) {
             verseNotes[noteKey] = {
                 text: noteText,
                 color: currentNoteColor,
@@ -4068,11 +4069,18 @@ function updateVerseNoteDisplay(verseNum) {
     if (!verseLine) return;
     
     // Remove all note classes
-    verseLine.classList.remove('has-note', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
+    verseLine.classList.remove('has-note', 'has-text', 'note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate');
     
     // Add note classes if note exists
     if (verseNotes[noteKey]) {
-        verseLine.classList.add('has-note', `note-${verseNotes[noteKey].color}`);
+        verseLine.classList.add('has-note');
+        // Add has-text class only if note has text content
+        if (verseNotes[noteKey].text && verseNotes[noteKey].text.trim()) {
+            verseLine.classList.add('has-text');
+        }
+        if (verseNotes[noteKey].color) {
+            verseLine.classList.add(`note-${verseNotes[noteKey].color}`);
+        }
     }
 }
 
@@ -4083,7 +4091,14 @@ function applyAllNoteDisplays() {
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
         
         if (verseNotes[noteKey]) {
-            verseLine.classList.add('has-note', `note-${verseNotes[noteKey].color}`);
+            verseLine.classList.add('has-note');
+            // Add has-text class only if note has text content
+            if (verseNotes[noteKey].text && verseNotes[noteKey].text.trim()) {
+                verseLine.classList.add('has-text');
+            }
+            if (verseNotes[noteKey].color) {
+                verseLine.classList.add(`note-${verseNotes[noteKey].color}`);
+            }
         }
     });
 }
@@ -4093,7 +4108,8 @@ function showNoteViewerIfExists(verseNum) {
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
     const note = verseNotes[noteKey];
     
-    if (note) {
+    // Only show viewer if note exists AND has text content
+    if (note && note.text && note.text.trim()) {
         showNoteViewer(verseNum, note);
     } else {
         hideNoteViewer();
