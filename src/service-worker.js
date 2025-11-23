@@ -58,48 +58,38 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   
-  // Handle Supabase API requests (cache after fetch with persistent storage)
+  // Handle Supabase API requests (cache-first with network fallback for persistent offline)
   if (url.origin.includes('supabase.co')) {
     event.respondWith(
-      fetch(event.request)
-        .then(response => {
-          // Clone the response
-          const responseClone = response.clone();
-          
-          // Cache the successful response in BOTH caches
-          if (response.status === 200) {
-            // Store in persistent cache that survives updates
-            caches.open(PERSISTENT_API_CACHE).then(cache => {
+      // Try cache first for instant loading
+      caches.open(PERSISTENT_API_CACHE).then(cache => {
+        return cache.match(event.request).then(cachedResponse => {
+          // Fetch from network in background and update cache
+          const fetchPromise = fetch(event.request).then(networkResponse => {
+            // Only cache successful responses
+            if (networkResponse && networkResponse.status === 200) {
+              // Clone before caching
+              const responseClone = networkResponse.clone();
+              
+              // Update both caches
               cache.put(event.request, responseClone.clone());
-            });
-            // Also store in version-specific cache for this session
-            caches.open(API_CACHE_NAME).then(cache => {
-              cache.put(event.request, responseClone);
-            });
-          }
-          
-          return response;
-        })
-        .catch(() => {
-          // If network fails, try persistent cache first, then regular cache
-          return caches.match(event.request, { cacheName: PERSISTENT_API_CACHE })
-            .then(persistentCache => {
-              if (persistentCache) {
-                return persistentCache;
-              }
-              // Try regular cache
-              return caches.match(event.request);
-            })
-            .then(cachedResponse => {
-              if (cachedResponse) {
-                return cachedResponse;
-              }
-              // Return offline message if no cache available
-              return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
-                headers: { 'Content-Type': 'application/json' }
+              caches.open(API_CACHE_NAME).then(versionCache => {
+                versionCache.put(event.request, responseClone);
               });
+            }
+            return networkResponse;
+          }).catch(() => {
+            // Network failed, return cached response if available
+            return cachedResponse || new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
+              headers: { 'Content-Type': 'application/json' },
+              status: 503
             });
-        })
+          });
+          
+          // Return cached response immediately if available, otherwise wait for network
+          return cachedResponse || fetchPromise;
+        });
+      })
     );
     return;
   }
@@ -128,7 +118,6 @@ self.addEventListener('fetch', (event) => {
           
           return response;
         });
-      }).catch(() => {
       }).catch(() => {
         // If both cache and network fail, show offline page
         if (event.request.mode === 'navigate') {

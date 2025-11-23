@@ -13,8 +13,9 @@ class BibleDataManager {
         this.supabaseClient = null;
         this.db = null; // IndexedDB instance
         this.dbReady = false;
+        this.dbInitPromise = null;
         this.initSupabase();
-        this.initIndexedDB();
+        this.dbInitPromise = this.initIndexedDB();
     }
 
     initSupabase() {
@@ -222,9 +223,9 @@ class BibleDataManager {
 
     // Save entire book to IndexedDB (replaces localStorage for large data)
     async saveBookToIndexedDB(key, bookData, language) {
-        if (!this.dbReady) {
+        if (!this.dbReady && this.dbInitPromise) {
             try {
-                await this.initIndexedDB();
+                await this.dbInitPromise;
             } catch (error) {
                 return; // Fail silently if IndexedDB not available
             }
@@ -263,9 +264,9 @@ class BibleDataManager {
 
     // Load entire book from IndexedDB
     async loadBookFromIndexedDB(key) {
-        if (!this.dbReady) {
+        if (!this.dbReady && this.dbInitPromise) {
             try {
-                await this.initIndexedDB();
+                await this.dbInitPromise;
             } catch (error) {
                 return null; // DB not available
             }
