@@ -10,17 +10,17 @@ const PERSISTENT_API_CACHE = 'my-bible-api-persistent';
 
 // Static assets to cache
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/src/styles.css',
-  '/src/script.js',
-  '/config/config.js',
-  '/src/bible-data-manager.js',
-  '/src/lib/supabase.js',
-  '/src/voice-command.js',
-  '/manifest.json',
-  '/resources/icons/bible.png',
-  '/data/bible/bible-data-loader.js'
+  './',
+  './index.html',
+  './src/styles.css',
+  './src/script.js',
+  './config/config.js',
+  './src/bible-data-manager.js',
+  './src/lib/supabase.js',
+  './src/voice-command.js',
+  './manifest.json',
+  './resources/icons/bible.png',
+  './data/bible/bible-data-loader.js'
 ];
 
 // Install event - cache static assets
