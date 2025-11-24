@@ -6446,21 +6446,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Bible Reading option - navigate to Bible Reading page
-    if (bibleReadingOption && bibleReadingPage) {
+    if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
-            // Hide main content
-            document.querySelector('.main-layout').style.display = 'none';
-            document.querySelector('header').style.display = 'none';
-            document.querySelector('.bottom-nav').style.display = 'none';
-            
-            // Show Bible Reading page
-            bibleReadingPage.style.display = 'block';
-            
-            // Close right sidebar
-            rightSidebar.classList.add('hidden');
-            if (window.innerWidth <= 768) {
-                rightSidebar.classList.remove('drawer-open');
-            }
+            // Navigate to the Bible Reading HTML file
+            window.location.href = 'src/bible-reading.html';
         });
     }
     
