@@ -619,7 +619,7 @@ body.dark-theme .search-bar .filter-btn.active::after {
     top: calc(100% + 1rem);
     right: -0.5rem;
     z-index: 1000;
-    background: #1e293b;
+    background: #292a2d;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     min-width: 280px;
@@ -636,7 +636,7 @@ body.dark-theme .search-bar .filter-btn.active::after {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #1e293b;
+    border-bottom: 8px solid #292a2d;
 }
 
 @media (max-width: 768px) {
@@ -721,7 +721,7 @@ body.dark-theme .search-bar .filter-btn.active::after {
 .filter-input {
     padding: 0.625rem 0.875rem;
     border: 2px solid #3c4043;
-    background: #1e293b;
+    background: #292a2d;
     color: #e8eaed;
     font-size: 0.9rem;
     font-family: inherit;
@@ -764,7 +764,7 @@ body.dark-theme .search-bar .filter-btn.active::after {
 /* Dropdown scrollbar styling */
 .filter-select {
     scrollbar-width: thin;
-    scrollbar-color: #5f6368 #1e293b;
+    scrollbar-color: #5f6368 #292a2d;
 }
 
 .filter-select::-webkit-scrollbar {
@@ -772,7 +772,7 @@ body.dark-theme .search-bar .filter-btn.active::after {
 }
 
 .filter-select::-webkit-scrollbar-track {
-    background: #1e293b;
+    background: #292a2d;
 }
 
 .filter-select::-webkit-scrollbar-thumb {
@@ -2098,9 +2098,9 @@ body.dark-theme .main-layout {
 
 /* Dark theme styling */
 body.dark-theme .verse-card {
-    background: #1e293b;
+    background: #292a2d;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body.dark-theme .verse-label {
@@ -2547,7 +2547,7 @@ body.dark-theme .color-option.active span {
 }
 
 body.dark-theme .books-sidebar {
-    background-color: #1e293b;
+    background-color: #292a2d;
     border-right: 1px solid #3c4043 !important;
 }
 
@@ -2570,7 +2570,7 @@ body.dark-theme .book-item.active .book-name {
 
 body.dark-theme .chapters-column,
 body.dark-theme .verses-column {
-    background-color: #1e293b;
+    background-color: #292a2d;
     border-right: 1px solid #3c4043 !important;
 }
 
@@ -2752,17 +2752,17 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
 /* Mobile dark theme adjustments */
 @media (max-width: 768px) {
     body.dark-theme .books-sidebar {
-        background-color: #1e293b;
+        background-color: #292a2d;
         border-right: 1px solid #3c4043 !important;
     }
     
     body.dark-theme .chapters-column {
-        background-color: #1e293b;
+        background-color: #292a2d;
         border-right: 1px solid #3c4043 !important;
     }
     
     body.dark-theme .verses-column {
-        background-color: #1e293b;
+        background-color: #292a2d;
         border-right: none !important;
     }
     
@@ -2811,17 +2811,17 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
     }
     
     body.dark-theme .books-sidebar.drawer-open {
-        background-color: #1e293b;
+        background-color: #292a2d;
         border-right: 1px solid #3c4043 !important;
     }
     
     body.dark-theme .chapters-column.drawer-open {
-        background-color: #1e293b;
+        background-color: #292a2d;
         border-right: 1px solid #3c4043 !important;
     }
     
     body.dark-theme .verses-column.drawer-open {
-        background-color: #1e293b;
+        background-color: #292a2d;
         border-right: none !important;
     }
 }
@@ -2859,7 +2859,7 @@ body.dark-theme .drawer-header-controls .icon-btn:hover {
 }
 
 body.dark-theme .home-options-loader {
-    background: #1e293b;
+    background: #292a2d;
 }
 
 body.dark-theme .home-options-loader .spinner {
@@ -2933,7 +2933,7 @@ body.dark-theme .home-options-loader .spinner {
 
 /* Dark theme styles for home options card */
 body.dark-theme .home-options-card {
-    background: #1e293b;
+    background: #292a2d;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -3165,7 +3165,7 @@ body.dark-theme .note-viewer-content::-webkit-scrollbar-thumb:hover {
 
 /* Dark theme for note viewer */
 body.dark-theme .note-viewer-modal {
-    background: #1e293b;
+    background: #292a2d;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
@@ -3781,7 +3781,7 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 
 /* Dark theme for notes modal */
 body.dark-theme .notes-modal {
-    background: #1e293b;
+    background: #292a2d;
 }
 
 body.dark-theme .notes-modal-header {
@@ -4109,7 +4109,7 @@ body.dark-theme .summary-paragraph::before {
 
 /* Dark theme for summary drawer */
 body.dark-theme .summary-drawer {
-    background: #1e293b;
+    background: #292a2d;
     border-left-color: #3c4043;
 }
 
@@ -4358,7 +4358,7 @@ body.dark-theme .character-item {
 
 body.dark-theme .characters-bottom-section {
     border-top-color: #3c4043;
-    background: #1e293b;
+    background: #292a2d;
 }
 
 body.dark-theme .no-characters {
@@ -4635,7 +4635,7 @@ body.dark-theme .summary-text {
 body.dark-theme .summary-bottom-section,
 body.dark-theme .timeline-bottom-section {
     border-top-color: #3c4043;
-    background: #1e293b;
+    background: #292a2d;
 }
 
 body.dark-theme .add-summary-btn {
@@ -4805,7 +4805,7 @@ body.dark-theme #search-btn-mobile.active::after {
 }
 
 body.dark-theme .mobile-admin-dropdown {
-    background: #1e293b;
+    background: #292a2d;
     border-color: #3c4043;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -4912,7 +4912,7 @@ body.dark-theme .desktop-admin-menu-btn.active::after {
 }
 
 body.dark-theme .desktop-admin-dropdown {
-    background: #1e293b;
+    background: #292a2d;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
@@ -5159,7 +5159,7 @@ body.dark-theme .add-character-btn:hover {
 
 /* Dark theme character modal */
 body.dark-theme .character-modal {
-    background: #1e293b;
+    background: #292a2d;
 }
 
 body.dark-theme .character-modal-header {
