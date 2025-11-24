@@ -1,4 +1,3 @@
-﻿// song_of_solomon Summary
+// song_of_solomon Summary
 window.songofsolomonSummary = {
-
 };

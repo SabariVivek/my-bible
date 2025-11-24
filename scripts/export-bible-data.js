@@ -1,17 +1,12 @@
 // Script to export Bible data from Supabase to JS files
 // Run this with Node.js after installing @supabase/supabase-js
-
 const fs = require('fs');
 const path = require('path');
-
 // You'll need to install: npm install @supabase/supabase-js
 const { createClient } = require('@supabase/supabase-js');
-
 const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck';
-
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
-
 const books = [
     // Old Testament
     { file: 'genesis', name: 'Genesis' },
@@ -82,10 +77,7 @@ const books = [
     { file: 'jude', name: 'Jude' },
     { file: 'revelation', name: 'Revelation' }
 ];
-
 async function exportBook(bookFile, language) {
-    console.log(`Exporting ${bookFile} (${language})...`);
-    
     const { data, error } = await supabase
         .from('bible_verses')
         .select('chapter, verse, text')
@@ -93,12 +85,9 @@ async function exportBook(bookFile, language) {
         .eq('language', language)
         .order('chapter', { ascending: true })
         .order('verse', { ascending: true });
-
     if (error) {
-        console.error(`Error fetching ${bookFile}:`, error);
         return;
     }
-
     // Organize data by chapter
     const bookData = {};
     data.forEach(row => {
@@ -107,25 +96,19 @@ async function exportBook(bookFile, language) {
         }
         bookData[row.chapter][`verse_${row.verse}`] = row.text;
     });
-
     // Generate JS file content
     const jsContent = `// ${bookFile} - ${language} Bible Data
 // Auto-generated - Do not edit manually
 window.bibleData_${bookFile}_${language} = ${JSON.stringify(bookData, null, 2)};
 `;
-
     // Write to file
     const dir = path.join(__dirname, '..', 'data', 'bible', language);
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
-    
     const filePath = path.join(dir, `${bookFile}.js`);
     fs.writeFileSync(filePath, jsContent, 'utf8');
-    
-    console.log(`✅ Exported ${bookFile} (${language})`);
 }
-
 async function exportAll() {
     for (const book of books) {
         await exportBook(book.file, 'tamil');
@@ -133,12 +116,9 @@ async function exportAll() {
         // Small delay to avoid rate limiting
         await new Promise(resolve => setTimeout(resolve, 100));
     }
-    console.log('✅ All books exported!');
 }
-
 // Run if called directly
 if (require.main === module) {
     exportAll().catch(console.error);
 }
-
 module.exports = { exportBook, exportAll };

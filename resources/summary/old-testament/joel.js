@@ -1,4 +1,3 @@
-﻿// joel Summary
+// joel Summary
 window.joelSummary = {
-
 };

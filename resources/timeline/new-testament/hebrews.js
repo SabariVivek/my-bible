@@ -1,4 +1,3 @@
-﻿// hebrews Timeline
+// hebrews Timeline
 window.hebrewsTimeline = {
-
 };

@@ -1,4 +1,3 @@
-﻿// daniel Timeline
+// daniel Timeline
 window.danielTimeline = {
-
 };

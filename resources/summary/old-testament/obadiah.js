@@ -1,4 +1,3 @@
-﻿// obadiah Summary
+// obadiah Summary
 window.obadiahSummary = {
-
 };

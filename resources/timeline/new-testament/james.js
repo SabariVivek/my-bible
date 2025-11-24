@@ -1,4 +1,3 @@
-﻿// james Timeline
+// james Timeline
 window.jamesTimeline = {
-
 };

@@ -1,4 +1,3 @@
-﻿// genesis Summary
+// genesis Summary
 window.genesisSummary = {
-
 };

@@ -1,4 +1,3 @@
-﻿// i_timothy Timeline
+// i_timothy Timeline
 window.itimothyTimeline = {
-
 };

@@ -1,4 +1,3 @@
-﻿// acts Timeline
+// acts Timeline
 window.actsTimeline = {
-
 };

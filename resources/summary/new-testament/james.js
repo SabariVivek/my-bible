@@ -1,4 +1,3 @@
-﻿// james Summary
+// james Summary
 window.jamesSummary = {
-
 };

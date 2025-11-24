@@ -1,4 +1,3 @@
-﻿// exodus Summary
+// exodus Summary
 window.exodusSummary = {
-
 };

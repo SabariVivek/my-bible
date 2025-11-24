@@ -1,4 +1,3 @@
-﻿// luke Summary
+// luke Summary
 window.lukeSummary = {
-
 };

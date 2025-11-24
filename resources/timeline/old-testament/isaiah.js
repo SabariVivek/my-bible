@@ -1,4 +1,3 @@
-﻿// isaiah Timeline
+// isaiah Timeline
 window.isaiahTimeline = {
-
 };

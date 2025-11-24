@@ -1,4 +1,3 @@
-﻿// mark Timeline
+// mark Timeline
 window.markTimeline = {
-
 };

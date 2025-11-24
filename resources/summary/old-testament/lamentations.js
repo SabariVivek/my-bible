@@ -1,4 +1,3 @@
-﻿// lamentations Summary
+// lamentations Summary
 window.lamentationsSummary = {
-
 };

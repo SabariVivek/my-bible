@@ -1,4 +1,3 @@
-﻿// mark Summary
+// mark Summary
 window.markSummary = {
-
 };

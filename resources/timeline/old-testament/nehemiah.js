@@ -1,4 +1,3 @@
-﻿// nehemiah Timeline
+// nehemiah Timeline
 window.nehemiahTimeline = {
-
 };

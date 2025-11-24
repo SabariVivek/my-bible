@@ -1,4 +1,3 @@
-﻿// esther Timeline
+// esther Timeline
 window.estherTimeline = {
-
 };

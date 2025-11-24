@@ -1,4 +1,3 @@
-﻿// colossians Timeline
+// colossians Timeline
 window.colossiansTimeline = {
-
 };

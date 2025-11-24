@@ -1,4 +1,3 @@
-﻿// ezekiel Summary
+// ezekiel Summary
 window.ezekielSummary = {
-
 };

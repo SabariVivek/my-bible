@@ -1,4 +1,3 @@
-﻿// joel Timeline
+// joel Timeline
 window.joelTimeline = {
-
 };

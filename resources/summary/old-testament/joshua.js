@@ -1,4 +1,3 @@
-﻿// joshua Summary
+// joshua Summary
 window.joshuaSummary = {
-
 };

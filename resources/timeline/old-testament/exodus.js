@@ -1,4 +1,3 @@
-﻿// exodus Timeline
+// exodus Timeline
 window.exodusTimeline = {
-
 };

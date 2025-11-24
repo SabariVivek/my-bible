@@ -1,4 +1,3 @@
-﻿// leviticus Timeline
+// leviticus Timeline
 window.leviticusTimeline = {
-
 };

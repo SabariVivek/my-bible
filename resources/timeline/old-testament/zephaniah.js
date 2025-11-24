@@ -1,4 +1,3 @@
-﻿// zephaniah Timeline
+// zephaniah Timeline
 window.zephaniahTimeline = {
-
 };

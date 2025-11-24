@@ -1,4 +1,3 @@
-﻿// i_john Summary
+// i_john Summary
 window.ijohnSummary = {
-
 };

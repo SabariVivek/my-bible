@@ -1,4 +1,3 @@
-﻿// luke Timeline
+// luke Timeline
 window.lukeTimeline = {
-
 };

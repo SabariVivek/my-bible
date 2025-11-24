@@ -1,4 +1,3 @@
-﻿// acts Summary
+// acts Summary
 window.actsSummary = {
-
 };

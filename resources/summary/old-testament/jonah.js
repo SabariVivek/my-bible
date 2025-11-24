@@ -1,4 +1,3 @@
-﻿// jonah Summary
+// jonah Summary
 window.jonahSummary = {
-
 };

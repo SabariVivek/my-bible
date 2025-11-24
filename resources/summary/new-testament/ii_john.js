@@ -1,4 +1,3 @@
-﻿// ii_john Summary
+// ii_john Summary
 window.iijohnSummary = {
-
 };

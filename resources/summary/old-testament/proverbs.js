@@ -1,4 +1,3 @@
-﻿// proverbs Summary
+// proverbs Summary
 window.proverbsSummary = {
-
 };

@@ -1,4 +1,3 @@
-﻿// haggai Timeline
+// haggai Timeline
 window.haggaiTimeline = {
-
 };

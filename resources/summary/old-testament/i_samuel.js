@@ -1,4 +1,3 @@
-﻿// i_samuel Summary
+// i_samuel Summary
 window.isamuelSummary = {
-
 };

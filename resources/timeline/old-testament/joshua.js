@@ -1,4 +1,3 @@
-﻿// joshua Timeline
+// joshua Timeline
 window.joshuaTimeline = {
-
 };

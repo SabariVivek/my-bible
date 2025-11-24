@@ -1,4 +1,3 @@
-﻿// philippians Timeline
+// philippians Timeline
 window.philippiansTimeline = {
-
 };

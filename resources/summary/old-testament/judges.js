@@ -1,4 +1,3 @@
-﻿// judges Summary
+// judges Summary
 window.judgesSummary = {
-
 };

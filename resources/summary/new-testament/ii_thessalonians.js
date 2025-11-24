@@ -1,4 +1,3 @@
-﻿// ii_thessalonians Summary
+// ii_thessalonians Summary
 window.iithessaloniansSummary = {
-
 };

@@ -1,4 +1,3 @@
-﻿// ezekiel Timeline
+// ezekiel Timeline
 window.ezekielTimeline = {
-
 };

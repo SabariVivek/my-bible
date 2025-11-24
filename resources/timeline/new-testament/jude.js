@@ -1,4 +1,3 @@
-﻿// jude Timeline
+// jude Timeline
 window.judeTimeline = {
-
 };

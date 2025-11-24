@@ -1,4 +1,3 @@
-﻿// revelation Timeline
+// revelation Timeline
 window.revelationTimeline = {
-
 };

@@ -1,4 +1,3 @@
-﻿// philemon Timeline
+// philemon Timeline
 window.philemonTimeline = {
-
 };

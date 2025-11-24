@@ -1,4 +1,3 @@
-﻿// i_corinthians Timeline
+// i_corinthians Timeline
 window.icorinthiansTimeline = {
-
 };

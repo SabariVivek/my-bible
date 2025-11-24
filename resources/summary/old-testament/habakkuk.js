@@ -1,4 +1,3 @@
-﻿// habakkuk Summary
+// habakkuk Summary
 window.habakkukSummary = {
-
 };

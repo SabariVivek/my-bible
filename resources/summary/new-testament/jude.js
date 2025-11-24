@@ -1,4 +1,3 @@
-﻿// jude Summary
+// jude Summary
 window.judeSummary = {
-
 };

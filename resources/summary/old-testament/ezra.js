@@ -1,4 +1,3 @@
-﻿// ezra Summary
+// ezra Summary
 window.ezraSummary = {
-
 };

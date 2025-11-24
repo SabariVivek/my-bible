@@ -1,4 +1,3 @@
-﻿// deuteronomy Summary
+// deuteronomy Summary
 window.deuteronomySummary = {
-
 };

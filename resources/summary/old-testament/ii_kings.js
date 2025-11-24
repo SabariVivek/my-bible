@@ -1,4 +1,3 @@
-﻿// ii_kings Summary
+// ii_kings Summary
 window.iikingsSummary = {
-
 };

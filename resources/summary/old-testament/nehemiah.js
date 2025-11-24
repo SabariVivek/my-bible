@@ -1,4 +1,3 @@
-﻿// nehemiah Summary
+// nehemiah Summary
 window.nehemiahSummary = {
-
 };

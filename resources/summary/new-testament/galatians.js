@@ -1,4 +1,3 @@
-﻿// galatians Summary
+// galatians Summary
 window.galatiansSummary = {
-
 };

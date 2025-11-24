@@ -1,4 +1,3 @@
-﻿// jonah Timeline
+// jonah Timeline
 window.jonahTimeline = {
-
 };

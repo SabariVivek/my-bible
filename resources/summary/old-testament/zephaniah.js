@@ -1,4 +1,3 @@
-﻿// zephaniah Summary
+// zephaniah Summary
 window.zephaniahSummary = {
-
 };

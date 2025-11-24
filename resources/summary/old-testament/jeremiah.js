@@ -1,4 +1,3 @@
-﻿// jeremiah Summary
+// jeremiah Summary
 window.jeremiahSummary = {
-
 };

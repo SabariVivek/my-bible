@@ -1,4 +1,3 @@
-﻿// hosea Summary
+// hosea Summary
 window.hoseaSummary = {
-
 };

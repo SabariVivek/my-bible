@@ -1,4 +1,3 @@
-﻿// daniel Summary
+// daniel Summary
 window.danielSummary = {
-
 };

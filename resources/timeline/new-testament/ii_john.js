@@ -1,4 +1,3 @@
-﻿// ii_john Timeline
+// ii_john Timeline
 window.iijohnTimeline = {
-
 };

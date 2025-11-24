@@ -1,4 +1,3 @@
-﻿// esther Summary
+// esther Summary
 window.estherSummary = {
-
 };

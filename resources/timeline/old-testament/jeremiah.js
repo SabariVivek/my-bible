@@ -1,4 +1,3 @@
-﻿// jeremiah Timeline
+// jeremiah Timeline
 window.jeremiahTimeline = {
-
 };

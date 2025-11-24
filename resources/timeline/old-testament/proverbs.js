@@ -1,4 +1,3 @@
-﻿// proverbs Timeline
+// proverbs Timeline
 window.proverbsTimeline = {
-
 };

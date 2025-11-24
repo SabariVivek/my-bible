@@ -1,4 +1,3 @@
-﻿// i_corinthians Summary
+// i_corinthians Summary
 window.icorinthiansSummary = {
-
 };

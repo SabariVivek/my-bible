@@ -1,4 +1,3 @@
-﻿// hosea Timeline
+// hosea Timeline
 window.hoseaTimeline = {
-
 };

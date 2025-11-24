@@ -1,4 +1,3 @@
-﻿// leviticus Summary
+// leviticus Summary
 window.leviticusSummary = {
-
 };

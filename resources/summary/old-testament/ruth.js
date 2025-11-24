@@ -1,4 +1,3 @@
-﻿// ruth Summary
+// ruth Summary
 window.ruthSummary = {
-
 };

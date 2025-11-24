@@ -1,4 +1,3 @@
-﻿// psalms Summary
+// psalms Summary
 window.psalmsSummary = {
-
 };

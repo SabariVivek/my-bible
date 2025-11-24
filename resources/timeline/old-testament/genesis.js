@@ -1,4 +1,3 @@
-﻿// genesis Timeline
+// genesis Timeline
 window.genesisTimeline = {
-
 };

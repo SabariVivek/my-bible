@@ -1,4 +1,3 @@
-﻿// ecclesiastes Summary
+// ecclesiastes Summary
 window.ecclesiastesSummary = {
-
 };

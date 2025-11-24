@@ -1,4 +1,3 @@
-﻿// job Timeline
+// job Timeline
 window.jobTimeline = {
-
 };

@@ -1,4 +1,3 @@
-﻿// i_kings Summary
+// i_kings Summary
 window.ikingsSummary = {
-
 };

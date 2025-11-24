@@ -5,10 +5,8 @@ const CACHE_VERSION = `v5-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
 const STATIC_CACHE_NAME = `my-bible-static-${CACHE_VERSION}`;
-
 // Persistent API cache that survives updates
 const PERSISTENT_API_CACHE = 'my-bible-api-persistent';
-
 // Static assets to cache
 const STATIC_ASSETS = [
   './',
@@ -23,7 +21,6 @@ const STATIC_ASSETS = [
   './resources/icons/bible.png',
   './data/bible/bible-data-loader.js'
 ];
-
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -36,7 +33,6 @@ self.addEventListener('install', (event) => {
       .then(() => self.skipWaiting())
   );
 });
-
 // Activate event - clean up old caches BUT keep persistent API cache
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -48,7 +44,6 @@ self.addEventListener('activate', (event) => {
                            cache === API_CACHE_NAME || 
                            cache === STATIC_CACHE_NAME ||
                            cache === PERSISTENT_API_CACHE;
-          
           if (!shouldKeep) {
             return caches.delete(cache);
           }
@@ -57,19 +52,15 @@ self.addEventListener('activate', (event) => {
     }).then(() => self.clients.claim())
   );
 });
-
 // Fetch event - network first for Supabase API, cache first for static assets
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  
   // Handle Supabase API requests (cache-first with timeout for offline)
   if (url.origin.includes('supabase.co')) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         // If we have cache, return it immediately
         if (cachedResponse) {
-          console.log('✅ Serving from cache:', event.request.url);
-          
           // Update cache in background (don't wait)
           fetch(event.request).then(networkResponse => {
             if (networkResponse && networkResponse.status === 200) {
@@ -79,12 +70,9 @@ self.addEventListener('fetch', (event) => {
               });
             }
           }).catch(() => {}); // Fail silently if offline
-          
           return cachedResponse;
         }
-        
         // No cache - try network with timeout
-        console.log('🌐 No cache, fetching from network:', event.request.url);
         return Promise.race([
           fetch(event.request).then(response => {
             if (response && response.status === 200) {
@@ -100,7 +88,6 @@ self.addEventListener('fetch', (event) => {
             setTimeout(() => reject(new Error('Network timeout')), 5000)
           )
         ]).catch(error => {
-          console.error('❌ Network failed:', error.message);
           return new Response(JSON.stringify({ error: 'Offline and no cached data' }), {
             headers: { 'Content-Type': 'application/json' },
             status: 503
@@ -110,7 +97,6 @@ self.addEventListener('fetch', (event) => {
     );
     return;
   }
-  
   // Handle static assets (cache first)
   if (event.request.destination === 'document' || 
       event.request.destination === 'script' || 
@@ -121,18 +107,15 @@ self.addEventListener('fetch', (event) => {
         if (cachedResponse) {
           return cachedResponse;
         }
-        
         return fetch(event.request).then(response => {
           // Don't cache if not a success response
           if (!response || response.status !== 200) {
             return response;
           }
-          
           const responseClone = response.clone();
           caches.open(STATIC_CACHE_NAME).then(cache => {
             cache.put(event.request, responseClone);
           });
-          
           return response;
         });
       }).catch(() => {

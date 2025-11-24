@@ -1,4 +1,3 @@
-﻿// job Summary
+// job Summary
 window.jobSummary = {
-
 };

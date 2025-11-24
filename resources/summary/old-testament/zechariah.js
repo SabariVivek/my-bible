@@ -1,4 +1,3 @@
-﻿// zechariah Summary
+// zechariah Summary
 window.zechariahSummary = {
-
 };

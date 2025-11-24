@@ -1,4 +1,3 @@
-﻿// i_peter Summary
+// i_peter Summary
 window.ipeterSummary = {
-
 };

@@ -1,4 +1,3 @@
-﻿// lamentations Timeline
+// lamentations Timeline
 window.lamentationsTimeline = {
-
 };

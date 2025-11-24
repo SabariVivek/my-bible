@@ -1,4 +1,3 @@
-﻿// i_chronicles Timeline
+// i_chronicles Timeline
 window.ichroniclesTimeline = {
-
 };

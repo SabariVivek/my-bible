@@ -1,4 +1,3 @@
-﻿// romans Timeline
+// romans Timeline
 window.romansTimeline = {
-
 };

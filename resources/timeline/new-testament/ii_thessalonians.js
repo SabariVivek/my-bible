@@ -1,4 +1,3 @@
-﻿// ii_thessalonians Timeline
+// ii_thessalonians Timeline
 window.iithessaloniansTimeline = {
-
 };

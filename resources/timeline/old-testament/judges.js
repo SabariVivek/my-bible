@@ -1,4 +1,3 @@
-﻿// judges Timeline
+// judges Timeline
 window.judgesTimeline = {
-
 };

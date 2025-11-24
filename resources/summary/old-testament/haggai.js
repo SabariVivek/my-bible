@@ -1,4 +1,3 @@
-﻿// haggai Summary
+// haggai Summary
 window.haggaiSummary = {
-
 };

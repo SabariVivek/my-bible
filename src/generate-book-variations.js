@@ -2,7 +2,6 @@
  * Generate phonetic and spelling variations for Bible book names
  * Supports both Tamil and English variations
  */
-
 // Tamil names for 66 books
 const books = {
     "Genesis": "ஆதியாகமம்",
@@ -72,7 +71,6 @@ const books = {
     "Jude": "யூதா",
     "Revelation": "வெளிப்படுத்தல்"
 };
-
 /**
  * Generate Tamil variations using phonetic and spelling rules
  * @param {string} word - Tamil word
@@ -81,20 +79,16 @@ const books = {
  */
 function tamilVariations(word, count = 20) {
     const vars = new Set();
-    
     // Remove last character
     if (word.length > 1) {
         vars.add(word.slice(0, -1));
     }
-    
     // Remove ம் if exists at end
     if (word.endsWith("ம்")) {
         vars.add(word.slice(0, -1));
     }
-    
     // Tamil vowel marks that can be swapped
     const vowels = ["ா", "ி", "ீ", "ு", "ூ", "ெ", "ே", "ை", "ொ", "ோ"];
-    
     // Swap vowels
     for (let i = 0; i < word.length; i++) {
         const ch = word[i];
@@ -105,14 +99,12 @@ function tamilVariations(word, count = 20) {
             }
         }
     }
-    
     // Duplicate characters (common transcription error)
     for (let i = 0; i < word.length; i++) {
         const ch = word[i];
         const variation = word.slice(0, i) + ch + word.slice(i);
         vars.add(variation);
     }
-    
     // Remove characters (common omission)
     for (let i = 0; i < word.length; i++) {
         const variation = word.slice(0, i) + word.slice(i + 1);
@@ -120,10 +112,8 @@ function tamilVariations(word, count = 20) {
             vars.add(variation);
         }
     }
-    
     return Array.from(vars).slice(0, count);
 }
-
 /**
  * Generate English variations using phonetic and spelling rules
  * @param {string} word - English word
@@ -148,58 +138,47 @@ function engVariations(word, count = 20) {
         'h': [''],
         'w': ['v']
     };
-    
     const variations = new Set();
     const lower = word.toLowerCase();
-    
     for (let i = 0; i < lower.length; i++) {
         const char = lower[i];
-        
         // Vowel substitution
         if (vowels.includes(char)) {
             for (const v of vowels) {
                 variations.add(lower.slice(0, i) + v + lower.slice(i + 1));
             }
         }
-        
         // Consonant substitution
         if (consonantSwaps[char]) {
             for (const rep of consonantSwaps[char]) {
                 variations.add(lower.slice(0, i) + rep + lower.slice(i + 1));
             }
         }
-        
         // Double character (common misspelling)
         variations.add(lower.slice(0, i) + char + char + lower.slice(i + 1));
-        
         // Remove character (common omission)
         if (lower.length > 3) {
             variations.add(lower.slice(0, i) + lower.slice(i + 1));
         }
     }
-    
     // Add common suffixes/prefixes variations
     if (lower.length > 4) {
         variations.add(lower + 's');
         variations.add(lower + 'h');
         variations.add(lower.slice(0, -1));
     }
-    
     return Array.from(variations).slice(0, count);
 }
-
 /**
  * Generate all variations for all books
  * @returns {Object} - Dictionary with book names as keys and variation arrays as values
  */
 function generateAllVariations() {
     const finalData = {};
-    
     for (const [book, tamil] of Object.entries(books)) {
         const englishBase = book.toLowerCase().replace(/\s+/g, '');
         const englishVars = engVariations(englishBase, 20);
         const tamilVars = tamilVariations(tamil, 20);
-        
         // Combine all variations and remove duplicates
         const allVariations = Array.from(new Set([
             tamil,
@@ -208,23 +187,19 @@ function generateAllVariations() {
             book.toLowerCase(),
             englishBase
         ]));
-        
         finalData[book] = {
             tamil: tamil,
             aliases: allVariations
         };
     }
-    
     return finalData;
 }
-
 /**
  * Generate variations and save as JSON
  */
 function saveVariationsToFile() {
     const data = generateAllVariations();
     const json = JSON.stringify(data, null, 2);
-    
     // In browser environment, create downloadable file
     if (typeof window !== 'undefined') {
         const blob = new Blob([json], { type: 'application/json' });
@@ -235,27 +210,19 @@ function saveVariationsToFile() {
         a.click();
         URL.revokeObjectURL(url);
     }
-    
     return data;
 }
-
 /**
  * Log variations for testing
  */
 function logVariations() {
     const data = generateAllVariations();
-    console.log('📚 Generated variations for', Object.keys(data).length, 'books');
-    
     // Show sample for first 3 books
     const samples = Object.entries(data).slice(0, 3);
     for (const [book, info] of samples) {
-        console.log(`\n${book} (${info.tamil}):`);
-        console.log(`  ${info.aliases.length} variations:`, info.aliases.slice(0, 10).join(', '), '...');
     }
-    
     return data;
 }
-
 // Export for use in Node.js or browser
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -267,11 +234,9 @@ if (typeof module !== 'undefined' && module.exports) {
         books
     };
 }
-
 // Auto-run if executed directly
 if (typeof window === 'undefined' && require.main === module) {
     const fs = require('fs');
     const data = generateAllVariations();
     fs.writeFileSync('bible_alias_full_tamil_english.json', JSON.stringify(data, null, 2), 'utf-8');
-    console.log('✅ Generated bible_alias_full_tamil_english.json');
 }

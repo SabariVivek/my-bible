@@ -1,4 +1,3 @@
-﻿// ii_timothy Summary
+// ii_timothy Summary
 window.iitimothySummary = {
-
 };

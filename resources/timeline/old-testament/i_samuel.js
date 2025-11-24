@@ -1,4 +1,3 @@
-﻿// i_samuel Timeline
+// i_samuel Timeline
 window.isamuelTimeline = {
-
 };

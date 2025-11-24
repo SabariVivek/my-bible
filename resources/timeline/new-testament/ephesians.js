@@ -1,4 +1,3 @@
-﻿// ephesians Timeline
+// ephesians Timeline
 window.ephesiansTimeline = {
-
 };

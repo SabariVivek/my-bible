@@ -1,4 +1,3 @@
-﻿// psalms Timeline
+// psalms Timeline
 window.psalmsTimeline = {
-
 };

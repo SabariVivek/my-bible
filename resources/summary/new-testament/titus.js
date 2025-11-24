@@ -1,4 +1,3 @@
-﻿// titus Summary
+// titus Summary
 window.titusSummary = {
-
 };

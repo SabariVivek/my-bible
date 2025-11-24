@@ -1,4 +1,3 @@
-﻿// obadiah Timeline
+// obadiah Timeline
 window.obadiahTimeline = {
-
 };

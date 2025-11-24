@@ -1,4 +1,3 @@
-﻿// ii_chronicles Summary
+// ii_chronicles Summary
 window.iichroniclesSummary = {
-
 };

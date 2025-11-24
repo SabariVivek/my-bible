@@ -1,4 +1,3 @@
-﻿// ezra Timeline
+// ezra Timeline
 window.ezraTimeline = {
-
 };

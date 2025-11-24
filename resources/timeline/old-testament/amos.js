@@ -1,4 +1,3 @@
-﻿// amos Timeline
+// amos Timeline
 window.amosTimeline = {
-
 };

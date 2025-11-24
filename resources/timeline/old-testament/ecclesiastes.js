@@ -1,4 +1,3 @@
-﻿// ecclesiastes Timeline
+// ecclesiastes Timeline
 window.ecclesiastesTimeline = {
-
 };

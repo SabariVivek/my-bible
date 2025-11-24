@@ -1,4 +1,3 @@
-﻿// i_peter Timeline
+// i_peter Timeline
 window.ipeterTimeline = {
-
 };

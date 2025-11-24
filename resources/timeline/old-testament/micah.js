@@ -1,4 +1,3 @@
-﻿// micah Timeline
+// micah Timeline
 window.micahTimeline = {
-
 };

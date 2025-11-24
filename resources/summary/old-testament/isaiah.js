@@ -1,4 +1,3 @@
-﻿// isaiah Summary
+// isaiah Summary
 window.isaiahSummary = {
-
 };

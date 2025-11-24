@@ -1,4 +1,3 @@
-﻿// micah Summary
+// micah Summary
 window.micahSummary = {
-
 };

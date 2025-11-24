@@ -1,4 +1,3 @@
-﻿// colossians Summary
+// colossians Summary
 window.colossiansSummary = {
-
 };

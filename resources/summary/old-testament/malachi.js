@@ -1,4 +1,3 @@
-﻿// malachi Summary
+// malachi Summary
 window.malachiSummary = {
-
 };

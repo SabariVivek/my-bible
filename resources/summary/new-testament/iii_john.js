@@ -1,4 +1,3 @@
-﻿// iii_john Summary
+// iii_john Summary
 window.iiijohnSummary = {
-
 };

@@ -1,26 +1,21 @@
 // ===================================
 // Bible Notes Documentation System
 // ===================================
-
 let pages = [];
 let currentPageId = null;
 let editMode = false;
 let theme = localStorage.getItem('theme') || 'light';
-
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
     // Hide page loader after a short delay to ensure theme is applied
     const pageLoader = document.getElementById('page-loader');
-    
     try {
         await loadPages();
         loadTheme();
         setupEventListeners();
         renderPageTree();
         initializeDragAndDrop();
-        
         const isMobile = window.innerWidth <= 768;
-        
         if (isMobile) {
             // On mobile, show sidebar and welcome screen
             const sidebar = document.getElementById('sidebar');
@@ -31,7 +26,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (pages.length > 0) {
                 const lastPageId = localStorage.getItem('last-viewed-page');
                 const lastPage = lastPageId ? findPageById(lastPageId) : null;
-                
                 if (lastPage && lastPage.type === 'page') {
                     viewPage(lastPageId);
                 } else {
@@ -43,7 +37,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
     } catch (error) {
-        console.error('Error initializing app:', error);
         // Still setup event listeners even if loading fails
         loadTheme();
         setupEventListeners();
@@ -60,88 +53,71 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, 100);
     }
 });
-
 // ===================================
 // Data Management
 // ===================================
 async function loadPages() {
     // Always try loading from Supabase first for cross-device sync
     const loadedFromSupabase = await loadPagesFromSupabase();
-    
     if (!loadedFromSupabase) {
         // Fallback to localStorage if Supabase load fails
         const stored = localStorage.getItem('bible-notes-pages');
         if (stored) {
             try {
                 pages = JSON.parse(stored);
-                console.log('Loaded documentation from local storage as fallback');
                 // Try to save to Supabase if we loaded from localStorage
                 setTimeout(() => savePagesToSupabase(), 1000);
             } catch (e) {
-                console.error('Error loading pages:', e);
                 pages = getDefaultPages();
             }
         } else {
             pages = getDefaultPages();
         }
     }
-    
     // Don't keep localStorage backup - Supabase is primary storage
     // Only clear old localStorage data to free up space
     try {
         localStorage.removeItem('bible-notes-pages');
     } catch (e) {
-        console.warn('Could not clear old localStorage backup:', e);
     }
 }
-
 function savePages() {
     try {
         // Save only to Supabase - primary storage
         debouncedSupabaseSync();
     } catch (e) {
-        console.error('Error saving pages:', e);
         showToast('Error saving pages', 'error');
     }
 }
-
 // Debounced Supabase sync - waits 2 seconds after last change before syncing
 function debouncedSupabaseSync() {
     // Clear any existing timeout
     if (syncTimeout) {
         clearTimeout(syncTimeout);
     }
-    
     // Set new timeout
     syncTimeout = setTimeout(async () => {
         // Wait if sync is already in progress
         if (syncInProgress) {
-            console.log('Supabase sync in progress, will retry in 1 second...');
             setTimeout(() => debouncedSupabaseSync(), 1000); // Retry after 1 second
             return;
         }
-        
         syncInProgress = true;
         const success = await savePagesToSupabase();
         syncInProgress = false;
-        
         if (success) {
-            console.log('✓ Auto-synced to Supabase');
             showToast('Saved to cloud', 'success');
         } else {
-            console.log('⚠ Supabase sync failed, will retry on next change');
             showToast('Save failed - will retry', 'warning');
         }
     }, 2000); // Wait 2 seconds after last change (faster than GitHub)
 }
-
 // ===================================
 // Supabase Backend for Documentation
 // ===================================
 let supabaseDocsLoaded = false;
 let syncTimeout = null; // For debouncing
 let syncInProgress = false; // Track if sync is ongoing
-
 async function loadPagesFromSupabase() {
     try {
         const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${SUPABASE_CONFIG.tableName}?id=eq.main`, {
@@ -150,27 +126,21 @@ async function loadPagesFromSupabase() {
                 'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`
             }
         });
-        
         if (response.ok) {
             const data = await response.json();
             if (data && data.length > 0) {
                 pages = data[0].pages || getDefaultPages();
                 supabaseDocsLoaded = true;
-                console.log('✓ Documentation pages loaded from Supabase:', pages.length, 'top-level items');
                 return true;
             }
         }
-        
-        console.log('No documentation found in Supabase, starting fresh');
         pages = getDefaultPages();
         return false;
     } catch (error) {
-        console.warn('Could not load documentation from Supabase:', error.message);
         pages = getDefaultPages();
         return false;
     }
 }
-
 async function savePagesToSupabase() {
     try {
         const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${SUPABASE_CONFIG.tableName}?id=eq.main`, {
@@ -186,25 +156,19 @@ async function savePagesToSupabase() {
                 last_updated: new Date().toISOString()
             })
         });
-        
         if (response.ok) {
-            console.log('✓ Documentation saved to Supabase successfully');
             return true;
         } else {
             const error = await response.text();
-            console.error('Failed to save to Supabase:', error);
             return false;
         }
     } catch (error) {
-        console.error('Error saving to Supabase:', error);
         return false;
     }
 }
-
 async function manualSyncWithSupabase() {
     const syncBtn = document.getElementById('sync-btn');
     if (!syncBtn) return;
-    
     // Show loading state
     syncBtn.disabled = true;
     syncBtn.style.opacity = '0.5';
@@ -216,7 +180,6 @@ async function manualSyncWithSupabase() {
             <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
         </svg>
     `;
-    
     try {
         // First load from Supabase
         const loadSuccess = await loadPagesFromSupabase();
@@ -224,7 +187,6 @@ async function manualSyncWithSupabase() {
             renderPageTree();
             showToast('Synced from cloud', 'success');
         }
-        
         // Then save current state to Supabase
         const saveSuccess = await savePagesToSupabase();
         if (saveSuccess && !loadSuccess) {
@@ -233,7 +195,6 @@ async function manualSyncWithSupabase() {
             showToast('Sync failed. Check console for details.', 'error');
         }
     } catch (error) {
-        console.error('Sync error:', error);
         showToast('Sync failed: ' + error.message, 'error');
     } finally {
         // Restore button state
@@ -242,7 +203,6 @@ async function manualSyncWithSupabase() {
         syncBtn.innerHTML = originalHTML;
     }
 }
-
 function getDefaultPages() {
     return [
         {
@@ -256,11 +216,9 @@ function getDefaultPages() {
         }
     ];
 }
-
 function generateId() {
     return 'item_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 }
-
 function findPageById(id, items = pages) {
     for (let item of items) {
         if (item.id === id) return item;
@@ -271,7 +229,6 @@ function findPageById(id, items = pages) {
     }
     return null;
 }
-
 function findFirstPage(items) {
     for (let item of items) {
         if (item.type === 'page') return item;
@@ -282,7 +239,6 @@ function findFirstPage(items) {
     }
     return null;
 }
-
 function findParentOfItem(itemId, items = pages, parent = null) {
     for (let item of items) {
         if (item.id === itemId) return parent;
@@ -293,7 +249,6 @@ function findParentOfItem(itemId, items = pages, parent = null) {
     }
     return undefined;
 }
-
 function deleteItem(itemId) {
     function removeFromArray(items) {
         for (let i = 0; i < items.length; i++) {
@@ -307,21 +262,17 @@ function deleteItem(itemId) {
         }
         return false;
     }
-    
     removeFromArray(pages);
     savePages();
 }
-
 // ===================================
 // Theme Management
 // ===================================
 function loadTheme() {
     document.body.classList.toggle('dark-theme', theme === 'dark');
 }
-
 async function toggleTheme(event) {
     const clickedButton = event.currentTarget;
-    
     // Check if View Transition API is supported and user doesn't prefer reduced motion
     if (
         !document.startViewTransition ||
@@ -338,7 +289,6 @@ async function toggleTheme(event) {
         }
         return;
     }
-    
     // Start view transition
     const transition = document.startViewTransition(() => {
         document.body.classList.toggle('dark-theme');
@@ -350,10 +300,8 @@ async function toggleTheme(event) {
             metaThemeColor.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#ffffff');
         }
     });
-    
     // Wait for transition to be ready
     await transition.ready;
-    
     // Get button position for circular reveal effect
     const { top, left, width, height } = clickedButton.getBoundingClientRect();
     const x = left + width / 2;
@@ -364,7 +312,6 @@ async function toggleTheme(event) {
         Math.max(left, right),
         Math.max(top, bottom)
     );
-    
     // Animate the circular reveal
     document.documentElement.animate(
         {
@@ -380,72 +327,54 @@ async function toggleTheme(event) {
         }
     );
 }
-
 // ===================================
 // Event Listeners
 // ===================================
-
 // Initialize sidebar resizer functionality
 function initializeSidebarResizer() {
     // Skip on mobile devices
     if (window.innerWidth <= 768) return;
-    
     const sidebar = document.querySelector('.sidebar');
     const resizer = document.getElementById('sidebar-resizer');
-    
     if (!sidebar || !resizer) return;
-    
     // Load saved width from localStorage
     const savedWidth = localStorage.getItem('sidebar-width');
     if (savedWidth) {
         sidebar.style.width = savedWidth + 'px';
     }
-    
     let isResizing = false;
     let startX = 0;
     let startWidth = 0;
-    
     // Start resize
     resizer.addEventListener('mousedown', (e) => {
         isResizing = true;
         startX = e.clientX;
         startWidth = sidebar.offsetWidth;
-        
         // Add resizing class for visual feedback
         document.body.style.cursor = 'col-resize';
         resizer.style.backgroundColor = '#1a73e8';
-        
         // Prevent text selection during resize
         e.preventDefault();
     });
-    
     // Handle resize
     document.addEventListener('mousemove', (e) => {
         if (!isResizing) return;
-        
         const deltaX = e.clientX - startX;
         let newWidth = startWidth + deltaX;
-        
         // Apply constraints (min 200px, max 600px)
         newWidth = Math.max(200, Math.min(600, newWidth));
-        
         sidebar.style.width = newWidth + 'px';
     });
-    
     // End resize
     document.addEventListener('mouseup', () => {
         if (!isResizing) return;
-        
         isResizing = false;
-        
         // Remove visual feedback
         document.body.style.cursor = '';
         resizer.style.backgroundColor = '';
-        
         // Save width to localStorage
         localStorage.setItem('sidebar-width', sidebar.offsetWidth);
     });
-    
     // Handle window resize to disable on mobile
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {
@@ -454,40 +383,32 @@ function initializeSidebarResizer() {
         }
     });
 }
-
 function setupEventListeners() {
     // Sidebar resizer
     initializeSidebarResizer();
-    
     // Theme toggle
     const themeToggle = document.querySelector('.theme-toggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', toggleTheme);
     }
-    
     // Sync button
     const syncBtn = document.getElementById('sync-btn');
     if (syncBtn) {
         syncBtn.addEventListener('click', manualSyncWithSupabase);
     }
-    
     // Mobile menu toggle
     const menuBtn = document.querySelector('.sidebar-toggle');
     if (menuBtn) {
         menuBtn.addEventListener('click', toggleSidebar);
     }
-    
     // Create buttons
     const createBtnDesktop = document.getElementById('create-btn-desktop');
     const welcomeCreateBtn = document.getElementById('welcome-create-btn');
-    
     if (createBtnDesktop) createBtnDesktop.addEventListener('click', showCreateModal);
     if (welcomeCreateBtn) welcomeCreateBtn.addEventListener('click', showCreateModal);
-    
     // Edit button
     const editBtn = document.getElementById('edit-btn');
     if (editBtn) editBtn.addEventListener('click', enterEditMode);
-    
     // Title inputs - update page title in real-time
     const titleInputDesktop = document.getElementById('title-input');
     const titleInputMobile = document.getElementById('title-input-mobile');
@@ -503,48 +424,39 @@ function setupEventListeners() {
             if (pageTitle) pageTitle.textContent = e.target.value || 'Untitled';
         });
     }
-    
     // Save buttons
     const saveBtnDesktop = document.getElementById('save-btn-desktop');
     const saveBtnMobile = document.getElementById('save-btn-mobile');
     if (saveBtnDesktop) saveBtnDesktop.addEventListener('click', savePage);
     if (saveBtnMobile) saveBtnMobile.addEventListener('click', savePage);
-    
     // Cancel buttons
     const cancelBtnDesktop = document.getElementById('cancel-btn-desktop');
     const cancelBtnMobile = document.getElementById('cancel-btn-mobile');
     if (cancelBtnDesktop) cancelBtnDesktop.addEventListener('click', cancelEdit);
     if (cancelBtnMobile) cancelBtnMobile.addEventListener('click', cancelEdit);
-    
     // Toolbar buttons (use data-action)
     document.querySelectorAll('.toolbar-btn[data-action]').forEach(btn => {
         btn.addEventListener('click', function() {
             executeCommand(this.dataset.action);
         });
     });
-    
     // Heading select
     const headingSelect = document.getElementById('heading-select');
     if (headingSelect) headingSelect.addEventListener('change', formatHeading);
-    
     // Color picker
     setupColorPicker();
-    
     // Image upload
     const imageUpload = document.getElementById('image-upload');
     if (imageUpload) imageUpload.addEventListener('change', handleImageUpload);
-    
     // Sidebar search
     const sidebarSearch = document.getElementById('sidebar-search');
     if (sidebarSearch) sidebarSearch.addEventListener('input', handleSidebarSearch);
-    
     // Editor events
     const editor = document.getElementById('editor');
     if (editor) {
         editor.addEventListener('paste', handlePaste);
         editor.addEventListener('input', detectLinks);
     }
-    
     // Setup modals
     setupCreateModal();
     setupDeleteModal();
@@ -552,21 +464,16 @@ function setupEventListeners() {
     setupModalCloseListeners();
     setupContextMenu();
 }
-
 function setupContextMenu() {
     const menu = document.getElementById('tree-context-menu');
     if (!menu) return;
-    
     menu.addEventListener('click', (e) => {
         const menuItem = e.target.closest('.context-menu-item');
         if (!menuItem) return;
-        
         const action = menuItem.dataset.action;
         const itemId = menu.dataset.itemId;
         const itemTitle = menu.dataset.itemTitle;
-        
         menu.style.display = 'none';
-        
         if (action === 'rename') {
             showRenameModal(itemId, itemTitle);
         } else if (action === 'delete') {
@@ -574,12 +481,10 @@ function setupContextMenu() {
         }
     });
 }
-
 function setupModalCloseListeners() {
     document.querySelectorAll('.modal').forEach(modal => {
         const overlay = modal.querySelector('.modal-overlay');
         const closeBtns = modal.querySelectorAll('.modal-close');
-        
         if (overlay) {
             overlay.addEventListener('click', () => closeModal(modal));
         }
@@ -588,20 +493,16 @@ function setupModalCloseListeners() {
         });
     });
 }
-
 function setupCreateModal() {
     const createModal = document.getElementById('create-modal');
     if (!createModal) return;
-    
     const folderOption = createModal.querySelector('.create-option[data-type="folder"]');
     const pageOption = createModal.querySelector('.create-option[data-type="page"]');
     const createBtn = document.getElementById('create-item-btn');
     const nameInput = document.getElementById('new-item-name');
     const nameInputGroup = document.getElementById('name-input-group');
     const modalFooter = createModal.querySelector('.modal-footer');
-    
     let selectedType = null;
-    
     if (folderOption) {
         folderOption.addEventListener('click', () => {
             selectedType = 'folder';
@@ -615,7 +516,6 @@ function setupCreateModal() {
             }
         });
     }
-    
     if (pageOption) {
         pageOption.addEventListener('click', () => {
             selectedType = 'page';
@@ -629,25 +529,21 @@ function setupCreateModal() {
             }
         });
     }
-    
     if (createBtn) {
         createBtn.addEventListener('click', () => {
             if (!selectedType) {
                 showToast('Please select folder or page', 'error');
                 return;
             }
-            
             const name = nameInput?.value.trim();
             if (!name) {
                 showToast('Please enter a name', 'error');
                 return;
             }
-            
             // Check if creating under a parent folder
             const parentId = createModal.dataset.parentId || null;
             createNewItem(selectedType, name, parentId);
             closeModal(createModal);
-            
             // Reset modal
             if (nameInput) nameInput.value = '';
             if (nameInputGroup) nameInputGroup.style.display = 'none';
@@ -658,7 +554,6 @@ function setupCreateModal() {
             delete createModal.dataset.parentId;
         });
     }
-    
     // Handle Enter key in name input
     if (nameInput) {
         nameInput.addEventListener('keypress', (e) => {
@@ -668,48 +563,38 @@ function setupCreateModal() {
         });
     }
 }
-
 function setupDeleteModal() {
     const deleteModal = document.getElementById('delete-modal');
     if (!deleteModal) return;
-    
     const confirmBtn = document.getElementById('delete-confirm-btn');
     const cancelBtn = document.getElementById('delete-cancel-btn');
-    
     if (confirmBtn) {
         confirmBtn.addEventListener('click', () => {
             const itemId = deleteModal.dataset.itemId;
             if (itemId) {
                 deleteItem(itemId);
-                
                 if (currentPageId === itemId) {
                     currentPageId = null;
                     showWelcomeScreen();
                 }
-                
                 renderPageTree();
                 showToast('Deleted');
             }
             closeModal(deleteModal);
         });
     }
-    
     if (cancelBtn) {
         cancelBtn.addEventListener('click', () => closeModal(deleteModal));
     }
 }
-
 function setupRenameModal() {
     const renameModal = document.getElementById('rename-modal');
     if (!renameModal) return;
-    
     const confirmBtn = document.getElementById('confirm-rename-btn');
     const input = document.getElementById('rename-input');
-    
     if (confirmBtn) {
         confirmBtn.addEventListener('click', confirmRename);
     }
-    
     if (input) {
         input.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
@@ -718,21 +603,16 @@ function setupRenameModal() {
         });
     }
 }
-
 // ===================================
 // Sidebar Functions
 // ===================================
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     if (!sidebar) return;
-    
     const isMobile = window.innerWidth <= 768;
-    
     if (isMobile) {
         // Mobile: slide in/out behavior
         const isOpen = sidebar.classList.toggle('open');
-        console.log('Mobile sidebar toggled:', isOpen ? 'open' : 'closed');
-        
         // Close sidebar when clicking outside on mobile
         if (isOpen) {
             const closeOnClickOutside = (e) => {
@@ -741,7 +621,6 @@ function toggleSidebar() {
                     document.removeEventListener('click', closeOnClickOutside);
                 }
             };
-            
             setTimeout(() => {
                 document.addEventListener('click', closeOnClickOutside);
             }, 0);
@@ -749,19 +628,15 @@ function toggleSidebar() {
     } else {
         // Desktop: collapse/expand behavior
         const isCollapsed = sidebar.classList.toggle('collapsed');
-        console.log('Desktop sidebar toggled:', isCollapsed ? 'collapsed' : 'expanded');
     }
 }
-
 function handleSidebarSearch(e) {
     const query = e.target.value.toLowerCase().trim();
     const treeItems = document.querySelectorAll('.tree-item');
-    
     if (query === '') {
         treeItems.forEach(item => item.style.display = '');
         return;
     }
-    
     treeItems.forEach(item => {
         const name = item.querySelector('.tree-name');
         if (name) {
@@ -770,39 +645,31 @@ function handleSidebarSearch(e) {
         }
     });
 }
-
 // ===================================
 // Page Tree Rendering
 // ===================================
 function renderPageTree() {
     const treeContainer = document.getElementById('page-tree');
     if (!treeContainer) return;
-    
     treeContainer.innerHTML = '';
-    
     pages.forEach(item => {
         treeContainer.appendChild(createTreeItem(item));
     });
 }
-
 function createTreeItem(item, level = 0) {
     const li = document.createElement('li');
     li.className = 'tree-item';
     li.dataset.itemId = item.id;
     li.dataset.itemType = item.type;
-    
     const header = document.createElement('div');
     header.className = 'tree-item-header';
     if (currentPageId === item.id) {
         header.classList.add('active');
     }
-    
     const hasChildren = item.children && item.children.length > 0;
-    
     // Check if this folder should be expanded from localStorage
     const expandedFolders = JSON.parse(localStorage.getItem('expanded-folders') || '[]');
     const shouldBeExpanded = expandedFolders.includes(item.id);
-    
     // Toggle arrow for folders, spacer for pages
     if (item.type === 'folder') {
         const toggle = document.createElement('div');
@@ -825,11 +692,9 @@ function createTreeItem(item, level = 0) {
         spacer.style.flexShrink = '0';
         header.appendChild(spacer);
     }
-    
     // Icon
     const icon = document.createElement('div');
     icon.className = 'tree-icon';
-    
     if (item.type === 'folder') {
         // Yellow folder icon
         icon.innerHTML = `
@@ -847,17 +712,14 @@ function createTreeItem(item, level = 0) {
         `;
     }
     header.appendChild(icon);
-    
     // Name
     const name = document.createElement('div');
     name.className = 'tree-name';
     name.textContent = item.title;
     header.appendChild(name);
-    
     // Actions
     const actions = document.createElement('div');
     actions.className = 'tree-actions';
-    
     // Add button (only for folders)
     if (item.type === 'folder') {
         const addBtn = document.createElement('button');
@@ -875,7 +737,6 @@ function createTreeItem(item, level = 0) {
         });
         actions.appendChild(addBtn);
     }
-    
     // Three dots menu button
     const menuBtn = document.createElement('button');
     menuBtn.className = 'tree-action-btn tree-menu-btn';
@@ -892,49 +753,37 @@ function createTreeItem(item, level = 0) {
         showTreeItemMenu(e, item);
     });
     actions.appendChild(menuBtn);
-    
     header.appendChild(actions);
-    
     // Click handler
     if (item.type === 'page') {
         header.addEventListener('click', () => {
-            console.log('Clicked page:', item.title, item.id);
             viewPage(item.id);
         });
     } else {
         header.addEventListener('click', () => {
-            console.log('Clicked folder:', item.title);
             toggleTreeChildren(item.id);
         });
     }
-    
     li.appendChild(header);
-    
     // Children - always create container for folders (even if empty) to allow dropping
     if (item.type === 'folder') {
         const childrenUl = document.createElement('ul');
         childrenUl.className = shouldBeExpanded ? 'tree-children expanded' : 'tree-children';
         childrenUl.id = `children-${item.id}`;
-        
         if (item.children && item.children.length > 0) {
             item.children.forEach(child => {
                 childrenUl.appendChild(createTreeItem(child, level + 1));
             });
         }
-        
         li.appendChild(childrenUl);
     }
-    
     return li;
 }
-
 function toggleTreeChildren(itemId) {
     const childrenUl = document.getElementById(`children-${itemId}`);
     const toggle = document.querySelector(`[data-item-id="${itemId}"] .tree-toggle`);
-    
     if (childrenUl) {
         const isExpanded = childrenUl.classList.toggle('expanded');
-        
         // Save expanded state to localStorage
         const expandedFolders = JSON.parse(localStorage.getItem('expanded-folders') || '[]');
         if (isExpanded) {
@@ -953,7 +802,6 @@ function toggleTreeChildren(itemId) {
         toggle.classList.toggle('expanded');
     }
 }
-
 // ===================================
 // Page Viewing
 // ===================================
@@ -961,32 +809,21 @@ function showWelcomeScreen() {
     const welcomeScreen = document.getElementById('welcome-screen');
     const pageView = document.getElementById('page-view');
     const pageEdit = document.getElementById('page-edit');
-    
     if (welcomeScreen) welcomeScreen.style.display = 'flex';
     if (pageView) pageView.style.display = 'none';
     if (pageEdit) pageEdit.style.display = 'none';
-    
     currentPageId = null;
     editMode = false;
-    
     // Update active state
     document.querySelectorAll('.tree-item-header').forEach(h => h.classList.remove('active'));
 }
-
 function viewPage(pageId) {
-    console.log('viewPage called with:', pageId);
-    
     const page = findPageById(pageId);
-    console.log('Found page:', page);
-    
     if (!page || page.type !== 'page') {
-        console.log('Page not found or not a page type');
         return;
     }
-    
     currentPageId = pageId;
     editMode = false;
-    
     // Close sidebar on mobile
     if (window.innerWidth <= 768) {
         const sidebar = document.querySelector('.sidebar');
@@ -994,43 +831,31 @@ function viewPage(pageId) {
             sidebar.classList.remove('open');
         }
     }
-    
     const welcomeScreen = document.getElementById('welcome-screen');
     const pageView = document.getElementById('page-view');
     const pageEdit = document.getElementById('page-edit');
-    
     if (welcomeScreen) welcomeScreen.style.display = 'none';
     if (pageView) pageView.style.display = 'block';
     if (pageEdit) pageEdit.style.display = 'none';
-    
     // Update breadcrumb
     updateBreadcrumb(pageId);
-    
     // Update page content
     const pageTitle = document.getElementById('page-title');
     const pageContent = document.getElementById('page-content');
-    
     if (pageTitle) {
         pageTitle.textContent = page.title;
-        console.log('Set page title:', page.title);
     }
-    
     if (pageContent) {
         pageContent.innerHTML = page.content || '<p>This page is empty. Click Edit to add content.</p>';
-        console.log('Set page content');
     }
-    
     // Update active state
     document.querySelectorAll('.tree-item-header').forEach(h => h.classList.remove('active'));
     const activeHeader = document.querySelector(`[data-item-id="${pageId}"] .tree-item-header`);
     if (activeHeader) {
         activeHeader.classList.add('active');
-        console.log('Set active header');
     }
-    
     // Save last viewed
     localStorage.setItem('last-viewed-page', pageId);
-    
     // Highlight code blocks
     if (window.hljs) {
         document.querySelectorAll('#page-content pre code').forEach(block => {
@@ -1038,22 +863,17 @@ function viewPage(pageId) {
         });
     }
 }
-
 function updateBreadcrumb(pageId) {
     const breadcrumb = document.getElementById('breadcrumb');
     if (!breadcrumb) return;
-    
     const path = [];
     let current = findPageById(pageId);
-    
     while (current) {
         path.unshift(current);
         const parent = findParentOfItem(current.id);
         current = parent;
     }
-    
     breadcrumb.innerHTML = '';
-    
     path.forEach((item, index) => {
         if (index > 0) {
             const separator = document.createElement('span');
@@ -1061,47 +881,37 @@ function updateBreadcrumb(pageId) {
             separator.textContent = '/';
             breadcrumb.appendChild(separator);
         }
-        
         const link = document.createElement('a');
         link.href = '#';
         link.className = 'breadcrumb-item';
         link.textContent = item.title;
-        
         if (item.type === 'page') {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 viewPage(item.id);
             });
         }
-        
         breadcrumb.appendChild(link);
     });
 }
-
 // ===================================
 // Page Editing
 // ===================================
 function enterEditMode() {
     if (!currentPageId) return;
-    
     const page = findPageById(currentPageId);
     if (!page || page.type !== 'page') return;
-    
     editMode = true;
-    
     const welcomeScreen = document.getElementById('welcome-screen');
     const pageView = document.getElementById('page-view');
     const pageEdit = document.getElementById('page-edit');
-    
     if (welcomeScreen) welcomeScreen.style.display = 'none';
     if (pageView) pageView.style.display = 'none';
     if (pageEdit) pageEdit.style.display = 'flex';
-    
     // Populate editor
     const titleInputDesktop = document.getElementById('title-input');
     const titleInputMobile = document.getElementById('title-input-mobile');
     const editor = document.getElementById('editor');
-    
     if (titleInputDesktop) titleInputDesktop.value = page.title;
     if (titleInputMobile) titleInputMobile.value = page.title;
     if (editor) {
@@ -1109,60 +919,37 @@ function enterEditMode() {
         editor.focus();
     }
 }
-
 function savePage() {
     if (!currentPageId) return;
-    
     const page = findPageById(currentPageId);
     if (!page || page.type !== 'page') return;
-    
     const titleInputDesktop = document.getElementById('title-input');
     const titleInputMobile = document.getElementById('title-input-mobile');
     const editor = document.getElementById('editor');
-    
-    console.log('Desktop input:', titleInputDesktop ? titleInputDesktop.value : 'not found');
-    console.log('Mobile input:', titleInputMobile ? titleInputMobile.value : 'not found');
-    console.log('Desktop visible:', titleInputDesktop ? window.getComputedStyle(titleInputDesktop.parentElement).display : 'N/A');
-    console.log('Mobile visible:', titleInputMobile ? window.getComputedStyle(titleInputMobile.parentElement).display : 'N/A');
-    
     // Get title from the visible input
     let newTitle = '';
     const isMobile = window.innerWidth <= 768;
-    
     if (isMobile && titleInputMobile) {
         newTitle = titleInputMobile.value.trim();
-        console.log('Using mobile input:', newTitle);
     } else if (!isMobile && titleInputDesktop) {
         newTitle = titleInputDesktop.value.trim();
-        console.log('Using desktop input:', newTitle);
     } else {
         // Fallback: try both
         newTitle = (titleInputDesktop?.value || titleInputMobile?.value || '').trim();
-        console.log('Using fallback:', newTitle);
     }
-    
     const newContent = editor?.innerHTML || '';
-    
     if (!newTitle) {
         showToast('Please enter a title', 'error');
         return;
     }
-    
-    console.log('Saving page with title:', newTitle);
-    console.log('Old title was:', page.title);
-    
     page.title = newTitle;
     page.content = newContent;
     page.updatedAt = new Date().toISOString();
-    
-    console.log('Updated page object:', page);
-    
     savePages();
     renderPageTree();
     viewPage(currentPageId);
     showToast('Saved');
 }
-
 function cancelEdit() {
     if (currentPageId) {
         viewPage(currentPageId);
@@ -1170,16 +957,13 @@ function cancelEdit() {
         showWelcomeScreen();
     }
 }
-
 // ===================================
 // Toolbar Commands
 // ===================================
 function executeCommand(command) {
     const editor = document.getElementById('editor');
     if (!editor) return;
-    
     editor.focus();
-    
     switch (command) {
         case 'bold':
             document.execCommand('bold', false, null);
@@ -1213,49 +997,40 @@ function executeCommand(command) {
             break;
     }
 }
-
 function formatHeading() {
     const select = document.getElementById('heading-select');
     if (!select) return;
-    
     const value = select.value;
     if (value === 'p') {
         document.execCommand('formatBlock', false, '<p>');
     } else {
         document.execCommand('formatBlock', false, `<${value}>`);
     }
-    
     select.value = 'p';
 }
-
 function setupColorPicker() {
     const colorPickerBtn = document.getElementById('color-picker-btn');
     const colorPickerDropdown = document.getElementById('color-picker-dropdown');
     const removeColorBtn = document.getElementById('remove-color-btn');
-    
     if (!colorPickerBtn || !colorPickerDropdown) return;
-    
     // Toggle dropdown
     colorPickerBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         const isVisible = colorPickerDropdown.style.display === 'block';
         colorPickerDropdown.style.display = isVisible ? 'none' : 'block';
     });
-    
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.color-picker-container')) {
             colorPickerDropdown.style.display = 'none';
         }
     });
-    
     // Handle color button clicks
     colorPickerDropdown.querySelectorAll('.color-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
             const type = btn.dataset.type;
             const color = btn.dataset.color;
-            
             if (color === 'reset') {
                 if (type === 'text') {
                     document.execCommand('removeFormat', false, null);
@@ -1269,11 +1044,9 @@ function setupColorPicker() {
                     document.execCommand('hiliteColor', false, color);
                 }
             }
-            
             colorPickerDropdown.style.display = 'none';
         });
     });
-    
     // Remove color button
     if (removeColorBtn) {
         removeColorBtn.addEventListener('click', (e) => {
@@ -1283,18 +1056,15 @@ function setupColorPicker() {
         });
     }
 }
-
 function insertLink() {
     const url = prompt('Enter URL:');
     if (url) {
         document.execCommand('createLink', false, url);
     }
 }
-
 function insertTable() {
     const rows = prompt('Number of rows:', '3');
     const cols = prompt('Number of columns:', '3');
-    
     if (rows && cols) {
         let table = '<table><tbody>';
         for (let i = 0; i < parseInt(rows); i++) {
@@ -1305,11 +1075,9 @@ function insertTable() {
             table += '</tr>';
         }
         table += '</tbody></table>';
-        
         document.execCommand('insertHTML', false, table);
     }
 }
-
 function insertCodeBlock() {
     const code = prompt('Enter code:');
     if (code) {
@@ -1317,45 +1085,37 @@ function insertCodeBlock() {
         document.execCommand('insertHTML', false, html);
     }
 }
-
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
 }
-
 // ===================================
 // Image Upload
 // ===================================
 function handleImageUpload(e) {
     const file = e.target.files[0];
     if (!file) return;
-    
     if (!file.type.startsWith('image/')) {
         showToast('Please select an image file', 'error');
         return;
     }
-    
     const reader = new FileReader();
     reader.onload = function(event) {
         const img = `<img src="${event.target.result}" alt="${file.name}" />`;
         document.execCommand('insertHTML', false, img);
     };
     reader.readAsDataURL(file);
-    
     e.target.value = '';
 }
-
 // ===================================
 // Paste & Links
 // ===================================
 function handlePaste(e) {
     e.preventDefault();
-    
     const clipboardData = e.clipboardData || window.clipboardData;
     const htmlData = clipboardData.getData('text/html');
     const textData = clipboardData.getData('text/plain');
-    
     if (htmlData) {
         const cleaned = cleanPastedHtml(htmlData);
         document.execCommand('insertHTML', false, cleaned);
@@ -1363,14 +1123,11 @@ function handlePaste(e) {
         document.execCommand('insertHTML', false, textData.replace(/\n/g, '<br>'));
     }
 }
-
 function cleanPastedHtml(html) {
     const div = document.createElement('div');
     div.innerHTML = html;
-    
     // Remove only dangerous elements
     div.querySelectorAll('script, style, meta, link').forEach(el => el.remove());
-    
     // Clean attributes but preserve styling
     div.querySelectorAll('*').forEach(el => {
         const allowedAttrs = ['href', 'src', 'alt', 'title', 'style', 'class'];
@@ -1379,7 +1136,6 @@ function cleanPastedHtml(html) {
                 el.removeAttribute(attr.name);
             }
         });
-        
         // Preserve common formatting tags
         if (el.tagName === 'SPAN' && !el.style.cssText && !el.className) {
             // Unwrap empty spans
@@ -1389,14 +1145,11 @@ function cleanPastedHtml(html) {
             el.remove();
         }
     });
-    
     return div.innerHTML;
 }
-
 function detectLinks() {
     // Basic link detection - can be enhanced
 }
-
 // ===================================
 // Create New Item
 // ===================================
@@ -1409,11 +1162,9 @@ function createNewItem(type, name, parentId = null) {
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
     };
-    
     if (type === 'page') {
         newItem.content = '';
     }
-    
     if (parentId) {
         // Add to parent folder
         const parent = findPageById(parentId);
@@ -1424,11 +1175,9 @@ function createNewItem(type, name, parentId = null) {
         // Add to root
         pages.push(newItem);
     }
-    
     savePages();
     renderPageTree();
     initializeDragAndDrop();
-    
     // Auto-select and highlight new item
     setTimeout(() => {
         const newItemHeader = document.querySelector(`[data-item-id="${newItem.id}"] .tree-item-header`);
@@ -1436,7 +1185,6 @@ function createNewItem(type, name, parentId = null) {
             newItemHeader.scrollIntoView({ behavior: 'smooth', block: 'center' });
             newItemHeader.classList.add('active');
         }
-        
         if (type === 'page') {
             viewPage(newItem.id);
             setTimeout(() => enterEditMode(), 100);
@@ -1448,39 +1196,30 @@ function createNewItem(type, name, parentId = null) {
             }
         }
     }, 100);
-    
     showToast(`${type === 'folder' ? 'Folder' : 'Page'} created`);
 }
-
 // ===================================
 // Modal Functions
 // ===================================
 function showCreateModal() {
     const modal = document.getElementById('create-modal');
     if (!modal) return;
-    
     modal.style.display = 'flex';
-    
     // Reset state
     const nameInputGroup = document.getElementById('name-input-group');
     const modalFooter = modal.querySelector('.modal-footer');
     const nameInput = document.getElementById('new-item-name');
-    
     if (nameInputGroup) nameInputGroup.style.display = 'none';
     if (modalFooter) modalFooter.style.display = 'none';
     if (nameInput) nameInput.value = '';
-    
     modal.querySelectorAll('.create-option').forEach(opt => {
         opt.classList.remove('selected');
     });
 }
-
 function showRenameModal(itemId, currentName) {
     const modal = document.getElementById('rename-modal');
     if (!modal) return;
-    
     modal.dataset.itemId = itemId;
-    
     const input = document.getElementById('rename-input');
     if (input) {
         input.value = currentName;
@@ -1489,81 +1228,63 @@ function showRenameModal(itemId, currentName) {
             input.select();
         }, 100);
     }
-    
     modal.style.display = 'flex';
 }
-
 function showDeleteModal(itemId, itemTitle) {
     const modal = document.getElementById('delete-modal');
     if (!modal) return;
-    
     modal.dataset.itemId = itemId;
-    
     const message = modal.querySelector('#delete-message');
     if (message) {
         message.textContent = `Are you sure you want to delete "${itemTitle}"?`;
     }
-    
     modal.style.display = 'flex';
 }
-
 function closeModal(modal) {
     if (modal) {
         modal.style.display = 'none';
     }
 }
-
 function confirmRename() {
     const modal = document.getElementById('rename-modal');
     const itemId = modal?.dataset.itemId;
     const input = document.getElementById('rename-input');
     const newName = input?.value.trim();
-    
     if (!newName) {
         showToast('Please enter a name', 'error');
         return;
     }
-    
     const item = findPageById(itemId);
     if (item) {
         item.title = newName;
         item.updatedAt = new Date().toISOString();
-        
         savePages();
         renderPageTree();
         initializeDragAndDrop();
-        
         // Update active state if this item is currently viewed
         if (currentPageId === itemId) {
             const pageTitle = document.getElementById('page-title');
             if (pageTitle) pageTitle.textContent = newName;
         }
-        
         showToast('Renamed');
     }
-    
     closeModal(modal);
 }
-
 // ===================================
 // Tree Item Context Menu
 // ===================================
 function showTreeItemMenu(event, item) {
     const menu = document.getElementById('tree-context-menu');
     if (!menu) return;
-    
     // Store item reference
     menu.dataset.itemId = item.id;
     menu.dataset.itemTitle = item.title;
-    
     // Position menu at click location
     const x = event.clientX;
     const y = event.clientY;
-    
     menu.style.display = 'block';
     menu.style.left = x + 'px';
     menu.style.top = y + 'px';
-    
     // Adjust if menu goes off screen
     setTimeout(() => {
         const rect = menu.getBoundingClientRect();
@@ -1574,7 +1295,6 @@ function showTreeItemMenu(event, item) {
             menu.style.top = (y - rect.height) + 'px';
         }
     }, 0);
-    
     // Close menu when clicking outside
     const closeMenu = (e) => {
         if (!menu.contains(e.target)) {
@@ -1582,55 +1302,44 @@ function showTreeItemMenu(event, item) {
             document.removeEventListener('click', closeMenu);
         }
     };
-    
     setTimeout(() => {
         document.addEventListener('click', closeMenu);
     }, 0);
 }
-
 function showAddToFolderModal(parentId) {
     // Find the parent folder
     const parent = findPageById(parentId);
     if (!parent || parent.type !== 'folder') return;
-    
     // Show create modal with parent context
     const modal = document.getElementById('create-modal');
     if (!modal) return;
-    
     modal.dataset.parentId = parentId;
     modal.style.display = 'flex';
-    
     // Reset state
     const nameInputGroup = document.getElementById('name-input-group');
     const modalFooter = modal.querySelector('.modal-footer');
     const nameInput = document.getElementById('new-item-name');
-    
     if (nameInputGroup) nameInputGroup.style.display = 'none';
     if (modalFooter) modalFooter.style.display = 'none';
     if (nameInput) nameInput.value = '';
-    
     modal.querySelectorAll('.create-option').forEach(opt => {
         opt.classList.remove('selected');
     });
 }
-
 // ===================================
 // Toast Notifications
 // ===================================
 function showToast(message, type = 'success') {
     let toast = document.getElementById('toast');
-    
     if (!toast) {
         toast = document.createElement('div');
         toast.id = 'toast';
         toast.className = 'toast';
         document.body.appendChild(toast);
     }
-    
     // Shorten message for mobile
     const isMobile = window.innerWidth <= 768;
     let displayMessage = message;
-    
     if (isMobile) {
         // Short messages for mobile
         const mobileMessages = {
@@ -1644,32 +1353,24 @@ function showToast(message, type = 'success') {
             'Renamed successfully': 'Renamed',
             'Deleted successfully': 'Deleted'
         };
-        
         displayMessage = mobileMessages[message] || message;
     }
-    
     toast.textContent = displayMessage;
     toast.className = `toast ${type}`;
-    
     toast.offsetHeight;
-    
     toast.classList.add('show');
-    
     setTimeout(() => {
         toast.classList.remove('show');
     }, 3000);
 }
-
 // ===================================
 // Drag and Drop
 // ===================================
 function initializeDragAndDrop() {
     // Disable drag and drop on mobile
     if (window.innerWidth <= 768) return;
-    
     const pageTree = document.getElementById('page-tree');
     if (!pageTree || typeof Sortable === 'undefined') return;
-    
     const sortableOptions = {
         group: {
             name: 'nested',
@@ -1684,21 +1385,17 @@ function initializeDragAndDrop() {
         chosenClass: 'sortable-chosen',
         handle: '.tree-name',
         draggable: '.tree-item',
-        
         onStart: function(evt) {
             document.body.classList.add('dragging');
         },
-        
         // Allow dropping on folder headers
         onMove: function(evt) {
             const draggedItem = evt.dragged;
             const relatedItem = evt.related;
-            
             // If hovering over a folder, auto-expand it and allow drop into it
             if (relatedItem && relatedItem.dataset.itemType === 'folder') {
                 const folderId = relatedItem.dataset.itemId;
                 const childrenUl = document.getElementById(`children-${folderId}`);
-                
                 if (childrenUl && !childrenUl.classList.contains('expanded')) {
                     // Auto-expand folder when dragging over it
                     setTimeout(() => {
@@ -1710,39 +1407,30 @@ function initializeDragAndDrop() {
                 }
             }
         },
-        
         onEnd: function(evt) {
             document.body.classList.remove('dragging');
             updateTreeStructure();
         }
     };
-    
     // Initialize sortable on root level
     new Sortable(pageTree, sortableOptions);
-    
     // Initialize sortable on all nested lists (including empty ones)
     document.querySelectorAll('.tree-children').forEach(childrenUl => {
         new Sortable(childrenUl, sortableOptions);
     });
 }
-
 function updateTreeStructure() {
     // Rebuild the pages array from the DOM structure
     const newPages = [];
     const processedItems = new Set();
-    
     function buildTreeFromDom(container, parentArray) {
         const items = Array.from(container.children);
-        
         for (let item of items) {
             const itemId = item.dataset.itemId;
             if (!itemId || processedItems.has(itemId)) continue;
-            
             const pageItem = findPageById(itemId);
-            
             if (pageItem) {
                 processedItems.add(itemId);
-                
                 // Create a fresh copy to avoid reference issues
                 const newItem = {
                     id: pageItem.id,
@@ -1752,30 +1440,24 @@ function updateTreeStructure() {
                     createdAt: pageItem.createdAt,
                     updatedAt: pageItem.updatedAt
                 };
-                
                 if (pageItem.type === 'page') {
                     newItem.content = pageItem.content;
                 }
-                
                 // Check if this item has nested children
                 const childrenUl = item.querySelector(`#children-${itemId}`);
                 if (childrenUl && childrenUl.children.length > 0) {
                     buildTreeFromDom(childrenUl, newItem.children);
                 }
-                
                 parentArray.push(newItem);
             }
         }
     }
-    
     const pageTree = document.getElementById('page-tree');
     if (pageTree) {
         buildTreeFromDom(pageTree, newPages);
     }
-    
     // Update global pages array
     pages = newPages;
     savePages();
-    
     showToast('Order updated');
 }

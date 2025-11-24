@@ -1,4 +1,3 @@
-﻿// galatians Timeline
+// galatians Timeline
 window.galatiansTimeline = {
-
 };

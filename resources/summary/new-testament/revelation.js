@@ -1,4 +1,3 @@
-﻿// revelation Summary
+// revelation Summary
 window.revelationSummary = {
-
 };

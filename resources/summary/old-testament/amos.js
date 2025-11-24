@@ -1,4 +1,3 @@
-﻿// amos Summary
+// amos Summary
 window.amosSummary = {
-
 };

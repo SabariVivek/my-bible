@@ -1,4 +1,3 @@
-﻿// ruth Timeline
+// ruth Timeline
 window.ruthTimeline = {
-
 };

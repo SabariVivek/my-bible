@@ -1,4 +1,3 @@
-﻿// ephesians Summary
+// ephesians Summary
 window.ephesiansSummary = {
-
 };

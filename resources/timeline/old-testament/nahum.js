@@ -1,4 +1,3 @@
-﻿// nahum Timeline
+// nahum Timeline
 window.nahumTimeline = {
-
 };

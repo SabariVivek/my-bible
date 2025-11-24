@@ -1,4 +1,3 @@
-﻿// hebrews Summary
+// hebrews Summary
 window.hebrewsSummary = {
-
 };

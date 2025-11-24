@@ -1,4 +1,3 @@
-﻿// i_kings Timeline
+// i_kings Timeline
 window.ikingsTimeline = {
-
 };

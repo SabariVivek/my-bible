@@ -1,4 +1,3 @@
-﻿// nahum Summary
+// nahum Summary
 window.nahumSummary = {
-
 };

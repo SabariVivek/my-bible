@@ -1,4 +1,3 @@
-﻿// i_chronicles Summary
+// i_chronicles Summary
 window.ichroniclesSummary = {
-
 };

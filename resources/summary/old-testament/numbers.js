@@ -1,4 +1,3 @@
-﻿// numbers Summary
+// numbers Summary
 window.numbersSummary = {
-
 };

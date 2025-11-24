@@ -1,4 +1,3 @@
-﻿// romans Summary
+// romans Summary
 window.romansSummary = {
-
 };

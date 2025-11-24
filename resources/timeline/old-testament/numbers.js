@@ -1,4 +1,3 @@
-﻿// numbers Timeline
+// numbers Timeline
 window.numbersTimeline = {
-
 };

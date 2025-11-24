@@ -1,4 +1,3 @@
-﻿// malachi Timeline
+// malachi Timeline
 window.malachiTimeline = {
-
 };

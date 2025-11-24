@@ -1,4 +1,3 @@
-﻿// titus Timeline
+// titus Timeline
 window.titusTimeline = {
-
 };

@@ -1,4 +1,3 @@
-﻿// habakkuk Timeline
+// habakkuk Timeline
 window.habakkukTimeline = {
-
 };

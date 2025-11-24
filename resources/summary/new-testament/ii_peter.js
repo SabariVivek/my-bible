@@ -1,4 +1,3 @@
-﻿// ii_peter Summary
+// ii_peter Summary
 window.iipeterSummary = {
-
 };

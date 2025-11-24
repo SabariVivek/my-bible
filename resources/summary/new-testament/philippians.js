@@ -1,4 +1,3 @@
-﻿// philippians Summary
+// philippians Summary
 window.philippiansSummary = {
-
 };

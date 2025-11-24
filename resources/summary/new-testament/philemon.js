@@ -1,4 +1,3 @@
-﻿// philemon Summary
+// philemon Summary
 window.philemonSummary = {
-
 };
