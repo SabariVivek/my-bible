@@ -1391,9 +1391,10 @@
 
                         // Load completed dates
                         const dates = await BibleReadingDB.getCompletedDates(user.id);
-                        dates.forEach(d => {
-                            const date = new Date(d.completed_date);
-                            const dateKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+                        dates.forEach(dateStr => {
+                            // Parse date string as YYYY-MM-DD directly to avoid timezone issues
+                            const [year, month, day] = dateStr.split('-').map(Number);
+                            const dateKey = `${year}-${month}-${day}`;
                             user.completedDates[dateKey] = true;
                         });
                     }
@@ -1480,9 +1481,16 @@
                 // Remove user from array
                 state.users = state.users.filter(u => u.id !== userId);
 
-                // If deleted user was current user, clear current user
+                // If deleted user was current user, clear current user and localStorage
                 if (state.currentUser && state.currentUser.id === userId) {
                     state.currentUser = null;
+                    localStorage.removeItem('bibleTrackerCurrentUserId');
+                }
+
+                // If no users left, also clear current user
+                if (state.users.length === 0) {
+                    state.currentUser = null;
+                    localStorage.removeItem('bibleTrackerCurrentUserId');
                 }
 
                 saveData();
