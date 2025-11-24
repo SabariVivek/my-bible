@@ -1,6 +1,7 @@
 // Service worker for PWA with Supabase API caching
-// IMPORTANT: Only increment version when you want to force cache clearing
-const CACHE_VERSION = 'v5';
+// IMPORTANT: Cache version is automatically updated with build timestamp
+const BUILD_TIMESTAMP = '{{BUILD_TIMESTAMP}}';
+const CACHE_VERSION = `v5-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
 const STATIC_CACHE_NAME = `my-bible-static-${CACHE_VERSION}`;
