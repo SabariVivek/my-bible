@@ -1328,7 +1328,7 @@
                 
                 // For NT books with cycle specified, only check entries in that cycle
                 if (isNTBook && currentReadingCycle) {
-                    const entryIsSecondCycle = entry.month > 6;
+                    const entryIsSecondCycle = entry.month > 6 || (entry.month === 7 && entry.day >= 2);
                     const checkingSecondCycle = currentReadingCycle === 'second';
                     if (entryIsSecondCycle !== checkingSecondCycle) continue;
                 }
@@ -1543,7 +1543,7 @@
                     user.completedDates[dateKey] = true;
 
                     // Determine reading cycle for NT books
-                    const isSecondReading = entry.month > 6;
+                    const isSecondReading = entry.month > 7 || (entry.month === 7 && entry.day >= 2);
 
                     // Collect chapters
                     entry.portions.forEach(portion => {
@@ -1633,7 +1633,8 @@
             try {
                 // Determine which NT reading period (1st or 2nd)
                 const month = state.selectedDate.getMonth() + 1;
-                const isSecondReading = month > 6;
+                const day = state.selectedDate.getDate();
+                const isSecondReading = month > 7 || (month === 7 && day >= 2);
 
                 // Mark all chapters in Supabase
                 for (const portion of reading.portions) {
@@ -2109,7 +2110,8 @@
                 
                 // Determine current reading cycle based on SELECTED date's month (not today)
                 const selectedMonth = state.selectedDate.getMonth() + 1;
-                const currentReadingCycle = selectedMonth > 6 ? 'second' : 'first';
+                const selectedDay = state.selectedDate.getDate();
+                const currentReadingCycle = (selectedMonth > 7 || (selectedMonth === 7 && selectedDay >= 2)) ? 'second' : 'first';
                 
                 // For NT books, count chapters based on current cycle
                 let readChapters = 0;
