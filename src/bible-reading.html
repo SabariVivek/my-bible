@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Reading Tracker</title>
+    <title>Bible Reading</title>
     <link rel="icon" type="image/png" href="../resources/icons/bible.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Supabase Client Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="lib/supabase-bible-reading.js"></script>
     <script>
         // Apply dark theme class immediately if saved
         if (localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme')) {
@@ -30,99 +33,6 @@
         body.dark-theme {
             background-color: #202124;
             color: #e8eaed;
-        }
-
-        /* Header Styles */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            background-color: #ffffff;
-            border-bottom: 1px solid #e0e0e0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-
-        .dark-theme .header {
-            background-color: #292a2d;
-            border-bottom-color: #3c4043;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .back-btn {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s;
-            color: #5f6368;
-        }
-
-        .dark-theme .back-btn {
-            color: #e8eaed;
-        }
-
-        .back-btn:hover {
-            background-color: rgba(95, 99, 104, 0.1);
-        }
-
-        .dark-theme .back-btn:hover {
-            background-color: rgba(232, 234, 237, 0.1);
-        }
-
-        .header-title {
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: #000000;
-            font-family: Merriweather, serif;
-            transition: color 0.3s;
-        }
-
-        .dark-theme .header-title {
-            color: #e8eaed;
-        }
-
-        .header-right {
-            display: flex;
-            gap: 0.75rem;
-            align-items: center;
-        }
-
-        .icon-btn {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s;
-            color: #5f6368;
-        }
-
-        .dark-theme .icon-btn {
-            color: #e8eaed;
-        }
-
-        .icon-btn:hover {
-            background-color: rgba(95, 99, 104, 0.1);
-        }
-
-        .dark-theme .icon-btn:hover {
-            background-color: rgba(232, 234, 237, 0.1);
         }
 
         /* Container */
@@ -733,68 +643,90 @@
         .mdc-button-primary:hover {
             background-color: rgba(102, 126, 234, 0.1);
         }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .loading-overlay.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .loading-content {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .book-loader {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 12px;
+        }
     </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="header-left">
-            <button class="back-btn" onclick="window.history.back()" aria-label="Back">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-            </button>
-            <h1 class="header-title">Bible Reading Tracker</h1>
-        </div>
-        <div class="header-right">
-            <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
-                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="4"/>
-                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-                </svg>
-                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
-                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-                </svg>
-            </button>
+    <div id="app"></div>
+    
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="book-loader"></div>
+            <div class="loading-text">Loading...</div>
         </div>
     </div>
 
-    <div id="app"></div>
-
     <script>
-        // Theme toggle functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('theme-toggle');
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
-            
-            function updateThemeIcons() {
-                const isDark = document.documentElement.classList.contains('dark-theme');
-                if (isDark) {
-                    sunIcon.style.display = 'none';
-                    moonIcon.style.display = 'block';
-                } else {
-                    sunIcon.style.display = 'block';
-                    moonIcon.style.display = 'none';
-                }
-            }
-            
-            updateThemeIcons();
-            
-            themeToggle?.addEventListener('click', () => {
-                document.documentElement.classList.toggle('dark-theme');
-                const isDark = document.documentElement.classList.contains('dark-theme');
-                localStorage.setItem('readingTrackerTheme', isDark ? 'dark' : 'light');
-                updateThemeIcons();
-                
-                // Update state if it exists
-                if (typeof state !== 'undefined') {
-                    state.darkMode = isDark;
-                    render();
-                }
-            });
-        });
+        // Loading functions
+        function showLoading(message = 'Loading...') {
+            const overlay = document.getElementById('loadingOverlay');
+            const text = overlay.querySelector('.loading-text');
+            if (text) text.textContent = message;
+            overlay.classList.add('show');
+        }
+
+        function hideLoading() {
+            const overlay = document.getElementById('loadingOverlay');
+            overlay.classList.remove('show');
+        }
+
+        // Theme toggle function
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark-theme');
+            const isDark = document.documentElement.classList.contains('dark-theme');
+            localStorage.setItem('readingTrackerTheme', isDark ? 'dark' : 'light');
+            state.darkMode = isDark;
+            render();
+        }
 
         // SVG Icons as functions
         const icons = {
@@ -806,8 +738,10 @@
             checkCircle: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
             check: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`,
             logOut: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>`,
-            shield: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>`,
+            user: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
             users: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+            settings: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M4.2 4.2l4.2 4.2m5.6 5.6 4.2 4.2M1 12h6m6 0h6M4.2 19.8l4.2-4.2m5.6-5.6 4.2-4.2"/></svg>`,
+            dashboard: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>`,
             chevronLeft: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>`,
             chevronDown: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>`,
             calendar: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>`,
@@ -1419,47 +1353,112 @@
         }
 
         // Storage Functions
-        function loadData() {
-            const savedUsers = localStorage.getItem('bibleTrackerUsers');
-            const savedCurrentUser = localStorage.getItem('bibleTrackerCurrentUser');
+        async function loadData() {
+            showLoading('Loading users...');
+            
+            // Load theme from localStorage
             const savedTheme = localStorage.getItem('bibleTrackerTheme');
-
-            if (savedUsers) {
-                state.users = JSON.parse(savedUsers);
-            }
-
-            if (savedCurrentUser) {
-                state.currentUser = JSON.parse(savedCurrentUser);
-            }
-
             if (savedTheme) {
                 state.darkMode = savedTheme === 'dark';
             }
+
+            // Load users from Supabase
+            try {
+                const users = await BibleReadingDB.getAllUsers();
+                if (users && users.length > 0) {
+                    state.users = users.map(u => ({
+                        id: u.id,
+                        name: u.name,
+                        progress: {},
+                        completedDates: {},
+                        joinedDate: u.joined_date
+                    }));
+
+                    // Load progress for each user
+                    for (const user of state.users) {
+                        const progress = await BibleReadingDB.getUserProgress(user.id);
+                        progress.forEach(p => {
+                            // Convert database reading_cycle format to app format
+                            let key;
+                            if (p.reading_cycle) {
+                                const suffix = p.reading_cycle === 'second' ? '-2nd' : '-1st';
+                                key = `${p.book_name}-${p.chapter_number}${suffix}`;
+                            } else {
+                                key = `${p.book_name}-${p.chapter_number}`;
+                            }
+                            user.progress[key] = p.status;
+                        });
+
+                        // Load completed dates
+                        const dates = await BibleReadingDB.getCompletedDates(user.id);
+                        dates.forEach(d => {
+                            const date = new Date(d.completed_date);
+                            const dateKey = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+                            user.completedDates[dateKey] = true;
+                        });
+                    }
+
+                    // Load current user from localStorage
+                    const savedCurrentUserId = localStorage.getItem('bibleTrackerCurrentUserId');
+                    if (savedCurrentUserId) {
+                        state.currentUser = state.users.find(u => u.id === savedCurrentUserId);
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading data from Supabase:', error);
+                // Fallback to localStorage
+                const savedUsers = localStorage.getItem('bibleTrackerUsers');
+                const savedCurrentUser = localStorage.getItem('bibleTrackerCurrentUser');
+                if (savedUsers) {
+                    state.users = JSON.parse(savedUsers);
+                }
+                if (savedCurrentUser) {
+                    state.currentUser = JSON.parse(savedCurrentUser);
+                }
+            } finally {
+                hideLoading();
+            }
         }
 
-        function saveData() {
-            localStorage.setItem('bibleTrackerUsers', JSON.stringify(state.users));
-            if (state.currentUser) {
-                localStorage.setItem('bibleTrackerCurrentUser', JSON.stringify(state.currentUser));
-            } 
+        async function saveData() {
+            // Save theme to localStorage
             localStorage.setItem('bibleTrackerTheme', state.darkMode ? 'dark' : 'light');
+            
+            // Save current user ID to localStorage
+            if (state.currentUser) {
+                localStorage.setItem('bibleTrackerCurrentUserId', state.currentUser.id);
+            }
+            
+            // Data is now saved to Supabase in real-time, no need to save here
         }
 
         // User Functions
-        function addUser(name) {
-            const newUser = {
-                id: Date.now(),
-                name: name.trim(),
-                progress: {},
-                completedDates: {},
-                joinedDate: new Date().toISOString()
-            };
-
-            state.users.push(newUser);
-            state.currentUser = newUser;
-            state.showUserModal = false;
-            saveData();
-            render();
+        async function addUser(name) {
+            showLoading('Creating user...');
+            try {
+                // Create user in Supabase
+                const newUser = await BibleReadingDB.createUser(name.trim());
+                
+                // Add to local state
+                const userObj = {
+                    id: newUser.id,
+                    name: newUser.name,
+                    progress: {},
+                    completedDates: {},
+                    joinedDate: newUser.joined_date
+                };
+                
+                state.users.push(userObj);
+                state.currentUser = userObj;
+                state.showUserModal = false;
+                saveData();
+                render();
+            } catch (error) {
+                console.error('Error adding user:', error);
+                alert('Failed to create user. Please try again.');
+            } finally {
+                hideLoading();
+            }
         }
 
         function switchUser(user) {
@@ -1468,24 +1467,35 @@
             render();
         }
 
-        function deleteUser(userId) {
+        async function deleteUser(userId) {
             if (!confirm('Are you sure you want to delete this user? This action cannot be undone.')) {
                 return;
             }
 
-            // Remove user from array
-            state.users = state.users.filter(u => u.id !== userId);
+            showLoading('Deleting user...');
+            try {
+                // Delete from Supabase
+                await BibleReadingDB.deleteUser(userId);
+                
+                // Remove user from array
+                state.users = state.users.filter(u => u.id !== userId);
 
-            // If deleted user was current user, clear current user
-            if (state.currentUser && state.currentUser.id === userId) {
-                state.currentUser = null;
+                // If deleted user was current user, clear current user
+                if (state.currentUser && state.currentUser.id === userId) {
+                    state.currentUser = null;
+                }
+
+                saveData();
+                render();
+            } catch (error) {
+                console.error('Error deleting user:', error);
+                alert('Failed to delete user. Please try again.');
+            } finally {
+                hideLoading();
             }
-
-            saveData();
-            render();
         }
 
-        function markUserUpToDate(userId) {
+        async function markUserUpToDate(userId) {
             const user = state.users.find(u => u.id === userId);
             if (!user) return;
 
@@ -1493,62 +1503,106 @@
                 return;
             }
 
-            const today = new Date();
-            const todayMonth = today.getMonth() + 1;
-            const todayDay = today.getDate();
+            showLoading('Marking readings as complete...');
+            
+            try {
+                const today = new Date();
+                const todayMonth = today.getMonth() + 1;
+                const todayDay = today.getDate();
 
-            // Mark all readings up to today
-            yearlyReadingPlan.forEach(entry => {
-                if (entry.leap) return; // Skip leap year entries
-                
-                // Only process entries up to today
-                if (entry.month > todayMonth || (entry.month === todayMonth && entry.day > todayDay)) {
-                    return;
-                }
+                // Collect all chapters and dates to mark
+                const chaptersToMark = [];
+                const datesToMark = [];
 
-                const dateKey = `${today.getFullYear()}-${entry.month}-${entry.day}`;
-                
-                // Mark date as completed
-                if (!user.completedDates) {
-                    user.completedDates = {};
-                }
-                user.completedDates[dateKey] = true;
-
-                // Determine reading cycle for NT books
-                const isSecondReading = entry.month > 6;
-
-                // Mark all chapters in this day's portions
-                entry.portions.forEach(portion => {
-                    const chapters = parseChapterRange(portion.chapters);
-                    const bookName = normalizeBookName(portion.book);
-                    if (bookName) {
-                        const isNTBook = newTestamentBooks.find(b => b.name === bookName);
-                        
-                        chapters.forEach(ch => {
-                            if (isNTBook) {
-                                const suffix = isSecondReading ? '-2nd' : '-1st';
-                                user.progress[`${bookName}-${ch}${suffix}`] = 'read';
-                            } else {
-                                user.progress[`${bookName}-${ch}`] = 'read';
-                            }
-                        });
+                // Build batch data
+                yearlyReadingPlan.forEach(entry => {
+                    if (entry.leap) return; // Skip leap year entries
+                    
+                    // Only process entries up to today
+                    if (entry.month > todayMonth || (entry.month === todayMonth && entry.day > todayDay)) {
+                        return;
                     }
+
+                    const dateKey = `${today.getFullYear()}-${entry.month}-${entry.day}`;
+                    const dateStr = `${today.getFullYear()}-${String(entry.month).padStart(2, '0')}-${String(entry.day).padStart(2, '0')}`;
+                    
+                    datesToMark.push(dateStr);
+                    
+                    // Mark date as completed locally
+                    if (!user.completedDates) {
+                        user.completedDates = {};
+                    }
+                    user.completedDates[dateKey] = true;
+
+                    // Determine reading cycle for NT books
+                    const isSecondReading = entry.month > 6;
+
+                    // Collect chapters
+                    entry.portions.forEach(portion => {
+                        const chapters = parseChapterRange(portion.chapters);
+                        const bookName = normalizeBookName(portion.book);
+                        if (bookName) {
+                            const isNTBook = newTestamentBooks.find(b => b.name === bookName);
+                            
+                            chapters.forEach(ch => {
+                                const readingCycle = isNTBook ? (isSecondReading ? 'second' : 'first') : null;
+                                
+                                chaptersToMark.push({
+                                    book: bookName,
+                                    chapter: ch,
+                                    cycle: readingCycle
+                                });
+                                
+                                // Update local state
+                                if (isNTBook) {
+                                    const suffix = isSecondReading ? '-2nd' : '-1st';
+                                    user.progress[`${bookName}-${ch}${suffix}`] = 'read';
+                                } else {
+                                    user.progress[`${bookName}-${ch}`] = 'read';
+                                }
+                            });
+                        }
+                    });
                 });
-            });
 
-            // Update user in the array
-            const userIndex = state.users.findIndex(u => u.id === userId);
-            if (userIndex !== -1) {
-                state.users[userIndex] = user;
+                // Batch insert chapters (do in chunks to avoid too large requests)
+                const chunkSize = 50;
+                for (let i = 0; i < chaptersToMark.length; i += chunkSize) {
+                    const chunk = chaptersToMark.slice(i, i + chunkSize);
+                    const promises = chunk.map(item => 
+                        BibleReadingDB.markChapterAsRead(userId, item.book, item.chapter, item.cycle)
+                    );
+                    await Promise.all(promises);
+                }
+
+                // Batch insert dates
+                for (let i = 0; i < datesToMark.length; i += chunkSize) {
+                    const chunk = datesToMark.slice(i, i + chunkSize);
+                    const promises = chunk.map(date => 
+                        BibleReadingDB.markDateAsCompleted(userId, date)
+                    );
+                    await Promise.all(promises);
+                }
+
+                // Update user in the array
+                const userIndex = state.users.findIndex(u => u.id === userId);
+                if (userIndex !== -1) {
+                    state.users[userIndex] = user;
+                }
+
+                // Update current user if this is the active user
+                if (state.currentUser && state.currentUser.id === userId) {
+                    state.currentUser = user;
+                }
+
+                saveData();
+                render();
+            } catch (error) {
+                console.error('Error marking user up to date:', error);
+                alert('Failed to mark user up to date. Please try again.');
+            } finally {
+                hideLoading();
             }
-
-            // Update current user if this is the active user
-            if (state.currentUser && state.currentUser.id === userId) {
-                state.currentUser = user;
-            }
-
-            saveData();
-            render();
         }
 
         function toggleChapter(book, chapter) {
@@ -1556,7 +1610,7 @@
             return;
         }
 
-        function markTodayComplete() {
+        async function markTodayComplete() {
             const reading = getTodayReading(state.selectedDate);
             if (!reading || !state.currentUser) return;
 
@@ -1567,47 +1621,69 @@
                 return;
             }
 
-            // Determine which NT reading period (1st or 2nd)
-            const month = state.selectedDate.getMonth() + 1;
-            const isSecondReading = month > 6;
+            showLoading('Saving progress...');
+            try {
+                // Determine which NT reading period (1st or 2nd)
+                const month = state.selectedDate.getMonth() + 1;
+                const isSecondReading = month > 6;
 
-            reading.portions.forEach(portion => {
-                const chapters = parseChapterRange(portion.chapters);
-                const bookName = normalizeBookName(portion.book);
-                if (bookName) {
-                    // Check if this is a NT book
-                    const isNTBook = newTestamentBooks.find(b => b.name === bookName);
-                    
-                    chapters.forEach(ch => {
-                        if (isNTBook) {
-                            // For NT books, use different keys for 1st and 2nd reading
-                            const suffix = isSecondReading ? '-2nd' : '-1st';
-                            state.currentUser.progress[`${bookName}-${ch}${suffix}`] = 'read';
-                        } else {
-                            // OT books use the original key
-                            state.currentUser.progress[`${bookName}-${ch}`] = 'read';
+                // Mark all chapters in Supabase
+                for (const portion of reading.portions) {
+                    const chapters = parseChapterRange(portion.chapters);
+                    const bookName = normalizeBookName(portion.book);
+                    if (bookName) {
+                        const isNTBook = newTestamentBooks.find(b => b.name === bookName);
+                        
+                        for (const ch of chapters) {
+                            const readingCycle = isNTBook ? (isSecondReading ? 'second' : 'first') : null;
+                            await BibleReadingDB.markChapterAsRead(
+                                state.currentUser.id,
+                                bookName,
+                                ch,
+                                readingCycle
+                            );
+                            
+                            // Update local state
+                            if (isNTBook) {
+                                const suffix = isSecondReading ? '-2nd' : '-1st';
+                                state.currentUser.progress[`${bookName}-${ch}${suffix}`] = 'read';
+                            } else {
+                                state.currentUser.progress[`${bookName}-${ch}`] = 'read';
+                            }
                         }
-                    });
+                    }
                 }
-            });
 
-            if (!state.currentUser.completedDates) {
-                state.currentUser.completedDates = {};
+                // Mark date as completed in Supabase
+                await BibleReadingDB.markDateAsCompleted(
+                    state.currentUser.id,
+                    state.selectedDate.toISOString().split('T')[0]
+                );
+
+                // Update local state
+                if (!state.currentUser.completedDates) {
+                    state.currentUser.completedDates = {};
+                }
+                state.currentUser.completedDates[dateKey] = true;
+
+                // Update in users array
+                const userIndex = state.users.findIndex(u => u.id === state.currentUser.id);
+                if (userIndex !== -1) {
+                    state.users[userIndex] = state.currentUser;
+                }
+
+                saveData();
+                
+                // Trigger confetti animation
+                createConfetti();
+                
+                render();
+            } catch (error) {
+                console.error('Error marking complete:', error);
+                alert('Failed to save progress. Please try again.');
+            } finally {
+                hideLoading();
             }
-            state.currentUser.completedDates[dateKey] = true;
-
-            // Update in users array
-            const userIndex = state.users.findIndex(u => u.id === state.currentUser.id);
-            if (userIndex !== -1) {
-                state.users[userIndex] = state.currentUser;
-            }
-
-            saveData();
-            
-            // Trigger confetti animation
-            createConfetti();
-            
-            render();
         }
 
         // Create confetti animation
@@ -1675,7 +1751,7 @@
                             <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-6">
                                 ${icons.book}
                             </div>
-                            <h1 class="text-4xl font-bold mb-2">Bible Reading Tracker</h1>
+                            <h1 class="text-4xl font-bold mb-2">Bible Reading</h1>
                             <p class="${theme.textSecondary}">Choose your profile or create a new one</p>
                         </div>
 
@@ -1725,7 +1801,7 @@
                                     <button onclick="state.showUserModal = false; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
                                         Cancel
                                     </button>
-                                    <button onclick="handleAddUser()" class="flex-1 bg-blue-600 text-white rounded-lg py-3 font-semibold">
+                                    <button onclick="handleAddUser()" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white rounded-lg py-3 font-semibold transition-colors">
                                         Create
                                     </button>
                                 </div>
@@ -1777,7 +1853,12 @@
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold">
+                                    <button onclick="window.history.back()" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M19 12H5M12 19l-7-7 7-7"/>
+                                        </svg>
+                                    </button>
+                                    <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold">
                                         ${state.currentUser.name.charAt(0).toUpperCase()}
                                     </div>
                                     <div>
@@ -1797,11 +1878,14 @@
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    <button onclick="state.isAdmin = true; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Admin Mode">
-                                        ${icons.shield}
+                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
+                                        ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
-                                    <button onclick="state.currentUser = null; saveData(); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors">
-                                        ${icons.logOut}
+                                    <button onclick="state.isAdmin = true; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Dashboard">
+                                        ${icons.dashboard}
+                                    </button>
+                                    <button onclick="state.currentUser = null; saveData(); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Profile">
+                                        ${icons.user}
                                     </button>
                                 </div>
                             </div>
@@ -1842,9 +1926,9 @@
                         <!-- Progress Overview Card -->
                         <div id="progressOverviewCard" class="progress-overview-card ${theme.card} border ${theme.border} rounded-xl p-6 mb-6">
                             <div class="flex items-center justify-between mb-6">
-                                <h3 class="text-lg font-bold">Progress Overview</h3>
+                                <h3 class="text-lg font-bold">Progress</h3>
                                 <button onclick="state.showProgressDetails = !state.showProgressDetails; render();" class="text-sm font-semibold text-blue-500 hover:text-blue-400 hover:underline transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer">
-                                    ${state.showProgressDetails ? 'Hide Details' : 'Show Details'}
+                                    ${state.showProgressDetails ? 'Hide' : 'Show'}
                                     <span class="transition-transform ${state.showProgressDetails ? 'rotate-180' : ''}">${icons.chevronDown}</span>
                                 </button>
                             </div>
@@ -2134,7 +2218,9 @@
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 text-blue-500">${icons.shield}</div>
+                                    <div class="w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center text-white">
+                                        ${icons.dashboard}
+                                    </div>
                                     <div>
                                         <h2 class="font-bold text-xl">Admin</h2>
                                         <p class="text-sm ${theme.textSecondary}">Manage all users</p>
@@ -2142,7 +2228,7 @@
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    <button onclick="state.isAdmin = false; render();" class="bg-blue-600 text-white rounded-lg px-4 py-2 font-semibold">
+                                    <button onclick="state.isAdmin = false; render();" class="bg-slate-700 hover:bg-slate-600 text-white rounded-lg px-4 py-2 font-semibold transition-colors">
                                         Exit Admin
                                     </button>
                                 </div>
@@ -2171,15 +2257,10 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             ${state.users.map(user => {
-                // Count unique chapters (normalize NT chapters to avoid counting 1st/2nd separately)
+                // Count total chapter readings (OT once + NT twice = 1449 total)
                 const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
-                const uniqueChapters = new Set();
-                progressKeys.forEach(key => {
-                    const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                    uniqueChapters.add(normalizedKey);
-                });
-                const totalRead = uniqueChapters.size;
-                const percentage = Math.round((totalRead / 1189) * 100);
+                const totalRead = progressKeys.length;
+                const percentage = Math.round((totalRead / 1449) * 100);
                 const completedDays = Object.keys(user.completedDates || {}).length;
 
                 return `
@@ -2194,7 +2275,7 @@
                                                     Joined ${new Date(user.joinedDate).toLocaleDateString()}
                                                 </p>
                                             </div>
-                                            <button onclick="deleteUser(${user.id})" class="text-red-500 hover:text-red-400 p-2 rounded-lg hover:bg-red-500/10 transition-colors" title="Delete User">
+                                            <button onclick="deleteUser(${user.id}).catch(err => console.error(err))" class="text-red-500 hover:text-red-400 p-2 rounded-lg hover:bg-red-500/10 transition-colors" title="Delete User">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
                                             </button>
                                         </div>
@@ -2213,7 +2294,7 @@
                                             <div class="grid grid-cols-2 gap-3 pt-3 border-t ${theme.border}">
                                                 <div>
                                                     <p class="text-xs ${theme.textSecondary}">Chapters</p>
-                                                    <p class="font-bold">${totalRead}/1189</p>
+                                                    <p class="font-bold">${totalRead}/1449</p>
                                                 </div>
                                                 <div>
                                                     <p class="text-xs ${theme.textSecondary}">Days Complete</p>
@@ -2221,7 +2302,7 @@
                                                 </div>
                                             </div>
                                             
-                                            <button onclick="markUserUpToDate(${user.id})" class="w-full mt-4 py-2 rounded-lg font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors">
+                                            <button onclick="markUserUpToDate(${user.id}).catch(err => console.error(err))" class="w-full mt-4 py-2 rounded-lg font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors">
                                                 Mark Up to Date
                                             </button>
                                         </div>
@@ -2273,8 +2354,10 @@
         }
 
         // Initialize
-        loadData();
-        render();
+        (async () => {
+            await loadData();
+            render();
+        })();
 
         // Handle Enter key for user creation
         document.addEventListener('keypress', (e) => {
