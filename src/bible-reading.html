@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e293b" id="theme-color-meta">
     <title>Bible Reading</title>
     <link rel="icon" type="image/png" href="../resources/icons/bible.png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,9 +13,18 @@
     <script src="lib/supabase-bible-reading.js"></script>
     <script>
         // Apply dark theme class immediately if saved
-        if (localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme')) {
+        const isDarkTheme = localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme');
+        if (isDarkTheme) {
             document.documentElement.classList.add('dark-theme');
         }
+        
+        // Set initial theme color for Android notification bar
+        document.addEventListener('DOMContentLoaded', function() {
+            const metaThemeColor = document.getElementById('theme-color-meta');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', isDarkTheme ? '#1e293b' : '#ffffff');
+            }
+        });
     </script>
     <style>
         * {
@@ -725,6 +735,13 @@
             const isDark = document.documentElement.classList.contains('dark-theme');
             localStorage.setItem('readingTrackerTheme', isDark ? 'dark' : 'light');
             state.darkMode = isDark;
+            
+            // Update Android notification bar color
+            const metaThemeColor = document.getElementById('theme-color-meta');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', isDark ? '#1e293b' : '#ffffff');
+            }
+            
             render();
         }
 
@@ -1195,7 +1212,8 @@
             selectedDate: new Date(),
             activeTestament: 'new',
             isAdmin: false,
-            showProgressDetails: false
+            showProgressDetails: false,
+            isLoadingProfiles: false
         };
 
         // Helper Functions
@@ -2333,12 +2351,18 @@
             `;
         }
 
-        function render() {
+        async function render() {
             const app = document.getElementById('app');
 
             if (state.isAdmin) {
                 app.innerHTML = renderAdminView();
             } else if (!state.currentUser) {
+                // Reload users from Supabase when showing profile selection
+                if (!state.isLoadingProfiles) {
+                    state.isLoadingProfiles = true;
+                    await loadData();
+                    state.isLoadingProfiles = false;
+                }
                 app.innerHTML = renderUserSelection();
                 // Focus input if modal is open
                 if (state.showUserModal) {
