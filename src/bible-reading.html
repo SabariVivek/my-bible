@@ -757,7 +757,7 @@
             logOut: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>`,
             user: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
             users: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-            settings: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M4.2 4.2l4.2 4.2m5.6 5.6 4.2 4.2M1 12h6m6 0h6M4.2 19.8l4.2-4.2m5.6-5.6 4.2-4.2"/></svg>`,
+            settings: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>`,
             dashboard: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>`,
             chevronLeft: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>`,
             chevronDown: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>`,
@@ -1218,7 +1218,8 @@
             isAdmin: localStorage.getItem('isAdmin') === 'true',
             showProgressDetails: false,
             isLoadingProfiles: false,
-            showDashboard: true  // Show dashboard by default
+            showDashboard: true,  // Show dashboard by default
+            showAdminView: false  // Show admin profile management view
         };
 
         // Helper Functions
@@ -2202,6 +2203,11 @@
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
+                                    ${localStorage.getItem('isAdmin') === 'true' ? `
+                                        <button onclick="state.showAdminView = true; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Manage Profiles">
+                                            ${icons.settings}
+                                        </button>
+                                    ` : ''}
                                     <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
@@ -2540,18 +2546,21 @@
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
+                                    <button onclick="state.showAdminView = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back">
+                                        ${icons.chevronLeft}
+                                    </button>
                                     <div class="w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center text-white">
-                                        ${icons.dashboard}
+                                        ${icons.settings}
                                     </div>
                                     <div>
-                                        <h2 class="font-bold text-xl">Admin</h2>
-                                        <p class="text-sm ${theme.textSecondary}">Manage all users</p>
+                                        <h2 class="font-bold text-xl">Manage Profiles</h2>
+                                        <p class="text-sm ${theme.textSecondary}">Edit and delete user profiles</p>
                                     </div>
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    <button onclick="state.isAdmin = false; localStorage.setItem('isAdmin', 'false'); render();" class="bg-slate-700 hover:bg-slate-600 text-white rounded-lg px-4 py-2 font-semibold transition-colors">
-                                        Exit Admin
+                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
+                                        ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
                                 </div>
                             </div>
@@ -2648,7 +2657,10 @@
         async function render() {
             const app = document.getElementById('app');
 
-            if (!state.currentUser) {
+            if (state.showAdminView) {
+                // Show admin profile management view (check this first)
+                app.innerHTML = renderAdminView();
+            } else if (!state.currentUser) {
                 // No current user - show profile selection (default initial view)
                 // Reload users from Supabase when showing profile selection
                 if (!state.isLoadingProfiles) {
