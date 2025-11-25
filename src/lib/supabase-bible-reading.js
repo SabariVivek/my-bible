@@ -40,48 +40,78 @@ async function deleteUser(userId) {
     if (error) throw error;
 }
 // Reading Progress
-async function markChapterAsRead(userId, bookName, chapterNumber, readingCycle = null) {
+async function markChapterAsRead(userId, bookName, chapterNumber) {
     const { data, error } = await supabase
         .from('reading_progress')
         .upsert([{
             user_id: userId,
             book_name: bookName,
             chapter_number: chapterNumber,
-            reading_cycle: readingCycle,
             status: 'read',
             marked_at: new Date().toISOString()
         }], {
-            onConflict: 'user_id,book_name,chapter_number,reading_cycle'
+            onConflict: 'user_id,book_name,chapter_number'
         })
-        .select()
-        .single();
+        .select();
+    if (error) throw error;
+    return data;
+}
+
+// Batch mark multiple chapters as read (more efficient)
+async function markChaptersAsReadBatch(userId, chapters) {
+    const records = chapters.map(ch => ({
+        user_id: userId,
+        book_name: ch.book,
+        chapter_number: ch.chapter,
+        status: 'read',
+        marked_at: new Date().toISOString()
+    }));
+    
+    const { data, error } = await supabase
+        .from('reading_progress')
+        .upsert(records, {
+            onConflict: 'user_id,book_name,chapter_number'
+        })
+        .select();
     if (error) throw error;
     return data;
 }
 async function getUserProgress(userId) {
-    // Fetch all records - no limit (default Supabase limit is 1000, we need up to 1449)
-    const { data, error } = await supabase
-        .from('reading_progress')
-        .select('*')
-        .eq('user_id', userId)
-        .eq('status', 'read')
-        .limit(2000);  // Set explicit high limit to ensure all chapters are fetched
-    if (error) throw error;
-    return data;
+    // Fetch all records using pagination (Supabase default limit is 1000)
+    let allData = [];
+    let from = 0;
+    const pageSize = 1000;
+    let hasMore = true;
+    
+    while (hasMore) {
+        const { data, error } = await supabase
+            .from('reading_progress')
+            .select('*')
+            .eq('user_id', userId)
+            .eq('status', 'read')
+            .range(from, from + pageSize - 1)
+            .order('id', { ascending: true });
+        
+        if (error) throw error;
+        
+        if (data && data.length > 0) {
+            allData = allData.concat(data);
+            from += pageSize;
+            hasMore = data.length === pageSize; // Continue if we got a full page
+        } else {
+            hasMore = false;
+        }
+    }
+    
+    return allData;
 }
-async function clearChapterProgress(userId, bookName, chapterNumber, readingCycle = null) {
-    let query = supabase
+async function clearChapterProgress(userId, bookName, chapterNumber) {
+    const { error } = await supabase
         .from('reading_progress')
         .delete()
         .eq('user_id', userId)
         .eq('book_name', bookName)
         .eq('chapter_number', chapterNumber);
-    if (readingCycle) {
-        query = query.eq('reading_cycle', readingCycle);
-    } else {
-        query = query.is('reading_cycle', null);
-    }
-    const { error } = await query;
     if (error) throw error;
 }
 // Daily Portions
@@ -138,8 +168,24 @@ async function markDateAsCompleted(userId, date) {
         }], {
             onConflict: 'user_id,completed_date'
         })
-        .select()
-        .single();
+        .select();
+    if (error) throw error;
+    return data;
+}
+
+// Batch mark multiple dates as completed (more efficient)
+async function markDatesAsCompletedBatch(userId, dates) {
+    const records = dates.map(date => ({
+        user_id: userId,
+        completed_date: date instanceof Date ? date.toISOString().split('T')[0] : date
+    }));
+    
+    const { data, error } = await supabase
+        .from('completed_dates')
+        .upsert(records, {
+            onConflict: 'user_id,completed_date'
+        })
+        .select();
     if (error) throw error;
     return data;
 }
@@ -187,12 +233,11 @@ async function syncLocalDataToSupabase() {
             const progressEntries = Object.entries(localUser.progress || {});
             for (const [key, status] of progressEntries) {
                 if (status === 'read') {
-                    // Parse the key (e.g., "GENESIS-1" or "MATTHEW-1-1st")
+                    // Parse the key (e.g., "GENESIS-1")
                     const parts = key.split('-');
                     const bookName = parts[0];
                     const chapterNumber = parseInt(parts[1]);
-                    const readingCycle = parts[2] || null; // '1st' or '2nd' for NT
-                    await markChapterAsRead(newUser.id, bookName, chapterNumber, readingCycle);
+                    await markChapterAsRead(newUser.id, bookName, chapterNumber);
                 }
             }
             // Sync completed dates
@@ -223,6 +268,7 @@ window.BibleReadingDB = {
     deleteUser,
     // Progress
     markChapterAsRead,
+    markChaptersAsReadBatch,
     getUserProgress,
     clearChapterProgress,
     // Daily Portions
@@ -231,6 +277,7 @@ window.BibleReadingDB = {
     getCompletedPortions,
     // Completed Dates
     markDateAsCompleted,
+    markDatesAsCompletedBatch,
     getCompletedDates,
     // Summary
     getUserProgressSummary,

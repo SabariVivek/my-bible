@@ -14,6 +14,7 @@
     <!-- Supabase Client Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="lib/supabase-bible-reading.js"></script>
+    <script src="yearlyReadingPlan.js"></script>
     <script>
         // Apply dark theme class immediately if saved
         const isDarkTheme = localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme');
@@ -1273,403 +1274,6 @@
             { name: 'REVELATION', chapters: 22 }
         ];
 
-        const yearlyReadingPlan = [
-            // January
-            { month: 1, day: 1, portions: [{ book: "Genesis", chapters: "1-2" }, { book: "Psalms", chapters: "1-2" }, { book: "Matthew", chapters: "1-2" }] },
-            { month: 1, day: 2, portions: [{ book: "Genesis", chapters: "3-4" }, { book: "Psalms", chapters: "3-5" }, { book: "Matthew", chapters: "3-4" }] },
-            { month: 1, day: 3, portions: [{ book: "Genesis", chapters: "5-6" }, { book: "Psalms", chapters: "6-8" }, { book: "Matthew", chapters: "5" }] },
-            { month: 1, day: 4, portions: [{ book: "Genesis", chapters: "7-8" }, { book: "Psalms", chapters: "9-10" }, { book: "Matthew", chapters: "6" }] },
-            { month: 1, day: 5, portions: [{ book: "Genesis", chapters: "9-10" }, { book: "Psalms", chapters: "11-13" }, { book: "Matthew", chapters: "7" }] },
-            { month: 1, day: 6, portions: [{ book: "Genesis", chapters: "11-12" }, { book: "Psalms", chapters: "14-16" }, { book: "Matthew", chapters: "8" }] },
-            { month: 1, day: 7, portions: [{ book: "Genesis", chapters: "13-14" }, { book: "Psalms", chapters: "17" }, { book: "Matthew", chapters: "9" }] },
-            { month: 1, day: 8, portions: [{ book: "Genesis", chapters: "15-16" }, { book: "Psalms", chapters: "18" }, { book: "Matthew", chapters: "10" }] },
-            { month: 1, day: 9, portions: [{ book: "Genesis", chapters: "17-18" }, { book: "Psalms", chapters: "19-21" }, { book: "Matthew", chapters: "11" }] },
-            { month: 1, day: 10, portions: [{ book: "Genesis", chapters: "19" }, { book: "Psalms", chapters: "22" }, { book: "Matthew", chapters: "12" }] },
-            { month: 1, day: 11, portions: [{ book: "Genesis", chapters: "20-21" }, { book: "Psalms", chapters: "23-25" }, { book: "Matthew", chapters: "13" }] },
-            { month: 1, day: 12, portions: [{ book: "Genesis", chapters: "22-23" }, { book: "Psalms", chapters: "26-28" }, { book: "Matthew", chapters: "14" }] },
-            { month: 1, day: 13, portions: [{ book: "Genesis", chapters: "24" }, { book: "Psalms", chapters: "29-30" }, { book: "Matthew", chapters: "15" }] },
-            { month: 1, day: 14, portions: [{ book: "Genesis", chapters: "25-26" }, { book: "Psalms", chapters: "31" }, { book: "Matthew", chapters: "16" }] },
-            { month: 1, day: 15, portions: [{ book: "Genesis", chapters: "27" }, { book: "Psalms", chapters: "32" }, { book: "Matthew", chapters: "17" }] },
-            { month: 1, day: 16, portions: [{ book: "Genesis", chapters: "28-29" }, { book: "Psalms", chapters: "33" }, { book: "Matthew", chapters: "18" }] },
-            { month: 1, day: 17, portions: [{ book: "Genesis", chapters: "30" }, { book: "Psalms", chapters: "34" }, { book: "Matthew", chapters: "19" }] },
-            { month: 1, day: 18, portions: [{ book: "Genesis", chapters: "31" }, { book: "Psalms", chapters: "35" }, { book: "Matthew", chapters: "20" }] },
-            { month: 1, day: 19, portions: [{ book: "Genesis", chapters: "32-33" }, { book: "Psalms", chapters: "36" }, { book: "Matthew", chapters: "21" }] },
-            { month: 1, day: 20, portions: [{ book: "Genesis", chapters: "34-35" }, { book: "Psalms", chapters: "37" }, { book: "Matthew", chapters: "22" }] },
-            { month: 1, day: 21, portions: [{ book: "Genesis", chapters: "36" }, { book: "Psalms", chapters: "38" }, { book: "Matthew", chapters: "23" }] },
-            { month: 1, day: 22, portions: [{ book: "Genesis", chapters: "37" }, { book: "Psalms", chapters: "39-40" }, { book: "Matthew", chapters: "24" }] },
-            { month: 1, day: 23, portions: [{ book: "Genesis", chapters: "38" }, { book: "Psalms", chapters: "41-43" }, { book: "Matthew", chapters: "25" }] },
-            { month: 1, day: 24, portions: [{ book: "Genesis", chapters: "39-40" }, { book: "Psalms", chapters: "44" }, { book: "Matthew", chapters: "26" }] },
-            { month: 1, day: 25, portions: [{ book: "Genesis", chapters: "41" }, { book: "Psalms", chapters: "45" }, { book: "Matthew", chapters: "27" }] },
-            { month: 1, day: 26, portions: [{ book: "Genesis", chapters: "42-43" }, { book: "Psalms", chapters: "46-48" }, { book: "Matthew", chapters: "28" }] },
-            { month: 1, day: 27, portions: [{ book: "Genesis", chapters: "44-45" }, { book: "Psalms", chapters: "49" }, { book: "Romans", chapters: "1-2" }] },
-            { month: 1, day: 28, portions: [{ book: "Genesis", chapters: "46-47" }, { book: "Psalms", chapters: "50" }, { book: "Romans", chapters: "3-4" }] },
-            { month: 1, day: 29, portions: [{ book: "Genesis", chapters: "48-50" }, { book: "Psalms", chapters: "51-52" }, { book: "Romans", chapters: "5-6" }] },
-            { month: 1, day: 30, portions: [{ book: "Exodus", chapters: "1-2" }, { book: "Psalms", chapters: "53-55" }, { book: "Romans", chapters: "7-8" }] },
-            { month: 1, day: 31, portions: [{ book: "Exodus", chapters: "3-4" }, { book: "Psalms", chapters: "56-57" }, { book: "Romans", chapters: "9" }] },
-
-            // February
-            { month: 2, day: 1, portions: [{ book: "Exodus", chapters: "5-6" }, { book: "Psalms", chapters: "58-59" }, { book: "Romans", chapters: "10-11" }] },
-            { month: 2, day: 2, portions: [{ book: "Exodus", chapters: "7-8" }, { book: "Psalms", chapters: "60-61" }, { book: "Romans", chapters: "12" }] },
-            { month: 2, day: 3, portions: [{ book: "Exodus", chapters: "9" }, { book: "Psalms", chapters: "62-63" }, { book: "Romans", chapters: "13-14" }] },
-            { month: 2, day: 4, portions: [{ book: "Exodus", chapters: "10" }, { book: "Psalms", chapters: "64-65" }, { book: "Romans", chapters: "15-16" }] },
-            { month: 2, day: 5, portions: [{ book: "Exodus", chapters: "11-12" }, { book: "Psalms", chapters: "66-67" }, { book: "Mark", chapters: "1" }] },
-            { month: 2, day: 6, portions: [{ book: "Exodus", chapters: "13-14" }, { book: "Psalms", chapters: "68" }, { book: "Mark", chapters: "2" }] },
-            { month: 2, day: 7, portions: [{ book: "Exodus", chapters: "15" }, { book: "Psalms", chapters: "69" }, { book: "Mark", chapters: "3" }] },
-            { month: 2, day: 8, portions: [{ book: "Exodus", chapters: "16" }, { book: "Psalms", chapters: "70-71" }, { book: "Mark", chapters: "4" }] },
-            { month: 2, day: 9, portions: [{ book: "Exodus", chapters: "17-18" }, { book: "Psalms", chapters: "72" }, { book: "Mark", chapters: "5" }] },
-            { month: 2, day: 10, portions: [{ book: "Exodus", chapters: "19-20" }, { book: "Psalms", chapters: "73" }, { book: "Mark", chapters: "6" }] },
-            { month: 2, day: 11, portions: [{ book: "Exodus", chapters: "21" }, { book: "Psalms", chapters: "74" }, { book: "Mark", chapters: "7" }] },
-            { month: 2, day: 12, portions: [{ book: "Exodus", chapters: "22" }, { book: "Psalms", chapters: "75-76" }, { book: "Mark", chapters: "8" }] },
-            { month: 2, day: 13, portions: [{ book: "Exodus", chapters: "23" }, { book: "Psalms", chapters: "77" }, { book: "Mark", chapters: "9" }] },
-            { month: 2, day: 14, portions: [{ book: "Exodus", chapters: "24-25" }, { book: "Psalms", chapters: "78" }, { book: "Mark", chapters: "10" }] },
-            { month: 2, day: 15, portions: [{ book: "Exodus", chapters: "26" }, { book: "Psalms", chapters: "79-80" }, { book: "Mark", chapters: "11" }] },
-            { month: 2, day: 16, portions: [{ book: "Exodus", chapters: "27" }, { book: "Psalms", chapters: "81-82" }, { book: "Mark", chapters: "12" }] },
-            { month: 2, day: 17, portions: [{ book: "Exodus", chapters: "28" }, { book: "Psalms", chapters: "83-84" }, { book: "Mark", chapters: "13" }] },
-            { month: 2, day: 18, portions: [{ book: "Exodus", chapters: "29" }, { book: "Psalms", chapters: "85-86" }, { book: "Mark", chapters: "14" }] },
-            { month: 2, day: 19, portions: [{ book: "Exodus", chapters: "30" }, { book: "Psalms", chapters: "87-88" }, { book: "Mark", chapters: "15-16" }] },
-            { month: 2, day: 20, portions: [{ book: "Exodus", chapters: "31-32" }, { book: "Psalms", chapters: "89" }, { book: "1 Corinthians", chapters: "1-2" }] },
-            { month: 2, day: 21, portions: [{ book: "Exodus", chapters: "33-34" }, { book: "Psalms", chapters: "90-91" }, { book: "1 Corinthians", chapters: "3" }] },
-            { month: 2, day: 22, portions: [{ book: "Exodus", chapters: "35" }, { book: "Psalms", chapters: "92-93" }, { book: "1 Corinthians", chapters: "4-5" }] },
-            { month: 2, day: 23, portions: [{ book: "Exodus", chapters: "36" }, { book: "Psalms", chapters: "94-95" }, { book: "1 Corinthians", chapters: "6" }] },
-            { month: 2, day: 24, portions: [{ book: "Exodus", chapters: "37" }, { book: "Psalms", chapters: "96-99" }, { book: "1 Corinthians", chapters: "7" }] },
-            { month: 2, day: 25, portions: [{ book: "Exodus", chapters: "38" }, { book: "Psalms", chapters: "100-101" }, { book: "1 Corinthians", chapters: "8-9" }] },
-            { month: 2, day: 26, portions: [{ book: "Exodus", chapters: "39-40" }, { book: "Psalms", chapters: "102" }, { book: "1 Corinthians", chapters: "10" }] },
-            { month: 2, day: 27, portions: [{ book: "Leviticus", chapters: "1-2" }, { book: "Psalms", chapters: "103" }, { book: "1 Corinthians", chapters: "11" }] },
-            { month: 2, day: 28, portions: [{ book: "Leviticus", chapters: "3-4" }, { book: "Psalms", chapters: "104" }, { book: "1 Corinthians", chapters: "12-13" }] },
-            // Feb 28 for leap years (split version)
-            { month: 2, day: 28, leap: true, portions: [{ book: "Leviticus", chapters: "3" }, { book: "Psalms", chapters: "104" }, { book: "" }] },
-            // Feb 29 for leap years only
-            { month: 2, day: 29, leap: true, portions: [{ book: "Leviticus", chapters: "4" }, { book: "1 Corinthians", chapters: "12-13" }, { book: "" }] },
-
-            // March
-            { month: 3, day: 1, portions: [{ book: "Leviticus", chapters: "5-6" }, { book: "Psalms", chapters: "105" }, { book: "1 Corinthians", chapters: "14" }] },
-            { month: 3, day: 2, portions: [{ book: "Leviticus", chapters: "7" }, { book: "Psalms", chapters: "106" }, { book: "1 Corinthians", chapters: "15" }] },
-            { month: 3, day: 3, portions: [{ book: "Leviticus", chapters: "8" }, { book: "Psalms", chapters: "107" }, { book: "1 Corinthians", chapters: "16" }] },
-            { month: 3, day: 4, portions: [{ book: "Leviticus", chapters: "9-10" }, { book: "Psalms", chapters: "108-109" }, { book: "2 Corinthians", chapters: "1-2" }] },
-            { month: 3, day: 5, portions: [{ book: "Leviticus", chapters: "11" }, { book: "Psalms", chapters: "110-112" }, { book: "2 Corinthians", chapters: "3-4" }] },
-            { month: 3, day: 6, portions: [{ book: "Leviticus", chapters: "12-13" }, { book: "Psalms", chapters: "113-114" }, { book: "2 Corinthians", chapters: "5-7" }] },
-            { month: 3, day: 7, portions: [{ book: "Leviticus", chapters: "14" }, { book: "Psalms", chapters: "115-116" }, { book: "2 Corinthians", chapters: "8-9" }] },
-            { month: 3, day: 8, portions: [{ book: "Leviticus", chapters: "15" }, { book: "Psalms", chapters: "117-118" }, { book: "2 Corinthians", chapters: "10-11" }] },
-            { month: 3, day: 9, portions: [{ book: "Leviticus", chapters: "16" }, { book: "Psalms", chapters: "119:1-40" }, { book: "2 Corinthians", chapters: "12-13" }] },
-            { month: 3, day: 10, portions: [{ book: "Leviticus", chapters: "17-18" }, { book: "Psalms", chapters: "119:41-80" }, { book: "Luke", chapters: "1" }] },
-            { month: 3, day: 11, portions: [{ book: "Leviticus", chapters: "19" }, { book: "Psalms", chapters: "119:81-128" }, { book: "Luke", chapters: "2" }] },
-            { month: 3, day: 12, portions: [{ book: "Leviticus", chapters: "20" }, { book: "Psalms", chapters: "119:129-176" }, { book: "Luke", chapters: "3" }] },
-            { month: 3, day: 13, portions: [{ book: "Leviticus", chapters: "21" }, { book: "Psalms", chapters: "120-124" }, { book: "Luke", chapters: "4" }] },
-            { month: 3, day: 14, portions: [{ book: "Leviticus", chapters: "22" }, { book: "Psalms", chapters: "125-127" }, { book: "Luke", chapters: "5" }] },
-            { month: 3, day: 15, portions: [{ book: "Leviticus", chapters: "23" }, { book: "Psalms", chapters: "128-130" }, { book: "Luke", chapters: "6" }] },
-            { month: 3, day: 16, portions: [{ book: "Leviticus", chapters: "24" }, { book: "Psalms", chapters: "131-134" }, { book: "Luke", chapters: "7" }] },
-            { month: 3, day: 17, portions: [{ book: "Leviticus", chapters: "25" }, { book: "Psalms", chapters: "135-136" }, { book: "Luke", chapters: "8" }] },
-            { month: 3, day: 18, portions: [{ book: "Leviticus", chapters: "26" }, { book: "Psalms", chapters: "137-139" }, { book: "Luke", chapters: "9" }] },
-            { month: 3, day: 19, portions: [{ book: "Leviticus", chapters: "27" }, { book: "Psalms", chapters: "140-142" }, { book: "Luke", chapters: "10" }] },
-            { month: 3, day: 20, portions: [{ book: "Numbers", chapters: "1" }, { book: "Psalms", chapters: "143-144" }, { book: "Luke", chapters: "11" }] },
-            { month: 3, day: 21, portions: [{ book: "Numbers", chapters: "2" }, { book: "Psalms", chapters: "145-147" }, { book: "Luke", chapters: "12" }] },
-            { month: 3, day: 22, portions: [{ book: "Numbers", chapters: "3" }, { book: "Psalms", chapters: "148-150" }, { book: "Luke", chapters: "13-14" }] },
-            { month: 3, day: 23, portions: [{ book: "Numbers", chapters: "4" }, { book: "Proverbs", chapters: "1" }, { book: "Luke", chapters: "15" }] },
-            { month: 3, day: 24, portions: [{ book: "Numbers", chapters: "5" }, { book: "Proverbs", chapters: "2" }, { book: "Luke", chapters: "16" }] },
-            { month: 3, day: 25, portions: [{ book: "Numbers", chapters: "6" }, { book: "Proverbs", chapters: "3" }, { book: "Luke", chapters: "17" }] },
-            { month: 3, day: 26, portions: [{ book: "Numbers", chapters: "7" }, { book: "Proverbs", chapters: "4" }, { book: "Luke", chapters: "18" }] },
-            { month: 3, day: 27, portions: [{ book: "Numbers", chapters: "8-9" }, { book: "Proverbs", chapters: "5" }, { book: "Luke", chapters: "19" }] },
-            { month: 3, day: 28, portions: [{ book: "Numbers", chapters: "10" }, { book: "Proverbs", chapters: "6" }, { book: "Luke", chapters: "20" }] },
-            { month: 3, day: 29, portions: [{ book: "Numbers", chapters: "11" }, { book: "Proverbs", chapters: "7" }, { book: "Luke", chapters: "21" }] },
-            { month: 3, day: 30, portions: [{ book: "Numbers", chapters: "12-13" }, { book: "Proverbs", chapters: "8-9" }, { book: "Luke", chapters: "22" }] },
-            { month: 3, day: 31, portions: [{ book: "Numbers", chapters: "14" }, { book: "Proverbs", chapters: "10" }, { book: "Luke", chapters: "23" }] },
-
-            // April
-            { month: 4, day: 1, portions: [{ book: "Numbers", chapters: "15" }, { book: "Proverbs", chapters: "11" }, { book: "Luke", chapters: "24" }] },
-            { month: 4, day: 2, portions: [{ book: "Numbers", chapters: "16" }, { book: "Proverbs", chapters: "12" }, { book: "Galatians", chapters: "1-2" }] },
-            { month: 4, day: 3, portions: [{ book: "Numbers", chapters: "17-18" }, { book: "Proverbs", chapters: "13" }, { book: "Galatians", chapters: "3-4" }] },
-            { month: 4, day: 4, portions: [{ book: "Numbers", chapters: "19" }, { book: "Proverbs", chapters: "14" }, { book: "Galatians", chapters: "5-6" }] },
-            { month: 4, day: 5, portions: [{ book: "Numbers", chapters: "20-21" }, { book: "Proverbs", chapters: "15" }, { book: "Ephesians", chapters: "1-2" }] },
-            { month: 4, day: 6, portions: [{ book: "Numbers", chapters: "22-23" }, { book: "Proverbs", chapters: "16" }, { book: "Ephesians", chapters: "3-4" }] },
-            { month: 4, day: 7, portions: [{ book: "Numbers", chapters: "24-25" }, { book: "Proverbs", chapters: "17" }, { book: "Ephesians", chapters: "5-6" }] },
-            { month: 4, day: 8, portions: [{ book: "Numbers", chapters: "26" }, { book: "Proverbs", chapters: "18" }, { book: "Philippians", chapters: "1-2" }] },
-            { month: 4, day: 9, portions: [{ book: "Numbers", chapters: "27" }, { book: "Proverbs", chapters: "19" }, { book: "Philippians", chapters: "3-4" }] },
-            { month: 4, day: 10, portions: [{ book: "Numbers", chapters: "28" }, { book: "Proverbs", chapters: "20" }, { book: "John", chapters: "1" }] },
-            { month: 4, day: 11, portions: [{ book: "Numbers", chapters: "29-30" }, { book: "Proverbs", chapters: "21" }, { book: "John", chapters: "2-3" }] },
-            { month: 4, day: 12, portions: [{ book: "Numbers", chapters: "31" }, { book: "Proverbs", chapters: "22" }, { book: "John", chapters: "4" }] },
-            { month: 4, day: 13, portions: [{ book: "Numbers", chapters: "32" }, { book: "Proverbs", chapters: "23" }, { book: "John", chapters: "5" }] },
-            { month: 4, day: 14, portions: [{ book: "Numbers", chapters: "33" }, { book: "Proverbs", chapters: "24" }, { book: "John", chapters: "6" }] },
-            { month: 4, day: 15, portions: [{ book: "Numbers", chapters: "34" }, { book: "Proverbs", chapters: "25" }, { book: "John", chapters: "7" }] },
-            { month: 4, day: 16, portions: [{ book: "Numbers", chapters: "35" }, { book: "Proverbs", chapters: "26" }, { book: "John", chapters: "8" }] },
-            { month: 4, day: 17, portions: [{ book: "Numbers", chapters: "36" }, { book: "Proverbs", chapters: "27" }, { book: "John", chapters: "9-10" }] },
-            { month: 4, day: 18, portions: [{ book: "Deuteronomy", chapters: "1" }, { book: "Proverbs", chapters: "28" }, { book: "John", chapters: "11" }] },
-            { month: 4, day: 19, portions: [{ book: "Deuteronomy", chapters: "2" }, { book: "Proverbs", chapters: "29" }, { book: "John", chapters: "12" }] },
-            { month: 4, day: 20, portions: [{ book: "Deuteronomy", chapters: "3" }, { book: "Proverbs", chapters: "30" }, { book: "John", chapters: "13-14" }] },
-            { month: 4, day: 21, portions: [{ book: "Deuteronomy", chapters: "4" }, { book: "Proverbs", chapters: "31" }, { book: "John", chapters: "15-16" }] },
-            { month: 4, day: 22, portions: [{ book: "Deuteronomy", chapters: "5" }, { book: "Ecclesiastes", chapters: "1" }, { book: "John", chapters: "17-18" }] },
-            { month: 4, day: 23, portions: [{ book: "Deuteronomy", chapters: "6-7" }, { book: "Ecclesiastes", chapters: "2" }, { book: "John", chapters: "19" }] },
-            { month: 4, day: 24, portions: [{ book: "Deuteronomy", chapters: "8-9" }, { book: "Ecclesiastes", chapters: "3" }, { book: "John", chapters: "20-21" }] },
-            { month: 4, day: 25, portions: [{ book: "Deuteronomy", chapters: "10-11" }, { book: "Ecclesiastes", chapters: "4" }, { book: "Acts", chapters: "1" }] },
-            { month: 4, day: 26, portions: [{ book: "Deuteronomy", chapters: "12" }, { book: "Ecclesiastes", chapters: "5" }, { book: "Acts", chapters: "2" }] },
-            { month: 4, day: 27, portions: [{ book: "Deuteronomy", chapters: "13-14" }, { book: "Ecclesiastes", chapters: "6" }, { book: "Acts", chapters: "3-4" }] },
-            { month: 4, day: 28, portions: [{ book: "Deuteronomy", chapters: "15" }, { book: "Ecclesiastes", chapters: "7" }, { book: "Acts", chapters: "5-6" }] },
-            { month: 4, day: 29, portions: [{ book: "Deuteronomy", chapters: "16" }, { book: "Ecclesiastes", chapters: "8" }, { book: "Acts", chapters: "7" }] },
-            { month: 4, day: 30, portions: [{ book: "Deuteronomy", chapters: "17" }, { book: "Ecclesiastes", chapters: "9" }, { book: "Acts", chapters: "8" }] },
-
-            // May
-            { month: 5, day: 1, portions: [{ book: "Deuteronomy", chapters: "18" }, { book: "Ecclesiastes", chapters: "10" }, { book: "Acts", chapters: "9" }] },
-            { month: 5, day: 2, portions: [{ book: "Deuteronomy", chapters: "19" }, { book: "Ecclesiastes", chapters: "11" }, { book: "Acts", chapters: "10" }] },
-            { month: 5, day: 3, portions: [{ book: "Deuteronomy", chapters: "20" }, { book: "Ecclesiastes", chapters: "12" }, { book: "Acts", chapters: "11-12" }] },
-            { month: 5, day: 4, portions: [{ book: "Deuteronomy", chapters: "21" }, { book: "Song of Solomon", chapters: "1" }, { book: "Acts", chapters: "13" }] },
-            { month: 5, day: 5, portions: [{ book: "Deuteronomy", chapters: "22" }, { book: "Song of Solomon", chapters: "2" }, { book: "Acts", chapters: "14-15" }] },
-            { month: 5, day: 6, portions: [{ book: "Deuteronomy", chapters: "23" }, { book: "Song of Solomon", chapters: "3" }, { book: "Acts", chapters: "16-17" }] },
-            { month: 5, day: 7, portions: [{ book: "Deuteronomy", chapters: "24" }, { book: "Song of Solomon", chapters: "4" }, { book: "Acts", chapters: "18-19" }] },
-            { month: 5, day: 8, portions: [{ book: "Deuteronomy", chapters: "25" }, { book: "Song of Solomon", chapters: "5" }, { book: "Acts", chapters: "20" }] },
-            { month: 5, day: 9, portions: [{ book: "Deuteronomy", chapters: "26" }, { book: "Song of Solomon", chapters: "6" }, { book: "Acts", chapters: "21-22" }] },
-            { month: 5, day: 10, portions: [{ book: "Deuteronomy", chapters: "27" }, { book: "Song of Solomon", chapters: "7" }, { book: "Acts", chapters: "23-24" }] },
-            { month: 5, day: 11, portions: [{ book: "Deuteronomy", chapters: "28" }, { book: "Song of Solomon", chapters: "8" }, { book: "Acts", chapters: "25-26" }] },
-            { month: 5, day: 12, portions: [{ book: "Deuteronomy", chapters: "29" }, { book: "Isaiah", chapters: "1" }, { book: "Acts", chapters: "27" }] },
-            { month: 5, day: 13, portions: [{ book: "Deuteronomy", chapters: "30" }, { book: "Isaiah", chapters: "2" }, { book: "Acts", chapters: "28" }] },
-            { month: 5, day: 14, portions: [{ book: "Deuteronomy", chapters: "31" }, { book: "Isaiah", chapters: "3-4" }, { book: "Colossians", chapters: "1" }] },
-            { month: 5, day: 15, portions: [{ book: "Deuteronomy", chapters: "32" }, { book: "Isaiah", chapters: "5" }, { book: "Colossians", chapters: "2" }] },
-            { month: 5, day: 16, portions: [{ book: "Deuteronomy", chapters: "33-34" }, { book: "Isaiah", chapters: "6" }, { book: "Colossians", chapters: "3-4" }] },
-            { month: 5, day: 17, portions: [{ book: "Joshua", chapters: "1" }, { book: "Isaiah", chapters: "7" }, { book: "1 Thessalonians", chapters: "1-2" }] },
-            { month: 5, day: 18, portions: [{ book: "Joshua", chapters: "2" }, { book: "Isaiah", chapters: "8" }, { book: "1 Thessalonians", chapters: "3-4" }] },
-            { month: 5, day: 19, portions: [{ book: "Joshua", chapters: "3-4" }, { book: "Isaiah", chapters: "9" }, { book: "1 Thessalonians", chapters: "5" }] },
-            { month: 5, day: 20, portions: [{ book: "Joshua", chapters: "5-6" }, { book: "Isaiah", chapters: "10" }, { book: "2 Thessalonians", chapters: "1-2" }] },
-            { month: 5, day: 21, portions: [{ book: "Joshua", chapters: "7" }, { book: "Isaiah", chapters: "11" }, { book: "2 Thessalonians", chapters: "3" }] },
-            { month: 5, day: 22, portions: [{ book: "Joshua", chapters: "8" }, { book: "Isaiah", chapters: "12" }, { book: "1 Timothy", chapters: "1-3" }] },
-            { month: 5, day: 23, portions: [{ book: "Joshua", chapters: "9" }, { book: "Isaiah", chapters: "13" }, { book: "1 Timothy", chapters: "4-5" }] },
-            { month: 5, day: 24, portions: [{ book: "Joshua", chapters: "10" }, { book: "Isaiah", chapters: "14" }, { book: "1 Timothy", chapters: "6" }] },
-            { month: 5, day: 25, portions: [{ book: "Joshua", chapters: "11" }, { book: "Isaiah", chapters: "15" }, { book: "2 Timothy", chapters: "1" }] },
-            { month: 5, day: 26, portions: [{ book: "Joshua", chapters: "12" }, { book: "Isaiah", chapters: "16" }, { book: "2 Timothy", chapters: "2" }] },
-            { month: 5, day: 27, portions: [{ book: "Joshua", chapters: "13" }, { book: "Isaiah", chapters: "17-18" }, { book: "2 Timothy", chapters: "3-4" }] },
-            { month: 5, day: 28, portions: [{ book: "Joshua", chapters: "14" }, { book: "Isaiah", chapters: "19" }, { book: "Titus", chapters: "1-3" }] },
-            { month: 5, day: 29, portions: [{ book: "Joshua", chapters: "15" }, { book: "Isaiah", chapters: "20-21" }, { book: "Philemon", chapters: "1" }] },
-            { month: 5, day: 30, portions: [{ book: "Joshua", chapters: "16" }, { book: "Isaiah", chapters: "22" }, { book: "Hebrews", chapters: "1-2" }] },
-            { month: 5, day: 31, portions: [{ book: "Joshua", chapters: "17" }, { book: "Isaiah", chapters: "23" }, { book: "Hebrews", chapters: "3-5" }] },
-
-            // June
-            { month: 6, day: 1, portions: [{ book: "Joshua", chapters: "18" }, { book: "Isaiah", chapters: "24" }, { book: "Hebrews", chapters: "6-7" }] },
-            { month: 6, day: 2, portions: [{ book: "Joshua", chapters: "19" }, { book: "Isaiah", chapters: "25" }, { book: "Hebrews", chapters: "8-9" }] },
-            { month: 6, day: 3, portions: [{ book: "Joshua", chapters: "20-21" }, { book: "Isaiah", chapters: "26-27" }, { book: "Hebrews", chapters: "10" }] },
-            { month: 6, day: 4, portions: [{ book: "Joshua", chapters: "22" }, { book: "Isaiah", chapters: "28" }, { book: "Hebrews", chapters: "11" }] },
-            { month: 6, day: 5, portions: [{ book: "Joshua", chapters: "23-24" }, { book: "Isaiah", chapters: "29" }, { book: "Hebrews", chapters: "12" }] },
-            { month: 6, day: 6, portions: [{ book: "Judges", chapters: "1" }, { book: "Isaiah", chapters: "30" }, { book: "Hebrews", chapters: "13" }] },
-            { month: 6, day: 7, portions: [{ book: "Judges", chapters: "2-3" }, { book: "Isaiah", chapters: "31" }, { book: "James", chapters: "1" }] },
-            { month: 6, day: 8, portions: [{ book: "Judges", chapters: "4-5" }, { book: "Isaiah", chapters: "32" }, { book: "James", chapters: "2" }] },
-            { month: 6, day: 9, portions: [{ book: "Judges", chapters: "6" }, { book: "Isaiah", chapters: "33" }, { book: "James", chapters: "3-4" }] },
-            { month: 6, day: 10, portions: [{ book: "Judges", chapters: "7-8" }, { book: "Isaiah", chapters: "34" }, { book: "James", chapters: "5" }] },
-            { month: 6, day: 11, portions: [{ book: "Judges", chapters: "9" }, { book: "Isaiah", chapters: "35" }, { book: "1 Peter", chapters: "1" }] },
-            { month: 6, day: 12, portions: [{ book: "Judges", chapters: "10-11" }, { book: "Isaiah", chapters: "36" }, { book: "1 Peter", chapters: "2" }] },
-            { month: 6, day: 13, portions: [{ book: "Judges", chapters: "12-13" }, { book: "Isaiah", chapters: "37" }, { book: "1 Peter", chapters: "3-5" }] },
-            { month: 6, day: 14, portions: [{ book: "Judges", chapters: "14-15" }, { book: "Isaiah", chapters: "38" }, { book: "2 Peter", chapters: "1-2" }] },
-            { month: 6, day: 15, portions: [{ book: "Judges", chapters: "16" }, { book: "Isaiah", chapters: "39" }, { book: "2 Peter", chapters: "3" }] },
-            { month: 6, day: 16, portions: [{ book: "Judges", chapters: "17-18" }, { book: "Isaiah", chapters: "40" }, { book: "1 John", chapters: "1-2" }] },
-            { month: 6, day: 17, portions: [{ book: "Judges", chapters: "19" }, { book: "Isaiah", chapters: "41" }, { book: "1 John", chapters: "3-4" }] },
-            { month: 6, day: 18, portions: [{ book: "Judges", chapters: "20" }, { book: "Isaiah", chapters: "42" }, { book: "1 John", chapters: "5" }] },
-            { month: 6, day: 19, portions: [{ book: "Judges", chapters: "21" }, { book: "Isaiah", chapters: "43" }, { book: "2 John & 3 John", chapters: "1" }] },
-            { month: 6, day: 20, portions: [{ book: "Ruth", chapters: "1-2" }, { book: "Isaiah", chapters: "44" }, { book: "Jude", chapters: "1" }] },
-            { month: 6, day: 21, portions: [{ book: "Ruth", chapters: "3-4" }, { book: "Isaiah", chapters: "45" }, { book: "Revelation", chapters: "1-2" }] },
-            { month: 6, day: 22, portions: [{ book: "1 Samuel", chapters: "1" }, { book: "Isaiah", chapters: "46-47" }, { book: "Revelation", chapters: "3-4" }] },
-            { month: 6, day: 23, portions: [{ book: "1 Samuel", chapters: "2" }, { book: "Isaiah", chapters: "48" }, { book: "Revelation", chapters: "5-6" }] },
-            { month: 6, day: 24, portions: [{ book: "1 Samuel", chapters: "3" }, { book: "Isaiah", chapters: "49" }, { book: "Revelation", chapters: "7-9" }] },
-            { month: 6, day: 25, portions: [{ book: "1 Samuel", chapters: "4" }, { book: "Isaiah", chapters: "50" }, { book: "Revelation", chapters: "10-11" }] },
-            { month: 6, day: 26, portions: [{ book: "1 Samuel", chapters: "5-6" }, { book: "Isaiah", chapters: "51" }, { book: "Revelation", chapters: "12-13" }] },
-            { month: 6, day: 27, portions: [{ book: "1 Samuel", chapters: "7-8" }, { book: "Isaiah", chapters: "52" }, { book: "Revelation", chapters: "14" }] },
-            { month: 6, day: 28, portions: [{ book: "1 Samuel", chapters: "9" }, { book: "Isaiah", chapters: "53" }, { book: "Revelation", chapters: "15-16" }] },
-            { month: 6, day: 29, portions: [{ book: "1 Samuel", chapters: "10" }, { book: "Isaiah", chapters: "54" }, { book: "Revelation", chapters: "17-18" }] },
-            { month: 6, day: 30, portions: [{ book: "1 Samuel", chapters: "11-12" }, { book: "Isaiah", chapters: "55" }, { book: "Revelation", chapters: "19-20" }] },
-
-            // July
-            { month: 7, day: 1, portions: [{ book: "1 Samuel", chapters: "13" }, { book: "Isaiah", chapters: "56-57" }, { book: "Revelation", chapters: "21-22" }] },
-            { month: 7, day: 2, portions: [{ book: "1 Samuel", chapters: "14" }, { book: "Isaiah", chapters: "58" }, { book: "Matthew", chapters: "1-2" }] },
-            { month: 7, day: 3, portions: [{ book: "1 Samuel", chapters: "15" }, { book: "Isaiah", chapters: "59" }, { book: "Matthew", chapters: "3-4" }] },
-            { month: 7, day: 4, portions: [{ book: "1 Samuel", chapters: "16" }, { book: "Isaiah", chapters: "60" }, { book: "Matthew", chapters: "5" }] },
-            { month: 7, day: 5, portions: [{ book: "1 Samuel", chapters: "17" }, { book: "Isaiah", chapters: "61" }, { book: "Matthew", chapters: "6" }] },
-            { month: 7, day: 6, portions: [{ book: "1 Samuel", chapters: "18" }, { book: "Isaiah", chapters: "62" }, { book: "Matthew", chapters: "7" }] },
-            { month: 7, day: 7, portions: [{ book: "1 Samuel", chapters: "19" }, { book: "Isaiah", chapters: "63" }, { book: "Matthew", chapters: "8" }] },
-            { month: 7, day: 8, portions: [{ book: "1 Samuel", chapters: "20" }, { book: "Isaiah", chapters: "64" }, { book: "Matthew", chapters: "9" }] },
-            { month: 7, day: 9, portions: [{ book: "1 Samuel", chapters: "21-22" }, { book: "Isaiah", chapters: "65" }, { book: "Matthew", chapters: "10" }] },
-            { month: 7, day: 10, portions: [{ book: "1 Samuel", chapters: "23" }, { book: "Isaiah", chapters: "66" }, { book: "Matthew", chapters: "11" }] },
-            { month: 7, day: 11, portions: [{ book: "1 Samuel", chapters: "24" }, { book: "Jeremiah", chapters: "1" }, { book: "Matthew", chapters: "12" }] },
-            { month: 7, day: 12, portions: [{ book: "1 Samuel", chapters: "25" }, { book: "Jeremiah", chapters: "2" }, { book: "Matthew", chapters: "13" }] },
-            { month: 7, day: 13, portions: [{ book: "1 Samuel", chapters: "26-27" }, { book: "Jeremiah", chapters: "3" }, { book: "Matthew", chapters: "14" }] },
-            { month: 7, day: 14, portions: [{ book: "1 Samuel", chapters: "28" }, { book: "Jeremiah", chapters: "4" }, { book: "Matthew", chapters: "15" }] },
-            { month: 7, day: 15, portions: [{ book: "1 Samuel", chapters: "29-30" }, { book: "Jeremiah", chapters: "5" }, { book: "Matthew", chapters: "16" }] },
-            { month: 7, day: 16, portions: [{ book: "1 Samuel", chapters: "31" }, { book: "Jeremiah", chapters: "6" }, { book: "Matthew", chapters: "17" }] },
-            { month: 7, day: 17, portions: [{ book: "2 Samuel", chapters: "1" }, { book: "Jeremiah", chapters: "7" }, { book: "Matthew", chapters: "18" }] },
-            { month: 7, day: 18, portions: [{ book: "2 Samuel", chapters: "2" }, { book: "Jeremiah", chapters: "8" }, { book: "Matthew", chapters: "19" }] },
-            { month: 7, day: 19, portions: [{ book: "2 Samuel", chapters: "3" }, { book: "Jeremiah", chapters: "9" }, { book: "Matthew", chapters: "20" }] },
-            { month: 7, day: 20, portions: [{ book: "2 Samuel", chapters: "4-5" }, { book: "Jeremiah", chapters: "10" }, { book: "Matthew", chapters: "21" }] },
-            { month: 7, day: 21, portions: [{ book: "2 Samuel", chapters: "6" }, { book: "Jeremiah", chapters: "11" }, { book: "Matthew", chapters: "22" }] },
-            { month: 7, day: 22, portions: [{ book: "2 Samuel", chapters: "7" }, { book: "Jeremiah", chapters: "12" }, { book: "Matthew", chapters: "23" }] },
-            { month: 7, day: 23, portions: [{ book: "2 Samuel", chapters: "8-9" }, { book: "Jeremiah", chapters: "13" }, { book: "Matthew", chapters: "24" }] },
-            { month: 7, day: 24, portions: [{ book: "2 Samuel", chapters: "10" }, { book: "Jeremiah", chapters: "14" }, { book: "Matthew", chapters: "25" }] },
-            { month: 7, day: 25, portions: [{ book: "2 Samuel", chapters: "11" }, { book: "Jeremiah", chapters: "15" }, { book: "Matthew", chapters: "26" }] },
-            { month: 7, day: 26, portions: [{ book: "2 Samuel", chapters: "12" }, { book: "Jeremiah", chapters: "16" }, { book: "Matthew", chapters: "27" }] },
-            { month: 7, day: 27, portions: [{ book: "2 Samuel", chapters: "13" }, { book: "Jeremiah", chapters: "17" }, { book: "Matthew", chapters: "28" }] },
-            { month: 7, day: 28, portions: [{ book: "2 Samuel", chapters: "14" }, { book: "Jeremiah", chapters: "18" }, { book: "Romans", chapters: "1-2" }] },
-            { month: 7, day: 29, portions: [{ book: "2 Samuel", chapters: "15" }, { book: "Jeremiah", chapters: "19" }, { book: "Romans", chapters: "3-4" }] },
-            { month: 7, day: 30, portions: [{ book: "2 Samuel", chapters: "16" }, { book: "Jeremiah", chapters: "20" }, { book: "Romans", chapters: "5-6" }] },
-            { month: 7, day: 31, portions: [{ book: "2 Samuel", chapters: "17" }, { book: "Jeremiah", chapters: "21" }, { book: "Romans", chapters: "7-8" }] },
-
-            // August
-            { month: 8, day: 1, portions: [{ book: "2 Samuel", chapters: "18" }, { book: "Jeremiah", chapters: "22" }, { book: "Romans", chapters: "9" }] },
-            { month: 8, day: 2, portions: [{ book: "2 Samuel", chapters: "19" }, { book: "Jeremiah", chapters: "23" }, { book: "Romans", chapters: "10-11" }] },
-            { month: 8, day: 3, portions: [{ book: "2 Samuel", chapters: "20-21" }, { book: "Jeremiah", chapters: "24" }, { book: "Romans", chapters: "12" }] },
-            { month: 8, day: 4, portions: [{ book: "2 Samuel", chapters: "22" }, { book: "Jeremiah", chapters: "25" }, { book: "Romans", chapters: "13-14" }] },
-            { month: 8, day: 5, portions: [{ book: "2 Samuel", chapters: "23" }, { book: "Jeremiah", chapters: "26" }, { book: "Romans", chapters: "15-16" }] },
-            { month: 8, day: 6, portions: [{ book: "2 Samuel", chapters: "24" }, { book: "Jeremiah", chapters: "27" }, { book: "Mark", chapters: "1" }] },
-            { month: 8, day: 7, portions: [{ book: "1 Kings", chapters: "1" }, { book: "Jeremiah", chapters: "28" }, { book: "Mark", chapters: "2" }] },
-            { month: 8, day: 8, portions: [{ book: "1 Kings", chapters: "2" }, { book: "Jeremiah", chapters: "29" }, { book: "Mark", chapters: "3" }] },
-            { month: 8, day: 9, portions: [{ book: "1 Kings", chapters: "3" }, { book: "Jeremiah", chapters: "30" }, { book: "Mark", chapters: "4" }] },
-            { month: 8, day: 10, portions: [{ book: "1 Kings", chapters: "4-5" }, { book: "Jeremiah", chapters: "31" }, { book: "Mark", chapters: "5" }] },
-            { month: 8, day: 11, portions: [{ book: "1 Kings", chapters: "6" }, { book: "Jeremiah", chapters: "32" }, { book: "Mark", chapters: "6" }] },
-            { month: 8, day: 12, portions: [{ book: "1 Kings", chapters: "7" }, { book: "Jeremiah", chapters: "33" }, { book: "Mark", chapters: "7" }] },
-            { month: 8, day: 13, portions: [{ book: "1 Kings", chapters: "8" }, { book: "Jeremiah", chapters: "34" }, { book: "Mark", chapters: "8" }] },
-            { month: 8, day: 14, portions: [{ book: "1 Kings", chapters: "9" }, { book: "Jeremiah", chapters: "35" }, { book: "Mark", chapters: "9" }] },
-            { month: 8, day: 15, portions: [{ book: "1 Kings", chapters: "10" }, { book: "Jeremiah", chapters: "36" }, { book: "Mark", chapters: "10" }] },
-            { month: 8, day: 16, portions: [{ book: "1 Kings", chapters: "11" }, { book: "Jeremiah", chapters: "37" }, { book: "Mark", chapters: "11" }] },
-            { month: 8, day: 17, portions: [{ book: "1 Kings", chapters: "12" }, { book: "Jeremiah", chapters: "38" }, { book: "Mark", chapters: "12" }] },
-            { month: 8, day: 18, portions: [{ book: "1 Kings", chapters: "13" }, { book: "Jeremiah", chapters: "39" }, { book: "Mark", chapters: "13" }] },
-            { month: 8, day: 19, portions: [{ book: "1 Kings", chapters: "14" }, { book: "Jeremiah", chapters: "40" }, { book: "Mark", chapters: "14" }] },
-            { month: 8, day: 20, portions: [{ book: "1 Kings", chapters: "15" }, { book: "Jeremiah", chapters: "41" }, { book: "Mark", chapters: "15" }] },
-            { month: 8, day: 21, portions: [{ book: "1 Kings", chapters: "16" }, { book: "Jeremiah", chapters: "42" }, { book: "Mark", chapters: "16" }] },
-            { month: 8, day: 22, portions: [{ book: "1 Kings", chapters: "17" }, { book: "Jeremiah", chapters: "43" }, { book: "1 Corinthians", chapters: "1-2" }] },
-            { month: 8, day: 23, portions: [{ book: "1 Kings", chapters: "18" }, { book: "Jeremiah", chapters: "44" }, { book: "1 Corinthians", chapters: "3" }] },
-            { month: 8, day: 24, portions: [{ book: "1 Kings", chapters: "19" }, { book: "Jeremiah", chapters: "45-46" }, { book: "1 Corinthians", chapters: "4-5" }] },
-            { month: 8, day: 25, portions: [{ book: "1 Kings", chapters: "20" }, { book: "Jeremiah", chapters: "47" }, { book: "1 Corinthians", chapters: "6" }] },
-            { month: 8, day: 26, portions: [{ book: "1 Kings", chapters: "21" }, { book: "Jeremiah", chapters: "48" }, { book: "1 Corinthians", chapters: "7" }] },
-            { month: 8, day: 27, portions: [{ book: "1 Kings", chapters: "22" }, { book: "Jeremiah", chapters: "49" }, { book: "1 Corinthians", chapters: "8-9" }] },
-            { month: 8, day: 28, portions: [{ book: "2 Kings", chapters: "1-2" }, { book: "Jeremiah", chapters: "50" }, { book: "1 Corinthians", chapters: "10" }] },
-            { month: 8, day: 29, portions: [{ book: "2 Kings", chapters: "3" }, { book: "Jeremiah", chapters: "51" }, { book: "1 Corinthians", chapters: "11" }] },
-            { month: 8, day: 30, portions: [{ book: "2 Kings", chapters: "4" }, { book: "Jeremiah", chapters: "52" }, { book: "1 Corinthians", chapters: "12-13" }] },
-            { month: 8, day: 31, portions: [{ book: "2 Kings", chapters: "5" }, { book: "Lamentations", chapters: "1" }, { book: "1 Corinthians", chapters: "14" }] },
-
-            // September
-            { month: 9, day: 1, portions: [{ book: "2 Kings", chapters: "6" }, { book: "Lamentations", chapters: "2" }, { book: "1 Corinthians", chapters: "15" }] },
-            { month: 9, day: 2, portions: [{ book: "2 Kings", chapters: "7" }, { book: "Lamentations", chapters: "3" }, { book: "1 Corinthians", chapters: "16" }] },
-            { month: 9, day: 3, portions: [{ book: "2 Kings", chapters: "8" }, { book: "Lamentations", chapters: "4" }, { book: "2 Corinthians", chapters: "1-2" }] },
-            { month: 9, day: 4, portions: [{ book: "2 Kings", chapters: "9" }, { book: "Lamentations", chapters: "5" }, { book: "2 Corinthians", chapters: "3-4" }] },
-            { month: 9, day: 5, portions: [{ book: "2 Kings", chapters: "10" }, { book: "Ezekiel", chapters: "1" }, { book: "2 Corinthians", chapters: "5-7" }] },
-            { month: 9, day: 6, portions: [{ book: "2 Kings", chapters: "11-12" }, { book: "Ezekiel", chapters: "2" }, { book: "2 Corinthians", chapters: "8-9" }] },
-            { month: 9, day: 7, portions: [{ book: "2 Kings", chapters: "13" }, { book: "Ezekiel", chapters: "3" }, { book: "2 Corinthians", chapters: "10-11" }] },
-            { month: 9, day: 8, portions: [{ book: "2 Kings", chapters: "14" }, { book: "Ezekiel", chapters: "4" }, { book: "2 Corinthians", chapters: "12-13" }] },
-            { month: 9, day: 9, portions: [{ book: "2 Kings", chapters: "15" }, { book: "Ezekiel", chapters: "5" }, { book: "Luke", chapters: "1" }] },
-            { month: 9, day: 10, portions: [{ book: "2 Kings", chapters: "16" }, { book: "Ezekiel", chapters: "6" }, { book: "Luke", chapters: "2" }] },
-            { month: 9, day: 11, portions: [{ book: "2 Kings", chapters: "17" }, { book: "Ezekiel", chapters: "7" }, { book: "Luke", chapters: "3" }] },
-            { month: 9, day: 12, portions: [{ book: "2 Kings", chapters: "18" }, { book: "Ezekiel", chapters: "8" }, { book: "Luke", chapters: "4" }] },
-            { month: 9, day: 13, portions: [{ book: "2 Kings", chapters: "19" }, { book: "Ezekiel", chapters: "9" }, { book: "Luke", chapters: "5" }] },
-            { month: 9, day: 14, portions: [{ book: "2 Kings", chapters: "20" }, { book: "Ezekiel", chapters: "10" }, { book: "Luke", chapters: "6" }] },
-            { month: 9, day: 15, portions: [{ book: "2 Kings", chapters: "21" }, { book: "Ezekiel", chapters: "11" }, { book: "Luke", chapters: "7" }] },
-            { month: 9, day: 16, portions: [{ book: "2 Kings", chapters: "22-23" }, { book: "Ezekiel", chapters: "12" }, { book: "Luke", chapters: "8" }] },
-            { month: 9, day: 17, portions: [{ book: "2 Kings", chapters: "24-25" }, { book: "Ezekiel", chapters: "13" }, { book: "Luke", chapters: "9" }] },
-            { month: 9, day: 18, portions: [{ book: "1 Chronicles", chapters: "1" }, { book: "Ezekiel", chapters: "14" }, { book: "Luke", chapters: "10" }] },
-            { month: 9, day: 19, portions: [{ book: "1 Chronicles", chapters: "2" }, { book: "Ezekiel", chapters: "15" }, { book: "Luke", chapters: "11" }] },
-            { month: 9, day: 20, portions: [{ book: "1 Chronicles", chapters: "3" }, { book: "Ezekiel", chapters: "16" }, { book: "Luke", chapters: "12" }] },
-            { month: 9, day: 21, portions: [{ book: "1 Chronicles", chapters: "4" }, { book: "Ezekiel", chapters: "17" }, { book: "Luke", chapters: "13-14" }] },
-            { month: 9, day: 22, portions: [{ book: "1 Chronicles", chapters: "5" }, { book: "Ezekiel", chapters: "18" }, { book: "Luke", chapters: "15" }] },
-            { month: 9, day: 23, portions: [{ book: "1 Chronicles", chapters: "6" }, { book: "Ezekiel", chapters: "19" }, { book: "Luke", chapters: "16" }] },
-            { month: 9, day: 24, portions: [{ book: "1 Chronicles", chapters: "7" }, { book: "Ezekiel", chapters: "20" }, { book: "Luke", chapters: "17" }] },
-            { month: 9, day: 25, portions: [{ book: "1 Chronicles", chapters: "8" }, { book: "Ezekiel", chapters: "21" }, { book: "Luke", chapters: "18" }] },
-            { month: 9, day: 26, portions: [{ book: "1 Chronicles", chapters: "9" }, { book: "Ezekiel", chapters: "22" }, { book: "Luke", chapters: "19" }] },
-            { month: 9, day: 27, portions: [{ book: "1 Chronicles", chapters: "10" }, { book: "Ezekiel", chapters: "23" }, { book: "Luke", chapters: "20" }] },
-            { month: 9, day: 28, portions: [{ book: "1 Chronicles", chapters: "11" }, { book: "Ezekiel", chapters: "24" }, { book: "Luke", chapters: "21" }] },
-            { month: 9, day: 29, portions: [{ book: "1 Chronicles", chapters: "12" }, { book: "Ezekiel", chapters: "25" }, { book: "Luke", chapters: "22" }] },
-            { month: 9, day: 30, portions: [{ book: "1 Chronicles", chapters: "13-14" }, { book: "Ezekiel", chapters: "26" }, { book: "Luke", chapters: "23" }] },
-
-            // October
-            { month: 10, day: 1, portions: [{ book: "1 Chronicles", chapters: "15" }, { book: "Ezekiel", chapters: "27" }, { book: "Luke", chapters: "24" }] },
-            { month: 10, day: 2, portions: [{ book: "1 Chronicles", chapters: "16" }, { book: "Ezekiel", chapters: "28" }, { book: "Galatians", chapters: "1-2" }] },
-            { month: 10, day: 3, portions: [{ book: "1 Chronicles", chapters: "17" }, { book: "Ezekiel", chapters: "29" }, { book: "Galatians", chapters: "3-4" }] },
-            { month: 10, day: 4, portions: [{ book: "1 Chronicles", chapters: "18-19" }, { book: "Ezekiel", chapters: "30" }, { book: "Galatians", chapters: "5-6" }] },
-            { month: 10, day: 5, portions: [{ book: "1 Chronicles", chapters: "20-21" }, { book: "Ezekiel", chapters: "31" }, { book: "Ephesians", chapters: "1-2" }] },
-            { month: 10, day: 6, portions: [{ book: "1 Chronicles", chapters: "22" }, { book: "Ezekiel", chapters: "32" }, { book: "Ephesians", chapters: "3-4" }] },
-            { month: 10, day: 7, portions: [{ book: "1 Chronicles", chapters: "23" }, { book: "Ezekiel", chapters: "33" }, { book: "Ephesians", chapters: "5-6" }] },
-            { month: 10, day: 8, portions: [{ book: "1 Chronicles", chapters: "24-25" }, { book: "Ezekiel", chapters: "34" }, { book: "Philippians", chapters: "1-2" }] },
-            { month: 10, day: 9, portions: [{ book: "1 Chronicles", chapters: "26" }, { book: "Ezekiel", chapters: "35" }, { book: "Philippians", chapters: "3-4" }] },
-            { month: 10, day: 10, portions: [{ book: "1 Chronicles", chapters: "27" }, { book: "Ezekiel", chapters: "36" }, { book: "John", chapters: "1" }] },
-            { month: 10, day: 11, portions: [{ book: "1 Chronicles", chapters: "28" }, { book: "Ezekiel", chapters: "37" }, { book: "John", chapters: "2-3" }] },
-            { month: 10, day: 12, portions: [{ book: "1 Chronicles", chapters: "29" }, { book: "Ezekiel", chapters: "38" }, { book: "John", chapters: "4" }] },
-            { month: 10, day: 13, portions: [{ book: "2 Chronicles", chapters: "1-2" }, { book: "Ezekiel", chapters: "39" }, { book: "John", chapters: "5" }] },
-            { month: 10, day: 14, portions: [{ book: "2 Chronicles", chapters: "3-4" }, { book: "Ezekiel", chapters: "40" }, { book: "John", chapters: "6" }] },
-            { month: 10, day: 15, portions: [{ book: "2 Chronicles", chapters: "5-6" }, { book: "Ezekiel", chapters: "41" }, { book: "John", chapters: "7" }] },
-            { month: 10, day: 16, portions: [{ book: "2 Chronicles", chapters: "7" }, { book: "Ezekiel", chapters: "42" }, { book: "John", chapters: "8" }] },
-            { month: 10, day: 17, portions: [{ book: "2 Chronicles", chapters: "8" }, { book: "Ezekiel", chapters: "43" }, { book: "John", chapters: "9-10" }] },
-            { month: 10, day: 18, portions: [{ book: "2 Chronicles", chapters: "9" }, { book: "Ezekiel", chapters: "44" }, { book: "John", chapters: "11" }] },
-            { month: 10, day: 19, portions: [{ book: "2 Chronicles", chapters: "10-11" }, { book: "Ezekiel", chapters: "45" }, { book: "John", chapters: "12" }] },
-            { month: 10, day: 20, portions: [{ book: "2 Chronicles", chapters: "12-13" }, { book: "Ezekiel", chapters: "46" }, { book: "John", chapters: "13-14" }] },
-            { month: 10, day: 21, portions: [{ book: "2 Chronicles", chapters: "14-15" }, { book: "Ezekiel", chapters: "47" }, { book: "John", chapters: "15-16" }] },
-            { month: 10, day: 22, portions: [{ book: "2 Chronicles", chapters: "16-17" }, { book: "Ezekiel", chapters: "48" }, { book: "John", chapters: "17-18" }] },
-            { month: 10, day: 23, portions: [{ book: "2 Chronicles", chapters: "18-19" }, { book: "Daniel", chapters: "1" }, { book: "John", chapters: "19" }] },
-            { month: 10, day: 24, portions: [{ book: "2 Chronicles", chapters: "20" }, { book: "Daniel", chapters: "2" }, { book: "John", chapters: "20-21" }] },
-            { month: 10, day: 25, portions: [{ book: "2 Chronicles", chapters: "21-22" }, { book: "Daniel", chapters: "3" }, { book: "Acts", chapters: "1" }] },
-            { month: 10, day: 26, portions: [{ book: "2 Chronicles", chapters: "23" }, { book: "Daniel", chapters: "4" }, { book: "Acts", chapters: "2" }] },
-            { month: 10, day: 27, portions: [{ book: "2 Chronicles", chapters: "24" }, { book: "Daniel", chapters: "5" }, { book: "Acts", chapters: "3-4" }] },
-            { month: 10, day: 28, portions: [{ book: "2 Chronicles", chapters: "25" }, { book: "Daniel", chapters: "6" }, { book: "Acts", chapters: "5-6" }] },
-            { month: 10, day: 29, portions: [{ book: "2 Chronicles", chapters: "26-27" }, { book: "Daniel", chapters: "7" }, { book: "Acts", chapters: "7" }] },
-            { month: 10, day: 30, portions: [{ book: "2 Chronicles", chapters: "28" }, { book: "Daniel", chapters: "8" }, { book: "Acts", chapters: "8" }] },
-            { month: 10, day: 31, portions: [{ book: "2 Chronicles", chapters: "29" }, { book: "Daniel", chapters: "9" }, { book: "Acts", chapters: "9" }] },
-
-            // November
-            { month: 11, day: 1, portions: [{ book: "2 Chronicles", chapters: "30" }, { book: "Daniel", chapters: "10" }, { book: "Acts", chapters: "10" }] },
-            { month: 11, day: 2, portions: [{ book: "2 Chronicles", chapters: "31" }, { book: "Daniel", chapters: "11" }, { book: "Acts", chapters: "11-12" }] },
-            { month: 11, day: 3, portions: [{ book: "2 Chronicles", chapters: "32" }, { book: "Daniel", chapters: "12" }, { book: "Acts", chapters: "13" }] },
-            { month: 11, day: 4, portions: [{ book: "2 Chronicles", chapters: "33" }, { book: "Hosea", chapters: "1" }, { book: "Acts", chapters: "14-15" }] },
-            { month: 11, day: 5, portions: [{ book: "2 Chronicles", chapters: "34" }, { book: "Hosea", chapters: "2" }, { book: "Acts", chapters: "16-17" }] },
-            { month: 11, day: 6, portions: [{ book: "2 Chronicles", chapters: "35" }, { book: "Hosea", chapters: "3" }, { book: "Acts", chapters: "18-19" }] },
-            { month: 11, day: 7, portions: [{ book: "2 Chronicles", chapters: "36" }, { book: "Hosea", chapters: "4" }, { book: "Acts", chapters: "20" }] },
-            { month: 11, day: 8, portions: [{ book: "Ezra", chapters: "1-2" }, { book: "Hosea", chapters: "5" }, { book: "Acts", chapters: "21-22" }] },
-            { month: 11, day: 9, portions: [{ book: "Ezra", chapters: "3-4" }, { book: "Hosea", chapters: "6" }, { book: "Acts", chapters: "23-24" }] },
-            { month: 11, day: 10, portions: [{ book: "Ezra", chapters: "5-6" }, { book: "Hosea", chapters: "7" }, { book: "Acts", chapters: "25-26" }] },
-            { month: 11, day: 11, portions: [{ book: "Ezra", chapters: "7" }, { book: "Hosea", chapters: "8" }, { book: "Acts", chapters: "27" }] },
-            { month: 11, day: 12, portions: [{ book: "Ezra", chapters: "8" }, { book: "Hosea", chapters: "9" }, { book: "Acts", chapters: "28" }] },
-            { month: 11, day: 13, portions: [{ book: "Ezra", chapters: "9" }, { book: "Hosea", chapters: "10" }, { book: "Colossians", chapters: "1" }] },
-            { month: 11, day: 14, portions: [{ book: "Ezra", chapters: "10" }, { book: "Hosea", chapters: "11" }, { book: "Colossians", chapters: "2" }] },
-            { month: 11, day: 15, portions: [{ book: "Nehemiah", chapters: "1-2" }, { book: "Hosea", chapters: "12" }, { book: "Colossians", chapters: "3-4" }] },
-            { month: 11, day: 16, portions: [{ book: "Nehemiah", chapters: "3" }, { book: "Hosea", chapters: "13" }, { book: "1 Thessalonians", chapters: "1-2" }] },
-            { month: 11, day: 17, portions: [{ book: "Nehemiah", chapters: "4" }, { book: "Hosea", chapters: "14" }, { book: "1 Thessalonians", chapters: "3-4" }] },
-            { month: 11, day: 18, portions: [{ book: "Nehemiah", chapters: "5-6" }, { book: "Joel", chapters: "1" }, { book: "1 Thessalonians", chapters: "5" }] },
-            { month: 11, day: 19, portions: [{ book: "Nehemiah", chapters: "7" }, { book: "Joel", chapters: "2" }, { book: "2 Thessalonians", chapters: "1-2" }] },
-            { month: 11, day: 20, portions: [{ book: "Nehemiah", chapters: "8" }, { book: "Joel", chapters: "3" }, { book: "2 Thessalonians", chapters: "3" }] },
-            { month: 11, day: 21, portions: [{ book: "Nehemiah", chapters: "9" }, { book: "Amos", chapters: "1" }, { book: "1 Timothy", chapters: "1-3" }] },
-            { month: 11, day: 22, portions: [{ book: "Nehemiah", chapters: "10" }, { book: "Amos", chapters: "2" }, { book: "1 Timothy", chapters: "4-5" }] },
-            { month: 11, day: 23, portions: [{ book: "Nehemiah", chapters: "11" }, { book: "Amos", chapters: "3" }, { book: "1 Timothy", chapters: "6" }] },
-            { month: 11, day: 24, portions: [{ book: "Nehemiah", chapters: "12" }, { book: "Amos", chapters: "4" }, { book: "2 Timothy", chapters: "1" }] },
-            { month: 11, day: 25, portions: [{ book: "Nehemiah", chapters: "13" }, { book: "Amos", chapters: "5" }, { book: "2 Timothy", chapters: "2" }] },
-            { month: 11, day: 26, portions: [{ book: "Esther", chapters: "1" }, { book: "Amos", chapters: "6" }, { book: "2 Timothy", chapters: "3-4" }] },
-            { month: 11, day: 27, portions: [{ book: "Esther", chapters: "2" }, { book: "Amos", chapters: "7" }, { book: "Titus", chapters: "1-3" }] },
-            { month: 11, day: 28, portions: [{ book: "Esther", chapters: "3-4" }, { book: "Amos", chapters: "8" }, { book: "Philemon", chapters: "1" }] },
-            { month: 11, day: 29, portions: [{ book: "Esther", chapters: "5-6" }, { book: "Amos", chapters: "9" }, { book: "Hebrews", chapters: "1-2" }] },
-            { month: 11, day: 30, portions: [{ book: "Esther", chapters: "7-8" }, { book: "Obadiah", chapters: "1" }, { book: "Hebrews", chapters: "3-5" }] },
-
-            // December
-            { month: 12, day: 1, portions: [{ book: "Esther", chapters: "9-10" }, { book: "Jonah", chapters: "1" }, { book: "Hebrews", chapters: "6-7" }] },
-            { month: 12, day: 2, portions: [{ book: "Job", chapters: "1-2" }, { book: "Jonah", chapters: "2-3" }, { book: "Hebrews", chapters: "8-9" }] },
-            { month: 12, day: 3, portions: [{ book: "Job", chapters: "3-4" }, { book: "Jonah", chapters: "4" }, { book: "Hebrews", chapters: "10" }] },
-            { month: 12, day: 4, portions: [{ book: "Job", chapters: "5" }, { book: "Micah", chapters: "1" }, { book: "Hebrews", chapters: "11" }] },
-            { month: 12, day: 5, portions: [{ book: "Job", chapters: "6-7" }, { book: "Micah", chapters: "2" }, { book: "Hebrews", chapters: "12" }] },
-            { month: 12, day: 6, portions: [{ book: "Job", chapters: "8" }, { book: "Micah", chapters: "3-4" }, { book: "Hebrews", chapters: "13" }] },
-            { month: 12, day: 7, portions: [{ book: "Job", chapters: "9" }, { book: "Micah", chapters: "5" }, { book: "James", chapters: "1" }] },
-            { month: 12, day: 8, portions: [{ book: "Job", chapters: "10" }, { book: "Micah", chapters: "6" }, { book: "James", chapters: "2" }] },
-            { month: 12, day: 9, portions: [{ book: "Job", chapters: "11" }, { book: "Micah", chapters: "7" }, { book: "James", chapters: "3-4" }] },
-            { month: 12, day: 10, portions: [{ book: "Job", chapters: "12" }, { book: "Nahum", chapters: "1-2" }, { book: "James", chapters: "5" }] },
-            { month: 12, day: 11, portions: [{ book: "Job", chapters: "13" }, { book: "Nahum", chapters: "3" }, { book: "1 Peter", chapters: "1" }] },
-            { month: 12, day: 12, portions: [{ book: "Job", chapters: "14" }, { book: "Habakkuk", chapters: "1" }, { book: "1 Peter", chapters: "2" }] },
-            { month: 12, day: 13, portions: [{ book: "Job", chapters: "15" }, { book: "Habakkuk", chapters: "2" }, { book: "1 Peter", chapters: "3-5" }] },
-            { month: 12, day: 14, portions: [{ book: "Job", chapters: "16-17" }, { book: "Habakkuk", chapters: "3" }, { book: "2 Peter", chapters: "1-2" }] },
-            { month: 12, day: 15, portions: [{ book: "Job", chapters: "18-19" }, { book: "Zephaniah", chapters: "1" }, { book: "2 Peter", chapters: "3" }] },
-            { month: 12, day: 16, portions: [{ book: "Job", chapters: "20" }, { book: "Zephaniah", chapters: "2" }, { book: "1 John", chapters: "1-2" }] },
-            { month: 12, day: 17, portions: [{ book: "Job", chapters: "21" }, { book: "Zephaniah", chapters: "3" }, { book: "1 John", chapters: "3-4" }] },
-            { month: 12, day: 18, portions: [{ book: "Job", chapters: "22" }, { book: "Haggai", chapters: "1-2" }, { book: "1 John", chapters: "5" }] },
-            { month: 12, day: 19, portions: [{ book: "Job", chapters: "23-24" }, { book: "Zechariah", chapters: "1" }, { book: "2 John & 3 John", chapters: "1" }] },
-            { month: 12, day: 20, portions: [{ book: "Job", chapters: "25-27" }, { book: "Zechariah", chapters: "2-3" }, { book: "Jude", chapters: "1" }] },
-            { month: 12, day: 21, portions: [{ book: "Job", chapters: "28" }, { book: "Zechariah", chapters: "4-5" }, { book: "Revelation", chapters: "1-2" }] },
-            { month: 12, day: 22, portions: [{ book: "Job", chapters: "29-30" }, { book: "Zechariah", chapters: "6-7" }, { book: "Revelation", chapters: "3-4" }] },
-            { month: 12, day: 23, portions: [{ book: "Job", chapters: "31-32" }, { book: "Zechariah", chapters: "8" }, { book: "Revelation", chapters: "5-6" }] },
-            { month: 12, day: 24, portions: [{ book: "Job", chapters: "33" }, { book: "Zechariah", chapters: "9" }, { book: "Revelation", chapters: "7-9" }] },
-            { month: 12, day: 25, portions: [{ book: "Job", chapters: "34" }, { book: "Zechariah", chapters: "10" }, { book: "Revelation", chapters: "10-11" }] },
-            { month: 12, day: 26, portions: [{ book: "Job", chapters: "35-36" }, { book: "Zechariah", chapters: "11" }, { book: "Revelation", chapters: "12-13" }] },
-            { month: 12, day: 27, portions: [{ book: "Job", chapters: "37" }, { book: "Zechariah", chapters: "12" }, { book: "Revelation", chapters: "14" }] },
-            { month: 12, day: 28, portions: [{ book: "Job", chapters: "38" }, { book: "Zechariah", chapters: "13-14" }, { book: "Revelation", chapters: "15-16" }] },
-            { month: 12, day: 29, portions: [{ book: "Job", chapters: "39" }, { book: "Malachi", chapters: "1" }, { book: "Revelation", chapters: "17-18" }] },
-            { month: 12, day: 30, portions: [{ book: "Job", chapters: "40" }, { book: "Malachi", chapters: "2" }, { book: "Revelation", chapters: "19-20" }] },
-            { month: 12, day: 31, portions: [{ book: "Job", chapters: "41-42" }, { book: "Malachi", chapters: "3-4" }, { book: "Revelation", chapters: "21-22" }] },
-        ];
-
-
-
         // State
         let state = {
             darkMode: localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme'),
@@ -1684,7 +1288,9 @@
             showDashboard: true,  // Show dashboard by default
             showAdminView: false,  // Show admin profile management view
             customModal: null,  // Custom modal state: { type, title, message, onConfirm, confirmText, cancelText }
-            showAllUsers: false  // Track if all users should be shown in dashboard
+            showAllUsers: false,  // Track if all users should be shown in dashboard
+            loadedUserData: new Set(),  // Track which users have their progress loaded
+            userModalError: ''  // Error message for user modal
         };
 
         // Helper Functions
@@ -1694,7 +1300,14 @@
 
             parts.forEach(part => {
                 part = part.trim();
-                if (part.includes('-')) {
+                
+                // Handle verse ranges like "119:41-80" - extract just the chapter number
+                if (part.includes(':')) {
+                    const chapterNum = parseInt(part.split(':')[0]);
+                    if (!chapters.includes(chapterNum)) {
+                        chapters.push(chapterNum);
+                    }
+                } else if (part.includes('-')) {
                     const [start, end] = part.split('-').map(n => parseInt(n.trim()));
                     for (let i = start; i <= end; i++) {
                         chapters.push(i);
@@ -1754,20 +1367,16 @@
             daysPending = totalDaysSinceJan1 - completedDaysCount;
             if (daysPending < 0) daysPending = 0;
             
-            // Calculate total chapters read
+            // Calculate total chapters read (single count - no more dual readings)
             const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
-            const uniqueChapters = new Set();
-            progressKeys.forEach(key => {
-                const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                uniqueChapters.add(normalizedKey);
-            });
+            const totalChaptersRead = progressKeys.length;
             
             return {
                 hasReadToday,
                 lastReadDate,
                 daysPending,
-                chaptersRead: uniqueChapters.size,
-                totalProgress: Math.round((uniqueChapters.size / 1189) * 100)
+                chaptersRead: totalChaptersRead,
+                totalProgress: Math.round((totalChaptersRead / 1189) * 100)
             };
         }
 
@@ -1802,12 +1411,8 @@
             const reading = yearlyReadingPlan.find(r => {
                 if (r.month === month && r.day === day) {
                     // If it's Feb 29 entry, only return it for leap years
-                    if (r.leap) {
+                    if (r.leapYearOnly) {
                         return isLeapYear;
-                    }
-                    // For Feb 28, skip the leap-specific version if it's not a leap year
-                    if (month === 2 && day === 28 && !isLeapYear && r.leap === false) {
-                        return false;
                     }
                     return true;
                 }
@@ -1818,86 +1423,49 @@
         }
 
         function calculateProgress(testament) {
-            if (!state.currentUser) return { read: 0, total: 0, percentage: 0, firstRead: 0, secondRead: 0 };
+            if (!state.currentUser) return { read: 0, total: 0, percentage: 0 };
 
             const books = testament === 'old' ? oldTestamentBooks : newTestamentBooks;
             let total = 0;
             let read = 0;
-            let firstRead = 0;
-            let secondRead = 0;
 
-            // For NT, count separately using -1st and -2nd suffixes
-            if (testament === 'new') {
-                books.forEach(book => {
-                    for (let i = 1; i <= book.chapters; i++) {
-                        const key1st = `${book.name}-${i}-1st`;
-                        const key2nd = `${book.name}-${i}-2nd`;
-                        
-                        if (state.currentUser.progress[key1st] === 'read') {
-                            firstRead++;
-                            read++;
-                        }
-                        if (state.currentUser.progress[key2nd] === 'read') {
-                            secondRead++;
-                            read++;
-                        }
-                    }
-                });
-                
-                total = 260 * 2; // 260 chapters × 2 readings = 520
-            } else {
-                books.forEach(book => {
-                    total += book.chapters;
-                    for (let i = 1; i <= book.chapters; i++) {
-                        const key = `${book.name}-${i}`;
-                        if (state.currentUser.progress[key] === 'read') read++;
-                    }
-                });
-            }
+            books.forEach(book => {
+                total += book.chapters;
+                for (let i = 1; i <= book.chapters; i++) {
+                    const key = `${book.name}-${i}`;
+                    if (state.currentUser.progress[key] === 'read') read++;
+                }
+            });
 
             return { 
                 read, 
                 total, 
-                percentage: Math.round((read / total) * 100),
-                firstRead,
-                secondRead
+                percentage: Math.round((read / total) * 100)
             };
         }
 
         // Get chapter status: 'completed', 'today', 'overdue', 'future'
-        // currentReadingCycle: 'first' or 'second' (only for NT books)
-        function getChapterStatus(bookName, chapter, currentReadingCycle = null) {
+        function getChapterStatus(bookName, chapter) {
             if (!state.currentUser) return 'future';
 
-            // Check if this is a NT book
-            const isNTBook = newTestamentBooks.find(b => b.name === bookName);
-            
-            // For NT books, check with appropriate suffix
-            if (isNTBook && currentReadingCycle) {
-                const suffix = currentReadingCycle === 'second' ? '-2nd' : '-1st';
-                const key = `${bookName}-${chapter}${suffix}`;
-                if (state.currentUser.progress[key] === 'read') return 'completed';
-            } else if (!isNTBook) {
-                const key = `${bookName}-${chapter}`;
-                if (state.currentUser.progress[key] === 'read') return 'completed';
-            }
+            // Check if chapter is completed
+            const key = `${bookName}-${chapter}`;
+            if (state.currentUser.progress[key] === 'read') return 'completed';
 
             const today = new Date();
             const todayMonth = today.getMonth() + 1;
             const todayDay = today.getDate();
+            const year = today.getFullYear();
+            const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 
             // Check all reading plan entries up to today
             for (const entry of yearlyReadingPlan) {
+                // Skip leap year entries if not a leap year
+                if (entry.leapYearOnly && !isLeapYear) continue;
+                
                 // Skip future dates
                 if (entry.month > todayMonth || (entry.month === todayMonth && entry.day > todayDay)) {
                     break;
-                }
-                
-                // For NT books with cycle specified, only check entries in that cycle
-                if (isNTBook && currentReadingCycle) {
-                    const entryIsSecondCycle = entry.month > 6 || (entry.month === 7 && entry.day >= 2);
-                    const checkingSecondCycle = currentReadingCycle === 'second';
-                    if (entryIsSecondCycle !== checkingSecondCycle) continue;
                 }
 
                 // Check if this chapter is in this day's portions
@@ -1933,46 +1501,38 @@
             try {
                 const users = await BibleReadingDB.getAllUsers();
                 if (users && users.length > 0) {
-                    state.users = users.map(u => ({
-                        id: u.id,
-                        name: u.name,
-                        progress: {},
-                        completedDates: {},
-                        joinedDate: u.joined_date
-                    }));
+                    // Check if we need to recreate the users array
+                    const existingUserIds = new Set(state.users.map(u => u.id));
+                    const newUserIds = new Set(users.map(u => u.id));
+                    const usersChanged = state.users.length !== users.length || 
+                        !users.every(u => existingUserIds.has(u.id));
 
-                    // Load progress for each user
-                    for (const user of state.users) {
-                        const progress = await BibleReadingDB.getUserProgress(user.id);
-                        progress.forEach(p => {
-                            // Convert database reading_cycle format to app format
-                            let key;
-                            if (p.reading_cycle) {
-                                const suffix = p.reading_cycle === 'second' ? '-2nd' : '-1st';
-                                key = `${p.book_name}-${p.chapter_number}${suffix}`;
-                            } else {
-                                key = `${p.book_name}-${p.chapter_number}`;
-                            }
-                            user.progress[key] = p.status;
-                        });
-
-                        // Load completed dates
-                        const dates = await BibleReadingDB.getCompletedDates(user.id);
-                        dates.forEach(dateStr => {
-                            // Parse date string as YYYY-MM-DD directly to avoid timezone issues
-                            const [year, month, day] = dateStr.split('-').map(Number);
-                            const dateKey = `${year}-${month}-${day}`;
-                            user.completedDates[dateKey] = true;
-                        });
+                    if (usersChanged || state.users.length === 0) {
+                        // Clear the loaded data cache since we're recreating users
+                        state.loadedUserData.clear();
+                        
+                        state.users = users.map(u => ({
+                            id: u.id,
+                            name: u.name,
+                            progress: {},
+                            completedDates: {},
+                            joinedDate: u.joined_date
+                        }));
                     }
 
                     // Load current user from localStorage
                     const savedCurrentUserId = localStorage.getItem('bibleTrackerCurrentUserId');
                     if (savedCurrentUserId) {
                         state.currentUser = state.users.find(u => u.id === savedCurrentUserId);
+                        
+                        // Only load progress for current user initially
+                        if (state.currentUser) {
+                            await loadUserProgress(state.currentUser);
+                        }
                     }
                 }
             } catch (error) {
+                console.error('Error loading data:', error);
                 // Fallback to localStorage
                 const savedUsers = localStorage.getItem('bibleTrackerUsers');
                 const savedCurrentUser = localStorage.getItem('bibleTrackerCurrentUser');
@@ -1985,6 +1545,101 @@
             } finally {
                 hideLoading();
             }
+        }
+
+        // Load progress for a specific user
+        async function loadUserProgress(user) {
+            // Skip if already loaded AND has progress data
+            const hasProgress = Object.keys(user.progress || {}).length > 0;
+            if (state.loadedUserData.has(user.id) && hasProgress) {
+                return;
+            }
+
+            // Mark as loading immediately to prevent race conditions
+            state.loadedUserData.add(user.id);
+
+            try {
+                // Load progress and dates in parallel
+                const [progress, dates] = await Promise.all([
+                    BibleReadingDB.getUserProgress(user.id),
+                    BibleReadingDB.getCompletedDates(user.id)
+                ]);
+
+                // Clear existing progress to avoid stale data
+                user.progress = {};
+                user.completedDates = {};
+
+                // Process progress
+                progress.forEach(p => {
+                    // Normalize book name to match local state format
+                    const normalizedBook = normalizeBookName(p.book_name) || p.book_name;
+                    
+                    if (!normalizeBookName(p.book_name)) {
+                        console.warn('Could not normalize book from DB:', p.book_name);
+                    }
+                    
+                    const key = `${normalizedBook}-${p.chapter_number}`;
+                    user.progress[key] = p.status;
+                });
+
+                // Process completed dates
+                dates.forEach(dateStr => {
+                    const [year, month, day] = dateStr.split('-').map(Number);
+                    const dateKey = `${year}-${month}-${day}`;
+                    user.completedDates[dateKey] = true;
+                });
+                
+                console.log('User progress loaded:', {
+                    userId: user.id,
+                    userName: user.name,
+                    totalProgress: Object.keys(user.progress).length,
+                    completedDates: Object.keys(user.completedDates).length,
+                    dbRecordsTotal: progress.length,
+                    sampleKeys: Object.keys(user.progress).slice(0, 10)
+                });
+            } catch (error) {
+                console.error(`Error loading progress for user ${user.id}:`, error);
+                // Remove from cache on error so it can be retried
+                state.loadedUserData.delete(user.id);
+            }
+        }
+
+        // Load all users' progress in background (non-blocking)
+        let loadingAllUsersPromise = null;
+        async function loadAllUsersProgressInBackground() {
+            // If already loading, return existing promise
+            if (loadingAllUsersPromise) {
+                return loadingAllUsersPromise;
+            }
+
+            loadingAllUsersPromise = (async () => {
+                try {
+                    // Load progress for users that haven't been loaded yet
+                    const usersToLoad = state.users.filter(u => !state.loadedUserData.has(u.id));
+                    
+                    if (usersToLoad.length === 0) {
+                        return;
+                    }
+
+                    // Load in batches of 3 to avoid overwhelming the database
+                    const batchSize = 3;
+                    for (let i = 0; i < usersToLoad.length; i += batchSize) {
+                        const batch = usersToLoad.slice(i, i + batchSize);
+                        await Promise.all(batch.map(user => loadUserProgress(user)));
+                        
+                        // Re-render to show updated stats if on dashboard
+                        if (state.showDashboard && !state.showAdminView) {
+                            render();
+                        }
+                    }
+                } catch (error) {
+                    console.error('Error loading users progress in background:', error);
+                } finally {
+                    loadingAllUsersPromise = null;
+                }
+            })();
+
+            return loadingAllUsersPromise;
         }
 
         async function saveData() {
@@ -2001,10 +1656,20 @@
 
         // User Functions
         async function addUser(name) {
+            const trimmedName = name.trim();
+            
+            // Check if user already exists
+            const existingUser = state.users.find(u => u.name.toLowerCase() === trimmedName.toLowerCase());
+            if (existingUser) {
+                state.userModalError = 'User already exists';
+                render();
+                return;
+            }
+            
             showLoading('Creating user...');
             try {
                 // Create user in Supabase
-                const newUser = await BibleReadingDB.createUser(name.trim());
+                const newUser = await BibleReadingDB.createUser(trimmedName);
                 
                 // Add to local state
                 const userObj = {
@@ -2018,20 +1683,45 @@
                 state.users.push(userObj);
                 state.currentUser = userObj;
                 state.showUserModal = false;
+                state.userModalError = '';
                 saveData();
                 render();
             } catch (error) {
-                alert('Failed to create user. Please try again.');
+                state.userModalError = 'Failed to create user. Please try again.';
+                render();
             } finally {
                 hideLoading();
             }
         }
 
-        async function switchUser(user) {
+        async function switchUser(userOrId) {
+            showLoading('Loading profile...');
+            
+            // If a user ID is passed, look up the user from state.users
+            // This ensures we're using the same reference with loaded progress
+            const userId = typeof userOrId === 'object' ? userOrId.id : userOrId;
+            // Handle both string and number IDs for comparison
+            const user = state.users.find(u => u.id == userId);
+            
+            if (!user) {
+                console.error('User not found:', userId);
+                hideLoading();
+                return;
+            }
+            
             state.currentUser = user;
             state.showDashboard = true;  // Show dashboard after selecting user
-            await loadCompletedPortionsForDate();
-            saveData();
+            
+            try {
+                // Load user's progress if not already loaded
+                await loadUserProgress(user);
+                await loadCompletedPortionsForDate();
+                
+                saveData();
+            } finally {
+                hideLoading();
+            }
+            
             render();
         }
 
@@ -2081,7 +1771,7 @@
                 type: 'primary',
                 title: 'Mark Up to Date',
                 message: `Mark all readings up to today (${new Date().toLocaleDateString()}) as completed for ${user.name}?`,
-                confirmText: 'Mark Complete',
+                confirmText: 'Update',
                 cancelText: 'Cancel',
                 onConfirm: async () => {
                     showLoading('Marking readings as complete...');
@@ -2095,90 +1785,143 @@
                 const chaptersToMark = [];
                 const datesToMark = [];
 
+                const year = today.getFullYear();
+                const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+
                 // Build batch data
                 yearlyReadingPlan.forEach(entry => {
-                    if (entry.leap) return; // Skip leap year entries
+                    // Skip leap year entries if not a leap year
+                    if (entry.leapYearOnly && !isLeapYear) return;
                     
-                    // Only process entries up to today
-                    if (entry.month > todayMonth || (entry.month === todayMonth && entry.day > todayDay)) {
+                    // Only process entries up to and including today
+                    const isBeforeToday = entry.month < todayMonth || (entry.month === todayMonth && entry.day <= todayDay);
+                    if (!isBeforeToday) {
                         return;
                     }
 
-                    const dateKey = `${today.getFullYear()}-${entry.month}-${entry.day}`;
-                    const dateStr = `${today.getFullYear()}-${String(entry.month).padStart(2, '0')}-${String(entry.day).padStart(2, '0')}`;
+                    const dateStr = `${year}-${String(entry.month).padStart(2, '0')}-${String(entry.day).padStart(2, '0')}`;
                     
                     datesToMark.push(dateStr);
-                    
-                    // Mark date as completed locally
-                    if (!user.completedDates) {
-                        user.completedDates = {};
-                    }
-                    user.completedDates[dateKey] = true;
-
-                    // Determine reading cycle for NT books
-                    const isSecondReading = entry.month > 7 || (entry.month === 7 && entry.day >= 2);
 
                     // Collect chapters
                     entry.portions.forEach(portion => {
                         const chapters = parseChapterRange(portion.chapters);
-                        const bookName = normalizeBookName(portion.book);
-                        if (bookName) {
-                            const isNTBook = newTestamentBooks.find(b => b.name === bookName);
-                            
-                            chapters.forEach(ch => {
-                                const readingCycle = isNTBook ? (isSecondReading ? 'second' : 'first') : null;
-                                
-                                chaptersToMark.push({
-                                    book: bookName,
-                                    chapter: ch,
-                                    cycle: readingCycle
+                        
+                        // Handle combined book entries like "2 John & 3 John"
+                        const bookNames = portion.book.includes('&') 
+                            ? portion.book.split('&').map(b => b.trim())
+                            : [portion.book];
+                        
+                        bookNames.forEach(rawBookName => {
+                            const bookName = normalizeBookName(rawBookName);
+                            if (bookName) {
+                                chapters.forEach(ch => {
+                                    chaptersToMark.push({
+                                        book: bookName,
+                                        chapter: ch
+                                    });
                                 });
-                                
-                                // Update local state
-                                if (isNTBook) {
-                                    const suffix = isSecondReading ? '-2nd' : '-1st';
-                                    user.progress[`${bookName}-${ch}${suffix}`] = 'read';
-                                } else {
-                                    user.progress[`${bookName}-${ch}`] = 'read';
-                                }
-                            });
-                        }
+                            } else {
+                                console.warn('Could not normalize book name:', rawBookName);
+                            }
+                        });
                     });
+                });
+                
+                // Deduplicate chapters before inserting
+                const uniqueChapters = [];
+                const seen = new Set();
+                chaptersToMark.forEach(ch => {
+                    const key = `${ch.book}-${ch.chapter}`;
+                    if (!seen.has(key)) {
+                        seen.add(key);
+                        uniqueChapters.push(ch);
+                    }
+                });
+
+                // Calculate OT/NT breakdown for verification
+                const otChapters = uniqueChapters.filter(ch => {
+                    return oldTestamentBooks.some(b => b.name === ch.book);
+                });
+                const ntChapters = uniqueChapters.filter(ch => {
+                    return newTestamentBooks.some(b => b.name === ch.book);
+                });
+
+                console.log('Preparing to mark:', {
+                    totalChapters: chaptersToMark.length,
+                    uniqueChapters: uniqueChapters.length,
+                    otChapters: otChapters.length,
+                    ntChapters: ntChapters.length,
+                    duplicatesRemoved: chaptersToMark.length - uniqueChapters.length,
+                    totalDates: datesToMark.length,
+                    todayDate: `${todayMonth}/${todayDay}/${year}`,
+                    isLeapYear: isLeapYear,
+                    sampleOTChapters: otChapters.slice(0, 5),
+                    sampleNTChapters: ntChapters.slice(0, 5),
+                    sampleDates: datesToMark.slice(0, 5)
                 });
 
                 // Batch insert chapters (do in chunks to avoid too large requests)
-                const chunkSize = 50;
-                for (let i = 0; i < chaptersToMark.length; i += chunkSize) {
-                    const chunk = chaptersToMark.slice(i, i + chunkSize);
-                    const promises = chunk.map(item => 
-                        BibleReadingDB.markChapterAsRead(userId, item.book, item.chapter, item.cycle)
-                    );
-                    await Promise.all(promises);
+                const chunkSize = 100;
+                let chaptersInserted = 0;
+                for (let i = 0; i < uniqueChapters.length; i += chunkSize) {
+                    const chunk = uniqueChapters.slice(i, i + chunkSize);
+                    try {
+                        const result = await BibleReadingDB.markChaptersAsReadBatch(userId, chunk);
+                        chaptersInserted += chunk.length;
+                        console.log(`Chapters inserted: ${chaptersInserted}/${uniqueChapters.length}`, {
+                            chunkSample: chunk.slice(0, 3),
+                            resultCount: result?.length
+                        });
+                    } catch (error) {
+                        console.error('Error inserting chapter batch:', error, {
+                            chunkSample: chunk.slice(0, 5)
+                        });
+                        // Continue with next batch even if this one fails
+                    }
                 }
 
                 // Batch insert dates
+                let datesInserted = 0;
                 for (let i = 0; i < datesToMark.length; i += chunkSize) {
                     const chunk = datesToMark.slice(i, i + chunkSize);
-                    const promises = chunk.map(date => 
-                        BibleReadingDB.markDateAsCompleted(userId, date)
-                    );
-                    await Promise.all(promises);
+                    try {
+                        await BibleReadingDB.markDatesAsCompletedBatch(userId, chunk);
+                        datesInserted += chunk.length;
+                        console.log(`Dates inserted: ${datesInserted}/${datesToMark.length}`);
+                    } catch (error) {
+                        console.error('Error inserting date batch:', error);
+                        // Continue with next batch even if this one fails
+                    }
                 }
 
-                // Update user in the array
-                const userIndex = state.users.findIndex(u => u.id === userId);
-                if (userIndex !== -1) {
-                    state.users[userIndex] = user;
-                }
+                console.log('Mark up to date completed:', {
+                    chaptersMarked: chaptersInserted,
+                    chaptersUnique: uniqueChapters.length,
+                    datesMarked: datesInserted,
+                    otChaptersMarked: otChapters.length,
+                    ntChaptersMarked: ntChapters.length
+                });
 
-                // Update current user if this is the active user
-                if (state.currentUser && state.currentUser.id === userId) {
-                    state.currentUser = user;
-                }
+                // Small delay to ensure database consistency
+                await new Promise(resolve => setTimeout(resolve, 500));
 
+                // Force reload user progress from database to ensure consistency
+                console.log('Reloading user progress from database...');
+                state.loadedUserData.delete(userId);
+                user.progress = {};  // Clear existing progress to force fresh load
+                user.completedDates = {};
+                await loadUserProgress(user);
+                
+                console.log('Progress reloaded:', {
+                    totalProgressKeys: Object.keys(user.progress).length,
+                    sampleKeys: Object.keys(user.progress).slice(0, 10)
+                });
+                        
                         saveData();
                         render();
                     } catch (error) {
+                        console.error('Error marking user up to date:', error);
                         alert('Failed to mark user up to date. Please try again.');
                     } finally {
                         hideLoading();
@@ -2210,32 +1953,26 @@
 
             showLoading('Saving progress...');
             try {
-                // Determine which NT reading period (1st or 2nd)
-                const month = state.selectedDate.getMonth() + 1;
-                const day = state.selectedDate.getDate();
-                const isSecondReading = month > 7 || (month === 7 && day >= 2);
-
                 // Mark all chapters in Supabase
                 for (const portion of reading.portions) {
                     const chapters = parseChapterRange(portion.chapters);
-                    const bookName = normalizeBookName(portion.book);
-                    if (bookName) {
-                        const isNTBook = newTestamentBooks.find(b => b.name === bookName);
-                        
-                        for (const ch of chapters) {
-                            const readingCycle = isNTBook ? (isSecondReading ? 'second' : 'first') : null;
-                            await BibleReadingDB.markChapterAsRead(
-                                state.currentUser.id,
-                                bookName,
-                                ch,
-                                readingCycle
-                            );
-                            
-                            // Update local state
-                            if (isNTBook) {
-                                const suffix = isSecondReading ? '-2nd' : '-1st';
-                                state.currentUser.progress[`${bookName}-${ch}${suffix}`] = 'read';
-                            } else {
+                    
+                    // Handle combined book entries like "2 John & 3 John"
+                    const bookNames = portion.book.includes('&') 
+                        ? portion.book.split('&').map(b => b.trim())
+                        : [portion.book];
+                    
+                    for (const rawBookName of bookNames) {
+                        const bookName = normalizeBookName(rawBookName);
+                        if (bookName) {
+                            for (const ch of chapters) {
+                                await BibleReadingDB.markChapterAsRead(
+                                    state.currentUser.id,
+                                    bookName,
+                                    ch
+                                );
+                                
+                                // Update local state
                                 state.currentUser.progress[`${bookName}-${ch}`] = 'read';
                             }
                         }
@@ -2317,6 +2054,9 @@
 
         // Render Functions
         function renderDashboard() {
+            // Load all users' progress in background (non-blocking)
+            loadAllUsersProgressInBackground();
+            
             const theme = state.darkMode ? {
                 bg: 'bg-slate-900',
                 card: 'bg-slate-800',
@@ -2352,7 +2092,7 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
                                     ${state.currentUser ? `
-                                        <button onclick="state.showDashboard = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Reading">
+                                        <button onclick="window.location.href = '../index.html';" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Bible Reading">
                                             ${icons.chevronLeft}
                                         </button>
                                     ` : ''}
@@ -2496,7 +2236,7 @@
                                 ${(state.showAllUsers ? state.users : state.users.slice(0, 5)).map(user => {
                                     const userStats = getUserStats(user);
                                     return `
-                                        <button onclick="switchUser({id: '${user.id}', name: '${user.name}', progress: ${JSON.stringify(user.progress).replace(/"/g, '&quot;')}, completedDates: ${JSON.stringify(user.completedDates).replace(/"/g, '&quot;')}, joinedDate: '${user.joinedDate}'}); state.showDashboard = false; render();" class="w-full flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-left">
+                                        <button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="w-full flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-left">
                                             <div class="flex items-center gap-3">
                                                 <div class="w-12 h-12 rounded-full ${userStats.hasReadToday ? 'bg-emerald-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-lg">
                                                     ${user.name.charAt(0).toUpperCase()}
@@ -2532,7 +2272,7 @@
 
                         <!-- Add New User (Admin Only) -->
                         ${state.isAdmin ? `
-                            <button onclick="state.showUserModal = true; render();" class="w-full ${theme.card} border-2 border-dashed ${theme.border} rounded-xl p-4 flex items-center justify-center gap-2 font-semibold ${theme.cardHover} transition-colors">
+                            <button onclick="state.showUserModal = true; state.userModalError = ''; render();" class="w-full ${theme.card} border-2 border-dashed ${theme.border} rounded-xl p-4 flex items-center justify-center gap-2 font-semibold ${theme.cardHover} transition-colors">
                                 ${icons.plus}
                                 Add Family Member
                             </button>
@@ -2543,9 +2283,12 @@
                         <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
                             <div class="${theme.card} rounded-2xl p-6 max-w-md w-full">
                                 <h2 class="text-2xl font-bold mb-4">Add Family Member</h2>
-                                <input id="newUserName" type="text" placeholder="Enter name" class="w-full ${theme.card} ${theme.text} border ${theme.border} rounded-lg px-4 py-3 mb-4 outline-none focus:ring-2 focus:ring-blue-500" autofocus />
+                                <div class="mb-4">
+                                    <input id="newUserName" type="text" placeholder="Enter name" class="w-full ${theme.card} ${theme.text} border ${state.userModalError ? 'border-red-500' : theme.border} rounded-lg px-4 py-3 outline-none focus:ring-2 ${state.userModalError ? 'focus:ring-red-500' : 'focus:ring-blue-500'}" autofocus />
+                                    ${state.userModalError ? `<p class="text-red-500 text-xs mt-1">${state.userModalError}</p>` : ''}
+                                </div>
                                 <div class="flex gap-3">
-                                    <button onclick="state.showUserModal = false; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
+                                    <button onclick="state.showUserModal = false; state.userModalError = ''; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
                                         Cancel
                                     </button>
                                     <button onclick="handleAddUser()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 font-semibold transition-colors">
@@ -2565,7 +2308,7 @@
                 card: 'bg-slate-800',
                 text: 'text-gray-100',
                 textSecondary: 'text-gray-400',
-                border: 'border-transparent'
+                border: 'border-slate-700'
             } : {
                 bg: 'bg-gray-50',
                 card: 'bg-white',
@@ -2587,27 +2330,14 @@
 
                         <div class="space-y-4 mb-8">
                             ${state.users.map(user => {
-                                // Count unique chapters (OT + unique NT chapters regardless of 1st/2nd reading)
-                                const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
-                                const uniqueChapters = new Set();
-                                
-                                progressKeys.forEach(key => {
-                                    // Remove -1st or -2nd suffix for NT books to count unique chapters
-                                    const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                                    uniqueChapters.add(normalizedKey);
-                                });
-                                
                                 return `
-                                <button onclick="switchUser(${JSON.stringify(user).replace(/"/g, '&quot;')})" class="w-full ${theme.card} hover:bg-slate-750 border ${theme.border} rounded-xl p-6 flex items-center justify-between transition-all">
+                                <button onclick="switchUser(${user.id})" class="w-full ${theme.card} hover:bg-slate-750 border ${theme.border} rounded-xl p-6 flex items-center justify-between transition-all">
                                     <div class="flex items-center gap-4">
                                         <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-lg">
                                             ${user.name.charAt(0).toUpperCase()}
                                         </div>
                                         <div class="text-left">
                                             <h3 class="font-semibold text-lg">${user.name}</h3>
-                                            <p class="text-sm ${theme.textSecondary}">
-                                                ${uniqueChapters.size} chapters completed
-                                            </p>
                                         </div>
                                     </div>
                                     ${icons.chevronRight}
@@ -2617,7 +2347,7 @@
                         </div>
 
                         ${state.isAdmin ? `
-                            <button onclick="state.showUserModal = true; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors">
+                            <button onclick="state.showUserModal = true; state.userModalError = ''; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors">
                                 ${icons.plus}
                                 Create New Profile
                             </button>
@@ -2628,9 +2358,12 @@
                         <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
                             <div class="${theme.card} rounded-2xl p-6 max-w-md w-full">
                                 <h2 class="text-2xl font-bold mb-4">Create Profile</h2>
-                                <input id="newUserName" type="text" placeholder="Enter your name" class="w-full ${theme.card} ${theme.text} border ${theme.border} rounded-lg px-4 py-3 mb-4 outline-none focus:ring-2 focus:ring-blue-500" autofocus />
+                                <div class="mb-4">
+                                    <input id="newUserName" type="text" placeholder="Enter your name" class="w-full ${theme.card} ${theme.text} border ${state.userModalError ? 'border-red-500' : theme.border} rounded-lg px-4 py-3 outline-none focus:ring-2 ${state.userModalError ? 'focus:ring-red-500' : 'focus:ring-blue-500'}" autofocus />
+                                    ${state.userModalError ? `<p class="text-red-500 text-xs mt-1">${state.userModalError}</p>` : ''}
+                                </div>
                                 <div class="flex gap-3">
-                                    <button onclick="state.showUserModal = false; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
+                                    <button onclick="state.showUserModal = false; state.userModalError = ''; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
                                         Cancel
                                     </button>
                                     <button onclick="handleAddUser()" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white rounded-lg py-3 font-semibold transition-colors">
@@ -2651,7 +2384,7 @@
                 cardHover: 'hover:bg-slate-750',
                 text: 'text-gray-100',
                 textSecondary: 'text-gray-400',
-                border: 'border-transparent'
+                border: 'border-slate-700'
             } : {
                 bg: 'bg-gray-50',
                 card: 'bg-white',
@@ -2700,8 +2433,7 @@
                                                 const progressKeys = Object.keys(state.currentUser.progress).filter(k => state.currentUser.progress[k] === 'read');
                                                 const uniqueChapters = new Set();
                                                 progressKeys.forEach(key => {
-                                                    const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                                                    uniqueChapters.add(normalizedKey);
+                                                    uniqueChapters.add(key);
                                                 });
                                                 return uniqueChapters.size;
                                             })()} chapters
@@ -2723,41 +2455,36 @@
                         ${todayReading ? `
                             <div class="reading-card-container">
                                 <div class="reading-card-wrapper">
-                                    <div id="dailyReadingCard" class="daily-reading-card ${theme.card} border ${theme.border} rounded-2xl p-6 mb-6 ${isDateCompleted ? 'opacity-75' : ''}">
-                                <div id="dailyReadingHeader" class="daily-reading-header flex items-center justify-between mb-4 flex-wrap gap-3">
-                                    <h2 id="selectedDateTitle" class="selected-date-title text-xl font-bold">${isToday ? "Today's Reading" : state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
-                                    <div id="datePickerWrapper" class="date-picker-wrapper flex items-center gap-2">
-                                        <button id="calendarButton" class="calendar-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 transition-colors" type="button" onclick="openCalendarModal()">
-                                            ${icons.calendar}
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                                <div id="readingPortions" class="reading-portions space-y-3 mb-4">
-                                    ${todayReading.portions.map((portion, idx) => {
-                                        const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
-                                        const portionKey = `${dateKey}-${idx}`;
-                                        const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
-                                        return `
-                                        <div id="portion${idx + 1}" class="reading-portion flex items-center justify-between gap-3 p-3 rounded-lg ${state.darkMode ? 'bg-slate-750' : 'bg-gray-50'}">
-                                            <div class="flex items-center gap-3 flex-1">
-                                                <span class="portion-number w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold">
-                                                    ${idx + 1}
-                                                </span>
-                                                <span class="portion-text font-medium">${portion.book} ${portion.chapters}</span>
+                                    <div id="dailyReadingCard" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-6">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <div class="flex items-center gap-3">
+                                                ${icons.book}
+                                                <h2 class="text-lg font-bold">${isToday ? "Today's Reading" : state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
                                             </div>
-                                            <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                                                    <polyline points="20 6 9 17 4 12"/>
-                                                </svg>
-                                            </div>
+                                            <button id="calendarButton" class="calendar-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 transition-colors" type="button" onclick="openCalendarModal()">
+                                                ${icons.calendar}
+                                            </button>
                                         </div>
-                                    `}).join('')}
-                                </div>
-                                
-                                <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} class="mark-complete-button w-full rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition-colors ${isDateCompleted ? 'bg-emerald-500/20 border-2 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-2 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
-                                    ${icons.checkCircle}
-                                    ${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}
+                                        <div class="space-y-3">
+                                            ${todayReading.portions.map((portion, idx) => {
+                                                const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+                                                const portionKey = `${dateKey}-${idx}`;
+                                                const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
+                                                return `
+                                                <div class="${theme.card} border ${theme.border} rounded-lg p-3 flex items-center justify-between gap-3">
+                                                    <span class="font-medium flex-1">${portion.book} ${portion.chapters}</span>
+                                                    <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                                            <polyline points="20 6 9 17 4 12"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            `}).join('')}
+                                        </div>
+                                        
+                                        <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} class="w-full mt-4 rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition-colors ${isDateCompleted ? 'bg-emerald-500/20 border-2 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-2 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
+                                            ${icons.checkCircle}
+                                            ${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}
                                 </button>
                                 </div>
                             </div>
@@ -2823,7 +2550,7 @@
                                     <div id="ntProgressSection" class="nt-progress-section">
                                         <div id="ntProgressHeader" class="progress-header flex items-center gap-2 mb-6">
                                             <div class="progress-indicator w-4 h-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 shadow-lg shadow-emerald-500/50"></div>
-                                            <span class="progress-label text-base font-bold">New Testament (2x)</span>
+                                            <span class="progress-label text-base font-bold">New Testament</span>
                                         </div>
                                         <div class="flex items-center gap-6">
                                             <div class="relative w-32 h-32 flex-shrink-0">
@@ -2845,18 +2572,10 @@
                                             </div>
                                             <div class="flex-1">
                                                 <div class="space-y-2">
-                                                    <div class="flex items-center justify-between">
-                                                        <span class="text-xs font-semibold ${theme.textSecondary}">1st Reading</span>
-                                                        <span class="text-sm font-bold text-emerald-500">${ntProgress.firstRead}/260</span>
-                                                    </div>
-                                                    <div class="flex items-center justify-between">
-                                                        <span class="text-xs font-semibold ${theme.textSecondary}">2nd Reading</span>
-                                                        <span class="text-sm font-bold text-teal-500">${ntProgress.secondRead}/260</span>
-                                                    </div>
-                                                    <div class="pt-2 border-t ${theme.border}">
-                                                        <div class="flex items-center justify-between">
-                                                            <span class="text-xs font-semibold ${theme.textSecondary}">Total Progress</span>
+                                                    <div class="flex items-center justify-center">
+                                                        <div class="text-center">
                                                             <span class="text-sm font-bold">${ntProgress.read}/${ntProgress.total}</span>
+                                                            <div class="text-xs ${theme.textSecondary} mt-1">Chapters</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2911,7 +2630,7 @@
                                         <div class="flex flex-col items-center gap-0.5">
                                             <div class="flex items-center gap-1.5 md:gap-2">
                                                 <div class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600"></div>
-                                                <span class="text-xs md:text-sm font-bold">New Testament <span class="text-xs ${theme.textSecondary}">(2x)</span></span>
+                                                <span class="text-xs md:text-sm font-bold">New Testament</span>
                                             </div>
                                             
                                         </div>
@@ -2937,32 +2656,14 @@
                             <!-- Books Grid -->
                             <div id="booksGrid" class="books-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                             ${allBooks.map((book, bookIndex) => {
-                // Check if this is a NT book
-                const isNTBook = newTestamentBooks.find(b => b.name === book.name);
-                
-                // Determine current reading cycle based on SELECTED date's month (not today)
-                const selectedMonth = state.selectedDate.getMonth() + 1;
-                const selectedDay = state.selectedDate.getDate();
-                const currentReadingCycle = (selectedMonth > 7 || (selectedMonth === 7 && selectedDay >= 2)) ? 'second' : 'first';
-                
-                // For NT books, count chapters based on current cycle
-                let readChapters = 0;
-                if (isNTBook) {
-                    const suffix = currentReadingCycle === 'second' ? '-2nd' : '-1st';
-                    readChapters = Array.from({ length: book.chapters }, (_, i) => i + 1)
-                        .filter(ch => state.currentUser.progress[`${book.name}-${ch}${suffix}`] === 'read').length;
-                } else {
-                    readChapters = Array.from({ length: book.chapters }, (_, i) => i + 1)
-                        .filter(ch => state.currentUser.progress[`${book.name}-${ch}`] === 'read').length;
-                }
-
-                // Add reading cycle indicator for NT books
-                const cycleLabel = isNTBook ? ` <span class="text-xs ${theme.textSecondary}">(${currentReadingCycle === 'second' ? '2nd' : '1st'} reading)</span>` : '';
+                // Count read chapters
+                const readChapters = Array.from({ length: book.chapters }, (_, i) => i + 1)
+                    .filter(ch => state.currentUser.progress[`${book.name}-${ch}`] === 'read').length;
 
                 return `
                                     <div id="book-${book.name.replace(/\s+/g, '-').toLowerCase()}" class="book-card ${theme.card} border ${theme.border} rounded-xl p-4">
                                         <div id="book-header-${bookIndex}" class="book-header flex items-center justify-between mb-3">
-                                            <h3 id="book-title-${bookIndex}" class="book-title font-bold text-sm">${book.name}${cycleLabel}</h3>
+                                            <h3 id="book-title-${bookIndex}" class="book-title font-bold text-sm">${book.name}</h3>
                                             <span id="book-progress-${bookIndex}" class="book-progress text-xs px-2 py-1 rounded-full ${readChapters === book.chapters ? 'bg-emerald-500/20 text-emerald-500' : `${state.darkMode ? 'bg-slate-700' : 'bg-gray-100'} ${theme.textSecondary}`}">
                                                 ${readChapters}/${book.chapters}
                                             </span>
@@ -2970,7 +2671,7 @@
                                         
                                         <div id="chapters-grid-${bookIndex}" class="chapters-grid grid grid-cols-10 md:grid-cols-10 lg:grid-cols-8 gap-1">
                                             ${Array.from({ length: book.chapters }, (_, i) => i + 1).map(ch => {
-                    const status = getChapterStatus(book.name, ch, isNTBook ? currentReadingCycle : null);
+                    const status = getChapterStatus(book.name, ch);
                     let buttonClass = '';
                     let titleText = `${book.name} ${ch}`;
 
@@ -3062,12 +2763,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             ${state.users.map(user => {
                                 const progressKeys = Object.keys(user.progress || {}).filter(k => user.progress[k] === 'read');
-                                const uniqueChapters = new Set();
-                                progressKeys.forEach(key => {
-                                    const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                                    uniqueChapters.add(normalizedKey);
-                                });
-                                const totalRead = uniqueChapters.size;
+                                const totalRead = progressKeys.length;
                                 const percentage = Math.round((totalRead / 1189) * 100);
                                 const completedDays = Object.keys(user.completedDates || {}).length;
 
@@ -3108,12 +2804,12 @@
                                             </div>
                                             
                                             <div class="grid grid-cols-2 gap-3 pt-3">
-                                                <button onclick="markUserUpToDate('${user.id}')" class="py-2.5 rounded-lg font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2">
+                                                <button onclick="markUserUpToDate(${user.id})" class="py-2.5 rounded-lg font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2">
                                                     ${icons.checkCircle}
                                                     <span class="hidden md:inline">Mark Up to Date</span>
                                                     <span class="md:hidden">Update</span>
                                                 </button>
-                                                <button onclick="deleteUser('${user.id}')" class="py-2.5 rounded-lg font-semibold text-sm bg-red-600 text-white hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
+                                                <button onclick="deleteUser(${user.id})" class="py-2.5 rounded-lg font-semibold text-sm bg-red-600 text-white hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
                                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                         <path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>
                                                     </svg>
@@ -3136,7 +2832,7 @@
                 card: 'bg-slate-800',
                 text: 'text-gray-100',
                 textSecondary: 'text-gray-400',
-                border: 'border-transparent'
+                border: 'border-slate-700'
             } : {
                 bg: 'bg-gray-50',
                 card: 'bg-white',
@@ -3145,25 +2841,15 @@
                 border: 'border-gray-200'
             };
 
-            // Count unique chapters across all users (OT:929 + NT:260 = 1189 total unique)
+            // Count total chapters read across all users (1189 total chapters)
             const totalChaptersRead = state.users.reduce((sum, u) => {
                 const progressKeys = Object.keys(u.progress).filter(k => u.progress[k] === 'read');
-                const uniqueChapters = new Set();
-                progressKeys.forEach(key => {
-                    const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                    uniqueChapters.add(normalizedKey);
-                });
-                return sum + uniqueChapters.size;
+                return sum + progressKeys.length;
             }, 0);
             
             const avgProgress = state.users.length > 0 ? Math.round(state.users.reduce((sum, u) => {
                 const progressKeys = Object.keys(u.progress).filter(k => u.progress[k] === 'read');
-                const uniqueChapters = new Set();
-                progressKeys.forEach(key => {
-                    const normalizedKey = key.replace(/-1st$|-2nd$/, '');
-                    uniqueChapters.add(normalizedKey);
-                });
-                return sum + (uniqueChapters.size / 1189) * 100;
+                return sum + (progressKeys.length / 1189) * 100;
             }, 0) / state.users.length) : 0;
 
             return `
@@ -3233,7 +2919,7 @@
                                                     Joined ${new Date(user.joinedDate).toLocaleDateString()}
                                                 </p>
                                             </div>
-                                            <button onclick="deleteUser(${user.id}).catch(err => console.error(err))" class="text-red-500 hover:text-red-400 p-2 rounded-lg hover:bg-red-500/10 transition-colors" title="Delete User">
+                                            <button onclick="deleteUser(${user.id})" class="text-red-500 hover:text-red-400 p-2 rounded-lg hover:bg-red-500/10 transition-colors" title="Delete User">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
                                             </button>
                                         </div>
@@ -3260,7 +2946,7 @@
                                                 </div>
                                             </div>
                                             
-                                            <button onclick="markUserUpToDate(${user.id}).catch(err => console.error(err))" class="w-full mt-4 py-2 rounded-lg font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors">
+                                            <button onclick="markUserUpToDate(${user.id})" class="w-full mt-4 py-2 rounded-lg font-semibold text-sm bg-emerald-600 text-white hover:bg-emerald-700 transition-colors">
                                                 Mark Up to Date
                                             </button>
                                         </div>
@@ -3301,8 +2987,8 @@
             } else if (!state.currentUser) {
                 console.log('No current user - showing profile selection');
                 // No current user - show profile selection (default initial view)
-                // Reload users from Supabase when showing profile selection
-                if (!state.isLoadingProfiles) {
+                // Only reload users if the list is empty
+                if (state.users.length === 0 && !state.isLoadingProfiles) {
                     state.isLoadingProfiles = true;
                     await loadData();
                     state.isLoadingProfiles = false;
@@ -3407,11 +3093,13 @@
         let calendarState = {
             currentMonth: new Date().getMonth(),
             currentYear: new Date().getFullYear(),
-            tempSelectedDate: null
+            tempSelectedDate: null,
+            isDashboardCalendar: false  // Track if calendar was opened from dashboard
         };
 
         // Open calendar modal
         function openCalendarModal() {
+            calendarState.isDashboardCalendar = false;  // Opening from personal reading view
             // Wait for next tick to ensure DOM is ready
             setTimeout(() => {
                 initCalendar();
@@ -3448,9 +3136,15 @@
         // Confirm date selection
         async function confirmDateSelection() {
             if (calendarState.tempSelectedDate) {
-                state.selectedDate = calendarState.tempSelectedDate;
-                await loadCompletedPortionsForDate();
-                saveData();
+                if (calendarState.isDashboardCalendar) {
+                    // Update dashboard date
+                    dashboardDate = calendarState.tempSelectedDate;
+                } else {
+                    // Update personal reading date
+                    state.selectedDate = calendarState.tempSelectedDate;
+                    await loadCompletedPortionsForDate();
+                    saveData();
+                }
                 render();
             }
             closeCalendarModal();
@@ -3530,7 +3224,7 @@
                         <button onclick="selectToday()" class="calendar-today-btn">Today</button>
                         <div style="display: flex; gap: 8px;">
                             <button onclick="closeCalendarModal()" class="mdc-button mdc-button-text">CANCEL</button>
-                            <button onclick="confirmDateSelection()" class="mdc-button mdc-button-primary">OK</button>
+                            <button onclick="calendarState.isDashboardCalendar ? confirmDashboardDateSelection() : confirmDateSelection()" class="mdc-button mdc-button-primary">OK</button>
                         </div>
                     </div>
                 </div>
@@ -3578,6 +3272,33 @@
                 calendarModal.innerHTML = generateCalendar();
             }
         }
+
+        // Dashboard calendar modal functions
+        function openDashboardCalendarModal() {
+            calendarState.isDashboardCalendar = true;  // Opening from dashboard
+            // Initialize calendar state with dashboard date
+            calendarState.currentYear = dashboardDate.getFullYear();
+            calendarState.currentMonth = dashboardDate.getMonth();
+            calendarState.tempSelectedDate = new Date(dashboardDate);
+            
+            setTimeout(() => {
+                initCalendar();
+                const backdrop = document.getElementById('calendarBackdrop');
+                const modal = document.getElementById('calendarModal');
+                const mainContent = document.getElementById('mainContent');
+
+                if (backdrop && modal) {
+                    backdrop.classList.add('show');
+                    modal.classList.add('show');
+                    if (mainContent) {
+                        mainContent.style.filter = 'blur(8px)';
+                        mainContent.style.pointerEvents = 'none';
+                    }
+                }
+            }, 0);
+        }
+
+
 
         // Initialize calendar when modal is opened
         function initCalendar() {

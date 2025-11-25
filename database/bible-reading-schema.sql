@@ -18,12 +18,11 @@ CREATE TABLE reading_progress (
     user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     book_name TEXT NOT NULL,
     chapter_number INTEGER NOT NULL,
-    reading_cycle TEXT, -- 'first' or 'second' for NT books, NULL for OT
     status TEXT NOT NULL DEFAULT 'unread', -- 'read', 'unread', 'today', 'overdue'
     marked_at TIMESTAMP WITH TIME ZONE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    UNIQUE(user_id, book_name, chapter_number, reading_cycle)
+    UNIQUE(user_id, book_name, chapter_number)
 );
 
 -- Completed dates table (tracks which days a user marked as complete)
@@ -125,4 +124,3 @@ GROUP BY u.id, u.name, u.joined_date;
 COMMENT ON TABLE users IS 'Stores user profiles for Bible reading tracker';
 COMMENT ON TABLE reading_progress IS 'Tracks individual chapter reading progress for each user';
 COMMENT ON TABLE completed_dates IS 'Records dates when users completed their daily reading';
-COMMENT ON COLUMN reading_progress.reading_cycle IS 'Tracks first or second reading cycle for New Testament books';
