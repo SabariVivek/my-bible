@@ -1,3 +1,0 @@
-// jude Timeline
-window.judeTimeline = {
-};

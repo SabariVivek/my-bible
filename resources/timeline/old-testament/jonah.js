@@ -1,3 +1,0 @@
-// jonah Timeline
-window.jonahTimeline = {
-};

@@ -1,3 +1,0 @@
-// job Timeline
-window.jobTimeline = {
-};

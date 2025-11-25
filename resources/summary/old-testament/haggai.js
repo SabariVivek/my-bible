@@ -1,3 +1,0 @@
-// haggai Summary
-window.haggaiSummary = {
-};

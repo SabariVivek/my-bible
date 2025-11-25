@@ -1,3 +1,0 @@
-// hosea Timeline
-window.hoseaTimeline = {
-};

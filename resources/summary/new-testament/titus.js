@@ -1,3 +1,0 @@
-// titus Summary
-window.titusSummary = {
-};

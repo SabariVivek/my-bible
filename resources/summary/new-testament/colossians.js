@@ -1,3 +1,0 @@
-// colossians Summary
-window.colossiansSummary = {
-};

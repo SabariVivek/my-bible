@@ -1,3 +1,0 @@
-// haggai Timeline
-window.haggaiTimeline = {
-};

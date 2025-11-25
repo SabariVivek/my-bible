@@ -1,3 +1,0 @@
-// habakkuk Timeline
-window.habakkukTimeline = {
-};

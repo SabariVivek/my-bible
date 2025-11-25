@@ -1,3 +1,0 @@
-// galatians Summary
-window.galatiansSummary = {
-};

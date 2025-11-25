@@ -1,3 +1,0 @@
-// judges Summary
-window.judgesSummary = {
-};

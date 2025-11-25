@@ -1,3 +1,0 @@
-// philemon Summary
-window.philemonSummary = {
-};

@@ -1,3 +1,0 @@
-// psalms Summary
-window.psalmsSummary = {
-};

@@ -1,3 +1,0 @@
-// micah Timeline
-window.micahTimeline = {
-};

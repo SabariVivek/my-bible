@@ -1,3 +1,0 @@
-// leviticus Summary
-window.leviticusSummary = {
-};

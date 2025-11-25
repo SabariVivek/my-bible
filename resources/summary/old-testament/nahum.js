@@ -1,3 +1,0 @@
-// nahum Summary
-window.nahumSummary = {
-};

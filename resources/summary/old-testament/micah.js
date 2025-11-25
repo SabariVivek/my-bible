@@ -1,3 +1,0 @@
-// micah Summary
-window.micahSummary = {
-};

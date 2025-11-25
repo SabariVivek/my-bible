@@ -1,3 +1,0 @@
-// titus Timeline
-window.titusTimeline = {
-};

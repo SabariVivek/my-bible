@@ -1,3 +1,0 @@
-// philippians Summary
-window.philippiansSummary = {
-};

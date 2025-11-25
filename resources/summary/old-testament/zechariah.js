@@ -1,3 +1,0 @@
-// zechariah Summary
-window.zechariahSummary = {
-};

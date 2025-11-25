@@ -1,3 +1,0 @@
-// luke Timeline
-window.lukeTimeline = {
-};

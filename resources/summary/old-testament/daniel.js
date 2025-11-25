@@ -1,3 +1,0 @@
-// daniel Summary
-window.danielSummary = {
-};

@@ -1,3 +1,0 @@
-// jeremiah Summary
-window.jeremiahSummary = {
-};

@@ -1,3 +1,0 @@
-// revelation Timeline
-window.revelationTimeline = {
-};

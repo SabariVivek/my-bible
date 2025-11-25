@@ -1,3 +1,0 @@
-// isaiah Timeline
-window.isaiahTimeline = {
-};

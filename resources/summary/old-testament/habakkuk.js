@@ -1,3 +1,0 @@
-// habakkuk Summary
-window.habakkukSummary = {
-};

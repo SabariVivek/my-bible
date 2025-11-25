@@ -1,3 +1,0 @@
-// lamentations Summary
-window.lamentationsSummary = {
-};

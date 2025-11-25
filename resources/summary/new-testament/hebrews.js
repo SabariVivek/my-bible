@@ -1,3 +1,0 @@
-// hebrews Summary
-window.hebrewsSummary = {
-};

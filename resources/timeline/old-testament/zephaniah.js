@@ -1,3 +1,0 @@
-// zephaniah Timeline
-window.zephaniahTimeline = {
-};

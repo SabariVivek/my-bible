@@ -1,3 +1,0 @@
-// luke Summary
-window.lukeSummary = {
-};

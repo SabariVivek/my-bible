@@ -1,3 +1,0 @@
-// joshua Timeline
-window.joshuaTimeline = {
-};

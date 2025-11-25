@@ -1,3 +1,0 @@
-// judges Timeline
-window.judgesTimeline = {
-};

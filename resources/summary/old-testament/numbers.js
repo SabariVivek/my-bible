@@ -1,3 +1,0 @@
-// numbers Summary
-window.numbersSummary = {
-};

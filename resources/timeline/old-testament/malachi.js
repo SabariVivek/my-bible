@@ -1,3 +1,0 @@
-// malachi Timeline
-window.malachiTimeline = {
-};

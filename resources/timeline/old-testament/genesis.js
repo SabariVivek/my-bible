@@ -1,3 +1,0 @@
-// genesis Timeline
-window.genesisTimeline = {
-};

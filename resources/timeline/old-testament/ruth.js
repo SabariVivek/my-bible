@@ -1,3 +1,0 @@
-// ruth Timeline
-window.ruthTimeline = {
-};

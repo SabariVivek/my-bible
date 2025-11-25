@@ -1,3 +1,0 @@
-// joel Summary
-window.joelSummary = {
-};

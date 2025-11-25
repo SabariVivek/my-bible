@@ -1,3 +1,0 @@
-// jeremiah Timeline
-window.jeremiahTimeline = {
-};

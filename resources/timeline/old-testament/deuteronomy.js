@@ -1,3 +1,0 @@
-// deuteronomy Timeline
-window.deuteronomyTimeline = {
-};

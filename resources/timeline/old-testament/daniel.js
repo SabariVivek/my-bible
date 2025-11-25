@@ -1,3 +1,0 @@
-// daniel Timeline
-window.danielTimeline = {
-};

@@ -1,3 +1,0 @@
-// nehemiah Timeline
-window.nehemiahTimeline = {
-};

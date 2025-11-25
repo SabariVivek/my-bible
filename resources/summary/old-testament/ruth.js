@@ -1,3 +1,0 @@
-// ruth Summary
-window.ruthSummary = {
-};

@@ -1,3 +1,0 @@
-// obadiah Timeline
-window.obadiahTimeline = {
-};

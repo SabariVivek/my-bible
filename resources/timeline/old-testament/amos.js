@@ -1,3 +1,0 @@
-// amos Timeline
-window.amosTimeline = {
-};

@@ -1,3 +1,0 @@
-// romans Timeline
-window.romansTimeline = {
-};

@@ -1,3 +1,0 @@
-// exodus Timeline
-window.exodusTimeline = {
-};

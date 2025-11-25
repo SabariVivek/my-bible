@@ -1,3 +1,0 @@
-// mark Timeline
-window.markTimeline = {
-};

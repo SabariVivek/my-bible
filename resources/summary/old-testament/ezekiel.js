@@ -1,3 +1,0 @@
-// ezekiel Summary
-window.ezekielSummary = {
-};

@@ -1,3 +1,0 @@
-// genesis Summary
-window.genesisSummary = {
-};

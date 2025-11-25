@@ -1,3 +1,0 @@
-// ephesians Timeline
-window.ephesiansTimeline = {
-};

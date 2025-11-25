@@ -1,3 +1,0 @@
-// mark Summary
-window.markSummary = {
-};

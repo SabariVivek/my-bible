@@ -1,3 +1,0 @@
-// proverbs Summary
-window.proverbsSummary = {
-};

@@ -1,3 +1,0 @@
-// ezekiel Timeline
-window.ezekielTimeline = {
-};

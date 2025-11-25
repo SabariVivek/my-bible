@@ -1,3 +1,0 @@
-// ephesians Summary
-window.ephesiansSummary = {
-};

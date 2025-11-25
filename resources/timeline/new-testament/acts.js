@@ -1,3 +1,0 @@
-// acts Timeline
-window.actsTimeline = {
-};

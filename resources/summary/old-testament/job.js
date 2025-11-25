@@ -1,3 +1,0 @@
-// job Summary
-window.jobSummary = {
-};

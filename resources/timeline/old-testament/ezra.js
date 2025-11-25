@@ -1,3 +1,0 @@
-// ezra Timeline
-window.ezraTimeline = {
-};

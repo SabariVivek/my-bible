@@ -1,3 +1,0 @@
-// philemon Timeline
-window.philemonTimeline = {
-};

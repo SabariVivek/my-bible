@@ -1,3 +1,0 @@
-// revelation Summary
-window.revelationSummary = {
-};

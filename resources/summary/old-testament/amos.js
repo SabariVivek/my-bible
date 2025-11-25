@@ -1,3 +1,0 @@
-// amos Summary
-window.amosSummary = {
-};

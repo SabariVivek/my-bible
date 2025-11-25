@@ -1,3 +1,0 @@
-// joshua Summary
-window.joshuaSummary = {
-};

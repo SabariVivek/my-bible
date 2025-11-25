@@ -1,3 +1,0 @@
-// jude Summary
-window.judeSummary = {
-};

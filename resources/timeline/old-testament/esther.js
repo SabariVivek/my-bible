@@ -1,3 +1,0 @@
-// esther Timeline
-window.estherTimeline = {
-};

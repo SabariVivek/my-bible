@@ -1,3 +1,0 @@
-// numbers Timeline
-window.numbersTimeline = {
-};

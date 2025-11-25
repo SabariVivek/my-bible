@@ -1,3 +1,0 @@
-// ezra Summary
-window.ezraSummary = {
-};

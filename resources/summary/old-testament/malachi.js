@@ -1,3 +1,0 @@
-// malachi Summary
-window.malachiSummary = {
-};

@@ -1,3 +1,0 @@
-// nehemiah Summary
-window.nehemiahSummary = {
-};

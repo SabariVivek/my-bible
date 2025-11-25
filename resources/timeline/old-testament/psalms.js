@@ -1,3 +1,0 @@
-// psalms Timeline
-window.psalmsTimeline = {
-};

@@ -1,3 +1,0 @@
-// acts Summary
-window.actsSummary = {
-};

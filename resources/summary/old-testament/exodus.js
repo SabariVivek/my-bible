@@ -1,3 +1,0 @@
-// exodus Summary
-window.exodusSummary = {
-};

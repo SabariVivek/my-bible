@@ -1,3 +1,0 @@
-// james Summary
-window.jamesSummary = {
-};

@@ -1,3 +1,0 @@
-// ecclesiastes Summary
-window.ecclesiastesSummary = {
-};

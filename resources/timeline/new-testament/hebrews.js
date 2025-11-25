@@ -1,3 +1,0 @@
-// hebrews Timeline
-window.hebrewsTimeline = {
-};

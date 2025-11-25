@@ -1,3 +1,0 @@
-// philippians Timeline
-window.philippiansTimeline = {
-};

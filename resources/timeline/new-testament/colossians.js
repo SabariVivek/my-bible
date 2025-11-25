@@ -1,3 +1,0 @@
-// colossians Timeline
-window.colossiansTimeline = {
-};

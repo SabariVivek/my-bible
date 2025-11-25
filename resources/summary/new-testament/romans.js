@@ -1,3 +1,0 @@
-// romans Summary
-window.romansSummary = {
-};

@@ -1,3 +1,0 @@
-// proverbs Timeline
-window.proverbsTimeline = {
-};

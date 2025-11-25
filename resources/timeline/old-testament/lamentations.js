@@ -1,3 +1,0 @@
-// lamentations Timeline
-window.lamentationsTimeline = {
-};

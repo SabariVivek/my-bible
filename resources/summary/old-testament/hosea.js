@@ -1,3 +1,0 @@
-// hosea Summary
-window.hoseaSummary = {
-};

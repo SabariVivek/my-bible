@@ -1,3 +1,0 @@
-// james Timeline
-window.jamesTimeline = {
-};

@@ -1,3 +1,0 @@
-// galatians Timeline
-window.galatiansTimeline = {
-};

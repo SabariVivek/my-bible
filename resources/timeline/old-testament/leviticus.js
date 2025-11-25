@@ -1,3 +1,0 @@
-// leviticus Timeline
-window.leviticusTimeline = {
-};

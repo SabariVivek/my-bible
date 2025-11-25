@@ -1,3 +1,0 @@
-// isaiah Summary
-window.isaiahSummary = {
-};

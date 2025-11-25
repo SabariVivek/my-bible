@@ -1,3 +1,0 @@
-// ecclesiastes Timeline
-window.ecclesiastesTimeline = {
-};
