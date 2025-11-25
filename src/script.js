@@ -305,20 +305,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
     const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
     const rightMenuBtn = document.getElementById('right-menu-btn');
+    const rightNotesOption = document.getElementById('right-notes-option');
+    const rightCultOption = document.getElementById('right-cult-option');
     const isMobile = window.innerWidth <= 768;
     let isFadingOut = false; // Flag to prevent re-showing during fade
+    
+    // Always show right-menu-btn (the button that opens right sidebar)
+    if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
+    
+    // Show/hide admin-only menu items based on admin status
+    
     if (isAdmin()) {
         if (isMobile) {
             // On mobile, show admin menu wrapper and toggle
             if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
             if (adminToggle) adminToggle.style.display = 'flex';
-            if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
         } else {
             // On desktop, show admin menu wrapper and toggle
             if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
             if (adminToggle) adminToggle.style.display = 'flex';
-            if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
         }
+        // Show admin-only menu items
+        if (rightNotesOption) rightNotesOption.style.display = 'flex';
+        if (rightCultOption) rightCultOption.style.display = 'flex';
+    } else {
+        // Hide admin-only menu items
+        if (rightNotesOption) rightNotesOption.style.display = 'none';
+        if (rightCultOption) rightCultOption.style.display = 'none';
     }
     // Admin toggle button click handler
     if (adminToggle) {
@@ -394,15 +407,27 @@ document.addEventListener('DOMContentLoaded', () => {
                         desktopAdminMenuWrapper.style.pointerEvents = '';
                     }, 2000);
                 }
-                if (rightMenuBtn) {
-                    rightMenuBtn.style.pointerEvents = 'none';
-                    rightMenuBtn.style.opacity = '0';
-                    rightMenuBtn.style.transition = 'opacity 2s ease';
+                // Hide admin-only menu items with fade
+                if (rightNotesOption) {
+                    rightNotesOption.style.pointerEvents = 'none';
+                    rightNotesOption.style.opacity = '0';
+                    rightNotesOption.style.transition = 'opacity 2s ease';
                     setTimeout(() => {
-                        rightMenuBtn.style.display = 'none';
-                        rightMenuBtn.style.opacity = '1';
-                        rightMenuBtn.style.transition = '';
-                        rightMenuBtn.style.pointerEvents = '';
+                        rightNotesOption.style.display = 'none';
+                        rightNotesOption.style.opacity = '1';
+                        rightNotesOption.style.transition = '';
+                        rightNotesOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightCultOption) {
+                    rightCultOption.style.pointerEvents = 'none';
+                    rightCultOption.style.opacity = '0';
+                    rightCultOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightCultOption.style.display = 'none';
+                        rightCultOption.style.opacity = '1';
+                        rightCultOption.style.transition = '';
+                        rightCultOption.style.pointerEvents = '';
                     }, 2000);
                 }
                 // Close right sidebar if open
@@ -417,9 +442,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     isFadingOut = false;
                 }, 2000);
             } else {
-                // If activating admin mode, update immediately
+                // If activating admin mode, show admin menu items immediately
                 isFadingOut = false;
                 localStorage.setItem('isAdmin', 'true');
+                
+                // Show admin-only menu items
+                if (rightNotesOption) rightNotesOption.style.display = 'flex';
+                if (rightCultOption) rightCultOption.style.display = 'flex';
+                
                 updateAdminUI();
             }
         });
@@ -3557,6 +3587,9 @@ function updateAdminUI() {
     const adminCheck = adminToggle?.querySelector('.admin-check');
     const voiceBtn = document.getElementById('voice-btn');
     const rightMenuBtn = document.getElementById('right-menu-btn');
+    const rightNotesOption = document.getElementById('right-notes-option');
+    const rightCultOption = document.getElementById('right-cult-option');
+    
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
     });
@@ -3564,10 +3597,16 @@ function updateAdminUI() {
     if (voiceBtn) {
         voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
     }
-    // Update right menu button visibility
-    if (rightMenuBtn) {
-        rightMenuBtn.style.display = isAdminMode ? 'flex' : 'none';
+    // Right menu button should always be visible (removed admin check)
+    
+    // Show/hide admin-only menu items in right sidebar
+    if (rightNotesOption) {
+        rightNotesOption.style.display = isAdminMode ? 'flex' : 'none';
     }
+    if (rightCultOption) {
+        rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    
     // Update admin toggle button state
     if (adminToggle) {
         if (isAdminMode) {
@@ -5344,13 +5383,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const bibleReadingOption = document.getElementById('bible-reading-option');
     const rightNotesOption = document.getElementById('right-notes-option');
     const rightCultOption = document.getElementById('right-cult-option');
-    // Initialize right sidebar and button visibility based on admin mode
+    // Initialize right sidebar (hidden by default)
     if (rightSidebar) {
         rightSidebar.classList.add('hidden');
     }
-    if (rightMenuBtn) {
-        rightMenuBtn.style.display = isAdmin() ? 'flex' : 'none';
-    }
+    // Right menu button is always visible (no admin check needed)
     // Toggle right sidebar
     if (rightMenuBtn && rightSidebar) {
         rightMenuBtn.addEventListener('click', (e) => {

@@ -1563,6 +1563,7 @@
 
         function switchUser(user) {
             state.currentUser = user;
+            state.showDashboard = true;  // Show dashboard after selecting user
             saveData();
             render();
         }
@@ -1871,7 +1872,7 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <button onclick="state.currentUser = null; state.showDashboard = false; state.isAdmin = false; localStorage.setItem('isAdmin', 'false'); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Manage Profiles">
+                                    <button onclick="state.currentUser = null; state.showDashboard = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Manage Profiles">
                                         ${icons.settings}
                                     </button>
                                     <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Toggle theme">
@@ -1884,10 +1885,12 @@
 
                     <div class="max-w-7xl mx-auto px-4 py-6 space-y-6">
                         <!-- Track Progress Button -->
-                        <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
-                            ${icons.book}
-                            Track My Progress
-                        </button>
+                        ${state.currentUser ? `
+                            <button onclick="state.showDashboard = false; state.isAdmin = false; localStorage.setItem('isAdmin', 'false'); render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
+                                ${icons.book}
+                                Track My Progress
+                            </button>
+                        ` : ''}
 
                         <!-- Today's Reading Card -->
                         ${todayReading ? `
@@ -1907,28 +1910,39 @@
                             </div>
                         ` : ''}
 
-                        <!-- Stats Cards -->
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="${theme.textSecondary} text-sm">Total Users</span>
-                                    ${icons.users}
+                        <!-- Stats Card -->
+                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <div class="grid grid-cols-3 gap-4 md:gap-6">
+                                <div class="text-center">
+                                    <div class="flex items-center justify-center mb-2">
+                                        ${icons.users}
+                                    </div>
+                                    <p class="text-2xl md:text-3xl font-bold mb-1">${stats.totalUsers}</p>
+                                    <span class="${theme.textSecondary} text-xs md:text-sm">
+                                        <span class="hidden md:inline">Total Users</span>
+                                        <span class="md:hidden">Total</span>
+                                    </span>
                                 </div>
-                                <p class="text-3xl font-bold">${stats.totalUsers}</p>
-                            </div>
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="${theme.textSecondary} text-sm">Completed Today</span>
-                                    ${icons.checkCircle}
+                                <div class="text-center border-x ${theme.border}">
+                                    <div class="flex items-center justify-center mb-2 text-emerald-500">
+                                        ${icons.checkCircle}
+                                    </div>
+                                    <p class="text-2xl md:text-3xl font-bold text-emerald-500 mb-1">${stats.completedCount}</p>
+                                    <span class="${theme.textSecondary} text-xs md:text-sm">
+                                        <span class="hidden md:inline">Completed Today</span>
+                                        <span class="md:hidden">Completed</span>
+                                    </span>
                                 </div>
-                                <p class="text-3xl font-bold text-emerald-500">${stats.completedCount}</p>
-                            </div>
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="${theme.textSecondary} text-sm">Pending Today</span>
-                                    ${icons.alert}
+                                <div class="text-center">
+                                    <div class="flex items-center justify-center mb-2 text-orange-500">
+                                        ${icons.alert}
+                                    </div>
+                                    <p class="text-2xl md:text-3xl font-bold text-orange-500 mb-1">${stats.pendingCount}</p>
+                                    <span class="${theme.textSecondary} text-xs md:text-sm">
+                                        <span class="hidden md:inline">Pending Today</span>
+                                        <span class="md:hidden">Pending</span>
+                                    </span>
                                 </div>
-                                <p class="text-3xl font-bold text-orange-500">${stats.pendingCount}</p>
                             </div>
                         </div>
 
@@ -2010,11 +2024,13 @@
                             </div>
                         </div>
 
-                        <!-- Add New User -->
-                        <button onclick="state.showUserModal = true; render();" class="w-full ${theme.card} border-2 border-dashed ${theme.border} rounded-xl p-4 flex items-center justify-center gap-2 font-semibold ${theme.cardHover} transition-colors">
-                            ${icons.plus}
-                            Add Family Member
-                        </button>
+                        <!-- Add New User (Admin Only) -->
+                        ${state.isAdmin ? `
+                            <button onclick="state.showUserModal = true; render();" class="w-full ${theme.card} border-2 border-dashed ${theme.border} rounded-xl p-4 flex items-center justify-center gap-2 font-semibold ${theme.cardHover} transition-colors">
+                                ${icons.plus}
+                                Add Family Member
+                            </button>
+                        ` : ''}
                     </div>
 
                     ${state.showUserModal ? `
@@ -2094,10 +2110,12 @@
                             }).join('')}
                         </div>
 
-                        <button onclick="state.showUserModal = true; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors">
-                            ${icons.plus}
-                            Create New Profile
-                        </button>
+                        ${state.isAdmin ? `
+                            <button onclick="state.showUserModal = true; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors">
+                                ${icons.plus}
+                                Create New Profile
+                            </button>
+                        ` : ''}
                     </div>
 
                     ${state.showUserModal ? `
@@ -2186,12 +2204,6 @@
                                 <div class="flex items-center gap-2">
                                     <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
-                                    </button>
-                                    <button onclick="state.isAdmin = true; state.showDashboard = true; localStorage.setItem('isAdmin', 'true'); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Dashboard">
-                                        ${icons.dashboard}
-                                    </button>
-                                    <button onclick="state.currentUser = null; saveData(); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Profile">
-                                        ${icons.user}
                                     </button>
                                 </div>
                             </div>
@@ -2636,18 +2648,8 @@
         async function render() {
             const app = document.getElementById('app');
 
-            if (state.isAdmin) {
-                // Admin always sees dashboard
-                app.innerHTML = renderDashboard();
-                // Focus input if modal is open
-                if (state.showUserModal) {
-                    setTimeout(() => {
-                        const input = document.getElementById('newUserName');
-                        if (input) input.focus();
-                    }, 100);
-                }
-            } else if (!state.currentUser) {
-                // Non-admin without current user sees profile selection
+            if (!state.currentUser) {
+                // No current user - show profile selection (default initial view)
                 // Reload users from Supabase when showing profile selection
                 if (!state.isLoadingProfiles) {
                     state.isLoadingProfiles = true;
@@ -2662,8 +2664,8 @@
                         if (input) input.focus();
                     }, 100);
                 }
-            } else if (state.showDashboard) {
-                // Show dashboard when a user is logged in but dashboard view is active
+            } else if (state.showDashboard || state.isAdmin) {
+                // Show dashboard when user is selected and dashboard view is active, or in admin mode
                 app.innerHTML = renderDashboard();
                 // Focus input if modal is open
                 if (state.showUserModal) {
@@ -2673,6 +2675,7 @@
                     }, 100);
                 }
             } else {
+                // Show personal reading tracker
                 app.innerHTML = renderMainApp();
             }
 
