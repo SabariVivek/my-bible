@@ -2351,7 +2351,11 @@
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    ${icons.dashboard}
+                                    ${state.currentUser ? `
+                                        <button onclick="state.showDashboard = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Reading">
+                                            ${icons.chevronLeft}
+                                        </button>
+                                    ` : ''}
                                     <div>
                                         <h1 class="text-xl font-bold">Dashboard</h1>
                                         <p class="text-sm ${theme.textSecondary}">${today}</p>
