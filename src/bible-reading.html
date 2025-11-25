@@ -699,6 +699,39 @@
             to { transform: rotate(360deg); }
         }
 
+        /* Copy Button Animation */
+        .copy-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .copy-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .copy-button.copied::before {
+            width: 100px;
+            height: 100px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .copy-button.copied {
+            animation: pulse 0.3s ease-in-out;
+        }
+
         .loading-text {
             font-size: 16px;
             font-weight: 500;
@@ -1901,9 +1934,14 @@
                         <!-- Today's Reading Card -->
                         ${todayReading ? `
                             <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center gap-3 mb-4">
-                                    ${icons.book}
-                                    <h2 class="text-lg font-bold">Today's Reading</h2>
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        ${icons.book}
+                                        <h2 class="text-lg font-bold">Today's Reading</h2>
+                                    </div>
+                                    <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
+                                        ${icons.copy}
+                                    </button>
                                 </div>
                                 <div class="space-y-2">
                                     ${todayReading.portions.map((portion, idx) => `
@@ -2208,15 +2246,6 @@
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    ${(() => {
-                                        const isAdmin = localStorage.getItem('isAdmin');
-                                        console.log('Rendering header - isAdmin from localStorage:', isAdmin);
-                                        return isAdmin === 'true' ? `
-                                            <button onclick="console.log('Settings clicked'); state.showAdminView = true; console.log('showAdminView set to:', state.showAdminView); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Manage Profiles">
-                                                ${icons.settings}
-                                            </button>
-                                        ` : '';
-                                    })()}
                                     <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
@@ -2232,9 +2261,6 @@
                                 <div id="dailyReadingHeader" class="daily-reading-header flex items-center justify-between mb-4 flex-wrap gap-3">
                                     <h2 id="selectedDateTitle" class="selected-date-title text-xl font-bold">${state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
                                     <div id="datePickerWrapper" class="date-picker-wrapper flex items-center gap-2">
-                                        <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 transition-colors" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
-                                            ${icons.copy}
-                                        </button>
                                         <button id="calendarButton" class="calendar-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 transition-colors" type="button" onclick="openCalendarModal()">
                                             ${icons.calendar}
                                         </button>
@@ -2810,8 +2836,8 @@
                         if (input) input.focus();
                     }, 100);
                 }
-            } else if (state.showDashboard || state.isAdmin) {
-                // Show dashboard when user is selected and dashboard view is active, or in admin mode
+            } else if (state.showDashboard) {
+                // Show dashboard when user is selected and dashboard view is active
                 app.innerHTML = renderDashboard();
                 // Focus input if modal is open
                 if (state.showUserModal) {
@@ -2842,15 +2868,14 @@
             });
 
             navigator.clipboard.writeText(text).then(() => {
-                // Show a temporary success message
                 const btn = document.getElementById('copyButton');
                 if (btn) {
                     const originalContent = btn.innerHTML;
                     btn.innerHTML = icons.check;
-                    btn.classList.add('text-emerald-500');
+                    btn.classList.add('text-emerald-500', 'copied');
                     setTimeout(() => {
                         btn.innerHTML = originalContent;
-                        btn.classList.remove('text-emerald-500');
+                        btn.classList.remove('text-emerald-500', 'copied');
                     }, 2000);
                 }
             }).catch(err => {
