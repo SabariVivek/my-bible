@@ -869,6 +869,54 @@
             transform: translateY(-1px);
         }
 
+        body.dark-theme .calendar-today-btn {
+            background: #667eea;
+            color: white;
+        }
+
+        body.dark-theme .calendar-today-btn:hover {
+            background: #5568d3;
+        }
+
+        /* Portion Checkbox Styles */
+        .portion-checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid #cbd5e1;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body.dark-theme .portion-checkbox {
+            border-color: #475569;
+        }
+
+        .portion-checkbox:hover {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .portion-checkbox.checked {
+            background: #10b981;
+            border-color: #10b981;
+        }
+
+        .portion-checkbox.checked svg {
+            display: block;
+        }
+
+        .portion-checkbox svg {
+            display: none;
+            width: 14px;
+            height: 14px;
+            color: white;
+        }
+
         /* Swipe Page Turn Animation */
         .reading-card-container {
             position: relative;
@@ -1018,6 +1066,7 @@
         let touchEndX = 0;
         const minSwipeDistance = 50;
         let dashboardDate = new Date(); // Track date for dashboard reading card
+        let completedPortions = new Set(); // Track individual completed portions for current date
 
         function handleSwipeGesture() {
             const swipeDistance = touchEndX - touchStartX;
@@ -1032,6 +1081,7 @@
                     const newDate = new Date(state.selectedDate);
                     newDate.setDate(newDate.getDate() - 1);
                     state.selectedDate = newDate;
+                    completedPortions.clear(); // Clear portions when changing date
                     saveData();
                     render();
                 }, 300);
@@ -1041,6 +1091,7 @@
                     const newDate = new Date(state.selectedDate);
                     newDate.setDate(newDate.getDate() + 1);
                     state.selectedDate = newDate;
+                    completedPortions.clear(); // Clear portions when changing date
                     saveData();
                     render();
                 }, 300);
@@ -1095,6 +1146,41 @@
                 touchEndX = e.changedTouches[0].screenX;
                 handleDashboardSwipeGesture();
             }, { passive: true });
+        }
+
+        function togglePortionComplete(portionIndex) {
+            const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+            const portionKey = `${dateKey}-${portionIndex}`;
+            
+            if (completedPortions.has(portionKey)) {
+                completedPortions.delete(portionKey);
+            } else {
+                completedPortions.add(portionKey);
+            }
+            
+            // Check if all portions are completed
+            const reading = getTodayReading(state.selectedDate);
+            if (reading) {
+                const allCompleted = reading.portions.every((_, idx) => 
+                    completedPortions.has(`${dateKey}-${idx}`)
+                );
+                
+                if (allCompleted) {
+                    markTodayComplete();
+                } else {
+                    render();
+                }
+            }
+        }
+
+        function markAllPortionsComplete() {
+            const reading = getTodayReading(state.selectedDate);
+            if (!reading) return;
+            
+            const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+            reading.portions.forEach((_, idx) => {
+                completedPortions.add(`${dateKey}-${idx}`);
+            });
         }
 
         // SVG Icons as functions
@@ -1572,7 +1658,8 @@
             isLoadingProfiles: false,
             showDashboard: true,  // Show dashboard by default
             showAdminView: false,  // Show admin profile management view
-            customModal: null  // Custom modal state: { type, title, message, onConfirm, confirmText, cancelText }
+            customModal: null,  // Custom modal state: { type, title, message, onConfirm, confirmText, cancelText }
+            showAllUsers: false  // Track if all users should be shown in dashboard
         };
 
         // Helper Functions
@@ -2090,6 +2177,11 @@
                 return;
             }
 
+            // Mark all portions as checked
+            reading.portions.forEach((_, idx) => {
+                completedPortions.add(`${dateKey}-${idx}`);
+            });
+
             showLoading('Saving progress...');
             try {
                 // Determine which NT reading period (1st or 2nd)
@@ -2270,10 +2362,7 @@
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="flex items-center gap-3">
                                                 ${icons.book}
-                                                <div>
-                                                    <h2 class="text-lg font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
-                                                    ${!isDashboardToday ? `<p class="text-xs ${theme.textSecondary} mt-0.5">Bible Reading Plan</p>` : ''}
-                                                </div>
+                                                <h2 class="text-lg font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
                                             </div>
                                             <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
                                                 ${icons.copy}
@@ -2369,12 +2458,19 @@
 
                         <!-- All Users List -->
                         <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                            <div class="flex items-center gap-3 mb-4">
-                                ${icons.users}
-                                <h2 class="text-lg font-bold">All Users</h2>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    ${icons.users}
+                                    <h2 class="text-lg font-bold">All Users</h2>
+                                </div>
+                                ${state.users.length > 5 ? `
+                                    <button onclick="state.showAllUsers = !state.showAllUsers; render();" class="text-sm font-semibold text-blue-500 hover:text-blue-400 transition-colors">
+                                        ${state.showAllUsers ? 'Show less' : 'Show more'}
+                                    </button>
+                                ` : ''}
                             </div>
                             <div class="space-y-3">
-                                ${state.users.map(user => {
+                                ${(state.showAllUsers ? state.users : state.users.slice(0, 5)).map(user => {
                                     const userStats = getUserStats(user);
                                     return `
                                         <button onclick="switchUser({id: '${user.id}', name: '${user.name}', progress: ${JSON.stringify(user.progress).replace(/"/g, '&quot;')}, completedDates: ${JSON.stringify(user.completedDates).replace(/"/g, '&quot;')}, joinedDate: '${user.joinedDate}'}); state.showDashboard = false; render();" class="w-full flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-left">
@@ -2610,14 +2706,25 @@
                                 </div>
                                 
                                 <div id="readingPortions" class="reading-portions space-y-3 mb-4">
-                                    ${todayReading.portions.map((portion, idx) => `
-                                        <div id="portion${idx + 1}" class="reading-portion flex items-center gap-3 p-3 rounded-lg ${state.darkMode ? 'bg-slate-750' : 'bg-gray-50'}">
-                                            <span class="portion-number w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold">
-                                                ${idx + 1}
-                                            </span>
-                                            <span class="portion-text font-medium">${portion.book} ${portion.chapters}</span>
+                                    ${todayReading.portions.map((portion, idx) => {
+                                        const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+                                        const portionKey = `${dateKey}-${idx}`;
+                                        const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
+                                        return `
+                                        <div id="portion${idx + 1}" class="reading-portion flex items-center justify-between gap-3 p-3 rounded-lg ${state.darkMode ? 'bg-slate-750' : 'bg-gray-50'}">
+                                            <div class="flex items-center gap-3 flex-1">
+                                                <span class="portion-number w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-sm font-bold">
+                                                    ${idx + 1}
+                                                </span>
+                                                <span class="portion-text font-medium">${portion.book} ${portion.chapters}</span>
+                                            </div>
+                                            <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                                    <polyline points="20 6 9 17 4 12"/>
+                                                </svg>
+                                            </div>
                                         </div>
-                                    `).join('')}
+                                    `}).join('')}
                                 </div>
                                 
                                 <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} class="mark-complete-button w-full rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition-colors ${isDateCompleted ? 'bg-emerald-500/20 border-2 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-2 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
@@ -3311,6 +3418,7 @@
         function confirmDateSelection() {
             if (calendarState.tempSelectedDate) {
                 state.selectedDate = calendarState.tempSelectedDate;
+                completedPortions.clear(); // Clear portions when changing date via calendar
                 saveData();
                 render();
             }
