@@ -1077,21 +1077,21 @@
 
             if (swipeDistance > 0) {
                 cardWrapper.classList.add('swipe-right');
-                setTimeout(() => {
+                setTimeout(async () => {
                     const newDate = new Date(state.selectedDate);
                     newDate.setDate(newDate.getDate() - 1);
                     state.selectedDate = newDate;
-                    completedPortions.clear(); // Clear portions when changing date
+                    await loadCompletedPortionsForDate();
                     saveData();
                     render();
                 }, 300);
             } else {
                 cardWrapper.classList.add('swipe-left');
-                setTimeout(() => {
+                setTimeout(async () => {
                     const newDate = new Date(state.selectedDate);
                     newDate.setDate(newDate.getDate() + 1);
                     state.selectedDate = newDate;
-                    completedPortions.clear(); // Clear portions when changing date
+                    await loadCompletedPortionsForDate();
                     saveData();
                     render();
                 }, 300);
@@ -1148,28 +1148,37 @@
             }, { passive: true });
         }
 
-        function togglePortionComplete(portionIndex) {
+        async function togglePortionComplete(portionIndex) {
+            if (!state.currentUser) return;
+            
             const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
             const portionKey = `${dateKey}-${portionIndex}`;
             
-            if (completedPortions.has(portionKey)) {
-                completedPortions.delete(portionKey);
-            } else {
-                completedPortions.add(portionKey);
-            }
-            
-            // Check if all portions are completed
-            const reading = getTodayReading(state.selectedDate);
-            if (reading) {
-                const allCompleted = reading.portions.every((_, idx) => 
-                    completedPortions.has(`${dateKey}-${idx}`)
-                );
-                
-                if (allCompleted) {
-                    markTodayComplete();
+            try {
+                if (completedPortions.has(portionKey)) {
+                    completedPortions.delete(portionKey);
+                    await BibleReadingDB.unmarkPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
                 } else {
-                    render();
+                    completedPortions.add(portionKey);
+                    await BibleReadingDB.markPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
                 }
+                
+                // Check if all portions are completed
+                const reading = getTodayReading(state.selectedDate);
+                if (reading) {
+                    const allCompleted = reading.portions.every((_, idx) => 
+                        completedPortions.has(`${dateKey}-${idx}`)
+                    );
+                    
+                    if (allCompleted) {
+                        await markTodayComplete();
+                    } else {
+                        render();
+                    }
+                }
+            } catch (error) {
+                console.error('Error toggling portion:', error);
+                alert('Failed to save progress. Please try again.');
             }
         }
 
@@ -1181,6 +1190,22 @@
             reading.portions.forEach((_, idx) => {
                 completedPortions.add(`${dateKey}-${idx}`);
             });
+        }
+
+        async function loadCompletedPortionsForDate() {
+            if (!state.currentUser) return;
+            
+            try {
+                const portions = await BibleReadingDB.getCompletedPortions(state.currentUser.id, state.selectedDate);
+                const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
+                
+                completedPortions.clear();
+                portions.forEach(portionIndex => {
+                    completedPortions.add(`${dateKey}-${portionIndex}`);
+                });
+            } catch (error) {
+                console.error('Error loading portions:', error);
+            }
         }
 
         // SVG Icons as functions
@@ -2002,9 +2027,10 @@
             }
         }
 
-        function switchUser(user) {
+        async function switchUser(user) {
             state.currentUser = user;
             state.showDashboard = true;  // Show dashboard after selecting user
+            await loadCompletedPortionsForDate();
             saveData();
             render();
         }
@@ -2458,16 +2484,9 @@
 
                         <!-- All Users List -->
                         <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                            <div class="flex items-center justify-between mb-4">
-                                <div class="flex items-center gap-3">
-                                    ${icons.users}
-                                    <h2 class="text-lg font-bold">All Users</h2>
-                                </div>
-                                ${state.users.length > 5 ? `
-                                    <button onclick="state.showAllUsers = !state.showAllUsers; render();" class="text-sm font-semibold text-blue-500 hover:text-blue-400 transition-colors">
-                                        ${state.showAllUsers ? 'Show less' : 'Show more'}
-                                    </button>
-                                ` : ''}
+                            <div class="flex items-center gap-3 mb-4">
+                                ${icons.users}
+                                <h2 class="text-lg font-bold">All Users</h2>
                             </div>
                             <div class="space-y-3">
                                 ${(state.showAllUsers ? state.users : state.users.slice(0, 5)).map(user => {
@@ -2500,6 +2519,11 @@
                                     `;
                                 }).join('')}
                             </div>
+                            ${state.users.length > 5 ? `
+                                <button onclick="state.showAllUsers = !state.showAllUsers; render();" class="w-full mt-4 text-sm font-semibold text-blue-500 hover:text-blue-400 transition-colors text-center">
+                                    ${state.showAllUsers ? 'Show less' : 'Show more'}
+                                </button>
+                            ` : ''}
                         </div>
 
                         <!-- Add New User (Admin Only) -->
@@ -3362,6 +3386,9 @@
         // Initialize
         (async () => {
             await loadData();
+            if (state.currentUser) {
+                await loadCompletedPortionsForDate();
+            }
             render();
         })();
 
@@ -3415,10 +3442,10 @@
         }
 
         // Confirm date selection
-        function confirmDateSelection() {
+        async function confirmDateSelection() {
             if (calendarState.tempSelectedDate) {
                 state.selectedDate = calendarState.tempSelectedDate;
-                completedPortions.clear(); // Clear portions when changing date via calendar
+                await loadCompletedPortionsForDate();
                 saveData();
                 render();
             }

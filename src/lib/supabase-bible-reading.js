@@ -84,6 +84,49 @@ async function clearChapterProgress(userId, bookName, chapterNumber, readingCycl
     const { error } = await query;
     if (error) throw error;
 }
+// Daily Portions
+async function markPortionAsCompleted(userId, date, portionIndex) {
+    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    const { data, error } = await supabase
+        .from('daily_portions')
+        .upsert([{
+            user_id: userId,
+            reading_date: dateStr,
+            portion_index: portionIndex,
+            completed: true,
+            completed_at: new Date().toISOString()
+        }], {
+            onConflict: 'user_id,reading_date,portion_index'
+        })
+        .select()
+        .single();
+    if (error) throw error;
+    return data;
+}
+
+async function unmarkPortionAsCompleted(userId, date, portionIndex) {
+    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    const { error } = await supabase
+        .from('daily_portions')
+        .delete()
+        .eq('user_id', userId)
+        .eq('reading_date', dateStr)
+        .eq('portion_index', portionIndex);
+    if (error) throw error;
+}
+
+async function getCompletedPortions(userId, date) {
+    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    const { data, error } = await supabase
+        .from('daily_portions')
+        .select('portion_index')
+        .eq('user_id', userId)
+        .eq('reading_date', dateStr)
+        .eq('completed', true);
+    if (error) throw error;
+    return data.map(d => d.portion_index);
+}
+
 // Completed Dates
 async function markDateAsCompleted(userId, date) {
     const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
@@ -182,6 +225,10 @@ window.BibleReadingDB = {
     markChapterAsRead,
     getUserProgress,
     clearChapterProgress,
+    // Daily Portions
+    markPortionAsCompleted,
+    unmarkPortionAsCompleted,
+    getCompletedPortions,
     // Completed Dates
     markDateAsCompleted,
     getCompletedDates,
