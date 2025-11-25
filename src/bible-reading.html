@@ -1017,6 +1017,7 @@
         let touchStartX = 0;
         let touchEndX = 0;
         const minSwipeDistance = 50;
+        let dashboardDate = new Date(); // Track date for dashboard reading card
 
         function handleSwipeGesture() {
             const swipeDistance = touchEndX - touchStartX;
@@ -1057,6 +1058,42 @@
             readingCard.addEventListener('touchend', (e) => {
                 touchEndX = e.changedTouches[0].screenX;
                 handleSwipeGesture();
+            }, { passive: true });
+        }
+
+        function handleDashboardSwipeGesture() {
+            const swipeDistance = touchEndX - touchStartX;
+            if (Math.abs(swipeDistance) < minSwipeDistance) return;
+
+            const cardWrapper = document.querySelector('.dashboard-reading-card-wrapper');
+            if (!cardWrapper) return;
+
+            if (swipeDistance > 0) {
+                cardWrapper.classList.add('swipe-right');
+                setTimeout(() => {
+                    dashboardDate.setDate(dashboardDate.getDate() - 1);
+                    render();
+                }, 300);
+            } else {
+                cardWrapper.classList.add('swipe-left');
+                setTimeout(() => {
+                    dashboardDate.setDate(dashboardDate.getDate() + 1);
+                    render();
+                }, 300);
+            }
+        }
+
+        function initDashboardSwipeListeners() {
+            const readingCard = document.getElementById('dashboardReadingCard');
+            if (!readingCard) return;
+
+            readingCard.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            readingCard.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleDashboardSwipeGesture();
             }, { passive: true });
         }
 
@@ -2183,6 +2220,11 @@
             const stats = getDashboardStats();
             const todayReading = getTodayReading(new Date());
             const today = new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+            const todayCheck = new Date();
+            todayCheck.setHours(0, 0, 0, 0);
+            const dashboardDateCheck = new Date(dashboardDate);
+            dashboardDateCheck.setHours(0, 0, 0, 0);
+            const isDashboardToday = dashboardDateCheck.getTime() === todayCheck.getTime();
 
             return `
                 <div class="min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
@@ -2222,23 +2264,30 @@
 
                         <!-- Today's Reading Card -->
                         ${todayReading ? `
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center justify-between mb-4">
-                                    <div class="flex items-center gap-3">
-                                        ${icons.book}
-                                        <h2 class="text-lg font-bold">Today's Reading</h2>
-                                    </div>
-                                    <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
-                                        ${icons.copy}
-                                    </button>
-                                </div>
-                                <div class="space-y-2">
-                                    ${todayReading.portions.map((portion, idx) => `
-                                        <div class="flex items-start gap-3 p-3 ${theme.accent} rounded-lg">
-                                            <span class="text-blue-500 font-bold">${idx + 1}.</span>
-                                            <span class="font-medium">${portion.book} ${portion.chapters}</span>
+                            <div class="reading-card-container">
+                                <div class="reading-card-wrapper dashboard-reading-card-wrapper">
+                                    <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                        <div class="flex items-center justify-between mb-4">
+                                            <div class="flex items-center gap-3">
+                                                ${icons.book}
+                                                <div>
+                                                    <h2 class="text-lg font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                                    ${!isDashboardToday ? `<p class="text-xs ${theme.textSecondary} mt-0.5">Bible Reading Plan</p>` : ''}
+                                                </div>
+                                            </div>
+                                            <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
+                                                ${icons.copy}
+                                            </button>
                                         </div>
-                                    `).join('')}
+                                        <div class="space-y-2">
+                                            ${getTodayReading(dashboardDate).portions.map((portion, idx) => `
+                                                <div class="flex items-start gap-3 p-3 ${theme.accent} rounded-lg">
+                                                    <span class="text-blue-500 font-bold">${idx + 1}.</span>
+                                                    <span class="font-medium">${portion.book} ${portion.chapters}</span>
+                                                </div>
+                                            `).join('')}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         ` : ''}
@@ -2498,6 +2547,8 @@
             const selectedDate = new Date(state.selectedDate);
             selectedDate.setHours(0, 0, 0, 0);
             const isFutureDate = selectedDate > today;
+            const isToday = selectedDate.getTime() === today.getTime();
+            const isPastDate = selectedDate < today;
 
             const allBooks = state.activeTestament === 'all'
                 ? [...oldTestamentBooks, ...newTestamentBooks]
@@ -2550,7 +2601,7 @@
                                 <div class="reading-card-wrapper">
                                     <div id="dailyReadingCard" class="daily-reading-card ${theme.card} border ${theme.border} rounded-2xl p-6 mb-6 ${isDateCompleted ? 'opacity-75' : ''}">
                                 <div id="dailyReadingHeader" class="daily-reading-header flex items-center justify-between mb-4 flex-wrap gap-3">
-                                    <h2 id="selectedDateTitle" class="selected-date-title text-xl font-bold">${state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                    <h2 id="selectedDateTitle" class="selected-date-title text-xl font-bold">${isToday ? "Today's Reading" : state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
                                     <div id="datePickerWrapper" class="date-picker-wrapper flex items-center gap-2">
                                         <button id="calendarButton" class="calendar-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 transition-colors" type="button" onclick="openCalendarModal()">
                                             ${icons.calendar}
@@ -2571,7 +2622,7 @@
                                 
                                 <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} class="mark-complete-button w-full rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition-colors ${isDateCompleted ? 'bg-emerald-500/20 border-2 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-2 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
                                     ${icons.checkCircle}
-                                    ${isDateCompleted ? 'Already Completed' : isFutureDate ? 'Future Date' : 'Mark as Complete'}
+                                    ${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}
                                 </button>
                                 </div>
                             </div>
@@ -3155,6 +3206,9 @@
             setTimeout(() => {
                 if (document.getElementById('dailyReadingCard')) {
                     initSwipeListeners();
+                }
+                if (document.getElementById('dashboardReadingCard')) {
+                    initDashboardSwipeListeners();
                 }
             }, 0);
 
