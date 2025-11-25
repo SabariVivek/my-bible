@@ -2589,10 +2589,18 @@
                                             </div>
                                             <div class="flex-1">
                                                 <div class="space-y-2">
-                                                    <div class="flex items-center justify-center">
-                                                        <div class="text-center">
-                                                            <span class="text-sm font-bold">${ntProgress.read}/${ntProgress.total}</span>
-                                                            <div class="text-xs ${theme.textSecondary} mt-1">Chapters</div>
+                                                    <div class="flex items-center justify-between">
+                                                        <span class="text-xs font-semibold ${theme.textSecondary}">Read</span>
+                                                        <span class="text-sm font-bold text-emerald-500">${ntProgress.read}</span>
+                                                    </div>
+                                                    <div class="flex items-center justify-between">
+                                                        <span class="text-xs font-semibold ${theme.textSecondary}">Remaining</span>
+                                                        <span class="text-sm font-bold ${theme.textSecondary}">${ntProgress.total - ntProgress.read}</span>
+                                                    </div>
+                                                    <div class="pt-2 border-t ${theme.border}">
+                                                        <div class="flex items-center justify-between">
+                                                            <span class="text-xs font-semibold ${theme.textSecondary}">Total</span>
+                                                            <span class="text-sm font-bold">${ntProgress.total}</span>
                                                         </div>
                                                     </div>
                                                 </div>
