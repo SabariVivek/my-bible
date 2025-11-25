@@ -763,7 +763,10 @@
             chevronDown: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>`,
             calendar: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>`,
             copy: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`,
-            x: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+            x: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`,
+            alert: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>`,
+            clock: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+            trendingUp: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
         };
 
         // Bible Data
@@ -1212,9 +1215,10 @@
             showUserModal: false,
             selectedDate: new Date(),
             activeTestament: 'new',
-            isAdmin: false,
+            isAdmin: localStorage.getItem('isAdmin') === 'true',
             showProgressDetails: false,
-            isLoadingProfiles: false
+            isLoadingProfiles: false,
+            showDashboard: true  // Show dashboard by default
         };
 
         // Helper Functions
@@ -1242,6 +1246,84 @@
             const otBook = oldTestamentBooks.find(b => b.name.toUpperCase() === normalized);
             const ntBook = newTestamentBooks.find(b => b.name.toUpperCase() === normalized);
             return otBook ? otBook.name : (ntBook ? ntBook.name : null);
+        }
+
+        // Dashboard Helper Functions
+        function getUserStats(user) {
+            if (!user) return null;
+            
+            const today = new Date();
+            const dateKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+            const hasReadToday = user.completedDates && user.completedDates[dateKey];
+            
+            // Calculate last read date
+            let lastReadDate = null;
+            let daysPending = 0;
+            
+            // Calculate pending days from Jan 1 of current year
+            const startOfYear = new Date(today.getFullYear(), 0, 1);
+            const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+            const totalDaysSinceJan1 = Math.floor((todayStart - startOfYear) / (1000 * 60 * 60 * 24)) + 1;
+            
+            // Count completed days in current year
+            let completedDaysCount = 0;
+            if (user.completedDates) {
+                completedDaysCount = Object.keys(user.completedDates).filter(d => {
+                    const [y, m, day] = d.split('-').map(Number);
+                    return y === today.getFullYear();
+                }).length;
+                
+                // Get last read date
+                const dates = Object.keys(user.completedDates).map(d => {
+                    const [y, m, day] = d.split('-').map(Number);
+                    return new Date(y, m - 1, day);
+                }).sort((a, b) => b - a);
+                
+                if (dates.length > 0) {
+                    lastReadDate = dates[0];
+                }
+            }
+            
+            // Days pending = total days from Jan 1 to today - completed days
+            daysPending = totalDaysSinceJan1 - completedDaysCount;
+            if (daysPending < 0) daysPending = 0;
+            
+            // Calculate total chapters read
+            const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
+            const uniqueChapters = new Set();
+            progressKeys.forEach(key => {
+                const normalizedKey = key.replace(/-1st$|-2nd$/, '');
+                uniqueChapters.add(normalizedKey);
+            });
+            
+            return {
+                hasReadToday,
+                lastReadDate,
+                daysPending,
+                chaptersRead: uniqueChapters.size,
+                totalProgress: Math.round((uniqueChapters.size / 1189) * 100)
+            };
+        }
+
+        function getDashboardStats() {
+            const today = new Date();
+            const dateKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
+            
+            const pendingUsers = state.users.filter(user => {
+                return !user.completedDates || !user.completedDates[dateKey];
+            });
+            
+            const completedUsers = state.users.filter(user => {
+                return user.completedDates && user.completedDates[dateKey];
+            });
+            
+            return {
+                totalUsers: state.users.length,
+                pendingCount: pendingUsers.length,
+                completedCount: completedUsers.length,
+                pendingUsers,
+                completedUsers
+            };
         }
 
         function getTodayReading(date) {
@@ -1752,6 +1834,209 @@
         }
 
         // Render Functions
+        function renderDashboard() {
+            const theme = state.darkMode ? {
+                bg: 'bg-slate-900',
+                card: 'bg-slate-800',
+                cardHover: 'hover:bg-slate-750',
+                text: 'text-gray-100',
+                textSecondary: 'text-gray-400',
+                border: 'border-slate-700',
+                accent: 'bg-slate-700'
+            } : {
+                bg: 'bg-gray-50',
+                card: 'bg-white',
+                cardHover: 'hover:bg-gray-50',
+                text: 'text-gray-900',
+                textSecondary: 'text-gray-600',
+                border: 'border-gray-200',
+                accent: 'bg-gray-100'
+            };
+
+            const stats = getDashboardStats();
+            const todayReading = getTodayReading(new Date());
+            const today = new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+            return `
+                <div class="min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
+                    <!-- Header -->
+                    <div class="${theme.card} border-b ${theme.border} sticky top-0 z-40">
+                        <div class="max-w-7xl mx-auto px-4 py-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    ${icons.dashboard}
+                                    <div>
+                                        <h1 class="text-xl font-bold">Dashboard</h1>
+                                        <p class="text-sm ${theme.textSecondary}">${today}</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button onclick="state.currentUser = null; state.showDashboard = false; state.isAdmin = false; localStorage.setItem('isAdmin', 'false'); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Manage Profiles">
+                                        ${icons.settings}
+                                    </button>
+                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Toggle theme">
+                                        ${state.darkMode ? icons.sun : icons.moon}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+                        <!-- Track Progress Button -->
+                        <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
+                            ${icons.book}
+                            Track My Progress
+                        </button>
+
+                        <!-- Today's Reading Card -->
+                        ${todayReading ? `
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    ${icons.book}
+                                    <h2 class="text-lg font-bold">Today's Reading</h2>
+                                </div>
+                                <div class="space-y-2">
+                                    ${todayReading.portions.map((portion, idx) => `
+                                        <div class="flex items-start gap-3 p-3 ${theme.accent} rounded-lg">
+                                            <span class="text-blue-500 font-bold">${idx + 1}.</span>
+                                            <span class="font-medium">${portion.book} ${portion.chapters}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        <!-- Stats Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="${theme.textSecondary} text-sm">Total Users</span>
+                                    ${icons.users}
+                                </div>
+                                <p class="text-3xl font-bold">${stats.totalUsers}</p>
+                            </div>
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="${theme.textSecondary} text-sm">Completed Today</span>
+                                    ${icons.checkCircle}
+                                </div>
+                                <p class="text-3xl font-bold text-emerald-500">${stats.completedCount}</p>
+                            </div>
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="${theme.textSecondary} text-sm">Pending Today</span>
+                                    ${icons.alert}
+                                </div>
+                                <p class="text-3xl font-bold text-orange-500">${stats.pendingCount}</p>
+                            </div>
+                        </div>
+
+                        <!-- Pending Users Section -->
+                        ${stats.pendingCount > 0 ? `
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    ${icons.alert}
+                                    <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
+                                </div>
+                                <div class="space-y-3">
+                                    ${stats.pendingUsers.map(user => {
+                                        const userStats = getUserStats(user);
+                                        return `
+                                            <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-lg">
+                                                        ${user.name.charAt(0).toUpperCase()}
+                                                    </div>
+                                                    <div>
+                                                        <h3 class="font-semibold">${user.name}</h3>
+                                                        <p class="text-sm ${theme.textSecondary}">
+                                                            ${userStats.daysPending === 0 ? 'Not started today' : 
+                                                              userStats.daysPending === 1 ? '1 day pending' : 
+                                                              `${userStats.daysPending} days pending`}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <span class="text-orange-500 font-semibold">⚠</span>
+                                            </div>
+                                        `;
+                                    }).join('')}
+                                </div>
+                            </div>
+                        ` : `
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
+                                <div class="text-emerald-500 text-5xl mb-3">🎉</div>
+                                <h3 class="text-xl font-bold mb-2">Everyone is up to date!</h3>
+                                <p class="${theme.textSecondary}">All family members have completed today's reading.</p>
+                            </div>
+                        `}
+
+                        <!-- All Users List -->
+                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <div class="flex items-center gap-3 mb-4">
+                                ${icons.users}
+                                <h2 class="text-lg font-bold">All Users</h2>
+                            </div>
+                            <div class="space-y-3">
+                                ${state.users.map(user => {
+                                    const userStats = getUserStats(user);
+                                    return `
+                                        <button onclick="switchUser({id: '${user.id}', name: '${user.name}', progress: ${JSON.stringify(user.progress).replace(/"/g, '&quot;')}, completedDates: ${JSON.stringify(user.completedDates).replace(/"/g, '&quot;')}, joinedDate: '${user.joinedDate}'}); state.showDashboard = false; render();" class="w-full flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-left">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-12 h-12 rounded-full ${userStats.hasReadToday ? 'bg-emerald-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-lg">
+                                                    ${user.name.charAt(0).toUpperCase()}
+                                                </div>
+                                                <div class="flex-1 min-w-0">
+                                                    <div class="flex items-center gap-2 mb-1">
+                                                        <h3 class="font-semibold truncate">${user.name}</h3>
+                                                        ${userStats.hasReadToday ? `<span class="text-emerald-500">${icons.checkCircle}</span>` : ''}
+                                                    </div>
+                                                    <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs ${theme.textSecondary}">
+                                                        <span>${userStats.chaptersRead} chapters read</span>
+                                                        <span>${userStats.totalProgress}% complete</span>
+                                                        ${userStats.lastReadDate ? `
+                                                            <span>Last: ${userStats.lastReadDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                                                        ` : '<span>No readings yet</span>'}
+                                                        ${!userStats.hasReadToday && userStats.daysPending > 0 ? `
+                                                            <span class="text-orange-500">${userStats.daysPending} ${userStats.daysPending === 1 ? 'day' : 'days'} pending</span>
+                                                        ` : ''}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            ${icons.chevronRight}
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Add New User -->
+                        <button onclick="state.showUserModal = true; render();" class="w-full ${theme.card} border-2 border-dashed ${theme.border} rounded-xl p-4 flex items-center justify-center gap-2 font-semibold ${theme.cardHover} transition-colors">
+                            ${icons.plus}
+                            Add Family Member
+                        </button>
+                    </div>
+
+                    ${state.showUserModal ? `
+                        <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+                            <div class="${theme.card} rounded-2xl p-6 max-w-md w-full">
+                                <h2 class="text-2xl font-bold mb-4">Add Family Member</h2>
+                                <input id="newUserName" type="text" placeholder="Enter name" class="w-full ${theme.card} ${theme.text} border ${theme.border} rounded-lg px-4 py-3 mb-4 outline-none focus:ring-2 focus:ring-blue-500" autofocus />
+                                <div class="flex gap-3">
+                                    <button onclick="state.showUserModal = false; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
+                                        Cancel
+                                    </button>
+                                    <button onclick="handleAddUser()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 font-semibold transition-colors">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
         function renderUserSelection() {
             const theme = state.darkMode ? {
                 bg: 'bg-slate-900',
@@ -1876,10 +2161,8 @@
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <button onclick="window.history.back()" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M19 12H5M12 19l-7-7 7-7"/>
-                                        </svg>
+                                    <button onclick="state.showDashboard = true; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Dashboard">
+                                        ${icons.chevronLeft}
                                     </button>
                                     <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold">
                                         ${state.currentUser.name.charAt(0).toUpperCase()}
@@ -1904,7 +2187,7 @@
                                     <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
-                                    <button onclick="state.isAdmin = true; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Dashboard">
+                                    <button onclick="state.isAdmin = true; state.showDashboard = true; localStorage.setItem('isAdmin', 'true'); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Dashboard">
                                         ${icons.dashboard}
                                     </button>
                                     <button onclick="state.currentUser = null; saveData(); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Profile">
@@ -2255,7 +2538,7 @@
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    <button onclick="state.isAdmin = false; render();" class="bg-slate-700 hover:bg-slate-600 text-white rounded-lg px-4 py-2 font-semibold transition-colors">
+                                    <button onclick="state.isAdmin = false; localStorage.setItem('isAdmin', 'false'); render();" class="bg-slate-700 hover:bg-slate-600 text-white rounded-lg px-4 py-2 font-semibold transition-colors">
                                         Exit Admin
                                     </button>
                                 </div>
@@ -2354,8 +2637,17 @@
             const app = document.getElementById('app');
 
             if (state.isAdmin) {
-                app.innerHTML = renderAdminView();
+                // Admin always sees dashboard
+                app.innerHTML = renderDashboard();
+                // Focus input if modal is open
+                if (state.showUserModal) {
+                    setTimeout(() => {
+                        const input = document.getElementById('newUserName');
+                        if (input) input.focus();
+                    }, 100);
+                }
             } else if (!state.currentUser) {
+                // Non-admin without current user sees profile selection
                 // Reload users from Supabase when showing profile selection
                 if (!state.isLoadingProfiles) {
                     state.isLoadingProfiles = true;
@@ -2363,6 +2655,16 @@
                     state.isLoadingProfiles = false;
                 }
                 app.innerHTML = renderUserSelection();
+                // Focus input if modal is open
+                if (state.showUserModal) {
+                    setTimeout(() => {
+                        const input = document.getElementById('newUserName');
+                        if (input) input.focus();
+                    }, 100);
+                }
+            } else if (state.showDashboard) {
+                // Show dashboard when a user is logged in but dashboard view is active
+                app.innerHTML = renderDashboard();
                 // Focus input if modal is open
                 if (state.showUserModal) {
                     setTimeout(() => {
