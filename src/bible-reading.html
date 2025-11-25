@@ -16,6 +16,23 @@
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
     <script>
+        // Force cache refresh for updated reading plan
+        const APP_VERSION = '20251126003722';
+        const STORED_VERSION = localStorage.getItem('bibleAppVersion');
+        if (STORED_VERSION !== APP_VERSION) {
+            console.log('New version detected, clearing cache...');
+            localStorage.setItem('bibleAppVersion', APP_VERSION);
+            if ('caches' in window) {
+                caches.keys().then(names => {
+                    names.forEach(name => caches.delete(name));
+                });
+            }
+            // Reload without cache
+            if (STORED_VERSION) {
+                window.location.reload(true);
+            }
+        }
+        
         // Apply dark theme class immediately if saved
         const isDarkTheme = localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme');
         if (isDarkTheme) {
