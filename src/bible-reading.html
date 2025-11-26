@@ -2798,20 +2798,43 @@
                                         </div>
                                         <div class="flex items-center gap-6">
                                             <div class="relative w-32 h-32 flex-shrink-0">
-                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
-                                                    <circle cx="60" cy="60" r="52" fill="none" stroke="${state.darkMode ? '#1e293b' : '#f3f4f6'}" stroke-width="8" opacity="0.3"/>
-                                                    <circle cx="60" cy="60" r="48" fill="none" stroke="${state.darkMode ? '#334155' : '#e5e7eb'}" stroke-width="12"/>
-                                                    <circle cx="60" cy="60" r="48" fill="none" stroke="url(#otGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${(otProgress.percentage / 100) * 301.6} 301.6" class="transition-all duration-700 ease-out" style="filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6))"/>
-                                                    <defs>
-                                                        <linearGradient id="otGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                                                            <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                                                            <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
-                                                        </linearGradient>
-                                                    </defs>
+                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                                                    ${(() => {
+                                                        const segments = [];
+                                                        const totalSegments = 48;
+                                                        const filledSegments = Math.round((otProgress.percentage / 100) * totalSegments);
+                                                        
+                                                        for (let i = 0; i < totalSegments; i++) {
+                                                            const filled = i < filledSegments;
+                                                            const angle = (i / totalSegments) * 360;
+                                                            const startAngle = angle;
+                                                            const endAngle = angle + (360 / totalSegments) - 2;
+                                                            
+                                                            const radius = 70;
+                                                            const innerRadius = 55;
+                                                            
+                                                            const startRad = (startAngle * Math.PI) / 180;
+                                                            const endRad = (endAngle * Math.PI) / 180;
+                                                            
+                                                            const x1 = 100 + radius * Math.cos(startRad);
+                                                            const y1 = 100 + radius * Math.sin(startRad);
+                                                            const x2 = 100 + radius * Math.cos(endRad);
+                                                            const y2 = 100 + radius * Math.sin(endRad);
+                                                            
+                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                            
+                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                            const segmentColor = filled ? '#3b82f6' : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                            segments.push('<path d="' + path + '" fill="' + segmentColor + '" opacity="' + (filled ? '1' : '0.3') + '" />');
+                                                        }
+                                                        return segments.join('');
+                                                    })()}
                                                 </svg>
                                                 <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                                    <span id="otProgressPercentage" class="progress-percentage text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">${otProgress.percentage}%</span>
+                                                    <span id="otProgressPercentage" class="progress-percentage text-xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">${otProgress.percentage}%</span>
                                                 </div>
                                             </div>
                                             <div class="flex-1">
@@ -2842,20 +2865,43 @@
                                         </div>
                                         <div class="flex items-center gap-6">
                                             <div class="relative w-32 h-32 flex-shrink-0">
-                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
-                                                    <circle cx="60" cy="60" r="52" fill="none" stroke="${state.darkMode ? '#1e293b' : '#f3f4f6'}" stroke-width="8" opacity="0.3"/>
-                                                    <circle cx="60" cy="60" r="48" fill="none" stroke="${state.darkMode ? '#334155' : '#e5e7eb'}" stroke-width="12"/>
-                                                    <circle cx="60" cy="60" r="48" fill="none" stroke="url(#ntGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${(ntProgress.percentage / 100) * 301.6} 301.6" class="transition-all duration-700 ease-out" style="filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))"/>
-                                                    <defs>
-                                                        <linearGradient id="ntGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                            <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
-                                                            <stop offset="50%" style="stop-color:#14b8a6;stop-opacity:1" />
-                                                            <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
-                                                        </linearGradient>
-                                                    </defs>
+                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                                                    ${(() => {
+                                                        const segments = [];
+                                                        const totalSegments = 48;
+                                                        const filledSegments = Math.round((ntProgress.percentage / 100) * totalSegments);
+                                                        
+                                                        for (let i = 0; i < totalSegments; i++) {
+                                                            const filled = i < filledSegments;
+                                                            const angle = (i / totalSegments) * 360;
+                                                            const startAngle = angle;
+                                                            const endAngle = angle + (360 / totalSegments) - 2;
+                                                            
+                                                            const radius = 70;
+                                                            const innerRadius = 55;
+                                                            
+                                                            const startRad = (startAngle * Math.PI) / 180;
+                                                            const endRad = (endAngle * Math.PI) / 180;
+                                                            
+                                                            const x1 = 100 + radius * Math.cos(startRad);
+                                                            const y1 = 100 + radius * Math.sin(startRad);
+                                                            const x2 = 100 + radius * Math.cos(endRad);
+                                                            const y2 = 100 + radius * Math.sin(endRad);
+                                                            
+                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                            
+                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                            const segmentColor = filled ? '#10b981' : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                            segments.push('<path d="' + path + '" fill="' + segmentColor + '" opacity="' + (filled ? '1' : '0.3') + '" />');
+                                                        }
+                                                        return segments.join('');
+                                                    })()}
                                                 </svg>
                                                 <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                                    <span id="ntProgressPercentage" class="progress-percentage text-3xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">${ntProgress.percentage}%</span>
+                                                    <span id="ntProgressPercentage" class="progress-percentage text-xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">${ntProgress.percentage}%</span>
                                                 </div>
                                             </div>
                                             <div class="flex-1">
@@ -2883,20 +2929,43 @@
                                 <div class="flex items-center justify-center gap-6 md:gap-12">
                                     <div class="flex flex-col items-center">
                                         <div class="relative w-24 h-24 md:w-36 md:h-36 mb-2 md:mb-3">
-                                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
-                                                <circle cx="60" cy="60" r="52" fill="none" stroke="${state.darkMode ? '#1e293b' : '#f3f4f6'}" stroke-width="8" opacity="0.3"/>
-                                                <circle cx="60" cy="60" r="48" fill="none" stroke="${state.darkMode ? '#334155' : '#e5e7eb'}" stroke-width="12"/>
-                                                <circle cx="60" cy="60" r="48" fill="none" stroke="url(#otGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${(otProgress.percentage / 100) * 301.6} 301.6" class="transition-all duration-700 ease-out" style="filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6))"/>
-                                                <defs>
-                                                    <linearGradient id="otGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
-                                                        <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
-                                                        <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
-                                                    </linearGradient>
-                                                </defs>
+                                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                                                ${(() => {
+                                                    const segments = [];
+                                                    const totalSegments = 48;
+                                                    const filledSegments = Math.round((otProgress.percentage / 100) * totalSegments);
+                                                    
+                                                    for (let i = 0; i < totalSegments; i++) {
+                                                        const filled = i < filledSegments;
+                                                        const angle = (i / totalSegments) * 360;
+                                                        const startAngle = angle;
+                                                        const endAngle = angle + (360 / totalSegments) - 2;
+                                                        
+                                                        const radius = 70;
+                                                        const innerRadius = 55;
+                                                        
+                                                        const startRad = (startAngle * Math.PI) / 180;
+                                                        const endRad = (endAngle * Math.PI) / 180;
+                                                        
+                                                        const x1 = 100 + radius * Math.cos(startRad);
+                                                        const y1 = 100 + radius * Math.sin(startRad);
+                                                        const x2 = 100 + radius * Math.cos(endRad);
+                                                        const y2 = 100 + radius * Math.sin(endRad);
+                                                        
+                                                        const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                        const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                        const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                        const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                        
+                                                        const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                        const segmentColor = filled ? '#3b82f6' : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                        segments.push('<path d="' + path + '" fill="' + segmentColor + '" opacity="' + (filled ? '1' : '0.3') + '" />');
+                                                    }
+                                                    return segments.join('');
+                                                })()}
                                             </svg>
                                             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                                <span class="text-xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">${otProgress.percentage}%</span>
+                                                <span class="text-lg md:text-xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">${otProgress.percentage}%</span>
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-1.5 md:gap-2">
@@ -2907,20 +2976,43 @@
 
                                     <div class="flex flex-col items-center">
                                         <div class="relative w-24 h-24 md:w-36 md:h-36 mb-2 md:mb-3">
-                                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
-                                                <circle cx="60" cy="60" r="52" fill="none" stroke="${state.darkMode ? '#1e293b' : '#f3f4f6'}" stroke-width="8" opacity="0.3"/>
-                                                <circle cx="60" cy="60" r="48" fill="none" stroke="${state.darkMode ? '#334155' : '#e5e7eb'}" stroke-width="12"/>
-                                                <circle cx="60" cy="60" r="48" fill="none" stroke="url(#ntGradient)" stroke-width="12" stroke-linecap="round" stroke-dasharray="${(ntProgress.percentage / 100) * 301.6} 301.6" class="transition-all duration-700 ease-out" style="filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))"/>
-                                                <defs>
-                                                    <linearGradient id="ntGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                        <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
-                                                        <stop offset="50%" style="stop-color:#14b8a6;stop-opacity:1" />
-                                                        <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
-                                                    </linearGradient>
-                                                </defs>
+                                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                                                ${(() => {
+                                                    const segments = [];
+                                                    const totalSegments = 48;
+                                                    const filledSegments = Math.round((ntProgress.percentage / 100) * totalSegments);
+                                                    
+                                                    for (let i = 0; i < totalSegments; i++) {
+                                                        const filled = i < filledSegments;
+                                                        const angle = (i / totalSegments) * 360;
+                                                        const startAngle = angle;
+                                                        const endAngle = angle + (360 / totalSegments) - 2;
+                                                        
+                                                        const radius = 70;
+                                                        const innerRadius = 55;
+                                                        
+                                                        const startRad = (startAngle * Math.PI) / 180;
+                                                        const endRad = (endAngle * Math.PI) / 180;
+                                                        
+                                                        const x1 = 100 + radius * Math.cos(startRad);
+                                                        const y1 = 100 + radius * Math.sin(startRad);
+                                                        const x2 = 100 + radius * Math.cos(endRad);
+                                                        const y2 = 100 + radius * Math.sin(endRad);
+                                                        
+                                                        const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                        const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                        const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                        const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                        
+                                                        const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                        const segmentColor = filled ? '#10b981' : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                        segments.push('<path d="' + path + '" fill="' + segmentColor + '" opacity="' + (filled ? '1' : '0.3') + '" />');
+                                                    }
+                                                    return segments.join('');
+                                                })()}
                                             </svg>
                                             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                                <span class="text-xl md:text-3xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">${ntProgress.percentage}%</span>
+                                                <span class="text-lg md:text-xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">${ntProgress.percentage}%</span>
                                             </div>
                                         </div>
                                         <div class="flex flex-col items-center gap-0.5">
@@ -3082,12 +3174,57 @@
                                         
                                         <div class="space-y-4">
                                             <div>
-                                                <div class="flex justify-between text-sm mb-2">
+                                                <div class="flex justify-between text-sm mb-4">
                                                     <span class="${theme.textSecondary}">Progress</span>
                                                     <span class="font-bold">${percentage}%</span>
                                                 </div>
-                                                <div class="h-2 rounded-full overflow-hidden ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'}">
-                                                    <div class="h-full bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300" style="width: ${percentage}%"></div>
+                                                <!-- Segmented Circular Progress Bar -->
+                                                <div class="flex justify-center">
+                                                    <div style="width: 140px; height: 140px; position: relative;">
+                                                        <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
+                                                            ${(() => {
+                                                                const segments = [];
+                                                                const totalSegments = 48;
+                                                                const filledSegments = Math.round((percentage / 100) * totalSegments);
+                                                                let progressColor = '#3b82f6';
+                                                                if (percentage > 25) progressColor = '#06b6d4';
+                                                                if (percentage > 50) progressColor = '#10b981';
+                                                                if (percentage > 75) progressColor = '#f59e0b';
+                                                                
+                                                                for (let i = 0; i < totalSegments; i++) {
+                                                                    const filled = i < filledSegments;
+                                                                    const angle = (i / totalSegments) * 360;
+                                                                    const startAngle = angle;
+                                                                    const endAngle = angle + (360 / totalSegments) - 2;
+                                                                    
+                                                                    const radius = 70;
+                                                                    const innerRadius = 55;
+                                                                    
+                                                                    const startRad = (startAngle * Math.PI) / 180;
+                                                                    const endRad = (endAngle * Math.PI) / 180;
+                                                                    
+                                                                    const x1 = 100 + radius * Math.cos(startRad);
+                                                                    const y1 = 100 + radius * Math.sin(startRad);
+                                                                    const x2 = 100 + radius * Math.cos(endRad);
+                                                                    const y2 = 100 + radius * Math.sin(endRad);
+                                                                    
+                                                                    const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                                    const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                                    const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                                    const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                                    
+                                                                    const largeArc = 0;
+                                                                    const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 ' + largeArc + ' 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 ' + largeArc + ' 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                                    const segmentColor = filled ? progressColor : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                                    segments.push('<path d="' + path + '" fill="' + segmentColor + '" opacity="' + (filled ? '1' : '0.3') + '" />');
+                                                                }
+                                                                return segments.join('');
+                                                            })()}
+                                                        </svg>
+                                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                                            <div style="font-size: 1.5em; font-weight: bold;">${percentage}%</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             
