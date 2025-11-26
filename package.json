@@ -1,4 +1,12 @@
 {
+  "name": "my-bible",
+  "version": "1.0.0",
+  "description": "Read the Bible in Tamil and Easy English",
+  "scripts": {
+    "update-cache": "node update-cache-version.js",
+    "build": "npm run update-cache",
+    "deploy": "npm run build && git add . && git commit -m 'chore: update cache version' || true"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.84.0"
   }

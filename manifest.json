@@ -22,6 +22,12 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["books", "education", "lifestyle"],
-  "screenshots": []
+  "categories": [
+    "books",
+    "education",
+    "lifestyle"
+  ],
+  "screenshots": [],
+  "version": "20251126111115",
+  "last_updated": "2025-11-26T05:41:15.549Z"
 }
