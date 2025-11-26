@@ -5428,8 +5428,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bible Reading option - navigate to Bible Reading page
     if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
-            // Navigate to the Bible Reading HTML file
-            window.location.href = 'src/bible-reading.html';
+            // Navigate to the Bible Reading HTML file with cache-busting parameter
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/bible-reading.html?cb=${cacheBuster}`;
         });
     }
     // Exit Bible Reading page
