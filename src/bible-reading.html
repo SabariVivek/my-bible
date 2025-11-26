@@ -1367,6 +1367,29 @@
             userModalError: ''  // Error message for user modal
         };
 
+        // Handle back navigation (mobile swipe back, browser back button)
+        window.addEventListener('popstate', (event) => {
+            // If we're in the admin view, go back to dashboard
+            if (state.showAdminView) {
+                state.showAdminView = false;
+                render();
+                // Push a new state so the next back button takes them out of the app
+                window.history.pushState({ page: 'dashboard' }, '', window.location.href);
+            } else if (state.currentUser && !state.showDashboard) {
+                // If we're in a profile detail page, go back to dashboard
+                state.showDashboard = true;
+                render();
+                // Push a new state so the next back button works correctly
+                window.history.pushState({ page: 'dashboard' }, '', window.location.href);
+            } else {
+                // If we're in dashboard or user selection, exit the Bible Reading page
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Push initial state to history so back button behavior works correctly
+        window.history.pushState({ page: 'dashboard' }, '', window.location.href);
+
         // Helper Functions
         function parseChapterRange(chaptersStr) {
             const chapters = [];
