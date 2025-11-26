@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="root">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,32 @@
     <meta http-equiv="Expires" content="0">
     <title>Bible Reading</title>
     <link rel="icon" type="image/png" href="../resources/icons/bible.png">
+    <style>
+        /* Critical dark theme styles - must load before Tailwind */
+        html.dark-theme,
+        html.dark-theme body {
+            background-color: #0f172a !important;
+            color: #f1f5f9 !important;
+        }
+        
+        html.dark-theme .custom-modal {
+            background: #1e293b !important;
+            color: #f1f5f9 !important;
+        }
+        
+        html.dark-theme .custom-modal-backdrop {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        html.dark-theme .calendar-modal-content {
+            background-color: #1e293b !important;
+        }
+        
+        html.dark-theme .modal {
+            background: #1e293b !important;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Supabase Client Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -33,7 +59,7 @@
             }
         }
         
-        // Apply dark theme class immediately if saved
+        // Apply dark theme class immediately before DOM renders
         const isDarkTheme = localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme');
         if (isDarkTheme) {
             document.documentElement.classList.add('dark-theme');
@@ -63,8 +89,8 @@
 
         html.dark-theme,
         html.dark-theme body {
-            background-color: #202124;
-            color: #e8eaed;
+            background-color: #202124 !important;
+            color: #e8eaed !important;
         }
 
         /* Container */
