@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#1e293b" id="theme-color-meta">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -1579,6 +1579,32 @@
                             await loadUserProgress(state.currentUser);
                         }
                     }
+
+                    // If on dashboard, also load all users' completed dates for count display while loader is showing
+                    if (state.showDashboard && state.users.length > 0) {
+                        showLoading('Loading statistics...');
+                        try {
+                            // Load all users' completed dates in parallel to show accurate counts
+                            await Promise.all(state.users.map(async user => {
+                                if (!state.loadedUserData.has(user.id)) {
+                                    try {
+                                        const dates = await BibleReadingDB.getCompletedDates(user.id);
+                                        user.completedDates = {};
+                                        dates.forEach(dateStr => {
+                                            const [year, month, day] = dateStr.split('-').map(Number);
+                                            const dateKey = `${year}-${month}-${day}`;
+                                            user.completedDates[dateKey] = true;
+                                        });
+                                        state.loadedUserData.add(user.id);
+                                    } catch (err) {
+                                        console.warn(`Could not load dates for user ${user.id}:`, err);
+                                    }
+                                }
+                            }));
+                        } catch (error) {
+                            console.error('Error loading dashboard statistics:', error);
+                        }
+                    }
                 }
             } catch (error) {
                 console.error('Error loading data:', error);
@@ -2804,6 +2830,12 @@
                                         <p class="text-sm ${theme.textSecondary}">Manage Profiles</p>
                                     </div>
                                 </div>
+                                <button onclick="state.showUserModal = true; render();" class="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-4 py-2 font-semibold transition-colors flex items-center gap-2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 5v14"/><path d="M5 12h14"/>
+                                    </svg>
+                                    <span class="hidden md:inline">Add Family Member</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -2870,14 +2902,6 @@
                                     </div>
                                 `;
                             }).join('')}
-                            
-                            <!-- Add New User Button -->
-                            <button onclick="state.showUserModal = true; state.userModalError = ''; render();" class="${theme.card} border-2 border-dashed ${theme.border} rounded-2xl p-8 shadow-sm flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:bg-opacity-50 transition-all group">
-                                <div class="w-14 h-14 rounded-full border-2 border-dashed ${theme.border} flex items-center justify-center group-hover:border-blue-500 transition-colors">
-                                    ${icons.plus}
-                                </div>
-                                <span class="font-semibold ${theme.textSecondary} group-hover:text-blue-500 transition-colors">Add Family Member</span>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -3060,6 +3084,34 @@
                     }, 100);
                 }
             } else if (state.showDashboard) {
+                // Load dashboard statistics BEFORE rendering dashboard
+                // This ensures counts are accurate when page is shown
+                if (state.users.length > 0) {
+                    showLoading('Loading statistics...');
+                    try {
+                        // Load all users' completed dates to show accurate dashboard stats
+                        await Promise.all(state.users.map(async user => {
+                            if (!state.loadedUserData.has(user.id)) {
+                                try {
+                                    const dates = await BibleReadingDB.getCompletedDates(user.id);
+                                    user.completedDates = {};
+                                    dates.forEach(dateStr => {
+                                        const [year, month, day] = dateStr.split('-').map(Number);
+                                        const dateKey = `${year}-${month}-${day}`;
+                                        user.completedDates[dateKey] = true;
+                                    });
+                                    state.loadedUserData.add(user.id);
+                                } catch (err) {
+                                    console.warn(`Could not load dates for user ${user.id}:`, err);
+                                }
+                            }
+                        }));
+                    } catch (error) {
+                        console.error('Error loading dashboard statistics:', error);
+                    }
+                }
+                hideLoading();
+                
                 // Show dashboard when user is selected and dashboard view is active
                 app.innerHTML = renderDashboard();
                 // Scroll to top when showing dashboard
