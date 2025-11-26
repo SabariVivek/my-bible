@@ -1689,14 +1689,6 @@
                     user.completedDates[dateKey] = true;
                 });
                 
-                console.log('User progress loaded:', {
-                    userId: user.id,
-                    userName: user.name,
-                    totalProgress: Object.keys(user.progress).length,
-                    completedDates: Object.keys(user.completedDates).length,
-                    dbRecordsTotal: progress.length,
-                    sampleKeys: Object.keys(user.progress).slice(0, 10)
-                });
             } catch (error) {
                 // Error loading progress
                 // Remove from cache on error so it can be retried
