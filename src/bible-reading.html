@@ -1096,20 +1096,33 @@
             // Wait for transition to be ready
             await transition.ready;
             
-            // Animate from right to left
-            document.documentElement.animate(
-                {
-                    clipPath: [
-                        'inset(0 0 0 100%)',
-                        'inset(0 0 0 0%)'
-                    ]
-                },
-                {
-                    duration: 500,
-                    easing: 'ease-in-out',
-                    pseudoElement: '::view-transition-new(root)'
-                }
-            );
+            // Get button position for circular reveal effect (same as index page)
+            if (clickedButton) {
+                const { top, left, width, height } = clickedButton.getBoundingClientRect();
+                const x = left + width / 2;
+                const y = top + height / 2;
+                const right = window.innerWidth - left;
+                const bottom = window.innerHeight - top;
+                const maxRadius = Math.hypot(
+                    Math.max(left, right),
+                    Math.max(top, bottom)
+                );
+                
+                // Animate the circular reveal (same as index page)
+                document.documentElement.animate(
+                    {
+                        clipPath: [
+                            `circle(0px at ${x}px ${y}px)`,
+                            `circle(${maxRadius}px at ${x}px ${y}px)`
+                        ]
+                    },
+                    {
+                        duration: 500,
+                        easing: 'ease-in-out',
+                        pseudoElement: '::view-transition-new(root)'
+                    }
+                );
+            }
         }
         
         // Lightweight re-render for theme changes (no statistics loading)
