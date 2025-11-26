@@ -2416,7 +2416,7 @@
                                             
                                             <!-- Segmented Circular Progress Bar -->
                                             <div class="flex justify-center">
-                                                <div style="width: 200px; height: 200px; position: relative;">
+                                                <div style="width: 150px; height: 150px; position: relative;">
                                                     <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
                                                         ${segments.map((filled, i) => {
                                                             const angle = (i / totalSegments) * 360;
@@ -2483,6 +2483,11 @@
                                 </div>
                             `;
                         })()}
+
+                        <!-- Family Statistics Heading -->
+                        <div class="mt-8 mb-4 text-center">
+                            <h2 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Family Progress</h2>
+                        </div>
 
                         <!-- Stats Card -->
                         <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
