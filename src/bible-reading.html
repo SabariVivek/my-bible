@@ -1079,6 +1079,38 @@
             `;
         }
 
+        function renderUserModal() {
+            const theme = state.darkMode ? {
+                card: 'bg-slate-800',
+                text: 'text-gray-100',
+                border: 'border-slate-700'
+            } : {
+                card: 'bg-white',
+                text: 'text-gray-900',
+                border: 'border-gray-200'
+            };
+            
+            return `
+                <div class="user-modal-backdrop fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onclick="if(event.target === this) { state.showUserModal = false; state.userModalError = ''; render(); }">
+                    <div class="${theme.card} rounded-2xl p-6 max-w-md w-full">
+                        <h2 class="text-2xl font-bold mb-4">Add Family Member</h2>
+                        <div class="mb-4">
+                            <input id="newUserName" type="text" placeholder="Enter name" class="w-full ${theme.card} ${theme.text} border ${state.userModalError ? 'border-red-500' : theme.border} rounded-lg px-4 py-3 outline-none focus:ring-2 ${state.userModalError ? 'focus:ring-red-500' : 'focus:ring-blue-500'}" onkeypress="if(event.key === 'Enter') handleAddUser()" autofocus />
+                            ${state.userModalError ? `<p class="text-red-500 text-xs mt-1">${state.userModalError}</p>` : ''}
+                        </div>
+                        <div class="flex gap-3">
+                            <button onclick="state.showUserModal = false; state.userModalError = ''; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold">
+                                Cancel
+                            </button>
+                            <button onclick="handleAddUser()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 font-semibold transition-colors">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
         // Swipe Gesture Handling
         let touchStartX = 0;
         let touchEndX = 0;
@@ -1672,6 +1704,16 @@
         }
 
         // User Functions
+        function handleAddUser() {
+            const input = document.getElementById('newUserName');
+            if (!input) return;
+            
+            const name = input.value.trim();
+            if (name) {
+                addUser(name);
+            }
+        }
+
         async function addUser(name) {
             const trimmedName = name.trim();
             
@@ -2286,14 +2328,6 @@
                                 </button>
                             ` : ''}
                         </div>
-
-                        <!-- Add New User (Admin Only) -->
-                        ${state.isAdmin ? `
-                            <button onclick="state.showUserModal = true; state.userModalError = ''; render();" class="w-full ${theme.card} border-2 border-dashed ${theme.border} rounded-xl p-4 flex items-center justify-center gap-2 font-semibold ${theme.cardHover} transition-colors">
-                                ${icons.plus}
-                                Add Family Member
-                            </button>
-                        ` : ''}
                     </div>
 
                     ${state.showUserModal ? `
@@ -2457,12 +2491,6 @@
                                         </p>
                                     </div>
                                 </div>
-                                
-                                <div class="flex items-center gap-2">
-                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
-                                        ${state.darkMode ? icons.sun : icons.moon}
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -2489,7 +2517,10 @@
                                                 const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
                                                 return `
                                                 <div class="${theme.card} border ${theme.border} rounded-lg p-3 flex items-center justify-between gap-3">
-                                                    <span class="font-medium flex-1">${portion.book} ${portion.chapters}</span>
+                                                    <div class="flex items-center gap-3 flex-1">
+                                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
+                                                        <span class="font-medium">${portion.book} ${portion.chapters}</span>
+                                                    </div>
                                                     <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
                                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                                                             <polyline points="20 6 9 17 4 12"/>
@@ -2773,12 +2804,6 @@
                                         <p class="text-sm ${theme.textSecondary}">Manage Profiles</p>
                                     </div>
                                 </div>
-                                
-                                <div class="flex items-center gap-2">
-                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
-                                        ${state.darkMode ? icons.sun : icons.moon}
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -2845,6 +2870,14 @@
                                     </div>
                                 `;
                             }).join('')}
+                            
+                            <!-- Add New User Button -->
+                            <button onclick="state.showUserModal = true; state.userModalError = ''; render();" class="${theme.card} border-2 border-dashed ${theme.border} rounded-2xl p-8 shadow-sm flex flex-col items-center justify-center gap-3 hover:border-blue-500 hover:bg-opacity-50 transition-all group">
+                                <div class="w-14 h-14 rounded-full border-2 border-dashed ${theme.border} flex items-center justify-center group-hover:border-blue-500 transition-colors">
+                                    ${icons.plus}
+                                </div>
+                                <span class="font-semibold ${theme.textSecondary} group-hover:text-blue-500 transition-colors">Add Family Member</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -3029,6 +3062,8 @@
             } else if (state.showDashboard) {
                 // Show dashboard when user is selected and dashboard view is active
                 app.innerHTML = renderDashboard();
+                // Scroll to top when showing dashboard
+                window.scrollTo({ top: 0, behavior: 'smooth' });
                 // Focus input if modal is open
                 if (state.showUserModal) {
                     setTimeout(() => {
@@ -3046,6 +3081,18 @@
             if (existingModal) existingModal.remove();
             if (state.customModal) {
                 document.body.insertAdjacentHTML('beforeend', renderCustomModal());
+            }
+            
+            // Render user modal if present (for settings page)
+            const existingUserModal = document.querySelector('.user-modal-backdrop');
+            if (existingUserModal) existingUserModal.remove();
+            if (state.showUserModal && state.showAdminView) {
+                document.body.insertAdjacentHTML('beforeend', renderUserModal());
+                // Focus input after render
+                setTimeout(() => {
+                    const input = document.getElementById('newUserName');
+                    if (input) input.focus();
+                }, 100);
             }
 
             // Initialize swipe listeners for reading card (with delay to ensure DOM is ready)
