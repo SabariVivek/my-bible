@@ -1507,6 +1507,8 @@
             
             // Calculate chapters scheduled by today's date
             let chaptersScheduledByToday = 0;
+            let otChaptersScheduled = 0;
+            let ntChaptersScheduled = 0;
             const booksWithChapters = new Map();
             
             readingDaysUpToToday.forEach(entry => {
@@ -1519,7 +1521,17 @@
                     }
                     
                     const bookChapters = booksWithChapters.get(bookName);
-                    chapterRanges.forEach(ch => bookChapters.add(ch));
+                    chapterRanges.forEach(ch => {
+                        bookChapters.add(ch);
+                        
+                        // Count OT vs NT
+                        const isOT = oldTestamentBooks.some(b => b.name === bookName);
+                        if (isOT) {
+                            otChaptersScheduled++;
+                        } else {
+                            ntChaptersScheduled++;
+                        }
+                    });
                 });
             });
             
@@ -1535,6 +1547,8 @@
             return {
                 chaptersScheduled: chaptersScheduledByToday,
                 totalChapters: totalChaptersInBible,
+                otChapters: otChaptersScheduled,
+                ntChapters: ntChaptersScheduled,
                 percentage: Math.min(percentage, 100),
                 dayOfYear: dayOfYear
             };
@@ -2441,12 +2455,12 @@
                                         <!-- Progress details -->
                                         <div class="grid grid-cols-2 gap-4 mt-6 pt-4 border-t ${theme.border}">
                                             <div>
-                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Scheduled</p>
-                                                <p class="text-xl font-bold">${progress.chaptersScheduled}</p>
+                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Old Testament</p>
+                                                <p class="text-xl font-bold">${progress.otChapters}/929</p>
                                             </div>
                                             <div>
-                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Total Bible</p>
-                                                <p class="text-xl font-bold">${progress.totalChapters}</p>
+                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">New Testament</p>
+                                                <p class="text-xl font-bold">${progress.ntChapters}/260</p>
                                             </div>
                                         </div>
                                     ` : `
@@ -3190,61 +3204,6 @@
                                         </div>
                                         
                                         <div class="space-y-4">
-                                            <div>
-                                                <div class="flex justify-between text-sm mb-4">
-                                                    <span class="${theme.textSecondary}">Progress</span>
-                                                    <span class="font-bold">${percentage}%</span>
-                                                </div>
-                                                <!-- Segmented Circular Progress Bar -->
-                                                <div class="flex justify-center">
-                                                    <div style="width: 140px; height: 140px; position: relative;">
-                                                        <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
-                                                            ${(() => {
-                                                                const segments = [];
-                                                                const totalSegments = 48;
-                                                                const filledSegments = Math.round((percentage / 100) * totalSegments);
-                                                                let progressColor = '#3b82f6';
-                                                                if (percentage > 25) progressColor = '#06b6d4';
-                                                                if (percentage > 50) progressColor = '#10b981';
-                                                                if (percentage > 75) progressColor = '#f59e0b';
-                                                                
-                                                                for (let i = 0; i < totalSegments; i++) {
-                                                                    const filled = i < filledSegments;
-                                                                    const angle = (i / totalSegments) * 360;
-                                                                    const startAngle = angle;
-                                                                    const endAngle = angle + (360 / totalSegments) - 2;
-                                                                    
-                                                                    const radius = 70;
-                                                                    const innerRadius = 55;
-                                                                    
-                                                                    const startRad = (startAngle * Math.PI) / 180;
-                                                                    const endRad = (endAngle * Math.PI) / 180;
-                                                                    
-                                                                    const x1 = 100 + radius * Math.cos(startRad);
-                                                                    const y1 = 100 + radius * Math.sin(startRad);
-                                                                    const x2 = 100 + radius * Math.cos(endRad);
-                                                                    const y2 = 100 + radius * Math.sin(endRad);
-                                                                    
-                                                                    const ix1 = 100 + innerRadius * Math.cos(startRad);
-                                                                    const iy1 = 100 + innerRadius * Math.sin(startRad);
-                                                                    const ix2 = 100 + innerRadius * Math.cos(endRad);
-                                                                    const iy2 = 100 + innerRadius * Math.sin(endRad);
-                                                                    
-                                                                    const largeArc = 0;
-                                                                    const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 ' + largeArc + ' 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 ' + largeArc + ' 0 ' + ix1 + ' ' + iy1 + ' Z';
-                                                                    const segmentColor = filled ? progressColor : (state.darkMode ? '#334155' : '#e5e7eb');
-                                                                    segments.push('<path d="' + path + '" fill="' + segmentColor + '" opacity="' + (filled ? '1' : '0.3') + '" />');
-                                                                }
-                                                                return segments.join('');
-                                                            })()}
-                                                        </svg>
-                                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                                                            <div style="font-size: 1.5em; font-weight: bold;">${percentage}%</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
                                             <div class="grid grid-cols-2 gap-4 pt-3 border-t ${theme.border}">
                                                 <div>
                                                     <p class="text-xs ${theme.textSecondary} mb-1">Chapters</p>
