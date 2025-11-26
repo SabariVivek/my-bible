@@ -1051,19 +1051,83 @@
         }
 
         // Theme toggle function
-        function toggleTheme() {
-            document.documentElement.classList.toggle('dark-theme');
-            const isDark = document.documentElement.classList.contains('dark-theme');
-            localStorage.setItem('readingTrackerTheme', isDark ? 'dark' : 'light');
-            state.darkMode = isDark;
+        async function toggleTheme(event) {
+            const clickedButton = event?.currentTarget || document.querySelector('button[onclick*="toggleTheme"]');
             
-            // Update Android notification bar color
-            const metaThemeColor = document.getElementById('theme-color-meta');
-            if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', isDark ? '#1e293b' : '#ffffff');
+            // Check if View Transition API is supported and user doesn't prefer reduced motion
+            if (
+                !document.startViewTransition ||
+                window.matchMedia('(prefers-reduced-motion: reduce)').matches
+            ) {
+                // Fallback: toggle without animation
+                document.documentElement.classList.toggle('dark-theme');
+                const isDark = document.documentElement.classList.contains('dark-theme');
+                localStorage.setItem('readingTrackerTheme', isDark ? 'dark' : 'light');
+                state.darkMode = isDark;
+                
+                // Update Android notification bar color
+                const metaThemeColor = document.getElementById('theme-color-meta');
+                if (metaThemeColor) {
+                    metaThemeColor.setAttribute('content', isDark ? '#1e293b' : '#ffffff');
+                }
+                
+                // Re-render dashboard only to update theme colors, without loading statistics
+                renderDashboardOnly();
+                return;
             }
             
-            render();
+            // Start view transition
+            const transition = document.startViewTransition(() => {
+                document.documentElement.classList.toggle('dark-theme');
+                const isDark = document.documentElement.classList.contains('dark-theme');
+                localStorage.setItem('readingTrackerTheme', isDark ? 'dark' : 'light');
+                state.darkMode = isDark;
+                
+                // Update Android notification bar color
+                const metaThemeColor = document.getElementById('theme-color-meta');
+                if (metaThemeColor) {
+                    metaThemeColor.setAttribute('content', isDark ? '#1e293b' : '#ffffff');
+                }
+                
+                // Re-render dashboard only to update theme colors, without loading statistics
+                renderDashboardOnly();
+            });
+            
+            // Wait for transition to be ready
+            await transition.ready;
+            
+            // Animate from right to left
+            document.documentElement.animate(
+                {
+                    clipPath: [
+                        'inset(0 0 0 100%)',
+                        'inset(0 0 0 0%)'
+                    ]
+                },
+                {
+                    duration: 500,
+                    easing: 'ease-in-out',
+                    pseudoElement: '::view-transition-new(root)'
+                }
+            );
+        }
+        
+        // Lightweight re-render for theme changes (no statistics loading)
+        function renderDashboardOnly() {
+            const app = document.getElementById('app');
+            if (state.showAdminView) {
+                app.innerHTML = renderProfileManagement();
+            } else if (!state.currentUser) {
+                app.innerHTML = renderUserSelection();
+                if (state.showUserModal) {
+                    setTimeout(() => {
+                        const input = document.getElementById('newUserName');
+                        if (input) input.focus();
+                    }, 100);
+                }
+            } else if (state.showDashboard) {
+                app.innerHTML = renderDashboard();
+            }
         }
 
         // Custom Modal Functions
@@ -2324,7 +2388,7 @@
                                             ${icons.settings}
                                         </button>
                                     ` : ''}
-                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Toggle theme">
+                                    <button onclick="toggleTheme(event)" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Toggle theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
                                 </div>
@@ -3287,7 +3351,7 @@
                                 </div>
                                 
                                 <div class="flex items-center gap-2">
-                                    <button onclick="toggleTheme()" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
+                                    <button onclick="toggleTheme(event)" class="${theme.card} border ${theme.border} rounded-lg p-2 transition-colors" title="Toggle Theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
                                 </div>
