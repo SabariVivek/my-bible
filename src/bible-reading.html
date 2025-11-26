@@ -1441,9 +1441,17 @@
             daysPending = totalDaysSinceJan1 - completedDaysCount;
             if (daysPending < 0) daysPending = 0;
             
-            // Calculate total chapters read (single count - no more dual readings)
-            const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
-            const totalChaptersRead = progressKeys.length;
+            // Calculate total chapters read
+            // Use readChaptersCount if loaded from dashboard, otherwise calculate from progress
+            let totalChaptersRead = 0;
+            if (user.readChaptersCount !== undefined) {
+                // Use the preloaded count from dashboard
+                totalChaptersRead = user.readChaptersCount;
+            } else if (user.progress) {
+                // Fallback to counting from progress object
+                const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
+                totalChaptersRead = progressKeys.length;
+            }
             
             return {
                 hasReadToday,
@@ -2262,8 +2270,8 @@
                                                 <div class="flex items-start gap-3 p-3 ${theme.accent} rounded-lg">
                                                     <span class="text-blue-500 font-bold">${idx + 1}.</span>
                                                     <div class="flex-1">
-                                                        ${tamilName ? `<div class="font-medium">${tamilName} ${portion.chapters}</div>` : ''}
-                                                        <div class="text-xs ${theme.textSecondary}">${portion.book} ${portion.chapters}</div>
+                                                        <div class="font-medium">${portion.book} ${portion.chapters}</div>
+                                                        ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${portion.chapters}</div>` : ''}
                                                     </div>
                                                 </div>
                                             `;
@@ -2578,8 +2586,8 @@
                                                     <div class="flex items-center gap-3 flex-1 min-w-0">
                                                         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
                                                         <div class="min-w-0 flex-1">
-                                                            ${tamilName ? `<div class="font-medium">${tamilName} ${portion.chapters}</div>` : ''}
-                                                            <div class="text-xs ${theme.textSecondary}">${portion.book} ${portion.chapters}</div>
+                                                            <div class="font-medium">${portion.book} ${portion.chapters}</div>
+                                                            ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${portion.chapters}</div>` : ''}
                                                         </div>
                                                     </div>
                                                     <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
@@ -2781,8 +2789,8 @@
                                     <div id="book-${book.name.replace(/\s+/g, '-').toLowerCase()}" class="book-card ${theme.card} border ${theme.border} rounded-xl p-4">
                                         <div id="book-header-${bookIndex}" class="book-header flex items-center justify-between mb-3">
                                             <div id="book-title-${bookIndex}" class="book-title font-bold text-sm">
-                                                <div>${book.tamil_name}</div>
-                                                <div class="text-xs font-normal ${theme.textSecondary}">${book.name}</div>
+                                                <div>${book.name}</div>
+                                                <div class="text-xs font-normal ${theme.textSecondary}">${book.tamil_name}</div>
                                             </div>
                                             <span id="book-progress-${bookIndex}" class="book-progress text-xs px-2 py-1 rounded-full ${readChapters === book.chapters ? 'bg-emerald-500/20 text-emerald-500' : `${state.darkMode ? 'bg-slate-700' : 'bg-gray-100'} ${theme.textSecondary}`}">
                                                 ${readChapters}/${book.chapters}
@@ -2961,15 +2969,13 @@
                 border: 'border-gray-200'
             };
 
-            // Count total chapters read across all users (1189 total chapters)
+            // Count total chapters read across all users using preloaded data
             const totalChaptersRead = state.users.reduce((sum, u) => {
-                const progressKeys = Object.keys(u.progress).filter(k => u.progress[k] === 'read');
-                return sum + progressKeys.length;
+                return sum + (u.readChaptersCount || 0);
             }, 0);
             
             const avgProgress = state.users.length > 0 ? Math.round(state.users.reduce((sum, u) => {
-                const progressKeys = Object.keys(u.progress).filter(k => u.progress[k] === 'read');
-                return sum + (progressKeys.length / 1189) * 100;
+                return sum + ((u.readChaptersCount || 0) / 1449) * 100;
             }, 0) / state.users.length) : 0;
 
             return `
@@ -3021,9 +3027,8 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             ${state.users.map(user => {
-                // Count total chapter readings (OT once + NT twice = 1449 total)
-                const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
-                const totalRead = progressKeys.length;
+                // Use preloaded chapter count from dashboard loading
+                const totalRead = user.readChaptersCount || 0;
                 const percentage = Math.round((totalRead / 1449) * 100);
                 const completedDays = Object.keys(user.completedDates || {}).length;
 
@@ -3101,6 +3106,49 @@
                     await loadData();
                     state.isLoadingProfiles = false;
                 }
+                
+                // Load all users' progress data for accurate statistics display
+                showLoading('Loading user statistics...');
+                try {
+                    await Promise.all(state.users.map(async user => {
+                        try {
+                            // Get completed dates
+                            const dates = await BibleReadingDB.getCompletedDates(user.id);
+                            user.completedDates = {};
+                            dates.forEach(dateStr => {
+                                const [year, month, day] = dateStr.split('-').map(Number);
+                                const dateKey = `${year}-${month}-${day}`;
+                                user.completedDates[dateKey] = true;
+                            });
+                            
+                            // If progress not already loaded, load it now
+                            if (!user.progress || Object.keys(user.progress).length === 0) {
+                                const progress = await BibleReadingDB.getUserProgress(user.id);
+                                user.progress = {};
+                                progress.forEach(p => {
+                                    const normalizedBook = normalizeBookName(p.book_name) || p.book_name;
+                                    const key = `${normalizedBook}-${p.chapter_number}`;
+                                    user.progress[key] = p.status;
+                                });
+                            }
+                            
+                            // Count read chapters from loaded progress
+                            const progressKeys = Object.keys(user.progress).filter(k => user.progress[k] === 'read');
+                            user.readChaptersCount = progressKeys.length;
+                            
+                            state.loadedUserData.add(user.id);
+                        } catch (err) {
+                            console.warn(`Could not load data for user ${user.id}:`, err);
+                            if (!user.completedDates) user.completedDates = {};
+                            if (!user.progress) user.progress = {};
+                            user.readChaptersCount = 0;
+                        }
+                    }));
+                } catch (error) {
+                    console.error('Error loading admin view statistics:', error);
+                }
+                hideLoading();
+                
                 console.log('Calling renderProfileManagement()');
                 app.innerHTML = renderProfileManagement();
                 console.log('Profile management rendered');
@@ -3127,21 +3175,29 @@
                 if (state.users.length > 0) {
                     showLoading('Loading statistics...');
                     try {
-                        // Load all users' completed dates to show accurate dashboard stats
+                        // Load all users' completed dates and chapter counts
                         await Promise.all(state.users.map(async user => {
-                            if (!state.loadedUserData.has(user.id)) {
-                                try {
-                                    const dates = await BibleReadingDB.getCompletedDates(user.id);
-                                    user.completedDates = {};
-                                    dates.forEach(dateStr => {
-                                        const [year, month, day] = dateStr.split('-').map(Number);
-                                        const dateKey = `${year}-${month}-${day}`;
-                                        user.completedDates[dateKey] = true;
-                                    });
-                                    state.loadedUserData.add(user.id);
-                                } catch (err) {
-                                    console.warn(`Could not load dates for user ${user.id}:`, err);
-                                }
+                            try {
+                                // Get completed dates
+                                const dates = await BibleReadingDB.getCompletedDates(user.id);
+                                user.completedDates = {};
+                                dates.forEach(dateStr => {
+                                    const [year, month, day] = dateStr.split('-').map(Number);
+                                    const dateKey = `${year}-${month}-${day}`;
+                                    user.completedDates[dateKey] = true;
+                                });
+                                
+                                // Get progress data and count read chapters
+                                const progress = await BibleReadingDB.getUserProgress(user.id);
+                                const readCount = progress ? progress.length : 0;
+                                user.readChaptersCount = readCount;
+                                
+                                state.loadedUserData.add(user.id);
+                            } catch (err) {
+                                console.warn(`Could not load data for user ${user.id}:`, err);
+                                // Ensure we at least have empty objects
+                                if (!user.completedDates) user.completedDates = {};
+                                user.readChaptersCount = 0;
                             }
                         }));
                     } catch (error) {
