@@ -84,6 +84,9 @@
             background-color: #f8f9fa;
             color: #000000;
             transition: background-color 0.3s, color 0.3s;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         html.dark-theme,
@@ -970,8 +973,8 @@
 
         .reading-card-wrapper {
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
-            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .reading-card-wrapper.swipe-left {
@@ -989,11 +992,11 @@
             }
             50% {
                 transform: rotateY(-90deg) translateX(-50px);
-                opacity: 0.5;
+                opacity: 1;
             }
             51% {
                 transform: rotateY(90deg) translateX(50px);
-                opacity: 0.5;
+                opacity: 1;
             }
             100% {
                 transform: rotateY(0deg) translateX(0);
@@ -1008,11 +1011,11 @@
             }
             50% {
                 transform: rotateY(90deg) translateX(50px);
-                opacity: 0.5;
+                opacity: 1;
             }
             51% {
                 transform: rotateY(-90deg) translateX(-50px);
-                opacity: 0.5;
+                opacity: 1;
             }
             100% {
                 transform: rotateY(0deg) translateX(0);
@@ -1482,6 +1485,58 @@
                 daysPending,
                 chaptersRead: totalChaptersRead,
                 totalProgress: Math.round((totalChaptersRead / 1189) * 100)
+            };
+        }
+
+        // Calculate timeline-based progress independent of actual reading
+        function calculateTimelineProgress() {
+            const today = new Date();
+            const currentYear = today.getFullYear();
+            const startOfYear = new Date(currentYear, 0, 1);
+            
+            // Calculate what day of the year we're on (1-365/366)
+            const timeDiff = today - startOfYear;
+            const dayOfYear = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) + 1;
+            
+            // Get all days in the reading plan up to and including today
+            const readingDaysUpToToday = yearlyReadingPlan.filter(entry => {
+                if (entry.month < today.getMonth() + 1) return true;
+                if (entry.month === today.getMonth() + 1 && entry.day <= today.getDate()) return true;
+                return false;
+            });
+            
+            // Calculate chapters scheduled by today's date
+            let chaptersScheduledByToday = 0;
+            const booksWithChapters = new Map();
+            
+            readingDaysUpToToday.forEach(entry => {
+                entry.portions.forEach(portion => {
+                    const bookName = normalizeBookName(portion.book);
+                    const chapterRanges = parseChapterRange(portion.chapters);
+                    
+                    if (!booksWithChapters.has(bookName)) {
+                        booksWithChapters.set(bookName, new Set());
+                    }
+                    
+                    const bookChapters = booksWithChapters.get(bookName);
+                    chapterRanges.forEach(ch => bookChapters.add(ch));
+                });
+            });
+            
+            // Count unique chapters scheduled
+            booksWithChapters.forEach((chapters, bookName) => {
+                chaptersScheduledByToday += chapters.size;
+            });
+            
+            // Total chapters in Bible = 1189
+            const totalChaptersInBible = 1189;
+            const percentage = Math.round((chaptersScheduledByToday / totalChaptersInBible) * 100);
+            
+            return {
+                chaptersScheduled: chaptersScheduledByToday,
+                totalChapters: totalChaptersInBible,
+                percentage: Math.min(percentage, 100),
+                dayOfYear: dayOfYear
             };
         }
 
@@ -2264,13 +2319,90 @@
                     </div>
 
                     <div class="max-w-7xl mx-auto px-4 py-6 space-y-6">
-                        <!-- Track Progress Button -->
-                        ${state.currentUser ? `
-                            <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
-                                ${icons.book}
-                                Track My Progress
-                            </button>
-                        ` : ''}
+                        <!-- Timeline Progress Bar -->
+                        ${(() => {
+                            const progress = calculateTimelineProgress();
+                            
+                            // Generate segmented progress bar
+                            const totalSegments = 48; // Number of segments in the circle
+                            const filledSegments = Math.round((progress.percentage / 100) * totalSegments);
+                            const segments = Array.from({ length: totalSegments }, (_, i) => i < filledSegments);
+                            
+                            // Color selection based on progress
+                            let progressColor = '#3b82f6'; // blue
+                            if (progress.percentage > 25) progressColor = '#06b6d4'; // cyan
+                            if (progress.percentage > 50) progressColor = '#10b981'; // emerald
+                            if (progress.percentage > 75) progressColor = '#f59e0b'; // amber
+                            
+                            return `
+                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                    <div class="mb-4">
+                                        <div class="flex items-center justify-between mb-2">
+                                            <div class="flex items-center gap-3">
+                                                ${icons.trendingUp || '📈'}
+                                                <h3 class="text-lg font-bold">Yearly Progress</h3>
+                                            </div>
+                                            <span class="text-2xl font-bold ${
+                                                progress.percentage <= 25 ? 'text-blue-500' : 
+                                                progress.percentage <= 50 ? 'text-cyan-500' : 
+                                                progress.percentage <= 75 ? 'text-emerald-500' : 
+                                                'text-amber-500'
+                                            }">${progress.percentage}%</span>
+                                        </div>
+                                        <p class="${theme.textSecondary} text-sm mb-6">Day ${progress.dayOfYear} of 365</p>
+                                        
+                                        <!-- Segmented Circular Progress Bar -->
+                                        <div class="flex justify-center">
+                                            <div style="width: 200px; height: 200px; position: relative;">
+                                                <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
+                                                    ${segments.map((filled, i) => {
+                                                        const angle = (i / totalSegments) * 360;
+                                                        const startAngle = angle;
+                                                        const endAngle = angle + (360 / totalSegments) - 2;
+                                                        
+                                                        const radius = 70;
+                                                        const innerRadius = 55;
+                                                        
+                                                        const startRad = (startAngle * Math.PI) / 180;
+                                                        const endRad = (endAngle * Math.PI) / 180;
+                                                        
+                                                        const x1 = 100 + radius * Math.cos(startRad);
+                                                        const y1 = 100 + radius * Math.sin(startRad);
+                                                        const x2 = 100 + radius * Math.cos(endRad);
+                                                        const y2 = 100 + radius * Math.sin(endRad);
+                                                        
+                                                        const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                        const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                        const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                        const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                        
+                                                        const largeArc = (360 / totalSegments) > 180 ? 1 : 0;
+                                                        const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 ' + largeArc + ' 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 ' + largeArc + ' 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                        
+                                                        return '<path d="' + path + '" fill="' + (filled ? progressColor : (state.darkMode ? '#334155' : '#e5e7eb')) + '" opacity="' + (filled ? '1' : '0.3') + '" style="transition: fill 0.5s ease;" />';
+                                                    }).join('')}
+                                                </svg>
+                                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                                    <div style="font-size: 1.5em; font-weight: bold;">${progress.percentage}%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Progress details -->
+                                    <div class="grid grid-cols-2 gap-4 mt-6 pt-4 border-t ${theme.border}">
+                                        <div>
+                                            <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Scheduled</p>
+                                            <p class="text-xl font-bold">${progress.chaptersScheduled}</p>
+                                        </div>
+                                        <div>
+                                            <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Total Bible</p>
+                                            <p class="text-xl font-bold">${progress.totalChapters}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        })()}
 
                         <!-- Today's Reading Card -->
                         ${todayReading ? `
@@ -2300,9 +2432,25 @@
                                             `;
                                             }).join('')}
                                         </div>
+                                        
+                                        <!-- Track Progress Button -->
+                                        ${state.currentUser ? `
+                                            <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg mt-4">
+                                                ${icons.book}
+                                                Track My Progress
+                                            </button>
+                                        ` : ''}
                                     </div>
                                 </div>
                             </div>
+                        ` : ''}
+
+                        <!-- Track Progress Button (Fallback - when no reading for today) -->
+                        ${!todayReading && state.currentUser ? `
+                            <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
+                                ${icons.book}
+                                Track My Progress
+                            </button>
                         ` : ''}
 
                         <!-- Stats Card -->
