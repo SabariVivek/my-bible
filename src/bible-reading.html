@@ -3264,7 +3264,9 @@
             
             let text = `${dateStr}\n\n`;
             reading.portions.forEach((portion, idx) => {
-                text += `${idx + 1}. ${portion.book} ${portion.chapters}\n`;
+                const tamilName = getTamilName(portion.book);
+                const displayText = tamilName ? `${portion.book} / ${tamilName}` : portion.book;
+                text += `${idx + 1}. ${displayText} ${portion.chapters}\n`;
             });
 
             navigator.clipboard.writeText(text).then(() => {
