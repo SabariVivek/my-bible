@@ -46,7 +46,6 @@
         const APP_VERSION = '20251126003722';
         const STORED_VERSION = localStorage.getItem('bibleAppVersion');
         if (STORED_VERSION !== APP_VERSION) {
-            console.log('New version detected, clearing cache...');
             localStorage.setItem('bibleAppVersion', APP_VERSION);
             if ('caches' in window) {
                 caches.keys().then(names => {
@@ -1254,7 +1253,6 @@
                     }
                 }
             } catch (error) {
-                console.error('Error toggling portion:', error);
                 alert('Failed to save progress. Please try again.');
             }
         }
@@ -1624,7 +1622,7 @@
                                         });
                                         state.loadedUserData.add(user.id);
                                     } catch (err) {
-                                        console.warn(`Could not load dates for user ${user.id}:`, err);
+                                        // Error loading dates, skip this user
                                     }
                                 }
                             }));
@@ -1700,7 +1698,7 @@
                     sampleKeys: Object.keys(user.progress).slice(0, 10)
                 });
             } catch (error) {
-                console.error(`Error loading progress for user ${user.id}:`, error);
+                // Error loading progress
                 // Remove from cache on error so it can be retried
                 state.loadedUserData.delete(user.id);
             }
