@@ -8,6 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <meta name="google" content="notranslate">
     <title>Bible Reading</title>
     <link rel="icon" type="image/png" href="../resources/icons/bible.png">
     <style>
@@ -77,6 +78,19 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        
+        /* Hide Google Translate bar */
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate,
+        .goog-te-bottom-frame,
+        .goog-te-tooltip {
+            display: none !important;
+            visibility: hidden !important;
+        }
+        
+        html {
+            top: 0 !important;
         }
 
         body {
