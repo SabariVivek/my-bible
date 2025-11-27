@@ -1306,19 +1306,8 @@
                     await BibleReadingDB.markPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
                 }
                 
-                // Check if all portions are completed
-                const reading = getTodayReading(state.selectedDate);
-                if (reading) {
-                    const allCompleted = reading.portions.every((_, idx) => 
-                        completedPortions.has(`${dateKey}-${idx}`)
-                    );
-                    
-                    if (allCompleted) {
-                        await markTodayComplete();
-                    } else {
-                        render();
-                    }
-                }
+                // Only update UI - don't auto-complete the entire day
+                render();
             } catch (error) {
                 alert('Failed to save progress. Please try again.');
             }
@@ -1431,7 +1420,8 @@
             customModal: null,  // Custom modal state: { type, title, message, onConfirm, confirmText, cancelText }
             showAllUsers: false,  // Track if all users should be shown in dashboard
             loadedUserData: new Set(),  // Track which users have their progress loaded
-            userModalError: ''  // Error message for user modal
+            userModalError: '',  // Error message for user modal
+            dashboardTab: 'my-plan'  // 'my-plan' or 'family' - for tabbed dashboard view
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
@@ -1543,12 +1533,18 @@
                 totalChaptersRead = progressKeys.length;
             }
             
+            const totalProgress = (totalChaptersRead / 1189) * 100;
+            
+            if (user.name === 'Anuradha' || user.name === 'Udhay') {
+                console.log(`${user.name} - chaptersRead: ${totalChaptersRead}, progress: ${user.progress ? Object.keys(user.progress).length : 'no progress'}, totalProgress: ${totalProgress.toFixed(2)}%`);
+            }
+            
             return {
                 hasReadToday,
                 lastReadDate,
                 daysPending,
                 chaptersRead: totalChaptersRead,
-                totalProgress: Math.round((totalChaptersRead / 1189) * 100)
+                totalProgress: totalProgress
             };
         }
 
@@ -1675,6 +1671,65 @@
             return ''; // Return empty if not found
         }
 
+        function getTestament(bookName) {
+            // Determine if a book belongs to Old or New Testament
+            const normalized = bookName.toUpperCase();
+            
+            // Check if it's in Old Testament
+            const otBook = oldTestamentBooks.find(b => b.name === normalized);
+            if (otBook) return 'Old Testament';
+            
+            // Check if it's in New Testament
+            const ntBook = newTestamentBooks.find(b => b.name === normalized);
+            if (ntBook) return 'New Testament';
+            
+            // Default fallback
+            return 'Unknown';
+        }
+
+        function expandChapterRanges(portions) {
+            // Expand chapter ranges into individual chapters
+            // e.g., "Ezekiel 30-32" becomes "Ezekiel 30", "Ezekiel 31", "Ezekiel 32"
+            // But keep verse ranges as-is, e.g., "119:1-88" stays as "119:1-88"
+            const expanded = [];
+            
+            portions.forEach(portion => {
+                const chapterPart = portion.chapters.trim();
+                
+                // Check if it contains verse range (e.g., "119:1-88")
+                if (chapterPart.includes(':')) {
+                    // Has verse range like "119:1-88" - keep as is
+                    expanded.push(portion);
+                } else if (chapterPart.includes('-')) {
+                    // Simple chapter range like "30-32" (no verse range)
+                    const parts = chapterPart.split('-');
+                    const start = parseInt(parts[0], 10);
+                    const end = parseInt(parts[1], 10);
+                    
+                    for (let i = start; i <= end; i++) {
+                        expanded.push({
+                            book: portion.book,
+                            chapters: i.toString()
+                        });
+                    }
+                } else {
+                    // No range, just add as is
+                    expanded.push(portion);
+                }
+            });
+            
+            return expanded;
+        }
+
+        function formatChaptersWithSpaces(chapters) {
+            // Add proper spacing around dashes and colons
+            // "30-32" becomes "30 - 32"
+            // "119:1-42" becomes "119 : 1 - 42"
+            return chapters
+                .replace(/\s*-\s*/g, ' - ')  // Add spaces around dashes
+                .replace(/\s*:\s*/g, ' : '); // Add spaces around colons
+        }
+
         function calculateProgress(testament) {
             if (!state.currentUser) return { read: 0, total: 0, percentage: 0 };
 
@@ -1788,20 +1843,34 @@
                     if (state.showDashboard && state.users.length > 0) {
                         showLoading('Loading statistics...');
                         try {
-                            // Load all users' completed dates in parallel to show accurate counts
+                            // Load all users' progress and completed dates in parallel
                             await Promise.all(state.users.map(async user => {
                                 if (!state.loadedUserData.has(user.id)) {
                                     try {
-                                        const dates = await BibleReadingDB.getCompletedDates(user.id);
+                                        const [progress, dates] = await Promise.all([
+                                            BibleReadingDB.getUserProgress(user.id),
+                                            BibleReadingDB.getCompletedDates(user.id)
+                                        ]);
+
+                                        // Load progress data
+                                        user.progress = {};
+                                        progress.forEach(p => {
+                                            const normalizedBook = normalizeBookName(p.book_name) || p.book_name;
+                                            const key = `${normalizedBook}-${p.chapter_number}`;
+                                            user.progress[key] = p.status;
+                                        });
+
+                                        // Load completed dates
                                         user.completedDates = {};
                                         dates.forEach(dateStr => {
                                             const [year, month, day] = dateStr.split('-').map(Number);
                                             const dateKey = `${year}-${month}-${day}`;
                                             user.completedDates[dateKey] = true;
                                         });
+                                        
                                         state.loadedUserData.add(user.id);
                                     } catch (err) {
-                                        // Error loading dates, skip this user
+                                        // Error loading data, skip this user
                                     }
                                 }
                             }));
@@ -1828,15 +1897,6 @@
 
         // Load progress for a specific user
         async function loadUserProgress(user) {
-            // Skip if already loaded AND has progress data
-            const hasProgress = Object.keys(user.progress || {}).length > 0;
-            if (state.loadedUserData.has(user.id) && hasProgress) {
-                return;
-            }
-
-            // Mark as loading immediately to prevent race conditions
-            state.loadedUserData.add(user.id);
-
             try {
                 // Load progress and dates in parallel
                 const [progress, dates] = await Promise.all([
@@ -1868,10 +1928,10 @@
                     user.completedDates[dateKey] = true;
                 });
                 
+                // Mark as loaded after successful load
+                state.loadedUserData.add(user.id);
             } catch (error) {
-                // Error loading progress
-                // Remove from cache on error so it can be retried
-                state.loadedUserData.delete(user.id);
+                console.error('Error loading user progress:', error);
             }
         }
 
@@ -2396,281 +2456,255 @@
                         </div>
                     </div>
 
+                    <!-- Tab Navigation -->
+                    <div class="max-w-7xl mx-auto px-4 py-4 border-b ${theme.border}">
+                        <div class="flex justify-center gap-12">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="pb-3 font-semibold text-lg transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600 border-b-2 border-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
+                                My Plan
+                            </button>
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="pb-3 font-semibold text-lg transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600 border-b-2 border-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
+                                Family
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="max-w-7xl mx-auto px-4 py-6 space-y-6">
-                        <!-- Today's Reading Card -->
-                        ${todayReading ? `
-                            <div class="reading-card-container">
-                                <div class="reading-card-wrapper dashboard-reading-card-wrapper">
-                                    <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                        ${state.dashboardTab === 'my-plan' ? `
+                            <!-- MY PLAN TAB -->
+                            ${todayReading ? `
+                                <div class="reading-card-container">
+                                    <div class="reading-card-wrapper dashboard-reading-card-wrapper">
+                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                            <div class="flex items-center justify-between mb-6">
+                                                <div class="flex items-center gap-2">
+                                                    ${icons.book}
+                                                    <h2 class="text-lg font-bold">Today's Reading</h2>
+                                                </div>
+                                                <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
+                                                    ${icons.copy}
+                                                </button>
+                                            </div>
+                            <div class="space-y-3">
+                                ${getTodayReading(dashboardDate).portions.map((portion, idx) => {
+                                    const tamilName = getTamilName(portion.book);
+                                    const testament = getTestament(portion.book);
+                                    const testamentShort = testament === 'Old Testament' ? 'Old' : 'New';
+                                    return `
+                                    <div class="flex items-start gap-3 p-4 ${theme.accent} rounded-lg">
+                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
+                                        <div class="flex-1 min-w-0">
+                                            <div class="font-semibold text-base mb-1">${portion.book} ${formatChaptersWithSpaces(portion.chapters)}</div>
+                                            ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${formatChaptersWithSpaces(portion.chapters)}</div>` : ''}
+                                        </div>
+                                        <span class="inline-block text-xs px-2 py-1 rounded bg-blue-500/20 text-blue-600 dark:text-blue-400 whitespace-nowrap flex-shrink-0">${testamentShort}</span>
+                                    </div>
+                                `;
+                                }).join('')}
+                            </div>                                            <!-- Action Buttons -->
+                                            <div class="mt-6">
+                                                <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
+                                                    ${icons.book}
+                                                    Track My Progress
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ` : ''}
+
+                            <!-- Yearly Progress (Simplified) -->
+                            ${(() => {
+                                const progress = calculateTimelineProgress();
+                                
+                                // Generate segmented progress bar
+                                const totalSegments = 48; // Number of segments in the circle
+                                const filledSegments = Math.round((progress.percentage / 100) * totalSegments);
+                                const segments = Array.from({ length: totalSegments }, (_, i) => i < filledSegments);
+                                
+                                // Color selection based on progress
+                                let progressColor = '#3b82f6'; // blue
+                                if (progress.percentage > 25) progressColor = '#06b6d4'; // cyan
+                                if (progress.percentage > 50) progressColor = '#10b981'; // emerald
+                                if (progress.percentage > 75) progressColor = '#f59e0b'; // amber
+                                
+                                return `
+                                    <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="flex items-center gap-3">
-                                                ${icons.book}
-                                                <h2 class="text-lg font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                                ${icons.trendingUp || '📈'}
+                                                <h3 class="text-lg font-bold">Yearly Progress</h3>
                                             </div>
-                                            <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
-                                                ${icons.copy}
+                                            <button onclick="state.showYearlyProgressDetails = !state.showYearlyProgressDetails; render();" class="text-sm font-semibold text-blue-500 hover:text-blue-400 hover:underline transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer">
+                                                ${state.showYearlyProgressDetails ? 'Hide' : 'Show'}
+                                                <span class="transition-transform ${state.showYearlyProgressDetails ? 'rotate-180' : ''}">${icons.chevronDown}</span>
                                             </button>
                                         </div>
-                                        <div class="space-y-2">
-                                            ${getTodayReading(dashboardDate).portions.map((portion, idx) => {
-                                                const tamilName = getTamilName(portion.book);
-                                                return `
-                                                <div class="flex items-start gap-3 p-3 ${theme.accent} rounded-lg">
-                                                    <span class="text-blue-500 font-bold">${idx + 1}.</span>
-                                                    <div class="flex-1">
-                                                        <div class="font-medium">${portion.book} ${portion.chapters}</div>
-                                                        ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${portion.chapters}</div>` : ''}
+
+                                        ${state.showYearlyProgressDetails ? `
+                                            <div class="mb-4">
+                                                <p class="${theme.textSecondary} text-sm mb-6">Day ${progress.dayOfYear} of 365</p>
+                                                
+                                                <!-- Segmented Circular Progress Bar -->
+                                                <div class="flex justify-center">
+                                                    <div style="width: 150px; height: 150px; position: relative;">
+                                                        <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
+                                                            ${segments.map((filled, i) => {
+                                                                const angle = (i / totalSegments) * 360;
+                                                                const startAngle = angle;
+                                                                const endAngle = angle + (360 / totalSegments) - 2;
+                                                                
+                                                                const radius = 70;
+                                                                const innerRadius = 55;
+                                                                
+                                                                const startRad = (startAngle * Math.PI) / 180;
+                                                                const endRad = (endAngle * Math.PI) / 180;
+                                                                
+                                                                const x1 = 100 + radius * Math.cos(startRad);
+                                                                const y1 = 100 + radius * Math.sin(startRad);
+                                                                const x2 = 100 + radius * Math.cos(endRad);
+                                                                const y2 = 100 + radius * Math.sin(endRad);
+                                                                
+                                                                const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                                const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                                const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                                const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                                
+                                                                const largeArc = (360 / totalSegments) > 180 ? 1 : 0;
+                                                                const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 ' + largeArc + ' 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 ' + largeArc + ' 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                                
+                                                                return '<path d="' + path + '" fill="' + (filled ? progressColor : (state.darkMode ? '#334155' : '#e5e7eb')) + '" opacity="' + (filled ? '1' : '0.3') + '" style="transition: fill 0.5s ease;" />';
+                                                            }).join('')}
+                                                        </svg>
+                                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                                                            <div style="font-size: 1.5em; font-weight: bold;">${progress.percentage}%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Progress details -->
+                                            <div class="grid grid-cols-2 gap-4 mt-6 pt-4 border-t ${theme.border}">
+                                                <div>
+                                                    <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Old Testament</p>
+                                                    <p class="text-xl font-bold">${progress.otChapters}/929</p>
+                                                </div>
+                                                <div>
+                                                    <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">New Testament</p>
+                                                    <p class="text-xl font-bold">${progress.ntChapters}/260</p>
+                                                </div>
+                                            </div>
+                                        ` : `
+                                            <div class="flex items-center justify-between">
+                                                <div>
+                                                    <p class="${theme.textSecondary} text-sm mb-1">Day ${progress.dayOfYear} of 365</p>
+                                                    <p class="text-3xl font-bold ${
+                                                        progress.percentage <= 25 ? 'text-blue-500' : 
+                                                        progress.percentage <= 50 ? 'text-cyan-500' : 
+                                                        progress.percentage <= 75 ? 'text-emerald-500' : 
+                                                        'text-amber-500'
+                                                    }">${progress.percentage}%</p>
+                                                </div>
+                                                <div class="text-right">
+                                                    <p class="${theme.textSecondary} text-sm mb-1">${progress.chaptersScheduled}/${progress.totalChapters}</p>
+                                                    <p class="${theme.textSecondary} text-xs">Chapters</p>
+                                                </div>
+                                            </div>
+                                        `}
+                                    </div>
+                                `;
+                            })()}
+                        ` : `
+                            <!-- Stats Grid -->
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="text-center">
+                                        <p class="text-3xl font-bold text-emerald-500 mb-2">${stats.completedCount}</p>
+                                        <p class="${theme.textSecondary} text-sm">Completed</p>
+                                    </div>
+                                    <div class="text-center border-l border-r ${theme.border}">
+                                        <p class="text-3xl font-bold text-orange-500 mb-2">${stats.pendingCount}</p>
+                                        <p class="${theme.textSecondary} text-sm">Pending</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="text-3xl font-bold text-blue-500 mb-2">${stats.totalUsers}</p>
+                                        <p class="${theme.textSecondary} text-sm">Total Users</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pending Users Section -->
+                            ${stats.pendingCount > 0 ? `
+                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                    <div class="flex items-center gap-3 mb-4">
+                                        ${icons.clock || '⏱️'}
+                                        <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
+                                    </div>
+                                    <div class="space-y-3">
+                                        ${stats.pendingUsers.map(user => {
+                                            const userStats = getUserStats(user);
+                                            return `
+                                                <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-lg">
+                                                            ${user.name.charAt(0).toUpperCase()}
+                                                        </div>
+                                                        <div>
+                                                            <h3 class="font-semibold">${user.name}</h3>
+                                                            <p class="text-sm ${theme.textSecondary}">
+                                                                ${userStats.daysPending === 0 ? 'Not started today' : 
+                                                                  userStats.daysPending === 1 ? '1 day pending' : 
+                                                                  `${userStats.daysPending} days pending`}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors">
+                                                        Catch Up
+                                                    </button>
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                    </div>
+                                </div>
+                            ` : `
+                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
+                                    <div class="text-emerald-500 text-5xl mb-3">🎉</div>
+                                    <h3 class="text-xl font-bold mb-2">Everyone is up to date!</h3>
+                                    <p class="${theme.textSecondary}">All family members have completed today's reading.</p>
+                                </div>
+                            `}
+
+                            <!-- Top Readers Section (All Time) -->
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    ${icons.star || '⭐'}
+                                    <h2 class="text-lg font-bold">Top Readers (This Year)</h2>
+                                </div>
+                                <div class="space-y-3">
+                                    ${state.users
+                                        .map(user => ({ user, stats: getUserStats(user) }))
+                                        .sort((a, b) => b.stats.totalProgress - a.stats.totalProgress)
+                                        .map(({ user, stats }) => {
+                                            const lastReadDate = stats.lastReadDate ? stats.lastReadDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Never';
+                                            return `
+                                                <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
+                                                    <div class="flex items-center gap-3 flex-1">
+                                                        <div class="w-12 h-12 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-lg">
+                                                            ${user.name.charAt(0).toUpperCase()}
+                                                        </div>
+                                                        <div class="flex-1">
+                                                            <h3 class="font-semibold">${user.name}</h3>
+                                                            <p class="text-sm ${theme.textSecondary}">Last read: ${lastReadDate}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <p class="text-base font-bold text-blue-500">${stats.totalProgress.toFixed(1)}%</p>
                                                     </div>
                                                 </div>
                                             `;
-                                            }).join('')}
-                                        </div>
-                                        
-                                        <!-- Track Progress Button -->
-                                        ${state.currentUser ? `
-                                            <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg mt-4">
-                                                ${icons.book}
-                                                Track My Progress
-                                            </button>
-                                        ` : ''}
-                                    </div>
+                                        }).join('')}
                                 </div>
-                            </div>
-                        ` : ''}
-
-                        <!-- Track Progress Button (Fallback - when no reading for today) -->
-                        ${!todayReading && state.currentUser ? `
-                            <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
-                                ${icons.book}
-                                Track My Progress
-                            </button>
-                        ` : ''}
-
-                        <!-- Timeline Progress Bar -->
-                        ${(() => {
-                            const progress = calculateTimelineProgress();
-                            
-                            // Generate segmented progress bar
-                            const totalSegments = 48; // Number of segments in the circle
-                            const filledSegments = Math.round((progress.percentage / 100) * totalSegments);
-                            const segments = Array.from({ length: totalSegments }, (_, i) => i < filledSegments);
-                            
-                            // Color selection based on progress
-                            let progressColor = '#3b82f6'; // blue
-                            if (progress.percentage > 25) progressColor = '#06b6d4'; // cyan
-                            if (progress.percentage > 50) progressColor = '#10b981'; // emerald
-                            if (progress.percentage > 75) progressColor = '#f59e0b'; // amber
-                            
-                            return `
-                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                    <div class="flex items-center justify-between mb-4">
-                                        <div class="flex items-center gap-3">
-                                            ${icons.trendingUp || '📈'}
-                                            <h3 class="text-lg font-bold">Yearly Progress</h3>
-                                        </div>
-                                        <button onclick="state.showYearlyProgressDetails = !state.showYearlyProgressDetails; render();" class="text-sm font-semibold text-blue-500 hover:text-blue-400 hover:underline transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer">
-                                            ${state.showYearlyProgressDetails ? 'Hide' : 'Show'}
-                                            <span class="transition-transform ${state.showYearlyProgressDetails ? 'rotate-180' : ''}">${icons.chevronDown}</span>
-                                        </button>
-                                    </div>
-
-                                    ${state.showYearlyProgressDetails ? `
-                                        <div class="mb-4">
-                                            <p class="${theme.textSecondary} text-sm mb-6">Day ${progress.dayOfYear} of 365</p>
-                                            
-                                            <!-- Segmented Circular Progress Bar -->
-                                            <div class="flex justify-center">
-                                                <div style="width: 150px; height: 150px; position: relative;">
-                                                    <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
-                                                        ${segments.map((filled, i) => {
-                                                            const angle = (i / totalSegments) * 360;
-                                                            const startAngle = angle;
-                                                            const endAngle = angle + (360 / totalSegments) - 2;
-                                                            
-                                                            const radius = 70;
-                                                            const innerRadius = 55;
-                                                            
-                                                            const startRad = (startAngle * Math.PI) / 180;
-                                                            const endRad = (endAngle * Math.PI) / 180;
-                                                            
-                                                            const x1 = 100 + radius * Math.cos(startRad);
-                                                            const y1 = 100 + radius * Math.sin(startRad);
-                                                            const x2 = 100 + radius * Math.cos(endRad);
-                                                            const y2 = 100 + radius * Math.sin(endRad);
-                                                            
-                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
-                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
-                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
-                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
-                                                            
-                                                            const largeArc = (360 / totalSegments) > 180 ? 1 : 0;
-                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 ' + largeArc + ' 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 ' + largeArc + ' 0 ' + ix1 + ' ' + iy1 + ' Z';
-                                                            
-                                                            return '<path d="' + path + '" fill="' + (filled ? progressColor : (state.darkMode ? '#334155' : '#e5e7eb')) + '" opacity="' + (filled ? '1' : '0.3') + '" style="transition: fill 0.5s ease;" />';
-                                                        }).join('')}
-                                                    </svg>
-                                                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                                                        <div style="font-size: 1.5em; font-weight: bold;">${progress.percentage}%</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Progress details -->
-                                        <div class="grid grid-cols-2 gap-4 mt-6 pt-4 border-t ${theme.border}">
-                                            <div>
-                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Old Testament</p>
-                                                <p class="text-xl font-bold">${progress.otChapters}/929</p>
-                                            </div>
-                                            <div>
-                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">New Testament</p>
-                                                <p class="text-xl font-bold">${progress.ntChapters}/260</p>
-                                            </div>
-                                        </div>
-                                    ` : `
-                                        <div class="flex items-center justify-between">
-                                            <div>
-                                                <p class="${theme.textSecondary} text-sm mb-1">Day ${progress.dayOfYear} of 365</p>
-                                                <p class="text-3xl font-bold ${
-                                                    progress.percentage <= 25 ? 'text-blue-500' : 
-                                                    progress.percentage <= 50 ? 'text-cyan-500' : 
-                                                    progress.percentage <= 75 ? 'text-emerald-500' : 
-                                                    'text-amber-500'
-                                                }">${progress.percentage}%</p>
-                                            </div>
-                                            <div class="text-right">
-                                                <p class="${theme.textSecondary} text-sm mb-1">${progress.chaptersScheduled}/${progress.totalChapters}</p>
-                                                <p class="${theme.textSecondary} text-xs">Chapters</p>
-                                            </div>
-                                        </div>
-                                    `}
-                                </div>
-                            `;
-                        })()}
-
-                        <!-- Family Statistics Heading -->
-                        <div class="mt-8 mb-4 text-center">
-                            <h2 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Family Progress</h2>
-                        </div>
-
-                        <!-- Stats Card -->
-                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                            <div class="grid grid-cols-3 gap-4 md:gap-6">
-                                <div class="text-center">
-                                    <div class="flex items-center justify-center mb-2">
-                                        ${icons.users}
-                                    </div>
-                                    <p class="text-2xl md:text-3xl font-bold mb-1">${stats.totalUsers}</p>
-                                    <span class="${theme.textSecondary} text-xs md:text-sm">
-                                        <span class="hidden md:inline">Total Users</span>
-                                        <span class="md:hidden">Total</span>
-                                    </span>
-                                </div>
-                                <div class="text-center border-x ${theme.border}">
-                                    <div class="flex items-center justify-center mb-2 text-emerald-500">
-                                        ${icons.checkCircle}
-                                    </div>
-                                    <p class="text-2xl md:text-3xl font-bold text-emerald-500 mb-1">${stats.completedCount}</p>
-                                    <span class="${theme.textSecondary} text-xs md:text-sm">
-                                        <span class="hidden md:inline">Completed Today</span>
-                                        <span class="md:hidden">Completed</span>
-                                    </span>
-                                </div>
-                                <div class="text-center">
-                                    <div class="flex items-center justify-center mb-2 text-orange-500">
-                                        ${icons.alert}
-                                    </div>
-                                    <p class="text-2xl md:text-3xl font-bold text-orange-500 mb-1">${stats.pendingCount}</p>
-                                    <span class="${theme.textSecondary} text-xs md:text-sm">
-                                        <span class="hidden md:inline">Pending Today</span>
-                                        <span class="md:hidden">Pending</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Users Section -->
-                        ${stats.pendingCount > 0 ? `
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center gap-3 mb-4">
-                                    ${icons.alert}
-                                    <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
-                                </div>
-                                <div class="space-y-3">
-                                    ${stats.pendingUsers.map(user => {
-                                        const userStats = getUserStats(user);
-                                        return `
-                                            <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
-                                                <div class="flex items-center gap-3">
-                                                    <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-lg">
-                                                        ${user.name.charAt(0).toUpperCase()}
-                                                    </div>
-                                                    <div>
-                                                        <h3 class="font-semibold">${user.name}</h3>
-                                                        <p class="text-sm ${theme.textSecondary}">
-                                                            ${userStats.daysPending === 0 ? 'Not started today' : 
-                                                              userStats.daysPending === 1 ? '1 day pending' : 
-                                                              `${userStats.daysPending} days pending`}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <span class="text-orange-500 font-semibold">⚠</span>
-                                            </div>
-                                        `;
-                                    }).join('')}
-                                </div>
-                            </div>
-                        ` : `
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
-                                <div class="text-emerald-500 text-5xl mb-3">🎉</div>
-                                <h3 class="text-xl font-bold mb-2">Everyone is up to date!</h3>
-                                <p class="${theme.textSecondary}">All family members have completed today's reading.</p>
                             </div>
                         `}
-
-                        <!-- All Users List -->
-                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                            <div class="flex items-center gap-3 mb-4">
-                                ${icons.users}
-                                <h2 class="text-lg font-bold">All Users</h2>
-                            </div>
-                            <div class="space-y-3">
-                                ${(state.showAllUsers ? state.users : state.users.slice(0, 5)).map(user => {
-                                    const userStats = getUserStats(user);
-                                    return `
-                                        <button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="w-full flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-left">
-                                            <div class="flex items-center gap-3">
-                                                <div class="w-12 h-12 rounded-full ${userStats.hasReadToday ? 'bg-emerald-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-lg">
-                                                    ${user.name.charAt(0).toUpperCase()}
-                                                </div>
-                                                <div class="flex-1 min-w-0">
-                                                    <div class="flex items-center gap-2 mb-1">
-                                                        <h3 class="font-semibold truncate">${user.name}</h3>
-                                                        ${userStats.hasReadToday ? `<span class="text-emerald-500">${icons.checkCircle}</span>` : ''}
-                                                    </div>
-                                                    <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs ${theme.textSecondary}">
-                                                        <span>${userStats.chaptersRead} chapters read</span>
-                                                        <span>${userStats.totalProgress}% complete</span>
-                                                        ${userStats.lastReadDate ? `
-                                                            <span>Last: ${userStats.lastReadDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
-                                                        ` : '<span>No readings yet</span>'}
-                                                        ${!userStats.hasReadToday && userStats.daysPending > 0 ? `
-                                                            <span class="text-orange-500">${userStats.daysPending} ${userStats.daysPending === 1 ? 'day' : 'days'} pending</span>
-                                                        ` : ''}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            ${icons.chevronRight}
-                                        </button>
-                                    `;
-                                }).join('')}
-                            </div>
-                            ${state.users.length > 5 ? `
-                                <button onclick="state.showAllUsers = !state.showAllUsers; render();" class="w-full mt-4 text-sm font-semibold text-blue-500 hover:text-blue-400 transition-colors text-center">
-                                    ${state.showAllUsers ? 'Show less' : 'Show more'}
-                                </button>
-                            ` : ''}
-                        </div>
                     </div>
 
                     ${state.showUserModal ? `
@@ -2847,7 +2881,7 @@
                                             </button>
                                         </div>
                                         <div class="space-y-3">
-                                            ${todayReading.portions.map((portion, idx) => {
+                                            ${expandChapterRanges(todayReading.portions).map((portion, idx) => {
                                                 const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
                                                 const portionKey = `${dateKey}-${idx}`;
                                                 const isPortionChecked = isDateCompleted || completedPortions.has(portionKey);
@@ -2857,8 +2891,8 @@
                                                     <div class="flex items-center gap-3 flex-1 min-w-0">
                                                         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
                                                         <div class="min-w-0 flex-1">
-                                                            <div class="font-medium">${portion.book} ${portion.chapters}</div>
-                                                            ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${portion.chapters}</div>` : ''}
+                                                            <div class="font-medium">${portion.book} ${formatChaptersWithSpaces(portion.chapters)}</div>
+                                                            ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${formatChaptersWithSpaces(portion.chapters)}</div>` : ''}
                                                         </div>
                                                     </div>
                                                     <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
@@ -3778,8 +3812,26 @@
                 const isSelected = day === tempDate.getDate() &&
                     calendarState.currentMonth === tempDate.getMonth() &&
                     calendarState.currentYear === tempDate.getFullYear();
+                
+                // Check if date is completed
+                const dateKey = `${calendarState.currentYear}-${calendarState.currentMonth + 1}-${day}`;
+                const isCompleted = state.currentUser && state.currentUser.completedDates && state.currentUser.completedDates[dateKey];
+                
+                // Check if date is in the future
+                const checkDate = new Date(calendarState.currentYear, calendarState.currentMonth, day);
+                const isFutureDate = checkDate > today;
+                
+                // Determine dot color (only show for past and today)
+                let dotColor = '';
+                if (!isFutureDate) {
+                    dotColor = isCompleted ? '#22c55e' : '#ef4444';
+                }
+                
                 const classes = `calendar-day ${isToday ? 'today' : ''} ${isSelected ? 'selected' : ''}`;
-                html += `<div class="${classes}" onclick="selectDateTemp(${calendarState.currentYear}, ${calendarState.currentMonth}, ${day})">${day}</div>`;
+                html += `<div class="${classes}" style="position: relative;" onclick="selectDateTemp(${calendarState.currentYear}, ${calendarState.currentMonth}, ${day})">
+                    <span>${day}</span>
+                    ${dotColor ? `<div style="position: absolute; top: 2px; right: 2px; width: 8px; height: 8px; border-radius: 50%; background-color: ${dotColor};"></div>` : ''}
+                </div>`;
             }
 
             // Next month days (empty cells)
