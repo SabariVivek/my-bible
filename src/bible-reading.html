@@ -2066,6 +2066,42 @@
             render();
         }
 
+        async function handleNonAdminUserSelect() {
+            const select = document.getElementById('userSelect');
+            const userId = parseInt(select.value);
+            
+            if (!userId) return;
+            
+            // Find the selected user
+            const user = state.users.find(u => u.id === userId);
+            if (!user) {
+                console.error('User not found:', userId);
+                return;
+            }
+            
+            showLoading('Loading profile...');
+            try {
+                state.currentUser = user;
+                state.showDashboard = true;
+                
+                // Save selected user to localStorage for auto-loading on next visit
+                localStorage.setItem('selectedNonAdminUserId', userId.toString());
+                
+                // Load user's progress
+                await loadUserProgress(user);
+                await loadCompletedPortionsForDate();
+                
+                saveData();
+            } catch (error) {
+                console.error('Error loading user profile:', error);
+                hideLoading();
+                return;
+            }
+            
+            hideLoading();
+            render();
+        }
+
         async function deleteUser(userId) {
             const user = state.users.find(u => u.id === userId);
             if (!user) return;
@@ -2456,7 +2492,11 @@
                                         <button onclick="console.log('Dashboard settings clicked'); state.showAdminView = true; console.log('showAdminView set to:', state.showAdminView); render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Manage Profiles">
                                             ${icons.settings}
                                         </button>
-                                    ` : ''}
+                                    ` : `
+                                        <button onclick="state.currentUser = null; state.showDashboard = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Switch User">
+                                            ${icons.users}
+                                        </button>
+                                    `}
                                     <button onclick="toggleTheme(event)" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Toggle theme">
                                         ${state.darkMode ? icons.sun : icons.moon}
                                     </button>
@@ -2739,6 +2779,51 @@
                             </div>
                         </div>
                     ` : ''}
+                </div>
+            `;
+        }
+
+        function renderNonAdminUserSelection() {
+            const theme = state.darkMode ? {
+                bg: 'bg-slate-900',
+                card: 'bg-slate-800',
+                text: 'text-gray-100',
+                textSecondary: 'text-gray-400',
+                border: 'border-slate-700',
+                input: 'bg-slate-700 border-slate-600 focus:border-blue-500'
+            } : {
+                bg: 'bg-gray-50',
+                card: 'bg-white',
+                text: 'text-gray-900',
+                textSecondary: 'text-gray-600',
+                border: 'border-gray-200',
+                input: 'bg-white border-gray-300 focus:border-blue-500'
+            };
+
+            return `
+                <div class="min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
+                    <div class="max-w-md mx-auto px-4 py-16">
+                        <div class="text-center mb-12">
+                            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-6">
+                                ${icons.book}
+                            </div>
+                            <h1 class="text-3xl font-bold mb-2">Bible Reading</h1>
+                            <p class="${theme.textSecondary}">Select your profile</p>
+                        </div>
+
+                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <label class="block text-sm font-semibold mb-3">Choose User</label>
+                            <select id="userSelect" class="w-full ${theme.input} ${theme.card} ${theme.text} border rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500 mb-6" onchange="document.getElementById('goButton').disabled = !this.value">
+                                <option value="">-- Select a user --</option>
+                                ${state.users.map(user => `
+                                    <option value="${user.id}">${user.name}</option>
+                                `).join('')}
+                            </select>
+                            <button id="goButton" onclick="handleNonAdminUserSelect()" disabled class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-500 disabled:cursor-not-allowed text-white rounded-lg py-3 font-semibold transition-colors">
+                                Go
+                            </button>
+                        </div>
+                    </div>
                 </div>
             `;
         }
@@ -3494,7 +3579,7 @@
 
         async function render() {
             const app = document.getElementById('app');
-            console.log('render() called - showAdminView:', state.showAdminView, 'currentUser:', state.currentUser?.name, 'users count:', state.users.length);
+            console.log('render() called - showAdminView:', state.showAdminView, 'currentUser:', state.currentUser?.name, 'users count:', state.users.length, 'isAdmin:', state.isAdmin);
 
             if (state.showAdminView) {
                 console.log('Rendering profile management view');
@@ -3553,15 +3638,22 @@
                 app.innerHTML = renderProfileManagement();
                 console.log('Profile management rendered');
             } else if (!state.currentUser) {
-                console.log('No current user - showing profile selection');
-                // No current user - show profile selection (default initial view)
+                console.log('No current user - showing user selection');
+                // No current user - show appropriate user selection view
                 // Only reload users if the list is empty
                 if (state.users.length === 0 && !state.isLoadingProfiles) {
                     state.isLoadingProfiles = true;
                     await loadData();
                     state.isLoadingProfiles = false;
                 }
-                app.innerHTML = renderUserSelection();
+                
+                // For non-admin users, show dropdown selection; for admin, show profile grid
+                if (state.isAdmin) {
+                    app.innerHTML = renderUserSelection();
+                } else {
+                    app.innerHTML = renderNonAdminUserSelection();
+                }
+                
                 // Focus input if modal is open
                 if (state.showUserModal) {
                     setTimeout(() => {
@@ -3696,6 +3788,26 @@
         // Initialize
         (async () => {
             await loadData();
+            
+            // For non-admin users, check if a user was previously selected and auto-load it
+            if (!state.isAdmin) {
+                const savedUserId = localStorage.getItem('selectedNonAdminUserId');
+                if (savedUserId) {
+                    const userId = parseInt(savedUserId);
+                    const savedUser = state.users.find(u => u.id === userId);
+                    
+                    if (savedUser) {
+                        console.log('Auto-loading previously selected user:', savedUser.name);
+                        state.currentUser = savedUser;
+                        state.showDashboard = true;
+                        await loadUserProgress(savedUser);
+                    } else {
+                        // Saved user doesn't exist anymore, clear the saved preference
+                        localStorage.removeItem('selectedNonAdminUserId');
+                    }
+                }
+            }
+            
             if (state.currentUser) {
                 await loadCompletedPortionsForDate();
             }
