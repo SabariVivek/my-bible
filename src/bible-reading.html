@@ -2514,15 +2514,15 @@
                                         </button>
                                     ` : ''}
                                     <div>
-                                        <h1 class="text-xl font-bold">Dashboard</h1>
-                                        <div class="flex items-center gap-2">
-                                            <p class="text-sm ${theme.textSecondary}">${today}</p>
+                                        <div class="flex items-center gap-2 items-center">
+                                            <h1 class="text-xl font-bold">Dashboard</h1>
                                             ${state.currentUser ? `
-                                                <span class="text-sm font-semibold px-3 py-1 rounded-full ${state.darkMode ? 'bg-blue-500/20 text-blue-300' : 'bg-blue-100 text-blue-700'}">
+                                                <span class="text-xs font-normal px-1 py-0.5 rounded text-xs ${state.darkMode ? 'bg-blue-500/15 text-blue-300' : 'bg-blue-100 text-blue-600'}">
                                                     ${state.currentUser.name}
                                                 </span>
                                             ` : ''}
                                         </div>
+                                        <p class="text-sm ${theme.textSecondary}">${today}</p>
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-2">
