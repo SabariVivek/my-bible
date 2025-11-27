@@ -2426,7 +2426,16 @@
             const isDashboardToday = dashboardDateCheck.getTime() === todayCheck.getTime();
 
             return `
-                <div class="min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
+                <style>
+                    .dashboard-container {
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        -webkit-touch-callout: none;
+                    }
+                </style>
+                <div class="dashboard-container min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
                     <!-- Header -->
                     <div class="${theme.card} border-b ${theme.border} sticky top-0 z-40">
                         <div class="max-w-7xl mx-auto px-4 py-4">
@@ -2456,19 +2465,9 @@
                         </div>
                     </div>
 
-                    <!-- Tab Navigation -->
-                    <div class="max-w-7xl mx-auto px-4 py-4 border-b ${theme.border}">
-                        <div class="flex justify-center gap-12">
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="pb-3 font-semibold text-lg transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600 border-b-2 border-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
-                                My Plan
-                            </button>
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="pb-3 font-semibold text-lg transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600 border-b-2 border-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
-                                Family
-                            </button>
-                        </div>
-                    </div>
+                    <!-- Tab Navigation - Removed from top -->
 
-                    <div class="max-w-7xl mx-auto px-4 py-6 space-y-6">
+                    <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
                         ${state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
                             ${todayReading ? `
@@ -2645,7 +2644,7 @@
                                             return `
                                                 <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-lg">
+                                                        <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm">
                                                             ${user.name.charAt(0).toUpperCase()}
                                                         </div>
                                                         <div>
@@ -2657,8 +2656,8 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    <button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg transition-colors">
-                                                        Catch Up
+                                                    <button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center justify-center" title="View user progress">
+                                                        ${icons.chevronRight || '→'}
                                                     </button>
                                                 </div>
                                             `;
@@ -2676,7 +2675,7 @@
                             <!-- Top Readers Section (All Time) -->
                             <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="flex items-center gap-3 mb-4">
-                                    ${icons.star || '⭐'}
+                                    ${icons.clock || '⏱️'}
                                     <h2 class="text-lg font-bold">Top Readers (This Year)</h2>
                                 </div>
                                 <div class="space-y-3">
@@ -2688,7 +2687,7 @@
                                             return `
                                                 <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
                                                     <div class="flex items-center gap-3 flex-1">
-                                                        <div class="w-12 h-12 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-lg">
+                                                        <div class="w-10 h-10 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm">
                                                             ${user.name.charAt(0).toUpperCase()}
                                                         </div>
                                                         <div class="flex-1">
@@ -2705,6 +2704,20 @@
                                 </div>
                             </div>
                         `}
+                    </div>
+
+                    <!-- Bottom Navigation Bar -->
+                    <div class="fixed bottom-0 left-0 right-0 ${theme.card} border-t ${theme.border} z-40">
+                        <div class="max-w-7xl mx-auto px-4 flex items-center justify-around h-20">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="flex-1 flex flex-col items-center justify-center gap-1 py-4 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
+                                ${icons.calendar || '📅'}
+                                <span class="text-xs font-semibold">My Plan</span>
+                            </button>
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="flex-1 flex flex-col items-center justify-center gap-1 py-4 transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
+                                ${icons.users || '👥'}
+                                <span class="text-xs font-semibold">Family</span>
+                            </button>
+                        </div>
                     </div>
 
                     ${state.showUserModal ? `
