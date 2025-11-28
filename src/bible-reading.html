@@ -3001,11 +3001,11 @@
                     <!-- Bottom Navigation Bar -->
                     <div class="fixed bottom-0 left-0 right-0 ${theme.card} border-t ${theme.border} z-40">
                         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600 border-t-2 border-blue-600' : theme.textSecondary + ' hover:text-blue-600 border-t-2 border-transparent'}" data-tab="my-plan">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600' : theme.textSecondary}" data-tab="my-plan">
                                 ${icons.calendar || '📅'}
                                 <span class="text-xs font-semibold">My Plan</span>
                             </button>
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600 border-t-2 border-blue-600' : theme.textSecondary + ' hover:text-blue-600 border-t-2 border-transparent'}" data-tab="family">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600' : theme.textSecondary}" data-tab="family">
                                 ${icons.users || '👥'}
                                 <span class="text-xs font-semibold">Family</span>
                             </button>
