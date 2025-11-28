@@ -1305,6 +1305,103 @@
             }, { passive: true });
         }
 
+        let tabSwipeStartX = 0;
+        let tabSwipeCurrentX = 0;
+        const tabMinSwipeDistance = 30;
+
+        function handleDashboardTabSwipe() {
+            const swipeDistance = tabSwipeCurrentX - tabSwipeStartX;
+            if (Math.abs(swipeDistance) < tabMinSwipeDistance) {
+                // Not enough swipe, snap back
+                const tabsContainer = document.querySelector('.dashboard-tabs-content');
+                if (tabsContainer) {
+                    tabsContainer.style.transition = 'transform 0.3s ease-out';
+                    tabsContainer.style.transform = 'translateX(0%)';
+                }
+                return;
+            }
+
+            // Swipe right = go to previous tab (My Plan)
+            if (swipeDistance > 0 && state.dashboardTab === 'family') {
+                state.dashboardTab = 'my-plan';
+                state.loadedUserData.clear();
+                render();
+            }
+            // Swipe left = go to next tab (Family)
+            else if (swipeDistance < 0 && state.dashboardTab === 'my-plan') {
+                state.dashboardTab = 'family';
+                state.loadedUserData.clear();
+                render();
+            }
+        }
+
+        function initDashboardTabSwipeListeners() {
+            const tabsContainer = document.querySelector('.dashboard-tabs-content');
+            if (!tabsContainer) return;
+
+            tabsContainer.addEventListener('touchstart', (e) => {
+                // Don't start swipe if touching a button
+                if (e.target.closest('button')) return;
+                
+                tabSwipeStartX = e.changedTouches[0].screenX;
+                tabSwipeCurrentX = tabSwipeStartX;
+                tabsContainer.style.transition = 'none';
+            }, { passive: true });
+
+            tabsContainer.addEventListener('touchmove', (e) => {
+                // Don't swipe if touching a button
+                if (e.target.closest('button')) return;
+                
+                tabSwipeCurrentX = e.changedTouches[0].screenX;
+                const swipeDistance = tabSwipeCurrentX - tabSwipeStartX;
+                
+                // Only allow swipes in the appropriate direction
+                if ((swipeDistance > 0 && state.dashboardTab === 'family') ||
+                    (swipeDistance < 0 && state.dashboardTab === 'my-plan')) {
+                    const percentage = (swipeDistance / window.innerWidth) * 100;
+                    tabsContainer.style.transform = `translateX(${percentage}%)`;
+                    
+                    // Update tab indicator position
+                    const tabButtons = document.querySelectorAll('.dashboard-tab-button');
+                    if (tabButtons.length === 2) {
+                        const indicatorMovement = (swipeDistance / window.innerWidth) * 50;
+                        const indicator = document.querySelector('.dashboard-tab-indicator');
+                        if (indicator) {
+                            if (state.dashboardTab === 'my-plan') {
+                                indicator.style.transform = `translateX(calc(0% + ${indicatorMovement}px))`;
+                            } else {
+                                indicator.style.transform = `translateX(calc(100% + ${indicatorMovement}px))`;
+                            }
+                        }
+                    }
+                }
+            }, { passive: true });
+
+            tabsContainer.addEventListener('touchend', (e) => {
+                tabsContainer.style.transition = 'transform 0.3s ease-out';
+                const swipeDistance = tabSwipeCurrentX - tabSwipeStartX;
+                
+                if (Math.abs(swipeDistance) < tabMinSwipeDistance) {
+                    // Not enough swipe, snap back
+                    tabsContainer.style.transform = 'translateX(0%)';
+                    
+                    // Snap back tab indicator
+                    const indicator = document.querySelector('.dashboard-tab-indicator');
+                    if (indicator) {
+                        indicator.style.transition = 'transform 0.3s ease-out';
+                        if (state.dashboardTab === 'my-plan') {
+                            indicator.style.transform = 'translateX(0%)';
+                        } else {
+                            indicator.style.transform = 'translateX(100%)';
+                        }
+                    }
+                } else {
+                    // Enough swipe, complete the transition
+                    handleDashboardTabSwipe();
+                }
+            }, { passive: true });
+        }
+
         async function togglePortionComplete(portionIndex) {
             if (!state.currentUser) return;
             
@@ -2515,6 +2612,10 @@
                         user-select: none;
                         -webkit-touch-callout: none;
                     }
+                    .dashboard-tabs-content {
+                        transition: transform 0.3s ease-out;
+                        transform: translateX(0%);
+                    }
                 </style>
                 <div class="dashboard-container min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
                     <!-- Header -->
@@ -2559,7 +2660,8 @@
 
                     <!-- Tab Navigation - Removed from top -->
 
-                    <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
+                    <div class="dashboard-tabs-content">
+                        <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
                         ${state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
                             ${todayReading ? `
@@ -2893,15 +2995,19 @@
                             </div>
                         `}
                     </div>
+                    </div>
 
                     <!-- Bottom Navigation Bar -->
                     <div class="fixed bottom-0 left-0 right-0 ${theme.card} border-t ${theme.border} z-40">
-                        <div class="max-w-7xl mx-auto px-4 flex items-center justify-around h-20">
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="flex-1 flex flex-col items-center justify-center gap-1 py-4 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
+                        <div class="relative max-w-7xl mx-auto px-4 flex items-center justify-around h-20">
+                            <!-- Tab Indicator -->
+                            <div class="dashboard-tab-indicator absolute bottom-0 h-1 bg-blue-600 transition-transform duration-300" style="width: 50%; left: 0%; ${state.dashboardTab === 'family' ? 'transform: translateX(100%);' : ''}"></div>
+                            
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-1 py-4 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600' : theme.textSecondary + ' hover:text-blue-600'}" data-tab="my-plan">
                                 ${icons.calendar || '📅'}
                                 <span class="text-xs font-semibold">My Plan</span>
                             </button>
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="flex-1 flex flex-col items-center justify-center gap-1 py-4 transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600' : theme.textSecondary + ' hover:text-blue-600'}">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-1 py-4 transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600' : theme.textSecondary + ' hover:text-blue-600'}" data-tab="family">
                                 ${icons.users || '👥'}
                                 <span class="text-xs font-semibold">Family</span>
                             </button>
@@ -3937,6 +4043,9 @@
                 }
                 if (document.getElementById('dashboardReadingCard')) {
                     initDashboardSwipeListeners();
+                }
+                if (document.querySelector('.dashboard-container')) {
+                    initDashboardTabSwipeListeners();
                 }
             }, 0);
 
