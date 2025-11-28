@@ -2569,7 +2569,9 @@
                                             <div class="flex items-center justify-between mb-6">
                                                 <div class="flex items-center gap-2">
                                                     ${icons.book}
-                                                    <h2 class="text-lg font-bold">Today's Reading</h2>
+                                                    <div>
+                                                        <h2 class="text-lg font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                                    </div>
                                                 </div>
                                                 <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
                                                     ${icons.copy}
@@ -2603,7 +2605,101 @@
                                 </div>
                             ` : ''}
 
-                            <!-- Yearly Progress (Simplified) -->
+                            <!-- Individual Progress Section -->
+                            ${(() => {
+                                const otProgress = calculateProgress('old');
+                                const ntProgress = calculateProgress('new');
+                                return `
+                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                    <div class="flex items-center gap-3 mb-6">
+                                        ${icons.trendingUp || '📈'}
+                                        <h3 class="text-lg font-bold">My Progress</h3>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-6">
+                                        <!-- Old Testament -->
+                                        <div class="flex flex-col items-center p-4 ${theme.accent} rounded-lg">
+                                            <div class="w-24 h-24 flex-shrink-0 mb-4 relative">
+                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                                                    ${(() => {
+                                                        const segments = [];
+                                                        const totalSegments = 24;
+                                                        const filledSegments = Math.round((otProgress.percentage / 100) * totalSegments);
+                                                        for (let i = 0; i < totalSegments; i++) {
+                                                            const filled = i < filledSegments;
+                                                            const angle = (i / totalSegments) * 360;
+                                                            const startAngle = angle;
+                                                            const endAngle = angle + (360 / totalSegments) - 2;
+                                                            const radius = 70;
+                                                            const innerRadius = 55;
+                                                            const startRad = (startAngle * Math.PI) / 180;
+                                                            const endRad = (endAngle * Math.PI) / 180;
+                                                            const x1 = 100 + radius * Math.cos(startRad);
+                                                            const y1 = 100 + radius * Math.sin(startRad);
+                                                            const x2 = 100 + radius * Math.cos(endRad);
+                                                            const y2 = 100 + radius * Math.sin(endRad);
+                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                            const segmentColor = filled ? '#3b82f6' : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                            segments.push('<path d=\"' + path + '\" fill=\"' + segmentColor + '\" opacity=\"' + (filled ? '1' : '0.3') + '\" />');
+                                                        }
+                                                        return segments.join('');
+                                                    })()}
+                                                </svg>
+                                                <div class="absolute inset-0 flex items-center justify-center">
+                                                    <span class="text-sm font-bold text-blue-500">${otProgress.percentage}%</span>
+                                                </div>
+                                            </div>
+                                            <p class="${theme.textSecondary} text-xs font-semibold mb-2">Old Testament</p>
+                                            <p class="text-sm font-bold">${otProgress.read}/${otProgress.total}</p>
+                                        </div>
+                                        <!-- New Testament -->
+                                        <div class="flex flex-col items-center p-4 ${theme.accent} rounded-lg">
+                                            <div class="w-24 h-24 flex-shrink-0 mb-4 relative">
+                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                                                    ${(() => {
+                                                        const segments = [];
+                                                        const totalSegments = 24;
+                                                        const filledSegments = Math.round((ntProgress.percentage / 100) * totalSegments);
+                                                        for (let i = 0; i < totalSegments; i++) {
+                                                            const filled = i < filledSegments;
+                                                            const angle = (i / totalSegments) * 360;
+                                                            const startAngle = angle;
+                                                            const endAngle = angle + (360 / totalSegments) - 2;
+                                                            const radius = 70;
+                                                            const innerRadius = 55;
+                                                            const startRad = (startAngle * Math.PI) / 180;
+                                                            const endRad = (endAngle * Math.PI) / 180;
+                                                            const x1 = 100 + radius * Math.cos(startRad);
+                                                            const y1 = 100 + radius * Math.sin(startRad);
+                                                            const x2 = 100 + radius * Math.cos(endRad);
+                                                            const y2 = 100 + radius * Math.sin(endRad);
+                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
+                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
+                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
+                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
+                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
+                                                            const segmentColor = filled ? '#10b981' : (state.darkMode ? '#334155' : '#e5e7eb');
+                                                            segments.push('<path d=\"' + path + '\" fill=\"' + segmentColor + '\" opacity=\"' + (filled ? '1' : '0.3') + '\" />');
+                                                        }
+                                                        return segments.join('');
+                                                    })()}
+                                                </svg>
+                                                <div class="absolute inset-0 flex items-center justify-center">
+                                                    <span class="text-sm font-bold text-emerald-500">${ntProgress.percentage}%</span>
+                                                </div>
+                                            </div>
+                                            <p class="${theme.textSecondary} text-xs font-semibold mb-2">New Testament</p>
+                                            <p class="text-sm font-bold">${ntProgress.read}/${ntProgress.total}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                `;
+                            })()}
+                        ` : `
+                            <!-- Yearly Progress (Simplified) - TOP OF FAMILY TAB -->
                             ${(() => {
                                 const progress = calculateTimelineProgress();
                                 
@@ -2704,7 +2800,7 @@
                                     </div>
                                 `;
                             })()}
-                        ` : `
+
                             <!-- Stats Grid -->
                             <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="grid grid-cols-3 gap-6">
@@ -3383,7 +3479,7 @@
                                                 <div>${book.name}</div>
                                                 <div class="text-xs font-normal ${theme.textSecondary}">${book.tamil_name}</div>
                                             </div>
-                                            <span id="book-progress-${bookIndex}" class="book-progress text-xs px-2 py-1 rounded-full ${readChapters === book.chapters ? 'bg-emerald-500/20 text-emerald-500' : `${state.darkMode ? 'bg-slate-700' : 'bg-gray-100'} ${theme.textSecondary}`}">
+                                            <span id="book-progress-${bookIndex}" class="book-progress text-xs px-2 py-1 rounded-full ${readChapters === book.chapters ? 'bg-emerald-500/20 text-emerald-500' : `${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.textSecondary}`}">
                                                 ${readChapters}/${book.chapters}
                                             </span>
                                         </div>
@@ -3408,7 +3504,7 @@
                             titleText += ' - Overdue';
                             break;
                         default:
-                            buttonClass = `${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'} ${theme.textSecondary} chapter-unread`;
+                            buttonClass = `${state.darkMode ? 'bg-slate-800' : 'bg-gray-200'} ${theme.textSecondary} chapter-unread`;
                             titleText += ' - Not scheduled yet';
                     }
 
@@ -3569,7 +3665,7 @@
                                     <button onclick="state.showAdminView = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back">
                                         ${icons.chevronLeft}
                                     </button>
-                                    <div class="w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center text-white">
+                                    <div class="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-white">
                                         ${icons.settings}
                                     </div>
                                     <div>
@@ -3636,7 +3732,7 @@
                                                     <span class="${theme.textSecondary}">Progress</span>
                                                     <span class="font-bold">${percentage}%</span>
                                                 </div>
-                                                <div class="h-2 rounded-full overflow-hidden ${state.darkMode ? 'bg-slate-700' : 'bg-gray-200'}">
+                                                <div class="h-2 rounded-full overflow-hidden ${state.darkMode ? 'bg-slate-800' : 'bg-gray-200'}">
                                                     <div class="h-full bg-gradient-to-r from-blue-500 to-purple-600 transition-all" style="width: ${percentage}%"></div>
                                                 </div>
                                             </div>
