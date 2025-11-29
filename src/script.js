@@ -332,9 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Show admin-only menu items
         if (rightNotesOption) rightNotesOption.style.display = 'flex';
-        if (rightKingsOption) rightKingsOption.style.display = 'flex';
-        if (rightProphetsOption) rightProphetsOption.style.display = 'flex';
-        if (rightTimelineOption) rightTimelineOption.style.display = 'flex';
+        // Kings, Prophets, Timeline are always hidden
         if (rightCharacterOption) rightCharacterOption.style.display = 'flex';
         if (rightLifeOfJesusOption) rightLifeOfJesusOption.style.display = 'flex';
         if (rightCultOption) rightCultOption.style.display = 'flex';
@@ -3624,13 +3622,13 @@ function updateAdminUI() {
         rightNotesOption.style.display = isAdminMode ? 'flex' : 'none';
     }
     if (rightKingsOption) {
-        rightKingsOption.style.display = isAdminMode ? 'flex' : 'none';
+        rightKingsOption.style.display = 'none';
     }
     if (rightProphetsOption) {
-        rightProphetsOption.style.display = isAdminMode ? 'flex' : 'none';
+        rightProphetsOption.style.display = 'none';
     }
     if (rightTimelineOption) {
-        rightTimelineOption.style.display = isAdminMode ? 'flex' : 'none';
+        rightTimelineOption.style.display = 'none';
     }
     if (rightCharacterOption) {
         rightCharacterOption.style.display = isAdminMode ? 'flex' : 'none';

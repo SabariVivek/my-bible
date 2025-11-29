@@ -158,9 +158,6 @@ function goBackMobile() {
 }
 
 // Swipe back gesture for mobile
-let touchStartX = 0;
-let touchStartY = 0;
-
 document.addEventListener('touchstart', function(event) {
     touchStartX = event.changedTouches[0].screenX;
     touchStartY = event.changedTouches[0].screenY;

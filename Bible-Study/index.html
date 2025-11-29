@@ -292,42 +292,9 @@
 
             <!-- Kings Content -->
             <div id="kings-content" class="hidden">
-                <!-- Top Navigation Bar (matching Life of Christ design) -->
-                <div class="life-of-christ-top-nav" id="kingsTopNav">
-                    <!-- Back Button -->
-                    <button class="nav-menu-btn" id="kingsBackBtn" onclick="handleKingsNavBackButton()">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Title -->
-                    <h1 class="nav-title" id="kingsTitleDisplay">
-                        <span class="title-full">Kings of Israel & Judah</span>
-                        <span class="title-short">Kings</span>
-                    </h1>
-                    
-                    <!-- Search Input -->
-                    <input 
-                        type="text" 
-                        id="kingsSearch" 
-                        class="nav-search-input-inline" 
-                        placeholder="Search kings..."
-                        autocomplete="off"
-                    />
-                    
-                    <!-- Search Icon / Clear Button -->
-                    <button class="nav-search-icon-btn" id="kingsSearchToggleBtn" onclick="toggleKingsSearchMode(event)">
-                        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <svg class="close-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                
                 <div class="content-header">
+                    <button class="mobile-back-btn" onclick="goBackMobile()">← Back</button>
+                    <h1 class="page-title">Kings</h1>
                     <div class="content-actions">
                         <span class="showing-text" id="showing-count">Showing 7</span>
                         <div class="card" style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 20px; max-width: fit-content; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
@@ -392,42 +359,9 @@
 
             <!-- Prophets Content -->
             <div id="prophets-content" class="hidden">
-                <!-- Top Navigation Bar (matching Life of Christ design) -->
-                <div class="life-of-christ-top-nav" id="prophetsTopNav">
-                    <!-- Back Button -->
-                    <button class="nav-menu-btn" id="prophetsBackBtn" onclick="handleProphetsNavBackButton()">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Title -->
-                    <h1 class="nav-title" id="prophetsTitleDisplay">
-                        <span class="title-full">Prophets of the Bible</span>
-                        <span class="title-short">Prophets</span>
-                    </h1>
-                    
-                    <!-- Search Input -->
-                    <input 
-                        type="text" 
-                        id="prophetsSearch" 
-                        class="nav-search-input-inline" 
-                        placeholder="Search prophets..."
-                        autocomplete="off"
-                    />
-                    
-                    <!-- Search Icon / Clear Button -->
-                    <button class="nav-search-icon-btn" id="prophetsSearchToggleBtn" onclick="toggleProphetsSearchMode(event)">
-                        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <svg class="close-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                
                 <div class="content-header">
+                    <button class="mobile-back-btn" onclick="goBackMobile()">← Back</button>
+                    <h1 class="page-title">Prophets</h1>
                     <div class="content-actions">
                         <span class="showing-text" id="prophets-showing-count">Showing 7</span>
                         <div class="card" style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 20px; max-width: fit-content; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
@@ -724,25 +658,10 @@
 
             <!-- Timeline Content -->
             <div id="timeline-content" class="hidden">
-                <!-- Top Navigation Bar (matching Life of Christ design) -->
-                <div class="life-of-christ-top-nav" id="timelineTopNav">
-                    <!-- Back Button -->
-                    <button class="nav-menu-btn" id="timelineBackBtn" onclick="handleTimelineNavBackButton()">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                    
-                    <!-- Title -->
-                    <h1 class="nav-title" id="timelineTitleDisplay">
-                        <span class="title-full">Biblical Timeline</span>
-                        <span class="title-short">Timeline</span>
-                    </h1>
-                    
-
-                </div>
-                
                 <div class="content-header">
+                    <button class="mobile-back-btn" onclick="goBackMobile()">← Back</button>
+                    <h1 class="page-title">Biblical Timeline</h1>
+                </div>
                 <div class="timeline-container">
                     <div class="timeline">
                         <ul>

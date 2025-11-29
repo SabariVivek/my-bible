@@ -2767,14 +2767,6 @@ body .dark-mode-maps .page-title {
     min-height: 100vh;
 }
 
-#timeline-content .timeline ul li:first-child {
-    margin-top: 40px;
-}
-
-#timeline-content .timeline ul li:last-child {
-    margin-bottom: 40px;
-}
-
 .timeline-container {
     min-height: 100vh;
     width: 100%;
@@ -2816,7 +2808,7 @@ body .dark-mode-maps .page-title {
 }
 
 .timeline-container .timeline ul li:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .timeline-container .timeline-content h1 {
