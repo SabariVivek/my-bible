@@ -509,7 +509,7 @@
 /* Apply light theme with purple gradient accents */
 
 #bible-content:not(.dark-mode-bible) .bible-verse-container {
-    background: #EBEBFF;
+    background: #F5F1E8;
     box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12),
                 0 2px 8px rgba(102, 126, 234, 0.08),
                 0 0 0 1px rgba(102, 126, 234, 0.15),
@@ -526,7 +526,7 @@
 }
 
 #bible-content:not(.dark-mode-bible) .bible-verse-form-content {
-    background: #EBEBFF;
+    background: #F5F1E8;
 }
 
 #bible-content:not(.dark-mode-bible) .bible-verse-header {
@@ -540,7 +540,7 @@
 }
 
 #bible-content:not(.dark-mode-bible) .bible-verse-input:focus {
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-color: #667eea;
     box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
 }
@@ -560,7 +560,7 @@
 }
 
 #bible-content:not(.dark-mode-bible) .bible-verse-dropdown-input:focus {
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-color: #667eea;
     box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
 }
@@ -574,7 +574,7 @@
 }
 
 #bible-content:not(.dark-mode-bible) .bible-verse-dropdown-list {
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-color: rgba(102, 126, 234, 0.3);
     box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
 }
@@ -640,7 +640,7 @@
 }
 
 #bible-content:not(.dark-mode-bible) .bible-verse-testament-btn {
-    background: #EBEBFF;
+    background: #F5F1E8;
     color: var(--heading-color);
     border-color: rgba(102, 126, 234, 0.3);
 }
@@ -2129,6 +2129,300 @@
     .line-spacing-btn {
         padding: 12px;
     }
+}
+
+/* ===== MOBILE BOTTOM DRAWER STYLES ===== */
+
+/* Mobile Breakpoint - Transform Bible Verse Display to Bottom Drawer */
+@media (max-width: 768px) {
+    #bibleVerseDisplaySection {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: auto;
+        max-height: 90vh;
+        width: 100%;
+        margin: 0;
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        animation: slideUpDrawer 0.3s ease-out;
+    }
+
+    @keyframes slideUpDrawer {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Drawer header with drag handle */
+    #bibleVerseDisplaySection .bible-chapter-header {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 16px 20px;
+        background: var(--bg-color);
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    /* Add drag handle above title */
+    #bibleVerseDisplaySection .bible-chapter-header::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 5px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 2.5px;
+    }
+
+    #bibleVerseDisplaySection .bible-chapter-title {
+        font-size: 20px;
+        margin-bottom: 0;
+        padding-top: 6px;
+    }
+
+    /* Scrollable content area */
+    #bibleVerseDisplaySection .bible-chapter-content {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Add padding to bottom for mobile to avoid content being cut off */
+    #bibleVerseDisplaySection .bible-chapter-content {
+        padding-bottom: 40px;
+    }
+
+    /* Make back button more mobile-friendly */
+    #bibleVerseDisplaySection .back-btn-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        padding: 0;
+        border-radius: 50%;
+        margin: 0;
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Adjust header layout for mobile drawer */
+    #bibleVerseDisplaySection .bible-chapter-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* Hide testament nav on mobile in drawer mode */
+    #bibleVerseDisplaySection .testament-nav-wrapper {
+        flex: 1;
+        min-width: 0;
+        order: 2;
+        margin-left: 50px;
+    }
+
+    /* Adjust settings menu for mobile drawer */
+    #bibleVerseDisplaySection .bible-settings-menu-wrapper {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        order: 3;
+    }
+
+    /* Bible verse text adjustments for mobile */
+    #bibleVerseDisplaySection .bible-verse-number {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    #bibleVerseDisplaySection .bible-verse-text,
+    #bibleVerseDisplaySection .bible-verse-tamil,
+    #bibleVerseDisplaySection .bible-verse-english,
+    #bibleVerseDisplaySection .bible-verse-esv {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Verse count tag positioning for mobile drawer */
+    #bibleVerseDisplaySection #bibleVerseCountTag {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Dark mode drawer styling */
+    .dark-mode-bible #bibleVerseDisplaySection {
+        background: #1a1a1a;
+        border-top: 1px solid #2d2d2d;
+    }
+
+    .dark-mode-bible #bibleVerseDisplaySection .bible-chapter-header {
+        background: #1a1a1a;
+        border-bottom-color: #2d2d2d;
+    }
+
+    .dark-mode-bible #bibleVerseDisplaySection .bible-chapter-header::before {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Light mode drawer styling */
+    #bibleVerseDisplaySection:not(.dark-mode-bible) {
+        background: #F5F1E8;
+    }
+
+    #bibleVerseDisplaySection:not(.dark-mode-bible) .bible-chapter-header {
+        background: #F5F1E8;
+        border-bottom-color: #e0d5c8;
+    }
+
+    /* Scrollbar styling for mobile drawer */
+    #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+
+    .dark-mode-bible #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Hide overlay/backdrop if any */
+    .bible-verse-modal-overlay {
+        display: none !important;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    #bibleVerseDisplaySection {
+        max-height: 95vh;
+    }
+
+    #bibleVerseDisplaySection .bible-chapter-header {
+        padding: 12px 16px;
+    }
+
+    #bibleVerseDisplaySection .bible-chapter-title {
+        font-size: 18px;
+    }
+
+    #bibleVerseDisplaySection .back-btn-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+        left: 8px;
+    }
+
+    #bibleVerseDisplaySection .bible-chapter-content {
+        padding: 16px;
+        padding-bottom: 40px;
+    }
+
+    #bibleVerseDisplaySection .bible-verse-item {
+        margin-bottom: 16px;
+    }
+
+    /* Smaller text for tiny devices */
+    #bibleVerseDisplaySection .bible-verse-number {
+        font-size: 12px;
+    }
+
+    #bibleVerseDisplaySection .bible-verse-text,
+    #bibleVerseDisplaySection .bible-verse-tamil,
+    #bibleVerseDisplaySection .bible-verse-english,
+    #bibleVerseDisplaySection .bible-verse-esv {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+}
+
+/* ===== WARM BROWN COLOR UPDATES FOR BIBLE VERSE MODAL ===== */
+
+/* Update button and accent colors from blue/purple to warm brown */
+.bible-verse-form-label {
+    color: #8B5A2B !important;
+}
+
+.bible-verse-input,
+.bible-verse-dropdown-input {
+    border-color: rgba(160, 114, 61, 0.3) !important;
+}
+
+.bible-verse-input:focus,
+.bible-verse-dropdown-input:focus {
+    border-color: #A0723D !important;
+    box-shadow: 0 0 15px rgba(160, 114, 61, 0.3) !important;
+}
+
+.bible-verse-dropdown-arrow {
+    border-top-color: #A0723D !important;
+}
+
+.bible-verse-dropdown-item:hover {
+    background: rgba(160, 114, 61, 0.15) !important;
+    color: #2A1F15 !important;
+}
+
+.bible-verse-radio-option input[type="radio"] {
+    border-color: rgba(160, 114, 61, 0.5) !important;
+}
+
+.bible-verse-radio-option input[type="radio"]:checked {
+    border-color: #A0723D !important;
+    background: rgba(160, 114, 61, 0.2) !important;
+}
+
+.bible-verse-radio-option input[type="radio"]:checked::after {
+    background: #A0723D !important;
+    box-shadow: 0 0 10px rgba(160, 114, 61, 0.8) !important;
+}
+
+.bible-verse-submit-btn {
+    background: linear-gradient(135deg, #A0723D 0%, #8B5A2B 100%) !important;
+    box-shadow: 0 5px 20px rgba(160, 114, 61, 0.3) !important;
+}
+
+.bible-verse-submit-btn:hover {
+    box-shadow: 0 8px 30px rgba(160, 114, 61, 0.5) !important;
+}
+
+.bible-verse-testament-btn.active {
+    background: linear-gradient(135deg, #A0723D 0%, #8B5A2B 100%) !important;
+    box-shadow: 0 2px 10px rgba(160, 114, 61, 0.3) !important;
+}
+
+/* Bible settings menu updates */
+.bible-settings-trigger {
+    background: rgba(160, 114, 61, 0.1) !important;
+    border-color: rgba(160, 114, 61, 0.2) !important;
+    color: #A0723D !important;
+}
+
+.bible-settings-trigger:hover {
+    background: rgba(160, 114, 61, 0.2) !important;
+    border-color: rgba(160, 114, 61, 0.3) !important;
 }
 
 
