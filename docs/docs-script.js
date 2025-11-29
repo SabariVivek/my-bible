@@ -1337,11 +1337,21 @@ function initImageLightbox() {
     const zoomInBtn = document.getElementById('zoom-in');
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
+    const lightboxContainer = document.querySelector('.lightbox-container');
     
     let currentZoom = 1;
+    let offsetX = 0;
+    let offsetY = 0;
     const minZoom = 1;
     const maxZoom = 5;
     const zoomStep = 0.2;
+    
+    // Dragging state
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragStartOffsetX = 0;
+    let dragStartOffsetY = 0;
     
     // Open lightbox on image click
     function setupImageClickHandlers(container) {
@@ -1368,7 +1378,9 @@ function initImageLightbox() {
     function openLightbox(imageSrc) {
         lightboxImage.src = imageSrc;
         currentZoom = 1;
-        lightboxImage.style.transform = 'scale(1)';
+        offsetX = 0;
+        offsetY = 0;
+        updateZoom();
         lightboxImage.classList.remove('zoomed');
         lightbox.style.display = 'flex';
         document.body.style.overflow = 'hidden';
@@ -1378,16 +1390,36 @@ function initImageLightbox() {
         lightbox.style.display = 'none';
         document.body.style.overflow = '';
         currentZoom = 1;
-        lightboxImage.style.transform = 'scale(1)';
+        offsetX = 0;
+        offsetY = 0;
+        updateZoom();
     }
     
     function updateZoom() {
-        lightboxImage.style.transform = `scale(${currentZoom})`;
+        lightboxImage.style.transform = `scale(${currentZoom}) translate(${offsetX}px, ${offsetY}px)`;
         
         if (currentZoom > minZoom) {
             lightboxImage.classList.add('zoomed');
         } else {
             lightboxImage.classList.remove('zoomed');
+        }
+    }
+    
+    function constrainOffset() {
+        // Get image dimensions
+        const imageRect = lightboxImage.getBoundingClientRect();
+        const containerRect = lightboxContainer.getBoundingClientRect();
+        
+        // Calculate max offset based on zoom level
+        if (currentZoom > minZoom) {
+            const maxOffsetX = (imageRect.width / 2);
+            const maxOffsetY = (imageRect.height / 2);
+            
+            offsetX = Math.max(-maxOffsetX, Math.min(maxOffsetX, offsetX));
+            offsetY = Math.max(-maxOffsetY, Math.min(maxOffsetY, offsetY));
+        } else {
+            offsetX = 0;
+            offsetY = 0;
         }
     }
     
@@ -1397,16 +1429,20 @@ function initImageLightbox() {
     
     zoomInBtn.addEventListener('click', function() {
         currentZoom = Math.min(currentZoom + zoomStep, maxZoom);
+        constrainOffset();
         updateZoom();
     });
     
     zoomOutBtn.addEventListener('click', function() {
         currentZoom = Math.max(currentZoom - zoomStep, minZoom);
+        constrainOffset();
         updateZoom();
     });
     
     zoomResetBtn.addEventListener('click', function() {
         currentZoom = 1;
+        offsetX = 0;
+        offsetY = 0;
         updateZoom();
     });
     
@@ -1417,9 +1453,11 @@ function initImageLightbox() {
                 closeLightbox();
             } else if (e.key === '+' || e.key === '=') {
                 currentZoom = Math.min(currentZoom + zoomStep, maxZoom);
+                constrainOffset();
                 updateZoom();
             } else if (e.key === '-') {
                 currentZoom = Math.max(currentZoom - zoomStep, minZoom);
+                constrainOffset();
                 updateZoom();
             }
         }
@@ -1437,37 +1475,105 @@ function initImageLightbox() {
         });
     }
     
-    // Pinch-to-zoom for mobile
+    // Mouse drag support for desktop
+    lightboxImage.addEventListener('mousedown', function(e) {
+        if (currentZoom > minZoom) {
+            isDragging = true;
+            dragStartX = e.clientX;
+            dragStartY = e.clientY;
+            dragStartOffsetX = offsetX;
+            dragStartOffsetY = offsetY;
+            lightboxImage.style.cursor = 'grabbing';
+            e.preventDefault();
+        }
+    }, false);
+    
+    document.addEventListener('mousemove', function(e) {
+        if (isDragging && currentZoom > minZoom) {
+            const deltaX = (e.clientX - dragStartX);
+            const deltaY = (e.clientY - dragStartY);
+            
+            offsetX = dragStartOffsetX + (deltaX / currentZoom);
+            offsetY = dragStartOffsetY + (deltaY / currentZoom);
+            
+            constrainOffset();
+            updateZoom();
+        }
+    }, false);
+    
+    document.addEventListener('mouseup', function() {
+        isDragging = false;
+        lightboxImage.style.cursor = 'zoom-in';
+        if (currentZoom > minZoom) {
+            lightboxImage.style.cursor = 'grab';
+        }
+    }, false);
+    
+    // Pinch-to-zoom and drag for mobile
     let touchStartDistance = 0;
     let touchStartZoom = 1;
+    let touchStartOffsetX = 0;
+    let touchStartOffsetY = 0;
     
     lightboxImage.addEventListener('touchstart', function(e) {
         if (e.touches.length === 2) {
-            // Calculate distance between two fingers
+            // Pinch zoom
             const touch1 = e.touches[0];
             const touch2 = e.touches[1];
             const dx = touch1.clientX - touch2.clientX;
             const dy = touch1.clientY - touch2.clientY;
             touchStartDistance = Math.sqrt(dx * dx + dy * dy);
             touchStartZoom = currentZoom;
+            touchStartOffsetX = offsetX;
+            touchStartOffsetY = offsetY;
+        } else if (e.touches.length === 1 && currentZoom > minZoom) {
+            // Single touch drag when zoomed
+            isDragging = true;
+            dragStartX = e.touches[0].clientX;
+            dragStartY = e.touches[0].clientY;
+            dragStartOffsetX = offsetX;
+            dragStartOffsetY = offsetY;
         }
     }, false);
     
     lightboxImage.addEventListener('touchmove', function(e) {
         if (e.touches.length === 2) {
+            // Pinch zoom
             e.preventDefault();
             
-            // Calculate new distance between two fingers
             const touch1 = e.touches[0];
             const touch2 = e.touches[1];
             const dx = touch1.clientX - touch2.clientX;
             const dy = touch1.clientY - touch2.clientY;
             const touchEndDistance = Math.sqrt(dx * dx + dy * dy);
             
-            // Calculate zoom based on finger distance change
             const zoomChange = touchEndDistance / touchStartDistance;
             currentZoom = Math.min(Math.max(touchStartZoom * zoomChange, minZoom), maxZoom);
+            offsetX = touchStartOffsetX;
+            offsetY = touchStartOffsetY;
             updateZoom();
+        } else if (e.touches.length === 1 && isDragging) {
+            // Single touch drag
+            e.preventDefault();
+            
+            const deltaX = (e.touches[0].clientX - dragStartX);
+            const deltaY = (e.touches[0].clientY - dragStartY);
+            
+            offsetX = dragStartOffsetX + (deltaX / currentZoom);
+            offsetY = dragStartOffsetY + (deltaY / currentZoom);
+            
+            constrainOffset();
+            updateZoom();
+        }
+    }, false);
+    
+    lightboxImage.addEventListener('touchend', function(e) {
+        if (e.touches.length < 2) {
+            isDragging = false;
+            if (e.touches.length === 0) {
+                constrainOffset();
+                updateZoom();
+            }
         }
     }, false);
     

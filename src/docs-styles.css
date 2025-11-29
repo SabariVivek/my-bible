@@ -1369,6 +1369,22 @@ body.dark-theme .editor th {
 }
 
 /* Responsive image sizing for different screen sizes */
+/* Desktop - constrain image width and center */
+@media (min-width: 769px) {
+    .editor img {
+        max-width: 600px;
+        margin: 16px auto;
+        padding: 8px;
+    }
+    
+    #page-content img {
+        max-width: 600px;
+        margin: 16px auto;
+        padding: 8px;
+        display: block;
+    }
+}
+
 @media (max-width: 768px) {
     .editor img {
         max-width: calc(100% - 16px);
@@ -1383,6 +1399,7 @@ body.dark-theme .editor th {
         margin: 12px 4px;
         padding: 2px;
     }
+}
 }
 
 /* Mobile Bottom Actions */
@@ -1485,10 +1502,12 @@ body.dark-theme .mobile-action-btn.save-btn {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     cursor: zoom-in;
     transition: transform 0.2s ease;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 #lightbox-image.zoomed {
-    cursor: zoom-out;
+    cursor: grab;
 }
 
 .lightbox-close {
