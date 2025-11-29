@@ -949,6 +949,9 @@ function viewPage(pageId) {
         if (window.imageLightbox) {
             window.imageLightbox.setupHandlers(pageContent);
         }
+        
+        // Setup table scroll handlers for page content
+        setupTableScrollHandlers(pageContent);
     }
     // Update active state
     document.querySelectorAll('.tree-item-header').forEach(h => h.classList.remove('active'));
@@ -1024,6 +1027,9 @@ function enterEditMode() {
         if (window.imageLightbox) {
             window.imageLightbox.setupHandlers(editor);
         }
+        
+        // Setup table scroll handlers for editor
+        setupTableScrollHandlers(editor);
     }
 }
 function savePage() {
@@ -1587,6 +1593,21 @@ function initImageLightbox() {
 
 // Store lightbox instance globally for use in other functions
 window.imageLightbox = null;
+
+// ===================================
+// Table Scroll Handler
+// ===================================
+function setupTableScrollHandlers(container) {
+    if (!container) return;
+    
+    const tables = container.querySelectorAll('table');
+    tables.forEach(table => {
+        // Just ensure table is scrollable - CSS handles the rest
+        table.style.display = 'block';
+        table.style.overflowX = 'auto';
+        table.style.webkitOverflowScrolling = 'touch';
+    });
+}
 
 // ===================================
 // Create New Item
