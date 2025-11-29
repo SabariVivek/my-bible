@@ -600,15 +600,7 @@ async function loadBibleVerses(book, chapter, verse, language) {
             return;
         }
         
-        // Display verses
-        displayBibleVerses(book, chapter, tamilChapterData, englishChapterData, esvChapterData, verse, language);
-        
-        // Update URL route
-        if (typeof updateRoute === 'function') {
-            updateRoute('bibleVerse', book, chapter, verse || '');
-        }
-        
-        // Hide all content sections
+        // Hide all content sections IMMEDIATELY to prevent UI flash
         document.getElementById('dashboard-content').classList.add('hidden');
         document.getElementById('kings-content').classList.add('hidden');
         document.getElementById('prophets-content').classList.add('hidden');
@@ -624,6 +616,14 @@ async function loadBibleVerses(book, chapter, verse, language) {
         
         // Show verse display section
         displaySection.classList.remove('hidden');
+        
+        // Display verses
+        displayBibleVerses(book, chapter, tamilChapterData, englishChapterData, esvChapterData, verse, language);
+        
+        // Update URL route
+        if (typeof updateRoute === 'function') {
+            updateRoute('bibleVerse', book, chapter, verse || '');
+        }
         
         // Scroll to top of the page
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -878,24 +878,45 @@ function initializeBibleNavigation() {
 
 function handleTouchStart(e) {
     touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
 }
 
 function handleTouchEnd(e) {
     touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
     handleSwipe();
 }
 
 function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
+    const horizontalThreshold = 50;
+    const verticalThreshold = 50;
+    const backEdgeThreshold = 50; // Only trigger back if swipe starts from left edge
     
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
+    const horizontalDiff = touchStartX - touchEndX;
+    const verticalDiff = Math.abs(touchStartY - touchEndY);
+    
+    // Ignore vertical swipes (scrolling)
+    if (verticalDiff > horizontalThreshold) {
+        return;
+    }
+    
+    // Check for Android back swipe (right swipe from left edge)
+    if (touchStartX < backEdgeThreshold && horizontalDiff < -horizontalThreshold) {
+        // Right swipe from left edge - trigger back
+        goBackToBibleForm();
+        return;
+    }
+    
+    // Only navigate chapters if swipe is significant and not from edge
+    if (Math.abs(horizontalDiff) > horizontalThreshold) {
+        if (horizontalDiff > 0) {
             // Swipe left - next chapter
             navigateToBibleNextChapter();
         } else {
-            // Swipe right - previous chapter
-            navigateToBiblePreviousChapter();
+            // Swipe right - previous chapter (only if not from edge)
+            if (touchStartX >= backEdgeThreshold) {
+                navigateToBiblePreviousChapter();
+            }
         }
     }
 }
