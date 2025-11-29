@@ -11,6 +11,8 @@ let currentBibleChapter = 1;
 let currentBibleLanguage = 'tamil';
 let touchStartX = 0;
 let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
 let isLanguageSwitching = false; // Flag to prevent verse count on language change
 
 // Book name mapping for file names
