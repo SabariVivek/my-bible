@@ -955,11 +955,30 @@ body.dark-theme .page-content th {
     padding: 12px 20px;
     background-color: #e8f0fe;
     font-style: italic;
+    border-radius: 4px;
 }
 
 body.dark-theme .page-content blockquote {
-    border-left-color: #eaa3a3;
-    background-color: #3c4043;
+    border-left-color: #8ab4f8;
+    background-color: #283545;
+    color: #e8e8e8;
+}
+
+/* Editor blockquote styling */
+.editor blockquote {
+    border-left: 3px solid #1a73e8;
+    margin: 20px 0;
+    padding: 12px 20px;
+    background-color: #e8f0fe;
+    font-style: italic;
+    border-radius: 4px;
+    color: #202124;
+}
+
+body.dark-theme .editor blockquote {
+    border-left-color: #8ab4f8;
+    background-color: #283545;
+    color: #e8e8e8;
 }
 
 .page-content hr {
