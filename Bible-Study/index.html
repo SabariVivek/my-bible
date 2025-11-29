@@ -9,6 +9,93 @@
     <link rel="stylesheet" href="styles/testament-nav.css">
     <link rel="stylesheet" href="styles/bible-verse-modal.css">
     <link rel="stylesheet" href="styles/cross-reference-popup.css">
+    <!-- Show loader while page loads in background -->
+    <script>
+        const hash = window.location.hash;
+        const isDashboardHash = !hash || hash === '#/' || hash === '#/dashboard';
+        
+        if (!isDashboardHash) {
+            // Create and inject loader immediately
+            const loaderStyle = document.createElement('style');
+            loaderStyle.innerHTML = `
+                html, body {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .page-loader-wrapper {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #121212;
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 99999;
+                }
+                
+                .page-loader-wrapper.hidden {
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.5s ease-out;
+                }
+                
+                .loader-spinner {
+                    width: 60px;
+                    height: 60px;
+                    border: 5px solid #333333;
+                    border-top: 5px solid #FFFFFF;
+                    border-right: 5px solid #CCCCCC;
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+                }
+                
+                .loader-text {
+                    color: #CCCCCC;
+                    margin-top: 25px;
+                    font-size: 16px;
+                    text-align: center;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+                
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+                
+                /* Hide left sidebar on mobile for non-dashboard pages */
+                @media (max-width: 768px) {
+                    .left-sidebar {
+                        display: none !important;
+                    }
+                }
+                
+                /* Hide dashboard on initial load */
+                #dashboard-content {
+                    visibility: hidden;
+                }
+            `;
+            document.head.appendChild(loaderStyle);
+            
+            // Create loader HTML
+            const loaderWrapper = document.createElement('div');
+            loaderWrapper.className = 'page-loader-wrapper';
+            loaderWrapper.id = 'page-loader-wrapper';
+            loaderWrapper.innerHTML = `
+                <div style="text-align: center;">
+                    <div class="loader-spinner"></div>
+                    <p class="loader-text">Loading...</p>
+                </div>
+            `;
+            document.documentElement.insertBefore(loaderWrapper, document.documentElement.firstChild);
+        }
+    </script>
     <!-- Fuse.js for smart search -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="scripts/parables.js"></script>
@@ -3170,8 +3257,34 @@
     <script>
         // Initialize router when the page loads
         document.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash;
+            const isDashboardHash = !hash || hash === '#/' || hash === '#/dashboard';
+            
+            // Initialize router first
             initializeRouter();
+            
+            // Hide loader and show content after router navigation completes
+            if (!isDashboardHash) {
+                setTimeout(() => {
+                    const loaderWrapper = document.getElementById('page-loader-wrapper');
+                    if (loaderWrapper) {
+                        loaderWrapper.classList.add('hidden');
+                        
+                        // Remove loader from DOM after fade out
+                        setTimeout(() => {
+                            loaderWrapper.remove();
+                        }, 500);
+                    }
+                    
+                    // Make dashboard visible again (in case user navigates back)
+                    const dashboardContent = document.getElementById('dashboard-content');
+                    if (dashboardContent) {
+                        dashboardContent.style.visibility = 'visible';
+                    }
+                }, 800);
+            }
         });
+    </script>
     </script>
 
     <!-- Passcode Modal -->

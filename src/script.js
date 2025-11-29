@@ -5509,12 +5509,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Character Study option - navigate to Bible-Study Character Study page
     if (rightCharacterOption) {
         rightCharacterOption.addEventListener('click', () => {
+            // Navigate directly with hash
             window.location.href = `Bible-Study/index.html#/genealogy`;
         });
     }
     // Life of Jesus option - navigate to Bible-Study Life of Christ page
     if (rightLifeOfJesusOption) {
         rightLifeOfJesusOption.addEventListener('click', () => {
+            // Navigate directly with hash
             window.location.href = `Bible-Study/index.html#/life-of-christ`;
         });
     }
