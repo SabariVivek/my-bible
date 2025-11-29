@@ -306,6 +306,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
     const rightMenuBtn = document.getElementById('right-menu-btn');
     const rightNotesOption = document.getElementById('right-notes-option');
+    const rightKingsOption = document.getElementById('right-kings-option');
+    const rightProphetsOption = document.getElementById('right-prophets-option');
+    const rightTimelineOption = document.getElementById('right-timeline-option');
+    const rightCharacterOption = document.getElementById('right-character-option');
+    const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     const isMobile = window.innerWidth <= 768;
     let isFadingOut = false; // Flag to prevent re-showing during fade
@@ -327,10 +332,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Show admin-only menu items
         if (rightNotesOption) rightNotesOption.style.display = 'flex';
+        if (rightKingsOption) rightKingsOption.style.display = 'flex';
+        if (rightProphetsOption) rightProphetsOption.style.display = 'flex';
+        if (rightTimelineOption) rightTimelineOption.style.display = 'flex';
+        if (rightCharacterOption) rightCharacterOption.style.display = 'flex';
+        if (rightLifeOfJesusOption) rightLifeOfJesusOption.style.display = 'flex';
         if (rightCultOption) rightCultOption.style.display = 'flex';
     } else {
         // Hide admin-only menu items
         if (rightNotesOption) rightNotesOption.style.display = 'none';
+        if (rightKingsOption) rightKingsOption.style.display = 'none';
+        if (rightProphetsOption) rightProphetsOption.style.display = 'none';
+        if (rightTimelineOption) rightTimelineOption.style.display = 'none';
+        if (rightCharacterOption) rightCharacterOption.style.display = 'none';
+        if (rightLifeOfJesusOption) rightLifeOfJesusOption.style.display = 'none';
         if (rightCultOption) rightCultOption.style.display = 'none';
     }
     // Admin toggle button click handler
@@ -3588,6 +3603,11 @@ function updateAdminUI() {
     const voiceBtn = document.getElementById('voice-btn');
     const rightMenuBtn = document.getElementById('right-menu-btn');
     const rightNotesOption = document.getElementById('right-notes-option');
+    const rightKingsOption = document.getElementById('right-kings-option');
+    const rightProphetsOption = document.getElementById('right-prophets-option');
+    const rightTimelineOption = document.getElementById('right-timeline-option');
+    const rightCharacterOption = document.getElementById('right-character-option');
+    const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     
     editButtons.forEach(btn => {
@@ -3602,6 +3622,21 @@ function updateAdminUI() {
     // Show/hide admin-only menu items in right sidebar
     if (rightNotesOption) {
         rightNotesOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightKingsOption) {
+        rightKingsOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightProphetsOption) {
+        rightProphetsOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightTimelineOption) {
+        rightTimelineOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightCharacterOption) {
+        rightCharacterOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    if (rightLifeOfJesusOption) {
+        rightLifeOfJesusOption.style.display = isAdminMode ? 'flex' : 'none';
     }
     if (rightCultOption) {
         rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
@@ -5382,6 +5417,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Right menu options
     const bibleReadingOption = document.getElementById('bible-reading-option');
     const rightNotesOption = document.getElementById('right-notes-option');
+    const rightKingsOption = document.getElementById('right-kings-option');
+    const rightProphetsOption = document.getElementById('right-prophets-option');
+    const rightTimelineOption = document.getElementById('right-timeline-option');
+    const rightCharacterOption = document.getElementById('right-character-option');
+    const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
     // Initialize right sidebar (hidden by default)
     if (rightSidebar) {
@@ -5450,10 +5490,73 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'docs/docs.html';
         });
     }
+    // Kings option - navigate to Bible-Study Kings page
+    if (rightKingsOption) {
+        rightKingsOption.addEventListener('click', () => {
+            window.location.href = `Bible-Study/index.html#/kings`;
+        });
+    }
+    // Prophets option - navigate to Bible-Study Prophets page
+    if (rightProphetsOption) {
+        rightProphetsOption.addEventListener('click', () => {
+            window.location.href = `Bible-Study/index.html#/prophets`;
+        });
+    }
+    // Timeline option - navigate to Bible-Study Timeline page
+    if (rightTimelineOption) {
+        rightTimelineOption.addEventListener('click', () => {
+            window.location.href = `Bible-Study/index.html#/timeline`;
+        });
+    }
+    // Character Study option - navigate to Bible-Study Character Study page
+    if (rightCharacterOption) {
+        rightCharacterOption.addEventListener('click', () => {
+            window.location.href = `Bible-Study/index.html#/genealogy`;
+        });
+    }
+    // Life of Jesus option - navigate to Bible-Study Life of Christ page
+    if (rightLifeOfJesusOption) {
+        rightLifeOfJesusOption.addEventListener('click', () => {
+            window.location.href = `Bible-Study/index.html#/life-of-christ`;
+        });
+    }
     // WMSCOG Cult option - navigate to secret page
     if (rightCultOption) {
         rightCultOption.addEventListener('click', () => {
             window.location.href = 'config/secret.html';
         });
     }
+    
+    // Disable copy functionality on the entire document
+    document.addEventListener('copy', (e) => {
+        e.preventDefault();
+        return false;
+    });
+    
+    // Disable context menu (right-click)
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        return false;
+    });
+    
+    // Disable text selection on the main scripture content
+    const scriptureText = document.querySelector('.scripture-text');
+    if (scriptureText) {
+        scriptureText.style.userSelect = 'none';
+        scriptureText.style.webkitUserSelect = 'none';
+        scriptureText.style.mozUserSelect = 'none';
+        scriptureText.style.msUserSelect = 'none';
+    }
+    
+    // Disable selection on mobile with touch events
+    document.addEventListener('selectstart', (e) => {
+        e.preventDefault();
+        return false;
+    });
+    
+    // Prevent drag and drop for copying text
+    document.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+        return false;
+    });
 });

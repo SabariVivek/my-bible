@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+/* Disable copy functionality globally */
+html, body, .main-layout, .content-area, .scripture-text, .verse-text {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+}
+
 /* Offline Message Overlay */
 /* Offline message styles removed - app works offline with cached data */
 
@@ -1296,6 +1305,13 @@ body:not(.dark-theme) .moon-icon {
 .right-menu-item .option-icon {
     flex-shrink: 0;
     color: #5f6368;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    height: 20px;
+    width: 20px;
+    transform: translateY(-2px);
 }
 
 .right-menu-item .option-name {
