@@ -817,6 +817,79 @@ function showWelcomeScreen() {
     // Update active state
     document.querySelectorAll('.tree-item-header').forEach(h => h.classList.remove('active'));
 }
+// Convert plain text URLs to clickable links
+function convertUrlsToLinks(html) {
+    // Create a temporary container to work with HTML safely
+    const container = document.createElement('div');
+    container.innerHTML = html;
+    
+    // Function to process text nodes and convert URLs
+    function processNode(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+            // Match URLs in text (http/https and www patterns)
+            const urlRegex = /(https?:\/\/[^\s<>]+|www\.[^\s<>]+)/g;
+            const text = node.textContent;
+            
+            if (urlRegex.test(text)) {
+                const fragment = document.createDocumentFragment();
+                let lastIndex = 0;
+                
+                // Reset regex
+                urlRegex.lastIndex = 0;
+                let match;
+                
+                while ((match = urlRegex.exec(text)) !== null) {
+                    // Add text before the URL
+                    if (match.index > lastIndex) {
+                        fragment.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+                    }
+                    
+                    // Create link
+                    const link = document.createElement('a');
+                    let url = match[0];
+                    // Add https:// to www URLs if not already present
+                    if (url.startsWith('www.')) {
+                        link.href = 'https://' + url;
+                    } else {
+                        link.href = url;
+                    }
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.textContent = url;
+                    
+                    // Apply CSS for intelligent wrapping on long URLs
+                    link.style.display = 'inline-block';
+                    link.style.wordBreak = 'break-word';
+                    link.style.overflowWrap = 'break-word';
+                    link.style.maxWidth = '100%';
+                    
+                    fragment.appendChild(link);
+                    
+                    lastIndex = urlRegex.lastIndex;
+                }
+                
+                // Add remaining text
+                if (lastIndex < text.length) {
+                    fragment.appendChild(document.createTextNode(text.substring(lastIndex)));
+                }
+                
+                // Replace node with fragment
+                node.parentNode.replaceChild(fragment, node);
+            }
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+            // Skip processing links and code blocks
+            if (['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE'].indexOf(node.tagName) === -1) {
+                // Process child nodes (need to use array to avoid issues with live collection)
+                const childNodes = Array.from(node.childNodes);
+                childNodes.forEach(child => processNode(child));
+            }
+        }
+    }
+    
+    processNode(container);
+    return container.innerHTML;
+}
+
 function viewPage(pageId) {
     const page = findPageById(pageId);
     if (!page || page.type !== 'page') {
@@ -844,9 +917,29 @@ function viewPage(pageId) {
     const pageContent = document.getElementById('page-content');
     if (pageTitle) {
         pageTitle.textContent = page.title;
+        
+        // Add heading icon before the page title in page-view-header
+        const pageViewHeader = pageTitle.closest('.page-view-header');
+        if (pageViewHeader) {
+            // Remove any existing icons first to avoid duplicates
+            const existingIcons = pageViewHeader.querySelectorAll('img[src*="heading"]');
+            existingIcons.forEach(img => img.remove());
+            
+            // Create and add new icon
+            const icon = document.createElement('img');
+            icon.src = '../resources/icons/heading.png';
+            icon.alt = 'Heading icon';
+            icon.style.width = '25px';
+            icon.style.height = '25px';
+            icon.style.display = 'inline-block';
+            icon.style.verticalAlign = 'middle';
+            icon.style.flexShrink = '0';
+            pageTitle.parentElement.insertBefore(icon, pageTitle);
+        }
     }
     if (pageContent) {
-        pageContent.innerHTML = page.content || '<p>This page is empty. Click Edit to add content.</p>';
+        const contentWithLinks = convertUrlsToLinks(page.content || '<p>This page is empty. Click Edit to add content.</p>');
+        pageContent.innerHTML = contentWithLinks;
     }
     // Update active state
     document.querySelectorAll('.tree-item-header').forEach(h => h.classList.remove('active'));
