@@ -2761,9 +2761,9 @@ body .dark-mode-maps .page-title {
 /* Timeline Styles */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
 
-/* Timeline content section - white background */
+/* Timeline content section - warm cream background */
 #timeline-content {
-    background-color: #ffffff !important;
+    background-color: #F5F1E8 !important;
     min-height: 100vh;
 }
 
@@ -2776,7 +2776,7 @@ body .dark-mode-maps .page-title {
     justify-content: center;
     padding: 40px 20px 20px 20px;
     /* Increased top padding to prevent cutoff */
-    background-color: #ffffff;
+    background-color: #F5F1E8;
     font-family: "Montserrat", sans-serif;
     overflow-y: visible;
     overflow-x: hidden;
@@ -4936,7 +4936,7 @@ html #king-page-content.dark-mode-kings .order-number {
     align-items: flex-start;
     justify-content: center;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #F5F1E8;
     overflow-y: auto;
     /* Add vertical scroll */
     overflow-x: hidden;
@@ -4947,7 +4947,7 @@ html #king-page-content.dark-mode-kings .order-number {
     min-height: 70vh;
     width: 100%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #F5F1E8;
     overflow-y: visible;
     overflow-x: hidden;
 }
@@ -4959,15 +4959,15 @@ html #king-page-content.dark-mode-kings .order-number {
 /* Chapter Section Heading Styles */
 .chapter-section-heading {
     position: relative;
-    color: #2c3e50;
+    color: #3A2F25;
     margin-bottom: 1.5rem;
     margin-top: 0;
     font-size: 1.5rem;
     font-weight: 700;
     padding-left: 20px;
     padding-bottom: 0.6rem;
-    border-left: 5px solid #4a7c59;
-    background: linear-gradient(to right, rgba(74, 124, 89, 0.08), transparent);
+    border-left: 5px solid #A0723D;
+    background: linear-gradient(to right, rgba(160, 114, 61, 0.08), transparent);
     padding-right: 1rem;
     padding-top: 0.6rem;
     border-radius: 0 8px 8px 0;
@@ -4975,7 +4975,7 @@ html #king-page-content.dark-mode-kings .order-number {
 }
 
 .chapter-section-heading:hover {
-    background: linear-gradient(to right, rgba(74, 124, 89, 0.12), transparent);
+    background: linear-gradient(to right, rgba(160, 114, 61, 0.12), transparent);
     transform: translateX(5px);
 }
 
