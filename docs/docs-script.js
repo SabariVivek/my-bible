@@ -7,6 +7,9 @@ let editMode = false;
 let theme = localStorage.getItem('theme') || 'light';
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
+    // Initialize image lightbox
+    window.imageLightbox = initImageLightbox();
+    
     // Hide page loader after a short delay to ensure theme is applied
     const pageLoader = document.getElementById('page-loader');
     try {
@@ -456,6 +459,7 @@ function setupEventListeners() {
     if (editor) {
         editor.addEventListener('paste', handlePaste);
         editor.addEventListener('input', detectLinks);
+        editor.addEventListener('keydown', handleEditorKeydown);
     }
     // Setup modals
     setupCreateModal();
@@ -940,6 +944,11 @@ function viewPage(pageId) {
     if (pageContent) {
         const contentWithLinks = convertUrlsToLinks(page.content || '<p>This page is empty. Click Edit to add content.</p>');
         pageContent.innerHTML = contentWithLinks;
+        
+        // Setup image lightbox handlers for page content
+        if (window.imageLightbox) {
+            window.imageLightbox.setupHandlers(pageContent);
+        }
     }
     // Update active state
     document.querySelectorAll('.tree-item-header').forEach(h => h.classList.remove('active'));
@@ -1010,6 +1019,11 @@ function enterEditMode() {
     if (editor) {
         editor.innerHTML = page.content || '';
         editor.focus();
+        
+        // Setup image lightbox handlers for editor
+        if (window.imageLightbox) {
+            window.imageLightbox.setupHandlers(editor);
+        }
     }
 }
 function savePage() {
@@ -1243,6 +1257,231 @@ function cleanPastedHtml(html) {
 function detectLinks() {
     // Basic link detection - can be enhanced
 }
+
+function handleEditorKeydown(e) {
+    // Check if user pressed a dash
+    if (e.key === '-') {
+        const editor = document.getElementById('editor');
+        if (!editor) return;
+        
+        // Delay to let the DOM update after dash is typed
+        setTimeout(() => {
+            // Get the cursor position
+            const selection = window.getSelection();
+            if (!selection.rangeCount) return;
+            
+            const range = selection.getRangeAt(0);
+            const cursorNode = range.endContainer;
+            const cursorOffset = range.endOffset;
+            
+            // Check if the cursor is in a text node
+            if (cursorNode.nodeType !== Node.TEXT_NODE) return;
+            
+            const text = cursorNode.textContent;
+            
+            // Check if we just typed the third dash (text ends with ---)
+            if (cursorOffset >= 3) {
+                const recentText = text.substring(cursorOffset - 3, cursorOffset);
+                
+                if (recentText === '---') {
+                    // Check if --- is on its own line or at the start
+                    const beforeText = text.substring(0, cursorOffset - 3);
+                    const isOwnLine = beforeText.length === 0 || beforeText.endsWith('\n') || beforeText.trim() === '';
+                    
+                    if (isOwnLine) {
+                        // Remove the "---" from the text node
+                        cursorNode.textContent = beforeText + text.substring(cursorOffset);
+                        
+                        // Create horizontal rule
+                        const hr = document.createElement('hr');
+                        
+                        // Insert after the text node
+                        const parent = cursorNode.parentNode;
+                        if (parent) {
+                            parent.insertBefore(hr, cursorNode.nextSibling);
+                        }
+                        
+                        // Create a new paragraph for continued typing
+                        const p = document.createElement('p');
+                        const br = document.createElement('br');
+                        p.appendChild(br);
+                        
+                        if (hr.parentNode) {
+                            hr.parentNode.insertBefore(p, hr.nextSibling);
+                        } else if (parent) {
+                            parent.insertBefore(p, hr.nextSibling || cursorNode.nextSibling);
+                        }
+                        
+                        // Move cursor to the new paragraph
+                        const newRange = document.createRange();
+                        const sel = window.getSelection();
+                        newRange.setStart(p, 0);
+                        newRange.collapse(true);
+                        sel.removeAllRanges();
+                        sel.addRange(newRange);
+                    }
+                }
+            }
+        }, 0);
+    }
+}
+
+// ===================================
+// Image Lightbox
+// ===================================
+function initImageLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    const zoomResetBtn = document.getElementById('zoom-reset');
+    
+    let currentZoom = 1;
+    const minZoom = 1;
+    const maxZoom = 5;
+    const zoomStep = 0.2;
+    
+    // Open lightbox on image click
+    function setupImageClickHandlers(container) {
+        if (!container) return;
+        
+        const images = container.querySelectorAll('img');
+        images.forEach(img => {
+            // Skip heading icons and other non-content images
+            if (img.src.includes('heading.png') || img.src.includes('icon')) {
+                return;
+            }
+            
+            // Remove previous click handlers
+            const newImg = img.cloneNode(true);
+            img.parentNode.replaceChild(newImg, img);
+            
+            newImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openLightbox(newImg.src);
+            });
+        });
+    }
+    
+    function openLightbox(imageSrc) {
+        lightboxImage.src = imageSrc;
+        currentZoom = 1;
+        lightboxImage.style.transform = 'scale(1)';
+        lightboxImage.classList.remove('zoomed');
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = '';
+        currentZoom = 1;
+        lightboxImage.style.transform = 'scale(1)';
+    }
+    
+    function updateZoom() {
+        lightboxImage.style.transform = `scale(${currentZoom})`;
+        
+        if (currentZoom > minZoom) {
+            lightboxImage.classList.add('zoomed');
+        } else {
+            lightboxImage.classList.remove('zoomed');
+        }
+    }
+    
+    // Event listeners
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxOverlay.addEventListener('click', closeLightbox);
+    
+    zoomInBtn.addEventListener('click', function() {
+        currentZoom = Math.min(currentZoom + zoomStep, maxZoom);
+        updateZoom();
+    });
+    
+    zoomOutBtn.addEventListener('click', function() {
+        currentZoom = Math.max(currentZoom - zoomStep, minZoom);
+        updateZoom();
+    });
+    
+    zoomResetBtn.addEventListener('click', function() {
+        currentZoom = 1;
+        updateZoom();
+    });
+    
+    // Keyboard support
+    document.addEventListener('keydown', function(e) {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === '+' || e.key === '=') {
+                currentZoom = Math.min(currentZoom + zoomStep, maxZoom);
+                updateZoom();
+            } else if (e.key === '-') {
+                currentZoom = Math.max(currentZoom - zoomStep, minZoom);
+                updateZoom();
+            }
+        }
+    });
+    
+    // Prevent lightbox from closing when clicking on image or controls
+    lightboxImage.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    const controls = document.querySelector('.lightbox-controls');
+    if (controls) {
+        controls.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+    
+    // Pinch-to-zoom for mobile
+    let touchStartDistance = 0;
+    let touchStartZoom = 1;
+    
+    lightboxImage.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 2) {
+            // Calculate distance between two fingers
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const dx = touch1.clientX - touch2.clientX;
+            const dy = touch1.clientY - touch2.clientY;
+            touchStartDistance = Math.sqrt(dx * dx + dy * dy);
+            touchStartZoom = currentZoom;
+        }
+    }, false);
+    
+    lightboxImage.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 2) {
+            e.preventDefault();
+            
+            // Calculate new distance between two fingers
+            const touch1 = e.touches[0];
+            const touch2 = e.touches[1];
+            const dx = touch1.clientX - touch2.clientX;
+            const dy = touch1.clientY - touch2.clientY;
+            const touchEndDistance = Math.sqrt(dx * dx + dy * dy);
+            
+            // Calculate zoom based on finger distance change
+            const zoomChange = touchEndDistance / touchStartDistance;
+            currentZoom = Math.min(Math.max(touchStartZoom * zoomChange, minZoom), maxZoom);
+            updateZoom();
+        }
+    }, false);
+    
+    // Return function to setup handlers for new content
+    return {
+        setupHandlers: setupImageClickHandlers,
+        openLightbox: openLightbox,
+        closeLightbox: closeLightbox
+    };
+}
+
+// Store lightbox instance globally for use in other functions
+window.imageLightbox = null;
+
 // ===================================
 // Create New Item
 // ===================================
