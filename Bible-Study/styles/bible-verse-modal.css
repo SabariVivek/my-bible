@@ -2135,6 +2135,24 @@
 
 /* Mobile Breakpoint - Transform Bible Verse Display to Bottom Drawer */
 @media (max-width: 768px) {
+    /* Override hidden class specifically for mobile drawer */
+    #bibleVerseDisplaySection:not(.hidden) {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: auto !important;
+        max-height: 90vh !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 20px 20px 0 0 !important;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        z-index: 10000 !important;
+        animation: slideUpDrawer 0.3s ease-out !important;
+    }
+
     #bibleVerseDisplaySection {
         position: fixed !important;
         bottom: 0 !important;
@@ -2148,8 +2166,7 @@
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
         display: flex !important;
         flex-direction: column !important;
-        z-index: 1000 !important;
-        animation: slideUpDrawer 0.3s ease-out !important;
+        z-index: 10000 !important;
     }
 
     @keyframes slideUpDrawer {
@@ -2161,6 +2178,11 @@
             transform: translateY(0);
             opacity: 1;
         }
+    }
+
+    /* Animation only when shown */
+    #bibleVerseDisplaySection:not(.hidden) {
+        animation: slideUpDrawer 0.3s ease-out !important;
     }
 
     /* Drawer header with drag handle */
@@ -2190,6 +2212,7 @@
         font-size: 20px;
         margin-bottom: 0;
         padding-top: 6px;
+        display: block !important;
     }
 
     /* Scrollable content area */
