@@ -14,9 +14,9 @@
     --light-bg: #F8F9FA;                    /* Very soft gray-white, prevents eye strain */
     
     /* Text Colors */
-    --light-main-text: #1A202C;             /* Deep charcoal gray - for sub-headings/main content text */
-    --light-secondary-text: #4A5568;        /* Slightly lighter gray for body text/all other content */
-    --light-heading: #2D3748;               /* Slightly bolder for page titles and navigation */
+    --light-main-text: #3A2F25;             /* Darker brown for sub-headings/main content text */
+    --light-secondary-text: #5C4E42;        /* Warm dark gray for body text/all other content */
+    --light-heading: #2A1F15;               /* Dark brown for page titles and navigation */
     
     /* Buttons */
     --light-btn-active-start: #A0723D;      /* Gradient start - warm brown */

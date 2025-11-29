@@ -71,7 +71,7 @@ body.modal-open {
 .sidebar-title {
     font-size: 18px;
     font-weight: 600;
-    color: #1f2937;
+    color: #2A1F15;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -85,7 +85,7 @@ body.modal-open {
     background: transparent;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
-    color: #1f2937;
+    color: #2A1F15;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -289,11 +289,11 @@ body.modal-open {
 
 .theme-toggle input[type="radio"]:checked + .theme-option {
     background: #cbd5e1;
-    color: #1f2937;
+    color: #2A1F15;
 }
 
 .theme-toggle input[type="radio"]:not(:checked) + .theme-option {
-    color: #6b7280;
+    color: #5C4E42;
 }
 
 .theme-option:hover {
@@ -470,12 +470,12 @@ body.modal-open {
 .user-name {
     font-weight: 600;
     font-size: 14px;
-    color: #1f2937;
+    color: #2A1F15;
 }
 
 .user-email {
     font-size: 12px;
-    color: #6b7280;
+    color: #5C4E42;
 }
 
 /* Content Styles */
@@ -489,7 +489,7 @@ body.modal-open {
 .page-title {
     font-size: 32px;
     font-weight: bold;
-    color: #1f2937;
+    color: #2A1F15;
 }
 
 .content-actions {
@@ -499,7 +499,7 @@ body.modal-open {
 }
 
 .showing-text {
-    color: #6b7280;
+    color: #5C4E42;
     font-size: 14px;
     font-weight: 500;
 }

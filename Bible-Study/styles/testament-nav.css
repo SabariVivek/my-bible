@@ -13,7 +13,7 @@
 }
 
 .testament-nav-trigger:hover {
-    color: #667eea;
+    color: #A0723D;
 }
 
 .testament-mega-menu {
@@ -73,22 +73,22 @@
 
 .testament-tab-button:hover {
     color: #000;
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
+    background: linear-gradient(90deg, rgba(160, 114, 61, 0.25) 0%, rgba(139, 90, 43, 0) 100%);
 }
 
 .testament-tab-button:last-child:hover {
-    background: linear-gradient(270deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
+    background: linear-gradient(270deg, rgba(160, 114, 61, 0.25) 0%, rgba(139, 90, 43, 0) 100%);
 }
 
 .testament-tab-button.active {
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
-    color: #667eea;
+    background: linear-gradient(90deg, rgba(160, 114, 61, 0.25) 0%, rgba(139, 90, 43, 0) 100%);
+    color: #A0723D;
     font-weight: 700;
     border-bottom: 2px solid transparent;
 }
 
 .testament-tab-button:last-child.active {
-    background: linear-gradient(270deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
+    background: linear-gradient(270deg, rgba(160, 114, 61, 0.25) 0%, rgba(139, 90, 43, 0) 100%);
 }
 
 .testament-content {
@@ -153,7 +153,7 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #A0723D 0%, #8B5A2B 100%);
     transition: width 0.3s ease;
 }
 
@@ -162,8 +162,8 @@
 }
 
 .testament-menu-item a.selected {
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
-    color: #667eea;
+    background: linear-gradient(90deg, rgba(160, 114, 61, 0.25) 0%, rgba(139, 90, 43, 0) 100%);
+    color: #A0723D;
     font-weight: 700;
     padding: 5px 12px;
     margin-left: -12px;
@@ -217,7 +217,7 @@
 }
 
 .dark-mode-books .testament-nav-trigger:hover {
-    color: #667eea !important;
+    color: #D4A574 !important;
 }
 
 .dark-mode-books .testament-mega-menu {
@@ -236,16 +236,16 @@
 
 .dark-mode-books .testament-tab-button:hover {
     color: #ececec;
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
+    background: linear-gradient(90deg, rgba(212, 165, 116, 0.25) 0%, rgba(193, 154, 107, 0) 100%);
 }
 
 .dark-mode-books .testament-tab-button:last-child:hover {
-    background: linear-gradient(270deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
+    background: linear-gradient(270deg, rgba(212, 165, 116, 0.25) 0%, rgba(193, 154, 107, 0) 100%);
 }
 
 .dark-mode-books .testament-tab-button.active {
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
-    color: #667eea;
+    background: linear-gradient(90deg, rgba(212, 165, 116, 0.25) 0%, rgba(193, 154, 107, 0) 100%);
+    color: #D4A574;
 }
 
 .dark-mode-books .testament-tab-button:last-child.active {
@@ -269,12 +269,12 @@
 }
 
 .dark-mode-books .testament-menu-item a::before {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #D4A574 0%, #C19A6B 100%);
 }
 
 .dark-mode-books .testament-menu-item a.selected {
-    background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0) 100%);
-    color: #667eea;
+    background: linear-gradient(90deg, rgba(212, 165, 116, 0.25) 0%, rgba(193, 154, 107, 0) 100%);
+    color: #D4A574;
 }
 
 /* Dark Mode Variant 2 Styles */
