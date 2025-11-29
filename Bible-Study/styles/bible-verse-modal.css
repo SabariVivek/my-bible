@@ -2138,9 +2138,11 @@
     /* Ensure hidden state is respected */
     #bibleVerseDisplaySection.hidden {
         display: none !important;
+        position: static !important;
+        bottom: auto !important;
     }
 
-    /* Override hidden class specifically for mobile drawer */
+    /* Only apply drawer styling when NOT hidden */
     #bibleVerseDisplaySection:not(.hidden) {
         position: fixed !important;
         bottom: 0 !important;
@@ -2149,29 +2151,15 @@
         top: auto !important;
         max-height: 90vh !important;
         width: 100% !important;
+        height: auto !important;
         margin: 0 !important;
+        padding: 0 !important;
         border-radius: 20px 20px 0 0 !important;
         box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
         display: flex !important;
         flex-direction: column !important;
         z-index: 10000 !important;
         animation: slideUpDrawer 0.3s ease-out !important;
-    }
-
-    #bibleVerseDisplaySection {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        top: auto !important;
-        max-height: 90vh !important;
-        width: 100% !important;
-        margin: 0 !important;
-        border-radius: 20px 20px 0 0 !important;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        z-index: 10000 !important;
     }
 
     @keyframes slideUpDrawer {
@@ -2185,23 +2173,19 @@
         }
     }
 
-    /* Animation only when shown */
-    #bibleVerseDisplaySection:not(.hidden) {
-        animation: slideUpDrawer 0.3s ease-out !important;
-    }
-
     /* Drawer header with drag handle */
-    #bibleVerseDisplaySection .bible-chapter-header {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-header {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding: 16px 20px;
         background: var(--bg-color);
         border-radius: 20px 20px 0 0;
         position: relative;
         flex-shrink: 0;
+        display: flex !important;
     }
 
     /* Add drag handle above title */
-    #bibleVerseDisplaySection .bible-chapter-header::before {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-header::before {
         content: '';
         position: absolute;
         top: 10px;
@@ -2213,7 +2197,7 @@
         border-radius: 2.5px;
     }
 
-    #bibleVerseDisplaySection .bible-chapter-title {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-title {
         font-size: 20px;
         margin-bottom: 0;
         padding-top: 6px;
@@ -2221,7 +2205,7 @@
     }
 
     /* Scrollable content area */
-    #bibleVerseDisplaySection .bible-chapter-content {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content {
         flex: 1;
         overflow-y: auto;
         overflow-x: hidden;
@@ -2230,12 +2214,12 @@
     }
 
     /* Add padding to bottom for mobile to avoid content being cut off */
-    #bibleVerseDisplaySection .bible-chapter-content {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content {
         padding-bottom: 40px;
     }
 
     /* Make back button more mobile-friendly */
-    #bibleVerseDisplaySection .back-btn-circle {
+    #bibleVerseDisplaySection:not(.hidden) .back-btn-circle {
         width: 40px;
         height: 40px;
         font-size: 24px;
@@ -2249,7 +2233,7 @@
     }
 
     /* Adjust header layout for mobile drawer */
-    #bibleVerseDisplaySection .bible-chapter-header {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-header {
         display: flex;
         align-items: center;
         gap: 12px;
@@ -2257,7 +2241,7 @@
     }
 
     /* Hide testament nav on mobile in drawer mode */
-    #bibleVerseDisplaySection .testament-nav-wrapper {
+    #bibleVerseDisplaySection:not(.hidden) .testament-nav-wrapper {
         flex: 1;
         min-width: 0;
         order: 2;
@@ -2265,7 +2249,7 @@
     }
 
     /* Adjust settings menu for mobile drawer */
-    #bibleVerseDisplaySection .bible-settings-menu-wrapper {
+    #bibleVerseDisplaySection:not(.hidden) .bible-settings-menu-wrapper {
         position: absolute;
         right: 16px;
         top: 50%;
@@ -2274,66 +2258,66 @@
     }
 
     /* Bible verse text adjustments for mobile */
-    #bibleVerseDisplaySection .bible-verse-number {
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-number {
         font-size: 14px;
         font-weight: 600;
     }
 
-    #bibleVerseDisplaySection .bible-verse-text,
-    #bibleVerseDisplaySection .bible-verse-tamil,
-    #bibleVerseDisplaySection .bible-verse-english,
-    #bibleVerseDisplaySection .bible-verse-esv {
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-text,
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-tamil,
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-english,
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-esv {
         font-size: 16px;
         line-height: 1.6;
     }
 
     /* Verse count tag positioning for mobile drawer */
-    #bibleVerseDisplaySection #bibleVerseCountTag {
+    #bibleVerseDisplaySection:not(.hidden) #bibleVerseCountTag {
         bottom: 20px;
         right: 20px;
         display: none !important;
     }
 
     /* Dark mode drawer styling */
-    .dark-mode-bible #bibleVerseDisplaySection {
+    .dark-mode-bible #bibleVerseDisplaySection:not(.hidden) {
         background: #1a1a1a;
         border-top: 1px solid #2d2d2d;
     }
 
-    .dark-mode-bible #bibleVerseDisplaySection .bible-chapter-header {
+    .dark-mode-bible #bibleVerseDisplaySection:not(.hidden) .bible-chapter-header {
         background: #1a1a1a;
         border-bottom-color: #2d2d2d;
     }
 
-    .dark-mode-bible #bibleVerseDisplaySection .bible-chapter-header::before {
+    .dark-mode-bible #bibleVerseDisplaySection:not(.hidden) .bible-chapter-header::before {
         background: rgba(255, 255, 255, 0.15);
     }
 
     /* Light mode drawer styling */
-    #bibleVerseDisplaySection:not(.dark-mode-bible) {
+    #bibleVerseDisplaySection:not(.hidden):not(.dark-mode-bible) {
         background: #F5F1E8;
     }
 
-    #bibleVerseDisplaySection:not(.dark-mode-bible) .bible-chapter-header {
+    #bibleVerseDisplaySection:not(.hidden):not(.dark-mode-bible) .bible-chapter-header {
         background: #F5F1E8;
         border-bottom-color: #e0d5c8;
     }
 
     /* Scrollbar styling for mobile drawer */
-    #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content::-webkit-scrollbar {
         width: 6px;
     }
 
-    #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar-track {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content::-webkit-scrollbar-track {
         background: transparent;
     }
 
-    #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar-thumb {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.2);
         border-radius: 3px;
     }
 
-    .dark-mode-bible #bibleVerseDisplaySection .bible-chapter-content::-webkit-scrollbar-thumb {
+    .dark-mode-bible #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.15);
     }
 
@@ -2345,43 +2329,43 @@
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
-    #bibleVerseDisplaySection {
+    #bibleVerseDisplaySection:not(.hidden) {
         max-height: 95vh;
     }
 
-    #bibleVerseDisplaySection .bible-chapter-header {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-header {
         padding: 12px 16px;
     }
 
-    #bibleVerseDisplaySection .bible-chapter-title {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-title {
         font-size: 18px;
     }
 
-    #bibleVerseDisplaySection .back-btn-circle {
+    #bibleVerseDisplaySection:not(.hidden) .back-btn-circle {
         width: 36px;
         height: 36px;
         font-size: 20px;
         left: 8px;
     }
 
-    #bibleVerseDisplaySection .bible-chapter-content {
+    #bibleVerseDisplaySection:not(.hidden) .bible-chapter-content {
         padding: 16px;
         padding-bottom: 40px;
     }
 
-    #bibleVerseDisplaySection .bible-verse-item {
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-item {
         margin-bottom: 16px;
     }
 
     /* Smaller text for tiny devices */
-    #bibleVerseDisplaySection .bible-verse-number {
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-number {
         font-size: 12px;
     }
 
-    #bibleVerseDisplaySection .bible-verse-text,
-    #bibleVerseDisplaySection .bible-verse-tamil,
-    #bibleVerseDisplaySection .bible-verse-english,
-    #bibleVerseDisplaySection .bible-verse-esv {
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-text,
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-tamil,
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-english,
+    #bibleVerseDisplaySection:not(.hidden) .bible-verse-esv {
         font-size: 15px;
         line-height: 1.5;
     }
