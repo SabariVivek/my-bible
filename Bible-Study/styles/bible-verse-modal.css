@@ -2135,6 +2135,11 @@
 
 /* Mobile Breakpoint - Transform Bible Verse Display to Bottom Drawer */
 @media (max-width: 768px) {
+    /* Ensure hidden state is respected */
+    #bibleVerseDisplaySection.hidden {
+        display: none !important;
+    }
+
     /* Override hidden class specifically for mobile drawer */
     #bibleVerseDisplaySection:not(.hidden) {
         position: fixed !important;
