@@ -10,7 +10,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #4a6b7c 0%, #5a5f6f 100%);
+    background: linear-gradient(135deg, #8B6F47 0%, #9A7E60 100%);
     min-height: 100vh;
     display: flex;
 }
@@ -27,7 +27,7 @@ body.modal-open {
     width: 100%;
     max-width: 1400px;
     margin: 20px auto 0;
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     overflow: hidden;

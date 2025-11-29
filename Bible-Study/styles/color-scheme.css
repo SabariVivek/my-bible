@@ -19,9 +19,9 @@
     --light-heading: #2D3748;               /* Slightly bolder for page titles and navigation */
     
     /* Buttons */
-    --light-btn-active-start: #8054D5;      /* Gradient start - soft violet/purple */
-    --light-btn-active-end: #6B46C1;        /* Gradient end - calm tone */
-    --light-btn-hover: #553C9A;             /* Slightly darker purple for feedback */
+    --light-btn-active-start: #A0723D;      /* Gradient start - warm brown */
+    --light-btn-active-end: #8B5A2B;        /* Gradient end - deep brown */
+    --light-btn-hover: #704214;             /* Slightly darker brown for feedback */
     
     /* Borders & Dividers */
     --light-border: #E2E8F0;                /* Subtle gray border, keeps layout clean */
@@ -43,9 +43,9 @@
     --dark-heading: #F3F3F3;                /* Slightly brighter to distinguish page titles and navigation */
     
     /* Buttons */
-    --dark-btn-active-start: #7C3AED;       /* Gradient start - vivid violet glow */
-    --dark-btn-active-end: #6D28D9;         /* Gradient end - matches "Tamil" tab */
-    --dark-btn-hover: #9F7AEA;              /* Softer, glowing hover color */
+    --dark-btn-active-start: #D4A574;       /* Gradient start - warm tan glow */
+    --dark-btn-active-end: #C19A6B;         /* Gradient end - golden tan */
+    --dark-btn-hover: #E8C4A0;              /* Softer, glowing hover color */
     
     /* Borders & Dividers */
     --dark-border: #2D2D2D;                 /* Subtle dark gray */

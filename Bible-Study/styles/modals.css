@@ -33,7 +33,7 @@
 }
 
 .king-card {
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-radius: 16px;
     padding: 35px;
     max-width: 600px;
@@ -57,14 +57,14 @@
 }
 
 .side-card {
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-radius: 12px;
     padding: 15px 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateX(50px);
     opacity: 0;
     transition: all 0.6s ease;
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid #A0723D;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -208,7 +208,7 @@
 
 .biography-section .king-info-label {
     margin-bottom: 8px;
-    color: #7c3aed;
+    color: #A0723D;
     font-weight: 700;
 }
 
@@ -246,7 +246,7 @@
 
 .biography-content h4 {
     margin: 0 0 15px 0;
-    color: #7c3aed;
+    color: #A0723D;
     font-size: 16px;
     font-weight: 700;
 }
@@ -323,7 +323,7 @@
 }
 
 .filter-card {
-    background: #EBEBFF;
+    background: #F5F1E8;
     border-radius: 16px;
     padding: 30px;
     max-width: 500px;
@@ -367,7 +367,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: #EBEBFF;
+    background: #F5F1E8;
 }
 
 .filter-option:hover {
@@ -376,9 +376,9 @@
 }
 
 .filter-option.selected {
-    border-color: #3b82f6;
-    background: #d8d8ff;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    border-color: #A0723D;
+    background: #E8D4C0;
+    box-shadow: 0 4px 12px rgba(160, 114, 61, 0.15);
 }
 
 .filter-option-icon {
@@ -415,7 +415,7 @@
 .filter-btn-apply {
     flex: 1;
     padding: 12px 20px;
-    background: #3b82f6;
+    background: #A0723D;
     color: white;
     border: none;
     border-radius: 8px;
@@ -426,7 +426,7 @@
 }
 
 .filter-btn-apply:hover {
-    background: #2563eb;
+    background: #8B5A2B;
 }
 
 .filter-btn-cancel {
