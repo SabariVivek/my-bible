@@ -1,0 +1,3323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Study</title>
+    <link rel="stylesheet" href="styles/color-scheme.css">
+    <link rel="stylesheet" href="styles/all-styles.css">
+    <link rel="stylesheet" href="styles/testament-nav.css">
+    <link rel="stylesheet" href="styles/bible-verse-modal.css">
+    <link rel="stylesheet" href="styles/cross-reference-popup.css">
+    <!-- Fuse.js for smart search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="scripts/parables.js"></script>
+    <script src="scripts/data/prayers-data.js"></script>
+    <script src="scripts/prayers.js"></script>
+    <script src="scripts/genealogy.js"></script>
+    <script src="scripts/data/seed-of-the-woman.js"></script>
+    <script src="scripts/seed-of-woman.js"></script>
+    <script src="scripts/data/life-of-jesus.js"></script>
+    <!-- Tamil Bible Data - New Testament -->
+    <script src="scripts/data/bible/tamil/new-testament/matthew.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/mark.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/luke.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/john.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/acts.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/romans.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/i_corinthians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/ii_corinthians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/galatians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/ephesians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/philippians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/colossians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/i_thessalonians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/ii_thessalonians.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/i_timothy.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/ii_timothy.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/titus.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/philemon.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/hebrews.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/james.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/i_peter.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/ii_peter.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/i_john.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/ii_john.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/iii_john.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/jude.js"></script>
+    <script src="scripts/data/bible/tamil/new-testament/revelation.js"></script>
+    <!-- English Bible Data - New Testament -->
+    <script src="scripts/data/bible/english/new-testament/matthew.js"></script>
+    <script src="scripts/data/bible/english/new-testament/mark.js"></script>
+    <script src="scripts/data/bible/english/new-testament/luke.js"></script>
+    <script src="scripts/data/bible/english/new-testament/john.js"></script>
+    <script src="scripts/data/bible/english/new-testament/acts.js"></script>
+    <script src="scripts/data/bible/english/new-testament/romans.js"></script>
+    <script src="scripts/data/bible/english/new-testament/i_corinthians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/ii_corinthians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/galatians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/ephesians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/philippians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/colossians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/i_thessalonians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/ii_thessalonians.js"></script>
+    <script src="scripts/data/bible/english/new-testament/i_timothy.js"></script>
+    <script src="scripts/data/bible/english/new-testament/ii_timothy.js"></script>
+    <script src="scripts/data/bible/english/new-testament/titus.js"></script>
+    <script src="scripts/data/bible/english/new-testament/philemon.js"></script>
+    <script src="scripts/data/bible/english/new-testament/hebrews.js"></script>
+    <script src="scripts/data/bible/english/new-testament/james.js"></script>
+    <script src="scripts/data/bible/english/new-testament/i_peter.js"></script>
+    <script src="scripts/data/bible/english/new-testament/ii_peter.js"></script>
+    <script src="scripts/data/bible/english/new-testament/i_john.js"></script>
+    <script src="scripts/data/bible/english/new-testament/ii_john.js"></script>
+    <script src="scripts/data/bible/english/new-testament/iii_john.js"></script>
+    <script src="scripts/data/bible/english/new-testament/jude.js"></script>
+    <script src="scripts/data/bible/english/new-testament/revelation.js"></script>
+    <!-- Kings data files -->
+    <script src="scripts/data/kings/table-data/david-data.js"></script>
+    <script src="scripts/data/kings/table-data/saul-data.js"></script>
+    <script src="scripts/data/kings/table-data/solomon-data.js"></script>
+    <script src="scripts/data/kings/table-data/jeroboam-i-data.js"></script>
+    <script src="scripts/data/kings/table-data/nadab-data.js"></script>
+    <script src="scripts/data/kings/table-data/baasha-data.js"></script>
+    <script src="scripts/data/kings/table-data/elah-data.js"></script>
+    <script src="scripts/data/kings/table-data/zimri-data.js"></script>
+    <script src="scripts/data/kings/table-data/omri-data.js"></script>
+    <script src="scripts/data/kings/table-data/ahab-data.js"></script>
+    <script src="scripts/data/kings/table-data/ahaziah-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoram-joram-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehu-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoahaz-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoash-joash-data.js"></script>
+    <script src="scripts/data/kings/table-data/jeroboam-ii-data.js"></script>
+    <script src="scripts/data/kings/table-data/zechariah-data.js"></script>
+    <script src="scripts/data/kings/table-data/shallum-data.js"></script>
+    <script src="scripts/data/kings/table-data/menahem-data.js"></script>
+    <script src="scripts/data/kings/table-data/pekahiah-data.js"></script>
+    <script src="scripts/data/kings/table-data/pekah-data.js"></script>
+    <script src="scripts/data/kings/table-data/hoshea-data.js"></script>
+    <script src="scripts/data/kings/table-data/rehoboam-data.js"></script>
+    <script src="scripts/data/kings/table-data/abijah-data.js"></script>
+    <script src="scripts/data/kings/table-data/asa-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoshaphat-data.js"></script>
+    <script src="scripts/data/kings/table-data/athaliah-data.js"></script>
+    <script src="scripts/data/kings/table-data/joash-data.js"></script>
+    <script src="scripts/data/kings/table-data/amaziah-data.js"></script>
+    <script src="scripts/data/kings/table-data/uzziah-data.js"></script>
+    <script src="scripts/data/kings/table-data/jotham-data.js"></script>
+    <script src="scripts/data/kings/table-data/ahaz-data.js"></script>
+    <script src="scripts/data/kings/table-data/hezekiah-data.js"></script>
+    <script src="scripts/data/kings/table-data/manasseh-data.js"></script>
+    <script src="scripts/data/kings/table-data/amon-data.js"></script>
+    <script src="scripts/data/kings/table-data/josiah-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoahaz-shallum-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoiakim-data.js"></script>
+    <script src="scripts/data/kings/table-data/jehoiachin-data.js"></script>
+    <script src="scripts/data/kings/table-data/zedekiah-data.js"></script>
+    <!-- Kings summary data files - Auto-loaded -->
+    <script src="scripts/data/kings/summary-data/load-all-summary.js"></script>
+    <script src="scripts/data/kings/table-data/kings-all-data.js"></script>
+    <script src="scripts/chapter-audio-player.js"></script>
+</head>
+<body>
+        <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar" id="leftSidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo"></div>
+                <h2 class="sidebar-title">
+                    <span>Bible Study</span>
+                </h2>
+                <!-- Collapsible Toggle Button -->
+                <button class="sidebar-collapse-btn" onclick="toggleSidebar()" title="Collapse sidebar">
+                    <svg class="chevron-icon" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chat-history">  
+                <div class="history-section">
+                    <div class="history-item active" onclick="showDashboard()">
+                        <span class="nav-icon">🧭</span>
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="history-item" onclick="showBible()">
+                        <span class="nav-icon">📝</span>
+                        <span>Bible</span>
+                    </div>
+                    <div class="history-item" onclick="showKings()">
+                        <span class="nav-icon">👑</span>
+                        <span>Kings</span>
+                    </div>
+                    <div class="history-item" onclick="showProphets()">
+                        <span class="nav-icon">🕊️</span>
+                        <span>Prophets</span>
+                    </div>
+                    <div class="history-item" onclick="showBooks()">
+                        <span class="nav-icon">📚</span>
+                        <span>Books</span>
+                    </div>
+                    <div class="history-item" onclick="showTimeline()">
+                        <span class="nav-icon">⏳</span>
+                        <span>Timeline</span>
+                    </div>
+                    <div class="history-item" onclick="showGenealogy()">
+                        <span class="nav-icon">✨</span>
+                        <span>Character Study</span>
+                    </div>
+                    <div class="history-item" onclick="showHelp()">
+                        <span class="nav-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path d="M12 2v20M5 8h14"/>
+                            </svg>
+                        </span>
+                        <span>Life of Christ</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <div class="theme-toggle-container">
+                <div class="theme-toggle">
+                    <input type="radio" name="theme" id="dark-theme" checked>
+                    <label for="dark-theme" class="theme-option" title="Dark Mode">
+                        <svg fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                        </svg>
+                        <span class="theme-option-text">Dark</span>
+                    </label>
+                    <input type="radio" name="theme" id="light-theme">
+                    <label for="light-theme" class="theme-option" title="Light Mode">
+                        <svg fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                        <span class="theme-option-text">Light</span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <!-- Dashboard Content -->
+            <div id="dashboard-content">
+                <div class="content-header" id="dashboard-title-header">
+                    <h1 class="page-title" id="dashboard-title">Dashboard</h1>
+                    <button class="secret-access-btn" onclick="showPasscodeModal()" title="Secret Access">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 10v4"/>
+                            <path d="M12 17h.01"/>
+                            <path d="M8 7v-2a4 4 0 0 1 8 0v2"/>
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="dashboard-cards-wrapper">
+                <div class="dashboard-cards-container">
+                    <div class="era-card creation-era">
+                        <div class="era-card-content">
+                            <h3 class="era-title">Creation Era</h3>
+                            <p class="era-subtitle">Genesis 1-11</p>
+                        </div>
+                    </div>
+                    
+                    <div class="era-card patriarchs-era">
+                        <div class="era-card-content">
+                            <h3 class="era-title">Patriarchs</h3>
+                            <p class="era-subtitle">Abraham to Joseph</p>
+                        </div>
+                    </div>
+                    
+                    <div class="era-card exodus-era">
+                        <div class="era-card-content">
+                            <h3 class="era-title">Exodus & Law</h3>
+                            <p class="era-subtitle">Moses & Wilderness</p>
+                        </div>
+                    </div>
+                    
+                    <div class="era-card kingdom-era">
+                        <div class="era-card-content">
+                            <h3 class="era-title">Kingdom Era</h3>
+                            <p class="era-subtitle">Kings & Prophets</p>
+                        </div>
+                    </div>
+                    
+                    <div class="era-card exile-era">
+                        <div class="era-card-content">
+                            <h3 class="era-title">Exile & Return</h3>
+                            <p class="era-subtitle">Babylon to Restoration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="era-card new-testament-era">
+                        <div class="era-card-content">
+                            <h3 class="era-title">New Testament</h3>
+                            <p class="era-subtitle">Jesus & Apostles</p>
+                        </div>
+                    </div>
+                     <div class="era-card parables-jesus">
+                        <div class="era-card-content" style="position:relative;">
+                            <h3 class="era-title">Parables of Jesus</h3>
+                            <p class="era-subtitle">Stories & Teachings</p>
+                            <span class="pdf-icon" style="position:absolute; right:24px; top:50%; transform:translateY(-50%);">
+                                <img src="resources/icon/pdf-icon.png" alt="PDF" style="height:32px; width:32px; vertical-align:middle;" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="era-card genealogy-card" style="cursor:pointer;">
+                        <div class="era-card-content" style="position:relative;">
+                            <h3 class="era-title">Adam to Jesus Christ</h3>
+                            <p class="era-subtitle">Family Lineage</p>  
+                            <span class="pdf-icon" style="position:absolute; right:24px; top:50%; transform:translateY(-50%);">
+                                <img src="resources/icon/pdf-icon.png" alt="PDF" style="height:32px; width:32px; vertical-align:middle;" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="era-card prayers-forgiveness">
+                        <div class="era-card-content">
+                            <h3 class="era-title">Prayers in Bible</h3>
+                            <p class="era-subtitle">Seeking God's Mercy</p>
+                        </div>
+                    </div>
+                    <div class="era-card seed-of-woman">
+                        <div class="era-card-content">
+                            <h3 class="era-title">The Seed of the Woman</h3>
+                            <p class="era-subtitle">Satan's Attacks, God's Preservation</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Kings Content -->
+            <div id="kings-content" class="hidden">
+                <div class="content-header">
+                    <button class="mobile-back-btn" onclick="goBackMobile()">← Back</button>
+                    <h1 class="page-title">Kings</h1>
+                    <div class="content-actions">
+                        <span class="showing-text" id="showing-count">Showing 7</span>
+                        <div class="card" style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 20px; max-width: fit-content; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="setting-item" style="margin-bottom: 0;">
+                                <div class="theme-buttons" style="display: flex; gap: 12px; margin-top: 0;">
+                                    <button class="theme-btn" onclick="openFilterCard()">
+                                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" style="width: 16px; height: 16px;">
+                                            <path d="M2 3h12M4 7h8M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="theme-btn active" data-filter="all">
+                                        <span>All</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="united">
+                                        <span>United</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="northern">
+                                        <span>Northern</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="southern">
+                                        <span>Southern</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th class="sortable" data-column="name">
+                                    King Name
+                                    <span class="sort-icon">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                                            <path d="M7 14L12 9L17 14H7Z" fill="currentColor" opacity="0.4"/>
+                                        </svg>
+                                    </span>
+                                </th>
+                                <th class="sortable" data-column="reign">
+                                    Reign
+                                    <span class="sort-icon">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 10L12 15L17 10H7Z" fill="currentColor"/>
+                                            <path d="M7 14L12 9L17 14H7Z" fill="currentColor" opacity="0.4"/>
+                                        </svg>
+                                    </span>
+                                </th>
+                                <th>Kingdom</th>
+                                <th>Character</th>
+                            </tr>
+                        </thead>
+                        <tbody id="kings-table-body">
+                            <!-- Table content will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Prophets Content -->
+            <div id="prophets-content" class="hidden">
+                <div class="content-header">
+                    <button class="mobile-back-btn" onclick="goBackMobile()">← Back</button>
+                    <h1 class="page-title">Prophets</h1>
+                    <div class="content-actions">
+                        <span class="showing-text" id="prophets-showing-count">Showing 7</span>
+                        <div class="card" style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 20px; max-width: fit-content; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="setting-item" style="margin-bottom: 0;">
+                                <div class="theme-buttons" style="display: flex; gap: 12px; margin-top: 0;">
+                                    <button class="theme-btn" onclick="openProphetsFilterCard()">
+                                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" style="width: 16px; height: 16px;">
+                                            <path d="M2 3h12M4 7h8M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="theme-btn active" data-filter="all">
+                                        <span>All</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="major">
+                                        <span>Major</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="minor">
+                                        <span>Minor</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="other">
+                                        <span>Other</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="prophets-table-container">
+                    <!-- Table will be generated by TableManager -->
+                </div>
+            </div>
+
+            <!-- Prophet Detail Content -->
+            <div id="prophet-detail-content" class="hidden">
+                <div class="content-header content-header-centered" style="padding-top: 24px; position: relative;">
+                    <button onclick="showProphets()" class="back-btn-circle" title="Back to Prophets">
+                        <span class="back-arrow">«</span>
+                    </button>
+                    <h1 class="page-title" id="prophetDetailTitle">Prophet Name</h1>
+                </div>
+                <div class="prophet-page-container">
+                    <!-- Prophet page content will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Books Content -->
+            <div id="books-content" class="hidden">
+                <div class="content-header">
+                    <h1 class="page-title">Bible Books</h1>
+                    <div class="content-actions">
+                        <span class="showing-text" id="books-showing-count">Showing 7</span>
+                        <div class="card" style="background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 6px; padding: 20px; max-width: fit-content; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                            <div class="setting-item" style="margin-bottom: 0;">
+                                <div class="theme-buttons" style="display: flex; gap: 12px; margin-top: 0;">
+                                    <button class="theme-btn" onclick="openBooksFilterCard()">
+                                        <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" style="width: 16px; height: 16px;">
+                                            <path d="M2 3h12M4 7h8M6 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                    </button>
+                                    <button class="theme-btn active" data-filter="all">
+                                        <span>All</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="old">
+                                        <span>Old</span>
+                                    </button>
+                                    <button class="theme-btn" data-filter="new">
+                                        <span>New</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="books-table-container">
+                    <!-- Table will be generated by TableManager -->
+                </div>
+            </div>
+
+            <!-- Book Chapter Content -->
+            <div id="book-chapter-content" class="hidden">
+                <div class="content-header content-header-centered" style="padding-top: 24px;">
+                    <button onclick="showBooks()" class="back-btn-circle" title="Back to Books">
+                        <span class="back-arrow">«</span>
+                    </button>
+                    <h1 class="page-title" id="bookChapterTitle">Book Chapter</h1>
+                    <div class="chapter-navigation-header">
+                        <button class="info-btn audio-btn" title="Audio" onclick="handleChapterAudioClick(event)" style="display: none;">
+                            <div class="audio-icon-animated">
+                                <div class="sound-bar bar1"></div>
+                                <div class="sound-bar bar2"></div>
+                                <div class="sound-bar bar3"></div>
+                                <div class="sound-bar bar4"></div>
+                            </div>
+                        </button>
+                        <button id="synopsisBtn" class="synopsis-btn" onclick="openSynopsisDrawer()" title="View Synopsis">
+                            <span class="synopsis-text">Synopsis</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="book-chapter-container">
+                    <!-- Book chapter content will be loaded here -->
+                </div>
+                <div class="chapter-navigation-footer">
+                    <button id="prevChapterBtnBottom" class="nav-chapter-btn-bottom" onclick="navigateToPreviousChapter()" title="Previous Chapter">
+                        <span class="nav-arrow">←</span>
+                        <span class="nav-text">Previous</span>
+                    </button>
+                    <button id="nextChapterBtnBottom" class="nav-chapter-btn-bottom" onclick="navigateToNextChapter()" title="Next Chapter">
+                        <span class="nav-text">Next</span>
+                        <span class="nav-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- King Page Content -->
+            <div id="king-page-content" class="hidden">
+                <div class="content-header content-header-centered" style="padding-top: 24px; position: relative;">
+                    <button onclick="showKings()" class="back-btn-circle" title="Back to Kings">
+                        <span class="back-arrow">«</span>
+                    </button>
+                    <h1 class="page-title" id="kingPageTitle">King Name</h1>
+                    <button class="info-btn audio-btn" title="Audio" onclick="handleKingAudioClick(event)">
+                        <div class="audio-icon-animated">
+                            <div class="sound-bar bar1"></div>
+                            <div class="sound-bar bar2"></div>
+                            <div class="sound-bar bar3"></div>
+                            <div class="sound-bar bar4"></div>
+                        </div>
+                    </button>
+                    <button onclick="showKingsTimelineFromKingPage()" class="timeline-view-btn" title="Timeline View">
+                        <img src="resources/icon/timeline-icon.png" alt="Timeline View" class="timeline-icon">
+                    </button>
+                    <button onclick="openKingTableView()" class="table-view-btn" title="Table View">
+                        <span class="timeline-icon">📅</span>
+                    </button>
+                </div>
+                <div class="king-page-container">
+                    <!-- King page content will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Kings Timeline Content -->
+            <div id="kings-timeline-content" class="hidden">
+                <div class="content-header content-header-centered" style="padding-top: 24px; position: relative;">
+                    <button onclick="goBackFromKingsTimeline()" class="back-btn-circle" title="Back">
+                        <span class="back-arrow">«</span>
+                    </button>
+                    <h1 class="page-title">Kings of Israel Timeline</h1>
+                </div>
+                <div class="kings-timeline-container">
+                    <div class="subtitle">A Biblical Chronicle</div>
+                    
+                    <div class="kings-timeline">
+                        <div class="section-header">
+                            <h2>United Kingdom</h2>
+                        </div>
+                        
+                        <div class="timeline-card">Saul</div>
+                        <div class="timeline-card">David</div>
+                        <div class="timeline-card">Solomon</div>
+                        
+                        <div class="split-indicator">
+                            <div class="split-line"></div>
+                            <div class="split-text">Kingdom Divided</div>
+                            <div class="split-line"></div>
+                        </div>
+                        
+                        <div class="kingdom-division">
+                            <div class="timeline-subcolumn">
+                                <div class="timeline-card judah-card">Rehoboam</div>
+                                <div class="timeline-card judah-card">Abijah (Abijam)</div>
+                                <div class="timeline-card judah-card">Asa</div>
+                                <div class="timeline-card judah-card">Jehoshaphat</div>
+                                <div class="timeline-card judah-card">Jehoram (Joram)</div>
+                                <div class="timeline-card judah-card">Ahaziah</div>
+                                <div class="timeline-card judah-card">Athaliah (Queen)</div>
+                                <div class="timeline-card judah-card">Joash (Jehoash)</div>
+                                <div class="timeline-card judah-card">Amaziah</div>
+                                <div class="timeline-card judah-card">Uzziah (Azariah)</div>
+                                <div class="timeline-card judah-card">Jotham</div>
+                                <div class="timeline-card judah-card">Ahaz</div>
+                                <div class="timeline-card judah-card">Hezekiah</div>
+                                <div class="timeline-card judah-card">Manasseh</div>
+                                <div class="timeline-card judah-card">Amon</div>
+                                <div class="timeline-card judah-card">Josiah</div>
+                                <div class="timeline-card judah-card">Jehoahaz (Shallum)</div>
+                                <div class="timeline-card judah-card">Jehoiakim</div>
+                                <div class="timeline-card judah-card">Jehoiachin (Jeconiah / Coniah)</div>
+                                <div class="timeline-card judah-card">Zedekiah</div>
+                            </div>
+                            
+                            <div class="timeline-subcolumn">
+                                <div class="timeline-card israel-card">Jeroboam I</div>
+                                <div class="timeline-card israel-card">Nadab</div>
+                                <div class="timeline-card israel-card">Baasha</div>
+                                <div class="timeline-card israel-card">Elah</div>
+                                <div class="timeline-card israel-card">Zimri</div>
+                                <div class="timeline-card israel-card">Omri</div>
+                                <div class="timeline-card israel-card">Ahab</div>
+                                <div class="timeline-card israel-card">Ahaziah</div>
+                                <div class="timeline-card israel-card">Jehoram (Joram)</div>
+                                <div class="timeline-card israel-card">Jehu</div>
+                                <div class="timeline-card israel-card">Jehoahaz</div>
+                                <div class="timeline-card israel-card">Jehoash (Joash)</div>
+                                <div class="timeline-card israel-card">Jeroboam II</div>
+                                <div class="timeline-card israel-card">Zechariah</div>
+                                <div class="timeline-card israel-card">Shallum</div>
+                                <div class="timeline-card israel-card">Menahem</div>
+                                <div class="timeline-card israel-card">Pekahiah</div>
+                                <div class="timeline-card israel-card">Pekah</div>
+                                <div class="timeline-card israel-card">Hoshea</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kings Timeline Modal -->
+            <div id="kings-timeline-modal" class="modal timeline-modal" style="display: none;">
+                <div class="modal-overlay" onclick="closeKingsTimelineModal()"></div>
+                <div class="modal-content timeline-modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Kings of Israel Timeline</h2>
+                        <button class="modal-close close-btn" onclick="closeKingsTimelineModal()">&times;</button>
+                    </div>
+                    <div class="modal-body timeline-modal-body">
+                        <div class="kings-timeline">
+                            <div class="section-header">
+                                <h2>United Kingdom</h2>
+                            </div>
+                            
+                            <div class="timeline-card">Saul</div>
+                            <div class="timeline-card">David</div>
+                            <div class="timeline-card">Solomon</div>
+                            
+                            <div class="split-indicator">
+                                <div class="split-line"></div>
+                                <div class="split-text">Kingdom Divided</div>
+                                <div class="split-line"></div>
+                            </div>
+                            
+                            <div class="kingdom-division">
+                                <div class="timeline-subcolumn">
+                                    <div class="timeline-card judah-card">Rehoboam</div>
+                                    <div class="timeline-card judah-card">Abijah (Abijam)</div>
+                                    <div class="timeline-card judah-card">Asa</div>
+                                    <div class="timeline-card judah-card">Jehoshaphat</div>
+                                    <div class="timeline-card judah-card">Jehoram (Joram)</div>
+                                    <div class="timeline-card judah-card">Ahaziah</div>
+                                    <div class="timeline-card judah-card">Athaliah (Queen)</div>
+                                    <div class="timeline-card judah-card">Joash (Jehoash)</div>
+                                    <div class="timeline-card judah-card">Amaziah</div>
+                                    <div class="timeline-card judah-card">Uzziah (Azariah)</div>
+                                    <div class="timeline-card judah-card">Jotham</div>
+                                    <div class="timeline-card judah-card">Ahaz</div>
+                                    <div class="timeline-card judah-card">Hezekiah</div>
+                                    <div class="timeline-card judah-card">Manasseh</div>
+                                    <div class="timeline-card judah-card">Amon</div>
+                                    <div class="timeline-card judah-card">Josiah</div>
+                                    <div class="timeline-card judah-card">Jehoahaz (Shallum)</div>
+                                    <div class="timeline-card judah-card">Jehoiakim</div>
+                                    <div class="timeline-card judah-card">Jehoiachin (Jeconiah / Coniah)</div>
+                                    <div class="timeline-card judah-card">Zedekiah</div>
+                                </div>
+                                
+                                <div class="timeline-subcolumn">
+                                    <div class="timeline-card israel-card">Jeroboam I</div>
+                                    <div class="timeline-card israel-card">Nadab</div>
+                                    <div class="timeline-card israel-card">Baasha</div>
+                                    <div class="timeline-card israel-card">Elah</div>
+                                    <div class="timeline-card israel-card">Zimri</div>
+                                    <div class="timeline-card israel-card">Omri</div>
+                                    <div class="timeline-card israel-card">Ahab</div>
+                                    <div class="timeline-card israel-card">Ahaziah</div>
+                                    <div class="timeline-card israel-card">Jehoram (Joram)</div>
+                                    <div class="timeline-card israel-card">Jehu</div>
+                                    <div class="timeline-card israel-card">Jehoahaz</div>
+                                    <div class="timeline-card israel-card">Jehoash (Joash)</div>
+                                    <div class="timeline-card israel-card">Jeroboam II</div>
+                                    <div class="timeline-card israel-card">Zechariah</div>
+                                    <div class="timeline-card israel-card">Shallum</div>
+                                    <div class="timeline-card israel-card">Menahem</div>
+                                    <div class="timeline-card israel-card">Pekahiah</div>
+                                    <div class="timeline-card israel-card">Pekah</div>
+                                    <div class="timeline-card israel-card">Hoshea</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Content -->
+            <div id="timeline-content" class="hidden">
+                <div class="content-header">
+                    <button class="mobile-back-btn" onclick="goBackMobile()">← Back</button>
+                    <h1 class="page-title">Biblical Timeline</h1>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <ul>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before Time</h3>
+                                    <h1>John 1</h1>
+                                    <p>In the Beginning was the Word</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 4000 BC</h3>
+                                    <h1>Genesis 1</h1>
+                                    <p>The Creation</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 4000 BC</h3>
+                                    <h1>Genesis 2</h1>
+                                    <p>The Garden of Eden</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 4000 BC</h3>
+                                    <h1>Genesis 3</h1>
+                                    <p>The Fall of Man</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 3000 BC</h3>
+                                    <h1>Genesis 4</h1>
+                                    <p>Cain kills Abel</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 3000 BC</h3>
+                                    <h1>Genesis 5</h1>
+                                    <p>From Adam to Noah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 2500 BC</h3>
+                                    <h1>Genesis 6 – 10</h1>
+                                    <p>The Great Flood</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 2100 BC</h3>
+                                    <h1>Job 1 – 42</h1>
+                                    <p>Job's Suffering and Faith</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">Before 2100 BC</h3>
+                                    <h1>Genesis 11</h1>
+                                    <p>The Tower of Babel</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">2091 BC</h3>
+                                    <h1>Genesis 12</h1>
+                                    <p>God Sends Abram to Egypt</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">2085 BC</h3>
+                                    <h1>Genesis 13</h1>
+                                    <p>Abram and Lot Part Ways</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">2084 – 1806 BC</h3>
+                                    <h1>Genesis 14 – 50</h1>
+                                    <p>The Decendants of Abraham.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1800 – 1446 BC</h3>
+                                    <h1>Exodus 1 – 3</h1>
+                                    <p>Israel in Egypt</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1446 – 1445 BC</h3>
+                                    <h1>Exodus 4 – 40</h1>
+                                    <p>The Ten Plagues on Egypt</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1445 BC</h3>
+                                    <h1>Leviticus 1 – 23</h1>
+                                    <p>Laws for Sacrifices and Offerings</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1445 – 1407 BC</h3>
+                                    <h1>Numbers 1 – 36</h1>
+                                    <p>Census, Tribes, Duties</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1407 BC</h3>
+                                    <h1>Psalm 90</h1>
+                                    <p>Psalm of Moses</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1406 BC</h3>
+                                    <h1>Deuteronomy 1 – 34</h1>
+                                    <p>Moses' Summary of Israel's History</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1406 – 1375 BC</h3>
+                                    <h1>Joshua 1 – 24</h1>
+                                    <p>Joshua Leads Israel Into Canaan.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1375 – 1140 BC</h3>
+                                    <h1>Judges 1 – 21</h1>
+                                    <p>Israel's relationship with the Gentiles in Canaan.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1140 BC</h3>
+                                    <h1>Ruth 1 – 4</h1>
+                                    <p>Naomi, Ruth and Boaz</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1100 – 1013 BC</h3>
+                                    <h1>1 Samuel 1 – 20</h1>
+                                    <p>Samuel, Saul, and David</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1013 BC</h3>
+                                    <h1>Psalm 59</h1>
+                                    <p>David's Psalm of Deliverance</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1012 BC</h3>
+                                    <h1>1 Samuel 21</h1>
+                                    <p>David at Nob and Gath</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1012 BC</h3>
+                                    <h1>Psalm 52</h1>
+                                    <p>David's Psalm Fleeing Saul</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1012 BC</h3>
+                                    <h1>Psalm 34</h1>
+                                    <p>David's Psalm Before Ahimelech</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>Psalm 56</h1>
+                                    <p>David's Psalm at Gath</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>1 Samuel 22</h1>
+                                    <p>Saul Slays the Priests of Nob</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>Psalms 57</h1>
+                                    <p>David's Psalms in the Cave</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>Psalms 142</h1>
+                                    <p>David's Psalms in the Cave</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>1 Samuel 23</h1>
+                                    <p>David Flees Saul</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>Psalm 54</h1>
+                                    <p>David's Psalm at Keilah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1011 BC</h3>
+                                    <h1>1 Samuel 24 – 31</h1>
+                                    <p>David vs. Saul</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1010 – 1004 BC</h3>
+                                    <h1>2 Samuel 1 – 4</h1>
+                                    <p>David's Children</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1003 BC</h3>
+                                    <h1>1 Chronicles 1 – 10</h1>
+                                    <p>Genealogies of the Israelites</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1003 BC</h3>
+                                    <h1>2 Samuel 5</h1>
+                                    <p>David Reigns over All Israel</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1003 – 1000 BC</h3>
+                                    <h1>1 Chronicles 11 – 15</h1>
+                                    <p>David Reigns over All Israel</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1000 BC</h3>
+                                    <h1>2 Samuel 6 – 8</h1>
+                                    <p>The Ark is Brought to Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">998 BC</h3>
+                                    <h1>Psalm 60</h1>
+                                    <p>David's Psalm of Victory</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">998 BC</h3>
+                                    <h1>Psalm 15</h1>
+                                    <p>David's Psalm of Zion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">998 BC</h3>
+                                    <h1>Psalm 24</h1>
+                                    <p>David's Psalm of Glory to God</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">998 BC</h3>
+                                    <h1>1 Chronicles 16</h1>
+                                    <p>David's festival sacrifice</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">998 BC</h3>
+                                    <h1>Psalms 96, 105, 106</h1>
+                                    <p>Psalms of Praise</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">997 BC</h3>
+                                    <h1>1 Chronicles 17 – 18</h1>
+                                    <p>David Purposes to build a Temple</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">995 BC</h3>
+                                    <h1>2 Samuel 9 – 10</h1>
+                                    <p>David and Mephibosheth</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">995 BC</h3>
+                                    <h1>1 Chronicles 19 – 20</h1>
+                                    <p>David Defeats Ammon and Aram</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">993 BC</h3>
+                                    <h1>2 Samuel 11 – 12</h1>
+                                    <p>David and Bathsheba</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">991 BC</h3>
+                                    <h1>Psalm 51</h1>
+                                    <p>David's Psalm of Repentance</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">990 BC</h3>
+                                    <h1>2 Samuel 13 – 14</h1>
+                                    <p>Amnon and Tamar</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">979 BC</h3>
+                                    <h1>1 Chronicles 21 – 27</h1>
+                                    <p>David Forces a Census, prepares government</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">976 BC</h3>
+                                    <h1>2 Samuel 15 – 16</h1>
+                                    <p>Absalom's Conspiracy</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">972 BC</h3>
+                                    <h1>Psalm 63</h1>
+                                    <p>David's Psalm of Thirst for God</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">972 BC</h3>
+                                    <h1>2 Samuel 17</h1>
+                                    <p>Hushai's Warning Saves David</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">972 BC</h3>
+                                    <h1>Psalms 41, 55</h1>
+                                    <p>David Psalms of Deliverance</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">972 BC</h3>
+                                    <h1>2 Samuel 18 – 23</h1>
+                                    <p>Absalom Slain by Joab</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">970 BC</h3>
+                                    <h1>Psalm 108</h1>
+                                    <p>David's Psalm of Steadfastness</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">970 BC</h3>
+                                    <h1>2 Samuel 24</h1>
+                                    <p>David Counts the Fighting Men</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">970 BC</h3>
+                                    <h1>1 Chronicles 28 – 29</h1>
+                                    <p>David's last days</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">970 BC</h3>
+                                    <h1>1 Kings 1 – 2</h1>
+                                    <p>David's last days</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">970 BC</h3>
+                                    <h1>Psalm 37</h1>
+                                    <p>David's Psalm of Salvation</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">967 BC</h3>
+                                    <h1>Psalm 72</h1>
+                                    <p>Psalm for Solomon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">967 BC</h3>
+                                    <h1>2 Chronicles 1</h1>
+                                    <p>Solomon Asks for Wisdom</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">967 BC</h3>
+                                    <h1>1 Kings 3</h1>
+                                    <p>Solomon Asks for Wisdom</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">967 BC</h3>
+                                    <h1>Psalm 45</h1>
+                                    <p>Psalm of Korah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">967 BC</h3>
+                                    <h1>1 Kings 4 – 9</h1>
+                                    <p>Solomon's Wisdom</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">966 BC</h3>
+                                    <h1>2 Chronicles 2 – 7</h1>
+                                    <p>Solomon Prepares for a Temple and Palace</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">959 BC</h3>
+                                    <h1>Psalms 135 – 136</h1>
+                                    <p>Psalms of Solomon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">959 BC</h3>
+                                    <h1>2 Chronicles 8</h1>
+                                    <p>Solomon's buildings</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">950 BC</h3>
+                                    <h1>Psalm 127</h1>
+                                    <p>Solomon Psalm of Blessing</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">950 BC</h3>
+                                    <h1>Proverbs 1 – 31</h1>
+                                    <p>The Proverbs of Solomon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">950 BC</h3>
+                                    <h1>Songs 1 – 8</h1>
+                                    <p>Solomon's Song of Songs</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">979 BC</h3>
+                                    <h1>Psalms 1 – 150 (Assorted)</h1>
+                                    <p>Psalms of Unknown Authors</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">946 BC</h3>
+                                    <h1>1 Kings 10</h1>
+                                    <p>The Queen of Sheba Visits Solomon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">946 BC</h3>
+                                    <h1>2 Chronicles 9</h1>
+                                    <p>The Queen of Sheba Visits Solomon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">939 BC</h3>
+                                    <h1>1 Kings 11</h1>
+                                    <p>Solomon's Wives and Idolatry</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">937 BC</h3>
+                                    <h1>Ecclesiastes 1 – 12</h1>
+                                    <p>Ecclesiastes Words of the Preacher</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">931 BC</h3>
+                                    <h1>1 Kings 12 – 13</h1>
+                                    <p>The Kingdom is Divided</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">930 BC</h3>
+                                    <h1>2 Chronicles 10 – 12</h1>
+                                    <p>Israelites Rebel against Rehoboam</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">925 BC</h3>
+                                    <h1>1 Kings 14 – 15</h1>
+                                    <p>Ahijah's Prophecies against Jeroboam</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">913 BC</h3>
+                                    <h1>2 Chronicles 13 – 14</h1>
+                                    <p>Civil War against Jeroboam</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">909 BC</h3>
+                                    <h1>1 Kings 16</h1>
+                                    <p>Jehu's prophecy against Baasha</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">895 BC</h3>
+                                    <h1>2 Chronicles 15 – 17</h1>
+                                    <p>Asa's Reforms</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">863 BC</h3>
+                                    <h1>1 Kings 17 – 22</h1>
+                                    <p>Elijah Prays for Drought</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">853 BC</h3>
+                                    <h1>Obadiah 1</h1>
+                                    <p>The Vision of Obadiah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">853 BC</h3>
+                                    <h1>2 Chronicles 18 – 21</h1>
+                                    <p>Jehoshaphat Allies with Ahab</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">852 BC</h3>
+                                    <h1>2 Kings 1 – 11</h1>
+                                    <p>Elisha</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">841 BC</h3>
+                                    <h1>2 Chronicles 22 – 24</h1>
+                                    <p>Ahaziah Succeeds Jehoram in Judah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">841 BC</h3>
+                                    <h1>2 Chronicles 23</h1>
+                                    <p>Jehoiada Makes Joash King</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">835 BC</h3>
+                                    <h1>2 Kings 12</h1>
+                                    <p>Joash Reigns Well</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">835 BC</h3>
+                                    <h1>Joel 1 – 3</h1>
+                                    <p>The Word of the LORD to Joel</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">812 BC</h3>
+                                    <h1>2 Kings 13 – 14</h1>
+                                    <p>Jehoahaz's wicked reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">796 BC</h3>
+                                    <h1>2 Chronicles 25</h1>
+                                    <p>Amaziah's good reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">790 BC</h3>
+                                    <h1>2 Kings 15</h1>
+                                    <p>Azariah's good reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">790 BC</h3>
+                                    <h1>2 Chronicles 26</h1>
+                                    <p>Uzziah Reigns in Judah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">766 BC</h3>
+                                    <h1>Amos 1 – 9</h1>
+                                    <p>The Words of Amos</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">760 BC</h3>
+                                    <h1>Jonah 1 – 4</h1>
+                                    <p>Jonah Sent to Nineveh</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">753 BC</h3>
+                                    <h1>Hosea 1 – 14</h1>
+                                    <p>Hosea's Prophecies</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">750 BC</h3>
+                                    <h1>2 Chronicles 27 – 28</h1>
+                                    <p>Jotham Succeeds Uzziah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">742 BC</h3>
+                                    <h1>2 Kings 16</h1>
+                                    <p>Wicked Reign of Ahaz</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">739 BC</h3>
+                                    <h1>Isaiah 1 – 7</h1>
+                                    <p>Isaiah Complains of Zion's Corruption</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">735 BC</h3>
+                                    <h1>Micah 1 – 7</h1>
+                                    <p>The Word of the LORD to Micah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">734 BC</h3>
+                                    <h1>Isaiah 8 – 25</h1>
+                                    <p>Uriah and Zechariah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">725 BC</h3>
+                                    <h1>2 Kings 17</h1>
+                                    <p>Hoshea the Last King of Israel</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">716 BC</h3>
+                                    <h1>2 Chronicles 29 – 31</h1>
+                                    <p>Hezekiah's Good Reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">712 BC</h3>
+                                    <h1>2 Kings 20</h1>
+                                    <p>Hezekiah's Illness and Healing</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">711 BC</h3>
+                                    <h1>Isaiah 38 – 66</h1>
+                                    <p>Hezekiah Shows Treasures</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">701 BC</h3>
+                                    <h1>2 Kings 18</h1>
+                                    <p>Sennacherib Threatens Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">701 BC</h3>
+                                    <h1>Isaiah 36</h1>
+                                    <p>Sennacherib Threatens Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">701 BC</h3>
+                                    <h1>2 Chronicles 32</h1>
+                                    <p>Sennacherib Threatens Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">701 BC</h3>
+                                    <h1>Psalms 46 – 48</h1>
+                                    <p>Korah's Psalms of Refuge (2Ch 32)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">701 BC</h3>
+                                    <h1>2 Kings 19</h1>
+                                    <p>Hezekiah's Prayer</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">701 BC</h3>
+                                    <h1>Isaiah 37</h1>
+                                    <p>Hezekiah's Prayer</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">697 BC</h3>
+                                    <h1>Nahum 1 – 3</h1>
+                                    <p>The Vision of Nahum</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">687 BC</h3>
+                                    <h1>2 Kings 21</h1>
+                                    <p>Manasseh's Wicked Reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">687 BC</h3>
+                                    <h1>2 Chronicles 33</h1>
+                                    <p>Manasseh's Wicked Reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">640 BC</h3>
+                                    <h1>2 Kings 22</h1>
+                                    <p>Josiah's good reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">640 BC</h3>
+                                    <h1>2 Chronicles 34</h1>
+                                    <p>Josiah's good reign</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">638 BC</h3>
+                                    <h1>Zephaniah 1 – 3</h1>
+                                    <p>The Word of the LORD to Zephaniah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">627 BC</h3>
+                                    <h1>Jeremiah 1 – 10</h1>
+                                    <p>The Call of Jeremiah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">625 BC</h3>
+                                    <h1>Habakkuk 1 – 3</h1>
+                                    <p>The Oracle to Habakkuk</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">622 BC</h3>
+                                    <h1>Jeremiah 11 – 12</h1>
+                                    <p>Jeremiah Proclaims God's Covenant</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">621 BC</h3>
+                                    <h1>2 Kings 22 – 23</h1>
+                                    <p>Josiah Prepares for Temple Repair</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">621 BC</h3>
+                                    <h1>2 Chronicles 35 – 36</h1>
+                                    <p>Josiah Celebrates the Passover</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">609 BC</h3>
+                                    <h1>Jeremiah 13 – 47</h1>
+                                    <p>Jeremiah Proclaims Covenant Is Broken</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">605 BC</h3>
+                                    <h1>Daniel 1 – 2</h1>
+                                    <p>Daniel Refuses the King's Portion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">601 BC</h3>
+                                    <h1>2 Kings 24</h1>
+                                    <p>Rebellion of Jehoiakim</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">593 BC</h3>
+                                    <h1>Ezekiel 1 – 19</h1>
+                                    <p>Ezekiel's Prophecy at Chebar</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">591 BC</h3>
+                                    <h1>Ezekiel 20 – 23</h1>
+                                    <p>Ezekiel Sees God Refuse the Elders</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">588 BC</h3>
+                                    <h1>2 Kings 25</h1>
+                                    <p>Siege of Jerusalem Begins</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">588 BC</h3>
+                                    <h1>Jeremiah 48 – 49</h1>
+                                    <p>Jeremiah Prophesies against Moab</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">588 BC</h3>
+                                    <h1>Ezekiel 24 – 25</h1>
+                                    <p>Siege of Jerusalem Begins</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">586 BC</h3>
+                                    <h1>2 Kings 25</h1>
+                                    <p>The Fall of Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">586 BC</h3>
+                                    <h1>Psalms 74, 79, Jer. 52</h1>
+                                    <p>Psalms of Desolation (Jer. 52)</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">586 BC</h3>
+                                    <h1>Jeremiah 50, 51</h1>
+                                    <p>Jeremiah Prophesies against Babylon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">586 BC</h3>
+                                    <h1>Lamentations 1 – 5</h1>
+                                    <p>Jeremiah's Lamentations</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">586 BC</h3>
+                                    <h1>Ezekiel 26 – 39</h1>
+                                    <p>Ezekiel Pronounces Judgment on Tyre</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">585 BC</h3>
+                                    <h1>Daniel 3 – 4</h1>
+                                    <p>Shadrach, Meshach, and Abednego</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">573 BC</h3>
+                                    <h1>Ezekiel 40 – 48</h1>
+                                    <p>Ezekiel's Second Temple Vision</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">539 BC</h3>
+                                    <h1>Daniel 5 – 12</h1>
+                                    <p>Daniel Interprets Handwriting on the Wall</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">537 BC</h3>
+                                    <h1>Ezra 1 – 5</h1>
+                                    <p>The Proclamation of Cyrus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">520 BC</h3>
+                                    <h1>Haggai 1 – 2</h1>
+                                    <p>The Word of the LORD by Haggai</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">520 BC</h3>
+                                    <h1>Zechariah 1 – 14</h1>
+                                    <p>The Word of the LORD to Zechariah</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">520 BC</h3>
+                                    <h1>Ezra 6</h1>
+                                    <p>Temple Work Resumed by Darius' Decree</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">483 BC</h3>
+                                    <h1>Esther 1 – 10</h1>
+                                    <p>Queen Vashti Deposed</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">458 BC</h3>
+                                    <h1>Ezra 7 – 10</h1>
+                                    <p>Ezra Journeys to Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">445 BC</h3>
+                                    <h1>Nehemiah 1 – 13</h1>
+                                    <p>Nehemiah's Prayer for the Exiles</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">430 BC</h3>
+                                    <h1>Malachi 1 – 4</h1>
+                                    <p>The Word of the LORD by Malachi</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1 BC</h3>
+                                    <h1>Luke 1 – 2</h1>
+                                    <p>Birth of John the Baptist</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1 BC</h3>
+                                    <h1>Mathew 1</h1>
+                                    <p>Augustus Taxes the Roman Empire</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1 AD</h3>
+                                    <h1>Matthew 2</h1>
+                                    <p>Visit of the Magi</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">1 AD</h3>
+                                    <h1>John 1</h1>
+                                    <p>Early Life of Jesus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Matthew 3</h1>
+                                    <p>John the Baptist Prepares the Way</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Mark 1</h1>
+                                    <p>John the Baptist Prepares the Way</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Luke 3</h1>
+                                    <p>John the Baptist Prepares the Way</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Matthew 4</h1>
+                                    <p>Temptation of Jesus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Luke 4</h1>
+                                    <p>Temptation of Jesus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Luke 5</h1>
+                                    <p>Jesus Calls his First Disciples</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>John 2 – 4</h1>
+                                    <p>Wedding at Cana</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">30 AD</h3>
+                                    <h1>Matthew 5 – 7</h1>
+                                    <p>Sermon on the Mount</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Matthew 8</h1>
+                                    <p>Jesus Ministers in Galilee</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Mark 2</h1>
+                                    <p>Jesus Ministers in Galilee</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>John 5</h1>
+                                    <p>The Pool of Bethesda</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Matthew 12</h1>
+                                    <p>Jesus Lord of the Sabbath</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Mark 3</h1>
+                                    <p>Jesus Lord of the Sabbath</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Luke 6</h1>
+                                    <p>Jesus Lord of the Sabbath</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Matthew 11</h1>
+                                    <p>Jesus Answers John's Disciples</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Luke 7</h1>
+                                    <p>Jesus Answers John's Disciples</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Matthew 13</h1>
+                                    <p>Jesus Speaks Many Parables</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Mark 4</h1>
+                                    <p>Jesus Speaks Many Parables</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Luke 8</h1>
+                                    <p>Jesus Speaks Many Parables</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Mark 5</h1>
+                                    <p>Jesus Heals a Demoniac</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">31 AD</h3>
+                                    <h1>Matthew 9</h1>
+                                    <p>Jesus Heals a Paralytic</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Matthew 10</h1>
+                                    <p>Jesus Sends out His Twelve Apostles</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Mark 6</h1>
+                                    <p>John the Baptist Beheaded</p>
+                               
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Matthew 14</h1>
+                                    <p>John the Baptist Beheaded</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Luke 9</h1>
+                                    <p>Jesus Feeds the 5,000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>John 6</h1>
+                                    <p>Jesus Feeds the 5,000</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Matthew 15</h1>
+                                    <p>Teachings on Clean and Unclean</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Mark 7</h1>
+                                    <p>Teachings on Clean and Unclean</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Matthew 16</h1>
+                                    <p>Peter's Confession of Christ</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Mark 8</h1>
+                                    <p>Peter's Confession of Christ</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Matthew 17</h1>
+                                    <p>The Transfiguration</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Mark 9</h1>
+                                    <p>The Transfiguration</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Matthew 18</h1>
+                                    <p>Greatest and Least in the Kingdom</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>Luke 10 – 11</h1>
+                                    <p>Jesus Sends out the Seventy-two</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">32 AD</h3>
+                                    <h1>John 7 – 10</h1>
+                                    <p>Jesus Teaches at the Feast of Tabernacles</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Luke 12 – 17</h1>
+                                    <p>Jesus Speaks More Parables</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>John 11</h1>
+                                    <p>Jesus Raises Lazarus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Matthew 19 – 20</h1>
+                                    <p>Final Journey to Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Mark 10</h1>
+                                    <p>Final Journey to Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Luke 18</h1>
+                                    <p>Final Journey to Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Matthew 21</h1>
+                                    <p>The Triumphal Entry</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Mark 11</h1>
+                                    <p>The Triumphal Entry</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Luke 19</h1>
+                                    <p>The Triumphal Entry</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>John 12</h1>
+                                    <p>The Triumphal Entry</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Matthew 22 – 24</h1>
+                                    <p>Closing Ministry in Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Matthew 25</h1>
+                                    <p>Closing Ministry in Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Mark 12 – 13</h1>
+                                    <p>Closing Ministry in Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Luke 20 – 21</h1>
+                                    <p>Thursday Before Passover</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>John 14 – 17</h1>
+                                    <p>Jesus Comforts His Disciples</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Matthew 27</h1>
+                                    <p>Jesus' Betrayal, Trial, Crucifixion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Mark 15</h1>
+                                    <p>Jesus' Betrayal, Trial, Crucifixion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Luke 23</h1>
+                                    <p>Jesus' Betrayal, Trial, Crucifixion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>John 18 – 19</h1>
+                                    <p>Jesus' Betrayal, Trial, Crucifixion</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Matthew 28</h1>
+                                    <p>Jesus' Resurrection</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Mark 16</h1>
+                                    <p>Jesus' Resurrection</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Luke 24</h1>
+                                    <p>Jesus' Resurrection</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>John 20 – 21</h1>
+                                    <p>Jesus' Resurrection</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Acts 1</h1>
+                                    <p>The Ascension</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">33 AD</h3>
+                                    <h1>Acts 2 – 12</h1>
+                                    <p>The Holy Spirit Comes at Pentecost</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">45 AD</h3>
+                                    <h1>James 1 – 5</h1>
+                                    <p>James Writes his Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">48 AD</h3>
+                                    <h1>Acts 13 – 18</h1>
+                                    <p>Paul's First Missionary Journey</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">51 AD</h3>
+                                    <h1>1 Thess. 1 – 5</h1>
+                                    <p>Paul Writes to the Thessalonians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">52 AD</h3>
+                                    <h1>2 Thess. 1 – 3</h1>
+                                    <p>Paul Writes again to the Thessalonians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">54 AD</h3>
+                                    <h1>Acts 19</h1>
+                                    <p>Paul in Ephesus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">54 AD</h3>
+                                    <h1>1 Corinthians 1 – 16</h1>
+                                    <p>Paul Writes to the Corinthians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">54 AD</h3>
+                                    <h1>Galatians 1 – 6</h1>
+                                    <p>Paul Writes to the Galatians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">57 AD</h3>
+                                    <h1>Acts 20</h1>
+                                    <p>Paul in Macedonia and Greece</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">57 AD</h3>
+                                    <h1>Romans 1 – 16</h1>
+                                    <p>Paul Writes to the Romans</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">57 AD</h3>
+                                    <h1>2 Corinthians 1 – 13</h1>
+                                    <p>Paul Writes again to the Corinthians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">59 AD</h3>
+                                    <h1>Acts 21 – 28</h1>
+                                    <p>Paul Returns to Jerusalem</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">62 AD</h3>
+                                    <h1>Ephesians 1 – 6</h1>
+                                    <p>Paul Writes to the Ephesians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">62 AD</h3>
+                                    <h1>Philippians 1 – 4</h1>
+                                    <p>Paul Writes to the Philippians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">62 AD</h3>
+                                    <h1>Colossians 1 – 4</h1>
+                                    <p>Paul Writes to the Colossians</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">62 AD</h3>
+                                    <h1>Philemon 1</h1>
+                                    <p>Paul Writes to Philemon</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">63 AD</h3>
+                                    <h1>1 Timothy 1 – 6</h1>
+                                    <p>Paul Writes to Timothy</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">64 AD</h3>
+                                    <h1>1 Peter 1 – 5</h1>
+                                    <p>Peter Writes his First Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">66 AD</h3>
+                                    <h1>Titus 1 – 3</h1>
+                                    <p>Paul Writes to Titus</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">67 AD</h3>
+                                    <h1>2 Timothy 1 – 4</h1>
+                                    <p>Paul Writes Again to Timothy</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">67 AD</h3>
+                                    <h1>2 Peter 1 – 3</h1>
+                                    <p>Peter Writes his Second Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">68 AD</h3>
+                                    <h1>Hebrews 1 – 13</h1>
+                                    <p>Letter to the Hebrews</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">68 AD</h3>
+                                    <h1>Jude 1</h1>
+                                    <p>Jude Writes his Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">90 AD</h3>
+                                    <h1>1 John 1 – 5</h1>
+                                    <p>John Writes his First Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">92 AD</h3>
+                                    <h1>2 John 1</h1>
+                                    <p>John Writes his Second Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">94 AD</h3>
+                                    <h1>3 John 1</h1>
+                                    <p>John Writes his Third Letter</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-content">
+                                    <h3 class="date">95 AD</h3>
+                                    <h1>Revelation 1 – 22</h1>
+                                    <p>John's Revelation on Patmos</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Character Study Content -->
+            <div id="genealogy-content" class="hidden">
+                <!-- Top Navigation Bar (matching My Bible design) -->
+                <div class="life-of-christ-top-nav" id="characterStudyTopNav">
+                    <!-- Back Button / Search Close -->
+                    <button class="nav-menu-btn" id="characterStudyBackBtn" onclick="handleCharacterStudyBackButton()">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Title (shown in normal mode) -->
+                    <h1 class="nav-title" id="characterStudyTitleDisplay">
+                        <span class="title-full">Character Study</span>
+                        <span class="title-short">Characters</span>
+                    </h1>
+                    
+                    <!-- Search Input (shown in search mode) -->
+                    <input 
+                        type="text" 
+                        id="charactersSearch" 
+                        class="nav-search-input-inline" 
+                        placeholder="Search characters..."
+                        autocomplete="off"
+                    />
+                    
+                    <!-- Search Icon / Clear Button -->
+                    <button class="nav-search-icon-btn" id="characterStudySearchToggleBtn" onclick="toggleCharacterStudySearchMode(event)">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="close-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="search-results-info" id="charactersSearchInfo"></div>
+                
+                <div class="characters-container">
+                    <div class="characters-cards-grid" id="charactersCardsGrid">
+                        <!-- Cards will be dynamically generated here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bible Content -->
+            <div id="bible-content" class="hidden">
+                <!-- Bible Verse Form -->
+                <div class="bible-verse-page-container" id="bibleVerseFormSection">
+                    <div class="bible-verse-container">
+                        <div class="bible-verse-form-content">
+                            <!-- Testament Toggle -->
+                            <div class="bible-verse-testament-toggle">
+                                <button class="bible-verse-testament-btn active" onclick="switchTestament('old')">
+                                    Old Testament
+                                </button>
+                                <button class="bible-verse-testament-btn" onclick="switchTestament('new')">
+                                    New Testament
+                                </button>
+                            </div>
+
+                            <form id="bibleVerseForm">
+                                <div class="bible-verse-form-row">
+                                    <label class="bible-verse-form-label">Book</label>
+                                    <div class="bible-verse-form-input">
+                                        <div class="bible-verse-custom-dropdown">
+                                            <input 
+                                                type="text" 
+                                                class="bible-verse-dropdown-input" 
+                                                id="bookInput" 
+                                                placeholder="Type to search books..."
+                                                autocomplete="off"
+                                            >
+                                            <div class="bible-verse-dropdown-arrow"></div>
+                                            <div class="bible-verse-dropdown-list" id="bookList"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bible-verse-form-row">
+                                    <label class="bible-verse-form-label">Chapter</label>
+                                    <div class="bible-verse-form-input">
+                                        <input type="text" class="bible-verse-input" id="chapterInput" placeholder="Enter chapter number">
+                                        <span class="bible-verse-helper-text" id="chapterHelperText">Example: 3</span>
+                                    </div>
+                                </div>
+
+                                <div class="bible-verse-form-row">
+                                    <label class="bible-verse-form-label">Verse</label>
+                                    <div class="bible-verse-form-input">
+                                        <input type="text" class="bible-verse-input" id="verseInput" placeholder="Enter verse number">
+                                        <span class="bible-verse-helper-text" id="verseHelperText">Example: 4:7 or 2-9</span>
+                                    </div>
+                                </div>
+
+                                <div class="bible-verse-form-row">
+                                    <label class="bible-verse-form-label">Language</label>
+                                    <div class="bible-verse-form-input">
+                                        <div class="bible-verse-radio-group">
+                                            <div class="bible-verse-radio-option">
+                                                <input type="radio" id="tamil" name="language" value="tamil">
+                                                <label for="tamil">Tamil</label>
+                                            </div>
+                                            <div class="bible-verse-radio-option">
+                                                <input type="radio" id="english" name="language" value="english">
+                                                <label for="english">English</label>
+                                            </div>
+                                            <div class="bible-verse-radio-option">
+                                                <input type="radio" id="both" name="language" value="both" checked>
+                                                <label for="both">Both</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bible-verse-submit-container">
+                                    <button type="submit" class="bible-verse-submit-btn">Submit Request</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bible Verse Display - Separate Main Content Section -->
+            <div class="main-section hidden" id="bibleVerseDisplaySection">
+                <div class="bible-chapter-header">
+                    <button class="back-btn-circle" onclick="goBackToBibleForm()">«</button>
+                    <div class="testament-nav-wrapper" id="bibleTestamentNavWrapper">
+                        <h1 class="bible-chapter-title" id="bibleVerseDisplayTitle">Genesis - 36</h1>
+                    </div>
+                    <!-- Reading Settings Menu -->
+                    <div class="bible-settings-menu-wrapper">
+                        <button class="bible-settings-trigger" id="bibleSettingsTrigger">
+                            <span class="dots">⋯</span>
+                        </button>
+                        <div class="bible-settings-dropdown" id="bibleSettingsDropdown">
+                            <div class="bible-settings-item">
+                                <span class="settings-icon">Aa</span>
+                                <span class="settings-label">Text Settings</span>
+                            </div>
+                            <div class="bible-settings-item">
+                                <span class="settings-icon">⊞</span>
+                                <span class="settings-label">Layout Options</span>
+                            </div>
+                            <div class="bible-settings-item">
+                                <span class="settings-icon">Ω</span>
+                                <span class="settings-label">Language Tools</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bible-chapter-content" id="bibleChapterContent">
+                    <!-- Verses will be inserted here -->
+                </div>
+                <!-- Verse count animated tag for Bible section -->
+                <div id="bibleVerseCountTag" class="verse-count-tag"></div>
+            </div>
+
+            <!-- Setting Content -->
+            <div id="setting-content" class="hidden">
+                <div class="content-header">
+                    <h1 class="page-title">Dashboard</h1>
+                </div>
+                <div style="text-align: center; padding: 50px;">
+                    <h2>Welcome to Bible Study Dashboard</h2>
+                    <p style="color: #6b7280; margin-top: 20px;">This is an additional dashboard view. Select any topic from the navigation to explore biblical content.</p>
+                </div>
+            </div>
+
+            <!-- Help Content / Life of Christ -->
+            <div id="help-content" class="hidden">
+                <!-- Top Navigation Bar (matching My Bible design) -->
+                <div class="life-of-christ-top-nav" id="lifeOfChristTopNav">
+                    <!-- Back Button / Search Close -->
+                    <button class="nav-menu-btn" id="navBackOrCloseBtn" onclick="handleNavBackButton()">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Title (shown in normal mode) -->
+                    <h1 class="nav-title" id="navTitleDisplay">
+                        <span class="title-full">Life of Jesus Christ</span>
+                        <span class="title-short">Life of Jesus</span>
+                    </h1>
+                    
+                    <!-- Search Input (shown in search mode) -->
+                    <input 
+                        type="text" 
+                        id="lifeOfChristSearch" 
+                        class="nav-search-input-inline" 
+                        placeholder="Search events..."
+                        autocomplete="off"
+                    />
+                    
+                    <!-- Search Icon / Clear Button -->
+                    <button class="nav-search-icon-btn" id="navSearchToggleBtn" onclick="toggleNavSearchMode(event)">
+                        <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="close-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="search-results-info" id="searchResultsInfo"></div>
+                
+                <div class="life-of-jesus-container">
+                    <div class="life-of-jesus-cards-grid" id="lifeOfJesusCardsGrid">
+                        <!-- Cards will be dynamically generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- King Details Popup -->
+    <div class="king-popup-overlay" id="kingPopup">
+        <div class="popup-container">
+            <div class="king-card">
+                <div class="king-card-header">
+                    <h2 class="king-card-title" id="popupKingName">King Details</h2>
+                    <button class="close-btn" onclick="closeKingPopup()">×</button>
+                </div>
+                <div class="king-card-content" id="popupKingContent">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Side Info Cards -->
+            <div class="side-cards-container" id="sideCardsContainer">
+                <div class="side-card order-card" id="orderCard">
+                    <div class="side-card-label">Order</div>
+                    <div class="side-card-value" id="orderValue">1st ruler</div>
+                </div>
+                
+                <div class="side-card kingdom-card" id="kingdomCard">
+                    <div class="side-card-label">Kingdom</div>
+                    <div class="side-card-value" id="kingdomValue">United Kingdom</div>
+                </div>
+                
+                <div class="side-card description-card" id="descriptionCard">
+                    <div class="side-card-label">Reign</div>
+                    <div class="side-card-value" id="descriptionValue">40 years</div>
+                </div>
+                
+                <div class="side-card character-card" id="characterCard">
+                    <div class="side-card-label">Character</div>
+                    <div class="side-card-value" id="characterValue">Disobedient</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Details Popup -->
+    <div class="king-popup-overlay" id="bookPopup">
+        <div class="popup-container">
+            <div class="king-card">
+                <div class="king-card-header">
+                    <h2 class="king-card-title" id="popupBookName">Book Details</h2>
+                    <button class="close-btn" onclick="closeBookPopup()">×</button>
+                </div>
+                <div class="king-card-content" id="popupBookContent">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter Card -->
+    <div class="filter-card-overlay" id="filterCardOverlay">
+        <div class="filter-card">
+            <div class="filter-card-header">
+                <h2 class="filter-card-title">Filter by Character</h2>
+                <button class="close-btn" onclick="closeFilterCard()">×</button>
+            </div>
+            <div class="filter-options">
+                <div class="filter-options-grid">
+                    <div class="filter-option selected" data-value="all">
+                        <div class="filter-option-icon">☰</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">All Characters</div>
+                            <div class="filter-option-description">Everyone</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Righteous">
+                        <div class="filter-option-icon">😇</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Righteous</div>
+                            <div class="filter-option-description">Follows God</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Good">
+                        <div class="filter-option-icon">👍</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Good</div>
+                            <div class="filter-option-description">Does good things</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Wise">
+                        <div class="filter-option-icon">🧠</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Wise</div>
+                            <div class="filter-option-description">Thinks smartly</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Zealous">
+                        <div class="filter-option-icon">🔥</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Zealous</div>
+                            <div class="filter-option-description">Very passionate</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Evil">
+                        <div class="filter-option-icon">😈</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Evil</div>
+                            <div class="filter-option-description">Does bad things</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Wicked">
+                        <div class="filter-option-icon">💀</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Wicked</div>
+                            <div class="filter-option-description">Very bad and cruel</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Disobedient">
+                        <div class="filter-option-icon">🚫</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Disobedient</div>
+                            <div class="filter-option-description">Doesn't listen to God</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Rebellious">
+                        <div class="filter-option-icon">⚡</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Rebellious</div>
+                            <div class="filter-option-description">Fights against rules</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Foolish">
+                        <div class="filter-option-icon">🤡</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Foolish</div>
+                            <div class="filter-option-description">Not wise, makes silly choices</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Good/Bad">
+                        <div class="filter-option-icon">⚖️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Good/Bad</div>
+                            <div class="filter-option-description">Has both good and bad actions</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Evil/Repentant">
+                        <div class="filter-option-icon">🔄</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Evil/Repentant</div>
+                            <div class="filter-option-description">Was bad, but changed to good</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="filter-btn-cancel" onclick="closeFilterCard()">Cancel</button>
+                <button class="filter-btn-apply" onclick="applyFilter()">Apply Filter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Passage Details Popup -->
+    <div class="passage-popup-overlay" id="passagePopup">
+        <div class="passage-modal-card">
+            <div class="passage-language-toggle">
+                <button class="passage-lang-btn active" data-lang="english" onclick="switchPassageLanguage('english')">English</button>
+                <button class="passage-lang-btn" data-lang="tamil" onclick="switchPassageLanguage('tamil')">தமிழ்</button>
+                <button class="passage-lang-btn" data-lang="dual" onclick="switchPassageLanguage('dual')">Both</button>
+            </div>
+            <button class="close-btn" onclick="closePassagePopup()">×</button>
+            <div class="passage-modal-header">
+                <h2 class="passage-modal-title">
+                    <span class="passage-modal-badge" id="passageBadge">Loading...</span>
+                </h2>
+            </div>
+            <div class="passage-modal-content" id="passageContent">
+                <div class="passage-loader">
+                    <div class="passage-loader-spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prophets Filter Card -->
+    <div class="filter-card-overlay" id="prophetsFilterCardOverlay">
+        <div class="filter-card">
+            <div class="filter-card-header">
+                <h2 class="filter-card-title">Filter by Audience</h2>
+                <button class="close-btn" onclick="closeProphetsFilterCard()">×</button>
+            </div>
+            <div class="filter-options">
+                <div class="filter-options-grid">
+                    <div class="filter-option selected" data-value="all">
+                        <div class="filter-option-icon">☰</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">All Audiences</div>
+                            <div class="filter-option-description">Everyone</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Judah">
+                        <div class="filter-option-icon">🛡️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Judah</div>
+                            <div class="filter-option-description">Southern Kingdom</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Northern Kingdom (Israel)">
+                        <div class="filter-option-icon">⚔️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Northern Kingdom</div>
+                            <div class="filter-option-description">Israel</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Israel in Babylon (exiles)">
+                        <div class="filter-option-icon">🏛️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Babylonian Exiles</div>
+                            <div class="filter-option-description">Israel in captivity</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Judah (post-exile)">
+                        <div class="filter-option-icon">🏠</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Post-Exile Judah</div>
+                            <div class="filter-option-description">After return from captivity</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Edom">
+                        <div class="filter-option-icon">🏔️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Edom</div>
+                            <div class="filter-option-description">Edomite nation</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Nineveh (Assyria)">
+                        <div class="filter-option-icon">🏰</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Nineveh</div>
+                            <div class="filter-option-description">Assyrian capital</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="filter-btn-cancel" onclick="closeProphetsFilterCard()">Cancel</button>
+                <button class="filter-btn-apply" onclick="applyProphetsFilter()">Apply Filter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books Filter Card -->
+    <div class="filter-card-overlay" id="booksFilterCardOverlay">
+        <div class="filter-card">
+            <div class="filter-card-header">
+                <h2 class="filter-card-title">Filter by Category</h2>
+                <button class="close-btn" onclick="closeBooksFilterCard()">×</button>
+            </div>
+            <div class="filter-options">
+                <div class="filter-options-grid">
+                    <div class="filter-option selected" data-value="all">
+                        <div class="filter-option-icon">📚</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">All Categories</div>
+                            <div class="filter-option-description">All Bible books</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Law">
+                        <div class="filter-option-icon">⚖️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Law</div>
+                            <div class="filter-option-description">Books of Moses</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="History">
+                        <div class="filter-option-icon">📖</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">History</div>
+                            <div class="filter-option-description">Historical books</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Poetry">
+                        <div class="filter-option-icon">📝</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Poetry</div>
+                            <div class="filter-option-description">Wisdom & poetry</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Major Prophet">
+                        <div class="filter-option-icon">⭐</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Major Prophet</div>
+                            <div class="filter-option-description">Major prophetic books</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Minor Prophet">
+                        <div class="filter-option-icon">📝</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Minor Prophet</div>
+                            <div class="filter-option-description">Minor prophetic books</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Gospel">
+                        <div class="filter-option-icon">✝️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Gospel</div>
+                            <div class="filter-option-description">Life of Jesus</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Acts">
+                        <div class="filter-option-icon">🔥</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Acts</div>
+                            <div class="filter-option-description">Early church history</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Letters">
+                        <div class="filter-option-icon">✉️</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Letters</div>
+                            <div class="filter-option-description">Epistles</div>
+                        </div>
+                    </div>
+                    <div class="filter-option" data-value="Revelation">
+                        <div class="filter-option-icon">🌟</div>
+                        <div class="filter-option-content">
+                            <div class="filter-option-name">Revelation</div>
+                            <div class="filter-option-description">Apocalyptic vision</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="filter-btn-cancel" onclick="closeBooksFilterCard()">Cancel</button>
+                <button class="filter-btn-apply" onclick="applyBooksFilter()">Apply Filter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapters Popup -->
+    <div class="chapters-overlay" id="chaptersOverlay" onclick="closeChaptersPopup()"></div>
+    <div class="chapters-popup" id="chaptersPopup">
+        <div class="popup-header">
+            <div>
+                <span class="book-title" id="popupBookTitle">Genesis</span>
+                <span class="chapter-count" id="popupChapterCount">(50 chapters)</span>
+            </div>
+            <button class="close-btn" onclick="closeChaptersPopup()">✕</button>
+        </div>
+        <div class="chapters" id="chaptersContainer">
+            <!-- Chapters will be generated dynamically -->
+        </div>
+    </div>
+
+    <!-- Synopsis Side Drawer -->
+    <div class="synopsis-drawer-overlay" id="synopsisDrawerOverlay"></div>
+    <div class="synopsis-side-drawer" id="synopsisSideDrawer">
+        <div class="synopsis-drawer-header">
+            <div class="synopsis-header-top">
+                <span class="synopsis-drawer-title" id="synopsisBookTitle">
+                    <span id="synopsisBookName">Genesis</span>
+                    <span class="synopsis-dropdown-icon" id="synopsisDropdownIcon">▼</span>
+                </span>
+                <select class="synopsis-book-selector" id="synopsisBookSelector" size="20">
+                    <optgroup label="Old Testament - Torah">
+                        <option value="0">Genesis</option>
+                        <option value="1">Exodus</option>
+                        <option value="2">Leviticus</option>
+                        <option value="3">Numbers</option>
+                        <option value="4">Deuteronomy</option>
+                    </optgroup>
+                    <optgroup label="Old Testament - Historical">
+                        <option value="5">Joshua</option>
+                        <option value="6">Judges</option>
+                        <option value="7">Ruth</option>
+                        <option value="8">1 Samuel</option>
+                        <option value="9">2 Samuel</option>
+                        <option value="10">1 Kings</option>
+                        <option value="11">2 Kings</option>
+                        <option value="12">1 Chronicles</option>
+                        <option value="13">2 Chronicles</option>
+                        <option value="14">Ezra</option>
+                        <option value="15">Nehemiah</option>
+                        <option value="16">Esther</option>
+                    </optgroup>
+                    <optgroup label="Old Testament - Wisdom">
+                        <option value="17">Job</option>
+                        <option value="18">Psalms</option>
+                        <option value="19">Proverbs</option>
+                        <option value="20">Ecclesiastes</option>
+                        <option value="21">Song of Solomon</option>
+                    </optgroup>
+                    <optgroup label="Old Testament - Major Prophets">
+                        <option value="22">Isaiah</option>
+                        <option value="23">Jeremiah</option>
+                        <option value="24">Lamentations</option>
+                        <option value="25">Ezekiel</option>
+                        <option value="26">Daniel</option>
+                    </optgroup>
+                    <optgroup label="Old Testament - Minor Prophets">
+                        <option value="27">Hosea</option>
+                        <option value="28">Joel</option>
+                        <option value="29">Amos</option>
+                        <option value="30">Obadiah</option>
+                        <option value="31">Jonah</option>
+                        <option value="32">Micah</option>
+                        <option value="33">Nahum</option>
+                        <option value="34">Habakkuk</option>
+                        <option value="35">Zephaniah</option>
+                        <option value="36">Haggai</option>
+                        <option value="37">Zechariah</option>
+                        <option value="38">Malachi</option>
+                    </optgroup>
+                    <optgroup label="New Testament - Gospels & Acts">
+                        <option value="39">Matthew</option>
+                        <option value="40">Mark</option>
+                        <option value="41">Luke</option>
+                        <option value="42">John</option>
+                        <option value="43">Acts</option>
+                    </optgroup>
+                    <optgroup label="New Testament - Paul's Letters">
+                        <option value="44">Romans</option>
+                        <option value="45">1 Corinthians</option>
+                        <option value="46">2 Corinthians</option>
+                        <option value="47">Galatians</option>
+                        <option value="48">Ephesians</option>
+                        <option value="49">Philippians</option>
+                        <option value="50">Colossians</option>
+                        <option value="51">1 Thessalonians</option>
+                        <option value="52">2 Thessalonians</option>
+                        <option value="53">1 Timothy</option>
+                        <option value="54">2 Timothy</option>
+                        <option value="55">Titus</option>
+                        <option value="56">Philemon</option>
+                    </optgroup>
+                    <optgroup label="New Testament - General Letters">
+                        <option value="57">Hebrews</option>
+                        <option value="58">James</option>
+                        <option value="59">1 Peter</option>
+                        <option value="60">2 Peter</option>
+                        <option value="61">1 John</option>
+                        <option value="62">2 John</option>
+                        <option value="63">3 John</option>
+                        <option value="64">Jude</option>
+                        <option value="65">Revelation</option>
+                    </optgroup>
+                </select>
+                <div class="synopsis-nav-buttons-right">
+                    <button class="synopsis-nav-btn" id="synopsisPrevBtn">←</button>
+                    <button class="synopsis-nav-btn" id="synopsisNextBtn">→</button>
+                </div>
+            </div>
+        </div>
+        <div class="synopsis-drawer-content" id="synopsisDrawerContent">
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Load JavaScript files in the correct order -->
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/data/kings-data.js"></script>
+    <script src="scripts/data/prophets-data.js"></script>
+    <script src="scripts/data/books-data.js"></script>
+    <script src="scripts/data/passages.js"></script>
+    <script src="scripts/data/characters-data.js"></script>
+    
+    <!-- Individual Chapter Data Files -->
+    <!-- Old Testament - Pentateuch -->
+    <script src="scripts/data/individual-chapters/old-testament/genesis-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/exodus-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/leviticus-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/numbers-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/deuteronomy-data.js"></script>
+
+    <!-- Old Testament - Historical Books -->
+    <script src="scripts/data/individual-chapters/old-testament/joshua-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/judges-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/ruth-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/1-samuel-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/2-samuel-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/1-kings-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/2-kings-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/1-chronicles-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/2-chronicles-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/ezra-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/nehemiah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/esther-data.js"></script>
+
+    <!-- Old Testament - Wisdom Books -->
+    <script src="scripts/data/individual-chapters/old-testament/job-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/psalms-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/proverbs-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/ecclesiastes-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/song-of-songs-data.js"></script>
+
+    <!-- Old Testament - Major Prophets -->
+    <script src="scripts/data/individual-chapters/old-testament/isaiah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/jeremiah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/lamentations-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/ezekiel-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/daniel-data.js"></script>
+
+    <!-- Old Testament - Minor Prophets -->
+    <script src="scripts/data/individual-chapters/old-testament/hosea-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/joel-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/amos-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/obadiah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/jonah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/micah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/nahum-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/habakkuk-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/zephaniah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/haggai-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/zechariah-data.js"></script>
+    <script src="scripts/data/individual-chapters/old-testament/malachi-data.js"></script>
+
+    <!-- New Testament - Gospels -->
+    <script src="scripts/data/individual-chapters/new-testament/matthew-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/mark-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/luke-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/john-data.js"></script>
+
+    <!-- New Testament - History -->
+    <script src="scripts/data/individual-chapters/new-testament/acts-data.js"></script>
+
+    <!-- New Testament - Paul's Letters -->
+    <script src="scripts/data/individual-chapters/new-testament/romans-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/1-corinthians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/2-corinthians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/galatians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/ephesians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/philippians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/colossians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/1-thessalonians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/2-thessalonians-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/1-timothy-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/2-timothy-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/titus-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/philemon-data.js"></script>
+
+    <!-- New Testament - General Letters -->
+    <script src="scripts/data/individual-chapters/new-testament/hebrews-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/james-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/1-peter-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/2-peter-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/1-john-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/2-john-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/3-john-data.js"></script>
+    <script src="scripts/data/individual-chapters/new-testament/jude-data.js"></script>
+
+    <!-- New Testament - Prophecy -->
+    <script src="scripts/data/individual-chapters/new-testament/revelation-data.js"></script>
+    
+    <!-- Synopsis Data Files - Old Testament -->
+    <script src="scripts/data/synopsis/old-testament/genesis-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/exodus-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/leviticus-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/numbers-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/deuteronomy-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/joshua-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/judges-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/ruth-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/samuel1-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/samuel2-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/kings-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/chronicles-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/ezra-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/nehemiah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/esther-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/job-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/psalms-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/proverbs-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/ecclesiastes-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/song-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/isaiah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/jeremiah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/lamentations-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/ezekiel-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/daniel-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/hosea-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/joel-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/amos-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/obadiah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/jonah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/micah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/nahum-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/habakkuk-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/zephaniah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/haggai-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/zechariah-synopsis.js"></script>
+    <script src="scripts/data/synopsis/old-testament/malachi-synopsis.js"></script>
+    
+    <!-- Synopsis Data Files - New Testament -->
+    <script src="scripts/data/synopsis/new-testament/matthew-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/mark-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/luke-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/john-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/acts-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/romans-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/corinthians-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/galatians-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/ephesians-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/philippians-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/colossians-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/thessalonians-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/timothy-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/titus-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/philemon-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/hebrews-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/james-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/peter-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/john-letters-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/jude-synopsis.js"></script>
+    <script src="scripts/data/synopsis/new-testament/revelation-synopsis.js"></script>
+    
+    <script src="scripts/utils/table-utils.js"></script>
+    <script src="scripts/utils/router.js"></script>
+    <script src="scripts/ui/theme-animation.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/characters.js"></script>
+    <script src="scripts/ui/testament-nav.js"></script>
+    <script src="scripts/ui/bible-settings-menu.js"></script>
+    <script src="scripts/ui/modal.js"></script>
+    <script src="scripts/ui/events.js"></script>
+    <script src="scripts/ui/life-of-christ.js"></script>
+    <script src="scripts/ui/synopsis-drawer.js"></script>
+    <script src="scripts/ui/swipe.js"></script>
+    <script src="scripts/ui/prophet-navigation.js"></script>
+    <script src="scripts/ui/king-hover-card.js"></script>
+    <script src="scripts/ui/bible-verse-modal.js"></script>
+    <!-- Cross-reference data files (must load before cross-reference-popup.js) -->
+    <script src="scripts/data/cross-references/matthew-cross-references.js"></script>
+    <script src="scripts/ui/cross-reference-popup.js"></script>
+    <script>
+        // Initialize router when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeRouter();
+        });
+    </script>
+
+    <!-- Passcode Modal -->
+    <div id="passcodeModal" class="passcode-modal" style="display: none;">
+        <div class="passcode-overlay" onclick="closePasscodeModal()"></div>
+        <div class="passcode-content">
+            <div class="passcode-header">
+                <h2>🔐 Secret Access</h2>
+                <button class="passcode-close-btn" onclick="closePasscodeModal()">✕</button>
+            </div>
+            <div class="passcode-body">
+                <p class="passcode-instruction">Enter 6-digit passcode</p>
+                <div class="otp-container">
+                    <input type="password" class="otp-input" maxlength="1" data-index="0" autocomplete="off" inputmode="numeric">
+                    <input type="password" class="otp-input" maxlength="1" data-index="1" autocomplete="off" inputmode="numeric">
+                    <input type="password" class="otp-input" maxlength="1" data-index="2" autocomplete="off" inputmode="numeric">
+                    <input type="password" class="otp-input" maxlength="1" data-index="3" autocomplete="off" inputmode="numeric">
+                    <input type="password" class="otp-input" maxlength="1" data-index="4" autocomplete="off" inputmode="numeric">
+                    <input type="password" class="otp-input" maxlength="1" data-index="5" autocomplete="off" inputmode="numeric">
+                </div>
+                <div id="passcodeError" class="passcode-error" style="display: none;">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: text-bottom; margin-right: 4px;">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </svg>
+                    Incorrect passcode. Try again.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // OTP Input Handling
+        const otpInputs = document.querySelectorAll('.otp-input');
+        const correctPasscode = '230870';
+
+        otpInputs.forEach((input, index) => {
+            // Handle input
+            input.addEventListener('input', function(e) {
+                const value = e.target.value;
+                
+                // Only allow numbers
+                if (!/^\d*$/.test(value)) {
+                    e.target.value = '';
+                    return;
+                }
+
+                // Move to next input if value is entered
+                if (value.length === 1 && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+
+                // Auto-validate when all 6 digits are entered
+                checkAllFilled();
+            });
+
+            // Handle backspace
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    otpInputs[index - 1].focus();
+                    otpInputs[index - 1].value = '';
+                }
+            });
+
+            // Handle paste
+            input.addEventListener('paste', function(e) {
+                e.preventDefault();
+                const pastedData = e.clipboardData.getData('text').replace(/\D/g, '');
+                
+                for (let i = 0; i < pastedData.length && index + i < otpInputs.length; i++) {
+                    otpInputs[index + i].value = pastedData[i];
+                }
+                
+                // Focus on the next empty input or last input
+                const nextEmptyIndex = Math.min(index + pastedData.length, otpInputs.length - 1);
+                otpInputs[nextEmptyIndex].focus();
+                
+                checkAllFilled();
+            });
+
+            // Select all on focus
+            input.addEventListener('focus', function() {
+                this.select();
+            });
+        });
+
+        function checkAllFilled() {
+            const enteredCode = Array.from(otpInputs).map(input => input.value).join('');
+            
+            if (enteredCode.length === 6) {
+                validatePasscode(enteredCode);
+            }
+        }
+
+        function showPasscodeModal() {
+            const modal = document.getElementById('passcodeModal');
+            const error = document.getElementById('passcodeError');
+            
+            modal.style.display = 'flex';
+            error.style.display = 'none';
+            
+            // Clear all inputs
+            otpInputs.forEach(input => {
+                input.value = '';
+                input.classList.remove('error');
+            });
+            
+            // Focus first input
+            setTimeout(() => otpInputs[0].focus(), 100);
+        }
+
+        function closePasscodeModal() {
+            const modal = document.getElementById('passcodeModal');
+            modal.style.display = 'none';
+        }
+
+        function validatePasscode(enteredCode) {
+            const error = document.getElementById('passcodeError');
+
+            if (enteredCode === correctPasscode) {
+                // Success - set flag and redirect to secret page
+                otpInputs.forEach(input => input.classList.add('success'));
+                
+                // Set session storage flag to indicate valid access from dashboard
+                sessionStorage.setItem('secretAccess', 'true');
+                
+                setTimeout(() => {
+                    window.location.href = 'secret.html';
+                }, 300);
+            } else {
+                // Error - show message and shake
+                error.style.display = 'block';
+                otpInputs.forEach(input => {
+                    input.classList.add('error');
+                    input.value = '';
+                });
+                
+                // Shake animation
+                document.querySelector('.otp-container').style.animation = 'shake 0.5s';
+                setTimeout(() => {
+                    document.querySelector('.otp-container').style.animation = '';
+                    otpInputs.forEach(input => input.classList.remove('error'));
+                    otpInputs[0].focus();
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>

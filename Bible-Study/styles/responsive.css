@@ -1,0 +1,686 @@
+﻿/* ===== RESPONSIVE STYLES - Mobile, Tablet, Desktop Breakpoints ===== */
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 15px;
+        min-height: calc(100vh - 20px);
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.collapsed {
+        width: 50px;
+    }
+
+    .header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .content-header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .content-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .table-container {
+        margin: 15px 0;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px 15px;
+    }
+
+    /* Hide contemporary kings column on tablets */
+    .contemporary-cell,
+    .table th:nth-child(4) {
+        display: none;
+    }
+
+    .pagination {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pagination-controls {
+        order: -1;
+    }
+
+    .fancy-dropdown.kingdom-dropdown {
+        width: 250px;
+    }
+
+    /* Modal responsive styles */
+    .popup-container {
+        flex-direction: column;
+        gap: 20px;
+        max-width: 95%;
+    }
+
+    .king-card {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+
+    .side-cards-container {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .side-card {
+        min-width: 150px;
+        flex-shrink: 0;
+    }
+
+    .king-popup-overlay.show .side-card:nth-child(1),
+    .king-popup-overlay.show .side-card:nth-child(2),
+    .king-popup-overlay.show .side-card:nth-child(3),
+    .king-popup-overlay.show .side-card:nth-child(4) {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .filter-options-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-card {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+/* Mobile Styles (600px and below) */
+@media (max-width: 600px) {
+    .container {
+        margin: 5px;
+        border-radius: 10px;
+        min-height: calc(100vh - 10px);
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar.collapsed {
+        width: 45px;
+    }
+
+    .logo {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .nav-item {
+        padding: 12px 15px;
+    }
+
+    .nav-icon {
+        font-size: 16px;
+    }
+
+    .header {
+        padding: 12px 15px;
+    }
+
+    .search-container {
+        padding: 10px 12px;
+    }
+
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .user-name {
+        font-size: 13px;
+    }
+
+    .user-email {
+        font-size: 11px;
+    }
+
+    .content-header {
+        padding: 15px 0;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .table-container {
+        margin: 10px 0;
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 500px;
+        font-size: 12px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px 12px;
+    }
+
+    /* Hide contemporary kings column on mobile */
+    .contemporary-cell,
+    .table th:nth-child(4) {
+        display: none;
+    }
+
+    .fancy-dropdown.kingdom-dropdown {
+        width: 200px;
+    }
+
+    .kingdom-dropdown-button {
+        padding: 12px 15px !important;
+        font-size: 13px !important;
+    }
+
+    .dropdown-item {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    .king-card {
+        padding: 25px;
+    }
+
+    .king-card-title {
+        font-size: 20px;
+    }
+
+    .filter-card {
+        padding: 20px;
+        width: 98%;
+    }
+
+    .filter-card-title {
+        font-size: 20px;
+    }
+}
+
+/* Small Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    .sidebar {
+        position: fixed;
+        left: -180px;
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .header {
+        position: relative;
+        padding-left: 50px;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .search-container {
+        width: calc(100% - 40px);
+    }
+
+    .content-actions {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .fancy-dropdown.kingdom-dropdown {
+        width: 100%;
+        min-width: 150px;
+    }
+
+    .table-container {
+        margin: 8px;
+    }
+
+    .table {
+        min-width: 450px;
+    }
+
+    .pagination {
+        padding: 12px 15px;
+    }
+
+    .pagination-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    /* Hide text in navigation items when collapsed */
+    .left-sidebar.collapsed .history-item span:not(.nav-icon) {
+        display: none !important;
+    }
+    
+    .left-sidebar.collapsed .sidebar-footer-item span {
+        display: none !important;
+    }
+}
+
+/* iPad and Tablet Landscape Styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .drawer-toggle {
+        left: 245px;
+    }
+
+    .sidebar.collapsed .drawer-toggle {
+        left: 55px;
+    }
+
+    .sidebar {
+        width: 260px;
+    }
+
+    .sidebar.collapsed {
+        width: 70px;
+    }
+
+    /* Seed of Woman Header Styles for iPad */
+    .content-header-centered {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: nowrap;
+    }
+
+    .content-header-centered .page-title {
+        font-size: 28px;
+        flex: 0 1 auto;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .chapter-navigation-header {
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    .back-btn-circle {
+        flex-shrink: 0;
+    }
+
+    /* Ensure proper spacing on iPad */
+    .main-content {
+        padding: 24px 32px;
+    }
+    
+    /* Fix sidebar footer visibility on iPad landscape */
+    .left-sidebar {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .sidebar-footer {
+        margin-top: auto;
+        flex-shrink: 0;
+    }
+    
+    .theme-toggle-container {
+        padding: 10px;
+        flex-shrink: 0;
+    }
+    
+    .theme-toggle {
+        width: 100%;
+        gap: 5px;
+    }
+    
+    .theme-option {
+        min-height: 36px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+    
+    .theme-option svg {
+        width: 15px !important;
+        height: 15px !important;
+    }
+    
+    .theme-option-text {
+        font-size: 12px;
+    }
+    
+    .sidebar-footer-item {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    /* Hide text in navigation items when collapsed */
+    .left-sidebar.collapsed .history-item span:not(.nav-icon) {
+        display: none !important;
+    }
+    
+    .left-sidebar.collapsed .sidebar-footer-item span {
+        display: none !important;
+    }
+}
+
+/* Large Desktop Styles (1200px and above) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .sidebar {
+        width: 280px;
+    }
+
+    .sidebar.collapsed {
+        width: 70px;
+    }
+
+    .search-container {
+        width: 500px;
+    }
+
+    .table th,
+    .table td {
+        padding: 18px 24px;
+    }
+
+    .king-card {
+        max-width: 700px;
+        width: 700px;
+    }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .user-avatar,
+    .info-btn,
+    .close-btn {
+        border: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .header,
+    .pagination,
+    .content-actions {
+        display: none !important;
+    }
+
+    .main-content {
+        width: 100% !important;
+    }
+
+    .table-container {
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px !important;
+        border: 1px solid #000 !important;
+    }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles can be added here */
+}
+
+/* Theme Toggle Responsive Styles for iPad and Tablets */
+@media (max-width: 1024px) {
+    .theme-toggle-container {
+        padding: 10px;
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    .theme-toggle {
+        display: flex !important;
+        width: 100%;
+        gap: 4px;
+        padding: 3px;
+    }
+    
+    .theme-option {
+        flex: 1;
+        min-height: 32px;
+        padding: 0 10px;
+        font-size: 12px;
+        display: flex !important;
+    }
+    
+    .theme-option svg {
+        width: 14px !important;
+        height: 14px !important;
+        display: block !important;
+    }
+    
+    .theme-option-text {
+        font-size: 12px;
+        display: inline-block !important;
+    }
+    
+    /* Ensure sidebar footer is visible */
+    .sidebar-footer {
+        display: flex !important;
+        flex-direction: column;
+        margin-top: auto;
+    }
+    
+    .sidebar-footer-item {
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    /* Hide text in navigation items when collapsed */
+    .left-sidebar.collapsed .history-item span:not(.nav-icon) {
+        display: none !important;
+    }
+    
+    .left-sidebar.collapsed .sidebar-footer-item span {
+        display: none !important;
+    }
+}
+
+/* Specific iPad landscape orientation fix */
+@media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: landscape) {
+    
+    .left-sidebar {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    
+    .sidebar-nav {
+        flex: 1;
+        overflow-y: auto;
+        min-height: 0;
+    }
+    
+    .sidebar-footer {
+        margin-top: auto;
+        flex-shrink: 0;
+        display: flex !important;
+        flex-direction: column;
+        border-top: 1px solid #e5e7eb;
+    }
+    
+    .theme-toggle-container {
+        display: flex !important;
+        padding: 8px;
+        border-top: 1px solid #e5e7eb;
+        flex-shrink: 0;
+    }
+    
+    .theme-toggle {
+        width: 100%;
+        display: flex !important;
+        gap: 4px;
+    }
+    
+    .theme-option {
+        flex: 1;
+        min-height: 34px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 8px;
+    }
+    
+    .theme-option svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    
+    .theme-option-text {
+        font-size: 11px;
+    }
+    
+    .sidebar-footer-item {
+        display: flex !important;
+        align-items: center;
+        padding: 10px 12px;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .sidebar-footer-item svg {
+        width: 16px !important;
+        height: 16px !important;
+        display: block !important;
+    }
+    
+    .sidebar-footer-item span {
+        display: inline-block !important;
+        font-size: 13px;
+    }
+}
+
+/* Tablet specific (768px and below) */
+@media (max-width: 768px) {
+    .theme-option {
+        padding: 0 8px;
+    }
+    
+    .left-sidebar.collapsed .theme-option-text {
+        display: none !important;
+    }
+    
+    .left-sidebar.collapsed .theme-toggle {
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+    .left-sidebar.collapsed .theme-option {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        justify-content: center;
+    }
+    
+    /* Hide text in navigation items when collapsed */
+    .left-sidebar.collapsed .history-item span:not(.nav-icon) {
+        display: none !important;
+    }
+    
+    .left-sidebar.collapsed .sidebar-footer-item span {
+        display: none !important;
+    }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 600px) {
+    .theme-toggle-container {
+        padding: 8px;
+    }
+    
+    .theme-option {
+        padding: 0 6px;
+        font-size: 11px;
+        min-height: 30px;
+    }
+    
+    .theme-option svg {
+        width: 13px !important;
+        height: 13px !important;
+    }
+    
+    .theme-option-text {
+        font-size: 11px;
+    }
+    
+    /* Hide text in navigation items when collapsed */
+    .left-sidebar.collapsed .history-item span:not(.nav-icon) {
+        display: none !important;
+    }
+    
+    .left-sidebar.collapsed .sidebar-footer-item span {
+        display: none !important;
+    }
+}
+
+/* Prophet Page Responsive Styles (Similar to King Page) */
+@media (max-width: 768px) {
+    .prophet-page-container {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prophet-page-container {
+        padding: 10px 15px;
+    }
+}
+

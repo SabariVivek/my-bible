@@ -1,0 +1,676 @@
+/* ===== COMPONENTS STYLES - Buttons, Dropdowns ===== */
+
+.table-row {
+    cursor: pointer !important;
+}
+
+.table-row td {
+    cursor: pointer !important;
+}
+
+.table tbody tr:hover {
+    background: #f0f9ff;
+    transform: scale(1.005);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.order-cell {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.order-number {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.order-number sup {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+.king-cell {
+    font-weight: 600;
+}
+
+.king-name {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.king-kingdom {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-united {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.status-israel {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-judah {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+/* Verse Badge Styles - For biblical references */
+.verse-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+    transition: all 0.2s ease;
+}
+
+.verse-samuel {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #fbbf24;
+}
+
+.verse-kings {
+    background: #dbeafe;
+    color: #1e3a8a;
+    border-color: #60a5fa;
+}
+
+.verse-chronicles {
+    background: #d1fae5;
+    color: #065f46;
+    border-color: #34d399;
+}
+
+/* Empty verse style - shows only colored dash without badge styling */
+.verse-badge.verse-empty {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-weight: 600;
+}
+
+.verse-badge.verse-samuel.verse-empty {
+    color: #92400e;
+}
+
+.verse-badge.verse-kings.verse-empty {
+    color: #1e3a8a;
+}
+
+.verse-badge.verse-chronicles.verse-empty {
+    color: #065f46;
+}
+
+/* Author Badge Styles - Distinct from status badges */
+.author-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: none;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+    transition: all 0.2s ease;
+}
+
+.author-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+.character-cell {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.character-righteous {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.character-good {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.character-wise {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.character-zealous {
+    background: #fed7d7;
+    color: #c53030;
+}
+
+.character-evil {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.character-wicked {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.character-disobedient {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.character-rebellious {
+    background: #fde68a;
+    color: #d97706;
+}
+
+.character-foolish {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.character-goodbad {
+    background: #f3f4f6;
+    color: var(--heading-color);
+}
+
+.character-evilrepentant {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+/* Button Styles */
+.filter-btn, .export-btn {
+    padding: 10px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #EBEBFF;
+    color: var(--heading-color);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn:hover, .export-btn:hover {
+    border-color: #d1d5db;
+    background: #f9fafb;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background: #f3f4f6;
+}
+
+.info-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin: 0 auto;
+}
+
+.info-btn:hover {
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.pagination-info {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn {
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    background: #EBEBFF;
+    color: var(--heading-color);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #f9fafb;
+    border-color: var(--secondary-text-color);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-btn.active {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+/* Dropdown Styles */
+.fancy-dropdown {
+    position: relative;
+    width: 50px;
+    margin-right: 0px;
+}
+
+.dropdown-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.dropdown-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.dropdown-button.active {
+    border-radius: 10px;
+}
+
+.fancy-dropdown.kingdom-dropdown {
+    width: 300px;
+}
+
+.kingdom-dropdown-button {
+    padding: 15px 20px !important;
+    font-size: 15px !important;
+    border-radius: 12px !important;
+    justify-content: space-between !important;
+}
+
+.kingdom-dropdown-button.active {
+    border-radius: 12px 12px 4px 4px !important;
+}
+
+.kingdom-dropdown .dropdown-arrow {
+    display: block;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+.kingdom-dropdown-button.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    min-width: 200px;
+    background: #EBEBFF;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px 4px 12px 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.dropdown-menu.show {
+    max-height: 250px;
+    opacity: 1;
+    overflow-y: auto;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+.dropdown-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #667eea15, #764ba215);
+    transform: translateX(5px);
+}
+
+.dropdown-item.selected {
+    background: linear-gradient(135deg, #667eea20, #764ba220);
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.dropdown-icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+.dropdown-text {
+    flex: 1;
+}
+
+.dropdown-count {
+    background: #e5e7eb;
+    color: #6b7280;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Status Classes */
+.status-evil {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.status-wicked {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+/* Books Filter Theme Buttons */
+.theme-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    color: #333333;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+}
+
+.theme-btn:hover {
+    background-color: #e8e8e8 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.theme-btn:active {
+    transform: scale(0.98) !important;
+}
+
+.theme-btn.active {
+    background: linear-gradient(135deg, #6B5FBF 0%, #8B7FC5 100%) !important;
+    border-color: #6B5FBF !important;
+    color: #ffffff !important;
+    transform: scale(1.02) !important;
+    box-shadow: 0 4px 16px rgba(107, 95, 191, 0.4) !important;
+}
+
+/* ===== BOOK CHAPTER CONTENT STYLES ===== */
+.book-chapter-container {
+    scrollbar-width: thin;
+    scrollbar-color: #4a7c59 #f0f0f0;
+}
+
+.book-chapter-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.book-chapter-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.book-chapter-container::-webkit-scrollbar-thumb {
+    background: #4a7c59;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.book-chapter-container::-webkit-scrollbar-thumb:hover {
+    background: #3d6649;
+}
+
+.chapter-section {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chapter-section h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chapter-section b {
+    font-weight: 600;
+    color: #2c5f3f;
+}
+
+/* Verse Reference Badges */
+.verse-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 1px 3px;
+    background-color: #fffbeb;
+    color: #d97706;
+    border: 1.5px solid #f59e0b;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    letter-spacing: 0.1px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.verse-badge:hover {
+    background-color: #fef3c7;
+    border-color: #d97706;
+    box-shadow: 0 1px 3px rgba(217, 119, 6, 0.2);
+    transform: translateY(-2px);
+}
+
+
+/* ===== BOOK CHAPTER CONTENT STYLES ===== */
+.book-chapter-container {
+    scrollbar-width: thin;
+    scrollbar-color: #4a7c59 #f0f0f0;
+}
+
+.book-chapter-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.book-chapter-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.book-chapter-container::-webkit-scrollbar-thumb {
+    background: #4a7c59;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.book-chapter-container::-webkit-scrollbar-thumb:hover {
+    background: #3d6649;
+}
+
+.chapter-section {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chapter-section h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.chapter-section b {
+    font-weight: 600;
+    color: #2c5f3f;
+}
+
+
+/* Note Card Styles */
+.note-card {
+    background: #f5f5f5;
+    border-radius: 15px;
+    padding: 2px;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.note-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.note-card-inner {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.note-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    padding-left: 15px;
+    border-left: 3px solid #667eea;
+}
+
+.note-content {
+    color: var(--secondary-text-color);
+    font-size: 15px;
+    line-height: 1.6;
+    position: relative;
+}
+
+.note-content p {
+    margin: 0 0 10px 0;
+}
+
+.note-content ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+}
+
+.note-content li {
+    margin: 8px 0;
+}
+
+.note-content p:last-child {
+    margin-bottom: 0;
+}
