@@ -890,24 +890,30 @@ function updateVerses() {
             const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
             
             if (isBottomSheetVisible) {
-                // Bottom sheet is open - toggle this verse in the selection
+                // Bottom sheet is open - close it and clear multi-highlights
                 const wasSelected = item.classList.contains('active');
                 const contentArea = document.querySelector('.scripture-text');
                 
-                // IMMEDIATELY remove or add highlight in the UI (using multi-highlighted color)
+                // Close the bottom sheet
+                existingBottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+                
+                // IMMEDIATELY remove or add highlight in the UI (using left-pane-selected grey color)
                 if (wasSelected) {
                     // Remove highlight immediately from this verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                     if (verseLine) {
+                        verseLine.classList.remove('left-pane-selected');
                         verseLine.classList.remove('multi-highlighted');
                         verseLine.style.backgroundColor = '';
                     }
                     console.log(`🗑️ Removed highlight from verse ${verse} immediately`);
                 } else {
-                    // Add multi-highlighted color for newly selected verse
+                    // Add left-pane-selected color for newly selected verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                     if (verseLine) {
-                        verseLine.classList.add('multi-highlighted');
+                        verseLine.classList.add('left-pane-selected');
+                        verseLine.classList.remove('multi-highlighted');
                     }
                     console.log(`✨ Added highlight to verse ${verse} immediately`);
                 }
@@ -925,38 +931,24 @@ function updateVerses() {
                     console.log(`✔️ Selected verse ${verse}`);
                 }
                 
-                // Update all selected verses with multi-highlighted color
+                // Update all selected verses with left-pane-selected grey color and remove underline
                 if (updatedSelectedVerses.length > 0) {
                     updatedSelectedVerses.forEach(vNum => {
                         const vLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
                         if (vLine) {
-                            vLine.classList.add('multi-highlighted');
+                            vLine.classList.add('left-pane-selected');
+                            vLine.classList.remove('multi-highlighted');
                         }
                     });
                 } else {
                     // No verses selected, remove all highlights
                     contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('left-pane-selected');
                         v.classList.remove('multi-highlighted');
                         v.style.backgroundColor = '';
                     });
                 }
                 
-                // Update bottom sheet
-                if (updatedSelectedVerses.length > 1) {
-                    const copyBtn = existingBottomSheet.querySelector('.copy-multi-verses-action');
-                    if (!copyBtn) {
-                        existingBottomSheet.classList.remove('visible');
-                        document.body.classList.remove('bottom-sheet-open');
-                        showMultiVerseActionsBottomSheet(updatedSelectedVerses);
-                    } else {
-                        updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
-                    }
-                } else if (updatedSelectedVerses.length === 1) {
-                    updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
-                } else {
-                    existingBottomSheet.classList.remove('visible');
-                    document.body.classList.remove('bottom-sheet-open');
-                }
             } else {
                 // Bottom sheet not open - just select this verse, don't open bottom sheet
                 versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
@@ -964,20 +956,20 @@ function updateVerses() {
                 
                 const contentArea = document.querySelector('.scripture-text');
                 contentArea.querySelectorAll('.verse-line').forEach(v => {
-                    v.classList.remove('multi-highlighted');
+                    v.classList.remove('left-pane-selected');
                     v.style.backgroundColor = '';
                 });
                 contentArea.querySelectorAll('.verse-container').forEach(v => {
-                    v.classList.remove('multi-highlighted');
+                    v.classList.remove('left-pane-selected');
                     v.style.backgroundColor = '';
                 });
                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                 const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                 if (verseLine) {
-                    verseLine.classList.add('multi-highlighted');
+                    verseLine.classList.add('left-pane-selected');
                 }
                 if (verseContainer) {
-                    verseContainer.classList.add('multi-highlighted');
+                    verseContainer.classList.add('left-pane-selected');
                 }
                 console.log(`✔️ Selected verse ${verse}`);
             }
@@ -1113,10 +1105,12 @@ function displayChapter() {
                             const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                             if (verseLine) {
                                 verseLine.classList.remove('multi-highlighted');
+                                verseLine.classList.remove('left-pane-selected');
                                 verseLine.style.backgroundColor = '';
                             }
                             if (verseContainer) {
                                 verseContainer.classList.remove('multi-highlighted');
+                                verseContainer.classList.remove('left-pane-selected');
                                 verseContainer.style.backgroundColor = '';
                             }
                             console.log(`🗑️ Removed highlight from verse ${verseNum} immediately`);
@@ -1136,20 +1130,21 @@ function displayChapter() {
                             console.log(`🗑️ Deselected verse ${verseNum}`);
                         } else {
                             console.log(`✔️ Selected verse ${verseNum}`);
-                            // Add highlight for newly selected verse
+                            // Add highlight for newly selected verse (left-pane selection)
                             const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                             if (verseLine) {
-                                verseLine.classList.add('multi-highlighted');
+                                verseLine.classList.add('left-pane-selected');
                             }
                         }
                         
                         // Update highlighting based on selection count
-                        // For text-based selections, always use multi-highlighted color
+                        // For manual selections in main content, use multi-highlighted class (underline)
                         if (updatedSelectedVerses.length > 0) {
                             updatedSelectedVerses.forEach(vNum => {
                                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
                                 if (verseLine) {
                                     verseLine.classList.remove('highlighted');
+                                    verseLine.classList.remove('left-pane-selected');
                                     verseLine.classList.add('multi-highlighted');
                                 }
                             });
@@ -1158,6 +1153,7 @@ function displayChapter() {
                             contentArea.querySelectorAll('.verse-line').forEach(v => {
                                 v.classList.remove('highlighted');
                                 v.classList.remove('multi-highlighted');
+                                v.classList.remove('left-pane-selected');
                                 v.style.backgroundColor = '';
                             });
                         }
@@ -2193,13 +2189,11 @@ function updateVerseHighlighting(selectedVerses) {
 function scrollToVerse(verseNum) {
     const contentArea = document.querySelector('.scripture-text');
     
-    // Remove highlight from all verses first
-    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('multi-highlighted'));
+    // Don't add highlight here - let the click handlers manage highlighting
+    // Just scroll to the verse
     
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseLine) {
-        // Add highlight to selected verse
-        verseLine.classList.add('multi-highlighted');
         // On mobile/tablet, scroll with offset to keep top nav visible
         if (window.innerWidth <= 1024) {
             const topNavHeight = 60; // height of top bar

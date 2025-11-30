@@ -1623,15 +1623,31 @@ body.dark-theme .mobile-chapter-header {
 }
 
 .verse-line.multi-highlighted {
-    background-color: #e8eaed !important;
+    text-decoration: underline dotted #1f2937 !important;
+    text-underline-offset: 3px !important;
 }
 
 .verse-line.multi-highlighted:active {
-    background-color: #e8eaed !important;
+    text-decoration: underline dotted #1f2937 !important;
+    text-underline-offset: 3px !important;
 }
 
 .verse-line.multi-highlighted:focus {
-    background-color: #e8eaed !important;
+    text-decoration: underline dotted #1f2937 !important;
+    text-underline-offset: 3px !important;
+}
+
+/* Left pane selection - grey background */
+.verse-line.left-pane-selected {
+    background-color: #d0d4d9 !important;
+}
+
+.verse-line.left-pane-selected:active {
+    background-color: #d0d4d9 !important;
+}
+
+.verse-line.left-pane-selected:focus {
+    background-color: #d0d4d9 !important;
 }
 
 /* Override selection color to prevent grey highlighting */
@@ -2994,15 +3010,31 @@ body.dark-theme .verse-line:focus {
 }
 
 body.dark-theme .verse-line.multi-highlighted {
-    background-color: #3c4043 !important;
+    text-decoration: underline dotted #60a5fa !important;
+    text-underline-offset: 3px !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:active {
-    background-color: #3c4043 !important;
+    text-decoration: underline dotted #60a5fa !important;
+    text-underline-offset: 3px !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:focus {
-    background-color: #3c4043 !important;
+    text-decoration: underline dotted #60a5fa !important;
+    text-underline-offset: 3px !important;
+}
+
+/* Left pane selection - grey background in dark theme */
+body.dark-theme .verse-line.left-pane-selected {
+    background-color: #2a2d30 !important;
+}
+
+body.dark-theme .verse-line.left-pane-selected:active {
+    background-color: #2a2d30 !important;
+}
+
+body.dark-theme .verse-line.left-pane-selected:focus {
+    background-color: #2a2d30 !important;
 }
 
 /* Override selection color in dark theme */
