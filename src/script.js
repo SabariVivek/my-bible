@@ -957,10 +957,12 @@ function displayChapter() {
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
-            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
-                <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
-                <span class="english-text ${englishTextColor}">${englishText}</span>
-            </p>`;
+            html += `<div class="verse-container" data-verse="${verseNum}">
+                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
+                    <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
+                    <span class="english-text ${englishTextColor}">${englishText}</span>
+                </p>
+            </div>`;
         });
     } else {
         // Display single language
@@ -972,18 +974,27 @@ function displayChapter() {
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
-            html += `<p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>`;
+            html += `<div class="verse-container" data-verse="${verseNum}">
+                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
+            </div>`;
         });
     }
     contentArea.innerHTML = html;
-    // Add click handlers to verse lines
-    contentArea.querySelectorAll('.verse-line').forEach(verseLine => {
-        verseLine.addEventListener('click', () => {
-            const verseNum = parseInt(verseLine.dataset.verse);
+    
+    // Add click handlers to verse containers to show bottom sheet
+    contentArea.querySelectorAll('.verse-container').forEach(container => {
+        const verseLine = container.querySelector('.verse-line');
+        const verseNum = parseInt(container.dataset.verse);
+        
+        // Handle verse line click to show bottom sheet
+        verseLine.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
             // Remove highlight from all verses
             contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
             // Add highlight to clicked verse
             verseLine.classList.add('highlighted');
+            
             // Update verse number selection in verses column
             const versesColumn = document.querySelector('.verses-column');
             versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
@@ -991,35 +1002,27 @@ function displayChapter() {
             if (verseItem) {
                 verseItem.classList.add('active');
             }
+            
+            // Show bottom sheet with verse actions
+            showVerseActionsBottomSheet(verseNum);
             // Show note viewer if verse has a note
             showNoteViewerIfExists(verseNum);
         });
-        // Add double-click handler for desktop/tablet
-        verseLine.addEventListener('dblclick', () => {
-            const verseNum = parseInt(verseLine.dataset.verse);
+        
+        // Handle double-click for edit
+        verseLine.addEventListener('dblclick', (e) => {
+            e.stopPropagation();
             openNotesModal(verseNum);
         });
-        // Add right-click handler for desktop/tablet
+        
+        // Handle right-click for edit
         verseLine.addEventListener('contextmenu', (e) => {
             e.preventDefault();
-            const verseNum = parseInt(verseLine.dataset.verse);
+            e.stopPropagation();
             openNotesModal(verseNum);
         });
-        // Add long-press handler for mobile
-        let pressTimer;
-        verseLine.addEventListener('touchstart', (e) => {
-            const verseNum = parseInt(verseLine.dataset.verse);
-            pressTimer = setTimeout(() => {
-                openNotesModal(verseNum);
-            }, 500); // 500ms for long press
-        });
-        verseLine.addEventListener('touchend', () => {
-            clearTimeout(pressTimer);
-        });
-        verseLine.addEventListener('touchmove', () => {
-            clearTimeout(pressTimer);
-        });
     });
+    
     // Apply note displays to verses
     applyAllNoteDisplays();
     // Update mobile chapter header
@@ -1067,6 +1070,160 @@ function updateMobileChapterHeader() {
         numberElement.textContent = currentChapter;
     }
 }
+
+// Handle swipe gesture for verse actions
+// Show verse actions in a bottom sheet modal
+function showVerseActionsBottomSheet(verseNum) {
+    // Create or get the bottom sheet modal
+    let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'verse-actions-bottom-sheet';
+        bottomSheet.className = 'verse-actions-bottom-sheet';
+        document.body.appendChild(bottomSheet);
+    }
+    
+    // Build the complete verse reference (e.g., "Matthew 1 : 1")
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter} : ${verseNum}`;
+    
+    // Set up the bottom sheet content
+    bottomSheet.innerHTML = `
+        <div class="verse-actions-backdrop"></div>
+        <div class="verse-actions-content">
+            <div class="verse-actions-header">
+                <div class="verse-reference">${verseReference}</div>
+                <button class="close-bottom-sheet" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="verse-actions-buttons">
+                <button class="verse-bottom-action copy-verse-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <button class="verse-bottom-action add-note-action" data-verse="${verseNum}">
+                    <img src="resources/icons/note.png" alt="Note" class="note-icon">
+                    <span>Note</span>
+                </button>
+                <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
+                    <img src="resources/icons/sermon.png" alt="Sermon" class="sermon-icon">
+                    <span>Sermon</span>
+                </button>
+                <button class="verse-bottom-action add-favorite-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    <span>Bookmark</span>
+                </button>
+                <button class="verse-bottom-action add-memory-action" data-verse="${verseNum}">
+                    <img src="resources/icons/memory_verse.png" alt="Memory" class="memory-icon">
+                    <span>Memory</span>
+                </button>
+                <button class="verse-bottom-action share-verse-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                    <span>Share</span>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Show the bottom sheet
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('bottom-sheet-open');
+    
+    // Add event listeners
+    const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
+    
+    const closeBottomSheet = () => {
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+    };
+    
+    closeBtn.addEventListener('click', closeBottomSheet);
+    backdrop.addEventListener('click', closeBottomSheet);
+    
+    // Copy verse button
+    bottomSheet.querySelector('.copy-verse-action').addEventListener('click', () => {
+        const book = bibleBooks[currentBook];
+        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+        const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
+        const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+        const copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter}:${verseNum}`;
+        navigator.clipboard.writeText(copyText).then(() => {
+            showToast('Verse copied!', 'success');
+            closeBottomSheet();
+        }).catch(() => {
+            showToast('Failed to copy verse', 'error');
+        });
+    });
+    
+    // Add note button
+    bottomSheet.querySelector('.add-note-action').addEventListener('click', () => {
+        openNotesModal(verseNum);
+        closeBottomSheet();
+    });
+    
+    // Add sermon button
+    bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
+        showToast('Add to Sermon - Coming Soon!', 'info');
+        closeBottomSheet();
+    });
+    
+    // Add favorite button
+    bottomSheet.querySelector('.add-favorite-action').addEventListener('click', () => {
+        showToast('Add to Favorites - Coming Soon!', 'info');
+        closeBottomSheet();
+    });
+    
+    // Add memory verse button
+    bottomSheet.querySelector('.add-memory-action').addEventListener('click', () => {
+        currentNoteVerse = verseNum;
+        toggleMemoryVerse();
+        closeBottomSheet();
+    });
+    
+    // Share verse button
+    bottomSheet.querySelector('.share-verse-action').addEventListener('click', () => {
+        const book = bibleBooks[currentBook];
+        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+        const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
+        const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+        const shareText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter}:${verseNum}`;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: `${bookName} ${currentChapter}:${verseNum}`,
+                text: shareText
+            }).catch(() => {
+                // User cancelled share
+            });
+        } else {
+            // Fallback: copy to clipboard if share API not available
+            navigator.clipboard.writeText(shareText).then(() => {
+                showToast('Verse copied to clipboard!', 'success');
+                closeBottomSheet();
+            }).catch(() => {
+                showToast('Share not available on this device', 'error');
+            });
+        }
+    });
+}
+
 // Scroll to specific verse
 function scrollToVerse(verseNum) {
     // Remove highlight from all verses
@@ -3437,10 +3594,16 @@ function openNotesModal(verseNum = null) {
 function closeNotesModal() {
     const modal = document.querySelector('.notes-modal-overlay');
     // Restore scroll position
-    const scrollY = document.body.style.top;
+    const scrollYStyle = document.body.style.top;
     document.body.classList.remove('modal-open');
     document.body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    
+    if (scrollYStyle) {
+        // scrollYStyle is in format like "-1234px", extract the number and negate it
+        const scrollY = Math.abs(parseInt(scrollYStyle));
+        window.scrollTo(0, scrollY);
+    }
+    
     if (modal) {
         modal.style.display = 'none';
     }
@@ -3569,10 +3732,15 @@ function hideNoteViewer() {
     const modal = document.querySelector('.note-viewer-modal');
     // Only restore scroll position if modal was actually open
     if (document.body.classList.contains('modal-open')) {
-        const scrollY = document.body.style.top;
+        const scrollYStyle = document.body.style.top;
         document.body.classList.remove('modal-open');
         document.body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        
+        if (scrollYStyle) {
+            // scrollYStyle is in format like "-1234px", extract the number and negate it
+            const scrollY = Math.abs(parseInt(scrollYStyle));
+            window.scrollTo(0, scrollY);
+        }
     }
     if (popup) {
         popup.style.display = 'none';
@@ -3734,9 +3902,9 @@ function initializeNotesModal() {
         const saved = await saveMemoryVersesToSupabase();
         if (saved) {
             if (isMemoryVerse) {
-                showToast(`Removed memory verse`, 2000);
+                showToast(`Removed...`, 2000);
             } else {
-                showToast(`Added memory verse`, 2000);
+                showToast(`Added...`, 2000);
             }
         } else {
             showToast(`Failed to save. Check console.`, 2000);
