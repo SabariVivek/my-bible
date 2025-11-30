@@ -5271,7 +5271,7 @@ body.dark-theme .add-character-btn:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -5279,8 +5279,8 @@ body.dark-theme .add-character-btn:hover {
 }
 
 .verse-actions-bottom-sheet.visible .verse-actions-backdrop {
-    opacity: 1;
-    pointer-events: auto;
+    opacity: 0;
+    pointer-events: none;
     z-index: 999;
 }
 
@@ -5591,7 +5591,7 @@ body.dark-theme .add-memory-action.memory-verse-active svg {
 }
 
 body.bottom-sheet-open {
-    overflow: hidden;
+    /* Allow scrolling while bottom sheet is open */
 }
 
 .character-modal-overlay.active {

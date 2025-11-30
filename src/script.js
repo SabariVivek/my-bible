@@ -877,17 +877,20 @@ function updateVerses() {
     versesColumn.innerHTML = html;
     // Add click handlers for scrolling to verse
     versesColumn.querySelectorAll('.number-item').forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
             // Restore UI elements if coming from home page
             restoreUIFromHomePage();
             localStorage.removeItem('isOnHomePage');
             hasUserInteracted = true;
             localStorage.setItem('hasUserInteracted', 'true');
             const verse = parseInt(item.dataset.verse);
-            // Remove active class from all verse items
+            
+            // Remove active class from all verses to clear previous selection
             versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
-            // Add active class to clicked verse
+            
+            // Add active class to clicked verse only
             item.classList.add('active');
+            
             // Close drawer on mobile after selecting verse
             if (window.innerWidth <= 768) {
                 const drawerOverlay = document.querySelector('.drawer-overlay');
@@ -996,31 +999,112 @@ function displayChapter() {
             
             if (tapCount === 1) {
                 tapTimeout = setTimeout(() => {
-                    // Single tap - show bottom sheet
-                    // Remove highlight from all verses
-                    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
-                    // Add highlight to clicked verse
-                    verseLine.classList.add('highlighted');
-                    
-                    // Update verse number selection in verses column
+                    // Single tap - show or update bottom sheet
                     const versesColumn = document.querySelector('.verses-column');
-                    versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
-                    const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
-                    if (verseItem) {
-                        verseItem.classList.add('active');
+                    
+                    // Get current selected verses BEFORE making changes
+                    const selectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
+                    
+                    // Check if bottom sheet already exists and is visible
+                    const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
+                    const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
+                    
+                    // If bottom sheet is open, toggle this verse in the selection (add/remove)
+                    if (isBottomSheetVisible) {
+                        const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
+                        if (verseItem) {
+                            verseItem.classList.toggle('active');
+                        }
+                        
+                        // Get updated selected verses after toggle
+                        const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
+                        
+                        // Log selected verses to console
+                        console.log('📌 Selected verses:', updatedSelectedVerses);
+                        
+                        // Update verse line highlighting to match selection
+                        const contentArea = document.querySelector('.scripture-text');
+                        
+                        // Debug: Check what verse elements exist
+                        const allVerseElements = contentArea.querySelectorAll('.verse-line');
+                        console.log(`📚 Total verse elements in DOM: ${allVerseElements.length}`);
+                        console.log('First few verse elements:', Array.from(allVerseElements).slice(0, 3).map(v => ({
+                            verseNum: v.getAttribute('data-verse'),
+                            text: v.textContent.substring(0, 50)
+                        })));
+                        
+                        // Remove highlighted from all verses
+                        contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+                        // Add highlighted to selected verses
+                        updatedSelectedVerses.forEach(vNum => {
+                            const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
+                            if (verseLine) {
+                                verseLine.classList.add('highlighted');
+                                console.log(`✅ Added highlight to verse ${vNum}`);
+                            } else {
+                                console.log(`❌ Could not find verse element with data-verse="${vNum}"`);
+                            }
+                        });
+                        
+                        // Debug: Show all highlighted verses after update
+                        const allHighlighted = contentArea.querySelectorAll('.verse-line.highlighted');
+                        console.log(`🎨 Total highlighted verses in DOM: ${allHighlighted.length}`);
+                        
+                        // Update the bottom sheet with current selections
+                        if (updatedSelectedVerses.length > 1) {
+                            // Close current sheet and show multi-verse sheet
+                            existingBottomSheet.classList.remove('visible');
+                            document.body.classList.remove('bottom-sheet-open');
+                            // Show multi-verse sheet
+                            showMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                        } else if (updatedSelectedVerses.length === 1) {
+                            // Close current sheet and show single verse sheet
+                            existingBottomSheet.classList.remove('visible');
+                            document.body.classList.remove('bottom-sheet-open');
+                            // Show single verse sheet
+                            showVerseActionsBottomSheet(updatedSelectedVerses[0]);
+                        } else {
+                            // No verses selected, close bottom sheet
+                            existingBottomSheet.classList.remove('visible');
+                            document.body.classList.remove('bottom-sheet-open');
+                        }
+                    } else {
+                        // Bottom sheet not open yet - single selection mode
+                        // Remove all active classes and highlights
+                        versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+                        const contentArea = document.querySelector('.scripture-text');
+                        contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+                        
+                        // Select only the clicked verse
+                        const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
+                        if (verseItem) {
+                            verseItem.classList.add('active');
+                        }
+                        
+                        // Add highlight to clicked verse only
+                        const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                        if (verseLine) {
+                            verseLine.classList.add('highlighted');
+                        }
+                        
+                        // Show bottom sheet for single verse
+                        showVerseActionsBottomSheet(verseNum);
                     }
                     
-                    // Show bottom sheet with verse actions
-                    showVerseActionsBottomSheet(verseNum);
                     tapCount = 0;
                 }, 300);
             } else if (tapCount === 2) {
                 clearTimeout(tapTimeout);
-                // Double tap - show note viewer
-                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-                const note = verseNotes[noteKey];
-                if (note && note.text && note.text.trim()) {
-                    showNoteViewer(verseNum, note);
+                // Double tap - show note viewer (only for single verse)
+                const versesColumn = document.querySelector('.verses-column');
+                const selectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
+                
+                if (selectedVerses.length === 1) {
+                    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+                    const note = verseNotes[noteKey];
+                    if (note && note.text && note.text.trim()) {
+                        showNoteViewer(verseNum, note);
+                    }
                 }
                 tapCount = 0;
             }
@@ -1085,14 +1169,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
     const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
     const currentColor = verseNotes[noteKey]?.color;
     
-    // Hide all action buttons
-    const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action');
-    allActionButtons.forEach(btn => {
-        btn.style.opacity = '0';
-        btn.style.pointerEvents = 'none';
-        btn.style.animation = 'fadeOut 0.3s ease-out forwards';
-    });
-    
     // Get or create color picker container
     let colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
     if (!colorPickerContainer) {
@@ -1101,7 +1177,9 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         colorPickerContainer.style.display = 'flex';
         colorPickerContainer.style.width = '100%';
         colorPickerContainer.style.justifyContent = 'center';
-        colorPickerContainer.style.padding = '0';
+        colorPickerContainer.style.padding = '10px 0';
+        colorPickerContainer.style.marginTop = '10px';
+        colorPickerContainer.style.borderTop = '1px solid #e0e0e0';
         colorPickerContainer.innerHTML = `
             <div class="color-picker-scroll">
                 <button class="color-option" data-color="burgundy" style="background: #3BA8FF !important;" title="Sky Blue"></button>
@@ -1121,9 +1199,13 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         buttonsContainer.appendChild(colorPickerContainer);
     }
     
-    // Show the color picker
-    colorPickerContainer.style.display = 'flex';
-    colorPickerContainer.style.animation = 'fadeIn 0.3s ease-out forwards';
+    // Toggle color picker visibility
+    if (colorPickerContainer.style.display === 'none' || colorPickerContainer.style.display === '') {
+        colorPickerContainer.style.display = 'flex';
+    } else {
+        colorPickerContainer.style.display = 'none';
+        return;
+    }
     
     // Remove previous event listeners and add new ones
     const colorOptions = colorPickerContainer.querySelectorAll('.color-option');
@@ -1187,45 +1269,103 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
                 console.error('Error saving to Supabase:', error);
             }
-            
-            // Close color picker and restore buttons after 300ms
-            setTimeout(() => {
-                hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn);
-            }, 300);
         });
     });
 }
 
-function hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn) {
+// Universal copy handler for both single and multi-verse
+function handleVersesCopy(copyBtn) {
+    console.log('🔥 COPY BUTTON CLICKED!');
+    
     const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
-    const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
-    const colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
+    const contentArea = document.querySelector('.scripture-text');
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     
-    // Hide color picker
-    if (colorPickerContainer) {
-        colorPickerContainer.style.animation = 'fadeOut 0.3s ease-out forwards';
-        setTimeout(() => {
-            colorPickerContainer.style.display = 'none';
-            colorPickerContainer.style.animation = '';
-        }, 300);
-    }
+    // Determine if it's single or multi-verse based on button class
+    const isSingleVerse = copyBtn.classList.contains('copy-verse-action');
+    const isMultiVerse = copyBtn.classList.contains('copy-multi-verses-action');
     
-    // Restore all action buttons
-    setTimeout(() => {
-        const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action');
-        allActionButtons.forEach(btn => {
-            btn.style.animation = 'fadeIn 0.3s ease-out forwards';
-            btn.style.opacity = '1';
-            btn.style.pointerEvents = 'auto';
+    let copyText = '';
+    let versesToCopy = [];
+    
+    if (isSingleVerse) {
+        // Single verse - get verse number from data attribute
+        const verseNum = parseInt(copyBtn.getAttribute('data-verse'));
+        const verseElement = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        
+        if (verseElement) {
+            const verseText = verseElement.textContent || '';
+            const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+            versesToCopy.push({verseNum, text: cleanVerseText});
+            console.log(`📖 Single verse ${verseNum}:`, cleanVerseText);
+            copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
+        }
+    } else if (isMultiVerse) {
+        // Multi-verse - get all highlighted verses
+        const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.highlighted'));
+        console.log('Total highlighted verses:', highlightedVerses.length);
+        
+        const verseNumbers = [];
+        highlightedVerses.forEach((verseLine, index) => {
+            const verseNum = verseLine.getAttribute('data-verse');
+            verseNumbers.push(verseNum);
+            const verseText = verseLine.textContent || '';
+            const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+            versesToCopy.push({verseNum, text: cleanVerseText});
+            console.log(`📖 Verse ${verseNum}:`, cleanVerseText);
+            
+            // Add verse reference with text and space between verses
+            if (index > 0) {
+                copyText += '\n'; // Space between verses
+            }
+            copyText += `[${verseNum}] ${cleanVerseText}\n`;
         });
         
-        // Scroll to the beginning
-        buttonsContainer.scrollLeft = 0;
-    }, 150);
+        // Add book chapter and verse range
+        const verseRange = verseNumbers.length > 1 
+            ? `${verseNumbers[0]} - ${verseNumbers[verseNumbers.length - 1]}`
+            : verseNumbers[0];
+        copyText += `\n${bookName} ${currentChapter} : ${verseRange}`;
+    }
+    
+    console.log('📋 Final copy text:', copyText);
+    console.log('📌 Verses copied:', versesToCopy);
+    
+    // Add animation
+    copyBtn.style.transform = 'scale(0.9)';
+    copyBtn.style.opacity = '0.7';
+    
+    navigator.clipboard.writeText(copyText).then(() => {
+        showToast(isSingleVerse ? 'Copied...' : 'Verses copied...', 'success');
+        console.log('✅ Successfully copied to clipboard!');
+        
+        // Restore animation
+        setTimeout(() => {
+            copyBtn.style.transform = 'scale(1)';
+            copyBtn.style.opacity = '1';
+            
+            // Close bottom sheet
+            if (bottomSheet) {
+                bottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+            }
+        }, 300);
+    }).catch((err) => {
+        console.error('❌ Failed to copy:', err);
+        showToast(isSingleVerse ? 'Failed to copy verse' : 'Failed to copy verses', 'error');
+        
+        // Restore animation on error
+        copyBtn.style.transform = 'scale(1)';
+        copyBtn.style.opacity = '1';
+    });
 }
+
 
 // Show verse actions in a bottom sheet modal
 function showVerseActionsBottomSheet(verseNum) {
+    console.log('📄 showVerseActionsBottomSheet called with verse:', verseNum);
+    
     // Create or get the bottom sheet modal
     let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     if (!bottomSheet) {
@@ -1337,32 +1477,8 @@ function showVerseActionsBottomSheet(verseNum) {
     backdrop.addEventListener('click', closeBottomSheet);
     
     // Copy verse button
-    bottomSheet.querySelector('.copy-verse-action').addEventListener('click', () => {
-        const copyBtn = bottomSheet.querySelector('.copy-verse-action');
-        const book = bibleBooks[currentBook];
-        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-        const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
-        const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
-        const copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
-        
-        // Add animation
-        copyBtn.style.transform = 'scale(0.9)';
-        copyBtn.style.opacity = '0.7';
-        
-        navigator.clipboard.writeText(copyText).then(() => {
-            showToast('Copied...', 'success');
-            // Restore animation
-            setTimeout(() => {
-                copyBtn.style.transform = 'scale(1)';
-                copyBtn.style.opacity = '1';
-                closeBottomSheet();
-            }, 300);
-        }).catch(() => {
-            showToast('Failed to copy verse', 'error');
-            // Restore animation on error
-            copyBtn.style.transform = 'scale(1)';
-            copyBtn.style.opacity = '1';
-        });
+    bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function() {
+        handleVersesCopy(this);
     });
     
     // Add note button (only if admin access enabled)
@@ -1521,10 +1637,307 @@ function showVerseActionsBottomSheet(verseNum) {
     });
 }
 
+// Show bottom sheet for multiple selected verses
+function showMultiVerseActionsBottomSheet(selectedVerses) {
+    console.log('🎯 showMultiVerseActionsBottomSheet called with verses:', selectedVerses);
+    
+    // Create or get the bottom sheet modal
+    let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'verse-actions-bottom-sheet';
+        bottomSheet.className = 'verse-actions-bottom-sheet';
+        document.body.appendChild(bottomSheet);
+    }
+    
+    // Build the verse reference (only book and chapter for multi-verse, no verse numbers)
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter}`;
+    
+    // Set up the bottom sheet content with limited actions
+    bottomSheet.innerHTML = `
+        <div class="verse-actions-backdrop"></div>
+        <div class="verse-actions-content">
+            <div class="verse-actions-header">
+                <div class="verse-reference">${verseReference}</div>
+                <button class="close-bottom-sheet" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="verse-actions-buttons">
+                <button class="verse-bottom-action copy-multi-verses-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    </svg>
+                    <span>Copy</span>
+                </button>
+                <button class="verse-bottom-action add-sermon-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                    <span>Sermon</span>
+                </button>
+                <button class="verse-bottom-action add-favorite-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Bookmark</span>
+                </button>
+                <button class="verse-bottom-action share-verses-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                    <span>Share</span>
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Show the bottom sheet
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('bottom-sheet-open');
+    
+    // Add event listeners
+    const closeBtn = bottomSheet.querySelector('.close-bottom-sheet');
+    const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
+    
+    const closeBottomSheet = () => {
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+    };
+    
+    closeBtn.addEventListener('click', closeBottomSheet);
+    backdrop.addEventListener('click', closeBottomSheet);
+    
+    // Copy multiple verses button
+    const copyBtn = bottomSheet.querySelector('.copy-multi-verses-action');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function() {
+            handleVersesCopy(this);
+        });
+    }
+    
+    // Add sermon button
+    bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
+        showToast('Add to Sermon - Coming Soon!', 'info');
+        closeBottomSheet();
+    });
+    
+    // Add bookmark button (color picker for first verse in selection)
+    const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
+    const firstVerse = selectedVerses[0];
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${firstVerse}`;
+    
+    // Check if first verse has a color
+    if (verseNotes[noteKey] && verseNotes[noteKey].color) {
+        bookmarkBtn.classList.add('bookmarked');
+    }
+    
+    bookmarkBtn.addEventListener('click', async () => {
+        showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn);
+    });
+    
+    // Share button - using event delegation on parent
+    if (!actionButtonsContainer.hasListener) {
+        actionButtonsContainer.addEventListener('click', (e) => {
+            if (!e.target.closest('.share-verses-action')) return;
+            
+            const book = bibleBooks[currentBook];
+            const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+            
+            // Get all highlighted verses from the text area
+            const contentArea = document.querySelector('.scripture-text');
+            const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.highlighted'));
+            
+            let shareText = '';
+            highlightedVerses.forEach(verseLine => {
+                const verseText = verseLine.textContent || '';
+                const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
+                shareText += `${cleanVerseText}\n`;
+            });
+            shareText += `\n${bookName} ${currentChapter}`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: `${bookName} ${currentChapter}`,
+                    text: shareText
+                }).catch(() => {
+                    // User cancelled share
+                });
+            } else {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showToast('Verses copied to clipboard!', 'success');
+                    closeBottomSheet();
+                }).catch(() => {
+                    showToast('Share not available on this device', 'error');
+                });
+            }
+        }, true);
+        actionButtonsContainer.hasListener = true;
+    }
+}
+
+// Show color picker for multiple bookmark selection
+async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+    
+    // Get or create color picker container
+    let colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
+    if (!colorPickerContainer) {
+        colorPickerContainer = document.createElement('div');
+        colorPickerContainer.className = 'bookmark-color-picker-container';
+        colorPickerContainer.style.display = 'flex';
+        colorPickerContainer.style.width = '100%';
+        colorPickerContainer.style.justifyContent = 'center';
+        colorPickerContainer.style.padding = '10px 0';
+        colorPickerContainer.style.marginTop = '10px';
+        colorPickerContainer.style.borderTop = '1px solid #e0e0e0';
+        colorPickerContainer.innerHTML = `
+            <div class="color-picker-scroll">
+                <button class="color-option" data-color="burgundy" style="background: #3BA8FF !important;" title="Sky Blue"></button>
+                <button class="color-option" data-color="forest" style="background: #2ECC71 !important;" title="Emerald Green"></button>
+                <button class="color-option" data-color="navy" style="background: #F1C40F !important;" title="Golden Yellow"></button>
+                <button class="color-option" data-color="amber" style="background: #FF7F50 !important;" title="Coral Orange"></button>
+                <button class="color-option" data-color="violet" style="background: #E74C3C !important;" title="Rose Red"></button>
+                <button class="color-option" data-color="teal" style="background: #9B59B6 !important;" title="Violet Purple"></button>
+                <button class="color-option" data-color="rust" style="background: #1ABC9C !important;" title="Turquoise"></button>
+                <button class="color-option" data-color="olive" style="background: #FF5FA2 !important;" title="Bright Pink"></button>
+                <button class="color-option" data-color="indigo" style="background: #007C82 !important;" title="Deep Teal"></button>
+                <button class="color-option" data-color="slate" style="background: #A3E635 !important;" title="Soft Lime"></button>
+                <button class="color-option" data-color="yellow" style="background: #4C51BF !important;" title="Indigo"></button>
+                <button class="color-option" data-color="green" style="background: #FFB020 !important;" title="Amber"></button>
+            </div>
+        `;
+        buttonsContainer.appendChild(colorPickerContainer);
+    }
+    
+    // Toggle color picker visibility
+    if (colorPickerContainer.style.display === 'none' || colorPickerContainer.style.display === '') {
+        colorPickerContainer.style.display = 'flex';
+    } else {
+        colorPickerContainer.style.display = 'none';
+        return;
+    }
+    
+    // Handle color selection
+    colorPickerContainer.querySelectorAll('.color-option').forEach(option => {
+        const newOption = option.cloneNode(true);
+        option.parentNode.replaceChild(newOption, option);
+        
+        newOption.addEventListener('click', async () => {
+            const selectedColor = newOption.dataset.color;
+            
+            // Update all selected verses with the color
+            for (const verseNum of selectedVerses) {
+                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+                if (!verseNotes[noteKey]) {
+                    verseNotes[noteKey] = {};
+                }
+                verseNotes[noteKey].color = selectedColor;
+                
+                // Save to Supabase if available
+                if (window.supabase) {
+                    try {
+                        await saveNoteToSupabase(noteKey, verseNotes[noteKey]);
+                    } catch (error) {
+                        console.error('Error saving note:', error);
+                    }
+                }
+                
+                // Update UI
+                const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                if (verseLine) {
+                    // Remove all color classes
+                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                    // Add new color class
+                    verseLine.classList.add(`note-${selectedColor}`);
+                    
+                    // Apply fade-in animation
+                    verseLine.style.animation = 'fadeInHighlight 0.4s ease-out forwards';
+                }
+            }
+            
+            // Update bookmark button appearance
+            bookmarkBtn.classList.add('bookmarked');
+        });
+    });
+}
+
+// Update single verse bottom sheet in place
+function updateSingleVerseActionsBottomSheet(verseNum) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) return;
+    
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter} : ${verseNum}`;
+    
+    // Update only the header and reference
+    const headerRef = bottomSheet.querySelector('.verse-reference');
+    if (headerRef) {
+        headerRef.textContent = verseReference;
+    }
+}
+
+// Update multi-verse bottom sheet in place
+function updateMultiVerseActionsBottomSheet(selectedVerses) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet) return;
+    
+    const book = bibleBooks[currentBook];
+    const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+    const verseReference = `${bookName} ${currentChapter}`;
+    
+    // Update only the header and reference
+    const headerRef = bottomSheet.querySelector('.verse-reference');
+    if (headerRef) {
+        headerRef.textContent = verseReference;
+    }
+}
+
+// Update verse line highlighting based on selected verses
+function updateVerseHighlighting(selectedVerses) {
+    // Only highlight verses if bottom sheet is open
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (!bottomSheet || !bottomSheet.classList.contains('visible')) {
+        return;
+    }
+    
+    const contentArea = document.querySelector('.scripture-text');
+    if (!contentArea) return;
+    
+    // Remove highlighted class from all verses
+    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+    
+    // Add highlighted class to all selected verses
+    selectedVerses.forEach(verseNum => {
+        const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        if (verseLine) {
+            verseLine.classList.add('highlighted');
+        }
+    });
+}
+
 // Scroll to specific verse
 function scrollToVerse(verseNum) {
-    // Remove highlight from all verses
-    document.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+    const contentArea = document.querySelector('.scripture-text');
+    
+    // Remove highlight from all verses first
+    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+    
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseLine) {
         // Add highlight to selected verse
