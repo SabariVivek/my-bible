@@ -1005,8 +1005,6 @@ function displayChapter() {
             
             // Show bottom sheet with verse actions
             showVerseActionsBottomSheet(verseNum);
-            // Show note viewer if verse has a note
-            showNoteViewerIfExists(verseNum);
         });
         
         // Handle double-click for edit
@@ -3883,38 +3881,9 @@ function openNotesModal(verseNum = null) {
     const existingNote = verseNotes[noteKey];
     // Set verse reference
     verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
-    // Initialize memory verse toggle button
-    const memoryVerseToggle = document.getElementById('memory-verse-toggle');
-    const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
-    // Initialize memoryVerses if undefined
-    if (typeof window.memoryVerses === 'undefined') {
-        window.memoryVerses = [];
-    }
-    // Check if verse is already a memory verse using the same logic as isMemoryVerse()
-    const checkIsMemoryVerse = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
-    if (checkIsMemoryVerse) {
-        memoryVerseToggle.classList.add('active');
-        memoryVerseToggle.title = 'Remove from Memory Verses';
-        
-        // Show filled star
-        const svgIcon = memoryVerseToggle.querySelector('svg');
-        if (svgIcon) {
-            svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor"/>';
-            svgIcon.style.display = 'block';
-        }
-    } else {
-        memoryVerseToggle.classList.remove('active');
-        memoryVerseToggle.title = 'Add to Memory Verses';
-        
-        // Show outline star
-        const svgIcon = memoryVerseToggle.querySelector('svg');
-        if (svgIcon) {
-            svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
-            svgIcon.style.display = 'block';
-        }
-    }
+    
     // Load existing note if available
-    if (existingNote) {
+    if (existingNote && existingNote.text) {
         textarea.value = existingNote.text;
         currentNoteColor = existingNote.color || null;
         deleteBtn.style.display = 'block';
@@ -4210,75 +4179,12 @@ function initializeNotesModal() {
     const closeBtn = document.querySelector('.notes-modal-close-btn');
     const saveBtn = document.getElementById('save-note-btn');
     const deleteBtn = document.getElementById('delete-note-btn');
-    const memoryVerseToggle = document.getElementById('memory-verse-toggle');
     if (!modal) return;
     // Close modal handlers
     closeBtn?.addEventListener('click', closeNotesModal);
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeNotesModal();
-        }
-    });
-    // Memory verse toggle handler
-    memoryVerseToggle?.addEventListener('click', async () => {
-        if (!currentNoteVerse) return;
-        const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${currentNoteVerse}`;
-        // Initialize memoryVerses if it doesn't exist
-        if (typeof window.memoryVerses === 'undefined') {
-            window.memoryVerses = [];
-        }
-        // Toggle memory verse status
-        const isMemoryVerse = window.memoryVerses.includes(verseReference);
-        if (isMemoryVerse) {
-            // Remove from memory verses
-            window.memoryVerses = window.memoryVerses.filter(v => v !== verseReference);
-            memoryVerseToggle.classList.remove('active');
-            memoryVerseToggle.title = 'Add to Memory Verses';
-        } else {
-            // Add to memory verses
-            window.memoryVerses.push(verseReference);
-            memoryVerseToggle.classList.add('active');
-            memoryVerseToggle.title = 'Remove from Memory Verses';
-        }
-        
-        // Update icon - show star based on memory verse status
-        const svgIcon = memoryVerseToggle.querySelector('svg');
-        if (!isMemoryVerse) {
-            // Now it's a memory verse, show filled star
-            if (svgIcon) {
-                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor"/>';
-                svgIcon.style.display = 'block';
-            }
-        } else {
-            // Not a memory verse anymore, show outline star
-            if (svgIcon) {
-                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
-                svgIcon.style.display = 'block';
-            }
-        }
-        
-        // Save to Supabase and localStorage
-        const saved = await saveMemoryVersesToSupabase();
-        if (saved) {
-            if (isMemoryVerse) {
-                showToast(`Removed...`, 2000);
-            } else {
-                showToast(`Added...`, 2000);
-            }
-        } else {
-            showToast(`Failed to save. Check console.`, 2000);
-        }
-        // Update UI - mark the book/chapter/verse with memory verse indicator
-        markBooksWithMemoryVerses();
-        updateVerseMemoryVerseIndicators();
-        // Update the verse line class
-        const verseLine = document.querySelector(`.verse-line[data-verse="${currentNoteVerse}"]`);
-        if (verseLine) {
-            if (isMemoryVerse) {
-                verseLine.classList.remove('memory-verse');
-            } else {
-                verseLine.classList.add('memory-verse');
-            }
         }
     });
     // Save note
