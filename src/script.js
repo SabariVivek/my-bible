@@ -1762,10 +1762,18 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     // Add memory verse button
     const memoryBtn = bottomSheet.querySelector('.add-memory-action');
     if (memoryBtn) {
-        // Disable for multi-verse
+        // Disable for multi-verse - show as active/filled star
         memoryBtn.disabled = true;
         memoryBtn.style.opacity = '0.5';
         memoryBtn.style.cursor = 'not-allowed';
+        
+        // Update to show filled star icon (active state)
+        const svgIcon = memoryBtn.querySelector('svg');
+        if (svgIcon) {
+            // Filled star icon
+            svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
+        }
+        
         memoryBtn.addEventListener('click', async () => {
             // For multi-verse, toggle memory for first verse
             currentNoteVerse = selectedVerses[0];
