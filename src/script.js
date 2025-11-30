@@ -885,11 +885,88 @@ function updateVerses() {
             localStorage.setItem('hasUserInteracted', 'true');
             const verse = parseInt(item.dataset.verse);
             
-            // Remove active class from all verses to clear previous selection
-            versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
+            // Check if bottom sheet is visible
+            const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
+            const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
             
-            // Add active class to clicked verse only
-            item.classList.add('active');
+            if (isBottomSheetVisible) {
+                // Bottom sheet is open - toggle this verse in the selection
+                const wasSelected = item.classList.contains('active');
+                const contentArea = document.querySelector('.scripture-text');
+                
+                // IMMEDIATELY remove or add highlight in the UI
+                if (wasSelected) {
+                    // Remove highlight immediately from this verse
+                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
+                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
+                    if (verseLine) {
+                        verseLine.classList.remove('highlighted');
+                    }
+                    if (verseContainer) {
+                        verseContainer.classList.remove('highlighted');
+                    }
+                    console.log(`🗑️ Removed highlight from verse ${verse} immediately`);
+                } else {
+                    // Add highlight immediately for newly selected verse
+                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
+                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
+                    if (verseLine) {
+                        verseLine.classList.add('highlighted');
+                    }
+                    if (verseContainer) {
+                        verseContainer.classList.add('highlighted');
+                    }
+                    console.log(`✨ Added highlight to verse ${verse} immediately`);
+                }
+                
+                // Now toggle the verse selection state
+                item.classList.toggle('active');
+                
+                // Get updated selected verses
+                const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(v => parseInt(v.dataset.verse));
+                
+                console.log('📌 Selected verses:', updatedSelectedVerses);
+                if (wasSelected) {
+                    console.log(`🗑️ Deselected verse ${verse}`);
+                } else {
+                    console.log(`✔️ Selected verse ${verse}`);
+                }
+                
+                // Update bottom sheet
+                if (updatedSelectedVerses.length > 1) {
+                    const copyBtn = existingBottomSheet.querySelector('.copy-multi-verses-action');
+                    if (!copyBtn) {
+                        existingBottomSheet.classList.remove('visible');
+                        document.body.classList.remove('bottom-sheet-open');
+                        showMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                    } else {
+                        updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                    }
+                } else if (updatedSelectedVerses.length === 1) {
+                    updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
+                } else {
+                    existingBottomSheet.classList.remove('visible');
+                    document.body.classList.remove('bottom-sheet-open');
+                }
+            } else {
+                // Bottom sheet not open - select this verse and show bottom sheet
+                versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
+                item.classList.add('active');
+                
+                const contentArea = document.querySelector('.scripture-text');
+                contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+                contentArea.querySelectorAll('.verse-container').forEach(v => v.classList.remove('highlighted'));
+                const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
+                const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
+                if (verseLine) {
+                    verseLine.classList.add('highlighted');
+                }
+                if (verseContainer) {
+                    verseContainer.classList.add('highlighted');
+                }
+                console.log(`✔️ Selected verse ${verse}`);
+                showVerseActionsBottomSheet(verse);
+            }
             
             // Close drawer on mobile after selecting verse
             if (window.innerWidth <= 768) {
@@ -1009,9 +1086,27 @@ function displayChapter() {
                     const existingBottomSheet = document.getElementById('verse-actions-bottom-sheet');
                     const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
                     
-                    // If bottom sheet is open, toggle this verse in the selection (add/remove)
+                    // If bottom sheet is open, handle multi-verse selection
                     if (isBottomSheetVisible) {
                         const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
+                        const wasSelected = verseItem && verseItem.classList.contains('active');
+                        const contentArea = document.querySelector('.scripture-text');
+                        
+                        // IMMEDIATELY remove or update highlighting in DOM before doing anything else
+                        if (wasSelected) {
+                            // Remove highlight immediately from this verse
+                            const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                            const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
+                            if (verseLine) {
+                                verseLine.classList.remove('highlighted');
+                            }
+                            if (verseContainer) {
+                                verseContainer.classList.remove('highlighted');
+                            }
+                            console.log(`🗑️ Removed highlight from verse ${verseNum} immediately`);
+                        }
+                        
+                        // Now toggle the verse selection
                         if (verseItem) {
                             verseItem.classList.toggle('active');
                         }
@@ -1021,9 +1116,20 @@ function displayChapter() {
                         
                         // Log selected verses to console
                         console.log('📌 Selected verses:', updatedSelectedVerses);
-                        
-                        // Update verse line highlighting to match selection
-                        const contentArea = document.querySelector('.scripture-text');
+                        if (wasSelected) {
+                            console.log(`🗑️ Deselected verse ${verseNum}`);
+                        } else {
+                            console.log(`✔️ Selected verse ${verseNum}`);
+                            // Add highlight for newly selected verse
+                            const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                            const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
+                            if (verseLine) {
+                                verseLine.classList.add('highlighted');
+                            }
+                            if (verseContainer) {
+                                verseContainer.classList.add('highlighted');
+                            }
+                        }
                         
                         // Debug: Check what verse elements exist
                         const allVerseElements = contentArea.querySelectorAll('.verse-line');
@@ -1033,27 +1139,13 @@ function displayChapter() {
                             text: v.textContent.substring(0, 50)
                         })));
                         
-                        // Remove highlighted from all verses
-                        contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
-                        // Add highlighted to selected verses
-                        updatedSelectedVerses.forEach(vNum => {
-                            const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
-                            if (verseLine) {
-                                verseLine.classList.add('highlighted');
-                                console.log(`✅ Added highlight to verse ${vNum}`);
-                            } else {
-                                console.log(`❌ Could not find verse element with data-verse="${vNum}"`);
-                            }
-                        });
-                        
                         // Debug: Show all highlighted verses after update
                         const allHighlighted = contentArea.querySelectorAll('.verse-line.highlighted');
                         console.log(`🎨 Total highlighted verses in DOM: ${allHighlighted.length}`);
                         
                         // Update the bottom sheet with current selections
                         if (updatedSelectedVerses.length > 1) {
-                            // Going from 1 to multiple verses - recreate as multi-verse sheet
-                            // But first check if it's already a multi-verse sheet
+                            // Multiple verses selected
                             const copyBtn = existingBottomSheet.querySelector('.copy-multi-verses-action');
                             if (!copyBtn) {
                                 // It's a single-verse sheet, recreate as multi-verse
@@ -1065,7 +1157,7 @@ function displayChapter() {
                                 updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
                             }
                         } else if (updatedSelectedVerses.length === 1) {
-                            // Single verse - just update the existing sheet without closing/reopening
+                            // Single verse - update the existing sheet
                             updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
                         } else {
                             // No verses selected, close bottom sheet
@@ -1073,8 +1165,8 @@ function displayChapter() {
                             document.body.classList.remove('bottom-sheet-open');
                         }
                     } else {
-                        // Bottom sheet not open yet - single selection mode
-                        // Remove all active classes and highlights
+                        // Bottom sheet not open yet - select the first verse and show bottom sheet
+                        // Remove all other active classes
                         versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
                         const contentArea = document.querySelector('.scripture-text');
                         contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
@@ -1087,9 +1179,15 @@ function displayChapter() {
                         
                         // Add highlight to clicked verse only
                         const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                        const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                         if (verseLine) {
                             verseLine.classList.add('highlighted');
                         }
+                        if (verseContainer) {
+                            verseContainer.classList.add('highlighted');
+                        }
+                        
+                        console.log(`✔️ Selected verse ${verseNum}`);
                         
                         // Show bottom sheet for single verse
                         showVerseActionsBottomSheet(verseNum);
@@ -1806,11 +1904,10 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn);
     });
     
-    // Share button - using event delegation on parent
-    if (!actionButtonsContainer.hasListener) {
-        actionButtonsContainer.addEventListener('click', (e) => {
-            if (!e.target.closest('.share-verses-action')) return;
-            
+    // Share button
+    const shareBtn = bottomSheet.querySelector('.share-verses-action');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
             const book = bibleBooks[currentBook];
             const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
             
@@ -1841,8 +1938,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     showToast('Share not available on this device', 'error');
                 });
             }
-        }, true);
-        actionButtonsContainer.hasListener = true;
+        });
     }
 }
 
