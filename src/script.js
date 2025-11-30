@@ -1465,9 +1465,6 @@ function showVerseActionsBottomSheet(verseNum) {
             } catch (error) {
                 console.error('Error saving to Supabase:', error);
             }
-            
-            // Close the bottom sheet after removing bookmark
-            closeBottomSheet();
         } else {
             // Show color picker for new bookmark
             showColorPickerForBookmark(verseNum, bookmarkBtn);
