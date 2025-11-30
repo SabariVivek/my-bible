@@ -987,38 +987,46 @@ function displayChapter() {
         const verseNum = parseInt(container.dataset.verse);
         
         // Handle verse line click to show bottom sheet
+        let tapTimeout;
+        let tapCount = 0;
+        
         verseLine.addEventListener('click', (e) => {
             e.stopPropagation();
+            tapCount++;
             
-            // Remove highlight from all verses
-            contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
-            // Add highlight to clicked verse
-            verseLine.classList.add('highlighted');
-            
-            // Update verse number selection in verses column
-            const versesColumn = document.querySelector('.verses-column');
-            versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
-            const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
-            if (verseItem) {
-                verseItem.classList.add('active');
+            if (tapCount === 1) {
+                tapTimeout = setTimeout(() => {
+                    // Single tap - show bottom sheet
+                    // Remove highlight from all verses
+                    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+                    // Add highlight to clicked verse
+                    verseLine.classList.add('highlighted');
+                    
+                    // Update verse number selection in verses column
+                    const versesColumn = document.querySelector('.verses-column');
+                    versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
+                    const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
+                    if (verseItem) {
+                        verseItem.classList.add('active');
+                    }
+                    
+                    // Show bottom sheet with verse actions
+                    showVerseActionsBottomSheet(verseNum);
+                    tapCount = 0;
+                }, 300);
+            } else if (tapCount === 2) {
+                clearTimeout(tapTimeout);
+                // Double tap - show note viewer
+                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+                const note = verseNotes[noteKey];
+                if (note && note.text && note.text.trim()) {
+                    showNoteViewer(verseNum, note);
+                }
+                tapCount = 0;
             }
-            
-            // Show bottom sheet with verse actions
-            showVerseActionsBottomSheet(verseNum);
         });
         
-        // Handle double-click for edit
-        verseLine.addEventListener('dblclick', (e) => {
-            e.stopPropagation();
-            openNotesModal(verseNum);
-        });
-        
-        // Handle right-click for edit
-        verseLine.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            openNotesModal(verseNum);
-        });
+        // Note: Right-click/long-press context menu removed
     });
     
     // Apply note displays to verses
