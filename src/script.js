@@ -1160,8 +1160,8 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             if (verseLine) {
                 // Remove all color classes
                 verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
-                // Add new color class
-                verseLine.classList.add(`note-${selectedColor}`);
+                // Add has-note class and new color class
+                verseLine.classList.add('has-note', `note-${selectedColor}`);
             }
             
             // Update button state with the color
@@ -1221,8 +1221,8 @@ function hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn) {
             bookmarkBtn.style.order = '';
             bookmarkBtn.style.animation = '';
             
-            // Scroll to the right to show all action buttons
-            buttonsContainer.scrollLeft = buttonsContainer.scrollWidth;
+            // Scroll to the beginning to start from Copy button
+            buttonsContainer.scrollLeft = 0;
         }, 500);
     }, 100);
     
