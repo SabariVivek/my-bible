@@ -1645,6 +1645,13 @@ body.dark-theme .mobile-chapter-header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
 }
 
+/* Selection color applied on top of bookmark colors (light theme) */
+.verse-line.has-note.multi-highlighted {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* Left pane selection - grey background */
 .verse-line.left-pane-selected {
     background-color: #d0d4d9 !important;
@@ -3040,6 +3047,13 @@ body.dark-theme .verse-line.multi-highlighted:focus {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
 }
 
+/* Selection color applied on top of bookmark colors (dark theme) */
+body.dark-theme .verse-line.has-note.multi-highlighted {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #ffffffaa !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
+}
+
 /* Left pane selection - grey background in dark theme */
 body.dark-theme .verse-line.left-pane-selected {
     background-color: #2a2d30 !important;
@@ -4287,6 +4301,28 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     vertical-align: middle;
 }
 
+/* Override all bookmark colors when verse is selected (light theme) */
+.verse-line.has-note.note-burgundy.multi-highlighted,
+.verse-line.has-note.note-forest.multi-highlighted,
+.verse-line.has-note.note-navy.multi-highlighted,
+.verse-line.has-note.note-amber.multi-highlighted,
+.verse-line.has-note.note-violet.multi-highlighted,
+.verse-line.has-note.note-teal.multi-highlighted,
+.verse-line.has-note.note-rust.multi-highlighted,
+.verse-line.has-note.note-olive.multi-highlighted,
+.verse-line.has-note.note-indigo.multi-highlighted,
+.verse-line.has-note.note-slate.multi-highlighted,
+.verse-line.has-note.note-yellow.multi-highlighted,
+.verse-line.has-note.note-green.multi-highlighted,
+.verse-line.has-note.note-blue.multi-highlighted,
+.verse-line.has-note.note-pink.multi-highlighted,
+.verse-line.has-note.note-orange.multi-highlighted,
+.verse-line.has-note.note-purple.multi-highlighted {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* Dark theme for notes modal */
 body.dark-theme .notes-modal {
     background: #292a2d;
@@ -4446,6 +4482,28 @@ body.dark-theme .verse-line.has-note.note-purple {
     background-color: rgba(179, 138, 255, 0.15) !important;
     border: 1px solid #b38affaa !important;
     box-shadow: 0 0 12px rgba(179, 138, 255, 0.25) !important;
+}
+
+/* Override all bookmark colors when verse is selected (dark theme) */
+body.dark-theme .verse-line.has-note.note-burgundy.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-forest.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-navy.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-amber.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-violet.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-teal.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-rust.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-olive.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-indigo.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-slate.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-yellow.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-green.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-blue.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-pink.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-orange.multi-highlighted,
+body.dark-theme .verse-line.has-note.note-purple.multi-highlighted {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #ffffffaa !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
 }
 
 /* Summary Drawer Overlay */
