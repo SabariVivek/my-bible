@@ -4166,68 +4166,68 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 
 /* Colored note backgrounds based on category */
 .verse-line.has-note.note-burgundy {
-    background-color: rgba(59, 168, 255, 0.25); /* Sky Blue */
+    background-color: rgba(59, 168, 255, 0.35) !important; /* Sky Blue */
 }
 
 .verse-line.has-note.note-forest {
-    background-color: rgba(46, 204, 113, 0.25); /* Emerald Green */
+    background-color: rgba(46, 204, 113, 0.35) !important; /* Emerald Green */
 }
 
 .verse-line.has-note.note-navy {
-    background-color: rgba(241, 196, 15, 0.25); /* Golden Yellow */
+    background-color: rgba(241, 196, 15, 0.35) !important; /* Golden Yellow */
 }
 
 .verse-line.has-note.note-amber {
-    background-color: rgba(255, 127, 80, 0.25); /* Coral Orange */
+    background-color: rgba(255, 127, 80, 0.35) !important; /* Coral Orange */
 }
 
 .verse-line.has-note.note-violet {
-    background-color: rgba(231, 76, 60, 0.25); /* Rose Red */
+    background-color: rgba(231, 76, 60, 0.35) !important; /* Rose Red */
 }
 
 .verse-line.has-note.note-teal {
-    background-color: rgba(155, 89, 182, 0.25); /* Violet Purple */
+    background-color: rgba(155, 89, 182, 0.35) !important; /* Violet Purple */
 }
 
 .verse-line.has-note.note-rust {
-    background-color: rgba(26, 188, 156, 0.25); /* Turquoise */
+    background-color: rgba(26, 188, 156, 0.35) !important; /* Turquoise */
 }
 
 .verse-line.has-note.note-olive {
-    background-color: rgba(255, 95, 162, 0.25); /* Bright Pink */
+    background-color: rgba(255, 95, 162, 0.35) !important; /* Bright Pink */
 }
 
 .verse-line.has-note.note-indigo {
-    background-color: rgba(0, 124, 130, 0.25); /* Deep Teal */
+    background-color: rgba(0, 124, 130, 0.35) !important; /* Deep Teal */
 }
 
 .verse-line.has-note.note-slate {
-    background-color: rgba(163, 230, 53, 0.25); /* Soft Lime */
+    background-color: rgba(163, 230, 53, 0.35) !important; /* Soft Lime */
 }
 
 /* New color classes for bookmark colors */
 .verse-line.has-note.note-yellow {
-    background-color: rgba(76, 81, 191, 0.25); /* Indigo */
+    background-color: rgba(76, 81, 191, 0.35) !important; /* Indigo */
 }
 
 .verse-line.has-note.note-green {
-    background-color: rgba(255, 176, 32, 0.25); /* Amber */
+    background-color: rgba(255, 176, 32, 0.35) !important; /* Amber */
 }
 
 .verse-line.has-note.note-blue {
-    background-color: rgba(33, 150, 243, 0.25); /* Blue */
+    background-color: rgba(33, 150, 243, 0.35) !important; /* Blue */
 }
 
 .verse-line.has-note.note-pink {
-    background-color: rgba(233, 30, 99, 0.25); /* Pink */
+    background-color: rgba(233, 30, 99, 0.35) !important; /* Pink */
 }
 
 .verse-line.has-note.note-orange {
-    background-color: rgba(255, 152, 0, 0.25); /* Orange */
+    background-color: rgba(255, 152, 0, 0.35) !important; /* Orange */
 }
 
 .verse-line.has-note.note-purple {
-    background-color: rgba(156, 39, 176, 0.25); /* Purple */
+    background-color: rgba(156, 39, 176, 0.35) !important; /* Purple */
 }
 
 .verse-line .note-indicator {
@@ -4304,68 +4304,68 @@ body.dark-theme .verse-line.has-note.has-text::after {
 
 /* Dark theme colored note backgrounds */
 body.dark-theme .verse-line.has-note.note-burgundy {
-    background-color: rgba(59, 168, 255, 0.15); /* Sky Blue */
+    background-color: rgba(59, 168, 255, 0.25) !important; /* Sky Blue */
 }
 
 body.dark-theme .verse-line.has-note.note-forest {
-    background-color: rgba(46, 204, 113, 0.15); /* Emerald Green */
+    background-color: rgba(46, 204, 113, 0.25) !important; /* Emerald Green */
 }
 
 body.dark-theme .verse-line.has-note.note-navy {
-    background-color: rgba(241, 196, 15, 0.15); /* Golden Yellow */
+    background-color: rgba(241, 196, 15, 0.25) !important; /* Golden Yellow */
 }
 
 body.dark-theme .verse-line.has-note.note-amber {
-    background-color: rgba(255, 127, 80, 0.15); /* Coral Orange */
+    background-color: rgba(255, 127, 80, 0.25) !important; /* Coral Orange */
 }
 
 body.dark-theme .verse-line.has-note.note-violet {
-    background-color: rgba(231, 76, 60, 0.15); /* Rose Red */
+    background-color: rgba(231, 76, 60, 0.25) !important; /* Rose Red */
 }
 
 body.dark-theme .verse-line.has-note.note-teal {
-    background-color: rgba(155, 89, 182, 0.15); /* Violet Purple */
+    background-color: rgba(155, 89, 182, 0.25) !important; /* Violet Purple */
 }
 
 body.dark-theme .verse-line.has-note.note-rust {
-    background-color: rgba(26, 188, 156, 0.15); /* Turquoise */
+    background-color: rgba(26, 188, 156, 0.25) !important; /* Turquoise */
 }
 
 body.dark-theme .verse-line.has-note.note-olive {
-    background-color: rgba(255, 95, 162, 0.15); /* Bright Pink */
+    background-color: rgba(255, 95, 162, 0.25) !important; /* Bright Pink */
 }
 
 body.dark-theme .verse-line.has-note.note-indigo {
-    background-color: rgba(0, 124, 130, 0.15); /* Deep Teal */
+    background-color: rgba(0, 124, 130, 0.25) !important; /* Deep Teal */
 }
 
 body.dark-theme .verse-line.has-note.note-slate {
-    background-color: rgba(163, 230, 53, 0.15); /* Soft Lime */
+    background-color: rgba(163, 230, 53, 0.25) !important; /* Soft Lime */
 }
 
 /* Dark theme - new color classes for bookmark colors */
 body.dark-theme .verse-line.has-note.note-yellow {
-    background-color: rgba(76, 81, 191, 0.15); /* Indigo */
+    background-color: rgba(76, 81, 191, 0.25) !important; /* Indigo */
 }
 
 body.dark-theme .verse-line.has-note.note-green {
-    background-color: rgba(255, 176, 32, 0.15); /* Amber */
+    background-color: rgba(255, 176, 32, 0.25) !important; /* Amber */
 }
 
 body.dark-theme .verse-line.has-note.note-blue {
-    background-color: rgba(33, 150, 243, 0.15); /* Blue */
+    background-color: rgba(33, 150, 243, 0.25) !important; /* Blue */
 }
 
 body.dark-theme .verse-line.has-note.note-pink {
-    background-color: rgba(233, 30, 99, 0.15); /* Pink */
+    background-color: rgba(233, 30, 99, 0.25) !important; /* Pink */
 }
 
 body.dark-theme .verse-line.has-note.note-orange {
-    background-color: rgba(255, 152, 0, 0.15); /* Orange */
+    background-color: rgba(255, 152, 0, 0.25) !important; /* Orange */
 }
 
 body.dark-theme .verse-line.has-note.note-purple {
-    background-color: rgba(156, 39, 176, 0.15); /* Purple */
+    background-color: rgba(156, 39, 176, 0.25) !important; /* Purple */
 }
 
 /* Summary Drawer Overlay */
@@ -5700,7 +5700,7 @@ body.dark-theme .add-character-btn:hover {
     flex-direction: row;
     gap: 0;
     padding: 12px 20px;
-    border-top: none;
+    border-top: none !important;
     background: transparent;
     flex-shrink: 0;
     order: 2;

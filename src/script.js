@@ -768,6 +768,7 @@ async function updateUI() {
     updateChapters();
     updateVerses();
     displayChapter();
+    applyAllNoteDisplays();
     updateDrawerContent();
 }
 // Update book selection
@@ -1330,13 +1331,8 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         buttonsContainer.appendChild(colorPickerContainer);
     }
     
-    // Toggle color picker visibility
-    if (colorPickerContainer.style.display === 'none' || colorPickerContainer.style.display === '') {
-        colorPickerContainer.style.display = 'flex';
-    } else {
-        colorPickerContainer.style.display = 'none';
-        return;
-    }
+    // Always show the color picker (don't toggle it)
+    colorPickerContainer.style.display = 'flex';
     
     // Remove previous event listeners and add new ones
     const colorOptions = colorPickerContainer.querySelectorAll('.color-option');
@@ -1374,7 +1370,7 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
             if (verseLine) {
                 // Remove all color classes
-                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
                 // Add has-note class and new color class
                 verseLine.classList.add('has-note', `note-${selectedColor}`);
                 // Add animation for visual feedback
@@ -1400,6 +1396,11 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
                 console.error('Error saving to Supabase:', error);
             }
+            
+            // Close the color picker after selection
+            setTimeout(() => {
+                colorPickerContainer.style.display = 'none';
+            }, 300);
         });
     });
 }
@@ -1713,7 +1714,7 @@ function showVerseActionsBottomSheet(verseNum) {
                 
                 // After animation, remove the classes
                 setTimeout(() => {
-                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
                     
                     // If no text, remove the note entirely and remove the has-note class
                     if (!verseNotes[noteKey].text) {
