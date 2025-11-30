@@ -898,25 +898,16 @@ function updateVerses() {
                 if (wasSelected) {
                     // Remove highlight immediately from this verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
-                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                     if (verseLine) {
                         verseLine.classList.remove('multi-highlighted');
                         verseLine.style.backgroundColor = '';
-                    }
-                    if (verseContainer) {
-                        verseContainer.classList.remove('multi-highlighted');
-                        verseContainer.style.backgroundColor = '';
                     }
                     console.log(`🗑️ Removed highlight from verse ${verse} immediately`);
                 } else {
                     // Add multi-highlighted color for newly selected verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
-                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                     if (verseLine) {
                         verseLine.classList.add('multi-highlighted');
-                    }
-                    if (verseContainer) {
-                        verseContainer.classList.add('multi-highlighted');
                     }
                     console.log(`✨ Added highlight to verse ${verse} immediately`);
                 }
@@ -938,21 +929,13 @@ function updateVerses() {
                 if (updatedSelectedVerses.length > 0) {
                     updatedSelectedVerses.forEach(vNum => {
                         const vLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
-                        const vContainer = contentArea.querySelector(`.verse-container[data-verse="${vNum}"]`);
                         if (vLine) {
                             vLine.classList.add('multi-highlighted');
-                        }
-                        if (vContainer) {
-                            vContainer.classList.add('multi-highlighted');
                         }
                     });
                 } else {
                     // No verses selected, remove all highlights
                     contentArea.querySelectorAll('.verse-line').forEach(v => {
-                        v.classList.remove('multi-highlighted');
-                        v.style.backgroundColor = '';
-                    });
-                    contentArea.querySelectorAll('.verse-container').forEach(v => {
                         v.classList.remove('multi-highlighted');
                         v.style.backgroundColor = '';
                     });
@@ -1155,12 +1138,8 @@ function displayChapter() {
                             console.log(`✔️ Selected verse ${verseNum}`);
                             // Add highlight for newly selected verse
                             const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-                            const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                             if (verseLine) {
                                 verseLine.classList.add('multi-highlighted');
-                            }
-                            if (verseContainer) {
-                                verseContainer.classList.add('multi-highlighted');
                             }
                         }
                         
@@ -1169,24 +1148,14 @@ function displayChapter() {
                         if (updatedSelectedVerses.length > 0) {
                             updatedSelectedVerses.forEach(vNum => {
                                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
-                                const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${vNum}"]`);
                                 if (verseLine) {
                                     verseLine.classList.remove('highlighted');
                                     verseLine.classList.add('multi-highlighted');
-                                }
-                                if (verseContainer) {
-                                    verseContainer.classList.remove('highlighted');
-                                    verseContainer.classList.add('multi-highlighted');
                                 }
                             });
                         } else {
                             // No verses selected: remove all highlights
                             contentArea.querySelectorAll('.verse-line').forEach(v => {
-                                v.classList.remove('highlighted');
-                                v.classList.remove('multi-highlighted');
-                                v.style.backgroundColor = '';
-                            });
-                            contentArea.querySelectorAll('.verse-container').forEach(v => {
                                 v.classList.remove('highlighted');
                                 v.classList.remove('multi-highlighted');
                                 v.style.backgroundColor = '';
@@ -1237,12 +1206,6 @@ function displayChapter() {
                                 v.style.backgroundColor = '';
                             }
                         });
-                        contentArea.querySelectorAll('.verse-container').forEach(v => {
-                            if (v.classList.contains('highlighted')) {
-                                v.classList.remove('highlighted');
-                                v.style.backgroundColor = '';
-                            }
-                        });
                         
                         // Select only the clicked verse
                         const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
@@ -1252,12 +1215,8 @@ function displayChapter() {
                         
                         // Add highlight to clicked verse only
                         const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-                        const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                         if (verseLine) {
                             verseLine.classList.add('multi-highlighted');
-                        }
-                        if (verseContainer) {
-                            verseContainer.classList.add('multi-highlighted');
                         }
                         
                         console.log(`✔️ Selected verse ${verseNum}`);
@@ -1520,6 +1479,26 @@ function handleVersesCopy(copyBtn) {
             copyBtn.style.transform = 'scale(1)';
             copyBtn.style.opacity = '1';
             
+            // Remove highlights from selected verses
+            if (isMultiVerse) {
+                const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
+                highlightedVerses.forEach(verseLine => {
+                    verseLine.classList.remove('multi-highlighted');
+                    verseLine.style.backgroundColor = '';
+                });
+                
+                // Clear selectedVerses array
+                selectedVerses = [];
+                
+                // Update left pane active states
+                const leftPane = document.querySelector('.verses-column');
+                if (leftPane) {
+                    leftPane.querySelectorAll('.verse-number.active').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                }
+            }
+            
             // Close bottom sheet
             if (bottomSheet) {
                 bottomSheet.classList.remove('visible');
@@ -1651,6 +1630,26 @@ function showVerseActionsBottomSheet(verseNum) {
     
     closeBtn.addEventListener('click', closeBottomSheet);
     backdrop.addEventListener('click', closeBottomSheet);
+    
+    // Setup scrollbar visibility for action buttons
+    const setupScrollbarVisibility = () => {
+        const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+        if (!buttonsContainer) return;
+        
+        let scrollbarTimeout;
+        
+        const showScrollbar = () => {
+            buttonsContainer.classList.add('show-scrollbar');
+            clearTimeout(scrollbarTimeout);
+            scrollbarTimeout = setTimeout(() => {
+                buttonsContainer.classList.remove('show-scrollbar');
+            }, 500);
+        };
+        
+        buttonsContainer.addEventListener('scroll', showScrollbar, { passive: true });
+    };
+    
+    setupScrollbarVisibility();
     
     // Copy verse button
     bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function() {
@@ -1912,6 +1911,26 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     
     closeBtn.addEventListener('click', closeBottomSheet);
     backdrop.addEventListener('click', closeBottomSheet);
+    
+    // Setup scrollbar visibility for action buttons
+    const setupScrollbarVisibility = () => {
+        const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+        if (!buttonsContainer) return;
+        
+        let scrollbarTimeout;
+        
+        const showScrollbar = () => {
+            buttonsContainer.classList.add('show-scrollbar');
+            clearTimeout(scrollbarTimeout);
+            scrollbarTimeout = setTimeout(() => {
+                buttonsContainer.classList.remove('show-scrollbar');
+            }, 500);
+        };
+        
+        buttonsContainer.addEventListener('scroll', showScrollbar, { passive: true });
+    };
+    
+    setupScrollbarVisibility();
     
     // Copy multiple verses button
     const copyBtn = bottomSheet.querySelector('.copy-multi-verses-action');

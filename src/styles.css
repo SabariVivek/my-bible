@@ -1673,20 +1673,6 @@ body.dark-theme .mobile-chapter-header {
     background-color: transparent !important;
 }
 
-.verse-container.multi-highlighted {
-    background-color: #d0d4d9 !important;
-    opacity: 0.7;
-}
-
-.verse-container.multi-highlighted:active {
-    background-color: #d0d4d9 !important;
-    opacity: 0.7;
-}
-
-.verse-container.multi-highlighted:focus {
-    background-color: #d0d4d9 !important;
-    opacity: 0.7;
-}
 
 .v-num {
     font-weight: bold;
@@ -3061,21 +3047,6 @@ body.dark-theme .verse-container:focus {
     background-color: transparent !important;
 }
 
-body.dark-theme .verse-container.multi-highlighted {
-    background-color: #2a2d30 !important;
-    opacity: 0.7;
-}
-
-body.dark-theme .verse-container.multi-highlighted:active {
-    background-color: #2a2d30 !important;
-    opacity: 0.7;
-}
-
-body.dark-theme .verse-container.multi-highlighted:focus {
-    background-color: #2a2d30 !important;
-    opacity: 0.7;
-}
-
 /* Prevent any pseudo-element grey in dark mode */
 body.dark-theme .verse-line::before,
 body.dark-theme .verse-line::after {
@@ -3144,8 +3115,7 @@ body.dark-theme .english-text.red {
 
 body.dark-theme .bottom-nav {
     background-color: #1a1a1a;
-    border-top: 2px solid #3a3a3a;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #3a3a3a;
 }
 
 body.dark-theme .nav-btn {
@@ -5589,22 +5559,35 @@ body.dark-theme .add-character-btn:hover {
     padding: 20px 20px;
     overflow-x: auto;
     overflow-y: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: #ccc #f5f5f5;
+    scrollbar-width: none;
     position: relative;
 }
 
 .verse-actions-buttons::-webkit-scrollbar {
+    height: 0px;
+    transition: height 0.3s ease;
+}
+
+.verse-actions-buttons.show-scrollbar::-webkit-scrollbar {
     height: 6px;
 }
 
 .verse-actions-buttons::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.verse-actions-buttons.show-scrollbar::-webkit-scrollbar-track {
     background: #f5f5f5;
 }
 
 .verse-actions-buttons::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: transparent;
     border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.verse-actions-buttons.show-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc;
 }
 
 .verse-actions-buttons::-webkit-scrollbar-thumb:hover {
@@ -5821,6 +5804,26 @@ body.dark-theme .verse-reference {
 
 body.dark-theme .close-bottom-sheet:hover {
     background-color: #3c4043;
+}
+
+body.dark-theme .verse-actions-buttons::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body.dark-theme .verse-actions-buttons.show-scrollbar::-webkit-scrollbar-track {
+    background: #3c4043;
+}
+
+body.dark-theme .verse-actions-buttons::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+body.dark-theme .verse-actions-buttons.show-scrollbar::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+body.dark-theme .verse-actions-buttons::-webkit-scrollbar-thumb:hover {
+    background: #888;
 }
 
 body.dark-theme .close-bottom-sheet svg {
