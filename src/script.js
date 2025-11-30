@@ -3861,9 +3861,8 @@ function openNotesModal(verseNum = null) {
         deleteBtn.style.display = 'none';
     }
     // Update active color button
-    document.querySelectorAll('.note-color-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.color === currentNoteColor);
-    });
+    // Color buttons removed - note colors no longer available
+    
     // Save current scroll position before preventing body scroll
     const scrollY = window.scrollY;
     document.body.style.top = `-${scrollY}px`;
@@ -4149,7 +4148,6 @@ function initializeNotesModal() {
     const saveBtn = document.getElementById('save-note-btn');
     const deleteBtn = document.getElementById('delete-note-btn');
     const memoryVerseToggle = document.getElementById('memory-verse-toggle');
-    const colorBtns = document.querySelectorAll('.note-color-btn');
     if (!modal) return;
     // Close modal handlers
     closeBtn?.addEventListener('click', closeNotesModal);
@@ -4211,21 +4209,8 @@ function initializeNotesModal() {
             deleteNote();
         }
     });
-    // Color selection - allow toggle on/off
-    colorBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // If clicking the already active button, deselect it
-            if (btn.classList.contains('active')) {
-                btn.classList.remove('active');
-                currentNoteColor = null;
-            } else {
-                // Otherwise, select this color and deselect others
-                colorBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentNoteColor = btn.dataset.color;
-            }
-        });
-    });
+    // Color selection removed - note colors no longer available
+    
     // Color navigation buttons
     const colorPrev = document.querySelector('.notes-color-prev');
     const colorNext = document.querySelector('.notes-color-next');
