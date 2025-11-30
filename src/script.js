@@ -1052,17 +1052,21 @@ function displayChapter() {
                         
                         // Update the bottom sheet with current selections
                         if (updatedSelectedVerses.length > 1) {
-                            // Close current sheet and show multi-verse sheet
-                            existingBottomSheet.classList.remove('visible');
-                            document.body.classList.remove('bottom-sheet-open');
-                            // Show multi-verse sheet
-                            showMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                            // Going from 1 to multiple verses - recreate as multi-verse sheet
+                            // But first check if it's already a multi-verse sheet
+                            const copyBtn = existingBottomSheet.querySelector('.copy-multi-verses-action');
+                            if (!copyBtn) {
+                                // It's a single-verse sheet, recreate as multi-verse
+                                existingBottomSheet.classList.remove('visible');
+                                document.body.classList.remove('bottom-sheet-open');
+                                showMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                            } else {
+                                // Already a multi-verse sheet, just update it
+                                updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
+                            }
                         } else if (updatedSelectedVerses.length === 1) {
-                            // Close current sheet and show single verse sheet
-                            existingBottomSheet.classList.remove('visible');
-                            document.body.classList.remove('bottom-sheet-open');
-                            // Show single verse sheet
-                            showVerseActionsBottomSheet(updatedSelectedVerses[0]);
+                            // Single verse - just update the existing sheet without closing/reopening
+                            updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
                         } else {
                             // No verses selected, close bottom sheet
                             existingBottomSheet.classList.remove('visible');
