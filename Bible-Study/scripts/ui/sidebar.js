@@ -15,6 +15,13 @@ function toggleDrawer() {
         toggleIcon.textContent = '⫸'; // Right arrow - click to expand right
     } else {
         toggleIcon.textContent = '⫷'; // Left arrow - click to collapse left
+        
+        // Close bottom sheet when sidebar opens
+        const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+        if (bottomSheet) {
+            bottomSheet.classList.remove('visible');
+            document.body.classList.remove('bottom-sheet-open');
+        }
     }
 }
 
