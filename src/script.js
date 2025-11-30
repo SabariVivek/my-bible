@@ -1227,16 +1227,12 @@ function displayChapter() {
                 }, 300);
             } else if (tapCount === 2) {
                 clearTimeout(tapTimeout);
-                // Double tap - show note viewer (only for single verse)
-                const versesColumn = document.querySelector('.verses-column');
-                const selectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
-                
-                if (selectedVerses.length === 1) {
-                    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-                    const note = verseNotes[noteKey];
-                    if (note && note.text && note.text.trim()) {
-                        showNoteViewer(verseNum, note);
-                    }
+                // Double tap - show note viewer for this verse
+                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+                const note = verseNotes[noteKey];
+                // Show the note viewer if note exists and has text
+                if (note && note.text && note.text.trim()) {
+                    showNoteViewer(verseNum, note);
                 }
                 tapCount = 0;
             }
