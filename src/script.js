@@ -520,6 +520,7 @@ function initializeMobileDrawer() {
     if (!menuBtn || !drawerOverlay) return;
     // Open/toggle drawer
     menuBtn.addEventListener('click', () => {
+        closeBottomSheet();
         // Check if on mobile or desktop
         if (window.innerWidth <= 768) {
             // Mobile: toggle drawer overlay
@@ -767,6 +768,7 @@ async function updateUI() {
     updateChapters();
     updateVerses();
     displayChapter();
+    applyAllNoteDisplays();
     updateDrawerContent();
 }
 // Update book selection
@@ -890,24 +892,30 @@ function updateVerses() {
             const isBottomSheetVisible = existingBottomSheet && existingBottomSheet.classList.contains('visible');
             
             if (isBottomSheetVisible) {
-                // Bottom sheet is open - toggle this verse in the selection
+                // Bottom sheet is open - close it and clear multi-highlights
                 const wasSelected = item.classList.contains('active');
                 const contentArea = document.querySelector('.scripture-text');
                 
-                // IMMEDIATELY remove or add highlight in the UI (using multi-highlighted color)
+                // Close the bottom sheet
+                existingBottomSheet.classList.remove('visible');
+                document.body.classList.remove('bottom-sheet-open');
+                
+                // IMMEDIATELY remove or add highlight in the UI (using left-pane-selected grey color)
                 if (wasSelected) {
                     // Remove highlight immediately from this verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                     if (verseLine) {
+                        verseLine.classList.remove('left-pane-selected');
                         verseLine.classList.remove('multi-highlighted');
                         verseLine.style.backgroundColor = '';
                     }
                     console.log(`🗑️ Removed highlight from verse ${verse} immediately`);
                 } else {
-                    // Add multi-highlighted color for newly selected verse
+                    // Add left-pane-selected color for newly selected verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                     if (verseLine) {
-                        verseLine.classList.add('multi-highlighted');
+                        verseLine.classList.add('left-pane-selected');
+                        verseLine.classList.remove('multi-highlighted');
                     }
                     console.log(`✨ Added highlight to verse ${verse} immediately`);
                 }
@@ -925,38 +933,24 @@ function updateVerses() {
                     console.log(`✔️ Selected verse ${verse}`);
                 }
                 
-                // Update all selected verses with multi-highlighted color
+                // Update all selected verses with left-pane-selected grey color and remove underline
                 if (updatedSelectedVerses.length > 0) {
                     updatedSelectedVerses.forEach(vNum => {
                         const vLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
                         if (vLine) {
-                            vLine.classList.add('multi-highlighted');
+                            vLine.classList.add('left-pane-selected');
+                            vLine.classList.remove('multi-highlighted');
                         }
                     });
                 } else {
                     // No verses selected, remove all highlights
                     contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('left-pane-selected');
                         v.classList.remove('multi-highlighted');
                         v.style.backgroundColor = '';
                     });
                 }
                 
-                // Update bottom sheet
-                if (updatedSelectedVerses.length > 1) {
-                    const copyBtn = existingBottomSheet.querySelector('.copy-multi-verses-action');
-                    if (!copyBtn) {
-                        existingBottomSheet.classList.remove('visible');
-                        document.body.classList.remove('bottom-sheet-open');
-                        showMultiVerseActionsBottomSheet(updatedSelectedVerses);
-                    } else {
-                        updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
-                    }
-                } else if (updatedSelectedVerses.length === 1) {
-                    updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
-                } else {
-                    existingBottomSheet.classList.remove('visible');
-                    document.body.classList.remove('bottom-sheet-open');
-                }
             } else {
                 // Bottom sheet not open - just select this verse, don't open bottom sheet
                 versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
@@ -964,20 +958,20 @@ function updateVerses() {
                 
                 const contentArea = document.querySelector('.scripture-text');
                 contentArea.querySelectorAll('.verse-line').forEach(v => {
-                    v.classList.remove('multi-highlighted');
+                    v.classList.remove('left-pane-selected');
                     v.style.backgroundColor = '';
                 });
                 contentArea.querySelectorAll('.verse-container').forEach(v => {
-                    v.classList.remove('multi-highlighted');
+                    v.classList.remove('left-pane-selected');
                     v.style.backgroundColor = '';
                 });
                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                 const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                 if (verseLine) {
-                    verseLine.classList.add('multi-highlighted');
+                    verseLine.classList.add('left-pane-selected');
                 }
                 if (verseContainer) {
-                    verseContainer.classList.add('multi-highlighted');
+                    verseContainer.classList.add('left-pane-selected');
                 }
                 console.log(`✔️ Selected verse ${verse}`);
             }
@@ -1113,10 +1107,12 @@ function displayChapter() {
                             const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                             if (verseLine) {
                                 verseLine.classList.remove('multi-highlighted');
+                                verseLine.classList.remove('left-pane-selected');
                                 verseLine.style.backgroundColor = '';
                             }
                             if (verseContainer) {
                                 verseContainer.classList.remove('multi-highlighted');
+                                verseContainer.classList.remove('left-pane-selected');
                                 verseContainer.style.backgroundColor = '';
                             }
                             console.log(`🗑️ Removed highlight from verse ${verseNum} immediately`);
@@ -1136,10 +1132,10 @@ function displayChapter() {
                             console.log(`🗑️ Deselected verse ${verseNum}`);
                         } else {
                             console.log(`✔️ Selected verse ${verseNum}`);
-                            // Add highlight for newly selected verse
+                            // Add highlight for newly selected verse (left-pane selection)
                             const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                             if (verseLine) {
-                                verseLine.classList.add('multi-highlighted');
+                                verseLine.classList.add('left-pane-selected');
                             }
                         }
                         
@@ -1162,12 +1158,13 @@ function displayChapter() {
                         }
                         
                         // Update highlighting based on selection count
-                        // For text-based selections, always use multi-highlighted color
+                        // For manual selections in main content, use multi-highlighted class (underline)
                         if (updatedSelectedVerses.length > 0) {
                             updatedSelectedVerses.forEach(vNum => {
                                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
                                 if (verseLine) {
                                     verseLine.classList.remove('highlighted');
+                                    verseLine.classList.remove('left-pane-selected');
                                     verseLine.classList.add('multi-highlighted');
                                 }
                             });
@@ -1176,6 +1173,7 @@ function displayChapter() {
                             contentArea.querySelectorAll('.verse-line').forEach(v => {
                                 v.classList.remove('highlighted');
                                 v.classList.remove('multi-highlighted');
+                                v.classList.remove('left-pane-selected');
                                 v.style.backgroundColor = '';
                             });
                         }
@@ -1247,16 +1245,12 @@ function displayChapter() {
                 }, 300);
             } else if (tapCount === 2) {
                 clearTimeout(tapTimeout);
-                // Double tap - show note viewer (only for single verse)
-                const versesColumn = document.querySelector('.verses-column');
-                const selectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
-                
-                if (selectedVerses.length === 1) {
-                    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-                    const note = verseNotes[noteKey];
-                    if (note && note.text && note.text.trim()) {
-                        showNoteViewer(verseNum, note);
-                    }
+                // Double tap - show note viewer for this verse
+                const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+                const note = verseNotes[noteKey];
+                // Show the note viewer if note exists and has text
+                if (note && note.text && note.text.trim()) {
+                    showNoteViewer(verseNum, note);
                 }
                 tapCount = 0;
             }
@@ -1351,13 +1345,8 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         buttonsContainer.appendChild(colorPickerContainer);
     }
     
-    // Toggle color picker visibility
-    if (colorPickerContainer.style.display === 'none' || colorPickerContainer.style.display === '') {
-        colorPickerContainer.style.display = 'flex';
-    } else {
-        colorPickerContainer.style.display = 'none';
-        return;
-    }
+    // Always show the color picker (don't toggle it)
+    colorPickerContainer.style.display = 'flex';
     
     // Remove previous event listeners and add new ones
     const colorOptions = colorPickerContainer.querySelectorAll('.color-option');
@@ -1395,7 +1384,7 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
             if (verseLine) {
                 // Remove all color classes
-                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
                 // Add has-note class and new color class
                 verseLine.classList.add('has-note', `note-${selectedColor}`);
                 // Add animation for visual feedback
@@ -1421,6 +1410,11 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
                 console.error('Error saving to Supabase:', error);
             }
+            
+            // Close the color picker after selection
+            setTimeout(() => {
+                colorPickerContainer.style.display = 'none';
+            }, 300);
         });
     });
 }
@@ -1734,7 +1728,7 @@ function showVerseActionsBottomSheet(verseNum) {
                 
                 // After animation, remove the classes
                 setTimeout(() => {
-                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green', 'note-blue', 'note-pink', 'note-orange', 'note-purple');
                     
                     // If no text, remove the note entirely and remove the has-note class
                     if (!verseNotes[noteKey].text) {
@@ -2211,13 +2205,11 @@ function updateVerseHighlighting(selectedVerses) {
 function scrollToVerse(verseNum) {
     const contentArea = document.querySelector('.scripture-text');
     
-    // Remove highlight from all verses first
-    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('multi-highlighted'));
+    // Don't add highlight here - let the click handlers manage highlighting
+    // Just scroll to the verse
     
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseLine) {
-        // Add highlight to selected verse
-        verseLine.classList.add('multi-highlighted');
         // On mobile/tablet, scroll with offset to keep top nav visible
         if (window.innerWidth <= 1024) {
             const topNavHeight = 60; // height of top bar
@@ -2326,6 +2318,16 @@ function initializeScrollbar() {
         }
     });
 }
+
+// Helper function to close bottom sheet
+function closeBottomSheet() {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (bottomSheet && bottomSheet.classList.contains('visible')) {
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+    }
+}
+
 // Dark theme toggle with animation
 function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
@@ -2391,10 +2393,16 @@ function initializeTheme() {
         );
     }
     if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
+        themeToggle.addEventListener('click', (event) => {
+            closeBottomSheet();
+            toggleTheme(event);
+        });
     }
     if (drawerThemeToggle) {
-        drawerThemeToggle.addEventListener('click', toggleTheme);
+        drawerThemeToggle.addEventListener('click', (event) => {
+            closeBottomSheet();
+            toggleTheme(event);
+        });
     }
 }
 // Initialize mobile language modal
@@ -2444,6 +2452,7 @@ function initializeMobileLanguageModal() {
     }
     // Open modal
     langBtn.addEventListener('click', (e) => {
+        closeBottomSheet();
         e.stopPropagation();
         updateModalActiveState();
         modalOverlay.classList.add('active');
@@ -2643,6 +2652,7 @@ function initializeSearch() {
         searchInput.focus();
     }
     searchBtn.addEventListener('click', () => {
+        closeBottomSheet();
         if (isSearchActive) {
             closeSearch();
         } else {
@@ -4396,6 +4406,21 @@ async function loadMemoryVersesFromSupabase() {
     if (typeof window.memoryVerses === 'undefined') {
         window.memoryVerses = [];
     }
+    
+    // Load from localStorage first (instant, offline-safe)
+    const localVerses = localStorage.getItem('memoryVerses');
+    if (localVerses) {
+        try {
+            window.memoryVerses = JSON.parse(localVerses);
+            markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to show memory verse styling
+        } catch (e) {
+            console.error('Error parsing localStorage memoryVerses:', e);
+        }
+    }
+    
+    // Async sync from Supabase (don't block UI)
     try {
         // Fetch all rows - each row contains one verse_reference
         const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
@@ -4410,35 +4435,21 @@ async function loadMemoryVersesFromSupabase() {
             const data = await response.json();
             if (data && data.length > 0) {
                 // Extract verse_reference from each row to create array of strings
-                window.memoryVerses = data.map(row => row.verse_reference).filter(ref => ref);
-                if (window.memoryVerses && window.memoryVerses.length > 0) {
+                const supabaseVerses = data.map(row => row.verse_reference).filter(ref => ref);
+                // Update if Supabase has different data
+                if (JSON.stringify(supabaseVerses) !== JSON.stringify(window.memoryVerses)) {
+                    window.memoryVerses = supabaseVerses;
+                    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
                     markBooksWithMemoryVerses();
                     updateVerseMemoryVerseIndicators();
-                    displayChapter(); // Refresh chapter display to show memory verse styling
-                    return true;
+                    displayChapter();
                 }
+                return true;
             }
-        } else {
-            const errorText = await response.text();
-        }
-        // Fallback to localStorage
-        const localVerses = localStorage.getItem('memoryVerses');
-        if (localVerses) {
-            window.memoryVerses = JSON.parse(localVerses);
-            markBooksWithMemoryVerses();
-            updateVerseMemoryVerseIndicators();
-            displayChapter(); // Refresh chapter display to show memory verse styling
         }
         return false;
     } catch (error) {
-        // Fallback to localStorage
-        const localVerses = localStorage.getItem('memoryVerses');
-        if (localVerses) {
-            window.memoryVerses = JSON.parse(localVerses);
-            markBooksWithMemoryVerses();
-            updateVerseMemoryVerseIndicators();
-            displayChapter(); // Refresh chapter display to show memory verse styling
-        }
+        console.error('Error loading memory verses from Supabase:', error);
         return false;
     }
 }
@@ -4463,10 +4474,10 @@ async function toggleMemoryVerse() {
         window.memoryVerses.push(verseReference);
     }
     
-    // Save to Supabase
-    await saveMemoryVersesToSupabase();
+    // Save to localStorage immediately (for instant UI update)
+    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
     
-    // Update UI indicators
+    // Update UI indicators immediately
     markBooksWithMemoryVerses();
     updateVerseMemoryVerseIndicators();
     
@@ -4479,6 +4490,11 @@ async function toggleMemoryVerse() {
             verseLine.classList.add('memory-verse');
         }
     }
+    
+    // Async save to Supabase (non-blocking) - don't await
+    saveMemoryVersesToSupabase().catch(error => {
+        console.error('Error saving memory verses to Supabase:', error);
+    });
 }
 
 async function saveMemoryVersesToSupabase() {
@@ -6559,6 +6575,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rightMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
+            closeBottomSheet();
             if (window.innerWidth <= 768) {
                 // Mobile: use drawer behavior
                 const isOpen = rightSidebar.classList.contains('drawer-open');
