@@ -1551,6 +1551,27 @@ body.dark-theme .mobile-chapter-header {
     padding-top: 1rem;
 }
 
+/* Prevent grey selection highlight */
+.scripture-text::selection {
+    background-color: transparent !important;
+}
+
+.scripture-text::-moz-selection {
+    background-color: transparent !important;
+}
+
+.scripture-text * {
+    background: none;
+}
+
+.scripture-text *::selection {
+    background-color: transparent !important;
+}
+
+.scripture-text *::-moz-selection {
+    background-color: transparent !important;
+}
+
 @media (max-width: 768px) {
     .scripture-text {
         padding-top: 0;
@@ -1576,14 +1597,95 @@ body.dark-theme .mobile-chapter-header {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.verse-line:hover {
-    background-color: #f8f9fa;
+.verse-line {
+    background-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.verse-line.highlighted {
-    background-color: #e8eaed;
+.verse-line:hover:not(.multi-highlighted) {
+    -color: #f8f9fa;
+}
+
+.verse-line:active {
+    background-color: transparent !important;
+}
+
+.verse-line:focus {
+    background-color: transparent !important;
+    outline: none;
+}
+
+.verse-line.multi-highlighted {
+    background-color: #d0d4d9 !important;
+}
+
+.verse-line.multi-highlighted:active {
+    background-color: #d0d4d9 !important;
+}
+
+.verse-line.multi-highlighted:focus {
+    background-color: #d0d4d9 !important;
+}
+
+/* Override selection color to prevent grey highlighting */
+.verse-line::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+.verse-line::-moz-selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+.verse-line * {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.verse-line *::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+.verse-line *::-moz-selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Light theme verse container */
+.verse-container {
+    background-color: transparent !important;
+}
+
+.verse-container:active {
+    background-color: transparent !important;
+}
+
+.verse-container:focus {
+    background-color: transparent !important;
+}
+
+.verse-container.multi-highlighted {
+    background-color: #d0d4d9 !important;
+    opacity: 0.7;
+}
+
+.verse-container.multi-highlighted:active {
+    background-color: #d0d4d9 !important;
+    opacity: 0.7;
+}
+
+.verse-container.multi-highlighted:focus {
+    background-color: #d0d4d9 !important;
+    opacity: 0.7;
 }
 
 .v-num {
@@ -2855,20 +2957,133 @@ body.dark-theme .number-item.active {
     font-weight: 600;
 }
 
+/* Prevent grey selection highlight in dark theme */
+body.dark-theme .scripture-text::selection {
+    background-color: transparent !important;
+}
+
+body.dark-theme .scripture-text::-moz-selection {
+    background-color: transparent !important;
+}
+
+body.dark-theme .scripture-text * {
+    background: none;
+}
+
+body.dark-theme .scripture-text *::selection {
+    background-color: transparent !important;
+}
+
+body.dark-theme .scripture-text *::-moz-selection {
+    background-color: transparent !important;
+}
+
 body.dark-theme .content-area {
     background-color: #202124;
 }
 
 body.dark-theme .verse-line {
     color: #b8b8b8;
+    background-color: transparent !important;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-body.dark-theme .verse-line:hover {
+body.dark-theme .verse-line:hover:not(.multi-highlighted) {
     background-color: #3c4043;
 }
 
-body.dark-theme .verse-line.highlighted {
-    background-color: #3c4043;
+body.dark-theme .verse-line:active {
+    background-color: transparent !important;
+}
+
+body.dark-theme .verse-line:focus {
+    background-color: transparent !important;
+    outline: none;
+}
+
+body.dark-theme .verse-line.multi-highlighted {
+    background-color: #2a2d30 !important;
+}
+
+body.dark-theme .verse-line.multi-highlighted:active {
+    background-color: #2a2d30 !important;
+}
+
+body.dark-theme .verse-line.multi-highlighted:focus {
+    background-color: #2a2d30 !important;
+}
+
+/* Override selection color in dark theme */
+body.dark-theme .verse-line::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+body.dark-theme .verse-line::-moz-selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+body.dark-theme .verse-line * {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body.dark-theme .verse-line *::selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+body.dark-theme .verse-line *::-moz-selection {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Dark theme verse container */
+body.dark-theme .verse-container {
+    background-color: transparent !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body.dark-theme .verse-container:active {
+    background-color: transparent !important;
+}
+
+body.dark-theme .verse-container:focus {
+    background-color: transparent !important;
+}
+
+body.dark-theme .verse-container.multi-highlighted {
+    background-color: #2a2d30 !important;
+    opacity: 0.7;
+}
+
+body.dark-theme .verse-container.multi-highlighted:active {
+    background-color: #2a2d30 !important;
+    opacity: 0.7;
+}
+
+body.dark-theme .verse-container.multi-highlighted:focus {
+    background-color: #2a2d30 !important;
+    opacity: 0.7;
+}
+
+/* Prevent any pseudo-element grey in dark mode */
+body.dark-theme .verse-line::before,
+body.dark-theme .verse-line::after {
+    background-color: transparent !important;
+}
+
+body.dark-theme .verse-container::before,
+body.dark-theme .verse-container::after {
+    background-color: transparent !important;
 }
 
 body.dark-theme .v-num {
@@ -5285,7 +5500,7 @@ body.dark-theme .add-character-btn:hover {
 }
 
 .verse-actions-content {
-    background: white;
+    background: #e0e0e0;
     border-radius: 16px 16px 0 0;
     margin-top: auto;
     padding: 0;
@@ -5295,6 +5510,7 @@ body.dark-theme .add-character-btn:hover {
     position: relative;
     z-index: 1001;
     filter: none;
+    border-top: 1px solid #e0e0e0;
 }
 
 @keyframes slideUp {
@@ -5379,13 +5595,13 @@ body.dark-theme .add-character-btn:hover {
     gap: 8px;
     padding: 12px 16px;
     border: none;
-    background: #f5f5f5;
+    background: #f8f9fa;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: 12px;
-    font-weight: 500;
-    color: #202124;
+    font-weight: 600;
+    color: #1a1a1a;
     white-space: nowrap;
     flex-shrink: 0;
     width: 70px;

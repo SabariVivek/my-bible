@@ -894,27 +894,29 @@ function updateVerses() {
                 const wasSelected = item.classList.contains('active');
                 const contentArea = document.querySelector('.scripture-text');
                 
-                // IMMEDIATELY remove or add highlight in the UI
+                // IMMEDIATELY remove or add highlight in the UI (using multi-highlighted color)
                 if (wasSelected) {
                     // Remove highlight immediately from this verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                     const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                     if (verseLine) {
-                        verseLine.classList.remove('highlighted');
+                        verseLine.classList.remove('multi-highlighted');
+                        verseLine.style.backgroundColor = '';
                     }
                     if (verseContainer) {
-                        verseContainer.classList.remove('highlighted');
+                        verseContainer.classList.remove('multi-highlighted');
+                        verseContainer.style.backgroundColor = '';
                     }
                     console.log(`🗑️ Removed highlight from verse ${verse} immediately`);
                 } else {
-                    // Add highlight immediately for newly selected verse
+                    // Add multi-highlighted color for newly selected verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                     const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                     if (verseLine) {
-                        verseLine.classList.add('highlighted');
+                        verseLine.classList.add('multi-highlighted');
                     }
                     if (verseContainer) {
-                        verseContainer.classList.add('highlighted');
+                        verseContainer.classList.add('multi-highlighted');
                     }
                     console.log(`✨ Added highlight to verse ${verse} immediately`);
                 }
@@ -930,6 +932,30 @@ function updateVerses() {
                     console.log(`🗑️ Deselected verse ${verse}`);
                 } else {
                     console.log(`✔️ Selected verse ${verse}`);
+                }
+                
+                // Update all selected verses with multi-highlighted color
+                if (updatedSelectedVerses.length > 0) {
+                    updatedSelectedVerses.forEach(vNum => {
+                        const vLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
+                        const vContainer = contentArea.querySelector(`.verse-container[data-verse="${vNum}"]`);
+                        if (vLine) {
+                            vLine.classList.add('multi-highlighted');
+                        }
+                        if (vContainer) {
+                            vContainer.classList.add('multi-highlighted');
+                        }
+                    });
+                } else {
+                    // No verses selected, remove all highlights
+                    contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('multi-highlighted');
+                        v.style.backgroundColor = '';
+                    });
+                    contentArea.querySelectorAll('.verse-container').forEach(v => {
+                        v.classList.remove('multi-highlighted');
+                        v.style.backgroundColor = '';
+                    });
                 }
                 
                 // Update bottom sheet
@@ -949,23 +975,28 @@ function updateVerses() {
                     document.body.classList.remove('bottom-sheet-open');
                 }
             } else {
-                // Bottom sheet not open - select this verse and show bottom sheet
+                // Bottom sheet not open - just select this verse, don't open bottom sheet
                 versesColumn.querySelectorAll('.number-item').forEach(v => v.classList.remove('active'));
                 item.classList.add('active');
                 
                 const contentArea = document.querySelector('.scripture-text');
-                contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
-                contentArea.querySelectorAll('.verse-container').forEach(v => v.classList.remove('highlighted'));
+                contentArea.querySelectorAll('.verse-line').forEach(v => {
+                    v.classList.remove('multi-highlighted');
+                    v.style.backgroundColor = '';
+                });
+                contentArea.querySelectorAll('.verse-container').forEach(v => {
+                    v.classList.remove('multi-highlighted');
+                    v.style.backgroundColor = '';
+                });
                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
                 const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verse}"]`);
                 if (verseLine) {
-                    verseLine.classList.add('highlighted');
+                    verseLine.classList.add('multi-highlighted');
                 }
                 if (verseContainer) {
-                    verseContainer.classList.add('highlighted');
+                    verseContainer.classList.add('multi-highlighted');
                 }
                 console.log(`✔️ Selected verse ${verse}`);
-                showVerseActionsBottomSheet(verse);
             }
             
             // Close drawer on mobile after selecting verse
@@ -1098,10 +1129,12 @@ function displayChapter() {
                             const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                             const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                             if (verseLine) {
-                                verseLine.classList.remove('highlighted');
+                                verseLine.classList.remove('multi-highlighted');
+                                verseLine.style.backgroundColor = '';
                             }
                             if (verseContainer) {
-                                verseContainer.classList.remove('highlighted');
+                                verseContainer.classList.remove('multi-highlighted');
+                                verseContainer.style.backgroundColor = '';
                             }
                             console.log(`🗑️ Removed highlight from verse ${verseNum} immediately`);
                         }
@@ -1124,11 +1157,40 @@ function displayChapter() {
                             const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                             const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                             if (verseLine) {
-                                verseLine.classList.add('highlighted');
+                                verseLine.classList.add('multi-highlighted');
                             }
                             if (verseContainer) {
-                                verseContainer.classList.add('highlighted');
+                                verseContainer.classList.add('multi-highlighted');
                             }
+                        }
+                        
+                        // Update highlighting based on selection count
+                        // For text-based selections, always use multi-highlighted color
+                        if (updatedSelectedVerses.length > 0) {
+                            updatedSelectedVerses.forEach(vNum => {
+                                const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
+                                const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${vNum}"]`);
+                                if (verseLine) {
+                                    verseLine.classList.remove('highlighted');
+                                    verseLine.classList.add('multi-highlighted');
+                                }
+                                if (verseContainer) {
+                                    verseContainer.classList.remove('highlighted');
+                                    verseContainer.classList.add('multi-highlighted');
+                                }
+                            });
+                        } else {
+                            // No verses selected: remove all highlights
+                            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                                v.classList.remove('highlighted');
+                                v.classList.remove('multi-highlighted');
+                                v.style.backgroundColor = '';
+                            });
+                            contentArea.querySelectorAll('.verse-container').forEach(v => {
+                                v.classList.remove('highlighted');
+                                v.classList.remove('multi-highlighted');
+                                v.style.backgroundColor = '';
+                            });
                         }
                         
                         // Debug: Check what verse elements exist
@@ -1169,7 +1231,18 @@ function displayChapter() {
                         // Remove all other active classes
                         versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
                         const contentArea = document.querySelector('.scripture-text');
-                        contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+                        contentArea.querySelectorAll('.verse-line').forEach(v => {
+                            if (v.classList.contains('highlighted')) {
+                                v.classList.remove('highlighted');
+                                v.style.backgroundColor = '';
+                            }
+                        });
+                        contentArea.querySelectorAll('.verse-container').forEach(v => {
+                            if (v.classList.contains('highlighted')) {
+                                v.classList.remove('highlighted');
+                                v.style.backgroundColor = '';
+                            }
+                        });
                         
                         // Select only the clicked verse
                         const verseItem = versesColumn.querySelector(`.number-item[data-verse="${verseNum}"]`);
@@ -1181,10 +1254,10 @@ function displayChapter() {
                         const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                         const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
                         if (verseLine) {
-                            verseLine.classList.add('highlighted');
+                            verseLine.classList.add('multi-highlighted');
                         }
                         if (verseContainer) {
-                            verseContainer.classList.add('highlighted');
+                            verseContainer.classList.add('multi-highlighted');
                         }
                         
                         console.log(`✔️ Selected verse ${verseNum}`);
@@ -1404,8 +1477,8 @@ function handleVersesCopy(copyBtn) {
             copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
         }
     } else if (isMultiVerse) {
-        // Multi-verse - get all highlighted verses
-        const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.highlighted'));
+        // Multi-verse - get all multi-highlighted verses
+        const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
         console.log('Total highlighted verses:', highlightedVerses.length);
         
         const verseNumbers = [];
@@ -2073,13 +2146,24 @@ function updateVerseHighlighting(selectedVerses) {
     if (!contentArea) return;
     
     // Remove highlighted class from all verses
-    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+    contentArea.querySelectorAll('.verse-line').forEach(v => {
+        if (v.classList.contains('multi-highlighted')) {
+            v.classList.remove('multi-highlighted');
+            v.style.backgroundColor = '';
+        }
+    });
+    contentArea.querySelectorAll('.verse-container').forEach(v => {
+        if (v.classList.contains('multi-highlighted')) {
+            v.classList.remove('multi-highlighted');
+            v.style.backgroundColor = '';
+        }
+    });
     
-    // Add highlighted class to all selected verses
+    // Add multi-highlighted class to all selected verses
     selectedVerses.forEach(verseNum => {
         const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
         if (verseLine) {
-            verseLine.classList.add('highlighted');
+            verseLine.classList.add('multi-highlighted');
         }
     });
 }
@@ -2089,12 +2173,12 @@ function scrollToVerse(verseNum) {
     const contentArea = document.querySelector('.scripture-text');
     
     // Remove highlight from all verses first
-    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
+    contentArea.querySelectorAll('.verse-line').forEach(v => v.classList.remove('multi-highlighted'));
     
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseLine) {
         // Add highlight to selected verse
-        verseLine.classList.add('highlighted');
+        verseLine.classList.add('multi-highlighted');
         // On mobile/tablet, scroll with offset to keep top nav visible
         if (window.innerWidth <= 1024) {
             const topNavHeight = 60; // height of top bar
@@ -2725,8 +2809,19 @@ function initializeSearch() {
                         const verseElement = document.querySelector(`.verse-line[data-verse="${verse}"]`);
                         if (verseElement) {
                             verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            document.querySelectorAll('.verse-line').forEach(v => v.classList.remove('highlighted'));
-                            verseElement.classList.add('highlighted');
+                            document.querySelectorAll('.verse-line').forEach(v => {
+                                if (v.classList.contains('highlighted')) {
+                                    v.classList.remove('highlighted');
+                                    v.style.backgroundColor = '';
+                                }
+                            });
+                            document.querySelectorAll('.verse-container').forEach(v => {
+                                if (v.classList.contains('multi-highlighted')) {
+                                    v.classList.remove('multi-highlighted');
+                                    v.style.backgroundColor = '';
+                                }
+                            });
+                            verseElement.classList.add('multi-highlighted');
                         }
                     }, 300);
                 });
