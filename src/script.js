@@ -1559,6 +1559,7 @@ function showVerseActionsBottomSheet(verseNum) {
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
         <div class="verse-actions-content">
+            <div class="grab-handle"></div>
             <div class="verse-actions-header">
                 <div class="verse-reference">${verseReference}</div>
                 <button class="close-bottom-sheet" aria-label="Close">
@@ -1834,6 +1835,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
         <div class="verse-actions-content">
+            <div class="grab-handle"></div>
             <div class="verse-actions-header">
                 <div class="verse-reference">${verseReference}</div>
                 <button class="close-bottom-sheet" aria-label="Close">

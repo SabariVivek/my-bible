@@ -5523,6 +5523,29 @@ body.dark-theme .add-character-btn:hover {
     }
 }
 
+.grab-handle {
+    width: 50px;
+    height: 5px;
+    background-color: #bdbdbd;
+    border-radius: 3px;
+    margin: 10px auto;
+    cursor: grab;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.grab-handle:hover {
+    background-color: #a0a0a0;
+    opacity: 1;
+}
+
+.grab-handle:active {
+    cursor: grabbing;
+    background-color: #808080;
+    opacity: 1;
+}
+
 .verse-actions-header {
     display: flex;
     justify-content: space-between;
@@ -5771,6 +5794,21 @@ body.dark-theme .color-picker-scroll::-webkit-scrollbar-thumb:hover {
 
 body.dark-theme .verse-actions-content {
     background: #292a2d;
+}
+
+body.dark-theme .grab-handle {
+    background-color: #4a4a4a;
+    opacity: 0.7;
+}
+
+body.dark-theme .grab-handle:hover {
+    background-color: #5a5a5a;
+    opacity: 1;
+}
+
+body.dark-theme .grab-handle:active {
+    background-color: #6a6a6a;
+    opacity: 1;
 }
 
 body.dark-theme .verse-actions-header {
