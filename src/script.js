@@ -1109,6 +1109,7 @@ function showVerseActionsBottomSheet(verseNum) {
                     </svg>
                     <span>Copy</span>
                 </button>
+                ${isAdmin() ? `
                 <button class="verse-bottom-action add-note-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
@@ -1116,6 +1117,7 @@ function showVerseActionsBottomSheet(verseNum) {
                     </svg>
                     <span>Note</span>
                 </button>
+                ` : ''}
                 <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -1174,24 +1176,41 @@ function showVerseActionsBottomSheet(verseNum) {
     
     // Copy verse button
     bottomSheet.querySelector('.copy-verse-action').addEventListener('click', () => {
+        const copyBtn = bottomSheet.querySelector('.copy-verse-action');
         const book = bibleBooks[currentBook];
         const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
         const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
         const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
         const copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
+        
+        // Add animation
+        copyBtn.style.transform = 'scale(0.9)';
+        copyBtn.style.opacity = '0.7';
+        
         navigator.clipboard.writeText(copyText).then(() => {
-            showToast('Verse copied!', 'success');
-            closeBottomSheet();
+            showToast('Copied...', 'success');
+            // Restore animation
+            setTimeout(() => {
+                copyBtn.style.transform = 'scale(1)';
+                copyBtn.style.opacity = '1';
+                closeBottomSheet();
+            }, 300);
         }).catch(() => {
             showToast('Failed to copy verse', 'error');
+            // Restore animation on error
+            copyBtn.style.transform = 'scale(1)';
+            copyBtn.style.opacity = '1';
         });
     });
     
-    // Add note button
-    bottomSheet.querySelector('.add-note-action').addEventListener('click', () => {
-        openNotesModal(verseNum);
-        closeBottomSheet();
-    });
+    // Add note button (only if admin access enabled)
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        noteBtn.addEventListener('click', () => {
+            openNotesModal(verseNum);
+            closeBottomSheet();
+        });
+    }
     
     // Add sermon button
     bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
