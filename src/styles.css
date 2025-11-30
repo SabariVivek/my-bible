@@ -28,6 +28,58 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
     }
 }
 
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes colorSelect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -3789,70 +3841,17 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     margin: 0 0 12px 0;
 }
 
-.notes-color-wrapper {
+.notes-color-options-horizontal {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    gap: 12px;
     margin-bottom: 24px;
-    position: relative;
-}
-
-.notes-color-options {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    flex: 1;
-    padding: 4px 5px;
-}
-
-.notes-color-options::-webkit-scrollbar {
-    display: none;
-}
-
-.notes-color-nav {
-    display: none;
-    background: #f1f3f4;
-    border: 1px solid #e0e0e0;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    flex-shrink: 0;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-}
-
-.notes-color-nav:hover {
-    background: #e8eaed;
-    transform: scale(1.05);
-}
-
-.notes-color-nav:active {
-    transform: scale(0.95);
-}
-
-.notes-color-nav svg {
-    color: #5f6368;
-}
-
-@media (min-width: 769px) {
-    .notes-color-nav {
-        display: flex;
-    }
-    
-    .notes-color-options {
-        overflow-x: hidden;
-    }
 }
 
 .note-color-btn {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     border: 3px solid transparent;
     border-radius: 50%;
     cursor: pointer;
@@ -3862,13 +3861,14 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 }
 
 .note-color-btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .note-color-btn.active {
     border-color: #1a73e8;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4);
 }
 
 .notes-modal-actions {
@@ -3967,6 +3967,31 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     background-color: rgba(221, 160, 221, 0.25); /* Plum - Background / Notes */
 }
 
+/* New color classes for bookmark colors */
+.verse-line.has-note.note-yellow {
+    background-color: rgba(255, 235, 59, 0.25); /* Yellow */
+}
+
+.verse-line.has-note.note-green {
+    background-color: rgba(76, 175, 80, 0.25); /* Green */
+}
+
+.verse-line.has-note.note-blue {
+    background-color: rgba(33, 150, 243, 0.25); /* Blue */
+}
+
+.verse-line.has-note.note-pink {
+    background-color: rgba(233, 30, 99, 0.25); /* Pink */
+}
+
+.verse-line.has-note.note-orange {
+    background-color: rgba(255, 152, 0, 0.25); /* Orange */
+}
+
+.verse-line.has-note.note-purple {
+    background-color: rgba(156, 39, 176, 0.25); /* Purple */
+}
+
 .verse-line .note-indicator {
     display: inline-block;
     width: 8px;
@@ -4034,19 +4059,6 @@ body.dark-theme .note-color-btn.active {
     border-color: #8ab4f8;
 }
 
-body.dark-theme .notes-color-nav {
-    background: #3c4043;
-    border-color: #5f6368;
-}
-
-body.dark-theme .notes-color-nav:hover {
-    background: #4d5156;
-}
-
-body.dark-theme .notes-color-nav svg {
-    color: #9aa0a6;
-}
-
 /* Dark theme - note icon (brightness adjustment if needed) */
 body.dark-theme .verse-line.has-note.has-text::after {
     filter: brightness(1.1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
@@ -4091,6 +4103,31 @@ body.dark-theme .verse-line.has-note.note-indigo {
 
 body.dark-theme .verse-line.has-note.note-slate {
     background-color: rgba(221, 160, 221, 0.15); /* Plum - Background / Notes */
+}
+
+/* Dark theme - new color classes for bookmark colors */
+body.dark-theme .verse-line.has-note.note-yellow {
+    background-color: rgba(255, 235, 59, 0.15); /* Yellow */
+}
+
+body.dark-theme .verse-line.has-note.note-green {
+    background-color: rgba(76, 175, 80, 0.15); /* Green */
+}
+
+body.dark-theme .verse-line.has-note.note-blue {
+    background-color: rgba(33, 150, 243, 0.15); /* Blue */
+}
+
+body.dark-theme .verse-line.has-note.note-pink {
+    background-color: rgba(233, 30, 99, 0.15); /* Pink */
+}
+
+body.dark-theme .verse-line.has-note.note-orange {
+    background-color: rgba(255, 152, 0, 0.15); /* Orange */
+}
+
+body.dark-theme .verse-line.has-note.note-purple {
+    background-color: rgba(156, 39, 176, 0.15); /* Purple */
 }
 
 /* Summary Drawer Overlay */
@@ -5288,12 +5325,14 @@ body.dark-theme .add-character-btn:hover {
 
 .verse-actions-buttons {
     display: flex;
+    flex-wrap: nowrap;
     gap: 12px;
     padding: 16px 20px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: thin;
     scrollbar-color: #ccc #f5f5f5;
+    position: relative;
 }
 
 .verse-actions-buttons::-webkit-scrollbar {
@@ -5332,6 +5371,7 @@ body.dark-theme .add-character-btn:hover {
     flex-shrink: 0;
     width: 70px;
     height: 70px;
+    order: 10;
 }
 
 .verse-bottom-action:hover {
@@ -5352,15 +5392,112 @@ body.dark-theme .add-character-btn:hover {
     color: currentColor;
 }
 
+.add-favorite-action {
+    position: relative;
+}
+
 .add-favorite-action svg {
     color: currentColor;
+    stroke: currentColor;
+    transition: color 0.2s ease;
+}
+
+.add-favorite-action.bookmarked svg {
+    color: var(--bookmark-color, #d4a04c);
+    fill: var(--bookmark-color, #d4a04c);
+    stroke: var(--bookmark-color, #d4a04c);
 }
 
 .add-memory-action svg {
     color: currentColor;
 }
 
-/* Dark theme for bottom sheet */
+/* Color Picker Styles */
+.bookmark-color-picker-container {
+    display: none;
+    flex-direction: row;
+    gap: 0;
+    padding: 12px 20px 0 0;
+    border-top: none;
+    background: transparent;
+    flex-shrink: 0;
+    order: 2;
+    position: absolute;
+    left: 110px;
+    top: 16px;
+}
+
+.color-picker-scroll {
+    display: flex;
+    gap: 0;
+    overflow-x: visible;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.color-picker-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.color-picker-scroll::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+
+.color-picker-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.color-picker-scroll::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.color-picker-scroll .color-option {
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    flex: none;
+    flex-direction: row;
+    margin: 0 3px;
+}
+
+.color-picker-scroll .color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.color-picker-scroll .color-option:active {
+    transform: scale(0.95);
+}
+
+/* Dark theme for color picker */
+body.dark-theme .bookmark-color-picker-container {
+    background: transparent;
+}
+
+body.dark-theme .color-picker-scroll::-webkit-scrollbar-track {
+    background: #3c4043;
+}
+
+body.dark-theme .color-picker-scroll::-webkit-scrollbar-thumb {
+    background: #5f6368;
+}
+
+body.dark-theme .color-picker-scroll::-webkit-scrollbar-thumb:hover {
+    background: #8a8d91;
+}
 body.dark-theme .verse-actions-content {
     background: #292a2d;
 }
@@ -6445,5 +6582,109 @@ body.light-theme .user-profile-card:hover div[class*="bg-gradient"] {
     50% {
         opacity: 0.6;
     }
+}
+
+/* Bookmark Color Picker */
+.bookmark-color-picker-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.bookmark-color-picker {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+.color-picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.color-picker-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.color-picker-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-picker-close:hover {
+    color: #000;
+}
+
+.color-picker-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.color-option {
+    width: 60px;
+    height: 60px;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    border-color: #ccc;
+}
+
+.color-option:active {
+    transform: scale(0.95);
+}
+
+/* Dark theme color picker */
+body.dark-theme .bookmark-color-picker {
+    background: #292a2d;
+}
+
+body.dark-theme .color-picker-header h3 {
+    color: #e8eaed;
+}
+
+body.dark-theme .color-picker-close {
+    color: #999;
+}
+
+body.dark-theme .color-picker-close:hover {
+    color: #fff;
+}
+
+body.dark-theme .color-option {
+    border-color: #3c4043;
+}
+
+body.dark-theme .color-option:hover {
+    border-color: #666;
 }
 

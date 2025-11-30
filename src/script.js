@@ -1072,6 +1072,156 @@ function updateMobileChapterHeader() {
 }
 
 // Handle swipe gesture for verse actions
+// Show color picker for bookmark selection
+async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+    const currentColor = verseNotes[noteKey]?.color;
+    
+    // Move bookmark button to first position with animation
+    bookmarkBtn.style.order = '1';
+    bookmarkBtn.style.animation = 'slideFromRight 0.5s ease-out forwards';
+    
+    // Hide all other action buttons except bookmark
+    const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action:not(.add-favorite-action)');
+    allActionButtons.forEach(btn => {
+        btn.style.opacity = '0';
+        btn.style.pointerEvents = 'none';
+        btn.style.animation = 'fadeOut 0.3s ease-out forwards';
+    });
+    
+    // Get or create color picker container in buttons area
+    let colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
+    if (!colorPickerContainer) {
+        colorPickerContainer = document.createElement('div');
+        colorPickerContainer.className = 'bookmark-color-picker-container';
+        colorPickerContainer.innerHTML = `
+            <div class="color-picker-scroll">
+                <button class="color-option" data-color="burgundy" style="background: #3BA8FF !important;" title="Sky Blue"></button>
+                <button class="color-option" data-color="forest" style="background: #2ECC71 !important;" title="Emerald Green"></button>
+                <button class="color-option" data-color="navy" style="background: #F1C40F !important;" title="Golden Yellow"></button>
+                <button class="color-option" data-color="amber" style="background: #FF7F50 !important;" title="Coral Orange"></button>
+                <button class="color-option" data-color="violet" style="background: #E74C3C !important;" title="Rose Red"></button>
+                <button class="color-option" data-color="teal" style="background: #9B59B6 !important;" title="Violet Purple"></button>
+                <button class="color-option" data-color="rust" style="background: #1ABC9C !important;" title="Turquoise"></button>
+                <button class="color-option" data-color="olive" style="background: #FF5FA2 !important;" title="Bright Pink"></button>
+                <button class="color-option" data-color="indigo" style="background: #007C82 !important;" title="Deep Teal"></button>
+                <button class="color-option" data-color="slate" style="background: #A3E635 !important;" title="Soft Lime"></button>
+                <button class="color-option" data-color="yellow" style="background: #4C51BF !important;" title="Indigo"></button>
+                <button class="color-option" data-color="green" style="background: #FFB020 !important;" title="Amber"></button>
+            </div>
+        `;
+        buttonsContainer.appendChild(colorPickerContainer);
+    }
+    
+    // Set color picker order to appear right after bookmark
+    colorPickerContainer.style.order = '2';
+    
+    // Show the color picker with animation (with delay so it follows bookmark)
+    colorPickerContainer.style.display = 'flex';
+    colorPickerContainer.style.animation = 'slideFromRight 0.5s ease-out 0.1s forwards';
+    
+    // Remove previous event listeners and add new ones
+    const colorOptions = colorPickerContainer.querySelectorAll('.color-option');
+    colorOptions.forEach(option => {
+        const newOption = option.cloneNode(true);
+        option.parentNode.replaceChild(newOption, option);
+    });
+    
+    // Add event listeners to color options
+    colorPickerContainer.querySelectorAll('.color-option').forEach(colorBtn => {
+        colorBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            const selectedColor = colorBtn.dataset.color;
+            
+            // If clicking the same color, close and restore buttons
+            if (currentColor === selectedColor) {
+                hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn);
+                return;
+            }
+            
+            // Create or update note entry with selected color
+            if (!verseNotes[noteKey]) {
+                verseNotes[noteKey] = {
+                    text: '',
+                    color: selectedColor,
+                    book: bibleBooks[currentBook].name,
+                    chapter: currentChapter,
+                    verse: verseNum,
+                    timestamp: new Date().toISOString()
+                };
+            } else {
+                verseNotes[noteKey].color = selectedColor;
+            }
+            
+            // Add the color highlight to the verse in the UI
+            const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+            if (verseLine) {
+                // Remove all color classes
+                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                // Add new color class
+                verseLine.classList.add(`note-${selectedColor}`);
+            }
+            
+            // Update button state with the color
+            bookmarkBtn.classList.add('bookmarked');
+            bookmarkBtn.setAttribute('data-bookmark-color', selectedColor);
+            const colorHex = colorBtn.style.background;
+            bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
+            
+            // Add animation to selected color
+            colorBtn.style.animation = 'colorSelect 0.3s ease-out';
+            
+            // Show toast
+            showToast(`Color ${selectedColor} selected...`, 'success');
+            
+            // Save changes
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            try {
+                await saveNotesToSupabase();
+            } catch (error) {
+                console.error('Error saving to Supabase:', error);
+            }
+        });
+    });
+}
+
+function hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn) {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+    const colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
+    
+    // Animate color picker out first
+    if (colorPickerContainer) {
+        colorPickerContainer.style.animation = 'slideFromRight 0.5s ease-out 0s reverse forwards';
+        setTimeout(() => {
+            colorPickerContainer.style.display = 'none';
+            colorPickerContainer.style.animation = '';
+            colorPickerContainer.style.order = '';
+        }, 500);
+    }
+    
+    // Animate bookmark button back to original position
+    setTimeout(() => {
+        bookmarkBtn.style.animation = 'slideFromRight 0.5s ease-out 0s reverse forwards';
+        setTimeout(() => {
+            bookmarkBtn.style.order = '';
+            bookmarkBtn.style.animation = '';
+        }, 500);
+    }, 100);
+    
+    // Restore other action buttons with slight delay
+    setTimeout(() => {
+        const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action:not(.add-favorite-action)');
+        allActionButtons.forEach(btn => {
+            btn.style.animation = 'fadeIn 0.3s ease-out forwards';
+            btn.style.opacity = '1';
+            btn.style.pointerEvents = 'auto';
+        });
+    }, 150);
+}
+
 // Show verse actions in a bottom sheet modal
 function showVerseActionsBottomSheet(verseNum) {
     // Create or get the bottom sheet modal
@@ -1129,9 +1279,7 @@ function showVerseActionsBottomSheet(verseNum) {
                 </button>
                 <button class="verse-bottom-action add-favorite-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10l7 7v11a2 2 0 0 1-2 2z"></path>
-                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
-                        <polyline points="7 3 7 8 15 8"></polyline>
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                     </svg>
                     <span>Bookmark</span>
                 </button>
@@ -1167,6 +1315,19 @@ function showVerseActionsBottomSheet(verseNum) {
     const backdrop = bottomSheet.querySelector('.verse-actions-backdrop');
     
     const closeBottomSheet = () => {
+        // Restore hidden buttons if color picker was active
+        const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+        if (buttonsContainer) {
+            const hiddenButtons = buttonsContainer.querySelectorAll('.verse-bottom-action[style*="opacity: 0"]');
+            if (hiddenButtons.length > 0) {
+                hiddenButtons.forEach(btn => {
+                    btn.style.animation = '';
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                });
+            }
+        }
+        
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
     };
@@ -1218,10 +1379,56 @@ function showVerseActionsBottomSheet(verseNum) {
         closeBottomSheet();
     });
     
-    // Add favorite button
-    bottomSheet.querySelector('.add-favorite-action').addEventListener('click', () => {
-        showToast('Add to Favorites - Coming Soon!', 'info');
-        closeBottomSheet();
+    // Add bookmark button
+    const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
+    const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
+    
+    // Check if verse has a color and update button appearance
+    if (verseNotes[noteKey] && verseNotes[noteKey].color) {
+        bookmarkBtn.classList.add('bookmarked');
+        const color = verseNotes[noteKey].color;
+        bookmarkBtn.setAttribute('data-bookmark-color', color);
+        // Get the color hex value from the color buttons
+        const colorHex = Array.from(colorPickerContainer?.querySelectorAll('.color-option') || []).find(btn => btn.dataset.color === color)?.style.background || '#d4a04c';
+        bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
+    } else {
+        bookmarkBtn.classList.remove('bookmarked');
+        bookmarkBtn.removeAttribute('data-bookmark-color');
+    }
+    
+    bookmarkBtn.addEventListener('click', async () => {
+        // If already bookmarked (has color), remove the bookmark
+        if (verseNotes[noteKey] && verseNotes[noteKey].color) {
+            const oldColor = verseNotes[noteKey].color;
+            verseNotes[noteKey].color = null;
+            
+            // Remove the color highlight from the verse in the UI
+            const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+            if (verseLine) {
+                verseLine.classList.remove(`note-${oldColor}`);
+            }
+            
+            // If no text, remove the note entirely
+            if (!verseNotes[noteKey].text) {
+                delete verseNotes[noteKey];
+            }
+            
+            bookmarkBtn.classList.remove('bookmarked');
+            bookmarkBtn.removeAttribute('data-bookmark-color');
+            bookmarkBtn.style.removeProperty('--bookmark-color');
+            showToast('Bookmark removed...', 'success');
+            
+            // Save changes
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            try {
+                await saveNotesToSupabase();
+            } catch (error) {
+                console.error('Error saving to Supabase:', error);
+            }
+        } else {
+            // Show color picker for new bookmark
+            showColorPickerForBookmark(verseNum, bookmarkBtn);
+        }
     });
     
     // Add memory verse button
