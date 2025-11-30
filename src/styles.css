@@ -4180,70 +4180,102 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     vertical-align: middle;
 }
 
-/* Colored note backgrounds based on category */
+/* Bookmark color styles - Light Theme */
 .verse-line.has-note.note-burgundy {
-    background-color: rgba(59, 168, 255, 0.35) !important; /* Sky Blue */
+    background-color: #e7f1ff !important;
+    border: 1px solid #78aaff !important;
+    box-shadow: 0 0 10px rgba(120, 170, 255, 0.35) !important;
 }
 
 .verse-line.has-note.note-forest {
-    background-color: rgba(46, 204, 113, 0.35) !important; /* Emerald Green */
+    background-color: #fff8d6 !important;
+    border: 1px solid #e6c45a !important;
+    box-shadow: 0 0 10px rgba(230, 196, 90, 0.3) !important;
 }
 
 .verse-line.has-note.note-navy {
-    background-color: rgba(241, 196, 15, 0.35) !important; /* Golden Yellow */
+    background-color: #ddffe8 !important;
+    border: 1px solid #72e6a4 !important;
+    box-shadow: 0 0 10px rgba(114, 230, 164, 0.3) !important;
 }
 
 .verse-line.has-note.note-amber {
-    background-color: rgba(255, 127, 80, 0.35) !important; /* Coral Orange */
+    background-color: #ffe4f0 !important;
+    border: 1px solid #ff8fc1 !important;
+    box-shadow: 0 0 10px rgba(255, 143, 193, 0.3) !important;
 }
 
 .verse-line.has-note.note-violet {
-    background-color: rgba(231, 76, 60, 0.35) !important; /* Rose Red */
+    background-color: #ffe9d8 !important;
+    border: 1px solid #ff9a54 !important;
+    box-shadow: 0 0 10px rgba(255, 154, 84, 0.3) !important;
 }
 
 .verse-line.has-note.note-teal {
-    background-color: rgba(155, 89, 182, 0.35) !important; /* Violet Purple */
+    background-color: #f2e9ff !important;
+    border: 1px solid #b38aff !important;
+    box-shadow: 0 0 10px rgba(179, 138, 255, 0.3) !important;
 }
 
 .verse-line.has-note.note-rust {
-    background-color: rgba(26, 188, 156, 0.35) !important; /* Turquoise */
+    background-color: #dcfaff !important;
+    border: 1px solid #5ed0d9 !important;
+    box-shadow: 0 0 10px rgba(94, 208, 217, 0.3) !important;
 }
 
 .verse-line.has-note.note-olive {
-    background-color: rgba(255, 95, 162, 0.35) !important; /* Bright Pink */
+    background-color: #ffe5e5 !important;
+    border: 1px solid #ff7a7a !important;
+    box-shadow: 0 0 10px rgba(255, 122, 122, 0.3) !important;
 }
 
 .verse-line.has-note.note-indigo {
-    background-color: rgba(0, 124, 130, 0.35) !important; /* Deep Teal */
+    background-color: #f6fbe1 !important;
+    border: 1px solid #b4c76f !important;
+    box-shadow: 0 0 10px rgba(180, 199, 111, 0.3) !important;
 }
 
 .verse-line.has-note.note-slate {
-    background-color: rgba(163, 230, 53, 0.35) !important; /* Soft Lime */
+    background-color: #f1f1f1 !important;
+    border: 1px solid #9d9d9d !important;
+    box-shadow: 0 0 10px rgba(157, 157, 157, 0.25) !important;
 }
 
 /* New color classes for bookmark colors */
 .verse-line.has-note.note-yellow {
-    background-color: rgba(76, 81, 191, 0.35) !important; /* Indigo */
+    background-color: #e7f1ff !important;
+    border: 1px solid #78aaff !important;
+    box-shadow: 0 0 10px rgba(120, 170, 255, 0.35) !important;
 }
 
 .verse-line.has-note.note-green {
-    background-color: rgba(255, 176, 32, 0.35) !important; /* Amber */
+    background-color: #fff8d6 !important;
+    border: 1px solid #e6c45a !important;
+    box-shadow: 0 0 10px rgba(230, 196, 90, 0.3) !important;
 }
 
 .verse-line.has-note.note-blue {
-    background-color: rgba(33, 150, 243, 0.35) !important; /* Blue */
+    background-color: #ddffe8 !important;
+    border: 1px solid #72e6a4 !important;
+    box-shadow: 0 0 10px rgba(114, 230, 164, 0.3) !important;
 }
 
 .verse-line.has-note.note-pink {
-    background-color: rgba(233, 30, 99, 0.35) !important; /* Pink */
+    background-color: #ffe4f0 !important;
+    border: 1px solid #ff8fc1 !important;
+    box-shadow: 0 0 10px rgba(255, 143, 193, 0.3) !important;
 }
 
 .verse-line.has-note.note-orange {
-    background-color: rgba(255, 152, 0, 0.35) !important; /* Orange */
+    background-color: #ffe9d8 !important;
+    border: 1px solid #ff9a54 !important;
+    box-shadow: 0 0 10px rgba(255, 154, 84, 0.3) !important;
 }
 
 .verse-line.has-note.note-purple {
-    background-color: rgba(156, 39, 176, 0.35) !important; /* Purple */
+    background-color: #f2e9ff !important;
+    border: 1px solid #b38aff !important;
+    box-shadow: 0 0 10px rgba(179, 138, 255, 0.3) !important;
 }
 
 .verse-line .note-indicator {
@@ -4320,68 +4352,100 @@ body.dark-theme .verse-line.has-note.has-text::after {
 
 /* Dark theme colored note backgrounds */
 body.dark-theme .verse-line.has-note.note-burgundy {
-    background-color: rgba(59, 168, 255, 0.25) !important; /* Sky Blue */
+    background-color: rgba(120, 170, 255, 0.12) !important;
+    border: 1px solid #78aaffaa !important;
+    box-shadow: 0 0 12px rgba(120, 170, 255, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-forest {
-    background-color: rgba(46, 204, 113, 0.25) !important; /* Emerald Green */
+    background-color: rgba(230, 196, 90, 0.15) !important;
+    border: 1px solid #e6c45aaa !important;
+    box-shadow: 0 0 12px rgba(230, 196, 90, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-navy {
-    background-color: rgba(241, 196, 15, 0.25) !important; /* Golden Yellow */
+    background-color: rgba(114, 230, 164, 0.15) !important;
+    border: 1px solid #72e6a4aa !important;
+    box-shadow: 0 0 12px rgba(114, 230, 164, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-amber {
-    background-color: rgba(255, 127, 80, 0.25) !important; /* Coral Orange */
+    background-color: rgba(255, 143, 193, 0.15) !important;
+    border: 1px solid #ff8fc1aa !important;
+    box-shadow: 0 0 12px rgba(255, 143, 193, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-violet {
-    background-color: rgba(231, 76, 60, 0.25) !important; /* Rose Red */
+    background-color: rgba(255, 154, 84, 0.15) !important;
+    border: 1px solid #ff9a54aa !important;
+    box-shadow: 0 0 12px rgba(255, 154, 84, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-teal {
-    background-color: rgba(155, 89, 182, 0.25) !important; /* Violet Purple */
+    background-color: rgba(179, 138, 255, 0.15) !important;
+    border: 1px solid #b38affaa !important;
+    box-shadow: 0 0 12px rgba(179, 138, 255, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-rust {
-    background-color: rgba(26, 188, 156, 0.25) !important; /* Turquoise */
+    background-color: rgba(94, 208, 217, 0.15) !important;
+    border: 1px solid #5ed0d9aa !important;
+    box-shadow: 0 0 12px rgba(94, 208, 217, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-olive {
-    background-color: rgba(255, 95, 162, 0.25) !important; /* Bright Pink */
+    background-color: rgba(255, 122, 122, 0.15) !important;
+    border: 1px solid #ff7a7aaa !important;
+    box-shadow: 0 0 12px rgba(255, 122, 122, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-indigo {
-    background-color: rgba(0, 124, 130, 0.25) !important; /* Deep Teal */
+    background-color: rgba(180, 199, 111, 0.15) !important;
+    border: 1px solid #b4c76faa !important;
+    box-shadow: 0 0 12px rgba(180, 199, 111, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-slate {
-    background-color: rgba(163, 230, 53, 0.25) !important; /* Soft Lime */
+    background-color: rgba(157, 157, 157, 0.15) !important;
+    border: 1px solid #9d9d9daa !important;
+    box-shadow: 0 0 12px rgba(157, 157, 157, 0.25) !important;
 }
 
 /* Dark theme - new color classes for bookmark colors */
 body.dark-theme .verse-line.has-note.note-yellow {
-    background-color: rgba(76, 81, 191, 0.25) !important; /* Indigo */
+    background-color: rgba(120, 170, 255, 0.12) !important;
+    border: 1px solid #78aaffaa !important;
+    box-shadow: 0 0 12px rgba(120, 170, 255, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-green {
-    background-color: rgba(255, 176, 32, 0.25) !important; /* Amber */
+    background-color: rgba(230, 196, 90, 0.12) !important;
+    border: 1px solid #e6c45aaa !important;
+    box-shadow: 0 0 12px rgba(230, 196, 90, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-blue {
-    background-color: rgba(33, 150, 243, 0.25) !important; /* Blue */
+    background-color: rgba(114, 230, 164, 0.15) !important;
+    border: 1px solid #72e6a4aa !important;
+    box-shadow: 0 0 12px rgba(114, 230, 164, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-pink {
-    background-color: rgba(233, 30, 99, 0.25) !important; /* Pink */
+    background-color: rgba(255, 143, 193, 0.15) !important;
+    border: 1px solid #ff8fc1aa !important;
+    box-shadow: 0 0 12px rgba(255, 143, 193, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-orange {
-    background-color: rgba(255, 152, 0, 0.25) !important; /* Orange */
+    background-color: rgba(255, 154, 84, 0.15) !important;
+    border: 1px solid #ff9a54aa !important;
+    box-shadow: 0 0 12px rgba(255, 154, 84, 0.25) !important;
 }
 
 body.dark-theme .verse-line.has-note.note-purple {
-    background-color: rgba(156, 39, 176, 0.25) !important; /* Purple */
+    background-color: rgba(179, 138, 255, 0.15) !important;
+    border: 1px solid #b38affaa !important;
+    box-shadow: 0 0 12px rgba(179, 138, 255, 0.25) !important;
 }
 
 /* Summary Drawer Overlay */

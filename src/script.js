@@ -1303,18 +1303,18 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         colorPickerContainer.style.borderTop = '1px solid #e0e0e0';
         colorPickerContainer.innerHTML = `
             <div class="color-picker-scroll">
-                <button class="color-option" data-color="burgundy" style="background: #3BA8FF !important;" title="Sky Blue"></button>
-                <button class="color-option" data-color="forest" style="background: #2ECC71 !important;" title="Emerald Green"></button>
-                <button class="color-option" data-color="navy" style="background: #F1C40F !important;" title="Golden Yellow"></button>
-                <button class="color-option" data-color="amber" style="background: #FF7F50 !important;" title="Coral Orange"></button>
-                <button class="color-option" data-color="violet" style="background: #E74C3C !important;" title="Rose Red"></button>
-                <button class="color-option" data-color="teal" style="background: #9B59B6 !important;" title="Violet Purple"></button>
-                <button class="color-option" data-color="rust" style="background: #1ABC9C !important;" title="Turquoise"></button>
-                <button class="color-option" data-color="olive" style="background: #FF5FA2 !important;" title="Bright Pink"></button>
-                <button class="color-option" data-color="indigo" style="background: #007C82 !important;" title="Deep Teal"></button>
-                <button class="color-option" data-color="slate" style="background: #A3E635 !important;" title="Soft Lime"></button>
-                <button class="color-option" data-color="yellow" style="background: #4C51BF !important;" title="Indigo"></button>
-                <button class="color-option" data-color="green" style="background: #FFB020 !important;" title="Amber"></button>
+                <button class="color-option" data-color="burgundy" style="background: #78aaff !important;" title="Blue"></button>
+                <button class="color-option" data-color="forest" style="background: #e6c45a !important;" title="Gold"></button>
+                <button class="color-option" data-color="navy" style="background: #72e6a4 !important;" title="Mint"></button>
+                <button class="color-option" data-color="amber" style="background: #ff8fc1 !important;" title="Rose"></button>
+                <button class="color-option" data-color="violet" style="background: #ff9a54 !important;" title="Orange"></button>
+                <button class="color-option" data-color="teal" style="background: #b38aff !important;" title="Purple"></button>
+                <button class="color-option" data-color="rust" style="background: #5ed0d9 !important;" title="Teal"></button>
+                <button class="color-option" data-color="olive" style="background: #ff7a7a !important;" title="Red"></button>
+                <button class="color-option" data-color="indigo" style="background: #b4c76f !important;" title="Olive"></button>
+                <button class="color-option" data-color="slate" style="background: #9d9d9d !important;" title="Grey"></button>
+                <button class="color-option" data-color="yellow" style="background: #78aaff !important;" title="Blue"></button>
+                <button class="color-option" data-color="green" style="background: #e6c45a !important;" title="Gold"></button>
             </div>
         `;
         buttonsContainer.appendChild(colorPickerContainer);
@@ -1669,18 +1669,18 @@ function showVerseActionsBottomSheet(verseNum) {
         bookmarkBtn.setAttribute('data-bookmark-color', color);
         // Set the bookmark color - will be updated when color picker is shown
         const colorMap = {
-            'burgundy': '#3BA8FF',
-            'forest': '#2ECC71',
-            'navy': '#F1C40F',
-            'amber': '#FF7F50',
-            'violet': '#E74C3C',
-            'teal': '#9B59B6',
-            'rust': '#1ABC9C',
-            'olive': '#FF5FA2',
-            'indigo': '#007C82',
-            'slate': '#A3E635',
-            'yellow': '#4C51BF',
-            'green': '#FFB020'
+            'burgundy': '#78aaff',
+            'forest': '#e6c45a',
+            'navy': '#72e6a4',
+            'amber': '#ff8fc1',
+            'violet': '#ff9a54',
+            'teal': '#b38aff',
+            'rust': '#5ed0d9',
+            'olive': '#ff7a7a',
+            'indigo': '#b4c76f',
+            'slate': '#9d9d9d',
+            'yellow': '#78aaff',
+            'green': '#e6c45a'
         };
         const colorHex = colorMap[color] || '#d4a04c';
         bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
@@ -2041,18 +2041,18 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
         colorPickerContainer.style.borderTop = '1px solid #e0e0e0';
         colorPickerContainer.innerHTML = `
             <div class="color-picker-scroll">
-                <button class="color-option" data-color="burgundy" style="background: #3BA8FF !important;" title="Sky Blue"></button>
-                <button class="color-option" data-color="forest" style="background: #2ECC71 !important;" title="Emerald Green"></button>
-                <button class="color-option" data-color="navy" style="background: #F1C40F !important;" title="Golden Yellow"></button>
-                <button class="color-option" data-color="amber" style="background: #FF7F50 !important;" title="Coral Orange"></button>
-                <button class="color-option" data-color="violet" style="background: #E74C3C !important;" title="Rose Red"></button>
-                <button class="color-option" data-color="teal" style="background: #9B59B6 !important;" title="Violet Purple"></button>
-                <button class="color-option" data-color="rust" style="background: #1ABC9C !important;" title="Turquoise"></button>
-                <button class="color-option" data-color="olive" style="background: #FF5FA2 !important;" title="Bright Pink"></button>
-                <button class="color-option" data-color="indigo" style="background: #007C82 !important;" title="Deep Teal"></button>
-                <button class="color-option" data-color="slate" style="background: #A3E635 !important;" title="Soft Lime"></button>
-                <button class="color-option" data-color="yellow" style="background: #4C51BF !important;" title="Indigo"></button>
-                <button class="color-option" data-color="green" style="background: #FFB020 !important;" title="Amber"></button>
+                <button class="color-option" data-color="burgundy" style="background: #78aaff !important;" title="Blue"></button>
+                <button class="color-option" data-color="forest" style="background: #e6c45a !important;" title="Gold"></button>
+                <button class="color-option" data-color="navy" style="background: #72e6a4 !important;" title="Mint"></button>
+                <button class="color-option" data-color="amber" style="background: #ff8fc1 !important;" title="Rose"></button>
+                <button class="color-option" data-color="violet" style="background: #ff9a54 !important;" title="Orange"></button>
+                <button class="color-option" data-color="teal" style="background: #b38aff !important;" title="Purple"></button>
+                <button class="color-option" data-color="rust" style="background: #5ed0d9 !important;" title="Teal"></button>
+                <button class="color-option" data-color="olive" style="background: #ff7a7a !important;" title="Red"></button>
+                <button class="color-option" data-color="indigo" style="background: #b4c76f !important;" title="Olive"></button>
+                <button class="color-option" data-color="slate" style="background: #9d9d9d !important;" title="Grey"></button>
+                <button class="color-option" data-color="yellow" style="background: #78aaff !important;" title="Blue"></button>
+                <button class="color-option" data-color="green" style="background: #e6c45a !important;" title="Gold"></button>
             </div>
         `;
         buttonsContainer.appendChild(colorPickerContainer);
