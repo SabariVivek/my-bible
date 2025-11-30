@@ -1079,23 +1079,23 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
     const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
     const currentColor = verseNotes[noteKey]?.color;
     
-    // Move bookmark button to first position with animation
-    bookmarkBtn.style.order = '1';
-    bookmarkBtn.style.animation = 'slideFromRight 0.5s ease-out forwards';
-    
-    // Hide all other action buttons except bookmark
-    const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action:not(.add-favorite-action)');
+    // Hide all action buttons
+    const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action');
     allActionButtons.forEach(btn => {
         btn.style.opacity = '0';
         btn.style.pointerEvents = 'none';
         btn.style.animation = 'fadeOut 0.3s ease-out forwards';
     });
     
-    // Get or create color picker container in buttons area
+    // Get or create color picker container
     let colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
     if (!colorPickerContainer) {
         colorPickerContainer = document.createElement('div');
         colorPickerContainer.className = 'bookmark-color-picker-container';
+        colorPickerContainer.style.display = 'flex';
+        colorPickerContainer.style.width = '100%';
+        colorPickerContainer.style.justifyContent = 'center';
+        colorPickerContainer.style.padding = '0';
         colorPickerContainer.innerHTML = `
             <div class="color-picker-scroll">
                 <button class="color-option" data-color="burgundy" style="background: #3BA8FF !important;" title="Sky Blue"></button>
@@ -1115,12 +1115,9 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         buttonsContainer.appendChild(colorPickerContainer);
     }
     
-    // Set color picker order to appear right after bookmark
-    colorPickerContainer.style.order = '2';
-    
-    // Show the color picker with animation (with delay so it follows bookmark)
+    // Show the color picker
     colorPickerContainer.style.display = 'flex';
-    colorPickerContainer.style.animation = 'slideFromRight 0.5s ease-out 0.1s forwards';
+    colorPickerContainer.style.animation = 'fadeIn 0.3s ease-out forwards';
     
     // Remove previous event listeners and add new ones
     const colorOptions = colorPickerContainer.querySelectorAll('.color-option');
@@ -1134,12 +1131,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
         colorBtn.addEventListener('click', async (e) => {
             e.stopPropagation();
             const selectedColor = colorBtn.dataset.color;
-            
-            // If clicking the same color, close and restore buttons
-            if (currentColor === selectedColor) {
-                hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn);
-                return;
-            }
             
             // Create or update note entry with selected color
             if (!verseNotes[noteKey]) {
@@ -1172,19 +1163,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             const colorHex = colorBtn.style.background;
             bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
             
-            // Add checkmark to selected color
-            const existingCheckmark = colorBtn.querySelector('.color-checkmark');
-            if (existingCheckmark) {
-                existingCheckmark.remove();
-            }
-            const checkmark = document.createElement('div');
-            checkmark.className = 'color-checkmark';
-            checkmark.innerHTML = '✓';
-            colorBtn.appendChild(checkmark);
-            
-            // Add animation to selected color
-            colorBtn.style.animation = 'colorSelect 0.3s ease-out';
-            
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
@@ -1206,36 +1184,26 @@ function hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn) {
     const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
     const colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
     
-    // Animate color picker out first
+    // Hide color picker
     if (colorPickerContainer) {
-        colorPickerContainer.style.animation = 'slideFromRight 0.5s ease-out 0s reverse forwards';
+        colorPickerContainer.style.animation = 'fadeOut 0.3s ease-out forwards';
         setTimeout(() => {
             colorPickerContainer.style.display = 'none';
             colorPickerContainer.style.animation = '';
-            colorPickerContainer.style.order = '';
-        }, 500);
+        }, 300);
     }
     
-    // Animate bookmark button back to original position
+    // Restore all action buttons
     setTimeout(() => {
-        bookmarkBtn.style.animation = 'slideFromRight 0.5s ease-out 0s reverse forwards';
-        setTimeout(() => {
-            bookmarkBtn.style.order = '';
-            bookmarkBtn.style.animation = '';
-            
-            // Scroll to the beginning to start from Copy button
-            buttonsContainer.scrollLeft = 0;
-        }, 500);
-    }, 100);
-    
-    // Restore other action buttons with slight delay
-    setTimeout(() => {
-        const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action:not(.add-favorite-action)');
+        const allActionButtons = buttonsContainer.querySelectorAll('.verse-bottom-action');
         allActionButtons.forEach(btn => {
             btn.style.animation = 'fadeIn 0.3s ease-out forwards';
             btn.style.opacity = '1';
             btn.style.pointerEvents = 'auto';
         });
+        
+        // Scroll to the beginning
+        buttonsContainer.scrollLeft = 0;
     }, 150);
 }
 
@@ -1302,10 +1270,9 @@ function showVerseActionsBottomSheet(verseNum) {
                 </button>
                 <button class="verse-bottom-action add-memory-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        <circle cx="9" cy="10" r="1"></circle>
-                        <circle cx="12" cy="10" r="1"></circle>
-                        <circle cx="15" cy="10" r="1"></circle>
+                        <path d="M15 21H9v-2a6 6 0 0 1 6 0v2Z"></path>
+                        <path d="M17 13a5 5 0 0 0-10 0"></path>
+                        <path d="M12 5V2m5 3l-3.5-3.5M7 8L3.5 4.5"></path>
                     </svg>
                     <span>Memory</span>
                 </button>
@@ -1472,10 +1439,42 @@ function showVerseActionsBottomSheet(verseNum) {
     });
     
     // Add memory verse button
-    bottomSheet.querySelector('.add-memory-action').addEventListener('click', () => {
+    // Add memory verse button with dynamic state
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    
+    // Function to update memory verse button appearance
+    const updateMemoryButtonAppearance = (isMemory) => {
+        const svgIcon = memoryBtn.querySelector('svg');
+        
+        if (isMemory) {
+            memoryBtn.classList.add('memory-verse-active');
+            // Show filled star
+            if (svgIcon) {
+                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor"/>';
+                svgIcon.style.display = 'block';
+            }
+        } else {
+            memoryBtn.classList.remove('memory-verse-active');
+            // Show outline star
+            if (svgIcon) {
+                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
+                svgIcon.style.display = 'block';
+            }
+        }
+    };
+    
+    // Check if this verse is a memory verse and update button appearance
+    const memoryVerseRef = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
+    const isMemory = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
+    updateMemoryButtonAppearance(isMemory);
+    
+    memoryBtn.addEventListener('click', async () => {
         currentNoteVerse = verseNum;
-        toggleMemoryVerse();
-        closeBottomSheet();
+        await toggleMemoryVerse();
+        
+        // Update button appearance after toggling
+        const isNowMemory = isMemoryVerse(bibleBooks[currentBook].name, currentChapter, verseNum);
+        updateMemoryButtonAppearance(isNowMemory);
     });
     
     // Share verse button
@@ -3726,6 +3725,45 @@ async function loadMemoryVersesFromSupabase() {
         return false;
     }
 }
+
+// Toggle memory verse status
+async function toggleMemoryVerse() {
+    if (!currentNoteVerse) return;
+    const verseReference = `${bibleBooks[currentBook].name} ${currentChapter}:${currentNoteVerse}`;
+    
+    // Initialize memoryVerses if it doesn't exist
+    if (typeof window.memoryVerses === 'undefined') {
+        window.memoryVerses = [];
+    }
+    
+    // Toggle memory verse status
+    const isMemoryVerse = window.memoryVerses.includes(verseReference);
+    if (isMemoryVerse) {
+        // Remove from memory verses
+        window.memoryVerses = window.memoryVerses.filter(v => v !== verseReference);
+    } else {
+        // Add to memory verses
+        window.memoryVerses.push(verseReference);
+    }
+    
+    // Save to Supabase
+    await saveMemoryVersesToSupabase();
+    
+    // Update UI indicators
+    markBooksWithMemoryVerses();
+    updateVerseMemoryVerseIndicators();
+    
+    // Update the verse line class
+    const verseLine = document.querySelector(`.verse-line[data-verse="${currentNoteVerse}"]`);
+    if (verseLine) {
+        if (isMemoryVerse) {
+            verseLine.classList.remove('memory-verse');
+        } else {
+            verseLine.classList.add('memory-verse');
+        }
+    }
+}
+
 async function saveMemoryVersesToSupabase() {
     // Save to localStorage immediately
     localStorage.setItem('memoryVerses', JSON.stringify(memoryVerses));
@@ -3846,9 +3884,23 @@ function openNotesModal(verseNum = null) {
     if (checkIsMemoryVerse) {
         memoryVerseToggle.classList.add('active');
         memoryVerseToggle.title = 'Remove from Memory Verses';
+        
+        // Show filled star
+        const svgIcon = memoryVerseToggle.querySelector('svg');
+        if (svgIcon) {
+            svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor"/>';
+            svgIcon.style.display = 'block';
+        }
     } else {
         memoryVerseToggle.classList.remove('active');
         memoryVerseToggle.title = 'Add to Memory Verses';
+        
+        // Show outline star
+        const svgIcon = memoryVerseToggle.querySelector('svg');
+        if (svgIcon) {
+            svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
+            svgIcon.style.display = 'block';
+        }
     }
     // Load existing note if available
     if (existingNote) {
@@ -4177,6 +4229,23 @@ function initializeNotesModal() {
             memoryVerseToggle.classList.add('active');
             memoryVerseToggle.title = 'Remove from Memory Verses';
         }
+        
+        // Update icon - show star based on memory verse status
+        const svgIcon = memoryVerseToggle.querySelector('svg');
+        if (!isMemoryVerse) {
+            // Now it's a memory verse, show filled star
+            if (svgIcon) {
+                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor"/>';
+                svgIcon.style.display = 'block';
+            }
+        } else {
+            // Not a memory verse anymore, show outline star
+            if (svgIcon) {
+                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
+                svgIcon.style.display = 'block';
+            }
+        }
+        
         // Save to Supabase and localStorage
         const saved = await saveMemoryVersesToSupabase();
         if (saved) {

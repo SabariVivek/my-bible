@@ -3821,16 +3821,17 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 }
 
 .memory-verse-toggle.active {
-    background-color: #d4a04c;
-    color: white;
+    background-color: transparent;
+    color: #FFD700;
 }
 
 .memory-verse-toggle.active svg {
-    fill: white;
+    color: #FFD700;
+    fill: #FFD700;
 }
 
 .memory-verse-toggle svg {
-    transition: fill 0.2s ease;
+    transition: color 0.2s ease, fill 0.2s ease;
 }
 
 .notes-textarea {
@@ -4055,8 +4056,8 @@ body.dark-theme .memory-verse-toggle:hover {
 }
 
 body.dark-theme .memory-verse-toggle.active {
-    background-color: #d4a04c;
-    color: white;
+    background-color: transparent;
+    color: #FFD700;
 }
 
 body.dark-theme .notes-textarea {
@@ -5406,6 +5407,14 @@ body.dark-theme .add-character-btn:hover {
     color: currentColor;
 }
 
+.add-memory-action.memory-verse-active {
+}
+
+.add-memory-action.memory-verse-active svg {
+    color: #FFD700;
+    fill: #FFD700;
+}
+
 .add-sermon-action svg {
     color: currentColor;
 }
@@ -5435,28 +5444,35 @@ body.dark-theme .add-character-btn:hover {
     display: none;
     flex-direction: row;
     gap: 0;
-    padding: 12px 0px 0 0;
+    padding: 12px 20px;
     border-top: none;
     background: transparent;
     flex-shrink: 0;
     order: 2;
-    position: absolute;
-    left: 110px;
-    top: 16px;
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
 }
 
 .color-picker-scroll {
     display: flex;
-    gap: 0;
-    overflow-x: visible;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
     padding: 0;
     justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .color-picker-scroll::-webkit-scrollbar {
-    height: 6px;
+    height: 0;
+    display: none;
 }
 
 .color-picker-scroll::-webkit-scrollbar-track {
@@ -5486,9 +5502,9 @@ body.dark-theme .add-character-btn:hover {
     flex-shrink: 0;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     padding: 0;
-    flex: none;
+    flex: 0 0 48px;
     flex-direction: row;
-    margin: 0 5px;
+    margin: 0;
     position: relative;
 }
 
@@ -5525,6 +5541,17 @@ body.dark-theme .color-picker-scroll::-webkit-scrollbar-thumb {
 body.dark-theme .color-picker-scroll::-webkit-scrollbar-thumb:hover {
     background: #8a8d91;
 }
+
+/* Hide outer scrollbar when color picker is displayed */
+.verse-actions-buttons:has(.bookmark-color-picker-container[style*="display: flex"]) {
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.verse-actions-buttons:has(.bookmark-color-picker-container[style*="display: flex"])::-webkit-scrollbar {
+    display: none;
+}
+
 body.dark-theme .verse-actions-content {
     background: #292a2d;
 }
@@ -5553,6 +5580,14 @@ body.dark-theme .verse-bottom-action {
 
 body.dark-theme .verse-bottom-action:hover {
     background: #4d5156;
+}
+
+body.dark-theme .add-memory-action.memory-verse-active {
+}
+
+body.dark-theme .add-memory-action.memory-verse-active svg {
+    color: #FFD700;
+    fill: #FFD700;
 }
 
 body.bottom-sheet-open {
