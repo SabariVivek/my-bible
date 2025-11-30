@@ -1178,7 +1178,7 @@ function showVerseActionsBottomSheet(verseNum) {
         const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
         const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
         const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
-        const copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter}:${verseNum}`;
+        const copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
         navigator.clipboard.writeText(copyText).then(() => {
             showToast('Verse copied!', 'success');
             closeBottomSheet();
@@ -1218,11 +1218,11 @@ function showVerseActionsBottomSheet(verseNum) {
         const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
         const verseText = document.querySelector(`.verse-line[data-verse="${verseNum}"]`)?.textContent || '';
         const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
-        const shareText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter}:${verseNum}`;
+        const shareText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
         
         if (navigator.share) {
             navigator.share({
-                title: `${bookName} ${currentChapter}:${verseNum}`,
+                title: `${bookName} ${currentChapter} : ${verseNum}`,
                 text: shareText
             }).catch(() => {
                 // User cancelled share
