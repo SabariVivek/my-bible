@@ -1132,6 +1132,11 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             e.stopPropagation();
             const selectedColor = colorBtn.dataset.color;
             
+            // Remove checkmark from all color options
+            colorPickerContainer.querySelectorAll('.color-checkmark').forEach(checkmark => {
+                checkmark.remove();
+            });
+            
             // Create or update note entry with selected color
             if (!verseNotes[noteKey]) {
                 verseNotes[noteKey] = {
@@ -1162,6 +1167,12 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             bookmarkBtn.setAttribute('data-bookmark-color', selectedColor);
             const colorHex = colorBtn.style.background;
             bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
+            
+            // Add checkmark to selected color
+            const checkmark = document.createElement('div');
+            checkmark.className = 'color-checkmark';
+            checkmark.innerHTML = '✓';
+            colorBtn.appendChild(checkmark);
             
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
