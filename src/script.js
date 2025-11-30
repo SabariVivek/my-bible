@@ -1170,11 +1170,18 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             const colorHex = colorBtn.style.background;
             bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
             
+            // Add checkmark to selected color
+            const existingCheckmark = colorBtn.querySelector('.color-checkmark');
+            if (existingCheckmark) {
+                existingCheckmark.remove();
+            }
+            const checkmark = document.createElement('div');
+            checkmark.className = 'color-checkmark';
+            checkmark.innerHTML = '✓';
+            colorBtn.appendChild(checkmark);
+            
             // Add animation to selected color
             colorBtn.style.animation = 'colorSelect 0.3s ease-out';
-            
-            // Show toast
-            showToast(`Color ${selectedColor} selected...`, 'success');
             
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
@@ -1183,6 +1190,11 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
                 console.error('Error saving to Supabase:', error);
             }
+            
+            // Close color picker and restore buttons after 300ms
+            setTimeout(() => {
+                hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn);
+            }, 300);
         });
     });
 }
@@ -1208,6 +1220,9 @@ function hideColorPickerAndRestoreButtons(verseNum, bookmarkBtn) {
         setTimeout(() => {
             bookmarkBtn.style.order = '';
             bookmarkBtn.style.animation = '';
+            
+            // Scroll to the right to show all action buttons
+            buttonsContainer.scrollLeft = buttonsContainer.scrollWidth;
         }, 500);
     }, 100);
     
@@ -1388,8 +1403,22 @@ function showVerseActionsBottomSheet(verseNum) {
         bookmarkBtn.classList.add('bookmarked');
         const color = verseNotes[noteKey].color;
         bookmarkBtn.setAttribute('data-bookmark-color', color);
-        // Get the color hex value from the color buttons
-        const colorHex = Array.from(colorPickerContainer?.querySelectorAll('.color-option') || []).find(btn => btn.dataset.color === color)?.style.background || '#d4a04c';
+        // Set the bookmark color - will be updated when color picker is shown
+        const colorMap = {
+            'burgundy': '#3BA8FF',
+            'forest': '#2ECC71',
+            'navy': '#F1C40F',
+            'amber': '#FF7F50',
+            'violet': '#E74C3C',
+            'teal': '#9B59B6',
+            'rust': '#1ABC9C',
+            'olive': '#FF5FA2',
+            'indigo': '#007C82',
+            'slate': '#A3E635',
+            'yellow': '#4C51BF',
+            'green': '#FFB020'
+        };
+        const colorHex = colorMap[color] || '#d4a04c';
         bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
     } else {
         bookmarkBtn.classList.remove('bookmarked');
@@ -1405,18 +1434,18 @@ function showVerseActionsBottomSheet(verseNum) {
             // Remove the color highlight from the verse in the UI
             const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
             if (verseLine) {
-                verseLine.classList.remove(`note-${oldColor}`);
-            }
-            
-            // If no text, remove the note entirely
-            if (!verseNotes[noteKey].text) {
-                delete verseNotes[noteKey];
+                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                
+                // If no text, remove the note entirely and remove the has-note class
+                if (!verseNotes[noteKey].text) {
+                    delete verseNotes[noteKey];
+                    verseLine.classList.remove('has-note', 'has-text');
+                }
             }
             
             bookmarkBtn.classList.remove('bookmarked');
             bookmarkBtn.removeAttribute('data-bookmark-color');
             bookmarkBtn.style.removeProperty('--bookmark-color');
-            showToast('Bookmark removed...', 'success');
             
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
@@ -1425,6 +1454,9 @@ function showVerseActionsBottomSheet(verseNum) {
             } catch (error) {
                 console.error('Error saving to Supabase:', error);
             }
+            
+            // Close the bottom sheet after removing bookmark
+            closeBottomSheet();
         } else {
             // Show color picker for new bookmark
             showColorPickerForBookmark(verseNum, bookmarkBtn);
