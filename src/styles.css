@@ -1903,7 +1903,7 @@ body.dark-theme .jesus-name {
     left: 350px; /* Books sidebar (190px) + Chapters (80px) + Verses (80px) */
     right: 0;
     height: 3.75rem;
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     border-top: 1px solid #e0e0e0;
     display: flex;
     align-items: center;
@@ -1912,6 +1912,7 @@ body.dark-theme .jesus-name {
     box-sizing: border-box;
     z-index: 15;
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Adjust bottom nav when sidebar is hidden */
@@ -1964,10 +1965,10 @@ body.dark-theme .jesus-name {
 }
 
 .nav-btn:hover {
-    background-color: #e8f0fe;
-    color: #1a73e8;
+    background-color: #e8eaed;
+    color: #202124;
     transform: scale(1.05);
-    box-shadow: 0 1px 4px rgba(26, 115, 232, 0.15);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .nav-btn:active {
@@ -3142,8 +3143,9 @@ body.dark-theme .english-text.red {
 }
 
 body.dark-theme .bottom-nav {
-    background-color: #202124;
-    border-top: 1px solid #3c4043;
+    background-color: #1a1a1a;
+    border-top: 1px solid #2d2d2d;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-theme .nav-btn {
@@ -3151,10 +3153,10 @@ body.dark-theme .nav-btn {
 }
 
 body.dark-theme .nav-btn:hover {
-    background-color: #3c4043;
-    color: #8ab4f8;
+    background-color: #2d2d2d;
+    color: #e8eaed;
     transform: scale(1.05);
-    box-shadow: 0 1px 4px rgba(138, 180, 248, 0.15);
+    box-shadow: 0 1px 4px rgba(232, 234, 237, 0.1);
 }
 
 body.dark-theme .current-chapter {
@@ -5510,7 +5512,6 @@ body.dark-theme .add-character-btn:hover {
     position: relative;
     z-index: 1001;
     filter: none;
-    border-top: 1px solid #e0e0e0;
 }
 
 @keyframes slideUp {
