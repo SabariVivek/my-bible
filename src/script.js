@@ -1143,6 +1143,24 @@ function displayChapter() {
                             }
                         }
                         
+                        // Update left pane: only show first selected verse as active
+                        if (updatedSelectedVerses.length > 0) {
+                            const firstVerse = updatedSelectedVerses[0];
+                            versesColumn.querySelectorAll('.number-item').forEach(item => {
+                                const verseNum = parseInt(item.dataset.verse);
+                                if (verseNum === firstVerse) {
+                                    item.classList.add('active');
+                                } else {
+                                    item.classList.remove('active');
+                                }
+                            });
+                        } else {
+                            // No verses selected, remove all active classes
+                            versesColumn.querySelectorAll('.number-item').forEach(item => {
+                                item.classList.remove('active');
+                            });
+                        }
+                        
                         // Update highlighting based on selection count
                         // For text-based selections, always use multi-highlighted color
                         if (updatedSelectedVerses.length > 0) {

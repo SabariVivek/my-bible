@@ -1623,15 +1623,15 @@ body.dark-theme .mobile-chapter-header {
 }
 
 .verse-line.multi-highlighted {
-    background-color: #e8eaed !important;
+    background-color: #cbcccf !important;
 }
 
 .verse-line.multi-highlighted:active {
-    background-color: #e8eaed !important;
+    background-color: #cbcccf !important;
 }
 
 .verse-line.multi-highlighted:focus {
-    background-color: #e8eaed !important;
+    background-color: #cbcccf !important;
 }
 
 /* Override selection color to prevent grey highlighting */
