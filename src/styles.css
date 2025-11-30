@@ -86,6 +86,24 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
     }
 }
 
+@keyframes highlightPulse {
+    0% {
+        filter: brightness(1.3);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+@keyframes fadeOutHighlight {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(0.3);
+    }
+}
+
 /* Admin Mode Notifications */
 /* Toast message for mobile */
 .toast {
@@ -3928,52 +3946,52 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 
 /* Colored note backgrounds based on category */
 .verse-line.has-note.note-burgundy {
-    background-color: rgba(255, 215, 0, 0.25); /* Gold - Promises */
+    background-color: rgba(59, 168, 255, 0.25); /* Sky Blue */
 }
 
 .verse-line.has-note.note-forest {
-    background-color: rgba(50, 205, 50, 0.25); /* Lime Green - Commands */
+    background-color: rgba(46, 204, 113, 0.25); /* Emerald Green */
 }
 
 .verse-line.has-note.note-navy {
-    background-color: rgba(65, 105, 225, 0.25); /* Royal Blue - God's nature */
+    background-color: rgba(241, 196, 15, 0.25); /* Golden Yellow */
 }
 
 .verse-line.has-note.note-amber {
-    background-color: rgba(147, 112, 219, 0.25); /* Medium Purple - Prophecy */
+    background-color: rgba(255, 127, 80, 0.25); /* Coral Orange */
 }
 
 .verse-line.has-note.note-violet {
-    background-color: rgba(255, 99, 71, 0.25); /* Tomato Red - Warnings */
+    background-color: rgba(231, 76, 60, 0.25); /* Rose Red */
 }
 
 .verse-line.has-note.note-teal {
-    background-color: rgba(255, 105, 180, 0.25); /* Hot Pink - Encouragement */
+    background-color: rgba(155, 89, 182, 0.25); /* Violet Purple */
 }
 
 .verse-line.has-note.note-rust {
-    background-color: rgba(32, 178, 170, 0.25); /* Light Sea Green - Hope */
+    background-color: rgba(26, 188, 156, 0.25); /* Turquoise */
 }
 
 .verse-line.has-note.note-olive {
-    background-color: rgba(255, 165, 0, 0.25); /* Orange - Covenants */
+    background-color: rgba(255, 95, 162, 0.25); /* Bright Pink */
 }
 
 .verse-line.has-note.note-indigo {
-    background-color: rgba(135, 206, 235, 0.25); /* Sky Blue - Wisdom */
+    background-color: rgba(0, 124, 130, 0.25); /* Deep Teal */
 }
 
 .verse-line.has-note.note-slate {
-    background-color: rgba(221, 160, 221, 0.25); /* Plum - Background / Notes */
+    background-color: rgba(163, 230, 53, 0.25); /* Soft Lime */
 }
 
 /* New color classes for bookmark colors */
 .verse-line.has-note.note-yellow {
-    background-color: rgba(255, 235, 59, 0.25); /* Yellow */
+    background-color: rgba(76, 81, 191, 0.25); /* Indigo */
 }
 
 .verse-line.has-note.note-green {
-    background-color: rgba(76, 175, 80, 0.25); /* Green */
+    background-color: rgba(255, 176, 32, 0.25); /* Amber */
 }
 
 .verse-line.has-note.note-blue {
@@ -4066,52 +4084,52 @@ body.dark-theme .verse-line.has-note.has-text::after {
 
 /* Dark theme colored note backgrounds */
 body.dark-theme .verse-line.has-note.note-burgundy {
-    background-color: rgba(255, 215, 0, 0.15); /* Gold - Promises */
+    background-color: rgba(59, 168, 255, 0.15); /* Sky Blue */
 }
 
 body.dark-theme .verse-line.has-note.note-forest {
-    background-color: rgba(50, 205, 50, 0.15); /* Lime Green - Commands */
+    background-color: rgba(46, 204, 113, 0.15); /* Emerald Green */
 }
 
 body.dark-theme .verse-line.has-note.note-navy {
-    background-color: rgba(65, 105, 225, 0.15); /* Royal Blue - God's nature */
+    background-color: rgba(241, 196, 15, 0.15); /* Golden Yellow */
 }
 
 body.dark-theme .verse-line.has-note.note-amber {
-    background-color: rgba(147, 112, 219, 0.15); /* Medium Purple - Prophecy */
+    background-color: rgba(255, 127, 80, 0.15); /* Coral Orange */
 }
 
 body.dark-theme .verse-line.has-note.note-violet {
-    background-color: rgba(255, 99, 71, 0.15); /* Tomato Red - Warnings */
+    background-color: rgba(231, 76, 60, 0.15); /* Rose Red */
 }
 
 body.dark-theme .verse-line.has-note.note-teal {
-    background-color: rgba(255, 105, 180, 0.15); /* Hot Pink - Encouragement */
+    background-color: rgba(155, 89, 182, 0.15); /* Violet Purple */
 }
 
 body.dark-theme .verse-line.has-note.note-rust {
-    background-color: rgba(32, 178, 170, 0.15); /* Light Sea Green - Hope */
+    background-color: rgba(26, 188, 156, 0.15); /* Turquoise */
 }
 
 body.dark-theme .verse-line.has-note.note-olive {
-    background-color: rgba(255, 165, 0, 0.15); /* Orange - Covenants */
+    background-color: rgba(255, 95, 162, 0.15); /* Bright Pink */
 }
 
 body.dark-theme .verse-line.has-note.note-indigo {
-    background-color: rgba(135, 206, 235, 0.15); /* Sky Blue - Wisdom */
+    background-color: rgba(0, 124, 130, 0.15); /* Deep Teal */
 }
 
 body.dark-theme .verse-line.has-note.note-slate {
-    background-color: rgba(221, 160, 221, 0.15); /* Plum - Background / Notes */
+    background-color: rgba(163, 230, 53, 0.15); /* Soft Lime */
 }
 
 /* Dark theme - new color classes for bookmark colors */
 body.dark-theme .verse-line.has-note.note-yellow {
-    background-color: rgba(255, 235, 59, 0.15); /* Yellow */
+    background-color: rgba(76, 81, 191, 0.15); /* Indigo */
 }
 
 body.dark-theme .verse-line.has-note.note-green {
-    background-color: rgba(76, 175, 80, 0.15); /* Green */
+    background-color: rgba(255, 176, 32, 0.15); /* Amber */
 }
 
 body.dark-theme .verse-line.has-note.note-blue {

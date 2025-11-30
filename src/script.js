@@ -1162,6 +1162,8 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
                 verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
                 // Add has-note class and new color class
                 verseLine.classList.add('has-note', `note-${selectedColor}`);
+                // Add animation for visual feedback
+                verseLine.style.animation = 'highlightPulse 0.5s ease-out';
             }
             
             // Update button state with the color
@@ -1434,13 +1436,22 @@ function showVerseActionsBottomSheet(verseNum) {
             // Remove the color highlight from the verse in the UI
             const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
             if (verseLine) {
-                verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                // Add fade out animation first
+                verseLine.style.animation = 'fadeOutHighlight 0.4s ease-out forwards';
                 
-                // If no text, remove the note entirely and remove the has-note class
-                if (!verseNotes[noteKey].text) {
-                    delete verseNotes[noteKey];
-                    verseLine.classList.remove('has-note', 'has-text');
-                }
+                // After animation, remove the classes
+                setTimeout(() => {
+                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
+                    
+                    // If no text, remove the note entirely and remove the has-note class
+                    if (!verseNotes[noteKey].text) {
+                        delete verseNotes[noteKey];
+                        verseLine.classList.remove('has-note', 'has-text');
+                    }
+                    
+                    // Clear animation after removal
+                    verseLine.style.animation = '';
+                }, 400);
             }
             
             bookmarkBtn.classList.remove('bookmarked');
