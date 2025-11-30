@@ -1976,13 +1976,19 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     const firstVerse = selectedVerses[0];
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${firstVerse}`;
     
+    // Disable for multi-verse - can only bookmark one verse at a time
+    bookmarkBtn.disabled = true;
+    bookmarkBtn.style.opacity = '0.5';
+    bookmarkBtn.style.cursor = 'not-allowed';
+    
     // Check if first verse has a color
     if (verseNotes[noteKey] && verseNotes[noteKey].color) {
         bookmarkBtn.classList.add('bookmarked');
     }
     
     bookmarkBtn.addEventListener('click', async () => {
-        showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn);
+        // Multi-verse bookmark is disabled
+        showToast('Bookmarks can only be added to individual verses', 'info');
     });
     
     // Share button
