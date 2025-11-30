@@ -1655,7 +1655,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
     const verseReference = `${bookName} ${currentChapter}`;
     
-    // Set up the bottom sheet content with limited actions
+    // Set up the bottom sheet content with all actions
     bottomSheet.innerHTML = `
         <div class="verse-actions-backdrop"></div>
         <div class="verse-actions-content">
@@ -1676,6 +1676,13 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     </svg>
                     <span>Copy</span>
                 </button>
+                <button class="verse-bottom-action add-note-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    <span>Note</span>
+                </button>
                 <button class="verse-bottom-action add-sermon-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -1690,6 +1697,14 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                     </svg>
                     <span>Bookmark</span>
+                </button>
+                <button class="verse-bottom-action add-memory-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 21H9v-2a6 6 0 0 1 6 0v2Z"></path>
+                        <path d="M17 13a5 5 0 0 0-10 0"></path>
+                        <path d="M12 5V2m5 3l-3.5-3.5M7 8L3.5 4.5"></path>
+                    </svg>
+                    <span>Memory</span>
                 </button>
                 <button class="verse-bottom-action share-verses-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1726,6 +1741,36 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     if (copyBtn) {
         copyBtn.addEventListener('click', function() {
             handleVersesCopy(this);
+        });
+    }
+    
+    // Add note button
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        // Disable for multi-verse
+        noteBtn.disabled = true;
+        noteBtn.style.opacity = '0.5';
+        noteBtn.style.cursor = 'not-allowed';
+        noteBtn.addEventListener('click', () => {
+            // For multi-verse, open note for first verse
+            currentNoteVerse = selectedVerses[0];
+            openNotesModal(selectedVerses[0]);
+            closeBottomSheet();
+        });
+    }
+    
+    // Add memory verse button
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    if (memoryBtn) {
+        // Disable for multi-verse
+        memoryBtn.disabled = true;
+        memoryBtn.style.opacity = '0.5';
+        memoryBtn.style.cursor = 'not-allowed';
+        memoryBtn.addEventListener('click', async () => {
+            // For multi-verse, toggle memory for first verse
+            currentNoteVerse = selectedVerses[0];
+            await toggleMemoryVerse();
+            closeBottomSheet();
         });
     }
     
