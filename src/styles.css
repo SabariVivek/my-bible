@@ -5324,40 +5324,21 @@ body.dark-theme .add-character-btn:hover {
 }
 
 .verse-bottom-action svg {
-    width: 24px;
-    height: 24px;
-    color: #667eea;
+    width: 20px;
+    height: 20px;
+    color: currentColor;
 }
 
 .add-sermon-action svg {
-    color: #48bb78;
-}
-
-.sermon-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-
-.note-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+    color: currentColor;
 }
 
 .add-favorite-action svg {
-    color: #ed8936;
+    color: currentColor;
 }
 
 .add-memory-action svg {
-    color: #ffd700;
-    filter: drop-shadow(0 0 4px #ffd700);
-}
-
-.memory-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+    color: currentColor;
 }
 
 /* Dark theme for bottom sheet */

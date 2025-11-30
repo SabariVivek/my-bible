@@ -1110,21 +1110,36 @@ function showVerseActionsBottomSheet(verseNum) {
                     <span>Copy</span>
                 </button>
                 <button class="verse-bottom-action add-note-action" data-verse="${verseNum}">
-                    <img src="resources/icons/note.png" alt="Note" class="note-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
                     <span>Note</span>
                 </button>
                 <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
-                    <img src="resources/icons/sermon.png" alt="Sermon" class="sermon-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
                     <span>Sermon</span>
                 </button>
                 <button class="verse-bottom-action add-favorite-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
-                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10l7 7v11a2 2 0 0 1-2 2z"></path>
+                        <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        <polyline points="7 3 7 8 15 8"></polyline>
                     </svg>
                     <span>Bookmark</span>
                 </button>
                 <button class="verse-bottom-action add-memory-action" data-verse="${verseNum}">
-                    <img src="resources/icons/memory_verse.png" alt="Memory" class="memory-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        <circle cx="9" cy="10" r="1"></circle>
+                        <circle cx="12" cy="10" r="1"></circle>
+                        <circle cx="15" cy="10" r="1"></circle>
+                    </svg>
                     <span>Memory</span>
                 </button>
                 <button class="verse-bottom-action share-verse-action" data-verse="${verseNum}">
