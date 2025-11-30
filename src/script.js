@@ -520,6 +520,7 @@ function initializeMobileDrawer() {
     if (!menuBtn || !drawerOverlay) return;
     // Open/toggle drawer
     menuBtn.addEventListener('click', () => {
+        closeBottomSheet();
         // Check if on mobile or desktop
         if (window.innerWidth <= 768) {
             // Mobile: toggle drawer overlay
@@ -2302,6 +2303,16 @@ function initializeScrollbar() {
         }
     });
 }
+
+// Helper function to close bottom sheet
+function closeBottomSheet() {
+    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
+    if (bottomSheet && bottomSheet.classList.contains('visible')) {
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('bottom-sheet-open');
+    }
+}
+
 // Dark theme toggle with animation
 function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
@@ -2367,10 +2378,16 @@ function initializeTheme() {
         );
     }
     if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
+        themeToggle.addEventListener('click', (event) => {
+            closeBottomSheet();
+            toggleTheme(event);
+        });
     }
     if (drawerThemeToggle) {
-        drawerThemeToggle.addEventListener('click', toggleTheme);
+        drawerThemeToggle.addEventListener('click', (event) => {
+            closeBottomSheet();
+            toggleTheme(event);
+        });
     }
 }
 // Initialize mobile language modal
@@ -2420,6 +2437,7 @@ function initializeMobileLanguageModal() {
     }
     // Open modal
     langBtn.addEventListener('click', (e) => {
+        closeBottomSheet();
         e.stopPropagation();
         updateModalActiveState();
         modalOverlay.classList.add('active');
@@ -2619,6 +2637,7 @@ function initializeSearch() {
         searchInput.focus();
     }
     searchBtn.addEventListener('click', () => {
+        closeBottomSheet();
         if (isSearchActive) {
             closeSearch();
         } else {
@@ -4372,6 +4391,21 @@ async function loadMemoryVersesFromSupabase() {
     if (typeof window.memoryVerses === 'undefined') {
         window.memoryVerses = [];
     }
+    
+    // Load from localStorage first (instant, offline-safe)
+    const localVerses = localStorage.getItem('memoryVerses');
+    if (localVerses) {
+        try {
+            window.memoryVerses = JSON.parse(localVerses);
+            markBooksWithMemoryVerses();
+            updateVerseMemoryVerseIndicators();
+            displayChapter(); // Refresh chapter display to show memory verse styling
+        } catch (e) {
+            console.error('Error parsing localStorage memoryVerses:', e);
+        }
+    }
+    
+    // Async sync from Supabase (don't block UI)
     try {
         // Fetch all rows - each row contains one verse_reference
         const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}?select=verse_reference&order=id.asc`, {
@@ -4386,35 +4420,21 @@ async function loadMemoryVersesFromSupabase() {
             const data = await response.json();
             if (data && data.length > 0) {
                 // Extract verse_reference from each row to create array of strings
-                window.memoryVerses = data.map(row => row.verse_reference).filter(ref => ref);
-                if (window.memoryVerses && window.memoryVerses.length > 0) {
+                const supabaseVerses = data.map(row => row.verse_reference).filter(ref => ref);
+                // Update if Supabase has different data
+                if (JSON.stringify(supabaseVerses) !== JSON.stringify(window.memoryVerses)) {
+                    window.memoryVerses = supabaseVerses;
+                    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
                     markBooksWithMemoryVerses();
                     updateVerseMemoryVerseIndicators();
-                    displayChapter(); // Refresh chapter display to show memory verse styling
-                    return true;
+                    displayChapter();
                 }
+                return true;
             }
-        } else {
-            const errorText = await response.text();
-        }
-        // Fallback to localStorage
-        const localVerses = localStorage.getItem('memoryVerses');
-        if (localVerses) {
-            window.memoryVerses = JSON.parse(localVerses);
-            markBooksWithMemoryVerses();
-            updateVerseMemoryVerseIndicators();
-            displayChapter(); // Refresh chapter display to show memory verse styling
         }
         return false;
     } catch (error) {
-        // Fallback to localStorage
-        const localVerses = localStorage.getItem('memoryVerses');
-        if (localVerses) {
-            window.memoryVerses = JSON.parse(localVerses);
-            markBooksWithMemoryVerses();
-            updateVerseMemoryVerseIndicators();
-            displayChapter(); // Refresh chapter display to show memory verse styling
-        }
+        console.error('Error loading memory verses from Supabase:', error);
         return false;
     }
 }
@@ -4439,10 +4459,10 @@ async function toggleMemoryVerse() {
         window.memoryVerses.push(verseReference);
     }
     
-    // Save to Supabase
-    await saveMemoryVersesToSupabase();
+    // Save to localStorage immediately (for instant UI update)
+    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
     
-    // Update UI indicators
+    // Update UI indicators immediately
     markBooksWithMemoryVerses();
     updateVerseMemoryVerseIndicators();
     
@@ -4455,6 +4475,11 @@ async function toggleMemoryVerse() {
             verseLine.classList.add('memory-verse');
         }
     }
+    
+    // Async save to Supabase (non-blocking) - don't await
+    saveMemoryVersesToSupabase().catch(error => {
+        console.error('Error saving memory verses to Supabase:', error);
+    });
 }
 
 async function saveMemoryVersesToSupabase() {
@@ -6535,6 +6560,7 @@ document.addEventListener('DOMContentLoaded', () => {
         rightMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
+            closeBottomSheet();
             if (window.innerWidth <= 768) {
                 // Mobile: use drawer behavior
                 const isOpen = rightSidebar.classList.contains('drawer-open');
