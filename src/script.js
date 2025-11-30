@@ -1126,45 +1126,20 @@ function displayChapter() {
                         // Get updated selected verses after toggle
                         const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(item => parseInt(item.dataset.verse));
                         
-                        // Log selected verses to console
-                        console.log('📌 Selected verses:', updatedSelectedVerses);
-                        if (wasSelected) {
-                            console.log(`🗑️ Deselected verse ${verseNum}`);
-                        } else {
-                            console.log(`✔️ Selected verse ${verseNum}`);
-                            // Add highlight for newly selected verse (left-pane selection)
-                            const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-                            if (verseLine) {
-                                verseLine.classList.add('left-pane-selected');
-                            }
-                        }
-                        
-                        // Update left pane: only show first selected verse as active
-                        if (updatedSelectedVerses.length > 0) {
-                            const firstVerse = updatedSelectedVerses[0];
-                            versesColumn.querySelectorAll('.number-item').forEach(item => {
-                                const verseNum = parseInt(item.dataset.verse);
-                                if (verseNum === firstVerse) {
-                                    item.classList.add('active');
-                                } else {
-                                    item.classList.remove('active');
-                                }
-                            });
-                        } else {
-                            // No verses selected, remove all active classes
-                            versesColumn.querySelectorAll('.number-item').forEach(item => {
-                                item.classList.remove('active');
-                            });
-                        }
-                        
                         // Update highlighting based on selection count
-                        // For manual selections in main content, use multi-highlighted class (underline)
+                        // For manual selections in main content, use multi-highlighted class
                         if (updatedSelectedVerses.length > 0) {
+                            // First, remove all highlights
+                            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                                v.classList.remove('highlighted');
+                                v.classList.remove('multi-highlighted');
+                                v.classList.remove('left-pane-selected');
+                            });
+                            
+                            // Then add multi-highlighted to all selected verses
                             updatedSelectedVerses.forEach(vNum => {
                                 const verseLine = contentArea.querySelector(`.verse-line[data-verse="${vNum}"]`);
                                 if (verseLine) {
-                                    verseLine.classList.remove('highlighted');
-                                    verseLine.classList.remove('left-pane-selected');
                                     verseLine.classList.add('multi-highlighted');
                                 }
                             });

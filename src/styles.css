@@ -1623,18 +1623,26 @@ body.dark-theme .mobile-chapter-header {
 }
 
 .verse-line.multi-highlighted {
-    text-decoration: underline dotted #1f2937 !important;
-    text-underline-offset: 3px !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    padding: 10px 14px !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
 }
 
 .verse-line.multi-highlighted:active {
-    text-decoration: underline dotted #1f2937 !important;
-    text-underline-offset: 3px !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 .verse-line.multi-highlighted:focus {
-    text-decoration: underline dotted #1f2937 !important;
-    text-underline-offset: 3px !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid #00000055 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Left pane selection - grey background */
@@ -3010,18 +3018,26 @@ body.dark-theme .verse-line:focus {
 }
 
 body.dark-theme .verse-line.multi-highlighted {
-    text-decoration: underline dotted #60a5fa !important;
-    text-underline-offset: 3px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #ffffffaa !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
+    padding: 10px 14px !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:active {
-    text-decoration: underline dotted #60a5fa !important;
-    text-underline-offset: 3px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #ffffffaa !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:focus {
-    text-decoration: underline dotted #60a5fa !important;
-    text-underline-offset: 3px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid #ffffffaa !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
 }
 
 /* Left pane selection - grey background in dark theme */
