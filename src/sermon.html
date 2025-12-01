@@ -182,6 +182,9 @@
             margin: 0;
             color: #333;
             flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         body.dark-theme .sermon-item-title {
@@ -691,6 +694,8 @@
             transform: translateY(100%);
             transition: transform 0.3s ease;
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            touch-action: none;
+            user-select: none;
         }
 
         body.dark-theme .sermon-bottom-sheet {
@@ -713,10 +718,32 @@
             background: #555;
         }
 
-        .sermon-sheet-header {
-            padding: 16px;
+        #sermon-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 12px 16px;
             border-bottom: 1px solid #e0e0e0;
-            text-align: center;
+        }
+
+        body.dark-theme #sermon-detail-header {
+            border-bottom-color: #3a3a3a;
+        }
+
+        #sermon-detail-header .sermon-date-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            white-space: nowrap;
+        }
+
+        .sermon-sheet-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         body.dark-theme .sermon-sheet-header {
@@ -881,6 +908,43 @@
             overflow-y: auto;
         }
 
+        .sermon-detail-close-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #999;
+            font-size: 18px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .sermon-detail-sheet.show-close .sermon-detail-close-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sermon-detail-close-btn:hover {
+            background: #f0f0f0;
+            color: #333;
+            transform: scale(1.1);
+        }
+
+        body.dark-theme .sermon-detail-close-btn:hover {
+            background: #3a3a3a;
+            color: #f0f0f0;
+        }
+
         .sermon-detail-section {
             margin-bottom: 1.5rem;
         }
@@ -907,9 +971,16 @@
         }
 
         .sermon-detail-verses {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            display: block;
+        }
+
+        .sermon-detail-verses .sermon-verse-badge {
+            display: table;
+            margin-bottom: 0.75rem;
+        }
+
+        .sermon-detail-verses .sermon-verse-badge:last-child {
+            margin-bottom: 0;
         }
 
         .sermon-detail-actions {
@@ -917,6 +988,7 @@
             gap: 0.75rem;
             padding: 16px;
             border-top: 1px solid #e0e0e0;
+            width: 100%;
         }
 
         body.dark-theme .sermon-detail-actions {
@@ -932,6 +1004,26 @@
             cursor: pointer;
             font-size: 0.95rem;
             transition: all 0.2s ease;
+            min-width: 0;
+            box-sizing: border-box;
+        }
+
+        .sermon-detail-close-bottom {
+            background: #e8e8e8;
+            color: #333;
+        }
+
+        .sermon-detail-close-bottom:hover {
+            background: #d8d8d8;
+        }
+
+        body.dark-theme .sermon-detail-close-bottom {
+            background: #3a3a3a;
+            color: #f0f0f0;
+        }
+
+        body.dark-theme .sermon-detail-close-bottom:hover {
+            background: #4a4a4a;
         }
 
         .sermon-detail-edit {
@@ -1349,7 +1441,7 @@
     <!-- Bottom Sheet for Adding Sermon -->
     <div class="sermon-bottom-sheet-overlay" id="sermon-sheet-overlay"></div>
     <div class="sermon-bottom-sheet" id="sermon-bottom-sheet">
-        <div class="sermon-sheet-handle"></div>
+        <div class="sermon-sheet-handle" id="sermon-sheet-drag-handle"></div>
         <div class="sermon-sheet-header">
             <h2 class="sermon-sheet-title">Add Sermon</h2>
         </div>
@@ -1413,8 +1505,13 @@
     <div class="sermon-detail-overlay" id="sermon-detail-overlay" onclick="closeSermonDetail()"></div>
     <div class="sermon-detail-sheet" id="sermon-detail-sheet">
         <div class="sermon-sheet-handle"></div>
-        <div class="sermon-sheet-header">
+        <div class="sermon-sheet-header" id="sermon-detail-header">
             <h2 class="sermon-sheet-title">Sermon Details</h2>
+            <button class="sermon-detail-close-btn" id="sermon-detail-close-btn" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
         <div class="sermon-sheet-content" id="sermon-detail-content"></div>
     </div>
@@ -1750,24 +1847,28 @@
 
             detailContent.innerHTML = `
                 <div class="sermon-detail-section">
-                    <h3>Sermon Title</h3>
-                    <p>${sermon.title}</p>
-                </div>
-                <div class="sermon-detail-section">
-                    <h3>Date</h3>
-                    <p>${formatSermonDate(new Date(sermon.date))}</p>
-                </div>
-                <div class="sermon-detail-section">
                     <h3>Verses</h3>
                     <div class="sermon-detail-verses">${versesHtml}</div>
                 </div>
                 <div class="sermon-detail-actions">
                     <button class="sermon-detail-btn sermon-detail-edit" onclick="editSermon(${index})">Edit</button>
                     <button class="sermon-detail-btn sermon-detail-delete" onclick="deleteSermonWithConfirm(${index})">Delete</button>
+                    <button class="sermon-detail-btn sermon-detail-close-bottom" onclick="closeSermonDetail()">Close</button>
+                </div>
+            `;
+
+            // Update header with title and date
+            const detailHeader = document.getElementById('sermon-detail-header');
+            const dateStr = formatSermonDate(new Date(sermon.date));
+            detailHeader.innerHTML = `
+                <div style="flex: 1;">
+                    <h3 style="margin: 0 0 0.25rem 0; font-size: 0.85rem; font-weight: 500; color: #999;">Sermon Title</h3>
+                    <h2 class="sermon-sheet-title" style="margin: 0; font-size: 1.1rem;">${sermon.title}</h2>
                 </div>
             `;
 
             detailSheet.classList.add('active');
+            detailSheet.classList.add('show-close');
         }
 
         // Close sermon details
@@ -1775,6 +1876,7 @@
             const detailSheet = document.getElementById('sermon-detail-sheet');
             const detailOverlay = document.getElementById('sermon-detail-overlay');
             detailSheet.classList.remove('active');
+            detailSheet.classList.remove('show-close');
             detailOverlay.classList.remove('active');
         }
 
@@ -1965,7 +2067,54 @@
         function closeBottomSheet() {
             overlay.classList.remove('active');
             bottomSheet.classList.remove('active');
+            // Reset form state and drag height
+            currentEditingIndex = null;
+            selectedSermonDate = null;
+            selectedSermonVerses = [];
+            renderVersesChips();
+            titleInput.value = '';
+            document.getElementById('sermon-date-display').textContent = 'Select date';
+            document.getElementById('sermon-book-select').value = '';
+            document.getElementById('sermon-chapter-select').value = '';
+            document.getElementById('sermon-verses-select').value = '';
+            bottomSheet.style.maxHeight = '80vh';
         }
+
+        // Drag to expand/collapse functionality
+        let dragStartY = 0;
+        let dragStartHeight = 0;
+        const dragHandle = document.getElementById('sermon-sheet-drag-handle');
+
+        dragHandle.addEventListener('touchstart', (e) => {
+            dragStartY = e.touches[0].clientY;
+            dragStartHeight = bottomSheet.offsetHeight;
+            bottomSheet.style.transition = 'none';
+        }, false);
+
+        dragHandle.addEventListener('touchmove', (e) => {
+            const currentY = e.touches[0].clientY;
+            const diff = dragStartY - currentY;
+            const newHeight = dragStartHeight + diff;
+            const maxHeight = window.innerHeight * 0.95;
+            const minHeight = 250;
+
+            if (newHeight >= minHeight && newHeight <= maxHeight) {
+                bottomSheet.style.maxHeight = newHeight + 'px';
+            }
+        }, false);
+
+        dragHandle.addEventListener('touchend', (e) => {
+            bottomSheet.style.transition = 'transform 0.3s ease';
+            const currentHeight = bottomSheet.offsetHeight;
+            const maxHeight = window.innerHeight * 0.95;
+            const threshold = maxHeight * 0.4;
+
+            if (currentHeight < threshold) {
+                closeBottomSheet();
+            } else {
+                bottomSheet.style.maxHeight = '80vh';
+            }
+        }, false);
 
         cancelBtn.addEventListener('click', closeBottomSheet);
         overlay.addEventListener('click', closeBottomSheet);
@@ -1983,12 +2132,17 @@
                 return;
             }
 
+            // Convert to ISO string if it's a Date object
+            const dateIso = selectedSermonDate instanceof Date 
+                ? selectedSermonDate.toISOString() 
+                : selectedSermonDate;
+
             if (currentEditingIndex !== null) {
                 // Update existing sermon
                 sermons[currentEditingIndex] = {
                     ...sermons[currentEditingIndex],
                     title: title,
-                    date: selectedSermonDate.toISOString(),
+                    date: dateIso,
                     verses: selectedSermonVerses
                 };
                 currentEditingIndex = null;
@@ -1997,7 +2151,7 @@
                 const newSermon = {
                     id: Date.now(),
                     title: title,
-                    date: selectedSermonDate.toISOString(),
+                    date: dateIso,
                     verses: selectedSermonVerses,
                     content: '' // For future use
                 };
