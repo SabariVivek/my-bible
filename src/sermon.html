@@ -1101,27 +1101,15 @@
                     <div class="sermon-dropdowns-row">
                         <div class="sermon-dropdown-group">
                             <label class="sermon-dropdown-label">Book</label>
-                            <div class="sermon-custom-dropdown-wrapper" id="sermon-book-wrapper">
-                                <button class="sermon-custom-dropdown-button" type="button" id="sermon-book-button">
-                                    <span id="sermon-book-display">Select Book</span>
-                                    <svg class="sermon-custom-dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                                <div class="sermon-custom-dropdown-menu" id="sermon-book-menu"></div>
-                            </div>
+                            <select class="sermon-dropdown-select" id="sermon-book-select">
+                                <option value="">Select Book</option>
+                            </select>
                         </div>
                         <div class="sermon-dropdown-group">
                             <label class="sermon-dropdown-label">Chapter</label>
-                            <div class="sermon-custom-dropdown-wrapper" id="sermon-chapter-wrapper">
-                                <button class="sermon-custom-dropdown-button" type="button" id="sermon-chapter-button">
-                                    <span id="sermon-chapter-display">Select Chapter</span>
-                                    <svg class="sermon-custom-dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                                <div class="sermon-custom-dropdown-menu" id="sermon-chapter-menu"></div>
-                            </div>
+                            <select class="sermon-dropdown-select" id="sermon-chapter-select" disabled>
+                                <option value="">Select Chapter</option>
+                            </select>
                         </div>
                     </div>
                     <div class="sermon-verses-row">
@@ -1243,148 +1231,49 @@
         let selectedSermonDate = null;
         let selectedSermonVerses = [];
 
-        // Custom Dropdown Implementation
-        class CustomDropdown {
-            constructor(buttonId, menuId, displayId) {
-                this.button = document.getElementById(buttonId);
-                this.menu = document.getElementById(menuId);
-                this.display = document.getElementById(displayId);
-                this.selectedValue = null;
-                this.disabled = false;
-                this.bottomSheet = document.getElementById('sermon-bottom-sheet');
-
-                this.button.classList.add('placeholder');
-                this.button.addEventListener('click', () => this.toggle());
-                document.addEventListener('click', (e) => {
-                    if (!this.button.contains(e.target) && !this.menu.contains(e.target)) {
-                        this.close();
-                    }
-                });
-                
-                // Add scroll listener to reposition menu
-                const contentArea = document.querySelector('.sermon-sheet-content');
-                if (contentArea) {
-                    contentArea.addEventListener('scroll', () => {
-                        if (this.menu.classList.contains('active')) {
-                            this.positionMenu();
-                        }
-                    });
-                }
-                
-                // Move menu to bottom sheet to break out of overflow container
-                this.menu.style.position = 'fixed';
-                this.menu.style.zIndex = '9999';
-            }
-
-            toggle() {
-                if (this.disabled) return;
-                this.menu.classList.contains('active') ? this.close() : this.open();
-            }
-
-            open() {
-                if (this.disabled) return;
-                this.menu.classList.add('active');
-                this.button.classList.add('active');
-                this.positionMenu();
-            }
-
-            close() {
-                this.menu.classList.remove('active');
-                this.button.classList.remove('active');
-            }
-
-            positionMenu() {
-                const buttonRect = this.button.getBoundingClientRect();
-                const menuHeight = 300; // max-height of menu
-                const spaceBelow = window.innerHeight - buttonRect.bottom;
-                const spaceAbove = buttonRect.top;
-                
-                // Position above if not enough space below
-                if (spaceBelow < menuHeight + 20 && spaceAbove > menuHeight + 20) {
-                    this.menu.style.top = (buttonRect.top - menuHeight - 4) + 'px';
-                } else {
-                    this.menu.style.top = (buttonRect.bottom + 4) + 'px';
-                }
-                
-                this.menu.style.left = buttonRect.left + 'px';
-                this.menu.style.width = buttonRect.width + 'px';
-            }
-
-            setOptions(items) {
-                this.menu.innerHTML = '';
-                items.forEach(item => {
-                    const div = document.createElement('div');
-                    div.className = 'sermon-custom-dropdown-item';
-                    div.textContent = item;
-                    div.addEventListener('click', () => this.selectItem(item));
-                    this.menu.appendChild(div);
-                });
-            }
-
-            selectItem(item) {
-                this.selectedValue = item;
-                this.display.textContent = item;
-                this.close();
-                this.button.classList.remove('placeholder');
-                return item;
-            }
-
-            setDisabled(disabled) {
-                this.disabled = disabled;
-                this.button.disabled = disabled;
-                this.button.style.opacity = disabled ? '0.5' : '1';
-            }
-
-            clear() {
-                this.selectedValue = null;
-                this.display.textContent = this.display.dataset.placeholder || 'Select Item';
-                this.button.classList.add('placeholder');
-                this.menu.innerHTML = '';
-            }
-        }
-
-        // Initialize custom dropdowns
-        const bookDropdown = new CustomDropdown('sermon-book-button', 'sermon-book-menu', 'sermon-book-display');
-        const chapterDropdown = new CustomDropdown('sermon-chapter-button', 'sermon-chapter-menu', 'sermon-chapter-display');
-
+        // Initialize book dropdown
         function initializeBookDropdown() {
-            const bookNames = bibleMeta.map(b => b.book);
-            bookDropdown.setOptions(bookNames);
-
-            bookDropdown.menu.querySelectorAll('.sermon-custom-dropdown-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    const selectedBook = item.textContent;
-                    loadChapters(selectedBook);
-                });
+            const bookSelect = document.getElementById('sermon-book-select');
+            bibleMeta.forEach(book => {
+                const option = document.createElement('option');
+                option.value = book.book;
+                option.textContent = book.book;
+                bookSelect.appendChild(option);
             });
         }
 
-        function loadChapters(selectedBook) {
+        // Handle book selection
+        document.getElementById('sermon-book-select').addEventListener('change', function () {
+            const selectedBook = this.value;
+            const chapterSelect = document.getElementById('sermon-chapter-select');
             const versesSelect = document.getElementById('sermon-verses-select');
-            versesSelect.innerHTML = '<option value="">Verses</option>';
-            chapterDropdown.clear();
+
+            chapterSelect.innerHTML = '<option value="">Select Chapter</option>';
+            versesSelect.innerHTML = '<option value="">Verse</option>';
             versesSelect.disabled = true;
 
             if (selectedBook) {
                 const book = bibleMeta.find(b => b.book === selectedBook);
-                const chapterNumbers = Array.from({length: book.chapters.length}, (_, i) => i + 1);
-                chapterDropdown.setOptions(chapterNumbers);
-                chapterDropdown.setDisabled(false);
-
-                chapterDropdown.menu.querySelectorAll('.sermon-custom-dropdown-item').forEach(item => {
-                    item.addEventListener('click', () => {
-                        const selectedChapter = parseInt(item.textContent);
-                        loadVerses(selectedBook, selectedChapter);
-                    });
+                book.chapters.forEach((_, index) => {
+                    const option = document.createElement('option');
+                    option.value = index + 1;
+                    option.textContent = index + 1;
+                    chapterSelect.appendChild(option);
                 });
+                chapterSelect.disabled = false;
             } else {
-                chapterDropdown.setDisabled(true);
+                chapterSelect.disabled = true;
             }
-        }
+        });
 
-        function loadVerses(selectedBook, selectedChapter) {
+        // Handle chapter selection
+        document.getElementById('sermon-chapter-select').addEventListener('change', function () {
+            const bookSelect = document.getElementById('sermon-book-select');
+            const selectedBook = bookSelect.value;
+            const selectedChapter = parseInt(this.value);
             const versesSelect = document.getElementById('sermon-verses-select');
-            versesSelect.innerHTML = '<option value="">Verses</option>';
+
+            versesSelect.innerHTML = '<option value="">Verse</option>';
 
             if (selectedChapter) {
                 const book = bibleMeta.find(b => b.book === selectedBook);
@@ -1399,7 +1288,7 @@
             } else {
                 versesSelect.disabled = true;
             }
-        }
+        });
 
         // Handle verse selection
         document.getElementById('sermon-verses-select').addEventListener('change', function () {
@@ -1409,10 +1298,12 @@
 
         // Add verse reference
         document.getElementById('sermon-add-verse-btn').addEventListener('click', function () {
+            const bookSelect = document.getElementById('sermon-book-select');
+            const chapterSelect = document.getElementById('sermon-chapter-select');
             const versesSelect = document.getElementById('sermon-verses-select');
 
-            const book = bookDropdown.selectedValue;
-            const chapter = chapterDropdown.selectedValue;
+            const book = bookSelect.value;
+            const chapter = chapterSelect.value;
             const verses = Array.from(versesSelect.selectedOptions).map(opt => opt.value);
 
             if (book && chapter && verses.length > 0) {
@@ -1628,9 +1519,9 @@
             selectedSermonVerses = [];
             document.getElementById('sermon-date-display').textContent = 'Select date';
             document.getElementById('sermon-date-input').value = '';
-            bookDropdown.clear();
-            chapterDropdown.clear();
-            chapterDropdown.setDisabled(true);
+            document.getElementById('sermon-book-select').value = '';
+            document.getElementById('sermon-chapter-select').value = '';
+            document.getElementById('sermon-chapter-select').disabled = true;
             document.getElementById('sermon-verses-select').value = '';
             document.getElementById('sermon-verses-select').disabled = true;
             document.getElementById('sermon-add-verse-btn').disabled = true;
