@@ -188,6 +188,49 @@
             color: #f0f0f0;
         }
 
+        .sermon-date-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        body.dark-theme .sermon-date-badge {
+            background: rgba(120, 170, 255, 0.1);
+            color: #8ab8ff;
+            border-color: rgba(120, 170, 255, 0.2);
+        }
+
+        .sermon-item-verses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .sermon-verse-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        body.dark-theme .sermon-verse-badge {
+            background: rgba(120, 170, 255, 0.1);
+            color: #8ab8ff;
+            border-color: rgba(120, 170, 255, 0.2);
+        }
+
         .sermon-verses-chips {
             display: flex;
             flex-wrap: wrap;
@@ -1379,12 +1422,16 @@
             sermonList.innerHTML = sermons.map((sermon, index) => {
                 const date = new Date(sermon.date);
                 const dateStr = formatSermonDate(date);
+                const versesHtml = sermon.verses && sermon.verses.length > 0
+                    ? sermon.verses.map(v => `<span class="sermon-verse-badge">${v.display}</span>`).join('')
+                    : '';
                 return `
                     <div class="sermon-item" data-index="${index}">
                         <div class="sermon-item-header">
                             <h3 class="sermon-item-title">${sermon.title}</h3>
                             <span class="sermon-date-badge">${dateStr}</span>
                         </div>
+                        ${versesHtml ? `<div class="sermon-item-verses">${versesHtml}</div>` : ''}
                     </div>
                 `;
             }).join('');
