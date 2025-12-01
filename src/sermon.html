@@ -2068,7 +2068,17 @@
                 return;
             }
 
-            sermonList.innerHTML = sermons.map((sermon, index) => {
+            // Sort sermons by date (newest first)
+            const sortedSermons = [...sermons].sort((a, b) => {
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return dateB - dateA;  // Descending order (newest first)
+            });
+
+            sermonList.innerHTML = sortedSermons.map((sermon, sortedIndex) => {
+                // Find the original index in the sermons array for onclick handlers
+                const originalIndex = sermons.findIndex(s => s.id === sermon.id);
+                
                 const date = new Date(sermon.date);
                 const dateStr = formatSermonDate(date);
                 let versesHtml = '';
@@ -2084,7 +2094,7 @@
                     }).join('');
                 }
                 return `
-                    <div class="sermon-item" data-index="${index}">
+                    <div class="sermon-item" data-index="${originalIndex}">
                         <div class="sermon-item-header">
                             <div class="sermon-item-title-wrapper">
                                 <h3 class="sermon-item-title">${sermon.title}</h3>
