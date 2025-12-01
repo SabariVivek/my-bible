@@ -2650,8 +2650,8 @@
                 };
                 sermons[currentEditingIndex] = updatedSermon;
                 
-                // Sync update to Supabase
-                if (updatedSermon.id && updatedSermon.id <= 1700000000000) {
+                // Sync update to Supabase for synced sermons (ID >= 10001)
+                if (updatedSermon.id && updatedSermon.id >= 10001) {
                     syncSermonUpdateToSupabase(currentEditingIndex);
                 }
                 
