@@ -141,6 +141,57 @@
             flex: 1;
             overflow-y: auto;
             padding: 2rem;
+            position: relative;
+        }
+
+        body.dark-theme .sermon-content {
+            background-color: #1a1a1a;
+        }
+
+        /* Sermon loader styles */
+        .sermon-loader-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        .sermon-loader-wrapper.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .sermon-loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #333333;
+            border-top: 5px solid #ffffff;
+            border-right: 5px solid #cccccc;
+            border-radius: 50%;
+            animation: sermon-spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .sermon-loader-text {
+            color: #cccccc;
+            margin-top: 25px;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        @keyframes sermon-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .sermon-list {
@@ -1464,6 +1515,14 @@
 
         <!-- Content area with sermon list -->
         <div class="sermon-content">
+            <!-- Loader -->
+            <div class="sermon-loader-wrapper" id="sermon-loader">
+                <div style="text-align: center;">
+                    <div class="sermon-loader-spinner"></div>
+                    <p class="sermon-loader-text">Loading...</p>
+                </div>
+            </div>
+            
             <div class="sermon-list" id="sermon-list">
                 <div class="sermon-empty-state">
                     <p>No sermons yet</p>
@@ -1811,9 +1870,13 @@
 
         // Load sermons from Supabase
         async function loadSermonsFromSupabase() {
+            const loader = document.getElementById('sermon-loader');
+            if (loader) loader.classList.remove('hidden');
+
             if (!supabase) {
                 console.log('Supabase not available, loading from localStorage');
                 loadSermonsFromLocalStorage();
+                if (loader) loader.classList.add('hidden');
                 return;
             }
 
@@ -1827,6 +1890,7 @@
                 if (error) {
                     console.error('Error loading sermons from Supabase:', error);
                     loadSermonsFromLocalStorage();
+                    if (loader) loader.classList.add('hidden');
                     return;
                 }
 
@@ -1847,13 +1911,16 @@
                 } else {
                     console.log('No sermons found in Supabase, loading from localStorage');
                     loadSermonsFromLocalStorage();
+                    if (loader) loader.classList.add('hidden');
                     return;
                 }
 
                 renderSermons();
+                if (loader) loader.classList.add('hidden');
             } catch (error) {
                 console.error('Error loading sermons from Supabase:', error);
                 loadSermonsFromLocalStorage();
+                if (loader) loader.classList.add('hidden');
             }
         }
 
