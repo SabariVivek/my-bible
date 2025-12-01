@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sermon</title>
     <link rel="stylesheet" href="../src/styles.css">
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/+esm"></script>
     <style>
         * {
             margin: 0;
@@ -176,12 +178,16 @@
             gap: 1rem;
         }
 
+        .sermon-item-title-wrapper {
+            flex: 1;
+            min-width: 0; /* Important for flexbox text truncation */
+        }
+
         .sermon-item-title {
             font-weight: 600;
             font-size: 0.9rem;
             margin: 0;
             color: #333;
-            flex: 1;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -1162,6 +1168,18 @@
             background: #ff5252;
         }
 
+        .sermon-tamil-title {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 0.25rem;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        body.dark-theme .sermon-tamil-title {
+            color: #999;
+        }
+
         .sermon-calendar-backdrop {
             position: fixed;
             top: 0;
@@ -1467,6 +1485,11 @@
                     autocomplete="off">
             </div>
             <div class="sermon-input-group">
+                <label class="sermon-input-label">Tamil Title (Optional)</label>
+                <input type="text" class="sermon-input-text" id="sermon-tamil-title-input" placeholder="Enter Tamil title..."
+                    autocomplete="off">
+            </div>
+            <div class="sermon-input-group">
                 <label class="sermon-input-label">Sermon Date</label>
                 <button class="sermon-date-picker-btn" id="sermon-date-picker-btn">
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1641,6 +1664,26 @@
         let currentCalendarDate = new Date();
         let selectedSermonDate = null;
         let selectedSermonVerses = [];
+        
+        // Supabase configuration
+        const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck';
+        let supabase = null;
+        let currentUserId = null;
+        let syncEnabled = false;
+        
+        // Initialize Supabase
+        async function initSupabase() {
+            try {
+                const { createClient } = window.supabase;
+                supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                syncEnabled = true;
+                console.log('Supabase initialized successfully');
+            } catch (error) {
+                console.warn('Supabase initialization failed:', error);
+                syncEnabled = false;
+            }
+        }
 
         // Initialize book dropdown
         function initializeBookDropdown() {
@@ -1805,7 +1848,10 @@
                 return `
                     <div class="sermon-item" data-index="${index}">
                         <div class="sermon-item-header">
-                            <h3 class="sermon-item-title">${sermon.title}</h3>
+                            <div class="sermon-item-title-wrapper">
+                                <h3 class="sermon-item-title">${sermon.title}</h3>
+                                ${sermon.tamilTitle ? `<p class="sermon-tamil-title">${sermon.tamilTitle}</p>` : ''}
+                            </div>
                             <span class="sermon-date-badge">
                                 <svg class="sermon-date-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -1835,6 +1881,92 @@
         // Save sermons to localStorage
         function saveSermons() {
             localStorage.setItem('sermons', JSON.stringify(sermons));
+            
+            // Sync to Supabase if enabled and user exists
+            if (syncEnabled && supabase && currentUserId) {
+                syncSermonsToSupabase();
+            }
+        }
+        
+        // Sync sermons to Supabase
+        async function syncSermonsToSupabase() {
+            if (!supabase || !currentUserId) return;
+            
+            try {
+                for (const sermon of sermons) {
+                    const dateStr = sermon.date instanceof Date 
+                        ? sermon.date.toISOString().split('T')[0]
+                        : sermon.date.split('T')[0];
+                    
+                    if (sermon.id && sermon.id > 1700000000000) {
+                        // Local ID (timestamp), create new record
+                        const { error } = await supabase
+                            .from('sermons')
+                            .insert([{
+                                user_id: currentUserId,
+                                title: sermon.title,
+                                tamil_title: sermon.tamilTitle || null,
+                                sermon_date: dateStr,
+                                verses: sermon.verses || []
+                            }]);
+                        
+                        if (error) {
+                            console.error('Error syncing sermon to Supabase:', error);
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error('Sync error:', error);
+            }
+        }
+        
+        // Sync sermon update to Supabase
+        async function syncSermonUpdateToSupabase(sermonIndex) {
+            if (!supabase || !currentUserId) return;
+            
+            const sermon = sermons[sermonIndex];
+            if (!sermon || !sermon.id || sermon.id > 1700000000000) return;
+            
+            try {
+                const dateStr = sermon.date instanceof Date 
+                    ? sermon.date.toISOString().split('T')[0]
+                    : sermon.date.split('T')[0];
+                
+                const { error } = await supabase
+                    .from('sermons')
+                    .update({
+                        title: sermon.title,
+                        tamil_title: sermon.tamilTitle || null,
+                        sermon_date: dateStr,
+                        verses: sermon.verses || []
+                    })
+                    .eq('id', sermon.id);
+                
+                if (error) {
+                    console.error('Error updating sermon in Supabase:', error);
+                }
+            } catch (error) {
+                console.error('Sync update error:', error);
+            }
+        }
+        
+        // Sync sermon deletion to Supabase
+        async function syncSermonDeleteToSupabase(sermonId) {
+            if (!supabase || !currentUserId || !sermonId || sermonId > 1700000000000) return;
+            
+            try {
+                const { error } = await supabase
+                    .from('sermons')
+                    .delete()
+                    .eq('id', sermonId)
+                    .eq('user_id', currentUserId);
+                
+                if (error) {
+                    console.error('Error deleting sermon from Supabase:', error);
+                }
+            } catch (error) {
+                console.error('Sync delete error:', error);
+            }
         }
 
         // Handle double-tap on sermon card
@@ -1905,6 +2037,7 @@
             const sermon = sermons[index];
             // Pre-fill the form with sermon data
             document.getElementById('sermon-title-input').value = sermon.title;
+            document.getElementById('sermon-tamil-title-input').value = sermon.tamilTitle || '';
             selectedSermonDate = sermon.date;
             document.getElementById('sermon-date-display').textContent = formatSermonDate(new Date(sermon.date));
             selectedSermonVerses = [...sermon.verses];
@@ -1943,6 +2076,12 @@
         function confirmDelete() {
             const confirmDialog = document.getElementById('sermon-confirm-dialog');
             const index = parseInt(confirmDialog.dataset.deleteIndex);
+            const sermonToDelete = sermons[index];
+            
+            // Sync deletion to Supabase
+            if (sermonToDelete.id) {
+                syncSermonDeleteToSupabase(sermonToDelete.id);
+            }
             
             sermons.splice(index, 1);
             saveSermons();
@@ -2061,6 +2200,7 @@
         // Open bottom sheet
         addBtn.addEventListener('click', () => {
             titleInput.value = '';
+            document.getElementById('sermon-tamil-title-input').value = '';
             selectedSermonDate = null;
             selectedSermonVerses = [];
             document.getElementById('sermon-date-display').textContent = 'Select date';
@@ -2093,6 +2233,7 @@
             selectedSermonVerses = [];
             renderVersesChips();
             titleInput.value = '';
+            document.getElementById('sermon-tamil-title-input').value = '';
             document.getElementById('sermon-date-display').textContent = 'Select date';
             document.getElementById('sermon-book-select').value = '';
             document.getElementById('sermon-chapter-select').value = '';
@@ -2142,6 +2283,7 @@
         // Save sermon
         saveBtn.addEventListener('click', () => {
             const title = titleInput.value.trim();
+            const tamilTitle = document.getElementById('sermon-tamil-title-input').value.trim();
             if (!title) {
                 alert('Please enter a sermon title');
                 return;
@@ -2159,18 +2301,27 @@
 
             if (currentEditingIndex !== null) {
                 // Update existing sermon
-                sermons[currentEditingIndex] = {
+                const updatedSermon = {
                     ...sermons[currentEditingIndex],
                     title: title,
+                    tamilTitle: tamilTitle || '',
                     date: dateIso,
                     verses: selectedSermonVerses
                 };
+                sermons[currentEditingIndex] = updatedSermon;
+                
+                // Sync update to Supabase
+                if (updatedSermon.id && updatedSermon.id <= 1700000000000) {
+                    syncSermonUpdateToSupabase(currentEditingIndex);
+                }
+                
                 currentEditingIndex = null;
             } else {
                 // Create new sermon
                 const newSermon = {
                     id: Date.now(),
                     title: title,
+                    tamilTitle: tamilTitle || '',
                     date: dateIso,
                     verses: selectedSermonVerses,
                     content: '' // For future use
@@ -2245,6 +2396,7 @@
 
         // Initialize on page load
         window.addEventListener('DOMContentLoaded', () => {
+            initSupabase();
             initializeBookDropdown();
             loadSermons();
         });
@@ -2252,9 +2404,11 @@
         // Initialize if DOM is already ready
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
+                initSupabase();
                 if (!bibleMeta) initializeBookDropdown();
             });
         } else {
+            initSupabase();
             initializeBookDropdown();
             loadSermons();
         }
