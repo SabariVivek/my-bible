@@ -1997,15 +1997,10 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         closeBottomSheet();
     });
     
-    // Add bookmark button (color picker for first verse in selection)
+    // Add bookmark button (color picker for all selected verses)
     const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
     const firstVerse = selectedVerses[0];
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${firstVerse}`;
-    
-    // Disable for multi-verse - can only bookmark one verse at a time
-    bookmarkBtn.disabled = true;
-    bookmarkBtn.style.opacity = '0.5';
-    bookmarkBtn.style.cursor = 'not-allowed';
     
     // Check if first verse has a color
     if (verseNotes[noteKey] && verseNotes[noteKey].color) {
@@ -2013,8 +2008,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     }
     
     bookmarkBtn.addEventListener('click', async () => {
-        // Multi-verse bookmark is disabled
-        showToast('Bookmarks can only be added to individual verses', 'info');
+        showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn);
     });
     
     // Share button
@@ -2109,35 +2103,52 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
             // Update all selected verses with the color
             for (const verseNum of selectedVerses) {
                 const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-                if (!verseNotes[noteKey]) {
-                    verseNotes[noteKey] = {};
-                }
-                verseNotes[noteKey].color = selectedColor;
                 
-                // Save to Supabase if available
-                if (window.supabase) {
-                    try {
-                        await saveNoteToSupabase(noteKey, verseNotes[noteKey]);
-                    } catch (error) {
-                        console.error('Error saving note:', error);
-                    }
+                // Create or update note entry
+                if (!verseNotes[noteKey]) {
+                    verseNotes[noteKey] = {
+                        text: '',
+                        color: selectedColor,
+                        book: bibleBooks[currentBook].name,
+                        chapter: currentChapter,
+                        verse: verseNum,
+                        timestamp: new Date().toISOString()
+                    };
+                } else {
+                    // Update existing note with new color
+                    verseNotes[noteKey].color = selectedColor;
                 }
                 
                 // Update UI
                 const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
                 if (verseLine) {
-                    // Remove all color classes
-                    verseLine.classList.remove('note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate', 'note-yellow', 'note-green');
-                    // Add new color class
-                    verseLine.classList.add(`note-${selectedColor}`);
+                    // Remove all existing note color classes
+                    const colorClasses = Array.from(verseLine.classList).filter(cls => cls.startsWith('note-'));
+                    colorClasses.forEach(cls => verseLine.classList.remove(cls));
+                    
+                    // Add has-note and new color class
+                    verseLine.classList.add('has-note', `note-${selectedColor}`);
                     
                     // Apply fade-in animation
                     verseLine.style.animation = 'fadeInHighlight 0.4s ease-out forwards';
                 }
             }
             
+            // Save all changes to localStorage and Supabase
+            localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+            try {
+                await saveNotesToSupabase();
+            } catch (error) {
+                console.error('Error saving notes to Supabase:', error);
+            }
+            
             // Update bookmark button appearance
             bookmarkBtn.classList.add('bookmarked');
+            
+            // Close color picker after selection
+            setTimeout(() => {
+                colorPickerContainer.style.display = 'none';
+            }, 300);
         });
     });
 }
