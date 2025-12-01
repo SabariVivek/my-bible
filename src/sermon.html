@@ -375,6 +375,7 @@
             flex-direction: column;
             gap: 0.5rem;
             overflow: visible;
+            flex: 1;
         }
 
         .sermon-verses-row {
@@ -422,6 +423,7 @@
             background-repeat: no-repeat;
             background-position: right 12px center;
             padding-right: 40px;
+            width: 100%;
         }
 
         .sermon-dropdown-select::placeholder,
@@ -845,6 +847,28 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            position: relative;
+        }
+
+        .sermon-input-group.error .sermon-input-text,
+        .sermon-input-group.error .sermon-date-picker-btn {
+            border-color: #ef4444 !important;
+            border-width: 2px;
+        }
+
+        .sermon-input-group.error .sermon-input-label {
+            color: #ef4444;
+        }
+
+        .sermon-input-error {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: -0.25rem;
+            display: none;
+        }
+
+        .sermon-input-group.error .sermon-input-error {
+            display: block;
         }
 
         .sermon-input-label {
@@ -1544,6 +1568,7 @@
                 <label class="sermon-input-label">Sermon Title</label>
                 <input type="text" class="sermon-input-text" id="sermon-title-input" placeholder="Enter sermon title..."
                     autocomplete="off">
+                <div class="sermon-input-error">Sermon title is required</div>
             </div>
             <div class="sermon-input-group">
                 <label class="sermon-input-label">Tamil Title (Optional)</label>
@@ -1563,6 +1588,7 @@
                     <span id="sermon-date-display">Select date</span>
                 </button>
                 <input type="hidden" id="sermon-date-input">
+                <div class="sermon-input-error">Sermon date is required</div>
             </div>
             <div class="sermon-input-group">
                 <div class="sermon-dropdowns-container">
@@ -1584,7 +1610,6 @@
                         <div class="sermon-dropdown-group">
                             <label class="sermon-dropdown-label">Verses</label>
                             <select class="sermon-dropdown-select" id="sermon-verses-select" multiple disabled>
-                                <option value="">Verse</option>
                             </select>
                         </div>
                         <button class="sermon-add-verse-btn" id="sermon-add-verse-btn" type="button" disabled>Add Verse</button>
@@ -1759,6 +1784,15 @@
                 option.textContent = book.book;
                 bookSelect.appendChild(option);
             });
+            
+            // Add dummy verses (1-5) to verses select initially
+            const versesSelect = document.getElementById('sermon-verses-select');
+            for (let i = 1; i <= 5; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                versesSelect.appendChild(option);
+            }
         }
 
         // Handle book selection
@@ -1768,7 +1802,15 @@
             const versesSelect = document.getElementById('sermon-verses-select');
 
             chapterSelect.innerHTML = '<option value="">Select Chapter</option>';
-            versesSelect.innerHTML = '<option value="">Verse</option>';
+            
+            // Reset to dummy verses
+            versesSelect.innerHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                versesSelect.appendChild(option);
+            }
             versesSelect.disabled = true;
 
             if (selectedBook) {
@@ -1792,11 +1834,14 @@
             const selectedChapter = parseInt(this.value);
             const versesSelect = document.getElementById('sermon-verses-select');
 
-            versesSelect.innerHTML = '<option value="">Verse</option>';
+            // Clear all options first
+            versesSelect.innerHTML = '';
 
             if (selectedChapter) {
                 const book = bibleMeta.find(b => b.book === selectedBook);
                 const verseCount = book.chapters[selectedChapter - 1];
+                
+                // Remove dummy verses and add actual verses for the chapter
                 for (let i = 1; i <= verseCount; i++) {
                     const option = document.createElement('option');
                     option.value = i;
@@ -1805,6 +1850,13 @@
                 }
                 versesSelect.disabled = false;
             } else {
+                // Reset to dummy verses if no chapter selected
+                for (let i = 1; i <= 5; i++) {
+                    const option = document.createElement('option');
+                    option.value = i;
+                    option.textContent = i;
+                    versesSelect.appendChild(option);
+                }
                 versesSelect.disabled = true;
             }
         });
@@ -2443,13 +2495,29 @@
         saveBtn.addEventListener('click', () => {
             const title = titleInput.value.trim();
             const tamilTitle = document.getElementById('sermon-tamil-title-input').value.trim();
+            
+            // Clear previous error states
+            document.querySelectorAll('.sermon-input-group').forEach(group => {
+                group.classList.remove('error');
+            });
+            
+            let isValid = true;
+            
+            // Validate title
             if (!title) {
-                alert('Please enter a sermon title');
-                return;
+                const titleGroup = titleInput.closest('.sermon-input-group');
+                titleGroup.classList.add('error');
+                isValid = false;
             }
-
+            
+            // Validate date
             if (!selectedSermonDate) {
-                alert('Please select a sermon date');
+                const dateGroup = datePickerBtn.closest('.sermon-input-group');
+                dateGroup.classList.add('error');
+                isValid = false;
+            }
+            
+            if (!isValid) {
                 return;
             }
 
