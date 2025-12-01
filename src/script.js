@@ -6609,6 +6609,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightTimelineOption = document.getElementById('right-timeline-option');
     const rightCharacterOption = document.getElementById('right-character-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
+    const rightSermonOption = document.getElementById('right-sermon-option');
     const rightCultOption = document.getElementById('right-cult-option');
     // Initialize right sidebar (hidden by default)
     if (rightSidebar) {
@@ -6708,6 +6709,13 @@ document.addEventListener('DOMContentLoaded', () => {
         rightLifeOfJesusOption.addEventListener('click', () => {
             // Navigate directly with hash
             window.location.href = `Bible-Study/index.html#/life-of-christ`;
+        });
+    }
+    // Sermon option - navigate to Sermon page
+    if (rightSermonOption) {
+        rightSermonOption.addEventListener('click', () => {
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/sermon.html?cb=${cacheBuster}`;
         });
     }
     // WMSCOG Cult option - navigate to secret page
