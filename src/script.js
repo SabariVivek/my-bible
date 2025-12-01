@@ -627,14 +627,22 @@ function updateChapterMemoryVerseIndicators() {
 // Update verse memory verse indicators
 function updateVerseMemoryVerseIndicators() {
     const verseItems = document.querySelectorAll('.verses-column .number-item');
+    const bookName = bibleBooks[currentBook].name;
+    const memoryVersesInChapter = [];
+    
     verseItems.forEach(item => {
         const verse = parseInt(item.dataset.verse);
-        if (verseHasMemoryVerse(bibleBooks[currentBook].name, currentChapter, verse)) {
+        if (verseHasMemoryVerse(bookName, currentChapter, verse)) {
             item.classList.add('has-memory-verse');
+            memoryVersesInChapter.push(verse);
         } else {
             item.classList.remove('has-memory-verse');
         }
     });
+    
+    if (memoryVersesInChapter.length > 0) {
+        console.log(`📌 Memory verses in ${bookName} ${currentChapter}: ${memoryVersesInChapter.join(', ')}`);
+    }
 }
 // Update book names based on language
 function updateBookNames() {
@@ -4430,6 +4438,7 @@ async function loadMemoryVersesFromSupabase() {
     if (localVerses) {
         try {
             window.memoryVerses = JSON.parse(localVerses);
+            console.log(`📚 Loaded ${window.memoryVerses.length} memory verses from localStorage:`, window.memoryVerses);
             markBooksWithMemoryVerses();
             updateVerseMemoryVerseIndicators();
             displayChapter(); // Refresh chapter display to show memory verse styling
@@ -4451,19 +4460,28 @@ async function loadMemoryVersesFromSupabase() {
         });
         if (response.ok) {
             const data = await response.json();
+            console.log(`🔄 Fetched ${data.length} rows from Supabase memory_verses table:`, data);
             if (data && data.length > 0) {
                 // Extract verse_reference from each row to create array of strings
                 const supabaseVerses = data.map(row => row.verse_reference).filter(ref => ref);
+                console.log(`📝 Extracted ${supabaseVerses.length} verse references:`, supabaseVerses);
                 // Update if Supabase has different data
                 if (JSON.stringify(supabaseVerses) !== JSON.stringify(window.memoryVerses)) {
+                    console.log('✅ Supabase data differs from local - updating...');
                     window.memoryVerses = supabaseVerses;
                     localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
                     markBooksWithMemoryVerses();
                     updateVerseMemoryVerseIndicators();
                     displayChapter();
+                } else {
+                    console.log('✓ Supabase data matches local data');
                 }
                 return true;
+            } else {
+                console.warn('⚠️ No memory verses found in Supabase!');
             }
+        } else {
+            console.error('❌ Supabase fetch failed with status:', response.status);
         }
         return false;
     } catch (error) {
@@ -4517,7 +4535,8 @@ async function toggleMemoryVerse() {
 
 async function saveMemoryVersesToSupabase() {
     // Save to localStorage immediately
-    localStorage.setItem('memoryVerses', JSON.stringify(memoryVerses));
+    localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
+    console.log(`💾 Saving ${window.memoryVerses.length} memory verses to Supabase:`, window.memoryVerses);
     try {
         // Delete all existing rows first
         // Using id>=0 to match all rows (since id is auto-increment starting from 1)
@@ -4531,15 +4550,18 @@ async function saveMemoryVersesToSupabase() {
             }
         });
         if (!deleteResponse.ok) {
+            console.error('❌ Failed to delete old memory verses:', deleteResponse.status);
             const errorText = await deleteResponse.text();
         } else {
+            console.log('✓ Deleted old memory verses');
         }
         // Only insert if we have verses to save
-        if (memoryVerses && memoryVerses.length > 0) {
+        if (window.memoryVerses && window.memoryVerses.length > 0) {
             // Insert all verses as individual rows
-            const rows = memoryVerses.map(verse => ({
+            const rows = window.memoryVerses.map(verse => ({
                 verse_reference: verse
             }));
+            console.log(`📤 Inserting ${rows.length} rows to Supabase...`);
             const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
                 method: 'POST',
                 headers: {
@@ -4551,15 +4573,19 @@ async function saveMemoryVersesToSupabase() {
                 body: JSON.stringify(rows)
             });
             if (response.ok) {
+                console.log('✅ Memory verses saved to Supabase successfully');
                 return true;
             } else {
+                console.error('❌ Failed to insert memory verses:', response.status);
                 const error = await response.text();
                 return false;
             }
         } else {
+            console.log('⚠️ No memory verses to save');
             return true;
         }
     } catch (error) {
+        console.error('❌ Error saving to Supabase:', error);
         return false;
     }
 }
