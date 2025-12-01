@@ -178,7 +178,7 @@
 
         .sermon-item-title {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             margin: 0;
             color: #333;
             flex: 1;
@@ -802,28 +802,30 @@
 
         .sermon-input-text {
             padding: 12px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
             font-size: 1rem;
             font-family: inherit;
             color: #333;
             background: #ffffff;
-            transition: border-color 0.2s;
+            transition: all 0.2s;
         }
 
         body.dark-theme .sermon-input-text {
-            background: #1a1a1a;
-            border-color: #3a3a3a;
+            background: #252525;
+            border-color: #404040;
             color: #f0f0f0;
         }
 
         .sermon-input-text:focus {
             outline: none;
             border-color: #78aaff;
+            background-color: #f5f5f5;
         }
 
         body.dark-theme .sermon-input-text:focus {
             border-color: #78aaff;
+            background-color: #252525;
         }
 
         /* Date Picker Button */
@@ -1431,7 +1433,7 @@
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
-            <h1 class="sermon-nav-title">Sermon</h1>
+            <h1 class="sermon-nav-title">Sermons</h1>
             <button class="sermon-add-btn" id="sermon-add-btn" aria-label="Add Sermon">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1820,13 +1822,13 @@
             }).join('');
         }
 
-        // Format date as Wed, dd/mm/yyyy
+        // Format date as Wed, dd/mm/yy
         function formatSermonDate(date) {
             const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
             const dayName = days[date.getDay()];
             const day = String(date.getDate()).padStart(2, '0');
             const month = String(date.getMonth() + 1).padStart(2, '0');
-            const year = date.getFullYear();
+            const year = String(date.getFullYear()).slice(-2);
             return `${dayName}, ${day}/${month}/${year}`;
         }
 
