@@ -1671,7 +1671,6 @@
         const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck';
         let supabase = null;
-        let currentUserId = null;
         let syncEnabled = false;
         
         // Initialize Supabase
@@ -1810,17 +1809,70 @@
             renderVersesChips();
         };
 
-        // Load sermons from localStorage on page load
-        function loadSermons() {
+        // Load sermons from Supabase
+        async function loadSermonsFromSupabase() {
+            if (!supabase) {
+                console.log('Supabase not available, loading from localStorage');
+                loadSermonsFromLocalStorage();
+                return;
+            }
+
+            try {
+                console.log('Loading sermons from Supabase...');
+                const { data, error } = await supabase
+                    .from('sermons')
+                    .select('*')
+                    .order('sermon_date', { ascending: false });
+
+                if (error) {
+                    console.error('Error loading sermons from Supabase:', error);
+                    loadSermonsFromLocalStorage();
+                    return;
+                }
+
+                if (data && data.length > 0) {
+                    // Convert Supabase data to local format
+                    sermons = data.map(item => ({
+                        id: item.id,
+                        title: item.title,
+                        tamilTitle: item.tamil_title || '',
+                        date: item.sermon_date,
+                        verses: item.verses || []
+                    }));
+                    
+                    console.log('Loaded', sermons.length, 'sermons from Supabase');
+                    
+                    // Save to localStorage as backup
+                    localStorage.setItem('sermons', JSON.stringify(sermons));
+                } else {
+                    console.log('No sermons found in Supabase, loading from localStorage');
+                    loadSermonsFromLocalStorage();
+                    return;
+                }
+
+                renderSermons();
+            } catch (error) {
+                console.error('Error loading sermons from Supabase:', error);
+                loadSermonsFromLocalStorage();
+            }
+        }
+
+        // Load sermons from localStorage (fallback)
+        function loadSermonsFromLocalStorage() {
             const saved = localStorage.getItem('sermons');
             if (saved) {
                 try {
                     sermons = JSON.parse(saved);
-                    renderSermons();
+                    console.log('Loaded', sermons.length, 'sermons from localStorage');
                 } catch (e) {
-                    console.error('Error loading sermons:', e);
+                    console.error('Error loading sermons from localStorage:', e);
                 }
             }
+        }
+
+        // Load sermons (uses Supabase if available, falls back to localStorage)
+        async function loadSermons() {
+            await loadSermonsFromSupabase();
         }
 
         // Render sermons list
@@ -1889,15 +1941,20 @@
         function saveSermons() {
             localStorage.setItem('sermons', JSON.stringify(sermons));
             
-            // Sync to Supabase if enabled and user exists
-            if (syncEnabled && supabase && currentUserId) {
+            // Sync to Supabase if enabled
+            if (syncEnabled && supabase) {
                 syncSermonsToSupabase();
             }
         }
         
         // Sync sermons to Supabase
         async function syncSermonsToSupabase() {
-            if (!supabase || !currentUserId) return;
+            if (!supabase) {
+                console.log('Sync skipped - supabase not available');
+                return;
+            }
+            
+            console.log('Starting sermon sync, total sermons:', sermons.length);
             
             try {
                 for (const sermon of sermons) {
@@ -1907,18 +1964,22 @@
                     
                     if (sermon.id && sermon.id > 1700000000000) {
                         // Local ID (timestamp), create new record
-                        const { error } = await supabase
+                        console.log('Syncing new sermon:', sermon.title, 'ID:', sermon.id);
+                        const { data, error } = await supabase
                             .from('sermons')
                             .insert([{
-                                user_id: currentUserId,
+                                id: sermon.id,
                                 title: sermon.title,
                                 tamil_title: sermon.tamilTitle || null,
                                 sermon_date: dateStr,
                                 verses: sermon.verses || []
-                            }]);
+                            }])
+                            .select();
                         
                         if (error) {
                             console.error('Error syncing sermon to Supabase:', error);
+                        } else if (data && data.length > 0) {
+                            console.log('Successfully synced sermon to Supabase with ID:', data[0].id);
                         }
                     }
                 }
@@ -1929,7 +1990,7 @@
         
         // Sync sermon update to Supabase
         async function syncSermonUpdateToSupabase(sermonIndex) {
-            if (!supabase || !currentUserId) return;
+            if (!supabase) return;
             
             const sermon = sermons[sermonIndex];
             if (!sermon || !sermon.id || sermon.id > 1700000000000) return;
@@ -1951,6 +2012,8 @@
                 
                 if (error) {
                     console.error('Error updating sermon in Supabase:', error);
+                } else {
+                    console.log('Successfully updated sermon in Supabase:', sermon.id);
                 }
             } catch (error) {
                 console.error('Sync update error:', error);
@@ -1959,17 +2022,18 @@
         
         // Sync sermon deletion to Supabase
         async function syncSermonDeleteToSupabase(sermonId) {
-            if (!supabase || !currentUserId || !sermonId || sermonId > 1700000000000) return;
+            if (!supabase || !sermonId || sermonId > 1700000000000) return;
             
             try {
                 const { error } = await supabase
                     .from('sermons')
                     .delete()
-                    .eq('id', sermonId)
-                    .eq('user_id', currentUserId);
+                    .eq('id', sermonId);
                 
                 if (error) {
                     console.error('Error deleting sermon from Supabase:', error);
+                } else {
+                    console.log('Successfully deleted sermon from Supabase:', sermonId);
                 }
             } catch (error) {
                 console.error('Sync delete error:', error);
