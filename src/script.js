@@ -1613,6 +1613,19 @@ function showVerseActionsBottomSheet(verseNum) {
         
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
+        
+        // Deselect all verses when closing bottom sheet
+        const versesColumn = document.querySelector('.verses');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+        }
+        
+        const contentArea = document.querySelector('.scripture-text');
+        if (contentArea) {
+            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                v.classList.remove('multi-highlighted');
+            });
+        }
     };
     
     closeBtn.addEventListener('click', closeBottomSheet);
@@ -1894,6 +1907,19 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     const closeBottomSheet = () => {
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('bottom-sheet-open');
+        
+        // Deselect all verses when closing bottom sheet
+        const versesColumn = document.querySelector('.verses');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item').forEach(item => item.classList.remove('active'));
+        }
+        
+        const contentArea = document.querySelector('.scripture-text');
+        if (contentArea) {
+            contentArea.querySelectorAll('.verse-line').forEach(v => {
+                v.classList.remove('multi-highlighted');
+            });
+        }
     };
     
     closeBtn.addEventListener('click', closeBottomSheet);
