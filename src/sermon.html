@@ -832,6 +832,229 @@
         }
 
         /* Calendar Modal */
+        /* Sermon Detail Sheet */
+        .sermon-detail-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 199;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .sermon-detail-sheet.active ~ .sermon-detail-overlay,
+        .sermon-detail-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .sermon-detail-sheet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 16px 16px 0 0;
+            z-index: 200;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-theme .sermon-detail-sheet {
+            background: #2a2a2a;
+        }
+
+        .sermon-detail-sheet.active {
+            transform: translateY(0);
+        }
+
+        .sermon-detail-sheet .sermon-sheet-content {
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+        .sermon-detail-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .sermon-detail-section h3 {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0 0 0.5rem 0;
+        }
+
+        body.dark-theme .sermon-detail-section h3 {
+            color: #999;
+        }
+
+        .sermon-detail-section p {
+            margin: 0;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        body.dark-theme .sermon-detail-section p {
+            color: #f0f0f0;
+        }
+
+        .sermon-detail-verses {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .sermon-detail-actions {
+            display: flex;
+            gap: 0.75rem;
+            padding: 16px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .sermon-detail-actions {
+            border-top-color: #3a3a3a;
+        }
+
+        .sermon-detail-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .sermon-detail-edit {
+            background: #78aaff;
+            color: white;
+        }
+
+        .sermon-detail-edit:hover {
+            background: #5a96ff;
+        }
+
+        .sermon-detail-delete {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .sermon-detail-delete:hover {
+            background: #ff5252;
+        }
+
+        /* Confirmation Dialog */
+        .sermon-confirm-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 299;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .sermon-confirm-dialog.active ~ .sermon-confirm-backdrop,
+        .sermon-confirm-backdrop.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .sermon-confirm-dialog {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            z-index: 300;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            display: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            min-width: 280px;
+        }
+
+        body.dark-theme .sermon-confirm-dialog {
+            background: #2a2a2a;
+        }
+
+        .sermon-confirm-dialog.active {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .sermon-confirm-content {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .sermon-confirm-content p {
+            margin: 0 0 24px 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        body.dark-theme .sermon-confirm-content p {
+            color: #f0f0f0;
+        }
+
+        .sermon-confirm-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .sermon-confirm-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .sermon-confirm-cancel {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .sermon-confirm-cancel:hover {
+            background: #d0d0d0;
+        }
+
+        body.dark-theme .sermon-confirm-cancel {
+            background: #404040;
+            color: #f0f0f0;
+        }
+
+        body.dark-theme .sermon-confirm-cancel:hover {
+            background: #4a4a4a;
+        }
+
+        .sermon-confirm-delete {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .sermon-confirm-delete:hover {
+            background: #ff5252;
+        }
+
         .sermon-calendar-backdrop {
             position: fixed;
             top: 0;
@@ -1186,6 +1409,28 @@
     </div>
 
     <!-- Calendar Modal for Date Picker -->
+    <!-- Sermon Detail Bottom Sheet -->
+    <div class="sermon-detail-overlay" id="sermon-detail-overlay" onclick="closeSermonDetail()"></div>
+    <div class="sermon-detail-sheet" id="sermon-detail-sheet">
+        <div class="sermon-sheet-handle"></div>
+        <div class="sermon-sheet-header">
+            <h2 class="sermon-sheet-title">Sermon Details</h2>
+        </div>
+        <div class="sermon-sheet-content" id="sermon-detail-content"></div>
+    </div>
+
+    <!-- Confirmation Dialog -->
+    <div class="sermon-confirm-backdrop" id="sermon-confirm-backdrop" onclick="cancelConfirmDialog()"></div>
+    <div class="sermon-confirm-dialog" id="sermon-confirm-dialog">
+        <div class="sermon-confirm-content">
+            <p id="sermon-confirm-message"></p>
+            <div class="sermon-confirm-buttons">
+                <button class="sermon-confirm-btn sermon-confirm-cancel" onclick="cancelConfirmDialog()">Cancel</button>
+                <button class="sermon-confirm-btn sermon-confirm-delete" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+
     <div class="sermon-calendar-backdrop" id="sermon-calendar-backdrop" onclick="closeSermonCalendar()"></div>
     <div class="sermon-calendar-modal" id="sermon-calendar-modal">
         <div class="sermon-calendar-content">
@@ -1475,6 +1720,115 @@
             localStorage.setItem('sermons', JSON.stringify(sermons));
         }
 
+        // Handle double-tap on sermon card
+        let lastTap = 0;
+        document.addEventListener('click', function(e) {
+            const sermonItem = e.target.closest('.sermon-item');
+            if (!sermonItem) return;
+
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+
+            if (tapLength < 500 && tapLength > 0) {
+                // Double-tap detected
+                const index = sermonItem.dataset.index;
+                showSermonDetails(index);
+            }
+            lastTap = currentTime;
+        });
+
+        // Show sermon details bottom sheet
+        function showSermonDetails(index) {
+            const sermon = sermons[index];
+            const detailSheet = document.getElementById('sermon-detail-sheet');
+            const detailContent = document.getElementById('sermon-detail-content');
+
+            // Populate detail sheet
+            const versesHtml = sermon.verses && sermon.verses.length > 0
+                ? sermon.verses.map(v => `<span class="sermon-verse-badge">${v.display}</span>`).join('')
+                : 'No verses added';
+
+            detailContent.innerHTML = `
+                <div class="sermon-detail-section">
+                    <h3>Sermon Title</h3>
+                    <p>${sermon.title}</p>
+                </div>
+                <div class="sermon-detail-section">
+                    <h3>Date</h3>
+                    <p>${formatSermonDate(new Date(sermon.date))}</p>
+                </div>
+                <div class="sermon-detail-section">
+                    <h3>Verses</h3>
+                    <div class="sermon-detail-verses">${versesHtml}</div>
+                </div>
+                <div class="sermon-detail-actions">
+                    <button class="sermon-detail-btn sermon-detail-edit" onclick="editSermon(${index})">Edit</button>
+                    <button class="sermon-detail-btn sermon-detail-delete" onclick="deleteSermonWithConfirm(${index})">Delete</button>
+                </div>
+            `;
+
+            detailSheet.classList.add('active');
+        }
+
+        // Close sermon details
+        function closeSermonDetail() {
+            const detailSheet = document.getElementById('sermon-detail-sheet');
+            const detailOverlay = document.getElementById('sermon-detail-overlay');
+            detailSheet.classList.remove('active');
+            detailOverlay.classList.remove('active');
+        }
+
+        // Edit sermon
+        function editSermon(index) {
+            const sermon = sermons[index];
+            // Pre-fill the form with sermon data
+            document.getElementById('sermon-title-input').value = sermon.title;
+            selectedSermonDate = sermon.date;
+            document.getElementById('sermon-date-display').textContent = formatSermonDate(new Date(sermon.date));
+            selectedSermonVerses = [...sermon.verses];
+            currentEditingIndex = index;
+            renderVersesChips();
+            closeSermonDetail();
+            document.getElementById('sermon-bottom-sheet').classList.add('active');
+            document.getElementById('sermon-sheet-overlay').classList.add('active');
+        }
+
+        let currentEditingIndex = null;
+
+        // Delete sermon with confirmation
+        function deleteSermonWithConfirm(index) {
+            const confirmDialog = document.getElementById('sermon-confirm-dialog');
+            const confirmBackdrop = document.getElementById('sermon-confirm-backdrop');
+            const confirmMessage = document.getElementById('sermon-confirm-message');
+
+            confirmMessage.textContent = 'Are you sure you want to delete this sermon?';
+            confirmDialog.classList.add('active');
+            confirmBackdrop.classList.add('active');
+
+            // Store the index to delete
+            confirmDialog.dataset.deleteIndex = index;
+        }
+
+        // Cancel confirm dialog
+        function cancelConfirmDialog() {
+            const confirmDialog = document.getElementById('sermon-confirm-dialog');
+            const confirmBackdrop = document.getElementById('sermon-confirm-backdrop');
+            confirmDialog.classList.remove('active');
+            confirmBackdrop.classList.remove('active');
+        }
+
+        // Confirm delete
+        function confirmDelete() {
+            const confirmDialog = document.getElementById('sermon-confirm-dialog');
+            const index = parseInt(confirmDialog.dataset.deleteIndex);
+            
+            sermons.splice(index, 1);
+            saveSermons();
+            renderSermons();
+            cancelConfirmDialog();
+            closeSermonDetail();
+        }
+
         // Calendar functions
         function renderSermonCalendar() {
             const year = currentCalendarDate.getFullYear();
@@ -1629,15 +1983,27 @@
                 return;
             }
 
-            const newSermon = {
-                id: Date.now(),
-                title: title,
-                date: selectedSermonDate.toISOString(),
-                verses: selectedSermonVerses,
-                content: '' // For future use
-            };
+            if (currentEditingIndex !== null) {
+                // Update existing sermon
+                sermons[currentEditingIndex] = {
+                    ...sermons[currentEditingIndex],
+                    title: title,
+                    date: selectedSermonDate.toISOString(),
+                    verses: selectedSermonVerses
+                };
+                currentEditingIndex = null;
+            } else {
+                // Create new sermon
+                const newSermon = {
+                    id: Date.now(),
+                    title: title,
+                    date: selectedSermonDate.toISOString(),
+                    verses: selectedSermonVerses,
+                    content: '' // For future use
+                };
+                sermons.unshift(newSermon);
+            }
 
-            sermons.unshift(newSermon);
             saveSermons();
             renderSermons();
             closeBottomSheet();
