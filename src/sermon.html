@@ -211,7 +211,7 @@
             border-radius: 8px;
             background: #f5f5f5;
             border: 1px solid #e0e0e0;
-            transition: background 0.2s;
+            transition: background 0.2s, box-shadow 0.2s;
             position: relative;
         }
 
@@ -222,10 +222,12 @@
 
         .sermon-item:hover {
             background: #efefef;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.3), inset 0 0 8px rgba(120, 170, 255, 0.1);
         }
 
         body.dark-theme .sermon-item:hover {
             background: #333;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
         }
 
         .sermon-item-header {
@@ -860,6 +862,7 @@
         .sermon-input-group.error .sermon-date-picker-btn {
             border-color: #ef4444 !important;
             border-width: 2px;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.5), inset 0 0 4px rgba(239, 68, 68, 0.1);
         }
 
         .sermon-input-group.error .sermon-input-label {
