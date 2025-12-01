@@ -233,18 +233,21 @@
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
+            overflow: visible;
         }
 
         .sermon-dropdowns-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.75rem;
+            overflow: visible;
         }
 
         .sermon-dropdown-group {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            overflow: visible;
         }
 
         .sermon-verses-row {
@@ -252,6 +255,8 @@
             gap: 0.75rem;
             align-items: flex-end;
             justify-content: space-between;
+            position: relative;
+            z-index: 1;
         }
 
         .sermon-verses-row .sermon-dropdown-group {
@@ -393,6 +398,163 @@
         .sermon-dropdown-select[multiple] option:checked {
             background: linear-gradient(#78aaff, #78aaff);
             color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Custom Dropdown Styles */
+        .sermon-custom-dropdown-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: visible;
+            z-index: 3000;
+        }
+
+        .sermon-custom-dropdown-button {
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: #333;
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sermon-custom-dropdown-button.placeholder {
+            color: #bbb;
+        }
+
+        body.dark-theme .sermon-custom-dropdown-button.placeholder {
+            color: #777;
+        }
+
+        body.dark-theme .sermon-custom-dropdown-button {
+            background-color: #252525;
+            border-color: #404040;
+            color: #f0f0f0;
+        }
+
+        .sermon-custom-dropdown-button:hover {
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.1);
+        }
+
+        body.dark-theme .sermon-custom-dropdown-button:hover {
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.15);
+        }
+
+        .sermon-custom-dropdown-button.active {
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.2);
+        }
+
+        .sermon-custom-dropdown-arrow {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .sermon-custom-dropdown-button.active .sermon-custom-dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .sermon-custom-dropdown-menu {
+            position: fixed;
+            background: #ffffff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 9999;
+            display: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        body.dark-theme .sermon-custom-dropdown-menu {
+            background: #2a2a2a;
+            border-color: #404040;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .sermon-custom-dropdown-menu.active {
+            display: block;
+        }
+
+        .sermon-custom-dropdown-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        body.dark-theme .sermon-custom-dropdown-item {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .sermon-custom-dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .sermon-custom-dropdown-item:hover {
+            background: #f5f5f5;
+        }
+
+        body.dark-theme .sermon-custom-dropdown-item:hover {
+            background: #333;
+        }
+
+        .sermon-custom-dropdown-item.selected {
+            background: rgba(120, 170, 255, 0.1);
+            color: #78aaff;
+            font-weight: 600;
+        }
+
+        body.dark-theme .sermon-custom-dropdown-item.selected {
+            background: rgba(120, 170, 255, 0.15);
+            color: #8ab8ff;
+        }
+
+        .sermon-custom-dropdown-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        body.dark-theme .sermon-custom-dropdown-checkbox {
+            border-color: #404040;
+        }
+
+        .sermon-custom-dropdown-item.selected .sermon-custom-dropdown-checkbox {
+            background: #78aaff;
+            border-color: #78aaff;
+        }
+
+        .sermon-custom-dropdown-checkbox::after {
+            content: '✓';
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .sermon-custom-dropdown-item.selected .sermon-custom-dropdown-checkbox::after {
+            display: block;
         }
 
         .sermon-add-verse-btn {
@@ -522,6 +684,7 @@
             flex: 1;
             padding: 16px;
             overflow-y: auto;
+            overflow-x: visible;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -938,15 +1101,27 @@
                     <div class="sermon-dropdowns-row">
                         <div class="sermon-dropdown-group">
                             <label class="sermon-dropdown-label">Book</label>
-                            <select class="sermon-dropdown-select" id="sermon-book-select">
-                                <option value="">Select Book</option>
-                            </select>
+                            <div class="sermon-custom-dropdown-wrapper" id="sermon-book-wrapper">
+                                <button class="sermon-custom-dropdown-button" type="button" id="sermon-book-button">
+                                    <span id="sermon-book-display">Select Book</span>
+                                    <svg class="sermon-custom-dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="sermon-custom-dropdown-menu" id="sermon-book-menu"></div>
+                            </div>
                         </div>
                         <div class="sermon-dropdown-group">
                             <label class="sermon-dropdown-label">Chapter</label>
-                            <select class="sermon-dropdown-select" id="sermon-chapter-select" disabled>
-                                <option value="">Chapter</option>
-                            </select>
+                            <div class="sermon-custom-dropdown-wrapper" id="sermon-chapter-wrapper">
+                                <button class="sermon-custom-dropdown-button" type="button" id="sermon-chapter-button">
+                                    <span id="sermon-chapter-display">Select Chapter</span>
+                                    <svg class="sermon-custom-dropdown-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div class="sermon-custom-dropdown-menu" id="sermon-chapter-menu"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="sermon-verses-row">
@@ -1068,49 +1243,148 @@
         let selectedSermonDate = null;
         let selectedSermonVerses = [];
 
-        // Initialize book dropdown
+        // Custom Dropdown Implementation
+        class CustomDropdown {
+            constructor(buttonId, menuId, displayId) {
+                this.button = document.getElementById(buttonId);
+                this.menu = document.getElementById(menuId);
+                this.display = document.getElementById(displayId);
+                this.selectedValue = null;
+                this.disabled = false;
+                this.bottomSheet = document.getElementById('sermon-bottom-sheet');
+
+                this.button.classList.add('placeholder');
+                this.button.addEventListener('click', () => this.toggle());
+                document.addEventListener('click', (e) => {
+                    if (!this.button.contains(e.target) && !this.menu.contains(e.target)) {
+                        this.close();
+                    }
+                });
+                
+                // Add scroll listener to reposition menu
+                const contentArea = document.querySelector('.sermon-sheet-content');
+                if (contentArea) {
+                    contentArea.addEventListener('scroll', () => {
+                        if (this.menu.classList.contains('active')) {
+                            this.positionMenu();
+                        }
+                    });
+                }
+                
+                // Move menu to bottom sheet to break out of overflow container
+                this.menu.style.position = 'fixed';
+                this.menu.style.zIndex = '9999';
+            }
+
+            toggle() {
+                if (this.disabled) return;
+                this.menu.classList.contains('active') ? this.close() : this.open();
+            }
+
+            open() {
+                if (this.disabled) return;
+                this.menu.classList.add('active');
+                this.button.classList.add('active');
+                this.positionMenu();
+            }
+
+            close() {
+                this.menu.classList.remove('active');
+                this.button.classList.remove('active');
+            }
+
+            positionMenu() {
+                const buttonRect = this.button.getBoundingClientRect();
+                const menuHeight = 300; // max-height of menu
+                const spaceBelow = window.innerHeight - buttonRect.bottom;
+                const spaceAbove = buttonRect.top;
+                
+                // Position above if not enough space below
+                if (spaceBelow < menuHeight + 20 && spaceAbove > menuHeight + 20) {
+                    this.menu.style.top = (buttonRect.top - menuHeight - 4) + 'px';
+                } else {
+                    this.menu.style.top = (buttonRect.bottom + 4) + 'px';
+                }
+                
+                this.menu.style.left = buttonRect.left + 'px';
+                this.menu.style.width = buttonRect.width + 'px';
+            }
+
+            setOptions(items) {
+                this.menu.innerHTML = '';
+                items.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'sermon-custom-dropdown-item';
+                    div.textContent = item;
+                    div.addEventListener('click', () => this.selectItem(item));
+                    this.menu.appendChild(div);
+                });
+            }
+
+            selectItem(item) {
+                this.selectedValue = item;
+                this.display.textContent = item;
+                this.close();
+                this.button.classList.remove('placeholder');
+                return item;
+            }
+
+            setDisabled(disabled) {
+                this.disabled = disabled;
+                this.button.disabled = disabled;
+                this.button.style.opacity = disabled ? '0.5' : '1';
+            }
+
+            clear() {
+                this.selectedValue = null;
+                this.display.textContent = this.display.dataset.placeholder || 'Select Item';
+                this.button.classList.add('placeholder');
+                this.menu.innerHTML = '';
+            }
+        }
+
+        // Initialize custom dropdowns
+        const bookDropdown = new CustomDropdown('sermon-book-button', 'sermon-book-menu', 'sermon-book-display');
+        const chapterDropdown = new CustomDropdown('sermon-chapter-button', 'sermon-chapter-menu', 'sermon-chapter-display');
+
         function initializeBookDropdown() {
-            const bookSelect = document.getElementById('sermon-book-select');
-            bibleMeta.forEach(book => {
-                const option = document.createElement('option');
-                option.value = book.book;
-                option.textContent = book.book;
-                bookSelect.appendChild(option);
+            const bookNames = bibleMeta.map(b => b.book);
+            bookDropdown.setOptions(bookNames);
+
+            bookDropdown.menu.querySelectorAll('.sermon-custom-dropdown-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const selectedBook = item.textContent;
+                    loadChapters(selectedBook);
+                });
             });
         }
 
-        // Handle book selection
-        document.getElementById('sermon-book-select').addEventListener('change', function () {
-            const selectedBook = this.value;
-            const chapterSelect = document.getElementById('sermon-chapter-select');
+        function loadChapters(selectedBook) {
             const versesSelect = document.getElementById('sermon-verses-select');
-
-            chapterSelect.innerHTML = '<option value="">Chapter</option>';
             versesSelect.innerHTML = '<option value="">Verses</option>';
+            chapterDropdown.clear();
             versesSelect.disabled = true;
 
             if (selectedBook) {
                 const book = bibleMeta.find(b => b.book === selectedBook);
-                book.chapters.forEach((_, index) => {
-                    const option = document.createElement('option');
-                    option.value = index + 1;
-                    option.textContent = index + 1;
-                    chapterSelect.appendChild(option);
+                const chapterNumbers = Array.from({length: book.chapters.length}, (_, i) => i + 1);
+                chapterDropdown.setOptions(chapterNumbers);
+                chapterDropdown.setDisabled(false);
+
+                chapterDropdown.menu.querySelectorAll('.sermon-custom-dropdown-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const selectedChapter = parseInt(item.textContent);
+                        loadVerses(selectedBook, selectedChapter);
+                    });
                 });
-                chapterSelect.disabled = false;
             } else {
-                chapterSelect.disabled = true;
+                chapterDropdown.setDisabled(true);
             }
-        });
+        }
 
-        // Handle chapter selection
-        document.getElementById('sermon-chapter-select').addEventListener('change', function () {
-            const bookSelect = document.getElementById('sermon-book-select');
-            const selectedBook = bookSelect.value;
-            const selectedChapter = parseInt(this.value);
+        function loadVerses(selectedBook, selectedChapter) {
             const versesSelect = document.getElementById('sermon-verses-select');
-
-            versesSelect.innerHTML = '<option value="">Select Verses</option>';
+            versesSelect.innerHTML = '<option value="">Verses</option>';
 
             if (selectedChapter) {
                 const book = bibleMeta.find(b => b.book === selectedBook);
@@ -1125,7 +1399,7 @@
             } else {
                 versesSelect.disabled = true;
             }
-        });
+        }
 
         // Handle verse selection
         document.getElementById('sermon-verses-select').addEventListener('change', function () {
@@ -1135,12 +1409,10 @@
 
         // Add verse reference
         document.getElementById('sermon-add-verse-btn').addEventListener('click', function () {
-            const bookSelect = document.getElementById('sermon-book-select');
-            const chapterSelect = document.getElementById('sermon-chapter-select');
             const versesSelect = document.getElementById('sermon-verses-select');
 
-            const book = bookSelect.value;
-            const chapter = chapterSelect.value;
+            const book = bookDropdown.selectedValue;
+            const chapter = chapterDropdown.selectedValue;
             const verses = Array.from(versesSelect.selectedOptions).map(opt => opt.value);
 
             if (book && chapter && verses.length > 0) {
@@ -1356,9 +1628,9 @@
             selectedSermonVerses = [];
             document.getElementById('sermon-date-display').textContent = 'Select date';
             document.getElementById('sermon-date-input').value = '';
-            document.getElementById('sermon-book-select').value = '';
-            document.getElementById('sermon-chapter-select').value = '';
-            document.getElementById('sermon-chapter-select').disabled = true;
+            bookDropdown.clear();
+            chapterDropdown.clear();
+            chapterDropdown.setDisabled(true);
             document.getElementById('sermon-verses-select').value = '';
             document.getElementById('sermon-verses-select').disabled = true;
             document.getElementById('sermon-add-verse-btn').disabled = true;
