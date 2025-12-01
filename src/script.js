@@ -4623,6 +4623,125 @@ async function cleanupDuplicateMemoryVerses() {
         return false;
     }
 }
+
+// Initialize memory verses with all 91 original verses
+async function initializeOriginalMemoryVerses() {
+    const originalVerses = [
+        "Hebrews 4:12",
+        "Romans 6:23",
+        "2 Timothy 1:7",
+        "Philippians 4:13",
+        "Romans 3:23",
+        "Hebrews 11:1",
+        "Proverbs 3:5",
+        "Romans 12:2",
+        "Isaiah 41:10",
+        "John 3:16",
+        "Galatians 5:22",
+        "Romans 8:28",
+        "Hebrews 13:8",
+        "John 14:6",
+        "Philippians 4:6",
+        "Genesis 1:1",
+        "2 Timothy 3:16",
+        "2 Corinthians 5:17",
+        "Isaiah 12:1–6",
+        "John 1:1",
+        "Matthew 6:33",
+        "Psalm 56:3",
+        "1 John 4:19",
+        "1 John 1:9",
+        "James 1:22",
+        "1 Corinthians 15:58",
+        "Romans 10:17",
+        "Romans 5:8",
+        "John 14:27",
+        "Psalm 119:105",
+        "James 4:7",
+        "Hebrews 11:6",
+        "Philippians 4:8",
+        "Romans 8:1",
+        "Acts 16:31",
+        "Acts 1:8",
+        "Luke 6:31",
+        "Matthew 28:18–20",
+        "Jeremiah 29:13",
+        "Jeremiah 29:11",
+        "Psalm 23:1",
+        "Ephesians 5:2",
+        "Ephesians 2:8–9",
+        "1 Corinthians 10:31",
+        "Matthew 28:19",
+        "Matthew 22:37",
+        "Jonah 4:4",
+        "Isaiah 40:31",
+        "Psalm 150:6",
+        "Psalm 42:1–2",
+        "Psalm 34:18",
+        "Psalm 31:21",
+        "Joshua 1:9",
+        "Revelation 11:1–19",
+        "1 Thessalonians 5:18",
+        "Philippians 4:4",
+        "Philippians 1:6",
+        "Ephesians 4:32",
+        "1 Corinthians 10:13",
+        "Acts 4:12",
+        "John 16:33",
+        "John 10:10",
+        "John 1:3",
+        "Matthew 11:28",
+        "Matthew 7:7",
+        "Proverbs 22:6",
+        "Proverbs 18:10",
+        "Proverbs 3:5–6",
+        "Psalm 119:11",
+        "Psalm 46:1",
+        "1 John 3:16",
+        "1 Peter 5:7",
+        "Hebrews 4:16",
+        "2 Timothy 2:15",
+        "Galatians 5:22–23",
+        "1 Corinthians 13:4",
+        "Romans 15:13",
+        "Romans 10:13",
+        "John 14:26",
+        "John 13:34",
+        "John 11:25",
+        "John 5:24",
+        "John 3:17",
+        "Mark 11:24",
+        "Matthew 6:14",
+        "Isaiah 53:6",
+        "Isaiah 53:5",
+        "Isaiah 26:3",
+        "Psalm 91:1–2"
+    ];
+
+    try {
+        // Set to global memory verses
+        window.memoryVerses = originalVerses;
+        localStorage.setItem('memoryVerses', JSON.stringify(originalVerses));
+        console.log(`📚 Initializing ${originalVerses.length} original memory verses...`);
+        
+        // Save to Supabase
+        await saveMemoryVersesToSupabase();
+        
+        // Update UI
+        markBooksWithMemoryVerses();
+        updateVerseMemoryVerseIndicators();
+        displayChapter();
+        
+        showToast(`✅ Loaded ${originalVerses.length} memory verses to Supabase!`, 3000);
+        console.log(`✅ Successfully initialized ${originalVerses.length} memory verses`);
+        return true;
+    } catch (error) {
+        console.error('❌ Error initializing memory verses:', error);
+        showToast('Failed to initialize memory verses', 'error');
+        return false;
+    }
+}
+
 // Notes functionality
 function openNotesModal(verseNum = null) {
     // Check admin mode
