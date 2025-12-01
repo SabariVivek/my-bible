@@ -245,6 +245,19 @@
             border-color: rgba(120, 170, 255, 0.2);
         }
 
+        .sermon-verse-more {
+            display: inline-block;
+            margin-left: 0.5rem;
+            padding: 0 0;
+            color: #999;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        body.dark-theme .sermon-verse-more {
+            color: #777;
+        }
+
         .sermon-verses-chips {
             display: flex;
             flex-wrap: wrap;
@@ -1775,13 +1788,18 @@
             sermonList.innerHTML = sermons.map((sermon, index) => {
                 const date = new Date(sermon.date);
                 const dateStr = formatSermonDate(date);
-                const versesHtml = sermon.verses && sermon.verses.length > 0
-                    ? sermon.verses.map(v => `
-                        <div class="sermon-verse-item">
-                            <span class="sermon-verse-badge">${v.display}</span>
-                        </div>
-                    `).join('')
-                    : '';
+                let versesHtml = '';
+                if (sermon.verses && sermon.verses.length > 0) {
+                    versesHtml = sermon.verses.slice(0, 2).map((v, idx) => {
+                        const moreCount = sermon.verses.length > 2 && idx === 1 ? sermon.verses.length - 2 : 0;
+                        return `
+                            <div class="sermon-verse-item">
+                                <span class="sermon-verse-badge">${v.display}</span>
+                                ${moreCount > 0 ? `<span class="sermon-verse-more">+${moreCount} more</span>` : ''}
+                            </div>
+                        `;
+                    }).join('');
+                }
                 return `
                     <div class="sermon-item" data-index="${index}">
                         <div class="sermon-item-header">
