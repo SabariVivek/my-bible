@@ -888,7 +888,7 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.3);
-            z-index: 199;
+            z-index: 200;
             display: none;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -909,7 +909,7 @@
             right: 0;
             background: #ffffff;
             border-radius: 16px 16px 0 0;
-            z-index: 200;
+            z-index: 201;
             max-height: 80vh;
             display: flex;
             flex-direction: column;
@@ -2021,8 +2021,8 @@
             const dateStr = formatSermonDate(new Date(sermon.date));
             detailHeader.innerHTML = `
                 <div style="flex: 1;">
-                    <h3 style="margin: 0 0 0.25rem 0; font-size: 0.85rem; font-weight: 500; color: #999;">Sermon Title</h3>
                     <h2 class="sermon-sheet-title" style="margin: 0; font-size: 1.1rem;">${sermon.title}</h2>
+                    ${sermon.tamilTitle ? `<p style="margin: 0.25rem 0 0 0; font-size: 0.75rem; color: #666; font-weight: 500;">${sermon.tamilTitle}</p>` : ''}
                 </div>
             `;
 
@@ -2046,10 +2046,9 @@
             
             if (detailOverlay) {
                 detailOverlay.addEventListener('click', (e) => {
-                    // Only close if clicking directly on overlay, not on bubbled events
-                    if (e.target === detailOverlay) {
-                        closeSermonDetail();
-                    }
+                    console.log('Overlay clicked, target:', e.target, 'overlay:', detailOverlay);
+                    // Close on any click on the overlay
+                    closeSermonDetail();
                 });
             }
             
