@@ -7176,3 +7176,306 @@ body.dark-theme .color-option:hover {
     border-color: #666;
 }
 
+/* Sermon Selection Modal Styles */
+.sermon-selection-modal {
+    display: none;
+    z-index: 1000;
+}
+
+.sermon-selection-modal.visible {
+    display: flex;
+}
+
+.sermon-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sermon-modal-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-radius: 16px 16px 0 0;
+    z-index: 1001;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease-out;
+}
+
+body.dark-theme .sermon-modal-content {
+    background: #2a2a2a;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.sermon-modal-handle {
+    width: 40px;
+    height: 4px;
+    background: #ccc;
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
+body.dark-theme .sermon-modal-handle {
+    background: #555;
+}
+
+.sermon-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+body.dark-theme .sermon-modal-header {
+    border-bottom-color: #404040;
+}
+
+.sermon-modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+body.dark-theme .sermon-modal-title {
+    color: #f0f0f0;
+}
+
+.sermon-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    width: 36px;
+    height: 36px;
+}
+
+.sermon-modal-close:hover {
+    background: #f0f0f0;
+    color: #333;
+}
+
+body.dark-theme .sermon-modal-close:hover {
+    background: #3a3a3a;
+    color: #f0f0f0;
+}
+
+.sermon-modal-close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.sermon-selected-verses {
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+body.dark-theme .sermon-selected-verses {
+    background: #333;
+    border-bottom-color: #404040;
+    color: #aaa;
+}
+
+.sermon-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.sermon-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: #999;
+    font-size: 14px;
+}
+
+.sermon-empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+}
+
+.sermon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sermon-item {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+body.dark-theme .sermon-item {
+    border-color: #404040;
+}
+
+.sermon-item:hover {
+    border-color: #78aaff;
+    background: #f9f9f9;
+}
+
+body.dark-theme .sermon-item:hover {
+    background: #333;
+}
+
+.sermon-item.selected {
+    border-color: #78aaff;
+    background: rgba(120, 170, 255, 0.1);
+}
+
+body.dark-theme .sermon-item.selected {
+    background: rgba(120, 170, 255, 0.15);
+}
+
+.sermon-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.sermon-item-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+body.dark-theme .sermon-item-title {
+    color: #f0f0f0;
+}
+
+.sermon-item-date {
+    font-size: 12px;
+    color: #999;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sermon-item-verses {
+    font-size: 12px;
+    color: #78aaff;
+    font-weight: 500;
+}
+
+.sermon-view-all-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.sermon-view-all-btn {
+    color: #78aaff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.sermon-view-all-btn:hover {
+    color: #4b7ec0;
+    background: rgba(120, 170, 255, 0.1);
+}
+
+body.dark-theme .sermon-view-all-btn:hover {
+    color: #9ec5ff;
+    background: rgba(120, 170, 255, 0.15);
+}
+
+.sermon-modal-footer {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+    background: #f9f9f9;
+}
+
+body.dark-theme .sermon-modal-footer {
+    border-top-color: #404040;
+    background: #1a1a1a;
+}
+
+.sermon-modal-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sermon-modal-cancel {
+    background: #e0e0e0;
+    color: #333;
+}
+
+body.dark-theme .sermon-modal-cancel {
+    background: #404040;
+    color: #f0f0f0;
+}
+
+.sermon-modal-cancel:hover {
+    background: #d0d0d0;
+}
+
+body.dark-theme .sermon-modal-cancel:hover {
+    background: #505050;
+}
+
+.sermon-modal-save {
+    background: #78aaff;
+    color: #ffffff;
+}
+
+.sermon-modal-save:hover:not(:disabled) {
+    background: #5a94e6;
+}
+
+.sermon-modal-save:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+body.sermon-modal-open {
+    overflow: hidden;
+}

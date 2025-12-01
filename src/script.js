@@ -1675,8 +1675,31 @@ function showVerseActionsBottomSheet(verseNum) {
     
     // Add sermon button
     bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
-        showToast('Add to Sermon - Coming Soon!', 'info');
         closeBottomSheet();
+        
+        // Get all selected verses from the verses column
+        const versesColumn = document.querySelector('.verses-column');
+        const selectedVerseElements = versesColumn.querySelectorAll('.number-item.active');
+        const selectedVerses = Array.from(selectedVerseElements).map(item => {
+            const verseNum = parseInt(item.dataset.verse);
+            return {
+                book: bibleBooks[currentBook].name,
+                chapter: currentChapter,
+                verse: verseNum,
+                display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+            };
+        });
+        
+        // If no verses are selected, add the current verse only
+        const versesToAdd = selectedVerses.length > 0 ? selectedVerses : [{
+            book: bibleBooks[currentBook].name,
+            chapter: currentChapter,
+            verse: verseNum,
+            display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+        }];
+        
+        // Show sermon selection sheet
+        showSermonSelectionSheet(versesToAdd);
     });
     
     // Add bookmark button
@@ -2001,8 +2024,18 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
     
     // Add sermon button
     bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
-        showToast('Add to Sermon - Coming Soon!', 'info');
         closeBottomSheet();
+        
+        // For multi-select, use the selectedVerses array
+        const versesToAdd = selectedVerses.map(verseNum => ({
+            book: bibleBooks[currentBook].name,
+            chapter: currentChapter,
+            verse: verseNum,
+            display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+        }));
+        
+        // Show sermon selection sheet
+        showSermonSelectionSheet(versesToAdd);
     });
     
     // Add bookmark button (color picker for all selected verses)
@@ -6758,3 +6791,358 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     });
 });
+
+/**
+ * Convert an array of verses into consolidated verse ranges
+ * E.g., [1, 2, 3, 5, 6] becomes ranges: [{start: 1, end: 3}, {start: 5, end: 6}]
+ * @param {Array} verses - Array of verse numbers
+ * @returns {Array} Array of {start, end} objects representing ranges
+ */
+function getVerseRanges(verses) {
+    if (!verses || verses.length === 0) return [];
+    
+    // Sort and deduplicate
+    const uniqueVerses = [...new Set(verses)].sort((a, b) => a - b);
+    
+    const ranges = [];
+    let rangeStart = uniqueVerses[0];
+    let rangeEnd = uniqueVerses[0];
+    
+    for (let i = 1; i < uniqueVerses.length; i++) {
+        if (uniqueVerses[i] === rangeEnd + 1) {
+            // Consecutive verse, extend the range
+            rangeEnd = uniqueVerses[i];
+        } else {
+            // Gap found, save the current range and start a new one
+            ranges.push({ start: rangeStart, end: rangeEnd });
+            rangeStart = uniqueVerses[i];
+            rangeEnd = uniqueVerses[i];
+        }
+    }
+    
+    // Add the last range
+    ranges.push({ start: rangeStart, end: rangeEnd });
+    
+    return ranges;
+}
+
+/**
+ * Format verse ranges for display
+ * E.g., ranges for verses 1-3 and 5-6 becomes "1 - 3, 5 - 6"
+ * @param {Array} ranges - Array of {start, end} range objects
+ * @returns {string} Formatted verse range string
+ */
+function formatVerseRanges(ranges) {
+    return ranges.map(range => {
+        if (range.start === range.end) {
+            return range.start.toString();
+        } else {
+            return `${range.start} - ${range.end}`;
+        }
+    }).join(', ');
+}
+
+/**
+ * Convert multiple verses into verse objects with consolidated ranges
+ * Instead of {book, chapter, verse: 1}, {book, chapter, verse: 2}, {book, chapter, verse: 3}
+ * Returns {book, chapter, verses: [1, 2, 3], display: "John 3:1 - 3"}
+ * @param {Array} versesToAdd - Array of verse objects
+ * @returns {Array} Consolidated verse objects with ranges
+ */
+function consolidateVerses(versesToAdd) {
+    if (!versesToAdd || versesToAdd.length === 0) return [];
+    
+    // Group verses by book and chapter
+    const grouped = {};
+    
+    versesToAdd.forEach(verse => {
+        const key = `${verse.book}:${verse.chapter}`;
+        if (!grouped[key]) {
+            grouped[key] = {
+                book: verse.book,
+                chapter: verse.chapter,
+                verses: []
+            };
+        }
+        grouped[key].verses.push(verse.verse);
+    });
+    
+    // Convert to consolidated format
+    const consolidated = [];
+    for (const key in grouped) {
+        const group = grouped[key];
+        const ranges = getVerseRanges(group.verses);
+        const rangeStr = formatVerseRanges(ranges);
+        
+        consolidated.push({
+            book: group.book,
+            chapter: group.chapter,
+            verses: group.verses,
+            ranges: ranges,
+            display: `${group.book} ${group.chapter} : ${rangeStr}`
+        });
+    }
+    
+    return consolidated;
+}
+
+/**
+ * Fetch recently created sermons from Supabase
+ * @returns {Promise<Array>} Array of recent sermons
+ */
+async function getRecentSermons() {
+    try {
+        // Check if supabase is available
+        if (!window.supabase) {
+            console.warn('Supabase not available');
+            return [];
+        }
+        
+        const supabase = window.supabase.createClient(
+            'https://encjogfdbrfcatvytpir.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
+        );
+        
+        const { data, error } = await supabase
+            .from('sermons')
+            .select('id, title, tamil_title, sermon_date, verses')
+            .order('sermon_date', { ascending: false })
+            .limit(10);
+        
+        if (error) {
+            console.error('Error fetching sermons:', error);
+            return [];
+        }
+        
+        return data || [];
+    } catch (error) {
+        console.error('Error in getRecentSermons:', error);
+        return [];
+    }
+}
+
+/**
+ * Show sermon selection bottom sheet with recently created sermons
+ * @param {Array} versesToAdd - Array of verse objects to add {book, chapter, verse, display}
+ */
+async function showSermonSelectionSheet(versesToAdd) {
+    // Create or get the sermon selection modal
+    let sermonModal = document.getElementById('sermon-selection-modal');
+    if (!sermonModal) {
+        sermonModal = document.createElement('div');
+        sermonModal.id = 'sermon-selection-modal';
+        sermonModal.className = 'sermon-selection-modal';
+        document.body.appendChild(sermonModal);
+    }
+    
+    // Show loading state
+    const consolidatedVerses = consolidateVerses(versesToAdd);
+    const verseDisplayText = consolidatedVerses.map(v => v.display).join(', ');
+    
+    sermonModal.innerHTML = `
+        <div class="sermon-modal-backdrop"></div>
+        <div class="sermon-modal-content">
+            <div class="sermon-modal-handle"></div>
+            <div class="sermon-modal-header">
+                <h3 class="sermon-modal-title">Select Sermon</h3>
+                <button class="sermon-modal-close" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="sermon-selected-verses">
+                <small>Adding: ${verseDisplayText}</small>
+            </div>
+            <div class="sermon-modal-body">
+                <div class="sermon-loader">Loading sermons...</div>
+            </div>
+            <div class="sermon-modal-footer">
+                <button class="sermon-modal-btn sermon-modal-cancel">Cancel</button>
+                <button class="sermon-modal-btn sermon-modal-save" disabled>Add</button>
+            </div>
+        </div>
+    `;
+    
+    sermonModal.classList.add('visible');
+    document.body.classList.add('sermon-modal-open');
+    
+    // Fetch recent sermons
+    const sermons = await getRecentSermons();
+    
+    // Render sermons
+    const sermonBody = sermonModal.querySelector('.sermon-modal-body');
+    if (sermons.length === 0) {
+        sermonBody.innerHTML = '<div class="sermon-empty-state">No sermons found. Create one in the Sermon page first.</div>';
+    } else {
+        // Show only the most recent sermon by default
+        const renderSermons = (sermonList, showAll = false) => {
+            const displaySermons = showAll ? sermonList : [sermonList[0]];
+            
+            let sermonListHTML = '<div class="sermon-list">';
+            displaySermons.forEach((sermon) => {
+                const dateStr = new Date(sermon.sermon_date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+                const displayTitle = sermon.tamil_title && sermon.tamil_title.trim() 
+                    ? `${sermon.title} (${sermon.tamil_title})`
+                    : sermon.title;
+                
+                // Preselect the first sermon when showing default view
+                const isPreselected = !showAll;
+                
+                sermonListHTML += `
+                    <div class="sermon-item ${isPreselected ? 'selected' : ''}" data-sermon-id="${sermon.id}">
+                        <div class="sermon-item-header">
+                            <div class="sermon-item-title">${displayTitle}</div>
+                            <div class="sermon-item-date">${dateStr}</div>
+                        </div>
+                        ${sermon.verses && sermon.verses.length > 0 ? `
+                            <div class="sermon-item-verses">${sermon.verses.length} verses</div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+            
+            // Add "Any Other Sermon?" link if not showing all
+            if (!showAll && sermons.length > 1) {
+                sermonListHTML += `
+                    <div class="sermon-view-all-link">
+                        <a href="#" class="sermon-view-all-btn">Looking for others?</a>
+                    </div>
+                `;
+            }
+            
+            sermonListHTML += '</div>';
+            sermonBody.innerHTML = sermonListHTML;
+            
+            // Enable button if showing default view (first sermon is preselected)
+            if (!showAll) {
+                sermonModal.querySelector('.sermon-modal-save').disabled = false;
+            } else {
+                sermonModal.querySelector('.sermon-modal-save').disabled = true;
+            }
+            
+            // Add click handlers to sermon items
+            sermonBody.querySelectorAll('.sermon-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    sermonBody.querySelectorAll('.sermon-item').forEach(i => i.classList.remove('selected'));
+                    item.classList.add('selected');
+                    sermonModal.querySelector('.sermon-modal-save').disabled = false;
+                });
+            });
+            
+            // Add click handler for "Any Other Sermon?" link
+            const viewAllBtn = sermonBody.querySelector('.sermon-view-all-btn');
+            if (viewAllBtn) {
+                viewAllBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    renderSermons(sermonList, true);
+                });
+            }
+        };
+        
+        // Initial render with only the most recent sermon
+        renderSermons(sermons, false);
+    }
+    
+    // Close modal
+    const closeModal = () => {
+        sermonModal.classList.remove('visible');
+        document.body.classList.remove('sermon-modal-open');
+    };
+    
+    sermonModal.querySelector('.sermon-modal-close').addEventListener('click', closeModal);
+    sermonModal.querySelector('.sermon-modal-backdrop').addEventListener('click', closeModal);
+    sermonModal.querySelector('.sermon-modal-cancel').addEventListener('click', closeModal);
+    
+    // Save to sermon
+    sermonModal.querySelector('.sermon-modal-save').addEventListener('click', async () => {
+        const selectedSermon = sermonBody.querySelector('.sermon-item.selected');
+        if (!selectedSermon) return;
+        
+        const sermonId = parseInt(selectedSermon.dataset.sermonId);
+        
+        try {
+            // Find the sermon from the list
+            const sermon = sermons.find(s => s.id === sermonId);
+            if (!sermon) {
+                showToast('Sermon not found', 'error');
+                return;
+            }
+            
+            // Consolidate verses into ranges
+            const consolidatedVersesToAdd = consolidateVerses(versesToAdd);
+            
+            // Merge verses
+            const existingVerses = sermon.verses || [];
+            const newVerses = [...existingVerses];
+            
+            // Add new verse ranges if not already in the sermon
+            consolidatedVersesToAdd.forEach(newVerseRange => {
+                const verseRangeKey = `${newVerseRange.book}:${newVerseRange.chapter}:${newVerseRange.ranges.map(r => r.start === r.end ? r.start : `${r.start}-${r.end}`).join(',')}`;
+                
+                const alreadyExists = newVerses.some(v => {
+                    if (v.book !== newVerseRange.book || v.chapter !== newVerseRange.chapter) {
+                        return false;
+                    }
+                    
+                    // Check if all verses in the new range already exist
+                    const existingVersesInChapter = Array.isArray(v.verses) ? v.verses : [v.verse];
+                    return newVerseRange.verses.every(verse => existingVersesInChapter.includes(verse));
+                });
+                
+                if (!alreadyExists) {
+                    newVerses.push(newVerseRange);
+                }
+            });
+            
+            // Update sermon with new verses
+            await updateSermon(sermonId, { verses: newVerses });
+            
+            closeModal();
+            showToast('Added...', 'success');
+        } catch (error) {
+            console.error('Error adding verses to sermon:', error);
+            showToast('Failed to add verses to sermon', 'error');
+        }
+    });
+}
+
+/**
+ * Update a sermon in Supabase
+ * @param {number} sermonId - Sermon ID
+ * @param {Object} updates - Object with fields to update
+ * @returns {Promise<Object>} Updated sermon
+ */
+async function updateSermon(sermonId, updates) {
+    try {
+        if (!window.supabase) {
+            throw new Error('Supabase not available');
+        }
+        
+        const supabase = window.supabase.createClient(
+            'https://encjogfdbrfcatvytpir.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1NDM2MzksImV4cCI6MjA3OTExOTYzOX0.X3jHo2YTwQa0j8HTjhi7fkO1wU2rb6jwngRjVKaF6ck'
+        );
+        
+        const { data, error } = await supabase
+            .from('sermons')
+            .update(updates)
+            .eq('id', sermonId)
+            .select()
+            .single();
+        
+        if (error) {
+            throw error;
+        }
+        
+        return data;
+    } catch (error) {
+        console.error('Error updating sermon:', error);
+        throw error;
+    }
+}
