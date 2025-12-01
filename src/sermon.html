@@ -2360,6 +2360,13 @@
                     const dateStr = currentDate.toLocaleDateString();
                     document.getElementById('sermon-date-display').textContent = dateStr;
                     document.getElementById('sermon-date-input').value = currentDate.toISOString();
+                    
+                    // Clear error when date is selected
+                    const dateGroup = datePickerBtn.closest('.sermon-input-group');
+                    if (dateGroup) {
+                        dateGroup.classList.remove('error');
+                    }
+                    
                     closeSermonCalendar();
                 });
 
@@ -2407,6 +2414,23 @@
         const bottomSheet = document.getElementById('sermon-bottom-sheet');
         const titleInput = document.getElementById('sermon-title-input');
         const datePickerBtn = document.getElementById('sermon-date-picker-btn');
+
+        // Clear error on title input
+        titleInput.addEventListener('input', () => {
+            if (titleInput.value.trim()) {
+                const titleGroup = titleInput.closest('.sermon-input-group');
+                titleGroup.classList.remove('error');
+            }
+        });
+
+        // Clear error on date selection
+        const originalDatePickerClick = datePickerBtn.onclick;
+        datePickerBtn.addEventListener('click', () => {
+            if (selectedSermonDate) {
+                const dateGroup = datePickerBtn.closest('.sermon-input-group');
+                dateGroup.classList.remove('error');
+            }
+        });
 
         // Open bottom sheet
         addBtn.addEventListener('click', () => {
