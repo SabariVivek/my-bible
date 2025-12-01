@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,23 +55,24 @@
             border-bottom: 1px solid #e0e0e0;
         }
 
-        .sermon-back-btn {
+        .sermon-back-btn,
+        .sermon-add-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: none;
+            width: 36px;
+            height: 36px;
             border: none;
             cursor: pointer;
             color: #ffffff;
-            transition: color 0.2s ease, opacity 0.2s ease;
             flex-shrink: 0;
-            font-size: 24px;
+            font-size: 20px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
         }
 
-        body.light-theme .sermon-back-btn {
-            color: #333;
+        .sermon-back-btn {
+            background: none;
         }
 
         .sermon-back-btn:hover {
@@ -81,7 +83,40 @@
             opacity: 0.6;
         }
 
-        .sermon-back-btn svg {
+        .sermon-add-btn {
+            background: linear-gradient(135deg, #78aaff 0%, #5a94e6 100%);
+            box-shadow: 0 4px 12px rgba(120, 170, 255, 0.4);
+            transform: scale(1);
+        }
+
+        .sermon-add-btn:hover {
+            background: linear-gradient(135deg, #8ab8ff 0%, #6ca4f6 100%);
+            box-shadow: 0 6px 16px rgba(120, 170, 255, 0.5);
+            transform: scale(1.1);
+        }
+
+        .sermon-add-btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.3);
+        }
+
+        body.light-theme .sermon-back-btn {
+            color: #333;
+        }
+
+        body.light-theme .sermon-add-btn {
+            background: linear-gradient(135deg, #78aaff 0%, #5a94e6 100%);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(120, 170, 255, 0.4);
+        }
+
+        body.light-theme .sermon-add-btn:hover {
+            background: linear-gradient(135deg, #8ab8ff 0%, #6ca4f6 100%);
+            box-shadow: 0 6px 16px rgba(120, 170, 255, 0.5);
+        }
+
+        .sermon-back-btn svg,
+        .sermon-add-btn svg {
             width: 24px;
             height: 24px;
         }
@@ -104,14 +139,298 @@
             flex: 1;
             overflow-y: auto;
             padding: 2rem;
+        }
+
+        .sermon-list {
             display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sermon-item {
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            transition: background 0.2s;
+            position: relative;
+        }
+
+        body.dark-theme .sermon-item {
+            background: #2a2a2a;
+            border-color: #3a3a3a;
+        }
+
+        .sermon-item:hover {
+            background: #efefef;
+        }
+
+        body.dark-theme .sermon-item:hover {
+            background: #333;
+        }
+
+        .sermon-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .sermon-item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0;
+            color: #333;
+            flex: 1;
+        }
+
+        body.dark-theme .sermon-item-title {
+            color: #f0f0f0;
+        }
+
+        .sermon-verses-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .sermon-verse-chip {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 0.5rem;
+            padding: 6px 12px;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        body.dark-theme .sermon-verse-chip {
+            background: rgba(120, 170, 255, 0.1);
+            color: #8ab8ff;
+            border-color: rgba(120, 170, 255, 0.2);
+        }
+
+        .sermon-verse-chip-remove {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0;
+            line-height: 1;
+            transition: opacity 0.2s;
+        }
+
+        .sermon-verse-chip-remove:hover {
+            opacity: 0.7;
+        }
+
+        .sermon-dropdowns-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .sermon-dropdowns-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .sermon-dropdown-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .sermon-verses-row {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .sermon-verses-row .sermon-dropdown-group {
+            flex: 0.8;
+            min-width: 0;
+        }
+
+        .sermon-verses-row .sermon-add-verse-btn {
+            flex-shrink: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sermon-dropdown-label {
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-dropdown-label {
+            color: #f0f0f0;
+        }
+
+        .sermon-dropdown-select {
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: #333;
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 40px;
+        }
+
+        .sermon-dropdown-select::placeholder,
+        .sermon-dropdown-select option[value=""] {
+            color: #bbb;
+        }
+
+        .sermon-dropdown-select option {
+            padding: 10px;
+            background: #ffffff;
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .sermon-dropdown-select option:checked {
+            background: linear-gradient(#78aaff, #78aaff);
+            color: #ffffff;
+        }
+
+        body.dark-theme .sermon-dropdown-select {
+            background-color: #252525;
+            border-color: #404040;
+            color: #f0f0f0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23f0f0f0' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        }
+
+        body.dark-theme .sermon-dropdown-select::placeholder,
+        body.dark-theme .sermon-dropdown-select option[value=""] {
+            color: #777;
+        }
+
+        body.dark-theme .sermon-dropdown-select option {
+            background: #2a2a2a;
+            color: #f0f0f0;
+        }
+
+        .sermon-dropdown-select:hover {
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.1);
+        }
+
+        body.dark-theme .sermon-dropdown-select:hover {
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.15);
+        }
+
+        .sermon-dropdown-select:focus {
+            outline: none;
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.2);
+        }
+
+        body.dark-theme .sermon-dropdown-select:focus {
+            border-color: #78aaff;
+            box-shadow: 0 0 0 3px rgba(120, 170, 255, 0.25);
+        }
+
+        .sermon-dropdown-select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #f5f5f5;
+        }
+
+        body.dark-theme .sermon-dropdown-select:disabled {
+            background-color: #1a1a1a;
+        }
+
+        .sermon-dropdown-select option {
+            padding: 8px;
+            background: #ffffff;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-dropdown-select option {
+            background: #2a2a2a;
+            color: #f0f0f0;
+        }
+
+        .sermon-dropdown-select[multiple] {
+            min-height: 80px;
+            padding: 6px;
+            padding-right: 8px;
+            background-image: none !important;
+            background-position: none;
+        }
+
+        .sermon-dropdown-select[multiple] option {
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 4px;
+            background: #ffffff;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-dropdown-select[multiple] option {
+            background: #2a2a2a;
+            color: #f0f0f0;
+        }
+
+        .sermon-dropdown-select[multiple] option:checked {
+            background: linear-gradient(#78aaff, #78aaff);
+            color: #ffffff;
+        }
+
+        .sermon-add-verse-btn {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #78aaff 0%, #5a94e6 100%);
+            border: none;
+            border-radius: 12px;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            height: fit-content;
+            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.3);
+        }
+
+        .sermon-add-verse-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #8ab8ff 0%, #6ca4f6 100%);
+            box-shadow: 0 4px 12px rgba(120, 170, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .sermon-add-verse-btn:active:not(:disabled) {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(120, 170, 255, 0.3);
+        }
+
+        .sermon-add-verse-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         .sermon-empty-state {
             text-align: center;
             color: #999;
+            padding: 2rem;
         }
 
         body.dark-theme .sermon-empty-state {
@@ -121,6 +440,411 @@
         .sermon-empty-state p {
             margin-top: 1rem;
             font-size: 1rem;
+        }
+
+        /* Bottom Sheet Styles */
+        .sermon-bottom-sheet-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 200;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .sermon-bottom-sheet-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .sermon-bottom-sheet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 16px 16px 0 0;
+            z-index: 201;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-theme .sermon-bottom-sheet {
+            background: #2a2a2a;
+        }
+
+        .sermon-bottom-sheet.active {
+            transform: translateY(0);
+        }
+
+        .sermon-sheet-handle {
+            width: 40px;
+            height: 4px;
+            background: #ccc;
+            border-radius: 2px;
+            margin: 12px auto 0;
+        }
+
+        body.dark-theme .sermon-sheet-handle {
+            background: #555;
+        }
+
+        .sermon-sheet-header {
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        body.dark-theme .sermon-sheet-header {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .sermon-sheet-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-sheet-title {
+            color: #f0f0f0;
+        }
+
+        .sermon-sheet-content {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sermon-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .sermon-input-label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-input-label {
+            color: #f0f0f0;
+        }
+
+        .sermon-input-text {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #333;
+            background: #ffffff;
+            transition: border-color 0.2s;
+        }
+
+        body.dark-theme .sermon-input-text {
+            background: #1a1a1a;
+            border-color: #3a3a3a;
+            color: #f0f0f0;
+        }
+
+        .sermon-input-text:focus {
+            outline: none;
+            border-color: #78aaff;
+        }
+
+        body.dark-theme .sermon-input-text:focus {
+            border-color: #78aaff;
+        }
+
+        /* Date Picker Button */
+        .sermon-date-picker-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px;
+            background-color: #ffffff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+            color: #333;
+            font-family: inherit;
+        }
+
+        #sermon-date-display {
+            color: #999;
+        }
+
+        body.dark-theme #sermon-date-display {
+            color: #999;
+        }
+
+        body.dark-theme .sermon-date-picker-btn {
+            background-color: #252525;
+            border-color: #404040;
+            color: #f0f0f0;
+        }
+
+        .sermon-date-picker-btn:hover {
+            background-color: #f5f5f5;
+            border-color: #78aaff;
+        }
+
+        body.dark-theme .sermon-date-picker-btn:hover {
+            background-color: #252525;
+            border-color: #78aaff;
+        }
+
+        .sermon-date-picker-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Calendar Modal */
+        .sermon-calendar-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 250;
+            display: none;
+        }
+
+        .sermon-calendar-backdrop.show {
+            display: block;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+
+        .sermon-calendar-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 260;
+            display: none;
+        }
+
+        .sermon-calendar-modal.show {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .sermon-calendar-content {
+            width: 328px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        body.dark-theme .sermon-calendar-content {
+            background-color: #2a2a2a;
+        }
+
+        .sermon-calendar-header {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .sermon-calendar-header {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .sermon-calendar-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-calendar-title {
+            color: #f0f0f0;
+        }
+
+        .sermon-calendar-nav-btn {
+            width: 36px;
+            height: 36px;
+            padding: 6px;
+            border: none;
+            background: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-calendar-nav-btn {
+            color: #f0f0f0;
+        }
+
+        .sermon-calendar-nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-theme .sermon-calendar-nav-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sermon-calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            padding: 8px 12px;
+        }
+
+        .sermon-calendar-weekday {
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: #999;
+            letter-spacing: 0.5px;
+        }
+
+        body.dark-theme .sermon-calendar-weekday {
+            color: #999;
+        }
+
+        .sermon-calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 2px;
+            transition: all 0.2s;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-calendar-day {
+            color: #f0f0f0;
+        }
+
+        .sermon-calendar-day:hover:not(.other-month):not(.selected) {
+            background-color: rgba(120, 170, 255, 0.1);
+        }
+
+        .sermon-calendar-day.selected {
+            background-color: #78aaff;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .sermon-calendar-day.today:not(.selected) {
+            border: 2px solid #78aaff;
+            color: #78aaff;
+            font-weight: 500;
+        }
+
+        .sermon-calendar-day.other-month {
+            color: #ccc;
+            cursor: default;
+        }
+
+        body.dark-theme .sermon-calendar-day.other-month {
+            color: #555;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translate(-50%, -40%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+        }
+
+        .sermon-sheet-buttons {
+            display: flex;
+            gap: 1rem;
+            padding: 16px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .sermon-sheet-buttons {
+            border-top-color: #3a3a3a;
+        }
+
+        .sermon-btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .sermon-btn-cancel {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        body.dark-theme .sermon-btn-cancel {
+            background: #3a3a3a;
+            color: #f0f0f0;
+        }
+
+        .sermon-btn-cancel:hover {
+            background: #e0e0e0;
+        }
+
+        body.dark-theme .sermon-btn-cancel:hover {
+            background: #444;
+        }
+
+        .sermon-btn-save {
+            background: #78aaff;
+            color: #ffffff;
+        }
+
+        .sermon-btn-save:hover {
+            background: #5a94e6;
+        }
+
+        .sermon-btn-save:active {
+            background: #4a84d6;
         }
 
         /* Responsive design */
@@ -134,32 +858,565 @@
             }
 
             .sermon-content {
-                padding: 1.5rem;
+                padding: 1rem;
+            }
+
+            .sermon-list {
+                gap: 0.75rem;
+            }
+
+            .sermon-item {
+                padding: 0.75rem;
+            }
+
+            .sermon-bottom-sheet {
+                max-height: 90vh;
             }
         }
     </style>
 </head>
+
 <body class="dark-theme">
     <div class="sermon-container">
         <!-- Header matching Life of Jesus style -->
         <div class="sermon-top-nav">
             <button class="sermon-back-btn" id="sermon-back-btn" aria-label="Back">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
             <h1 class="sermon-nav-title">Sermon</h1>
+            <button class="sermon-add-btn" id="sermon-add-btn" aria-label="Add Sermon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
 
-        <!-- Content area -->
+        <!-- Content area with sermon list -->
         <div class="sermon-content">
-            <div class="sermon-empty-state">
-                <p>No sermon content available yet</p>
+            <div class="sermon-list" id="sermon-list">
+                <div class="sermon-empty-state">
+                    <p>No sermons yet</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Tap the + button to add a sermon</p>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Bottom Sheet for Adding Sermon -->
+    <div class="sermon-bottom-sheet-overlay" id="sermon-sheet-overlay"></div>
+    <div class="sermon-bottom-sheet" id="sermon-bottom-sheet">
+        <div class="sermon-sheet-handle"></div>
+        <div class="sermon-sheet-header">
+            <h2 class="sermon-sheet-title">Add Sermon</h2>
+        </div>
+        <div class="sermon-sheet-content">
+            <div class="sermon-input-group">
+                <label class="sermon-input-label">Sermon Title</label>
+                <input type="text" class="sermon-input-text" id="sermon-title-input" placeholder="Enter sermon title..."
+                    autocomplete="off">
+            </div>
+            <div class="sermon-input-group">
+                <label class="sermon-input-label">Sermon Date</label>
+                <button class="sermon-date-picker-btn" id="sermon-date-picker-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M16 2V6M8 2V6M3 10H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span id="sermon-date-display">Select date</span>
+                </button>
+                <input type="hidden" id="sermon-date-input">
+            </div>
+            <div class="sermon-input-group">
+                <div class="sermon-dropdowns-container">
+                    <div class="sermon-dropdowns-row">
+                        <div class="sermon-dropdown-group">
+                            <label class="sermon-dropdown-label">Book</label>
+                            <select class="sermon-dropdown-select" id="sermon-book-select">
+                                <option value="">Select Book</option>
+                            </select>
+                        </div>
+                        <div class="sermon-dropdown-group">
+                            <label class="sermon-dropdown-label">Chapter</label>
+                            <select class="sermon-dropdown-select" id="sermon-chapter-select" disabled>
+                                <option value="">Chapter</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sermon-verses-row">
+                        <div class="sermon-dropdown-group">
+                            <label class="sermon-dropdown-label">Verses</label>
+                            <select class="sermon-dropdown-select" id="sermon-verses-select" multiple disabled>
+                                <option value="">Verse</option>
+                            </select>
+                        </div>
+                        <button class="sermon-add-verse-btn" id="sermon-add-verse-btn" type="button" disabled>Add Verse</button>
+                    </div>
+                </div>
+                <div class="sermon-verses-chips" id="sermon-verses-chips"></div>
+            </div>
+        </div>
+        <div class="sermon-sheet-buttons">
+            <button class="sermon-btn sermon-btn-cancel" id="sermon-btn-cancel">Cancel</button>
+            <button class="sermon-btn sermon-btn-save" id="sermon-btn-save">Save</button>
+        </div>
+    </div>
+
+    <!-- Calendar Modal for Date Picker -->
+    <div class="sermon-calendar-backdrop" id="sermon-calendar-backdrop" onclick="closeSermonCalendar()"></div>
+    <div class="sermon-calendar-modal" id="sermon-calendar-modal">
+        <div class="sermon-calendar-content">
+            <div class="sermon-calendar-header">
+                <button class="sermon-calendar-nav-btn" onclick="prevSermonMonth()" aria-label="Previous month">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 19L8 12L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="sermon-calendar-title" id="sermon-calendar-title"></div>
+                <button class="sermon-calendar-nav-btn" onclick="nextSermonMonth()" aria-label="Next month">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L16 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="sermon-calendar-grid" id="sermon-calendar-grid"></div>
+        </div>
+    </div>
+
     <script>
+        // Bible metadata - simplified structure
+        const bibleMeta = [
+            { book: "Genesis", chapters: [31, 25, 24, 26, 32, 22, 24, 22, 29, 32, 32, 20, 18, 24, 21, 16, 27, 33, 38, 18, 34, 24, 20, 67, 34, 35, 46, 22, 35, 43, 55, 32, 20, 29, 23, 29, 43, 36, 30, 23, 23, 18, 22, 28, 34, 34, 28, 34, 31, 22] },
+            { book: "Exodus", chapters: [22, 25, 22, 31, 23, 30, 25, 32, 35, 29, 10, 51, 22, 31, 27, 36, 16, 27, 25, 26, 36, 31, 33, 18, 40, 37, 21, 43, 46, 38, 18, 35, 23, 35, 35, 38, 29, 31, 43, 38] },
+            { book: "Leviticus", chapters: [17, 16, 17, 35, 19, 30, 38, 36, 24, 20, 47, 8, 59, 57, 33, 34, 16, 30, 37, 27, 24, 33, 44, 23, 55, 46, 34] },
+            { book: "Numbers", chapters: [54, 34, 51, 49, 31, 27, 89, 26, 23, 36, 35, 16, 31, 41, 41, 35, 28, 32, 22, 29, 35, 41, 30, 25, 18, 65, 23, 31, 39, 17, 54, 42, 56, 29, 34, 13] },
+            { book: "Deuteronomy", chapters: [46, 37, 29, 49, 33, 25, 26, 20, 29, 22, 32, 32, 18, 29, 23, 22, 20, 22, 21, 20, 23, 30, 25, 22, 19, 19, 26, 69, 28, 20, 30, 52, 29, 12] },
+            { book: "Joshua", chapters: [18, 24, 17, 24, 15, 27, 26, 35, 27, 43, 23, 24, 33, 15, 63, 10, 18, 28, 51, 9, 45, 34, 16, 33] },
+            { book: "Judges", chapters: [36, 23, 31, 24, 31, 40, 25, 35, 57, 18, 40, 15, 25, 20, 20, 31, 13, 31, 30, 48, 25] },
+            { book: "Ruth", chapters: [22, 23, 18, 22] },
+            { book: "1 Samuel", chapters: [28, 36, 21, 22, 12, 21, 17, 22, 27, 27, 15, 25, 23, 52, 35, 23, 58, 30, 24, 42, 15, 23, 29, 22, 44, 25, 12, 25, 11, 31, 13] },
+            { book: "2 Samuel", chapters: [27, 32, 39, 12, 25, 23, 29, 18, 13, 19, 27, 31, 39, 33, 37, 23, 29, 33, 43, 26, 22, 51, 39, 25] },
+            { book: "1 Kings", chapters: [53, 46, 28, 34, 18, 38, 51, 66, 28, 29, 43, 33, 34, 31, 34, 34, 24, 46, 21, 43, 29, 53] },
+            { book: "2 Kings", chapters: [18, 25, 27, 44, 27, 33, 20, 29, 37, 36, 21, 21, 25, 29, 38, 20, 41, 37, 37, 21, 26, 20, 37, 20, 30] },
+            { book: "1 Chronicles", chapters: [54, 55, 24, 43, 41, 66, 40, 40, 44, 14, 47, 40, 14, 17, 29, 43, 27, 17, 19, 8, 30, 19, 32, 31, 31, 32, 34, 21, 30] },
+            { book: "2 Chronicles", chapters: [17, 18, 17, 22, 14, 42, 22, 18, 31, 19, 23, 16, 22, 15, 19, 14, 19, 34, 11, 37, 20, 12, 21, 27, 28, 23, 9, 27, 36, 27, 21, 33, 25, 33, 27, 23] },
+            { book: "Ezra", chapters: [11, 70, 13, 24, 17, 22, 28, 36, 15, 44] },
+            { book: "Nehemiah", chapters: [11, 20, 32, 23, 19, 19, 73, 18, 38, 39, 36, 47, 31] },
+            { book: "Esther", chapters: [22, 23, 15, 17, 14, 14, 10, 17, 32, 3] },
+            { book: "Job", chapters: [22, 13, 26, 21, 27, 30, 21, 22, 35, 22, 20, 25, 28, 22, 35, 22, 16, 21, 29, 29, 34, 30, 17, 25, 6, 14, 23, 28, 25, 31, 40, 22, 33, 37, 16, 33, 24, 41, 30, 24, 34, 17] },
+            { book: "Psalms", chapters: [6, 12, 8, 8, 12, 10, 17, 9, 20, 18, 7, 8, 6, 7, 5, 11, 15, 51, 15, 10, 14, 32, 6, 10, 22, 12, 14, 9, 11, 12, 24, 11, 22, 23, 28, 12, 40, 22, 13, 17, 13, 11, 5, 26, 17, 11, 9, 14, 20, 23, 19, 9, 6, 7, 23, 13, 11, 11, 17, 12, 8, 12, 11, 10, 13, 20, 7, 35, 36, 5, 24, 20, 28, 23, 10, 12, 20, 72, 13, 19, 16, 8, 18, 12, 13, 17, 7, 18, 52, 17, 16, 15, 5, 23, 11, 13, 12, 9, 9, 5, 8, 28, 22, 35, 45, 48, 43, 13, 31, 7, 10, 10, 9, 11, 14, 9, 6, 7, 9, 45, 48, 43, 13, 31, 7, 10, 10, 9, 11, 14, 9, 6, 7, 9] },
+            { book: "Proverbs", chapters: [33, 22, 35, 27, 23, 35, 27, 36, 18, 32, 31, 28, 25, 35, 33, 33, 28, 24, 29, 30, 31, 29, 35, 34, 28, 28, 27, 28, 27, 33, 31] },
+            { book: "Ecclesiastes", chapters: [18, 26, 22, 16, 20, 12, 29, 17, 18, 20, 10, 14] },
+            { book: "Song of Solomon", chapters: [17, 17, 11, 16, 16, 13, 13, 14] },
+            { book: "Isaiah", chapters: [31, 22, 26, 6, 30, 13, 25, 22, 21, 34, 16, 6, 22, 32, 9, 14, 14, 7, 25, 6, 17, 25, 18, 23, 12, 21, 13, 29, 24, 33, 9, 20, 24, 17, 10, 22, 38, 22, 8, 31, 29, 25, 28, 28, 25, 13, 15, 22, 26, 11, 23, 15, 12, 17, 13, 12, 21, 14, 21, 22, 11, 12, 19, 12] },
+            { book: "Jeremiah", chapters: [19, 37, 25, 31, 31, 30, 34, 22, 26, 25, 23, 17, 27, 22, 21, 21, 27, 23, 15, 18, 14, 30, 40, 10, 38, 24, 22, 17, 32, 24, 40, 44, 26, 22, 19, 32, 21, 28, 18, 16, 18, 22, 13, 30, 5, 28, 7, 47, 39, 46, 64, 34] },
+            { book: "Lamentations", chapters: [22, 22, 66, 22, 22] },
+            { book: "Ezekiel", chapters: [28, 10, 27, 17, 17, 14, 27, 18, 11, 22, 25, 28, 23, 23, 8, 63, 24, 32, 14, 49, 32, 31, 49, 27, 17, 21, 36, 26, 21, 26, 18, 32, 33, 31, 15, 38, 28, 24, 49, 26, 20, 27, 31, 25, 24, 23, 35] },
+            { book: "Daniel", chapters: [21, 49, 30, 37, 31, 28, 28, 27, 27, 21, 45, 13] },
+            { book: "Hosea", chapters: [11, 23, 5, 19, 15, 11, 16, 14, 17, 15, 12, 14, 16, 9] },
+            { book: "Joel", chapters: [20, 32, 21] },
+            { book: "Amos", chapters: [15, 16, 15, 13, 27, 14, 17, 14, 15] },
+            { book: "Obadiah", chapters: [21] },
+            { book: "Jonah", chapters: [17, 10, 10, 11] },
+            { book: "Micah", chapters: [16, 13, 12, 13, 15, 16, 20] },
+            { book: "Nahum", chapters: [15, 13, 19] },
+            { book: "Habakkuk", chapters: [17, 20, 19] },
+            { book: "Zephaniah", chapters: [18, 15, 20] },
+            { book: "Haggai", chapters: [15, 23] },
+            { book: "Zechariah", chapters: [21, 13, 10, 14, 11, 15, 14, 23, 17, 12, 17, 14, 9, 21] },
+            { book: "Malachi", chapters: [14, 17, 18, 6] },
+            { book: "Matthew", chapters: [25, 23, 17, 25, 48, 34, 29, 34, 38, 42, 30, 50, 58, 36, 39, 28, 27, 35, 30, 34, 46, 46, 39, 51, 46, 75, 66, 20] },
+            { book: "Mark", chapters: [45, 28, 35, 41, 43, 56, 37, 38, 50, 52, 33, 44, 37, 72, 47, 20] },
+            { book: "Luke", chapters: [80, 52, 38, 44, 39, 49, 50, 56, 62, 42, 54, 59, 35, 35, 32, 31, 37, 43, 48, 47, 38, 71, 56, 53] },
+            { book: "John", chapters: [51, 25, 36, 54, 47, 71, 53, 59, 41, 42, 57, 50, 38, 31, 27, 33, 26, 40, 42, 31, 25] },
+            { book: "Acts", chapters: [26, 47, 26, 37, 42, 15, 60, 40, 43, 48, 30, 25, 52, 28, 41, 40, 34, 28, 41, 38, 40, 30, 35, 27, 27, 32, 44, 31] },
+            { book: "Romans", chapters: [32, 29, 31, 25, 21, 23, 25, 39, 33, 21, 36, 21, 14, 23, 33, 27] },
+            { book: "1 Corinthians", chapters: [31, 16, 23, 21, 13, 20, 40, 13, 27, 33, 34, 31, 13, 40, 58, 24] },
+            { book: "2 Corinthians", chapters: [24, 17, 18, 18, 21, 18, 16, 24, 15, 18, 33, 21, 14] },
+            { book: "Galatians", chapters: [24, 21, 29, 31, 26, 18] },
+            { book: "Ephesians", chapters: [23, 22, 21, 32, 33, 24] },
+            { book: "Philippians", chapters: [30, 30, 21, 23] },
+            { book: "Colossians", chapters: [29, 23, 25, 18] },
+            { book: "1 Thessalonians", chapters: [10, 20, 13, 18, 28] },
+            { book: "2 Thessalonians", chapters: [12, 17, 18] },
+            { book: "1 Timothy", chapters: [20, 15, 16, 16, 25, 21] },
+            { book: "2 Timothy", chapters: [18, 26, 17, 22] },
+            { book: "Titus", chapters: [16, 15, 15] },
+            { book: "Philemon", chapters: [25] },
+            { book: "Hebrews", chapters: [14, 18, 19, 16, 14, 20, 28, 13, 28, 39, 40, 29, 25] },
+            { book: "James", chapters: [27, 26, 18, 17, 20] },
+            { book: "1 Peter", chapters: [25, 25, 22, 19, 14] },
+            { book: "2 Peter", chapters: [21, 22, 18] },
+            { book: "1 John", chapters: [10, 29, 24, 21, 21] },
+            { book: "2 John", chapters: [13] },
+            { book: "3 John", chapters: [14] },
+            { book: "Jude", chapters: [25] },
+            { book: "Revelation", chapters: [20, 29, 22, 11, 14, 17, 17, 13, 21, 11, 19, 17, 18, 20, 8, 21, 18, 24, 21, 15, 27, 21] }
+        ];
+
+        // Sermon management
+        let sermons = [];
+        let currentCalendarDate = new Date();
+        let selectedSermonDate = null;
+        let selectedSermonVerses = [];
+
+        // Initialize book dropdown
+        function initializeBookDropdown() {
+            const bookSelect = document.getElementById('sermon-book-select');
+            bibleMeta.forEach(book => {
+                const option = document.createElement('option');
+                option.value = book.book;
+                option.textContent = book.book;
+                bookSelect.appendChild(option);
+            });
+        }
+
+        // Handle book selection
+        document.getElementById('sermon-book-select').addEventListener('change', function () {
+            const selectedBook = this.value;
+            const chapterSelect = document.getElementById('sermon-chapter-select');
+            const versesSelect = document.getElementById('sermon-verses-select');
+
+            chapterSelect.innerHTML = '<option value="">Chapter</option>';
+            versesSelect.innerHTML = '<option value="">Verses</option>';
+            versesSelect.disabled = true;
+
+            if (selectedBook) {
+                const book = bibleMeta.find(b => b.book === selectedBook);
+                book.chapters.forEach((_, index) => {
+                    const option = document.createElement('option');
+                    option.value = index + 1;
+                    option.textContent = index + 1;
+                    chapterSelect.appendChild(option);
+                });
+                chapterSelect.disabled = false;
+            } else {
+                chapterSelect.disabled = true;
+            }
+        });
+
+        // Handle chapter selection
+        document.getElementById('sermon-chapter-select').addEventListener('change', function () {
+            const bookSelect = document.getElementById('sermon-book-select');
+            const selectedBook = bookSelect.value;
+            const selectedChapter = parseInt(this.value);
+            const versesSelect = document.getElementById('sermon-verses-select');
+
+            versesSelect.innerHTML = '<option value="">Select Verses</option>';
+
+            if (selectedChapter) {
+                const book = bibleMeta.find(b => b.book === selectedBook);
+                const verseCount = book.chapters[selectedChapter - 1];
+                for (let i = 1; i <= verseCount; i++) {
+                    const option = document.createElement('option');
+                    option.value = i;
+                    option.textContent = i;
+                    versesSelect.appendChild(option);
+                }
+                versesSelect.disabled = false;
+            } else {
+                versesSelect.disabled = true;
+            }
+        });
+
+        // Handle verse selection
+        document.getElementById('sermon-verses-select').addEventListener('change', function () {
+            const addBtn = document.getElementById('sermon-add-verse-btn');
+            addBtn.disabled = this.selectedOptions.length === 0;
+        });
+
+        // Add verse reference
+        document.getElementById('sermon-add-verse-btn').addEventListener('click', function () {
+            const bookSelect = document.getElementById('sermon-book-select');
+            const chapterSelect = document.getElementById('sermon-chapter-select');
+            const versesSelect = document.getElementById('sermon-verses-select');
+
+            const book = bookSelect.value;
+            const chapter = chapterSelect.value;
+            const verses = Array.from(versesSelect.selectedOptions).map(opt => opt.value);
+
+            if (book && chapter && verses.length > 0) {
+                const verseStart = verses[0];
+                const verseEnd = verses[verses.length - 1];
+                const verseRange = verseStart === verseEnd ? verseStart : `${verseStart} – ${verseEnd}`;
+
+                const verseRef = {
+                    book,
+                    chapter,
+                    verseStart: parseInt(verseStart),
+                    verseEnd: parseInt(verseEnd),
+                    display: `${book} ${chapter} : ${verseRange}`
+                };
+
+                selectedSermonVerses.push(verseRef);
+                renderVersesChips();
+
+                // Reset selects
+                versesSelect.value = '';
+                versesSelect.disabled = true;
+                chapterSelect.value = '';
+                chapterSelect.disabled = true;
+                bookSelect.value = '';
+                this.disabled = true;
+            }
+        });
+
+        // Render verse chips
+        function renderVersesChips() {
+            const chipsContainer = document.getElementById('sermon-verses-chips');
+            chipsContainer.innerHTML = selectedSermonVerses.map((verse, index) => `
+                <div class="sermon-verse-chip">
+                    ${verse.display}
+                    <button type="button" class="sermon-verse-chip-remove" onclick="removeVerseReference(${index})">×</button>
+                </div>
+            `).join('');
+        }
+
+        // Remove verse reference
+        window.removeVerseReference = function (index) {
+            selectedSermonVerses.splice(index, 1);
+            renderVersesChips();
+        };
+
+        // Load sermons from localStorage on page load
+        function loadSermons() {
+            const saved = localStorage.getItem('sermons');
+            if (saved) {
+                try {
+                    sermons = JSON.parse(saved);
+                    renderSermons();
+                } catch (e) {
+                    console.error('Error loading sermons:', e);
+                }
+            }
+        }
+
+        // Render sermons list
+        function renderSermons() {
+            const sermonList = document.getElementById('sermon-list');
+
+            if (sermons.length === 0) {
+                sermonList.innerHTML = `
+                    <div class="sermon-empty-state">
+                        <p>No sermons yet</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Tap the + button to add a sermon</p>
+                    </div>
+                `;
+                return;
+            }
+
+            sermonList.innerHTML = sermons.map((sermon, index) => {
+                const date = new Date(sermon.date);
+                const dateStr = formatSermonDate(date);
+                return `
+                    <div class="sermon-item" data-index="${index}">
+                        <div class="sermon-item-header">
+                            <h3 class="sermon-item-title">${sermon.title}</h3>
+                            <span class="sermon-date-badge">${dateStr}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Format date as Wed, dd/mm/yyyy
+        function formatSermonDate(date) {
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const dayName = days[date.getDay()];
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${dayName}, ${day}/${month}/${year}`;
+        }
+
+        // Save sermons to localStorage
+        function saveSermons() {
+            localStorage.setItem('sermons', JSON.stringify(sermons));
+        }
+
+        // Calendar functions
+        function renderSermonCalendar() {
+            const year = currentCalendarDate.getFullYear();
+            const month = currentCalendarDate.getMonth();
+
+            // Update title
+            const options = { year: 'numeric', month: 'long' };
+            document.getElementById('sermon-calendar-title').textContent =
+                currentCalendarDate.toLocaleDateString('en-US', options);
+
+            // Get first day of month and number of days
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+            const grid = document.getElementById('sermon-calendar-grid');
+            grid.innerHTML = '';
+
+            // Weekday headers
+            const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            weekdays.forEach(day => {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'sermon-calendar-weekday';
+                dayEl.textContent = day;
+                grid.appendChild(dayEl);
+            });
+
+            // Previous month days
+            for (let i = firstDay - 1; i >= 0; i--) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'sermon-calendar-day other-month';
+                dayEl.textContent = daysInPrevMonth - i;
+                grid.appendChild(dayEl);
+            }
+
+            // Current month days
+            const today = new Date();
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'sermon-calendar-day';
+                dayEl.textContent = day;
+
+                const currentDate = new Date(year, month, day);
+
+                // Check if today
+                if (currentDate.toDateString() === today.toDateString()) {
+                    dayEl.classList.add('today');
+                }
+
+                // Check if selected
+                if (selectedSermonDate && currentDate.toDateString() === selectedSermonDate.toDateString()) {
+                    dayEl.classList.add('selected');
+                }
+
+                dayEl.addEventListener('click', () => {
+                    selectedSermonDate = currentDate;
+                    const dateStr = currentDate.toLocaleDateString();
+                    document.getElementById('sermon-date-display').textContent = dateStr;
+                    document.getElementById('sermon-date-input').value = currentDate.toISOString();
+                    closeSermonCalendar();
+                });
+
+                grid.appendChild(dayEl);
+            }
+
+            // Next month days
+            const totalCells = grid.children.length - 7; // Subtract weekday headers
+            const remainingCells = 42 - totalCells; // 6 rows * 7 days
+            for (let day = 1; day <= remainingCells; day++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'sermon-calendar-day other-month';
+                dayEl.textContent = day;
+                grid.appendChild(dayEl);
+            }
+        }
+
+        function prevSermonMonth() {
+            currentCalendarDate.setMonth(currentCalendarDate.getMonth() - 1);
+            renderSermonCalendar();
+        }
+
+        function nextSermonMonth() {
+            currentCalendarDate.setMonth(currentCalendarDate.getMonth() + 1);
+            renderSermonCalendar();
+        }
+
+        function openSermonCalendar() {
+            currentCalendarDate = selectedSermonDate ? new Date(selectedSermonDate) : new Date();
+            renderSermonCalendar();
+            document.getElementById('sermon-calendar-backdrop').classList.add('show');
+            document.getElementById('sermon-calendar-modal').classList.add('show');
+        }
+
+        function closeSermonCalendar() {
+            document.getElementById('sermon-calendar-backdrop').classList.remove('show');
+            document.getElementById('sermon-calendar-modal').classList.remove('show');
+        }
+
+        // Bottom sheet functionality
+        const addBtn = document.getElementById('sermon-add-btn');
+        const cancelBtn = document.getElementById('sermon-btn-cancel');
+        const saveBtn = document.getElementById('sermon-btn-save');
+        const overlay = document.getElementById('sermon-sheet-overlay');
+        const bottomSheet = document.getElementById('sermon-bottom-sheet');
+        const titleInput = document.getElementById('sermon-title-input');
+        const datePickerBtn = document.getElementById('sermon-date-picker-btn');
+
+        // Open bottom sheet
+        addBtn.addEventListener('click', () => {
+            titleInput.value = '';
+            selectedSermonDate = null;
+            selectedSermonVerses = [];
+            document.getElementById('sermon-date-display').textContent = 'Select date';
+            document.getElementById('sermon-date-input').value = '';
+            document.getElementById('sermon-book-select').value = '';
+            document.getElementById('sermon-chapter-select').value = '';
+            document.getElementById('sermon-chapter-select').disabled = true;
+            document.getElementById('sermon-verses-select').value = '';
+            document.getElementById('sermon-verses-select').disabled = true;
+            document.getElementById('sermon-add-verse-btn').disabled = true;
+            renderVersesChips();
+            overlay.classList.add('active');
+            bottomSheet.classList.add('active');
+            titleInput.focus();
+        });
+
+        // Date picker button
+        datePickerBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openSermonCalendar();
+        });
+
+        // Close bottom sheet
+        function closeBottomSheet() {
+            overlay.classList.remove('active');
+            bottomSheet.classList.remove('active');
+        }
+
+        cancelBtn.addEventListener('click', closeBottomSheet);
+        overlay.addEventListener('click', closeBottomSheet);
+
+        // Save sermon
+        saveBtn.addEventListener('click', () => {
+            const title = titleInput.value.trim();
+            if (!title) {
+                alert('Please enter a sermon title');
+                return;
+            }
+
+            if (!selectedSermonDate) {
+                alert('Please select a sermon date');
+                return;
+            }
+
+            const newSermon = {
+                id: Date.now(),
+                title: title,
+                date: selectedSermonDate.toISOString(),
+                verses: selectedSermonVerses,
+                content: '' // For future use
+            };
+
+            sermons.unshift(newSermon);
+            saveSermons();
+            renderSermons();
+            closeBottomSheet();
+        });
+
+        // Allow Enter key to save
+        titleInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                saveBtn.click();
+            }
+        });
+
         // Back button functionality
         const backBtn = document.getElementById('sermon-back-btn');
         if (backBtn) {
@@ -171,7 +1428,7 @@
         // Swipe back functionality
         let touchStartX = 0;
         let touchEndX = 0;
-        const swipeThreshold = 50; // Minimum distance for swipe
+        const swipeThreshold = 50;
 
         document.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
@@ -183,10 +1440,8 @@
         }, false);
 
         function handleSwipe() {
-            // Check if swipe is from left edge
-            if (touchStartX < 30) { // Swipe from left edge (30px threshold)
+            if (touchStartX < 30) {
                 if (touchEndX - touchStartX > swipeThreshold) {
-                    // Swiped right - go back
                     window.history.back();
                 }
             }
@@ -214,6 +1469,23 @@
                 }
             }
         });
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            initializeBookDropdown();
+            loadSermons();
+        });
+
+        // Initialize if DOM is already ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                if (!bibleMeta) initializeBookDropdown();
+            });
+        } else {
+            initializeBookDropdown();
+            loadSermons();
+        }
     </script>
 </body>
+
 </html>
