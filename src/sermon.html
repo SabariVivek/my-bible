@@ -14,12 +14,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: #ffffff;
             color: #333;
+            touch-action: manipulation;
         }
 
         body.dark-theme {
@@ -1751,6 +1755,56 @@
         let currentCalendarDate = new Date();
         let selectedSermonDate = null;
         let selectedSermonVerses = [];
+        let nextSermonId = 10001;  // Starting ID for sermons
+        
+        // Check if admin is enabled
+        function isAdmin() {
+            const adminStatus = localStorage.getItem('isAdmin');
+            if (adminStatus === null) {
+                localStorage.setItem('isAdmin', 'false');
+                return false;
+            }
+            return adminStatus === 'true';
+        }
+        
+        // Disable zoom and copy functionality
+        document.addEventListener('touchmove', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault();  // Disable pinch zoom
+            }
+        }, { passive: false });
+
+        // Disable double-tap zoom
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();  // Disable double-tap zoom
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Disable copy
+        document.addEventListener('copy', (e) => {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable context menu
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Generate next sermon ID
+        function generateSermonId() {
+            const maxId = sermons.reduce((max, sermon) => {
+                const id = parseInt(sermon.id) || 10000;
+                return id > max ? id : max;
+            }, 10000);
+            nextSermonId = maxId + 1;
+            return nextSermonId;
+        }
         
         // Supabase configuration
         const SUPABASE_URL = 'https://encjogfdbrfcatvytpir.supabase.co';
@@ -1954,7 +2008,8 @@
                         title: item.title,
                         tamilTitle: item.tamil_title || '',
                         date: item.sermon_date,
-                        verses: item.verses || []
+                        verses: item.verses || [],
+                        _synced: true  // Mark as synced from Supabase
                     }));
                     
                     console.log('Loaded', sermons.length, 'sermons from Supabase');
@@ -2078,12 +2133,17 @@
             
             try {
                 for (const sermon of sermons) {
+                    // Skip if already synced to Supabase
+                    if (sermon._synced) {
+                        continue;
+                    }
+                    
                     const dateStr = sermon.date instanceof Date 
                         ? sermon.date.toISOString().split('T')[0]
                         : sermon.date.split('T')[0];
                     
-                    if (sermon.id && sermon.id > 1700000000000) {
-                        // Local ID (timestamp), create new record
+                    // Sync new sermons (with sequential IDs like 10001, 10002, etc)
+                    if (sermon.id && sermon.id >= 10001) {
                         console.log('Syncing new sermon:', sermon.title, 'ID:', sermon.id);
                         const { data, error } = await supabase
                             .from('sermons')
@@ -2100,6 +2160,7 @@
                             console.error('Error syncing sermon to Supabase:', error);
                         } else if (data && data.length > 0) {
                             console.log('Successfully synced sermon to Supabase with ID:', data[0].id);
+                            sermon._synced = true;  // Mark as synced
                         }
                     }
                 }
@@ -2113,7 +2174,7 @@
             if (!supabase) return;
             
             const sermon = sermons[sermonIndex];
-            if (!sermon || !sermon.id || sermon.id > 1700000000000) return;
+            if (!sermon || !sermon.id || sermon.id < 10001) return;  // Only update synced sermons
             
             try {
                 const dateStr = sermon.date instanceof Date 
@@ -2142,9 +2203,16 @@
         
         // Sync sermon deletion to Supabase
         async function syncSermonDeleteToSupabase(sermonId) {
-            if (!supabase || !sermonId || sermonId > 1700000000000) return;
+            if (!supabase || !sermonId) return;
+            
+            // Only delete from Supabase if it's a synced sermon (sequential IDs starting from 10001)
+            if (sermonId < 10001) {
+                console.log('Skipping Supabase delete for non-synced sermon:', sermonId);
+                return;
+            }
             
             try {
+                console.log('Deleting sermon from Supabase:', sermonId);
                 const { error } = await supabase
                     .from('sermons')
                     .delete()
@@ -2161,21 +2229,36 @@
         }
 
         // Handle double-tap on sermon card
-        let lastTap = 0;
-        document.addEventListener('click', function(e) {
-            const sermonItem = e.target.closest('.sermon-item');
-            if (!sermonItem) return;
+        let lastTapTime = null;
+        let lastTappedElement = null;
+        
+        function attachDoubleTapListener() {
+            // Use event delegation on document for maximum compatibility
+            document.addEventListener('click', function doubleTapHandler(e) {
+                const sermonItem = e.target.closest('.sermon-item');
+                if (!sermonItem) return;
 
-            const currentTime = new Date().getTime();
-            const tapLength = currentTime - lastTap;
+                const currentTime = new Date().getTime();
+                const timeSinceLastTap = lastTapTime !== null ? currentTime - lastTapTime : Infinity;
+                
+                console.log('Click on sermon item. timeSinceLastTap:', timeSinceLastTap, 'same element:', lastTappedElement === sermonItem);
 
-            if (tapLength < 500 && tapLength > 0) {
-                // Double-tap detected
-                const index = sermonItem.dataset.index;
-                showSermonDetails(index);
-            }
-            lastTap = currentTime;
-        });
+                // Check for double tap: within 500ms and on same element
+                if (timeSinceLastTap < 500 && lastTappedElement === sermonItem) {
+                    console.log('✅ DOUBLE TAP DETECTED!');
+                    const index = sermonItem.dataset.index;
+                    console.log('Opening sermon:', index);
+                    showSermonDetails(parseInt(index));
+                    lastTapTime = null;
+                    lastTappedElement = null;
+                } else {
+                    // Single tap - record this as potential first tap of double tap
+                    lastTapTime = currentTime;
+                    lastTappedElement = sermonItem;
+                    console.log('First tap recorded');
+                }
+            }, { passive: true });
+        }
 
         // Show sermon details bottom sheet
         function showSermonDetails(index) {
@@ -2188,14 +2271,19 @@
                 ? sermon.verses.map(v => `<span class="sermon-verse-badge">${v.display}</span>`).join('')
                 : 'No verses added';
 
+            // Build action buttons based on admin status
+            const adminButtons = isAdmin() ? `
+                <button class="sermon-detail-btn sermon-detail-edit" onclick="editSermon(${index})">Edit</button>
+                <button class="sermon-detail-btn sermon-detail-delete" onclick="deleteSermonWithConfirm(${index})">Delete</button>
+            ` : '';
+
             detailContent.innerHTML = `
                 <div class="sermon-detail-section">
                     <h3>Verses</h3>
                     <div class="sermon-detail-verses">${versesHtml}</div>
                 </div>
                 <div class="sermon-detail-actions">
-                    <button class="sermon-detail-btn sermon-detail-edit" onclick="editSermon(${index})">Edit</button>
-                    <button class="sermon-detail-btn sermon-detail-delete" onclick="deleteSermonWithConfirm(${index})">Delete</button>
+                    ${adminButtons}
                     <button class="sermon-detail-btn sermon-detail-close-bottom" onclick="closeSermonDetail()">Close</button>
                 </div>
             `;
@@ -2569,14 +2657,15 @@
                 
                 currentEditingIndex = null;
             } else {
-                // Create new sermon
+                // Create new sermon with sequential ID
                 const newSermon = {
-                    id: Date.now(),
+                    id: generateSermonId(),
                     title: title,
                     tamilTitle: tamilTitle || '',
                     date: dateIso,
                     verses: selectedSermonVerses,
-                    content: '' // For future use
+                    content: '', // For future use
+                    _synced: false  // Mark for syncing
                 };
                 sermons.unshift(newSermon);
             }
@@ -2651,6 +2740,21 @@
             initSupabase();
             initializeBookDropdown();
             loadSermons();
+            attachDoubleTapListener();
+            
+            // Hide/show admin buttons based on admin status
+            const addBtn = document.getElementById('sermon-add-btn');
+            if (addBtn) {
+                addBtn.style.display = isAdmin() ? 'flex' : 'none';
+            }
+            
+            // Listen for admin status changes
+            window.addEventListener('storage', () => {
+                const addBtn = document.getElementById('sermon-add-btn');
+                if (addBtn) {
+                    addBtn.style.display = isAdmin() ? 'flex' : 'none';
+                }
+            });
         });
 
         // Initialize if DOM is already ready
@@ -2658,11 +2762,25 @@
             document.addEventListener('DOMContentLoaded', () => {
                 initSupabase();
                 if (!bibleMeta) initializeBookDropdown();
+                attachDoubleTapListener();
+                
+                // Hide/show admin buttons based on admin status
+                const addBtn = document.getElementById('sermon-add-btn');
+                if (addBtn) {
+                    addBtn.style.display = isAdmin() ? 'flex' : 'none';
+                }
             });
         } else {
             initSupabase();
             initializeBookDropdown();
             loadSermons();
+            attachDoubleTapListener();
+            
+            // Hide/show admin buttons based on admin status
+            const addBtn = document.getElementById('sermon-add-btn');
+            if (addBtn) {
+                addBtn.style.display = isAdmin() ? 'flex' : 'none';
+            }
         }
     </script>
 </body>
