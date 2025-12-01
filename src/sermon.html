@@ -892,12 +892,14 @@
             display: none;
             opacity: 0;
             transition: opacity 0.3s ease;
+            pointer-events: none;
         }
 
         .sermon-detail-sheet.active ~ .sermon-detail-overlay,
         .sermon-detail-overlay.active {
             display: block;
             opacity: 1;
+            pointer-events: auto;
         }
 
         .sermon-detail-sheet {
@@ -2031,6 +2033,28 @@
             detailSheet.classList.remove('show-close');
             detailOverlay.classList.remove('active');
         }
+        
+        // Add overlay click handler for better cross-browser support
+        document.addEventListener('DOMContentLoaded', () => {
+            const detailOverlay = document.getElementById('sermon-detail-overlay');
+            const detailSheet = document.getElementById('sermon-detail-sheet');
+            
+            if (detailOverlay) {
+                detailOverlay.addEventListener('click', (e) => {
+                    // Only close if clicking directly on overlay, not on bubbled events
+                    if (e.target === detailOverlay) {
+                        closeSermonDetail();
+                    }
+                });
+            }
+            
+            // Prevent clicks inside the sheet from closing it
+            if (detailSheet) {
+                detailSheet.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+            }
+        });
 
         // Edit sermon
         function editSermon(index) {
