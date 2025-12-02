@@ -173,6 +173,7 @@
             justify-content: center;
             z-index: 1000;
             flex-direction: column;
+            gap: 20px;
         }
 
         .sermon-loader-wrapper.hidden {
@@ -182,8 +183,8 @@
         }
 
         .sermon-loader-spinner {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border: 5px solid #333333;
             border-top: 5px solid #ffffff;
             border-right: 5px solid #cccccc;
@@ -194,7 +195,6 @@
 
         .sermon-loader-text {
             color: #cccccc;
-            margin-top: 25px;
             font-size: 16px;
             text-align: center;
             font-weight: 500;
@@ -1711,17 +1711,20 @@
         }
 
         .passage-loader-spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid #e0e0e0;
-            border-top: 3px solid #78aaff;
+            width: 30%;
+            height: 30px;
+            border: 5px solid #333333;
+            border-top: 5px solid #ffffff;
+            border-right: 5px solid #cccccc;
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+            animation: sermon-spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
         body.dark-theme .passage-loader-spinner {
-            border-color: #3a3a3a;
-            border-top-color: #78aaff;
+            border-color: #333333;
+            border-top-color: #ffffff;
+            border-right-color: #cccccc;
         }
     </style>
 </head>
@@ -1749,10 +1752,8 @@
         <div class="sermon-content">
             <!-- Loader -->
             <div class="sermon-loader-wrapper" id="sermon-loader">
-                <div style="text-align: center;">
-                    <div class="sermon-loader-spinner"></div>
-                    <p class="sermon-loader-text">Loading...</p>
-                </div>
+                <div class="sermon-loader-spinner"></div>
+                <p class="sermon-loader-text">Loading...</p>
             </div>
             
             <div class="sermon-list" id="sermon-list">
