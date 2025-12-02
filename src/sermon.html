@@ -1096,6 +1096,22 @@
             margin-bottom: 0;
         }
 
+        .sermon-verse-clickable {
+            transition: all 0.2s ease;
+        }
+
+        .sermon-verse-clickable:hover {
+            background-color: #78aaff !important;
+            color: #ffffff !important;
+            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        body.dark-theme .sermon-verse-clickable:hover {
+            background-color: #78aaff !important;
+            color: #ffffff !important;
+        }
+
         .sermon-detail-actions {
             display: flex;
             gap: 0.75rem;
@@ -1533,6 +1549,166 @@
             .sermon-bottom-sheet {
                 max-height: 90vh;
             }
+        }
+
+        /* Passage popup modal styles */
+        .passage-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .passage-popup.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .passage-modal-card {
+            background: #ffffff;
+            border-radius: 16px 16px 0 0;
+            max-height: 85vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            animation: slideUp 0.3s ease;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-theme .passage-modal-card {
+            background: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .passage-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        .passage-header:active {
+            cursor: grabbing;
+        }
+
+        body.dark-theme .passage-header {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .passage-badge {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+
+        body.dark-theme .passage-badge {
+            color: #f0f0f0;
+        }
+
+
+
+        .passage-language-buttons {
+            display: flex;
+            gap: 8px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .passage-language-buttons {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .passage-lang-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            background: #f5f5f5;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.2s;
+        }
+
+        .passage-lang-btn.active {
+            background: #78aaff;
+            color: #ffffff;
+            border-color: #78aaff;
+        }
+
+        body.dark-theme .passage-lang-btn {
+            background: #2a2a2a;
+            border-color: #3a3a3a;
+            color: #999;
+        }
+
+        body.dark-theme .passage-lang-btn.active {
+            background: #78aaff;
+            border-color: #78aaff;
+            color: #ffffff;
+        }
+
+        .passage-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .passage-content p {
+            margin: 0 0 12px 0;
+        }
+
+        .passage-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .passage-no-data {
+            color: #999;
+            text-align: center;
+            padding: 32px 16px;
+        }
+
+        body.dark-theme .passage-no-data {
+            color: #666;
+        }
+
+        .passage-loader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+        }
+
+        .passage-loader-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e0e0e0;
+            border-top: 3px solid #78aaff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        body.dark-theme .passage-loader-spinner {
+            border-color: #3a3a3a;
+            border-top-color: #78aaff;
         }
     </style>
 </head>
@@ -2259,6 +2435,11 @@
         function attachDoubleTapListener() {
             // Use event delegation on document for maximum compatibility
             document.addEventListener('click', function doubleTapHandler(e) {
+                // Don't handle double-tap for verse badges - allow single click
+                if (e.target.closest('.sermon-verse-clickable')) {
+                    return;
+                }
+
                 const sermonItem = e.target.closest('.sermon-item');
                 if (!sermonItem) return;
 
@@ -2284,6 +2465,81 @@
             }, { passive: true });
         }
 
+        // Cache for preloaded verses
+        let verseCache = {
+            english: {},
+            tamil: {},
+            dual: {}
+        };
+
+        // Load and cache verses in background
+        async function preloadVersesCached(book, chapter, verseStart, verseEnd, language) {
+            const cacheKey = `${book}|${chapter}|${verseStart}|${verseEnd}`;
+            
+            // Check if already cached
+            if (verseCache[language][cacheKey]) {
+                return;
+            }
+
+            try {
+                const bookFile = book.toLowerCase().replace(/\s+/g, '_');
+                
+                const { data, error } = await supabase
+                    .from('bible_verses')
+                    .select('verse, text')
+                    .eq('book_file', bookFile)
+                    .eq('chapter', chapter)
+                    .eq('language', language)
+                    .gte('verse', verseStart)
+                    .lte('verse', verseEnd)
+                    .order('verse', { ascending: true });
+
+                if (error) {
+                    console.warn(`Error preloading verses: ${error.message}`);
+                    return;
+                }
+
+                // Cache the results
+                if (data && data.length > 0) {
+                    verseCache[language][cacheKey] = data;
+                    console.log(`✓ Preloaded ${language} verses: ${book} ${chapter}:${verseStart}-${verseEnd}`);
+                }
+            } catch (error) {
+                console.error('Error preloading verses:', error);
+            }
+        }
+
+        // Preload all verses in background when sermon opens
+        function preloadVersesInBackground(verses) {
+            // Group verses by book and chapter
+            const versesByBookChapter = {};
+
+            verses.forEach(v => {
+                const key = `${v.book}|${v.chapter}`;
+                if (!versesByBookChapter[key]) {
+                    versesByBookChapter[key] = {
+                        book: v.book,
+                        chapter: v.chapter,
+                        verseStarts: [],
+                        verseEnds: []
+                    };
+                }
+                versesByBookChapter[key].verseStarts.push(v.verseStart);
+                versesByBookChapter[key].verseEnds.push(v.verseEnd);
+            });
+
+            // Load each book/chapter combination in background
+            Object.values(versesByBookChapter).forEach(group => {
+                const minVerse = Math.min(...group.verseStarts);
+                const maxVerse = Math.max(...group.verseEnds);
+                
+                // Preload English
+                preloadVersesCached(group.book, group.chapter, minVerse, maxVerse, 'english');
+                // Preload Tamil
+                preloadVersesCached(group.book, group.chapter, minVerse, maxVerse, 'tamil');
+            });
+        }
+
         // Show sermon details bottom sheet
         function showSermonDetails(index) {
             const sermon = sermons[index];
@@ -2292,7 +2548,7 @@
 
             // Populate detail sheet
             const versesHtml = sermon.verses && sermon.verses.length > 0
-                ? sermon.verses.map(v => `<span class="sermon-verse-badge">${v.display}</span>`).join('')
+                ? sermon.verses.map(v => `<span class="sermon-verse-badge sermon-verse-clickable" onclick="openVerseInBible('${v.book}', ${v.chapter}, ${v.verseStart}, ${v.verseEnd})" style="cursor: pointer;">${v.display}</span>`).join('')
                 : 'No verses added';
 
             // Build action buttons based on admin status
@@ -2342,6 +2598,11 @@
             const container = document.querySelector('.sermon-container');
             if (container) {
                 container.classList.add('blurred');
+            }
+
+            // Preload all verses in background for faster access
+            if (sermon.verses && sermon.verses.length > 0) {
+                preloadVersesInBackground(sermon.verses);
             }
         }
 
@@ -2401,6 +2662,365 @@
         }
 
         let currentEditingIndex = null;
+
+        // Open verse in modal popup
+        function openVerseInBible(book, chapter, verseStart, verseEnd) {
+            const verseRef = `${book} ${chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
+            
+            // Load and display the verse from cache or Supabase
+            loadVersesFromSupabaseSermon(book, chapter, verseStart, verseEnd, verseRef);
+        }
+
+        // Load verses from cache or Supabase and display in modal
+        async function loadVersesFromSupabaseSermon(book, chapter, verseStart, verseEnd, verseRef) {
+            const badge = document.getElementById('passageBadge');
+            const content = document.getElementById('passageContent');
+            
+            if (!badge || !content) return;
+
+            // Store for language switching
+            currentSermonVerseRef = verseRef;
+            currentSermonVerseStart = verseStart;
+            currentSermonVerseEnd = verseEnd;
+            currentSermonBook = book;
+            currentSermonChapter = chapter;
+
+            // Show loader
+            content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
+            
+            // Reset language buttons to Tamil (default)
+            const buttons = document.querySelectorAll('.passage-lang-btn');
+            buttons.forEach(btn => {
+                if (btn.dataset.lang === 'tamil') {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            try {
+                const bookFile = book.toLowerCase().replace(/\s+/g, '_');
+                const cacheKey = `${book}|${chapter}|${verseStart}|${verseEnd}`;
+                
+                // Check cache first for Tamil
+                let data = verseCache.tamil[cacheKey];
+                
+                // If not in cache, fetch Tamil from Supabase
+                if (!data) {
+                    const { data: fetchedData, error } = await supabase
+                        .from('bible_verses')
+                        .select('verse, text')
+                        .eq('book_file', bookFile)
+                        .eq('chapter', chapter)
+                        .eq('language', 'tamil')
+                        .gte('verse', verseStart)
+                        .lte('verse', verseEnd)
+                        .order('verse', { ascending: true });
+
+                    if (error) {
+                        throw error;
+                    }
+                    data = fetchedData;
+                    
+                    // Cache the result for future use
+                    if (data && data.length > 0) {
+                        verseCache.tamil[cacheKey] = data;
+                    }
+                }
+
+                if (!data || data.length === 0) {
+                    // No Tamil data found, try English
+                    let engData = verseCache.english[cacheKey];
+                    
+                    if (!engData) {
+                        const { data: fetchedData, error } = await supabase
+                            .from('bible_verses')
+                            .select('verse, text')
+                            .eq('book_file', bookFile)
+                            .eq('chapter', chapter)
+                            .eq('language', 'english')
+                            .gte('verse', verseStart)
+                            .lte('verse', verseEnd)
+                            .order('verse', { ascending: true });
+
+                        if (error) {
+                            throw error;
+                        }
+                        engData = fetchedData;
+                        if (engData && engData.length > 0) {
+                            verseCache.english[cacheKey] = engData;
+                        }
+                    }
+
+                    if (!engData || engData.length === 0) {
+                        // No data found
+                        badge.textContent = verseRef;
+                        content.innerHTML = '<p class="passage-no-data">Data yet to be seeded</p>';
+                        setTimeout(() => {
+                            content.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        // Display English if Tamil not available
+                        buttons.forEach(btn => {
+                            if (btn.dataset.lang === 'english') {
+                                btn.classList.add('active');
+                            } else {
+                                btn.classList.remove('active');
+                            }
+                        });
+                        
+                        let htmlContent = '';
+                        engData.forEach(row => {
+                            htmlContent += `<p class="bible-verse">${row.verse}. ${row.text}</p>`;
+                        });
+
+                        badge.textContent = verseRef;
+                        content.innerHTML = htmlContent;
+                        content.scrollTop = 0;
+                        
+                        setTimeout(() => {
+                            content.style.opacity = '1';
+                        }, 50);
+                    }
+                } else {
+                    // Format and display the Tamil verses
+                    let htmlContent = '';
+                    data.forEach(row => {
+                        htmlContent += `<p class="tamil-verse">${row.verse}. ${row.text}</p>`;
+                    });
+
+                    badge.textContent = verseRef;
+                    content.innerHTML = htmlContent;
+                    content.scrollTop = 0;
+                    
+                    setTimeout(() => {
+                        content.style.opacity = '1';
+                    }, 50);
+                }
+
+                // Open the modal
+                const modal = document.getElementById('passagePopup');
+                if (modal) {
+                    modal.classList.add('show');
+                    document.body.classList.add('modal-open');
+                    // Initialize drag functionality
+                    setTimeout(() => initPassageModalDrag(), 100);
+                }
+
+            } catch (error) {
+                console.error('Error loading verses:', error);
+                badge.textContent = verseRef;
+                content.innerHTML = '<p class="passage-no-data">Error loading verse. Please try again.</p>';
+                
+                // Open the modal anyway to show error
+                const modal = document.getElementById('passagePopup');
+                if (modal) {
+                    modal.classList.add('show');
+                    document.body.classList.add('modal-open');
+                    // Initialize drag functionality
+                    setTimeout(() => initPassageModalDrag(), 100);
+                }
+            }
+        }
+
+        // Close passage popup modal
+        function closePassagePopupSermon() {
+            const modal = document.getElementById('passagePopup');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.classList.remove('modal-open');
+            }
+        }
+
+        // Handle click outside the modal card to close
+        function handlePassagePopupClick(event) {
+            const modal = document.getElementById('passagePopup');
+            const modalCard = document.getElementById('passageModalCard');
+            
+            // Close if clicking outside the modal card
+            if (modal && event.target === modal) {
+                closePassagePopupSermon();
+            }
+        }
+
+        // Draggable header for passage modal
+        let passageDragStartY = 0;
+        let passageDragStartHeight = 0;
+
+        function initPassageModalDrag() {
+            const header = document.getElementById('passageHeaderDrag');
+            const modalCard = document.getElementById('passageModalCard');
+            
+            if (!header) return;
+
+            header.addEventListener('touchstart', (e) => {
+                passageDragStartY = e.touches[0].clientY;
+                passageDragStartHeight = modalCard.offsetHeight;
+                modalCard.style.transition = 'none';
+            }, false);
+
+            header.addEventListener('touchmove', (e) => {
+                const currentY = e.touches[0].clientY;
+                const diff = passageDragStartY - currentY;
+                const newHeight = passageDragStartHeight + diff;
+                const maxHeight = window.innerHeight * 0.95;
+                const minHeight = 200;
+
+                if (newHeight >= minHeight && newHeight <= maxHeight) {
+                    modalCard.style.maxHeight = newHeight + 'px';
+                }
+            }, false);
+
+            header.addEventListener('touchend', (e) => {
+                modalCard.style.transition = 'max-height 0.3s ease';
+                const currentHeight = modalCard.offsetHeight;
+                const maxHeight = window.innerHeight * 0.95;
+                const threshold = maxHeight * 0.3;
+
+                if (currentHeight < threshold) {
+                    // Close if dragged down below threshold
+                    closePassagePopupSermon();
+                } else {
+                    // Reset to max height
+                    modalCard.style.maxHeight = '85vh';
+                }
+            }, false);
+        }
+
+        // Track current verse reference for language switching
+        let currentSermonVerseRef = '';
+        let currentSermonVerseStart = 0;
+        let currentSermonVerseEnd = 0;
+        let currentSermonBook = '';
+        let currentSermonChapter = 0;
+
+        // Switch passage language (English, Tamil, or Dual)
+        async function switchPassageLanguageSermon(language) {
+            // Update active button
+            const buttons = document.querySelectorAll('.passage-lang-btn');
+            buttons.forEach(btn => {
+                if (btn.dataset.lang === language) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            const content = document.getElementById('passageContent');
+            if (!content) return;
+
+            // Show loader
+            content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
+
+            try {
+                const bookFile = currentSermonBook.toLowerCase().replace(/\s+/g, '_');
+                const cacheKey = `${currentSermonBook}|${currentSermonChapter}|${currentSermonVerseStart}|${currentSermonVerseEnd}`;
+
+                if (language === 'dual') {
+                    // Load both English and Tamil from cache or Supabase
+                    let engData = verseCache.english[cacheKey];
+                    let tamData = verseCache.tamil[cacheKey];
+
+                    // Fetch if not in cache
+                    if (!engData) {
+                        const { data } = await supabase
+                            .from('bible_verses')
+                            .select('verse, text')
+                            .eq('book_file', bookFile)
+                            .eq('chapter', currentSermonChapter)
+                            .eq('language', 'english')
+                            .gte('verse', currentSermonVerseStart)
+                            .lte('verse', currentSermonVerseEnd)
+                            .order('verse', { ascending: true });
+                        engData = data;
+                        if (data) verseCache.english[cacheKey] = data;
+                    }
+
+                    if (!tamData) {
+                        const { data } = await supabase
+                            .from('bible_verses')
+                            .select('verse, text')
+                            .eq('book_file', bookFile)
+                            .eq('chapter', currentSermonChapter)
+                            .eq('language', 'tamil')
+                            .gte('verse', currentSermonVerseStart)
+                            .lte('verse', currentSermonVerseEnd)
+                            .order('verse', { ascending: true });
+                        tamData = data;
+                        if (data) verseCache.tamil[cacheKey] = data;
+                    }
+
+                    let dualHtml = '';
+                    const engVerses = engData || [];
+                    const tamVerses = tamData || [];
+
+                    // Combine both languages
+                    const maxVerse = Math.max(
+                        engVerses.length > 0 ? Math.max(...engVerses.map(v => v.verse)) : 0,
+                        tamVerses.length > 0 ? Math.max(...tamVerses.map(v => v.verse)) : 0
+                    );
+
+                    for (let i = currentSermonVerseStart; i <= maxVerse; i++) {
+                        const engVerse = engVerses.find(v => v.verse === i);
+                        const tamVerse = tamVerses.find(v => v.verse === i);
+
+                        if (engVerse || tamVerse) {
+                            dualHtml += '<div class="dual-verse-container">';
+                            if (engVerse) {
+                                dualHtml += `<p class="bible-verse">${engVerse.verse}. ${engVerse.text}</p>`;
+                            }
+                            if (tamVerse) {
+                                dualHtml += `<p class="tamil-verse">${tamVerse.verse}. ${tamVerse.text}</p>`;
+                            }
+                            dualHtml += '</div>';
+                        }
+                    }
+
+                    content.innerHTML = dualHtml || '<p class="passage-no-data">Translations not available</p>';
+                } else {
+                    // Load single language
+                    const langCode = language === 'tamil' ? 'tamil' : 'english';
+                    let data = verseCache[langCode][cacheKey];
+
+                    // Fetch if not in cache
+                    if (!data) {
+                        const { data: fetchedData, error } = await supabase
+                            .from('bible_verses')
+                            .select('verse, text')
+                            .eq('book_file', bookFile)
+                            .eq('chapter', currentSermonChapter)
+                            .eq('language', langCode)
+                            .gte('verse', currentSermonVerseStart)
+                            .lte('verse', currentSermonVerseEnd)
+                            .order('verse', { ascending: true });
+
+                        if (error) throw error;
+                        data = fetchedData;
+                        if (data) verseCache[langCode][cacheKey] = data;
+                    }
+
+                    if (!data || data.length === 0) {
+                        content.innerHTML = `<p class="passage-no-data">${language === 'tamil' ? 'Tamil' : 'English'} translation not available</p>`;
+                    } else {
+                        let htmlContent = '';
+                        const className = language === 'tamil' ? 'tamil-verse' : 'bible-verse';
+                        data.forEach(row => {
+                            htmlContent += `<p class="${className}">${row.verse}. ${row.text}</p>`;
+                        });
+                        content.innerHTML = htmlContent;
+                    }
+                }
+
+                content.scrollTop = 0;
+                setTimeout(() => {
+                    content.style.opacity = '1';
+                }, 50);
+
+            } catch (error) {
+                console.error('Error switching language:', error);
+                content.innerHTML = `<p class="passage-no-data">Error loading ${language} translation. Please try again.</p>`;
+            }
+        }
 
         // Delete sermon with confirmation
         function deleteSermonWithConfirm(index) {
@@ -2883,6 +3503,26 @@
             }
         }
     </script>
+
+    <!-- Passage Popup Modal for verse display -->
+    <div class="passage-popup" id="passagePopup" onclick="handlePassagePopupClick(event)">
+        <div class="passage-modal-card" id="passageModalCard">
+            <div class="passage-header" id="passageHeaderDrag">
+                <h2 id="passageBadge" class="passage-badge"></h2>
+            </div>
+            
+            <div class="passage-language-buttons">
+                <button class="passage-lang-btn active" data-lang="english" onclick="switchPassageLanguageSermon('english')">English</button>
+                <button class="passage-lang-btn" data-lang="tamil" onclick="switchPassageLanguageSermon('tamil')">Tamil</button>
+                <button class="passage-lang-btn" data-lang="dual" onclick="switchPassageLanguageSermon('dual')">Dual</button>
+            </div>
+            
+            <div class="passage-content" id="passageContent"></div>
+        </div>
+    </div>
+
+    <!-- Fuse.js for smart search (required for passage modal functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 </body>
 
 </html>
