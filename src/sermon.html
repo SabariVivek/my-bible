@@ -2301,15 +2301,19 @@
                 <button class="sermon-detail-btn sermon-detail-delete" onclick="deleteSermonWithConfirm(${index})">Delete</button>
             ` : '';
 
+            // Build detail content with optional actions section
+            const actionsSection = isAdmin() ? `
+                <div class="sermon-detail-actions">
+                    ${adminButtons}
+                </div>
+            ` : '';
+
             detailContent.innerHTML = `
                 <div class="sermon-detail-section">
                     <h3>Verses</h3>
                     <div class="sermon-detail-verses">${versesHtml}</div>
                 </div>
-                <div class="sermon-detail-actions">
-                    ${adminButtons}
-                    <button class="sermon-detail-btn sermon-detail-close-bottom" onclick="closeSermonDetail()">Close</button>
-                </div>
+                ${actionsSection}
             `;
 
             // Update header with title and date
@@ -2325,6 +2329,8 @@
             detailSheet.classList.add('active');
             detailSheet.classList.add('show-close');
             detailSheet.dataset.openSermonIndex = index;  // Track which sermon is open
+            detailSheet.style.maxHeight = '80vh';  // Reset maxHeight to default
+            detailSheet.style.transition = 'transform 0.3s ease';  // Re-enable transitions
             
             // Add blur to container
             const container = document.querySelector('.sermon-container');
@@ -2638,6 +2644,54 @@
                 bottomSheet.style.maxHeight = '80vh';
             }
         }, false);
+
+        // Drag to expand/collapse functionality for detail sheet
+        let detailDragStartY = 0;
+        let detailDragStartHeight = 0;
+        const detailSheet = document.getElementById('sermon-detail-sheet');
+        const detailSheetHandle = detailSheet.querySelector('.sermon-sheet-handle');
+        const detailSheetHeader = document.getElementById('sermon-detail-header');
+
+        // Create a combined touch handler for both handle and header
+        function initializeDetailSheetDrag() {
+            [detailSheetHandle, detailSheetHeader].forEach(element => {
+                if (!element) return;
+                
+                element.addEventListener('touchstart', (e) => {
+                    detailDragStartY = e.touches[0].clientY;
+                    detailDragStartHeight = detailSheet.offsetHeight;
+                    detailSheet.style.transition = 'none';
+                }, false);
+
+                element.addEventListener('touchmove', (e) => {
+                    const currentY = e.touches[0].clientY;
+                    const diff = detailDragStartY - currentY;
+                    const newHeight = detailDragStartHeight + diff;
+                    const maxHeight = window.innerHeight * 0.95;
+                    const minHeight = 250;
+
+                    if (newHeight >= minHeight && newHeight <= maxHeight) {
+                        detailSheet.style.maxHeight = newHeight + 'px';
+                    }
+                }, false);
+
+                element.addEventListener('touchend', (e) => {
+                    detailSheet.style.transition = 'transform 0.3s ease';
+                    const currentHeight = detailSheet.offsetHeight;
+                    const maxHeight = window.innerHeight * 0.95;
+                    const threshold = maxHeight * 0.4;
+
+                    if (currentHeight < threshold) {
+                        closeSermonDetail();
+                    } else {
+                        detailSheet.style.maxHeight = '80vh';
+                    }
+                }, false);
+            });
+        }
+
+        // Initialize detail sheet drag
+        initializeDetailSheetDrag();
 
         cancelBtn.addEventListener('click', closeBottomSheet);
         overlay.addEventListener('click', closeBottomSheet);
