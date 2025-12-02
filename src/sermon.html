@@ -328,6 +328,23 @@
             border-color: rgba(120, 170, 255, 0.2);
         }
 
+        .passage-verse-badge {
+            display: inline;
+            padding: 0;
+            background: none;
+            color: #ff9800;
+            border: none;
+            border-radius: 0;
+            font-size: inherit;
+            font-weight: 600;
+        }
+
+        body.dark-theme .passage-verse-badge {
+            background: none;
+            color: #ffb74d;
+            border-color: transparent;
+        }
+
         .sermon-verse-more {
             display: inline-block;
             margin-left: 0.5rem;
@@ -1081,6 +1098,39 @@
             color: #999;
         }
 
+        .sermon-verses-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .sermon-verses-header h3 {
+            margin: 0;
+        }
+
+        .sermon-show-all-link {
+            font-size: 0.85rem;
+            color: #78aaff;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .sermon-show-all-link:hover {
+            color: #5a92ff;
+            text-decoration: underline;
+        }
+
+        body.dark-theme .sermon-show-all-link {
+            color: #8ab8ff;
+        }
+
+        body.dark-theme .sermon-show-all-link:hover {
+            color: #a8d0ff;
+        }
+
         .sermon-detail-section p {
             margin: 0;
             color: #333;
@@ -1779,13 +1829,9 @@
         }
 
         .verse-title-divider {
-            padding: 16px 0 8px 0;
+            padding: 0 0 0 0;
             margin: 24px 0 16px 0;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        body.dark-theme .verse-title-divider {
-            border-top-color: #3a3a3a;
+            text-align: left;
         }
 
         .verse-title {
@@ -1793,10 +1839,17 @@
             font-size: 0.95rem;
             font-weight: 600;
             color: #78aaff;
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(120, 170, 255, 0.15);
+            border: 1px solid rgba(120, 170, 255, 0.25);
+            border-radius: 20px;
         }
 
         body.dark-theme .verse-title {
-            color: #78aaff;
+            color: #8ab8ff;
+            background: rgba(120, 170, 255, 0.1);
+            border-color: rgba(120, 170, 255, 0.2);
         }
 
         .verse-separator {
@@ -2722,19 +2775,17 @@
                 </div>
             ` : '';
 
-            // Add Show All button
-            const showAllBtn = sermon.verses && sermon.verses.length > 0 ? `
-                <div class="sermon-detail-show-all-section">
-                    <button class="sermon-detail-show-all-btn" onclick="showAllVerses(${index})">Show All Verses</button>
-                </div>
-            ` : '';
+            // Add Show All link
+            const showAllLink = sermon.verses && sermon.verses.length > 0 ? `<a class="sermon-show-all-link" onclick="showAllVerses(${index})" style="cursor: pointer;">Show All</a>` : '';
 
             detailContent.innerHTML = `
                 <div class="sermon-detail-section">
-                    <h3>Verses</h3>
+                    <div class="sermon-verses-header">
+                        <h3>Verses</h3>
+                        ${showAllLink}
+                    </div>
                     <div class="sermon-detail-verses">${versesHtml}</div>
                 </div>
-                ${showAllBtn}
                 ${actionsSection}
             `;
 
@@ -3130,23 +3181,23 @@
                         data = engData;
                     }
 
+                    // Add separator before verse (except for first verse)
+                    if (i > 0) {
+                        htmlContent += `<hr class="verse-separator" />`;
+                    }
+
                     // Add verse title
                     htmlContent += `<div class="verse-title-divider">
-                        <h4 class="verse-title">${verseTitle}</h4>
+                        <h4 class="verse-title"><span class="sermon-verse-badge">${verseTitle}</span></h4>
                     </div>`;
 
                     // Add verse content
                     if (data && data.length > 0) {
                         data.forEach(row => {
-                            htmlContent += `<p class="tamil-verse">${row.verse}. ${row.text}</p>`;
+                            htmlContent += `<p class="tamil-verse"><span class="passage-verse-badge">${row.verse}</span> ${row.text}</p>`;
                         });
                     } else {
                         htmlContent += `<p class="passage-no-data">Verse not found</p>`;
-                    }
-
-                    // Add separator (except for last verse)
-                    if (i < sermon.verses.length - 1) {
-                        htmlContent += `<hr class="verse-separator" />`;
                     }
                 }
 
@@ -3316,18 +3367,27 @@
                                 if (data) verseCache.tamil[cacheKey] = data;
                             }
 
+                            // Add separator before verse (except for first verse)
+                            if (i > 0) {
+                                htmlContent += `<hr class="verse-separator" />`;
+                            }
+
                             // Add verse title
                             htmlContent += `<div class="verse-title-divider">
-                                <h4 class="verse-title">${verseTitle}</h4>
+                                <h4 class="verse-title"><span class="sermon-verse-badge">${verseTitle}</span></h4>
                             </div>`;
 
                             // Add both language versions
                             if ((engData && engData.length > 0) || (tamData && tamData.length > 0)) {
                                 engData && engData.forEach(row => {
-                                    htmlContent += `<p class="bible-verse"><strong>Eng:</strong> ${row.verse}. ${row.text}</p>`;
+                                    htmlContent += `<p class="bible-verse"><span class="passage-verse-badge">${row.verse}</span> ${row.text}</p>`;
                                 });
+                                // Add divider between languages only if both exist
+                                if (engData && engData.length > 0 && tamData && tamData.length > 0) {
+                                    htmlContent += `<hr class="verse-separator" />`;
+                                }
                                 tamData && tamData.forEach(row => {
-                                    htmlContent += `<p class="tamil-verse"><strong>Tam:</strong> ${row.verse}. ${row.text}</p>`;
+                                    htmlContent += `<p class="tamil-verse"><span class="passage-verse-badge">${row.verse}</span> ${row.text}</p>`;
                                 });
                             } else {
                                 htmlContent += `<p class="passage-no-data">Verse not found</p>`;
@@ -3353,21 +3413,21 @@
 
                             // Add verse title
                             htmlContent += `<div class="verse-title-divider">
-                                <h4 class="verse-title">${verseTitle}</h4>
+                                <h4 class="verse-title"><span class="sermon-verse-badge">${verseTitle}</span></h4>
                             </div>`;
 
                             // Add verse content
                             if (data && data.length > 0) {
                                 data.forEach(row => {
                                     const className = language === 'tamil' ? 'tamil-verse' : 'bible-verse';
-                                    htmlContent += `<p class="${className}">${row.verse}. ${row.text}</p>`;
+                                    htmlContent += `<p class="${className}"><span class="passage-verse-badge">${row.verse}</span> ${row.text}</p>`;
                                 });
                             } else {
                                 htmlContent += `<p class="passage-no-data">Verse not found</p>`;
                             }
                         }
 
-                        // Add separator (except for last verse)
+                        // Add separator before next verse (except for last verse)
                         if (i < currentSermonAllVerses.length - 1) {
                             htmlContent += `<hr class="verse-separator" />`;
                         }
