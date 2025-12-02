@@ -1597,8 +1597,18 @@
             background: #444444;
         }
 
+        .passage-header-container {
+            display: flex;
+            justify-content: center;
+            padding: 8px 0 0 0;
+        }
+
+        body.dark-theme .passage-header-container {
+            background: #2a2a2a;
+        }
+
         body.dark-theme .passage-modal-card {
-            background: #1a1a1a;
+            background: #2a2a2a;
             color: #f0f0f0;
         }
 
@@ -1666,7 +1676,7 @@
         }
 
         body.dark-theme .passage-lang-btn {
-            background: #2a2a2a;
+            background: #1a1a1a;
             border-color: #3a3a3a;
             color: #999;
         }
@@ -1690,7 +1700,7 @@
         }
 
         .passage-content p:last-child {
-            margin-bottom: 0;
+            margin-bottom: 20px;
         }
 
         .passage-no-data {
@@ -2678,6 +2688,34 @@
         let currentEditingIndex = null;
 
         // Open verse in modal popup
+        // Map book names to database book_file identifiers
+        function getBookFileIdentifier(bookName) {
+            const bookMapping = {
+                '1 Corinthians': 'i_corinthians',
+                '2 Corinthians': 'ii_corinthians',
+                '1 Kings': 'i_kings',
+                '2 Kings': 'ii_kings',
+                '1 Chronicles': 'i_chronicles',
+                '2 Chronicles': 'ii_chronicles',
+                '1 Samuel': 'i_samuel',
+                '2 Samuel': 'ii_samuel',
+                '1 Thessalonians': 'i_thessalonians',
+                '2 Thessalonians': 'ii_thessalonians',
+                '1 Timothy': 'i_timothy',
+                '2 Timothy': 'ii_timothy',
+                '1 Peter': 'i_peter',
+                '2 Peter': 'ii_peter',
+                '1 John': 'i_john',
+                '2 John': 'ii_john',
+                '3 John': 'iii_john',
+                '1 Thessalonians': 'i_thessalonians',
+                '2 Thessalonians': 'ii_thessalonians'
+            };
+            
+            // Return mapped value if exists, otherwise convert to lowercase with underscores
+            return bookMapping[bookName] || bookName.toLowerCase().replace(/\s+/g, '_');
+        }
+
         function openVerseInBible(book, chapter, verseStart, verseEnd) {
             const verseRef = `${book} ${chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
             
@@ -2713,7 +2751,7 @@
             });
             
             try {
-                const bookFile = book.toLowerCase().replace(/\s+/g, '_');
+                const bookFile = getBookFileIdentifier(book);
                 const cacheKey = `${book}|${chapter}|${verseStart}|${verseEnd}`;
                 
                 // Check cache first for Tamil
@@ -2927,7 +2965,7 @@
             content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
 
             try {
-                const bookFile = currentSermonBook.toLowerCase().replace(/\s+/g, '_');
+                const bookFile = getBookFileIdentifier(currentSermonBook);
                 const cacheKey = `${currentSermonBook}|${currentSermonChapter}|${currentSermonVerseStart}|${currentSermonVerseEnd}`;
 
                 if (language === 'dual') {
@@ -3521,6 +3559,9 @@
     <!-- Passage Popup Modal for verse display -->
     <div class="passage-popup" id="passagePopup" onclick="handlePassagePopupClick(event)">
         <div class="passage-modal-card" id="passageModalCard">
+            <div class="passage-header-container">
+                <div class="passage-header-handle"></div>
+            </div>
             <div class="passage-header" id="passageHeaderDrag">
                 <h2 id="passageBadge" class="passage-badge"></h2>
             </div>
