@@ -1685,7 +1685,7 @@
         body.dark-theme .passage-lang-btn.active {
             background: #78aaff;
             border-color: #78aaff;
-            color: #ffffff;
+            color: #ffffff; 
         }
 
         .passage-content {
@@ -2263,6 +2263,8 @@
         // Load sermons (uses Supabase if available, falls back to localStorage)
         async function loadSermons() {
             await loadSermonsFromSupabase();
+            // Preload all verses from all sermons in background
+            await preloadAllSermonsVerses();
         }
 
         // Render sermons list
@@ -2563,6 +2565,32 @@
                 // Preload Tamil
                 preloadVersesCached(group.book, group.chapter, minVerse, maxVerse, 'tamil');
             });
+        }
+
+        // Preload all verses from all sermons on page load
+        async function preloadAllSermonsVerses() {
+            if (!sermons || sermons.length === 0) return;
+
+            // Collect all unique verse references from all sermons
+            const allVerses = [];
+            const verseSet = new Set();
+
+            sermons.forEach(sermon => {
+                if (sermon.verses && sermon.verses.length > 0) {
+                    sermon.verses.forEach(v => {
+                        const verseKey = `${v.book}|${v.chapter}|${v.verseStart}|${v.verseEnd}`;
+                        if (!verseSet.has(verseKey)) {
+                            verseSet.add(verseKey);
+                            allVerses.push(v);
+                        }
+                    });
+                }
+            });
+
+            // Preload all verses in background
+            if (allVerses.length > 0) {
+                preloadVersesInBackground(allVerses);
+            }
         }
 
         // Show sermon details bottom sheet
