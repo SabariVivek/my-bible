@@ -215,24 +215,36 @@
         .sermon-item {
             padding: 1rem;
             border-radius: 8px;
-            background: #f5f5f5;
+            background: #f9f9f9;
             border: 1px solid #e0e0e0;
             transition: background 0.2s, box-shadow 0.2s;
             position: relative;
         }
 
         body.dark-theme .sermon-item {
-            background: #2a2a2a;
+            background: #252525;
             border-color: #3a3a3a;
         }
 
         .sermon-item:hover {
-            background: #efefef;
+            background: #f3f3f3;
             box-shadow: 0 0 12px rgba(120, 170, 255, 0.3), inset 0 0 8px rgba(120, 170, 255, 0.1);
         }
 
         body.dark-theme .sermon-item:hover {
-            background: #333;
+            background: #2d2d2d;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        .sermon-item.active {
+            background: #e8f0ff;
+            border-color: #78aaff;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        body.dark-theme .sermon-item.active {
+            background: #1a2a40;
+            border-color: #78aaff;
             box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
         }
 
@@ -1058,10 +1070,6 @@
             color: #f0f0f0;
         }
 
-        .sermon-detail-section {
-            margin-bottom: 1.5rem;
-        }
-
         .sermon-detail-section h3 {
             font-weight: 600;
             font-size: 0.95rem;
@@ -1558,19 +1566,20 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0);
             display: flex;
             align-items: flex-end;
             justify-content: center;
             z-index: 1000;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease, background-color 0.3s ease;
         }
 
         .passage-popup.show {
             opacity: 1;
             pointer-events: auto;
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .passage-modal-card {
@@ -1580,8 +1589,35 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            animation: slideUp 0.3s ease;
+            animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(0);
+        }
+
+        .passage-popup:not(.show) .passage-modal-card {
+            animation: slideDown 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100%);
+                opacity: 0;
+            }
         }
 
         .passage-header-handle {
@@ -2263,8 +2299,8 @@
         // Load sermons (uses Supabase if available, falls back to localStorage)
         async function loadSermons() {
             await loadSermonsFromSupabase();
-            // Preload all verses from all sermons in background
-            await preloadAllSermonsVerses();
+            // Preload all verses from all sermons in background (non-blocking)
+            preloadAllSermonsVerses();
         }
 
         // Render sermons list
@@ -2641,6 +2677,17 @@
             detailSheet.style.maxHeight = '80vh';  // Reset maxHeight to default
             detailSheet.style.transition = 'transform 0.3s ease';  // Re-enable transitions
             
+            // Remove active class from all sermon items
+            document.querySelectorAll('.sermon-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active class to clicked sermon item
+            const sermonItem = document.querySelector(`[data-index="${index}"]`);
+            if (sermonItem) {
+                sermonItem.classList.add('active');
+            }
+            
             // Show overlay
             const detailOverlay = document.getElementById('sermon-detail-overlay');
             if (detailOverlay) {
@@ -2669,6 +2716,11 @@
                 detailOverlay.classList.remove('active');
             }
             detailSheet.dataset.openSermonIndex = null;  // Clear tracking
+            
+            // Remove active class from all sermon items
+            document.querySelectorAll('.sermon-item').forEach(item => {
+                item.classList.remove('active');
+            });
             
             // Remove blur from container
             const container = document.querySelector('.sermon-container');
@@ -2881,7 +2933,13 @@
 
                 // Open the modal
                 const modal = document.getElementById('passagePopup');
+                const modalCard = document.getElementById('passageModalCard');
                 if (modal) {
+                    // Reset modal card styles
+                    if (modalCard) {
+                        modalCard.style.maxHeight = '85vh';
+                        modalCard.style.transition = 'max-height 0.3s ease';
+                    }
                     modal.classList.add('show');
                     document.body.classList.add('modal-open');
                     // Initialize drag functionality
@@ -2895,7 +2953,13 @@
                 
                 // Open the modal anyway to show error
                 const modal = document.getElementById('passagePopup');
+                const modalCard = document.getElementById('passageModalCard');
                 if (modal) {
+                    // Reset modal card styles
+                    if (modalCard) {
+                        modalCard.style.maxHeight = '85vh';
+                        modalCard.style.transition = 'max-height 0.3s ease';
+                    }
                     modal.classList.add('show');
                     document.body.classList.add('modal-open');
                     // Initialize drag functionality
@@ -2934,13 +2998,18 @@
             
             if (!header) return;
 
-            header.addEventListener('touchstart', (e) => {
+            // Remove old event listeners to prevent duplicates
+            const newHeader = header.cloneNode(true);
+            header.parentNode.replaceChild(newHeader, header);
+            const updatedHeader = document.getElementById('passageHeaderDrag');
+
+            updatedHeader.addEventListener('touchstart', (e) => {
                 passageDragStartY = e.touches[0].clientY;
                 passageDragStartHeight = modalCard.offsetHeight;
                 modalCard.style.transition = 'none';
             }, false);
 
-            header.addEventListener('touchmove', (e) => {
+            updatedHeader.addEventListener('touchmove', (e) => {
                 const currentY = e.touches[0].clientY;
                 const diff = passageDragStartY - currentY;
                 const newHeight = passageDragStartHeight + diff;
@@ -2952,7 +3021,7 @@
                 }
             }, false);
 
-            header.addEventListener('touchend', (e) => {
+            updatedHeader.addEventListener('touchend', (e) => {
                 modalCard.style.transition = 'max-height 0.3s ease';
                 const currentHeight = modalCard.offsetHeight;
                 const maxHeight = window.innerHeight * 0.95;
@@ -3596,9 +3665,9 @@
             </div>
             
             <div class="passage-language-buttons">
-                <button class="passage-lang-btn active" data-lang="english" onclick="switchPassageLanguageSermon('english')">English</button>
                 <button class="passage-lang-btn" data-lang="tamil" onclick="switchPassageLanguageSermon('tamil')">Tamil</button>
-                <button class="passage-lang-btn" data-lang="dual" onclick="switchPassageLanguageSermon('dual')">Dual</button>
+                <button class="passage-lang-btn active" data-lang="english" onclick="switchPassageLanguageSermon('english')">English</button>
+                <button class="passage-lang-btn" data-lang="dual" onclick="switchPassageLanguageSermon('dual')">Both</button>
             </div>
             
             <div class="passage-content" id="passageContent"></div>
