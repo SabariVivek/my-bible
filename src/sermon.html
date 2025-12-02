@@ -1778,6 +1778,37 @@
             margin-bottom: 20px;
         }
 
+        .verse-title-divider {
+            padding: 16px 0 8px 0;
+            margin: 24px 0 16px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .verse-title-divider {
+            border-top-color: #3a3a3a;
+        }
+
+        .verse-title {
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #78aaff;
+        }
+
+        body.dark-theme .verse-title {
+            color: #78aaff;
+        }
+
+        .verse-separator {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 24px 0;
+        }
+
+        body.dark-theme .verse-separator {
+            border-top-color: #3a3a3a;
+        }
+
         .passage-no-data {
             color: #999;
             text-align: center;
@@ -1796,8 +1827,8 @@
         }
 
         .passage-loader-spinner {
-            width: 30%;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             border: 5px solid #333333;
             border-top: 5px solid #ffffff;
             border-right: 5px solid #cccccc;
@@ -3014,6 +3045,133 @@
             }
         }
 
+        // Show all verses from a sermon in the passage modal
+        async function showAllVerses(sermonIndex) {
+            const sermon = sermons[sermonIndex];
+            if (!sermon || !sermon.verses || sermon.verses.length === 0) return;
+
+            const badge = document.getElementById('passageBadge');
+            const content = document.getElementById('passageContent');
+            const modal = document.getElementById('passagePopup');
+            const modalCard = document.getElementById('passageModalCard');
+
+            if (!badge || !content || !modal) return;
+
+            // Set title
+            badge.textContent = `All Verses - ${sermon.title}`;
+
+            // Set flags for "Show All" mode
+            isShowAllMode = true;
+            currentSermonAllVerses = sermon.verses;
+
+            // Show loader
+            content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
+
+            // Reset language buttons
+            const buttons = document.querySelectorAll('.passage-lang-btn');
+            buttons.forEach(btn => {
+                if (btn.dataset.lang === 'tamil') {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            try {
+                let htmlContent = '';
+
+                // Load each verse with title and separator
+                for (let i = 0; i < sermon.verses.length; i++) {
+                    const verse = sermon.verses[i];
+                    const verseTitle = `${verse.book} ${verse.chapter}:${verse.verseStart}${verse.verseStart !== verse.verseEnd ? '-' + verse.verseEnd : ''}`;
+
+                    // Fetch verse text from Supabase
+                    const bookFile = getBookFileIdentifier(verse.book);
+                    const cacheKey = `${verse.book}|${verse.chapter}|${verse.verseStart}|${verse.verseEnd}`;
+
+                    // Try Tamil first
+                    let data = verseCache.tamil[cacheKey];
+                    if (!data) {
+                        const { data: fetchedData } = await supabase
+                            .from('bible_verses')
+                            .select('verse, text')
+                            .eq('book_file', bookFile)
+                            .eq('chapter', verse.chapter)
+                            .eq('language', 'tamil')
+                            .gte('verse', verse.verseStart)
+                            .lte('verse', verse.verseEnd)
+                            .order('verse', { ascending: true });
+
+                        data = fetchedData;
+                        if (data && data.length > 0) {
+                            verseCache.tamil[cacheKey] = data;
+                        }
+                    }
+
+                    // If no Tamil, try English
+                    if (!data || data.length === 0) {
+                        let engData = verseCache.english[cacheKey];
+                        if (!engData) {
+                            const { data: fetchedData } = await supabase
+                                .from('bible_verses')
+                                .select('verse, text')
+                                .eq('book_file', bookFile)
+                                .eq('chapter', verse.chapter)
+                                .eq('language', 'english')
+                                .gte('verse', verse.verseStart)
+                                .lte('verse', verse.verseEnd)
+                                .order('verse', { ascending: true });
+
+                            engData = fetchedData;
+                            if (engData && engData.length > 0) {
+                                verseCache.english[cacheKey] = engData;
+                            }
+                        }
+                        data = engData;
+                    }
+
+                    // Add verse title
+                    htmlContent += `<div class="verse-title-divider">
+                        <h4 class="verse-title">${verseTitle}</h4>
+                    </div>`;
+
+                    // Add verse content
+                    if (data && data.length > 0) {
+                        data.forEach(row => {
+                            htmlContent += `<p class="tamil-verse">${row.verse}. ${row.text}</p>`;
+                        });
+                    } else {
+                        htmlContent += `<p class="passage-no-data">Verse not found</p>`;
+                    }
+
+                    // Add separator (except for last verse)
+                    if (i < sermon.verses.length - 1) {
+                        htmlContent += `<hr class="verse-separator" />`;
+                    }
+                }
+
+                content.innerHTML = htmlContent;
+                content.scrollTop = 0;
+
+                // Open modal
+                if (modalCard) {
+                    modalCard.style.maxHeight = '85vh';
+                    modalCard.style.transition = 'max-height 0.3s ease';
+                }
+                modal.classList.add('show');
+                document.body.classList.add('modal-open');
+
+                // Initialize drag functionality
+                setTimeout(() => initPassageModalDrag(), 100);
+
+            } catch (error) {
+                console.error('Error loading all verses:', error);
+                content.innerHTML = '<p class="passage-no-data">Error loading verses. Please try again.</p>';
+                modal.classList.add('show');
+                document.body.classList.add('modal-open');
+            }
+        }
+
         // Close passage popup modal
         function closePassagePopupSermon() {
             const modal = document.getElementById('passagePopup');
@@ -3021,6 +3179,9 @@
                 modal.classList.remove('show');
                 document.body.classList.remove('modal-open');
             }
+            // Reset Show All mode flag
+            isShowAllMode = false;
+            currentSermonAllVerses = null;
         }
 
         // Handle click outside the modal card to close
@@ -3089,6 +3250,8 @@
         let currentSermonVerseEnd = 0;
         let currentSermonBook = '';
         let currentSermonChapter = 0;
+        let currentSermonAllVerses = null;  // Track all verses for "Show All" mode
+        let isShowAllMode = false;  // Flag to track if we're in "Show All" view
 
         // Switch passage language (English, Tamil, or Dual)
         async function switchPassageLanguageSermon(language) {
@@ -3107,6 +3270,118 @@
 
             // Show loader
             content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
+
+            // Handle "Show All" mode differently
+            if (isShowAllMode && currentSermonAllVerses && currentSermonAllVerses.length > 0) {
+                try {
+                    let htmlContent = '';
+
+                    // Load each verse with title and separator
+                    for (let i = 0; i < currentSermonAllVerses.length; i++) {
+                        const verse = currentSermonAllVerses[i];
+                        const verseTitle = `${verse.book} ${verse.chapter}:${verse.verseStart}${verse.verseStart !== verse.verseEnd ? '-' + verse.verseEnd : ''}`;
+                        const bookFile = getBookFileIdentifier(verse.book);
+                        const cacheKey = `${verse.book}|${verse.chapter}|${verse.verseStart}|${verse.verseEnd}`;
+
+                        if (language === 'dual') {
+                            // Load both English and Tamil
+                            let engData = verseCache.english[cacheKey];
+                            let tamData = verseCache.tamil[cacheKey];
+
+                            if (!engData) {
+                                const { data } = await supabase
+                                    .from('bible_verses')
+                                    .select('verse, text')
+                                    .eq('book_file', bookFile)
+                                    .eq('chapter', verse.chapter)
+                                    .eq('language', 'english')
+                                    .gte('verse', verse.verseStart)
+                                    .lte('verse', verse.verseEnd)
+                                    .order('verse', { ascending: true });
+                                engData = data;
+                                if (data) verseCache.english[cacheKey] = data;
+                            }
+
+                            if (!tamData) {
+                                const { data } = await supabase
+                                    .from('bible_verses')
+                                    .select('verse, text')
+                                    .eq('book_file', bookFile)
+                                    .eq('chapter', verse.chapter)
+                                    .eq('language', 'tamil')
+                                    .gte('verse', verse.verseStart)
+                                    .lte('verse', verse.verseEnd)
+                                    .order('verse', { ascending: true });
+                                tamData = data;
+                                if (data) verseCache.tamil[cacheKey] = data;
+                            }
+
+                            // Add verse title
+                            htmlContent += `<div class="verse-title-divider">
+                                <h4 class="verse-title">${verseTitle}</h4>
+                            </div>`;
+
+                            // Add both language versions
+                            if ((engData && engData.length > 0) || (tamData && tamData.length > 0)) {
+                                engData && engData.forEach(row => {
+                                    htmlContent += `<p class="bible-verse"><strong>Eng:</strong> ${row.verse}. ${row.text}</p>`;
+                                });
+                                tamData && tamData.forEach(row => {
+                                    htmlContent += `<p class="tamil-verse"><strong>Tam:</strong> ${row.verse}. ${row.text}</p>`;
+                                });
+                            } else {
+                                htmlContent += `<p class="passage-no-data">Verse not found</p>`;
+                            }
+                        } else {
+                            // Load single language
+                            const langCode = language === 'tamil' ? 'tamil' : 'english';
+                            let data = verseCache[langCode][cacheKey];
+
+                            if (!data) {
+                                const { data: fetchedData } = await supabase
+                                    .from('bible_verses')
+                                    .select('verse, text')
+                                    .eq('book_file', bookFile)
+                                    .eq('chapter', verse.chapter)
+                                    .eq('language', langCode)
+                                    .gte('verse', verse.verseStart)
+                                    .lte('verse', verse.verseEnd)
+                                    .order('verse', { ascending: true });
+                                data = fetchedData;
+                                if (fetchedData) verseCache[langCode][cacheKey] = fetchedData;
+                            }
+
+                            // Add verse title
+                            htmlContent += `<div class="verse-title-divider">
+                                <h4 class="verse-title">${verseTitle}</h4>
+                            </div>`;
+
+                            // Add verse content
+                            if (data && data.length > 0) {
+                                data.forEach(row => {
+                                    const className = language === 'tamil' ? 'tamil-verse' : 'bible-verse';
+                                    htmlContent += `<p class="${className}">${row.verse}. ${row.text}</p>`;
+                                });
+                            } else {
+                                htmlContent += `<p class="passage-no-data">Verse not found</p>`;
+                            }
+                        }
+
+                        // Add separator (except for last verse)
+                        if (i < currentSermonAllVerses.length - 1) {
+                            htmlContent += `<hr class="verse-separator" />`;
+                        }
+                    }
+
+                    content.innerHTML = htmlContent;
+                    content.scrollTop = 0;
+
+                } catch (error) {
+                    console.error('Error loading verses:', error);
+                    content.innerHTML = '<p class="passage-no-data">Error loading verses. Please try again.</p>';
+                }
+                return;
+            }
 
             try {
                 const bookFile = getBookFileIdentifier(currentSermonBook);
