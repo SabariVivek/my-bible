@@ -2332,6 +2332,12 @@
             detailSheet.style.maxHeight = '80vh';  // Reset maxHeight to default
             detailSheet.style.transition = 'transform 0.3s ease';  // Re-enable transitions
             
+            // Show overlay
+            const detailOverlay = document.getElementById('sermon-detail-overlay');
+            if (detailOverlay) {
+                detailOverlay.classList.add('active');
+            }
+            
             // Add blur to container
             const container = document.querySelector('.sermon-container');
             if (container) {
@@ -2345,7 +2351,9 @@
             const detailOverlay = document.getElementById('sermon-detail-overlay');
             detailSheet.classList.remove('active');
             detailSheet.classList.remove('show-close');
-            detailOverlay.classList.remove('active');
+            if (detailOverlay) {
+                detailOverlay.classList.remove('active');
+            }
             detailSheet.dataset.openSermonIndex = null;  // Clear tracking
             
             // Remove blur from container
