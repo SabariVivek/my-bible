@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Solomon called all the people of Israel to come together. They included the army officers who had authority over 1,000 men, and those who had authority over 100 men. They also included the judges, the leaders in Israel and the leaders of families."
+      "text": "Solomon called all the people of Israel to come together. They included the army officers who had authority over 1, 000 men, and those who had authority over 100 men. They also included the judges, the leaders in Israel and the leaders of families."
     },
     {
       "verse": "3",
@@ -18,15 +18,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But the bronze altar that Bezalel had made was in Gibeon, in front of the Lord's tent. (Bezalel was the son of Uri, and the grandson of Hur.) So Solomon and the people went to meet the Lord there in Gibeon."
+      "text": "But the bronze altar that Bezalel had made was in Gibeon, in front of the Lord's tent. (Bezalel was the son of Uri, and the grandson of Hur. ) So Solomon and the people went to meet the Lord there in Gibeon."
     },
     {
       "verse": "6",
-      "text": "Solomon went up to the bronze altar which was in front of the Lord's special tent. He offered 1,000 burnt offerings on the altar to the Lord."
+      "text": "Solomon went up to the bronze altar which was in front of the Lord's special tent. He offered 1, 000 burnt offerings on the altar to the Lord."
     },
     {
       "verse": "7",
-      "text": "That night, God showed himself to Solomon. God said, ‘Ask me to give you whatever you want.’"
+      "text": "That night, God showed himself to Solomon. God said, ‘Ask me to give you whatever you want. ’"
     },
     {
       "verse": "8",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So please give me wisdom and knowledge, so that I can be a good leader of these people. I will only be able to rule this great nation of your people if you do that for me.’"
+      "text": "So please give me wisdom and knowledge, so that I can be a good leader of these people. I will only be able to rule this great nation of your people if you do that for me. ’"
     },
     {
       "verse": "11",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Because of that, I will give to you wisdom and knowledge, as you asked. But I will also give you riches, valuable things and honour. You will have more of those than any king who has lived before you and more than any king who will live after you.’"
+      "text": "Because of that, I will give to you wisdom and knowledge, as you asked. But I will also give you riches, valuable things and honour. You will have more of those than any king who has lived before you and more than any king who will live after you. ’"
     },
     {
       "verse": "13",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Solomon brought together many chariots and horses for his soldiers to ride. He had 1,400 chariots and 12,000 horses. He kept some of them in Jerusalem where he lived as king. He kept the others in cities that he had chosen for this."
+      "text": "Solomon brought together many chariots and horses for his soldiers to ride. He had 1, 400 chariots and 12, 000 horses. He kept some of them in Jerusalem where he lived as king. He kept the others in cities that he had chosen for this."
     },
     {
       "verse": "15",
@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He chose 70,000 men to carry the heavy things for the buildings, and 80,000 men to cut rocks in the hills. He also chose 3,600 men to lead these workers."
+      "text": "He chose 70, 000 men to carry the heavy things for the buildings, and 80, 000 men to cut rocks in the hills. He also chose 3, 600 men to lead these workers."
     },
     {
       "verse": "3",
@@ -108,11 +108,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I will pay your men who cut down the trees. To pay them, I will send 2,000 tons of wheat, 2,000 tons of barley, 450,000 litres of wine and 450,000 litres of olive oil.’"
+      "text": "I will pay your men who cut down the trees. To pay them, I will send 2, 000 tons of wheat, 2, 000 tons of barley, 450, 000 litres of wine and 450, 000 litres of olive oil. ’"
     },
     {
       "verse": "11",
-      "text": "King Huram of Tyre replied to Solomon with this letter:‘Because the Lord loves his people, he has chosen you to be their king.’ ‘Because the Lord loves his people, he has chosen you to be their king.’"
+      "text": "King Huram of Tyre replied to Solomon with this letter:‘Because the Lord loves his people, he has chosen you to be their king. ’ ‘Because the Lord loves his people, he has chosen you to be their king. ’"
     },
     {
       "verse": "12",
@@ -132,15 +132,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then we will cut the wood that you need from the trees in Lebanon. We will tie the wood together to make boats. Then we will send them on the sea to Joppa. You can take the wood from there up to Jerusalem.’"
+      "text": "Then we will cut the wood that you need from the trees in Lebanon. We will tie the wood together to make boats. Then we will send them on the sea to Joppa. You can take the wood from there up to Jerusalem. ’"
     },
     {
       "verse": "17",
-      "text": "Solomon counted all the foreign men who were living in Israel, as his father David had done. There were 153,600 foreign men."
+      "text": "Solomon counted all the foreign men who were living in Israel, as his father David had done. There were 153, 600 foreign men."
     },
     {
       "verse": "18",
-      "text": "He chose 70,000 of them to carry things for the buildings and 80,000 of them to cut rocks in the hills. He also chose 3,600 of them to lead the workers, to make sure that they finished the work properly."
+      "text": "He chose 70, 000 of them to carry things for the buildings and 80, 000 of them to cut rocks in the hills. He also chose 3, 600 of them to lead the workers, to make sure that they finished the work properly."
     }
   ],
   "3": [
@@ -154,7 +154,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The foundation for God's temple was 27 metres long and 9 metres wide. (They measured it in cubits.)"
+      "text": "The foundation for God's temple was 27 metres long and 9 metres wide. (They measured it in cubits. )"
     },
     {
       "verse": "4",
@@ -174,7 +174,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Solomon's workers built the Most Holy Place in the temple. It was 9 metres long and 9 metres wide. That was how wide the temple itself was. They used about 20,000 kilograms of pure gold to cover its walls."
+      "text": "Solomon's workers built the Most Holy Place in the temple. It was 9 metres long and 9 metres wide. That was how wide the temple itself was. They used about 20, 000 kilograms of pure gold to cover its walls."
     },
     {
       "verse": "9",
@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings. Each wing was 2.2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub. The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
+      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings. Each wing was 2. 2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub. The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
     },
     {
       "verse": "14",
@@ -194,7 +194,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Solomon's workers made two pillars to stand at the front of the temple. They were 16 metres high. There was a piece on the top of each pillar that was 2.2 metres high."
+      "text": "Solomon's workers made two pillars to stand at the front of the temple. They were 16 metres high. There was a piece on the top of each pillar that was 2. 2 metres high."
     },
     {
       "verse": "16",
@@ -224,7 +224,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The bronze walls of the ‘Sea’ were 7½ centimetres thick. Its top edge was like a cup in the shape of a lily flower. The ‘Sea’ contained about 65,000 litres of water."
+      "text": "The bronze walls of the ‘Sea’ were 7½ centimetres thick. Its top edge was like a cup in the shape of a lily flower. The ‘Sea’ contained about 65, 000 litres of water."
     },
     {
       "verse": "6",
@@ -252,7 +252,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "two pillars;two pieces for the top of each pillar, with the shape of big bowls;rows of chains on the tops of the pillars;"
+      "text": "two pillars; two pieces for the top of each pillar, with the shape of big bowls; rows of chains on the tops of the pillars;"
     },
     {
       "verse": "13",
@@ -268,7 +268,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "the pots, small tools and forks for meat.King Solomon asked Huram-Abi to make all these things for the Lord's temple. He used bright bronze to make all these things."
+      "text": "the pots, small tools and forks for meat. King Solomon asked Huram-Abi to make all these things for the Lord's temple. He used bright bronze to make all these things."
     },
     {
       "verse": "17",
@@ -280,7 +280,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Solomon's workers also made all these things for God's temple:the gold altar;the tables which had the special bread on them;"
+      "text": "Solomon's workers also made all these things for God's temple: the gold altar; the tables which had the special bread on them;"
     },
     {
       "verse": "20",
@@ -288,11 +288,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "the gold images of flowers;the lamps;the small tools that held things for the altar;"
+      "text": "the gold images of flowers; the lamps; the small tools that held things for the altar;"
     },
     {
       "verse": "22",
-      "text": "the small tools of pure gold that they used for the lamps;the bowls for water;the dishes for ashes;the baskets that carried hot coals;the gold pieces that held the doors of the Most Holy Place;the gold pieces that held the doors of the temple's big hall."
+      "text": "the small tools of pure gold that they used for the lamps; the bowls for water; the dishes for ashes; the baskets that carried hot coals; the gold pieces that held the doors of the Most Holy Place; the gold pieces that held the doors of the temple's big hall."
     }
   ],
   "5": [
@@ -338,7 +338,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the priests came out of the Holy Place. All the different groups of priests who were there had made themselves clean to serve God. ‘He is good! His faithful love continues for ever!’"
+      "text": "Then the priests came out of the Holy Place. All the different groups of priests who were there had made themselves clean to serve God. ‘He is good! His faithful love continues for ever! ’"
     },
     {
       "verse": "12",
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "All these musicians made nice music together. They joined together to praise the Lord and to thank him. The singers sang loudly to the music of the trumpets, the cymbals and the other musical instruments. They loudly sang these words to praise the Lord:‘He is good!His faithful love continues for ever!’Then a cloud filled the Lord's temple."
+      "text": "All these musicians made nice music together. They joined together to praise the Lord and to thank him. The singers sang loudly to the music of the trumpets, the cymbals and the other musical instruments. They loudly sang these words to praise the Lord:‘He is good! His faithful love continues for ever! ’Then a cloud filled the Lord's temple."
     },
     {
       "verse": "14",
@@ -360,7 +360,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Now I have built a great temple for you. It is a place where you can live for ever.’"
+      "text": "Now I have built a great temple for you. It is a place where you can live for ever. ’"
     },
     {
       "verse": "3",
@@ -376,7 +376,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But now I have chosen Jerusalem to be the place where my people worship me. And I have chosen David to rule Israel, my people, as king.”"
+      "text": "But now I have chosen Jerusalem to be the place where my people worship me. And I have chosen David to rule Israel, my people, as king. ”"
     },
     {
       "verse": "7",
@@ -388,7 +388,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But you will not build the temple. Instead, one of your own sons will build it to give honour to me.”"
+      "text": "But you will not build the temple. Instead, one of your own sons will build it to give honour to me. ”"
     },
     {
       "verse": "10",
@@ -396,7 +396,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I have put the Covenant Box there. It contains the covenant that the Lord made with the Israelites.’"
+      "text": "I have put the Covenant Box there. It contains the covenant that the Lord made with the Israelites. ’"
     },
     {
       "verse": "12",
@@ -404,11 +404,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He had made a bronze stage to stand on. It was 2.3 metres long, 2.3 metres wide and 1.4 metres high. He put it in the middle of the yard and he stood on it. Then he went down on his knees where all the Israelites could see him. He lifted up his hands towards the sky."
+      "text": "He had made a bronze stage to stand on. It was 2. 3 metres long, 2. 3 metres wide and 1. 4 metres high. He put it in the middle of the yard and he stood on it. Then he went down on his knees where all the Israelites could see him. He lifted up his hands towards the sky."
     },
     {
       "verse": "14",
-      "text": "He prayed,‘Lord, Israel's God, there is no God like you, either in heaven or on the earth. You continue to do what you have promised to do for your people. You faithfully love those who want to serve you."
+      "text": "He prayed, ‘Lord, Israel's God, there is no God like you, either in heaven or on the earth. You continue to do what you have promised to do for your people. You faithfully love those who want to serve you."
     },
     {
       "verse": "15",
@@ -416,7 +416,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Now Lord, Israel's God, there is another promise that you spoke to my father David. I pray that you will do that too. You said to David, “There will always be one of your descendants to rule Israel as my chosen king. But for this to happen, your sons must be careful to obey my law, as you have done.”"
+      "text": "Now Lord, Israel's God, there is another promise that you spoke to my father David. I pray that you will do that too. You said to David, “There will always be one of your descendants to rule Israel as my chosen king. But for this to happen, your sons must be careful to obey my law, as you have done. ”"
     },
     {
       "verse": "17",
@@ -432,7 +432,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Watch over this temple and take care of it day and night. This is the place about which you said, “People will give honour to my name there.” Please answer my prayers when I turn towards this place to pray to you."
+      "text": "Watch over this temple and take care of it day and night. This is the place about which you said, “People will give honour to my name there. ” Please answer my prayers when I turn towards this place to pray to you."
     },
     {
       "verse": "21",
@@ -500,7 +500,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Then your people may think about the bad things that they have done. While they are prisoners in their enemies' country, they may be sorry about their sins. They may pray to you and ask you to forgive them. They may say, “We have turned away from God and we have done wicked things.”"
+      "text": "Then your people may think about the bad things that they have done. While they are prisoners in their enemies' country, they may be sorry about their sins. They may pray to you and ask you to forgive them. They may say, “We have turned away from God and we have done wicked things. ”"
     },
     {
       "verse": "38",
@@ -520,7 +520,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Lord God do not turn away from your special chosen king. Remember the faithful love that you promised to your servant David.’"
+      "text": "Lord God do not turn away from your special chosen king. Remember the faithful love that you promised to your servant David. ’"
     }
   ],
   "7": [
@@ -534,7 +534,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "All the Israelites saw the fire come down. They also saw the Lord's glory above the temple. They went down on their knees on the flat stones of the yard, with their faces towards the ground. They worshipped the Lord and they thanked him. They said, ‘He is good. His faithful love continues for ever.’"
+      "text": "All the Israelites saw the fire come down. They also saw the Lord's glory above the temple. They went down on their knees on the flat stones of the yard, with their faces towards the ground. They worshipped the Lord and they thanked him. They said, ‘He is good. His faithful love continues for ever. ’"
     },
     {
       "verse": "4",
@@ -542,11 +542,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "King Solomon offered 22,000 cows and 120,000 sheep and goats as sacrifices. In this way the king and all the people offered the temple as a gift to God."
+      "text": "King Solomon offered 22, 000 cows and 120, 000 sheep and goats as sacrifices. In this way the king and all the people offered the temple as a gift to God."
     },
     {
       "verse": "6",
-      "text": "The priests and the Levites stood in their places. The Levites held the musical instruments that King David had made to thank the Lord. They sang these words to praise the Lord: ‘His faithful love continues for ever.’ The priests stood on the other side and they made music with their trumpets. All the Israelites were standing up while this was happening."
+      "text": "The priests and the Levites stood in their places. The Levites held the musical instruments that King David had made to thank the Lord. They sang these words to praise the Lord: ‘His faithful love continues for ever. ’ The priests stood on the other side and they made music with their trumpets. All the Israelites were standing up while this was happening."
     },
     {
       "verse": "7",
@@ -594,7 +594,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "If you do that, I will always cause one of your descendants to rule as king. That is what I promised to your father David when I said, “There will always be someone from your family to rule over Israel.”"
+      "text": "If you do that, I will always cause one of your descendants to rule as king. That is what I promised to your father David when I said, “There will always be someone from your family to rule over Israel. ”"
     },
     {
       "verse": "19",
@@ -606,11 +606,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "This beautiful temple will became a heap of stones. Everyone who sees it will be very surprised. They will laugh about it! They will ask, “Why has the Lord destroyed this land and this temple?”"
+      "text": "This beautiful temple will became a heap of stones. Everyone who sees it will be very surprised. They will laugh about it! They will ask, “Why has the Lord destroyed this land and this temple? ”"
     },
     {
       "verse": "22",
-      "text": "People will answer, “He has done it because they have turned away from the Lord, the God of their ancestors. He brought their ancestors out of Egypt. But now they have chosen to worship other gods and to serve them. That is why the Lord has caused this trouble to happen to them.” ’"
+      "text": "People will answer, “He has done it because they have turned away from the Lord, the God of their ancestors. He brought their ancestors out of Egypt. But now they have chosen to worship other gods and to serve them. That is why the Lord has caused this trouble to happen to them. ” ’"
     }
   ],
   "8": [
@@ -656,7 +656,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Solomon had built a palace for his wife, Pharaoh's daughter. When the palace was ready, he brought her up there from the City of David. He said, ‘My wife must not live in the palace of David, king of Israel. The Lord's Covenant Box has been there, so it is a holy place.’"
+      "text": "Solomon had built a palace for his wife, Pharaoh's daughter. When the palace was ready, he brought her up there from the City of David. He said, ‘My wife must not live in the palace of David, king of Israel. The Lord's Covenant Box has been there, so it is a holy place. ’"
     },
     {
       "verse": "12",
@@ -718,7 +718,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So we should praise the Lord your God! He is happy with you and he has chosen you to rule Israel on his behalf. Your God will continue to love Israel for ever, and he will always make them strong. So he has made you king to rule them in a fair and honest way.’"
+      "text": "So we should praise the Lord your God! He is happy with you and he has chosen you to rule Israel on his behalf. Your God will continue to love Israel for ever, and he will always make them strong. So he has made you king to rule them in a fair and honest way. ’"
     },
     {
       "verse": "9",
@@ -786,7 +786,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Solomon had places to keep 4,000 horses that pulled his chariots. He also had 12,000 horses. He kept them in the cities that he had chosen for this and also in Jerusalem where he lived."
+      "text": "Solomon had places to keep 4, 000 horses that pulled his chariots. He also had 12, 000 horses. He kept them in the cities that he had chosen for this and also in Jerusalem where he lived."
     },
     {
       "verse": "26",
@@ -828,19 +828,19 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "‘Your father caused us to work too hard. Please make the work easier for us. If you do that, we will serve you as our king.’"
+      "text": "‘Your father caused us to work too hard. Please make the work easier for us. If you do that, we will serve you as our king. ’"
     },
     {
       "verse": "5",
-      "text": "Rehoboam answered them, ‘Go away for three days. Then come back to me.’ So the people went away."
+      "text": "Rehoboam answered them, ‘Go away for three days. Then come back to me. ’ So the people went away."
     },
     {
       "verse": "6",
-      "text": "Then King Rehoboam went to talk to the older advisors who had served his father Solomon. He asked them, ‘What answer should I give to these people?’"
+      "text": "Then King Rehoboam went to talk to the older advisors who had served his father Solomon. He asked them, ‘What answer should I give to these people? ’"
     },
     {
       "verse": "7",
-      "text": "They replied, ‘If you agree to be kind to these people and help them, they will always serve you as their king. So do what they are asking you to do.’"
+      "text": "They replied, ‘If you agree to be kind to these people and help them, they will always serve you as their king. So do what they are asking you to do. ’"
     },
     {
       "verse": "8",
@@ -848,19 +848,19 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He asked them, ‘What do you think that I should say to these people? They want me to make their work easier.’"
+      "text": "He asked them, ‘What do you think that I should say to these people? They want me to make their work easier. ’"
     },
     {
       "verse": "10",
-      "text": "Rehoboam's young advisors said, ‘The people said to you, “Your father made us work too hard. Please make our work easier.” You should tell them, “Even my little finger is thicker than my father's whole body!"
+      "text": "Rehoboam's young advisors said, ‘The people said to you, “Your father made us work too hard. Please make our work easier. ” You should tell them, “Even my little finger is thicker than my father's whole body!"
     },
     {
       "verse": "11",
-      "text": "My father made you work hard. I will make you work even harder! My father punished you with little whips. I will punish you with whips that bite your skin!” ’"
+      "text": "My father made you work hard. I will make you work even harder! My father punished you with little whips. I will punish you with whips that bite your skin! ” ’"
     },
     {
       "verse": "12",
-      "text": "Jeroboam and all the people returned to Rehoboam after three days. That was because the king had said, ‘Return to me in three days.’"
+      "text": "Jeroboam and all the people returned to Rehoboam after three days. That was because the king had said, ‘Return to me in three days. ’"
     },
     {
       "verse": "13",
@@ -868,7 +868,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Instead, he did what the young men had suggested. He said to the people, ‘My father gave you work that was too hard for you. I will make it even worse! My father punished you with little whips. I will punish you with whips that bite!’"
+      "text": "Instead, he did what the young men had suggested. He said to the people, ‘My father gave you work that was too hard for you. I will make it even worse! My father punished you with little whips. I will punish you with whips that bite! ’"
     },
     {
       "verse": "15",
@@ -876,7 +876,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "All the Israelites realized that the king refused to listen to them. So they said to the king,‘We can no longer serve the family of Jesse's son, David!Israelites, go back to your homes!You descendant of David, take care of your own family!’So the Israelites went to their homes. ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family!’"
+      "text": "All the Israelites realized that the king refused to listen to them. So they said to the king, ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family! ’So the Israelites went to their homes. ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family! ’"
     },
     {
       "verse": "17",
@@ -894,7 +894,7 @@ module.exports = {
   "11": [
     {
       "verse": "1",
-      "text": "Rehoboam arrived back in Jerusalem. He brought together all the men from the tribes of Judah and Benjamin who knew how to fight. There were 180,000 of them. Rehoboam wanted to attack the Israelite tribes so that he could rule them again as king. So they obeyed the Lord's message. They did not go to attack Jeroboam."
+      "text": "Rehoboam arrived back in Jerusalem. He brought together all the men from the tribes of Judah and Benjamin who knew how to fight. There were 180, 000 of them. Rehoboam wanted to attack the Israelite tribes so that he could rule them again as king. So they obeyed the Lord's message. They did not go to attack Jeroboam."
     },
     {
       "verse": "2",
@@ -906,7 +906,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "This is what the Lord says: “Do not go and attack your brothers. Do not fight against them. Instead, you must all go home. I, the Lord, have decided that this must happen.” ’So they obeyed the Lord's message. They did not go to attack Jeroboam."
+      "text": "This is what the Lord says: “Do not go and attack your brothers. Do not fight against them. Instead, you must all go home. I, the Lord, have decided that this must happen. ” ’So they obeyed the Lord's message. They did not go to attack Jeroboam."
     },
     {
       "verse": "5",
@@ -930,7 +930,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Zorah, Aijalon and Hebron.He made all those cities in Judah and Benjamin very strong."
+      "text": "Zorah, Aijalon and Hebron. He made all those cities in Judah and Benjamin very strong."
     },
     {
       "verse": "11",
@@ -996,7 +996,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "King Shishak's army had 1,200 chariots and 60,000 soldiers who rode on horses. Many other soldiers came with him from Egypt. They included men from Libya, Sukkoth and Ethiopia."
+      "text": "King Shishak's army had 1, 200 chariots and 60, 000 soldiers who rode on horses. Many other soldiers came with him from Egypt. They included men from Libya, Sukkoth and Ethiopia."
     },
     {
       "verse": "4",
@@ -1004,11 +1004,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The prophet Shemaiah then came to speak to Rehoboam and the leaders of Judah. They had met together in Jerusalem because they were afraid of King Shishak. Shemaiah said to them, ‘The Lord says this: “You have turned away from me. So now I have turned away from you. I will let Shishak take power over you.” ’"
+      "text": "The prophet Shemaiah then came to speak to Rehoboam and the leaders of Judah. They had met together in Jerusalem because they were afraid of King Shishak. Shemaiah said to them, ‘The Lord says this: “You have turned away from me. So now I have turned away from you. I will let Shishak take power over you. ” ’"
     },
     {
       "verse": "6",
-      "text": "The leaders of Israel and the king made themselves humble. They said, ‘The Lord is right to do that.’"
+      "text": "The leaders of Israel and the king made themselves humble. They said, ‘The Lord is right to do that. ’"
     },
     {
       "verse": "7",
@@ -1016,7 +1016,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "they will become his servants. Then they will learn what it is like to serve a foreign king instead of me.’"
+      "text": "they will become his servants. Then they will learn what it is like to serve a foreign king instead of me. ’"
     },
     {
       "verse": "9",
@@ -1058,11 +1058,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Abijah ruled in Jerusalem as king for three years. His mother's name was Micaiah. She was the daughter of Uriel from Gibeah.Abijah and Jeroboam fought a war against each other."
+      "text": "Abijah ruled in Jerusalem as king for three years. His mother's name was Micaiah. She was the daughter of Uriel from Gibeah. Abijah and Jeroboam fought a war against each other."
     },
     {
       "verse": "3",
-      "text": "Abijah attacked with an army of 400,000 brave soldiers that he had chosen. Jeroboam prepared to fight against him with 800,000 strong brave soldiers that he had chosen."
+      "text": "Abijah attacked with an army of 400, 000 brave soldiers that he had chosen. Jeroboam prepared to fight against him with 800, 000 strong brave soldiers that he had chosen."
     },
     {
       "verse": "4",
@@ -1098,7 +1098,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Listen to me! God himself is our leader. He is here to help us. His priests are ready to make a loud noise with their trumpets to start the battle against you. Israelite people, do not fight against the Lord, the God of your ancestors. You will not win the battle.’"
+      "text": "Listen to me! God himself is our leader. He is here to help us. His priests are ready to make a loud noise with their trumpets to start the battle against you. Israelite people, do not fight against the Lord, the God of your ancestors. You will not win the battle. ’"
     },
     {
       "verse": "13",
@@ -1118,7 +1118,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Abijah and his army killed many of the Israel soldiers. 500,000 of Israel's best soldiers died."
+      "text": "Abijah and his army killed many of the Israel soldiers. 500, 000 of Israel's best soldiers died."
     },
     {
       "verse": "18",
@@ -1168,11 +1168,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Asa said to Judah's people, ‘We should build these towns and make them stronger. We must put walls around them, with towers and strong gates. Judah still belongs to us because we have obeyed the Lord our God. He has made us safe from our enemies all around us.’So the people made these towns strong. Everything went well for them. So the people made these towns strong. Everything went well for them."
+      "text": "Asa said to Judah's people, ‘We should build these towns and make them stronger. We must put walls around them, with towers and strong gates. Judah still belongs to us because we have obeyed the Lord our God. He has made us safe from our enemies all around us. ’So the people made these towns strong. Everything went well for them. So the people made these towns strong. Everything went well for them."
     },
     {
       "verse": "8",
-      "text": "Asa had an army of 300,000 men from Judah. They carried big shields and spears. He also had 280,000 men from Benjamin's tribe. Those men carried small shields and they could shoot arrows with their bows. They were all brave soldiers who could fight well."
+      "text": "Asa had an army of 300, 000 men from Judah. They carried big shields and spears. He also had 280, 000 men from Benjamin's tribe. Those men carried small shields and they could shoot arrows with their bows. They were all brave soldiers who could fight well."
     },
     {
       "verse": "9",
@@ -1184,7 +1184,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then Asa called out to the Lord his God to help him. He prayed, ‘There is nobody like you Lord. You have power to help a few weak people against many strong people. Help us, Lord our God, because we trust you. We want people to give honour to your name. That is why we have come to fight against this large army. Lord, you are our God. You cannot let these men win against you.’"
+      "text": "Then Asa called out to the Lord his God to help him. He prayed, ‘There is nobody like you Lord. You have power to help a few weak people against many strong people. Help us, Lord our God, because we trust you. We want people to give honour to your name. That is why we have come to fight against this large army. Lord, you are our God. You cannot let these men win against you. ’"
     },
     {
       "verse": "12",
@@ -1230,7 +1230,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But you must be strong. Continue to be brave. God will make your work successful.’"
+      "text": "But you must be strong. Continue to be brave. God will make your work successful. ’"
     },
     {
       "verse": "8",
@@ -1246,7 +1246,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "At that time they offered many animals to the Lord as sacrifices. They were animals that they had taken from their enemies. There were 700 bulls and 7,000 sheep."
+      "text": "At that time they offered many animals to the Lord as sacrifices. They were animals that they had taken from their enemies. There were 700 bulls and 7, 000 sheep."
     },
     {
       "verse": "12",
@@ -1262,7 +1262,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "All Judah's people were happy to make this promise, because they truly wanted to serve the Lord. They wanted him to help them and he answered them.After that, the Lord made them safe from their enemies all around them."
+      "text": "All Judah's people were happy to make this promise, because they truly wanted to serve the Lord. They wanted him to help them and he answered them. After that, the Lord made them safe from their enemies all around them."
     },
     {
       "verse": "16",
@@ -1292,7 +1292,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He also sent this message to Ben-Hadad: ‘We should make an agreement to be friends, as our fathers did. I am sending you this silver and gold. Please stop being friends with Baasha, king of Israel. If you no longer help him, he will have to take his soldiers out of my country.’"
+      "text": "He also sent this message to Ben-Hadad: ‘We should make an agreement to be friends, as our fathers did. I am sending you this silver and gold. Please stop being friends with Baasha, king of Israel. If you no longer help him, he will have to take his soldiers out of my country. ’"
     },
     {
       "verse": "4",
@@ -1316,7 +1316,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Lord carefully watches over the whole earth. If people serve him faithfully, he makes them strong. But you have done a foolish thing. As a result, you will now always be fighting wars.’"
+      "text": "The Lord carefully watches over the whole earth. If people serve him faithfully, he makes them strong. But you have done a foolish thing. As a result, you will now always be fighting wars. ’"
     },
     {
       "verse": "10",
@@ -1382,11 +1382,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Some Philistines brought silver and other gifts to Jehoshaphat to make him happy. People from Arabia also brought gifts to him. They brought 7,700 male sheep and 7,700 male goats."
+      "text": "Some Philistines brought silver and other gifts to Jehoshaphat to make him happy. People from Arabia also brought gifts to him. They brought 7, 700 male sheep and 7, 700 male goats."
     },
     {
       "verse": "12",
-      "text": "Jehoshaphat became more and more powerful. He built strong buildings and places to store things everywhere in Judah. From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300,000 soldiers, in groups of 1,000."
+      "text": "Jehoshaphat became more and more powerful. He built strong buildings and places to store things everywhere in Judah. From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300, 000 soldiers, in groups of 1, 000."
     },
     {
       "verse": "13",
@@ -1394,23 +1394,23 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "These are the groups of the soldiers in each clan:From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300,000 soldiers, in groups of 1,000."
+      "text": "These are the groups of the soldiers in each clan: From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300, 000 soldiers, in groups of 1, 000."
     },
     {
       "verse": "15",
-      "text": "The next officer was Jehohanan. He had authority over 280,000 soldiers."
+      "text": "The next officer was Jehohanan. He had authority over 280, 000 soldiers."
     },
     {
       "verse": "16",
-      "text": "After him, the next officer was Zikri's son, Amasiah. He himself chose to serve the Lord in this way. He had authority over 200,000 soldiers."
+      "text": "After him, the next officer was Zikri's son, Amasiah. He himself chose to serve the Lord in this way. He had authority over 200, 000 soldiers."
     },
     {
       "verse": "17",
-      "text": "From Benjamin's tribe, the officer who led the soldiers was Eliada, a brave soldier. He had authority over 200,000 soldiers who had bows and arrows, as well as shields."
+      "text": "From Benjamin's tribe, the officer who led the soldiers was Eliada, a brave soldier. He had authority over 200, 000 soldiers who had bows and arrows, as well as shields."
     },
     {
       "verse": "18",
-      "text": "After him, the next officer was Jehozabad. He had authority over 180,000 soldiers who had their weapons ready to fight."
+      "text": "After him, the next officer was Jehozabad. He had authority over 180, 000 soldiers who had their weapons ready to fight."
     },
     {
       "verse": "19",
@@ -1428,27 +1428,27 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "King Ahab of Israel said to King Jehoshaphat of Judah, ‘Will you go with me to attack Ramoth Gilead?’ Jehoshaphat replied, ‘Yes, we should work together! Use my soldiers as if they belonged to you. My army will join with your army in the war.’"
+      "text": "King Ahab of Israel said to King Jehoshaphat of Judah, ‘Will you go with me to attack Ramoth Gilead? ’ Jehoshaphat replied, ‘Yes, we should work together! Use my soldiers as if they belonged to you. My army will join with your army in the war. ’"
     },
     {
       "verse": "4",
-      "text": "Then Jehoshaphat said to the king of Israel, ‘Before we go to fight, we must ask the Lord what we should do.’"
+      "text": "Then Jehoshaphat said to the king of Israel, ‘Before we go to fight, we must ask the Lord what we should do. ’"
     },
     {
       "verse": "5",
-      "text": "prophets. He asked them, ‘Should we attack Ramoth Gilead, or not?’ They answered, ‘Yes, go and attack it, because the God will give it to you, our king.’"
+      "text": "prophets. He asked them, ‘Should we attack Ramoth Gilead, or not? ’ They answered, ‘Yes, go and attack it, because the God will give it to you, our king. ’"
     },
     {
       "verse": "6",
-      "text": "But Jehoshaphat then asked, ‘Is there any other prophet of the Lord that we could ask?’"
+      "text": "But Jehoshaphat then asked, ‘Is there any other prophet of the Lord that we could ask? ’"
     },
     {
       "verse": "7",
-      "text": "The king of Israel said to Jehoshaphat, ‘There is still one man. We could ask him what the Lord wants us to do. But I do not like him, because he never says that anything good will happen to me. He always says that I will have trouble. He is Imlah's son, Micaiah.’Jehoshaphat said, ‘The king should not talk like that.’ Jehoshaphat said, ‘The king should not talk like that.’"
+      "text": "The king of Israel said to Jehoshaphat, ‘There is still one man. We could ask him what the Lord wants us to do. But I do not like him, because he never says that anything good will happen to me. He always says that I will have trouble. He is Imlah's son, Micaiah. ’Jehoshaphat said, ‘The king should not talk like that. ’ Jehoshaphat said, ‘The king should not talk like that. ’"
     },
     {
       "verse": "8",
-      "text": "So the king of Israel said to one of his officers, ‘Bring Imlah's son Micaiah here quickly.’"
+      "text": "So the king of Israel said to one of his officers, ‘Bring Imlah's son Micaiah here quickly. ’"
     },
     {
       "verse": "9",
@@ -1456,35 +1456,35 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Kenaanah's son Zedekiah had used iron to make sharp points like a bull's horns. He said, ‘This is what the Lord says: “With these sharp horns you will attack Syria's army. You will destroy them all.” ’"
+      "text": "Kenaanah's son Zedekiah had used iron to make sharp points like a bull's horns. He said, ‘This is what the Lord says: “With these sharp horns you will attack Syria's army. You will destroy them all. ” ’"
     },
     {
       "verse": "11",
-      "text": "All the other prophets were speaking the same message. They said, ‘Attack Ramoth Gilead. You will win the fight. The Lord will give the city to you, our king.’"
+      "text": "All the other prophets were speaking the same message. They said, ‘Attack Ramoth Gilead. You will win the fight. The Lord will give the city to you, our king. ’"
     },
     {
       "verse": "12",
-      "text": "The man who had gone to fetch Micaiah said to him, ‘All the other prophets are saying the same thing. They say that the king will win the fight. So you must agree with what they are saying. Promise that something good will happen.’"
+      "text": "The man who had gone to fetch Micaiah said to him, ‘All the other prophets are saying the same thing. They say that the king will win the fight. So you must agree with what they are saying. Promise that something good will happen. ’"
     },
     {
       "verse": "13",
-      "text": "But Micaiah said, ‘I can only speak what my God tells me to say. As surely as the Lord lives, that is what I must do.’"
+      "text": "But Micaiah said, ‘I can only speak what my God tells me to say. As surely as the Lord lives, that is what I must do. ’"
     },
     {
       "verse": "14",
-      "text": "When Micaiah arrived, the king asked him, ‘Micaiah, should we attack Ramoth Gilead or not?’Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city.’ Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city.’"
+      "text": "When Micaiah arrived, the king asked him, ‘Micaiah, should we attack Ramoth Gilead or not? ’Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city. ’ Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city. ’"
     },
     {
       "verse": "15",
-      "text": "Then King Ahab said to Micaiah, ‘I have already told you many times to tell me only what is true! You must promise to do this in the name of the Lord!’"
+      "text": "Then King Ahab said to Micaiah, ‘I have already told you many times to tell me only what is true! You must promise to do this in the name of the Lord! ’"
     },
     {
       "verse": "16",
-      "text": "Then Micaiah said, ‘I saw the whole army of Israel and they were walking about on the hills without any leader. They were like sheep with no shepherd as their guide. The Lord told me, “These people have no master. They should go home quietly and they should not fight.” ’"
+      "text": "Then Micaiah said, ‘I saw the whole army of Israel and they were walking about on the hills without any leader. They were like sheep with no shepherd as their guide. The Lord told me, “These people have no master. They should go home quietly and they should not fight. ” ’"
     },
     {
       "verse": "17",
-      "text": "The king of Israel said to King Jehoshaphat, ‘I told you what he would say! He never says that anything good will happen to me. He only says that I will have trouble.’"
+      "text": "The king of Israel said to King Jehoshaphat, ‘I told you what he would say! He never says that anything good will happen to me. He only says that I will have trouble. ’"
     },
     {
       "verse": "18",
@@ -1492,27 +1492,27 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The Lord asked, “Who will go and deceive King Ahab of Israel so that he attacks Ramoth Gilead and he dies there?” Many of the angels suggested different things."
+      "text": "The Lord asked, “Who will go and deceive King Ahab of Israel so that he attacks Ramoth Gilead and he dies there? ” Many of the angels suggested different things."
     },
     {
       "verse": "20",
-      "text": "Then a spirit came and stood in front of the Lord. The spirit said, “I will deceive Ahab.”The Lord asked, “How will you do it?”"
+      "text": "Then a spirit came and stood in front of the Lord. The spirit said, “I will deceive Ahab. ”The Lord asked, “How will you do it? ”"
     },
     {
       "verse": "21",
-      "text": "The spirit said, “I will give a message to all Ahab's prophets. I will cause them to speak lies.” The Lord said, “Go and deceive King Ahab, as you have said. He will do what you say.”"
+      "text": "The spirit said, “I will give a message to all Ahab's prophets. I will cause them to speak lies. ” The Lord said, “Go and deceive King Ahab, as you have said. He will do what you say. ”"
     },
     {
       "verse": "22",
-      "text": "So you see what has happened. The Lord has sent a spirit to these prophets who serve you. This spirit has caused them to speak lies. The Lord has decided that terrible trouble will come on you.’"
+      "text": "So you see what has happened. The Lord has sent a spirit to these prophets who serve you. This spirit has caused them to speak lies. The Lord has decided that terrible trouble will come on you. ’"
     },
     {
       "verse": "23",
-      "text": "Then Kenaanah's son Zedekiah went to Micaiah. He hit Micaiah on his face. He asked Micaiah, ‘Do you say that the Lord's spirit has gone away from me and has spoken to you instead? How did he do that?’"
+      "text": "Then Kenaanah's son Zedekiah went to Micaiah. He hit Micaiah on his face. He asked Micaiah, ‘Do you say that the Lord's spirit has gone away from me and has spoken to you instead? How did he do that? ’"
     },
     {
       "verse": "24",
-      "text": "Micaiah answered him, ‘One day, you will know which of us has spoken the truth. That will be the day that you go to hide in a room at the back of a house.’"
+      "text": "Micaiah answered him, ‘One day, you will know which of us has spoken the truth. That will be the day that you go to hide in a room at the back of a house. ’"
     },
     {
       "verse": "25",
@@ -1520,11 +1520,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Say to them, “The king commands you to put this man in prison. Feed him with only a little bread and water until I return safely from the battle.” ’"
+      "text": "Say to them, “The king commands you to put this man in prison. Feed him with only a little bread and water until I return safely from the battle. ” ’"
     },
     {
       "verse": "27",
-      "text": "Micaiah said, ‘If you do return safely, it will show that I have not spoken the Lord's message.’ Then he said to all the people who were there, ‘Remember what I have said to King Ahab!’"
+      "text": "Micaiah said, ‘If you do return safely, it will show that I have not spoken the Lord's message. ’ Then he said to all the people who were there, ‘Remember what I have said to King Ahab! ’"
     },
     {
       "verse": "28",
@@ -1532,15 +1532,15 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "King Ahab said to Jehoshaphat, ‘When we go into the battle, I will wear ordinary clothes. People will not recognize me as the king. But you should wear your royal clothes.’ So the king of Israel went into the battle as if he was an ordinary soldier."
+      "text": "King Ahab said to Jehoshaphat, ‘When we go into the battle, I will wear ordinary clothes. People will not recognize me as the king. But you should wear your royal clothes. ’ So the king of Israel went into the battle as if he was an ordinary soldier."
     },
     {
       "verse": "30",
-      "text": "But the king of Syria had said to his chariot officers, ‘Only fight the king of Israel. Do not fight against anyone else, whoever they are.’"
+      "text": "But the king of Syria had said to his chariot officers, ‘Only fight the king of Israel. Do not fight against anyone else, whoever they are. ’"
     },
     {
       "verse": "31",
-      "text": "The chariot officers saw King Jehoshaphat in his royal clothes. So they thought, ‘That is the king of Israel!’ They turned towards him to attack him. Jehoshaphat shouted out and the Lord helped him. God caused the officers to turn away from him."
+      "text": "The chariot officers saw King Jehoshaphat in his royal clothes. So they thought, ‘That is the king of Israel! ’ They turned towards him to attack him. Jehoshaphat shouted out and the Lord helped him. God caused the officers to turn away from him."
     },
     {
       "verse": "32",
@@ -1548,7 +1548,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Then a Syrian soldier shot an arrow into the air. He did not try to shoot at anyone, but the arrow hit the king of Israel. The arrow went through a space in the king's armour. The king commanded the man who drove his chariot, ‘Turn the chariot around. Take me away from the battle. An arrow has hit me.’"
+      "text": "Then a Syrian soldier shot an arrow into the air. He did not try to shoot at anyone, but the arrow hit the king of Israel. The arrow went through a space in the king's armour. The king commanded the man who drove his chariot, ‘Turn the chariot around. Take me away from the battle. An arrow has hit me. ’"
     },
     {
       "verse": "34",
@@ -1566,7 +1566,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But you have done some good things. You have removed the Asherah poles from Judah's land. You have chosen to serve God.’"
+      "text": "But you have done some good things. You have removed the Asherah poles from Judah's land. You have chosen to serve God. ’"
     },
     {
       "verse": "4",
@@ -1582,7 +1582,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Respect the Lord's authority. Be careful to do your job well. The Lord our God is always fair. So be fair to everyone, whoever they are. Do not cheat people. Do not accept bribes.’"
+      "text": "Respect the Lord's authority. Be careful to do your job well. The Lord our God is always fair. So be fair to everyone, whoever they are. Do not cheat people. Do not accept bribes. ’"
     },
     {
       "verse": "8",
@@ -1598,7 +1598,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Amariah, the most important priest, will have authority over you. He will tell you what the Lord's law says is right. But if it is an argument about the king's laws, Ishmael's son Zebadiah, the officer who rules Judah, will decide what is right. The Levites will serve as your officers. Be brave and do your work well. The Lord will help you to do what is right!’"
+      "text": "Amariah, the most important priest, will have authority over you. He will tell you what the Lord's law says is right. But if it is an argument about the king's laws, Ishmael's son Zebadiah, the officer who rules Judah, will decide what is right. The Levites will serve as your officers. Be brave and do your work well. The Lord will help you to do what is right! ’"
     }
   ],
   "20": [
@@ -1608,7 +1608,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Some men brought this news to Jehoshaphat: ‘A large army is coming from the other side of the Dead Sea to attack you. They came from Edom and they are already in Hazezon Tamar.’ (That is another name for En Gedi.)"
+      "text": "Some men brought this news to Jehoshaphat: ‘A large army is coming from the other side of the Dead Sea to attack you. They came from Edom and they are already in Hazezon Tamar. ’ (That is another name for En Gedi. )"
     },
     {
       "verse": "3",
@@ -1636,7 +1636,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "“In the future, we may have trouble. There might be war, disease, famine or some other punishment. If that happens, we will come to you and we will stand in front of this temple. You have chosen this place to be your home. We will call out to you to help us when we are in trouble. Then you will hear us and you will rescue us.”"
+      "text": "“In the future, we may have trouble. There might be war, disease, famine or some other punishment. If that happens, we will come to you and we will stand in front of this temple. You have chosen this place to be your home. We will call out to you to help us when we are in trouble. Then you will hear us and you will rescue us. ”"
     },
     {
       "verse": "10",
@@ -1648,7 +1648,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So, our God, please punish these people! We are not strong enough to fight against this large army that is attacking us. We do not know what to do. But we are asking you to help us.’"
+      "text": "So, our God, please punish these people! We are not strong enough to fight against this large army that is attacking us. We do not know what to do. But we are asking you to help us. ’"
     },
     {
       "verse": "13",
@@ -1668,7 +1668,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "You will not have to fight in this battle. Go to your places and stand still. Then you will see the Lord rescue you. People of Judah and Jerusalem, do not be afraid. Be brave! Tomorrow you must march out of here towards the enemy army. The Lord is with you!” ’"
+      "text": "You will not have to fight in this battle. Go to your places and stand still. Then you will see the Lord rescue you. People of Judah and Jerusalem, do not be afraid. Be brave! Tomorrow you must march out of here towards the enemy army. The Lord is with you! ” ’"
     },
     {
       "verse": "18",
@@ -1680,11 +1680,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Early the next morning, Jehoshaphat prepared to leave with his army. They started to march to the Tekoa desert. When they were ready to leave, Jehoshaphat stood up and he said, ‘Listen to me, people of Judah and people who live in Jerusalem! Trust in the Lord your God. Then you will be safe. Believe the message that his prophets have spoken. Then you will win the battle.’"
+      "text": "Early the next morning, Jehoshaphat prepared to leave with his army. They started to march to the Tekoa desert. When they were ready to leave, Jehoshaphat stood up and he said, ‘Listen to me, people of Judah and people who live in Jerusalem! Trust in the Lord your God. Then you will be safe. Believe the message that his prophets have spoken. Then you will win the battle. ’"
     },
     {
       "verse": "21",
-      "text": "Jehoshaphat spoke with the people. He chose some musicians to march in front of his army. They sang songs to worship the Lord and to praise him for his holy power. As they marched, they sang, ‘We thank the Lord! His faithful love continues for ever!’"
+      "text": "Jehoshaphat spoke with the people. He chose some musicians to march in front of his army. They sang songs to worship the Lord and to praise him for his holy power. As they marched, they sang, ‘We thank the Lord! His faithful love continues for ever! ’"
     },
     {
       "verse": "22",
@@ -1748,7 +1748,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Dodavahu's son Eliezer from Mareshah warned Jehoshaphat with a message from the Lord. He said, ‘You should not have become a friend of Ahaziah. Because of that, the Lord will destroy the things that you have made.’A storm destroyed the ships and they never went anywhere."
+      "text": "Dodavahu's son Eliezer from Mareshah warned Jehoshaphat with a message from the Lord. He said, ‘You should not have become a friend of Ahaziah. Because of that, the Lord will destroy the things that you have made. ’A storm destroyed the ships and they never went anywhere."
     }
   ],
   "21": [
@@ -1810,7 +1810,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "You will have a bad disease. You will have terrible pain in your stomach that becomes worse and worse. Finally, your inside parts will come out of your body.” ’"
+      "text": "You will have a bad disease. You will have terrible pain in your stomach that becomes worse and worse. Finally, your inside parts will come out of your body. ” ’"
     },
     {
       "verse": "16",
@@ -1868,7 +1868,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then he went to look for Ahaziah. Jehu's men caught him in the city of Samaria, where he was hiding. They took him to Jehu. Then they punished him with death. They buried him properly, because they said, ‘He was the grandson of King Jehoshaphat who served the Lord faithfully.’Now there was nobody in Ahaziah's family who had the authority to rule Judah as king."
+      "text": "Then he went to look for Ahaziah. Jehu's men caught him in the city of Samaria, where he was hiding. They took him to Jehu. Then they punished him with death. They buried him properly, because they said, ‘He was the grandson of King Jehoshaphat who served the Lord faithfully. ’Now there was nobody in Ahaziah's family who had the authority to rule Judah as king."
     },
     {
       "verse": "10",
@@ -1894,7 +1894,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They met together in God's temple to make a promise to the new king.Jehoiada said to them, ‘Here is the king's son. He must become king, as the Lord promised that David's descendants would be."
+      "text": "They met together in God's temple to make a promise to the new king. Jehoiada said to them, ‘Here is the king's son. He must become king, as the Lord promised that David's descendants would be."
     },
     {
       "verse": "4",
@@ -1910,7 +1910,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Levites must stand around the king. Each man must hold his weapon in his hand. If anyone tries to come into the temple, you must kill them. You must stay near to the king everywhere that he goes.’"
+      "text": "The Levites must stand around the king. Each man must hold his weapon in his hand. If anyone tries to come into the temple, you must kill them. You must stay near to the king everywhere that he goes. ’"
     },
     {
       "verse": "8",
@@ -1926,19 +1926,19 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Jehoiada and his sons brought the king's son out of the temple room. They put the crown onto Joash's head. They gave him a copy of the royal covenant. They poured olive oil on his head to show that he was now the king. They shouted, ‘May the king have a long life!’"
+      "text": "Jehoiada and his sons brought the king's son out of the temple room. They put the crown onto Joash's head. They gave him a copy of the royal covenant. They poured olive oil on his head to show that he was now the king. They shouted, ‘May the king have a long life! ’"
     },
     {
       "verse": "12",
-      "text": "Queen Athaliah heard the soldiers and the people as they shouted and praised the new king. So she went to the Lord's temple where all the people were. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
+      "text": "Queen Athaliah heard the soldiers and the people as they shouted and praised the new king. So she went to the Lord's temple where all the people were. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason! ’"
     },
     {
       "verse": "13",
-      "text": "Then she saw the king! He was standing in the king's place beside the pillar at the entrance of the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. There were musicians making music with trumpets and other musical instruments. They helped the people to sing and to praise God.When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
+      "text": "Then she saw the king! He was standing in the king's place beside the pillar at the entrance of the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. There were musicians making music with trumpets and other musical instruments. They helped the people to sing and to praise God. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason! ’"
     },
     {
       "verse": "14",
-      "text": "soldiers. He told them, ‘Bring her out of the temple to the line of guards outside. Use your swords to kill anyone who follows her.’ That was because Jehoiada had said, ‘You must not kill her inside the Lord's temple.’"
+      "text": "soldiers. He told them, ‘Bring her out of the temple to the line of guards outside. Use your swords to kill anyone who follows her. ’ That was because Jehoiada had said, ‘You must not kill her inside the Lord's temple. ’"
     },
     {
       "verse": "15",
@@ -1988,11 +1988,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He brought together the priests and the Levites. He told them, ‘Go around to all the towns in Judah. Bring here all the money that Israel's people offer each year for the temple. We will use it to repair the temple of your God. Go quickly and do it now!’But the Levites did not do it immediately."
+      "text": "He brought together the priests and the Levites. He told them, ‘Go around to all the towns in Judah. Bring here all the money that Israel's people offer each year for the temple. We will use it to repair the temple of your God. Go quickly and do it now! ’But the Levites did not do it immediately."
     },
     {
       "verse": "6",
-      "text": "So the king told Jehoiada, the leader of the priests, to come to him. He said to him, ‘You have not told the Levites to bring the money that the people of Judah and Jerusalem have given. Why have you not done that? The Lord's servant Moses and all Israel's people made the rule that people should give the money each year. It would be a tax to help with the tent of God's covenant.’"
+      "text": "So the king told Jehoiada, the leader of the priests, to come to him. He said to him, ‘You have not told the Levites to bring the money that the people of Judah and Jerusalem have given. Why have you not done that? The Lord's servant Moses and all Israel's people made the rule that people should give the money each year. It would be a tax to help with the tent of God's covenant. ’"
     },
     {
       "verse": "7",
@@ -2048,7 +2048,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then God's Spirit came to Jehoiada's son Zechariah with power. Zechariah stood in front of the people and he said, ‘This is what God says: “You are not obeying the Lord's commands. So nothing will go well for you. You have turned away from the Lord, so now he has turned away from you!” ’"
+      "text": "Then God's Spirit came to Jehoiada's son Zechariah with power. Zechariah stood in front of the people and he said, ‘This is what God says: “You are not obeying the Lord's commands. So nothing will go well for you. You have turned away from the Lord, so now he has turned away from you! ” ’"
     },
     {
       "verse": "21",
@@ -2056,7 +2056,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "King Joash forgot that Zechariah's father Jehoiada had been a faithful servant. He killed Jehoiada's son. Zechariah said, as he was dying, ‘I pray that the Lord sees what you have done! May he punish you because of it!’"
+      "text": "King Joash forgot that Zechariah's father Jehoiada had been a faithful servant. He killed Jehoiada's son. Zechariah said, as he was dying, ‘I pray that the Lord sees what you have done! May he punish you because of it! ’"
     },
     {
       "verse": "23",
@@ -2068,11 +2068,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon. Jehozabad's mother was Shimrith, who came from Moab.Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
+      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon. Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
     },
     {
       "verse": "27",
-      "text": "The things that happened while Joash was king are written in a book. The book is called ‘The history of the kings’. It includes a list of Joash's sons, and the many messages that prophets spoke about him. It also includes a report of the work which he did on God's temple.Joash's son Amaziah became king after him."
+      "text": "The things that happened while Joash was king are written in a book. The book is called ‘The history of the kings’. It includes a list of Joash's sons, and the many messages that prophets spoke about him. It also includes a report of the work which he did on God's temple. Joash's son Amaziah became king after him."
     }
   ],
   "25": [
@@ -2090,15 +2090,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins.’"
+      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins. ’"
     },
     {
       "verse": "5",
-      "text": "Then Amaziah brought all the people of Judah together. For each of their clans he chose officers to lead groups of 1,000 men and groups of 100 men. He did that for the clans of Judah's tribe and the clans of Benjamin's tribe. He counted all the men who were 20 years old or older who could fight with spears and shields. There were 300,000 of them."
+      "text": "Then Amaziah brought all the people of Judah together. For each of their clans he chose officers to lead groups of 1, 000 men and groups of 100 men. He did that for the clans of Judah's tribe and the clans of Benjamin's tribe. He counted all the men who were 20 years old or older who could fight with spears and shields. There were 300, 000 of them."
     },
     {
       "verse": "6",
-      "text": "He also paid 3,500 kilograms of silver for 100,000 soldiers from Israel to join his army."
+      "text": "He also paid 3, 500 kilograms of silver for 100, 000 soldiers from Israel to join his army."
     },
     {
       "verse": "7",
@@ -2106,11 +2106,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Lord will allow your enemies to win against you, even if you fight very well. God has the power to help you, but he can also cause your enemies to win against you.’"
+      "text": "The Lord will allow your enemies to win against you, even if you fight very well. God has the power to help you, but he can also cause your enemies to win against you. ’"
     },
     {
       "verse": "9",
-      "text": "Amaziah said to God's prophet, ‘But I have paid 3,500 kilograms of silver for these soldiers from Israel. What should I do about that?’ The prophet replied, ‘The Lord is able to give you much more than all that money!’"
+      "text": "Amaziah said to God's prophet, ‘But I have paid 3, 500 kilograms of silver for these soldiers from Israel. What should I do about that? ’ The prophet replied, ‘The Lord is able to give you much more than all that money! ’"
     },
     {
       "verse": "10",
@@ -2118,15 +2118,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But Amaziah was brave. He led his army to Salt Valley. There they killed 10,000 soldiers from Edom."
+      "text": "But Amaziah was brave. He led his army to Salt Valley. There they killed 10, 000 soldiers from Edom."
     },
     {
       "verse": "12",
-      "text": "They also caught 10,000 soldiers as their prisoners. They took them to the top of a high rock. They threw their prisoners from the top. They all fell down onto the rocks below and they died."
+      "text": "They also caught 10, 000 soldiers as their prisoners. They took them to the top of a high rock. They threw their prisoners from the top. They all fell down onto the rocks below and they died."
     },
     {
       "verse": "13",
-      "text": "But the soldiers from Israel that Amaziah had sent home attacked some towns in Judah. They were angry because Amaziah had not allowed them to join his army in the battle. They killed 3,000 men in Judah's towns between Samaria and Beth Horon. They took away many valuable things from those towns."
+      "text": "But the soldiers from Israel that Amaziah had sent home attacked some towns in Judah. They were angry because Amaziah had not allowed them to join his army in the battle. They killed 3, 000 men in Judah's towns between Samaria and Beth Horon. They took away many valuable things from those towns."
     },
     {
       "verse": "14",
@@ -2134,23 +2134,23 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So the Lord became angry with Amaziah. He sent a prophet to him with a message. The prophet said to Amaziah, ‘You should not worship these foreign gods! They could not even save their own people from your power!’"
+      "text": "So the Lord became angry with Amaziah. He sent a prophet to him with a message. The prophet said to Amaziah, ‘You should not worship these foreign gods! They could not even save their own people from your power! ’"
     },
     {
       "verse": "16",
-      "text": "While the prophet was still speaking, the king said to him, ‘We did not choose you to be the king's advisor! If you do not stop speaking, my men will kill you.’ So the prophet stopped. But then he said, ‘I know what God has decided to do. He will destroy you because you have done these bad things and you have not listened to my advice.’"
+      "text": "While the prophet was still speaking, the king said to him, ‘We did not choose you to be the king's advisor! If you do not stop speaking, my men will kill you. ’ So the prophet stopped. But then he said, ‘I know what God has decided to do. He will destroy you because you have done these bad things and you have not listened to my advice. ’"
     },
     {
       "verse": "17",
-      "text": "Then King Amaziah of Judah met with his advisors. Then he sent a message to King Jehoash of Israel. He was the son of Jehoahaz and the grandson of Jehu. King Amaziah's message said, ‘Come here and meet me!’"
+      "text": "Then King Amaziah of Judah met with his advisors. Then he sent a message to King Jehoash of Israel. He was the son of Jehoahaz and the grandson of Jehu. King Amaziah's message said, ‘Come here and meet me! ’"
     },
     {
       "verse": "18",
-      "text": "But King Jehoash of Israel sent this message back to King Amaziah of Judah: ‘In Lebanon, a thorn bush sent this message to a cedar tree: “Please give your daughter to my son, to be his wife.” Then a wild animal of Lebanon came and knocked down the thorn bush. It walked all over it!"
+      "text": "But King Jehoash of Israel sent this message back to King Amaziah of Judah: ‘In Lebanon, a thorn bush sent this message to a cedar tree: “Please give your daughter to my son, to be his wife. ” Then a wild animal of Lebanon came and knocked down the thorn bush. It walked all over it!"
     },
     {
       "verse": "19",
-      "text": "You are proud that you have won the fight against Edom. But do not boast about your power! You may be very happy, but stay at home! Do not try to fight against us. If you do that, you will cause trouble that destroys both you and your kingdom, Judah.’"
+      "text": "You are proud that you have won the fight against Edom. But do not boast about your power! You may be very happy, but stay at home! Do not try to fight against us. If you do that, you will cause trouble that destroys both you and your kingdom, Judah. ’"
     },
     {
       "verse": "20",
@@ -2236,11 +2236,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "There were 2,600 family leaders who led the groups of soldiers."
+      "text": "There were 2, 600 family leaders who led the groups of soldiers."
     },
     {
       "verse": "13",
-      "text": "Together they led 307,500 soldiers who knew how to fight well. They were a powerful army that could keep the king safe against his enemies."
+      "text": "Together they led 307, 500 soldiers who knew how to fight well. They were a powerful army that could keep the king safe against his enemies."
     },
     {
       "verse": "14",
@@ -2260,7 +2260,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They warned King Uzziah. They said to him, ‘It is not right for you, Uzziah, to offer incense to the Lord. Only the priests, Aaron's descendants, may do that. They are the people that God has chosen to offer incense to him. So you must leave this Holy Place because you have done something that is wrong. As a result, the Lord God will not give you any honour.’"
+      "text": "They warned King Uzziah. They said to him, ‘It is not right for you, Uzziah, to offer incense to the Lord. Only the priests, Aaron's descendants, may do that. They are the people that God has chosen to offer incense to him. So you must leave this Holy Place because you have done something that is wrong. As a result, the Lord God will not give you any honour. ’"
     },
     {
       "verse": "19",
@@ -2280,7 +2280,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Uzziah died and they buried him near his ancestors. Because he had the terrible disease on his skin, they did not bury him beside the other kings that had died. Instead they buried him in a field for graves that belonged to the kings of Judah.His son Jotham became king after him."
+      "text": "Uzziah died and they buried him near his ancestors. Because he had the terrible disease on his skin, they did not bury him beside the other kings that had died. Instead they buried him in a field for graves that belonged to the kings of Judah. His son Jotham became king after him."
     }
   ],
   "27": [
@@ -2302,7 +2302,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jotham took his army to attack the king of Ammon. He won the battle against them. That year, the Ammonites gave to him 3,400 kilograms of silver. They also gave him 2,200 kilolitres of wheat and 2,200 kilolitres of barley. The Ammonites paid Jotham the same amount for each of the next two years."
+      "text": "Jotham took his army to attack the king of Ammon. He won the battle against them. That year, the Ammonites gave to him 3, 400 kilograms of silver. They also gave him 2, 200 kilolitres of wheat and 2, 200 kilolitres of barley. The Ammonites paid Jotham the same amount for each of the next two years."
     },
     {
       "verse": "6",
@@ -2318,7 +2318,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Jotham died and his people buried him in the City of David.His son Ahaz became king after him."
+      "text": "Jotham died and his people buried him in the City of David. His son Ahaz became king after him."
     }
   ],
   "28": [
@@ -2340,11 +2340,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Because of this, the Lord his God put Ahaz under the power of the king of Syria. Syria's army won a battle against Ahaz's men. The king of Syria took many of Ahaz's people to Damascus as his prisoners.The Lord also allowed the king of Israel to attack Ahaz. Israel's soldiers completely won the battle against Ahaz."
+      "text": "Because of this, the Lord his God put Ahaz under the power of the king of Syria. Syria's army won a battle against Ahaz's men. The king of Syria took many of Ahaz's people to Damascus as his prisoners. The Lord also allowed the king of Israel to attack Ahaz. Israel's soldiers completely won the battle against Ahaz."
     },
     {
       "verse": "6",
-      "text": "In one day, King Pekah of Israel, Remaliah's son, killed 120,000 of Judah's best soldiers. God punished the people of Judah because they had turned away from the Lord, the God of their ancestors."
+      "text": "In one day, King Pekah of Israel, Remaliah's son, killed 120, 000 of Judah's best soldiers. God punished the people of Judah because they had turned away from the Lord, the God of their ancestors."
     },
     {
       "verse": "7",
@@ -2352,7 +2352,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Israelites took hold of 200,000 wives, sons and daughters of Judah's soldiers. They took them as their prisoners, even though they were their relatives. They also carried away to Samaria a lot of valuable things."
+      "text": "The Israelites took hold of 200, 000 wives, sons and daughters of Judah's soldiers. They took them as their prisoners, even though they were their relatives. They also carried away to Samaria a lot of valuable things."
     },
     {
       "verse": "9",
@@ -2364,7 +2364,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now listen to me! The Lord is very angry with you. So you must send back the prisoners that you have brought here from Judah. Remember that they are your relatives.’"
+      "text": "Now listen to me! The Lord is very angry with you. So you must send back the prisoners that you have brought here from Judah. Remember that they are your relatives. ’"
     },
     {
       "verse": "12",
@@ -2372,7 +2372,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "They said to the soldiers, ‘You must not bring your prisoners here! If you do, we will be guilty of even more sins against the Lord. The Lord is already angry with us people of Israel because we are guilty. Do not make it worse.’"
+      "text": "They said to the soldiers, ‘You must not bring your prisoners here! If you do, we will be guilty of even more sins against the Lord. The Lord is already angry with us people of Israel because we are guilty. Do not make it worse. ’"
     },
     {
       "verse": "14",
@@ -2392,7 +2392,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Philistine soldiers had also attacked towns in the low hills in the west of Judah and in the Negev in the south. They took these towns for themselves and they lived in them:Beth-Shemesh, Aijalon, Gederoth;Soco, Timnah and Gimzo with the villages around them."
+      "text": "Philistine soldiers had also attacked towns in the low hills in the west of Judah and in the Negev in the south. They took these towns for themselves and they lived in them: Beth-Shemesh, Aijalon, Gederoth; Soco, Timnah and Gimzo with the villages around them."
     },
     {
       "verse": "19",
@@ -2412,7 +2412,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He offered sacrifices to the gods of Damascus. He thought that those gods had helped the kings of Syria to win the wars against him. He thought, ‘If I offer sacrifices to them, perhaps they will help me too.’ But that sin caused a lot of trouble for King Ahaz and for his nation."
+      "text": "He offered sacrifices to the gods of Damascus. He thought that those gods had helped the kings of Syria to win the wars against him. He thought, ‘If I offer sacrifices to them, perhaps they will help me too. ’ But that sin caused a lot of trouble for King Ahaz and for his nation."
     },
     {
       "verse": "24",
@@ -2428,7 +2428,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Ahaz died and his people buried him in the City of David. But they did not bury him near the graves of Israel's kings.His son Hezekiah became king after him."
+      "text": "Ahaz died and his people buried him in the City of David. But they did not bury him near the graves of Israel's kings. His son Hezekiah became king after him."
     }
   ],
   "29": [
@@ -2474,19 +2474,19 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "My sons, the Lord has chosen you to serve him in his temple and to offer sacrifices. So do your work well.’"
+      "text": "My sons, the Lord has chosen you to serve him in his temple and to offer sacrifices. So do your work well. ’"
     },
     {
       "verse": "12",
-      "text": "Then these Levites started to work in the temple:From Kohath's clan: Amasai's son Mahath and Azariah's son Joel.From Merari's clan: Abdi's son Kish and Jehallelel's son Azariah.From Gershon's clan: Zimmah's son Joah and Joah's son Eden."
+      "text": "Then these Levites started to work in the temple: From Kohath's clan: Amasai's son Mahath and Azariah's son Joel. From Merari's clan: Abdi's son Kish and Jehallelel's son Azariah. From Gershon's clan: Zimmah's son Joah and Joah's son Eden."
     },
     {
       "verse": "13",
-      "text": "From Elizaphan's clan: Shimri and Jeiel.From Asaph's clan: Zechariah and Mattaniah."
+      "text": "From Elizaphan's clan: Shimri and Jeiel. From Asaph's clan: Zechariah and Mattaniah."
     },
     {
       "verse": "14",
-      "text": "From Heman's clan: Jehiel and Shimei.From Jeduthun's clan: Shemaiah and Uzziel."
+      "text": "From Heman's clan: Jehiel and Shimei. From Jeduthun's clan: Shemaiah and Uzziel."
     },
     {
       "verse": "15",
@@ -2506,7 +2506,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When Ahaz was king, he removed many things from the temple when he turned away from the Lord. We have made all those things clean again. We have put them in front of the Lord's altar so that the priests can use them again.’"
+      "text": "When Ahaz was king, he removed many things from the temple when he turned away from the Lord. We have made all those things clean again. We have put them in front of the Lord's altar so that the priests can use them again. ’"
     },
     {
       "verse": "20",
@@ -2554,7 +2554,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Then Hezekiah said, ‘Now you have made yourselves clean to serve the Lord. So come to the Lord's temple and bring sacrifices and offerings to thank the Lord.’ So all the people brought their sacrifices and their offerings to thank the Lord. Everyone who wanted to offer burnt offerings brought animals for that too."
+      "text": "Then Hezekiah said, ‘Now you have made yourselves clean to serve the Lord. So come to the Lord's temple and bring sacrifices and offerings to thank the Lord. ’ So all the people brought their sacrifices and their offerings to thank the Lord. Everyone who wanted to offer burnt offerings brought animals for that too."
     },
     {
       "verse": "32",
@@ -2562,15 +2562,15 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "bulls and 3,000 sheep to offer to the Lord."
+      "text": "bulls and 3, 000 sheep to offer to the Lord."
     },
     {
       "verse": "34",
-      "text": "But there were not enough priests to prepare all the animals for the sacrifices. So their relatives, the Levites, helped them until they had finished the work. By that time more priests had made themselves clean to serve the Lord. (The Levites had been more careful than the priests to make themselves clean for the Lord.)"
+      "text": "But there were not enough priests to prepare all the animals for the sacrifices. So their relatives, the Levites, helped them until they had finished the work. By that time more priests had made themselves clean to serve the Lord. (The Levites had been more careful than the priests to make themselves clean for the Lord. )"
     },
     {
       "verse": "35",
-      "text": "The people brought a lot of animals for burnt offerings. There was also the fat from the friendship offerings. And there were drink offerings too. The priests offered all those with the burnt offerings.That is how they started to worship the Lord again in his temple."
+      "text": "The people brought a lot of animals for burnt offerings. There was also the fat from the friendship offerings. And there were drink offerings too. The priests offered all those with the burnt offerings. That is how they started to worship the Lord again in his temple."
     },
     {
       "verse": "36",
@@ -2612,7 +2612,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "If you turn back to serve the Lord again, your enemies will be kind to your relatives and to your children. They will let them return here to their homes. The Lord your God is kind and he is ready to forgive you. So if you turn back to him, he will not send you away.’"
+      "text": "If you turn back to serve the Lord again, your enemies will be kind to your relatives and to your children. They will let them return here to their homes. The Lord your God is kind and he is ready to forgive you. So if you turn back to him, he will not send you away. ’"
     },
     {
       "verse": "10",
@@ -2652,7 +2652,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "who really wants to obey you, the God of their ancestors. If they have not made themselves properly clean to eat this meal, please forgive them.’"
+      "text": "who really wants to obey you, the God of their ancestors. If they have not made themselves properly clean to eat this meal, please forgive them. ’"
     },
     {
       "verse": "20",
@@ -2672,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "King Hezekiah of Judah gave 1,000 bulls and 7,000 sheep to the people. The leaders also gave them 1,000 bulls and 10,000 sheep. Many more priests also made themselves clean to serve the Lord."
+      "text": "King Hezekiah of Judah gave 1, 000 bulls and 7, 000 sheep to the people. The leaders also gave them 1, 000 bulls and 10, 000 sheep. Many more priests also made themselves clean to serve the Lord."
     },
     {
       "verse": "25",
@@ -2726,7 +2726,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The leader of the priests, Azariah from Zadok's clan, said, ‘The people have brought a lot of gifts to the Lord's temple. Since they started to do that, we have had enough food to eat. There has been a lot more food than we need. The Lord has blessed his people, so we still have all this extra food.’"
+      "text": "The leader of the priests, Azariah from Zadok's clan, said, ‘The people have brought a lot of gifts to the Lord's temple. Since they started to do that, we have had enough food to eat. There has been a lot more food than we need. The Lord has blessed his people, so we still have all this extra food. ’"
     },
     {
       "verse": "11",
@@ -2788,7 +2788,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "A big group of people came to help. They stopped the water that came from the springs and from the stream that went through that region. They said, ‘When the kings of Assyria arrive here, we do not want them to find plenty of water.’"
+      "text": "A big group of people came to help. They stopped the water that came from the springs and from the stream that went through that region. They said, ‘When the kings of Assyria arrive here, we do not want them to find plenty of water. ’"
     },
     {
       "verse": "5",
@@ -2804,7 +2804,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He has only the strength of human soldiers to help him. But we have the Lord our God to help us and to fight our battles!’After King Hezekiah of Judah said that to his men, they felt brave and strong."
+      "text": "He has only the strength of human soldiers to help him. But we have the Lord our God to help us and to fight our battles! ’After King Hezekiah of Judah said that to his men, they felt brave and strong."
     },
     {
       "verse": "9",
@@ -2816,7 +2816,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Hezekiah tells you, “The Lord our God will save us from the power of Assyria's king.” But he is deceiving you. You will die because you will have no food or water."
+      "text": "Hezekiah tells you, “The Lord our God will save us from the power of Assyria's king. ” But he is deceiving you. You will die because you will have no food or water."
     },
     {
       "verse": "12",
@@ -2840,7 +2840,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Sennacherib also wrote letters to insult the Lord, Israel's God, and to laugh at him. He wrote, ‘The gods of the other nations around you could not save their people from my power. So Hezekiah's God cannot rescue his people from me either.’"
+      "text": "Sennacherib also wrote letters to insult the Lord, Israel's God, and to laugh at him. He wrote, ‘The gods of the other nations around you could not save their people from my power. So Hezekiah's God cannot rescue his people from me either. ’"
     },
     {
       "verse": "18",
@@ -2904,7 +2904,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Hezekiah died and his people buried him beside the graves of King David's descendants, near the top of the hill. At his death, all the people of Judah and those who lived in Jerusalem gave him great honour.Hezekiah's son Manasseh became king after him."
+      "text": "Hezekiah died and his people buried him beside the graves of King David's descendants, near the top of the hill. At his death, all the people of Judah and those who lived in Jerusalem gave him great honour. Hezekiah's son Manasseh became king after him."
     }
   ],
   "33": [
@@ -2922,7 +2922,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He built altars in the Lord's temple. The Lord had said about his temple, ‘That is my home in Jerusalem where people will worship me for ever.’"
+      "text": "He built altars in the Lord's temple. The Lord had said about his temple, ‘That is my home in Jerusalem where people will worship me for ever. ’"
     },
     {
       "verse": "5",
@@ -2938,7 +2938,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I will never cause the Israelite people to leave this land that I gave to their ancestors. But they must be careful to obey all my commands, my laws and the rules that I gave to my servant Moses for them.’"
+      "text": "I will never cause the Israelite people to leave this land that I gave to their ancestors. But they must be careful to obey all my commands, my laws and the rules that I gave to my servant Moses for them. ’"
     },
     {
       "verse": "9",
@@ -3068,7 +3068,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Hilkiah told Shaphan, the king's secretary, ‘I have found the book of the Law in the Lord's temple.’ He gave the book to Shaphan."
+      "text": "Hilkiah told Shaphan, the king's secretary, ‘I have found the book of the Law in the Lord's temple. ’ He gave the book to Shaphan."
     },
     {
       "verse": "16",
@@ -3076,11 +3076,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They have paid out the money that was in the Lord's temple. They have given it to the leaders who have authority over the men who are doing the work.’"
+      "text": "They have paid out the money that was in the Lord's temple. They have given it to the leaders who have authority over the men who are doing the work. ’"
     },
     {
       "verse": "18",
-      "text": "Then Shaphan, the king's secretary, told the king, ‘Hilkiah the priest has given a book to me.’ Then Shaphan read it aloud to the king."
+      "text": "Then Shaphan, the king's secretary, told the king, ‘Hilkiah the priest has given a book to me. ’ Then Shaphan read it aloud to the king."
     },
     {
       "verse": "19",
@@ -3092,7 +3092,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He told them, ‘Go to the temple. Ask the Lord about the message in this book that Hilkiah has found. I need to know what I should do, as well as the people who still live in Judah and in Israel. The Lord has become very angry with us because our ancestors have not obeyed his message. They have not done the things that this book tells us that we should do.’"
+      "text": "He told them, ‘Go to the temple. Ask the Lord about the message in this book that Hilkiah has found. I need to know what I should do, as well as the people who still live in Judah and in Israel. The Lord has become very angry with us because our ancestors have not obeyed his message. They have not done the things that this book tells us that we should do. ’"
     },
     {
       "verse": "22",
@@ -3108,7 +3108,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I will send this trouble because they have turned away from me. They have offered sacrifices to other gods. I am very angry with them because of all the idols that they have made for themselves. My anger is like a fire that is burning and nobody can stop it!”"
+      "text": "I will send this trouble because they have turned away from me. They have offered sacrifices to other gods. I am very angry with them because of all the idols that they have made for themselves. My anger is like a fire that is burning and nobody can stop it! ”"
     },
     {
       "verse": "26",
@@ -3120,7 +3120,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place and the people who live here.” That is what the Lord says.’The men took Huldah's answer back to the king."
+      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place and the people who live here. ” That is what the Lord says. ’The men took Huldah's answer back to the king."
     },
     {
       "verse": "29",
@@ -3166,19 +3166,19 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Kill the lambs for the Passover meal. Make yourselves clean to serve the Lord. Prepare the sacrifices for each Israelite family. Then they can eat the Passover meal, as the Lord told Moses they must do.’"
+      "text": "Kill the lambs for the Passover meal. Make yourselves clean to serve the Lord. Prepare the sacrifices for each Israelite family. Then they can eat the Passover meal, as the Lord told Moses they must do. ’"
     },
     {
       "verse": "7",
-      "text": "Josiah took 30,000 lambs and goats, and 3,000 bulls from his own animals. He gave them to the people who were there, to kill for their Passover sacrifices."
+      "text": "Josiah took 30, 000 lambs and goats, and 3, 000 bulls from his own animals. He gave them to the people who were there, to kill for their Passover sacrifices."
     },
     {
       "verse": "8",
-      "text": "His officers were also happy to give their animals to the people, as well as to the priests and the Levites. Hilkiah, Zechariah, and Jehiel were officers who took care of the temple. They gave 2,600 lambs and 300 bulls to the priests for Passover sacrifices."
+      "text": "His officers were also happy to give their animals to the people, as well as to the priests and the Levites. Hilkiah, Zechariah, and Jehiel were officers who took care of the temple. They gave 2, 600 lambs and 300 bulls to the priests for Passover sacrifices."
     },
     {
       "verse": "9",
-      "text": "These Levite officers gave 5,000 lambs and 500 bulls to the Levites for Passover sacrifices: Konaniah and his brothers, Shemaiah and Nethanel; Hashabiah, Jeiel and Jozabad."
+      "text": "These Levite officers gave 5, 000 lambs and 500 bulls to the Levites for Passover sacrifices: Konaniah and his brothers, Shemaiah and Nethanel; Hashabiah, Jeiel and Jozabad."
     },
     {
       "verse": "10",
@@ -3226,7 +3226,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But Necho sent men with a message to Josiah. King Necho said, ‘King of Judah, you should not come to fight against me. We should be friends. I came to fight against this kingdom which is my enemy. God has told me that I must hurry. So do not try to stop me, because God is with me. If you try to fight against God, he will destroy you.’"
+      "text": "But Necho sent men with a message to Josiah. King Necho said, ‘King of Judah, you should not come to fight against me. We should be friends. I came to fight against this kingdom which is my enemy. God has told me that I must hurry. So do not try to stop me, because God is with me. If you try to fight against God, he will destroy you. ’"
     },
     {
       "verse": "22",
@@ -3234,7 +3234,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Necho's soldiers hit King Josiah with their arrows. The king said to his servants, ‘Take me away from the battle! The arrows have hurt me very much.’"
+      "text": "Necho's soldiers hit King Josiah with their arrows. The king said to his servants, ‘Take me away from the battle! The arrows have hurt me very much. ’"
     },
     {
       "verse": "24",
@@ -3260,7 +3260,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The king of Egypt stopped Jehoahaz from ruling in Jerusalem. He made Judah pay tax to him. It was 3,400 kilograms of silver and 34 kilograms of gold."
+      "text": "The king of Egypt stopped Jehoahaz from ruling in Jerusalem. He made Judah pay tax to him. It was 3, 400 kilograms of silver and 34 kilograms of gold."
     },
     {
       "verse": "4",
@@ -3280,7 +3280,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The other things that happened while Jehoiakim was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the disgusting sins that he was guilty of.Jehoiakim's son Jehoiachin became king after him. Jehoiakim's son Jehoiachin became king after him."
+      "text": "The other things that happened while Jehoiakim was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the disgusting sins that he was guilty of. Jehoiakim's son Jehoiachin became king after him. Jehoiakim's son Jehoiachin became king after him."
     },
     {
       "verse": "9",
@@ -3340,7 +3340,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "‘This is what Cyrus, the king of Persia, says:The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah. Any of God's people who live among you may now return to Jerusalem. I pray that the Lord their God will be with them.’"
+      "text": "‘This is what Cyrus, the king of Persia, says: The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah. Any of God's people who live among you may now return to Jerusalem. I pray that the Lord their God will be with them. ’"
     }
   ]
 };

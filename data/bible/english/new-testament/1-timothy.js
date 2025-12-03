@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I am writing to you, Timothy. I told you the message about Jesus and you believed in him. So you are like my own child.I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
+      "text": "I am writing to you, Timothy. I told you the message about Jesus and you believed in him. So you are like my own child. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
     },
     {
       "verse": "3",
@@ -34,11 +34,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "We also know that God did not make those laws for people who already live in a good way. He made them for people like this, to show them what is right:people who refuse to obey any laws;people who do not want anyone to rule them;people who turn away from God;people who do bad things;people who do not respect God's holy things;people who kill their father or their mother;people who murder;"
+      "text": "We also know that God did not make those laws for people who already live in a good way. He made them for people like this, to show them what is right: people who refuse to obey any laws; people who do not want anyone to rule them; people who turn away from God; people who do bad things; people who do not respect God's holy things; people who kill their father or their mother; people who murder;"
     },
     {
       "verse": "10",
-      "text": "people who have sex in a wrong way;men who have sex with other men;people who catch other people to sell them;people who tell lies;people who do not speak the truth in court;people who do any wrong things that are against God's true message."
+      "text": "people who have sex in a wrong way; men who have sex with other men; people who catch other people to sell them; people who tell lies; people who do not speak the truth in court; people who do any wrong things that are against God's true message."
     },
     {
       "verse": "11",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Here is a true message that everyone should believe: ‘Christ Jesus came into the world to save people who do wrong things.’ I am the worst person like that!"
+      "text": "Here is a true message that everyone should believe: ‘Christ Jesus came into the world to save people who do wrong things. ’ I am the worst person like that!"
     },
     {
       "verse": "16",
@@ -146,7 +146,7 @@ module.exports = {
   "3": [
     {
       "verse": "1",
-      "text": "These words are true: ‘If you want to become a leader of God's people, it is an important work that you want to do.’"
+      "text": "These words are true: ‘If you want to become a leader of God's people, it is an important work that you want to do. ’"
     },
     {
       "verse": "2",
@@ -206,7 +206,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Yes, the message that God has shown us about Jesus Christ is very great. We all agree to this:God showed him to us as a man.God's Spirit showed that he always did what was right.Angels saw him.People taught his message in many countries of the world.People in the world believed in him.God took him up to be with himself in heaven."
+      "text": "Yes, the message that God has shown us about Jesus Christ is very great. We all agree to this: God showed him to us as a man. God's Spirit showed that he always did what was right. Angels saw him. People taught his message in many countries of the world. People in the world believed in him. God took him up to be with himself in heaven."
     }
   ],
   "4": [
@@ -240,7 +240,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "People say this: ‘If a person works to make his body strong and healthy, that will help him a little. But if a person works to live in a way that makes God happy, that will help him much more. It will help that person in his life now on earth. It will also help him in his future life with God in heaven.’"
+      "text": "People say this: ‘If a person works to make his body strong and healthy, that will help him a little. But if a person works to live in a way that makes God happy, that will help him much more. It will help that person in his life now on earth. It will also help him in his future life with God in heaven. ’"
     },
     {
       "verse": "9",
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You are still a young man, but everyone should respect you as the leader in the church. Show the believers how they should live. Be a good example to them in these ways:what you say,what you do,how you love people,how you trust God,and how you do only what is right."
+      "text": "You are still a young man, but everyone should respect you as the leader in the church. Show the believers how they should live. Be a good example to them in these ways: what you say, what you do, how you love people, how you trust God, and how you do only what is right."
     },
     {
       "verse": "13",
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Bible says: ‘Do not tie shut the mouth of a bull while it walks on your wheat seeds.’ The Bible also says: ‘You must pay a worker what his work is worth.’"
+      "text": "The Bible says: ‘Do not tie shut the mouth of a bull while it walks on your wheat seeds. ’ The Bible also says: ‘You must pay a worker what his work is worth. ’"
     },
     {
       "verse": "19",
@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Slaves who have masters who are also believers must continue to respect them. As believers, the slave and his master are like brothers together. But that slave must not refuse to obey his master because of that. Instead, he should work even better for his master. He should do that because he loves his master as a believer.Teach these things and tell people to obey them."
+      "text": "Slaves who have masters who are also believers must continue to respect them. As believers, the slave and his master are like brothers together. But that slave must not refuse to obey his master because of that. Instead, he should work even better for his master. He should do that because he loves his master as a believer. Teach these things and tell people to obey them."
     },
     {
       "verse": "3",
@@ -460,7 +460,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Some people have believed those wrong ideas and now they no longer trust God.I pray that God will continue to be very kind to all of you."
+      "text": "Some people have believed those wrong ideas and now they no longer trust God. I pray that God will continue to be very kind to all of you."
     }
   ]
 };

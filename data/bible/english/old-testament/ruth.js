@@ -30,11 +30,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I also pray that God will give to each of you another husband and a new home.’ Naomi kissed them and said ‘goodbye’. Ruth and Orpah began to weep loudly."
+      "text": "I also pray that God will give to each of you another husband and a new home. ’ Naomi kissed them and said ‘goodbye’. Ruth and Orpah began to weep loudly."
     },
     {
       "verse": "10",
-      "text": "They said to Naomi, ‘No! We will go with you to live with your people.’"
+      "text": "They said to Naomi, ‘No! We will go with you to live with your people. ’"
     },
     {
       "verse": "11",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I am sure that you do not want to wait until they are old enough for you to marry them! Would you wait all that time and not marry anyone else? So, my daughters, you must not return to Judah with me. You should not have to share my pain. The Lord has turned against me.’"
+      "text": "I am sure that you do not want to wait until they are old enough for you to marry them! Would you wait all that time and not marry anyone else? So, my daughters, you must not return to Judah with me. You should not have to share my pain. The Lord has turned against me. ’"
     },
     {
       "verse": "14",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Naomi said to Ruth, ‘Look! Orpah has returned to her family. She has returned to serve the gods of Moab. Go back home with her.’"
+      "text": "Naomi said to Ruth, ‘Look! Orpah has returned to her family. She has returned to serve the gods of Moab. Go back home with her. ’"
     },
     {
       "verse": "16",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I will die in the same place that you die. That is where people will bury me. I will stay beside you until death makes us separate. If I ever leave you, the Lord should punish me.’"
+      "text": "I will die in the same place that you die. That is where people will bury me. I will stay beside you until death makes us separate. If I ever leave you, the Lord should punish me. ’"
     },
     {
       "verse": "18",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Naomi and Ruth travelled together to Bethlehem. When they arrived there, the people were very surprised. The women from the town said, ‘Is this really Naomi?’"
+      "text": "Naomi and Ruth travelled together to Bethlehem. When they arrived there, the people were very surprised. The women from the town said, ‘Is this really Naomi? ’"
     },
     {
       "verse": "20",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I left here with everything that I needed. Now the Lord has brought me back here with nothing. The Almighty Lord has turned against me, so that I have suffered. It is not right for you to call me Naomi.’"
+      "text": "I left here with everything that I needed. Now the Lord has brought me back here with nothing. The Almighty Lord has turned against me, so that I have suffered. It is not right for you to call me Naomi. ’"
     },
     {
       "verse": "22",
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "One day, Ruth, the woman from Moab, said to Naomi, ‘Let me go to the fields to pick up some grain from the harvest. I will walk behind anyone who lets me do that.’ Naomi said, ‘Yes, my daughter, go and do that.’"
+      "text": "One day, Ruth, the woman from Moab, said to Naomi, ‘Let me go to the fields to pick up some grain from the harvest. I will walk behind anyone who lets me do that. ’ Naomi said, ‘Yes, my daughter, go and do that. ’"
     },
     {
       "verse": "3",
@@ -100,11 +100,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Just then, Boaz arrived from Bethlehem town. He said ‘hello’ to the workers. ‘I pray that the Lord will help you,’ he said. The men replied, ‘We pray that the Lord will bless you!’"
+      "text": "Just then, Boaz arrived from Bethlehem town. He said ‘hello’ to the workers. ‘I pray that the Lord will help you, ’ he said. The men replied, ‘We pray that the Lord will bless you! ’"
     },
     {
       "verse": "5",
-      "text": "Boaz asked the leader of his workers, ‘Who is that young woman? Which family does she belong to?’"
+      "text": "Boaz asked the leader of his workers, ‘Who is that young woman? Which family does she belong to? ’"
     },
     {
       "verse": "6",
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "She asked me, “Please let me walk behind your workers. Then I can pick up the grains of barley that they leave on the ground.” She has worked very hard in the field since she arrived this morning. She only had a short rest in the hut.’"
+      "text": "She asked me, “Please let me walk behind your workers. Then I can pick up the grains of barley that they leave on the ground. ” She has worked very hard in the field since she arrived this morning. She only had a short rest in the hut. ’"
     },
     {
       "verse": "8",
@@ -120,11 +120,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Watch carefully where the men are working. Then follow behind the other women. I have told the male workers not to touch you. Whenever you are thirsty, go and drink water from the jars. My servants fill those jars with water to drink.’"
+      "text": "Watch carefully where the men are working. Then follow behind the other women. I have told the male workers not to touch you. Whenever you are thirsty, go and drink water from the jars. My servants fill those jars with water to drink. ’"
     },
     {
       "verse": "10",
-      "text": "Ruth went down on her knees with her head towards the ground in front of Boaz. She said, ‘I am a foreign woman. So why do you choose to be so kind to me? Why are you taking care of me?’"
+      "text": "Ruth went down on her knees with her head towards the ground in front of Boaz. She said, ‘I am a foreign woman. So why do you choose to be so kind to me? Why are you taking care of me? ’"
     },
     {
       "verse": "11",
@@ -132,15 +132,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You have done many good things. So I pray that the Lord will do good things for you in return. You have come here to be safe with the Lord, who is Israel's God. I pray that he will bless you.’"
+      "text": "You have done many good things. So I pray that the Lord will do good things for you in return. You have come here to be safe with the Lord, who is Israel's God. I pray that he will bless you. ’"
     },
     {
       "verse": "13",
-      "text": "Ruth said, ‘Thank you, sir. You are being very kind to me. Your words cause me to feel happy and strong. I am not even as important as one of your servant girls, but you have been kind to me.’"
+      "text": "Ruth said, ‘Thank you, sir. You are being very kind to me. Your words cause me to feel happy and strong. I am not even as important as one of your servant girls, but you have been kind to me. ’"
     },
     {
       "verse": "14",
-      "text": "When it was time to eat a meal, Boaz said to Ruth, ‘Come here and eat with us. Take some bread and mix it with the wine.’ So Ruth sat down to eat with the workers. Boaz gave her some grain that someone had cooked. She ate all that she wanted, and she still had some with her."
+      "text": "When it was time to eat a meal, Boaz said to Ruth, ‘Come here and eat with us. Take some bread and mix it with the wine. ’ So Ruth sat down to eat with the workers. Boaz gave her some grain that someone had cooked. She ate all that she wanted, and she still had some with her."
     },
     {
       "verse": "15",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "You should also pull out some barley and drop it for her to pick up. Do not be angry with her.’"
+      "text": "You should also pull out some barley and drop it for her to pick up. Do not be angry with her. ’"
     },
     {
       "verse": "17",
@@ -160,19 +160,19 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Naomi asked Ruth, ‘Where did you work today, to pick up all this barley? I want God to bless the man who was so kind to you.’ So Ruth told Naomi about the man whose field she had worked in. She said, ‘The man that I worked with today is called Boaz.’"
+      "text": "Naomi asked Ruth, ‘Where did you work today, to pick up all this barley? I want God to bless the man who was so kind to you. ’ So Ruth told Naomi about the man whose field she had worked in. She said, ‘The man that I worked with today is called Boaz. ’"
     },
     {
       "verse": "20",
-      "text": "Naomi said to Ruth, ‘He has been kind to us! He has thought about our husbands who have died and he has helped us who are still alive. I pray that the Lord will bless him in return. That man is our relative. He is one of our family-redeemers.’"
+      "text": "Naomi said to Ruth, ‘He has been kind to us! He has thought about our husbands who have died and he has helped us who are still alive. I pray that the Lord will bless him in return. That man is our relative. He is one of our family-redeemers. ’"
     },
     {
       "verse": "21",
-      "text": "Then Ruth said, ‘Boaz even said to me, “Stay with my workers until they have finished the work in my fields.” ’"
+      "text": "Then Ruth said, ‘Boaz even said to me, “Stay with my workers until they have finished the work in my fields. ” ’"
     },
     {
       "verse": "22",
-      "text": "Naomi said to Ruth, ‘Yes, my daughter, it will be good for you to work beside the young women in his fields. You will be safe there, but the workers in another field might hurt you.’"
+      "text": "Naomi said to Ruth, ‘Yes, my daughter, it will be good for you to work beside the young women in his fields. You will be safe there, but the workers in another field might hurt you. ’"
     },
     {
       "verse": "23",
@@ -194,11 +194,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "After that, he will lie down to sleep. Then you will see where he is lying. Go and lift the cloth from over his feet. Lie down there. Then he will tell you what you should do.’"
+      "text": "After that, he will lie down to sleep. Then you will see where he is lying. Go and lift the cloth from over his feet. Lie down there. Then he will tell you what you should do. ’"
     },
     {
       "verse": "5",
-      "text": "Ruth said, ‘I will do what you have said to me.’"
+      "text": "Ruth said, ‘I will do what you have said to me. ’"
     },
     {
       "verse": "6",
@@ -214,7 +214,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He asked, ‘Who are you?’ Ruth replied, ‘I am your servant, Ruth. You are our family-redeemer, so please cover me with the corner of your cloth.’"
+      "text": "He asked, ‘Who are you? ’ Ruth replied, ‘I am your servant, Ruth. You are our family-redeemer, so please cover me with the corner of your cloth. ’"
     },
     {
       "verse": "10",
@@ -230,37 +230,37 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Stay here for this night. In the morning, we will see what to do. If this relative wants to take care of you, let him do it. If he does not agree, then I will do it. As surely as the Lord lives, I will do it. So just lie here until the morning.’"
+      "text": "Stay here for this night. In the morning, we will see what to do. If this relative wants to take care of you, let him do it. If he does not agree, then I will do it. As surely as the Lord lives, I will do it. So just lie here until the morning. ’"
     },
     {
       "verse": "14",
-      "text": "So Ruth lay beside Boaz's feet until morning arrived. Then she got up before anyone could see her. Boaz said to her, ‘Nobody must know that a woman came here to the threshing floor.’"
+      "text": "So Ruth lay beside Boaz's feet until morning arrived. Then she got up before anyone could see her. Boaz said to her, ‘Nobody must know that a woman came here to the threshing floor. ’"
     },
     {
       "verse": "15",
-      "text": "He said to Ruth, ‘Bring me the coat that you are wearing.’ She brought the coat to him. Then Boaz poured six bowls of barley seeds onto it. He tied it together and put it on her shoulder. Later, he returned to the town."
+      "text": "He said to Ruth, ‘Bring me the coat that you are wearing. ’ She brought the coat to him. Then Boaz poured six bowls of barley seeds onto it. He tied it together and put it on her shoulder. Later, he returned to the town."
     },
     {
       "verse": "16",
-      "text": "When Ruth returned home to Naomi, Naomi asked her, ‘My daughter, what happened last night?’ Then Ruth told her everything that Boaz had done for her."
+      "text": "When Ruth returned home to Naomi, Naomi asked her, ‘My daughter, what happened last night? ’ Then Ruth told her everything that Boaz had done for her."
     },
     {
       "verse": "17",
-      "text": "She said to Naomi, ‘He also gave me all this barley. He said, “Do not return to Naomi with nothing to give to her.” ’"
+      "text": "She said to Naomi, ‘He also gave me all this barley. He said, “Do not return to Naomi with nothing to give to her. ” ’"
     },
     {
       "verse": "18",
-      "text": "Naomi said, ‘My daughter, you must be patient. We must wait to see what will happen. Boaz will surely do what he needs to do today.’"
+      "text": "Naomi said, ‘My daughter, you must be patient. We must wait to see what will happen. Boaz will surely do what he needs to do today. ’"
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "In the morning, Boaz went to the gate of the town and he sat down there. Later, the family-redeemer that Boaz had talked about to Ruth came there. Boaz said to him, ‘Come here, my friend, and sit down.’ So the man went to sit with Boaz."
+      "text": "In the morning, Boaz went to the gate of the town and he sat down there. Later, the family-redeemer that Boaz had talked about to Ruth came there. Boaz said to him, ‘Come here, my friend, and sit down. ’ So the man went to sit with Boaz."
     },
     {
       "verse": "2",
-      "text": "Boaz chose ten of the town's leaders and he said to them, ‘Come and sit here.’ So they sat down."
+      "text": "Boaz chose ten of the town's leaders and he said to them, ‘Come and sit here. ’ So they sat down."
     },
     {
       "verse": "3",
@@ -268,15 +268,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I thought that I must tell you about this, in front of the leaders of our town. Tell us if you will buy this land from Naomi, so that all the people who sit here know what you decide. If you want to buy it, then you should buy it. If you do not want to buy it, then you must tell me. Then I will know what to do. You are the person who must decide. If you do not choose to buy the land, then I can buy it.’ The relative said, ‘I will buy it.’"
+      "text": "I thought that I must tell you about this, in front of the leaders of our town. Tell us if you will buy this land from Naomi, so that all the people who sit here know what you decide. If you want to buy it, then you should buy it. If you do not want to buy it, then you must tell me. Then I will know what to do. You are the person who must decide. If you do not choose to buy the land, then I can buy it. ’ The relative said, ‘I will buy it. ’"
     },
     {
       "verse": "5",
-      "text": "Then Boaz said, ‘You should also know this: When you buy the land from Naomi, you also have to marry the Moabite woman, Ruth. She is the widow of Elimelech's son. She will give birth to your children and Elimelech's land will continue to belong to his family.’"
+      "text": "Then Boaz said, ‘You should also know this: When you buy the land from Naomi, you also have to marry the Moabite woman, Ruth. She is the widow of Elimelech's son. She will give birth to your children and Elimelech's land will continue to belong to his family. ’"
     },
     {
       "verse": "6",
-      "text": "When Boaz said that, the relative replied, ‘If that is true, I cannot buy the land. It would not belong to my own children when I die. You may buy the land instead of me. I cannot buy it myself.’"
+      "text": "When Boaz said that, the relative replied, ‘If that is true, I cannot buy the land. It would not belong to my own children when I die. You may buy the land instead of me. I cannot buy it myself. ’"
     },
     {
       "verse": "7",
@@ -284,7 +284,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So the relative said to Boaz, ‘You may buy the land.’ When he said that, he removed his shoe."
+      "text": "So the relative said to Boaz, ‘You may buy the land. ’ When he said that, he removed his shoe."
     },
     {
       "verse": "9",
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I will also marry Ruth, who came here from Moab. She was Mahlon's wife. In that way, the land will still belong to his family. Ruth's descendants will still have his family's name. His family will continue to belong to this town where he lived. Today you have seen that this is what we have agreed together.’"
+      "text": "I will also marry Ruth, who came here from Moab. She was Mahlon's wife. In that way, the land will still belong to his family. Ruth's descendants will still have his family's name. His family will continue to belong to this town where he lived. Today you have seen that this is what we have agreed together. ’"
     },
     {
       "verse": "11",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "We pray that this woman will give birth to many children for you. Then the Lord will give you many descendants, so that you have a large family. We pray that your family will be like the family of Perez, who was the son of Judah and his wife, Tamar.’"
+      "text": "We pray that this woman will give birth to many children for you. Then the Lord will give you many descendants, so that you have a large family. We pray that your family will be like the family of Perez, who was the son of Judah and his wife, Tamar. ’"
     },
     {
       "verse": "13",
@@ -312,7 +312,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He will help you to feel young again. He will take care of you when you are old. Your son's wife, Ruth, has given birth to this boy. She loves you and she has helped you more than seven sons could ever do.’"
+      "text": "He will help you to feel young again. He will take care of you when you are old. Your son's wife, Ruth, has given birth to this boy. She loves you and she has helped you more than seven sons could ever do. ’"
     },
     {
       "verse": "16",
@@ -320,27 +320,27 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The women who lived there said, ‘Now Naomi has a son again!’ They called the boy Obed. He became the father of Jesse, who became the father of David."
+      "text": "The women who lived there said, ‘Now Naomi has a son again! ’ They called the boy Obed. He became the father of Jesse, who became the father of David."
     },
     {
       "verse": "18",
-      "text": "These are the descendants of Perez:Perez was the father of Hezron."
+      "text": "These are the descendants of Perez: Perez was the father of Hezron."
     },
     {
       "verse": "19",
-      "text": "Hezron was the father of Ram.Ram was the father of Amminadab."
+      "text": "Hezron was the father of Ram. Ram was the father of Amminadab."
     },
     {
       "verse": "20",
-      "text": "Amminadab was the father of Nahshon.Nahshon was the father of Salmon."
+      "text": "Amminadab was the father of Nahshon. Nahshon was the father of Salmon."
     },
     {
       "verse": "21",
-      "text": "Salmon was the father of Boaz.Boaz was the father of Obed."
+      "text": "Salmon was the father of Boaz. Boaz was the father of Obed."
     },
     {
       "verse": "22",
-      "text": "Obed was the father of Jesse.Jesse was the father of David."
+      "text": "Obed was the father of Jesse. Jesse was the father of David."
     }
   ]
 };

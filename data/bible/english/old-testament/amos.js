@@ -6,11 +6,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Amos said, ‘The Lord speaks loudly from Zion. Yes, he shouts from Jerusalem. As a result, the green fields will become dry and the grass will die. There will be nothing for the sheep to eat. Even the grass on Mount Carmel mountain will die.’"
+      "text": "Amos said, ‘The Lord speaks loudly from Zion. Yes, he shouts from Jerusalem. As a result, the green fields will become dry and the grass will die. There will be nothing for the sheep to eat. Even the grass on Mount Carmel mountain will die. ’"
     },
     {
       "verse": "3",
-      "text": "The Lord says, ‘The people in Damascus have done more and more wrong things. So I will certainly punish them!They have been cruel to the people in Gilead. They used their iron weapons to tear them into pieces."
+      "text": "The Lord says, ‘The people in Damascus have done more and more wrong things. So I will certainly punish them! They have been cruel to the people in Gilead. They used their iron weapons to tear them into pieces."
     },
     {
       "verse": "4",
@@ -18,11 +18,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "I will also break the strong gates of the city of Damascus. I will remove all the people who live in the Aven valley. I will remove the king of Beth-Eden. Their enemies will take the people of Syria far away to Kir as prisoners.’ That is what the Lord says."
+      "text": "I will also break the strong gates of the city of Damascus. I will remove all the people who live in the Aven valley. I will remove the king of Beth-Eden. Their enemies will take the people of Syria far away to Kir as prisoners. ’ That is what the Lord says."
     },
     {
       "verse": "6",
-      "text": "The Lord says, ‘The people in Gaza have done more and more wrong things. So I will certainly punish them.They caught my people and they took them away from their homes. They sold them to the people in Edom."
+      "text": "The Lord says, ‘The people in Gaza have done more and more wrong things. So I will certainly punish them. They caught my people and they took them away from their homes. They sold them to the people in Edom."
     },
     {
       "verse": "7",
@@ -30,27 +30,27 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I will remove the king of Ashdod city. And I will remove the king who rules in Ashkelon city. I will punish the people who live in Ekron city. All the Philistines who remain will die.’ That is what the Lord God says."
+      "text": "I will remove the king of Ashdod city. And I will remove the king who rules in Ashkelon city. I will punish the people who live in Ekron city. All the Philistines who remain will die. ’ That is what the Lord God says."
     },
     {
       "verse": "9",
-      "text": "The Lord says, ‘The people in Tyre have done more and more wrong things. So I will certainly punish them.Before, they had been friends with the people in Israel. They had promised to those people, “We will be like brothers.” But the people from Tyre did not do what they had promised. They took my people away. They sold my people to the people in Edom and my people became slaves."
+      "text": "The Lord says, ‘The people in Tyre have done more and more wrong things. So I will certainly punish them. Before, they had been friends with the people in Israel. They had promised to those people, “We will be like brothers. ” But the people from Tyre did not do what they had promised. They took my people away. They sold my people to the people in Edom and my people became slaves."
     },
     {
       "verse": "10",
-      "text": "So I will start a fire on the walls of Tyre city. And the fire will burn all the strong buildings. It will destroy them completely.’"
+      "text": "So I will start a fire on the walls of Tyre city. And the fire will burn all the strong buildings. It will destroy them completely. ’"
     },
     {
       "verse": "11",
-      "text": "The Lord says, ‘The people in Edom have done more and more wrong things. So I will certainly punish them.They took their swords and they chased after their cousins, the Israelites. They were not kind. Instead, they continued to be angry all the time. They did not stop attacking them."
+      "text": "The Lord says, ‘The people in Edom have done more and more wrong things. So I will certainly punish them. They took their swords and they chased after their cousins, the Israelites. They were not kind. Instead, they continued to be angry all the time. They did not stop attacking them."
     },
     {
       "verse": "12",
-      "text": "So I will start a fire. And the fire will destroy the big city of Teman. The fire will also burn the strong buildings of Bozrah city.’"
+      "text": "So I will start a fire. And the fire will destroy the big city of Teman. The fire will also burn the strong buildings of Bozrah city. ’"
     },
     {
       "verse": "13",
-      "text": "The Lord says, ‘The people in Ammon have done more and more wrong things. So I will certainly punish them.People from Ammon fought against the people in Gilead. Ammon's people wanted to get more land for themselves. While they were killing people there, they also cut pregnant women open."
+      "text": "The Lord says, ‘The people in Ammon have done more and more wrong things. So I will certainly punish them. People from Ammon fought against the people in Gilead. Ammon's people wanted to get more land for themselves. While they were killing people there, they also cut pregnant women open."
     },
     {
       "verse": "14",
@@ -58,13 +58,13 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The enemies will take away their king and their leaders. They will take them to another country. The king and the leaders will not be free to return.’ That is what the Lord says."
+      "text": "The enemies will take away their king and their leaders. They will take them to another country. The king and the leaders will not be free to return. ’ That is what the Lord says."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "The Lord says, ‘The people in Moab have done more and more wrong things. So I will certainly punish them.They dug up the bones of Edom's king. They burned his bones until they became ashes."
+      "text": "The Lord says, ‘The people in Moab have done more and more wrong things. So I will certainly punish them. They dug up the bones of Edom's king. They burned his bones until they became ashes."
     },
     {
       "verse": "2",
@@ -72,19 +72,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I will let the enemies kill the ruler of Moab. And I will let them kill all its leaders too.’ That is what the Lord says."
+      "text": "I will let the enemies kill the ruler of Moab. And I will let them kill all its leaders too. ’ That is what the Lord says."
     },
     {
       "verse": "4",
-      "text": "The Lord says, ‘The people in Judah have done more and more wrong things. So I will certainly punish them.They refused to obey my laws and my commands. They have listened to their false gods, Those are the same false gods that their ancestors served."
+      "text": "The Lord says, ‘The people in Judah have done more and more wrong things. So I will certainly punish them. They refused to obey my laws and my commands. They have listened to their false gods, Those are the same false gods that their ancestors served."
     },
     {
       "verse": "5",
-      "text": "So I will send fire to Judah. The fire will completely burn the strong buildings that are in Jerusalem.’"
+      "text": "So I will send fire to Judah. The fire will completely burn the strong buildings that are in Jerusalem. ’"
     },
     {
       "verse": "6",
-      "text": "The Lord says, ‘The people in Israel have done more and more wrong things. So I will certainly punish them.They sold people that did not do wrong things. They sold them for silver. And they sold poor people for only the price of shoes."
+      "text": "The Lord says, ‘The people in Israel have done more and more wrong things. So I will certainly punish them. They sold people that did not do wrong things. They sold them for silver. And they sold poor people for only the price of shoes."
     },
     {
       "verse": "7",
@@ -104,11 +104,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I chose some men among you to be prophets, and some to be Nazirites. You Israelites know that it is true.’ That is what the Lord says."
+      "text": "I chose some men among you to be prophets, and some to be Nazirites. You Israelites know that it is true. ’ That is what the Lord says."
     },
     {
       "verse": "12",
-      "text": "‘But you told the Nazirites to drink wine, like everyone else. And you said to the prophets, “Do not speak messages from God.”"
+      "text": "‘But you told the Nazirites to drink wine, like everyone else. And you said to the prophets, “Do not speak messages from God. ”"
     },
     {
       "verse": "13",
@@ -124,7 +124,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "At that time, strong, brave soldiers will run away without their clothes.’ That is what the Lord says."
+      "text": "At that time, strong, brave soldiers will run away without their clothes. ’ That is what the Lord says."
     }
   ],
   "3": [
@@ -134,7 +134,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He says, ‘There are many nations of people on the earth. But I chose you alone to belong to me. So I will punish you when you do wrong things.’"
+      "text": "He says, ‘There are many nations of people on the earth. But I chose you alone to belong to me. So I will punish you when you do wrong things. ’"
     },
     {
       "verse": "3",
@@ -162,19 +162,19 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Tell this message now in Ashdod city. Go to the strong cities in Egypt and speak the message there. Say this: ‘Come to the mountains in Samaria. Look at the cruel things that people are doing in Samaria. Many people are afraid.’"
+      "text": "Tell this message now in Ashdod city. Go to the strong cities in Egypt and speak the message there. Say this: ‘Come to the mountains in Samaria. Look at the cruel things that people are doing in Samaria. Many people are afraid. ’"
     },
     {
       "verse": "10",
-      "text": "The Lord says, ‘People have forgotten how to be honest. They rob people and they store valuable things in their big houses. They become rich because they are so cruel.’"
+      "text": "The Lord says, ‘People have forgotten how to be honest. They rob people and they store valuable things in their big houses. They become rich because they are so cruel. ’"
     },
     {
       "verse": "11",
-      "text": "So the Lord God says, ‘Enemies will come to attack your land. They will destroy your strong buildings. They will take all your good things from you.’"
+      "text": "So the Lord God says, ‘Enemies will come to attack your land. They will destroy your strong buildings. They will take all your good things from you. ’"
     },
     {
       "verse": "12",
-      "text": "The Lord says, ‘When a lion catches a young sheep, the shepherd will try to save as much as he can. He might save only two legs, or a small part of an ear. It will be the same for the Israelites who live in Samaria. They will escape with only a piece of a bed, or a bit of cloth.’"
+      "text": "The Lord says, ‘When a lion catches a young sheep, the shepherd will try to save as much as he can. He might save only two legs, or a small part of an ear. It will be the same for the Israelites who live in Samaria. They will escape with only a piece of a bed, or a bit of cloth. ’"
     },
     {
       "verse": "13",
@@ -186,13 +186,13 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I will destroy all their houses, the homes that they live in during the winter, and the ones that they live in during the summer. I will completely destroy all their big, beautiful houses, with their valuable things made from ivory.’ That is what the Lord says."
+      "text": "I will destroy all their houses, the homes that they live in during the winter, and the ones that they live in during the summer. I will completely destroy all their big, beautiful houses, with their valuable things made from ivory. ’ That is what the Lord says."
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "Listen to this message, you women who live on the hill in Samaria. You are like fat cows that do not work hard for food. You are like the cows in Bashan. They eat on very good land by the Jordan river. You do not give to weak people what they need. You are not fair to poor people. Then you sit down and you say to your husbands, ‘Bring us more to drink.’"
+      "text": "Listen to this message, you women who live on the hill in Samaria. You are like fat cows that do not work hard for food. You are like the cows in Bashan. They eat on very good land by the Jordan river. You do not give to weak people what they need. You are not fair to poor people. Then you sit down and you say to your husbands, ‘Bring us more to drink. ’"
     },
     {
       "verse": "2",
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "There are places in your city's walls where people have broken the walls. Your enemies will pull you through those places and they will throw you out. They will take you to that bad place called Harmon. None of you will stay here.’"
+      "text": "There are places in your city's walls where people have broken the walls. Your enemies will pull you through those places and they will throw you out. They will take you to that bad place called Harmon. None of you will stay here. ’"
     },
     {
       "verse": "4",
@@ -208,11 +208,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You bring bread to say “thank you”. You even bring lots of it and you tell everyone, “Look at how much I have brought.” You really like to do that. So continue to do it, but it does not make me happy.’ The Lord God says this!"
+      "text": "You bring bread to say “thank you”. You even bring lots of it and you tell everyone, “Look at how much I have brought. ” You really like to do that. So continue to do it, but it does not make me happy. ’ The Lord God says this!"
     },
     {
       "verse": "6",
-      "text": "‘Earlier I made you hungry in all your cities. There was no food anywhere. But you did not start to pray to me again.’ The Lord says this!"
+      "text": "‘Earlier I made you hungry in all your cities. There was no food anywhere. But you did not start to pray to me again. ’ The Lord says this!"
     },
     {
       "verse": "7",
@@ -220,19 +220,19 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "People became weak. They went from city to city to look for water. They were almost too weak to walk. There was not enough water. But still you did not start to pray to me again.’ The Lord says this!"
+      "text": "People became weak. They went from city to city to look for water. They were almost too weak to walk. There was not enough water. But still you did not start to pray to me again. ’ The Lord says this!"
     },
     {
       "verse": "9",
-      "text": "‘I sent hot winds from the east. They burned the small plants, so those plants died. Worms made the other plants sick. So the other plants died. Locusts ate your trees that give fruit. But still you did not start to pray to me again.’ The Lord says this!."
+      "text": "‘I sent hot winds from the east. They burned the small plants, so those plants died. Worms made the other plants sick. So the other plants died. Locusts ate your trees that give fruit. But still you did not start to pray to me again. ’ The Lord says this! ."
     },
     {
       "verse": "10",
-      "text": "‘I caused many people among you to become very sick. It was like what happened many years ago in Egypt. At that time, very many people got sick. Then I sent soldiers to you. And they killed your young men and they took away your horses. The smell from dead bodies was very bad. But you still did not start to pray to me again.’ The Lord says this!"
+      "text": "‘I caused many people among you to become very sick. It was like what happened many years ago in Egypt. At that time, very many people got sick. Then I sent soldiers to you. And they killed your young men and they took away your horses. The smell from dead bodies was very bad. But you still did not start to pray to me again. ’ The Lord says this!"
     },
     {
       "verse": "11",
-      "text": "‘I killed many people among you, as I destroyed the cities called Sodom and Gomorrah. Some of you did not die. You were like a stick that is already burning. And someone saves it from the fire. But still you did not start to pray to me again.’ The Lord says this!"
+      "text": "‘I killed many people among you, as I destroyed the cities called Sodom and Gomorrah. Some of you did not die. You were like a stick that is already burning. And someone saves it from the fire. But still you did not start to pray to me again. ’ The Lord says this!"
     },
     {
       "verse": "12",
@@ -240,7 +240,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I made the mountains and I made the wind. I tell people what I have decided to do. I change dawn into night. I walk on the high places of the earth. My name is the Lord God Almighty.’"
+      "text": "I made the mountains and I made the wind. I tell people what I have decided to do. I change dawn into night. I walk on the high places of the earth. My name is the Lord God Almighty. ’"
     }
   ],
   "5": [
@@ -250,11 +250,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘You are like a young woman that died young, without children. Now you have fallen down and you will not rise up again. You lie there on the ground. There is nobody there to help you to get up.’"
+      "text": "‘You are like a young woman that died young, without children. Now you have fallen down and you will not rise up again. You lie there on the ground. There is nobody there to help you to get up. ’"
     },
     {
       "verse": "3",
-      "text": "This is what the Lord God says to you: ‘1,000 soldiers will go out from a city to fight, but only 100 soldiers will come back. From another city, 100 soldiers will go out to fight, but only ten will come back.’"
+      "text": "This is what the Lord God says to you: ‘1, 000 soldiers will go out from a city to fight, but only 100 soldiers will come back. From another city, 100 soldiers will go out to fight, but only ten will come back. ’"
     },
     {
       "verse": "4",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Do not go to Bethel, Gilgal, or Beersheba. Do not try to find me there, because I am not there. I will send enemies to destroy those places. They will take the people away as slaves.’"
+      "text": "Do not go to Bethel, Gilgal, or Beersheba. Do not try to find me there, because I am not there. I will send enemies to destroy those places. They will take the people away as slaves. ’"
     },
     {
       "verse": "6",
@@ -294,7 +294,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "This is such an evil time that clever people say nothing. That is how they keep themselves safe.’"
+      "text": "This is such an evil time that clever people say nothing. That is how they keep themselves safe. ’"
     },
     {
       "verse": "14",
@@ -310,7 +310,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "In every field and garden, people will be weeping, because I will come to punish them all.’ That is what the Lord says."
+      "text": "In every field and garden, people will be weeping, because I will come to punish them all. ’ That is what the Lord says."
     },
     {
       "verse": "18",
@@ -350,7 +350,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "I will send you away as prisoners. Your enemies will take you beyond Damascus.’That is what the Lord says, and he is God Almighty."
+      "text": "I will send you away as prisoners. Your enemies will take you beyond Damascus. ’That is what the Lord says, and he is God Almighty."
     }
   ],
   "6": [
@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Lord God Almighty has promised that this will surely happen. He has spoken this strong message: ‘The Israelites think that they are very strong. But I have turned against them. I hate their strong buildings. So I will give their great city and everything in it to their enemies.’"
+      "text": "The Lord God Almighty has promised that this will surely happen. He has spoken this strong message: ‘The Israelites think that they are very strong. But I have turned against them. I hate their strong buildings. So I will give their great city and everything in it to their enemies. ’"
     },
     {
       "verse": "9",
@@ -392,7 +392,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "When a man comes to carry a dead body outside to burn it, he will ask his relative, ‘Is there anyone with you in the house?’ The relative will answer, ‘No.’ Then the man will say, ‘Be quiet!. Do not speak the name of the Lord!’"
+      "text": "When a man comes to carry a dead body outside to burn it, he will ask his relative, ‘Is there anyone with you in the house? ’ The relative will answer, ‘No. ’ Then the man will say, ‘Be quiet! . Do not speak the name of the Lord! ’"
     },
     {
       "verse": "11",
@@ -408,7 +408,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "But the Lord God Almighty says to you Israelites, ‘I am sending an enemy nation to attack you. They will bring trouble to you everywhere, all the way from Lebo-Hamath in the north, to the Arabah valley in the south.’"
+      "text": "But the Lord God Almighty says to you Israelites, ‘I am sending an enemy nation to attack you. They will bring trouble to you everywhere, all the way from Lebo-Hamath in the north, to the Arabah valley in the south. ’"
     }
   ],
   "7": [
@@ -418,11 +418,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I saw that the locusts came and they ate everything. I asked the Lord, ‘Lord God, please forgive your people. We cannot continue to live if those locusts destroy our food. We are too weak!’"
+      "text": "I saw that the locusts came and they ate everything. I asked the Lord, ‘Lord God, please forgive your people. We cannot continue to live if those locusts destroy our food. We are too weak! ’"
     },
     {
       "verse": "3",
-      "text": "Then the Lord decided not to do it. He said to me, ‘That will not happen.’"
+      "text": "Then the Lord decided not to do it. He said to me, ‘That will not happen. ’"
     },
     {
       "verse": "4",
@@ -430,11 +430,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "I said, ‘Lord God, please do not do that! Your people cannot continue to live. We are too weak!’"
+      "text": "I said, ‘Lord God, please do not do that! Your people cannot continue to live. We are too weak! ’"
     },
     {
       "verse": "6",
-      "text": "Then the Lord decided not to do it. He said to me, ‘That too will not happen.’"
+      "text": "Then the Lord decided not to do it. He said to me, ‘That too will not happen. ’"
     },
     {
       "verse": "7",
@@ -442,11 +442,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He asked me, ‘Amos, what do you see?’ I said, ‘You are measuring the wall to see if it is straight.’The Lord said, ‘Understand this. I am ready to measure my people with this string. I will test them and I will punish them for their sins. I will not forgive them any more."
+      "text": "He asked me, ‘Amos, what do you see? ’ I said, ‘You are measuring the wall to see if it is straight. ’The Lord said, ‘Understand this. I am ready to measure my people with this string. I will test them and I will punish them for their sins. I will not forgive them any more."
     },
     {
       "verse": "9",
-      "text": "I will send enemies to destroy the holy places of Isaac's descendants. All Israel's holy places will fall down. Enemies will use swords to kill King Jeroboam and his family.’"
+      "text": "I will send enemies to destroy the holy places of Isaac's descendants. All Israel's holy places will fall down. Enemies will use swords to kill King Jeroboam and his family. ’"
     },
     {
       "verse": "10",
@@ -454,7 +454,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Amos is saying, “Our enemies will kill King Jeroboam. They will take all the people to a foreign country as prisoners.” ’"
+      "text": "Amos is saying, “Our enemies will kill King Jeroboam. They will take all the people to a foreign country as prisoners. ” ’"
     },
     {
       "verse": "12",
@@ -462,7 +462,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Do not speak God's message here in Bethel any longer. It is where our king and our nation come to worship.’"
+      "text": "Do not speak God's message here in Bethel any longer. It is where our king and our nation come to worship. ’"
     },
     {
       "verse": "14",
@@ -474,11 +474,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So listen to the Lord's message to you! You are telling me, “Do not speak God's message against Israel. Do not say that trouble is coming to Isaac's descendants.”"
+      "text": "So listen to the Lord's message to you! You are telling me, “Do not speak God's message against Israel. Do not say that trouble is coming to Isaac's descendants. ”"
     },
     {
       "verse": "17",
-      "text": "The Lord says this to you, Amaziah: “Your wife will work as a prostitute in the streets. Your sons and daughters will die in war. Enemies will measure your land into separate pieces and they will give it to others. They will take your people away from here as prisoners to a foreign country. And that is where they will die.” ’"
+      "text": "The Lord says this to you, Amaziah: “Your wife will work as a prostitute in the streets. Your sons and daughters will die in war. Enemies will measure your land into separate pieces and they will give it to others. They will take your people away from here as prisoners to a foreign country. And that is where they will die. ” ’"
     }
   ],
   "8": [
@@ -488,11 +488,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He asked me, ‘Amos, what do you see?’ I answered him, ‘I see a basket of summer fruit.’ Then the Lord said to me, ‘The time has now come to punish my people. I will not forgive them any longer."
+      "text": "He asked me, ‘Amos, what do you see? ’ I answered him, ‘I see a basket of summer fruit. ’ Then the Lord said to me, ‘The time has now come to punish my people. I will not forgive them any longer."
     },
     {
       "verse": "3",
-      "text": "On the day that I come to punish them, people will not sing in the temple. Instead they will weep loudly. There will be dead bodies everywhere. Be quiet now!’ That is what the Lord God says."
+      "text": "On the day that I come to punish them, people will not sing in the temple. Instead they will weep loudly. There will be dead bodies everywhere. Be quiet now! ’ That is what the Lord God says."
     },
     {
       "verse": "4",
@@ -500,7 +500,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You say to yourselves, ‘We want the new moon festival to finish so that we can sell food again. We want our Sabbath day of rest to finish so that we can sell grain.’ But when you sell things, you cheat the people who buy from you. You deceive them with false weights, and you make the price too high."
+      "text": "You say to yourselves, ‘We want the new moon festival to finish so that we can sell food again. We want our Sabbath day of rest to finish so that we can sell grain. ’ But when you sell things, you cheat the people who buy from you. You deceive them with false weights, and you make the price too high."
     },
     {
       "verse": "6",
@@ -512,7 +512,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The whole country will shake because of your sins. Everyone who lives there will weep. The ground will rise up, like the floods of the Nile river in Egypt. Then it will go down again, like the water of the Nile.’"
+      "text": "The whole country will shake because of your sins. Everyone who lives there will weep. The ground will rise up, like the floods of the Nile river in Egypt. Then it will go down again, like the water of the Nile. ’"
     },
     {
       "verse": "9",
@@ -520,7 +520,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Your parties will become funerals. You will not sing happy songs but you will weep. You will wear rough clothes and you will cut off all your hair. You will be as sad as if your only son had died. That will be a very bad day for you.’"
+      "text": "Your parties will become funerals. You will not sing happy songs but you will weep. You will wear rough clothes and you will cut off all your hair. You will be as sad as if your only son had died. That will be a very bad day for you. ’"
     },
     {
       "verse": "11",
@@ -536,7 +536,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "They worship Samaria's idols. They use the names of those false gods to make promises. They say, “In the name of the god of Dan,” or “In the name of the god of Beersheba.” Those people will fall down and they will never get up again.’"
+      "text": "They worship Samaria's idols. They use the names of those false gods to make promises. They say, “In the name of the god of Dan, ” or “In the name of the god of Beersheba. ” Those people will fall down and they will never get up again. ’"
     }
   ],
   "9": [
@@ -554,7 +554,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Even when their enemies take them away as prisoners, I will cause them to die in battle. I have decided to destroy them. I will not help them.’"
+      "text": "Even when their enemies take them away as prisoners, I will cause them to die in battle. I have decided to destroy them. I will not help them. ’"
     },
     {
       "verse": "5",
@@ -570,7 +570,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I, the Lord God, am carefully watching you Israelites. I see that you are a wicked nation, so I will remove you from the earth. But I will not completely destroy all the descendants of Jacob.’ That is what the Lord says."
+      "text": "I, the Lord God, am carefully watching you Israelites. I see that you are a wicked nation, so I will remove you from the earth. But I will not completely destroy all the descendants of Jacob. ’ That is what the Lord says."
     },
     {
       "verse": "9",
@@ -578,7 +578,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Those among my people who do bad things will die. They say, “God will not send trouble to us. Nothing bad will happen to us.” But their enemies will kill those bad people in war.’"
+      "text": "Those among my people who do bad things will die. They say, “God will not send trouble to us. Nothing bad will happen to us. ” But their enemies will kill those bad people in war. ’"
     },
     {
       "verse": "11",
@@ -586,7 +586,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You Israelites will fight the Edomites who still remain. You will win against them and the other nations that once belonged to me.’That is what the Lord says, and he will do it."
+      "text": "You Israelites will fight the Edomites who still remain. You will win against them and the other nations that once belonged to me. ’That is what the Lord says, and he will do it."
     },
     {
       "verse": "13",
@@ -598,7 +598,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "And I will plant my people in their own land. That is the land that I have given to them, and nobody will ever pull them out of that land.’That is what the Lord your God says."
+      "text": "And I will plant my people in their own land. That is the land that I have given to them, and nobody will ever pull them out of that land. ’That is what the Lord your God says."
     }
   ]
 };

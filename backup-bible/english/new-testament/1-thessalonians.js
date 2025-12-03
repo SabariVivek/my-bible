@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from Paul, Silas and Timothy.We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ.We pray that God will continue to help you. We pray that he will give you peace in your minds. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds."
+      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds."
     },
     {
       "verse": "2",
@@ -212,7 +212,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Certainly, you love all the believers in all the region of Macedonia. And now we ask you, as our Christian friends, ‘Please love each other more and more.’"
+      "text": "Certainly, you love all the believers in all the region of Macedonia. And now we ask you, as our Christian friends, ‘Please love each other more and more. ’"
     },
     {
       "verse": "11",
@@ -258,7 +258,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "At that time, people will be saying, ‘We are safe and there is no trouble for us.’ But then, when they are not ready for it, great punishment will suddenly happen to them. It will be impossible for them to run away. Pain will suddenly come to them, like a woman who is giving birth to a baby."
+      "text": "At that time, people will be saying, ‘We are safe and there is no trouble for us. ’ But then, when they are not ready for it, great punishment will suddenly happen to them. It will be impossible for them to run away. Pain will suddenly come to them, like a woman who is giving birth to a baby."
     },
     {
       "verse": "4",

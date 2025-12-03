@@ -6,67 +6,67 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Lord, how long must I call out to you for help?You do not listen to me!I shout aloud to you, ‘Violence is everywhere!’but you do nothing to make us safe. You do not listen to me! I shout aloud to you, ‘Violence is everywhere!’ but you do nothing to make us safe."
+      "text": "Lord, how long must I call out to you for help? You do not listen to me! I shout aloud to you, ‘Violence is everywhere! ’but you do nothing to make us safe. You do not listen to me! I shout aloud to you, ‘Violence is everywhere! ’ but you do nothing to make us safe."
     },
     {
       "verse": "3",
-      "text": "You cause me to see many things that are not right.You do not punish people who are doing wrong things.Why do you let that happen?People do cruel things and there is violence everywhere.They argue and they fight and they quarrel. You do not punish people who are doing wrong things. Why do you let that happen? People do cruel things and there is violence everywhere. They argue and they fight and they quarrel."
+      "text": "You cause me to see many things that are not right. You do not punish people who are doing wrong things. Why do you let that happen? People do cruel things and there is violence everywhere. They argue and they fight and they quarrel. You do not punish people who are doing wrong things. Why do you let that happen? People do cruel things and there is violence everywhere. They argue and they fight and they quarrel."
     },
     {
       "verse": "4",
-      "text": "The law has no power to make things right.There is no justice in the courts.Instead, wicked people win against good people.The judges decide that bad people are good. There is no justice in the courts. Instead, wicked people win against good people. The judges decide that bad people are good."
+      "text": "The law has no power to make things right. There is no justice in the courts. Instead, wicked people win against good people. The judges decide that bad people are good. There is no justice in the courts. Instead, wicked people win against good people. The judges decide that bad people are good."
     },
     {
       "verse": "5",
-      "text": "‘All of you, look carefully at the other nations.You will be very surprised at what is happening.While you are still alive, I will do a very surprising thing.You would not believe it even if someone told you. You will be very surprised at what is happening. While you are still alive, I will do a very surprising thing. You would not believe it even if someone told you."
+      "text": "‘All of you, look carefully at the other nations. You will be very surprised at what is happening. While you are still alive, I will do a very surprising thing. You would not believe it even if someone told you. You will be very surprised at what is happening. While you are still alive, I will do a very surprising thing. You would not believe it even if someone told you."
     },
     {
       "verse": "6",
-      "text": "I will give more power to the Babylonians.They are a cruel nation with brave soldiers.They march across the whole earth.They take cities that do not belong to them. They are a cruel nation with brave soldiers. They march across the whole earth. They take cities that do not belong to them."
+      "text": "I will give more power to the Babylonians. They are a cruel nation with brave soldiers. They march across the whole earth. They take cities that do not belong to them. They are a cruel nation with brave soldiers. They march across the whole earth. They take cities that do not belong to them."
     },
     {
       "verse": "7",
-      "text": "They cause people to be very afraid.They obey no laws except their own rules. They obey no laws except their own rules."
+      "text": "They cause people to be very afraid. They obey no laws except their own rules. They obey no laws except their own rules."
     },
     {
       "verse": "8",
-      "text": "Their horses run faster than leopards.They are more cruel than wolvesthat attack in the evening.Their riders come on fast horsesfrom places that are far away.They quickly attack their enemies,like hungry eagles that fly down to catch chickens. They are more cruel than wolves that attack in the evening. Their riders come on fast horses from places that are far away. They quickly attack their enemies, like hungry eagles that fly down to catch chickens."
+      "text": "Their horses run faster than leopards. They are more cruel than wolvesthat attack in the evening. Their riders come on fast horsesfrom places that are far away. They quickly attack their enemies, like hungry eagles that fly down to catch chickens. They are more cruel than wolves that attack in the evening. Their riders come on fast horses from places that are far away. They quickly attack their enemies, like hungry eagles that fly down to catch chickens."
     },
     {
       "verse": "9",
-      "text": "Their whole army comes to do violent things.They march forward like a wind from the desert.They make people their prisoners,as easily as if they are picking up sand. They march forward like a wind from the desert. They make people their prisoners, as easily as if they are picking up sand."
+      "text": "Their whole army comes to do violent things. They march forward like a wind from the desert. They make people their prisoners, as easily as if they are picking up sand. They march forward like a wind from the desert. They make people their prisoners, as easily as if they are picking up sand."
     },
     {
       "verse": "10",
-      "text": "They insult kings,and they laugh at rulers.They laugh at all the strong cities of their enemies.They build heaps of earth against the walls,and they take those cities for themselves. and they laugh at rulers. They laugh at all the strong cities of their enemies. They build heaps of earth against the walls, and they take those cities for themselves."
+      "text": "They insult kings, and they laugh at rulers. They laugh at all the strong cities of their enemies. They build heaps of earth against the walls, and they take those cities for themselves. and they laugh at rulers. They laugh at all the strong cities of their enemies. They build heaps of earth against the walls, and they take those cities for themselves."
     },
     {
       "verse": "11",
-      "text": "Their army quickly moves on to another place,like a wind that blows.They think that their own god has made them strong,and so they are guilty.’ like a wind that blows. They think that their own god has made them strong, and so they are guilty.’"
+      "text": "Their army quickly moves on to another place, like a wind that blows. They think that their own god has made them strong, and so they are guilty. ’ like a wind that blows. They think that their own god has made them strong, and so they are guilty. ’"
     },
     {
       "verse": "12",
-      "text": "Lord, you have always been God,since the beginning.You are the God that I worship as holy,and you will never die.Lord, you have chosen the Babyloniansas your weapon to punish your people.You are a strong rock to protect us,but you have decided to use them to punish us. since the beginning. You are the God that I worship as holy, and you will never die. Lord, you have chosen the Babylonians as your weapon to punish your people. You are a strong rock to protect us, but you have decided to use them to punish us."
+      "text": "Lord, you have always been God, since the beginning. You are the God that I worship as holy, and you will never die. Lord, you have chosen the Babyloniansas your weapon to punish your people. You are a strong rock to protect us, but you have decided to use them to punish us. since the beginning. You are the God that I worship as holy, and you will never die. Lord, you have chosen the Babylonians as your weapon to punish your people. You are a strong rock to protect us, but you have decided to use them to punish us."
     },
     {
       "verse": "13",
-      "text": "But you are too holy to accept anything that is evil.You cannot agree with people who do wrong things.So why do you let these wicked people live?Why do you say nothing?They are killing people who are more righteous than themselves. You cannot agree with people who do wrong things. So why do you let these wicked people live? Why do you say nothing? They are killing people who are more righteous than themselves."
+      "text": "But you are too holy to accept anything that is evil. You cannot agree with people who do wrong things. So why do you let these wicked people live? Why do you say nothing? They are killing people who are more righteous than themselves. You cannot agree with people who do wrong things. So why do you let these wicked people live? Why do you say nothing? They are killing people who are more righteous than themselves."
     },
     {
       "verse": "14",
-      "text": "It seems that you have made people like fish in the sea.They are like animals that have no leader to rule them. They are like animals that have no leader to rule them."
+      "text": "It seems that you have made people like fish in the sea. They are like animals that have no leader to rule them. They are like animals that have no leader to rule them."
     },
     {
       "verse": "15",
-      "text": "The Babylonians can easily catch them,like people who catch fish with hooks.They throw their nets into the water,and they catch as many as they want.When they store their fish in special nets,they sing happy songs. like people who catch fish with hooks. They throw their nets into the water, and they catch as many as they want. When they store their fish in special nets, they sing happy songs."
+      "text": "The Babylonians can easily catch them, like people who catch fish with hooks. They throw their nets into the water, and they catch as many as they want. When they store their fish in special nets, they sing happy songs. like people who catch fish with hooks. They throw their nets into the water, and they catch as many as they want. When they store their fish in special nets, they sing happy songs."
     },
     {
       "verse": "16",
-      "text": "Their nets give them everything that they need,so they offer sacrifices to their nets.Their nets give them plenty of good food to eat,so they burn incense to thank their nets. so they offer sacrifices to their nets. Their nets give them plenty of good food to eat, so they burn incense to thank their nets."
+      "text": "Their nets give them everything that they need, so they offer sacrifices to their nets. Their nets give them plenty of good food to eat, so they burn incense to thank their nets. so they offer sacrifices to their nets. Their nets give them plenty of good food to eat, so they burn incense to thank their nets."
     },
     {
       "verse": "17",
-      "text": "Will you let them continue to do that?Will they make their nets full of fishas many times as they want to?Will they continue to destroy other nationsand never stop?"
+      "text": "Will you let them continue to do that? Will they make their nets full of fishas many times as they want to? Will they continue to destroy other nationsand never stop?"
     }
   ],
   "2": [
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But one day, their prisoners will laugh at them. The people will insult that proud nation with songs and proverbs. They will say, “You have stored for yourselves many valuable things that do not belong to you. It will be very bad for you! You have robbed other nations so that you can be rich. This will not continue much longer!”"
+      "text": "But one day, their prisoners will laugh at them. The people will insult that proud nation with songs and proverbs. They will say, “You have stored for yourselves many valuable things that do not belong to you. It will be very bad for you! You have robbed other nations so that you can be rich. This will not continue much longer! ”"
     },
     {
       "verse": "7",
@@ -144,11 +144,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "It will be very bad for anyone who says to a piece of wood, “Wake up!” It will be bad for anyone who says to a stone that cannot speak, “Get up and help me!” It cannot teach you! It has gold or silver to make it look nice, but it is not alive."
+      "text": "It will be very bad for anyone who says to a piece of wood, “Wake up! ” It will be bad for anyone who says to a stone that cannot speak, “Get up and help me! ” It cannot teach you! It has gold or silver to make it look nice, but it is not alive."
     },
     {
       "verse": "20",
-      "text": "But the Lord rules from his holy temple. Everybody on the earth should be quiet in front of him.’"
+      "text": "But the Lord rules from his holy temple. Everybody on the earth should be quiet in front of him. ’"
     }
   ],
   "3": [
@@ -158,75 +158,75 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Lord, I have heard the report about you.I see the things that you have done, Lord,and I respect your power.Please do great things like that again.Do them again now for us to see.When you are angry with us,please still remember to be kind! I see the things that you have done, Lord, and I respect your power. Please do great things like that again. Do them again now for us to see. When you are angry with us, please still remember to be kind!"
+      "text": "Lord, I have heard the report about you. I see the things that you have done, Lord, and I respect your power. Please do great things like that again. Do them again now for us to see. When you are angry with us, please still remember to be kind! I see the things that you have done, Lord, and I respect your power. Please do great things like that again. Do them again now for us to see. When you are angry with us, please still remember to be kind!"
     },
     {
       "verse": "3",
-      "text": "God is coming from Teman!The Holy God is coming from Paran mountain.Selah.His beautiful power covers the whole sky!People praise him all over the earth! The Holy God is coming from Paran mountain. Selah. His beautiful power covers the whole sky! People praise him all over the earth!"
+      "text": "God is coming from Teman! The Holy God is coming from Paran mountain. Selah. His beautiful power covers the whole sky! People praise him all over the earth! The Holy God is coming from Paran mountain. Selah. His beautiful power covers the whole sky! People praise him all over the earth!"
     },
     {
       "verse": "4",
-      "text": "He is as bright as the sunrise.His hands throw bright lightning!That is where he hides his power. His hands throw bright lightning! That is where he hides his power."
+      "text": "He is as bright as the sunrise. His hands throw bright lightning! That is where he hides his power. His hands throw bright lightning! That is where he hides his power."
     },
     {
       "verse": "5",
-      "text": "As he marches to war,bad disease marches with him. bad disease marches with him."
+      "text": "As he marches to war, bad disease marches with him. bad disease marches with him."
     },
     {
       "verse": "6",
-      "text": "God stands ready to fight,and he causes the earth to shake.He looks at the nationsand they shake with fear.The very old mountains break into pieces.The old hills fall down flat.He travels on roads that have been there for ever. and he causes the earth to shake. He looks at the nations and they shake with fear. The very old mountains break into pieces. The old hills fall down flat. He travels on roads that have been there for ever."
+      "text": "God stands ready to fight, and he causes the earth to shake. He looks at the nationsand they shake with fear. The very old mountains break into pieces. The old hills fall down flat. He travels on roads that have been there for ever. and he causes the earth to shake. He looks at the nations and they shake with fear. The very old mountains break into pieces. The old hills fall down flat. He travels on roads that have been there for ever."
     },
     {
       "verse": "7",
-      "text": "I see the tents where Cushan's people live,and the people are afraid.The people in Midian are shaking with fear. and the people are afraid. The people in Midian are shaking with fear."
+      "text": "I see the tents where Cushan's people live, and the people are afraid. The people in Midian are shaking with fear. and the people are afraid. The people in Midian are shaking with fear."
     },
     {
       "verse": "8",
-      "text": "Was it the rivers that made you angry, Lord?Did the sea make you so angry?You rode on your chariots as horses pulled them!You rode into battle to win against your enemies. Did the sea make you so angry? You rode on your chariots as horses pulled them! You rode into battle to win against your enemies."
+      "text": "Was it the rivers that made you angry, Lord? Did the sea make you so angry? You rode on your chariots as horses pulled them! You rode into battle to win against your enemies. Did the sea make you so angry? You rode on your chariots as horses pulled them! You rode into battle to win against your enemies."
     },
     {
       "verse": "9",
-      "text": "You have prepared your bow.You are ready to shoot your arrows.Selah.You send rivers of water to cut the earth into pieces. You are ready to shoot your arrows. Selah. You send rivers of water to cut the earth into pieces."
+      "text": "You have prepared your bow. You are ready to shoot your arrows. Selah. You send rivers of water to cut the earth into pieces. You are ready to shoot your arrows. Selah. You send rivers of water to cut the earth into pieces."
     },
     {
       "verse": "10",
-      "text": "The mountains see you and they shake.Rain pours down from the sky and it causes floods.The deep sea roarsand it lifts its waves up high. Rain pours down from the sky and it causes floods. The deep sea roars and it lifts its waves up high."
+      "text": "The mountains see you and they shake. Rain pours down from the sky and it causes floods. The deep sea roarsand it lifts its waves up high. Rain pours down from the sky and it causes floods. The deep sea roars and it lifts its waves up high."
     },
     {
       "verse": "11",
-      "text": "You shoot your bright arrowsso that the sun and the moon stand still in the sky.Your bright spear flies like lightning,and the sun and the moon do not move! so that the sun and the moon stand still in the sky. Your bright spear flies like lightning, and the sun and the moon do not move!"
+      "text": "You shoot your bright arrowsso that the sun and the moon stand still in the sky. Your bright spear flies like lightning, and the sun and the moon do not move! so that the sun and the moon stand still in the sky. Your bright spear flies like lightning, and the sun and the moon do not move!"
     },
     {
       "verse": "12",
-      "text": "You angrily march across the earth.You knock down the armies of the nations,because you are so angry. You knock down the armies of the nations, because you are so angry."
+      "text": "You angrily march across the earth. You knock down the armies of the nations, because you are so angry. You knock down the armies of the nations, because you are so angry."
     },
     {
       "verse": "13",
-      "text": "You have marched out to rescue your people,and to save your special servant.You have knocked down the leader of the wicked nation.You have removed all his clothes,from head to foot.Selah. and to save your special servant. You have knocked down the leader of the wicked nation. You have removed all his clothes, from head to foot. Selah."
+      "text": "You have marched out to rescue your people, and to save your special servant. You have knocked down the leader of the wicked nation. You have removed all his clothes, from head to foot. Selah. and to save your special servant. You have knocked down the leader of the wicked nation. You have removed all his clothes, from head to foot. Selah."
     },
     {
       "verse": "14",
-      "text": "You threw his own spear into his head,and you destroyed his army.When his soldiers rushed out to attack us,they were laughing.They thought that they would easily win against us,as if we were poor, weak people. and you destroyed his army. When his soldiers rushed out to attack us, they were laughing. They thought that they would easily win against us, as if we were poor, weak people."
+      "text": "You threw his own spear into his head, and you destroyed his army. When his soldiers rushed out to attack us, they were laughing. They thought that they would easily win against us, as if we were poor, weak people. and you destroyed his army. When his soldiers rushed out to attack us, they were laughing. They thought that they would easily win against us, as if we were poor, weak people."
     },
     {
       "verse": "15",
-      "text": "But you, Lord, marched across the sea with your horses.You made the waters of the sea shake. You made the waters of the sea shake."
+      "text": "But you, Lord, marched across the sea with your horses. You made the waters of the sea shake. You made the waters of the sea shake."
     },
     {
       "verse": "16",
-      "text": "I listened to thisand I was very afraid.My lips shook with fearwhen I heard the sound.My bones became weak.My legs would not let me walk.But I will be patient.I will wait for the day of trouble that will come.Yes, punishment will come to the people who are attacking us. and I was very afraid. My lips shook with fear when I heard the sound. My bones became weak. My legs would not let me walk. But I will be patient. I will wait for the day of trouble that will come. Yes, punishment will come to the people who are attacking us."
+      "text": "I listened to thisand I was very afraid. My lips shook with fearwhen I heard the sound. My bones became weak. My legs would not let me walk. But I will be patient. I will wait for the day of trouble that will come. Yes, punishment will come to the people who are attacking us. and I was very afraid. My lips shook with fear when I heard the sound. My bones became weak. My legs would not let me walk. But I will be patient. I will wait for the day of trouble that will come. Yes, punishment will come to the people who are attacking us."
     },
     {
       "verse": "17",
-      "text": "Whatever happens, I will continue to thank the Lord.If there are no flowers on the fig trees,if there are no grapes on the vines,if there are no olives on the olive trees,if there are no crops in the fields,if the sheep are dying in the hills,if there are no cows on the farms, If there are no flowers on the fig trees, if there are no grapes on the vines, if there are no olives on the olive trees, if there are no crops in the fields, if the sheep are dying in the hills, if there are no cows on the farms,"
+      "text": "Whatever happens, I will continue to thank the Lord. If there are no flowers on the fig trees, if there are no grapes on the vines, if there are no olives on the olive trees, if there are no crops in the fields, if the sheep are dying in the hills, if there are no cows on the farms, If there are no flowers on the fig trees, if there are no grapes on the vines, if there are no olives on the olive trees, if there are no crops in the fields, if the sheep are dying in the hills, if there are no cows on the farms,"
     },
     {
       "verse": "18",
-      "text": "I will still sing to thank the Lord!I will be happy because God is the one who makes me safe. I will be happy because God is the one who makes me safe."
+      "text": "I will still sing to thank the Lord! I will be happy because God is the one who makes me safe. I will be happy because God is the one who makes me safe."
     },
     {
       "verse": "19",
-      "text": "The Lord God causes me to be strong.He makes my feet run safely over the rocks and hills,like a deer's feet.This prayer is for the music leader. He must use stringed instruments."
+      "text": "The Lord God causes me to be strong. He makes my feet run safely over the rocks and hills, like a deer's feet. This prayer is for the music leader. He must use stringed instruments."
     }
   ]
 };

@@ -10,19 +10,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "God said, ‘There will be light!’And there was light. And there was light."
+      "text": "God said, ‘There will be light! ’And there was light. And there was light."
     },
     {
       "verse": "4",
-      "text": "God saw that the light was good.He caused the light and the dark to be separate. He caused the light and the dark to be separate."
+      "text": "God saw that the light was good. He caused the light and the dark to be separate. He caused the light and the dark to be separate."
     },
     {
       "verse": "5",
-      "text": "God called the light ‘day’. He called the dark ‘night’.Evening passed and then it was morning.That was the first day. Evening passed and then it was morning. That was the first day."
+      "text": "God called the light ‘day’. He called the dark ‘night’. Evening passed and then it was morning. That was the first day. Evening passed and then it was morning. That was the first day."
     },
     {
       "verse": "6",
-      "text": "Then God said, ‘A wide space will appear between the waters. So the waters will be in two separate places.’"
+      "text": "Then God said, ‘A wide space will appear between the waters. So the waters will be in two separate places. ’"
     },
     {
       "verse": "7",
@@ -30,27 +30,27 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "God called the wide space ‘sky’.Evening passed and then it was morning.That was the second day. Evening passed and then it was morning. That was the second day."
+      "text": "God called the wide space ‘sky’. Evening passed and then it was morning. That was the second day. Evening passed and then it was morning. That was the second day."
     },
     {
       "verse": "9",
-      "text": "God said, ‘The water that is under the sky will come together in one place. Then dry ground will appear.’And what God said happened. And what God said happened."
+      "text": "God said, ‘The water that is under the sky will come together in one place. Then dry ground will appear. ’And what God said happened. And what God said happened."
     },
     {
       "verse": "10",
-      "text": "God called the dry ground ‘land’. He called the water that had come together ‘sea’.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "God called the dry ground ‘land’. He called the water that had come together ‘sea’. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "11",
-      "text": "Then God said, ‘The land will cause plants to grow. There will be plants with their seeds and trees with their fruits. Each kind of plant and tree will have its own seeds and fruits.’And what God said happened. And what God said happened."
+      "text": "Then God said, ‘The land will cause plants to grow. There will be plants with their seeds and trees with their fruits. Each kind of plant and tree will have its own seeds and fruits. ’And what God said happened. And what God said happened."
     },
     {
       "verse": "12",
-      "text": "All kinds of plants and trees began to grow in the ground. The plants made seeds. The trees made fruits with seeds in them. Each plant made its own kind of seeds.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "All kinds of plants and trees began to grow in the ground. The plants made seeds. The trees made fruits with seeds in them. Each plant made its own kind of seeds. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "13",
-      "text": "Evening passed and then it was morning.That was the third day. That was the third day."
+      "text": "Evening passed and then it was morning. That was the third day. That was the third day."
     },
     {
       "verse": "14",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The lights in the sky will give light to the earth.’And what God said happened."
+      "text": "The lights in the sky will give light to the earth. ’And what God said happened."
     },
     {
       "verse": "16",
@@ -70,47 +70,47 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They were to rule over the day and night. They were to make the time of light separate from the time of dark.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "They were to rule over the day and night. They were to make the time of light separate from the time of dark. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "19",
-      "text": "Evening passed and then it was morning.That was the fourth day. That was the fourth day."
+      "text": "Evening passed and then it was morning. That was the fourth day. That was the fourth day."
     },
     {
       "verse": "20",
-      "text": "God said, ‘The waters will become full with many living things. Birds will appear and fly above the earth, all across the sky.’"
+      "text": "God said, ‘The waters will become full with many living things. Birds will appear and fly above the earth, all across the sky. ’"
     },
     {
       "verse": "21",
-      "text": "God made big animals to live in the sea. He made every different kind of living thing that filled the sea. He made every different kind of bird to fly in the sky.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "God made big animals to live in the sea. He made every different kind of living thing that filled the sea. He made every different kind of bird to fly in the sky. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "22",
-      "text": "God blessed the animals and the birds. He said to them, ‘Give birth to many young ones, so that you grow in number. Fill all the water in the seas. The birds also should become very many, all across the earth.’"
+      "text": "God blessed the animals and the birds. He said to them, ‘Give birth to many young ones, so that you grow in number. Fill all the water in the seas. The birds also should become very many, all across the earth. ’"
     },
     {
       "verse": "23",
-      "text": "Evening passed and then it was morning.That was the fifth day. That was the fifth day."
+      "text": "Evening passed and then it was morning. That was the fifth day. That was the fifth day."
     },
     {
       "verse": "24",
-      "text": "God said, ‘Different kinds of animals will now appear on the land. There will be farm animals and wild animals. There will also be other small animals that move along the ground. There will be many kinds of animals and each kind will be different.’And what God said happened. And what God said happened."
+      "text": "God said, ‘Different kinds of animals will now appear on the land. There will be farm animals and wild animals. There will also be other small animals that move along the ground. There will be many kinds of animals and each kind will be different. ’And what God said happened. And what God said happened."
     },
     {
       "verse": "25",
-      "text": "God made the different kinds of wild animals and the different kinds of farm animals. He made all the different kinds of animals that move along the ground.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
+      "text": "God made the different kinds of wild animals and the different kinds of farm animals. He made all the different kinds of animals that move along the ground. God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "26",
-      "text": "Then God said, ‘We will make humans so that they are very much like us. They will rule over the fish in the sea and over the birds in the sky. They will rule over the farm animals. They will rule over the whole earth and all the animals that move along the ground.’"
+      "text": "Then God said, ‘We will make humans so that they are very much like us. They will rule over the fish in the sea and over the birds in the sky. They will rule over the farm animals. They will rule over the whole earth and all the animals that move along the ground. ’"
     },
     {
       "verse": "27",
-      "text": "God made humans.He made them to be like himself.He made some of them males and some of them females. He made them to be like himself. He made some of them males and some of them females."
+      "text": "God made humans. He made them to be like himself. He made some of them males and some of them females. He made them to be like himself. He made some of them males and some of them females."
     },
     {
       "verse": "28",
-      "text": "God blessed them. He said to them, ‘Give birth to children. Grow in number. Fill the earth and rule over it. Rule over the fish in the sea. Rule over the birds in the sky. Rule over every different kind of living animal that moves along the ground.’"
+      "text": "God blessed them. He said to them, ‘Give birth to children. Grow in number. Fill the earth and rule over it. Rule over the fish in the sea. Rule over the birds in the sky. Rule over every different kind of living animal that moves along the ground. ’"
     },
     {
       "verse": "29",
@@ -118,11 +118,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "I give to the animals green plants for their food. It will be food for all the animals on the earth, all the birds in the sky and all the animals that move along the ground. Everything that has life may eat every kind of green plant.’And what God said happened. And what God said happened."
+      "text": "I give to the animals green plants for their food. It will be food for all the animals on the earth, all the birds in the sky and all the animals that move along the ground. Everything that has life may eat every kind of green plant. ’And what God said happened. And what God said happened."
     },
     {
       "verse": "31",
-      "text": "God looked at everything that he had made. He saw that it was very good.Evening passed. And then it was morning.That was the sixth day."
+      "text": "God looked at everything that he had made. He saw that it was very good. Evening passed. And then it was morning. That was the sixth day."
     }
   ],
   "2": [
@@ -140,7 +140,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "This is what happened when God made the heavens and the earth.When the Lord God made the heavens and the earth,"
+      "text": "This is what happened when God made the heavens and the earth. When the Lord God made the heavens and the earth,"
     },
     {
       "verse": "5",
@@ -192,11 +192,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But you must not eat any fruit from the tree that gives knowledge of good and evil. If you do eat fruit from that tree, that day you will certainly die.’"
+      "text": "But you must not eat any fruit from the tree that gives knowledge of good and evil. If you do eat fruit from that tree, that day you will certainly die. ’"
     },
     {
       "verse": "18",
-      "text": "Then the Lord God said, ‘It is not good for the man to live alone. I will make a helper who is right for him.’"
+      "text": "Then the Lord God said, ‘It is not good for the man to live alone. I will make a helper who is right for him. ’"
     },
     {
       "verse": "19",
@@ -204,7 +204,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "So the man gave names to the farm animals, to the birds in the sky and to all the other animals.But none of these animals was the right helper for the man."
+      "text": "So the man gave names to the farm animals, to the birds in the sky and to all the other animals. But none of these animals was the right helper for the man."
     },
     {
       "verse": "21",
@@ -216,7 +216,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then the man said, ‘Finally, this is someone who is right for me. She has bones that are taken from my bones. Her body comes from my body. I will call her “woman” because God used me, a man, to make her.’"
+      "text": "Then the man said, ‘Finally, this is someone who is right for me. She has bones that are taken from my bones. Her body comes from my body. I will call her “woman” because God used me, a man, to make her. ’"
     },
     {
       "verse": "24",
@@ -230,7 +230,7 @@ module.exports = {
   "3": [
     {
       "verse": "1",
-      "text": "The Lord God made many wild animals. But the snake was the most clever of them all. The snake asked the woman, ‘Did God say, “You must not eat the fruit from any tree in the garden”? Is that really true?’"
+      "text": "The Lord God made many wild animals. But the snake was the most clever of them all. The snake asked the woman, ‘Did God say, “You must not eat the fruit from any tree in the garden”? Is that really true? ’"
     },
     {
       "verse": "2",
@@ -238,7 +238,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But God said, “You must not eat fruit from the tree that is in the middle of the garden. You must not even touch it. If you do that, you will die.” ’"
+      "text": "But God said, “You must not eat fruit from the tree that is in the middle of the garden. You must not even touch it. If you do that, you will die. ” ’"
     },
     {
       "verse": "4",
@@ -246,7 +246,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "God knows that when you eat the fruit from this tree, you will understand things. You will become like God himself. You will know about good things and evil things.’"
+      "text": "God knows that when you eat the fruit from this tree, you will understand things. You will become like God himself. You will know about good things and evil things. ’"
     },
     {
       "verse": "6",
@@ -262,39 +262,39 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Lord God called out to the man. He said to him, ‘Where are you?’"
+      "text": "The Lord God called out to the man. He said to him, ‘Where are you? ’"
     },
     {
       "verse": "10",
-      "text": "The man replied, ‘I heard you in the garden. I was afraid because I had no clothes. So I hid myself from you.’"
+      "text": "The man replied, ‘I heard you in the garden. I was afraid because I had no clothes. So I hid myself from you. ’"
     },
     {
       "verse": "11",
-      "text": "The Lord God said, ‘Who told you that you had no clothes? Have you eaten fruit from the tree that I said you must not eat?’"
+      "text": "The Lord God said, ‘Who told you that you had no clothes? Have you eaten fruit from the tree that I said you must not eat? ’"
     },
     {
       "verse": "12",
-      "text": "The man said, ‘It was the woman that you put here with me. She gave me some fruit from the tree. So I ate it.’"
+      "text": "The man said, ‘It was the woman that you put here with me. She gave me some fruit from the tree. So I ate it. ’"
     },
     {
       "verse": "13",
-      "text": "Then the Lord God said to the woman, ‘Why have you done a thing like that?’ The woman replied, ‘It was the snake. The snake deceived me with a lie. So I ate the fruit.’"
+      "text": "Then the Lord God said to the woman, ‘Why have you done a thing like that? ’ The woman replied, ‘It was the snake. The snake deceived me with a lie. So I ate the fruit. ’"
     },
     {
       "verse": "14",
-      "text": "The Lord God said to the snake,‘Because you have done this, I will curse you.Among all the farm animals and wild animals,you are the one that I will curse.From now on, you will move across the ground on your stomach.You will eat dust from the ground.You will do this for your whole life. ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life."
+      "text": "The Lord God said to the snake, ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life. ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life."
     },
     {
       "verse": "15",
-      "text": "I will cause you and the woman to become enemies.Your descendants and her descendants will always be enemies.One of her descendants will attack your head.You will attack his heel.’ Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel.’"
+      "text": "I will cause you and the woman to become enemies. Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel. ’ Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel. ’"
     },
     {
       "verse": "16",
-      "text": "God said to the woman, ‘I will cause you to have great pain when you give birth to children. You will want to please your husband. But he will rule over you as your master.’"
+      "text": "God said to the woman, ‘I will cause you to have great pain when you give birth to children. You will want to please your husband. But he will rule over you as your master. ’"
     },
     {
       "verse": "17",
-      "text": "Then God said to Adam, ‘You listened to your wife and you did what she said. You ate fruit from the tree after I told you, “You must not eat fruit from this tree.” Because you did that, I will curse the ground. You will have to work very hard to make plants grow in it for your food. It will be like this for your whole life."
+      "text": "Then God said to Adam, ‘You listened to your wife and you did what she said. You ate fruit from the tree after I told you, “You must not eat fruit from this tree. ” Because you did that, I will curse the ground. You will have to work very hard to make plants grow in it for your food. It will be like this for your whole life."
     },
     {
       "verse": "18",
@@ -302,7 +302,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You will have to work hard for a long time before you have any food to eat. You will do this for your whole life until you die. Then you will return into the ground. That is where you came from. I made you from the soil of the ground, and you will become soil again.’"
+      "text": "You will have to work hard for a long time before you have any food to eat. You will do this for your whole life until you die. Then you will return into the ground. That is where you came from. I made you from the soil of the ground, and you will become soil again. ’"
     },
     {
       "verse": "20",
@@ -314,7 +314,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The Lord God said, ‘The man has now become like one of us because he understands good and evil. So we must not let him take fruit from the tree that gives life. If he eats that fruit, he will live for ever.’"
+      "text": "The Lord God said, ‘The man has now become like one of us because he understands good and evil. So we must not let him take fruit from the tree that gives life. If he eats that fruit, he will live for ever. ’"
     },
     {
       "verse": "23",
@@ -328,7 +328,7 @@ module.exports = {
   "4": [
     {
       "verse": "1",
-      "text": "Adam had sex with his wife, Eve. She became pregnant. She gave birth to Cain. She said, ‘With the Lord's help, I have given birth to a son.’"
+      "text": "Adam had sex with his wife, Eve. She became pregnant. She gave birth to Cain. She said, ‘With the Lord's help, I have given birth to a son. ’"
     },
     {
       "verse": "2",
@@ -352,15 +352,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "If you do what is right, I will accept you. But if you do not do the right thing, sin will be very near to you. It will be like a wild animal at your door that is ready to eat you. But you must become its master.’"
+      "text": "If you do what is right, I will accept you. But if you do not do the right thing, sin will be very near to you. It will be like a wild animal at your door that is ready to eat you. But you must become its master. ’"
     },
     {
       "verse": "8",
-      "text": "One day Cain said to his brother Abel, ‘We should go out to the fields.’ While they were in the fields, Cain attacked his brother Abel. He killed Abel."
+      "text": "One day Cain said to his brother Abel, ‘We should go out to the fields. ’ While they were in the fields, Cain attacked his brother Abel. He killed Abel."
     },
     {
       "verse": "9",
-      "text": "Then the Lord said to Cain, ‘Where is Abel, your brother?’ Cain replied, ‘I do not know where he is. Must I always keep my brother safe?’"
+      "text": "Then the Lord said to Cain, ‘Where is Abel, your brother? ’ Cain replied, ‘I do not know where he is. Must I always keep my brother safe? ’"
     },
     {
       "verse": "10",
@@ -372,7 +372,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When you work hard to dig the ground, no plants will grow in it for your food. You will travel from place to place. You will not have your own home.’"
+      "text": "When you work hard to dig the ground, no plants will grow in it for your food. You will travel from place to place. You will not have your own home. ’"
     },
     {
       "verse": "13",
@@ -380,11 +380,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Now you are making me leave my home here on the land. I will be far away from where you are. I will be a traveller without a home. If someone sees me, they will kill me.’"
+      "text": "Now you are making me leave my home here on the land. I will be far away from where you are. I will be a traveller without a home. If someone sees me, they will kill me. ’"
     },
     {
       "verse": "15",
-      "text": "But the Lord said to Cain, ‘No! If anyone kills Cain, I will punish that person seven times more than I have punished you.’Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain. Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain."
+      "text": "But the Lord said to Cain, ‘No! If anyone kills Cain, I will punish that person seven times more than I have punished you. ’Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain. Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain."
     },
     {
       "verse": "16",
@@ -416,25 +416,25 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Lamech said to his two wives,‘Adah and Zillah, listen to me!My wives, hear my words!A man attacked me, so I killed him.Yes, I killed a young man because he hurt me. ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me."
+      "text": "Lamech said to his two wives, ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me. ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me."
     },
     {
       "verse": "24",
-      "text": "If someone kills Cain, God will punish that person seven times more.But if someone attacks me, I will punish that person 77 times more!’ But if someone attacks me, I will punish that person 77 times more!’"
+      "text": "If someone kills Cain, God will punish that person seven times more. But if someone attacks me, I will punish that person 77 times more! ’ But if someone attacks me, I will punish that person 77 times more! ’"
     },
     {
       "verse": "25",
-      "text": "Adam again had sex with his wife, Eve. She gave birth to another son. She called him Seth. Eve said, ‘God has given me another child to take the place of Abel, because Cain killed Abel.’ At that time, people began to use the name of the Lord to worship him."
+      "text": "Adam again had sex with his wife, Eve. She gave birth to another son. She called him Seth. Eve said, ‘God has given me another child to take the place of Abel, because Cain killed Abel. ’ At that time, people began to use the name of the Lord to worship him."
     },
     {
       "verse": "26",
-      "text": "Later Seth had a son and he called him Enosh.At that time, people began to use the name of the Lord to worship him."
+      "text": "Later Seth had a son and he called him Enosh. At that time, people began to use the name of the Lord to worship him."
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "This is the report about Adam and his family.When God made men and women, he made them like himself."
+      "text": "This is the report about Adam and his family. When God made men and women, he made them like himself."
     },
     {
       "verse": "2",
@@ -546,7 +546,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "He called his son Noah. Lamech said, ‘He will help us in our difficult work on the land. We have pain when we work on the land to get food. That is because the Lord God cursed the ground.’"
+      "text": "He called his son Noah. Lamech said, ‘He will help us in our difficult work on the land. We have pain when we work on the land to get food. That is because the Lord God cursed the ground. ’"
     },
     {
       "verse": "30",
@@ -572,7 +572,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Lord said, ‘My Spirit will not give life to humans for ever. One day they will die. I will not let them live for more than 120 years. Then they will die.’"
+      "text": "The Lord said, ‘My Spirit will not give life to humans for ever. One day they will die. I will not let them live for more than 120 years. Then they will die. ’"
     },
     {
       "verse": "4",
@@ -588,7 +588,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So the Lord said, ‘I made humans, but now I will destroy them. I will completely take them off the earth. As well as human people, I will also destroy the animals, the living things that move on the ground, and the birds. I am sorry that I made them.’"
+      "text": "So the Lord said, ‘I made humans, but now I will destroy them. I will completely take them off the earth. As well as human people, I will also destroy the animals, the living things that move on the ground, and the birds. I am sorry that I made them. ’"
     },
     {
       "verse": "8",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This is the report about Noah and his family.Noah was a good man. He was the only person at that time who lived in a completely right way. He stayed near to God in his life."
+      "text": "This is the report about Noah and his family. Noah was a good man. He was the only person at that time who lived in a completely right way. He stayed near to God in his life."
     },
     {
       "verse": "10",
@@ -644,7 +644,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "You must also take every different kind of food. That will be food for you and food for the animals.’"
+      "text": "You must also take every different kind of food. That will be food for you and food for the animals. ’"
     },
     {
       "verse": "22",
@@ -666,7 +666,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "In seven days, I will cause rain to fall on the earth. It will rain for 40 days and 40 nights. In that way, I will destroy every living thing that I have made on the earth.’"
+      "text": "In seven days, I will cause rain to fall on the earth. It will rain for 40 days and 40 nights. In that way, I will destroy every living thing that I have made on the earth. ’"
     },
     {
       "verse": "5",
@@ -816,7 +816,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Bring every different kind of living animal out of the ship. Bring out the birds, the animals, and the living things that move across the ground. Now they may give birth to young ones again. They can grow in number all over the earth.’"
+      "text": "Bring every different kind of living animal out of the ship. Bring out the birds, the animals, and the living things that move across the ground. Now they may give birth to young ones again. They can grow in number all over the earth. ’"
     },
     {
       "verse": "18",
@@ -836,7 +836,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "As long as the earth continues to be here,the time for people to plant seeds will come each year.The time for harvest will come each year.Times of cold and heat will always come.Summer and winter will always come.Day and night will never stop.’"
+      "text": "As long as the earth continues to be here, the time for people to plant seeds will come each year. The time for harvest will come each year. Times of cold and heat will always come. Summer and winter will always come. Day and night will never stop. ’"
     }
   ],
   "9": [
@@ -862,11 +862,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God made people so that they were like himself.So if anyone kills a human,another human must kill him. So if anyone kills a human, another human must kill him."
+      "text": "God made people so that they were like himself. So if anyone kills a human, another human must kill him. So if anyone kills a human, another human must kill him."
     },
     {
       "verse": "7",
-      "text": "But as for you, you should give birth to many children so that you become very many people. There will be many people and they will live all over the earth.’"
+      "text": "But as for you, you should give birth to many children so that you become very many people. There will be many people and they will live all over the earth. ’"
     },
     {
       "verse": "8",
@@ -882,7 +882,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "This is the covenant that I promise to keep: I will never cause water to destroy all living things on the earth again. Deep water will never again come again to destroy the earth.’"
+      "text": "This is the covenant that I promise to keep: I will never cause water to destroy all living things on the earth again. Deep water will never again come again to destroy the earth. ’"
     },
     {
       "verse": "12",
@@ -902,11 +902,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "When I see the rainbow in the clouds, I will remember my covenant. It is a promise that I have made with every kind of living thing on the earth.’"
+      "text": "When I see the rainbow in the clouds, I will remember my covenant. It is a promise that I have made with every kind of living thing on the earth. ’"
     },
     {
       "verse": "17",
-      "text": "Then God said to Noah, ‘The rainbow will show you that I will certainly keep my promise. I will keep my covenant that is between me and everything that lives on the earth.’"
+      "text": "Then God said to Noah, ‘The rainbow will show you that I will certainly keep my promise. I will keep my covenant that is between me and everything that lives on the earth. ’"
     },
     {
       "verse": "18",
@@ -938,7 +938,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "He said, ‘I curse Canaan! He will become a slave that must serve his brothers.’"
+      "text": "He said, ‘I curse Canaan! He will become a slave that must serve his brothers. ’"
     },
     {
       "verse": "26",
@@ -946,7 +946,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "I pray that God will make the land of Japheth and his descendants grow bigger. I pray that the descendants of Japheth will share good things with Shem. I pray that Canaan will become Japheth's slave.’"
+      "text": "I pray that God will make the land of Japheth and his descendants grow bigger. I pray that the descendants of Japheth will share good things with Shem. I pray that Canaan will become Japheth's slave. ’"
     },
     {
       "verse": "28",
@@ -960,7 +960,7 @@ module.exports = {
   "10": [
     {
       "verse": "1",
-      "text": "This is the report about Noah's sons, Shem, Ham and Japheth, and their families.After the deep water went away, they all had children themselves. After the deep water went away, they all had children themselves."
+      "text": "This is the report about Noah's sons, Shem, Ham and Japheth, and their families. After the deep water went away, they all had children themselves. After the deep water went away, they all had children themselves."
     },
     {
       "verse": "2",
@@ -992,7 +992,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Lord helped Nimrod to be a great hunter. That is why people say, ‘Like Nimrod, a great hunter that the Lord helped.’"
+      "text": "The Lord helped Nimrod to be a great hunter. That is why people say, ‘Like Nimrod, a great hunter that the Lord helped. ’"
     },
     {
       "verse": "10",
@@ -1098,11 +1098,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They said to each other, ‘We should make bricks and cook them until they are hard.’ These people used bricks instead of stones to build houses. They used tar to hold the bricks together, instead of cement."
+      "text": "They said to each other, ‘We should make bricks and cook them until they are hard. ’ These people used bricks instead of stones to build houses. They used tar to hold the bricks together, instead of cement."
     },
     {
       "verse": "4",
-      "text": "They said, ‘Let us build a city to live in. We should also build a very tall tower. The tower will go up into the heavens. Then we will always be famous. If we do that, we will not have to separate and go to live in different places on the earth.’"
+      "text": "They said, ‘Let us build a city to live in. We should also build a very tall tower. The tower will go up into the heavens. Then we will always be famous. If we do that, we will not have to separate and go to live in different places on the earth. ’"
     },
     {
       "verse": "5",
@@ -1114,7 +1114,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Now we must go down to them. We must make their language become confused. Then they will not be able to understand each other.’"
+      "text": "Now we must go down to them. We must make their language become confused. Then they will not be able to understand each other. ’"
     },
     {
       "verse": "8",
@@ -1126,7 +1126,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This is the report about Shem and his family.Two years after the deep water went away from the earth, Shem was 100 years old. He became the father of Arphaxad."
+      "text": "This is the report about Shem and his family. Two years after the deep water went away from the earth, Shem was 100 years old. He became the father of Arphaxad."
     },
     {
       "verse": "11",
@@ -1194,7 +1194,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "This is the report about Terah and his family.Terah became the father of Abram, Nahor and Haran. Haran became the father of Lot."
+      "text": "This is the report about Terah and his family. Terah became the father of Abram, Nahor and Haran. Haran became the father of Lot."
     },
     {
       "verse": "28",
@@ -1210,7 +1210,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Terah took his son Abram and his grandson Lot. (Lot was Haran's son.) Terah also took Abram's wife Sarai. They all left Ur, the land of the Chaldeans. They began to go to Canaan. But when they came to Haran, they stayed there."
+      "text": "Terah took his son Abram and his grandson Lot. (Lot was Haran's son. ) Terah also took Abram's wife Sarai. They all left Ur, the land of the Chaldeans. They began to go to Canaan. But when they came to Haran, they stayed there."
     },
     {
       "verse": "32",
@@ -1228,7 +1228,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I will bless those people who bless you. But I will curse anyone who insults you. Through you, I will bless all the families of people on the earth.’"
+      "text": "I will bless those people who bless you. But I will curse anyone who insults you. Through you, I will bless all the families of people on the earth. ’"
     },
     {
       "verse": "4",
@@ -1236,7 +1236,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Abram took his wife Sarai, and his nephew Lot. He took everything that belonged to them. He also took the people that worked for them in Haran. They all left to go to the land of Canaan.When they arrived in Canaan,"
+      "text": "Abram took his wife Sarai, and his nephew Lot. He took everything that belonged to them. He also took the people that worked for them in Haran. They all left to go to the land of Canaan. When they arrived in Canaan,"
     },
     {
       "verse": "6",
@@ -1244,7 +1244,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord appeared to Abram there. He said, ‘I will give this land to your descendants.’ So Abram built an altar in that place to worship the Lord. He did that because the Lord had appeared to him."
+      "text": "The Lord appeared to Abram there. He said, ‘I will give this land to your descendants. ’ So Abram built an altar in that place to worship the Lord. He did that because the Lord had appeared to him."
     },
     {
       "verse": "8",
@@ -1264,11 +1264,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When the Egyptians see you they will say, “This is Abram's wife.” Then they will kill me, but they will let you live."
+      "text": "When the Egyptians see you they will say, “This is Abram's wife. ” Then they will kill me, but they will let you live."
     },
     {
       "verse": "13",
-      "text": "So tell them that you are my sister. Then they will do good things to me, because they want to please you. They will not kill me because they will think that you are my sister.’"
+      "text": "So tell them that you are my sister. Then they will do good things to me, because they want to please you. They will not kill me because they will think that you are my sister. ’"
     },
     {
       "verse": "14",
@@ -1292,7 +1292,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You told me “She is my sister”. As a result, I took her to be my wife. Now, here is your wife. Take her and go away!’"
+      "text": "You told me “She is my sister”. As a result, I took her to be my wife. Now, here is your wife. Take her and go away! ’"
     },
     {
       "verse": "20",
@@ -1326,7 +1326,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Abram's shepherds and Lot's shepherds began to quarrel with each other. (At that time, Canaanites and Perizzites also lived in the land.)"
+      "text": "Abram's shepherds and Lot's shepherds began to quarrel with each other. (At that time, Canaanites and Perizzites also lived in the land. )"
     },
     {
       "verse": "8",
@@ -1334,11 +1334,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Look everywhere! There is enough land for all of us. We must go different ways. If you go to the left, I will go to the right. If you go to the right, I will go to the left.’"
+      "text": "Look everywhere! There is enough land for all of us. We must go different ways. If you go to the left, I will go to the right. If you go to the right, I will go to the left. ’"
     },
     {
       "verse": "10",
-      "text": "Lot looked up and he saw the flat land of Jordan, as far as Zoar. He saw that it had lots of water, like the garden of the Lord. It was good land, like the land of Egypt. (This was before the Lord destroyed the cities there called Sodom and Gomorrah.)"
+      "text": "Lot looked up and he saw the flat land of Jordan, as far as Zoar. He saw that it had lots of water, like the garden of the Lord. It was good land, like the land of Egypt. (This was before the Lord destroyed the cities there called Sodom and Gomorrah. )"
     },
     {
       "verse": "11",
@@ -1366,7 +1366,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Go and travel round all this land. Look at it, because I am giving it to you!’"
+      "text": "Go and travel round all this land. Look at it, because I am giving it to you! ’"
     },
     {
       "verse": "18",
@@ -1376,19 +1376,19 @@ module.exports = {
   "14": [
     {
       "verse": "1",
-      "text": "Now there were many kings living in that land, at that time.  They fought against each other.  One fight was when Kedorlaomer had ruled over the other kings for 12 years."
+      "text": "Now there were many kings living in that land, at that time. They fought against each other. One fight was when Kedorlaomer had ruled over the other kings for 12 years."
     },
     {
       "verse": "2",
-      "text": "And in the next year, five kings made one group like that and fought against him.  Kedorlaomer joined with three other kings.  So it was four kings against five other kings."
+      "text": "And in the next year, five kings made one group like that and fought against him. Kedorlaomer joined with three other kings. So it was four kings against five other kings."
     },
     {
       "verse": "3",
-      "text": "The four kings were Amraphel king of Shinar, Arioch king of Ellasar, Kedorlaomer king of Elam and Tidal king of Goiim.  Those kings fought a war against Bera king of Sodom, Birsha king of Gomorrah, Shinab king of Admah, Shemeber king of Zeboiim and the king of Bela.  (Bela is another name for the town of Zoar."
+      "text": "The four kings were Amraphel king of Shinar, Arioch king of Ellasar, Kedorlaomer king of Elam and Tidal king of Goiim. Those kings fought a war against Bera king of Sodom, Birsha king of Gomorrah, Shinab king of Admah, Shemeber king of Zeboiim and the king of Bela. (Bela is another name for the town of Zoar."
     },
     {
       "verse": "4",
-      "text": ") They fought in the Valley of Siddim.  (That is the Salt Sea."
+      "text": ") They fought in the Valley of Siddim. (That is the Salt Sea."
     },
     {
       "verse": "5",
@@ -1400,7 +1400,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They then went back. They went to En Mishpat. (That is Kadesh.) They took the whole land of the Amalekites. They also took the land of the Amorites who were living in Hazezon Tamar."
+      "text": "They then went back. They went to En Mishpat. (That is Kadesh. ) They took the whole land of the Amalekites. They also took the land of the Amorites who were living in Hazezon Tamar."
     },
     {
       "verse": "8",
@@ -1424,7 +1424,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "At that time, Abram, the Hebrew man, was living near the special oak trees of Mamre. Mamre was an Amorite. He was the brother of Eshcol and Aner. These men had agreed to be Abram's friends.A man ran away from Sodom. He told Abram everything that had happened."
+      "text": "At that time, Abram, the Hebrew man, was living near the special oak trees of Mamre. Mamre was an Amorite. He was the brother of Eshcol and Aner. These men had agreed to be Abram's friends. A man ran away from Sodom. He told Abram everything that had happened."
     },
     {
       "verse": "14",
@@ -1452,11 +1452,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Praise the Most High God! He has given you power over your enemies.’After that, Abram gave Melchizedek a tenth part of everything."
+      "text": "Praise the Most High God! He has given you power over your enemies. ’After that, Abram gave Melchizedek a tenth part of everything."
     },
     {
       "verse": "21",
-      "text": "Then the king of Sodom said to Abram, ‘Give back to me all my people. Take everything else for yourself.’"
+      "text": "Then the king of Sodom said to Abram, ‘Give back to me all my people. Take everything else for yourself. ’"
     },
     {
       "verse": "22",
@@ -1464,17 +1464,17 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I promised that I would not take anything that belonged to you. I will not take the smallest thing, not even a piece of string, or part of a shoe. Then you will never be able to say, “I made Abram become rich.”"
+      "text": "I promised that I would not take anything that belonged to you. I will not take the smallest thing, not even a piece of string, or part of a shoe. Then you will never be able to say, “I made Abram become rich. ”"
     },
     {
       "verse": "24",
-      "text": "I myself will accept only the food that my young men have eaten. But Aner, Eshcol and Mamre went with me to help me to fight. They should take their part of the things that we brought back with us.’"
+      "text": "I myself will accept only the food that my young men have eaten. But Aner, Eshcol and Mamre went with me to help me to fight. They should take their part of the things that we brought back with us. ’"
     }
   ],
   "15": [
     {
       "verse": "1",
-      "text": "After this, the Lord spoke to Abram in a dream. God said, ‘Do not be afraid Abram. I will keep you safe. I myself will give you many good gifts.’"
+      "text": "After this, the Lord spoke to Abram in a dream. God said, ‘Do not be afraid Abram. I will keep you safe. I myself will give you many good gifts. ’"
     },
     {
       "verse": "2",
@@ -1482,15 +1482,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Because you have not given me any children, understand this: Everything that I have will one day belong to a servant in my house.’"
+      "text": "Because you have not given me any children, understand this: Everything that I have will one day belong to a servant in my house. ’"
     },
     {
       "verse": "4",
-      "text": "The Lord gave Abram this message: ‘No! Eliezer will not be the one who receives your things. You will have your own son. He will be the one who receives everything that you have.’"
+      "text": "The Lord gave Abram this message: ‘No! Eliezer will not be the one who receives your things. You will have your own son. He will be the one who receives everything that you have. ’"
     },
     {
       "verse": "5",
-      "text": "The Lord took Abram outside. He said to Abram, ‘Look up at the sky. Count the stars. They are too many for you to count!’ Then God said, ‘That is how many descendants you will have.’"
+      "text": "The Lord took Abram outside. He said to Abram, ‘Look up at the sky. Count the stars. They are too many for you to count! ’ Then God said, ‘That is how many descendants you will have. ’"
     },
     {
       "verse": "6",
@@ -1498,15 +1498,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord also said to Abram, ‘I am the Lord. I brought you out of Ur of the Chaldeans to bring you to this land. I am giving it to you. It will belong to you.’"
+      "text": "The Lord also said to Abram, ‘I am the Lord. I brought you out of Ur of the Chaldeans to bring you to this land. I am giving it to you. It will belong to you. ’"
     },
     {
       "verse": "8",
-      "text": "But Abram said, ‘Almighty Lord, how can I be sure that this land will belong to me?’"
+      "text": "But Abram said, ‘Almighty Lord, how can I be sure that this land will belong to me? ’"
     },
     {
       "verse": "9",
-      "text": "The Lord said to Abram, ‘Bring a young cow, a goat and a male sheep to offer them to me. Each animal must be three years old. Also bring a dove and a young pigeon.’"
+      "text": "The Lord said to Abram, ‘Bring a young cow, a goat and a male sheep to offer them to me. Each animal must be three years old. Also bring a dove and a young pigeon. ’"
     },
     {
       "verse": "10",
@@ -1534,7 +1534,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "After four generations, your descendants will come back here to Canaan. At that time, I will punish the Amorites because they do very bad things. But the time has not yet arrived that I will punish them.’"
+      "text": "After four generations, your descendants will come back here to Canaan. At that time, I will punish the Amorites because they do very bad things. But the time has not yet arrived that I will punish them. ’"
     },
     {
       "verse": "17",
@@ -1554,7 +1554,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Amorites, Canaanites, Girgashites and Jebusites.’"
+      "text": "Amorites, Canaanites, Girgashites and Jebusites. ’"
     }
   ],
   "16": [
@@ -1564,7 +1564,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Sarai said to Abram, ‘The Lord has not let me have any children. Go and sleep with my servant. Then if she gives birth, her children will be my family.’ Abram agreed to do this."
+      "text": "Sarai said to Abram, ‘The Lord has not let me have any children. Go and sleep with my servant. Then if she gives birth, her children will be my family. ’ Abram agreed to do this."
     },
     {
       "verse": "3",
@@ -1576,11 +1576,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then Sarai said to Abram, ‘It is because of you that Hagar is now insulting me. I gave her to you so that you could have sex with her. Now she is pregnant and she does not respect me. The Lord will decide who is right, you or me.’"
+      "text": "Then Sarai said to Abram, ‘It is because of you that Hagar is now insulting me. I gave her to you so that you could have sex with her. Now she is pregnant and she does not respect me. The Lord will decide who is right, you or me. ’"
     },
     {
       "verse": "6",
-      "text": "Abram said to Sarai, ‘Hagar is your servant and you have authority over her. Do to her whatever you think is right.’ Then Sarai caused trouble for Hagar. So Hagar ran away from Sarai."
+      "text": "Abram said to Sarai, ‘Hagar is your servant and you have authority over her. Do to her whatever you think is right. ’ Then Sarai caused trouble for Hagar. So Hagar ran away from Sarai."
     },
     {
       "verse": "7",
@@ -1588,27 +1588,27 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The angel said, ‘Sarai's servant, Hagar, where have you come from? Where are you going?’ Hagar replied, ‘I am running away from Sarai. I am her servant.’"
+      "text": "The angel said, ‘Sarai's servant, Hagar, where have you come from? Where are you going? ’ Hagar replied, ‘I am running away from Sarai. I am her servant. ’"
     },
     {
       "verse": "9",
-      "text": "The angel of the Lord told Hagar, ‘Go back to Sarai. You are her servant and you must obey her.’"
+      "text": "The angel of the Lord told Hagar, ‘Go back to Sarai. You are her servant and you must obey her. ’"
     },
     {
       "verse": "10",
-      "text": "The angel also said, ‘I will make the number of your descendants become very many. They will be too many for people to count.’"
+      "text": "The angel also said, ‘I will make the number of your descendants become very many. They will be too many for people to count. ’"
     },
     {
       "verse": "11",
-      "text": "The angel of the Lord said to Hagar,‘Now you are pregnant and you will give birth to a son.When you cried in pain, the Lord heard you,so you must give your son the name “Ishmael”. ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”."
+      "text": "The angel of the Lord said to Hagar, ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”. ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”."
     },
     {
       "verse": "12",
-      "text": "Like a wild donkey, nobody will be able to rule him.He will fight against everyone, and everyone will fight against him.He will think that everyone is his enemy.He will keep away from his brothers.’ He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers.’"
+      "text": "Like a wild donkey, nobody will be able to rule him. He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers. ’ He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers. ’"
     },
     {
       "verse": "13",
-      "text": "When Hagar heard what the angel said, she said to herself, ‘I have seen the God who sees me!’ So she called the Lord ‘The God who sees me.’"
+      "text": "When Hagar heard what the angel said, she said to herself, ‘I have seen the God who sees me! ’ So she called the Lord ‘The God who sees me. ’"
     },
     {
       "verse": "14",
@@ -1630,7 +1630,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then I will certainly keep my covenant with you. I will make your descendants grow in number.’"
+      "text": "Then I will certainly keep my covenant with you. I will make your descendants grow in number. ’"
     },
     {
       "verse": "3",
@@ -1654,7 +1654,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "You are now living here in Canaan as a foreign person. But I will give all of this land to you and to your descendants. It will belong to them for ever. I will be their God.’"
+      "text": "You are now living here in Canaan as a foreign person. But I will give all of this land to you and to your descendants. It will belong to them for ever. I will be their God. ’"
     },
     {
       "verse": "9",
@@ -1678,7 +1678,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "If any male person among you has not been circumcised, I will not accept him as one of my people. He must become separate from his people. He has not obeyed my covenant.’"
+      "text": "If any male person among you has not been circumcised, I will not accept him as one of my people. He must become separate from his people. He has not obeyed my covenant. ’"
     },
     {
       "verse": "15",
@@ -1686,15 +1686,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "I will bless her. She will give birth to a son for you. Many nations of people will be her descendants. Some of them will become kings. That is how much I will bless her!’"
+      "text": "I will bless her. She will give birth to a son for you. Many nations of people will be her descendants. Some of them will become kings. That is how much I will bless her! ’"
     },
     {
       "verse": "17",
-      "text": "Abraham fell down so that his face touched the ground. He laughed and he said to himself, ‘I am now 100 years old. That is too old to have a son. Sarah is 90 years old, so she could never give birth to a child. That is too old to have a child.’"
+      "text": "Abraham fell down so that his face touched the ground. He laughed and he said to himself, ‘I am now 100 years old. That is too old to have a son. Sarah is 90 years old, so she could never give birth to a child. That is too old to have a child. ’"
     },
     {
       "verse": "18",
-      "text": "So Abraham said to God, ‘I would be happy if you would bless Ishmael as my son.’"
+      "text": "So Abraham said to God, ‘I would be happy if you would bless Ishmael as my son. ’"
     },
     {
       "verse": "19",
@@ -1706,7 +1706,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But I will make my covenant with Isaac, not with Ishmael. At about this time next year, Sarah will give birth to your son, Isaac.’"
+      "text": "But I will make my covenant with Isaac, not with Ishmael. At about this time next year, Sarah will give birth to your son, Isaac. ’"
     },
     {
       "verse": "22",
@@ -1752,11 +1752,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Let me also bring some food for you to eat. Now that you have come to my home, you should rest and become strong again. Then you will be ready to continue with your journey.’ The men replied, ‘That is good. Please do what you have said.’"
+      "text": "Let me also bring some food for you to eat. Now that you have come to my home, you should rest and become strong again. Then you will be ready to continue with your journey. ’ The men replied, ‘That is good. Please do what you have said. ’"
     },
     {
       "verse": "6",
-      "text": "Abraham went quickly to the tent. He said to Sarah, ‘Be quick! Get plenty of good flour and make bread with it.’"
+      "text": "Abraham went quickly to the tent. He said to Sarah, ‘Be quick! Get plenty of good flour and make bread with it. ’"
     },
     {
       "verse": "7",
@@ -1768,11 +1768,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then the men asked Abraham, ‘Where is Sarah, your wife?’ Abraham replied, ‘She is there in the tent.’"
+      "text": "Then the men asked Abraham, ‘Where is Sarah, your wife? ’ Abraham replied, ‘She is there in the tent. ’"
     },
     {
       "verse": "10",
-      "text": "Then one of the men said, ‘I will certainly return to you at about this time next year. At that time Sarah, your wife, will have a son!’Sarah was listening to all this. She was at the door of the tent, near to where they were talking."
+      "text": "Then one of the men said, ‘I will certainly return to you at about this time next year. At that time Sarah, your wife, will have a son! ’Sarah was listening to all this. She was at the door of the tent, near to where they were talking."
     },
     {
       "verse": "11",
@@ -1780,19 +1780,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So Sarah laughed to herself. She thought, ‘I have become old and weak. My husband is also old. I will never have a baby and be happy like that.’"
+      "text": "So Sarah laughed to herself. She thought, ‘I have become old and weak. My husband is also old. I will never have a baby and be happy like that. ’"
     },
     {
       "verse": "13",
-      "text": "Then the Lord said to Abraham, ‘Why did Sarah laugh like that? She said, “I am too old to have a child.”"
+      "text": "Then the Lord said to Abraham, ‘Why did Sarah laugh like that? She said, “I am too old to have a child. ”"
     },
     {
       "verse": "14",
-      "text": "But surely, nothing is too difficult for the Lord to do. At this time next year, I will return to you and Sarah will have a son.’"
+      "text": "But surely, nothing is too difficult for the Lord to do. At this time next year, I will return to you and Sarah will have a son. ’"
     },
     {
       "verse": "15",
-      "text": "Then Sarah was afraid. So she told a lie. She said, ‘I did not laugh.’ But the Lord said, ‘Yes, you did laugh.’"
+      "text": "Then Sarah was afraid. So she told a lie. She said, ‘I did not laugh. ’ But the Lord said, ‘Yes, you did laugh. ’"
     },
     {
       "verse": "16",
@@ -1808,7 +1808,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "I have chosen him so that he will teach my message to his children and their families. He will teach them to do what is right and what is fair. Then I, the Lord, will do for Abraham everything that I have promised to him.’"
+      "text": "I have chosen him so that he will teach my message to his children and their families. He will teach them to do what is right and what is fair. Then I, the Lord, will do for Abraham everything that I have promised to him. ’"
     },
     {
       "verse": "20",
@@ -1816,7 +1816,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So I must go down there to see if it is really true. I will see if those people are as bad as everybody says they are. Then I will know what is true.’"
+      "text": "So I must go down there to see if it is really true. I will see if those people are as bad as everybody says they are. Then I will know what is true. ’"
     },
     {
       "verse": "22",
@@ -1832,11 +1832,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Will you kill them all, the good people and the bad people? Surely you would not do anything like that! You would not punish good people in the same way as bad people. You are the great judge of everyone on the earth. You will surely do what is right!’"
+      "text": "Will you kill them all, the good people and the bad people? Surely you would not do anything like that! You would not punish good people in the same way as bad people. You are the great judge of everyone on the earth. You will surely do what is right! ’"
     },
     {
       "verse": "26",
-      "text": "The Lord replied, ‘If I see that there are 50 good people in the city of Sodom, I will not destroy that place. Because of those 50 good people, I will leave the city there.’"
+      "text": "The Lord replied, ‘If I see that there are 50 good people in the city of Sodom, I will not destroy that place. Because of those 50 good people, I will leave the city there. ’"
     },
     {
       "verse": "27",
@@ -1844,23 +1844,23 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "But let me ask you this. What will you do if there are 45 good people in the city? Will you destroy the city, because there are only five fewer good people there?’ The Lord replied, ‘If I see that there are 45 good people in the city, I will not destroy it.’"
+      "text": "But let me ask you this. What will you do if there are 45 good people in the city? Will you destroy the city, because there are only five fewer good people there? ’ The Lord replied, ‘If I see that there are 45 good people in the city, I will not destroy it. ’"
     },
     {
       "verse": "29",
-      "text": "Abraham spoke to God again. He said, ‘What will you do if only 40 good people are there?’ The Lord said, ‘Because of 40 good people, I will not destroy the city.’"
+      "text": "Abraham spoke to God again. He said, ‘What will you do if only 40 good people are there? ’ The Lord said, ‘Because of 40 good people, I will not destroy the city. ’"
     },
     {
       "verse": "30",
-      "text": "Then Abraham said, ‘Please do not be angry, Lord. Let me speak again. What will you do if there are only 30 good people there?’ The Lord answered, ‘I will not destroy the city if I find 30 good people there.’"
+      "text": "Then Abraham said, ‘Please do not be angry, Lord. Let me speak again. What will you do if there are only 30 good people there? ’ The Lord answered, ‘I will not destroy the city if I find 30 good people there. ’"
     },
     {
       "verse": "31",
-      "text": "Abraham said, ‘I have been brave to speak to you, Lord. What will you do if only 20 good people are there?’ The Lord said, ���Because of 20 good people, I will not destroy the city.’"
+      "text": "Abraham said, ‘I have been brave to speak to you, Lord. What will you do if only 20 good people are there? ’ The Lord said, ���Because of 20 good people, I will not destroy the city. ’"
     },
     {
       "verse": "32",
-      "text": "After all that, Abraham said, ‘Please do not be angry, Lord. Let me speak just one more time. If there are only ten good people there, what will you do?’ The Lord replied, ‘Because of ten good people, I will not destroy the city.’"
+      "text": "After all that, Abraham said, ‘Please do not be angry, Lord. Let me speak just one more time. If there are only ten good people there, what will you do? ’ The Lord replied, ‘Because of ten good people, I will not destroy the city. ’"
     },
     {
       "verse": "33",
@@ -1874,7 +1874,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Lot said, ‘My lords, please come to stay in my house. You can wash your feet and stay the night there. Then you can continue your journey early in the morning.’ The angels replied, ‘No, we will stay the night here in this public place.’"
+      "text": "Lot said, ‘My lords, please come to stay in my house. You can wash your feet and stay the night there. Then you can continue your journey early in the morning. ’ The angels replied, ‘No, we will stay the night here in this public place. ’"
     },
     {
       "verse": "3",
@@ -1886,7 +1886,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The men shouted to Lot, ‘Where are the men who are staying with you tonight? Bring them out here to us. We want to have sex with them.’"
+      "text": "The men shouted to Lot, ‘Where are the men who are staying with you tonight? Bring them out here to us. We want to have sex with them. ’"
     },
     {
       "verse": "6",
@@ -1898,11 +1898,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "See here! I have two daughters. They have never had sex with a man. Let me bring them out to you. Then you can do whatever you want with them. But do not do anything to these men. They are my visitors and I cannot let anyone hurt them.’"
+      "text": "See here! I have two daughters. They have never had sex with a man. Let me bring them out to you. Then you can do whatever you want with them. But do not do anything to these men. They are my visitors and I cannot let anyone hurt them. ’"
     },
     {
       "verse": "9",
-      "text": "The men from the city said, ‘Do not try to stop us! You are a stranger here in this city. You cannot tell us what to do! Be careful or we will do even worse things to you.’ They pushed against Lot and tried to reach the door of his house. They wanted to break the door and go in to the house."
+      "text": "The men from the city said, ‘Do not try to stop us! You are a stranger here in this city. You cannot tell us what to do! Be careful or we will do even worse things to you. ’ They pushed against Lot and tried to reach the door of his house. They wanted to break the door and go in to the house."
     },
     {
       "verse": "10",
@@ -1918,15 +1918,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "We will soon destroy this city. Everybody knows how bad the people who live here are. As a result, the Lord has sent us to destroy this place.’"
+      "text": "We will soon destroy this city. Everybody knows how bad the people who live here are. As a result, the Lord has sent us to destroy this place. ’"
     },
     {
       "verse": "14",
-      "text": "So Lot went out of his house. He spoke to the men who would marry his daughters. He said to them, ‘Hurry! Leave this city now, because the Lord has decided to destroy it.’ But the men did not believe Lot. They thought he was not being serious."
+      "text": "So Lot went out of his house. He spoke to the men who would marry his daughters. He said to them, ‘Hurry! Leave this city now, because the Lord has decided to destroy it. ’ But the men did not believe Lot. They thought he was not being serious."
     },
     {
       "verse": "15",
-      "text": "At dawn, the two angels told Lot he must leave quickly. They said to him, ‘Hurry! Take your wife and take your two daughters who are here. If you do not go quickly, you will all die when the Lord destroys the city.’"
+      "text": "At dawn, the two angels told Lot he must leave quickly. They said to him, ‘Hurry! Take your wife and take your two daughters who are here. If you do not go quickly, you will all die when the Lord destroys the city. ’"
     },
     {
       "verse": "16",
@@ -1934,7 +1934,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "When they had reached a place outside the city, one of the angels said, ‘Now run! Your lives are in danger. Do not look behind you! Do not stop anywhere in this valley. Run up into the mountains or you will die.’"
+      "text": "When they had reached a place outside the city, one of the angels said, ‘Now run! Your lives are in danger. Do not look behind you! Do not stop anywhere in this valley. Run up into the mountains or you will die. ’"
     },
     {
       "verse": "18",
@@ -1946,7 +1946,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Look! See that town over there. It is near and I can run to it safely. And it is a small town. So please let me run there. You can see that it is only a small place. If I go there, I will stay alive.’"
+      "text": "Look! See that town over there. It is near and I can run to it safely. And it is a small town. So please let me run there. You can see that it is only a small place. If I go there, I will stay alive. ’"
     },
     {
       "verse": "21",
@@ -1954,7 +1954,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But run there quickly. I cannot do anything until you arrive in the town.’ (The name of the town became ‘Zoar’, because it was small.)"
+      "text": "But run there quickly. I cannot do anything until you arrive in the town. ’ (The name of the town became ‘Zoar’, because it was small. )"
     },
     {
       "verse": "23",
@@ -1994,7 +1994,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "So we should give our father much wine to drink. When he becomes drunk, we will have sex with him. Then our father's family will continue to have descendants.’"
+      "text": "So we should give our father much wine to drink. When he becomes drunk, we will have sex with him. Then our father's family will continue to have descendants. ’"
     },
     {
       "verse": "33",
@@ -2002,7 +2002,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The next day the older daughter said to her younger sister, ‘Last night I had sex with my father. We should make him drunk with wine again tonight. Then you can have sex with him. As a result, our father's family will continue.’"
+      "text": "The next day the older daughter said to her younger sister, ‘Last night I had sex with my father. We should make him drunk with wine again tonight. Then you can have sex with him. As a result, our father's family will continue. ’"
     },
     {
       "verse": "35",
@@ -2032,7 +2032,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But God appeared to Abimelech in a dream. He said to Abimelech, ‘Now you will die! The woman that you have taken to be your wife is already a married woman.’"
+      "text": "But God appeared to Abimelech in a dream. He said to Abimelech, ‘Now you will die! The woman that you have taken to be your wife is already a married woman. ’"
     },
     {
       "verse": "4",
@@ -2040,7 +2040,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Abraham told me that Sarah was his sister. And she herself said, “I am his sister.” So I am not guilty! I did not think that I was doing a bad thing.’"
+      "text": "Abraham told me that Sarah was his sister. And she herself said, “I am his sister. ” So I am not guilty! I did not think that I was doing a bad thing. ’"
     },
     {
       "verse": "6",
@@ -2048,7 +2048,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "You must now give her back to her husband. He is a prophet and he will pray for you. Because of that, you will not die. But if you do not give her back, you and all your people will surely die.’"
+      "text": "You must now give her back to her husband. He is a prophet and he will pray for you. Because of that, you will not die. But if you do not give her back, you and all your people will surely die. ’"
     },
     {
       "verse": "8",
@@ -2056,15 +2056,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Abimelech called Abraham to come to him. He said to Abraham, ‘Why have you done this bad thing against us? I have not done anything wrong against you. Now you have made me and the people in my kingdom guilty of a very bad thing. Nobody should ever do the things that you have done to me.’"
+      "text": "Abimelech called Abraham to come to him. He said to Abraham, ‘Why have you done this bad thing against us? I have not done anything wrong against you. Now you have made me and the people in my kingdom guilty of a very bad thing. Nobody should ever do the things that you have done to me. ’"
     },
     {
       "verse": "10",
-      "text": "Abimelech asked Abraham, ‘What caused you to do this?’"
+      "text": "Abimelech asked Abraham, ‘What caused you to do this? ’"
     },
     {
       "verse": "11",
-      "text": "Abraham replied, ‘I did it because I was afraid. I thought, “The people here do not respect God. They will kill me so that they can take my wife from me.”"
+      "text": "Abraham replied, ‘I did it because I was afraid. I thought, “The people here do not respect God. They will kill me so that they can take my wife from me. ”"
     },
     {
       "verse": "12",
@@ -2072,7 +2072,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "God told me to leave my father's house and to travel. At that time I said to Sarah, “This is how you can show that you love me. Everywhere we go, tell people that I am your brother.” ’"
+      "text": "God told me to leave my father's house and to travel. At that time I said to Sarah, “This is how you can show that you love me. Everywhere we go, tell people that I am your brother. ” ’"
     },
     {
       "verse": "14",
@@ -2080,11 +2080,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Abimelech said, ‘Look! See my land all round you. Go and live anywhere that you want to live.’"
+      "text": "Abimelech said, ‘Look! See my land all round you. Go and live anywhere that you want to live. ’"
     },
     {
       "verse": "16",
-      "text": "Abimelech said to Sarah, ‘I have given 1,000 pieces of silver to your brother. This is to show everyone that you yourself did nothing wrong. It will pay you for any trouble that you have received.’"
+      "text": "Abimelech said to Sarah, ‘I have given 1, 000 pieces of silver to your brother. This is to show everyone that you yourself did nothing wrong. It will pay you for any trouble that you have received. ’"
     },
     {
       "verse": "17",
@@ -2118,11 +2118,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Sarah said, ‘Now God has made me laugh. Everyone who hears about what has happened will be happy with me.’"
+      "text": "Sarah said, ‘Now God has made me laugh. Everyone who hears about what has happened will be happy with me. ’"
     },
     {
       "verse": "7",
-      "text": "She also said, ‘Abraham would never have thought that I would feed a child at my breasts. But I have given birth to a son for him, even when he is old.’"
+      "text": "She also said, ‘Abraham would never have thought that I would feed a child at my breasts. But I have given birth to a son for him, even when he is old. ’"
     },
     {
       "verse": "8",
@@ -2130,11 +2130,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then Sarah saw that Ishmael was laughing at Isaac. (Ishmael was the son of Abraham and Hagar, the Egyptian servant.)"
+      "text": "Then Sarah saw that Ishmael was laughing at Isaac. (Ishmael was the son of Abraham and Hagar, the Egyptian servant. )"
     },
     {
       "verse": "10",
-      "text": "So Sarah said to Abraham, ‘Send that slave woman and her son away from here. Ishmael must never receive any of our family's things. Everything must belong to my own son, Isaac.’"
+      "text": "So Sarah said to Abraham, ‘Send that slave woman and her son away from here. Ishmael must never receive any of our family's things. Everything must belong to my own son, Isaac. ’"
     },
     {
       "verse": "11",
@@ -2146,11 +2146,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But, because Ishmael is also your son, I will make his descendants become a great nation of people too.’"
+      "text": "But, because Ishmael is also your son, I will make his descendants become a great nation of people too. ’"
     },
     {
       "verse": "14",
-      "text": "Abraham woke up early the next morning. He took some food and some water in a bottle that was made from animal skin. He gave them to Hagar and he put them on her shoulders. Then he sent Hagar away, with their son, Ishmael.She went and she travelled round the wilderness of Beersheba."
+      "text": "Abraham woke up early the next morning. He took some food and some water in a bottle that was made from animal skin. He gave them to Hagar and he put them on her shoulders. Then he sent Hagar away, with their son, Ishmael. She went and she travelled round the wilderness of Beersheba."
     },
     {
       "verse": "15",
@@ -2158,7 +2158,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "metres away from him. She thought, ‘I cannot watch the boy die.’ As she sat there, she began to cry."
+      "text": "metres away from him. She thought, ‘I cannot watch the boy die. ’ As she sat there, she began to cry."
     },
     {
       "verse": "17",
@@ -2166,7 +2166,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Go over to him and lift him up. Take hold of his hand and help him to stand. I will make him become a great nation of people.’"
+      "text": "Go over to him and lift him up. Take hold of his hand and help him to stand. I will make him become a great nation of people. ’"
     },
     {
       "verse": "19",
@@ -2186,11 +2186,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So please make a promise to me in front of God. Promise that you will never deceive me, or my children, or my descendants. You are living here in this land as a stranger. I have been kind to you, so please show that you will also be kind to us.’"
+      "text": "So please make a promise to me in front of God. Promise that you will never deceive me, or my children, or my descendants. You are living here in this land as a stranger. I have been kind to you, so please show that you will also be kind to us. ’"
     },
     {
       "verse": "24",
-      "text": "Abraham said, ‘I promise to do all that.’"
+      "text": "Abraham said, ‘I promise to do all that. ’"
     },
     {
       "verse": "25",
@@ -2198,7 +2198,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Abimelech said, ‘I do not know who has done this. You did not tell me before. I did not hear about it until today.’"
+      "text": "Abimelech said, ‘I do not know who has done this. You did not tell me before. I did not hear about it until today. ’"
     },
     {
       "verse": "27",
@@ -2210,11 +2210,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Abimelech asked Abraham, ‘Why have you put these seven lambs in a different place?’"
+      "text": "Abimelech asked Abraham, ‘Why have you put these seven lambs in a different place? ’"
     },
     {
       "verse": "30",
-      "text": "Abraham replied, ‘You must accept these seven lambs as a gift from me. That will show that you agree that I dug this well. Everyone will know that it belongs to me.’"
+      "text": "Abraham replied, ‘You must accept these seven lambs as a gift from me. That will show that you agree that I dug this well. Everyone will know that it belongs to me. ’"
     },
     {
       "verse": "31",
@@ -2236,11 +2236,11 @@ module.exports = {
   "22": [
     {
       "verse": "1",
-      "text": "Some time later, God wanted to see if Abraham really trusted him. God said to him, ‘Abraham!’ Abraham replied, ‘Here I am.’"
+      "text": "Some time later, God wanted to see if Abraham really trusted him. God said to him, ‘Abraham! ’ Abraham replied, ‘Here I am. ’"
     },
     {
       "verse": "2",
-      "text": "God said, ‘Take your son and go to the land of Moriah. Take your only son Isaac, whom you love. You must offer him to me there as a burnt offering. I will show you the mountain where you must do this.’"
+      "text": "God said, ‘Take your son and go to the land of Moriah. Take your only son Isaac, whom you love. You must offer him to me there as a burnt offering. I will show you the mountain where you must do this. ’"
     },
     {
       "verse": "3",
@@ -2252,7 +2252,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He said to his servants, ‘Stay here with the donkey. I will take the boy and we will go over there. We will worship God in that place and then we will come back to you.’"
+      "text": "He said to his servants, ‘Stay here with the donkey. I will take the boy and we will go over there. We will worship God in that place and then we will come back to you. ’"
     },
     {
       "verse": "6",
@@ -2260,11 +2260,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Isaac spoke to his father, Abraham. He said, ‘Father?’ Abraham replied ‘Yes my son, what is it?’ Isaac replied, ‘I see that the fire and the wood are here. But where is the lamb so that we can make the burnt offering?’"
+      "text": "Isaac spoke to his father, Abraham. He said, ‘Father? ’ Abraham replied ‘Yes my son, what is it? ’ Isaac replied, ‘I see that the fire and the wood are here. But where is the lamb so that we can make the burnt offering? ’"
     },
     {
       "verse": "8",
-      "text": "Abraham replied, ‘My son, God himself will bring the lamb for the burnt offering.’The two of them continued to walk on together."
+      "text": "Abraham replied, ‘My son, God himself will bring the lamb for the burnt offering. ’The two of them continued to walk on together."
     },
     {
       "verse": "9",
@@ -2276,11 +2276,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But then the angel of the Lord spoke to Abraham from heaven. He said, ‘Abraham! Abraham!’ Abraham replied, ‘Here I am.’"
+      "text": "But then the angel of the Lord spoke to Abraham from heaven. He said, ‘Abraham! Abraham! ’ Abraham replied, ‘Here I am. ’"
     },
     {
       "verse": "12",
-      "text": "The angel said, ‘Do not hurt the boy! Do not do anything to him. Now I know that you respect God and you obey him. Isaac is your only son and you agreed to offer him to me as a sacrifice. You did not try to keep him safe.’"
+      "text": "The angel said, ‘Do not hurt the boy! Do not do anything to him. Now I know that you respect God and you obey him. Isaac is your only son and you agreed to offer him to me as a sacrifice. You did not try to keep him safe. ’"
     },
     {
       "verse": "13",
@@ -2288,7 +2288,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Abraham called that place ‘The Lord will give me what I need.’ People still say today, ‘On the mountain of the Lord, he will give us what we need.’"
+      "text": "Abraham called that place ‘The Lord will give me what I need. ’ People still say today, ‘On the mountain of the Lord, he will give us what we need. ’"
     },
     {
       "verse": "15",
@@ -2304,7 +2304,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I will bless all the nations on the earth through your descendants. I will do this because you have obeyed me.’"
+      "text": "I will bless all the nations on the earth through your descendants. I will do this because you have obeyed me. ’"
     },
     {
       "verse": "19",
@@ -2312,7 +2312,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Later, someone told Abraham ‘Milcah also has given birth to children. Your brother Nahor is their father.’"
+      "text": "Later, someone told Abraham ‘Milcah also has given birth to children. Your brother Nahor is their father. ’"
     },
     {
       "verse": "21",
@@ -2346,7 +2346,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "‘I am living as a stranger among you. Please, sell me some land here, so that it belongs to me. Then I can use it to bury my wife properly.’"
+      "text": "‘I am living as a stranger among you. Please, sell me some land here, so that it belongs to me. Then I can use it to bury my wife properly. ’"
     },
     {
       "verse": "5",
@@ -2354,7 +2354,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "‘Sir, please listen to what we say. We respect you as a great and powerful person. We have good places where we bury our people who have died. Choose the best one that you like. None of us will refuse to give you the place that you choose. Then you will be able to bury your dead wife there.’"
+      "text": "‘Sir, please listen to what we say. We respect you as a great and powerful person. We have good places where we bury our people who have died. Choose the best one that you like. None of us will refuse to give you the place that you choose. Then you will be able to bury your dead wife there. ’"
     },
     {
       "verse": "7",
@@ -2366,7 +2366,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Ask him to sell the cave of Machpelah to me. It belongs to Ephron. It is at the edge of his field. You will see that I pay the proper price to him. Then it will belong to me. I can bury my family there when they die.’"
+      "text": "Ask him to sell the cave of Machpelah to me. It belongs to Ephron. It is at the edge of his field. You will see that I pay the proper price to him. Then it will belong to me. I can bury my family there when they die. ’"
     },
     {
       "verse": "10",
@@ -2374,7 +2374,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Ephron said, ‘No sir. Please listen to me. You may take my field as well as the cave. I promise in front of my people that I will give all this to you. Then you can bury your dead wife there.’"
+      "text": "Ephron said, ‘No sir. Please listen to me. You may take my field as well as the cave. I promise in front of my people that I will give all this to you. Then you can bury your dead wife there. ’"
     },
     {
       "verse": "12",
@@ -2382,7 +2382,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "While they were listening, he said to Ephron, ‘Let me say this. I will pay you the price to buy the field. Please accept the money from me. Then I can bury my dead wife there.’"
+      "text": "While they were listening, he said to Ephron, ‘Let me say this. I will pay you the price to buy the field. Please accept the money from me. Then I can bury my dead wife there. ’"
     },
     {
       "verse": "14",
@@ -2390,7 +2390,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "‘Listen to me, sir. The land is worth 400 shekels of silver. But the price is not important, because we are friends. Now bury your dead wife there.’"
+      "text": "‘Listen to me, sir. The land is worth 400 shekels of silver. But the price is not important, because we are friends. Now bury your dead wife there. ’"
     },
     {
       "verse": "16",
@@ -2428,11 +2428,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Instead, you must go to my own country. Go to my family there to find a wife for my son Isaac.’"
+      "text": "Instead, you must go to my own country. Go to my family there to find a wife for my son Isaac. ’"
     },
     {
       "verse": "5",
-      "text": "The servant asked Abraham, ‘What should I do if the woman will not agree? Maybe she will not come back with me to this land? Must I then take your son to the country that you came from?’"
+      "text": "The servant asked Abraham, ‘What should I do if the woman will not agree? Maybe she will not come back with me to this land? Must I then take your son to the country that you came from? ’"
     },
     {
       "verse": "6",
@@ -2440,11 +2440,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord, the God of heaven, took me away from there. He took me out of my father's house. He took me away from the land where my family lives. God made a serious promise to me. He said, “I will give this land to your descendants.” Because God has promised this, he will send his angel to go in front of you. When you arrive there, you will find a woman to marry my son."
+      "text": "The Lord, the God of heaven, took me away from there. He took me out of my father's house. He took me away from the land where my family lives. God made a serious promise to me. He said, “I will give this land to your descendants. ” Because God has promised this, he will send his angel to go in front of you. When you arrive there, you will find a woman to marry my son."
     },
     {
       "verse": "8",
-      "text": "But perhaps the woman will not agree to come back here with you. If that happens, you do not have to keep this promise. But do not take my son back to that land.’"
+      "text": "But perhaps the woman will not agree to come back here with you. If that happens, you do not have to keep this promise. But do not take my son back to that land. ’"
     },
     {
       "verse": "9",
@@ -2468,7 +2468,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will say to one of the young women, “Please let me have a drink of water from your pot.” If she is the right woman for your servant Isaac to marry, please may she say, “Yes, drink. Then I will give water to your camels also”. If that happens, then I will know that you have kept your promise to my master.’"
+      "text": "I will say to one of the young women, “Please let me have a drink of water from your pot. ” If she is the right woman for your servant Isaac to marry, please may she say, “Yes, drink. Then I will give water to your camels also”. If that happens, then I will know that you have kept your promise to my master. ’"
     },
     {
       "verse": "15",
@@ -2480,15 +2480,15 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Abraham's servant hurried to meet her. He said, ‘Please give me a little water to drink from your pot.’"
+      "text": "Abraham's servant hurried to meet her. He said, ‘Please give me a little water to drink from your pot. ’"
     },
     {
       "verse": "18",
-      "text": "She replied, ‘Yes sir, please drink.’ She quickly took the pot down from her shoulders. She held the pot with her hands and gave him a drink."
+      "text": "She replied, ‘Yes sir, please drink. ’ She quickly took the pot down from her shoulders. She held the pot with her hands and gave him a drink."
     },
     {
       "verse": "19",
-      "text": "After she had done that, she said, ‘Now I will get some water for your camels too. I will do this until they have drunk as much water as they want.’"
+      "text": "After she had done that, she said, ‘Now I will get some water for your camels too. I will do this until they have drunk as much water as they want. ’"
     },
     {
       "verse": "20",
@@ -2504,7 +2504,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The servant gave them to Rebekah and he asked her, ‘Whose daughter are you? Please tell me. Is there a room in your father's house for me and my men to sleep there tonight?’"
+      "text": "The servant gave them to Rebekah and he asked her, ‘Whose daughter are you? Please tell me. Is there a room in your father's house for me and my men to sleep there tonight? ’"
     },
     {
       "verse": "24",
@@ -2512,7 +2512,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "We have plenty of grass and food for the camels. And there is a room for you to stay with us for the night.’"
+      "text": "We have plenty of grass and food for the camels. And there is a room for you to stay with us for the night. ’"
     },
     {
       "verse": "26",
@@ -2520,7 +2520,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "He said, ‘I praise the Lord who is the God of my master, Abraham. He has been very kind to my master. He has done what he promised to do for him. The Lord has been kind to me too. He has led me here to the house of my master's family.’"
+      "text": "He said, ‘I praise the Lord who is the God of my master, Abraham. He has been very kind to my master. He has done what he promised to do for him. The Lord has been kind to me too. He has led me here to the house of my master's family. ’"
     },
     {
       "verse": "28",
@@ -2536,7 +2536,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Laban said to him, ‘The Lord has blessed you! You should not continue to stand out here. Come with me. I have prepared a room for you in my house. There is also a place for your camels.’"
+      "text": "Laban said to him, ‘The Lord has blessed you! You should not continue to stand out here. Come with me. I have prepared a room for you in my house. There is also a place for your camels. ’"
     },
     {
       "verse": "32",
@@ -2544,7 +2544,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "They prepared food for the servant but he said, ‘I will not eat yet. First I must tell you why I have come here.’ Laban said, ‘Please tell us.’"
+      "text": "They prepared food for the servant but he said, ‘I will not eat yet. First I must tell you why I have come here. ’ Laban said, ‘Please tell us. ’"
     },
     {
       "verse": "34",
@@ -2564,11 +2564,11 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Instead, go to the land where my father lived and find a wife for my son from among my family there.”"
+      "text": "Instead, go to the land where my father lived and find a wife for my son from among my family there. ”"
     },
     {
       "verse": "39",
-      "text": "So I asked my master, “What should I do if the woman will not return with me?”"
+      "text": "So I asked my master, “What should I do if the woman will not return with me? ”"
     },
     {
       "verse": "40",
@@ -2576,7 +2576,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "Go to the place where my family group live. If they refuse to let you take her, you will no longer have to keep your promise to me.”"
+      "text": "Go to the place where my family group live. If they refuse to let you take her, you will no longer have to keep your promise to me. ”"
     },
     {
       "verse": "42",
@@ -2584,23 +2584,23 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "See, I am standing here near this well. If a young woman comes to get water, I will say to her, ‘Please let me drink some water from your pot.’"
+      "text": "See, I am standing here near this well. If a young woman comes to get water, I will say to her, ‘Please let me drink some water from your pot. ’"
     },
     {
       "verse": "44",
-      "text": "If she is the woman that the Lord has chosen to marry my master's son, please may she say to me, ‘Yes, drink. Then I will also get some water for your camels to drink.’ ”"
+      "text": "If she is the woman that the Lord has chosen to marry my master's son, please may she say to me, ‘Yes, drink. Then I will also get some water for your camels to drink. ’ ”"
     },
     {
       "verse": "45",
-      "text": "While I was still praying quietly, Rebekah came to the well. She carried her pot on her shoulder. She went down to the well, and got some water. Then I said to her “Please give me some water to drink.”"
+      "text": "While I was still praying quietly, Rebekah came to the well. She carried her pot on her shoulder. She went down to the well, and got some water. Then I said to her “Please give me some water to drink. ”"
     },
     {
       "verse": "46",
-      "text": "She quickly took her pot down from her shoulder. She said, “Drink. Then I will get water for your camels too.” So I drank. And she also gave water to the camels."
+      "text": "She quickly took her pot down from her shoulder. She said, “Drink. Then I will get water for your camels too. ” So I drank. And she also gave water to the camels."
     },
     {
       "verse": "47",
-      "text": "I asked her, “Whose daughter are you?” She said, “I am the daughter of Bethuel. Nahor is his father and Milcah is his mother.” When I heard that, I put the ring in her nose. I put the rings on her arms."
+      "text": "I asked her, “Whose daughter are you? ” She said, “I am the daughter of Bethuel. Nahor is his father and Milcah is his mother. ” When I heard that, I put the ring in her nose. I put the rings on her arms."
     },
     {
       "verse": "48",
@@ -2608,7 +2608,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "So tell me what you will say. If you will show true love to my master, then please say, “Yes.” But if not, then tell me. Then I will know what to do.’"
+      "text": "So tell me what you will say. If you will show true love to my master, then please say, “Yes. ” But if not, then tell me. Then I will know what to do. ’"
     },
     {
       "verse": "50",
@@ -2616,7 +2616,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Here is Rebekah. Take her with you to become the wife of your master's son. That is what the Lord has shown to be right.’"
+      "text": "Here is Rebekah. Take her with you to become the wife of your master's son. That is what the Lord has shown to be right. ’"
     },
     {
       "verse": "52",
@@ -2628,31 +2628,31 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "After that, the servant ate a meal. The men who were with him also ate and drank. They stayed there for the night.When they woke up the next morning, the servant said, ‘Let me leave now so that I can go back to my master.’"
+      "text": "After that, the servant ate a meal. The men who were with him also ate and drank. They stayed there for the night. When they woke up the next morning, the servant said, ‘Let me leave now so that I can go back to my master. ’"
     },
     {
       "verse": "55",
-      "text": "Rebekah's brother and her mother replied, ‘Please let Rebekah stay with us for a few more days. After about ten days, she can go with you.’"
+      "text": "Rebekah's brother and her mother replied, ‘Please let Rebekah stay with us for a few more days. After about ten days, she can go with you. ’"
     },
     {
       "verse": "56",
-      "text": "But the servant said, ‘Do not make me stay longer. The Lord has given me what I came here for. Let me leave now so that I can go back to my master.’"
+      "text": "But the servant said, ‘Do not make me stay longer. The Lord has given me what I came here for. Let me leave now so that I can go back to my master. ’"
     },
     {
       "verse": "57",
-      "text": "Rebekah's brother and mother said, ‘Let us call the girl. We can ask her what she wants to do.’"
+      "text": "Rebekah's brother and mother said, ‘Let us call the girl. We can ask her what she wants to do. ’"
     },
     {
       "verse": "58",
-      "text": "So they called Rebekah to come. They asked her, ‘Will you go with this man now?’ Rebekah said, ‘Yes, I will go.’"
+      "text": "So they called Rebekah to come. They asked her, ‘Will you go with this man now? ’ Rebekah said, ‘Yes, I will go. ’"
     },
     {
       "verse": "59",
-      "text": "So they agreed to let their sister Rebekah go. Her nurse went with her. They left there with Abraham's servant, and his men. ‘Our sister, may you become the mother of millions of descendants. May your descendants win against their enemies, and may they go into their enemies' cities.’"
+      "text": "So they agreed to let their sister Rebekah go. Her nurse went with her. They left there with Abraham's servant, and his men. ‘Our sister, may you become the mother of millions of descendants. May your descendants win against their enemies, and may they go into their enemies' cities. ’"
     },
     {
       "verse": "60",
-      "text": "As Rebekah was leaving, her brother and her mother blessed her. They said,‘Our sister, may you become the mother of millions of descendants.May your descendants win against their enemies,and may they go into their enemies' cities.’"
+      "text": "As Rebekah was leaving, her brother and her mother blessed her. They said, ‘Our sister, may you become the mother of millions of descendants. May your descendants win against their enemies, and may they go into their enemies' cities. ’"
     },
     {
       "verse": "61",
@@ -2672,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "65",
-      "text": "She asked Abraham's servant, ‘I see a man in the field who is coming towards us. Who is he?’ The servant replied, ‘He is my master’. Rebekah covered her face with a piece of cloth."
+      "text": "She asked Abraham's servant, ‘I see a man in the field who is coming towards us. Who is he? ’ The servant replied, ‘He is my master’. Rebekah covered her face with a piece of cloth."
     },
     {
       "verse": "66",
@@ -2722,7 +2722,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Abraham had bought the field from the Hittites.So they buried Abraham there. It was in the cave where his wife, Sarah, had also been buried."
+      "text": "Abraham had bought the field from the Hittites. So they buried Abraham there. It was in the cave where his wife, Sarah, had also been buried."
     },
     {
       "verse": "11",
@@ -2730,7 +2730,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "This is the report about Abraham's son, Ishmael, and his family.Sarah's female servant gave birth to Ishmael. Her name was Hagar. She was from Egypt."
+      "text": "This is the report about Abraham's son, Ishmael, and his family. Sarah's female servant gave birth to Ishmael. Her name was Hagar. She was from Egypt."
     },
     {
       "verse": "13",
@@ -2758,7 +2758,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "This is the report about Abraham's son, Isaac, and his family.Abraham became the father of Isaac."
+      "text": "This is the report about Abraham's son, Isaac, and his family. Abraham became the father of Isaac."
     },
     {
       "verse": "20",
@@ -2770,11 +2770,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The babies inside her were fighting with each other. Rebekah said, ‘Why is this happening to me?’ So Rebekah went to ask the Lord."
+      "text": "The babies inside her were fighting with each other. Rebekah said, ‘Why is this happening to me? ’ So Rebekah went to ask the Lord."
     },
     {
       "verse": "23",
-      "text": "The Lord said to Rebekah, ‘The two children who are in your body will become two separate nations of people. One group will be stronger than the other. The older son will become a servant to the younger son.’"
+      "text": "The Lord said to Rebekah, ‘The two children who are in your body will become two separate nations of people. One group will be stronger than the other. The older son will become a servant to the younger son. ’"
     },
     {
       "verse": "24",
@@ -2802,23 +2802,23 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "He said to Jacob ‘Quick, let me have some of that red food! I am very hungry.’ (That is why he was also called Edom.)"
+      "text": "He said to Jacob ‘Quick, let me have some of that red food! I am very hungry. ’ (That is why he was also called Edom. )"
     },
     {
       "verse": "31",
-      "text": "Jacob said, ‘You must first sell me your birthright.’"
+      "text": "Jacob said, ‘You must first sell me your birthright. ’"
     },
     {
       "verse": "32",
-      "text": "Esau said, ‘Look, I am so hungry that I will die. Then my birthright will not help me at all!’"
+      "text": "Esau said, ‘Look, I am so hungry that I will die. Then my birthright will not help me at all! ’"
     },
     {
       "verse": "33",
-      "text": "Jacob said, ‘First, make a serious promise to me.’ So Esau promised to sell his birthright to Jacob. In that way, Esau showed that he did not think that his birthright was important."
+      "text": "Jacob said, ‘First, make a serious promise to me. ’ So Esau promised to sell his birthright to Jacob. In that way, Esau showed that he did not think that his birthright was important."
     },
     {
       "verse": "34",
-      "text": "Then Jacob gave Esau some bread and the soup made from grains. Esau ate the food and he drank. Then he got up and he left.In that way, Esau showed that he did not think that his birthright was important."
+      "text": "Then Jacob gave Esau some bread and the soup made from grains. Esau ate the food and he drank. Then he got up and he left. In that way, Esau showed that he did not think that his birthright was important."
     }
   ],
   "26": [
@@ -2840,7 +2840,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "This will happen because Abraham obeyed me. He obeyed all my laws and rules, and he did what I told him to do.’"
+      "text": "This will happen because Abraham obeyed me. He obeyed all my laws and rules, and he did what I told him to do. ’"
     },
     {
       "verse": "6",
@@ -2848,7 +2848,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The men of Gerar asked Isaac about his wife. He told them, ‘She is my sister.’ He was afraid to say, ‘She is my wife.’ He thought that the men of Gerar might kill him because Rebekah was very beautiful."
+      "text": "The men of Gerar asked Isaac about his wife. He told them, ‘She is my sister. ’ He was afraid to say, ‘She is my wife. ’ He thought that the men of Gerar might kill him because Rebekah was very beautiful."
     },
     {
       "verse": "8",
@@ -2856,15 +2856,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Abimelech called Isaac to come to him. He said, ‘Rebekah is your wife! Why did you say, “She is my sister”?’ Isaac replied, ‘I thought that someone might kill me because of her.’"
+      "text": "Abimelech called Isaac to come to him. He said, ‘Rebekah is your wife! Why did you say, “She is my sister”? ’ Isaac replied, ‘I thought that someone might kill me because of her. ’"
     },
     {
       "verse": "10",
-      "text": "Abimelech said, ‘You have done a bad thing against us! One of my men might have had sex with your wife. Then we would have been guilty of a bad sin.’"
+      "text": "Abimelech said, ‘You have done a bad thing against us! One of my men might have had sex with your wife. Then we would have been guilty of a bad sin. ’"
     },
     {
       "verse": "11",
-      "text": "So Abimelech told his people, ‘I will kill anyone who hurts this man, or his wife.’"
+      "text": "So Abimelech told his people, ‘I will kill anyone who hurts this man, or his wife. ’"
     },
     {
       "verse": "12",
@@ -2884,7 +2884,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Abimelech said to Isaac ‘You have become too powerful for us. Go and live somewhere else.’"
+      "text": "Abimelech said to Isaac ‘You have become too powerful for us. Go and live somewhere else. ’"
     },
     {
       "verse": "17",
@@ -2900,7 +2900,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But the shepherds of Gerar quarrelled with Isaac's shepherds. They said, ‘The water belongs to us!’ So Isaac called that well Esek, because they quarrelled with him there."
+      "text": "But the shepherds of Gerar quarrelled with Isaac's shepherds. They said, ‘The water belongs to us! ’ So Isaac called that well Esek, because they quarrelled with him there."
     },
     {
       "verse": "21",
@@ -2908,7 +2908,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Isaac moved away from Sitnah and he dug another well. No one quarrelled with him about this well. So he called it Rehoboth. He said, ‘Now the Lord has given us a place to live. We will have many good things in this land.’"
+      "text": "Isaac moved away from Sitnah and he dug another well. No one quarrelled with him about this well. So he called it Rehoboth. He said, ‘Now the Lord has given us a place to live. We will have many good things in this land. ’"
     },
     {
       "verse": "23",
@@ -2916,7 +2916,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "That night the Lord appeared to him. The Lord said, ‘I am the God of your father Abraham. Do not be afraid, because I am with you. I will bless you. I will give you many descendants because of my servant Abraham.’"
+      "text": "That night the Lord appeared to him. The Lord said, ‘I am the God of your father Abraham. Do not be afraid, because I am with you. I will bless you. I will give you many descendants because of my servant Abraham. ’"
     },
     {
       "verse": "25",
@@ -2928,15 +2928,15 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Isaac asked them, ‘Why have you come to me? You hated me and you sent me away from you.’"
+      "text": "Isaac asked them, ‘Why have you come to me? You hated me and you sent me away from you. ’"
     },
     {
       "verse": "28",
-      "text": "They replied, ‘We saw that the Lord is with you. So we said to one another, “There should be an agreement between us and you.” So let us promise to be friends."
+      "text": "They replied, ‘We saw that the Lord is with you. So we said to one another, “There should be an agreement between us and you. ” So let us promise to be friends."
     },
     {
       "verse": "29",
-      "text": "Promise that you will not hurt us. We did not hurt you. We did only good things for you. We sent you away as friends. Now the Lord is blessing you.’"
+      "text": "Promise that you will not hurt us. We did not hurt you. We did only good things for you. We sent you away as friends. Now the Lord is blessing you. ’"
     },
     {
       "verse": "30",
@@ -2948,7 +2948,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The same day, Isaac's servants came to him. They told him about a well that they had dug. They said, ‘We have found water!’"
+      "text": "The same day, Isaac's servants came to him. They told him about a well that they had dug. They said, ‘We have found water! ’"
     },
     {
       "verse": "33",
@@ -2966,7 +2966,7 @@ module.exports = {
   "27": [
     {
       "verse": "1",
-      "text": "Isaac became old. He could not see anything because his eyes were weak. He called for his older son, Esau. Isaac said, ‘My son.’ Esau replied, ‘Yes, I am here.’"
+      "text": "Isaac became old. He could not see anything because his eyes were weak. He called for his older son, Esau. Isaac said, ‘My son. ’ Esau replied, ‘Yes, I am here. ’"
     },
     {
       "verse": "2",
@@ -2978,7 +2978,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then prepare the food that I like to eat. Bring it to me so that I can eat it. Then I will give you my blessing before I die.’"
+      "text": "Then prepare the food that I like to eat. Bring it to me so that I can eat it. Then I will give you my blessing before I die. ’"
     },
     {
       "verse": "5",
@@ -2990,7 +2990,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "“Bring me some meat and prepare the food that I like to eat. When I have eaten it, I will give you my blessing. I will bless you in front of the Lord before I die.”"
+      "text": "“Bring me some meat and prepare the food that I like to eat. When I have eaten it, I will give you my blessing. I will bless you in front of the Lord before I die. ”"
     },
     {
       "verse": "8",
@@ -3002,7 +3002,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then take the food to your father. When he has eaten it, he will give you his blessing before he dies.’"
+      "text": "Then take the food to your father. When he has eaten it, he will give you his blessing before he dies. ’"
     },
     {
       "verse": "11",
@@ -3010,11 +3010,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "My father may touch me. Then he will know that I am deceiving him. He will not bless me. He will curse me instead.’"
+      "text": "My father may touch me. Then he will know that I am deceiving him. He will not bless me. He will curse me instead. ’"
     },
     {
       "verse": "13",
-      "text": "Jacob's mother said, ‘My son, the curse will happen to me, not you. Do what I say. Go and get the things that I told you.’"
+      "text": "Jacob's mother said, ‘My son, the curse will happen to me, not you. Do what I say. Go and get the things that I told you. ’"
     },
     {
       "verse": "14",
@@ -3034,23 +3034,23 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Jacob went to his father. He said, ‘My father.’ Isaac replied ‘Yes, my son. Who are you, Esau or Jacob?’"
+      "text": "Jacob went to his father. He said, ‘My father. ’ Isaac replied ‘Yes, my son. Who are you, Esau or Jacob? ’"
     },
     {
       "verse": "19",
-      "text": "Jacob said, ‘I am Esau. I am your firstborn son. I have done as you told me. Please sit up. Eat some of the meat from the wild animal that I killed. Then you can bless me.’"
+      "text": "Jacob said, ‘I am Esau. I am your firstborn son. I have done as you told me. Please sit up. Eat some of the meat from the wild animal that I killed. Then you can bless me. ’"
     },
     {
       "verse": "20",
-      "text": "Isaac asked his son, ‘My son, how did you find it so quickly?’ Jacob replied, ‘The Lord your God helped me find it.’"
+      "text": "Isaac asked his son, ‘My son, how did you find it so quickly? ’ Jacob replied, ‘The Lord your God helped me find it. ’"
     },
     {
       "verse": "21",
-      "text": "Isaac said to Jacob, ‘Come near to me so that I can touch you, my son. Then I will know if you really are my son Esau.’"
+      "text": "Isaac said to Jacob, ‘Come near to me so that I can touch you, my son. Then I will know if you really are my son Esau. ’"
     },
     {
       "verse": "22",
-      "text": "Jacob went near to his father. Isaac touched him and he said, ‘The voice is Jacob's voice. But the hands are Esau's hands.’"
+      "text": "Jacob went near to his father. Isaac touched him and he said, ‘The voice is Jacob's voice. But the hands are Esau's hands. ’"
     },
     {
       "verse": "23",
@@ -3058,27 +3058,27 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Isaac asked again, ‘Are you really my son Esau?’ Jacob replied, ‘I am.’"
+      "text": "Isaac asked again, ‘Are you really my son Esau? ’ Jacob replied, ‘I am. ’"
     },
     {
       "verse": "25",
-      "text": "Isaac said, ‘My son, bring me some of your meat. I will eat it. Then I will bless you.’ So Jacob brought the food to him and Isaac ate it. Jacob also brought some wine and Isaac drank it."
+      "text": "Isaac said, ‘My son, bring me some of your meat. I will eat it. Then I will bless you. ’ So Jacob brought the food to him and Isaac ate it. Jacob also brought some wine and Isaac drank it."
     },
     {
       "verse": "26",
-      "text": "Then Isaac said, ‘Come here my son and kiss me.’ ‘The smell of my son is like the smell of a field. It is like a field that the Lord has blessed."
+      "text": "Then Isaac said, ‘Come here my son and kiss me. ’ ‘The smell of my son is like the smell of a field. It is like a field that the Lord has blessed."
     },
     {
       "verse": "27",
-      "text": "So Jacob went to Isaac and kissed him. Isaac smelled the clothes that Jacob wore. Then Isaac blessed him. He said,‘The smell of my son is like the smell of a field.It is like a field that the Lord has blessed."
+      "text": "So Jacob went to Isaac and kissed him. Isaac smelled the clothes that Jacob wore. Then Isaac blessed him. He said, ‘The smell of my son is like the smell of a field. It is like a field that the Lord has blessed."
     },
     {
       "verse": "28",
-      "text": "May God give you rain for your crops,so that they grow well in the good ground.Then you will have plenty of grain for food.And you will have grapes to make wine. so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine."
+      "text": "May God give you rain for your crops, so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine. so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine."
     },
     {
       "verse": "29",
-      "text": "May the people of many nations serve you.May they respect you as their master.You will rule over your brothers.Yes, your mother's sons will bend down to respect you.May God curse anyone who curses you.And may he bless anyone who blesses you.’ May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you.’"
+      "text": "May the people of many nations serve you. May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you. ’ May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you. ’"
     },
     {
       "verse": "30",
@@ -3086,47 +3086,47 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "He prepared nice food that Isaac liked to eat. Then he took the food to his father, Isaac. Esau said, ‘My father, please sit up. Eat some of the meat from the wild animal that I have killed. Then you can bless me.’"
+      "text": "He prepared nice food that Isaac liked to eat. Then he took the food to his father, Isaac. Esau said, ‘My father, please sit up. Eat some of the meat from the wild animal that I have killed. Then you can bless me. ’"
     },
     {
       "verse": "32",
-      "text": "His father Isaac asked, ‘Who are you?’ Esau replied, ‘I am your firstborn son, Esau.’"
+      "text": "His father Isaac asked, ‘Who are you? ’ Esau replied, ‘I am your firstborn son, Esau. ’"
     },
     {
       "verse": "33",
-      "text": "Isaac's body shook very much. He asked, ‘Who was it who killed an animal and brought the meat to me? Just before you came, I ate all of it. And then I blessed him. And God will certainly bless him!’"
+      "text": "Isaac's body shook very much. He asked, ‘Who was it who killed an animal and brought the meat to me? Just before you came, I ate all of it. And then I blessed him. And God will certainly bless him! ’"
     },
     {
       "verse": "34",
-      "text": "Esau heard what his father had said and he cried aloud. He was very upset. He said, ‘My father, please bless me too!’"
+      "text": "Esau heard what his father had said and he cried aloud. He was very upset. He said, ‘My father, please bless me too! ’"
     },
     {
       "verse": "35",
-      "text": "But Isaac said, ‘Your brother came to me. He deceived me and he took your blessing away from you.’"
+      "text": "But Isaac said, ‘Your brother came to me. He deceived me and he took your blessing away from you. ’"
     },
     {
       "verse": "36",
-      "text": "Esau said, ‘Yes, “Jacob” is the right name for him. He has cheated me twice. First he took my birthright. Now he has taken my blessing as well!’ Then Esau asked his father, ‘You must still have some blessing left for me, don't you?’"
+      "text": "Esau said, ‘Yes, “Jacob” is the right name for him. He has cheated me twice. First he took my birthright. Now he has taken my blessing as well! ’ Then Esau asked his father, ‘You must still have some blessing left for me, don't you? ’"
     },
     {
       "verse": "37",
-      "text": "Isaac replied, ‘I have made Jacob master over you. All his relatives will become his servants. I have given him crops and wine. So what can I still do to bless you, my son?’"
+      "text": "Isaac replied, ‘I have made Jacob master over you. All his relatives will become his servants. I have given him crops and wine. So what can I still do to bless you, my son? ’"
     },
     {
       "verse": "38",
-      "text": "Esau said, ‘My father, you surely have one blessing left for me. Please bless me too!’ Then Esau wept loudly."
+      "text": "Esau said, ‘My father, you surely have one blessing left for me. Please bless me too! ’ Then Esau wept loudly."
     },
     {
       "verse": "39",
-      "text": "Isaac replied,‘You will not live in a place where the ground gives good food.You will not have rain to make your crops grow. ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow."
+      "text": "Isaac replied, ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow. ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow."
     },
     {
       "verse": "40",
-      "text": "You will have to fight to get the things that you need.You will serve your brother as your master.But when you choose to turn against him,you will become free from his power over you.’ You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you.’"
+      "text": "You will have to fight to get the things that you need. You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you. ’ You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you. ’"
     },
     {
       "verse": "41",
-      "text": "Because Isaac had blessed Jacob, Esau hated his younger brother Jacob. Esau said quietly, ‘My father will die soon. When we have buried his body, I will kill my brother.’"
+      "text": "Because Isaac had blessed Jacob, Esau hated his younger brother Jacob. Esau said quietly, ‘My father will die soon. When we have buried his body, I will kill my brother. ’"
     },
     {
       "verse": "42",
@@ -3142,11 +3142,11 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "He may forget what you did to him. Then I will send a message to you, so that you can come back from Haran. I do not want to lose both of my sons in one day.’"
+      "text": "He may forget what you did to him. Then I will send a message to you, so that you can come back from Haran. I do not want to lose both of my sons in one day. ’"
     },
     {
       "verse": "46",
-      "text": "Then Rebekah said to Isaac, ‘I do not like living in the same place as Esau's wives. It makes me very upset, because they are Hittites. If Jacob marries one of the Hittite women who live in this land, I will be very sad. I would rather die!’"
+      "text": "Then Rebekah said to Isaac, ‘I do not like living in the same place as Esau's wives. It makes me very upset, because they are Hittites. If Jacob marries one of the Hittite women who live in this land, I will be very sad. I would rather die! ’"
     }
   ],
   "28": [
@@ -3164,7 +3164,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "May God bless you and your descendants with the good things that he promised to Abraham. The land that he promised to give to Abraham will then belong to you. That is the land where you now live as a foreign person.’"
+      "text": "May God bless you and your descendants with the good things that he promised to Abraham. The land that he promised to give to Abraham will then belong to you. That is the land where you now live as a foreign person. ’"
     },
     {
       "verse": "5",
@@ -3172,7 +3172,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Esau heard that Isaac had blessed Jacob and then sent him away to Paddan Aram. Isaac had told Jacob to find a woman from Paddan Aram that he would marry. Isaac had said to Jacob, ‘Do not marry a Canaanite woman.’"
+      "text": "Esau heard that Isaac had blessed Jacob and then sent him away to Paddan Aram. Isaac had told Jacob to find a woman from Paddan Aram that he would marry. Isaac had said to Jacob, ‘Do not marry a Canaanite woman. ’"
     },
     {
       "verse": "7",
@@ -3208,15 +3208,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I am with you. I will take care of you wherever you go. I will bring you back to this land. I will not leave you until I have done what I promised to do for you.’"
+      "text": "I am with you. I will take care of you wherever you go. I will bring you back to this land. I will not leave you until I have done what I promised to do for you. ’"
     },
     {
       "verse": "16",
-      "text": "Jacob woke from his sleep. He thought, ‘The Lord is in this place and I did not know it.’"
+      "text": "Jacob woke from his sleep. He thought, ‘The Lord is in this place and I did not know it. ’"
     },
     {
       "verse": "17",
-      "text": "Jacob was afraid. He said, ‘How great this place is! This must be the house of God. This is the gate of heaven.’"
+      "text": "Jacob was afraid. He said, ‘How great this place is! This must be the house of God. This is the gate of heaven. ’"
     },
     {
       "verse": "18",
@@ -3236,7 +3236,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "This special stone that I have put here will be God's house. And from everything that God gives me, I will give God one tenth.’"
+      "text": "This special stone that I have put here will be God's house. And from everything that God gives me, I will give God one tenth. ’"
     }
   ],
   "29": [
@@ -3254,23 +3254,23 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Jacob asked the shepherds, ‘My brothers, where are you from?’ The shepherds replied, ‘We are from Haran.’"
+      "text": "Jacob asked the shepherds, ‘My brothers, where are you from? ’ The shepherds replied, ‘We are from Haran. ’"
     },
     {
       "verse": "5",
-      "text": "Jacob said, ‘Do you know Laban? He is Nahor's grandson.’ The shepherds replied, ‘Yes, we know him.’"
+      "text": "Jacob said, ‘Do you know Laban? He is Nahor's grandson. ’ The shepherds replied, ‘Yes, we know him. ’"
     },
     {
       "verse": "6",
-      "text": "Jacob asked them, ‘Is he in good health?’ They replied, ‘Yes, he is. Look. Here comes his daughter now, with their sheep. Her name is Rachel.’"
+      "text": "Jacob asked them, ‘Is he in good health? ’ They replied, ‘Yes, he is. Look. Here comes his daughter now, with their sheep. Her name is Rachel. ’"
     },
     {
       "verse": "7",
-      "text": "Jacob said to them, ‘The sun is still high in the sky. It is not yet the right time to bring all the sheep together. So give them some water now. Then they can go back to the fields and eat more grass.’"
+      "text": "Jacob said to them, ‘The sun is still high in the sky. It is not yet the right time to bring all the sheep together. So give them some water now. Then they can go back to the fields and eat more grass. ’"
     },
     {
       "verse": "8",
-      "text": "The shepherds said, ‘We cannot do that. We have to wait until all the sheep are here together. Then we can remove the big stone from the well and we can give water to the sheep.’"
+      "text": "The shepherds said, ‘We cannot do that. We have to wait until all the sheep are here together. Then we can remove the big stone from the well and we can give water to the sheep. ’"
     },
     {
       "verse": "9",
@@ -3294,11 +3294,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Then Laban said, ‘Yes, you really are my own relative.’ So Jacob stayed with Laban for a month."
+      "text": "Then Laban said, ‘Yes, you really are my own relative. ’ So Jacob stayed with Laban for a month."
     },
     {
       "verse": "15",
-      "text": "Then Laban said to Jacob, ‘You should not work for me for nothing because you are my relative. Tell me what I should pay you.’"
+      "text": "Then Laban said to Jacob, ‘You should not work for me for nothing because you are my relative. Tell me what I should pay you. ’"
     },
     {
       "verse": "16",
@@ -3310,11 +3310,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Jacob loved Rachel. He said to Laban, ‘I will work for you for seven years. In return, I want to marry your younger daughter, Rachel.’"
+      "text": "Jacob loved Rachel. He said to Laban, ‘I will work for you for seven years. In return, I want to marry your younger daughter, Rachel. ’"
     },
     {
       "verse": "19",
-      "text": "Laban said, ‘It is better for you to marry her than another man. Stay here with me.’"
+      "text": "Laban said, ‘It is better for you to marry her than another man. Stay here with me. ’"
     },
     {
       "verse": "20",
@@ -3322,7 +3322,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "After seven years, Jacob said to Laban, ‘Give me my wife. My time to work for you is finished and I want to marry her.’"
+      "text": "After seven years, Jacob said to Laban, ‘Give me my wife. My time to work for you is finished and I want to marry her. ’"
     },
     {
       "verse": "22",
@@ -3338,7 +3338,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "When morning came, Jacob saw that he had slept with Leah! He said to Laban, ‘You have done a very bad thing to me! I worked for you to get Rachel as my wife. Why have you deceived me?’"
+      "text": "When morning came, Jacob saw that he had slept with Leah! He said to Laban, ‘You have done a very bad thing to me! I worked for you to get Rachel as my wife. Why have you deceived me? ’"
     },
     {
       "verse": "26",
@@ -3346,7 +3346,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So finish this week of Leah's marriage. Then we will give you Rachel to marry too. But you must work for another seven years.’"
+      "text": "So finish this week of Leah's marriage. Then we will give you Rachel to marry too. But you must work for another seven years. ’"
     },
     {
       "verse": "28",
@@ -3366,33 +3366,33 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Leah became pregnant and she gave birth to a son. She called him Reuben. She said, ‘It is because the Lord has seen how sad I am. My husband will love me now because I have given birth to a son.’"
+      "text": "Leah became pregnant and she gave birth to a son. She called him Reuben. She said, ‘It is because the Lord has seen how sad I am. My husband will love me now because I have given birth to a son. ’"
     },
     {
       "verse": "33",
-      "text": "Leah became pregnant again. She gave birth to another son. She said, ‘The Lord has given me another son because he knows that I am not loved.’ She called this son Simeon."
+      "text": "Leah became pregnant again. She gave birth to another son. She said, ‘The Lord has given me another son because he knows that I am not loved. ’ She called this son Simeon."
     },
     {
       "verse": "34",
-      "text": "Leah became pregnant again. Later, she gave birth to another son. She said, ‘Now I have given my husband three sons, so he will want to stay with me.’ She called this son Levi."
+      "text": "Leah became pregnant again. Later, she gave birth to another son. She said, ‘Now I have given my husband three sons, so he will want to stay with me. ’ She called this son Levi."
     },
     {
       "verse": "35",
-      "text": "Leah became pregnant again. She gave birth to another son. She said, ‘This time I will praise the Lord.’ She called this son Judah. Then she stopped giving birth to children."
+      "text": "Leah became pregnant again. She gave birth to another son. She said, ‘This time I will praise the Lord. ’ She called this son Judah. Then she stopped giving birth to children."
     }
   ],
   "30": [
     {
       "verse": "1",
-      "text": "Rachel now knew that she could not give birth to any children for Jacob. So she became jealous of her sister. Rachel said to Jacob, ‘Please give me children. If not, I will die.’"
+      "text": "Rachel now knew that she could not give birth to any children for Jacob. So she became jealous of her sister. Rachel said to Jacob, ‘Please give me children. If not, I will die. ’"
     },
     {
       "verse": "2",
-      "text": "Jacob became angry with Rachel. He said, ‘Am I God? God has stopped you from giving birth to children!’"
+      "text": "Jacob became angry with Rachel. He said, ‘Am I God? God has stopped you from giving birth to children! ’"
     },
     {
       "verse": "3",
-      "text": "Rachel said, ‘Take my servant Bilhah and have sex with her. Then she can have children on my behalf. Through her, I can have a family.’"
+      "text": "Rachel said, ‘Take my servant Bilhah and have sex with her. Then she can have children on my behalf. Through her, I can have a family. ’"
     },
     {
       "verse": "4",
@@ -3404,7 +3404,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Rachel said, ‘God has shown that I am right. He has listened to me and he has given a son to me.’ Because of this, she called the boy Dan."
+      "text": "Rachel said, ‘God has shown that I am right. He has listened to me and he has given a son to me. ’ Because of this, she called the boy Dan."
     },
     {
       "verse": "7",
@@ -3412,7 +3412,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Rachel said, ‘I have fought with my sister and I have won.’ She called this son Naphtali."
+      "text": "Rachel said, ‘I have fought with my sister and I have won. ’ She called this son Naphtali."
     },
     {
       "verse": "9",
@@ -3424,7 +3424,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Leah said, ‘This is very good.’ She called the boy Gad."
+      "text": "Leah said, ‘This is very good. ’ She called the boy Gad."
     },
     {
       "verse": "12",
@@ -3432,19 +3432,19 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Leah said, ‘I am very happy! Women will call me happy.’ So she called this boy Asher."
+      "text": "Leah said, ‘I am very happy! Women will call me happy. ’ So she called this boy Asher."
     },
     {
       "verse": "14",
-      "text": "It was the time for the harvest of wheat. Reuben went out and he found some mandrake plants in a field. He took them to his mother, Leah. Rachel said to Leah, ‘Please give me some of the mandrakes that your son gave to you.’"
+      "text": "It was the time for the harvest of wheat. Reuben went out and he found some mandrake plants in a field. He took them to his mother, Leah. Rachel said to Leah, ‘Please give me some of the mandrakes that your son gave to you. ’"
     },
     {
       "verse": "15",
-      "text": "But Leah said to Rachel, ‘You took my husband from me. That was bad enough! Now you want to take my son's mandrakes too!’ Rachel said, ‘OK. If you give me some of your son's mandrakes, Jacob can sleep with you tonight.’"
+      "text": "But Leah said to Rachel, ‘You took my husband from me. That was bad enough! Now you want to take my son's mandrakes too! ’ Rachel said, ‘OK. If you give me some of your son's mandrakes, Jacob can sleep with you tonight. ’"
     },
     {
       "verse": "16",
-      "text": "In the evening, Jacob came in from the fields. Leah went out to meet him. She said, ‘You must sleep with me tonight. I have paid for you with my son's mandrakes.’ So Jacob slept with Leah that night."
+      "text": "In the evening, Jacob came in from the fields. Leah went out to meet him. She said, ‘You must sleep with me tonight. I have paid for you with my son's mandrakes. ’ So Jacob slept with Leah that night."
     },
     {
       "verse": "17",
@@ -3452,7 +3452,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Leah said, ‘God has helped me because I gave my servant to Jacob as a wife.’ She called her son Issachar."
+      "text": "Leah said, ‘God has helped me because I gave my servant to Jacob as a wife. ’ She called her son Issachar."
     },
     {
       "verse": "19",
@@ -3460,7 +3460,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Leah said, ‘God has given me this valuable gift. Now my husband will respect me because I have given him six sons.’ She called this son Zebulun."
+      "text": "Leah said, ‘God has given me this valuable gift. Now my husband will respect me because I have given him six sons. ’ She called this son Zebulun."
     },
     {
       "verse": "21",
@@ -3472,11 +3472,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "She became pregnant and she gave birth to a son. Rachel said, ‘I am not ashamed any longer, because God has given me a son.’"
+      "text": "She became pregnant and she gave birth to a son. Rachel said, ‘I am not ashamed any longer, because God has given me a son. ’"
     },
     {
       "verse": "24",
-      "text": "Rachel called her son Joseph. She said, ‘I pray that the Lord will give me another son.’"
+      "text": "Rachel called her son Joseph. She said, ‘I pray that the Lord will give me another son. ’"
     },
     {
       "verse": "25",
@@ -3484,15 +3484,15 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Let me take my wives and my children with me. I have worked for you so that I could have them. You must let me leave, because you know how much I have worked for you.’"
+      "text": "Let me take my wives and my children with me. I have worked for you so that I could have them. You must let me leave, because you know how much I have worked for you. ’"
     },
     {
       "verse": "27",
-      "text": "Laban said to Jacob, ‘If you are happy with me then please stay here. I know that the Lord has blessed me because you are here with me. I have used magic to know that.’"
+      "text": "Laban said to Jacob, ‘If you are happy with me then please stay here. I know that the Lord has blessed me because you are here with me. I have used magic to know that. ’"
     },
     {
       "verse": "28",
-      "text": "Laban also said to Jacob, ‘Tell me how much I should pay you for your work. I will pay whatever you want.’"
+      "text": "Laban also said to Jacob, ‘Tell me how much I should pay you for your work. I will pay whatever you want. ’"
     },
     {
       "verse": "29",
@@ -3500,11 +3500,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Before I came, you had only a few sheep and goats. Now you have many more valuable things. Wherever I have worked for you, the Lord has blessed you. But now I want to work to help my own family. I must do that soon.’"
+      "text": "Before I came, you had only a few sheep and goats. Now you have many more valuable things. Wherever I have worked for you, the Lord has blessed you. But now I want to work to help my own family. I must do that soon. ’"
     },
     {
       "verse": "31",
-      "text": "Laban asked, ‘What must I give to you?’ Jacob replied, ‘You do not need to give me anything. But just do one thing for me. Then I will still take care of your animals. I will make sure that nothing bad happens to them."
+      "text": "Laban asked, ‘What must I give to you? ’ Jacob replied, ‘You do not need to give me anything. But just do one thing for me. Then I will still take care of your animals. I will make sure that nothing bad happens to them."
     },
     {
       "verse": "32",
@@ -3512,11 +3512,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "In the future, this will show that I am honest. You can check on my animals whenever you want to. I will only have sheep or goats that have marks on their skin, or black lambs. If I have any other animals, you may call me a robber.’"
+      "text": "In the future, this will show that I am honest. You can check on my animals whenever you want to. I will only have sheep or goats that have marks on their skin, or black lambs. If I have any other animals, you may call me a robber. ’"
     },
     {
       "verse": "34",
-      "text": "Laban said, ‘I agree to this. It will be as you have said.’"
+      "text": "Laban said, ‘I agree to this. It will be as you have said. ’"
     },
     {
       "verse": "35",
@@ -3558,7 +3558,7 @@ module.exports = {
   "31": [
     {
       "verse": "1",
-      "text": "Jacob heard that Laban's sons were complaining about him. They were saying, ‘Jacob has taken everything that belonged to our father. He has taken things from our father and he has become rich himself.’"
+      "text": "Jacob heard that Laban's sons were complaining about him. They were saying, ‘Jacob has taken everything that belonged to our father. He has taken things from our father and he has become rich himself. ’"
     },
     {
       "verse": "2",
@@ -3566,7 +3566,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then the Lord said to Jacob, ‘Go back to the land where your father and grandfather lived. Go back to your relatives. I will be with you there.’"
+      "text": "Then the Lord said to Jacob, ‘Go back to the land where your father and grandfather lived. Go back to your relatives. I will be with you there. ’"
     },
     {
       "verse": "4",
@@ -3586,7 +3586,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Sometimes Laban said, “I will pay you with the animals that have different colours on their skin.” If he said that, all the animals gave birth to babies with different colours on their skins. Sometimes he said, “I will pay you with the animals that have marks on them.” Then all the animals gave birth to babies with marks on them."
+      "text": "Sometimes Laban said, “I will pay you with the animals that have different colours on their skin. ” If he said that, all the animals gave birth to babies with different colours on their skins. Sometimes he said, “I will pay you with the animals that have marks on them. ” Then all the animals gave birth to babies with marks on them."
     },
     {
       "verse": "9",
@@ -3598,7 +3598,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The angel of God spoke to me in the dream. He said, “Jacob.” I replied, “Yes, here I am.”"
+      "text": "The angel of God spoke to me in the dream. He said, “Jacob. ” I replied, “Yes, here I am. ”"
     },
     {
       "verse": "12",
@@ -3606,7 +3606,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I am the God who appeared to you at Bethel. That is where you poured oil on the special stone and you made a promise to me. Now I am telling you to leave this land. Go back to the land where you were born.” ’"
+      "text": "I am the God who appeared to you at Bethel. That is where you poured oil on the special stone and you made a promise to me. Now I am telling you to leave this land. Go back to the land where you were born. ” ’"
     },
     {
       "verse": "14",
@@ -3618,7 +3618,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So everything that God has taken away from our father really belongs to us and to our children. So you must do everything that God has told you to do.’"
+      "text": "So everything that God has taken away from our father really belongs to us and to our children. So you must do everything that God has told you to do. ’"
     },
     {
       "verse": "17",
@@ -3650,7 +3650,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then God appeared to Laban the Aramean in a dream at night. God warned him, ‘Be careful what you say to Jacob. Do not say anything good or bad to him.’"
+      "text": "Then God appeared to Laban the Aramean in a dream at night. God warned him, ‘Be careful what you say to Jacob. Do not say anything good or bad to him. ’"
     },
     {
       "verse": "25",
@@ -3670,11 +3670,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "I have the power to hurt you. But last night the God of your father appeared to me. He told me, “Be careful what you say to Jacob. Do not say anything good or bad against him.”"
+      "text": "I have the power to hurt you. But last night the God of your father appeared to me. He told me, “Be careful what you say to Jacob. Do not say anything good or bad against him. ”"
     },
     {
       "verse": "30",
-      "text": "I know that you want very much to return to your father's house. That is why you have left my home. But why did you take my idols?’"
+      "text": "I know that you want very much to return to your father's house. That is why you have left my home. But why did you take my idols? ’"
     },
     {
       "verse": "31",
@@ -3682,7 +3682,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "But if you find your idols with anyone here, that person must die. While our relatives watch, you may look for anything that belongs to you. If you find anything then take it.’Jacob did not know that Rachel had taken her father's idols."
+      "text": "But if you find your idols with anyone here, that person must die. While our relatives watch, you may look for anything that belongs to you. If you find anything then take it. ’Jacob did not know that Rachel had taken her father's idols."
     },
     {
       "verse": "33",
@@ -3694,7 +3694,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Rachel said to him, ‘Do not be angry with me, sir. I cannot stand up in front of you. It is the time of my monthly blood loss.’ So Laban looked everywhere for the idols, but he did not find them."
+      "text": "Rachel said to him, ‘Do not be angry with me, sir. I cannot stand up in front of you. It is the time of my monthly blood loss. ’ So Laban looked everywhere for the idols, but he did not find them."
     },
     {
       "verse": "36",
@@ -3702,7 +3702,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Now you have looked through everything that I have. Did you find anything that belongs to you? If you have found anything, put it here. Then your relatives and my relatives can see it. Our relatives can decide which of us is right, you or me!’"
+      "text": "Now you have looked through everything that I have. Did you find anything that belongs to you? If you have found anything, put it here. Then your relatives and my relatives can see it. Our relatives can decide which of us is right, you or me! ’"
     },
     {
       "verse": "38",
@@ -3722,7 +3722,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "The God of my father, the God of Abraham and the Fear of Isaac was with me. If he had not helped me, then you would have sent me away with nothing. But God has seen what you have done to hurt me. He has seen how hard I have worked for you. So last night he told you that you had done wrong.’"
+      "text": "The God of my father, the God of Abraham and the Fear of Isaac was with me. If he had not helped me, then you would have sent me away with nothing. But God has seen what you have done to hurt me. He has seen how hard I have worked for you. So last night he told you that you had done wrong. ’"
     },
     {
       "verse": "43",
@@ -3730,7 +3730,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "So we should be friends. Let us make an agreement together. It will show that we have agreed to be friends.’"
+      "text": "So we should be friends. Let us make an agreement together. It will show that we have agreed to be friends. ’"
     },
     {
       "verse": "45",
@@ -3738,7 +3738,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "He said to his relatives, ‘Go and get some stones.’ So they brought some stones and they put them together on the ground. Then they all ate a meal together, near the heap of stones."
+      "text": "He said to his relatives, ‘Go and get some stones. ’ So they brought some stones and they put them together on the ground. Then they all ate a meal together, near the heap of stones."
     },
     {
       "verse": "47",
@@ -3746,7 +3746,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "Laban said, ‘These stones show that we have made an agreement today.’ That is why the place was called Galeed."
+      "text": "Laban said, ‘These stones show that we have made an agreement today. ’ That is why the place was called Galeed."
     },
     {
       "verse": "49",
@@ -3754,7 +3754,7 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "Remember that God is watching you. If you do wrong to my daughters, God will see it. And if you marry any other women, remember this. God is watching you. Even if no one else sees you, God will know.’"
+      "text": "Remember that God is watching you. If you do wrong to my daughters, God will see it. And if you marry any other women, remember this. God is watching you. Even if no one else sees you, God will know. ’"
     },
     {
       "verse": "51",
@@ -3766,7 +3766,7 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "Let the God of Abraham, Nahor, and their ancestors decide if one of us is guilty.’So Jacob made a promise in the name of the God that his father Isaac worshipped."
+      "text": "Let the God of Abraham, Nahor, and their ancestors decide if one of us is guilty. ’So Jacob made a promise in the name of the God that his father Isaac worshipped."
     },
     {
       "verse": "54",
@@ -3784,7 +3784,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "When Jacob saw them, he said, ‘This is where God's army has put up their tents!’ So he called that place Mahanaim."
+      "text": "When Jacob saw them, he said, ‘This is where God's army has put up their tents! ’ So he called that place Mahanaim."
     },
     {
       "verse": "3",
@@ -3796,11 +3796,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "I have cows, donkeys, sheep and goats. I have male and female servants. Now I am sending this message to my lord so that you will be happy with me.” ’"
+      "text": "I have cows, donkeys, sheep and goats. I have male and female servants. Now I am sending this message to my lord so that you will be happy with me. ” ’"
     },
     {
       "verse": "6",
-      "text": "When the men returned, they said to Jacob, ‘We went to your brother Esau. Now he is coming to meet you and he has 400 men with him.’"
+      "text": "When the men returned, they said to Jacob, ‘We went to your brother Esau. Now he is coming to meet you and he has 400 men with him. ’"
     },
     {
       "verse": "7",
@@ -3808,11 +3808,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He thought, ‘If Esau attacks one group, the other group may run away safely.’"
+      "text": "He thought, ‘If Esau attacks one group, the other group may run away safely. ’"
     },
     {
       "verse": "9",
-      "text": "Then Jacob prayed, ‘God of my grandfather Abraham and my father Isaac, Lord, you said to me, “Go back to your country and to your relatives. I will do good things for you there.”"
+      "text": "Then Jacob prayed, ‘God of my grandfather Abraham and my father Isaac, Lord, you said to me, “Go back to your country and to your relatives. I will do good things for you there. ”"
     },
     {
       "verse": "10",
@@ -3824,7 +3824,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "But you have said, “I will give you many good things. I will give you so many descendants that nobody will be able to count them. They will be as many as the pieces of sand on the shore of the sea.” ’"
+      "text": "But you have said, “I will give you many good things. I will give you so many descendants that nobody will be able to count them. They will be as many as the pieces of sand on the shore of the sea. ” ’"
     },
     {
       "verse": "13",
@@ -3840,15 +3840,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He told his servants to take care of them. He separated each group of animals from the other groups. Jacob said to his servants, ‘Go in front of me. Keep some space between each group of animals.’"
+      "text": "He told his servants to take care of them. He separated each group of animals from the other groups. Jacob said to his servants, ‘Go in front of me. Keep some space between each group of animals. ’"
     },
     {
       "verse": "17",
-      "text": "He told the servant who led the first group of animals, ‘When my brother Esau meets you, he may ask, “Who do you belong to? Where are you going? Who do all these animals belong to?”"
+      "text": "He told the servant who led the first group of animals, ‘When my brother Esau meets you, he may ask, “Who do you belong to? Where are you going? Who do all these animals belong to? ”"
     },
     {
       "verse": "18",
-      "text": "Then you must say, “They belong to your servant Jacob. They are a gift that he has sent to my lord Esau. Jacob himself is coming behind us.” ’"
+      "text": "Then you must say, “They belong to your servant Jacob. They are a gift that he has sent to my lord Esau. Jacob himself is coming behind us. ” ’"
     },
     {
       "verse": "19",
@@ -3856,7 +3856,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "You must also say “Your servant Jacob is coming behind us.” ’Jacob thought, ‘Esau will be happy to receive my gifts. He will no longer be angry with me. Then, when I meet him, he will not hurt me.’"
+      "text": "You must also say “Your servant Jacob is coming behind us. ” ’Jacob thought, ‘Esau will be happy to receive my gifts. He will no longer be angry with me. Then, when I meet him, he will not hurt me. ’"
     },
     {
       "verse": "21",
@@ -3880,23 +3880,23 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then the man said to Jacob, ‘Now let me go because dawn has come.’ But Jacob said, ‘I will not let you go unless you bless me.’"
+      "text": "Then the man said to Jacob, ‘Now let me go because dawn has come. ’ But Jacob said, ‘I will not let you go unless you bless me. ’"
     },
     {
       "verse": "27",
-      "text": "The man asked Jacob, ‘What is your name?’ Jacob replied, ‘My name is Jacob.’"
+      "text": "The man asked Jacob, ‘What is your name? ’ Jacob replied, ‘My name is Jacob. ’"
     },
     {
       "verse": "28",
-      "text": "Then the man said, ‘Your name will not be Jacob any longer. Your name will now be Israel. That is because you have fought with God and you have fought with men. And you have won!’"
+      "text": "Then the man said, ‘Your name will not be Jacob any longer. Your name will now be Israel. That is because you have fought with God and you have fought with men. And you have won! ’"
     },
     {
       "verse": "29",
-      "text": "Then Jacob said, ‘Please tell me your name.’ But the man said, ‘Why do you want to know my name?’ Then he blessed Jacob in that place."
+      "text": "Then Jacob said, ‘Please tell me your name. ’ But the man said, ‘Why do you want to know my name? ’ Then he blessed Jacob in that place."
     },
     {
       "verse": "30",
-      "text": "So Jacob called the place Peniel. He said, ‘I have seen God face to face, and I am still alive!’"
+      "text": "So Jacob called the place Peniel. He said, ‘I have seen God face to face, and I am still alive! ’"
     },
     {
       "verse": "31",
@@ -3926,7 +3926,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then Esau looked up. He saw the women and children. He asked, ‘Who are these people with you?’ Jacob replied, ‘They are the children that God has given to me, your servant.’"
+      "text": "Then Esau looked up. He saw the women and children. He asked, ‘Who are these people with you? ’ Jacob replied, ‘They are the children that God has given to me, your servant. ’"
     },
     {
       "verse": "6",
@@ -3938,11 +3938,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Esau asked Jacob, ‘Why did you send all those animals in front of you?’ Jacob replied, ‘So that you would be happy to see me, my lord.’"
+      "text": "Esau asked Jacob, ‘Why did you send all those animals in front of you? ’ Jacob replied, ‘So that you would be happy to see me, my lord. ’"
     },
     {
       "verse": "9",
-      "text": "But Esau said, ‘Keep your animals for yourself, my brother. I have enough animals of my own.’"
+      "text": "But Esau said, ‘Keep your animals for yourself, my brother. I have enough animals of my own. ’"
     },
     {
       "verse": "10",
@@ -3950,11 +3950,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So please accept the gift that I brought to you. God has been very kind to me so that I have everything that I need.’ So Esau accepted the gifts because Jacob would not agree to keep them."
+      "text": "So please accept the gift that I brought to you. God has been very kind to me so that I have everything that I need. ’ So Esau accepted the gifts because Jacob would not agree to keep them."
     },
     {
       "verse": "12",
-      "text": "Then Esau said, ‘Let us continue to go on our way. I will travel with you.’"
+      "text": "Then Esau said, ‘Let us continue to go on our way. I will travel with you. ’"
     },
     {
       "verse": "13",
@@ -3962,11 +3962,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So you should go in front of me, my lord. I will travel slowly with the animals and children, so that they are comfortable. Then, my lord, I will come to you in Seir.’"
+      "text": "So you should go in front of me, my lord. I will travel slowly with the animals and children, so that they are comfortable. Then, my lord, I will come to you in Seir. ’"
     },
     {
       "verse": "15",
-      "text": "Esau said, ‘Then let me leave some of my men to travel with you.’ But Jacob replied, ‘You do not need to do that. All I want is for you to be happy with me.’"
+      "text": "Esau said, ‘Then let me leave some of my men to travel with you. ’ But Jacob replied, ‘You do not need to do that. All I want is for you to be happy with me. ’"
     },
     {
       "verse": "16",
@@ -4004,7 +4004,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Shechem said to his father, Hamor, ‘I want to marry this girl. Please get her for me.’"
+      "text": "Shechem said to his father, Hamor, ‘I want to marry this girl. Please get her for me. ’"
     },
     {
       "verse": "5",
@@ -4028,7 +4028,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then you can live among us. You can live anywhere you want to in this land. You should live here, buy and sell things. Buy land and houses here.’"
+      "text": "Then you can live among us. You can live anywhere you want to in this land. You should live here, buy and sell things. Buy land and houses here. ’"
     },
     {
       "verse": "11",
@@ -4036,7 +4036,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "I will pay you the gifts that you ask for Dinah. It can be as much as you like. I will pay it all, because I want to have Dinah as my wife.’"
+      "text": "I will pay you the gifts that you ask for Dinah. It can be as much as you like. I will pay it all, because I want to have Dinah as my wife. ’"
     },
     {
       "verse": "13",
@@ -4056,7 +4056,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But your men must agree to be circumcised. If not, we will take our sister with us and we will leave this place.’"
+      "text": "But your men must agree to be circumcised. If not, we will take our sister with us and we will leave this place. ’"
     },
     {
       "verse": "18",
@@ -4080,7 +4080,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then their things and their animals will all become our things. So we should agree to be circumcised, as they ask. Then they will live among us.’"
+      "text": "Then their things and their animals will all become our things. So we should agree to be circumcised, as they ask. Then they will live among us. ’"
     },
     {
       "verse": "24",
@@ -4108,17 +4108,17 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "When they returned to Jacob, he said to Simeon and Levi, ‘You have brought bad trouble to me! The people who live in this land, the Canaanites and the Perizzites, will hate me. I will be like a bad smell to them. We do not have many men to fight for us. If the Perizzites and Canaanites join together and they attack us, they will destroy our whole family!’"
+      "text": "When they returned to Jacob, he said to Simeon and Levi, ‘You have brought bad trouble to me! The people who live in this land, the Canaanites and the Perizzites, will hate me. I will be like a bad smell to them. We do not have many men to fight for us. If the Perizzites and Canaanites join together and they attack us, they will destroy our whole family! ’"
     },
     {
       "verse": "31",
-      "text": "But Simeon and Levi replied, ‘Shechem should not have had sex with our sister as if she were a prostitute.’"
+      "text": "But Simeon and Levi replied, ‘Shechem should not have had sex with our sister as if she were a prostitute. ’"
     }
   ],
   "35": [
     {
       "verse": "1",
-      "text": "After these things had happened, God said to Jacob, ‘Go to Bethel and live there. Build an altar to worship me. I am the God who appeared to you when you were running away from Esau.’"
+      "text": "After these things had happened, God said to Jacob, ‘Go to Bethel and live there. Build an altar to worship me. I am the God who appeared to you when you were running away from Esau. ’"
     },
     {
       "verse": "2",
@@ -4126,7 +4126,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then we will go to Bethel. I will build an altar there to worship God. He is the one who answered me when I was in trouble. And he has been with me everywhere that I went.’"
+      "text": "Then we will go to Bethel. I will build an altar there to worship God. He is the one who answered me when I was in trouble. And he has been with me everywhere that I went. ’"
     },
     {
       "verse": "4",
@@ -4154,7 +4154,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He said to Jacob, ‘Your name is Jacob, but you will no longer be called Jacob. Instead, your name will be Israel.’ So God gave the name Israel to Jacob."
+      "text": "He said to Jacob, ‘Your name is Jacob, but you will no longer be called Jacob. Instead, your name will be Israel. ’ So God gave the name Israel to Jacob."
     },
     {
       "verse": "11",
@@ -4162,7 +4162,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "I give to you the land that I gave to Abraham and Isaac. Yes, I will give this land to your descendants that come after you.’"
+      "text": "I give to you the land that I gave to Abraham and Isaac. Yes, I will give this land to your descendants that come after you. ’"
     },
     {
       "verse": "13",
@@ -4182,7 +4182,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "As she was having even more pain, the woman who was helping her said, ‘Do not be afraid. You have another son!’"
+      "text": "As she was having even more pain, the woman who was helping her said, ‘Do not be afraid. You have another son! ’"
     },
     {
       "verse": "18",
@@ -4202,7 +4202,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "While Israel stayed there, his son Reuben had sex with Bilhah. She was Israel's slave wife, and Israel heard what had happened.Jacob had 12 sons:"
+      "text": "While Israel stayed there, his son Reuben had sex with Bilhah. She was Israel's slave wife, and Israel heard what had happened. Jacob had 12 sons:"
     },
     {
       "verse": "23",
@@ -4218,7 +4218,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The sons of Leah's servant, Zilpah, were Gad and Asher.Those were Jacob's sons who were born to him in Paddan Aram. Those were Jacob's sons who were born to him in Paddan Aram."
+      "text": "The sons of Leah's servant, Zilpah, were Gad and Asher. Those were Jacob's sons who were born to him in Paddan Aram. Those were Jacob's sons who were born to him in Paddan Aram."
     },
     {
       "verse": "27",
@@ -4236,11 +4236,11 @@ module.exports = {
   "36": [
     {
       "verse": "1",
-      "text": "This is the report about Esau and his family. (Esau is also called Edom.)"
+      "text": "This is the report about Esau and his family. (Esau is also called Edom. )"
     },
     {
       "verse": "2",
-      "text": "Esau took women from Canaan to be his wives. They were:Adah, the daughter of Elon the Hittite,Oholibamah, the daughter of Anah and granddaughter of Zibeon the Hivite,"
+      "text": "Esau took women from Canaan to be his wives. They were: Adah, the daughter of Elon the Hittite, Oholibamah, the daughter of Anah and granddaughter of Zibeon the Hivite,"
     },
     {
       "verse": "3",
@@ -4272,7 +4272,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "These are the names of Esau's sons:Eliphaz, the son of Esau's wife, Adah,and Reuel, the son of Esau's wife, Basemath."
+      "text": "These are the names of Esau's sons: Eliphaz, the son of Esau's wife, Adah, and Reuel, the son of Esau's wife, Basemath."
     },
     {
       "verse": "11",
@@ -4404,7 +4404,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Magdiel and Iram. These were the leaders who lived with their families in different places in the land. Each place was called the same name as the clan leader who lived there.All those people are the descendants of Esau, the ancestor of the Edomites."
+      "text": "Magdiel and Iram. These were the leaders who lived with their families in different places in the land. Each place was called the same name as the clan leader who lived there. All those people are the descendants of Esau, the ancestor of the Edomites."
     }
   ],
   "37": [
@@ -4414,7 +4414,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This is the report about Jacob and his family.Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers."
+      "text": "This is the report about Jacob and his family. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers."
     },
     {
       "verse": "3",
@@ -4434,19 +4434,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "We were out in the field tying the crops together into bundles. Then my bundle stood up. Your bundles stood in a circle round my bundle. And all your bundles bent down to respect my bundle.’"
+      "text": "We were out in the field tying the crops together into bundles. Then my bundle stood up. Your bundles stood in a circle round my bundle. And all your bundles bent down to respect my bundle. ’"
     },
     {
       "verse": "8",
-      "text": "Joseph's brothers said to him, ‘Do you really think that you will be like a king and rule over us like that?’ They hated Joseph even more because of what he told them about his dream."
+      "text": "Joseph's brothers said to him, ‘Do you really think that you will be like a king and rule over us like that? ’ They hated Joseph even more because of what he told them about his dream."
     },
     {
       "verse": "9",
-      "text": "Then Joseph had another dream and he told his brothers about it. He said, ‘Listen to me. I have had another dream. This is what happened: The sun, the moon and 11 stars bent down in front of me.’"
+      "text": "Then Joseph had another dream and he told his brothers about it. He said, ‘Listen to me. I have had another dream. This is what happened: The sun, the moon and 11 stars bent down in front of me. ’"
     },
     {
       "verse": "10",
-      "text": "Joseph told his father and his brothers about the dream. Jacob, his father, was angry with him. He said to Joseph, ‘You should not tell us about a dream like that! Do you really think that I, your mother and your brothers will come and bend down in front of you?’"
+      "text": "Joseph told his father and his brothers about the dream. Jacob, his father, was angry with him. He said to Joseph, ‘You should not tell us about a dream like that! Do you really think that I, your mother and your brothers will come and bend down in front of you? ’"
     },
     {
       "verse": "11",
@@ -4458,23 +4458,23 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Jacob said to Joseph, ‘You know that your brothers have taken my sheep to eat grass near Shechem. I want you to go to them.’ Joseph replied, ‘I am ready to go.’"
+      "text": "Jacob said to Joseph, ‘You know that your brothers have taken my sheep to eat grass near Shechem. I want you to go to them. ’ Joseph replied, ‘I am ready to go. ’"
     },
     {
       "verse": "14",
-      "text": "So Jacob said to Joseph, ‘Go and see if your brothers are well. See if the sheep have enough grass to eat. Then come back and tell me news about them.’ Then Jacob sent Joseph from the Valley of Hebron to go to them."
+      "text": "So Jacob said to Joseph, ‘Go and see if your brothers are well. See if the sheep have enough grass to eat. Then come back and tell me news about them. ’ Then Jacob sent Joseph from the Valley of Hebron to go to them."
     },
     {
       "verse": "15",
-      "text": "When Joseph arrived near Shechem and he was walking in the fields there, a man met him. He asked Joseph, ‘What are you looking for?’"
+      "text": "When Joseph arrived near Shechem and he was walking in the fields there, a man met him. He asked Joseph, ‘What are you looking for? ’"
     },
     {
       "verse": "16",
-      "text": "Joseph replied, ‘I am looking for my brothers. They have taken the sheep to eat grass. Please tell me where they are.’"
+      "text": "Joseph replied, ‘I am looking for my brothers. They have taken the sheep to eat grass. Please tell me where they are. ’"
     },
     {
       "verse": "17",
-      "text": "The man said, ‘They have moved away from here. I heard them say, “Let us go to Dothan.” ’So Joseph went to look for his brothers. He found them at Dothan."
+      "text": "The man said, ‘They have moved away from here. I heard them say, “Let us go to Dothan. ” ’So Joseph went to look for his brothers. He found them at Dothan."
     },
     {
       "verse": "18",
@@ -4486,7 +4486,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "We will kill him. We can throw him into one of the dry wells. We can tell people that a wild animal ate him. Then his dreams will never become true!’"
+      "text": "We will kill him. We can throw him into one of the dry wells. We can tell people that a wild animal ate him. Then his dreams will never become true! ’"
     },
     {
       "verse": "21",
@@ -4494,7 +4494,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Do not even get his blood on your hands. Just throw him into this dry well here in the wilderness. But do not attack him.’ Reuben said this to save Joseph, so that his brothers would not kill him. Then later, Reuben could take Joseph back to his father."
+      "text": "Do not even get his blood on your hands. Just throw him into this dry well here in the wilderness. But do not attack him. ’ Reuben said this to save Joseph, so that his brothers would not kill him. Then later, Reuben could take Joseph back to his father."
     },
     {
       "verse": "23",
@@ -4514,7 +4514,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So let us sell him to these Ishmaelites. We do not need to hurt him. Then we will not have to kill him. We should remember that he is our brother. He is our own relative.’ Judah's brothers agreed with what he said."
+      "text": "So let us sell him to these Ishmaelites. We do not need to hurt him. Then we will not have to kill him. We should remember that he is our brother. He is our own relative. ’ Judah's brothers agreed with what he said."
     },
     {
       "verse": "28",
@@ -4526,7 +4526,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Reuben went back to his brothers. He said to them, ‘The boy is not in the well! What can I do now?’"
+      "text": "Reuben went back to his brothers. He said to them, ‘The boy is not in the well! What can I do now? ’"
     },
     {
       "verse": "31",
@@ -4534,11 +4534,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "They took the coat back to their father and they told him, ‘We found this coat. Look at it. Tell us if it is your son's coat.’"
+      "text": "They took the coat back to their father and they told him, ‘We found this coat. Look at it. Tell us if it is your son's coat. ’"
     },
     {
       "verse": "33",
-      "text": "Jacob saw that it was Joseph's coat. He said, ‘It is my son's coat! A wild animal must have eaten him! The animal has torn Joseph's body into pieces.’"
+      "text": "Jacob saw that it was Joseph's coat. He said, ‘It is my son's coat! A wild animal must have eaten him! The animal has torn Joseph's body into pieces. ’"
     },
     {
       "verse": "34",
@@ -4546,7 +4546,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "All Jacob's sons and daughters came to comfort him. But Jacob was very sad, so they could not make him happy. Jacob said, ‘I will be sad until the day that I die, because my son is dead.’ Jacob wept because Joseph was dead."
+      "text": "All Jacob's sons and daughters came to comfort him. But Jacob was very sad, so they could not make him happy. Jacob said, ‘I will be sad until the day that I die, because my son is dead. ’ Jacob wept because Joseph was dead."
     },
     {
       "verse": "36",
@@ -4584,7 +4584,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then Judah said to Onan, ‘You should marry your dead brother's wife and have sex with her. You are her dead husband's brother. You must have a son who will become your dead brother's descendant.’"
+      "text": "Then Judah said to Onan, ‘You should marry your dead brother's wife and have sex with her. You are her dead husband's brother. You must have a son who will become your dead brother's descendant. ’"
     },
     {
       "verse": "9",
@@ -4596,7 +4596,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then Judah said to his son's widow, Tamar, ‘Go back to your father's house and live there as a widow. Stay there until my son Shelah grows older.’ Judah thought, ‘I do not want Shelah to die in the way that his brothers died.’ So Tamar went to live in her father's house."
+      "text": "Then Judah said to his son's widow, Tamar, ‘Go back to your father's house and live there as a widow. Stay there until my son Shelah grows older. ’ Judah thought, ‘I do not want Shelah to die in the way that his brothers died. ’ So Tamar went to live in her father's house."
     },
     {
       "verse": "12",
@@ -4604,7 +4604,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Someone told Tamar, ‘Your husband's father is going to Timnah to get the wool from his sheep.’"
+      "text": "Someone told Tamar, ‘Your husband's father is going to Timnah to get the wool from his sheep. ’"
     },
     {
       "verse": "14",
@@ -4616,15 +4616,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He did not know that she was his son's widow. He went to her at the side of the road. He said, ‘Let me have sex with you.’ Tamar asked him, ‘If I have sex with you, what will you give me?’"
+      "text": "He did not know that she was his son's widow. He went to her at the side of the road. He said, ‘Let me have sex with you. ’ Tamar asked him, ‘If I have sex with you, what will you give me? ’"
     },
     {
       "verse": "17",
-      "text": "Judah replied, ‘I will take a young goat from my animals and I will give it to you.’ Tamar said, ‘Please give me something now to show me that you will really send the goat to me.’"
+      "text": "Judah replied, ‘I will take a young goat from my animals and I will give it to you. ’ Tamar said, ‘Please give me something now to show me that you will really send the goat to me. ’"
     },
     {
       "verse": "18",
-      "text": "Judah asked her, ‘What should I give you?’ Tamar replied, ‘Give me your special ring and the string that holds it. And give me the stick that is in your hand.’ So Judah gave them to her. He had sex with her. As a result, she became pregnant."
+      "text": "Judah asked her, ‘What should I give you? ’ Tamar replied, ‘Give me your special ring and the string that holds it. And give me the stick that is in your hand. ’ So Judah gave them to her. He had sex with her. As a result, she became pregnant."
     },
     {
       "verse": "19",
@@ -4636,27 +4636,27 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He asked some men who lived there, ‘Where is the temple prostitute who sat by the road at Enaim?’ But the men said, ‘There has not been any prostitute here.’"
+      "text": "He asked some men who lived there, ‘Where is the temple prostitute who sat by the road at Enaim? ’ But the men said, ‘There has not been any prostitute here. ’"
     },
     {
       "verse": "22",
-      "text": "So Hirah went back to Judah, with the goat. He told him, ‘I did not find her. The men who lived there said, “There has not been any temple prostitute here.” ’"
+      "text": "So Hirah went back to Judah, with the goat. He told him, ‘I did not find her. The men who lived there said, “There has not been any temple prostitute here. ” ’"
     },
     {
       "verse": "23",
-      "text": "So Judah said, ‘Let her keep the things that I gave to her. People will laugh at me if you go back there again. I sent this young goat for her, as I promised, but you could not find her.’"
+      "text": "So Judah said, ‘Let her keep the things that I gave to her. People will laugh at me if you go back there again. I sent this young goat for her, as I promised, but you could not find her. ’"
     },
     {
       "verse": "24",
-      "text": "Three months later, someone told Judah, ‘Your dead son's wife, Tamar, has become a prostitute and now she is pregnant.’ Judah said, ‘Take her out of the town and burn her to death!’"
+      "text": "Three months later, someone told Judah, ‘Your dead son's wife, Tamar, has become a prostitute and now she is pregnant. ’ Judah said, ‘Take her out of the town and burn her to death! ’"
     },
     {
       "verse": "25",
-      "text": "So they took Tamar away to kill her. But she sent a message to her dead husband's father. She said, ‘The man that these things belong to had sex with me. That is why I am pregnant. Look at these things carefully. Do you know who the ring, its string, and the stick belong to?’"
+      "text": "So they took Tamar away to kill her. But she sent a message to her dead husband's father. She said, ‘The man that these things belong to had sex with me. That is why I am pregnant. Look at these things carefully. Do you know who the ring, its string, and the stick belong to? ’"
     },
     {
       "verse": "26",
-      "text": "Judah saw that the things belonged to him. He said, ‘She is more honest than I am. She has done this because I would not give her to my son, Shelah, as his wife.’ Judah did not have sex with Tamar again."
+      "text": "Judah saw that the things belonged to him. He said, ‘She is more honest than I am. She has done this because I would not give her to my son, Shelah, as his wife. ’ Judah did not have sex with Tamar again."
     },
     {
       "verse": "27",
@@ -4664,11 +4664,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "While she was giving birth, one baby put out his hand. The woman who was helping Tamar tied a red string to that baby's arm. She said, ‘This baby came out first.’"
+      "text": "While she was giving birth, one baby put out his hand. The woman who was helping Tamar tied a red string to that baby's arm. She said, ‘This baby came out first. ’"
     },
     {
       "verse": "29",
-      "text": "But then the baby moved his hand back inside and his brother came out first. The woman said, ‘You have opened a way for yourself to come out!’ So they gave him the name ‘Perez’."
+      "text": "But then the baby moved his hand back inside and his brother came out first. The woman said, ‘You have opened a way for yourself to come out! ’ So they gave him the name ‘Perez’."
     },
     {
       "verse": "30",
@@ -4698,11 +4698,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So Potiphar told Joseph to take care of everything that belonged to him. Potiphar did not worry about anything in his house. The only thing that he thought about was the food that he ate.Joseph was a strong and handsome man."
+      "text": "So Potiphar told Joseph to take care of everything that belonged to him. Potiphar did not worry about anything in his house. The only thing that he thought about was the food that he ate. Joseph was a strong and handsome man."
     },
     {
       "verse": "7",
-      "text": "After some time had passed, Potiphar's wife saw that Joseph was handsome. She said, ‘Come to bed with me!’"
+      "text": "After some time had passed, Potiphar's wife saw that Joseph was handsome. She said, ‘Come to bed with me! ’"
     },
     {
       "verse": "8",
@@ -4710,7 +4710,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "No one has more authority in this house than I do. My master keeps nothing from me, except you. That is because you are his wife. I could not do such a bad thing. I could not do a sin that is against God.’"
+      "text": "No one has more authority in this house than I do. My master keeps nothing from me, except you. That is because you are his wife. I could not do such a bad thing. I could not do a sin that is against God. ’"
     },
     {
       "verse": "10",
@@ -4722,7 +4722,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Potiphar's wife suddenly took hold of Joseph's coat. She said, ‘Come to bed with me!’ Joseph left his coat in her hand and he ran out of the house."
+      "text": "Potiphar's wife suddenly took hold of Joseph's coat. She said, ‘Come to bed with me! ’ Joseph left his coat in her hand and he ran out of the house."
     },
     {
       "verse": "13",
@@ -4734,7 +4734,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "When he heard me scream like that, he ran out of the house. But he left his coat here with me.’"
+      "text": "When he heard me scream like that, he ran out of the house. But he left his coat here with me. ’"
     },
     {
       "verse": "16",
@@ -4746,11 +4746,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But I screamed loudly for help. So he left his coat with me and he ran out of the house.’"
+      "text": "But I screamed loudly for help. So he left his coat with me and he ran out of the house. ’"
     },
     {
       "verse": "19",
-      "text": "Joseph's master heard the story that his wife told him. She said, ‘This is what your slave did to me.’ When Potiphar heard that, he was very angry."
+      "text": "Joseph's master heard the story that his wife told him. She said, ‘This is what your slave did to me. ’ When Potiphar heard that, he was very angry."
     },
     {
       "verse": "20",
@@ -4796,11 +4796,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So Joseph asked the two officers, ‘What are you sad about?’"
+      "text": "So Joseph asked the two officers, ‘What are you sad about? ’"
     },
     {
       "verse": "8",
-      "text": "They replied, ‘We both had dreams last night, but there is nobody to tell us what they mean.’ Joseph said, ‘Only God can tell you the meaning of dreams. Tell your dreams to me.’"
+      "text": "They replied, ‘We both had dreams last night, but there is nobody to tell us what they mean. ’ Joseph said, ‘Only God can tell you the meaning of dreams. Tell your dreams to me. ’"
     },
     {
       "verse": "9",
@@ -4812,7 +4812,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Pharaoh's cup was in my hand. I took the grapes and I squeezed them. Then I put the juice into the cup and I gave the cup to Pharaoh.’"
+      "text": "Pharaoh's cup was in my hand. I took the grapes and I squeezed them. Then I put the juice into the cup and I gave the cup to Pharaoh. ’"
     },
     {
       "verse": "12",
@@ -4828,7 +4828,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Men took hold of me in the land of the Hebrews and they brought me here. Even here, I have not done anything wrong. I should not be in this prison.’"
+      "text": "Men took hold of me in the land of the Hebrews and they brought me here. Even here, I have not done anything wrong. I should not be in this prison. ’"
     },
     {
       "verse": "16",
@@ -4836,7 +4836,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The top basket contained many different kinds of bread for Pharaoh. But birds were eating them out of the basket on my head.’"
+      "text": "The top basket contained many different kinds of bread for Pharaoh. But birds were eating them out of the basket on my head. ’"
     },
     {
       "verse": "18",
@@ -4844,7 +4844,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "In three days, Pharaoh will lift off your head. He will hang you on a tree. Then birds will eat the meat off your body.’"
+      "text": "In three days, Pharaoh will lift off your head. He will hang you on a tree. Then birds will eat the meat off your body. ’"
     },
     {
       "verse": "20",
@@ -4856,7 +4856,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But Pharaoh hanged the baker to kill him.So it all happened in the way that Joseph said it would happen."
+      "text": "But Pharaoh hanged the baker to kill him. So it all happened in the way that Joseph said it would happen."
     },
     {
       "verse": "23",
@@ -4914,7 +4914,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "And everything happened as he had told us! You gave me my job as cupbearer again. But you hanged the baker to kill him.’"
+      "text": "And everything happened as he had told us! You gave me my job as cupbearer again. But you hanged the baker to kill him. ’"
     },
     {
       "verse": "14",
@@ -4922,11 +4922,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Pharaoh said to Joseph, ‘I had a dream, and no one can tell me what it means. But people have told me about you. They say that you can tell the meaning of dreams.’"
+      "text": "Pharaoh said to Joseph, ‘I had a dream, and no one can tell me what it means. But people have told me about you. They say that you can tell the meaning of dreams. ’"
     },
     {
       "verse": "16",
-      "text": "Joseph replied to Pharaoh, ‘I cannot do this. But God will give you an answer that will make you happy.’"
+      "text": "Joseph replied to Pharaoh, ‘I cannot do this. But God will give you an answer that will make you happy. ’"
     },
     {
       "verse": "17",
@@ -4958,7 +4958,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The thin grains ate the seven groups of fat grains. I told those dreams to my wise men and magicians. But none of them could tell me the meaning of my dreams.’"
+      "text": "The thin grains ate the seven groups of fat grains. I told those dreams to my wise men and magicians. But none of them could tell me the meaning of my dreams. ’"
     },
     {
       "verse": "25",
@@ -4998,15 +4998,15 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "This is what you should do: Choose some officers.  Give them authority to store food during the good years when there is plenty.  They must take a fifth part of all the food that grows everywhere in Egypt."
+      "text": "This is what you should do: Choose some officers. Give them authority to store food during the good years when there is plenty. They must take a fifth part of all the food that grows everywhere in Egypt."
     },
     {
       "verse": "35",
-      "text": "They must store the extra food during the good years that will come soon.  Give these officers authority to store and to take care of the food in the cities."
+      "text": "They must store the extra food during the good years that will come soon. Give these officers authority to store and to take care of the food in the cities."
     },
     {
       "verse": "36",
-      "text": "Then you will be ready for the seven years of famine that will happen everywhere in Egypt. The people in Egypt will have enough food, and the famine will not destroy the land.’"
+      "text": "Then you will be ready for the seven years of famine that will happen everywhere in Egypt. The people in Egypt will have enough food, and the famine will not destroy the land. ’"
     },
     {
       "verse": "37",
@@ -5014,7 +5014,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Pharaoh said to his officers, ‘This man has the Spirit of God in him. We will never find anyone else like him.’"
+      "text": "Pharaoh said to his officers, ‘This man has the Spirit of God in him. We will never find anyone else like him. ’"
     },
     {
       "verse": "39",
@@ -5022,11 +5022,11 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "I will give you authority in my palace. All my people will do whatever you tell them to do. Only I will be greater than you, because I am the king.’"
+      "text": "I will give you authority in my palace. All my people will do whatever you tell them to do. Only I will be greater than you, because I am the king. ’"
     },
     {
       "verse": "41",
-      "text": "Pharaoh also said to Joseph, ‘I give you authority in the whole land of Egypt.’"
+      "text": "Pharaoh also said to Joseph, ‘I give you authority in the whole land of Egypt. ’"
     },
     {
       "verse": "42",
@@ -5034,11 +5034,11 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Pharaoh gave Joseph a chariot to ride in. It showed that Joseph was Pharaoh's most important officer. Only Pharaoh had more authority. As Joseph travelled, his servants shouted to the people, ‘Bend your knees to respect Joseph!’In this way Pharaoh gave Joseph authority over everything in the land of Egypt."
+      "text": "Pharaoh gave Joseph a chariot to ride in. It showed that Joseph was Pharaoh's most important officer. Only Pharaoh had more authority. As Joseph travelled, his servants shouted to the people, ‘Bend your knees to respect Joseph! ’In this way Pharaoh gave Joseph authority over everything in the land of Egypt."
     },
     {
       "verse": "44",
-      "text": "Pharaoh said to Joseph, ‘I rule Egypt as Pharaoh. But nobody who lives anywhere in Egypt will do anything, unless you tell them to.’"
+      "text": "Pharaoh said to Joseph, ‘I rule Egypt as Pharaoh. But nobody who lives anywhere in Egypt will do anything, unless you tell them to. ’"
     },
     {
       "verse": "45",
@@ -5066,11 +5066,11 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Joseph called his firstborn son Manasseh. Joseph said, ‘God has made me forget all the trouble that my family has given to me.’"
+      "text": "Joseph called his firstborn son Manasseh. Joseph said, ‘God has made me forget all the trouble that my family has given to me. ’"
     },
     {
       "verse": "52",
-      "text": "Joseph called his second son Ephraim. Joseph said, ‘God has given children to me in the land where I have received pain.’"
+      "text": "Joseph called his second son Ephraim. Joseph said, ‘God has given children to me in the land where I have received pain. ’"
     },
     {
       "verse": "53",
@@ -5082,7 +5082,7 @@ module.exports = {
     },
     {
       "verse": "55",
-      "text": "When the Egyptian people became hungry, they cried out to Pharaoh for food. When they did that, Pharaoh told all the Egyptians, ‘Go to Joseph. Do whatever he tells you to do.’"
+      "text": "When the Egyptian people became hungry, they cried out to Pharaoh for food. When they did that, Pharaoh told all the Egyptians, ‘Go to Joseph. Do whatever he tells you to do. ’"
     },
     {
       "verse": "56",
@@ -5100,7 +5100,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I have heard that there is food in Egypt. Go there and buy some for us. Then we may continue to live and not die.’"
+      "text": "I have heard that there is food in Egypt. Go there and buy some for us. Then we may continue to live and not die. ’"
     },
     {
       "verse": "3",
@@ -5120,7 +5120,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "As soon as Joseph saw the men, he knew that they were his brothers. But he spoke to them as if they were strangers. He did not speak to them in a kind way. He asked them, ‘Where do you come from?’ They replied, ‘We come from the land of Canaan. We have come here to buy food.’"
+      "text": "As soon as Joseph saw the men, he knew that they were his brothers. But he spoke to them as if they were strangers. He did not speak to them in a kind way. He asked them, ‘Where do you come from? ’ They replied, ‘We come from the land of Canaan. We have come here to buy food. ’"
     },
     {
       "verse": "8",
@@ -5128,7 +5128,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then Joseph remembered the dream that he had dreamed about his brothers. He said to them, ‘You have come here secretly to see how your people can attack our land.’"
+      "text": "Then Joseph remembered the dream that he had dreamed about his brothers. He said to them, ‘You have come here secretly to see how your people can attack our land. ’"
     },
     {
       "verse": "10",
@@ -5136,15 +5136,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "We are all the sons of one man. We are honest men. We are not your enemies.’"
+      "text": "We are all the sons of one man. We are honest men. We are not your enemies. ’"
     },
     {
       "verse": "12",
-      "text": "But Joseph said, ‘No! You have come here to see if our country is weak so that you can attack us.’"
+      "text": "But Joseph said, ‘No! You have come here to see if our country is weak so that you can attack us. ’"
     },
     {
       "verse": "13",
-      "text": "Joseph's brothers replied, ‘We belong to a family of 12 brothers. We are the sons of one man who lives in Canaan. Our youngest brother stayed at home with our father. One other brother is not with us any more.’"
+      "text": "Joseph's brothers replied, ‘We belong to a family of 12 brothers. We are the sons of one man who lives in Canaan. Our youngest brother stayed at home with our father. One other brother is not with us any more. ’"
     },
     {
       "verse": "14",
@@ -5156,7 +5156,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "One of you must go to bring your brother here. I will keep you others in prison. In that way I will know if what you said is true. If your youngest brother does not come, then I will certainly know that you are enemies!’"
+      "text": "One of you must go to bring your brother here. I will keep you others in prison. In that way I will know if what you said is true. If your youngest brother does not come, then I will certainly know that you are enemies! ’"
     },
     {
       "verse": "17",
@@ -5172,15 +5172,15 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But you must return to Egypt and you must bring your youngest brother to me. Then I will know that what you have said is true. Then you will not die.’ Joseph's brothers agreed to do what he told them."
+      "text": "But you must return to Egypt and you must bring your youngest brother to me. Then I will know that what you have said is true. Then you will not die. ’ Joseph's brothers agreed to do what he told them."
     },
     {
       "verse": "21",
-      "text": "The brothers said to each other, ‘This punishment is happening to us because of what we did to Joseph. We saw how upset he was when he asked us not to kill him. But we refused to be kind to him. That is why we have all this trouble.’"
+      "text": "The brothers said to each other, ‘This punishment is happening to us because of what we did to Joseph. We saw how upset he was when he asked us not to kill him. But we refused to be kind to him. That is why we have all this trouble. ’"
     },
     {
       "verse": "22",
-      "text": "Reuben said, ‘I told you not to do anything bad to the boy. But you would not agree! We killed him and now we must receive the punishment.’"
+      "text": "Reuben said, ‘I told you not to do anything bad to the boy. But you would not agree! We killed him and now we must receive the punishment. ’"
     },
     {
       "verse": "23",
@@ -5204,7 +5204,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "He said to his brothers, ‘They have given back my money! Here it is in my bag!’ All the brothers were upset and frightened. They asked each other, ‘What has God done to us?’"
+      "text": "He said to his brothers, ‘They have given back my money! Here it is in my bag! ’ All the brothers were upset and frightened. They asked each other, ‘What has God done to us? ’"
     },
     {
       "verse": "29",
@@ -5220,7 +5220,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "brothers, all the sons of one father. One brother is not with us any more, and the youngest brother is at home with our father in Canaan.”"
+      "text": "brothers, all the sons of one father. One brother is not with us any more, and the youngest brother is at home with our father in Canaan. ”"
     },
     {
       "verse": "33",
@@ -5228,7 +5228,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "But then you must bring your youngest brother here to me. If you do that, I will know that you are really honest men. I will know that you are not our enemies. Then I will give your brother back to you. You will be able to stay in Egypt and you can buy and sell things here.” ’"
+      "text": "But then you must bring your youngest brother here to me. If you do that, I will know that you are really honest men. I will know that you are not our enemies. Then I will give your brother back to you. You will be able to stay in Egypt and you can buy and sell things here. ” ’"
     },
     {
       "verse": "35",
@@ -5236,15 +5236,15 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Their father Jacob said to them, ‘You are taking my children away from me! Joseph is not here any more. Simeon also is not here. Now you want to take Benjamin away from me. Everything that happens is hurting me!’"
+      "text": "Their father Jacob said to them, ‘You are taking my children away from me! Joseph is not here any more. Simeon also is not here. Now you want to take Benjamin away from me. Everything that happens is hurting me! ’"
     },
     {
       "verse": "37",
-      "text": "Then Reuben said to his father, Jacob, ‘I will bring Benjamin back to you. If I do not, then you can kill both of my sons. Trust me to take care of him. I will bring him back.’"
+      "text": "Then Reuben said to his father, Jacob, ‘I will bring Benjamin back to you. If I do not, then you can kill both of my sons. Trust me to take care of him. I will bring him back. ’"
     },
     {
       "verse": "38",
-      "text": "But Jacob said, ‘My son will not go with you. His brother is already dead. Benjamin is the only one left. Something bad may happen to him on your journey. I am already an old man. If I lose Benjamin, I would be so sad that I would die.’"
+      "text": "But Jacob said, ‘My son will not go with you. His brother is already dead. Benjamin is the only one left. Something bad may happen to him on your journey. I am already an old man. If I lose Benjamin, I would be so sad that I would die. ’"
     }
   ],
   "43": [
@@ -5254,11 +5254,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Jacob's family ate all the food that they had brought from Egypt. So Jacob said to his sons, ‘Go back to Egypt, and buy some more food for us.’"
+      "text": "Jacob's family ate all the food that they had brought from Egypt. So Jacob said to his sons, ‘Go back to Egypt, and buy some more food for us. ’"
     },
     {
       "verse": "3",
-      "text": "But Judah said, ‘The man told us many times, “Unless your brother is with you, I will not let you see me again.”"
+      "text": "But Judah said, ‘The man told us many times, “Unless your brother is with you, I will not let you see me again. ”"
     },
     {
       "verse": "4",
@@ -5266,15 +5266,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But if you do not send Benjamin, we will not go. The man clearly said to us, “Unless your brother is with you, you will not see me again.” ’"
+      "text": "But if you do not send Benjamin, we will not go. The man clearly said to us, “Unless your brother is with you, you will not see me again. ” ’"
     },
     {
       "verse": "6",
-      "text": "Jacob said to them, ‘You have brought great trouble to me! You should not have told the man that you had another brother.’"
+      "text": "Jacob said to them, ‘You have brought great trouble to me! You should not have told the man that you had another brother. ’"
     },
     {
       "verse": "7",
-      "text": "The brothers replied, ‘The man asked us many questions about our family. He asked us, “Is your father still alive? Do you have another brother?” We only answered his questions. We did not know that he would say, “Bring your brother here.” ’"
+      "text": "The brothers replied, ‘The man asked us many questions about our family. He asked us, “Is your father still alive? Do you have another brother? ” We only answered his questions. We did not know that he would say, “Bring your brother here. ” ’"
     },
     {
       "verse": "8",
@@ -5286,7 +5286,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We must go now! We have already talked for too long. By now, we could have gone to Egypt and returned twice!’"
+      "text": "We must go now! We have already talked for too long. By now, we could have gone to Egypt and returned twice! ’"
     },
     {
       "verse": "11",
@@ -5302,7 +5302,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I pray that God Almighty will help you. I pray that God will cause the man to be kind to you. Then he will let your older brother go free. He and Benjamin will return here with you. As for me, if I must lose my sons, then I will lose them. There is nothing that I can do to stop it.’"
+      "text": "I pray that God Almighty will help you. I pray that God will cause the man to be kind to you. Then he will let your older brother go free. He and Benjamin will return here with you. As for me, if I must lose my sons, then I will lose them. There is nothing that I can do to stop it. ’"
     },
     {
       "verse": "15",
@@ -5310,7 +5310,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Joseph saw that Benjamin was with them. So he said to his servant who took care of his house, ‘Take these men to my house. Kill an animal and prepare it for a meal. These men will eat with me at noon.’"
+      "text": "Joseph saw that Benjamin was with them. So he said to his servant who took care of his house, ‘Take these men to my house. Kill an animal and prepare it for a meal. These men will eat with me at noon. ’"
     },
     {
       "verse": "17",
@@ -5318,7 +5318,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The brothers were frightened when the servant took them to Joseph's house. They thought, ‘He has brought us here because of the money that we found in our bags last time. Someone put it there before we returned home. Now he wants to punish us. He will take us to be his slaves. He will take our donkeys too.’"
+      "text": "The brothers were frightened when the servant took them to Joseph's house. They thought, ‘He has brought us here because of the money that we found in our bags last time. Someone put it there before we returned home. Now he wants to punish us. He will take us to be his slaves. He will take our donkeys too. ’"
     },
     {
       "verse": "19",
@@ -5334,11 +5334,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "We have also brought more money so that we can buy more food. We do not know who put the money back into our bags.’"
+      "text": "We have also brought more money so that we can buy more food. We do not know who put the money back into our bags. ’"
     },
     {
       "verse": "23",
-      "text": "The servant replied, ‘Do not worry. Everything is all right. Your God, the God of your father, put the valuable silver coins there. I received your money. No problem!’ Then the servant brought Simeon out to see his brothers."
+      "text": "The servant replied, ‘Do not worry. Everything is all right. Your God, the God of your father, put the valuable silver coins there. I received your money. No problem! ’ Then the servant brought Simeon out to see his brothers."
     },
     {
       "verse": "24",
@@ -5354,15 +5354,15 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Joseph asked them if they were well. Then he said, ‘You told me last time about your old father. How is he? Is he still alive?’"
+      "text": "Joseph asked them if they were well. Then he said, ‘You told me last time about your old father. How is he? Is he still alive? ’"
     },
     {
       "verse": "28",
-      "text": "The brothers replied, ‘Your servant, our father, is still alive. And he is well.’ They bent down to the ground again, to respect Joseph."
+      "text": "The brothers replied, ‘Your servant, our father, is still alive. And he is well. ’ They bent down to the ground again, to respect Joseph."
     },
     {
       "verse": "29",
-      "text": "Then Joseph saw his brother Benjamin, his own mother's son. Joseph asked, ‘Is this your youngest brother? Is he the one that you told me about?’ Joseph said to Benjamin, ‘I pray that God will bless you, my son.’"
+      "text": "Then Joseph saw his brother Benjamin, his own mother's son. Joseph asked, ‘Is this your youngest brother? Is he the one that you told me about? ’ Joseph said to Benjamin, ‘I pray that God will bless you, my son. ’"
     },
     {
       "verse": "30",
@@ -5370,7 +5370,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "After that, he washed his face. He returned to his brothers. He controlled himself and he said, ‘Prepare the food for them to eat.’"
+      "text": "After that, he washed his face. He returned to his brothers. He controlled himself and he said, ‘Prepare the food for them to eat. ’"
     },
     {
       "verse": "32",
@@ -5392,7 +5392,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then take my silver cup and put it in the top of the youngest man's bag. Put it with the money that he brought to pay for his food.’ The servant did what Joseph had told him to do."
+      "text": "Then take my silver cup and put it in the top of the youngest man's bag. Put it with the money that he brought to pay for his food. ’ The servant did what Joseph had told him to do."
     },
     {
       "verse": "3",
@@ -5404,7 +5404,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You have taken my master's own special cup. It is the cup that he drinks from. He also uses it to find out about future things. You have done a very bad thing!” ’"
+      "text": "You have taken my master's own special cup. It is the cup that he drinks from. He also uses it to find out about future things. You have done a very bad thing! ” ’"
     },
     {
       "verse": "6",
@@ -5420,11 +5420,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "If any one of us has this silver cup, he must die. We others will become your slaves, sir.’"
+      "text": "If any one of us has this silver cup, he must die. We others will become your slaves, sir. ’"
     },
     {
       "verse": "10",
-      "text": "The servant said, ‘What you say is fair. Whoever has the cup, will become my slave. The rest of you will go free.’"
+      "text": "The servant said, ‘What you say is fair. Whoever has the cup, will become my slave. The rest of you will go free. ’"
     },
     {
       "verse": "11",
@@ -5444,15 +5444,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Joseph said, ‘Why have you done this bad thing? You should have known about an important man like me. I can use magic to find out what people do.’"
+      "text": "Joseph said, ‘Why have you done this bad thing? You should have known about an important man like me. I can use magic to find out what people do. ’"
     },
     {
       "verse": "16",
-      "text": "Judah said, ‘We do not know what to say to you, my lord. We cannot say that we did not do this. God has shown that we are guilty of this sin. Now we are your slaves. We are all your slaves, as well as the one who had your cup in his bag.’"
+      "text": "Judah said, ‘We do not know what to say to you, my lord. We cannot say that we did not do this. God has shown that we are guilty of this sin. Now we are your slaves. We are all your slaves, as well as the one who had your cup in his bag. ’"
     },
     {
       "verse": "17",
-      "text": "But Joseph said, ‘I would not do a thing like that! Only the man who had the cup will be my slave. The rest of you can return to your father. You may go as my friends.’"
+      "text": "But Joseph said, ‘I would not do a thing like that! Only the man who had the cup will be my slave. The rest of you can return to your father. You may go as my friends. ’"
     },
     {
       "verse": "18",
@@ -5460,23 +5460,23 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You asked us, “Do you have a father or another brother?”"
+      "text": "You asked us, “Do you have a father or another brother? ”"
     },
     {
       "verse": "20",
-      "text": "And we replied, “We have a father who is very old. He has a young son who was born when our father was already old. That son's brother is dead. He is the only son of his mother who still lives. His father loves him.”"
+      "text": "And we replied, “We have a father who is very old. He has a young son who was born when our father was already old. That son's brother is dead. He is the only son of his mother who still lives. His father loves him. ”"
     },
     {
       "verse": "21",
-      "text": "Then you said, “Bring your youngest brother to me so that I can see him.”"
+      "text": "Then you said, “Bring your youngest brother to me so that I can see him. ”"
     },
     {
       "verse": "22",
-      "text": "And we said, “The boy cannot leave his father. If he leaves him, his father will die.”"
+      "text": "And we said, “The boy cannot leave his father. If he leaves him, his father will die. ”"
     },
     {
       "verse": "23",
-      "text": "But you said to us, “Your youngest brother must come with you. If he does not come, I will not let you see me again.”"
+      "text": "But you said to us, “Your youngest brother must come with you. If he does not come, I will not let you see me again. ”"
     },
     {
       "verse": "24",
@@ -5484,11 +5484,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "After some time, our father said, “Go back to Egypt and buy some more food for us.”"
+      "text": "After some time, our father said, “Go back to Egypt and buy some more food for us. ”"
     },
     {
       "verse": "26",
-      "text": "But we said, “We cannot go back there. We can only go if our youngest brother goes with us. If he is not with us, we will not be able to see the man again.”"
+      "text": "But we said, “We cannot go back there. We can only go if our youngest brother goes with us. If he is not with us, we will not be able to see the man again. ”"
     },
     {
       "verse": "27",
@@ -5496,11 +5496,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "One of them went away and he never returned. So I said, ‘A wild animal must have eaten him.’ I have not seen him since that happened."
+      "text": "One of them went away and he never returned. So I said, ‘A wild animal must have eaten him. ’ I have not seen him since that happened."
     },
     {
       "verse": "29",
-      "text": "If you take my youngest son away from me too, something bad may happen to him. I am already an old man. If I lose Benjamin, I would be so sad that I would die.” ’"
+      "text": "If you take my youngest son away from me too, something bad may happen to him. I am already an old man. If I lose Benjamin, I would be so sad that I would die. ” ’"
     },
     {
       "verse": "30",
@@ -5512,7 +5512,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "I promised my father that I would take care of the boy. I said, “I will bring the boy back. If I do not, then you can say that I am guilty. I will be guilty for all of my life.”"
+      "text": "I promised my father that I would take care of the boy. I said, “I will bring the boy back. If I do not, then you can say that I am guilty. I will be guilty for all of my life. ”"
     },
     {
       "verse": "33",
@@ -5520,13 +5520,13 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "I cannot go back to my father if the boy is not with me. I never want to see how upset my father would be.’"
+      "text": "I cannot go back to my father if the boy is not with me. I never want to see how upset my father would be. ’"
     }
   ],
   "45": [
     {
       "verse": "1",
-      "text": "After Judah said this, Joseph could not control himself. He did not want to cry in front of all his servants. So he shouted, ‘Make everyone go away from me!’ So there was no one still there with Joseph, except his brothers. Then he told his brothers who he was."
+      "text": "After Judah said this, Joseph could not control himself. He did not want to cry in front of all his servants. So he shouted, ‘Make everyone go away from me! ’ So there was no one still there with Joseph, except his brothers. Then he told his brothers who he was."
     },
     {
       "verse": "2",
@@ -5534,11 +5534,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Joseph said to his brothers, ‘I am Joseph! Is my father still alive?’ But his brothers could not answer him because they were too frightened. They could see Joseph was there in front of them!"
+      "text": "Joseph said to his brothers, ‘I am Joseph! Is my father still alive? ’ But his brothers could not answer him because they were too frightened. They could see Joseph was there in front of them!"
     },
     {
       "verse": "4",
-      "text": "Then Joseph said to them, ‘Come near to me.’ So they did that. He said, ‘I am your brother Joseph. I am the one that you sold to become a slave in Egypt!"
+      "text": "Then Joseph said to them, ‘Come near to me. ’ So they did that. He said, ‘I am your brother Joseph. I am the one that you sold to become a slave in Egypt!"
     },
     {
       "verse": "5",
@@ -5566,7 +5566,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I will take care of you there. I will give food to you, because there will be five more years of famine. If you do not come here, you and all your family and servants will become very poor.” ’"
+      "text": "I will take care of you there. I will give food to you, because there will be five more years of famine. If you do not come here, you and all your family and servants will become very poor. ” ’"
     },
     {
       "verse": "12",
@@ -5574,7 +5574,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Tell my father about the authority that I have here in Egypt. Tell him about everything that you have seen here. Then bring my father here quickly.’"
+      "text": "Tell my father about the authority that I have here in Egypt. Tell him about everything that you have seen here. Then bring my father here quickly. ’"
     },
     {
       "verse": "14",
@@ -5594,7 +5594,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then bring your father and your families to come here to me. I will give you the best land in Egypt to live on. You will have all the best things that the land gives to you.”"
+      "text": "Then bring your father and your families to come here to me. I will give you the best land in Egypt to live on. You will have all the best things that the land gives to you. ”"
     },
     {
       "verse": "19",
@@ -5602,7 +5602,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Do not worry. You do not have to bring all your things from your own country. The best things of Egypt will belong to you.” ’"
+      "text": "Do not worry. You do not have to bring all your things from your own country. The best things of Egypt will belong to you. ” ’"
     },
     {
       "verse": "21",
@@ -5614,11 +5614,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Joseph also sent these things to his father:10 donkeys that carried the best things from Egypt,10 female donkeys that carried food and grain,and other food for his father's journey."
+      "text": "Joseph also sent these things to his father:10 donkeys that carried the best things from Egypt, 10 female donkeys that carried food and grain, and other food for his father's journey."
     },
     {
       "verse": "24",
-      "text": "Then Joseph sent his brothers to start their journey. As they left, he said to them, ‘Do not argue with each other on your way home!’"
+      "text": "Then Joseph sent his brothers to start their journey. As they left, he said to them, ‘Do not argue with each other on your way home! ’"
     },
     {
       "verse": "25",
@@ -5626,7 +5626,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "They told him, ‘Joseph is still alive! He rules over all of Egypt!’ Jacob was so surprised that he did not believe what they said."
+      "text": "They told him, ‘Joseph is still alive! He rules over all of Egypt! ’ Jacob was so surprised that he did not believe what they said."
     },
     {
       "verse": "27",
@@ -5634,7 +5634,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Jacob said, ‘Now I believe you! My son Joseph is still alive! I will go and see him before I die.’"
+      "text": "Jacob said, ‘Now I believe you! My son Joseph is still alive! I will go and see him before I die. ’"
     }
   ],
   "46": [
@@ -5644,7 +5644,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "During the night, God spoke to Israel in a dream. He said, ‘Jacob! Jacob!’ Jacob replied, ‘Yes, I am here.’"
+      "text": "During the night, God spoke to Israel in a dream. He said, ‘Jacob! Jacob! ’ Jacob replied, ‘Yes, I am here. ’"
     },
     {
       "verse": "3",
@@ -5652,7 +5652,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I will go with you to Egypt. I will also bring you back again. Joseph will be with you when you die.’"
+      "text": "I will go with you to Egypt. I will also bring you back again. Joseph will be with you when you die. ’"
     },
     {
       "verse": "5",
@@ -5668,7 +5668,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "These are the names of the descendants of Israel who went to Egypt, (that is, the sons of Jacob):Reuben was the firstborn son of Jacob."
+      "text": "These are the names of the descendants of Israel who went to Egypt, (that is, the sons of Jacob): Reuben was the firstborn son of Jacob."
     },
     {
       "verse": "9",
@@ -5756,7 +5756,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Jacob said to Joseph, ‘Now I am ready to die. I have seen for myself that you are still alive.’"
+      "text": "Jacob said to Joseph, ‘Now I am ready to die. I have seen for myself that you are still alive. ’"
     },
     {
       "verse": "31",
@@ -5764,21 +5764,21 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The men are shepherds. They take care of their animals. They have brought with them their sheep, goats and cows, and everything that they have.”"
+      "text": "The men are shepherds. They take care of their animals. They have brought with them their sheep, goats and cows, and everything that they have. ”"
     },
     {
       "verse": "33",
-      "text": "Pharaoh will call you to meet him. He will ask you, “What is your job?”"
+      "text": "Pharaoh will call you to meet him. He will ask you, “What is your job? ”"
     },
     {
       "verse": "34",
-      "text": "Then you should answer, “We have always taken care of cows and sheep since we were young men. Our ancestors have always done this work.” Egyptians do not want to live near people who take care of sheep. So Pharaoh will let you stay in the region called Goshen.’"
+      "text": "Then you should answer, “We have always taken care of cows and sheep since we were young men. Our ancestors have always done this work. ” Egyptians do not want to live near people who take care of sheep. So Pharaoh will let you stay in the region called Goshen. ’"
     }
   ],
   "47": [
     {
       "verse": "1",
-      "text": "Joseph went to Pharaoh. He told him, ‘My father and brothers have arrived from Canaan. They have come with their animals and everything that belongs to them. They are now in Goshen.’"
+      "text": "Joseph went to Pharaoh. He told him, ‘My father and brothers have arrived from Canaan. They have come with their animals and everything that belongs to them. They are now in Goshen. ’"
     },
     {
       "verse": "2",
@@ -5786,11 +5786,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Pharaoh asked the brothers, ‘What is your job?’ The brothers replied, ‘We are shepherds, sir. We take care of animals, just like our ancestors did.’"
+      "text": "Pharaoh asked the brothers, ‘What is your job? ’ The brothers replied, ‘We are shepherds, sir. We take care of animals, just like our ancestors did. ’"
     },
     {
       "verse": "4",
-      "text": "They also said to Pharaoh, ‘We have come to stay here for a short time because there is a bad famine in Canaan. Our animals do not have any grass to eat there. Please sir, let us stay in Goshen.’"
+      "text": "They also said to Pharaoh, ‘We have come to stay here for a short time because there is a bad famine in Canaan. Our animals do not have any grass to eat there. Please sir, let us stay in Goshen. ’"
     },
     {
       "verse": "5",
@@ -5798,7 +5798,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The whole land of Egypt is here for them. Your father and your brothers should stay in the best part of the land. They may live in Goshen. Choose the best shepherds from among them to take care of my own animals.’"
+      "text": "The whole land of Egypt is here for them. Your father and your brothers should stay in the best part of the land. They may live in Goshen. Choose the best shepherds from among them to take care of my own animals. ’"
     },
     {
       "verse": "7",
@@ -5806,11 +5806,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then Pharaoh asked Jacob, ‘How old are you?’"
+      "text": "Then Pharaoh asked Jacob, ‘How old are you? ’"
     },
     {
       "verse": "9",
-      "text": "Jacob replied, ‘I have been alive for 130 years. My years have been few, and they have been difficult. I have not lived for as long as my ancestors lived.’"
+      "text": "Jacob replied, ‘I have been alive for 130 years. My years have been few, and they have been difficult. I have not lived for as long as my ancestors lived. ’"
     },
     {
       "verse": "10",
@@ -5834,11 +5834,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Soon the people of Egypt and Canaan did not have any more money. All the Egyptians went to Joseph and they said, ‘Give us food to eat. If not, we will die! We do not have any more money.’"
+      "text": "Soon the people of Egypt and Canaan did not have any more money. All the Egyptians went to Joseph and they said, ‘Give us food to eat. If not, we will die! We do not have any more money. ’"
     },
     {
       "verse": "16",
-      "text": "Joseph said to the people, ‘If you have no money, bring me your animals. I will give you food if you pay me with your animals instead of money.’"
+      "text": "Joseph said to the people, ‘If you have no money, bring me your animals. I will give you food if you pay me with your animals instead of money. ’"
     },
     {
       "verse": "17",
@@ -5850,7 +5850,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Do not let us die here and now! Do not destroy our land! If you give food to us, we will pay you with ourselves and with our land. We will become Pharaoh's slaves. Our land will become Pharaoh's land. Give us grain to eat and seed to plant. Then we will not die. Our fields will not be empty.’"
+      "text": "Do not let us die here and now! Do not destroy our land! If you give food to us, we will pay you with ourselves and with our land. We will become Pharaoh's slaves. Our land will become Pharaoh's land. Give us grain to eat and seed to plant. Then we will not die. Our fields will not be empty. ’"
     },
     {
       "verse": "20",
@@ -5870,11 +5870,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "But when the plants are ready to eat, you must give one fifth part to Pharaoh. You may keep the other four parts. You may keep it for seed to plant again and you may eat it. It will be food for you, for your people and for your children.’"
+      "text": "But when the plants are ready to eat, you must give one fifth part to Pharaoh. You may keep the other four parts. You may keep it for seed to plant again and you may eat it. It will be food for you, for your people and for your children. ’"
     },
     {
       "verse": "25",
-      "text": "The people said, ‘You have saved our lives! Because you have been kind to us, we agree to become Pharaoh's slaves.’"
+      "text": "The people said, ‘You have saved our lives! Because you have been kind to us, we agree to become Pharaoh's slaves. ’"
     },
     {
       "verse": "26",
@@ -5894,21 +5894,21 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Carry my body out of Egypt. Bury me in the grave of my ancestors.’ Joseph said, ‘I will do as you say.’"
+      "text": "Carry my body out of Egypt. Bury me in the grave of my ancestors. ’ Joseph said, ‘I will do as you say. ’"
     },
     {
       "verse": "31",
-      "text": "Jacob said, ‘Promise me that you will do this.’ Then Joseph made a promise to him. After that, Jacob rested on his bed and he thanked God."
+      "text": "Jacob said, ‘Promise me that you will do this. ’ Then Joseph made a promise to him. After that, Jacob rested on his bed and he thanked God."
     }
   ],
   "48": [
     {
       "verse": "1",
-      "text": "After some time, someone told Joseph, ‘Your father is ill.’ So Joseph went to see Jacob and he took his two sons, Manasseh and Ephraim, with him."
+      "text": "After some time, someone told Joseph, ‘Your father is ill. ’ So Joseph went to see Jacob and he took his two sons, Manasseh and Ephraim, with him."
     },
     {
       "verse": "2",
-      "text": "Someone told Jacob, ‘Your son Joseph has come to see you.’ Jacob's body became stronger and he sat up on the bed."
+      "text": "Someone told Jacob, ‘Your son Joseph has come to see you. ’ Jacob's body became stronger and he sat up on the bed."
     },
     {
       "verse": "3",
@@ -5916,7 +5916,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He said to me, “I will give you many children, so that your descendants are many. In that way, you will become the ancestor of many nations. I will give this land to you so that it belongs to your descendants for ever.” ’"
+      "text": "He said to me, “I will give you many children, so that your descendants are many. In that way, you will become the ancestor of many nations. I will give this land to you so that it belongs to your descendants for ever. ” ’"
     },
     {
       "verse": "5",
@@ -5928,15 +5928,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "As for me, I was very sad when your mother Rachel died on our journey from Paddan. She died near to Ephrath. So I buried her there, next to the road to Ephrath (that is now called Bethlehem).’"
+      "text": "As for me, I was very sad when your mother Rachel died on our journey from Paddan. She died near to Ephrath. So I buried her there, next to the road to Ephrath (that is now called Bethlehem). ’"
     },
     {
       "verse": "8",
-      "text": "Joseph brought Ephraim and Manasseh to his father, Jacob. Jacob asked him, ‘Who are these boys?’"
+      "text": "Joseph brought Ephraim and Manasseh to his father, Jacob. Jacob asked him, ‘Who are these boys? ’"
     },
     {
       "verse": "9",
-      "text": "Joseph replied, ‘They are the sons that God has given to me here in Egypt.’ Then Israel said, ‘Bring them near to me so that I can bless them.’"
+      "text": "Joseph replied, ‘They are the sons that God has given to me here in Egypt. ’ Then Israel said, ‘Bring them near to me so that I can bless them. ’"
     },
     {
       "verse": "10",
@@ -5944,7 +5944,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Jacob said to Joseph, ‘I never thought that I would see you again. But now God has let me see your children too.’"
+      "text": "Jacob said to Joseph, ‘I never thought that I would see you again. But now God has let me see your children too. ’"
     },
     {
       "verse": "12",
@@ -5960,11 +5960,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Jacob blessed Joseph. He said,‘May God bless these two boys.He is the God that my ancestors, Abraham and Isaac, served.Like a shepherd takes care of his sheep,God has taken care of me all my life, until this day. ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day."
+      "text": "Then Jacob blessed Joseph. He said, ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day. ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day."
     },
     {
       "verse": "16",
-      "text": "He is the Angel who has kept me safe.I pray that he will bless these boys.I pray that, because of them, people will remember my name,and the names of my ancestors, Abraham and Isaac.I pray that they will have many descendants who live all over the earth.’ I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth.’"
+      "text": "He is the Angel who has kept me safe. I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth. ’ I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth. ’"
     },
     {
       "verse": "17",
@@ -5972,15 +5972,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Joseph said to Jacob, ‘No, my father. This boy is the firstborn son. Put your right hand on his head.’"
+      "text": "Joseph said to Jacob, ‘No, my father. This boy is the firstborn son. Put your right hand on his head. ’"
     },
     {
       "verse": "19",
-      "text": "But Jacob refused to change. He said, ‘I know, my son. I know what I am doing. Manasseh will also have many descendants who become a great nation. But his younger brother, Ephraim, will become even greater. Ephraim's descendants will become many great nations.’"
+      "text": "But Jacob refused to change. He said, ‘I know, my son. I know what I am doing. Manasseh will also have many descendants who become a great nation. But his younger brother, Ephraim, will become even greater. Ephraim's descendants will become many great nations. ’"
     },
     {
       "verse": "20",
-      "text": "So Jacob blessed both of Joseph's sons that day. He said, ‘In your name Israel's people will give this blessing:“May God be good to you, just like he was to Ephraim and Manasseh.” ’In this way, Jacob put Ephraim before Manasseh when he blessed them. “May God be good to you, just like he was to Ephraim and Manasseh.” ’ In this way, Jacob put Ephraim before Manasseh when he blessed them."
+      "text": "So Jacob blessed both of Joseph's sons that day. He said, ‘In your name Israel's people will give this blessing:“May God be good to you, just like he was to Ephraim and Manasseh. ” ’In this way, Jacob put Ephraim before Manasseh when he blessed them. “May God be good to you, just like he was to Ephraim and Manasseh. ” ’ In this way, Jacob put Ephraim before Manasseh when he blessed them."
     },
     {
       "verse": "21",
@@ -5988,7 +5988,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I give to you more than I give to your brothers. I give to you the good part of the land that I took from the Amorites. I fought against them with my weapons to take that land.’"
+      "text": "I give to you more than I give to your brothers. I give to you the good part of the land that I took from the Amorites. I fought against them with my weapons to take that land. ’"
     }
   ],
   "49": [
@@ -5998,7 +5998,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "You sons of Jacob, come together now and listen to your father, Israel.’"
+      "text": "You sons of Jacob, come together now and listen to your father, Israel. ’"
     },
     {
       "verse": "3",
@@ -6098,7 +6098,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Benjamin is like a hungry wolf. He kills an animal and eats it in the morning. In the evening, he gives what remains to his people.’"
+      "text": "Benjamin is like a hungry wolf. He kills an animal and eats it in the morning. In the evening, he gives what remains to his people. ’"
     },
     {
       "verse": "28",
@@ -6118,7 +6118,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Abraham bought the cave and the field from the Hittites.’"
+      "text": "Abraham bought the cave and the field from the Hittites. ’"
     },
     {
       "verse": "33",
@@ -6144,11 +6144,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "My father made me make a promise. He said, “I will soon die. Bury me in the grave that I prepared for myself in Canaan.” So please let me go and bury my father there. Then I will return.’"
+      "text": "My father made me make a promise. He said, “I will soon die. Bury me in the grave that I prepared for myself in Canaan. ” So please let me go and bury my father there. Then I will return. ’"
     },
     {
       "verse": "6",
-      "text": "Pharaoh said, ‘Go and bury your father's body in the way that you promised him.’"
+      "text": "Pharaoh said, ‘Go and bury your father's body in the way that you promised him. ’"
     },
     {
       "verse": "7",
@@ -6168,7 +6168,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Canaanite people who lived near there saw how sad Joseph and his people were. So they gave Atad's threshing floor a different name. They called it ‘Abel Mizraim’. They said, ‘The Egyptians are showing that they are very sad because an important person has died.’"
+      "text": "The Canaanite people who lived near there saw how sad Joseph and his people were. So they gave Atad's threshing floor a different name. They called it ‘Abel Mizraim’. They said, ‘The Egyptians are showing that they are very sad because an important person has died. ’"
     },
     {
       "verse": "12",
@@ -6184,7 +6184,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Now Jacob was dead and Joseph's brothers became frightened. They said to each other, ‘We did a bad thing to Joseph. Now he will be angry and he will punish us for what we did.’"
+      "text": "Now Jacob was dead and Joseph's brothers became frightened. They said to each other, ‘We did a bad thing to Joseph. Now he will be angry and he will punish us for what we did. ’"
     },
     {
       "verse": "16",
@@ -6192,11 +6192,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He told us to say to you, “Please forgive your brothers for the very bad thing that they did against you. They did a very cruel thing to you.” So please forgive our sin. We are servants of your father's God.’When Joseph received their message, he was very upset and he wept."
+      "text": "He told us to say to you, “Please forgive your brothers for the very bad thing that they did against you. They did a very cruel thing to you. ” So please forgive our sin. We are servants of your father's God. ’When Joseph received their message, he was very upset and he wept."
     },
     {
       "verse": "18",
-      "text": "His brothers came to see him. They bent down low to the ground in front of Joseph. They said to him, ‘We are your slaves.’"
+      "text": "His brothers came to see him. They bent down low to the ground in front of Joseph. They said to him, ‘We are your slaves. ’"
     },
     {
       "verse": "19",
@@ -6208,7 +6208,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So do not be afraid. I will continue to take care of you. You and your children will receive what you need.’ In this way Joseph comforted them and he spoke kind words to them."
+      "text": "So do not be afraid. I will continue to take care of you. You and your children will receive what you need. ’ In this way Joseph comforted them and he spoke kind words to them."
     },
     {
       "verse": "22",
@@ -6220,11 +6220,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then Joseph said to his brothers, ‘I will soon die. But God will come to you and he will help you. He will take you out of Egypt. He will take you back to the land that he promised to give to Abraham, Isaac and Jacob.’"
+      "text": "Then Joseph said to his brothers, ‘I will soon die. But God will come to you and he will help you. He will take you out of Egypt. He will take you back to the land that he promised to give to Abraham, Isaac and Jacob. ’"
     },
     {
       "verse": "25",
-      "text": "He also said, ‘God will help you to leave Egypt. When that happens, you must carry my bones away from here.’ Joseph made the other sons of Israel promise that they would do that."
+      "text": "He also said, ‘God will help you to leave Egypt. When that happens, you must carry my bones away from here. ’ Joseph made the other sons of Israel promise that they would do that."
     },
     {
       "verse": "26",

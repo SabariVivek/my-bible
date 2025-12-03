@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "We are writing to you, God's own people who live in Colossae. You are like brothers and sisters to us because you continue to believe in Christ.I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds."
+      "text": "We are writing to you, God's own people who live in Colossae. You are like brothers and sisters to us because you continue to believe in Christ. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds."
     },
     {
       "verse": "3",
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "They teach, ‘Do not touch things like that!’ Or, ‘Do not eat that kind of food!�� Or, ‘Keep away from that thing!’"
+      "text": "They teach, ‘Do not touch things like that! ’ Or, ‘Do not eat that kind of food! �� Or, ‘Keep away from that thing! ’"
     },
     {
       "verse": "22",
@@ -380,7 +380,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Say to Archippus, ‘As you serve the Lord, be careful to finish the work that he gave you to do.’"
+      "text": "Say to Archippus, ‘As you serve the Lord, be careful to finish the work that he gave you to do. ’"
     },
     {
       "verse": "18",

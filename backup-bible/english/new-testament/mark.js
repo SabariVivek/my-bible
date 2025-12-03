@@ -6,15 +6,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The prophet Isaiah wrote this message from God in his book:‘Listen! I will send someone to prepare a way for you.He will tell people my message."
+      "text": "The prophet Isaiah wrote this message from God in his book:‘Listen! I will send someone to prepare a way for you. He will tell people my message."
     },
     {
       "verse": "3",
-      "text": "His voice will shout in the wilderness:“The Lord will come soon, so prepare a way for him.Make the paths straight for him.” ’ “The Lord will come soon, so prepare a way for him. Make the paths straight for him.” ’"
+      "text": "His voice will shout in the wilderness:“The Lord will come soon, so prepare a way for him. Make the paths straight for him. ” ’ “The Lord will come soon, so prepare a way for him. Make the paths straight for him. ” ’"
     },
     {
       "verse": "4",
-      "text": "So John went to a place in the wilderness. He baptized people and he spoke a message from God. He said to people, ‘You have done many wrong things. You must turn away from them and change how you live. Then God will forgive you and I will baptize you.’"
+      "text": "So John went to a place in the wilderness. He baptized people and he spoke a message from God. He said to people, ‘You have done many wrong things. You must turn away from them and change how you live. Then God will forgive you and I will baptize you. ’"
     },
     {
       "verse": "5",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I have baptized you with water. But this man will baptize you with the Holy Spirit.’"
+      "text": "I have baptized you with water. But this man will baptize you with the Holy Spirit. ’"
     },
     {
       "verse": "9",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "A voice spoke from heaven: ‘You are my Son and I love you. You make me very happy.’"
+      "text": "A voice spoke from heaven: ‘You are my Son and I love you. You make me very happy. ’"
     },
     {
       "verse": "12",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Jesus said, ‘Now is the time when the kingdom of God has come very near. You have done many wrong things. Turn away from them and change the way that you live. Believe God's good news.’"
+      "text": "Jesus said, ‘Now is the time when the kingdom of God has come very near. You have done many wrong things. Turn away from them and change the way that you live. Believe God's good news. ’"
     },
     {
       "verse": "16",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Jesus said to them, ‘Come with me and be my disciples. Then I will teach you how to catch people, instead of fish.’"
+      "text": "Jesus said to them, ‘Come with me and be my disciples. Then I will teach you how to catch people, instead of fish. ’"
     },
     {
       "verse": "18",
@@ -94,11 +94,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "He said, ‘Jesus from Nazareth, leave us alone! Do not kill us! I know who you are. You are the Holy One and God has sent you.’"
+      "text": "He said, ‘Jesus from Nazareth, leave us alone! Do not kill us! I know who you are. You are the Holy One and God has sent you. ’"
     },
     {
       "verse": "25",
-      "text": "Jesus said to the bad spirit, ‘Be quiet! Come out of the man!’"
+      "text": "Jesus said to the bad spirit, ‘Be quiet! Come out of the man! ’"
     },
     {
       "verse": "26",
@@ -106,7 +106,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "All the people were very surprised and they said to each other, ‘This is very strange. This man Jesus is teaching us something new and he speaks with authority. He can tell bad spirits what they must do. Then they do it.’"
+      "text": "All the people were very surprised and they said to each other, ‘This is very strange. This man Jesus is teaching us something new and he speaks with authority. He can tell bad spirits what they must do. Then they do it. ’"
     },
     {
       "verse": "28",
@@ -138,11 +138,11 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "When they found him, they said, ‘Everyone is looking for you.’"
+      "text": "When they found him, they said, ‘Everyone is looking for you. ’"
     },
     {
       "verse": "38",
-      "text": "Jesus replied, ‘We should go to other towns near here. Then I can teach the people there too. That is the reason why I came here.’"
+      "text": "Jesus replied, ‘We should go to other towns near here. Then I can teach the people there too. That is the reason why I came here. ’"
     },
     {
       "verse": "39",
@@ -150,11 +150,11 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "One day, a man who had a disease of the skin came to Jesus. He went down on his knees in front of Jesus. The man said. ‘If you want, you can make me well. Please do it.’"
+      "text": "One day, a man who had a disease of the skin came to Jesus. He went down on his knees in front of Jesus. The man said. ‘If you want, you can make me well. Please do it. ’"
     },
     {
       "verse": "41",
-      "text": "Jesus felt very sorry for the man. He put out his hand towards the man and he touched him. ‘I do want to help you,’ Jesus said, ‘Be clean again!’"
+      "text": "Jesus felt very sorry for the man. He put out his hand towards the man and he touched him. ‘I do want to help you, ’ Jesus said, ‘Be clean again! ’"
     },
     {
       "verse": "42",
@@ -166,7 +166,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "He said, ‘Listen to me. Do not tell anyone about this. Instead, go and show yourself to the priest. Take him a gift for God. Moses' law tells you what you should give when you are clean again after this kind of disease. This will show everyone that you are now well again.’"
+      "text": "He said, ‘Listen to me. Do not tell anyone about this. Instead, go and show yourself to the priest. Take him a gift for God. Moses' law tells you what you should give when you are clean again after this kind of disease. This will show everyone that you are now well again. ’"
     },
     {
       "verse": "45",
@@ -174,11 +174,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "That evening, when the sun had gone down, people in the town came to Jesus.  They brought to him everyone who was ill."
+      "text": "That evening, when the sun had gone down, people in the town came to Jesus. They brought to him everyone who was ill."
     },
     {
       "verse": "33",
-      "text": "And they brought people with bad spirits in them.  All these people were standing together near the door of the house."
+      "text": "And they brought people with bad spirits in them. All these people were standing together near the door of the house."
     }
   ],
   "2": [
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jesus saw the man and his friends. He knew that they believed in him. So he said to the man who could not walk, ‘My friend, I forgive you for your sins.’"
+      "text": "Jesus saw the man and his friends. He knew that they believed in him. So he said to the man who could not walk, ‘My friend, I forgive you for your sins. ’"
     },
     {
       "verse": "6",
@@ -208,7 +208,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They thought, ‘This man Jesus should not have said that. He is speaking as if he is God. Only God can forgive people for their sins.’"
+      "text": "They thought, ‘This man Jesus should not have said that. He is speaking as if he is God. Only God can forgive people for their sins. ’"
     },
     {
       "verse": "8",
@@ -216,19 +216,19 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I said to this man who cannot walk, “I forgive you for your sins.” Instead, I could have said to him, “Stand up! Pick up your mat and walk.” Which of those is easier for me to say?"
+      "text": "I said to this man who cannot walk, “I forgive you for your sins. ” Instead, I could have said to him, “Stand up! Pick up your mat and walk. ” Which of those is easier for me to say?"
     },
     {
       "verse": "10",
-      "text": "But I want you to know this. I, the Son of Man, have authority on earth to forgive people for their sins.’ Then he said to the man who could not walk,"
+      "text": "But I want you to know this. I, the Son of Man, have authority on earth to forgive people for their sins. ’ Then he said to the man who could not walk,"
     },
     {
       "verse": "11",
-      "text": "‘I am saying to you, stand up! Pick up your mat and go home.’"
+      "text": "‘I am saying to you, stand up! Pick up your mat and go home. ’"
     },
     {
       "verse": "12",
-      "text": "Immediately, the man stood up. He picked up his mat and he walked out of the house. Everyone watched him do this. The people were very surprised. They praised God and they said, ‘God is great. We have never seen anything like this before.’"
+      "text": "Immediately, the man stood up. He picked up his mat and he walked out of the house. Everyone watched him do this. The people were very surprised. They praised God and they said, ‘God is great. We have never seen anything like this before. ’"
     },
     {
       "verse": "13",
@@ -236,7 +236,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "While Jesus was walking along, he saw a man called Levi. Levi was the son of Alphaeus. His job was to take taxes from people. He was sitting in his office. Jesus said to him, ‘Come with me and be my disciple.’ Levi stood up and he went with Jesus."
+      "text": "While Jesus was walking along, he saw a man called Levi. Levi was the son of Alphaeus. His job was to take taxes from people. He was sitting in his office. Jesus said to him, ‘Come with me and be my disciple. ’ Levi stood up and he went with Jesus."
     },
     {
       "verse": "15",
@@ -244,15 +244,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Some teachers of God's Law who were Pharisees saw what was happening. They said to Jesus' disciples, ‘He is eating with bad people and men who take taxes. That is not right.’"
+      "text": "Some teachers of God's Law who were Pharisees saw what was happening. They said to Jesus' disciples, ‘He is eating with bad people and men who take taxes. That is not right. ’"
     },
     {
       "verse": "17",
-      "text": "Jesus heard what these people were saying. He said to them, ‘People who are well do not need a doctor. It is people who are ill that need a doctor. Some people think that they always obey God. I did not come to help people like that. Some people know that they have done wrong things. I am asking those people to come to me for help.’"
+      "text": "Jesus heard what these people were saying. He said to them, ‘People who are well do not need a doctor. It is people who are ill that need a doctor. Some people think that they always obey God. I did not come to help people like that. Some people know that they have done wrong things. I am asking those people to come to me for help. ’"
     },
     {
       "verse": "18",
-      "text": "At this time, the disciples of John the Baptist and the disciples of the Pharisees were fasting. Some people came to Jesus and they asked him this question: ‘The disciples of John and the disciples of the Pharisees often fast for a time. So why do your disciples never do that?’"
+      "text": "At this time, the disciples of John the Baptist and the disciples of the Pharisees were fasting. Some people came to Jesus and they asked him this question: ‘The disciples of John and the disciples of the Pharisees often fast for a time. So why do your disciples never do that? ’"
     },
     {
       "verse": "19",
@@ -260,7 +260,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But there will be a time when people will take the man away from his friends. At that time his friends will fast.’"
+      "text": "But there will be a time when people will take the man away from his friends. At that time his friends will fast. ’"
     },
     {
       "verse": "21",
@@ -268,7 +268,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "And nobody pours new wine into old wineskins. If he does that, the new wine will tear the old wineskins. He will lose the wine and the wineskins will spoil. Instead, you must put new wine into new wineskins.’"
+      "text": "And nobody pours new wine into old wineskins. If he does that, the new wine will tear the old wineskins. He will lose the wine and the wineskins will spoil. Instead, you must put new wine into new wineskins. ’"
     },
     {
       "verse": "23",
@@ -276,7 +276,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Some Pharisees said to Jesus, ‘Look at what your disciples are doing. They should not do that on our day of rest. It is against God's Law.’"
+      "text": "Some Pharisees said to Jesus, ‘Look at what your disciples are doing. They should not do that on our day of rest. It is against God's Law. ’"
     },
     {
       "verse": "25",
@@ -284,7 +284,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "David went into the temple. He ate the special bread that was there. He gave some of it to his men to eat as well. This happened during the time that Abiathar was the leader of the priests. It is against God's Law for anyone except the priests to eat that special bread.’"
+      "text": "David went into the temple. He ate the special bread that was there. He gave some of it to his men to eat as well. This happened during the time that Abiathar was the leader of the priests. It is against God's Law for anyone except the priests to eat that special bread. ’"
     },
     {
       "verse": "27",
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So you should know that the Son of Man has authority over the laws about the day of rest.’"
+      "text": "So you should know that the Son of Man has authority over the laws about the day of rest. ’"
     }
   ],
   "3": [
@@ -306,15 +306,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Jesus said to the man, ‘Stand here in front of everyone.’"
+      "text": "Jesus said to the man, ‘Stand here in front of everyone. ’"
     },
     {
       "verse": "4",
-      "text": "Then Jesus said to the Pharisees, ‘Is it right for us to do good things on our day of rest? Or should we do bad things? Should we save a person's life? Or should we kill people?’Nobody said anything. Nobody said anything."
+      "text": "Then Jesus said to the Pharisees, ‘Is it right for us to do good things on our day of rest? Or should we do bad things? Should we save a person's life? Or should we kill people? ’Nobody said anything. Nobody said anything."
     },
     {
       "verse": "5",
-      "text": "Jesus looked round at everybody. He felt angry with them. He also felt sad because they did not want to learn. Then he said to the man, ‘Lift up your hand.’ The man lifted his hand and it became well. He could use it again."
+      "text": "Jesus looked round at everybody. He felt angry with them. He also felt sad because they did not want to learn. Then he said to the man, ‘Lift up your hand. ’ The man lifted his hand and it became well. He could use it again."
     },
     {
       "verse": "6",
@@ -338,11 +338,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Often, a person with a bad spirit saw Jesus. Then, the spirit caused the person to fall down on the ground in front of Jesus. The spirit caused that person to shout out, ‘You are the Son of God.’"
+      "text": "Often, a person with a bad spirit saw Jesus. Then, the spirit caused the person to fall down on the ground in front of Jesus. The spirit caused that person to shout out, ‘You are the Son of God. ’"
     },
     {
       "verse": "12",
-      "text": "Jesus often had to say to the bad spirits, ‘You must not tell anyone who I am.’"
+      "text": "Jesus often had to say to the bad spirits, ‘You must not tell anyone who I am. ’"
     },
     {
       "verse": "13",
@@ -358,7 +358,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "apostles:Simon, (Jesus called him Peter)."
+      "text": "apostles: Simon, (Jesus called him Peter)."
     },
     {
       "verse": "17",
@@ -366,7 +366,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Andrew,Philip,Bartholomew,Matthew,Thomas,James, who was the son of Alphaeus,Thaddaeus,Simon the Zealot"
+      "text": "Andrew, Philip, Bartholomew, Matthew, Thomas, James, who was the son of Alphaeus, Thaddaeus, Simon the Zealot"
     },
     {
       "verse": "19",
@@ -382,11 +382,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Some teachers of God's Law came from Jerusalem. They said, ‘Jesus has a bad spirit called Beelzebul in him. That is Satan, the one who rules all the bad spirits. This man can send bad spirits out of people because Satan gives him authority.’"
+      "text": "Some teachers of God's Law came from Jerusalem. They said, ‘Jesus has a bad spirit called Beelzebul in him. That is Satan, the one who rules all the bad spirits. This man can send bad spirits out of people because Satan gives him authority. ’"
     },
     {
       "verse": "23",
-      "text": "So Jesus spoke to the teachers of God's Law. He said, ‘Come here and listen to me.’ He used stories to explain to them, ‘Satan would not fight against himself!"
+      "text": "So Jesus spoke to the teachers of God's Law. He said, ‘Come here and listen to me. ’ He used stories to explain to them, ‘Satan would not fight against himself!"
     },
     {
       "verse": "24",
@@ -410,11 +410,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "But God will never forgive people who say bad things against the Holy Spirit. Those people will always be guilty of a terrible sin.’"
+      "text": "But God will never forgive people who say bad things against the Holy Spirit. Those people will always be guilty of a terrible sin. ’"
     },
     {
       "verse": "30",
-      "text": "Jesus said that to the teachers of God's Law, because they had said, ‘Jesus has a bad spirit in him.’"
+      "text": "Jesus said that to the teachers of God's Law, because they had said, ‘Jesus has a bad spirit in him. ’"
     },
     {
       "verse": "31",
@@ -422,11 +422,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "A crowd of people was sitting around Jesus. Somebody said to him, ‘Look! Your mother and brothers are outside. They are looking for you.’"
+      "text": "A crowd of people was sitting around Jesus. Somebody said to him, ‘Look! Your mother and brothers are outside. They are looking for you. ’"
     },
     {
       "verse": "33",
-      "text": "Jesus replied, ‘I will tell you who my mother and brothers really are.’"
+      "text": "Jesus replied, ‘I will tell you who my mother and brothers really are. ’"
     },
     {
       "verse": "34",
@@ -434,7 +434,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "My brothers and sisters and my mother are the people who do what God wants.’"
+      "text": "My brothers and sisters and my mother are the people who do what God wants. ’"
     }
   ],
   "4": [
@@ -468,15 +468,15 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But some seeds fell on good soil. Good strong plants grew from these seeds. Some plants made 30 new seeds. Some plants made 60 new seeds. And some plants made 100 new seeds.’"
+      "text": "But some seeds fell on good soil. Good strong plants grew from these seeds. Some plants made 30 new seeds. Some plants made 60 new seeds. And some plants made 100 new seeds. ’"
     },
     {
       "verse": "9",
-      "text": "Then Jesus said, ‘You have ears, so listen well to what I say!’"
+      "text": "Then Jesus said, ‘You have ears, so listen well to what I say! ’"
     },
     {
       "verse": "10",
-      "text": "When Jesus was alone, the 12 apostles and other people who were there asked him about the stories. “They are always looking but they do not see clearly. They are always listening but they do not understand.” If they did understand, they would turn to God. Then God would forgive them.’"
+      "text": "When Jesus was alone, the 12 apostles and other people who were there asked him about the stories. “They are always looking but they do not see clearly. They are always listening but they do not understand. ” If they did understand, they would turn to God. Then God would forgive them. ’"
     },
     {
       "verse": "11",
@@ -484,7 +484,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "This is so that:“They are always looking but they do not see clearly.They are always listening but they do not understand.”If they did understand, they would turn to God. Then God would forgive them.’"
+      "text": "This is so that:“They are always looking but they do not see clearly. They are always listening but they do not understand. ”If they did understand, they would turn to God. Then God would forgive them. ’"
     },
     {
       "verse": "13",
@@ -516,7 +516,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But some seeds fell on good soil. This is like other people who listen to the message from God. They understand the message and they believe it. These people are like good plants that grow well. From one seed, some good plants make 30 new seeds. Other good plants make 60 new seeds, and some good plants make 100 new seeds.’"
+      "text": "But some seeds fell on good soil. This is like other people who listen to the message from God. They understand the message and they believe it. These people are like good plants that grow well. From one seed, some good plants make 30 new seeds. Other good plants make 60 new seeds, and some good plants make 100 new seeds. ’"
     },
     {
       "verse": "21",
@@ -524,11 +524,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "God hides some things now. But there will be a time when people will see them. God keeps some things secret now. But there will be a time when people will understand those things.’"
+      "text": "God hides some things now. But there will be a time when people will see them. God keeps some things secret now. But there will be a time when people will understand those things. ’"
     },
     {
       "verse": "23",
-      "text": "Then Jesus said, ‘You have ears, so listen well to what I say.’"
+      "text": "Then Jesus said, ‘You have ears, so listen well to what I say. ’"
     },
     {
       "verse": "24",
@@ -536,7 +536,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "A person who has received some things will receive more things. Some other people have nothing. They will lose even the little bit that they do have.’"
+      "text": "A person who has received some things will receive more things. Some other people have nothing. They will lose even the little bit that they do have. ’"
     },
     {
       "verse": "26",
@@ -552,7 +552,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "When the new seeds have completely grown, the man will cut down the plants. It is time for him to take the seeds to use for food.’"
+      "text": "When the new seeds have completely grown, the man will cut down the plants. It is time for him to take the seeds to use for food. ’"
     },
     {
       "verse": "30",
@@ -564,7 +564,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "But when it starts to grow, it becomes bigger than the largest bush. It will have big branches. Then the birds will come and they will live there. They will build their nests in the shade of the branches.’"
+      "text": "But when it starts to grow, it becomes bigger than the largest bush. It will have big branches. Then the birds will come and they will live there. They will build their nests in the shade of the branches. ’"
     },
     {
       "verse": "33",
@@ -576,7 +576,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "On that same day, in the evening, Jesus said to his disciples, ‘We should go across the lake to the other side.’"
+      "text": "On that same day, in the evening, Jesus said to his disciples, ‘We should go across the lake to the other side. ’"
     },
     {
       "verse": "36",
@@ -588,19 +588,19 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Jesus was in a comfortable place at the back of the boat. He was sleeping. The disciples woke him. They said to him, ‘Teacher, we will die here in the water! Please do something!’"
+      "text": "Jesus was in a comfortable place at the back of the boat. He was sleeping. The disciples woke him. They said to him, ‘Teacher, we will die here in the water! Please do something! ’"
     },
     {
       "verse": "39",
-      "text": "Jesus woke up and he spoke strongly to the wind and to the water. ‘Be quiet!’ he said. ‘Stop!’ Then the wind stopped and the water became quiet again."
+      "text": "Jesus woke up and he spoke strongly to the wind and to the water. ‘Be quiet! ’ he said. ‘Stop! ’ Then the wind stopped and the water became quiet again."
     },
     {
       "verse": "40",
-      "text": "Jesus said to his disciples, ‘You should not be afraid like that. You should trust me.’"
+      "text": "Jesus said to his disciples, ‘You should not be afraid like that. You should trust me. ’"
     },
     {
       "verse": "41",
-      "text": "But the disciples became very afraid. They said to each other, ‘Who is this man? Even the wind and the water obey him.’"
+      "text": "But the disciples became very afraid. They said to each other, ‘Who is this man? Even the wind and the water obey him. ’"
     }
   ],
   "5": [
@@ -618,19 +618,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He screamed loudly, ‘Jesus, you are the Son of the Most High God! What are you doing here? Please, promise God that you will not hurt me.’"
+      "text": "He screamed loudly, ‘Jesus, you are the Son of the Most High God! What are you doing here? Please, promise God that you will not hurt me. ’"
     },
     {
       "verse": "8",
-      "text": "He said that because Jesus had already said to the bad spirit, ‘Come out of this man.’"
+      "text": "He said that because Jesus had already said to the bad spirit, ‘Come out of this man. ’"
     },
     {
       "verse": "9",
-      "text": "Then Jesus asked the man, ‘What is your name?’The man replied, ‘My name is Army because there are so many bad spirits in me.’ The man replied, ‘My name is Army because there are so many bad spirits in me.’"
+      "text": "Then Jesus asked the man, ‘What is your name? ’The man replied, ‘My name is Army because there are so many bad spirits in me. ’ The man replied, ‘My name is Army because there are so many bad spirits in me. ’"
     },
     {
       "verse": "10",
-      "text": "He said to Jesus many times, ‘Please do not send these bad spirits away from this place.’"
+      "text": "He said to Jesus many times, ‘Please do not send these bad spirits away from this place. ’"
     },
     {
       "verse": "11",
@@ -638,11 +638,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The bad spirits said, ‘Jesus, send us to the pigs. Let us go into them.’"
+      "text": "The bad spirits said, ‘Jesus, send us to the pigs. Let us go into them. ’"
     },
     {
       "verse": "13",
-      "text": "Jesus let them do this. So the bad spirits came out of the man and they went into the pigs. There were about 2,000 pigs. They rushed together down the hill into the lake. All the pigs died there in the water."
+      "text": "Jesus let them do this. So the bad spirits came out of the man and they went into the pigs. There were about 2, 000 pigs. They rushed together down the hill into the lake. All the pigs died there in the water."
     },
     {
       "verse": "14",
@@ -658,7 +658,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then the people who lived there said to Jesus, ‘Please go away. Leave this place.’"
+      "text": "Then the people who lived there said to Jesus, ‘Please go away. Leave this place. ’"
     },
     {
       "verse": "18",
@@ -666,7 +666,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But Jesus did not let him do this. Jesus said to him, ‘Go to your home and to your friends. Tell them what the Lord has done for you. Tell them how he has been kind to you.’"
+      "text": "But Jesus did not let him do this. Jesus said to him, ‘Go to your home and to your friends. Tell them what the Lord has done for you. Tell them how he has been kind to you. ’"
     },
     {
       "verse": "20",
@@ -682,11 +682,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He said, ‘My little daughter is very ill and she will die very soon. Please come to my house and put your hands on her. Then she will be well and she will live.’"
+      "text": "He said, ‘My little daughter is very ill and she will die very soon. Please come to my house and put your hands on her. Then she will be well and she will live. ’"
     },
     {
       "verse": "24",
-      "text": "So Jesus went with Jairus.A large crowd followed Jesus. The people were pushing against him."
+      "text": "So Jesus went with Jairus. A large crowd followed Jesus. The people were pushing against him."
     },
     {
       "verse": "25",
@@ -702,7 +702,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "She said, ‘Even if I can only touch his clothes, I will become well again.’"
+      "text": "She said, ‘Even if I can only touch his clothes, I will become well again. ’"
     },
     {
       "verse": "29",
@@ -710,11 +710,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Jesus knew immediately that something powerful had gone out from him. So he turned around in the crowd and he asked, ‘Who touched my clothes?’"
+      "text": "Jesus knew immediately that something powerful had gone out from him. So he turned around in the crowd and he asked, ‘Who touched my clothes? ’"
     },
     {
       "verse": "31",
-      "text": "His disciples replied, ‘You can see that the crowd is pushing against you. So you cannot ask who touched you!’"
+      "text": "His disciples replied, ‘You can see that the crowd is pushing against you. So you cannot ask who touched you! ’"
     },
     {
       "verse": "32",
@@ -726,15 +726,15 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Jesus said to her, ‘Young woman, you are now well again because you believed in me. Have peace in your mind. Go now and have no more pain.’"
+      "text": "Jesus said to her, ‘Young woman, you are now well again because you believed in me. Have peace in your mind. Go now and have no more pain. ’"
     },
     {
       "verse": "35",
-      "text": "While Jesus was still speaking, some men arrived from the house of Jairus. He was the leader at the Jews' meeting place. The men said to Jairus, ‘Your daughter is dead. Do not ask any longer for the teacher to come.’"
+      "text": "While Jesus was still speaking, some men arrived from the house of Jairus. He was the leader at the Jews' meeting place. The men said to Jairus, ‘Your daughter is dead. Do not ask any longer for the teacher to come. ’"
     },
     {
       "verse": "36",
-      "text": "Jesus heard what the men said to Jairus. But Jesus said to him, ‘Do not be afraid. Instead, believe.’"
+      "text": "Jesus heard what the men said to Jairus. But Jesus said to him, ‘Do not be afraid. Instead, believe. ’"
     },
     {
       "verse": "37",
@@ -746,15 +746,15 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Jesus went into the house and he said to the people, ‘You should not be weeping and making a noise. The child is not dead. She is asleep.’"
+      "text": "Jesus went into the house and he said to the people, ‘You should not be weeping and making a noise. The child is not dead. She is asleep. ’"
     },
     {
       "verse": "40",
-      "text": "The people laughed at Jesus when he said that.Then Jesus sent them all out of the house. He went into the place where the child was lying. The child's father and mother went with him. He also took Peter, James and John with him."
+      "text": "The people laughed at Jesus when he said that. Then Jesus sent them all out of the house. He went into the place where the child was lying. The child's father and mother went with him. He also took Peter, James and John with him."
     },
     {
       "verse": "41",
-      "text": "Then Jesus held the girl's hand. He said to her, ‘Talitha koum.’ This means, ‘Little girl, I say to you, stand up!’"
+      "text": "Then Jesus held the girl's hand. He said to her, ‘Talitha koum. ’ This means, ‘Little girl, I say to you, stand up! ’"
     },
     {
       "verse": "42",
@@ -762,19 +762,19 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Jesus said to them, ‘You must not tell anyone what has happened here. Now give the girl something to eat.’"
+      "text": "Jesus said to them, ‘You must not tell anyone what has happened here. Now give the girl something to eat. ’"
     },
     {
       "verse": "2",
-      "text": "Jesus got out of the boat.  Immediately, a man with a bad spirit in him came to him.  This man lived outside, among some graves."
+      "text": "Jesus got out of the boat. Immediately, a man with a bad spirit in him came to him. This man lived outside, among some graves."
     },
     {
       "verse": "3",
-      "text": "He was very strong and nobody could hold him.  People often put chains around his ankles to hold him."
+      "text": "He was very strong and nobody could hold him. People often put chains around his ankles to hold him."
     },
     {
       "verse": "4",
-      "text": "They wanted to keep him in a safe place.  But he broke the chains that held him."
+      "text": "They wanted to keep him in a safe place. But he broke the chains that held him."
     }
   ],
   "6": [
@@ -788,11 +788,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "We know he is an ordinary man. He is the carpenter. He is the son of Mary and the brother of James, Joses, Simon and Judas. His sisters live here in the town among us. Isn't that true?’ So the people there turned against Jesus."
+      "text": "We know he is an ordinary man. He is the carpenter. He is the son of Mary and the brother of James, Joses, Simon and Judas. His sisters live here in the town among us. Isn't that true? ’ So the people there turned against Jesus."
     },
     {
       "verse": "4",
-      "text": "Then Jesus said to them, ‘If a man is a prophet from God, people everywhere will respect him. But the people in his own town will not accept him. Even his own people and his own family will not respect him.’"
+      "text": "Then Jesus said to them, ‘If a man is a prophet from God, people everywhere will respect him. But the people in his own town will not accept him. Even his own people and his own family will not respect him. ’"
     },
     {
       "verse": "5",
@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Jesus was very surprised because the people there would not believe in him.Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
+      "text": "Jesus was very surprised because the people there would not believe in him. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
     },
     {
       "verse": "7",
@@ -820,7 +820,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Perhaps you might go to a town where the people do not accept you. They will not listen to you. So you should leave that town. Clean that town's dirt off your feet. Then it will be clear that they have done something wrong.’"
+      "text": "Perhaps you might go to a town where the people do not accept you. They will not listen to you. So you should leave that town. Clean that town's dirt off your feet. Then it will be clear that they have done something wrong. ’"
     },
     {
       "verse": "12",
@@ -832,23 +832,23 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "People were talking about Jesus. King Herod heard about what was happening. Some people were saying that Jesus was really John the Baptist. They said that John had died, but he had become alive again. ‘That is why this man can do these very powerful things,’ they said."
+      "text": "People were talking about Jesus. King Herod heard about what was happening. Some people were saying that Jesus was really John the Baptist. They said that John had died, but he had become alive again. ‘That is why this man can do these very powerful things, ’ they said."
     },
     {
       "verse": "15",
-      "text": "Other people said, ‘This man is Elijah.’ And other people said, ‘He is a prophet. He is like one of God's prophets who lived a long time ago.’"
+      "text": "Other people said, ‘This man is Elijah. ’ And other people said, ‘He is a prophet. He is like one of God's prophets who lived a long time ago. ’"
     },
     {
       "verse": "16",
-      "text": "But when someone told Herod, he said, ‘This man is surely John. I sent a soldier to cut off his head. But he has become alive again!’"
+      "text": "But when someone told Herod, he said, ‘This man is surely John. I sent a soldier to cut off his head. But he has become alive again! ’"
     },
     {
       "verse": "17",
-      "text": "Herod himself had sent his soldiers to take hold of John. He had said to his soldiers, ‘Tie his hands and feet and put him in prison.’ Herod had done that because of his wife, Herodias. She had been the wife of Herod's brother, Philip. But Herod had married her."
+      "text": "Herod himself had sent his soldiers to take hold of John. He had said to his soldiers, ‘Tie his hands and feet and put him in prison. ’ Herod had done that because of his wife, Herodias. She had been the wife of Herod's brother, Philip. But Herod had married her."
     },
     {
       "verse": "18",
-      "text": "John had said to him, ‘Herodias is your brother's wife. It is not right for you to have her as your wife.’"
+      "text": "John had said to him, ‘Herodias is your brother's wife. It is not right for you to have her as your wife. ’"
     },
     {
       "verse": "19",
@@ -864,19 +864,19 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The daughter of Herodias came in and she danced. Herod and his visitors were very happy when they saw her dance.King Herod said to the girl, ‘Ask me for anything that you want. I will give it to you.’"
+      "text": "The daughter of Herodias came in and she danced. Herod and his visitors were very happy when they saw her dance. King Herod said to the girl, ‘Ask me for anything that you want. I will give it to you. ’"
     },
     {
       "verse": "23",
-      "text": "He made a strong promise, ‘I will give you anything that you ask me to give to you. I will even give you half of everything that I rule over.’"
+      "text": "He made a strong promise, ‘I will give you anything that you ask me to give to you. I will even give you half of everything that I rule over. ’"
     },
     {
       "verse": "24",
-      "text": "The girl went out and she said to her mother, ‘What should I ask him for?’ Her mother replied, ‘Ask for the head of John the Baptist.’"
+      "text": "The girl went out and she said to her mother, ‘What should I ask him for? ’ Her mother replied, ‘Ask for the head of John the Baptist. ’"
     },
     {
       "verse": "25",
-      "text": "The girl went quickly to Herod and she said to him, ‘I want the head of John the Baptist. Put it on a plate! Do it now!’"
+      "text": "The girl went quickly to Herod and she said to him, ‘I want the head of John the Baptist. Put it on a plate! Do it now! ’"
     },
     {
       "verse": "26",
@@ -900,7 +900,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Many people were coming to Jesus and then going away. Jesus and his disciples were too busy even to eat. So Jesus said to them, ‘Come with me to a place where there are no other people. We should be alone together. Then we can rest for a short time.’"
+      "text": "Many people were coming to Jesus and then going away. Jesus and his disciples were too busy even to eat. So Jesus said to them, ‘Come with me to a place where there are no other people. We should be alone together. Then we can rest for a short time. ’"
     },
     {
       "verse": "32",
@@ -912,7 +912,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Jesus got out of the boat and he saw a large crowd. He felt sorry for them. He thought to himself, ‘These people are like sheep that have nobody to take care of them.’ So he began to teach them many things."
+      "text": "Jesus got out of the boat and he saw a large crowd. He felt sorry for them. He thought to himself, ‘These people are like sheep that have nobody to take care of them. ’ So he began to teach them many things."
     },
     {
       "verse": "35",
@@ -920,15 +920,15 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "The people do not have anything to eat. So send them away now. Tell them to go to the farms and villages that are near here. Then they can buy some food for themselves to eat.’"
+      "text": "The people do not have anything to eat. So send them away now. Tell them to go to the farms and villages that are near here. Then they can buy some food for themselves to eat. ’"
     },
     {
       "verse": "37",
-      "text": "‘You should give them some food to eat,’ Jesus replied.But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people.’ But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people.’"
+      "text": "‘You should give them some food to eat, ’ Jesus replied. But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people. ’ But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people. ’"
     },
     {
       "verse": "38",
-      "text": "Jesus asked them, ‘How many loaves of bread do you have? Go and see.’ When they had looked, they told Jesus, ‘We have five loaves and two fish.’"
+      "text": "Jesus asked them, ‘How many loaves of bread do you have? Go and see. ’ When they had looked, they told Jesus, ‘We have five loaves and two fish. ’"
     },
     {
       "verse": "39",
@@ -952,11 +952,11 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "There were 5,000 men in the crowd that ate the food there."
+      "text": "There were 5, 000 men in the crowd that ate the food there."
     },
     {
       "verse": "45",
-      "text": "Immediately after this, Jesus said to his disciples, ‘Get into the boat and sail across the lake to Bethsaida.’ Jesus said that he would first send the crowd away. Then he would also leave."
+      "text": "Immediately after this, Jesus said to his disciples, ‘Get into the boat and sail across the lake to Bethsaida. ’ Jesus said that he would first send the crowd away. Then he would also leave."
     },
     {
       "verse": "46",
@@ -972,11 +972,11 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "But they saw that he was walking on the water. They thought, ‘It is a spirit.’ And they screamed out."
+      "text": "But they saw that he was walking on the water. They thought, ‘It is a spirit. ’ And they screamed out."
     },
     {
       "verse": "50",
-      "text": "They all saw him and they were very afraid. But immediately, Jesus said to them, ‘Be brave. It is I. Do not be afraid.’"
+      "text": "They all saw him and they were very afraid. But immediately, Jesus said to them, ‘Be brave. It is I. Do not be afraid. ’"
     },
     {
       "verse": "51",
@@ -1018,23 +1018,23 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "When they come from the market place, they always wash themselves carefully. Unless they do this, they do not eat anything. Their leaders also gave them rules about how they should wash cups, pots and metal bowls.)"
+      "text": "When they come from the market place, they always wash themselves carefully. Unless they do this, they do not eat anything. Their leaders also gave them rules about how they should wash cups, pots and metal bowls. )"
     },
     {
       "verse": "5",
-      "text": "The Pharisees and the teachers of God's Law said to Jesus, ‘Your disciples do not obey the things that our leaders taught many years ago. Your disciples have not washed their hands in the right way. They are eating their food with unclean hands. That is not right.’"
+      "text": "The Pharisees and the teachers of God's Law said to Jesus, ‘Your disciples do not obey the things that our leaders taught many years ago. Your disciples have not washed their hands in the right way. They are eating their food with unclean hands. That is not right. ’"
     },
     {
       "verse": "6",
-      "text": "Jesus said to them, ‘You are hypocrites! What God's prophet Isaiah wrote about you long ago is true:God says, “These people say good things about me,but they do not really want to obey me. God says, “These people say good things about me, but they do not really want to obey me."
+      "text": "Jesus said to them, ‘You are hypocrites! What God's prophet Isaiah wrote about you long ago is true: God says, “These people say good things about me, but they do not really want to obey me. God says, “These people say good things about me, but they do not really want to obey me."
     },
     {
       "verse": "7",
-      "text": "They say that I am great.But what they say has no purpose.They teach their own rules, which I did not give to them.” ’ But what they say has no purpose. They teach their own rules, which I did not give to them.” ’"
+      "text": "They say that I am great. But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’ But what they say has no purpose. They teach their own rules, which I did not give to them. ” ’"
     },
     {
       "verse": "8",
-      "text": "Jesus then said, ‘You have stopped obeying God. Instead you obey the ideas that men teach.’"
+      "text": "Jesus then said, ‘You have stopped obeying God. Instead you obey the ideas that men teach. ’"
     },
     {
       "verse": "9",
@@ -1042,11 +1042,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "For example, Moses wrote, “You must love your father and your mother. You must obey them.” He also said, “You must kill anyone who curses his father or his mother.”"
+      "text": "For example, Moses wrote, “You must love your father and your mother. You must obey them. ” He also said, “You must kill anyone who curses his father or his mother. ”"
     },
     {
       "verse": "11",
-      "text": "But you teach that a person may say to his father or to his mother, “I would have given gifts to help you. But I cannot do that, because I have given them to God instead.”"
+      "text": "But you teach that a person may say to his father or to his mother, “I would have given gifts to help you. But I cannot do that, because I have given them to God instead. ”"
     },
     {
       "verse": "12",
@@ -1054,7 +1054,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "This shows that you have not obeyed what God says is right. Instead, you have obeyed the ideas that you received from your leaders many years ago. And you do many other things like that.’"
+      "text": "This shows that you have not obeyed what God says is right. Instead, you have obeyed the ideas that you received from your leaders many years ago. And you do many other things like that. ’"
     },
     {
       "verse": "14",
@@ -1066,7 +1066,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "[You have heard my words. So do what I say.’]"
+      "text": "[You have heard my words. So do what I say. ’]"
     },
     {
       "verse": "17",
@@ -1078,7 +1078,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But food does not go into people's minds. It goes into their stomachs and then it passes out of their bodies.’When Jesus said this, he was teaching that all foods are clean."
+      "text": "But food does not go into people's minds. It goes into their stomachs and then it passes out of their bodies. ’When Jesus said this, he was teaching that all foods are clean."
     },
     {
       "verse": "20",
@@ -1094,7 +1094,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "All these wrong things begin inside people's minds and then they come out. That is what makes them unclean.’"
+      "text": "All these wrong things begin inside people's minds and then they come out. That is what makes them unclean. ’"
     },
     {
       "verse": "24",
@@ -1110,15 +1110,15 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Jesus said to the woman, ‘First, the children must eat all that they want. It is not right to take food from the children and then throw it to the dogs.’"
+      "text": "Jesus said to the woman, ‘First, the children must eat all that they want. It is not right to take food from the children and then throw it to the dogs. ’"
     },
     {
       "verse": "28",
-      "text": "The woman replied, ‘Yes, sir. That is true. But small pieces of food drop while the children eat. And the dogs under the table eat those pieces.’"
+      "text": "The woman replied, ‘Yes, sir. That is true. But small pieces of food drop while the children eat. And the dogs under the table eat those pieces. ’"
     },
     {
       "verse": "29",
-      "text": "‘That is a good answer,’ Jesus replied. ‘Now the bad spirit has left your daughter. You may go.’"
+      "text": "‘That is a good answer, ’ Jesus replied. ‘Now the bad spirit has left your daughter. You may go. ’"
     },
     {
       "verse": "30",
@@ -1138,7 +1138,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Jesus looked up towards heaven. He cried with a low, sad sound. Then he said to the man, ‘Ephphatha!’ That means, ‘Become open!’"
+      "text": "Jesus looked up towards heaven. He cried with a low, sad sound. Then he said to the man, ‘Ephphatha! ’ That means, ‘Become open! ’"
     },
     {
       "verse": "35",
@@ -1150,7 +1150,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "The people were very surprised about everything that Jesus did. They said, ‘Jesus has done everything well. If people cannot hear, Jesus makes them able to hear. If people cannot speak, Jesus makes them able to speak.’"
+      "text": "The people were very surprised about everything that Jesus did. They said, ‘Jesus has done everything well. If people cannot hear, Jesus makes them able to hear. If people cannot speak, Jesus makes them able to speak. ’"
     }
   ],
   "8": [
@@ -1164,15 +1164,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I do not want to send them back to their homes while they are hungry. They might fall down during their journey because they are weak. Some of them have travelled a long way to come here.’"
+      "text": "I do not want to send them back to their homes while they are hungry. They might fall down during their journey because they are weak. Some of them have travelled a long way to come here. ’"
     },
     {
       "verse": "4",
-      "text": "The disciples replied, ‘This place is far from any houses. We cannot get enough bread to feed all these people.’"
+      "text": "The disciples replied, ‘This place is far from any houses. We cannot get enough bread to feed all these people. ’"
     },
     {
       "verse": "5",
-      "text": "‘How many loaves of bread do you have?’ Jesus asked. ‘We have seven loaves,’ they replied."
+      "text": "‘How many loaves of bread do you have? ’ Jesus asked. ‘We have seven loaves, ’ they replied."
     },
     {
       "verse": "6",
@@ -1188,7 +1188,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "About 4,000 people were there and ate the food. Then Jesus sent the people away."
+      "text": "About 4, 000 people were there and ate the food. Then Jesus sent the people away."
     },
     {
       "verse": "10",
@@ -1200,7 +1200,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Jesus cried with a low, sad sound. He said, ‘People who are alive today want God to show them something powerful. But I tell you this: God will not do the powerful thing for them that they want.’"
+      "text": "Jesus cried with a low, sad sound. He said, ‘People who are alive today want God to show them something powerful. But I tell you this: God will not do the powerful thing for them that they want. ’"
     },
     {
       "verse": "13",
@@ -1212,15 +1212,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Jesus said to them, ‘Be careful. Do not accept the yeast of the Pharisees or the yeast of Herod.’"
+      "text": "Jesus said to them, ‘Be careful. Do not accept the yeast of the Pharisees or the yeast of Herod. ’"
     },
     {
       "verse": "16",
-      "text": "The disciples began to say to each other, ‘Jesus is saying that because we do not have any bread.’"
+      "text": "The disciples began to say to each other, ‘Jesus is saying that because we do not have any bread. ’"
     },
     {
       "verse": "17",
-      "text": "Jesus knew what they were talking about. So he said to them, ‘You should not be arguing about the bread. You still do not understand my teaching. You seem unable to learn. ‘There were 12 baskets,’ they replied."
+      "text": "Jesus knew what they were talking about. So he said to them, ‘You should not be arguing about the bread. You still do not understand my teaching. You seem unable to learn. ‘There were 12 baskets, ’ they replied."
     },
     {
       "verse": "18",
@@ -1228,15 +1228,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Remember that I used five loaves of bread to feed 5,000 men. How many baskets did you fill with pieces of food that were left?’‘There were 12 baskets,’ they replied."
+      "text": "Remember that I used five loaves of bread to feed 5, 000 men. How many baskets did you fill with pieces of food that were left? ’‘There were 12 baskets, ’ they replied."
     },
     {
       "verse": "20",
-      "text": "Jesus asked them, ‘I also used seven loaves to feed 4,000 people. That time, how many baskets did you fill with pieces of food?’‘There were seven baskets,’ they replied. ‘There were seven baskets,’ they replied."
+      "text": "Jesus asked them, ‘I also used seven loaves to feed 4, 000 people. That time, how many baskets did you fill with pieces of food? ’‘There were seven baskets, ’ they replied. ‘There were seven baskets, ’ they replied."
     },
     {
       "verse": "21",
-      "text": "‘You really should understand about me now,’ he said to them."
+      "text": "‘You really should understand about me now, ’ he said to them."
     },
     {
       "verse": "22",
@@ -1244,11 +1244,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Jesus took the blind man's hand and he led the man out of the village. Jesus put water from his own mouth on the man's eyes. And he put his hands on the man. ‘Can you see anything?’ Jesus asked."
+      "text": "Jesus took the blind man's hand and he led the man out of the village. Jesus put water from his own mouth on the man's eyes. And he put his hands on the man. ‘Can you see anything? ’ Jesus asked."
     },
     {
       "verse": "24",
-      "text": "The man looked up. He said, ‘I can see people. But they look like trees that are walking about.’"
+      "text": "The man looked up. He said, ‘I can see people. But they look like trees that are walking about. ’"
     },
     {
       "verse": "25",
@@ -1256,19 +1256,19 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Jesus told the man that he must go back to his home. Jesus said, ‘Do not even go into the village.’"
+      "text": "Jesus told the man that he must go back to his home. Jesus said, ‘Do not even go into the village. ’"
     },
     {
       "verse": "27",
-      "text": "Then Jesus and his disciples went to visit some villages. They were near to the town of Caesarea Philippi. On the way, Jesus asked his disciples, ‘When people talk about me, who do they say that I am?’"
+      "text": "Then Jesus and his disciples went to visit some villages. They were near to the town of Caesarea Philippi. On the way, Jesus asked his disciples, ‘When people talk about me, who do they say that I am? ’"
     },
     {
       "verse": "28",
-      "text": "They replied, ‘Some people say that you are John the Baptist. Other people say that you are Elijah. And some other people say that you are one of God's prophets.’"
+      "text": "They replied, ‘Some people say that you are John the Baptist. Other people say that you are Elijah. And some other people say that you are one of God's prophets. ’"
     },
     {
       "verse": "29",
-      "text": "Jesus asked them, ‘But what do you think? Who do you say that I am?’Peter answered him, ‘You are the Messiah.’ Peter answered him, ‘You are the Messiah.’"
+      "text": "Jesus asked them, ‘But what do you think? Who do you say that I am? ’Peter answered him, ‘You are the Messiah. ’ Peter answered him, ‘You are the Messiah. ’"
     },
     {
       "verse": "30",
@@ -1284,7 +1284,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jesus turned round and he looked at his disciples. He said that Peter was not saying good things. He said to Peter, ‘Satan, go away from me! Your thoughts do not come from God. Instead, you are thinking like men think.’"
+      "text": "Jesus turned round and he looked at his disciples. He said that Peter was not saying good things. He said to Peter, ‘Satan, go away from me! Your thoughts do not come from God. Instead, you are thinking like men think. ’"
     },
     {
       "verse": "34",
@@ -1304,13 +1304,13 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "People who are living today do not obey God. They are very bad. But you must not be ashamed of me or of my words. If you are, then the Son of Man will be ashamed of you. One day he will return and God's holy angels will be with him. He will have the bright glory of his Father. He will be ashamed of you on that day if you are ashamed of him now.’"
+      "text": "People who are living today do not obey God. They are very bad. But you must not be ashamed of me or of my words. If you are, then the Son of Man will be ashamed of you. One day he will return and God's holy angels will be with him. He will have the bright glory of his Father. He will be ashamed of you on that day if you are ashamed of him now. ’"
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "Jesus then said to them, ‘I tell you this: Some people who are standing here will see God begin to rule in his kingdom with great power. They will see that before they die.’"
+      "text": "Jesus then said to them, ‘I tell you this: Some people who are standing here will see God begin to rule in his kingdom with great power. They will see that before they die. ’"
     },
     {
       "verse": "2",
@@ -1326,7 +1326,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So Peter said to Jesus, ‘Teacher, it is good that we are here. Please let us build three huts. One hut will be for you. One hut will be for Moses. And one hut will be for Elijah.’"
+      "text": "So Peter said to Jesus, ‘Teacher, it is good that we are here. Please let us build three huts. One hut will be for you. One hut will be for Moses. And one hut will be for Elijah. ’"
     },
     {
       "verse": "6",
@@ -1334,7 +1334,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then a cloud appeared and it covered them all. A voice spoke from the cloud and it said, ‘This is my Son, and I love him. Listen to him.’"
+      "text": "Then a cloud appeared and it covered them all. A voice spoke from the cloud and it said, ‘This is my Son, and I love him. Listen to him. ’"
     },
     {
       "verse": "8",
@@ -1342,15 +1342,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "While they were walking down the mountain, Jesus said to the three disciples, ‘You must not tell anyone now about the things that you have just seen. One day the Son of Man will become alive again after his death. Then you can tell people about these things.’"
+      "text": "While they were walking down the mountain, Jesus said to the three disciples, ‘You must not tell anyone now about the things that you have just seen. One day the Son of Man will become alive again after his death. Then you can tell people about these things. ’"
     },
     {
       "verse": "10",
-      "text": "The three disciples kept these words secret. But they talked together about the words, ‘become alive again after his death’. They asked each other, ‘What does this mean?’"
+      "text": "The three disciples kept these words secret. But they talked together about the words, ‘become alive again after his death’. They asked each other, ‘What does this mean? ’"
     },
     {
       "verse": "11",
-      "text": "Then the three disciples asked Jesus, ‘Why do the teachers of God's Law say that God's prophet Elijah must return first, before the Messiah comes?’"
+      "text": "Then the three disciples asked Jesus, ‘Why do the teachers of God's Law say that God's prophet Elijah must return first, before the Messiah comes? ’"
     },
     {
       "verse": "12",
@@ -1358,7 +1358,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But I tell you that Elijah has already come. People did to him everything that they wanted to do. The Bible already showed that those things would happen to him.’"
+      "text": "But I tell you that Elijah has already come. People did to him everything that they wanted to do. The Bible already showed that those things would happen to him. ’"
     },
     {
       "verse": "14",
@@ -1370,7 +1370,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Jesus asked his disciples, ‘What are you arguing about with the teachers of God's Law?’"
+      "text": "Jesus asked his disciples, ‘What are you arguing about with the teachers of God's Law? ’"
     },
     {
       "verse": "17",
@@ -1378,11 +1378,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "When the bad spirit takes hold of him, it throws him to the ground. Water comes out of his mouth and he bites his teeth together. Then his body stops moving. I asked your disciples to send the spirit out of him. But they were not able to do it.’"
+      "text": "When the bad spirit takes hold of him, it throws him to the ground. Water comes out of his mouth and he bites his teeth together. Then his body stops moving. I asked your disciples to send the spirit out of him. But they were not able to do it. ’"
     },
     {
       "verse": "19",
-      "text": "Jesus replied, ‘You people today still do not believe in God. I have been with you for a long time and still you do not believe. It is difficult for me to be patient with you. Bring the boy to me.’"
+      "text": "Jesus replied, ‘You people today still do not believe in God. I have been with you for a long time and still you do not believe. It is difficult for me to be patient with you. Bring the boy to me. ’"
     },
     {
       "verse": "20",
@@ -1390,27 +1390,27 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Jesus asked the boy's father, ‘How long has he been like this?’‘He has been like this since he was a small boy,’ the father replied."
+      "text": "Jesus asked the boy's father, ‘How long has he been like this? ’‘He has been like this since he was a small boy, ’ the father replied."
     },
     {
       "verse": "22",
-      "text": "‘Often the spirit has caused him to fall into the fire or into water. It is trying to kill him. Please be kind to us. If you can do anything, help us!’"
+      "text": "‘Often the spirit has caused him to fall into the fire or into water. It is trying to kill him. Please be kind to us. If you can do anything, help us! ’"
     },
     {
       "verse": "23",
-      "text": "Jesus said to the father, ‘You should not say, “If you can do anything.” Everything is possible for those people who believe.’"
+      "text": "Jesus said to the father, ‘You should not say, “If you can do anything. ” Everything is possible for those people who believe. ’"
     },
     {
       "verse": "24",
-      "text": "Immediately, the boy's father shouted, ‘Oh! I believe! Help me to believe more!’"
+      "text": "Immediately, the boy's father shouted, ‘Oh! I believe! Help me to believe more! ’"
     },
     {
       "verse": "25",
-      "text": "Jesus saw that the crowd of people was quickly becoming bigger. So he told the bad spirit to stop. Jesus said to it, ‘Spirit, I am telling you that you must leave this boy. He cannot hear or speak because of you. I tell you to come out of him! You must never go into him again.’"
+      "text": "Jesus saw that the crowd of people was quickly becoming bigger. So he told the bad spirit to stop. Jesus said to it, ‘Spirit, I am telling you that you must leave this boy. He cannot hear or speak because of you. I tell you to come out of him! You must never go into him again. ’"
     },
     {
       "verse": "26",
-      "text": "The spirit screamed. It caused the boy's body to shake many times. Then it came out of him. The boy seemed to be dead, so many people said, ‘He is dead.’"
+      "text": "The spirit screamed. It caused the boy's body to shake many times. Then it came out of him. The boy seemed to be dead, so many people said, ‘He is dead. ’"
     },
     {
       "verse": "27",
@@ -1418,11 +1418,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Jesus went into a house and the disciples were alone with him. Then they asked him, ‘Why could we not cause the bad spirit to leave the boy?’"
+      "text": "Jesus went into a house and the disciples were alone with him. Then they asked him, ‘Why could we not cause the bad spirit to leave the boy? ’"
     },
     {
       "verse": "29",
-      "text": "Jesus said to them, ‘You must pray. This kind of spirit will not leave a person unless you pray.’"
+      "text": "Jesus said to them, ‘You must pray. This kind of spirit will not leave a person unless you pray. ’"
     },
     {
       "verse": "30",
@@ -1430,7 +1430,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "That was because he was teaching his disciples. He told them, ‘Soon, they will give the Son of Man to powerful people. They will take him away and they will kill him. But three days after that, he will become alive again.’"
+      "text": "That was because he was teaching his disciples. He told them, ‘Soon, they will give the Son of Man to powerful people. They will take him away and they will kill him. But three days after that, he will become alive again. ’"
     },
     {
       "verse": "32",
@@ -1438,7 +1438,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jesus and his disciples arrived at Capernaum. When they were in the house, Jesus asked them, ‘What were you arguing about on the way?’"
+      "text": "Jesus and his disciples arrived at Capernaum. When they were in the house, Jesus asked them, ‘What were you arguing about on the way? ’"
     },
     {
       "verse": "34",
@@ -1446,7 +1446,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Jesus sat down. He told the 12 apostles to come to him. Then he said to them, ‘If you want to be the leader, make yourself less important than everyone else. You must become the servant of everyone.’"
+      "text": "Jesus sat down. He told the 12 apostles to come to him. Then he said to them, ‘If you want to be the leader, make yourself less important than everyone else. You must become the servant of everyone. ’"
     },
     {
       "verse": "36",
@@ -1454,15 +1454,15 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "‘If someone accepts a child like this because of me, then that person also accepts me. If he accepts me, then he is not only accepting me. He is also accepting my Father God, who sent me.’"
+      "text": "‘If someone accepts a child like this because of me, then that person also accepts me. If he accepts me, then he is not only accepting me. He is also accepting my Father God, who sent me. ’"
     },
     {
       "verse": "38",
-      "text": "John said to Jesus, ‘Teacher, we saw a man who was causing bad spirits to go out of people. He was using your authority to do it. But he is not in our group. So we told him that he must not do it.’"
+      "text": "John said to Jesus, ‘Teacher, we saw a man who was causing bad spirits to go out of people. He was using your authority to do it. But he is not in our group. So we told him that he must not do it. ’"
     },
     {
       "verse": "39",
-      "text": "‘Do not tell him to stop,’ Jesus said. ‘That man is using my authority to do powerful things. Someone who does that cannot immediately say anything bad about me."
+      "text": "‘Do not tell him to stop, ’ Jesus said. ‘That man is using my authority to do powerful things. Someone who does that cannot immediately say anything bad about me."
     },
     {
       "verse": "40",
@@ -1482,7 +1482,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "“In hell, the worms do not die,and the fire never goes out.” and the fire never goes out.”"
+      "text": "“In hell, the worms do not die, and the fire never goes out. ” and the fire never goes out. ”"
     },
     {
       "verse": "49",
@@ -1490,19 +1490,19 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "Salt is good. But if your salt is not salty any more, you cannot make it salty again. You should be like good salt and love each other. Do not cause trouble among yourselves.’"
+      "text": "Salt is good. But if your salt is not salty any more, you cannot make it salty again. You should be like good salt and love each other. Do not cause trouble among yourselves. ’"
     },
     {
       "verse": "43",
-      "text": "If your hand causes you to do wrong things, you should cut it off.  You will only have one hand, but you can have God's true life."
+      "text": "If your hand causes you to do wrong things, you should cut it off. You will only have one hand, but you can have God's true life."
     },
     {
       "verse": "44",
-      "text": "It will be much worse for you if you keep both your hands and go to hell.  There, the fire always burns and never stops."
+      "text": "It will be much worse for you if you keep both your hands and go to hell. There, the fire always burns and never stops."
     },
     {
       "verse": "45",
-      "text": "If your foot causes you to do wrong things, you should cut it off.  You will only have one foot, but you can have God's true life."
+      "text": "If your foot causes you to do wrong things, you should cut it off. You will only have one foot, but you can have God's true life."
     },
     {
       "verse": "46",
@@ -1516,15 +1516,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Some Pharisees came to Jesus. They wanted to find out how he would answer their question. They asked him, ‘Can a man send his wife away, so that she is no longer his wife? Is it right for him to do that?’"
+      "text": "Some Pharisees came to Jesus. They wanted to find out how he would answer their question. They asked him, ‘Can a man send his wife away, so that she is no longer his wife? Is it right for him to do that? ’"
     },
     {
       "verse": "3",
-      "text": "Jesus replied with a question: ‘What did Moses say was right for you?’"
+      "text": "Jesus replied with a question: ‘What did Moses say was right for you? ’"
     },
     {
       "verse": "4",
-      "text": "The Pharisees said, ‘Moses said that a man could write a letter to say that he and his wife are no longer married. Then the man can send the woman away.’"
+      "text": "The Pharisees said, ‘Moses said that a man could write a letter to say that he and his wife are no longer married. Then the man can send the woman away. ’"
     },
     {
       "verse": "5",
@@ -1544,7 +1544,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "God has put them together to be husband and wife. So nobody should cause them to be separate.’"
+      "text": "God has put them together to be husband and wife. So nobody should cause them to be separate. ’"
     },
     {
       "verse": "10",
@@ -1556,7 +1556,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "In the same way, a woman must not leave her husband and then marry another man. She also has done a wrong thing. It is the same as if she had sex with another woman's husband.’"
+      "text": "In the same way, a woman must not leave her husband and then marry another man. She also has done a wrong thing. It is the same as if she had sex with another woman's husband. ’"
     },
     {
       "verse": "13",
@@ -1568,7 +1568,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I tell you this: A person must become like a little child for God to rule in his life. If he does not become like a child, he will not come into the kingdom of God.’"
+      "text": "I tell you this: A person must become like a little child for God to rule in his life. If he does not become like a child, he will not come into the kingdom of God. ’"
     },
     {
       "verse": "16",
@@ -1576,23 +1576,23 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "While Jesus was starting on his journey, a man ran to him. He went down on his knees in front of Jesus. He said to Jesus, ‘Good teacher, what must I do so that I can live with God for ever?’"
+      "text": "While Jesus was starting on his journey, a man ran to him. He went down on his knees in front of Jesus. He said to Jesus, ‘Good teacher, what must I do so that I can live with God for ever? ’"
     },
     {
       "verse": "18",
-      "text": "Jesus said to him, ‘Why do you say that I am good? Only God is good. Nobody else. “Do not kill anyone. Do not have sex with anyone who is not your wife. Do not rob anyone. Do not say things that are not true about people. Do not take things that are not yours. Love your father and your mother, and obey them.” ’"
+      "text": "Jesus said to him, ‘Why do you say that I am good? Only God is good. Nobody else. “Do not kill anyone. Do not have sex with anyone who is not your wife. Do not rob anyone. Do not say things that are not true about people. Do not take things that are not yours. Love your father and your mother, and obey them. ” ’"
     },
     {
       "verse": "19",
-      "text": "You know God's rules:“Do not kill anyone.Do not have sex with anyone who is not your wife.Do not rob anyone.Do not say things that are not true about people.Do not take things that are not yours.Love your father and your mother, and obey them.” ’"
+      "text": "You know God's rules:“Do not kill anyone. Do not have sex with anyone who is not your wife. Do not rob anyone. Do not say things that are not true about people. Do not take things that are not yours. Love your father and your mother, and obey them. ” ’"
     },
     {
       "verse": "20",
-      "text": "‘Teacher,’ the man replied, ‘I have obeyed all these laws since I was a young man.’"
+      "text": "‘Teacher, ’ the man replied, ‘I have obeyed all these laws since I was a young man. ’"
     },
     {
       "verse": "21",
-      "text": "Jesus looked at the man and Jesus loved him. Jesus said to him, ‘There is still just one thing that you must do. Go now. Sell everything that you have. Then give the money to poor people. If you do that, you will have many valuable things in heaven. Then come back and be my disciple.’"
+      "text": "Jesus looked at the man and Jesus loved him. Jesus said to him, ‘There is still just one thing that you must do. Go now. Sell everything that you have. Then give the money to poor people. If you do that, you will have many valuable things in heaven. Then come back and be my disciple. ’"
     },
     {
       "verse": "22",
@@ -1600,7 +1600,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Jesus looked round and he said to his disciples, ‘It is very difficult for rich people to let God rule in their lives.’"
+      "text": "Jesus looked round and he said to his disciples, ‘It is very difficult for rich people to let God rule in their lives. ’"
     },
     {
       "verse": "24",
@@ -1608,19 +1608,19 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The hole in a needle is very small. A camel cannot go through it! But it is even more difficult than that for a rich person to let God rule in their life.’"
+      "text": "The hole in a needle is very small. A camel cannot go through it! But it is even more difficult than that for a rich person to let God rule in their life. ’"
     },
     {
       "verse": "26",
-      "text": "Then Jesus' disciples were even more surprised. They said to each other, ‘So perhaps God will not save anyone!’"
+      "text": "Then Jesus' disciples were even more surprised. They said to each other, ‘So perhaps God will not save anyone! ’"
     },
     {
       "verse": "27",
-      "text": "Jesus looked at them and he replied, ‘For people, it really is impossible. But God can do it. God can do everything.’"
+      "text": "Jesus looked at them and he replied, ‘For people, it really is impossible. But God can do it. God can do everything. ’"
     },
     {
       "verse": "28",
-      "text": "Peter said to Jesus, ‘Look! We have left everything that we had. Now we are your disciples.’"
+      "text": "Peter said to Jesus, ‘Look! We have left everything that we had. Now we are your disciples. ’"
     },
     {
       "verse": "29",
@@ -1632,7 +1632,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But many people who are very important now will not be important then. And people who are not important now will become very important then.’"
+      "text": "But many people who are very important now will not be important then. And people who are not important now will become very important then. ’"
     },
     {
       "verse": "32",
@@ -1640,35 +1640,35 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "‘Listen!’ he said to them. ‘We are going to Jerusalem. There, someone will give the Son of Man to the leaders of the priests and to the teachers of God's Law. These Jewish leaders will decide that he must die. Then they will put him under the power of people who are not Jews."
+      "text": "‘Listen! ’ he said to them. ‘We are going to Jerusalem. There, someone will give the Son of Man to the leaders of the priests and to the teachers of God's Law. These Jewish leaders will decide that he must die. Then they will put him under the power of people who are not Jews."
     },
     {
       "verse": "34",
-      "text": "Those people will laugh at him. They will spit at him. They will hit him with whips. Then they will kill him. But after three days, he will become alive again.’"
+      "text": "Those people will laugh at him. They will spit at him. They will hit him with whips. Then they will kill him. But after three days, he will become alive again. ’"
     },
     {
       "verse": "35",
-      "text": "James and John, who were Zebedee's sons, came to Jesus. ‘Teacher,’ they said, ‘we want to ask you for something. Please do it for us.’"
+      "text": "James and John, who were Zebedee's sons, came to Jesus. ‘Teacher, ’ they said, ‘we want to ask you for something. Please do it for us. ’"
     },
     {
       "verse": "36",
-      "text": "‘What do you want me to do for you?’ Jesus asked them."
+      "text": "‘What do you want me to do for you? ’ Jesus asked them."
     },
     {
       "verse": "37",
-      "text": "They said to him, ‘When you are king, we want to rule with you. One of us will sit at your right side and the other one at your left side.’"
+      "text": "They said to him, ‘When you are king, we want to rule with you. One of us will sit at your right side and the other one at your left side. ’"
     },
     {
       "verse": "38",
-      "text": "Jesus said to them, ‘You do not understand what you are asking for. I will have much pain and trouble. Are you ready to have the same pain? Are you ready to die in the way that I will die?’"
+      "text": "Jesus said to them, ‘You do not understand what you are asking for. I will have much pain and trouble. Are you ready to have the same pain? Are you ready to die in the way that I will die? ’"
     },
     {
       "verse": "39",
-      "text": "James and John replied, ‘Yes, we can do all that.’Jesus said to them, ‘Yes, that is true. You will have pain like mine. And people will want to kill you like me."
+      "text": "James and John replied, ‘Yes, we can do all that. ’Jesus said to them, ‘Yes, that is true. You will have pain like mine. And people will want to kill you like me."
     },
     {
       "verse": "40",
-      "text": "But I cannot promise that you will sit at my right side or at my left side. God has chosen the people who will sit there. He has prepared the places for those people.’"
+      "text": "But I cannot promise that you will sit at my right side or at my left side. God has chosen the people who will sit there. He has prepared the places for those people. ’"
     },
     {
       "verse": "41",
@@ -1688,7 +1688,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "Even the Son of Man came to earth to be a servant to other people. He did not come here to have servants who must work for him. No, he came to die so that many people can be free.’"
+      "text": "Even the Son of Man came to earth to be a servant to other people. He did not come here to have servants who must work for him. No, he came to die so that many people can be free. ’"
     },
     {
       "verse": "46",
@@ -1696,15 +1696,15 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "Somebody told Bartimaeus that Jesus from Nazareth was walking past him. So he began to shout. He said, ‘Jesus, Son of David! Please be kind to me and help me!’"
+      "text": "Somebody told Bartimaeus that Jesus from Nazareth was walking past him. So he began to shout. He said, ‘Jesus, Son of David! Please be kind to me and help me! ’"
     },
     {
       "verse": "48",
-      "text": "Many people were angry with Bartimaeus. They told him that he should be quiet. But he shouted even louder than before, ‘Son of David! Please help me!’"
+      "text": "Many people were angry with Bartimaeus. They told him that he should be quiet. But he shouted even louder than before, ‘Son of David! Please help me! ’"
     },
     {
       "verse": "49",
-      "text": "Jesus stopped. He said to the people, ‘Tell the man to come here.’ So the people said to the blind man, ‘Be brave! Stand up. Jesus is asking you to go to him.’"
+      "text": "Jesus stopped. He said to the people, ‘Tell the man to come here. ’ So the people said to the blind man, ‘Be brave! Stand up. Jesus is asking you to go to him. ’"
     },
     {
       "verse": "50",
@@ -1712,11 +1712,11 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Then Jesus said to Bartimaeus, ‘What do you want me to do for you?’The blind man said to Jesus, ‘Teacher, I want to see again.’ The blind man said to Jesus, ‘Teacher, I want to see again.’"
+      "text": "Then Jesus said to Bartimaeus, ‘What do you want me to do for you? ’The blind man said to Jesus, ‘Teacher, I want to see again. ’ The blind man said to Jesus, ‘Teacher, I want to see again. ’"
     },
     {
       "verse": "52",
-      "text": "‘Go,’ Jesus said to him. ‘You are well now, because you believed in me.’ Immediately, Bartimaeus could see again. He followed Jesus along the road."
+      "text": "‘Go, ’ Jesus said to him. ‘You are well now, because you believed in me. ’ Immediately, Bartimaeus could see again. He followed Jesus along the road."
     }
   ],
   "11": [
@@ -1730,7 +1730,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Someone may ask you, “Why are you doing this?” Then say, “The Master needs the donkey. He will send it back here soon.” ’"
+      "text": "Someone may ask you, “Why are you doing this? ” Then say, “The Master needs the donkey. He will send it back here soon. ” ’"
     },
     {
       "verse": "4",
@@ -1738,7 +1738,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Some people were standing there. They asked the two disciples, ‘What are you doing? Why are you undoing the donkey's rope?’"
+      "text": "Some people were standing there. They asked the two disciples, ‘What are you doing? Why are you undoing the donkey's rope? ’"
     },
     {
       "verse": "6",
@@ -1754,11 +1754,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Many people went in front of Jesus, and other people followed him. All of them were shouting,‘We praise God!May the Lord God bless the king who comes with his authority! ‘We praise God! May the Lord God bless the king who comes with his authority!"
+      "text": "Many people went in front of Jesus, and other people followed him. All of them were shouting, ‘We praise God! May the Lord God bless the king who comes with his authority! ‘We praise God! May the Lord God bless the king who comes with his authority!"
     },
     {
       "verse": "10",
-      "text": "Great will be the kingdom of King David, our ancestor!We praise God above!’ We praise God above!’"
+      "text": "Great will be the kingdom of King David, our ancestor! We praise God above! ’ We praise God above! ’"
     },
     {
       "verse": "11",
@@ -1774,7 +1774,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So Jesus said to the tree, ‘Nobody will ever eat your fruit again.’ And his disciples heard what he said."
+      "text": "So Jesus said to the tree, ‘Nobody will ever eat your fruit again. ’ And his disciples heard what he said."
     },
     {
       "verse": "15",
@@ -1786,7 +1786,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "While he was teaching the people, Jesus said, ‘The Bible says, “God's house will be a place where people from all countries pray.” But you have changed it into a place where robbers meet.’"
+      "text": "While he was teaching the people, Jesus said, ‘The Bible says, “God's house will be a place where people from all countries pray. ” But you have changed it into a place where robbers meet. ’"
     },
     {
       "verse": "18",
@@ -1802,7 +1802,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Peter remembered what Jesus had said. So he said to Jesus, ‘Teacher, look at that fig tree. You said that it should die, and it has died.’"
+      "text": "Peter remembered what Jesus had said. So he said to Jesus, ‘Teacher, look at that fig tree. You said that it should die, and it has died. ’"
     },
     {
       "verse": "22",
@@ -1810,7 +1810,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I tell you this: A person could say to this mountain, “Move and throw yourself into the sea.” Then it will happen like he says. But he must not let other ideas come into his mind. He must really believe that those things will happen. If he does believe it, God will do those things for him."
+      "text": "I tell you this: A person could say to this mountain, “Move and throw yourself into the sea. ” Then it will happen like he says. But he must not let other ideas come into his mind. He must really believe that those things will happen. If he does believe it, God will do those things for him."
     },
     {
       "verse": "24",
@@ -1822,7 +1822,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "If you do forgive them, your Father in heaven will forgive you. God will forgive you for the bad things that you have done.’"
+      "text": "If you do forgive them, your Father in heaven will forgive you. God will forgive you for the bad things that you have done. ’"
     },
     {
       "verse": "27",
@@ -1830,7 +1830,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "They asked him, ‘What authority do you have to do these things? Who gave you the authority to do them?’"
+      "text": "They asked him, ‘What authority do you have to do these things? Who gave you the authority to do them? ’"
     },
     {
       "verse": "29",
@@ -1838,19 +1838,19 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "John baptized people. Did God give him authority to do this? Or did men tell him to do it? Now, tell me your answer.’"
+      "text": "John baptized people. Did God give him authority to do this? Or did men tell him to do it? Now, tell me your answer. ’"
     },
     {
       "verse": "31",
-      "text": "Then the Jewish leaders talked to each other. They said, ‘We could say that God gave John his authority. But, if we say that, Jesus will say to us, “Then you should have believed John.”"
+      "text": "Then the Jewish leaders talked to each other. They said, ‘We could say that God gave John his authority. But, if we say that, Jesus will say to us, “Then you should have believed John. ”"
     },
     {
       "verse": "32",
-      "text": "But we do not want to say that only men gave John his authority.’ The Jewish leaders were afraid of the crowd. All the people thought that John really was a prophet from God."
+      "text": "But we do not want to say that only men gave John his authority. ’ The Jewish leaders were afraid of the crowd. All the people thought that John really was a prophet from God."
     },
     {
       "verse": "33",
-      "text": "So the Jewish leaders answered Jesus: ‘We do not know who gave John his authority.’So Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things.’"
+      "text": "So the Jewish leaders answered Jesus: ‘We do not know who gave John his authority. ’So Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things. ’"
     }
   ],
   "12": [
@@ -1876,15 +1876,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The man had only one person that he could still send. This was his own son. The man loved him very much. So, last of all, he sent his son to the farmers. He thought, “The farmers will surely respect my son.”"
+      "text": "The man had only one person that he could still send. This was his own son. The man loved him very much. So, last of all, he sent his son to the farmers. He thought, “The farmers will surely respect my son. ”"
     },
     {
       "verse": "7",
-      "text": "But those farmers said to each other, “This is the son of our master. The garden will belong to him when his father dies. We should kill the son and then the garden will be ours.”"
+      "text": "But those farmers said to each other, “This is the son of our master. The garden will belong to him when his father dies. We should kill the son and then the garden will be ours. ”"
     },
     {
       "verse": "8",
-      "text": "So the farmers took the son and they killed him. Then they threw his dead body out of the garden.’"
+      "text": "So the farmers took the son and they killed him. Then they threw his dead body out of the garden. ’"
     },
     {
       "verse": "9",
@@ -1892,11 +1892,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I am sure that you have read these words in the Bible:“The builders refused to use a certain stone. They thought that it had no value.But now that stone has become the most important stone at the corner of the building."
+      "text": "I am sure that you have read these words in the Bible:“The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building."
     },
     {
       "verse": "11",
-      "text": "The Lord God did this.And we can see that he did something great.” ’ And we can see that he did something great.” ’"
+      "text": "The Lord God did this. And we can see that he did something great. ” ’ And we can see that he did something great. ” ’"
     },
     {
       "verse": "12",
@@ -1908,19 +1908,19 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "These men came to Jesus and they said, ‘Teacher, we know that you only say true things. It does not matter to you what other people think. If someone is important, you do not change your answers to make them happy. You really do teach us what God wants us to do. Tell us, should we pay our taxes to the Roman ruler, Caesar? Is it right to give that money to him, or not?’"
+      "text": "These men came to Jesus and they said, ‘Teacher, we know that you only say true things. It does not matter to you what other people think. If someone is important, you do not change your answers to make them happy. You really do teach us what God wants us to do. Tell us, should we pay our taxes to the Roman ruler, Caesar? Is it right to give that money to him, or not? ’"
     },
     {
       "verse": "15",
-      "text": "Jesus knew that those men were not honest. So he said, ‘You just ask that question to cause trouble for me. Now, bring me a coin. I want to see it.’ They replied, ‘It is Caesar's picture and Caesar's name.’"
+      "text": "Jesus knew that those men were not honest. So he said, ‘You just ask that question to cause trouble for me. Now, bring me a coin. I want to see it. ’ They replied, ‘It is Caesar's picture and Caesar's name. ’"
     },
     {
       "verse": "16",
-      "text": "So they brought a coin to him. Jesus asked them, ‘Whose picture is on this coin? Whose name is on it?’They replied, ‘It is Caesar's picture and Caesar's name.’"
+      "text": "So they brought a coin to him. Jesus asked them, ‘Whose picture is on this coin? Whose name is on it? ’They replied, ‘It is Caesar's picture and Caesar's name. ’"
     },
     {
       "verse": "17",
-      "text": "Jesus then said to them, ‘So you should give to Caesar the things that belong to him. And give to God the things that belong to God.’They were very surprised at his answer. They were very surprised at his answer."
+      "text": "Jesus then said to them, ‘So you should give to Caesar the things that belong to him. And give to God the things that belong to God. ’They were very surprised at his answer. They were very surprised at his answer."
     },
     {
       "verse": "18",
@@ -1928,7 +1928,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "‘Teacher,’ they said to him, ‘Moses wrote these things for us in the Bible: If a man dies without children, his brother must marry the man's wife. Then their children will be called the children of the brother who died."
+      "text": "‘Teacher, ’ they said to him, ‘Moses wrote these things for us in the Bible: If a man dies without children, his brother must marry the man's wife. Then their children will be called the children of the brother who died."
     },
     {
       "verse": "20",
@@ -1944,7 +1944,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "You teach that at some time dead people will become alive again. On that day, whose wife will that woman be? She had married all seven of those brothers.’"
+      "text": "You teach that at some time dead people will become alive again. On that day, whose wife will that woman be? She had married all seven of those brothers. ’"
     },
     {
       "verse": "24",
@@ -1956,15 +1956,15 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "But God does make dead people alive again! You have read what Moses wrote about the bush in the wilderness. There, God said to Moses, “I am the God of Abraham. I am the God of Isaac. And I am the God of Jacob.”"
+      "text": "But God does make dead people alive again! You have read what Moses wrote about the bush in the wilderness. There, God said to Moses, “I am the God of Abraham. I am the God of Isaac. And I am the God of Jacob. ”"
     },
     {
       "verse": "27",
-      "text": "God is not the God of people who are dead. He is the God of people who are alive. So you see, you are very wrong.’"
+      "text": "God is not the God of people who are dead. He is the God of people who are alive. So you see, you are very wrong. ’"
     },
     {
       "verse": "28",
-      "text": "One of the teachers of God's Law came near to the group of people. He heard Jesus speaking with the leaders. The teacher knew that Jesus had answered them well. So then the teacher asked Jesus, ‘Which rule is the most important among God's Laws?’"
+      "text": "One of the teachers of God's Law came near to the group of people. He heard Jesus speaking with the leaders. The teacher knew that Jesus had answered them well. So then the teacher asked Jesus, ‘Which rule is the most important among God's Laws? ’"
     },
     {
       "verse": "29",
@@ -1972,11 +1972,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Love the Lord, your God completely. Love him with all your mind and with all your strength. Love him in everything that you think and you do.”"
+      "text": "Love the Lord, your God completely. Love him with all your mind and with all your strength. Love him in everything that you think and you do. ”"
     },
     {
       "verse": "31",
-      "text": "The second most important rule is this: “You should love other people as much as you love yourself.” No other rules are as important as these two.’"
+      "text": "The second most important rule is this: “You should love other people as much as you love yourself. ” No other rules are as important as these two. ’"
     },
     {
       "verse": "32",
@@ -1984,23 +1984,23 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "We must love him completely, with all our mind and with all our strength. We must also love other people as much as we love ourselves. This is more important than all the gifts or animals that we could offer to God.’"
+      "text": "We must love him completely, with all our mind and with all our strength. We must also love other people as much as we love ourselves. This is more important than all the gifts or animals that we could offer to God. ’"
     },
     {
       "verse": "34",
-      "text": "Jesus heard that the man had answered well. So Jesus said to him, ‘You are almost ready for God to rule in your life.’ After that, everybody was afraid to ask Jesus any more questions."
+      "text": "Jesus heard that the man had answered well. So Jesus said to him, ‘You are almost ready for God to rule in your life. ’ After that, everybody was afraid to ask Jesus any more questions."
     },
     {
       "verse": "35",
-      "text": "Jesus was teaching people in the yard at the temple. He said, ‘The teachers of God's Law say that the Messiah is King David's son. What do you think about that? “The Lord God said to my Lord: Sit at my right side until I win against your enemies. The you will be able to put your feet on them.”"
+      "text": "Jesus was teaching people in the yard at the temple. He said, ‘The teachers of God's Law say that the Messiah is King David's son. What do you think about that? “The Lord God said to my Lord: Sit at my right side until I win against your enemies. The you will be able to put your feet on them. ”"
     },
     {
       "verse": "36",
-      "text": "The Holy Spirit helped David himself to say:“The Lord God said to my Lord:Sit at my right side until I win against your enemies.The you will be able to put your feet on them.”"
+      "text": "The Holy Spirit helped David himself to say:“The Lord God said to my Lord: Sit at my right side until I win against your enemies. The you will be able to put your feet on them. ”"
     },
     {
       "verse": "37",
-      "text": "In these words, David himself calls the Messiah his Lord. So can you really say that the Messiah is David's son?’The large crowd liked to listen to the things that Jesus was saying. It made them happy. The large crowd liked to listen to the things that Jesus was saying. It made them happy."
+      "text": "In these words, David himself calls the Messiah his Lord. So can you really say that the Messiah is David's son? ’The large crowd liked to listen to the things that Jesus was saying. It made them happy. The large crowd liked to listen to the things that Jesus was saying. It made them happy."
     },
     {
       "verse": "38",
@@ -2012,7 +2012,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "But these men take things away from women after their husbands have died, even their houses. Then they pray for a long time so that other people will praise them. Because they do these things, God will punish those men much more than other people.’"
+      "text": "But these men take things away from women after their husbands have died, even their houses. Then they pray for a long time so that other people will praise them. Because they do these things, God will punish those men much more than other people. ’"
     },
     {
       "verse": "41",
@@ -2028,17 +2028,17 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "All those rich people have plenty of money. They only put a small part of that into the box. But this woman has almost nothing. She put in all the money that she had. That was all the money that she needed to live.’"
+      "text": "All those rich people have plenty of money. They only put a small part of that into the box. But this woman has almost nothing. She put in all the money that she had. That was all the money that she needed to live. ’"
     }
   ],
   "13": [
     {
       "verse": "1",
-      "text": "Then Jesus left the temple. While he was leaving, one of his disciples said to him, ‘Teacher, look at these great buildings! The stones in the walls of God's House are really great!’"
+      "text": "Then Jesus left the temple. While he was leaving, one of his disciples said to him, ‘Teacher, look at these great buildings! The stones in the walls of God's House are really great! ’"
     },
     {
       "verse": "2",
-      "text": "Jesus said to him, ‘Yes, look at all these large buildings! But I tell you, enemies will completely destroy them. Not even one stone will remain on top of another stone.’"
+      "text": "Jesus said to him, ‘Yes, look at all these large buildings! But I tell you, enemies will completely destroy them. Not even one stone will remain on top of another stone. ’"
     },
     {
       "verse": "3",
@@ -2046,7 +2046,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "They said to Jesus, ‘Please tell us when all these things will happen. What will show us that they will soon happen?’"
+      "text": "They said to Jesus, ‘Please tell us when all these things will happen. What will show us that they will soon happen? ’"
     },
     {
       "verse": "5",
@@ -2054,7 +2054,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Many people will say that they have come on my behalf. They will say, “I am the Messiah!” and they will deceive many people."
+      "text": "Many people will say that they have come on my behalf. They will say, “I am the Messiah! ” and they will deceive many people."
     },
     {
       "verse": "7",
@@ -2086,7 +2086,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "There will be a time when you will see in the temple a disgusting thing that causes trouble. You will see it in a place where it should not be. (When you read this, you must understand what it means.) At that time, people in Judea must run away to the hills to hide."
+      "text": "There will be a time when you will see in the temple a disgusting thing that causes trouble. You will see it in a place where it should not be. (When you read this, you must understand what it means. ) At that time, people in Judea must run away to the hills to hide."
     },
     {
       "verse": "15",
@@ -2114,11 +2114,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "At that time, someone may say to you, “Look, here is the Messiah!” Or they may say, “Look, he is there!” If they say that, do not believe them."
+      "text": "At that time, someone may say to you, “Look, here is the Messiah! ” Or they may say, “Look, he is there! ” If they say that, do not believe them."
     },
     {
       "verse": "22",
-      "text": "Some people will even say, “I am the Messiah.” Other people will say, “I am a prophet from God.” But their words will be false. They will do strange and powerful things for people to see. If possible, they would even deceive the people that God has chosen."
+      "text": "Some people will even say, “I am the Messiah. ” Other people will say, “I am a prophet from God. ” But their words will be false. They will do strange and powerful things for people to see. If possible, they would even deceive the people that God has chosen."
     },
     {
       "verse": "23",
@@ -2178,7 +2178,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "I am saying this to you. I am also saying this to everyone else. Always be ready!’"
+      "text": "I am saying this to you. I am also saying this to everyone else. Always be ready! ’"
     }
   ],
   "14": [
@@ -2188,7 +2188,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They said to each other, ‘We do not want to do it during the festival. If we do that, the people will be angry. Then they may fight against us.’"
+      "text": "They said to each other, ‘We do not want to do it during the festival. If we do that, the people will be angry. Then they may fight against us. ’"
     },
     {
       "verse": "3",
@@ -2200,7 +2200,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "She could have sold it and she could have given the money to poor people. She could have sold it for more than 300 coins. A man would have to work for a year to get that much money.’ So they spoke angrily to the woman."
+      "text": "She could have sold it and she could have given the money to poor people. She could have sold it for more than 300 coins. A man would have to work for a year to get that much money. ’ So they spoke angrily to the woman."
     },
     {
       "verse": "6",
@@ -2216,11 +2216,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I tell you this: Everywhere in the world, people will speak about God's good news. At the same time, they will also tell people about the good thing that this woman has done. And so they will remember her.’"
+      "text": "I tell you this: Everywhere in the world, people will speak about God's good news. At the same time, they will also tell people about the good thing that this woman has done. And so they will remember her. ’"
     },
     {
       "verse": "10",
-      "text": "Then Judas Iscariot went to the leaders of the priests. He said that he would help them to catch Jesus. (Judas was one of Jesus' 12 apostles.)"
+      "text": "Then Judas Iscariot went to the leaders of the priests. He said that he would help them to catch Jesus. (Judas was one of Jesus' 12 apostles. )"
     },
     {
       "verse": "11",
@@ -2228,19 +2228,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The first day of the festival when the Jews eat flat bread arrived. On this day, each family kills a young sheep for the Passover meal. Jesus' disciples said to him, ‘We will go to prepare the Passover meal for you. Where do you want us to do that?’"
+      "text": "The first day of the festival when the Jews eat flat bread arrived. On this day, each family kills a young sheep for the Passover meal. Jesus' disciples said to him, ‘We will go to prepare the Passover meal for you. Where do you want us to do that? ’"
     },
     {
       "verse": "13",
-      "text": "So Jesus sent two disciples to prepare the meal. ‘Go into the city,’ he said to them. ‘A man, who is carrying a jar of water, will meet you. Follow him."
+      "text": "So Jesus sent two disciples to prepare the meal. ‘Go into the city, ’ he said to them. ‘A man, who is carrying a jar of water, will meet you. Follow him."
     },
     {
       "verse": "14",
-      "text": "He will go to a house. You must say to the master of that house, “The Teacher sends this message to you: ‘Where is the room for visitors? I will eat the Passover meal there with my disciples.’ ”"
+      "text": "He will go to a house. You must say to the master of that house, “The Teacher sends this message to you: ‘Where is the room for visitors? I will eat the Passover meal there with my disciples. ’ ”"
     },
     {
       "verse": "15",
-      "text": "Then the man will show you a large room upstairs. The room will have in it all the things that you will need. You should prepare the Passover meal for us there.’"
+      "text": "Then the man will show you a large room upstairs. The room will have in it all the things that you will need. You should prepare the Passover meal for us there. ’"
     },
     {
       "verse": "16",
@@ -2252,11 +2252,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "While they were eating the meal, Jesus said, ‘I tell you this: One of you will help the Jewish leaders to take hold of me. It is someone who is eating this meal with me.’"
+      "text": "While they were eating the meal, Jesus said, ‘I tell you this: One of you will help the Jewish leaders to take hold of me. It is someone who is eating this meal with me. ’"
     },
     {
       "verse": "19",
-      "text": "The disciples became very sad. Each one of them said to Jesus, ‘Surely you do not mean me, do you?’"
+      "text": "The disciples became very sad. Each one of them said to Jesus, ‘Surely you do not mean me, do you? ’"
     },
     {
       "verse": "20",
@@ -2264,11 +2264,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The Son of Man must die in the way that the Bible says. But it will be very bad for the man who gives me to my enemies. It would have been better for that man if he had not been born.’"
+      "text": "The Son of Man must die in the way that the Bible says. But it will be very bad for the man who gives me to my enemies. It would have been better for that man if he had not been born. ’"
     },
     {
       "verse": "22",
-      "text": "While Jesus and his disciples were eating, he took a loaf of bread. He thanked God for it. Then he broke the bread into pieces. He gave some of it to each of his disciples. ‘Take this bread and eat it,’ he said to them. ‘This is my body.’"
+      "text": "While Jesus and his disciples were eating, he took a loaf of bread. He thanked God for it. Then he broke the bread into pieces. He gave some of it to each of his disciples. ‘Take this bread and eat it, ’ he said to them. ‘This is my body. ’"
     },
     {
       "verse": "23",
@@ -2280,7 +2280,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I tell you this: I will not drink wine again until God rules in his kingdom. Then it will be new wine.’"
+      "text": "I tell you this: I will not drink wine again until God rules in his kingdom. Then it will be new wine. ’"
     },
     {
       "verse": "26",
@@ -2288,27 +2288,27 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Then Jesus said to the disciples, ‘All of you will turn away from me. It will happen as the Bible says:God says, “I will kill the shepherd who leads the sheep.Then the sheep will run away in different directions.” ’ God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions.” ’"
+      "text": "Then Jesus said to the disciples, ‘All of you will turn away from me. It will happen as the Bible says: God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions. ” ’ God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions. ” ’"
     },
     {
       "verse": "28",
-      "text": "Jesus then said, ‘But after that happens, I will become alive again. Then I will go to Galilee, and you will meet me there.’"
+      "text": "Jesus then said, ‘But after that happens, I will become alive again. Then I will go to Galilee, and you will meet me there. ’"
     },
     {
       "verse": "29",
-      "text": "Peter said to Jesus, ‘Even if everyone else runs away, I will not leave you.’"
+      "text": "Peter said to Jesus, ‘Even if everyone else runs away, I will not leave you. ’"
     },
     {
       "verse": "30",
-      "text": "Jesus replied, ‘I tell you this: Even tonight, you will say that you do not know me. You will say that three times before the cockerel sings for the second time in the morning.’"
+      "text": "Jesus replied, ‘I tell you this: Even tonight, you will say that you do not know me. You will say that three times before the cockerel sings for the second time in the morning. ’"
     },
     {
       "verse": "31",
-      "text": "But Peter said very strongly, ‘I will die with you if I need to. But I will never say that I do not know you.’ All the other disciples said the same thing."
+      "text": "But Peter said very strongly, ‘I will die with you if I need to. But I will never say that I do not know you. ’ All the other disciples said the same thing."
     },
     {
       "verse": "32",
-      "text": "Then they arrived at a garden called Gethsemane. Jesus said to his disciples, ‘Sit here while I pray.’"
+      "text": "Then they arrived at a garden called Gethsemane. Jesus said to his disciples, ‘Sit here while I pray. ’"
     },
     {
       "verse": "33",
@@ -2316,7 +2316,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "He said to them, ‘I am very sad. I feel as if I could die because I feel so sad. Wait here and stay awake.’"
+      "text": "He said to them, ‘I am very sad. I feel as if I could die because I feel so sad. Wait here and stay awake. ’"
     },
     {
       "verse": "35",
@@ -2324,7 +2324,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "He said, ‘Abba, my Father, you can do all things. Please take this great pain away from me. But I do not ask you to do what I want. Do what you want to do.’"
+      "text": "He said, ‘Abba, my Father, you can do all things. Please take this great pain away from me. But I do not ask you to do what I want. Do what you want to do. ’"
     },
     {
       "verse": "37",
@@ -2332,7 +2332,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "You must keep awake and you must pray. Then you will not want to do something wrong. You really want to do the right thing, but your body is weak.’"
+      "text": "You must keep awake and you must pray. Then you will not want to do something wrong. You really want to do the right thing, but your body is weak. ’"
     },
     {
       "verse": "39",
@@ -2348,7 +2348,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Stand up, we will go now. Look! The man who will give me to my enemies is here.’"
+      "text": "Stand up, we will go now. Look! The man who will give me to my enemies is here. ’"
     },
     {
       "verse": "43",
@@ -2356,11 +2356,11 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "Before this, Judas had told these men, ‘I will kiss one of the men. You must take hold of that man. Lead him away and do not let him go.’"
+      "text": "Before this, Judas had told these men, ‘I will kiss one of the men. You must take hold of that man. Lead him away and do not let him go. ’"
     },
     {
       "verse": "45",
-      "text": "When they arrived, Judas went immediately to Jesus. ‘Teacher,’ he said to Jesus. Then he kissed Jesus in a friendly way."
+      "text": "When they arrived, Judas went immediately to Jesus. ‘Teacher, ’ he said to Jesus. Then he kissed Jesus in a friendly way."
     },
     {
       "verse": "46",
@@ -2376,7 +2376,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "No! I was with you every day when I was teaching people in the yard of the temple. You did not try to take hold of me then. But this must happen in the way that the Bible says it would happen.’"
+      "text": "No! I was with you every day when I was teaching people in the yard of the temple. You did not try to take hold of me then. But this must happen in the way that the Bible says it would happen. ’"
     },
     {
       "verse": "50",
@@ -2412,7 +2412,7 @@ module.exports = {
     },
     {
       "verse": "58",
-      "text": "They said, ‘We heard Jesus say, “I will destroy the temple, which men have built. In three days I will build another House for God. It will not be people who build this new house.” ’"
+      "text": "They said, ‘We heard Jesus say, “I will destroy the temple, which men have built. In three days I will build another House for God. It will not be people who build this new house. ” ’"
     },
     {
       "verse": "59",
@@ -2420,55 +2420,55 @@ module.exports = {
     },
     {
       "verse": "60",
-      "text": "Then Caiaphas stood up in front of everyone. He said to Jesus, ‘You must reply now to what these men have said against you. Are the things that they are saying true?’ So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God?’"
+      "text": "Then Caiaphas stood up in front of everyone. He said to Jesus, ‘You must reply now to what these men have said against you. Are the things that they are saying true? ’ So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God? ’"
     },
     {
       "verse": "61",
-      "text": "But Jesus did not reply. He did not say anything.So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God?’"
+      "text": "But Jesus did not reply. He did not say anything. So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God? ’"
     },
     {
       "verse": "62",
-      "text": "‘I am,’ Jesus replied. ‘And you will all see the Son of Man. He will be sitting in the most important place at the right side of the Most Powerful God. You will see him coming to earth. He will be riding on the clouds in the sky.’"
+      "text": "‘I am, ’ Jesus replied. ‘And you will all see the Son of Man. He will be sitting in the most important place at the right side of the Most Powerful God. You will see him coming to earth. He will be riding on the clouds in the sky. ’"
     },
     {
       "verse": "63",
-      "text": "Then Caiaphas tore his clothes to show that he was angry. ‘We do not need anyone else to speak against Jesus,’ he said. Everyone agreed that Jesus deserved to die."
+      "text": "Then Caiaphas tore his clothes to show that he was angry. ‘We do not need anyone else to speak against Jesus, ’ he said. Everyone agreed that Jesus deserved to die."
     },
     {
       "verse": "64",
-      "text": "‘You have heard the bad words that he has spoken against God. Do you think that he is guilty?’Everyone agreed that Jesus deserved to die."
+      "text": "‘You have heard the bad words that he has spoken against God. Do you think that he is guilty? ’Everyone agreed that Jesus deserved to die."
     },
     {
       "verse": "65",
-      "text": "Then some of the men began to spit on Jesus. They covered his eyes with a cloth and they hit him many times with their fists. They said, ‘Show us that you are a prophet! Tell us who hit you!’ Then the guards took hold of Jesus and they beat him."
+      "text": "Then some of the men began to spit on Jesus. They covered his eyes with a cloth and they hit him many times with their fists. They said, ‘Show us that you are a prophet! Tell us who hit you! ’ Then the guards took hold of Jesus and they beat him."
     },
     {
       "verse": "66",
-      "text": "Peter was still sitting outside in the yard. One of the young women who was a servant of the most important priest came there. She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth.’"
+      "text": "Peter was still sitting outside in the yard. One of the young women who was a servant of the most important priest came there. She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth. ’"
     },
     {
       "verse": "67",
-      "text": "She saw Peter, who was making himself warm by the fire.She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth.’"
+      "text": "She saw Peter, who was making himself warm by the fire. She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth. ’"
     },
     {
       "verse": "68",
-      "text": "Peter replied, ‘That is not true! I do not even know what you are talking about!’ Then Peter went out to the gate of the yard. At that moment a cockerel sang."
+      "text": "Peter replied, ‘That is not true! I do not even know what you are talking about! ’ Then Peter went out to the gate of the yard. At that moment a cockerel sang."
     },
     {
       "verse": "69",
-      "text": "The young woman watched him, and again she said to the other people there, ‘He is one of the men who were friends of Jesus.’ After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men.’"
+      "text": "The young woman watched him, and again she said to the other people there, ‘He is one of the men who were friends of Jesus. ’ After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men. ’"
     },
     {
       "verse": "70",
-      "text": "But Peter again said that it was not true.After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men.’"
+      "text": "But Peter again said that it was not true. After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men. ’"
     },
     {
       "verse": "71",
-      "text": "Then Peter began to speak very strongly to them. He said, ‘I do not know this man that you are talking about. God will surely punish me if this is not true!’ When Peter thought about this, he wept very much."
+      "text": "Then Peter began to speak very strongly to them. He said, ‘I do not know this man that you are talking about. God will surely punish me if this is not true! ’ When Peter thought about this, he wept very much."
     },
     {
       "verse": "72",
-      "text": "Immediately a cockerel sang loudly for a second time. Then Peter remembered what Jesus had said to him: ‘You will say three times that you do not know me. You will do it before the cockerel sings for the second time.’When Peter thought about this, he wept very much."
+      "text": "Immediately a cockerel sang loudly for a second time. Then Peter remembered what Jesus had said to him: ‘You will say three times that you do not know me. You will do it before the cockerel sings for the second time. ’When Peter thought about this, he wept very much."
     }
   ],
   "15": [
@@ -2478,7 +2478,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Pilate asked Jesus, ‘Are you the king of the Jews?’Jesus replied, ‘You have said it.’ Jesus replied, ‘You have said it.’"
+      "text": "Pilate asked Jesus, ‘Are you the king of the Jews? ’Jesus replied, ‘You have said it. ’ Jesus replied, ‘You have said it. ’"
     },
     {
       "verse": "3",
@@ -2486,7 +2486,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So Pilate asked him again, ‘What is your answer? You should say something! Listen! They are saying that you have done many bad things.’"
+      "text": "So Pilate asked him again, ‘What is your answer? You should say something! Listen! They are saying that you have done many bad things. ’"
     },
     {
       "verse": "5",
@@ -2506,7 +2506,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Pilate asked the people, ‘Do you want me to let the king of the Jews go free?’"
+      "text": "Pilate asked the people, ‘Do you want me to let the king of the Jews go free? ’"
     },
     {
       "verse": "10",
@@ -2514,23 +2514,23 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But the leaders of the priests talked strongly to the people. They said, ‘Ask Pilate to let Barabbas go free instead of Jesus.’"
+      "text": "But the leaders of the priests talked strongly to the people. They said, ‘Ask Pilate to let Barabbas go free instead of Jesus. ’"
     },
     {
       "verse": "12",
-      "text": "Pilate asked the crowd again, ‘So what should I do to Jesus? He is the man that you call “the king of the Jews”.’"
+      "text": "Pilate asked the crowd again, ‘So what should I do to Jesus? He is the man that you call “the king of the Jews”. ’"
     },
     {
       "verse": "13",
-      "text": "The people shouted back to Pilate: ‘Kill him on a cross!’"
+      "text": "The people shouted back to Pilate: ‘Kill him on a cross! ’"
     },
     {
       "verse": "14",
-      "text": "‘Why should I kill him?’ Pilate asked. ‘What bad things has he done?’But the people shouted even louder, ‘Kill him on a cross!’ But the people shouted even louder, ‘Kill him on a cross!’"
+      "text": "‘Why should I kill him? ’ Pilate asked. ‘What bad things has he done? ’But the people shouted even louder, ‘Kill him on a cross! ’ But the people shouted even louder, ‘Kill him on a cross! ’"
     },
     {
       "verse": "15",
-      "text": "Pilate decided to do what the crowd wanted. So he let Barabbas go free. He said to his soldiers, ‘Hit Jesus many times with a whip. Then take him and fix him on a cross to die.’"
+      "text": "Pilate decided to do what the crowd wanted. So he let Barabbas go free. He said to his soldiers, ‘Hit Jesus many times with a whip. Then take him and fix him on a cross to die. ’"
     },
     {
       "verse": "16",
@@ -2542,7 +2542,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the soldiers began to laugh at Jesus. They said, ‘Hello, King of the Jews, you are great!’"
+      "text": "Then the soldiers began to laugh at Jesus. They said, ‘Hello, King of the Jews, you are great! ’"
     },
     {
       "verse": "19",
@@ -2558,7 +2558,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The soldiers took Jesus to a place that is called Golgotha. (Golgotha means ‘the place of a skull’.)"
+      "text": "The soldiers took Jesus to a place that is called Golgotha. (Golgotha means ‘the place of a skull’. )"
     },
     {
       "verse": "23",
@@ -2582,7 +2582,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "[The Bible says that this would happen. It says, ‘People thought of him as someone who did not obey God's Law.’]"
+      "text": "[The Bible says that this would happen. It says, ‘People thought of him as someone who did not obey God's Law. ’]"
     },
     {
       "verse": "29",
@@ -2590,7 +2590,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "If you can really do that, save yourself. Come down from the cross!’"
+      "text": "If you can really do that, save yourself. Come down from the cross! ’"
     },
     {
       "verse": "31",
@@ -2598,7 +2598,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "If he is the Messiah, the king of Israel, he should come down from the cross now. Then we would see it and we would believe in him.’ The two men who were on the crosses next to Jesus also insulted him."
+      "text": "If he is the Messiah, the king of Israel, he should come down from the cross now. Then we would see it and we would believe in him. ’ The two men who were on the crosses next to Jesus also insulted him."
     },
     {
       "verse": "33",
@@ -2606,15 +2606,15 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "At three o'clock in the afternoon, Jesus shouted loudly, ‘Eloi, Eloi, lema sabachthani?’ That means, ‘My God, my God, why have you left me alone?’"
+      "text": "At three o'clock in the afternoon, Jesus shouted loudly, ‘Eloi, Eloi, lema sabachthani? ’ That means, ‘My God, my God, why have you left me alone? ’"
     },
     {
       "verse": "35",
-      "text": "Some people who were standing near there heard him. They said to each other, ‘Look! He is shouting to Elijah.’"
+      "text": "Some people who were standing near there heard him. They said to each other, ‘Look! He is shouting to Elijah. ’"
     },
     {
       "verse": "36",
-      "text": "One man ran to get a piece of cloth. He poured cheap wine on it, and he put it on the end of a stick. Then he lifted it up to Jesus so that he could drink the wine from it. The man said, ‘Wait! Now we will see if Elijah comes to take him down from the cross.’"
+      "text": "One man ran to get a piece of cloth. He poured cheap wine on it, and he put it on the end of a stick. Then he lifted it up to Jesus so that he could drink the wine from it. The man said, ‘Wait! Now we will see if Elijah comes to take him down from the cross. ’"
     },
     {
       "verse": "37",
@@ -2626,7 +2626,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "The captain of the soldiers was standing there in front of Jesus. He saw how Jesus died. ‘It must be true!’ he said. ‘This man really was the Son of God.’"
+      "text": "The captain of the soldiers was standing there in front of Jesus. He saw how Jesus died. ‘It must be true! ’ he said. ‘This man really was the Son of God. ’"
     },
     {
       "verse": "40",
@@ -2672,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The women asked each other, ‘Who will roll away the heavy stone for us? It closes the hole in the rock where they put Jesus' dead body.’"
+      "text": "The women asked each other, ‘Who will roll away the heavy stone for us? It closes the hole in the rock where they put Jesus' dead body. ’"
     },
     {
       "verse": "4",
@@ -2688,7 +2688,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But now you must go to tell his disciples and Peter about this. Tell them, “Jesus is going to Galilee and you must also go there. You will see him there, just as he told you it would happen.” ’"
+      "text": "But now you must go to tell his disciples and Peter about this. Tell them, “Jesus is going to Galilee and you must also go there. You will see him there, just as he told you it would happen. ” ’"
     },
     {
       "verse": "8",
@@ -2732,7 +2732,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "If they pick up a snake, it will not hurt them. If they drink poison, it will not hurt them. They will put their hands on ill people, and God will make those people well.’"
+      "text": "If they pick up a snake, it will not hurt them. If they drink poison, it will not hurt them. They will put their hands on ill people, and God will make those people well. ’"
     },
     {
       "verse": "19",
@@ -2740,7 +2740,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The disciples went out everywhere. They told people God's good news. The Lord worked with them. He did powerful things to show that the message which they spoke was true.]"
+      "text": "The disciples went out everywhere. They told people God's good news. The Lord worked with them. He did powerful things to show that the message which they spoke was true. ]"
     }
   ]
 };

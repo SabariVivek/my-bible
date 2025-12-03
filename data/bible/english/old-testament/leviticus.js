@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Israel's people must not eat any fat or drink any blood. This rule is for them and for their children everywhere. They must obey this rule always.’"
+      "text": "Israel's people must not eat any fat or drink any blood. This rule is for them and for their children everywhere. They must obey this rule always. ’"
     }
   ],
   "4": [
@@ -398,7 +398,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He will forgive the person when the priest does this. The flour that he did not burn is like the grain offering. It belongs to the priests.” ’"
+      "text": "He will forgive the person when the priest does this. The flour that he did not burn is like the grain offering. It belongs to the priests. ” ’"
     },
     {
       "verse": "14",
@@ -422,7 +422,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The sheep is an offering because the person did not obey the Lord.’"
+      "text": "The sheep is an offering because the person did not obey the Lord. ’"
     }
   ],
   "6": [
@@ -452,7 +452,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The priest will give the sheep to the Lord. It is an atonement for the wrong things that the person has done. Then the Lord will forgive the person.’"
+      "text": "The priest will give the sheep to the Lord. It is an atonement for the wrong things that the person has done. Then the Lord will forgive the person. ’"
     },
     {
       "verse": "8",
@@ -496,7 +496,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Any son, grandson or male of Aaron's family can eat the bread. It is his usual part of the burnt offerings to the Lord. A person who touches the bread will become holy.’"
+      "text": "Any son, grandson or male of Aaron's family can eat the bread. It is his usual part of the burnt offerings to the Lord. A person who touches the bread will become holy. ’"
     },
     {
       "verse": "19",
@@ -516,7 +516,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "All of the gifts that the priests give to God must be burnt completely. Nobody should eat them.’"
+      "text": "All of the gifts that the priests give to God must be burnt completely. Nobody should eat them. ’"
     },
     {
       "verse": "24",
@@ -630,7 +630,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "A person might touch something that is not clean. He must not eat the meat of the offering to the Lord. That person must not eat it if he has touched an unclean animal or an unclean person. If he does eat it, they must send him away. They must send him away from Israel's people.’"
+      "text": "A person might touch something that is not clean. He must not eat the meat of the offering to the Lord. That person must not eat it if he has touched an unclean animal or an unclean person. If he does eat it, they must send him away. They must send him away from Israel's people. ’"
     },
     {
       "verse": "22",
@@ -654,7 +654,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "You must send away from Israel's people any person who eats blood.’"
+      "text": "You must send away from Israel's people any person who eats blood. ’"
     },
     {
       "verse": "28",
@@ -690,7 +690,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "The Lord told the Israelites that they must do this. He told them that on the day that Aaron's sons became priests. All their sons and grandsons must always give these offerings to the priests.” ’"
+      "text": "The Lord told the Israelites that they must do this. He told them that on the day that Aaron's sons became priests. All their sons and grandsons must always give these offerings to the priests. ” ’"
     },
     {
       "verse": "37",
@@ -712,7 +712,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Cause all the people to come to the door of the Tent of Meeting.’"
+      "text": "Cause all the people to come to the door of the Tent of Meeting. ’"
     },
     {
       "verse": "4",
@@ -720,7 +720,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Moses said to the people, ‘The Lord said that I must do this.’"
+      "text": "Moses said to the people, ‘The Lord said that I must do this. ’"
     },
     {
       "verse": "6",
@@ -840,7 +840,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Remember that you must stay at the door of the Tent of Meeting. You must stay there for seven days and seven nights. The Lord told me that you must do this. If you do not obey him, you will die.’"
+      "text": "Remember that you must stay at the door of the Tent of Meeting. You must stay there for seven days and seven nights. The Lord told me that you must do this. If you do not obey him, you will die. ’"
     },
     {
       "verse": "36",
@@ -854,7 +854,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He said to Aaron, ‘Bring a young bull for your sin offering. And bring a male sheep for your burnt offering. They must be perfect to give to the Lord.’"
+      "text": "He said to Aaron, ‘Bring a young bull for your sin offering. And bring a male sheep for your burnt offering. They must be perfect to give to the Lord. ’"
     },
     {
       "verse": "3",
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Tell Israel's people that they must bring a bull and a male sheep. They must bring them to sacrifice as a friendship offering to the Lord. They will sacrifice them. They must mix grain and oil to offer with them. They must do that because the Lord will appear to them today.’"
+      "text": "Tell Israel's people that they must bring a bull and a male sheep. They must bring them to sacrifice as a friendship offering to the Lord. They will sacrifice them. They must mix grain and oil to offer with them. They must do that because the Lord will appear to them today. ’"
     },
     {
       "verse": "5",
@@ -870,11 +870,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Moses said to the people, ‘The Lord has told you that you must do this. Do it. And then the Lord will show you how great he is.’"
+      "text": "Moses said to the people, ‘The Lord has told you that you must do this. Do it. And then the Lord will show you how great he is. ’"
     },
     {
       "verse": "7",
-      "text": "Moses said to Aaron, ‘Go to the altar. Sacrifice your sin offering and your burnt offering to the Lord. You must do that to pay for your sins and those of the people. Then sacrifice the people's gift. Their offerings are an atonement for the bad things that they have done. The Lord said that you should do this.’"
+      "text": "Moses said to Aaron, ‘Go to the altar. Sacrifice your sin offering and your burnt offering to the Lord. You must do that to pay for your sins and those of the people. Then sacrifice the people's gift. Their offerings are an atonement for the bad things that they have done. The Lord said that you should do this. ’"
     },
     {
       "verse": "8",
@@ -948,7 +948,7 @@ module.exports = {
   "10": [
     {
       "verse": "1",
-      "text": "Nadab and Abihu were sons of Aaron. They put hot material in the pots that they used to burn incense. They threw incense over the hot material. They offered the incense to the Lord. This was a wrong thing to do. The Lord had not told them that they should do it. So it was wrong. “People may come near to me. But those people must see that I am holy. All the people must give honour to me.” ’ Aaron did not reply."
+      "text": "Nadab and Abihu were sons of Aaron. They put hot material in the pots that they used to burn incense. They threw incense over the hot material. They offered the incense to the Lord. This was a wrong thing to do. The Lord had not told them that they should do it. So it was wrong. “People may come near to me. But those people must see that I am holy. All the people must give honour to me. ” ’ Aaron did not reply."
     },
     {
       "verse": "2",
@@ -956,11 +956,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then Moses said to Aaron, ‘This is what the Lord said,“People may come near to me. But those people must see that I am holy.All the people must give honour to me.” ’Aaron did not reply."
+      "text": "Then Moses said to Aaron, ‘This is what the Lord said, “People may come near to me. But those people must see that I am holy. All the people must give honour to me. ” ’Aaron did not reply."
     },
     {
       "verse": "4",
-      "text": "Mishael and Elzaphan were sons of Aaron's father's brother, Uzziel. Moses said to them, ‘Carry Nadab and Abihu away from the altar. Take your cousins outside the camp.’"
+      "text": "Mishael and Elzaphan were sons of Aaron's father's brother, Uzziel. Moses said to them, ‘Carry Nadab and Abihu away from the altar. Take your cousins outside the camp. ’"
     },
     {
       "verse": "5",
@@ -972,7 +972,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "If you go away from the door of the Tent of Meeting you will die. You will die because the Lord's holy oil is on you.’ So Aaron and his sons did as Moses had said."
+      "text": "If you go away from the door of the Tent of Meeting you will die. You will die because the Lord's holy oil is on you. ’ So Aaron and his sons did as Moses had said."
     },
     {
       "verse": "8",
@@ -988,7 +988,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "You must teach Israel's people all the rules that I, the Lord, gave to them by Moses.’"
+      "text": "You must teach Israel's people all the rules that I, the Lord, gave to them by Moses. ’"
     },
     {
       "verse": "12",
@@ -1004,7 +1004,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Bring the top of the leg and the meat of the ribs. Lift them up to the Lord. The Lord has given them to you and to your children. Lift them up with the fat parts of the burnt offering. He told you that you should do this.’"
+      "text": "Bring the top of the leg and the meat of the ribs. Lift them up to the Lord. The Lord has given them to you and to your children. Lift them up with the fat parts of the burnt offering. He told you that you should do this. ’"
     },
     {
       "verse": "16",
@@ -1016,11 +1016,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You did not bring the blood into the holy place. I told you that you must eat its meat in the Tent of Meeting.’"
+      "text": "You did not bring the blood into the holy place. I told you that you must eat its meat in the Tent of Meeting. ’"
     },
     {
       "verse": "19",
-      "text": "Aaron said to Moses, ‘My sons sacrificed their gifts to the Lord today. But very bad things have happened to me today. I would not have given the Lord any pleasure if I had eaten the sin offering today.’"
+      "text": "Aaron said to Moses, ‘My sons sacrificed their gifts to the Lord today. But very bad things have happened to me today. I would not have given the Lord any pleasure if I had eaten the sin offering today. ’"
     },
     {
       "verse": "20",
@@ -1206,7 +1206,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "I am the Lord who brought you away from Egypt. I became your God. So be holy because I am holy.” ’"
+      "text": "I am the Lord who brought you away from Egypt. I became your God. So be holy because I am holy. ” ’"
     },
     {
       "verse": "46",
@@ -1248,7 +1248,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "If the woman does not have money to buy a sheep she can give two doves or pigeons. The priest will use one bird for a sin offering and he will burn the other one. That is how he will make atonement for her. Then she will be clean.’"
+      "text": "If the woman does not have money to buy a sheep she can give two doves or pigeons. The priest will use one bird for a sin offering and he will burn the other one. That is how he will make atonement for her. Then she will be clean. ’"
     }
   ],
   "13": [
@@ -1430,7 +1430,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "A person with this disease must tear his clothes. He must not comb his hair. He must cover the lower part of his face. He must shout, “I am not clean.”"
+      "text": "A person with this disease must tear his clothes. He must not comb his hair. He must cover the lower part of his face. He must shout, “I am not clean. ”"
     },
     {
       "verse": "46",
@@ -1482,7 +1482,7 @@ module.exports = {
     },
     {
       "verse": "58",
-      "text": "If there is no mildew in the washed clothes, the people must wash the clothes again. Then the clothes will be clean.’"
+      "text": "If there is no mildew in the washed clothes, the people must wash the clothes again. Then the clothes will be clean. ’"
     },
     {
       "verse": "59",
@@ -1616,7 +1616,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "These are the rules for a person who had a disease in his skin. They are for a disease that he might give to other people. They are for people who are too poor to buy three sheep.’"
+      "text": "These are the rules for a person who had a disease in his skin. They are for a disease that he might give to other people. They are for people who are too poor to buy three sheep. ’"
     },
     {
       "verse": "33",
@@ -1628,7 +1628,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "If a person finds mildew in his house, he must tell the priest. He must say, “I have found something like mildew in my house.”"
+      "text": "If a person finds mildew in his house, he must tell the priest. He must say, “I have found something like mildew in my house. ”"
     },
     {
       "verse": "36",
@@ -1648,7 +1648,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "The priest must say, “You must remove the stones that have mildew.” The person must put the stones outside the town. He must put them in a special place."
+      "text": "The priest must say, “You must remove the stones that have mildew. ” The person must put the stones outside the town. He must put them in a special place."
     },
     {
       "verse": "41",
@@ -1700,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "Then the priest will take the living bird outside the town. He will let the bird fly away. That will make atonement for the house. The person may then live in the house again.’"
+      "text": "Then the priest will take the living bird outside the town. He will let the bird fly away. That will make atonement for the house. The person may then live in the house again. ’"
     },
     {
       "verse": "54",
@@ -1726,7 +1726,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘Say to Israel's people, “If pus is coming out of a man's body, he is unclean.”"
+      "text": "‘Say to Israel's people, “If pus is coming out of a man's body, he is unclean. ”"
     },
     {
       "verse": "3",
@@ -1842,7 +1842,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The tabernacle is God's house. It is among Israel's people. The priests must keep the people away from anything that makes them unclean. If they are not clean, they will make the Tent of Meeting unclean. So they will die.’"
+      "text": "The tabernacle is God's house. It is among Israel's people. The priests must keep the people away from anything that makes them unclean. If they are not clean, they will make the Tent of Meeting unclean. So they will die. ’"
     },
     {
       "verse": "32",
@@ -1892,7 +1892,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He must not kill the other goat. It is an atonement to the Lord. It will pay for the bad things that the people have done. It is to take away the people's punishment. He must send it away into the desert.’"
+      "text": "He must not kill the other goat. It is an atonement to the Lord. It will pay for the bad things that the people have done. It is to take away the people's punishment. He must send it away into the desert. ’"
     },
     {
       "verse": "11",
@@ -1988,7 +1988,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "He will make atonement for all the Israelites' sins once every year. This rule is for now and for all time.’The people did everything in the way that the Lord had commanded Moses."
+      "text": "He will make atonement for all the Israelites' sins once every year. This rule is for now and for all time. ’The people did everything in the way that the Lord had commanded Moses."
     }
   ],
   "17": [
@@ -2054,7 +2054,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "If that person does not wash his clothes and his body, it is his own mistake.’"
+      "text": "If that person does not wash his clothes and his body, it is his own mistake. ’"
     }
   ],
   "18": [
@@ -2080,7 +2080,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Tell them this:A person must not have sex with anyone who belongs to his own family. I am the Lord."
+      "text": "Tell them this: A person must not have sex with anyone who belongs to his own family. I am the Lord."
     },
     {
       "verse": "7",
@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "All the people must obey my rules. They must not do the bad things that the people in Canaan did. If they did them, my people would become unclean. I am the Lord your God.’"
+      "text": "All the people must obey my rules. They must not do the bad things that the people in Canaan did. If they did them, my people would become unclean. I am the Lord your God. ’"
     }
   ],
   "19": [
@@ -2326,7 +2326,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "They must obey all my rules. I am the Lord.’"
+      "text": "They must obey all my rules. I am the Lord. ’"
     }
   ],
   "20": [
@@ -2336,7 +2336,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘Talk to Israel's people. Say, “If any Israelite or foreign person gives his children to the god called Molech, he must die.” The people must throw stones at him to kill him."
+      "text": "‘Talk to Israel's people. Say, “If any Israelite or foreign person gives his children to the god called Molech, he must die. ” The people must throw stones at him to kill him."
     },
     {
       "verse": "3",
@@ -2436,7 +2436,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "A man or a woman who uses magic is doing a wrong thing. People must throw stones at that person until they die. Their sin will cause their death.’"
+      "text": "A man or a woman who uses magic is doing a wrong thing. People must throw stones at that person until they die. Their sin will cause their death. ’"
     }
   ],
   "21": [
@@ -2498,7 +2498,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "so that their children will be holy. I am the Lord. I make priests holy.’"
+      "text": "so that their children will be holy. I am the Lord. I make priests holy. ’"
     },
     {
       "verse": "16",
@@ -2506,7 +2506,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "‘Talk to Aaron. Say, “A priest who does not have a perfect body must not sacrifice the burnt offerings to God.” This rule is for now and for all time."
+      "text": "‘Talk to Aaron. Say, “A priest who does not have a perfect body must not sacrifice the burnt offerings to God. ” This rule is for now and for all time."
     },
     {
       "verse": "18",
@@ -2530,7 +2530,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But none of Aaron's family who is not perfect can go near the holy curtain or the altar. He would make the holy places unclean. I am the Lord. I make them holy.’"
+      "text": "But none of Aaron's family who is not perfect can go near the holy curtain or the altar. He would make the holy places unclean. I am the Lord. I make them holy. ’"
     },
     {
       "verse": "24",
@@ -2600,7 +2600,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "If the people eat them they are sinning. They will have to pay for their sin. I am the Lord and I make them holy.’"
+      "text": "If the people eat them they are sinning. They will have to pay for their sin. I am the Lord and I make them holy. ’"
     },
     {
       "verse": "17",
@@ -2636,7 +2636,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "This rule is for Israel's people. You must not take animals from foreigners and then offer them to God as sacrifices. God will not accept them on your behalf, because animals like that are not perfect.’"
+      "text": "This rule is for Israel's people. You must not take animals from foreigners and then offer them to God as sacrifices. God will not accept them on your behalf, because animals like that are not perfect. ’"
     },
     {
       "verse": "26",
@@ -2668,7 +2668,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "I brought you out of Egypt and I became your God. I am the Lord.’"
+      "text": "I brought you out of Egypt and I became your God. I am the Lord. ’"
     }
   ],
   "23": [
@@ -2702,7 +2702,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "For seven days the people must give burnt offerings to the Lord. On the seventh day they must stop work and they must worship the Lord.’"
+      "text": "For seven days the people must give burnt offerings to the Lord. On the seventh day they must stop work and they must worship the Lord. ’"
     },
     {
       "verse": "9",
@@ -2758,7 +2758,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "When the people harvest the grain, they must not cut it to the edge of the field. They must not pick up any grain that falls. Some grain must remain in the field. It is for the poor people and for foreign people. I am the Lord your God.’"
+      "text": "When the people harvest the grain, they must not cut it to the edge of the field. They must not pick up any grain that falls. Some grain must remain in the field. It is for the poor people and for foreign people. I am the Lord your God. ’"
     },
     {
       "verse": "23",
@@ -2770,7 +2770,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They must not work. They must burn an offering to the Lord.’"
+      "text": "They must not work. They must burn an offering to the Lord. ’"
     },
     {
       "verse": "26",
@@ -2798,7 +2798,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "It is a Sabbath rest for all the people. They must not eat any food. They must rest from the evening of the ninth day until the evening of the tenth day.’"
+      "text": "It is a Sabbath rest for all the people. They must not eat any food. They must rest from the evening of the ninth day until the evening of the tenth day. ’"
     },
     {
       "verse": "33",
@@ -2842,7 +2842,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Your descendants in the future will know that God brought Israel's people out of Egypt. They will know that he caused them to live in huts as they travelled through the wilderness. I am the Lord, your God.’"
+      "text": "Your descendants in the future will know that God brought Israel's people out of Egypt. They will know that he caused them to live in huts as they travelled through the wilderness. I am the Lord, your God. ’"
     },
     {
       "verse": "44",
@@ -2884,7 +2884,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The bread is for Aaron and for his sons. They must eat it in a holy place. It is their holy part of the burnt offering to the Lord.’"
+      "text": "The bread is for Aaron and for his sons. They must eat it in a holy place. It is their holy part of the burnt offering to the Lord. ’"
     },
     {
       "verse": "10",
@@ -2892,7 +2892,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Israelite woman's son said bad things about God. The people took him to Moses. (The name of the mother was Shelomith. She was the daughter of Dibri from the family of Dan.)"
+      "text": "The Israelite woman's son said bad things about God. The people took him to Moses. (The name of the mother was Shelomith. She was the daughter of Dibri from the family of Dan. )"
     },
     {
       "verse": "12",
@@ -2912,7 +2912,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He must die. All the people must throw stones at him until he is dead.” You must kill anyone who says bad things about the Lord's name. They may be a foreigner or an Israelite. You must kill them."
+      "text": "He must die. All the people must throw stones at him until he is dead. ” You must kill anyone who says bad things about the Lord's name. They may be a foreigner or an Israelite. You must kill them."
     },
     {
       "verse": "17",
@@ -2936,7 +2936,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "This rule is for all the people. It is the same rule for Israelites and foreigners. I am the Lord your God.’"
+      "text": "This rule is for all the people. It is the same rule for Israelites and foreigners. I am the Lord your God. ’"
     },
     {
       "verse": "23",
@@ -3196,7 +3196,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "of them. And 100 of you will run after 1,000 enemies. You will kill all your enemies."
+      "text": "of them. And 100 of you will run after 1, 000 enemies. You will kill all your enemies."
     },
     {
       "verse": "9",
@@ -3344,7 +3344,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "I will remember my covenant with their ancestors that I brought out of Egypt. The people of other nations saw me do this. I am the Lord.’"
+      "text": "I will remember my covenant with their ancestors that I brought out of Egypt. The people of other nations saw me do this. I am the Lord. ’"
     },
     {
       "verse": "46",
@@ -3482,7 +3482,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "A person must not change a good animal for a bad animal. A person must not change a bad animal for a good animal. If he does that, both animals are holy. They belong to God. A person cannot buy them back.’"
+      "text": "A person must not change a good animal for a bad animal. A person must not change a bad animal for a good animal. If he does that, both animals are holy. They belong to God. A person cannot buy them back. ’"
     },
     {
       "verse": "34",

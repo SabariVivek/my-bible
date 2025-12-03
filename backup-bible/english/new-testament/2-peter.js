@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Simon Peter. I am Jesus Christ's servant and his apostle.I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve."
+      "text": "This letter is from me, Simon Peter. I am Jesus Christ's servant and his apostle. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve."
     },
     {
       "verse": "2",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "17-18",
-      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power. He said: ‘This is my Son and I love him. He makes me very happy.’"
+      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power. He said: ‘This is my Son and I love him. He makes me very happy. ’"
     }
   ],
   "2": [
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "God will certainly punish those people who want bad things for themselves. They do the wrong things that their bodies want to do. They do not want to obey anyone's authority.These false teachers are not afraid of what other people think about them. They think that they themselves are very important. They are not afraid to say many bad things against the great angels in heaven."
+      "text": "God will certainly punish those people who want bad things for themselves. They do the wrong things that their bodies want to do. They do not want to obey anyone's authority. These false teachers are not afraid of what other people think about them. They think that they themselves are very important. They are not afraid to say many bad things against the great angels in heaven."
     },
     {
       "verse": "11",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "You know these true proverbs: ‘After a dog has been sick, it returns to eat it again.’ Also: ‘After you wash a pig, it will quickly roll in the dirt again.’ These words describe how the false teachers live."
+      "text": "You know these true proverbs: ‘After a dog has been sick, it returns to eat it again. ’ Also: ‘After you wash a pig, it will quickly roll in the dirt again. ’ These words describe how the false teachers live."
     }
   ],
   "3": [
@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "They will say: ‘Christ promised that he would return to this world. But he has not returned! Our ancestors have already died, but since God made the world in the beginning, nothing has changed.’"
+      "text": "They will say: ‘Christ promised that he would return to this world. But he has not returned! Our ancestors have already died, but since God made the world in the beginning, nothing has changed. ’"
     },
     {
       "verse": "5",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "My friends, here is one thing that you must remember. In the Lord God's mind, one day and 1,000 years are the same. For him, 1,000 years is like a single day."
+      "text": "My friends, here is one thing that you must remember. In the Lord God's mind, one day and 1, 000 years are the same. For him, 1, 000 years is like a single day."
     },
     {
       "verse": "9",

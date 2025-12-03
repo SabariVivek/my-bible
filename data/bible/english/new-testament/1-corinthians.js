@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "My Christian friends, I tell you this with the authority of our Lord Jesus Christ: ‘Please agree with each other. Do not become separate groups. Be united and think about things in the same way.’"
+      "text": "My Christian friends, I tell you this with the authority of our Lord Jesus Christ: ‘Please agree with each other. Do not become separate groups. Be united and think about things in the same way. ’"
     },
     {
       "verse": "11",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "It happens like this: One of you says, ‘I belong to Paul's group.’ Another person says, ‘I belong to Apollos's group.’ Another person says, ‘I belong to Peter's group.’ And another person says, ‘I belong to Christ's group.’"
+      "text": "It happens like this: One of you says, ‘I belong to Paul's group. ’ Another person says, ‘I belong to Apollos's group. ’ Another person says, ‘I belong to Peter's group. ’ And another person says, ‘I belong to Christ's group. ’"
     },
     {
       "verse": "13",
@@ -58,11 +58,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So none of you can say, ‘I belong to Paul's group because he baptized me.’"
+      "text": "So none of you can say, ‘I belong to Paul's group because he baptized me. ’"
     },
     {
       "verse": "16",
-      "text": "(Now I remember that I also baptized Stephanas and his family. I cannot remember that I baptized anyone else.)"
+      "text": "(Now I remember that I also baptized Stephanas and his family. I cannot remember that I baptized anyone else. )"
     },
     {
       "verse": "17",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "It says in the Bible:‘I, God, will destroy all the clever thoughts of wise people.I will show that their clever ideas are useless.’ ‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless.’"
+      "text": "It says in the Bible:‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless. ’ ‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless. ’"
     },
     {
       "verse": "20",
@@ -122,7 +122,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Remember what is written in the Bible:‘If you want to be proud about something,be proud of what the Lord has done.’"
+      "text": "Remember what is written in the Bible:‘If you want to be proud about something, be proud of what the Lord has done. ’"
     }
   ],
   "2": [
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But we do speak about wise thoughts to those of you who know Christ very well. But those wise thoughts do not belong to this world. They are not the ideas that the rulers of this world think are important. Those rulers will not be powerful for long. ‘Nobody ever saw or heard anything about this. Nobody ever thought that it could happen. But these are the things that God has prepared for his people who love him.’"
+      "text": "But we do speak about wise thoughts to those of you who know Christ very well. But those wise thoughts do not belong to this world. They are not the ideas that the rulers of this world think are important. Those rulers will not be powerful for long. ‘Nobody ever saw or heard anything about this. Nobody ever thought that it could happen. But these are the things that God has prepared for his people who love him. ’"
     },
     {
       "verse": "7",
@@ -160,7 +160,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This is written in the Bible:‘Nobody ever saw or heard anything about this.Nobody ever thought that it could happen.But these are the things that God has prepared for his people who love him.’"
+      "text": "This is written in the Bible:‘Nobody ever saw or heard anything about this. Nobody ever thought that it could happen. But these are the things that God has prepared for his people who love him. ’"
     },
     {
       "verse": "10",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "If someone does not believe in God, they cannot accept the message that comes from God's Spirit. They think that God's message is silly. They cannot even understand those things. Only God's Spirit can explain them to people. ‘Nobody can know what the Lord God is thinking. Nobody can tell him what he should do.’ But we think about these things in the same way that Christ thinks."
+      "text": "If someone does not believe in God, they cannot accept the message that comes from God's Spirit. They think that God's message is silly. They cannot even understand those things. Only God's Spirit can explain them to people. ‘Nobody can know what the Lord God is thinking. Nobody can tell him what he should do. ’ But we think about these things in the same way that Christ thinks."
     },
     {
       "verse": "15",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "As it says in the Bible:‘Nobody can know what the Lord God is thinking.Nobody can tell him what he should do.’But we think about these things in the same way that Christ thinks."
+      "text": "As it says in the Bible:‘Nobody can know what the Lord God is thinking. Nobody can tell him what he should do. ’But we think about these things in the same way that Christ thinks."
     }
   ],
   "3": [
@@ -206,7 +206,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Some of you say, ‘Paul is my leader.’ And other people say, ‘Apollos is my leader.’ When you speak like that, you are talking like people who belong to this world."
+      "text": "Some of you say, ‘Paul is my leader. ’ And other people say, ‘Apollos is my leader. ’ When you speak like that, you are talking like people who belong to this world."
     },
     {
       "verse": "5",
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Apollos and I work together as God's servants. You are like God's field that we work in.You are also like a building that belongs to God."
+      "text": "Apollos and I work together as God's servants. You are like God's field that we work in. You are also like a building that belongs to God."
     },
     {
       "verse": "10",
@@ -262,15 +262,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Be careful! Do not think that you are better than you really are. Maybe you think that you are wise, like people today want to be wise. But if you want to become truly wise, be ready for other people to think that you are a fool. ‘God causes the clever thoughts of wise people to confuse them.’"
+      "text": "Be careful! Do not think that you are better than you really are. Maybe you think that you are wise, like people today want to be wise. But if you want to become truly wise, be ready for other people to think that you are a fool. ‘God causes the clever thoughts of wise people to confuse them. ’"
     },
     {
       "verse": "19",
-      "text": "People in this world think that some people are wise. But God thinks that those wise people are fools. It says in the Bible:‘God causes the clever thoughts of wise people to confuse them.’"
+      "text": "People in this world think that some people are wise. But God thinks that those wise people are fools. It says in the Bible:‘God causes the clever thoughts of wise people to confuse them. ’"
     },
     {
       "verse": "20",
-      "text": "In another place, the Bible says:‘The Lord knows that the thoughts of wise people have no value.’ ‘The Lord knows that the thoughts of wise people have no value.’"
+      "text": "In another place, the Bible says:‘The Lord knows that the thoughts of wise people have no value. ’ ‘The Lord knows that the thoughts of wise people have no value. ’"
     },
     {
       "verse": "21",
@@ -308,7 +308,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "My Christian friends, I want to help you to understand these things. That is why I have used Apollos and myself as examples. You should learn from us what this means: ‘Obey what is written in the Bible.’ None of you should be proud of one leader and not respect another leader."
+      "text": "My Christian friends, I want to help you to understand these things. That is why I have used Apollos and myself as examples. You should learn from us what this means: ‘Obey what is written in the Bible. ’ None of you should be proud of one leader and not respect another leader."
     },
     {
       "verse": "7",
@@ -414,11 +414,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now I am telling you this: I was talking about people who say that they are believers. If they say that, but they have sex in a wrong way, do not be friends with them. It is the same if they want many things for themselves. They may worship idols. They may insult people. They may often get drunk. They may deceive people and rob them. If one of your own group does things like that, do not even agree to eat a meal with them. ‘Send the bad person away from among yourselves.’"
+      "text": "Now I am telling you this: I was talking about people who say that they are believers. If they say that, but they have sex in a wrong way, do not be friends with them. It is the same if they want many things for themselves. They may worship idols. They may insult people. They may often get drunk. They may deceive people and rob them. If one of your own group does things like that, do not even agree to eat a meal with them. ‘Send the bad person away from among yourselves. ’"
     },
     {
       "verse": "12",
-      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group. Do what the Bible says:‘Send the bad person away from among yourselves.’"
+      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group. Do what the Bible says:‘Send the bad person away from among yourselves. ’"
     }
   ],
   "6": [
@@ -468,11 +468,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Some of you believers may say, ‘I am free to do anything that I want to do.’ That may be true, but not everything will help you. I could say, ‘I am free to do the things that I want to do.’ Yes, but I will not let anything rule over me."
+      "text": "Some of you believers may say, ‘I am free to do anything that I want to do. ’ That may be true, but not everything will help you. I could say, ‘I am free to do the things that I want to do. ’ Yes, but I will not let anything rule over me."
     },
     {
       "verse": "13",
-      "text": "Some of you may say, ‘God made food to feed our bodies. That is why people have stomachs. But one day God will destroy both stomachs and food.’ Yes, but the Lord gave our bodies to us. Our bodies belong to the Lord. So you should not use your bodies to have sex in a wrong way."
+      "text": "Some of you may say, ‘God made food to feed our bodies. That is why people have stomachs. But one day God will destroy both stomachs and food. ’ Yes, but the Lord gave our bodies to us. Our bodies belong to the Lord. So you should not use your bodies to have sex in a wrong way."
     },
     {
       "verse": "14",
@@ -480,11 +480,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "You know that your bodies are parts of Christ's own body. So you must never take your body and make it join with a prostitute's body. That is like you have done it with part of Christ's body. Never let that happen! ‘The man and the woman become as one body.’"
+      "text": "You know that your bodies are parts of Christ's own body. So you must never take your body and make it join with a prostitute's body. That is like you have done it with part of Christ's body. Never let that happen! ‘The man and the woman become as one body. ’"
     },
     {
       "verse": "16",
-      "text": "Anyone who makes his own body join to a prostitute becomes one body with that prostitute. You should know that. It says in the Bible:‘The man and the woman become as one body.’"
+      "text": "Anyone who makes his own body join to a prostitute becomes one body with that prostitute. You should know that. It says in the Bible:‘The man and the woman become as one body. ’"
     },
     {
       "verse": "17",
@@ -492,7 +492,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So never have sex in a wrong way! You may say, ‘If a person does a bad thing, it is not his body that does it.’ But if you have sex in a wrong way, you are doing a bad thing to your own body."
+      "text": "So never have sex in a wrong way! You may say, ‘If a person does a bad thing, it is not his body that does it. ’ But if you have sex in a wrong way, you are doing a bad thing to your own body."
     },
     {
       "verse": "19",
@@ -506,7 +506,7 @@ module.exports = {
   "7": [
     {
       "verse": "1",
-      "text": "You wrote to ask me about certain things. You say, ‘It is a good thing when a man does not marry.’"
+      "text": "You wrote to ask me about certain things. You say, ‘It is a good thing when a man does not marry. ’"
     },
     {
       "verse": "2",
@@ -542,7 +542,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I will say this to people who have married. (This is not my rule. It is a rule that comes from the Lord himself.) A wife must not leave her husband."
+      "text": "I will say this to people who have married. (This is not my rule. It is a rule that comes from the Lord himself. ) A wife must not leave her husband."
     },
     {
       "verse": "11",
@@ -550,7 +550,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "To all you other people, I say this. (This is what I think. The Lord has not spoken about it.) A Christian man may have a wife who does not believe in Christ. If she agrees to continue living with him, then he should not send her away."
+      "text": "To all you other people, I say this. (This is what I think. The Lord has not spoken about it. ) A Christian man may have a wife who does not believe in Christ. If she agrees to continue living with him, then he should not send her away."
     },
     {
       "verse": "13",
@@ -638,7 +638,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "As a result, he thinks in two opposite ways.It is the same for a woman who has no husband, or a young girl who has not married. She wants to serve the Lord very well. She wants to be completely pure, both in her body and in her spirit. But a woman who has a husband has to think about this world's things. She wants to live in a way that makes her husband happy."
+      "text": "As a result, he thinks in two opposite ways. It is the same for a woman who has no husband, or a young girl who has not married. She wants to serve the Lord very well. She wants to be completely pure, both in her body and in her spirit. But a woman who has a husband has to think about this world's things. She wants to live in a way that makes her husband happy."
     },
     {
       "verse": "35",
@@ -668,7 +668,7 @@ module.exports = {
   "8": [
     {
       "verse": "1",
-      "text": "You asked me a question about food that people have offered to idols. You say, ‘We all know about these things.’ We know that is true. But when you know about something, that can make you proud. Love is better. Love helps people to become strong."
+      "text": "You asked me a question about food that people have offered to idols. You say, ‘We all know about these things. ’ We know that is true. But when you know about something, that can make you proud. Love is better. Love helps people to become strong."
     },
     {
       "verse": "2",
@@ -680,7 +680,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So think about food that people have offered to idols. You ask, ‘Should Christians eat that food?’ We know that no idol is really alive. We also know that there is only one God."
+      "text": "So think about food that people have offered to idols. You ask, ‘Should Christians eat that food? ’ We know that no idol is really alive. We also know that there is only one God."
     },
     {
       "verse": "5",
@@ -754,7 +754,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "God's Law that he gave to Moses says this: ‘Do not tie shut the mouth of your ox while it walks on your grain.’But God's Law does not teach this only to help bulls."
+      "text": "God's Law that he gave to Moses says this: ‘Do not tie shut the mouth of your ox while it walks on your grain. ’But God's Law does not teach this only to help bulls."
     },
     {
       "verse": "10",
@@ -766,7 +766,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You agree to help other people who teach God's message to you. So surely we should receive even more help from you!But Barnabas and I have not used our authority to make you help us like that. Instead, we accept all these difficult things patiently. We want the good news about Christ to go everywhere. We do not want to do anything that might stop it."
+      "text": "You agree to help other people who teach God's message to you. So surely we should receive even more help from you! But Barnabas and I have not used our authority to make you help us like that. Instead, we accept all these difficult things patiently. We want the good news about Christ to go everywhere. We do not want to do anything that might stop it."
     },
     {
       "verse": "13",
@@ -856,11 +856,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Do not worship idols, as some of them did. The Bible says: ‘The people sat down to eat and to drink. After that, they got up from their meal and they danced.’"
+      "text": "Do not worship idols, as some of them did. The Bible says: ‘The people sat down to eat and to drink. After that, they got up from their meal and they danced. ’"
     },
     {
       "verse": "8",
-      "text": "Nor must we ever have sex in wrong ways. Some of our ancestors did that, and 23,000 of them died in one day as a result."
+      "text": "Nor must we ever have sex in wrong ways. Some of our ancestors did that, and 23, 000 of them died in one day as a result."
     },
     {
       "verse": "9",
@@ -920,7 +920,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Some of you may say, ‘We are free to do anything that we want to do!’ But not everything is good for you to do. You may say, ‘We are free to do anything!’ But not everything helps you to be strong as a believer."
+      "text": "Some of you may say, ‘We are free to do anything that we want to do! ’ But not everything is good for you to do. You may say, ‘We are free to do anything! ’ But not everything helps you to be strong as a believer."
     },
     {
       "verse": "24",
@@ -932,7 +932,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The Bible says this: ‘The earth, and everything in it, belongs to the Lord.’"
+      "text": "The Bible says this: ‘The earth, and everything in it, belongs to the Lord. ’"
     },
     {
       "verse": "27",
@@ -940,15 +940,15 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "But someone there may say to you, ‘They offered this food to an idol.’ If someone tells you that, do not eat the food. It might cause trouble to the thoughts of the person who told you."
+      "text": "But someone there may say to you, ‘They offered this food to an idol. ’ If someone tells you that, do not eat the food. It might cause trouble to the thoughts of the person who told you."
     },
     {
       "verse": "29",
-      "text": "It may not cause your own thoughts to have trouble. But the other person may not be sure if it is right to eat that kind of food.Perhaps you will say, ‘Why should another person's thoughts decide what is right for me? I am free to do what I want."
+      "text": "It may not cause your own thoughts to have trouble. But the other person may not be sure if it is right to eat that kind of food. Perhaps you will say, ‘Why should another person's thoughts decide what is right for me? I am free to do what I want."
     },
     {
       "verse": "30",
-      "text": "I thank God for my food before I eat it. If I do that, nobody should say that it is wrong for me to eat it.’"
+      "text": "I thank God for my food before I eat it. If I do that, nobody should say that it is wrong for me to eat it. ’"
     },
     {
       "verse": "31",
@@ -1054,15 +1054,15 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "This is the message that I received from the Lord. I then told it to you.This is what happened on the night that Jesus' enemies took hold of him. The Lord Jesus picked up some bread to eat with his disciples."
+      "text": "This is the message that I received from the Lord. I then told it to you. This is what happened on the night that Jesus' enemies took hold of him. The Lord Jesus picked up some bread to eat with his disciples."
     },
     {
       "verse": "24",
-      "text": "He thanked God for the bread and then he broke it into pieces. He said: ‘This is my body that I give to save you. Eat this bread, so that you remember me.’"
+      "text": "He thanked God for the bread and then he broke it into pieces. He said: ‘This is my body that I give to save you. Eat this bread, so that you remember me. ’"
     },
     {
       "verse": "25",
-      "text": "After they had eaten supper, Jesus took a cup of wine. He spoke to his disciples again. He said, ‘This cup shows my blood that will pour out when I die. God now makes a new agreement to save people because of my death. Whenever you drink from the cup in this way, do it to remember me.’"
+      "text": "After they had eaten supper, Jesus took a cup of wine. He spoke to his disciples again. He said, ‘This cup shows my blood that will pour out when I die. God now makes a new agreement to save people because of my death. Whenever you drink from the cup in this way, do it to remember me. ’"
     },
     {
       "verse": "26",
@@ -1098,7 +1098,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "If you are hungry, you should eat at home before you come. Then, when you meet together, God will not have any reason to punish you.I will talk about the other things when I come to visit you."
+      "text": "If you are hungry, you should eat at home before you come. Then, when you meet together, God will not have any reason to punish you. I will talk about the other things when I come to visit you."
     }
   ],
   "12": [
@@ -1112,7 +1112,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "This is what I want you to understand now. God's Spirit will never lead anyone to say, ‘God has cursed Jesus.’ And it is only God's Spirit that will lead someone to say, ‘Jesus is Lord.’"
+      "text": "This is what I want you to understand now. God's Spirit will never lead anyone to say, ‘God has cursed Jesus. ’ And it is only God's Spirit that will lead someone to say, ‘Jesus is Lord. ’"
     },
     {
       "verse": "4",
@@ -1160,11 +1160,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "If the foot could speak, it might say, ‘I am not a hand, so I do not belong to this body.’ But what it says makes no difference. It is still a part of the body."
+      "text": "If the foot could speak, it might say, ‘I am not a hand, so I do not belong to this body. ’ But what it says makes no difference. It is still a part of the body."
     },
     {
       "verse": "16",
-      "text": "If the ear could speak, it might say, ‘I am not an eye, so I do not belong to this body.’ But what it says makes no difference. It still belongs to the body."
+      "text": "If the ear could speak, it might say, ‘I am not an eye, so I do not belong to this body. ’ But what it says makes no difference. It still belongs to the body."
     },
     {
       "verse": "17",
@@ -1184,7 +1184,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "For that reason, the eye cannot say to the hand, ‘I do not need you.’ And the head cannot say to the feet, ‘I do not need you.’"
+      "text": "For that reason, the eye cannot say to the hand, ‘I do not need you. ’ And the head cannot say to the feet, ‘I do not need you. ’"
     },
     {
       "verse": "22",
@@ -1196,7 +1196,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "But we do not need to do this with the beautiful parts of our body.God has put all these parts together in one body. Some parts seem to be not very special. But God has shown that those parts are very valuable."
+      "text": "But we do not need to do this with the beautiful parts of our body. God has put all these parts together in one body. Some parts seem to be not very special. But God has shown that those parts are very valuable."
     },
     {
       "verse": "25",
@@ -1224,7 +1224,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But it is good if you really want the more valuable gifts from God.Now I will show you a way that is better than anything else."
+      "text": "But it is good if you really want the more valuable gifts from God. Now I will show you a way that is better than anything else."
     }
   ],
   "13": [
@@ -1360,11 +1360,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "My Christian friends, do not continue to think like children think. Instead, think properly like men and women should think. The only way you should be like babies is to keep away from evil things. ‘I will send strangers to speak to my people. They will speak my message to them in strange languages. But even when I do this, my people will not listen to me.’ That is what the Lord God has said."
+      "text": "My Christian friends, do not continue to think like children think. Instead, think properly like men and women should think. The only way you should be like babies is to keep away from evil things. ‘I will send strangers to speak to my people. They will speak my message to them in strange languages. But even when I do this, my people will not listen to me. ’ That is what the Lord God has said."
     },
     {
       "verse": "21",
-      "text": "This is written in the Bible:‘I will send strangers to speak to my people.They will speak my message to them in strange languages.But even when I do this, my people will not listen to me.’That is what the Lord God has said."
+      "text": "This is written in the Bible:‘I will send strangers to speak to my people. They will speak my message to them in strange languages. But even when I do this, my people will not listen to me. ’That is what the Lord God has said."
     },
     {
       "verse": "22",
@@ -1380,7 +1380,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The visitor's secret thoughts will become clear. As a result, he will bend down to the ground and he will worship God. He will say, ‘God is really here among you!’"
+      "text": "The visitor's secret thoughts will become clear. As a result, he will bend down to the ground and he will worship God. He will say, ‘God is really here among you! ’"
     },
     {
       "verse": "26",
@@ -1412,7 +1412,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "When we meet together as God's people, he wants there to be peace among us. He does not want to bring trouble.This is what happens in all the churches where God's people meet together."
+      "text": "When we meet together as God's people, he wants there to be peace among us. He does not want to bring trouble. This is what happens in all the churches where God's people meet together."
     },
     {
       "verse": "34",
@@ -1454,7 +1454,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I received the good news from Christ, and I told that message to you. I told you the most important things:Christ died as a sacrifice for our sins. The Bible already said how that would happen."
+      "text": "I received the good news from Christ, and I told that message to you. I told you the most important things: Christ died as a sacrifice for our sins. The Bible already said how that would happen."
     },
     {
       "verse": "4",
@@ -1550,7 +1550,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "It says in the Bible, ‘God has put all things under his authority.’But it is clear that the words ‘all things’ do not include God himself. No, because it is God who put all things under Christ's authority."
+      "text": "It says in the Bible, ‘God has put all things under his authority. ’But it is clear that the words ‘all things’ do not include God himself. No, because it is God who put all things under Christ's authority."
     },
     {
       "verse": "28",
@@ -1562,7 +1562,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Also, think about us! All the time we are in great danger. ‘Tomorrow we will probably die. So we should just eat and drink as much as we like.’"
+      "text": "Also, think about us! All the time we are in great danger. ‘Tomorrow we will probably die. So we should just eat and drink as much as we like. ’"
     },
     {
       "verse": "31",
@@ -1570,11 +1570,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "At Ephesus city, people attacked me like wild animals and I fought against them. But that would be worth nothing to me if dead people do not rise to a new life. If dead people do not live again, then we could say:‘Tomorrow we will probably die.So we should just eat and drink as much as we like.’"
+      "text": "At Ephesus city, people attacked me like wild animals and I fought against them. But that would be worth nothing to me if dead people do not rise to a new life. If dead people do not live again, then we could say:‘Tomorrow we will probably die. So we should just eat and drink as much as we like. ’"
     },
     {
       "verse": "33",
-      "text": "Do not let anyone deceive you. Remember this:‘If you become a friend of bad people, you also will live in a bad way.’ ‘If you become a friend of bad people, you also will live in a bad way.’"
+      "text": "Do not let anyone deceive you. Remember this:‘If you become a friend of bad people, you also will live in a bad way. ’ ‘If you become a friend of bad people, you also will live in a bad way. ’"
     },
     {
       "verse": "34",
@@ -1582,7 +1582,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "One of you may ask, ‘How does God raise dead people, to make them alive again? What kind of body will they have?’"
+      "text": "One of you may ask, ‘How does God raise dead people, to make them alive again? What kind of body will they have? ’"
     },
     {
       "verse": "36",
@@ -1622,7 +1622,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "It says in the Bible, ‘The first man, Adam, became a person who received life.’ But Christ is like the last Adam. He is a spirit who gives life to people."
+      "text": "It says in the Bible, ‘The first man, Adam, became a person who received life. ’ But Christ is like the last Adam. He is a spirit who gives life to people."
     },
     {
       "verse": "46",
@@ -1654,15 +1654,15 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "That has to happen. Our bodies that are becoming spoiled must change. They must change into bodies that never become spoiled. Our bodies that are dying must change into bodies that will never die. ‘God has won against death. He has destroyed it completely!’"
+      "text": "That has to happen. Our bodies that are becoming spoiled must change. They must change into bodies that never become spoiled. Our bodies that are dying must change into bodies that will never die. ‘God has won against death. He has destroyed it completely! ’"
     },
     {
       "verse": "54",
-      "text": "God will give us new bodies like that. When that happens, what is written in the Bible will become true. It says:‘God has won against death. He has destroyed it completely!’"
+      "text": "God will give us new bodies like that. When that happens, what is written in the Bible will become true. It says:‘God has won against death. He has destroyed it completely! ’"
     },
     {
       "verse": "55",
-      "text": "‘Death, you can no longer win!Death, you no longer have any power to hurt us!’ Death, you no longer have any power to hurt us!’"
+      "text": "‘Death, you can no longer win! Death, you no longer have any power to hurt us! ’ Death, you no longer have any power to hurt us! ’"
     },
     {
       "verse": "56",
@@ -1756,7 +1756,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "All the Christians here say ‘hello’ to you.When you meet, kiss each other as Christian brothers and sisters."
+      "text": "All the Christians here say ‘hello’ to you. When you meet, kiss each other as Christian brothers and sisters."
     },
     {
       "verse": "21",
@@ -1764,7 +1764,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "If anyone among you does not really love the Lord, I pray that God will curse that person.Our Lord, come now! We are waiting for you! Our Lord, come now! We are waiting for you!"
+      "text": "If anyone among you does not really love the Lord, I pray that God will curse that person. Our Lord, come now! We are waiting for you! Our Lord, come now! We are waiting for you!"
     },
     {
       "verse": "23",

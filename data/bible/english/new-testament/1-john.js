@@ -56,7 +56,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Someone may say, ‘I belong to God.’ But if he does not obey God's commands, that person is telling a lie. He is not living in the way that God's true message teaches us."
+      "text": "Someone may say, ‘I belong to God. ’ But if he does not obey God's commands, that person is telling a lie. He is not living in the way that God's true message teaches us."
     },
     {
       "verse": "5",
@@ -92,11 +92,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "You who are older, like fathers, I am writing to you because you know Christ. He has always been there, since before the world began.You who are young men, I am writing to you because you have won against Satan. You who are young men, I am writing to you because you have won against Satan."
+      "text": "You who are older, like fathers, I am writing to you because you know Christ. He has always been there, since before the world began. You who are young men, I am writing to you because you have won against Satan. You who are young men, I am writing to you because you have won against Satan."
     },
     {
       "verse": "14",
-      "text": "Yes, my children, I have written to you because you know God, our Father.Fathers, I have written to you because you know Christ. He was already there before the world began.Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan."
+      "text": "Yes, my children, I have written to you because you know God, our Father. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan."
     },
     {
       "verse": "15",
@@ -280,7 +280,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But we belong to God. Everyone who knows God believes our message. But anyone who does not belong to God does not believe it.So that is how we know if someone's message comes from God's Spirit or not. God's Spirit brings us a true message, but false spirits tell lies."
+      "text": "But we belong to God. Everyone who knows God believes our message. But anyone who does not belong to God does not believe it. So that is how we know if someone's message comes from God's Spirit or not. God's Spirit brings us a true message, but false spirits tell lies."
     },
     {
       "verse": "7",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Someone may say, ‘I love God.’ But if he says that and he hates another Christian, he is telling a lie. He sees other believers but he does not love them. So he surely cannot love God that he has not seen."
+      "text": "Someone may say, ‘I love God. ’ But if he says that and he hates another Christian, he is telling a lie. He sees other believers but he does not love them. So he surely cannot love God that he has not seen."
     },
     {
       "verse": "21",

@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Cush's sons were: Seba, Havilah, Sabta, Raamah and Sabteca.Raamah's sons were: Sheba and Dedan. Raamah's sons were: Sheba and Dedan."
+      "text": "Cush's sons were: Seba, Havilah, Sabta, Raamah and Sabteca. Raamah's sons were: Sheba and Dedan. Raamah's sons were: Sheba and Dedan."
     },
     {
       "verse": "10",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Shem's sons were: Elam, Asshur, Arphaxad, Lud and Aram.Aram's sons were: Uz, Hul, Gether and Meshech. Aram's sons were: Uz, Hul, Gether and Meshech."
+      "text": "Shem's sons were: Elam, Asshur, Arphaxad, Lud and Aram. Aram's sons were: Uz, Hul, Gether and Meshech. Aram's sons were: Uz, Hul, Gether and Meshech."
     },
     {
       "verse": "18",
@@ -114,7 +114,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "These were their descendants:Ishmael's firstborn son was Nebaioth.His other sons were: Kedar, Adbeel, Mibsam, Ishmael's firstborn son was Nebaioth."
+      "text": "These were their descendants: Ishmael's firstborn son was Nebaioth. His other sons were: Kedar, Adbeel, Mibsam, Ishmael's firstborn son was Nebaioth."
     },
     {
       "verse": "30",
@@ -126,15 +126,15 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Abraham's slave wife Keturah gave birth to these sons: Zimran, Jokshan, Medan, Midian, Ishbak and Shuah.Jokshan's sons were: Sheba and Dedan. Jokshan's sons were: Sheba and Dedan."
+      "text": "Abraham's slave wife Keturah gave birth to these sons: Zimran, Jokshan, Medan, Midian, Ishbak and Shuah. Jokshan's sons were: Sheba and Dedan. Jokshan's sons were: Sheba and Dedan."
     },
     {
       "verse": "33",
-      "text": "Midian's sons were: Ephah, Epher, Hanoch, Abida and Eldaah.All those men were descendants of Keturah. All those men were descendants of Keturah."
+      "text": "Midian's sons were: Ephah, Epher, Hanoch, Abida and Eldaah. All those men were descendants of Keturah. All those men were descendants of Keturah."
     },
     {
       "verse": "34",
-      "text": "Abraham was the father of Isaac.Isaac's sons were: Esau and Israel. Isaac's sons were: Esau and Israel."
+      "text": "Abraham was the father of Isaac. Isaac's sons were: Esau and Israel. Isaac's sons were: Esau and Israel."
     },
     {
       "verse": "35",
@@ -158,19 +158,19 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Shobal's sons were: Alvan, Manahath, Ebal, Shepho and Onam.Zibeon's sons were: Aiah and Anah. Zibeon's sons were: Aiah and Anah."
+      "text": "Shobal's sons were: Alvan, Manahath, Ebal, Shepho and Onam. Zibeon's sons were: Aiah and Anah. Zibeon's sons were: Aiah and Anah."
     },
     {
       "verse": "41",
-      "text": "Anah's son was Dishon.Dishon's sons were: Hemdan, Eshban, Ithran and Keran. Dishon's sons were: Hemdan, Eshban, Ithran and Keran."
+      "text": "Anah's son was Dishon. Dishon's sons were: Hemdan, Eshban, Ithran and Keran. Dishon's sons were: Hemdan, Eshban, Ithran and Keran."
     },
     {
       "verse": "42",
-      "text": "Ezer's sons were: Bilhan, Zaavan and Jaakan.Dishan's sons were: Uz and Aran. Dishan's sons were: Uz and Aran."
+      "text": "Ezer's sons were: Bilhan, Zaavan and Jaakan. Dishan's sons were: Uz and Aran. Dishan's sons were: Uz and Aran."
     },
     {
       "verse": "43",
-      "text": "These kings ruled in Edom before any kings ruled over Israel:Bela son of Beor. The name of his city was Dinhabah. Bela son of Beor. The name of his city was Dinhabah."
+      "text": "These kings ruled in Edom before any kings ruled over Israel: Bela son of Beor. The name of his city was Dinhabah. Bela son of Beor. The name of his city was Dinhabah."
     },
     {
       "verse": "44",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "King Hadad also died.The leaders of the clans of Edom were: Timna, Alvah, Jetheth,"
+      "text": "King Hadad also died. The leaders of the clans of Edom were: Timna, Alvah, Jetheth,"
     },
     {
       "verse": "52",
@@ -308,7 +308,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But later Geshur and Aram attacked Jair's towns and took them for themselves. They also took Kenath and the 60 small towns around it.All those people were descendants of Gilead's father, Makir."
+      "text": "But later Geshur and Aram attacked Jair's towns and took them for themselves. They also took Kenath and the 60 small towns around it. All those people were descendants of Gilead's father, Makir."
     },
     {
       "verse": "24",
@@ -328,7 +328,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Onam's sons were: Shammai and Jada.Shammai's sons were: Nadab and Abishur. Shammai's sons were: Nadab and Abishur."
+      "text": "Onam's sons were: Shammai and Jada. Shammai's sons were: Nadab and Abishur. Shammai's sons were: Nadab and Abishur."
     },
     {
       "verse": "29",
@@ -348,7 +348,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jonathan's sons were: Peleth and Zaza.All those men were Jerahmeel's descendants. All those men were Jerahmeel's descendants."
+      "text": "Jonathan's sons were: Peleth and Zaza. All those men were Jerahmeel's descendants. All those men were Jerahmeel's descendants."
     },
     {
       "verse": "34",
@@ -416,7 +416,7 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "Those people were Caleb's descendants.The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader. The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader."
+      "text": "Those people were Caleb's descendants. The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader. The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader."
     },
     {
       "verse": "52",
@@ -502,7 +502,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Jeconiah's enemies took him away as their prisoner.His sons were: Shealtiel,"
+      "text": "Jeconiah's enemies took him away as their prisoner. His sons were: Shealtiel,"
     },
     {
       "verse": "18",
@@ -510,7 +510,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Pedaiah's sons were: Zerubbabel and Shimei.Zerubbabel's sons were: Meshullam and Hananiah. Their sister was Shelomith."
+      "text": "Pedaiah's sons were: Zerubbabel and Shimei. Zerubbabel's sons were: Meshullam and Hananiah. Their sister was Shelomith."
     },
     {
       "verse": "20",
@@ -544,7 +544,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Caleb's wife Ephrathah gave birth to their firstborn son, Hur. Hur was the ancestor of the people of Bethlehem. His three sons were Etam, Penuel and Ezer.Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah."
+      "text": "Caleb's wife Ephrathah gave birth to their firstborn son, Hur. Hur was the ancestor of the people of Bethlehem. His three sons were Etam, Penuel and Ezer. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah."
     },
     {
       "verse": "5",
@@ -564,11 +564,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Another of Judah's descendants was called Jabez. People respected him more than his brothers. His mother called him Jabez, because she said, ‘I had a lot of pain at his birth.’"
+      "text": "Another of Judah's descendants was called Jabez. People respected him more than his brothers. His mother called him Jabez, because she said, ‘I had a lot of pain at his birth. ’"
     },
     {
       "verse": "10",
-      "text": "Jabez prayed to Israel's God for help. He said, ‘Please bless me very much and give me more land. Please take care of me so that nothing hurts me and I do not have pain.’ God did what Jabez had prayed for."
+      "text": "Jabez prayed to Israel's God for help. He said, ‘Please bless me very much and give me more land. Please take care of me so that nothing hurts me and I do not have pain. ’ God did what Jabez had prayed for."
     },
     {
       "verse": "11",
@@ -580,11 +580,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The sons of Kenaz were: Othniel and Seraiah.Othniel's sons were: Hathath and Meonothai."
+      "text": "The sons of Kenaz were: Othniel and Seraiah. Othniel's sons were: Hathath and Meonothai."
     },
     {
       "verse": "14",
-      "text": "Meonothai became the father of Ophrah.Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things. Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things."
+      "text": "Meonothai became the father of Ophrah. Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things. Seraiah became the father of Joab. Joab was the ancestor of the people who live in Ge-Harashim. Those people had special skills to make things."
     },
     {
       "verse": "15",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Ezrah's sons were: Jether, Mered, Epher and Jalon.Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa.Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah. Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah."
+      "text": "Ezrah's sons were: Jether, Mered, Epher and Jalon. Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah. Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah."
     },
     {
       "verse": "19",
@@ -604,11 +604,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Shimon's sons were: Amnon, Rinnah, Ben-Hanan and Tilon.Ishi's descendants were Zoheth and Ben-Zoheth. Ishi's descendants were Zoheth and Ben-Zoheth."
+      "text": "Shimon's sons were: Amnon, Rinnah, Ben-Hanan and Tilon. Ishi's descendants were Zoheth and Ben-Zoheth. Ishi's descendants were Zoheth and Ben-Zoheth."
     },
     {
       "verse": "21",
-      "text": "These were the sons of Judah's son, Shelah: Er, Laadah, Jokim, Joash, Saraph and Jashubi-Lehem. Er became the father of Lecah. Laadah became the father of Mareshah. Joash and Saraph both married women from Moab and they returned to live in Lehem. Other clans that were descendants of Shelah worked with linen at Beth-Ashbea, and some lived in Cozeba. (These lists are from old history books.)"
+      "text": "These were the sons of Judah's son, Shelah: Er, Laadah, Jokim, Joash, Saraph and Jashubi-Lehem. Er became the father of Lecah. Laadah became the father of Mareshah. Joash and Saraph both married women from Moab and they returned to live in Lehem. Other clans that were descendants of Shelah worked with linen at Beth-Ashbea, and some lived in Cozeba. (These lists are from old history books. )"
     },
     {
       "verse": "23",
@@ -726,7 +726,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Bela was the son of Azaz. Azaz was the son of Shema. Shema was the son of Joel.Reuben's people lived in the region of Aroer, as far north as Nebo and Baal-Meon."
+      "text": "Bela was the son of Azaz. Azaz was the son of Shema. Shema was the son of Joel. Reuben's people lived in the region of Aroer, as far north as Nebo and Baal-Meon."
     },
     {
       "verse": "9",
@@ -766,7 +766,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The tribes of Reuben, Gad and half of the tribe of Manasseh had a large army. They had 44,760 brave soldiers who knew how to fight well. Their weapons were shields, swords, and bows and arrows."
+      "text": "The tribes of Reuben, Gad and half of the tribe of Manasseh had a large army. They had 44, 760 brave soldiers who knew how to fight well. Their weapons were shields, swords, and bows and arrows."
     },
     {
       "verse": "19",
@@ -778,7 +778,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "They took all their enemies' animals. They included 50,000 camels, 250,000 sheep and 2,000 donkeys. They also caught 100,000 people as their prisoners."
+      "text": "They took all their enemies' animals. They included 50, 000 camels, 250, 000 sheep and 2, 000 donkeys. They also caught 100, 000 people as their prisoners."
     },
     {
       "verse": "22",
@@ -812,7 +812,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Amram's children were: Aaron, Moses and Miriam.Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar. Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar."
+      "text": "Amram's children were: Aaron, Moses and Miriam. Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar. Aaron's sons were: Nadab, Abihu, Eleazar and Ithamar."
     },
     {
       "verse": "4",
@@ -876,7 +876,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Merari's sons were: Mahli and Mushi.These are the ancestors of the clans of the Levites: These are the ancestors of the clans of the Levites:"
+      "text": "Merari's sons were: Mahli and Mushi. These are the ancestors of the clans of the Levites: These are the ancestors of the clans of the Levites:"
     },
     {
       "verse": "20",
@@ -932,7 +932,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "These are the leaders of the music and their sons:From Kohath's clan: Heman the singer. He was Joel's son. Joel was Samuel's son."
+      "text": "These are the leaders of the music and their sons: From Kohath's clan: Heman the singer. He was Joel's son. Joel was Samuel's son."
     },
     {
       "verse": "34",
@@ -1000,7 +1000,7 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "These were Aaron's descendants:Eleazar was Aaron's son. Phinehas was Eleazar's son. Abishua was Phinehas's son."
+      "text": "These were Aaron's descendants: Eleazar was Aaron's son. Phinehas was Eleazar's son. Abishua was Phinehas's son."
     },
     {
       "verse": "51",
@@ -1040,7 +1040,7 @@ module.exports = {
     },
     {
       "verse": "60",
-      "text": "They also received some towns in land that belonged to Benjamin's tribe. They received these towns with the fields around them: Gibeon, Geba, Alemeth and Anathoth.So there were 13 towns for Aaron's descendants to live in. towns for Aaron's descendants to live in."
+      "text": "They also received some towns in land that belonged to Benjamin's tribe. They received these towns with the fields around them: Gibeon, Geba, Alemeth and Anathoth. So there were 13 towns for Aaron's descendants to live in. towns for Aaron's descendants to live in."
     },
     {
       "verse": "61",
@@ -1134,7 +1134,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Tola's sons were Uzzi, Rephaiah, Jeriel, Jahmai, Ibsam and Samuel. They were leaders of their clans. Among Tola's descendants there were 22,600 brave soldiers when David was king."
+      "text": "Tola's sons were Uzzi, Rephaiah, Jeriel, Jahmai, Ibsam and Samuel. They were leaders of their clans. Among Tola's descendants there were 22, 600 brave soldiers when David was king."
     },
     {
       "verse": "3",
@@ -1142,11 +1142,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The books of their clans show that they had many wives and sons. They had 36,000 men who were ready to fight in the army."
+      "text": "The books of their clans show that they had many wives and sons. They had 36, 000 men who were ready to fight in the army."
     },
     {
       "verse": "5",
-      "text": "The books of the clans of Issachar show that they had 87,000 brave soldiers."
+      "text": "The books of the clans of Issachar show that they had 87, 000 brave soldiers."
     },
     {
       "verse": "6",
@@ -1154,7 +1154,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Bela had five sons. They were Ezbon, Uzzi, Uzziel, Jerimoth and Iri. They were leaders of their clans. The books of their ancestors show that they had 22,034 brave soldiers."
+      "text": "Bela had five sons. They were Ezbon, Uzzi, Uzziel, Jerimoth and Iri. They were leaders of their clans. The books of their ancestors show that they had 22, 034 brave soldiers."
     },
     {
       "verse": "8",
@@ -1162,7 +1162,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The books of their ancestors include a list of those clan leaders. Also the books show that they had 22,200 brave soldiers."
+      "text": "The books of their ancestors include a list of those clan leaders. Also the books show that they had 22, 200 brave soldiers."
     },
     {
       "verse": "10",
@@ -1170,7 +1170,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "All those sons of Jediael were leaders of their clans. They had 17,200 brave soldiers who were ready to fight in the army."
+      "text": "All those sons of Jediael were leaders of their clans. They had 17, 200 brave soldiers who were ready to fight in the army."
     },
     {
       "verse": "12",
@@ -1210,7 +1210,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Tahath's son was Zabad and Zabad's son was Shuthelah.Ezer and Elead were also sons of Ephraim. They went to Gath and they tried to take some cows and sheep from there. So some men who were born in that city killed them."
+      "text": "Tahath's son was Zabad and Zabad's son was Shuthelah. Ezer and Elead were also sons of Ephraim. They went to Gath and they tried to take some cows and sheep from there. So some men who were born in that city killed them."
     },
     {
       "verse": "22",
@@ -1282,7 +1282,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "All those men were descendants of Asher. They were leaders of their clans. They were great and brave soldiers and great leaders. They had 26,000 men ready to fight in the army. There were lists that showed those men's names with their clans."
+      "text": "All those men were descendants of Asher. They were leaders of their clans. They were great and brave soldiers and great leaders. They had 26, 000 men ready to fight in the army. There were lists that showed those men's names with their clans."
     }
   ],
   "8": [
@@ -1428,13 +1428,13 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Ulam's sons were brave soldiers. They could shoot arrows very well. They had 150 sons and grandsons.All those men were descendants of Benjamin."
+      "text": "Ulam's sons were brave soldiers. They could shoot arrows very well. They had 150 sons and grandsons. All those men were descendants of Benjamin."
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "All the Israelites' names were included in the lists of their ancestors. Those lists are written in the history book about Israel's kings.The people of Judah had turned away from the Lord. Their enemies took them away to Babylon as their prisoners."
+      "text": "All the Israelites' names were included in the lists of their ancestors. Those lists are written in the history book about Israel's kings. The people of Judah had turned away from the Lord. Their enemies took them away to Babylon as their prisoners."
     },
     {
       "verse": "2",
@@ -1442,7 +1442,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Some people from the tribes of Judah, Benjamin, Ephraim and Manasseh lived in Jerusalem.Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez. Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez."
+      "text": "Some people from the tribes of Judah, Benjamin, Ephraim and Manasseh lived in Jerusalem. Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez. Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez."
     },
     {
       "verse": "5",
@@ -1450,7 +1450,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "From the clan of Judah's son Zerah, there was Jeuel.There were 690 people from Judah's tribe who returned. people from Judah's tribe who returned."
+      "text": "From the clan of Judah's son Zerah, there was Jeuel. There were 690 people from Judah's tribe who returned. people from Judah's tribe who returned."
     },
     {
       "verse": "7",
@@ -1478,7 +1478,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "There were 1,760 priests and their relatives who returned. They were leaders of their clans. They were able to do their jobs well as they served God in his temple."
+      "text": "There were 1, 760 priests and their relatives who returned. They were leaders of their clans. They were able to do their jobs well as they served God in his temple."
     },
     {
       "verse": "14",
@@ -1594,7 +1594,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Ahaz became the father of Jadah.Jadah became the father of Alemeth, Azmaveth and Zimri.Zimri became the father of Moza. Jadah became the father of Alemeth, Azmaveth and Zimri. Zimri became the father of Moza."
+      "text": "Ahaz became the father of Jadah. Jadah became the father of Alemeth, Azmaveth and Zimri. Zimri became the father of Moza. Jadah became the father of Alemeth, Azmaveth and Zimri. Zimri became the father of Moza."
     },
     {
       "verse": "43",
@@ -1620,7 +1620,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Saul said to the young man who carried his armour, ‘Kill me now with your sword. I do not want these foreign men to come and be cruel to me.’ But the young man would not agree to kill Saul because he was too afraid. So Saul took his own sword and he threw himself onto it so that he died."
+      "text": "Saul said to the young man who carried his armour, ‘Kill me now with your sword. I do not want these foreign men to come and be cruel to me. ’ But the young man would not agree to kill Saul because he was too afraid. So Saul took his own sword and he threw himself onto it so that he died."
     },
     {
       "verse": "5",
@@ -1670,7 +1670,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "In the past, even when Saul was our king, you led the Israelites in war. The Lord your God said to you, “You will take care of my people, as a shepherd takes care of his sheep. You will rule over my people, Israel.” ’"
+      "text": "In the past, even when Saul was our king, you led the Israelites in war. The Lord your God said to you, “You will take care of my people, as a shepherd takes care of his sheep. You will rule over my people, Israel. ” ’"
     },
     {
       "verse": "3",
@@ -1682,11 +1682,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The Jebusites said to David, ‘You will never get into our city.’ But David did get in and he took Zion, the city's strong place. It is now called the City of David."
+      "text": "The Jebusites said to David, ‘You will never get into our city. ’ But David did get in and he took Zion, the city's strong place. It is now called the City of David."
     },
     {
       "verse": "6",
-      "text": "David had said to his soldiers, ‘The man who attacks the Jebusites first will become the captain of my army.’ Zeruiah's son Joab attacked first. So he became the captain of the army."
+      "text": "David had said to his soldiers, ‘The man who attacks the Jebusites first will become the captain of my army. ’ Zeruiah's son Joab attacked first. So he became the captain of the army."
     },
     {
       "verse": "7",
@@ -1706,7 +1706,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "This is the list of David's brave soldiers:Jashobeam belonged to Hakmoni's clan. He was the leader of David's officers. He used his spear to fight against 300 men in one battle and he killed all of them."
+      "text": "This is the list of David's brave soldiers: Jashobeam belonged to Hakmoni's clan. He was the leader of David's officers. He used his spear to fight against 300 men in one battle and he killed all of them."
     },
     {
       "verse": "12",
@@ -1730,7 +1730,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "David was very thirsty. He said, ‘I want someone to bring water from the well near Bethlehem's gate for me to drink.’"
+      "text": "David was very thirsty. He said, ‘I want someone to bring water from the well near Bethlehem's gate for me to drink. ’"
     },
     {
       "verse": "18",
@@ -1738,7 +1738,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "He said, ‘God knows that it is not right for me to drink this water. It would seem like the blood of the brave men who fetched it for me. The Philistines might have killed them on the way.’ So David refused to drink it.That was one of the great things that those three brave soldiers did."
+      "text": "He said, ‘God knows that it is not right for me to drink this water. It would seem like the blood of the brave men who fetched it for me. The Philistines might have killed them on the way. ’ So David refused to drink it. That was one of the great things that those three brave soldiers did."
     },
     {
       "verse": "20",
@@ -1754,7 +1754,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Benaiah also killed a very big Egyptian man who was 2.3 metres tall. The Egyptian held a spear that was thick and heavy, like a big tree. Benaiah attacked him with a heavy stick. He took the spear from the Egyptian's hand and he used it to kill him."
+      "text": "Benaiah also killed a very big Egyptian man who was 2. 3 metres tall. The Egyptian held a spear that was thick and heavy, like a big tree. Benaiah attacked him with a heavy stick. He took the spear from the Egyptian's hand and he used it to kill him."
     },
     {
       "verse": "24",
@@ -1766,59 +1766,59 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "These men were also David's great soldiers:Joab's brother Asahel.Elhanan, Dodo's son, from Bethlehem."
+      "text": "These men were also David's great soldiers: Joab's brother Asahel. Elhanan, Dodo's son, from Bethlehem."
     },
     {
       "verse": "27",
-      "text": "Shammoth, from Harod's clan.Helez, from Pelon's clan."
+      "text": "Shammoth, from Harod's clan. Helez, from Pelon's clan."
     },
     {
       "verse": "28",
-      "text": "Ira, Ikkesh's son, from Tekoa.Abiezer, from Anathoth."
+      "text": "Ira, Ikkesh's son, from Tekoa. Abiezer, from Anathoth."
     },
     {
       "verse": "29",
-      "text": "Sibbekai, from Hushah's clan.Ilai, from Ahoah's clan."
+      "text": "Sibbekai, from Hushah's clan. Ilai, from Ahoah's clan."
     },
     {
       "verse": "30",
-      "text": "Maharai, from Netophah.Heled, Baanah's son, also from Netophah."
+      "text": "Maharai, from Netophah. Heled, Baanah's son, also from Netophah."
     },
     {
       "verse": "31",
-      "text": "Ithai, Ribai's son, from Gibeah, in the land that belonged to Benjamin's tribe.Benaiah, from Pirathon."
+      "text": "Ithai, Ribai's son, from Gibeah, in the land that belonged to Benjamin's tribe. Benaiah, from Pirathon."
     },
     {
       "verse": "32",
-      "text": "Hurai, from the valleys near Gaash.Abiel, from Arbah's clan."
+      "text": "Hurai, from the valleys near Gaash. Abiel, from Arbah's clan."
     },
     {
       "verse": "33",
-      "text": "Azmaveth, from Baharum.Eliahba, from Shaalbon."
+      "text": "Azmaveth, from Baharum. Eliahba, from Shaalbon."
     },
     {
       "verse": "34",
-      "text": "Hashem's sons, who were Gizonites.Shagee's son Jonathan, from Harar."
+      "text": "Hashem's sons, who were Gizonites. Shagee's son Jonathan, from Harar."
     },
     {
       "verse": "35",
-      "text": "Sachar's son Ahiam, also from Harar.Ur's son Eliphal."
+      "text": "Sachar's son Ahiam, also from Harar. Ur's son Eliphal."
     },
     {
       "verse": "36",
-      "text": "Hepher, from Mekerath.Ahijah, from Pelon's clan."
+      "text": "Hepher, from Mekerath. Ahijah, from Pelon's clan."
     },
     {
       "verse": "37",
-      "text": "Hezro, from Carmel.Ezbai's son Naarai."
+      "text": "Hezro, from Carmel. Ezbai's son Naarai."
     },
     {
       "verse": "38",
-      "text": "Nathan's brother Joel.Hagri's son Mibhar."
+      "text": "Nathan's brother Joel. Hagri's son Mibhar."
     },
     {
       "verse": "39",
-      "text": "Zelek, from Ammon.Naharai, from Beeroth. He carried Joab's weapons. (Joab was the son of Zeruiah.)"
+      "text": "Zelek, from Ammon. Naharai, from Beeroth. He carried Joab's weapons. (Joab was the son of Zeruiah. )"
     },
     {
       "verse": "40",
@@ -1826,7 +1826,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "Uriah, the Hittite.Ahlai's son Zabad."
+      "text": "Uriah, the Hittite. Ahlai's son Zabad."
     },
     {
       "verse": "42",
@@ -1834,23 +1834,23 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Maakah's son Hanan.Joshaphat, from Mithna."
+      "text": "Maakah's son Hanan. Joshaphat, from Mithna."
     },
     {
       "verse": "44",
-      "text": "Uzzia, from Ashterath.Shama and Jeiel, sons of Hotham, from Aroer."
+      "text": "Uzzia, from Ashterath. Shama and Jeiel, sons of Hotham, from Aroer."
     },
     {
       "verse": "45",
-      "text": "Shimri's son Jediael.Jediael's brother Joha, from Tiz."
+      "text": "Shimri's son Jediael. Jediael's brother Joha, from Tiz."
     },
     {
       "verse": "46",
-      "text": "Eliel, from Mahavah.Elnaam's sons, Jeribai and Joshaviah.Ithmah, from Moab."
+      "text": "Eliel, from Mahavah. Elnaam's sons, Jeribai and Joshaviah. Ithmah, from Moab."
     },
     {
       "verse": "47",
-      "text": "Eliel and Obed.Jaasiel, from Zobah."
+      "text": "Eliel and Obed. Jaasiel, from Zobah."
     }
   ],
   "12": [
@@ -1864,11 +1864,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Ahiezer, their leader, and his brother Joash. They were sons of Shemaah, who was from Gibeah town.Jeziel and Pelet, the sons of Azmaveth.Beracah.Jehu, from Anathoth town."
+      "text": "Ahiezer, their leader, and his brother Joash. They were sons of Shemaah, who was from Gibeah town. Jeziel and Pelet, the sons of Azmaveth. Beracah. Jehu, from Anathoth town."
     },
     {
       "verse": "4",
-      "text": "Ishmaiah, from Gibeon town. He was the leader of the 30 great soldiers.Jeremiah, Jahaziel, Johanan and Jozabad, who was from Gederah."
+      "text": "Ishmaiah, from Gibeon town. He was the leader of the 30 great soldiers. Jeremiah, Jahaziel, Johanan and Jozabad, who was from Gederah."
     },
     {
       "verse": "5",
@@ -1908,7 +1908,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "These descendants of Gad were leaders in the army. The least important officer among them led 100 soldiers. The greatest officer led 1,000 soldiers."
+      "text": "These descendants of Gad were leaders in the army. The least important officer among them led 100 soldiers. The greatest officer led 1, 000 soldiers."
     },
     {
       "verse": "15",
@@ -1920,19 +1920,19 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "David went out to meet them. He said to them, ‘I hope that you have come here as my friends. If you have come to help me, I will make an agreement with you. But I hope that you have not come here to help my enemies and to tell them where I am hiding. I have not done anything wrong. So I pray that the God of our ancestors will see what you do. He will punish you as you deserve!’"
+      "text": "David went out to meet them. He said to them, ‘I hope that you have come here as my friends. If you have come to help me, I will make an agreement with you. But I hope that you have not come here to help my enemies and to tell them where I am hiding. I have not done anything wrong. So I pray that the God of our ancestors will see what you do. He will punish you as you deserve! ’"
     },
     {
       "verse": "18",
-      "text": "Then God's Spirit came to Amasai with power. He was the leader of the 30 great soldiers. He said,‘We will serve you, David, Jesse's son.We have come to help you!May God bless you!May God bless those who help you!Yes, your God will help you.’So David accepted them as his friends. He made them officers in his army. ‘We will serve you, David, Jesse's son. We have come to help you! May God bless you! May God bless those who help you! Yes, your God will help you.’ So David accepted them as his friends. He made them officers in his army."
+      "text": "Then God's Spirit came to Amasai with power. He was the leader of the 30 great soldiers. He said, ‘We will serve you, David, Jesse's son. We have come to help you! May God bless you! May God bless those who help you! Yes, your God will help you. ’So David accepted them as his friends. He made them officers in his army. ‘We will serve you, David, Jesse's son. We have come to help you! May God bless you! May God bless those who help you! Yes, your God will help you. ’ So David accepted them as his friends. He made them officers in his army."
     },
     {
       "verse": "19",
-      "text": "Some men from Manasseh's tribe also joined David's army. That was at the time when David joined with the Philistines to fight against Saul. But David and his men were not able to help the Philistines like that. That was because the leaders of the Philistines decided to send David and his men away. They said, ‘David may turn against us and go to help his master Saul, instead. If he does that, we will all be dead!’"
+      "text": "Some men from Manasseh's tribe also joined David's army. That was at the time when David joined with the Philistines to fight against Saul. But David and his men were not able to help the Philistines like that. That was because the leaders of the Philistines decided to send David and his men away. They said, ‘David may turn against us and go to help his master Saul, instead. If he does that, we will all be dead! ’"
     },
     {
       "verse": "20",
-      "text": "So David returned to Ziklag. These men from Manasseh's tribe joined David's army at that time:Adnah, Jozabad, Jediael, Michael, Jozabad, Elihu and Zillethai. Each of them had been the leader of 1,000 soldiers in Saul's army."
+      "text": "So David returned to Ziklag. These men from Manasseh's tribe joined David's army at that time: Adnah, Jozabad, Jediael, Michael, Jozabad, Elihu and Zillethai. Each of them had been the leader of 1, 000 soldiers in Saul's army."
     },
     {
       "verse": "21",
@@ -1948,19 +1948,19 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "From Judah's tribe, there were 6,800 men who carried shields and spears. They knew how to fight well."
+      "text": "From Judah's tribe, there were 6, 800 men who carried shields and spears. They knew how to fight well."
     },
     {
       "verse": "25",
-      "text": "From Simeon's tribe, there were 7,100 strong men who knew how to fight well."
+      "text": "From Simeon's tribe, there were 7, 100 strong men who knew how to fight well."
     },
     {
       "verse": "26",
-      "text": "From Levi's tribe, there were 4,600 men."
+      "text": "From Levi's tribe, there were 4, 600 men."
     },
     {
       "verse": "27",
-      "text": "Jehoiada was the leader of the men who were Aaron's descendants. He brought 3,700 men with him."
+      "text": "Jehoiada was the leader of the men who were Aaron's descendants. He brought 3, 700 men with him."
     },
     {
       "verse": "28",
@@ -1968,15 +1968,15 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "From Benjamin's tribe that Saul belonged to, there were 3,000 men. Most of those men had served Saul faithfully until that time."
+      "text": "From Benjamin's tribe that Saul belonged to, there were 3, 000 men. Most of those men had served Saul faithfully until that time."
     },
     {
       "verse": "30",
-      "text": "From Ephraim's tribe, there were 20,800 men who were brave soldiers. The people in their clans respected them very much."
+      "text": "From Ephraim's tribe, there were 20, 800 men who were brave soldiers. The people in their clans respected them very much."
     },
     {
       "verse": "31",
-      "text": "From the half tribe of Manasseh on the west side of the Jordan River, there were 18,000 men. Their clans had chosen those men to go and help David become their king."
+      "text": "From the half tribe of Manasseh on the west side of the Jordan River, there were 18, 000 men. Their clans had chosen those men to go and help David become their king."
     },
     {
       "verse": "32",
@@ -1984,23 +1984,23 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "From Zebulun's tribe, there were 50,000 brave men who were ready to fight. They knew how to use many different kinds of weapons. They were completely faithful to David."
+      "text": "From Zebulun's tribe, there were 50, 000 brave men who were ready to fight. They knew how to use many different kinds of weapons. They were completely faithful to David."
     },
     {
       "verse": "34",
-      "text": "From Naphtali's tribe, there were 1,000 officers and 37,000 men who carried shields and spears."
+      "text": "From Naphtali's tribe, there were 1, 000 officers and 37, 000 men who carried shields and spears."
     },
     {
       "verse": "35",
-      "text": "From Dan's tribe, there were 28,600 men who were ready for war."
+      "text": "From Dan's tribe, there were 28, 600 men who were ready for war."
     },
     {
       "verse": "36",
-      "text": "From Asher's tribe there were 40,000 soldiers who were ready for war."
+      "text": "From Asher's tribe there were 40, 000 soldiers who were ready for war."
     },
     {
       "verse": "37",
-      "text": "From the east side of the Jordan River, there were 120,000 soldiers who knew how to use many different kinds of weapons. Those men belonged to the tribes of Reuben, Gad and the other half tribe of Manasseh."
+      "text": "From the east side of the Jordan River, there were 120, 000 soldiers who knew how to use many different kinds of weapons. Those men belonged to the tribes of Reuben, Gad and the other half tribe of Manasseh."
     },
     {
       "verse": "38",
@@ -2018,7 +2018,7 @@ module.exports = {
   "13": [
     {
       "verse": "1",
-      "text": "David spoke with the officers of his army. Some of them were the leaders of 1,000 men. Other officers were the leaders of 100 men."
+      "text": "David spoke with the officers of his army. Some of them were the leaders of 1, 000 men. Other officers were the leaders of 100 men."
     },
     {
       "verse": "2",
@@ -2026,7 +2026,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "We should bring back the Covenant Box of our God. While Saul was king, we did not use it to ask God about things.’"
+      "text": "We should bring back the Covenant Box of our God. While Saul was king, we did not use it to ask God about things. ’"
     },
     {
       "verse": "4",
@@ -2038,7 +2038,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "David and all the Israelites went to Baalah, a town in Judah. (Baalah is also called Kiriath-Jearim.) They went to bring the Covenant Box of God from there to Jerusalem. The Israelites called it by the name of the Lord. He sits as King between the two cherubs that are on the top of the Covenant Box."
+      "text": "David and all the Israelites went to Baalah, a town in Judah. (Baalah is also called Kiriath-Jearim. ) They went to bring the Covenant Box of God from there to Jerusalem. The Israelites called it by the name of the Lord. He sits as King between the two cherubs that are on the top of the Covenant Box."
     },
     {
       "verse": "7",
@@ -2062,7 +2062,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So David now became afraid of God. He said, ‘God's Covenant Box is too holy to take with me.’"
+      "text": "So David now became afraid of God. He said, ‘God's Covenant Box is too holy to take with me. ’"
     },
     {
       "verse": "13",
@@ -2104,7 +2104,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Philistines heard the news that David had now become king over all Israel. So their whole army went to look for him to catch him. When David heard about this, he went out to attack them. The Lord answered him, ‘Yes, go and attack the Philistines. I will help you to win against them.’"
+      "text": "The Philistines heard the news that David had now become king over all Israel. So their whole army went to look for him to catch him. When David heard about this, he went out to attack them. The Lord answered him, ‘Yes, go and attack the Philistines. I will help you to win against them. ’"
     },
     {
       "verse": "9",
@@ -2112,11 +2112,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "David asked God, ‘Should I go and attack the Philistines? Will you put them under my power?’The Lord answered him, ‘Yes, go and attack the Philistines. I will help you to win against them.’"
+      "text": "David asked God, ‘Should I go and attack the Philistines? Will you put them under my power? ’The Lord answered him, ‘Yes, go and attack the Philistines. I will help you to win against them. ’"
     },
     {
       "verse": "11",
-      "text": "So David and his men went to Baal Perazim. There they won the fight against the Philistines in that place. David said, ‘God has helped me to sweep away my enemy like a flood of water.’ So they called that place Baal Perazim."
+      "text": "So David and his men went to Baal Perazim. There they won the fight against the Philistines in that place. David said, ‘God has helped me to sweep away my enemy like a flood of water. ’ So they called that place Baal Perazim."
     },
     {
       "verse": "12",
@@ -2132,7 +2132,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "When you hear a noise in the tops of the trees like marching men, go out to attack them. Then you will know that God has gone in front of you. He will knock down the Philistine army for you.’"
+      "text": "When you hear a noise in the tops of the trees like marching men, go out to attack them. Then you will know that God has gone in front of you. He will knock down the Philistine army for you. ’"
     },
     {
       "verse": "16",
@@ -2150,7 +2150,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then David said, ‘Only the Levites may carry God's Covenant Box. The Lord chose them to do that. He chose them to serve him for ever.’"
+      "text": "Then David said, ‘Only the Levites may carry God's Covenant Box. The Lord chose them to do that. He chose them to serve him for ever. ’"
     },
     {
       "verse": "3",
@@ -2194,7 +2194,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The first time that we tried to bring it here, you did not carry it. Because of that, the Lord our God punished us. He did that because we did not ask him about the proper way to carry it.’"
+      "text": "The first time that we tried to bring it here, you did not carry it. Because of that, the Lord our God punished us. He did that because we did not ask him about the proper way to carry it. ’"
     },
     {
       "verse": "14",
@@ -2292,51 +2292,51 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Thank the Lord!Make his name famous!Tell people in all the nations what he has done. Make his name famous! Tell people in all the nations what he has done."
+      "text": "Thank the Lord! Make his name famous! Tell people in all the nations what he has done. Make his name famous! Tell people in all the nations what he has done."
     },
     {
       "verse": "9",
-      "text": "Sing songs and make musicto praise him!Tell people about the miracles that he has done. to praise him! Tell people about the miracles that he has done."
+      "text": "Sing songs and make musicto praise him! Tell people about the miracles that he has done. to praise him! Tell people about the miracles that he has done."
     },
     {
       "verse": "10",
-      "text": "Boast about his holy name.Everybody who wants to worship the Lord should be very happy! Everybody who wants to worship the Lord should be very happy!"
+      "text": "Boast about his holy name. Everybody who wants to worship the Lord should be very happy! Everybody who wants to worship the Lord should be very happy!"
     },
     {
       "verse": "11",
-      "text": "Ask the Lord to help you!Ask him to give you strength.Always try to be near himand worship him. Ask him to give you strength. Always try to be near him and worship him."
+      "text": "Ask the Lord to help you! Ask him to give you strength. Always try to be near himand worship him. Ask him to give you strength. Always try to be near him and worship him."
     },
     {
       "verse": "12",
-      "text": "Remember the great things that he has done.Remember his miracles,and the commands that he has spoken. Remember his miracles, and the commands that he has spoken."
+      "text": "Remember the great things that he has done. Remember his miracles, and the commands that he has spoken. Remember his miracles, and the commands that he has spoken."
     },
     {
       "verse": "13",
-      "text": "You are the descendants of God's servant, Israel.You are Jacob's descendants,and God has chosen you to be his people. You are Jacob's descendants, and God has chosen you to be his people."
+      "text": "You are the descendants of God's servant, Israel. You are Jacob's descendants, and God has chosen you to be his people. You are Jacob's descendants, and God has chosen you to be his people."
     },
     {
       "verse": "14",
-      "text": "He is the Lord our God.He rules the whole earth with justice. He rules the whole earth with justice."
+      "text": "He is the Lord our God. He rules the whole earth with justice. He rules the whole earth with justice."
     },
     {
       "verse": "15",
-      "text": "Always remember the covenant that he has made with us.He made that promise to continue for ever. He made that promise to continue for ever."
+      "text": "Always remember the covenant that he has made with us. He made that promise to continue for ever. He made that promise to continue for ever."
     },
     {
       "verse": "16",
-      "text": "That is the promise that he made to Abraham,and that he also made to Isaac. and that he also made to Isaac."
+      "text": "That is the promise that he made to Abraham, and that he also made to Isaac. and that he also made to Isaac."
     },
     {
       "verse": "17",
-      "text": "He repeated it to Jacob as a law.It was a covenant with Israel's peoplethat would continue for ever. It was a covenant with Israel's people that would continue for ever."
+      "text": "He repeated it to Jacob as a law. It was a covenant with Israel's peoplethat would continue for ever. It was a covenant with Israel's people that would continue for ever."
     },
     {
       "verse": "18",
-      "text": "He promised, ‘I will give the land of Canaan to you.It will belong to you and to your descendants.’ It will belong to you and to your descendants.’"
+      "text": "He promised, ‘I will give the land of Canaan to you. It will belong to you and to your descendants. ’ It will belong to you and to your descendants. ’"
     },
     {
       "verse": "19",
-      "text": "At one time, God's people were only a few.They lived in Canaan as strangers. They lived in Canaan as strangers."
+      "text": "At one time, God's people were only a few. They lived in Canaan as strangers. They lived in Canaan as strangers."
     },
     {
       "verse": "20",
@@ -2344,67 +2344,67 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But the Lord did not let anyone hurt them.He punished kings,to keep his people safe. He punished kings, to keep his people safe."
+      "text": "But the Lord did not let anyone hurt them. He punished kings, to keep his people safe. He punished kings, to keep his people safe."
     },
     {
       "verse": "22",
-      "text": "He said, ‘Do not even touch the people that I have chosen to be mine.Do not hurt my prophets.’ Do not hurt my prophets.’"
+      "text": "He said, ‘Do not even touch the people that I have chosen to be mine. Do not hurt my prophets. ’ Do not hurt my prophets. ’"
     },
     {
       "verse": "23",
-      "text": "Sing to the Lord, all the world.Every day, tell people the message that he has rescued us. Every day, tell people the message that he has rescued us."
+      "text": "Sing to the Lord, all the world. Every day, tell people the message that he has rescued us. Every day, tell people the message that he has rescued us."
     },
     {
       "verse": "24",
-      "text": "Tell the other nations that he is very great.Tell all of them about the great things that he has done. Tell all of them about the great things that he has done."
+      "text": "Tell the other nations that he is very great. Tell all of them about the great things that he has done. Tell all of them about the great things that he has done."
     },
     {
       "verse": "25",
-      "text": "Yes, the Lord is great!Everyone should praise him, as he deserves.People should respect him with fear,more than all other gods. Everyone should praise him, as he deserves. People should respect him with fear, more than all other gods."
+      "text": "Yes, the Lord is great! Everyone should praise him, as he deserves. People should respect him with fear, more than all other gods. Everyone should praise him, as he deserves. People should respect him with fear, more than all other gods."
     },
     {
       "verse": "26",
-      "text": "All the other nations' gods are useless idols.But the Lord made the heavens. But the Lord made the heavens."
+      "text": "All the other nations' gods are useless idols. But the Lord made the heavens. But the Lord made the heavens."
     },
     {
       "verse": "27",
-      "text": "We see that he is a very great king.Strength and joy are in his home. Strength and joy are in his home."
+      "text": "We see that he is a very great king. Strength and joy are in his home. Strength and joy are in his home."
     },
     {
       "verse": "28",
-      "text": "You people of other nations,recognize that the Lord is great and powerful. recognize that the Lord is great and powerful."
+      "text": "You people of other nations, recognize that the Lord is great and powerful. recognize that the Lord is great and powerful."
     },
     {
       "verse": "29",
-      "text": "Agree that the Lord's name is great.Bring a gift to offer to him in his temple.Worship the Lord,who is beautiful and holy. Bring a gift to offer to him in his temple. Worship the Lord, who is beautiful and holy."
+      "text": "Agree that the Lord's name is great. Bring a gift to offer to him in his temple. Worship the Lord, who is beautiful and holy. Bring a gift to offer to him in his temple. Worship the Lord, who is beautiful and holy."
     },
     {
       "verse": "30",
-      "text": "Everyone on earth must shake with fear in front of him.He has fixed the world in its place,so that nothing can shake it. He has fixed the world in its place, so that nothing can shake it."
+      "text": "Everyone on earth must shake with fear in front of him. He has fixed the world in its place, so that nothing can shake it. He has fixed the world in its place, so that nothing can shake it."
     },
     {
       "verse": "31",
-      "text": "The earth and the sky should be happy!The people of all nations should say,‘The Lord rules as king!’ The people of all nations should say, ‘The Lord rules as king!’"
+      "text": "The earth and the sky should be happy! The people of all nations should say, ‘The Lord rules as king! ’ The people of all nations should say, ‘The Lord rules as king! ’"
     },
     {
       "verse": "32",
-      "text": "The sea and everything in it should shout aloud!The fields and all their crops should shout with joy! The fields and all their crops should shout with joy!"
+      "text": "The sea and everything in it should shout aloud! The fields and all their crops should shout with joy! The fields and all their crops should shout with joy!"
     },
     {
       "verse": "33",
-      "text": "Then all the trees in the forests will also sing,because they are so happy.They will be happy because the Lord is comingto judge the earth. because they are so happy. They will be happy because the Lord is coming to judge the earth."
+      "text": "Then all the trees in the forests will also sing, because they are so happy. They will be happy because the Lord is comingto judge the earth. because they are so happy. They will be happy because the Lord is coming to judge the earth."
     },
     {
       "verse": "34",
-      "text": "Thank the Lord, because he is good.His faithful love will always be with us. His faithful love will always be with us."
+      "text": "Thank the Lord, because he is good. His faithful love will always be with us. His faithful love will always be with us."
     },
     {
       "verse": "35",
-      "text": "Say to him, ‘God, you are the one who rescues us!Please save us now!Bring us safely home from among the other nations.Then we will thank you!We will shout aloud to praise your holy name.’ Please save us now! Bring us safely home from among the other nations. Then we will thank you! We will shout aloud to praise your holy name.’"
+      "text": "Say to him, ‘God, you are the one who rescues us! Please save us now! Bring us safely home from among the other nations. Then we will thank you! We will shout aloud to praise your holy name. ’ Please save us now! Bring us safely home from among the other nations. Then we will thank you! We will shout aloud to praise your holy name. ’"
     },
     {
       "verse": "36",
-      "text": "Praise the Lord, Israel's God,as he deserves!Praise him now and for ever!Then all the people said, ‘Amen! We agree! Praise the Lord!’ as he deserves! Praise him now and for ever! Then all the people said, ‘Amen! We agree! Praise the Lord!’"
+      "text": "Praise the Lord, Israel's God, as he deserves! Praise him now and for ever! Then all the people said, ‘Amen! We agree! Praise the Lord! ’ as he deserves! Praise him now and for ever! Then all the people said, ‘Amen! We agree! Praise the Lord! ’"
     },
     {
       "verse": "37",
@@ -2438,11 +2438,11 @@ module.exports = {
   "17": [
     {
       "verse": "1",
-      "text": "King David was living in his palace. One day, he said to Nathan the prophet, ‘Now I am living in a beautiful palace that is made of cedar wood. But the Lord's Covenant Box is still in a tent.’"
+      "text": "King David was living in his palace. One day, he said to Nathan the prophet, ‘Now I am living in a beautiful palace that is made of cedar wood. But the Lord's Covenant Box is still in a tent. ’"
     },
     {
       "verse": "2",
-      "text": "Nathan replied to David, ‘Do what you think is right. God will help you.’"
+      "text": "Nathan replied to David, ‘Do what you think is right. God will help you. ’"
     },
     {
       "verse": "3",
@@ -2458,7 +2458,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I have moved about to many different places with the Israelites. I chose leaders to take care of my people, like shepherds take care of their sheep. But I never said to any of them, ‘You should have built a beautiful house of cedar wood for me.’ ”"
+      "text": "I have moved about to many different places with the Israelites. I chose leaders to take care of my people, like shepherds take care of their sheep. But I never said to any of them, ‘You should have built a beautiful house of cedar wood for me. ’ ”"
     },
     {
       "verse": "7",
@@ -2474,7 +2474,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "from the time that I chose leaders to rule my people Israel. But now I will cause all your enemies to be weak.I say to you, David: the Lord will give you descendants who will rule as kings after you. That will be the royal house that I build for you."
+      "text": "from the time that I chose leaders to rule my people Israel. But now I will cause all your enemies to be weak. I say to you, David: the Lord will give you descendants who will rule as kings after you. That will be the royal house that I build for you."
     },
     {
       "verse": "11",
@@ -2490,7 +2490,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will cause him to rule my people and my kingdom for ever. Someone from his family will always be king.” ’"
+      "text": "I will cause him to rule my people and my kingdom for ever. Someone from his family will always be king. ” ’"
     },
     {
       "verse": "15",
@@ -2530,7 +2530,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "so that people see your promises are true. Then people will always give honour to your great name. They will say, “The Lord Almighty is Israel's God.” And David's descendants will continue to serve you as kings."
+      "text": "so that people see your promises are true. Then people will always give honour to your great name. They will say, “The Lord Almighty is Israel's God. ” And David's descendants will continue to serve you as kings."
     },
     {
       "verse": "25",
@@ -2542,7 +2542,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Now please bless my family and my descendants. Then we will serve you faithfully for ever. Yes, Lord, you have blessed my descendants, and I know that you will continue to bless them for ever.’"
+      "text": "Now please bless my family and my descendants. Then we will serve you faithfully for ever. Yes, Lord, you have blessed my descendants, and I know that you will continue to bless them for ever. ’"
     }
   ],
   "18": [
@@ -2560,15 +2560,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "David took from Hadadezer 1,000 chariots and 7,000 men who drove them. He also caught 20,000 of Hadadezer's other soldiers. David kept 100 horses that pulled chariots. But he cut the legs of the other horses so that they could not run."
+      "text": "David took from Hadadezer 1, 000 chariots and 7, 000 men who drove them. He also caught 20, 000 of Hadadezer's other soldiers. David kept 100 horses that pulled chariots. But he cut the legs of the other horses so that they could not run."
     },
     {
       "verse": "5",
-      "text": "The Syrians from Damascus sent an army to help King Hadadezer of Zobah. But David killed 22,000 soldiers of the Syrian army. The Lord helped David to win all the battles that he fought."
+      "text": "The Syrians from Damascus sent an army to help King Hadadezer of Zobah. But David killed 22, 000 soldiers of the Syrian army. The Lord helped David to win all the battles that he fought."
     },
     {
       "verse": "6",
-      "text": "David put some of his soldiers in Damascus to keep his authority over the Syrian people. They had to pay taxes to King David.The Lord helped David to win all the battles that he fought."
+      "text": "David put some of his soldiers in Damascus to keep his authority over the Syrian people. They had to pay taxes to King David. The Lord helped David to win all the battles that he fought."
     },
     {
       "verse": "7",
@@ -2592,11 +2592,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Zeruiah's son Abishai killed 18,000 men from Edom in the Valley of Salt. The Lord helped David to win all the battles that he fought."
+      "text": "Zeruiah's son Abishai killed 18, 000 men from Edom in the Valley of Salt. The Lord helped David to win all the battles that he fought."
     },
     {
       "verse": "13",
-      "text": "He put groups of his soldiers in Edom, so that David had authority over all the Edomites.The Lord helped David to win all the battles that he fought."
+      "text": "He put groups of his soldiers in Edom, so that David had authority over all the Edomites. The Lord helped David to win all the battles that he fought."
     },
     {
       "verse": "14",
@@ -2622,11 +2622,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "David thought, ‘Nahash was kind to me, so I will be kind to his son Hanun.’ So David sent some of his officers to give a message to Hanun. David wanted to tell Hanun that he was sorry that his father Nahash had died.David's officers took his kind message to the land of the Ammonites."
+      "text": "David thought, ‘Nahash was kind to me, so I will be kind to his son Hanun. ’ So David sent some of his officers to give a message to Hanun. David wanted to tell Hanun that he was sorry that his father Nahash had died. David's officers took his kind message to the land of the Ammonites."
     },
     {
       "verse": "3",
-      "text": "But the leaders of the Ammonites said to Hanun, ‘David has sent his officers to you with a kind message. But do not think that he really wants to give honour to your father. No, he has sent his men to look at our land. They want to see how they can attack our country and take it for themselves.’"
+      "text": "But the leaders of the Ammonites said to Hanun, ‘David has sent his officers to you with a kind message. But do not think that he really wants to give honour to your father. No, he has sent his men to look at our land. They want to see how they can attack our country and take it for themselves. ’"
     },
     {
       "verse": "4",
@@ -2634,15 +2634,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Some people came to tell David what had happened. His officers were very ashamed. So David sent men to them with a message. King David said, ‘Stay in Jericho city until your beards have grown again. Then you can return here.’"
+      "text": "Some people came to tell David what had happened. His officers were very ashamed. So David sent men to them with a message. King David said, ‘Stay in Jericho city until your beards have grown again. Then you can return here. ’"
     },
     {
       "verse": "6",
-      "text": "The Ammonites realized that they had caused David to be very angry. So King Hanun and his people made an agreement with the people of Aram-Naharaim, Aram-Maacah and Zobah. The Ammonites sent them about 34,000 kilograms of silver to get their help with chariots and their drivers."
+      "text": "The Ammonites realized that they had caused David to be very angry. So King Hanun and his people made an agreement with the people of Aram-Naharaim, Aram-Maacah and Zobah. The Ammonites sent them about 34, 000 kilograms of silver to get their help with chariots and their drivers."
     },
     {
       "verse": "7",
-      "text": "They had 32,000 chariots to use in the battle. They also received help from the king of Maakah and his army. All these men made their camp near Medeba. At the same time King Hanun had brought together the Ammonite soldiers from their towns. They were all ready to fight."
+      "text": "They had 32, 000 chariots to use in the battle. They also received help from the king of Maakah and his army. All these men made their camp near Medeba. At the same time King Hanun had brought together the Ammonite soldiers from their towns. They were all ready to fight."
     },
     {
       "verse": "8",
@@ -2666,7 +2666,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Be strong! We must be brave as we fight on behalf of our people and the cities of our God. The Lord will do what he decides is good.’"
+      "text": "Be strong! We must be brave as we fight on behalf of our people and the cities of our God. The Lord will do what he decides is good. ’"
     },
     {
       "verse": "14",
@@ -2674,7 +2674,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The Ammonites saw that the Syrians were running away from Joab. So they also ran away from his brother Abishai's men. They went back into their city.So Joab returned to Jerusalem."
+      "text": "The Ammonites saw that the Syrians were running away from Joab. So they also ran away from his brother Abishai's men. They went back into their city. So Joab returned to Jerusalem."
     },
     {
       "verse": "16",
@@ -2686,7 +2686,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "the Syrians ran away from the Israelites. David and his army killed 7,000 Syrians who drove chariots. They killed 40,000 other Syrian soldiers. They also killed Shophach, the captain of the Syrian army."
+      "text": "the Syrians ran away from the Israelites. David and his army killed 7, 000 Syrians who drove chariots. They killed 40, 000 other Syrian soldiers. They also killed Shophach, the captain of the Syrian army."
     },
     {
       "verse": "19",
@@ -2704,7 +2704,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He brought the people out from the city to do hard work for him. He made them cut wood with saws, and use iron tools and axes. He did the same thing to the people of all the other Ammonite cities.Then David and all his army returned to Jerusalem."
+      "text": "He brought the people out from the city to do hard work for him. He made them cut wood with saws, and use iron tools and axes. He did the same thing to the people of all the other Ammonite cities. Then David and all his army returned to Jerusalem."
     },
     {
       "verse": "4",
@@ -2734,11 +2734,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So David said to Joab and to the officers in his army, ‘Go and count the men everywhere in Israel, from Beersheba to Dan. Then come and give me a report. I want to know how many men there are.’"
+      "text": "So David said to Joab and to the officers in his army, ‘Go and count the men everywhere in Israel, from Beersheba to Dan. Then come and give me a report. I want to know how many men there are. ’"
     },
     {
       "verse": "3",
-      "text": "But Joab replied, ‘I pray that the Lord will make your army grow 100 times bigger! All your men are your faithful servants, my lord the king. But why do you want to do this? You will cause all Israel to become guilty.’"
+      "text": "But Joab replied, ‘I pray that the Lord will make your army grow 100 times bigger! All your men are your faithful servants, my lord the king. But why do you want to do this? You will cause all Israel to become guilty. ’"
     },
     {
       "verse": "4",
@@ -2746,7 +2746,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Joab reported to David about the number of soldiers who could fight. There were 1,100,000 men in all Israel who could fight with swords. There were 470,000 men in Judah who could fight with swords."
+      "text": "Joab reported to David about the number of soldiers who could fight. There were 1, 100, 000 men in all Israel who could fight with swords. There were 470, 000 men in Judah who could fight with swords."
     },
     {
       "verse": "6",
@@ -2758,7 +2758,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then David said to God, ‘What I have done was a bad sin. Please forgive me. I have done a foolish thing.’"
+      "text": "Then David said to God, ‘What I have done was a bad sin. Please forgive me. I have done a foolish thing. ’"
     },
     {
       "verse": "9",
@@ -2766,7 +2766,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "‘Go and give my message to David: “There are three ways that I could punish you. You must choose one of them, and that is what I will do to punish you.” ’"
+      "text": "‘Go and give my message to David: “There are three ways that I could punish you. You must choose one of them, and that is what I will do to punish you. ” ’"
     },
     {
       "verse": "11",
@@ -2774,19 +2774,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You may choose to have three years when there will be a famine. Or you may choose to have three months when you have to run away from your enemies' swords so that they do not kill you. Or you may choose to have three days when a very bad disease comes to your people. The angel of the Lord would kill many people in every part of Israel.” Now decide which punishment you will choose. I will take your answer to God, who sent me with this message.’"
+      "text": "You may choose to have three years when there will be a famine. Or you may choose to have three months when you have to run away from your enemies' swords so that they do not kill you. Or you may choose to have three days when a very bad disease comes to your people. The angel of the Lord would kill many people in every part of Israel. ” Now decide which punishment you will choose. I will take your answer to God, who sent me with this message. ’"
     },
     {
       "verse": "13",
-      "text": "David said to Gad, ‘I am very upset. I do not want men to punish me. The Lord is kind and he forgives people. So it is better if he punishes me.’"
+      "text": "David said to Gad, ‘I am very upset. I do not want men to punish me. The Lord is kind and he forgives people. So it is better if he punishes me. ’"
     },
     {
       "verse": "14",
-      "text": "So the Lord caused a very bad disease to kill people in Israel. 70,000 Israelite men died."
+      "text": "So the Lord caused a very bad disease to kill people in Israel. 70, 000 Israelite men died."
     },
     {
       "verse": "15",
-      "text": "God sent his angel to destroy Jerusalem. But as the angel started to kill people, the Lord saw what was happening. He decided to stop the punishment that he was causing. He said to the angel who was killing the people, ‘That is enough. Stop what you are doing!’ When the Lord said that, his angel was standing near the threshing floor of Araunah the Jebusite."
+      "text": "God sent his angel to destroy Jerusalem. But as the angel started to kill people, the Lord saw what was happening. He decided to stop the punishment that he was causing. He said to the angel who was killing the people, ‘That is enough. Stop what you are doing! ’ When the Lord said that, his angel was standing near the threshing floor of Araunah the Jebusite."
     },
     {
       "verse": "16",
@@ -2794,11 +2794,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "David said to God, ‘I am the person who has done an evil thing. I told Joab to count the number of men in my army. These people have followed me like sheep that follow a shepherd. They have not done anything wrong. Lord my God, you should only punish me and my family. But please take this disease away from your people.’"
+      "text": "David said to God, ‘I am the person who has done an evil thing. I told Joab to count the number of men in my army. These people have followed me like sheep that follow a shepherd. They have not done anything wrong. Lord my God, you should only punish me and my family. But please take this disease away from your people. ’"
     },
     {
       "verse": "18",
-      "text": "Then the angel of the Lord said to Gad, ‘Tell David to go up to the threshing floor of Araunah the Jebusite. Build an altar there to worship the Lord.’"
+      "text": "Then the angel of the Lord said to Gad, ‘Tell David to go up to the threshing floor of Araunah the Jebusite. Build an altar there to worship the Lord. ’"
     },
     {
       "verse": "19",
@@ -2814,15 +2814,15 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "David said to Araunah, ‘Let me buy this threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people. I will pay you the whole price for the land.’"
+      "text": "David said to Araunah, ‘Let me buy this threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people. I will pay you the whole price for the land. ’"
     },
     {
       "verse": "23",
-      "text": "Araunah replied, ‘My lord the king, please take it for yourself. You may do what you would like to do. Look, I will give you the bulls for the burnt offerings. You can use the wood from these tools for the fire. Take my wheat to make an offering to the Lord. I will give all these things to you.’"
+      "text": "Araunah replied, ‘My lord the king, please take it for yourself. You may do what you would like to do. Look, I will give you the bulls for the burnt offerings. You can use the wood from these tools for the fire. Take my wheat to make an offering to the Lord. I will give all these things to you. ’"
     },
     {
       "verse": "24",
-      "text": "But King David said to Araunah, ‘No, I must pay you the whole price. I cannot offer something that belongs to you as a sacrifice to the Lord. I cannot offer to him a burnt offering that has cost me nothing.’"
+      "text": "But King David said to Araunah, ‘No, I must pay you the whole price. I cannot offer something that belongs to you as a sacrifice to the Lord. I cannot offer to him a burnt offering that has cost me nothing. ’"
     },
     {
       "verse": "25",
@@ -2852,7 +2852,7 @@ module.exports = {
   "22": [
     {
       "verse": "1",
-      "text": "Then David said, ‘This is the place where the temple of the Lord God will be. The altar for Israel's burnt offerings will also be here.’"
+      "text": "Then David said, ‘This is the place where the temple of the Lord God will be. The altar for Israel's burnt offerings will also be here. ’"
     },
     {
       "verse": "2",
@@ -2868,7 +2868,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "David said, ‘The Lord's temple must be great and beautiful. It must be famous, so that the people of every nation see how great it is. My son Solomon is young and he has no special skills. So I must prepare everything for him to build the temple.’So before David died, he prepared all these things. So before David died, he prepared all these things."
+      "text": "David said, ‘The Lord's temple must be great and beautiful. It must be famous, so that the people of every nation see how great it is. My son Solomon is young and he has no special skills. So I must prepare everything for him to build the temple. ’So before David died, he prepared all these things. So before David died, he prepared all these things."
     },
     {
       "verse": "6",
@@ -2888,7 +2888,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He will build a temple to give honour to my name. He will become my son and I will become his father. I will give him descendants to rule Israel as kings for ever.”"
+      "text": "He will build a temple to give honour to my name. He will become my son and I will become his father. I will give him descendants to rule Israel as kings for ever. ”"
     },
     {
       "verse": "11",
@@ -2904,7 +2904,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Look! I have been careful to prepare the things that you will need to build the Lord's temple. I have got 4,000 tons of gold and 40,000 tons of silver. I have more bronze and iron than anyone can weigh. I have plenty of wood and stone. You will need to get even more than this."
+      "text": "Look! I have been careful to prepare the things that you will need to build the Lord's temple. I have got 4, 000 tons of gold and 40, 000 tons of silver. I have more bronze and iron than anyone can weigh. I have plenty of wood and stone. You will need to get even more than this."
     },
     {
       "verse": "15",
@@ -2912,7 +2912,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They can use gold, silver, bronze and iron to make things. You have more workers than you can count! So now you must start the work! I pray that the Lord will be with you to help you.’"
+      "text": "They can use gold, silver, bronze and iron to make things. You have more workers than you can count! So now you must start the work! I pray that the Lord will be with you to help you. ’"
     },
     {
       "verse": "17",
@@ -2924,7 +2924,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "So you must serve the Lord your God with all that you are. Start the work! Begin to build the Lord God's holy place. Then you can put the Lord's Covenant Box there, as well as the other holy things. You will put them in the temple that you have built to give honour to the Lord's name.’"
+      "text": "So you must serve the Lord your God with all that you are. Start the work! Begin to build the Lord God's holy place. Then you can put the Lord's Covenant Box there, as well as the other holy things. You will put them in the temple that you have built to give honour to the Lord's name. ’"
     }
   ],
   "23": [
@@ -2938,15 +2938,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "years old or older. There were 38,000 men."
+      "text": "years old or older. There were 38, 000 men."
     },
     {
       "verse": "4",
-      "text": "David said, ‘24,000 of these Levite men must have authority for the work of the Lord's temple. 6,000 of them will be officers and judges."
+      "text": "David said, ‘24, 000 of these Levite men must have authority for the work of the Lord's temple. 6, 000 of them will be officers and judges."
     },
     {
       "verse": "5",
-      "text": "4,000 of them will be guards at the gates of the temple. 4,000 of them will use music to praise the Lord. They will use the musical instruments that I have provided for them.’"
+      "text": "4, 000 of them will be guards at the gates of the temple. 4, 000 of them will use music to praise the Lord. They will use the musical instruments that I have provided for them. ’"
     },
     {
       "verse": "6",
@@ -2962,7 +2962,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Shimei's three sons were: Shelomoth, Haziel and Haran.Those men were the leaders of Ladan's family. Those men were the leaders of Ladan's family."
+      "text": "Shimei's three sons were: Shelomoth, Haziel and Haran. Those men were the leaders of Ladan's family. Those men were the leaders of Ladan's family."
     },
     {
       "verse": "10",
@@ -2978,7 +2978,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Amram's sons were Aaron and Moses.The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people. The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people."
+      "text": "Amram's sons were Aaron and Moses. The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people. The Lord chose Aaron and his descendants for special work for all time. Their work was to offer special holy things to the Lord. They would offer sacrifices to the Lord. They would serve him in the temple. And they would use his name to bless the people."
     },
     {
       "verse": "14",
@@ -3010,7 +3010,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Merari's sons were Mahli and Mushi.Mahli's sons were Eleazar and Kish. Mahli's sons were Eleazar and Kish."
+      "text": "Merari's sons were Mahli and Mushi. Mahli's sons were Eleazar and Kish. Mahli's sons were Eleazar and Kish."
     },
     {
       "verse": "22",
@@ -3030,7 +3030,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So the Levites no longer need to carry the tabernacle to different places. They do not need to carry all the things that are used to serve God.’"
+      "text": "So the Levites no longer need to carry the tabernacle to different places. They do not need to carry all the things that are used to serve God. ’"
     },
     {
       "verse": "27",
@@ -3060,7 +3060,7 @@ module.exports = {
   "24": [
     {
       "verse": "1",
-      "text": "Aaron's descendants, the priests, were in the following groups.Aaron's four sons were: Nadab, Abihu, Eleazar and Ithamar."
+      "text": "Aaron's descendants, the priests, were in the following groups. Aaron's four sons were: Nadab, Abihu, Eleazar and Ithamar."
     },
     {
       "verse": "2",
@@ -3092,7 +3092,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The leaders of the other Levite families included:Shubael, from Amram's descendants.Jehdeiah, from Shubael's descendants. That is the list of the Levites, with the leaders of each family."
+      "text": "The leaders of the other Levite families included: Shubael, from Amram's descendants. Jehdeiah, from Shubael's descendants. That is the list of the Levites, with the leaders of each family."
     },
     {
       "verse": "21",
@@ -3100,7 +3100,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "From Izhar's descendants: Shelomoth.From Shelomoth's descendants: Jahath."
+      "text": "From Izhar's descendants: Shelomoth. From Shelomoth's descendants: Jahath."
     },
     {
       "verse": "23",
@@ -3132,7 +3132,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Mushi's sons were: Mahli, Eder and Jerimoth.That is the list of the Levites, with the leaders of each family."
+      "text": "Mushi's sons were: Mahli, Eder and Jerimoth. That is the list of the Levites, with the leaders of each family."
     },
     {
       "verse": "31",
@@ -3174,13 +3174,13 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "groups of musicians. There were 12 musicians in each group and each group had its leader. These were the names of the leaders of each group, from the first to the last that they chose:1. Asaph's descendant Joseph, with his sons and his relatives.2. Gedaliah, with his sons and his relatives.3. Zaccur, with his sons and his relatives.4. Izri, with his sons and his relatives.5. Nethaniah, with his sons and his relatives.6. Bukkiah, with his sons and his relatives.7. Jesarelah, with his sons and his relatives.8. Jeshaiah with his sons and his relatives.9. Mattaniah with his sons and his relatives.10. Shimei with his sons and his relatives.11. Azarel with his sons and his relatives.12. Hashabiah with his sons and his relatives.13. Shubael with his sons and his relatives.14. Mattithiah with his sons and his relatives.15. Jeremoth with his sons and his relatives.16. Hananiah with his sons and his relatives.17. Joshbekashah with his sons and his relatives.18. Hanani with his sons and his relatives.19. Mallothi with his sons and his relatives.20. Eliathah with his sons and his relatives.21. Hothir with his sons and his relatives.22. Giddalti with his sons and his relatives.23. Mahazioth with his sons and his relatives.24. Romamti-Ezer with his sons and his relatives."
+      "text": "groups of musicians. There were 12 musicians in each group and each group had its leader. These were the names of the leaders of each group, from the first to the last that they chose:1. Asaph's descendant Joseph, with his sons and his relatives. 2. Gedaliah, with his sons and his relatives. 3. Zaccur, with his sons and his relatives. 4. Izri, with his sons and his relatives. 5. Nethaniah, with his sons and his relatives. 6. Bukkiah, with his sons and his relatives. 7. Jesarelah, with his sons and his relatives. 8. Jeshaiah with his sons and his relatives. 9. Mattaniah with his sons and his relatives. 10. Shimei with his sons and his relatives. 11. Azarel with his sons and his relatives. 12. Hashabiah with his sons and his relatives. 13. Shubael with his sons and his relatives. 14. Mattithiah with his sons and his relatives. 15. Jeremoth with his sons and his relatives. 16. Hananiah with his sons and his relatives. 17. Joshbekashah with his sons and his relatives. 18. Hanani with his sons and his relatives. 19. Mallothi with his sons and his relatives. 20. Eliathah with his sons and his relatives. 21. Hothir with his sons and his relatives. 22. Giddalti with his sons and his relatives. 23. Mahazioth with his sons and his relatives. 24. Romamti-Ezer with his sons and his relatives."
     }
   ],
   "26": [
     {
       "verse": "1",
-      "text": "These are the groups of guards for the entrances of the temple:From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph. From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph."
+      "text": "These are the groups of guards for the entrances of the temple: From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph. From Korah's descendants there was Kore's son Meshelemiah, who was a descendant of Asaph."
     },
     {
       "verse": "2",
@@ -3236,7 +3236,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They chose Shuppim's group and Hosah's group to be guards at the West gate, as well as the Shalleketh Gate on the higher road.They chose the times for each group of guards to work each day."
+      "text": "They chose Shuppim's group and Hosah's group to be guards at the West gate, as well as the Shalleketh Gate on the higher road. They chose the times for each group of guards to work each day."
     },
     {
       "verse": "17",
@@ -3292,7 +3292,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "There were descendants of Hebron: Hashabiah and his relatives served as officers on the west side of the Jordan River. There were 1,700 of those men who could work well. They had authority for the work the people did to serve the Lord and the king."
+      "text": "There were descendants of Hebron: Hashabiah and his relatives served as officers on the west side of the Jordan River. There were 1, 700 of those men who could work well. They had authority for the work the people did to serve the Lord and the king."
     },
     {
       "verse": "31",
@@ -3300,17 +3300,17 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "There were 2,700 men from Jeriah's clan who were good leaders in their families. King David chose them to be officers with authority for the tribes of Reuben, Gad and the half tribe of Manasseh. They had authority for all the work that people did to serve the Lord and the king."
+      "text": "There were 2, 700 men from Jeriah's clan who were good leaders in their families. King David chose them to be officers with authority for the tribes of Reuben, Gad and the half tribe of Manasseh. They had authority for all the work that people did to serve the Lord and the king."
     }
   ],
   "27": [
     {
       "verse": "1",
-      "text": "This is a list of the men from Israel's families who served as soldiers in the army. Some were leaders of their families. Some were officers who led 1,000 soldiers or officers who led 100 soldiers. Other men were officers who served the king in different ways. Each month of the year, a group of 24,000 men served the king as soldiers."
+      "text": "This is a list of the men from Israel's families who served as soldiers in the army. Some were leaders of their families. Some were officers who led 1, 000 soldiers or officers who led 100 soldiers. Other men were officers who served the king in different ways. Each month of the year, a group of 24, 000 men served the king as soldiers."
     },
     {
       "verse": "2",
-      "text": "Zabdiel's son Jashobeam was the leader of the first group of 24,000 soldiers. They worked in the first month of each year."
+      "text": "Zabdiel's son Jashobeam was the leader of the first group of 24, 000 soldiers. They worked in the first month of each year."
     },
     {
       "verse": "3",
@@ -3318,11 +3318,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Dodai was the leader of the second group of 24,000 soldiers. They worked in the second month. Dodai belonged to Ahoah's clan. Mikloth was the leader who helped him."
+      "text": "Dodai was the leader of the second group of 24, 000 soldiers. They worked in the second month. Dodai belonged to Ahoah's clan. Mikloth was the leader who helped him."
     },
     {
       "verse": "5",
-      "text": "Benaiah was the leader of the third group of 24,000 soldiers. They worked in the third month. Benaiah was the son of Jehoiada, the priest."
+      "text": "Benaiah was the leader of the third group of 24, 000 soldiers. They worked in the third month. Benaiah was the son of Jehoiada, the priest."
     },
     {
       "verse": "6",
@@ -3330,43 +3330,43 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Asahel was the leader of the fourth group of 24,000 soldiers. They worked in the fourth month. Asahel was Joab's brother. His son Zebadiah was the leader of the group after him."
+      "text": "Asahel was the leader of the fourth group of 24, 000 soldiers. They worked in the fourth month. Asahel was Joab's brother. His son Zebadiah was the leader of the group after him."
     },
     {
       "verse": "8",
-      "text": "Shamhuth, from Izrah's clan, was the leader of the fifth group of 24,000 soldiers. They worked in the fifth month."
+      "text": "Shamhuth, from Izrah's clan, was the leader of the fifth group of 24, 000 soldiers. They worked in the fifth month."
     },
     {
       "verse": "9",
-      "text": "Ira was the leader of the sixth group of 24,000 soldiers. They worked in the sixth month. Ira was the son of Ikkesh from Tekoa."
+      "text": "Ira was the leader of the sixth group of 24, 000 soldiers. They worked in the sixth month. Ira was the son of Ikkesh from Tekoa."
     },
     {
       "verse": "10",
-      "text": "Helez was the leader of the seventh group of 24,000 soldiers. They worked in the seventh month. He belonged to Pelon's clan, in the tribe of Ephraim."
+      "text": "Helez was the leader of the seventh group of 24, 000 soldiers. They worked in the seventh month. He belonged to Pelon's clan, in the tribe of Ephraim."
     },
     {
       "verse": "11",
-      "text": "Sibbecai was the leader of the eighth group of 24,000 soldiers. They worked in the eighth month. Sibbecai was a descendant of Zerah, who came from Hushah."
+      "text": "Sibbecai was the leader of the eighth group of 24, 000 soldiers. They worked in the eighth month. Sibbecai was a descendant of Zerah, who came from Hushah."
     },
     {
       "verse": "12",
-      "text": "Abiezer was the leader of the ninth group of 24,000 soldiers. They worked in the ninth month. Abiezer came from Anathoth, in the tribe of Benjamin."
+      "text": "Abiezer was the leader of the ninth group of 24, 000 soldiers. They worked in the ninth month. Abiezer came from Anathoth, in the tribe of Benjamin."
     },
     {
       "verse": "13",
-      "text": "Maharai was the leader of the tenth group of 24,000 soldiers. They worked in the tenth month. Maharai was a descendant of Zerah, who came from Netophah."
+      "text": "Maharai was the leader of the tenth group of 24, 000 soldiers. They worked in the tenth month. Maharai was a descendant of Zerah, who came from Netophah."
     },
     {
       "verse": "14",
-      "text": "Benaiah was the leader of the 11th group of 24,000 soldiers. They worked in the 11th month. Benaiah came from Pirathon, in the tribe of Ephraim."
+      "text": "Benaiah was the leader of the 11th group of 24, 000 soldiers. They worked in the 11th month. Benaiah came from Pirathon, in the tribe of Ephraim."
     },
     {
       "verse": "15",
-      "text": "Heldai was the leader of the 12th group of 24,000 soldiers. They worked in the 12th month. He was a descendant of Othniel, who came from Netophah."
+      "text": "Heldai was the leader of the 12th group of 24, 000 soldiers. They worked in the 12th month. He was a descendant of Othniel, who came from Netophah."
     },
     {
       "verse": "16",
-      "text": "This is a list of the officers who had authority over Israel's tribes:For Reuben: Zikri's son, Eliezer.For Simeon: Maakah's son, Shephatiah. Those were the officers who led the tribes of Israel."
+      "text": "This is a list of the officers who had authority over Israel's tribes: For Reuben: Zikri's son, Eliezer. For Simeon: Maakah's son, Shephatiah. Those were the officers who led the tribes of Israel."
     },
     {
       "verse": "17",
@@ -3374,23 +3374,23 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "For Judah: Elihu, a brother of David.For Issachar: Michael's son, Omri."
+      "text": "For Judah: Elihu, a brother of David. For Issachar: Michael's son, Omri."
     },
     {
       "verse": "19",
-      "text": "For Zebulun: Obadiah's son, Ishmaiah.For Naphtali: Azriel's son, Jerimoth."
+      "text": "For Zebulun: Obadiah's son, Ishmaiah. For Naphtali: Azriel's son, Jerimoth."
     },
     {
       "verse": "20",
-      "text": "For Ephraim Hoshea's son, Azaziah.For the half tribe of Manasseh in the west: Pedaiah's son, Joel."
+      "text": "For Ephraim Hoshea's son, Azaziah. For the half tribe of Manasseh in the west: Pedaiah's son, Joel."
     },
     {
       "verse": "21",
-      "text": "For the half tribe of Manasseh in Gilead: Zechariah's son, Iddo.For Benjamin: Abner's son, Jaasiel."
+      "text": "For the half tribe of Manasseh in Gilead: Zechariah's son, Iddo. For Benjamin: Abner's son, Jaasiel."
     },
     {
       "verse": "22",
-      "text": "For Dan: Jeroham's son, Azarel.Those were the officers who led the tribes of Israel."
+      "text": "For Dan: Jeroham's son, Azarel. Those were the officers who led the tribes of Israel."
     },
     {
       "verse": "23",
@@ -3402,7 +3402,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Adiel's son Azmaveth had authority over the places in the palace where the king stored his valuable things.Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers. Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers."
+      "text": "Adiel's son Azmaveth had authority over the places in the palace where the king stored his valuable things. Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers. Uzziah's son Jonathan had authority over the places in the different regions of Israel where the king stored his things. Those places were in towns, in villages and in strong towers."
     },
     {
       "verse": "26",
@@ -3410,27 +3410,27 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Shimei from Ramah had authority over the men who worked in the king's vineyards.Zabdi from Shepham had authority over the men who stored wine in the vineyards. Zabdi from Shepham had authority over the men who stored wine in the vineyards."
+      "text": "Shimei from Ramah had authority over the men who worked in the king's vineyards. Zabdi from Shepham had authority over the men who stored wine in the vineyards. Zabdi from Shepham had authority over the men who stored wine in the vineyards."
     },
     {
       "verse": "28",
-      "text": "Baal-Hanan from Geder had authority over the trees in the low hills in the west. They were olive trees and fig trees.Joash had authority over the places where they stored the olive oil. Joash had authority over the places where they stored the olive oil."
+      "text": "Baal-Hanan from Geder had authority over the trees in the low hills in the west. They were olive trees and fig trees. Joash had authority over the places where they stored the olive oil. Joash had authority over the places where they stored the olive oil."
     },
     {
       "verse": "29",
-      "text": "Shitrai from Sharon had authority to take care of the king's cows that were in Sharon.Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys. Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys."
+      "text": "Shitrai from Sharon had authority to take care of the king's cows that were in Sharon. Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys. Adlai's son Shaphat had authority to take care of the king's cows that were in the valleys."
     },
     {
       "verse": "30",
-      "text": "Obil, a descendant of Ishmael, had authority for the king's camels.Jehdeiah from Meronoth had authority for the donkeys. Jehdeiah from Meronoth had authority for the donkeys."
+      "text": "Obil, a descendant of Ishmael, had authority for the king's camels. Jehdeiah from Meronoth had authority for the donkeys. Jehdeiah from Meronoth had authority for the donkeys."
     },
     {
       "verse": "31",
-      "text": "Jaziz, a descendant of Hagar, had authority to take care of the king's sheep and goats.These were the officers who had authority to take care of King David's things. These were the officers who had authority to take care of King David's things."
+      "text": "Jaziz, a descendant of Hagar, had authority to take care of the king's sheep and goats. These were the officers who had authority to take care of King David's things. These were the officers who had authority to take care of King David's things."
     },
     {
       "verse": "32",
-      "text": "David's uncle, Jonathan, was a wise man who gave good advice. He wrote down records.Hakmoni's son Jehiel taught the king's sons. Hakmoni's son Jehiel taught the king's sons."
+      "text": "David's uncle, Jonathan, was a wise man who gave good advice. He wrote down records. Hakmoni's son Jehiel taught the king's sons. Hakmoni's son Jehiel taught the king's sons."
     },
     {
       "verse": "33",
@@ -3438,13 +3438,13 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "After Ahithophel died, Benaiah's son Jehoiada became the king's advisor. After him, Abiathar became his advisor.Joab was the captain who led the king's army."
+      "text": "After Ahithophel died, Benaiah's son Jehoiada became the king's advisor. After him, Abiathar became his advisor. Joab was the captain who led the king's army."
     }
   ],
   "28": [
     {
       "verse": "1",
-      "text": "David told all Israel's officers to come and meet with him in Jerusalem. They included:The officers who had authority over Israel's tribes.The leaders of the army groups that served the king.The army officers who led groups of 1,000 soldiers or 100 soldiers.The officers who had authority for the king's valuable things and animals.The officers who had authority for the animals and things that belonged to the king's sons.The officers in the king's palace.The brave army officers and soldiers."
+      "text": "David told all Israel's officers to come and meet with him in Jerusalem. They included: The officers who had authority over Israel's tribes. The leaders of the army groups that served the king. The army officers who led groups of 1, 000 soldiers or 100 soldiers. The officers who had authority for the king's valuable things and animals. The officers who had authority for the animals and things that belonged to the king's sons. The officers in the king's palace. The brave army officers and soldiers."
     },
     {
       "verse": "2",
@@ -3452,7 +3452,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But God said to me, “You are a fighter and you have killed many people in war. So you must not build a house to give honour to my name.”"
+      "text": "But God said to me, “You are a fighter and you have killed many people in war. So you must not build a house to give honour to my name. ”"
     },
     {
       "verse": "4",
@@ -3468,7 +3468,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He must always continue to obey my commands and my laws, as he now does. If he is careful to do that, I will make his kingdom strong for all time.”"
+      "text": "He must always continue to obey my commands and my laws, as he now does. If he is careful to do that, I will make his kingdom strong for all time. ”"
     },
     {
       "verse": "8",
@@ -3480,7 +3480,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "You must realize that the Lord has chosen you to build a temple to be his special home. Now you must be strong! Do this work.’"
+      "text": "You must realize that the Lord has chosen you to build a temple to be his special home. Now you must be strong! Do this work. ’"
     },
     {
       "verse": "11",
@@ -3512,11 +3512,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "And there was the weight of pure gold for the altar to burn incense.David also gave Solomon the plan for the gold images of cherubs for the Lord's Covenant Box. They would have wings that touched each other above the lid of the Covenant Box. They would be like a chariot for the Lord."
+      "text": "And there was the weight of pure gold for the altar to burn incense. David also gave Solomon the plan for the gold images of cherubs for the Lord's Covenant Box. They would have wings that touched each other above the lid of the Covenant Box. They would be like a chariot for the Lord."
     },
     {
       "verse": "19",
-      "text": "David said, ‘I have written down everything about these things, as the Lord told me to do. He helped me to understand how these plans would work.’"
+      "text": "David said, ‘I have written down everything about these things, as the Lord told me to do. He helped me to understand how these plans would work. ’"
     },
     {
       "verse": "20",
@@ -3524,7 +3524,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Look! Here are the groups of priests and Levites who are ready to serve the Lord in the temple. The men with special skills are ready to help you with the work. The officers and all the people are ready to do what you tell them to do.’"
+      "text": "Look! Here are the groups of priests and Levites who are ready to serve the Lord in the temple. The men with special skills are ready to help you with the work. The officers and all the people are ready to do what you tell them to do. ’"
     }
   ],
   "29": [
@@ -3546,15 +3546,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Workers with special skills can also use that gold and silver to make beautiful things. So now, who else will make a gift today to serve the Lord?’"
+      "text": "Workers with special skills can also use that gold and silver to make beautiful things. So now, who else will make a gift today to serve the Lord? ’"
     },
     {
       "verse": "6",
-      "text": "Then the Israelite leaders and officers agreed to offer gifts to help the Lord's work. They included the leaders of clans and the leaders of Israel's tribes, the army officers who led 1,000 men and who led 100 men, and the officers with authority for the king's work."
+      "text": "Then the Israelite leaders and officers agreed to offer gifts to help the Lord's work. They included the leaders of clans and the leaders of Israel's tribes, the army officers who led 1, 000 men and who led 100 men, and the officers with authority for the king's work."
     },
     {
       "verse": "7",
-      "text": "They gave these gifts for God's temple:190 tons of gold.10,000 gold coins.380 tons of silver.675 tons of bronze.3,750 tons of iron."
+      "text": "They gave these gifts for God's temple:190 tons of gold. 10, 000 gold coins. 380 tons of silver. 675 tons of bronze. 3, 750 tons of iron."
     },
     {
       "verse": "8",
@@ -3566,19 +3566,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "David praised the Lord in front of all the people who had met together. He said,‘We praise you Lord,the God of our ancestor, Israel.You deserve that people praise you for ever! ‘We praise you Lord, the God of our ancestor, Israel. You deserve that people praise you for ever!"
+      "text": "David praised the Lord in front of all the people who had met together. He said, ‘We praise you Lord, the God of our ancestor, Israel. You deserve that people praise you for ever! ‘We praise you Lord, the God of our ancestor, Israel. You deserve that people praise you for ever!"
     },
     {
       "verse": "11",
-      "text": "Lord, you are great, powerful and beautiful!You rule as king over everything in heaven and on earth.Yes, Lord, everything belongs in your kingdom! You rule as king over everything in heaven and on earth. Yes, Lord, everything belongs in your kingdom!"
+      "text": "Lord, you are great, powerful and beautiful! You rule as king over everything in heaven and on earth. Yes, Lord, everything belongs in your kingdom! You rule as king over everything in heaven and on earth. Yes, Lord, everything belongs in your kingdom!"
     },
     {
       "verse": "12",
-      "text": "You are the one who gives people riches and honour.You rule over everything.You have great strength and power,so you are able to make people strong and famous. You rule over everything. You have great strength and power, so you are able to make people strong and famous."
+      "text": "You are the one who gives people riches and honour. You rule over everything. You have great strength and power, so you are able to make people strong and famous. You rule over everything. You have great strength and power, so you are able to make people strong and famous."
     },
     {
       "verse": "13",
-      "text": "So we thank you, our God.We praise your great name! We praise your great name!"
+      "text": "So we thank you, our God. We praise your great name! We praise your great name!"
     },
     {
       "verse": "14",
@@ -3602,19 +3602,19 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Please help my son Solomon to want to obey you. Help him to obey all your commands, rules and laws. Help him to work well to build your temple. I have prepared the things that he will need to do that.’"
+      "text": "Please help my son Solomon to want to obey you. Help him to obey all your commands, rules and laws. Help him to work well to build your temple. I have prepared the things that he will need to do that. ’"
     },
     {
       "verse": "20",
-      "text": "Then David spoke to all the people who were meeting there together. He told them, ‘Now praise the Lord, your God!’ So all the people praised the Lord, the God of their ancestors. They bent down low to worship the Lord. They gave honour to the Lord and also to the king."
+      "text": "Then David spoke to all the people who were meeting there together. He told them, ‘Now praise the Lord, your God! ’ So all the people praised the Lord, the God of their ancestors. They bent down low to worship the Lord. They gave honour to the Lord and also to the king."
     },
     {
       "verse": "21",
-      "text": "On the next day, they offered sacrifices to the Lord. They made burnt offerings of 1,000 bulls, 1,000 male sheep and 1,000 lambs. They made the proper drink offerings with those sacrifices. They also offered many other sacrifices on behalf of all the Israelites."
+      "text": "On the next day, they offered sacrifices to the Lord. They made burnt offerings of 1, 000 bulls, 1, 000 male sheep and 1, 000 lambs. They made the proper drink offerings with those sacrifices. They also offered many other sacrifices on behalf of all the Israelites."
     },
     {
       "verse": "22",
-      "text": "They ate a big feast to give honour to the Lord and they were very happy.Then they anointed David's son Solomon to be the next king, with the Lord's blessing. That was the second time that they had chosen him as their king. They also anointed Zadok to be priest."
+      "text": "They ate a big feast to give honour to the Lord and they were very happy. Then they anointed David's son Solomon to be the next king, with the Lord's blessing. That was the second time that they had chosen him as their king. They also anointed Zadok to be priest."
     },
     {
       "verse": "23",

@@ -6,43 +6,43 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Teacher says, ‘Nothing has a purpose.Nothing that ever happens has a purpose.’ Nothing that ever happens has a purpose.’"
+      "text": "The Teacher says, ‘Nothing has a purpose. Nothing that ever happens has a purpose. ’ Nothing that ever happens has a purpose. ’"
     },
     {
       "verse": "3",
-      "text": "People work very hard while they live on the earth.But in the end, what do they receive in return for their work? But in the end, what do they receive in return for their work?"
+      "text": "People work very hard while they live on the earth. But in the end, what do they receive in return for their work? But in the end, what do they receive in return for their work?"
     },
     {
       "verse": "4",
-      "text": "Old people die and then their children live after them.But the earth continues and it never changes. But the earth continues and it never changes."
+      "text": "Old people die and then their children live after them. But the earth continues and it never changes. But the earth continues and it never changes."
     },
     {
       "verse": "5",
-      "text": "The sun rises in the morning and it disappears in the evening.Then it quickly moves to rise again the next morning. Then it quickly moves to rise again the next morning."
+      "text": "The sun rises in the morning and it disappears in the evening. Then it quickly moves to rise again the next morning. Then it quickly moves to rise again the next morning."
     },
     {
       "verse": "6",
-      "text": "The wind blows to the south. Then it turns to the north.It blows in every direction. Then it starts again. It blows in every direction. Then it starts again."
+      "text": "The wind blows to the south. Then it turns to the north. It blows in every direction. Then it starts again. It blows in every direction. Then it starts again."
     },
     {
       "verse": "7",
-      "text": "All rivers pour water into the sea, but the sea does not become full.The water returns to the rivers and it all happens again. The water returns to the rivers and it all happens again."
+      "text": "All rivers pour water into the sea, but the sea does not become full. The water returns to the rivers and it all happens again. The water returns to the rivers and it all happens again."
     },
     {
       "verse": "8",
-      "text": "Everything continues in the same way.There is nothing important to talk about.Nothing that we see is enough to make us happy.There are always more things that we want to hear. There is nothing important to talk about. Nothing that we see is enough to make us happy. There are always more things that we want to hear."
+      "text": "Everything continues in the same way. There is nothing important to talk about. Nothing that we see is enough to make us happy. There are always more things that we want to hear. There is nothing important to talk about. Nothing that we see is enough to make us happy. There are always more things that we want to hear."
     },
     {
       "verse": "9",
-      "text": "Things that are happening now will continue to happen in the future.What people have done before, other people will do again.There is nothing truly new anywhere on the earth. What people have done before, other people will do again. There is nothing truly new anywhere on the earth."
+      "text": "Things that are happening now will continue to happen in the future. What people have done before, other people will do again. There is nothing truly new anywhere on the earth. What people have done before, other people will do again. There is nothing truly new anywhere on the earth."
     },
     {
       "verse": "10",
-      "text": "People may say, ‘Look! Here is something new!’But really it happened long ago, before we were born. But really it happened long ago, before we were born."
+      "text": "People may say, ‘Look! Here is something new! ’But really it happened long ago, before we were born. But really it happened long ago, before we were born."
     },
     {
       "verse": "11",
-      "text": "People do not remember things that happened in the past.In the future, people will not remember what has happened either. In the future, people will not remember what has happened either."
+      "text": "People do not remember things that happened in the past. In the future, people will not remember what has happened either. In the future, people will not remember what has happened either."
     },
     {
       "verse": "12",
@@ -58,11 +58,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "If someone has bent something,you cannot always make it straight again.You cannot count things,if they are not there. you cannot always make it straight again. You cannot count things, if they are not there."
+      "text": "If someone has bent something, you cannot always make it straight again. You cannot count things, if they are not there. you cannot always make it straight again. You cannot count things, if they are not there."
     },
     {
       "verse": "16",
-      "text": "I said to myself, ‘Listen! I have become very wise! I am much wiser than any of the kings who ruled in Jerusalem before me. I know a lot more things than they ever did!’"
+      "text": "I said to myself, ‘Listen! I have become very wise! I am much wiser than any of the kings who ruled in Jerusalem before me. I know a lot more things than they ever did! ’"
     },
     {
       "verse": "17",
@@ -70,17 +70,17 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The more wisdom you have,the more you will worry.The more you learn,the more you suffer."
+      "text": "The more wisdom you have, the more you will worry. The more you learn, the more you suffer."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "I said to myself, ‘I will enjoy the good things of life. I will see if that helps me to be happy.’ But I realized that this too had no purpose."
+      "text": "I said to myself, ‘I will enjoy the good things of life. I will see if that helps me to be happy. ’ But I realized that this too had no purpose."
     },
     {
       "verse": "2",
-      "text": "I said, ‘It is foolish to laugh all the time. If I only try to please myself, it does not really help me.’"
+      "text": "I said, ‘It is foolish to laugh all the time. If I only try to please myself, it does not really help me. ’"
     },
     {
       "verse": "3",
@@ -112,31 +112,31 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "If I saw something that I wantedI took it for myself.If something would give me pleasure,I did it.So all my work made me very happy.My hard work gave me things to enjoy. I took it for myself. If something would give me pleasure, I did it. So all my work made me very happy. My hard work gave me things to enjoy."
+      "text": "If I saw something that I wantedI took it for myself. If something would give me pleasure, I did it. So all my work made me very happy. My hard work gave me things to enjoy. I took it for myself. If something would give me pleasure, I did it. So all my work made me very happy. My hard work gave me things to enjoy."
     },
     {
       "verse": "11",
-      "text": "Then I thought about everything that I had done,and all my hard work.After all that, I realized that none of these things had a purpose.I was like somebody who tries to catch the wind.None of the things on earth have any value. and all my hard work. After all that, I realized that none of these things had a purpose. I was like somebody who tries to catch the wind. None of the things on earth have any value."
+      "text": "Then I thought about everything that I had done, and all my hard work. After all that, I realized that none of these things had a purpose. I was like somebody who tries to catch the wind. None of the things on earth have any value. and all my hard work. After all that, I realized that none of these things had a purpose. I was like somebody who tries to catch the wind. None of the things on earth have any value."
     },
     {
       "verse": "12",
-      "text": "Then I decided to think about wisdom.I also thought about foolish ways to live.I thought, ‘The next king will not do any morethan I have already done.’ I also thought about foolish ways to live. I thought, ‘The next king will not do any more than I have already done.’"
+      "text": "Then I decided to think about wisdom. I also thought about foolish ways to live. I thought, ‘The next king will not do any morethan I have already done. ’ I also thought about foolish ways to live. I thought, ‘The next king will not do any more than I have already done. ’"
     },
     {
       "verse": "13",
-      "text": "I realized that it is better to be wise than foolish.In the same way, the light is better than the dark. In the same way, the light is better than the dark."
+      "text": "I realized that it is better to be wise than foolish. In the same way, the light is better than the dark. In the same way, the light is better than the dark."
     },
     {
       "verse": "14",
-      "text": "Wise people can see where they are going.Foolish people walk in the dark.But at the end of their lives, there is no difference.They both die. Foolish people walk in the dark. But at the end of their lives, there is no difference. They both die."
+      "text": "Wise people can see where they are going. Foolish people walk in the dark. But at the end of their lives, there is no difference. They both die. Foolish people walk in the dark. But at the end of their lives, there is no difference. They both die."
     },
     {
       "verse": "15",
-      "text": "Then I thought, ‘I will also die, as foolish people do.So what value have I received from my great wisdom?’I said to myself, ‘Wisdom too has no purpose.’ So what value have I received from my great wisdom?’ I said to myself, ‘Wisdom too has no purpose.’"
+      "text": "Then I thought, ‘I will also die, as foolish people do. So what value have I received from my great wisdom? ’I said to myself, ‘Wisdom too has no purpose. ’ So what value have I received from my great wisdom? ’ I said to myself, ‘Wisdom too has no purpose. ’"
     },
     {
       "verse": "16",
-      "text": "People forget about wise peopleas quickly as they forget about fools.One day, nobody will remember any of them.It is true! As fools all have to die, wise people will also die. as quickly as they forget about fools. One day, nobody will remember any of them. It is true! As fools all have to die, wise people will also die."
+      "text": "People forget about wise peopleas quickly as they forget about fools. One day, nobody will remember any of them. It is true! As fools all have to die, wise people will also die. as quickly as they forget about fools. One day, nobody will remember any of them. It is true! As fools all have to die, wise people will also die."
     },
     {
       "verse": "17",
@@ -182,35 +182,35 @@ module.exports = {
   "3": [
     {
       "verse": "1",
-      "text": "There is a right time for everything.Everything that we do on the earth has a proper time. Everything that we do on the earth has a proper time."
+      "text": "There is a right time for everything. Everything that we do on the earth has a proper time. Everything that we do on the earth has a proper time."
     },
     {
       "verse": "2",
-      "text": "There is a time to be born,and there is a time to die.There is a time to plant seeds.There is a time to pull the plants out of the ground. and there is a time to die. There is a time to plant seeds. There is a time to pull the plants out of the ground."
+      "text": "There is a time to be born, and there is a time to die. There is a time to plant seeds. There is a time to pull the plants out of the ground. and there is a time to die. There is a time to plant seeds. There is a time to pull the plants out of the ground."
     },
     {
       "verse": "3",
-      "text": "There is a time to kill people.There is a time to make people well.There is a time to destroy things.There is a time to build things. There is a time to make people well. There is a time to destroy things. There is a time to build things."
+      "text": "There is a time to kill people. There is a time to make people well. There is a time to destroy things. There is a time to build things. There is a time to make people well. There is a time to destroy things. There is a time to build things."
     },
     {
       "verse": "4",
-      "text": "There is a time to weep.There is a time to laugh.There is a time to be sad.There is a time to dance. There is a time to laugh. There is a time to be sad. There is a time to dance."
+      "text": "There is a time to weep. There is a time to laugh. There is a time to be sad. There is a time to dance. There is a time to laugh. There is a time to be sad. There is a time to dance."
     },
     {
       "verse": "5",
-      "text": "There is a time to throw stones away.There is a time to pick them up and use them.There is a time to hug people.There is a time to turn away from people. There is a time to pick them up and use them. There is a time to hug people. There is a time to turn away from people."
+      "text": "There is a time to throw stones away. There is a time to pick them up and use them. There is a time to hug people. There is a time to turn away from people. There is a time to pick them up and use them. There is a time to hug people. There is a time to turn away from people."
     },
     {
       "verse": "6",
-      "text": "There is a time to look for things that you have lost.There is a time to accept that you have lost them.There is a time to keep things.There is a time to throw things away. There is a time to accept that you have lost them. There is a time to keep things. There is a time to throw things away."
+      "text": "There is a time to look for things that you have lost. There is a time to accept that you have lost them. There is a time to keep things. There is a time to throw things away. There is a time to accept that you have lost them. There is a time to keep things. There is a time to throw things away."
     },
     {
       "verse": "7",
-      "text": "There is a time to tear our clothes.There is a time to mend them.There is a time to say nothing.There is a time to speak. There is a time to mend them. There is a time to say nothing. There is a time to speak."
+      "text": "There is a time to tear our clothes. There is a time to mend them. There is a time to say nothing. There is a time to speak. There is a time to mend them. There is a time to say nothing. There is a time to speak."
     },
     {
       "verse": "8",
-      "text": "There is a time to love.There is a time to hate.There is a time for war.There is a time for peace. There is a time to hate. There is a time for war. There is a time for peace."
+      "text": "There is a time to love. There is a time to hate. There is a time for war. There is a time for peace. There is a time to hate. There is a time for war. There is a time for peace."
     },
     {
       "verse": "9",
@@ -238,15 +238,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Whatever is happening now has happened before.Everything that will happen in the future has already happened.God causes the same things to happen again and again. Everything that will happen in the future has already happened. God causes the same things to happen again and again."
+      "text": "Whatever is happening now has happened before. Everything that will happen in the future has already happened. God causes the same things to happen again and again. Everything that will happen in the future has already happened. God causes the same things to happen again and again."
     },
     {
       "verse": "16",
-      "text": "I saw something else that happens on the earth.Judges should choose what is right,but instead they choose what is wicked.They should decide what is fair,but they do evil things. Judges should choose what is right, but instead they choose what is wicked. They should decide what is fair, but they do evil things."
+      "text": "I saw something else that happens on the earth. Judges should choose what is right, but instead they choose what is wicked. They should decide what is fair, but they do evil things. Judges should choose what is right, but instead they choose what is wicked. They should decide what is fair, but they do evil things."
     },
     {
       "verse": "17",
-      "text": "I said to myself,‘One day, God will judge everyone,righteous people and wicked people.He has chosen a time for everything.So there is a right time when he will judge people.’ ‘One day, God will judge everyone, righteous people and wicked people. He has chosen a time for everything. So there is a right time when he will judge people.’"
+      "text": "I said to myself, ‘One day, God will judge everyone, righteous people and wicked people. He has chosen a time for everything. So there is a right time when he will judge people. ’ ‘One day, God will judge everyone, righteous people and wicked people. He has chosen a time for everything. So there is a right time when he will judge people. ’"
     },
     {
       "verse": "18",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Do the spirits of humans go up into the sky when we die? Do the spirits of animals go down into the ground? Nobody really knows.’"
+      "text": "Do the spirits of humans go up into the sky when we die? Do the spirits of animals go down into the ground? Nobody really knows. ’"
     },
     {
       "verse": "22",
@@ -272,15 +272,15 @@ module.exports = {
   "4": [
     {
       "verse": "1",
-      "text": "I saw again all the ways that people are cruel on the earth.I saw some people who were crying because cruel people were hurting them.There was nobody who could help them.Nobody could rescue them from those cruel people. I saw some people who were crying because cruel people were hurting them. There was nobody who could help them. Nobody could rescue them from those cruel people."
+      "text": "I saw again all the ways that people are cruel on the earth. I saw some people who were crying because cruel people were hurting them. There was nobody who could help them. Nobody could rescue them from those cruel people. I saw some people who were crying because cruel people were hurting them. There was nobody who could help them. Nobody could rescue them from those cruel people."
     },
     {
       "verse": "2",
-      "text": "I thought about people who are already dead.I decided that they are happier than the people who are still alive. I decided that they are happier than the people who are still alive."
+      "text": "I thought about people who are already dead. I decided that they are happier than the people who are still alive. I decided that they are happier than the people who are still alive."
     },
     {
       "verse": "3",
-      "text": "But people who have not yet been born are even happier!They have not seen the evil things that happen on the earth. They have not seen the evil things that happen on the earth."
+      "text": "But people who have not yet been born are even happier! They have not seen the evil things that happen on the earth. They have not seen the evil things that happen on the earth."
     },
     {
       "verse": "4",
@@ -288,11 +288,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Foolish people refuse to work.They sit and they do nothing.So they become hungry and they die. They sit and they do nothing. So they become hungry and they die."
+      "text": "Foolish people refuse to work. They sit and they do nothing. So they become hungry and they die. They sit and they do nothing. So they become hungry and they die."
     },
     {
       "verse": "6",
-      "text": "It is good to have only a little food and be happy.That is better than too much hard work that gives you a lot of food.It is as useless as somebody who tries to catch the wind. That is better than too much hard work that gives you a lot of food. It is as useless as somebody who tries to catch the wind."
+      "text": "It is good to have only a little food and be happy. That is better than too much hard work that gives you a lot of food. It is as useless as somebody who tries to catch the wind. That is better than too much hard work that gives you a lot of food. It is as useless as somebody who tries to catch the wind."
     },
     {
       "verse": "7",
@@ -300,23 +300,23 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "There are people who live alone.They have no friends, children or brothers.They work hard every day.They want to get more riches for themselves.But they are never happy with the things that they have.They should ask themselves, ‘Why am I working so hard?Am I helping anybody?I am not doing things that make me happy.’Their work has no purpose. It only brings trouble to their lives. They have no friends, children or brothers. They work hard every day. They want to get more riches for themselves. But they are never happy with the things that they have. They should ask themselves, ‘Why am I working so hard? Am I helping anybody? I am not doing things that make me happy.’ Their work has no purpose. It only brings trouble to their lives."
+      "text": "There are people who live alone. They have no friends, children or brothers. They work hard every day. They want to get more riches for themselves. But they are never happy with the things that they have. They should ask themselves, ‘Why am I working so hard? Am I helping anybody? I am not doing things that make me happy. ’Their work has no purpose. It only brings trouble to their lives. They have no friends, children or brothers. They work hard every day. They want to get more riches for themselves. But they are never happy with the things that they have. They should ask themselves, ‘Why am I working so hard? Am I helping anybody? I am not doing things that make me happy. ’ Their work has no purpose. It only brings trouble to their lives."
     },
     {
       "verse": "9",
-      "text": "Two people who work togetherare better than one person who works alone.They can help each other to work well. are better than one person who works alone. They can help each other to work well."
+      "text": "Two people who work togetherare better than one person who works alone. They can help each other to work well. are better than one person who works alone. They can help each other to work well."
     },
     {
       "verse": "10",
-      "text": "If one of them falls down,his friend can help him to get up.But it is terrible if you fall down when you are alone.There is nobody who can help you to stand up again. his friend can help him to get up. But it is terrible if you fall down when you are alone. There is nobody who can help you to stand up again."
+      "text": "If one of them falls down, his friend can help him to get up. But it is terrible if you fall down when you are alone. There is nobody who can help you to stand up again. his friend can help him to get up. But it is terrible if you fall down when you are alone. There is nobody who can help you to stand up again."
     },
     {
       "verse": "11",
-      "text": "Also, if two people sleep together,they help each other to be warm.But if you sleep alone,it is difficult to be warm. they help each other to be warm. But if you sleep alone, it is difficult to be warm."
+      "text": "Also, if two people sleep together, they help each other to be warm. But if you sleep alone, it is difficult to be warm. they help each other to be warm. But if you sleep alone, it is difficult to be warm."
     },
     {
       "verse": "12",
-      "text": "If you are alone, one person might attack you and hurt you.But two people together can help each other to win the fight.If you use three strings to make a rope,it is difficult for anyone to break it. But two people together can help each other to win the fight. If you use three strings to make a rope, it is difficult for anyone to break it."
+      "text": "If you are alone, one person might attack you and hurt you. But two people together can help each other to win the fight. If you use three strings to make a rope, it is difficult for anyone to break it. But two people together can help each other to win the fight. If you use three strings to make a rope, it is difficult for anyone to break it."
     },
     {
       "verse": "13",
@@ -342,15 +342,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "You should not speak too soon.Think carefully before you make a promise to God.God is in heaven and you are here on the earth.So do not say too much. Think carefully before you make a promise to God. God is in heaven and you are here on the earth. So do not say too much."
+      "text": "You should not speak too soon. Think carefully before you make a promise to God. God is in heaven and you are here on the earth. So do not say too much. Think carefully before you make a promise to God. God is in heaven and you are here on the earth. So do not say too much."
     },
     {
       "verse": "3",
-      "text": "If you worry about many things,you will have many dreams.If you talk too much,you will say foolish things. you will have many dreams. If you talk too much, you will say foolish things."
+      "text": "If you worry about many things, you will have many dreams. If you talk too much, you will say foolish things. you will have many dreams. If you talk too much, you will say foolish things."
     },
     {
       "verse": "4",
-      "text": "If you make a promise to God,quickly do what you have promised.God is not pleased with foolish people.So give what you have promised to give. quickly do what you have promised. God is not pleased with foolish people. So give what you have promised to give."
+      "text": "If you make a promise to God, quickly do what you have promised. God is not pleased with foolish people. So give what you have promised to give. quickly do what you have promised. God is not pleased with foolish people. So give what you have promised to give."
     },
     {
       "verse": "5",
@@ -358,7 +358,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Do not say things that cause you to do something wrong. Do not say to the priest, ‘My promise was a mistake.’ That would make God angry with you. He might destroy everything that you have worked to get for yourself."
+      "text": "Do not say things that cause you to do something wrong. Do not say to the priest, ‘My promise was a mistake. ’ That would make God angry with you. He might destroy everything that you have worked to get for yourself."
     },
     {
       "verse": "7",
@@ -374,35 +374,35 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "People who love money never have enough.They may get more and more valuable things,but they are never happy.This also has no purpose. They may get more and more valuable things, but they are never happy. This also has no purpose."
+      "text": "People who love money never have enough. They may get more and more valuable things, but they are never happy. This also has no purpose. They may get more and more valuable things, but they are never happy. This also has no purpose."
     },
     {
       "verse": "11",
-      "text": "As a person's money becomes more,there are more people who want a share of it.Money does not help the people who have a lot of it.They see it, but it quickly disappears. there are more people who want a share of it. Money does not help the people who have a lot of it. They see it, but it quickly disappears."
+      "text": "As a person's money becomes more, there are more people who want a share of it. Money does not help the people who have a lot of it. They see it, but it quickly disappears. there are more people who want a share of it. Money does not help the people who have a lot of it. They see it, but it quickly disappears."
     },
     {
       "verse": "12",
-      "text": "Someone who has worked hard all day will sleep well at night.That is true even if they have not had much food to eat.But the rich man worries about his riches.So he does not sleep well. That is true even if they have not had much food to eat. But the rich man worries about his riches. So he does not sleep well."
+      "text": "Someone who has worked hard all day will sleep well at night. That is true even if they have not had much food to eat. But the rich man worries about his riches. So he does not sleep well. That is true even if they have not had much food to eat. But the rich man worries about his riches. So he does not sleep well."
     },
     {
       "verse": "13",
-      "text": "I have seen another terrible thing that happens on the earth.Some people may store their riches,but it does not help them in a time of trouble. Some people may store their riches, but it does not help them in a time of trouble."
+      "text": "I have seen another terrible thing that happens on the earth. Some people may store their riches, but it does not help them in a time of trouble. Some people may store their riches, but it does not help them in a time of trouble."
     },
     {
       "verse": "14",
-      "text": "Something may happen in the futurethat causes their money to disappear.After they die,no money remains for their children. that causes their money to disappear. After they die, no money remains for their children."
+      "text": "Something may happen in the futurethat causes their money to disappear. After they die, no money remains for their children. that causes their money to disappear. After they die, no money remains for their children."
     },
     {
       "verse": "15",
-      "text": "When people are born,they bring nothing with them.When they die,they take nothing away with them.All their hard work finally leaves them with nothing. they bring nothing with them. When they die, they take nothing away with them. All their hard work finally leaves them with nothing."
+      "text": "When people are born, they bring nothing with them. When they die, they take nothing away with them. All their hard work finally leaves them with nothing. they bring nothing with them. When they die, they take nothing away with them. All their hard work finally leaves them with nothing."
     },
     {
       "verse": "16",
-      "text": "This is also a terrible thing to happen.People leave this earth with nothing,as they came into it with nothing.All their hard work has been useless,like someone who tries to catch the wind. People leave this earth with nothing, as they came into it with nothing. All their hard work has been useless, like someone who tries to catch the wind."
+      "text": "This is also a terrible thing to happen. People leave this earth with nothing, as they came into it with nothing. All their hard work has been useless, like someone who tries to catch the wind. People leave this earth with nothing, as they came into it with nothing. All their hard work has been useless, like someone who tries to catch the wind."
     },
     {
       "verse": "17",
-      "text": "Even if people are rich, they do not enjoy their food.They suffer all through their lives.They are upset, angry and sick. They suffer all through their lives. They are upset, angry and sick."
+      "text": "Even if people are rich, they do not enjoy their food. They suffer all through their lives. They are upset, angry and sick. They suffer all through their lives. They are upset, angry and sick."
     },
     {
       "verse": "18",
@@ -440,105 +440,105 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "A rich person might live for 2,000 years. But if he never enjoys his riches, it would be better if he died at birth. Remember that after death, we all go into our graves."
+      "text": "A rich person might live for 2, 000 years. But if he never enjoys his riches, it would be better if he died at birth. Remember that after death, we all go into our graves."
     },
     {
       "verse": "7",
-      "text": "The reason people work so hard is to get food.But they never have enough to eat. But they never have enough to eat."
+      "text": "The reason people work so hard is to get food. But they never have enough to eat. But they never have enough to eat."
     },
     {
       "verse": "8",
-      "text": "Does a wise person have a better life than a foolish person?No, he does not!Does it help a poor person if he knows how to live well?No! No, he does not! Does it help a poor person if he knows how to live well?"
+      "text": "Does a wise person have a better life than a foolish person? No, he does not! Does it help a poor person if he knows how to live well? No! No, he does not! Does it help a poor person if he knows how to live well?"
     },
     {
       "verse": "9",
-      "text": "It is good to enjoy the things that we have.That is better than to want more things all the time.If you always try to get more things, that has no purpose.It is like somebody who tries to catch the wind. That is better than to want more things all the time. If you always try to get more things, that has no purpose. It is like somebody who tries to catch the wind."
+      "text": "It is good to enjoy the things that we have. That is better than to want more things all the time. If you always try to get more things, that has no purpose. It is like somebody who tries to catch the wind. That is better than to want more things all the time. If you always try to get more things, that has no purpose. It is like somebody who tries to catch the wind."
     },
     {
       "verse": "10",
-      "text": "Everything that is here today already has its name.Everyone knows what we humans are like.It is useless to argue with someone who is more powerful than we are. Everyone knows what we humans are like. It is useless to argue with someone who is more powerful than we are."
+      "text": "Everything that is here today already has its name. Everyone knows what we humans are like. It is useless to argue with someone who is more powerful than we are. Everyone knows what we humans are like. It is useless to argue with someone who is more powerful than we are."
     },
     {
       "verse": "11",
-      "text": "If we talk too much,we will say silly things.So it will not help anyone to talk with many words. we will say silly things. So it will not help anyone to talk with many words."
+      "text": "If we talk too much, we will say silly things. So it will not help anyone to talk with many words. we will say silly things. So it will not help anyone to talk with many words."
     },
     {
       "verse": "12",
-      "text": "Nobody knows the best way for us to live our lives.We live for only a few yearsand our lives seem to have no purpose.Our lives quickly disappear, like a shadow.Nobody can tell us what will happen on the earth after our death."
+      "text": "Nobody knows the best way for us to live our lives. We live for only a few yearsand our lives seem to have no purpose. Our lives quickly disappear, like a shadow. Nobody can tell us what will happen on the earth after our death."
     }
   ],
   "7": [
     {
       "verse": "1",
-      "text": "If people respect you as a good person,that is better than expensive perfume.The day of your death is better than the day of your birth. that is better than expensive perfume. The day of your death is better than the day of your birth."
+      "text": "If people respect you as a good person, that is better than expensive perfume. The day of your death is better than the day of your birth. that is better than expensive perfume. The day of your death is better than the day of your birth."
     },
     {
       "verse": "2",
-      "text": "If you go to a house where there is a funeral,that is better for you than to go to a party.Everyone will die one day.People should think about death while they are still alive. that is better for you than to go to a party. Everyone will die one day. People should think about death while they are still alive."
+      "text": "If you go to a house where there is a funeral, that is better for you than to go to a party. Everyone will die one day. People should think about death while they are still alive. that is better for you than to go to a party. Everyone will die one day. People should think about death while they are still alive."
     },
     {
       "verse": "3",
-      "text": "If you are sad,that is better for you than to laugh all the time.We learn more about ourselves when we are sad. that is better for you than to laugh all the time. We learn more about ourselves when we are sad."
+      "text": "If you are sad, that is better for you than to laugh all the time. We learn more about ourselves when we are sad. that is better for you than to laugh all the time. We learn more about ourselves when we are sad."
     },
     {
       "verse": "4",
-      "text": "A wise person thinks about funerals and what they mean.A foolish person thinks about how to enjoy a party. A foolish person thinks about how to enjoy a party."
+      "text": "A wise person thinks about funerals and what they mean. A foolish person thinks about how to enjoy a party. A foolish person thinks about how to enjoy a party."
     },
     {
       "verse": "5",
-      "text": "If a wise person warns you, listen to him.That is better for you than to listen to the songs of a foolish person. That is better for you than to listen to the songs of a foolish person."
+      "text": "If a wise person warns you, listen to him. That is better for you than to listen to the songs of a foolish person. That is better for you than to listen to the songs of a foolish person."
     },
     {
       "verse": "6",
-      "text": "If you use thorn bushes to make a fire,they make a lot of noise but they burn too quickly.When a foolish person laughs,their noise also has no purpose. they make a lot of noise but they burn too quickly. When a foolish person laughs, their noise also has no purpose."
+      "text": "If you use thorn bushes to make a fire, they make a lot of noise but they burn too quickly. When a foolish person laughs, their noise also has no purpose. they make a lot of noise but they burn too quickly. When a foolish person laughs, their noise also has no purpose."
     },
     {
       "verse": "7",
-      "text": "If a wise person cheats people,he becomes a fool.If you accept a bribe,you will no longer think properly. he becomes a fool. If you accept a bribe, you will no longer think properly."
+      "text": "If a wise person cheats people, he becomes a fool. If you accept a bribe, you will no longer think properly. he becomes a fool. If you accept a bribe, you will no longer think properly."
     },
     {
       "verse": "8",
-      "text": "If you finish some work,that is better than to start something new.It is better to be patient than to be proud. that is better than to start something new. It is better to be patient than to be proud."
+      "text": "If you finish some work, that is better than to start something new. It is better to be patient than to be proud. that is better than to start something new. It is better to be patient than to be proud."
     },
     {
       "verse": "9",
-      "text": "Control your angry thoughts.Only fools allow their anger to continue. Only fools allow their anger to continue."
+      "text": "Control your angry thoughts. Only fools allow their anger to continue. Only fools allow their anger to continue."
     },
     {
       "verse": "10",
-      "text": "Do not say, ‘Everything was a lot better in the past.’Those are not wise thoughts. Those are not wise thoughts."
+      "text": "Do not say, ‘Everything was a lot better in the past. ’Those are not wise thoughts. Those are not wise thoughts."
     },
     {
       "verse": "11",
-      "text": "It is good to have wisdom,like money that you receive from your father.Wisdom helps everyone who lives. like money that you receive from your father. Wisdom helps everyone who lives."
+      "text": "It is good to have wisdom, like money that you receive from your father. Wisdom helps everyone who lives. like money that you receive from your father. Wisdom helps everyone who lives."
     },
     {
       "verse": "12",
-      "text": "Both wisdom and money can keep you safe.But wisdom is better.If you are wise, your knowledge can save your life. But wisdom is better. If you are wise, your knowledge can save your life."
+      "text": "Both wisdom and money can keep you safe. But wisdom is better. If you are wise, your knowledge can save your life. But wisdom is better. If you are wise, your knowledge can save your life."
     },
     {
       "verse": "13",
-      "text": "Think about the things that God has done.If God has bent something,nobody can make it straight again. If God has bent something, nobody can make it straight again."
+      "text": "Think about the things that God has done. If God has bent something, nobody can make it straight again. If God has bent something, nobody can make it straight again."
     },
     {
       "verse": "14",
-      "text": "If your life is good, you should be happy.But if you have trouble, think about this:God causes both joy and trouble in our lives.We do not know what will happen next. But if you have trouble, think about this: God causes both joy and trouble in our lives. We do not know what will happen next."
+      "text": "If your life is good, you should be happy. But if you have trouble, think about this: God causes both joy and trouble in our lives. We do not know what will happen next. But if you have trouble, think about this: God causes both joy and trouble in our lives. We do not know what will happen next."
     },
     {
       "verse": "15",
-      "text": "In my short life on the earthI have seen these things which have no purpose:Sometimes righteous people may die when they are still young.They did good things, but they died.And sometimes wicked people continue to live for along time.They did evil things, but they continued to live. I have seen these things which have no purpose: Sometimes righteous people may die when they are still young. They did good things, but they died. And sometimes wicked people continue to live for along time. They did evil things, but they continued to live."
+      "text": "In my short life on the earthI have seen these things which have no purpose: Sometimes righteous people may die when they are still young. They did good things, but they died. And sometimes wicked people continue to live for along time. They did evil things, but they continued to live. I have seen these things which have no purpose: Sometimes righteous people may die when they are still young. They did good things, but they died. And sometimes wicked people continue to live for along time. They did evil things, but they continued to live."
     },
     {
       "verse": "16",
-      "text": "So do not try to be too good or too wise.That might cause you to have trouble. That might cause you to have trouble."
+      "text": "So do not try to be too good or too wise. That might cause you to have trouble. That might cause you to have trouble."
     },
     {
       "verse": "17",
-      "text": "But do not be too wicked. Do not be a fool.That might cause you to die when you are still young. That might cause you to die when you are still young."
+      "text": "But do not be too wicked. Do not be a fool. That might cause you to die when you are still young. That might cause you to die when you are still young."
     },
     {
       "verse": "18",
-      "text": "Remember both these things.Do not forget either of them.You can do that if you respect God and you obey him. Do not forget either of them. You can do that if you respect God and you obey him."
+      "text": "Remember both these things. Do not forget either of them. You can do that if you respect God and you obey him. Do not forget either of them. You can do that if you respect God and you obey him."
     },
     {
       "verse": "19",
@@ -546,11 +546,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "There is nobody on the earth who is so righteousthat they always do what is right.There is nobody who never does a wrong thing. that they always do what is right. There is nobody who never does a wrong thing."
+      "text": "There is nobody on the earth who is so righteousthat they always do what is right. There is nobody who never does a wrong thing. that they always do what is right. There is nobody who never does a wrong thing."
     },
     {
       "verse": "21",
-      "text": "Do not listen to all the things that people say about you.You might hear your servant when he is cursing you! You might hear your servant when he is cursing you!"
+      "text": "Do not listen to all the things that people say about you. You might hear your servant when he is cursing you! You might hear your servant when he is cursing you!"
     },
     {
       "verse": "22",
@@ -558,65 +558,65 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I have used wisdom to study all these things.I tried very much to understand everything that happens.But I could not do it. I tried very much to understand everything that happens. But I could not do it."
+      "text": "I have used wisdom to study all these things. I tried very much to understand everything that happens. But I could not do it. I tried very much to understand everything that happens. But I could not do it."
     },
     {
       "verse": "24",
-      "text": "People cannot understand these things.The meaning of life is too difficult for anyone to understand. The meaning of life is too difficult for anyone to understand."
+      "text": "People cannot understand these things. The meaning of life is too difficult for anyone to understand. The meaning of life is too difficult for anyone to understand."
     },
     {
       "verse": "25",
-      "text": "I decided to study many thingsso that I would become wise.I wanted to understand the reason why things happen.I also wanted to know why it is stupid to be wicked,and why it is crazy to do foolish things. so that I would become wise. I wanted to understand the reason why things happen. I also wanted to know why it is stupid to be wicked, and why it is crazy to do foolish things."
+      "text": "I decided to study many thingsso that I would become wise. I wanted to understand the reason why things happen. I also wanted to know why it is stupid to be wicked, and why it is crazy to do foolish things. so that I would become wise. I wanted to understand the reason why things happen. I also wanted to know why it is stupid to be wicked, and why it is crazy to do foolish things."
     },
     {
       "verse": "26",
-      "text": "I learned this:Some women are like a trap that catches animals.Women like that are more dangerous than death.They may pretend to love you.They may hold you in their arms.But really their arms are like chains.They want to catch you,as hunters catch animals.Women like that will easily catcha man who has turned away from God.But a man who pleases Godwill escape from them. Some women are like a trap that catches animals. Women like that are more dangerous than death. They may pretend to love you. They may hold you in their arms. But really their arms are like chains. They want to catch you, as hunters catch animals. Women like that will easily catch a man who has turned away from God. But a man who pleases God will escape from them."
+      "text": "I learned this: Some women are like a trap that catches animals. Women like that are more dangerous than death. They may pretend to love you. They may hold you in their arms. But really their arms are like chains. They want to catch you, as hunters catch animals. Women like that will easily catcha man who has turned away from God. But a man who pleases Godwill escape from them. Some women are like a trap that catches animals. Women like that are more dangerous than death. They may pretend to love you. They may hold you in their arms. But really their arms are like chains. They want to catch you, as hunters catch animals. Women like that will easily catch a man who has turned away from God. But a man who pleases God will escape from them."
     },
     {
       "verse": "27",
-      "text": "This is what I, the Teacher, have learned.I studied everything very carefully.I wanted to know the reason why things happen. I studied everything very carefully. I wanted to know the reason why things happen."
+      "text": "This is what I, the Teacher, have learned. I studied everything very carefully. I wanted to know the reason why things happen. I studied everything very carefully. I wanted to know the reason why things happen."
     },
     {
       "verse": "28",
-      "text": "I continued to try to learn more and more.But I could not find the answers.Among one thousand people,I found one good man.But among them all,I did not find a good woman. But I could not find the answers. Among one thousand people, I found one good man. But among them all, I did not find a good woman."
+      "text": "I continued to try to learn more and more. But I could not find the answers. Among one thousand people, I found one good man. But among them all, I did not find a good woman. But I could not find the answers. Among one thousand people, I found one good man. But among them all, I did not find a good woman."
     },
     {
       "verse": "29",
-      "text": "I did learn this:God made people to do what is right.But people have chosen their own way to do things."
+      "text": "I did learn this: God made people to do what is right. But people have chosen their own way to do things."
     }
   ],
   "8": [
     {
       "verse": "1",
-      "text": "This is what I know about people who are truly wise.They know how to explain things.Wisdom helps a person to be happy.It causes them to smile even when they have trouble. They know how to explain things. Wisdom helps a person to be happy. It causes them to smile even when they have trouble."
+      "text": "This is what I know about people who are truly wise. They know how to explain things. Wisdom helps a person to be happy. It causes them to smile even when they have trouble. They know how to explain things. Wisdom helps a person to be happy. It causes them to smile even when they have trouble."
     },
     {
       "verse": "2",
-      "text": "You promised God that you would serve the king faithfully.So obey the king's commands. So obey the king's commands."
+      "text": "You promised God that you would serve the king faithfully. So obey the king's commands. So obey the king's commands."
     },
     {
       "verse": "3",
-      "text": "If you are with the king,do not leave in a hurry.Do not join with people who plan turn against him.Remember that the king can do anything that he wants to do. do not leave in a hurry. Do not join with people who plan turn against him. Remember that the king can do anything that he wants to do."
+      "text": "If you are with the king, do not leave in a hurry. Do not join with people who plan turn against him. Remember that the king can do anything that he wants to do. do not leave in a hurry. Do not join with people who plan turn against him. Remember that the king can do anything that he wants to do."
     },
     {
       "verse": "4",
-      "text": "The king's command has complete power.Nobody can tell him that he is wrong. Nobody can tell him that he is wrong."
+      "text": "The king's command has complete power. Nobody can tell him that he is wrong. Nobody can tell him that he is wrong."
     },
     {
       "verse": "5",
-      "text": "Trouble will not come to anyone who obeys the king's command.A wise person knows the right time to do things.He also knows the right way to do them. A wise person knows the right time to do things. He also knows the right way to do them."
+      "text": "Trouble will not come to anyone who obeys the king's command. A wise person knows the right time to do things. He also knows the right way to do them. A wise person knows the right time to do things. He also knows the right way to do them."
     },
     {
       "verse": "6",
-      "text": "There is a right time for things to happen.There is a right way to do things.But trouble comes to people anyway. There is a right way to do things. But trouble comes to people anyway."
+      "text": "There is a right time for things to happen. There is a right way to do things. But trouble comes to people anyway. There is a right way to do things. But trouble comes to people anyway."
     },
     {
       "verse": "7",
-      "text": "Nobody knows what will happen in the future.Nobody can tell us about it. Nobody can tell us about it."
+      "text": "Nobody knows what will happen in the future. Nobody can tell us about it. Nobody can tell us about it."
     },
     {
       "verse": "8",
-      "text": "Nobody has the power to control the wind.Also, nobody has the power to decide the day of their death.Soldiers are not allowed to leave a battle.Also, if people do wicked things,that will not rescue them. Also, nobody has the power to decide the day of their death. Soldiers are not allowed to leave a battle. Also, if people do wicked things, that will not rescue them."
+      "text": "Nobody has the power to control the wind. Also, nobody has the power to decide the day of their death. Soldiers are not allowed to leave a battle. Also, if people do wicked things, that will not rescue them. Also, nobody has the power to decide the day of their death. Soldiers are not allowed to leave a battle. Also, if people do wicked things, that will not rescue them."
     },
     {
       "verse": "9",
@@ -698,11 +698,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I have seen another thing that happens here on the earth.The runner who runs fastest does not always win the race.The strongest soldiers do not always win the battle.Very wise people do not always have food to eat.Very clever people do not always become rich.People who have learned many things are not always successful.Yes, anything may happen to anyone at any time. The runner who runs fastest does not always win the race. The strongest soldiers do not always win the battle. Very wise people do not always have food to eat. Very clever people do not always become rich. People who have learned many things are not always successful. Yes, anything may happen to anyone at any time."
+      "text": "I have seen another thing that happens here on the earth. The runner who runs fastest does not always win the race. The strongest soldiers do not always win the battle. Very wise people do not always have food to eat. Very clever people do not always become rich. People who have learned many things are not always successful. Yes, anything may happen to anyone at any time. The runner who runs fastest does not always win the race. The strongest soldiers do not always win the battle. Very wise people do not always have food to eat. Very clever people do not always become rich. People who have learned many things are not always successful. Yes, anything may happen to anyone at any time."
     },
     {
       "verse": "12",
-      "text": "Nobody knows the time when trouble may come to them.A fish does not know when somebody will catch it in a net.A bird does not know when somebody will catch it in a trap.In the same way, terrible trouble suddenly happens to people when they do not expect it. A fish does not know when somebody will catch it in a net. A bird does not know when somebody will catch it in a trap. In the same way, terrible trouble suddenly happens to people when they do not expect it."
+      "text": "Nobody knows the time when trouble may come to them. A fish does not know when somebody will catch it in a net. A bird does not know when somebody will catch it in a trap. In the same way, terrible trouble suddenly happens to people when they do not expect it. A fish does not know when somebody will catch it in a net. A bird does not know when somebody will catch it in a trap. In the same way, terrible trouble suddenly happens to people when they do not expect it."
     },
     {
       "verse": "13",
@@ -722,169 +722,169 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "A wise person speaks quietly.But it is good to listen carefully to him.His words have more value than a kingwho is shouting to a crowd of fools. But it is good to listen carefully to him. His words have more value than a king who is shouting to a crowd of fools."
+      "text": "A wise person speaks quietly. But it is good to listen carefully to him. His words have more value than a kingwho is shouting to a crowd of fools. But it is good to listen carefully to him. His words have more value than a king who is shouting to a crowd of fools."
     },
     {
       "verse": "18",
-      "text": "Wisdom is better than weapons that are used to fight a war.But one bad person can destroy many good things."
+      "text": "Wisdom is better than weapons that are used to fight a war. But one bad person can destroy many good things."
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "A few dead flies in a bottle of perfume cause it to have a bad smell.In the same way, one foolish thing can destroy a lot of wisdom. In the same way, one foolish thing can destroy a lot of wisdom."
+      "text": "A few dead flies in a bottle of perfume cause it to have a bad smell. In the same way, one foolish thing can destroy a lot of wisdom. In the same way, one foolish thing can destroy a lot of wisdom."
     },
     {
       "verse": "2",
-      "text": "If you are wise,you know the right way to go.But a fool is stupid and he goes the wrong way. you know the right way to go. But a fool is stupid and he goes the wrong way."
+      "text": "If you are wise, you know the right way to go. But a fool is stupid and he goes the wrong way. you know the right way to go. But a fool is stupid and he goes the wrong way."
     },
     {
       "verse": "3",
-      "text": "Even when fools walk along the road,they show that they are stupid.Everyone can see that they are not wise. they show that they are stupid. Everyone can see that they are not wise."
+      "text": "Even when fools walk along the road, they show that they are stupid. Everyone can see that they are not wise. they show that they are stupid. Everyone can see that they are not wise."
     },
     {
       "verse": "4",
-      "text": "If your master becomes angry with you,do not leave your place.Be patient and answer him quietly.Then he will forgive your mistakes. do not leave your place. Be patient and answer him quietly. Then he will forgive your mistakes."
+      "text": "If your master becomes angry with you, do not leave your place. Be patient and answer him quietly. Then he will forgive your mistakes. do not leave your place. Be patient and answer him quietly. Then he will forgive your mistakes."
     },
     {
       "verse": "5",
-      "text": "I have seen another terrible thing that happens on the earth.It happens when a ruler does a silly thing. It happens when a ruler does a silly thing."
+      "text": "I have seen another terrible thing that happens on the earth. It happens when a ruler does a silly thing. It happens when a ruler does a silly thing."
     },
     {
       "verse": "6",
-      "text": "A ruler may give fools too much authority.At the same time, rich people have no authority. At the same time, rich people have no authority."
+      "text": "A ruler may give fools too much authority. At the same time, rich people have no authority. At the same time, rich people have no authority."
     },
     {
       "verse": "7",
-      "text": "Slaves ride on horses, as important people do.At the same time, princes have to walk, as slaves do. At the same time, princes have to walk, as slaves do."
+      "text": "Slaves ride on horses, as important people do. At the same time, princes have to walk, as slaves do. At the same time, princes have to walk, as slaves do."
     },
     {
       "verse": "8",
-      "text": "If you dig a deep hole, you might fall into it.If you knock down a wall, a snake might bite you. If you knock down a wall, a snake might bite you."
+      "text": "If you dig a deep hole, you might fall into it. If you knock down a wall, a snake might bite you. If you knock down a wall, a snake might bite you."
     },
     {
       "verse": "9",
-      "text": "If you cut stones out of the ground, a stone might hurt you.If you cut wood into pieces, a piece of it might hurt you. If you cut wood into pieces, a piece of it might hurt you."
+      "text": "If you cut stones out of the ground, a stone might hurt you. If you cut wood into pieces, a piece of it might hurt you. If you cut wood into pieces, a piece of it might hurt you."
     },
     {
       "verse": "10",
-      "text": "If your axe is not sharp,you will need to be very strong to use it.If you are wise, you will make the axe's edge sharp again.That is how wisdom helps you to do things well. you will need to be very strong to use it. If you are wise, you will make the axe's edge sharp again. That is how wisdom helps you to do things well."
+      "text": "If your axe is not sharp, you will need to be very strong to use it. If you are wise, you will make the axe's edge sharp again. That is how wisdom helps you to do things well. you will need to be very strong to use it. If you are wise, you will make the axe's edge sharp again. That is how wisdom helps you to do things well."
     },
     {
       "verse": "11",
-      "text": "Someone may have power over dangerous snakes.But that will not help him if the snake bites him first. But that will not help him if the snake bites him first."
+      "text": "Someone may have power over dangerous snakes. But that will not help him if the snake bites him first. But that will not help him if the snake bites him first."
     },
     {
       "verse": "12",
-      "text": "People respect a wise person,because of the things that he says.But the words of a fool will destroy him. because of the things that he says. But the words of a fool will destroy him."
+      "text": "People respect a wise person, because of the things that he says. But the words of a fool will destroy him. because of the things that he says. But the words of a fool will destroy him."
     },
     {
       "verse": "13",
-      "text": "When a fool starts to speak,he says silly things.When he finishes,he is saying crazy things that are wicked. he says silly things. When he finishes, he is saying crazy things that are wicked."
+      "text": "When a fool starts to speak, he says silly things. When he finishes, he is saying crazy things that are wicked. he says silly things. When he finishes, he is saying crazy things that are wicked."
     },
     {
       "verse": "14",
-      "text": "But he never stops talking.Nobody knows what will happen in the future.Nobody can tell us what will happen after we die. Nobody knows what will happen in the future. Nobody can tell us what will happen after we die."
+      "text": "But he never stops talking. Nobody knows what will happen in the future. Nobody can tell us what will happen after we die. Nobody knows what will happen in the future. Nobody can tell us what will happen after we die."
     },
     {
       "verse": "15",
-      "text": "When a fool does any work,he quickly becomes tired.He is so tired that he forgets the way to town. he quickly becomes tired. He is so tired that he forgets the way to town."
+      "text": "When a fool does any work, he quickly becomes tired. He is so tired that he forgets the way to town. he quickly becomes tired. He is so tired that he forgets the way to town."
     },
     {
       "verse": "16",
-      "text": "A country is in terrible troubleif its ruler is young and foolish.If its leaders go to parties all day,a country is in trouble. if its ruler is young and foolish. If its leaders go to parties all day, a country is in trouble."
+      "text": "A country is in terrible troubleif its ruler is young and foolish. If its leaders go to parties all day, a country is in trouble. if its ruler is young and foolish. If its leaders go to parties all day, a country is in trouble."
     },
     {
       "verse": "17",
-      "text": "But if a country's ruler belongs to a good family,that country will be a happy place.Its leaders only enjoy parties at the proper time.They control themselves and they do not become drunk. that country will be a happy place. Its leaders only enjoy parties at the proper time. They control themselves and they do not become drunk."
+      "text": "But if a country's ruler belongs to a good family, that country will be a happy place. Its leaders only enjoy parties at the proper time. They control themselves and they do not become drunk. that country will be a happy place. Its leaders only enjoy parties at the proper time. They control themselves and they do not become drunk."
     },
     {
       "verse": "18",
-      "text": "If a man is too lazy to work on his house,its roof will fall down.Rain will make his rooms wet. its roof will fall down. Rain will make his rooms wet."
+      "text": "If a man is too lazy to work on his house, its roof will fall down. Rain will make his rooms wet. its roof will fall down. Rain will make his rooms wet."
     },
     {
       "verse": "19",
-      "text": "Good food and wine help us to laugh and to be happy.But you need to have money to buy everything. But you need to have money to buy everything."
+      "text": "Good food and wine help us to laugh and to be happy. But you need to have money to buy everything. But you need to have money to buy everything."
     },
     {
       "verse": "20",
-      "text": "Do not say bad things about the king.Do not even think about it!Even when you are in your bedroom,do not say bad things about rich people.A little bird might hear you.It might tell people what you have said."
+      "text": "Do not say bad things about the king. Do not even think about it! Even when you are in your bedroom, do not say bad things about rich people. A little bird might hear you. It might tell people what you have said."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "Freely give your things to other people.If you do that, one day you will receive your things back again. If you do that, one day you will receive your things back again."
+      "text": "Freely give your things to other people. If you do that, one day you will receive your things back again. If you do that, one day you will receive your things back again."
     },
     {
       "verse": "2",
-      "text": "Share your things with several other people.You do not know when trouble will come.Then those people can help you. You do not know when trouble will come. Then those people can help you."
+      "text": "Share your things with several other people. You do not know when trouble will come. Then those people can help you. You do not know when trouble will come. Then those people can help you."
     },
     {
       "verse": "3",
-      "text": "When clouds are full of water,rain will fall on the earth.If a tree falls to the ground,it will stay there, in the same place. rain will fall on the earth. If a tree falls to the ground, it will stay there, in the same place."
+      "text": "When clouds are full of water, rain will fall on the earth. If a tree falls to the ground, it will stay there, in the same place. rain will fall on the earth. If a tree falls to the ground, it will stay there, in the same place."
     },
     {
       "verse": "4",
-      "text": "A farmer who waits for the right windwill never plant any seeds.If he is always looking at the clouds,he will never bring in his crops. will never plant any seeds. If he is always looking at the clouds, he will never bring in his crops."
+      "text": "A farmer who waits for the right windwill never plant any seeds. If he is always looking at the clouds, he will never bring in his crops. will never plant any seeds. If he is always looking at the clouds, he will never bring in his crops."
     },
     {
       "verse": "5",
-      "text": "We do not know the path that the wind blows along.Nor do we know how a baby's body growsinside a pregnant woman.So nobody can explain the things that God does.He is the one who has made everything. Nor do we know how a baby's body grows inside a pregnant woman. So nobody can explain the things that God does. He is the one who has made everything."
+      "text": "We do not know the path that the wind blows along. Nor do we know how a baby's body growsinside a pregnant woman. So nobody can explain the things that God does. He is the one who has made everything. Nor do we know how a baby's body grows inside a pregnant woman. So nobody can explain the things that God does. He is the one who has made everything."
     },
     {
       "verse": "6",
-      "text": "Plant your seeds in the morning,and continue to work until the evening.You do not know which seeds will become strong plants.Perhaps only some of them will grow.Perhaps they will all grow well. and continue to work until the evening. You do not know which seeds will become strong plants. Perhaps only some of them will grow. Perhaps they will all grow well."
+      "text": "Plant your seeds in the morning, and continue to work until the evening. You do not know which seeds will become strong plants. Perhaps only some of them will grow. Perhaps they will all grow well. and continue to work until the evening. You do not know which seeds will become strong plants. Perhaps only some of them will grow. Perhaps they will all grow well."
     },
     {
       "verse": "7",
-      "text": "Light makes people happy.It is good to see the sun rise in the morning. It is good to see the sun rise in the morning."
+      "text": "Light makes people happy. It is good to see the sun rise in the morning. It is good to see the sun rise in the morning."
     },
     {
       "verse": "8",
-      "text": "People may live for many years,and they should happily enjoy every day.But they should remember that their lives will end in death.There will be many days of trouble ahead.We cannot understand everything that will happen to us in the future. and they should happily enjoy every day. But they should remember that their lives will end in death. There will be many days of trouble ahead. We cannot understand everything that will happen to us in the future."
+      "text": "People may live for many years, and they should happily enjoy every day. But they should remember that their lives will end in death. There will be many days of trouble ahead. We cannot understand everything that will happen to us in the future. and they should happily enjoy every day. But they should remember that their lives will end in death. There will be many days of trouble ahead. We cannot understand everything that will happen to us in the future."
     },
     {
       "verse": "9",
-      "text": "Young people, enjoy your life while you are young.Do the things that you think are good.Enjoy the things that you see.But remember that God will judge youfor all the things that you do. Do the things that you think are good. Enjoy the things that you see. But remember that God will judge you for all the things that you do."
+      "text": "Young people, enjoy your life while you are young. Do the things that you think are good. Enjoy the things that you see. But remember that God will judge youfor all the things that you do. Do the things that you think are good. Enjoy the things that you see. But remember that God will judge you for all the things that you do."
     },
     {
       "verse": "10",
-      "text": "Do not worry about things.Do not let your body cause you to have pain.You will not be young and strong for very long.We all become old too quickly."
+      "text": "Do not worry about things. Do not let your body cause you to have pain. You will not be young and strong for very long. We all become old too quickly."
     }
   ],
   "12": [
     {
       "verse": "1",
-      "text": "Remember to serve God while you are young.He is the one who made you.Your life will have many troubles in the future.During those years, you will say,‘I do not enjoy my life any more.’ He is the one who made you. Your life will have many troubles in the future. During those years, you will say, ‘I do not enjoy my life any more.’"
+      "text": "Remember to serve God while you are young. He is the one who made you. Your life will have many troubles in the future. During those years, you will say, ‘I do not enjoy my life any more. ’ He is the one who made you. Your life will have many troubles in the future. During those years, you will say, ‘I do not enjoy my life any more. ’"
     },
     {
       "verse": "2",
-      "text": "When you are old, the light from the sun will not seem to be bright.You will not see the moon or the stars.There will always be dark clouds after the rain. You will not see the moon or the stars. There will always be dark clouds after the rain."
+      "text": "When you are old, the light from the sun will not seem to be bright. You will not see the moon or the stars. There will always be dark clouds after the rain. You will not see the moon or the stars. There will always be dark clouds after the rain."
     },
     {
       "verse": "3",
-      "text": "Your arms that have kept you safe will shake.Your legs will become weak.You will have only a few teeth to eat with.Your eyes will no longer see very well. Your legs will become weak. You will have only a few teeth to eat with. Your eyes will no longer see very well."
+      "text": "Your arms that have kept you safe will shake. Your legs will become weak. You will have only a few teeth to eat with. Your eyes will no longer see very well. Your legs will become weak. You will have only a few teeth to eat with. Your eyes will no longer see very well."
     },
     {
       "verse": "4",
-      "text": "Your ears will not hear noises outside in the streets.You will not hear the sound of people as they work.You will not hear the sound of people as they sing songs.But a bird's song will wake youwhen you want to sleep. You will not hear the sound of people as they work. You will not hear the sound of people as they sing songs. But a bird's song will wake you when you want to sleep."
+      "text": "Your ears will not hear noises outside in the streets. You will not hear the sound of people as they work. You will not hear the sound of people as they sing songs. But a bird's song will wake youwhen you want to sleep. You will not hear the sound of people as they work. You will not hear the sound of people as they sing songs. But a bird's song will wake you when you want to sleep."
     },
     {
       "verse": "5",
-      "text": "You will be afraid to stand on high places.You will worry about danger in the streets.When you are old, your hair will become white,like the flowers on an almond tree.You will feel too tired to move yourself,like an old grasshopper.You will not want to have sex.Finally, we will all die and go to our home in the ground.Many people will weep at our funeral. You will worry about danger in the streets. When you are old, your hair will become white, like the flowers on an almond tree. You will feel too tired to move yourself, like an old grasshopper. You will not want to have sex. Finally, we will all die and go to our home in the ground. Many people will weep at our funeral."
+      "text": "You will be afraid to stand on high places. You will worry about danger in the streets. When you are old, your hair will become white, like the flowers on an almond tree. You will feel too tired to move yourself, like an old grasshopper. You will not want to have sex. Finally, we will all die and go to our home in the ground. Many people will weep at our funeral. You will worry about danger in the streets. When you are old, your hair will become white, like the flowers on an almond tree. You will feel too tired to move yourself, like an old grasshopper. You will not want to have sex. Finally, we will all die and go to our home in the ground. Many people will weep at our funeral."
     },
     {
       "verse": "6",
-      "text": "Remember to serve God while you are young,because one day your life will finish.It will be like a silver chain that breaks;like a gold bowl that breaks;like a water pot at the well that breaks into pieces;like a rope at the well that breaks apart. because one day your life will finish. It will be like a silver chain that breaks; like a gold bowl that breaks; like a water pot at the well that breaks into pieces; like a rope at the well that breaks apart."
+      "text": "Remember to serve God while you are young, because one day your life will finish. It will be like a silver chain that breaks; like a gold bowl that breaks; like a water pot at the well that breaks into pieces; like a rope at the well that breaks apart. because one day your life will finish. It will be like a silver chain that breaks; like a gold bowl that breaks; like a water pot at the well that breaks into pieces; like a rope at the well that breaks apart."
     },
     {
       "verse": "7",
-      "text": "Our bodies go back into the ground as dust.The breath of our life goes back to God,who gave it to us. The breath of our life goes back to God, who gave it to us."
+      "text": "Our bodies go back into the ground as dust. The breath of our life goes back to God, who gave it to us. The breath of our life goes back to God, who gave it to us."
     },
     {
       "verse": "8",
-      "text": "So I, the Teacher, say,‘All these things have no purpose.We cannot understand why they happen.’ ‘All these things have no purpose. We cannot understand why they happen.’"
+      "text": "So I, the Teacher, say, ‘All these things have no purpose. We cannot understand why they happen. ’ ‘All these things have no purpose. We cannot understand why they happen. ’"
     },
     {
       "verse": "9",

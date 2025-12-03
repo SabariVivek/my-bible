@@ -2,19 +2,19 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "After Joshua had died, the Israelites asked the Lord, ‘Which of our tribes should be the first to attack the Canaanites?’"
+      "text": "After Joshua had died, the Israelites asked the Lord, ‘Which of our tribes should be the first to attack the Canaanites? ’"
     },
     {
       "verse": "2",
-      "text": "The Lord replied, ‘Judah should attack first. I will give the land to them, to take for themselves.’"
+      "text": "The Lord replied, ‘Judah should attack first. I will give the land to them, to take for themselves. ’"
     },
     {
       "verse": "3",
-      "text": "The men of Judah's tribe said to their cousins, the men of Simeon's tribe, ‘Join with us to fight against the Canaanites. Help us to take the land that God has given to our tribe. Then we will help you to take the land that belongs to your tribe.’ So the men of Simeon's tribe joined with the men of Judah's tribe."
+      "text": "The men of Judah's tribe said to their cousins, the men of Simeon's tribe, ‘Join with us to fight against the Canaanites. Help us to take the land that God has given to our tribe. Then we will help you to take the land that belongs to your tribe. ’ So the men of Simeon's tribe joined with the men of Judah's tribe."
     },
     {
       "verse": "4",
-      "text": "They attacked the Canaanites and the Perizzites at Bezek. The Lord helped them to win against 10,000 Canaanite and Perizzite fighters."
+      "text": "They attacked the Canaanites and the Perizzites at Bezek. The Lord helped them to win against 10, 000 Canaanite and Perizzite fighters."
     },
     {
       "verse": "5",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "King Adoni-Bezek said, ‘God has punished me because I did the same thing to 70 other kings. I cut off their thumbs and big toes. I made them pick up bits of food to eat under my table.’ The Israelites took King Adoni-Bezek back to Jerusalem. He died there."
+      "text": "King Adoni-Bezek said, ‘God has punished me because I did the same thing to 70 other kings. I cut off their thumbs and big toes. I made them pick up bits of food to eat under my table. ’ The Israelites took King Adoni-Bezek back to Jerusalem. He died there."
     },
     {
       "verse": "8",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Caleb said, ‘If a brave man attacks and takes Kiriath Sepher, he can marry my daughter, Acsah.’"
+      "text": "Caleb said, ‘If a brave man attacks and takes Kiriath Sepher, he can marry my daughter, Acsah. ’"
     },
     {
       "verse": "13",
@@ -54,11 +54,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "After this, Acsah told Othniel that they should ask her father to give them some land. She went to see her father, Caleb. As she got off her donkey, Caleb asked her, ‘What would you like me to do for you?’"
+      "text": "After this, Acsah told Othniel that they should ask her father to give them some land. She went to see her father, Caleb. As she got off her donkey, Caleb asked her, ‘What would you like me to do for you? ’"
     },
     {
       "verse": "15",
-      "text": "She replied, ‘Please be kind and give me a special gift. You have given me some land in the Negev desert. Now please give me a place with springs so that I have water for the land.’ So Caleb gave her some land with springs, on high land and on low land."
+      "text": "She replied, ‘Please be kind and give me a special gift. You have given me some land in the Negev desert. Now please give me a place with springs so that I have water for the land. ’ So Caleb gave her some land with springs, on high land and on low land."
     },
     {
       "verse": "16",
@@ -94,11 +94,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Those men saw a man who was leaving the city. They said to him, ‘If you show us how our soldiers can get into the city, we will keep you safe.’"
+      "text": "Those men saw a man who was leaving the city. They said to him, ‘If you show us how our soldiers can get into the city, we will keep you safe. ’"
     },
     {
       "verse": "25",
-      "text": "So the man showed them a secret entrance to the city.The men of Joseph's tribes killed all the people in the city. But they kept the man and his family safe."
+      "text": "So the man showed them a secret entrance to the city. The men of Joseph's tribes killed all the people in the city. But they kept the man and his family safe."
     },
     {
       "verse": "26",
@@ -156,7 +156,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So now I tell you, I will not chase the Canaanites away so that you can take their land. Instead, they will cause trouble for you. Their false gods will cause you to turn away from me.’"
+      "text": "So now I tell you, I will not chase the Canaanites away so that you can take their land. Instead, they will cause trouble for you. Their false gods will cause you to turn away from me. ’"
     },
     {
       "verse": "4",
@@ -232,7 +232,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I will use those nations to test the Israelites. I will see if my people will live carefully, in the way that I have shown them. That is the way that their ancestors lived.’"
+      "text": "I will use those nations to test the Israelites. I will see if my people will live carefully, in the way that I have shown them. That is the way that their ancestors lived. ’"
     },
     {
       "verse": "23",
@@ -250,7 +250,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The nations who remained were:the Philistines, with their five kings,all the Canaanites,the Sidonians,the Hivites who lived in the Lebanon mountains, from Mount Baal Hermon to Lebo-Hamath."
+      "text": "The nations who remained were: the Philistines, with their five kings, all the Canaanites, the Sidonians, the Hivites who lived in the Lebanon mountains, from Mount Baal Hermon to Lebo-Hamath."
     },
     {
       "verse": "4",
@@ -314,11 +314,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But when Ehud reached the stone idols at Gilgal, he turned round to go back to the king. He said to King Eglon, ‘I have a secret message for you, sir!’ So the king said, ‘Leave us alone.’ All his servants went out."
+      "text": "But when Ehud reached the stone idols at Gilgal, he turned round to go back to the king. He said to King Eglon, ‘I have a secret message for you, sir! ’ So the king said, ‘Leave us alone. ’ All his servants went out."
     },
     {
       "verse": "20",
-      "text": "The king was now sitting alone in his cool room on the roof of the palace. Ehud went near to the king and he said, ‘I have a message from God for you.’ The king started to get up from his chair."
+      "text": "The king was now sitting alone in his cool room on the roof of the palace. Ehud went near to the king and he said, ‘I have a message from God for you. ’ The king started to get up from his chair."
     },
     {
       "verse": "21",
@@ -350,11 +350,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "He said to them, ‘Follow me! The Lord will put your enemy, the Moabites, under your power!’ The Israelites followed him to the Jordan River, near the border of Moab. They would not let anyone go across the river."
+      "text": "He said to them, ‘Follow me! The Lord will put your enemy, the Moabites, under your power! ’ The Israelites followed him to the Jordan River, near the border of Moab. They would not let anyone go across the river."
     },
     {
       "verse": "29",
-      "text": "That day they killed about 10,000 Moabite soldiers. They were all strong, brave fighters, but none of them escaped."
+      "text": "That day they killed about 10, 000 Moabite soldiers. They were all strong, brave fighters, but none of them escaped."
     },
     {
       "verse": "30",
@@ -388,23 +388,23 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "One day, Deborah told Abinoam's son Barak to come to her. He lived in Kedesh, a town in Naphtali. She said to Barak, ‘The Lord, Israel's God, has given you this command: “March to Mount Tabor with 10,000 men who belong to the tribes of Naphtali and Zebulun."
+      "text": "One day, Deborah told Abinoam's son Barak to come to her. He lived in Kedesh, a town in Naphtali. She said to Barak, ‘The Lord, Israel's God, has given you this command: “March to Mount Tabor with 10, 000 men who belong to the tribes of Naphtali and Zebulun."
     },
     {
       "verse": "7",
-      "text": "I will deceive Sisera, the leader of King Jabin's army. He will go to the Kishon river with his great army and all their chariots. I will put them all under your power.” ’"
+      "text": "I will deceive Sisera, the leader of King Jabin's army. He will go to the Kishon river with his great army and all their chariots. I will put them all under your power. ” ’"
     },
     {
       "verse": "8",
-      "text": "Barak said to Deborah, ‘I will go if you will come with me. But if you do not agree to go, I will not go either.’"
+      "text": "Barak said to Deborah, ‘I will go if you will come with me. But if you do not agree to go, I will not go either. ’"
     },
     {
       "verse": "9",
-      "text": "Deborah said, ‘Yes, I will go with you. But you will not receive honour for the battle. Instead, the Lord will put Sisera under the power of a woman.’So Deborah went with Barak to Kedesh."
+      "text": "Deborah said, ‘Yes, I will go with you. But you will not receive honour for the battle. Instead, the Lord will put Sisera under the power of a woman. ’So Deborah went with Barak to Kedesh."
     },
     {
       "verse": "10",
-      "text": "Barak told the men from Zebulun and Naphtali to go with him to Kedesh. 10,000 men came to follow him. Deborah also went with him."
+      "text": "Barak told the men from Zebulun and Naphtali to go with him to Kedesh. 10, 000 men came to follow him. Deborah also went with him."
     },
     {
       "verse": "11",
@@ -420,7 +420,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Then Deborah said to Barak, ‘Get ready! This is the day that the Lord will put Sisera under your power! The Lord will lead you into battle!’So Barak led his 10,000 soldiers down from Mount Tabor."
+      "text": "Then Deborah said to Barak, ‘Get ready! This is the day that the Lord will put Sisera under your power! The Lord will lead you into battle! ’So Barak led his 10, 000 soldiers down from Mount Tabor."
     },
     {
       "verse": "15",
@@ -436,15 +436,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Jael came out of her tent to say ‘hello’ to Sisera. She said to him, ‘Please come into my tent, sir. You can rest safely here. Do not be afraid.’ So Sisera went into her tent to rest. Jael put a cloth over him."
+      "text": "Jael came out of her tent to say ‘hello’ to Sisera. She said to him, ‘Please come into my tent, sir. You can rest safely here. Do not be afraid. ’ So Sisera went into her tent to rest. Jael put a cloth over him."
     },
     {
       "verse": "19",
-      "text": "Sisera said to her, ‘I am thirsty. Please give me some water to drink.’ She gave him some milk from a leather bottle. Then she covered him again with the cloth."
+      "text": "Sisera said to her, ‘I am thirsty. Please give me some water to drink. ’ She gave him some milk from a leather bottle. Then she covered him again with the cloth."
     },
     {
       "verse": "20",
-      "text": "Sisera said to her, ‘Stand at the door of your tent and watch. If someone comes to ask if anyone is here, say, “No.” ’"
+      "text": "Sisera said to her, ‘Stand at the door of your tent and watch. If someone comes to ask if anyone is here, say, “No. ” ’"
     },
     {
       "verse": "21",
@@ -452,7 +452,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Barak had been chasing Sisera. Jael went out of her tent to say ‘hello’ to him. She said to Barak, ‘Come here! I will show you the man that you are looking for.’ Barak went with her into the tent. He saw Sisera there. He was lying on the ground and he was dead. Barak saw the peg that had gone through Sisera's head."
+      "text": "Barak had been chasing Sisera. Jael went out of her tent to say ‘hello’ to him. She said to Barak, ‘Come here! I will show you the man that you are looking for. ’ Barak went with her into the tent. He saw Sisera there. He was lying on the ground and he was dead. Barak saw the peg that had gone through Sisera's head."
     },
     {
       "verse": "23",
@@ -470,123 +470,123 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘The leaders of Israel led their people out.The people were happy to follow them to the battle.Praise the Lord! The people were happy to follow them to the battle. Praise the Lord!"
+      "text": "‘The leaders of Israel led their people out. The people were happy to follow them to the battle. Praise the Lord! The people were happy to follow them to the battle. Praise the Lord!"
     },
     {
       "verse": "3",
-      "text": "Hear this, you kings! Listen, you rulers!I will sing to worship the Lord.Yes, I will praise him with a song.He is the Lord, Israel's God. I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God."
+      "text": "Hear this, you kings! Listen, you rulers! I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God. I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God."
     },
     {
       "verse": "4",
-      "text": "Lord, you came from Seir mountains.Yes, you marched from the land of Edom.As you came, the earth shook.Rain poured down from the clouds in the sky. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky."
+      "text": "Lord, you came from Seir mountains. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky."
     },
     {
       "verse": "5",
-      "text": "The mountains shook when you appeared,as they shook at Sinai mountain when you showed your power.You are the Lord, the God of Israel. as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel."
+      "text": "The mountains shook when you appeared, as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel. as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel."
     },
     {
       "verse": "6",
-      "text": "When Anath's son Shamgar ruled the land,nobody travelled on the roads.When Jael ruled, people walked on secret paths,because they were afraid. nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid."
+      "text": "When Anath's son Shamgar ruled the land, nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid. nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid."
     },
     {
       "verse": "7",
-      "text": "Nobody lived in the small villages.Then I, Deborah, became their leader.I became like a mother for Israel's people,to keep them safe. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe."
+      "text": "Nobody lived in the small villages. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe."
     },
     {
       "verse": "8",
-      "text": "When the Israelites chose new gods to worship,enemies attacked their cities.No one in Israel was ready to fight.Not one of their 40,000 soldiers had a shield or a spear. enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40,000 soldiers had a shield or a spear."
+      "text": "When the Israelites chose new gods to worship, enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40, 000 soldiers had a shield or a spear. enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40, 000 soldiers had a shield or a spear."
     },
     {
       "verse": "9",
-      "text": "I thank God for Israel's leaders,and the people who are ready to fight our enemies.Praise the Lord! and the people who are ready to fight our enemies. Praise the Lord!"
+      "text": "I thank God for Israel's leaders, and the people who are ready to fight our enemies. Praise the Lord! and the people who are ready to fight our enemies. Praise the Lord!"
     },
     {
       "verse": "10",
-      "text": "Listen to me, you rich people who ride on white donkeys,with beautiful cloths to sit on.And you people who walk along the road,you should listen too! with beautiful cloths to sit on. And you people who walk along the road, you should listen too!"
+      "text": "Listen to me, you rich people who ride on white donkeys, with beautiful cloths to sit on. And you people who walk along the road, you should listen too! with beautiful cloths to sit on. And you people who walk along the road, you should listen too!"
     },
     {
       "verse": "11",
-      "text": "Listen to the voices of the singers near the wells of water.They sing about the great things that the Lord has done.They tell how Israel's soldiers have won against their enemies.Then the Lord's people marched down to the city gates. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates."
+      "text": "Listen to the voices of the singers near the wells of water. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates."
     },
     {
       "verse": "12",
-      "text": "“Wake up, Deborah! Wake up and sing a song!Get up, Barak, son of Abinoam!Take your enemies away as your prisoners.” Get up, Barak, son of Abinoam! Take your enemies away as your prisoners.”"
+      "text": "“Wake up, Deborah! Wake up and sing a song! Get up, Barak, son of Abinoam! Take your enemies away as your prisoners. ” Get up, Barak, son of Abinoam! Take your enemies away as your prisoners. ”"
     },
     {
       "verse": "13",
-      "text": "The faithful men who remained returned to their leaders.The Lord's people came to me.They were ready to fight against our enemies. The Lord's people came to me. They were ready to fight against our enemies."
+      "text": "The faithful men who remained returned to their leaders. The Lord's people came to me. They were ready to fight against our enemies. The Lord's people came to me. They were ready to fight against our enemies."
     },
     {
       "verse": "14",
-      "text": "Some men of Ephraim's tribe came to help,from the land where Amalek lived.They followed men of Benjamin's tribe, with their soldiers.Leaders also came from Makir.Army officers came from Zebulun's tribe. from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe."
+      "text": "Some men of Ephraim's tribe came to help, from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe. from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe."
     },
     {
       "verse": "15",
-      "text": "The leaders of Issachar's tribe were with Deborah.Yes, the men of Issachar joined with Barak.Barak led them into the valley.But the men of Reuben's tribe could not decide what to do. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do."
+      "text": "The leaders of Issachar's tribe were with Deborah. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do."
     },
     {
       "verse": "16",
-      "text": "Instead, they stayed to take care of their sheep.Did they want to listen to the shepherds as they called out to their sheep?The clans of Reuben's tribe could not agree what they should do. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do."
+      "text": "Instead, they stayed to take care of their sheep. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do."
     },
     {
       "verse": "17",
-      "text": "The men of Gilead stayed at home,on the east side of the Jordan River.The men of Dan's tribe stayed with their ships.The men of Asher's tribe also stayed in their homes near the sea. on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea."
+      "text": "The men of Gilead stayed at home, on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea. on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea."
     },
     {
       "verse": "18",
-      "text": "But the men of Zebulun's tribe were not afraid to die in war.The men of Naphtali's tribe were also ready to attack the enemy. The men of Naphtali's tribe were also ready to attack the enemy."
+      "text": "But the men of Zebulun's tribe were not afraid to die in war. The men of Naphtali's tribe were also ready to attack the enemy. The men of Naphtali's tribe were also ready to attack the enemy."
     },
     {
       "verse": "19",
-      "text": "Kings of Canaan came and they fought against us.They attacked us at Taanach, near the stream at Megiddo.But they could not take any valuable silver from us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us."
+      "text": "Kings of Canaan came and they fought against us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us."
     },
     {
       "verse": "20",
-      "text": "Even the stars fought against Sisera!They travelled across the sky to attack him. They travelled across the sky to attack him."
+      "text": "Even the stars fought against Sisera! They travelled across the sky to attack him. They travelled across the sky to attack him."
     },
     {
       "verse": "21",
-      "text": "The Kishon river carried away Sisera's soldiers.It used its power to stop them.So I will be brave and I will continue to fight! It used its power to stop them. So I will be brave and I will continue to fight!"
+      "text": "The Kishon river carried away Sisera's soldiers. It used its power to stop them. So I will be brave and I will continue to fight! It used its power to stop them. So I will be brave and I will continue to fight!"
     },
     {
       "verse": "22",
-      "text": "As for the horses of Sisera's army,their feet made a loud noise as they ran away. their feet made a loud noise as they ran away."
+      "text": "As for the horses of Sisera's army, their feet made a loud noise as they ran away. their feet made a loud noise as they ran away."
     },
     {
       "verse": "23",
-      "text": "The Lord's angel says, “Punish Meroz!Punish the people who live there,because they did not come to help the Lord.They did not agree to fight against the Lord's strong enemy.” Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy.”"
+      "text": "The Lord's angel says, “Punish Meroz! Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy. ” Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy. ”"
     },
     {
       "verse": "24",
-      "text": "But Jael should receive great honour!Jael, the wife of Heber the Kenite,should receive more honour than all other women who live in tents. Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents."
+      "text": "But Jael should receive great honour! Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents. Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents."
     },
     {
       "verse": "25",
-      "text": "Sisera asked her for water to drink, and she gave him milk.She gave him the best cream in a beautiful bowl. She gave him the best cream in a beautiful bowl."
+      "text": "Sisera asked her for water to drink, and she gave him milk. She gave him the best cream in a beautiful bowl. She gave him the best cream in a beautiful bowl."
     },
     {
       "verse": "26",
-      "text": "She took a tent peg in her left hand.She took a worker's hammer in her right hand.She hit the peg through Sisera's head.She broke his skull. She broke it completely.She knocked the sharp peg through his head. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head."
+      "text": "She took a tent peg in her left hand. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head."
     },
     {
       "verse": "27",
-      "text": "He fell to the floor at her feet.He lay there and he did not move.He died at the place where he fell.Jael had killed him! He lay there and he did not move. He died at the place where he fell. Jael had killed him!"
+      "text": "He fell to the floor at her feet. He lay there and he did not move. He died at the place where he fell. Jael had killed him! He lay there and he did not move. He died at the place where he fell. Jael had killed him!"
     },
     {
       "verse": "28",
-      "text": "Sisera's mother looked out from the window of her house.She waited for Sisera to return.She said, “His chariot has taken a long time to come!Why do I not yet hear the sound of his horse's feet?” She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet?”"
+      "text": "Sisera's mother looked out from the window of her house. She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet? ” She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet? ”"
     },
     {
       "verse": "29",
-      "text": "Her wise ladies replied,and she herself thought the same thing: and she herself thought the same thing:"
+      "text": "Her wise ladies replied, and she herself thought the same thing: and she herself thought the same thing:"
     },
     {
       "verse": "30",
-      "text": "“They are taking valuable things from their enemies.They are sharing the things between them.Each soldier will bring one or two women for himself.Sisera's share will be some beautiful cloth.Yes, he is bringing pieces of valuable cloth,and a beautiful necklace for me!That is why he is so late to return home.” They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home.”"
+      "text": "“They are taking valuable things from their enemies. They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home. ” They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home. ”"
     },
     {
       "verse": "31",
-      "text": "I pray that all your enemies will die as Sisera died, Lord!But I pray that those who love you will shine brightly.May they be strong like the sun at dawn.’After that, there was peace in Israel for 40 years."
+      "text": "I pray that all your enemies will die as Sisera died, Lord! But I pray that those who love you will shine brightly. May they be strong like the sun at dawn. ’After that, there was peace in Israel for 40 years."
     }
   ],
   "6": [
@@ -628,7 +628,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I said to you, ‘I am the Lord your God. You are now living in the land of the Amorites, but you must not worship their gods.’ But you have not obeyed me.” ’"
+      "text": "I said to you, ‘I am the Lord your God. You are now living in the land of the Amorites, but you must not worship their gods. ’ But you have not obeyed me. ” ’"
     },
     {
       "verse": "11",
@@ -636,23 +636,23 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The Lord's angel appeared to Gideon. He said to him, ‘The Lord is with you, brave fighter.’"
+      "text": "The Lord's angel appeared to Gideon. He said to him, ‘The Lord is with you, brave fighter. ’"
     },
     {
       "verse": "13",
-      "text": "Gideon replied, ‘But sir, if the Lord is with us, why has all this trouble happened to us? Our ancestors told us about all the great things that the Lord did for them. They told us how he brought them safely out of Egypt. But the Lord has not helped us like that. He has turned away from us. He has put us under the power of the Midianites.’"
+      "text": "Gideon replied, ‘But sir, if the Lord is with us, why has all this trouble happened to us? Our ancestors told us about all the great things that the Lord did for them. They told us how he brought them safely out of Egypt. But the Lord has not helped us like that. He has turned away from us. He has put us under the power of the Midianites. ’"
     },
     {
       "verse": "14",
-      "text": "The Lord himself then said to Gideon, ‘Go now and use the strength that you have. Rescue Israel from the power of the Midianites. I myself am sending you to do this.’"
+      "text": "The Lord himself then said to Gideon, ‘Go now and use the strength that you have. Rescue Israel from the power of the Midianites. I myself am sending you to do this. ’"
     },
     {
       "verse": "15",
-      "text": "Gideon said, ‘But sir, how can I rescue Israel? Look at me! My clan is the weakest in the tribe of Manasseh. And I am the youngest person in my family.’"
+      "text": "Gideon said, ‘But sir, how can I rescue Israel? Look at me! My clan is the weakest in the tribe of Manasseh. And I am the youngest person in my family. ’"
     },
     {
       "verse": "16",
-      "text": "The Lord answered him, ‘Understand that I will be with you! You will destroy the Midianites as if they were only one man.’"
+      "text": "The Lord answered him, ‘Understand that I will be with you! You will destroy the Midianites as if they were only one man. ’"
     },
     {
       "verse": "17",
@@ -660,7 +660,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Please stay here so that I can bring a gift for you.’ The Lord answered, ‘I will stay here until you come back.’"
+      "text": "Please stay here so that I can bring a gift for you. ’ The Lord answered, ‘I will stay here until you come back. ’"
     },
     {
       "verse": "19",
@@ -668,7 +668,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "God's angel said to him, ‘Put the meat and the bread on this rock. Pour the soup over them.’ Gideon did what the angel told him to do."
+      "text": "God's angel said to him, ‘Put the meat and the bread on this rock. Pour the soup over them. ’ Gideon did what the angel told him to do."
     },
     {
       "verse": "21",
@@ -676,11 +676,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Gideon realized that he had been talking to the Lord's angel. He cried out, ‘Oh no! Almighty Lord, I have seen your angel, face to face.’"
+      "text": "Gideon realized that he had been talking to the Lord's angel. He cried out, ‘Oh no! Almighty Lord, I have seen your angel, face to face. ’"
     },
     {
       "verse": "23",
-      "text": "But the Lord said to him, ‘Do not worry. Do not be afraid. You will not die because of this.’"
+      "text": "But the Lord said to him, ‘Do not worry. Do not be afraid. You will not die because of this. ’"
     },
     {
       "verse": "24",
@@ -692,7 +692,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then build an altar in their place to give honour to the Lord your God. Build it in the proper way, on top of that hill. Then use the wood from the Asherah pole to burn the second bull as a burnt offering to me.’"
+      "text": "Then build an altar in their place to give honour to the Lord your God. Build it in the proper way, on top of that hill. Then use the wood from the Asherah pole to burn the second bull as a burnt offering to me. ’"
     },
     {
       "verse": "27",
@@ -704,19 +704,19 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "They asked each other, ‘Who has done this?’ They asked many people until someone told them, ‘Joash's son Gideon has done this.’"
+      "text": "They asked each other, ‘Who has done this? ’ They asked many people until someone told them, ‘Joash's son Gideon has done this. ’"
     },
     {
       "verse": "30",
-      "text": "Then the men of the town said to Joash, ‘Bring Gideon out of your house. We must punish him with death. He has destroyed Baal's altar, and he has cut down the Asherah pole that was beside it.’"
+      "text": "Then the men of the town said to Joash, ‘Bring Gideon out of your house. We must punish him with death. He has destroyed Baal's altar, and he has cut down the Asherah pole that was beside it. ’"
     },
     {
       "verse": "31",
-      "text": "Joash said to the angry men who were against him, ‘Are you trying to save Baal because he is in trouble? Why should you do that? Anyone who tries to help Baal will die before tomorrow arrives. If Baal really is a god, he should fight for himself. It is his altar that someone has pulled down!’"
+      "text": "Joash said to the angry men who were against him, ‘Are you trying to save Baal because he is in trouble? Why should you do that? Anyone who tries to help Baal will die before tomorrow arrives. If Baal really is a god, he should fight for himself. It is his altar that someone has pulled down! ’"
     },
     {
       "verse": "32",
-      "text": "So after that, people called Gideon ‘Jerub-Baal’. That was because Joash had said, ‘Baal should fight for himself. He himself should punish the person who pulled down his altar.’"
+      "text": "So after that, people called Gideon ‘Jerub-Baal’. That was because Joash had said, ‘Baal should fight for himself. He himself should punish the person who pulled down his altar. ’"
     },
     {
       "verse": "33",
@@ -736,7 +736,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "I will do this: I will put the wool of a sheep's skin out on the stone floor. During the night, please cause the dew to make it wet. If it is wet but the ground around it is dry, I will know that it is true. You will use me to rescue Israel, as you have promised.’"
+      "text": "I will do this: I will put the wool of a sheep's skin out on the stone floor. During the night, please cause the dew to make it wet. If it is wet but the ground around it is dry, I will know that it is true. You will use me to rescue Israel, as you have promised. ’"
     },
     {
       "verse": "38",
@@ -744,7 +744,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Then Gideon said to God. ‘Please do not be angry with me. Let me ask you to do one more thing. I will put out the sheep's wool again to see what happens. This time please make the ground wet with dew, but keep only the wool dry.’"
+      "text": "Then Gideon said to God. ‘Please do not be angry with me. Let me ask you to do one more thing. I will put out the sheep's wool again to see what happens. This time please make the ground wet with dew, but keep only the wool dry. ’"
     },
     {
       "verse": "40",
@@ -762,15 +762,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So say to the men, “If you are very afraid of the battle and you are shaking with fear, you may go.” ’ So 22,000 men left that place and they went home. But 10,000 soldiers remained with Gideon."
+      "text": "So say to the men, “If you are very afraid of the battle and you are shaking with fear, you may go. ” ’ So 22, 000 men left that place and they went home. But 10, 000 soldiers remained with Gideon."
     },
     {
       "verse": "4",
-      "text": "Then the Lord said to Gideon, ‘There are still too many men. Take them to the spring of water to drink. I will test them for you there. If I say, “This man should go with you,” then take him. But if I say, “This man should not go with you,” then do not take him.’"
+      "text": "Then the Lord said to Gideon, ‘There are still too many men. Take them to the spring of water to drink. I will test them for you there. If I say, “This man should go with you, ” then take him. But if I say, “This man should not go with you, ” then do not take him. ’"
     },
     {
       "verse": "5",
-      "text": "So Gideon took the men to the spring of water. The Lord said to Gideon, ‘Put the men who use their tongues to drink like a dog in one group. Put the men who go down on their knees to drink in another group.’"
+      "text": "So Gideon took the men to the spring of water. The Lord said to Gideon, ‘Put the men who use their tongues to drink like a dog in one group. Put the men who go down on their knees to drink in another group. ’"
     },
     {
       "verse": "6",
@@ -778,11 +778,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord said to Gideon, ‘I will use those 300 men to rescue you and put the Midianites under your power. Let all the other men return to their homes.’"
+      "text": "The Lord said to Gideon, ‘I will use those 300 men to rescue you and put the Midianites under your power. Let all the other men return to their homes. ’"
     },
     {
       "verse": "8",
-      "text": "men with him. He took the food and trumpets from the other men and he gave it to the 300 men. Then Gideon sent the other men home.The camp of the Midianite army was in the valley below the Israelites."
+      "text": "men with him. He took the food and trumpets from the other men and he gave it to the 300 men. Then Gideon sent the other men home. The camp of the Midianite army was in the valley below the Israelites."
     },
     {
       "verse": "9",
@@ -794,7 +794,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Listen to what the Midianites are saying to each other. That will make you brave enough to attack them.’ So Gideon took Purah with him to the edge of the Midianite army's camp, where they had guards."
+      "text": "Listen to what the Midianites are saying to each other. That will make you brave enough to attack them. ’ So Gideon took Purah with him to the edge of the Midianite army's camp, where they had guards."
     },
     {
       "verse": "12",
@@ -802,15 +802,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When Gideon came nearer, he heard a Midianite soldier tell his friend about a dream. The soldier said, ‘In my dream, I saw a loaf of bread that was rolling into our camp. It hit one of our tents and it knocked the tent down to the ground!’"
+      "text": "When Gideon came nearer, he heard a Midianite soldier tell his friend about a dream. The soldier said, ‘In my dream, I saw a loaf of bread that was rolling into our camp. It hit one of our tents and it knocked the tent down to the ground! ’"
     },
     {
       "verse": "14",
-      "text": "The other soldier replied, ‘This dream is telling us about Joash's son Gideon, the leader of the Israelites. It shows us that he has the power to kill us. God has put Midian and all our army under his power!’"
+      "text": "The other soldier replied, ‘This dream is telling us about Joash's son Gideon, the leader of the Israelites. It shows us that he has the power to kill us. God has put Midian and all our army under his power! ’"
     },
     {
       "verse": "15",
-      "text": "When Gideon heard this news about the dream and its meaning, he praised God. He returned to the Israelites' camp. He shouted to his men, ‘Get up now! The Lord has put Midian's army under your power!’"
+      "text": "When Gideon heard this news about the dream and its meaning, he praised God. He returned to the Israelites' camp. He shouted to his men, ‘Get up now! The Lord has put Midian's army under your power! ’"
     },
     {
       "verse": "16",
@@ -822,7 +822,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You will be all around the camp. I and my group of men will make a noise with our trumpets. Then you must also make a noise with your trumpets. Then shout, “We are fighting for the Lord and for Gideon!” ’"
+      "text": "You will be all around the camp. I and my group of men will make a noise with our trumpets. Then you must also make a noise with your trumpets. Then shout, “We are fighting for the Lord and for Gideon! ” ’"
     },
     {
       "verse": "19",
@@ -830,7 +830,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then all three groups of Israelite soldiers made a noise with their trumpets that they held in the right hands. They broke their pots and they held their burning branches in their left hands. Then they shouted, ‘Fight for the Lord and for Gideon!’"
+      "text": "Then all three groups of Israelite soldiers made a noise with their trumpets that they held in the right hands. They broke their pots and they held their burning branches in their left hands. Then they shouted, ‘Fight for the Lord and for Gideon! ’"
     },
     {
       "verse": "21",
@@ -846,7 +846,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then Gideon sent men to the hill country of Ephraim with this message: ‘Come down to the valleys and stop the Midianites from escaping. Put guards on all the places where people go across the streams and rivers. Do that on the Jordan River as far as Beth Barah.’ So all the men of Ephraim's tribe came together. They put guards on the Jordan River and the streams, as far as Beth Barah."
+      "text": "Then Gideon sent men to the hill country of Ephraim with this message: ‘Come down to the valleys and stop the Midianites from escaping. Put guards on all the places where people go across the streams and rivers. Do that on the Jordan River as far as Beth Barah. ’ So all the men of Ephraim's tribe came together. They put guards on the Jordan River and the streams, as far as Beth Barah."
     },
     {
       "verse": "25",
@@ -856,7 +856,7 @@ module.exports = {
   "8": [
     {
       "verse": "1",
-      "text": "The men of Ephraim's tribe asked Gideon, ‘Why have you insulted us? You should have called us to join with you to fight against the Midianites.’ They were very angry and they argued with Gideon. When Gideon said that, the men of Ephraim stopped being angry."
+      "text": "The men of Ephraim's tribe asked Gideon, ‘Why have you insulted us? You should have called us to join with you to fight against the Midianites. ’ They were very angry and they argued with Gideon. When Gideon said that, the men of Ephraim stopped being angry."
     },
     {
       "verse": "2",
@@ -864,7 +864,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "God chose you to take power over the leaders of Midian's army. You killed Oreb and Zeeb! Nothing that I did was as great as that!’When Gideon said that, the men of Ephraim stopped being angry."
+      "text": "God chose you to take power over the leaders of Midian's army. You killed Oreb and Zeeb! Nothing that I did was as great as that! ’When Gideon said that, the men of Ephraim stopped being angry."
     },
     {
       "verse": "4",
@@ -872,15 +872,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Gideon said to the men of Succoth, ‘Please give my soldiers some food to eat. They are very tired. We are chasing the kings of Midian, Zebah and Zalmunna, to catch them.’"
+      "text": "Gideon said to the men of Succoth, ‘Please give my soldiers some food to eat. They are very tired. We are chasing the kings of Midian, Zebah and Zalmunna, to catch them. ’"
     },
     {
       "verse": "6",
-      "text": "The city leaders of Succoth said, ‘You have not yet caught Zebah and Zalmunna. We will not give you any food until you have done that.’"
+      "text": "The city leaders of Succoth said, ‘You have not yet caught Zebah and Zalmunna. We will not give you any food until you have done that. ’"
     },
     {
       "verse": "7",
-      "text": "Gideon replied, ‘Because you say that, I will return here. When the Lord has put Zebah and Zalmunna under my power, I will come back to punish you. I will beat you with thorn branches that will tear your skin to pieces!’"
+      "text": "Gideon replied, ‘Because you say that, I will return here. When the Lord has put Zebah and Zalmunna under my power, I will come back to punish you. I will beat you with thorn branches that will tear your skin to pieces! ’"
     },
     {
       "verse": "8",
@@ -888,11 +888,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Gideon also warned the men of Peniel, ‘When I have won the fight against my enemies, I will return. Then I will destroy your strong tower.’"
+      "text": "Gideon also warned the men of Peniel, ‘When I have won the fight against my enemies, I will return. Then I will destroy your strong tower. ’"
     },
     {
       "verse": "10",
-      "text": "Zebah and Zalmunna had 15,000 men with them in Karkor. They were the only men left of their great army from the east. 120,000 of their soldiers had died in the battle."
+      "text": "Zebah and Zalmunna had 15, 000 men with them in Karkor. They were the only men left of their great army from the east. 120, 000 of their soldiers had died in the battle."
     },
     {
       "verse": "11",
@@ -912,7 +912,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Gideon went to Succoth with Zebah and Zalmunna. He said to the leaders, ‘Now I have brought these kings to you! You insulted me! You said, “We will not give your tired men any food until you have caught Zebah and Zalmunna.” ’"
+      "text": "Gideon went to Succoth with Zebah and Zalmunna. He said to the leaders, ‘Now I have brought these kings to you! You insulted me! You said, “We will not give your tired men any food until you have caught Zebah and Zalmunna. ” ’"
     },
     {
       "verse": "16",
@@ -924,35 +924,35 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then Gideon said to Zebah and Zalmunna, ‘Tell me about the men that you killed at Tabor. What kind of men were they?’ The kings answered, ‘They were like you. They looked like the sons of kings.’"
+      "text": "Then Gideon said to Zebah and Zalmunna, ‘Tell me about the men that you killed at Tabor. What kind of men were they? ’ The kings answered, ‘They were like you. They looked like the sons of kings. ’"
     },
     {
       "verse": "19",
-      "text": "Gideon said, ‘Those were my brothers, my own mother's sons. If you had not killed my brothers, I would not kill you. I promise you that, as surely as the Lord lives.’"
+      "text": "Gideon said, ‘Those were my brothers, my own mother's sons. If you had not killed my brothers, I would not kill you. I promise you that, as surely as the Lord lives. ’"
     },
     {
       "verse": "20",
-      "text": "Gideon said to his oldest son, Jether, ‘Kill them now!’ But Jether was only a boy. He was too afraid to do anything. So Gideon did kill them. He took away the silver images from the necks of their camels."
+      "text": "Gideon said to his oldest son, Jether, ‘Kill them now! ’ But Jether was only a boy. He was too afraid to do anything. So Gideon did kill them. He took away the silver images from the necks of their camels."
     },
     {
       "verse": "21",
-      "text": "Zebah and Zalmunna said to Gideon, ‘Kill us yourself! Let us see if you are brave enough to do that!’So Gideon did kill them. He took away the silver images from the necks of their camels."
+      "text": "Zebah and Zalmunna said to Gideon, ‘Kill us yourself! Let us see if you are brave enough to do that! ’So Gideon did kill them. He took away the silver images from the necks of their camels."
     },
     {
       "verse": "22",
-      "text": "After that, the Israelites said to Gideon, ‘Rule over us as our king! You, your son and your grandson should rule us. You have rescued us from Midian's power.’"
+      "text": "After that, the Israelites said to Gideon, ‘Rule over us as our king! You, your son and your grandson should rule us. You have rescued us from Midian's power. ’"
     },
     {
       "verse": "23",
-      "text": "But Gideon said to them, ‘I will not agree to rule over you. Nor will my son rule over you. The Lord will rule over you.’"
+      "text": "But Gideon said to them, ‘I will not agree to rule over you. Nor will my son rule over you. The Lord will rule over you. ’"
     },
     {
       "verse": "24",
-      "text": "Gideon also said, ‘I will ask you only to do one thing for me. Each of you should give me one ear-ring from the things that you took from our enemies.’ (The Midianites wore gold ear-rings because they were descendants of Ishmael.)"
+      "text": "Gideon also said, ‘I will ask you only to do one thing for me. Each of you should give me one ear-ring from the things that you took from our enemies. ’ (The Midianites wore gold ear-rings because they were descendants of Ishmael. )"
     },
     {
       "verse": "25",
-      "text": "The people replied, ‘We are happy to give them to you.’So they put a coat on the ground. Each man threw a ring onto it."
+      "text": "The people replied, ‘We are happy to give them to you. ’So they put a coat on the ground. Each man threw a ring onto it."
     },
     {
       "verse": "26",
@@ -1002,11 +1002,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘Say this to the leaders of Shechem: “You should not agree to let all of Gideon's 70 sons rule over you. It would be better for you to have only one man rule over you. Remember that I belong to your own family.” ’"
+      "text": "‘Say this to the leaders of Shechem: “You should not agree to let all of Gideon's 70 sons rule over you. It would be better for you to have only one man rule over you. Remember that I belong to your own family. ” ’"
     },
     {
       "verse": "3",
-      "text": "Abimelech's mother's family told the men of Shechem what Abimelech had said. They agreed that Abimelech would be a good ruler for them. They said, ‘He is our brother.’"
+      "text": "Abimelech's mother's family told the men of Shechem what Abimelech had said. They agreed that Abimelech would be a good ruler for them. They said, ‘He is our brother. ’"
     },
     {
       "verse": "4",
@@ -1026,35 +1026,35 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "One day, the trees decided to choose a king for themselves. They said to the olive tree, “Be our king.”"
+      "text": "One day, the trees decided to choose a king for themselves. They said to the olive tree, “Be our king. ”"
     },
     {
       "verse": "9",
-      "text": "But the olive tree replied, “My oil pleases men and even the gods. I will not stop making my oil so that I can rule over all you other trees!”"
+      "text": "But the olive tree replied, “My oil pleases men and even the gods. I will not stop making my oil so that I can rule over all you other trees! ”"
     },
     {
       "verse": "10",
-      "text": "Then the trees said to the fig tree, “Come and be our king.”"
+      "text": "Then the trees said to the fig tree, “Come and be our king. ”"
     },
     {
       "verse": "11",
-      "text": "The fig tree replied, “I will not stop making my good, sweet figs so that I can rule over you.”"
+      "text": "The fig tree replied, “I will not stop making my good, sweet figs so that I can rule over you. ”"
     },
     {
       "verse": "12",
-      "text": "Then the trees said to the vine, “Come and be our king.”"
+      "text": "Then the trees said to the vine, “Come and be our king. ”"
     },
     {
       "verse": "13",
-      "text": "But the vine answered, “Wine from my grapes makes gods and people happy. I will not stop making wine so that I can rule over you.”"
+      "text": "But the vine answered, “Wine from my grapes makes gods and people happy. I will not stop making wine so that I can rule over you. ”"
     },
     {
       "verse": "14",
-      "text": "Finally, the trees said to the thorn bush, “Come and be our king.”"
+      "text": "Finally, the trees said to the thorn bush, “Come and be our king. ”"
     },
     {
       "verse": "15",
-      "text": "The thorn bush said to the trees, “If you really want to choose me as your king, come here. Hide under my branches to keep safe. If not, I will cause fire to come out from the thorn bush. It will burn up all the big cedar trees in Lebanon!”"
+      "text": "The thorn bush said to the trees, “If you really want to choose me as your king, come here. Hide under my branches to keep safe. If not, I will cause fire to come out from the thorn bush. It will burn up all the big cedar trees in Lebanon! ”"
     },
     {
       "verse": "16",
@@ -1074,7 +1074,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But if you have not been faithful, I pray that Abimelech will destroy you! I pray that his fire will completely burn up the leaders of Shechem and Beth Millo. And I pray that fire from you leaders will completely destroy Abimelech!’"
+      "text": "But if you have not been faithful, I pray that Abimelech will destroy you! I pray that his fire will completely burn up the leaders of Shechem and Beth Millo. And I pray that fire from you leaders will completely destroy Abimelech! ’"
     },
     {
       "verse": "21",
@@ -1110,7 +1110,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "If I were the leader of these people, I would remove Abimelech as king. I would say to him, “Make your army strong and try to fight against us!” ’"
+      "text": "If I were the leader of these people, I would remove Abimelech as king. I would say to him, “Make your army strong and try to fight against us! ” ’"
     },
     {
       "verse": "30",
@@ -1126,7 +1126,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "When the sun rises in the morning, quickly attack the city. When Gaal and his men come out to fight, you can do to them whatever you want.’"
+      "text": "When the sun rises in the morning, quickly attack the city. When Gaal and his men come out to fight, you can do to them whatever you want. ’"
     },
     {
       "verse": "34",
@@ -1138,15 +1138,15 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Gaal saw them. He said to Zebul, ‘Look! There are men coming down from the tops of the hills.’ Zebul replied, ‘No, you are wrong. You can see shadows in the hills. They only look like men.’"
+      "text": "Gaal saw them. He said to Zebul, ‘Look! There are men coming down from the tops of the hills. ’ Zebul replied, ‘No, you are wrong. You can see shadows in the hills. They only look like men. ’"
     },
     {
       "verse": "37",
-      "text": "Gaal said again, ‘Look! I can really see men who are coming down from the middle of the land. There is another group of men who are coming along the road from the Diviner's Oak Tree.’"
+      "text": "Gaal said again, ‘Look! I can really see men who are coming down from the middle of the land. There is another group of men who are coming along the road from the Diviner's Oak Tree. ’"
     },
     {
       "verse": "38",
-      "text": "Then Zebul said to Gaal, ‘What has happened to your proud words now? You boasted when you said, “Abimelech is nobody! We should not serve him.” Here are the men that you insulted as useless! So now go out and fight them!’"
+      "text": "Then Zebul said to Gaal, ‘What has happened to your proud words now? You boasted when you said, “Abimelech is nobody! We should not serve him. ” Here are the men that you insulted as useless! So now go out and fight them! ’"
     },
     {
       "verse": "39",
@@ -1186,11 +1186,11 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "He took all his men up to Mount Zalmon. He used an axe to cut some branches off a tree. He put the branches on his shoulders. Then he said to his men, ‘Be quick! Do the same thing as you have seen me do!’"
+      "text": "He took all his men up to Mount Zalmon. He used an axe to cut some branches off a tree. He put the branches on his shoulders. Then he said to his men, ‘Be quick! Do the same thing as you have seen me do! ’"
     },
     {
       "verse": "49",
-      "text": "So all the men cut branches and they followed Abimelech. They put the branches around the strong building. Then they brought fire to burn down the building. There were about 1,000 men and women in the tower of Shechem. They all died in the fire."
+      "text": "So all the men cut branches and they followed Abimelech. They put the branches around the strong building. Then they brought fire to burn down the building. There were about 1, 000 men and women in the tower of Shechem. They all died in the fire."
     },
     {
       "verse": "50",
@@ -1210,7 +1210,7 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "Abimelech quickly said to the young man who carried his weapons, ‘Take hold of your sword and kill me! I do not want people to say that a woman killed me!’ So the young man killed him with his sword."
+      "text": "Abimelech quickly said to the young man who carried his weapons, ‘Take hold of your sword and kill me! I do not want people to say that a woman killed me! ’ So the young man killed him with his sword."
     },
     {
       "verse": "55",
@@ -1264,7 +1264,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then the Israelites called out to the Lord for help. They said, ‘We have turned against you. We have worshipped the idols of Baal instead of you.’"
+      "text": "Then the Israelites called out to the Lord for help. They said, ‘We have turned against you. We have worshipped the idols of Baal instead of you. ’"
     },
     {
       "verse": "13",
@@ -1272,11 +1272,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Go and ask those other gods to help you! They are the gods that you have chosen, so let them rescue you from your trouble!’"
+      "text": "Go and ask those other gods to help you! They are the gods that you have chosen, so let them rescue you from your trouble! ’"
     },
     {
       "verse": "15",
-      "text": "But the Israelites said to the Lord, ‘We are guilty. Punish us in whatever way you think is right, but please rescue us now.’"
+      "text": "But the Israelites said to the Lord, ‘We are guilty. Punish us in whatever way you think is right, but please rescue us now. ’"
     },
     {
       "verse": "16",
@@ -1288,7 +1288,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The leaders of the people of Gilead asked each other, ‘Who will lead us to attack the Ammonites? Any man who agrees to do that will become the leader of everyone who lives in Gilead.’"
+      "text": "The leaders of the people of Gilead asked each other, ‘Who will lead us to attack the Ammonites? Any man who agrees to do that will become the leader of everyone who lives in Gilead. ’"
     },
     {
       "verse": "11-12",
@@ -1302,7 +1302,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Gilead's wife also gave birth to sons for him. When they were older, they sent Jephthah away from the family home. They said to him, ‘You will not receive any of our father's things when he dies. You are the son of a prostitute, not our mother.’"
+      "text": "Gilead's wife also gave birth to sons for him. When they were older, they sent Jephthah away from the family home. They said to him, ‘You will not receive any of our father's things when he dies. You are the son of a prostitute, not our mother. ’"
     },
     {
       "verse": "3",
@@ -1318,23 +1318,23 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "They said to him, ‘Come and lead our army to fight against the Ammonites.’"
+      "text": "They said to him, ‘Come and lead our army to fight against the Ammonites. ’"
     },
     {
       "verse": "7",
-      "text": "Jephthah said to them, ‘Before this, you hated me. You made me leave my father's house. So why do you come to me for help, now that you are in trouble?’"
+      "text": "Jephthah said to them, ‘Before this, you hated me. You made me leave my father's house. So why do you come to me for help, now that you are in trouble? ’"
     },
     {
       "verse": "8",
-      "text": "The leaders of Gilead replied, ‘But we really need you to help us. Please join us to fight against the Ammonites. Then we will make you the leader of everyone who lives in Gilead.’"
+      "text": "The leaders of Gilead replied, ‘But we really need you to help us. Please join us to fight against the Ammonites. Then we will make you the leader of everyone who lives in Gilead. ’"
     },
     {
       "verse": "9",
-      "text": "Jephthah said to them, ‘So, you are saying that I should come back home to fight with you against the Ammonites. You are saying that if the Lord gives them to me, I will be your leader. Is that really true?’"
+      "text": "Jephthah said to them, ‘So, you are saying that I should come back home to fight with you against the Ammonites. You are saying that if the Lord gives them to me, I will be your leader. Is that really true? ’"
     },
     {
       "verse": "10",
-      "text": "The leaders of Gilead said, ‘We promise to do that. The Lord will judge between us if we do not do what you have said.’"
+      "text": "The leaders of Gilead said, ‘We promise to do that. The Lord will judge between us if we do not do what you have said. ’"
     },
     {
       "verse": "11",
@@ -1342,11 +1342,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Jephthah sent men with a message to the Ammonite king. He asked, ‘Why have you come to fight against our people? What have we done to make you angry?’"
+      "text": "Jephthah sent men with a message to the Ammonite king. He asked, ‘Why have you come to fight against our people? What have we done to make you angry? ’"
     },
     {
       "verse": "13",
-      "text": "The Ammonite king answered Jephthah's men, ‘You Israelites came here from Egypt and you took our land on the east side of the Jordan River. You have taken for yourselves all our land from the Arnon river in the south to the Jabbok river in the north. You have taken it all, as far as the Jordan River in the west. Now give it back to us, so that we do not need to fight for it.’"
+      "text": "The Ammonite king answered Jephthah's men, ‘You Israelites came here from Egypt and you took our land on the east side of the Jordan River. You have taken for yourselves all our land from the Arnon river in the south to the Jabbok river in the north. You have taken it all, as far as the Jordan River in the west. Now give it back to us, so that we do not need to fight for it. ’"
     },
     {
       "verse": "14",
@@ -1362,7 +1362,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then they sent a message to the king of Edom. They asked him, ‘Please let us travel through your land.’ But the king of Edom refused to let them do that. The Israelites sent the same message to the king of Moab. He also refused to agree. So the Israelites stayed at Kadesh."
+      "text": "Then they sent a message to the king of Edom. They asked him, ‘Please let us travel through your land. ’ But the king of Edom refused to let them do that. The Israelites sent the same message to the king of Moab. He also refused to agree. So the Israelites stayed at Kadesh."
     },
     {
       "verse": "18",
@@ -1370,7 +1370,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Sihon was the Amorite king who ruled in Heshbon. The Israelites sent a message to him. They asked him, ‘Please let us travel through your land to our own place.’"
+      "text": "Sihon was the Amorite king who ruled in Heshbon. The Israelites sent a message to him. They asked him, ‘Please let us travel through your land to our own place. ’"
     },
     {
       "verse": "20",
@@ -1402,7 +1402,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "I have not done anything to hurt you. You are the one who is doing something wrong if you attack us. The Lord himself is the judge! He will decide whether the Israelites or the Ammonites are doing what is right.” ’"
+      "text": "I have not done anything to hurt you. You are the one who is doing something wrong if you attack us. The Lord himself is the judge! He will decide whether the Israelites or the Ammonites are doing what is right. ” ’"
     },
     {
       "verse": "28",
@@ -1418,7 +1418,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Then, when I return home safely, I will give you a burnt offering. Whatever is first to come out through the door of my house as I arrive, I will offer it to you as a sacrifice.’"
+      "text": "Then, when I return home safely, I will give you a burnt offering. Whatever is first to come out through the door of my house as I arrive, I will offer it to you as a sacrifice. ’"
     },
     {
       "verse": "32",
@@ -1434,7 +1434,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "When Jephthah saw her, he was so upset that he tore his clothes. He said, ‘Oh no! My daughter! You have made me very sad. I made a serious promise to the Lord and I must do what I promised.’"
+      "text": "When Jephthah saw her, he was so upset that he tore his clothes. He said, ‘Oh no! My daughter! You have made me very sad. I made a serious promise to the Lord and I must do what I promised. ’"
     },
     {
       "verse": "36",
@@ -1442,11 +1442,11 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "But please allow me to do this one thing. Let me walk in the hills with my friends for two months. I need time to be sad because I will die before I can marry a man.’"
+      "text": "But please allow me to do this one thing. Let me walk in the hills with my friends for two months. I need time to be sad because I will die before I can marry a man. ’"
     },
     {
       "verse": "38",
-      "text": "Jephthah said, ‘You may go.’ He sent her away from home for two months. She and her friends walked in the hills. They wept together because she would never marry."
+      "text": "Jephthah said, ‘You may go. ’ He sent her away from home for two months. She and her friends walked in the hills. They wept together because she would never marry."
     },
     {
       "verse": "39",
@@ -1460,7 +1460,7 @@ module.exports = {
   "12": [
     {
       "verse": "1",
-      "text": "The men of Ephraim's tribe joined together to make an army. They crossed over the Jordan River to Zaphon. They said to Jephthah, ‘Why did you go to fight against the Ammonites without us? You should have asked us to go with you. Now we will burn down your house with you inside it!’"
+      "text": "The men of Ephraim's tribe joined together to make an army. They crossed over the Jordan River to Zaphon. They said to Jephthah, ‘Why did you go to fight against the Ammonites without us? You should have asked us to go with you. Now we will burn down your house with you inside it! ’"
     },
     {
       "verse": "2",
@@ -1468,19 +1468,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "When I realized that you would not come to help us, we attacked the Ammonites ourselves. I put my life in danger. But the Lord put the Ammonites under my power. So why have you come to attack me now?’"
+      "text": "When I realized that you would not come to help us, we attacked the Ammonites ourselves. I put my life in danger. But the Lord put the Ammonites under my power. So why have you come to attack me now? ’"
     },
     {
       "verse": "4",
-      "text": "Jephthah brought together all the men of Gilead. They fought against the men of Ephraim's tribe. The men of Gilead won the fight. They were angry because the men of Ephraim had insulted them. They had said, ‘You people of Gilead have run away to live on the land of Ephraim and Manasseh.’"
+      "text": "Jephthah brought together all the men of Gilead. They fought against the men of Ephraim's tribe. The men of Gilead won the fight. They were angry because the men of Ephraim had insulted them. They had said, ‘You people of Gilead have run away to live on the land of Ephraim and Manasseh. ’"
     },
     {
       "verse": "5",
-      "text": "After that, Gilead's army put guards at the places where people could go across the Jordan River. They wanted to stop people from Ephraim going across the river. If one of Ephraim's soldiers was trying to escape, they would ask him, ‘Do you belong to Ephraim's tribe?’ The man would say, ‘No, I do not!’"
+      "text": "After that, Gilead's army put guards at the places where people could go across the Jordan River. They wanted to stop people from Ephraim going across the river. If one of Ephraim's soldiers was trying to escape, they would ask him, ‘Do you belong to Ephraim's tribe? ’ The man would say, ‘No, I do not! ’"
     },
     {
       "verse": "6",
-      "text": "Then they would tell him, ‘Say, “Shibboleth!” ’ People from Ephraim could not say that word properly. So if the man said, ‘Sibboleth,’ they would take hold of him and kill him. That day, they killed 42,000 soldiers of Ephraim at those places on the Jordan River."
+      "text": "Then they would tell him, ‘Say, “Shibboleth! ” ’ People from Ephraim could not say that word properly. So if the man said, ‘Sibboleth, ’ they would take hold of him and kill him. That day, they killed 42, 000 soldiers of Ephraim at those places on the Jordan River."
     },
     {
       "verse": "7",
@@ -1538,7 +1538,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Yes, you will give birth to a son. You must never cut the boy's hair. He is to be a Nazirite. He will belong to God from the time that he is born. He will begin to rescue the Israelites from the power of the Philistines.’"
+      "text": "Yes, you will give birth to a son. You must never cut the boy's hair. He is to be a Nazirite. He will belong to God from the time that he is born. He will begin to rescue the Israelites from the power of the Philistines. ’"
     },
     {
       "verse": "6",
@@ -1546,11 +1546,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He said to me, “You will become pregnant and you will give birth to a son. You must not drink any wine or beer. You must not eat any food that is unclean. The boy will belong to me as a Nazirite from his birth until the day that he dies!” ’"
+      "text": "He said to me, “You will become pregnant and you will give birth to a son. You must not drink any wine or beer. You must not eat any food that is unclean. The boy will belong to me as a Nazirite from his birth until the day that he dies! ” ’"
     },
     {
       "verse": "8",
-      "text": "Manoah prayed to the Lord, ‘Lord, please send the man of God to come to us again. Let him teach us how we should take care of this boy who will be born.’"
+      "text": "Manoah prayed to the Lord, ‘Lord, please send the man of God to come to us again. Let him teach us how we should take care of this boy who will be born. ’"
     },
     {
       "verse": "9",
@@ -1558,15 +1558,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "She ran to tell her husband, ‘Come quickly! The man who came to me the other day has appeared to me again!’"
+      "text": "She ran to tell her husband, ‘Come quickly! The man who came to me the other day has appeared to me again! ’"
     },
     {
       "verse": "11",
-      "text": "Manoah got up and he followed his wife. When he met the man, he asked him, ‘Are you the man who talked to my wife?’ The man said, ‘Yes, I am.’"
+      "text": "Manoah got up and he followed his wife. When he met the man, he asked him, ‘Are you the man who talked to my wife? ’ The man said, ‘Yes, I am. ’"
     },
     {
       "verse": "12",
-      "text": "Then Manoah asked him, ‘When what you promised happens, how should the boy live? What kind of work will he do?’"
+      "text": "Then Manoah asked him, ‘When what you promised happens, how should the boy live? What kind of work will he do? ’"
     },
     {
       "verse": "13",
@@ -1574,23 +1574,23 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "She must not eat anything that comes from vines. She must not drink wine or beer. She must not eat any food that is unclean. She must obey everything that I have commanded her to do.’"
+      "text": "She must not eat anything that comes from vines. She must not drink wine or beer. She must not eat any food that is unclean. She must obey everything that I have commanded her to do. ’"
     },
     {
       "verse": "15",
-      "text": "Manoah said to the Lord's angel, ‘Please stay here with us. We would like to cook a young goat for you to eat.’"
+      "text": "Manoah said to the Lord's angel, ‘Please stay here with us. We would like to cook a young goat for you to eat. ’"
     },
     {
       "verse": "16",
-      "text": "The angel replied, ‘Even if I stay with you, I will not eat your food. But you may prepare a burnt offering as a sacrifice to the Lord.’ The angel said that because Manoah had not realized that he was the Lord's angel."
+      "text": "The angel replied, ‘Even if I stay with you, I will not eat your food. But you may prepare a burnt offering as a sacrifice to the Lord. ’ The angel said that because Manoah had not realized that he was the Lord's angel."
     },
     {
       "verse": "17",
-      "text": "Then Manoah asked the Lord's angel, ‘What is your name? When what you have promised happens, we will want to give you honour.’"
+      "text": "Then Manoah asked the Lord's angel, ‘What is your name? When what you have promised happens, we will want to give you honour. ’"
     },
     {
       "verse": "18",
-      "text": "The angel replied, ‘You should not ask what my name is. It is too great for you to understand.’"
+      "text": "The angel replied, ‘You should not ask what my name is. It is too great for you to understand. ’"
     },
     {
       "verse": "19",
@@ -1606,11 +1606,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "He said to his wife, ‘We are sure to die! We have seen God!’"
+      "text": "He said to his wife, ‘We are sure to die! We have seen God! ’"
     },
     {
       "verse": "23",
-      "text": "But his wife said to him, ‘The Lord accepted our burnt offering and our grain offering. He would not have done that if he wanted to kill us. He would not have shown us all these great things. He would not have told us about what will happen to us.’"
+      "text": "But his wife said to him, ‘The Lord accepted our burnt offering and our grain offering. He would not have done that if he wanted to kill us. He would not have shown us all these great things. He would not have told us about what will happen to us. ’"
     },
     {
       "verse": "24",
@@ -1628,11 +1628,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "When he returned home, he said to his father and mother, ‘I have seen a young Philistine woman in Timnah and I want to marry her. Please get her for me as my wife.’"
+      "text": "When he returned home, he said to his father and mother, ‘I have seen a young Philistine woman in Timnah and I want to marry her. Please get her for me as my wife. ’"
     },
     {
       "verse": "3",
-      "text": "His parents replied, ‘You do not need to go to the Philistines to get a wife. They are not the Lord's people. There is surely someone among our own relatives or other Israelites that you would like to marry.’ But Samson said to his father, ‘You must get her for me. She is the right girl for me to marry.’"
+      "text": "His parents replied, ‘You do not need to go to the Philistines to get a wife. They are not the Lord's people. There is surely someone among our own relatives or other Israelites that you would like to marry. ’ But Samson said to his father, ‘You must get her for me. She is the right girl for me to marry. ’"
     },
     {
       "verse": "4",
@@ -1672,19 +1672,19 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But if you cannot tell me the answer, you will give me 30 linen shirts and 30 sets of clothes.’ The young men said, ‘Tell us your question.’"
+      "text": "But if you cannot tell me the answer, you will give me 30 linen shirts and 30 sets of clothes. ’ The young men said, ‘Tell us your question. ’"
     },
     {
       "verse": "14",
-      "text": "Samson said to them:‘Out of the one who eats came something to eat.Out of the strong one came something sweet.’After three days, the Philistine men could not find the answer. ‘Out of the one who eats came something to eat. Out of the strong one came something sweet.’ After three days, the Philistine men could not find the answer."
+      "text": "Samson said to them:‘Out of the one who eats came something to eat. Out of the strong one came something sweet. ’After three days, the Philistine men could not find the answer. ‘Out of the one who eats came something to eat. Out of the strong one came something sweet. ’ After three days, the Philistine men could not find the answer."
     },
     {
       "verse": "15",
-      "text": "On the fourth day they said to Samson's wife, ‘Find a way to make your husband tell you the answer. If you do not, we will use fire to destroy your father's house, with you inside it! Did you ask us to come to your marriage party to make us poor?’"
+      "text": "On the fourth day they said to Samson's wife, ‘Find a way to make your husband tell you the answer. If you do not, we will use fire to destroy your father's house, with you inside it! Did you ask us to come to your marriage party to make us poor? ’"
     },
     {
       "verse": "16",
-      "text": "Then Samson's wife went to him and she wept. She said to him, ‘It seems that you hate me. You do not really love me. You have asked my friends a clever question, but you have not told me the answer.’Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you?’ Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you?’"
+      "text": "Then Samson's wife went to him and she wept. She said to him, ‘It seems that you hate me. You do not really love me. You have asked my friends a clever question, but you have not told me the answer. ’Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you? ’ Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you? ’"
     },
     {
       "verse": "17",
@@ -1692,7 +1692,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Before sunset on the seventh day, the men of the town gave their answer to Samson:‘There is nothing sweeter than honey!There is nothing stronger than a lion!’Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question.’ ‘There is nothing sweeter than honey! There is nothing stronger than a lion!’ Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question.’"
+      "text": "Before sunset on the seventh day, the men of the town gave their answer to Samson:‘There is nothing sweeter than honey! There is nothing stronger than a lion! ’Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question. ’ ‘There is nothing sweeter than honey! There is nothing stronger than a lion! ’ Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question. ’"
     },
     {
       "verse": "19",
@@ -1706,15 +1706,15 @@ module.exports = {
   "15": [
     {
       "verse": "1",
-      "text": "Later, Samson went to visit his wife at the time of the wheat harvest. He took a young goat with him as a gift. He said to her father, ‘I am going into my wife's room to sleep with her.’ But her father stopped him."
+      "text": "Later, Samson went to visit his wife at the time of the wheat harvest. He took a young goat with him as a gift. He said to her father, ‘I am going into my wife's room to sleep with her. ’ But her father stopped him."
     },
     {
       "verse": "2",
-      "text": "He said, ‘I was sure that you hated my daughter. So I have given her to your special friend to be his wife. Look at her younger sister. She is more beautiful. Take her as your wife, instead.’"
+      "text": "He said, ‘I was sure that you hated my daughter. So I have given her to your special friend to be his wife. Look at her younger sister. She is more beautiful. Take her as your wife, instead. ’"
     },
     {
       "verse": "3",
-      "text": "Samson said, ‘This time I will not be guilty when I punish the Philistines!’"
+      "text": "Samson said, ‘This time I will not be guilty when I punish the Philistines! ’"
     },
     {
       "verse": "4",
@@ -1726,15 +1726,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Philistines asked, ‘Who did this?’ People said to them, ‘It was Samson, the man who married the young woman in Timnah. He did it because her father gave her to Samson's special friend instead of Samson.’So the Philistines went and burned the man and his daughter to death."
+      "text": "The Philistines asked, ‘Who did this? ’ People said to them, ‘It was Samson, the man who married the young woman in Timnah. He did it because her father gave her to Samson's special friend instead of Samson. ’So the Philistines went and burned the man and his daughter to death."
     },
     {
       "verse": "7",
-      "text": "Samson said to them, ‘Because you have done this, I will punish you. I will not stop until your punishment is complete.’ After that, Samson went to live in a cave in the rock of Etam."
+      "text": "Samson said to them, ‘Because you have done this, I will punish you. I will not stop until your punishment is complete. ’ After that, Samson went to live in a cave in the rock of Etam."
     },
     {
       "verse": "8",
-      "text": "He attacked them with great strength. He killed many of them.After that, Samson went to live in a cave in the rock of Etam."
+      "text": "He attacked them with great strength. He killed many of them. After that, Samson went to live in a cave in the rock of Etam."
     },
     {
       "verse": "9",
@@ -1742,19 +1742,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The men of Judah asked them, ‘Why have you come to attack us?’ The Philistines replied, ‘We have come to catch Samson and take him as our prisoner. We need to punish him in the same way that he has punished us.’"
+      "text": "The men of Judah asked them, ‘Why have you come to attack us? ’ The Philistines replied, ‘We have come to catch Samson and take him as our prisoner. We need to punish him in the same way that he has punished us. ’"
     },
     {
       "verse": "11",
-      "text": "Then 3,000 men of Judah went to the cave where Samson was hiding. They said to him, ‘You know that the Philistines are our rulers. You are causing them to give us trouble.’Samson said, ‘I have only done to them as they did to me.’ Samson said, ‘I have only done to them as they did to me.’"
+      "text": "Then 3, 000 men of Judah went to the cave where Samson was hiding. They said to him, ‘You know that the Philistines are our rulers. You are causing them to give us trouble. ’Samson said, ‘I have only done to them as they did to me. ’ Samson said, ‘I have only done to them as they did to me. ’"
     },
     {
       "verse": "12",
-      "text": "The men of Judah said to him, ‘We have come to tie you up as our prisoner. We must let the Philistines take you away.’Samson said, ‘Promise me that you will not kill me yourselves.’ Samson said, ‘Promise me that you will not kill me yourselves.’"
+      "text": "The men of Judah said to him, ‘We have come to tie you up as our prisoner. We must let the Philistines take you away. ’Samson said, ‘Promise me that you will not kill me yourselves. ’ Samson said, ‘Promise me that you will not kill me yourselves. ’"
     },
     {
       "verse": "13",
-      "text": "They said, ‘We agree. We will only tie you up and give you to them. We promise that we will not kill you.’So they tied him up with two new ropes. They took him with them away from the cave. So they tied him up with two new ropes. They took him with them away from the cave."
+      "text": "They said, ‘We agree. We will only tie you up and give you to them. We promise that we will not kill you. ’So they tied him up with two new ropes. They took him with them away from the cave. So they tied him up with two new ropes. They took him with them away from the cave."
     },
     {
       "verse": "14",
@@ -1762,11 +1762,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He saw a bone from the skull of a donkey that had just died. He picked it up and he used it to kill 1,000 Philistine soldiers."
+      "text": "He saw a bone from the skull of a donkey that had just died. He picked it up and he used it to kill 1, 000 Philistine soldiers."
     },
     {
       "verse": "16",
-      "text": "Then Samson sang this song:‘I have used a donkey's skull to kill 1,000 men.I have made them like many heaps of dead donkeys!’ ‘I have used a donkey's skull to kill 1,000 men. I have made them like many heaps of dead donkeys!’"
+      "text": "Then Samson sang this song:‘I have used a donkey's skull to kill 1, 000 men. I have made them like many heaps of dead donkeys! ’ ‘I have used a donkey's skull to kill 1, 000 men. I have made them like many heaps of dead donkeys! ’"
     },
     {
       "verse": "17",
@@ -1774,7 +1774,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Samson was now very thirsty. He called out to the Lord for help. He said, ‘You have helped me to win a great battle. Should I now die because I am so thirsty? Then these Philistines would do whatever they want to me.’"
+      "text": "Samson was now very thirsty. He called out to the Lord for help. He said, ‘You have helped me to win a great battle. Should I now die because I am so thirsty? Then these Philistines would do whatever they want to me. ’"
     },
     {
       "verse": "19",
@@ -1792,7 +1792,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The people of Gaza heard that Samson was in their city. The men met together and they waited for Samson to leave. They hid themselves all night at the gate of the city. They waited there quietly and they thought, ‘We will kill him at dawn when he tries to leave the city.’"
+      "text": "The people of Gaza heard that Samson was in their city. The men met together and they waited for Samson to leave. They hid themselves all night at the gate of the city. They waited there quietly and they thought, ‘We will kill him at dawn when he tries to leave the city. ’"
     },
     {
       "verse": "3",
@@ -1804,15 +1804,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The rulers of the Philistines went to visit Delilah. They said to her, ‘Do something clever to discover what makes Samson so strong. We want to find a way to take hold of him and tie him up. If you do that, we will each give you 1,100 pieces of silver.’"
+      "text": "The rulers of the Philistines went to visit Delilah. They said to her, ‘Do something clever to discover what makes Samson so strong. We want to find a way to take hold of him and tie him up. If you do that, we will each give you 1, 100 pieces of silver. ’"
     },
     {
       "verse": "6",
-      "text": "So Delilah said to Samson, ‘Please tell me what makes you so strong. How could someone tie you up so that you become helpless?’"
+      "text": "So Delilah said to Samson, ‘Please tell me what makes you so strong. How could someone tie you up so that you become helpless? ’"
     },
     {
       "verse": "7",
-      "text": "Samson replied, ‘Someone would have to use seven new strings for bows. The strings must not have become dry. If they use those strings to tie me up, I will become weak, like other men.’"
+      "text": "Samson replied, ‘Someone would have to use seven new strings for bows. The strings must not have become dry. If they use those strings to tie me up, I will become weak, like other men. ’"
     },
     {
       "verse": "8",
@@ -1820,31 +1820,31 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Some Philistine men hid in a room of her house. Then she shouted, ‘Samson, the Philistines are here!’ But he broke the seven strings very easily. They were like thin cotton that a fire burns. So they did not discover the secret about his strength."
+      "text": "Some Philistine men hid in a room of her house. Then she shouted, ‘Samson, the Philistines are here! ’ But he broke the seven strings very easily. They were like thin cotton that a fire burns. So they did not discover the secret about his strength."
     },
     {
       "verse": "10",
-      "text": "Delilah said to Samson, ‘You have deceived me as if I was a fool! Tell me the truth! How can someone really make you weak?’"
+      "text": "Delilah said to Samson, ‘You have deceived me as if I was a fool! Tell me the truth! How can someone really make you weak? ’"
     },
     {
       "verse": "11",
-      "text": "Samson said to her, ‘They would have to use new ropes that no one has used. If they tie me up with those, I will become weak, like other men.’"
+      "text": "Samson said to her, ‘They would have to use new ropes that no one has used. If they tie me up with those, I will become weak, like other men. ’"
     },
     {
       "verse": "12",
-      "text": "So Delilah took some new ropes and she tied Samson up with them. Some Philistine men were hiding in the room, as they did before. Then she shouted, ‘Samson, the Philistines are here!’ But he broke the ropes off his arms, as if they were thin string."
+      "text": "So Delilah took some new ropes and she tied Samson up with them. Some Philistine men were hiding in the room, as they did before. Then she shouted, ‘Samson, the Philistines are here! ’ But he broke the ropes off his arms, as if they were thin string."
     },
     {
       "verse": "13",
-      "text": "Then Delilah said to Samson, ‘You have deceived me again as if I was a fool. Now you must tell me the truth. Tell me how someone can make you weak.’Samson replied, ‘You see that my long hair is tied in seven tails. You must tie them into the cloth that is on the loom. Fix them there very strongly. If you do that, I will become weak, like other men.’"
+      "text": "Then Delilah said to Samson, ‘You have deceived me again as if I was a fool. Now you must tell me the truth. Tell me how someone can make you weak. ’Samson replied, ‘You see that my long hair is tied in seven tails. You must tie them into the cloth that is on the loom. Fix them there very strongly. If you do that, I will become weak, like other men. ’"
     },
     {
       "verse": "14",
-      "text": "Delilah did this while Samson was asleep. She took the seven tails of his hair and she tied them into the cloth on the loom. She fixed them with a strong peg. Then she shouted, ‘Samson, the Philistines are here!’ He woke up and he pulled out the peg. He tore his hair away from the cloth on the loom so that he was free."
+      "text": "Delilah did this while Samson was asleep. She took the seven tails of his hair and she tied them into the cloth on the loom. She fixed them with a strong peg. Then she shouted, ‘Samson, the Philistines are here! ’ He woke up and he pulled out the peg. He tore his hair away from the cloth on the loom so that he was free."
     },
     {
       "verse": "15",
-      "text": "Then Delilah said to him, ‘I realize that you do not really love me, because you will not tell me your secret. You have deceived me three times, as if I was a fool. You have refused to tell me what makes you so strong.’"
+      "text": "Then Delilah said to him, ‘I realize that you do not really love me, because you will not tell me your secret. You have deceived me three times, as if I was a fool. You have refused to tell me what makes you so strong. ’"
     },
     {
       "verse": "16",
@@ -1852,11 +1852,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Finally, Samson told her his secret. He said to her, ‘No one has ever cut my hair. Even before I was born, I belonged to God as a Nazirite. If someone cuts off my hair, I would have no more strength. I would become as weak as any other man.’"
+      "text": "Finally, Samson told her his secret. He said to her, ‘No one has ever cut my hair. Even before I was born, I belonged to God as a Nazirite. If someone cuts off my hair, I would have no more strength. I would become as weak as any other man. ’"
     },
     {
       "verse": "18",
-      "text": "Delilah realized that Samson had told her the truth. So she sent a message to the rulers of the Philistines. She told them, ‘Samson has now told me his secret. So come back once more.’ So the Philistine rulers went to visit Delilah again. They took their pieces of silver with them."
+      "text": "Delilah realized that Samson had told her the truth. So she sent a message to the rulers of the Philistines. She told them, ‘Samson has now told me his secret. So come back once more. ’ So the Philistine rulers went to visit Delilah again. They took their pieces of silver with them."
     },
     {
       "verse": "19",
@@ -1864,7 +1864,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then Delilah shouted, ‘Samson, the Philistines are here!’ He woke up and he thought, ‘I will make myself free as I have always done before.’ But he did not realize that the Lord had gone away from him."
+      "text": "Then Delilah shouted, ‘Samson, the Philistines are here! ’ He woke up and he thought, ‘I will make myself free as I have always done before. ’ But he did not realize that the Lord had gone away from him."
     },
     {
       "verse": "21",
@@ -1876,27 +1876,27 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "One day, the rulers of the Philistines met together to have a big feast. They offered a great sacrifice to their god, Dagon. They said, ‘Dagon has put our enemy, Samson, under our power.’"
+      "text": "One day, the rulers of the Philistines met together to have a big feast. They offered a great sacrifice to their god, Dagon. They said, ‘Dagon has put our enemy, Samson, under our power. ’"
     },
     {
       "verse": "24",
-      "text": "When the people saw what had happened to Samson, they praised their god. They said, ‘Our god has let us catch our enemy. He was the enemy who destroyed our land and who killed many of us.’"
+      "text": "When the people saw what had happened to Samson, they praised their god. They said, ‘Our god has let us catch our enemy. He was the enemy who destroyed our land and who killed many of us. ’"
     },
     {
       "verse": "25",
-      "text": "The people were very happy at the feast. They shouted, ‘Bring Samson here for us to see him! He can help us to enjoy our party.’So they brought Samson out of the prison. The people were happy to see him. They made him stand between the pillars of the temple."
+      "text": "The people were very happy at the feast. They shouted, ‘Bring Samson here for us to see him! He can help us to enjoy our party. ’So they brought Samson out of the prison. The people were happy to see him. They made him stand between the pillars of the temple."
     },
     {
       "verse": "26",
-      "text": "A young man held Samson's hand to lead him. Samson said to him, ‘Put me where I can touch the pillars which hold up the temple's roof. I want to rest my body on them.’"
+      "text": "A young man held Samson's hand to lead him. Samson said to him, ‘Put me where I can touch the pillars which hold up the temple's roof. I want to rest my body on them. ’"
     },
     {
       "verse": "27",
-      "text": "The temple was full of men and women, as well as all the Philistine rulers. About 3,000 people were on the roof as they watched Samson. They were laughing at him."
+      "text": "The temple was full of men and women, as well as all the Philistine rulers. About 3, 000 people were on the roof as they watched Samson. They were laughing at him."
     },
     {
       "verse": "28",
-      "text": "Samson prayed to the Lord, ‘Remember me, Almighty Lord. Please make me strong again one more time. I want to punish the Philistines because they cut out my two eyes.’"
+      "text": "Samson prayed to the Lord, ‘Remember me, Almighty Lord. Please make me strong again one more time. I want to punish the Philistines because they cut out my two eyes. ’"
     },
     {
       "verse": "29",
@@ -1904,7 +1904,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Samson shouted out, ‘Let me die with the Philistines!’ Then he pushed the pillars with all his strength. The temple fell down on the rulers and all the other people in it. In that way, Samson killed more people as he died than he had killed while he lived."
+      "text": "Samson shouted out, ‘Let me die with the Philistines! ’ Then he pushed the pillars with all his strength. The temple fell down on the rulers and all the other people in it. In that way, Samson killed more people as he died than he had killed while he lived."
     },
     {
       "verse": "31",
@@ -1914,15 +1914,15 @@ module.exports = {
   "17": [
     {
       "verse": "1",
-      "text": "There was a man who lived in the hill country of Ephraim. His name was Micah. His mother said, ‘Thank you, my son. I pray that the Lord will bless you.’"
+      "text": "There was a man who lived in the hill country of Ephraim. His name was Micah. His mother said, ‘Thank you, my son. I pray that the Lord will bless you. ’"
     },
     {
       "verse": "2",
-      "text": "He said to his mother, ‘I know about the 1,100 pieces of silver that somebody took from you. You cursed the person who had robbed you and I heard you. Look! Here are the pieces of silver. I took them myself. But now I am giving them back to you.’His mother said, ‘Thank you, my son. I pray that the Lord will bless you.’"
+      "text": "He said to his mother, ‘I know about the 1, 100 pieces of silver that somebody took from you. You cursed the person who had robbed you and I heard you. Look! Here are the pieces of silver. I took them myself. But now I am giving them back to you. ’His mother said, ‘Thank you, my son. I pray that the Lord will bless you. ’"
     },
     {
       "verse": "3",
-      "text": "When Micah gave the 1,100 pieces of silver back to his mother, she said, ‘I will now give this silver to the Lord. We will use it to make an image and a metal idol. In that way, I will give it back to you, my son.’"
+      "text": "When Micah gave the 1, 100 pieces of silver back to his mother, she said, ‘I will now give this silver to the Lord. We will use it to make an image and a metal idol. In that way, I will give it back to you, my son. ’"
     },
     {
       "verse": "4",
@@ -1946,11 +1946,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Micah asked him, ‘Where have you come from?’ The man replied, ‘I am a Levite who was living in Bethlehem in Judah. Now I am looking for a new place to live.’"
+      "text": "Micah asked him, ‘Where have you come from? ’ The man replied, ‘I am a Levite who was living in Bethlehem in Judah. Now I am looking for a new place to live. ’"
     },
     {
       "verse": "10",
-      "text": "Micah said, ‘Stay here with me. You will be my advisor and my priest. I will pay you ten pieces of silver each year, as well as your clothes and food.’"
+      "text": "Micah said, ‘Stay here with me. You will be my advisor and my priest. I will pay you ten pieces of silver each year, as well as your clothes and food. ’"
     },
     {
       "verse": "11",
@@ -1962,7 +1962,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then Micah said, ‘Now I know that the Lord will bless me, because I have this Levite as my own priest.’"
+      "text": "Then Micah said, ‘Now I know that the Lord will bless me, because I have this Levite as my own priest. ’"
     }
   ],
   "18": [
@@ -1972,23 +1972,23 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So the men of Dan sent five soldiers from the clans of their tribe to explore the land. The leaders sent them out from Zorah and Eshtaol. They told them, ‘Go and find some land for us.’The five men went into the hill country of Ephraim. They came to Micah's house and they stayed there for a night."
+      "text": "So the men of Dan sent five soldiers from the clans of their tribe to explore the land. The leaders sent them out from Zorah and Eshtaol. They told them, ‘Go and find some land for us. ’The five men went into the hill country of Ephraim. They came to Micah's house and they stayed there for a night."
     },
     {
       "verse": "3",
-      "text": "While they were at Micah's house, they recognized the voice of the young Levite. So they went in and they asked him, ‘Who brought you here? What are you doing in this place? Why are you here?’"
+      "text": "While they were at Micah's house, they recognized the voice of the young Levite. So they went in and they asked him, ‘Who brought you here? What are you doing in this place? Why are you here? ’"
     },
     {
       "verse": "4",
-      "text": "He told them what Micah had done for him. He said, ‘He pays me to work for him as his priest.’"
+      "text": "He told them what Micah had done for him. He said, ‘He pays me to work for him as his priest. ’"
     },
     {
       "verse": "5",
-      "text": "So they said to him, ‘Please ask God if our journey will have a good result.’"
+      "text": "So they said to him, ‘Please ask God if our journey will have a good result. ’"
     },
     {
       "verse": "6",
-      "text": "Micah's priest answered, ‘Yes, do not worry. The Lord will be with you on your journey.’"
+      "text": "Micah's priest answered, ‘Yes, do not worry. The Lord will be with you on your journey. ’"
     },
     {
       "verse": "7",
@@ -1996,7 +1996,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The five men of Dan's tribe returned to Zorah and Eshtaol. Their relatives asked them, ‘What did you find?’"
+      "text": "The five men of Dan's tribe returned to Zorah and Eshtaol. Their relatives asked them, ‘What did you find? ’"
     },
     {
       "verse": "9",
@@ -2004,7 +2004,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "When you attack, you will see that the people there think that they are safe. Their land is very big and it has everything that we need. God will surely give it to you.’"
+      "text": "When you attack, you will see that the people there think that they are safe. Their land is very big and it has everything that we need. God will surely give it to you. ’"
     },
     {
       "verse": "11",
@@ -2020,7 +2020,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The five men who had explored the land of Laish said to their relatives, ‘Do you know that in one of these houses there is an ephod, some small idols, an image and a metal idol. Think carefully and decide what to do.’"
+      "text": "The five men who had explored the land of Laish said to their relatives, ‘Do you know that in one of these houses there is an ephod, some small idols, an image and a metal idol. Think carefully and decide what to do. ’"
     },
     {
       "verse": "15",
@@ -2036,11 +2036,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "When the priest saw that the five men were taking the things from the house, he asked them, ‘What are you doing?’"
+      "text": "When the priest saw that the five men were taking the things from the house, he asked them, ‘What are you doing? ’"
     },
     {
       "verse": "19",
-      "text": "They said to him, ‘Be quiet! Do not say a word. Come with us. You will be our advisor and our priest. That will be much better for you. You will serve a whole Israelite tribe, instead of only one man's family.’"
+      "text": "They said to him, ‘Be quiet! Do not say a word. Come with us. You will be our advisor and our priest. That will be much better for you. You will serve a whole Israelite tribe, instead of only one man's family. ’"
     },
     {
       "verse": "20",
@@ -2056,15 +2056,15 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "they shouted to them. The men of Dan turned around and they said to Micah, ‘What is the problem? Why have you brought all these men?’"
+      "text": "they shouted to them. The men of Dan turned around and they said to Micah, ‘What is the problem? Why have you brought all these men? ’"
     },
     {
       "verse": "24",
-      "text": "Micah replied, ‘You have taken away the gods that I made. You have also taken my priest. Now I have nothing left. You should not ask me, “What is the problem?” ’"
+      "text": "Micah replied, ‘You have taken away the gods that I made. You have also taken my priest. Now I have nothing left. You should not ask me, “What is the problem? ” ’"
     },
     {
       "verse": "25",
-      "text": "The men of Dan said to Micah, ‘Do not argue with us! If you say any more, some of our men may become very angry. They might attack you. You and your family might all die!’"
+      "text": "The men of Dan said to Micah, ‘Do not argue with us! If you say any more, some of our men may become very angry. They might attack you. You and your family might all die! ’"
     },
     {
       "verse": "26",
@@ -2076,7 +2076,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "No one came to rescue the people of Laish. The city was a long way from Sidon. They had no other friends to help them.Laish was in a valley near Beth Rehob. The Danites built the city again and they lived there."
+      "text": "No one came to rescue the people of Laish. The city was a long way from Sidon. They had no other friends to help them. Laish was in a valley near Beth Rehob. The Danites built the city again and they lived there."
     },
     {
       "verse": "29",
@@ -2110,11 +2110,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "On the fourth day they got up early. The Levite was ready to leave with his wife. But the woman's father said to the Levite, ‘Eat some food so that you are strong for your journey. Then you may go.’"
+      "text": "On the fourth day they got up early. The Levite was ready to leave with his wife. But the woman's father said to the Levite, ‘Eat some food so that you are strong for your journey. Then you may go. ’"
     },
     {
       "verse": "6",
-      "text": "So the two men sat down and they ate a meal together. Then the woman's father said to the Levite, ‘Stay here one more night. Then we can continue to be happy together.’"
+      "text": "So the two men sat down and they ate a meal together. Then the woman's father said to the Levite, ‘Stay here one more night. Then we can continue to be happy together. ’"
     },
     {
       "verse": "7",
@@ -2122,11 +2122,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Levite got up early in the morning of the fifth day. He was ready to leave. But the woman's father said, ‘Make yourself strong with some food. Wait until this afternoon and then you can go.’ So the two of them ate a meal together."
+      "text": "The Levite got up early in the morning of the fifth day. He was ready to leave. But the woman's father said, ‘Make yourself strong with some food. Wait until this afternoon and then you can go. ’ So the two of them ate a meal together."
     },
     {
       "verse": "9",
-      "text": "The Levite prepared to leave with his wife and his male servant. Then her father said, ‘Look! It is nearly evening already. Sleep here tonight. The day is almost over. Stay one more night and enjoy yourself. Early tomorrow morning you can leave on your journey to go home.’"
+      "text": "The Levite prepared to leave with his wife and his male servant. Then her father said, ‘Look! It is nearly evening already. Sleep here tonight. The day is almost over. Stay one more night and enjoy yourself. Early tomorrow morning you can leave on your journey to go home. ’"
     },
     {
       "verse": "10",
@@ -2134,15 +2134,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "When they arrived near to Jebus, it was getting dark. The servant said to his master, ‘Let us stay in this city of the Jebusites. We can sleep here for the night.’"
+      "text": "When they arrived near to Jebus, it was getting dark. The servant said to his master, ‘Let us stay in this city of the Jebusites. We can sleep here for the night. ’"
     },
     {
       "verse": "12",
-      "text": "The Levite replied, ‘No, we should not stay in a foreign city. The people who live here are not Israelites. We will go on to Gibeah.’"
+      "text": "The Levite replied, ‘No, we should not stay in a foreign city. The people who live here are not Israelites. We will go on to Gibeah. ’"
     },
     {
       "verse": "13",
-      "text": "He said to his servant, ‘Let us try to reach Gibeah or Ramah. Then we can stay in one of those places for the night.’"
+      "text": "He said to his servant, ‘Let us try to reach Gibeah or Ramah. Then we can stay in one of those places for the night. ’"
     },
     {
       "verse": "14",
@@ -2158,7 +2158,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He saw the Levite traveller in the public place. He asked, ‘Where are you travelling to? Where have you come from?’"
+      "text": "He saw the Levite traveller in the public place. He asked, ‘Where are you travelling to? Where have you come from? ’"
     },
     {
       "verse": "18",
@@ -2166,11 +2166,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "We have straw and food for our donkeys. We have food and wine for myself, my wife and my servant. We have everything that we need.’"
+      "text": "We have straw and food for our donkeys. We have food and wine for myself, my wife and my servant. We have everything that we need. ’"
     },
     {
       "verse": "20",
-      "text": "The old man said, ‘Do not worry. I will take care of you. Please come into my house, but do not stay for the night in this public place.’"
+      "text": "The old man said, ‘Do not worry. I will take care of you. Please come into my house, but do not stay for the night in this public place. ’"
     },
     {
       "verse": "21",
@@ -2178,7 +2178,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "They were enjoying their time together. Suddenly, some wicked men who lived in the city came to the house. They stood all around it and they hit the door hard. They shouted to the old man who lived there, ‘Bring out the man who came to visit you. We want to have sex with him.’"
+      "text": "They were enjoying their time together. Suddenly, some wicked men who lived in the city came to the house. They stood all around it and they hit the door hard. They shouted to the old man who lived there, ‘Bring out the man who came to visit you. We want to have sex with him. ’"
     },
     {
       "verse": "23",
@@ -2186,7 +2186,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Look! Here is my daughter. She has never had sex with anyone before. Here is my visitor's slave wife too. I will bring them outside to you. Then you can do whatever cruel things you want to do to them. But do not do such a terrible thing to this man.’"
+      "text": "Look! Here is my daughter. She has never had sex with anyone before. Here is my visitor's slave wife too. I will bring them outside to you. Then you can do whatever cruel things you want to do to them. But do not do such a terrible thing to this man. ’"
     },
     {
       "verse": "25",
@@ -2202,7 +2202,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "He said to her, ‘Get up. It is time to go!’ But she did not answer. Then he put her on his donkey and he started on his way home."
+      "text": "He said to her, ‘Get up. It is time to go! ’ But she did not answer. Then he put her on his donkey and he started on his way home."
     },
     {
       "verse": "29",
@@ -2210,21 +2210,21 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Everyone who saw what he had done said, ‘In all the time since the Israelites left Egypt, nothing as bad as this has ever happened before. We have never seen anything like it. Think carefully about it. We must decide what to do!’"
+      "text": "Everyone who saw what he had done said, ‘In all the time since the Israelites left Egypt, nothing as bad as this has ever happened before. We have never seen anything like it. Think carefully about it. We must decide what to do! ’"
     }
   ],
   "20": [
     {
       "verse": "1",
-      "text": "Then all the Israelites agreed to come together. They came from everywhere in Israel, from Dan in the north as far as Beersheba in the south. They also came from the Gilead region on the east side of the Jordan River. They all came together at Mizpah, to meet with the Lord. Then the Israelites asked, ‘Tell us how this evil thing happened.’"
+      "text": "Then all the Israelites agreed to come together. They came from everywhere in Israel, from Dan in the north as far as Beersheba in the south. They also came from the Gilead region on the east side of the Jordan River. They all came together at Mizpah, to meet with the Lord. Then the Israelites asked, ‘Tell us how this evil thing happened. ’"
     },
     {
       "verse": "2",
-      "text": "The leaders of all Israel's tribes stood there with the people of God. There were 400,000 Israelite men who had their weapons, ready to fight."
+      "text": "The leaders of all Israel's tribes stood there with the people of God. There were 400, 000 Israelite men who had their weapons, ready to fight."
     },
     {
       "verse": "3",
-      "text": "By this time, the people of Benjamin's tribe had heard the news that the other tribes were meeting in Mizpah.Then the Israelites asked, ‘Tell us how this evil thing happened.’"
+      "text": "By this time, the people of Benjamin's tribe had heard the news that the other tribes were meeting in Mizpah. Then the Israelites asked, ‘Tell us how this evil thing happened. ’"
     },
     {
       "verse": "4",
@@ -2240,7 +2240,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So now all you people of Israel must decide what you will do about it.’"
+      "text": "So now all you people of Israel must decide what you will do about it. ’"
     },
     {
       "verse": "8",
@@ -2252,7 +2252,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "men in each tribe. We will take 100 men from every 1,000 men, and 1,000 men from every 10,000 men. Those men will find food for the other soldiers. That will be their job. Then the other soldiers will be able to attack Gibeah. They will punish Gibeah's people as they deserve for the terrible thing that they have done.’"
+      "text": "men in each tribe. We will take 100 men from every 1, 000 men, and 1, 000 men from every 10, 000 men. Those men will find food for the other soldiers. That will be their job. Then the other soldiers will be able to attack Gibeah. They will punish Gibeah's people as they deserve for the terrible thing that they have done. ’"
     },
     {
       "verse": "11",
@@ -2264,7 +2264,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Send those wicked men of Gibeah out to us. We must punish them with death. Only that will remove this terrible sin from Israel.’But the people of Benjamin did not agree to do that."
+      "text": "Send those wicked men of Gibeah out to us. We must punish them with death. Only that will remove this terrible sin from Israel. ’But the people of Benjamin did not agree to do that."
     },
     {
       "verse": "14",
@@ -2272,7 +2272,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "26,000 soldiers came to Gibeah with their weapons, ready to fight. There were also 700 brave soldiers already in Gibeah."
+      "text": "26, 000 soldiers came to Gibeah with their weapons, ready to fight. There were also 700 brave soldiers already in Gibeah."
     },
     {
       "verse": "16",
@@ -2280,11 +2280,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The other Israelite tribes, without Benjamin, had an army of 400,000 soldiers who knew how to use their weapons."
+      "text": "The other Israelite tribes, without Benjamin, had an army of 400, 000 soldiers who knew how to use their weapons."
     },
     {
       "verse": "18",
-      "text": "They went to Bethel. They asked God which tribe should go first to attack Benjamin's army. The Lord replied, ‘Judah must go first.’"
+      "text": "They went to Bethel. They asked God which tribe should go first to attack Benjamin's army. The Lord replied, ‘Judah must go first. ’"
     },
     {
       "verse": "19",
@@ -2296,7 +2296,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Benjamin's soldiers came out of Gibeah to attack. They killed 22,000 Israelites in the battle that day."
+      "text": "Benjamin's soldiers came out of Gibeah to attack. They killed 22, 000 Israelites in the battle that day."
     },
     {
       "verse": "24",
@@ -2304,7 +2304,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "This time, when the soldiers of Benjamin came out of Gibeah to attack them, they killed another 18,000 Israelite soldiers in the battle."
+      "text": "This time, when the soldiers of Benjamin came out of Gibeah to attack them, they killed another 18, 000 Israelite soldiers in the battle."
     },
     {
       "verse": "26",
@@ -2324,7 +2324,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The soldiers of Benjamin were saying, ‘We are winning against them, as we have done before!’ But the Israelites were saying, ‘We will continue to run away so that their soldiers chase us. We will lead them away from the city onto the roads.’"
+      "text": "The soldiers of Benjamin were saying, ‘We are winning against them, as we have done before! ’ But the Israelites were saying, ‘We will continue to run away so that their soldiers chase us. We will lead them away from the city onto the roads. ’"
     },
     {
       "verse": "33",
@@ -2332,19 +2332,19 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "10,000 Israelite soldiers who knew how to fight well attacked Gibeah. There was a big battle. The men of Benjamin did not realize that they were in a lot of trouble."
+      "text": "10, 000 Israelite soldiers who knew how to fight well attacked Gibeah. There was a big battle. The men of Benjamin did not realize that they were in a lot of trouble."
     },
     {
       "verse": "35",
-      "text": "The Lord destroyed Benjamin's army as the Israelites attacked them. Israel's soldiers killed more than 25,000 soldiers of Benjamin's army that day."
+      "text": "The Lord destroyed Benjamin's army as the Israelites attacked them. Israel's soldiers killed more than 25, 000 soldiers of Benjamin's army that day."
     },
     {
       "verse": "36",
-      "text": "Finally, the men of Benjamin realized that they had lost the battle.This is how it happened: Israel's soldiers let Benjamin's army chase after them. They trusted the soldiers who were hiding around Gibeah to attack the city."
+      "text": "Finally, the men of Benjamin realized that they had lost the battle. This is how it happened: Israel's soldiers let Benjamin's army chase after them. They trusted the soldiers who were hiding around Gibeah to attack the city."
     },
     {
       "verse": "39",
-      "text": "Then the other Israelite soldiers would turn round to attack the soldiers who were chasing them.Benjamin's soldiers had begun to kill the Israelites. When they had killed about 30 of them, they said, ‘Look! We are winning again, as we always do!’"
+      "text": "Then the other Israelite soldiers would turn round to attack the soldiers who were chasing them. Benjamin's soldiers had begun to kill the Israelites. When they had killed about 30 of them, they said, ‘Look! We are winning again, as we always do! ’"
     },
     {
       "verse": "40",
@@ -2364,15 +2364,15 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "They killed 18,000 strong soldiers of Benjamin's tribe."
+      "text": "They killed 18, 000 strong soldiers of Benjamin's tribe."
     },
     {
       "verse": "45",
-      "text": "The rest of Benjamin's soldiers ran towards the desert, as far as the rock of Rimmon. The Israelites killed 5,000 of them as they ran along the roads. They chased them to Gidom, and they killed 2,000 more of Benjamin's soldiers there."
+      "text": "The rest of Benjamin's soldiers ran towards the desert, as far as the rock of Rimmon. The Israelites killed 5, 000 of them as they ran along the roads. They chased them to Gidom, and they killed 2, 000 more of Benjamin's soldiers there."
     },
     {
       "verse": "46",
-      "text": "On that day, 25,000 soldiers of Benjamin's tribe died. They were all brave men who knew how to fight well."
+      "text": "On that day, 25, 000 soldiers of Benjamin's tribe died. They were all brave men who knew how to fight well."
     },
     {
       "verse": "47",
@@ -2384,11 +2384,11 @@ module.exports = {
     },
     {
       "verse": "22-23",
-      "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening. They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin?’ The Lord said, ‘Yes, attack them.’ So they went to stand in the same places around the city as they had done the day before."
+      "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening. They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin? ’ The Lord said, ‘Yes, attack them. ’ So they went to stand in the same places around the city as they had done the day before."
     },
     {
       "verse": "27-28",
-      "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them?’ The Lord said, ‘Attack them. Tomorrow I will put them under your power.’"
+      "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them? ’ The Lord said, ‘Attack them. Tomorrow I will put them under your power. ’"
     },
     {
       "verse": "37-38",
@@ -2398,7 +2398,7 @@ module.exports = {
   "21": [
     {
       "verse": "1",
-      "text": "The Israelites had made a promise to the Lord at Mizpah. They agreed together, ‘None of us will allow our daughters to marry a man of Benjamin's tribe.’"
+      "text": "The Israelites had made a promise to the Lord at Mizpah. They agreed together, ‘None of us will allow our daughters to marry a man of Benjamin's tribe. ’"
     },
     {
       "verse": "2",
@@ -2406,7 +2406,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They said, ‘Lord, Israel's God, why has this terrible thing happened in Israel? We have lost one whole tribe of Israel.’"
+      "text": "They said, ‘Lord, Israel's God, why has this terrible thing happened in Israel? We have lost one whole tribe of Israel. ’"
     },
     {
       "verse": "4",
@@ -2414,7 +2414,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the Israelites asked, ‘Which people from Israel's tribes did not join us when we all met together at Mizpah?’ They asked this because they had made a serious promise at Mizpah. They had said, ‘We must punish with death anyone who does not join us here to meet with the Lord.’"
+      "text": "Then the Israelites asked, ‘Which people from Israel's tribes did not join us when we all met together at Mizpah? ’ They asked this because they had made a serious promise at Mizpah. They had said, ‘We must punish with death anyone who does not join us here to meet with the Lord. ’"
     },
     {
       "verse": "6",
@@ -2422,11 +2422,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "How can we find women to marry the few men who are left? We all made a serious promise to the Lord that we would not let them marry our daughters.’"
+      "text": "How can we find women to marry the few men who are left? We all made a serious promise to the Lord that we would not let them marry our daughters. ’"
     },
     {
       "verse": "8",
-      "text": "So they asked, ‘When we met with the Lord at Mizpah, which people from all Israel's tribes did not come with us?’ They realized that no one from Jabesh Gilead had come to the meeting."
+      "text": "So they asked, ‘When we met with the Lord at Mizpah, which people from all Israel's tribes did not come with us? ’ They realized that no one from Jabesh Gilead had come to the meeting."
     },
     {
       "verse": "9",
@@ -2434,11 +2434,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So all the Israelites decided to send an army of 12,000 soldiers to attack Jabesh Gilead. They commanded them, ‘Use your swords to kill everyone there, including the women and children."
+      "text": "So all the Israelites decided to send an army of 12, 000 soldiers to attack Jabesh Gilead. They commanded them, ‘Use your swords to kill everyone there, including the women and children."
     },
     {
       "verse": "11",
-      "text": "This is what you must do: Kill every male and every woman who has slept with a man. But do not kill the women who have never had sex.’"
+      "text": "This is what you must do: Kill every male and every woman who has slept with a man. But do not kill the women who have never had sex. ’"
     },
     {
       "verse": "12",
@@ -2466,11 +2466,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But we cannot allow our daughters to marry them. We promised that we would never do that. We said, “God himself will punish anyone who allows his daughter to marry a man of Benjamin.”"
+      "text": "But we cannot allow our daughters to marry them. We promised that we would never do that. We said, “God himself will punish anyone who allows his daughter to marry a man of Benjamin. ”"
     },
     {
       "verse": "19",
-      "text": "But every year there is a big feast at Shiloh to give honour to the Lord. That will happen soon.’Shiloh is north of Bethel and south of Lebonah. It is on the east side of the road from Bethel to Shechem."
+      "text": "But every year there is a big feast at Shiloh to give honour to the Lord. That will happen soon. ’Shiloh is north of Bethel and south of Lebonah. It is on the east side of the road from Bethel to Shechem."
     },
     {
       "verse": "20",
@@ -2482,7 +2482,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Their fathers or their brothers may come to us and complain. If they do, we will say, “Please agree to help the men of Benjamin. We could not find a wife for each of them in the war. You did not choose to give your daughters to them, so you will not be guilty. The men of Benjamin caught them and took them away.” ’"
+      "text": "Their fathers or their brothers may come to us and complain. If they do, we will say, “Please agree to help the men of Benjamin. We could not find a wife for each of them in the war. You did not choose to give your daughters to them, so you will not be guilty. The men of Benjamin caught them and took them away. ” ’"
     },
     {
       "verse": "23",

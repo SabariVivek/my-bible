@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Lord said to Joshua,‘Moses, my servant, is dead. Now you and all these people must get ready to cross the Jordan River. Lead the people of Israel into the land that I am giving to them."
+      "text": "The Lord said to Joshua, ‘Moses, my servant, is dead. Now you and all these people must get ready to cross the Jordan River. Lead the people of Israel into the land that I am giving to them."
     },
     {
       "verse": "3",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Remember that I have told you this: Be strong and do not be afraid. Do not be weak but be brave. I, the Lord your God, will be with you, everywhere that you go.’"
+      "text": "Remember that I have told you this: Be strong and do not be afraid. Do not be weak but be brave. I, the Lord your God, will be with you, everywhere that you go. ’"
     },
     {
       "verse": "10",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "‘Go through all the places where the people live. Tell them to get food ready for a journey. In three days, you will cross the Jordan River. You will begin to take the land for yourselves. This is the land that the Lord your God is ready to give to you.’"
+      "text": "‘Go through all the places where the people live. Tell them to get food ready for a journey. In three days, you will cross the Jordan River. You will begin to take the land for yourselves. This is the land that the Lord your God is ready to give to you. ’"
     },
     {
       "verse": "12",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "until the Lord gives them a place to rest, as he has already given to you. When all the other tribes are safe in the land, you may return to the land east of the Jordan. Moses gave this land to you.’"
+      "text": "until the Lord gives them a place to rest, as he has already given to you. When all the other tribes are safe in the land, you may return to the land east of the Jordan. Moses gave this land to you. ’"
     },
     {
       "verse": "16",
@@ -70,21 +70,21 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "If anyone turns against you and he does not obey your commands, we will make sure that he dies. You must be very strong and brave.’"
+      "text": "If anyone turns against you and he does not obey your commands, we will make sure that he dies. You must be very strong and brave. ’"
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "Then Joshua sent two men to go out from Shittim. He sent them in secret to see what the land was like. He told them, ‘Go! Look at all the land. Look very carefully at Jericho city.’When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there. When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there."
+      "text": "Then Joshua sent two men to go out from Shittim. He sent them in secret to see what the land was like. He told them, ‘Go! Look at all the land. Look very carefully at Jericho city. ’When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there. When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there."
     },
     {
       "verse": "2",
-      "text": "Some people told the king of Jericho, ‘Look! Some Israelite men have come here tonight to see what our land is like.’"
+      "text": "Some people told the king of Jericho, ‘Look! Some Israelite men have come here tonight to see what our land is like. ’"
     },
     {
       "verse": "3",
-      "text": "So the king of Jericho sent a message to Rahab. He said, ‘Bring out the men who are staying in your house. They have come secretly to see what all our land is like!’"
+      "text": "So the king of Jericho sent a message to Rahab. He said, ‘Bring out the men who are staying in your house. They have come secretly to see what all our land is like! ’"
     },
     {
       "verse": "4",
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "When it was nearly time to close the gate of the city for the night, they left. I do not know where they went. If you chase after them quickly, you may catch them.’"
+      "text": "When it was nearly time to close the gate of the city for the night, they left. I do not know where they went. If you chase after them quickly, you may catch them. ’"
     },
     {
       "verse": "6",
@@ -124,19 +124,19 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When you attack this city, do not kill my family. Save the lives of my father, my mother, my brothers and sisters, and all their families.’"
+      "text": "When you attack this city, do not kill my family. Save the lives of my father, my mother, my brothers and sisters, and all their families. ’"
     },
     {
       "verse": "14",
-      "text": "The men replied, ‘We promise to do that. If anyone kills you or your family, may we die too! Do not tell anyone about us. When the Lord gives us this land, we will be kind to you. We will save your lives.’"
+      "text": "The men replied, ‘We promise to do that. If anyone kills you or your family, may we die too! Do not tell anyone about us. When the Lord gives us this land, we will be kind to you. We will save your lives. ’"
     },
     {
       "verse": "15",
-      "text": "So Rahab put a rope out through the window of her house. (The house that she lived in was part of the city wall.) The men climbed down the rope."
+      "text": "So Rahab put a rope out through the window of her house. (The house that she lived in was part of the city wall. ) The men climbed down the rope."
     },
     {
       "verse": "16",
-      "text": "Rahab told them, ‘Go to the hills. The men who are chasing you will not find you there. Hide there for three days until they return to this city. Then you can go back to your people.’"
+      "text": "Rahab told them, ‘Go to the hills. The men who are chasing you will not find you there. Hide there for three days until they return to this city. Then you can go back to your people. ’"
     },
     {
       "verse": "17",
@@ -152,11 +152,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But if you tell anyone about us, we do not have to do what we have promised to you.’"
+      "text": "But if you tell anyone about us, we do not have to do what we have promised to you. ’"
     },
     {
       "verse": "21",
-      "text": "Rahab said, ‘I agree with what you have said.’ She sent the men away. When they had gone, she tied the red string in her window."
+      "text": "Rahab said, ‘I agree with what you have said. ’ She sent the men away. When they had gone, she tied the red string in her window."
     },
     {
       "verse": "22",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "They said to him, ‘We are sure that the Lord has given us the whole land. All the people there are very frightened of us.’"
+      "text": "They said to him, ‘We are sure that the Lord has given us the whole land. All the people there are very frightened of us. ’"
     }
   ],
   "3": [
@@ -186,15 +186,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "They will show you the way to go because you have never been here before. But do not go too near to the Covenant Box. Stay about 1,000 metres behind it.’"
+      "text": "They will show you the way to go because you have never been here before. But do not go too near to the Covenant Box. Stay about 1, 000 metres behind it. ’"
     },
     {
       "verse": "5",
-      "text": "Joshua said to the people, ‘Make yourselves ready to serve the Lord as his holy people. Tomorrow, the Lord will do great miracles among you.’"
+      "text": "Joshua said to the people, ‘Make yourselves ready to serve the Lord as his holy people. Tomorrow, the Lord will do great miracles among you. ’"
     },
     {
       "verse": "6",
-      "text": "He said to the priests, ‘Pick up the Covenant Box, and carry it in front of the people.’ So they picked it up, and they went on in front of the people."
+      "text": "He said to the priests, ‘Pick up the Covenant Box, and carry it in front of the people. ’ So they picked it up, and they went on in front of the people."
     },
     {
       "verse": "7",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The priests that are carrying the Covenant Box must go to the shore of the Jordan River. Tell them to go into the water and to stand there.’"
+      "text": "The priests that are carrying the Covenant Box must go to the shore of the Jordan River. Tell them to go into the water and to stand there. ’"
     },
     {
       "verse": "9",
@@ -222,7 +222,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Watch the priests who are carrying the Covenant Box. As soon as their feet touch the water of the river, you will see that the water stops running. It will rise up like a wall.’"
+      "text": "Watch the priests who are carrying the Covenant Box. As soon as their feet touch the water of the river, you will see that the water stops running. It will rise up like a wall. ’"
     },
     {
       "verse": "14",
@@ -252,7 +252,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tell them, “Pick up 12 stones from the middle of the river. Take them from the place where the priests are standing. Carry the stones with you to the shore. Put them in the place where you stay tonight.” ’"
+      "text": "Tell them, “Pick up 12 stones from the middle of the river. Take them from the place where the priests are standing. Carry the stones with you to the shore. Put them in the place where you stay tonight. ” ’"
     },
     {
       "verse": "4",
@@ -264,11 +264,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The heap of stones will help you to remember what happened today. In future years, your children will ask you, “What do these stones mean?”"
+      "text": "The heap of stones will help you to remember what happened today. In future years, your children will ask you, “What do these stones mean? ”"
     },
     {
       "verse": "7",
-      "text": "Then you will tell them that the water in the Jordan River stopped where the Lord's Covenant Box was. When the priests carried the Covenant Box into the river, the water stopped. These stones will help the people of Israel to remember this for ever.’"
+      "text": "Then you will tell them that the water in the Jordan River stopped where the Lord's Covenant Box was. When the priests carried the Covenant Box into the river, the water stopped. These stones will help the people of Israel to remember this for ever. ’"
     },
     {
       "verse": "8",
@@ -280,7 +280,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The priests had carried the Covenant Box into the middle of the river. They stood there while the people did everything that the Lord had told Joshua. That is what Moses had also told Joshua.The people crossed over the river quickly."
+      "text": "The priests had carried the Covenant Box into the middle of the river. They stood there while the people did everything that the Lord had told Joshua. That is what Moses had also told Joshua. The people crossed over the river quickly."
     },
     {
       "verse": "11",
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "About 40,000 men who had weapons crossed to the flat land near Jericho. They marched past the Lord's Covenant Box."
+      "text": "About 40, 000 men who had weapons crossed to the flat land near Jericho. They marched past the Lord's Covenant Box."
     },
     {
       "verse": "14",
@@ -304,11 +304,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "‘Tell the priests who are carrying the Covenant Box to come up out of the Jordan River.’"
+      "text": "‘Tell the priests who are carrying the Covenant Box to come up out of the Jordan River. ’"
     },
     {
       "verse": "17",
-      "text": "So Joshua told the priests, ‘Come up out of the Jordan.’"
+      "text": "So Joshua told the priests, ‘Come up out of the Jordan. ’"
     },
     {
       "verse": "18",
@@ -324,11 +324,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He said to the Israelite people, ‘In future years, your children will ask you, “What do these stones mean?”"
+      "text": "He said to the Israelite people, ‘In future years, your children will ask you, “What do these stones mean? ”"
     },
     {
       "verse": "22",
-      "text": "Then you must tell them, “We Israelites went across the Jordan River on dry ground.”"
+      "text": "Then you must tell them, “We Israelites went across the Jordan River on dry ground. ”"
     },
     {
       "verse": "23",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The Lord has done this so that all the nations of the world can see how powerful he is. He did it so that you would always obey him, the Lord your God.’"
+      "text": "The Lord has done this so that all the nations of the world can see how powerful he is. He did it so that you would always obey him, the Lord your God. ’"
     }
   ],
   "5": [
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Lord said to Joshua at that time, ‘Make knives of stone and circumcise the Israelite men.’"
+      "text": "The Lord said to Joshua at that time, ‘Make knives of stone and circumcise the Israelite men. ’"
     },
     {
       "verse": "3",
@@ -374,7 +374,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Lord said to Joshua, ‘This shows that you are no longer ashamed to be slaves, as you were in Egypt. Today I have taken away your shame.’So they called that place Gilgal, and it still has that name."
+      "text": "The Lord said to Joshua, ‘This shows that you are no longer ashamed to be slaves, as you were in Egypt. Today I have taken away your shame. ’So they called that place Gilgal, and it still has that name."
     },
     {
       "verse": "10",
@@ -390,15 +390,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "While Joshua was near Jericho, a man appeared to him. Joshua looked up and there he was! He stood in front of Joshua with a sword in his hand. Joshua went towards him. He asked the man, ‘Are you here to help us, or to help our enemies?’"
+      "text": "While Joshua was near Jericho, a man appeared to him. Joshua looked up and there he was! He stood in front of Joshua with a sword in his hand. Joshua went towards him. He asked the man, ‘Are you here to help us, or to help our enemies? ’"
     },
     {
       "verse": "14",
-      "text": "The man answered, ‘Neither. I am the captain of the Lord's army. Now I am here!’Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do.’ Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do.’"
+      "text": "The man answered, ‘Neither. I am the captain of the Lord's army. Now I am here! ’Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do. ’ Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do. ’"
     },
     {
       "verse": "15",
-      "text": "The captain of the Lord's army said, ‘Remove your shoes from your feet. You are standing on holy ground.’ Joshua did that."
+      "text": "The captain of the Lord's army said, ‘Remove your shoes from your feet. You are standing on holy ground. ’ Joshua did that."
     }
   ],
   "6": [
@@ -420,11 +420,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then they will make one long loud noise with their trumpets. As soon as you hear this, all the soldiers must give a loud shout. Then the city walls will fall down. The whole army will go straight into the city.’"
+      "text": "Then they will make one long loud noise with their trumpets. As soon as you hear this, all the soldiers must give a loud shout. Then the city walls will fall down. The whole army will go straight into the city. ’"
     },
     {
       "verse": "6",
-      "text": "Joshua called the priests to come to him. He told them, ‘Pick up the Lord's Covenant Box. Seven priests must march in front of it. They must hold seven trumpets, one each.’"
+      "text": "Joshua called the priests to come to him. He told them, ‘Pick up the Lord's Covenant Box. Seven priests must march in front of it. They must hold seven trumpets, one each. ’"
     },
     {
       "verse": "7",
@@ -440,7 +440,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But Joshua had said to the people, ‘Do not shout or speak aloud. Do not say anything until I tell you. When the right day comes, I will tell you, “Now shout aloud to attack!” When I tell you that, then shout!’"
+      "text": "But Joshua had said to the people, ‘Do not shout or speak aloud. Do not say anything until I tell you. When the right day comes, I will tell you, “Now shout aloud to attack! ” When I tell you that, then shout! ’"
     },
     {
       "verse": "11",
@@ -476,7 +476,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Everything that is made from silver, gold, bronze and iron belong to the Lord as his holy things. You must store them with his other valuable things.’"
+      "text": "Everything that is made from silver, gold, bronze and iron belong to the Lord as his holy things. You must store them with his other valuable things. ’"
     },
     {
       "verse": "20",
@@ -488,7 +488,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Joshua said to the two men that Rahab had hidden, ‘Go into her house. Bring her out, with all her family who are there with her. That is what you promised to do for her.’"
+      "text": "Joshua said to the two men that Rahab had hidden, ‘Go into her house. Bring her out, with all her family who are there with her. That is what you promised to do for her. ’"
     },
     {
       "verse": "23",
@@ -504,7 +504,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "At that time, Joshua made a strong promise. He said, ‘If anyone tries to build Jericho city again, the Lord will punish him as a guilty man. When he starts to build, his oldest son will die. When he puts up the city's gates, his youngest son will die.’"
+      "text": "At that time, Joshua made a strong promise. He said, ‘If anyone tries to build Jericho city again, the Lord will punish him as a guilty man. When he starts to build, his oldest son will die. When he puts up the city's gates, his youngest son will die. ’"
     },
     {
       "verse": "27",
@@ -518,15 +518,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Joshua sent some men to go from Jericho to Ai. That is a city near to Beth Aven, and east of Bethel. He said to the men, ‘Go up and look at the land near there secretly.’ So the men went to Ai to see what they could discover."
+      "text": "Joshua sent some men to go from Jericho to Ai. That is a city near to Beth Aven, and east of Bethel. He said to the men, ‘Go up and look at the land near there secretly. ’ So the men went to Ai to see what they could discover."
     },
     {
       "verse": "3",
-      "text": "The men came back and they said to Joshua, ‘There are not many men in Ai. Do not send our whole army to attack it. 2,000 or 3,000 men will be enough to take the city.’"
+      "text": "The men came back and they said to Joshua, ‘There are not many men in Ai. Do not send our whole army to attack it. 2, 000 or 3, 000 men will be enough to take the city. ’"
     },
     {
       "verse": "4",
-      "text": "So about 3,000 Israelite men went to attack Ai. But the men of Ai made them run away."
+      "text": "So about 3, 000 Israelite men went to attack Ai. But the men of Ai made them run away."
     },
     {
       "verse": "5",
@@ -546,7 +546,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Canaanites and the other tribes who live in this land will hear about what has happened. They will come to attack us and they will completely destroy us all. If that happens, nobody will ever respect your great name again!’"
+      "text": "The Canaanites and the other tribes who live in this land will hear about what has happened. They will come to attack us and they will completely destroy us all. If that happens, nobody will ever respect your great name again! ’"
     },
     {
       "verse": "10",
@@ -562,7 +562,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "So stand up now! Tell the people to make themselves clean. Make yourselves ready! Tomorrow you will come to stand in front of me. I, the Lord God of Israel tell you, “Israelite people, you have kept some of the things that I told you to destroy. You will not win against your enemies until you have removed those things!”"
+      "text": "So stand up now! Tell the people to make themselves clean. Make yourselves ready! Tomorrow you will come to stand in front of me. I, the Lord God of Israel tell you, “Israelite people, you have kept some of the things that I told you to destroy. You will not win against your enemies until you have removed those things! ”"
     },
     {
       "verse": "14",
@@ -570,7 +570,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then I will show you which man has taken the things that belong to me. You must kill that man and burn his body. You must kill him and everything that he has, together with all his family. He has done a very bad thing that no Israelite should ever do. He has turned against the covenant that I made with my people.’"
+      "text": "Then I will show you which man has taken the things that belong to me. You must kill that man and burn his body. You must kill him and everything that he has, together with all his family. He has done a very bad thing that no Israelite should ever do. He has turned against the covenant that I made with my people. ’"
     },
     {
       "verse": "16",
@@ -586,7 +586,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then Joshua said to Achan, ‘My son, tell the truth, to show that you respect the Lord, Israel's God. Tell me what you have done. Do not try to deceive me.’"
+      "text": "Then Joshua said to Achan, ‘My son, tell the truth, to show that you respect the Lord, Israel's God. Tell me what you have done. Do not try to deceive me. ’"
     },
     {
       "verse": "20",
@@ -594,7 +594,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I found a beautiful coat from Babylon, and I found 200 silver coins, and a piece of gold that weighed half a kilogram. I wanted them so much that I took them for myself. I hid them in the ground in my tent. The silver coins are under the other things.’"
+      "text": "I found a beautiful coat from Babylon, and I found 200 silver coins, and a piece of gold that weighed half a kilogram. I wanted them so much that I took them for myself. I hid them in the ground in my tent. The silver coins are under the other things. ’"
     },
     {
       "verse": "22",
@@ -610,7 +610,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Joshua said, ‘Why did you cause so much trouble to come to us? The Lord will certainly give you trouble today!’Then all the Israelites threw stones at him until he died. They also killed his family and they burned all the bodies."
+      "text": "Joshua said, ‘Why did you cause so much trouble to come to us? The Lord will certainly give you trouble today! ’Then all the Israelites threw stones at him until he died. They also killed his family and they burned all the bodies."
     },
     {
       "verse": "26",
@@ -624,11 +624,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "You must destroy the city and its king as you destroyed Jericho and its king. But this time you may take their valuable things and their animals for yourselves. Hide some of your men behind the city, so that they are ready to attack.’"
+      "text": "You must destroy the city and its king as you destroyed Jericho and its king. But this time you may take their valuable things and their animals for yourselves. Hide some of your men behind the city, so that they are ready to attack. ’"
     },
     {
       "verse": "3",
-      "text": "So Joshua and the whole army marched towards Ai. Joshua chose 30,000 of the best soldiers and he sent some of them out at night time."
+      "text": "So Joshua and the whole army marched towards Ai. Joshua chose 30, 000 of the best soldiers and he sent some of them out at night time."
     },
     {
       "verse": "4",
@@ -640,7 +640,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "They will chase us away from the city. They will say, “The Israelites are running away from us, as they did before.” We will continue to run away from them."
+      "text": "They will chase us away from the city. They will say, “The Israelites are running away from us, as they did before. ” We will continue to run away from them."
     },
     {
       "verse": "7",
@@ -648,7 +648,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "When you have taken the city, start to burn it. Do what the Lord has told you to do. Be sure that you obey my commands.’"
+      "text": "When you have taken the city, start to burn it. Do what the Lord has told you to do. Be sure that you obey my commands. ’"
     },
     {
       "verse": "9",
@@ -664,7 +664,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Joshua had already sent about 5,000 men to hide on the west side of the city, between Bethel and Ai."
+      "text": "Joshua had already sent about 5, 000 men to hide on the west side of the city, between Bethel and Ai."
     },
     {
       "verse": "13",
@@ -688,7 +688,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the Lord said to Joshua, ‘Hold out the spear that is in your hand. Point it towards Ai. I am now giving the city to you.’So Joshua held out his spear towards Ai. So Joshua held out his spear towards Ai."
+      "text": "Then the Lord said to Joshua, ‘Hold out the spear that is in your hand. Point it towards Ai. I am now giving the city to you. ’So Joshua held out his spear towards Ai. So Joshua held out his spear towards Ai."
     },
     {
       "verse": "19",
@@ -716,7 +716,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "All the people of Ai died on that day. That was 12,000 men and women."
+      "text": "All the people of Ai died on that day. That was 12, 000 men and women."
     },
     {
       "verse": "26",
@@ -740,7 +740,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "He built it as the Lord's servant, Moses, had told the Israelites to do. Moses had written this on the scroll of God's laws. The law said, ‘You must build an altar with whole stones that you have not cut. Do not use any iron tools on them.’ They made burnt offerings on the altar to worship the Lord. They also made sacrifices as friendship offerings."
+      "text": "He built it as the Lord's servant, Moses, had told the Israelites to do. Moses had written this on the scroll of God's laws. The law said, ‘You must build an altar with whole stones that you have not cut. Do not use any iron tools on them. ’ They made burnt offerings on the altar to worship the Lord. They also made sacrifices as friendship offerings."
     },
     {
       "verse": "32",
@@ -782,15 +782,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "They arrived at the tents of the Israelites in Gilgal. They said to Joshua and to the men of Israel, ‘We have come from a land that is very far away. Please let us make an agreement that we will not fight each other.’"
+      "text": "They arrived at the tents of the Israelites in Gilgal. They said to Joshua and to the men of Israel, ‘We have come from a land that is very far away. Please let us make an agreement that we will not fight each other. ’"
     },
     {
       "verse": "7",
-      "text": "But the men of Israel said to the Hivites, ‘Perhaps you live near to us. So we could not make a promise not to fight against you.’"
+      "text": "But the men of Israel said to the Hivites, ‘Perhaps you live near to us. So we could not make a promise not to fight against you. ’"
     },
     {
       "verse": "8",
-      "text": "The Hivites said to Joshua, ‘If you agree, we will become your servants.’Joshua asked them, ‘Who are you? Where do you come from?’ Joshua asked them, ‘Who are you? Where do you come from?’"
+      "text": "The Hivites said to Joshua, ‘If you agree, we will become your servants. ’Joshua asked them, ‘Who are you? Where do you come from? ’ Joshua asked them, ‘Who are you? Where do you come from? ’"
     },
     {
       "verse": "9",
@@ -802,7 +802,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Our leaders and all our people told us to come to meet you. Our leaders said, “Take food and drink for your journey. Go to meet them, and say to them, ‘We want to be your servants. Please promise not to fight against us.’ ”"
+      "text": "Our leaders and all our people told us to come to meet you. Our leaders said, “Take food and drink for your journey. Go to meet them, and say to them, ‘We want to be your servants. Please promise not to fight against us. ’ ”"
     },
     {
       "verse": "12",
@@ -810,7 +810,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "These bags of wine were new, but see how old and spoiled they are now. Our clothes and our shoes have become old as we made our long journey.’"
+      "text": "These bags of wine were new, but see how old and spoiled they are now. Our clothes and our shoes have become old as we made our long journey. ’"
     },
     {
       "verse": "14",
@@ -830,7 +830,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Israelites did not attack them, because of the promise that their leaders had made. They had made a strong promise in the name of the Lord God of Israel that they would not kill the Gibeonites.The Israelite people were angry with their leaders, because of the agreement."
+      "text": "The Israelites did not attack them, because of the promise that their leaders had made. They had made a strong promise in the name of the Lord God of Israel that they would not kill the Gibeonites. The Israelite people were angry with their leaders, because of the agreement."
     },
     {
       "verse": "19",
@@ -842,7 +842,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "We will let them live, but they will become our servants. They will cut wood and they will fetch water for all the Israelite people.’ That is what the Israelite leaders decided to do."
+      "text": "We will let them live, but they will become our servants. They will cut wood and they will fetch water for all the Israelite people. ’ That is what the Israelite leaders decided to do."
     },
     {
       "verse": "22",
@@ -850,7 +850,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Because you told lies to us, you will always have to be our servants. You will cut wood and you will fetch water to serve our God.’"
+      "text": "Because you told lies to us, you will always have to be our servants. You will cut wood and you will fetch water to serve our God. ’"
     },
     {
       "verse": "24",
@@ -858,7 +858,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Now we are under your power. You must decide what to do with us. Do whatever you think is right and good.’"
+      "text": "Now we are under your power. You must decide what to do with us. Do whatever you think is right and good. ’"
     },
     {
       "verse": "26",
@@ -884,7 +884,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Adoni-Zedek said to them, ‘The Gibeonites have made an agreement with Joshua and the Israelites not to fight them. So please come and help me to attack Gibeon.’"
+      "text": "Adoni-Zedek said to them, ‘The Gibeonites have made an agreement with Joshua and the Israelites not to fight them. So please come and help me to attack Gibeon. ’"
     },
     {
       "verse": "5",
@@ -892,7 +892,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Gibeonites sent a message to Joshua at Gilgal. They said, ‘Please sir, do not refuse to help us! Come quickly and save us. All the Amorite kings from the hills have joined together to attack us.’"
+      "text": "The Gibeonites sent a message to Joshua at Gilgal. They said, ‘Please sir, do not refuse to help us! Come quickly and save us. All the Amorite kings from the hills have joined together to attack us. ’"
     },
     {
       "verse": "7",
@@ -900,7 +900,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Lord said to Joshua, ‘Do not be afraid of them. I will cause you to win against their armies. They will not be strong enough to fight against you.’"
+      "text": "The Lord said to Joshua, ‘Do not be afraid of them. I will cause you to win against their armies. They will not be strong enough to fight against you. ’"
     },
     {
       "verse": "9",
@@ -916,7 +916,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So the Lord caused the Israelites to win the fight against the Amorites. After the battle that day, Joshua stood in front of Israel and he prayed to the Lord. He said,‘Sun, stand still over Gibeon city.Moon, stand still over Aijalon valley.’ ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley.’"
+      "text": "So the Lord caused the Israelites to win the fight against the Amorites. After the battle that day, Joshua stood in front of Israel and he prayed to the Lord. He said, ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley. ’ ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley. ’"
     },
     {
       "verse": "13",
@@ -944,7 +944,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But you must continue to chase after your enemies. Do not stop now! Catch them! Do not let them reach their cities where they will be safe. Remember that the Lord your God has caused you to win against them.’"
+      "text": "But you must continue to chase after your enemies. Do not stop now! Catch them! Do not let them reach their cities where they will be safe. Remember that the Lord your God has caused you to win against them. ’"
     },
     {
       "verse": "20",
@@ -956,7 +956,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then Joshua said to his men, ‘Take away the stones to open the cave where the five kings are. Bring them out here to me.’"
+      "text": "Then Joshua said to his men, ‘Take away the stones to open the cave where the five kings are. Bring them out here to me. ’"
     },
     {
       "verse": "23",
@@ -964,11 +964,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "When they had brought the kings to Joshua, he called the men of Israel to meet there. He said to the officers of his army, ‘Put your feet on the necks of these kings.’ They did as he told them."
+      "text": "When they had brought the kings to Joshua, he called the men of Israel to meet there. He said to the officers of his army, ‘Put your feet on the necks of these kings. ’ They did as he told them."
     },
     {
       "verse": "25",
-      "text": "Joshua said to them, ‘Do not be afraid. Be very strong and brave. Look at these kings! This is what the Lord will do to all the enemies that you will fight against.’"
+      "text": "Joshua said to them, ‘Do not be afraid. Be very strong and brave. Look at these kings! This is what the Lord will do to all the enemies that you will fight against. ’"
     },
     {
       "verse": "26",
@@ -1066,7 +1066,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Lord said to Joshua, ‘Do not be afraid of them. This time tomorrow they will all be dead! I will give all of them to you Israelites. You must cut the legs of their horses so that they cannot run well. You must also burn their chariots.’"
+      "text": "The Lord said to Joshua, ‘Do not be afraid of them. This time tomorrow they will all be dead! I will give all of them to you Israelites. You must cut the legs of their horses so that they cannot run well. You must also burn their chariots. ’"
     },
     {
       "verse": "7",
@@ -1134,7 +1134,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "In that way, Joshua took the whole land. The Lord had promised Moses that he would give the land to his people. Joshua gave a part of the land to each tribe, for them to live in.After all that, the people did not have to fight any more."
+      "text": "In that way, Joshua took the whole land. The Lord had promised Moses that he would give the land to his people. Joshua gave a part of the land to each tribe, for them to live in. After all that, the people did not have to fight any more."
     }
   ],
   "12": [
@@ -1172,67 +1172,67 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Joshua took the land of these kings:king of Jericho,king of Ai (near Bethel),"
+      "text": "Joshua took the land of these kings: king of Jericho, king of Ai (near Bethel),"
     },
     {
       "verse": "10",
-      "text": "king of Jerusalem,king of Hebron,"
+      "text": "king of Jerusalem, king of Hebron,"
     },
     {
       "verse": "11",
-      "text": "king of Jarmuth,king of Lachish,"
+      "text": "king of Jarmuth, king of Lachish,"
     },
     {
       "verse": "12",
-      "text": "king of Eglon,king of Gezer,"
+      "text": "king of Eglon, king of Gezer,"
     },
     {
       "verse": "13",
-      "text": "king of Debir,king of Geder,"
+      "text": "king of Debir, king of Geder,"
     },
     {
       "verse": "14",
-      "text": "king of Hormah,king of Arad,"
+      "text": "king of Hormah, king of Arad,"
     },
     {
       "verse": "15",
-      "text": "king of Libnah,king of Adullam,"
+      "text": "king of Libnah, king of Adullam,"
     },
     {
       "verse": "16",
-      "text": "king of Makkedah,king of Bethel,"
+      "text": "king of Makkedah, king of Bethel,"
     },
     {
       "verse": "17",
-      "text": "king of Tappuah,king of Hepher,"
+      "text": "king of Tappuah, king of Hepher,"
     },
     {
       "verse": "18",
-      "text": "king of Aphek,king of Lasharon,"
+      "text": "king of Aphek, king of Lasharon,"
     },
     {
       "verse": "19",
-      "text": "king of Madon,king of Hazor,"
+      "text": "king of Madon, king of Hazor,"
     },
     {
       "verse": "20",
-      "text": "king of Shimron Meron,king of Acshaph,"
+      "text": "king of Shimron Meron, king of Acshaph,"
     },
     {
       "verse": "21",
-      "text": "king of Taanach,king of Megiddo,"
+      "text": "king of Taanach, king of Megiddo,"
     },
     {
       "verse": "22",
-      "text": "king of Kedesh,king of Jokneam in Carmel,"
+      "text": "king of Kedesh, king of Jokneam in Carmel,"
     },
     {
       "verse": "23",
-      "text": "king of Dor in Naphoth Dor,king of Goyim in Gilgal,"
+      "text": "king of Dor in Naphoth Dor, king of Goyim in Gilgal,"
     },
     {
       "verse": "24",
-      "text": "king of Tirzah.Joshua and the Israelites took the land of these 31 kings."
+      "text": "king of Tirzah. Joshua and the Israelites took the land of these 31 kings."
     }
   ],
   "13": [
@@ -1262,7 +1262,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Each of the nine tribes, and the half tribe of Manasseh, must receive its own part of the land.’"
+      "text": "Each of the nine tribes, and the half tribe of Manasseh, must receive its own part of the land. ’"
     },
     {
       "verse": "8",
@@ -1282,7 +1282,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "(That was the kingdom of King Og in Bashan, who ruled in Ashtaroth and Edrei. He was one of the last of the Rephaites.) Moses had won a fight against them and he had taken their land."
+      "text": "(That was the kingdom of King Og in Bashan, who ruled in Ashtaroth and Edrei. He was one of the last of the Rephaites. ) Moses had won a fight against them and he had taken their land."
     },
     {
       "verse": "13",
@@ -1326,7 +1326,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The border of Reuben's land was the Jordan River.Moses gave these towns and their villages to the tribe of Reuben, family by family."
+      "text": "The border of Reuben's land was the Jordan River. Moses gave these towns and their villages to the tribe of Reuben, family by family."
     },
     {
       "verse": "24",
@@ -1358,7 +1358,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "It included half of Gilead, Ashtaroth and Edrei. (These were the cities that belonged to King Og in Bashan.) This land was for half the descendants of Makir, Manasseh's son, to live in, family by family."
+      "text": "It included half of Gilead, Ashtaroth and Edrei. (These were the cities that belonged to King Og in Bashan. ) This land was for half the descendants of Makir, Manasseh's son, to live in, family by family."
     },
     {
       "verse": "32",
@@ -1404,7 +1404,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So Moses made a promise to me on that day. He said, “The land that your feet have walked on will always belong to you and to your children. That is because you have trusted the Lord your God.”"
+      "text": "So Moses made a promise to me on that day. He said, “The land that your feet have walked on will always belong to you and to your children. That is because you have trusted the Lord your God. ”"
     },
     {
       "verse": "10",
@@ -1416,7 +1416,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So please give to me this hill country that the Lord promised to me. You heard that the Anakites were living there then, in large, strong cities. But the Lord will help me to chase them out, as he has promised to do.’"
+      "text": "So please give to me this hill country that the Lord promised to me. You heard that the Anakites were living there then, in large, strong cities. But the Lord will help me to chase them out, as he has promised to do. ’"
     },
     {
       "verse": "13",
@@ -1428,7 +1428,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "(Before that, Hebron had been called ‘Kiriath Arba’. Arba was a famous Anakite.)After that, there were no more battles in Canaan."
+      "text": "(Before that, Hebron had been called ‘Kiriath Arba’. Arba was a famous Anakite. )After that, there were no more battles in Canaan."
     }
   ],
   "15": [
@@ -1450,11 +1450,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Judah's east border went from the Salt Sea as far as the end of the Jordan River.Their north border started from the end of the Jordan at the Salt Sea."
+      "text": "Judah's east border went from the Salt Sea as far as the end of the Jordan River. Their north border started from the end of the Jordan at the Salt Sea."
     },
     {
       "verse": "6",
-      "text": "From there it went to Beth Hoglah. Then it went north of Beth Arabah to the stone of Bohan. (Bohan was a son of Reuben.)"
+      "text": "From there it went to Beth Hoglah. Then it went north of Beth Arabah to the stone of Bohan. (Bohan was a son of Reuben. )"
     },
     {
       "verse": "7",
@@ -1478,7 +1478,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The west border of Judah's land was the Mediterranean Sea.Those were the borders of the land which Judah's tribe and its clans received. Those were the borders of the land which Judah's tribe and its clans received."
+      "text": "The west border of Judah's land was the Mediterranean Sea. Those were the borders of the land which Judah's tribe and its clans received. Those were the borders of the land which Judah's tribe and its clans received."
     },
     {
       "verse": "13",
@@ -1494,7 +1494,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Caleb said, ‘If a brave man attacks and takes Kiriath Sepher, he can marry my daughter, Acsah.’"
+      "text": "Caleb said, ‘If a brave man attacks and takes Kiriath Sepher, he can marry my daughter, Acsah. ’"
     },
     {
       "verse": "17",
@@ -1502,11 +1502,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "After this, Acsah told Othniel that they should ask her father to give them some land. She went to see her father, Caleb. As she got off her donkey, Caleb asked her, ‘What would you like me to do for you?’"
+      "text": "After this, Acsah told Othniel that they should ask her father to give them some land. She went to see her father, Caleb. As she got off her donkey, Caleb asked her, ‘What would you like me to do for you? ’"
     },
     {
       "verse": "19",
-      "text": "She said, ‘Please be kind and give me a special gift. You have given me some land in the Negev desert. Now please give me a place with springs so that I have water for the land.’ So Caleb gave her some land with springs, on high land and on low land."
+      "text": "She said, ‘Please be kind and give me a special gift. You have given me some land in the Negev desert. Now please give me a place with springs so that I have water for the land. ’ So Caleb gave her some land with springs, on high land and on low land."
     },
     {
       "verse": "20",
@@ -1514,7 +1514,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "These towns were in the south of Judah's land, near the border of Edom:Kabzeel, Eder, Jagur,"
+      "text": "These towns were in the south of Judah's land, near the border of Edom: Kabzeel, Eder, Jagur,"
     },
     {
       "verse": "22",
@@ -1558,11 +1558,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Lebaoth, Shilhim, Ain and Rimmon.That is 29 towns with their villages."
+      "text": "Lebaoth, Shilhim, Ain and Rimmon. That is 29 towns with their villages."
     },
     {
       "verse": "33",
-      "text": "These towns were in the low hills in the west:Eshtaol, Zorah, Ashnah,"
+      "text": "These towns were in the low hills in the west: Eshtaol, Zorah, Ashnah,"
     },
     {
       "verse": "34",
@@ -1574,7 +1574,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Also he gave them Shaaraim, Adithaim and Gederah, (or Gederothaim).There were 14 towns and villages."
+      "text": "Also he gave them Shaaraim, Adithaim and Gederah, (or Gederothaim). There were 14 towns and villages."
     },
     {
       "verse": "37",
@@ -1594,7 +1594,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "Also he gave them Gederoth, Beth Dagon, Naamah and Makkedah.There were 16 towns and their villages."
+      "text": "Also he gave them Gederoth, Beth Dagon, Naamah and Makkedah. There were 16 towns and their villages."
     },
     {
       "verse": "42",
@@ -1606,7 +1606,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "Keilah, Aczib and Mareshah.There were nine towns with their villages."
+      "text": "Keilah, Aczib and Mareshah. There were nine towns with their villages."
     },
     {
       "verse": "45",
@@ -1622,7 +1622,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "These towns were in the hill country:Shamir, Jattir, Socoh,"
+      "text": "These towns were in the hill country: Shamir, Jattir, Socoh,"
     },
     {
       "verse": "49",
@@ -1634,7 +1634,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Goshen, Holon and Giloh.There were 11 towns and their villages."
+      "text": "Goshen, Holon and Giloh. There were 11 towns and their villages."
     },
     {
       "verse": "52",
@@ -1646,7 +1646,7 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "Humtah, Kiriath Arba (that is, Hebron) and Zior.There were nine towns and their villages."
+      "text": "Humtah, Kiriath Arba (that is, Hebron) and Zior. There were nine towns and their villages."
     },
     {
       "verse": "55",
@@ -1658,7 +1658,7 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "Kain, Gibeah and Timnah.There were ten towns and their villages."
+      "text": "Kain, Gibeah and Timnah. There were ten towns and their villages."
     },
     {
       "verse": "58",
@@ -1666,19 +1666,19 @@ module.exports = {
     },
     {
       "verse": "59",
-      "text": "Maarath, Beth Anoth and Eltekon.There were six towns and their villages."
+      "text": "Maarath, Beth Anoth and Eltekon. There were six towns and their villages."
     },
     {
       "verse": "60",
-      "text": "And Kiriath Baal, (that is, Kiriath-Jearim) and Rabbah.There were two towns and their villages. There were two towns and their villages."
+      "text": "And Kiriath Baal, (that is, Kiriath-Jearim) and Rabbah. There were two towns and their villages. There were two towns and their villages."
     },
     {
       "verse": "61",
-      "text": "These towns were in the desert:Beth Arabah, Middin, Secacah,"
+      "text": "These towns were in the desert: Beth Arabah, Middin, Secacah,"
     },
     {
       "verse": "62",
-      "text": "Nibshan, Salt city, and En Gedi.There were six towns and their villages. There were six towns and their villages."
+      "text": "Nibshan, Salt city, and En Gedi. There were six towns and their villages. There were six towns and their villages."
     },
     {
       "verse": "63",
@@ -1704,7 +1704,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Joshua gave this land to the tribe of Ephraim, clan by clan:The border of their land went from Ataroth Addar in the east to Beth Horon."
+      "text": "Joshua gave this land to the tribe of Ephraim, clan by clan: The border of their land went from Ataroth Addar in the east to Beth Horon."
     },
     {
       "verse": "6",
@@ -1716,7 +1716,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "From Tappuah, the border continued to the west, to the stream of Kanah. From there, it continued to the sea.That is the land that Joshua gave to the families of the tribe of Ephraim."
+      "text": "From Tappuah, the border continued to the west, to the stream of Kanah. From there, it continued to the sea. That is the land that Joshua gave to the families of the tribe of Ephraim."
     },
     {
       "verse": "9",
@@ -1742,7 +1742,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "They went to see Eleazar the priest, Joshua son of Nun, and the leaders. They said, ‘The Lord told Moses to give us part of the land. We must have land like the sons of other families.’ Joshua agreed and he gave land to them, like the other families."
+      "text": "They went to see Eleazar the priest, Joshua son of Nun, and the leaders. They said, ‘The Lord told Moses to give us part of the land. We must have land like the sons of other families. ’ Joshua agreed and he gave land to them, like the other families."
     },
     {
       "verse": "5",
@@ -1782,15 +1782,15 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Joseph's descendants asked Joshua, ‘Why have you given only one part of the land for us to live in? The Lord has blessed us with many children, so there are many people in our tribe.’"
+      "text": "Joseph's descendants asked Joshua, ‘Why have you given only one part of the land for us to live in? The Lord has blessed us with many children, so there are many people in our tribe. ’"
     },
     {
       "verse": "15",
-      "text": "Joshua said to them, ‘Because there are so many of you, you may take more land. If the hill country of Ephraim is too small for you, move into the forest that belongs to the Perizzites and the Rephaites. Cut down trees there to make a place to live.’"
+      "text": "Joshua said to them, ‘Because there are so many of you, you may take more land. If the hill country of Ephraim is too small for you, move into the forest that belongs to the Perizzites and the Rephaites. Cut down trees there to make a place to live. ’"
     },
     {
       "verse": "16",
-      "text": "They replied, ‘The hill country is certainly not big enough for us. But the Canaanites who live in Beth Shan and its villages, and in the valley of Jezreel, have iron chariots.’"
+      "text": "They replied, ‘The hill country is certainly not big enough for us. But the Canaanites who live in Beth Shan and its villages, and in the valley of Jezreel, have iron chariots. ’"
     },
     {
       "verse": "17",
@@ -1798,7 +1798,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You may take the whole of the hill country as your land. You can cut down the trees of the forests and live there. It is true that the Canaanites are strong fighters and they have iron chariots. But you will be strong enough to chase them out.’"
+      "text": "You may take the whole of the hill country as your land. You can cut down the trees of the forests and live there. It is true that the Canaanites are strong fighters and they have iron chariots. But you will be strong enough to chase them out. ’"
     }
   ],
   "18": [
@@ -1828,11 +1828,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Levites will not have any land of their own. Their gift from the Lord is to serve him. Gad, Reuben and half the tribe of Manasseh already have their land on the east side of the Jordan River. The Lord's servant, Moses, gave it to them.’"
+      "text": "The Levites will not have any land of their own. Their gift from the Lord is to serve him. Gad, Reuben and half the tribe of Manasseh already have their land on the east side of the Jordan River. The Lord's servant, Moses, gave it to them. ’"
     },
     {
       "verse": "8",
-      "text": "Before the men left, Joshua said to them, ‘Go and look carefully at the land. Describe what you see. Then bring your report back to me here in Shiloh. I will use lots so that the Lord decides how to share the land between you.’"
+      "text": "Before the men left, Joshua said to them, ‘Go and look carefully at the land. Describe what you see. Then bring your report back to me here in Shiloh. I will use lots so that the Lord decides how to share the land between you. ’"
     },
     {
       "verse": "9",
@@ -1880,11 +1880,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The east border of their land was the Jordan River.Those are the borders of the land that Joshua gave to the families of Benjamin's tribe. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe."
+      "text": "The east border of their land was the Jordan River. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe."
     },
     {
       "verse": "21",
-      "text": "These are the cities that Joshua gave to the tribe of Benjamin:Jericho, Beth Hoglah, Emek Keziz,"
+      "text": "These are the cities that Joshua gave to the tribe of Benjamin: Jericho, Beth Hoglah, Emek Keziz,"
     },
     {
       "verse": "22",
@@ -1896,7 +1896,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Kephar, Ammoni, Ophni and Geba.There were 12 towns and their villages."
+      "text": "Kephar, Ammoni, Ophni and Geba. There were 12 towns and their villages."
     },
     {
       "verse": "25",
@@ -1912,7 +1912,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Zelah, Haeleph, the Jebusite city (that is, Jerusalem), Gibeah and Kiriath.There were 14 towns and their villages.Joshua gave these cities to Benjamin's tribe, for each clan to live in."
+      "text": "Zelah, Haeleph, the Jebusite city (that is, Jerusalem), Gibeah and Kiriath. There were 14 towns and their villages. Joshua gave these cities to Benjamin's tribe, for each clan to live in."
     }
   ],
   "19": [
@@ -1922,7 +1922,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "It included these towns:Beersheba (also called Sheba), Moladah,"
+      "text": "It included these towns: Beersheba (also called Sheba), Moladah,"
     },
     {
       "verse": "3",
@@ -1938,15 +1938,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Beth Lebaoth and Sharuhen.There were 13 towns and their villages."
+      "text": "Beth Lebaoth and Sharuhen. There were 13 towns and their villages."
     },
     {
       "verse": "7",
-      "text": "He also gave them Ain, Rimmon, Ether and Ashan.There were four towns and their villages."
+      "text": "He also gave them Ain, Rimmon, Ether and Ashan. There were four towns and their villages."
     },
     {
       "verse": "8",
-      "text": "This included all the villages near them as far as Baalath Beer (also called Ramah, in the Negev).That was the land that Joshua gave to the families of Simeon's tribe."
+      "text": "This included all the villages near them as far as Baalath Beer (also called Ramah, in the Negev). That was the land that Joshua gave to the families of Simeon's tribe."
     },
     {
       "verse": "9",
@@ -1974,7 +1974,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Their land included these towns: Kattath, Nahalal, Shimron, Idalah and Bethlehem.There were 12 towns and their villages."
+      "text": "Their land included these towns: Kattath, Nahalal, Shimron, Idalah and Bethlehem. There were 12 towns and their villages."
     },
     {
       "verse": "16",
@@ -2002,7 +2002,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The border of their land touched Tabor, Shahazumah and Beth Shemesh. It ended at the Jordan River.There were 16 towns and their villages."
+      "text": "The border of their land touched Tabor, Shahazumah and Beth Shemesh. It ended at the Jordan River. There were 16 towns and their villages."
     },
     {
       "verse": "23",
@@ -2102,7 +2102,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "(But later, the people of Dan failed to take their land and keep it. So they went to attack Leshem. They took the town and they killed its people. Then they lived there themselves. They called the city Dan, after their ancestor.)"
+      "text": "(But later, the people of Dan failed to take their land and keep it. So they went to attack Leshem. They took the town and they killed its people. Then they lived there themselves. They called the city Dan, after their ancestor. )"
     },
     {
       "verse": "48",
@@ -2144,7 +2144,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The killer must stay inside that city. The judges there will decide if he is not guilty of murder. Then he must wait until the leader of the priests dies. After that, he is free to return to the town that he came from.’"
+      "text": "The killer must stay inside that city. The judges there will decide if he is not guilty of murder. Then he must wait until the leader of the priests dies. After that, he is free to return to the town that he came from. ’"
     },
     {
       "verse": "7",
@@ -2166,7 +2166,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They met at Shiloh in the land of Canaan. The Levites said, ‘The Lord told Moses that you must give us towns to live in, as well as land for our animals.’"
+      "text": "They met at Shiloh in the land of Canaan. The Levites said, ‘The Lord told Moses that you must give us towns to live in, as well as land for our animals. ’"
     },
     {
       "verse": "3",
@@ -2360,7 +2360,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But you must be very careful to obey the rules and the laws that Moses gave to you. You must love the Lord your God. You must obey the rules and commands that he has given to us. You must worship him and serve him with everything that you have.’"
+      "text": "But you must be very careful to obey the rules and the laws that Moses gave to you. You must love the Lord your God. You must obey the rules and commands that he has given to us. You must worship him and serve him with everything that you have. ’"
     },
     {
       "verse": "6",
@@ -2368,11 +2368,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "(Moses had given land in Bashan to half the tribe of Manasseh. But Joshua had given land on the west side of the Jordan to the other half of the tribe, as he did for the other tribes.) When Joshua sent the 2½ tribes home, he blessed them."
+      "text": "(Moses had given land in Bashan to half the tribe of Manasseh. But Joshua had given land on the west side of the Jordan to the other half of the tribe, as he did for the other tribes. ) When Joshua sent the 2½ tribes home, he blessed them."
     },
     {
       "verse": "8",
-      "text": "He said, ‘Go back to your homes with the valuable things that you took from your enemies. Take many animals with you. Take silver, gold, bronze and iron things, as well as beautiful clothes. Share these things with the other people of your tribes.’"
+      "text": "He said, ‘Go back to your homes with the valuable things that you took from your enemies. Take many animals with you. Take silver, gold, bronze and iron things, as well as beautiful clothes. Share these things with the other people of your tribes. ’"
     },
     {
       "verse": "9",
@@ -2384,7 +2384,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The other Israelites heard this news: ‘Those 2½ tribes have built an altar on the border of Canaan, at Geliloth! They have built it on the west side of the Jordan River, our side!’"
+      "text": "The other Israelites heard this news: ‘Those 2½ tribes have built an altar on the border of Canaan, at Geliloth! They have built it on the west side of the Jordan River, our side! ’"
     },
     {
       "verse": "12",
@@ -2420,7 +2420,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Remember the time when Achan, son of Zerah, took things that belonged to God for himself. He refused to obey God's command about Jericho's valuable things. Then God became angry with all the people of Israel. Achan died because of his sin, but he was not the only one.’"
+      "text": "Remember the time when Achan, son of Zerah, took things that belonged to God for himself. He refused to obey God's command about Jericho's valuable things. Then God became angry with all the people of Israel. Achan died because of his sin, but he was not the only one. ’"
     },
     {
       "verse": "21",
@@ -2440,7 +2440,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The Lord put the Jordan River as a border between our tribes and your tribes. The tribes of Reuben and Gad cannot worship the Lord!” In that way, your descendants might stop our descendants from serving the Lord."
+      "text": "The Lord put the Jordan River as a border between our tribes and your tribes. The tribes of Reuben and Gad cannot worship the Lord! ” In that way, your descendants might stop our descendants from serving the Lord."
     },
     {
       "verse": "26",
@@ -2448,15 +2448,15 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "But it will help us all, our descendants and your descendants, to remember to obey the Lord. We will go to worship him at his tabernacle. There we will bring to him our burnt offerings, our sacrifices and our friendship offerings. Then, in future years, your descendants will not say to our descendants, “You cannot worship the Lord with us.”"
+      "text": "But it will help us all, our descendants and your descendants, to remember to obey the Lord. We will go to worship him at his tabernacle. There we will bring to him our burnt offerings, our sacrifices and our friendship offerings. Then, in future years, your descendants will not say to our descendants, “You cannot worship the Lord with us. ”"
     },
     {
       "verse": "28",
-      "text": "If they say that to us, we will reply, “Look at this altar that our ancestors built. It is a copy of the Lord's true altar. It is not for burnt offerings or sacrifices. They built it so that we would remember that we all belong to the Lord.”"
+      "text": "If they say that to us, we will reply, “Look at this altar that our ancestors built. It is a copy of the Lord's true altar. It is not for burnt offerings or sacrifices. They built it so that we would remember that we all belong to the Lord. ”"
     },
     {
       "verse": "29",
-      "text": "We would never decide to turn against the Lord. We want to continue to obey him. We know that the only altar where we must make burnt offerings, sacrifices and friendship offerings is the true altar of the Lord our God. That altar stands in front of his tabernacle.’"
+      "text": "We would never decide to turn against the Lord. We want to continue to obey him. We know that the only altar where we must make burnt offerings, sacrifices and friendship offerings is the true altar of the Lord our God. That altar stands in front of his tabernacle. ’"
     },
     {
       "verse": "30",
@@ -2464,7 +2464,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "They said to them, ‘Now we know that the Lord is with us! You have not refused to obey the Lord. So we know that he will not punish us Israelites.’"
+      "text": "They said to them, ‘Now we know that the Lord is with us! You have not refused to obey the Lord. So we know that he will not punish us Israelites. ’"
     },
     {
       "verse": "32",
@@ -2486,7 +2486,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "One day, Joshua called all the leaders to meet with him. They were the leaders of Israel's tribes and clans, the judges and the officers. He said to them,‘I am now very old."
+      "text": "One day, Joshua called all the leaders to meet with him. They were the leaders of Israel's tribes and clans, the judges and the officers. He said to them, ‘I am now very old."
     },
     {
       "verse": "3",
@@ -2518,7 +2518,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Because the Lord your God fights on your behalf, one of you can chase away 1,000 men! The Lord has promised to do this for you."
+      "text": "Because the Lord your God fights on your behalf, one of you can chase away 1, 000 men! The Lord has promised to do this for you."
     },
     {
       "verse": "11",
@@ -2542,7 +2542,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "You must obey the rules that he commanded you to obey in his covenant. You must not serve or worship other gods. If you turn against him, the Lord your God will be very angry with you. Then very soon none of you will remain in this good land that he has given to you.’"
+      "text": "You must obey the rules that he commanded you to obey in his covenant. You must not serve or worship other gods. If you turn against him, the Lord your God will be very angry with you. Then very soon none of you will remain in this good land that he has given to you. ’"
     }
   ],
   "24": [
@@ -2596,7 +2596,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The land was a gift from me. I gave you a land where you had not worked in its fields. I gave you towns to live in that you did not build. You eat grapes and olives from trees that you did not plant.” ’"
+      "text": "The land was a gift from me. I gave you a land where you had not worked in its fields. I gave you towns to live in that you did not build. You eat grapes and olives from trees that you did not plant. ” ’"
     },
     {
       "verse": "14",
@@ -2604,7 +2604,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But if you refuse to serve the Lord, then you should choose another god to worship. Decide today! Will you serve the gods that your ancestors worshipped across the river? Will you serve the gods of the Amorites, in whose land you are now living? You choose! But as for me and my family, we will serve the Lord.’"
+      "text": "But if you refuse to serve the Lord, then you should choose another god to worship. Decide today! Will you serve the gods that your ancestors worshipped across the river? Will you serve the gods of the Amorites, in whose land you are now living? You choose! But as for me and my family, we will serve the Lord. ’"
     },
     {
       "verse": "16",
@@ -2616,7 +2616,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Lord chased all the nations out as we moved into the land. He chased out the Amorites and the other people who lived in the land. So we too will serve the Lord, because he is our God.’"
+      "text": "The Lord chased all the nations out as we moved into the land. He chased out the Amorites and the other people who lived in the land. So we too will serve the Lord, because he is our God. ’"
     },
     {
       "verse": "19",
@@ -2624,23 +2624,23 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "If you turn away from the Lord and you serve foreign gods, he will turn against you. He has been kind and he has helped you until now. But he will bring trouble to you and he will destroy you, if you turn away from him.’"
+      "text": "If you turn away from the Lord and you serve foreign gods, he will turn against you. He has been kind and he has helped you until now. But he will bring trouble to you and he will destroy you, if you turn away from him. ’"
     },
     {
       "verse": "21",
-      "text": "The people said to Joshua, ‘Never! We will only serve the Lord.’"
+      "text": "The people said to Joshua, ‘Never! We will only serve the Lord. ’"
     },
     {
       "verse": "22",
-      "text": "Joshua said to them, ‘You yourselves have chosen to serve the Lord. Agree now that you have done that.’They replied, ‘Yes, we agree!’ They replied, ‘Yes, we agree!’"
+      "text": "Joshua said to them, ‘You yourselves have chosen to serve the Lord. Agree now that you have done that. ’They replied, ‘Yes, we agree! ’ They replied, ‘Yes, we agree! ’"
     },
     {
       "verse": "23",
-      "text": "Joshua said, ‘So now you must throw away the foreign gods that you still keep. Trust the Lord, Israel's God, and obey him.’"
+      "text": "Joshua said, ‘So now you must throw away the foreign gods that you still keep. Trust the Lord, Israel's God, and obey him. ’"
     },
     {
       "verse": "24",
-      "text": "The people said to Joshua, ‘We will serve the Lord our God and we will obey him.’"
+      "text": "The people said to Joshua, ‘We will serve the Lord our God and we will obey him. ’"
     },
     {
       "verse": "25",
@@ -2652,7 +2652,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Joshua said to all the people, ‘Look at this stone! It has heard everything that the Lord has said to us today! It will speak against you if you fail to obey your God!’"
+      "text": "Joshua said to all the people, ‘Look at this stone! It has heard everything that the Lord has said to us today! It will speak against you if you fail to obey your God! ’"
     },
     {
       "verse": "28",

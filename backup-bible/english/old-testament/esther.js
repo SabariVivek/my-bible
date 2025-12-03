@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The king asked them, ‘What should we do with Queen Vashti? What does our law say about this? The eunuchs took my message to her, but she did not obey my command. And I am the king!’"
+      "text": "The king asked them, ‘What should we do with Queen Vashti? What does our law say about this? The eunuchs took my message to her, but she did not obey my command. And I am the king! ’"
     },
     {
       "verse": "16",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "When other women hear about this, they will not obey their own husbands. All the women will say, “Queen Vashti did not obey her husband, King Xerxes. When he told her to come to him, she refused to do it!”"
+      "text": "When other women hear about this, they will not obey their own husbands. All the women will say, “Queen Vashti did not obey her husband, King Xerxes. When he told her to come to him, she refused to do it! ”"
     },
     {
       "verse": "18",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "You must send this command to everyone in your great kingdom. When people know about this law, all the women will respect their husbands. They will obey them, whether they are important people or ordinary people.’"
+      "text": "You must send this command to everyone in your great kingdom. When people know about this law, all the women will respect their husbands. They will obey them, whether they are important people or ordinary people. ’"
     },
     {
       "verse": "21",
@@ -104,7 +104,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The king may choose the young woman that pleases him most. She may take the place of Vashti as queen.’King Xerxes thought that this was a good idea. He did everything that the servants said."
+      "text": "The king may choose the young woman that pleases him most. She may take the place of Vashti as queen. ’King Xerxes thought that this was a good idea. He did everything that the servants said."
     },
     {
       "verse": "5",
@@ -194,7 +194,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The officers at the king's gate asked Mordecai, ‘Why do you not obey the king's command?’"
+      "text": "The officers at the king's gate asked Mordecai, ‘Why do you not obey the king's command? ’"
     },
     {
       "verse": "4",
@@ -218,7 +218,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "If you agree, we should send out a command to destroy them. Then I will give 350 tons of silver to the king, so that your officers can do this work.’"
+      "text": "If you agree, we should send out a command to destroy them. Then I will give 350 tons of silver to the king, so that your officers can do this work. ’"
     },
     {
       "verse": "10",
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "He said to Haman, ‘Keep your money. You should do anything that you want with these people.’"
+      "text": "He said to Haman, ‘Keep your money. You should do anything that you want with these people. ’"
     },
     {
       "verse": "12",
@@ -288,7 +288,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "‘Everybody knows the law. People cannot go to meet the king in his own part of the palace unless the king asks them to come. All the king's officers and all his people know that that is the law. If somebody decides to go to the king when the king has not asked to see him, that person must die. He will only stay alive if the king holds out his gold sceptre towards him. As for me, the king has not asked me to go to him for the last 30 days.’"
+      "text": "‘Everybody knows the law. People cannot go to meet the king in his own part of the palace unless the king asks them to come. All the king's officers and all his people know that that is the law. If somebody decides to go to the king when the king has not asked to see him, that person must die. He will only stay alive if the king holds out his gold sceptre towards him. As for me, the king has not asked me to go to him for the last 30 days. ’"
     },
     {
       "verse": "12",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "You must speak now on behalf of all the Jewish people. If you do not, they will receive help from another place to make them safe and free. Then you and your father's family will come to an end. But I think that perhaps you have become queen so that you can help at a time like this.’"
+      "text": "You must speak now on behalf of all the Jewish people. If you do not, they will receive help from another place to make them safe and free. Then you and your father's family will come to an end. But I think that perhaps you have become queen so that you can help at a time like this. ’"
     },
     {
       "verse": "15",
@@ -308,7 +308,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "‘Tell all the Jews in Susa to meet together. Tell them to fast and to pray for me. They must not eat or drink for three days, during the day and the night. My female servants and I will also do that. After three days, I will go and speak to the king. I know that I will do that against the king's law. But if I must die because of that, I agree to die.’"
+      "text": "‘Tell all the Jews in Susa to meet together. Tell them to fast and to pray for me. They must not eat or drink for three days, during the day and the night. My female servants and I will also do that. After three days, I will go and speak to the king. I know that I will do that against the king's law. But if I must die because of that, I agree to die. ’"
     },
     {
       "verse": "17",
@@ -326,19 +326,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The king asked her, ‘What is your trouble, Queen Esther? I will do for you whatever you want. I will even give you half of my kingdom!’"
+      "text": "The king asked her, ‘What is your trouble, Queen Esther? I will do for you whatever you want. I will even give you half of my kingdom! ’"
     },
     {
       "verse": "4",
-      "text": "Esther replied, ‘If the king agrees, I would like you to do this. I would like the king and Haman to come to a special meal that I have prepared for you.’"
+      "text": "Esther replied, ‘If the king agrees, I would like you to do this. I would like the king and Haman to come to a special meal that I have prepared for you. ’"
     },
     {
       "verse": "5",
-      "text": "The king said to his servants, ‘Bring Haman here quickly. Then we can do what Esther wants.’The king and Haman went to the meal that Esther had prepared."
+      "text": "The king said to his servants, ‘Bring Haman here quickly. Then we can do what Esther wants. ’The king and Haman went to the meal that Esther had prepared."
     },
     {
       "verse": "6",
-      "text": "When they were drinking wine, the king asked Esther, ‘What do you want? I will give you whatever you want. What do you want me to do for you? Even if you want half of my kingdom, I will give it to you.’"
+      "text": "When they were drinking wine, the king asked Esther, ‘What do you want? I will give you whatever you want. What do you want me to do for you? Even if you want half of my kingdom, I will give it to you. ’"
     },
     {
       "verse": "7",
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "If the king is pleased with me, and if you agree, please do what I ask. I would like the king and Haman to come again tomorrow. Come to another meal that I will prepare for you. Then I will tell you what I want, as you have asked me to do.’"
+      "text": "If the king is pleased with me, and if you agree, please do what I ask. I would like the king and Haman to come again tomorrow. Come to another meal that I will prepare for you. Then I will tell you what I want, as you have asked me to do. ’"
     },
     {
       "verse": "9",
@@ -354,7 +354,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Haman did not show that he was angry at that time. He went home.Then Haman told his friends and Zeresh, his wife, to meet with him."
+      "text": "Haman did not show that he was angry at that time. He went home. Then Haman told his friends and Zeresh, his wife, to meet with him."
     },
     {
       "verse": "11",
@@ -366,11 +366,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But even all these things do not make me happy. I am angry when I see that Jewish man Mordecai. He is sitting at the king's gate.’"
+      "text": "But even all these things do not make me happy. I am angry when I see that Jewish man Mordecai. He is sitting at the king's gate. ’"
     },
     {
       "verse": "14",
-      "text": "Haman's wife and all his friends said to him, ‘This will make you happy. Tell your men to build a wooden tower that is 22 metres high. In the morning, tell the king to hang Mordecai on the tower to kill him. Then you will enjoy Queen Esther's special meal.’Haman liked their idea very much. So he told his men to build the tall tower."
+      "text": "Haman's wife and all his friends said to him, ‘This will make you happy. Tell your men to build a wooden tower that is 22 metres high. In the morning, tell the king to hang Mordecai on the tower to kill him. Then you will enjoy Queen Esther's special meal. ’Haman liked their idea very much. So he told his men to build the tall tower."
     }
   ],
   "6": [
@@ -384,19 +384,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "When the king heard this, he asked his servant, ‘When Mordecai saved my life, what great honour did we give to him?’ The king's servants replied, ‘We did not do anything for him.’"
+      "text": "When the king heard this, he asked his servant, ‘When Mordecai saved my life, what great honour did we give to him? ’ The king's servants replied, ‘We did not do anything for him. ’"
     },
     {
       "verse": "4",
-      "text": "The king said, ‘Who is now in the palace yard?’Haman had just arrived at the palace. His men had built the wooden tower. Now he wanted to ask the king to hang Mordecai on it to kill him."
+      "text": "The king said, ‘Who is now in the palace yard? ’Haman had just arrived at the palace. His men had built the wooden tower. Now he wanted to ask the king to hang Mordecai on it to kill him."
     },
     {
       "verse": "5",
-      "text": "The king's servants said to the king, ‘Haman is in the palace yard.’ The king said, ‘Bring him here to me.’"
+      "text": "The king's servants said to the king, ‘Haman is in the palace yard. ’ The king said, ‘Bring him here to me. ’"
     },
     {
       "verse": "6",
-      "text": "Haman came in to the king's room. The king asked him, ‘If I want to give great honour to a man, what should we do for that man?’Haman thought to himself, ‘I am sure that I am that man. The king must want to give me honour.’"
+      "text": "Haman came in to the king's room. The king asked him, ‘If I want to give great honour to a man, what should we do for that man? ’Haman thought to himself, ‘I am sure that I am that man. The king must want to give me honour. ’"
     },
     {
       "verse": "7",
@@ -408,15 +408,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then give the clothes and the horse to one of your royal officers. Tell the officer to put the king's clothes on the man that you want to give honour to. Then the officer must put the man on the king's horse. He must lead him through all the streets of the city. As he goes, the officer must shout, “This is what the king does for a man that he want to give honour to!” ’"
+      "text": "Then give the clothes and the horse to one of your royal officers. Tell the officer to put the king's clothes on the man that you want to give honour to. Then the officer must put the man on the king's horse. He must lead him through all the streets of the city. As he goes, the officer must shout, “This is what the king does for a man that he want to give honour to! ” ’"
     },
     {
       "verse": "10",
-      "text": "The king said to Haman, ‘That is a good idea! Go quickly! Get my clothes and my horse. Go and do everything that you have suggested. Do it for the Jew, Mordecai, who sits at the king's gate. Be careful to do for him everything that you said.’"
+      "text": "The king said to Haman, ‘That is a good idea! Go quickly! Get my clothes and my horse. Go and do everything that you have suggested. Do it for the Jew, Mordecai, who sits at the king's gate. Be careful to do for him everything that you said. ’"
     },
     {
       "verse": "11",
-      "text": "So Haman took the king's clothes and the king's horse to Mordecai. He put the king's clothes on Mordecai. Then he led Mordecai on the horse through all the streets of the city. Haman went in front and he shouted, ‘Look! This is what the king does for a man that he want to give honour to!’"
+      "text": "So Haman took the king's clothes and the king's horse to Mordecai. He put the king's clothes on Mordecai. Then he led Mordecai on the horse through all the streets of the city. Haman went in front and he shouted, ‘Look! This is what the king does for a man that he want to give honour to! ’"
     },
     {
       "verse": "12",
@@ -424,7 +424,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He told his wife, Zeresh, and his friends about everything that had happened to him. Then his advisors, as well as his wife, said to him, ‘It seems that you have already lost some of your power to Mordecai. If he really is Jewish, you will never win against him. He will destroy you completely.’"
+      "text": "He told his wife, Zeresh, and his friends about everything that had happened to him. Then his advisors, as well as his wife, said to him, ‘It seems that you have already lost some of your power to Mordecai. If he really is Jewish, you will never win against him. He will destroy you completely. ’"
     },
     {
       "verse": "14",
@@ -438,7 +438,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This was the second day that they ate a special meal together. While they were drinking wine, the king said to Esther, ‘Queen Esther, what do you want me to do for you? I will give you whatever you want. Even if you want half of my kingdom, I will give it to you.’"
+      "text": "This was the second day that they ate a special meal together. While they were drinking wine, the king said to Esther, ‘Queen Esther, what do you want me to do for you? I will give you whatever you want. Even if you want half of my kingdom, I will give it to you. ’"
     },
     {
       "verse": "3",
@@ -446,15 +446,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Someone has sold me and my people as if we are animals. Now they will kill us and completely destroy us all. If we had been sold to become slaves, I would not have spoken to the king. It would not have been important enough for that.’"
+      "text": "Someone has sold me and my people as if we are animals. Now they will kill us and completely destroy us all. If we had been sold to become slaves, I would not have spoken to the king. It would not have been important enough for that. ’"
     },
     {
       "verse": "5",
-      "text": "Then King Xerxes asked Queen Esther, ‘Who is this man? Who would even think of anything like that? Where is he?’"
+      "text": "Then King Xerxes asked Queen Esther, ‘Who is this man? Who would even think of anything like that? Where is he? ’"
     },
     {
       "verse": "6",
-      "text": "Esther replied, ‘The enemy of our people is this wicked man Haman!’Then Haman became very afraid, as he sat there with the king and the queen. Then Haman became very afraid, as he sat there with the king and the queen."
+      "text": "Esther replied, ‘The enemy of our people is this wicked man Haman! ’Then Haman became very afraid, as he sat there with the king and the queen. Then Haman became very afraid, as he sat there with the king and the queen."
     },
     {
       "verse": "7",
@@ -462,11 +462,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Queen Esther was lying down on a bed. Haman threw himself down beside her. At that moment, the king returned from the garden. The king shouted, ‘What is this man doing? He even attacks the queen when she is with me in my palace!’While the king was still saying this, his servants covered Haman's head."
+      "text": "Queen Esther was lying down on a bed. Haman threw himself down beside her. At that moment, the king returned from the garden. The king shouted, ‘What is this man doing? He even attacks the queen when she is with me in my palace! ’While the king was still saying this, his servants covered Haman's head."
     },
     {
       "verse": "9",
-      "text": "One of the king's eunuchs, Harbona, said, ‘There is a wooden tower near Haman's home. It is 22 metres high. His men built it so that he could hang Mordecai on it. Mordecai is the man who saved the king's life.’The king said, ‘Hang Haman on the tower until he is dead.’ The king said, ‘Hang Haman on the tower until he is dead.’"
+      "text": "One of the king's eunuchs, Harbona, said, ‘There is a wooden tower near Haman's home. It is 22 metres high. His men built it so that he could hang Mordecai on it. Mordecai is the man who saved the king's life. ’The king said, ‘Hang Haman on the tower until he is dead. ’ The king said, ‘Hang Haman on the tower until he is dead. ’"
     },
     {
       "verse": "10",
@@ -476,7 +476,7 @@ module.exports = {
   "8": [
     {
       "verse": "1",
-      "text": "That day, King Xerxes took everything that had belonged to Haman, the enemy of the Jews. He gave it all to Queen Esther. Esther told the king that Mordecai was her cousin.So Mordecai came to meet the king."
+      "text": "That day, King Xerxes took everything that had belonged to Haman, the enemy of the Jews. He gave it all to Queen Esther. Esther told the king that Mordecai was her cousin. So Mordecai came to meet the king."
     },
     {
       "verse": "2",
@@ -496,7 +496,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I cannot let this evil thing happen to my relatives. I have to do something to stop it.’"
+      "text": "I cannot let this evil thing happen to my relatives. I have to do something to stop it. ’"
     },
     {
       "verse": "7",
@@ -504,7 +504,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Now you must use my authority to write another law. Write a law that you think will save your people. Then mark the letters with my special ring. Any letter that has my name and the mark of my ring on it has the king's authority. Nobody can ever change it.’"
+      "text": "Now you must use my authority to write another law. Write a law that you think will save your people. Then mark the letters with my special ring. Any letter that has my name and the mark of my ring on it has the king's authority. Nobody can ever change it. ’"
     },
     {
       "verse": "9",
@@ -590,11 +590,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then the king said to Queen Esther, ‘In Susa the Jews have killed 500 men and also the ten sons of Haman. So I think that they have killed many more of their enemies in the other regions of my kingdom! Now, what else do you want? If you ask me, I will do anything that you still want me to do.’"
+      "text": "Then the king said to Queen Esther, ‘In Susa the Jews have killed 500 men and also the ten sons of Haman. So I think that they have killed many more of their enemies in the other regions of my kingdom! Now, what else do you want? If you ask me, I will do anything that you still want me to do. ’"
     },
     {
       "verse": "13",
-      "text": "Esther replied, ‘If the king agrees, please let the Jews who live in Susa do the same thing tomorrow. Let your new law continue for one more day. Also, let them hang the dead bodies of Haman's ten sons from the wooden tower.’"
+      "text": "Esther replied, ‘If the king agrees, please let the Jews who live in Susa do the same thing tomorrow. Let your new law continue for one more day. Also, let them hang the dead bodies of Haman's ten sons from the wooden tower. ’"
     },
     {
       "verse": "14",
@@ -666,7 +666,7 @@ module.exports = {
     },
     {
       "verse": "16-17",
-      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75,000 of their enemies. But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
+      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75, 000 of their enemies. But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
     }
   ],
   "10": [

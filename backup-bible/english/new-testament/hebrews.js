@@ -14,43 +14,43 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "That shows us that God's Son is much greater than the angels. God has given him a name that shows he is more important than they are. ‘You are my Son. Today I have become your Father.’ In another place in the Bible, God says, ‘I will be his Father, and he will be my Son.’"
+      "text": "That shows us that God's Son is much greater than the angels. God has given him a name that shows he is more important than they are. ‘You are my Son. Today I have become your Father. ’ In another place in the Bible, God says, ‘I will be his Father, and he will be my Son. ’"
     },
     {
       "verse": "5",
-      "text": "God never said this to any angel:‘You are my Son.Today I have become your Father.’In another place in the Bible, God says,‘I will be his Father,and he will be my Son.’"
+      "text": "God never said this to any angel:‘You are my Son. Today I have become your Father. ’In another place in the Bible, God says, ‘I will be his Father, and he will be my Son. ’"
     },
     {
       "verse": "6",
-      "text": "Also, when God was ready to bring his greatest Son into the world, he said:‘All God's angels must worship him.’ ‘All God's angels must worship him.’"
+      "text": "Also, when God was ready to bring his greatest Son into the world, he said:‘All God's angels must worship him. ’ ‘All God's angels must worship him. ’"
     },
     {
       "verse": "7",
-      "text": "God speaks about the angels like this:‘God makes his angels like winds.They serve him like fires that burn brightly.’ ‘God makes his angels like winds. They serve him like fires that burn brightly.’"
+      "text": "God speaks about the angels like this:‘God makes his angels like winds. They serve him like fires that burn brightly. ’ ‘God makes his angels like winds. They serve him like fires that burn brightly. ’"
     },
     {
       "verse": "8",
-      "text": "But this is what God says to his Son:‘You are God and you will rule as King for ever!You will rule your kingdom in a completely good way. ‘You are God and you will rule as King for ever! You will rule your kingdom in a completely good way."
+      "text": "But this is what God says to his Son:‘You are God and you will rule as King for ever! You will rule your kingdom in a completely good way. ‘You are God and you will rule as King for ever! You will rule your kingdom in a completely good way."
     },
     {
       "verse": "9",
-      "text": "You love everything that is right.And you hate everything that is wrong.Because of that, you will be completely happy.I am your God and I have blessed you.I have chosen you to be greater than others who are with you.’ And you hate everything that is wrong. Because of that, you will be completely happy. I am your God and I have blessed you. I have chosen you to be greater than others who are with you.’"
+      "text": "You love everything that is right. And you hate everything that is wrong. Because of that, you will be completely happy. I am your God and I have blessed you. I have chosen you to be greater than others who are with you. ’ And you hate everything that is wrong. Because of that, you will be completely happy. I am your God and I have blessed you. I have chosen you to be greater than others who are with you. ’"
     },
     {
       "verse": "10",
-      "text": "The Bible also says this:‘Lord, in the beginning you made the earth.With your own power, you also made everything above the earth. ‘Lord, in the beginning you made the earth. With your own power, you also made everything above the earth."
+      "text": "The Bible also says this:‘Lord, in the beginning you made the earth. With your own power, you also made everything above the earth. ‘Lord, in the beginning you made the earth. With your own power, you also made everything above the earth."
     },
     {
       "verse": "11",
-      "text": "All these things will come to an end.But as for you, you will continue for ever.Like clothes, those things will all become old. But as for you, you will continue for ever. Like clothes, those things will all become old."
+      "text": "All these things will come to an end. But as for you, you will continue for ever. Like clothes, those things will all become old. But as for you, you will continue for ever. Like clothes, those things will all become old."
     },
     {
       "verse": "12",
-      "text": "Then you will put them away like an old coat.You will change them, like people change clothes.But you will always continue to be the same.Your life will never come to an end.’ You will change them, like people change clothes. But you will always continue to be the same. Your life will never come to an end.’"
+      "text": "Then you will put them away like an old coat. You will change them, like people change clothes. But you will always continue to be the same. Your life will never come to an end. ’ You will change them, like people change clothes. But you will always continue to be the same. Your life will never come to an end. ’"
     },
     {
       "verse": "13",
-      "text": "Also, God has never said this to any of the angels:‘Sit at my right side until I win against your enemies completely.Then you will be able to put your feet on them.’ ‘Sit at my right side until I win against your enemies completely. Then you will be able to put your feet on them.’"
+      "text": "Also, God has never said this to any of the angels:‘Sit at my right side until I win against your enemies completely. Then you will be able to put your feet on them. ’ ‘Sit at my right side until I win against your enemies completely. Then you will be able to put your feet on them. ’"
     },
     {
       "verse": "14",
@@ -80,7 +80,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "No! Instead, someone wrote this somewhere in the Bible:‘Lord God, why do you even think about people?You take care of men and women,even though they seem to be so small."
+      "text": "No! Instead, someone wrote this somewhere in the Bible:‘Lord God, why do you even think about people? You take care of men and women, even though they seem to be so small."
     },
     {
       "verse": "7",
@@ -88,7 +88,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "You caused them to rule over everything.’It says that God has caused people to rule over everything. That means that there is nothing that people do not have authority over. But at this time, we do not yet see that people rule over everything."
+      "text": "You caused them to rule over everything. ’It says that God has caused people to rule over everything. That means that there is nothing that people do not have authority over. But at this time, we do not yet see that people rule over everything."
     },
     {
       "verse": "9",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "It was right that God should bring Jesus back to heaven as king. All things belong to God, and he causes all things to continue. God wanted many people to become his children. He wanted them to live with him in heaven. Jesus made this possible because he died with much pain as a sacrifice. ‘I will tell my brothers and sisters that you are great. When your people meet together, I will stand with them, and I will praise you with songs.’"
+      "text": "It was right that God should bring Jesus back to heaven as king. All things belong to God, and he causes all things to continue. God wanted many people to become his children. He wanted them to live with him in heaven. Jesus made this possible because he died with much pain as a sacrifice. ‘I will tell my brothers and sisters that you are great. When your people meet together, I will stand with them, and I will praise you with songs. ’"
     },
     {
       "verse": "11",
@@ -104,11 +104,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "He says this to God:‘I will tell my brothers and sisters that you are great.When your people meet together,I will stand with them,and I will praise you with songs.’"
+      "text": "He says this to God:‘I will tell my brothers and sisters that you are great. When your people meet together, I will stand with them, and I will praise you with songs. ’"
     },
     {
       "verse": "13",
-      "text": "He also says this:‘I will trust God completely.’He says this too:‘I stand here with the children that God has given me.’ ‘I will trust God completely.’ He says this too: ‘I stand here with the children that God has given me.’"
+      "text": "He also says this:‘I will trust God completely. ’He says this too:‘I stand here with the children that God has given me. ’ ‘I will trust God completely. ’ He says this too: ‘I stand here with the children that God has given me. ’"
     },
     {
       "verse": "14",
@@ -162,23 +162,23 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Do not refuse to obey him.Do not be like God's people many years ago.When they travelled in the wilderness, they turned against me.They wanted to see if I would punish them. Do not be like God's people many years ago. When they travelled in the wilderness, they turned against me. They wanted to see if I would punish them."
+      "text": "Do not refuse to obey him. Do not be like God's people many years ago. When they travelled in the wilderness, they turned against me. They wanted to see if I would punish them. Do not be like God's people many years ago. When they travelled in the wilderness, they turned against me. They wanted to see if I would punish them."
     },
     {
       "verse": "9",
-      "text": "years your ancestors saw the great things that I did.But still they did not obey me. But still they did not obey me."
+      "text": "years your ancestors saw the great things that I did. But still they did not obey me. But still they did not obey me."
     },
     {
       "verse": "10",
-      "text": "That is why I became angry with them.I said, “They always want to do what is wrong.They refuse to understand my message.” I said, “They always want to do what is wrong. They refuse to understand my message.”"
+      "text": "That is why I became angry with them. I said, “They always want to do what is wrong. They refuse to understand my message. ” I said, “They always want to do what is wrong. They refuse to understand my message. ”"
     },
     {
       "verse": "11",
-      "text": "Because of that, I promised to punish them.Because I was angry with them, I said,“They will never arrive in my special place of rest.” ’ Because I was angry with them, I said, “They will never arrive in my special place of rest.” ’"
+      "text": "Because of that, I promised to punish them. Because I was angry with them, I said, “They will never arrive in my special place of rest. ” ’ Because I was angry with them, I said, “They will never arrive in my special place of rest. ” ’"
     },
     {
       "verse": "12",
-      "text": "So be careful, my Christian friends. Do not refuse to trust God. That would be a very bad thing to do. Do not turn away from the God who lives for ever. ‘You must listen when you hear God speak today. Do not refuse to obey him. Do not be like God's people many years ago, when they turned against God.’"
+      "text": "So be careful, my Christian friends. Do not refuse to trust God. That would be a very bad thing to do. Do not turn away from the God who lives for ever. ‘You must listen when you hear God speak today. Do not refuse to obey him. Do not be like God's people many years ago, when they turned against God. ’"
     },
     {
       "verse": "13",
@@ -190,7 +190,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "We have seen what the Bible says:‘You must listen when you hear God speak today.Do not refuse to obey him.Do not be like God's people many years ago,when they turned against God.’"
+      "text": "We have seen what the Bible says:‘You must listen when you hear God speak today. Do not refuse to obey him. Do not be like God's people many years ago, when they turned against God. ’"
     },
     {
       "verse": "16",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "God promised to punish them, because they refused to obey him. He said, ‘They will never arrive in my special place of rest.’"
+      "text": "God promised to punish them, because they refused to obey him. He said, ‘They will never arrive in my special place of rest. ’"
     },
     {
       "verse": "19",
@@ -212,7 +212,7 @@ module.exports = {
   "4": [
     {
       "verse": "1",
-      "text": "God promised his people that they could go to his special place of rest. That promise is still true for us today. So we must be very careful. Do not fail to arrive in that place. We certainly do not want that to happen. ‘Because I was very angry with them, I promised this: “They will never arrive in my special place of rest.” ’"
+      "text": "God promised his people that they could go to his special place of rest. That promise is still true for us today. So we must be very careful. Do not fail to arrive in that place. We certainly do not want that to happen. ‘Because I was very angry with them, I promised this: “They will never arrive in my special place of rest. ” ’"
     },
     {
       "verse": "2",
@@ -220,23 +220,23 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But those of us who trust God do enjoy his special place of rest. This is what God said:‘Because I was very angry with them, I promised this:“They will never arrive in my special place of rest.” ’God said that, even though he had finished his work when he made the world."
+      "text": "But those of us who trust God do enjoy his special place of rest. This is what God said:‘Because I was very angry with them, I promised this:“They will never arrive in my special place of rest. ” ’God said that, even though he had finished his work when he made the world."
     },
     {
       "verse": "4",
-      "text": "In the Bible God has spoken about the seventh day like this:‘God rested from all his work on the seventh day.’ ‘God rested from all his work on the seventh day.’"
+      "text": "In the Bible God has spoken about the seventh day like this:‘God rested from all his work on the seventh day. ’ ‘God rested from all his work on the seventh day. ’"
     },
     {
       "verse": "5",
-      "text": "As we have already seen, God said something later about his rest:‘They will never arrive in my special place of rest.’ ‘They will never arrive in my special place of rest.’"
+      "text": "As we have already seen, God said something later about his rest:‘They will never arrive in my special place of rest. ’ ‘They will never arrive in my special place of rest. ’"
     },
     {
       "verse": "6",
-      "text": "So we see that there is still a chance for people to go to God's place of rest. But those people who first heard God's message in the wilderness refused to obey him. As a result, they did not arrive in his special place of rest. ‘You must listen when you hear God speak today. Do not refuse to obey him.’"
+      "text": "So we see that there is still a chance for people to go to God's place of rest. But those people who first heard God's message in the wilderness refused to obey him. As a result, they did not arrive in his special place of rest. ‘You must listen when you hear God speak today. Do not refuse to obey him. ’"
     },
     {
       "verse": "7",
-      "text": "So God chose another time for people to go to his place of rest. He called it ‘Today’. A long time after Moses, David spoke God's message. As we have already seen, he said:‘You must listen when you hear God speak today.Do not refuse to obey him.’"
+      "text": "So God chose another time for people to go to his place of rest. He called it ‘Today’. A long time after Moses, David spoke God's message. As we have already seen, he said:‘You must listen when you hear God speak today. Do not refuse to obey him. ’"
     },
     {
       "verse": "8",
@@ -294,11 +294,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "It is the same with Christ. He did not choose himself to be God's special priest. He did not choose to make himself important like that. God chose him. God showed that Christ was very important. God said to him:‘You are my Son.Today I have become your Father.’ ‘You are my Son. Today I have become your Father.’"
+      "text": "It is the same with Christ. He did not choose himself to be God's special priest. He did not choose to make himself important like that. God chose him. God showed that Christ was very important. God said to him:‘You are my Son. Today I have become your Father. ’ ‘You are my Son. Today I have become your Father. ’"
     },
     {
       "verse": "6",
-      "text": "And in another place in the Bible God says this:‘You will be a priest for ever,in the same way that Melchizedek was a priest long ago.’ ‘You will be a priest for ever, in the same way that Melchizedek was a priest long ago.’"
+      "text": "And in another place in the Bible God says this:‘You will be a priest for ever, in the same way that Melchizedek was a priest long ago. ’ ‘You will be a priest for ever, in the same way that Melchizedek was a priest long ago. ’"
     },
     {
       "verse": "7",
@@ -388,7 +388,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "God said to Abraham, ‘I will certainly bless you. I will give you many children and many, many grandchildren.’"
+      "text": "God said to Abraham, ‘I will certainly bless you. I will give you many children and many, many grandchildren. ’"
     },
     {
       "verse": "15",
@@ -466,7 +466,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "What we have said becomes even clearer now. Another kind of priest has come, who is a priest like Melchizedek. ‘You will be a priest for ever, in the same way that Melchizedek was God's priest.’"
+      "text": "What we have said becomes even clearer now. Another kind of priest has come, who is a priest like Melchizedek. ‘You will be a priest for ever, in the same way that Melchizedek was God's priest. ’"
     },
     {
       "verse": "16",
@@ -474,7 +474,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Bible speaks about him as a priest like this:‘You will be a priest for ever,in the same way that Melchizedek was God's priest.’"
+      "text": "The Bible speaks about him as a priest like this:‘You will be a priest for ever, in the same way that Melchizedek was God's priest. ’"
     },
     {
       "verse": "18",
@@ -486,11 +486,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Also, when God said that Jesus would be his special priest, he made a strong promise. When the Levites became priests, he did not make a strong promise like that. ‘The Lord God has promised this strongly. He will not change his mind. You will be a priest for ever.’"
+      "text": "Also, when God said that Jesus would be his special priest, he made a strong promise. When the Levites became priests, he did not make a strong promise like that. ‘The Lord God has promised this strongly. He will not change his mind. You will be a priest for ever. ’"
     },
     {
       "verse": "21",
-      "text": "But when Jesus became God's priest, God made a strong promise. God said:‘The Lord God has promised this strongly.He will not change his mind.You will be a priest for ever.’"
+      "text": "But when Jesus became God's priest, God made a strong promise. God said:‘The Lord God has promised this strongly. He will not change his mind. You will be a priest for ever. ’"
     },
     {
       "verse": "22",
@@ -544,7 +544,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But the way that those Levite priests work is only like a picture of the true things in heaven. It is like a shadow of what would happen in heaven. Long ago, when Moses was ready to make the tabernacle, God warned him about it. God said to Moses, ‘Be careful to make everything just like the plan which I showed you on the mountain.’"
+      "text": "But the way that those Levite priests work is only like a picture of the true things in heaven. It is like a shadow of what would happen in heaven. Long ago, when Moses was ready to make the tabernacle, God warned him about it. God said to Moses, ‘Be careful to make everything just like the plan which I showed you on the mountain. ’"
     },
     {
       "verse": "6",
@@ -556,23 +556,23 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But God did find something wrong with it. As a result, he said this to his people:‘Listen to this! The Lord says:A time will come when I make a new agreement with my people.That is, with Israel's people and with Judah's people."
+      "text": "But God did find something wrong with it. As a result, he said this to his people:‘Listen to this! The Lord says: A time will come when I make a new agreement with my people. That is, with Israel's people and with Judah's people."
     },
     {
       "verse": "9",
-      "text": "It will not be like the old agreement that I made with their ancestors.At that time, I brought my people safely out of Egypt.I led them like a father who takes his child's hand.But they did not continue to obey my agreement with them.So I turned away from them.That is what the Lord says. At that time, I brought my people safely out of Egypt. I led them like a father who takes his child's hand. But they did not continue to obey my agreement with them. So I turned away from them. That is what the Lord says."
+      "text": "It will not be like the old agreement that I made with their ancestors. At that time, I brought my people safely out of Egypt. I led them like a father who takes his child's hand. But they did not continue to obey my agreement with them. So I turned away from them. That is what the Lord says. At that time, I brought my people safely out of Egypt. I led them like a father who takes his child's hand. But they did not continue to obey my agreement with them. So I turned away from them. That is what the Lord says."
     },
     {
       "verse": "10",
-      "text": "But now the Lord says this:After the time of that old agreementI will make a new agreement with Israel's people.It will be like this:I will put my laws into their thoughts.I will write my laws deep inside them.I will be their God and they will be my people. After the time of that old agreement I will make a new agreement with Israel's people. It will be like this: I will put my laws into their thoughts. I will write my laws deep inside them. I will be their God and they will be my people."
+      "text": "But now the Lord says this: After the time of that old agreementI will make a new agreement with Israel's people. It will be like this: I will put my laws into their thoughts. I will write my laws deep inside them. I will be their God and they will be my people. After the time of that old agreement I will make a new agreement with Israel's people. It will be like this: I will put my laws into their thoughts. I will write my laws deep inside them. I will be their God and they will be my people."
     },
     {
       "verse": "11",
-      "text": "As a result, nobody will have to teach their friends or their family about me.They will never need to say, “You should know the Lord.”This is because everyone will already know me.The most important people will know me,as well as the least important people. They will never need to say, “You should know the Lord.” This is because everyone will already know me. The most important people will know me, as well as the least important people."
+      "text": "As a result, nobody will have to teach their friends or their family about me. They will never need to say, “You should know the Lord. ”This is because everyone will already know me. The most important people will know me, as well as the least important people. They will never need to say, “You should know the Lord. ” This is because everyone will already know me. The most important people will know me, as well as the least important people."
     },
     {
       "verse": "12",
-      "text": "I will be kind to them.I will forgive them for the wicked things that they have done.I will not continue to think about their sins.That is what the Lord says.’ I will forgive them for the wicked things that they have done. I will not continue to think about their sins. That is what the Lord says.’"
+      "text": "I will be kind to them. I will forgive them for the wicked things that they have done. I will not continue to think about their sins. That is what the Lord says. ’ I will forgive them for the wicked things that they have done. I will not continue to think about their sins. That is what the Lord says. ’"
     },
     {
       "verse": "13",
@@ -658,7 +658,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When Moses did this, he said to the people, ‘This blood shows that God's agreement with you has authority.’"
+      "text": "When Moses did this, he said to the people, ‘This blood shows that God's agreement with you has authority. ’"
     },
     {
       "verse": "21",
@@ -712,23 +712,23 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So, when Christ came into the world, he said to his Father,‘You have not wanted people to offer sacrifices and other gifts to you.Instead, you have prepared a body for me to offer to you."
+      "text": "So, when Christ came into the world, he said to his Father, ‘You have not wanted people to offer sacrifices and other gifts to you. Instead, you have prepared a body for me to offer to you."
     },
     {
       "verse": "6",
-      "text": "Sacrifices do not make you happy.If people burn whole animals as a sacrifice,or if they offer a sacrifice to make them clean from their sins,that does not make you happy. If people burn whole animals as a sacrifice, or if they offer a sacrifice to make them clean from their sins, that does not make you happy."
+      "text": "Sacrifices do not make you happy. If people burn whole animals as a sacrifice, or if they offer a sacrifice to make them clean from their sins, that does not make you happy. If people burn whole animals as a sacrifice, or if they offer a sacrifice to make them clean from their sins, that does not make you happy."
     },
     {
       "verse": "7",
-      "text": "Then I said, “Here I am, my God.I have come to do what you want.That is what it says about me in the Bible.” ’ I have come to do what you want. That is what it says about me in the Bible.” ’"
+      "text": "Then I said, “Here I am, my God. I have come to do what you want. That is what it says about me in the Bible. ” ’ I have come to do what you want. That is what it says about me in the Bible. ” ’"
     },
     {
       "verse": "8",
-      "text": "So think about what Christ said there. First he said to God, ‘You have not wanted gifts and sacrifices of animals. Any kind of sacrifice like that does not make you happy.’ But we know that Moses' rules taught about those sacrifices. God's law said that they were necessary."
+      "text": "So think about what Christ said there. First he said to God, ‘You have not wanted gifts and sacrifices of animals. Any kind of sacrifice like that does not make you happy. ’ But we know that Moses' rules taught about those sacrifices. God's law said that they were necessary."
     },
     {
       "verse": "9",
-      "text": "Then Christ said, ‘Here I am. I have come to do what you want.’ In that way, Christ took away the first agreement and its rules about sacrifices. Christ's sacrifice of his own body is the new way that God forgives our sins."
+      "text": "Then Christ said, ‘Here I am. I have come to do what you want. ’ In that way, Christ took away the first agreement and its rules about sacrifices. Christ's sacrifice of his own body is the new way that God forgives our sins."
     },
     {
       "verse": "10",
@@ -756,11 +756,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "‘The Lord God says:After the time of the old agreement,I will make a new agreement with my people.It will be like this:I will put my laws deep inside them.I will put them into their thoughts.’ After the time of the old agreement, I will make a new agreement with my people. It will be like this: I will put my laws deep inside them. I will put them into their thoughts.’"
+      "text": "‘The Lord God says: After the time of the old agreement, I will make a new agreement with my people. It will be like this: I will put my laws deep inside them. I will put them into their thoughts. ’ After the time of the old agreement, I will make a new agreement with my people. It will be like this: I will put my laws deep inside them. I will put them into their thoughts. ’"
     },
     {
       "verse": "17",
-      "text": "Then he says this:‘I will not continue to think about their sinswhen they do not obey my laws.’ ‘I will not continue to think about their sins when they do not obey my laws.’"
+      "text": "Then he says this:‘I will not continue to think about their sinswhen they do not obey my laws. ’ ‘I will not continue to think about their sins when they do not obey my laws. ’"
     },
     {
       "verse": "18",
@@ -812,7 +812,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "We know God and his message. And God said this: ‘I am the one who will punish people for their sins. I will give them the punishment that they ought to receive.’ God also said this: ‘The Lord will judge his people.’"
+      "text": "We know God and his message. And God said this: ‘I am the one who will punish people for their sins. I will give them the punishment that they ought to receive. ’ God also said this: ‘The Lord will judge his people. ’"
     },
     {
       "verse": "31",
@@ -840,11 +840,11 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "This is what the Bible says:‘In a very short time,my special servant will come.He is the one that I promised to send to you.He will not be late."
+      "text": "This is what the Bible says:‘In a very short time, my special servant will come. He is the one that I promised to send to you. He will not be late."
     },
     {
       "verse": "38",
-      "text": "The person that I have accepted as right will live.That person will live because he trusts me.But if anyone is afraid and he turns back,I will not be happy with that person.’ That person will live because he trusts me. But if anyone is afraid and he turns back, I will not be happy with that person.’"
+      "text": "The person that I have accepted as right will live. That person will live because he trusts me. But if anyone is afraid and he turns back, I will not be happy with that person. ’ That person will live because he trusts me. But if anyone is afraid and he turns back, I will not be happy with that person. ’"
     },
     {
       "verse": "39",
@@ -922,7 +922,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "God had said to Abraham, ‘It is through Isaac that your family will continue.’"
+      "text": "God had said to Abraham, ‘It is through Isaac that your family will continue. ’"
     },
     {
       "verse": "19",
@@ -1032,11 +1032,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "God speaks to you as his children. Do not ever forget these words in the Bible that will make you strong:‘My son, when the Lord shows you what is right,do not easily forget it.Do not be upset when he punishes you."
+      "text": "God speaks to you as his children. Do not ever forget these words in the Bible that will make you strong:‘My son, when the Lord shows you what is right, do not easily forget it. Do not be upset when he punishes you."
     },
     {
       "verse": "6",
-      "text": "The Lord does that to everyone that he loves.He punishes everyone that he accepts as a son.’ He punishes everyone that he accepts as a son.’"
+      "text": "The Lord does that to everyone that he loves. He punishes everyone that he accepts as a son. ’ He punishes everyone that he accepts as a son. ’"
     },
     {
       "verse": "7",
@@ -1092,11 +1092,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "They were very afraid of what God had told them. God had said, ‘If even an animal touches the mountain, you must kill it with stones.’"
+      "text": "They were very afraid of what God had told them. God had said, ‘If even an animal touches the mountain, you must kill it with stones. ’"
     },
     {
       "verse": "21",
-      "text": "Even Moses was very afraid when he saw God's great power. He said, ‘I am full of fear!’"
+      "text": "Even Moses was very afraid when he saw God's great power. He said, ‘I am full of fear! ’"
     },
     {
       "verse": "22",
@@ -1116,11 +1116,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "At Sinai mountain many years ago, God's voice caused the earth to shake. But now God has promised this: ‘Once again I will cause the earth to shake. But this time I will also cause heaven to shake.’"
+      "text": "At Sinai mountain many years ago, God's voice caused the earth to shake. But now God has promised this: ‘Once again I will cause the earth to shake. But this time I will also cause heaven to shake. ’"
     },
     {
       "verse": "27",
-      "text": "These words, ‘once again,’ show us that God will take away the things that he has made. All things on the earth that he causes to shake will finish. After that, everything that nobody can shake will continue to be there."
+      "text": "These words, ‘once again, ’ show us that God will take away the things that he has made. All things on the earth that he causes to shake will finish. After that, everything that nobody can shake will continue to be there."
     },
     {
       "verse": "28",
@@ -1150,11 +1150,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "In the way that you live, do not want lots of money. Be happy with the things that you have. Be happy, because God has said this:‘I will never leave you;I will always be there with you.’ ‘I will never leave you; I will always be there with you.’"
+      "text": "In the way that you live, do not want lots of money. Be happy with the things that you have. Be happy, because God has said this:‘I will never leave you; I will always be there with you. ’ ‘I will never leave you; I will always be there with you. ’"
     },
     {
       "verse": "6",
-      "text": "Because of that, we can bravely say this:‘The Lord is the one who helps me,so I will not be afraid.I will not be afraid of anything that people can do to me.’ ‘The Lord is the one who helps me, so I will not be afraid. I will not be afraid of anything that people can do to me.’"
+      "text": "Because of that, we can bravely say this:‘The Lord is the one who helps me, so I will not be afraid. I will not be afraid of anything that people can do to me. ’ ‘The Lord is the one who helps me, so I will not be afraid. I will not be afraid of anything that people can do to me. ’"
     },
     {
       "verse": "7",

@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "All the believers who are here say ‘hello’ to you. We all send this letter to you.I am writing to you, the people of the churches that are in Galatia."
+      "text": "All the believers who are here say ‘hello’ to you. We all send this letter to you. I am writing to you, the people of the churches that are in Galatia."
     },
     {
       "verse": "3",
@@ -90,7 +90,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "They had only heard people say this about me: ‘This man caused bad trouble against us Christians before. He tried to destroy God's message about Jesus. But now he himself is telling people the good news about Jesus, so that they believe.’"
+      "text": "They had only heard people say this about me: ‘This man caused bad trouble against us Christians before. He tried to destroy God's message about Jesus. But now he himself is telling people the good news about Jesus, so that they believe. ’"
     },
     {
       "verse": "24",
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The church leaders in Jerusalem did not argue with me. (They were the people who seemed to be the leaders. It does not matter to me whether they were really important people or not. God does not respect some people more than others.) Those leaders did not tell me to change the message that I teach."
+      "text": "The church leaders in Jerusalem did not argue with me. (They were the people who seemed to be the leaders. It does not matter to me whether they were really important people or not. God does not respect some people more than others. ) Those leaders did not tell me to change the message that I teach."
     },
     {
       "verse": "7",
@@ -152,7 +152,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "But I could see that they were wrong to do this. They were not living in a way that agrees with God's true message. So I spoke to Peter in front of all of them. I said to him, ‘You were born as a Jew, but you have been living like a Gentile. As a believer, you no longer obey all the Jewish rules. So you should not try to make Gentile believers obey those Jewish rules.’"
+      "text": "But I could see that they were wrong to do this. They were not living in a way that agrees with God's true message. So I spoke to Peter in front of all of them. I said to him, ‘You were born as a Jew, but you have been living like a Gentile. As a believer, you no longer obey all the Jewish rules. So you should not try to make Gentile believers obey those Jewish rules. ’"
     },
     {
       "verse": "15",
@@ -214,7 +214,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Bible already said what would happen at a future time. It said that God would make the Gentiles right with himself, if they believed in him. God showed this good news to Abraham a long time before it happened. He said to Abraham, ‘I will bless people from all countries because of you.’"
+      "text": "The Bible already said what would happen at a future time. It said that God would make the Gentiles right with himself, if they believed in him. God showed this good news to Abraham a long time before it happened. He said to Abraham, ‘I will bless people from all countries because of you. ’"
     },
     {
       "verse": "9",
@@ -222,11 +222,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But some people try to obey all the rules of God's Law. They think that they will become right with God if they do this very well. But God will speak against people like that and he will punish them. It is written in the Bible: ‘God will punish everyone who does not always obey all the rules in his Law completely.’"
+      "text": "But some people try to obey all the rules of God's Law. They think that they will become right with God if they do this very well. But God will speak against people like that and he will punish them. It is written in the Bible: ‘God will punish everyone who does not always obey all the rules in his Law completely. ’"
     },
     {
       "verse": "11",
-      "text": "We know that the Law can not cause anyone to become right with God. That is clear because the Bible says, ‘The person that God has accepted as right will live because they trust him.’"
+      "text": "We know that the Law can not cause anyone to become right with God. That is clear because the Bible says, ‘The person that God has accepted as right will live because they trust him. ’"
     },
     {
       "verse": "12",
@@ -234,7 +234,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "So God's Law shows that it is right for God to punish us. But Christ took that punishment away from us, because God punished him instead of us. It says in the Bible: ‘When people hang someone on a tree to kill him, it shows that God has cursed that person.’"
+      "text": "So God's Law shows that it is right for God to punish us. But Christ took that punishment away from us, because God punished him instead of us. It says in the Bible: ‘When people hang someone on a tree to kill him, it shows that God has cursed that person. ’"
     },
     {
       "verse": "14",
@@ -404,11 +404,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "But Abraham's wife, Sarah, is a picture of the new Jerusalem that is above. Sarah was a free person, not a slave, and she is like our mother. ‘Be happy, you woman who could not have any children! You have never known the pain of a child's birth. But now shout loudly because you are so happy! Yes, be happy, because the lonely woman now has more children than the woman who has a husband.’"
+      "text": "But Abraham's wife, Sarah, is a picture of the new Jerusalem that is above. Sarah was a free person, not a slave, and she is like our mother. ‘Be happy, you woman who could not have any children! You have never known the pain of a child's birth. But now shout loudly because you are so happy! Yes, be happy, because the lonely woman now has more children than the woman who has a husband. ’"
     },
     {
       "verse": "27",
-      "text": "It says in the Bible:‘Be happy, you woman who could not have any children!You have never known the pain of a child's birth.But now shout loudly because you are so happy!Yes, be happy, because the lonely woman now has more childrenthan the woman who has a husband.’"
+      "text": "It says in the Bible:‘Be happy, you woman who could not have any children! You have never known the pain of a child's birth. But now shout loudly because you are so happy! Yes, be happy, because the lonely woman now has more childrenthan the woman who has a husband. ’"
     },
     {
       "verse": "28",
@@ -420,7 +420,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "But this is what it says in the Bible: ‘Send away the woman who is a slave and her son. That woman's son will never receive anything from his father. The son of the free woman will receive all those good things.’"
+      "text": "But this is what it says in the Bible: ‘Send away the woman who is a slave and her son. That woman's son will never receive anything from his father. The son of the free woman will receive all those good things. ’"
     },
     {
       "verse": "31",
@@ -462,7 +462,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "People say this: ‘Only a small amount of yeast in the flour will cause a loaf of bread to grow big.’"
+      "text": "People say this: ‘Only a small amount of yeast in the flour will cause a loaf of bread to grow big. ’"
     },
     {
       "verse": "10",
@@ -482,7 +482,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "One rule brings together all the rules in God's Law. That one rule says: ‘Love other people as much as you love yourself.’"
+      "text": "One rule brings together all the rules in God's Law. That one rule says: ‘Love other people as much as you love yourself. ’"
     },
     {
       "verse": "15",

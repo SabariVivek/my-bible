@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘This is what Cyrus, the king of Persia says:The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah."
+      "text": "‘This is what Cyrus, the king of Persia says: The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah."
     },
     {
       "verse": "3",
@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "In places where there are some Israelites who want to return, their neighbours must help them with gifts. They should give them silver, gold and other things for their journey. They should also give them animals. They may also give them special gifts for God's temple that is in Jerusalem.’"
+      "text": "In places where there are some Israelites who want to return, their neighbours must help them with gifts. They should give them silver, gold and other things for their journey. They should also give them animals. They may also give them special gifts for God's temple that is in Jerusalem. ’"
     },
     {
       "verse": "5",
@@ -34,15 +34,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "They counted the things and they made this list:30 gold dishes.1,000 silver dishes.29 special tools."
+      "text": "They counted the things and they made this list:30 gold dishes. 1, 000 silver dishes. 29 special tools."
     },
     {
       "verse": "10",
-      "text": "gold bowls.410 silver bowls.1,000 other things."
+      "text": "gold bowls. 410 silver bowls. 1, 000 other things."
     },
     {
       "verse": "11",
-      "text": "There were 5,400 things made from gold and silver. Sheshbazzar took them all with him when he left Babylon to return to Jerusalem with the other exiles."
+      "text": "There were 5, 400 things made from gold and silver. Sheshbazzar took them all with him when he left Babylon to return to Jerusalem with the other exiles."
     }
   ],
   "2": [
@@ -56,7 +56,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "2,172 descendants of Parosh."
+      "text": "2, 172 descendants of Parosh."
     },
     {
       "verse": "4",
@@ -68,11 +68,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "2,812 descendants of Pahath-Moab (from the families of Jeshua and Joab)."
+      "text": "2, 812 descendants of Pahath-Moab (from the families of Jeshua and Joab)."
     },
     {
       "verse": "7",
-      "text": "1,254 descendants of Elam."
+      "text": "1, 254 descendants of Elam."
     },
     {
       "verse": "8",
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "1,222 descendants of Azgad."
+      "text": "1, 222 descendants of Azgad."
     },
     {
       "verse": "13",
@@ -100,7 +100,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "2,056 descendants of Bigvai."
+      "text": "2, 056 descendants of Bigvai."
     },
     {
       "verse": "15",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "1,254 men from the other town called Elam."
+      "text": "1, 254 men from the other town called Elam."
     },
     {
       "verse": "32",
@@ -184,7 +184,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "3,630 men from Senaah."
+      "text": "3, 630 men from Senaah."
     },
     {
       "verse": "36",
@@ -192,15 +192,15 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "1,052 descendants of Immer."
+      "text": "1, 052 descendants of Immer."
     },
     {
       "verse": "38",
-      "text": "1,247 descendants of Pashhur."
+      "text": "1, 247 descendants of Pashhur."
     },
     {
       "verse": "39",
-      "text": "1,017 descendants of Harim."
+      "text": "1, 017 descendants of Harim."
     },
     {
       "verse": "40",
@@ -216,7 +216,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "The temple servants:the descendants of Ziha, Hasupha, Tabbaoth,"
+      "text": "The temple servants: the descendants of Ziha, Hasupha, Tabbaoth,"
     },
     {
       "verse": "44",
@@ -264,7 +264,7 @@ module.exports = {
     },
     {
       "verse": "55",
-      "text": "The descendants of King Solomon's servants:the descendants of Sotai, Hassophereth, Peruda,"
+      "text": "The descendants of King Solomon's servants: the descendants of Sotai, Hassophereth, Peruda,"
     },
     {
       "verse": "56",
@@ -288,7 +288,7 @@ module.exports = {
     },
     {
       "verse": "61",
-      "text": "These priests also could not show what families they belonged to: The descendants of Hobaiah, Hakkoz and Barzillai. (This Barzillai had married one of the daughters of a man from Gilead called Barzillai. So he took Barzillai's name for himself.)"
+      "text": "These priests also could not show what families they belonged to: The descendants of Hobaiah, Hakkoz and Barzillai. (This Barzillai had married one of the daughters of a man from Gilead called Barzillai. So he took Barzillai's name for himself. )"
     },
     {
       "verse": "62",
@@ -300,11 +300,11 @@ module.exports = {
     },
     {
       "verse": "64",
-      "text": "All together, 42,360 people returned to Jerusalem."
+      "text": "All together, 42, 360 people returned to Jerusalem."
     },
     {
       "verse": "65",
-      "text": "There were also 7,337 male and female servants, as well as 200 male and female singers."
+      "text": "There were also 7, 337 male and female servants, as well as 200 male and female singers."
     },
     {
       "verse": "66",
@@ -312,7 +312,7 @@ module.exports = {
     },
     {
       "verse": "67",
-      "text": "camels and 6,720 donkeys."
+      "text": "camels and 6, 720 donkeys."
     },
     {
       "verse": "68",
@@ -320,7 +320,7 @@ module.exports = {
     },
     {
       "verse": "69",
-      "text": "They each gave as much money as they were able to give. Together they gave about 500 kilograms of gold and nearly 3,000 kilograms of silver. They also gave 100 special sets of clothes for the priests."
+      "text": "They each gave as much money as they were able to give. Together they gave about 500 kilograms of gold and nearly 3, 000 kilograms of silver. They also gave 100 special sets of clothes for the priests."
     },
     {
       "verse": "70",
@@ -362,15 +362,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "These are their names:Jeshua, his sons and his brothers.Kadmiel and his sons. (They were descendants of Hodaviah.)Henadad's sons, with their sons and brothers, who were Levites."
+      "text": "These are their names: Jeshua, his sons and his brothers. Kadmiel and his sons. (They were descendants of Hodaviah. )Henadad's sons, with their sons and brothers, who were Levites."
     },
     {
       "verse": "10",
-      "text": "The men who were building the Lord's temple finished the foundations. Then the priests put on their special clothes. They made a noise with their trumpets. The Levites (sons of Asaph) made a noise with their cymbals. They all stood to praise the Lord, in the way that Israel's King David had told them many years before. ‘He is good. His love for Israel will continue for ever.’ Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
+      "text": "The men who were building the Lord's temple finished the foundations. Then the priests put on their special clothes. They made a noise with their trumpets. The Levites (sons of Asaph) made a noise with their cymbals. They all stood to praise the Lord, in the way that Israel's King David had told them many years before. ‘He is good. His love for Israel will continue for ever. ’ Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
     },
     {
       "verse": "11",
-      "text": "They sang together to praise the Lord. Group by group, they sang these words:‘He is good.His love for Israel will continue for ever.’Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
+      "text": "They sang together to praise the Lord. Group by group, they sang these words:‘He is good. His love for Israel will continue for ever. ’Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
     },
     {
       "verse": "12",
@@ -388,11 +388,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They went to speak to Zerubbabel and to the leaders of the Israelite families. They said, ‘Let us help you to build the temple. We also want to worship your God. We have lived in this country since Esarhaddon, king of Assyria, brought us here. All this time we have made sacrifices to your God.’"
+      "text": "They went to speak to Zerubbabel and to the leaders of the Israelite families. They said, ‘Let us help you to build the temple. We also want to worship your God. We have lived in this country since Esarhaddon, king of Assyria, brought us here. All this time we have made sacrifices to your God. ’"
     },
     {
       "verse": "3",
-      "text": "But Zerubbabel, Jeshua and the other leaders of Israel's people said, ‘No. You cannot help us to build the temple for our God. We must build it by ourselves for the Lord, Israel's God. That is what Cyrus, king of Persia, has commanded us to do.’"
+      "text": "But Zerubbabel, Jeshua and the other leaders of Israel's people said, ‘No. You cannot help us to build the temple for our God. We must build it by ourselves for the Lord, Israel's God. That is what Cyrus, king of Persia, has commanded us to do. ’"
     },
     {
       "verse": "4",
@@ -424,7 +424,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "This is the letter that they sent to Artaxerxes:‘To King Artaxerxes,from your servants in the land west of the Euphrates river. ‘To King Artaxerxes, from your servants in the land west of the Euphrates river."
+      "text": "This is the letter that they sent to Artaxerxes:‘To King Artaxerxes, from your servants in the land west of the Euphrates river. ‘To King Artaxerxes, from your servants in the land west of the Euphrates river."
     },
     {
       "verse": "12",
@@ -444,7 +444,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So we are telling the king that you should not let these people build up this city again, with its walls. If they do that, you will no longer have any authority in this region that is west of the Euphrates river.’"
+      "text": "So we are telling the king that you should not let these people build up this city again, with its walls. If they do that, you will no longer have any authority in this region that is west of the Euphrates river. ’"
     },
     {
       "verse": "17",
@@ -468,7 +468,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "You must be very careful to make sure that they stop. We do not want the danger to our kingdom to become any greater. Our authority to rule them as kings must continue.’"
+      "text": "You must be very careful to make sure that they stop. We do not want the danger to our kingdom to become any greater. Our authority to rule them as kings must continue. ’"
     },
     {
       "verse": "23",
@@ -490,11 +490,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "At that time, Tattenai was the ruler who had authority over the region on the west side of the Euphrates river. He went with Shethar-Bozenai and their friends to ask the Jews what they were doing. They asked them, ‘Who gave you the authority to build this temple and make it ready to use again?’"
+      "text": "At that time, Tattenai was the ruler who had authority over the region on the west side of the Euphrates river. He went with Shethar-Bozenai and their friends to ask the Jews what they were doing. They asked them, ‘Who gave you the authority to build this temple and make it ready to use again? ’"
     },
     {
       "verse": "4",
-      "text": "They also asked, ‘What are the names of the men who are building this place?’"
+      "text": "They also asked, ‘What are the names of the men who are building this place? ’"
     },
     {
       "verse": "5",
@@ -506,7 +506,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "This is what they said:King Darius, we hope that you are well."
+      "text": "This is what they said: King Darius, we hope that you are well."
     },
     {
       "verse": "8",
@@ -514,7 +514,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "We spoke to their leaders and we asked them, ‘Who gave you authority to build this temple and make it ready to use again?’"
+      "text": "We spoke to their leaders and we asked them, ‘Who gave you authority to build this temple and make it ready to use again? ’"
     },
     {
       "verse": "10",
@@ -534,15 +534,15 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He gave back to us the gold and silver things that belong in our God's temple. King Nebuchadnezzar had taken those things away from the temple in Jerusalem. He took them to Babylon and he put them in his own temple.But King Cyrus gave our valuable things to Sheshbazzar. He had given authority to this man to rule over Judah."
+      "text": "He gave back to us the gold and silver things that belong in our God's temple. King Nebuchadnezzar had taken those things away from the temple in Jerusalem. He took them to Babylon and he put them in his own temple. But King Cyrus gave our valuable things to Sheshbazzar. He had given authority to this man to rule over Judah."
     },
     {
       "verse": "15",
-      "text": "He said to Sheshbazzar, “Take these things and put them safely in the temple in Jerusalem. Let the people build the house of God again, in the place where it used to be.”"
+      "text": "He said to Sheshbazzar, “Take these things and put them safely in the temple in Jerusalem. Let the people build the house of God again, in the place where it used to be. ”"
     },
     {
       "verse": "16",
-      "text": "So this man, Sheshbazzar, came here. He built the foundations of God's temple in Jerusalem. Since then we have continued to build it, but we have not finished it yet.’"
+      "text": "So this man, Sheshbazzar, came here. He built the foundations of God's temple in Jerusalem. Since then we have continued to build it, but we have not finished it yet. ’"
     },
     {
       "verse": "17",
@@ -568,7 +568,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "We will give back to them the silver and gold things that belong in their God's temple. King Nebuchadnezzar took them from the temple in Jerusalem and he brought them here to Babylon. Now they must return to the place where they belong, in God's house in Jerusalem.”"
+      "text": "We will give back to them the silver and gold things that belong in their God's temple. King Nebuchadnezzar took them from the temple in Jerusalem and he brought them here to Babylon. Now they must return to the place where they belong, in God's house in Jerusalem. ”"
     },
     {
       "verse": "6",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "No king or nation should try to change my command. They must never destroy God's temple in Jerusalem. That is the place that he has chosen for people to worship him. I pray that he will remove anyone who tries to attack that place.I, Darius, have made this command. Everyone must obey it completely.’ I, Darius, have made this command. Everyone must obey it completely.’"
+      "text": "No king or nation should try to change my command. They must never destroy God's temple in Jerusalem. That is the place that he has chosen for people to worship him. I pray that he will remove anyone who tries to attack that place. I, Darius, have made this command. Everyone must obey it completely. ’ I, Darius, have made this command. Everyone must obey it completely. ’"
     },
     {
       "verse": "13",
@@ -642,7 +642,7 @@ module.exports = {
   "7": [
     {
       "verse": "1",
-      "text": "After these things, Ezra came to Jerusalem from Babylon. This happened while Artaxerxes was king of Persia.This is the list of Ezra's ancestors: He was the son of Seraiah, the son of Azariah, the son of Hilkiah."
+      "text": "After these things, Ezra came to Jerusalem from Babylon. This happened while Artaxerxes was king of Persia. This is the list of Ezra's ancestors: He was the son of Seraiah, the son of Azariah, the son of Hilkiah."
     },
     {
       "verse": "2",
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "‘From Artaxerxes, king of all kings.To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well."
+      "text": "‘From Artaxerxes, king of all kings. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well."
     },
     {
       "verse": "13",
@@ -726,7 +726,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "This is how much you may give to him:3,400 kilograms of silver,22,000 litres of grain,2,200 litres of wine,2,200 litres of oil,and all the salt that he wants."
+      "text": "This is how much you may give to him:3, 400 kilograms of silver, 22, 000 litres of grain, 2, 200 litres of wine, 2, 200 litres of oil, and all the salt that he wants."
     },
     {
       "verse": "23",
@@ -742,7 +742,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Everyone must obey the laws of your God and also the laws of the king. If they do not obey, they deserve the right punishment. They may have to die. They may have to leave the country. They may have to lose their valuable things. They may have to go to prison.’"
+      "text": "Everyone must obey the laws of your God and also the laws of the king. If they do not obey, they deserve the right punishment. They may have to die. They may have to leave the country. They may have to lose their valuable things. They may have to go to prison. ’"
     },
     {
       "verse": "27",
@@ -760,11 +760,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Gershom, from Phinehas's clan.Daniel, from Ithamar's clan."
+      "text": "Gershom, from Phinehas's clan. Daniel, from Ithamar's clan."
     },
     {
       "verse": "3",
-      "text": "Shecaniah's son, Hattush, from David's clan.Zechariah and 150 other men, from Parosh's clan."
+      "text": "Shecaniah's son, Hattush, from David's clan. Zechariah and 150 other men, from Parosh's clan."
     },
     {
       "verse": "4",
@@ -840,7 +840,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I was ashamed to ask the king to send his soldiers with us to keep us safe. He could have sent soldiers who rode on horses with us, or other soldiers. But we had said to the king, ‘Our God helps people who trust him and he keeps them safe. But he is very angry with people who turn away from him and he punishes them.’"
+      "text": "I was ashamed to ask the king to send his soldiers with us to keep us safe. He could have sent soldiers who rode on horses with us, or other soldiers. But we had said to the king, ‘Our God helps people who trust him and he keeps them safe. But he is very angry with people who turn away from him and he punishes them. ’"
     },
     {
       "verse": "23",
@@ -856,11 +856,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "I weighed 20,000 kilograms of silver and 3,500 kilograms of things made from silver. I weighed 3,500 kilograms of gold"
+      "text": "I weighed 20, 000 kilograms of silver and 3, 500 kilograms of things made from silver. I weighed 3, 500 kilograms of gold"
     },
     {
       "verse": "27",
-      "text": "gold bowls that weighed 8.5 kilograms. I also gave to them two beautiful bowls made from bronze. They shone brightly and they were as valuable as gold."
+      "text": "gold bowls that weighed 8. 5 kilograms. I also gave to them two beautiful bowls made from bronze. They shone brightly and they were as valuable as gold."
     },
     {
       "verse": "28",
@@ -868,7 +868,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "So you must be careful to keep them safe until you reach Jerusalem. When you get there, you must weigh them again. Do that in front of the leaders of the priests, the Levites and the leaders of Israelite families. Then they should store them in the rooms of the temple.’"
+      "text": "So you must be careful to keep them safe until you reach Jerusalem. When you get there, you must weigh them again. Do that in front of the leaders of the priests, the Levites and the leaders of Israelite families. Then they should store them in the rooms of the temple. ’"
     },
     {
       "verse": "30",
@@ -906,7 +906,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They have married some of the foreign people's daughters. They have let their sons do the same thing. In this way, God's holy people have become mixed with the foreign people who live near to them. Our own leaders and officers have led the way in these bad things.’"
+      "text": "They have married some of the foreign people's daughters. They have let their sons do the same thing. In this way, God's holy people have become mixed with the foreign people who live near to them. Our own leaders and officers have led the way in these bad things. ’"
     },
     {
       "verse": "3",
@@ -922,7 +922,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I said,‘My God, I am too ashamed to look up at you. Our sins are very great. They are so many that they reach far above us. We are completely guilty."
+      "text": "I said, ‘My God, I am too ashamed to look up at you. Our sins are very great. They are so many that they reach far above us. We are completely guilty."
     },
     {
       "verse": "7",
@@ -946,7 +946,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So you must not let your daughters marry their sons. And do not let your sons marry their daughters. Do not ever help them to live in peace and become strong. If you make yourselves separate from them, you will be strong yourselves. The land will give you good food to eat. After you die, the land will belong to your children, and to your descendants for ever.”"
+      "text": "So you must not let your daughters marry their sons. And do not let your sons marry their daughters. Do not ever help them to live in peace and become strong. If you make yourselves separate from them, you will be strong yourselves. The land will give you good food to eat. After you die, the land will belong to your children, and to your descendants for ever. ”"
     },
     {
       "verse": "13",
@@ -958,7 +958,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Lord God of Israel, you are righteous. Only a few of us escaped from exile and remain as your people today. Now we stand before you as guilty people. Because of our sins, we do not deserve to come near to you.’"
+      "text": "Lord God of Israel, you are righteous. Only a few of us escaped from exile and remain as your people today. Now we stand before you as guilty people. Because of our sins, we do not deserve to come near to you. ’"
     }
   ],
   "10": [
@@ -968,7 +968,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then Shecaniah spoke to Ezra. Shecaniah was Jehiel's son, a descendant of Elam.Shecaniah said, ‘We have not been faithful to our God. We have married foreign women from the nations who live near us. But Israel may still hope that God will forgive us."
+      "text": "Then Shecaniah spoke to Ezra. Shecaniah was Jehiel's son, a descendant of Elam. Shecaniah said, ‘We have not been faithful to our God. We have married foreign women from the nations who live near us. But Israel may still hope that God will forgive us."
     },
     {
       "verse": "3",
@@ -976,7 +976,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Get up now! You must do something about this. We will help you, so you must be brave!’"
+      "text": "Get up now! You must do something about this. We will help you, so you must be brave! ’"
     },
     {
       "verse": "5",
@@ -1004,7 +1004,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now you must agree to obey the Lord, the God that your ancestors worshipped. Turn away from your sins and do the things that please him. Make yourselves separate from the foreign people who live near you. Send away your foreign wives.’"
+      "text": "Now you must agree to obey the Lord, the God that your ancestors worshipped. Turn away from your sins and do the things that please him. Make yourselves separate from the foreign people who live near you. Send away your foreign wives. ’"
     },
     {
       "verse": "12",
@@ -1016,7 +1016,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So please let our officers decide what to do on behalf of us all. People who have married foreign wives should come here on certain days. People from each town should come on the right day, together with the leaders and judges from that town. In this way, we can make things right. Then our God will not be angry with us any longer.’"
+      "text": "So please let our officers decide what to do on behalf of us all. People who have married foreign wives should come here on certain days. People from each town should come on the right day, together with the leaders and judges from that town. In this way, we can make things right. Then our God will not be angry with us any longer. ’"
     },
     {
       "verse": "15",
@@ -1032,7 +1032,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "These are the priests who had married foreign wives.From the clan of Jozadak's son, Jeshua, and his brothers:Maaseiah, Eliezer, Jarib, Gedaliah. From the clan of Jozadak's son, Jeshua, and his brothers:"
+      "text": "These are the priests who had married foreign wives. From the clan of Jozadak's son, Jeshua, and his brothers: Maaseiah, Eliezer, Jarib, Gedaliah. From the clan of Jozadak's son, Jeshua, and his brothers:"
     },
     {
       "verse": "19",
@@ -1040,51 +1040,51 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "From the clan of Immer:Hanani, Zebadiah."
+      "text": "From the clan of Immer: Hanani, Zebadiah."
     },
     {
       "verse": "21",
-      "text": "From the clan of Harim:Maaseiah, Elijah, Shemaiah, Jehiel, Uzziah."
+      "text": "From the clan of Harim: Maaseiah, Elijah, Shemaiah, Jehiel, Uzziah."
     },
     {
       "verse": "22",
-      "text": "From the clan of Pashhur:Elioenai, Maaseiah, Ishmael, Nethanel, Jozabad, Elasah."
+      "text": "From the clan of Pashhur: Elioenai, Maaseiah, Ishmael, Nethanel, Jozabad, Elasah."
     },
     {
       "verse": "23",
-      "text": "From the Levites:Jozabad, Shimei, Kelaiah (also called Kelita), Pethahiah, Judah, Eliezer."
+      "text": "From the Levites: Jozabad, Shimei, Kelaiah (also called Kelita), Pethahiah, Judah, Eliezer."
     },
     {
       "verse": "24",
-      "text": "From the singers:Eliashib.From the men who were guards at the temple gate:Shallum, Telem, Uri. From the men who were guards at the temple gate:"
+      "text": "From the singers: Eliashib. From the men who were guards at the temple gate: Shallum, Telem, Uri. From the men who were guards at the temple gate:"
     },
     {
       "verse": "25",
-      "text": "These are the other Israelites who had married foreign wives.From the clan of Parosh:Ramiah, Izziah, Malkijah, Mijamin, Eleazar, Malkijah, Benaiah. From the clan of Parosh:"
+      "text": "These are the other Israelites who had married foreign wives. From the clan of Parosh: Ramiah, Izziah, Malkijah, Mijamin, Eleazar, Malkijah, Benaiah. From the clan of Parosh:"
     },
     {
       "verse": "26",
-      "text": "From the clan of Elam:Mattaniah, Zechariah, Jehiel, Abdi, Jeremoth, Elijah."
+      "text": "From the clan of Elam: Mattaniah, Zechariah, Jehiel, Abdi, Jeremoth, Elijah."
     },
     {
       "verse": "27",
-      "text": "From the clan of Zattu:Elioenai, Eliashib, Mattaniah, Jeremoth, Zabad, Aziza."
+      "text": "From the clan of Zattu: Elioenai, Eliashib, Mattaniah, Jeremoth, Zabad, Aziza."
     },
     {
       "verse": "28",
-      "text": "From the clan of Bebai:Jehohanan, Hananiah, Zabbai, Athlai."
+      "text": "From the clan of Bebai: Jehohanan, Hananiah, Zabbai, Athlai."
     },
     {
       "verse": "29",
-      "text": "From the clan of Bani:Meshullam, Malluch, Adaiah, Jashub, Sheal, Jeremoth."
+      "text": "From the clan of Bani: Meshullam, Malluch, Adaiah, Jashub, Sheal, Jeremoth."
     },
     {
       "verse": "30",
-      "text": "From the clan of Pahath-Moab:Adna, Kelal, Benaiah, Maaseiah, Mattaniah, Bezalel, Binnui, Manasseh."
+      "text": "From the clan of Pahath-Moab: Adna, Kelal, Benaiah, Maaseiah, Mattaniah, Bezalel, Binnui, Manasseh."
     },
     {
       "verse": "31",
-      "text": "From the clan of Harim:Eliezer, Ishijah, Malkijah, Shemaiah, Shimeon,"
+      "text": "From the clan of Harim: Eliezer, Ishijah, Malkijah, Shemaiah, Shimeon,"
     },
     {
       "verse": "32",
@@ -1092,11 +1092,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "From the clan of Hashum:Mattenai, Mattattah, Zabad, Eliphelet, Jeremai, Manasseh, Shimei."
+      "text": "From the clan of Hashum: Mattenai, Mattattah, Zabad, Eliphelet, Jeremai, Manasseh, Shimei."
     },
     {
       "verse": "34",
-      "text": "From the clan of Bani:Maadai, Amram, Uel,"
+      "text": "From the clan of Bani: Maadai, Amram, Uel,"
     },
     {
       "verse": "35",
@@ -1112,7 +1112,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "From the clan of Binnui:Shimei,"
+      "text": "From the clan of Binnui: Shimei,"
     },
     {
       "verse": "39",
@@ -1132,7 +1132,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "From the clan of Nebo:Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel, Benaiah."
+      "text": "From the clan of Nebo: Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel, Benaiah."
     },
     {
       "verse": "44",

@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, James. I am a servant of God and the Lord Jesus Christ.I am writing to the 12 tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you. tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you."
+      "text": "This letter is from me, James. I am a servant of God and the Lord Jesus Christ. I am writing to the 12 tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you. tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you."
     },
     {
       "verse": "2",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When troubles happen to you, you may want to do something bad. But do not say, ‘God is causing me to do wrong things.’ Nothing can make God do anything bad. And God does not try to make anyone do a wrong thing."
+      "text": "When troubles happen to you, you may want to do something bad. But do not say, ‘God is causing me to do wrong things. ’ Nothing can make God do anything bad. And God does not try to make anyone do a wrong thing."
     },
     {
       "verse": "14",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "You are kind to the man who is wearing beautiful clothes. You say to him, ‘Please sit here in this good place.’ But you say to the poor man, ‘Go and stand over there.’ Or you may say to him, ‘Sit on the floor near my feet.’"
+      "text": "You are kind to the man who is wearing beautiful clothes. You say to him, ‘Please sit here in this good place. ’ But you say to the poor man, ‘Go and stand over there. ’ Or you may say to him, ‘Sit on the floor near my feet. ’"
     },
     {
       "verse": "4",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But the message of God's kingdom is this: ‘Love other people as much as you love yourself.’ That is what the Bible says. If you really do that, you do well."
+      "text": "But the message of God's kingdom is this: ‘Love other people as much as you love yourself. ’ That is what the Bible says. If you really do that, you do well."
     },
     {
       "verse": "9",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "For example, God has said in his Law, ‘You must not have sex with anyone who is not your husband or your wife.’ But God has also said, ‘Do not kill another person.’ Perhaps you do not have sex in a wrong way like that. But if you then murder someone, God's Law shows that you are still wrong."
+      "text": "For example, God has said in his Law, ‘You must not have sex with anyone who is not your husband or your wife. ’ But God has also said, ‘Do not kill another person. ’ Perhaps you do not have sex in a wrong way like that. But if you then murder someone, God's Law shows that you are still wrong."
     },
     {
       "verse": "12",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then one of you may say to them, ‘Go with God's peace! I pray that you will be warm. I pray that you will eat well.’ But if you do not give to them what they need, that does not help them at all."
+      "text": "Then one of you may say to them, ‘Go with God's peace! I pray that you will be warm. I pray that you will eat well. ’ But if you do not give to them what they need, that does not help them at all."
     },
     {
       "verse": "17",
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Someone may say, ‘You believe in God, but I do good things to help people.’ Then I would say, ‘You cannot show me that you believe in God if you do not do good things. I do good things, and that shows that I really believe in God.’"
+      "text": "Someone may say, ‘You believe in God, but I do good things to help people. ’ Then I would say, ‘You cannot show me that you believe in God if you do not do good things. I do good things, and that shows that I really believe in God. ’"
     },
     {
       "verse": "19",
@@ -196,7 +196,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The Bible tells us what happened. It says, ‘Abraham believed God. As a result, God accepted Abraham as right with him.’ God also called Abraham his friend."
+      "text": "The Bible tells us what happened. It says, ‘Abraham believed God. As a result, God accepted Abraham as right with him. ’ God also called Abraham his friend."
     },
     {
       "verse": "24",
@@ -230,7 +230,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "In the same way, our tongue is a very small part of our body. But it speaks as if it is very great.Think about this. A very small fire can cause even a big forest to burn completely."
+      "text": "In the same way, our tongue is a very small part of our body. But it speaks as if it is very great. Think about this. A very small fire can cause even a big forest to burn completely."
     },
     {
       "verse": "6",
@@ -304,11 +304,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The Bible says, ‘God has caused his Spirit to live in us. He wants very much to keep us for himself.’ Do you think that is not true?"
+      "text": "The Bible says, ‘God has caused his Spirit to live in us. He wants very much to keep us for himself. ’ Do you think that is not true?"
     },
     {
       "verse": "6",
-      "text": "But God will be very kind to us and he will help us. That is why the Bible says, ‘God is against those people who think that they are important. But he is kind to people who do not feel important.’"
+      "text": "But God will be very kind to us and he will help us. That is why the Bible says, ‘God is against those people who think that they are important. But he is kind to people who do not feel important. ’"
     },
     {
       "verse": "7",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Some of you say, ‘Today or tomorrow we will go to a certain city. We will stay there for a year. We will buy and sell things, and we will become rich.’ If you say things like that, listen to me."
+      "text": "Some of you say, ‘Today or tomorrow we will go to a certain city. We will stay there for a year. We will buy and sell things, and we will become rich. ’ If you say things like that, listen to me."
     },
     {
       "verse": "14",
@@ -344,7 +344,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So what you ought to say is, ‘If the Lord agrees and we are still alive, then we will do this or that.’"
+      "text": "So what you ought to say is, ‘If the Lord agrees and we are still alive, then we will do this or that. ’"
     },
     {
       "verse": "16",
@@ -402,7 +402,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Here is another important thing to remember, my Christian friends. When you want to make a strong promise, never use extra words. Do not say, ‘I promise by heaven,’ or ‘I promise by the earth.’ Do not use any extra words like that. When you say ‘yes,’ that should be enough. When you say ‘no,’ that should also be enough. If you say more than that, God will say that you are guilty."
+      "text": "Here is another important thing to remember, my Christian friends. When you want to make a strong promise, never use extra words. Do not say, ‘I promise by heaven, ’ or ‘I promise by the earth. ’ Do not use any extra words like that. When you say ‘yes, ’ that should be enough. When you say ‘no, ’ that should also be enough. If you say more than that, God will say that you are guilty."
     },
     {
       "verse": "13",

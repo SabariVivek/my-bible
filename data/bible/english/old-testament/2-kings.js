@@ -6,47 +6,47 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "At this time, Ahaziah was king of Israel. He lived in the city of Samaria. One day he fell from the window of an upstairs room in his palace. He became very ill. So he sent men to the temple of Baal-Zebub, the god of Ekron. He told them, ‘Ask their god if I will become well again after my disease.’"
+      "text": "At this time, Ahaziah was king of Israel. He lived in the city of Samaria. One day he fell from the window of an upstairs room in his palace. He became very ill. So he sent men to the temple of Baal-Zebub, the god of Ekron. He told them, ‘Ask their god if I will become well again after my disease. ’"
     },
     {
       "verse": "3",
-      "text": "Then the angel of the Lord spoke to Elijah. He was a prophet who came from Tishbe. The angel said, ‘Go and meet the men that the king of Samaria has sent. Say to them, “Do you think that there is no God in Israel? Is that why you are going to Ekron's god, Baal-Zebub, to ask if the king will be well again?”"
+      "text": "Then the angel of the Lord spoke to Elijah. He was a prophet who came from Tishbe. The angel said, ‘Go and meet the men that the king of Samaria has sent. Say to them, “Do you think that there is no God in Israel? Is that why you are going to Ekron's god, Baal-Zebub, to ask if the king will be well again? ”"
     },
     {
       "verse": "4",
-      "text": "Because you are doing this, the Lord says to you, Ahaziah, “You will never leave the bed that you are lying on. You will certainly die.” ’"
+      "text": "Because you are doing this, the Lord says to you, Ahaziah, “You will never leave the bed that you are lying on. You will certainly die. ” ’"
     },
     {
       "verse": "5",
-      "text": "Elijah went to tell the men the Lord's message. So the men returned to the king. He asked them, ‘Why have you returned already?’"
+      "text": "Elijah went to tell the men the Lord's message. So the men returned to the king. He asked them, ‘Why have you returned already? ’"
     },
     {
       "verse": "6",
-      "text": "They replied, ‘A man came to meet us. He told us to go back to the king who had sent us. He says to you, “This is what the Lord says: Why have you sent men to speak to Ekron's god, Baal-Zebub? You seem to think that there is no God in Israel. Because of that, you will not leave the bed that you are lying on. You will certainly die.” ’"
+      "text": "They replied, ‘A man came to meet us. He told us to go back to the king who had sent us. He says to you, “This is what the Lord says: Why have you sent men to speak to Ekron's god, Baal-Zebub? You seem to think that there is no God in Israel. Because of that, you will not leave the bed that you are lying on. You will certainly die. ” ’"
     },
     {
       "verse": "7",
-      "text": "The king asked them, ‘Describe the man who came to meet you. What did he look like?’"
+      "text": "The king asked them, ‘Describe the man who came to meet you. What did he look like? ’"
     },
     {
       "verse": "8",
-      "text": "They replied, ‘He was wearing rough clothes. He had tied a leather belt around him.’ Then the king said, ‘That was Elijah, the prophet from Tishbe.’"
+      "text": "They replied, ‘He was wearing rough clothes. He had tied a leather belt around him. ’ Then the king said, ‘That was Elijah, the prophet from Tishbe. ’"
     },
     {
       "verse": "9",
-      "text": "soldiers with their captain to fetch Elijah. Elijah was sitting on the top of a hill. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down with us.” ’"
+      "text": "soldiers with their captain to fetch Elijah. Elijah was sitting on the top of a hill. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down with us. ” ’"
     },
     {
       "verse": "10",
-      "text": "Elijah replied to the captain, ‘If I am really a man of God, fire will come down from the sky. It will destroy you and your 50 soldiers.’ Then fire did come down from the sky. It destroyed the captain and his 50 soldiers."
+      "text": "Elijah replied to the captain, ‘If I am really a man of God, fire will come down from the sky. It will destroy you and your 50 soldiers. ’ Then fire did come down from the sky. It destroyed the captain and his 50 soldiers."
     },
     {
       "verse": "11",
-      "text": "more soldiers to fetch Elijah. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down immediately!” ’"
+      "text": "more soldiers to fetch Elijah. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down immediately! ” ’"
     },
     {
       "verse": "12",
-      "text": "Elijah answered, ‘If I am really a man of God, fire will come down from the sky. It will destroy you and your 50 soldiers.’ Then fire from God did come down from the sky. It destroyed the captain and his 50 soldiers."
+      "text": "Elijah answered, ‘If I am really a man of God, fire will come down from the sky. It will destroy you and your 50 soldiers. ’ Then fire from God did come down from the sky. It destroyed the captain and his 50 soldiers."
     },
     {
       "verse": "13",
@@ -54,15 +54,15 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "We know that fire came down from the sky. It destroyed the two captains who came before me and all their soldiers. But now, please be kind and do not kill me.’"
+      "text": "We know that fire came down from the sky. It destroyed the two captains who came before me and all their soldiers. But now, please be kind and do not kill me. ’"
     },
     {
       "verse": "15",
-      "text": "The angel of the Lord said to Elijah, ‘Go down with him. Do not be afraid of him.’ So Elijah went down with the captain to meet the king."
+      "text": "The angel of the Lord said to Elijah, ‘Go down with him. Do not be afraid of him. ’ So Elijah went down with the captain to meet the king."
     },
     {
       "verse": "16",
-      "text": "Elijah said to the king, ‘This is what the Lord says: You sent men to speak to Ekron's god, Baal-Zebub, to find out what would happen to you. Did you think that there is no God in Israel? You did not ask him what would happen. Because of that, you will not leave the bed that you are lying on. You will certainly die.’"
+      "text": "Elijah said to the king, ‘This is what the Lord says: You sent men to speak to Ekron's god, Baal-Zebub, to find out what would happen to you. Did you think that there is no God in Israel? You did not ask him what would happen. Because of that, you will not leave the bed that you are lying on. You will certainly die. ’"
     },
     {
       "verse": "17",
@@ -80,23 +80,23 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Bethel.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you also live.’So they went down to Bethel together."
+      "text": "Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Bethel. ’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you also live. ’So they went down to Bethel together."
     },
     {
       "verse": "3",
-      "text": "A group of prophets lived in Bethel. They came out to Elisha and they asked him, ‘Do you know that the Lord will take your master away from you today?’ Elisha replied, ‘Yes, I do know that, but do not talk about it now.’"
+      "text": "A group of prophets lived in Bethel. They came out to Elisha and they asked him, ‘Do you know that the Lord will take your master away from you today? ’ Elisha replied, ‘Yes, I do know that, but do not talk about it now. ’"
     },
     {
       "verse": "4",
-      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Jericho.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live.’So they went to Jericho together."
+      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Jericho. ’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live. ’So they went to Jericho together."
     },
     {
       "verse": "5",
-      "text": "A group of prophets lived in Jericho. They went out to Elisha and they asked him, ‘Do you know that the Lord will take your master away from you today?’ Elisha replied, ‘Yes, I do know that, but do not talk about it now.’"
+      "text": "A group of prophets lived in Jericho. They went out to Elisha and they asked him, ‘Do you know that the Lord will take your master away from you today? ’ Elisha replied, ‘Yes, I do know that, but do not talk about it now. ’"
     },
     {
       "verse": "6",
-      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to the Jordan River.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live.’So they continued to travel together."
+      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to the Jordan River. ’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live. ’So they continued to travel together."
     },
     {
       "verse": "7",
@@ -108,11 +108,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "After they had crossed the river, Elijah said to Elisha, ‘The Lord will soon take me away from you. What do you want me to do for you before that happens?’ Elisha replied, ‘Please let me have twice as much of your spirit.’"
+      "text": "After they had crossed the river, Elijah said to Elisha, ‘The Lord will soon take me away from you. What do you want me to do for you before that happens? ’ Elisha replied, ‘Please let me have twice as much of your spirit. ’"
     },
     {
       "verse": "10",
-      "text": "Elijah said, ‘You have asked a difficult thing. But watch carefully when God takes me from you. If you see it happen, you will receive that spirit. If you do not see me, you will not receive it.’"
+      "text": "Elijah said, ‘You have asked a difficult thing. But watch carefully when God takes me from you. If you see it happen, you will receive that spirit. If you do not see me, you will not receive it. ’"
     },
     {
       "verse": "11",
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When Elisha saw this, he shouted, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses!’After that, Elisha could not see Elijah again. He took hold of his own clothes and he tore them into pieces because he was very upset."
+      "text": "When Elisha saw this, he shouted, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses! ’After that, Elisha could not see Elijah again. He took hold of his own clothes and he tore them into pieces because he was very upset."
     },
     {
       "verse": "13",
@@ -128,35 +128,35 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He took Elijah's coat and he hit the water with it. He said, ‘Now is the Lord, Elijah's God, with me?’ When he hit the water with Elijah's coat, the water became separate, to the left side and to the right side. Elisha went across the river."
+      "text": "He took Elijah's coat and he hit the water with it. He said, ‘Now is the Lord, Elijah's God, with me? ’ When he hit the water with Elijah's coat, the water became separate, to the left side and to the right side. Elisha went across the river."
     },
     {
       "verse": "15",
-      "text": "The group of prophets from Jericho were standing not far away. They saw what happened. They said, ‘The spirit that gave power to Elijah is now with Elisha.’ They went to meet Elisha. They bent down low to the ground to respect him."
+      "text": "The group of prophets from Jericho were standing not far away. They saw what happened. They said, ‘The spirit that gave power to Elijah is now with Elisha. ’ They went to meet Elisha. They bent down low to the ground to respect him."
     },
     {
       "verse": "16",
-      "text": "They said to him, ‘Please, sir! We are your servants. We have 50 strong men with us. Let them go and look for your master. Perhaps the Spirit of the Lord has carried him away. Maybe it has dropped him somewhere on a mountain or in a valley.’ But Elisha replied, ‘No. Do not send them to look for him.’"
+      "text": "They said to him, ‘Please, sir! We are your servants. We have 50 strong men with us. Let them go and look for your master. Perhaps the Spirit of the Lord has carried him away. Maybe it has dropped him somewhere on a mountain or in a valley. ’ But Elisha replied, ‘No. Do not send them to look for him. ’"
     },
     {
       "verse": "17",
-      "text": "But the prophets asked him many times to do this. Elisha was too ashamed to refuse. So he said, ‘Send them to look.’ They sent 50 men who looked for Elijah for three days. But they did not find him."
+      "text": "But the prophets asked him many times to do this. Elisha was too ashamed to refuse. So he said, ‘Send them to look. ’ They sent 50 men who looked for Elijah for three days. But they did not find him."
     },
     {
       "verse": "18",
-      "text": "When they returned, Elisha was waiting for them in Jericho. He said to them, ‘I told you not to go and look for Elijah.’"
+      "text": "When they returned, Elisha was waiting for them in Jericho. He said to them, ‘I told you not to go and look for Elijah. ’"
     },
     {
       "verse": "19",
-      "text": "One day, the leaders in Jericho said to Elisha, ‘Please listen to us, sir. You can see that our city is in a good place. But the water here is bad. The land does not give us good crops.’"
+      "text": "One day, the leaders in Jericho said to Elisha, ‘Please listen to us, sir. You can see that our city is in a good place. But the water here is bad. The land does not give us good crops. ’"
     },
     {
       "verse": "20",
-      "text": "Elisha said, ‘Bring a new bowl to me with some salt in it.’ So they brought it to him."
+      "text": "Elisha said, ‘Bring a new bowl to me with some salt in it. ’ So they brought it to him."
     },
     {
       "verse": "21",
-      "text": "Then Elisha went out to the city's spring of water. He threw the salt into it. He said, ‘This is what the Lord says: “I have made this water clean again. It will no longer cause people to die. The land will no longer be useless for crops.” ’"
+      "text": "Then Elisha went out to the city's spring of water. He threw the salt into it. He said, ‘This is what the Lord says: “I have made this water clean again. It will no longer cause people to die. The land will no longer be useless for crops. ” ’"
     },
     {
       "verse": "22",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Elisha went from Jericho to Bethel. While he travelled along the road, some boys came out of the town. They laughed at Elisha. They shouted at him, ‘Bald man, move on! Go away, you bald man!’"
+      "text": "Elisha went from Jericho to Bethel. While he travelled along the road, some boys came out of the town. They laughed at Elisha. They shouted at him, ‘Bald man, move on! Go away, you bald man! ’"
     },
     {
       "verse": "24",
@@ -190,7 +190,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Mesha, the king of Moab, was a sheep farmer. Every year he had to pay the king of Israel 100,000 male lambs and the wool from 100,000 male sheep. Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority.’"
+      "text": "Mesha, the king of Moab, was a sheep farmer. Every year he had to pay the king of Israel 100, 000 male lambs and the wool from 100, 000 male sheep. Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority. ’"
     },
     {
       "verse": "5",
@@ -202,11 +202,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He also sent this message to Jehoshaphat, the king of Judah: ‘The king of Moab has turned against me. Will you go with me to fight against the Moabites?’Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority.’"
+      "text": "He also sent this message to Jehoshaphat, the king of Judah: ‘The king of Moab has turned against me. Will you go with me to fight against the Moabites? ’Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority. ’"
     },
     {
       "verse": "8",
-      "text": "King Jehoram asked, ‘What road should we go on to attack Moab?’ King Jehoshaphat replied, ‘We should travel through the Edom desert.’"
+      "text": "King Jehoram asked, ‘What road should we go on to attack Moab? ’ King Jehoshaphat replied, ‘We should travel through the Edom desert. ’"
     },
     {
       "verse": "9",
@@ -214,19 +214,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The king of Israel was very upset. He said, ‘What has happened? Perhaps the Lord has brought us three kings here to put us under the power of the king of Moab!’"
+      "text": "The king of Israel was very upset. He said, ‘What has happened? Perhaps the Lord has brought us three kings here to put us under the power of the king of Moab! ’"
     },
     {
       "verse": "11",
-      "text": "But King Jehoshaphat asked, ‘There must surely be a prophet of the Lord here somewhere. We could ask him what the Lord wants us to do.’An officer of the king of Israel answered him, ‘Yes, Shaphat's son Elisha is here. He was Elijah's servant.’"
+      "text": "But King Jehoshaphat asked, ‘There must surely be a prophet of the Lord here somewhere. We could ask him what the Lord wants us to do. ’An officer of the king of Israel answered him, ‘Yes, Shaphat's son Elisha is here. He was Elijah's servant. ’"
     },
     {
       "verse": "12",
-      "text": "Jehoshaphat said, ‘He will tell us what the Lord is saying.’ So the king of Israel, King Jehoshaphat and the king of Edom went to meet Elisha."
+      "text": "Jehoshaphat said, ‘He will tell us what the Lord is saying. ’ So the king of Israel, King Jehoshaphat and the king of Edom went to meet Elisha."
     },
     {
       "verse": "13",
-      "text": "Elisha said to the king of Israel, ‘We have nothing to say to each other! Instead, go to the prophets that your father and your mother liked to listen to.’ The king of Israel replied, ‘No! The Lord told us three kings to come here together. Now he is putting us under Moab's power.’"
+      "text": "Elisha said to the king of Israel, ‘We have nothing to say to each other! Instead, go to the prophets that your father and your mother liked to listen to. ’ The king of Israel replied, ‘No! The Lord told us three kings to come here together. Now he is putting us under Moab's power. ’"
     },
     {
       "verse": "14",
@@ -234,7 +234,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But now, bring someone to play music on a harp for me.’While the man was making music, the Lord's power came to Elisha."
+      "text": "But now, bring someone to play music on a harp for me. ’While the man was making music, the Lord's power came to Elisha."
     },
     {
       "verse": "16",
@@ -250,7 +250,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You will destroy all their strong cities and all their important towns. You will cut down every good tree. You will stop their springs giving any water. You will cover their fields with stones so that nothing grows there.’"
+      "text": "You will destroy all their strong cities and all their important towns. You will cut down every good tree. You will stop their springs giving any water. You will cover their fields with stones so that nothing grows there. ’"
     },
     {
       "verse": "20",
@@ -266,7 +266,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "They said to each other, ‘That is blood! The armies of those kings have fought against each other. Now they are all dead! We must go and take all their valuable things!’"
+      "text": "They said to each other, ‘That is blood! The armies of those kings have fought against each other. Now they are all dead! We must go and take all their valuable things! ’"
     },
     {
       "verse": "24",
@@ -274,7 +274,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They destroyed the Moabites' towns. Each Israelite soldier threw a stone onto all the good fields, until they covered them with stones. They filled the springs so that they gave no water. They cut down all the good trees.Only the city of Kir-Hareseth was still there with its stone walls. But the Israelite soldiers stood all around the city. They attacked it with stones from their slings."
+      "text": "They destroyed the Moabites' towns. Each Israelite soldier threw a stone onto all the good fields, until they covered them with stones. They filled the springs so that they gave no water. They cut down all the good trees. Only the city of Kir-Hareseth was still there with its stone walls. But the Israelite soldiers stood all around the city. They attacked it with stones from their slings."
     },
     {
       "verse": "26",
@@ -288,11 +288,11 @@ module.exports = {
   "4": [
     {
       "verse": "1",
-      "text": "There was a woman whose husband belonged to the group of prophets. When her husband died, she called out to Elisha for help. She said, ‘Your servant, my husband, is dead. He served the Lord faithfully. My husband was in debt to a certain man. Now that man wants to take my two children to be his slaves.’"
+      "text": "There was a woman whose husband belonged to the group of prophets. When her husband died, she called out to Elisha for help. She said, ‘Your servant, my husband, is dead. He served the Lord faithfully. My husband was in debt to a certain man. Now that man wants to take my two children to be his slaves. ’"
     },
     {
       "verse": "2",
-      "text": "Elisha said to her, ‘How can I help you? Tell me, what things do you have in your house?’She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil.’ She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil.’"
+      "text": "Elisha said to her, ‘How can I help you? Tell me, what things do you have in your house? ’She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil. ’ She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil. ’"
     },
     {
       "verse": "3",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then take the jars into your house. Go in with your sons and shut the door behind you. Pour the olive oil from your jar into all the other jars. When each jar is full, put it in a safe place.’"
+      "text": "Then take the jars into your house. Go in with your sons and shut the door behind you. Pour the olive oil from your jar into all the other jars. When each jar is full, put it in a safe place. ’"
     },
     {
       "verse": "5",
@@ -308,11 +308,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When all the jars were full, she said to one of her sons, ‘Bring me another jar.’ But he said, ‘There are no more jars.’ Then there was no more olive oil to pour from her jar."
+      "text": "When all the jars were full, she said to one of her sons, ‘Bring me another jar. ’ But he said, ‘There are no more jars. ’ Then there was no more olive oil to pour from her jar."
     },
     {
       "verse": "7",
-      "text": "Then the widow went back to Elisha, the man of God. She told him what had happened. He said, ‘Go and sell the oil. Use some of the money to pay the debt to the man. Use the money that remains to buy food for you and your sons. Then you will live.’"
+      "text": "Then the widow went back to Elisha, the man of God. She told him what had happened. He said, ‘Go and sell the oil. Use some of the money to pay the debt to the man. Use the money that remains to buy food for you and your sons. Then you will live. ’"
     },
     {
       "verse": "8",
@@ -324,7 +324,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We should make a small room on the roof of our house for him. We can put a bed, a table, a chair and a lamp in the room. Then, when he comes to visit us, he can stay there.’"
+      "text": "We should make a small room on the roof of our house for him. We can put a bed, a table, a chair and a lamp in the room. Then, when he comes to visit us, he can stay there. ’"
     },
     {
       "verse": "11",
@@ -332,23 +332,23 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "He told Gehazi, his servant, ‘Ask the woman to come here.’ So Gehazi did that. The woman came and she stood in front of Elisha."
+      "text": "He told Gehazi, his servant, ‘Ask the woman to come here. ’ So Gehazi did that. The woman came and she stood in front of Elisha."
     },
     {
       "verse": "13",
-      "text": "Elisha said to Gehazi, ‘Say to her, “You have done a lot to take care of us. So what can we do for you? Can we speak on your behalf to the king, or to the officer who leads the army?” ’ The woman replied, ‘I live here safely among my own people.’"
+      "text": "Elisha said to Gehazi, ‘Say to her, “You have done a lot to take care of us. So what can we do for you? Can we speak on your behalf to the king, or to the officer who leads the army? ” ’ The woman replied, ‘I live here safely among my own people. ’"
     },
     {
       "verse": "14",
-      "text": "But Elisha asked Gehazi again, ‘What can we do to help her?’ Gehazi said, ‘She has no son. But her husband is an old man.’"
+      "text": "But Elisha asked Gehazi again, ‘What can we do to help her? ’ Gehazi said, ‘She has no son. But her husband is an old man. ’"
     },
     {
       "verse": "15",
-      "text": "Elisha said, ‘Ask her to come here.’ When Gehazi did that, she came and she stood near the door."
+      "text": "Elisha said, ‘Ask her to come here. ’ When Gehazi did that, she came and she stood near the door."
     },
     {
       "verse": "16",
-      "text": "Elisha said to her, ‘About this time next year, you will hold a son in your arms.’ The woman said, ‘No, my master! You are a man of God. Please do not tell me lies.’"
+      "text": "Elisha said to her, ‘About this time next year, you will hold a son in your arms. ’ The woman said, ‘No, my master! You are a man of God. Please do not tell me lies. ’"
     },
     {
       "verse": "17",
@@ -360,7 +360,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "He said to his father, ‘My head is hurting! Yes, it hurts!’ His father said to a servant, ‘Carry the boy to his mother.’"
+      "text": "He said to his father, ‘My head is hurting! Yes, it hurts! ’ His father said to a servant, ‘Carry the boy to his mother. ’"
     },
     {
       "verse": "20",
@@ -372,15 +372,15 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "She sent a message to her husband. She said, ‘Send to me one of the servants with one of the donkeys. I must go quickly to see the man of God and then I will return.’"
+      "text": "She sent a message to her husband. She said, ‘Send to me one of the servants with one of the donkeys. I must go quickly to see the man of God and then I will return. ’"
     },
     {
       "verse": "23",
-      "text": "Her husband asked, ‘Why do you want to go and see him today? It is not a special day with a new moon. It is not a Sabbath day.’ She said, ‘All is well.’"
+      "text": "Her husband asked, ‘Why do you want to go and see him today? It is not a special day with a new moon. It is not a Sabbath day. ’ She said, ‘All is well. ’"
     },
     {
       "verse": "24",
-      "text": "Then she prepared the donkey. She said to her servant, ‘You go ahead and lead! Go as fast as you can unless I say, “Go more slowly.” ’"
+      "text": "Then she prepared the donkey. She said to her servant, ‘You go ahead and lead! Go as fast as you can unless I say, “Go more slowly. ” ’"
     },
     {
       "verse": "25",
@@ -388,11 +388,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Run to meet her. Ask her, “Are you well? Is your husband well? Is your son well?” ’ The woman replied, ‘All is well.’"
+      "text": "Run to meet her. Ask her, “Are you well? Is your husband well? Is your son well? ” ’ The woman replied, ‘All is well. ’"
     },
     {
       "verse": "27",
-      "text": "But when she reached the man of God at Mount Carmel, she took hold of his feet. Gehazi came to push her away. But the man of God said, ‘Leave her alone. She is very upset. But the Lord has hidden the reason from me. He did not tell me about her problem.’"
+      "text": "But when she reached the man of God at Mount Carmel, she took hold of his feet. Gehazi came to push her away. But the man of God said, ‘Leave her alone. She is very upset. But the Lord has hidden the reason from me. He did not tell me about her problem. ’"
     },
     {
       "verse": "28",
@@ -400,15 +400,15 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Elisha said to Gehazi, ‘Tie your belt around you. Prepare to travel! Take my stick with you and run there quickly. If you meet anyone, do not stop to speak. If anyone speaks to you, do not stop to answer them. When you get there, put my stick on the boy's face.’"
+      "text": "Elisha said to Gehazi, ‘Tie your belt around you. Prepare to travel! Take my stick with you and run there quickly. If you meet anyone, do not stop to speak. If anyone speaks to you, do not stop to answer them. When you get there, put my stick on the boy's face. ’"
     },
     {
       "verse": "30",
-      "text": "But the child's mother said, ‘I promise you, as surely as the Lord lives and you live, I will not leave you.’ So Elisha got up and he went back to Shunem with her."
+      "text": "But the child's mother said, ‘I promise you, as surely as the Lord lives and you live, I will not leave you. ’ So Elisha got up and he went back to Shunem with her."
     },
     {
       "verse": "31",
-      "text": "Gehazi ran ahead and he arrived before they did. He put Elisha's stick on the boy's face. But the boy did not move or make any sound. So Gehazi went back to meet Elisha. He said to him, ‘The boy did not wake up.’"
+      "text": "Gehazi ran ahead and he arrived before they did. He put Elisha's stick on the boy's face. But the boy did not move or make any sound. So Gehazi went back to meet Elisha. He said to him, ‘The boy did not wake up. ’"
     },
     {
       "verse": "32",
@@ -428,7 +428,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Then Elisha called Gehazi to come to him. He said, ‘Tell the boy's mother to come here.’ Gehazi did that. When the woman came, Elisha said to her, ‘Take your son.’"
+      "text": "Then Elisha called Gehazi to come to him. He said, ‘Tell the boy's mother to come here. ’ Gehazi did that. When the woman came, Elisha said to her, ‘Take your son. ’"
     },
     {
       "verse": "37",
@@ -436,7 +436,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "After that, Elisha went back to Gilgal. There was a famine in that region. The group of prophets came to meet with Elisha. He said to his servant, ‘Put the large pot over the fire. Cook some soup for the prophets.’"
+      "text": "After that, Elisha went back to Gilgal. There was a famine in that region. The group of prophets came to meet with Elisha. He said to his servant, ‘Put the large pot over the fire. Cook some soup for the prophets. ’"
     },
     {
       "verse": "39",
@@ -444,19 +444,19 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "They poured out the soup for the men to eat. But when they started to eat it, they shouted, ‘Man of God, this soup will kill us!’ They could not eat it."
+      "text": "They poured out the soup for the men to eat. But when they started to eat it, they shouted, ‘Man of God, this soup will kill us! ’ They could not eat it."
     },
     {
       "verse": "41",
-      "text": "Then Elisha said, ‘Bring some flour.’ He put the flour into the pot. He said, ‘Now pour out some more soup for the people to eat.’ Then there was nothing in the soup that would hurt them."
+      "text": "Then Elisha said, ‘Bring some flour. ’ He put the flour into the pot. He said, ‘Now pour out some more soup for the people to eat. ’ Then there was nothing in the soup that would hurt them."
     },
     {
       "verse": "42",
-      "text": "One day, a man came from Baal Shalishah. He brought 20 bread loaves for the man of God. The flour for the bread was made from the first barley that he had picked at harvest time. He also brought some fresh grain. Elisha said, ‘Give this food to the people to eat.’"
+      "text": "One day, a man came from Baal Shalishah. He brought 20 bread loaves for the man of God. The flour for the bread was made from the first barley that he had picked at harvest time. He also brought some fresh grain. Elisha said, ‘Give this food to the people to eat. ’"
     },
     {
       "verse": "43",
-      "text": "But his servant said, ‘There is not enough food here to feed 100 men!’ Elisha said, ‘Give it to the people for them to eat. Do it, because the Lord says, “They will all eat as much as they want. There will even be some food left.” ’"
+      "text": "But his servant said, ‘There is not enough food here to feed 100 men! ’ Elisha said, ‘Give it to the people for them to eat. Do it, because the Lord says, “They will all eat as much as they want. There will even be some food left. ” ’"
     },
     {
       "verse": "44",
@@ -474,7 +474,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "One day, the girl said to her master's wife, ‘I would like my master Naaman to meet the prophet who is in Samaria. The prophet would take away his disease.’"
+      "text": "One day, the girl said to her master's wife, ‘I would like my master Naaman to meet the prophet who is in Samaria. The prophet would take away his disease. ’"
     },
     {
       "verse": "4",
@@ -482,19 +482,19 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The king of Syria replied, ‘Go to meet this prophet! I will send a letter to the king of Israel.’ So Naaman went to Israel. He took with him 30,000 pieces of silver, 6,000 pieces of gold, and 10 sets of clothes."
+      "text": "The king of Syria replied, ‘Go to meet this prophet! I will send a letter to the king of Israel. ’ So Naaman went to Israel. He took with him 30, 000 pieces of silver, 6, 000 pieces of gold, and 10 sets of clothes."
     },
     {
       "verse": "6",
-      "text": "He also took the letter for the king of Israel. The message from the king of Syria said, ‘I am sending my servant Naaman to you, with this letter. I want you to take away the disease of his skin.’"
+      "text": "He also took the letter for the king of Israel. The message from the king of Syria said, ‘I am sending my servant Naaman to you, with this letter. I want you to take away the disease of his skin. ’"
     },
     {
       "verse": "7",
-      "text": "When the king of Israel read the letter, he was very upset. He tore his clothes. He said, ‘I am not God, am I? I cannot kill people or make them alive again. Why does he think that I can make this man well again? I see that he is trying to start a fight with me.’"
+      "text": "When the king of Israel read the letter, he was very upset. He tore his clothes. He said, ‘I am not God, am I? I cannot kill people or make them alive again. Why does he think that I can make this man well again? I see that he is trying to start a fight with me. ’"
     },
     {
       "verse": "8",
-      "text": "Elisha, the man of God, heard that the king of Israel had torn his clothes. So he sent this message to him: ‘You did not have to tear your clothes. Tell the man from Syria to come to me. Then he will know that there is a true prophet in Israel.’"
+      "text": "Elisha, the man of God, heard that the king of Israel had torn his clothes. So he sent this message to him: ‘You did not have to tear your clothes. Tell the man from Syria to come to me. Then he will know that there is a true prophet in Israel. ’"
     },
     {
       "verse": "9",
@@ -502,7 +502,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Elisha sent his servant with a message to Naaman. He said, ‘Go to the Jordan River. Wash yourself seven times in the river. Then your skin will be clean again. You will not have the disease.’"
+      "text": "Elisha sent his servant with a message to Naaman. He said, ‘Go to the Jordan River. Wash yourself seven times in the river. Then your skin will be clean again. You will not have the disease. ’"
     },
     {
       "verse": "11",
@@ -510,11 +510,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The Abana and Pharpar rivers in Damascus are better than any of the rivers in Israel. Surely, I could wash in those rivers and become clean!’ So Naaman turned around and he went away. He was very angry."
+      "text": "The Abana and Pharpar rivers in Damascus are better than any of the rivers in Israel. Surely, I could wash in those rivers and become clean! ’ So Naaman turned around and he went away. He was very angry."
     },
     {
       "verse": "13",
-      "text": "But Naaman's servants went to him. One of them said, ‘My master, the prophet might have asked you to do something very difficult. Then you surely would have done it! Now he says to you, “Wash yourself! Then you will be clean.” That is much easier for you to do.’"
+      "text": "But Naaman's servants went to him. One of them said, ‘My master, the prophet might have asked you to do something very difficult. Then you surely would have done it! Now he says to you, “Wash yourself! Then you will be clean. ” That is much easier for you to do. ’"
     },
     {
       "verse": "14",
@@ -522,11 +522,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Naaman and all his servants went back to see Elisha, the man of God. Naaman stood in front of him and he said, ‘Now I know that there is no God in the whole world except the one in Israel. Please accept a gift from me, your servant.’"
+      "text": "Then Naaman and all his servants went back to see Elisha, the man of God. Naaman stood in front of him and he said, ‘Now I know that there is no God in the whole world except the one in Israel. Please accept a gift from me, your servant. ’"
     },
     {
       "verse": "16",
-      "text": "But Elisha replied, ‘I serve the Lord. I promise you, as surely as he lives, I will not accept a gift from you.’ Naaman asked him many times to accept a gift but Elisha refused."
+      "text": "But Elisha replied, ‘I serve the Lord. I promise you, as surely as he lives, I will not accept a gift from you. ’ Naaman asked him many times to accept a gift but Elisha refused."
     },
     {
       "verse": "17",
@@ -534,27 +534,27 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But I pray that the Lord will forgive me, your servant, when I do this one thing: My master, the king of Syria, often goes into the temple of our god, Rimmon. When he bends down low to worship Rimmon, he takes hold of my arm. So I also have to bend down low with him. I ask the Lord to forgive me when I do that.’"
+      "text": "But I pray that the Lord will forgive me, your servant, when I do this one thing: My master, the king of Syria, often goes into the temple of our god, Rimmon. When he bends down low to worship Rimmon, he takes hold of my arm. So I also have to bend down low with him. I ask the Lord to forgive me when I do that. ’"
     },
     {
       "verse": "19",
-      "text": "Elisha said to Naaman, ‘Go home with peace in your mind.’ Then Naaman started on his way home."
+      "text": "Elisha said to Naaman, ‘Go home with peace in your mind. ’ Then Naaman started on his way home."
     },
     {
       "verse": "20",
-      "text": "Elisha's servant, Gehazi, thought, ‘My master did not accept the gifts that Naaman offered to him. He made it too easy for that Syrian man. As surely as the Lord lives, I will run after him. I will accept a gift from him.’"
+      "text": "Elisha's servant, Gehazi, thought, ‘My master did not accept the gifts that Naaman offered to him. He made it too easy for that Syrian man. As surely as the Lord lives, I will run after him. I will accept a gift from him. ’"
     },
     {
       "verse": "21",
-      "text": "So Gehazi ran quickly after Naaman before he had gone very far. Naaman saw that a man was running after him. So he got down from his chariot to meet him. Naaman asked Gehazi, ‘Is everything well?’"
+      "text": "So Gehazi ran quickly after Naaman before he had gone very far. Naaman saw that a man was running after him. So he got down from his chariot to meet him. Naaman asked Gehazi, ‘Is everything well? ’"
     },
     {
       "verse": "22",
-      "text": "Gehazi answered, ‘Everything is well. My master sent me with this message: “Two young men from the group of prophets have just arrived at my house. They have come from the hill country of Ephraim. Please give them 3,000 pieces of silver and two sets of clothes.” ’"
+      "text": "Gehazi answered, ‘Everything is well. My master sent me with this message: “Two young men from the group of prophets have just arrived at my house. They have come from the hill country of Ephraim. Please give them 3, 000 pieces of silver and two sets of clothes. ” ’"
     },
     {
       "verse": "23",
-      "text": "Naaman said, ‘Yes, I will. But please agree to take 6,000 pieces of silver.’ He asked Gehazi to accept them. He put the 6,000 pieces of silver into two bags, as well as two sets of clothes. He gave them to two of his servants and they carried them in front of Gehazi."
+      "text": "Naaman said, ‘Yes, I will. But please agree to take 6, 000 pieces of silver. ’ He asked Gehazi to accept them. He put the 6, 000 pieces of silver into two bags, as well as two sets of clothes. He gave them to two of his servants and they carried them in front of Gehazi."
     },
     {
       "verse": "24",
@@ -562,7 +562,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Gehazi went in and he stood in front of his master. Elisha asked Gehazi, ‘Where have you been?’ Gehazi answered, ‘I have not been anywhere, sir.’ Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease."
+      "text": "Gehazi went in and he stood in front of his master. Elisha asked Gehazi, ‘Where have you been? ’ Gehazi answered, ‘I have not been anywhere, sir. ’ Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease."
     },
     {
       "verse": "26",
@@ -570,7 +570,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Now you will have the same disease in your skin that Naaman had! It will always be with you and your descendants.’Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease."
+      "text": "Now you will have the same disease in your skin that Naaman had! It will always be with you and your descendants. ’Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease."
     }
   ],
   "6": [
@@ -580,11 +580,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "We must go to the Jordan River to cut down some trees. Each one of us can bring back some wood to build a new place for us to meet in.’ Elisha agreed and he told them to go."
+      "text": "We must go to the Jordan River to cut down some trees. Each one of us can bring back some wood to build a new place for us to meet in. ’ Elisha agreed and he told them to go."
     },
     {
       "verse": "3",
-      "text": "One of the prophets said, ‘Please come with us, sir.’ Elisha replied, ‘I will come with you.’"
+      "text": "One of the prophets said, ‘Please come with us, sir. ’ Elisha replied, ‘I will come with you. ’"
     },
     {
       "verse": "4",
@@ -592,23 +592,23 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "While one of them was cutting down a tree, his iron axe fell into the water. He shouted, ‘Oh! My master! The axe did not belong to me!’"
+      "text": "While one of them was cutting down a tree, his iron axe fell into the water. He shouted, ‘Oh! My master! The axe did not belong to me! ’"
     },
     {
       "verse": "6",
-      "text": "Elisha asked him, ‘Where did it fall in the water?’ He showed Elisha the place. Then Elisha cut a branch from a tree. He threw it in the water at that place. It caused the iron axe to come to the top of the water."
+      "text": "Elisha asked him, ‘Where did it fall in the water? ’ He showed Elisha the place. Then Elisha cut a branch from a tree. He threw it in the water at that place. It caused the iron axe to come to the top of the water."
     },
     {
       "verse": "7",
-      "text": "Elisha told the prophet, ‘Lift it out of the water.’ So the man took hold of it with his hand."
+      "text": "Elisha told the prophet, ‘Lift it out of the water. ’ So the man took hold of it with his hand."
     },
     {
       "verse": "8",
-      "text": "There was a war between the king of Syria and Israel. The king of Syria talked with his officers. He said to them, ‘I will attack Israel at a certain place.’"
+      "text": "There was a war between the king of Syria and Israel. The king of Syria talked with his officers. He said to them, ‘I will attack Israel at a certain place. ’"
     },
     {
       "verse": "9",
-      "text": "But Elisha, the man of God, sent a message to the king of Israel. He said, ‘Do not travel through that place. The Syrian army is going there to attack us.’"
+      "text": "But Elisha, the man of God, sent a message to the king of Israel. He said, ‘Do not travel through that place. The Syrian army is going there to attack us. ’"
     },
     {
       "verse": "10",
@@ -616,15 +616,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "This made the king of Syria very angry. He asked his officers to come to him. He said to them, ‘One of you is helping the king of Israel. Who is it?’"
+      "text": "This made the king of Syria very angry. He asked his officers to come to him. He said to them, ‘One of you is helping the king of Israel. Who is it? ’"
     },
     {
       "verse": "12",
-      "text": "One of his officers said, ‘None of us is helping him, my master the king. There is a prophet who lives in Israel. His name is Elisha. He tells the king of Israel every word that you speak secretly, even what you say in your bedroom!’"
+      "text": "One of his officers said, ‘None of us is helping him, my master the king. There is a prophet who lives in Israel. His name is Elisha. He tells the king of Israel every word that you speak secretly, even what you say in your bedroom! ’"
     },
     {
       "verse": "13",
-      "text": "The king of Syria said, ‘Go and find the place where he is. Then I will send some men there to catch him.’A report came back to the king of Syria, ‘Elisha is in Dothan.’"
+      "text": "The king of Syria said, ‘Go and find the place where he is. Then I will send some men there to catch him. ’A report came back to the king of Syria, ‘Elisha is in Dothan. ’"
     },
     {
       "verse": "14",
@@ -632,35 +632,35 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The servant of Elisha, the man of God, got up early the next morning. He went out and he saw an army with horses and chariots all around the city. He said to Elisha, ‘Oh! My master! What can we do?’"
+      "text": "The servant of Elisha, the man of God, got up early the next morning. He went out and he saw an army with horses and chariots all around the city. He said to Elisha, ‘Oh! My master! What can we do? ’"
     },
     {
       "verse": "16",
-      "text": "Elisha replied, ‘Do not be afraid. There are more men to fight for us than there are for them.’"
+      "text": "Elisha replied, ‘Do not be afraid. There are more men to fight for us than there are for them. ’"
     },
     {
       "verse": "17",
-      "text": "Then Elisha prayed, ‘Lord, please open my servant's eyes so that he can see clearly.’ The Lord opened the servant's eyes. Now he could see lots of horses and chariots that burned with fire. They were on the hill all around Elisha."
+      "text": "Then Elisha prayed, ‘Lord, please open my servant's eyes so that he can see clearly. ’ The Lord opened the servant's eyes. Now he could see lots of horses and chariots that burned with fire. They were on the hill all around Elisha."
     },
     {
       "verse": "18",
-      "text": "When the enemy soldiers came towards Elisha, he prayed, ‘Lord, please make these people become blind.’ The Lord did what Elisha had asked. He made the enemy soldiers become blind."
+      "text": "When the enemy soldiers came towards Elisha, he prayed, ‘Lord, please make these people become blind. ’ The Lord did what Elisha had asked. He made the enemy soldiers become blind."
     },
     {
       "verse": "19",
-      "text": "Elisha said to them, ‘You are on the wrong road. You have come to the wrong city. Follow me! I will lead you to the man that you are looking for.’ Elisha led them to Samaria."
+      "text": "Elisha said to them, ‘You are on the wrong road. You have come to the wrong city. Follow me! I will lead you to the man that you are looking for. ’ Elisha led them to Samaria."
     },
     {
       "verse": "20",
-      "text": "After they had gone into the city of Samaria, Elisha prayed again, ‘Lord, please open the eyes of these men so that they can see again.’ The Lord opened their eyes. Now they could see that they were in the middle of Samaria!"
+      "text": "After they had gone into the city of Samaria, Elisha prayed again, ‘Lord, please open the eyes of these men so that they can see again. ’ The Lord opened their eyes. Now they could see that they were in the middle of Samaria!"
     },
     {
       "verse": "21",
-      "text": "When the king of Israel saw the Syrian army in his city, he asked Elisha, ‘My master, what should I do? Should I kill them?’"
+      "text": "When the king of Israel saw the Syrian army in his city, he asked Elisha, ‘My master, what should I do? Should I kill them? ’"
     },
     {
       "verse": "22",
-      "text": "Elisha answered, ‘You must not kill them. That would not be right. You did not win a fight against them with your weapons. Give them some food and water. Then they can eat and drink before they go back to their master.’"
+      "text": "Elisha answered, ‘You must not kill them. That would not be right. You did not win a fight against them with your weapons. Give them some food and water. Then they can eat and drink before they go back to their master. ’"
     },
     {
       "verse": "23",
@@ -676,19 +676,19 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "While the king of Israel was walking on the wall of the city, a woman shouted to him, ‘Please help me, my master the king!’"
+      "text": "While the king of Israel was walking on the wall of the city, a woman shouted to him, ‘Please help me, my master the king! ’"
     },
     {
       "verse": "27",
-      "text": "The king replied, ‘Why do you ask me? Only the Lord can help you. I have no wheat or wine to give you.’"
+      "text": "The king replied, ‘Why do you ask me? Only the Lord can help you. I have no wheat or wine to give you. ’"
     },
     {
       "verse": "28",
-      "text": "Then the king asked her, ‘What is your problem?’ She answered, ‘This woman here said to me, “Let us take your son today, so that we can eat him. Tomorrow we will eat my son.”"
+      "text": "Then the king asked her, ‘What is your problem? ’ She answered, ‘This woman here said to me, “Let us take your son today, so that we can eat him. Tomorrow we will eat my son. ”"
     },
     {
       "verse": "29",
-      "text": "So we cooked my son and we ate him. The next day I said to her, “Now we will take your son, so that we can eat him.” But she has hidden him somewhere!’"
+      "text": "So we cooked my son and we ate him. The next day I said to her, “Now we will take your son, so that we can eat him. ” But she has hidden him somewhere! ’"
     },
     {
       "verse": "30",
@@ -696,25 +696,25 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "He said, ‘I will certainly cut off Elisha's head today! May God punish me with death if Elisha still has his head by the end of the day!’"
+      "text": "He said, ‘I will certainly cut off Elisha's head today! May God punish me with death if Elisha still has his head by the end of the day! ’"
     },
     {
       "verse": "32",
-      "text": "Elisha was sitting in his house. The leaders of the city were with him. The king sent a man to Elisha with a message. But before he arrived, Elisha said to the leaders, ‘I tell you this. That murderer, the king, has sent someone to cut off my head. When the king's man arrives, shut the door. Stop him from coming in here. We will soon hear the sound of his master as he arrives too.’"
+      "text": "Elisha was sitting in his house. The leaders of the city were with him. The king sent a man to Elisha with a message. But before he arrived, Elisha said to the leaders, ‘I tell you this. That murderer, the king, has sent someone to cut off my head. When the king's man arrives, shut the door. Stop him from coming in here. We will soon hear the sound of his master as he arrives too. ’"
     },
     {
       "verse": "33",
-      "text": "While Elisha was still talking to the city's leaders, the king's man arrived with this message: ‘The Lord has caused this terrible trouble to happen to us. I cannot wait any longer for the Lord to help us.’"
+      "text": "While Elisha was still talking to the city's leaders, the king's man arrived with this message: ‘The Lord has caused this terrible trouble to happen to us. I cannot wait any longer for the Lord to help us. ’"
     }
   ],
   "7": [
     {
       "verse": "1",
-      "text": "Elisha said, ‘Now listen to the Lord's message! This is what the Lord says: “About this time tomorrow, five kilograms of good flour will cost only one piece of silver. Ten kilograms of barley will also cost one piece of silver. You will be able to buy this food at the gate of Samaria.” ’"
+      "text": "Elisha said, ‘Now listen to the Lord's message! This is what the Lord says: “About this time tomorrow, five kilograms of good flour will cost only one piece of silver. Ten kilograms of barley will also cost one piece of silver. You will be able to buy this food at the gate of Samaria. ” ’"
     },
     {
       "verse": "2",
-      "text": "The special officer who was near to the king said to the man of God, ‘That will never happen! Even if the Lord opens the skies and sends us rain, it could not happen so soon.’ Elisha said, ‘You yourself will see this happen, but you will not eat any of the food!’"
+      "text": "The special officer who was near to the king said to the man of God, ‘That will never happen! Even if the Lord opens the skies and sends us rain, it could not happen so soon. ’ Elisha said, ‘You yourself will see this happen, but you will not eat any of the food! ’"
     },
     {
       "verse": "3",
@@ -722,7 +722,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "There is no food in the city. If we go in there we will die. And if we stay here, we will die. So we will go out to the camp of the Syrian army. We will ask them to be kind to us. They may let us stay alive, or they may kill us. But we would have died anyway.’"
+      "text": "There is no food in the city. If we go in there we will die. And if we stay here, we will die. So we will go out to the camp of the Syrian army. We will ask them to be kind to us. They may let us stay alive, or they may kill us. But we would have died anyway. ’"
     },
     {
       "verse": "5",
@@ -730,7 +730,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Lord God had caused the Syrian soldiers to hear the sound of horses, chariots and a very big army. So they said among themselves, ‘Listen! The king of Israel has paid the king of the Hittites and the king of Egypt to come here and attack us!’"
+      "text": "The Lord God had caused the Syrian soldiers to hear the sound of horses, chariots and a very big army. So they said among themselves, ‘Listen! The king of Israel has paid the king of the Hittites and the king of Egypt to come here and attack us! ’"
     },
     {
       "verse": "7",
@@ -742,11 +742,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then they said to each other, ‘We should not be doing this. It is not right! This is a day of good news and we have not told anyone. If we wait until the morning, we will be in trouble. We must go now and tell the king's officers what has happened.’"
+      "text": "Then they said to each other, ‘We should not be doing this. It is not right! This is a day of good news and we have not told anyone. If we wait until the morning, we will be in trouble. We must go now and tell the king's officers what has happened. ’"
     },
     {
       "verse": "10",
-      "text": "So they went back to the city's gate and they called out to the guards. They said to them, ‘We went out to the camp of the Syrian army. There was nobody there! We did not hear anyone at all. The horses and donkeys are still there, where the soldiers had tied them. The tents are still there, as they were before.’"
+      "text": "So they went back to the city's gate and they called out to the guards. They said to them, ‘We went out to the camp of the Syrian army. There was nobody there! We did not hear anyone at all. The horses and donkeys are still there, where the soldiers had tied them. The tents are still there, as they were before. ’"
     },
     {
       "verse": "11",
@@ -754,15 +754,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The king got up in the middle of the night. He said to his officers, ‘I will tell you what the Syrian soldiers have done to deceive us. They know that we have no food. So they have left their tents and they have hidden in the fields. They are thinking, “The Israelites will surely come out of the city. Then we will catch them while they are still alive. We will then get into their city.” ’"
+      "text": "The king got up in the middle of the night. He said to his officers, ‘I will tell you what the Syrian soldiers have done to deceive us. They know that we have no food. So they have left their tents and they have hidden in the fields. They are thinking, “The Israelites will surely come out of the city. Then we will catch them while they are still alive. We will then get into their city. ” ’"
     },
     {
       "verse": "13",
-      "text": "One of the king's officers answered him, ‘Send some men with five of the horses that are still in our city. We will see what happens to them. All of us Israelites in the city will soon die. If the Syrian soldiers kill those men, they would have died anyway. So send them out of the city to find out what is happening.’"
+      "text": "One of the king's officers answered him, ‘Send some men with five of the horses that are still in our city. We will see what happens to them. All of us Israelites in the city will soon die. If the Syrian soldiers kill those men, they would have died anyway. So send them out of the city to find out what is happening. ’"
     },
     {
       "verse": "14",
-      "text": "So they prepared two chariots with their horses. The king sent the men to see what had happened to the Syrian army. He commanded the men, ‘Go and look for them.’"
+      "text": "So they prepared two chariots with their horses. The king sent the men to see what had happened to the Syrian army. He commanded the men, ‘Go and look for them. ’"
     },
     {
       "verse": "15",
@@ -778,11 +778,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Elisha had said to the king, ‘This time tomorrow, five kilograms of good flour will cost only one piece of silver. Ten kilograms of barley will also cost one piece of silver. You will be able to buy this food at the gate of Samaria.’"
+      "text": "Elisha had said to the king, ‘This time tomorrow, five kilograms of good flour will cost only one piece of silver. Ten kilograms of barley will also cost one piece of silver. You will be able to buy this food at the gate of Samaria. ’"
     },
     {
       "verse": "19",
-      "text": "But the officer had replied to the man of God, ‘That will never happen! Even if the Lord opens the skies and sends us rain, it could not happen so soon.’ Elisha had said, ‘You yourself will see this happen, but you will not eat any of the food!’"
+      "text": "But the officer had replied to the man of God, ‘That will never happen! Even if the Lord opens the skies and sends us rain, it could not happen so soon. ’ Elisha had said, ‘You yourself will see this happen, but you will not eat any of the food! ’"
     },
     {
       "verse": "20",
@@ -792,7 +792,7 @@ module.exports = {
   "8": [
     {
       "verse": "1",
-      "text": "Elisha had said to the woman whose son he had made alive again, ‘Go away from here. The Lord says that there will be a famine in this country for seven years. So you and your family should go to live somewhere else during that time.’"
+      "text": "Elisha had said to the woman whose son he had made alive again, ‘Go away from here. The Lord says that there will be a famine in this country for seven years. So you and your family should go to live somewhere else during that time. ’"
     },
     {
       "verse": "2",
@@ -804,31 +804,31 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The king was talking to Gehazi, the servant of the man of God. The king said to Gehazi, ‘Tell me about all the great things that Elisha has done.’"
+      "text": "The king was talking to Gehazi, the servant of the man of God. The king said to Gehazi, ‘Tell me about all the great things that Elisha has done. ’"
     },
     {
       "verse": "5",
-      "text": "So Gehazi was telling the king that Elisha had made dead people alive again. While Gehazi was saying this, the woman from Shunem came in to ask the king for her house and her fields. It was her son that Elisha had made alive again. Gehazi said, ‘My master the king, this is the woman! And this is her son that Elisha made alive again!’"
+      "text": "So Gehazi was telling the king that Elisha had made dead people alive again. While Gehazi was saying this, the woman from Shunem came in to ask the king for her house and her fields. It was her son that Elisha had made alive again. Gehazi said, ‘My master the king, this is the woman! And this is her son that Elisha made alive again! ’"
     },
     {
       "verse": "6",
-      "text": "The king asked the woman about it. She told him what had happened. Then the king commanded one of his officers to take care of her. The king said to him, ‘This woman must receive back everything that belongs to her. She must also receive the value of all the crops that have grown in her fields since the day that she went away.’"
+      "text": "The king asked the woman about it. She told him what had happened. Then the king commanded one of his officers to take care of her. The king said to him, ‘This woman must receive back everything that belongs to her. She must also receive the value of all the crops that have grown in her fields since the day that she went away. ’"
     },
     {
       "verse": "7",
-      "text": "Ben-Hadad, the king of Syria, was ill in Damascus. Elisha went to Damascus at that time. Somebody told the king, ‘The man of God has come to the city.’"
+      "text": "Ben-Hadad, the king of Syria, was ill in Damascus. Elisha went to Damascus at that time. Somebody told the king, ‘The man of God has come to the city. ’"
     },
     {
       "verse": "8",
-      "text": "The king said to Hazael, ‘Take a gift with you to go and meet the man of God. Ask him to get a message from the Lord. Ask him, “Will I get well again after this disease?” ’"
+      "text": "The king said to Hazael, ‘Take a gift with you to go and meet the man of God. Ask him to get a message from the Lord. Ask him, “Will I get well again after this disease? ” ’"
     },
     {
       "verse": "9",
-      "text": "So Hazael went to meet Elisha. He took a gift with him. There were 40 camels that carried many kinds of valuable things that came from Damascus. He arrived at Elisha's house and he stood in front of him. Hazael said, ‘Your servant, Ben-Hadad, king of Syria, has sent me to you. He asks, “Will I get well again after this disease?” ’"
+      "text": "So Hazael went to meet Elisha. He took a gift with him. There were 40 camels that carried many kinds of valuable things that came from Damascus. He arrived at Elisha's house and he stood in front of him. Hazael said, ‘Your servant, Ben-Hadad, king of Syria, has sent me to you. He asks, “Will I get well again after this disease? ” ’"
     },
     {
       "verse": "10",
-      "text": "Elisha answered, ‘Go back to the king. Tell him, “Certainly, you will get well again.” But the Lord has shown me that the king will surely die.’"
+      "text": "Elisha answered, ‘Go back to the king. Tell him, “Certainly, you will get well again. ” But the Lord has shown me that the king will surely die. ’"
     },
     {
       "verse": "11",
@@ -836,15 +836,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So Hazael asked him, ‘Why are you weeping, my master?’ Elisha replied, ‘Because I know that you will cause great trouble for Israel's people. You will destroy their strong cities with fire. You will fight their young men and you will kill them. You will knock down their children to kill them. You will cut open their pregnant women.’"
+      "text": "So Hazael asked him, ‘Why are you weeping, my master? ’ Elisha replied, ‘Because I know that you will cause great trouble for Israel's people. You will destroy their strong cities with fire. You will fight their young men and you will kill them. You will knock down their children to kill them. You will cut open their pregnant women. ’"
     },
     {
       "verse": "13",
-      "text": "Hazael said, ‘I am only an ordinary man, sir. I am not more important than a dog! How could I ever do great things like that?’ Elisha answered, ‘The Lord has shown me that you will become the king of Syria.’"
+      "text": "Hazael said, ‘I am only an ordinary man, sir. I am not more important than a dog! How could I ever do great things like that? ’ Elisha answered, ‘The Lord has shown me that you will become the king of Syria. ’"
     },
     {
       "verse": "14",
-      "text": "Then Hazael left Elisha. He returned to his master, the king. King Ben-Hadad asked him, ‘What did Elisha say to you?’ Hazael replied, ‘He told me that you will surely get well again.’"
+      "text": "Then Hazael left Elisha. He returned to his master, the king. King Ben-Hadad asked him, ‘What did Elisha say to you? ’ Hazael replied, ‘He told me that you will surely get well again. ’"
     },
     {
       "verse": "15",
@@ -918,7 +918,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Pour the oil from the bottle onto his head. Say to him, “This is what the Lord says to you: I have now chosen you to be king of Israel.” Then open the door and run away quickly!’"
+      "text": "Pour the oil from the bottle onto his head. Say to him, “This is what the Lord says to you: I have now chosen you to be king of Israel. ” Then open the door and run away quickly! ’"
     },
     {
       "verse": "4",
@@ -926,7 +926,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "When he arrived there, he found the army officers. They were sitting together. The prophet said, ‘Captain, I have a message for you.’ Jehu asked him, ‘The message is for which of us?’ The prophet replied, ‘It is for you, sir.’"
+      "text": "When he arrived there, he found the army officers. They were sitting together. The prophet said, ‘Captain, I have a message for you. ’ Jehu asked him, ‘The message is for which of us? ’ The prophet replied, ‘It is for you, sir. ’"
     },
     {
       "verse": "6",
@@ -946,27 +946,27 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Dogs will eat Jezebel's body on the ground in Jezreel. Nobody will bury her.” ’Then the young prophet opened the door and he ran away."
+      "text": "Dogs will eat Jezebel's body on the ground in Jezreel. Nobody will bury her. ” ’Then the young prophet opened the door and he ran away."
     },
     {
       "verse": "11",
-      "text": "Jehu went out to the other army officers. They asked him, ‘Is everything well? Why did that crazy man come to you?’ Jehu replied, ‘It was not important. You know what that man is like and the kind of things he says.’"
+      "text": "Jehu went out to the other army officers. They asked him, ‘Is everything well? Why did that crazy man come to you? ’ Jehu replied, ‘It was not important. You know what that man is like and the kind of things he says. ’"
     },
     {
       "verse": "12",
-      "text": "But the officers said, ‘That is not true! Tell us what he said.’ So Jehu told them what the prophet had said. He told them, ‘The prophet said, “This is what the Lord says: I have now chosen you to be the king of Israel.” ’"
+      "text": "But the officers said, ‘That is not true! Tell us what he said. ’ So Jehu told them what the prophet had said. He told them, ‘The prophet said, “This is what the Lord says: I have now chosen you to be the king of Israel. ” ’"
     },
     {
       "verse": "13",
-      "text": "The other officers then quickly took their coats. They put them on the stone steps for Jehu to walk on. Then they made a loud noise with a trumpet. They shouted, ‘Jehu is king!’"
+      "text": "The other officers then quickly took their coats. They put them on the stone steps for Jehu to walk on. Then they made a loud noise with a trumpet. They shouted, ‘Jehu is king! ’"
     },
     {
       "verse": "14",
-      "text": "So Jehu, the son of Jehoshaphat and grandson of Nimshi, became an enemy of King Joram.Joram had been in Ramoth Gilead with the whole army of Israel. They were fighting against Hazael, the king of Syria, who wanted to attack Israel."
+      "text": "So Jehu, the son of Jehoshaphat and grandson of Nimshi, became an enemy of King Joram. Joram had been in Ramoth Gilead with the whole army of Israel. They were fighting against Hazael, the king of Syria, who wanted to attack Israel."
     },
     {
       "verse": "15",
-      "text": "The Syrian soldiers had hurt King Joram in the battle against King Hazael. So he returned to Jezreel to get well again.Jehu said to his men, ‘If you really want to help me, do not let anyone leave this city. Nobody must go to warn the people in Jezreel.’"
+      "text": "The Syrian soldiers had hurt King Joram in the battle against King Hazael. So he returned to Jezreel to get well again. Jehu said to his men, ‘If you really want to help me, do not let anyone leave this city. Nobody must go to warn the people in Jezreel. ’"
     },
     {
       "verse": "16",
@@ -974,31 +974,31 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "A guard was standing on the tower in Jezreel to watch for enemies. He saw Jehu's soldiers coming towards the city. He shouted, ‘I can see a group of soldiers who are coming here on horses.’King Joram said, ‘Send out a man on a horse to meet the soldiers. Ask them. “Are you coming to us as friends?” ’"
+      "text": "A guard was standing on the tower in Jezreel to watch for enemies. He saw Jehu's soldiers coming towards the city. He shouted, ‘I can see a group of soldiers who are coming here on horses. ’King Joram said, ‘Send out a man on a horse to meet the soldiers. Ask them. “Are you coming to us as friends? ” ’"
     },
     {
       "verse": "18",
-      "text": "The man on the horse rode out of the city to meet Jehu. He said to Jehu, ‘The king asks you, “Are you coming here as friends?” ’ Jehu replied, ‘Whether we are friends or not, turn round and ride behind me!’The guard on the tower reported to Joram, ‘The man that you sent with the message has reached them. But he is not coming back yet.’"
+      "text": "The man on the horse rode out of the city to meet Jehu. He said to Jehu, ‘The king asks you, “Are you coming here as friends? ” ’ Jehu replied, ‘Whether we are friends or not, turn round and ride behind me! ’The guard on the tower reported to Joram, ‘The man that you sent with the message has reached them. But he is not coming back yet. ’"
     },
     {
       "verse": "19",
-      "text": "So King Joram sent a second man out on a horse. The rider said to Jehu, ‘The king asks you, “Are you coming here as friends?” ’ Jehu replied, ‘Whether we are friends or not, turn round and ride behind me!’"
+      "text": "So King Joram sent a second man out on a horse. The rider said to Jehu, ‘The king asks you, “Are you coming here as friends? ” ’ Jehu replied, ‘Whether we are friends or not, turn round and ride behind me! ’"
     },
     {
       "verse": "20",
-      "text": "The guard reported to Joram, ‘The man has reached them, but he is not coming back yet either. Their leader is driving his chariot like Nimshi's son, Jehu. He drives like a crazy man!’"
+      "text": "The guard reported to Joram, ‘The man has reached them, but he is not coming back yet either. Their leader is driving his chariot like Nimshi's son, Jehu. He drives like a crazy man! ’"
     },
     {
       "verse": "21",
-      "text": "Then King Joram commanded, ‘Prepare my chariot for me.’ So they brought his chariot to him. Then King Joram of Israel and King Ahaziah of Judah rode out of the city to meet Jehu. Each king was riding in his own chariot. They met Jehu at the piece of land that had once belonged to Naboth, the man from Jezreel."
+      "text": "Then King Joram commanded, ‘Prepare my chariot for me. ’ So they brought his chariot to him. Then King Joram of Israel and King Ahaziah of Judah rode out of the city to meet Jehu. Each king was riding in his own chariot. They met Jehu at the piece of land that had once belonged to Naboth, the man from Jezreel."
     },
     {
       "verse": "22",
-      "text": "When Joram saw Jehu, he asked, ‘Have you come as a friend, Jehu?’ Jehu replied, ‘We cannot be friends. Your mother Jezebel still causes people to worship idols and to use magic.’"
+      "text": "When Joram saw Jehu, he asked, ‘Have you come as a friend, Jehu? ’ Jehu replied, ‘We cannot be friends. Your mother Jezebel still causes people to worship idols and to use magic. ’"
     },
     {
       "verse": "23",
-      "text": "Joram turned his chariot round and he drove away quickly. He shouted to King Ahaziah, ‘Ahaziah, they have deceived us!’"
+      "text": "Joram turned his chariot round and he drove away quickly. He shouted to King Ahaziah, ‘Ahaziah, they have deceived us! ’"
     },
     {
       "verse": "24",
@@ -1010,11 +1010,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "“Yesterday, I saw the blood of Naboth and his sons where you murdered them. One day, I will punish you as you deserve. I will do it here on this piece of land. That is what the Lord says.” So now pick up Joram's body and throw it on this piece of land. Do what the Lord has promised he would do.’"
+      "text": "“Yesterday, I saw the blood of Naboth and his sons where you murdered them. One day, I will punish you as you deserve. I will do it here on this piece of land. That is what the Lord says. ” So now pick up Joram's body and throw it on this piece of land. Do what the Lord has promised he would do. ’"
     },
     {
       "verse": "27",
-      "text": "King Ahaziah of Judah saw what had happened to Joram. So he rode away quickly on the road towards Beth Haggan. Jehu chased after him and he shouted, ‘Kill him too!’ Jehu's men shot arrows at Ahaziah as he rode in his chariot up the hill to Gur, near Ibleam. He escaped to Megiddo and he died there."
+      "text": "King Ahaziah of Judah saw what had happened to Joram. So he rode away quickly on the road towards Beth Haggan. Jehu chased after him and he shouted, ‘Kill him too! ’ Jehu's men shot arrows at Ahaziah as he rode in his chariot up the hill to Gur, near Ibleam. He escaped to Megiddo and he died there."
     },
     {
       "verse": "28",
@@ -1030,19 +1030,19 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "When Jehu came through the gate of the city, Jezebel called out to him, ‘Have you come as a friend, Zimri? No, you have murdered your master!’"
+      "text": "When Jehu came through the gate of the city, Jezebel called out to him, ‘Have you come as a friend, Zimri? No, you have murdered your master! ’"
     },
     {
       "verse": "32",
-      "text": "Jehu looked up at the window and he saw her. Then he shouted, ‘Who wants to help me? Anyone there?’ Two or three eunuchs looked out though a window at him."
+      "text": "Jehu looked up at the window and he saw her. Then he shouted, ‘Who wants to help me? Anyone there? ’ Two or three eunuchs looked out though a window at him."
     },
     {
       "verse": "33",
-      "text": "Jehu shouted to them, ‘Throw her down!’ So they threw her down. When she hit the ground, some of her blood splashed on the wall. It also splashed on Jehu's horses as he drove them over her body."
+      "text": "Jehu shouted to them, ‘Throw her down! ’ So they threw her down. When she hit the ground, some of her blood splashed on the wall. It also splashed on Jehu's horses as he drove them over her body."
     },
     {
       "verse": "34",
-      "text": "Jehu went into the palace and he ate a meal. Then he said, ‘Take away that evil woman's body. She was the daughter of a king, so you should bury her properly.’"
+      "text": "Jehu went into the palace and he ate a meal. Then he said, ‘Take away that evil woman's body. She was the daughter of a king, so you should bury her properly. ’"
     },
     {
       "verse": "35",
@@ -1054,7 +1054,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Her dead body will lie on the ground in Jezreel like dung. Nobody will be able to recognize who it is.” ’"
+      "text": "Her dead body will lie on the ground in Jezreel like dung. Nobody will be able to recognize who it is. ” ’"
     }
   ],
   "10": [
@@ -1068,19 +1068,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Choose the best person to be king from among your master's sons. Make him your king instead of his father. Then prepare to fight on behalf of your master's family.’"
+      "text": "Choose the best person to be king from among your master's sons. Make him your king instead of his father. Then prepare to fight on behalf of your master's family. ’"
     },
     {
       "verse": "4",
-      "text": "But the letter made the officers in Samaria very afraid. They said, ‘Even two kings could not win against Jehu. So we can never fight against him and win!’"
+      "text": "But the letter made the officers in Samaria very afraid. They said, ‘Even two kings could not win against Jehu. So we can never fight against him and win! ’"
     },
     {
       "verse": "5",
-      "text": "So these people sent a message to Jehu:the officer who took care of the king's palace,the man who ruled the city of Samaria,the city's leaders,and the men who took care of Ahab's children.The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right.’ The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right.’"
+      "text": "So these people sent a message to Jehu: the officer who took care of the king's palace, the man who ruled the city of Samaria, the city's leaders, and the men who took care of Ahab's children. The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right. ’ The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right. ’"
     },
     {
       "verse": "6",
-      "text": "So Jehu wrote a second letter to them. It said, ‘If you are ready to help me and you will obey me, do this: Bring the heads of your master's sons here to me in Jezreel. Bring them by this time tomorrow.’At that time, important leaders of the city were taking care of the king's 70 sons."
+      "text": "So Jehu wrote a second letter to them. It said, ‘If you are ready to help me and you will obey me, do this: Bring the heads of your master's sons here to me in Jezreel. Bring them by this time tomorrow. ’At that time, important leaders of the city were taking care of the king's 70 sons."
     },
     {
       "verse": "7",
@@ -1088,7 +1088,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Someone told Jehu, ‘They have brought the heads of the king's sons.’ Then Jehu said, ‘Put them in two heaps at the gate of the city. Leave them there until the morning.’"
+      "text": "Someone told Jehu, ‘They have brought the heads of the king's sons. ’ Then Jehu said, ‘Put them in two heaps at the gate of the city. Leave them there until the morning. ’"
     },
     {
       "verse": "9",
@@ -1096,7 +1096,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "You must realize this: Every punishment that the Lord said would happen to Ahab's family must happen. The Lord has done what he told his servant Elijah he would do.’"
+      "text": "You must realize this: Every punishment that the Lord said would happen to Ahab's family must happen. The Lord has done what he told his servant Elijah he would do. ’"
     },
     {
       "verse": "11",
@@ -1108,19 +1108,19 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He met some relatives of Ahaziah, the king of Judah. Jehu asked them, ‘Who are you?’ They said, ‘We are relatives of Ahaziah. We are going to Jezreel to visit the families of the king and his mother.’"
+      "text": "He met some relatives of Ahaziah, the king of Judah. Jehu asked them, ‘Who are you? ’ They said, ‘We are relatives of Ahaziah. We are going to Jezreel to visit the families of the king and his mother. ’"
     },
     {
       "verse": "14",
-      "text": "Jehu said to his men, ‘Catch them, but do not kill them!’ So they took hold of them. Then they killed them all near the well at Beth Eked. They killed 42 people, so that none of them remained alive."
+      "text": "Jehu said to his men, ‘Catch them, but do not kill them! ’ So they took hold of them. Then they killed them all near the well at Beth Eked. They killed 42 people, so that none of them remained alive."
     },
     {
       "verse": "15",
-      "text": "When Jehu left Beth Eked, he met Rekab's son Jehonadab. He was coming to meet Jehu. Jehu said, ‘Hello! Do you trust me, as I trust you?’ Jehonadab answered, ‘Yes, I do!’ Jehu replied, ‘Then hold your hand out to me.’ So he did that and Jehu pulled him up into his chariot."
+      "text": "When Jehu left Beth Eked, he met Rekab's son Jehonadab. He was coming to meet Jehu. Jehu said, ‘Hello! Do you trust me, as I trust you? ’ Jehonadab answered, ‘Yes, I do! ’ Jehu replied, ‘Then hold your hand out to me. ’ So he did that and Jehu pulled him up into his chariot."
     },
     {
       "verse": "16",
-      "text": "Jehu said, ‘Come with me. You will see that I want to serve the Lord faithfully.’ So Jehonadab rode with Jehu in his chariot."
+      "text": "Jehu said, ‘Come with me. You will see that I want to serve the Lord faithfully. ’ So Jehonadab rode with Jehu in his chariot."
     },
     {
       "verse": "17",
@@ -1132,11 +1132,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "So tell all the prophets who serve Baal to come here, as well as all Baal's servants and his priests. Make sure that they all come. I want to offer a great sacrifice to Baal. If any of them does not come, I will punish him with death.’But Jehu was deceiving them. He wanted to kill all Baal's servants."
+      "text": "So tell all the prophets who serve Baal to come here, as well as all Baal's servants and his priests. Make sure that they all come. I want to offer a great sacrifice to Baal. If any of them does not come, I will punish him with death. ’But Jehu was deceiving them. He wanted to kill all Baal's servants."
     },
     {
       "verse": "20",
-      "text": "He gave a command, ‘Prepare a special day when we can all worship Baal.’ So Jehu's servants told everybody about it."
+      "text": "He gave a command, ‘Prepare a special day when we can all worship Baal. ’ So Jehu's servants told everybody about it."
     },
     {
       "verse": "21",
@@ -1144,19 +1144,19 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then Jehu said to the man who took care of the special clothes, ‘Bring out the robes for the servants of Baal to wear.’ So the man brought out the robes for them."
+      "text": "Then Jehu said to the man who took care of the special clothes, ‘Bring out the robes for the servants of Baal to wear. ’ So the man brought out the robes for them."
     },
     {
       "verse": "23",
-      "text": "Then Jehu and Rekab's son Jehonadab went into the temple of Baal. Jehu said to the servants of Baal, ‘Look around carefully. Be sure that there are no servants of the Lord here with you. There must only be servants of Baal here.’"
+      "text": "Then Jehu and Rekab's son Jehonadab went into the temple of Baal. Jehu said to the servants of Baal, ‘Look around carefully. Be sure that there are no servants of the Lord here with you. There must only be servants of Baal here. ’"
     },
     {
       "verse": "24",
-      "text": "So they went into the temple to offer sacrifices and burnt offerings. But Jehu had put 80 of his men outside the temple. He had said to them, ‘Do not let any of these men escape. If you let anyone escape, I will punish you with death.’"
+      "text": "So they went into the temple to offer sacrifices and burnt offerings. But Jehu had put 80 of his men outside the temple. He had said to them, ‘Do not let any of these men escape. If you let anyone escape, I will punish you with death. ’"
     },
     {
       "verse": "25",
-      "text": "When Jehu had finished offering the sacrifices, he said to the guards and the soldiers, ‘Go into the temple and kill all Baal's servants. Do not let any of them escape.’ So the guards and soldiers used their swords to cut all the people down. They threw the dead bodies out of the temple. Then they went into the inside room of the temple."
+      "text": "When Jehu had finished offering the sacrifices, he said to the guards and the soldiers, ‘Go into the temple and kill all Baal's servants. Do not let any of them escape. ’ So the guards and soldiers used their swords to cut all the people down. They threw the dead bodies out of the temple. Then they went into the inside room of the temple."
     },
     {
       "verse": "26",
@@ -1176,7 +1176,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The Lord said to Jehu, ‘You have done well. You have done the things that I say are right. You have punished Ahab's family in the way that I wanted. So your descendants will be kings of Israel for four generations.’"
+      "text": "The Lord said to Jehu, ‘You have done well. You have done the things that I say are right. You have punished Ahab's family in the way that I wanted. So your descendants will be kings of Israel for four generations. ’"
     },
     {
       "verse": "31",
@@ -1218,7 +1218,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "In the seventh year that Athaliah ruled Judah, the priest Jehoiada asked some of the king's officers to come to him. They were officers of army groups, the king's special guards and the palace guards.They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them."
+      "text": "In the seventh year that Athaliah ruled Judah, the priest Jehoiada asked some of the king's officers to come to him. They were officers of army groups, the king's special guards and the palace guards. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them."
     },
     {
       "verse": "5",
@@ -1234,7 +1234,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "You must stand around the king. Each man must hold his weapon in his hand. If anyone comes near to you, you must kill them. You must stay near to the king everywhere that he goes.’"
+      "text": "You must stand around the king. Each man must hold his weapon in his hand. If anyone comes near to you, you must kill them. You must stay near to the king everywhere that he goes. ’"
     },
     {
       "verse": "9",
@@ -1250,19 +1250,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then Jehoiada brought the king's son out of the temple room. He put the crown onto Joash's head. He gave him a copy of the royal covenant. They poured olive oil on his head to show that he was now the king. They clapped their hands and they shouted, ‘May the king have a long life!’"
+      "text": "Then Jehoiada brought the king's son out of the temple room. He put the crown onto Joash's head. He gave him a copy of the royal covenant. They poured olive oil on his head to show that he was now the king. They clapped their hands and they shouted, ‘May the king have a long life! ’"
     },
     {
       "verse": "13",
-      "text": "Queen Athaliah heard the soldiers and the people as they were shouting. So she went to the Lord's temple where all the people were. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
+      "text": "Queen Athaliah heard the soldiers and the people as they were shouting. So she went to the Lord's temple where all the people were. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason! ’"
     },
     {
       "verse": "14",
-      "text": "Then she saw the king! He was standing in the king's place beside the pillar in the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. Many of them made music with trumpets.When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
+      "text": "Then she saw the king! He was standing in the king's place beside the pillar in the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. Many of them made music with trumpets. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason! ’"
     },
     {
       "verse": "15",
-      "text": "Jehoiada the priest gave a command to the army officers who had authority over groups of soldiers. He told them, ‘Bring her out of the temple to the line of guards outside. Use your swords to kill anyone who follows her.’ That was because Jehoiada had said, ‘You must not kill her inside the Lord's temple.’"
+      "text": "Jehoiada the priest gave a command to the army officers who had authority over groups of soldiers. He told them, ‘Bring her out of the temple to the line of guards outside. Use your swords to kill anyone who follows her. ’ That was because Jehoiada had said, ‘You must not kill her inside the Lord's temple. ’"
     },
     {
       "verse": "16",
@@ -1274,7 +1274,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then people everywhere in the country went to the temple of Baal. They destroyed it. They completely knocked down its altars and idols. They killed Baal's priest, Mattan, in front of Baal's altars.Then Jehoiada the priest put guards to keep the Lord's temple safe."
+      "text": "Then people everywhere in the country went to the temple of Baal. They destroyed it. They completely knocked down its altars and idols. They killed Baal's priest, Mattan, in front of Baal's altars. Then Jehoiada the priest put guards to keep the Lord's temple safe."
     },
     {
       "verse": "19",
@@ -1304,11 +1304,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Joash said to all the priests, ‘Bring together all the money that people have offered to the Lord in his temple. This includes:the money that each person pays as his tax,the money that people have given because of a promise,and the money that people have chosen to give for the temple."
+      "text": "Joash said to all the priests, ‘Bring together all the money that people have offered to the Lord in his temple. This includes: the money that each person pays as his tax, the money that people have given because of a promise, and the money that people have chosen to give for the temple."
     },
     {
       "verse": "5",
-      "text": "Each priest should receive the money that he needs to make repairs to the temple. When he sees that something is broken, he can use some of the people's money to mend it.’"
+      "text": "Each priest should receive the money that he needs to make repairs to the temple. When he sees that something is broken, he can use some of the people's money to mend it. ’"
     },
     {
       "verse": "6",
@@ -1316,7 +1316,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So King Joash called Jehoiada and the other priests to come to him. He said to them, ‘You have made no repairs to the temple yet! Why not? Do not take any more of your people's money! It must only be used to make repairs to the temple.’"
+      "text": "So King Joash called Jehoiada and the other priests to come to him. He said to them, ‘You have made no repairs to the temple yet! Why not? Do not take any more of your people's money! It must only be used to make repairs to the temple. ’"
     },
     {
       "verse": "8",
@@ -1340,7 +1340,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But they did not use any of this money to buy things that they used in the temple. This included:silver bowls,small tools that they used for the lamps,bowls for water,trumpets,and anything else that was made with silver or gold."
+      "text": "But they did not use any of this money to buy things that they used in the temple. This included: silver bowls, small tools that they used for the lamps, bowls for water, trumpets, and anything else that was made with silver or gold."
     },
     {
       "verse": "14",
@@ -1402,7 +1402,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The king of Syria had destroyed most of Jehoahaz's army. All that remained were:50 soldiers that rode horses.10 chariots.10,000 other soldiers.The king of Syria completely destroyed all the rest of the army. Only dust remained! The king of Syria completely destroyed all the rest of the army. Only dust remained!"
+      "text": "The king of Syria had destroyed most of Jehoahaz's army. All that remained were:50 soldiers that rode horses. 10 chariots. 10, 000 other soldiers. The king of Syria completely destroyed all the rest of the army. Only dust remained! The king of Syria completely destroyed all the rest of the army. Only dust remained!"
     },
     {
       "verse": "8",
@@ -1430,31 +1430,31 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "When Jehoash was still king of Israel, Elisha became very ill. It was the illness from which he would soon die. Jehoash went to visit him. Jehoash stood beside Elisha and he wept. Jehoash said, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses!’"
+      "text": "When Jehoash was still king of Israel, Elisha became very ill. It was the illness from which he would soon die. Jehoash went to visit him. Jehoash stood beside Elisha and he wept. Jehoash said, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses! ’"
     },
     {
       "verse": "15",
-      "text": "Elisha said to King Jehoash, ‘Fetch a bow and some arrows.’ The king did that."
+      "text": "Elisha said to King Jehoash, ‘Fetch a bow and some arrows. ’ The king did that."
     },
     {
       "verse": "16",
-      "text": "Then Elisha said to the king of Israel, ‘Prepare to shoot an arrow.’ When he had done that, Elisha put his hands on the king's hands."
+      "text": "Then Elisha said to the king of Israel, ‘Prepare to shoot an arrow. ’ When he had done that, Elisha put his hands on the king's hands."
     },
     {
       "verse": "17",
-      "text": "Elisha said, ‘Open the window towards the east.’ When the king opened it, Elisha said, ‘Shoot the arrow!’ The king shot the arrow and Elisha said, ‘That is the Lord's arrow which shows that you will win the battle against Syria. You will completely destroy Syria's army at Aphek.’"
+      "text": "Elisha said, ‘Open the window towards the east. ’ When the king opened it, Elisha said, ‘Shoot the arrow! ’ The king shot the arrow and Elisha said, ‘That is the Lord's arrow which shows that you will win the battle against Syria. You will completely destroy Syria's army at Aphek. ’"
     },
     {
       "verse": "18",
-      "text": "Then Elisha said, ‘Pick up the other arrows.’ When the king of Israel took them, Elisha said to him, ‘Hit the ground with them.’ The king hit the ground three times and then he stopped."
+      "text": "Then Elisha said, ‘Pick up the other arrows. ’ When the king of Israel took them, Elisha said to him, ‘Hit the ground with them. ’ The king hit the ground three times and then he stopped."
     },
     {
       "verse": "19",
-      "text": "The man of God then became angry with King Jehoash. He said, ‘You should have hit the ground five times or six times. Then you would have completely destroyed Syria's army. But now you will only win three battles against Syria.’"
+      "text": "The man of God then became angry with King Jehoash. He said, ‘You should have hit the ground five times or six times. Then you would have completely destroyed Syria's army. But now you will only win three battles against Syria. ’"
     },
     {
       "verse": "20",
-      "text": "After that, Elisha died and they buried him.Every year in spring, groups of fighters from Moab came to attack places in Israel."
+      "text": "After that, Elisha died and they buried him. Every year in spring, groups of fighters from Moab came to attack places in Israel."
     },
     {
       "verse": "21",
@@ -1500,23 +1500,23 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins.’"
+      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins. ’"
     },
     {
       "verse": "7",
-      "text": "Amaziah killed 10,000 soldiers from Edom in Salt valley. He attacked Sela city and he took it for himself. He gave it a new name, ‘Joktheel’. That is still its name."
+      "text": "Amaziah killed 10, 000 soldiers from Edom in Salt valley. He attacked Sela city and he took it for himself. He gave it a new name, ‘Joktheel’. That is still its name."
     },
     {
       "verse": "8",
-      "text": "Then Amaziah sent men with a message to King Jehoash of Israel. He was the son of Jehoahaz and the grandson of Jehu. Amaziah's message said, ‘Come here and meet me.’"
+      "text": "Then Amaziah sent men with a message to King Jehoash of Israel. He was the son of Jehoahaz and the grandson of Jehu. Amaziah's message said, ‘Come here and meet me. ’"
     },
     {
       "verse": "9",
-      "text": "But King Jehoash of Israel sent this message back to King Amaziah of Judah: ‘In Lebanon, a thorn bush sent this message to a cedar tree: “Please give your daughter to my son, to be his wife.” Then a wild animal of Lebanon came and knocked down the thorn bush. It walked all over it!"
+      "text": "But King Jehoash of Israel sent this message back to King Amaziah of Judah: ‘In Lebanon, a thorn bush sent this message to a cedar tree: “Please give your daughter to my son, to be his wife. ” Then a wild animal of Lebanon came and knocked down the thorn bush. It walked all over it!"
     },
     {
       "verse": "10",
-      "text": "Yes! You have won the fight against Edom. But do not boast about your power! You may be very happy, but stay at home! Do not try to fight against us. If you do that, you will cause trouble that destroys both you and your kingdom, Judah.’"
+      "text": "Yes! You have won the fight against Edom. But do not boast about your power! You may be very happy, but stay at home! Do not try to fight against us. If you do that, you will cause trouble that destroys both you and your kingdom, Judah. ’"
     },
     {
       "verse": "11",
@@ -1642,7 +1642,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The Lord had given this promise to Jehu: ‘Your descendants will be kings of Israel for four generations.’ That is what happened."
+      "text": "The Lord had given this promise to Jehu: ‘Your descendants will be kings of Israel for four generations. ’ That is what happened."
     },
     {
       "verse": "13",
@@ -1772,11 +1772,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "(At the same time, King Rezin got Elath town back for Syria. He chased out the people of Judah who were living there. People from Edom then moved into Elath, and they are still living there.)"
+      "text": "(At the same time, King Rezin got Elath town back for Syria. He chased out the people of Judah who were living there. People from Edom then moved into Elath, and they are still living there. )"
     },
     {
       "verse": "7",
-      "text": "King Ahaz sent a message to Tiglath-Pileser, the king of Assyria. He said, ‘I am your servant and I need your help. The king of Syria and the king of Israel have brought their armies to attack me in Jerusalem. Please come here to rescue me.’"
+      "text": "King Ahaz sent a message to Tiglath-Pileser, the king of Assyria. He said, ‘I am your servant and I need your help. The king of Syria and the king of Israel have brought their armies to attack me in Jerusalem. Please come here to rescue me. ’"
     },
     {
       "verse": "8",
@@ -1804,11 +1804,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "A bronze altar stood in front of the Lord's temple to bring sacrifices to him. Now it stood between the new altar and the front of the temple. So Ahaz moved it away from there. He put it on the north side of the new altar. Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times.’"
+      "text": "A bronze altar stood in front of the Lord's temple to bring sacrifices to him. Now it stood between the new altar and the front of the temple. So Ahaz moved it away from there. He put it on the north side of the new altar. Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times. ’"
     },
     {
       "verse": "15",
-      "text": "Then King Ahaz commanded Uriah the priest, ‘On the large new altar, offer these gifts:A burnt offering for each morning.A grain offering for each evening.A burnt offering and a grain offering on behalf of the king.A burnt offering on behalf of all the people of Israel.A grain offering and drink offerings on behalf of the people.Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times.’"
+      "text": "Then King Ahaz commanded Uriah the priest, ‘On the large new altar, offer these gifts: A burnt offering for each morning. A grain offering for each evening. A burnt offering and a grain offering on behalf of the king. A burnt offering on behalf of all the people of Israel. A grain offering and drink offerings on behalf of the people. Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times. ’"
     },
     {
       "verse": "16",
@@ -1882,7 +1882,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The Lord had used his prophets and his other servants to warn the people of Israel and Judah. He told them, ‘Stop living in an evil way. Obey my Law, with its commands and its rules. I gave my Law to your ancestors so that they would obey it. I also used my servants, the prophets, to teach it to you.’"
+      "text": "The Lord had used his prophets and his other servants to warn the people of Israel and Judah. He told them, ‘Stop living in an evil way. Obey my Law, with its commands and its rules. I gave my Law to your ancestors so that they would obey it. I also used my servants, the prophets, to teach it to you. ’"
     },
     {
       "verse": "14",
@@ -1934,11 +1934,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "People told the king of Assyria, ‘You sent some nations of people to go and live in the towns of Samaria. But they do not know how to obey the rules of that country's god. So he has sent lions to attack them. The lions are killing them because they do not know the rules of that country's god.’"
+      "text": "People told the king of Assyria, ‘You sent some nations of people to go and live in the towns of Samaria. But they do not know how to obey the rules of that country's god. So he has sent lions to attack them. The lions are killing them because they do not know the rules of that country's god. ’"
     },
     {
       "verse": "27",
-      "text": "The king of Assyria replied, ‘You took some Israelite priests away from Samaria as prisoners. Send one of them back to live there. Then he can teach the people what the god of that country wants them to do.’"
+      "text": "The king of Assyria replied, ‘You took some Israelite priests away from Samaria as prisoners. Send one of them back to live there. Then he can teach the people what the god of that country wants them to do. ’"
     },
     {
       "verse": "28",
@@ -1986,7 +1986,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Instead, you must only worship the Lord your God. It is he who will save you from the power of all your enemies.’"
+      "text": "Instead, you must only worship the Lord your God. It is he who will save you from the power of all your enemies. ’"
     },
     {
       "verse": "40",
@@ -2052,7 +2052,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So King Hezekiah of Judah sent a message to the king of Assyria, who was in Lachish. Hezekiah said, ‘What I did was wrong. Please take your army out of Judah. Then I will pay you everything that you ask me to pay.’ The king of Assyria told King Hezekiah that he must pay ten tons of silver and one ton of gold."
+      "text": "So King Hezekiah of Judah sent a message to the king of Assyria, who was in Lachish. Hezekiah said, ‘What I did was wrong. Please take your army out of Judah. Then I will pay you everything that you ask me to pay. ’ The king of Assyria told King Hezekiah that he must pay ten tons of silver and one ton of gold."
     },
     {
       "verse": "15",
@@ -2064,15 +2064,15 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "King Sennacherib of Assyria sent his three most important officers from Lachish to Jerusalem, to speak to King Hezekiah. The three officers took a large army with them.They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes."
+      "text": "King Sennacherib of Assyria sent his three most important officers from Lachish to Jerusalem, to speak to King Hezekiah. The three officers took a large army with them. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes."
     },
     {
       "verse": "18",
-      "text": "They told King Hezekiah to come to them. These three people went out to meet them:Hilkiah's son Eliakim, who was the most important officer in the king's palace.Shebna, a government officer.Asaph's son Joah, the king's secretary."
+      "text": "They told King Hezekiah to come to them. These three people went out to meet them: Hilkiah's son Eliakim, who was the most important officer in the king's palace. Shebna, a government officer. Asaph's son Joah, the king's secretary."
     },
     {
       "verse": "19",
-      "text": "One of Sennacherib's officers said to them,‘Tell Hezekiah that the king of Assyria, the great king, says this to him: “Why are you so sure that someone will rescue you from our power?"
+      "text": "One of Sennacherib's officers said to them, ‘Tell Hezekiah that the king of Assyria, the great king, says this to him: “Why are you so sure that someone will rescue you from our power?"
     },
     {
       "verse": "20",
@@ -2084,11 +2084,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But maybe you will say to me, ‘We are trusting the Lord our God to help us.’ But it was your king, Hezekiah, who removed the altars and the special places where you worship your God. He told the people of Judah and Jerusalem, ‘You must worship God only at the altar here in Jerusalem.’ ”"
+      "text": "But maybe you will say to me, ‘We are trusting the Lord our God to help us. ’ But it was your king, Hezekiah, who removed the altars and the special places where you worship your God. He told the people of Judah and Jerusalem, ‘You must worship God only at the altar here in Jerusalem. ’ ”"
     },
     {
       "verse": "23",
-      "text": "So you should make an agreement with my master, the king of Assyria. I will give you 2,000 horses if you have enough riders to put on them."
+      "text": "So you should make an agreement with my master, the king of Assyria. I will give you 2, 000 horses if you have enough riders to put on them."
     },
     {
       "verse": "24",
@@ -2096,15 +2096,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "You should also understand this: It was the Lord himself who commanded me to bring my army here and attack Jerusalem. He said to me, “Attack this country and destroy it!” ’"
+      "text": "You should also understand this: It was the Lord himself who commanded me to bring my army here and attack Jerusalem. He said to me, “Attack this country and destroy it! ” ’"
     },
     {
       "verse": "26",
-      "text": "Then Hilkiah's son Eliakim, Shebna and Joah said to the leader of the Assyrian army, ‘Please sir, speak to us in the Aramaic language. We can understand it. Do not speak to us in the Hebrew language because all the people who are on the wall of the city will understand it.’"
+      "text": "Then Hilkiah's son Eliakim, Shebna and Joah said to the leader of the Assyrian army, ‘Please sir, speak to us in the Aramaic language. We can understand it. Do not speak to us in the Hebrew language because all the people who are on the wall of the city will understand it. ’"
     },
     {
       "verse": "27",
-      "text": "But the Assyrian army leader replied, ‘My master did not send me here to give this message only to your king and to you. The men who are sitting on the city wall also need to hear my master's message. Like you, they will soon have to eat their own dung and to drink their own urine.’"
+      "text": "But the Assyrian army leader replied, ‘My master did not send me here to give this message only to your king and to you. The men who are sitting on the city wall also need to hear my master's message. Like you, they will soon have to eat their own dung and to drink their own urine. ’"
     },
     {
       "verse": "28",
@@ -2116,15 +2116,15 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Do not believe Hezekiah when he tells you that you can trust the Lord to help you. He says, ‘The Lord will surely rescue us. He will not let the king of Assyria take this city for himself.’"
+      "text": "Do not believe Hezekiah when he tells you that you can trust the Lord to help you. He says, ‘The Lord will surely rescue us. He will not let the king of Assyria take this city for himself. ’"
     },
     {
       "verse": "31",
-      "text": "Do not believe what Hezekiah says.” This is what the king of Assyria says: “Show me that you accept my offer of peace and come out of your city. Then you will all live safely in your homes. You will eat the fruit from your own vines and fig trees. You will drink the water from your own wells."
+      "text": "Do not believe what Hezekiah says. ” This is what the king of Assyria says: “Show me that you accept my offer of peace and come out of your city. Then you will all live safely in your homes. You will eat the fruit from your own vines and fig trees. You will drink the water from your own wells."
     },
     {
       "verse": "32",
-      "text": "Later, I will come to Jerusalem. I will take you away to a country that is like your own land here. There will be plenty of grain and new wine for you in that country. There will be bread and there will be vineyards. There will be olive trees and there will be honey. Choose life instead of death! Do not listen to Hezekiah. He is deceiving you when he says, ‘The Lord will rescue us.’"
+      "text": "Later, I will come to Jerusalem. I will take you away to a country that is like your own land here. There will be plenty of grain and new wine for you in that country. There will be bread and there will be vineyards. There will be olive trees and there will be honey. Choose life instead of death! Do not listen to Hezekiah. He is deceiving you when he says, ‘The Lord will rescue us. ’"
     },
     {
       "verse": "33",
@@ -2136,11 +2136,11 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "No god among all the gods of those countries could save their people from my power. So do not think that the Lord can save Jerusalem from my power.” ’"
+      "text": "No god among all the gods of those countries could save their people from my power. So do not think that the Lord can save Jerusalem from my power. ” ’"
     },
     {
       "verse": "36",
-      "text": "When the people who were sitting on the wall heard this, they were quiet. They did not reply, because King Hezekiah had said, ‘Do not answer him.’"
+      "text": "When the people who were sitting on the wall heard this, they were quiet. They did not reply, because King Hezekiah had said, ‘Do not answer him. ’"
     },
     {
       "verse": "37",
@@ -2162,7 +2162,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Assyrian officer has brought a message from his king to insult the God who lives for ever. Maybe the Lord your God has heard that message. He should punish the officer for his wicked message. So please pray for the people who remain in Jerusalem.’"
+      "text": "The Assyrian officer has brought a message from his king to insult the God who lives for ever. Maybe the Lord your God has heard that message. He should punish the officer for his wicked message. So please pray for the people who remain in Jerusalem. ’"
     },
     {
       "verse": "5",
@@ -2174,7 +2174,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Listen to me! I will put a spirit into the king of Assyria's mind. He will hear a report which will cause him to return to his own country. There, in his own land, I will cause someone to kill him with a sword.” ’"
+      "text": "Listen to me! I will put a spirit into the king of Assyria's mind. He will hear a report which will cause him to return to his own country. There, in his own land, I will cause someone to kill him with a sword. ” ’"
     },
     {
       "verse": "8",
@@ -2182,7 +2182,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then the king of Assyria heard a report about Tirhakah, the king of Ethiopia. People told him, ‘He has brought his army from Ethiopia to fight against you.’When the king of Assyria heard that news, he sent another message to Hezekiah in Jerusalem."
+      "text": "Then the king of Assyria heard a report about Tirhakah, the king of Ethiopia. People told him, ‘He has brought his army from Ethiopia to fight against you. ’When the king of Assyria heard that news, he sent another message to Hezekiah in Jerusalem."
     },
     {
       "verse": "10",
@@ -2198,7 +2198,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The kings of Hamath and Arpad have gone. The king of Sepharvaim city has gone. The kings of Hena and Ivvah have also gone.’"
+      "text": "The kings of Hamath and Arpad have gone. The king of Sepharvaim city has gone. The kings of Hena and Ivvah have also gone. ’"
     },
     {
       "verse": "14",
@@ -2222,43 +2222,43 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "So now, our Lord and our God, please save us from the power of Sennacherib! Then all the kingdoms in the world will know that you Lord are the only God.’"
+      "text": "So now, our Lord and our God, please save us from the power of Sennacherib! Then all the kingdoms in the world will know that you Lord are the only God. ’"
     },
     {
       "verse": "20",
-      "text": "Then Amoz's son Isaiah sent this message to Hezekiah: ‘The Lord, Israel's God, says, “I heard your prayer to me about Sennacherib, the king of Assyria.” “The holy people of Zion laugh at you! They think that you are useless. Yes, the people of Jerusalem shake their heads as you run away."
+      "text": "Then Amoz's son Isaiah sent this message to Hezekiah: ‘The Lord, Israel's God, says, “I heard your prayer to me about Sennacherib, the king of Assyria. ” “The holy people of Zion laugh at you! They think that you are useless. Yes, the people of Jerusalem shake their heads as you run away."
     },
     {
       "verse": "21",
-      "text": "This is the Lord's reply. The Lord says this about King Sennacherib:“The holy people of Zion laugh at you!They think that you are useless.Yes, the people of Jerusalem shake their headsas you run away."
+      "text": "This is the Lord's reply. The Lord says this about King Sennacherib:“The holy people of Zion laugh at you! They think that you are useless. Yes, the people of Jerusalem shake their headsas you run away."
     },
     {
       "verse": "22",
-      "text": "Who do you think it is that you have insulted?Who have you shouted at?Who have you looked at so proudly?The answer is the Holy God of Israel! Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel!"
+      "text": "Who do you think it is that you have insulted? Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel! Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel!"
     },
     {
       "verse": "23",
-      "text": "You have sent your servantsto insult the Lord God.You have said, ‘I have taken all my chariotsand I have gone up high mountains,the highest mountains in Lebanon.I have cut down its tall cedar trees,and I have cut down its best pine trees.I went up to its highest places,and I went far into its forests. to insult the Lord God. You have said, ‘I have taken all my chariots and I have gone up high mountains, the highest mountains in Lebanon. I have cut down its tall cedar trees, and I have cut down its best pine trees. I went up to its highest places, and I went far into its forests."
+      "text": "You have sent your servantsto insult the Lord God. You have said, ‘I have taken all my chariotsand I have gone up high mountains, the highest mountains in Lebanon. I have cut down its tall cedar trees, and I have cut down its best pine trees. I went up to its highest places, and I went far into its forests. to insult the Lord God. You have said, ‘I have taken all my chariots and I have gone up high mountains, the highest mountains in Lebanon. I have cut down its tall cedar trees, and I have cut down its best pine trees. I went up to its highest places, and I went far into its forests."
     },
     {
       "verse": "24",
-      "text": "I dug wells in other countries,and they gave me water to drink.My army marched through all the rivers in Egypt,and the rivers became dry.’ and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry.’"
+      "text": "I dug wells in other countries, and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry. ’ and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry. ’"
     },
     {
       "verse": "25",
-      "text": "You said that, but now listen to this!You must surely have heard it already.I decided what to do a long time ago!Now I am causing it to happen.I decided that you would destroy strong citiesso that they became heaps of stones. You must surely have heard it already. I decided what to do a long time ago! Now I am causing it to happen. I decided that you would destroy strong cities so that they became heaps of stones."
+      "text": "You said that, but now listen to this! You must surely have heard it already. I decided what to do a long time ago! Now I am causing it to happen. I decided that you would destroy strong citiesso that they became heaps of stones. You must surely have heard it already. I decided what to do a long time ago! Now I am causing it to happen. I decided that you would destroy strong cities so that they became heaps of stones."
     },
     {
       "verse": "26",
-      "text": "The people of those cities have no power.They are afraid and they are confused.They are like plants in a field,that cannot live for a long time.They are like fresh green grass,or grass that grows on the roof of a house.When a hot wind blows on them,it burns them and they die. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die."
+      "text": "The people of those cities have no power. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die."
     },
     {
       "verse": "27",
-      "text": "I know everything about you.I know where you live.I know when you go out.And I know when you return home.I know how much you shout against me,when you are angry. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry."
+      "text": "I know everything about you. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry."
     },
     {
       "verse": "28",
-      "text": "Yes, you do shout at me!And I have heard all your proud noise.So I will put my hook in your nose.I will tie a rope to your mouth.Then I will pull you back homeby the same way that you came.” And I have heard all your proud noise. So I will put my hook in your nose. I will tie a rope to your mouth. Then I will pull you back home by the same way that you came.”"
+      "text": "Yes, you do shout at me! And I have heard all your proud noise. So I will put my hook in your nose. I will tie a rope to your mouth. Then I will pull you back homeby the same way that you came. ” And I have heard all your proud noise. So I will put my hook in your nose. I will tie a rope to your mouth. Then I will pull you back home by the same way that you came. ”"
     },
     {
       "verse": "29",
@@ -2274,19 +2274,19 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "This is what the Lord says about the king of Assyria:“His army will not come into this city.His soldiers will not shoot any arrows here.They will not attack the city as they hold their shields.They will not build heaps of earth against the city's walls. “His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls."
+      "text": "This is what the Lord says about the king of Assyria:“His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls. “His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls."
     },
     {
       "verse": "33",
-      "text": "No! The king will return home by the way that he came.He will not come into this city.”That is what the Lord says. He will not come into this city.” That is what the Lord says."
+      "text": "No! The king will return home by the way that he came. He will not come into this city. ”That is what the Lord says. He will not come into this city. ” That is what the Lord says."
     },
     {
       "verse": "34",
-      "text": "“I will make this city safe and I will rescue it.I will do that to show that I am great.I promised my servant David that I would do it. So I will do it.” ’ I will do that to show that I am great. I promised my servant David that I would do it. So I will do it.” ’"
+      "text": "“I will make this city safe and I will rescue it. I will do that to show that I am great. I promised my servant David that I would do it. So I will do it. ” ’ I will do that to show that I am great. I promised my servant David that I would do it. So I will do it. ” ’"
     },
     {
       "verse": "35",
-      "text": "That night, the Lord's angel went to the camp of the Assyrian army. He killed 185,000 of their soldiers. When people got up in the morning, they saw all those dead bodies!"
+      "text": "That night, the Lord's angel went to the camp of the Assyrian army. He killed 185, 000 of their soldiers. When people got up in the morning, they saw all those dead bodies!"
     },
     {
       "verse": "36",
@@ -2300,7 +2300,7 @@ module.exports = {
   "20": [
     {
       "verse": "1",
-      "text": "At that time, Hezekiah became very ill. He nearly died. Then Amoz's son, Isaiah the prophet, went to Hezekiah. He said to Hezekiah, ‘This is what the Lord says: “You will soon die. You will not get better. So you must tell your family what to do after your death.” ’"
+      "text": "At that time, Hezekiah became very ill. He nearly died. Then Amoz's son, Isaiah the prophet, went to Hezekiah. He said to Hezekiah, ‘This is what the Lord says: “You will soon die. You will not get better. So you must tell your family what to do after your death. ” ’"
     },
     {
       "verse": "2",
@@ -2308,7 +2308,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He said, ‘Lord, please remember that I have served you well. I have always obeyed you. You could trust me to do the things that you told me to do.’ Hezekiah wept very much."
+      "text": "He said, ‘Lord, please remember that I have served you well. I have always obeyed you. You could trust me to do the things that you told me to do. ’ Hezekiah wept very much."
     },
     {
       "verse": "4",
@@ -2320,23 +2320,23 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "more years. I will rescue you and this city from the power of the king of Assyria. I will keep Jerusalem safe, because I do what is right and I made a promise to my servant David.” ’"
+      "text": "more years. I will rescue you and this city from the power of the king of Assyria. I will keep Jerusalem safe, because I do what is right and I made a promise to my servant David. ” ’"
     },
     {
       "verse": "7",
-      "text": "Then Isaiah said, ‘Take some figs to make a medicine.’ So the king's servants did what Isaiah had said. They put the medicine on Hezekiah's boil. He became well again."
+      "text": "Then Isaiah said, ‘Take some figs to make a medicine. ’ So the king's servants did what Isaiah had said. They put the medicine on Hezekiah's boil. He became well again."
     },
     {
       "verse": "8",
-      "text": "Hezekiah had asked Isaiah, ‘What will show me that the Lord will make me well again? How will I know that I will go up to the Lord's temple on the third day from now?’"
+      "text": "Hezekiah had asked Isaiah, ‘What will show me that the Lord will make me well again? How will I know that I will go up to the Lord's temple on the third day from now? ’"
     },
     {
       "verse": "9",
-      "text": "Isaiah answered, ‘The Lord will do a miracle to show you that he will do what he has promised. Do you want the shadow on these stairs to move down ten steps? Or do you want the shadow to go back up ten steps?’"
+      "text": "Isaiah answered, ‘The Lord will do a miracle to show you that he will do what he has promised. Do you want the shadow on these stairs to move down ten steps? Or do you want the shadow to go back up ten steps? ’"
     },
     {
       "verse": "10",
-      "text": "Hezekiah said, ‘It is easy to cause the shadow to move down ten steps. So I want it to go back up ten steps.’"
+      "text": "Hezekiah said, ‘It is easy to cause the shadow to move down ten steps. So I want it to go back up ten steps. ’"
     },
     {
       "verse": "11",
@@ -2352,11 +2352,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Then Isaiah the prophet went to King Hezekiah. Isaiah asked the king, ‘What did those men say? Where did they come from?’ Hezekiah replied, ‘They came from Babylon, far away.’"
+      "text": "Then Isaiah the prophet went to King Hezekiah. Isaiah asked the king, ‘What did those men say? Where did they come from? ’ Hezekiah replied, ‘They came from Babylon, far away. ’"
     },
     {
       "verse": "15",
-      "text": "Isaiah asked, ‘What did they see in your palace?’ Hezekiah said, ‘They saw everything that is in my palace. I showed all my valuable things to them.’"
+      "text": "Isaiah asked, ‘What did they see in your palace? ’ Hezekiah said, ‘They saw everything that is in my palace. I showed all my valuable things to them. ’"
     },
     {
       "verse": "16",
@@ -2368,11 +2368,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Some of your own descendants will also go to Babylon. Soldiers from Babylon will take them away from here. Your descendants will become eunuchs in the king of Babylon's palace.” That is what the Lord says. ’"
+      "text": "Some of your own descendants will also go to Babylon. Soldiers from Babylon will take them away from here. Your descendants will become eunuchs in the king of Babylon's palace. ” That is what the Lord says. ’"
     },
     {
       "verse": "19",
-      "text": "Hezekiah said to Isaiah, ‘The Lord's message that you have spoken to me is good.’ But he was thinking, ‘While I am still alive, people will live safely without any trouble.’"
+      "text": "Hezekiah said to Isaiah, ‘The Lord's message that you have spoken to me is good. ’ But he was thinking, ‘While I am still alive, people will live safely without any trouble. ’"
     },
     {
       "verse": "20",
@@ -2398,7 +2398,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He built altars in the Lord's temple. The Lord had said about his temple, ‘That is my home in Jerusalem where people will worship me.’"
+      "text": "He built altars in the Lord's temple. The Lord had said about his temple, ‘That is my home in Jerusalem where people will worship me. ’"
     },
     {
       "verse": "5",
@@ -2414,7 +2414,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I will never cause the Israelite people to leave this land that I gave to their ancestors. But they must be careful to obey all my commands and all my Law that my servant Moses gave to them.’"
+      "text": "I will never cause the Israelite people to leave this land that I gave to their ancestors. But they must be careful to obey all my commands and all my Law that my servant Moses gave to them. ’"
     },
     {
       "verse": "9",
@@ -2442,7 +2442,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "My people have done things that I say are evil. They have made me very angry. They have continued to do that since their ancestors came out from Egypt, until today.” ’"
+      "text": "My people have done things that I say are evil. They have made me very angry. They have continued to do that since their ancestors came out from Egypt, until today. ” ’"
     },
     {
       "verse": "16",
@@ -2516,19 +2516,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The leaders of the work are honest men. So they do not need to give a report on how they use the money.’"
+      "text": "The leaders of the work are honest men. So they do not need to give a report on how they use the money. ’"
     },
     {
       "verse": "8",
-      "text": "Hilkiah, the leader of the priests, told Shaphan, the king's secretary, ‘I have found the Book of the Law in the Lord's temple.’ He gave the book to Shaphan and Shaphan read it."
+      "text": "Hilkiah, the leader of the priests, told Shaphan, the king's secretary, ‘I have found the Book of the Law in the Lord's temple. ’ He gave the book to Shaphan and Shaphan read it."
     },
     {
       "verse": "9",
-      "text": "Then Shaphan went to the king. He said to him, ‘Your officers have paid out all the money that was in the Lord's temple. They have given it to the men who are working on the temple repairs and to their leaders.’"
+      "text": "Then Shaphan went to the king. He said to him, ‘Your officers have paid out all the money that was in the Lord's temple. They have given it to the men who are working on the temple repairs and to their leaders. ’"
     },
     {
       "verse": "10",
-      "text": "Then Shaphan told the king, ‘Hilkiah the priest has given me a book.’ Shaphan started to read the book while the king listened."
+      "text": "Then Shaphan told the king, ‘Hilkiah the priest has given me a book. ’ Shaphan started to read the book while the king listened."
     },
     {
       "verse": "11",
@@ -2540,7 +2540,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He told them, ‘Go to the temple. Ask the Lord about the message in this book that Hilkiah has found. I need to know what I should do, as well as all the people of Judah. The Lord has become very angry with us because our ancestors have not obeyed the words in this book. They have not done the things that it tells us we should do.’"
+      "text": "He told them, ‘Go to the temple. Ask the Lord about the message in this book that Hilkiah has found. I need to know what I should do, as well as all the people of Judah. The Lord has become very angry with us because our ancestors have not obeyed the words in this book. They have not done the things that it tells us we should do. ’"
     },
     {
       "verse": "14",
@@ -2556,7 +2556,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I will send this trouble because they have turned away from me. They have offered sacrifices to other gods. I am very angry with them because of all the idols that they have made for themselves. My anger is like a fire that is burning and nobody can stop it!”"
+      "text": "I will send this trouble because they have turned away from me. They have offered sacrifices to other gods. I am very angry with them because of all the idols that they have made for themselves. My anger is like a fire that is burning and nobody can stop it! ”"
     },
     {
       "verse": "18",
@@ -2568,7 +2568,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place.” That is what the Lord says.’The men took Huldah's answer back to the king."
+      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place. ” That is what the Lord says. ’The men took Huldah's answer back to the king."
     }
   ],
   "23": [
@@ -2622,7 +2622,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "King Josiah also destroyed the altars that were on the hills east of Jerusalem. Those altars were on the south side of Mount Trouble. King Solomon had built them to worship these false gods:Ashtoreth, a wicked female god that the people in Sidon worshipped.Chemosh, a wicked god that the people in Moab worshipped.Molech, the evil god that the people in Ammon worshipped."
+      "text": "King Josiah also destroyed the altars that were on the hills east of Jerusalem. Those altars were on the south side of Mount Trouble. King Solomon had built them to worship these false gods: Ashtoreth, a wicked female god that the people in Sidon worshipped. Chemosh, a wicked god that the people in Moab worshipped. Molech, the evil god that the people in Ammon worshipped."
     },
     {
       "verse": "14",
@@ -2634,15 +2634,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then Josiah looked around and he saw graves on the hill. He sent someone to bring the bones from them. He burned them on the altar, so that people could not use it again. The Lord had said that this would happen when King Jeroboam was standing beside the altar. A man of God had spoken God's message to Jeroboam during a festival.Josiah looked up and he saw the grave of the man of God who had spoken God's message."
+      "text": "Then Josiah looked around and he saw graves on the hill. He sent someone to bring the bones from them. He burned them on the altar, so that people could not use it again. The Lord had said that this would happen when King Jeroboam was standing beside the altar. A man of God had spoken God's message to Jeroboam during a festival. Josiah looked up and he saw the grave of the man of God who had spoken God's message."
     },
     {
       "verse": "17",
-      "text": "He asked, ‘Whose grave stone is that?’ The men from Bethel city said to him, ‘It is the grave of the man of God who came from Judah. You have now done to this altar at Bethel the things that he said would happen.’"
+      "text": "He asked, ‘Whose grave stone is that? ’ The men from Bethel city said to him, ‘It is the grave of the man of God who came from Judah. You have now done to this altar at Bethel the things that he said would happen. ’"
     },
     {
       "verse": "18",
-      "text": "King Josiah said, ‘Do not do anything to his grave. Do not remove his bones.’ So they did not do anything with the bones of the man of God. They also left the bones of the old prophet who had come from Samaria."
+      "text": "King Josiah said, ‘Do not do anything to his grave. Do not remove his bones. ’ So they did not do anything with the bones of the man of God. They also left the bones of the old prophet who had come from Samaria."
     },
     {
       "verse": "19",
@@ -2654,7 +2654,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Then the king commanded all the people, ‘The Book of God's Covenant teaches about the Passover festival. Now you must eat that Passover meal to give honour to the Lord your God.’"
+      "text": "Then the king commanded all the people, ‘The Book of God's Covenant teaches about the Passover festival. Now you must eat that Passover meal to give honour to the Lord your God. ’"
     },
     {
       "verse": "22",
@@ -2702,7 +2702,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Pharaoh Necho kept him in a prison at Riblah, so that Jehoahaz could not rule in Jerusalem. Riblah is in the Hamath region. Necho made Judah pay tax to him. It was 3,400 kilograms of silver and 34 kilograms of gold."
+      "text": "Pharaoh Necho kept him in a prison at Riblah, so that Jehoahaz could not rule in Jerusalem. Riblah is in the Hamath region. Necho made Judah pay tax to him. It was 3, 400 kilograms of silver and 34 kilograms of gold."
     },
     {
       "verse": "34",
@@ -2776,7 +2776,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Nebuchadnezzar took away as his prisoners all the people who lived in Jerusalem. There were 10,000 people. They included all the officers and all the soldiers. He also took away the people who had special skills to work with wood and metal. The only people who remained in Judah were the very poor people."
+      "text": "Nebuchadnezzar took away as his prisoners all the people who lived in Jerusalem. There were 10, 000 people. They included all the officers and all the soldiers. He also took away the people who had special skills to work with wood and metal. The only people who remained in Judah were the very poor people."
     },
     {
       "verse": "15",
@@ -2784,7 +2784,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The king of Babylon also took away to Babylon all the soldiers of Judah's army. There were 7,000 soldiers. They included the best fighters. He also took 1,000 workers who had special skills to make things with wood and metal."
+      "text": "The king of Babylon also took away to Babylon all the soldiers of Judah's army. There were 7, 000 soldiers. They included the best fighters. He also took 1, 000 workers who had special skills to make things with wood and metal."
     },
     {
       "verse": "17",
@@ -2800,7 +2800,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "All this trouble happened to Jerusalem and to Judah because the Lord was very angry with them. In the end, the Lord sent them away from himself.This is what happened when King Zedekiah turned against the king of Babylon."
+      "text": "All this trouble happened to Jerusalem and to Judah because the Lord was very angry with them. In the end, the Lord sent them away from himself. This is what happened when King Zedekiah turned against the king of Babylon."
     }
   ],
   "25": [
@@ -2874,11 +2874,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Captain Nebuzaradan took hold of these people:Seraiah, the leader of the priests,Zephaniah, the next most important priest,and the three temple guards."
+      "text": "Captain Nebuzaradan took hold of these people: Seraiah, the leader of the priests, Zephaniah, the next most important priest, and the three temple guards."
     },
     {
       "verse": "19",
-      "text": "He also took hold of these people who remained in Jerusalem:The palace officer with authority over the soldiers,five of the king's advisors,the army secretary who took men to join the army,and 60 other people of Judah who were in the city."
+      "text": "He also took hold of these people who remained in Jerusalem: The palace officer with authority over the soldiers, five of the king's advisors, the army secretary who took men to join the army, and 60 other people of Judah who were in the city."
     },
     {
       "verse": "20",
@@ -2886,7 +2886,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "There, at Riblah, the king of Babylon commanded his soldiers to punish them all with death.That was how Judah's people went into exile, away from their own land."
+      "text": "There, at Riblah, the king of Babylon commanded his soldiers to punish them all with death. That was how Judah's people went into exile, away from their own land."
     },
     {
       "verse": "22",
@@ -2894,11 +2894,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The officers of Judah's army and their men heard news that the king of Babylon had chosen Gedaliah to be the ruler of Judah. So they went to meet Gedaliah at Mizpah. The army officers were:Nethaniah's son Ishmael,Kareah's son Johanan,Seraiah, the son of Tanhumeth, who came from Netophah,and Jaazaniah, whose father came from Maakah."
+      "text": "The officers of Judah's army and their men heard news that the king of Babylon had chosen Gedaliah to be the ruler of Judah. So they went to meet Gedaliah at Mizpah. The army officers were: Nethaniah's son Ishmael, Kareah's son Johanan, Seraiah, the son of Tanhumeth, who came from Netophah, and Jaazaniah, whose father came from Maakah."
     },
     {
       "verse": "24",
-      "text": "Gedaliah promised that he would not hurt these officers or the men who were with them. He said to them, ‘Do not be afraid to serve the soldiers from Babylon. Make your homes here in our land, but agree to serve the king of Babylon. If you do that, you will be successful.’"
+      "text": "Gedaliah promised that he would not hurt these officers or the men who were with them. He said to them, ‘Do not be afraid to serve the soldiers from Babylon. Make your homes here in our land, but agree to serve the king of Babylon. If you do that, you will be successful. ’"
     },
     {
       "verse": "25",

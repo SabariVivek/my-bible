@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I am writing to you, Timothy. You are like my own child, and I love you very much.I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
+      "text": "I am writing to you, Timothy. You are like my own child, and I love you very much. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
     },
     {
       "verse": "3",
@@ -116,15 +116,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "We all know that this is true:‘If we have died with Christ in this world,we will also live with him in the future world. ‘If we have died with Christ in this world, we will also live with him in the future world."
+      "text": "We all know that this is true:‘If we have died with Christ in this world, we will also live with him in the future world. ‘If we have died with Christ in this world, we will also live with him in the future world."
     },
     {
       "verse": "12",
-      "text": "If we continue to be strong during troubles here,we will also rule with him there in heaven.But if we say that we do not know Christ,he will also say that he does not know us. we will also rule with him there in heaven. But if we say that we do not know Christ, he will also say that he does not know us."
+      "text": "If we continue to be strong during troubles here, we will also rule with him there in heaven. But if we say that we do not know Christ, he will also say that he does not know us. we will also rule with him there in heaven. But if we say that we do not know Christ, he will also say that he does not know us."
     },
     {
       "verse": "13",
-      "text": "Even if we no longer trust him,he will still be someone that people can trust.He will always remain true to his nature.’ he will still be someone that people can trust. He will always remain true to his nature.’"
+      "text": "Even if we no longer trust him, he will still be someone that people can trust. He will always remain true to his nature. ’ he will still be someone that people can trust. He will always remain true to his nature. ’"
     },
     {
       "verse": "14",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But the group of true believers remains strong, like the foundation under a building. God has written his message there. It says, ‘The Lord knows who his own people are.’ It also says, ‘Everyone who says that he belongs to the Lord must stop doing bad things.’"
+      "text": "But the group of true believers remains strong, like the foundation under a building. God has written his message there. It says, ‘The Lord knows who his own people are. ’ It also says, ‘Everyone who says that he belongs to the Lord must stop doing bad things. ’"
     },
     {
       "verse": "20",

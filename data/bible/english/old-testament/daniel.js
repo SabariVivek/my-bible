@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Nebuchadnezzar had an officer who was called Ashpenaz. Ashpenaz had authority over the king's other officers. One day, Nebuchadnezzar said to Ashpenaz, ‘Bring some of the Israelite men to me. Choose some men from the king of Judah's family, and choose some men from the other important Israelite families.’"
+      "text": "Nebuchadnezzar had an officer who was called Ashpenaz. Ashpenaz had authority over the king's other officers. One day, Nebuchadnezzar said to Ashpenaz, ‘Bring some of the Israelite men to me. Choose some men from the king of Judah's family, and choose some men from the other important Israelite families. ’"
     },
     {
       "verse": "4",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But the officer said to Daniel, ‘I am afraid of the king, who is my master. He has chosen the food that he wants you to eat. If you eat different food, you might become weaker than the other young men. If the king sees that, he might kill me!’"
+      "text": "But the officer said to Daniel, ‘I am afraid of the king, who is my master. He has chosen the food that he wants you to eat. If you eat different food, you might become weaker than the other young men. If the king sees that, he might kill me! ’"
     },
     {
       "verse": "11",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "After ten days, see what our faces and our bodies look like. Also see what the other young men who eat the king's food look like. When you look at them and you look at us, you can decide what to do with us.’"
+      "text": "After ten days, see what our faces and our bodies look like. Also see what the other young men who eat the king's food look like. When you look at them and you look at us, you can decide what to do with us. ’"
     },
     {
       "verse": "14",
@@ -96,11 +96,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then the king said to them, ‘I have had a dream that gives me trouble in my mind. I want to know what the dream means.’"
+      "text": "Then the king said to them, ‘I have had a dream that gives me trouble in my mind. I want to know what the dream means. ’"
     },
     {
       "verse": "4",
-      "text": "Then the wise men answered the king. (This is in the Aramaic language. ) They said, ‘King, live for ever! We are your servants. Tell us the dream. Then we will tell you what it means.’"
+      "text": "Then the wise men answered the king. (This is in the Aramaic language. ) They said, ‘King, live for ever! We are your servants. Tell us the dream. Then we will tell you what it means. ’"
     },
     {
       "verse": "5",
@@ -108,11 +108,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You must tell me about the dream and you must tell me what it means. If you do that, I will give to you many gifts and great honour. So you must tell me my dream, and tell me what it means.’"
+      "text": "You must tell me about the dream and you must tell me what it means. If you do that, I will give to you many gifts and great honour. So you must tell me my dream, and tell me what it means. ’"
     },
     {
       "verse": "7",
-      "text": "They answered the king again, ‘We are your servants, so please tell us your dream. Then we will tell you what it means.’"
+      "text": "They answered the king again, ‘We are your servants, so please tell us your dream. Then we will tell you what it means. ’"
     },
     {
       "verse": "8",
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "If you do not tell me the dream, I will certainly punish you with death. You have agreed among yourselves to tell me lies. You want to deceive me until you can think of something better. So now, tell me the dream. Then I will believe you when you tell me what it means.’"
+      "text": "If you do not tell me the dream, I will certainly punish you with death. You have agreed among yourselves to tell me lies. You want to deceive me until you can think of something better. So now, tell me the dream. Then I will believe you when you tell me what it means. ’"
     },
     {
       "verse": "10",
@@ -128,15 +128,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "You are asking us to do something much too difficult! Nobody can do it, except the gods. And they do not live among men.’"
+      "text": "You are asking us to do something much too difficult! Nobody can do it, except the gods. And they do not live among men. ’"
     },
     {
       "verse": "12",
-      "text": "This made the king very angry. So he said to his soldiers, ‘Kill all the wise men in Babylon.’"
+      "text": "This made the king very angry. So he said to his soldiers, ‘Kill all the wise men in Babylon. ’"
     },
     {
       "verse": "13",
-      "text": "He sent a message to command them to kill all his wise men.Some men went to look for Daniel and his friends too. They wanted to punish them with death."
+      "text": "He sent a message to command them to kill all his wise men. Some men went to look for Daniel and his friends too. They wanted to punish them with death."
     },
     {
       "verse": "14",
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Daniel said to Arioch, ‘Why is the king's command so cruel?’ Then Arioch explained everything to Daniel."
+      "text": "Daniel said to Arioch, ‘Why is the king's command so cruel? ’ Then Arioch explained everything to Daniel."
     },
     {
       "verse": "16",
@@ -164,31 +164,31 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "He said,‘Praise God's great name for ever!He has great wisdom and great power."
+      "text": "He said, ‘Praise God's great name for ever! He has great wisdom and great power."
     },
     {
       "verse": "21",
-      "text": "He makes things happen at the right time.He gives to some kings authority to rule.And he takes that authority away from other kings.He causes some people to become wise.He helps people to understand the things that they learn. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn."
+      "text": "He makes things happen at the right time. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn."
     },
     {
       "verse": "22",
-      "text": "He explains difficult problems and secret things.He knows about all things,even when they are in dark places.He himself lives in the light. He knows about all things, even when they are in dark places. He himself lives in the light."
+      "text": "He explains difficult problems and secret things. He knows about all things, even when they are in dark places. He himself lives in the light. He knows about all things, even when they are in dark places. He himself lives in the light."
     },
     {
       "verse": "23",
-      "text": "My ancestors' God,I thank you and I praise you!You have made me wiseand you have made me strong.We asked you to help us,and now you have shown me your answer.You have explained the king's problem to us.So I thank you.’ I thank you and I praise you! You have made me wise and you have made me strong. We asked you to help us, and now you have shown me your answer. You have explained the king's problem to us. So I thank you.’"
+      "text": "My ancestors' God, I thank you and I praise you! You have made me wiseand you have made me strong. We asked you to help us, and now you have shown me your answer. You have explained the king's problem to us. So I thank you. ’ I thank you and I praise you! You have made me wise and you have made me strong. We asked you to help us, and now you have shown me your answer. You have explained the king's problem to us. So I thank you. ’"
     },
     {
       "verse": "24",
-      "text": "So Daniel went to see Arioch, the king's officer. The king had told Arioch to kill all the wise men of Babylon. But Daniel said to him, ‘Do not kill Babylon's wise men. Take me to the king. Then I will tell the king what his dream means.’"
+      "text": "So Daniel went to see Arioch, the king's officer. The king had told Arioch to kill all the wise men of Babylon. But Daniel said to him, ‘Do not kill Babylon's wise men. Take me to the king. Then I will tell the king what his dream means. ’"
     },
     {
       "verse": "25",
-      "text": "Then Arioch quickly took Daniel to meet the king. He said, ‘I have found this man, who is one of the people that you brought from Judah. He can tell you, sir, what your dream means.’"
+      "text": "Then Arioch quickly took Daniel to meet the king. He said, ‘I have found this man, who is one of the people that you brought from Judah. He can tell you, sir, what your dream means. ’"
     },
     {
       "verse": "26",
-      "text": "The king spoke to Daniel, whose other name was Belteshazzar. He asked Daniel, ‘Can you tell me my dream? And can you tell me what it means?’"
+      "text": "The king spoke to Daniel, whose other name was Belteshazzar. He asked Daniel, ‘Can you tell me my dream? And can you tell me what it means? ’"
     },
     {
       "verse": "27",
@@ -204,7 +204,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "I am not more wise than other people. But God has explained your secret dream to me, because he wants you to know what it means. He wants you to understand the thoughts in your mind.’"
+      "text": "I am not more wise than other people. But God has explained your secret dream to me, because he wants you to know what it means. He wants you to understand the thoughts in your mind. ’"
     },
     {
       "verse": "31",
@@ -224,7 +224,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Then the iron, the clay, the bronze, the silver and the gold all broke into pieces. They became like chaff that the wind blows away. Nobody could see any of those pieces any more. But the stone that had hit the statue became a large mountain. It filled the whole earth.’"
+      "text": "Then the iron, the clay, the bronze, the silver and the gold all broke into pieces. They became like chaff that the wind blows away. Nobody could see any of those pieces any more. But the stone that had hit the statue became a large mountain. It filled the whole earth. ’"
     },
     {
       "verse": "36",
@@ -260,11 +260,11 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "During the time when those kings rule, the God of heaven will begin a new kingdom. That kingdom will continue for ever. No other people will ever have power over it. It will break up all those other kingdoms and it will destroy them. And it will continue for ever. In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true.’"
+      "text": "During the time when those kings rule, the God of heaven will begin a new kingdom. That kingdom will continue for ever. No other people will ever have power over it. It will break up all those other kingdoms and it will destroy them. And it will continue for ever. In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true. ’"
     },
     {
       "verse": "45",
-      "text": "You saw the stone that came from the mountain. It was not a human hand that cut it out. That stone broke the iron, the bronze, the clay, the silver and the gold into pieces.In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true.’"
+      "text": "You saw the stone that came from the mountain. It was not a human hand that cut it out. That stone broke the iron, the bronze, the clay, the silver and the gold into pieces. In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true. ’"
     },
     {
       "verse": "46",
@@ -272,7 +272,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "The king said to Daniel, ‘It is true that your God rules all other gods. He rules over kings and he explains secret things. I know this because you were able to explain this dream to me.’"
+      "text": "The king said to Daniel, ‘It is true that your God rules all other gods. He rules over kings and he explains secret things. I know this because you were able to explain this dream to me. ’"
     },
     {
       "verse": "48",
@@ -306,7 +306,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The king will punish anyone who does not do that. His soldiers will throw them immediately into a very hot fire.’"
+      "text": "The king will punish anyone who does not do that. His soldiers will throw them immediately into a very hot fire. ’"
     },
     {
       "verse": "7",
@@ -330,7 +330,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "But there are some Jewish men who do not obey you. They are Shadrach, Meshach and Abednego. You gave them authority to take care of everything in Babylon region. Those men do not respect your authority. They do not give honour to your gods. They do not worship your gold statue.’"
+      "text": "But there are some Jewish men who do not obey you. They are Shadrach, Meshach and Abednego. You gave them authority to take care of everything in Babylon region. Those men do not respect your authority. They do not give honour to your gods. They do not worship your gold statue. ’"
     },
     {
       "verse": "13",
@@ -342,7 +342,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Next time you hear the sound of the special music, you must obey my rule. You must bend down and you must worship the statue that I have built. If you do not worship the statue, my servants will throw you immediately into the middle of a very hot fire. There is no god who can save you from my power.’"
+      "text": "Next time you hear the sound of the special music, you must obey my rule. You must bend down and you must worship the statue that I have built. If you do not worship the statue, my servants will throw you immediately into the middle of a very hot fire. There is no god who can save you from my power. ’"
     },
     {
       "verse": "16",
@@ -354,15 +354,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But even if he does not save us, we still would not serve your gods. And we will not worship the gold statue that you have built. We want you to understand that very clearly, sir.’"
+      "text": "But even if he does not save us, we still would not serve your gods. And we will not worship the gold statue that you have built. We want you to understand that very clearly, sir. ’"
     },
     {
       "verse": "19",
-      "text": "Then Nebuchadnezzar was even more angry with Shadrach, Meshach and Abednego. His face became red. He said to his servants, ‘Make the fire in the oven seven times hotter than usual.’"
+      "text": "Then Nebuchadnezzar was even more angry with Shadrach, Meshach and Abednego. His face became red. He said to his servants, ‘Make the fire in the oven seven times hotter than usual. ’"
     },
     {
       "verse": "20",
-      "text": "He told the strongest men in his army, ‘Tie up Shadrach, Meshach and Abednego. Then throw them into the very hot fire!’"
+      "text": "He told the strongest men in his army, ‘Tie up Shadrach, Meshach and Abednego. Then throw them into the very hot fire! ’"
     },
     {
       "verse": "21",
@@ -378,15 +378,15 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "What King Nebuchadnezzar saw next surprised him very much. He jumped up and he shouted to his officers, ‘We tied up three men and we threw them into the fire. Isn't that right?’ The officers answered the king, ‘Yes, sir, we certainly did that.’"
+      "text": "What King Nebuchadnezzar saw next surprised him very much. He jumped up and he shouted to his officers, ‘We tied up three men and we threw them into the fire. Isn't that right? ’ The officers answered the king, ‘Yes, sir, we certainly did that. ’"
     },
     {
       "verse": "25",
-      "text": "The king said, ‘But I see four men walking about in the fire! No ropes are holding them and the fire has not hurt them. The fourth man seems like a son of the gods.’"
+      "text": "The king said, ‘But I see four men walking about in the fire! No ropes are holding them and the fire has not hurt them. The fourth man seems like a son of the gods. ’"
     },
     {
       "verse": "26",
-      "text": "King Nebuchadnezzar went near to the door of the oven where the very hot fire was. He shouted aloud to the men inside, ‘Shadrach, Meshach and Abednego, I see that you are servants of the powerful God who rules over everything. Now come out here!’So Shadrach, Meshach and Abednego came out of the fire."
+      "text": "King Nebuchadnezzar went near to the door of the oven where the very hot fire was. He shouted aloud to the men inside, ‘Shadrach, Meshach and Abednego, I see that you are servants of the powerful God who rules over everything. Now come out here! ’So Shadrach, Meshach and Abednego came out of the fire."
     },
     {
       "verse": "27",
@@ -398,7 +398,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "No other god can save people like their God has done for them. So I make a command for the people of every nation who speak any language. They must never say anything against the God of Shadrach, Meshach and Abednego. If anyone does that, my soldiers will cut them into pieces. They will knock down those people's houses so that they become heaps of stones.’"
+      "text": "No other god can save people like their God has done for them. So I make a command for the people of every nation who speak any language. They must never say anything against the God of Shadrach, Meshach and Abednego. If anyone does that, my soldiers will cut them into pieces. They will knock down those people's houses so that they become heaps of stones. ’"
     },
     {
       "verse": "30",
@@ -408,15 +408,15 @@ module.exports = {
   "4": [
     {
       "verse": "1",
-      "text": "This is a message from King Nebuchadnezzar.I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives."
+      "text": "This is a message from King Nebuchadnezzar. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives."
     },
     {
       "verse": "2",
-      "text": "I am happy to tell you about the powerful God who rules over everything.He has done miracles and great things for me. He has done miracles and great things for me."
+      "text": "I am happy to tell you about the powerful God who rules over everything. He has done miracles and great things for me. He has done miracles and great things for me."
     },
     {
       "verse": "3",
-      "text": "His miracles show his great strength.They are very powerful.His kingdom will continue for ever.He will always rule. They are very powerful. His kingdom will continue for ever. He will always rule."
+      "text": "His miracles show his great strength. They are very powerful. His kingdom will continue for ever. He will always rule. They are very powerful. His kingdom will continue for ever. He will always rule."
     },
     {
       "verse": "4",
@@ -464,7 +464,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But leave the base of the tree and its roots in the ground. Tie iron and bronze round it. Then leave it there in the grass.Make him wet with dew from the sky. Cause him to live with the animals in the fields of grass."
+      "text": "But leave the base of the tree and its roots in the ground. Tie iron and bronze round it. Then leave it there in the grass. Make him wet with dew from the sky. Cause him to live with the animals in the fields of grass."
     },
     {
       "verse": "16",
@@ -472,15 +472,15 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The holy angels who take care of the earth have decided this. It is their command. Now everyone will be sure that the powerful God above rules over human kingdoms. He gives authority to rule to anyone that he chooses. He causes humble men to rule as kings.” ’"
+      "text": "The holy angels who take care of the earth have decided this. It is their command. Now everyone will be sure that the powerful God above rules over human kingdoms. He gives authority to rule to anyone that he chooses. He causes humble men to rule as kings. ” ’"
     },
     {
       "verse": "18",
-      "text": "Then I said to Belteshazzar, ‘This is the dream that I, King Nebuchadnezzar, had. Now, you must tell me what it means. None of the wise men in any region of my kingdom can tell me what it means. But you can tell me, because the spirit of the holy gods is in you.’"
+      "text": "Then I said to Belteshazzar, ‘This is the dream that I, King Nebuchadnezzar, had. Now, you must tell me what it means. None of the wise men in any region of my kingdom can tell me what it means. But you can tell me, because the spirit of the holy gods is in you. ’"
     },
     {
       "verse": "19",
-      "text": "Daniel, whose other name was Belteshazzar, was upset for a short time. His thoughts caused him a lot of trouble. The king said, ‘Belteshazzar, do not let the dream or what it means cause you trouble.’Then Belteshazzar answered the king. ‘Sir, I would like the dream to be about your enemies and not about you."
+      "text": "Daniel, whose other name was Belteshazzar, was upset for a short time. His thoughts caused him a lot of trouble. The king said, ‘Belteshazzar, do not let the dream or what it means cause you trouble. ’Then Belteshazzar answered the king. ‘Sir, I would like the dream to be about your enemies and not about you."
     },
     {
       "verse": "20",
@@ -496,7 +496,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "In your dream, you saw a holy angel who came down from heaven. He said, “Cut down the tree and destroy it. But leave the base of the tree and its roots in the ground. Tie iron and bronze round it. Then leave it in the grass. Make him wet with dew from the sky. Cause him to live in the fields with the wild animals for seven years.”"
+      "text": "In your dream, you saw a holy angel who came down from heaven. He said, “Cut down the tree and destroy it. But leave the base of the tree and its roots in the ground. Tie iron and bronze round it. Then leave it in the grass. Make him wet with dew from the sky. Cause him to live in the fields with the wild animals for seven years. ”"
     },
     {
       "verse": "24",
@@ -512,7 +512,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So King Nebuchadnezzar, please do as I suggest. Stop doing bad things. Start to do things that are right. Turn away from your sins. Instead, be kind to poor people. Then, perhaps, you will continue to be comfortable and happy.’"
+      "text": "So King Nebuchadnezzar, please do as I suggest. Stop doing bad things. Start to do things that are right. Turn away from your sins. Instead, be kind to poor people. Then, perhaps, you will continue to be comfortable and happy. ’"
     },
     {
       "verse": "28",
@@ -524,7 +524,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The king said, ‘Look how great Babylon is! It is the city that I have built to be my home as king. It shows that I am a great and powerful king!’"
+      "text": "The king said, ‘Look how great Babylon is! It is the city that I have built to be my home as king. It shows that I am a great and powerful king! ’"
     },
     {
       "verse": "31",
@@ -532,7 +532,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "People will chase you away from the city so that you live with the wild animals. You will eat grass as cows do. I will cause you to live like that for seven years. Then you will understand that the powerful God above rules over human kingdoms. He gives authority to rule to anyone that he chooses.’"
+      "text": "People will chase you away from the city so that you live with the wild animals. You will eat grass as cows do. I will cause you to live like that for seven years. Then you will understand that the powerful God above rules over human kingdoms. He gives authority to rule to anyone that he chooses. ’"
     },
     {
       "verse": "33",
@@ -540,11 +540,11 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "At the end of that time, I, Nebuchadnezzar, looked up towards heaven. My own mind returned to me again. I praised the powerful God above who lives for ever. I worshipped him as a great God.His kingdom will continue for ever.He will always have authority to rule. His kingdom will continue for ever. He will always have authority to rule."
+      "text": "At the end of that time, I, Nebuchadnezzar, looked up towards heaven. My own mind returned to me again. I praised the powerful God above who lives for ever. I worshipped him as a great God. His kingdom will continue for ever. He will always have authority to rule. His kingdom will continue for ever. He will always have authority to rule."
     },
     {
       "verse": "35",
-      "text": "All the people on the earth seem like nothing to him.He does whatever he wants among the angels in heaven,and among the people on the earth too.Nobody can stop him.Nobody can ask him, ‘Why are you doing that?’ He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that?’"
+      "text": "All the people on the earth seem like nothing to him. He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that? ’ He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that? ’"
     },
     {
       "verse": "36",
@@ -558,7 +558,7 @@ module.exports = {
   "5": [
     {
       "verse": "1",
-      "text": "King Belshazzar gave a big party for 1,000 important people in his country. He drank wine with all of them."
+      "text": "King Belshazzar gave a big party for 1, 000 important people in his country. He drank wine with all of them."
     },
     {
       "verse": "2",
@@ -582,7 +582,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The king called for his enchanters, his wise men and his diviners to come. When they arrived, the king said to them, ‘Who can read these words? Who can tell me what they mean? Whoever can do that, I will make him great. I will put valuable purple clothes on him and he will have a gold chain around his neck. I will make him the third ruler in the kingdom.’"
+      "text": "The king called for his enchanters, his wise men and his diviners to come. When they arrived, the king said to them, ‘Who can read these words? Who can tell me what they mean? Whoever can do that, I will make him great. I will put valuable purple clothes on him and he will have a gold chain around his neck. I will make him the third ruler in the kingdom. ’"
     },
     {
       "verse": "8",
@@ -602,7 +602,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "His name was Daniel, but the king called him Belteshazzar. He was very clever and he knew many things. He could explain what dreams mean. He could find the answer to difficult problems. Send somebody to bring Daniel here. He will tell you what these words mean.’"
+      "text": "His name was Daniel, but the king called him Belteshazzar. He was very clever and he knew many things. He could explain what dreams mean. He could find the answer to difficult problems. Send somebody to bring Daniel here. He will tell you what these words mean. ’"
     },
     {
       "verse": "13",
@@ -618,7 +618,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "I have heard that you can tell people what their dreams mean. And I have heard that you can find the answer to difficult problems. So can you read these words? Can you tell me what they mean? If you can do that, then I will put valuable purple clothes on you. You will have a gold chain around your neck. You will become the third ruler in the kingdom.’"
+      "text": "I have heard that you can tell people what their dreams mean. And I have heard that you can find the answer to difficult problems. So can you read these words? Can you tell me what they mean? If you can do that, then I will put valuable purple clothes on you. You will have a gold chain around your neck. You will become the third ruler in the kingdom. ’"
     },
     {
       "verse": "17",
@@ -654,11 +654,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "These are the words:Mene, Mene, Tekel and Parsin."
+      "text": "These are the words: Mene, Mene, Tekel and Parsin."
     },
     {
       "verse": "26",
-      "text": "This is what the words mean:Mene means “counted”. It shows that God has counted the days of your kingdom. Now these days are finished. Your kingdom has come to an end."
+      "text": "This is what the words mean: Mene means “counted”. It shows that God has counted the days of your kingdom. Now these days are finished. Your kingdom has come to an end."
     },
     {
       "verse": "27",
@@ -666,7 +666,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Peres means “separate”. It shows that God has cut your kingdom into two separate parts. He has given it to the people from Media and Persia.’"
+      "text": "Peres means “separate”. It shows that God has cut your kingdom into two separate parts. He has given it to the people from Media and Persia. ’"
     },
     {
       "verse": "29",
@@ -700,7 +700,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then these men said to each other, ‘We cannot find anything that Daniel does wrong in his work. We must find something that he does to obey the laws of his God.’"
+      "text": "Then these men said to each other, ‘We cannot find anything that Daniel does wrong in his work. We must find something that he does to obey the laws of his God. ’"
     },
     {
       "verse": "6",
@@ -712,7 +712,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "You should write down this law and then you should write your name on it, as king. Then it will be a law of the Medes and the Persians which nobody can change.’"
+      "text": "You should write down this law and then you should write your name on it, as king. Then it will be a law of the Medes and the Persians which nobody can change. ’"
     },
     {
       "verse": "9",
@@ -724,15 +724,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the officers and rulers who were jealous of Daniel went to see what he would do. They saw that Daniel was praying to God and he was asking God for help. The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it.’"
+      "text": "Then the officers and rulers who were jealous of Daniel went to see what he would do. They saw that Daniel was praying to God and he was asking God for help. The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it. ’"
     },
     {
       "verse": "12",
-      "text": "So they went to tell the king about this. They said, ‘Remember that you wrote a new law. You commanded that for 30 days, nobody must pray to any god or person, except to you, the king. If anyone prays to someone else, your servants must throw them into the cave where your lions live.’The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it.’"
+      "text": "So they went to tell the king about this. They said, ‘Remember that you wrote a new law. You commanded that for 30 days, nobody must pray to any god or person, except to you, the king. If anyone prays to someone else, your servants must throw them into the cave where your lions live. ’The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it. ’"
     },
     {
       "verse": "13",
-      "text": "Then the officers said to the king, ‘But Daniel does not obey your new law. He is one of the men that they brought here from Judah. He does not respect you or your law. He still prays three times every day to his God.’"
+      "text": "Then the officers said to the king, ‘But Daniel does not obey your new law. He is one of the men that they brought here from Judah. He does not respect you or your law. He still prays three times every day to his God. ’"
     },
     {
       "verse": "14",
@@ -740,11 +740,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then the officers agreed together and they went back to the king. They said, ‘Remember, sir, that nobody can change a law that the king has made. It is a law of the Medes and the Persians.’"
+      "text": "Then the officers agreed together and they went back to the king. They said, ‘Remember, sir, that nobody can change a law that the king has made. It is a law of the Medes and the Persians. ’"
     },
     {
       "verse": "16",
-      "text": "So the king sent his servants to fetch Daniel. Then they threw Daniel into the cave where the lions lived. The king said to Daniel, ‘You have always continued to serve your God. I am sure that he will save you.’"
+      "text": "So the king sent his servants to fetch Daniel. Then they threw Daniel into the cave where the lions lived. The king said to Daniel, ‘You have always continued to serve your God. I am sure that he will save you. ’"
     },
     {
       "verse": "17",
@@ -760,7 +760,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When he got near to the cave, he was very upset. He shouted to Daniel, ‘Daniel, you have continued to worship the living God, as his servant. Was your God able to save you from the lions?’"
+      "text": "When he got near to the cave, he was very upset. He shouted to Daniel, ‘Daniel, you have continued to worship the living God, as his servant. Was your God able to save you from the lions? ’"
     },
     {
       "verse": "21",
@@ -768,7 +768,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "My God sent his angel, and he shut the lions' mouths. So the lions have not hurt me. God knows that I have done no wrong thing. I have not done anything to hurt you, the king, either.’"
+      "text": "My God sent his angel, and he shut the lions' mouths. So the lions have not hurt me. God knows that I have done no wrong thing. I have not done anything to hurt you, the king, either. ’"
     },
     {
       "verse": "23",
@@ -784,11 +784,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "I have made a law for every part of my kingdom. All people must respect the God that Daniel serves. They must respect him with fear.He is the God who always lives.He will continue for ever.Nobody will ever destroy his kingdom.He will rule for ever. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever."
+      "text": "I have made a law for every part of my kingdom. All people must respect the God that Daniel serves. They must respect him with fear. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever."
     },
     {
       "verse": "27",
-      "text": "He rescues his people and he keeps them safe.He does powerful miracles in the heavens and on the earth.He has saved Daniel from the lions' power!’ He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power!’"
+      "text": "He rescues his people and he keeps them safe. He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power! ’ He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power! ’"
     },
     {
       "verse": "28",
@@ -814,7 +814,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then I saw a second animal. It seemed like a bear. It raised itself up on one side and it had three ribs between its teeth. Someone said to it, “Stand up and eat the meat from many bodies.”"
+      "text": "Then I saw a second animal. It seemed like a bear. It raised itself up on one side and it had three ribs between its teeth. Someone said to it, “Stand up and eat the meat from many bodies. ”"
     },
     {
       "verse": "6",
@@ -830,11 +830,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "While I looked, people put some thrones in their places.Then the God who has ruled for ever sat on his throne.His clothes were as white as snow.His hair was white like pure wool.His throne and the wheels under it burned with flames of fire. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire."
+      "text": "While I looked, people put some thrones in their places. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire."
     },
     {
       "verse": "10",
-      "text": "A river of fire poured out from the place where he was sitting.Thousands of servants were ready to do whatever he wanted.Many more thousands stood around, ready to serve him.Then the meeting of the court began.Someone opened the books to see what was in them. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them."
+      "text": "A river of fire poured out from the place where he was sitting. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them."
     },
     {
       "verse": "11",
@@ -846,11 +846,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I continued to watch in my vision at night and this is what I saw:I saw someone who seemed like a son of man.He was coming towards me, with the clouds of the sky around him.He came near to the God who has ruled for ever.People took him to stand in front of God. I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God."
+      "text": "I continued to watch in my vision at night and this is what I saw: I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God. I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God."
     },
     {
       "verse": "14",
-      "text": "God gave him great honour and authority to rule as king.The people of all nations and those who spoke every language agreed to serve him.He has authority to rule for ever.He will never stop being king.Nobody will be able to destroy his kingdom. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom."
+      "text": "God gave him great honour and authority to rule as king. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom."
     },
     {
       "verse": "15",
@@ -866,7 +866,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But the holy people of the Most High God will receive authority to rule as kings. God's kingdom will belong to them for ever.”"
+      "text": "But the holy people of the Most High God will receive authority to rule as kings. God's kingdom will belong to them for ever. ”"
     },
     {
       "verse": "19",
@@ -902,11 +902,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Then the holy people who belong to the Most High God will receive authority to rule as kings. They will have authority over all the kingdoms of the earth and all their great power. The kingdom of the Most High God will continue for ever. All rulers will serve him and obey him.”"
+      "text": "Then the holy people who belong to the Most High God will receive authority to rule as kings. They will have authority over all the kingdoms of the earth and all their great power. The kingdom of the Most High God will continue for ever. All rulers will serve him and obey him. ”"
     },
     {
       "verse": "28",
-      "text": "That is a report of everything that I saw in my vision. It caused me, Daniel, to have much trouble in my mind and my face became white. But I did not tell anyone about these things.’"
+      "text": "That is a report of everything that I saw in my vision. It caused me, Daniel, to have much trouble in my mind and my face became white. But I did not tell anyone about these things. ’"
     }
   ],
   "8": [
@@ -960,11 +960,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then I heard two angels as they talked to each other. One angel asked, ‘How long will the things in this vision continue to happen? How long will this disgusting thing stop the sacrifices each day? How long will it stand against God and stamp on his temple and his army?’"
+      "text": "Then I heard two angels as they talked to each other. One angel asked, ‘How long will the things in this vision continue to happen? How long will this disgusting thing stop the sacrifices each day? How long will it stand against God and stamp on his temple and his army? ’"
     },
     {
       "verse": "14",
-      "text": "The other angel answered, ‘It will continue for 2,300 evenings and mornings. After that, God's temple will be clean again.’"
+      "text": "The other angel answered, ‘It will continue for 2, 300 evenings and mornings. After that, God's temple will be clean again. ’"
     },
     {
       "verse": "15",
@@ -972,11 +972,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "I heard a person's voice. It was coming across the Ulai river. The voice said, ‘Gabriel, help this man to understand the vision.’"
+      "text": "I heard a person's voice. It was coming across the Ulai river. The voice said, ‘Gabriel, help this man to understand the vision. ’"
     },
     {
       "verse": "17",
-      "text": "So Gabriel came towards me, where I was standing. I was very afraid and I fell down onto the ground. He said to me, ‘You, as a human, need to understand that the vision is about the end of time.’"
+      "text": "So Gabriel came towards me, where I was standing. I was very afraid and I fell down onto the ground. He said to me, ‘You, as a human, need to understand that the vision is about the end of time. ’"
     },
     {
       "verse": "18",
@@ -1012,7 +1012,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "This vision about the evenings and the mornings is true. I have told you what it means. But keep the vision as a secret now. It will be a long time before these things happen.’"
+      "text": "This vision about the evenings and the mornings is true. I have told you what it means. But keep the vision as a secret now. It will be a long time before these things happen. ’"
     },
     {
       "verse": "27",
@@ -1094,7 +1094,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Lord, please listen! Lord, please forgive us. Lord, please do what we have asked you to do. My God, please do it quickly, so that people give you honour. Help your city and your people who belong to you.’"
+      "text": "Lord, please listen! Lord, please forgive us. Lord, please do what we have asked you to do. My God, please do it quickly, so that people give you honour. Help your city and your people who belong to you. ’"
     },
     {
       "verse": "20",
@@ -1126,13 +1126,13 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The foreign ruler will make an agreement with many people. That agreement will continue for one week. In the middle of that week, he will stop the sacrifices and offerings in the temple. Instead, he will put a disgusting thing there that causes trouble. It will remain there until God finally destroys the ruler who destroys. His end will happen at the time that God has decided.’"
+      "text": "The foreign ruler will make an agreement with many people. That agreement will continue for one week. In the middle of that week, he will stop the sacrifices and offerings in the temple. Instead, he will put a disgusting thing there that causes trouble. It will remain there until God finally destroys the ruler who destroys. His end will happen at the time that God has decided. ’"
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "In the third year that King Cyrus ruled Persia, God gave a message to Daniel. (Daniel's other name was Belteshazzar.) The message was true. It was about a great war. Daniel had a vision which helped him to understand the message."
+      "text": "In the third year that King Cyrus ruled Persia, God gave a message to Daniel. (Daniel's other name was Belteshazzar. ) The message was true. It was about a great war. Daniel had a vision which helped him to understand the message."
     },
     {
       "verse": "2",
@@ -1172,7 +1172,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The man said, ‘Daniel, God loves you very much. Listen carefully to what I say to you. Stand up now, because God has sent me to you.’ When he said this, I stood up. But my body was still shaking."
+      "text": "The man said, ‘Daniel, God loves you very much. Listen carefully to what I say to you. Stand up now, because God has sent me to you. ’ When he said this, I stood up. But my body was still shaking."
     },
     {
       "verse": "12",
@@ -1184,7 +1184,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Now I have come to explain what will happen to your people in the future. The vision is about a future time.’"
+      "text": "Now I have come to explain what will happen to your people in the future. The vision is about a future time. ’"
     },
     {
       "verse": "15",
@@ -1196,7 +1196,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I am your servant, sir. I am too weak to speak with you. It is difficult for me to breathe.’"
+      "text": "I am your servant, sir. I am too weak to speak with you. It is difficult for me to breathe. ’"
     },
     {
       "verse": "18",
@@ -1204,17 +1204,17 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "He said to me, ‘Do not be afraid. God loves you very much. Have peace in your mind. Now be strong and brave!’ When he said this, I felt stronger. I said, ‘Sir, please speak to me now. You have made me strong again.’"
+      "text": "He said to me, ‘Do not be afraid. God loves you very much. Have peace in your mind. Now be strong and brave! ’ When he said this, I felt stronger. I said, ‘Sir, please speak to me now. You have made me strong again. ’"
     },
     {
       "verse": "20",
-      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear.Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
+      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear. Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "I myself helped Michael in the first year that Darius ruled as king. I fought with Michael against his enemies.’"
+      "text": "I myself helped Michael in the first year that Darius ruled as king. I fought with Michael against his enemies. ’"
     },
     {
       "verse": "2",
@@ -1390,7 +1390,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "He will put up his royal tents between the seas, at the holy mountain. But he will die there and nobody will help him.’"
+      "text": "He will put up his royal tents between the seas, at the holy mountain. But he will die there and nobody will help him. ’"
     }
   ],
   "12": [
@@ -1408,7 +1408,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Daniel, you must now close this message. Put seals on the book so that nobody can open it until it is time for the end of this world. Many people will try to understand about these things. They will travel everywhere to get more knowledge.’"
+      "text": "Daniel, you must now close this message. Put seals on the book so that nobody can open it until it is time for the end of this world. Many people will try to understand about these things. They will travel everywhere to get more knowledge. ’"
     },
     {
       "verse": "5",
@@ -1416,15 +1416,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "One of them spoke to the man who wore linen clothes and who now stood above the river. He asked that man, ‘How long will it be until these wonderful things finish?’"
+      "text": "One of them spoke to the man who wore linen clothes and who now stood above the river. He asked that man, ‘How long will it be until these wonderful things finish? ’"
     },
     {
       "verse": "7",
-      "text": "The man who wore linen clothes lifted up both his hands towards the sky. I heard him make a strong promise with the authority of God, who lives for ever. He said, ‘It will continue for three and a half times. Then the enemies of God's holy people will finally lose their power. That will be the end of all these events.’"
+      "text": "The man who wore linen clothes lifted up both his hands towards the sky. I heard him make a strong promise with the authority of God, who lives for ever. He said, ‘It will continue for three and a half times. Then the enemies of God's holy people will finally lose their power. That will be the end of all these events. ’"
     },
     {
       "verse": "8",
-      "text": "I heard the man's words, but I did not understand. So I said, ‘Sir, how will all these things finally finish?’"
+      "text": "I heard the man's words, but I did not understand. So I said, ‘Sir, how will all these things finally finish? ’"
     },
     {
       "verse": "9",
@@ -1436,15 +1436,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "People will suffer for 1,290 days during that time of trouble. It will start from the time when people can no longer offer their sacrifices each day in the temple. That is when the enemy will put a disgusting thing that causes trouble in the holy place."
+      "text": "People will suffer for 1, 290 days during that time of trouble. It will start from the time when people can no longer offer their sacrifices each day in the temple. That is when the enemy will put a disgusting thing that causes trouble in the holy place."
     },
     {
       "verse": "12",
-      "text": "But God will bless all those people who remain faithful until the 1,335 days come to an end."
+      "text": "But God will bless all those people who remain faithful until the 1, 335 days come to an end."
     },
     {
       "verse": "13",
-      "text": "You yourself must serve God faithfully until the end of your life. You will die. But at the end of time you will rise to live again. Then you will receive the good things that God has prepared for you.’"
+      "text": "You yourself must serve God faithfully until the end of your life. You will die. But at the end of time you will rise to live again. Then you will receive the good things that God has prepared for you. ’"
     }
   ]
 };

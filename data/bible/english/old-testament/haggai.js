@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests. Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me.’"
+      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests. Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me. ’"
     },
     {
       "verse": "3",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I have stopped the rain, so that your fields and the hills have become dry. Your crops will not grow. There will be no grapes to make wine. You will not have olives to make oil. Nothing will grow in the ground. Your animals will not become fat. People and animals will all hurt. For all your work, you will get nothing.’"
+      "text": "I have stopped the rain, so that your fields and the hills have become dry. Your crops will not grow. There will be no grapes to make wine. You will not have olives to make oil. Nothing will grow in the ground. Your animals will not become fat. People and animals will all hurt. For all your work, you will get nothing. ’"
     },
     {
       "verse": "12",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Haggai, the Lord's prophet, then spoke this message from the Lord: ‘The Lord says, “I am with you.” ’"
+      "text": "Haggai, the Lord's prophet, then spoke this message from the Lord: ‘The Lord says, “I am with you. ” ’"
     },
     {
       "verse": "14",
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This new temple will be even more beautiful than the old temple in past times. Here in this place I will bless my people.’ That is what the Almighty Lord says."
+      "text": "This new temple will be even more beautiful than the old temple in past times. Here in this place I will bless my people. ’ That is what the Almighty Lord says."
     },
     {
       "verse": "10",
@@ -104,11 +104,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "A person might be carrying some special, holy meat in his clothes. His clothes might then touch some food. It might be bread, or soup, or wine, or oil. If the clothes that hold the holy meat touch any other food, does that other food also become holy?’ The priests replied, ‘No.’"
+      "text": "A person might be carrying some special, holy meat in his clothes. His clothes might then touch some food. It might be bread, or soup, or wine, or oil. If the clothes that hold the holy meat touch any other food, does that other food also become holy? ’ The priests replied, ‘No. ’"
     },
     {
       "verse": "13",
-      "text": "Haggai asked the priests another question: ‘If anyone touches a dead body, you know that you become unclean. If an unclean person touches any of these foods, would they also become unclean?’ The priests replied, ‘Yes, those things would be unclean.’"
+      "text": "Haggai asked the priests another question: ‘If anyone touches a dead body, you know that you become unclean. If an unclean person touches any of these foods, would they also become unclean? ’ The priests replied, ‘Yes, those things would be unclean. ’"
     },
     {
       "verse": "14",
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You have already eaten the crops that you stored. The grapes, figs, pomegranates and olives are not yet ready for you to pick. But after today, I will bless you. You will have many good things.’"
+      "text": "You have already eaten the crops that you stored. The grapes, figs, pomegranates and olives are not yet ready for you to pick. But after today, I will bless you. You will have many good things. ’"
     },
     {
       "verse": "20",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But I, the Almighty Lord say this to you, Zerubbabel, son of Shealtiel. You are my servant and I have chosen you. On that special day, I will give to you the authority to rule on my behalf. That is the message of the Almighty Lord.’"
+      "text": "But I, the Almighty Lord say this to you, Zerubbabel, son of Shealtiel. You are my servant and I have chosen you. On that special day, I will give to you the authority to rule on my behalf. That is the message of the Almighty Lord. ’"
     }
   ]
 };

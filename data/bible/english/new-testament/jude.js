@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Even the leader of God's angels, Michael, did not speak bad words like that against the Devil. Long ago, Michael argued with the Devil about who should have Moses' dead body. But even when the Devil said bad words against God, Michael himself did not speak against the Devil. He did not think that he should do that. Instead, Michael said, ‘The Lord himself will show that you are wrong.’"
+      "text": "Even the leader of God's angels, Michael, did not speak bad words like that against the Devil. Long ago, Michael argued with the Devil about who should have Moses' dead body. But even when the Devil said bad words against God, Michael himself did not speak against the Devil. He did not think that he should do that. Instead, Michael said, ‘The Lord himself will show that you are wrong. ’"
     },
     {
       "verse": "10",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He will judge all people. He will punish everyone who lives in a way that does not please him. He will punish them because of all the wicked things that they have done. He will punish them because of all the bad words that they have spoken against him.’"
+      "text": "He will judge all people. He will punish everyone who lives in a way that does not please him. He will punish them because of all the wicked things that they have done. He will punish them because of all the bad words that they have spoken against him. ’"
     },
     {
       "verse": "16",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They said to you, ‘In the last days of this world, some people will laugh at God's message. They will say that it is silly to obey God. Instead, they will do the bad things that they want to do. Those things do not please God.’"
+      "text": "They said to you, ‘In the last days of this world, some people will laugh at God's message. They will say that it is silly to obey God. Instead, they will do the bad things that they want to do. Those things do not please God. ’"
     },
     {
       "verse": "19",

@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. I am in prison because I serve Christ Jesus. Our Christian friend Timothy is here with me.We are writing to you, Philemon. You are our friend, and we love you. You work on behalf of Christ, as we do."
+      "text": "This letter is from me, Paul. I am in prison because I serve Christ Jesus. Our Christian friend Timothy is here with me. We are writing to you, Philemon. You are our friend, and we love you. You work on behalf of Christ, as we do."
     },
     {
       "verse": "2",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But instead, because of love, I will ask you, ‘Please do it.’ I, Paul, am an old man. Also, I am in prison now because I serve Christ Jesus."
+      "text": "But instead, because of love, I will ask you, ‘Please do it. ’ I, Paul, am an old man. Also, I am in prison now because I serve Christ Jesus."
     },
     {
       "verse": "10",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "I, Paul, am writing this myself: ‘I will pay the money back to you.’ But you should remember what I have given to you already. You have life with God because I told you the good news about Jesus."
+      "text": "I, Paul, am writing this myself: ‘I will pay the money back to you. ’ But you should remember what I have given to you already. You have life with God because I told you the good news about Jesus."
     },
     {
       "verse": "20",

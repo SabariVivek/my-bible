@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Peter. I am an apostle of Jesus Christ.I am writing to you, God's own people that he has chosen. You are now living in many different places, in the regions called Pontus, Galatia, Cappadocia, Asia and Bithynia. You are living in these foreign places as strangers."
+      "text": "This letter is from me, Peter. I am an apostle of Jesus Christ. I am writing to you, God's own people that he has chosen. You are now living in many different places, in the regions called Pontus, Galatia, Cappadocia, Asia and Bithynia. You are living in these foreign places as strangers."
     },
     {
       "verse": "2",
-      "text": "God, the Father, already decided that you should be his people. God's Spirit has made you special people who would obey Jesus Christ. God chose you so that Jesus Christ's blood would make you really clean.I pray that God will help you and give you peace in your minds more and more. I pray that God will help you and give you peace in your minds more and more."
+      "text": "God, the Father, already decided that you should be his people. God's Spirit has made you special people who would obey Jesus Christ. God chose you so that Jesus Christ's blood would make you really clean. I pray that God will help you and give you peace in your minds more and more. I pray that God will help you and give you peace in your minds more and more."
     },
     {
       "verse": "3",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "In the Bible God says this: ‘You must be completely good, because I am completely good.’"
+      "text": "In the Bible God says this: ‘You must be completely good, because I am completely good. ’"
     },
     {
       "verse": "17",
@@ -94,11 +94,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The Bible says:‘All people are like grass.They may seem beautiful for a short time,like flowers that grow in the fields.But grass soon becomes dry and it dies.Flowers soon fall to the ground."
+      "text": "The Bible says:‘All people are like grass. They may seem beautiful for a short time, like flowers that grow in the fields. But grass soon becomes dry and it dies. Flowers soon fall to the ground."
     },
     {
       "verse": "25",
-      "text": "But the Lord God's message will continue for ever.’That message is the good news about Jesus Christ, which people have taught you."
+      "text": "But the Lord God's message will continue for ever. ’That message is the good news about Jesus Christ, which people have taught you."
     }
   ],
   "2": [
@@ -124,15 +124,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "In the Bible, God says this:‘Look, I have chosen a stone that is very valuable.I have chosen this stone as the most important stone,for the corner of my house in Zion.Anyone who believes in him will never be disappointed.’ ‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed.’"
+      "text": "In the Bible, God says this:‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed. ’ ‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed. ’"
     },
     {
       "verse": "7",
-      "text": "This stone is very valuable to you who believe in Jesus. But the Bible says this about people who do not believe in him:‘The builders refused to use a certain stone.They thought that it had no value.But now that stone has become the most important stone at the corner of the building.’ ‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building.’"
+      "text": "This stone is very valuable to you who believe in Jesus. But the Bible says this about people who do not believe in him:‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. ’ ‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building. ’"
     },
     {
       "verse": "8",
-      "text": "The Bible also says this:‘This stone will cause people to fall to the ground.It is a rock that will make them fall down.’They fall down like that because they refuse to obey God's message. God already decided that this would happen to them. ‘This stone will cause people to fall to the ground. It is a rock that will make them fall down.’ They fall down like that because they refuse to obey God's message. God already decided that this would happen to them."
+      "text": "The Bible also says this:‘This stone will cause people to fall to the ground. It is a rock that will make them fall down. ’They fall down like that because they refuse to obey God's message. God already decided that this would happen to them. ‘This stone will cause people to fall to the ground. It is a rock that will make them fall down. ’ They fall down like that because they refuse to obey God's message. God already decided that this would happen to them."
     },
     {
       "verse": "9",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "You are free people. But you are servants of God. So do not think, ‘Because I am free, I can do any bad thing that I want to do.’"
+      "text": "You are free people. But you are servants of God. So do not think, ‘Because I am free, I can do any bad thing that I want to do. ’"
     },
     {
       "verse": "17",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You who are slaves must obey your masters. Always respect them. Do that to every kind of master. Obey those who are good and kind. But also obey masters who are not fair to you. ‘He never did anything that was wrong. He never said anything that was not true.’"
+      "text": "You who are slaves must obey your masters. Always respect them. Do that to every kind of master. Obey those who are good and kind. But also obey masters who are not fair to you. ‘He never did anything that was wrong. He never said anything that was not true. ’"
     },
     {
       "verse": "19",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The Bible says this:‘He never did anything that was wrong.He never said anything that was not true.’"
+      "text": "The Bible says this:‘He never did anything that was wrong. He never said anything that was not true. ’"
     },
     {
       "verse": "23",
@@ -242,15 +242,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The Bible says this:‘Do you want to enjoy your life?Do you want to be happy?Then you must be careful not to say evil things.Do not tell any lies."
+      "text": "The Bible says this:‘Do you want to enjoy your life? Do you want to be happy? Then you must be careful not to say evil things. Do not tell any lies."
     },
     {
       "verse": "11",
-      "text": "Stop doing evil things.Instead, do things that are good.Try to be friends with people.Help people to live in peace with each other. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other."
+      "text": "Stop doing evil things. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other."
     },
     {
       "verse": "12",
-      "text": "Remember that the Lord God sees what everyone does.He takes care of people who do what is right.When they pray, he listens to them.But the Lord God turns against people who do evil things.’ He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things.’"
+      "text": "Remember that the Lord God sees what everyone does. He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things. ’ He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things. ’"
     },
     {
       "verse": "13",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Instead, always remember that Christ is your Lord. Let him rule how you live. People may ask you, ‘Why do you trust God to help you?’ You must always be ready to answer them about that."
+      "text": "Instead, always remember that Christ is your Lord. Let him rule how you live. People may ask you, ‘Why do you trust God to help you? ’ You must always be ready to answer them about that."
     },
     {
       "verse": "16",
@@ -360,11 +360,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The time has come when God will start to judge people. He will first judge the people who belong to him. If he will start with his own people, what will happen to other people? They have refused to obey God's good news, so it will surely be very bad for them. ‘When God saves righteous people, that is a difficult thing. It will surely be much worse for people who turn away from God and who do bad things.’"
+      "text": "The time has come when God will start to judge people. He will first judge the people who belong to him. If he will start with his own people, what will happen to other people? They have refused to obey God's good news, so it will surely be very bad for them. ‘When God saves righteous people, that is a difficult thing. It will surely be much worse for people who turn away from God and who do bad things. ’"
     },
     {
       "verse": "18",
-      "text": "The Bible says:‘When God saves righteous people, that is a difficult thing.It will surely be much worse for people who turn away from God and who do bad things.’"
+      "text": "The Bible says:‘When God saves righteous people, that is a difficult thing. It will surely be much worse for people who turn away from God and who do bad things. ’"
     },
     {
       "verse": "19",
@@ -390,7 +390,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "I want to say the same thing to you who are young men. You must respect the authority of the leaders. All of you who are believers must respect one another. Do not think that you are more important than other people. The Bible says:‘God is against proud people.But he is kind to humble people.’ ‘God is against proud people. But he is kind to humble people.’"
+      "text": "I want to say the same thing to you who are young men. You must respect the authority of the leaders. All of you who are believers must respect one another. Do not think that you are more important than other people. The Bible says:‘God is against proud people. But he is kind to humble people. ’ ‘God is against proud people. But he is kind to humble people. ’"
     },
     {
       "verse": "6",
@@ -426,7 +426,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "When you meet, kiss each other as Christian brothers and sisters.I pray for all of you who belong to Christ. I pray that God will give you peace in your minds."
+      "text": "When you meet, kiss each other as Christian brothers and sisters. I pray for all of you who belong to Christ. I pray that God will give you peace in your minds."
     }
   ]
 };

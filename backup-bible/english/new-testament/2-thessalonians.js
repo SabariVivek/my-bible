@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from Paul, Silas and Timothy.We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ."
+      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ."
     },
     {
       "verse": "2",
@@ -158,7 +158,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Even when we were there with you, we told you this rule: ‘If anyone refuses to work, you should not give food to him.’"
+      "text": "Even when we were there with you, we told you this rule: ‘If anyone refuses to work, you should not give food to him. ’"
     },
     {
       "verse": "11",

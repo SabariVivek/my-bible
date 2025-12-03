@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people.He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
+      "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people. He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
     },
     {
       "verse": "4",
@@ -50,11 +50,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Now I will make you free from the people from Nineveh. And I will break the things that are holding you like iron.’"
+      "text": "Now I will make you free from the people from Nineveh. And I will break the things that are holding you like iron. ’"
     },
     {
       "verse": "14",
-      "text": "Nineveh, the Lord has said what will happen to you. He has said, ‘You will have no children and your family name will have an end. I will destroy the statues that you made from wood and metal. You worship those statues in your temples. There I will make graves for you because you are bad.’"
+      "text": "Nineveh, the Lord has said what will happen to you. He has said, ‘You will have no children and your family name will have an end. I will destroy the statues that you made from wood and metal. You worship those statues in your temples. There I will make graves for you because you are bad. ’"
     },
     {
       "verse": "15",
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Nineveh is like a pool of water. But now its people run away, like water that is pouring away. ‘Stop, stop!’ they shout, but nobody comes back."
+      "text": "Nineveh is like a pool of water. But now its people run away, like water that is pouring away. ‘Stop, stop! ’ they shout, but nobody comes back."
     },
     {
       "verse": "9",
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The Lord Almighty says, ‘I am against you. I will burn your chariots and the sword will kill your young lions. I will take away all the animals that you attack. Nobody will hear the voices of your messengers.’"
+      "text": "The Lord Almighty says, ‘I am against you. I will burn your chariots and the sword will kill your young lions. I will take away all the animals that you attack. Nobody will hear the voices of your messengers. ’"
     }
   ],
   "3": [
@@ -142,7 +142,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "When people see you, they will run away. And they will say, ‘They have destroyed Nineveh. Nobody will be sad.’ There will be nobody to help you."
+      "text": "When people see you, they will run away. And they will say, ‘They have destroyed Nineveh. Nobody will be sad. ’ There will be nobody to help you."
     },
     {
       "verse": "8",

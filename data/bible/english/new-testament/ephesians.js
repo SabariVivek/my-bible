@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus.I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him."
+      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him."
     },
     {
       "verse": "2",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You will also know how very powerful God is. He uses that power to help us now, as we trust in Christ.God's power is greater than anything we could ever know."
+      "text": "You will also know how very powerful God is. He uses that power to help us now, as we trust in Christ. God's power is greater than anything we could ever know."
     },
     {
       "verse": "20",
@@ -296,15 +296,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But God has been kind to all of us. Each of us has received a special gift, just as Christ has decided to give us. ‘When he went up to the highest place, he led many prisoners with him. Then he gave gifts to his people.’"
+      "text": "But God has been kind to all of us. Each of us has received a special gift, just as Christ has decided to give us. ‘When he went up to the highest place, he led many prisoners with him. Then he gave gifts to his people. ’"
     },
     {
       "verse": "8",
-      "text": "This is what it says about him:‘When he went up to the highest place,he led many prisoners with him.Then he gave gifts to his people.’"
+      "text": "This is what it says about him:‘When he went up to the highest place, he led many prisoners with him. Then he gave gifts to his people. ’"
     },
     {
       "verse": "9",
-      "text": "It says: ‘He went up.’ That must mean that Christ had also come down. He came down to a lower place, the earth."
+      "text": "It says: ‘He went up. ’ That must mean that Christ had also come down. He came down to a lower place, the earth."
     },
     {
       "verse": "10",
@@ -422,7 +422,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Do not let anyone have a chance to deceive you with a false message about those kinds of bad things. God will certainly punish people who do not obey him. ‘Wake up, you people who are asleep! Rise up from among the dead people! Then Christ will shine his light on you.’"
+      "text": "Do not let anyone have a chance to deceive you with a false message about those kinds of bad things. God will certainly punish people who do not obey him. ‘Wake up, you people who are asleep! Rise up from among the dead people! Then Christ will shine his light on you. ’"
     },
     {
       "verse": "7",
@@ -454,7 +454,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Everything that becomes clear to see is in the light. That is why it says:‘Wake up, you people who are asleep!Rise up from among the dead people!Then Christ will shine his light on you.’"
+      "text": "Everything that becomes clear to see is in the light. That is why it says:‘Wake up, you people who are asleep! Rise up from among the dead people! Then Christ will shine his light on you. ’"
     },
     {
       "verse": "15",
@@ -522,7 +522,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The Bible says this: ‘When a man marries, he leaves his father and his mother. Instead, God joins the man and his wife together. The two people become like one body.’"
+      "text": "The Bible says this: ‘When a man marries, he leaves his father and his mother. Instead, God joins the man and his wife together. The two people become like one body. ’"
     },
     {
       "verse": "32",
@@ -540,11 +540,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "God's Law says: ‘Always respect your father and your mother.’ That is the first rule of God's Law that also has a promise."
+      "text": "God's Law says: ‘Always respect your father and your mother. ’ That is the first rule of God's Law that also has a promise."
     },
     {
       "verse": "3",
-      "text": "The promise is this: ‘As a result, you will be happy and you will live for a long time on the earth.’"
+      "text": "The promise is this: ‘As a result, you will be happy and you will live for a long time on the earth. ’"
     },
     {
       "verse": "4",

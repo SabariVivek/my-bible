@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So I am writing to all you Christians who are in Rome. God loves you and he has chosen you to be his own people.I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
+      "text": "So I am writing to all you Christians who are in Rome. God loves you and he has chosen you to be his own people. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": "8",
@@ -54,11 +54,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "I am not ashamed to tell people the good news. God uses that good news to show his great power. He uses it to save all people who believe in Jesus Christ. First, God saves all Jews who are believers. And he also saves all Gentiles who are believers. ‘Everyone that God accepts as right will live, because they trust him.’"
+      "text": "I am not ashamed to tell people the good news. God uses that good news to show his great power. He uses it to save all people who believe in Jesus Christ. First, God saves all Jews who are believers. And he also saves all Gentiles who are believers. ‘Everyone that God accepts as right will live, because they trust him. ’"
     },
     {
       "verse": "17",
-      "text": "The good news explains how God accepts people as right with himself. He does this when they believe in Christ. It is only because of their faith. Nothing else. This is what was written in the Bible long ago:‘Everyone that God accepts as right will live, because they trust him.’"
+      "text": "The good news explains how God accepts people as right with himself. He does this when they believe in Christ. It is only because of their faith. Nothing else. This is what was written in the Bible long ago:‘Everyone that God accepts as right will live, because they trust him. ’"
     },
     {
       "verse": "18",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Ever since God made the world, he has been showing people clearly about himself. We cannot see God. But the things that he has made show us clearly what he is like. We can understand his great power that continues for ever. We can know that he is the true God. So there is no reason for anyone to say, ‘We could not know about God.’"
+      "text": "Ever since God made the world, he has been showing people clearly about himself. We cannot see God. But the things that he has made show us clearly what he is like. We can understand his great power that continues for ever. We can know that he is the true God. So there is no reason for anyone to say, ‘We could not know about God. ’"
     },
     {
       "verse": "21",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I ask each of you again: ‘Do you speak against people who do bad things, but you do those same bad things yourself?’ Then God will certainly punish you and you will not go free."
+      "text": "I ask each of you again: ‘Do you speak against people who do bad things, but you do those same bad things yourself? ’ Then God will certainly punish you and you will not go free."
     },
     {
       "verse": "4",
@@ -184,7 +184,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Those people show that they know what is right. It is as if God has written his Law deep inside them. Their thoughts tell them the difference between what is right and what is wrong. Sometimes their thoughts say: ‘You did something that is wrong.’ And sometimes their thoughts say: ‘You did what is right.’"
+      "text": "Those people show that they know what is right. It is as if God has written his Law deep inside them. Their thoughts tell them the difference between what is right and what is wrong. Sometimes their thoughts say: ‘You did something that is wrong. ’ And sometimes their thoughts say: ‘You did what is right. ’"
     },
     {
       "verse": "16",
@@ -208,11 +208,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So you teach other people, do you? But do you teach yourself? You tell other people, ‘Do not rob anyone.’ But maybe you yourself rob other people. ‘Because of you Jews, the Gentiles say bad things against God.’"
+      "text": "So you teach other people, do you? But do you teach yourself? You tell other people, ‘Do not rob anyone. ’ But maybe you yourself rob other people. ‘Because of you Jews, the Gentiles say bad things against God. ’"
     },
     {
       "verse": "22",
-      "text": "You say, ‘People must not have sex with anyone who is not their wife or their husband.’ But maybe you yourself have sex in a wrong way. You say that you hate idols. But do you rob places where people worship idols?"
+      "text": "You say, ‘People must not have sex with anyone who is not their wife or their husband. ’ But maybe you yourself have sex in a wrong way. You say that you hate idols. But do you rob places where people worship idols?"
     },
     {
       "verse": "23",
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "This is written in the Bible:‘Because of you Jews, the Gentiles say bad things against God.’"
+      "text": "This is written in the Bible:‘Because of you Jews, the Gentiles say bad things against God. ’"
     },
     {
       "verse": "25",
@@ -246,7 +246,7 @@ module.exports = {
   "3": [
     {
       "verse": "1",
-      "text": "So someone may ask, ‘Does it help a person if they are a Jew, rather than a Gentile? Does it help a person if someone has circumcised them?’ ‘Your message is true. It shows that you are right. People may say that you are wrong. But it will always be clear that you are right.’"
+      "text": "So someone may ask, ‘Does it help a person if they are a Jew, rather than a Gentile? Does it help a person if someone has circumcised them? ’ ‘Your message is true. It shows that you are right. People may say that you are wrong. But it will always be clear that you are right. ’"
     },
     {
       "verse": "2",
@@ -254,15 +254,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But you may say, ‘Some Jews did not believe God's messages as they should have done. Because of that, maybe God will not do what he said he would do.’"
+      "text": "But you may say, ‘Some Jews did not believe God's messages as they should have done. Because of that, maybe God will not do what he said he would do. ’"
     },
     {
       "verse": "4",
-      "text": "No, certainly it does not mean that! God will always do what he says. He will always say what is true, even if everyone in the world should tell lies. This is what is written in the Bible:‘Your message is true. It shows that you are right.People may say that you are wrong.But it will always be clear that you are right.’"
+      "text": "No, certainly it does not mean that! God will always do what he says. He will always say what is true, even if everyone in the world should tell lies. This is what is written in the Bible:‘Your message is true. It shows that you are right. People may say that you are wrong. But it will always be clear that you are right. ’"
     },
     {
       "verse": "5",
-      "text": "Maybe some people may say, ‘The wrong things that we do show more clearly that God is always right. So perhaps God is wrong to punish us.’"
+      "text": "Maybe some people may say, ‘The wrong things that we do show more clearly that God is always right. So perhaps God is wrong to punish us. ’"
     },
     {
       "verse": "6",
@@ -270,11 +270,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Someone might also say, ‘When I tell lies, that shows how great and good God is. My lies show more clearly that God always says what is true. So God should not say that I am a bad person. He should not punish me.’"
+      "text": "Someone might also say, ‘When I tell lies, that shows how great and good God is. My lies show more clearly that God always says what is true. So God should not say that I am a bad person. He should not punish me. ’"
     },
     {
       "verse": "8",
-      "text": "But if that is true, you could also say, ‘We should do more and more bad things. Then something good will happen as a result.’ Some people even say that is the message which I teach. But if they say that, they are insulting me. It is right that God should punish those people."
+      "text": "But if that is true, you could also say, ‘We should do more and more bad things. Then something good will happen as a result. ’ Some people even say that is the message which I teach. But if they say that, they are insulting me. It is right that God should punish those people."
     },
     {
       "verse": "9",
@@ -282,23 +282,23 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This is written in the Bible:‘There is nobody who is right with God.There is not even one person who is like that."
+      "text": "This is written in the Bible:‘There is nobody who is right with God. There is not even one person who is like that."
     },
     {
       "verse": "11",
-      "text": "There is nobody who understands what is true.There is nobody who wants to worship God. There is nobody who wants to worship God."
+      "text": "There is nobody who understands what is true. There is nobody who wants to worship God. There is nobody who wants to worship God."
     },
     {
       "verse": "12",
-      "text": "Everyone has turned away from God.All people have become completely bad.Nobody does what is good or kind.There is not even one person who is like that. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that."
+      "text": "Everyone has turned away from God. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that."
     },
     {
       "verse": "13",
-      "text": "Bad words come out of their mouth, like a very bad smell.They tell lies all the time,so that people do wrong things.The things that they say hurt people, like a snake's poison. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison."
+      "text": "Bad words come out of their mouth, like a very bad smell. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison."
     },
     {
       "verse": "14",
-      "text": "They are always saying bad things against people,because they want to cause trouble for them. because they want to cause trouble for them."
+      "text": "They are always saying bad things against people, because they want to cause trouble for them. because they want to cause trouble for them."
     },
     {
       "verse": "15",
@@ -306,7 +306,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Everywhere they go, they destroy things.They only make people very sad. They only make people very sad."
+      "text": "Everywhere they go, they destroy things. They only make people very sad. They only make people very sad."
     },
     {
       "verse": "17",
@@ -314,11 +314,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They refuse to respect God in any way.’"
+      "text": "They refuse to respect God in any way. ’"
     },
     {
       "verse": "19",
-      "text": "So, we know that God's Law belongs to the Jews. God told them to obey everything that his Law teaches. As a result, nobody can say: ‘God should not punish me.’ Everybody in the world must stand in front of God and he will judge them."
+      "text": "So, we know that God's Law belongs to the Jews. God told them to obey everything that his Law teaches. As a result, nobody can say: ‘God should not punish me. ’ Everybody in the world must stand in front of God and he will judge them."
     },
     {
       "verse": "20",
@@ -380,7 +380,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Remember what the Bible tells us. It says: ‘Abraham believed God. As a result, God accepted Abraham as right with him.’"
+      "text": "Remember what the Bible tells us. It says: ‘Abraham believed God. As a result, God accepted Abraham as right with him. ’"
     },
     {
       "verse": "4",
@@ -396,11 +396,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "David says:‘The people that God has forgiven are really happy.They have done wrong things, but he has forgiven them."
+      "text": "David says:‘The people that God has forgiven are really happy. They have done wrong things, but he has forgiven them."
     },
     {
       "verse": "8",
-      "text": "A person is really happy when the Lord accepts him.The Lord does not think about that person's sin any more.’ The Lord does not think about that person's sin any more.’"
+      "text": "A person is really happy when the Lord accepts him. The Lord does not think about that person's sin any more. ’ The Lord does not think about that person's sin any more. ’"
     },
     {
       "verse": "9",
@@ -436,11 +436,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "In the Bible, God said to Abraham, ‘I have chosen you to become the ancestor of many different people.’ That is what God himself promises, because Abraham believed in him. God is the one who causes dead people to become alive again. He speaks about things that are not yet there as if they were already there."
+      "text": "In the Bible, God said to Abraham, ‘I have chosen you to become the ancestor of many different people. ’ That is what God himself promises, because Abraham believed in him. God is the one who causes dead people to become alive again. He speaks about things that are not yet there as if they were already there."
     },
     {
       "verse": "18",
-      "text": "Abraham continued to trust God. He hoped to receive what God had promised. He continued to hope even when he had no good reason to hope. That is why he became the ancestor of many different people. It happened just like God had said: ‘You will have very many descendants.’"
+      "text": "Abraham continued to trust God. He hoped to receive what God had promised. He continued to hope even when he had no good reason to hope. That is why he became the ancestor of many different people. It happened just like God had said: ‘You will have very many descendants. ’"
     },
     {
       "verse": "19",
@@ -460,7 +460,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Think about those words, ‘God accepted him as right.’ They are not only speaking about Abraham."
+      "text": "Think about those words, ‘God accepted him as right. ’ They are not only speaking about Abraham."
     },
     {
       "verse": "24",
@@ -526,7 +526,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "But still death ruled all people, from the time when Adam lived until the time when Moses lived. Everyone died, even those who did not fail in the same way that Adam failed.Adam shows us something about God's special Messiah who would come at a future time."
+      "text": "But still death ruled all people, from the time when Adam lived until the time when Moses lived. Everyone died, even those who did not fail in the same way that Adam failed. Adam shows us something about God's special Messiah who would come at a future time."
     },
     {
       "verse": "15",
@@ -560,7 +560,7 @@ module.exports = {
   "6": [
     {
       "verse": "1",
-      "text": "Someone might say, ‘Perhaps we should continue to do wrong things. Then God can be kind to us in more and more ways.’"
+      "text": "Someone might say, ‘Perhaps we should continue to do wrong things. Then God can be kind to us in more and more ways. ’"
     },
     {
       "verse": "2",
@@ -616,7 +616,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Someone might say: ‘So we have a new life because God is kind to us. God's Law that he gave to Moses does not rule us any more. Then maybe we should continue to do wrong things. It will not make any difference.’ No, that is not true!"
+      "text": "Someone might say: ‘So we have a new life because God is kind to us. God's Law that he gave to Moses does not rule us any more. Then maybe we should continue to do wrong things. It will not make any difference. ’ No, that is not true!"
     },
     {
       "verse": "16",
@@ -678,7 +678,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So someone might say, ‘God's Law must be bad.’ No! Certainly, it is not bad! Without that law, I would not have known what sin really is. One rule says, ‘You must not want to take things for yourself that belong to other people.’ Without that command, I would not have known that it is wrong to want other people's things."
+      "text": "So someone might say, ‘God's Law must be bad. ’ No! Certainly, it is not bad! Without that law, I would not have known what sin really is. One rule says, ‘You must not want to take things for yourself that belong to other people. ’ Without that command, I would not have known that it is wrong to want other people's things."
     },
     {
       "verse": "8",
@@ -702,7 +702,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But someone might say, ‘This means that something good brought death to you.’ No! God's Law did not do that! It was sin that brought death to me. Sin used God's good Law to show that I was guilty. Because of that, we can see that sin is really very bad. The commands in God's Law help to show that sin is completely bad."
+      "text": "But someone might say, ‘This means that something good brought death to you. ’ No! God's Law did not do that! It was sin that brought death to me. Sin used God's good Law to show that I was guilty. Because of that, we can see that sin is really very bad. The commands in God's Law help to show that sin is completely bad."
     },
     {
       "verse": "14",
@@ -750,7 +750,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I thank God! He has made me free, because of what Jesus Christ has done.So with my mind I want to obey God's laws. But, at the same time, I serve sin as my master, because I am weak and human."
+      "text": "I thank God! He has made me free, because of what Jesus Christ has done. So with my mind I want to obey God's laws. But, at the same time, I serve sin as my master, because I am weak and human."
     }
   ],
   "8": [
@@ -812,7 +812,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The Spirit that you have received from God does not make you serve him like slaves. That would make you afraid again. No. The Spirit that God has given to you causes you to become God's children. Now he takes care of you. God's Spirit makes us call God: ‘Abba, our Father.’"
+      "text": "The Spirit that you have received from God does not make you serve him like slaves. That would make you afraid again. No. The Spirit that God has given to you causes you to become God's children. Now he takes care of you. God's Spirit makes us call God: ‘Abba, our Father. ’"
     },
     {
       "verse": "16",
@@ -892,11 +892,11 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Christ will always continue to love us. Nothing can stop that! We may have troubles. Things may make us sad or afraid. People may do bad things to us. We may have no food or no clothes. There may be great danger. People may even try to kill us. But none of these things can stop Christ from loving us. ‘Because we are your people, God, people try to kill us all the time. They think that we are like sheep, and we are ready to be killed.’"
+      "text": "Christ will always continue to love us. Nothing can stop that! We may have troubles. Things may make us sad or afraid. People may do bad things to us. We may have no food or no clothes. There may be great danger. People may even try to kill us. But none of these things can stop Christ from loving us. ‘Because we are your people, God, people try to kill us all the time. They think that we are like sheep, and we are ready to be killed. ’"
     },
     {
       "verse": "36",
-      "text": "As it says in the Bible:‘Because we are your people, God,people try to kill us all the time.They think that we are like sheep,and we are ready to be killed.’"
+      "text": "As it says in the Bible:‘Because we are your people, God, people try to kill us all the time. They think that we are like sheep, and we are ready to be killed. ’"
     },
     {
       "verse": "37",
@@ -934,7 +934,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Not all of them are true descendants of Abraham. God told Abraham, ‘It is only Isaac that I will call the father of your descendants.’"
+      "text": "Not all of them are true descendants of Abraham. God told Abraham, ‘It is only Isaac that I will call the father of your descendants. ’"
     },
     {
       "verse": "8",
@@ -942,7 +942,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This is what God promised to Abraham: ‘At this time next year I will come back. Then Sarah, your wife, will have a son.’"
+      "text": "This is what God promised to Abraham: ‘At this time next year I will come back. Then Sarah, your wife, will have a son. ’"
     },
     {
       "verse": "10",
@@ -954,11 +954,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "God said to Rebekah, ‘The older son will serve the younger son.’"
+      "text": "God said to Rebekah, ‘The older son will serve the younger son. ’"
     },
     {
       "verse": "13",
-      "text": "This is written in the Bible: ‘I loved Jacob, but I hated Esau.’"
+      "text": "This is written in the Bible: ‘I loved Jacob, but I hated Esau. ’"
     },
     {
       "verse": "14",
@@ -966,7 +966,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Think about this. God said to Moses, ‘I will be kind to whoever I choose to be kind to. I will feel sorry for whoever I choose to feel sorry for.’"
+      "text": "Think about this. God said to Moses, ‘I will be kind to whoever I choose to be kind to. I will feel sorry for whoever I choose to feel sorry for. ’"
     },
     {
       "verse": "16",
@@ -974,7 +974,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Bible tells us what God said to Pharaoh: ‘This is why I caused you to be king of Egypt. My purpose was to show how powerful I am. As a result, people everywhere would know that I am great.’"
+      "text": "The Bible tells us what God said to Pharaoh: ‘This is why I caused you to be king of Egypt. My purpose was to show how powerful I am. As a result, people everywhere would know that I am great. ’"
     },
     {
       "verse": "18",
@@ -982,11 +982,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "One of you may say to me, ‘God always does what he wants to do. Nobody can change what God makes them do. So God should not say that people have done wrong things.’"
+      "text": "One of you may say to me, ‘God always does what he wants to do. Nobody can change what God makes them do. So God should not say that people have done wrong things. ’"
     },
     {
       "verse": "20",
-      "text": "But you are only human. You have no authority to speak against God like that. God has made you. A pot cannot speak against the person who made it! It cannot ask him, ‘Why did you make me like this?’"
+      "text": "But you are only human. You have no authority to speak against God like that. God has made you. A pot cannot speak against the person who made it! It cannot ask him, ‘Why did you make me like this? ’"
     },
     {
       "verse": "21",
@@ -994,7 +994,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "What does that teach us about God? Some people are like pots that are ready for God to destroy. God is angry with people like that. He is ready to show his power against them. But he has chosen to wait patiently. He keeps his anger for later. ‘I will say to people who were not my people, “Now you are my people.” I will say to people that I did not love, “I love you.” ’"
+      "text": "What does that teach us about God? Some people are like pots that are ready for God to destroy. God is angry with people like that. He is ready to show his power against them. But he has chosen to wait patiently. He keeps his anger for later. ‘I will say to people who were not my people, “Now you are my people. ” I will say to people that I did not love, “I love you. ” ’"
     },
     {
       "verse": "23",
@@ -1006,27 +1006,27 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "God says this in the book of Hosea:‘I will say to people who were not my people,“Now you are my people.”I will say to people that I did not love,“I love you.” ’"
+      "text": "God says this in the book of Hosea:‘I will say to people who were not my people, “Now you are my people. ”I will say to people that I did not love, “I love you. ” ’"
     },
     {
       "verse": "26",
-      "text": "‘God had said to them,“You are not my people.”In the same place where he said that,people will now call them “Children of God, who lives for ever.” ’ “You are not my people.” In the same place where he said that, people will now call them “Children of God, who lives for ever.” ’"
+      "text": "‘God had said to them, “You are not my people. ”In the same place where he said that, people will now call them “Children of God, who lives for ever. ” ’ “You are not my people. ” In the same place where he said that, people will now call them “Children of God, who lives for ever. ” ’"
     },
     {
       "verse": "27",
-      "text": "Also, Isaiah, God's prophet, said this about Israel's people:‘There are so many of Israel's people, nobody can count them.They are as many as the bits of sand on the shore of the sea.But God will save only a few of them. ‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them."
+      "text": "Also, Isaiah, God's prophet, said this about Israel's people:‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them. ‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them."
     },
     {
       "verse": "28",
-      "text": "The Lord God will finish his work quickly.He has warned his people what he will do.And he will punish them completely.’ He has warned his people what he will do. And he will punish them completely.’"
+      "text": "The Lord God will finish his work quickly. He has warned his people what he will do. And he will punish them completely. ’ He has warned his people what he will do. And he will punish them completely. ’"
     },
     {
       "verse": "29",
-      "text": "Isaiah had already said this:‘The Lord of great power has let some of our children live.If he had not done that, no descendants would remain.We would have become like the people in Sodom and Gomorrah.’ ‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah.’"
+      "text": "Isaiah had already said this:‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah. ’ ‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah. ’"
     },
     {
       "verse": "30",
-      "text": "So, we must think about what all this means. The Gentiles were not trying to become right with God. But some of them have now become right with him. God has accepted them as right, because they have believed in Jesus Christ. ‘Look, I am putting a special stone in Zion. That stone will cause people to fall to the ground. It is a rock that will make them fall down. But anyone who believes in him will never be disappointed.’"
+      "text": "So, we must think about what all this means. The Gentiles were not trying to become right with God. But some of them have now become right with him. God has accepted them as right, because they have believed in Jesus Christ. ‘Look, I am putting a special stone in Zion. That stone will cause people to fall to the ground. It is a rock that will make them fall down. But anyone who believes in him will never be disappointed. ’"
     },
     {
       "verse": "31",
@@ -1038,7 +1038,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "It says this in the Bible:‘Look, I am putting a special stone in Zion.That stone will cause people to fall to the ground.It is a rock that will make them fall down.But anyone who believes in him will never be disappointed.’"
+      "text": "It says this in the Bible:‘Look, I am putting a special stone in Zion. That stone will cause people to fall to the ground. It is a rock that will make them fall down. But anyone who believes in him will never be disappointed. ’"
     }
   ],
   "10": [
@@ -1060,23 +1060,23 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Moses wrote about how God's Law could help people to be right with God. He said, ‘If a person obeys the rules in God's Law, then he will live by them.’"
+      "text": "Moses wrote about how God's Law could help people to be right with God. He said, ‘If a person obeys the rules in God's Law, then he will live by them. ’"
     },
     {
       "verse": "6",
-      "text": "But the Bible speaks also about another way. It shows how to become right with God because you trust him. It says: ‘Do not say to yourself, “Someone will have to go up into heaven.” ’ (That means: ‘Someone will have to bring Christ down from up there.’)"
+      "text": "But the Bible speaks also about another way. It shows how to become right with God because you trust him. It says: ‘Do not say to yourself, “Someone will have to go up into heaven. ” ’ (That means: ‘Someone will have to bring Christ down from up there. ’)"
     },
     {
       "verse": "7",
-      "text": "‘Do not say to yourself either, “Someone will have to go down into the world below.” ’ (That means: ‘Someone will have to bring Christ up from the place where dead people are.’)"
+      "text": "‘Do not say to yourself either, “Someone will have to go down into the world below. ” ’ (That means: ‘Someone will have to bring Christ up from the place where dead people are. ’)"
     },
     {
       "verse": "8",
-      "text": "But the Bible says: ‘God's message is near you. You can talk about it, and you can think about it.’ That is the same message that we are teaching to people. We tell people to believe in Jesus Christ."
+      "text": "But the Bible says: ‘God's message is near you. You can talk about it, and you can think about it. ’ That is the same message that we are teaching to people. We tell people to believe in Jesus Christ."
     },
     {
       "verse": "9",
-      "text": "The message is this: You must say clearly that Jesus is the Lord. Also, you must believe deep inside yourself that God raised him to life again after his death. Then God will save you. ‘Everyone who believes in him will not be disappointed.’"
+      "text": "The message is this: You must say clearly that Jesus is the Lord. Also, you must believe deep inside yourself that God raised him to life again after his death. Then God will save you. ‘Everyone who believes in him will not be disappointed. ’"
     },
     {
       "verse": "10",
@@ -1084,7 +1084,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "It says in the Bible:‘Everyone who believes in him will not be disappointed.’"
+      "text": "It says in the Bible:‘Everyone who believes in him will not be disappointed. ’"
     },
     {
       "verse": "12",
@@ -1092,7 +1092,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "As it says in the Bible: ‘The Lord God will save everyone who asks him for help.’"
+      "text": "As it says in the Bible: ‘The Lord God will save everyone who asks him for help. ’"
     },
     {
       "verse": "14",
@@ -1100,11 +1100,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "And nobody can go to tell God's message to people unless God sends them. This is written in the Bible: ‘When people arrive to tell us good news, we say “welcome!” ’"
+      "text": "And nobody can go to tell God's message to people unless God sends them. This is written in the Bible: ‘When people arrive to tell us good news, we say “welcome! ” ’"
     },
     {
       "verse": "16",
-      "text": "But not every person who hears the good news obeys its message. Isaiah said this: ‘Lord God, it seems that nobody has believed our message.’"
+      "text": "But not every person who hears the good news obeys its message. Isaiah said this: ‘Lord God, it seems that nobody has believed our message. ’"
     },
     {
       "verse": "17",
@@ -1112,25 +1112,25 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Let me ask you this: ‘Did Israel's people hear that message?’ They certainly did! The Bible says:‘People have spoken God's message everywhere.People have heard his message in every part of the world.’ ‘People have spoken God's message everywhere. People have heard his message in every part of the world.’"
+      "text": "Let me ask you this: ‘Did Israel's people hear that message? ’ They certainly did! The Bible says:‘People have spoken God's message everywhere. People have heard his message in every part of the world. ’ ‘People have spoken God's message everywhere. People have heard his message in every part of the world. ’"
     },
     {
       "verse": "19",
-      "text": "So I ask this too: ‘When Israel's people heard God's message, did they understand it?’ First, think about what Moses wrote. God said to Israel's people:‘I will make you jealous because of people who are not my people.I will make you angry because of people who know nothing about me.’ ‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me.’"
+      "text": "So I ask this too: ‘When Israel's people heard God's message, did they understand it? ’ First, think about what Moses wrote. God said to Israel's people:‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me. ’ ‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me. ’"
     },
     {
       "verse": "20",
-      "text": "Also, this is what Isaiah said very bravely:‘God says: Those people who were not looking for me have found me.I showed myself to people who were not even asking about me.’ ‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me.’"
+      "text": "Also, this is what Isaiah said very bravely:‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me. ’ ‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me. ’"
     },
     {
       "verse": "21",
-      "text": "But Isaiah says this about Israel's people:‘God says: For a very long time,I have been asking my people to return to me.But they refused to obey me.They turned against me.’"
+      "text": "But Isaiah says this about Israel's people:‘God says: For a very long time, I have been asking my people to return to me. But they refused to obey me. They turned against me. ’"
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "So I ask this: ‘Has God turned away from his people?’ No, certainly, he has not done that! I myself belong to Israel's people. I am a descendant of Abraham and I belong to Benjamin's tribe."
+      "text": "So I ask this: ‘Has God turned away from his people? ’ No, certainly, he has not done that! I myself belong to Israel's people. I am a descendant of Abraham and I belong to Benjamin's tribe."
     },
     {
       "verse": "2",
@@ -1138,11 +1138,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "‘Lord God, they have killed your prophets. They have destroyed the altars where people offered sacrifices to you. I am the only person alive who still serves you. And they are trying to kill me.’"
+      "text": "‘Lord God, they have killed your prophets. They have destroyed the altars where people offered sacrifices to you. I am the only person alive who still serves you. And they are trying to kill me. ’"
     },
     {
       "verse": "4",
-      "text": "This was God's answer to Elijah: ‘There are still 7,000 men that I have kept for myself. Those men have not worshipped the false god Baal.’"
+      "text": "This was God's answer to Elijah: ‘There are still 7, 000 men that I have kept for myself. Those men have not worshipped the false god Baal. ’"
     },
     {
       "verse": "5",
@@ -1154,23 +1154,23 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So we can say this: Israel's people did not all find what they were looking for. Only those people that God had chosen received it. But the other people of Israel became unable to understand God's message. ‘God caused them to be like people who are sleeping. Even until this day, their eyes cannot really see, and their ears cannot really hear.’"
+      "text": "So we can say this: Israel's people did not all find what they were looking for. Only those people that God had chosen received it. But the other people of Israel became unable to understand God's message. ‘God caused them to be like people who are sleeping. Even until this day, their eyes cannot really see, and their ears cannot really hear. ’"
     },
     {
       "verse": "8",
-      "text": "It says this in the Bible:‘God caused them to be like people who are sleeping.Even until this day, their eyes cannot really see,and their ears cannot really hear.’"
+      "text": "It says this in the Bible:‘God caused them to be like people who are sleeping. Even until this day, their eyes cannot really see, and their ears cannot really hear. ’"
     },
     {
       "verse": "9",
-      "text": "King David says this:‘They enjoy eating lots of good food together.I pray that God will catch them while they are eating!I want those good things to lead them into trouble.I want God to punish them because of what they have done. ‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done."
+      "text": "King David says this:‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done. ‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done."
     },
     {
       "verse": "10",
-      "text": "I want their eyes to become dark so that they cannot see.I want their bodies always to be in pain, like slaves.’ I want their bodies always to be in pain, like slaves.’"
+      "text": "I want their eyes to become dark so that they cannot see. I want their bodies always to be in pain, like slaves. ’ I want their bodies always to be in pain, like slaves. ’"
     },
     {
       "verse": "11",
-      "text": "So now I ask this: ‘When Israel's people failed to accept Jesus as God's Messiah, did they make themselves separate from God for ever?’ No, certainly that is not true! Because of their mistake, God is now saving Gentiles. God is doing that so that Israel's people would become jealous."
+      "text": "So now I ask this: ‘When Israel's people failed to accept Jesus as God's Messiah, did they make themselves separate from God for ever? ’ No, certainly that is not true! Because of their mistake, God is now saving Gentiles. God is doing that so that Israel's people would become jealous."
     },
     {
       "verse": "12",
@@ -1202,7 +1202,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You might say, ‘God broke off the branches so that I could become part of the tree.’"
+      "text": "You might say, ‘God broke off the branches so that I could become part of the tree. ’"
     },
     {
       "verse": "20",
@@ -1230,11 +1230,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "When that has happened, God will save all Israel's people. This is written in the Bible:‘The one who rescues will come from Zion.He will turn Jacob's people away from their sins."
+      "text": "When that has happened, God will save all Israel's people. This is written in the Bible:‘The one who rescues will come from Zion. He will turn Jacob's people away from their sins."
     },
     {
       "verse": "27",
-      "text": "And I will make this agreement with them.I will forgive them for their sins.’ I will forgive them for their sins.’"
+      "text": "And I will make this agreement with them. I will forgive them for their sins. ’ I will forgive them for their sins. ’"
     },
     {
       "verse": "28",
@@ -1258,19 +1258,19 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Yes! God is very great! He has everything! He knows and he understands all things! Nobody can completely understand the things that he decides. Nobody can explain the ways in which he works. ‘Nobody knows the thoughts of the Lord God. Nobody is able to tell him what he should do.’"
+      "text": "Yes! God is very great! He has everything! He knows and he understands all things! Nobody can completely understand the things that he decides. Nobody can explain the ways in which he works. ‘Nobody knows the thoughts of the Lord God. Nobody is able to tell him what he should do. ’"
     },
     {
       "verse": "34",
-      "text": "The Bible says this:‘Nobody knows the thoughts of the Lord God.Nobody is able to tell him what he should do.’"
+      "text": "The Bible says this:‘Nobody knows the thoughts of the Lord God. Nobody is able to tell him what he should do. ’"
     },
     {
       "verse": "35",
-      "text": "‘Nobody has ever given anything to God,so that God had a debt to pay back to them.’ so that God had a debt to pay back to them.’"
+      "text": "‘Nobody has ever given anything to God, so that God had a debt to pay back to them. ’ so that God had a debt to pay back to them. ’"
     },
     {
       "verse": "36",
-      "text": "It is God who made all things. He also causes all things to continue. And all things are there to show how great he is.We praise him! He is great for ever! Amen. This is true!"
+      "text": "It is God who made all things. He also causes all things to continue. And all things are there to show how great he is. We praise him! He is great for ever! Amen. This is true!"
     }
   ],
   "12": [
@@ -1348,11 +1348,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "My friends, if someone has done bad things to you, do not try to punish them yourselves. Instead, let God be angry and punish them. This is what is written in the Bible:‘The Lord God says,“When people do something wrong,I am the one who will punish them.I will pay them back.” ’ ‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back.” ’"
+      "text": "My friends, if someone has done bad things to you, do not try to punish them yourselves. Instead, let God be angry and punish them. This is what is written in the Bible:‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back. ” ’ ‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back. ” ’"
     },
     {
       "verse": "20",
-      "text": "But the Bible also says this:‘If your enemy is hungry, feed him.If he is thirsty, give him something to drink.If you help your enemy, he will become ashamed.He will be sorry because of what he did to you.’ ‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you.’"
+      "text": "But the Bible also says this:‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you. ’ ‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you. ’"
     },
     {
       "verse": "21",
@@ -1394,7 +1394,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The rules in God's Law say this: ‘Do not have sex with anyone who is not your own wife or your own husband. Do not kill anyone. Do not rob anyone. Do not want things that belong to other people.’ All these rules, and all the other rules in God's Law, are all included in one rule. That one rule is: ‘Love other people as much as you love yourself.’"
+      "text": "The rules in God's Law say this: ‘Do not have sex with anyone who is not your own wife or your own husband. Do not kill anyone. Do not rob anyone. Do not want things that belong to other people. ’ All these rules, and all the other rules in God's Law, are all included in one rule. That one rule is: ‘Love other people as much as you love yourself. ’"
     },
     {
       "verse": "10",
@@ -1456,11 +1456,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So then, if you eat only vegetables, you must not judge other believers. Also, if you eat anything, you must not think that you are better than other believers. Remember that all of us will have to stand in front of God. He will decide whether we have done what is right or wrong. ‘The Lord God says, “As surely as I live, this will certainly happen: Everyone will go down on their knees in front of me. Everyone will praise me that I am God.” ’"
+      "text": "So then, if you eat only vegetables, you must not judge other believers. Also, if you eat anything, you must not think that you are better than other believers. Remember that all of us will have to stand in front of God. He will decide whether we have done what is right or wrong. ‘The Lord God says, “As surely as I live, this will certainly happen: Everyone will go down on their knees in front of me. Everyone will praise me that I am God. ” ’"
     },
     {
       "verse": "11",
-      "text": "This is written in the Bible:‘The Lord God says,“As surely as I live, this will certainly happen:Everyone will go down on their knees in front of me.Everyone will praise me that I am God.” ’"
+      "text": "This is written in the Bible:‘The Lord God says, “As surely as I live, this will certainly happen: Everyone will go down on their knees in front of me. Everyone will praise me that I am God. ” ’"
     },
     {
       "verse": "12",
@@ -1522,7 +1522,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Even Christ did not just do things that would make himself happy. It is written in the Bible that he said this: ‘People have insulted you, God. In that way they have also insulted me.’"
+      "text": "Even Christ did not just do things that would make himself happy. It is written in the Bible that he said this: ‘People have insulted you, God. In that way they have also insulted me. ’"
     },
     {
       "verse": "4",
@@ -1538,7 +1538,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Christ has accepted you, so you must accept each other. In that way you will be praising God. ‘I will tell the Gentiles about you, God. I will praise you with songs, to show how great you are.’"
+      "text": "Christ has accepted you, so you must accept each other. In that way you will be praising God. ‘I will tell the Gentiles about you, God. I will praise you with songs, to show how great you are. ’"
     },
     {
       "verse": "8",
@@ -1546,19 +1546,19 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Gentiles also praise God because he has been kind to them. This is written in the Bible:‘I will tell the Gentiles about you, God.I will praise you with songs, to show how great you are.’"
+      "text": "The Gentiles also praise God because he has been kind to them. This is written in the Bible:‘I will tell the Gentiles about you, God. I will praise you with songs, to show how great you are. ’"
     },
     {
       "verse": "10",
-      "text": "It says also in the Bible:‘Be very happy, you Gentiles!Praise God together with his people.’ ‘Be very happy, you Gentiles! Praise God together with his people.’"
+      "text": "It says also in the Bible:‘Be very happy, you Gentiles! Praise God together with his people. ’ ‘Be very happy, you Gentiles! Praise God together with his people. ’"
     },
     {
       "verse": "11",
-      "text": "It also says this:‘Say how great the Lord is, all you Gentiles.All people, from every country, should say how great he is.’ ‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is.’"
+      "text": "It also says this:‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is. ’ ‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is. ’"
     },
     {
       "verse": "12",
-      "text": "God's prophet Isaiah says this:‘The root of Jesse will arrive.He will come to rule the Gentiles.The Gentiles will trust him to save them.’ ‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them.’"
+      "text": "God's prophet Isaiah says this:‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them. ’ ‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them. ’"
     },
     {
       "verse": "13",
@@ -1590,11 +1590,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "I want to go to places where nobody has ever told people about Christ before. I want to tell the good news to people in those places. That is what I have always wanted to do. I do not want to work in a place where someone else has already started to teach God's message. ‘Those people that nobody ever told them about him will now see. Those people who have never heard about him will now understand.’"
+      "text": "I want to go to places where nobody has ever told people about Christ before. I want to tell the good news to people in those places. That is what I have always wanted to do. I do not want to work in a place where someone else has already started to teach God's message. ‘Those people that nobody ever told them about him will now see. Those people who have never heard about him will now understand. ’"
     },
     {
       "verse": "21",
-      "text": "This is written in the Bible about God's Messiah:‘Those people that nobody ever told them about him will now see.Those people who have never heard about him will now understand.’"
+      "text": "This is written in the Bible about God's Messiah:‘Those people that nobody ever told them about him will now see. Those people who have never heard about him will now understand. ’"
     },
     {
       "verse": "22",
@@ -1664,7 +1664,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Also say ‘hello’ for me to the group of believers who meet in Priscilla and Aquila's house.Say ‘hello’ to my very good friend Epenetus. He was the first person in the region of Asia who believed in Christ."
+      "text": "Also say ‘hello’ for me to the group of believers who meet in Priscilla and Aquila's house. Say ‘hello’ to my very good friend Epenetus. He was the first person in the region of Asia who believed in Christ."
     },
     {
       "verse": "6",
@@ -1736,11 +1736,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Gaius also says ‘hello’ to you. I, Paul, am staying in his house. The group of Christians here also meet together in his house. Erastus also says ‘hello’ to you. He is an officer who takes care of the city's money. Our Christian friend Quartus says ‘hello’ to you too.["
+      "text": "Gaius also says ‘hello’ to you. I, Paul, am staying in his house. The group of Christians here also meet together in his house. Erastus also says ‘hello’ to you. He is an officer who takes care of the city's money. Our Christian friend Quartus says ‘hello’ to you too. ["
     },
     {
       "verse": "24",
-      "text": "I pray that our Lord Jesus Christ will continue to be very kind to all of you.]"
+      "text": "I pray that our Lord Jesus Christ will continue to be very kind to all of you. ]"
     },
     {
       "verse": "25",

@@ -110,13 +110,13 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "It shone with the colours of a rainbow in the clouds when there is rain. This bright light showed the glory of the Lord, who was there.When I saw this, I bent down low with my face on the ground. I heard a voice that was speaking to me."
+      "text": "It shone with the colours of a rainbow in the clouds when there is rain. This bright light showed the glory of the Lord, who was there. When I saw this, I bent down low with my face on the ground. I heard a voice that was speaking to me."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "The voice said to me, ‘Son of man, you must stand up on your feet. Then I will speak to you.’"
+      "text": "The voice said to me, ‘Son of man, you must stand up on your feet. Then I will speak to you. ’"
     },
     {
       "verse": "2",
@@ -128,7 +128,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I am sending you to speak to these people. They do not accept my authority and they refuse to change. But you must say to them, “This is what the Almighty Lord says.”"
+      "text": "I am sending you to speak to these people. They do not accept my authority and they refuse to change. But you must say to them, “This is what the Almighty Lord says. ”"
     },
     {
       "verse": "5",
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But you must listen to what I say to you, son of man. Do not refuse to obey me, as those people refuse to obey me. Open your mouth and eat what I will give to you.’"
+      "text": "But you must listen to what I say to you, son of man. Do not refuse to obey me, as those people refuse to obey me. Open your mouth and eat what I will give to you. ’"
     },
     {
       "verse": "9",
@@ -158,7 +158,7 @@ module.exports = {
   "3": [
     {
       "verse": "1",
-      "text": "He said to me, ‘Son of man, eat what you can see in front of you. Eat this scroll with words on it. Then go and speak to the Israelites.’"
+      "text": "He said to me, ‘Son of man, eat what you can see in front of you. Eat this scroll with words on it. Then go and speak to the Israelites. ’"
     },
     {
       "verse": "2",
@@ -166,7 +166,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He said, ‘Son of man, I am giving you this scroll. Eat it all and fill your stomach with it.’ So I ate it. It had a sweet taste like honey in my mouth."
+      "text": "He said, ‘Son of man, I am giving you this scroll. Eat it all and fill your stomach with it. ’ So I ate it. It had a sweet taste like honey in my mouth."
     },
     {
       "verse": "4",
@@ -190,7 +190,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "You will be as strong as the strongest stone that nobody can break. Do not be afraid of them. Do not be afraid of how they look at you. Remember that they are people who refuse to obey me.’"
+      "text": "You will be as strong as the strongest stone that nobody can break. Do not be afraid of them. Do not be afraid of how they look at you. Remember that they are people who refuse to obey me. ’"
     },
     {
       "verse": "10",
@@ -198,7 +198,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now you must go to the Israelites who are prisoners in Babylon. They are your own people. Give my message to them and say, “This is what the Almighty Lord says.” They may listen to you or they may refuse to listen. But you must still give them my message.’"
+      "text": "Now you must go to the Israelites who are prisoners in Babylon. They are your own people. Give my message to them and say, “This is what the Almighty Lord says. ” They may listen to you or they may refuse to listen. But you must still give them my message. ’"
     },
     {
       "verse": "12",
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I may say to a wicked person, “Your punishment will be death.” Then you must warn that person. You must tell him to stop doing wicked things so that he may save his life. If you do not tell the wicked person this, he will die because of his sins. But I will say that you are guilty, as if you had killed him yourself."
+      "text": "I may say to a wicked person, “Your punishment will be death. ” Then you must warn that person. You must tell him to stop doing wicked things so that he may save his life. If you do not tell the wicked person this, he will die because of his sins. But I will say that you are guilty, as if you had killed him yourself."
     },
     {
       "verse": "19",
@@ -238,11 +238,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But if you do warn that righteous person to stop doing bad things, he may agree. Then he will continue to live, because you warned him. You also will have saved your own life.’"
+      "text": "But if you do warn that righteous person to stop doing bad things, he may agree. Then he will continue to live, because you warned him. You also will have saved your own life. ’"
     },
     {
       "verse": "22",
-      "text": "The Lord continued to give me strength. He said to me, ‘Stand up now! Go out into the valley and I will speak to you there.’"
+      "text": "The Lord continued to give me strength. He said to me, ‘Stand up now! Go out into the valley and I will speak to you there. ’"
     },
     {
       "verse": "23",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "But sometimes I will speak to you. Then you will be able to open your mouth and give them my message. You must tell them, “This is what the Almighty Lord says.” Some of them will listen to my message. But other people will refuse to listen. They are a nation of people who refuse to obey me.’"
+      "text": "But sometimes I will speak to you. Then you will be able to open your mouth and give them my message. You must tell them, “This is what the Almighty Lord says. ” Some of them will listen to my message. But other people will refuse to listen. They are a nation of people who refuse to obey me. ’"
     }
   ],
   "4": [
@@ -304,19 +304,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Prepare your food like a cake that is made from barley. Bake it on a fire that you have made with human dung. Do this where the people can see you.’"
+      "text": "Prepare your food like a cake that is made from barley. Bake it on a fire that you have made with human dung. Do this where the people can see you. ’"
     },
     {
       "verse": "13",
-      "text": "The Lord also said, ‘I will send Israel's people away to live in foreign lands. Then they will have to eat unclean food, as you will do now.’"
+      "text": "The Lord also said, ‘I will send Israel's people away to live in foreign lands. Then they will have to eat unclean food, as you will do now. ’"
     },
     {
       "verse": "14",
-      "text": "Then I said, ‘No, Almighty Lord, I could not use human dung. It would make me unclean. Since I was a child I have never eaten any food that would make me unclean. I have never eaten meat from a dead animal that people have found. I have not eaten meat from an animal that wild animals have killed.’"
+      "text": "Then I said, ‘No, Almighty Lord, I could not use human dung. It would make me unclean. Since I was a child I have never eaten any food that would make me unclean. I have never eaten meat from a dead animal that people have found. I have not eaten meat from an animal that wild animals have killed. ’"
     },
     {
       "verse": "15",
-      "text": "So God said to me, ‘I will allow you to use dung from cows instead of from humans. You may use that to make the fire to cook your bread.’"
+      "text": "So God said to me, ‘I will allow you to use dung from cows instead of from humans. You may use that to make the fire to cook your bread. ’"
     },
     {
       "verse": "16",
@@ -324,7 +324,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They will not have enough food or water. Everyone will be very upset. Their bodies will become very thin when I punish them for their sins.’"
+      "text": "They will not have enough food or water. Everyone will be very upset. Their bodies will become very thin when I punish them for their sins. ’"
     },
     {
       "verse": "4-5",
@@ -398,7 +398,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Famine or wild animals will kill you. Your children will no longer live. Illness and war will destroy you. I will send soldiers to attack you. I, the Lord, say this!’"
+      "text": "Famine or wild animals will kill you. Your children will no longer live. Illness and war will destroy you. I will send soldiers to attack you. I, the Lord, say this! ’"
     }
   ],
   "6": [
@@ -440,7 +440,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "They will know that I am the Lord. They will know that it was true when I promised to bring this terrible trouble to them.” ’"
+      "text": "They will know that I am the Lord. They will know that it was true when I promised to bring this terrible trouble to them. ” ’"
     },
     {
       "verse": "11",
@@ -456,7 +456,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will punish them very much. I will destroy their land from the desert in the south as far as Diblah. I will make it a place where nobody can live. Then they will know that I am the Lord.’"
+      "text": "I will punish them very much. I will destroy their land from the desert in the south as far as Diblah. I will make it a place where nobody can live. Then they will know that I am the Lord. ’"
     }
   ],
   "7": [
@@ -558,7 +558,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Terrible trouble is coming to my people! When they are afraid, they will look for peace. But they will not find it. I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord.’"
+      "text": "Terrible trouble is coming to my people! When they are afraid, they will look for peace. But they will not find it. I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord. ’"
     },
     {
       "verse": "26",
@@ -566,7 +566,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The king will be very sad. His son will not hope for anything good to happen. The people will shake with fear.I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord.’"
+      "text": "The king will be very sad. His son will not hope for anything good to happen. The people will shake with fear. I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord. ’"
     }
   ],
   "8": [
@@ -588,11 +588,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the Lord said to me, ‘Son of man, look up towards the north.’ When I looked, I saw the disgusting idol. It stood at the entrance, on the north side of the altar gate."
+      "text": "Then the Lord said to me, ‘Son of man, look up towards the north. ’ When I looked, I saw the disgusting idol. It stood at the entrance, on the north side of the altar gate."
     },
     {
       "verse": "6",
-      "text": "He said to me, ‘Son of man, look at what they are doing! Israel's people are doing very disgusting things here. They are chasing me far away from my holy temple. But you will see even worse things than these.’"
+      "text": "He said to me, ‘Son of man, look at what they are doing! Israel's people are doing very disgusting things here. They are chasing me far away from my holy temple. But you will see even worse things than these. ’"
     },
     {
       "verse": "7",
@@ -600,11 +600,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He said to me, ‘Son of man, make a hole through the wall here.’ So I dug into the wall. I found a door in it."
+      "text": "He said to me, ‘Son of man, make a hole through the wall here. ’ So I dug into the wall. I found a door in it."
     },
     {
       "verse": "9",
-      "text": "He said to me, ‘Go in there. Look at the wicked things that they are doing in this place.’"
+      "text": "He said to me, ‘Go in there. Look at the wicked things that they are doing in this place. ’"
     },
     {
       "verse": "10",
@@ -616,11 +616,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The Lord said, ‘Son of man, look at the wicked things that Israel's leaders are doing! They are doing them secretly in the dark. Each of them has a room where they worship their images of idols. They say, “The Lord does not see us! The Lord has gone away from our land!” ’"
+      "text": "The Lord said, ‘Son of man, look at the wicked things that Israel's leaders are doing! They are doing them secretly in the dark. Each of them has a room where they worship their images of idols. They say, “The Lord does not see us! The Lord has gone away from our land! ” ’"
     },
     {
       "verse": "13",
-      "text": "The Lord said to me, ‘You will see even worse things that they are doing.’"
+      "text": "The Lord said to me, ‘You will see even worse things that they are doing. ’"
     },
     {
       "verse": "14",
@@ -628,7 +628,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He said to me, ‘Son of man, look at that! But you will see even worse things than these.’"
+      "text": "He said to me, ‘Son of man, look at that! But you will see even worse things than these. ’"
     },
     {
       "verse": "16",
@@ -640,13 +640,13 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So now I will punish them in my great anger. I will not be sorry for them. I will not be kind to them. They may shout at me for help, but I will not listen to them.’"
+      "text": "So now I will punish them in my great anger. I will not be sorry for them. I will not be kind to them. They may shout at me for help, but I will not listen to them. ’"
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "I heard the Lord shout loudly, ‘Bring here the men who will punish the people of this city! Tell the guards to bring their weapons with them.’"
+      "text": "I heard the Lord shout loudly, ‘Bring here the men who will punish the people of this city! Tell the guards to bring their weapons with them. ’"
     },
     {
       "verse": "2",
@@ -658,7 +658,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He said, ‘Go everywhere in the city of Jerusalem. Find the people who are very sad because of the disgusting things that people are doing in the city. Use your pens to put a mark on those people. Put the mark on the front of their heads.’"
+      "text": "He said, ‘Go everywhere in the city of Jerusalem. Find the people who are very sad because of the disgusting things that people are doing in the city. Use your pens to put a mark on those people. Put the mark on the front of their heads. ’"
     },
     {
       "verse": "5",
@@ -666,27 +666,27 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Kill the old men, young men and girls. Kill the women and the children. Destroy them all! But do not touch anyone who has the mark on their head.’So the men started to kill. The first people that they killed were the city's leaders who were in front of the temple."
+      "text": "Kill the old men, young men and girls. Kill the women and the children. Destroy them all! But do not touch anyone who has the mark on their head. ’So the men started to kill. The first people that they killed were the city's leaders who were in front of the temple."
     },
     {
       "verse": "7",
-      "text": "The Lord said to them, ‘Fill the yards of the temple with dead bodies! Make the temple an unclean place! Go and do it now!’ So they went out and they started to kill people everywhere in the city."
+      "text": "The Lord said to them, ‘Fill the yards of the temple with dead bodies! Make the temple an unclean place! Go and do it now! ’ So they went out and they started to kill people everywhere in the city."
     },
     {
       "verse": "8",
-      "text": "I was alone while they were doing this. I bent down low with my face towards the ground. I called out, ‘Almighty Lord! Will you destroy all Israel's people who are still alive? Are you so angry with the people of Jerusalem that you will do that?’"
+      "text": "I was alone while they were doing this. I bent down low with my face towards the ground. I called out, ‘Almighty Lord! Will you destroy all Israel's people who are still alive? Are you so angry with the people of Jerusalem that you will do that? ’"
     },
     {
       "verse": "9",
-      "text": "He answered me, ‘The sins of the people of Israel and Judah are very great. They murder people everywhere in the land. In the city, nobody does what is right. They say, “The Lord has gone away from our land! The Lord does not see what we are doing!”"
+      "text": "He answered me, ‘The sins of the people of Israel and Judah are very great. They murder people everywhere in the land. In the city, nobody does what is right. They say, “The Lord has gone away from our land! The Lord does not see what we are doing! ”"
     },
     {
       "verse": "10",
-      "text": "So I will not be sorry for them. I will not be kind to them. Now I will punish them as they deserve for the things that they have done.’"
+      "text": "So I will not be sorry for them. I will not be kind to them. Now I will punish them as they deserve for the things that they have done. ’"
     },
     {
       "verse": "11",
-      "text": "Then I saw again the man who was wearing linen clothes, with the box of pens. He brought this message to the Lord: ‘I have done what you commanded me to do.’"
+      "text": "Then I saw again the man who was wearing linen clothes, with the box of pens. He brought this message to the Lord: ‘I have done what you commanded me to do. ’"
     }
   ],
   "10": [
@@ -696,7 +696,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Lord said to the man who was wearing linen clothes, ‘Go between the wheels that are under the cherubs. Pick up some of the hot coals that are burning among the cherubs. Fill your hands with them. Then throw them everywhere over the city.’ Then the man did this, as I watched him."
+      "text": "The Lord said to the man who was wearing linen clothes, ‘Go between the wheels that are under the cherubs. Pick up some of the hot coals that are burning among the cherubs. Fill your hands with them. Then throw them everywhere over the city. ’ Then the man did this, as I watched him."
     },
     {
       "verse": "3",
@@ -712,7 +712,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Lord gave a command to the man who was wearing linen clothes. He said, ‘Go in among the cherubs. Take coals of fire from between the wheels.’ So the man went in and he stood beside one of the wheels."
+      "text": "The Lord gave a command to the man who was wearing linen clothes. He said, ‘Go in among the cherubs. Take coals of fire from between the wheels. ’ So the man went in and he stood beside one of the wheels."
     },
     {
       "verse": "7",
@@ -720,7 +720,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "(Under the wings of the cherubs I could see something that looked like human hands.)"
+      "text": "(Under the wings of the cherubs I could see something that looked like human hands. )"
     },
     {
       "verse": "9",
@@ -790,11 +790,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They say, “It is not the right time now to build houses. This city is like a pot to cook meat on a fire. We are like the meat in that pot.”"
+      "text": "They say, “It is not the right time now to build houses. This city is like a pot to cook meat on a fire. We are like the meat in that pot. ”"
     },
     {
       "verse": "4",
-      "text": "Son of man, you must speak my message to warn them.’"
+      "text": "Son of man, you must speak my message to warn them. ’"
     },
     {
       "verse": "5",
@@ -802,7 +802,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You have killed many people in this city. The streets are full of the dead bodies of people that you have killed.”"
+      "text": "You have killed many people in this city. The streets are full of the dead bodies of people that you have killed. ”"
     },
     {
       "verse": "7",
@@ -810,7 +810,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "You are afraid that an enemy will attack you. So I will bring an army to attack you.” That is what the Almighty Lord says."
+      "text": "You are afraid that an enemy will attack you. So I will bring an army to attack you. ” That is what the Almighty Lord says."
     },
     {
       "verse": "9",
@@ -826,11 +826,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then you will know that I am the Lord. You have not obeyed my rules or my laws. Instead, you have lived in the same wicked way as the nations around you.” ’"
+      "text": "Then you will know that I am the Lord. You have not obeyed my rules or my laws. Instead, you have lived in the same wicked way as the nations around you. ” ’"
     },
     {
       "verse": "13",
-      "text": "While I was speaking the Lord's message, Benaiah's son Pelatiah died. Then I bent down low with my face towards the ground. I shouted, ‘Almighty Lord, do not do this! You will completely destroy all Israel's people who remain!’"
+      "text": "While I was speaking the Lord's message, Benaiah's son Pelatiah died. Then I bent down low with my face towards the ground. I shouted, ‘Almighty Lord, do not do this! You will completely destroy all Israel's people who remain! ’"
     },
     {
       "verse": "14",
@@ -838,15 +838,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "‘Son of man, listen to what the people of Jerusalem are saying about you, your brothers and your relatives. They say this about all the people of Israel who are now in Babylon. They are saying, “Those people have gone far away from the Lord. So now this land belongs to us and we can keep it.”"
+      "text": "‘Son of man, listen to what the people of Jerusalem are saying about you, your brothers and your relatives. They say this about all the people of Israel who are now in Babylon. They are saying, “Those people have gone far away from the Lord. So now this land belongs to us and we can keep it. ”"
     },
     {
       "verse": "16",
-      "text": "So say this: “This is what the Almighty Lord says. I removed my people from their own land and I sent them far away. I sent them to live among other nations and in other countries. But I am still near to them in the countries where they have gone.”"
+      "text": "So say this: “This is what the Almighty Lord says. I removed my people from their own land and I sent them far away. I sent them to live among other nations and in other countries. But I am still near to them in the countries where they have gone. ”"
     },
     {
       "verse": "17",
-      "text": "Then say, “This is what the Almighty Lord says. I will fetch you from the places where you have been living. I will bring you back together from those countries. I will give the land of Israel back to you.”"
+      "text": "Then say, “This is what the Almighty Lord says. I will fetch you from the places where you have been living. I will bring you back together from those countries. I will give the land of Israel back to you. ”"
     },
     {
       "verse": "18",
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But it will be different for those who continue to worship their disgusting idols. I will punish them as they deserve because of the evil things that they have done. That is what the Almighty Lord says.’"
+      "text": "But it will be different for those who continue to worship their disgusting idols. I will punish them as they deserve because of the evil things that they have done. That is what the Almighty Lord says. ’"
     },
     {
       "verse": "22",
@@ -904,7 +904,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Put your bag of things on your shoulder while the people watch you. Carry it out when it starts to become dark. Cover your face so that you cannot see the ground. I want you to do this so that it warns Israel's people about danger.’"
+      "text": "Put your bag of things on your shoulder while the people watch you. Carry it out when it starts to become dark. Cover your face so that you cannot see the ground. I want you to do this so that it warns Israel's people about danger. ’"
     },
     {
       "verse": "7",
@@ -916,15 +916,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "‘Son of man, listen to Israel's people who refuse to obey me. They have asked you, “What are you doing?”"
+      "text": "‘Son of man, listen to Israel's people who refuse to obey me. They have asked you, “What are you doing? ”"
     },
     {
       "verse": "10",
-      "text": "Say to them, “This is what the Almighty Lord says: This is a message about the prince who rules in Jerusalem and all the Israelites who are there.”"
+      "text": "Say to them, “This is what the Almighty Lord says: This is a message about the prince who rules in Jerusalem and all the Israelites who are there. ”"
     },
     {
       "verse": "11",
-      "text": "Tell them, “I am teaching you a lesson to warn you about what will happen to you.” As you have done, the people will have to go as prisoners to another country."
+      "text": "Tell them, “I am teaching you a lesson to warn you about what will happen to you. ” As you have done, the people will have to go as prisoners to another country."
     },
     {
       "verse": "12",
@@ -944,7 +944,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But I will save a few of them. War, famine and disease will not kill all of them. When they live among those other nations, they will realize that they have done many disgusting things. And they will know that I am the Lord.’"
+      "text": "But I will save a few of them. War, famine and disease will not kill all of them. When they live among those other nations, they will realize that they have done many disgusting things. And they will know that I am the Lord. ’"
     },
     {
       "verse": "17",
@@ -960,7 +960,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The towns where people live will become heaps of stones. An enemy will destroy the whole land. Then you will know that I am the Lord.” ’"
+      "text": "The towns where people live will become heaps of stones. An enemy will destroy the whole land. Then you will know that I am the Lord. ” ’"
     },
     {
       "verse": "21",
@@ -968,11 +968,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "‘Son of man, you have this proverb in the land of Israel: “A long time passes and visions never truly happen.”"
+      "text": "‘Son of man, you have this proverb in the land of Israel: “A long time passes and visions never truly happen. ”"
     },
     {
       "verse": "23",
-      "text": "But you must say to them, “This is what the Almighty Lord says: I will soon stop you from saying the words of that proverb.” Instead, say to them “The time will soon be here when every vision will truly happen."
+      "text": "But you must say to them, “This is what the Almighty Lord says: I will soon stop you from saying the words of that proverb. ” Instead, say to them “The time will soon be here when every vision will truly happen."
     },
     {
       "verse": "24",
@@ -980,7 +980,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But I, the Lord, will speak. Whatever I say will certainly happen. It will happen very soon. Understand this, you people who refuse to obey me. I will do this while you are still alive. I will do all the things that I have said. That is what the Almighty Lord says.” ’"
+      "text": "But I, the Lord, will speak. Whatever I say will certainly happen. It will happen very soon. Understand this, you people who refuse to obey me. I will do this while you are still alive. I will do all the things that I have said. That is what the Almighty Lord says. ” ’"
     },
     {
       "verse": "26",
@@ -988,11 +988,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "‘Son of man, listen to what Israel's people are saying about you! They say, “The things that you see in your vision will not happen for many years. It will be a long time before his messages become true.”"
+      "text": "‘Son of man, listen to what Israel's people are saying about you! They say, “The things that you see in your vision will not happen for many years. It will be a long time before his messages become true. ”"
     },
     {
       "verse": "28",
-      "text": "So say to them, “This is what the Almighty Lord says: I will not wait any longer to do what I have said. I will do everything that I have told you. That is what the Almighty Lord says.” ’"
+      "text": "So say to them, “This is what the Almighty Lord says: I will not wait any longer to do what I have said. I will do everything that I have told you. That is what the Almighty Lord says. ” ’"
     }
   ],
   "13": [
@@ -1018,11 +1018,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The visions that these prophets see are false. They tell lies about what will happen. They say, ‘The Lord says this,’ when I have not sent them with any message. But they still think that what they say will really happen."
+      "text": "The visions that these prophets see are false. They tell lies about what will happen. They say, ‘The Lord says this, ’ when I have not sent them with any message. But they still think that what they say will really happen."
     },
     {
       "verse": "7",
-      "text": "Yes, you prophets have seen false visions. You tell lies when you say, ‘The Lord says this.’ You say that, but I have not spoken any message to you!"
+      "text": "Yes, you prophets have seen false visions. You tell lies when you say, ‘The Lord says this. ’ You say that, but I have not spoken any message to you!"
     },
     {
       "verse": "8",
@@ -1042,7 +1042,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "After the wall has fallen down, people will say, ‘That white paint was useless!’"
+      "text": "After the wall has fallen down, people will say, ‘That white paint was useless! ’"
     },
     {
       "verse": "13",
@@ -1058,7 +1058,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They were prophets of Israel who told lies. They promised that Jerusalem would have peace. But there was really no peace.’ That is what the Almighty Lord says.”"
+      "text": "They were prophets of Israel who told lies. They promised that Jerusalem would have peace. But there was really no peace. ’ That is what the Almighty Lord says. ”"
     },
     {
       "verse": "17",
@@ -1086,7 +1086,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So you women will not see any more false visions. You will no longer pretend that you know future events. I will rescue my people from your power. Then you will know that I am the Lord.” ’"
+      "text": "So you women will not see any more false visions. You will no longer pretend that you know future events. I will rescue my people from your power. Then you will know that I am the Lord. ” ’"
     }
   ],
   "14": [
@@ -1108,11 +1108,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Israel's people have turned away from me because of their idols. So I will give them an answer that will bring them back to worship me.”"
+      "text": "Israel's people have turned away from me because of their idols. So I will give them an answer that will bring them back to worship me. ”"
     },
     {
       "verse": "6",
-      "text": "Say to Israel's people, “This is what the Almighty Lord says: Turn back to me and stop worshipping idols. Stop doing the disgusting things that you have been doing.”"
+      "text": "Say to Israel's people, “This is what the Almighty Lord says: Turn back to me and stop worshipping idols. Stop doing the disgusting things that you have been doing. ”"
     },
     {
       "verse": "7",
@@ -1132,7 +1132,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I will do that to bring back Israel's people to serve me. They will not continue to make themselves unclean because of all their sins. They will be my people and I will be their God. That is what the Almighty Lord says.’"
+      "text": "I will do that to bring back Israel's people to serve me. They will not continue to make themselves unclean because of all their sins. They will be my people and I will be their God. That is what the Almighty Lord says. ’"
     },
     {
       "verse": "12",
@@ -1156,7 +1156,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Or I might bring an enemy to attack that nation. I would say, “Soldiers with swords should destroy the whole land.” I would cause them to kill both people and animals."
+      "text": "Or I might bring an enemy to attack that nation. I would say, “Soldiers with swords should destroy the whole land. ” I would cause them to kill both people and animals."
     },
     {
       "verse": "18",
@@ -1180,7 +1180,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Yes, when you see what they are like, you will no longer be upset. You will know that I have punished the people of Jerusalem as they deserved. That is what the Almighty Lord says.’"
+      "text": "Yes, when you see what they are like, you will no longer be upset. You will know that I have punished the people of Jerusalem as they deserved. That is what the Almighty Lord says. ’"
     }
   ],
   "15": [
@@ -1214,7 +1214,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "They have not served me faithfully. So I will destroy their land. That is what the Almighty Lord says.’"
+      "text": "They have not served me faithfully. So I will destroy their land. That is what the Almighty Lord says. ’"
     }
   ],
   "16": [
@@ -1240,7 +1240,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then I saw you as I went that way. You were lying there on the ground in your blood. You were trying to move. While you lay there, I said to you, ‘Stay alive.’"
+      "text": "Then I saw you as I went that way. You were lying there on the ground in your blood. You were trying to move. While you lay there, I said to you, ‘Stay alive. ’"
     },
     {
       "verse": "7",
@@ -1468,7 +1468,7 @@ module.exports = {
     },
     {
       "verse": "63",
-      "text": "I will forgive you for your sins so that you are no longer guilty. Then you will remember your sins. You will be too ashamed to say anything. That is what the Almighty Lord says.” ’"
+      "text": "I will forgive you for your sins so that you are no longer guilty. Then you will remember your sins. You will be too ashamed to say anything. That is what the Almighty Lord says. ” ’"
     }
   ],
   "17": [
@@ -1502,7 +1502,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But the vine was already growing in a good field where there was plenty of water. It could grow very well in that place, with new branches. It could become a beautiful vine and make grapesthere.”"
+      "text": "But the vine was already growing in a good field where there was plenty of water. It could grow very well in that place, with new branches. It could become a beautiful vine and make grapesthere. ”"
     },
     {
       "verse": "9",
@@ -1510,7 +1510,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Yes the plant is in the ground, but will it continue to grow? When the hot wind from the east blows on it, it will become completely dry. It will die in the same good field where it had been growing.” ’"
+      "text": "Yes the plant is in the ground, but will it continue to grow? When the hot wind from the east blows on it, it will become completely dry. It will die in the same good field where it had been growing. ” ’"
     },
     {
       "verse": "11",
@@ -1518,11 +1518,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "‘Israel's people have turned against me. Say to them, “Surely you must understand the meaning of this story.” Then say to them, “Listen! The king of Babylon came to Jerusalem. He took away Israel's king and his officers. He took them with him as his prisoners to Babylon."
+      "text": "‘Israel's people have turned against me. Say to them, “Surely you must understand the meaning of this story. ” Then say to them, “Listen! The king of Babylon came to Jerusalem. He took away Israel's king and his officers. He took them with him as his prisoners to Babylon."
     },
     {
       "verse": "13",
-      "text": "He made an agreement with one man from the king of Israel's family. He made that man promise to serve Babylon's king. Then he could rule as king in Jerusalem.The king of Babylon also took away the leaders of Jerusalem as his prisoners."
+      "text": "He made an agreement with one man from the king of Israel's family. He made that man promise to serve Babylon's king. Then he could rule as king in Jerusalem. The king of Babylon also took away the leaders of Jerusalem as his prisoners."
     },
     {
       "verse": "14",
@@ -1558,7 +1558,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The Almighty Lord says this: I myself will take a new branch from the top of a tall cedar tree. I will break off one of its small fresh branches. Then I will plant it on the top of a high mountain. I, the Lord, have said this and I will surely do it.” ’"
+      "text": "The Almighty Lord says this: I myself will take a new branch from the top of a tall cedar tree. I will break off one of its small fresh branches. Then I will plant it on the top of a high mountain. I, the Lord, have said this and I will surely do it. ” ’"
     },
     {
       "verse": "23",
@@ -1566,7 +1566,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then all the trees of the forest will know that I am the Lord. I cause tall trees to fall down. I cause small trees to grow tall. I cause green trees to become dry. I cause dry trees to make fresh leaves.I, the Lord, have said this and I will surely do it.” ’"
+      "text": "Then all the trees of the forest will know that I am the Lord. I cause tall trees to fall down. I cause small trees to grow tall. I cause green trees to become dry. I cause dry trees to make fresh leaves. I, the Lord, have said this and I will surely do it. ” ’"
     }
   ],
   "18": [
@@ -1576,7 +1576,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘You say this proverb about Israel: “The fathers have eaten bitter fruit, but it causes their children's teeth to hurt.” Why do you say that?"
+      "text": "‘You say this proverb about Israel: “The fathers have eaten bitter fruit, but it causes their children's teeth to hurt. ” Why do you say that?"
     },
     {
       "verse": "3",
@@ -1604,7 +1604,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He faithfully obeys my laws and my rules.A man like that is righteous. He will continue to live. That is what the Almighty Lord says."
+      "text": "He faithfully obeys my laws and my rules. A man like that is righteous. He will continue to live. That is what the Almighty Lord says."
     },
     {
       "verse": "10",
@@ -1620,7 +1620,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When he lends money to people, he wants them to pay back a lot more money to him.A man like that will not continue to live! He will certainly die, because he himself has done all these disgusting things. He is guilty, so he himself must die as his punishment."
+      "text": "When he lends money to people, he wants them to pay back a lot more money to him. A man like that will not continue to live! He will certainly die, because he himself has done all these disgusting things. He is guilty, so he himself must die as his punishment."
     },
     {
       "verse": "14",
@@ -1636,7 +1636,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He refuses to do anything that is wrong. When he lends money to people, he does not take more back money back from them. He obeys my rules and my laws.This man will certainly continue to live. He will not die because of his father's sins."
+      "text": "He refuses to do anything that is wrong. When he lends money to people, he does not take more back money back from them. He obeys my rules and my laws. This man will certainly continue to live. He will not die because of his father's sins."
     },
     {
       "verse": "18",
@@ -1644,7 +1644,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You should not say, “Surely the son should receive punishment because of his father's sins.” If the son does what is good and right, and he obeys my laws and my rules, he will continue to live."
+      "text": "You should not say, “Surely the son should receive punishment because of his father's sins. ” If the son does what is good and right, and he obeys my laws and my rules, he will continue to live."
     },
     {
       "verse": "20",
@@ -1668,7 +1668,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But you say, “The Lord is not doing what is right!” So listen to me, Israel's people. It is you who are not doing what is right! It is not me!"
+      "text": "But you say, “The Lord is not doing what is right! ” So listen to me, Israel's people. It is you who are not doing what is right! It is not me!"
     },
     {
       "verse": "26",
@@ -1684,7 +1684,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "But you, Israel's people, say, “The Lord is not doing what is right!” Do you really think that is true? No, you are the people who do not do what is right, you Israelites!"
+      "text": "But you, Israel's people, say, “The Lord is not doing what is right! ” Do you really think that is true? No, you are the people who do not do what is right, you Israelites!"
     },
     {
       "verse": "30",
@@ -1696,7 +1696,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "It does not make me happy when anyone has to die. Turn away from your sins so that you continue to live! That is what the Almighty Lord says.’"
+      "text": "It does not make me happy when anyone has to die. Turn away from your sins so that you continue to live! That is what the Almighty Lord says. ’"
     }
   ],
   "19": [
@@ -1706,55 +1706,55 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Say this:“Your mother was like a great lion among the other lions.She lay among strong young lions.She helped her children to grow safely. “Your mother was like a great lion among the other lions. She lay among strong young lions. She helped her children to grow safely."
+      "text": "Say this:“Your mother was like a great lion among the other lions. She lay among strong young lions. She helped her children to grow safely. “Your mother was like a great lion among the other lions. She lay among strong young lions. She helped her children to grow safely."
     },
     {
       "verse": "3",
-      "text": "She taught one of her children to catch animals for food.As he grew, he started to eat people. As he grew, he started to eat people."
+      "text": "She taught one of her children to catch animals for food. As he grew, he started to eat people. As he grew, he started to eat people."
     },
     {
       "verse": "4",
-      "text": "The people of other nations heard about him.They dug a hole and they caught him in their trap.They put hooks in him and they took him to Egypt. They dug a hole and they caught him in their trap. They put hooks in him and they took him to Egypt."
+      "text": "The people of other nations heard about him. They dug a hole and they caught him in their trap. They put hooks in him and they took him to Egypt. They dug a hole and they caught him in their trap. They put hooks in him and they took him to Egypt."
     },
     {
       "verse": "5",
-      "text": "His mother waited for him to return home.He did not come and she stopped hoping for him.She helped another of her sons to become a strong young lion. He did not come and she stopped hoping for him. She helped another of her sons to become a strong young lion."
+      "text": "His mother waited for him to return home. He did not come and she stopped hoping for him. She helped another of her sons to become a strong young lion. He did not come and she stopped hoping for him. She helped another of her sons to become a strong young lion."
     },
     {
       "verse": "6",
-      "text": "He grew to be strong among the other lions.He learned to catch wild animals and to eat them.He also learned to eat people. He learned to catch wild animals and to eat them. He also learned to eat people."
+      "text": "He grew to be strong among the other lions. He learned to catch wild animals and to eat them. He also learned to eat people. He learned to catch wild animals and to eat them. He also learned to eat people."
     },
     {
       "verse": "7",
-      "text": "He attacked their strong buildings and he destroyed their cities.When he roared, the noise frightened everyone in the land. When he roared, the noise frightened everyone in the land."
+      "text": "He attacked their strong buildings and he destroyed their cities. When he roared, the noise frightened everyone in the land. When he roared, the noise frightened everyone in the land."
     },
     {
       "verse": "8",
-      "text": "Men from other nations near there came to attack him.They threw a net over him.They caught him in their trap. They threw a net over him. They caught him in their trap."
+      "text": "Men from other nations near there came to attack him. They threw a net over him. They caught him in their trap. They threw a net over him. They caught him in their trap."
     },
     {
       "verse": "9",
-      "text": "They tied hooks around his neck.They took him to the king of Babylon.There they put him in prison to stop him roaring.The people on the hills of Israel could not hear his voice any longer. They took him to the king of Babylon. There they put him in prison to stop him roaring. The people on the hills of Israel could not hear his voice any longer."
+      "text": "They tied hooks around his neck. They took him to the king of Babylon. There they put him in prison to stop him roaring. The people on the hills of Israel could not hear his voice any longer. They took him to the king of Babylon. There they put him in prison to stop him roaring. The people on the hills of Israel could not hear his voice any longer."
     },
     {
       "verse": "10",
-      "text": "Your mother was like a vine that was growing near a stream.It grew well because there was plenty of water there.It made many branches and it had a lot of fruit. It grew well because there was plenty of water there. It made many branches and it had a lot of fruit."
+      "text": "Your mother was like a vine that was growing near a stream. It grew well because there was plenty of water there. It made many branches and it had a lot of fruit. It grew well because there was plenty of water there. It made many branches and it had a lot of fruit."
     },
     {
       "verse": "11",
-      "text": "Its branches became big and strong.They were strong enough to make a ruler's stick of authority.The vine grew taller than all the other trees around it.Everyone could see that it was very tall and strong. They were strong enough to make a ruler's stick of authority. The vine grew taller than all the other trees around it. Everyone could see that it was very tall and strong."
+      "text": "Its branches became big and strong. They were strong enough to make a ruler's stick of authority. The vine grew taller than all the other trees around it. Everyone could see that it was very tall and strong. They were strong enough to make a ruler's stick of authority. The vine grew taller than all the other trees around it. Everyone could see that it was very tall and strong."
     },
     {
       "verse": "12",
-      "text": "But the Lord became angry with that vine.He pulled up its roots and he threw it down to the ground.The east wind made it dry and destroyed its fruit.Its strong branches broke and they became useless.Fire destroyed them. He pulled up its roots and he threw it down to the ground. The east wind made it dry and destroyed its fruit. Its strong branches broke and they became useless. Fire destroyed them."
+      "text": "But the Lord became angry with that vine. He pulled up its roots and he threw it down to the ground. The east wind made it dry and destroyed its fruit. Its strong branches broke and they became useless. Fire destroyed them. He pulled up its roots and he threw it down to the ground. The east wind made it dry and destroyed its fruit. Its strong branches broke and they became useless. Fire destroyed them."
     },
     {
       "verse": "13",
-      "text": "Now that vine is growing in a desert.It is in a hot, dry place where there is no water. It is in a hot, dry place where there is no water."
+      "text": "Now that vine is growing in a desert. It is in a hot, dry place where there is no water. It is in a hot, dry place where there is no water."
     },
     {
       "verse": "14",
-      "text": "Fire started to burn its strongest branch.From there the fire destroyed its other branches and its fruit.No strong branch remained in the vine.Now there was nothing to make a ruler's stick of authority.”This is a funeral song. It tells a very sad story.’"
+      "text": "Fire started to burn its strongest branch. From there the fire destroyed its other branches and its fruit. No strong branch remained in the vine. Now there was nothing to make a ruler's stick of authority. ”This is a funeral song. It tells a very sad story. ’"
     }
   ],
   "20": [
@@ -1768,7 +1768,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "‘Son of man, speak to the leaders of Israel. Tell them, “This is what the Almighty Lord says: You say that you want a message from me. I promise you this, as surely as I live: I will not allow you to come to me like that.”"
+      "text": "‘Son of man, speak to the leaders of Israel. Tell them, “This is what the Almighty Lord says: You say that you want a message from me. I promise you this, as surely as I live: I will not allow you to come to me like that. ”"
     },
     {
       "verse": "4",
@@ -1776,7 +1776,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Say to them, “This is what the Almighty Lord says: On the day that I chose Israel's people to belong to me, I made a promise to all Jacob's descendants. In the land of Egypt, I showed them who I am. I promised them, ‘I am the Lord your God.’"
+      "text": "Say to them, “This is what the Almighty Lord says: On the day that I chose Israel's people to belong to me, I made a promise to all Jacob's descendants. In the land of Egypt, I showed them who I am. I promised them, ‘I am the Lord your God. ’"
     },
     {
       "verse": "6",
@@ -1784,7 +1784,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I said to them, ‘You must each destroy the disgusting idols that you worship. Those are the idols of Egypt and they cause you to be unclean. Remember that I am the Lord your God.’"
+      "text": "I said to them, ‘You must each destroy the disgusting idols that you worship. Those are the idols of Egypt and they cause you to be unclean. Remember that I am the Lord your God. ’"
     },
     {
       "verse": "8",
@@ -1808,7 +1808,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But when Israel's people were in the wilderness, they turned against me. They did not obey my laws or my commands. (But anyone who did obey them would enjoy a good life.) They did not obey my rules for Sabbath days. So I was very angry with them. I decided to destroy them there in the wilderness."
+      "text": "But when Israel's people were in the wilderness, they turned against me. They did not obey my laws or my commands. (But anyone who did obey them would enjoy a good life. ) They did not obey my rules for Sabbath days. So I was very angry with them. I decided to destroy them there in the wilderness."
     },
     {
       "verse": "14",
@@ -1836,11 +1836,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Make Sabbath days special to show that you belong to me. Then you will know that I am the Lord your God.’"
+      "text": "Make Sabbath days special to show that you belong to me. Then you will know that I am the Lord your God. ’"
     },
     {
       "verse": "21",
-      "text": "But their children also turned against me. They were not careful to obey my laws and my commands. (But anyone who obeyed them would enjoy a good life.) They did not obey my rules about Sabbath days. So I was very angry with them. I was ready to destroy them there in the wilderness."
+      "text": "But their children also turned against me. They were not careful to obey my laws and my commands. (But anyone who obeyed them would enjoy a good life. ) They did not obey my rules about Sabbath days. So I was very angry with them. I was ready to destroy them there in the wilderness."
     },
     {
       "verse": "22",
@@ -1860,7 +1860,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "I let them make themselves unclean because of the offerings that they made. They burned their firstborn children in fire as sacrifices. I did that to make them afraid. I wanted them to know that I am the Lord.”"
+      "text": "I let them make themselves unclean because of the offerings that they made. They burned their firstborn children in fire as sacrifices. I did that to make them afraid. I wanted them to know that I am the Lord. ”"
     },
     {
       "verse": "27",
@@ -1872,7 +1872,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "I asked them, ���Why do you go to these high places?’ ” (That is why people still call them “high places”.)"
+      "text": "I asked them, ���Why do you go to these high places? ’ ” (That is why people still call them “high places”. )"
     },
     {
       "verse": "30",
@@ -1884,7 +1884,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "You think, ‘We want to live like the people of other nations and clans. They worship idols that are made from wood and stone.’ But these thoughts will never happen."
+      "text": "You think, ‘We want to live like the people of other nations and clans. They worship idols that are made from wood and stone. ’ But these thoughts will never happen."
     },
     {
       "verse": "33",
@@ -1932,7 +1932,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "At that time, I will help you. I will not punish you as you deserve for your wicked and evil acts. Instead, I will do things that bring honour to my name. Then, Israel's people, you will know that I am the Lord. That is what the Almighty Lord says.” ’"
+      "text": "At that time, I will help you. I will not punish you as you deserve for your wicked and evil acts. Instead, I will do things that bring honour to my name. Then, Israel's people, you will know that I am the Lord. That is what the Almighty Lord says. ” ’"
     },
     {
       "verse": "45",
@@ -1948,11 +1948,11 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "Everyone will see that I, the Lord, started the fire. Nobody will be able to stop it burning.” ’"
+      "text": "Everyone will see that I, the Lord, started the fire. Nobody will be able to stop it burning. ” ’"
     },
     {
       "verse": "49",
-      "text": "Then I said, ‘Almighty Lord, “The people are already saying that my stories make them confused.” ’"
+      "text": "Then I said, ‘Almighty Lord, “The people are already saying that my stories make them confused. ” ’"
     }
   ],
   "21": [
@@ -1974,7 +1974,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then all the people will know that I am the Lord. I am the one who is punishing them with my sword. And I will not put it back in its place.”"
+      "text": "Then all the people will know that I am the Lord. I am the one who is punishing them with my sword. And I will not put it back in its place. ”"
     },
     {
       "verse": "6",
@@ -1982,7 +1982,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They will ask you, “Why are you so sad?” Then you will say, “I am sad because of the news that will soon come. Every one of you will be very afraid. Your hands will be weak and your knees will shake.” You can be sure that this will happen very soon. That is what the Almighty Lord says.’"
+      "text": "They will ask you, “Why are you so sad? ” Then you will say, “I am sad because of the news that will soon come. Every one of you will be very afraid. Your hands will be weak and your knees will shake. ” You can be sure that this will happen very soon. That is what the Almighty Lord says. ’"
     },
     {
       "verse": "8",
@@ -1990,39 +1990,39 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "‘Son of man, speak my message to the people. Say, “This is what the Lord says:Look at my sword! It is sharp and it shines brightly."
+      "text": "‘Son of man, speak my message to the people. Say, “This is what the Lord says: Look at my sword! It is sharp and it shines brightly."
     },
     {
       "verse": "10",
-      "text": "It is sharp and it is ready to kill people.It shines as bright as lightning!Should we trust in the power of our king?No! This sword does not respect any kingdom. It shines as bright as lightning! Should we trust in the power of our king? No! This sword does not respect any kingdom."
+      "text": "It is sharp and it is ready to kill people. It shines as bright as lightning! Should we trust in the power of our king? No! This sword does not respect any kingdom. It shines as bright as lightning! Should we trust in the power of our king? No! This sword does not respect any kingdom."
     },
     {
       "verse": "11",
-      "text": "Now it is sharp and it shines.It is ready for someone to take in their hand.It is ready for the killer to use it.” It is ready for someone to take in their hand. It is ready for the killer to use it.”"
+      "text": "Now it is sharp and it shines. It is ready for someone to take in their hand. It is ready for the killer to use it. ” It is ready for someone to take in their hand. It is ready for the killer to use it. ”"
     },
     {
       "verse": "12",
-      "text": "Cry aloud, son of man!This sword is ready to attack my people.It will attack all the leaders of Israel.It will destroy my people and their leaders.Because of that, show that you are very upset. This sword is ready to attack my people. It will attack all the leaders of Israel. It will destroy my people and their leaders. Because of that, show that you are very upset."
+      "text": "Cry aloud, son of man! This sword is ready to attack my people. It will attack all the leaders of Israel. It will destroy my people and their leaders. Because of that, show that you are very upset. This sword is ready to attack my people. It will attack all the leaders of Israel. It will destroy my people and their leaders. Because of that, show that you are very upset."
     },
     {
       "verse": "13",
-      "text": "I am ready to test my people.My sword does not respect the power of any king.So my people will not escape punishment.That is what the Almighty Lord says. My sword does not respect the power of any king. So my people will not escape punishment. That is what the Almighty Lord says."
+      "text": "I am ready to test my people. My sword does not respect the power of any king. So my people will not escape punishment. That is what the Almighty Lord says. My sword does not respect the power of any king. So my people will not escape punishment. That is what the Almighty Lord says."
     },
     {
       "verse": "14",
-      "text": "So speak my message to warn my people, son of man.Then clap your hands together.My sword must attack them many times.It is ready to kill many people.It will attack them from all directions. Then clap your hands together. My sword must attack them many times. It is ready to kill many people. It will attack them from all directions."
+      "text": "So speak my message to warn my people, son of man. Then clap your hands together. My sword must attack them many times. It is ready to kill many people. It will attack them from all directions. Then clap your hands together. My sword must attack them many times. It is ready to kill many people. It will attack them from all directions."
     },
     {
       "verse": "15",
-      "text": "So people will shake with fear. Many of them will fall down.My sword is ready to kill them at every gate of the city.It shines like lightning. It is ready to kill! My sword is ready to kill them at every gate of the city. It shines like lightning. It is ready to kill!"
+      "text": "So people will shake with fear. Many of them will fall down. My sword is ready to kill them at every gate of the city. It shines like lightning. It is ready to kill! My sword is ready to kill them at every gate of the city. It shines like lightning. It is ready to kill!"
     },
     {
       "verse": "16",
-      "text": "My sword, attack quickly on your right side!Now turn and attack on your left side!Attack in every direction that you turn! Now turn and attack on your left side! Attack in every direction that you turn!"
+      "text": "My sword, attack quickly on your right side! Now turn and attack on your left side! Attack in every direction that you turn! Now turn and attack on your left side! Attack in every direction that you turn!"
     },
     {
       "verse": "17",
-      "text": "Then I, too, will clap my hands together.Finally, my anger will finish.I, the Lord, have spoken.’ Finally, my anger will finish. I, the Lord, have spoken.’"
+      "text": "Then I, too, will clap my hands together. Finally, my anger will finish. I, the Lord, have spoken. ’ Finally, my anger will finish. I, the Lord, have spoken. ’"
     },
     {
       "verse": "18",
@@ -2058,31 +2058,31 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "This is what the Almighty Lord says:Take off the special cloth from the king's head.Remove his crown!Everything will change!Give honour to humble people!Make proud people ashamed!"
+      "text": "This is what the Almighty Lord says: Take off the special cloth from the king's head. Remove his crown! Everything will change! Give honour to humble people! Make proud people ashamed!"
     },
     {
       "verse": "27",
-      "text": "I will cause your city to become a heap of stones.I will destroy the kingdom.This will happen when my chosen man comes.I have chosen him to punish the city.Then I will give him authority over the city, because it belongs to him. I will destroy the kingdom. This will happen when my chosen man comes. I have chosen him to punish the city. Then I will give him authority over the city, because it belongs to him."
+      "text": "I will cause your city to become a heap of stones. I will destroy the kingdom. This will happen when my chosen man comes. I have chosen him to punish the city. Then I will give him authority over the city, because it belongs to him. I will destroy the kingdom. This will happen when my chosen man comes. I have chosen him to punish the city. Then I will give him authority over the city, because it belongs to him."
     },
     {
       "verse": "28",
-      "text": "You, son of man, must speak my message about the Ammonites. They have insulted Israel. This is what the Almighty Lord says:A sword is ready to destroy them.It shines brightly like lightning and it is ready to kill. A sword is ready to destroy them. It shines brightly like lightning and it is ready to kill."
+      "text": "You, son of man, must speak my message about the Ammonites. They have insulted Israel. This is what the Almighty Lord says: A sword is ready to destroy them. It shines brightly like lightning and it is ready to kill. A sword is ready to destroy them. It shines brightly like lightning and it is ready to kill."
     },
     {
       "verse": "29",
-      "text": "Their visions about the battle have deceived them.What they think will happen is only lies.The sword will punish wicked people with death.The time for their final punishment has now arrived. What they think will happen is only lies. The sword will punish wicked people with death. The time for their final punishment has now arrived."
+      "text": "Their visions about the battle have deceived them. What they think will happen is only lies. The sword will punish wicked people with death. The time for their final punishment has now arrived. What they think will happen is only lies. The sword will punish wicked people with death. The time for their final punishment has now arrived."
     },
     {
       "verse": "30",
-      "text": "Now put the sword back in its place!I will judge you in your own land,in the place where you were born. I will judge you in your own land, in the place where you were born."
+      "text": "Now put the sword back in its place! I will judge you in your own land, in the place where you were born. I will judge you in your own land, in the place where you were born."
     },
     {
       "verse": "31",
-      "text": "I will punish you very strongly,because I am so angry with you.I will put you under the power of cruel menwho know how to destroy people. because I am so angry with you. I will put you under the power of cruel men who know how to destroy people."
+      "text": "I will punish you very strongly, because I am so angry with you. I will put you under the power of cruel menwho know how to destroy people. because I am so angry with you. I will put you under the power of cruel men who know how to destroy people."
     },
     {
       "verse": "32",
-      "text": "You will be like wood that helps a fire to burn.You will die a violent death in your own land.Nobody will remember you any more.I, the Lord, have said this.’"
+      "text": "You will be like wood that helps a fire to burn. You will die a violent death in your own land. Nobody will remember you any more. I, the Lord, have said this. ’"
     }
   ],
   "22": [
@@ -2148,7 +2148,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "All the other nations will see that you are useless. Then you will know that I am the Lord.” ’"
+      "text": "All the other nations will see that you are useless. Then you will know that I am the Lord. ” ’"
     },
     {
       "verse": "17",
@@ -2172,7 +2172,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "My great anger will cause you to melt, like men cause silver to melt in a hot oven. Then you will know that I am the Lord. And you will know that I have punished you with my anger.’"
+      "text": "My great anger will cause you to melt, like men cause silver to melt in a hot oven. Then you will know that I am the Lord. And you will know that I have punished you with my anger. ’"
     },
     {
       "verse": "23",
@@ -2180,7 +2180,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "‘Son of man, say to the land of Israel, “I am angry with you. Because of that, you will receive no rain to make you clean.”"
+      "text": "‘Son of man, say to the land of Israel, “I am angry with you. Because of that, you will receive no rain to make you clean. ”"
     },
     {
       "verse": "25",
@@ -2196,7 +2196,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "The prophets in the land give false messages. They say that bad things are good. They see false visions. They tell lies about what will happen. They say, “This is what the Almighty Lord says.” But I, the Lord, have not spoken to them."
+      "text": "The prophets in the land give false messages. They say that bad things are good. They see false visions. They tell lies about what will happen. They say, “This is what the Almighty Lord says. ” But I, the Lord, have not spoken to them."
     },
     {
       "verse": "29",
@@ -2208,7 +2208,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "So I will certainly destroy them. I will punish them with my great anger, like a fire that burns them completely. I will now punish them as they deserve for their sins. That is what the Almighty Lord says.’"
+      "text": "So I will certainly destroy them. I will punish them with my great anger, like a fire that burns them completely. I will now punish them as they deserve for their sins. That is what the Almighty Lord says. ’"
     }
   ],
   "23": [
@@ -2318,7 +2318,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "That is how I will stop you living in a disgusting way. You will no longer live as a prostitute, in the way that you lived in Egypt. You will not want to live in that way again. You will not think about how you lived in Egypt any more.”"
+      "text": "That is how I will stop you living in a disgusting way. You will no longer live as a prostitute, in the way that you lived in Egypt. You will not want to live in that way again. You will not think about how you lived in Egypt any more. ”"
     },
     {
       "verse": "28",
@@ -2334,23 +2334,23 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "You have lived in the same bad way that your sister lived. So I will punish you as I punished her.”"
+      "text": "You have lived in the same bad way that your sister lived. So I will punish you as I punished her. ”"
     },
     {
       "verse": "32",
-      "text": "This is what the Lord God says:“You will drink from the same cup of punishment that I gave to your sister.It is a cup that holds a lot of punishment.People will laugh at you and they will insult you. “You will drink from the same cup of punishment that I gave to your sister. It is a cup that holds a lot of punishment. People will laugh at you and they will insult you."
+      "text": "This is what the Lord God says:“You will drink from the same cup of punishment that I gave to your sister. It is a cup that holds a lot of punishment. People will laugh at you and they will insult you. “You will drink from the same cup of punishment that I gave to your sister. It is a cup that holds a lot of punishment. People will laugh at you and they will insult you."
     },
     {
       "verse": "33",
-      "text": "You will suffer very much.You will be drunk and very sad.The cup of your punishment will destroy you.Like your sister Samaria, nothing will remain in you. You will be drunk and very sad. The cup of your punishment will destroy you. Like your sister Samaria, nothing will remain in you."
+      "text": "You will suffer very much. You will be drunk and very sad. The cup of your punishment will destroy you. Like your sister Samaria, nothing will remain in you. You will be drunk and very sad. The cup of your punishment will destroy you. Like your sister Samaria, nothing will remain in you."
     },
     {
       "verse": "34",
-      "text": "You will have to drink all the punishment that is in that cup!Then you will break the cup into pieces.You will cut your breasts to show that you are very upset.I, the Almighty Lord, have said this.” Then you will break the cup into pieces. You will cut your breasts to show that you are very upset. I, the Almighty Lord, have said this.”"
+      "text": "You will have to drink all the punishment that is in that cup! Then you will break the cup into pieces. You will cut your breasts to show that you are very upset. I, the Almighty Lord, have said this. ” Then you will break the cup into pieces. You will cut your breasts to show that you are very upset. I, the Almighty Lord, have said this. ”"
     },
     {
       "verse": "35",
-      "text": "This is what the Almighty Lord says: “You have forgotten me. You have not been faithful to me. You have lived as a prostitute and you have done disgusting things. So now you must receive the punishment that you deserve.” ’"
+      "text": "This is what the Almighty Lord says: “You have forgotten me. You have not been faithful to me. You have lived as a prostitute and you have done disgusting things. So now you must receive the punishment that you deserve. ” ’"
     },
     {
       "verse": "36",
@@ -2382,7 +2382,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "I said this about the woman who had become tired of having sex with so many men: “They will continue to have sex with her, as she is a prostitute.”"
+      "text": "I said this about the woman who had become tired of having sex with so many men: “They will continue to have sex with her, as she is a prostitute. ”"
     },
     {
       "verse": "44",
@@ -2420,43 +2420,43 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tell a story to these people who refuse to obey me. Say to them, “This is what the Almighty Lord says:Put the pot on the fire. Put it there now.Pour some water into the pot."
+      "text": "Tell a story to these people who refuse to obey me. Say to them, “This is what the Almighty Lord says: Put the pot on the fire. Put it there now. Pour some water into the pot."
     },
     {
       "verse": "4",
-      "text": "Put the pieces of meat into it.Put in all the good pieces of meat.Put in the leg and the shoulder.Fill it with all the best bones. Put in all the good pieces of meat. Put in the leg and the shoulder. Fill it with all the best bones."
+      "text": "Put the pieces of meat into it. Put in all the good pieces of meat. Put in the leg and the shoulder. Fill it with all the best bones. Put in all the good pieces of meat. Put in the leg and the shoulder. Fill it with all the best bones."
     },
     {
       "verse": "5",
-      "text": "Use meat and bones from the best sheep.Put more wood on the fire under the pot.Cause the water in the pot to boil well.Cook the bones and the meat. Put more wood on the fire under the pot. Cause the water in the pot to boil well. Cook the bones and the meat."
+      "text": "Use meat and bones from the best sheep. Put more wood on the fire under the pot. Cause the water in the pot to boil well. Cook the bones and the meat. Put more wood on the fire under the pot. Cause the water in the pot to boil well. Cook the bones and the meat."
     },
     {
       "verse": "6",
-      "text": "This is what the Almighty Lord says:Terrible trouble will come to the city that is full of murderers!It is like a pot that has become dirty.Nobody has tried to clean it.Take out each piece of meat, one by one.No piece is special. Terrible trouble will come to the city that is full of murderers! It is like a pot that has become dirty. Nobody has tried to clean it. Take out each piece of meat, one by one. No piece is special."
+      "text": "This is what the Almighty Lord says: Terrible trouble will come to the city that is full of murderers! It is like a pot that has become dirty. Nobody has tried to clean it. Take out each piece of meat, one by one. No piece is special. Terrible trouble will come to the city that is full of murderers! It is like a pot that has become dirty. Nobody has tried to clean it. Take out each piece of meat, one by one. No piece is special."
     },
     {
       "verse": "7",
-      "text": "You can see the blood of people that men killed in the city.It lies on the rocks where everyone can see it.Those murderers did not leave the blood on the ground,where dirt would hide it. It lies on the rocks where everyone can see it. Those murderers did not leave the blood on the ground, where dirt would hide it."
+      "text": "You can see the blood of people that men killed in the city. It lies on the rocks where everyone can see it. Those murderers did not leave the blood on the ground, where dirt would hide it. It lies on the rocks where everyone can see it. Those murderers did not leave the blood on the ground, where dirt would hide it."
     },
     {
       "verse": "8",
-      "text": "I have put the blood on the rocks where everyone can see it.Nothing will be able to hide it.When I see it, I am very angry.I will punish the people of that city as they deserve. Nothing will be able to hide it. When I see it, I am very angry. I will punish the people of that city as they deserve."
+      "text": "I have put the blood on the rocks where everyone can see it. Nothing will be able to hide it. When I see it, I am very angry. I will punish the people of that city as they deserve. Nothing will be able to hide it. When I see it, I am very angry. I will punish the people of that city as they deserve."
     },
     {
       "verse": "9",
-      "text": "So this is what the Almighty Lord says:Terrible trouble will come to the city that is full of murderers!I will put more wood on the fire to destroy it. Terrible trouble will come to the city that is full of murderers! I will put more wood on the fire to destroy it."
+      "text": "So this is what the Almighty Lord says: Terrible trouble will come to the city that is full of murderers! I will put more wood on the fire to destroy it. Terrible trouble will come to the city that is full of murderers! I will put more wood on the fire to destroy it."
     },
     {
       "verse": "10",
-      "text": "Yes, make a big heap of wood.Make the fire burn hot! Cook the meat well!Mix in some spices!Let the bones burn. Make the fire burn hot! Cook the meat well! Mix in some spices! Let the bones burn."
+      "text": "Yes, make a big heap of wood. Make the fire burn hot! Cook the meat well! Mix in some spices! Let the bones burn. Make the fire burn hot! Cook the meat well! Mix in some spices! Let the bones burn."
     },
     {
       "verse": "11",
-      "text": "Then put the empty pot on the coals of the fire.Make the pot very hot, so that its metal is bright red.Burn all the dirt to remove it.Make the pot clean again! Make the pot very hot, so that its metal is bright red. Burn all the dirt to remove it. Make the pot clean again!"
+      "text": "Then put the empty pot on the coals of the fire. Make the pot very hot, so that its metal is bright red. Burn all the dirt to remove it. Make the pot clean again! Make the pot very hot, so that its metal is bright red. Burn all the dirt to remove it. Make the pot clean again!"
     },
     {
       "verse": "12",
-      "text": "Yes, I have tried to make it clean.But the disgusting dirt is still there.So throw the pot and all its dirt on the fire! But the disgusting dirt is still there. So throw the pot and all its dirt on the fire!"
+      "text": "Yes, I have tried to make it clean. But the disgusting dirt is still there. So throw the pot and all its dirt on the fire! But the disgusting dirt is still there. So throw the pot and all its dirt on the fire!"
     },
     {
       "verse": "13",
@@ -2464,7 +2464,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I, the Lord have said what I will do. Now I will do it! The time for your punishment has come! I will not change my mind. I will not be kind to you. I will not be sorry for you. I will judge you as you deserve for the things that you have done. That is what the Almighty Lord says.” ’"
+      "text": "I, the Lord have said what I will do. Now I will do it! The time for your punishment has come! I will not change my mind. I will not be kind to you. I will not be sorry for you. I will judge you as you deserve for the things that you have done. That is what the Almighty Lord says. ” ’"
     },
     {
       "verse": "15",
@@ -2476,7 +2476,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Cry inside yourself but do not cry aloud. Do not show that you are sad because someone has died. Do not remove the cloth from your head. Keep your shoes on your feet. Do not cover the lower part of your face. Do not eat the food that people eat at funerals.’"
+      "text": "Cry inside yourself but do not cry aloud. Do not show that you are sad because someone has died. Do not remove the cloth from your head. Keep your shoes on your feet. Do not cover the lower part of your face. Do not eat the food that people eat at funerals. ’"
     },
     {
       "verse": "18",
@@ -2484,7 +2484,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then the people said to me, ‘Please tell us why you are doing these things. What are you trying to show us?’"
+      "text": "Then the people said to me, ‘Please tell us why you are doing these things. What are you trying to show us? ’"
     },
     {
       "verse": "20",
@@ -2504,7 +2504,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Ezekiel is an example to you. You must do the same as he has done when his wife died. When this happens, you will know that I am the Almighty Lord.”"
+      "text": "Ezekiel is an example to you. You must do the same as he has done when his wife died. When this happens, you will know that I am the Almighty Lord. ”"
     },
     {
       "verse": "25",
@@ -2546,11 +2546,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So listen! I will now use my power to punish you. I will allow other nations to take all your valuable things. I will completely remove you so that you will not be a nation any longer. I will destroy you. Then you will know that I am the Lord.”"
+      "text": "So listen! I will now use my power to punish you. I will allow other nations to take all your valuable things. I will completely remove you so that you will not be a nation any longer. I will destroy you. Then you will know that I am the Lord. ”"
     },
     {
       "verse": "8",
-      "text": "The Almighty Lord says this: The people in Moab and Seir said, “Judah's people have become the same as all the other nations.”"
+      "text": "The Almighty Lord says this: The people in Moab and Seir said, “Judah's people have become the same as all the other nations. ”"
     },
     {
       "verse": "9",
@@ -2596,7 +2596,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘Son of man, Tyre's people have said, “Good! An enemy has destroyed Jerusalem! Traders from that city went out to many nations. Now we will do that instead of them. We will become rich because Jerusalem is no longer a strong city.”"
+      "text": "‘Son of man, Tyre's people have said, “Good! An enemy has destroyed Jerusalem! Traders from that city went out to many nations. Now we will do that instead of them. We will become rich because Jerusalem is no longer a strong city. ”"
     },
     {
       "verse": "3",
@@ -2656,11 +2656,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then they will sing this funeral song about you:“City that was famous for your great sailors,now your power has gone!In the past, you made many people afraid,as your brave men travelled across the sea."
+      "text": "Then they will sing this funeral song about you:“City that was famous for your great sailors, now your power has gone! In the past, you made many people afraid, as your brave men travelled across the sea."
     },
     {
       "verse": "18",
-      "text": "Now you have fallen to the groundand people who live on the coast shake with fear.Now your power has goneand those people are very afraid.” and people who live on the coast shake with fear. Now your power has gone and those people are very afraid.”"
+      "text": "Now you have fallen to the groundand people who live on the coast shake with fear. Now your power has goneand those people are very afraid. ” and people who live on the coast shake with fear. Now your power has gone and those people are very afraid. ”"
     },
     {
       "verse": "19",
@@ -2672,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I will cause terrible things to happen to you. You will come to a complete end. People will look for you, but they will never find you. That is what the Almighty Lord says.’"
+      "text": "I will cause terrible things to happen to you. You will come to a complete end. People will look for you, but they will never find you. That is what the Almighty Lord says. ’"
     }
   ],
   "27": [
@@ -2690,35 +2690,35 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Your borders reached into the middle of the sea.Your builders made you like a great ship. Your builders made you like a great ship."
+      "text": "Your borders reached into the middle of the sea. Your builders made you like a great ship. Your builders made you like a great ship."
     },
     {
       "verse": "5",
-      "text": "They used wood from the pine trees of Senir.They used a cedar tree from Lebanon to make your mast. They used a cedar tree from Lebanon to make your mast."
+      "text": "They used wood from the pine trees of Senir. They used a cedar tree from Lebanon to make your mast. They used a cedar tree from Lebanon to make your mast."
     },
     {
       "verse": "6",
-      "text": "They used oak trees from Bashan to make your oars.They used pine wood from the coasts of Cyprus to make your deck.They made it beautiful with ivory. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory."
+      "text": "They used oak trees from Bashan to make your oars. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory."
     },
     {
       "verse": "7",
-      "text": "They used good linen from Egypt to make your sail.They made it pretty with many colours.The sail was like a flag that everyone could see.They made tents of cloth to cover your deck.It was blue and purple cloth that came from Cyprus island. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island."
+      "text": "They used good linen from Egypt to make your sail. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island."
     },
     {
       "verse": "8",
-      "text": "Men from Sidon and Arvad used the oars to move the ship.Your own clever men from Tyre were your sailors. Your own clever men from Tyre were your sailors."
+      "text": "Men from Sidon and Arvad used the oars to move the ship. Your own clever men from Tyre were your sailors. Your own clever men from Tyre were your sailors."
     },
     {
       "verse": "9",
-      "text": "Leaders from Gebal went with you.They brought men who knew how to mend the ship.Sailors of ships from many countriescame to buy things from you. They brought men who knew how to mend the ship. Sailors of ships from many countries came to buy things from you."
+      "text": "Leaders from Gebal went with you. They brought men who knew how to mend the ship. Sailors of ships from many countriescame to buy things from you. They brought men who knew how to mend the ship. Sailors of ships from many countries came to buy things from you."
     },
     {
       "verse": "10",
-      "text": "There were brave soldiers from Persia, Lydia and Libya in your army.They hung their shields and their helmets on your walls.They caused people to give you honour. They hung their shields and their helmets on your walls. They caused people to give you honour."
+      "text": "There were brave soldiers from Persia, Lydia and Libya in your army. They hung their shields and their helmets on your walls. They caused people to give you honour. They hung their shields and their helmets on your walls. They caused people to give you honour."
     },
     {
       "verse": "11",
-      "text": "Men from Arvad and Helech were guards who stood on your walls.Soldiers from Gammad were in your strong towers.They hung their weapons on your walls.They made you look very beautiful. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful."
+      "text": "Men from Arvad and Helech were guards who stood on your walls. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful."
     },
     {
       "verse": "12",
@@ -2774,93 +2774,93 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Big ships from Tarshish carried your valuable things across the sea.You, Tyre, were like a great ship in the middle of the sea.You were full with a heavy load of many things."
+      "text": "Big ships from Tarshish carried your valuable things across the sea. You, Tyre, were like a great ship in the middle of the sea. You were full with a heavy load of many things."
     },
     {
       "verse": "26",
-      "text": "Your sailors took you into the great waves of the sea.There, a strong east wind has caused you to break into small pieces. There, a strong east wind has caused you to break into small pieces."
+      "text": "Your sailors took you into the great waves of the sea. There, a strong east wind has caused you to break into small pieces. There, a strong east wind has caused you to break into small pieces."
     },
     {
       "verse": "27",
-      "text": "All your valuable things and your riches will fall into the deep sea.All your sailors, your captains, your traders and your soldierswill also fall into the sea.Yes, everyone in you will drown in the seaon that day when you break into pieces. All your sailors, your captains, your traders and your soldiers will also fall into the sea. Yes, everyone in you will drown in the sea on that day when you break into pieces."
+      "text": "All your valuable things and your riches will fall into the deep sea. All your sailors, your captains, your traders and your soldierswill also fall into the sea. Yes, everyone in you will drown in the seaon that day when you break into pieces. All your sailors, your captains, your traders and your soldiers will also fall into the sea. Yes, everyone in you will drown in the sea on that day when you break into pieces."
     },
     {
       "verse": "28",
-      "text": "When your sailors call out for help,the cities on the coast of the sea will shake. the cities on the coast of the sea will shake."
+      "text": "When your sailors call out for help, the cities on the coast of the sea will shake. the cities on the coast of the sea will shake."
     },
     {
       "verse": "29",
-      "text": "All the sailors of other ships will leave their ships.The sailors and their captains will stand on the shore of the sea. The sailors and their captains will stand on the shore of the sea."
+      "text": "All the sailors of other ships will leave their ships. The sailors and their captains will stand on the shore of the sea. The sailors and their captains will stand on the shore of the sea."
     },
     {
       "verse": "30",
-      "text": "They will weep loudly because they are very upset about you.They will throw dirt on their heads.They will lie down in ashes. They will throw dirt on their heads. They will lie down in ashes."
+      "text": "They will weep loudly because they are very upset about you. They will throw dirt on their heads. They will lie down in ashes. They will throw dirt on their heads. They will lie down in ashes."
     },
     {
       "verse": "31",
-      "text": "They will cut all the hair off their heads.They will wear sackcloth.They will weep and be very upsetbecause of the terrible thing that has happened to you. They will wear sackcloth. They will weep and be very upset because of the terrible thing that has happened to you."
+      "text": "They will cut all the hair off their heads. They will wear sackcloth. They will weep and be very upsetbecause of the terrible thing that has happened to you. They will wear sackcloth. They will weep and be very upset because of the terrible thing that has happened to you."
     },
     {
       "verse": "32",
-      "text": "As they weep, they will sing this funeral song about you:‘Tyre was the greatest city.But now it lies at the bottom of the seaand nobody knows that it is there.’ ‘Tyre was the greatest city. But now it lies at the bottom of the sea and nobody knows that it is there.’"
+      "text": "As they weep, they will sing this funeral song about you:‘Tyre was the greatest city. But now it lies at the bottom of the seaand nobody knows that it is there. ’ ‘Tyre was the greatest city. But now it lies at the bottom of the sea and nobody knows that it is there. ’"
     },
     {
       "verse": "33",
-      "text": "Your valuable things went to many peoplein nations across the sea.People were happy with the things that they received from you.Even kings in far places became rich because of you. in nations across the sea. People were happy with the things that they received from you. Even kings in far places became rich because of you."
+      "text": "Your valuable things went to many peoplein nations across the sea. People were happy with the things that they received from you. Even kings in far places became rich because of you. in nations across the sea. People were happy with the things that they received from you. Even kings in far places became rich because of you."
     },
     {
       "verse": "34",
-      "text": "Now the sea has broken you into pieces.You have fallen to the bottom of the deep sea.All your valuable things and the people who worked in youlie at the bottom of the sea. You have fallen to the bottom of the deep sea. All your valuable things and the people who worked in you lie at the bottom of the sea."
+      "text": "Now the sea has broken you into pieces. You have fallen to the bottom of the deep sea. All your valuable things and the people who worked in youlie at the bottom of the sea. You have fallen to the bottom of the deep sea. All your valuable things and the people who worked in you lie at the bottom of the sea."
     },
     {
       "verse": "35",
-      "text": "The people who live on the coast of the sea are afraid,because of what has happened to you.Their kings shake with fear.Their faces look very sad. because of what has happened to you. Their kings shake with fear. Their faces look very sad."
+      "text": "The people who live on the coast of the sea are afraid, because of what has happened to you. Their kings shake with fear. Their faces look very sad. because of what has happened to you. Their kings shake with fear. Their faces look very sad."
     },
     {
       "verse": "36",
-      "text": "Traders from other nations keep away from you.A terrible thing has happened to you.It will be the end of you for ever.” ’"
+      "text": "Traders from other nations keep away from you. A terrible thing has happened to you. It will be the end of you for ever. ” ’"
     }
   ],
   "28": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me: You are a very proud man. You say, ‘I am a god and Tyre is my throne. I rule over all the seas around me.’ But, whatever you think, you are only a man. You are not a god."
+      "text": "The Lord gave this message to me: You are a very proud man. You say, ‘I am a god and Tyre is my throne. I rule over all the seas around me. ’ But, whatever you think, you are only a man. You are not a god."
     },
     {
       "verse": "2",
-      "text": "‘Son of man, say this to the ruler of Tyre. “This is what the Almighty Lord says:You are a very proud man.You say, ‘I am a god and Tyre is my throne.I rule over all the seas around me.’But, whatever you think, you are only a man. You are not a god."
+      "text": "‘Son of man, say this to the ruler of Tyre. “This is what the Almighty Lord says: You are a very proud man. You say, ‘I am a god and Tyre is my throne. I rule over all the seas around me. ’But, whatever you think, you are only a man. You are not a god."
     },
     {
       "verse": "3",
-      "text": "You think that you are wiser than Daniel,and that you know all secrets. and that you know all secrets."
+      "text": "You think that you are wiser than Daniel, and that you know all secrets. and that you know all secrets."
     },
     {
       "verse": "4",
-      "text": "You have been wise and clever enough to make yourself rich.You have stored much gold and silver in your palace. You have stored much gold and silver in your palace."
+      "text": "You have been wise and clever enough to make yourself rich. You have stored much gold and silver in your palace. You have stored much gold and silver in your palace."
     },
     {
       "verse": "5",
-      "text": "Because you are a clever trader,you have become even richer.And because of your riches, you have become very proud. you have become even richer. And because of your riches, you have become very proud."
+      "text": "Because you are a clever trader, you have become even richer. And because of your riches, you have become very proud. you have become even richer. And because of your riches, you have become very proud."
     },
     {
       "verse": "6",
-      "text": "So this is what the Almighty Lord says:You think that you are as wise as a god. You think that you are as wise as a god."
+      "text": "So this is what the Almighty Lord says: You think that you are as wise as a god. You think that you are as wise as a god."
     },
     {
       "verse": "7",
-      "text": "So listen! I will bring a foreign army to attack you.They will be a very cruel enemy.They will use their swords to destroy your beautiful city.They will spoil the beautiful things that you have used your wisdom to get for yourselves. They will be a very cruel enemy. They will use their swords to destroy your beautiful city. They will spoil the beautiful things that you have used your wisdom to get for yourselves."
+      "text": "So listen! I will bring a foreign army to attack you. They will be a very cruel enemy. They will use their swords to destroy your beautiful city. They will spoil the beautiful things that you have used your wisdom to get for yourselves. They will be a very cruel enemy. They will use their swords to destroy your beautiful city. They will spoil the beautiful things that you have used your wisdom to get for yourselves."
     },
     {
       "verse": "8",
-      "text": "They will kill you violently in battle,and the sea will become your grave. and the sea will become your grave."
+      "text": "They will kill you violently in battle, and the sea will become your grave. and the sea will become your grave."
     },
     {
       "verse": "9",
-      "text": "When your enemies attack you,you will no longer say, ‘I am a god.’When they are ready to kill you,you will know that you are only human. you will no longer say, ‘I am a god.’ When they are ready to kill you, you will know that you are only human."
+      "text": "When your enemies attack you, you will no longer say, ‘I am a god. ’When they are ready to kill you, you will know that you are only human. you will no longer say, ‘I am a god. ’ When they are ready to kill you, you will know that you are only human."
     },
     {
       "verse": "10",
-      "text": "Foreign people will kill you.You will die like people who do not belong to me.I, the Almighty Lord have said this.” ’ You will die like people who do not belong to me. I, the Almighty Lord have said this.” ’"
+      "text": "Foreign people will kill you. You will die like people who do not belong to me. I, the Almighty Lord have said this. ” ’ You will die like people who do not belong to me. I, the Almighty Lord have said this. ” ’"
     },
     {
       "verse": "11",
@@ -2868,35 +2868,35 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "‘Son of man, sing this funeral song about the king of Tyre. Tell him, “This is what the Almighty Lord says:At one time, you were the example of a good man.You were completely wise and beautiful."
+      "text": "‘Son of man, sing this funeral song about the king of Tyre. Tell him, “This is what the Almighty Lord says: At one time, you were the example of a good man. You were completely wise and beautiful."
     },
     {
       "verse": "13",
-      "text": "You lived in God's beautiful garden, Eden.You wore valuable jewels on your clothes.The jewels were ruby, topaz, emerald,chrysolite, onyx, jasper,sapphire, turquoise and beryl.They were fixed to pieces of gold.They were ready for you to wear on the day that you were born. You wore valuable jewels on your clothes. The jewels were ruby, topaz, emerald, chrysolite, onyx, jasper, sapphire, turquoise and beryl. They were fixed to pieces of gold. They were ready for you to wear on the day that you were born."
+      "text": "You lived in God's beautiful garden, Eden. You wore valuable jewels on your clothes. The jewels were ruby, topaz, emerald, chrysolite, onyx, jasper, sapphire, turquoise and beryl. They were fixed to pieces of gold. They were ready for you to wear on the day that you were born. You wore valuable jewels on your clothes. The jewels were ruby, topaz, emerald, chrysolite, onyx, jasper, sapphire, turquoise and beryl. They were fixed to pieces of gold. They were ready for you to wear on the day that you were born."
     },
     {
       "verse": "14",
-      "text": "I put you there with a cherub to be your guard.You lived on my holy mountain.You walked among the stones that burned with fire. You lived on my holy mountain. You walked among the stones that burned with fire."
+      "text": "I put you there with a cherub to be your guard. You lived on my holy mountain. You walked among the stones that burned with fire. You lived on my holy mountain. You walked among the stones that burned with fire."
     },
     {
       "verse": "15",
-      "text": "Everything that you did was completely goodfrom the day that you were born.But later, you started to do wicked things. from the day that you were born. But later, you started to do wicked things."
+      "text": "Everything that you did was completely goodfrom the day that you were born. But later, you started to do wicked things. from the day that you were born. But later, you started to do wicked things."
     },
     {
       "verse": "16",
-      "text": "As a trader, you bought and sold many things.As a result, you became violent and you did evil things.So I sent you away in shame.I would not allow you to remain on my mountain.The cherub that had been your guard chased you out.You could no longer walk among the stones that burned with fire. As a result, you became violent and you did evil things. So I sent you away in shame. I would not allow you to remain on my mountain. The cherub that had been your guard chased you out. You could no longer walk among the stones that burned with fire."
+      "text": "As a trader, you bought and sold many things. As a result, you became violent and you did evil things. So I sent you away in shame. I would not allow you to remain on my mountain. The cherub that had been your guard chased you out. You could no longer walk among the stones that burned with fire. As a result, you became violent and you did evil things. So I sent you away in shame. I would not allow you to remain on my mountain. The cherub that had been your guard chased you out. You could no longer walk among the stones that burned with fire."
     },
     {
       "verse": "17",
-      "text": "But because you were so beautiful, you were very proud.You used your wisdom to do bad things,because you loved to have beautiful things.So I threw you down to the ground.I let other kings see what had happened to you. You used your wisdom to do bad things, because you loved to have beautiful things. So I threw you down to the ground. I let other kings see what had happened to you."
+      "text": "But because you were so beautiful, you were very proud. You used your wisdom to do bad things, because you loved to have beautiful things. So I threw you down to the ground. I let other kings see what had happened to you. You used your wisdom to do bad things, because you loved to have beautiful things. So I threw you down to the ground. I let other kings see what had happened to you."
     },
     {
       "verse": "18",
-      "text": "As a trader, you did many wrong things to cheat people.Your holy places became unclean.So I caused fire to completely destroy your city.Everyone could see that only ashes remained on the ground. Your holy places became unclean. So I caused fire to completely destroy your city. Everyone could see that only ashes remained on the ground."
+      "text": "As a trader, you did many wrong things to cheat people. Your holy places became unclean. So I caused fire to completely destroy your city. Everyone could see that only ashes remained on the ground. Your holy places became unclean. So I caused fire to completely destroy your city. Everyone could see that only ashes remained on the ground."
     },
     {
       "verse": "19",
-      "text": "All the people of other nations who knew you are very afraid.They have seen the terrible thing that has happened to you.You have come to a complete end and you will never return.” ’ They have seen the terrible thing that has happened to you. You have come to a complete end and you will never return.” ’"
+      "text": "All the people of other nations who knew you are very afraid. They have seen the terrible thing that has happened to you. You have come to a complete end and you will never return. ” ’ They have seen the terrible thing that has happened to you. You have come to a complete end and you will never return. ” ’"
     },
     {
       "verse": "20",
@@ -2908,11 +2908,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Say, “This is what the Almighty Lord says:Listen! I have become your enemy, Sidon.I will show your people how great I am.Then they will know that I am the Lord.I will punish your people for their sinsso that they know that I am a holy God."
+      "text": "Say, “This is what the Almighty Lord says: Listen! I have become your enemy, Sidon. I will show your people how great I am. Then they will know that I am the Lord. I will punish your people for their sinsso that they know that I am a holy God."
     },
     {
       "verse": "23",
-      "text": "I will cause disease to kill people in the city.Enemies will attack from all around the city,and people will die in the streets.Then they will know that I am the Lord. Enemies will attack from all around the city, and people will die in the streets. Then they will know that I am the Lord."
+      "text": "I will cause disease to kill people in the city. Enemies will attack from all around the city, and people will die in the streets. Then they will know that I am the Lord. Enemies will attack from all around the city, and people will die in the streets. Then they will know that I am the Lord."
     },
     {
       "verse": "24",
@@ -2924,13 +2924,13 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "They will live there safely. They will build houses and they will plant vineyards. I will punish all the nations around them who have insulted them. Then my people will live safely in their homes. And they will know that I am the Lord their God.” ’"
+      "text": "They will live there safely. They will build houses and they will plant vineyards. I will punish all the nations around them who have insulted them. Then my people will live safely in their homes. And they will know that I am the Lord their God. ” ’"
     }
   ],
   "29": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me on the 12th day of the 10th month of the 10th year: Listen, Pharaoh, king of Egypt, I have become your enemy. You are like the great monster that lies in Egypt's streams. You say, ‘The Nile river belongs to me! I made it for myself.’"
+      "text": "The Lord gave this message to me on the 12th day of the 10th month of the 10th year: Listen, Pharaoh, king of Egypt, I have become your enemy. You are like the great monster that lies in Egypt's streams. You say, ‘The Nile river belongs to me! I made it for myself. ’"
     },
     {
       "verse": "2",
@@ -2938,15 +2938,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tell them, “The Almighty Lord says this:Listen, Pharaoh, king of Egypt, I have become your enemy.You are like the great monster that lies in Egypt's streams.You say, ‘The Nile river belongs to me! I made it for myself.’"
+      "text": "Tell them, “The Almighty Lord says this: Listen, Pharaoh, king of Egypt, I have become your enemy. You are like the great monster that lies in Egypt's streams. You say, ‘The Nile river belongs to me! I made it for myself. ’"
     },
     {
       "verse": "4",
-      "text": "But I will put hooks into your mouth and catch you.I will cause the fish in your streams to hang on your scales.I will pull you out from the streams with all those fish on you. I will cause the fish in your streams to hang on your scales. I will pull you out from the streams with all those fish on you."
+      "text": "But I will put hooks into your mouth and catch you. I will cause the fish in your streams to hang on your scales. I will pull you out from the streams with all those fish on you. I will cause the fish in your streams to hang on your scales. I will pull you out from the streams with all those fish on you."
     },
     {
       "verse": "5",
-      "text": "I will leave you in the wilderness with all your fish.You will lie on the ground in the open fields.Nobody will pick you up or take care of you.I will give you to the wild animals and birds to be their food. You will lie on the ground in the open fields. Nobody will pick you up or take care of you. I will give you to the wild animals and birds to be their food."
+      "text": "I will leave you in the wilderness with all your fish. You will lie on the ground in the open fields. Nobody will pick you up or take care of you. I will give you to the wild animals and birds to be their food. You will lie on the ground in the open fields. Nobody will pick you up or take care of you. I will give you to the wild animals and birds to be their food."
     },
     {
       "verse": "6",
@@ -2962,7 +2962,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The land of Egypt will become an empty place. Then they will know that I am the Lord.You said, ‘The Nile river belongs to me. I made it for myself.’"
+      "text": "The land of Egypt will become an empty place. Then they will know that I am the Lord. You said, ‘The Nile river belongs to me. I made it for myself. ’"
     },
     {
       "verse": "10",
@@ -2990,7 +2990,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Israel will never again hope that Egypt has the power to help them. Instead, Egypt will cause Israel's people to remember their sin. Their sin was to ask Egypt for help. Then they will know that I am the Almighty Lord.” ’"
+      "text": "Israel will never again hope that Egypt has the power to help them. Instead, Egypt will cause Israel's people to remember their sin. Their sin was to ask Egypt for help. Then they will know that I am the Almighty Lord. ” ’"
     },
     {
       "verse": "17",
@@ -3010,41 +3010,41 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "At that time, I will make Israel a powerful nation again. Then I will give you a message to speak to them, Ezekiel. They will listen to what you say. Then they will know that I am the Lord.’"
+      "text": "At that time, I will make Israel a powerful nation again. Then I will give you a message to speak to them, Ezekiel. They will listen to what you say. Then they will know that I am the Lord. ’"
     }
   ],
   "30": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me: Weep and cry aloud, ‘Help! The day of great trouble is coming!’"
+      "text": "The Lord gave this message to me: Weep and cry aloud, ‘Help! The day of great trouble is coming! ’"
     },
     {
       "verse": "2",
-      "text": "‘Son of man, prophesy to the people. Say to them, “This is what the Almighty Lord says:Weep and cry aloud, ‘Help! The day of great trouble is coming!’"
+      "text": "‘Son of man, prophesy to the people. Say to them, “This is what the Almighty Lord says: Weep and cry aloud, ‘Help! The day of great trouble is coming! ’"
     },
     {
       "verse": "3",
-      "text": "Yes, that day will be very soon. It is the day of the Lord.It will be a day of dark clouds,when the Lord will punish the nations. It will be a day of dark clouds, when the Lord will punish the nations."
+      "text": "Yes, that day will be very soon. It is the day of the Lord. It will be a day of dark clouds, when the Lord will punish the nations. It will be a day of dark clouds, when the Lord will punish the nations."
     },
     {
       "verse": "4",
-      "text": "An enemy army will attack Egypt.The people of Ethiopia will be afraid.Many people in Egypt will die in the battle.Enemies will carry away Egypt's riches.They will knock down Egypt's buildings. The people of Ethiopia will be afraid. Many people in Egypt will die in the battle. Enemies will carry away Egypt's riches. They will knock down Egypt's buildings."
+      "text": "An enemy army will attack Egypt. The people of Ethiopia will be afraid. Many people in Egypt will die in the battle. Enemies will carry away Egypt's riches. They will knock down Egypt's buildings. The people of Ethiopia will be afraid. Many people in Egypt will die in the battle. Enemies will carry away Egypt's riches. They will knock down Egypt's buildings."
     },
     {
       "verse": "5",
-      "text": "Soldiers from other nations will also die in the battle.They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia,as well as men who belong to my own people. They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia, as well as men who belong to my own people."
+      "text": "Soldiers from other nations will also die in the battle. They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia, as well as men who belong to my own people. They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia, as well as men who belong to my own people."
     },
     {
       "verse": "6",
-      "text": "This is what the Lord says:All the people who help Egypt will die in the battle.Egypt will no longer be proud of her great power.Egypt's soldiers will die everywhere, from Migdol to Aswan.That is what the Almighty Lord says. All the people who help Egypt will die in the battle. Egypt will no longer be proud of her great power. Egypt's soldiers will die everywhere, from Migdol to Aswan. That is what the Almighty Lord says."
+      "text": "This is what the Lord says: All the people who help Egypt will die in the battle. Egypt will no longer be proud of her great power. Egypt's soldiers will die everywhere, from Migdol to Aswan. That is what the Almighty Lord says. All the people who help Egypt will die in the battle. Egypt will no longer be proud of her great power. Egypt's soldiers will die everywhere, from Migdol to Aswan. That is what the Almighty Lord says."
     },
     {
       "verse": "7",
-      "text": "Egypt will become like a desert among other deserts.Its cities will become heaps of stones. Its cities will become heaps of stones."
+      "text": "Egypt will become like a desert among other deserts. Its cities will become heaps of stones. Its cities will become heaps of stones."
     },
     {
       "verse": "8",
-      "text": "I will burn Egypt with fire.I will destroy all those who fight to help Egypt.Then they will know that I am the Lord. I will destroy all those who fight to help Egypt. Then they will know that I am the Lord."
+      "text": "I will burn Egypt with fire. I will destroy all those who fight to help Egypt. Then they will know that I am the Lord. I will destroy all those who fight to help Egypt. Then they will know that I am the Lord."
     },
     {
       "verse": "9",
@@ -3052,43 +3052,43 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This is what the Almighty Lord says:I will use King Nebuchadnezzar of Babylon to destroy Egypt's army. I will use King Nebuchadnezzar of Babylon to destroy Egypt's army."
+      "text": "This is what the Almighty Lord says: I will use King Nebuchadnezzar of Babylon to destroy Egypt's army. I will use King Nebuchadnezzar of Babylon to destroy Egypt's army."
     },
     {
       "verse": "11",
-      "text": "The king and his army will come to destroy the land.They are a nation of cruel people.They will attack Egypt's people with their swords.They will fill the land with dead bodies. They are a nation of cruel people. They will attack Egypt's people with their swords. They will fill the land with dead bodies."
+      "text": "The king and his army will come to destroy the land. They are a nation of cruel people. They will attack Egypt's people with their swords. They will fill the land with dead bodies. They are a nation of cruel people. They will attack Egypt's people with their swords. They will fill the land with dead bodies."
     },
     {
       "verse": "12",
-      "text": "I will cause the Nile river to become dry.I will put the land under the power of evil men.Foreigners will destroy the land of Egyptand everything that is in it.That is what I, the Lord, say. I will put the land under the power of evil men. Foreigners will destroy the land of Egypt and everything that is in it. That is what I, the Lord, say."
+      "text": "I will cause the Nile river to become dry. I will put the land under the power of evil men. Foreigners will destroy the land of Egyptand everything that is in it. That is what I, the Lord, say. I will put the land under the power of evil men. Foreigners will destroy the land of Egypt and everything that is in it. That is what I, the Lord, say."
     },
     {
       "verse": "13",
-      "text": "The Almighty Lord says this:I will destroy Egypt's idols and the false gods in Memphis.Egypt will no longer have its own ruler.I will cause Egypt's people to be very afraid. I will destroy Egypt's idols and the false gods in Memphis. Egypt will no longer have its own ruler. I will cause Egypt's people to be very afraid."
+      "text": "The Almighty Lord says this: I will destroy Egypt's idols and the false gods in Memphis. Egypt will no longer have its own ruler. I will cause Egypt's people to be very afraid. I will destroy Egypt's idols and the false gods in Memphis. Egypt will no longer have its own ruler. I will cause Egypt's people to be very afraid."
     },
     {
       "verse": "14",
-      "text": "I will make Pathros a desert.I will burn Zoan with fire.I will punish the city of Thebes. I will burn Zoan with fire. I will punish the city of Thebes."
+      "text": "I will make Pathros a desert. I will burn Zoan with fire. I will punish the city of Thebes. I will burn Zoan with fire. I will punish the city of Thebes."
     },
     {
       "verse": "15",
-      "text": "I will punish Egypt's strong city of Pelusium.I will show the people there that I am very angry.I will destroy all the soldiers in Thebes. I will show the people there that I am very angry. I will destroy all the soldiers in Thebes."
+      "text": "I will punish Egypt's strong city of Pelusium. I will show the people there that I am very angry. I will destroy all the soldiers in Thebes. I will show the people there that I am very angry. I will destroy all the soldiers in Thebes."
     },
     {
       "verse": "16",
-      "text": "Yes, I will destroy all of Egypt with fire!The people of Pelusium will suffer with great pain.Enemies will knock down the walls of Thebes.The people of Memphis will live in fear every day. The people of Pelusium will suffer with great pain. Enemies will knock down the walls of Thebes. The people of Memphis will live in fear every day."
+      "text": "Yes, I will destroy all of Egypt with fire! The people of Pelusium will suffer with great pain. Enemies will knock down the walls of Thebes. The people of Memphis will live in fear every day. The people of Pelusium will suffer with great pain. Enemies will knock down the walls of Thebes. The people of Memphis will live in fear every day."
     },
     {
       "verse": "17",
-      "text": "The young men of Heliopolis and Bubastis will die in the war.Enemies will take the other people from those cities as their prisoners. Enemies will take the other people from those cities as their prisoners."
+      "text": "The young men of Heliopolis and Bubastis will die in the war. Enemies will take the other people from those cities as their prisoners. Enemies will take the other people from those cities as their prisoners."
     },
     {
       "verse": "18",
-      "text": "It will be a very dark day in Tahpanheswhen I destroy Egypt's strength.Egypt will not be proud of her great power any more.A dark cloud will cover the land.Enemies will take away the people from Egypt's villages as prisoners. when I destroy Egypt's strength. Egypt will not be proud of her great power any more. A dark cloud will cover the land. Enemies will take away the people from Egypt's villages as prisoners."
+      "text": "It will be a very dark day in Tahpanheswhen I destroy Egypt's strength. Egypt will not be proud of her great power any more. A dark cloud will cover the land. Enemies will take away the people from Egypt's villages as prisoners. when I destroy Egypt's strength. Egypt will not be proud of her great power any more. A dark cloud will cover the land. Enemies will take away the people from Egypt's villages as prisoners."
     },
     {
       "verse": "19",
-      "text": "That is how I will punish Egypt.Then they will know that I am the Lord.” ’ Then they will know that I am the Lord.” ’"
+      "text": "That is how I will punish Egypt. Then they will know that I am the Lord. ” ’ Then they will know that I am the Lord. ” ’"
     },
     {
       "verse": "20",
@@ -3130,35 +3130,35 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Think about how powerful Assyria was.At one time, it was as strong as a great cedar tree in Lebanon.It had beautiful branches that gave shade in the forest.It was very tall. Its top reached up to the clouds. At one time, it was as strong as a great cedar tree in Lebanon. It had beautiful branches that gave shade in the forest. It was very tall. Its top reached up to the clouds."
+      "text": "Think about how powerful Assyria was. At one time, it was as strong as a great cedar tree in Lebanon. It had beautiful branches that gave shade in the forest. It was very tall. Its top reached up to the clouds. At one time, it was as strong as a great cedar tree in Lebanon. It had beautiful branches that gave shade in the forest. It was very tall. Its top reached up to the clouds."
     },
     {
       "verse": "4",
-      "text": "Springs of water from under the ground helped it to grow very tall.Rivers passed around the place where the tree was.Streams from there gave water to all the trees in the forest. Rivers passed around the place where the tree was. Streams from there gave water to all the trees in the forest."
+      "text": "Springs of water from under the ground helped it to grow very tall. Rivers passed around the place where the tree was. Streams from there gave water to all the trees in the forest. Rivers passed around the place where the tree was. Streams from there gave water to all the trees in the forest."
     },
     {
       "verse": "5",
-      "text": "So this cedar tree grew taller than all the other trees.Its branches became large and very long.It grew very well because it had plenty of water. Its branches became large and very long. It grew very well because it had plenty of water."
+      "text": "So this cedar tree grew taller than all the other trees. Its branches became large and very long. It grew very well because it had plenty of water. Its branches became large and very long. It grew very well because it had plenty of water."
     },
     {
       "verse": "6",
-      "text": "All kinds of birds built their nests among its leaves.Under its branches, the wild animals gave birth.All the great nations lived in its shade. Under its branches, the wild animals gave birth. All the great nations lived in its shade."
+      "text": "All kinds of birds built their nests among its leaves. Under its branches, the wild animals gave birth. All the great nations lived in its shade. Under its branches, the wild animals gave birth. All the great nations lived in its shade."
     },
     {
       "verse": "7",
-      "text": "It was great and beautiful, with long branches.Its roots went down deep into the groundand they drank plenty of water. Its roots went down deep into the ground and they drank plenty of water."
+      "text": "It was great and beautiful, with long branches. Its roots went down deep into the groundand they drank plenty of water. Its roots went down deep into the ground and they drank plenty of water."
     },
     {
       "verse": "8",
-      "text": "The cedar trees in God's garden were not as beautiful.The branches of the pine trees were not as strong.No other tree in God's garden was nearly as great or as beautiful. The branches of the pine trees were not as strong. No other tree in God's garden was nearly as great or as beautiful."
+      "text": "The cedar trees in God's garden were not as beautiful. The branches of the pine trees were not as strong. No other tree in God's garden was nearly as great or as beautiful. The branches of the pine trees were not as strong. No other tree in God's garden was nearly as great or as beautiful."
     },
     {
       "verse": "9",
-      "text": "I made that tree beautiful, with all its strong branches.All the trees in Eden, God's garden, were jealous of that tree. All the trees in Eden, God's garden, were jealous of that tree."
+      "text": "I made that tree beautiful, with all its strong branches. All the trees in Eden, God's garden, were jealous of that tree. All the trees in Eden, God's garden, were jealous of that tree."
     },
     {
       "verse": "10",
-      "text": "So this is what the Almighty Lord says:That great tree, Assyria, was very tall. Its top reached up to the clouds. It was very proud because it was so great."
+      "text": "So this is what the Almighty Lord says: That great tree, Assyria, was very tall. Its top reached up to the clouds. It was very proud because it was so great."
     },
     {
       "verse": "11",
@@ -3190,7 +3190,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Yes, Egypt is very strong, like the great trees of Eden. You are as great and powerful as any nation. But you will fall to the ground and go into your grave. It happened to Assyria and the other nations, and it will happen to you. You will lie under the ground among people who do not belong to me and who have died in war.This is a picture of what will happen to Pharaoh and all his people. That is what the Almighty Lord says.” ’"
+      "text": "Yes, Egypt is very strong, like the great trees of Eden. You are as great and powerful as any nation. But you will fall to the ground and go into your grave. It happened to Assyria and the other nations, and it will happen to you. You will lie under the ground among people who do not belong to me and who have died in war. This is a picture of what will happen to Pharaoh and all his people. That is what the Almighty Lord says. ” ’"
     }
   ],
   "32": [
@@ -3200,63 +3200,63 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘Son of man, sing a funeral song about Pharaoh, king of Egypt. Say this to him:“You have shown your power among the nations,like a strong lion.But really you are a monster who lives in the sea.You live in the rivers of your country.You beat the water with your feet.The water of your streams becomes dirty."
+      "text": "‘Son of man, sing a funeral song about Pharaoh, king of Egypt. Say this to him:“You have shown your power among the nations, like a strong lion. But really you are a monster who lives in the sea. You live in the rivers of your country. You beat the water with your feet. The water of your streams becomes dirty."
     },
     {
       "verse": "3",
-      "text": "This is what the Almighty Lord says:I will bring a big crowd of people togetherto catch you in my net.They will use my net to pull you out of the water. I will bring a big crowd of people together to catch you in my net. They will use my net to pull you out of the water."
+      "text": "This is what the Almighty Lord says: I will bring a big crowd of people togetherto catch you in my net. They will use my net to pull you out of the water. I will bring a big crowd of people together to catch you in my net. They will use my net to pull you out of the water."
     },
     {
       "verse": "4",
-      "text": "I will throw you onto dry groundand I will leave you there.I will bring the birds to fly down from the skyand sit on you.I will bring the wild animals to feed themselves on you,and eat as much as they want. and I will leave you there. I will bring the birds to fly down from the sky and sit on you. I will bring the wild animals to feed themselves on you, and eat as much as they want."
+      "text": "I will throw you onto dry groundand I will leave you there. I will bring the birds to fly down from the skyand sit on you. I will bring the wild animals to feed themselves on you, and eat as much as they want. and I will leave you there. I will bring the birds to fly down from the sky and sit on you. I will bring the wild animals to feed themselves on you, and eat as much as they want."
     },
     {
       "verse": "5",
-      "text": "I will put the meat of your body on the mountains.Your bones will fill the valleys. Your bones will fill the valleys."
+      "text": "I will put the meat of your body on the mountains. Your bones will fill the valleys. Your bones will fill the valleys."
     },
     {
       "verse": "6",
-      "text": "I will make the ground wet with your blood.It will pour out of you, up to the mountains.And it will fill the deep valleys. It will pour out of you, up to the mountains. And it will fill the deep valleys."
+      "text": "I will make the ground wet with your blood. It will pour out of you, up to the mountains. And it will fill the deep valleys. It will pour out of you, up to the mountains. And it will fill the deep valleys."
     },
     {
       "verse": "7",
-      "text": "When I completely destroy you,I will cover the sky and make the stars become dark.I will cover the sun with a cloud.The moon will no longer give any light. I will cover the sky and make the stars become dark. I will cover the sun with a cloud. The moon will no longer give any light."
+      "text": "When I completely destroy you, I will cover the sky and make the stars become dark. I will cover the sun with a cloud. The moon will no longer give any light. I will cover the sky and make the stars become dark. I will cover the sun with a cloud. The moon will no longer give any light."
     },
     {
       "verse": "8",
-      "text": "I will make the sky over you become dark,with no lights in it.Your whole country will become dark.That is what the Almighty Lord says. with no lights in it. Your whole country will become dark. That is what the Almighty Lord says."
+      "text": "I will make the sky over you become dark, with no lights in it. Your whole country will become dark. That is what the Almighty Lord says. with no lights in it. Your whole country will become dark. That is what the Almighty Lord says."
     },
     {
       "verse": "9",
-      "text": "When many other nations know that I have destroyed you,they will be afraid.Foreign nations that you do not know will be very upset. they will be afraid. Foreign nations that you do not know will be very upset."
+      "text": "When many other nations know that I have destroyed you, they will be afraid. Foreign nations that you do not know will be very upset. they will be afraid. Foreign nations that you do not know will be very upset."
     },
     {
       "verse": "10",
-      "text": "The people of many countries will be afraidwhen they see what I have done to you.Their kings will shake with fear.When I wave my sword in front of them,they will not stop shaking!At the time that your life finishes,they will also fear death. when they see what I have done to you. Their kings will shake with fear. When I wave my sword in front of them, they will not stop shaking! At the time that your life finishes, they will also fear death."
+      "text": "The people of many countries will be afraidwhen they see what I have done to you. Their kings will shake with fear. When I wave my sword in front of them, they will not stop shaking! At the time that your life finishes, they will also fear death. when they see what I have done to you. Their kings will shake with fear. When I wave my sword in front of them, they will not stop shaking! At the time that your life finishes, they will also fear death."
     },
     {
       "verse": "11",
-      "text": "This is what the Almighty Lord says:The king of Babylon will attack you with his army. The king of Babylon will attack you with his army."
+      "text": "This is what the Almighty Lord says: The king of Babylon will attack you with his army. The king of Babylon will attack you with his army."
     },
     {
       "verse": "12",
-      "text": "His brave soldiers will fight against you.I will cause them to destroy your army.They are the most cruel of all the nations.They will stop Egypt's people being proud of their power.They will destroy all Egypt's armies. I will cause them to destroy your army. They are the most cruel of all the nations. They will stop Egypt's people being proud of their power. They will destroy all Egypt's armies."
+      "text": "His brave soldiers will fight against you. I will cause them to destroy your army. They are the most cruel of all the nations. They will stop Egypt's people being proud of their power. They will destroy all Egypt's armies. I will cause them to destroy your army. They are the most cruel of all the nations. They will stop Egypt's people being proud of their power. They will destroy all Egypt's armies."
     },
     {
       "verse": "13",
-      "text": "I will destroy all Egypt's cows that live beside its great rivers.So no people or animals will walk in the water any more.They will not cause the water to become dirty. So no people or animals will walk in the water any more. They will not cause the water to become dirty."
+      "text": "I will destroy all Egypt's cows that live beside its great rivers. So no people or animals will walk in the water any more. They will not cause the water to become dirty. So no people or animals will walk in the water any more. They will not cause the water to become dirty."
     },
     {
       "verse": "14",
-      "text": "Then I will cause the water in the rivers to be clean again.The water will move freely like olive oil.That is what the Almighty Lord says. The water will move freely like olive oil. That is what the Almighty Lord says."
+      "text": "Then I will cause the water in the rivers to be clean again. The water will move freely like olive oil. That is what the Almighty Lord says. The water will move freely like olive oil. That is what the Almighty Lord says."
     },
     {
       "verse": "15",
-      "text": "I will cause Egypt to become an empty place.I will remove everything that grows on the land.I will kill all the people who live there.Then they will know that I am the Lord.” I will remove everything that grows on the land. I will kill all the people who live there. Then they will know that I am the Lord.”"
+      "text": "I will cause Egypt to become an empty place. I will remove everything that grows on the land. I will kill all the people who live there. Then they will know that I am the Lord. ” I will remove everything that grows on the land. I will kill all the people who live there. Then they will know that I am the Lord. ”"
     },
     {
       "verse": "16",
-      "text": "That is the funeral song that they will sing about Egypt. Women of many nations will sing it. They will sing it because of the death of Egypt and all her people. That is what the Almighty Lord says.’"
+      "text": "That is the funeral song that they will sing about Egypt. Women of many nations will sing it. They will sing it because of the death of Egypt and all her people. That is what the Almighty Lord says. ’"
     },
     {
       "verse": "17",
@@ -3268,7 +3268,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Say to them, “You think you are more beautiful than the people of other nations. But you too must go down to lie in your graves among those who do not belong to God.”"
+      "text": "Say to them, “You think you are more beautiful than the people of other nations. But you too must go down to lie in your graves among those who do not belong to God. ”"
     },
     {
       "verse": "20",
@@ -3276,7 +3276,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "In the place of dead people, brave soldiers will welcome the people of Egypt and those who helped them. They will say, “They have come down to join us who do not belong to God. They have died in battle and now they lie in their graves.”"
+      "text": "In the place of dead people, brave soldiers will welcome the people of Egypt and those who helped them. They will say, “They have come down to join us who do not belong to God. They have died in battle and now they lie in their graves. ”"
     },
     {
       "verse": "22",
@@ -3320,7 +3320,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "When he was alive, I caused him to make people very afraid. But Pharaoh and all his great army will lie in their graves among other people who died in battle. They will lie with people who do not belong to God. That is what I, the Almighty Lord, have said.’"
+      "text": "When he was alive, I caused him to make people very afraid. But Pharaoh and all his great army will lie in their graves among other people who died in battle. They will lie with people who do not belong to God. That is what I, the Almighty Lord, have said. ’"
     }
   ],
   "33": [
@@ -3346,7 +3346,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But the guard might not blow the trumpet when he sees the enemy. He might not warn his people that the enemy is ready to attack them. Then enemy soldiers might kill some of his people. Those people will die because of their sins. But the guard will be guilty of their death, because he did not warn them of danger.”"
+      "text": "But the guard might not blow the trumpet when he sees the enemy. He might not warn his people that the enemy is ready to attack them. Then enemy soldiers might kill some of his people. Those people will die because of their sins. But the guard will be guilty of their death, because he did not warn them of danger. ”"
     },
     {
       "verse": "7",
@@ -3354,7 +3354,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I might say to a wicked person, “You will certainly die because of your sins.” Then you must warn that wicked person to stop doing wicked things. If you do not warn him, he will die because of his sins. But I will say that you are guilty of his death."
+      "text": "I might say to a wicked person, “You will certainly die because of your sins. ” Then you must warn that wicked person to stop doing wicked things. If you do not warn him, he will die because of his sins. But I will say that you are guilty of his death."
     },
     {
       "verse": "9",
@@ -3362,15 +3362,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Son of man, give Israel's people this message: “You are saying, ‘The punishment for our sins is too much for us. We are dying because of all the bad things that we have done. What should we do so that we can continue to live?’ ”"
+      "text": "Son of man, give Israel's people this message: “You are saying, ‘The punishment for our sins is too much for us. We are dying because of all the bad things that we have done. What should we do so that we can continue to live? ’ ”"
     },
     {
       "verse": "11",
-      "text": "Tell them, “It does not make me happy to punish wicked people with death. I, the Almighty Lord, promise you this, as surely as I live. I want wicked people to stop doing wrong things so that they may continue to live. So stop doing evil things! Israel's people, you do not have to die. Turn back to me!”"
+      "text": "Tell them, “It does not make me happy to punish wicked people with death. I, the Almighty Lord, promise you this, as surely as I live. I want wicked people to stop doing wrong things so that they may continue to live. So stop doing evil things! Israel's people, you do not have to die. Turn back to me! ”"
     },
     {
       "verse": "12",
-      "text": "Son of man, you must say to your people, “If a righteous person refuses to obey me, I will punish him. The good things that he has done will not save him. And if a wicked person stops doing bad things, he will no longer be guilty. Righteous people will not continue to live if they start to do bad things.”"
+      "text": "Son of man, you must say to your people, “If a righteous person refuses to obey me, I will punish him. The good things that he has done will not save him. And if a wicked person stops doing bad things, he will no longer be guilty. Righteous people will not continue to live if they start to do bad things. ”"
     },
     {
       "verse": "13",
@@ -3378,7 +3378,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Also, I may say to wicked people, “You will certainly die because of your sins.” But then they may stop doing bad things. They may start to do things that are good and right."
+      "text": "Also, I may say to wicked people, “You will certainly die because of your sins. ” But then they may stop doing bad things. They may start to do things that are good and right."
     },
     {
       "verse": "15",
@@ -3390,7 +3390,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Your people, the Israelites, are saying: “The Lord is not fair in the things that he does!” But it is the people themselves who live in a way that is not fair."
+      "text": "Your people, the Israelites, are saying: “The Lord is not fair in the things that he does! ” But it is the people themselves who live in a way that is not fair."
     },
     {
       "verse": "18",
@@ -3402,11 +3402,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But you Israelites continue to say, “The Lord is not fair!” But I will judge each of you in a way that you deserve for the things that you have done.’"
+      "text": "But you Israelites continue to say, “The Lord is not fair! ” But I will judge each of you in a way that you deserve for the things that you have done. ’"
     },
     {
       "verse": "21",
-      "text": "years after we had come to Babylon as prisoners. It was on the 5th day of the 10th month of that year. A man who had escaped from Jerusalem came to me in Babylon. He said, ‘Enemies have taken Jerusalem for themselves.’"
+      "text": "years after we had come to Babylon as prisoners. It was on the 5th day of the 10th month of that year. A man who had escaped from Jerusalem came to me in Babylon. He said, ‘Enemies have taken Jerusalem for themselves. ’"
     },
     {
       "verse": "22",
@@ -3418,7 +3418,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "‘Son of man, there are people who continue to live in the places in Israel that have become heaps of stones. Those Israelites are saying, “Abraham was only one man, but God gave him the whole land of Israel. We are many people. So we can be sure that the land now belongs to us.”"
+      "text": "‘Son of man, there are people who continue to live in the places in Israel that have become heaps of stones. Those Israelites are saying, “Abraham was only one man, but God gave him the whole land of Israel. We are many people. So we can be sure that the land now belongs to us. ”"
     },
     {
       "verse": "25",
@@ -3426,7 +3426,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "You use violence to get the things that you want. You do disgusting things. You have sex with other men's wives. So you should certainly not have the land!”"
+      "text": "You use violence to get the things that you want. You do disgusting things. You have sex with other men's wives. So you should certainly not have the land! ”"
     },
     {
       "verse": "27",
@@ -3438,11 +3438,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "I will cause the land to become heaps of stones where nobody lives. I will do that to punish the people for the disgusting things that they have done. Then they will know that I am the Lord.”"
+      "text": "I will cause the land to become heaps of stones where nobody lives. I will do that to punish the people for the disgusting things that they have done. Then they will know that I am the Lord. ”"
     },
     {
       "verse": "30",
-      "text": "Son of man, the Israelites who are here with you in Babylon are talking about you. They meet together near the walls of the city and at the doors of their houses. They are saying to each other, “Come and hear the message that has come from the Lord.”"
+      "text": "Son of man, the Israelites who are here with you in Babylon are talking about you. They meet together near the walls of the city and at the doors of their houses. They are saying to each other, “Come and hear the message that has come from the Lord. ”"
     },
     {
       "verse": "31",
@@ -3454,7 +3454,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "All these things that I have said will certainly happen. When my people see them happen, they will know that a prophet has lived among them.’"
+      "text": "All these things that I have said will certainly happen. When my people see them happen, they will know that a prophet has lived among them. ’"
     }
   ],
   "34": [
@@ -3580,7 +3580,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "You are my people and I take care of you, as a shepherd takes care of his sheep. You are my people and I am your God. That is what the Almighty Lord says.” ’"
+      "text": "You are my people and I take care of you, as a shepherd takes care of his sheep. You are my people and I am your God. That is what the Almighty Lord says. ” ’"
     }
   ],
   "35": [
@@ -3622,7 +3622,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "You said, ‘We will take these two nations for ourselves. Israel and Judah will belong to us.’ You said that when I, the Lord, was there with them."
+      "text": "You said, ‘We will take these two nations for ourselves. Israel and Judah will belong to us. ’ You said that when I, the Lord, was there with them."
     },
     {
       "verse": "11",
@@ -3630,7 +3630,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then you will know that I, the Lord, have heard you. You have insulted the mountains of Israel. You said, ‘Those mountains have become a desert. So we can take them for ourselves.’"
+      "text": "Then you will know that I, the Lord, have heard you. You have insulted the mountains of Israel. You said, ‘Those mountains have become a desert. So we can take them for ourselves. ’"
     },
     {
       "verse": "13",
@@ -3642,7 +3642,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "You were happy when you saw me punish Israel's people so that their land became a desert. Because you were happy, I will punish you as you deserve. Mount Seir and all the land of Edom will become an empty desert. Then Edom's people will know that I am the Lord.” ’"
+      "text": "You were happy when you saw me punish Israel's people so that their land became a desert. Because you were happy, I will punish you as you deserve. Mount Seir and all the land of Edom will become an empty desert. Then Edom's people will know that I am the Lord. ” ’"
     }
   ],
   "36": [
@@ -3652,7 +3652,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This is what the Almighty Lord says: Your enemies have laughed at you. They have said, ‘The old mountains now belong to us!’ ”"
+      "text": "This is what the Almighty Lord says: Your enemies have laughed at you. They have said, ‘The old mountains now belong to us! ’ ”"
     },
     {
       "verse": "3",
@@ -3664,7 +3664,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So this is what the Almighty Lord says: I am very angry with those nations and I will punish them. I am even more angry with the people of Edom because they insulted my people. They were happy to take my land for themselves so that their animals could eat the grass.”"
+      "text": "So this is what the Almighty Lord says: I am very angry with those nations and I will punish them. I am even more angry with the people of Edom because they insulted my people. They were happy to take my land for themselves so that their animals could eat the grass. ”"
     },
     {
       "verse": "6",
@@ -3696,7 +3696,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "This is what the Almighty Lord says: People are saying to you, Israel's land, ‘You destroy people. You take away the nation's children.’"
+      "text": "This is what the Almighty Lord says: People are saying to you, Israel's land, ‘You destroy people. You take away the nation's children. ’"
     },
     {
       "verse": "14",
@@ -3704,7 +3704,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "People from other nations will no longer insult you or laugh at you. You will no longer cause your nation to suffer. That is what the Almighty Lord says.” ’"
+      "text": "People from other nations will no longer insult you or laugh at you. You will no longer cause your nation to suffer. That is what the Almighty Lord says. ” ’"
     },
     {
       "verse": "16",
@@ -3724,7 +3724,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But among the nations where they went, they continued to bring shame to my holy name. People said, “These are the Lord's people, but they had to leave the land that he gave to them.”"
+      "text": "But among the nations where they went, they continued to bring shame to my holy name. People said, “These are the Lord's people, but they had to leave the land that he gave to them. ”"
     },
     {
       "verse": "21",
@@ -3784,15 +3784,15 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "They will say, ‘This land was like a desert, but now it is like the Garden of Eden. People now live in the cities that had become heaps of stones. The cities now have strong walls.’"
+      "text": "They will say, ‘This land was like a desert, but now it is like the Garden of Eden. People now live in the cities that had become heaps of stones. The cities now have strong walls. ’"
     },
     {
       "verse": "36",
-      "text": "Then the nations that still live around you will see what has happened. They will know that I, the Lord, have mended the broken cities. They will know that I have planted crops again in the fields that were empty. I, the Lord, have said this, and I will do it!”"
+      "text": "Then the nations that still live around you will see what has happened. They will know that I, the Lord, have mended the broken cities. They will know that I have planted crops again in the fields that were empty. I, the Lord, have said this, and I will do it! ”"
     },
     {
       "verse": "37-38",
-      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival. I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord.’"
+      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival. I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord. ’"
     }
   ],
   "37": [
@@ -3806,7 +3806,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He asked me, ‘Son of man, can these bones become alive again?’I said, ‘Almighty Lord, only you know the answer.’ I said, ‘Almighty Lord, only you know the answer.’"
+      "text": "He asked me, ‘Son of man, can these bones become alive again? ’I said, ‘Almighty Lord, only you know the answer. ’ I said, ‘Almighty Lord, only you know the answer. ’"
     },
     {
       "verse": "4",
@@ -3818,7 +3818,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I will join you together and I will put meat on you. I will cover you with skin. I will put breath into you and you will become alive. Then you will know that I am the Lord.” ’"
+      "text": "I will join you together and I will put meat on you. I will cover you with skin. I will put breath into you and you will become alive. Then you will know that I am the Lord. ” ’"
     },
     {
       "verse": "7",
@@ -3830,7 +3830,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then the Lord said to me, ‘Prophesy to the wind, son of man. Speak my message to the wind. Say, “This is what the Almighty Lord says: Blow from all directions and put breath into these dead bodies! Cause them to become alive again.” ’"
+      "text": "Then the Lord said to me, ‘Prophesy to the wind, son of man. Speak my message to the wind. Say, “This is what the Almighty Lord says: Blow from all directions and put breath into these dead bodies! Cause them to become alive again. ” ’"
     },
     {
       "verse": "10",
@@ -3838,7 +3838,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the Lord said to me, ‘Son of man, these bones are a picture of all Israel's people. The Israelites are saying, “Our bones are dead and dry. There are no good things that we can hope for. We have come to an end.”"
+      "text": "Then the Lord said to me, ‘Son of man, these bones are a picture of all Israel's people. The Israelites are saying, “Our bones are dead and dry. There are no good things that we can hope for. We have come to an end. ”"
     },
     {
       "verse": "12",
@@ -3850,7 +3850,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will put the breath of my Spirit in you, and you will become alive. I will let you live safely in your own land. Then you will know that I, the Lord, have spoken. You will know that I have done what I said I would do. That is what the Lordsays.” ’"
+      "text": "I will put the breath of my Spirit in you, and you will become alive. I will let you live safely in your own land. Then you will know that I, the Lord, have spoken. You will know that I have done what I said I would do. That is what the Lordsays. ” ’"
     },
     {
       "verse": "15",
@@ -3858,7 +3858,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "‘Son of man, take a stick and write on it, “This stick belongs to Judah and the Israelite tribes that are with him.” Then take another stick and write on it, “This stick belongs to Joseph's son Ephraim and the Israelite tribes that are with him.”"
+      "text": "‘Son of man, take a stick and write on it, “This stick belongs to Judah and the Israelite tribes that are with him. ” Then take another stick and write on it, “This stick belongs to Joseph's son Ephraim and the Israelite tribes that are with him. ”"
     },
     {
       "verse": "17",
@@ -3866,11 +3866,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Your people will ask you, “Please tell us what this means.”"
+      "text": "Your people will ask you, “Please tell us what this means. ”"
     },
     {
       "verse": "19",
-      "text": "When they ask that, say to them, “This is what the Almighty Lord says: I will take Joseph's stick that belongs to Ephraim and the Israelite tribes that are with him. I will cause it to join together with Judah's stick. I will make them become one stick in my hand.”"
+      "text": "When they ask that, say to them, “This is what the Almighty Lord says: I will take Joseph's stick that belongs to Ephraim and the Israelite tribes that are with him. I will cause it to join together with Judah's stick. I will make them become one stick in my hand. ”"
     },
     {
       "verse": "20",
@@ -3906,7 +3906,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Then the nations will know that I, the Lord, have chosen the Israelites as my own people. The nations will see that I have put my temple among my people for ever.” ’"
+      "text": "Then the nations will know that I, the Lord, have chosen the Israelites as my own people. The nations will see that I have put my temple among my people for ever. ” ’"
     }
   ],
   "38": [
@@ -3932,7 +3932,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "All the soldiers from Gomer will join you. An army from Beth Togarmah will also come with all its soldiers from far away in the north. So armies from many nations will be with you.”"
+      "text": "All the soldiers from Gomer will join you. An army from Beth Togarmah will also come with all its soldiers from far away in the north. So armies from many nations will be with you. ”"
     },
     {
       "verse": "7",
@@ -3956,7 +3956,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "We will fight them and take their things for ourselves. The people there have come back from other nations where they lived. They are living in their homes which had become heaps of stones. Now they have got many animals and valuable things. Their land has become an important place in the middle of everywhere.’"
+      "text": "We will fight them and take their things for ourselves. The people there have come back from other nations where they lived. They are living in their homes which had become heaps of stones. Now they have got many animals and valuable things. Their land has become an important place in the middle of everywhere. ’"
     },
     {
       "verse": "13",
@@ -4000,7 +4000,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I will show all the nations that I am great and I am holy. Then they will know that I am the Lord.” ’"
+      "text": "I will show all the nations that I am great and I am holy. Then they will know that I am the Lord. ” ’"
     }
   ],
   "39": [
@@ -4034,7 +4034,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I promise that I will cause this to happen. You can be sure that this day will come, says the Lord God.I told you that this day would come."
+      "text": "I promise that I will cause this to happen. You can be sure that this day will come, says the Lord God. I told you that this day would come."
     },
     {
       "verse": "9",
@@ -4066,7 +4066,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "(A town called Hamonah is also there.) That is how they will make the land clean.”"
+      "text": "(A town called Hamonah is also there. ) That is how they will make the land clean. ”"
     },
     {
       "verse": "17",
@@ -4082,7 +4082,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "I will give you horses and their riders to eat. I will give you great men and many kinds of soldiers to eat,” says the Lord God."
+      "text": "I will give you horses and their riders to eat. I will give you great men and many kinds of soldiers to eat, ” says the Lord God."
     },
     {
       "verse": "21",
@@ -4098,7 +4098,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I punished them because they had not kept themselves clean from sin. I hid myself from them because they had done so many evil things.’"
+      "text": "I punished them because they had not kept themselves clean from sin. I hid myself from them because they had done so many evil things. ’"
     },
     {
       "verse": "25",
@@ -4118,7 +4118,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "No longer will I turn away from them. I will pour my Spirit over Israel's people, says the Lord God.’"
+      "text": "No longer will I turn away from them. I will pour my Spirit over Israel's people, says the Lord God. ’"
     }
   ],
   "40": [
@@ -4136,7 +4136,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The man said to me, ‘Son of man, watch and listen carefully to me. Remember everything that I will show you. God has brought you here so that I can show these things to you. Tell Israel's people about everything that you see.’"
+      "text": "The man said to me, ‘Son of man, watch and listen carefully to me. Remember everything that I will show you. God has brought you here so that I can show these things to you. Tell Israel's people about everything that you see. ’"
     },
     {
       "verse": "5",
@@ -4304,7 +4304,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "The room beside the south gate is for the priests who serve God at the altar. These priests are descendants of Zadok. They are the only descendants of Levi who may come near to the Lord to serve him.’"
+      "text": "The room beside the south gate is for the priests who serve God at the altar. These priests are descendants of Zadok. They are the only descendants of Levi who may come near to the Lord to serve him. ’"
     },
     {
       "verse": "47",
@@ -4334,7 +4334,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He measured the inside room. It was 10 metres long and 10 metres wide. It was at the back of the big hall. The man said to me, ‘This is the Most Holy Place.’"
+      "text": "He measured the inside room. It was 10 metres long and 10 metres wide. It was at the back of the big hall. The man said to me, ‘This is the Most Holy Place. ’"
     },
     {
       "verse": "5",
@@ -4370,7 +4370,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He measured the building at the back of the temple yard, on the west side. That was also 50 metres, including the side rooms at each end.Wooden boards covered the walls of the big hall, the inside room and the entrance room of the temple."
+      "text": "He measured the building at the back of the temple yard, on the west side. That was also 50 metres, including the side rooms at each end. Wooden boards covered the walls of the big hall, the inside room and the entrance room of the temple."
     },
     {
       "verse": "16",
@@ -4390,7 +4390,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "There was an altar that was made of wood. It was 1½ metres high and 1 metre wide on each side. Its corners, its sides and its base were all made of wood. The man said to me, ‘This is the table that stands here in front of the Lord.’"
+      "text": "There was an altar that was made of wood. It was 1½ metres high and 1 metre wide on each side. Its corners, its sides and its base were all made of wood. The man said to me, ‘This is the table that stands here in front of the Lord. ’"
     },
     {
       "verse": "23",
@@ -4456,7 +4456,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This entrance was at the end of the wall in the outside yard.There was another building like this one on the south side of the temple. It was opposite the other building and it also had two rows of rooms."
+      "text": "This entrance was at the end of the wall in the outside yard. There was another building like this one on the south side of the temple. It was opposite the other building and it also had two rows of rooms."
     },
     {
       "verse": "11",
@@ -4472,7 +4472,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "When the priests go into the holy place of the temple, they must not leave until they change their clothes. Before they go into the outside yard, they must take off the special clothes that they wear to serve the Lord. Those clothes are holy, so they must put on other clothes. Then they can go out to the places where the people meet.’"
+      "text": "When the priests go into the holy place of the temple, they must not leave until they change their clothes. Before they go into the outside yard, they must take off the special clothes that they wear to serve the Lord. Those clothes are holy, so they must put on other clothes. Then they can go out to the places where the people meet. ’"
     },
     {
       "verse": "15",
@@ -4558,7 +4558,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The middle part is also square, with each side 7 metres long. It has a border around its edge that is 25 centimetres high. There is a hole all around that is 50 centimetres wide. There are steps up to the top of the altar on the east side.’"
+      "text": "The middle part is also square, with each side 7 metres long. It has a border around its edge that is 25 centimetres high. There is a hole all around that is 50 centimetres wide. There are steps up to the top of the altar on the east side. ’"
     },
     {
       "verse": "18",
@@ -4598,7 +4598,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "When the seven days have finished, the priests can begin to offer burnt offerings and peace offerings on the altar. They can do this for you on the eighth day and after that. Then I will accept you as my own people. That is what I, the Almighty Lord, say.’"
+      "text": "When the seven days have finished, the priests can begin to offer burnt offerings and peace offerings on the altar. They can do this for you on the eighth day and after that. Then I will accept you as my own people. That is what I, the Almighty Lord, say. ’"
     }
   ],
   "44": [
@@ -4612,7 +4612,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Only Israel's ruler is allowed to sit in the gate's entrance. He may sit there to eat a holy meal in front of the Lord. He may only go in and out through the entrance room of that gate.’"
+      "text": "Only Israel's ruler is allowed to sit in the gate's entrance. He may sit there to eat a holy meal in front of the Lord. He may only go in and out through the entrance room of that gate. ’"
     },
     {
       "verse": "4",
@@ -4724,7 +4724,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The priests must not eat any bird or any animal that people find dead. They must not eat anything that a wild animal has killed.” ’"
+      "text": "The priests must not eat any bird or any animal that people find dead. They must not eat anything that a wild animal has killed. ” ’"
     }
   ],
   "45": [
@@ -4826,7 +4826,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "You will have another festival that starts on the 15th day of the 7th month. It will continue for seven days. Each day, the ruler must provide the same things for sin offerings, burnt offerings and grain offerings, as well as the olive oil.’"
+      "text": "You will have another festival that starts on the 15th day of the 7th month. It will continue for seven days. Each day, the ruler must provide the same things for sin offerings, burnt offerings and grain offerings, as well as the olive oil. ’"
     }
   ],
   "46": [
@@ -4900,7 +4900,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The king must not take for himself any land that belongs to the people. He must not take them away from their own land. He can only give his own land to his sons. Nobody may take any of my people away from the land that belongs to them.’"
+      "text": "The king must not take for himself any land that belongs to the people. He must not take them away from their own land. He can only give his own land to his sons. Nobody may take any of my people away from the land that belongs to them. ’"
     },
     {
       "verse": "19",
@@ -4908,7 +4908,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "He said to me, ‘This is the place where the priests will cook the meat for the sin offerings and for the guilt offerings. They will bake the grain offerings here, too. In this way, they will not have to take these holy things into the outside yard. If they did that, someone might touch them and become holy.’"
+      "text": "He said to me, ‘This is the place where the priests will cook the meat for the sin offerings and for the guilt offerings. They will bake the grain offerings here, too. In this way, they will not have to take these holy things into the outside yard. If they did that, someone might touch them and become holy. ’"
     },
     {
       "verse": "21",
@@ -4924,13 +4924,13 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The man said to me, ‘The temple servants will use these kitchens to cook meat that the people bring for sacrifices.’"
+      "text": "The man said to me, ‘The temple servants will use these kitchens to cook meat that the people bring for sacrifices. ’"
     }
   ],
   "47": [
     {
       "verse": "1",
-      "text": "The man brought me back to the entrance of the temple. There I saw water that was pouring out from under the entrance. It was pouring towards the east. (The front entrance of the temple opened towards the east.) The river of water came from under the south side of the temple. It went past the south side of the altar."
+      "text": "The man brought me back to the entrance of the temple. There I saw water that was pouring out from under the entrance. It was pouring towards the east. (The front entrance of the temple opened towards the east. ) The river of water came from under the south side of the temple. It went past the south side of the altar."
     },
     {
       "verse": "2",
@@ -4950,7 +4950,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The man said to me, ‘Son of man, you must remember what you have seen.’Then he took me back to the river's edge."
+      "text": "The man said to me, ‘Son of man, you must remember what you have seen. ’Then he took me back to the river's edge."
     },
     {
       "verse": "7",
@@ -4974,7 +4974,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "All kinds of fruit trees will live on each side of the river. Their leaves will never become dry. They will always give fruit every month. This is because the water that feeds them comes from the holy temple. The fruit from these trees will provide food. And their leaves will make sick people well.’"
+      "text": "All kinds of fruit trees will live on each side of the river. Their leaves will never become dry. They will always give fruit every month. This is because the water that feeds them comes from the holy temple. The fruit from these trees will provide food. And their leaves will make sick people well. ’"
     },
     {
       "verse": "13",
@@ -4986,7 +4986,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "These will be the borders of your land:The north border goes from the Mediterranean Sea to the city of Hethlon. It continues to go east, past Lebo-Hamath and to Zedad."
+      "text": "These will be the borders of your land: The north border goes from the Mediterranean Sea to the city of Hethlon. It continues to go east, past Lebo-Hamath and to Zedad."
     },
     {
       "verse": "16",
@@ -5018,13 +5018,13 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Give them land among the tribe where they have decided to live.’That is what the Almighty Lord says."
+      "text": "Give them land among the tribe where they have decided to live. ’That is what the Almighty Lord says."
     }
   ],
   "48": [
     {
       "verse": "1",
-      "text": "‘This is the list of Israel's tribes, with the land that each tribe will receive:Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath.Dan's part of the land goes all the way from Israel's border in the east to the Mediterranean Sea in the west. Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath."
+      "text": "‘This is the list of Israel's tribes, with the land that each tribe will receive: Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath. Dan's part of the land goes all the way from Israel's border in the east to the Mediterranean Sea in the west. Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath."
     },
     {
       "verse": "2",
@@ -5084,7 +5084,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The city will be square, 2,250 metres long on each side."
+      "text": "The city will be square, 2, 250 metres long on each side."
     },
     {
       "verse": "17",
@@ -5092,7 +5092,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "There will be two other pieces of land south of the special holy land. There will be a piece 2.5 kilometres wide on the east side of the city and a piece 2.5 kilometres wide on the west side. People who live in the city may use these pieces of land to grow crops."
+      "text": "There will be two other pieces of land south of the special holy land. There will be a piece 2. 5 kilometres wide on the east side of the city and a piece 2. 5 kilometres wide on the west side. People who live in the city may use these pieces of land to grow crops."
     },
     {
       "verse": "19",
@@ -5112,7 +5112,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The other tribes will each have a part of the land that is south of this special part. The land for each of these tribes will go all the way from Israel's border in the east to the Mediterranean Sea in the west.South of the special land will be the land for Benjamin."
+      "text": "The other tribes will each have a part of the land that is south of this special part. The land for each of these tribes will go all the way from Israel's border in the east to the Mediterranean Sea in the west. South of the special land will be the land for Benjamin."
     },
     {
       "verse": "24",
@@ -5140,7 +5140,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "These will be the entrance gates on each side of the city. The wall on the north side of the city will be 2,250 metres long. From that time on, the name of the city will be, “The Lord is there.” ’"
+      "text": "These will be the entrance gates on each side of the city. The wall on the north side of the city will be 2, 250 metres long. From that time on, the name of the city will be, “The Lord is there. ” ’"
     },
     {
       "verse": "31",
@@ -5148,19 +5148,19 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The wall on the east side will also be 2,250 metres long. The three gates on that side will be for Joseph, for Benjamin and for Dan."
+      "text": "The wall on the east side will also be 2, 250 metres long. The three gates on that side will be for Joseph, for Benjamin and for Dan."
     },
     {
       "verse": "33",
-      "text": "The wall on the south side will also be 2,250 metres long. The three gates on that side will be for Simeon, for Issachar and for Zebulun."
+      "text": "The wall on the south side will also be 2, 250 metres long. The three gates on that side will be for Simeon, for Issachar and for Zebulun."
     },
     {
       "verse": "34",
-      "text": "The wall on the west side will also be 2,250 metres long. The three gates on that side will be for Gad, for Asher and for Naphtali."
+      "text": "The wall on the west side will also be 2, 250 metres long. The three gates on that side will be for Gad, for Asher and for Naphtali."
     },
     {
       "verse": "35",
-      "text": "So the walls all around the city will measure 9,000 metres.From that time on, the name of the city will be, “The Lord is there.” ’"
+      "text": "So the walls all around the city will measure 9, 000 metres. From that time on, the name of the city will be, “The Lord is there. ” ’"
     }
   ]
 };

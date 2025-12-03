@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. Our Christian friend Timothy is here with me as I write.I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia."
+      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. Our Christian friend Timothy is here with me as I write. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia."
     },
     {
       "verse": "2",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I did not decide this in a careless way. I really wanted to do it. I do not decide to do things only to please myself, like someone who does not know God. I do not say ‘Yes,’ and then I immediately say ‘No’."
+      "text": "I did not decide this in a careless way. I really wanted to do it. I do not decide to do things only to please myself, like someone who does not know God. I do not say ‘Yes, ’ and then I immediately say ‘No’."
     },
     {
       "verse": "18",
@@ -66,11 +66,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Silas, Timothy and I told you the message about God's Son, Jesus Christ. Christ is not someone who changes his message between ‘Yes’ and ‘No’. Instead, he always says ‘Yes,’ and he does what he says."
+      "text": "Silas, Timothy and I told you the message about God's Son, Jesus Christ. Christ is not someone who changes his message between ‘Yes’ and ‘No’. Instead, he always says ‘Yes, ’ and he does what he says."
     },
     {
       "verse": "20",
-      "text": "Christ says ‘Yes’ to all of God's promises, so that they become true. So when we pray, we say ‘Yes, amen!,’ because we know that Christ has done it. And when we do that, we are saying that God is great."
+      "text": "Christ says ‘Yes’ to all of God's promises, so that they become true. So when we pray, we say ‘Yes, amen! , ’ because we know that Christ has done it. And when we do that, we are saying that God is great."
     },
     {
       "verse": "21",
@@ -156,7 +156,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "For the people who are dying, we are like a bad smell that brings a message of death. But for the people that God is saving, we are like a lovely smell that brings a message of new life.Nobody is really good enough to tell such an important message!"
+      "text": "For the people who are dying, we are like a bad smell that brings a message of death. But for the people that God is saving, we are like a lovely smell that brings a message of new life. Nobody is really good enough to tell such an important message!"
     },
     {
       "verse": "17",
@@ -260,7 +260,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God is the one who said, ‘Let light shine in the dark.’ And he is the one who has caused his light to shine deep inside us. Because of that, we know how great and powerful God is. We see that his power shines brightly in Christ's face."
+      "text": "God is the one who said, ‘Let light shine in the dark. ’ And he is the one who has caused his light to shine deep inside us. Because of that, we know how great and powerful God is. We see that his power shines brightly in Christ's face."
     },
     {
       "verse": "7",
@@ -288,7 +288,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "This is written in the Bible: ‘I believed in God, and so I spoke.’ We also have the same kind of faith in God. So we also speak God's message, because we believe in him."
+      "text": "This is written in the Bible: ‘I believed in God, and so I spoke. ’ We also have the same kind of faith in God. So we also speak God's message, because we believe in him."
     },
     {
       "verse": "14",
@@ -390,7 +390,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "So we speak to people on behalf of Christ. It is like this: When we speak, God himself is speaking to you. On behalf of Christ, we say to you, ‘Please come back to God, as his friends!’"
+      "text": "So we speak to people on behalf of Christ. It is like this: When we speak, God himself is speaking to you. On behalf of Christ, we say to you, ‘Please come back to God, as his friends! ’"
     },
     {
       "verse": "21",
@@ -400,11 +400,11 @@ module.exports = {
   "6": [
     {
       "verse": "1",
-      "text": "So, as we work together with God, we tell you to be careful. Remember that God has been very kind and he has forgiven you. Do not waste that! ‘I listened to your prayer at the right time for me to help you. I helped you on the right day for me to save you.’ Listen! The right time is now! The day for God to save you is now!"
+      "text": "So, as we work together with God, we tell you to be careful. Remember that God has been very kind and he has forgiven you. Do not waste that! ‘I listened to your prayer at the right time for me to help you. I helped you on the right day for me to save you. ’ Listen! The right time is now! The day for God to save you is now!"
     },
     {
       "verse": "2",
-      "text": "In the Bible God says:‘I listened to your prayer at the right time for me to help you.I helped you on the right day for me to save you.’Listen! The right time is now! The day for God to save you is now!"
+      "text": "In the Bible God says:‘I listened to your prayer at the right time for me to help you. I helped you on the right day for me to save you. ’Listen! The right time is now! The day for God to save you is now!"
     },
     {
       "verse": "3",
@@ -452,7 +452,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Do not become united with people who do not believe in Christ. God has made you right with himself. Right and wrong cannot work together. Light and dark cannot join together. ‘I will make my home with them and I will live among them. I will be their God and they will be my people.’"
+      "text": "Do not become united with people who do not believe in Christ. God has made you right with himself. Right and wrong cannot work together. Light and dark cannot join together. ‘I will make my home with them and I will live among them. I will be their God and they will be my people. ’"
     },
     {
       "verse": "15",
@@ -460,15 +460,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Idols do not belong in God's house. Remember that we believers are the house of the God who lives for ever. This is what God has said:‘I will make my home with them and I will live among them.I will be their God and they will be my people.’"
+      "text": "Idols do not belong in God's house. Remember that we believers are the house of the God who lives for ever. This is what God has said:‘I will make my home with them and I will live among them. I will be their God and they will be my people. ’"
     },
     {
       "verse": "17",
-      "text": "And so, the Lord says:‘Come out from among them and be separate.Do not touch anything that is disgusting.Then I will accept you.’ ‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you.’"
+      "text": "And so, the Lord says:‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you. ’ ‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you. ’"
     },
     {
       "verse": "18",
-      "text": "He also says:‘I will be a Father to you.You will be my sons and my daughters.That is what the Almighty Lord God says.’"
+      "text": "He also says:‘I will be a Father to you. You will be my sons and my daughters. That is what the Almighty Lord God says. ’"
     }
   ],
   "7": [
@@ -522,7 +522,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "That is how God has comforted us.It was not only us that God comforted. When Titus came, we were very happy to see how happy he was too. He was happy because all of you had taken care of him."
+      "text": "That is how God has comforted us. It was not only us that God comforted. When Titus came, we were very happy to see how happy he was too. He was happy because all of you had taken care of him."
     },
     {
       "verse": "14",
@@ -588,7 +588,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "My purpose is not to bring trouble to you. You should not have pain while other people have plenty. Instead, both you and they should have enough. ‘The person who picked up a lot did not have too much. And the person who picked up a small amount also had enough.’"
+      "text": "My purpose is not to bring trouble to you. You should not have pain while other people have plenty. Instead, both you and they should have enough. ‘The person who picked up a lot did not have too much. And the person who picked up a small amount also had enough. ’"
     },
     {
       "verse": "14",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "It says this in the Bible:‘The person who picked up a lot did not have too much.And the person who picked up a small amount also had enough.’"
+      "text": "It says this in the Bible:‘The person who picked up a lot did not have too much. And the person who picked up a small amount also had enough. ’"
     },
     {
       "verse": "16",
@@ -666,11 +666,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Since God loves you, he is able to give you more than you need. You will always have every good thing that you need for yourselves. And you will have enough to do many good things to help other people. ‘He has shared his things with many poor people. God will always remember how kind that person has been.’"
+      "text": "Since God loves you, he is able to give you more than you need. You will always have every good thing that you need for yourselves. And you will have enough to do many good things to help other people. ‘He has shared his things with many poor people. God will always remember how kind that person has been. ’"
     },
     {
       "verse": "9",
-      "text": "The Bible says this about someone who helps other people:‘He has shared his things with many poor people.God will always remember how kind that person has been.’"
+      "text": "The Bible says this about someone who helps other people:‘He has shared his things with many poor people. God will always remember how kind that person has been. ’"
     },
     {
       "verse": "10",
@@ -736,7 +736,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Some people say: ‘Paul's letters are powerful and they say strong things. But when he himself is here with us, he seems to be weak. And the words that he speaks have no value.’"
+      "text": "Some people say: ‘Paul's letters are powerful and they say strong things. But when he himself is here with us, he seems to be weak. And the words that he speaks have no value. ’"
     },
     {
       "verse": "11",
@@ -756,7 +756,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "We do not praise ourselves for the work that other people have done. That would not be right. But we hope that you will continue to believe more and more strongly. In that way our work among you will become even greater. But it will still be the work that God has given to us, and no more than that. ‘If you want to be proud about something, be proud of what the Lord has done.’"
+      "text": "We do not praise ourselves for the work that other people have done. That would not be right. But we hope that you will continue to believe more and more strongly. In that way our work among you will become even greater. But it will still be the work that God has given to us, and no more than that. ‘If you want to be proud about something, be proud of what the Lord has done. ’"
     },
     {
       "verse": "16",
@@ -764,7 +764,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Bible says this:‘If you want to be proud about something,be proud of what the Lord has done.’"
+      "text": "The Bible says this:‘If you want to be proud about something, be proud of what the Lord has done. ’"
     },
     {
       "verse": "18",
@@ -854,7 +854,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But we were not brave enough to do things like that to you. Should I be ashamed of that?But other people are brave enough to praise themselves. So I will also be proud of the same things. (Now I am talking like a fool!)"
+      "text": "But we were not brave enough to do things like that to you. Should I be ashamed of that? But other people are brave enough to praise themselves. So I will also be proud of the same things. (Now I am talking like a fool! )"
     },
     {
       "verse": "22",
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Are they Christ's servants? I serve him even better than they do! (Now I am speaking like a crazy person.) I work much more than they have worked. I have been in prison more often than they have. People have hit me with whips very many times. I have nearly died many times."
+      "text": "Are they Christ's servants? I serve him even better than they do! (Now I am speaking like a crazy person. ) I work much more than they have worked. I have been in prison more often than they have. People have hit me with whips very many times. I have nearly died many times."
     },
     {
       "verse": "24",
@@ -932,7 +932,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But he said to me, ‘I will be kind to you and I will help you. That will be enough for you. When you are weak, I will show that I am completely powerful to help you.’So I am happy to be proud about my weakness. Then I know that Christ's power will be with me."
+      "text": "But he said to me, ‘I will be kind to you and I will help you. That will be enough for you. When you are weak, I will show that I am completely powerful to help you. ’So I am happy to be proud about my weakness. Then I know that Christ's power will be with me."
     },
     {
       "verse": "10",
@@ -990,7 +990,7 @@ module.exports = {
   "13": [
     {
       "verse": "1",
-      "text": "This is the third time that I will be coming to visit you. Remember this: ‘There must be two or three people to say certainly that another person has done something wrong. Two or three people must agree what has happened.’"
+      "text": "This is the third time that I will be coming to visit you. Remember this: ‘There must be two or three people to say certainly that another person has done something wrong. Two or three people must agree what has happened. ’"
     },
     {
       "verse": "2",

@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We must find a clever way to stop them. If we do nothing, their families will become even bigger. Then, if there is a war, they will join our enemies and they will fight against us. That will give the Israelites a chance to leave our country.’"
+      "text": "We must find a clever way to stop them. If we do nothing, their families will become even bigger. Then, if there is a war, they will join our enemies and they will fight against us. That will give the Israelites a chance to leave our country. ’"
     },
     {
       "verse": "11",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "‘When you help the Israelite women at the birth of their children, this is what you must do. If she gives birth to a son, kill him. But if the child is a daughter, you may let her live.’"
+      "text": "‘When you help the Israelite women at the birth of their children, this is what you must do. If she gives birth to a son, kill him. But if the child is a daughter, you may let her live. ’"
     },
     {
       "verse": "17",
@@ -70,11 +70,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the king of Egypt called the two women to come to him. He asked them, ‘Why have you done this? Why have you let the boys live?’"
+      "text": "Then the king of Egypt called the two women to come to him. He asked them, ‘Why have you done this? Why have you let the boys live? ’"
     },
     {
       "verse": "19",
-      "text": "The two women said to Pharaoh, ‘Israelite women are not like Egyptian women. Israelite women are very strong. They give birth to their babies very quickly, before we arrive at the house.’"
+      "text": "The two women said to Pharaoh, ‘Israelite women are not like Egyptian women. Israelite women are very strong. They give birth to their babies very quickly, before we arrive at the house. ’"
     },
     {
       "verse": "20",
@@ -86,7 +86,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then Pharaoh spoke to all the Egyptian people. He said, ‘When an Israelite boy is born, you must throw him in the river Nile. But you can let the baby girls live.’"
+      "text": "Then Pharaoh spoke to all the Egyptian people. He said, ‘When an Israelite boy is born, you must throw him in the river Nile. But you can let the baby girls live. ’"
     }
   ],
   "2": [
@@ -112,23 +112,23 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When she opened the basket, she saw the baby boy. He was crying. She was sorry for him and she said, ‘This is one of the Israelite children.’"
+      "text": "When she opened the basket, she saw the baby boy. He was crying. She was sorry for him and she said, ‘This is one of the Israelite children. ’"
     },
     {
       "verse": "7",
-      "text": "Then the baby's sister said to Pharaoh's daughter, ‘Do you want me to fetch one of the Israelite mothers? She can take care of this baby and she can feed him for you.’"
+      "text": "Then the baby's sister said to Pharaoh's daughter, ‘Do you want me to fetch one of the Israelite mothers? She can take care of this baby and she can feed him for you. ’"
     },
     {
       "verse": "8",
-      "text": "Pharaoh's daughter said, ‘Yes, please do that.’So the girl went and she fetched the baby's own mother."
+      "text": "Pharaoh's daughter said, ‘Yes, please do that. ’So the girl went and she fetched the baby's own mother."
     },
     {
       "verse": "9",
-      "text": "Pharaoh's daughter said to the baby's mother, ‘Please take this baby to your house. You can take care of him for me. I will pay you to do this.’ So the woman took the baby home and she took care of him."
+      "text": "Pharaoh's daughter said to the baby's mother, ‘Please take this baby to your house. You can take care of him for me. I will pay you to do this. ’ So the woman took the baby home and she took care of him."
     },
     {
       "verse": "10",
-      "text": "When the baby was older, his mother took him to Pharaoh's daughter. He now became her son. She gave him the name ‘Moses’. She said, ‘I will call him Moses because I pulled him out of the water.’"
+      "text": "When the baby was older, his mother took him to Pharaoh's daughter. He now became her son. She gave him the name ‘Moses’. She said, ‘I will call him Moses because I pulled him out of the water. ’"
     },
     {
       "verse": "11",
@@ -140,15 +140,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The next day, Moses went out again to visit his people. He saw that two Israelite men were fighting each other. Moses said to the guilty man, ‘Why are you attacking your friend, who is an Israelite like you?’"
+      "text": "The next day, Moses went out again to visit his people. He saw that two Israelite men were fighting each other. Moses said to the guilty man, ‘Why are you attacking your friend, who is an Israelite like you? ’"
     },
     {
       "verse": "14",
-      "text": "The man answered, ‘You do not have authority over us! You cannot judge us! Do you want to kill me, as you killed that Egyptian man?’ Then Moses was afraid. He said to himself, ‘People must know what I have done!’"
+      "text": "The man answered, ‘You do not have authority over us! You cannot judge us! Do you want to kill me, as you killed that Egyptian man? ’ Then Moses was afraid. He said to himself, ‘People must know what I have done! ’"
     },
     {
       "verse": "15",
-      "text": "Pharaoh heard about what had happened. He wanted to kill Moses. So Moses ran away from Pharaoh. He went from Egypt to the country called Midian and he lived there.One day, Moses sat down by a well which was near where he lived. One day, Moses sat down by a well which was near where he lived."
+      "text": "Pharaoh heard about what had happened. He wanted to kill Moses. So Moses ran away from Pharaoh. He went from Egypt to the country called Midian and he lived there. One day, Moses sat down by a well which was near where he lived. One day, Moses sat down by a well which was near where he lived."
     },
     {
       "verse": "16",
@@ -160,15 +160,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the girls went back home to Reuel, their father. He asked them, ‘Why have you come home so soon today?’"
+      "text": "Then the girls went back home to Reuel, their father. He asked them, ‘Why have you come home so soon today? ’"
     },
     {
       "verse": "19",
-      "text": "They answered, ‘An Egyptian man saved us from the shepherds. He even took water from the well and he gave it to our animals.’"
+      "text": "They answered, ‘An Egyptian man saved us from the shepherds. He even took water from the well and he gave it to our animals. ’"
     },
     {
       "verse": "20",
-      "text": "Reuel said to his daughters, ‘So where is the man? You should not have left him there. Ask him to come here so that he can eat a meal with us.’"
+      "text": "Reuel said to his daughters, ‘So where is the man? You should not have left him there. Ask him to come here so that he can eat a meal with us. ’"
     },
     {
       "verse": "21",
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Later, Zipporah gave birth to a son for Moses. Moses gave the boy the name ‘Gershom’. He called him that because he said, ‘I am living as a stranger in a foreign country.’"
+      "text": "Later, Zipporah gave birth to a son for Moses. Moses gave the boy the name ‘Gershom’. He called him that because he said, ‘I am living as a stranger in a foreign country. ’"
     },
     {
       "verse": "23",
@@ -202,19 +202,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Moses said to himself, ‘I will go nearer and see this strange thing. I want to see why the bush is not completely burned.’"
+      "text": "Moses said to himself, ‘I will go nearer and see this strange thing. I want to see why the bush is not completely burned. ’"
     },
     {
       "verse": "4",
-      "text": "The Lord saw that Moses came near to look at the bush. God spoke to Moses from inside the bush. He said, ‘Moses! Moses!’ Moses answered, ‘Here I am.’"
+      "text": "The Lord saw that Moses came near to look at the bush. God spoke to Moses from inside the bush. He said, ‘Moses! Moses! ’ Moses answered, ‘Here I am. ’"
     },
     {
       "verse": "5",
-      "text": "God said to Moses, ‘Do not come nearer! Remove your shoes from your feet. The ground that you are standing on is holy.’"
+      "text": "God said to Moses, ‘Do not come nearer! Remove your shoes from your feet. The ground that you are standing on is holy. ’"
     },
     {
       "verse": "6",
-      "text": "Then God said, ‘I am the God that your father worshipped. I am also the God of your ancestors, Abraham, Isaac and Jacob.’ Then Moses covered his face. He was afraid to look at God."
+      "text": "Then God said, ‘I am the God that your father worshipped. I am also the God of your ancestors, Abraham, Isaac and Jacob. ’ Then Moses covered his face. He was afraid to look at God."
     },
     {
       "verse": "7",
@@ -230,27 +230,27 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So now you must go! I will send you to speak to Pharaoh. You will lead my people, the Israelites, out of Egypt.’"
+      "text": "So now you must go! I will send you to speak to Pharaoh. You will lead my people, the Israelites, out of Egypt. ’"
     },
     {
       "verse": "11",
-      "text": "But Moses said to God, ‘I am not an important person. I cannot go to Pharaoh. I cannot lead the Israelites out of Egypt!’"
+      "text": "But Moses said to God, ‘I am not an important person. I cannot go to Pharaoh. I cannot lead the Israelites out of Egypt! ’"
     },
     {
       "verse": "12",
-      "text": "God said to Moses, ‘Be sure of this: I will be with you. After you have led the people out of Egypt you will all worship me here, on this mountain. That will show you that I myself have sent you to do this.’"
+      "text": "God said to Moses, ‘Be sure of this: I will be with you. After you have led the people out of Egypt you will all worship me here, on this mountain. That will show you that I myself have sent you to do this. ’"
     },
     {
       "verse": "13",
-      "text": "Then Moses said to God, ‘If I go to the Israelites, they may not believe me. I will say, “The God that your ancestors worshipped has sent me to you.” But then they will ask me, “What is his name?” Then what will I say to them?’"
+      "text": "Then Moses said to God, ‘If I go to the Israelites, they may not believe me. I will say, “The God that your ancestors worshipped has sent me to you. ” But then they will ask me, “What is his name? ” Then what will I say to them? ’"
     },
     {
       "verse": "14",
-      "text": "God said to Moses, ‘I am who I am! Say this to the Israelite people: “I AM has sent me to you.” ’"
+      "text": "God said to Moses, ‘I am who I am! Say this to the Israelite people: “I AM has sent me to you. ” ’"
     },
     {
       "verse": "15",
-      "text": "God also said to Moses, ‘Say this to the Israelite people: “It is the Lord God who has sent me to you. He is the God that your ancestors worshipped. He is the God of Abraham, Isaac and Jacob.” That is my name for all time. All generations of my people must call me by that name."
+      "text": "God also said to Moses, ‘Say this to the Israelite people: “It is the Lord God who has sent me to you. He is the God that your ancestors worshipped. He is the God of Abraham, Isaac and Jacob. ” That is my name for all time. All generations of my people must call me by that name."
     },
     {
       "verse": "16",
@@ -258,11 +258,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I promise that I will bring you out of your troubles in Egypt. I will lead you into the land of the Canaanites, the Hittites, the Amorites, the Perizzites, the Hivites and the Jebusites. It is a land that will give you plenty of good food and drink, enough for everyone.’ ”"
+      "text": "I promise that I will bring you out of your troubles in Egypt. I will lead you into the land of the Canaanites, the Hittites, the Amorites, the Perizzites, the Hivites and the Jebusites. It is a land that will give you plenty of good food and drink, enough for everyone. ’ ”"
     },
     {
       "verse": "18",
-      "text": "When you say that, the leaders of the Israelites will listen to you. Then you must go with them to the king of Egypt. Say to him, “The Lord God has met with us. He is the God that we, the Israelite people, worship. So let us go on a journey into the wilderness. That will be a journey of three days. We must offer sacrifices to the Lord our God there.”"
+      "text": "When you say that, the leaders of the Israelites will listen to you. Then you must go with them to the king of Egypt. Say to him, “The Lord God has met with us. He is the God that we, the Israelite people, worship. So let us go on a journey into the wilderness. That will be a journey of three days. We must offer sacrifices to the Lord our God there. ”"
     },
     {
       "verse": "19",
@@ -278,37 +278,37 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "All the Israelite women will ask their Egyptian friends to give them things. They will ask the women who live near them and those who live with them in their houses. They will ask for silver things, gold things and beautiful clothes. Then you will take those things and you will dress your sons and your daughters with them. In that way, you will take many valuable things away from the Egyptians.’"
+      "text": "All the Israelite women will ask their Egyptian friends to give them things. They will ask the women who live near them and those who live with them in their houses. They will ask for silver things, gold things and beautiful clothes. Then you will take those things and you will dress your sons and your daughters with them. In that way, you will take many valuable things away from the Egyptians. ’"
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "Then Moses replied, ‘Perhaps the leaders of Israel will not believe me. Perhaps they will not listen to my message. Perhaps they will say, “The Lord did not really appear to you.” ’"
+      "text": "Then Moses replied, ‘Perhaps the leaders of Israel will not believe me. Perhaps they will not listen to my message. Perhaps they will say, “The Lord did not really appear to you. ” ’"
     },
     {
       "verse": "2",
-      "text": "Then the Lord said to Moses, ‘What is that thing in your hand?’ Moses answered, ‘It is a stick.’"
+      "text": "Then the Lord said to Moses, ‘What is that thing in your hand? ’ Moses answered, ‘It is a stick. ’"
     },
     {
       "verse": "3",
-      "text": "The Lord said, ‘Throw it down on the ground.’ So Moses threw it on the ground. Then the stick became a snake! Moses ran away from the snake."
+      "text": "The Lord said, ‘Throw it down on the ground. ’ So Moses threw it on the ground. Then the stick became a snake! Moses ran away from the snake."
     },
     {
       "verse": "4",
-      "text": "Then the Lord said to Moses, ‘Take hold of the snake's tail with your hand.’ So Moses caught the snake with his hand. Then it became a stick in his hand again."
+      "text": "Then the Lord said to Moses, ‘Take hold of the snake's tail with your hand. ’ So Moses caught the snake with his hand. Then it became a stick in his hand again."
     },
     {
       "verse": "5",
-      "text": "God said, ‘Do this in front of them. Then they will believe you. They will believe that I, the Lord God, have appeared to you. I am the God that their ancestors worshipped. I am the God of Abraham, the God of Isaac and the God of Jacob.’"
+      "text": "God said, ‘Do this in front of them. Then they will believe you. They will believe that I, the Lord God, have appeared to you. I am the God that their ancestors worshipped. I am the God of Abraham, the God of Isaac and the God of Jacob. ’"
     },
     {
       "verse": "6",
-      "text": "Then the Lord said to Moses, ‘Put your hand inside your robe.’ So Moses did this. When he took his hand out again, the skin had become white, like snow. It was the bad disease called leprosy."
+      "text": "Then the Lord said to Moses, ‘Put your hand inside your robe. ’ So Moses did this. When he took his hand out again, the skin had become white, like snow. It was the bad disease called leprosy."
     },
     {
       "verse": "7",
-      "text": "Then God said, ‘Put your hand back inside your robe again.’ So Moses did that. And when he took his hand out, it was well again, like the rest of his skin!"
+      "text": "Then God said, ‘Put your hand back inside your robe again. ’ So Moses did that. And when he took his hand out, it was well again, like the rest of his skin!"
     },
     {
       "verse": "8",
@@ -316,11 +316,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But they may still not listen to your message. If they will not even believe those two miracles, do this: Take some water from the River Nile and pour it on the dry ground. The water that you take from the river will become blood on the ground.’"
+      "text": "But they may still not listen to your message. If they will not even believe those two miracles, do this: Take some water from the River Nile and pour it on the dry ground. The water that you take from the river will become blood on the ground. ’"
     },
     {
       "verse": "10",
-      "text": "Then Moses said to the Lord, ‘My Lord, I cannot speak well. I speak slowly and I speak with difficulty. I never could speak well. And even now, when you have spoken to me, I still cannot speak well.’"
+      "text": "Then Moses said to the Lord, ‘My Lord, I cannot speak well. I speak slowly and I speak with difficulty. I never could speak well. And even now, when you have spoken to me, I still cannot speak well. ’"
     },
     {
       "verse": "11",
@@ -328,11 +328,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Now go! I will help you to speak well. I will teach you what you must say.’"
+      "text": "Now go! I will help you to speak well. I will teach you what you must say. ’"
     },
     {
       "verse": "13",
-      "text": "But Moses said, ‘My Lord, please send some other person. Do not send me!’"
+      "text": "But Moses said, ‘My Lord, please send some other person. Do not send me! ’"
     },
     {
       "verse": "14",
@@ -348,15 +348,15 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Take this stick with you and hold it in your hand. You will use it to do the miracles to show that I have sent you.’"
+      "text": "Take this stick with you and hold it in your hand. You will use it to do the miracles to show that I have sent you. ’"
     },
     {
       "verse": "18",
-      "text": "Then Moses went back to Jethro, his wife's father. Moses said to him, ‘Please let me return to my family in Egypt. I must see if they are still alive.’ So Jethro said to Moses, ‘Go in peace.’"
+      "text": "Then Moses went back to Jethro, his wife's father. Moses said to him, ‘Please let me return to my family in Egypt. I must see if they are still alive. ’ So Jethro said to Moses, ‘Go in peace. ’"
     },
     {
       "verse": "19",
-      "text": "The Lord had said to Moses while he was still in Midian, ‘Go back to Egypt. All the men who tried to kill you are now dead.’"
+      "text": "The Lord had said to Moses while he was still in Midian, ‘Go back to Egypt. All the men who tried to kill you are now dead. ’"
     },
     {
       "verse": "20",
@@ -372,7 +372,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I have already said to you, Let my son go so that he can worship me. But if you refuse to let him go, I will kill your first son.” ’"
+      "text": "I have already said to you, Let my son go so that he can worship me. But if you refuse to let him go, I will kill your first son. ” ’"
     },
     {
       "verse": "24",
@@ -380,15 +380,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But Zipporah took a sharp stone and she cut off her son's foreskin with the stone. She touched Moses' feet with the foreskin. She said, ‘You are a husband of blood to me.’"
+      "text": "But Zipporah took a sharp stone and she cut off her son's foreskin with the stone. She touched Moses' feet with the foreskin. She said, ‘You are a husband of blood to me. ’"
     },
     {
       "verse": "26",
-      "text": "So God did not do anything bad to Moses. Then Zipporah said to Moses, ‘You are a husband of blood, because of this circumcision.’"
+      "text": "So God did not do anything bad to Moses. Then Zipporah said to Moses, ‘You are a husband of blood, because of this circumcision. ’"
     },
     {
       "verse": "27",
-      "text": "The Lord said to Aaron, ‘Go into the desert to meet Moses.’ So Aaron went. He met Moses at the mountain of God and he kissed him."
+      "text": "The Lord said to Aaron, ‘Go into the desert to meet Moses. ’ So Aaron went. He met Moses at the mountain of God and he kissed him."
     },
     {
       "verse": "28",
@@ -410,23 +410,23 @@ module.exports = {
   "5": [
     {
       "verse": "1",
-      "text": "After this, Moses and Aaron went to visit Pharaoh. They said to him, ‘Listen to what the Lord says. He is the God of Israel. He says, “Let my people go. Let them prepare a feast in the desert to worship me.” ’"
+      "text": "After this, Moses and Aaron went to visit Pharaoh. They said to him, ‘Listen to what the Lord says. He is the God of Israel. He says, “Let my people go. Let them prepare a feast in the desert to worship me. ” ’"
     },
     {
       "verse": "2",
-      "text": "But Pharaoh said, ‘The Lord is not my god. I do not need to obey him. I do not have to let the Israelites go. I do not know the Lord. I will not let the Israelites go.’"
+      "text": "But Pharaoh said, ‘The Lord is not my god. I do not need to obey him. I do not have to let the Israelites go. I do not know the Lord. I will not let the Israelites go. ’"
     },
     {
       "verse": "3",
-      "text": "Moses and Aaron said, ‘The God of the Israelites has met us. Please let us go. We must go on a journey of three days into the desert. There we must give gifts to the Lord our God. If we do not do this, God may punish us. We may become very ill, or people may attack us in war.’"
+      "text": "Moses and Aaron said, ‘The God of the Israelites has met us. Please let us go. We must go on a journey of three days into the desert. There we must give gifts to the Lord our God. If we do not do this, God may punish us. We may become very ill, or people may attack us in war. ’"
     },
     {
       "verse": "4",
-      "text": "But the king of Egypt said, ‘Moses and Aaron, you must not take the people away from their work! Go back to your jobs!’"
+      "text": "But the king of Egypt said, ‘Moses and Aaron, you must not take the people away from their work! Go back to your jobs! ’"
     },
     {
       "verse": "5",
-      "text": "Pharaoh said, ‘Look, there are now many of your people who live in my country. But you are taking them away from their work.’"
+      "text": "Pharaoh said, ‘Look, there are now many of your people who live in my country. But you are taking them away from their work. ’"
     },
     {
       "verse": "6",
@@ -438,11 +438,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But they must still make the same number of bricks as they did before. Do not let them make fewer bricks. These people are lazy. That is why they are complaining. They say, “We want to go and offer sacrifices to our God.”"
+      "text": "But they must still make the same number of bricks as they did before. Do not let them make fewer bricks. These people are lazy. That is why they are complaining. They say, “We want to go and offer sacrifices to our God. ”"
     },
     {
       "verse": "9",
-      "text": "Make the work more difficult for them to do. They will have to do very hard work. They will be too busy to listen to the lies of their leaders.’"
+      "text": "Make the work more difficult for them to do. They will have to do very hard work. They will be too busy to listen to the lies of their leaders. ’"
     },
     {
       "verse": "10",
@@ -450,7 +450,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "You must try to find straw for yourselves. But you will still have to make the same number of bricks.” ’"
+      "text": "You must try to find straw for yourselves. But you will still have to make the same number of bricks. ” ’"
     },
     {
       "verse": "12",
@@ -458,11 +458,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The slaves' masters made the Israelites work quickly. They said, ‘Finish all your work for each day, as much as when we gave straw to you.’"
+      "text": "The slaves' masters made the Israelites work quickly. They said, ‘Finish all your work for each day, as much as when we gave straw to you. ’"
     },
     {
       "verse": "14",
-      "text": "Pharaoh's slave masters hit the Israelite leaders who had authority over the people. They said to them, ‘Why have you not made the complete number of bricks today, as you did before?’"
+      "text": "Pharaoh's slave masters hit the Israelite leaders who had authority over the people. They said to them, ‘Why have you not made the complete number of bricks today, as you did before? ’"
     },
     {
       "verse": "15",
@@ -470,19 +470,19 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Our masters no longer give us any straw. But they say “Make bricks!” Then they hit us. But it is your people who are doing wrong things, not us.’"
+      "text": "Our masters no longer give us any straw. But they say “Make bricks! ” Then they hit us. But it is your people who are doing wrong things, not us. ’"
     },
     {
       "verse": "17",
-      "text": "But Pharaoh said, ‘You Israelites are just lazy people! That is why you say, “Let us go to offer sacrifices to the Lord.”"
+      "text": "But Pharaoh said, ‘You Israelites are just lazy people! That is why you say, “Let us go to offer sacrifices to the Lord. ”"
     },
     {
       "verse": "18",
-      "text": "Now go back and do your work. Nobody will give you any straw. But you must make the complete number of bricks.’"
+      "text": "Now go back and do your work. Nobody will give you any straw. But you must make the complete number of bricks. ’"
     },
     {
       "verse": "19",
-      "text": "The Israelite work leaders heard Pharaoh say, ‘You must still make the same number of bricks as you made before.’ Then they knew that they were in trouble."
+      "text": "The Israelite work leaders heard Pharaoh say, ‘You must still make the same number of bricks as you made before. ’ Then they knew that they were in trouble."
     },
     {
       "verse": "20",
@@ -490,7 +490,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The work leaders said to Moses and Aaron, ‘We hope that the Lord will punish you! You have made us like a bad smell to Pharaoh and to his officers. You have given them a reason to kill us.’"
+      "text": "The work leaders said to Moses and Aaron, ‘We hope that the Lord will punish you! You have made us like a bad smell to Pharaoh and to his officers. You have given them a reason to kill us. ’"
     },
     {
       "verse": "22",
@@ -498,13 +498,13 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I went to speak to Pharaoh with your authority. But since I spoke to Pharaoh, he has caused these people to have trouble. And you have done nothing to save your people.’"
+      "text": "I went to speak to Pharaoh with your authority. But since I spoke to Pharaoh, he has caused these people to have trouble. And you have done nothing to save your people. ’"
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "Then the Lord said to Moses, ‘Now you will see what I will do to Pharaoh. I will use my great power to make him let my people go. With my strong power I will cause him to make them leave his land.’"
+      "text": "Then the Lord said to Moses, ‘Now you will see what I will do to Pharaoh. I will use my great power to make him let my people go. With my strong power I will cause him to make them leave his land. ’"
     },
     {
       "verse": "2",
@@ -532,7 +532,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I will take you to live in another land. That is the land that I promised to give to Abraham, to Isaac and to Jacob. Yes, I will give it to you and it will belong to you. I am the Lord.” ’"
+      "text": "I will take you to live in another land. That is the land that I promised to give to Abraham, to Isaac and to Jacob. Yes, I will give it to you and it will belong to you. I am the Lord. ” ’"
     },
     {
       "verse": "9",
@@ -544,11 +544,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "‘Go and speak to Pharaoh, king of Egypt. Tell him that he must let the Israelites go out of his country.’"
+      "text": "‘Go and speak to Pharaoh, king of Egypt. Tell him that he must let the Israelites go out of his country. ’"
     },
     {
       "verse": "12",
-      "text": "But Moses said to the Lord, ‘Look! Even the Israelites have not listened to me. So Pharaoh certainly will not listen to me. You know that I do not speak well.’"
+      "text": "But Moses said to the Lord, ‘Look! Even the Israelites have not listened to me. So Pharaoh certainly will not listen to me. You know that I do not speak well. ’"
     },
     {
       "verse": "13",
@@ -556,7 +556,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "These were the leaders of their family clans:Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans. Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans."
+      "text": "These were the leaders of their family clans: Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans. Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans."
     },
     {
       "verse": "15",
@@ -576,7 +576,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The sons of Merari: Mahli and Mushi.These were the family clans of Levi, from the oldest to the youngest. These were the family clans of Levi, from the oldest to the youngest."
+      "text": "The sons of Merari: Mahli and Mushi. These were the family clans of Levi, from the oldest to the youngest. These were the family clans of Levi, from the oldest to the youngest."
     },
     {
       "verse": "20",
@@ -600,11 +600,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Aaron's son, Eleazar, married one of Putiel's daughters. Phinehas was their son.These were the leaders of the Levite family clans. These were the leaders of the Levite family clans."
+      "text": "Aaron's son, Eleazar, married one of Putiel's daughters. Phinehas was their son. These were the leaders of the Levite family clans. These were the leaders of the Levite family clans."
     },
     {
       "verse": "26",
-      "text": "This shows us the ancestors of Aaron and Moses. They were the men to whom the Lord spoke. He said to them, ‘Lead the Israelites out of Egypt. Lead them out in their families and clans, like an army.’"
+      "text": "This shows us the ancestors of Aaron and Moses. They were the men to whom the Lord spoke. He said to them, ‘Lead the Israelites out of Egypt. Lead them out in their families and clans, like an army. ’"
     },
     {
       "verse": "27",
@@ -616,11 +616,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "he said, ‘I am the Lord. Tell Pharaoh, king of Egypt, everything that I say to you.’"
+      "text": "he said, ‘I am the Lord. Tell Pharaoh, king of Egypt, everything that I say to you. ’"
     },
     {
       "verse": "30",
-      "text": "But Moses said, ‘You know that I do not speak well. Pharaoh will not listen to me.’"
+      "text": "But Moses said, ‘You know that I do not speak well. Pharaoh will not listen to me. ’"
     }
   ],
   "7": [
@@ -642,7 +642,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the Egyptians will know that I am the Lord. I will show my great strength in Egypt and I will lead the Israelites out from there.’"
+      "text": "Then the Egyptians will know that I am the Lord. I will show my great strength in Egypt and I will lead the Israelites out from there. ’"
     },
     {
       "verse": "6",
@@ -658,7 +658,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "‘Pharaoh will say to you, “Show me a miracle.” Then say to Aaron, “Take your stick and throw it down in front of Pharaoh.” When Aaron does that, his stick will become a snake.’"
+      "text": "‘Pharaoh will say to you, “Show me a miracle. ” Then say to Aaron, “Take your stick and throw it down in front of Pharaoh. ” When Aaron does that, his stick will become a snake. ’"
     },
     {
       "verse": "10",
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then say to Pharaoh, “The Lord, the God of the Israelites, has sent me to you to say, ‘Let my people go, so that they may worship me in the desert.’ But until now, you have not listened to my message."
+      "text": "Then say to Pharaoh, “The Lord, the God of the Israelites, has sent me to you to say, ‘Let my people go, so that they may worship me in the desert. ’ But until now, you have not listened to my message."
     },
     {
       "verse": "17",
@@ -694,11 +694,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The fish in the river will die, and the river will have a very bad smell. Then the Egyptians will not be able to drink the water from the Nile river.” ’"
+      "text": "The fish in the river will die, and the river will have a very bad smell. Then the Egyptians will not be able to drink the water from the Nile river. ” ’"
     },
     {
       "verse": "19",
-      "text": "Then the Lord said to Moses, ‘Say to Aaron, “Take your stick. Lift up your hand over the waters of Egypt. Lift your stick up over their rivers and their streams. Lift it up over their lakes and pools of water. Do that so that all the water becomes blood.” There will be blood in every part of Egypt. There will even be blood in their buckets and bowls.’"
+      "text": "Then the Lord said to Moses, ‘Say to Aaron, “Take your stick. Lift up your hand over the waters of Egypt. Lift your stick up over their rivers and their streams. Lift it up over their lakes and pools of water. Do that so that all the water becomes blood. ” There will be blood in every part of Egypt. There will even be blood in their buckets and bowls. ’"
     },
     {
       "verse": "20",
@@ -740,11 +740,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The frogs will jump all over you. They will jump on your people and on all your servants.” ’"
+      "text": "The frogs will jump all over you. They will jump on your people and on all your servants. ” ’"
     },
     {
       "verse": "5",
-      "text": "Then the Lord said to Moses, ‘Say to Aaron, “Take your stick in your hand. Then raise your hand over the rivers, the streams and the pools. You will cause frogs to come up over the whole of Egypt.” ’"
+      "text": "Then the Lord said to Moses, ‘Say to Aaron, “Take your stick in your hand. Then raise your hand over the rivers, the streams and the pools. You will cause frogs to come up over the whole of Egypt. ” ’"
     },
     {
       "verse": "6",
@@ -756,19 +756,19 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then Pharaoh called Moses and Aaron to come to him. He said, ‘Pray to the Lord. Ask him to remove the frogs from me and from my people. Then I will let your people go. They can offer sacrifices to the Lord.’"
+      "text": "Then Pharaoh called Moses and Aaron to come to him. He said, ‘Pray to the Lord. Ask him to remove the frogs from me and from my people. Then I will let your people go. They can offer sacrifices to the Lord. ’"
     },
     {
       "verse": "9",
-      "text": "Moses said to Pharaoh, ‘I will let you choose the time when I should pray to God. Then I will ask God to do this for you, for your servants and for your people. I will ask God to remove the frogs from you and from all your houses. The frogs will remain only in the Nile river.’"
+      "text": "Moses said to Pharaoh, ‘I will let you choose the time when I should pray to God. Then I will ask God to do this for you, for your servants and for your people. I will ask God to remove the frogs from you and from all your houses. The frogs will remain only in the Nile river. ’"
     },
     {
       "verse": "10",
-      "text": "Pharaoh said, ‘Do it tomorrow.’ Moses answered, ‘I will do what you have asked. Then you will know that there is nobody like the Lord our God."
+      "text": "Pharaoh said, ‘Do it tomorrow. ’ Moses answered, ‘I will do what you have asked. Then you will know that there is nobody like the Lord our God."
     },
     {
       "verse": "11",
-      "text": "The frogs will go away from you and your houses. They will go away from your servants and your people. They will remain only in the river.’"
+      "text": "The frogs will go away from you and your houses. They will go away from your servants and your people. They will remain only in the river. ’"
     },
     {
       "verse": "12",
@@ -788,7 +788,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then the Lord said to Moses, ‘Say to Aaron, “Lift up your stick and hit the dirt on the ground. It will become gnats in the whole land of Egypt.” ’"
+      "text": "Then the Lord said to Moses, ‘Say to Aaron, “Lift up your stick and hit the dirt on the ground. It will become gnats in the whole land of Egypt. ” ’"
     },
     {
       "verse": "17",
@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then the magicians said to Pharaoh, ‘This is the work of God.’ But there was no change in Pharaoh's thoughts. He would not listen to them. The Lord had said that this would happen, and it did!"
+      "text": "Then the magicians said to Pharaoh, ‘This is the work of God. ’ But there was no change in Pharaoh's thoughts. He would not listen to them. The Lord had said that this would happen, and it did!"
     },
     {
       "verse": "20",
@@ -816,7 +816,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I will make a difference between my people and your people. This miracle will happen tomorrow.” ’"
+      "text": "I will make a difference between my people and your people. This miracle will happen tomorrow. ” ’"
     },
     {
       "verse": "24",
@@ -824,7 +824,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Then Pharaoh called Moses and Aaron to come to him. He said to them, ‘Go! You can offer sacrifices to your God here, in Egypt.’"
+      "text": "Then Pharaoh called Moses and Aaron to come to him. He said to them, ‘Go! You can offer sacrifices to your God here, in Egypt. ’"
     },
     {
       "verse": "26",
@@ -832,15 +832,15 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So we must go on a journey for three days into the desert. We will offer sacrifices to the Lord our God there, as he has told us to do.’"
+      "text": "So we must go on a journey for three days into the desert. We will offer sacrifices to the Lord our God there, as he has told us to do. ’"
     },
     {
       "verse": "28",
-      "text": "So Pharaoh said, ‘I will let you go. You may go into the desert and offer sacrifices to the Lord your God there. But do not go very far away. And pray for me too.’"
+      "text": "So Pharaoh said, ‘I will let you go. You may go into the desert and offer sacrifices to the Lord your God there. But do not go very far away. And pray for me too. ’"
     },
     {
       "verse": "29",
-      "text": "Then Moses said, ‘I will leave you now, and I will pray to the Lord. Tomorrow, all the flies will go away from you, your officers and your people. But be careful! Do not deceive us, as you did before. You must really let the people go away to offer sacrifices to the Lord.’"
+      "text": "Then Moses said, ‘I will leave you now, and I will pray to the Lord. Tomorrow, all the flies will go away from you, your officers and your people. But be careful! Do not deceive us, as you did before. You must really let the people go away to offer sacrifices to the Lord. ’"
     },
     {
       "verse": "30",
@@ -870,11 +870,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But the Lord will make a difference between the animals of the Israelites and the animals of the Egyptians. None of the animals of the Israelites will die.” ’"
+      "text": "But the Lord will make a difference between the animals of the Israelites and the animals of the Egyptians. None of the animals of the Israelites will die. ” ’"
     },
     {
       "verse": "5",
-      "text": "The Lord decided when this would happen. He said, ‘Tomorrow I will make this happen in the land of Egypt.’"
+      "text": "The Lord decided when this would happen. He said, ‘Tomorrow I will make this happen in the land of Egypt. ’"
     },
     {
       "verse": "6",
@@ -890,7 +890,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "They will become very small dust over the whole country of Egypt. The dust will cause boils to appear on the skin of people and animals. It will happen all over Egypt.’"
+      "text": "They will become very small dust over the whole country of Egypt. The dust will cause boils to appear on the skin of people and animals. It will happen all over Egypt. ’"
     },
     {
       "verse": "10",
@@ -930,7 +930,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Now send your servants out to tell this message to your people. You must bring into your houses all your animals from the fields to be safe. The hail will fall on every person and on every animal that is still outside. They will all die.” ’"
+      "text": "Now send your servants out to tell this message to your people. You must bring into your houses all your animals from the fields to be safe. The hail will fall on every person and on every animal that is still outside. They will all die. ” ’"
     },
     {
       "verse": "20",
@@ -942,7 +942,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then the Lord said to Moses, ‘Lift up your hand towards the sky. Then hail will fall over all the country of Egypt. It will fall on people and on animals. It will fall on all the plants that grow in the fields of Egypt.’"
+      "text": "Then the Lord said to Moses, ‘Lift up your hand towards the sky. Then hail will fall over all the country of Egypt. It will fall on people and on animals. It will fall on all the plants that grow in the fields of Egypt. ’"
     },
     {
       "verse": "23",
@@ -966,7 +966,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "The storms with the thunder and the hail are too much for us! Pray to the Lord to take them away. Then I will let you go! You do not need to stay any longer in Egypt.’"
+      "text": "The storms with the thunder and the hail are too much for us! Pray to the Lord to take them away. Then I will let you go! You do not need to stay any longer in Egypt. ’"
     },
     {
       "verse": "29",
@@ -974,7 +974,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "But I know you and your officers. You still do not respect the Lord God.’"
+      "text": "But I know you and your officers. You still do not respect the Lord God. ’"
     },
     {
       "verse": "31",
@@ -1004,7 +1004,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "In the future, you can tell your children and your children's children how I punished the Egyptians. You can tell them about the miracles that I did among the Egyptians. In this way, you will know that I am the Lord.’"
+      "text": "In the future, you can tell your children and your children's children how I punished the Egyptians. You can tell them about the miracles that I did among the Egyptians. In this way, you will know that I am the Lord. ’"
     },
     {
       "verse": "3",
@@ -1020,19 +1020,19 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "They will fill your houses, and your officers' houses. They will fill all the houses in Egypt! It will be worse than anything that your fathers or your grandfathers have ever seen. Nothing like this has ever happened in Egypt before now.” ’ Then Moses turned away and left Pharaoh."
+      "text": "They will fill your houses, and your officers' houses. They will fill all the houses in Egypt! It will be worse than anything that your fathers or your grandfathers have ever seen. Nothing like this has ever happened in Egypt before now. ” ’ Then Moses turned away and left Pharaoh."
     },
     {
       "verse": "7",
-      "text": "Pharaoh's officers said to him, ‘Will you let this man bring trouble to us for ever? Allow the people to go. Then they can worship the Lord their God. Surely you understand by now that this man has destroyed Egypt!’"
+      "text": "Pharaoh's officers said to him, ‘Will you let this man bring trouble to us for ever? Allow the people to go. Then they can worship the Lord their God. Surely you understand by now that this man has destroyed Egypt! ’"
     },
     {
       "verse": "8",
-      "text": "So Pharaoh's officers took Moses and Aaron back to him. Pharaoh said to them, ‘Go and worship the Lord your God. But tell me, who will go?’"
+      "text": "So Pharaoh's officers took Moses and Aaron back to him. Pharaoh said to them, ‘Go and worship the Lord your God. But tell me, who will go? ’"
     },
     {
       "verse": "9",
-      "text": "Moses said, ‘We will all go, both young people and old people. We will take our sons and daughters. We will also take our animals, because we must have a feast to worship the Lord.’"
+      "text": "Moses said, ‘We will all go, both young people and old people. We will take our sons and daughters. We will also take our animals, because we must have a feast to worship the Lord. ’"
     },
     {
       "verse": "10",
@@ -1040,11 +1040,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "No! If you really want to go and worship the Lord, only the men can go.’ Pharaoh was angry and he told Moses and Aaron to go away."
+      "text": "No! If you really want to go and worship the Lord, only the men can go. ’ Pharaoh was angry and he told Moses and Aaron to go away."
     },
     {
       "verse": "12",
-      "text": "Then the Lord said to Moses, ‘Lift up your hand over the country of Egypt. Then locusts will fly all over the land. They will eat every plant that grows in the ground. They will eat everything that the hail has not destroyed.’"
+      "text": "Then the Lord said to Moses, ‘Lift up your hand over the country of Egypt. Then locusts will fly all over the land. They will eat every plant that grows in the ground. They will eat everything that the hail has not destroyed. ’"
     },
     {
       "verse": "13",
@@ -1064,7 +1064,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Please forgive my sins just one more time. Ask the Lord your God to remove this punishment of death from me.’"
+      "text": "Please forgive my sins just one more time. Ask the Lord your God to remove this punishment of death from me. ’"
     },
     {
       "verse": "18",
@@ -1080,7 +1080,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Then the Lord said to Moses, ‘Lift up your hand towards the sky. Then it will become dark over the whole country of Egypt. It will be so dark that people will be able to feel it.’"
+      "text": "Then the Lord said to Moses, ‘Lift up your hand towards the sky. Then it will become dark over the whole country of Egypt. It will be so dark that people will be able to feel it. ’"
     },
     {
       "verse": "22",
@@ -1092,7 +1092,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then Pharaoh called Moses to come to him. He said, ‘Go and worship the Lord. Even your families may go with you. Only your animals must remain in Egypt.’"
+      "text": "Then Pharaoh called Moses to come to him. He said, ‘Go and worship the Lord. Even your families may go with you. Only your animals must remain in Egypt. ’"
     },
     {
       "verse": "25",
@@ -1100,7 +1100,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So we must take our animals with us. Not one animal can remain behind. We must take them to worship the Lord our God. Until we arrive in the desert, we will not know which animals to use as sacrifices.’"
+      "text": "So we must take our animals with us. Not one animal can remain behind. We must take them to worship the Lord our God. Until we arrive in the desert, we will not know which animals to use as sacrifices. ’"
     },
     {
       "verse": "27",
@@ -1108,11 +1108,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Pharaoh said to Moses, ‘Go away from me! Be careful not to come back! I never want to see you again! On the day that you see my face, you will die!’"
+      "text": "Pharaoh said to Moses, ‘Go away from me! Be careful not to come back! I never want to see you again! On the day that you see my face, you will die! ’"
     },
     {
       "verse": "29",
-      "text": "Moses replied, ‘You are right! You will never see me again.’"
+      "text": "Moses replied, ‘You are right! You will never see me again. ’"
     }
   ],
   "11": [
@@ -1122,7 +1122,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So tell the Israelite people now what they must do. Every man and every woman must ask the Egyptians that live near them for gold things and silver things.’"
+      "text": "So tell the Israelite people now what they must do. Every man and every woman must ask the Egyptians that live near them for gold things and silver things. ’"
     },
     {
       "verse": "3",
@@ -1142,15 +1142,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But no trouble will happen to the Israelite people. Not even a dog will frighten them or their animals. Then you will know that I, the Lord, make a difference between Egypt and Israel.” ’"
+      "text": "But no trouble will happen to the Israelite people. Not even a dog will frighten them or their animals. Then you will know that I, the Lord, make a difference between Egypt and Israel. ” ’"
     },
     {
       "verse": "8",
-      "text": "Moses continued to say to the king, ‘All your officers will come to me. They will fall down in front of me and they will say, “Now go! Leave here with all your people.” After that, I will leave.’After he said that, Moses left Pharaoh. Moses was very angry. After he said that, Moses left Pharaoh. Moses was very angry."
+      "text": "Moses continued to say to the king, ‘All your officers will come to me. They will fall down in front of me and they will say, “Now go! Leave here with all your people. ” After that, I will leave. ’After he said that, Moses left Pharaoh. Moses was very angry. After he said that, Moses left Pharaoh. Moses was very angry."
     },
     {
       "verse": "9",
-      "text": "The Lord had already said to Moses, ‘Pharaoh will refuse to listen to you. But that will give me the chance to do even greater miracles in Egypt.’"
+      "text": "The Lord had already said to Moses, ‘Pharaoh will refuse to listen to you. But that will give me the chance to do even greater miracles in Egypt. ’"
     },
     {
       "verse": "10",
@@ -1236,7 +1236,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Eat nothing that has yeast in it. Whatever country you live in, you must eat bread without yeast in it.’"
+      "text": "Eat nothing that has yeast in it. Whatever country you live in, you must eat bread without yeast in it. ’"
     },
     {
       "verse": "21",
@@ -1260,11 +1260,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Your children may say to you, “What does this feast mean?”"
+      "text": "Your children may say to you, “What does this feast mean? ”"
     },
     {
       "verse": "27",
-      "text": "Then you must say to them, “It is the Lord's Passover sacrifice. The Lord passed over the houses of the Israelites when they were in Egypt. He killed the Egyptians but he saved our families.” ’ Then the people bent their heads down to the ground and they worshipped God."
+      "text": "Then you must say to them, “It is the Lord's Passover sacrifice. The Lord passed over the houses of the Israelites when they were in Egypt. He killed the Egyptians but he saved our families. ” ’ Then the people bent their heads down to the ground and they worshipped God."
     },
     {
       "verse": "28",
@@ -1284,11 +1284,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Take all your animals with you, as you have said. Just go away! But also pray that God will bless me.’"
+      "text": "Take all your animals with you, as you have said. Just go away! But also pray that God will bless me. ’"
     },
     {
       "verse": "33",
-      "text": "The Egyptians were telling the Israelites to leave quickly. They wanted them to go out of the country immediately. The Egyptians said, ‘If we do not send them away immediately, we will all die!’"
+      "text": "The Egyptians were telling the Israelites to leave quickly. They wanted them to go out of the country immediately. The Egyptians said, ‘If we do not send them away immediately, we will all die! ’"
     },
     {
       "verse": "34",
@@ -1304,7 +1304,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "The Israelites travelled from Rameses to Succoth. There were about 600,000 men who walked. There were also many women and children."
+      "text": "The Israelites travelled from Rameses to Succoth. There were about 600, 000 men who walked. There were also many women and children."
     },
     {
       "verse": "38",
@@ -1328,7 +1328,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Then the Lord said to Moses and Aaron, ‘These are the rules for the Passover festival:No foreign person may eat the Passover meal."
+      "text": "Then the Lord said to Moses and Aaron, ‘These are the rules for the Passover festival: No foreign person may eat the Passover meal."
     },
     {
       "verse": "44",
@@ -1352,7 +1352,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "Both the people who were born as Israelites and the foreign people who live among you must obey this rule.’"
+      "text": "Both the people who were born as Israelites and the foreign people who live among you must obey this rule. ’"
     },
     {
       "verse": "50",
@@ -1370,7 +1370,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He said, ‘Keep every firstborn male separate and special for me. Every male who is the first to be born of his mother is mine. He is mine, whether he is man or animal.’"
+      "text": "He said, ‘Keep every firstborn male separate and special for me. Every male who is the first to be born of his mother is mine. He is mine, whether he is man or animal. ’"
     },
     {
       "verse": "3",
@@ -1394,7 +1394,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "On that day, you must tell your children the reason for this festival. Tell them, “We do this because of what the Lord did for us. He brought us out of Egypt.”"
+      "text": "On that day, you must tell your children the reason for this festival. Tell them, “We do this because of what the Lord did for us. He brought us out of Egypt. ”"
     },
     {
       "verse": "9",
@@ -1418,19 +1418,19 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "One day, your son may ask you, “What does this mean?” Then you must say to him, “The Lord brought us out of Egypt with his powerful authority. He took us away from the place where we were slaves."
+      "text": "One day, your son may ask you, “What does this mean? ” Then you must say to him, “The Lord brought us out of Egypt with his powerful authority. He took us away from the place where we were slaves."
     },
     {
       "verse": "15",
-      "text": "Pharaoh refused to let us go. But the Lord killed all the firstborn sons in the country of Egypt. He killed all the firstborn males, both people and animals. That is why I offer all the firstborn male animals as a sacrifice to the Lord. But for each of my firstborn sons, I give an animal to God instead.”"
+      "text": "Pharaoh refused to let us go. But the Lord killed all the firstborn sons in the country of Egypt. He killed all the firstborn males, both people and animals. That is why I offer all the firstborn male animals as a sacrifice to the Lord. But for each of my firstborn sons, I give an animal to God instead. ”"
     },
     {
       "verse": "16",
-      "text": "It will be like a mark on your hand or something that you fix between your eyes. It will be a sign that causes you to remember what happened. You will remember that the Lord used his great power to bring us out of Egypt.’"
+      "text": "It will be like a mark on your hand or something that you fix between your eyes. It will be a sign that causes you to remember what happened. You will remember that the Lord used his great power to bring us out of Egypt. ’"
     },
     {
       "verse": "17",
-      "text": "When Pharaoh let the people go away, God did not lead them through the country of the Philistines. This was a short way for them to go, but God did not lead them that way. God said, ‘If the people have to fight a war, they may change their minds. Then they may return to Egypt.’"
+      "text": "When Pharaoh let the people go away, God did not lead them through the country of the Philistines. This was a short way for them to go, but God did not lead them that way. God said, ‘If the people have to fight a war, they may change their minds. Then they may return to Egypt. ’"
     },
     {
       "verse": "18",
@@ -1438,7 +1438,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Moses took Joseph's bones with him. Joseph had made the Israelites promise to do this. He had said, ‘One day, God will come and he will save you. Then you must carry my bones with you when you leave this place.’"
+      "text": "Moses took Joseph's bones with him. Joseph had made the Israelites promise to do this. He had said, ‘One day, God will come and he will save you. Then you must carry my bones with you when you leave this place. ’"
     },
     {
       "verse": "20",
@@ -1464,15 +1464,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then Pharaoh will think, “The Israelites are confused. They do not know where they are going. The desert has stopped them.”"
+      "text": "Then Pharaoh will think, “The Israelites are confused. They do not know where they are going. The desert has stopped them. ”"
     },
     {
       "verse": "4",
-      "text": "Then I will cause Pharaoh's mind to become hard again. He will go to catch the Israelites. I will show how great I am when I win against Pharaoh and his whole army. Because of this, the Egyptians will know that I am the Lord.’The Israelites did what God said."
+      "text": "Then I will cause Pharaoh's mind to become hard again. He will go to catch the Israelites. I will show how great I am when I win against Pharaoh and his whole army. Because of this, the Egyptians will know that I am the Lord. ’The Israelites did what God said."
     },
     {
       "verse": "5",
-      "text": "Someone told the king of Egypt that the Israelites had run away. Then Pharaoh and his officers changed their minds about the Israelites. They said, ‘We have done a foolish thing. We have let the Israelites go. We have lost our slaves!’"
+      "text": "Someone told the king of Egypt that the Israelites had run away. Then Pharaoh and his officers changed their minds about the Israelites. They said, ‘We have done a foolish thing. We have let the Israelites go. We have lost our slaves! ’"
     },
     {
       "verse": "6",
@@ -1480,7 +1480,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "of his best chariots with him., as well as all the other chariots of Egypt. All the chariots had officers to drive them."
+      "text": "of his best chariots with him. , as well as all the other chariots of Egypt. All the chariots had officers to drive them."
     },
     {
       "verse": "8",
@@ -1500,7 +1500,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "We said to you in Egypt, “Leave us alone. Let us work for the Egyptians.” It would have been better for us to be their slaves than to die here in the desert!’"
+      "text": "We said to you in Egypt, “Leave us alone. Let us work for the Egyptians. ” It would have been better for us to be their slaves than to die here in the desert! ’"
     },
     {
       "verse": "13",
@@ -1508,7 +1508,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The Lord will fight for you. You will only have to watch.’"
+      "text": "The Lord will fight for you. You will only have to watch. ’"
     },
     {
       "verse": "15",
@@ -1524,7 +1524,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "When I do that, the Egyptians will know that I really am the Lord. They will know that I am great.’"
+      "text": "When I do that, the Egyptians will know that I really am the Lord. They will know that I am great. ’"
     },
     {
       "verse": "19",
@@ -1552,11 +1552,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "He stopped the wheels of their chariots, so that the Egyptians could not drive them properly. So the Egyptians said, ‘Let us run away from the Israelite army! It is the Lord who fights for them against Egypt.’"
+      "text": "He stopped the wheels of their chariots, so that the Egyptians could not drive them properly. So the Egyptians said, ‘Let us run away from the Israelite army! It is the Lord who fights for them against Egypt. ’"
     },
     {
       "verse": "26",
-      "text": "Then the Lord said to Moses, ‘Lift up your hand over the sea. Then the water will return back. The sea will cover the Egyptians, their chariots, their horses and their riders.’"
+      "text": "Then the Lord said to Moses, ‘Lift up your hand over the sea. Then the water will return back. The sea will cover the Egyptians, their chariots, their horses and their riders. ’"
     },
     {
       "verse": "27",
@@ -1582,71 +1582,71 @@ module.exports = {
   "15": [
     {
       "verse": "1",
-      "text": "Then Moses and the Israelites sang this song to praise the Lord:‘I will sing to the Lord, because he has shown his great power.He threw horses and their riders into the sea. ‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea."
+      "text": "Then Moses and the Israelites sang this song to praise the Lord:‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea."
     },
     {
       "verse": "2",
-      "text": "The Lord makes me strong. He is the reason for my song.He is the one who has saved me.He is my God and I will praise him.He is my father's God and I will praise his name. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name."
+      "text": "The Lord makes me strong. He is the reason for my song. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name."
     },
     {
       "verse": "3",
-      "text": "The Lord is like a brave soldier.The Lord is his name. The Lord is his name."
+      "text": "The Lord is like a brave soldier. The Lord is his name. The Lord is his name."
     },
     {
       "verse": "4",
-      "text": "He threw Pharaoh's chariots and his army into the sea.Pharaoh's best officers drowned in the Red Sea. Pharaoh's best officers drowned in the Red Sea."
+      "text": "He threw Pharaoh's chariots and his army into the sea. Pharaoh's best officers drowned in the Red Sea. Pharaoh's best officers drowned in the Red Sea."
     },
     {
       "verse": "5",
-      "text": "The deep waters have covered them.They fell to the floor of the sea, like a stone. They fell to the floor of the sea, like a stone."
+      "text": "The deep waters have covered them. They fell to the floor of the sea, like a stone. They fell to the floor of the sea, like a stone."
     },
     {
       "verse": "6",
-      "text": "Your right hand, Lord, was great and powerful.Your right hand, Lord, destroyed the enemy. Your right hand, Lord, destroyed the enemy."
+      "text": "Your right hand, Lord, was great and powerful. Your right hand, Lord, destroyed the enemy. Your right hand, Lord, destroyed the enemy."
     },
     {
       "verse": "7",
-      "text": "With your powerful authority, you killed your enemies.You were very angry with them.You killed them, like a fire burns dry grass. You were very angry with them. You killed them, like a fire burns dry grass."
+      "text": "With your powerful authority, you killed your enemies. You were very angry with them. You killed them, like a fire burns dry grass. You were very angry with them. You killed them, like a fire burns dry grass."
     },
     {
       "verse": "8",
-      "text": "You blew on the water and it became like a wall.The deep waters stood up in a big heap. The deep waters stood up in a big heap."
+      "text": "You blew on the water and it became like a wall. The deep waters stood up in a big heap. The deep waters stood up in a big heap."
     },
     {
       "verse": "9",
-      "text": "The enemy said, “We will go after them. We will catch them.We will destroy them with our swords.We will do whatever we want to them.We will take all their valuable things for ourselves.” We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves.”"
+      "text": "The enemy said, “We will go after them. We will catch them. We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves. ” We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves. ”"
     },
     {
       "verse": "10",
-      "text": "But Lord, you blew on the watersso that the sea covered your enemies.They went down like heavy metal in the great waters. so that the sea covered your enemies. They went down like heavy metal in the great waters."
+      "text": "But Lord, you blew on the watersso that the sea covered your enemies. They went down like heavy metal in the great waters. so that the sea covered your enemies. They went down like heavy metal in the great waters."
     },
     {
       "verse": "11",
-      "text": "Lord, there is nobody like you among all the gods!There is nobody like you anywhere!You are great and holy.Everyone should respect you and praise you.You do great miracles.There is nobody like you! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you!"
+      "text": "Lord, there is nobody like you among all the gods! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you!"
     },
     {
       "verse": "12",
-      "text": "You lifted up your right hand.A big hole opened in the ground and our enemies fell into it. A big hole opened in the ground and our enemies fell into it."
+      "text": "You lifted up your right hand. A big hole opened in the ground and our enemies fell into it. A big hole opened in the ground and our enemies fell into it."
     },
     {
       "verse": "13",
-      "text": "You have promised to love your people.So you have saved them and you lead them.With your strength, you show them the way to your holy home. So you have saved them and you lead them. With your strength, you show them the way to your holy home."
+      "text": "You have promised to love your people. So you have saved them and you lead them. With your strength, you show them the way to your holy home. So you have saved them and you lead them. With your strength, you show them the way to your holy home."
     },
     {
       "verse": "14",
-      "text": "The people of other nations will hear what you have done.They will be very afraid.The people who live in Philistia will shake with fear. They will be very afraid. The people who live in Philistia will shake with fear."
+      "text": "The people of other nations will hear what you have done. They will be very afraid. The people who live in Philistia will shake with fear. They will be very afraid. The people who live in Philistia will shake with fear."
     },
     {
       "verse": "15",
-      "text": "The rulers of Edom will be afraid.The leaders of Moab will shake with fear.The people who live in Canaan will become weak. The leaders of Moab will shake with fear. The people who live in Canaan will become weak."
+      "text": "The rulers of Edom will be afraid. The leaders of Moab will shake with fear. The people who live in Canaan will become weak. The leaders of Moab will shake with fear. The people who live in Canaan will become weak."
     },
     {
       "verse": "16",
-      "text": "They will all be afraid.Because of your great power they will want to run away.But they cannot move!They will remain still, like stones, until your people go on past them.They will stand and watch as the people you have saved, Lord, pass by. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by."
+      "text": "They will all be afraid. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by."
     },
     {
       "verse": "17",
-      "text": "You will bring your people in safely.You will bring them to live on your own mountain.Lord, that is the place that you have prepared for your home.It is the holy place that you have built, Lord. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord."
+      "text": "You will bring your people in safely. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord."
     },
     {
       "verse": "18",
@@ -1654,7 +1654,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Pharaoh's horses, his chariots and his soldiers went into the sea.Then the Lord made the waters of the sea come back over them.But the Israelites walked through the middle of the sea on dry ground.’ Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground.’"
+      "text": "Pharaoh's horses, his chariots and his soldiers went into the sea. Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground. ’ Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground. ’"
     },
     {
       "verse": "20",
@@ -1662,7 +1662,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "This is the song that she sang:‘Sing to the Lord, because he has shown his great power.He threw horses and their riders into the sea.’ ‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea.’"
+      "text": "This is the song that she sang:‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ’ ‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea. ’"
     },
     {
       "verse": "22",
@@ -1674,15 +1674,15 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then the people complained. They spoke against Moses. They said, ‘There is nothing for us to drink!’"
+      "text": "Then the people complained. They spoke against Moses. They said, ‘There is nothing for us to drink! ’"
     },
     {
       "verse": "25",
-      "text": "Then Moses called to the Lord for help. The Lord showed Moses a special tree. Moses threw a branch into the water. Then the water became good for them to drink.There at Marah, the Lord made a law for the Israelites to obey. He tested them there, to see if they would trust him."
+      "text": "Then Moses called to the Lord for help. The Lord showed Moses a special tree. Moses threw a branch into the water. Then the water became good for them to drink. There at Marah, the Lord made a law for the Israelites to obey. He tested them there, to see if they would trust him."
     },
     {
       "verse": "26",
-      "text": "He said, ‘Be careful to listen to what the Lord your God says to you. Let him see that you are doing things that are right. Obey his commands and his rules. Then I will not give to you the diseases that I gave to the Egyptians. I am the Lord. I am the one who gives you health.’"
+      "text": "He said, ‘Be careful to listen to what the Lord your God says to you. Let him see that you are doing things that are right. Obey his commands and his rules. Then I will not give to you the diseases that I gave to the Egyptians. I am the Lord. I am the one who gives you health. ’"
     },
     {
       "verse": "27",
@@ -1700,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Israelites said to them, ‘It would have been better if the Lord had killed us in Egypt! There, we sat round pots with plenty of meat. We ate all the food that we wanted. But now you have brought us into this desert. We are so hungry that we will soon die!’"
+      "text": "The Israelites said to them, ‘It would have been better if the Lord had killed us in Egypt! There, we sat round pots with plenty of meat. We ate all the food that we wanted. But now you have brought us into this desert. We are so hungry that we will soon die! ’"
     },
     {
       "verse": "4",
@@ -1708,7 +1708,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "On the sixth day, they must pick up and prepare twice as much bread.’"
+      "text": "On the sixth day, they must pick up and prepare twice as much bread. ’"
     },
     {
       "verse": "6",
@@ -1716,15 +1716,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then, in the morning, you will see how great the Lord is. The Lord has heard the bad things that you have said against him. We, Moses and Aaron, are the Lord's servants. So you are complaining against him, not against us!’"
+      "text": "Then, in the morning, you will see how great the Lord is. The Lord has heard the bad things that you have said against him. We, Moses and Aaron, are the Lord's servants. So you are complaining against him, not against us! ’"
     },
     {
       "verse": "8",
-      "text": "Moses said to them, ‘The Lord will give you meat to eat in the evening. And in the morning, he will give you all the bread that you want. He will do this because he has heard you when you complained against him. We are only his servants. You have said bad things against the Lord, not against us.’"
+      "text": "Moses said to them, ‘The Lord will give you meat to eat in the evening. And in the morning, he will give you all the bread that you want. He will do this because he has heard you when you complained against him. We are only his servants. You have said bad things against the Lord, not against us. ’"
     },
     {
       "verse": "9",
-      "text": "Then Moses said to Aaron, ‘Say to all the Israelites, “The Lord has heard the bad things that you have said against him. Now come together, and stand in front of him.” ’"
+      "text": "Then Moses said to Aaron, ‘Say to all the Israelites, “The Lord has heard the bad things that you have said against him. Now come together, and stand in front of him. ” ’"
     },
     {
       "verse": "10",
@@ -1736,11 +1736,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "‘I have heard the bad things that the Israelites have said against me. Tell them this: “In the evening, you will eat meat. And in the morning you will eat all the bread that you want. Then you will know that I am the Lord your God.” ’"
+      "text": "‘I have heard the bad things that the Israelites have said against me. Tell them this: “In the evening, you will eat meat. And in the morning you will eat all the bread that you want. Then you will know that I am the Lord your God. ” ’"
     },
     {
       "verse": "13",
-      "text": "That evening, quails appeared. They covered all the ground round the tents.In the morning, there was dew on the ground round the tents."
+      "text": "That evening, quails appeared. They covered all the ground round the tents. In the morning, there was dew on the ground round the tents."
     },
     {
       "verse": "14",
@@ -1748,11 +1748,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "When the Israelites saw these pieces, they said, ‘What is it?’ They did not understand what it was. But Moses said to them, ‘This is the bread that the Lord has given to you. It is for you to eat."
+      "text": "When the Israelites saw these pieces, they said, ‘What is it? ’ They did not understand what it was. But Moses said to them, ‘This is the bread that the Lord has given to you. It is for you to eat."
     },
     {
       "verse": "16",
-      "text": "This is what the Lord has commanded: “Each family must pick up as much as they need to eat. Pick up two litres for each person who lives in your tent.” ’"
+      "text": "This is what the Lord has commanded: “Each family must pick up as much as they need to eat. Pick up two litres for each person who lives in your tent. ” ’"
     },
     {
       "verse": "17",
@@ -1764,7 +1764,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then Moses said to them, ‘Do not keep any of it until the morning.’"
+      "text": "Then Moses said to them, ‘Do not keep any of it until the morning. ’"
     },
     {
       "verse": "20",
@@ -1780,7 +1780,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Moses said to them, ‘This is what the Lord has said: “Tomorrow is a special day of rest. It is a Sabbath day, to worship the Lord. Today, you must bake any food that you want to bake. Boil the meat that you want to boil. Keep until the morning whatever food you do not eat today.” ’"
+      "text": "Moses said to them, ‘This is what the Lord has said: “Tomorrow is a special day of rest. It is a Sabbath day, to worship the Lord. Today, you must bake any food that you want to bake. Boil the meat that you want to boil. Keep until the morning whatever food you do not eat today. ” ’"
     },
     {
       "verse": "24",
@@ -1792,7 +1792,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "On six days of each week, you must pick food up from the ground. But on the seventh day of the week, there will not be any food on the ground. That is because the seventh day is the Sabbath day of rest.’"
+      "text": "On six days of each week, you must pick food up from the ground. But on the seventh day of the week, there will not be any food on the ground. That is because the seventh day is the Sabbath day of rest. ’"
     },
     {
       "verse": "27",
@@ -1804,7 +1804,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Remember this: The Lord has given the Sabbath day to you. That is why, on the sixth day, he gives you enough food for two days. Then everyone must stay at home on the seventh day. Nobody must leave his home that day.’"
+      "text": "Remember this: The Lord has given the Sabbath day to you. That is why, on the sixth day, he gives you enough food for two days. Then everyone must stay at home on the seventh day. Nobody must leave his home that day. ’"
     },
     {
       "verse": "30",
@@ -1816,11 +1816,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Moses said, ‘This is what the Lord has commanded: “Keep one bowl (an omer) of manna for people to look at in future times. They will see the bread that I fed to you in the desert, after I had brought you out of Egypt.” ’"
+      "text": "Moses said, ‘This is what the Lord has commanded: “Keep one bowl (an omer) of manna for people to look at in future times. They will see the bread that I fed to you in the desert, after I had brought you out of Egypt. ” ’"
     },
     {
       "verse": "33",
-      "text": "So Moses said to Aaron, ‘Put an omer of manna into a jar. Then put the jar in the place where we worship the Lord. We must keep it safe, so that our descendants can see it in the future.’"
+      "text": "So Moses said to Aaron, ‘Put an omer of manna into a jar. Then put the jar in the place where we worship the Lord. We must keep it safe, so that our descendants can see it in the future. ’"
     },
     {
       "verse": "34",
@@ -1832,7 +1832,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "(The people used omers to measure the food. Ten omers is equal to one ephah.)"
+      "text": "(The people used omers to measure the food. Ten omers is equal to one ephah. )"
     }
   ],
   "17": [
@@ -1842,15 +1842,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Because of this, the people quarrelled with Moses. They said, ‘Give us water to drink!’ Moses said to them, ‘You should not quarrel with me! You should not try to test the Lord!’"
+      "text": "Because of this, the people quarrelled with Moses. They said, ‘Give us water to drink! ’ Moses said to them, ‘You should not quarrel with me! You should not try to test the Lord! ’"
     },
     {
       "verse": "3",
-      "text": "But the people needed water to drink. They complained against Moses. They said, ‘You should not have brought us out of Egypt! You will kill us and our children and our animals. We will all die, because we have no water to drink.’"
+      "text": "But the people needed water to drink. They complained against Moses. They said, ‘You should not have brought us out of Egypt! You will kill us and our children and our animals. We will all die, because we have no water to drink. ’"
     },
     {
       "verse": "4",
-      "text": "Then Moses called to the Lord for help. He said, ‘What can I do with these people? They will soon be throwing stones at me to kill me.’"
+      "text": "Then Moses called to the Lord for help. He said, ‘What can I do with these people? They will soon be throwing stones at me to kill me. ’"
     },
     {
       "verse": "5",
@@ -1858,11 +1858,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I will stand there, in front of you, by the rock at Sinai. Hit the rock with your stick, and water will come out of it. Then the people can drink.’ So Moses did this, while the leaders of the Israelites watched him."
+      "text": "I will stand there, in front of you, by the rock at Sinai. Hit the rock with your stick, and water will come out of it. Then the people can drink. ’ So Moses did this, while the leaders of the Israelites watched him."
     },
     {
       "verse": "7",
-      "text": "Moses called that place Massah and Meribah, because the Israelites quarrelled there. They tried to test the Lord to see what he would do. They said, ‘Let us see if the Lord is really with us. Will he help us, or not?’"
+      "text": "Moses called that place Massah and Meribah, because the Israelites quarrelled there. They tried to test the Lord to see what he would do. They said, ‘Let us see if the Lord is really with us. Will he help us, or not? ’"
     },
     {
       "verse": "8",
@@ -1870,7 +1870,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Moses said to Joshua, ‘Choose some of our men. Then go out with them and fight against the Amalekites. Tomorrow I will stand on the top of the hill, and I will hold God's stick in my hand.’"
+      "text": "Moses said to Joshua, ‘Choose some of our men. Then go out with them and fight against the Amalekites. Tomorrow I will stand on the top of the hill, and I will hold God's stick in my hand. ’"
     },
     {
       "verse": "10",
@@ -1890,7 +1890,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Then the Lord said to Moses, ‘Write down what happened here in a book. Then people will remember it. Read it aloud for Joshua to hear. Say that I will completely destroy all the Amalekites. Nobody in the whole world will remember them any more.’"
+      "text": "Then the Lord said to Moses, ‘Write down what happened here in a book. Then people will remember it. Read it aloud for Joshua to hear. Say that I will completely destroy all the Amalekites. Nobody in the whole world will remember them any more. ’"
     },
     {
       "verse": "15",
@@ -1898,7 +1898,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Moses said, ‘Take hold of the Lord's flag! The Lord will always continue to fight against the Amalekites.’"
+      "text": "Moses said, ‘Take hold of the Lord's flag! The Lord will always continue to fight against the Amalekites. ’"
     }
   ],
   "18": [
@@ -1912,11 +1912,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Moses' older son was called Gershom. Moses said about him, ‘I have become a stranger in a foreign country.’"
+      "text": "Moses' older son was called Gershom. Moses said about him, ‘I have become a stranger in a foreign country. ’"
     },
     {
       "verse": "4",
-      "text": "The other son was called Eliezer. Moses said about him, ‘My ancestors' God gave me help. He saved me from Pharaoh, when Pharaoh wanted to kill me.’"
+      "text": "The other son was called Eliezer. Moses said about him, ‘My ancestors' God gave me help. He saved me from Pharaoh, when Pharaoh wanted to kill me. ’"
     },
     {
       "verse": "5",
@@ -1924,7 +1924,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Jethro had already sent a message to Moses. He said, ‘I am coming with your wife and her two sons to see you.’"
+      "text": "Jethro had already sent a message to Moses. He said, ‘I am coming with your wife and her two sons to see you. ’"
     },
     {
       "verse": "7",
@@ -1944,7 +1944,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now I know that the Lord is greater than all other gods. He destroyed the proud Egyptians when they were cruel to his people.’"
+      "text": "Now I know that the Lord is greater than all other gods. He destroyed the proud Egyptians when they were cruel to his people. ’"
     },
     {
       "verse": "12",
@@ -1956,7 +1956,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Jethro saw all these things that Moses did to help the people. So he said, ‘You are trying to do too much! Why do you sit there alone to judge all these people during the whole day?’"
+      "text": "Jethro saw all these things that Moses did to help the people. So he said, ‘You are trying to do too much! Why do you sit there alone to judge all these people during the whole day? ’"
     },
     {
       "verse": "15",
@@ -1964,7 +1964,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "When they quarrel, they come to me to decide who is right. I tell them what God's laws and commands teach.’"
+      "text": "When they quarrel, they come to me to decide who is right. I tell them what God's laws and commands teach. ’"
     },
     {
       "verse": "17",
@@ -1984,7 +1984,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But you must also choose some other clever men to help you. They must be honest men who respect God. They must not want to take money from people. Choose these men to be officers with authority over groups of the people. They will be leaders of 1,000 people, or 100 people, or 50 people, or 10 people."
+      "text": "But you must also choose some other clever men to help you. They must be honest men who respect God. They must not want to take money from people. Choose these men to be officers with authority over groups of the people. They will be leaders of 1, 000 people, or 100 people, or 50 people, or 10 people."
     },
     {
       "verse": "22",
@@ -1992,7 +1992,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "If you agree with my idea, and if God commands you to do it, it will help you. The work will not be too hard for you. And all these people will go home happily.’"
+      "text": "If you agree with my idea, and if God commands you to do it, it will help you. The work will not be too hard for you. And all these people will go home happily. ’"
     },
     {
       "verse": "24",
@@ -2000,7 +2000,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Moses chose wise men from all the Israelites. He made them officers to lead 1,000 people, or 100 people, or 50 people, or 10 people."
+      "text": "Moses chose wise men from all the Israelites. He made them officers to lead 1, 000 people, or 100 people, or 50 people, or 10 people."
     },
     {
       "verse": "26",
@@ -2026,7 +2026,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You will be my priests who serve in my kingdom. You will be a nation that is special to me.” These are the words that you must speak to the Israelites.’"
+      "text": "You will be my priests who serve in my kingdom. You will be a nation that is special to me. ” These are the words that you must speak to the Israelites. ’"
     },
     {
       "verse": "7",
@@ -2034,11 +2034,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The people all replied together. They said, ‘We will do everything that the Lord has said.’ Then Moses repeated their answer to the Lord."
+      "text": "The people all replied together. They said, ‘We will do everything that the Lord has said. ’ Then Moses repeated their answer to the Lord."
     },
     {
       "verse": "9",
-      "text": "The Lord said to Moses, ‘I will come to you in a thick cloud. Then the people will hear me when I speak to you. Then they will always believe what you say.’ Moses told the Lord the words that the people had said."
+      "text": "The Lord said to Moses, ‘I will come to you in a thick cloud. Then the people will hear me when I speak to you. Then they will always believe what you say. ’ Moses told the Lord the words that the people had said."
     },
     {
       "verse": "10",
@@ -2054,7 +2054,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Nobody must go near them. You must throw stones at them to kill them. Or you must shoot arrows at them. You must not let them live, whether they are people or animals.” The people must wait until they hear the sound of a trumpet. When they hear a long noise, then they may go up on the mountain.’"
+      "text": "Nobody must go near them. You must throw stones at them to kill them. Or you must shoot arrows at them. You must not let them live, whether they are people or animals. ” The people must wait until they hear the sound of a trumpet. When they hear a long noise, then they may go up on the mountain. ’"
     },
     {
       "verse": "14",
@@ -2062,7 +2062,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Moses said to them, ‘Prepare yourselves for the third day. While you wait, do not have sex with your wives, or anyone.’"
+      "text": "Then Moses said to them, ‘Prepare yourselves for the third day. While you wait, do not have sex with your wives, or anyone. ’"
     },
     {
       "verse": "16",
@@ -2090,15 +2090,15 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Even the priests must make themselves clean before they come near to me. If they do not obey this command, I will punish them. I am the Lord.’"
+      "text": "Even the priests must make themselves clean before they come near to me. If they do not obey this command, I will punish them. I am the Lord. ’"
     },
     {
       "verse": "23",
-      "text": "Moses said to the Lord, ‘The people cannot come up Sinai mountain. You warned us that we must make a line round the edge of the mountain. You said that we must make the mountain a special place.’"
+      "text": "Moses said to the Lord, ‘The people cannot come up Sinai mountain. You warned us that we must make a line round the edge of the mountain. You said that we must make the mountain a special place. ’"
     },
     {
       "verse": "24",
-      "text": "The Lord replied, ‘Now go back down. Then bring Aaron up with you. But the priests and the people must stay where they are. They must not try to come up here where I am. If they come across the line, I will punish them.’"
+      "text": "The Lord replied, ‘Now go back down. Then bring Aaron up with you. But the priests and the people must stay where they are. They must not try to come up here where I am. If they come across the line, I will punish them. ’"
     },
     {
       "verse": "25",
@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "You must not want to take your neighbour's house for yourself. You must not want to take his wife, or his servants, male or female. You must not want to take his ox, or his donkey, or anything else that belongs to your neighbour.’"
+      "text": "You must not want to take your neighbour's house for yourself. You must not want to take his wife, or his servants, male or female. You must not want to take his ox, or his donkey, or anything else that belongs to your neighbour. ’"
     },
     {
       "verse": "18",
@@ -2184,11 +2184,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "They said to Moses, ‘Speak to us yourself. We will listen to you. But do not let God speak to us. If he does, we will die.’"
+      "text": "They said to Moses, ‘Speak to us yourself. We will listen to you. But do not let God speak to us. If he does, we will die. ’"
     },
     {
       "verse": "20",
-      "text": "Moses said to the people, ‘Do not be afraid. God has come to test you. He wants you to respect him and to obey him. Then you will not do things that are wrong.’"
+      "text": "Moses said to the people, ‘Do not be afraid. God has come to test you. He wants you to respect him and to obey him. Then you will not do things that are wrong. ’"
     },
     {
       "verse": "21",
@@ -2212,7 +2212,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Do not make an altar which has stairs going up to it. If you do that, someone may see under your clothes when you climb up the stairs. Then you would be ashamed.”"
+      "text": "Do not make an altar which has stairs going up to it. If you do that, someone may see under your clothes when you climb up the stairs. Then you would be ashamed. ”"
     }
   ],
   "21": [
@@ -2234,7 +2234,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But perhaps the slave may say, “I love my master, my wife and my children. I will not go away as a free man!”"
+      "text": "But perhaps the slave may say, “I love my master, my wife and my children. I will not go away as a free man! ”"
     },
     {
       "verse": "6",
@@ -2372,7 +2372,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But if the owner of the house kills the robber after sunrise, he is guilty of murder.Anyone who takes something that belongs to someone else must pay back the owner. If he cannot pay for everything that he has taken, he must become a slave. The owner will receive the money that someone has paid for the slave."
+      "text": "But if the owner of the house kills the robber after sunrise, he is guilty of murder. Anyone who takes something that belongs to someone else must pay back the owner. If he cannot pay for everything that he has taken, he must become a slave. The owner will receive the money that someone has paid for the slave."
     },
     {
       "verse": "4",
@@ -2476,7 +2476,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Do not refuse to offer your grain, your wine or your olive oil to me.You must give your firstborn sons to me. You must give your firstborn sons to me."
+      "text": "Do not refuse to offer your grain, your wine or your olive oil to me. You must give your firstborn sons to me. You must give your firstborn sons to me."
     },
     {
       "verse": "30",
@@ -2550,7 +2550,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Eat the Feast of Harvest every year. Offer to me the first crops that you bring from your fields.At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields."
+      "text": "Eat the Feast of Harvest every year. Offer to me the first crops that you bring from your fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields."
     },
     {
       "verse": "17",
@@ -2562,7 +2562,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God.Do not cook a young goat in its mother's milk. Do not cook a young goat in its mother's milk."
+      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk. Do not cook a young goat in its mother's milk."
     },
     {
       "verse": "20",
@@ -2618,7 +2618,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Do not let them live in your land. They would cause you to do bad things against me. If you serve their gods, you will become like their prisoners.’"
+      "text": "Do not let them live in your land. They would cause you to do bad things against me. If you serve their gods, you will become like their prisoners. ’"
     }
   ],
   "24": [
@@ -2628,15 +2628,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Only Moses can come near to me, but not the others. The people must not come up the mountain with him.’"
+      "text": "Only Moses can come near to me, but not the others. The people must not come up the mountain with him. ’"
     },
     {
       "verse": "3",
-      "text": "Moses went and he told the people all the Lord's commands and his teaching. The people answered together, ‘We will do everything that the Lord has told us.’"
+      "text": "Moses went and he told the people all the Lord's commands and his teaching. The people answered together, ‘We will do everything that the Lord has told us. ’"
     },
     {
       "verse": "4",
-      "text": "Then Moses wrote down everything that the Lord had said.Early the next morning, Moses built an altar at the bottom of the mountain. Then he put up 12 stone pillars. Each pillar stood there for one of Israel's 12 tribes."
+      "text": "Then Moses wrote down everything that the Lord had said. Early the next morning, Moses built an altar at the bottom of the mountain. Then he put up 12 stone pillars. Each pillar stood there for one of Israel's 12 tribes."
     },
     {
       "verse": "5",
@@ -2648,11 +2648,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then he took the Book of God's Covenant and he read it to the people. They replied, ‘We will do everything that the Lord has told us. We will obey his commands.’"
+      "text": "Then he took the Book of God's Covenant and he read it to the people. They replied, ‘We will do everything that the Lord has told us. We will obey his commands. ’"
     },
     {
       "verse": "8",
-      "text": "Then Moses used the blood in the bowls to splash on the people. He said, ‘This blood shows that you accept the covenant that the Lord has made with you. You agree to obey the rules of his covenant.’"
+      "text": "Then Moses used the blood in the bowls to splash on the people. He said, ‘This blood shows that you accept the covenant that the Lord has made with you. You agree to obey the rules of his covenant. ’"
     },
     {
       "verse": "9",
@@ -2668,7 +2668,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The Lord said to Moses, ‘Come up to me on the mountain. Stay here. I will give you the flat stones with my Law on them. I have written on them my Law and my commands, so that you can teach them to the people.’"
+      "text": "The Lord said to Moses, ‘Come up to me on the mountain. Stay here. I will give you the flat stones with my Law on them. I have written on them my Law and my commands, so that you can teach them to the people. ’"
     },
     {
       "verse": "13",
@@ -2676,7 +2676,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Moses said to the leaders, ‘Wait here for us. We will come back to you. Aaron and Hur are here with you. If you have any arguments, they can decide who is right.’"
+      "text": "Moses said to the leaders, ‘Wait here for us. We will come back to you. Aaron and Hur are here with you. If you have any arguments, they can decide who is right. ’"
     },
     {
       "verse": "15",
@@ -2706,19 +2706,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "These are the gifts that you must receive from the people as an offering:gold, silver and bronze;"
+      "text": "These are the gifts that you must receive from the people as an offering: gold, silver and bronze;"
     },
     {
       "verse": "4",
-      "text": "blue, purple and red material;good linen and goat's hair;"
+      "text": "blue, purple and red material; good linen and goat's hair;"
     },
     {
       "verse": "5",
-      "text": "red leather from sheep's skins and other good leather;wood from acacia trees;"
+      "text": "red leather from sheep's skins and other good leather; wood from acacia trees;"
     },
     {
       "verse": "6",
-      "text": "olive oil for the lamps;spices for the special oil and for incense with a nice smell;"
+      "text": "olive oil for the lamps; spices for the special oil and for incense with a nice smell;"
     },
     {
       "verse": "7",
@@ -2888,7 +2888,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "All the curtains must be the same size: 13.5 metres long and 2 metres wide."
+      "text": "All the curtains must be the same size: 13. 5 metres long and 2 metres wide."
     },
     {
       "verse": "9",
@@ -3010,7 +3010,7 @@ module.exports = {
   "27": [
     {
       "verse": "1",
-      "text": "Use acacia wood to make an altar. It must be square, 2.2 metres long and 2.2 metres wide. It must be 1.3 metres high."
+      "text": "Use acacia wood to make an altar. It must be square, 2. 2 metres long and 2. 2 metres wide. It must be 1. 3 metres high."
     },
     {
       "verse": "2",
@@ -3104,7 +3104,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "These are the clothes that they must make:a breastpiece,an ephod,a robe,a long shirt,a linen hat,and a long belt of cloth.They must make these special clothes for your brother Aaron and for his sons. Then Aaron and his sons will serve me as my priests."
+      "text": "These are the clothes that they must make: a breastpiece, an ephod, a robe, a long shirt, a linen hat, and a long belt of cloth. They must make these special clothes for your brother Aaron and for his sons. Then Aaron and his sons will serve me as my priests."
     },
     {
       "verse": "5",
@@ -3156,7 +3156,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then fix four rows of jewels on it. These are the names of the jewels:a ruby, a topaz and a beryl in the first row;"
+      "text": "Then fix four rows of jewels on it. These are the names of the jewels: a ruby, a topaz and a beryl in the first row;"
     },
     {
       "verse": "18",
@@ -3168,7 +3168,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "a chrysolite, an onyx and a jasper in the fourth row.Fix each jewel into beautiful gold around its edges."
+      "text": "a chrysolite, an onyx and a jasper in the fourth row. Fix each jewel into beautiful gold around its edges."
     },
     {
       "verse": "21",
@@ -3350,7 +3350,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Take all the fat from this male sheep. Take its fat tail, the fat around its inside parts and the best part of the liver. Take the two kidneys with the fat that is round them. Also take the top part of its right leg. (This is the sheep that makes Aaron and his sons special servants of God.)"
+      "text": "Take all the fat from this male sheep. Take its fat tail, the fat around its inside parts and the best part of the liver. Take the two kidneys with the fat that is round them. Also take the top part of its right leg. (This is the sheep that makes Aaron and his sons special servants of God. )"
     },
     {
       "verse": "23",
@@ -3406,7 +3406,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Kill a bull each day, as a sacrifice that makes people clean from their sins.Also make the altar clean and pure. Pour oil over it to make it holy for me."
+      "text": "Kill a bull each day, as a sacrifice that makes people clean from their sins. Also make the altar clean and pure. Pour oil over it to make it holy for me."
     },
     {
       "verse": "37",
@@ -3488,7 +3488,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Once every year, Aaron must make the altar clean and pure. He must put some of the blood from the sin offering on the horns of the altar. A priest must do this every year from now on. The altar is holy because it belongs to me, the Lord.’"
+      "text": "Once every year, Aaron must make the altar clean and pure. He must put some of the blood from the sin offering on the horns of the altar. A priest must do this every year from now on. The altar is holy because it belongs to me, the Lord. ’"
     },
     {
       "verse": "11",
@@ -3512,7 +3512,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Receive these silver coins from the Israelites. Use the money to take care of the Tent of Meeting. Then the Lord will always remember that you belong to him. You have paid money for your lives.’"
+      "text": "Receive these silver coins from the Israelites. Use the money to take care of the Tent of Meeting. Then the Lord will always remember that you belong to him. You have paid money for your lives. ’"
     },
     {
       "verse": "17",
@@ -3532,7 +3532,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "If they wash their hands and their feet, they will not die as they serve me. This will always be a rule for Aaron and for his descendants, the priests.’"
+      "text": "If they wash their hands and their feet, they will not die as they serve me. This will always be a rule for Aaron and for his descendants, the priests. ’"
     },
     {
       "verse": "22",
@@ -3540,11 +3540,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "‘Mix together these special spices:6 kilograms of pure myrrh,3 kilograms of sweet cinnamon,3 kilograms of sweet grasses,"
+      "text": "‘Mix together these special spices:6 kilograms of pure myrrh, 3 kilograms of sweet cinnamon, 3 kilograms of sweet grasses,"
     },
     {
       "verse": "24",
-      "text": "kilograms of cassia,and 4 litres of olive oil."
+      "text": "kilograms of cassia, and 4 litres of olive oil."
     },
     {
       "verse": "25",
@@ -3552,15 +3552,15 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then pour some of this special oil on these things:the Tent of Meeting,the Covenant Box,"
+      "text": "Then pour some of this special oil on these things: the Tent of Meeting, the Covenant Box,"
     },
     {
       "verse": "27",
-      "text": "the special table and all its tools,the lampstand and its tools,the altar for incense,"
+      "text": "the special table and all its tools, the lampstand and its tools, the altar for incense,"
     },
     {
       "verse": "28",
-      "text": "the altar for burnt offerings and all its tools,and the large bowl of water with its base."
+      "text": "the altar for burnt offerings and all its tools, and the large bowl of water with its base."
     },
     {
       "verse": "29",
@@ -3580,7 +3580,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Nobody must make a perfume that has a sweet smell like this oil. Nobody must put this oil on any person who is not a priest. Anyone who does not obey this rule will no longer belong to my people.” ’"
+      "text": "Nobody must make a perfume that has a sweet smell like this oil. Nobody must put this oil on any person who is not a priest. Anyone who does not obey this rule will no longer belong to my people. ” ’"
     },
     {
       "verse": "34",
@@ -3600,7 +3600,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "If anyone makes any incense like it for his own perfume, he will no longer belong to my people.’"
+      "text": "If anyone makes any incense like it for his own perfume, he will no longer belong to my people. ’"
     }
   ],
   "31": [
@@ -3630,23 +3630,23 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They will make these things:the Tent of Meeting,the Covenant Box with its special lid,the other things that will be in the tabernacle."
+      "text": "They will make these things: the Tent of Meeting, the Covenant Box with its special lid, the other things that will be in the tabernacle."
     },
     {
       "verse": "8",
-      "text": "Those things include:the special table with all its tools,the pure gold lampstand with all its tools,the altar for incense, The workers must make all these things in the way that I have commanded you.’"
+      "text": "Those things include: the special table with all its tools, the pure gold lampstand with all its tools, the altar for incense, The workers must make all these things in the way that I have commanded you. ’"
     },
     {
       "verse": "9",
-      "text": "the altar for burnt offerings with all its tools,the large bowl for water and its base,"
+      "text": "the altar for burnt offerings with all its tools, the large bowl for water and its base,"
     },
     {
       "verse": "10",
-      "text": "the beautiful clothes for Aaron the priest,the clothes for his sons as they serve as priests,"
+      "text": "the beautiful clothes for Aaron the priest, the clothes for his sons as they serve as priests,"
     },
     {
       "verse": "11",
-      "text": "the special oil to show that things belong to me,and the sweet incense for the Holy Place.The workers must make all these things in the way that I have commanded you.’"
+      "text": "the special oil to show that things belong to me, and the sweet incense for the Holy Place. The workers must make all these things in the way that I have commanded you. ’"
     },
     {
       "verse": "12",
@@ -3670,7 +3670,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "It will always be a sign that I have chosen the Israelites to be my people. You will remember that the Lord made the heavens and the earth in six days. Then, on the seventh day, he stopped working and he rested.” ’"
+      "text": "It will always be a sign that I have chosen the Israelites to be my people. You will remember that the Lord made the heavens and the earth in six days. Then, on the seventh day, he stopped working and he rested. ” ’"
     },
     {
       "verse": "18",
@@ -3680,11 +3680,11 @@ module.exports = {
   "32": [
     {
       "verse": "1",
-      "text": "The people realized that Moses had been on the mountain for a long time. So they went in a group to Aaron. They said to him, ‘Do something! Make some gods for us who will lead us. This man, Moses, brought us here out of Egypt. But now we do not know what has happened to him.’"
+      "text": "The people realized that Moses had been on the mountain for a long time. So they went in a group to Aaron. They said to him, ‘Do something! Make some gods for us who will lead us. This man, Moses, brought us here out of Egypt. But now we do not know what has happened to him. ’"
     },
     {
       "verse": "2",
-      "text": "So Aaron said to them, ‘Take the gold rings from the ears of your wives, your sons and your daughters. Then bring the rings to me.’"
+      "text": "So Aaron said to them, ‘Take the gold rings from the ears of your wives, your sons and your daughters. Then bring the rings to me. ’"
     },
     {
       "verse": "3",
@@ -3692,11 +3692,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Aaron took the gold rings from the people. He melted the gold and he used a tool to make an image of a calf. Then the people said, ‘Look, people of Israel! This is our god who brought us up out of Egypt!’"
+      "text": "Aaron took the gold rings from the people. He melted the gold and he used a tool to make an image of a calf. Then the people said, ‘Look, people of Israel! This is our god who brought us up out of Egypt! ’"
     },
     {
       "verse": "5",
-      "text": "When Aaron saw this, he built an altar in front of the gold calf. He told everyone, ‘Tomorrow, there will be a feast to worship the Lord.’"
+      "text": "When Aaron saw this, he built an altar in front of the gold calf. He told everyone, ‘Tomorrow, there will be a feast to worship the Lord. ’"
     },
     {
       "verse": "6",
@@ -3708,7 +3708,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "They have already turned away from my commands. They have made for themselves an image of a calf. They have bent down low to worship it. They have made sacrifices to give it honour. They are saying, “This is the god of the Israelites, the god who brought us out of Egypt!” ’"
+      "text": "They have already turned away from my commands. They have made for themselves an image of a calf. They have bent down low to worship it. They have made sacrifices to give it honour. They are saying, “This is the god of the Israelites, the god who brought us out of Egypt! ” ’"
     },
     {
       "verse": "9",
@@ -3716,7 +3716,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I am very angry with them and I will destroy them. Do not try to stop me. I will make your descendants into a great nation, instead of them.’"
+      "text": "I am very angry with them and I will destroy them. Do not try to stop me. I will make your descendants into a great nation, instead of them. ’"
     },
     {
       "verse": "11",
@@ -3724,11 +3724,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "If you destroy them, the Egyptians will say, “God led the Israelites out of our land so that he could completely destroy them. He wanted to kill them in the mountains.” So please stop being angry. Change your mind. Please do not bring this great trouble on your own people."
+      "text": "If you destroy them, the Egyptians will say, “God led the Israelites out of our land so that he could completely destroy them. He wanted to kill them in the mountains. ” So please stop being angry. Change your mind. Please do not bring this great trouble on your own people."
     },
     {
       "verse": "13",
-      "text": "Remember your servants, Abraham, Isaac and Jacob, who are our ancestors. Remember the serious promise that you made to them. You said, “I will give you many descendants. They will be as many as the stars in the sky. I have also promised to give this whole land to them. It will belong to them as their home for ever.” ’"
+      "text": "Remember your servants, Abraham, Isaac and Jacob, who are our ancestors. Remember the serious promise that you made to them. You said, “I will give you many descendants. They will be as many as the stars in the sky. I have also promised to give this whole land to them. It will belong to them as their home for ever. ” ’"
     },
     {
       "verse": "14",
@@ -3744,11 +3744,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Joshua heard the noise of the Israelites as they were shouting down below. He said to Moses, ‘I can hear the sound of war in the camp!’"
+      "text": "Joshua heard the noise of the Israelites as they were shouting down below. He said to Moses, ‘I can hear the sound of war in the camp! ’"
     },
     {
       "verse": "18",
-      "text": "But Moses said, ‘It is not the noise that soldiers make when they have won a battle. It is not the sound of soldiers who are crying because their enemy has won against them. I can hear the sound of people who are singing.’"
+      "text": "But Moses said, ‘It is not the noise that soldiers make when they have won a battle. It is not the sound of soldiers who are crying because their enemy has won against them. I can hear the sound of people who are singing. ’"
     },
     {
       "verse": "19",
@@ -3760,7 +3760,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Moses said to Aaron, ‘Why did you agree to do this? What did the people do to you? You have made them guilty of a great sin.’"
+      "text": "Moses said to Aaron, ‘Why did you agree to do this? What did the people do to you? You have made them guilty of a great sin. ’"
     },
     {
       "verse": "22",
@@ -3768,11 +3768,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "They said to me, “Make us some gods that will lead us. This man Moses brought us here out of Egypt. But now we do not know what has happened to him.”"
+      "text": "They said to me, “Make us some gods that will lead us. This man Moses brought us here out of Egypt. But now we do not know what has happened to him. ”"
     },
     {
       "verse": "24",
-      "text": "So I said to them, “Everyone who has any gold rings must remove them.” So they gave the gold to me. I threw it into the fire. Then this image of a calf came out of the fire!’"
+      "text": "So I said to them, “Everyone who has any gold rings must remove them. ” So they gave the gold to me. I threw it into the fire. Then this image of a calf came out of the fire! ’"
     },
     {
       "verse": "25",
@@ -3780,23 +3780,23 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So Moses stood at the edge of the camp. He said, ‘Everyone who decides to serve the Lord must come here to me.’ Then all the Levites went to stand near Moses."
+      "text": "So Moses stood at the edge of the camp. He said, ‘Everyone who decides to serve the Lord must come here to me. ’ Then all the Levites went to stand near Moses."
     },
     {
       "verse": "27",
-      "text": "Then Moses said to the Levites, ‘The Lord, Israel's God, says this: Each one of you must take his sword in his hand. You must go everywhere in the camp, from this side to the other side. You must kill everyone, even your brothers, your friends and your neighbours.’"
+      "text": "Then Moses said to the Levites, ‘The Lord, Israel's God, says this: Each one of you must take his sword in his hand. You must go everywhere in the camp, from this side to the other side. You must kill everyone, even your brothers, your friends and your neighbours. ’"
     },
     {
       "verse": "28",
-      "text": "The Levites obeyed Moses' command. About 3,000 Israelites died on that day."
+      "text": "The Levites obeyed Moses' command. About 3, 000 Israelites died on that day."
     },
     {
       "verse": "29",
-      "text": "Then Moses said to the Levites, ‘You have shown today that you want to serve the Lord. You have become his special servants because you have obeyed him. You have agreed to kill even your own sons and brothers. God has blessed you because of this.’"
+      "text": "Then Moses said to the Levites, ‘You have shown today that you want to serve the Lord. You have become his special servants because you have obeyed him. You have agreed to kill even your own sons and brothers. God has blessed you because of this. ’"
     },
     {
       "verse": "30",
-      "text": "On the next day, Moses said to the people, ‘You have done a great sin. But now I will go back up the mountain. I will speak to the Lord. Perhaps I can do something so that the Lord will forgive your sin.’"
+      "text": "On the next day, Moses said to the people, ‘You have done a great sin. But now I will go back up the mountain. I will speak to the Lord. Perhaps I can do something so that the Lord will forgive your sin. ’"
     },
     {
       "verse": "31",
@@ -3804,7 +3804,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "But now I ask you to forgive them for their sin. But if you will not do that, then please remove my name from your book.’"
+      "text": "But now I ask you to forgive them for their sin. But if you will not do that, then please remove my name from your book. ’"
     },
     {
       "verse": "33",
@@ -3812,7 +3812,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Now go! Lead the Israelites to the place that I have told you about. My angel will go in front of you. But on the day for punishment, I will certainly punish them for their sin.’"
+      "text": "Now go! Lead the Israelites to the place that I have told you about. My angel will go in front of you. But on the day for punishment, I will certainly punish them for their sin. ’"
     },
     {
       "verse": "35",
@@ -3830,7 +3830,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "You will go to that land where there is plenty of food and drink, enough for everyone. But I will not travel with you. You are proud people who refuse to obey me. If I go with you, I might destroy you as you travel.’"
+      "text": "You will go to that land where there is plenty of food and drink, enough for everyone. But I will not travel with you. You are proud people who refuse to obey me. If I go with you, I might destroy you as you travel. ’"
     },
     {
       "verse": "4",
@@ -3838,7 +3838,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The Lord had said to Moses, ‘Tell the Israelites, “You are proud people who refuse to obey me. If I go with you, even for a moment, I might destroy you. Now remove your jewels. Then I will decide what I should do with you.” ’"
+      "text": "The Lord had said to Moses, ‘Tell the Israelites, “You are proud people who refuse to obey me. If I go with you, even for a moment, I might destroy you. Now remove your jewels. Then I will decide what I should do with you. ” ’"
     },
     {
       "verse": "6",
@@ -3866,15 +3866,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Moses said to the Lord, ‘You have said to me, “Lead these people to their new land.” But you have not told me who my helper will be on the journey. You have told me, “I know you by your name. I am very pleased with you.”"
+      "text": "Moses said to the Lord, ‘You have said to me, “Lead these people to their new land. ” But you have not told me who my helper will be on the journey. You have told me, “I know you by your name. I am very pleased with you. ”"
     },
     {
       "verse": "13",
-      "text": "If you are really pleased with me, tell me your thoughts. I want to understand you properly. Then I can continue to please you. Remember that this nation, the Israelites, are your own people.’"
+      "text": "If you are really pleased with me, tell me your thoughts. I want to understand you properly. Then I can continue to please you. Remember that this nation, the Israelites, are your own people. ’"
     },
     {
       "verse": "14",
-      "text": "The Lord replied, ‘I myself will go with you. I will give you rest.’"
+      "text": "The Lord replied, ‘I myself will go with you. I will give you rest. ’"
     },
     {
       "verse": "15",
@@ -3882,15 +3882,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "If you do not go with us, nobody will know that you are pleased with me. Nobody will know that you are pleased with us as your special people. I, and all your people, will be the same as all the other people in the world.’"
+      "text": "If you do not go with us, nobody will know that you are pleased with me. Nobody will know that you are pleased with us as your special people. I, and all your people, will be the same as all the other people in the world. ’"
     },
     {
       "verse": "17",
-      "text": "The Lord said to Moses, ‘I will certainly do what you have asked for. This is because I am pleased with you. I know you by your name.’"
+      "text": "The Lord said to Moses, ‘I will certainly do what you have asked for. This is because I am pleased with you. I know you by your name. ’"
     },
     {
       "verse": "18",
-      "text": "Then Moses said, ‘Please, show me your glory!’"
+      "text": "Then Moses said, ‘Please, show me your glory! ’"
     },
     {
       "verse": "19",
@@ -3898,7 +3898,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But you will never see my face. Nobody can see my face and still be alive.’"
+      "text": "But you will never see my face. Nobody can see my face and still be alive. ’"
     },
     {
       "verse": "21",
@@ -3910,7 +3910,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then I will remove my hand so that you will see my back. But nobody must ever see my face.’"
+      "text": "Then I will remove my hand so that you will see my back. But nobody must ever see my face. ’"
     }
   ],
   "34": [
@@ -3924,7 +3924,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Nobody must come with you. Nobody must go anywhere on the mountain. Even your sheep and your cows must not eat grass near the bottom of the mountain.’"
+      "text": "Nobody must come with you. Nobody must go anywhere on the mountain. Even your sheep and your cows must not eat grass near the bottom of the mountain. ’"
     },
     {
       "verse": "4",
@@ -3940,7 +3940,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I faithfully love thousands of people. I forgive their sins when they turn against me. But if people are guilty, I surely punish them. I punish their children, their grandchildren and their grandchildren's children.’"
+      "text": "I faithfully love thousands of people. I forgive their sins when they turn against me. But if people are guilty, I surely punish them. I punish their children, their grandchildren and their grandchildren's children. ’"
     },
     {
       "verse": "8",
@@ -3948,7 +3948,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He said, ‘Lord, my God, if you are pleased with me, please travel with us! It is true that these people are proud and they often do not obey you. But please forgive all our sins. Please accept us as your own people.’"
+      "text": "He said, ‘Lord, my God, if you are pleased with me, please travel with us! It is true that these people are proud and they often do not obey you. But please forgive all our sins. Please accept us as your own people. ’"
     },
     {
       "verse": "10",
@@ -3992,7 +3992,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "For a firstborn donkey, you may pay for it with a lamb instead. If you do not pay for it, you must break the donkey's neck. You must pay me back for every firstborn son that you have.Nobody may come to worship me without an offering to give me."
+      "text": "For a firstborn donkey, you may pay for it with a lamb instead. If you do not pay for it, you must break the donkey's neck. You must pay me back for every firstborn son that you have. Nobody may come to worship me without an offering to give me."
     },
     {
       "verse": "21",
@@ -4016,11 +4016,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God.Do not cook a young goat in its mother's milk.’ Do not cook a young goat in its mother's milk.’"
+      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk. ’ Do not cook a young goat in its mother's milk. ’"
     },
     {
       "verse": "27",
-      "text": "Then the Lord said to Moses, ‘Write down these words. They are the rules of the covenant that I have made with you and with the Israelites.’"
+      "text": "Then the Lord said to Moses, ‘Write down these words. They are the rules of the covenant that I have made with you and with the Israelites. ’"
     },
     {
       "verse": "28",
@@ -4066,7 +4066,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Do not light a fire in any of your homes on a Sabbath day.’"
+      "text": "Do not light a fire in any of your homes on a Sabbath day. ’"
     },
     {
       "verse": "4",
@@ -4074,19 +4074,19 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Take an offering to give to the Lord from the things that you have. Everyone who wants to give something may choose to give these things:gold, silver, bronze;"
+      "text": "Take an offering to give to the Lord from the things that you have. Everyone who wants to give something may choose to give these things: gold, silver, bronze;"
     },
     {
       "verse": "6",
-      "text": "blue, purple and red material;good linen, goats' hair;"
+      "text": "blue, purple and red material; good linen, goats' hair;"
     },
     {
       "verse": "7",
-      "text": "red leather from sheep's skins and other kinds of good leather;acacia wood;"
+      "text": "red leather from sheep's skins and other kinds of good leather; acacia wood;"
     },
     {
       "verse": "8",
-      "text": "olive oil for the lamps;spices to make the special oil and the sweet incense;"
+      "text": "olive oil for the lamps; spices to make the special oil and the sweet incense;"
     },
     {
       "verse": "9",
@@ -4098,7 +4098,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "the tabernacle, with the tent and the other material that covers it;the rings, boards, sticks, poles and bases that are part of the tabernacle;"
+      "text": "the tabernacle, with the tent and the other material that covers it; the rings, boards, sticks, poles and bases that are part of the tabernacle;"
     },
     {
       "verse": "12",
@@ -4106,31 +4106,31 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "the special table with its poles and all its dishes;the special bread that you will put on the table for the Lord;"
+      "text": "the special table with its poles and all its dishes; the special bread that you will put on the table for the Lord;"
     },
     {
       "verse": "14",
-      "text": "the lampstand that will give light and its tools;the lamps and the oil for the lamps;"
+      "text": "the lampstand that will give light and its tools; the lamps and the oil for the lamps;"
     },
     {
       "verse": "15",
-      "text": "the altar for incense and its poles;the special oil and the sweet incense;the curtain for the entrance of the tabernacle;"
+      "text": "the altar for incense and its poles; the special oil and the sweet incense; the curtain for the entrance of the tabernacle;"
     },
     {
       "verse": "16",
-      "text": "the altar for burnt offerings and its bronze net;the poles for this altar and all its tools;the large bowl for water and its base;"
+      "text": "the altar for burnt offerings and its bronze net; the poles for this altar and all its tools; the large bowl for water and its base;"
     },
     {
       "verse": "17",
-      "text": "the curtains for the yard, its poles and their bases;the curtain for the entrance of the yard;"
+      "text": "the curtains for the yard, its poles and their bases; the curtain for the entrance of the yard;"
     },
     {
       "verse": "18",
-      "text": "pegs to fix the tent to the ground;pegs and ropes to hold the curtain around the yard;"
+      "text": "pegs to fix the tent to the ground; pegs and ropes to hold the curtain around the yard;"
     },
     {
       "verse": "19",
-      "text": "the special clothes for Aaron and his sons to wear when they serve the Lord as priests in the Holy Place.’"
+      "text": "the special clothes for Aaron and his sons to wear when they serve the Lord as priests in the Holy Place. ’"
     },
     {
       "verse": "20",
@@ -4194,13 +4194,13 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "They have special skills to make all kinds of things. They can draw pictures of the things that they want to make. They can cut pictures in metal. They can use blue, purple and red material and good linen to make beautiful things with pictures on them. They are very clever at their work, so that the things that they make look beautiful.’"
+      "text": "They have special skills to make all kinds of things. They can draw pictures of the things that they want to make. They can cut pictures in metal. They can use blue, purple and red material and good linen to make beautiful things with pictures on them. They are very clever at their work, so that the things that they make look beautiful. ’"
     }
   ],
   "36": [
     {
       "verse": "1",
-      "text": "Then Moses said, ‘Bezalel and Oholiab will do the work that the Lord has commanded us to do. Everyone that the Lord has helped to have special skills will work with them. They will help to build the tabernacle and all the other special things that the Lord has commanded.’"
+      "text": "Then Moses said, ‘Bezalel and Oholiab will do the work that the Lord has commanded us to do. Everyone that the Lord has helped to have special skills will work with them. They will help to build the tabernacle and all the other special things that the Lord has commanded. ’"
     },
     {
       "verse": "2",
@@ -4216,11 +4216,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "They said to Moses, ‘The people are bringing many more gifts than we need to finish the tabernacle, as the Lord commanded us to do.’"
+      "text": "They said to Moses, ‘The people are bringing many more gifts than we need to finish the tabernacle, as the Lord commanded us to do. ’"
     },
     {
       "verse": "6",
-      "text": "So Moses sent a message to everyone in the whole camp. He said, ‘No man or woman must offer any more gifts for the work of the tabernacle.’ When the people heard Moses' message, they did not bring any more gifts."
+      "text": "So Moses sent a message to everyone in the whole camp. He said, ‘No man or woman must offer any more gifts for the work of the tabernacle. ’ When the people heard Moses' message, they did not bring any more gifts."
     },
     {
       "verse": "7",
@@ -4256,7 +4256,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The curtains were all the same size: 13.5 metres long and 2 metres wide."
+      "text": "The curtains were all the same size: 13. 5 metres long and 2 metres wide."
     },
     {
       "verse": "16",
@@ -4472,7 +4472,7 @@ module.exports = {
   "38": [
     {
       "verse": "1",
-      "text": "Bezalel used acacia wood to build the altar for burnt offerings. It was square, 2.2 metres long and 2.2 metres wide. It was 1.3 metres high."
+      "text": "Bezalel used acacia wood to build the altar for burnt offerings. It was square, 2. 2 metres long and 2. 2 metres wide. It was 1. 3 metres high."
     },
     {
       "verse": "2",
@@ -4532,7 +4532,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They used blue, purple and red material, as well as good linen, to make the curtain for the entrance of the yard. A worker used special skills so that it looked beautiful. It was 9 metres wide and 2.2 metres high. All the curtains around the yard were 2.2 metres high."
+      "text": "They used blue, purple and red material, as well as good linen, to make the curtain for the entrance of the yard. A worker used special skills so that it looked beautiful. It was 9 metres wide and 2. 2 metres high. All the curtains around the yard were 2. 2 metres high."
     },
     {
       "verse": "19",
@@ -4556,19 +4556,19 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The workers used 1,000 kilograms of gold to do all the work to make the tabernacle. That was its proper weight. The Israelites had lifted up this gold as an offering to the Lord."
+      "text": "The workers used 1, 000 kilograms of gold to do all the work to make the tabernacle. That was its proper weight. The Israelites had lifted up this gold as an offering to the Lord."
     },
     {
       "verse": "25",
-      "text": "The people had also brought 3,430 kilograms of silver as an offering for the work."
+      "text": "The people had also brought 3, 430 kilograms of silver as an offering for the work."
     },
     {
       "verse": "26",
-      "text": "years old when Moses counted them had given the right amount, about ten grams. There were 603,550 men that Moses had counted."
+      "text": "years old when Moses counted them had given the right amount, about ten grams. There were 603, 550 men that Moses had counted."
     },
     {
       "verse": "27",
-      "text": "kilograms of silver to make each base to hold the poles. There were 100 bases to hold the tabernacle and the special curtain inside it. So they used 3,400 kilograms of silver to make the bases."
+      "text": "kilograms of silver to make each base to hold the poles. There were 100 bases to hold the tabernacle and the special curtain inside it. So they used 3, 400 kilograms of silver to make the bases."
     },
     {
       "verse": "28",
@@ -4576,7 +4576,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "The people had also lifted up 2,425 kilograms of bronze as an offering to the Lord."
+      "text": "The people had also lifted up 2, 425 kilograms of bronze as an offering to the Lord."
     },
     {
       "verse": "30",
@@ -4762,7 +4762,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Moses carefully checked all the work. He saw that the workers had done it exactly as the Lord had commanded them.When Moses saw this, he blessed the people."
+      "text": "Moses carefully checked all the work. He saw that the workers had done it exactly as the Lord had commanded them. When Moses saw this, he blessed the people."
     }
   ],
   "40": [
@@ -4824,7 +4824,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Pour some oil on their heads, as you did to their father. Then they too may serve me as my priests. In this way, they and their descendants will always continue to serve me as priests.’"
+      "text": "Pour some oil on their heads, as you did to their father. Then they too may serve me as my priests. In this way, they and their descendants will always continue to serve me as priests. ’"
     },
     {
       "verse": "16",
@@ -4896,7 +4896,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Moses also made the yard around the tabernacle and round the altar. He hung the curtain at the entrance of the yard.In that way, Moses finished the work. In that way, Moses finished the work."
+      "text": "Moses also made the yard around the tabernacle and round the altar. He hung the curtain at the entrance of the yard. In that way, Moses finished the work. In that way, Moses finished the work."
     },
     {
       "verse": "34",

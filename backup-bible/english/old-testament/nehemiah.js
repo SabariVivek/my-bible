@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "These are the words of Nehemiah, Hacaliah's son.It was the month Kislev. This was when King Artaxerxes had ruled for 20 years. I was in the big city of Susa."
+      "text": "These are the words of Nehemiah, Hacaliah's son. It was the month Kislev. This was when King Artaxerxes had ruled for 20 years. I was in the big city of Susa."
     },
     {
       "verse": "2",
@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They told me, ‘The Jews who returned to Judah are in much trouble. The walls of the city still have lots of holes in them. Fire has burned the city's gates down to the ground. So the people are very ashamed.’"
+      "text": "They told me, ‘The Jews who returned to Judah are in much trouble. The walls of the city still have lots of holes in them. Fire has burned the city's gates down to the ground. So the people are very ashamed. ’"
     },
     {
       "verse": "4",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But if they return to me and they obey my commands, I will be kind to them. I will bring them back together again from all the different places where they are living. Even if they live far away, I will find them. I will bring them to the place that I have chosen to give honour to my name.”"
+      "text": "But if they return to me and they obey my commands, I will be kind to them. I will bring them back together again from all the different places where they are living. Even if they live far away, I will find them. I will bring them to the place that I have chosen to give honour to my name. ”"
     },
     {
       "verse": "10",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Please listen to my prayer, my Lord. Hear the prayers of your people who love to respect your name. Please cause the king to be kind to me. May he give me what I ask for.’I was the king's cupbearer."
+      "text": "Please listen to my prayer, my Lord. Hear the prayers of your people who love to respect your name. Please cause the king to be kind to me. May he give me what I ask for. ’I was the king's cupbearer."
     }
   ],
   "2": [
@@ -52,23 +52,23 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The king asked me, ‘Why are you sad? You are not ill. This must mean that you are very upset.’ I was very frightened."
+      "text": "The king asked me, ‘Why are you sad? You are not ill. This must mean that you are very upset. ’ I was very frightened."
     },
     {
       "verse": "3",
-      "text": "I replied to the king, ‘May the king live for ever! I am sad because enemies have destroyed the city where my ancestors are buried. They burned the city's gates.’"
+      "text": "I replied to the king, ‘May the king live for ever! I am sad because enemies have destroyed the city where my ancestors are buried. They burned the city's gates. ’"
     },
     {
       "verse": "4",
-      "text": "The king asked me, ‘What do you want me to do for you?’ So I prayed to our God who rules from heaven."
+      "text": "The king asked me, ‘What do you want me to do for you? ’ So I prayed to our God who rules from heaven."
     },
     {
       "verse": "5",
-      "text": "Then I said to the king, ‘Please sir, if you think it is a good idea and you are pleased with me, let me go to Judah. If you agree to send me there, I can build again the city where my ancestors are buried.’"
+      "text": "Then I said to the king, ‘Please sir, if you think it is a good idea and you are pleased with me, let me go to Judah. If you agree to send me there, I can build again the city where my ancestors are buried. ’"
     },
     {
       "verse": "6",
-      "text": "The king was sitting with the queen next to him. The king asked me, ‘How long will you be away? When will you return?’ I told the king how long I would be away. Because the king was happy to send me, I told him when I would leave. The king agreed to do what I asked him, because my God was with me."
+      "text": "The king was sitting with the queen next to him. The king asked me, ‘How long will you be away? When will you return? ’ I told the king how long I would be away. Because the king was happy to send me, I told him when I would leave. The king agreed to do what I asked him, because my God was with me."
     },
     {
       "verse": "7",
@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Also give me a letter for Asaph, who takes care of the king's forest there. Tell him to give me wood from the trees. I need to make beams to mend the gates of the strong place near the temple. I also need to mend the city's wall. And I need to build a house for myself to live in.’The king agreed to do what I asked him, because my God was with me."
+      "text": "Also give me a letter for Asaph, who takes care of the king's forest there. Tell him to give me wood from the trees. I need to make beams to mend the gates of the strong place near the temple. I also need to mend the city's wall. And I need to build a house for myself to live in. ’The king agreed to do what I asked him, because my God was with me."
     },
     {
       "verse": "9",
@@ -112,19 +112,19 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But then I said to them, ‘We have a big problem. Jerusalem has become a heap of stones. Fire has burned the gates. You must help to build the city's walls again. Then we will no longer be ashamed of our city.’"
+      "text": "But then I said to them, ‘We have a big problem. Jerusalem has become a heap of stones. Fire has burned the gates. You must help to build the city's walls again. Then we will no longer be ashamed of our city. ’"
     },
     {
       "verse": "18",
-      "text": "I told the people how God had helped me to come to Jerusalem. I told them what the king had said to me. Then the people said, ‘We will start to build now!’The people prepared to start this good work."
+      "text": "I told the people how God had helped me to come to Jerusalem. I told them what the king had said to me. Then the people said, ‘We will start to build now! ’The people prepared to start this good work."
     },
     {
       "verse": "19",
-      "text": "But Sanballat, Tobiah and an Arab man called Geshem heard about what we were doing. They laughed at us and they insulted us. They said, ‘What are you trying to do? Have you turned against the king's authority?’"
+      "text": "But Sanballat, Tobiah and an Arab man called Geshem heard about what we were doing. They laughed at us and they insulted us. They said, ‘What are you trying to do? Have you turned against the king's authority? ’"
     },
     {
       "verse": "20",
-      "text": "I replied to them, ‘Our God who rules from heaven will help us. We are his servants and we will start to build. But you have never been true citizens of Jerusalem.’"
+      "text": "I replied to them, ‘Our God who rules from heaven will help us. We are his servants and we will start to build. But you have never been true citizens of Jerusalem. ’"
     }
   ],
   "3": [
@@ -264,11 +264,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "His officers and Samaria's army were with him. He said to them, ‘Those Jews have great ideas, but they are weak. How will they ever repair the wall? Will they give sacrifices to their God? Will that help them to repair the wall in one day? They will never build anything from this heap of stones that fire has destroyed!’"
+      "text": "His officers and Samaria's army were with him. He said to them, ‘Those Jews have great ideas, but they are weak. How will they ever repair the wall? Will they give sacrifices to their God? Will that help them to repair the wall in one day? They will never build anything from this heap of stones that fire has destroyed! ’"
     },
     {
       "verse": "3",
-      "text": "Tobiah the Ammonite was with him. Tobiah said, ‘The wall that the Jews are trying to build is very weak. Even if a little fox climbs up on it, the stones would all fall down again!’"
+      "text": "Tobiah the Ammonite was with him. Tobiah said, ‘The wall that the Jews are trying to build is very weak. Even if a little fox climbs up on it, the stones would all fall down again! ’"
     },
     {
       "verse": "4",
@@ -276,7 +276,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Do not forgive their sins. Do not say that they are not guilty. They have insulted us when we are trying to build.’"
+      "text": "Do not forgive their sins. Do not say that they are not guilty. They have insulted us when we are trying to build. ’"
     },
     {
       "verse": "6",
@@ -296,11 +296,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then the people in Judah complained, ‘Our workers are becoming weak. There are so many stones and rubbish! We cannot finish the work on the wall!’"
+      "text": "Then the people in Judah complained, ‘Our workers are becoming weak. There are so many stones and rubbish! We cannot finish the work on the wall! ’"
     },
     {
       "verse": "11",
-      "text": "At the same time, our enemies were boasting, ‘Before the Jews even see us, we will attack them. We will kill them before they know what is happening. That will be the end of their work on the wall!’"
+      "text": "At the same time, our enemies were boasting, ‘Before the Jews even see us, we will attack them. We will kill them before they know what is happening. That will be the end of their work on the wall! ’"
     },
     {
       "verse": "12",
@@ -312,7 +312,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I went round the city and I looked at everything. I said to the leaders, the officers and the people, ‘Do not be afraid of our enemies. Remember that our Lord God is great and powerful. Fight on behalf of your brothers, your sons, your daughters and your wives. Fight to keep your homes safe.’"
+      "text": "I went round the city and I looked at everything. I said to the leaders, the officers and the people, ‘Do not be afraid of our enemies. Remember that our Lord God is great and powerful. Fight on behalf of your brothers, your sons, your daughters and your wives. Fight to keep your homes safe. ’"
     },
     {
       "verse": "15",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When you hear the sound of the trumpet, come to join us here. Our God will fight on our behalf.’"
+      "text": "When you hear the sound of the trumpet, come to join us here. Our God will fight on our behalf. ’"
     },
     {
       "verse": "21",
@@ -344,7 +344,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I said to the people, ‘Everybody must stay in Jerusalem each night, together with those who are helping them. Then they can be our guards to keep us safe at night. During each day they can do the work.’"
+      "text": "I said to the people, ‘Everybody must stay in Jerusalem each night, together with those who are helping them. Then they can be our guards to keep us safe at night. During each day they can do the work. ’"
     },
     {
       "verse": "23",
@@ -358,11 +358,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Many of them said, ‘We are big families, with many sons and daughters. We need to have food to eat so that we can stay alive.’"
+      "text": "Many of them said, ‘We are big families, with many sons and daughters. We need to have food to eat so that we can stay alive. ’"
     },
     {
       "verse": "3",
-      "text": "Other people said, ‘People have to lend us money to buy food. We have to give them our fields, our vineyards and our homes until we can pay them back.’"
+      "text": "Other people said, ‘People have to lend us money to buy food. We have to give them our fields, our vineyards and our homes until we can pay them back. ’"
     },
     {
       "verse": "4",
@@ -370,7 +370,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Now we have to sell our sons and daughters as slaves so that we can pay back the money. But we are from the same human family as those other Jews. Our children are not different from their children. Already some of our daughters have become slaves. Our fields and vineyards now belong to other people, so we are helpless to do anything.’"
+      "text": "Now we have to sell our sons and daughters as slaves so that we can pay back the money. But we are from the same human family as those other Jews. Our children are not different from their children. Already some of our daughters have become slaves. Our fields and vineyards now belong to other people, so we are helpless to do anything. ’"
     },
     {
       "verse": "6",
@@ -378,11 +378,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I thought carefully about what they had said. Then I said to the Jewish leaders and officers, ‘You are cheating your own people! You are taking back more money than you have lent to them.’I told the Jews to come together for a big meeting."
+      "text": "I thought carefully about what they had said. Then I said to the Jewish leaders and officers, ‘You are cheating your own people! You are taking back more money than you have lent to them. ’I told the Jews to come together for a big meeting."
     },
     {
       "verse": "8",
-      "text": "I said to them all, ‘When our own Jewish people have become slaves of foreign people, we have tried hard to buy them back. But now you are making your own people sell their children to you. And you want us to pay you to buy them back again!’ The Jewish leaders kept quiet. They had nothing to say."
+      "text": "I said to them all, ‘When our own Jewish people have become slaves of foreign people, we have tried hard to buy them back. But now you are making your own people sell their children to you. And you want us to pay you to buy them back again! ’ The Jewish leaders kept quiet. They had nothing to say."
     },
     {
       "verse": "9",
@@ -394,15 +394,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now you must give back to them their fields, their vineyards, their gardens of olive trees and their houses. Do not make them pay any extra money for the money, food, wine or olive oil that you lent to them.’"
+      "text": "Now you must give back to them their fields, their vineyards, their gardens of olive trees and their houses. Do not make them pay any extra money for the money, food, wine or olive oil that you lent to them. ’"
     },
     {
       "verse": "12",
-      "text": "The leaders replied, ‘We will give everything back to them. We will not make them pay back their debts to us. We will do everything that you have said.’I told the priests to come to our meeting. While they were with us, I made the Jewish leaders and officers make a strong promise. They agreed to do what they had promised to do."
+      "text": "The leaders replied, ‘We will give everything back to them. We will not make them pay back their debts to us. We will do everything that you have said. ’I told the priests to come to our meeting. While they were with us, I made the Jewish leaders and officers make a strong promise. They agreed to do what they had promised to do."
     },
     {
       "verse": "13",
-      "text": "I shook my coat so that everything fell out of its pockets. I said, ‘You must all do what you have promised to do. If not, I pray that God will shake you out like that! He will take away your homes and all your things. You will be left with nothing!’ Everyone at the meeting said, ‘Amen, we agree!’ They praised the Lord.All the people did what they had promised to do. All the people did what they had promised to do."
+      "text": "I shook my coat so that everything fell out of its pockets. I said, ‘You must all do what you have promised to do. If not, I pray that God will shake you out like that! He will take away your homes and all your things. You will be left with nothing! ’ Everyone at the meeting said, ‘Amen, we agree! ’ They praised the Lord. All the people did what they had promised to do. All the people did what they had promised to do."
     },
     {
       "verse": "14",
@@ -436,11 +436,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Sanballat and Geshem sent this message to me: ‘Come and meet with us in a village on the low land of Ono.’I realized that they wanted to cause trouble for me."
+      "text": "Sanballat and Geshem sent this message to me: ‘Come and meet with us in a village on the low land of Ono. ’I realized that they wanted to cause trouble for me."
     },
     {
       "verse": "3",
-      "text": "So I sent this message back to them: ‘I am too busy to come and meet you. The work here is too important. I cannot stop the work here to come and meet you.’"
+      "text": "So I sent this message back to them: ‘I am too busy to come and meet you. The work here is too important. I cannot stop the work here to come and meet you. ’"
     },
     {
       "verse": "4",
@@ -456,23 +456,23 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "You have chosen some prophets to speak your message in Jerusalem. You have told them to say, “There is now a king in Judah!” The king of Persia will surely hear this news. So we must meet together and talk about it.’"
+      "text": "You have chosen some prophets to speak your message in Jerusalem. You have told them to say, “There is now a king in Judah! ” The king of Persia will surely hear this news. So we must meet together and talk about it. ’"
     },
     {
       "verse": "8",
-      "text": "I sent this reply: ‘What you say is not true. Nothing like that is happening. You are only speaking your own ideas.’"
+      "text": "I sent this reply: ‘What you say is not true. Nothing like that is happening. You are only speaking your own ideas. ’"
     },
     {
       "verse": "9",
-      "text": "All our enemies wanted to frighten us. They thought, ‘The Jews will be so afraid that they will not be able to work well. They will not finish building the wall.’So I prayed to God, ‘Give me strength to continue the work.’ So I prayed to God, ‘Give me strength to continue the work.’"
+      "text": "All our enemies wanted to frighten us. They thought, ‘The Jews will be so afraid that they will not be able to work well. They will not finish building the wall. ’So I prayed to God, ‘Give me strength to continue the work. ’ So I prayed to God, ‘Give me strength to continue the work. ’"
     },
     {
       "verse": "10",
-      "text": "One day I went to Shemaiah's house. He was the son of Delaiah, Mehetabel's son. He could not go out of his house. He said to me, ‘Meet me inside the temple of God. We will close the temple's doors. Our enemies are coming to kill you. One night soon, they will come to kill you.’"
+      "text": "One day I went to Shemaiah's house. He was the son of Delaiah, Mehetabel's son. He could not go out of his house. He said to me, ‘Meet me inside the temple of God. We will close the temple's doors. Our enemies are coming to kill you. One night soon, they will come to kill you. ’"
     },
     {
       "verse": "11",
-      "text": "But I said, ‘I am not a man who would run away to be safe. I will not go into the temple to save my life.’"
+      "text": "But I said, ‘I am not a man who would run away to be safe. I will not go into the temple to save my life. ’"
     },
     {
       "verse": "12",
@@ -518,7 +518,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I said to them, ‘Do not open Jerusalem's gates until the sun is high in the sky. Shut the gates and lock them while the guards are still there. Choose people who live in Jerusalem to be guards for the city. Some guards must stand at the city's gates. Other guards must stand near their own houses.’"
+      "text": "I said to them, ‘Do not open Jerusalem's gates until the sun is high in the sky. Shut the gates and lock them while the guards are still there. Choose people who live in Jerusalem to be guards for the city. Some guards must stand at the city's gates. Other guards must stand near their own houses. ’"
     },
     {
       "verse": "4",
@@ -534,11 +534,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "These people came from Babylon with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah.This is a list of the number of men in each Israelite clan who returned:"
+      "text": "These people came from Babylon with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah. This is a list of the number of men in each Israelite clan who returned:"
     },
     {
       "verse": "8",
-      "text": "The clan of Parosh: 2,172."
+      "text": "The clan of Parosh: 2, 172."
     },
     {
       "verse": "9",
@@ -550,11 +550,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The clan of Pahath-Moab (descendants of Jeshua and Joab): 2,818."
+      "text": "The clan of Pahath-Moab (descendants of Jeshua and Joab): 2, 818."
     },
     {
       "verse": "12",
-      "text": "The clan of Elam: 1,254."
+      "text": "The clan of Elam: 1, 254."
     },
     {
       "verse": "13",
@@ -574,7 +574,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The clan of Azgad: 2,322."
+      "text": "The clan of Azgad: 2, 322."
     },
     {
       "verse": "18",
@@ -582,7 +582,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The clan of Bigvai: 2,067."
+      "text": "The clan of Bigvai: 2, 067."
     },
     {
       "verse": "20",
@@ -610,7 +610,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The number of men who belonged to these towns:Bethlehem and Netophah: 188."
+      "text": "The number of men who belonged to these towns: Bethlehem and Netophah: 188."
     },
     {
       "verse": "27",
@@ -642,7 +642,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The other Elam: 1,254."
+      "text": "The other Elam: 1, 254."
     },
     {
       "verse": "35",
@@ -658,27 +658,27 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Senaah: 3,930."
+      "text": "Senaah: 3, 930."
     },
     {
       "verse": "39",
-      "text": "These priests also returned:The clan of Jedaiah (descendants of Jeshua): 973."
+      "text": "These priests also returned: The clan of Jedaiah (descendants of Jeshua): 973."
     },
     {
       "verse": "40",
-      "text": "The clan of Immer: 1,052."
+      "text": "The clan of Immer: 1, 052."
     },
     {
       "verse": "41",
-      "text": "The clan of Pashhur: 1,247."
+      "text": "The clan of Pashhur: 1, 247."
     },
     {
       "verse": "42",
-      "text": "The clan of Harim: 1,017."
+      "text": "The clan of Harim: 1, 017."
     },
     {
       "verse": "43",
-      "text": "These Levites also returned:The clans of Jeshua and Kadmiel (descendants of Hodaviah): 74."
+      "text": "These Levites also returned: The clans of Jeshua and Kadmiel (descendants of Hodaviah): 74."
     },
     {
       "verse": "44",
@@ -690,7 +690,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "These were the families of the temple servants who returned:Ziha, Hasupha, Tabbaoth,"
+      "text": "These were the families of the temple servants who returned: Ziha, Hasupha, Tabbaoth,"
     },
     {
       "verse": "47",
@@ -734,7 +734,7 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "These were the servants of King Solomon whose descendants returned:Sotai, Sophereth, Perida,"
+      "text": "These were the servants of King Solomon whose descendants returned: Sotai, Sophereth, Perida,"
     },
     {
       "verse": "58",
@@ -758,7 +758,7 @@ module.exports = {
     },
     {
       "verse": "63",
-      "text": "There were also some priests from the clans of Hobaiah, Hakkoz and Barzillai. (Barzillai was a man who had married a daughter of Barzillai, who came from Gilead. So he took Barzillai's name for himself.)"
+      "text": "There were also some priests from the clans of Hobaiah, Hakkoz and Barzillai. (Barzillai was a man who had married a daughter of Barzillai, who came from Gilead. So he took Barzillai's name for himself. )"
     },
     {
       "verse": "64",
@@ -770,11 +770,11 @@ module.exports = {
     },
     {
       "verse": "66",
-      "text": "The number of all the people who returned to Judea was 42,360."
+      "text": "The number of all the people who returned to Judea was 42, 360."
     },
     {
       "verse": "67",
-      "text": "There were also 7,337 male and female servants, as well as 245 male and female singers."
+      "text": "There were also 7, 337 male and female servants, as well as 245 male and female singers."
     },
     {
       "verse": "68",
@@ -782,19 +782,19 @@ module.exports = {
     },
     {
       "verse": "69",
-      "text": "camels and 6,720 donkeys."
+      "text": "camels and 6, 720 donkeys."
     },
     {
       "verse": "70",
-      "text": "Some of the family leaders gave money to help build the wall. The officer who ruled there gave 8.5 kilograms of gold, 50 bowls and 530 sets of special clothes for the priests."
+      "text": "Some of the family leaders gave money to help build the wall. The officer who ruled there gave 8. 5 kilograms of gold, 50 bowls and 530 sets of special clothes for the priests."
     },
     {
       "verse": "71",
-      "text": "kilograms of gold and 1,300 kilograms of silver."
+      "text": "kilograms of gold and 1, 300 kilograms of silver."
     },
     {
       "verse": "72",
-      "text": "kilograms of gold and 1,300 kilograms of silver. They also gave 67 sets of special clothes for the priests."
+      "text": "kilograms of gold and 1, 300 kilograms of silver. They also gave 67 sets of special clothes for the priests."
     },
     {
       "verse": "73",
@@ -824,7 +824,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Ezra praised the Lord, the great God. All the people lifted their hands and they shouted, ‘Amen! Amen!’ They bent their heads to the ground and they worshipped the Lord."
+      "text": "Ezra praised the Lord, the great God. All the people lifted their hands and they shouted, ‘Amen! Amen! ’ They bent their heads to the ground and they worshipped the Lord."
     },
     {
       "verse": "7",
@@ -836,15 +836,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then Ezra (the priest who studied God's Law), Nehemiah (the ruler) and the Levites who were teaching the people said to all the people, ‘Do not cry or weep. Today is a special holy day for the Lord your God.’They said this because the people were weeping. The words of the Law had made them sad."
+      "text": "Then Ezra (the priest who studied God's Law), Nehemiah (the ruler) and the Levites who were teaching the people said to all the people, ‘Do not cry or weep. Today is a special holy day for the Lord your God. ’They said this because the people were weeping. The words of the Law had made them sad."
     },
     {
       "verse": "10",
-      "text": "Nehemiah said to the people, ‘Go to your homes and eat some good food. Drink sweet drinks. Share your food and your drink with people who do not have enough for themselves. This is a holy day for our Lord, so do not be sad. The Lord will give you joy so that you can be strong.’"
+      "text": "Nehemiah said to the people, ‘Go to your homes and eat some good food. Drink sweet drinks. Share your food and your drink with people who do not have enough for themselves. This is a holy day for our Lord, so do not be sad. The Lord will give you joy so that you can be strong. ’"
     },
     {
       "verse": "11",
-      "text": "The Levites also comforted the people. They said, ‘Do not weep. Today is a holy day, so do not be sad.’"
+      "text": "The Levites also comforted the people. They said, ‘Do not weep. Today is a holy day, so do not be sad. ’"
     },
     {
       "verse": "12",
@@ -860,7 +860,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "They discovered that they must send a message to everyone in Jerusalem and all Judah's cities. They must tell people, ‘Go into the hill country. Bring back branches from olive trees, wild olive trees, myrtle trees, palm trees and other trees with lots of leaves. Use these branches to build huts to live in. That is what God's Law teaches.’"
+      "text": "They discovered that they must send a message to everyone in Jerusalem and all Judah's cities. They must tell people, ‘Go into the hill country. Bring back branches from olive trees, wild olive trees, myrtle trees, palm trees and other trees with lots of leaves. Use these branches to build huts to live in. That is what God's Law teaches. ’"
     },
     {
       "verse": "16",
@@ -894,7 +894,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the Levites (Jeshua, Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah and Pethahiah) said, ‘Stand up and praise the Lord your God. He lives always and for ever.’They said, ‘Your name is great and wonderful. We praise you more than words could ever say."
+      "text": "Then the Levites (Jeshua, Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah and Pethahiah) said, ‘Stand up and praise the Lord your God. He lives always and for ever. ’They said, ‘Your name is great and wonderful. We praise you more than words could ever say."
     },
     {
       "verse": "6",
@@ -946,7 +946,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Our ancestors made an image of a young cow to be their god. They said to each other, “This is our god who brought us out of Egypt.” They insulted you in that way, but you still did not turn away from your people."
+      "text": "Our ancestors made an image of a young cow to be their god. They said to each other, “This is our god who brought us out of Egypt. ” They insulted you in that way, but you still did not turn away from your people."
     },
     {
       "verse": "19",
@@ -1022,17 +1022,17 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "But because of our sins you have caused foreign kings to rule over us. They take the food that grows in our fields. They use us and our animals in any way that they like. So we are very upset!’"
+      "text": "But because of our sins you have caused foreign kings to rule over us. They take the food that grows in our fields. They use us and our animals in any way that they like. So we are very upset! ’"
     },
     {
       "verse": "38",
-      "text": "‘Because of this we Israelite people are all making a promise. We are writing down our agreement to serve the Lord. Our leaders, our Levites and our priests will write their names on it to give it their authority.’"
+      "text": "‘Because of this we Israelite people are all making a promise. We are writing down our agreement to serve the Lord. Our leaders, our Levites and our priests will write their names on it to give it their authority. ’"
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "These people put their mark of authority on the promise that they had written:Hacaliah's son, Nehemiah (the government officer), and Zedekiah."
+      "text": "These people put their mark of authority on the promise that they had written: Hacaliah's son, Nehemiah (the government officer), and Zedekiah."
     },
     {
       "verse": "2",
@@ -1064,7 +1064,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Levites were:Azaniah's son, Jeshua, Binnui from the clan of Henadad, Kadmiel."
+      "text": "The Levites were: Azaniah's son, Jeshua, Binnui from the clan of Henadad, Kadmiel."
     },
     {
       "verse": "10",
@@ -1164,7 +1164,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Each year we will throw dice to decide when different families must bring wood to the temple of our God. The priests, the Levites and the other people must do this. The wood will burn sacrifices on the altar of the Lord our God. We will do this in the way that the Law of the Lord our God teaches. We agree that we will always take care of the temple of our God.’"
+      "text": "Each year we will throw dice to decide when different families must bring wood to the temple of our God. The priests, the Levites and the other people must do this. The wood will burn sacrifices on the altar of the Lord our God. We will do this in the way that the Law of the Lord our God teaches. We agree that we will always take care of the temple of our God. ’"
     },
     {
       "verse": "35",
@@ -1184,7 +1184,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "The Levites and the other Israelites will bring their gifts of grain, wine and olive oil to store in the temple's rooms. The priests will store them with the things that they use to serve God in the temple. That is the place where the priests who are working at that time, the temple guards and the singers stay.We agree that we will always take care of the temple of our God.’"
+      "text": "The Levites and the other Israelites will bring their gifts of grain, wine and olive oil to store in the temple's rooms. The priests will store them with the things that they use to serve God in the temple. That is the place where the priests who are working at that time, the temple guards and the singers stay. We agree that we will always take care of the temple of our God. ’"
     }
   ],
   "11": [
@@ -1202,7 +1202,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But some of Judah's and Benjamin's descendants went to live in Jerusalem. This is who they were:From the tribe of Judah:Athaiah, son of Uzziah and Zechariah's grandson. His other ancestors were: Amariah, Shephatiah and Mahalalel. They were descendants of Judah's son, Perez."
+      "text": "But some of Judah's and Benjamin's descendants went to live in Jerusalem. This is who they were: From the tribe of Judah: Athaiah, son of Uzziah and Zechariah's grandson. His other ancestors were: Amariah, Shephatiah and Mahalalel. They were descendants of Judah's son, Perez."
     },
     {
       "verse": "5",
@@ -1214,7 +1214,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "From the tribe of Benjamin:Sallu, son of Meshullam and Joed's grandson. His other ancestors were: Pedaiah, Kolaiah, Maaseiah, Ithiel and Jeshaiah."
+      "text": "From the tribe of Benjamin: Sallu, son of Meshullam and Joed's grandson. His other ancestors were: Pedaiah, Kolaiah, Maaseiah, Ithiel and Jeshaiah."
     },
     {
       "verse": "8",
@@ -1222,11 +1222,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Zicri's son, Joel, was the officer with authority over them.Hassenuah's son, Judah, was the next most important officer in the city."
+      "text": "Zicri's son, Joel, was the officer with authority over them. Hassenuah's son, Judah, was the next most important officer in the city."
     },
     {
       "verse": "10",
-      "text": "From the priests:Joiarib's son, Jedaiah, and Jakin."
+      "text": "From the priests: Joiarib's son, Jedaiah, and Jakin."
     },
     {
       "verse": "11",
@@ -1234,19 +1234,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Their relatives worked with them in the temple. There were 822 men from that clan.Adaiah, son of Jeroham and Pelaliah's grandson. His other ancestors were: Amzi, Zechariah, Pashhur and Malkijah."
+      "text": "Their relatives worked with them in the temple. There were 822 men from that clan. Adaiah, son of Jeroham and Pelaliah's grandson. His other ancestors were: Amzi, Zechariah, Pashhur and Malkijah."
     },
     {
       "verse": "13",
-      "text": "His relatives were with him. There were 242 men from that clan who were leaders of their families.Amashsai, son of Azarel and Ahzai's grandson. Ahzai was the son of Meshillemoth, son of Immer."
+      "text": "His relatives were with him. There were 242 men from that clan who were leaders of their families. Amashsai, son of Azarel and Ahzai's grandson. Ahzai was the son of Meshillemoth, son of Immer."
     },
     {
       "verse": "14",
-      "text": "His friends were with him. They were 128 strong brave men from that clan.Haggedolim's son, Zabdiel, was the officer with authority over them."
+      "text": "His friends were with him. They were 128 strong brave men from that clan. Haggedolim's son, Zabdiel, was the officer with authority over them."
     },
     {
       "verse": "15",
-      "text": "From the Levites:Shemaiah, son of Hasshub and Azrikam's grandson. Azrikam was the son of Hashabiah, son of Bunni."
+      "text": "From the Levites: Shemaiah, son of Hasshub and Azrikam's grandson. Azrikam was the son of Hashabiah, son of Bunni."
     },
     {
       "verse": "16",
@@ -1254,7 +1254,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Mattaniah, son of Mica and Zabdi's grandson. Zabdi was Asaph's son. Mattaniah led the people when they prayed and they thanked God.Bakbukiah helped Mattaniah, as well as Shammua's son, Abda. Shammua was the son of Galal, the son of Jeduthun."
+      "text": "Mattaniah, son of Mica and Zabdi's grandson. Zabdi was Asaph's son. Mattaniah led the people when they prayed and they thanked God. Bakbukiah helped Mattaniah, as well as Shammua's son, Abda. Shammua was the son of Galal, the son of Jeduthun."
     },
     {
       "verse": "18",
@@ -1262,7 +1262,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The temple guards were:Akkub, Talmon and their relatives. There were 172 guards who watched the gates."
+      "text": "The temple guards were: Akkub, Talmon and their relatives. There were 172 guards who watched the gates."
     },
     {
       "verse": "20",
@@ -1336,7 +1336,7 @@ module.exports = {
   "12": [
     {
       "verse": "1",
-      "text": "This is a list of the priests and the Levites who returned with Zerubbabel, son of Shealtiel, and with Jeshua:Seraiah, Jeremiah, Ezra, These men were the leaders of the priests and the people who helped them in the time of Jeshua."
+      "text": "This is a list of the priests and the Levites who returned with Zerubbabel, son of Shealtiel, and with Jeshua: Seraiah, Jeremiah, Ezra, These men were the leaders of the priests and the people who helped them in the time of Jeshua."
     },
     {
       "verse": "2",
@@ -1360,11 +1360,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Sallu, Amok, Hilkiah and Jedaiah.These men were the leaders of the priests and the people who helped them in the time of Jeshua."
+      "text": "Sallu, Amok, Hilkiah and Jedaiah. These men were the leaders of the priests and the people who helped them in the time of Jeshua."
     },
     {
       "verse": "8",
-      "text": "The Levites were:Jeshua, Binnui, Kadmiel, Sherebiah, Judah and Mattaniah.Mattaniah and his relatives had authority for the songs which they sang to thank God in the temple."
+      "text": "The Levites were: Jeshua, Binnui, Kadmiel, Sherebiah, Judah and Mattaniah. Mattaniah and his relatives had authority for the songs which they sang to thank God in the temple."
     },
     {
       "verse": "9",
@@ -1380,43 +1380,43 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "In the time of Joiakim, these were the priests who were leaders of their clans:Meraiah was the leader of Seraiah's clan.Hananiah was the leader of Jeremiah's clan."
+      "text": "In the time of Joiakim, these were the priests who were leaders of their clans: Meraiah was the leader of Seraiah's clan. Hananiah was the leader of Jeremiah's clan."
     },
     {
       "verse": "13",
-      "text": "Meshullam was the leader of Ezra's clan.Jehohanan was the leader of Amariah's clan."
+      "text": "Meshullam was the leader of Ezra's clan. Jehohanan was the leader of Amariah's clan."
     },
     {
       "verse": "14",
-      "text": "Jonathan was the leader of Malluch's clan.Joseph was the leader of Shecaniah's clan."
+      "text": "Jonathan was the leader of Malluch's clan. Joseph was the leader of Shecaniah's clan."
     },
     {
       "verse": "15",
-      "text": "Adna was the leader of Harim's clan.Helkai was the leader of Meremoth's clan."
+      "text": "Adna was the leader of Harim's clan. Helkai was the leader of Meremoth's clan."
     },
     {
       "verse": "16",
-      "text": "Zechariah was the leader of Iddo's clan.Meshullam was the leader of Ginnethon's clan."
+      "text": "Zechariah was the leader of Iddo's clan. Meshullam was the leader of Ginnethon's clan."
     },
     {
       "verse": "17",
-      "text": "Zicri was the leader of Abijah's clan.Piltai was the leader of the clans of Miniamin and Moadiah."
+      "text": "Zicri was the leader of Abijah's clan. Piltai was the leader of the clans of Miniamin and Moadiah."
     },
     {
       "verse": "18",
-      "text": "Shammua was the leader of Bilgah's clan.Jehonathan was the leader of Shemaiah's clan."
+      "text": "Shammua was the leader of Bilgah's clan. Jehonathan was the leader of Shemaiah's clan."
     },
     {
       "verse": "19",
-      "text": "Mattenai was the leader of Joiarib's clan.Uzzi was the leader of Jedaiah's clan."
+      "text": "Mattenai was the leader of Joiarib's clan. Uzzi was the leader of Jedaiah's clan."
     },
     {
       "verse": "20",
-      "text": "Kallai was the leader of Sallu's clan.Eber was the leader of Amok's clan."
+      "text": "Kallai was the leader of Sallu's clan. Eber was the leader of Amok's clan."
     },
     {
       "verse": "21",
-      "text": "Hashabiah was the leader of Hilkiah's clan.Nethanel was the leader of Jedaiah's clan."
+      "text": "Hashabiah was the leader of Hilkiah's clan. Nethanel was the leader of Jedaiah's clan."
     },
     {
       "verse": "22",
@@ -1428,11 +1428,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The leaders of the Levites were:Hashabiah, Sherebiah, Kadmiel's son, Jeshua, and their relatives.The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded."
+      "text": "The leaders of the Levites were: Hashabiah, Sherebiah, Kadmiel's son, Jeshua, and their relatives. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded."
     },
     {
       "verse": "25",
-      "text": "The guards for the temple gates were:Mattaniah, Bakbukiah, Obadiah, Meshullam, Talmon and Akkub.They watched the temple rooms near the gates, where they stored special things."
+      "text": "The guards for the temple gates were: Mattaniah, Bakbukiah, Obadiah, Meshullam, Talmon and Akkub. They watched the temple rooms near the gates, where they stored special things."
     },
     {
       "verse": "26",
@@ -1566,7 +1566,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I warned the officers. I told them, ‘You have stopped taking care of God's temple!’ Then I told the Levites and the other workers to return to their jobs in the temple."
+      "text": "I warned the officers. I told them, ‘You have stopped taking care of God's temple! ’ Then I told the Levites and the other workers to return to their jobs in the temple."
     },
     {
       "verse": "12",
@@ -1594,11 +1594,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Your ancestors did the same thing. That is why God punished them and he brought trouble on this city. Now you will make God even more angry with us, Israel's people. You are insulting God's Sabbath day.’"
+      "text": "Your ancestors did the same thing. That is why God punished them and he brought trouble on this city. Now you will make God even more angry with us, Israel's people. You are insulting God's Sabbath day. ’"
     },
     {
       "verse": "19",
-      "text": "So I gave a command to the guards at the city's gates. I told them, ‘You must close the gates in the evening before each Sabbath day begins. Do not open the gates again until the Sabbath day has finished.’ I told some of my own men to stand at the gates. They would watch carefully so that no traders would bring things into Jerusalem on any Sabbath day."
+      "text": "So I gave a command to the guards at the city's gates. I told them, ‘You must close the gates in the evening before each Sabbath day begins. Do not open the gates again until the Sabbath day has finished. ’ I told some of my own men to stand at the gates. They would watch carefully so that no traders would bring things into Jerusalem on any Sabbath day."
     },
     {
       "verse": "20",
@@ -1606,11 +1606,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I warned them, ‘Do not stay beside the city's wall all night. If you do this again, I will take hold of you.’ After I said that, they did not come again to Jerusalem on a Sabbath day."
+      "text": "I warned them, ‘Do not stay beside the city's wall all night. If you do this again, I will take hold of you. ’ After I said that, they did not come again to Jerusalem on a Sabbath day."
     },
     {
       "verse": "22",
-      "text": "Then I told the Levites that they must make themselves ready to serve God. I told them to go and stand at the gates as guards. They must keep the Sabbath day as a special day for God.My God, please remember this good thing that I have done. Because of your faithful love, please be kind to me."
+      "text": "Then I told the Levites that they must make themselves ready to serve God. I told them to go and stand at the gates as guards. They must keep the Sabbath day as a special day for God. My God, please remember this good thing that I have done. Because of your faithful love, please be kind to me."
     },
     {
       "verse": "23",
@@ -1630,7 +1630,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "We can never agree to all the evil things that you have done. If we all married foreign women, we would not be faithful to our God.’"
+      "text": "We can never agree to all the evil things that you have done. If we all married foreign women, we would not be faithful to our God. ’"
     },
     {
       "verse": "28",
@@ -1646,7 +1646,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "I also made sure that people brought wood to the temple for sacrifices on the altar. I made them bring the first crops and fruits from their fields for the offerings.My God, please remember to bless me."
+      "text": "I also made sure that people brought wood to the temple for sacrifices on the altar. I made them bring the first crops and fruits from their fields for the offerings. My God, please remember to bless me."
     }
   ]
 };
