@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Lord said to Joshua, When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. ‘Moses, my servant, is dead. Now you and all these people must get ready to cross the Jordan River. Lead the people of Israel into the land that I am giving to them."
+      "text": "The Lord said to Joshua,‘Moses, my servant, is dead. Now you and all these people must get ready to cross the Jordan River. Lead the people of Israel into the land that I am giving to them."
     },
     {
       "verse": "3",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Remember that I have told you this: Be strong and do not be afraid. Do not be weak but be brave. I, the Lord your God, will be with you, everywhere that you go.’ Joshua speaks to the Israelites"
+      "text": "Remember that I have told you this: Be strong and do not be afraid. Do not be weak but be brave. I, the Lord your God, will be with you, everywhere that you go.’"
     },
     {
       "verse": "10",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "until the Lord gives them a place to rest, as he has already given to you. When all the other tribes are safe in the land, you may return to the land east of the Jordan. Moses gave this land to you.’ Rest’ was very special to the people of Israel. It meant that they had a land where they could grow food and live safely."
+      "text": "until the Lord gives them a place to rest, as he has already given to you. When all the other tribes are safe in the land, you may return to the land east of the Jordan. Moses gave this land to you.’"
     },
     {
       "verse": "16",
@@ -70,13 +70,13 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "If anyone turns against you and he does not obey your commands, we will make sure that he dies. You must be very strong and brave.’ Print... Use screen font size Show All Comments Joshua IntroductionJoshua 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If anyone turns against you and he does not obey your commands, we will make sure that he dies. You must be very strong and brave.’"
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "Then Joshua sent two men to go out from Shittim. He sent them in secret to see what the land was like. He told them, ‘Go! Look at all the land. Look very carefully at Jericho city.’ When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there. Rahab probably had rooms in her home where visitors could sleep."
+      "text": "Then Joshua sent two men to go out from Shittim. He sent them in secret to see what the land was like. He told them, ‘Go! Look at all the land. Look very carefully at Jericho city.’When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there. When they came to Jericho city, they arrived at the house of a prostitute. Her name was Rahab. They stayed there."
     },
     {
       "verse": "2",
@@ -152,7 +152,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But if you tell anyone about us, we do not have to do what we have promised to you.’ The men told Rahab to tie a red string in her window. This was the sign that the Israelites would not kill her or her family."
+      "text": "But if you tell anyone about us, we do not have to do what we have promised to you.’"
     },
     {
       "verse": "21",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "They said to him, ‘We are sure that the Lord has given us the whole land. All the people there are very frightened of us.’ Print... Use screen font size Show All Comments Joshua 1Joshua 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They said to him, ‘We are sure that the Lord has given us the whole land. All the people there are very frightened of us.’"
     }
   ],
   "3": [
@@ -218,11 +218,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Now choose 12 men, one from each tribe of Israel's family."
+      "text": "men, one from each tribe of Israel's family."
     },
     {
       "verse": "13",
-      "text": "Watch the priests who are carrying the Covenant Box. As soon as their feet touch the water of the river, you will see that the water stops running. It will rise up like a wall.’ Many different tribes lived in the land of Canaan."
+      "text": "Watch the priests who are carrying the Covenant Box. As soon as their feet touch the water of the river, you will see that the water stops running. It will rise up like a wall.’"
     },
     {
       "verse": "14",
@@ -238,7 +238,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The priests stood in the middle of the river on dry ground, with the Lord's Covenant Box. While they stood there, all the Israelite people walked across the river on dry ground. In that way, the whole nation arrived on the other side of the river. Print... Use screen font size Show All Comments Joshua 2Joshua 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priests stood in the middle of the river on dry ground, with the Lord's Covenant Box. While they stood there, all the Israelite people walked across the river on dry ground. In that way, the whole nation arrived on the other side of the river."
     }
   ],
   "4": [
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So Joshua called the 12 men that he had chosen, one from each Israelite tribe."
+      "text": "men that he had chosen, one from each Israelite tribe."
     },
     {
       "verse": "5",
@@ -272,15 +272,15 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So the 12 men obeyed Joshua's command. They took 12 stones from the middle of the Jordan River, as the Lord had told Joshua. There was one stone for each Israelite tribe. They carried the stones to the place where the people had put their tents. They put the stones down there."
+      "text": "men obeyed Joshua's command. They took 12 stones from the middle of the Jordan River, as the Lord had told Joshua. There was one stone for each Israelite tribe. They carried the stones to the place where the people had put their tents. They put the stones down there."
     },
     {
       "verse": "9",
-      "text": "Joshua also made a heap of 12 stones in the middle of the Jordan River. He put them in the place where the priests with the Covenant Box had stood. Those stones are still there today. The stones were still there when this book was written."
+      "text": "stones in the middle of the Jordan River. He put them in the place where the priests with the Covenant Box had stood. Those stones are still there today."
     },
     {
       "verse": "10",
-      "text": "The priests had carried the Covenant Box into the middle of the river. They stood there while the people did everything that the Lord had told Joshua. That is what Moses had also told Joshua. The people crossed over the river quickly."
+      "text": "The priests had carried the Covenant Box into the middle of the river. They stood there while the people did everything that the Lord had told Joshua. That is what Moses had also told Joshua.The people crossed over the river quickly."
     },
     {
       "verse": "11",
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "About 40,000 men who had weapons crossed to the flat land near Jericho. They marched past the Lord's Covenant Box. The tribes of Reuben, Gad and half the tribe of Manasseh already had their own land on the east side of the Jordan River."
+      "text": "About 40,000 men who had weapons crossed to the flat land near Jericho. They marched past the Lord's Covenant Box."
     },
     {
       "verse": "14",
@@ -336,13 +336,13 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The Lord has done this so that all the nations of the world can see how powerful he is. He did it so that you would always obey him, the Lord your God.’ Print... Use screen font size Show All Comments Joshua 3Joshua 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord has done this so that all the nations of the world can see how powerful he is. He did it so that you would always obey him, the Lord your God.’"
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "Many people heard how the Lord had caused the Jordan River to become dry. This included all the Amorite kings on the west side of the Jordan River, and all the Canaanite kings who lived near the sea. They heard how the Lord had made the river become dry until all the Israelites had crossed to the other side. So the kings became very afraid of the Israelite people. They felt too weak to fight against them. These Amorite and Canaanite kings ruled people on the west side of the Jordan River. When they saw that the Israelites had crossed the Jordan River to their side, they became very afraid. Circumcision at Gilgal"
+      "text": "Many people heard how the Lord had caused the Jordan River to become dry. This included all the Amorite kings on the west side of the Jordan River, and all the Canaanite kings who lived near the sea. They heard how the Lord had made the river become dry until all the Israelites had crossed to the other side. So the kings became very afraid of the Israelite people. They felt too weak to fight against them."
     },
     {
       "verse": "2",
@@ -350,7 +350,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So Joshua made the knives and he circumcised the men at Gibeath Haaraloth. God told Abraham that he and his sons must circumcise all male children. They must do this when the children were eight days old. This showed that God had made a promise to them as his special people. See Genesis But they had not circumcised any children who were born while they travelled in the desert."
+      "text": "So Joshua made the knives and he circumcised the men at Gibeath Haaraloth."
     },
     {
       "verse": "4",
@@ -362,7 +362,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Israelites had travelled in the desert for 40 years. But all the men who were old enough to fight when they left Egypt had now died. This happened because they had not obeyed the Lord. The Lord had promised to give to them the land of Canaan, a land where there is plenty of food and drink. But he made a strong promise that those men would not see that land, because they had turned against him."
+      "text": "years. But all the men who were old enough to fight when they left Egypt had now died. This happened because they had not obeyed the Lord. The Lord had promised to give to them the land of Canaan, a land where there is plenty of food and drink. But he made a strong promise that those men would not see that land, because they had turned against him."
     },
     {
       "verse": "7",
@@ -370,11 +370,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "All of the Israelite men were circumcised. Then they stayed there in Gilgal until they were strong again."
+      "text": "All of the Israelite men were circumcised. Then they stayed there in Gilgal until they were strong again. So they called that place Gilgal, and it still has that name."
     },
     {
       "verse": "9",
-      "text": "The Lord said to Joshua, ‘This shows that you are no longer ashamed to be slaves, as you were in Egypt. Today I have taken away your shame.’ So they called that place Gilgal, and it still has that name. Gilgal means ‘taken away’."
+      "text": "The Lord said to Joshua, ‘This shows that you are no longer ashamed to be slaves, as you were in Egypt. Today I have taken away your shame.’So they called that place Gilgal, and it still has that name."
     },
     {
       "verse": "10",
@@ -386,7 +386,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The manna that they had been eating no longer appeared. The Israelite people never ate manna again. Now they could eat the food that was grown in Canaan. The Passover Festival was an important time when the Israelites ate a special meal. It helped them to remember how God had saved them. They had been slaves in Egypt. They remembered, too, how God had dried up the Red Sea. Then they could walk out of Egypt. Manna was food that God sent to the Israelites from the sky. It fed them all the time that they travelled through the desert. See Exodus The captain of the Lord's army"
+      "text": "The manna that they had been eating no longer appeared. The Israelite people never ate manna again. Now they could eat the food that was grown in Canaan."
     },
     {
       "verse": "13",
@@ -394,11 +394,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The man answered, ‘Neither. I am the captain of the Lord's army. Now I am here!’ Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do.’"
+      "text": "The man answered, ‘Neither. I am the captain of the Lord's army. Now I am here!’Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do.’ Joshua fell on the ground to worship the man and he said, ‘Sir, I am your servant. Tell me what I should do.’"
     },
     {
       "verse": "15",
-      "text": "The captain of the Lord's army said, ‘Remove your shoes from your feet. You are standing on holy ground.’ Joshua did that. Print... Use screen font size Show All Comments Joshua 4Joshua 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The captain of the Lord's army said, ‘Remove your shoes from your feet. You are standing on holy ground.’ Joshua did that."
     }
   ],
   "6": [
@@ -500,7 +500,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But Joshua kept Rahab safe, as well as her family and everyone who belonged to her. Rahab had hidden the men that Joshua sent to find out about Jericho city. Because she did that, her family still lives among the Israelites, even today. Rahab was a prostitute. But God saved her. She believed that God would keep her safe. See Hebrews"
+      "text": "But Joshua kept Rahab safe, as well as her family and everyone who belonged to her. Rahab had hidden the men that Joshua sent to find out about Jericho city. Because she did that, her family still lives among the Israelites, even today."
     },
     {
       "verse": "26",
@@ -508,7 +508,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So the Lord was with Joshua to help him. Joshua became famous everywhere in the land. Print... Use screen font size Show All Comments Joshua 5Joshua 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the Lord was with Joshua to help him. Joshua became famous everywhere in the land."
     }
   ],
   "7": [
@@ -530,7 +530,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "They chased the Israelites away from the gate of the city and they killed about 36 Israelite soldiers. They chased them down the hill as far as Shebarim. They killed the Israelites as they ran down the hill. When the people of Israel heard this, they became very frightened."
+      "text": "Israelite soldiers. They chased them down the hill as far as Shebarim. They killed the Israelites as they ran down the hill. When the people of Israel heard this, they became very frightened."
     },
     {
       "verse": "6",
@@ -546,7 +546,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Canaanites and the other tribes who live in this land will hear about what has happened. They will come to attack us and they will completely destroy us all. If that happens, nobody will ever respect your great name again!’ When Israelite people were very sad or upset, they tore their clothes and they put dirt on their heads."
+      "text": "The Canaanites and the other tribes who live in this land will hear about what has happened. They will come to attack us and they will completely destroy us all. If that happens, nobody will ever respect your great name again!’"
     },
     {
       "verse": "10",
@@ -610,11 +610,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Joshua said, ‘Why did you cause so much trouble to come to us? The Lord will certainly give you trouble today!’ Achor’ means trouble. Then all the Israelites threw stones at him until he died. They also killed his family and they burned all the bodies."
+      "text": "Joshua said, ‘Why did you cause so much trouble to come to us? The Lord will certainly give you trouble today!’Then all the Israelites threw stones at him until he died. They also killed his family and they burned all the bodies."
     },
     {
       "verse": "26",
-      "text": "They put a big heap of stones over him. They are still there today. That is why the place is still called ‘Trouble Valley’. Then the Lord was not angry with his people any more. Print... Use screen font size Show All Comments Joshua 6Joshua 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They put a big heap of stones over him. They are still there today. That is why the place is still called ‘Trouble Valley’. Then the Lord was not angry with his people any more."
     }
   ],
   "8": [
@@ -688,7 +688,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the Lord said to Joshua, ‘Hold out the spear that is in your hand. Point it towards Ai. I am now giving the city to you.’ So Joshua held out his spear towards Ai."
+      "text": "Then the Lord said to Joshua, ‘Hold out the spear that is in your hand. Point it towards Ai. I am now giving the city to you.’So Joshua held out his spear towards Ai. So Joshua held out his spear towards Ai."
     },
     {
       "verse": "19",
@@ -732,7 +732,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "He hanged the king of Ai on a tree. He left his body there until evening. At sunset, Joshua told his men to cut the body down. They threw it on the ground outside the city's gate. They covered it with a heap of stones. Those stones are still there today. Joshua reads God's law to the people"
+      "text": "He hanged the king of Ai on a tree. He left his body there until evening. At sunset, Joshua told his men to cut the body down. They threw it on the ground outside the city's gate. They covered it with a heap of stones. Those stones are still there today."
     },
     {
       "verse": "30",
@@ -756,7 +756,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Joshua read aloud every command that Moses had written. He read it to all the Israelite people. The women, children and the foreign people who lived with them also listened. See Deuteronomy See Deuteronomy God had punished the people of Israel because they did not obey him at Ai. They were very careful to do just what God had told them after that. They were very happy when God helped them to win the fight. When Joshua read the Law to them, they listened with great care. Print... Use screen font size Show All Comments Joshua 7Joshua 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Joshua read aloud every command that Moses had written. He read it to all the Israelite people. The women, children and the foreign people who lived with them also listened."
     }
   ],
   "9": [
@@ -790,7 +790,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Hivites said to Joshua, ‘If you agree, we will become your servants.’ Joshua asked them, ‘Who are you? Where do you come from?’"
+      "text": "The Hivites said to Joshua, ‘If you agree, we will become your servants.’Joshua asked them, ‘Who are you? Where do you come from?’ Joshua asked them, ‘Who are you? Where do you come from?’"
     },
     {
       "verse": "9",
@@ -830,7 +830,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Israelites did not attack them, because of the promise that their leaders had made. They had made a strong promise in the name of the Lord God of Israel that they would not kill the Gibeonites. The Israelite people were angry with their leaders, because of the agreement."
+      "text": "The Israelites did not attack them, because of the promise that their leaders had made. They had made a strong promise in the name of the Lord God of Israel that they would not kill the Gibeonites.The Israelite people were angry with their leaders, because of the agreement."
     },
     {
       "verse": "19",
@@ -866,7 +866,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Instead, they made the Gibeonites cut wood and fetch water, as servants for the Israelite people. They would also do this for the priests who served the Lord at his altar. They are still doing this, at the place that the Lord has chosen for his altar. Print... Use screen font size Show All Comments Joshua 8Joshua 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Instead, they made the Gibeonites cut wood and fetch water, as servants for the Israelite people. They would also do this for the priests who served the Lord at his altar. They are still doing this, at the place that the Lord has chosen for his altar."
     }
   ],
   "10": [
@@ -916,7 +916,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So the Lord caused the Israelites to win the fight against the Amorites. After the battle that day, Joshua stood in front of Israel and he prayed to the Lord. He said, ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley.’"
+      "text": "So the Lord caused the Israelites to win the fight against the Amorites. After the battle that day, Joshua stood in front of Israel and he prayed to the Lord. He said,‘Sun, stand still over Gibeon city.Moon, stand still over Aijalon valley.’ ‘Sun, stand still over Gibeon city. Moon, stand still over Aijalon valley.’"
     },
     {
       "verse": "13",
@@ -928,7 +928,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Joshua and all the Israelite army went back to their tents at Gilgal. The Israelites kill the five Amorite kings"
+      "text": "Then Joshua and all the Israelite army went back to their tents at Gilgal."
     },
     {
       "verse": "16",
@@ -944,7 +944,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But you must continue to chase after your enemies. Do not stop now! Catch them! Do not let them reach their cities where they will be safe. Remember that the Lord your God has caused you to win against them.’ Joshua wanted to wait until his army had finished chasing the Amorites."
+      "text": "But you must continue to chase after your enemies. Do not stop now! Catch them! Do not let them reach their cities where they will be safe. Remember that the Lord your God has caused you to win against them.’"
     },
     {
       "verse": "20",
@@ -976,7 +976,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "At sunset, Joshua told his men to take the kings down from the trees. They threw them into the cave where they had been hiding. They put big stones over the front of the cave. The stones are still there today. Joshua attacks other cities Joshua had destroyed the cities that were near to Gilgal. Now he attacked the cities that were far away."
+      "text": "At sunset, Joshua told his men to take the kings down from the trees. They threw them into the cave where they had been hiding. They put big stones over the front of the cave. The stones are still there today."
     },
     {
       "verse": "28",
@@ -1040,7 +1040,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "After this, Joshua and all Israel's army went back to their tents at Gilgal. Print... Use screen font size Show All Comments Joshua 9Joshua 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After this, Joshua and all Israel's army went back to their tents at Gilgal."
     }
   ],
   "11": [
@@ -1062,7 +1062,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "These kings all joined together to fight against the Israelites. They put up their tents near the water at Merom. Kinnereth was an old name for Galilee."
+      "text": "These kings all joined together to fight against the Israelites. They put up their tents near the water at Merom."
     },
     {
       "verse": "6",
@@ -1102,7 +1102,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Moses had told all the Lord's commands to Joshua. Joshua obeyed all the Lord's commands. He did everything that the Lord had told Moses. The land that Joshua took for the Israelites"
+      "text": "Moses had told all the Lord's commands to Joshua. Joshua obeyed all the Lord's commands. He did everything that the Lord had told Moses."
     },
     {
       "verse": "16",
@@ -1134,7 +1134,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "In that way, Joshua took the whole land. The Lord had promised Moses that he would give the land to his people. Joshua gave a part of the land to each tribe, for them to live in. After all that, the people did not have to fight any more. Print... Use screen font size Show All Comments Joshua 10Joshua 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "In that way, Joshua took the whole land. The Lord had promised Moses that he would give the land to his people. Joshua gave a part of the land to each tribe, for them to live in.After all that, the people did not have to fight any more."
     }
   ],
   "12": [
@@ -1160,11 +1160,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Lord's servant, Moses, and the Israelites won against these kings. Moses gave their land to the tribes of Reuben, Gad and half the tribe of Manasseh to live in. Verses 1-6 is a list of the two kings that Moses won against. Kingdoms on the west side of the Jordan River"
+      "text": "The Lord's servant, Moses, and the Israelites won against these kings. Moses gave their land to the tribes of Reuben, Gad and half the tribe of Manasseh to live in."
     },
     {
       "verse": "7",
-      "text": "Joshua and the Israelites killed these kings who ruled on the west side of the Jordan River. Joshua gave these kings' land to the Israelite tribes for them to live in. He gave a different piece of land to each tribe. Their land went from Baal Gad in the Lebanon valley to Halak mountain, which is near Seir."
+      "text": "Joshua and the Israelites killed these kings who ruled on the west side of the Jordan River. Joshua gave these kings' land to the Israelite tribes for them to live in. He gave a different piece of land to each tribe. Their land went from Baal Gad in the Lebanon valley to Halak mountain, which is near Seir. kings."
     },
     {
       "verse": "8",
@@ -1172,7 +1172,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Joshua took the land of these kings: king of Jericho,king of Ai (near Bethel),"
+      "text": "Joshua took the land of these kings:king of Jericho,king of Ai (near Bethel),"
     },
     {
       "verse": "10",
@@ -1232,7 +1232,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "king of Tirzah.Joshua and the Israelites took the land of these 31 kings. Verses 7-24 is a list of the 31 kings that Joshua won against. Print... Use screen font size Show All Comments Joshua 11Joshua 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "king of Tirzah.Joshua and the Israelites took the land of these 31 kings."
     }
   ],
   "13": [
@@ -1254,7 +1254,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "There is also the land of the Gebalites, and all of Lebanon in the east. That land goes from Baal Gad at the side of Hermon mountain, to Lebo-Hamath. We do not know how old Joshua was. Caleb was 85 (see Joshua The Avvites were a group of people who lived near Canaan."
+      "text": "There is also the land of the Gebalites, and all of Lebanon in the east. That land goes from Baal Gad at the side of Hermon mountain, to Lebo-Hamath."
     },
     {
       "verse": "6",
@@ -1262,7 +1262,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Each of the nine tribes, and the half tribe of Manasseh, must receive its own part of the land.’ The other tribes (Reuben, Gad and half Manasseh) had already received their land on the east side of the Jordan River. How Moses had given land to some tribes"
+      "text": "Each of the nine tribes, and the half tribe of Manasseh, must receive its own part of the land.’"
     },
     {
       "verse": "8",
@@ -1290,7 +1290,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Moses had given no land to the tribe of Levi. This was because God had made the Levites a promise. He had made a rule that they would receive their food from the sacrifices and offerings that the other tribes gave to the Lord God of Israel. The Levites received that, instead of land for themselves. Land for Reuben's tribe"
+      "text": "Moses had given no land to the tribe of Levi. This was because God had made the Levites a promise. He had made a rule that they would receive their food from the sacrifices and offerings that the other tribes gave to the Lord God of Israel. The Levites received that, instead of land for themselves."
     },
     {
       "verse": "15",
@@ -1298,7 +1298,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He gave them the land from Aroer by the edge of the Arnon valley and the town in the middle of the valley."
+      "text": "He gave them the land from Aroer by the edge of the Arnon valley and the town in the middle of the valley. Moses gave these towns and their villages to the tribe of Reuben, family by family."
     },
     {
       "verse": "17",
@@ -1326,7 +1326,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The border of Reuben's land was the Jordan River. You can read about Balaam in Numbers 22. Moses gave these towns and their villages to the tribe of Reuben, family by family. Land for Gad's tribe"
+      "text": "The border of Reuben's land was the Jordan River.Moses gave these towns and their villages to the tribe of Reuben, family by family."
     },
     {
       "verse": "24",
@@ -1346,7 +1346,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Moses gave these towns and their villages to the tribe of Gad, family by family. Land for half of Manasseh's tribe"
+      "text": "Moses gave these towns and their villages to the tribe of Gad, family by family."
     },
     {
       "verse": "29",
@@ -1366,7 +1366,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Moses gave no part of the land to Levi's tribe. The Lord himself, Israel's God, would be their part, as he had promised them. Print... Use screen font size Show All Comments Joshua 12Joshua 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses gave no part of the land to Levi's tribe. The Lord himself, Israel's God, would be their part, as he had promised them."
     }
   ],
   "14": [
@@ -1388,7 +1388,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The leaders of the Israelites gave a part of the land to each tribe, as the Lord had told Moses to do. Manasseh and Ephraim were Joseph's sons. Joshua gives Hebron to Caleb"
+      "text": "The leaders of the Israelites gave a part of the land to each tribe, as the Lord had told Moses to do."
     },
     {
       "verse": "6",
@@ -1396,7 +1396,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I was 40 years old when Moses sent me from there to explore the land of Canaan. I brought back to him a true report. I was sure that we could take the land."
+      "text": "years old when Moses sent me from there to explore the land of Canaan. I brought back to him a true report. I was sure that we could take the land."
     },
     {
       "verse": "8",
@@ -1404,11 +1404,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So Moses made a promise to me on that day. He said, “The land that your feet have walked on will always belong to you and to your children. That is because you have trusted the Lord your God.” See Numbers and Deuteronomy"
+      "text": "So Moses made a promise to me on that day. He said, “The land that your feet have walked on will always belong to you and to your children. That is because you have trusted the Lord your God.”"
     },
     {
       "verse": "10",
-      "text": "The Lord has kept me alive for 45 years since Moses said this. During that time, the Israelites were travelling in the desert. Now I am 85 years old."
+      "text": "years since Moses said this. During that time, the Israelites were travelling in the desert. Now I am 85 years old."
     },
     {
       "verse": "11",
@@ -1420,7 +1420,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then Joshua blessed Caleb, Jephunneh's son. Joshua gave Hebron to him as his part of the land."
+      "text": "Then Joshua blessed Caleb, Jephunneh's son. Joshua gave Hebron to him as his part of the land. After that, there were no more battles in Canaan."
     },
     {
       "verse": "14",
@@ -1428,7 +1428,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "(Before that, Hebron had been called ‘Kiriath Arba’. Arba was a famous Anakite.) After that, there were no more battles in Canaan. Print... Use screen font size Show All Comments Joshua 13Joshua 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "(Before that, Hebron had been called ‘Kiriath Arba’. Arba was a famous Anakite.)After that, there were no more battles in Canaan."
     }
   ],
   "15": [
@@ -1450,7 +1450,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Judah's east border went from the Salt Sea as far as the end of the Jordan River. Their north border started from the end of the Jordan at the Salt Sea."
+      "text": "Judah's east border went from the Salt Sea as far as the end of the Jordan River.Their north border started from the end of the Jordan at the Salt Sea."
     },
     {
       "verse": "6",
@@ -1474,11 +1474,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then it went out to the hills north of Ekron, and on towards Shikkeron. It went past Baalah mountain, as far as Jabneel. Judah's north border ended at the sea. Achan and his family had died in the valley of Achor. They had taken things from Jericho. But God had said that they must destroy those things (Joshua So the valley was called ‘Trouble Valley’."
+      "text": "Then it went out to the hills north of Ekron, and on towards Shikkeron. It went past Baalah mountain, as far as Jabneel. Judah's north border ended at the sea."
     },
     {
       "verse": "12",
-      "text": "The west border of Judah's land was the Mediterranean Sea. Those were the borders of the land which Judah's tribe and its clans received. Caleb takes the cities of Hebron and Debir See Judges"
+      "text": "The west border of Judah's land was the Mediterranean Sea.Those were the borders of the land which Judah's tribe and its clans received. Those were the borders of the land which Judah's tribe and its clans received."
     },
     {
       "verse": "13",
@@ -1506,7 +1506,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "She said, ‘Please be kind and give me a special gift. You have given me some land in the Negev desert. Now please give me a place with springs so that I have water for the land.’ So Caleb gave her some land with springs, on high land and on low land. Judah's towns"
+      "text": "She said, ‘Please be kind and give me a special gift. You have given me some land in the Negev desert. Now please give me a place with springs so that I have water for the land.’ So Caleb gave her some land with springs, on high land and on low land."
     },
     {
       "verse": "20",
@@ -1514,11 +1514,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "These towns were in the south of Judah's land, near the border of Edom: Kabzeel, Eder, Jagur,"
+      "text": "These towns were in the south of Judah's land, near the border of Edom:Kabzeel, Eder, Jagur,"
     },
     {
       "verse": "22",
-      "text": "Kinah, Dimonah, Adadah,"
+      "text": "Kinah, Dimonah, Adadah, towns with their villages."
     },
     {
       "verse": "23",
@@ -1558,15 +1558,15 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Lebaoth, Shilhim, Ain and Rimmon. That is 29 towns with their villages."
+      "text": "Lebaoth, Shilhim, Ain and Rimmon.That is 29 towns with their villages."
     },
     {
       "verse": "33",
-      "text": "These towns were in the low hills in the west: Eshtaol, Zorah, Ashnah,"
+      "text": "These towns were in the low hills in the west:Eshtaol, Zorah, Ashnah,"
     },
     {
       "verse": "34",
-      "text": "Zanoah, En Gannim, Tappuah, Enam,"
+      "text": "Zanoah, En Gannim, Tappuah, Enam, towns and villages."
     },
     {
       "verse": "35",
@@ -1574,11 +1574,11 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Also he gave them Shaaraim, Adithaim and Gederah, (or Gederothaim). There were 14 towns and villages."
+      "text": "Also he gave them Shaaraim, Adithaim and Gederah, (or Gederothaim).There were 14 towns and villages."
     },
     {
       "verse": "37",
-      "text": "He gave them Zenan, Hadashah, Migdal Gad,"
+      "text": "He gave them Zenan, Hadashah, Migdal Gad, towns and their villages."
     },
     {
       "verse": "38",
@@ -1594,11 +1594,11 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "Also he gave them Gederoth, Beth Dagon, Naamah and Makkedah. There were 16 towns and their villages."
+      "text": "Also he gave them Gederoth, Beth Dagon, Naamah and Makkedah.There were 16 towns and their villages."
     },
     {
       "verse": "42",
-      "text": "He also gave them Libnah, Ether, Ashan,"
+      "text": "He also gave them Libnah, Ether, Ashan, There were nine towns with their villages."
     },
     {
       "verse": "43",
@@ -1606,7 +1606,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "Keilah, Aczib and Mareshah. There were nine towns with their villages."
+      "text": "Keilah, Aczib and Mareshah.There were nine towns with their villages."
     },
     {
       "verse": "45",
@@ -1622,11 +1622,11 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "These towns were in the hill country: Shamir, Jattir, Socoh,"
+      "text": "These towns were in the hill country:Shamir, Jattir, Socoh,"
     },
     {
       "verse": "49",
-      "text": "Dannah, Kiriath Sannah (that is, Debir),"
+      "text": "Dannah, Kiriath Sannah (that is, Debir), towns and their villages."
     },
     {
       "verse": "50",
@@ -1634,11 +1634,11 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Goshen, Holon and Giloh. There were 11 towns and their villages."
+      "text": "Goshen, Holon and Giloh.There were 11 towns and their villages."
     },
     {
       "verse": "52",
-      "text": "He also gave them Arab, Dumah, Eshan,"
+      "text": "He also gave them Arab, Dumah, Eshan, There were nine towns and their villages."
     },
     {
       "verse": "53",
@@ -1646,11 +1646,11 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "Humtah, Kiriath Arba (that is, Hebron) and Zior. There were nine towns and their villages."
+      "text": "Humtah, Kiriath Arba (that is, Hebron) and Zior.There were nine towns and their villages."
     },
     {
       "verse": "55",
-      "text": "Also Maon, Carmel, Ziph, Juttah,"
+      "text": "Also Maon, Carmel, Ziph, Juttah, There were ten towns and their villages."
     },
     {
       "verse": "56",
@@ -1658,37 +1658,37 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "Kain, Gibeah and Timnah. There were ten towns and their villages."
+      "text": "Kain, Gibeah and Timnah.There were ten towns and their villages."
     },
     {
       "verse": "58",
-      "text": "And he gave them Halhul, Beth Zur, Gedor,"
+      "text": "And he gave them Halhul, Beth Zur, Gedor, There were six towns and their villages."
     },
     {
       "verse": "59",
-      "text": "Maarath, Beth Anoth and Eltekon. There were six towns and their villages."
+      "text": "Maarath, Beth Anoth and Eltekon.There were six towns and their villages."
     },
     {
       "verse": "60",
-      "text": "And Kiriath Baal, (that is, Kiriath-Jearim) and Rabbah. There were two towns and their villages."
+      "text": "And Kiriath Baal, (that is, Kiriath-Jearim) and Rabbah.There were two towns and their villages. There were two towns and their villages."
     },
     {
       "verse": "61",
-      "text": "These towns were in the desert: Beth Arabah, Middin, Secacah,"
+      "text": "These towns were in the desert:Beth Arabah, Middin, Secacah,"
     },
     {
       "verse": "62",
-      "text": "Nibshan, Salt city, and En Gedi. There were six towns and their villages."
+      "text": "Nibshan, Salt city, and En Gedi.There were six towns and their villages. There were six towns and their villages."
     },
     {
       "verse": "63",
-      "text": "But the men of Judah's tribe could not chase the Jebusites out of Jerusalem. As a result, the Jebusites still live there, together with the people of Judah. Print... Use screen font size Show All Comments Joshua 14Joshua 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the men of Judah's tribe could not chase the Jebusites out of Jerusalem. As a result, the Jebusites still live there, together with the people of Judah."
     }
   ],
   "16": [
     {
       "verse": "1",
-      "text": "This is the land that Joshua gave to the descendants of Joseph. Their land went from the Jordan River at Jericho, and from there it went through the desert into the hills of Bethel. The descendants of Joseph became two tribes, Ephraim and Manasseh. Ephraim and Manasseh were Joseph's sons."
+      "text": "This is the land that Joshua gave to the descendants of Joseph. Their land went from the Jordan River at Jericho, and from there it went through the desert into the hills of Bethel."
     },
     {
       "verse": "2",
@@ -1700,11 +1700,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Joshua gave this land to Manasseh and Ephraim, the sons of Joseph. It was for them and their descendants. Land for Ephraim's tribe"
+      "text": "Joshua gave this land to Manasseh and Ephraim, the sons of Joseph. It was for them and their descendants."
     },
     {
       "verse": "5",
-      "text": "Joshua gave this land to the tribe of Ephraim, clan by clan: The border of their land went from Ataroth Addar in the east to Beth Horon."
+      "text": "Joshua gave this land to the tribe of Ephraim, clan by clan:The border of their land went from Ataroth Addar in the east to Beth Horon."
     },
     {
       "verse": "6",
@@ -1716,7 +1716,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "From Tappuah, the border continued to the west, to the stream of Kanah. From there, it continued to the sea. That is the land that Joshua gave to the families of the tribe of Ephraim."
+      "text": "From Tappuah, the border continued to the west, to the stream of Kanah. From there, it continued to the sea.That is the land that Joshua gave to the families of the tribe of Ephraim."
     },
     {
       "verse": "9",
@@ -1724,7 +1724,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But the tribe of Ephraim did not chase out the Canaanite people who lived in Gezer. Canaanite people still live there with the people of Ephraim, but they have to work as their slaves. Print... Use screen font size Show All Comments Joshua 15Joshua 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the tribe of Ephraim did not chase out the Canaanite people who lived in Gezer. Canaanite people still live there with the people of Ephraim, but they have to work as their slaves."
     }
   ],
   "17": [
@@ -1778,7 +1778,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When the Israelites became stronger, they made the Canaanites work for them as slaves. But they never completely chased the Canaanites out from those towns. Joseph's descendants ask for more land"
+      "text": "When the Israelites became stronger, they made the Canaanites work for them as slaves. But they never completely chased the Canaanites out from those towns."
     },
     {
       "verse": "14",
@@ -1798,7 +1798,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You may take the whole of the hill country as your land. You can cut down the trees of the forests and live there. It is true that the Canaanites are strong fighters and they have iron chariots. But you will be strong enough to chase them out.’ Print... Use screen font size Show All Comments Joshua 16Joshua 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You may take the whole of the hill country as your land. You can cut down the trees of the forests and live there. It is true that the Canaanites are strong fighters and they have iron chariots. But you will be strong enough to chase them out.’"
     }
   ],
   "18": [
@@ -1808,7 +1808,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "But there were still seven tribes that Joshua had not yet given a part of the land for themselves. Shiloh was near the middle of the land of Canaan. It was easy for everyone to get there."
+      "text": "But there were still seven tribes that Joshua had not yet given a part of the land for themselves."
     },
     {
       "verse": "3",
@@ -1828,7 +1828,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Levites will not have any land of their own. Their gift from the Lord is to serve him. Gad, Reuben and half the tribe of Manasseh already have their land on the east side of the Jordan River. The Lord's servant, Moses, gave it to them.’ Judah, Ephraim and Manasseh had already received their land. See Joshua 16-17."
+      "text": "The Levites will not have any land of their own. Their gift from the Lord is to serve him. Gad, Reuben and half the tribe of Manasseh already have their land on the east side of the Jordan River. The Lord's servant, Moses, gave it to them.’"
     },
     {
       "verse": "8",
@@ -1840,7 +1840,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "There at Shiloh, Joshua used lots to see how the Lord wanted to divide the land. He told each of the seven Israelite tribes which part of the land they would receive. Land for Benjamin's tribe"
+      "text": "There at Shiloh, Joshua used lots to see how the Lord wanted to divide the land. He told each of the seven Israelite tribes which part of the land they would receive."
     },
     {
       "verse": "11",
@@ -1880,15 +1880,15 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The east border of their land was the Jordan River. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe."
+      "text": "The east border of their land was the Jordan River.Those are the borders of the land that Joshua gave to the families of Benjamin's tribe. Those are the borders of the land that Joshua gave to the families of Benjamin's tribe."
     },
     {
       "verse": "21",
-      "text": "These are the cities that Joshua gave to the tribe of Benjamin: Jericho, Beth Hoglah, Emek Keziz,"
+      "text": "These are the cities that Joshua gave to the tribe of Benjamin:Jericho, Beth Hoglah, Emek Keziz,"
     },
     {
       "verse": "22",
-      "text": "Beth Arabah, Zemaraim, Bethel,"
+      "text": "Beth Arabah, Zemaraim, Bethel, towns and their villages."
     },
     {
       "verse": "23",
@@ -1896,11 +1896,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Kephar, Ammoni, Ophni and Geba. There were 12 towns and their villages."
+      "text": "Kephar, Ammoni, Ophni and Geba.There were 12 towns and their villages."
     },
     {
       "verse": "25",
-      "text": "Gibeon, Ramah, Beeroth,"
+      "text": "Gibeon, Ramah, Beeroth, towns and their villages. Joshua gave these cities to Benjamin's tribe, for each clan to live in."
     },
     {
       "verse": "26",
@@ -1912,7 +1912,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Zelah, Haeleph, the Jebusite city (that is, Jerusalem), Gibeah and Kiriath. There were 14 towns and their villages. Joshua gave these cities to Benjamin's tribe, for each clan to live in. Print... Use screen font size Show All Comments Joshua 17Joshua 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Zelah, Haeleph, the Jebusite city (that is, Jerusalem), Gibeah and Kiriath.There were 14 towns and their villages.Joshua gave these cities to Benjamin's tribe, for each clan to live in."
     }
   ],
   "19": [
@@ -1922,11 +1922,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "It included these towns: Beersheba (also called Sheba), Moladah,"
+      "text": "It included these towns:Beersheba (also called Sheba), Moladah,"
     },
     {
       "verse": "3",
-      "text": "Hazar-Shual, Balah, Ezem,"
+      "text": "Hazar-Shual, Balah, Ezem, towns and their villages."
     },
     {
       "verse": "4",
@@ -1938,23 +1938,23 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Beth Lebaoth and Sharuhen. There were 13 towns and their villages."
+      "text": "Beth Lebaoth and Sharuhen.There were 13 towns and their villages."
     },
     {
       "verse": "7",
-      "text": "He also gave them Ain, Rimmon, Ether and Ashan. There were four towns and their villages."
+      "text": "He also gave them Ain, Rimmon, Ether and Ashan.There were four towns and their villages."
     },
     {
       "verse": "8",
-      "text": "This included all the villages near them as far as Baalath Beer (also called Ramah, in the Negev). That was the land that Joshua gave to the families of Simeon's tribe."
+      "text": "This included all the villages near them as far as Baalath Beer (also called Ramah, in the Negev).That was the land that Joshua gave to the families of Simeon's tribe."
     },
     {
       "verse": "9",
-      "text": "Because Judah had received more land than they needed, Joshua took some of their land for Simeon. So Simeon's tribe lived inside the land that Joshua had given to Judah. Simeon was the smallest tribe. Land for Zebulun's tribe"
+      "text": "Because Judah had received more land than they needed, Joshua took some of their land for Simeon. So Simeon's tribe lived inside the land that Joshua had given to Judah."
     },
     {
       "verse": "10",
-      "text": "The next part of the land was for Zebulun's tribe, clan by clan. The border of their land went as far as Sarid."
+      "text": "The next part of the land was for Zebulun's tribe, clan by clan. The border of their land went as far as Sarid. towns and their villages."
     },
     {
       "verse": "11",
@@ -1974,15 +1974,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Their land included these towns: Kattath, Nahalal, Shimron, Idalah and Bethlehem. There were 12 towns and their villages."
+      "text": "Their land included these towns: Kattath, Nahalal, Shimron, Idalah and Bethlehem.There were 12 towns and their villages."
     },
     {
       "verse": "16",
-      "text": "That was the land that Joshua gave to the families of Zebulun's tribe, as well as the towns and their villages. Land for Issachar's tribe"
+      "text": "That was the land that Joshua gave to the families of Zebulun's tribe, as well as the towns and their villages."
     },
     {
       "verse": "17",
-      "text": "The next part of the land was for Issachar's tribe, clan by clan."
+      "text": "The next part of the land was for Issachar's tribe, clan by clan. towns and their villages."
     },
     {
       "verse": "18",
@@ -2002,11 +2002,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The border of their land touched Tabor, Shahazumah and Beth Shemesh. It ended at the Jordan River. There were 16 towns and their villages."
+      "text": "The border of their land touched Tabor, Shahazumah and Beth Shemesh. It ended at the Jordan River.There were 16 towns and their villages."
     },
     {
       "verse": "23",
-      "text": "That was the land that Joshua gave to the families of Issachar's tribe, as well as the towns and their villages. Land for Asher's tribe"
+      "text": "That was the land that Joshua gave to the families of Issachar's tribe, as well as the towns and their villages."
     },
     {
       "verse": "24",
@@ -2038,7 +2038,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "That was the land that Joshua gave to the families of Asher's tribe, as well as the towns and their villages. Land for Naphtali's tribe"
+      "text": "That was the land that Joshua gave to the families of Asher's tribe, as well as the towns and their villages."
     },
     {
       "verse": "32",
@@ -2070,7 +2070,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "That was the land that Joshua gave to the families of Naphtali's tribe, as well as the towns and their villages. Land for Dan's tribe"
+      "text": "That was the land that Joshua gave to the families of Naphtali's tribe, as well as the towns and their villages."
     },
     {
       "verse": "40",
@@ -2106,7 +2106,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "That was the land that Joshua gave to the families of Dan's tribe, as well as the towns and their villages. Land for Joshua"
+      "text": "That was the land that Joshua gave to the families of Dan's tribe, as well as the towns and their villages."
     },
     {
       "verse": "49",
@@ -2118,7 +2118,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "That is the list of all the pieces of land that each tribe received. Eleazar the priest, Joshua, son of Nun, and the Israelite leaders used lots to decide which part of the land was for each tribe. They did this in Shiloh, in front of the Tent of Meeting. The Lord was there with them. In that way, they finished giving each tribe a part of the land. Print... Use screen font size Show All Comments Joshua 18Joshua 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is the list of all the pieces of land that each tribe received. Eleazar the priest, Joshua, son of Nun, and the Israelite leaders used lots to decide which part of the land was for each tribe. They did this in Shiloh, in front of the Tent of Meeting. The Lord was there with them. In that way, they finished giving each tribe a part of the land."
     }
   ],
   "20": [
@@ -2132,7 +2132,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Anyone can be safe in these cities if he has killed someone but he did not mean to kill. A person like that must run to one of these towns and he will be safe from the dead person's relative. Moses' law said that anyone who killed somebody must die. See Leviticus A relative of the dead person had to kill him. See Numbers"
+      "text": "Anyone can be safe in these cities if he has killed someone but he did not mean to kill. A person like that must run to one of these towns and he will be safe from the dead person's relative."
     },
     {
       "verse": "4",
@@ -2156,7 +2156,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Any Israelite or foreign person living in Israel could run to these cities and be safe. They may have killed someone, but they did not mean to kill them. If they run to these cities, the dead person's relative could not kill them. The judges in the city had to decide whether a killer was guilty of murder. Nobody could kill them before the judges decided. Print... Use screen font size Show All Comments Joshua 19Joshua 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Any Israelite or foreign person living in Israel could run to these cities and be safe. They may have killed someone, but they did not mean to kill them. If they run to these cities, the dead person's relative could not kill them. The judges in the city had to decide whether a killer was guilty of murder. Nobody could kill them before the judges decided."
     }
   ],
   "21": [
@@ -2166,7 +2166,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They met at Shiloh in the land of Canaan. The Levites said, ‘The Lord told Moses that you must give us towns to live in, as well as land for our animals.’ The Levites did not have any land of their own."
+      "text": "They met at Shiloh in the land of Canaan. The Levites said, ‘The Lord told Moses that you must give us towns to live in, as well as land for our animals.’"
     },
     {
       "verse": "3",
@@ -2182,11 +2182,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then they gave 13 towns to the descendants of Gershon. Those towns came from the tribes of Issachar, Asher, Naphtali and the east half of Manasseh in Bashan."
+      "text": "towns to the descendants of Gershon. Those towns came from the tribes of Issachar, Asher, Naphtali and the east half of Manasseh in Bashan."
     },
     {
       "verse": "7",
-      "text": "They gave 12 towns to the descendants of Merari. Those towns came from the tribes of Reuben, Gad and Zebulun."
+      "text": "towns to the descendants of Merari. Those towns came from the tribes of Reuben, Gad and Zebulun."
     },
     {
       "verse": "8",
@@ -2290,7 +2290,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "So the clans of Gershon received 13 cities with their fields."
+      "text": "cities with their fields."
     },
     {
       "verse": "34",
@@ -2318,11 +2318,11 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "So the clans of Merari received 12 towns. That was all the Levite clans."
+      "text": "towns. That was all the Levite clans."
     },
     {
       "verse": "41",
-      "text": "The Levites received 48 towns in the land of the Israelite people."
+      "text": "towns in the land of the Israelite people."
     },
     {
       "verse": "42",
@@ -2338,7 +2338,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "The Lord did all the good things that he had promised to do for the people of Israel. He did not fail to do anything that he had promised. Print... Use screen font size Show All Comments Joshua 20Joshua 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord did all the good things that he had promised to do for the people of Israel. He did not fail to do anything that he had promised."
     }
   ],
   "22": [
@@ -2360,7 +2360,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But you must be very careful to obey the rules and the laws that Moses gave to you. You must love the Lord your God. You must obey the rules and commands that he has given to us. You must worship him and serve him with everything that you have.’ See Numbers"
+      "text": "But you must be very careful to obey the rules and the laws that Moses gave to you. You must love the Lord your God. You must obey the rules and commands that he has given to us. You must worship him and serve him with everything that you have.’"
     },
     {
       "verse": "6",
@@ -2376,7 +2376,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So the tribes of Reuben, Gad and half the tribe of Manasseh left the other Israelites in Shiloh, in the land of Canaan. They returned to their own land in Gilead. Moses had given this land to them, as the Lord had told him. An altar causes trouble"
+      "text": "So the tribes of Reuben, Gad and half the tribe of Manasseh left the other Israelites in Shiloh, in the land of Canaan. They returned to their own land in Gilead. Moses had given this land to them, as the Lord had told him."
     },
     {
       "verse": "10",
@@ -2396,7 +2396,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "10 Israelite leaders went with him, one man from each of their tribes. Each man was a leader of his own clan."
+      "text": "Israelite leaders went with him, one man from each of their tribes. Each man was a leader of his own clan."
     },
     {
       "verse": "15",
@@ -2412,7 +2412,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Now you are doing another bad thing. You no longer want to obey the Lord. You are turning against him today. So tomorrow the Lord may punish us all! See Deuteronomy See Numbers"
+      "text": "Now you are doing another bad thing. You no longer want to obey the Lord. You are turning against him today. So tomorrow the Lord may punish us all!"
     },
     {
       "verse": "19",
@@ -2420,7 +2420,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Remember the time when Achan, son of Zerah, took things that belonged to God for himself. He refused to obey God's command about Jericho's valuable things. Then God became angry with all the people of Israel. Achan died because of his sin, but he was not the only one.’ See Joshua"
+      "text": "Remember the time when Achan, son of Zerah, took things that belonged to God for himself. He refused to obey God's command about Jericho's valuable things. Then God became angry with all the people of Israel. Achan died because of his sin, but he was not the only one.’"
     },
     {
       "verse": "21",
@@ -2476,7 +2476,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The people of Reuben and Gad gave their altar a name, because they wanted to remember that the Lord is their God. So they called the altar ‘Remember’. Print... Use screen font size Show All Comments Joshua 21Joshua 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The people of Reuben and Gad gave their altar a name, because they wanted to remember that the Lord is their God. So they called the altar ‘Remember’."
     }
   ],
   "23": [
@@ -2486,7 +2486,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "One day, Joshua called all the leaders to meet with him. They were the leaders of Israel's tribes and clans, the judges and the officers. He said to them, ‘I am now very old."
+      "text": "One day, Joshua called all the leaders to meet with him. They were the leaders of Israel's tribes and clans, the judges and the officers. He said to them,‘I am now very old."
     },
     {
       "verse": "3",
@@ -2542,7 +2542,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "You must obey the rules that he commanded you to obey in his covenant. You must not serve or worship other gods. If you turn against him, the Lord your God will be very angry with you. Then very soon none of you will remain in this good land that he has given to you.’ Print... Use screen font size Show All Comments Joshua 22Joshua 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You must obey the rules that he commanded you to obey in his covenant. You must not serve or worship other gods. If you turn against him, the Lord your God will be very angry with you. Then very soon none of you will remain in this good land that he has given to you.’"
     }
   ],
   "24": [
@@ -2552,7 +2552,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Joshua said to the people, ‘This is what the Lord, Israel's God, says: Shechem was an important place. When Abraham came to Shechem, God had said to him, ‘I will give this land to your people.’ See Genesis Now the people lived in the land. “A long time ago, your ancestors lived on the other side of the Euphrates river. They included Terah who was the father of Abraham and Nahor. They worshipped other gods."
+      "text": "Joshua said to the people, ‘This is what the Lord, Israel's God, says:“A long time ago, your ancestors lived on the other side of the Euphrates river. They included Terah who was the father of Abraham and Nahor. They worshipped other gods."
     },
     {
       "verse": "3",
@@ -2596,7 +2596,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The land was a gift from me. I gave you a land where you had not worked in its fields. I gave you towns to live in that you did not build. You eat grapes and olives from trees that you did not plant.” ’ fear’ or ‘insects that bite’"
+      "text": "The land was a gift from me. I gave you a land where you had not worked in its fields. I gave you towns to live in that you did not build. You eat grapes and olives from trees that you did not plant.” ’"
     },
     {
       "verse": "14",
@@ -2632,7 +2632,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Joshua said to them, ‘You yourselves have chosen to serve the Lord. Agree now that you have done that.’ They replied, ‘Yes, we agree!’"
+      "text": "Joshua said to them, ‘You yourselves have chosen to serve the Lord. Agree now that you have done that.’They replied, ‘Yes, we agree!’ They replied, ‘Yes, we agree!’"
     },
     {
       "verse": "23",
@@ -2652,11 +2652,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Joshua said to all the people, ‘Look at this stone! It has heard everything that the Lord has said to us today! It will speak against you if you fail to obey your God!’ The stone could not really hear or speak. But Joshua wanted the people to remember what they had promised to God. The stone would help them to remember their promises."
+      "text": "Joshua said to all the people, ‘Look at this stone! It has heard everything that the Lord has said to us today! It will speak against you if you fail to obey your God!’"
     },
     {
       "verse": "28",
-      "text": "Then Joshua sent the people away. They went to the parts of the land that now belonged to each of them. Joshua dies"
+      "text": "Then Joshua sent the people away. They went to the parts of the land that now belonged to each of them."
     },
     {
       "verse": "29",
@@ -2672,11 +2672,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The Israelites had brought Joseph's bones up from Egypt, to bury him at Shechem. This land was in the field that Jacob had bought from the sons of Hamor, Shechem's father. Jacob had paid them 100 pieces of silver for the land. Now the land belonged to Joseph's descendants. Genesis"
+      "text": "The Israelites had brought Joseph's bones up from Egypt, to bury him at Shechem. This land was in the field that Jacob had bought from the sons of Hamor, Shechem's father. Jacob had paid them 100 pieces of silver for the land. Now the land belonged to Joseph's descendants."
     },
     {
       "verse": "33",
-      "text": "Aaron's son, Eleazar, also died. The people buried him at Gibeah, in the hill country of Ephraim. That land had been given to Eleazar's son Phinehas. Print... Use screen font size Show All Comments Joshua 23Judges Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Aaron's son, Eleazar, also died. The people buried him at Gibeah, in the hill country of Ephraim. That land had been given to Eleazar's son Phinehas."
     }
   ]
 };

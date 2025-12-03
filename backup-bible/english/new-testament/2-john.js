@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I love you because we have all come to understand what is true. It will remain with us for ever. When John wrote this letter to ‘a special lady’, he may have been writing it to a group of believers. Or he may have been writing it to someone who had a home where the believers met."
+      "text": "I love you because we have all come to understand what is true. It will remain with us for ever."
     },
     {
       "verse": "3",
@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I was very happy to hear about some of your children. I am happy because they are living in a good way. They are obeying the true message about God. They are doing what God our Father has told us to do. Do not believe false teachers"
+      "text": "I was very happy to hear about some of your children. I am happy because they are living in a good way. They are obeying the true message about God. They are doing what God our Father has told us to do."
     },
     {
       "verse": "5",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The believers here say ‘hello’ to you. They are the children of your sister that God has chosen. John talks about the group of believers who are with him as the sister of the lady that he is writing the letter to. The words ‘lady’ (in verse 1) and ‘sister’ (in verse 13) probably mean the groups of believers in two places. Print... Use screen font size Show All Comments 2 John Introduction3 John Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The believers here say ‘hello’ to you. They are the children of your sister that God has chosen."
     }
   ]
 };

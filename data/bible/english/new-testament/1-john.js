@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "We have an important message to tell you. We want to tell you about the person who was already there before the beginning of the world. We have heard him speak. We have seen him with our own eyes. We watched him and we touched him. He is the Word that gives us life with God. John is writing with authority. He is saying that he was with Jesus, the Word of God. He knows Jesus, and he knows what Jesus taught."
+      "text": "We have an important message to tell you. We want to tell you about the person who was already there before the beginning of the world. We have heard him speak. We have seen him with our own eyes. We watched him and we touched him. He is the Word that gives us life with God."
     },
     {
       "verse": "2",
@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "We are writing to you so that together we all may be completely happy. God is light"
+      "text": "We are writing to you so that together we all may be completely happy."
     },
     {
       "verse": "5",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "God says that all people have done wrong things. So, if we say that we have not done any wrong thing, we are saying that God tells lies. It shows that we have not accepted his message at all. Print... Use screen font size Show All Comments 1 John Introduction1 John 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God says that all people have done wrong things. So, if we say that we have not done any wrong thing, we are saying that God tells lies. It shows that we have not accepted his message at all."
     }
   ],
   "2": [
@@ -64,7 +64,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "If we say that we are living in God's true way, then we must live in the way that Jesus lived. If we believe in Jesus Christ and we trust God, this means that we belong to God. We are united with God and with Jesus. The way that we live shows whether we are true believers. God tells us to love each other"
+      "text": "If we say that we are living in God's true way, then we must live in the way that Jesus lived."
     },
     {
       "verse": "7",
@@ -84,7 +84,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But if someone hates other believers, he is still living in a bad way. He is like someone who is walking in the dark. He cannot see where he is going. He is like a blind person. He cannot understand God's true message. John tells Christians that they must live ‘in the light’. He means that they should live in a way that God says is right."
+      "text": "But if someone hates other believers, he is still living in a bad way. He is like someone who is walking in the dark. He cannot see where he is going. He is like a blind person. He cannot understand God's true message."
     },
     {
       "verse": "12",
@@ -92,11 +92,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "You who are older, like fathers, I am writing to you because you know Christ. He has always been there, since before the world began. You who are young men, I am writing to you because you have won against Satan."
+      "text": "You who are older, like fathers, I am writing to you because you know Christ. He has always been there, since before the world began.You who are young men, I am writing to you because you have won against Satan. You who are young men, I am writing to you because you have won against Satan."
     },
     {
       "verse": "14",
-      "text": "Yes, my children, I have written to you because you know God, our Father. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan."
+      "text": "Yes, my children, I have written to you because you know God, our Father.Fathers, I have written to you because you know Christ. He was already there before the world began.Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan. Fathers, I have written to you because you know Christ. He was already there before the world began. Young men, I have written to you because you are strong. You continue to obey God's message, and you have won against Satan."
     },
     {
       "verse": "15",
@@ -108,7 +108,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "One day, those people and the things that they want will not be there any longer. But those who continue to do what God wants will live for ever. People who are against Christ"
+      "text": "One day, those people and the things that they want will not be there any longer. But those who continue to do what God wants will live for ever."
     },
     {
       "verse": "18",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "These people used to be in our group of believers. But they left us. They never really belonged to our group. If they had been true believers, they would have remained with us. When they left us, it showed clearly that none of them really belonged to us. John was an old man. He wrote to his readers as if they were his children."
+      "text": "These people used to be in our group of believers. But they left us. They never really belonged to our group. If they had been true believers, they would have remained with us. When they left us, it showed clearly that none of them really belonged to us."
     },
     {
       "verse": "20",
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Anyone who says that Jesus is not God's Son does not belong to the Father. But anyone who accepts Jesus as the Son of God also belongs to the Father. Some people say that they are Christians, but they do not believe in Jesus. John tells us what true Christians believe."
+      "text": "Anyone who says that Jesus is not God's Son does not belong to the Father. But anyone who accepts Jesus as the Son of God also belongs to the Father."
     },
     {
       "verse": "24",
@@ -156,7 +156,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "You know that Christ only does what is right. So you should know this: Everyone who continues to do what is right has become a child of God. Print... Use screen font size Show All Comments 1 John 11 John 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You know that Christ only does what is right. So you should know this: Everyone who continues to do what is right has become a child of God."
     }
   ],
   "3": [
@@ -198,7 +198,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "In this way, we can see clearly who are God's children and who are the Devil's children. Anyone who does not live in a way that is good and right does not belong to God. People like that do not love other believers. Christians must love one another"
+      "text": "In this way, we can see clearly who are God's children and who are the Devil's children. Anyone who does not live in a way that is good and right does not belong to God. People like that do not love other believers."
     },
     {
       "verse": "11",
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "When another believer has trouble, we need to be kind to him. Maybe you have all the things that you need to live. If you see another believer who needs things like that, you should help him. If you refuse to be kind to him, it shows that you do not belong to God. You do not love people in the way that God loves them. Christians should love their Christian friends. We should even be ready to die for them."
+      "text": "When another believer has trouble, we need to be kind to him. Maybe you have all the things that you need to live. If you see another believer who needs things like that, you should help him. If you refuse to be kind to him, it shows that you do not belong to God. You do not love people in the way that God loves them."
     },
     {
       "verse": "18",
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Anyone who obeys God's commands lives together with God. God also lives in him. How do we know that God lives in us? It is because of his Holy Spirit that he has given to us. Print... Use screen font size Show All Comments 1 John 21 John 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Anyone who obeys God's commands lives together with God. God also lives in him. How do we know that God lives in us? It is because of his Holy Spirit that he has given to us."
     }
   ],
   "4": [
@@ -272,7 +272,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "My little children, you belong to God. You have won against those people with a false message. You have been able to do that because God's Holy Spirit is in you. He is more powerful than the spirit that belongs to this world."
+      "text": "My little children, you belong to God. You have won against those people with a false message. You have been able to do that because God's Holy Spirit is in you. He is more powerful than the spirit that belongs to this world. So that is how we know if someone's message comes from God's Spirit or not. God's Spirit brings us a true message, but false spirits tell lies."
     },
     {
       "verse": "5",
@@ -280,7 +280,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But we belong to God. Everyone who knows God believes our message. But anyone who does not belong to God does not believe it. So that is how we know if someone's message comes from God's Spirit or not. God's Spirit brings us a true message, but false spirits tell lies. It is very important to know the difference between true spirits and false spirits. Some people say that Jesus was not really a man. Other people say that he was not really God. People like that do not have God's Spirit. What they teach is false. Love each other because God loved us"
+      "text": "But we belong to God. Everyone who knows God believes our message. But anyone who does not belong to God does not believe it.So that is how we know if someone's message comes from God's Spirit or not. God's Spirit brings us a true message, but false spirits tell lies."
     },
     {
       "verse": "7",
@@ -340,7 +340,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "This is the command that God has given us. He has told us that anyone who loves him should love other Christians too. God's love is very special. Christians know how much God loves them. He sent Jesus to die on the cross to save us from our sin. We are no longer afraid that God will punish us for our sins. That is how much God loves us. Because of that, true Christians love other people. If they hate other people, it shows that they do not really know about God's love. Print... Use screen font size Show All Comments 1 John 31 John 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "This is the command that God has given us. He has told us that anyone who loves him should love other Christians too."
     }
   ],
   "5": [
@@ -374,7 +374,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Those things are the Holy Spirit, the water of Jesus' baptism and the blood of his death on the cross. These all show us the same thing, that Jesus came from God. When John baptized Jesus, God spoke from heaven. He said, ‘This is my Son.’ See Matthew Mark Luke When Jesus died on the cross, he did that as a sacrifice to save us from our sins. His blood was the blood of a sacrifice offered to God."
+      "text": "Those things are the Holy Spirit, the water of Jesus' baptism and the blood of his death on the cross. These all show us the same thing, that Jesus came from God."
     },
     {
       "verse": "9",
@@ -390,7 +390,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So whoever belongs to the Son has this true life. But anyone who does not belong to the Son of God does not have this true life. Christians have true life with God"
+      "text": "So whoever belongs to the Son has this true life. But anyone who does not belong to the Son of God does not have this true life."
     },
     {
       "verse": "13",
@@ -410,7 +410,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Any wrong thing that a person does is sin. But not all sins cause death. A sin that causes death’ is when someone does a bad thing that takes him completely away from life with God. A sin like that causes a person to die in their spirit, so that they can no longer live with God for ever."
+      "text": "Any wrong thing that a person does is sin. But not all sins cause death."
     },
     {
       "verse": "18",
@@ -422,11 +422,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "We also know that the Son of God has come into the world. He has helped us to understand what is true. As a result, we know the only true God. We live together with this true God, because we belong to his Son, Jesus Christ. He is the true God. He is the one who gives us life with God for ever. Or: ‘God keeps his children safe.’"
+      "text": "We also know that the Son of God has come into the world. He has helped us to understand what is true. As a result, we know the only true God. We live together with this true God, because we belong to his Son, Jesus Christ. He is the true God. He is the one who gives us life with God for ever."
     },
     {
       "verse": "21",
-      "text": "My little children, be careful to keep away from idols. John is writing this letter to help Christians to know God better. He wants them to be sure that they have true life with God. If we trust in Jesus as the Son of God, we become God's children. God will hear us when we pray to him. He will give us the good things that he chooses for us. God will keep us safe from the power of Satan. He will help us to do what is good, so that we do not continue to do wrong things. Print... Use screen font size Show All Comments 1 John 42 John Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "My little children, be careful to keep away from idols."
     }
   ]
 };

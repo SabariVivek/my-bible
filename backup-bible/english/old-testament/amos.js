@@ -2,15 +2,15 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "Amos was one of the shepherds who lived in the town of Tekoa. God spoke to him. He showed Amos the things that would happen to the people of Israel. God did that two years before the earthquake came. It was during the time that Uzziah was the king of Judah, and Joash's son, Jeroboam, was the king of Israel. This book tells about the message that Amos received from God. Tekoa was a town near Jerusalem. It was where Amos kept his sheep."
+      "text": "Amos was one of the shepherds who lived in the town of Tekoa. God spoke to him. He showed Amos the things that would happen to the people of Israel. God did that two years before the earthquake came. It was during the time that Uzziah was the king of Judah, and Joash's son, Jeroboam, was the king of Israel. This book tells about the message that Amos received from God."
     },
     {
       "verse": "2",
-      "text": "Amos said, ‘The Lord speaks loudly from Zion. Yes, he shouts from Jerusalem. As a result, the green fields will become dry and the grass will die. There will be nothing for the sheep to eat. Even the grass on Mount Carmel mountain will die.’ When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. God will punish the nations near Israel"
+      "text": "Amos said, ‘The Lord speaks loudly from Zion. Yes, he shouts from Jerusalem. As a result, the green fields will become dry and the grass will die. There will be nothing for the sheep to eat. Even the grass on Mount Carmel mountain will die.’"
     },
     {
       "verse": "3",
-      "text": "The Lord says, ‘The people in Damascus have done more and more wrong things. So I will certainly punish them! Damascus was the most important city in Syria (also called Aram). They have been cruel to the people in Gilead. They used their iron weapons to tear them into pieces."
+      "text": "The Lord says, ‘The people in Damascus have done more and more wrong things. So I will certainly punish them!They have been cruel to the people in Gilead. They used their iron weapons to tear them into pieces."
     },
     {
       "verse": "4",
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Lord says, ‘The people in Gaza have done more and more wrong things. So I will certainly punish them. Gaza was a city where the Philistine people lived. They caught my people and they took them away from their homes. They sold them to the people in Edom."
+      "text": "The Lord says, ‘The people in Gaza have done more and more wrong things. So I will certainly punish them.They caught my people and they took them away from their homes. They sold them to the people in Edom."
     },
     {
       "verse": "7",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Lord says, ‘The people in Tyre have done more and more wrong things. So I will certainly punish them. Before, they had been friends with the people in Israel. They had promised to those people, “We will be like brothers.” But the people from Tyre did not do what they had promised. They took my people away. They sold my people to the people in Edom and my people became slaves."
+      "text": "The Lord says, ‘The people in Tyre have done more and more wrong things. So I will certainly punish them.Before, they had been friends with the people in Israel. They had promised to those people, “We will be like brothers.” But the people from Tyre did not do what they had promised. They took my people away. They sold my people to the people in Edom and my people became slaves."
     },
     {
       "verse": "10",
@@ -42,15 +42,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Lord says, ‘The people in Edom have done more and more wrong things. So I will certainly punish them. They took their swords and they chased after their cousins, the Israelites. They were not kind. Instead, they continued to be angry all the time. They did not stop attacking them."
+      "text": "The Lord says, ‘The people in Edom have done more and more wrong things. So I will certainly punish them.They took their swords and they chased after their cousins, the Israelites. They were not kind. Instead, they continued to be angry all the time. They did not stop attacking them."
     },
     {
       "verse": "12",
-      "text": "So I will start a fire. And the fire will destroy the big city of Teman. The fire will also burn the strong buildings of Bozrah city.’ The Edomites and the Israelites were from the same family. The Edomites were descendants of Esau. The Israelites were descendants of Jacob. These two brothers were born at the same time from the same mother. Jacob also had the name Israel."
+      "text": "So I will start a fire. And the fire will destroy the big city of Teman. The fire will also burn the strong buildings of Bozrah city.’"
     },
     {
       "verse": "13",
-      "text": "The Lord says, ‘The people in Ammon have done more and more wrong things. So I will certainly punish them. People from Ammon fought against the people in Gilead. Ammon's people wanted to get more land for themselves. While they were killing people there, they also cut pregnant women open."
+      "text": "The Lord says, ‘The people in Ammon have done more and more wrong things. So I will certainly punish them.People from Ammon fought against the people in Gilead. Ammon's people wanted to get more land for themselves. While they were killing people there, they also cut pregnant women open."
     },
     {
       "verse": "14",
@@ -58,13 +58,13 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The enemies will take away their king and their leaders. They will take them to another country. The king and the leaders will not be free to return.’ That is what the Lord says. Print... Use screen font size Show All Comments Amos IntroductionAmos 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The enemies will take away their king and their leaders. They will take them to another country. The king and the leaders will not be free to return.’ That is what the Lord says."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "The Lord says, ‘The people in Moab have done more and more wrong things. So I will certainly punish them. They dug up the bones of Edom's king. They burned his bones until they became ashes."
+      "text": "The Lord says, ‘The people in Moab have done more and more wrong things. So I will certainly punish them.They dug up the bones of Edom's king. They burned his bones until they became ashes."
     },
     {
       "verse": "2",
@@ -72,19 +72,19 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I will let the enemies kill the ruler of Moab. And I will let them kill all its leaders too.’ That is what the Lord says. A message to the people in Judah"
+      "text": "I will let the enemies kill the ruler of Moab. And I will let them kill all its leaders too.’ That is what the Lord says."
     },
     {
       "verse": "4",
-      "text": "The Lord says, ‘The people in Judah have done more and more wrong things. So I will certainly punish them. They refused to obey my laws and my commands. They have listened to their false gods, Those are the same false gods that their ancestors served."
+      "text": "The Lord says, ‘The people in Judah have done more and more wrong things. So I will certainly punish them.They refused to obey my laws and my commands. They have listened to their false gods, Those are the same false gods that their ancestors served."
     },
     {
       "verse": "5",
-      "text": "So I will send fire to Judah. The fire will completely burn the strong buildings that are in Jerusalem.’ A message to the people in Israel"
+      "text": "So I will send fire to Judah. The fire will completely burn the strong buildings that are in Jerusalem.’"
     },
     {
       "verse": "6",
-      "text": "The Lord says, ‘The people in Israel have done more and more wrong things. So I will certainly punish them. They sold people that did not do wrong things. They sold them for silver. And they sold poor people for only the price of shoes."
+      "text": "The Lord says, ‘The people in Israel have done more and more wrong things. So I will certainly punish them.They sold people that did not do wrong things. They sold them for silver. And they sold poor people for only the price of shoes."
     },
     {
       "verse": "7",
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "When they lend money to poor people, they take the poor people's clothes. They do not return the clothes each night, as they should do. Instead they sleep on the clothes themselves. They do that at the places where they worship their gods. The rich people take money from poor people. They use that money to buy wine for themselves. Then they drink the wine in the temples of their gods. When a poor person gave clothes to a rich person, the poor person was giving a promise. He was promising to pay money back to the rich person. God had said this to rich people about those poor people's clothes: ‘Do not keep the clothes at night. Give the clothes back to the poor people for the nights. Then they will not be cold.’"
+      "text": "When they lend money to poor people, they take the poor people's clothes. They do not return the clothes each night, as they should do. Instead they sleep on the clothes themselves. They do that at the places where they worship their gods. The rich people take money from poor people. They use that money to buy wine for themselves. Then they drink the wine in the temples of their gods."
     },
     {
       "verse": "9",
@@ -108,7 +108,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "‘But you told the Nazirites to drink wine, like everyone else. And you said to the prophets, “Do not speak messages from God.” Nazirites’ were people that had made a special promise. So they lived in a different way from other people. They did not drink alcohol and they did not cut their hair. And they did not touch anything that was dead."
+      "text": "‘But you told the Nazirites to drink wine, like everyone else. And you said to the prophets, “Do not speak messages from God.”"
     },
     {
       "verse": "13",
@@ -124,7 +124,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "At that time, strong, brave soldiers will run away without their clothes.’ That is what the Lord says. Print... Use screen font size Show All Comments Amos 1Amos 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "At that time, strong, brave soldiers will run away without their clothes.’ That is what the Lord says."
     }
   ],
   "3": [
@@ -134,7 +134,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He says, ‘There are many nations of people on the earth. But I chose you alone to belong to me. So I will punish you when you do wrong things.’ The prophet's work"
+      "text": "He says, ‘There are many nations of people on the earth. But I chose you alone to belong to me. So I will punish you when you do wrong things.’"
     },
     {
       "verse": "3",
@@ -158,7 +158,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So now the lion has roared! Everyone should be afraid! The Lord God has spoken, so his prophets must tell his message. Samaria"
+      "text": "So now the lion has roared! Everyone should be afraid! The Lord God has spoken, so his prophets must tell his message."
     },
     {
       "verse": "9",
@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I will destroy all their houses, the homes that they live in during the winter, and the ones that they live in during the summer. I will completely destroy all their big, beautiful houses, with their valuable things made from ivory.’ That is what the Lord says. Print... Use screen font size Show All Comments Amos 2Amos 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will destroy all their houses, the homes that they live in during the winter, and the ones that they live in during the summer. I will completely destroy all their big, beautiful houses, with their valuable things made from ivory.’ That is what the Lord says."
     }
   ],
   "4": [
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "There are places in your city's walls where people have broken the walls. Your enemies will pull you through those places and they will throw you out. They will take you to that bad place called Harmon. None of you will stay here.’ Harmon was a place that people were afraid of. Today nobody knows where this place was. The people in Israel have not learned to listen to God"
+      "text": "There are places in your city's walls where people have broken the walls. Your enemies will pull you through those places and they will throw you out. They will take you to that bad place called Harmon. None of you will stay here.’"
     },
     {
       "verse": "4",
@@ -240,7 +240,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I made the mountains and I made the wind. I tell people what I have decided to do. I change dawn into night. I walk on the high places of the earth. My name is the Lord God Almighty.’ Print... Use screen font size Show All Comments Amos 3Amos 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I made the mountains and I made the wind. I tell people what I have decided to do. I change dawn into night. I walk on the high places of the earth. My name is the Lord God Almighty.’"
     }
   ],
   "5": [
@@ -310,7 +310,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "In every field and garden, people will be weeping, because I will come to punish them all.’ That is what the Lord says. The special day of the Lord"
+      "text": "In every field and garden, people will be weeping, because I will come to punish them all.’ That is what the Lord says."
     },
     {
       "verse": "18",
@@ -346,11 +346,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Instead, you have idols that you have made for yourselves. You have the idol of Sakkuth, your king. You have the idol of Kaiwan, your star god. Now you will have to carry them with you."
+      "text": "Instead, you have idols that you have made for yourselves. You have the idol of Sakkuth, your king. You have the idol of Kaiwan, your star god. Now you will have to carry them with you. That is what the Lord says, and he is God Almighty."
     },
     {
       "verse": "27",
-      "text": "I will send you away as prisoners. Your enemies will take you beyond Damascus.’ That is what the Lord says, and he is God Almighty. Print... Use screen font size Show All Comments Amos 4Amos 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will send you away as prisoners. Your enemies will take you beyond Damascus.’That is what the Lord says, and he is God Almighty."
     }
   ],
   "6": [
@@ -376,7 +376,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You drink lots of wine. You put beautiful oils on your bodies. But you are not sad that Joseph's descendants are destroying themselves as a nation. Joseph's descendants is a way of talking about the nation of Israel."
+      "text": "You drink lots of wine. You put beautiful oils on your bodies. But you are not sad that Joseph's descendants are destroying themselves as a nation."
     },
     {
       "verse": "7",
@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Lord God Almighty has promised that this will surely happen. He has spoken this strong message: ‘The Israelites think that they are very strong. But I have turned against them. I hate their strong buildings. So I will give their great city and everything in it to their enemies.’ The Israelites' great city was Samaria."
+      "text": "The Lord God Almighty has promised that this will surely happen. He has spoken this strong message: ‘The Israelites think that they are very strong. But I have turned against them. I hate their strong buildings. So I will give their great city and everything in it to their enemies.’"
     },
     {
       "verse": "9",
@@ -396,7 +396,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "When the Lord gives his command, enemies will destroy all the houses, great and small. They will break them all into pieces. They did not want to speak the Lord's name because he might send more trouble."
+      "text": "When the Lord gives his command, enemies will destroy all the houses, great and small. They will break them all into pieces."
     },
     {
       "verse": "12",
@@ -408,7 +408,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "But the Lord God Almighty says to you Israelites, ‘I am sending an enemy nation to attack you. They will bring trouble to you everywhere, all the way from Lebo-Hamath in the north, to the Arabah valley in the south.’ Print... Use screen font size Show All Comments Amos 5Amos 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the Lord God Almighty says to you Israelites, ‘I am sending an enemy nation to attack you. They will bring trouble to you everywhere, all the way from Lebo-Hamath in the north, to the Arabah valley in the south.’"
     }
   ],
   "7": [
@@ -422,7 +422,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then the Lord decided not to do it. He said to me, ‘That will not happen.’ The Fire"
+      "text": "Then the Lord decided not to do it. He said to me, ‘That will not happen.’"
     },
     {
       "verse": "4",
@@ -434,19 +434,19 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then the Lord decided not to do it. He said to me, ‘That too will not happen.’ The Lord measures the wall"
+      "text": "Then the Lord decided not to do it. He said to me, ‘That too will not happen.’"
     },
     {
       "verse": "7",
-      "text": "Then the Lord showed this vision to me. The Lord God was standing next to a wall. In his hand was a string with a heavy weight on its end. The Lord was hanging the string down the wall. He was looking to see whether the wall was straight."
+      "text": "Then the Lord showed this vision to me. The Lord God was standing next to a wall. In his hand was a string with a heavy weight on its end. The Lord was hanging the string down the wall. He was looking to see whether the wall was straight. The Lord said, ‘Understand this. I am ready to measure my people with this string. I will test them and I will punish them for their sins. I will not forgive them any more."
     },
     {
       "verse": "8",
-      "text": "He asked me, ‘Amos, what do you see?’ I said, ‘You are measuring the wall to see if it is straight.’ The Lord said, ‘Understand this. I am ready to measure my people with this string. I will test them and I will punish them for their sins. I will not forgive them any more."
+      "text": "He asked me, ‘Amos, what do you see?’ I said, ‘You are measuring the wall to see if it is straight.’The Lord said, ‘Understand this. I am ready to measure my people with this string. I will test them and I will punish them for their sins. I will not forgive them any more."
     },
     {
       "verse": "9",
-      "text": "I will send enemies to destroy the holy places of Isaac's descendants. All Israel's holy places will fall down. Enemies will use swords to kill King Jeroboam and his family.’ Amaziah speaks with Amos"
+      "text": "I will send enemies to destroy the holy places of Isaac's descendants. All Israel's holy places will fall down. Enemies will use swords to kill King Jeroboam and his family.’"
     },
     {
       "verse": "10",
@@ -478,7 +478,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Lord says this to you, Amaziah: “Your wife will work as a prostitute in the streets. Your sons and daughters will die in war. Enemies will measure your land into separate pieces and they will give it to others. They will take your people away from here as prisoners to a foreign country. And that is where they will die.” ’ Print... Use screen font size Show All Comments Amos 6Amos 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord says this to you, Amaziah: “Your wife will work as a prostitute in the streets. Your sons and daughters will die in war. Enemies will measure your land into separate pieces and they will give it to others. They will take your people away from here as prisoners to a foreign country. And that is where they will die.” ’"
     }
   ],
   "8": [
@@ -492,7 +492,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "On the day that I come to punish them, people will not sing in the temple. Instead they will weep loudly. There will be dead bodies everywhere. Be quiet now!’ That is what the Lord God says. Trouble will come to Israel's people"
+      "text": "On the day that I come to punish them, people will not sing in the temple. Instead they will weep loudly. There will be dead bodies everywhere. Be quiet now!’ That is what the Lord God says."
     },
     {
       "verse": "4",
@@ -536,7 +536,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "They worship Samaria's idols. They use the names of those false gods to make promises. They say, “In the name of the god of Dan,” or “In the name of the god of Beersheba.” Those people will fall down and they will never get up again.’ Print... Use screen font size Show All Comments Amos 7Amos 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They worship Samaria's idols. They use the names of those false gods to make promises. They say, “In the name of the god of Dan,” or “In the name of the god of Beersheba.” Those people will fall down and they will never get up again.’"
     }
   ],
   "9": [
@@ -578,15 +578,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Those among my people who do bad things will die. They say, “God will not send trouble to us. Nothing bad will happen to us.” But their enemies will kill those bad people in war.’ The Israelites will be strong again"
+      "text": "Those among my people who do bad things will die. They say, “God will not send trouble to us. Nothing bad will happen to us.” But their enemies will kill those bad people in war.’"
     },
     {
       "verse": "11",
-      "text": "The Lord says, ‘When that time comes, I will make David's kingdom strong again. It has become like a broken hut, but I will repair it. I will cause it to become as good and strong as it was when king David ruled."
+      "text": "The Lord says, ‘When that time comes, I will make David's kingdom strong again. It has become like a broken hut, but I will repair it. I will cause it to become as good and strong as it was when king David ruled. That is what the Lord says, and he will do it."
     },
     {
       "verse": "12",
-      "text": "You Israelites will fight the Edomites who still remain. You will win against them and the other nations that once belonged to me.’ That is what the Lord says, and he will do it."
+      "text": "You Israelites will fight the Edomites who still remain. You will win against them and the other nations that once belonged to me.’That is what the Lord says, and he will do it."
     },
     {
       "verse": "13",
@@ -594,11 +594,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will bring the people of Israel, my people, back to their own land. Enemies destroyed their cities, but now my people will build them again. They will live safely in them. My people will plant vines. They will drink wine from their grapes. They will eat the fruit from trees that they have planted in their gardens."
+      "text": "I will bring the people of Israel, my people, back to their own land. Enemies destroyed their cities, but now my people will build them again. They will live safely in them. My people will plant vines. They will drink wine from their grapes. They will eat the fruit from trees that they have planted in their gardens. That is what the Lord your God says."
     },
     {
       "verse": "15",
-      "text": "And I will plant my people in their own land. That is the land that I have given to them, and nobody will ever pull them out of that land.’ That is what the Lord your God says. Print... Use screen font size Show All Comments Amos 8Obadiah Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And I will plant my people in their own land. That is the land that I have given to them, and nobody will ever pull them out of that land.’That is what the Lord your God says."
     }
   ]
 };

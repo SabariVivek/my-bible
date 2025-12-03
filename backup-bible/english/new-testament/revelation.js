@@ -10,31 +10,31 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "If anyone reads aloud the words of this prophecy, God will bless that person. God will also bless the people who listen to these words, if they continue to obey them. The things that are written here will soon happen. John writes to the seven churches"
+      "text": "If anyone reads aloud the words of this prophecy, God will bless that person. God will also bless the people who listen to these words, if they continue to obey them. The things that are written here will soon happen."
     },
     {
       "verse": "4",
-      "text": "I am John. I am writing to the seven churches that are in the region of Asia. I pray that God will be very kind to you. I pray that he will give you peace in your minds. God is alive now. He has always been alive. He will continue to be alive for ever. God will help you, and the seven spirits that are in front of his throne will help you. We find the number 7 many times in the Book of Revelation. In the Bible, the number 7 usually means that something is complete or perfect. So ‘the seven spirits’ may mean God's Holy Spirit."
+      "text": "I am John. I am writing to the seven churches that are in the region of Asia. I pray that God will be very kind to you. I pray that he will give you peace in your minds. God is alive now. He has always been alive. He will continue to be alive for ever.God will help you, and the seven spirits that are in front of his throne will help you. God will help you, and the seven spirits that are in front of his throne will help you."
     },
     {
       "verse": "5",
-      "text": "Jesus Christ will also help you. He always speaks a true message. He is the first person who became alive again after death. He rules the kings of the earth. Other people had become alive again after they had died. But Jesus never died again. This shows us that, after death, believers will also become alive again for ever. In this way, believers follow him. Jesus loves us and he died for us. That is how he made us free. Because of Jesus, God will not punish us for the bad things that we have done."
+      "text": "Jesus Christ will also help you. He always speaks a true message. He is the first person who became alive again after death. He rules the kings of the earth.Jesus loves us and he died for us. That is how he made us free. Because of Jesus, God will not punish us for the bad things that we have done."
     },
     {
       "verse": "6",
-      "text": "Jesus has brought us into his family, so that we belong to God's kingdom. He has made us priests, so that we serve his God and Father. So we praise Jesus Christ! He will always be very great! He has power for all time. Amen. This is true!"
+      "text": "Jesus has brought us into his family, so that we belong to God's kingdom. He has made us priests, so that we serve his God and Father.So we praise Jesus Christ! He will always be very great! He has power for all time. Amen. This is true! So we praise Jesus Christ! He will always be very great! He has power for all time. Amen. This is true!"
     },
     {
       "verse": "7",
-      "text": "Look! He will come on the clouds! At that time, everyone will see him! Even the people who pushed a spear into his body will see him. The soldiers who killed Jesus put nails through his body to fix him to the cross. Also, a soldier put a spear into Jesus when he was dying on the cross. See John But we think that this does not include only the soldiers. The leaders of Israel's people and of the Roman government in Israel decided to kill Jesus. Perhaps this verse also includes everyone else who does not want Jesus as their Lord. If they had been alive then, they would have wanted to kill him. All these people will see Jesus when he comes to the earth again. Then they will know that he is the Lord. They will know that they should have obeyed him. So they will be sad. See Zechariah People from all the nations on earth will be sad when they see him. Yes, it is true! Amen!"
+      "text": "Look! He will come on the clouds!At that time, everyone will see him!Even the people who pushed a spear into his body will see him.People from all the nations on earth will be sad when they see him.Yes, it is true! Amen! At that time, everyone will see him! Even the people who pushed a spear into his body will see him. People from all the nations on earth will be sad when they see him. Yes, it is true! Amen!"
     },
     {
       "verse": "8",
-      "text": "The Lord God says, ‘I caused all things to begin and I will cause the end of all things. I have all power and authority. I am alive. I have always been alive. I will continue to be alive for ever.’ Jesus appears to John"
+      "text": "The Lord God says, ‘I caused all things to begin and I will cause the end of all things. I have all power and authority. I am alive. I have always been alive. I will continue to be alive for ever.’"
     },
     {
       "verse": "9",
-      "text": "I am John. I am a believer, as you are. I am like your brother and your friend. Because we belong to Jesus' kingdom, we are having trouble and pain. So we all need to be strong and patient, as Jesus helps us. The Roman leaders punished me because I taught God's message. I told people the true message about Jesus. That is why they sent me to Patmos island. Patmos island was near to the region called Asia. The Romans had sent John to Patmos because they did not want him to teach about Jesus. Patmos was a prison. The Romans would not let John leave Patmos."
+      "text": "I am John. I am a believer, as you are. I am like your brother and your friend. Because we belong to Jesus' kingdom, we are having trouble and pain. So we all need to be strong and patient, as Jesus helps us. The Roman leaders punished me because I taught God's message. I told people the true message about Jesus. That is why they sent me to Patmos island."
     },
     {
       "verse": "10",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The voice said: ‘When you see these things, write them in a book. Then you must send the book to the seven churches in these cities: The Lord's day’ may mean Sunday, the first day of the week. This was the day when Christians met together to worship God. Ephesus,Smyrna,Pergamum,Thyatira,Sardis,Philadelphia,Laodicea.’"
+      "text": "The voice said: ‘When you see these things, write them in a book. Then you must send the book to the seven churches in these cities:Ephesus,Smyrna,Pergamum,Thyatira,Sardis,Philadelphia,Laodicea.’"
     },
     {
       "verse": "12",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He held seven stars in his right hand. A sword with two sharp edges came out of his mouth. His face was like the sun when it shines very brightly. a son of man’ or ‘a human’. See Daniel"
+      "text": "He held seven stars in his right hand. A sword with two sharp edges came out of his mouth. His face was like the sun when it shines very brightly."
     },
     {
       "verse": "17",
@@ -74,17 +74,17 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "So write down the things that you have seen. Write about what you see that is happening now. Also write about the things that will happen later. This verse means that Jesus has authority. He will say when a person must die. He will also decide where the dead person's spirit will go. The Bible shows us that Hades is the place for dead people."
+      "text": "So write down the things that you have seen. Write about what you see that is happening now. Also write about the things that will happen later."
     },
     {
       "verse": "20",
-      "text": "You saw seven stars that I held in my right hand. You saw seven lights in their gold lampstands. Now I will tell you what they mean. The seven stars show what the angels of the seven churches are like. The seven lights in their lampstands show what the seven churches themselves are like.’ angels’ or perhaps it may mean ‘messengers’ or ‘leaders’. Print... Use screen font size Show All Comments Revelation IntroductionRevelation 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You saw seven stars that I held in my right hand. You saw seven lights in their gold lampstands. Now I will tell you what they mean. The seven stars show what the angels of the seven churches are like. The seven lights in their lampstands show what the seven churches themselves are like.’"
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "‘Now write this to the angel of the church at Ephesus: Many people think that the ‘angel’ here means a human messenger that God has sent. The ‘angel’ could have been the person who read this letter aloud to the church. So ‘angel’ could also mean this in Revelation Everywhere else in Revelation, ‘angel’ means a being from heaven. “This is the message to you from the one who holds the seven stars. He holds them carefully in his right hand. He walks among the seven gold lampstands."
+      "text": "‘Now write this to the angel of the church at Ephesus:“This is the message to you from the one who holds the seven stars. He holds them carefully in his right hand. He walks among the seven gold lampstands. “This is the message to you from the one who holds the seven stars. He holds them carefully in his right hand. He walks among the seven gold lampstands."
     },
     {
       "verse": "2",
@@ -104,15 +104,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But this is something that you do well: you hate the bad things that the Nicolaitans are doing. I also hate what they do. The Nicolaitans were teaching the Christians to do wrong things. They were not teaching the same message as Jesus had taught. We do not know much about the wrong things that they taught."
+      "text": "But this is something that you do well: you hate the bad things that the Nicolaitans are doing. I also hate what they do."
     },
     {
       "verse": "7",
-      "text": "God's Spirit is now speaking to people in the churches. You should recognize that the Spirit is speaking. Everyone who knows that should listen to what he says. I will let everyone who wins against Satan eat my fruit. This fruit is from the tree that makes us alive. And this tree grows in God's garden.” ’ If we turn against Satan, Jesus promises to give us new life. The fruit that he gives us is a picture of everything that we need to live that new life. Jesus' message to the believers at Smyrna"
+      "text": "God's Spirit is now speaking to people in the churches. You should recognize that the Spirit is speaking. Everyone who knows that should listen to what he says. I will let everyone who wins against Satan eat my fruit. This fruit is from the tree that makes us alive. And this tree grows in God's garden.” ’"
     },
     {
       "verse": "8",
-      "text": "‘Write this to the angel of the church at Smyrna: “This is the message to you from the one who is the first and the last. He was dead, but he became alive again."
+      "text": "‘Write this to the angel of the church at Smyrna:“This is the message to you from the one who is the first and the last. He was dead, but he became alive again. “This is the message to you from the one who is the first and the last. He was dead, but he became alive again."
     },
     {
       "verse": "9",
@@ -120,19 +120,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I know that trouble will soon come to you. But do not be afraid. Listen! The Devil will cause some of you to go to prison. He wants to see whether you will continue to believe in me. As a result, you will suffer for ten days. But continue to trust me, even if you die. Then you will win against the Devil. I will give you a gift, as they give a crown to the winner of a race. You will have life with me for ever. ten days’ may mean a short time of trouble, rather than a long time. At the time John was on earth, a winner of a race received a crown. The crown was the shape of a circle. Somebody had tied leaves together to make it."
+      "text": "I know that trouble will soon come to you. But do not be afraid. Listen! The Devil will cause some of you to go to prison. He wants to see whether you will continue to believe in me. As a result, you will suffer for ten days. But continue to trust me, even if you die. Then you will win against the Devil. I will give you a gift, as they give a crown to the winner of a race. You will have life with me for ever."
     },
     {
       "verse": "11",
-      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully! The second death will not hurt anyone who wins against Satan.” ’ The second death is the opposite of when someone lives always with Jesus. It means that a person must go to a place without Jesus. Nobody is happy in that place. The name of that place is hell, or the lake of fire. See Revelation Jesus' message to the believers at Pergamum"
+      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully! The second death will not hurt anyone who wins against Satan.” ’"
     },
     {
       "verse": "12",
-      "text": "‘Write this to the angel of the church at Pergamum: “This is the message to you from the one who has the sharp sword with two edges."
+      "text": "‘Write this to the angel of the church at Pergamum:“This is the message to you from the one who has the sharp sword with two edges. “This is the message to you from the one who has the sharp sword with two edges."
     },
     {
       "verse": "13",
-      "text": "I know where you live. It is the place where Satan sits as king. But you still continue to trust me. You remember Antipas who spoke a clear message about me. Because of that, some people in your city killed him. You saw what happened to him, but you continued to believe in me. You still serve me, even there where Satan lives. Pergamum was a city where Satan was powerful. There was a special building in Pergamum for people to worship the king of Rome. This king was against Christians because they would not worship him. Also, there was a very big stone table on a hill. People offered gifts to the false god Zeus on this big table. Also, many people worshipped a snake god. The Devil appears as a snake in the Bible. See Genesis 3."
+      "text": "I know where you live. It is the place where Satan sits as king. But you still continue to trust me. You remember Antipas who spoke a clear message about me. Because of that, some people in your city killed him. You saw what happened to him, but you continued to believe in me. You still serve me, even there where Satan lives."
     },
     {
       "verse": "14",
@@ -144,15 +144,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So you must stop doing these bad things. If you do not change how you live, I will quickly come to punish you. I will fight against those bad people with my sharp sword that comes out of my mouth. Balak was the king of Moab. See Numbers"
+      "text": "So you must stop doing these bad things. If you do not change how you live, I will quickly come to punish you. I will fight against those bad people with my sharp sword that comes out of my mouth."
     },
     {
       "verse": "17",
-      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully! To everyone who wins against Satan I will give some of my special food called manna. I will also give each of them a white stone. I will write a new name on that stone. Nobody will know that name except the person who receives it.” ’ The colour white in the Bible usually means completely good and clean. So the white stone may show that God will make us like that. He will make our spirits completely clean if we continue to believe him. Jesus' message to the believers at Thyatira"
+      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully! To everyone who wins against Satan I will give some of my special food called manna. I will also give each of them a white stone. I will write a new name on that stone. Nobody will know that name except the person who receives it.” ’"
     },
     {
       "verse": "18",
-      "text": "‘Write this to the angel of the church at Thyatira: “This is the message to you from the Son of God. He has eyes that burn brightly like flames of fire. His feet shine like bright metal."
+      "text": "‘Write this to the angel of the church at Thyatira:“This is the message to you from the Son of God. He has eyes that burn brightly like flames of fire. His feet shine like bright metal. “This is the message to you from the Son of God. He has eyes that burn brightly like flames of fire. His feet shine like bright metal."
     },
     {
       "verse": "19",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I will send a terrible illness to kill those who obey her. Then all the people in the churches will know that I look deep inside them. I know what you really want. I know what you really think. I will give each of you what is right for you, as a result of what you have done. God's Law says that someone should have sex only with their wife or their husband."
+      "text": "I will send a terrible illness to kill those who obey her. Then all the people in the churches will know that I look deep inside them. I know what you really want. I know what you really think. I will give each of you what is right for you, as a result of what you have done."
     },
     {
       "verse": "24",
@@ -196,13 +196,13 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’ The person who rules the countries will be strong. He will rule with great power and he will punish people who do wrong things. The morning star appears in the sky just before the sunrise. It is very bright. It shows us that the day is coming. In Revelation Jesus says that he is the morning star. He brings light when it has been dark. Print... Use screen font size Show All Comments Revelation 1Revelation 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’"
     }
   ],
   "3": [
     {
       "verse": "1",
-      "text": "‘Write this to the angel of the church at Sardis: “This is the message to you from the one who holds the seven spirits of God and the seven stars. I know everything that you do. I know that people praise you. They think that you are alive. But that is not true, because really you are dead in your spirits."
+      "text": "‘Write this to the angel of the church at Sardis:“This is the message to you from the one who holds the seven spirits of God and the seven stars.I know everything that you do. I know that people praise you. They think that you are alive. But that is not true, because really you are dead in your spirits. “This is the message to you from the one who holds the seven spirits of God and the seven stars."
     },
     {
       "verse": "2",
@@ -222,11 +222,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’ God's book of life’ has the names of people who will live with God for ever. Jesus' message to the believers at Philadelphia"
+      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’"
     },
     {
       "verse": "7",
-      "text": "‘Write this to the angel of the church at Philadelphia: “This is my message to you. I am the one who is completely good, the true God. I have King David's key in my hand. When I open a door, nobody can shut it. And when I shut a door, nobody can open it. David was a great king of God's people, Israel. He lived on the earth a long time before Jesus lived here as a man. Both men belonged to the same family."
+      "text": "‘Write this to the angel of the church at Philadelphia:“This is my message to you. I am the one who is completely good, the true God. I have King David's key in my hand. When I open a door, nobody can shut it. And when I shut a door, nobody can open it. “This is my message to you. I am the one who is completely good, the true God. I have King David's key in my hand. When I open a door, nobody can shut it. And when I shut a door, nobody can open it."
     },
     {
       "verse": "8",
@@ -242,7 +242,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I will come soon. Continue to obey my message that you already know. Then nobody can take away your crown which is God's gift to you. soon’ or ‘quickly’. The crown is Jesus' gift. It shows that the person has won against Satan. That person will live with God for ever. See Revelation"
+      "text": "I will come soon. Continue to obey my message that you already know. Then nobody can take away your crown which is God's gift to you."
     },
     {
       "verse": "12",
@@ -250,11 +250,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’ Jerusalem was the capital city of Israel. Israel was the country on this earth where God's people lived. New Jerusalem will be the place where God's people will live for ever. Revelation 21-22 describes this New Jerusalem. Jesus' message to the believers at Laodicea"
+      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’"
     },
     {
       "verse": "14",
-      "text": "‘Write this to the angel of the church at Laodicea: “This is my message to you. I am the one whose name is ‘Amen’. I faithfully tell people God's true message. Everything that God has created starts with me. That name means: ‘God's promises will happen because of him’."
+      "text": "‘Write this to the angel of the church at Laodicea:“This is my message to you. I am the one whose name is ‘Amen’. I faithfully tell people God's true message. Everything that God has created starts with me. “This is my message to you. I am the one whose name is ‘Amen’. I faithfully tell people God's true message. Everything that God has created starts with me."
     },
     {
       "verse": "15",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But you are only warm. Because you are neither cold nor hot, I am ready to throw you away completely. In a place near to Laodicea, hot water came up out of the ground. People used the hot water like a medicine. But by the time this water reached Laodicea city, it was not hot. It was only warm. Also, at another city near Laodicea, cold water came up out of the ground. This cold water was good to drink. But by the time it reached Laodicea through a pipe, it too became warm. So then people did not like to drink it. So people could use both the hot water and the cold water where they came out of the ground. But they did not like the warm water at Laodicea. In these verses, Jesus is saying that he will not use the Christians at Laodicea. They are like the warm water that is not good for anything."
+      "text": "But you are only warm. Because you are neither cold nor hot, I am ready to throw you away completely."
     },
     {
       "verse": "17",
@@ -270,7 +270,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So I tell you that you should buy gold from me. With my gold, you would be really rich. My gold is the best, because it has been through fire. You should also buy white clothes from me to dress yourselves. Then you will not be ashamed because you have no clothes. You should also buy medicine from me to put on your eyes. Then you will be able to see well. Jesus is not talking about gold or clothes or medicine that we can see or touch. He is telling these people what they need inside themselves. He is talking about what they need in their spirits. These Christians must receive what only he can give them. They must stop thinking that they are all right. They thought this because they had lots of money. People with ‘white clothes’ are like a picture of people who are completely good and clean."
+      "text": "So I tell you that you should buy gold from me. With my gold, you would be really rich. My gold is the best, because it has been through fire. You should also buy white clothes from me to dress yourselves. Then you will not be ashamed because you have no clothes. You should also buy medicine from me to put on your eyes. Then you will be able to see well."
     },
     {
       "verse": "19",
@@ -286,7 +286,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’ Print... Use screen font size Show All Comments Revelation 2Revelation 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God's Spirit is speaking to you in the churches. You should understand what the Spirit is saying to you. You have ears, so listen carefully!” ’"
     }
   ],
   "4": [
@@ -304,7 +304,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "All around the throne there were 24 other thrones. 24 leaders were sitting on these thrones. They were wearing white clothes and they had gold crowns on their heads."
+      "text": "other thrones. 24 leaders were sitting on these thrones. They were wearing white clothes and they had gold crowns on their heads."
     },
     {
       "verse": "5",
@@ -312,15 +312,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Also in front of the throne there was something like a sea of glass that shone with light. The number seven shows that something is complete or perfect. The seven spirits together show God's Holy Spirit. In the middle, round the throne, there were four other beings that were alive. They had eyes all over them, on their fronts and on their backs."
+      "text": "Also in front of the throne there was something like a sea of glass that shone with light.In the middle, round the throne, there were four other beings that were alive. They had eyes all over them, on their fronts and on their backs."
     },
     {
       "verse": "7",
-      "text": "The first of these beings was like a lion. The second being was like an ox. The third being had a face like a man's face. And the fourth being was like an eagle that was flying."
+      "text": "The first of these beings was like a lion. The second being was like an ox. The third being had a face like a man's face. And the fourth being was like an eagle that was flying. ‘The Lord God has all power and authority. He has no bad thing in him. He is completely good. He has always been alive. He is alive now. He will continue to be alive for ever.’"
     },
     {
       "verse": "8",
-      "text": "Each of these four beings had six wings. They had eyes all over them, even under their wings. All day and all night they never stop saying: ‘The Lord God has all power and authority. He has no bad thing in him. He is completely good. He has always been alive. He is alive now. He will continue to be alive for ever.’"
+      "text": "Each of these four beings had six wings. They had eyes all over them, even under their wings. All day and all night they never stop saying:‘The Lord God has all power and authority.He has no bad thing in him. He is completely good.He has always been alive. He is alive now.He will continue to be alive for ever.’"
     },
     {
       "verse": "9",
@@ -332,7 +332,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "‘God, our Lord, you are very good! Everyone should give you honour and say how great and powerful you are! Everyone should worship you, because you created everything. You decided to make them and so you made them! That is why everything in the world is here.’ Print... Use screen font size Show All Comments Revelation 3Revelation 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘God, our Lord, you are very good!Everyone should give you honour and say how great and powerful you are!Everyone should worship you, because you created everything.You decided to make them and so you made them!That is why everything in the world is here.’"
     }
   ],
   "5": [
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But nobody in heaven could open the book and look inside it. Neither could anyone on the earth or anyone under the earth open it. The book was a long piece of paper called a scroll. It was rolled up and closed with seals. The place ‘under the earth’ means where dead people are. The Jews called this place Hades."
+      "text": "But nobody in heaven could open the book and look inside it. Neither could anyone on the earth or anyone under the earth open it."
     },
     {
       "verse": "4",
@@ -354,11 +354,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then one of the leaders said to me, ‘Do not weep! Look! There is someone who can break the seven seals and then open the book. His name is the Lion from Judah's tribe. He is called the Root of King David. He has won over all his enemies.’ Jesus was born on the earth into David's family. So King David was his ancestor. But Jesus is called the Root of David. He belongs to David's family, but he is greater than David. He has always been alive and he made everything and everyone. See also Revelation"
+      "text": "Then one of the leaders said to me, ‘Do not weep! Look! There is someone who can break the seven seals and then open the book. His name is the Lion from Judah's tribe. He is called the Root of King David. He has won over all his enemies.’"
     },
     {
       "verse": "6",
-      "text": "Then I saw a Lamb. He was standing in the middle of the throne. The four beings that are alive and the leaders were around him. The Lamb appeared to be like a lamb that someone had killed. He had seven horns and seven eyes. His eyes are the seven spirits of God, that God has sent into all parts of the world."
+      "text": "Then I saw a Lamb. He was standing in the middle of the throne. The four beings that are alive and the leaders were around him. The Lamb appeared to be like a lamb that someone had killed. He had seven horns and seven eyes. His eyes are the seven spirits of God, that God has sent into all parts of the world. ‘You are so good! You are good enough to take the book. You can break its seals and open it. You can do this because they killed you. When you died, you bought people for God with your blood. You bought them from every tribe, from every language and every nation."
     },
     {
       "verse": "7",
@@ -370,27 +370,27 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The beings that are alive and the leaders sang a new song. They sang: ‘You are so good! You are good enough to take the book. You can break its seals and open it. You can do this because they killed you. When you died, you bought people for God with your blood. You bought them from every tribe, from every language and every nation."
+      "text": "The beings that are alive and the leaders sang a new song. They sang:‘You are so good!You are good enough to take the book.You can break its seals and open it.You can do this because they killed you.When you died, you bought people for God with your blood.You bought them from every tribe,from every language and every nation."
     },
     {
       "verse": "10",
-      "text": "You have caused them to belong to the kingdom of our God. You have made them priests, so that they serve God. And they will rule on the earth.’"
+      "text": "You have caused them to belong to the kingdom of our God.You have made them priests,so that they serve God.And they will rule on the earth.’ You have made them priests, so that they serve God. And they will rule on the earth.’"
     },
     {
       "verse": "11",
-      "text": "Then I looked again, and I heard the voices of many angels. There were thousands and millions of them. They were standing around the throne, with the beings that are alive and the leaders."
+      "text": "Then I looked again, and I heard the voices of many angels. There were thousands and millions of them. They were standing around the throne, with the beings that are alive and the leaders. ‘The Lamb that people killed is completely good! He has all authority, and all things belong to him. He is wise and powerful. Everyone must agree that he is great! Everyone must praise him and worship him!’"
     },
     {
       "verse": "12",
-      "text": "They all sang with loud voices: ‘The Lamb that people killed is completely good! He has all authority, and all things belong to him. He is wise and powerful. Everyone must agree that he is great! Everyone must praise him and worship him!’"
+      "text": "They all sang with loud voices:‘The Lamb that people killed is completely good!He has all authority, and all things belong to him.He is wise and powerful.Everyone must agree that he is great!Everyone must praise him and worship him!’"
     },
     {
       "verse": "13",
-      "text": "Then I heard everything that is alive singing. That was everything in heaven and everything on the earth, and everything under the earth and everything in the sea. They were singing: ‘We praise the one who sits on the throne. We praise the one who is the Lamb. We say that they are great! We worship them! They have power to rule for ever!’"
+      "text": "Then I heard everything that is alive singing. That was everything in heaven and everything on the earth, and everything under the earth and everything in the sea. They were singing:‘We praise the one who sits on the throne.We praise the one who is the Lamb.We say that they are great! We worship them!They have power to rule for ever!’ ‘We praise the one who sits on the throne. We praise the one who is the Lamb. We say that they are great! We worship them! They have power to rule for ever!’"
     },
     {
       "verse": "14",
-      "text": "The four beings that are alive agreed. They said, ‘Yes, this is true.’ The leaders fell down and they worshipped God and the Lamb. Jesus is the Lamb of God. See John Print... Use screen font size Show All Comments Revelation 4Revelation 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The four beings that are alive agreed. They said, ‘Yes, this is true.’ The leaders fell down and they worshipped God and the Lamb."
     }
   ],
   "6": [
@@ -416,7 +416,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then I heard a sound like somebody speaking among the four beings. The voice said, ‘A litre of wheat is worth one day's work. And three litres of barley is also worth one day's work. But do not destroy the olive oil and the wine.’ Wheat and barley are plants that farmers grow. People use the seeds to make flour for bread. The rider on the black horse weighs the wheat and barley seeds. They are very expensive. This shows a time of trouble when people will not have enough food to eat. There may not be enough water to grow wheat or barley. But the rider on the black horse must not destroy the fruits that grow on trees (olives and grapes). So this time of trouble will not destroy everything that people need."
+      "text": "Then I heard a sound like somebody speaking among the four beings. The voice said, ‘A litre of wheat is worth one day's work. And three litres of barley is also worth one day's work. But do not destroy the olive oil and the wine.’"
     },
     {
       "verse": "7",
@@ -424,7 +424,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I looked, and I saw a grey horse. The name of the person who was riding the horse was Death. The place for dead people, called Hades, was following near to him. They had authority to kill people in a quarter of the earth. They could kill people in different ways. They could kill them in wars. They could cause people to die because there was no food. They could cause people to become very ill so that they died. They could also cause wild animals to kill people. The ‘grey’ horse is the same colour as a person who is ill or dead."
+      "text": "I looked, and I saw a grey horse. The name of the person who was riding the horse was Death. The place for dead people, called Hades, was following near to him. They had authority to kill people in a quarter of the earth. They could kill people in different ways. They could kill them in wars. They could cause people to die because there was no food. They could cause people to become very ill so that they died. They could also cause wild animals to kill people."
     },
     {
       "verse": "9",
@@ -460,7 +460,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Their great day has come. They will punish us because they are so angry. Nobody will be able to escape.’ Print... Use screen font size Show All Comments Revelation 5Revelation 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Their great day has come. They will punish us because they are so angry. Nobody will be able to escape.’"
     }
   ],
   "7": [
@@ -494,23 +494,23 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "12,000 from Zebulun's tribe,12,000 from Joseph's tribe,12,000 from Benjamin's tribe. The 12 names in this list were all sons of Jacob, except Manasseh, who was Joseph's son. Jacob's other name was Israel. He was the ancestor of Israel's people. The angel did not include the name of Jacob's other son, Dan, in the list. The large crowd who were wearing white clothes"
+      "text": "12,000 from Zebulun's tribe,12,000 from Joseph's tribe,12,000 from Benjamin's tribe."
     },
     {
       "verse": "9",
-      "text": "After this, I looked again. I saw a very big crowd of people. There were so many people that nobody could count them. They came from every nation, from every tribe and from every language. They were standing in front of the throne and in front of the Lamb. They were wearing long white clothes and they held branches of palm trees in their hands. The branches of a palm tree have big leaves. At the time when Jesus lived on this earth, people used palm branches at special events. They thought that the palm tree was a special tree. The people held palm branches when Jesus rode into Jerusalem. This was because they were so happy to see him. They were showing that he was a great king. They were showing that he would beat all his enemies. See John"
+      "text": "After this, I looked again. I saw a very big crowd of people. There were so many people that nobody could count them. They came from every nation, from every tribe and from every language. They were standing in front of the throne and in front of the Lamb. They were wearing long white clothes and they held branches of palm trees in their hands."
     },
     {
       "verse": "10",
-      "text": "They shouted loudly: ‘We worship our God who sits on the throne. And we worship the Lamb. They have saved us from Satan's power.’"
+      "text": "They shouted loudly:‘We worship our God who sits on the throne.And we worship the Lamb.They have saved us from Satan's power.’ ‘We worship our God who sits on the throne. And we worship the Lamb. They have saved us from Satan's power.’"
     },
     {
       "verse": "11",
-      "text": "All the angels were standing around the throne, and around the leaders and the four beings. The angels all bent down so that their faces touched the ground. They worshipped God who was on the throne in front of them."
+      "text": "All the angels were standing around the throne, and around the leaders and the four beings. The angels all bent down so that their faces touched the ground. They worshipped God who was on the throne in front of them. ‘This is true! We worship our God and we give him honour. He is completely wise. We thank him and we praise him. He has all power and authority for ever! Amen!’"
     },
     {
       "verse": "12",
-      "text": "They said: ‘This is true! We worship our God and we give him honour. He is completely wise. We thank him and we praise him. He has all power and authority for ever! Amen!’"
+      "text": "They said:‘This is true!We worship our God and we give him honour.He is completely wise.We thank him and we praise him.He has all power and authority for ever!Amen!’"
     },
     {
       "verse": "13",
@@ -518,7 +518,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I replied, ‘You surely know who they are, sir.’ He said to me, ‘They are the people who have had a time of very bad trouble. Now they have come out of that. They have washed their clothes in the blood of the Lamb. Now their clothes are white and clean."
+      "text": "I replied, ‘You surely know who they are, sir.’He said to me, ‘They are the people who have had a time of very bad trouble. Now they have come out of that. They have washed their clothes in the blood of the Lamb. Now their clothes are white and clean."
     },
     {
       "verse": "15",
@@ -530,7 +530,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Lamb is there with them, near to God's throne. He will take care of them, like a shepherd with his sheep. He will take them to drink fresh water that gives people life. They will no longer be sad. God will take away all the tears from their eyes.’ This verse is not telling us about clothes that we wear on our bodies. See Revelation The ‘clothes’ mean what we are really like in our spirits. Jesus' blood poured out when he died for us. He can make our spirits as clean as white clothes if we believe in him. Print... Use screen font size Show All Comments Revelation 6Revelation 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lamb is there with them, near to God's throne. He will take care of them, like a shepherd with his sheep. He will take them to drink fresh water that gives people life. They will no longer be sad. God will take away all the tears from their eyes.’"
     }
   ],
   "8": [
@@ -552,7 +552,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the angel took the gold bowl and he filled it with fire from the altar. Then he threw it all down onto the earth. There were loud noises and the sound of thunder. There was bright lightning, like a very bad storm. The earth shook with an earthquake. Many years before Jesus came to this earth, God spoke to Israel's people. He told them to build a special house for him. In this house they worshipped God and they offered gifts to him. There was a very big altar where the priests burned animals and other gifts for God. See Exodus And there was a small gold altar where they burned incense. See Exodus The first four trumpets"
+      "text": "Then the angel took the gold bowl and he filled it with fire from the altar. Then he threw it all down onto the earth. There were loud noises and the sound of thunder. There was bright lightning, like a very bad storm. The earth shook with an earthquake."
     },
     {
       "verse": "6",
@@ -580,11 +580,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then the fourth angel made a sound with his trumpet. A third of the sun became dark. A third of the moon and a third of the stars also became dark. There was no light for a third of the day and there was no light for a third of the night. The troubles that the first four trumpets bring destroy a third of the earth. That means one part out of every three parts. They also destroy the same amount of the sea, the rivers and the light. So these troubles do not destroy everything. They do not cause the end of this world."
+      "text": "Then the fourth angel made a sound with his trumpet. A third of the sun became dark. A third of the moon and a third of the stars also became dark. There was no light for a third of the day and there was no light for a third of the night."
     },
     {
       "verse": "13",
-      "text": "Then I looked up. I saw an eagle that was flying high in the sky above me. I heard it say with a loud voice, ‘Great trouble! Great trouble! Yes, great trouble is coming to the people who live on the earth! Very bad things will happen when the other three angels make a sound with their trumpets!’ Print... Use screen font size Show All Comments Revelation 7Revelation 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then I looked up. I saw an eagle that was flying high in the sky above me. I heard it say with a loud voice, ‘Great trouble! Great trouble! Yes, great trouble is coming to the people who live on the earth! Very bad things will happen when the other three angels make a sound with their trumpets!’"
     }
   ],
   "9": [
@@ -594,7 +594,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "When the star opened the entrance, smoke came up out of the hole. It was like the smoke from a very big hot fire. The smoke caused the sun and the sky to become dark. The ‘deep hole’ is under the earth and it has no end. It is a prison that keeps bad spirits inside it."
+      "text": "When the star opened the entrance, smoke came up out of the hole. It was like the smoke from a very big hot fire. The smoke caused the sun and the sky to become dark."
     },
     {
       "verse": "3",
@@ -630,11 +630,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The king that ruled them was the angel of the deep hole. His name is ‘Abaddon’ in the Hebrew language. In the Greek language his name is ‘Apollyon’. These names both mean ‘someone who destroys things’. Abaddon means the devil."
+      "text": "The king that ruled them was the angel of the deep hole. His name is ‘Abaddon’ in the Hebrew language. In the Greek language his name is ‘Apollyon’."
     },
     {
       "verse": "12",
-      "text": "The first great trouble has now finished. But after all these things, there are two more great troubles still to come. The sixth trumpet"
+      "text": "The first great trouble has now finished. But after all these things, there are two more great troubles still to come."
     },
     {
       "verse": "13",
@@ -670,7 +670,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "They were not sorry that they murdered other people. They were not sorry that they used magic to hurt people. They continued to have sex with people in wrong ways. They continued to rob other people. They did not want to change the way that they lived. This chapter tells us that a lot of pain will come to many people on the earth. Many people will die in pain because they are not sorry for their sins. They do not turn to God. Instead, they enjoy doing what is bad. They do not want to obey God, so God will punish them. Print... Use screen font size Show All Comments Revelation 8Revelation 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They were not sorry that they murdered other people. They were not sorry that they used magic to hurt people. They continued to have sex with people in wrong ways. They continued to rob other people. They did not want to change the way that they lived."
     }
   ],
   "10": [
@@ -716,7 +716,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the voice said to me, ‘You must continue to tell God's message to people. You must say what will happen to people from everywhere in the world. They are the people of many nations, and people who speak many languages, and also their kings.’ Other verses in the Bible tell us about prophets who ‘ate’ messages from God. Then those prophets told God's message to other people. See Ezekiel Jeremiah Now John must tell God's message to many people. The message about Jesus is good news, so it has a sweet taste. But if people do not agree with God's message, it will become like bad food in their stomachs. Print... Use screen font size Show All Comments Revelation 9Revelation 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the voice said to me, ‘You must continue to tell God's message to people. You must say what will happen to people from everywhere in the world. They are the people of many nations, and people who speak many languages, and also their kings.’"
     }
   ],
   "11": [
@@ -730,7 +730,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I will give authority to my two servants who speak my message clearly. They will tell people my messages for 1,260 days. They will wear rough clothes made from goats' hair.’ Jews wore rough cloth (sackcloth) to show that they were very upset or very sad."
+      "text": "I will give authority to my two servants who speak my message clearly. They will tell people my messages for 1,260 days. They will wear rough clothes made from goats' hair.’"
     },
     {
       "verse": "4",
@@ -742,7 +742,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "These servants of God have authority to shut up the sky. Then there will be no rain during the time that they tell their messages from God. They also have authority to cause the water on earth to become blood. They can cause many different kinds of trouble to happen on the earth. They can do this as often as they want to. God showed his prophet Zechariah two olive trees and a gold lampstand. See Zechariah 4."
+      "text": "These servants of God have authority to shut up the sky. Then there will be no rain during the time that they tell their messages from God. They also have authority to cause the water on earth to become blood. They can cause many different kinds of trouble to happen on the earth. They can do this as often as they want to."
     },
     {
       "verse": "7",
@@ -750,7 +750,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Their dead bodies will lie in the street of the great city where people killed their Lord on a cross. This city should be called Sodom or Egypt, because it is as bad as those places. We read about this deep hole in Revelation People killed Jesus Christ on a cross outside the city of Jerusalem in Israel. The leaders of Israel's people caused Jesus to die there. They refused to recognize him as Lord. Sodom and Egypt were also places where the people did not obey God. See Genesis and Exodus"
+      "text": "Their dead bodies will lie in the street of the great city where people killed their Lord on a cross. This city should be called Sodom or Egypt, because it is as bad as those places."
     },
     {
       "verse": "9",
@@ -766,7 +766,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then God's two servants heard a loud voice that came from heaven. The voice said, ‘Come up here.’ They went up to heaven in a cloud, while their enemies watched them. The two servants speak God's messages to the people who are living on the earth. They may be two special people who will come one day. Or they may be like a picture of Christians all over the earth. The number two is important. Among God's people long ago, there had to be two or more people to agree that something was true. Then they could say that it had really happened. See Deuteronomy"
+      "text": "Then God's two servants heard a loud voice that came from heaven. The voice said, ‘Come up here.’ They went up to heaven in a cloud, while their enemies watched them."
     },
     {
       "verse": "13",
@@ -774,27 +774,27 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "That is the second great trouble and it has now finished. But the third great trouble will come soon. The seventh trumpet"
+      "text": "That is the second great trouble and it has now finished. But the third great trouble will come soon."
     },
     {
       "verse": "15",
-      "text": "The seventh angel made a sound with his trumpet. Then there was the sound of loud voices in heaven. They shouted: ‘Our Lord God and his Messiah now have all authority! The whole world has become their kingdom. God will rule as King for ever!’"
+      "text": "The seventh angel made a sound with his trumpet. Then there was the sound of loud voices in heaven. They shouted:‘Our Lord God and his Messiah now have all authority!The whole world has become their kingdom.God will rule as King for ever!’ ‘Our Lord God and his Messiah now have all authority! The whole world has become their kingdom. God will rule as King for ever!’"
     },
     {
       "verse": "16",
-      "text": "The 24 leaders were sitting on their thrones in front of God. Now they threw themselves down on their faces and they worshipped God."
+      "text": "leaders were sitting on their thrones in front of God. Now they threw themselves down on their faces and they worshipped God. ‘We thank you, Lord God, because you have all authority! You are alive now and you have always been alive. You have great power and now you have begun to rule the whole world!"
     },
     {
       "verse": "17",
-      "text": "They said: ‘We thank you, Lord God, because you have all authority! You are alive now and you have always been alive. You have great power and now you have begun to rule the whole world!"
+      "text": "They said:‘We thank you, Lord God, because you have all authority!You are alive now and you have always been alive.You have great power and now you have begun to rule the whole world!"
     },
     {
       "verse": "18",
-      "text": "The nations of the world were very angry. But now it is time for you to be angry with them. Now you will judge all the people who have died. You will give good things to your servants, the prophets, and to all your people. You will bless everyone who respects and obeys you, whether they are important people or not. But you will destroy all those people who destroy the earth. The time has now come for all this to happen.’"
+      "text": "The nations of the world were very angry.But now it is time for you to be angry with them.Now you will judge all the people who have died.You will give good things to your servants, the prophets,and to all your people.You will bless everyone who respects and obeys you,whether they are important people or not.But you will destroy all those people who destroy the earth.The time has now come for all this to happen.’ But now it is time for you to be angry with them. Now you will judge all the people who have died. You will give good things to your servants, the prophets, and to all your people. You will bless everyone who respects and obeys you, whether they are important people or not. But you will destroy all those people who destroy the earth. The time has now come for all this to happen.’"
     },
     {
       "verse": "19",
-      "text": "Then the door of the temple in heaven became open. Inside it, I saw God's Covenant Box. There was a great storm with bright lightning and the loud noise of thunder. There was an earthquake and strong rain with stones of ice fell from the sky. Many years ago, God told Israel's people to make a special box. He told them to keep the box in God's house. See Exodus The box helped them remember God. They remembered that God had promised to live among them. He had agreed to be their God if they would obey him. Print... Use screen font size Show All Comments Revelation 10Revelation 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the door of the temple in heaven became open. Inside it, I saw God's Covenant Box. There was a great storm with bright lightning and the loud noise of thunder. There was an earthquake and strong rain with stones of ice fell from the sky."
     }
   ],
   "12": [
@@ -824,7 +824,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then a war started in heaven. Michael and his angels fought against the dragon. The dragon and his army of angels fought against Michael and his angels."
+      "text": "Then a war started in heaven. Michael and his angels fought against the dragon. The dragon and his army of angels fought against Michael and his angels. ‘Now God has saved his people from Satan's power! God has shown his great power as King. His Messiah has authority to rule. Satan said bad things against our people. He never stopped telling our God that our brothers and sisters are guilty. But now God has thrown him out of heaven."
     },
     {
       "verse": "8",
@@ -836,15 +836,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then I heard a loud voice in heaven that said: The Bible tells us that the angel Michael is a powerful angel. He is a leader of God's angels. See Jude and Daniel Now God has saved his people from Satan's power! God has shown his great power as King. His Messiah has authority to rule. Satan said bad things against our people. He never stopped telling our God that our brothers and sisters are guilty. But now God has thrown him out of heaven."
+      "text": "Then I heard a loud voice in heaven that said:‘Now God has saved his people from Satan's power!God has shown his great power as King.His Messiah has authority to rule.Satan said bad things against our people.He never stopped telling our God that our brothers and sisters are guilty.But now God has thrown him out of heaven."
     },
     {
       "verse": "11",
-      "text": "Our brothers and sisters fought against him and they won. They could do this because of the death of the Lamb as a sacrifice. They continued to speak God's true message. They were also ready to die as God's servants. That is why they were able to win against Satan."
+      "text": "Our brothers and sisters fought against him and they won.They could do this because of the death of the Lamb as a sacrifice.They continued to speak God's true message.They were also ready to die as God's servants.That is why they were able to win against Satan. They could do this because of the death of the Lamb as a sacrifice. They continued to speak God's true message. They were also ready to die as God's servants. That is why they were able to win against Satan."
     },
     {
       "verse": "12",
-      "text": "So be happy, everyone who lives in heaven! But terrible trouble will happen to the earth and the sea. The Devil has come down to you now and he is very angry. He knows that he has only a short time to hurt people.’"
+      "text": "So be happy, everyone who lives in heaven!But terrible trouble will happen to the earth and the sea.The Devil has come down to you now and he is very angry.He knows that he has only a short time to hurt people.’ But terrible trouble will happen to the earth and the sea. The Devil has come down to you now and he is very angry. He knows that he has only a short time to hurt people.’"
     },
     {
       "verse": "13",
@@ -852,7 +852,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "But the woman received the two wings of a very big eagle. Then she could fly to the place in the wilderness that God had prepared for her. In that place God would keep her safe from the big snake. God would take care of her there for a time, times and half a time. A time, times and half a time’ may mean three and a half years. This is the same as 1,260 days. See Revelation It is also the same as 42 months. See Revelation See also Daniel"
+      "text": "But the woman received the two wings of a very big eagle. Then she could fly to the place in the wilderness that God had prepared for her. In that place God would keep her safe from the big snake. God would take care of her there for a time, times and half a time."
     },
     {
       "verse": "15",
@@ -864,11 +864,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "As a result, the dragon was very angry with the woman. So he went away to fight a war against her other descendants. Those are the people who obey God's commands. They continue to trust Jesus and to speak his message. The ‘woman’ is like a picture of God's people. In verses 1-5, perhaps she is Israel's people and the boy that is born is Jesus. In verses 6 and 13-17, she is like all the Christians on the earth. The Devil is the enemy of all Christians."
-    },
-    {
-      "verse": "18",
-      "text": "After that, the dragon stood on the shore of the sea. Print... Use screen font size Show All Comments Revelation 11Revelation 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As a result, the dragon was very angry with the woman. So he went away to fight a war against her other descendants. Those are the people who obey God's commands. They continue to trust Jesus and to speak his message. After that, the dragon stood on the shore of the sea."
     }
   ],
   "13": [
@@ -878,7 +874,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The wild animal that I saw was like a leopard. But its feet were like a bear's feet and its mouth was like a lion's mouth. The dragon gave his own power and great authority to the wild animal so that it could rule as king. The wild animal from the sea seems to be a false Jesus Christ. People killed Jesus, but God caused him to become alive again. This wild animal makes people believe that it also became alive again after death. But it is the Devil (the dragon or great snake) who gives the wild animal authority."
+      "text": "The wild animal that I saw was like a leopard. But its feet were like a bear's feet and its mouth was like a lion's mouth. The dragon gave his own power and great authority to the wild animal so that it could rule as king."
     },
     {
       "verse": "3",
@@ -890,7 +886,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The wild animal received authority to rule people for 42 months. It could speak proud words and insult God."
+      "text": "months. It could speak proud words and insult God."
     },
     {
       "verse": "6",
@@ -902,7 +898,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Nearly all the people who live on the earth will worship the wild animal. But those people whose names are in the Lamb's book of life will not worship it. The Lamb wrote the names of these believers in his book from the beginning of the world. He is the Lamb that people killed as a sacrifice. The Lamb's book of life’ has the names of people who will live with God for ever. See Philippians Revelation"
+      "text": "Nearly all the people who live on the earth will worship the wild animal. But those people whose names are in the Lamb's book of life will not worship it. The Lamb wrote the names of these believers in his book from the beginning of the world. He is the Lamb that people killed as a sacrifice."
     },
     {
       "verse": "9",
@@ -910,7 +906,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "‘If it is right for someone's enemy to catch him, that is what will happen. If it is right for someone's enemy to kill him with a sword, that is what will happen.’ This means that God's people must be patient and strong. They must continue to trust God. God's people must believe that God knows what will happen. Sometimes this is difficult for us to understand. But we should continue to trust God. He has all authority and he knows what is right for everyone. The wild animal from the land"
+      "text": "‘If it is right for someone's enemy to catch him, that is what will happen.If it is right for someone's enemy to kill him with a sword, that is what will happen.’This means that God's people must be patient and strong. They must continue to trust God. If it is right for someone's enemy to kill him with a sword, that is what will happen.’ This means that God's people must be patient and strong. They must continue to trust God."
     },
     {
       "verse": "11",
@@ -918,7 +914,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "It worked for the first wild animal and it used the authority of the first wild animal. It made all the people on earth worship the first wild animal. That first animal was the one that someone had hurt very much. It seemed that it would soon die but it had become well again. The wild animal from the ground seems to be a false prophet or a false Holy Spirit. The Holy Spirit causes people to worship Jesus. This second wild animal causes people to worship the first wild animal."
+      "text": "It worked for the first wild animal and it used the authority of the first wild animal. It made all the people on earth worship the first wild animal. That first animal was the one that someone had hurt very much. It seemed that it would soon die but it had become well again."
     },
     {
       "verse": "13",
@@ -942,7 +938,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You must think carefully so that you can understand this number. Anyone who is wise should try to understand what the wild animal's number means. It is a human number. The number is 666. Print... Use screen font size Show All Comments Revelation 12Revelation 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You must think carefully so that you can understand this number. Anyone who is wise should try to understand what the wild animal's number means. It is a human number. The number is 666."
     }
   ],
   "14": [
@@ -964,7 +960,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "They have not spoken any lies. They have done nothing wrong. These 144,000 may be a certain group of men who have decided to serve God with all their lives. So they have chosen not to have sex. Or it may mean that they have kept themselves pure because they have not worshipped false gods. They have been completely faithful to the true God. See Revelation The three angels with messages"
+      "text": "They have not spoken any lies. They have done nothing wrong."
     },
     {
       "verse": "6",
@@ -976,7 +972,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "A second angel followed the first one. He said, ‘God has destroyed Babylon! It is no longer a great city! It has caused people everywhere to do the same bad things as it enjoys. She is like a prostitute who makes men become drunk and have sex in a wrong way. She has caused them to turn away from God.’ Babylon was the capital city of a country that was the enemy of God's people, Israel, many years ago. Babylon had ruled many other countries. The leaders in Rome ruled many countries when Jesus lived on the earth. Really, John may be talking about Rome here when he says ‘Babylon’. But ‘Babylon’ could mean any place that is against God and his people. That means a place where Satan rules."
+      "text": "A second angel followed the first one. He said, ‘God has destroyed Babylon! It is no longer a great city! It has caused people everywhere to do the same bad things as it enjoys. She is like a prostitute who makes men become drunk and have sex in a wrong way. She has caused them to turn away from God.’"
     },
     {
       "verse": "9",
@@ -996,7 +992,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then I heard a voice that spoke from heaven. It said, ‘Write this: From this time, people who continue to believe in the Lord and then they die will be very happy.’ God's Spirit says, ‘Yes, they will rest from their work. God will not forget the good things that they have done.’ The earth's harvest"
+      "text": "Then I heard a voice that spoke from heaven. It said, ‘Write this: From this time, people who continue to believe in the Lord and then they die will be very happy.’ God's Spirit says, ‘Yes, they will rest from their work. God will not forget the good things that they have done.’"
     },
     {
       "verse": "14",
@@ -1004,11 +1000,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then another angel came out from God's house in heaven. He shouted with a loud voice to the person who was sitting on the cloud. He told him, ‘Use your sharp knife and start to work. It is time to bring in the harvest. Cut down the plants and bring them in. The harvest on the earth is now ready.’ a son of man’ or ‘a human’. This person seems to be the Lord Jesus. Jesus often called himself the Son of Man. See Daniel The sharp knife had a round shape to cut crops."
+      "text": "Then another angel came out from God's house in heaven. He shouted with a loud voice to the person who was sitting on the cloud. He told him, ‘Use your sharp knife and start to work. It is time to bring in the harvest. Cut down the plants and bring them in. The harvest on the earth is now ready.’"
     },
     {
       "verse": "16",
-      "text": "Then the person who sat on the cloud moved his sharp knife over the earth. He cut down the earth's plants and he brought in the harvest. The Lord Jesus brings in the harvest of people from all the earth. He will bring all the people together. He will decide who is good. He will also decide who is bad. See Matthew"
+      "text": "Then the person who sat on the cloud moved his sharp knife over the earth. He cut down the earth's plants and he brought in the harvest."
     },
     {
       "verse": "17",
@@ -1016,7 +1012,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Again, another angel came from the altar where people offered gifts to God. This angel had authority for the fire on the altar. He shouted with a loud voice to the angel who had the sharp knife. He told him, ‘Use your knife and cut the grapes off the earth's vine. The grapes are ready now to make wine.’ Fire destroys what the farmer does not need after the harvest."
+      "text": "Again, another angel came from the altar where people offered gifts to God. This angel had authority for the fire on the altar. He shouted with a loud voice to the angel who had the sharp knife. He told him, ‘Use your knife and cut the grapes off the earth's vine. The grapes are ready now to make wine.’"
     },
     {
       "verse": "19",
@@ -1024,25 +1020,25 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The winepress was outside the city. When God stamped on the grapes, the juice that came out of the winepress was blood. The river of blood was very deep. It rose as high as horses' necks and it went as far as 300 kilometres. God is showing how angry he is. He is angry with everyone who will not obey him. The grapes are like a picture of bad people. At the time when John was writing Revelation, this is how people made wine. They put the grapes in a big hole that they had cut in the rock. This was called a winepress. Then they walked on the grapes, to squeeze them. Pipes went out of the winepress. The juice from the grapes went out through the pipes. It was red like blood. This is a picture of how God will punish his enemies. So, in fact, John was describing the deaths of these people. See also Revelation and Isaiah Print... Use screen font size Show All Comments Revelation 13Revelation 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The winepress was outside the city. When God stamped on the grapes, the juice that came out of the winepress was blood. The river of blood was very deep. It rose as high as horses' necks and it went as far as 300 kilometres."
     }
   ],
   "15": [
     {
       "verse": "1",
-      "text": "Then I saw another very wonderful thing in the sky. I saw seven angels with seven terrible troubles to hurt people. They are the final troubles. When they have finished, God will stop being angry. See Revelation"
+      "text": "Then I saw another very wonderful thing in the sky. I saw seven angels with seven terrible troubles to hurt people. They are the final troubles. When they have finished, God will stop being angry."
     },
     {
       "verse": "2",
-      "text": "Then I saw what seemed to be a glass sea. Fire was mixed in it. I also saw people who were standing at the edge of the glass sea. Those people had fought against the wild animal and they had won. They had won against its image and the number that means its name. They had fought and they had won. God had given them harps. They held the harps to make music."
+      "text": "Then I saw what seemed to be a glass sea. Fire was mixed in it. I also saw people who were standing at the edge of the glass sea. Those people had fought against the wild animal and they had won. They had won against its image and the number that means its name. They had fought and they had won. God had given them harps. They held the harps to make music. ‘Lord God with all power, what you do is great and wonderful! Everything that you do is completely fair and honest. You are King of all nations of the world."
     },
     {
       "verse": "3",
-      "text": "Now they sang the song of God's servant, Moses, and the Lamb's song. They sang this: Moses wrote a song after God had led Israel's people safely across the Red Sea. See Exodus Lord God with all power, what you do is great and wonderful! Everything that you do is completely fair and honest. You are King of all nations of the world."
+      "text": "Now they sang the song of God's servant, Moses, and the Lamb's song. They sang this:‘Lord God with all power,what you do is great and wonderful!Everything that you do is completely fair and honest.You are King of all nations of the world."
     },
     {
       "verse": "4",
-      "text": "Everyone will respect and obey you, Lord. They will say how great your name is, because only you are completely good. People from every nation have seen what you do. You always do what is right. So all people will come and stand in front of you, and they will worship you.’"
+      "text": "Everyone will respect and obey you, Lord.They will say how great your name is,because only you are completely good.People from every nation have seen what you do.You always do what is right.So all people will come and stand in front of you,and they will worship you.’ They will say how great your name is, because only you are completely good. People from every nation have seen what you do. You always do what is right. So all people will come and stand in front of you, and they will worship you.’"
     },
     {
       "verse": "5",
@@ -1058,7 +1054,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then God's house in heaven became full of smoke, which showed God's great glory and his power. As a result, nobody could go into God's house until the angels had finished sending the seven terrible troubles. Many years ago, Israel's people were travelling from Egypt to their own country. They were living in tents. God told them to make a special tent for him. Then he would live there among them. See Exodus 26. Print... Use screen font size Show All Comments Revelation 14Revelation 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then God's house in heaven became full of smoke, which showed God's great glory and his power. As a result, nobody could go into God's house until the angels had finished sending the seven terrible troubles."
     }
   ],
   "16": [
@@ -1080,15 +1076,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then I heard the voice of the angel who had authority over the waters. He said to God, ‘Holy One, you are alive now and you always have been alive. You are right in everything that you decide. Now you have judged these people."
+      "text": "Then I heard the voice of the angel who had authority over the waters. He said to God,‘Holy One, you are alive now and you always have been alive.You are right in everything that you decide.Now you have judged these people. ‘Holy One, you are alive now and you always have been alive. You are right in everything that you decide. Now you have judged these people."
     },
     {
       "verse": "6",
-      "text": "They have killed your people and your prophets. They have caused your servants to bleed and to die. So now you have given these bad people blood to drink. That is what ought to happen to them. It is right.’"
+      "text": "They have killed your people and your prophets.They have caused your servants to bleed and to die.So now you have given these bad people blood to drink.That is what ought to happen to them. It is right.’ They have caused your servants to bleed and to die. So now you have given these bad people blood to drink. That is what ought to happen to them. It is right.’"
     },
     {
       "verse": "7",
-      "text": "Then I heard a voice from the altar in heaven. It said, ‘Yes, Lord God, you have all authority. When you judge people, it is the punishment that they deserve.’"
+      "text": "Then I heard a voice from the altar in heaven. It said,‘Yes, Lord God, you have all authority.When you judge people, it is the punishment that they deserve.’ ‘Yes, Lord God, you have all authority. When you judge people, it is the punishment that they deserve.’"
     },
     {
       "verse": "8",
@@ -1116,11 +1112,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Those bad spirits are the spirits of demons. They had the power to do miracles. They went to all the rulers in the whole world, to bring them together to fight in a big war. That war will happen on the great day of God, who has all power and authority. We read about the dragon in Revelation The false prophet is probably the same as the second wild animal. See Revelation"
+      "text": "Those bad spirits are the spirits of demons. They had the power to do miracles. They went to all the rulers in the whole world, to bring them together to fight in a big war. That war will happen on the great day of God, who has all power and authority."
     },
     {
       "verse": "15",
-      "text": "The Lord says: ‘Listen! I will come secretly, like someone who robs people. If you continue to watch carefully, you will be happy. Keep your clothes with you all the time. Then, when I come, you will not be ashamed because you have no clothes.’ Jesus is telling his people that they must always be ready for him. He will return to this earth. He may come at any time, even at night. See 1 Thessalonians Christians must not be like people who are asleep. People like that will not be ready to get up when he comes. Chapter 16 describes the last set of troubles before the end of the world. It is very important that Christians go on believing Jesus. They must be ready for him during this time."
+      "text": "The Lord says: ‘Listen! I will come secretly, like someone who robs people. If you continue to watch carefully, you will be happy. Keep your clothes with you all the time. Then, when I come, you will not be ashamed because you have no clothes.’"
     },
     {
       "verse": "16",
@@ -1144,7 +1140,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Strong rain with stones of ice fell from the sky. The stones hit people and caused them great pain. The weight of each stone was about 50 kilograms. The people cursed God because the strong rain and the stones of ice caused them to have such terrible pain. The troubles that the seven bowls bring are the last troubles. They seem to be worse than the troubles that the seven seals or the seven trumpets bring. But the last bowl brings events like those events that come with the last trumpet. See Revelation There is a great storm and the ground moves strongly. These events also happen after the last seal becomes open. See Revelation So perhaps these verses are describing the same events in three different ways. Some people think that the events of the first six seals happen before the first six trumpets. After that, the events of the first six bowls happen. Then the last seal, the last trumpet and the last bowl may all show the same events. Print... Use screen font size Show All Comments Revelation 15Revelation 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Strong rain with stones of ice fell from the sky. The stones hit people and caused them great pain. The weight of each stone was about 50 kilograms. The people cursed God because the strong rain and the stones of ice caused them to have such terrible pain."
     }
   ],
   "17": [
@@ -1154,11 +1150,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "It is like the kings who rule on the earth have had sex with that bad woman. She has led the people who live on the earth to do bad things. They have become drunk from the strong wine that she has given to them.’ The great prostitute is like a picture of the bad city of Babylon. See Revelation Many years ago, Babylon city was in a place where many rivers came together. Verse 15 of this chapter explains what these rivers mean. The Bible tells us many times about people who have sex in a wrong way. In the Bible, this idea is often used as a picture of people who turn away from God. It means that people were worshipping idols instead of the true God. If they chose to worship other gods, they were like a bad wife who had gone away from her husband. The people in Babylon worshipped many false gods."
+      "text": "It is like the kings who rule on the earth have had sex with that bad woman. She has led the people who live on the earth to do bad things. They have become drunk from the strong wine that she has given to them.’"
     },
     {
       "verse": "3",
-      "text": "Again, God's Spirit caused me to see and to hear strange things. The angel carried me away to a wilderness. There I saw a woman who was sitting on a wild animal that was bright red. All over this wild animal, names were written that insulted God. The animal had seven heads and ten horns."
+      "text": "Again, God's Spirit caused me to see and to hear strange things. The angel carried me away to a wilderness. There I saw a woman who was sitting on a wild animal that was bright red. All over this wild animal, names were written that insulted God. The animal had seven heads and ten horns. Powerful Babylon. Mother of all prostitutes. Mother of all the disgusting things on the earth."
     },
     {
       "verse": "4",
@@ -1166,7 +1162,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "A name was written on the front of her head. Only God knows what it means. It was: Powerful Babylon. Mother of all prostitutes. Mother of all the disgusting things on the earth."
+      "text": "A name was written on the front of her head. Only God knows what it means. It was:Powerful Babylon.Mother of all prostitutes.Mother of all the disgusting things on the earth."
     },
     {
       "verse": "6",
@@ -1178,7 +1174,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "This animal was once alive, but it is not alive now. Soon it will come up out of the deep hole again but then God will destroy it completely. All these things will surprise many people who live on the earth. Those are the people whose names are not written in God's book of life from the beginning of the world. They will be surprised to see the animal that was alive at one time. It is not alive now, but it will soon appear again. We read about this deep hole in Revelation"
+      "text": "This animal was once alive, but it is not alive now. Soon it will come up out of the deep hole again but then God will destroy it completely. All these things will surprise many people who live on the earth. Those are the people whose names are not written in God's book of life from the beginning of the world. They will be surprised to see the animal that was alive at one time. It is not alive now, but it will soon appear again."
     },
     {
       "verse": "9",
@@ -1190,7 +1186,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The wild animal is a picture of an eighth king. He was alive once, but he is not alive now. He belongs to the group of seven kings, but God will destroy him completely. The city of Rome has seven hills. So many people think that the message about Babylon is really a picture of Rome. Rome was an enemy of God's people at the time when John was alive."
+      "text": "The wild animal is a picture of an eighth king. He was alive once, but he is not alive now. He belongs to the group of seven kings, but God will destroy him completely."
     },
     {
       "verse": "12",
@@ -1202,7 +1198,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Together they will fight a war against the Lamb. But the Lamb will win against them. He is the Lord above all lords. He is the King who rules over all kings. And God's people will be with him. They are the people that the Lamb has chosen to belong to him. They are the people who have continued to trust him.’ We do not really know what the ‘seven kings’ and the ‘ten kings’ mean. Different people have different ideas about them. There is one important thing for us to understand. The city (the ‘woman’) may not be only one city in only one place at only one time. It is the Devil's city. And he rules everyone in the world who does not love God."
+      "text": "Together they will fight a war against the Lamb. But the Lamb will win against them. He is the Lord above all lords. He is the King who rules over all kings. And God's people will be with him. They are the people that the Lamb has chosen to belong to him. They are the people who have continued to trust him.’"
     },
     {
       "verse": "15",
@@ -1218,49 +1214,49 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The bad woman that you saw is a picture of the great city. That city has power over all the kings who rule on the earth.’ This describes what will happen to Babylon. Enemies will destroy the city and take away all its valuable things. Print... Use screen font size Show All Comments Revelation 16Revelation 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The bad woman that you saw is a picture of the great city. That city has power over all the kings who rule on the earth.’"
     }
   ],
   "18": [
     {
       "verse": "1",
-      "text": "After these things happened, I saw another angel. He was coming down from heaven. He had great authority. He was beautiful and he shone brightly. He gave light to the whole world."
+      "text": "After these things happened, I saw another angel. He was coming down from heaven. He had great authority. He was beautiful and he shone brightly. He gave light to the whole world. ‘God has destroyed the great city of Babylon! She has become a place where demons live. She is a home for every disgusting spirit. She is a home for every unclean bird. She is a home for every unclean and disgusting animal."
     },
     {
       "verse": "2",
-      "text": "He shouted with a very loud voice: ‘God has destroyed the great city of Babylon! She has become a place where demons live. She is a home for every disgusting spirit. She is a home for every unclean bird. She is a home for every unclean and disgusting animal."
+      "text": "He shouted with a very loud voice:‘God has destroyed the great city of Babylon!She has become a place where demons live.She is a home for every disgusting spirit.She is a home for every unclean bird.She is a home for every unclean and disgusting animal."
     },
     {
       "verse": "3",
-      "text": "She has been like a prostitute who makes men become drunk. Then she leads them to have sex in a wrong way. She has caused people from every nation to turn away from God. It is like all the kings of the earth have had sex with that bad woman. All the traders of the earth have become rich, because she has bought things from them to enjoy a wicked life.’"
+      "text": "She has been like a prostitute who makes men become drunk.Then she leads them to have sex in a wrong way.She has caused people from every nation to turn away from God.It is like all the kings of the earth have had sex with that bad woman.All the traders of the earth have become rich,because she has bought things from them to enjoy a wicked life.’ Then she leads them to have sex in a wrong way. She has caused people from every nation to turn away from God. It is like all the kings of the earth have had sex with that bad woman. All the traders of the earth have become rich, because she has bought things from them to enjoy a wicked life.’"
     },
     {
       "verse": "4",
-      "text": "Then I heard another voice which spoke from heaven. It said: ‘My people, leave the city! Come out! Do not do the bad things that the people of that city have done. Then you will not receive the terrible troubles that God sends to them."
+      "text": "Then I heard another voice which spoke from heaven. It said:‘My people, leave the city! Come out!Do not do the bad things that the people of that city have done.Then you will not receive the terrible troubles that God sends to them. ‘My people, leave the city! Come out! Do not do the bad things that the people of that city have done. Then you will not receive the terrible troubles that God sends to them."
     },
     {
       "verse": "5",
-      "text": "They have done very many bad things. Their sins have reached as high as heaven. God has remembered to punish them."
+      "text": "They have done very many bad things.Their sins have reached as high as heaven.God has remembered to punish them. Their sins have reached as high as heaven. God has remembered to punish them."
     },
     {
       "verse": "6",
-      "text": "Yes, punish the people of that city. Do to them the same things that they have done to others. Punish them with twice the bad things that they themselves have done. She caused people to drink pain from her cup. Now make her drink twice as much pain for herself!"
+      "text": "Yes, punish the people of that city.Do to them the same things that they have done to others.Punish them with twice the bad things that they themselves have done.She caused people to drink pain from her cup.Now make her drink twice as much pain for herself! Do to them the same things that they have done to others. Punish them with twice the bad things that they themselves have done. She caused people to drink pain from her cup. Now make her drink twice as much pain for herself!"
     },
     {
       "verse": "7",
-      "text": "She liked to receive honour. She bought expensive things to enjoy a wicked life. So now give her the trouble and pain that she deserves. She has said to herself, “I rule people like a queen. I do not live like a widow. I will never need to be sad.”"
+      "text": "She liked to receive honour.She bought expensive things to enjoy a wicked life.So now give her the trouble and pain that she deserves.She has said to herself, “I rule people like a queen.I do not live like a widow.I will never need to be sad.” She bought expensive things to enjoy a wicked life. So now give her the trouble and pain that she deserves. She has said to herself, “I rule people like a queen. I do not live like a widow. I will never need to be sad.”"
     },
     {
       "verse": "8",
-      "text": "Because she speaks like that, she will receive many troubles in one single day. Her people will become very ill. They will be very sad. They will have no food to eat. Fire will destroy the city, The Lord God is powerful. So he will punish her with these troubles.’"
+      "text": "Because she speaks like that,she will receive many troubles in one single day.Her people will become very ill.They will be very sad.They will have no food to eat.Fire will destroy the city,The Lord God is powerful.So he will punish her with these troubles.’ she will receive many troubles in one single day. Her people will become very ill. They will be very sad. They will have no food to eat. Fire will destroy the city, The Lord God is powerful. So he will punish her with these troubles.’"
     },
     {
       "verse": "9",
-      "text": "When all that happens, the kings on the earth will be very sad. They enjoyed the bad things that people did in that city. They had many expensive things so that they were happy. Now they will see the smoke from the fire that burns the city. As a result, they will cry and they will weep."
+      "text": "When all that happens, the kings on the earth will be very sad. They enjoyed the bad things that people did in that city. They had many expensive things so that they were happy. Now they will see the smoke from the fire that burns the city. As a result, they will cry and they will weep. ‘Terrible trouble has come to you, Babylon! Great city! Powerful city! It is very bad for you! In one single hour God has destroyed you!’"
     },
     {
       "verse": "10",
-      "text": "They will stand a long way from the city because they are afraid. They do not want to suffer in the same way. They will say, ‘Terrible trouble has come to you, Babylon! Great city! Powerful city! It is very bad for you! In one single hour God has destroyed you!’"
+      "text": "They will stand a long way from the city because they are afraid. They do not want to suffer in the same way. They will say,‘Terrible trouble has come to you, Babylon!Great city! Powerful city! It is very bad for you!In one single hour God has destroyed you!’"
     },
     {
       "verse": "11",
@@ -1268,7 +1264,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "They sold many expensive things like these: Things made from gold and silver.Valuable stones and pearls.Good linen and other kinds of expensive cloth that is red or purple.Things made from wood that has a nice smell.Many different things that are made from ivory.Many kinds of things that people had made from expensive wood, from different metals and from stone."
+      "text": "They sold many expensive things like these:Things made from gold and silver.Valuable stones and pearls.Good linen and other kinds of expensive cloth that is red or purple.Things made from wood that has a nice smell.Many different things that are made from ivory.Many kinds of things that people had made from expensive wood, from different metals and from stone."
     },
     {
       "verse": "13",
@@ -1280,77 +1276,77 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The traders had become rich because of the city. But now they will stand a long way from the city because they are afraid. They do not want to suffer in the same way themselves. They will weep and they will be very sad."
+      "text": "The traders had become rich because of the city. But now they will stand a long way from the city because they are afraid. They do not want to suffer in the same way themselves. They will weep and they will be very sad. ‘Bad trouble has come to you, Babylon! Great city! It is very bad for you! You wore beautiful clothes that were made from good linen. You wore bright things that made you look beautiful. You shone with gold, valuable stones and pearls."
     },
     {
       "verse": "16",
-      "text": "They will say, ‘Bad trouble has come to you, Babylon! Great city! It is very bad for you! You wore beautiful clothes that were made from good linen. You wore bright things that made you look beautiful. You shone with gold, valuable stones and pearls."
+      "text": "They will say,‘Bad trouble has come to you, Babylon!Great city! It is very bad for you!You wore beautiful clothes that were made from good linen.You wore bright things that made you look beautiful.You shone with gold, valuable stones and pearls."
     },
     {
       "verse": "17",
-      "text": "But in one single hour God has destroyed all those valuable things.’ All the sailors and the people who travel on ships will also be sad. They include every ship's captain, and everyone who works on ships on the sea. They will stand a long way from the city."
+      "text": "But in one single hour God has destroyed all those valuable things.’All the sailors and the people who travel on ships will also be sad. They include every ship's captain, and everyone who works on ships on the sea. They will stand a long way from the city."
     },
     {
       "verse": "18",
-      "text": "They will see the smoke from the fire that burns the city. Then they will shout, ‘There is no other city like this great city!’"
+      "text": "They will see the smoke from the fire that burns the city. Then they will shout, ‘There is no other city like this great city!’ ‘Bad trouble has come to you, Babylon! Great city! It is very bad for you! Everyone who had ships on the sea became rich because of you. You used your money to buy their expensive things. But in one single hour God has destroyed that city.’"
     },
     {
       "verse": "19",
-      "text": "They will throw dirt from the ground on their heads because they are so sad. They will weep and they will shout, ‘Bad trouble has come to you, Babylon! Great city! It is very bad for you! Everyone who had ships on the sea became rich because of you. You used your money to buy their expensive things. But in one single hour God has destroyed that city.’"
+      "text": "They will throw dirt from the ground on their heads because they are so sad. They will weep and they will shout,‘Bad trouble has come to you, Babylon!Great city! It is very bad for you!Everyone who had ships on the sea became rich because of you.You used your money to buy their expensive things.But in one single hour God has destroyed that city.’"
     },
     {
       "verse": "20",
-      "text": "Yes, you who live in heaven, be happy! Be happy because God has punished Babylon! God's people and his apostles and his prophets, be happy! God has punished the city because of what she did to you."
+      "text": "Yes, you who live in heaven, be happy!Be happy because God has punished Babylon!God's people and his apostles and his prophets, be happy!God has punished the city because of what she did to you. Be happy because God has punished Babylon! God's people and his apostles and his prophets, be happy! God has punished the city because of what she did to you."
     },
     {
       "verse": "21",
-      "text": "Then a powerful angel picked up a very big, heavy stone. He threw it into the sea. He said, ‘God will throw you down, Babylon! You are a great city, but God will throw you down like this stone. Nobody will ever see you again!"
+      "text": "Then a powerful angel picked up a very big, heavy stone. He threw it into the sea. He said,‘God will throw you down, Babylon!You are a great city, but God will throw you down like this stone.Nobody will ever see you again! ‘God will throw you down, Babylon! You are a great city, but God will throw you down like this stone. Nobody will ever see you again!"
     },
     {
       "verse": "22",
-      "text": "Nobody will ever hear music in the city again. Nobody will sing there. Nobody will make music with harps, or with flutes, or with trumpets. There will never be workers who make things in the city. Nobody will ever hear the sound of people who make flour again."
+      "text": "Nobody will ever hear music in the city again.Nobody will sing there.Nobody will make music with harps, or with flutes, or with trumpets.There will never be workers who make things in the city.Nobody will ever hear the sound of people who make flour again. Nobody will sing there. Nobody will make music with harps, or with flutes, or with trumpets. There will never be workers who make things in the city. Nobody will ever hear the sound of people who make flour again."
     },
     {
       "verse": "23",
-      "text": "No light from people's lamps will ever shine in the city again. Nobody will ever hear the happy voices of a man and a woman when they marry. Your traders were the most powerful people on the earth. You used your magic to deceive people from all nations."
+      "text": "No light from people's lamps will ever shine in the city again.Nobody will ever hear the happy voices of a man and a woman when they marry.Your traders were the most powerful people on the earth.You used your magic to deceive people from all nations. Nobody will ever hear the happy voices of a man and a woman when they marry. Your traders were the most powerful people on the earth. You used your magic to deceive people from all nations."
     },
     {
       "verse": "24",
-      "text": "Your people killed God's people and his prophets. Their blood lies on the ground in the city. The blood of everyone on earth that people have killed is also there. This shows that you are guilty of their murder.’ God completely destroys the Devil's city, which John calls ‘Babylon’. Many people became rich and powerful because of that city. They thought that money and power were more important than God. But nobody who serves the Devil will be happy in the end. Nobody can be really happy unless they serve God. Print... Use screen font size Show All Comments Revelation 17Revelation 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Your people killed God's people and his prophets.Their blood lies on the ground in the city.The blood of everyone on earth that people have killed is also there.This shows that you are guilty of their murder.’"
     }
   ],
   "19": [
     {
       "verse": "1",
-      "text": "After these things, I heard a sound like the voices of a great crowd of people in heaven. They were shouting, ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great!"
+      "text": "After these things, I heard a sound like the voices of a great crowd of people in heaven. They were shouting,‘Praise the Lord our God!He has saved us!He is very powerful!We say that he is great! ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great!"
     },
     {
       "verse": "2",
-      "text": "Everything that he decides is right and fair. He has punished that great prostitute. She led people on the earth to do wicked things. She murdered God's servants with her own hands. But now God has punished her as she deserves.’ Babylon and other wicked cities are like a prostitute. They cause people to turn away from God, so that they are not faithful to him."
+      "text": "Everything that he decides is right and fair.He has punished that great prostitute.She led people on the earth to do wicked things.She murdered God's servants with her own hands.But now God has punished her as she deserves.’ He has punished that great prostitute. She led people on the earth to do wicked things. She murdered God's servants with her own hands. But now God has punished her as she deserves.’"
     },
     {
       "verse": "3",
-      "text": "Then the crowd of people in heaven shouted again, ‘Praise the Lord our God! The smoke from the fire that burns that city will go up for ever.’"
+      "text": "Then the crowd of people in heaven shouted again,‘Praise the Lord our God!The smoke from the fire that burns that city will go up for ever.’ ‘Praise the Lord our God! The smoke from the fire that burns that city will go up for ever.’"
     },
     {
       "verse": "4",
-      "text": "The 24 leaders and the four beings that are alive then threw themselves down on the ground. They worshipped God, who was sitting on the throne. They said, ‘It is true! Praise the Lord God!’"
+      "text": "leaders and the four beings that are alive then threw themselves down on the ground. They worshipped God, who was sitting on the throne. They said, ‘It is true! Praise the Lord God!’"
     },
     {
       "verse": "5",
-      "text": "Then a voice spoke from the throne. It said, ‘All of you who are God's servants, praise our God! All of you who respect God's power, worship him! Important people and ordinary people should worship him!’"
+      "text": "Then a voice spoke from the throne. It said,‘All of you who are God's servants,praise our God!All of you who respect God's power, worship him!Important people and ordinary people should worship him!’ ‘All of you who are God's servants, praise our God! All of you who respect God's power, worship him! Important people and ordinary people should worship him!’"
     },
     {
       "verse": "6",
-      "text": "Then I heard a sound like the noise of a very big crowd that was shouting. The sound was like the noise of water that pours quickly along a river. It was like the noise of loud thunder. The crowd of people shouted, ‘Praise the Lord our God! He rules with all power and authority!"
+      "text": "Then I heard a sound like the noise of a very big crowd that was shouting. The sound was like the noise of water that pours quickly along a river. It was like the noise of loud thunder. The crowd of people shouted,‘Praise the Lord our God!He rules with all power and authority! ‘Praise the Lord our God! He rules with all power and authority!"
     },
     {
       "verse": "7",
-      "text": "We must shout with joy because we are so happy! We will say that God is great! The time has come for the Lamb's wedding party. His bride has prepared herself."
+      "text": "We must shout with joy because we are so happy!We will say that God is great!The time has come for the Lamb's wedding party.His bride has prepared herself. We will say that God is great! The time has come for the Lamb's wedding party. His bride has prepared herself."
     },
     {
       "verse": "8",
-      "text": "God has given her linen clothes to wear that are bright and clean.’ These special linen clothes show the good things that God's holy people have done. God's people are clean and pure because Jesus, the Lamb, died in their place as a sacrifice."
+      "text": "God has given her linen clothes to wear that are bright and clean.’These special linen clothes show the good things that God's holy people have done. These special linen clothes show the good things that God's holy people have done."
     },
     {
       "verse": "9",
@@ -1358,7 +1354,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then I bent down low at the angel's feet to worship him. But he said to me, ‘You must not do that! I am only a servant of God, the same as you are. I am a servant, like all believers who show clearly that they trust in Jesus. God is the one that you should worship! When God gave a message to his prophets, it was Jesus that they spoke about.’ The great king on a white horse"
+      "text": "Then I bent down low at the angel's feet to worship him. But he said to me, ‘You must not do that! I am only a servant of God, the same as you are. I am a servant, like all believers who show clearly that they trust in Jesus. God is the one that you should worship! When God gave a message to his prophets, it was Jesus that they spoke about.’"
     },
     {
       "verse": "11",
@@ -1382,7 +1378,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The man who rides on the white horse has a name that is written on his shirt. It is also written high on his leg. His name is: ‘The King who rules over all other kings. The Lord who rules over all lords’. This sharp sword shows that he speaks strong words against his enemies. See Revelation God is angry with those people who are enemies of Jesus. Jesus will punish those people like someone who stamps on grapes to make wine. See Revelation These verses describe Jesus. He is the great King who will win against all his enemies."
+      "text": "The man who rides on the white horse has a name that is written on his shirt. It is also written high on his leg. His name is: ‘The King who rules over all other kings. The Lord who rules over all lords’."
     },
     {
       "verse": "17",
@@ -1402,7 +1398,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The rider of the white horse then killed all his other enemies. He killed them with the sword that came out of his mouth. So then all the birds ate the meat from the dead bodies until they were completely full. Print... Use screen font size Show All Comments Revelation 18Revelation 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The rider of the white horse then killed all his other enemies. He killed them with the sword that came out of his mouth. So then all the birds ate the meat from the dead bodies until they were completely full."
     }
   ],
   "20": [
@@ -1416,7 +1412,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then he threw the dragon into the deep hole. He closed the door to the deep hole, and he locked it with the key. He put a seal on the door. During that time, Satan could no longer deceive the people of all nations. But after the 1,000 years have finished, he must go free for a short time. We read about this deep hole in Revelation We read about the dragon in Revelation"
+      "text": "Then he threw the dragon into the deep hole. He closed the door to the deep hole, and he locked it with the key. He put a seal on the door. During that time, Satan could no longer deceive the people of all nations. But after the 1,000 years have finished, he must go free for a short time."
     },
     {
       "verse": "4",
@@ -1428,7 +1424,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God has blessed those people that he raises up that first time. They belong to God as his holy people. The second death has no power over them. Instead, they will be priests who serve God and Christ. They will rule as kings with him for 1,000 years. God sends Satan into the lake of fire"
+      "text": "God has blessed those people that he raises up that first time. They belong to God as his holy people. The second death has no power over them. Instead, they will be priests who serve God and Christ. They will rule as kings with him for 1,000 years."
     },
     {
       "verse": "7",
@@ -1444,7 +1440,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The Devil had deceived those people. I saw God throw him into the lake of fire that burns with sulphur. That is the lake where he had already thrown the wild animal and the false prophet. They will have a lot of pain in that place, all day and all night for ever. The prophet Ezekiel spoke about Gog, the leader, and Magog, his people, as great enemies of God's people Israel. He spoke about them many years before Jesus was born. See Ezekiel 38-39. Ezekiel said that God would destroy these enemies with fire from heaven. God himself would destroy them because they were such great enemies of his people. So John uses the same names when he describes the last war between God's people and Satan's people. There is so much sand on the shore of the sea that nobody could ever count the bits of sand. God judges all the dead people"
+      "text": "The Devil had deceived those people. I saw God throw him into the lake of fire that burns with sulphur. That is the lake where he had already thrown the wild animal and the false prophet. They will have a lot of pain in that place, all day and all night for ever."
     },
     {
       "verse": "11",
@@ -1452,7 +1448,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "I also saw the people who had died, important people and ordinary people. They were standing in front of the great throne. Then someone opened books to see what was in them. God had written in them all the things that the people had done. Then someone opened another book which is God's book of life. God judged the people who had died. He looked in the books to see what they had done, and he decided what was right. We read about ‘God's book of life’ in Revelation"
+      "text": "I also saw the people who had died, important people and ordinary people. They were standing in front of the great throne. Then someone opened books to see what was in them. God had written in them all the things that the people had done. Then someone opened another book which is God's book of life. God judged the people who had died. He looked in the books to see what they had done, and he decided what was right."
     },
     {
       "verse": "13",
@@ -1464,7 +1460,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "If anyone's name was not written in the book of life, God threw that person into the lake of fire. Print... Use screen font size Show All Comments Revelation 19Revelation 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If anyone's name was not written in the book of life, God threw that person into the lake of fire."
     }
   ],
   "21": [
@@ -1498,7 +1494,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But I will punish other people. They include: people who are afraid of trouble;people who do not believe in Jesus;people who do disgusting things;people who murder other people;people who have sex in a wrong way;people who use magic to hurt people;people who worship idols;people who tell lies.All these people will go into the lake of fire that burns with sulphur. That is the second death for people.’ New city of Jerusalem"
+      "text": "But I will punish other people. They include:people who are afraid of trouble;people who do not believe in Jesus;people who do disgusting things;people who murder other people;people who have sex in a wrong way;people who use magic to hurt people;people who worship idols;people who tell lies.All these people will go into the lake of fire that burns with sulphur. That is the second death for people.’ All these people will go into the lake of fire that burns with sulphur. That is the second death for people.’"
     },
     {
       "verse": "9",
@@ -1518,11 +1514,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "There were three gates on each side of the city: three gates were on the east side,three gates were on the north side,three gates were on the south side,three gates were on the west side."
+      "text": "There were three gates on each side of the city:three gates were on the east side,three gates were on the north side,three gates were on the south side,three gates were on the west side."
     },
     {
       "verse": "14",
-      "text": "The city's wall has a foundation of 12 strong stones. The names of the Lamb's 12 apostles were written on those 12 stones. When Jesus was alive on this earth, he chose 12 men to work with him. These workers were called apostles. He sent them to teach other people about him. See Matthew One of these men (Judas Iscariot) did not continue to believe in Jesus. Later, other men, like Paul, were also called Christ's apostles."
+      "text": "The city's wall has a foundation of 12 strong stones. The names of the Lamb's 12 apostles were written on those 12 stones."
     },
     {
       "verse": "15",
@@ -1534,7 +1530,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He also measured its wall. The size of the wall was 144 cubits (65 metres). That is the way that humans measure things. The angel also measured in the same way. stadia’ and ‘cubits’ were how people measured things in John's time. 12,000 stadia was about 2,400 kilometres. 144 cubits was about 65 metres. We do not know if this was how high the wall was or how thick it was. The numbers 12,000 and 144 may mean something special."
+      "text": "He also measured its wall. The size of the wall was 144 cubits (65 metres). That is the way that humans measure things. The angel also measured in the same way."
     },
     {
       "verse": "18",
@@ -1542,15 +1538,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The strong stones that were the foundation of the city's wall were very beautiful. They had valuable jewels in them that were different colours. Each great stone had its own special jewel. They were called: 1. Jasper;2. Sapphire;3. Agate;4. Emerald;"
+      "text": "The strong stones that were the foundation of the city's wall were very beautiful. They had valuable jewels in them that were different colours. Each great stone had its own special jewel. They were called:1. Jasper;2. Sapphire;3. Agate;4. Emerald;"
     },
     {
       "verse": "20",
-      "text": "5. Onyx;6. Carnelian;7. Quartz;8. Beryl;9. Topaz;10. Chrysoprase; Chrysoprase’ or ‘Turquoise’ 11. Jacinth;12. Amethyst."
+      "text": "5. Onyx;6. Carnelian;7. Quartz;8. Beryl;9. Topaz;10. Chrysoprase;11. Jacinth;12. Amethyst."
     },
     {
       "verse": "21",
-      "text": "The 12 gates were 12 pearls. They had used a single pearl to make each gate. The city's biggest street was made from pure gold. The light shone through it, as light shines through clean glass."
+      "text": "gates were 12 pearls. They had used a single pearl to make each gate. The city's biggest street was made from pure gold. The light shone through it, as light shines through clean glass."
     },
     {
       "verse": "22",
@@ -1574,7 +1570,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "But nothing that is bad or unclean will ever go in there. Nobody who does anything that God hates will go into the city. Nobody who tells lies will go in. Only those people with their names written in the Lamb's book of life can go in there. We read about the ‘book of life’ in Revelation Print... Use screen font size Show All Comments Revelation 20Revelation 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But nothing that is bad or unclean will ever go in there. Nobody who does anything that God hates will go into the city. Nobody who tells lies will go in. Only those people with their names written in the Lamb's book of life can go in there."
     }
   ],
   "22": [
@@ -1596,7 +1592,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "There will be no more night, so nobody will need a lamp to make light. They will not need light from the sun, because the Lord God will shine on them. They will rule as kings for ever. The final message"
+      "text": "There will be no more night, so nobody will need a lamp to make light. They will not need light from the sun, because the Lord God will shine on them. They will rule as kings for ever."
     },
     {
       "verse": "6",
@@ -1604,7 +1600,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Jesus says, ‘Listen! I will come soon. God will bless everyone who obeys the words of the prophecy that is in this book.’ I will come soon’ or ‘I will come quickly.’ John finishes his book"
+      "text": "Jesus says, ‘Listen! I will come soon. God will bless everyone who obeys the words of the prophecy that is in this book.’"
     },
     {
       "verse": "8",
@@ -1620,7 +1616,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Let everybody continue to live as they choose. Everyone who does wrong things will continue to do wrong things. Everyone who is disgusting will continue to be disgusting. Everyone who does right things will continue to do right things. Everyone who belongs to God will continue to be holy.’ Each person chooses what they will do. They choose whether they will do right things or wrong things. God will decide what is fair for each person. He will judge them because of what they have done."
+      "text": "Let everybody continue to live as they choose. Everyone who does wrong things will continue to do wrong things. Everyone who is disgusting will continue to be disgusting. Everyone who does right things will continue to do right things. Everyone who belongs to God will continue to be holy.’"
     },
     {
       "verse": "12",
@@ -1636,11 +1632,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But other people must stay outside the city: wicked people;people who do magic;people who have sex in a wrong way;people who murder other people;people who worship idols;everyone who likes to tell lies and deceive people."
+      "text": "But other people must stay outside the city:wicked people;people who do magic;people who have sex in a wrong way;people who murder other people;people who worship idols;everyone who likes to tell lies and deceive people."
     },
     {
       "verse": "16",
-      "text": "I am Jesus. I have sent my angel to tell you this message. You must tell it to all the people in the churches. I am called the Root of King David. I am his descendant. I am the bright morning star.’ See Revelation and the note there. Jesus was born into King David's family when he came to this earth as a man. Jesus is greater than David. He has always been alive and he made everything and everyone."
+      "text": "I am Jesus. I have sent my angel to tell you this message. You must tell it to all the people in the churches. I am called the Root of King David. I am his descendant. I am the bright morning star.’"
     },
     {
       "verse": "17",
@@ -1656,11 +1652,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "It is Jesus who tells us that all these messages are true. He says, ‘Yes, I will come soon!’ Amen! We agree! Come, Lord Jesus!"
+      "text": "It is Jesus who tells us that all these messages are true. He says, ‘Yes, I will come soon!’Amen! We agree! Come, Lord Jesus! Amen! We agree! Come, Lord Jesus!"
     },
     {
       "verse": "21",
-      "text": "I pray that the Lord Jesus will continue to be kind to all of you. \u001a Print... Use screen font size Show All Comments Revelation 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that the Lord Jesus will continue to be kind to all of you. \u001a"
     }
   ]
 };

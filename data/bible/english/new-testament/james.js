@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, James. I am a servant of God and the Lord Jesus Christ. James is the brother of Jesus, but he describes himself as a servant of Jesus Christ. I am writing to the 12 tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you. This may mean all believers, wherever they live. There were 12 tribes of Israel in the Old Testament. They were God's people. Now all Christians are God's people. What to do when you have troubles"
+      "text": "This letter is from me, James. I am a servant of God and the Lord Jesus Christ.I am writing to the 12 tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you. tribes of God's people who live in many different parts of the world. I say ‘hello’ to all of you."
     },
     {
       "verse": "2",
@@ -25,7 +25,7 @@ module.exports = {
       "text": "But when you ask God for something, you must trust him completely. Do not have other ideas in your mind. People who are not sure that God will help them are like the waves in the sea. The wind blows the water one way and then it blows the water another way."
     },
     {
-      "verse": "7-8",
+      "verse": "7",
       "text": "A person who is like that never knows what to do. He has many ideas in his mind. He should not think that he will receive anything from the Lord."
     },
     {
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "We may agree to do what our bad thoughts tell us to do. When we do that, it becomes a sin. Then, we may not stop doing those bad things. If we continue to live like that, the result of our sins is death. Death’ here means that we no longer have life with God. We become separate from God."
+      "text": "We may agree to do what our bad thoughts tell us to do. When we do that, it becomes a sin. Then, we may not stop doing those bad things. If we continue to live like that, the result of our sins is death."
     },
     {
       "verse": "16",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "He chose to make us his children. He used his true message to do that. Because of that, we are like the first special gift that belongs to him from among everything that he has made. Listen and do what God wants"
+      "text": "He chose to make us his children. He used his true message to do that. Because of that, we are like the first special gift that belongs to him from among everything that he has made."
     },
     {
       "verse": "19",
@@ -102,7 +102,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "If you want to serve God in a completely good way, do things like this: Help children who have no parents and women who are widows. Help them in their troubles. If you serve God our Father like that, he will be pleased with you. Do not let the bad people in this world make you bad too. Print... Use screen font size Show All Comments James IntroductionJames 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you want to serve God in a completely good way, do things like this: Help children who have no parents and women who are widows. Help them in their troubles. If you serve God our Father like that, he will be pleased with you. Do not let the bad people in this world make you bad too."
     }
   ],
   "2": [
@@ -156,7 +156,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "God will not forgive anyone who has not forgiven other people. But God is kind! He judges us, but even more than that, he forgives us! Believe God and do good things"
+      "text": "God will not forgive anyone who has not forgiven other people. But God is kind! He judges us, but even more than that, he forgives us!"
     },
     {
       "verse": "14",
@@ -196,7 +196,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The Bible tells us what happened. It says, ‘Abraham believed God. As a result, God accepted Abraham as right with him.’ God also called Abraham his friend. See Genesis 22. See Genesis"
+      "text": "The Bible tells us what happened. It says, ‘Abraham believed God. As a result, God accepted Abraham as right with him.’ God also called Abraham his friend."
     },
     {
       "verse": "24",
@@ -208,7 +208,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "If our bodies have no spirit, they are dead. In the same way, if our faith does not lead us to do good things, it is dead. See Joshua Print... Use screen font size Show All Comments James 1James 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If our bodies have no spirit, they are dead. In the same way, if our faith does not lead us to do good things, it is dead."
     }
   ],
   "3": [
@@ -230,7 +230,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "In the same way, our tongue is a very small part of our body. But it speaks as if it is very great. Teachers must be careful to teach God's word correctly. Because they have authority as teachers, they can cause a lot of trouble to people if they do not teach what is true. So God will judge them very strictly. Think about this. A very small fire can cause even a big forest to burn completely."
+      "text": "In the same way, our tongue is a very small part of our body. But it speaks as if it is very great.Think about this. A very small fire can cause even a big forest to burn completely."
     },
     {
       "verse": "6",
@@ -258,7 +258,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "A fig tree cannot give olives, my friends. A vine for grapes cannot give figs. And a salty spring cannot give sweet water. How to be wise"
+      "text": "A fig tree cannot give olives, my friends. A vine for grapes cannot give figs. And a salty spring cannot give sweet water."
     },
     {
       "verse": "13",
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Those who bring peace to other people help them to live together in peace. As a result, people choose to do what is right and good. Print... Use screen font size Show All Comments James 2James 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Those who bring peace to other people help them to live together in peace. As a result, people choose to do what is right and good."
     }
   ],
   "4": [
@@ -332,7 +332,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "God is the one who gave his Law to people. Only he has the authority to judge whether people have done what is right. Only he can decide to save people or to destroy them. So you must not judge your friends. You do not have that authority. Trust God every day"
+      "text": "God is the one who gave his Law to people. Only he has the authority to judge whether people have done what is right. Only he can decide to save people or to destroy them. So you must not judge your friends. You do not have that authority."
     },
     {
       "verse": "13",
@@ -352,7 +352,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "So you know the right thing that you ought to do. But if you know that and you do not do the right thing, then you have done a wrong thing. Print... Use screen font size Show All Comments James 3James 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So you know the right thing that you ought to do. But if you know that and you do not do the right thing, then you have done a wrong thing."
     }
   ],
   "5": [
@@ -378,7 +378,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You say that a righteous person is guilty. You have even killed him and he could not stop you. Be patient until the Lord comes again"
+      "text": "You say that a righteous person is guilty. You have even killed him and he could not stop you."
     },
     {
       "verse": "7",
@@ -402,7 +402,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Here is another important thing to remember, my Christian friends. When you want to make a strong promise, never use extra words. Do not say, ‘I promise by heaven,’ or ‘I promise by the earth.’ Do not use any extra words like that. When you say ‘yes,’ that should be enough. When you say ‘no,’ that should also be enough. If you say more than that, God will say that you are guilty. Prayer"
+      "text": "Here is another important thing to remember, my Christian friends. When you want to make a strong promise, never use extra words. Do not say, ‘I promise by heaven,’ or ‘I promise by the earth.’ Do not use any extra words like that. When you say ‘yes,’ that should be enough. When you say ‘no,’ that should also be enough. If you say more than that, God will say that you are guilty."
     },
     {
       "verse": "13",
@@ -434,7 +434,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Understand this: if you turn a person back from their bad ways, you will save them from death. And God will forgive that person for his many sins. Print... Use screen font size Show All Comments James 41 Peter Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Understand this: if you turn a person back from their bad ways, you will save them from death. And God will forgive that person for his many sins."
     }
   ]
 };

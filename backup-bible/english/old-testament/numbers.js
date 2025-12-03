@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "The Israelites were in the Sinai desert. It was the first day of the second month of the second year after they left Egypt. Moses was in the Tent of Meeting. The Tent of Meeting was a special tent where God came to meet his people. It was also called the tabernacle. God told Moses how to make it. See Exodus The Lord said to Moses,"
+      "text": "The Israelites were in the Sinai desert. It was the first day of the second month of the second year after they left Egypt. Moses was in the Tent of Meeting.The Lord said to Moses,"
     },
     {
       "verse": "2",
@@ -14,11 +14,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "A man from each tribe must help you. Each of them will be the leader of his family. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "A man from each tribe must help you. Each of them will be the leader of his family."
     },
     {
       "verse": "5",
-      "text": "These are the men from each tribe who must help you: Reuben: Elizur, the son of Shedeur."
+      "text": "These are the men from each tribe who must help you:Reuben: Elizur, the son of Shedeur."
     },
     {
       "verse": "6",
@@ -77,10 +77,6 @@ module.exports = {
       "text": "They did the things that the Lord had told Moses to do. So Moses recorded the names there in the Sinai desert."
     },
     {
-      "verse": "20-43",
-      "text": "They recorded the names of all the men who were 20 years old or older. Those men could fight in the army. They recorded the names of the men in each clan and family. Reuben was the firstborn son of Israel, so they recorded his tribe first. These were the numbers of the men from each tribe: Reuben: 46,500 men.Simeon: 59,300 men.Gad: 45,650 men.Judah: 74,600 men.Issachar: 54,400 men.Zebulun: 57,400 men.Ephraim (Joseph's son): 40,500 men.Manasseh (Joseph's son): 32,200 men.Benjamin: 35,400 men.Dan: 62,700 men.Asher: 41,500 men.Naphtali: 53,400 men."
-    },
-    {
       "verse": "44",
       "text": "Moses and Aaron counted the numbers of the men in each tribe. The 12 leaders of the Israelites helped them to do it. That was one man from each tribe."
     },
@@ -90,7 +86,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "The number of all the men was 603,550. The tribe of Levi"
+      "text": "The number of all the men was 603,550."
     },
     {
       "verse": "47",
@@ -122,7 +118,103 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "The Israelites did everything that the Lord had told Moses to do. Print... Use screen font size Show All Comments Numbers IntroductionNumbers 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Israelites did everything that the Lord had told Moses to do."
+    },
+    {
+      "verse": "20",
+      "text": "years old or older. T"
+    },
+    {
+      "verse": "21",
+      "text": "hose men could fight"
+    },
+    {
+      "verse": "22",
+      "text": "in the army. They rec"
+    },
+    {
+      "verse": "23",
+      "text": "orded the names of th"
+    },
+    {
+      "verse": "24",
+      "text": "e men in each clan an"
+    },
+    {
+      "verse": "25",
+      "text": "d family. Reuben was"
+    },
+    {
+      "verse": "26",
+      "text": "the firstborn son of"
+    },
+    {
+      "verse": "27",
+      "text": "Israel, so they recor"
+    },
+    {
+      "verse": "28",
+      "text": "ded his tribe first."
+    },
+    {
+      "verse": "29",
+      "text": "These were the number"
+    },
+    {
+      "verse": "30",
+      "text": "s of the men from eac"
+    },
+    {
+      "verse": "31",
+      "text": "h tribe:Reuben: 46,50"
+    },
+    {
+      "verse": "32",
+      "text": "0 men.Simeon: 59,300"
+    },
+    {
+      "verse": "33",
+      "text": "men.Gad: 45,650 men.J"
+    },
+    {
+      "verse": "34",
+      "text": "udah: 74,600 men.Issa"
+    },
+    {
+      "verse": "35",
+      "text": "char: 54,400 men.Zebu"
+    },
+    {
+      "verse": "36",
+      "text": "lun: 57,400 men.Ephra"
+    },
+    {
+      "verse": "37",
+      "text": "im (Joseph's son): 40"
+    },
+    {
+      "verse": "38",
+      "text": ",500 men.Manasseh (Jo"
+    },
+    {
+      "verse": "39",
+      "text": "seph's son): 32,200 m"
+    },
+    {
+      "verse": "40",
+      "text": "en.Benjamin: 35,400 m"
+    },
+    {
+      "verse": "41",
+      "text": "en.Dan: 62,700 men.As"
+    },
+    {
+      "verse": "42",
+      "text": "her: 41,500 men.Napht"
+    },
+    {
+      "verse": "43",
+      "text": "ali: 53,400 men."
     }
   ],
   "2": [
@@ -132,7 +224,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘The Israelites must put up their tents on each side of the Tent of Meeting. They must not be very near to it but they must be all around it. They must live together in their tribes. Each person must be with his own tribe. Each tribe must have its own flag. The tribes put up their tents in a square, with the Tent of Meeting in the middle."
+      "text": "‘The Israelites must put up their tents on each side of the Tent of Meeting. They must not be very near to it but they must be all around it. They must live together in their tribes. Each person must be with his own tribe. Each tribe must have its own flag."
     },
     {
       "verse": "3",
@@ -260,7 +352,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The Israelites did everything that the Lord had told Moses. They put up their tents in groups, as the Lord wanted. Each tribe put up its tents under its own flag. When they started to travel, each man walked with his own clan and his own family. Print... Use screen font size Show All Comments Numbers 1Numbers 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Israelites did everything that the Lord had told Moses. They put up their tents in groups, as the Lord wanted. Each tribe put up its tents under its own flag. When they started to travel, each man walked with his own clan and his own family."
     }
   ],
   "3": [
@@ -278,7 +370,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But Nadab and Abihu fell down and died in front of the Lord. That happened when they offered strange fire to the Lord in the Sinai desert. They had no children. So only Eleazar and Ithamar worked as priests while their father Aaron was alive. We are not sure what ‘strange fire’ was. But we know that it was something wrong that did not please God. The Levites help the priests"
+      "text": "But Nadab and Abihu fell down and died in front of the Lord. That happened when they offered strange fire to the Lord in the Sinai desert. They had no children. So only Eleazar and Ithamar worked as priests while their father Aaron was alive."
     },
     {
       "verse": "5",
@@ -314,7 +406,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I killed all the firstborn sons of the Egyptians. But I kept the firstborn sons of every person and animal among the Israelites for myself. They belong to me. I am the Lord!’ The Levite families"
+      "text": "I killed all the firstborn sons of the Egyptians. But I kept the firstborn sons of every person and animal among the Israelites for myself. They belong to me. I am the Lord!’"
     },
     {
       "verse": "14",
@@ -342,7 +434,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Merari's sons were called Mahli and Mushi. Those were the sons and grandsons of Levi. They became the leaders of the clans of Levi's tribe. Gershon's clan"
+      "text": "Merari's sons were called Mahli and Mushi.Those were the sons and grandsons of Levi. They became the leaders of the clans of Levi's tribe. Those were the sons and grandsons of Levi. They became the leaders of the clans of Levi's tribe."
     },
     {
       "verse": "21",
@@ -366,7 +458,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "There was a yard round the outside of the tabernacle and the altar. Gershon's family took care of the curtains that hung round the yard, with their ropes. They also took care of the curtain at the entrance to the yard. They took care of all those kinds of things. Kohath's clan"
+      "text": "There was a yard round the outside of the tabernacle and the altar. Gershon's family took care of the curtains that hung round the yard, with their ropes. They also took care of the curtain at the entrance to the yard. They took care of all those kinds of things."
     },
     {
       "verse": "27",
@@ -390,7 +482,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Eleazar, the son of Aaron the priest, was the most important leader of the Levites. He ruled over those people who took care of God's special Tent. Merari's clan"
+      "text": "Eleazar, the son of Aaron the priest, was the most important leader of the Levites. He ruled over those people who took care of God's special Tent."
     },
     {
       "verse": "33",
@@ -418,7 +510,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "So Moses and Aaron obeyed the Lord. They counted the Levites by their clans. There were 22,000 males who were one month old or older. The firstborn sons belong to the Lord"
+      "text": "So Moses and Aaron obeyed the Lord. They counted the Levites by their clans. There were 22,000 males who were one month old or older."
     },
     {
       "verse": "40",
@@ -446,7 +538,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "There are 273 more firstborn males of the people than there are Levites. So the people must pay for the extra firstborn sons."
+      "text": "more firstborn males of the people than there are Levites. So the people must pay for the extra firstborn sons."
     },
     {
       "verse": "47",
@@ -458,7 +550,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "So Moses took the money to buy back the extra 273 firstborn sons. That was because the number of firstborn sons was more than the number of Levites."
+      "text": "firstborn sons. That was because the number of firstborn sons was more than the number of Levites."
     },
     {
       "verse": "50",
@@ -466,7 +558,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Moses did what the Lord had told him to do. He gave the money to Aaron and his sons. Print... Use screen font size Show All Comments Numbers 2Numbers 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses did what the Lord had told him to do. He gave the money to Aaron and his sons."
     }
   ],
   "4": [
@@ -548,7 +640,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But the men from Kohath's clan must not look at anything that is holy, even for a moment. If they do look at those things, they will die.’ Gershon's clan"
+      "text": "But the men from Kohath's clan must not look at anything that is holy, even for a moment. If they do look at those things, they will die.’"
     },
     {
       "verse": "21",
@@ -580,7 +672,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "That is the work for the Tent of Meeting that the descendants of Gershon must do. Ithamar, the son of Aaron the priest, will tell them the things that they must do.’ Merari's clan"
+      "text": "That is the work for the Tent of Meeting that the descendants of Gershon must do. Ithamar, the son of Aaron the priest, will tell them the things that they must do.’"
     },
     {
       "verse": "29",
@@ -600,7 +692,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "That is the work of the descendants of Merari in the Tent of Meeting. Ithamar, the son of Aaron the priest, will tell them the things that they must do.’ The numbers in the Levite clans"
+      "text": "That is the work of the descendants of Merari in the Tent of Meeting. Ithamar, the son of Aaron the priest, will tell them the things that they must do.’"
     },
     {
       "verse": "34",
@@ -664,7 +756,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "They told each man the things that he must do. Or they told him what he must carry. Moses recorded all their names. The Lord had told him that he must do that. Print... Use screen font size Show All Comments Numbers 3Numbers 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They told each man the things that he must do. Or they told him what he must carry. Moses recorded all their names. The Lord had told him that he must do that."
     }
   ],
   "5": [
@@ -682,7 +774,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Israelites did what the Lord had said to Moses. They sent those people outside the camp. What to pay when you do a wrong thing"
+      "text": "The Israelites did what the Lord had said to Moses. They sent those people outside the camp."
     },
     {
       "verse": "5",
@@ -706,7 +798,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The priest will keep all the special gifts.’ Husbands and wives"
+      "text": "The priest will keep all the special gifts.’"
     },
     {
       "verse": "11",
@@ -742,11 +834,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then the woman must agree to the strong promise that the priest tells her to say. Holy water’ was special water that the priests kept in God's tent. The priest must say to her, “This water brings a curse. If no other man has had sex with you, it will not hurt you."
+      "text": "Then the woman must agree to the strong promise that the priest tells her to say.The priest must say to her, “This water brings a curse. If no other man has had sex with you, it will not hurt you."
     },
     {
       "verse": "20",
-      "text": "But if another man has had sex with you,"
+      "text": "But if another man has had sex with you, The woman must say, “That should happen. I agree!”"
     },
     {
       "verse": "21",
@@ -754,7 +846,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "That will happen when you drink the bitter water.” The woman must say, “That should happen. I agree!”"
+      "text": "That will happen when you drink the bitter water.”The woman must say, “That should happen. I agree!”"
     },
     {
       "verse": "23",
@@ -781,12 +873,16 @@ module.exports = {
       "text": "But, if she did not do those wrong things, the water will not hurt her. She will be able to have babies."
     },
     {
-      "verse": "29-30",
-      "text": "Perhaps a man is jealous because his wife has had sex with another man. Or he may only think that his wife has had sex with another man. This is what the law says that the priest must do: The man must bring her in front of the Lord."
+      "verse": "31",
+      "text": "If the woman did not do those wrong things, you must not punish her husband. But if the woman did do those wrong things, you must punish her.’"
     },
     {
-      "verse": "31",
-      "text": "If the woman did not do those wrong things, you must not punish her husband. But if the woman did do those wrong things, you must punish her.’ Print... Use screen font size Show All Comments Numbers 4Numbers 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "verse": "29",
+      "text": "Perhaps a man is jealous because his wife has had sex with another man.  Or he may only think that his wife has had sex with another man."
+    },
+    {
+      "verse": "30",
+      "text": "This is what the law says that the priest must do: The man must bring her in front of the Lord."
     }
   ],
   "6": [
@@ -804,7 +900,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "They must not eat the seeds of grapes for all the time that they are Nazirites. They must not even eat the skins of grapes. Nazirites were a separate group of Israelites, but they were not priests."
+      "text": "They must not eat the seeds of grapes for all the time that they are Nazirites. They must not even eat the skins of grapes."
     },
     {
       "verse": "5",
@@ -872,7 +968,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Those are the rules about Nazirites. Also, the Nazirite may give anything else that he can give. And he must bring any other gift that he promised to the Lord.’ The priests' blessing"
+      "text": "Those are the rules about Nazirites. Also, the Nazirite may give anything else that he can give. And he must bring any other gift that he promised to the Lord.’"
     },
     {
       "verse": "22",
@@ -884,19 +980,19 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "They must say: “I pray that the Lord will bless you. I pray that he will keep you safe."
+      "text": "They must say:“I pray that the Lord will bless you.I pray that he will keep you safe. “I pray that the Lord will bless you. I pray that he will keep you safe."
     },
     {
       "verse": "25",
-      "text": "I pray that the Lord will smile at you. And I pray that he will be very kind to you."
+      "text": "I pray that the Lord will smile at you.And I pray that he will be very kind to you. And I pray that he will be very kind to you."
     },
     {
       "verse": "26",
-      "text": "I pray that the Lord will be pleased with you. And I pray that he will give you peace in your minds.”"
+      "text": "I pray that the Lord will be pleased with you.And I pray that he will give you peace in your minds.” And I pray that he will give you peace in your minds.”"
     },
     {
       "verse": "27",
-      "text": "Aaron and his sons must use my name to bless the Israelites. If they do that, I will certainly bless them.’ Print... Use screen font size Show All Comments Numbers 5Numbers 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Aaron and his sons must use my name to bless the Israelites. If they do that, I will certainly bless them.’"
     }
   ],
   "7": [
@@ -906,7 +1002,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then the 12 leaders of Israel's tribes came to God's Tent. They brought gifts. These men were the leaders who had helped to count the people."
+      "text": "leaders of Israel's tribes came to God's Tent. They brought gifts. These men were the leaders who had helped to count the people."
     },
     {
       "verse": "3",
@@ -1238,23 +1334,23 @@ module.exports = {
     },
     {
       "verse": "85",
-      "text": "Each plate weighed 130 shekels and each bowl weighed 70 shekels. All the silver weighed 2,400 shekels. That was the shekel of God's Holy Tent."
+      "text": "shekels and each bowl weighed 70 shekels. All the silver weighed 2,400 shekels. That was the shekel of God's Holy Tent."
     },
     {
       "verse": "86",
-      "text": "They brought 12 small dishes that people had made from gold. Each small dish weighed ten shekels. They were each full of incense. All the gold weighed 120 shekels."
+      "text": "small dishes that people had made from gold. Each small dish weighed ten shekels. They were each full of incense. All the gold weighed 120 shekels."
     },
     {
       "verse": "87",
-      "text": "All the animals for the burnt offering were 12 young bulls, 12 male sheep and 12 male lambs that were one year old. They also brought the proper grain offerings with those animals. And they brought 12 male goats for a sin offering."
+      "text": "young bulls, 12 male sheep and 12 male lambs that were one year old. They also brought the proper grain offerings with those animals. And they brought 12 male goats for a sin offering."
     },
     {
       "verse": "88",
-      "text": "There were also another 24 oxen, 60 male sheep, 60 male goats and 60 male lambs. The male lambs were one year old. Those animals were for the friendship offering. That was the offering when they made the altar special for God. That was after Moses had poured special oil on it."
+      "text": "oxen, 60 male sheep, 60 male goats and 60 male lambs. The male lambs were one year old. Those animals were for the friendship offering. That was the offering when they made the altar special for God. That was after Moses had poured special oil on it."
     },
     {
       "verse": "89",
-      "text": "When Moses went into the Tent of Meeting, to speak with the Lord, the Lord did speak to him. And Moses heard the Lord. The sound came from above the lid which was on the top of the Covenant Box. On the lid, there were images of two cherubs. The sound came from between the cherubs. That was how the Lord spoke to Moses. Print... Use screen font size Show All Comments Numbers 6Numbers 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When Moses went into the Tent of Meeting, to speak with the Lord, the Lord did speak to him. And Moses heard the Lord. The sound came from above the lid which was on the top of the Covenant Box. On the lid, there were images of two cherubs. The sound came from between the cherubs. That was how the Lord spoke to Moses."
     }
   ],
   "8": [
@@ -1272,7 +1368,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "A worker had made the lampstand from one piece of gold that he had made flat with a hammer. From its base to the flowers at the top, he had made it in that way. It was completely like the lampstand that the Lord had shown to Moses. The lampstand was the shape of a tree with 3 branches on the left of it and 3 branches on the right of it. There were models of flowers on the branches. Each branch held one lamp. The Levites must be ready to serve God"
+      "text": "A worker had made the lampstand from one piece of gold that he had made flat with a hammer. From its base to the flowers at the top, he had made it in that way. It was completely like the lampstand that the Lord had shown to Moses."
     },
     {
       "verse": "5",
@@ -1312,7 +1408,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "That is how you will make the Levites separate from the other Israelites. And then the Levites will be mine. The burnt offering showed that Levi's tribe were giving themselves to God completely. The sin offering made them clean from sin."
+      "text": "That is how you will make the Levites separate from the other Israelites. And then the Levites will be mine."
     },
     {
       "verse": "15",
@@ -1356,11 +1452,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But they must stop that work when they are 50 years old. And they must not do that work after that."
+      "text": "years old. And they must not do that work after that."
     },
     {
       "verse": "26",
-      "text": "But they can help the other Levites in the Tent of Meeting. They can help them to do their jobs. But they themselves must not have any jobs. Those are the rules about the Levites and about their jobs.’ Print... Use screen font size Show All Comments Numbers 7Numbers 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But they can help the other Levites in the Tent of Meeting. They can help them to do their jobs. But they themselves must not have any jobs. Those are the rules about the Levites and about their jobs.’"
     }
   ],
   "9": [
@@ -1418,7 +1514,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "People from foreign countries may also eat the Lord's Passover meal, if they are living among you. But they must obey all the rules about the Passover festival. The rules are the same for a foreign person and for an Israelite.” ’ The cloud above the Tent of Meeting"
+      "text": "People from foreign countries may also eat the Lord's Passover meal, if they are living among you. But they must obey all the rules about the Passover festival. The rules are the same for a foreign person and for an Israelite.” ’"
     },
     {
       "verse": "15",
@@ -1454,7 +1550,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The Lord decided when they should make their camp. And the Lord decided when they should start to travel. So they obeyed the Lord about everything that the Lord said to Moses. Print... Use screen font size Show All Comments Numbers 8Numbers 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord decided when they should make their camp. And the Lord decided when they should start to travel. So they obeyed the Lord about everything that the Lord said to Moses."
     }
   ],
   "10": [
@@ -1496,7 +1592,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "You must make sounds with the trumpets on your happy days, too. And you must make sounds with the trumpets at your regular festivals and on the first days of your months. And you must make sounds with the trumpets over your burnt offerings, and over your friendship offerings. God will hear and he will remember you. I am the Lord your God.’ The Israelites leave the Sinai desert"
+      "text": "You must make sounds with the trumpets on your happy days, too. And you must make sounds with the trumpets at your regular festivals and on the first days of your months. And you must make sounds with the trumpets over your burnt offerings, and over your friendship offerings. God will hear and he will remember you. I am the Lord your God.’"
     },
     {
       "verse": "11",
@@ -1508,7 +1604,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "They started to travel for the first time, in the way that the Lord had told them to do, through Moses. The Israelites had been in the Sinai desert for nearly one year."
+      "text": "They started to travel for the first time, in the way that the Lord had told them to do, through Moses."
     },
     {
       "verse": "14",
@@ -1600,7 +1696,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "When they stopped travelling, Moses said, ‘Return, Lord, to be near to the thousands of Israel's people.’ Print... Use screen font size Show All Comments Numbers 9Numbers 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When they stopped travelling, Moses said, ‘Return, Lord, to be near to the thousands of Israel's people.’"
     }
   ],
   "11": [
@@ -1614,7 +1710,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So that place was called Taberah, because the Lord's fire burned among them there. The Israelites had travelled for three days only. But already they had begun to complain."
+      "text": "So that place was called Taberah, because the Lord's fire burned among them there."
     },
     {
       "verse": "4",
@@ -1638,7 +1734,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "At night, dew fell on the ground in the camp. The manna fell with the dew. When the Israelites left Egypt, some foreign people came with them. We do not know why these foreign people came with them. Perhaps some of them were slaves."
+      "text": "At night, dew fell on the ground in the camp. The manna fell with the dew."
     },
     {
       "verse": "10",
@@ -1722,7 +1818,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Then Moses and the leaders returned to the camp. The Lord sends birds to feed the Israelites"
+      "text": "Then Moses and the leaders returned to the camp."
     },
     {
       "verse": "31",
@@ -1738,11 +1834,11 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "They buried there the bodies of people who had wanted better food. So the people called that place Kibroth-Hattaavah. That means ‘graves of greedy people’."
+      "text": "They buried there the bodies of people who had wanted better food. So the people called that place Kibroth-Hattaavah."
     },
     {
       "verse": "35",
-      "text": "From Kibroth-Hattaavah the people travelled to Hazeroth, and they stayed at Hazeroth. Print... Use screen font size Show All Comments Numbers 10Numbers 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "From Kibroth-Hattaavah the people travelled to Hazeroth, and they stayed at Hazeroth."
     }
   ],
   "12": [
@@ -1752,7 +1848,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They said, ‘We do not believe that the Lord has really spoken only by Moses. We believe that he has spoken by us too.’ The Lord heard what they said. Aaron and Miriam were Moses' brother and sister. They were leaders too. They helped Moses."
+      "text": "They said, ‘We do not believe that the Lord has really spoken only by Moses. We believe that he has spoken by us too.’ The Lord heard what they said."
     },
     {
       "verse": "3",
@@ -1808,7 +1904,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "After that, the people left Hazeroth. They went to the Paran desert and they put up their tents there. Print... Use screen font size Show All Comments Numbers 11Numbers 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After that, the people left Hazeroth. They went to the Paran desert and they put up their tents there."
     }
   ],
   "13": [
@@ -1826,7 +1922,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "This is a list of their names: From Reuben's tribe: Shammua, the son of Zaccur."
+      "text": "This is a list of their names:From Reuben's tribe: Shammua, the son of Zaccur."
     },
     {
       "verse": "5",
@@ -1874,7 +1970,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Those are the names of the men that Moses sent to explore the land. Moses changed the name of Hoshea, the son of Nun, to Joshua. Hoshea means ‘God saves.’ Joshua means ‘the Lord saves.’"
+      "text": "Those are the names of the men that Moses sent to explore the land. Moses changed the name of Hoshea, the son of Nun, to Joshua."
     },
     {
       "verse": "17",
@@ -1910,7 +2006,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The men returned after they had explored the land for 40 days. The men bring news to Moses"
+      "text": "The men returned after they had explored the land for 40 days."
     },
     {
       "verse": "26",
@@ -1942,7 +2038,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "We also saw descendants of the Nephilites there. And we felt like very small insects when we looked at them. And we seemed like very small insects to them too.’ (The descendants of Anak are also descendants of the Nephilites.) See Genesis Print... Use screen font size Show All Comments Numbers 12Numbers 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We also saw descendants of the Nephilites there. And we felt like very small insects when we looked at them. And we seemed like very small insects to them too.’ (The descendants of Anak are also descendants of the Nephilites.)"
     }
   ],
   "14": [
@@ -1980,7 +2076,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But do not refuse to obey the Lord. Do not be afraid of the people in that land. They are ready for us to fight against them and win! They have no place to hide! The Lord is with us to help us. So do not be afraid of them.’ The Israelites would tear their own clothes to show that they were upset. People often tore their clothes when someone had died."
+      "text": "But do not refuse to obey the Lord. Do not be afraid of the people in that land. They are ready for us to fight against them and win! They have no place to hide! The Lord is with us to help us. So do not be afraid of them.’"
     },
     {
       "verse": "10",
@@ -2076,19 +2172,15 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Your children will be shepherds in the desert for 40 years. Because you did not trust me, your children will have trouble. That will continue until all your dead bodies are lying in the desert."
+      "text": "years. Because you did not trust me, your children will have trouble. That will continue until all your dead bodies are lying in the desert."
     },
     {
       "verse": "34",
-      "text": "You explored the land of Canaan for 40 days. Now you will have trouble for 40 years, because of your sins. Each day becomes one year! You will know that I am not with you, but I am against you."
+      "text": "days. Now you will have trouble for 40 years, because of your sins. Each day becomes one year! You will know that I am not with you, but I am against you."
     },
     {
       "verse": "35",
       "text": "I, the Lord, have spoken! I will certainly do all these things to punish these evil people. That is because they have all joined together to speak against me. In this desert they will die. Yes, that will be the end of them!” ’"
-    },
-    {
-      "verse": "36-37",
-      "text": "The men who had given a bad report to the people about the land of Canaan died immediately. Moses had sent them to explore the land, but they had caused all the people to turn against the Lord. So the Lord sent a bad disease to kill those men."
     },
     {
       "verse": "38",
@@ -2120,7 +2212,15 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "Then the Amalekites and the Canaanites who lived in those hills ran down. They attacked the Israelite men and they chased them to Hormah. Hormah was a town on the south of Canaan. See Joshua Print... Use screen font size Show All Comments Numbers 13Numbers 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the Amalekites and the Canaanites who lived in those hills ran down. They attacked the Israelite men and they chased them to Hormah."
+    },
+    {
+      "verse": "36",
+      "text": "The men who had given a bad report to the people about the land of Canaan died immediately.  Moses had sent them to explore the land, but they had caused all the people to turn against the Lord."
+    },
+    {
+      "verse": "37",
+      "text": "So the Lord sent a bad disease to kill those men."
     }
   ],
   "15": [
@@ -2142,7 +2242,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You must also give 1 litre of wine for each lamb. You must give that as a drink offering with each burnt offering or sacrifice."
+      "text": "litre of wine for each lamb. You must give that as a drink offering with each burnt offering or sacrifice."
     },
     {
       "verse": "6",
@@ -2246,7 +2346,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "That person thought that the Lord's command was not important. He has not obeyed God's rules. So you must make that person completely separate from the people. He is a guilty person.’ A man does not obey the rules for the day of rest"
+      "text": "That person thought that the Lord's command was not important. He has not obeyed God's rules. So you must make that person completely separate from the people. He is a guilty person.’"
     },
     {
       "verse": "32",
@@ -2266,7 +2366,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "So the people took the man outside the camp. They threw stones at him until he died. That was what the Lord had told Moses to do. Tassels"
+      "text": "So the people took the man outside the camp. They threw stones at him until he died. That was what the Lord had told Moses to do."
     },
     {
       "verse": "37",
@@ -2286,7 +2386,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "I am the Lord your God. I brought you out from Egypt to be your God. I am the Lord your God.’ Print... Use screen font size Show All Comments Numbers 14Numbers 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I am the Lord your God. I brought you out from Egypt to be your God. I am the Lord your God.’"
     }
   ],
   "16": [
@@ -2296,7 +2396,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Together with 250 leaders of the Israelites, they all turned against Moses. Those were famous men that the people had chosen as their leaders."
+      "text": "leaders of the Israelites, they all turned against Moses. Those were famous men that the people had chosen as their leaders."
     },
     {
       "verse": "3",
@@ -2444,7 +2544,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "So Eleazar took the 250 pots and he used the bronze metal to cover the altar."
+      "text": "pots and he used the bronze metal to cover the altar."
     },
     {
       "verse": "40",
@@ -2488,7 +2588,7 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "After the disease stopped, Aaron went back to Moses at the door of the Tent of Meeting. Print... Use screen font size Show All Comments Numbers 15Numbers 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After the disease stopped, Aaron went back to Moses at the door of the Tent of Meeting."
     }
   ],
   "17": [
@@ -2514,7 +2614,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Moses spoke to the Israelites and the leaders gave him 12 sticks."
+      "text": "sticks."
     },
     {
       "verse": "7",
@@ -2542,7 +2642,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Any person who comes near the Lord's special Tent will die. So we will all die!’ Print... Use screen font size Show All Comments Numbers 16Numbers 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Any person who comes near the Lord's special Tent will die. So we will all die!’"
     }
   ],
   "18": [
@@ -2572,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But only you, Aaron, and your sons will serve me as priests. You will work at the altar and in the Holy Place behind the curtain. I have chosen you to serve me as my priests. That is my gift to you. Any other person who comes near the Holy Place must die.’ Offerings for priests and for Levites"
+      "text": "But only you, Aaron, and your sons will serve me as priests. You will work at the altar and in the Holy Place behind the curtain. I have chosen you to serve me as my priests. That is my gift to you. Any other person who comes near the Holy Place must die.’"
     },
     {
       "verse": "8",
@@ -2616,7 +2716,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "And the meat of those animals belongs to you. In the same way, the meat of the ribs and the right back leg of the special gifts that you lift up to me also belong to you. See Numbers"
+      "text": "And the meat of those animals belongs to you. In the same way, the meat of the ribs and the right back leg of the special gifts that you lift up to me also belong to you."
     },
     {
       "verse": "19",
@@ -2672,7 +2772,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "You will not be guilty when you eat it. That is because you have offered the best part of it to God. But you must do that in the right way. The gifts that you receive from the Israelites are holy. If you do not do the right things with them, you will die.” ’ Print... Use screen font size Show All Comments Numbers 17Numbers 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You will not be guilty when you eat it. That is because you have offered the best part of it to God. But you must do that in the right way. The gifts that you receive from the Israelites are holy. If you do not do the right things with them, you will die.” ’"
     }
   ],
   "19": [
@@ -2762,7 +2862,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "If an unclean person touches anything, that thing also becomes unclean. If anyone touches the unclean person, he also becomes unclean until evening.’ Print... Use screen font size Show All Comments Numbers 18Numbers 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If an unclean person touches anything, that thing also becomes unclean. If anyone touches the unclean person, he also becomes unclean until evening.’"
     }
   ],
   "20": [
@@ -2816,7 +2916,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The place where this happened was called ‘Meribah’, because the Israelites quarrelled with the Lord there. But he showed them there that he was their holy God. The word Meribah means ‘to quarrel’. God showed the people that they could trust him to give them what they needed. The Israelites want to travel through Edom"
+      "text": "The place where this happened was called ‘Meribah’, because the Israelites quarrelled with the Lord there. But he showed them there that he was their holy God."
     },
     {
       "verse": "14",
@@ -2828,7 +2928,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But when we asked the Lord to help us, he heard us. He sent an angel and he brought us out from Egypt. Now we are here at Kadesh, which is a town at the border of your land."
+      "text": "But when we asked the Lord to help us, he heard us. He sent an angel and he brought us out from Egypt.Now we are here at Kadesh, which is a town at the border of your land."
     },
     {
       "verse": "17",
@@ -2848,7 +2948,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "In that way, the Edomites stopped the Israelites from travelling through Edom. So the Israelites turned away from there. Aaron dies"
+      "text": "In that way, the Edomites stopped the Israelites from travelling through Edom. So the Israelites turned away from there."
     },
     {
       "verse": "22",
@@ -2880,7 +2980,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "The Israelites wept for 30 days because Aaron died. Moses and Eleazar came down from Hor mountain. The people saw that Eleazar was wearing the clothes of the leader of the priests. So they knew that Aaron was dead. Print... Use screen font size Show All Comments Numbers 19Numbers 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "days because Aaron died."
     }
   ],
   "21": [
@@ -2894,7 +2994,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Lord accepted the Israelites' promise. He put the Canaanites under their power. The Israelites destroyed them and all their towns. After that, the place was called Hormah. Hormah means ‘destroyed’. The bronze snake"
+      "text": "The Lord accepted the Israelites' promise. He put the Canaanites under their power. The Israelites destroyed them and all their towns. After that, the place was called Hormah."
     },
     {
       "verse": "4",
@@ -2918,7 +3018,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Moses made a bronze snake and he put it on a pole. When a snake bit anyone and they looked at the bronze snake, they did not die. The Israelites travel to Moab"
+      "text": "Moses made a bronze snake and he put it on a pole. When a snake bit anyone and they looked at the bronze snake, they did not die."
     },
     {
       "verse": "10",
@@ -2946,15 +3046,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "From there, the Israelites continued to travel until they arrived at Beer. That is the well where the Lord had said to Moses, ‘Bring the people together. Then I will give water to them.’"
+      "text": "From there, the Israelites continued to travel until they arrived at Beer. That is the well where the Lord had said to Moses, ‘Bring the people together. Then I will give water to them.’ ‘Sing to this well. Ask it to give water to us."
     },
     {
       "verse": "17",
-      "text": "The Israelites sang this song at that well: ‘Sing to this well. Ask it to give water to us."
+      "text": "The Israelites sang this song at that well:‘Sing to this well.Ask it to give water to us."
     },
     {
       "verse": "18",
-      "text": "This was the well that our rulers dug. Our leaders dug it with their sceptres and their ruler's sticks.’ After that, the Israelites went from the desert to Mattanah."
+      "text": "This was the well that our rulers dug.Our leaders dug it with their sceptres and their ruler's sticks.’After that, the Israelites went from the desert to Mattanah. Our leaders dug it with their sceptres and their ruler's sticks.’"
     },
     {
       "verse": "19",
@@ -2962,7 +3062,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "They went from Bamoth to the valley in the region of Moab. They put up their tents near the top of Pisgah mountain that is high above the desert. The Israelites continued to travel north towards Canaan. The Israelites fight against Sihon and Og"
+      "text": "They went from Bamoth to the valley in the region of Moab. They put up their tents near the top of Pisgah mountain that is high above the desert."
     },
     {
       "verse": "21",
@@ -2974,7 +3074,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But Sihon would not let the Israelites travel through his land. Sihon and his army marched to Jahaz, in the desert. They attacked the Israelites there."
+      "text": "But Sihon would not let the Israelites travel through his land. Sihon and his army marched to Jahaz, in the desert. They attacked the Israelites there. ‘Come to Heshbon and build it up again. Build the city of Sihon again."
     },
     {
       "verse": "24",
@@ -2990,19 +3090,19 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So the people who write songs wrote this: ‘Come to Heshbon and build it up again. Build the city of Sihon again."
+      "text": "So the people who write songs wrote this:‘Come to Heshbon and build it up again.Build the city of Sihon again."
     },
     {
       "verse": "28",
-      "text": "An army that was like a fire went out from Heshbon. It was like a flame that went out from Sihon's city. It destroyed Ar in Moab, and everything on the hills near the River Arnon."
+      "text": "An army that was like a fire went out from Heshbon.It was like a flame that went out from Sihon's city.It destroyed Ar in Moab,and everything on the hills near the River Arnon. It was like a flame that went out from Sihon's city. It destroyed Ar in Moab, and everything on the hills near the River Arnon."
     },
     {
       "verse": "29",
-      "text": "It will be very bad for you, people of Moab. Sihon has killed you people who worship the god Chemosh. Your god has let the king of the Amorites put you in prison."
+      "text": "It will be very bad for you, people of Moab.Sihon has killed you people who worship the god Chemosh.Your god has let the king of the Amorites put you in prison. Sihon has killed you people who worship the god Chemosh. Your god has let the king of the Amorites put you in prison."
     },
     {
       "verse": "30",
-      "text": "But now, we have won against them! We have destroyed Heshbon, and as far as Dibon. We have killed them from Nophah to Medeba.’"
+      "text": "But now, we have won against them!We have destroyed Heshbon, and as far as Dibon.We have killed them from Nophah to Medeba.’ We have destroyed Heshbon, and as far as Dibon. We have killed them from Nophah to Medeba.’"
     },
     {
       "verse": "31",
@@ -3022,7 +3122,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "So they killed Og and his sons and all his army. Nobody was left alive. Their land became the Israelites' land. Print... Use screen font size Show All Comments Numbers 20Numbers 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So they killed Og and his sons and all his army. Nobody was left alive. Their land became the Israelites' land."
     }
   ],
   "22": [
@@ -3040,7 +3140,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So the Moabites said to the leaders of the Midianites, ‘This large group of people will destroy everything round us. They will be like a bull that eats all the grass in a field!’ So Balak, the king of Moab,"
+      "text": "So the Moabites said to the leaders of the Midianites, ‘This large group of people will destroy everything round us. They will be like a bull that eats all the grass in a field!’So Balak, the king of Moab,"
     },
     {
       "verse": "5",
@@ -3104,7 +3204,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "That night, God said to Balaam, ‘These men have asked you to go with them, so go with them. But only do what I tell you.’ Balaam and his donkey"
+      "text": "That night, God said to Balaam, ‘These men have asked you to go with them, so go with them. But only do what I tell you.’"
     },
     {
       "verse": "21",
@@ -3188,7 +3288,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "The next day, Balak took Balaam to Bamoth-Baal. From there, Balaam could see some of the big group of the Israelites. Print... Use screen font size Show All Comments Numbers 21Numbers 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The next day, Balak took Balaam to Bamoth-Baal. From there, Balaam could see some of the big group of the Israelites."
     }
   ],
   "23": [
@@ -3238,7 +3338,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Balaam answered, ‘I can only speak the message that the Lord has told me.’ Balaam's second message from God"
+      "text": "Balaam answered, ‘I can only speak the message that the Lord has told me.’"
     },
     {
       "verse": "13",
@@ -3310,7 +3410,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Balak did that. He offered a bull and a male sheep on each altar as sacrifices. Print... Use screen font size Show All Comments Numbers 22Numbers 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Balak did that. He offered a bull and a male sheep on each altar as sacrifices."
     }
   ],
   "24": [
@@ -3368,7 +3468,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So I will now return to my own people. But listen! Before I go, I will tell you what these Israelites will do to your people in the future.’ Balaam's fourth message from God"
+      "text": "So I will now return to my own people. But listen! Before I go, I will tell you what these Israelites will do to your people in the future.’"
     },
     {
       "verse": "15",
@@ -3384,11 +3484,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "He will win against his enemies in Edom and Seir. The Israelites will become stronger. Sheth’ or ‘Seth’."
+      "text": "He will win against his enemies in Edom and Seir. The Israelites will become stronger."
     },
     {
       "verse": "19",
-      "text": "A descendant of Jacob will become their ruler. He will destroy all the people who are still alive in the city.’ Balaam's final messages from God"
+      "text": "A descendant of Jacob will become their ruler. He will destroy all the people who are still alive in the city.’"
     },
     {
       "verse": "20",
@@ -3412,7 +3512,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "After he spoke those messages, Balaam returned to his home. King Balak also left that place. Print... Use screen font size Show All Comments Numbers 23Numbers 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After he spoke those messages, Balaam returned to his home. King Balak also left that place."
     }
   ],
   "25": [
@@ -3486,13 +3586,13 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They have deceived you and they have become your enemies. They took some of you to worship their god Peor. They used Cozbi to make you do a wrong thing, and she was the daughter of a Midianite leader. Phinehas killed her on the day when the bad disease killed many Israelites at Peor mountain.’ Print... Use screen font size Show All Comments Numbers 24Numbers 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They have deceived you and they have become your enemies. They took some of you to worship their god Peor. They used Cozbi to make you do a wrong thing, and she was the daughter of a Midianite leader. Phinehas killed her on the day when the bad disease killed many Israelites at Peor mountain.’"
     }
   ],
   "26": [
     {
       "verse": "1",
-      "text": "When the bad disease stopped killing people, the Lord spoke to Moses and to Eleazar, the son of Aaron."
+      "text": "When the bad disease stopped killing people, the Lord spoke to Moses and to Eleazar, the son of Aaron. These are the names of the Israelites who came out of Egypt:"
     },
     {
       "verse": "2",
@@ -3504,7 +3604,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "‘Count all the men who are 20 years old or older. The Lord has told Moses that we must do that.’ These are the names of the Israelites who came out of Egypt:"
+      "text": "‘Count all the men who are 20 years old or older. The Lord has told Moses that we must do that.’These are the names of the Israelites who came out of Egypt:"
     },
     {
       "verse": "5",
@@ -3692,7 +3792,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "There were 601,730 men on the list of all the Israelites. Each tribe will receive some land in Canaan"
+      "text": "There were 601,730 men on the list of all the Israelites."
     },
     {
       "verse": "52",
@@ -3732,7 +3832,7 @@ module.exports = {
     },
     {
       "verse": "61",
-      "text": "Nadab and Abihu died when they offered strange fire to the Lord. We are not sure what ‘strange fire’ was. But we know that it was something that did not please God. See Numbers"
+      "text": "Nadab and Abihu died when they offered strange fire to the Lord."
     },
     {
       "verse": "62",
@@ -3748,7 +3848,7 @@ module.exports = {
     },
     {
       "verse": "65",
-      "text": "The Lord had said about those men, ‘They will certainly die in the desert.’ Among all those men, only Caleb the son of Jephunneh and Joshua the son of Nun were still alive. Print... Use screen font size Show All Comments Numbers 25Numbers 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord had said about those men, ‘They will certainly die in the desert.’ Among all those men, only Caleb the son of Jephunneh and Joshua the son of Nun were still alive."
     }
   ],
   "27": [
@@ -3794,7 +3894,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Sometimes the man's father may have no brothers. If that happens, you must give his land to another person in his family. This is a rule for all the people. The Lord gave this command to Moses.” ’ Joshua is the new leader"
+      "text": "Sometimes the man's father may have no brothers. If that happens, you must give his land to another person in his family. This is a rule for all the people. The Lord gave this command to Moses.” ’"
     },
     {
       "verse": "12",
@@ -3842,7 +3942,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He put his hands on Joshua to show that he would be the new leader. Moses gave his authority to Joshua, as the Lord had told him to do. Print... Use screen font size Show All Comments Numbers 26Numbers 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He put his hands on Joshua to show that he would be the new leader. Moses gave his authority to Joshua, as the Lord had told him to do."
     }
   ],
   "28": [
@@ -3904,7 +4004,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Also, you must offer one male goat as a sin offering to the Lord. You must offer it with the proper drink offering. But you must still offer the regular burnt offering. The Passover"
+      "text": "Also, you must offer one male goat as a sin offering to the Lord. You must offer it with the proper drink offering. But you must still offer the regular burnt offering."
     },
     {
       "verse": "16",
@@ -3912,7 +4012,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Day 15 is the start of a week when you must eat the flat bread. You must not put any yeast in the bread. You must do that for seven days."
+      "text": "is the start of a week when you must eat the flat bread. You must not put any yeast in the bread. You must do that for seven days."
     },
     {
       "verse": "18",
@@ -3944,7 +4044,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "And the seventh day must be a holy day and all the people must meet together. You must not work at your jobs on that day. The Festival of Weeks"
+      "text": "And the seventh day must be a holy day and all the people must meet together. You must not work at your jobs on that day."
     },
     {
       "verse": "26",
@@ -3956,7 +4056,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Mix together 3 kilograms of the best flour and olive oil. Offer that with each bull. With the male sheep, offer 2 kilograms of flour with oil."
+      "text": "kilograms of the best flour and olive oil. Offer that with each bull. With the male sheep, offer 2 kilograms of flour with oil."
     },
     {
       "verse": "29",
@@ -3968,7 +4068,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "You must still give the regular burnt offering with the proper grain offering. You must give them with the proper drink offerings. The animals must not have anything wrong with them. Print... Use screen font size Show All Comments Numbers 27Numbers 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You must still give the regular burnt offering with the proper grain offering. You must give them with the proper drink offerings. The animals must not have anything wrong with them."
     }
   ],
   "29": [
@@ -3986,7 +4086,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Offer 1 kilogram of flour with each lamb."
+      "text": "kilogram of flour with each lamb."
     },
     {
       "verse": "5",
@@ -3994,7 +4094,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Offer these sacrifices as well as the burnt offering, grain offerings and drink offerings that you give each month and each day. The smell of the smoke from these sacrifices will cause the Lord to be happy. The Day of Atonement"
+      "text": "Offer these sacrifices as well as the burnt offering, grain offerings and drink offerings that you give each month and each day. The smell of the smoke from these sacrifices will cause the Lord to be happy."
     },
     {
       "verse": "7",
@@ -4010,11 +4110,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Offer 1 kilogram of flour with oil with each lamb."
+      "text": "kilogram of flour with oil with each lamb."
     },
     {
       "verse": "11",
-      "text": "Also offer one male goat as a sin offering. Give these gifts as well as the burnt offering, the grain offerings and the drink offerings that you give each day and each month. The Festival of Huts"
+      "text": "Also offer one male goat as a sin offering. Give these gifts as well as the burnt offering, the grain offerings and the drink offerings that you give each day and each month."
     },
     {
       "verse": "12",
@@ -4026,7 +4126,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "With each of the 13 bulls give a grain offering. Mix together 3 kilograms of the best flour with olive oil. Offer it to me with each bull. With each male sheep, offer 2 kilograms of flour with oil."
+      "text": "bulls give a grain offering. Mix together 3 kilograms of the best flour with olive oil. Offer it to me with each bull. With each male sheep, offer 2 kilograms of flour with oil."
     },
     {
       "verse": "15",
@@ -4130,7 +4230,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Moses told the Israelites everything that the Lord had said to him. Print... Use screen font size Show All Comments Numbers 28Numbers 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses told the Israelites everything that the Lord had said to him."
     }
   ],
   "30": [
@@ -4196,7 +4296,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Those are the rules that the Lord gave to Moses. They say what must happen when husbands, wives or young women who still live at home make a promise to the Lord. Print... Use screen font size Show All Comments Numbers 29Numbers 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Those are the rules that the Lord gave to Moses. They say what must happen when husbands, wives or young women who still live at home make a promise to the Lord."
     }
   ],
   "31": [
@@ -4294,7 +4394,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "On the seventh day, you must wash your clothes. After that you will be clean again. Then you can come into the camp.’ They shared the things that they had taken"
+      "text": "On the seventh day, you must wash your clothes. After that you will be clean again. Then you can come into the camp.’"
     },
     {
       "verse": "25",
@@ -4346,7 +4446,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "So there were 675 sheep for the Lord."
+      "text": "sheep for the Lord."
     },
     {
       "verse": "38",
@@ -4414,7 +4514,7 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "Moses and Eleazar took the gold gifts from the soldiers' officers and leaders into the Tent of Meeting. It would help the Israelites to remember how the Lord had helped them. Print... Use screen font size Show All Comments Numbers 30Numbers 32 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses and Eleazar took the gold gifts from the soldiers' officers and leaders into the Tent of Meeting. It would help the Israelites to remember how the Lord had helped them."
     }
   ],
   "32": [
@@ -4436,7 +4536,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "so please let us have this land for our animals. Let us have this land to live on, instead of land on the other side of the Jordan River.’ The Israelites were getting near to Canaan from the south-east. They already had power over much of the land east of the Jordan River."
+      "text": "so please let us have this land for our animals. Let us have this land to live on, instead of land on the other side of the Jordan River.’"
     },
     {
       "verse": "6",
@@ -4584,7 +4684,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Nobah attacked Kenath and the villages round it. He called it Nobah, like his own name. Print... Use screen font size Show All Comments Numbers 31Numbers 33 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Nobah attacked Kenath and the villages round it. He called it Nobah, like his own name."
     }
   ],
   "33": [
@@ -4742,7 +4842,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Aaron was 123 years old when he died on Hor mountain."
+      "text": "years old when he died on Hor mountain."
     },
     {
       "verse": "40",
@@ -4810,7 +4910,7 @@ module.exports = {
     },
     {
       "verse": "56",
-      "text": "If you do not do that, I will punish you in the way that I wanted to punish them.” ’ Print... Use screen font size Show All Comments Numbers 32Numbers 34 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you do not do that, I will punish you in the way that I wanted to punish them.” ’"
     }
   ],
   "34": [
@@ -4832,7 +4932,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "There the border will turn and it will go along the Stream of Egypt. It will continue as far as the Mediterranean Sea. The Salt Sea is called the Dead Sea today. The ‘Stream of Egypt’ was the border of Egypt."
+      "text": "There the border will turn and it will go along the Stream of Egypt. It will continue as far as the Mediterranean Sea."
     },
     {
       "verse": "6",
@@ -4852,7 +4952,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This will be the east border: Draw a line from Hazar-Enan to Shepham."
+      "text": "This will be the east border: Draw a line from Hazar-Enan to Shepham. That will be your land, with its borders.’"
     },
     {
       "verse": "11",
@@ -4860,7 +4960,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then it will go along the Jordan River and it will finish at the Salt Sea. That will be your land, with its borders.’"
+      "text": "Then it will go along the Jordan River and it will finish at the Salt Sea.That will be your land, with its borders.’"
     },
     {
       "verse": "13",
@@ -4872,7 +4972,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Their land is on the east side of the Jordan River. It is on the other side of the river from Jericho city.’ Officers"
+      "text": "Their land is on the east side of the Jordan River. It is on the other side of the river from Jericho city.’"
     },
     {
       "verse": "16",
@@ -4888,7 +4988,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "These are the names of those leaders: Caleb the son of Jephunneh from the tribe of Judah."
+      "text": "These are the names of those leaders:Caleb the son of Jephunneh from the tribe of Judah."
     },
     {
       "verse": "20",
@@ -4904,7 +5004,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "These will be the two leaders from the descendants of Joseph: Hanniel the son of Ephod from the tribe of Manasseh."
+      "text": "These will be the two leaders from the descendants of Joseph:Hanniel the son of Ephod from the tribe of Manasseh."
     },
     {
       "verse": "24",
@@ -4928,7 +5028,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Those were the men that the Lord chose to decide about the land for the Israelite families. Print... Use screen font size Show All Comments Numbers 33Numbers 35 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Those were the men that the Lord chose to decide about the land for the Israelite families."
     }
   ],
   "35": [
@@ -4946,11 +5046,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The fields that you give to them for their animals must reach 500 metres from the walls of each town."
+      "text": "metres from the walls of each town."
     },
     {
       "verse": "5",
-      "text": "You must also measure 1,000 metres outside the town on each side, the east side, the south side, the west side and the north side. So the town will be in the centre. Those fields of grass will belong to them for each of their towns. The safe cities"
+      "text": "You must also measure 1,000 metres outside the town on each side, the east side, the south side, the west side and the north side. So the town will be in the centre. Those fields of grass will belong to them for each of their towns."
     },
     {
       "verse": "6",
@@ -4990,7 +5090,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Those six towns will be safe places for Israelites and for foreign people who live among them. Anyone who has killed another person may run to one of these towns and be safe there. But they will only be safe if they did not mean to kill the other person. The dead person's relative’ is the man from the dead person's family who has to punish the guilty person."
+      "text": "Those six towns will be safe places for Israelites and for foreign people who live among them. Anyone who has killed another person may run to one of these towns and be safe there. But they will only be safe if they did not mean to kill the other person."
     },
     {
       "verse": "16",
@@ -5066,7 +5166,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "You must not make the land where you live become unclean. It is the land where I also live. That is because I, the Lord, live among the Israelites.’ Print... Use screen font size Show All Comments Numbers 34Numbers 36 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You must not make the land where you live become unclean. It is the land where I also live. That is because I, the Lord, live among the Israelites.’"
     }
   ],
   "36": [
@@ -5084,7 +5184,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Even when the Jubilee year comes, the land will not return to our tribe. It will belong to the tribes of the men that Zelophehad's daughters have married.’ See Numbers"
+      "text": "Even when the Jubilee year comes, the land will not return to our tribe. It will belong to the tribes of the men that Zelophehad's daughters have married.’"
     },
     {
       "verse": "5",
@@ -5120,7 +5220,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Those are the rules that the Lord gave to the Israelites at that time. The Lord told Moses what he should say to the people. That happened when they were beside the Jordan River in Moab, on the flat ground on the other side of the river from Jericho city. Print... Use screen font size Show All Comments Numbers 35Deuteronomy Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Those are the rules that the Lord gave to the Israelites at that time. The Lord told Moses what he should say to the people. That happened when they were beside the Jordan River in Moab, on the flat ground on the other side of the river from Jericho city."
     }
   ]
 };

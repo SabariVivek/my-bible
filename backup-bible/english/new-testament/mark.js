@@ -2,19 +2,19 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This is the start of the good news about Jesus Christ. He is the Son of God."
+      "text": "This is the start of the good news about Jesus Christ. He is the Son of God. ‘Listen! I will send someone to prepare a way for you. He will tell people my message."
     },
     {
       "verse": "2",
-      "text": "The prophet Isaiah wrote this message from God in his book: See Exodus Malachi Isaiah Listen! I will send someone to prepare a way for you. He will tell people my message."
+      "text": "The prophet Isaiah wrote this message from God in his book:‘Listen! I will send someone to prepare a way for you.He will tell people my message."
     },
     {
       "verse": "3",
-      "text": "His voice will shout in the wilderness: “The Lord will come soon, so prepare a way for him. Make the paths straight for him.” ’ Isaiah was telling people about a man called John. John would say to the people that they should prepare themselves for the Messiah. People mended the roads before a king travelled along them. Isaiah was using this like a picture in words, to help people to understand how to prepare for the Messiah."
+      "text": "His voice will shout in the wilderness:“The Lord will come soon, so prepare a way for him.Make the paths straight for him.” ’ “The Lord will come soon, so prepare a way for him. Make the paths straight for him.” ’"
     },
     {
       "verse": "4",
-      "text": "So John went to a place in the wilderness. He baptized people and he spoke a message from God. He said to people, ‘You have done many wrong things. You must turn away from them and change how you live. Then God will forgive you and I will baptize you.’ Baptism showed that a person wanted to change. They would tell God that they were sorry for the wrong things that they had done and they wanted to obey God."
+      "text": "So John went to a place in the wilderness. He baptized people and he spoke a message from God. He said to people, ‘You have done many wrong things. You must turn away from them and change how you live. Then God will forgive you and I will baptize you.’"
     },
     {
       "verse": "5",
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "John wore clothes made from the hair of a camel. He also wore a belt made from leather. His usual food was locusts and honey from the wilderness. Judea was in the south of Israel and Jerusalem was the capital city."
+      "text": "John wore clothes made from the hair of a camel. He also wore a belt made from leather. His usual food was locusts and honey from the wilderness."
     },
     {
       "verse": "7",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I have baptized you with water. But this man will baptize you with the Holy Spirit.’ John baptizes Jesus"
+      "text": "I have baptized you with water. But this man will baptize you with the Holy Spirit.’"
     },
     {
       "verse": "9",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "A voice spoke from heaven: ‘You are my Son and I love you. You make me very happy.’ Satan tries to cause Jesus to do wrong things"
+      "text": "A voice spoke from heaven: ‘You are my Son and I love you. You make me very happy.’"
     },
     {
       "verse": "12",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Jesus was in the wilderness for 40 days. During this time, Satan tried to cause him to do wrong things. There were wild animals with Jesus in the wilderness. God's angels took care of him. Jesus asks some men to be his disciples"
+      "text": "days. During this time, Satan tried to cause him to do wrong things. There were wild animals with Jesus in the wilderness. God's angels took care of him."
     },
     {
       "verse": "14",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Jesus said, ‘Now is the time when the kingdom of God has come very near. You have done many wrong things. Turn away from them and change the way that you live. Believe God's good news.’ King Herod had put John in prison even though John had not done anything wrong. John was also called John the Baptist because he baptized people."
+      "text": "Jesus said, ‘Now is the time when the kingdom of God has come very near. You have done many wrong things. Turn away from them and change the way that you live. Believe God's good news.’"
     },
     {
       "verse": "16",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Simon and Andrew immediately put down their nets and they went with Jesus. Simon was also called Peter. Jesus did not mean that Simon and Andrew would really catch people. He would teach Simon and Andrew how to tell other people the good news about himself. They would bring people to Jesus, so that those people could believe in him. Simon and his brother lived in a town called Capernaum. This town is on the shore of Lake Galilee."
+      "text": "Simon and Andrew immediately put down their nets and they went with Jesus."
     },
     {
       "verse": "19",
@@ -78,11 +78,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Immediately, Jesus asked them to come with him. They left their father and his workers in the boat, and they went with Jesus to be his disciples. Jesus causes a bad spirit to leave a man"
+      "text": "Immediately, Jesus asked them to come with him. They left their father and his workers in the boat, and they went with Jesus to be his disciples."
     },
     {
       "verse": "21",
-      "text": "Then Jesus and those disciples went into a town called Capernaum. On the next Jewish day of rest, Jesus went into the Jews' meeting place. He began to teach the people there. The day when Jewish people rest is called the Sabbath. It is the day that we call Saturday. Their meeting place was called a synagogue. It is a building where Jewish people meet to pray. They also read the Old Testament of the Bible there."
+      "text": "Then Jesus and those disciples went into a town called Capernaum. On the next Jewish day of rest, Jesus went into the Jews' meeting place. He began to teach the people there."
     },
     {
       "verse": "22",
@@ -110,7 +110,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Immediately, people began to hear the news about Jesus. Everywhere in Galilee, people were talking about him. Jesus makes many people well"
+      "text": "Immediately, people began to hear the news about Jesus. Everywhere in Galilee, people were talking about him."
     },
     {
       "verse": "29",
@@ -125,12 +125,8 @@ module.exports = {
       "text": "So Jesus went to her and he held her hand. Then he helped her to sit up and she was well again. Immediately she prepared food for her visitors."
     },
     {
-      "verse": "32-33",
-      "text": "That evening, when the sun had gone down, people in the town came to Jesus. They brought to him everyone who was ill. And they brought people with bad spirits in them. All these people were standing together near the door of the house."
-    },
-    {
       "verse": "34",
-      "text": "Jesus caused many sick people to become well. They had many different kinds of illness. He also caused many bad spirits to leave people. The spirits knew who he was. So Jesus did not let them speak. The Jews had many rules about the things that they should not do on their day of rest. They must not work or carry things on that day. When the sun went down, it was the end of the day of rest. So the people waited until then to bring the sick people to Jesus. Jesus prays alone in a quiet place"
+      "text": "Jesus caused many sick people to become well. They had many different kinds of illness. He also caused many bad spirits to leave people. The spirits knew who he was. So Jesus did not let them speak."
     },
     {
       "verse": "35",
@@ -150,7 +146,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "So Jesus travelled everywhere in Galilee. He taught the people in the Jewish meeting places. He caused bad spirits to come out of people. A man with a disease in his skin"
+      "text": "So Jesus travelled everywhere in Galilee. He taught the people in the Jewish meeting places. He caused bad spirits to come out of people."
     },
     {
       "verse": "40",
@@ -174,7 +170,15 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "But instead, the man went away and he talked to everybody. He told them what had happened to him. Because he did this, it became too difficult for Jesus to go into the towns. Everybody knew him. So Jesus stayed in places in the wilderness. People came from all the places around there to see him. Print... Use screen font size Show All Comments Mark IntroductionMark 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But instead, the man went away and he talked to everybody. He told them what had happened to him. Because he did this, it became too difficult for Jesus to go into the towns. Everybody knew him. So Jesus stayed in places in the wilderness. People came from all the places around there to see him."
+    },
+    {
+      "verse": "32",
+      "text": "That evening, when the sun had gone down, people in the town came to Jesus.  They brought to him everyone who was ill."
+    },
+    {
+      "verse": "33",
+      "text": "And they brought people with bad spirits in them.  All these people were standing together near the door of the house."
     }
   ],
   "2": [
@@ -196,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jesus saw the man and his friends. He knew that they believed in him. So he said to the man who could not walk, ‘My friend, I forgive you for your sins.’ Houses in Israel had flat roofs. There were steps outside the house up to the roof. The roof was made of small sticks and hard dry soil. It was easy for the men to make a big hole in the roof. Then they could tie ropes on to the mat and they could put it down through the roof."
+      "text": "Jesus saw the man and his friends. He knew that they believed in him. So he said to the man who could not walk, ‘My friend, I forgive you for your sins.’"
     },
     {
       "verse": "6",
@@ -224,7 +228,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Immediately, the man stood up. He picked up his mat and he walked out of the house. Everyone watched him do this. The people were very surprised. They praised God and they said, ‘God is great. We have never seen anything like this before.’ Jesus often called himself the Son of Man. He may have done this so that people would remember about some messages in the Bible. See Daniel Jesus asks Levi to be his disciple"
+      "text": "Immediately, the man stood up. He picked up his mat and he walked out of the house. Everyone watched him do this. The people were very surprised. They praised God and they said, ‘God is great. We have never seen anything like this before.’"
     },
     {
       "verse": "13",
@@ -232,7 +236,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "While Jesus was walking along, he saw a man called Levi. Levi was the son of Alphaeus. His job was to take taxes from people. He was sitting in his office. Jesus said to him, ‘Come with me and be my disciple.’ Levi stood up and he went with Jesus. Levi took money on behalf of the Roman government. The Jews did not like men who did this job."
+      "text": "While Jesus was walking along, he saw a man called Levi. Levi was the son of Alphaeus. His job was to take taxes from people. He was sitting in his office. Jesus said to him, ‘Come with me and be my disciple.’ Levi stood up and he went with Jesus."
     },
     {
       "verse": "15",
@@ -240,7 +244,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Some teachers of God's Law who were Pharisees saw what was happening. They said to Jesus' disciples, ‘He is eating with bad people and men who take taxes. That is not right.’ The Pharisees taught people the rules that God had given to Moses. They also taught many of their own ideas. They thought that it was wrong for Jesus to eat with those kinds of people. The Pharisees thought that they themselves were very good people. They thought that they obeyed all of God's rules."
+      "text": "Some teachers of God's Law who were Pharisees saw what was happening. They said to Jesus' disciples, ‘He is eating with bad people and men who take taxes. That is not right.’"
     },
     {
       "verse": "17",
@@ -248,7 +252,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "At this time, the disciples of John the Baptist and the disciples of the Pharisees were fasting. Some people came to Jesus and they asked him this question: ‘The disciples of John and the disciples of the Pharisees often fast for a time. So why do your disciples never do that?’ John the Baptist and the Pharisees taught their disciples to fast (stop eating food) for a certain time. They did this to show that they were serving God."
+      "text": "At this time, the disciples of John the Baptist and the disciples of the Pharisees were fasting. Some people came to Jesus and they asked him this question: ‘The disciples of John and the disciples of the Pharisees often fast for a time. So why do your disciples never do that?’"
     },
     {
       "verse": "19",
@@ -256,7 +260,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But there will be a time when people will take the man away from his friends. At that time his friends will fast.’ Jesus often told stories to teach the people. In this story, Jesus is like the man who marries. His disciples are like the friends. While Jesus was with his disciples, they were very happy. But soon his enemies would kill him. Then the disciples would be sad."
+      "text": "But there will be a time when people will take the man away from his friends. At that time his friends will fast.’"
     },
     {
       "verse": "21",
@@ -264,7 +268,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "And nobody pours new wine into old wineskins. If he does that, the new wine will tear the old wineskins. He will lose the wine and the wineskins will spoil. Instead, you must put new wine into new wineskins.’ Wine is a strong drink. It needs more room as it gets older. People put wine in wineskins to keep it. Wineskins become hard when they get older, so new wine would cause them to tear. The Pharisees had many rules that were not from God. Jesus was teaching the people that the old wineskins were like those rules. The new wine was like the things that Jesus was teaching them. Jesus' new teaching did not mix with the old rules. Jesus answers questions about the day of rest"
+      "text": "And nobody pours new wine into old wineskins. If he does that, the new wine will tear the old wineskins. He will lose the wine and the wineskins will spoil. Instead, you must put new wine into new wineskins.’"
     },
     {
       "verse": "23",
@@ -280,7 +284,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "David went into the temple. He ate the special bread that was there. He gave some of it to his men to eat as well. This happened during the time that Abiathar was the leader of the priests. It is against God's Law for anyone except the priests to eat that special bread.’ See 1 Samuel 21."
+      "text": "David went into the temple. He ate the special bread that was there. He gave some of it to his men to eat as well. This happened during the time that Abiathar was the leader of the priests. It is against God's Law for anyone except the priests to eat that special bread.’"
     },
     {
       "verse": "27",
@@ -288,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So you should know that the Son of Man has authority over the laws about the day of rest.’ Print... Use screen font size Show All Comments Mark 1Mark 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So you should know that the Son of Man has authority over the laws about the day of rest.’"
     }
   ],
   "3": [
@@ -306,7 +310,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then Jesus said to the Pharisees, ‘Is it right for us to do good things on our day of rest? Or should we do bad things? Should we save a person's life? Or should we kill people?’ Nobody said anything."
+      "text": "Then Jesus said to the Pharisees, ‘Is it right for us to do good things on our day of rest? Or should we do bad things? Should we save a person's life? Or should we kill people?’Nobody said anything. Nobody said anything."
     },
     {
       "verse": "5",
@@ -314,7 +318,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Pharisees left the meeting place immediately. They went to meet with some other people who were friends with the ruler, Herod. The Pharisees talked with them about how they could kill Jesus. The people who were friends with Herod were important Jews. Herod ruled part of Israel on behalf of the Romans. His friends were happy because the Romans had authority in Israel. They did not like Jesus. They thought that he would cause problems for Herod. Crowds follow Jesus"
+      "text": "The Pharisees left the meeting place immediately. They went to meet with some other people who were friends with the ruler, Herod. The Pharisees talked with them about how they could kill Jesus."
     },
     {
       "verse": "7",
@@ -338,7 +342,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Jesus often had to say to the bad spirits, ‘You must not tell anyone who I am.’ Jesus chooses 12 apostles"
+      "text": "Jesus often had to say to the bad spirits, ‘You must not tell anyone who I am.’"
     },
     {
       "verse": "13",
@@ -346,7 +350,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He chose a group of 12 men. He called them his apostles. He wanted them to be with him. And he would send them to teach people about God."
+      "text": "men. He called them his apostles. He wanted them to be with him. And he would send them to teach people about God."
     },
     {
       "verse": "15",
@@ -354,7 +358,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "These are the names of the 12 apostles: Jesus had many disciples. He chose 12 of them to be with him, so that he could teach them. He also called these 12 men apostles. The word apostle means that someone has sent the person out to do a job. Their job was to tell other people about Jesus. Simon, (Jesus called him Peter)."
+      "text": "apostles:Simon, (Jesus called him Peter)."
     },
     {
       "verse": "17",
@@ -362,11 +366,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Andrew,Philip,Bartholomew,Matthew, Matthew is another name for Levi. Thomas,James, who was the son of Alphaeus,Thaddaeus, In Luke Thaddaeus is called Judas, the son of James. Simon the Zealot"
+      "text": "Andrew,Philip,Bartholomew,Matthew,Thomas,James, who was the son of Alphaeus,Thaddaeus,Simon the Zealot"
     },
     {
       "verse": "19",
-      "text": "and Judas Iscariot, who later gave Jesus to his enemies.Jesus talks about Satan"
+      "text": "and Judas Iscariot, who later gave Jesus to his enemies."
     },
     {
       "verse": "20",
@@ -374,11 +378,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "People told his family what was happening. So they went to take him away with them. They thought that Jesus was crazy. Jesus' family lived in Nazareth, which was 40 kilometres away from Capernaum."
+      "text": "People told his family what was happening. So they went to take him away with them. They thought that Jesus was crazy."
     },
     {
       "verse": "22",
-      "text": "Some teachers of God's Law came from Jerusalem. They said, ‘Jesus has a bad spirit called Beelzebul in him. That is Satan, the one who rules all the bad spirits. This man can send bad spirits out of people because Satan gives him authority.’ Beelzebul is another name for Satan. They are both names for God's greatest enemy."
+      "text": "Some teachers of God's Law came from Jerusalem. They said, ‘Jesus has a bad spirit called Beelzebul in him. That is Satan, the one who rules all the bad spirits. This man can send bad spirits out of people because Satan gives him authority.’"
     },
     {
       "verse": "23",
@@ -410,7 +414,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Jesus said that to the teachers of God's Law, because they had said, ‘Jesus has a bad spirit in him.’ Jesus' mother and his brothers come to look for him"
+      "text": "Jesus said that to the teachers of God's Law, because they had said, ‘Jesus has a bad spirit in him.’"
     },
     {
       "verse": "31",
@@ -430,7 +434,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "My brothers and sisters and my mother are the people who do what God wants.’ People who believe in Jesus become part of the family of God. Print... Use screen font size Show All Comments Mark 2Mark 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "My brothers and sisters and my mother are the people who do what God wants.’"
     }
   ],
   "4": [
@@ -464,15 +468,15 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But some seeds fell on good soil. Good strong plants grew from these seeds. Some plants made 30 new seeds. Some plants made 60 new seeds. And some plants made 100 new seeds.’ When a farmer planted seeds, he threw them onto the ground around him."
+      "text": "But some seeds fell on good soil. Good strong plants grew from these seeds. Some plants made 30 new seeds. Some plants made 60 new seeds. And some plants made 100 new seeds.’"
     },
     {
       "verse": "9",
-      "text": "Then Jesus said, ‘You have ears, so listen well to what I say!’ Jesus explains to his disciples why he uses stories"
+      "text": "Then Jesus said, ‘You have ears, so listen well to what I say!’"
     },
     {
       "verse": "10",
-      "text": "When Jesus was alone, the 12 apostles and other people who were there asked him about the stories."
+      "text": "When Jesus was alone, the 12 apostles and other people who were there asked him about the stories. “They are always looking but they do not see clearly. They are always listening but they do not understand.” If they did understand, they would turn to God. Then God would forgive them.’"
     },
     {
       "verse": "11",
@@ -480,7 +484,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "This is so that: “They are always looking but they do not see clearly. They are always listening but they do not understand.” If they did understand, they would turn to God. Then God would forgive them.’ Jesus explains the story about the seeds"
+      "text": "This is so that:“They are always looking but they do not see clearly.They are always listening but they do not understand.”If they did understand, they would turn to God. Then God would forgive them.’"
     },
     {
       "verse": "13",
@@ -512,7 +516,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But some seeds fell on good soil. This is like other people who listen to the message from God. They understand the message and they believe it. These people are like good plants that grow well. From one seed, some good plants make 30 new seeds. Other good plants make 60 new seeds, and some good plants make 100 new seeds.’ People put a light in a high place"
+      "text": "But some seeds fell on good soil. This is like other people who listen to the message from God. They understand the message and they believe it. These people are like good plants that grow well. From one seed, some good plants make 30 new seeds. Other good plants make 60 new seeds, and some good plants make 100 new seeds.’"
     },
     {
       "verse": "21",
@@ -524,7 +528,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then Jesus said, ‘You have ears, so listen well to what I say.’ At that time, people burned oil in a small bowl which they called a lamp. They put the lamp up on a high place so that people could see. God's good news is like the light from a lamp. We should not hide it."
+      "text": "Then Jesus said, ‘You have ears, so listen well to what I say.’"
     },
     {
       "verse": "24",
@@ -532,7 +536,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "A person who has received some things will receive more things. Some other people have nothing. They will lose even the little bit that they do have.’ Jesus is telling his disciples about how to listen to him. They should listen carefully so that they will be able to understand his message more and more. Then God can teach them even more things. Some people think that they know God. But they do not really understand and they do not obey him. So God will take away those things from their minds. Jesus tells a story about seeds"
+      "text": "A person who has received some things will receive more things. Some other people have nothing. They will lose even the little bit that they do have.’"
     },
     {
       "verse": "26",
@@ -548,7 +552,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "When the new seeds have completely grown, the man will cut down the plants. It is time for him to take the seeds to use for food.’ Jesus tells a story about a very small seed"
+      "text": "When the new seeds have completely grown, the man will cut down the plants. It is time for him to take the seeds to use for food.’"
     },
     {
       "verse": "30",
@@ -568,7 +572,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "He always used stories to teach the people. Then he explained everything to his own disciples when he was alone with them. Jesus stops a storm"
+      "text": "He always used stories to teach the people. Then he explained everything to his own disciples when he was alone with them."
     },
     {
       "verse": "35",
@@ -596,17 +600,13 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "But the disciples became very afraid. They said to each other, ‘Who is this man? Even the wind and the water obey him.’ Print... Use screen font size Show All Comments Mark 3Mark 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the disciples became very afraid. They said to each other, ‘Who is this man? Even the wind and the water obey him.’"
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "Jesus and his disciples came to the other side of the lake. They came to a place where the Gerasene people lived. This place was across the lake from Capernaum, on the east side. About two kilometres from the shore, there was a small village. There were some caves in the rocks where people from the village buried dead people."
-    },
-    {
-      "verse": "2-4",
-      "text": "Jesus got out of the boat. Immediately, a man with a bad spirit in him came to him. This man lived outside, among some graves. He was very strong and nobody could hold him. People often put chains around his ankles to hold him. They wanted to keep him in a safe place. But he broke the chains that held him."
+      "text": "Jesus and his disciples came to the other side of the lake. They came to a place where the Gerasene people lived."
     },
     {
       "verse": "5",
@@ -626,7 +626,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then Jesus asked the man, ‘What is your name?’ The man replied, ‘My name is Army because there are so many bad spirits in me.’"
+      "text": "Then Jesus asked the man, ‘What is your name?’The man replied, ‘My name is Army because there are so many bad spirits in me.’ The man replied, ‘My name is Army because there are so many bad spirits in me.’"
     },
     {
       "verse": "10",
@@ -670,7 +670,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "So the man went away. He began to speak to many people in the region called ‘The ten cities’. He told them about the great things that Jesus had done for him. All the people were very surprised. Jesus makes a dead girl live"
+      "text": "So the man went away. He began to speak to many people in the region called ‘The ten cities’. He told them about the great things that Jesus had done for him. All the people were very surprised."
     },
     {
       "verse": "21",
@@ -686,11 +686,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "So Jesus went with Jairus. A large crowd followed Jesus. The people were pushing against him."
+      "text": "So Jesus went with Jairus.A large crowd followed Jesus. The people were pushing against him."
     },
     {
       "verse": "25",
-      "text": "There was a sick woman who had lost blood for 12 years."
+      "text": "years."
     },
     {
       "verse": "26",
@@ -750,7 +750,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "The people laughed at Jesus when he said that. Then Jesus sent them all out of the house. He went into the place where the child was lying. The child's father and mother went with him. He also took Peter, James and John with him."
+      "text": "The people laughed at Jesus when he said that.Then Jesus sent them all out of the house. He went into the place where the child was lying. The child's father and mother went with him. He also took Peter, James and John with him."
     },
     {
       "verse": "41",
@@ -762,13 +762,25 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Jesus said to them, ‘You must not tell anyone what has happened here. Now give the girl something to eat.’ Talitha koum’ are the words that Jesus spoke in the Aramaic language. Print... Use screen font size Show All Comments Mark 4Mark 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jesus said to them, ‘You must not tell anyone what has happened here. Now give the girl something to eat.’"
+    },
+    {
+      "verse": "2",
+      "text": "Jesus got out of the boat.  Immediately, a man with a bad spirit in him came to him.  This man lived outside, among some graves."
+    },
+    {
+      "verse": "3",
+      "text": "He was very strong and nobody could hold him.  People often put chains around his ankles to hold him."
+    },
+    {
+      "verse": "4",
+      "text": "They wanted to keep him in a safe place.  But he broke the chains that held him."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "Jesus left that place. He went to his own town. His disciples went with him. Jesus' family lived in a town called Nazareth."
+      "text": "Jesus left that place. He went to his own town. His disciples went with him."
     },
     {
       "verse": "2",
@@ -776,7 +788,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "We know he is an ordinary man. He is the carpenter. He is the son of Mary and the brother of James, Joses, Simon and Judas. His sisters live here in the town among us. Isn't that true?’ So the people there turned against Jesus. The people thought that they knew everything about Jesus. They believed that he was only an ordinary man."
+      "text": "We know he is an ordinary man. He is the carpenter. He is the son of Mary and the brother of James, Joses, Simon and Judas. His sisters live here in the town among us. Isn't that true?’ So the people there turned against Jesus."
     },
     {
       "verse": "4",
@@ -784,15 +796,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jesus could not do any powerful miracles in his own town. But he did put his hands on a few sick people and he made them well."
+      "text": "Jesus could not do any powerful miracles in his own town. But he did put his hands on a few sick people and he made them well. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
     },
     {
       "verse": "6",
-      "text": "Jesus was very surprised because the people there would not believe in him. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages. Jesus sends the 12 apostles to tell God's message"
+      "text": "Jesus was very surprised because the people there would not believe in him.Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
     },
     {
       "verse": "7",
-      "text": "Jesus asked his 12 apostles to come to him. He started to send them out to tell God's message to people. He sent them out two by two and he gave them authority over bad spirits."
+      "text": "apostles to come to him. He started to send them out to tell God's message to people. He sent them out two by two and he gave them authority over bad spirits."
     },
     {
       "verse": "8",
@@ -812,19 +824,19 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So the 12 apostles went out. They told people that they must change the way that they live. They must stop doing wrong things."
+      "text": "apostles went out. They told people that they must change the way that they live. They must stop doing wrong things."
     },
     {
       "verse": "13",
-      "text": "The disciples caused many bad spirits to come out of people. They also put olive oil on many sick people, and the sick people became well. Herod kills John the Baptist"
+      "text": "The disciples caused many bad spirits to come out of people. They also put olive oil on many sick people, and the sick people became well."
     },
     {
       "verse": "14",
-      "text": "People were talking about Jesus. King Herod heard about what was happening. Some people were saying that Jesus was really John the Baptist. They said that John had died, but he had become alive again. ‘That is why this man can do these very powerful things,’ they said. The name of this Herod was Herod Antipas. He ruled Galilee region from 4 BC to AD 39."
+      "text": "People were talking about Jesus. King Herod heard about what was happening. Some people were saying that Jesus was really John the Baptist. They said that John had died, but he had become alive again. ‘That is why this man can do these very powerful things,’ they said."
     },
     {
       "verse": "15",
-      "text": "Other people said, ‘This man is Elijah.’ And other people said, ‘He is a prophet. He is like one of God's prophets who lived a long time ago.’ Elijah was a prophet of God. He had spoken powerful messages from God and he had done many great things. God's prophet Malachi said that Elijah would return one day. See Malachi But Jesus showed that Malachi was talking about John the Baptist, not about Jesus himself. See Matthew"
+      "text": "Other people said, ‘This man is Elijah.’ And other people said, ‘He is a prophet. He is like one of God's prophets who lived a long time ago.’"
     },
     {
       "verse": "16",
@@ -836,7 +848,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "John had said to him, ‘Herodias is your brother's wife. It is not right for you to have her as your wife.’ Herodias had left Philip, her first husband. Then Herod married her. So John told him what Moses had written in God's law. God's law said, ‘A man must not marry his brother's wife.’ See Leviticus Herod was angry with John when he told him that. So Herod told his men that they must put John in prison."
+      "text": "John had said to him, ‘Herodias is your brother's wife. It is not right for you to have her as your wife.’"
     },
     {
       "verse": "19",
@@ -852,7 +864,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The daughter of Herodias came in and she danced. Herod and his visitors were very happy when they saw her dance. King Herod said to the girl, ‘Ask me for anything that you want. I will give it to you.’"
+      "text": "The daughter of Herodias came in and she danced. Herod and his visitors were very happy when they saw her dance.King Herod said to the girl, ‘Ask me for anything that you want. I will give it to you.’"
     },
     {
       "verse": "23",
@@ -880,7 +892,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "People told John's disciples about what had happened. So they went to the prison. They took away John's body and they buried it. Jesus gives food to 5,000 men and their families"
+      "text": "People told John's disciples about what had happened. So they went to the prison. They took away John's body and they buried it."
     },
     {
       "verse": "30",
@@ -912,7 +924,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "‘You should give them some food to eat,’ Jesus replied. But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people.’ These coins were called denarii. People who worked received about one coin each day."
+      "text": "‘You should give them some food to eat,’ Jesus replied.But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people.’ But the disciples said, ‘We cannot go to buy bread for all these people. A man must work for eight months to get the 200 coins that we would need for that. We cannot get enough food to give to these people.’"
     },
     {
       "verse": "38",
@@ -940,7 +952,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "There were 5,000 men in the crowd that ate the food there. Women and children also ate the loaves and the fish. Jesus walks on water"
+      "text": "There were 5,000 men in the crowd that ate the food there."
     },
     {
       "verse": "45",
@@ -972,7 +984,7 @@ module.exports = {
     },
     {
       "verse": "52",
-      "text": "They did not understand what Jesus had done with the loaves of bread. They were not ready to learn. Jesus makes many sick people well"
+      "text": "They did not understand what Jesus had done with the loaves of bread. They were not ready to learn."
     },
     {
       "verse": "53",
@@ -988,7 +1000,7 @@ module.exports = {
     },
     {
       "verse": "56",
-      "text": "Jesus went to villages, towns and farms. Everywhere that he went, they brought sick people to the market places. The sick people asked Jesus for help. They wanted to touch even the edge of his coat. Every sick person who touched him became well. Print... Use screen font size Show All Comments Mark 5Mark 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jesus went to villages, towns and farms. Everywhere that he went, they brought sick people to the market places. The sick people asked Jesus for help. They wanted to touch even the edge of his coat. Every sick person who touched him became well."
     }
   ],
   "7": [
@@ -1014,11 +1026,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Jesus said to them, ‘You are hypocrites! What God's prophet Isaiah wrote about you long ago is true: God says, “These people say good things about me, but they do not really want to obey me."
+      "text": "Jesus said to them, ‘You are hypocrites! What God's prophet Isaiah wrote about you long ago is true:God says, “These people say good things about me,but they do not really want to obey me. God says, “These people say good things about me, but they do not really want to obey me."
     },
     {
       "verse": "7",
-      "text": "They say that I am great. But what they say has no purpose. They teach their own rules, which I did not give to them.” ’ See Isaiah"
+      "text": "They say that I am great.But what they say has no purpose.They teach their own rules, which I did not give to them.” ’ But what they say has no purpose. They teach their own rules, which I did not give to them.” ’"
     },
     {
       "verse": "8",
@@ -1042,7 +1054,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "This shows that you have not obeyed what God says is right. Instead, you have obeyed the ideas that you received from your leaders many years ago. And you do many other things like that.’ See Exodus"
+      "text": "This shows that you have not obeyed what God says is right. Instead, you have obeyed the ideas that you received from your leaders many years ago. And you do many other things like that.’"
     },
     {
       "verse": "14",
@@ -1054,7 +1066,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "[You have heard my words. So do what I say.’] This verse is not in some old copies of the Bible. Jesus explains to his disciples what he had taught"
+      "text": "[You have heard my words. So do what I say.’]"
     },
     {
       "verse": "17",
@@ -1062,11 +1074,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Jesus said, ‘I am surprised that you too do not understand what I am saying. You should understand that food will not make people unclean. Food goes into people's bodies from outside."
+      "text": "Jesus said, ‘I am surprised that you too do not understand what I am saying. You should understand that food will not make people unclean. Food goes into people's bodies from outside. When Jesus said this, he was teaching that all foods are clean."
     },
     {
       "verse": "19",
-      "text": "But food does not go into people's minds. It goes into their stomachs and then it passes out of their bodies.’ When Jesus said this, he was teaching that all foods are clean."
+      "text": "But food does not go into people's minds. It goes into their stomachs and then it passes out of their bodies.’When Jesus said this, he was teaching that all foods are clean."
     },
     {
       "verse": "20",
@@ -1082,7 +1094,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "All these wrong things begin inside people's minds and then they come out. That is what makes them unclean.’ Jesus travels out of Israel"
+      "text": "All these wrong things begin inside people's minds and then they come out. That is what makes them unclean.’"
     },
     {
       "verse": "24",
@@ -1110,7 +1122,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The woman went to her home. She saw her child, who was lying on the bed. The bad spirit had left the girl. Jesus makes a man well again"
+      "text": "The woman went to her home. She saw her child, who was lying on the bed. The bad spirit had left the girl."
     },
     {
       "verse": "31",
@@ -1138,7 +1150,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "The people were very surprised about everything that Jesus did. They said, ‘Jesus has done everything well. If people cannot hear, Jesus makes them able to hear. If people cannot speak, Jesus makes them able to speak.’ Print... Use screen font size Show All Comments Mark 6Mark 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The people were very surprised about everything that Jesus did. They said, ‘Jesus has done everything well. If people cannot hear, Jesus makes them able to hear. If people cannot speak, Jesus makes them able to speak.’"
     }
   ],
   "8": [
@@ -1180,7 +1192,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Immediately, he got into the boat with his disciples. They all returned to the part of the country called Dalmanutha. Dalmanutha is on the west shore of Lake Galilee. It is south of the flat part of the country called Gennesaret."
+      "text": "Immediately, he got into the boat with his disciples. They all returned to the part of the country called Dalmanutha."
     },
     {
       "verse": "11",
@@ -1192,7 +1204,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then Jesus left those Pharisees. He got back into the boat to go to the other side of the lake. Jesus talks about the yeast of the Pharisees and the yeast of Herod"
+      "text": "Then Jesus left those Pharisees. He got back into the boat to go to the other side of the lake."
     },
     {
       "verse": "14",
@@ -1200,7 +1212,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Jesus said to them, ‘Be careful. Do not accept the yeast of the Pharisees or the yeast of Herod.’ People put yeast into flour and water when they want to make bread. The yeast causes the flour to grow bigger and become a loaf of bread. Jesus was talking about the things that the Pharisees taught people. These things could grow and hurt people. See Matthew"
+      "text": "Jesus said to them, ‘Be careful. Do not accept the yeast of the Pharisees or the yeast of Herod.’"
     },
     {
       "verse": "16",
@@ -1208,7 +1220,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Jesus knew what they were talking about. So he said to them, ‘You should not be arguing about the bread. You still do not understand my teaching. You seem unable to learn."
+      "text": "Jesus knew what they were talking about. So he said to them, ‘You should not be arguing about the bread. You still do not understand my teaching. You seem unable to learn. ‘There were 12 baskets,’ they replied."
     },
     {
       "verse": "18",
@@ -1216,15 +1228,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Remember that I used five loaves of bread to feed 5,000 men. How many baskets did you fill with pieces of food that were left?’ ‘There were 12 baskets,’ they replied."
+      "text": "Remember that I used five loaves of bread to feed 5,000 men. How many baskets did you fill with pieces of food that were left?’‘There were 12 baskets,’ they replied."
     },
     {
       "verse": "20",
-      "text": "Jesus asked them, ‘I also used seven loaves to feed 4,000 people. That time, how many baskets did you fill with pieces of food?’ ‘There were seven baskets,’ they replied."
+      "text": "Jesus asked them, ‘I also used seven loaves to feed 4,000 people. That time, how many baskets did you fill with pieces of food?’‘There were seven baskets,’ they replied. ‘There were seven baskets,’ they replied."
     },
     {
       "verse": "21",
-      "text": "‘You really should understand about me now,’ he said to them. Jesus makes a blind man able to see"
+      "text": "‘You really should understand about me now,’ he said to them."
     },
     {
       "verse": "22",
@@ -1244,7 +1256,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Jesus told the man that he must go back to his home. Jesus said, ‘Do not even go into the village.’ Peter says who Jesus is"
+      "text": "Jesus told the man that he must go back to his home. Jesus said, ‘Do not even go into the village.’"
     },
     {
       "verse": "27",
@@ -1252,19 +1264,19 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "They replied, ‘Some people say that you are John the Baptist. Other people say that you are Elijah. And some other people say that you are one of God's prophets.’ This is the same report that people told King Herod in Matthew"
+      "text": "They replied, ‘Some people say that you are John the Baptist. Other people say that you are Elijah. And some other people say that you are one of God's prophets.’"
     },
     {
       "verse": "29",
-      "text": "Jesus asked them, ‘But what do you think? Who do you say that I am?’ Peter answered him, ‘You are the Messiah.’ The people were waiting for God to send someone special to them. They called this person the Messiah or the Christ. Jesus knew that the people had wrong ideas about this person. They thought that this person would save them from the Roman government. They thought that he would be a great soldier. So Jesus wanted to teach the people what he, the Messiah, had come to do."
+      "text": "Jesus asked them, ‘But what do you think? Who do you say that I am?’Peter answered him, ‘You are the Messiah.’ Peter answered him, ‘You are the Messiah.’"
     },
     {
       "verse": "30",
-      "text": "Then Jesus warned his disciples that they must not tell anyone about him. Jesus tells his disciples how he will die"
+      "text": "Then Jesus warned his disciples that they must not tell anyone about him."
     },
     {
       "verse": "31",
-      "text": "Then Jesus began to teach his disciples about the things that must happen to the Son of Man. He would have to suffer in many ways. The important Jews, the leaders of the priests and the teachers of God's Law would turn against him. People would kill him. But after three days, he would become alive again. Before this time, Jesus had not told anyone so clearly what would happen to him."
+      "text": "Then Jesus began to teach his disciples about the things that must happen to the Son of Man. He would have to suffer in many ways. The important Jews, the leaders of the priests and the teachers of God's Law would turn against him. People would kill him. But after three days, he would become alive again."
     },
     {
       "verse": "32",
@@ -1272,7 +1284,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jesus turned round and he looked at his disciples. He said that Peter was not saying good things. He said to Peter, ‘Satan, go away from me! Your thoughts do not come from God. Instead, you are thinking like men think.’ Peter did not understand that God wanted Jesus to die for us. Satan wanted Peter to stop Jesus, so that Jesus would not obey God. That is why Jesus called Peter ‘Satan’."
+      "text": "Jesus turned round and he looked at his disciples. He said that Peter was not saying good things. He said to Peter, ‘Satan, go away from me! Your thoughts do not come from God. Instead, you are thinking like men think.’"
     },
     {
       "verse": "34",
@@ -1292,7 +1304,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "People who are living today do not obey God. They are very bad. But you must not be ashamed of me or of my words. If you are, then the Son of Man will be ashamed of you. One day he will return and God's holy angels will be with him. He will have the bright glory of his Father. He will be ashamed of you on that day if you are ashamed of him now.’ Print... Use screen font size Show All Comments Mark 7Mark 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People who are living today do not obey God. They are very bad. But you must not be ashamed of me or of my words. If you are, then the Son of Man will be ashamed of you. One day he will return and God's holy angels will be with him. He will have the bright glory of his Father. He will be ashamed of you on that day if you are ashamed of him now.’"
     }
   ],
   "9": [
@@ -1310,7 +1322,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then Elijah and Moses appeared in front of the three disciples. Elijah and Moses were talking with Jesus. Moses had lived a long time before Jesus. He was a leader of God's people. He died about 1400 years before Jesus was born. We can read about Moses in the book of Exodus. Elijah was one of God's special servants who spoke God's messages to the people. He lived about 850 years before Jesus was born. He was still alive when God took him up to live in heaven. We can read about Elijah in 1 Kings."
+      "text": "Then Elijah and Moses appeared in front of the three disciples. Elijah and Moses were talking with Jesus."
     },
     {
       "verse": "5",
@@ -1318,7 +1330,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Peter did not really know what to say. That was because the three disciples were very afraid. Peter and his friends wanted to build the huts so that these important people could stay with them longer. But God did not want them to remain on the mountain. God sent these two men to talk to Jesus. They talked about the things that would happen in Jerusalem. Jesus would die on a cross there. See Luke"
+      "text": "Peter did not really know what to say. That was because the three disciples were very afraid."
     },
     {
       "verse": "7",
@@ -1346,7 +1358,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But I tell you that Elijah has already come. People did to him everything that they wanted to do. The Bible already showed that those things would happen to him.’ See 1 Kings When Jesus talked to them about Elijah, he was also talking about John the Baptist. Herod did cruel things to John. See Mark Jesus helps a boy who has a bad spirit"
+      "text": "But I tell you that Elijah has already come. People did to him everything that they wanted to do. The Bible already showed that those things would happen to him.’"
     },
     {
       "verse": "14",
@@ -1378,7 +1390,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Jesus asked the boy's father, ‘How long has he been like this?’ ‘He has been like this since he was a small boy,’ the father replied."
+      "text": "Jesus asked the boy's father, ‘How long has he been like this?’‘He has been like this since he was a small boy,’ the father replied."
     },
     {
       "verse": "22",
@@ -1422,7 +1434,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The disciples did not understand what Jesus had said. But they were afraid to ask him. Jesus explains who will be the most important person"
+      "text": "The disciples did not understand what Jesus had said. But they were afraid to ask him."
     },
     {
       "verse": "33",
@@ -1442,7 +1454,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "‘If someone accepts a child like this because of me, then that person also accepts me. If he accepts me, then he is not only accepting me. He is also accepting my Father God, who sent me.’ Jesus loved children. And he showed his disciples that a child is important to God. We should also love people who do not seem important."
+      "text": "‘If someone accepts a child like this because of me, then that person also accepts me. If he accepts me, then he is not only accepting me. He is also accepting my Father God, who sent me.’"
     },
     {
       "verse": "38",
@@ -1465,20 +1477,12 @@ module.exports = {
       "text": "A person who believes in me may not seem important. But you should never make that person do wrong things. Do not do that! It would be better if someone tied a big stone around your neck and then he threw you into the sea!"
     },
     {
-      "verse": "43-44",
-      "text": "If your hand causes you to do wrong things, you should cut it off. You will only have one hand, but you can have God's true life. It will be much worse for you if you keep both your hands and go to hell. There, the fire always burns and never stops."
-    },
-    {
-      "verse": "45-46",
-      "text": "If your foot causes you to do wrong things, you should cut it off. You will only have one foot, but you can have God's true life. It will be much worse if you keep your two feet and go to hell."
-    },
-    {
       "verse": "47",
-      "text": "If your eye causes you to do wrong things, then you should remove it. Then you will only have one eye, but you can go into the kingdom of God. It will be much worse if you keep both your eyes and God throws you into hell. Jesus does not want his disciples to cut their bodies. But it is very important for them not to do wrong things. That is what Jesus is telling them."
+      "text": "If your eye causes you to do wrong things, then you should remove it. Then you will only have one eye, but you can go into the kingdom of God. It will be much worse if you keep both your eyes and God throws you into hell."
     },
     {
       "verse": "48",
-      "text": "“In hell, the worms do not die, and the fire never goes out.” See Isaiah These worms live in dead bodies. Some old copies of the Bible repeat the words of verse 48 in verse 44 and in verse 46."
+      "text": "“In hell, the worms do not die,and the fire never goes out.” and the fire never goes out.”"
     },
     {
       "verse": "49",
@@ -1486,7 +1490,23 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "Salt is good. But if your salt is not salty any more, you cannot make it salty again. You should be like good salt and love each other. Do not cause trouble among yourselves.’ The fire will show what is good in everyone's lives. Print... Use screen font size Show All Comments Mark 8Mark 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Salt is good. But if your salt is not salty any more, you cannot make it salty again. You should be like good salt and love each other. Do not cause trouble among yourselves.’"
+    },
+    {
+      "verse": "43",
+      "text": "If your hand causes you to do wrong things, you should cut it off.  You will only have one hand, but you can have God's true life."
+    },
+    {
+      "verse": "44",
+      "text": "It will be much worse for you if you keep both your hands and go to hell.  There, the fire always burns and never stops."
+    },
+    {
+      "verse": "45",
+      "text": "If your foot causes you to do wrong things, you should cut it off.  You will only have one foot, but you can have God's true life."
+    },
+    {
+      "verse": "46",
+      "text": "It will be much worse if you keep your two feet and go to hell."
     }
   ],
   "10": [
@@ -1500,11 +1520,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Jesus replied with a question: ‘What did Moses say was right for you?’ God told the rules to Moses and Moses wrote them down. That happened many centuries before Jesus came to earth."
+      "text": "Jesus replied with a question: ‘What did Moses say was right for you?’"
     },
     {
       "verse": "4",
-      "text": "The Pharisees said, ‘Moses said that a man could write a letter to say that he and his wife are no longer married. Then the man can send the woman away.’ See Deuteronomy"
+      "text": "The Pharisees said, ‘Moses said that a man could write a letter to say that he and his wife are no longer married. Then the man can send the woman away.’"
     },
     {
       "verse": "5",
@@ -1524,7 +1544,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "God has put them together to be husband and wife. So nobody should cause them to be separate.’ See Genesis"
+      "text": "God has put them together to be husband and wife. So nobody should cause them to be separate.’"
     },
     {
       "verse": "10",
@@ -1536,7 +1556,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "In the same way, a woman must not leave her husband and then marry another man. She also has done a wrong thing. It is the same as if she had sex with another woman's husband.’ Jesus prays for some children"
+      "text": "In the same way, a woman must not leave her husband and then marry another man. She also has done a wrong thing. It is the same as if she had sex with another woman's husband.’"
     },
     {
       "verse": "13",
@@ -1552,7 +1572,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then Jesus took hold of the children. He put his hands on each of them and he asked God to bless them. Jesus meets a rich man"
+      "text": "Then Jesus took hold of the children. He put his hands on each of them and he asked God to bless them."
     },
     {
       "verse": "17",
@@ -1560,11 +1580,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Jesus said to him, ‘Why do you say that I am good? Only God is good. Nobody else."
+      "text": "Jesus said to him, ‘Why do you say that I am good? Only God is good. Nobody else. “Do not kill anyone. Do not have sex with anyone who is not your wife. Do not rob anyone. Do not say things that are not true about people. Do not take things that are not yours. Love your father and your mother, and obey them.” ’"
     },
     {
       "verse": "19",
-      "text": "You know God's rules: “Do not kill anyone. Do not have sex with anyone who is not your wife. Do not rob anyone. Do not say things that are not true about people. Do not take things that are not yours. Love your father and your mother, and obey them.” ’"
+      "text": "You know God's rules:“Do not kill anyone.Do not have sex with anyone who is not your wife.Do not rob anyone.Do not say things that are not true about people.Do not take things that are not yours.Love your father and your mother, and obey them.” ’"
     },
     {
       "verse": "20",
@@ -1612,7 +1632,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But many people who are very important now will not be important then. And people who are not important now will become very important then.’ Jesus talks again about his death"
+      "text": "But many people who are very important now will not be important then. And people who are not important now will become very important then.’"
     },
     {
       "verse": "32",
@@ -1624,7 +1644,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Those people will laugh at him. They will spit at him. They will hit him with whips. Then they will kill him. But after three days, he will become alive again.’ James and John ask Jesus to do something for them"
+      "text": "Those people will laugh at him. They will spit at him. They will hit him with whips. Then they will kill him. But after three days, he will become alive again.’"
     },
     {
       "verse": "35",
@@ -1644,7 +1664,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "James and John replied, ‘Yes, we can do all that.’ Jesus said to them, ‘Yes, that is true. You will have pain like mine. And people will want to kill you like me."
+      "text": "James and John replied, ‘Yes, we can do all that.’Jesus said to them, ‘Yes, that is true. You will have pain like mine. And people will want to kill you like me."
     },
     {
       "verse": "40",
@@ -1668,11 +1688,11 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "Even the Son of Man came to earth to be a servant to other people. He did not come here to have servants who must work for him. No, he came to die so that many people can be free.’ Jesus causes a blind man to see"
+      "text": "Even the Son of Man came to earth to be a servant to other people. He did not come here to have servants who must work for him. No, he came to die so that many people can be free.’"
     },
     {
       "verse": "46",
-      "text": "Then Jesus and his disciples arrived in Jericho. When they were leaving the city again, a large crowd of people followed them. A blind man was sitting by the side of the road. He was asking people to give him money. His name was Bartimaeus and he was the son of Timaeus. Bartimaeus was blind, so he could not work. So he asked people to give him money. He needed that money to buy food."
+      "text": "Then Jesus and his disciples arrived in Jericho. When they were leaving the city again, a large crowd of people followed them. A blind man was sitting by the side of the road. He was asking people to give him money. His name was Bartimaeus and he was the son of Timaeus."
     },
     {
       "verse": "47",
@@ -1680,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "Many people were angry with Bartimaeus. They told him that he should be quiet. But he shouted even louder than before, ‘Son of David! Please help me!’ Son of David’ is a name for the special person that God sent to save the people. It is another name for the Messiah. David was the king of Israel many centuries before this."
+      "text": "Many people were angry with Bartimaeus. They told him that he should be quiet. But he shouted even louder than before, ‘Son of David! Please help me!’"
     },
     {
       "verse": "49",
@@ -1692,17 +1712,17 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Then Jesus said to Bartimaeus, ‘What do you want me to do for you?’ The blind man said to Jesus, ‘Teacher, I want to see again.’"
+      "text": "Then Jesus said to Bartimaeus, ‘What do you want me to do for you?’The blind man said to Jesus, ‘Teacher, I want to see again.’ The blind man said to Jesus, ‘Teacher, I want to see again.’"
     },
     {
       "verse": "52",
-      "text": "‘Go,’ Jesus said to him. ‘You are well now, because you believed in me.’ Immediately, Bartimaeus could see again. He followed Jesus along the road. Print... Use screen font size Show All Comments Mark 9Mark 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘Go,’ Jesus said to him. ‘You are well now, because you believed in me.’ Immediately, Bartimaeus could see again. He followed Jesus along the road."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "Jesus and his disciples were coming near to Jerusalem. They were almost at the villages called Bethphage and Bethany. They were on the Mount of Olives. Then Jesus sent two of his disciples to go further. Bethphage and Bethany were on the east side of the Mount of Olives."
+      "text": "Jesus and his disciples were coming near to Jerusalem. They were almost at the villages called Bethphage and Bethany. They were on the Mount of Olives. Then Jesus sent two of his disciples to go further."
     },
     {
       "verse": "2",
@@ -1730,19 +1750,19 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Many people then put their coats down on the road. Other people cut branches down from trees in the fields. They put the branches down on the road as well. The people did this so that the donkey would walk on the coats and branches. People did this when a king or a great leader came."
+      "text": "Many people then put their coats down on the road. Other people cut branches down from trees in the fields. They put the branches down on the road as well."
     },
     {
       "verse": "9",
-      "text": "Many people went in front of Jesus, and other people followed him. All of them were shouting, ‘We praise God! May the Lord God bless the king who comes with his authority!"
+      "text": "Many people went in front of Jesus, and other people followed him. All of them were shouting,‘We praise God!May the Lord God bless the king who comes with his authority! ‘We praise God! May the Lord God bless the king who comes with his authority!"
     },
     {
       "verse": "10",
-      "text": "Great will be the kingdom of King David, our ancestor! We praise God above!’"
+      "text": "Great will be the kingdom of King David, our ancestor!We praise God above!’ We praise God above!’"
     },
     {
       "verse": "11",
-      "text": "Jesus went into Jerusalem and went to the temple. He looked at everything there. It was late in the day, so he then went out of the city to Bethany. The 12 apostles went with him. A tree without fruit"
+      "text": "Jesus went into Jerusalem and went to the temple. He looked at everything there. It was late in the day, so he then went out of the city to Bethany. The 12 apostles went with him."
     },
     {
       "verse": "12",
@@ -1754,11 +1774,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So Jesus said to the tree, ‘Nobody will ever eat your fruit again.’ And his disciples heard what he said. Jesus goes to the temple"
+      "text": "So Jesus said to the tree, ‘Nobody will ever eat your fruit again.’ And his disciples heard what he said."
     },
     {
       "verse": "15",
-      "text": "When they arrived back in Jerusalem, Jesus went into the yard of the temple. People were buying and selling things there. Jesus began to make them all leave that place. Some men were changing coins there for people. He pushed over their tables. And he pushed over the seats of the men who sold birds. Only priests went into the temple. Other people could go into the yards that were around it. People had to use special money at the temple. There was a market in one of the yards. People could buy animals there."
+      "text": "When they arrived back in Jerusalem, Jesus went into the yard of the temple. People were buying and selling things there. Jesus began to make them all leave that place. Some men were changing coins there for people. He pushed over their tables. And he pushed over the seats of the men who sold birds."
     },
     {
       "verse": "16",
@@ -1774,7 +1794,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When it was evening, Jesus and his disciples went out of the city again. The fig tree is dead"
+      "text": "When it was evening, Jesus and his disciples went out of the city again."
     },
     {
       "verse": "20",
@@ -1798,11 +1818,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But when you stand up to pray, first you must forgive other people. If anyone has done something bad against you, forgive that person. If you do forgive them, your Father in heaven will forgive you. God will forgive you for the bad things that you have done.’"
+      "text": "But when you stand up to pray, first you must forgive other people. If anyone has done something bad against you, forgive that person."
     },
     {
       "verse": "26",
-      "text": "Verse 26 is not in most copies of the Bible. Jesus talks about his authority"
+      "text": "If you do forgive them, your Father in heaven will forgive you. God will forgive you for the bad things that you have done.’"
     },
     {
       "verse": "27",
@@ -1830,13 +1850,13 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "So the Jewish leaders answered Jesus: ‘We do not know who gave John his authority.’ So Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things.’ Print... Use screen font size Show All Comments Mark 10Mark 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the Jewish leaders answered Jesus: ‘We do not know who gave John his authority.’So Jesus said to them, ‘You will not answer my question. So I will not tell you what authority I have to do these things.’"
     }
   ],
   "12": [
     {
       "verse": "1",
-      "text": "Then Jesus began to speak again to the important Jews. He told them stories. He said, ‘There was a man who made a garden. He planted vines to grow grapes there. He built a wall around the garden. He dug a hole in the ground where he could make the grapes into wine. He also built a tall building to watch over the garden. He found some farmers who would work in the garden for him. Then he went away to another country. From a tall building, someone could watch for any animals or bad people who were coming to the garden. In this story, the man was like God. The garden was like Israel, and the farmers were like the leaders in Israel."
+      "text": "Then Jesus began to speak again to the important Jews. He told them stories. He said, ‘There was a man who made a garden. He planted vines to grow grapes there. He built a wall around the garden. He dug a hole in the ground where he could make the grapes into wine. He also built a tall building to watch over the garden. He found some farmers who would work in the garden for him. Then he went away to another country."
     },
     {
       "verse": "2",
@@ -1852,11 +1872,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The man then sent another servant, but the farmers killed this servant. He sent many other servants to them. The farmers hit some of these servants with sticks and they killed other servants. The servants that the master sent to the field were like the prophets."
+      "text": "The man then sent another servant, but the farmers killed this servant. He sent many other servants to them. The farmers hit some of these servants with sticks and they killed other servants."
     },
     {
       "verse": "6",
-      "text": "The man had only one person that he could still send. This was his own son. The man loved him very much. So, last of all, he sent his son to the farmers. He thought, “The farmers will surely respect my son.” The master's son was like Jesus."
+      "text": "The man had only one person that he could still send. This was his own son. The man loved him very much. So, last of all, he sent his son to the farmers. He thought, “The farmers will surely respect my son.”"
     },
     {
       "verse": "7",
@@ -1864,23 +1884,23 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So the farmers took the son and they killed him. Then they threw his dead body out of the garden.’ The farmers were cruel to the man's servants because the farmers did not want to obey the man. They killed his son for the same reason. They are like people who do not want to obey God. God may give them many chances to change their minds. But if they do not obey God, he will certainly punish them in the end."
+      "text": "So the farmers took the son and they killed him. Then they threw his dead body out of the garden.’"
     },
     {
       "verse": "9",
-      "text": "Jesus then asked, ‘What will the master of the garden do then? I tell you, he will come and he will kill those farmers. Then he will give the garden to other people to take care of it."
+      "text": "Jesus then asked, ‘What will the master of the garden do then? I tell you, he will come and he will kill those farmers. Then he will give the garden to other people to take care of it. “The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building."
     },
     {
       "verse": "10",
-      "text": "I am sure that you have read these words in the Bible: See Psalm The builders refused to use a certain stone. The stone is like Jesus. The leaders did not think that he was important. But God decided that Jesus was important. In the end, he will rule over everybody and over everything. They thought that it had no value. But now that stone has become the most important stone at the corner of the building."
+      "text": "I am sure that you have read these words in the Bible:“The builders refused to use a certain stone. They thought that it had no value.But now that stone has become the most important stone at the corner of the building."
     },
     {
       "verse": "11",
-      "text": "The Lord God did this. And we can see that he did something great.” ’"
+      "text": "The Lord God did this.And we can see that he did something great.” ’ And we can see that he did something great.” ’"
     },
     {
       "verse": "12",
-      "text": "The Jewish leaders knew that Jesus had told this story about them. They were the bad farmers in the story. So they wanted to take hold of Jesus. But they were afraid of the crowd. So they left him and they went away. The Pharisees ask about the money that Caesar demanded"
+      "text": "The Jewish leaders knew that Jesus had told this story about them. They were the bad farmers in the story. So they wanted to take hold of Jesus. But they were afraid of the crowd. So they left him and they went away."
     },
     {
       "verse": "13",
@@ -1892,19 +1912,19 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Jesus knew that those men were not honest. So he said, ‘You just ask that question to cause trouble for me. Now, bring me a coin. I want to see it.’"
+      "text": "Jesus knew that those men were not honest. So he said, ‘You just ask that question to cause trouble for me. Now, bring me a coin. I want to see it.’ They replied, ‘It is Caesar's picture and Caesar's name.’"
     },
     {
       "verse": "16",
-      "text": "So they brought a coin to him. Jesus asked them, ‘Whose picture is on this coin? Whose name is on it?’ They replied, ‘It is Caesar's picture and Caesar's name.’"
+      "text": "So they brought a coin to him. Jesus asked them, ‘Whose picture is on this coin? Whose name is on it?’They replied, ‘It is Caesar's picture and Caesar's name.’"
     },
     {
       "verse": "17",
-      "text": "Jesus then said to them, ‘So you should give to Caesar the things that belong to him. And give to God the things that belong to God.’ They were very surprised at his answer. The Sadducees ask Jesus a question"
+      "text": "Jesus then said to them, ‘So you should give to Caesar the things that belong to him. And give to God the things that belong to God.’They were very surprised at his answer. They were very surprised at his answer."
     },
     {
       "verse": "18",
-      "text": "Also, some Sadducees came to Jesus. Sadducees do not believe that anyone becomes alive again after they die. They wanted to ask Jesus a question. The Sadducees were a group of Jewish leaders. They taught that death was the end."
+      "text": "Also, some Sadducees came to Jesus. Sadducees do not believe that anyone becomes alive again after they die. They wanted to ask Jesus a question."
     },
     {
       "verse": "19",
@@ -1940,7 +1960,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "God is not the God of people who are dead. He is the God of people who are alive. So you see, you are very wrong.’ See Exodus Jesus teaches people about the most important rule"
+      "text": "God is not the God of people who are dead. He is the God of people who are alive. So you see, you are very wrong.’"
     },
     {
       "verse": "28",
@@ -1956,7 +1976,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The second most important rule is this: “You should love other people as much as you love yourself.” No other rules are as important as these two.’ See Deuteronomy Joshua"
+      "text": "The second most important rule is this: “You should love other people as much as you love yourself.” No other rules are as important as these two.’"
     },
     {
       "verse": "32",
@@ -1968,19 +1988,19 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Jesus heard that the man had answered well. So Jesus said to him, ‘You are almost ready for God to rule in your life.’ After that, everybody was afraid to ask Jesus any more questions. Jesus teaches the people about the Messiah"
+      "text": "Jesus heard that the man had answered well. So Jesus said to him, ‘You are almost ready for God to rule in your life.’ After that, everybody was afraid to ask Jesus any more questions."
     },
     {
       "verse": "35",
-      "text": "Jesus was teaching people in the yard at the temple. He said, ‘The teachers of God's Law say that the Messiah is King David's son. What do you think about that?"
+      "text": "Jesus was teaching people in the yard at the temple. He said, ‘The teachers of God's Law say that the Messiah is King David's son. What do you think about that? “The Lord God said to my Lord: Sit at my right side until I win against your enemies. The you will be able to put your feet on them.”"
     },
     {
       "verse": "36",
-      "text": "The Holy Spirit helped David himself to say: The Messiah was a special person that the Jews were waiting for. They believed that God would send him to save them. See Psalm The Lord God said to my Lord: Sit at my right side until I win against your enemies. The you will be able to put your feet on them.” In this verse the first time that David says ‘Lord’ he is talking about God. The second time that he says ‘Lord’ he is talking about Jesus, the Messiah."
+      "text": "The Holy Spirit helped David himself to say:“The Lord God said to my Lord:Sit at my right side until I win against your enemies.The you will be able to put your feet on them.”"
     },
     {
       "verse": "37",
-      "text": "In these words, David himself calls the Messiah his Lord. So can you really say that the Messiah is David's son?’ Jesus explained a very important fact to the teachers of God's Law. Jesus is a man but he is also God. The large crowd liked to listen to the things that Jesus was saying. It made them happy."
+      "text": "In these words, David himself calls the Messiah his Lord. So can you really say that the Messiah is David's son?’The large crowd liked to listen to the things that Jesus was saying. It made them happy. The large crowd liked to listen to the things that Jesus was saying. It made them happy."
     },
     {
       "verse": "38",
@@ -1992,7 +2012,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "But these men take things away from women after their husbands have died, even their houses. Then they pray for a long time so that other people will praise them. Because they do these things, God will punish those men much more than other people.’ Jesus talks about people who give to God"
+      "text": "But these men take things away from women after their husbands have died, even their houses. Then they pray for a long time so that other people will praise them. Because they do these things, God will punish those men much more than other people.’"
     },
     {
       "verse": "41",
@@ -2008,7 +2028,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "All those rich people have plenty of money. They only put a small part of that into the box. But this woman has almost nothing. She put in all the money that she had. That was all the money that she needed to live.’ Print... Use screen font size Show All Comments Mark 11Mark 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All those rich people have plenty of money. They only put a small part of that into the box. But this woman has almost nothing. She put in all the money that she had. That was all the money that she needed to live.’"
     }
   ],
   "13": [
@@ -2074,7 +2094,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "A person who is outside in his field must not go back to his home. He must not return even to fetch his coat. Jesus was talking about a disgusting idol in the temple. See Daniel At that time, people often sat on the roof of their house after they had finished their work. The roof was flat, and it was cool there. There were steps outside the house up to the roof."
+      "text": "A person who is outside in his field must not go back to his home. He must not return even to fetch his coat."
     },
     {
       "verse": "17",
@@ -2102,7 +2122,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So watch out! I have told you about all these things before they happen. The time when the Son of Man returns"
+      "text": "So watch out! I have told you about all these things before they happen."
     },
     {
       "verse": "24",
@@ -2118,7 +2138,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Then he will send his angels. They will go in every direction, to every part of the earth and to every part of the sky. They will bring together all the people that God has chosen. A lesson about the fig tree"
+      "text": "Then he will send his angels. They will go in every direction, to every part of the earth and to every part of the sky. They will bring together all the people that God has chosen."
     },
     {
       "verse": "28",
@@ -2134,7 +2154,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "One day, the earth and the sky will have an end. But my words will be there for ever. Nobody knows when the Son of Man will return to the world"
+      "text": "One day, the earth and the sky will have an end. But my words will be there for ever."
     },
     {
       "verse": "32",
@@ -2158,7 +2178,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "I am saying this to you. I am also saying this to everyone else. Always be ready!’ Print... Use screen font size Show All Comments Mark 12Mark 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I am saying this to you. I am also saying this to everyone else. Always be ready!’"
     }
   ],
   "14": [
@@ -2168,11 +2188,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They said to each other, ‘We do not want to do it during the festival. If we do that, the people will be angry. Then they may fight against us.’ flat bread’ is bread which has no yeast in it. A woman pours special oil on Jesus' head"
+      "text": "They said to each other, ‘We do not want to do it during the festival. If we do that, the people will be angry. Then they may fight against us.’"
     },
     {
       "verse": "3",
-      "text": "Then Jesus went to Bethany, and he visited Simon at his house. At one time, Simon had had a bad disease of the skin. While Jesus was eating a meal there, a woman came into the house. She brought a small stone jar that contained expensive oil with a very nice smell. They used nard to make it. The woman broke the jar to open it. Then she poured the oil over Jesus' head. Nard is a plant that people use to make expensive oil. The plant grows in the country called India. People kept the oil in a special stone jar. The woman had to break the jar so that she could pour out the oil."
+      "text": "Then Jesus went to Bethany, and he visited Simon at his house. At one time, Simon had had a bad disease of the skin. While Jesus was eating a meal there, a woman came into the house. She brought a small stone jar that contained expensive oil with a very nice smell. They used nard to make it. The woman broke the jar to open it. Then she poured the oil over Jesus' head."
     },
     {
       "verse": "4",
@@ -2196,7 +2216,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I tell you this: Everywhere in the world, people will speak about God's good news. At the same time, they will also tell people about the good thing that this woman has done. And so they will remember her.’ Judas agrees to help the leaders of the priests"
+      "text": "I tell you this: Everywhere in the world, people will speak about God's good news. At the same time, they will also tell people about the good thing that this woman has done. And so they will remember her.’"
     },
     {
       "verse": "10",
@@ -2204,7 +2224,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The leaders of the priests were very happy about this. They promised to give Judas some money. Then Judas waited for the right moment to help them to take hold of Jesus. Jesus eats his last meal with his 12 apostles"
+      "text": "The leaders of the priests were very happy about this. They promised to give Judas some money. Then Judas waited for the right moment to help them to take hold of Jesus."
     },
     {
       "verse": "12",
@@ -2244,7 +2264,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The Son of Man must die in the way that the Bible says. But it will be very bad for the man who gives me to my enemies. It would have been better for that man if he had not been born.’ There was a dish on the table with some food in it. They were all putting their bread into the same dish to pick up the food. The Passover meal"
+      "text": "The Son of Man must die in the way that the Bible says. But it will be very bad for the man who gives me to my enemies. It would have been better for that man if he had not been born.’"
     },
     {
       "verse": "22",
@@ -2264,11 +2284,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then Jesus and his disciples sang a song to praise God. Then they went out to the Mount of Olives. Judas was not still with the other disciples. He left earlier. See John Jesus tells the disciples what will happen"
+      "text": "Then Jesus and his disciples sang a song to praise God. Then they went out to the Mount of Olives."
     },
     {
       "verse": "27",
-      "text": "Then Jesus said to the disciples, ‘All of you will turn away from me. It will happen as the Bible says: God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions.” ’ See Zechariah"
+      "text": "Then Jesus said to the disciples, ‘All of you will turn away from me. It will happen as the Bible says:God says, “I will kill the shepherd who leads the sheep.Then the sheep will run away in different directions.” ’ God says, “I will kill the shepherd who leads the sheep. Then the sheep will run away in different directions.” ’"
     },
     {
       "verse": "28",
@@ -2284,7 +2304,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But Peter said very strongly, ‘I will die with you if I need to. But I will never say that I do not know you.’ All the other disciples said the same thing. Jesus prays in the garden called Gethsemane"
+      "text": "But Peter said very strongly, ‘I will die with you if I need to. But I will never say that I do not know you.’ All the other disciples said the same thing."
     },
     {
       "verse": "32",
@@ -2328,7 +2348,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Stand up, we will go now. Look! The man who will give me to my enemies is here.’ Judas leads the men who will take Jesus away"
+      "text": "Stand up, we will go now. Look! The man who will give me to my enemies is here.’"
     },
     {
       "verse": "43",
@@ -2368,11 +2388,11 @@ module.exports = {
     },
     {
       "verse": "52",
-      "text": "But the young man left the piece of cloth behind and he ran away. So when he ran away, he was not wearing anything. We think that this young man was called Mark. Mark wrote this book. The most important priest asks Jesus questions"
+      "text": "But the young man left the piece of cloth behind and he ran away. So when he ran away, he was not wearing anything."
     },
     {
       "verse": "53",
-      "text": "The men took Jesus to the house of the most important priest. All the leaders of the priests met together there with the important Jews and with the teachers of God's Law. The most important priest was called Caiaphas. When all these important Jews met together, they were called the Sanhedrin. They decided together about how to rule the people. There were 71 men in the Sanhedrin. They had a lot of power, but they could not punish a guilty person with death. Only the Roman rulers could do that."
+      "text": "The men took Jesus to the house of the most important priest. All the leaders of the priests met together there with the important Jews and with the teachers of God's Law."
     },
     {
       "verse": "54",
@@ -2384,7 +2404,7 @@ module.exports = {
     },
     {
       "verse": "56",
-      "text": "Many people said things against Jesus that were not true. But they did not agree with each other in what they said. In Jewish rules, two or more people had to say the same thing about a person. Then the judge would believe that their words were true. He would agree that the person had done something wrong."
+      "text": "Many people said things against Jesus that were not true. But they did not agree with each other in what they said."
     },
     {
       "verse": "57",
@@ -2400,11 +2420,11 @@ module.exports = {
     },
     {
       "verse": "60",
-      "text": "Then Caiaphas stood up in front of everyone. He said to Jesus, ‘You must reply now to what these men have said against you. Are the things that they are saying true?’"
+      "text": "Then Caiaphas stood up in front of everyone. He said to Jesus, ‘You must reply now to what these men have said against you. Are the things that they are saying true?’ So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God?’"
     },
     {
       "verse": "61",
-      "text": "But Jesus did not reply. He did not say anything. So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God?’"
+      "text": "But Jesus did not reply. He did not say anything.So again, Caiaphas asked Jesus, ‘Are you the Messiah? Are you the Son of God?’"
     },
     {
       "verse": "62",
@@ -2412,23 +2432,23 @@ module.exports = {
     },
     {
       "verse": "63",
-      "text": "Then Caiaphas tore his clothes to show that he was angry. ‘We do not need anyone else to speak against Jesus,’ he said."
+      "text": "Then Caiaphas tore his clothes to show that he was angry. ‘We do not need anyone else to speak against Jesus,’ he said. Everyone agreed that Jesus deserved to die."
     },
     {
       "verse": "64",
-      "text": "‘You have heard the bad words that he has spoken against God. Do you think that he is guilty?’ Caiaphas tore his own clothes to show other people that he was very angry. Everyone agreed that Jesus deserved to die."
+      "text": "‘You have heard the bad words that he has spoken against God. Do you think that he is guilty?’Everyone agreed that Jesus deserved to die."
     },
     {
       "verse": "65",
-      "text": "Then some of the men began to spit on Jesus. They covered his eyes with a cloth and they hit him many times with their fists. They said, ‘Show us that you are a prophet! Tell us who hit you!’ Then the guards took hold of Jesus and they beat him. Peter says three times that he does not know Jesus"
+      "text": "Then some of the men began to spit on Jesus. They covered his eyes with a cloth and they hit him many times with their fists. They said, ‘Show us that you are a prophet! Tell us who hit you!’ Then the guards took hold of Jesus and they beat him."
     },
     {
       "verse": "66",
-      "text": "Peter was still sitting outside in the yard. One of the young women who was a servant of the most important priest came there."
+      "text": "Peter was still sitting outside in the yard. One of the young women who was a servant of the most important priest came there. She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth.’"
     },
     {
       "verse": "67",
-      "text": "She saw Peter, who was making himself warm by the fire. She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth.’"
+      "text": "She saw Peter, who was making himself warm by the fire.She looked at him and she said, ‘You also were a friend of Jesus, the man from Nazareth.’"
     },
     {
       "verse": "68",
@@ -2436,29 +2456,29 @@ module.exports = {
     },
     {
       "verse": "69",
-      "text": "The young woman watched him, and again she said to the other people there, ‘He is one of the men who were friends of Jesus.’"
+      "text": "The young woman watched him, and again she said to the other people there, ‘He is one of the men who were friends of Jesus.’ After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men.’"
     },
     {
       "verse": "70",
-      "text": "But Peter again said that it was not true. After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men.’ They knew that he was from Galilee. They knew it because of the way that he spoke. See Matthew"
+      "text": "But Peter again said that it was not true.After a little time, the other people who were standing there said to Peter, ‘We know you are from Galilee. So we are sure that you are one of those men.’"
     },
     {
       "verse": "71",
-      "text": "Then Peter began to speak very strongly to them. He said, ‘I do not know this man that you are talking about. God will surely punish me if this is not true!’"
+      "text": "Then Peter began to speak very strongly to them. He said, ‘I do not know this man that you are talking about. God will surely punish me if this is not true!’ When Peter thought about this, he wept very much."
     },
     {
       "verse": "72",
-      "text": "Immediately a cockerel sang loudly for a second time. Then Peter remembered what Jesus had said to him: ‘You will say three times that you do not know me. You will do it before the cockerel sings for the second time.’ When Peter thought about this, he wept very much. Print... Use screen font size Show All Comments Mark 13Mark 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Immediately a cockerel sang loudly for a second time. Then Peter remembered what Jesus had said to him: ‘You will say three times that you do not know me. You will do it before the cockerel sings for the second time.’When Peter thought about this, he wept very much."
     }
   ],
   "15": [
     {
       "verse": "1",
-      "text": "Very early the next morning, all the Jewish leaders met together. The leaders of the priests met with the leaders, the teachers of God's Law, and the other important Jews. They decided what they would do. They tied Jesus' hands and feet and they took him to Pilate's house. They put him under Pilate's authority. Pilate ruled Jerusalem on behalf of the Roman government."
+      "text": "Very early the next morning, all the Jewish leaders met together. The leaders of the priests met with the leaders, the teachers of God's Law, and the other important Jews. They decided what they would do. They tied Jesus' hands and feet and they took him to Pilate's house. They put him under Pilate's authority."
     },
     {
       "verse": "2",
-      "text": "Pilate asked Jesus, ‘Are you the king of the Jews?’ Jesus replied, ‘You have said it.’"
+      "text": "Pilate asked Jesus, ‘Are you the king of the Jews?’Jesus replied, ‘You have said it.’ Jesus replied, ‘You have said it.’"
     },
     {
       "verse": "3",
@@ -2506,11 +2526,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "‘Why should I kill him?’ Pilate asked. ‘What bad things has he done?’ But the people shouted even louder, ‘Kill him on a cross!’"
+      "text": "‘Why should I kill him?’ Pilate asked. ‘What bad things has he done?’But the people shouted even louder, ‘Kill him on a cross!’ But the people shouted even louder, ‘Kill him on a cross!’"
     },
     {
       "verse": "15",
-      "text": "Pilate decided to do what the crowd wanted. So he let Barabbas go free. He said to his soldiers, ‘Hit Jesus many times with a whip. Then take him and fix him on a cross to die.’ Pilate was afraid that the crowd would start to fight. So he did what they had asked him to do. He wanted them to be happy. People with authority used a whip to punish someone who had done something wrong. It had long narrow pieces of leather. And there were pieces of metal on the ends of them."
+      "text": "Pilate decided to do what the crowd wanted. So he let Barabbas go free. He said to his soldiers, ‘Hit Jesus many times with a whip. Then take him and fix him on a cross to die.’"
     },
     {
       "verse": "16",
@@ -2518,7 +2538,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then they put a dark red coat on Jesus. They used some branches with thorns to make a crown for him. They put it on his head. A crown is usually a special hat that a king wears. But this crown had sharp bits and it was painful for Jesus to wear it. The dark red coat was also like the coat that a king wore. The soldiers did not believe that Jesus was really a king."
+      "text": "Then they put a dark red coat on Jesus. They used some branches with thorns to make a crown for him. They put it on his head."
     },
     {
       "verse": "18",
@@ -2530,7 +2550,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When they had stopped laughing at him, they took the dark red coat off him. They put his own clothes back on him. Then they took him away to the place where they would kill him on a cross. The soldiers put Jesus on a cross"
+      "text": "When they had stopped laughing at him, they took the dark red coat off him. They put his own clothes back on him. Then they took him away to the place where they would kill him on a cross."
     },
     {
       "verse": "21",
@@ -2538,7 +2558,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The soldiers took Jesus to a place that is called Golgotha. (Golgotha means ‘the place of a skull’.) The skull is the bone inside the head. Golgotha was the place where the Roman soldiers killed robbers."
+      "text": "The soldiers took Jesus to a place that is called Golgotha. (Golgotha means ‘the place of a skull’.)"
     },
     {
       "verse": "23",
@@ -2562,7 +2582,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "[The Bible says that this would happen. It says, ‘People thought of him as someone who did not obey God's Law.’] See Isaiah Verse 28 is not in many old copies of Mark's book."
+      "text": "[The Bible says that this would happen. It says, ‘People thought of him as someone who did not obey God's Law.’]"
     },
     {
       "verse": "29",
@@ -2578,7 +2598,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "If he is the Messiah, the king of Israel, he should come down from the cross now. Then we would see it and we would believe in him.’ The two men who were on the crosses next to Jesus also insulted him. Jesus dies"
+      "text": "If he is the Messiah, the king of Israel, he should come down from the cross now. Then we would see it and we would believe in him.’ The two men who were on the crosses next to Jesus also insulted him."
     },
     {
       "verse": "33",
@@ -2602,11 +2622,11 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "And the curtain inside the temple completely tore into two parts from the top down to the bottom. The curtain was in front of the special room inside the temple. God caused it to tear from the top down. The curtain was too thick for a man to tear it."
+      "text": "And the curtain inside the temple completely tore into two parts from the top down to the bottom."
     },
     {
       "verse": "39",
-      "text": "The captain of the soldiers was standing there in front of Jesus. He saw how Jesus died. ‘It must be true!’ he said. ‘This man really was the Son of God.’ The captain was an important soldier. He had authority over 100 other soldiers."
+      "text": "The captain of the soldiers was standing there in front of Jesus. He saw how Jesus died. ‘It must be true!’ he said. ‘This man really was the Son of God.’"
     },
     {
       "verse": "40",
@@ -2614,7 +2634,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "These women had travelled with Jesus when he was in Galilee and they had helped him. Many other women were also there near the cross. They had come to Jerusalem with Jesus. Joseph buries Jesus' dead body"
+      "text": "These women had travelled with Jesus when he was in Galilee and they had helped him. Many other women were also there near the cross. They had come to Jerusalem with Jesus."
     },
     {
       "verse": "42",
@@ -2638,7 +2658,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "Mary from Magdala and Mary the mother of Joses were watching. They saw where Joseph had put Jesus' dead body. Print... Use screen font size Show All Comments Mark 14Mark 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Mary from Magdala and Mary the mother of Joses were watching. They saw where Joseph had put Jesus' dead body."
     }
   ],
   "16": [
@@ -2648,7 +2668,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They went out at dawn on the first day of the week, Sunday. They went to the hole in the rock where Joseph had put Jesus' dead body. The Jews rested on Saturdays until the sun went down. The women had bought the spices after that, during Saturday evening. The Jews always put these spices on a dead body when they buried it."
+      "text": "They went out at dawn on the first day of the week, Sunday. They went to the hole in the rock where Joseph had put Jesus' dead body."
     },
     {
       "verse": "3",
@@ -2660,7 +2680,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "When the women went into the hole in the rock, they saw a young man there. He was sitting in there on the right side and he wore bright white clothes. The women were very afraid. This young man was an angel."
+      "text": "When the women went into the hole in the rock, they saw a young man there. He was sitting in there on the right side and he wore bright white clothes. The women were very afraid."
     },
     {
       "verse": "6",
@@ -2668,11 +2688,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But now you must go to tell his disciples and Peter about this. Tell them, “Jesus is going to Galilee and you must also go there. You will see him there, just as he told you it would happen.” ’ Peter had said three times that he did not know Jesus. So maybe Peter thought that he was not still a disciple. But the angel's words included Peter. So Peter would know that Jesus still wanted him to be his disciple."
+      "text": "But now you must go to tell his disciples and Peter about this. Tell them, “Jesus is going to Galilee and you must also go there. You will see him there, just as he told you it would happen.” ’"
     },
     {
       "verse": "8",
-      "text": "Then the women went out of the hole in the rock, and they ran away from that place. They were very upset and they had trouble in their minds. Because they were afraid, they did not say anything to anyone. The end of Mark's book"
+      "text": "Then the women went out of the hole in the rock, and they ran away from that place. They were very upset and they had trouble in their minds. Because they were afraid, they did not say anything to anyone."
     },
     {
       "verse": "9",
@@ -2684,7 +2704,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "She told them that Jesus was alive. And she told them that she had seen him. But they did not believe it. Some important copies of Mark's Gospel do not have verses 9-20. But many copies do have these verses."
+      "text": "She told them that Jesus was alive. And she told them that she had seen him. But they did not believe it."
     },
     {
       "verse": "12",
@@ -2712,7 +2732,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "If they pick up a snake, it will not hurt them. If they drink poison, it will not hurt them. They will put their hands on ill people, and God will make those people well.’ Jesus goes up to heaven"
+      "text": "If they pick up a snake, it will not hurt them. If they drink poison, it will not hurt them. They will put their hands on ill people, and God will make those people well.’"
     },
     {
       "verse": "19",
@@ -2720,7 +2740,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The disciples went out everywhere. They told people God's good news. The Lord worked with them. He did powerful things to show that the message which they spoke was true.] Print... Use screen font size Show All Comments Mark 15Luke Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The disciples went out everywhere. They told people God's good news. The Lord worked with them. He did powerful things to show that the message which they spoke was true.]"
     }
   ]
 };

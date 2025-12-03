@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "Here are the names of the Israelites who went to Egypt with Jacob. Each one went there with his family. God gave Jacob a new name, ‘Israel’. See Genesis So Jacob's descendants were called Israelites."
+      "text": "Here are the names of the Israelites who went to Egypt with Jacob. Each one went there with his family."
     },
     {
       "verse": "2",
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jacob himself had 70 descendants. His other son, Joseph, was already in Egypt."
+      "text": "descendants. His other son, Joseph, was already in Egypt."
     },
     {
       "verse": "6",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We must find a clever way to stop them. If we do nothing, their families will become even bigger. Then, if there is a war, they will join our enemies and they will fight against us. That will give the Israelites a chance to leave our country.’ The new king did not know what had happened before. He did not know that Joseph had given food to the Egyptians in a time of famine. See Genesis 37-50."
+      "text": "We must find a clever way to stop them. If we do nothing, their families will become even bigger. Then, if there is a war, they will join our enemies and they will fight against us. That will give the Israelites a chance to leave our country.’"
     },
     {
       "verse": "11",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The Israelites became very upset because of all the difficult work. They had to build houses with bricks and mortar. They also did many different kinds of work in the fields. The Egyptians made the Israelites do all this difficult work. mortar’ is a mixture of sand and other materials used to fix bricks together."
+      "text": "The Israelites became very upset because of all the difficult work. They had to build houses with bricks and mortar. They also did many different kinds of work in the fields. The Egyptians made the Israelites do all this difficult work."
     },
     {
       "verse": "15",
@@ -86,7 +86,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then Pharaoh spoke to all the Egyptian people. He said, ‘When an Israelite boy is born, you must throw him in the river Nile. But you can let the baby girls live.’ Print... Use screen font size Show All Comments Exodus IntroductionExodus 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Pharaoh spoke to all the Egyptian people. He said, ‘When an Israelite boy is born, you must throw him in the river Nile. But you can let the baby girls live.’"
     }
   ],
   "2": [
@@ -100,7 +100,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then she could not continue to hide him. So she took a basket that was made from river grass. She painted the basket with tar, to keep the water out of it. Then she put her baby in the basket. She put the basket among the reeds at the edge of the river. The Israelite woman did not want her beautiful baby to die. She would not let the Egyptians throw him into the river. She believed that God would keep her baby safe."
+      "text": "Then she could not continue to hide him. So she took a basket that was made from river grass. She painted the basket with tar, to keep the water out of it. Then she put her baby in the basket. She put the basket among the reeds at the edge of the river."
     },
     {
       "verse": "4",
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Pharaoh's daughter said, ‘Yes, please do that.’ So the girl went and she fetched the baby's own mother."
+      "text": "Pharaoh's daughter said, ‘Yes, please do that.’So the girl went and she fetched the baby's own mother."
     },
     {
       "verse": "9",
@@ -128,7 +128,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "When the baby was older, his mother took him to Pharaoh's daughter. He now became her son. She gave him the name ‘Moses’. She said, ‘I will call him Moses because I pulled him out of the water.’ Moses became like a son to Pharaoh's daughter. He grew to become a man in Pharaoh's house. God had important things for Moses to do in future times. Moses runs away to Midian"
+      "text": "When the baby was older, his mother took him to Pharaoh's daughter. He now became her son. She gave him the name ‘Moses’. She said, ‘I will call him Moses because I pulled him out of the water.’"
     },
     {
       "verse": "11",
@@ -140,7 +140,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The next day, Moses went out again to visit his people. He saw that two Israelite men were fighting each other. Moses said to the guilty man, ‘Why are you attacking your friend, who is an Israelite like you?’ Moses was very angry because of what he saw. He was angry because of what the Egyptians were doing to the Israelites. He also saw one of his own people who was attacking another Israelite. Moses did not like it when people tried to hurt each other."
+      "text": "The next day, Moses went out again to visit his people. He saw that two Israelite men were fighting each other. Moses said to the guilty man, ‘Why are you attacking your friend, who is an Israelite like you?’"
     },
     {
       "verse": "14",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Pharaoh heard about what had happened. He wanted to kill Moses. So Moses ran away from Pharaoh. He went from Egypt to the country called Midian and he lived there. Midian was a country about 300 kilometres to the east of Egypt. It was also about 300 kilometres south of Canaan. One day, Moses sat down by a well which was near where he lived."
+      "text": "Pharaoh heard about what had happened. He wanted to kill Moses. So Moses ran away from Pharaoh. He went from Egypt to the country called Midian and he lived there.One day, Moses sat down by a well which was near where he lived. One day, Moses sat down by a well which was near where he lived."
     },
     {
       "verse": "16",
@@ -156,7 +156,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But some shepherds then arrived at the well. They made the girls go away. So Moses stood up and he went to help the young women. He gave water to their animals. The shepherds were not kind to the daughters of the priest of Midian. But Moses was kind to them. He chased the shepherds away."
+      "text": "But some shepherds then arrived at the well. They made the girls go away. So Moses stood up and he went to help the young women. He gave water to their animals."
     },
     {
       "verse": "18",
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Later, Zipporah gave birth to a son for Moses. Moses gave the boy the name ‘Gershom’. He called him that because he said, ‘I am living as a stranger in a foreign country.’ In the Hebrew language, ‘Gershom’ sounds like ‘a foreign person’. Moses remembered that he belonged to the Israelite people. He did not belong to Egypt or to Midian. Reuel's daughters had thought that Moses was an Egyptian. This was because he was wearing Egyptian clothes. Moses was happy to have a place in Reuel's family. He was happy to marry Zipporah and to have a son."
+      "text": "Later, Zipporah gave birth to a son for Moses. Moses gave the boy the name ‘Gershom’. He called him that because he said, ‘I am living as a stranger in a foreign country.’"
     },
     {
       "verse": "23",
@@ -188,13 +188,13 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "God saw what was happening to the Israelites. He knew that he must help them. Now the king was dead. So the Israelites hoped that things would get better. But they could not help themselves. Only God could help them. Print... Use screen font size Show All Comments Exodus 1Exodus 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God saw what was happening to the Israelites. He knew that he must help them."
     }
   ],
   "3": [
     {
       "verse": "1",
-      "text": "Moses worked as a shepherd and he took care of Jethro's sheep. Jethro was his wife's father and he was the priest of Midian. Moses led the sheep to the far side of the desert. He came to Sinai, the mountain of God. Jethro was another name for Reuel. See Exodus"
+      "text": "Moses worked as a shepherd and he took care of Jethro's sheep. Jethro was his wife's father and he was the priest of Midian. Moses led the sheep to the far side of the desert. He came to Sinai, the mountain of God."
     },
     {
       "verse": "2",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Moses said to himself, ‘I will go nearer and see this strange thing. I want to see why the bush is not completely burned.’ When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "Moses said to himself, ‘I will go nearer and see this strange thing. I want to see why the bush is not completely burned.’"
     },
     {
       "verse": "4",
@@ -214,7 +214,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then God said, ‘I am the God that your father worshipped. I am also the God of your ancestors, Abraham, Isaac and Jacob.’ Then Moses covered his face. He was afraid to look at God. God showed himself to Moses as the angel of the Lord. God himself appeared to Moses in a way that Moses could see. He looked like a fire in a burning bush. Moses came near to the bush. He heard God's voice. He knew that it was a very special place. ‘Holy’ means that God had made it special for himself. In those days, people removed their shoes when they worshipped God. They still do that in some places today. God told Moses that he was the same God that his ancestors worshipped."
+      "text": "Then God said, ‘I am the God that your father worshipped. I am also the God of your ancestors, Abraham, Isaac and Jacob.’ Then Moses covered his face. He was afraid to look at God."
     },
     {
       "verse": "7",
@@ -238,7 +238,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "God said to Moses, ‘Be sure of this: I will be with you. After you have led the people out of Egypt you will all worship me here, on this mountain. That will show you that I myself have sent you to do this.’ Moses did not need to be afraid to do what God told him to do. God would be with him."
+      "text": "God said to Moses, ‘Be sure of this: I will be with you. After you have led the people out of Egypt you will all worship me here, on this mountain. That will show you that I myself have sent you to do this.’"
     },
     {
       "verse": "13",
@@ -246,11 +246,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "God said to Moses, ‘I am who I am! Say this to the Israelite people: “I AM has sent me to you.” ’ God told Moses that his name is ‘I am who I am.’ The words can mean, ‘I am what I am.’ They can also mean, ‘I will be what I will be.’ He was already God from the beginning, before he made the world. See Genesis He is God now, at the present time. He will be God in the future time, for ever."
+      "text": "God said to Moses, ‘I am who I am! Say this to the Israelite people: “I AM has sent me to you.” ’"
     },
     {
       "verse": "15",
-      "text": "God also said to Moses, ‘Say this to the Israelite people: “It is the Lord God who has sent me to you. He is the God that your ancestors worshipped. He is the God of Abraham, Isaac and Jacob.” That is my name for all time. All generations of my people must call me by that name. In English, we write God's special name as the Lord, with big letters. In Hebrew the name is YHWH. In English, this name is sometimes written as ‘Yahweh’ or ‘Jehovah’."
+      "text": "God also said to Moses, ‘Say this to the Israelite people: “It is the Lord God who has sent me to you. He is the God that your ancestors worshipped. He is the God of Abraham, Isaac and Jacob.” That is my name for all time. All generations of my people must call me by that name."
     },
     {
       "verse": "16",
@@ -278,7 +278,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "All the Israelite women will ask their Egyptian friends to give them things. They will ask the women who live near them and those who live with them in their houses. They will ask for silver things, gold things and beautiful clothes. Then you will take those things and you will dress your sons and your daughters with them. In that way, you will take many valuable things away from the Egyptians.’ Print... Use screen font size Show All Comments Exodus 2Exodus 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the Israelite women will ask their Egyptian friends to give them things. They will ask the women who live near them and those who live with them in their houses. They will ask for silver things, gold things and beautiful clothes. Then you will take those things and you will dress your sons and your daughters with them. In that way, you will take many valuable things away from the Egyptians.’"
     }
   ],
   "4": [
@@ -316,7 +316,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But they may still not listen to your message. If they will not even believe those two miracles, do this: Take some water from the River Nile and pour it on the dry ground. The water that you take from the river will become blood on the ground.’ These miracles would show the Israelites that Moses spoke with the authority of God."
+      "text": "But they may still not listen to your message. If they will not even believe those two miracles, do this: Take some water from the River Nile and pour it on the dry ground. The water that you take from the river will become blood on the ground.’"
     },
     {
       "verse": "10",
@@ -348,11 +348,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Take this stick with you and hold it in your hand. You will use it to do the miracles to show that I have sent you.’ Moses returns to Egypt"
+      "text": "Take this stick with you and hold it in your hand. You will use it to do the miracles to show that I have sent you.’"
     },
     {
       "verse": "18",
-      "text": "Then Moses went back to Jethro, his wife's father. Moses said to him, ‘Please let me return to my family in Egypt. I must see if they are still alive.’ So Jethro said to Moses, ‘Go in peace.’ Go in peace’ means that Jethro agreed with Moses. He wanted Moses to have a good journey and to arrive safely."
+      "text": "Then Moses went back to Jethro, his wife's father. Moses said to him, ‘Please let me return to my family in Egypt. I must see if they are still alive.’ So Jethro said to Moses, ‘Go in peace.’"
     },
     {
       "verse": "19",
@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So God did not do anything bad to Moses. Then Zipporah said to Moses, ‘You are a husband of blood, because of this circumcision.’ A long time before this, God had told Abraham that he must circumcise himself and every male person in his house. All the men that would be born into that family must obey that command. That was the sign of God's promise to Abraham and his family. Because Moses had not circumcised his son, he had not obeyed God's command. Zipporah circumcised their son because God would have killed Moses. Because she obeyed God, Moses did not die."
+      "text": "So God did not do anything bad to Moses. Then Zipporah said to Moses, ‘You are a husband of blood, because of this circumcision.’"
     },
     {
       "verse": "27",
@@ -404,7 +404,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "And the people believed Aaron and Moses. They had heard that the Lord had come to his people. God had seen their hard life and he was sorry for them. They put their heads down and they worshipped God. Print... Use screen font size Show All Comments Exodus 3Exodus 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And the people believed Aaron and Moses. They had heard that the Lord had come to his people. God had seen their hard life and he was sorry for them. They put their heads down and they worshipped God."
     }
   ],
   "5": [
@@ -442,7 +442,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Make the work more difficult for them to do. They will have to do very hard work. They will be too busy to listen to the lies of their leaders.’ When they made bricks, they mixed straw with the clay. This made the bricks stronger. Pharaoh was making the Israelites do work that was even harder. Now they had to look for straw before they could use it in the bricks."
+      "text": "Make the work more difficult for them to do. They will have to do very hard work. They will be too busy to listen to the lies of their leaders.’"
     },
     {
       "verse": "10",
@@ -498,7 +498,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I went to speak to Pharaoh with your authority. But since I spoke to Pharaoh, he has caused these people to have trouble. And you have done nothing to save your people.’ Print... Use screen font size Show All Comments Exodus 4Exodus 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I went to speak to Pharaoh with your authority. But since I spoke to Pharaoh, he has caused these people to have trouble. And you have done nothing to save your people.’"
     }
   ],
   "6": [
@@ -552,11 +552,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then the Lord spoke to Moses and Aaron about the Israelites, and about Pharaoh, the king of Egypt. He commanded Moses and Aaron to lead the Israelites out of Egypt. The ancestors of Moses and Aaron"
+      "text": "Then the Lord spoke to Moses and Aaron about the Israelites, and about Pharaoh, the king of Egypt. He commanded Moses and Aaron to lead the Israelites out of Egypt."
     },
     {
       "verse": "14",
-      "text": "These were the leaders of their family clans: Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans."
+      "text": "These were the leaders of their family clans:Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans. Israel's firstborn son was Reuben. Reuben's sons were: Hanoch, Pallu, Hezron and Carmi. These were Reuben's family clans."
     },
     {
       "verse": "15",
@@ -576,7 +576,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The sons of Merari: Mahli and Mushi. These were the family clans of Levi, from the oldest to the youngest."
+      "text": "The sons of Merari: Mahli and Mushi.These were the family clans of Levi, from the oldest to the youngest. These were the family clans of Levi, from the oldest to the youngest."
     },
     {
       "verse": "20",
@@ -600,7 +600,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Aaron's son, Eleazar, married one of Putiel's daughters. Phinehas was their son. These were the leaders of the Levite family clans."
+      "text": "Aaron's son, Eleazar, married one of Putiel's daughters. Phinehas was their son.These were the leaders of the Levite family clans. These were the leaders of the Levite family clans."
     },
     {
       "verse": "26",
@@ -608,7 +608,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Moses and Aaron were the men who spoke to Pharaoh, king of Egypt. They told him that the Israelites would leave Egypt. They were the same Moses and Aaron as we read about in the list of Israelite families. Aaron will speak on Moses' behalf"
+      "text": "Moses and Aaron were the men who spoke to Pharaoh, king of Egypt. They told him that the Israelites would leave Egypt. They were the same Moses and Aaron as we read about in the list of Israelite families."
     },
     {
       "verse": "28",
@@ -620,7 +620,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "But Moses said, ‘You know that I do not speak well. Pharaoh will not listen to me.’ Print... Use screen font size Show All Comments Exodus 5Exodus 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But Moses said, ‘You know that I do not speak well. Pharaoh will not listen to me.’"
     }
   ],
   "7": [
@@ -630,7 +630,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "You must say everything that I command you to say. Your brother Aaron must tell Pharaoh to let the Israelites go out of his country. A prophet is a person that speaks God's words. Aaron would be like a prophet for Moses. God would speak to Moses and Aaron would tell Moses' message to Pharaoh."
+      "text": "You must say everything that I command you to say. Your brother Aaron must tell Pharaoh to let the Israelites go out of his country."
     },
     {
       "verse": "3",
@@ -642,7 +642,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the Egyptians will know that I am the Lord. I will show my great strength in Egypt and I will lead the Israelites out from there.’ Aaron's stick becomes a snake"
+      "text": "Then the Egyptians will know that I am the Lord. I will show my great strength in Egypt and I will lead the Israelites out from there.’"
     },
     {
       "verse": "6",
@@ -650,7 +650,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Moses was 80 years old and Aaron was 83 years old when they spoke to Pharaoh."
+      "text": "years old and Aaron was 83 years old when they spoke to Pharaoh."
     },
     {
       "verse": "8",
@@ -674,7 +674,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But Pharaoh's mind was hard and he refused to listen to Moses and Aaron. That was what the Lord had said would happen, and it did! A magician uses magic to do strange, powerful things. The Egyptians were afraid of snakes and they worshipped them. But Aaron's stick ate the magicians' sticks. God was showing them that he is more powerful than magic. 1: Moses changes water into blood"
+      "text": "But Pharaoh's mind was hard and he refused to listen to Moses and Aaron. That was what the Lord had said would happen, and it did!"
     },
     {
       "verse": "14",
@@ -718,11 +718,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The Egyptians dug holes on the shore of the Nile river to find water to drink. They could not drink the water from the river itself. The river gave the Egyptians all that they needed. It was called the River Nile. It gave water to drink and to put on food plants. At certain times the river rose over the fields and it gave food to the plants. The Egyptians needed the river Nile so that they could live."
+      "text": "The Egyptians dug holes on the shore of the Nile river to find water to drink. They could not drink the water from the river itself."
     },
     {
       "verse": "25",
-      "text": "After the Lord had made the water in the river become blood, another seven days passed. Print... Use screen font size Show All Comments Exodus 6Exodus 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After the Lord had made the water in the river become blood, another seven days passed."
     }
   ],
   "8": [
@@ -784,7 +784,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But when Pharaoh saw that the trouble had gone, his mind became hard again. He refused to listen to Moses and Aaron. The Lord had said that this would happen, and it did! 3: Gnats"
+      "text": "But when Pharaoh saw that the trouble had gone, his mind became hard again. He refused to listen to Moses and Aaron. The Lord had said that this would happen, and it did!"
     },
     {
       "verse": "16",
@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then the magicians said to Pharaoh, ‘This is the work of God.’ But there was no change in Pharaoh's thoughts. He would not listen to them. The Lord had said that this would happen, and it did! 4: Flies"
+      "text": "Then the magicians said to Pharaoh, ‘This is the work of God.’ But there was no change in Pharaoh's thoughts. He would not listen to them. The Lord had said that this would happen, and it did!"
     },
     {
       "verse": "20",
@@ -852,7 +852,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "But again, Pharaoh's mind became hard. He refused to let the people go. Print... Use screen font size Show All Comments Exodus 7Exodus 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But again, Pharaoh's mind became hard. He refused to let the people go."
     }
   ],
   "9": [
@@ -882,7 +882,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Pharaoh sent his men to see what had happened. They saw that not one of the animals of the Israelites was dead! But Pharaoh's mind was still hard. He did not let the people go. 6: Boils"
+      "text": "Pharaoh sent his men to see what had happened. They saw that not one of the animals of the Israelites was dead! But Pharaoh's mind was still hard. He did not let the people go."
     },
     {
       "verse": "8",
@@ -902,7 +902,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "But Pharaoh refused to listen to Moses and Aaron. The Lord caused Pharaoh's mind to be hard. The Lord had told Moses that this would happen, and it did! 7: Hail"
+      "text": "But Pharaoh refused to listen to Moses and Aaron. The Lord caused Pharaoh's mind to be hard. The Lord had told Moses that this would happen, and it did!"
     },
     {
       "verse": "13",
@@ -974,7 +974,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "But I know you and your officers. You still do not respect the Lord God.’ Moses knew that Pharaoh and his servants were not really afraid of God. They only wanted their problems to go away. They wanted the bad things that were happening to stop."
+      "text": "But I know you and your officers. You still do not respect the Lord God.’"
     },
     {
       "verse": "31",
@@ -982,7 +982,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "But the hail did not destroy the wheat and other grains. Those crops become ripe later in the year. Flax is a plant. People make cloth from the flax plant. Barley is a food plant. Wheat is also a food plant that makes grains. These plants had not yet grown as tall, so the hail did not destroy them."
+      "text": "But the hail did not destroy the wheat and other grains. Those crops become ripe later in the year."
     },
     {
       "verse": "33",
@@ -994,7 +994,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Pharaoh still refused to obey God. He did not let the Israelites go. The Lord had told Moses that this would happen, and it did! Print... Use screen font size Show All Comments Exodus 8Exodus 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Pharaoh still refused to obey God. He did not let the Israelites go. The Lord had told Moses that this would happen, and it did!"
     }
   ],
   "10": [
@@ -1040,7 +1040,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "No! If you really want to go and worship the Lord, only the men can go.’ Pharaoh was angry and he told Moses and Aaron to go away. Pharaoh does not want God to be with them. If he let the families go, he would be doing a good thing to the Israelites. It would be like God was going with them. But Pharaoh does not want to do this. He does not want to do a good thing for the Israelites."
+      "text": "No! If you really want to go and worship the Lord, only the men can go.’ Pharaoh was angry and he told Moses and Aaron to go away."
     },
     {
       "verse": "12",
@@ -1076,7 +1076,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But the Lord caused Pharaoh's mind to become hard again. Pharaoh would not let the Israelites go. The ‘Red Sea’ is also called the Sea of Reeds (water grasses). It is to the east of Egypt. 9: Darkness"
+      "text": "But the Lord caused Pharaoh's mind to become hard again. Pharaoh would not let the Israelites go."
     },
     {
       "verse": "21",
@@ -1100,7 +1100,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So we must take our animals with us. Not one animal can remain behind. We must take them to worship the Lord our God. Until we arrive in the desert, we will not know which animals to use as sacrifices.’ The Israelites killed animals as sacrifices. Then they burned them on an altar as a gift to God."
+      "text": "So we must take our animals with us. Not one animal can remain behind. We must take them to worship the Lord our God. Until we arrive in the desert, we will not know which animals to use as sacrifices.’"
     },
     {
       "verse": "27",
@@ -1112,7 +1112,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Moses replied, ‘You are right! You will never see me again.’ Print... Use screen font size Show All Comments Exodus 9Exodus 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses replied, ‘You are right! You will never see me again.’"
     }
   ],
   "11": [
@@ -1142,11 +1142,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But no trouble will happen to the Israelite people. Not even a dog will frighten them or their animals. Then you will know that I, the Lord, make a difference between Egypt and Israel.” ’ The firstborn son of every family in Egypt would die during that night. There would be no difference between rich families and poor families. The firstborn sons of important people and the sons of slaves would all die. Even the firstborn male children of their cows would die."
+      "text": "But no trouble will happen to the Israelite people. Not even a dog will frighten them or their animals. Then you will know that I, the Lord, make a difference between Egypt and Israel.” ’"
     },
     {
       "verse": "8",
-      "text": "Moses continued to say to the king, ‘All your officers will come to me. They will fall down in front of me and they will say, “Now go! Leave here with all your people.” After that, I will leave.’ After he said that, Moses left Pharaoh. Moses was very angry."
+      "text": "Moses continued to say to the king, ‘All your officers will come to me. They will fall down in front of me and they will say, “Now go! Leave here with all your people.” After that, I will leave.’After he said that, Moses left Pharaoh. Moses was very angry. After he said that, Moses left Pharaoh. Moses was very angry."
     },
     {
       "verse": "9",
@@ -1154,7 +1154,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Moses and Aaron did all these miracles in front of Pharaoh. But the Lord caused Pharaoh's mind to be hard. So Pharaoh would not let the Israelites leave his country. Print... Use screen font size Show All Comments Exodus 10Exodus 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses and Aaron did all these miracles in front of Pharaoh. But the Lord caused Pharaoh's mind to be hard. So Pharaoh would not let the Israelites leave his country."
     }
   ],
   "12": [
@@ -1208,7 +1208,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When you put the blood round the doors of your houses, that will be a sign to show that you live there. When I see the blood on your house, I will pass over you. No trouble will hurt you, when I attack the people of Egypt. I will pass over you is where the English word ‘Passover’ comes from. God made a promise. He would not kill anyone in a house that had blood on the door. He would ‘pass over’ that house."
+      "text": "When you put the blood round the doors of your houses, that will be a sign to show that you live there. When I see the blood on your house, I will pass over you. No trouble will hurt you, when I attack the people of Egypt."
     },
     {
       "verse": "14",
@@ -1248,7 +1248,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The Lord will pass through the country and he will kill the Egyptians. But when the Lord sees the blood on the wood round the door, he will pass over that house. He will not let the death angel come into your houses. The Lord will not let him kill you. Hyssop’ is a plant with lots of leaves. They held the hyssop in the hand and they used it like a paint brush. They painted some of the blood on the pieces of wood round the doors."
+      "text": "The Lord will pass through the country and he will kill the Egyptians. But when the Lord sees the blood on the wood round the door, he will pass over that house. He will not let the death angel come into your houses. The Lord will not let him kill you."
     },
     {
       "verse": "24",
@@ -1276,7 +1276,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Pharaoh and all his officers woke up in the middle of the night. All the Egyptians also woke up in the middle of the night. Everyone was crying loudly everywhere in Egypt. In every home, somebody had died that night. The Israelites leave Egypt"
+      "text": "Pharaoh and all his officers woke up in the middle of the night. All the Egyptians also woke up in the middle of the night. Everyone was crying loudly everywhere in Egypt. In every home, somebody had died that night."
     },
     {
       "verse": "31",
@@ -1312,23 +1312,23 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "The Israelites cooked the bread that they had brought with them from Egypt. It had no yeast in it, because they had to leave Egypt quickly. The Egyptians did not let them wait. So the Israelites did not have time to prepare any food for themselves. When you make bread with yeast in it, you must wait for the bread to become light and full of air. Then you can cook it. This takes some time. The Israelites were in a hurry. They did not have time for this."
+      "text": "The Israelites cooked the bread that they had brought with them from Egypt. It had no yeast in it, because they had to leave Egypt quickly. The Egyptians did not let them wait. So the Israelites did not have time to prepare any food for themselves."
     },
     {
       "verse": "40",
-      "text": "The Israelites had lived in Egypt for 430 years."
+      "text": "years."
     },
     {
       "verse": "41",
-      "text": "It was on the last day of the 430 years that all the Lord's people left Egypt. They left in family groups, like an army."
+      "text": "years that all the Lord's people left Egypt. They left in family groups, like an army."
     },
     {
       "verse": "42",
-      "text": "The Lord carefully watched his people all that night, when he brought them out of Egypt. Because of that, all Israelites must watch carefully during this special night. They and their descendants must do this every year, to thank the Lord. Rules for the Passover festival"
+      "text": "The Lord carefully watched his people all that night, when he brought them out of Egypt. Because of that, all Israelites must watch carefully during this special night. They and their descendants must do this every year, to thank the Lord."
     },
     {
       "verse": "43",
-      "text": "Then the Lord said to Moses and Aaron, ‘These are the rules for the Passover festival: No foreign person may eat the Passover meal."
+      "text": "Then the Lord said to Moses and Aaron, ‘These are the rules for the Passover festival:No foreign person may eat the Passover meal."
     },
     {
       "verse": "44",
@@ -1360,7 +1360,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "On that same day, the Lord brought the Israelites out of Egypt, in family groups, like an army. Print... Use screen font size Show All Comments Exodus 11Exodus 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "On that same day, the Lord brought the Israelites out of Egypt, in family groups, like an army."
     }
   ],
   "13": [
@@ -1370,7 +1370,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He said, ‘Keep every firstborn male separate and special for me. Every male who is the first to be born of his mother is mine. He is mine, whether he is man or animal.’ God had killed the firstborn sons of the Egyptians, but he had saved the firstborn sons of the Israelites. Because of this, the firstborn sons were special. God said, ‘They are mine.’"
+      "text": "He said, ‘Keep every firstborn male separate and special for me. Every male who is the first to be born of his mother is mine. He is mine, whether he is man or animal.’"
     },
     {
       "verse": "3",
@@ -1426,7 +1426,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "It will be like a mark on your hand or something that you fix between your eyes. It will be a sign that causes you to remember what happened. You will remember that the Lord used his great power to bring us out of Egypt.’ The Israelites cross the Red Sea"
+      "text": "It will be like a mark on your hand or something that you fix between your eyes. It will be a sign that causes you to remember what happened. You will remember that the Lord used his great power to bring us out of Egypt.’"
     },
     {
       "verse": "17",
@@ -1438,7 +1438,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Moses took Joseph's bones with him. Joseph had made the Israelites promise to do this. He had said, ‘One day, God will come and he will save you. Then you must carry my bones with you when you leave this place.’ See Genesis Joseph was one of Jacob's sons who became a ruler in Egypt. He died there. But he did not want his family to bury him in Egypt. He wanted them to bury him in Canaan."
+      "text": "Moses took Joseph's bones with him. Joseph had made the Israelites promise to do this. He had said, ‘One day, God will come and he will save you. Then you must carry my bones with you when you leave this place.’"
     },
     {
       "verse": "20",
@@ -1450,13 +1450,13 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The cloud did not leave the people during the day. Nor did the fire leave them during the night. It was always in front of them. Print... Use screen font size Show All Comments Exodus 12Exodus 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The cloud did not leave the people during the day. Nor did the fire leave them during the night. It was always in front of them."
     }
   ],
   "14": [
     {
       "verse": "1",
-      "text": "Then the Lord said to Moses,"
+      "text": "Then the Lord said to Moses, The Israelites did what God said."
     },
     {
       "verse": "2",
@@ -1468,7 +1468,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then I will cause Pharaoh's mind to become hard again. He will go to catch the Israelites. I will show how great I am when I win against Pharaoh and his whole army. Because of this, the Egyptians will know that I am the Lord.’ The Israelites did what God said."
+      "text": "Then I will cause Pharaoh's mind to become hard again. He will go to catch the Israelites. I will show how great I am when I win against Pharaoh and his whole army. Because of this, the Egyptians will know that I am the Lord.’The Israelites did what God said."
     },
     {
       "verse": "5",
@@ -1480,7 +1480,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He took 600 of his best chariots with him., as well as all the other chariots of Egypt. All the chariots had officers to drive them."
+      "text": "of his best chariots with him., as well as all the other chariots of Egypt. All the chariots had officers to drive them."
     },
     {
       "verse": "8",
@@ -1576,77 +1576,77 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The Israelites saw the great power that the Lord had used against the Egyptians. As a result, they respected the Lord and his power. They trusted the Lord to help them, and they also trusted Moses, his servant. Print... Use screen font size Show All Comments Exodus 13Exodus 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Israelites saw the great power that the Lord had used against the Egyptians. As a result, they respected the Lord and his power. They trusted the Lord to help them, and they also trusted Moses, his servant."
     }
   ],
   "15": [
     {
       "verse": "1",
-      "text": "Then Moses and the Israelites sang this song to praise the Lord: ‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea."
+      "text": "Then Moses and the Israelites sang this song to praise the Lord:‘I will sing to the Lord, because he has shown his great power.He threw horses and their riders into the sea. ‘I will sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea."
     },
     {
       "verse": "2",
-      "text": "The Lord makes me strong. He is the reason for my song. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name."
+      "text": "The Lord makes me strong. He is the reason for my song.He is the one who has saved me.He is my God and I will praise him.He is my father's God and I will praise his name. He is the one who has saved me. He is my God and I will praise him. He is my father's God and I will praise his name."
     },
     {
       "verse": "3",
-      "text": "The Lord is like a brave soldier. The Lord is his name."
+      "text": "The Lord is like a brave soldier.The Lord is his name. The Lord is his name."
     },
     {
       "verse": "4",
-      "text": "He threw Pharaoh's chariots and his army into the sea. Pharaoh's best officers drowned in the Red Sea."
+      "text": "He threw Pharaoh's chariots and his army into the sea.Pharaoh's best officers drowned in the Red Sea. Pharaoh's best officers drowned in the Red Sea."
     },
     {
       "verse": "5",
-      "text": "The deep waters have covered them. They fell to the floor of the sea, like a stone."
+      "text": "The deep waters have covered them.They fell to the floor of the sea, like a stone. They fell to the floor of the sea, like a stone."
     },
     {
       "verse": "6",
-      "text": "Your right hand, Lord, was great and powerful. Your right hand, Lord, destroyed the enemy."
+      "text": "Your right hand, Lord, was great and powerful.Your right hand, Lord, destroyed the enemy. Your right hand, Lord, destroyed the enemy."
     },
     {
       "verse": "7",
-      "text": "With your powerful authority, you killed your enemies. You were very angry with them. You killed them, like a fire burns dry grass."
+      "text": "With your powerful authority, you killed your enemies.You were very angry with them.You killed them, like a fire burns dry grass. You were very angry with them. You killed them, like a fire burns dry grass."
     },
     {
       "verse": "8",
-      "text": "You blew on the water and it became like a wall. The deep waters stood up in a big heap."
+      "text": "You blew on the water and it became like a wall.The deep waters stood up in a big heap. The deep waters stood up in a big heap."
     },
     {
       "verse": "9",
-      "text": "The enemy said, “We will go after them. We will catch them. We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves.”"
+      "text": "The enemy said, “We will go after them. We will catch them.We will destroy them with our swords.We will do whatever we want to them.We will take all their valuable things for ourselves.” We will destroy them with our swords. We will do whatever we want to them. We will take all their valuable things for ourselves.”"
     },
     {
       "verse": "10",
-      "text": "But Lord, you blew on the waters so that the sea covered your enemies. They went down like heavy metal in the great waters."
+      "text": "But Lord, you blew on the watersso that the sea covered your enemies.They went down like heavy metal in the great waters. so that the sea covered your enemies. They went down like heavy metal in the great waters."
     },
     {
       "verse": "11",
-      "text": "Lord, there is nobody like you among all the gods! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you!"
+      "text": "Lord, there is nobody like you among all the gods!There is nobody like you anywhere!You are great and holy.Everyone should respect you and praise you.You do great miracles.There is nobody like you! There is nobody like you anywhere! You are great and holy. Everyone should respect you and praise you. You do great miracles. There is nobody like you!"
     },
     {
       "verse": "12",
-      "text": "You lifted up your right hand. A big hole opened in the ground and our enemies fell into it."
+      "text": "You lifted up your right hand.A big hole opened in the ground and our enemies fell into it. A big hole opened in the ground and our enemies fell into it."
     },
     {
       "verse": "13",
-      "text": "You have promised to love your people. So you have saved them and you lead them. With your strength, you show them the way to your holy home."
+      "text": "You have promised to love your people.So you have saved them and you lead them.With your strength, you show them the way to your holy home. So you have saved them and you lead them. With your strength, you show them the way to your holy home."
     },
     {
       "verse": "14",
-      "text": "The people of other nations will hear what you have done. They will be very afraid. The people who live in Philistia will shake with fear."
+      "text": "The people of other nations will hear what you have done.They will be very afraid.The people who live in Philistia will shake with fear. They will be very afraid. The people who live in Philistia will shake with fear."
     },
     {
       "verse": "15",
-      "text": "The rulers of Edom will be afraid. The leaders of Moab will shake with fear. The people who live in Canaan will become weak."
+      "text": "The rulers of Edom will be afraid.The leaders of Moab will shake with fear.The people who live in Canaan will become weak. The leaders of Moab will shake with fear. The people who live in Canaan will become weak."
     },
     {
       "verse": "16",
-      "text": "They will all be afraid. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by."
+      "text": "They will all be afraid.Because of your great power they will want to run away.But they cannot move!They will remain still, like stones, until your people go on past them.They will stand and watch as the people you have saved, Lord, pass by. Because of your great power they will want to run away. But they cannot move! They will remain still, like stones, until your people go on past them. They will stand and watch as the people you have saved, Lord, pass by."
     },
     {
       "verse": "17",
-      "text": "You will bring your people in safely. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord."
+      "text": "You will bring your people in safely.You will bring them to live on your own mountain.Lord, that is the place that you have prepared for your home.It is the holy place that you have built, Lord. You will bring them to live on your own mountain. Lord, that is the place that you have prepared for your home. It is the holy place that you have built, Lord."
     },
     {
       "verse": "18",
@@ -1654,15 +1654,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Pharaoh's horses, his chariots and his soldiers went into the sea. Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground.’"
+      "text": "Pharaoh's horses, his chariots and his soldiers went into the sea.Then the Lord made the waters of the sea come back over them.But the Israelites walked through the middle of the sea on dry ground.’ Then the Lord made the waters of the sea come back over them. But the Israelites walked through the middle of the sea on dry ground.’"
     },
     {
       "verse": "20",
-      "text": "Then Miriam, Aaron's sister, who was a prophet, took a tambourine in her hand. All the other women followed her, with tambourines in their hands. They danced while Miriam sang to them. A tambourine is a thing to make music. It is like a small drum that you hold in your hand."
+      "text": "Then Miriam, Aaron's sister, who was a prophet, took a tambourine in her hand. All the other women followed her, with tambourines in their hands. They danced while Miriam sang to them."
     },
     {
       "verse": "21",
-      "text": "This is the song that she sang: ‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea.’ The waters of Marah and Elim"
+      "text": "This is the song that she sang:‘Sing to the Lord, because he has shown his great power.He threw horses and their riders into the sea.’ ‘Sing to the Lord, because he has shown his great power. He threw horses and their riders into the sea.’"
     },
     {
       "verse": "22",
@@ -1670,7 +1670,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then they arrived at Marah. But they could not drink the water there because it was too bitter. That is why they called that place ‘Marah’. Marah’ in the Hebrew language means ‘bitter’."
+      "text": "Then they arrived at Marah. But they could not drink the water there because it was too bitter. That is why they called that place ‘Marah’."
     },
     {
       "verse": "24",
@@ -1678,7 +1678,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Then Moses called to the Lord for help. The Lord showed Moses a special tree. Moses threw a branch into the water. Then the water became good for them to drink. There at Marah, the Lord made a law for the Israelites to obey. He tested them there, to see if they would trust him."
+      "text": "Then Moses called to the Lord for help. The Lord showed Moses a special tree. Moses threw a branch into the water. Then the water became good for them to drink.There at Marah, the Lord made a law for the Israelites to obey. He tested them there, to see if they would trust him."
     },
     {
       "verse": "26",
@@ -1686,7 +1686,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Then the Israelites arrived at Elim. There they found 12 wells of water and 70 palm trees. The Israelites put up their tents there, where there was water. Print... Use screen font size Show All Comments Exodus 14Exodus 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the Israelites arrived at Elim. There they found 12 wells of water and 70 palm trees. The Israelites put up their tents there, where there was water."
     }
   ],
   "16": [
@@ -1740,7 +1740,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "That evening, quails appeared. They covered all the ground round the tents. A quail is a small bird. The Israelites caught and killed the quails. Then they cooked and ate them. In the morning, there was dew on the ground round the tents."
+      "text": "That evening, quails appeared. They covered all the ground round the tents.In the morning, there was dew on the ground round the tents."
     },
     {
       "verse": "14",
@@ -1812,7 +1812,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The Israelites called the special food ‘manna��. It was white, like seeds called coriander. When they tasted the manna, it was like thin pieces of bread with honey in it."
+      "text": "The Israelites called the special food ‘manna’. It was white, like seeds called coriander. When they tasted the manna, it was like thin pieces of bread with honey in it."
     },
     {
       "verse": "32",
@@ -1824,15 +1824,15 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Aaron did what the Lord had told Moses. He put the jar in the Covenant Box, to keep it safe. This happened at a later time. In Exodus we read that Moses made a special box called the Covenant Box. In the box he put the two stones on which God had written his ten special commands. After Moses had made the Covenant Box, Aaron put the jar of manna into it."
+      "text": "Aaron did what the Lord had told Moses. He put the jar in the Covenant Box, to keep it safe."
     },
     {
       "verse": "35",
-      "text": "The Israelites ate the manna for 40 years, until they had finished their journey in the desert. After those 40 years, they arrived at the edge of Canaan."
+      "text": "years, until they had finished their journey in the desert. After those 40 years, they arrived at the edge of Canaan."
     },
     {
       "verse": "36",
-      "text": "(The people used omers to measure the food. Ten omers is equal to one ephah.) One omer was about two litres. Print... Use screen font size Show All Comments Exodus 15Exodus 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "(The people used omers to measure the food. Ten omers is equal to one ephah.)"
     }
   ],
   "17": [
@@ -1862,7 +1862,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Moses called that place Massah and Meribah, because the Israelites quarrelled there. They tried to test the Lord to see what he would do. They said, ‘Let us see if the Lord is really with us. Will he help us, or not?’ Massah’ means ‘a test’. ‘Meribah’ means ‘a quarrel’. The Israelites fight the Amalekites"
+      "text": "Moses called that place Massah and Meribah, because the Israelites quarrelled there. They tried to test the Lord to see what he would do. They said, ‘Let us see if the Lord is really with us. Will he help us, or not?’"
     },
     {
       "verse": "8",
@@ -1898,7 +1898,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Moses said, ‘Take hold of the Lord's flag! The Lord will always continue to fight against the Amalekites.’ A flag is a large piece of cloth that someone fixes to a stick. Soldiers carry flags when they go to fight in a war. The flag is like a sign for the soldiers. Print... Use screen font size Show All Comments Exodus 16Exodus 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses said, ‘Take hold of the Lord's flag! The Lord will always continue to fight against the Amalekites.’"
     }
   ],
   "18": [
@@ -1916,7 +1916,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The other son was called Eliezer. Moses said about him, ‘My ancestors' God gave me help. He saved me from Pharaoh, when Pharaoh wanted to kill me.’ The name Gershom means ‘a foreign person’. The name Eliezer means ‘My God gives me help’."
+      "text": "The other son was called Eliezer. Moses said about him, ‘My ancestors' God gave me help. He saved me from Pharaoh, when Pharaoh wanted to kill me.’"
     },
     {
       "verse": "5",
@@ -1948,7 +1948,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then Jethro brought an animal to burn as a sacrifice to God. He also brought other sacrifices. Aaron came, with all the leaders of the Israelites. They ate a special meal together with Jethro, to worship God. Moses chooses some judges"
+      "text": "Then Jethro brought an animal to burn as a sacrifice to God. He also brought other sacrifices. Aaron came, with all the leaders of the Israelites. They ate a special meal together with Jethro, to worship God."
     },
     {
       "verse": "13",
@@ -2008,14 +2008,10 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Then Moses said ‘goodbye’ to his wife's father, Jethro. Jethro returned to his own country. Print... Use screen font size Show All Comments Exodus 17Exodus 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Moses said ‘goodbye’ to his wife's father, Jethro. Jethro returned to his own country."
     }
   ],
   "19": [
-    {
-      "verse": "1-2",
-      "text": "After the Israelites left Rephidim, they went into the Sinai desert. The Israelites put up their tents in the desert, at the side of Sinai mountain. That happened on the first day of the third month since they came out of Egypt."
-    },
     {
       "verse": "3",
       "text": "Moses went up the mountain to speak with God. The Lord spoke to him from the mountain. He said, ‘This is what you must say to the Israelites, Jacob's descendants:"
@@ -2106,7 +2102,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "So Moses went down to the people. He told them what the Lord had said. Print... Use screen font size Show All Comments Exodus 18Exodus 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Moses went down to the people. He told them what the Lord had said."
+    },
+    {
+      "verse": "1-2",
+      "text": "After the Israelites left Rephidim, they went into the Sinai desert. The Israelites put up their tents in the desert, at the side of Sinai mountain. That happened on the first day of the third month since they came out of Egypt."
     }
   ],
   "20": [
@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "You must not want to take your neighbour's house for yourself. You must not want to take his wife, or his servants, male or female. You must not want to take his ox, or his donkey, or anything else that belongs to your neighbour.’ The people are very afraid"
+      "text": "You must not want to take your neighbour's house for yourself. You must not want to take his wife, or his servants, male or female. You must not want to take his ox, or his donkey, or anything else that belongs to your neighbour.’"
     },
     {
       "verse": "18",
@@ -2192,7 +2192,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So the people stayed away from the mountain. But Moses walked towards the thick, dark cloud, where God was. Rules about certain things"
+      "text": "So the people stayed away from the mountain. But Moses walked towards the thick, dark cloud, where God was."
     },
     {
       "verse": "22",
@@ -2212,7 +2212,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Do not make an altar which has stairs going up to it. If you do that, someone may see under your clothes when you climb up the stairs. Then you would be ashamed.” Print... Use screen font size Show All Comments Exodus 19Exodus 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not make an altar which has stairs going up to it. If you do that, someone may see under your clothes when you climb up the stairs. Then you would be ashamed.”"
     }
   ],
   "21": [
@@ -2238,7 +2238,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then his master must take the slave to stand in front of the judges. He must lead the slave to stand beside the door, or the wood that holds the door. Then the master must push the sharp point of a tool through the slave's ear. After that, he will serve his master for all his life. to stand in front of the judges’ or ‘to stand in front of God’."
+      "text": "Then his master must take the slave to stand in front of the judges. He must lead the slave to stand beside the door, or the wood that holds the door. Then the master must push the sharp point of a tool through the slave's ear. After that, he will serve his master for all his life."
     },
     {
       "verse": "7",
@@ -2258,7 +2258,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "If he does not do these three things, she may leave him. She does not have to pay him any money. The master is buying the female slave to take care of her. Perhaps he has promised to marry her. Her own family are too poor to take care of her themselves. When people attack other people"
+      "text": "If he does not do these three things, she may leave him. She does not have to pay him any money."
     },
     {
       "verse": "12",
@@ -2314,7 +2314,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "You must give him a burn for a burn, a wound for a wound, a bruise for a bruise. If someone is guilty, they must punish him as he deserves. If a man kills someone, the man must die. Every part of the person that the man has hurt, they must hurt that part of the man. A ‘burn’ is a mark on the body that fire causes. A ‘wound’ is a place where someone has cut the skin. A ‘bruise’ is a mark on the skin where someone has hit a person."
+      "text": "You must give him a burn for a burn, a wound for a wound, a bruise for a bruise."
     },
     {
       "verse": "26",
@@ -2322,7 +2322,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "If he knocks out the tooth of his slave, he must also let the slave go away to pay for the loss of the tooth. Rules about animals"
+      "text": "If he knocks out the tooth of his slave, he must also let the slave go away to pay for the loss of the tooth."
     },
     {
       "verse": "28",
@@ -2358,7 +2358,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "But perhaps that bull has attacked other animals before. If its owner knows that and he did not do anything, he must pay for the dead bull. He should have kept his bull in a safe place. So he must pay the owner of the dead bull, but he can keep the dead animal for himself. Print... Use screen font size Show All Comments Exodus 20Exodus 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But perhaps that bull has attacked other animals before. If its owner knows that and he did not do anything, he must pay for the dead bull. He should have kept his bull in a safe place. So he must pay the owner of the dead bull, but he can keep the dead animal for himself."
     }
   ],
   "22": [
@@ -2368,11 +2368,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Perhaps someone may catch a robber as he goes into another person's house. The owner of the house might knock down the robber so that he dies. If this happens at night, the owner of the house is not guilty of murder."
+      "text": "Perhaps someone may catch a robber as he goes into another person's house. The owner of the house might knock down the robber so that he dies. If this happens at night, the owner of the house is not guilty of murder. Anyone who takes something that belongs to someone else must pay back the owner. If he cannot pay for everything that he has taken, he must become a slave. The owner will receive the money that someone has paid for the slave."
     },
     {
       "verse": "3",
-      "text": "But if the owner of the house kills the robber after sunrise, he is guilty of murder. Anyone who takes something that belongs to someone else must pay back the owner. If he cannot pay for everything that he has taken, he must become a slave. The owner will receive the money that someone has paid for the slave."
+      "text": "But if the owner of the house kills the robber after sunrise, he is guilty of murder.Anyone who takes something that belongs to someone else must pay back the owner. If he cannot pay for everything that he has taken, he must become a slave. The owner will receive the money that someone has paid for the slave."
     },
     {
       "verse": "4",
@@ -2392,7 +2392,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But if you do not find the robber, you must take your neighbour to stand in front of the judges. They must decide if your neighbour has taken your things for himself. to stand in front of the judges’ or ‘to stand in front of God’. Also in other verses that follow."
+      "text": "But if you do not find the robber, you must take your neighbour to stand in front of the judges. They must decide if your neighbour has taken your things for himself."
     },
     {
       "verse": "9",
@@ -2420,7 +2420,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But if the owner is with his animal when something bad happens to it, you do not have to pay anything. And if you already paid your neighbour some money to use his animal, that will be enough to pay him for the loss. Rules about life"
+      "text": "But if the owner is with his animal when something bad happens to it, you do not have to pay anything. And if you already paid your neighbour some money to use his animal, that will be enough to pay him for the loss."
     },
     {
       "verse": "16",
@@ -2428,7 +2428,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Her father might refuse to give her to the man to be his wife. But the man must still give the right gifts for a girl who is not married. If a man wanted to marry a girl, he gave gifts or money to her parents. They would agree together the right amount."
+      "text": "Her father might refuse to give her to the man to be his wife. But the man must still give the right gifts for a girl who is not married."
     },
     {
       "verse": "18",
@@ -2476,7 +2476,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Do not refuse to offer your grain, your wine or your olive oil to me. You must give your firstborn sons to me."
+      "text": "Do not refuse to offer your grain, your wine or your olive oil to me.You must give your firstborn sons to me. You must give your firstborn sons to me."
     },
     {
       "verse": "30",
@@ -2484,7 +2484,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "You must live as my special people. So do not eat any meat from your animals that wild animals have killed. Instead, you must give it as food to the dogs. Print... Use screen font size Show All Comments Exodus 21Exodus 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You must live as my special people. So do not eat any meat from your animals that wild animals have killed. Instead, you must give it as food to the dogs."
     }
   ],
   "23": [
@@ -2522,7 +2522,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Do not be cruel to a foreign person who lives among you. You yourselves know what that feels like. Remember that you lived in Egypt as foreigners. Rules about the Sabbath day and Feasts"
+      "text": "Do not be cruel to a foreign person who lives among you. You yourselves know what that feels like. Remember that you lived in Egypt as foreigners."
     },
     {
       "verse": "10",
@@ -2550,7 +2550,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Eat the Feast of Harvest every year. Offer to me the first crops that you bring from your fields. The Israelites ate the Harvest Feast when they picked the first food from their fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields."
+      "text": "Eat the Feast of Harvest every year. Offer to me the first crops that you bring from your fields.At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields. At the end of each year, eat Feast of Final Harvest. Do that when you have finished bringing in all of your crops from the fields."
     },
     {
       "verse": "17",
@@ -2562,7 +2562,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk. God's special angel"
+      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God.Do not cook a young goat in its mother's milk. Do not cook a young goat in its mother's milk."
     },
     {
       "verse": "20",
@@ -2606,7 +2606,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "I will remove the people slowly, one group at a time. As you become strong, you will take the land as your own home. fear’ or ‘insects that bite’"
+      "text": "I will remove the people slowly, one group at a time. As you become strong, you will take the land as your own home."
     },
     {
       "verse": "31",
@@ -2618,7 +2618,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Do not let them live in your land. They would cause you to do bad things against me. If you serve their gods, you will become like their prisoners.’ Print... Use screen font size Show All Comments Exodus 22Exodus 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not let them live in your land. They would cause you to do bad things against me. If you serve their gods, you will become like their prisoners.’"
     }
   ],
   "24": [
@@ -2636,7 +2636,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then Moses wrote down everything that the Lord had said. Early the next morning, Moses built an altar at the bottom of the mountain. Then he put up 12 stone pillars. Each pillar stood there for one of Israel's 12 tribes."
+      "text": "Then Moses wrote down everything that the Lord had said.Early the next morning, Moses built an altar at the bottom of the mountain. Then he put up 12 stone pillars. Each pillar stood there for one of Israel's 12 tribes."
     },
     {
       "verse": "5",
@@ -2692,7 +2692,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Moses went up the mountain and he went into the cloud. He stayed on the mountain for 40 days and 40 nights. Print... Use screen font size Show All Comments Exodus 23Exodus 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses went up the mountain and he went into the cloud. He stayed on the mountain for 40 days and 40 nights."
     }
   ],
   "25": [
@@ -2706,7 +2706,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "These are the gifts that you must receive from the people as an offering: gold, silver and bronze;"
+      "text": "These are the gifts that you must receive from the people as an offering:gold, silver and bronze;"
     },
     {
       "verse": "4",
@@ -2722,7 +2722,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "onyx and other jewels to fix on the priest's ephod and his breastpiece. The ephod and the breastpiece were special clothes that the priests wore."
+      "text": "onyx and other jewels to fix on the priest's ephod and his breastpiece."
     },
     {
       "verse": "8",
@@ -2730,7 +2730,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I will show you how to make this tabernacle and everything that you will put inside it. But you must make everything in the way that I tell you. The Covenant Box"
+      "text": "I will show you how to make this tabernacle and everything that you will put inside it. But you must make everything in the way that I tell you."
     },
     {
       "verse": "10",
@@ -2782,7 +2782,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I will meet with you there, between the two cherubs that are above the lid. They watch over the Covenant Box. In that place I will give you all my commands for the Israelites. The table for special bread"
+      "text": "I will meet with you there, between the two cherubs that are above the lid. They watch over the Covenant Box. In that place I will give you all my commands for the Israelites."
     },
     {
       "verse": "23",
@@ -2814,7 +2814,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Put the Lord's special bread on this table. The bread must always be there for me. The lampstand"
+      "text": "Put the Lord's special bread on this table. The bread must always be there for me."
     },
     {
       "verse": "31",
@@ -2850,11 +2850,11 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Use 34 kilograms of pure gold to make the lampstand and all the tools to take care of it."
+      "text": "kilograms of pure gold to make the lampstand and all the tools to take care of it."
     },
     {
       "verse": "40",
-      "text": "Be careful to make all these things like the plan that I have shown you on the mountain. Print... Use screen font size Show All Comments Exodus 24Exodus 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Be careful to make all these things like the plan that I have shown you on the mountain."
     }
   ],
   "26": [
@@ -2876,11 +2876,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Put 50 rings on the edge of the first set. Put 50 rings on the edge of the other set. Do this so that the rings on one curtain are opposite to the rings on the other curtain."
+      "text": "rings on the edge of the first set. Put 50 rings on the edge of the other set. Do this so that the rings on one curtain are opposite to the rings on the other curtain."
     },
     {
       "verse": "6",
-      "text": "Then use 50 small gold hooks to join the curtains together. In this way, a single piece of curtain will make the whole tabernacle."
+      "text": "small gold hooks to join the curtains together. In this way, a single piece of curtain will make the whole tabernacle."
     },
     {
       "verse": "7",
@@ -2896,11 +2896,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Use material to make 50 rings along the edge of the end curtain in each set."
+      "text": "rings along the edge of the end curtain in each set."
     },
     {
       "verse": "11",
-      "text": "Then make 50 bronze hooks. Use them to join the two sets of curtains together so that it makes a single tent."
+      "text": "bronze hooks. Use them to join the two sets of curtains together so that it makes a single tent."
     },
     {
       "verse": "12",
@@ -2920,7 +2920,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Each board must be 4 metres high and 65 centimetres wide."
+      "text": "metres high and 65 centimetres wide."
     },
     {
       "verse": "17",
@@ -2928,19 +2928,19 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Make 20 boards for the south side of the tabernacle."
+      "text": "boards for the south side of the tabernacle."
     },
     {
       "verse": "19",
-      "text": "Then use silver to make 40 heavy bases to hold up the boards. Two bases will hold up each board. The pegs on the boards will fit into holes in the bases."
+      "text": "heavy bases to hold up the boards. Two bases will hold up each board. The pegs on the boards will fit into holes in the bases."
     },
     {
       "verse": "20",
-      "text": "Also make 20 boards for the north side of the tabernacle."
+      "text": "boards for the north side of the tabernacle."
     },
     {
       "verse": "21",
-      "text": "Make 40 silver bases, two bases under each board."
+      "text": "silver bases, two bases under each board."
     },
     {
       "verse": "22",
@@ -2956,7 +2956,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "So there will be eight boards at the back of the tabernacle and 16 silver bases, two bases under each board."
+      "text": "silver bases, two bases under each board."
     },
     {
       "verse": "26",
@@ -2976,7 +2976,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Make the tabernacle the same as the plan that I showed to you on the mountain. The curtain inside the tabernacle"
+      "text": "Make the tabernacle the same as the plan that I showed to you on the mountain."
     },
     {
       "verse": "31",
@@ -2996,7 +2996,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Put the special table in the Holy Place, outside the curtain. It will be on the north side of the tabernacle. Put the lampstand opposite the table, on the south side. The Hebrew name for the special lid shows that it was a place where God would forgive sins."
+      "text": "Put the special table in the Holy Place, outside the curtain. It will be on the north side of the tabernacle. Put the lampstand opposite the table, on the south side."
     },
     {
       "verse": "36",
@@ -3004,7 +3004,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Use acacia wood to make five poles. Cover them with gold. Fix gold rings to the poles. Use bronze to make five bases to hold up the poles. Then hang the curtain from the rings on the poles. Print... Use screen font size Show All Comments Exodus 25Exodus 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Use acacia wood to make five poles. Cover them with gold. Fix gold rings to the poles. Use bronze to make five bases to hold up the poles. Then hang the curtain from the rings on the poles."
     }
   ],
   "27": [
@@ -3038,7 +3038,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Use boards to make the altar, so that it is empty inside. You must make it in the way that the Lord showed you on the mountain. The net would hold the coal for the fire and the ashes would fall through it. The yard"
+      "text": "Use boards to make the altar, so that it is empty inside. You must make it in the way that the Lord showed you on the mountain."
     },
     {
       "verse": "9",
@@ -3046,27 +3046,23 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Make 20 poles and 20 bronze bases to hold the poles. Use silver to make hooks and sticks to hold the curtains."
+      "text": "poles and 20 bronze bases to hold the poles. Use silver to make hooks and sticks to hold the curtains."
     },
     {
       "verse": "11",
-      "text": "The north side of the yard must also be 45 metres long. It will also have 20 poles with their bronze bases, as well as their silver hooks and sticks."
+      "text": "metres long. It will also have 20 poles with their bronze bases, as well as their silver hooks and sticks."
     },
     {
       "verse": "12",
-      "text": "The west end of the yard must be 23 metres long. Make curtains for it, with ten poles and their bronze bases."
+      "text": "metres long. Make curtains for it, with ten poles and their bronze bases."
     },
     {
       "verse": "13",
       "text": "The entrance to the yard is at its east end. That end must also be 23 metres long."
     },
     {
-      "verse": "14-15",
-      "text": "There will be 7 metres of curtain on each side of the entrance. There will be three poles with their bases to hold the curtains on each side."
-    },
-    {
       "verse": "16",
-      "text": "Make a curtain 9 metres wide for the entrance to the yard. Make it out of blue, purple and red material, as well as good linen. Choose a worker who can use special skills to make the curtain look beautiful. Make four poles and their bases to hold the curtain at the entrance."
+      "text": "metres wide for the entrance to the yard. Make it out of blue, purple and red material, as well as good linen. Choose a worker who can use special skills to make the curtain look beautiful. Make four poles and their bases to hold the curtain at the entrance."
     },
     {
       "verse": "17",
@@ -3074,11 +3070,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The yard will be 45 metres long and 23 metres wide. Use good linen to make the curtains. They must be 2¼ metres high on the bronze bases."
+      "text": "metres long and 23 metres wide. Use good linen to make the curtains. They must be 2¼ metres high on the bronze bases."
     },
     {
       "verse": "19",
-      "text": "Use bronze to make all the tools that you will use in the tabernacle. Also use bronze to make the pegs that fix the tent of the tabernacle to the ground. And make bronze pegs to fix the curtain around the yard to the ground. Olive oil for the lamps"
+      "text": "Use bronze to make all the tools that you will use in the tabernacle. Also use bronze to make the pegs that fix the tent of the tabernacle to the ground. And make bronze pegs to fix the curtain around the yard to the ground."
     },
     {
       "verse": "20",
@@ -3086,7 +3082,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Aaron and his sons must make sure that the lamps always give light from evening until morning. The lampstand will be in the Tent of Meeting, outside the curtain that hangs in front of the Covenant Box. The lamps must always give light there, where the Lord is. This will always be a rule for the Israelites, now and in the future. Tent of Meeting’ was another name for the tabernacle. Print... Use screen font size Show All Comments Exodus 26Exodus 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Aaron and his sons must make sure that the lamps always give light from evening until morning. The lampstand will be in the Tent of Meeting, outside the curtain that hangs in front of the Covenant Box. The lamps must always give light there, where the Lord is. This will always be a rule for the Israelites, now and in the future."
+    },
+    {
+      "verse": "14-15",
+      "text": "metres of curtain on each side of the entrance. There will be three poles with their bases to hold the curtains on each side."
     }
   ],
   "28": [
@@ -3104,11 +3104,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "These are the clothes that they must make: a breastpiece,an ephod,a robe,a long shirt,a linen hat,and a long belt of cloth.They must make these special clothes for your brother Aaron and for his sons. Then Aaron and his sons will serve me as my priests."
+      "text": "These are the clothes that they must make:a breastpiece,an ephod,a robe,a long shirt,a linen hat,and a long belt of cloth.They must make these special clothes for your brother Aaron and for his sons. Then Aaron and his sons will serve me as my priests."
     },
     {
       "verse": "5",
-      "text": "The workers who have special skills must use beautiful material that is gold, blue, purple and red, as well as good linen. The ephod"
+      "text": "The workers who have special skills must use beautiful material that is gold, blue, purple and red, as well as good linen."
     },
     {
       "verse": "6",
@@ -3136,7 +3136,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Fix the two stones on the shoulder pieces of the ephod so that they show the names of the 12 sons of Israel. Aaron will carry the names on his shoulders as he serves the Lord. Then the Lord will remember to bless his people."
+      "text": "sons of Israel. Aaron will carry the names on his shoulders as he serves the Lord. Then the Lord will remember to bless his people."
     },
     {
       "verse": "13",
@@ -3144,7 +3144,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "And use pure gold to make two thin chains, like strings. Fix these chains to the gold pieces that hold the onyx stones. The breastpiece"
+      "text": "And use pure gold to make two thin chains, like strings. Fix these chains to the gold pieces that hold the onyx stones."
     },
     {
       "verse": "15",
@@ -3156,7 +3156,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then fix four rows of jewels on it. These are the names of the jewels: a ruby, a topaz and a beryl in the first row;"
+      "text": "Then fix four rows of jewels on it. These are the names of the jewels:a ruby, a topaz and a beryl in the first row;"
     },
     {
       "verse": "18",
@@ -3172,7 +3172,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "There will be 12 jewels, one jewel for each of Israel's sons. You must carefully write one tribe's name on each jewel with a sharp tool."
+      "text": "jewels, one jewel for each of Israel's sons. You must carefully write one tribe's name on each jewel with a sharp tool."
     },
     {
       "verse": "22",
@@ -3208,7 +3208,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Put the Urim and Thummim in the pocket of the breastpiece. They will also be over Aaron's heart when he goes in there to serve the Lord. The Urim and Thummim will always be there to show Aaron what the Lord is saying about the Israelites. He will carry this help over his heart all the time. Other clothes for the priests"
+      "text": "Put the Urim and Thummim in the pocket of the breastpiece. They will also be over Aaron's heart when he goes in there to serve the Lord. The Urim and Thummim will always be there to show Aaron what the Lord is saying about the Israelites. He will carry this help over his heart all the time."
     },
     {
       "verse": "31",
@@ -3224,7 +3224,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "There will be a bell then a pomegranate, another bell then a pomegranate, all around the edge of the robe. This robe was like a long shirt that the priest wore under the ephod."
+      "text": "There will be a bell then a pomegranate, another bell then a pomegranate, all around the edge of the robe."
     },
     {
       "verse": "35",
@@ -3260,7 +3260,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Aaron and his sons must wear them when they go into the Tent of Meeting. They must also wear them when they go near to the altar to serve me in the Holy Place. Then they will not be guilty. I will not punish them with death. This will always be a rule for Aaron and his descendants. Print... Use screen font size Show All Comments Exodus 27Exodus 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Aaron and his sons must wear them when they go into the Tent of Meeting. They must also wear them when they go near to the altar to serve me in the Holy Place. Then they will not be guilty. I will not punish them with death. This will always be a rule for Aaron and his descendants."
     }
   ],
   "29": [
@@ -3274,7 +3274,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Put the bread and the biscuits into a basket. Bring them to the Tent of Meeting with the bull and the two sheep. Tent of Meeting’ was another name for the tabernacle."
+      "text": "Put the bread and the biscuits into a basket. Bring them to the Tent of Meeting with the bull and the two sheep."
     },
     {
       "verse": "4",
@@ -3406,7 +3406,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Kill a bull each day, as a sacrifice that makes people clean from their sins. Also make the altar clean and pure. Pour oil over it to make it holy for me."
+      "text": "Kill a bull each day, as a sacrifice that makes people clean from their sins.Also make the altar clean and pure. Pour oil over it to make it holy for me."
     },
     {
       "verse": "37",
@@ -3446,7 +3446,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "They will know that I am the Lord their God. I brought them out of Egypt so that I could live among them. I am the Lord their God. Print... Use screen font size Show All Comments Exodus 28Exodus 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They will know that I am the Lord their God. I brought them out of Egypt so that I could live among them. I am the Lord their God."
     }
   ],
   "30": [
@@ -3488,7 +3488,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Once every year, Aaron must make the altar clean and pure. He must put some of the blood from the sin offering on the horns of the altar. A priest must do this every year from now on. The altar is holy because it belongs to me, the Lord.’ Money for the tabernacle"
+      "text": "Once every year, Aaron must make the altar clean and pure. He must put some of the blood from the sin offering on the horns of the altar. A priest must do this every year from now on. The altar is holy because it belongs to me, the Lord.’"
     },
     {
       "verse": "11",
@@ -3504,7 +3504,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "You must count every person who is 20 years old or more. Each person must offer his gift to the Lord."
+      "text": "years old or more. Each person must offer his gift to the Lord."
     },
     {
       "verse": "15",
@@ -3512,7 +3512,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Receive these silver coins from the Israelites. Use the money to take care of the Tent of Meeting. Then the Lord will always remember that you belong to him. You have paid money for your lives.’ Tent of Meeting’ was another name for the tabernacle. The bronze bowl"
+      "text": "Receive these silver coins from the Israelites. Use the money to take care of the Tent of Meeting. Then the Lord will always remember that you belong to him. You have paid money for your lives.’"
     },
     {
       "verse": "17",
@@ -3532,7 +3532,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "If they wash their hands and their feet, they will not die as they serve me. This will always be a rule for Aaron and for his descendants, the priests.’ Special oil and incense"
+      "text": "If they wash their hands and their feet, they will not die as they serve me. This will always be a rule for Aaron and for his descendants, the priests.’"
     },
     {
       "verse": "22",
@@ -3540,11 +3540,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "‘Mix together these special spices: 6 kilograms of pure myrrh,3 kilograms of sweet cinnamon,3 kilograms of sweet grasses,"
+      "text": "‘Mix together these special spices:6 kilograms of pure myrrh,3 kilograms of sweet cinnamon,3 kilograms of sweet grasses,"
     },
     {
       "verse": "24",
-      "text": "6 kilograms of cassia, cassia’ is the name of a spice. and 4 litres of olive oil."
+      "text": "kilograms of cassia,and 4 litres of olive oil."
     },
     {
       "verse": "25",
@@ -3552,7 +3552,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then pour some of this special oil on these things: the Tent of Meeting,the Covenant Box,"
+      "text": "Then pour some of this special oil on these things:the Tent of Meeting,the Covenant Box,"
     },
     {
       "verse": "27",
@@ -3600,7 +3600,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "If anyone makes any incense like it for his own perfume, he will no longer belong to my people.’ gum resin’ is a sticky liquid that comes from a tree. ‘galbanum’ and ‘onycha’ are the names of spices. Print... Use screen font size Show All Comments Exodus 29Exodus 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If anyone makes any incense like it for his own perfume, he will no longer belong to my people.’"
     }
   ],
   "31": [
@@ -3630,11 +3630,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They will make these things: the Tent of Meeting,the Covenant Box with its special lid,the other things that will be in the tabernacle."
+      "text": "They will make these things:the Tent of Meeting,the Covenant Box with its special lid,the other things that will be in the tabernacle."
     },
     {
       "verse": "8",
-      "text": "Those things include: the special table with all its tools,the pure gold lampstand with all its tools,the altar for incense,"
+      "text": "Those things include:the special table with all its tools,the pure gold lampstand with all its tools,the altar for incense, The workers must make all these things in the way that I have commanded you.’"
     },
     {
       "verse": "9",
@@ -3646,7 +3646,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "the special oil to show that things belong to me,and the sweet incense for the Holy Place.The workers must make all these things in the way that I have commanded you.’ The Sabbath day"
+      "text": "the special oil to show that things belong to me,and the sweet incense for the Holy Place.The workers must make all these things in the way that I have commanded you.’"
     },
     {
       "verse": "12",
@@ -3674,7 +3674,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Lord finished speaking to Moses on Sinai mountain. Then he gave Moses the two flat stones with the special commands that God himself had written on them. Print... Use screen font size Show All Comments Exodus 30Exodus 32 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord finished speaking to Moses on Sinai mountain. Then he gave Moses the two flat stones with the special commands that God himself had written on them."
     }
   ],
   "32": [
@@ -3772,7 +3772,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "So I said to them, “Everyone who has any gold rings must remove them.” So they gave the gold to me. I threw it into the fire. Then this image of a calf came out of the fire!’ God punishes the people"
+      "text": "So I said to them, “Everyone who has any gold rings must remove them.” So they gave the gold to me. I threw it into the fire. Then this image of a calf came out of the fire!’"
     },
     {
       "verse": "25",
@@ -3804,7 +3804,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "But now I ask you to forgive them for their sin. But if you will not do that, then please remove my name from your book.’ This was a book where God had written the names of his people."
+      "text": "But now I ask you to forgive them for their sin. But if you will not do that, then please remove my name from your book.’"
     },
     {
       "verse": "33",
@@ -3816,7 +3816,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "The Lord did send a bad disease to punish the people. He punished them because they had caused Aaron to make an image of a calf. Print... Use screen font size Show All Comments Exodus 31Exodus 33 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord did send a bad disease to punish the people. He punished them because they had caused Aaron to make an image of a calf."
     }
   ],
   "33": [
@@ -3842,11 +3842,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So the Israelites no longer wore their jewels after they left Sinai mountain. The special tent"
+      "text": "So the Israelites no longer wore their jewels after they left Sinai mountain."
     },
     {
       "verse": "7",
-      "text": "As they travelled, Moses put up a special tent outside the camp. It was not near the other tents. He called it the Tent of Meeting. Anyone could go there to ask the Lord about something. They would go to the Tent of Meeting that was outside the camp. This ‘Tent of Meeting’ was probably not yet the proper tabernacle. But it was a special tent where God would meet with people."
+      "text": "As they travelled, Moses put up a special tent outside the camp. It was not near the other tents. He called it the Tent of Meeting. Anyone could go there to ask the Lord about something. They would go to the Tent of Meeting that was outside the camp."
     },
     {
       "verse": "8",
@@ -3862,7 +3862,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Lord would speak to Moses face to face, as a man speaks to his friend. Then Moses would return to the camp. But Nun's son Joshua always stayed in the special tent. Joshua was a young man who helped Moses. God's great glory"
+      "text": "The Lord would speak to Moses face to face, as a man speaks to his friend. Then Moses would return to the camp. But Nun's son Joshua always stayed in the special tent. Joshua was a young man who helped Moses."
     },
     {
       "verse": "12",
@@ -3874,7 +3874,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The Lord replied, ‘I myself will go with you. I will give you rest.’ This means that God would take them safely to their new home."
+      "text": "The Lord replied, ‘I myself will go with you. I will give you rest.’"
     },
     {
       "verse": "15",
@@ -3910,7 +3910,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then I will remove my hand so that you will see my back. But nobody must ever see my face.’ Print... Use screen font size Show All Comments Exodus 32Exodus 34 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then I will remove my hand so that you will see my back. But nobody must ever see my face.’"
     }
   ],
   "34": [
@@ -3924,7 +3924,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Nobody must come with you. Nobody must go anywhere on the mountain. Even your sheep and your cows must not eat grass near the bottom of the mountain.’ See Exodus"
+      "text": "Nobody must come with you. Nobody must go anywhere on the mountain. Even your sheep and your cows must not eat grass near the bottom of the mountain.’"
     },
     {
       "verse": "4",
@@ -3988,11 +3988,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Every firstborn child that a woman gives birth to belongs to me. That is also true for every firstborn male that your animals give birth to. That includes your cows and your sheep."
+      "text": "Every firstborn child that a woman gives birth to belongs to me. That is also true for every firstborn male that your animals give birth to. That includes your cows and your sheep. Nobody may come to worship me without an offering to give me."
     },
     {
       "verse": "20",
-      "text": "For a firstborn donkey, you may pay for it with a lamb instead. If you do not pay for it, you must break the donkey's neck. You must pay me back for every firstborn son that you have. Nobody may come to worship me without an offering to give me."
+      "text": "For a firstborn donkey, you may pay for it with a lamb instead. If you do not pay for it, you must break the donkey's neck. You must pay me back for every firstborn son that you have.Nobody may come to worship me without an offering to give me."
     },
     {
       "verse": "21",
@@ -4008,7 +4008,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I will chase the nations out of the land as you move in. I will give you more and more land to live in. Three times each year you must come to worship the Lord your God. When you do that, nobody will try to take your land for themselves. See Deuteronomy The Feast of Harvest was also called the Feast of Huts."
+      "text": "I will chase the nations out of the land as you move in. I will give you more and more land to live in. Three times each year you must come to worship the Lord your God. When you do that, nobody will try to take your land for themselves."
     },
     {
       "verse": "25",
@@ -4016,7 +4016,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God. Do not cook a young goat in its mother's milk.’"
+      "text": "When you cut the first crops from your fields, bring the best food to the house of the Lord your God.Do not cook a young goat in its mother's milk.’ Do not cook a young goat in its mother's milk.’"
     },
     {
       "verse": "27",
@@ -4024,7 +4024,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Moses was there on the mountain with the Lord for 40 days and 40 nights. He did not eat anything or drink anything during that time. He wrote the words of God's covenant on the flat stones. Those were God's ten special commands. Moses' face shines"
+      "text": "days and 40 nights. He did not eat anything or drink anything during that time. He wrote the words of God's covenant on the flat stones. Those were God's ten special commands."
     },
     {
       "verse": "29",
@@ -4052,7 +4052,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "They could see that his face was shining. So Moses would put the thin cloth over his face again. The cloth would stay on his face until he went into the special tent again to speak with the Lord. Print... Use screen font size Show All Comments Exodus 33Exodus 35 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They could see that his face was shining. So Moses would put the thin cloth over his face again. The cloth would stay on his face until he went into the special tent again to speak with the Lord."
     }
   ],
   "35": [
@@ -4066,7 +4066,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Do not light a fire in any of your homes on a Sabbath day.’ Materials for the tabernacle"
+      "text": "Do not light a fire in any of your homes on a Sabbath day.’"
     },
     {
       "verse": "4",
@@ -4074,7 +4074,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Take an offering to give to the Lord from the things that you have. Everyone who wants to give something may choose to give these things: gold, silver, bronze;"
+      "text": "Take an offering to give to the Lord from the things that you have. Everyone who wants to give something may choose to give these things:gold, silver, bronze;"
     },
     {
       "verse": "6",
@@ -4170,7 +4170,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Many Israelites chose to offer gifts to the Lord. Men and women all brought the gifts that they had decided to bring. Moses had told them about the work that the Lord had commanded them to do. So they brought these things to help with the work. Bezalel and Oholiab"
+      "text": "Many Israelites chose to offer gifts to the Lord. Men and women all brought the gifts that they had decided to bring. Moses had told them about the work that the Lord had commanded them to do. So they brought these things to help with the work."
     },
     {
       "verse": "30",
@@ -4194,7 +4194,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "They have special skills to make all kinds of things. They can draw pictures of the things that they want to make. They can cut pictures in metal. They can use blue, purple and red material and good linen to make beautiful things with pictures on them. They are very clever at their work, so that the things that they make look beautiful.’ Print... Use screen font size Show All Comments Exodus 34Exodus 36 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They have special skills to make all kinds of things. They can draw pictures of the things that they want to make. They can cut pictures in metal. They can use blue, purple and red material and good linen to make beautiful things with pictures on them. They are very clever at their work, so that the things that they make look beautiful.’"
     }
   ],
   "36": [
@@ -4224,7 +4224,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The workers already had more things than they needed to finish all the work. The tabernacle"
+      "text": "The workers already had more things than they needed to finish all the work."
     },
     {
       "verse": "8",
@@ -4244,11 +4244,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "They put 50 rings along the edge of the first set. They put another 50 rings along the edge of the second set. The rings on one curtain were opposite to the rings on the other curtain."
+      "text": "rings along the edge of the first set. They put another 50 rings along the edge of the second set. The rings on one curtain were opposite to the rings on the other curtain."
     },
     {
       "verse": "13",
-      "text": "They made 50 small gold hooks to join the curtains together. So a single piece of curtain made the whole tabernacle."
+      "text": "small gold hooks to join the curtains together. So a single piece of curtain made the whole tabernacle."
     },
     {
       "verse": "14",
@@ -4264,11 +4264,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They used material to make 50 rings along the edge of the end curtain in each set."
+      "text": "rings along the edge of the end curtain in each set."
     },
     {
       "verse": "18",
-      "text": "They made 50 bronze hooks to join the two sets of curtains together. It made a single tent."
+      "text": "bronze hooks to join the two sets of curtains together. It made a single tent."
     },
     {
       "verse": "19",
@@ -4280,7 +4280,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Each board was 4 metres high and 65 centimetres wide."
+      "text": "metres high and 65 centimetres wide."
     },
     {
       "verse": "22",
@@ -4288,19 +4288,19 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "They made 20 boards for the south side of the tabernacle."
+      "text": "boards for the south side of the tabernacle."
     },
     {
       "verse": "24",
-      "text": "They used silver to make 40 heavy bases to hold up the boards. Two bases would hold up each board. The pegs on the boards fitted into holes in the bases."
+      "text": "heavy bases to hold up the boards. Two bases would hold up each board. The pegs on the boards fitted into holes in the bases."
     },
     {
       "verse": "25",
-      "text": "They made 20 boards for the north side of the tabernacle."
+      "text": "boards for the north side of the tabernacle."
     },
     {
       "verse": "26",
-      "text": "They made 40 silver bases, two bases under each board."
+      "text": "silver bases, two bases under each board."
     },
     {
       "verse": "27",
@@ -4316,7 +4316,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "So there were eight boards at the back of the tabernacle and 16 silver bases, two bases under each board."
+      "text": "silver bases, two bases under each board."
     },
     {
       "verse": "31",
@@ -4348,7 +4348,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "They made five poles to hold up this curtain. They fixed gold hooks to the poles. They covered the tops of the poles with gold. But they used bronze to make five bases to hold up the poles. Print... Use screen font size Show All Comments Exodus 35Exodus 37 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They made five poles to hold up this curtain. They fixed gold hooks to the poles. They covered the tops of the poles with gold. But they used bronze to make five bases to hold up the poles."
     }
   ],
   "37": [
@@ -4370,7 +4370,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He pushed the poles through the rings on the sides of the Covenant Box, to carry it. Bezalel was the leader of the work but he did not do everything himself. He could teach other people to do it. See Exodus"
+      "text": "He pushed the poles through the rings on the sides of the Covenant Box, to carry it."
     },
     {
       "verse": "6",
@@ -4386,7 +4386,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The cherubs looked at each other and they watched over the lid. Their wings touched each other over the top of the lid. The special table"
+      "text": "The cherubs looked at each other and they watched over the lid. Their wings touched each other over the top of the lid."
     },
     {
       "verse": "10",
@@ -4414,7 +4414,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He used pure gold to make the things that would be on the table. He made plates, big spoons, jars and bowls. They would use those things to pour out drink offerings. The lampstand"
+      "text": "He used pure gold to make the things that would be on the table. He made plates, big spoons, jars and bowls. They would use those things to pour out drink offerings."
     },
     {
       "verse": "17",
@@ -4446,7 +4446,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "He used 34 kilograms of pure gold to make the lampstand and all its tools. The altar for incense"
+      "text": "kilograms of pure gold to make the lampstand and all its tools."
     },
     {
       "verse": "25",
@@ -4466,7 +4466,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "He also made the special oil that would make things holy. He also made the incense with a sweet smell, like perfume. Print... Use screen font size Show All Comments Exodus 36Exodus 38 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He also made the special oil that would make things holy. He also made the incense with a sweet smell, like perfume."
     }
   ],
   "38": [
@@ -4480,7 +4480,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He made all the tools for the altar with bronze. He made pots to remove the ashes, and also spades and bowls. He made forks for the meat and dishes to carry the fire. Bezalel was the leader of the work but he did not do everything himself. He could teach other people to do it. See Exodus"
+      "text": "He made all the tools for the altar with bronze. He made pots to remove the ashes, and also spades and bowls. He made forks for the meat and dishes to carry the fire."
     },
     {
       "verse": "4",
@@ -4500,7 +4500,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He used bronze to make a large bowl for water, and a base for it to stand on. He used the bronze from small mirrors to make these things. The mirrors had belonged to women who worked at the entrance of the Tent of Meeting. The yard of the tabernacle"
+      "text": "He used bronze to make a large bowl for water, and a base for it to stand on. He used the bronze from small mirrors to make these things. The mirrors had belonged to women who worked at the entrance of the Tent of Meeting."
     },
     {
       "verse": "9",
@@ -4508,23 +4508,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He made 20 poles and 20 bronze bases to hold the poles. He used silver to make hooks and sticks to hold the curtains."
+      "text": "poles and 20 bronze bases to hold the poles. He used silver to make hooks and sticks to hold the curtains."
     },
     {
       "verse": "11",
-      "text": "The north side of the yard was also 45 metres long. It also had 20 poles and their bronze bases, as well as their silver hooks and sticks."
+      "text": "metres long. It also had 20 poles and their bronze bases, as well as their silver hooks and sticks."
     },
     {
       "verse": "12",
-      "text": "The west end of the yard was 23 metres long. It had curtains with ten poles and their ten bronze bases. The poles had silver hooks and sticks."
+      "text": "metres long. It had curtains with ten poles and their ten bronze bases. The poles had silver hooks and sticks."
     },
     {
       "verse": "13",
       "text": "The entrance of the yard was at its east end. That end was also 23 metres long."
-    },
-    {
-      "verse": "14-15",
-      "text": "There were 7 metres of curtain on each side of the entrance. Three poles with their bases held the curtains on each side."
     },
     {
       "verse": "16",
@@ -4544,7 +4540,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The workers used bronze to make the pegs that fixed the tabernacle to the ground. They also made bronze pegs to fix all the curtains around the yard to the ground. The materials for the tabernacle"
+      "text": "The workers used bronze to make the pegs that fixed the tabernacle to the ground. They also made bronze pegs to fix all the curtains around the yard to the ground."
     },
     {
       "verse": "21",
@@ -4568,15 +4564,15 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Each person who was 20 years old when Moses counted them had given the right amount, about ten grams. There were 603,550 men that Moses had counted."
+      "text": "years old when Moses counted them had given the right amount, about ten grams. There were 603,550 men that Moses had counted."
     },
     {
       "verse": "27",
-      "text": "The workers used 34 kilograms of silver to make each base to hold the poles. There were 100 bases to hold the tabernacle and the special curtain inside it. So they used 3,400 kilograms of silver to make the bases."
+      "text": "kilograms of silver to make each base to hold the poles. There were 100 bases to hold the tabernacle and the special curtain inside it. So they used 3,400 kilograms of silver to make the bases."
     },
     {
       "verse": "28",
-      "text": "Then they used the 30 kilograms that still remained. With this, they made the hooks and the sticks for the poles, and they covered the tops of the poles."
+      "text": "kilograms that still remained. With this, they made the hooks and the sticks for the poles, and they covered the tops of the poles."
     },
     {
       "verse": "29",
@@ -4588,13 +4584,17 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "They used this bronze to make the bases for the curtains around the yard and for the entrance to the yard. They used it to make the pegs to fix the tabernacle and the curtain around the yard to the ground. Print... Use screen font size Show All Comments Exodus 37Exodus 39 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They used this bronze to make the bases for the curtains around the yard and for the entrance to the yard. They used it to make the pegs to fix the tabernacle and the curtain around the yard to the ground."
+    },
+    {
+      "verse": "14-15",
+      "text": "metres of curtain on each side of the entrance. Three poles with their bases held the curtains on each side."
     }
   ],
   "39": [
     {
       "verse": "1",
-      "text": "The workers used blue, purple and red material to make beautiful clothes for the priests. They would wear them when they served God in the Holy Place. They made these special clothes for Aaron, as the Lord had commanded Moses. The ephod"
+      "text": "The workers used blue, purple and red material to make beautiful clothes for the priests. They would wear them when they served God in the Holy Place. They made these special clothes for Aaron, as the Lord had commanded Moses."
     },
     {
       "verse": "2",
@@ -4618,7 +4618,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They fixed the two onyx stones on the shoulder pieces of the ephod. They showed the names of the 12 sons of Israel, so that the Lord would remember to bless his people. The Lord had commanded Moses to do this. The breastpiece"
+      "text": "They fixed the two onyx stones on the shoulder pieces of the ephod. They showed the names of the 12 sons of Israel, so that the Lord would remember to bless his people. The Lord had commanded Moses to do this."
     },
     {
       "verse": "8",
@@ -4646,7 +4646,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "There were 12 jewels, one jewel for each of Israel's sons. They used a sharp tool to write one tribe's name on each jewel. Each of the jewels was a different colour."
+      "text": "jewels, one jewel for each of Israel's sons. They used a sharp tool to write one tribe's name on each jewel."
     },
     {
       "verse": "15",
@@ -4674,7 +4674,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "They used a string of blue material to tie the rings of the breastpiece to the rings of the ephod. They fixed them together above the ephod's belt, so that the breastpiece would not become separate. The workers made all these things as the Lord had commanded Moses. The other clothes for the priests"
+      "text": "They used a string of blue material to tie the rings of the breastpiece to the rings of the ephod. They fixed them together above the ephod's belt, so that the breastpiece would not become separate. The workers made all these things as the Lord had commanded Moses."
     },
     {
       "verse": "22",
@@ -4694,7 +4694,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So there was a bell, then a pomegranate, another bell then a pomegranate, all around the edge of the robe. The priest would wear this robe when he served the Lord, as the Lord had commanded Moses. This robe was like a long shirt that the priest wore under the ephod."
+      "text": "So there was a bell, then a pomegranate, another bell then a pomegranate, all around the edge of the robe. The priest would wear this robe when he served the Lord, as the Lord had commanded Moses."
     },
     {
       "verse": "27",
@@ -4714,7 +4714,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "They fixed a blue string to the plate, to tie it to the front of the special hat. The Lord had commanded Moses to do this. Moses checks the tabernacle"
+      "text": "They fixed a blue string to the plate, to tie it to the front of the special hat. The Lord had commanded Moses to do this."
     },
     {
       "verse": "32",
@@ -4758,11 +4758,11 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "The Israelites did all the work in the way that the Lord had commanded Moses."
+      "text": "The Israelites did all the work in the way that the Lord had commanded Moses. When Moses saw this, he blessed the people."
     },
     {
       "verse": "43",
-      "text": "Moses carefully checked all the work. He saw that the workers had done it exactly as the Lord had commanded them. When Moses saw this, he blessed the people. Print... Use screen font size Show All Comments Exodus 38Exodus 40 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses carefully checked all the work. He saw that the workers had done it exactly as the Lord had commanded them.When Moses saw this, he blessed the people."
     }
   ],
   "40": [
@@ -4784,7 +4784,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Put the gold altar for incense in front of the Covenant Box. Hang the curtain that will be at the entrance to the tabernacle. The Tent of Meeting and the tabernacle usually mean the same tent. Sometimes the Tent of Meeting means only the tent itself and the tabernacle means the tent and the yard that were around it."
+      "text": "Put the gold altar for incense in front of the Covenant Box. Hang the curtain that will be at the entrance to the tabernacle."
     },
     {
       "verse": "6",
@@ -4896,7 +4896,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Moses also made the yard around the tabernacle and round the altar. He hung the curtain at the entrance of the yard. In that way, Moses finished the work. The glory of the Lord"
+      "text": "Moses also made the yard around the tabernacle and round the altar. He hung the curtain at the entrance of the yard.In that way, Moses finished the work. In that way, Moses finished the work."
     },
     {
       "verse": "34",
@@ -4916,7 +4916,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "So the cloud stayed over the tabernacle during the day, to show that the Lord was with them. During the night, there was fire in the cloud. All the Israelites could see the cloud during all their journeys. Print... Use screen font size Show All Comments Exodus 39Leviticus Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the cloud stayed over the tabernacle during the day, to show that the Lord was with them. During the night, there was fire in the cloud. All the Israelites could see the cloud during all their journeys."
     }
   ]
 };

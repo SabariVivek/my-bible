@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "Nahum lives in Elkosh and this is his prophecy about the people in Nineveh. Elkosh is a town in Judah."
+      "text": "Nahum lives in Elkosh and this is his prophecy about the people in Nineveh."
     },
     {
       "verse": "2",
@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
+      "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people.He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
     },
     {
       "verse": "4",
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He causes the mountains to shake and he causes the hills to become flat. The earth and all the people in the world are afraid of God. fertile’ land is land where you can grow strong and healthy plants for food."
+      "text": "He causes the mountains to shake and he causes the hills to become flat. The earth and all the people in the world are afraid of God."
     },
     {
       "verse": "6",
@@ -58,7 +58,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "People in Judah, look at the mountains. You will see the feet of the person who will bring good news. He causes peace. You can have your special festivals again now. And now you can do what you promised to me. The bad people will not win a war against you because I have killed them. God has used armies to punish his people. This is because they have not listened to him. And they have not done what he says. One of those armies came from Nineveh. Now God will help his people. God will use other armies to punish the people in Nineveh because they have been so cruel and bad. Print... Use screen font size Show All Comments Nahum IntroductionNahum 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People in Judah, look at the mountains. You will see the feet of the person who will bring good news. He causes peace. You can have your special festivals again now. And now you can do what you promised to me. The bad people will not win a war against you because I have killed them."
     }
   ],
   "2": [
@@ -68,7 +68,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Your soldiers have destroyed the great nations of Israel and Jacob. They have destroyed their fields and their vineyards. But, the Lord will make Israel and Jacob great again. After King Solomon died, the nation of Israel became two kingdoms. The kingdom in the north was then called Israel and the kingdom in the south was called Judah. ‘Jacob’ here is probably another name for Judah."
+      "text": "Your soldiers have destroyed the great nations of Israel and Jacob. They have destroyed their fields and their vineyards. But, the Lord will make Israel and Jacob great again."
     },
     {
       "verse": "3",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Take the silver. Take the gold. The city has so many valuable things. All the people in Nineveh run away to different places. Some of them try to stop the water but they fail. This is because the people in this city have no love for each other. They only came to live there because of the many valuable things that their soldiers had taken from other countries."
+      "text": "Take the silver. Take the gold. The city has so many valuable things."
     },
     {
       "verse": "10",
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The Lord Almighty says, ‘I am against you. I will burn your chariots and the sword will kill your young lions. I will take away all the animals that you attack. Nobody will hear the voices of your messengers.’ The people in Nineveh were strong and cruel like lions. But Nahum tells them that God will be strong and cruel to them. God will attack the people in Nineveh because they have attacked many countries. Print... Use screen font size Show All Comments Nahum 1Nahum 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord Almighty says, ‘I am against you. I will burn your chariots and the sword will kill your young lions. I will take away all the animals that you attack. Nobody will hear the voices of your messengers.’"
     }
   ],
   "3": [
@@ -190,7 +190,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You have received a bad wound and nobody can make it better. People have heard about what happened to you. All of them are very happy and they clap their hands. That is because you have done cruel things to all of them. Print... Use screen font size Show All Comments Nahum 2Habakkuk Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You have received a bad wound and nobody can make it better. People have heard about what happened to you. All of them are very happy and they clap their hands. That is because you have done cruel things to all of them."
     }
   ]
 };

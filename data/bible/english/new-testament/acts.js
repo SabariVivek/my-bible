@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "After Jesus died on the cross, he became alive again. During the 40 days after that, he showed himself many times to his apostles. He showed himself in different ways. Then they could be really sure that he was alive again. During this time, Jesus spoke to his apostles about the kingdom of God. That first book is called ‘Luke’. We can read about this in Luke 24."
+      "text": "After Jesus died on the cross, he became alive again. During the 40 days after that, he showed himself many times to his apostles. He showed himself in different ways. Then they could be really sure that he was alive again. During this time, Jesus spoke to his apostles about the kingdom of God."
     },
     {
       "verse": "4",
@@ -38,11 +38,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The apostles were still looking carefully up into the sky when suddenly two men appeared. They were wearing white clothes and they stood near the apostles. We think that these men were angels."
+      "text": "The apostles were still looking carefully up into the sky when suddenly two men appeared. They were wearing white clothes and they stood near the apostles."
     },
     {
       "verse": "11",
-      "text": "The men said to the apostles, ‘You men from Galilee, you should not still be standing here and looking up into the sky. God has taken Jesus into heaven. You saw the way that Jesus went up to heaven. One day, he himself will return in the same way.’ The apostles choose Matthias"
+      "text": "The men said to the apostles, ‘You men from Galilee, you should not still be standing here and looking up into the sky. God has taken Jesus into heaven. You saw the way that Jesus went up to heaven. One day, he himself will return in the same way.’"
     },
     {
       "verse": "12",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When the apostles arrived back in Jerusalem, they went to their room. The room where they were staying was upstairs. Those apostles were Peter, John, James and Andrew; Philip and Thomas; Bartholomew and Matthew; also James the son of Alphaeus, Simon the Zealot, and Judas, the son of James. All this happened on the east side of the Mount of Olives. This hill is between Jerusalem and the town of Bethany. Olive trees grow there. A Zealot was someone who fought for his government or against the Roman government."
+      "text": "When the apostles arrived back in Jerusalem, they went to their room. The room where they were staying was upstairs. Those apostles were Peter, John, James and Andrew; Philip and Thomas; Bartholomew and Matthew; also James the son of Alphaeus, Simon the Zealot, and Judas, the son of James."
     },
     {
       "verse": "14",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Judas belonged to our group of disciples. Jesus chose him to work together with us.’ David was a great king of Israel's people, about 1,000 years before Christ came to this earth. See 1 Samuel Samuel We can read more about what Judas did in Luke 22."
+      "text": "Judas belonged to our group of disciples. Jesus chose him to work together with us.’"
     },
     {
       "verse": "18",
@@ -74,11 +74,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "All the people who lived in Jerusalem heard about his death. So they called that field ‘Akeldama’ in their own language. ‘Akeldama’ means ‘The Field of Blood’. We can read about Judas and the money in Matthew"
+      "text": "All the people who lived in Jerusalem heard about his death. So they called that field ‘Akeldama’ in their own language. ‘Akeldama’ means ‘The Field of Blood’."
     },
     {
       "verse": "20",
-      "text": "Peter then said, ‘This is what King David wrote in the book of Psalms: “Let the house that he lived in become empty, so that nobody lives in it.” See Psalm David also wrote: “Let somebody else do the job which he did.” ’ See Psalm"
+      "text": "Peter then said, ‘This is what King David wrote in the book of Psalms:“Let the house that he lived in become empty,so that nobody lives in it.”David also wrote:“Let somebody else do the job which he did.” ’ “Let the house that he lived in become empty, so that nobody lives in it.” David also wrote: “Let somebody else do the job which he did.” ’"
     },
     {
       "verse": "21",
@@ -102,7 +102,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then the group used lots to choose the name of one man. It happened that they chose Matthias. So Matthias now became the 12th apostle, together with the other 11 men. Print... Use screen font size Show All Comments Acts IntroductionActs 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the group used lots to choose the name of one man. It happened that they chose Matthias. So Matthias now became the 12th apostle, together with the other 11 men."
     }
   ],
   "2": [
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "All the believers became full with the Holy Spirit. They began to speak in languages that they had not learned. They spoke whatever language the Holy Spirit helped them to speak. The Jewish Day of Pentecost was 50 days after the Passover meal."
+      "text": "All the believers became full with the Holy Spirit. They began to speak in languages that they had not learned. They spoke whatever language the Holy Spirit helped them to speak."
     },
     {
       "verse": "5",
@@ -156,11 +156,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But some other people laughed at the disciples. They said, ‘These people have drunk too much wine!’ Peter speaks to the crowd"
+      "text": "But some other people laughed at the disciples. They said, ‘These people have drunk too much wine!’"
     },
     {
       "verse": "14",
-      "text": "Peter was there with the other 11 apostles and he stood up with them. He began to speak to the crowd with a loud voice. He said, ‘You people who are Jews like us, listen carefully to me. All of you who live here in Jerusalem, you also listen to me. I will explain to you everything that is happening."
+      "text": "apostles and he stood up with them. He began to speak to the crowd with a loud voice. He said, ‘You people who are Jews like us, listen carefully to me. All of you who live here in Jerusalem, you also listen to me. I will explain to you everything that is happening."
     },
     {
       "verse": "15",
@@ -168,23 +168,23 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "No, something different is happening here. Long ago, the prophet Joel spoke God's message about all this. This is what he said: On the Day of Pentecost, the Jews prayed at nine o'clock. Then they ate their first meal of the day at 10 o'clock. So at nine o'clock they would not yet have had any food or drink that day. So they could not be drunk. See Joel"
+      "text": "No, something different is happening here. Long ago, the prophet Joel spoke God's message about all this. This is what he said:"
     },
     {
       "verse": "17",
-      "text": "God says “This is what I will do in the last days. I will give my Spirit to all people. Your sons and daughters will speak my message to people. Your young men will see visions in their minds. And your old men will see things in their dreams."
+      "text": "God says “This is what I will do in the last days.I will give my Spirit to all people.Your sons and daughters will speak my message to people.Your young men will see visions in their minds.And your old men will see things in their dreams. I will give my Spirit to all people. Your sons and daughters will speak my message to people. Your young men will see visions in their minds. And your old men will see things in their dreams."
     },
     {
       "verse": "18",
-      "text": "At that time, I will give my Spirit to all my servants, both men and women. Then they will speak my message to people."
+      "text": "At that time, I will give my Spirit to all my servants,both men and women.Then they will speak my message to people. both men and women. Then they will speak my message to people."
     },
     {
       "verse": "19",
-      "text": "I will cause special things to appear in the sky. I will cause special things to appear on the earth too. Those things will show how great I am. There will be blood, fire and thick dark smoke."
+      "text": "I will cause special things to appear in the sky.I will cause special things to appear on the earth too.Those things will show how great I am.There will be blood, fire and thick dark smoke. I will cause special things to appear on the earth too. Those things will show how great I am. There will be blood, fire and thick dark smoke."
     },
     {
       "verse": "20",
-      "text": "The sun will become dark to people. The moon will become dark red like the colour of blood. These things will happen before the great day of the Lord arrives. That will be a wonderful day!"
+      "text": "The sun will become dark to people.The moon will become dark red like the colour of blood.These things will happen before the great day of the Lord arrives.That will be a wonderful day! The moon will become dark red like the colour of blood. These things will happen before the great day of the Lord arrives. That will be a wonderful day!"
     },
     {
       "verse": "21",
@@ -192,7 +192,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Peter then said, ‘People of Israel, listen to what I am saying! Jesus, the man from Nazareth, came with God's authority to do his work. God did many powerful and special things through him. These miracles showed you clearly that God had sent him. You know about all this. These things happened here, and you saw them."
+      "text": "Peter then said, ‘People of Israel, listen to what I am saying! Jesus, the man from Nazareth, came with God's authority to do his work. God did many powerful and special things through him. These miracles showed you clearly that God had sent him. You know about all this. These things happened here, and you saw them. “I saw the Lord near me all the time. He is next to me, on my right side, so nothing will cause me trouble."
     },
     {
       "verse": "23",
@@ -204,23 +204,23 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "A long time ago, King David spoke about the Messiah in this way: “I saw the Lord near me all the time. He is next to me, on my right side, so nothing will cause me trouble."
+      "text": "A long time ago, King David spoke about the Messiah in this way:“I saw the Lord near me all the time.He is next to me, on my right side,so nothing will cause me trouble."
     },
     {
       "verse": "26",
-      "text": "Because of this, I am very happy, and I will praise you, God. I am human and one day I will die, but I know that you will help me while I live."
+      "text": "Because of this, I am very happy,and I will praise you, God.I am human and one day I will die,but I know that you will help me while I live. and I will praise you, God. I am human and one day I will die, but I know that you will help me while I live."
     },
     {
       "verse": "27",
-      "text": "When I die, you will not leave me in Hades, the place for dead people. You will not let anything destroy the body of your Holy One."
+      "text": "When I die, you will not leave me in Hades, the place for dead people.You will not let anything destroy the body of your Holy One. You will not let anything destroy the body of your Holy One."
     },
     {
       "verse": "28",
-      "text": "You have shown me the paths that lead to life with you. I will be completely happy because you will be with me for ever.” ’ See Psalm"
+      "text": "You have shown me the paths that lead to life with you.I will be completely happy because you will be with me for ever.” ’ I will be completely happy because you will be with me for ever.” ’"
     },
     {
       "verse": "29",
-      "text": "Peter then said, ‘Friends, people of Israel, I must speak clearly to you about our ancestor, King David. He died and people buried his body in the ground. You can still see the place where people buried him."
+      "text": "Peter then said, ‘Friends, people of Israel, I must speak clearly to you about our ancestor, King David. He died and people buried his body in the ground. You can still see the place where people buried him. “The Lord God said to my Lord: Sit at my right side until I beat your enemies completely."
     },
     {
       "verse": "30",
@@ -240,11 +240,11 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "King David himself did not go up into heaven like Jesus did. But David said: “The Lord God said to my Lord: Sit at my right side until I beat your enemies completely."
+      "text": "King David himself did not go up into heaven like Jesus did. But David said:“The Lord God said to my Lord:Sit at my right side until I beat your enemies completely."
     },
     {
       "verse": "35",
-      "text": "Then you will be able to put your feet on them.” See Psalm"
+      "text": "Then you will be able to put your feet on them.”"
     },
     {
       "verse": "36",
@@ -268,11 +268,11 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "Many of the people who listened to Peter believed his message. So the apostles baptized those people. About three thousand people who now believed in Jesus joined the group that same day. How the believers lived"
+      "text": "Many of the people who listened to Peter believed his message. So the apostles baptized those people. About three thousand people who now believed in Jesus joined the group that same day."
     },
     {
       "verse": "42",
-      "text": "These new believers listened carefully to what the apostles taught them. They joined with everyone else in the group. They prayed together and they ate meals together. When believers ate together they also remembered Jesus' death for them."
+      "text": "These new believers listened carefully to what the apostles taught them. They joined with everyone else in the group. They prayed together and they ate meals together."
     },
     {
       "verse": "43",
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "All the time, they praised God. All the other people thought that the believers were good people. Every day, the Lord saved more people so that the group of believers grew bigger. Print... Use screen font size Show All Comments Acts 1Acts 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the time, they praised God. All the other people thought that the believers were good people. Every day, the Lord saved more people so that the group of believers grew bigger."
     }
   ],
   "3": [
@@ -334,7 +334,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "‘Look!’ they said. ‘We know this man. He usually sits at the Beautiful Gate of the temple and he asks people for money. What has happened to him?’ They were all very surprised. Peter speaks to the crowd in the temple"
+      "text": "‘Look!’ they said. ‘We know this man. He usually sits at the Beautiful Gate of the temple and he asks people for money. What has happened to him?’ They were all very surprised."
     },
     {
       "verse": "11",
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "It happened because of Jesus, who was the special servant of God. That is the God of Abraham, Isaac, Jacob and our other ancestors who lived long ago. God has raised his servant Jesus up to a place of honour. We can read about Abraham, Isaac and Jacob in the Bible in Genesis. You helped the rulers to take hold of Jesus. The Roman ruler Pilate had decided to let Jesus go free. But you turned against Jesus."
+      "text": "It happened because of Jesus, who was the special servant of God. That is the God of Abraham, Isaac, Jacob and our other ancestors who lived long ago. God has raised his servant Jesus up to a place of honour.You helped the rulers to take hold of Jesus. The Roman ruler Pilate had decided to let Jesus go free. But you turned against Jesus."
     },
     {
       "verse": "14",
@@ -386,7 +386,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "God will punish anyone who does not obey that prophet. He will no longer be one of God's people and God will destroy him.” ’ We can read what Moses said to the people in Deuteronomy"
+      "text": "God will punish anyone who does not obey that prophet. He will no longer be one of God's people and God will destroy him.” ’"
     },
     {
       "verse": "24",
@@ -394,11 +394,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "You are the people who receive that message from God today. The promise that God made to bless our ancestors is the same promise that he makes to you. God said to our ancestor Abraham, “Through your descendants, I will bless all the people on the earth.” We can read about God's promise to Abraham in Genesis"
+      "text": "You are the people who receive that message from God today. The promise that God made to bless our ancestors is the same promise that he makes to you. God said to our ancestor Abraham, “Through your descendants, I will bless all the people on the earth.”"
     },
     {
       "verse": "26",
-      "text": "God chose Jesus to be his special servant. God sent him to you first. He wants to help you, so that you stop doing bad things. That is how he will bless you.’ Print... Use screen font size Show All Comments Acts 2Acts 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God chose Jesus to be his special servant. God sent him to you first. He wants to help you, so that you stop doing bad things. That is how he will bless you.’"
     }
   ],
   "4": [
@@ -416,7 +416,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But many of the people who had heard Peter's message believed what he said. There were now about 5,000 men who believed in Jesus. The Jewish leaders ask Peter and John questions"
+      "text": "But many of the people who had heard Peter's message believed what he said. There were now about 5,000 men who believed in Jesus."
     },
     {
       "verse": "5",
@@ -432,7 +432,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then Peter became full with the Holy Spirit and he said to them, ‘All you men are rulers of the people and important Jews."
+      "text": "Then Peter became full with the Holy Spirit and he said to them, ‘All you men are rulers of the people and important Jews. “The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building.” ’"
     },
     {
       "verse": "9",
@@ -444,7 +444,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Bible says this about him: We can read this in Psalm The prophet was saying that the Messiah would be like a special stone that makes a building strong. When the Jewish leaders refused Jesus, they were like the builders. “The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building.” ’"
+      "text": "The Bible says this about him:“The builders refused to use a certain stone. They thought that it had no value.But now that stone has become the most important stone at the corner of the building.” ’"
     },
     {
       "verse": "12",
@@ -452,7 +452,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The Jewish leaders saw that Peter and John were not afraid of them. They also knew that they were not special people. They had not been to any school. So the leaders were very surprised about how Peter and John spoke. They understood that Peter and John had been friends with Jesus. The teachers of God's Law went to special schools. At these schools, they learned how to teach the people about God. Peter and John had never been to one of these schools. But they knew how to teach the people about God."
+      "text": "The Jewish leaders saw that Peter and John were not afraid of them. They also knew that they were not special people. They had not been to any school. So the leaders were very surprised about how Peter and John spoke. They understood that Peter and John had been friends with Jesus."
     },
     {
       "verse": "14",
@@ -468,7 +468,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But we do not want any more people to know what has happened. So we must say to these men, “You must stop using the name of Jesus. You must stop teaching people about him.” ’ The people in Jerusalem knew that Peter and John had done a good thing for the man. The Jewish leaders had asked Pilate to kill Jesus for them. Now the leaders were afraid that more people would believe in Jesus. Then those people might fight against them."
+      "text": "But we do not want any more people to know what has happened. So we must say to these men, “You must stop using the name of Jesus. You must stop teaching people about him.” ’"
     },
     {
       "verse": "18",
@@ -488,11 +488,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The man who became well because of this miracle was more than 40 years old. The group of believers pray to God"
+      "text": "years old."
     },
     {
       "verse": "23",
-      "text": "After the Jewish leaders let them go free, Peter and John went back to the group of believers. They told them what the leaders of the priests and the important Jews had said."
+      "text": "After the Jewish leaders let them go free, Peter and John went back to the group of believers. They told them what the leaders of the priests and the important Jews had said. “People of other nations were very angry. They made plans to do useless things. Why did they do that?"
     },
     {
       "verse": "24",
@@ -500,11 +500,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Our ancestor, King David, was your servant. You sent your Holy Spirit to him so that he spoke your message. You said through him, See Psalm People of other nations were very angry. They made plans to do useless things. Why did they do that?"
+      "text": "Our ancestor, King David, was your servant. You sent your Holy Spirit to him so that he spoke your message. You said through him,“People of other nations were very angry.They made plans to do useless things.Why did they do that?"
     },
     {
       "verse": "26",
-      "text": "The kings and rulers of the world met together. They decided to fight against the Lord God and against his Messiah.”"
+      "text": "The kings and rulers of the world met together.They decided to fight against the Lord Godand against his Messiah.” They decided to fight against the Lord God and against his Messiah.”"
     },
     {
       "verse": "27",
@@ -524,7 +524,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The believers finished praying. The house where they were meeting together shook. God filled them all with his Holy Spirit. That made them very brave and they spoke God's message clearly to people. The believers help each other"
+      "text": "The believers finished praying. The house where they were meeting together shook. God filled them all with his Holy Spirit. That made them very brave and they spoke God's message clearly to people."
     },
     {
       "verse": "32",
@@ -548,7 +548,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Joseph sold a field that belonged to him. He took the money from this and he gave it to the apostles. He wanted them to use the money to help other believers. The family of Levi were servants in the temple, where they worked for the priests. We can read about them in Numbers Print... Use screen font size Show All Comments Acts 3Acts 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Joseph sold a field that belonged to him. He took the money from this and he gave it to the apostles. He wanted them to use the money to help other believers."
     }
   ],
   "5": [
@@ -558,7 +558,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Ananias gave part of the money that he received to the apostles. But he kept part of the money for himself. Sapphira knew all about what Ananias had done. Ananias gave his money to the apostles. Then they would give it to other believers who needed it. Ananias told the apostles that he had given them all the money. But this was not true. He had only given them part of it."
+      "text": "Ananias gave part of the money that he received to the apostles. But he kept part of the money for himself. Sapphira knew all about what Ananias had done."
     },
     {
       "verse": "3",
@@ -566,7 +566,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Before you sold the field, it belonged to you. And after you sold the field, the money was yours. You could choose what to do with it. But you chose to do a very bad thing. You did not only tell a lie to us men. You have told a lie to God.’ The Holy Spirit had told Peter what Ananias had done. Ananias did not need to tell him."
+      "text": "Before you sold the field, it belonged to you. And after you sold the field, the money was yours. You could choose what to do with it. But you chose to do a very bad thing. You did not only tell a lie to us men. You have told a lie to God.’"
     },
     {
       "verse": "5",
@@ -594,7 +594,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The whole group of believers, and many other people, heard about what had happened to Ananias and Sapphira. They were all very afraid. The apostles do some powerful things for the people to see"
+      "text": "The whole group of believers, and many other people, heard about what had happened to Ananias and Sapphira. They were all very afraid."
     },
     {
       "verse": "12",
@@ -614,7 +614,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Many people also came into Jerusalem from the small towns near the city. They brought their sick friends with them. Some of those sick people had bad spirits that gave them trouble. God caused all these sick people to become well again. God's Holy Spirit caused the apostles to be powerful. They could cause sick people to become well again. In those days, people thought that shadows were powerful. And they thought that Peter's shadow would cause sick people to become well again. The most important priest puts the apostles in prison"
+      "text": "Many people also came into Jerusalem from the small towns near the city. They brought their sick friends with them. Some of those sick people had bad spirits that gave them trouble. God caused all these sick people to become well again."
     },
     {
       "verse": "17",
@@ -634,7 +634,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The apostles did what the angel told them to do. At dawn they went into the yard of the temple. They began to teach the people there. Then the most important priest and his friends arrived. They told the group of Jewish leaders to meet with them. All the most important people in Israel were in that group. Then they sent their police to the prison to bring the apostles to the meeting place."
+      "text": "The apostles did what the angel told them to do. At dawn they went into the yard of the temple. They began to teach the people there.Then the most important priest and his friends arrived. They told the group of Jewish leaders to meet with them. All the most important people in Israel were in that group. Then they sent their police to the prison to bring the apostles to the meeting place."
     },
     {
       "verse": "22",
@@ -642,7 +642,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "They said, ‘We arrived at the prison. We saw that the soldiers had locked the gates. They were standing at the gates and they were watching carefully. But when we opened the gates of the prison, we did not find anyone there!’ The soldiers at the gates of the prison did not know that the apostles were not inside."
+      "text": "They said, ‘We arrived at the prison. We saw that the soldiers had locked the gates. They were standing at the gates and they were watching carefully. But when we opened the gates of the prison, we did not find anyone there!’"
     },
     {
       "verse": "24",
@@ -698,7 +698,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Later, Judas from Galilee appeared at the time when the Romans were making a list of everyone's names. Many people also came to help him fight against the Romans. But somebody killed him. His men also ran away and nothing more happened. The Romans were making a list of all the people at the time when Jesus was born. Judas from Galilee would not pay money to the Roman government. People joined Judas's group and they helped him. They fought the Roman soldiers. These people were called Zealots. This Judas was not the same man that Jesus chose to follow him."
+      "text": "Later, Judas from Galilee appeared at the time when the Romans were making a list of everyone's names. Many people also came to help him fight against the Romans. But somebody killed him. His men also ran away and nothing more happened."
     },
     {
       "verse": "38",
@@ -710,7 +710,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "The Jewish leaders agreed with Gamaliel. They told the apostles to come back into the room. They told the police to hit them with whips. Then they said to the apostles, ‘You must not use the authority of Jesus to teach the people.’ After that, they let the apostles go free. Rulers used a whip to punish people who did not obey the law."
+      "text": "The Jewish leaders agreed with Gamaliel. They told the apostles to come back into the room. They told the police to hit them with whips. Then they said to the apostles, ‘You must not use the authority of Jesus to teach the people.’ After that, they let the apostles go free."
     },
     {
       "verse": "41",
@@ -718,17 +718,17 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Every day the apostles continued to teach people about Jesus. They spoke in people's homes and in the yard of the temple. All the time, they told people the good news that Jesus is God's Messiah. Print... Use screen font size Show All Comments Acts 4Acts 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Every day the apostles continued to teach people about Jesus. They spoke in people's homes and in the yard of the temple. All the time, they told people the good news that Jesus is God's Messiah."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "At that time, more and more people became disciples of Jesus. Among the believers, some were Jews who spoke the Greek language. Others were Jews who spoke the Aramaic language. The Jews who spoke Greek had a problem with the other Jews. They said, ‘The widows in our group do not receive the right help. Each day, when you give out the food and money, our widows receive less than they should get.’ Greek was the language that people spoke in Greece. The Jews who were born in Israel spoke the Aramaic language."
+      "text": "At that time, more and more people became disciples of Jesus. Among the believers, some were Jews who spoke the Greek language. Others were Jews who spoke the Aramaic language. The Jews who spoke Greek had a problem with the other Jews. They said, ‘The widows in our group do not receive the right help. Each day, when you give out the food and money, our widows receive less than they should get.’"
     },
     {
       "verse": "2",
-      "text": "The 12 apostles heard about the problem. They told all the believers to meet together with them. The apostles said, ‘Our work is to teach people God's message about Jesus. We do not have time to give out the food and money to people as well."
+      "text": "apostles heard about the problem. They told all the believers to meet together with them. The apostles said, ‘Our work is to teach people God's message about Jesus. We do not have time to give out the food and money to people as well."
     },
     {
       "verse": "3",
@@ -748,7 +748,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So more and more people heard the message from God. The number of people in Jerusalem who believed in Jesus grew more and more. Many of the Jewish priests also believed the message about Jesus. A very large number of priests lived in Jerusalem and they worked in the temple. The important Jews take hold of Stephen"
+      "text": "So more and more people heard the message from God. The number of people in Jerusalem who believed in Jesus grew more and more. Many of the Jewish priests also believed the message about Jesus."
     },
     {
       "verse": "8",
@@ -780,7 +780,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "All the Jewish leaders who sat there in the meeting looked carefully at Stephen. They saw that his face was very bright, like the face of an angel. Print... Use screen font size Show All Comments Acts 5Acts 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the Jewish leaders who sat there in the meeting looked carefully at Stephen. They saw that his face was very bright, like the face of an angel."
     }
   ],
   "7": [
@@ -794,11 +794,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "God said to Abraham, “Leave your own country and your own family and go to a different country. I will show you where that will be.” Abraham lived with his father in a city called Ur. Ur was in a country called Babylonia, which is now part of Iraq. Abraham moved with his father from Ur to live in Haran."
+      "text": "God said to Abraham, “Leave your own country and your own family and go to a different country. I will show you where that will be.”"
     },
     {
       "verse": "4",
-      "text": "So Abraham left his country where the Chaldean people lived. He went to Haran and he stayed there. While he was there, his father died. Then God said to him, “Leave this place.” God then sent him to live in Canaan. This is where we are living now. The land that God led Abraham to was called Canaan. This country is now called Israel. Jerusalem is the capital city."
+      "text": "So Abraham left his country where the Chaldean people lived. He went to Haran and he stayed there. While he was there, his father died. Then God said to him, “Leave this place.” God then sent him to live in Canaan. This is where we are living now."
     },
     {
       "verse": "5",
@@ -810,11 +810,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But I will punish those people who cause your descendants to work as slaves for them. After I have done that, your descendants will leave that country. They will come to this place and worship me here.” That is what God said to Abraham. We can read about God's promise to Abraham in Genesis 12. Abraham's descendants worked in Egypt for 400 years. Then Moses led them out of that country to the country which became Israel. Moses was standing on Sinai mountain when God spoke to him. We can read about this in Exodus 3."
+      "text": "But I will punish those people who cause your descendants to work as slaves for them. After I have done that, your descendants will leave that country. They will come to this place and worship me here.” That is what God said to Abraham."
     },
     {
       "verse": "8",
-      "text": "Then God made an covenant with Abraham that his descendants would be his special people. God said, “You must circumcise all your baby boys.” Later, Abraham became the father of Isaac. Abraham circumcised Isaac when he was eight days old. Then Isaac became the father of Jacob. Jacob himself had 12 sons. These sons became the 12 ancestors of the families of Israel. Jacob is also sometimes called Israel. We can read the names of Jacob's 12 sons in Genesis"
+      "text": "Then God made an covenant with Abraham that his descendants would be his special people. God said, “You must circumcise all your baby boys.”Later, Abraham became the father of Isaac. Abraham circumcised Isaac when he was eight days old. Then Isaac became the father of Jacob. Jacob himself had 12 sons. These sons became the 12 ancestors of the families of Israel. Later, Abraham became the father of Isaac. Abraham circumcised Isaac when he was eight days old. Then Isaac became the father of Jacob. Jacob himself had 12 sons. These sons became the 12 ancestors of the families of Israel."
     },
     {
       "verse": "9",
@@ -842,11 +842,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So Jacob went to Egypt with all his family. Jacob and his 12 sons, our ancestors, lived there until they died. The kings of the country of Egypt were always called Pharaoh. We can read the story of Joseph in Genesis 37-50."
+      "text": "So Jacob went to Egypt with all his family. Jacob and his 12 sons, our ancestors, lived there until they died."
     },
     {
       "verse": "16",
-      "text": "When the people of Israel left Egypt, they carried with them the dead bodies of Joseph and his family. They took them back to Shechem and they buried them in a hole for dead people there. Abraham had bought that ground in Shechem from the family of a man called Hamor. He had paid Hamor the right money for it.’ Shechem was the place in Canaan where Jacob and his family had lived. Jacob and Joseph knew that one day their families would return to Shechem. So Jacob asked his family to take his dead body back to Shechem. We can read about this in Genesis Much later, Joseph also asked his family to take his dead body back to Shechem. We can read about this in Genesis and Joshua"
+      "text": "When the people of Israel left Egypt, they carried with them the dead bodies of Joseph and his family. They took them back to Shechem and they buried them in a hole for dead people there. Abraham had bought that ground in Shechem from the family of a man called Hamor. He had paid Hamor the right money for it.’"
     },
     {
       "verse": "17",
@@ -870,11 +870,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Moses had teachers who taught him all the wise things that the Egyptians knew. He learned how to speak well. He could also do powerful things. We can read this story about Moses in Exodus"
+      "text": "Moses had teachers who taught him all the wise things that the Egyptians knew. He learned how to speak well. He could also do powerful things."
     },
     {
       "verse": "23",
-      "text": "When Moses was 40 years old, he went to see his own people, the people of Israel."
+      "text": "years old, he went to see his own people, the people of Israel."
     },
     {
       "verse": "24",
@@ -902,7 +902,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Moses lived in Midian for 40 years. Then, one day, he was in the wilderness near Sinai mountain. He saw a bush there that was burning. An angel appeared to him in the fire."
+      "text": "years. Then, one day, he was in the wilderness near Sinai mountain. He saw a bush there that was burning. An angel appeared to him in the fire."
     },
     {
       "verse": "31",
@@ -918,7 +918,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "I have seen that the Egyptians are being cruel to my people. My people are crying with pain and I have heard them. Now I have come down to save them. So come here and listen to me. I will send you back to Egypt.” ’ We can read this story about Moses in Exodus 3."
+      "text": "I have seen that the Egyptians are being cruel to my people. My people are crying with pain and I have heard them. Now I have come down to save them. So come here and listen to me. I will send you back to Egypt.” ’"
     },
     {
       "verse": "35",
@@ -926,7 +926,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "So it was Moses who led the people of Israel out of Egypt. He did some powerful things before the people left Egypt. This showed that God was with him. He did more miracles at the Red Sea. Then he led the people through the wilderness for 40 years. He also did more miracles there. We can read about this in Exodus 7-17."
+      "text": "So it was Moses who led the people of Israel out of Egypt. He did some powerful things before the people left Egypt. This showed that God was with him. He did more miracles at the Red Sea. Then he led the people through the wilderness for 40 years. He also did more miracles there."
     },
     {
       "verse": "37",
@@ -942,27 +942,27 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "So the people said to Aaron, “Please make us some gods that we can carry in front of us. Yes, that man Moses brought us out of Egypt. But now we do not know what has happened to him.” Aaron was the brother of Moses."
+      "text": "So the people said to Aaron, “Please make us some gods that we can carry in front of us. Yes, that man Moses brought us out of Egypt. But now we do not know what has happened to him.”"
     },
     {
       "verse": "41",
-      "text": "It was then that the people made something that would be an idol for them. They made it from gold with the shape of a young bull. They killed some animals and they burned them as a gift for their idol. The people then had a big meal together because they were very happy. They thought that they had made something that was very good. We can read about this in Exodus"
+      "text": "It was then that the people made something that would be an idol for them. They made it from gold with the shape of a young bull. They killed some animals and they burned them as a gift for their idol. The people then had a big meal together because they were very happy. They thought that they had made something that was very good."
     },
     {
       "verse": "42",
-      "text": "But God turned away from his people. He let them do what they wanted to do. He let them worship the stars in the sky. One of God's prophets wrote about this long ago: “God said, ‘People of Israel, listen! When you were in the wilderness for 40 years, you brought sacrifices and gifts to me. But you did not really worship me when you did that."
+      "text": "But God turned away from his people. He let them do what they wanted to do. He let them worship the stars in the sky.One of God's prophets wrote about this long ago:“God said, ‘People of Israel, listen!When you were in the wilderness for 40 years,you brought sacrifices and gifts to me.But you did not really worship me when you did that. One of God's prophets wrote about this long ago: “God said, ‘People of Israel, listen! years, you brought sacrifices and gifts to me. But you did not really worship me when you did that."
     },
     {
       "verse": "43",
-      "text": "No. You carried with you the idol of the god called Molech. You also carried an idol with the shape of a star, to be like your god, Rephan. These were the idols which you worshipped in the wilderness. So now I will send you away from your own country. You will go to live in places beyond Babylon.’ ” We can read this in Amos Amos was speaking a message from God."
+      "text": "No. You carried with you the idol of the god called Molech.You also carried an idol with the shape of a star,to be like your god, Rephan.These were the idols which you worshipped in the wilderness.So now I will send you away from your own country.You will go to live in places beyond Babylon.’ ” You also carried an idol with the shape of a star, to be like your god, Rephan. These were the idols which you worshipped in the wilderness. So now I will send you away from your own country. You will go to live in places beyond Babylon.’ ”"
     },
     {
       "verse": "44",
-      "text": "When our ancestors were in the wilderness, they carried a special tent with them. It showed that God was there with them and that is where they worshipped him. God showed Moses how he should make that tent. The people made it in the way that God had said. A tent is a house that someone made from cloth or animal skins. When people travel, they can carry it from one place to the next place. God told Moses how to make this special tent. It was called the tabernacle."
+      "text": "When our ancestors were in the wilderness, they carried a special tent with them. It showed that God was there with them and that is where they worshipped him. God showed Moses how he should make that tent. The people made it in the way that God had said."
     },
     {
       "verse": "45",
-      "text": "Later, our ancestors received that special tent for themselves. They brought it with them when they came with Joshua to live in this land. They took the land from the people who were living here. God chased out those people so that our ancestors could live there. The tent remained in this place until David became the king of Israel. Many other people were already living in Canaan. But God had promised to give Canaan to the people of Israel. Joshua helped the people of Israel to fight the other people in Canaan. And God helped the people of Israel to win their battles. So the people who had lived there went away from Canaan."
+      "text": "Later, our ancestors received that special tent for themselves. They brought it with them when they came with Joshua to live in this land. They took the land from the people who were living here. God chased out those people so that our ancestors could live there. The tent remained in this place until David became the king of Israel."
     },
     {
       "verse": "46",
@@ -970,15 +970,15 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "But it was David's son, Solomon, who built a house for God. God did not want David to build a house for him. But David brought together the materials to build it."
+      "text": "But it was David's son, Solomon, who built a house for God."
     },
     {
       "verse": "48",
-      "text": "But we know that God does not live in a house that people have made. He is the powerful God who is over all. God's prophet Isaiah spoke these words: See Isaiah"
+      "text": "But we know that God does not live in a house that people have made. He is the powerful God who is over all. God's prophet Isaiah spoke these words:"
     },
     {
       "verse": "49",
-      "text": "The Lord God says, “Heaven is the seat where I sit to rule. The earth is the place where I put my feet. You could not build a house for me where I could live. You could not make a place for me to rest there."
+      "text": "The Lord God says,“Heaven is the seat where I sit to rule.The earth is the place where I put my feet.You could not build a house for me where I could live.You could not make a place for me to rest there. “Heaven is the seat where I sit to rule. The earth is the place where I put my feet. You could not build a house for me where I could live. You could not make a place for me to rest there."
     },
     {
       "verse": "50",
@@ -994,7 +994,7 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "You are the people who received God's Law. God caused his angels to give that Law to your ancestors. But you have not obeyed it.’ The Jewish leaders kill Stephen"
+      "text": "You are the people who received God's Law. God caused his angels to give that Law to your ancestors. But you have not obeyed it.’"
     },
     {
       "verse": "54",
@@ -1006,7 +1006,7 @@ module.exports = {
     },
     {
       "verse": "56",
-      "text": "Stephen said, ‘Look! I can see into heaven itself. It is open! I can see the Son of Man and he is standing at the right side of God!’ The Son of Man is another name for Jesus. Jesus often called himself the Son of Man when he talked to people. Jesus was ready to receive Stephen into heaven."
+      "text": "Stephen said, ‘Look! I can see into heaven itself. It is open! I can see the Son of Man and he is standing at the right side of God!’"
     },
     {
       "verse": "57",
@@ -1022,13 +1022,13 @@ module.exports = {
     },
     {
       "verse": "60",
-      "text": "Then he fell down on his knees. He shouted, ‘Lord, please forgive these men. Do not punish them because they are doing this to me.’ After Stephen had said this, he died. Print... Use screen font size Show All Comments Acts 6Acts 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then he fell down on his knees. He shouted, ‘Lord, please forgive these men. Do not punish them because they are doing this to me.’ After Stephen had said this, he died."
     }
   ],
   "8": [
     {
       "verse": "1",
-      "text": "Saul was standing there while the Jewish leaders killed Stephen. He agreed with what they did. Saul puts many believers in prisonOn the same day that Stephen died, the group of believers who lived in Jerusalem began to have great trouble. People did bad things to them. All the believers left Jerusalem and went to other places in Judea and Samaria. Only Jesus' 12 apostles stayed in Jerusalem."
+      "text": "Saul was standing there while the Jewish leaders killed Stephen. He agreed with what they did.On the same day that Stephen died, the group of believers who lived in Jerusalem began to have great trouble. People did bad things to them. All the believers left Jerusalem and went to other places in Judea and Samaria. Only Jesus' 12 apostles stayed in Jerusalem. On the same day that Stephen died, the group of believers who lived in Jerusalem began to have great trouble. People did bad things to them. All the believers left Jerusalem and went to other places in Judea and Samaria. Only Jesus' 12 apostles stayed in Jerusalem."
     },
     {
       "verse": "2",
@@ -1036,7 +1036,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But Saul brought great trouble to the believers. He wanted to destroy their whole group. So he went to all their houses. He took hold of the believers and he put them into prison. He did that to both men and women. People in Samaria hear God's good news"
+      "text": "But Saul brought great trouble to the believers. He wanted to destroy their whole group. So he went to all their houses. He took hold of the believers and he put them into prison. He did that to both men and women."
     },
     {
       "verse": "4",
@@ -1056,7 +1056,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "As a result, the people in that city were very happy. The Holy Spirit lived in Philip. He helped Philip to speak in a powerful way. Because of this Philip could do these special things for the people."
+      "text": "As a result, the people in that city were very happy."
     },
     {
       "verse": "9",
@@ -1124,15 +1124,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Peter and John told the people about the Lord Jesus and they spoke God's message to them. Then they returned to Jerusalem. On their way, they went through many villages in Samaria and they told the people the good news about Jesus. Philip meets a man from Ethiopia"
+      "text": "Peter and John told the people about the Lord Jesus and they spoke God's message to them. Then they returned to Jerusalem. On their way, they went through many villages in Samaria and they told the people the good news about Jesus."
     },
     {
       "verse": "26",
-      "text": "Then an angel of the Lord God came to Philip. He said, ‘Philip, go south to the road between Jerusalem and Gaza which goes through the wilderness.’ It was about 70 kilometres from Jerusalem to the town of Gaza."
+      "text": "Then an angel of the Lord God came to Philip. He said, ‘Philip, go south to the road between Jerusalem and Gaza which goes through the wilderness.’"
     },
     {
       "verse": "27",
-      "text": "So Philip started on his journey. While he was going along this road, he met an important officer from Ethiopia. This man had authority over the queen of Ethiopia's money. The queen was called Candace. The officer was travelling home from Jerusalem. He had been there to worship God. Ethiopia is a country in Africa. Candace was a special name for their queen. We think that the man from Ethiopia was a Gentile. But now he worshipped the God of the Jews. The Ethiopian man was riding in a chariot that horses pulled. It was not the kind of chariot that soldiers used when they went to fight."
+      "text": "So Philip started on his journey. While he was going along this road, he met an important officer from Ethiopia. This man had authority over the queen of Ethiopia's money. The queen was called Candace. The officer was travelling home from Jerusalem. He had been there to worship God."
     },
     {
       "verse": "28",
@@ -1152,11 +1152,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The officer was reading these words from the book of Isaiah: ‘He was like a sheep that people were leading away to kill. He was like a lamb when they are cutting off its wool, but it makes no noise. In the same way, he did not say anything."
+      "text": "The officer was reading these words from the book of Isaiah:‘He was like a sheep that people were leading away to kill.He was like a lamb when they are cutting off its wool,but it makes no noise.In the same way, he did not say anything. ‘He was like a sheep that people were leading away to kill. He was like a lamb when they are cutting off its wool, but it makes no noise. In the same way, he did not say anything."
     },
     {
       "verse": "33",
-      "text": "People did not respect him at all. They refused to judge him in a fair way. Nobody can say anything about his descendants, because his life on earth came to an end.’ We can read this in Isaiah Isaiah wrote this about Jesus hundreds of years earlier."
+      "text": "People did not respect him at all.They refused to judge him in a fair way.Nobody can say anything about his descendants,because his life on earth came to an end.’ They refused to judge him in a fair way. Nobody can say anything about his descendants, because his life on earth came to an end.’"
     },
     {
       "verse": "34",
@@ -1168,11 +1168,11 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "As they were travelling along the road, they came to a place with some water. The man said to Philip, ‘Look! There is some water here. Please will you baptize me? Is there anything to stop you?’ ["
+      "text": "As they were travelling along the road, they came to a place with some water. The man said to Philip, ‘Look! There is some water here. Please will you baptize me? Is there anything to stop you?’["
     },
     {
       "verse": "37",
-      "text": "Philip said to him, ‘I can baptize you if you really believe in Jesus.’ The man said to Philip, ‘I do believe that Jesus Christ is the Son of God.’] Most Bibles do not have verse 37."
+      "text": "Philip said to him, ‘I can baptize you if you really believe in Jesus.’ The man said to Philip, ‘I do believe that Jesus Christ is the Son of God.’]"
     },
     {
       "verse": "38",
@@ -1184,7 +1184,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Philip saw that he was now in Azotus. From there, he visited many towns and he told people the good news about Jesus. He did this as he went all the way to Caesarea. Azotus was a town 30 kilometres north of Gaza. Caesarea was an important city in Israel. The Roman ruler sometimes lived there. Caesarea was at the coast and it was an important port. It was 70 kilometres from Jerusalem. We think that Philip lived in Caesarea for many years. Philip was still living in Caesarea when Luke wrote about him again in Acts Print... Use screen font size Show All Comments Acts 7Acts 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Philip saw that he was now in Azotus. From there, he visited many towns and he told people the good news about Jesus. He did this as he went all the way to Caesarea."
     }
   ],
   "9": [
@@ -1194,7 +1194,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Saul asked him, ‘Please will you write some letters for me? Then I can give one of these letters to the leader of each Jewish group in Damascus. That will give me authority to take hold of any believers that I find there.’ Saul needed letters from the most important priest. Then he would have authority. He could catch any believers that he found. Damascus was an important city and it was about 240 kilometres from Jerusalem. It was in Syria and many Jews lived there. Damascus was one of the ten towns that the Romans did not rule. These ten towns had their own rulers. Saul wanted to find anyone who agreed with the Way of the Lord Jesus. Then he would tie them and bring them back to Jerusalem, whether they were men or they were women."
+      "text": "Saul asked him, ‘Please will you write some letters for me? Then I can give one of these letters to the leader of each Jewish group in Damascus. That will give me authority to take hold of any believers that I find there.’Saul wanted to find anyone who agreed with the Way of the Lord Jesus. Then he would tie them and bring them back to Jerusalem, whether they were men or they were women."
     },
     {
       "verse": "3",
@@ -1202,7 +1202,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Saul fell down onto the ground. He heard a voice which said to him, ‘Saul, Saul, why do you fight against me?’ People called the early Christians ‘Those who followed the Way of the Lord’."
+      "text": "Saul fell down onto the ground. He heard a voice which said to him, ‘Saul, Saul, why do you fight against me?’"
     },
     {
       "verse": "5",
@@ -1254,7 +1254,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "So Ananias went to Judas's house and he went inside. He put his hands on Saul and he said to him, ‘Brother Saul, the Lord Jesus himself has sent me here to you. It was Jesus that you saw on the road when you were coming here to Damascus. He has sent me to you so that you will be able to see again. God will also fill you with his Holy Spirit.’ Brother is a name that a Christian may call another Christian."
+      "text": "So Ananias went to Judas's house and he went inside. He put his hands on Saul and he said to him, ‘Brother Saul, the Lord Jesus himself has sent me here to you. It was Jesus that you saw on the road when you were coming here to Damascus. He has sent me to you so that you will be able to see again. God will also fill you with his Holy Spirit.’"
     },
     {
       "verse": "18",
@@ -1262,7 +1262,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then Saul ate some food and he became strong again. Saul teaches people about JesusSaul stayed with the believers in Damascus for a few days."
+      "text": "Then Saul ate some food and he became strong again.Saul stayed with the believers in Damascus for a few days."
     },
     {
       "verse": "20",
@@ -1286,7 +1286,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "But one night, Saul's friends helped him to leave the city secretly. They put him in a basket. Then they put him through a hole in the city wall. Then they let the basket go slowly down to the ground outside the city. Paul's friends tied a rope to the basket and they held the rope. Then they let the basket go down to the ground. Saul returns to Jerusalem"
+      "text": "But one night, Saul's friends helped him to leave the city secretly. They put him in a basket. Then they put him through a hole in the city wall. Then they let the basket go slowly down to the ground outside the city."
     },
     {
       "verse": "26",
@@ -1302,7 +1302,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Saul also talked with the Jews who spoke the Greek language. He argued with them about Jesus. As a result, they wanted to kill him. Saul could speak the Greek language. Most people in that part of the world spoke Greek."
+      "text": "Saul also talked with the Jews who spoke the Greek language. He argued with them about Jesus. As a result, they wanted to kill him."
     },
     {
       "verse": "30",
@@ -1310,7 +1310,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "By this time there were believers everywhere in Judea, Galilee and Samaria. For some time they had no troubles. The Holy Spirit helped them to become strong. So more people became believers, and they obeyed God in everything that they did. Peter travels to Lydda and Joppa"
+      "text": "By this time there were believers everywhere in Judea, Galilee and Samaria. For some time they had no troubles. The Holy Spirit helped them to become strong. So more people became believers, and they obeyed God in everything that they did."
     },
     {
       "verse": "32",
@@ -1330,7 +1330,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "There was a woman called Tabitha who lived in Joppa. She was a believer. In the Greek language, her name was Dorcas, which means ‘deer’. She was always doing good things to help people. She gave poor people the things that they needed. Joppa was a town 45 kilometres from Jerusalem. At that time, it was an important sea port in Judea. Joppa was about 20 kilometres from Lydda. Tabitha was her name in the Aramaic language. Most Jews spoke the Aramaic language. They might also speak the Hebrew language. Greek is the language that people spoke in Greece, but a lot of people in other countries also spoke it."
+      "text": "There was a woman called Tabitha who lived in Joppa. She was a believer. In the Greek language, her name was Dorcas, which means ‘deer’. She was always doing good things to help people. She gave poor people the things that they needed."
     },
     {
       "verse": "37",
@@ -1358,7 +1358,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Peter stayed in Joppa for many days. He stayed with a man called Simon, who was a tanner. A ‘tanner’ is someone who works with animal skins to make leather. Print... Use screen font size Show All Comments Acts 8Acts 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Peter stayed in Joppa for many days. He stayed with a man called Simon, who was a tanner."
     }
   ],
   "10": [
@@ -1368,15 +1368,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Cornelius was a good man. He and all his family served God faithfully. Cornelius prayed to God every day. He also gave money to help poor Jewish people. Cornelius was a not a Jew. But he believed in God and he obeyed the Law of Moses. His family and all his servants also obeyed God."
+      "text": "Cornelius was a good man. He and all his family served God faithfully. Cornelius prayed to God every day. He also gave money to help poor Jewish people."
     },
     {
       "verse": "3",
-      "text": "One afternoon, at about three o'clock, Cornelius had a vision. He clearly saw one of God's angels. The angel came in and said to him, ‘Cornelius!’ Three o'clock in the afternoon was a time when the Jews prayed to God. Cornelius was praying when he saw the angel in his dream."
+      "text": "One afternoon, at about three o'clock, Cornelius had a vision. He clearly saw one of God's angels. The angel came in and said to him, ‘Cornelius!’"
     },
     {
       "verse": "4",
-      "text": "Cornelius looked at the angel and he was afraid. He asked, ‘Master, why have you come to me?’ The angel answered, ‘God has heard your prayers. He knows about all the money that you give to poor people. This has pleased him. Now God is answering your prayers."
+      "text": "Cornelius looked at the angel and he was afraid. He asked, ‘Master, why have you come to me?’The angel answered, ‘God has heard your prayers. He knows about all the money that you give to poor people. This has pleased him. Now God is answering your prayers."
     },
     {
       "verse": "5",
@@ -1384,7 +1384,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "He is staying at the house of Simon the tanner. His house is near the sea.’ A ‘tanner’ is someone who works with animal skins to make leather."
+      "text": "He is staying at the house of Simon the tanner. His house is near the sea.’"
     },
     {
       "verse": "7",
@@ -1392,7 +1392,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Cornelius explained to these three men what the angel had said to him. Then he sent them to Joppa. Joppa was about 50 kilometres from Caesarea."
+      "text": "Cornelius explained to these three men what the angel had said to him. Then he sent them to Joppa."
     },
     {
       "verse": "9",
@@ -1412,11 +1412,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then Peter heard a voice that said to him, ‘Peter, stand up and kill some of these animals. Then you can cook them and eat the meat.’ In those days, in Israel, all the houses had flat roofs. People sat up there after they had finished working. It was quiet there."
+      "text": "Then Peter heard a voice that said to him, ‘Peter, stand up and kill some of these animals. Then you can cook them and eat the meat.’"
     },
     {
       "verse": "14",
-      "text": "Peter answered, ‘No, Lord, I would certainly not do that. I have never eaten an animal that our Law says is unclean.’ We can read about these laws in Leviticus 11. The animals inside the cloth included animals that these laws would not allow a Jew to eat."
+      "text": "Peter answered, ‘No, Lord, I would certainly not do that. I have never eaten an animal that our Law says is unclean.’"
     },
     {
       "verse": "15",
@@ -1452,7 +1452,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then Peter said to the men, ‘Please come into the house and stay here with us tonight.’ Peter at Cornelius's houseThe next day, Peter left Joppa to go to Caesarea with Cornelius's men. Some believers who lived in Joppa travelled with them."
+      "text": "Then Peter said to the men, ‘Please come into the house and stay here with us tonight.’The next day, Peter left Joppa to go to Caesarea with Cornelius's men. Some believers who lived in Joppa travelled with them."
     },
     {
       "verse": "24",
@@ -1476,7 +1476,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "So when you asked me to come here, I was happy to come. I knew that it was right. So tell me now. Why did you ask me to come?’ Peter now understood more about his own dream. He knew that God was teaching him something. The dream was a message from God about all people. All people can be believers. People can be either Jews or Gentiles. God will accept everyone."
+      "text": "So when you asked me to come here, I was happy to come. I knew that it was right. So tell me now. Why did you ask me to come?’"
     },
     {
       "verse": "30",
@@ -1492,7 +1492,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "So I sent some men immediately to bring you here. Thank you that you agreed to come. Now we are all here together, and God is with us. We are ready to listen to your message. Please tell us everything that the Lord God has told you to say.’ Peter speaks to Cornelius and to his family and friends"
+      "text": "So I sent some men immediately to bring you here. Thank you that you agreed to come. Now we are all here together, and God is with us. We are ready to listen to your message. Please tell us everything that the Lord God has told you to say.’"
     },
     {
       "verse": "34",
@@ -1532,7 +1532,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Then Peter said, ‘All of God's prophets spoke about Jesus as God's Messiah. They said that God would forgive everyone who believes in him. He would forgive them for their sins because of what Jesus, the Messiah, would do.’ Gentiles receive the Holy Spirit"
+      "text": "Then Peter said, ‘All of God's prophets spoke about Jesus as God's Messiah. They said that God would forgive everyone who believes in him. He would forgive them for their sins because of what Jesus, the Messiah, would do.’"
     },
     {
       "verse": "44",
@@ -1544,7 +1544,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "They heard the new believers speaking in strange languages. They were also praising God. Then Peter said,"
+      "text": "They heard the new believers speaking in strange languages. They were also praising God.Then Peter said,"
     },
     {
       "verse": "47",
@@ -1552,7 +1552,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "So Peter told the Jewish believers to baptize the new believers. They spoke the name of Jesus Christ when they baptized them. After that, Cornelius asked Peter to stay with them for a few days. Print... Use screen font size Show All Comments Acts 9Acts 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Peter told the Jewish believers to baptize the new believers. They spoke the name of Jesus Christ when they baptized them. After that, Cornelius asked Peter to stay with them for a few days."
     }
   ],
   "11": [
@@ -1566,7 +1566,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So they said to Peter, ‘You stayed in the house of men who were not circumcised. You even ate meals with them!’ The Jews that spoke to Peter believed in Jesus. They thought that Peter had done a wrong thing. He had stayed with people who were not Jews. And he had even eaten meals with them."
+      "text": "So they said to Peter, ‘You stayed in the house of men who were not circumcised. You even ate meals with them!’"
     },
     {
       "verse": "4",
@@ -1626,7 +1626,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Jewish believers heard what Peter said. They could not say anything more against him. Instead, they praised God and they said, ‘We now see that God has also let Gentiles have life with him. He will accept them if they stop doing bad things and turn to him.’ The believers go to Antioch"
+      "text": "The Jewish believers heard what Peter said. They could not say anything more against him. Instead, they praised God and they said, ‘We now see that God has also let Gentiles have life with him. He will accept them if they stop doing bad things and turn to him.’"
     },
     {
       "verse": "19",
@@ -1666,7 +1666,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "One of these men was called Agabus. The Holy Spirit gave him a message from God. He stood up and he said to the people there, ‘Soon people will be very hungry all over the world because there will be no food.’ (That happened when Claudius ruled the Roman world.) Claudius ruled the Roman world from AD 41 to 54. There was a famine in many parts of the Roman world at that time. In Judea, this happened in AD 46."
+      "text": "One of these men was called Agabus. The Holy Spirit gave him a message from God. He stood up and he said to the people there, ‘Soon people will be very hungry all over the world because there will be no food.’ (That happened when Claudius ruled the Roman world.)"
     },
     {
       "verse": "29",
@@ -1674,7 +1674,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Then they gave the money to Barnabas and Saul. Barnabas and Saul took this gift to the leaders of the believers in Jerusalem. Print... Use screen font size Show All Comments Acts 10Acts 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then they gave the money to Barnabas and Saul. Barnabas and Saul took this gift to the leaders of the believers in Jerusalem."
     }
   ],
   "12": [
@@ -1684,19 +1684,19 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He sent his soldiers to cut off James's head. James was John's brother. James and John were sons of Zebedee. King Herod killed James about 10 years after Jesus became alive again."
+      "text": "He sent his soldiers to cut off James's head. James was John's brother."
     },
     {
       "verse": "3",
-      "text": "King Herod saw that the Jews were happy because he had killed James. So he sent his soldiers to take hold of Peter too. This happened during the Festival of Flat Bread. The Jews usually made bread with yeast, flour and water. But during the week of the Passover festival they did not use any yeast in their bread."
+      "text": "King Herod saw that the Jews were happy because he had killed James. So he sent his soldiers to take hold of Peter too. This happened during the Festival of Flat Bread."
     },
     {
       "verse": "4",
-      "text": "After the soldiers caught Peter, they put him in prison. While he was in prison, four different groups of soldiers guarded him. There were four soldiers in each group. Herod wanted to judge Peter in front of everybody. After the Passover festival had finished, he would bring Peter out of the prison to do this. Each group of soldiers guarded the prison for four hours. When one group stopped the next group started. They did this day and night."
+      "text": "After the soldiers caught Peter, they put him in prison. While he was in prison, four different groups of soldiers guarded him. There were four soldiers in each group. Herod wanted to judge Peter in front of everybody. After the Passover festival had finished, he would bring Peter out of the prison to do this."
     },
     {
       "verse": "5",
-      "text": "So Herod kept Peter in prison. But during that time, the group of believers prayed that God would help Peter. Peter walks out of the prison"
+      "text": "So Herod kept Peter in prison. But during that time, the group of believers prayed that God would help Peter."
     },
     {
       "verse": "6",
@@ -1724,7 +1724,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When Peter realized what God had done for him, he went to Mary's house. She was the mother of John Mark. Many people were meeting together in her house. They were praying to God. It is possible that John Mark wrote Mark's book about Jesus. Mary was the aunt of Barnabas."
+      "text": "When Peter realized what God had done for him, he went to Mary's house. She was the mother of John Mark. Many people were meeting together in her house. They were praying to God."
     },
     {
       "verse": "13",
@@ -1736,7 +1736,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The people in the house said to her, ‘You are crazy.’ But she told them again that Peter really was there. So then they said, ‘It is not him, but it is his angel.’ At that time, some people believed that everyone had an angel. These angels kept them safe."
+      "text": "The people in the house said to her, ‘You are crazy.’ But she told them again that Peter really was there. So then they said, ‘It is not him, but it is his angel.’"
     },
     {
       "verse": "16",
@@ -1744,19 +1744,19 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Peter raised his hand towards them so that they would all be quiet. Then he explained to them how the Lord God had brought him out of the prison. He said to them, ‘Tell James and all the other believers what has happened to me.’ Then he left the house and he went away to another place. This is a different man called James than the man that Herod killed."
+      "text": "Peter raised his hand towards them so that they would all be quiet. Then he explained to them how the Lord God had brought him out of the prison. He said to them, ‘Tell James and all the other believers what has happened to me.’ Then he left the house and he went away to another place."
     },
     {
       "verse": "18",
-      "text": "When morning arrived, there was a lot of trouble at the prison. The soldiers did not understand what had happened to Peter."
+      "text": "When morning arrived, there was a lot of trouble at the prison. The soldiers did not understand what had happened to Peter. After this happened, Herod left Judea. He went to Caesarea and he stayed there for some time."
     },
     {
       "verse": "19",
-      "text": "When Herod knew about it, he said to the soldiers, ‘Go and look for Peter!’ But they could not find him anywhere. Herod then asked the soldiers who guarded the prison some questions. They could not explain what had happened. So Herod commanded other soldiers to cut off their heads. After this happened, Herod left Judea. He went to Caesarea and he stayed there for some time. King Herod dies"
+      "text": "When Herod knew about it, he said to the soldiers, ‘Go and look for Peter!’ But they could not find him anywhere. Herod then asked the soldiers who guarded the prison some questions. They could not explain what had happened. So Herod commanded other soldiers to cut off their heads.After this happened, Herod left Judea. He went to Caesarea and he stayed there for some time."
     },
     {
       "verse": "20",
-      "text": "At that time, King Herod was angry with the people who lived in Tyre and Sidon. A group of men from these cities went together to speak to Herod about the problem. A man called Blastus was an important servant in King Herod's house. The group of men said to Blastus, ‘Please help us when we speak to King Herod.’ Then they went and they said to Herod, ‘Please stop being angry with our people. We want to be friends again.’ They said this because they needed to buy food in King Herod's country. The Romans ruled Tyre and Sidon. These were not Jewish cities. And the people did not want Herod to rule them. But they bought their food from Galilee. And the problem was that Herod ruled in Galilee."
+      "text": "At that time, King Herod was angry with the people who lived in Tyre and Sidon. A group of men from these cities went together to speak to Herod about the problem. A man called Blastus was an important servant in King Herod's house. The group of men said to Blastus, ‘Please help us when we speak to King Herod.’ Then they went and they said to Herod, ‘Please stop being angry with our people. We want to be friends again.’ They said this because they needed to buy food in King Herod's country."
     },
     {
       "verse": "21",
@@ -1768,7 +1768,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Herod let the people praise him, instead of God. So, immediately, an angel of the Lord God caused him to become very ill. Worms ate his body and later he died. Barnabas and Saul return to Antioch"
+      "text": "Herod let the people praise him, instead of God. So, immediately, an angel of the Lord God caused him to become very ill. Worms ate his body and later he died."
     },
     {
       "verse": "24",
@@ -1776,13 +1776,13 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Barnabas and Saul had gone to Jerusalem to help the believers there. They finished their work and then they returned to Antioch. They took John Mark with them. Print... Use screen font size Show All Comments Acts 11Acts 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Barnabas and Saul had gone to Jerusalem to help the believers there. They finished their work and then they returned to Antioch. They took John Mark with them."
     }
   ],
   "13": [
     {
       "verse": "1",
-      "text": "There were some prophets among the group of believers in Antioch. They taught the other believers more about Jesus. Barnabas and Simeon were two of these men. (People also called Simeon ‘Niger’.) There was Lucius who had lived in Cyrene. There was also Manaen who had lived together with the ruler Herod when they were children. And there was Saul. Niger’ was a word in the language of the Roman people (Latin). It means ‘Black’. Simeon was probably a man with dark skin who came from north Africa."
+      "text": "There were some prophets among the group of believers in Antioch. They taught the other believers more about Jesus. Barnabas and Simeon were two of these men. (People also called Simeon ‘Niger’.) There was Lucius who had lived in Cyrene. There was also Manaen who had lived together with the ruler Herod when they were children. And there was Saul."
     },
     {
       "verse": "2",
@@ -1790,7 +1790,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The believers continued to pray and to fast. Then the leaders put their hands on Barnabas and Saul and they prayed for them. They sent them away to start this new work. What happened in Cyprus"
+      "text": "The believers continued to pray and to fast. Then the leaders put their hands on Barnabas and Saul and they prayed for them. They sent them away to start this new work."
     },
     {
       "verse": "4",
@@ -1802,7 +1802,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "They travelled across the whole island and they arrived at a town called Paphos. There they met a man called Bar-Jesus. He was a Jew. He used magic to do surprising things. He said that he was a prophet from God. But his messages were not true. Bar-Jesus’ means ‘the son of Jesus’."
+      "text": "They travelled across the whole island and they arrived at a town called Paphos. There they met a man called Bar-Jesus. He was a Jew. He used magic to do surprising things. He said that he was a prophet from God. But his messages were not true."
     },
     {
       "verse": "7",
@@ -1822,11 +1822,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Lord will now punish you. You will become blind for a time. You will not even see the light of the sun.’ Luke now begins to call Saul by his new name, Paul. When Paul said that, immediately something like a dark cloud covered Elymas's eyes. He could not find his own way. He needed someone to lead him by the hand."
+      "text": "The Lord will now punish you. You will become blind for a time. You will not even see the light of the sun.’When Paul said that, immediately something like a dark cloud covered Elymas's eyes. He could not find his own way. He needed someone to lead him by the hand."
     },
     {
       "verse": "12",
-      "text": "Sergius Paulus saw what had happened to Elymas. He was very surprised about the things that Barnabas and Paul taught him about the Lord Jesus. And so he believed in Jesus. Paul and Barnabas go to Antioch in Pisidia"
+      "text": "Sergius Paulus saw what had happened to Elymas. He was very surprised about the things that Barnabas and Paul taught him about the Lord Jesus. And so he believed in Jesus."
     },
     {
       "verse": "13",
@@ -1858,7 +1858,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "All of these things happened during about 450 years. We can read about the Israelites when they left Egypt in Exodus 12. After this, God gave to his people leaders who were called judges. They ruled Israel until the time when God's prophet Samuel was alive."
+      "text": "years.After this, God gave to his people leaders who were called judges. They ruled Israel until the time when God's prophet Samuel was alive."
     },
     {
       "verse": "21",
@@ -1866,7 +1866,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then God removed Saul as king. He caused David to be their king instead. God said this about David: “I have watched David, the son of Jesse. He does things that make me happy. I know that he will do everything that I want.” We can read about Samuel, Saul and David in 1 Samuel 8-31."
+      "text": "Then God removed Saul as king. He caused David to be their king instead. God said this about David: “I have watched David, the son of Jesse. He does things that make me happy. I know that he will do everything that I want.”"
     },
     {
       "verse": "23",
@@ -1878,7 +1878,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "When John had almost finished his work, he said to the people, “Perhaps you think that I am the special man that God will send. I am not that man. But listen! That man will come soon. I am not good enough even to undo his shoes for him.” ’ We can read about John the Baptist and his work in Luke 3. It was the job of servants to remove their master's shoes."
+      "text": "When John had almost finished his work, he said to the people, “Perhaps you think that I am the special man that God will send. I am not that man. But listen! That man will come soon. I am not good enough even to undo his shoes for him.” ’"
     },
     {
       "verse": "26",
@@ -1902,23 +1902,23 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "For many days after this, Jesus appeared to his disciples. The people who had earlier travelled with him from Galilee to Jerusalem saw him. They are now telling the people of Israel all about it. We can read about what happened to Jesus in Jerusalem in Luke 22-24."
+      "text": "For many days after this, Jesus appeared to his disciples. The people who had earlier travelled with him from Galilee to Jerusalem saw him. They are now telling the people of Israel all about it."
     },
     {
       "verse": "32",
-      "text": "So we have come here to tell you this good news. God promised our ancestors that he would do these great things for his people."
+      "text": "So we have come here to tell you this good news. God promised our ancestors that he would do these great things for his people. “You are my Son. Today, I have become your Father.”"
     },
     {
       "verse": "33",
-      "text": "Now he has done these things for us who are alive today. He has raised up Jesus to live again. We can read about this in the second Psalm. God says, “You are my Son. Today, I have become your Father.” See Psalm"
+      "text": "Now he has done these things for us who are alive today. He has raised up Jesus to live again. We can read about this in the second Psalm. God says,“You are my Son.Today, I have become your Father.”"
     },
     {
       "verse": "34",
-      "text": "God caused Jesus to live again so that nothing would destroy his body. He will not die again. This is what God said to our ancestors: “I will surely help you with good things, just like I promised to King David.” See Isaiah"
+      "text": "God caused Jesus to live again so that nothing would destroy his body. He will not die again. This is what God said to our ancestors:“I will surely help you with good things,just like I promised to King David.” “I will surely help you with good things, just like I promised to King David.”"
     },
     {
       "verse": "35",
-      "text": "God also says this in another Psalm: “Your servant who loves you will not remain dead. You will not let anything destroy the body of your Holy One.” See Psalm"
+      "text": "God also says this in another Psalm:“Your servant who loves you will not remain dead.You will not let anything destroy the body of your Holy One.” “Your servant who loves you will not remain dead. You will not let anything destroy the body of your Holy One.”"
     },
     {
       "verse": "36",
@@ -1938,11 +1938,11 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Be careful then! Remember what God's prophets spoke about long ago. Do not let that happen to you. This is what one of them wrote: See Habakkuk"
+      "text": "Be careful then! Remember what God's prophets spoke about long ago. Do not let that happen to you. This is what one of them wrote:"
     },
     {
       "verse": "41",
-      "text": "“Listen to me, you people who laugh at God! You will be surprised at the great things that I do. And then you will die. I am working now, while you are still alive. But still you will not believe what is true. Even if someone explains everything to you, you will never believe.” ’"
+      "text": "“Listen to me, you people who laugh at God!You will be surprised at the great things that I do.And then you will die.I am working now, while you are still alive.But still you will not believe what is true.Even if someone explains everything to you,you will never believe.” ’ You will be surprised at the great things that I do. And then you will die. I am working now, while you are still alive. But still you will not believe what is true. Even if someone explains everything to you, you will never believe.” ’"
     },
     {
       "verse": "42",
@@ -1966,7 +1966,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "The Lord God has also told us to do this. He said: “I have chosen you to be like a light to the Gentiles. You must go to people everywhere in the world. You must tell them how God wants to save them.” ’ See Isaiah"
+      "text": "The Lord God has also told us to do this. He said:“I have chosen you to be like a light to the Gentiles.You must go to people everywhere in the world.You must tell them how God wants to save them.” ’ “I have chosen you to be like a light to the Gentiles. You must go to people everywhere in the world. You must tell them how God wants to save them.” ’"
     },
     {
       "verse": "48",
@@ -1986,7 +1986,7 @@ module.exports = {
     },
     {
       "verse": "52",
-      "text": "The believers in Antioch continued to be very happy. The Holy Spirit completely filled them. Print... Use screen font size Show All Comments Acts 12Acts 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The believers in Antioch continued to be very happy. The Holy Spirit completely filled them."
     }
   ],
   "14": [
@@ -2016,7 +2016,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "In all these places, they continued to tell people the good news about Jesus. This is what happened in Lystra"
+      "text": "In all these places, they continued to tell people the good news about Jesus."
     },
     {
       "verse": "8",
@@ -2036,11 +2036,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "They called Barnabas ‘Zeus’. They called Paul ‘Hermes’, because he was the one who spoke the message to the people. Zeus and Hermes were the names of two Greek gods. Zeus was the leader of the Greek gods. And Hermes was the god who gave messages from Zeus to the people."
+      "text": "They called Barnabas ‘Zeus’. They called Paul ‘Hermes’, because he was the one who spoke the message to the people."
     },
     {
       "verse": "13",
-      "text": "The temple of Zeus was very near to the town. The priest who worked there brought bulls and flowers to the town gate. Many people had come together in that place. The priest and the crowd wanted to kill the animals as sacrifices to Paul and Barnabas. They thought that Paul and Barnabas were gods that they should offer sacrifices to."
+      "text": "The temple of Zeus was very near to the town. The priest who worked there brought bulls and flowers to the town gate. Many people had come together in that place. The priest and the crowd wanted to kill the animals as sacrifices to Paul and Barnabas."
     },
     {
       "verse": "14",
@@ -2068,7 +2068,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But some believers came out from the town and they stood around Paul. Then Paul stood up! He went back with them into the town. Paul and Barnabas return to Antioch in SyriaThe next day, Paul and Barnabas left Lystra and they went to Derbe."
+      "text": "But some believers came out from the town and they stood around Paul. Then Paul stood up! He went back with them into the town.The next day, Paul and Barnabas left Lystra and they went to Derbe."
     },
     {
       "verse": "21",
@@ -2100,13 +2100,13 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Paul and Barnabas stayed there with the believers in Antioch for a long time. Print... Use screen font size Show All Comments Acts 13Acts 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Paul and Barnabas stayed there with the believers in Antioch for a long time."
     }
   ],
   "15": [
     {
       "verse": "1",
-      "text": "Some men arrived in Antioch from Judea. They began to teach the believers there who were not Jews. They said to them, ‘God cannot save you unless someone circumcises you. This is in the Law that God gave to Moses.’ These men were Jewish believers."
+      "text": "Some men arrived in Antioch from Judea. They began to teach the believers there who were not Jews. They said to them, ‘God cannot save you unless someone circumcises you. This is in the Law that God gave to Moses.’"
     },
     {
       "verse": "2",
@@ -2138,7 +2138,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He made no difference between them and us. When they believed in Jesus, he saved them. He made them clean inside. Peter was one of the apostles."
+      "text": "He made no difference between them and us. When they believed in Jesus, he saved them. He made them clean inside."
     },
     {
       "verse": "10",
@@ -2166,15 +2166,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The Lord God said, “Later I will return. At that time I will make David's kingdom strong again. Jesus was a descendant of King David. It has become like a house that has fallen down, but I will build it again so that it is strong."
+      "text": "The Lord God said,“Later I will return.At that time I will make David's kingdom strong again.It has become like a house that has fallen down,but I will build it again so that it is strong. “Later I will return. At that time I will make David's kingdom strong again. It has become like a house that has fallen down, but I will build it again so that it is strong."
     },
     {
       "verse": "17",
-      "text": "Then many other people will want to know me, the Lord God. Those are the Gentiles that I have chosen to belong to me. I, the Lord God, say this, and I will make these things happen."
+      "text": "Then many other people will want to know me, the Lord God.Those are the Gentiles that I have chosen to belong to me.I, the Lord God, say this,and I will make these things happen. Those are the Gentiles that I have chosen to belong to me. I, the Lord God, say this, and I will make these things happen."
     },
     {
       "verse": "18",
-      "text": "Long ago I caused people to know all these things.” ’ See Amos"
+      "text": "Long ago I caused people to know all these things.” ’"
     },
     {
       "verse": "19",
@@ -2186,7 +2186,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "These rules are important, because people have known the Law of Moses for a very long time. On every Jewish day of rest, someone teaches us about the Law in our Jewish meeting places in every city.’ We can read about these rules in Leviticus The leaders in Jerusalem write a letter to the Gentile believers"
+      "text": "These rules are important, because people have known the Law of Moses for a very long time. On every Jewish day of rest, someone teaches us about the Law in our Jewish meeting places in every city.’"
     },
     {
       "verse": "22",
@@ -2194,7 +2194,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "This is the letter that they sent with those men: ‘We, the apostles and leaders of the believers here say “hello” to you, our friends who also believe in Jesus. We say “hello” to all of you Gentile believers who live in Antioch, Syria and Cilicia. Antioch was a city, but Syria and Cilicia were regions."
+      "text": "This is the letter that they sent with those men:‘We, the apostles and leaders of the believers here say “hello” to you, our friends who also believe in Jesus. We say “hello” to all of you Gentile believers who live in Antioch, Syria and Cilicia. ‘We, the apostles and leaders of the believers here say “hello” to you, our friends who also believe in Jesus. We say “hello” to all of you Gentile believers who live in Antioch, Syria and Cilicia."
     },
     {
       "verse": "24",
@@ -2238,7 +2238,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "[But Silas decided to stay there.] Many Bibles leave out Acts"
+      "text": "[But Silas decided to stay there.]"
     },
     {
       "verse": "35",
@@ -2266,7 +2266,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "They travelled through Syria and Cilicia. Paul taught the believers in those regions. He helped them to be strong and to trust Jesus. Print... Use screen font size Show All Comments Acts 14Acts 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They travelled through Syria and Cilicia. Paul taught the believers in those regions. He helped them to be strong and to trust Jesus."
     }
   ],
   "16": [
@@ -2280,7 +2280,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Paul wanted Timothy to travel with him to different places. All the Jews in that region knew that Timothy's father was a Gentile. So Paul circumcised Timothy, so that the Jews would accept him. Timothy's father was not a Jew. So nobody had circumcised Timothy when he was a baby. Paul wanted Timothy to go with him to help him with his work. Paul wanted to tell Jews, not only Gentiles, the good news about Jesus. These Jews knew Timothy. They knew that his father was not a Jew. This is why Paul circumcised Timothy. If he had not done this, the Jews would not have accepted him."
+      "text": "Paul wanted Timothy to travel with him to different places. All the Jews in that region knew that Timothy's father was a Gentile. So Paul circumcised Timothy, so that the Jews would accept him."
     },
     {
       "verse": "4",
@@ -2288,7 +2288,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "In this way, the groups of believers in those towns became stronger. They trusted Jesus more. More and more people joined the groups of believers every day. Paul has a vision"
+      "text": "In this way, the groups of believers in those towns became stronger. They trusted Jesus more. More and more people joined the groups of believers every day."
     },
     {
       "verse": "6",
@@ -2308,7 +2308,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "After Paul's vision, we immediately prepared ourselves for the journey to Macedonia. We decided that God was telling us to go there. He wanted us to tell the people there the good news about Jesus. We' is used here so it seems that Luke met Paul, Silas and Timothy in Troas. Lydia becomes a believer"
+      "text": "After Paul's vision, we immediately prepared ourselves for the journey to Macedonia. We decided that God was telling us to go there. He wanted us to tell the people there the good news about Jesus."
     },
     {
       "verse": "11",
@@ -2320,7 +2320,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "On the Jewish day of rest, we went out of the city gate. We went down to the edge of the river. We thought that the Jews might have a special meeting place there. We thought that they would meet there to pray. We found a group of women who were meeting there. So we sat down and we talked to them. Not many Jews were living in Philippi, so they did not have a synagogue. Instead, they met at the side of the river to pray together."
+      "text": "On the Jewish day of rest, we went out of the city gate. We went down to the edge of the river. We thought that the Jews might have a special meeting place there. We thought that they would meet there to pray. We found a group of women who were meeting there. So we sat down and we talked to them."
     },
     {
       "verse": "14",
@@ -2328,7 +2328,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Paul and Silas baptized Lydia and the other people who lived in her house. After this, Lydia asked us to go to her house. She said to us, ‘If you think that I really believe in the Lord Jesus, then please stay in my house.’ We agreed to go and to stay there. The Roman rulers put Paul and Silas in prison"
+      "text": "Then Paul and Silas baptized Lydia and the other people who lived in her house. After this, Lydia asked us to go to her house. She said to us, ‘If you think that I really believe in the Lord Jesus, then please stay in my house.’ We agreed to go and to stay there."
     },
     {
       "verse": "16",
@@ -2376,7 +2376,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The prison guard woke up. He saw that the prison doors were open. He thought that all the people in the prison had become free. He decided that he should kill himself. So he pulled out his sword. The guard thought that the people in the prison had run away. He knew that this would be a very bad thing for him. If this had happened, the leader of the soldiers would kill him. So he decided to kill himself."
+      "text": "The prison guard woke up. He saw that the prison doors were open. He thought that all the people in the prison had become free. He decided that he should kill himself. So he pulled out his sword."
     },
     {
       "verse": "28",
@@ -2428,7 +2428,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "After Paul and Silas left the prison, they went to Lydia's house. There they met the other believers. They spoke to the believers to make them strong. Then Paul and Silas left Philippi. Luke did not go with Paul and Silas when they left Philippi. Print... Use screen font size Show All Comments Acts 15Acts 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After Paul and Silas left the prison, they went to Lydia's house. There they met the other believers. They spoke to the believers to make them strong. Then Paul and Silas left Philippi."
     }
   ],
   "17": [
@@ -2442,11 +2442,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He told the people what was true about God's Messiah. He used the Bible to show them clearly that the Messiah had to suffer and die. He also showed them that the Messiah had to become alive again. Paul said to them, ‘I have been telling you about Jesus. He is the Messiah that God has sent to us.’ Amphipolis and Apollonia were in the country called Greece."
+      "text": "He told the people what was true about God's Messiah. He used the Bible to show them clearly that the Messiah had to suffer and die. He also showed them that the Messiah had to become alive again. Paul said to them, ‘I have been telling you about Jesus. He is the Messiah that God has sent to us.’"
     },
     {
       "verse": "4",
-      "text": "Some of the Jews believed Paul's message. They joined the group with Paul and Silas. A large number of Greek people who now worshipped God also joined this group. Many important women in the city also believed and they joined the group. Most of the people that lived in Thessalonica were Greek. They were not born as Jews. But some of them had heard about the God of the Jews and they believed in him."
+      "text": "Some of the Jews believed Paul's message. They joined the group with Paul and Silas. A large number of Greek people who now worshipped God also joined this group. Many important women in the city also believed and they joined the group."
     },
     {
       "verse": "5",
@@ -2466,7 +2466,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The officers decided how much money Jason and the other believers should pay to go free. When they received it, they allowed them to go. Many people in Berea believe Paul's message"
+      "text": "The officers decided how much money Jason and the other believers should pay to go free. When they received it, they allowed them to go."
     },
     {
       "verse": "10",
@@ -2490,7 +2490,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "When Paul left Berea, some men went with him. They went with him as far as the city of Athens. Before these men returned to Berea, Paul gave them a message for Silas and Timothy. He said, ‘Please come quickly and meet me here in Athens.’ Athens is a city that was in the country called Achaia. Today, Athens is the capital city of Greece. Paul visits Athens"
+      "text": "When Paul left Berea, some men went with him. They went with him as far as the city of Athens. Before these men returned to Berea, Paul gave them a message for Silas and Timothy. He said, ‘Please come quickly and meet me here in Athens.’"
     },
     {
       "verse": "16",
@@ -2502,7 +2502,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "There were some teachers there who liked to talk about the things that people should believe. Some of them were called Epicureans and some were called Stoics. After they talked to Paul, some of them said to each other, ‘Who is this silly man? He knows nothing and he talks too much!’ But some of these teachers said, ‘We think that he is talking about strange gods.’ They said this because Paul was telling people the good news about Jesus. He was also talking about the time when God will cause dead people to live again. The Epicureans were disciples of Epicurus. He taught that there were no gods. Or that the gods were not near to the people. The Stoics were disciples of Zeno. Zeno taught that everyone should be good to themselves. They should also do the right things for other people. He taught that God was the soul of the world."
+      "text": "There were some teachers there who liked to talk about the things that people should believe. Some of them were called Epicureans and some were called Stoics. After they talked to Paul, some of them said to each other, ‘Who is this silly man? He knows nothing and he talks too much!’ But some of these teachers said, ‘We think that he is talking about strange gods.’ They said this because Paul was telling people the good news about Jesus. He was also talking about the time when God will cause dead people to live again."
     },
     {
       "verse": "19",
@@ -2514,7 +2514,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "(The people of Athens liked to talk about new ideas. So did the foreign people who lived there. They all wanted to hear new things and to talk about them. They seemed to do this all the time.) These important men were the rulers of Athens and they met together on the Areopagus hill. They decided what should happen in the city."
+      "text": "(The people of Athens liked to talk about new ideas. So did the foreign people who lived there. They all wanted to hear new things and to talk about them. They seemed to do this all the time.)"
     },
     {
       "verse": "22",
@@ -2566,13 +2566,13 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Some of the people who had heard Paul's message joined his group. They believed the good news about Jesus. One of these believers was a man called Dionysius. He belonged to the group of important officers. A woman called Damaris also became a believer. Several other people also believed Paul's message about Jesus. Print... Use screen font size Show All Comments Acts 16Acts 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Some of the people who had heard Paul's message joined his group. They believed the good news about Jesus. One of these believers was a man called Dionysius. He belonged to the group of important officers. A woman called Damaris also became a believer. Several other people also believed Paul's message about Jesus."
     }
   ],
   "18": [
     {
       "verse": "1",
-      "text": "After Paul had spoken to the important officers of Athens, he left the city. He went from there to the city of Corinth. Corinth is a city in Greece, about 75 kilometres from Athens."
+      "text": "After Paul had spoken to the important officers of Athens, he left the city. He went from there to the city of Corinth."
     },
     {
       "verse": "2",
@@ -2592,7 +2592,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Jews did not agree with Paul and they insulted him. So he shook the dirt off his clothes at them. He said to them, ‘If God punishes you, then you have caused it to happen. It will not be because of me. Now I will go to the Gentiles and I will teach them God's message.’ Paul cleaned the dirt off his clothes. This meant that Paul did not want to speak to those Jews again."
+      "text": "The Jews did not agree with Paul and they insulted him. So he shook the dirt off his clothes at them. He said to them, ‘If God punishes you, then you have caused it to happen. It will not be because of me. Now I will go to the Gentiles and I will teach them God's message.’"
     },
     {
       "verse": "7",
@@ -2600,7 +2600,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "A man called Crispus was the leader of the Jewish meeting place there. He, and everyone else who lived in his house, believed in the Lord Jesus. Many other people in Corinth heard Paul's message and they believed in Jesus. When they became believers, someone baptized them. Paul continued to teach in Corinth. But now he usually taught those who were not Jews. Most people who lived in Corinth were Greek."
+      "text": "A man called Crispus was the leader of the Jewish meeting place there. He, and everyone else who lived in his house, believed in the Lord Jesus. Many other people in Corinth heard Paul's message and they believed in Jesus. When they became believers, someone baptized them."
     },
     {
       "verse": "9",
@@ -2612,11 +2612,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So Paul stayed in Corinth for 18 months and he taught the people God's message about Jesus."
+      "text": "months and he taught the people God's message about Jesus."
     },
     {
       "verse": "12",
-      "text": "Gallio then became the Roman ruler of the region called Achaia. At this time the Jewish leaders in Corinth decided together to speak against Paul. So they took hold of him and they brought him to Gallio. They wanted Gallio to judge Paul. The men with authority in Rome caused Gallio to rule Achaia in AD 51."
+      "text": "Gallio then became the Roman ruler of the region called Achaia. At this time the Jewish leaders in Corinth decided together to speak against Paul. So they took hold of him and they brought him to Gallio. They wanted Gallio to judge Paul."
     },
     {
       "verse": "13",
@@ -2636,11 +2636,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then the whole crowd of people took hold of a man called Sosthenes. He was the leader of the Jewish meeting place there. The crowd hit him with sticks in front of Gallio. But Gallio did nothing to stop them. He did not think it was important. Paul travels from Corinth to Antioch"
+      "text": "Then the whole crowd of people took hold of a man called Sosthenes. He was the leader of the Jewish meeting place there. The crowd hit him with sticks in front of Gallio. But Gallio did nothing to stop them. He did not think it was important."
     },
     {
       "verse": "18",
-      "text": "Paul remained in Corinth with the believers for many days. Then he left them. Priscilla and Aquila also went with him. They went to the port called Cenchrea. They got on a ship there to sail to Syria. Before they left, someone cut off all the hair on Paul's head. This showed that he had made a promise to God. God had helped Paul to do many things in Corinth. Maybe he was saying thank you because God had helped him."
+      "text": "Paul remained in Corinth with the believers for many days. Then he left them. Priscilla and Aquila also went with him. They went to the port called Cenchrea. They got on a ship there to sail to Syria. Before they left, someone cut off all the hair on Paul's head. This showed that he had made a promise to God."
     },
     {
       "verse": "19",
@@ -2660,7 +2660,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He stayed in Antioch for some time. Then he left there and he travelled through the regions called Galatia and Phrygia. He spoke to all the believers in these places. He helped them to trust God and to be strong. These are some of the things that Apollos did"
+      "text": "He stayed in Antioch for some time. Then he left there and he travelled through the regions called Galatia and Phrygia. He spoke to all the believers in these places. He helped them to trust God and to be strong."
     },
     {
       "verse": "24",
@@ -2672,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Apollos went to the Jewish meeting place and he taught the people there. He was not afraid to speak God's message to them. Priscilla and Aquila heard what Apollos was teaching the people. So they said to him, ‘Please come with us to our home.’ Then they explained to Apollos the whole of God's message about Jesus. Then he could understand better. Alexandria was an important city in Egypt and in the world. And people went there to learn many different things."
+      "text": "Apollos went to the Jewish meeting place and he taught the people there. He was not afraid to speak God's message to them. Priscilla and Aquila heard what Apollos was teaching the people. So they said to him, ‘Please come with us to our home.’ Then they explained to Apollos the whole of God's message about Jesus. Then he could understand better."
     },
     {
       "verse": "27",
@@ -2680,21 +2680,21 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Some of the Jews there spoke against Apollos's message. But he argued strongly against them so that everyone could hear. He explained to them what God had said in the Bible. He showed them clearly that Jesus is God's Messiah. Print... Use screen font size Show All Comments Acts 17Acts 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Some of the Jews there spoke against Apollos's message. But he argued strongly against them so that everyone could hear. He explained to them what God had said in the Bible. He showed them clearly that Jesus is God's Messiah."
     }
   ],
   "19": [
     {
       "verse": "1",
-      "text": "While Apollos was in Corinth, Paul travelled through the region of Asia. He arrived in Ephesus and he found some believers there."
+      "text": "While Apollos was in Corinth, Paul travelled through the region of Asia. He arrived in Ephesus and he found some believers there. The believers answered, ‘We did not even know that there is a Holy Spirit.’"
     },
     {
       "verse": "2",
-      "text": "Paul asked them, ‘When you believed the message about Jesus, did you receive God's Holy Spirit?’ The believers answered, ‘We did not even know that there is a Holy Spirit.’"
+      "text": "Paul asked them, ‘When you believed the message about Jesus, did you receive God's Holy Spirit?’The believers answered, ‘We did not even know that there is a Holy Spirit.’"
     },
     {
       "verse": "3",
-      "text": "So Paul asked them, ‘When someone baptized you, what kind of baptism was that?’ ‘We received the baptism that John spoke about,’ they answered."
+      "text": "So Paul asked them, ‘When someone baptized you, what kind of baptism was that?’‘We received the baptism that John spoke about,’ they answered. ‘We received the baptism that John spoke about,’ they answered."
     },
     {
       "verse": "4",
@@ -2710,7 +2710,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "There were about 12 men there."
+      "text": "men there."
     },
     {
       "verse": "8",
@@ -2722,7 +2722,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Paul taught the people there for two years. During that time, all the people who lived in Asia region heard the message about the Lord Jesus. This included Jews and Gentiles. The sons of Sceva tell bad spirits to leave people"
+      "text": "Paul taught the people there for two years. During that time, all the people who lived in Asia region heard the message about the Lord Jesus. This included Jews and Gentiles."
     },
     {
       "verse": "11",
@@ -2762,7 +2762,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "As a result of this, more and more people heard the good news about the Lord Jesus. The message was powerful and people's lives changed. Bad troubles happen in Ephesus"
+      "text": "As a result of this, more and more people heard the good news about the Lord Jesus. The message was powerful and people's lives changed."
     },
     {
       "verse": "21",
@@ -2790,7 +2790,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "If people continue to believe Paul's message, it will be very bad for us. People will say bad things against our work. The house of our god Artemis will not be important any more. People will even think that Artemis herself is not a great god. As it is now, people in all of Asia region and everywhere else worship her. We do not want that to change.’ Artemis was a female god that the Ephesians worshipped."
+      "text": "If people continue to believe Paul's message, it will be very bad for us. People will say bad things against our work. The house of our god Artemis will not be important any more. People will even think that Artemis herself is not a great god. As it is now, people in all of Asia region and everywhere else worship her. We do not want that to change.’"
     },
     {
       "verse": "28",
@@ -2798,7 +2798,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "More and more people in the whole city began to shout. There was trouble everywhere. Gaius and Aristarchus had been travelling with Paul. They had come with him from Macedonia. Some people from the crowd took hold of Gaius and Aristarchus. They pulled them quickly to the big public meeting place in the middle of the city. In this place, the Roman people met together to watch many different things."
+      "text": "More and more people in the whole city began to shout. There was trouble everywhere. Gaius and Aristarchus had been travelling with Paul. They had come with him from Macedonia. Some people from the crowd took hold of Gaius and Aristarchus. They pulled them quickly to the big public meeting place in the middle of the city."
     },
     {
       "verse": "30",
@@ -2846,7 +2846,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "When the officer had said all this, he said to the crowd, ‘All of you should go home now.’ Print... Use screen font size Show All Comments Acts 18Acts 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When the officer had said all this, he said to the crowd, ‘All of you should go home now.’"
     }
   ],
   "20": [
@@ -2856,11 +2856,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He visited many places in that region. He spoke to the believers in each place. He helped them to be strong. After that, he arrived in Greece. We think that Paul visited Philippi, Thessalonica and Berea among other places."
+      "text": "He visited many places in that region. He spoke to the believers in each place. He helped them to be strong. After that, he arrived in Greece."
     },
     {
       "verse": "3",
-      "text": "Paul stayed in Greece for three months. One day, he was preparing to travel to Syria by ship. But then he heard news that some Jews wanted to kill him on the journey. So he decided to travel through Macedonia and return to Jerusalem. Many Jews travelled by ship from cities in Macedonia to Jerusalem for the Passover meal. Paul decided not to travel by ship because of the Jews. Instead, he travelled to Jerusalem by land and some other people went with him."
+      "text": "Paul stayed in Greece for three months. One day, he was preparing to travel to Syria by ship. But then he heard news that some Jews wanted to kill him on the journey. So he decided to travel through Macedonia and return to Jerusalem."
     },
     {
       "verse": "4",
@@ -2868,11 +2868,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "These men had all left by ship before we did. When they arrived in Troas, they waited for us there. We know that Luke was with Paul and the other believers on this journey."
+      "text": "These men had all left by ship before we did. When they arrived in Troas, they waited for us there."
     },
     {
       "verse": "6",
-      "text": "As for us, we sailed by ship from Philippi, after the festival when the Jews eat flat bread. This was the week before the Passover meal. ‘Flat bread’ is bread which has no yeast in it. During the week of the Passover festival Jews did not eat any food that contained yeast. We think that Paul stayed in Philippi for the Passover festival. At this time they remembered the time when God caused Jesus to live again. After five days we arrived in Troas. We met the other men there and we all stayed there for seven days. Paul visits the believers in Troas for the last time"
+      "text": "As for us, we sailed by ship from Philippi, after the festival when the Jews eat flat bread.After five days we arrived in Troas. We met the other men there and we all stayed there for seven days. After five days we arrived in Troas. We met the other men there and we all stayed there for seven days."
     },
     {
       "verse": "7",
@@ -2896,7 +2896,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The other believers took Eutychus to his home. They were very happy because he was alive. Paul travels from Troas to Miletus"
+      "text": "The other believers took Eutychus to his home. They were very happy because he was alive."
     },
     {
       "verse": "13",
@@ -2912,7 +2912,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Paul had decided to leave quickly from there. He did not want to visit Ephesus, because he did not want to remain in Asia for a long time. Instead, he wanted to travel to Jerusalem quickly. He wanted to arrive there before the day of the Pentecost festival. Paul meets with the leaders of the believers"
+      "text": "Paul had decided to leave quickly from there. He did not want to visit Ephesus, because he did not want to remain in Asia for a long time. Instead, he wanted to travel to Jerusalem quickly. He wanted to arrive there before the day of the Pentecost festival."
     },
     {
       "verse": "17",
@@ -2992,7 +2992,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Then Paul finished speaking. He went down on his knees together with the leaders of the believers. He prayed with them all."
+      "text": "Then Paul finished speaking. He went down on his knees together with the leaders of the believers. He prayed with them all. After that, they walked with Paul to the ship."
     },
     {
       "verse": "37",
@@ -3000,13 +3000,13 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "They were very sad because Paul had said, ‘I will never see you again.’ After that, they walked with Paul to the ship. Print... Use screen font size Show All Comments Acts 19Acts 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They were very sad because Paul had said, ‘I will never see you again.’After that, they walked with Paul to the ship."
     }
   ],
   "21": [
     {
       "verse": "1",
-      "text": "We said ‘goodbye’ to the leaders of the believers from Ephesus. Then we went on a ship straight across the sea, and we arrived at Cos. The next day, we continued on our journey to Rhodes. From there we went to the town of Patara. Cos and Rhodes are islands. Patara is a town on the coast."
+      "text": "We said ‘goodbye’ to the leaders of the believers from Ephesus. Then we went on a ship straight across the sea, and we arrived at Cos. The next day, we continued on our journey to Rhodes. From there we went to the town of Patara."
     },
     {
       "verse": "2",
@@ -3038,7 +3038,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He had four daughters who were not married. They spoke messages from God. We can read about this in Acts"
+      "text": "He had four daughters who were not married. They spoke messages from God."
     },
     {
       "verse": "10",
@@ -3066,7 +3066,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Some of the believers from Caesarea also went with us. They took us to the house of a man called Mnason. We had decided to stay with him. His home town was on the island called Cyprus. He had been a believer for a long time. Paul visits James in Jerusalem"
+      "text": "Some of the believers from Caesarea also went with us. They took us to the house of a man called Mnason. We had decided to stay with him. His home town was on the island called Cyprus. He had been a believer for a long time."
     },
     {
       "verse": "17",
@@ -3086,7 +3086,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "These Jews here have heard about what you teach Jewish people in other countries. They think that you say to them, “You do not need to obey the Law of Moses any longer. You do not need to circumcise your children. You do not need to live in the way that Jewish people usually live.” Brother is a name that a Christian may call another Christian."
+      "text": "These Jews here have heard about what you teach Jewish people in other countries. They think that you say to them, “You do not need to obey the Law of Moses any longer. You do not need to circumcise your children. You do not need to live in the way that Jewish people usually live.”"
     },
     {
       "verse": "22",
@@ -3106,7 +3106,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So the next day, Paul went with the four men. He joined with them when they washed to make themselves clean in front of God. Then he went into the yard of the temple. He told the priest there when the four men would finish their promise to God. This would be after seven days. After that, each man would give an animal as a sacrifice to God. These men had promised something to God. It was time now to cut their hair. This showed that they had finished the time of their promise to God. The men had to wait for seven days, before they went to the temple. The priests there killed the animal that each man brought as a gift to God."
+      "text": "So the next day, Paul went with the four men. He joined with them when they washed to make themselves clean in front of God. Then he went into the yard of the temple. He told the priest there when the four men would finish their promise to God. This would be after seven days. After that, each man would give an animal as a sacrifice to God."
     },
     {
       "verse": "27",
@@ -3118,11 +3118,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "(These men had earlier seen Paul in the city with a man called Trophimus. Trophimus was a Gentile who came from Ephesus. They thought that Paul had brought Trophimus into the temple. That is why they shouted bad things against Paul.) Trophimus was a not a Jew so he could not go into the temple."
+      "text": "(These men had earlier seen Paul in the city with a man called Trophimus. Trophimus was a Gentile who came from Ephesus. They thought that Paul had brought Trophimus into the temple. That is why they shouted bad things against Paul.)"
     },
     {
       "verse": "30",
-      "text": "Many other people in the city heard about the trouble and they also became angry. They all ran from their homes to the temple and they took hold of Paul. Then they pulled him out of the temple and they closed the doors immediately. The crowd wanted to kill Paul, but they could not kill him in the temple. That would have caused the House of God not to be clean in front of God."
+      "text": "Many other people in the city heard about the trouble and they also became angry. They all ran from their homes to the temple and they took hold of Paul. Then they pulled him out of the temple and they closed the doors immediately."
     },
     {
       "verse": "31",
@@ -3150,7 +3150,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "While the soldiers were leading Paul into their building, he asked their leader, ‘Please may I say something to you?’ The soldiers' leader replied, ‘Oh! Do you speak the Greek language?"
+      "text": "While the soldiers were leading Paul into their building, he asked their leader, ‘Please may I say something to you?’The soldiers' leader replied, ‘Oh! Do you speak the Greek language?"
     },
     {
       "verse": "38",
@@ -3162,7 +3162,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "The leader of the soldiers said to Paul, ‘Yes, you may speak to the people.’ So Paul stood still on the steps of the soldiers' building. He raised his hands towards them so that the people became quiet. Then he spoke to them in Aramaic, the Jewish people's own language. Print... Use screen font size Show All Comments Acts 20Acts 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The leader of the soldiers said to Paul, ‘Yes, you may speak to the people.’ So Paul stood still on the steps of the soldiers' building. He raised his hands towards them so that the people became quiet. Then he spoke to them in Aramaic, the Jewish people's own language."
     }
   ],
   "22": [
@@ -3172,11 +3172,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The crowd heard Paul speaking to them in their own Hebrew language. So they became really quiet. Paul continued to speak. He said,"
+      "text": "The crowd heard Paul speaking to them in their own Hebrew language. So they became really quiet.Paul continued to speak. He said,"
     },
     {
       "verse": "3",
-      "text": "‘I am a Jew. I was born in Tarsus in the region of Cilicia. I lived here in Jerusalem when I was a boy. I studied God's Law for many years and Gamaliel was my teacher. I learned very well how to obey the laws of our ancestors. I tried to obey God as carefully as all of you do today. Gamaliel was a Pharisee. He taught Jewish boys and young men about God's Law. He was a very good teacher."
+      "text": "‘I am a Jew. I was born in Tarsus in the region of Cilicia. I lived here in Jerusalem when I was a boy. I studied God's Law for many years and Gamaliel was my teacher. I learned very well how to obey the laws of our ancestors. I tried to obey God as carefully as all of you do today."
     },
     {
       "verse": "4",
@@ -3184,7 +3184,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The most important priest and all the group of Jewish leaders can tell you that this is true. They gave me letters for the Jewish leaders in Damascus. So I travelled to Damascus to take hold of the believers in that city. I wanted to tie them up and bring them back to Jerusalem. Then the leaders here could punish them.’ Paul tells the crowd how he began to believe in Jesus"
+      "text": "The most important priest and all the group of Jewish leaders can tell you that this is true. They gave me letters for the Jewish leaders in Damascus. So I travelled to Damascus to take hold of the believers in that city. I wanted to tie them up and bring them back to Jerusalem. Then the leaders here could punish them.’"
     },
     {
       "verse": "6",
@@ -3196,7 +3196,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "“Lord, who are you?” I asked. He said to me, “I am Jesus from Nazareth. And you are fighting against me.”"
+      "text": "“Lord, who are you?” I asked.He said to me, “I am Jesus from Nazareth. And you are fighting against me.”"
     },
     {
       "verse": "9",
@@ -3248,7 +3248,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But the Lord said to me, “Go! I will now send you a long way away. You must go to the Gentiles and tell them my message.” ’ The people in the crowd become very angry with Paul"
+      "text": "But the Lord said to me, “Go! I will now send you a long way away. You must go to the Gentiles and tell them my message.” ’"
     },
     {
       "verse": "22",
@@ -3256,11 +3256,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "While they were shouting this, they were taking off their coats. They also threw dirt from the ground up into the air. The Jews did this when someone had said bad things about God. They thought that Paul had done that, so they were very angry."
+      "text": "While they were shouting this, they were taking off their coats. They also threw dirt from the ground up into the air."
     },
     {
       "verse": "24",
-      "text": "The leader of the soldiers said to his men, ‘Take this man into our building. Then hit him with whips. We must find out what he has done. He must tell us why the Jews are shouting so loudly against him.’ The soldiers would hit a person so that he would give them a true answer. A whip was a stick with long pieces of strong material fixed at one end."
+      "text": "The leader of the soldiers said to his men, ‘Take this man into our building. Then hit him with whips. We must find out what he has done. He must tell us why the Jews are shouting so loudly against him.’"
     },
     {
       "verse": "25",
@@ -3272,19 +3272,19 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So the soldiers' leader went to speak to Paul. He asked him, ‘Tell me. Are you really a citizen of Rome?’ Paul answered, ‘Yes, I am.’"
+      "text": "So the soldiers' leader went to speak to Paul. He asked him, ‘Tell me. Are you really a citizen of Rome?’Paul answered, ‘Yes, I am.’ Paul answered, ‘Yes, I am.’"
     },
     {
       "verse": "28",
-      "text": "The soldiers' leader said, ‘I paid a lot of money to the government so that I could become a citizen of Rome.’ Paul replied, ‘But I was already a citizen of Rome when I was born.’"
+      "text": "The soldiers' leader said, ‘I paid a lot of money to the government so that I could become a citizen of Rome.’Paul replied, ‘But I was already a citizen of Rome when I was born.’ Paul replied, ‘But I was already a citizen of Rome when I was born.’"
     },
     {
       "verse": "29",
-      "text": "Immediately, the men who wanted to hit Paul with whips moved away from him. The leader of the soldiers was also very afraid. He had tied chains around Paul's arms and legs. He knew that he should not have done that to a citizen of Rome. The leader of the soldiers could hold a citizen of Rome in prison. But he should not put chains on the arms and legs of the citizen."
+      "text": "Immediately, the men who wanted to hit Paul with whips moved away from him. The leader of the soldiers was also very afraid. He had tied chains around Paul's arms and legs. He knew that he should not have done that to a citizen of Rome."
     },
     {
       "verse": "30",
-      "text": "The soldiers' leader wanted to find the reason why the Jews had said bad things against Paul. He wanted to know what was really true. So the next day, he told his soldiers to remove the chains from Paul. He sent a message to the most important priest and to all the group of Jewish leaders. He told them to meet together with him. Then he took Paul to their meeting. He made Paul stand in front of them. Print... Use screen font size Show All Comments Acts 21Acts 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The soldiers' leader wanted to find the reason why the Jews had said bad things against Paul. He wanted to know what was really true. So the next day, he told his soldiers to remove the chains from Paul. He sent a message to the most important priest and to all the group of Jewish leaders. He told them to meet together with him. Then he took Paul to their meeting. He made Paul stand in front of them."
     }
   ],
   "23": [
@@ -3298,7 +3298,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Paul said to him, ‘God will certainly hit you! You are a hypocrite! You are sitting there and you are judging me. You are asking if I obey the Law of God. But you yourself do not obey the Law! You should not have said, “Hit that man!” ’ Paul said that Ananias was like a wall that people had painted with white paint to make it look nice. Ananias wanted people to think that he was good. But on the inside he was bad."
+      "text": "Paul said to him, ‘God will certainly hit you! You are a hypocrite! You are sitting there and you are judging me. You are asking if I obey the Law of God. But you yourself do not obey the Law! You should not have said, “Hit that man!” ’"
     },
     {
       "verse": "4",
@@ -3306,7 +3306,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Paul replied, ‘My brothers, I did not know that this man is the most important priest. Our Jewish law says, “Do not say bad things against the man who rules your people.” So I should not have said anything bad against him.’ Brother is a name that a Jew sometimes called another Jew."
+      "text": "Paul replied, ‘My brothers, I did not know that this man is the most important priest. Our Jewish law says, “Do not say bad things against the man who rules your people.” So I should not have said anything bad against him.’"
     },
     {
       "verse": "6",
@@ -3330,7 +3330,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The next night, the Lord Jesus came and he stood near Paul. He said to Paul, ‘Do not be afraid! You have told people here in Jerusalem about me. You must also do the same thing in Rome.’ The Jews in Jerusalem decide to kill Paul"
+      "text": "The next night, the Lord Jesus came and he stood near Paul. He said to Paul, ‘Do not be afraid! You have told people here in Jerusalem about me. You must also do the same thing in Rome.’"
     },
     {
       "verse": "12",
@@ -3338,7 +3338,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "More than 40 men were in the group that decided this."
+      "text": "men were in the group that decided this."
     },
     {
       "verse": "14",
@@ -3374,7 +3374,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The leader of the soldiers said to him, ‘Do not tell anyone that you told me about this.’ Then he sent the young man away. The soldiers' leader sends Paul to Felix"
+      "text": "The leader of the soldiers said to him, ‘Do not tell anyone that you told me about this.’ Then he sent the young man away."
     },
     {
       "verse": "23",
@@ -3414,11 +3414,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The next day, the soldiers who had walked returned to their building in Jerusalem. But the soldiers who rode horses continued to travel with Paul. Antipatris was 40 kilometres from Jerusalem. This was a long way for the soldiers to walk in one night. Not many Jews lived between Antipatris and Caesarea. So, after that night, the soldiers could return to Jerusalem. They did not need many soldiers to keep Paul safe after this."
+      "text": "The next day, the soldiers who had walked returned to their building in Jerusalem. But the soldiers who rode horses continued to travel with Paul."
     },
     {
       "verse": "33",
-      "text": "When they arrived in Caesarea, they gave the letter to Felix, the ruler. They also brought Paul to him."
+      "text": "When they arrived in Caesarea, they gave the letter to Felix, the ruler. They also brought Paul to him. Felix then said to his soldiers, ‘Put this man in the prison in Herod's house. Guard him carefully!’"
     },
     {
       "verse": "34",
@@ -3426,7 +3426,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Felix said, ‘When the Jews arrive, they will tell me about you. I will also listen to you. I will decide what is right.’ Felix then said to his soldiers, ‘Put this man in the prison in Herod's house. Guard him carefully!’ Print... Use screen font size Show All Comments Acts 22Acts 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Felix said, ‘When the Jews arrive, they will tell me about you. I will also listen to you. I will decide what is right.’Felix then said to his soldiers, ‘Put this man in the prison in Herod's house. Guard him carefully!’"
     }
   ],
   "24": [
@@ -3448,7 +3448,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "We know that this man brings trouble everywhere. Anywhere in the world that Jewish people live, he makes them angry. Then they all fight each other. He is the leader of a group called the Nazarenes.’ Tertullus wanted Felix to think that Paul was a problem to the Roman authority."
+      "text": "We know that this man brings trouble everywhere. Anywhere in the world that Jewish people live, he makes them angry. Then they all fight each other. He is the leader of a group called the Nazarenes.’"
     },
     {
       "verse": "6",
@@ -3460,11 +3460,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then he told us to come and to speak to you about it.] You should ask this man some questions about what he has done. You will find out that what we say against him is true.’ Part of verses 6, 7 and 8 are not in all copies of the Bible."
+      "text": "Then he told us to come and to speak to you about it.] You should ask this man some questions about what he has done. You will find out that what we say against him is true.’"
     },
     {
       "verse": "9",
-      "text": "The other Jews that were there also spoke against Paul. They said, ‘All these things that Tertullus has said are true.’ Paul tells Felix his own story"
+      "text": "The other Jews that were there also spoke against Paul. They said, ‘All these things that Tertullus has said are true.’"
     },
     {
       "verse": "10",
@@ -3472,7 +3472,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I went to Jerusalem less than 12 days ago. You can check that that is true. I went there to worship God."
+      "text": "days ago. You can check that that is true. I went there to worship God."
     },
     {
       "verse": "12",
@@ -3520,7 +3520,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He said to the officer who was holding Paul, ‘Continue to guard this man carefully. But his friends can come and see him. They can help him and they can bring things for him.’ Felix and Drusilla listen to Paul"
+      "text": "He said to the officer who was holding Paul, ‘Continue to guard this man carefully. But his friends can come and see him. They can help him and they can bring things for him.’"
     },
     {
       "verse": "24",
@@ -3528,15 +3528,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Paul continued to speak for some time. He said, ‘People need to do what is right. They need to stop themselves doing wrong things. One day, God will judge people for how they have lived.’ While Paul talked about these things, Felix became afraid. He said to Paul, ‘You can leave us now. At some time I may want to listen to you again. Then I will ask you to come to me again.’"
+      "text": "Paul continued to speak for some time. He said, ‘People need to do what is right. They need to stop themselves doing wrong things. One day, God will judge people for how they have lived.’While Paul talked about these things, Felix became afraid. He said to Paul, ‘You can leave us now. At some time I may want to listen to you again. Then I will ask you to come to me again.’"
     },
     {
       "verse": "26",
-      "text": "But Felix also hoped that Paul would give him some money. For that reason he often met with Paul and they talked together. Some rulers wanted people in prison to give them money. Then the rulers would let them go. If the rulers did this, they would not be obeying the law."
+      "text": "But Felix also hoped that Paul would give him some money. For that reason he often met with Paul and they talked together."
     },
     {
       "verse": "27",
-      "text": "This happened for two years. Felix left Paul in the prison, because he wanted to make the Jewish leaders happy. Then Porcius Festus became the ruler instead of Felix. Print... Use screen font size Show All Comments Acts 23Acts 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "This happened for two years. Felix left Paul in the prison, because he wanted to make the Jewish leaders happy. Then Porcius Festus became the ruler instead of Felix."
     }
   ],
   "25": [
@@ -3586,11 +3586,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Festus talked to his officers about what Paul had said. Then he said to Paul, ‘You have asked to go to Caesar, for him to be your judge. So prepare yourself to go to Caesar!’ King Agrippa and Bernice visit Festus"
+      "text": "Festus talked to his officers about what Paul had said. Then he said to Paul, ‘You have asked to go to Caesar, for him to be your judge. So prepare yourself to go to Caesar!’"
     },
     {
       "verse": "13",
-      "text": "Several days after this, King Agrippa and Bernice came to Caesarea. They wanted to say ‘welcome’ to Festus as the new ruler. This king was Agrippa the second. He was the son of Agrippa the first. He ruled over a part of Galilee, but he did have some authority over the Jews. He could decide who would be their most important priest. Bernice was the oldest daughter of Agrippa the first and she was the younger sister of Agrippa the second."
+      "text": "Several days after this, King Agrippa and Bernice came to Caesarea. They wanted to say ‘welcome’ to Festus as the new ruler."
     },
     {
       "verse": "14",
@@ -3626,7 +3626,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Agrippa said to Festus, ‘I would like to hear this man myself.’ Festus replied, ‘You will hear him tomorrow.’"
+      "text": "Agrippa said to Festus, ‘I would like to hear this man myself.’Festus replied, ‘You will hear him tomorrow.’ Festus replied, ‘You will hear him tomorrow.’"
     },
     {
       "verse": "23",
@@ -3646,13 +3646,13 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "I need to tell Caesar what wrong things this man has done. If I cannot do that, it would not be right to send him to Rome.’ Print... Use screen font size Show All Comments Acts 24Acts 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I need to tell Caesar what wrong things this man has done. If I cannot do that, it would not be right to send him to Rome.’"
     }
   ],
   "26": [
     {
       "verse": "1",
-      "text": "King Agrippa said to Paul, ‘You may now say what you think about this problem.’ Paul raised his hand so that people would listen to him."
+      "text": "King Agrippa said to Paul, ‘You may now say what you think about this problem.’Paul raised his hand so that people would listen to him."
     },
     {
       "verse": "2",
@@ -3676,7 +3676,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He promised a great thing to our 12 Israelite families. We all expect to receive what God has promised to us. That is why we Jews always worship God, in the day and in the night. Like these Jews here, I believe in God's great promise. But that is the reason that they speak against me."
+      "text": "Israelite families. We all expect to receive what God has promised to us. That is why we Jews always worship God, in the day and in the night. Like these Jews here, I believe in God's great promise. But that is the reason that they speak against me."
     },
     {
       "verse": "8",
@@ -3704,11 +3704,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "All of us fell down to the ground. I heard a voice that spoke to me in my own language, Hebrew. He said “Saul, Saul, why do you fight against me? You are like an ox that kicks against its master's stick. So you are hurting yourself.” Hebrew was the language of the Jews. Jesus used a picture to show Saul what was happening. A farmer made his ox pull a cart for him. He used a sharp stick. It made the ox walk where he wanted it to go. The sharp stick hurt the ox if it went the wrong way. The stick also hurt the ox if it tried to kick it."
+      "text": "All of us fell down to the ground. I heard a voice that spoke to me in my own language, Hebrew. He said “Saul, Saul, why do you fight against me? You are like an ox that kicks against its master's stick. So you are hurting yourself.”"
     },
     {
       "verse": "15",
-      "text": "“Lord, who are you?” I asked. He replied, “I am Jesus. And you are fighting against me."
+      "text": "“Lord, who are you?” I asked.He replied, “I am Jesus. And you are fighting against me."
     },
     {
       "verse": "16",
@@ -3720,7 +3720,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You will help them to understand what is really true. They are like people who live in the dark. Teach them what is true about me. Then they will be like people who live in the light. Now Satan has power over them. Lead them from there into God's kingdom. Then God will forgive them for the wrong things that they have done. Because they believe in me, God will accept them as his own people.” ’ Paul tells Agrippa and Bernice about his work for God"
+      "text": "You will help them to understand what is really true. They are like people who live in the dark. Teach them what is true about me. Then they will be like people who live in the light. Now Satan has power over them. Lead them from there into God's kingdom. Then God will forgive them for the wrong things that they have done. Because they believe in me, God will accept them as his own people.” ’"
     },
     {
       "verse": "19",
@@ -3776,13 +3776,13 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "King Agrippa said to Festus, ‘We could have let this man go free from the prison. But he has asked that Caesar should judge him. So we cannot let him go free.’ Print... Use screen font size Show All Comments Acts 25Acts 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "King Agrippa said to Festus, ‘We could have let this man go free from the prison. But he has asked that Caesar should judge him. So we cannot let him go free.’"
     }
   ],
   "27": [
     {
       "verse": "1",
-      "text": "Some time after that, Festus decided that we should sail to Italy. So he commanded a soldier called Julius to guard Paul and some other prisoners. Julius was an officer in the Roman army. He had authority over 100 soldiers in a group called ‘The Emperor Augustus Group’. Luke was with Paul on this journey."
+      "text": "Some time after that, Festus decided that we should sail to Italy. So he commanded a soldier called Julius to guard Paul and some other prisoners. Julius was an officer in the Roman army. He had authority over 100 soldiers in a group called ‘The Emperor Augustus Group’."
     },
     {
       "verse": "2",
@@ -3814,7 +3814,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "We remained there for many days. By then it had become dangerous to continue the journey. It was already after the Day of Atonement. If all this happened in the year AD 59, the Day of Atonement was on 5th October that year. It was dangerous to travel by ship after the beginning of October. The winds were very strong. The Day of Atonement was a special day when the Jews asked God to forgive them. So Paul spoke to the army officer and to the sailors."
+      "text": "We remained there for many days. By then it had become dangerous to continue the journey. It was already after the Day of Atonement.So Paul spoke to the army officer and to the sailors."
     },
     {
       "verse": "10",
@@ -3822,11 +3822,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But the army officer did not believe what Paul said. Instead, he decided to do what the owner of the ship and the captain said. The owner was the man that the ship belonged to. The captain had authority on the ship to sail it and to tell the sailors what to do."
+      "text": "But the army officer did not believe what Paul said. Instead, he decided to do what the owner of the ship and the captain said."
     },
     {
       "verse": "12",
-      "text": "This port was not a good place for a ship to remain during the winter. Most of the men on the ship wanted to continue the journey. They wanted to sail as far as Phoenix, if they could get there. They could stay there for the winter. Phoenix was a port on the island called Crete. It was open to the sea both to the south-west and to the north-west. South-west means in a direction between south and west. North-west means in a direction between north and west. The ship is in a storm"
+      "text": "This port was not a good place for a ship to remain during the winter. Most of the men on the ship wanted to continue the journey. They wanted to sail as far as Phoenix, if they could get there. They could stay there for the winter. Phoenix was a port on the island called Crete. It was open to the sea both to the south-west and to the north-west."
     },
     {
       "verse": "13",
@@ -3858,7 +3858,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "For many days, we did not see the sun or any stars. The storm continued to blow strongly. So then we thought, ‘It is not possible for us to remain alive.’ At that time, sailors looked at the sun and the stars. Then they knew where they were."
+      "text": "For many days, we did not see the sun or any stars. The storm continued to blow strongly. So then we thought, ‘It is not possible for us to remain alive.’"
     },
     {
       "verse": "21",
@@ -3882,11 +3882,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "But the wind will blow the ship so that we hit an island.’"
+      "text": "But the wind will blow the ship so that we hit an island.���"
     },
     {
       "verse": "27",
-      "text": "The storm had continued for 14 days and nights. The strong wind was blowing the ship across the Mediterranean Sea. About midnight, the sailors thought that we were near to the land."
+      "text": "days and nights. The strong wind was blowing the ship across the Mediterranean Sea. About midnight, the sailors thought that we were near to the land."
     },
     {
       "verse": "28",
@@ -3894,7 +3894,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "The sailors were afraid that the ship would hit some rocks. So they dropped four anchors on ropes from the back of the ship into the sea. After that, they prayed that dawn would come soon."
+      "text": "The sailors were afraid that the ship would hit some rocks. So they dropped four anchors on ropes from the back of the ship into the sea.After that, they prayed that dawn would come soon."
     },
     {
       "verse": "30",
@@ -3926,11 +3926,11 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "There were 276 people on the ship."
+      "text": "people on the ship."
     },
     {
       "verse": "38",
-      "text": "After everyone had eaten enough, the sailors threw bags of wheat off the ship into the sea. Then the ship was not so heavy. Wheat is a plant. People use wheat to make bread. But this wheat was not food for the sailors. The ship was carrying the wheat to Rome. The sea completely destroys the ship"
+      "text": "After everyone had eaten enough, the sailors threw bags of wheat off the ship into the sea. Then the ship was not so heavy."
     },
     {
       "verse": "39",
@@ -3946,7 +3946,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "The soldiers decided to kill the prisoners that they were guarding. They did not want these men to swim to the land and escape."
+      "text": "The soldiers decided to kill the prisoners that they were guarding. They did not want these men to swim to the land and escape. In this way all of us got safely out of the sea and we arrived on the land."
     },
     {
       "verse": "43",
@@ -3954,7 +3954,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "You other people must follow them. Hold on to pieces of wood, or pieces of the ship.’ In this way all of us got safely out of the sea and we arrived on the land. Print... Use screen font size Show All Comments Acts 26Acts 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You other people must follow them. Hold on to pieces of wood, or pieces of the ship.’In this way all of us got safely out of the sea and we arrived on the land."
     }
   ],
   "28": [
@@ -4000,15 +4000,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "When we left Malta, we had been there for three months. We got on a ship that was called ‘The Twin Gods’. It had come from Alexandria and it had stayed in Malta during the winter. The ‘Twin Gods’ were two Greek gods called Castor and Pollux. The people from Greece thought that these gods were very powerful."
+      "text": "When we left Malta, we had been there for three months. We got on a ship that was called ‘The Twin Gods’. It had come from Alexandria and it had stayed in Malta during the winter."
     },
     {
       "verse": "12",
-      "text": "We sailed across the sea and we arrived at the city of Syracuse. We stayed there for three days. Syracuse was a port on the south-east coast of the island called Sicily."
+      "text": "We sailed across the sea and we arrived at the city of Syracuse. We stayed there for three days."
     },
     {
       "verse": "13",
-      "text": "We left Syracuse and we sailed to the city of Rhegium. The next day, the wind began to blow from the south, so we sailed more quickly. The day after that, we arrived at the town of Puteoli. Puteoli was a port near Naples in Italy. People who wanted to go to Rome got off their ships here."
+      "text": "We left Syracuse and we sailed to the city of Rhegium. The next day, the wind began to blow from the south, so we sailed more quickly. The day after that, we arrived at the town of Puteoli."
     },
     {
       "verse": "14",
@@ -4016,7 +4016,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The believers in Rome had heard about us. So they came out of the city to meet us at ‘The Market of Appius’ and ‘The Three Hotels’. When Paul saw the believers, he thanked God for them. He was very happy that they had come to meet him. The Market of Appius was 50 kilometres from Rome. The Three Hotels was 40 kilometres from Rome."
+      "text": "The believers in Rome had heard about us. So they came out of the city to meet us at ‘The Market of Appius’ and ‘The Three Hotels’. When Paul saw the believers, he thanked God for them. He was very happy that they had come to meet him."
     },
     {
       "verse": "16",
@@ -4060,11 +4060,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "“Go and say to this people, ‘You will listen and listen. But you will not understand. You will look and look. But you will not see anything.’"
+      "text": "“Go and say to this people,‘You will listen and listen. But you will not understand.You will look and look. But you will not see anything.’ ‘You will listen and listen. But you will not understand. You will look and look. But you will not see anything.’"
     },
     {
       "verse": "27",
-      "text": "These people do not really want to understand. They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to me and they would obey me. Then I would forgive them and I would make them well.” ’"
+      "text": "These people do not really want to understand.They are like people who have shut their ears.They are like people who have shut their eyes.If they did want to look, then they would really see.If they did want to listen, then they would really hear.They would understand my message.They would turn back to me and they would obey me.Then I would forgive them and I would make them well.” ’ They are like people who have shut their ears. They are like people who have shut their eyes. If they did want to look, then they would really see. If they did want to listen, then they would really hear. They would understand my message. They would turn back to me and they would obey me. Then I would forgive them and I would make them well.” ’"
     },
     {
       "verse": "28",
@@ -4072,7 +4072,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "[After Paul had said this, the Jews left. They were still arguing with each other.] Many copies of the Bible do not have Acts"
+      "text": "[After Paul had said this, the Jews left. They were still arguing with each other.]"
     },
     {
       "verse": "30",
@@ -4080,7 +4080,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "He told people clearly about the kingdom of God. He taught them about the Lord Jesus Christ. He was not afraid to speak strongly. Nobody tried to stop him. Print... Use screen font size Show All Comments Acts 27Romans Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He told people clearly about the kingdom of God. He taught them about the Lord Jesus Christ. He was not afraid to speak strongly. Nobody tried to stop him."
     }
   ]
 };

@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Because you are doing this, the Lord says to you, Ahaziah, “You will never leave the bed that you are lying on. You will certainly die.” ’ When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "Because you are doing this, the Lord says to you, Ahaziah, “You will never leave the bed that you are lying on. You will certainly die.” ’"
     },
     {
       "verse": "5",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then the king sent 50 soldiers with their captain to fetch Elijah. Elijah was sitting on the top of a hill. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down with us.” ’"
+      "text": "soldiers with their captain to fetch Elijah. Elijah was sitting on the top of a hill. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down with us.” ’"
     },
     {
       "verse": "10",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the king sent another captain with 50 more soldiers to fetch Elijah. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down immediately!” ’"
+      "text": "more soldiers to fetch Elijah. The captain went up and he said to Elijah, ‘Man of God, the king says, “Come down immediately!” ’"
     },
     {
       "verse": "12",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The other things that happened while Ahaziah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that King Ahaziah did. Jehoshaphat was the king in Judah between 868 BC and 847 BC. Here are the dates when the kings of Israel ruled: 871-852 BC King Ahab. 852-851 BC King Ahaziah. 851-845 BC King Joram (also called Jehoram). Print... Use screen font size Show All Comments 2 Kings Introduction2 Kings 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The other things that happened while Ahaziah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that King Ahaziah did."
     }
   ],
   "2": [
@@ -80,7 +80,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Bethel.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you also live.’ So they went down to Bethel together."
+      "text": "Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Bethel.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you also live.’So they went down to Bethel together."
     },
     {
       "verse": "3",
@@ -88,7 +88,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Jericho.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live.’ So they went to Jericho together."
+      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to Jericho.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live.’So they went to Jericho together."
     },
     {
       "verse": "5",
@@ -96,11 +96,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to the Jordan River.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live.’ So they continued to travel together."
+      "text": "Then Elijah said to Elisha, ‘Stay here, because the Lord has sent me to the Jordan River.’ But Elisha replied, ‘I will not leave you. I promise that, as surely as the Lord lives and as surely as you live.’So they continued to travel together."
     },
     {
       "verse": "7",
-      "text": "50 men who belonged to the group of prophets went and they stood near the Jordan River. They were standing not far away from Elijah and Elisha. They watched what happened."
+      "text": "men who belonged to the group of prophets went and they stood near the Jordan River. They were standing not far away from Elijah and Elisha. They watched what happened."
     },
     {
       "verse": "8",
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When Elisha saw this, he shouted, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses!’ Elisha calls Elijah his father because he was his master and his teacher as a prophet. Like a firstborn son, he wanted to receive twice as much of Elijah's spirit. After that, Elisha could not see Elijah again. He took hold of his own clothes and he tore them into pieces because he was very upset."
+      "text": "When Elisha saw this, he shouted, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses!’After that, Elisha could not see Elijah again. He took hold of his own clothes and he tore them into pieces because he was very upset."
     },
     {
       "verse": "13",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They said to him, ‘Please, sir! We are your servants. We have 50 strong men with us. Let them go and look for your master. Perhaps the Spirit of the Lord has carried him away. Maybe it has dropped him somewhere on a mountain or in a valley.’ But Elisha replied, ‘No. Do not send them to look for him.’ the Spirit’ or ‘the wind’."
+      "text": "They said to him, ‘Please, sir! We are your servants. We have 50 strong men with us. Let them go and look for your master. Perhaps the Spirit of the Lord has carried him away. Maybe it has dropped him somewhere on a mountain or in a valley.’ But Elisha replied, ‘No. Do not send them to look for him.’"
     },
     {
       "verse": "17",
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "When they returned, Elisha was waiting for them in Jericho. He said to them, ‘I told you not to go and look for Elijah.’ Elisha shows that he has God's authority"
+      "text": "When they returned, Elisha was waiting for them in Jericho. He said to them, ‘I told you not to go and look for Elijah.’"
     },
     {
       "verse": "19",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Then Elisha travelled to Mount Carmel. From there, he returned to Samaria. Print... Use screen font size Show All Comments 2 Kings 12 Kings 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Elisha travelled to Mount Carmel. From there, he returned to Samaria."
     }
   ],
   "3": [
@@ -186,11 +186,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But Jehoram continued to do the same bad things that Nebat's son Jeroboam had done. Jeroboam had caused many people in Israel to do those sins, and Jehoram did not stop doing them himself. Jehoram is also called Joram in some Bibles. Samaria was the capital city of Israel. Baal was a false god. Some kings of Israel caused their people to worship Baal. Perhaps this was to keep them away from God's house in Jerusalem."
+      "text": "But Jehoram continued to do the same bad things that Nebat's son Jeroboam had done. Jeroboam had caused many people in Israel to do those sins, and Jehoram did not stop doing them himself."
     },
     {
       "verse": "4",
-      "text": "Mesha, the king of Moab, was a sheep farmer. Every year he had to pay the king of Israel 100,000 male lambs and the wool from 100,000 male sheep."
+      "text": "Mesha, the king of Moab, was a sheep farmer. Every year he had to pay the king of Israel 100,000 male lambs and the wool from 100,000 male sheep. Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority.’"
     },
     {
       "verse": "5",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He also sent this message to Jehoshaphat, the king of Judah: ‘The king of Moab has turned against me. Will you go with me to fight against the Moabites?’ Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority.’"
+      "text": "He also sent this message to Jehoshaphat, the king of Judah: ‘The king of Moab has turned against me. Will you go with me to fight against the Moabites?’Jehoshaphat replied, ‘Yes, I will go with you. We will have one army. My soldiers will join with your soldiers. My horses will be under your authority.’"
     },
     {
       "verse": "8",
@@ -218,7 +218,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But King Jehoshaphat asked, ‘There must surely be a prophet of the Lord here somewhere. We could ask him what the Lord wants us to do.’ Kings tells us that there was no king of Edom at this time. The king of Judah chose an officer to rule Edom. So the ‘king of Edom’ here means the ruler of Edom. An officer of the king of Israel answered him, ‘Yes, Shaphat's son Elisha is here. He was Elijah's servant.’"
+      "text": "But King Jehoshaphat asked, ‘There must surely be a prophet of the Lord here somewhere. We could ask him what the Lord wants us to do.’An officer of the king of Israel answered him, ‘Yes, Shaphat's son Elisha is here. He was Elijah's servant.’"
     },
     {
       "verse": "12",
@@ -234,7 +234,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But now, bring someone to play music on a harp for me.’ While the man was making music, the Lord's power came to Elisha."
+      "text": "But now, bring someone to play music on a harp for me.’While the man was making music, the Lord's power came to Elisha."
     },
     {
       "verse": "16",
@@ -274,7 +274,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They destroyed the Moabites' towns. Each Israelite soldier threw a stone onto all the good fields, until they covered them with stones. They filled the springs so that they gave no water. They cut down all the good trees. Only the city of Kir-Hareseth was still there with its stone walls. But the Israelite soldiers stood all around the city. They attacked it with stones from their slings."
+      "text": "They destroyed the Moabites' towns. Each Israelite soldier threw a stone onto all the good fields, until they covered them with stones. They filled the springs so that they gave no water. They cut down all the good trees.Only the city of Kir-Hareseth was still there with its stone walls. But the Israelite soldiers stood all around the city. They attacked it with stones from their slings."
     },
     {
       "verse": "26",
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So the king of Moab took his oldest son who would have become king after him. He killed him on the wall of the city as a burnt offering to their god. This made the Israelite soldiers become very upset. So they went away from the city and they returned to their own land. Kir-Hareseth was the capital city of Moab. The Moabites' false god was called Chemosh. Print... Use screen font size Show All Comments 2 Kings 22 Kings 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the king of Moab took his oldest son who would have become king after him. He killed him on the wall of the city as a burnt offering to their god. This made the Israelite soldiers become very upset. So they went away from the city and they returned to their own land."
     }
   ],
   "4": [
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Elisha said to her, ‘How can I help you? Tell me, what things do you have in your house?’ She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil.’"
+      "text": "Elisha said to her, ‘How can I help you? Tell me, what things do you have in your house?’She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil.’ She said to Elisha, ‘Please sir, I have nothing in the house. All I have is a small jar of olive oil.’"
     },
     {
       "verse": "3",
@@ -312,7 +312,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then the widow went back to Elisha, the man of God. She told him what had happened. He said, ‘Go and sell the oil. Use some of the money to pay the debt to the man. Use the money that remains to buy food for you and your sons. Then you will live.’ Elisha gives life to a boy"
+      "text": "Then the widow went back to Elisha, the man of God. She told him what had happened. He said, ‘Go and sell the oil. Use some of the money to pay the debt to the man. Use the money that remains to buy food for you and your sons. Then you will live.’"
     },
     {
       "verse": "8",
@@ -324,7 +324,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We should make a small room on the roof of our house for him. We can put a bed, a table, a chair and a lamp in the room. Then, when he comes to visit us, he can stay there.’ The roofs of houses were often flat, so people could put things on them."
+      "text": "We should make a small room on the roof of our house for him. We can put a bed, a table, a chair and a lamp in the room. Then, when he comes to visit us, he can stay there.’"
     },
     {
       "verse": "11",
@@ -432,7 +432,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "She came in to the room. She bent down low near Elisha's feet with her face towards the ground. Then she took her son and she left the room. sneezed’ means that he suddenly blew air out through his nose. Elisha does some more miracles"
+      "text": "She came in to the room. She bent down low near Elisha's feet with her face towards the ground. Then she took her son and she left the room."
     },
     {
       "verse": "38",
@@ -460,13 +460,13 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "So the servant gave the bread to the prophets to eat. They ate as much as they wanted and some food still remained. The Lord had said that this would happen. Print... Use screen font size Show All Comments 2 Kings 32 Kings 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the servant gave the bread to the prophets to eat. They ate as much as they wanted and some food still remained. The Lord had said that this would happen."
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "Naaman was the leader of the king of Syria's army. Naaman's master respected him as a great man. The Lord had used Naaman to help Syria win wars against their enemies. Naaman was a brave soldier, but he had a bad disease of his skin. Naaman's disease may have been leprosy."
+      "text": "Naaman was the leader of the king of Syria's army. Naaman's master respected him as a great man. The Lord had used Naaman to help Syria win wars against their enemies. Naaman was a brave soldier, but he had a bad disease of his skin."
     },
     {
       "verse": "2",
@@ -562,7 +562,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Gehazi went in and he stood in front of his master. Elisha asked Gehazi, ‘Where have you been?’ Gehazi answered, ‘I have not been anywhere, sir.’"
+      "text": "Gehazi went in and he stood in front of his master. Elisha asked Gehazi, ‘Where have you been?’ Gehazi answered, ‘I have not been anywhere, sir.’ Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease."
     },
     {
       "verse": "26",
@@ -570,7 +570,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Now you will have the same disease in your skin that Naaman had! It will always be with you and your descendants.’ Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease. Print... Use screen font size Show All Comments 2 Kings 42 Kings 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Now you will have the same disease in your skin that Naaman had! It will always be with you and your descendants.’Then Gehazi went away from Elisha. His skin had already become white like snow because of the disease."
     }
   ],
   "6": [
@@ -600,7 +600,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Elisha told the prophet, ‘Lift it out of the water.’ So the man took hold of it with his hand. Elisha stops the Syrian army"
+      "text": "Elisha told the prophet, ‘Lift it out of the water.’ So the man took hold of it with his hand."
     },
     {
       "verse": "8",
@@ -624,7 +624,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The king of Syria said, ‘Go and find the place where he is. Then I will send some men there to catch him.’ A report came back to the king of Syria, ‘Elisha is in Dothan.’"
+      "text": "The king of Syria said, ‘Go and find the place where he is. Then I will send some men there to catch him.’A report came back to the king of Syria, ‘Elisha is in Dothan.’"
     },
     {
       "verse": "14",
@@ -664,7 +664,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So the king of Israel made a big feast for them. They had a lot of food and drink. Then he sent them back to their master, the king of Syria. After this happened, no more groups of Syrian soldiers came to attack Israel. The Syrian army attacks Samaria"
+      "text": "So the king of Israel made a big feast for them. They had a lot of food and drink. Then he sent them back to their master, the king of Syria. After this happened, no more groups of Syrian soldiers came to attack Israel."
     },
     {
       "verse": "24",
@@ -672,7 +672,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "As a result, there was a famine in the city. The Syrian army were all around the city for a long time. Food in the city was very expensive. A donkey's head cost 80 pieces of silver. A small cup of dove's dung cost five pieces of silver. dove's dung’ or ‘dry seeds’."
+      "text": "As a result, there was a famine in the city. The Syrian army were all around the city for a long time. Food in the city was very expensive. A donkey's head cost 80 pieces of silver. A small cup of dove's dung cost five pieces of silver."
     },
     {
       "verse": "26",
@@ -696,7 +696,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "He said, ‘I will certainly cut off Elisha's head today! May God punish me with death if Elisha still has his head by the end of the day!’ Sackcloth was very rough to wear. It showed that the person was sad and upset."
+      "text": "He said, ‘I will certainly cut off Elisha's head today! May God punish me with death if Elisha still has his head by the end of the day!’"
     },
     {
       "verse": "32",
@@ -704,17 +704,17 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "While Elisha was still talking to the city's leaders, the king's man arrived with this message: ‘The Lord has caused this terrible trouble to happen to us. I cannot wait any longer for the Lord to help us.’ These may be the words of the king or the words of the man that he sent. Print... Use screen font size Show All Comments 2 Kings 52 Kings 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "While Elisha was still talking to the city's leaders, the king's man arrived with this message: ‘The Lord has caused this terrible trouble to happen to us. I cannot wait any longer for the Lord to help us.’"
     }
   ],
   "7": [
     {
       "verse": "1",
-      "text": "Elisha said, ‘Now listen to the Lord's message! This is what the Lord says: “About this time tomorrow, five kilograms of good flour will cost only one piece of silver. Ten kilograms of barley will also cost one piece of silver. You will be able to buy this food at the gate of Samaria.” ’ Elisha said that by the next day, food would be very cheap for people to buy."
+      "text": "Elisha said, ‘Now listen to the Lord's message! This is what the Lord says: “About this time tomorrow, five kilograms of good flour will cost only one piece of silver. Ten kilograms of barley will also cost one piece of silver. You will be able to buy this food at the gate of Samaria.” ’"
     },
     {
       "verse": "2",
-      "text": "The special officer who was near to the king said to the man of God, ‘That will never happen! Even if the Lord opens the skies and sends us rain, it could not happen so soon.’ Elisha said, ‘You yourself will see this happen, but you will not eat any of the food!’ How the war finished"
+      "text": "The special officer who was near to the king said to the man of God, ‘That will never happen! Even if the Lord opens the skies and sends us rain, it could not happen so soon.’ Elisha said, ‘You yourself will see this happen, but you will not eat any of the food!’"
     },
     {
       "verse": "3",
@@ -786,7 +786,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "That is what really happened to him! At the city gate, the people ran over the king's officer and he died. Print... Use screen font size Show All Comments 2 Kings 62 Kings 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is what really happened to him! At the city gate, the people ran over the king's officer and he died."
     }
   ],
   "8": [
@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "After seven years, she came back from there. She went to the king to ask for her house and her land. See 2 Kings Someone else had used the woman's land while she was away."
+      "text": "After seven years, she came back from there. She went to the king to ask for her house and her land."
     },
     {
       "verse": "4",
@@ -812,7 +812,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The king asked the woman about it. She told him what had happened. Then the king commanded one of his officers to take care of her. The king said to him, ‘This woman must receive back everything that belongs to her. She must also receive the value of all the crops that have grown in her fields since the day that she went away.’ King Ben-Hadad dies"
+      "text": "The king asked the woman about it. She told him what had happened. Then the king commanded one of his officers to take care of her. The king said to him, ‘This woman must receive back everything that belongs to her. She must also receive the value of all the crops that have grown in her fields since the day that she went away.’"
     },
     {
       "verse": "7",
@@ -848,7 +848,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The next day, Hazael took a thick cloth. He used water to make it wet. Then he put it over the king's face so that he could not breathe. So King Ben-Hadad died. Hazael became king of Syria after him. Jehoram becomes the king of Judah"
+      "text": "The next day, Hazael took a thick cloth. He used water to make it wet. Then he put it over the king's face so that he could not breathe. So King Ben-Hadad died. Hazael became king of Syria after him."
     },
     {
       "verse": "16",
@@ -856,7 +856,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He was 32 years old when he became king. He ruled in Jerusalem for eight years."
+      "text": "years old when he became king. He ruled in Jerusalem for eight years."
     },
     {
       "verse": "18",
@@ -864,7 +864,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But the Lord did not want to destroy the nation of Judah, because of his promise to his servant, David. The Lord had promised that King David would always have descendants who would rule the nation. Jehoram may have started to rule Judah while his father, King Jehoshaphat, was still alive."
+      "text": "But the Lord did not want to destroy the nation of Judah, because of his promise to his servant, David. The Lord had promised that King David would always have descendants who would rule the nation."
     },
     {
       "verse": "20",
@@ -876,7 +876,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Even today, Edom's people do not obey the rulers of Judah. The people of Libnah city also turned against Judah at the same time. Zair was a city just inside the border of Edom."
+      "text": "Even today, Edom's people do not obey the rulers of Judah. The people of Libnah city also turned against Judah at the same time."
     },
     {
       "verse": "23",
@@ -884,7 +884,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Jehoram died and they buried him with his ancestors in the City of David. His son Ahaziah became king after him. Ahaziah becomes the king of Judah"
+      "text": "Jehoram died and they buried him with his ancestors in the City of David. His son Ahaziah became king after him."
     },
     {
       "verse": "25",
@@ -892,11 +892,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Ahaziah was 22 years old when he became king. He ruled in Jerusalem for one year. His mother's name was Athaliah. She was a granddaughter of Omri, king of Israel."
+      "text": "years old when he became king. He ruled in Jerusalem for one year. His mother's name was Athaliah. She was a granddaughter of Omri, king of Israel."
     },
     {
       "verse": "27",
-      "text": "Ahaziah lived in the same bad way that Ahab's family had done. He did things that the Lord said were evil, as Ahab's family had done. That was because he had married a woman from Ahab's family. Athaliah was a daughter of King Ahab."
+      "text": "Ahaziah lived in the same bad way that Ahab's family had done. He did things that the Lord said were evil, as Ahab's family had done. That was because he had married a woman from Ahab's family."
     },
     {
       "verse": "28",
@@ -904,7 +904,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "King Joram returned to Jezreel, so that his wounds could get better after the battle. While he was there, King Ahaziah went to visit him, because of his wounds. Print... Use screen font size Show All Comments 2 Kings 72 Kings 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "King Joram returned to Jezreel, so that his wounds could get better after the battle. While he was there, King Ahaziah went to visit him, because of his wounds."
     }
   ],
   "9": [
@@ -922,7 +922,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The young prophet that Elisha had sent went to Ramoth Gilead."
+      "text": "The young prophet that Elisha had sent went to Ramoth Gilead. Then the young prophet opened the door and he ran away."
     },
     {
       "verse": "5",
@@ -946,7 +946,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Dogs will eat Jezebel's body on the ground in Jezreel. Nobody will bury her.” ’ Then the young prophet opened the door and he ran away."
+      "text": "Dogs will eat Jezebel's body on the ground in Jezreel. Nobody will bury her.” ’Then the young prophet opened the door and he ran away."
     },
     {
       "verse": "11",
@@ -958,15 +958,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The other officers then quickly took their coats. They put them on the stone steps for Jehu to walk on. Then they made a loud noise with a trumpet. They shouted, ‘Jehu is king!’ Jehu kills Joram"
+      "text": "The other officers then quickly took their coats. They put them on the stone steps for Jehu to walk on. Then they made a loud noise with a trumpet. They shouted, ‘Jehu is king!’"
     },
     {
       "verse": "14",
-      "text": "So Jehu, the son of Jehoshaphat and grandson of Nimshi, became an enemy of King Joram. Joram had been in Ramoth Gilead with the whole army of Israel. They were fighting against Hazael, the king of Syria, who wanted to attack Israel."
+      "text": "So Jehu, the son of Jehoshaphat and grandson of Nimshi, became an enemy of King Joram.Joram had been in Ramoth Gilead with the whole army of Israel. They were fighting against Hazael, the king of Syria, who wanted to attack Israel."
     },
     {
       "verse": "15",
-      "text": "The Syrian soldiers had hurt King Joram in the battle against King Hazael. So he returned to Jezreel to get well again. Jehu said to his men, ‘If you really want to help me, do not let anyone leave this city. Nobody must go to warn the people in Jezreel.’"
+      "text": "The Syrian soldiers had hurt King Joram in the battle against King Hazael. So he returned to Jezreel to get well again.Jehu said to his men, ‘If you really want to help me, do not let anyone leave this city. Nobody must go to warn the people in Jezreel.’"
     },
     {
       "verse": "16",
@@ -974,11 +974,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "A guard was standing on the tower in Jezreel to watch for enemies. He saw Jehu's soldiers coming towards the city. He shouted, ‘I can see a group of soldiers who are coming here on horses.’ King Joram said, ‘Send out a man on a horse to meet the soldiers. Ask them. “Are you coming to us as friends?” ’"
+      "text": "A guard was standing on the tower in Jezreel to watch for enemies. He saw Jehu's soldiers coming towards the city. He shouted, ‘I can see a group of soldiers who are coming here on horses.’King Joram said, ‘Send out a man on a horse to meet the soldiers. Ask them. “Are you coming to us as friends?” ’"
     },
     {
       "verse": "18",
-      "text": "The man on the horse rode out of the city to meet Jehu. He said to Jehu, ‘The king asks you, “Are you coming here as friends?” ’ Jehu replied, ‘Whether we are friends or not, turn round and ride behind me!’ The guard on the tower reported to Joram, ‘The man that you sent with the message has reached them. But he is not coming back yet.’"
+      "text": "The man on the horse rode out of the city to meet Jehu. He said to Jehu, ‘The king asks you, “Are you coming here as friends?” ’ Jehu replied, ‘Whether we are friends or not, turn round and ride behind me!’The guard on the tower reported to Joram, ‘The man that you sent with the message has reached them. But he is not coming back yet.’"
     },
     {
       "verse": "19",
@@ -994,7 +994,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "When Joram saw Jehu, he asked, ‘Have you come as a friend, Jehu?’ Jehu replied, ‘We cannot be friends. Your mother Jezebel still causes people to worship idols and to use magic.’ King Ahab and his wife Jezebel had taken Naboth's land from him. See 1 Kings"
+      "text": "When Joram saw Jehu, he asked, ‘Have you come as a friend, Jehu?’ Jehu replied, ‘We cannot be friends. Your mother Jezebel still causes people to worship idols and to use magic.’"
     },
     {
       "verse": "23",
@@ -1038,7 +1038,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jehu shouted to them, ‘Throw her down!’ So they threw her down. When she hit the ground, some of her blood splashed on the wall. It also splashed on Jehu's horses as he drove them over her body. The palace was probably near the gate of the city. We know that it was near the land that had belonged to Naboth. Jezebel called Jehu ‘Zimri’ because Zimri was someone who had also killed his master, the king. See 1 Kings The eunuchs were servants in the palace."
+      "text": "Jehu shouted to them, ‘Throw her down!’ So they threw her down. When she hit the ground, some of her blood splashed on the wall. It also splashed on Jehu's horses as he drove them over her body."
     },
     {
       "verse": "34",
@@ -1054,17 +1054,17 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Her dead body will lie on the ground in Jezreel like dung. Nobody will be able to recognize who it is.” ’ Print... Use screen font size Show All Comments 2 Kings 82 Kings 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Her dead body will lie on the ground in Jezreel like dung. Nobody will be able to recognize who it is.” ’"
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "Ahab had 70 sons who lived in Samaria. So Jehu wrote letters and he sent them to Samaria. He sent them to Jezreel's officers and leaders, as well as to the men who took care of Ahab's sons."
+      "text": "sons who lived in Samaria. So Jehu wrote letters and he sent them to Samaria. He sent them to Jezreel's officers and leaders, as well as to the men who took care of Ahab's sons."
     },
     {
       "verse": "2",
-      "text": "This was what the letter said: Jezreel's officers and leaders had probably escaped to Samaria. ‘When this letter reaches you, your master's sons will be with you. You also have his chariots and horses in a strong city. And you have weapons."
+      "text": "This was what the letter said:‘When this letter reaches you, your master's sons will be with you. You also have his chariots and horses in a strong city. And you have weapons."
     },
     {
       "verse": "3",
@@ -1076,11 +1076,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So these people sent a message to Jehu: the officer who took care of the king's palace,the man who ruled the city of Samaria,the city's leaders,and the men who took care of Ahab's children.The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right.’"
+      "text": "So these people sent a message to Jehu:the officer who took care of the king's palace,the man who ruled the city of Samaria,the city's leaders,and the men who took care of Ahab's children.The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right.’ The message said, ‘We are your servants. We will do anything that you tell us. We will not make anyone king. You must do what you think is right.’"
     },
     {
       "verse": "6",
-      "text": "So Jehu wrote a second letter to them. It said, ‘If you are ready to help me and you will obey me, do this: Bring the heads of your master's sons here to me in Jezreel. Bring them by this time tomorrow.’ When Jehu said, ‘Bring me the heads of your masters sons’, he might have meant, ‘Bring me the people who take care of your master's sons.’ Perhaps because of that, he says he is not guilty for the death of these men (verse 9). At that time, important leaders of the city were taking care of the king's 70 sons."
+      "text": "So Jehu wrote a second letter to them. It said, ‘If you are ready to help me and you will obey me, do this: Bring the heads of your master's sons here to me in Jezreel. Bring them by this time tomorrow.’At that time, important leaders of the city were taking care of the king's 70 sons."
     },
     {
       "verse": "7",
@@ -1112,7 +1112,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Jehu said to his men, ‘Catch them, but do not kill them!’ So they took hold of them. Then they killed them all near the well at Beth Eked. They killed 42 people, so that none of them remained alive. They were on their way to visit King Joram, his mother Queen Jezebel and their families. They did not know that Jehu had killed all Ahab's descendants."
+      "text": "Jehu said to his men, ‘Catch them, but do not kill them!’ So they took hold of them. Then they killed them all near the well at Beth Eked. They killed 42 people, so that none of them remained alive."
     },
     {
       "verse": "15",
@@ -1124,7 +1124,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Jehu arrived in Samaria. He killed all the descendants of Ahab who were still alive in Samaria. The Lord had told Elijah that this would happen. Jehu removes false prophets"
+      "text": "Jehu arrived in Samaria. He killed all the descendants of Ahab who were still alive in Samaria. The Lord had told Elijah that this would happen."
     },
     {
       "verse": "18",
@@ -1132,7 +1132,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "So tell all the prophets who serve Baal to come here, as well as all Baal's servants and his priests. Make sure that they all come. I want to offer a great sacrifice to Baal. If any of them does not come, I will punish him with death.’ But Jehu was deceiving them. He wanted to kill all Baal's servants."
+      "text": "So tell all the prophets who serve Baal to come here, as well as all Baal's servants and his priests. Make sure that they all come. I want to offer a great sacrifice to Baal. If any of them does not come, I will punish him with death.’But Jehu was deceiving them. He wanted to kill all Baal's servants."
     },
     {
       "verse": "20",
@@ -1180,7 +1180,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But Jehu was not careful to obey completely the law of the Lord, Israel's God. He did not turn away from the sins of Jeroboam which he had caused Israel to do. for four generations’ means Jehu's son, Jehu's grandson, his grandson's son and his grandson's grandson."
+      "text": "But Jehu was not careful to obey completely the law of the Lord, Israel's God. He did not turn away from the sins of Jeroboam which he had caused Israel to do."
     },
     {
       "verse": "32",
@@ -1200,7 +1200,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Jehu ruled over Israel as king in Samaria for 28 years. Print... Use screen font size Show All Comments 2 Kings 92 Kings 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years."
     }
   ],
   "11": [
@@ -1218,7 +1218,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "In the seventh year that Athaliah ruled Judah, the priest Jehoiada asked some of the king's officers to come to him. They were officers of army groups, the king's special guards and the palace guards. Jehoiada was the leader of the priests. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them."
+      "text": "In the seventh year that Athaliah ruled Judah, the priest Jehoiada asked some of the king's officers to come to him. They were officers of army groups, the king's special guards and the palace guards.They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them. They came to meet with Jehoiada in the Lord's temple. There, he made them promise to agree with his idea. Then he showed the king's son Joash to them."
     },
     {
       "verse": "5",
@@ -1254,11 +1254,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Queen Athaliah heard the soldiers and the people as they were shouting. So she went to the Lord's temple where all the people were."
+      "text": "Queen Athaliah heard the soldiers and the people as they were shouting. So she went to the Lord's temple where all the people were. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
     },
     {
       "verse": "14",
-      "text": "Then she saw the king! He was standing in the king's place beside the pillar in the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. Many of them made music with trumpets. This was the special place for a king to stand, to show that he had authority to rule. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’ Treason’ is when people turn against their ruler."
+      "text": "Then she saw the king! He was standing in the king's place beside the pillar in the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. Many of them made music with trumpets.When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
     },
     {
       "verse": "15",
@@ -1274,7 +1274,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then people everywhere in the country went to the temple of Baal. They destroyed it. They completely knocked down its altars and idols. They killed Baal's priest, Mattan, in front of Baal's altars. Then Jehoiada the priest put guards to keep the Lord's temple safe."
+      "text": "Then people everywhere in the country went to the temple of Baal. They destroyed it. They completely knocked down its altars and idols. They killed Baal's priest, Mattan, in front of Baal's altars.Then Jehoiada the priest put guards to keep the Lord's temple safe."
     },
     {
       "verse": "19",
@@ -1286,7 +1286,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "And Joash was seven years old when he began to rule Judah as king. Print... Use screen font size Show All Comments 2 Kings 102 Kings 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And Joash was seven years old when he began to rule Judah as king."
     }
   ],
   "12": [
@@ -1300,11 +1300,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But Joash did not remove the altars on the hills. The people continued to offer sacrifices and to burn incense on those altars. Jehoiada was the leader of the priests."
+      "text": "But Joash did not remove the altars on the hills. The people continued to offer sacrifices and to burn incense on those altars."
     },
     {
       "verse": "4",
-      "text": "Joash said to all the priests, ‘Bring together all the money that people have offered to the Lord in his temple. This includes: the money that each person pays as his tax,the money that people have given because of a promise,and the money that people have chosen to give for the temple."
+      "text": "Joash said to all the priests, ‘Bring together all the money that people have offered to the Lord in his temple. This includes:the money that each person pays as his tax,the money that people have given because of a promise,and the money that people have chosen to give for the temple."
     },
     {
       "verse": "5",
@@ -1312,7 +1312,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When Joash had been king for 23 years, the priests had still not made any repairs to the temple."
+      "text": "years, the priests had still not made any repairs to the temple."
     },
     {
       "verse": "7",
@@ -1320,7 +1320,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The priests agreed that they would not take any more money from the people. They agreed that they would not make repairs to the temple themselves. The priests agreed that somebody else would make repairs to the house of the Lord."
+      "text": "The priests agreed that they would not take any more money from the people. They agreed that they would not make repairs to the temple themselves."
     },
     {
       "verse": "9",
@@ -1340,7 +1340,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But they did not use any of this money to buy things that they used in the temple. This included: silver bowls,small tools that they used for the lamps,bowls for water,trumpets,and anything else that was made with silver or gold."
+      "text": "But they did not use any of this money to buy things that they used in the temple. This included:silver bowls,small tools that they used for the lamps,bowls for water,trumpets,and anything else that was made with silver or gold."
     },
     {
       "verse": "14",
@@ -1356,11 +1356,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "At that time, Hazael, the king of Syria, attacked Gath. His army took the city for him. Then King Hazael decided to attack Jerusalem. Gath was a city where the Philistines lived."
+      "text": "At that time, Hazael, the king of Syria, attacked Gath. His army took the city for him. Then King Hazael decided to attack Jerusalem."
     },
     {
       "verse": "18",
-      "text": "Joash, the king of Judah, took all the valuable things that he and his ancestors had given to God. Those ancestors were the kings of Judah: Jehoshaphat, Jehoram and Ahaziah. He also took gold that was in the palace and in the temple. He sent all those valuable things to Hazael, king of Syria. When Hazael received the gifts from Joash, he took his army away from Jerusalem. Hazael took the special things in the Lord's house. The priests only used these things when they worshipped the Lord."
+      "text": "Joash, the king of Judah, took all the valuable things that he and his ancestors had given to God. Those ancestors were the kings of Judah: Jehoshaphat, Jehoram and Ahaziah. He also took gold that was in the palace and in the temple. He sent all those valuable things to Hazael, king of Syria. When Hazael received the gifts from Joash, he took his army away from Jerusalem."
     },
     {
       "verse": "19",
@@ -1372,7 +1372,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The officers that killed him were Shimeath's son Jozabad and Shomer's son Jehozabad. People buried Joash beside his ancestors in the City of David. His son Amaziah became king after him. Print... Use screen font size Show All Comments 2 Kings 112 Kings 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The officers that killed him were Shimeath's son Jozabad and Shomer's son Jehozabad. People buried Joash beside his ancestors in the City of David. His son Amaziah became king after him."
     }
   ],
   "13": [
@@ -1402,7 +1402,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The king of Syria had destroyed most of Jehoahaz's army. All that remained were: 50 soldiers that rode horses.10 chariots.10,000 other soldiers.The king of Syria completely destroyed all the rest of the army. Only dust remained!"
+      "text": "The king of Syria had destroyed most of Jehoahaz's army. All that remained were:50 soldiers that rode horses.10 chariots.10,000 other soldiers.The king of Syria completely destroyed all the rest of the army. Only dust remained! The king of Syria completely destroyed all the rest of the army. Only dust remained!"
     },
     {
       "verse": "8",
@@ -1410,7 +1410,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Jehoahaz died and they buried him beside his ancestors in Samaria. His son Jehoash became king after him. Jehoash becomes the king of Israel"
+      "text": "Jehoahaz died and they buried him beside his ancestors in Samaria. His son Jehoash became king after him."
     },
     {
       "verse": "10",
@@ -1426,11 +1426,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Jehoash died and they buried him in Samaria beside the other kings of Israel. Jeroboam became king of Israel after him. Elisha dies"
+      "text": "Jehoash died and they buried him in Samaria beside the other kings of Israel. Jeroboam became king of Israel after him."
     },
     {
       "verse": "14",
-      "text": "When Jehoash was still king of Israel, Elisha became very ill. It was the illness from which he would soon die. Jehoash went to visit him. Jehoash stood beside Elisha and he wept. Jehoash said, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses!’ These are the same words that Elisha spoke to Elijah when Elijah was going up to heaven. See 2 Kings The king is saying that Elisha has been a very powerful leader in the history of Israel."
+      "text": "When Jehoash was still king of Israel, Elisha became very ill. It was the illness from which he would soon die. Jehoash went to visit him. Jehoash stood beside Elisha and he wept. Jehoash said, ‘My father! My father! You are riding in Israel's chariot! Israel's men are riding on the horses!’"
     },
     {
       "verse": "15",
@@ -1454,7 +1454,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "After that, Elisha died and they buried him. Every year in spring, groups of fighters from Moab came to attack places in Israel."
+      "text": "After that, Elisha died and they buried him.Every year in spring, groups of fighters from Moab came to attack places in Israel."
     },
     {
       "verse": "21",
@@ -1474,7 +1474,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Then Jehoahaz's son, King Jehoash, took back some Israelite cities from Ben-Hadad. They were cities that Hazael had taken from Jehoahaz in war. King Jehoash won three battles against Ben-Hadad and he took back those cities for Israel. Print... Use screen font size Show All Comments 2 Kings 122 Kings 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Jehoahaz's son, King Jehoash, took back some Israelite cities from Ben-Hadad. They were cities that Hazael had taken from Jehoahaz in war. King Jehoash won three battles against Ben-Hadad and he took back those cities for Israel."
     }
   ],
   "14": [
@@ -1484,7 +1484,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Amaziah was 25 years old when he began to rule as king. He ruled in Jerusalem for 29 years. His mother's name was Jehoaddin. She was from Jerusalem."
+      "text": "years old when he began to rule as king. He ruled in Jerusalem for 29 years. His mother's name was Jehoaddin. She was from Jerusalem."
     },
     {
       "verse": "3",
@@ -1500,11 +1500,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins.’ See Deuteronomy"
+      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins.’"
     },
     {
       "verse": "7",
-      "text": "Amaziah killed 10,000 soldiers from Edom in Salt valley. He attacked Sela city and he took it for himself. He gave it a new name, ‘Joktheel’. That is still its name. Salt valley was south of the Salt Sea."
+      "text": "Amaziah killed 10,000 soldiers from Edom in Salt valley. He attacked Sela city and he took it for himself. He gave it a new name, ‘Joktheel’. That is still its name."
     },
     {
       "verse": "8",
@@ -1532,7 +1532,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He took all the gold and silver and all the valuable things from the Lord's temple and the palace. He also took some of the people away with him as prisoners. Then he returned to Samaria. King Jehoash of Israel dies"
+      "text": "He took all the gold and silver and all the valuable things from the Lord's temple and the palace. He also took some of the people away with him as prisoners. Then he returned to Samaria."
     },
     {
       "verse": "15",
@@ -1540,7 +1540,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Jehoash died and they buried him beside the other kings of Israel in Samaria. His son Jeroboam became king after him. King Amaziah of Judah dies"
+      "text": "Jehoash died and they buried him beside the other kings of Israel in Samaria. His son Jeroboam became king after him."
     },
     {
       "verse": "17",
@@ -1564,7 +1564,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "He was the king who built Elath into a strong city again. He put it back under Judah's power. He did that after his father Amaziah had died. Jeroboam II becomes the king of Israel"
+      "text": "He was the king who built Elath into a strong city again. He put it back under Judah's power. He did that after his father Amaziah had died."
     },
     {
       "verse": "23",
@@ -1572,11 +1572,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "He did things that the Lord said were evil. He did not turn away from the bad things that Nebat's son Jeroboam had done. He had caused many people in Israel to do those sins. This King Jeroboam was the second king of Israel who had that name. So we can call him Jeroboam II."
+      "text": "He did things that the Lord said were evil. He did not turn away from the bad things that Nebat's son Jeroboam had done. He had caused many people in Israel to do those sins."
     },
     {
       "verse": "25",
-      "text": "Jeroboam was the king who made Israel's border strong between Lebo-Hamath and the Salt Sea. The Lord, Israel's God, had already told his prophet Jonah that this would happen. Jonah was the son of Amittai and he came from Gath Hepher. Lebo-Hamath was in the north of Israel and the Salt Sea was in the south. We call the Salt Sea the Dead Sea today."
+      "text": "Jeroboam was the king who made Israel's border strong between Lebo-Hamath and the Salt Sea. The Lord, Israel's God, had already told his prophet Jonah that this would happen. Jonah was the son of Amittai and he came from Gath Hepher."
     },
     {
       "verse": "26",
@@ -1592,7 +1592,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Jeroboam died and they buried him beside the other kings of Israel in Samaria. His son Zechariah became king after him. Zechariah was the 4th king in Jehu's family after Jehu himself. See God's promise to Jehu in 2 Kings Print... Use screen font size Show All Comments 2 Kings 132 Kings 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jeroboam died and they buried him beside the other kings of Israel in Samaria. His son Zechariah became king after him."
     }
   ],
   "15": [
@@ -1602,7 +1602,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Azariah was 16 years old when he became king. He ruled in Jerusalem for 52 years. His mother's name was Jecoliah. She came from Jerusalem."
+      "text": "years old when he became king. He ruled in Jerusalem for 52 years. His mother's name was Jecoliah. She came from Jerusalem."
     },
     {
       "verse": "3",
@@ -1610,11 +1610,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But he did not remove the altars on the hills. The people continued to offer sacrifices and to burn incense on those altars. Azariah was also called Uzziah. See 2 Kings Isaiah"
+      "text": "But he did not remove the altars on the hills. The people continued to offer sacrifices and to burn incense on those altars."
     },
     {
       "verse": "5",
-      "text": "The Lord caused the king to have a bad disease in his skin. He had the disease until the day that he died. He lived in a house away from other people. His son Jotham had authority in the palace and he ruled the people of Judah. The disease may have been what we call leprosy."
+      "text": "The Lord caused the king to have a bad disease in his skin. He had the disease until the day that he died. He lived in a house away from other people. His son Jotham had authority in the palace and he ruled the people of Judah."
     },
     {
       "verse": "6",
@@ -1622,7 +1622,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Azariah died and they buried him beside his ancestors in the City of David. His son Jotham became king after him. Zechariah becomes the king of Israel"
+      "text": "Azariah died and they buried him beside his ancestors in the City of David. His son Jotham became king after him."
     },
     {
       "verse": "8",
@@ -1642,7 +1642,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The Lord had given this promise to Jehu: ‘Your descendants will be kings of Israel for four generations.’ That is what happened. See 2 Kings The four descendants of Jehu who became king were: Jehoahaz, Jehoash, Jeroboam II and Zechariah. Shallum becomes the king of Israel"
+      "text": "The Lord had given this promise to Jehu: ‘Your descendants will be kings of Israel for four generations.’ That is what happened."
     },
     {
       "verse": "13",
@@ -1658,7 +1658,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "At that time, when Menahem came from Tirzah, he attacked the city of Tiphsah. The people who lived there refused to let him go into their city. So he killed them all. He even cut open the pregnant women. Menahem becomes the king of Israel"
+      "text": "At that time, when Menahem came from Tirzah, he attacked the city of Tiphsah. The people who lived there refused to let him go into their city. So he killed them all. He even cut open the pregnant women."
     },
     {
       "verse": "17",
@@ -1674,7 +1674,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Menahem made all the rich people in Israel pay taxes to him. Every rich man had to pay 50 silver coins. Menahem gave that money to the king of Assyria. Then the king of Assyria went away. He did not stay any longer in Israel. Pul was a short name for King Tiglath-Pileser III."
+      "text": "Menahem made all the rich people in Israel pay taxes to him. Every rich man had to pay 50 silver coins. Menahem gave that money to the king of Assyria. Then the king of Assyria went away. He did not stay any longer in Israel."
     },
     {
       "verse": "21",
@@ -1682,7 +1682,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Menahem died and his son, Pekahiah, became king after him. Pekahiah becomes the king of Israel"
+      "text": "Menahem died and his son, Pekahiah, became king after him."
     },
     {
       "verse": "23",
@@ -1698,7 +1698,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The other things that happened while Pekahiah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that Pekahiah did. Pekah becomes the king of Israel"
+      "text": "The other things that happened while Pekahiah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that Pekahiah did."
     },
     {
       "verse": "27",
@@ -1718,7 +1718,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The other things that happened while Pekah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that Pekah did. Jotham becomes the king of Judah"
+      "text": "The other things that happened while Pekah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that Pekah did."
     },
     {
       "verse": "32",
@@ -1726,7 +1726,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jotham was 25 years old when he became king. He ruled Judah as king in Jerusalem for 16 years. His mother's name was Jerusha. She was Zadok's daughter."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 16 years. His mother's name was Jerusha. She was Zadok's daughter."
     },
     {
       "verse": "34",
@@ -1746,7 +1746,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Jotham died and they buried him beside his ancestors in the City of David, who was his ancestor. His son Ahaz became king after him. Print... Use screen font size Show All Comments 2 Kings 142 Kings 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jotham died and they buried him beside his ancestors in the City of David, who was his ancestor. His son Ahaz became king after him."
     }
   ],
   "16": [
@@ -1756,7 +1756,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Ahaz was 20 years old when he became king. He ruled Judah as king in Jerusalem for 16 years. He did not do the things that the Lord his God said were good. So he was not like his ancestor, King David."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 16 years. He did not do the things that the Lord his God said were good. So he was not like his ancestor, King David."
     },
     {
       "verse": "3",
@@ -1764,7 +1764,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Ahaz offered sacrifices and he burned incense on altars on the hills, as well as under all the big trees. Walk through fire’ may mean that he burned his son as a sacrifice to a false god."
+      "text": "Ahaz offered sacrifices and he burned incense on altars on the hills, as well as under all the big trees."
     },
     {
       "verse": "5",
@@ -1784,7 +1784,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So the king of Assyria agreed to do what Ahaz had asked him to do. He attacked Damascus and he took the city for himself. He sent the people who had lived there to Kir as his prisoners. He punished King Rezin with death. These are the words of Ahaz, which the men repeated to Tiglath-Pileser. Damascus was the capital city of Syria."
+      "text": "So the king of Assyria agreed to do what Ahaz had asked him to do. He attacked Damascus and he took the city for himself. He sent the people who had lived there to Kir as his prisoners. He punished King Rezin with death."
     },
     {
       "verse": "10",
@@ -1804,11 +1804,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "A bronze altar stood in front of the Lord's temple to bring sacrifices to him. Now it stood between the new altar and the front of the temple. So Ahaz moved it away from there. He put it on the north side of the new altar."
+      "text": "A bronze altar stood in front of the Lord's temple to bring sacrifices to him. Now it stood between the new altar and the front of the temple. So Ahaz moved it away from there. He put it on the north side of the new altar. Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times.’"
     },
     {
       "verse": "15",
-      "text": "Then King Ahaz commanded Uriah the priest, ‘On the large new altar, offer these gifts: A burnt offering for each morning.A grain offering for each evening.A burnt offering and a grain offering on behalf of the king.A burnt offering on behalf of all the people of Israel.A grain offering and drink offerings on behalf of the people.Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times.’"
+      "text": "Then King Ahaz commanded Uriah the priest, ‘On the large new altar, offer these gifts:A burnt offering for each morning.A grain offering for each evening.A burnt offering and a grain offering on behalf of the king.A burnt offering on behalf of all the people of Israel.A grain offering and drink offerings on behalf of the people.Splash the blood from all these sacrifices on the new altar. But I will use the bronze altar myself, to find out about my future times.’"
     },
     {
       "verse": "16",
@@ -1820,7 +1820,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "He removed the roof that gave shade for people in the temple yard on the Sabbath days. He also removed the king's special entrance into the temple yard. He did these things to please the king of Assyria. We can read about these things in 1 Kings"
+      "text": "He removed the roof that gave shade for people in the temple yard on the Sabbath days. He also removed the king's special entrance into the temple yard. He did these things to please the king of Assyria."
     },
     {
       "verse": "19",
@@ -1828,7 +1828,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Ahaz died and they buried him beside his ancestors in the City of David. His son Hezekiah became king after him. Print... Use screen font size Show All Comments 2 Kings 152 Kings 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Ahaz died and they buried him beside his ancestors in the City of David. His son Hezekiah became king after him."
     }
   ],
   "17": [
@@ -1854,7 +1854,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When Hoshea had been king of Israel for nine years, the king of Assyria won the war against Samaria. He took the Israelites away to Assyria as his prisoners. He caused them to live in Halah, in Gozan beside the River Habor and in towns in Media. Why the Lord punished Israel"
+      "text": "When Hoshea had been king of Israel for nine years, the king of Assyria won the war against Samaria. He took the Israelites away to Assyria as his prisoners. He caused them to live in Halah, in Gozan beside the River Habor and in towns in Media."
     },
     {
       "verse": "7",
@@ -1922,7 +1922,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "In the end, the Lord sent the Israelites away from himself. He had used his servants, the prophets, to warn them that this would happen. As a result, the Assyrian army took the Israelites away from their own land as prisoners to Assyria. They still live there, even today. Foreign people come to live in Israel"
+      "text": "In the end, the Lord sent the Israelites away from himself. He had used his servants, the prophets, to warn them that this would happen. As a result, the Assyrian army took the Israelites away from their own land as prisoners to Assyria. They still live there, even today."
     },
     {
       "verse": "24",
@@ -1934,7 +1934,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "People told the king of Assyria, ‘You sent some nations of people to go and live in the towns of Samaria. But they do not know how to obey the rules of that country's god. So he has sent lions to attack them. The lions are killing them because they do not know the rules of that country's god.’ Samaria’ here means the whole kingdom of Israel, but not the kingdom of Judah."
+      "text": "People told the king of Assyria, ‘You sent some nations of people to go and live in the towns of Samaria. But they do not know how to obey the rules of that country's god. So he has sent lions to attack them. The lions are killing them because they do not know the rules of that country's god.’"
     },
     {
       "verse": "27",
@@ -1954,7 +1954,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The people from Avva made idols of their gods called Nibhaz and Tartak. The people from Sepharvaim burned their children in fire as offerings to their gods, Adrammelech and Anammelech. People thought that their gods only had power in their own country."
+      "text": "The people from Avva made idols of their gods called Nibhaz and Tartak. The people from Sepharvaim burned their children in fire as offerings to their gods, Adrammelech and Anammelech."
     },
     {
       "verse": "32",
@@ -1994,7 +1994,7 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "Even while they were worshipping the Lord, they continued to serve their own idols. Their children and their grandchildren continue to live as their fathers did, even today. Print... Use screen font size Show All Comments 2 Kings 162 Kings 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Even while they were worshipping the Lord, they continued to serve their own idols. Their children and their grandchildren continue to live as their fathers did, even today."
     }
   ],
   "18": [
@@ -2004,7 +2004,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Hezekiah was 25 years old when he became king. He ruled Judah as king in Jerusalem for 29 years. His mother's name was Abijah. She was the daughter of Zechariah."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 29 years. His mother's name was Abijah. She was the daughter of Zechariah."
     },
     {
       "verse": "3",
@@ -2012,7 +2012,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He removed the altars on the hills. He knocked down the stone pillars that people worshipped and he cut down the Asherah poles. He broke into pieces the bronze snake that Moses had made. Until then, the Israelites had burned incense as an offering to it. It was called Nehushtan. See Numbers The word ‘Nehushtan’ sounds like ‘bronze snake’ in Hebrew."
+      "text": "He removed the altars on the hills. He knocked down the stone pillars that people worshipped and he cut down the Asherah poles. He broke into pieces the bronze snake that Moses had made. Until then, the Israelites had burned incense as an offering to it. It was called Nehushtan."
     },
     {
       "verse": "5",
@@ -2044,11 +2044,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "This happened because they had not obeyed the Lord their God. They had not obeyed the covenant that he had made with them. They did not accept the teaching that Moses, the Lord's servant, had commanded them to obey. Sennacherib attacks Judah"
+      "text": "This happened because they had not obeyed the Lord their God. They had not obeyed the covenant that he had made with them. They did not accept the teaching that Moses, the Lord's servant, had commanded them to obey."
     },
     {
       "verse": "13",
-      "text": "When Hezekiah had ruled Judah for 14 years, King Sennacherib of Assyria attacked Judah with his army. He took all the strong cities in Judah for himself."
+      "text": "years, King Sennacherib of Assyria attacked Judah with his army. He took all the strong cities in Judah for himself."
     },
     {
       "verse": "14",
@@ -2060,19 +2060,19 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "At the same time, Hezekiah removed the gold that he had used to cover the doors of the Lord's temple. He also took the gold off the wood at the sides of the doors. He gave all that gold to the king of Assyria. Sennacherib warns the people of Jerusalem"
+      "text": "At the same time, Hezekiah removed the gold that he had used to cover the doors of the Lord's temple. He also took the gold off the wood at the sides of the doors. He gave all that gold to the king of Assyria."
     },
     {
       "verse": "17",
-      "text": "King Sennacherib of Assyria sent his three most important officers from Lachish to Jerusalem, to speak to King Hezekiah. The three officers took a large army with them. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes."
+      "text": "King Sennacherib of Assyria sent his three most important officers from Lachish to Jerusalem, to speak to King Hezekiah. The three officers took a large army with them.They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes. They arrived in Jerusalem. They went and stood at the stream of water that came from the higher pool. It was on the road to the field where people washed clothes."
     },
     {
       "verse": "18",
-      "text": "They told King Hezekiah to come to them. These three people went out to meet them: Hilkiah's son Eliakim, who was the most important officer in the king's palace.Shebna, a government officer.Asaph's son Joah, the king's secretary."
+      "text": "They told King Hezekiah to come to them. These three people went out to meet them:Hilkiah's son Eliakim, who was the most important officer in the king's palace.Shebna, a government officer.Asaph's son Joah, the king's secretary."
     },
     {
       "verse": "19",
-      "text": "One of Sennacherib's officers said to them, ‘Tell Hezekiah that the king of Assyria, the great king, says this to him: “Why are you so sure that someone will rescue you from our power?"
+      "text": "One of Sennacherib's officers said to them,‘Tell Hezekiah that the king of Assyria, the great king, says this to him: “Why are you so sure that someone will rescue you from our power?"
     },
     {
       "verse": "20",
@@ -2144,7 +2144,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Then King Hezekiah's three officers, Eliakim, Shebna and Joah, went back to Hezekiah. They had torn their clothes because they were very upset. They told the king what the Assyrian officer had said. Print... Use screen font size Show All Comments 2 Kings 172 Kings 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then King Hezekiah's three officers, Eliakim, Shebna and Joah, went back to Hezekiah. They had torn their clothes because they were very upset. They told the king what the Assyrian officer had said."
     }
   ],
   "19": [
@@ -2182,7 +2182,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then the king of Assyria heard a report about Tirhakah, the king of Ethiopia. People told him, ‘He has brought his army from Ethiopia to fight against you.’ When the king of Assyria heard that news, he sent another message to Hezekiah in Jerusalem."
+      "text": "Then the king of Assyria heard a report about Tirhakah, the king of Ethiopia. People told him, ‘He has brought his army from Ethiopia to fight against you.’When the king of Assyria heard that news, he sent another message to Hezekiah in Jerusalem."
     },
     {
       "verse": "10",
@@ -2226,43 +2226,43 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then Amoz's son Isaiah sent this message to Hezekiah: ‘The Lord, Israel's God, says, “I heard your prayer to me about Sennacherib, the king of Assyria.”"
+      "text": "Then Amoz's son Isaiah sent this message to Hezekiah: ‘The Lord, Israel's God, says, “I heard your prayer to me about Sennacherib, the king of Assyria.” “The holy people of Zion laugh at you! They think that you are useless. Yes, the people of Jerusalem shake their heads as you run away."
     },
     {
       "verse": "21",
-      "text": "This is the Lord's reply. The Lord says this about King Sennacherib: “The holy people of Zion laugh at you! They think that you are useless. Yes, the people of Jerusalem shake their heads as you run away."
+      "text": "This is the Lord's reply. The Lord says this about King Sennacherib:“The holy people of Zion laugh at you!They think that you are useless.Yes, the people of Jerusalem shake their headsas you run away."
     },
     {
       "verse": "22",
-      "text": "Who do you think it is that you have insulted? Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel!"
+      "text": "Who do you think it is that you have insulted?Who have you shouted at?Who have you looked at so proudly?The answer is the Holy God of Israel! Who have you shouted at? Who have you looked at so proudly? The answer is the Holy God of Israel!"
     },
     {
       "verse": "23",
-      "text": "You have sent your servants to insult the Lord God. You have said, ‘I have taken all my chariots and I have gone up high mountains, the highest mountains in Lebanon. I have cut down its tall cedar trees, and I have cut down its best pine trees. I went up to its highest places, and I went far into its forests."
+      "text": "You have sent your servantsto insult the Lord God.You have said, ‘I have taken all my chariotsand I have gone up high mountains,the highest mountains in Lebanon.I have cut down its tall cedar trees,and I have cut down its best pine trees.I went up to its highest places,and I went far into its forests. to insult the Lord God. You have said, ‘I have taken all my chariots and I have gone up high mountains, the highest mountains in Lebanon. I have cut down its tall cedar trees, and I have cut down its best pine trees. I went up to its highest places, and I went far into its forests."
     },
     {
       "verse": "24",
-      "text": "I dug wells in other countries, and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry.’"
+      "text": "I dug wells in other countries,and they gave me water to drink.My army marched through all the rivers in Egypt,and the rivers became dry.’ and they gave me water to drink. My army marched through all the rivers in Egypt, and the rivers became dry.’"
     },
     {
       "verse": "25",
-      "text": "You said that, but now listen to this! The Lord continues to speak his message to King Sennacherib. You must surely have heard it already. I decided what to do a long time ago! Now I am causing it to happen. I decided that you would destroy strong cities so that they became heaps of stones."
+      "text": "You said that, but now listen to this!You must surely have heard it already.I decided what to do a long time ago!Now I am causing it to happen.I decided that you would destroy strong citiesso that they became heaps of stones. You must surely have heard it already. I decided what to do a long time ago! Now I am causing it to happen. I decided that you would destroy strong cities so that they became heaps of stones."
     },
     {
       "verse": "26",
-      "text": "The people of those cities have no power. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die."
+      "text": "The people of those cities have no power.They are afraid and they are confused.They are like plants in a field,that cannot live for a long time.They are like fresh green grass,or grass that grows on the roof of a house.When a hot wind blows on them,it burns them and they die. They are afraid and they are confused. They are like plants in a field, that cannot live for a long time. They are like fresh green grass, or grass that grows on the roof of a house. When a hot wind blows on them, it burns them and they die."
     },
     {
       "verse": "27",
-      "text": "I know everything about you. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry."
+      "text": "I know everything about you.I know where you live.I know when you go out.And I know when you return home.I know how much you shout against me,when you are angry. I know where you live. I know when you go out. And I know when you return home. I know how much you shout against me, when you are angry."
     },
     {
       "verse": "28",
-      "text": "Yes, you do shout at me! And I have heard all your proud noise. So I will put my hook in your nose. I will tie a rope to your mouth. Then I will pull you back home by the same way that you came.”"
+      "text": "Yes, you do shout at me!And I have heard all your proud noise.So I will put my hook in your nose.I will tie a rope to your mouth.Then I will pull you back homeby the same way that you came.” And I have heard all your proud noise. So I will put my hook in your nose. I will tie a rope to your mouth. Then I will pull you back home by the same way that you came.”"
     },
     {
       "verse": "29",
-      "text": "King Hezekiah, this is how you will know that I have spoken a true message from the Lord. This year, you will eat crops that grow by themselves. And next year you will eat what grows from the same seeds. But in the third year you will plant seeds for yourselves, and they will give you a harvest of crops. You will plant vines again and you will eat grapes from them. Isaiah has told Hezekiah about the Lord's message to King Sennacherib. Now he speaks to King Hezekiah himself."
+      "text": "King Hezekiah, this is how you will know that I have spoken a true message from the Lord. This year, you will eat crops that grow by themselves. And next year you will eat what grows from the same seeds. But in the third year you will plant seeds for yourselves, and they will give you a harvest of crops. You will plant vines again and you will eat grapes from them."
     },
     {
       "verse": "30",
@@ -2274,15 +2274,15 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "This is what the Lord says about the king of Assyria: “His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls."
+      "text": "This is what the Lord says about the king of Assyria:“His army will not come into this city.His soldiers will not shoot any arrows here.They will not attack the city as they hold their shields.They will not build heaps of earth against the city's walls. “His army will not come into this city. His soldiers will not shoot any arrows here. They will not attack the city as they hold their shields. They will not build heaps of earth against the city's walls."
     },
     {
       "verse": "33",
-      "text": "No! The king will return home by the way that he came. He will not come into this city.” That is what the Lord says."
+      "text": "No! The king will return home by the way that he came.He will not come into this city.”That is what the Lord says. He will not come into this city.” That is what the Lord says."
     },
     {
       "verse": "34",
-      "text": "“I will make this city safe and I will rescue it. I will do that to show that I am great. I promised my servant David that I would do it. So I will do it.” ’"
+      "text": "“I will make this city safe and I will rescue it.I will do that to show that I am great.I promised my servant David that I would do it. So I will do it.” ’ I will do that to show that I am great. I promised my servant David that I would do it. So I will do it.” ’"
     },
     {
       "verse": "35",
@@ -2294,7 +2294,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "One day, Sennacherib was worshipping his god Nisrok in Nisrok's temple. Two of Sennacherib's sons, Adrammelech and Sharezer, went in and they killed him with their swords. Then they ran away to the region of Ararat. Sennacherib's son Esarhaddon now ruled Assyria as king. This probably happened about 20 years after verse 36. Print... Use screen font size Show All Comments 2 Kings 182 Kings 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "One day, Sennacherib was worshipping his god Nisrok in Nisrok's temple. Two of Sennacherib's sons, Adrammelech and Sharezer, went in and they killed him with their swords. Then they ran away to the region of Ararat. Sennacherib's son Esarhaddon now ruled Assyria as king."
     }
   ],
   "20": [
@@ -2320,7 +2320,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I will let you live for 15 more years. I will rescue you and this city from the power of the king of Assyria. I will keep Jerusalem safe, because I do what is right and I made a promise to my servant David.” ’"
+      "text": "more years. I will rescue you and this city from the power of the king of Assyria. I will keep Jerusalem safe, because I do what is right and I made a promise to my servant David.” ’"
     },
     {
       "verse": "7",
@@ -2340,7 +2340,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then Isaiah the prophet asked the Lord to do this. The Lord caused the shadow to go back up ten steps on the stairs that King Ahaz had made. The shadow would move further down the steps during the day, so that would not be a miracle. Hezekiah wanted to see something special that showed the Lord's power."
+      "text": "Then Isaiah the prophet asked the Lord to do this. The Lord caused the shadow to go back up ten steps on the stairs that King Ahaz had made."
     },
     {
       "verse": "12",
@@ -2380,13 +2380,13 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So Hezekiah died and they buried him beside his ancestors. His son Manasseh became king after him. Print... Use screen font size Show All Comments 2 Kings 192 Kings 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Hezekiah died and they buried him beside his ancestors. His son Manasseh became king after him."
     }
   ],
   "21": [
     {
       "verse": "1",
-      "text": "Manasseh was 12 years old when he became king. He ruled as king in Jerusalem for 55 years. His mother's name was Hephzibah."
+      "text": "years old when he became king. He ruled as king in Jerusalem for 55 years. His mother's name was Hephzibah."
     },
     {
       "verse": "2",
@@ -2398,7 +2398,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He built altars in the Lord's temple. The Lord had said about his temple, ‘That is my home in Jerusalem where people will worship me.’ These were altars to give honour to false gods, not to the Lord."
+      "text": "He built altars in the Lord's temple. The Lord had said about his temple, ‘That is my home in Jerusalem where people will worship me.’"
     },
     {
       "verse": "5",
@@ -2434,7 +2434,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I will judge Jerusalem and I will punish the people, as I punished Samaria and the family of King Ahab. I will remove the people from Jerusalem, like someone who washes the dirt from both sides of a plate. God judges his people, like a builder measures a wall to see if it is straight. See Amos and Isaiah"
+      "text": "I will judge Jerusalem and I will punish the people, as I punished Samaria and the family of King Ahab. I will remove the people from Jerusalem, like someone who washes the dirt from both sides of a plate."
     },
     {
       "verse": "14",
@@ -2454,11 +2454,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Manasseh died and they buried him in the garden of his palace. It is called Uzza's garden. His son Amon became king after him. Amon becomes the king of Judah"
+      "text": "Manasseh died and they buried him in the garden of his palace. It is called Uzza's garden. His son Amon became king after him."
     },
     {
       "verse": "19",
-      "text": "Amon was 22 years old when he became king. He ruled as king in Jerusalem for two years. His mother's name was Meshullemeth. She was the daughter of Haruz, who came from Jotbah."
+      "text": "years old when he became king. He ruled as king in Jerusalem for two years. His mother's name was Meshullemeth. She was the daughter of Haruz, who came from Jotbah."
     },
     {
       "verse": "20",
@@ -2486,7 +2486,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "People buried him in his grave in Uzza's garden. His son Josiah became king after him. Print... Use screen font size Show All Comments 2 Kings 202 Kings 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People buried him in his grave in Uzza's garden. His son Josiah became king after him."
     }
   ],
   "22": [
@@ -2496,11 +2496,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Josiah did things that the Lord said were right. He lived in the good ways of his ancestor, King David. He did not turn away from the Lord's teaching in any way. Hilkiah finds the Book of God's Law"
+      "text": "Josiah did things that the Lord said were right. He lived in the good ways of his ancestor, King David. He did not turn away from the Lord's teaching in any way."
     },
     {
       "verse": "3",
-      "text": "When Josiah had been king for 18 years, he sent Shaphan to the Lord's temple. Shaphan was the son of Azaliah, and the grandson of Meshullam. He was the king's secretary. Josiah told Shaphan,"
+      "text": "years, he sent Shaphan to the Lord's temple. Shaphan was the son of Azaliah, and the grandson of Meshullam. He was the king's secretary. Josiah told Shaphan,"
     },
     {
       "verse": "4",
@@ -2564,11 +2564,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When you heard the message that I had spoken, you were very upset. You made yourself humble to respect me. You tore your clothes and you wept. You did that when you heard how I would punish this place and the people who live here. I said that I would destroy this place so that people would use its name as a curse. Because you became so upset, I have heard your prayer."
+      "text": "When you heard the message that I had spoken, you were very upset. You made yourself humble to respect me. You tore your clothes and you wept. You did that when you heard how I would punish this place and the people who live here. I said that I would destroy this place so that people would use its name as a curse. Because you became so upset, I have heard your prayer. The men took Huldah's answer back to the king."
     },
     {
       "verse": "20",
-      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place.” That is what the Lord says.’ The men took Huldah's answer back to the king. Print... Use screen font size Show All Comments 2 Kings 212 Kings 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place.” That is what the Lord says.’The men took Huldah's answer back to the king."
     }
   ],
   "23": [
@@ -2578,7 +2578,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He went up to the Lord's temple. All the people who lived in Jerusalem and in the rest of Judah went with him. They included the priests, the prophets, young people and old people. Everyone went to the temple. They all listened while the king read to them all the words in the Book of God's Covenant. That was the book that Hilkiah had found in the Lord's temple. He went up’ because the temple was on a hill."
+      "text": "He went up to the Lord's temple. All the people who lived in Jerusalem and in the rest of Judah went with him. They included the priests, the prophets, young people and old people. Everyone went to the temple. They all listened while the king read to them all the words in the Book of God's Covenant. That was the book that Hilkiah had found in the Lord's temple."
     },
     {
       "verse": "3",
@@ -2586,7 +2586,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then the king gave a command to Hilkiah, the leader of the priests, and to the other priests and the temple guards. He told them to bring out from the Lord's temple everything that people used there to worship false gods. People used those things to worship Baal, Asherah and all the stars in the sky. King Josiah burned those things outside Jerusalem, in the fields of the Kidron Valley. Then he took all the ashes to Bethel. He took the ashes to Bethel because of what he would do there. See verses 15-18."
+      "text": "Then the king gave a command to Hilkiah, the leader of the priests, and to the other priests and the temple guards. He told them to bring out from the Lord's temple everything that people used there to worship false gods. People used those things to worship Baal, Asherah and all the stars in the sky. King Josiah burned those things outside Jerusalem, in the fields of the Kidron Valley. Then he took all the ashes to Bethel."
     },
     {
       "verse": "5",
@@ -2594,7 +2594,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "He also removed the Asherah pole from the Lord's temple. He took it outside Jerusalem, to the Kidron Valley. He burned it there. He made its ashes into dust. He threw the dust over the graves of ordinary people. They buried ordinary people at a place outside the city in the Kidron Valley. Rich or important people had their own special graves."
+      "text": "He also removed the Asherah pole from the Lord's temple. He took it outside Jerusalem, to the Kidron Valley. He burned it there. He made its ashes into dust. He threw the dust over the graves of ordinary people."
     },
     {
       "verse": "7",
@@ -2614,7 +2614,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "He removed the images of horses that the kings of Judah had put beside the entrance to the Lord's temple. He also burned the chariots that were there. The kings had put the horses and chariots there to give honour to the sun god. They were in the temple yard near the room of Nathan Melech, a palace officer. The Valley of Ben Hinnom was to the south and west of Jerusalem. Molech was a false god. They used the horses and chariots when they worshipped the sun."
+      "text": "He removed the images of horses that the kings of Judah had put beside the entrance to the Lord's temple. He also burned the chariots that were there. The kings had put the horses and chariots there to give honour to the sun god. They were in the temple yard near the room of Nathan Melech, a palace officer."
     },
     {
       "verse": "12",
@@ -2622,11 +2622,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "King Josiah also destroyed the altars that were on the hills east of Jerusalem. Those altars were on the south side of Mount Trouble. King Solomon had built them to worship these false gods: Mount Trouble may be a name for the Mount of Olives, on the east side of Jerusalem. The hill was called this because there were many altars for false gods there. Ashtoreth, a wicked female god that the people in Sidon worshipped.Chemosh, a wicked god that the people in Moab worshipped.Molech, the evil god that the people in Ammon worshipped."
+      "text": "King Josiah also destroyed the altars that were on the hills east of Jerusalem. Those altars were on the south side of Mount Trouble. King Solomon had built them to worship these false gods:Ashtoreth, a wicked female god that the people in Sidon worshipped.Chemosh, a wicked god that the people in Moab worshipped.Molech, the evil god that the people in Ammon worshipped."
     },
     {
       "verse": "14",
-      "text": "Josiah broke the stone pillars that people worshipped into small pieces. He cut down the Asherah poles. He covered the ground where they had been with human bones. People would not go where there were dead bodies, or human bones. See Numbers"
+      "text": "Josiah broke the stone pillars that people worshipped into small pieces. He cut down the Asherah poles. He covered the ground where they had been with human bones."
     },
     {
       "verse": "15",
@@ -2634,7 +2634,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then Josiah looked around and he saw graves on the hill. He sent someone to bring the bones from them. He burned them on the altar, so that people could not use it again. The Lord had said that this would happen when King Jeroboam was standing beside the altar. A man of God had spoken God's message to Jeroboam during a festival. Josiah looked up and he saw the grave of the man of God who had spoken God's message."
+      "text": "Then Josiah looked around and he saw graves on the hill. He sent someone to bring the bones from them. He burned them on the altar, so that people could not use it again. The Lord had said that this would happen when King Jeroboam was standing beside the altar. A man of God had spoken God's message to Jeroboam during a festival.Josiah looked up and he saw the grave of the man of God who had spoken God's message."
     },
     {
       "verse": "17",
@@ -2642,7 +2642,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "King Josiah said, ‘Do not do anything to his grave. Do not remove his bones.’ So they did not do anything with the bones of the man of God. They also left the bones of the old prophet who had come from Samaria. See 1 Kings"
+      "text": "King Josiah said, ‘Do not do anything to his grave. Do not remove his bones.’ So they did not do anything with the bones of the man of God. They also left the bones of the old prophet who had come from Samaria."
     },
     {
       "verse": "19",
@@ -2678,7 +2678,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So the Lord said, ‘I will also send Judah away from me, as I sent Israel away. I will refuse to stay in Jerusalem and in my temple. I chose the city to be my home and the place where people would worship me. But now I will leave there. ’ King Josiah dies"
+      "text": "So the Lord said, ‘I will also send Judah away from me, as I sent Israel away. I will refuse to stay in Jerusalem and in my temple. I chose the city to be my home and the place where people would worship me. But now I will leave there. ’"
     },
     {
       "verse": "28",
@@ -2690,11 +2690,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Josiah's servants put his dead body in a chariot. They took it from Megiddo to Jerusalem. They buried him in his own grave. Then the people of Judah poured olive oil on the head of Josiah's son Jehoahaz. So he became king after his father. They poured olive oil on someone's head to show that they were now the king. Jehoahaz and Jehoiakim"
+      "text": "Josiah's servants put his dead body in a chariot. They took it from Megiddo to Jerusalem. They buried him in his own grave. Then the people of Judah poured olive oil on the head of Josiah's son Jehoahaz. So he became king after his father."
     },
     {
       "verse": "31",
-      "text": "Jehoahaz was 23 years old when he became king. He ruled as king in Jerusalem for three months. His mother's name was Hamutal. She was the daughter of Jeremiah, who came from Libnah."
+      "text": "years old when he became king. He ruled as king in Jerusalem for three months. His mother's name was Hamutal. She was the daughter of Jeremiah, who came from Libnah."
     },
     {
       "verse": "32",
@@ -2714,11 +2714,11 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Jehoiakim was 25 years old when he became king. He ruled for 11 years as king in Jerusalem. His mother's name was Zebidah. She was the daughter of Pedaiah, who came from Rumah."
+      "text": "years old when he became king. He ruled for 11 years as king in Jerusalem. His mother's name was Zebidah. She was the daughter of Pedaiah, who came from Rumah."
     },
     {
       "verse": "37",
-      "text": "Jehoiakim did things that the Lord said were evil, as his ancestors had done. Print... Use screen font size Show All Comments 2 Kings 222 Kings 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jehoiakim did things that the Lord said were evil, as his ancestors had done."
     }
   ],
   "24": [
@@ -2752,7 +2752,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Jehoiachin was 18 years old when he became king. He ruled as king in Jerusalem for three months. His mother's name was Nehushta. She was the daughter of Elnathan, who came from Jerusalem."
+      "text": "years old when he became king. He ruled as king in Jerusalem for three months. His mother's name was Nehushta. She was the daughter of Elnathan, who came from Jerusalem."
     },
     {
       "verse": "9",
@@ -2792,7 +2792,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Zedekiah was 21 years old when he became king. He ruled in Jerusalem for 11 years. His mother's name was Hamutal. She was the daughter of Jeremiah, who came from Libnah."
+      "text": "years old when he became king. He ruled in Jerusalem for 11 years. His mother's name was Hamutal. She was the daughter of Jeremiah, who came from Libnah."
     },
     {
       "verse": "19",
@@ -2800,7 +2800,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "All this trouble happened to Jerusalem and to Judah because the Lord was very angry with them. In the end, the Lord sent them away from himself. This is what happened when King Zedekiah turned against the king of Babylon. Print... Use screen font size Show All Comments 2 Kings 232 Kings 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All this trouble happened to Jerusalem and to Judah because the Lord was very angry with them. In the end, the Lord sent them away from himself.This is what happened when King Zedekiah turned against the king of Babylon."
     }
   ],
   "25": [
@@ -2822,7 +2822,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But the soldiers of Babylon's army chased after the king. They caught him on the flat land near Jericho. All King Zedekiah's soldiers ran away from him in many directions. The new wall made it very difficult for people to escape from the city."
+      "text": "But the soldiers of Babylon's army chased after the king. They caught him on the flat land near Jericho. All King Zedekiah's soldiers ran away from him in many directions."
     },
     {
       "verse": "6",
@@ -2870,23 +2870,23 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Each pillar was 8 metres high. The bronze piece on the top of one pillar was more than 1 metre high. It had rows of chains with images of pomegranates made from bronze all around it. The other pillar, with its rows of chains and pomegranates, was the same. The bronze things may also include the bulls that the large bath stood on. See 1 Kings"
+      "text": "metres high. The bronze piece on the top of one pillar was more than 1 metre high. It had rows of chains with images of pomegranates made from bronze all around it. The other pillar, with its rows of chains and pomegranates, was the same."
     },
     {
       "verse": "18",
-      "text": "Captain Nebuzaradan took hold of these people: Seraiah, the leader of the priests,Zephaniah, the next most important priest,and the three temple guards."
+      "text": "Captain Nebuzaradan took hold of these people:Seraiah, the leader of the priests,Zephaniah, the next most important priest,and the three temple guards."
     },
     {
       "verse": "19",
-      "text": "He also took hold of these people who remained in Jerusalem: The palace officer with authority over the soldiers,five of the king's advisors,the army secretary who took men to join the army,and 60 other people of Judah who were in the city."
+      "text": "He also took hold of these people who remained in Jerusalem:The palace officer with authority over the soldiers,five of the king's advisors,the army secretary who took men to join the army,and 60 other people of Judah who were in the city."
     },
     {
       "verse": "20",
-      "text": "Nebuzaradan took hold of all those people. He brought them to the king of Babylon at Riblah, in the Hamath region."
+      "text": "Nebuzaradan took hold of all those people. He brought them to the king of Babylon at Riblah, in the Hamath region. That was how Judah's people went into exile, away from their own land."
     },
     {
       "verse": "21",
-      "text": "There, at Riblah, the king of Babylon commanded his soldiers to punish them all with death. That was how Judah's people went into exile, away from their own land. Gedaliah rules Judah"
+      "text": "There, at Riblah, the king of Babylon commanded his soldiers to punish them all with death.That was how Judah's people went into exile, away from their own land."
     },
     {
       "verse": "22",
@@ -2894,7 +2894,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The officers of Judah's army and their men heard news that the king of Babylon had chosen Gedaliah to be the ruler of Judah. So they went to meet Gedaliah at Mizpah. The army officers were: Nethaniah's son Ishmael,Kareah's son Johanan,Seraiah, the son of Tanhumeth, who came from Netophah,and Jaazaniah, whose father came from Maakah."
+      "text": "The officers of Judah's army and their men heard news that the king of Babylon had chosen Gedaliah to be the ruler of Judah. So they went to meet Gedaliah at Mizpah. The army officers were:Nethaniah's son Ishmael,Kareah's son Johanan,Seraiah, the son of Tanhumeth, who came from Netophah,and Jaazaniah, whose father came from Maakah."
     },
     {
       "verse": "24",
@@ -2910,7 +2910,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "37 years after King Jehoiachin of Judah had gone as a prisoner to Babylon, Evil-Merodach became the king of Babylon. On the 27th day of the 12th month, he took Jehoiachin out from his prison so that he became free."
+      "text": "years after King Jehoiachin of Judah had gone as a prisoner to Babylon, Evil-Merodach became the king of Babylon. On the 27th day of the 12th month, he took Jehoiachin out from his prison so that he became free."
     },
     {
       "verse": "28",
@@ -2922,7 +2922,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The king of Babylon gave Jehoiachin everything that he needed each day for the rest of his life. Print... Use screen font size Show All Comments 2 Kings 241 Chronicles Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The king of Babylon gave Jehoiachin everything that he needed each day for the rest of his life."
     }
   ]
 };

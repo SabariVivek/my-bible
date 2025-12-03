@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I am writing to you, Timothy. I told you the message about Jesus and you believed in him. So you are like my own child. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. Paul tells Timothy to stop the wrong teachers"
+      "text": "I am writing to you, Timothy. I told you the message about Jesus and you believed in him. So you are like my own child.I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
     },
     {
       "verse": "3",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They want to be teachers of God's laws. They speak very strongly, but they do not really understand what they are talking about. The purpose of God's laws"
+      "text": "They want to be teachers of God's laws. They speak very strongly, but they do not really understand what they are talking about."
     },
     {
       "verse": "8",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "We also know that God did not make those laws for people who already live in a good way. He made them for people like this, to show them what is right: people who refuse to obey any laws;people who do not want anyone to rule them;people who turn away from God;people who do bad things;people who do not respect God's holy things;people who kill their father or their mother;people who murder;"
+      "text": "We also know that God did not make those laws for people who already live in a good way. He made them for people like this, to show them what is right:people who refuse to obey any laws;people who do not want anyone to rule them;people who turn away from God;people who do bad things;people who do not respect God's holy things;people who kill their father or their mother;people who murder;"
     },
     {
       "verse": "10",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "That true message is the good news that comes from our great God. We praise him for it. He has chosen me to tell this good news to people. Paul thanks Christ Jesus"
+      "text": "That true message is the good news that comes from our great God. We praise him for it. He has chosen me to tell this good news to people."
     },
     {
       "verse": "12",
@@ -62,11 +62,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But God was kind to me. Christ Jesus showed that he was completely patient with me, the worst person. That was an example to those people who would later believe in him. They would believe and receive life for ever with God. Before Paul became a Christian, he caused a lot of trouble for Christians. He did not agree with what Christians believed. He did bad things to Christians. He thought that he was working in a way that made God happy, but he was wrong. See Acts When he became a Christian he knew that God was very kind to save him."
+      "text": "But God was kind to me. Christ Jesus showed that he was completely patient with me, the worst person. That was an example to those people who would later believe in him. They would believe and receive life for ever with God."
     },
     {
       "verse": "17",
-      "text": "Praise God, the King who rules for ever! He can never die. He lives where we cannot see him. He is the only God. So praise him and say how great he is! That is true always and for ever! Amen! This is true. Timothy should be a good leader in the church"
+      "text": "Praise God, the King who rules for ever! He can never die. He lives where we cannot see him. He is the only God. So praise him and say how great he is! That is true always and for ever! Amen! This is true."
     },
     {
       "verse": "18",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Hymenaeus and Alexander are people like that. I have given them to Satan so that he may punish them. Then they will learn not to say bad things against God any more. Some Christian leaders had prayed for Timothy before Paul wrote this letter. See 1 Timothy They had spoken words from God to Timothy. Perhaps God had said that he would make Timothy strong. Timothy needed to be strong so that he could be a Christian leader. Timothy did not have to fight anyone. Paul did not mean that. He meant that Timothy had to be strong and brave, like a soldier. Then he could teach the true Christian message. Paul had told Hymenaeus and Alexander to leave the church. He wanted them to become ashamed of themselves. He hoped that they would learn to obey God. Print... Use screen font size Show All Comments 1 Timothy Introduction1 Timothy 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Hymenaeus and Alexander are people like that. I have given them to Satan so that he may punish them. Then they will learn not to say bad things against God any more."
     }
   ],
   "2": [
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So then, in every place where you meet together, I want the men to pray. The men who lift up their hands and pray must be those who live good lives. They must not be people who are angry or who quarrel with others. Christian women should also live in a good way"
+      "text": "So then, in every place where you meet together, I want the men to pray. The men who lift up their hands and pray must be those who live good lives. They must not be people who are angry or who quarrel with others."
     },
     {
       "verse": "9",
@@ -136,11 +136,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "It was Eve, not Adam, who believed the lies that Satan told her. Because she believed Satan completely, she did what God had said was wrong. Adam was the first person that God made. See Genesis See Genesis"
+      "text": "It was Eve, not Adam, who believed the lies that Satan told her. Because she believed Satan completely, she did what God had said was wrong."
     },
     {
       "verse": "15",
-      "text": "But even as women give birth to children, God will save them. They must continue to trust God and to love other people. They must live in a way that shows they belong to God. They must think carefully about how they live. Then God will save them. Print... Use screen font size Show All Comments 1 Timothy 11 Timothy 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But even as women give birth to children, God will save them. They must continue to trust God and to love other people. They must live in a way that shows they belong to God. They must think carefully about how they live. Then God will save them."
     }
   ],
   "3": [
@@ -170,7 +170,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Also, people outside the church should agree that the leader is a good person. Then nobody can say anything bad against him. And so, he will not come under the Devil's power. The Devil is happy when other people say bad things about Christian leaders. Helpers in the church"
+      "text": "Also, people outside the church should agree that the leader is a good person. Then nobody can say anything bad against him. And so, he will not come under the Devil's power."
     },
     {
       "verse": "8",
@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Deacons' wives must live good lives, so that people respect them. They must not say bad things against people. They must think carefully about how they live. People should know that they are honest in everything they do. Deacons' wives’ could also mean ‘deacons who are women’."
+      "text": "Deacons' wives must live good lives, so that people respect them. They must not say bad things against people. They must think carefully about how they live. People should know that they are honest in everything they do."
     },
     {
       "verse": "12",
@@ -206,7 +206,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Yes, the message that God has shown us about Jesus Christ is very great. We all agree to this: God showed him to us as a man. God's Spirit showed that he always did what was right. Angels saw him. People taught his message in many countries of the world. People in the world believed in him. God took him up to be with himself in heaven. These words probably come from a song about Jesus that the Christians sang when they met together. Print... Use screen font size Show All Comments 1 Timothy 21 Timothy 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, the message that God has shown us about Jesus Christ is very great. We all agree to this:God showed him to us as a man.God's Spirit showed that he always did what was right.Angels saw him.People taught his message in many countries of the world.People in the world believed in him.God took him up to be with himself in heaven."
     }
   ],
   "4": [
@@ -228,7 +228,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "God has said that it is good. We should pray that he will bless it. Because of that, it becomes good and clean for us to eat. The Bible says that everything that God has made is good. See Genesis God also showed Peter that we may eat all different kinds of food. See Acts How Timothy can be a good servant of Christ"
+      "text": "God has said that it is good. We should pray that he will bless it. Because of that, it becomes good and clean for us to eat."
     },
     {
       "verse": "6",
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You are still a young man, but everyone should respect you as the leader in the church. Show the believers how they should live. Be a good example to them in these ways: what you say,what you do,how you love people,how you trust God,and how you do only what is right."
+      "text": "You are still a young man, but everyone should respect you as the leader in the church. Show the believers how they should live. Be a good example to them in these ways:what you say,what you do,how you love people,how you trust God,and how you do only what is right."
     },
     {
       "verse": "13",
@@ -264,7 +264,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Remember the gift that God's Holy Spirit has given to you. You received that gift when the group of church leaders put their hands on you. They spoke messages from God about how you would serve him. So do not stop using that gift from God. The leaders of the believers put their hands on people when they prayed for them. They did that when God chose someone to serve him in a special way. The Holy Spirit helps people to serve God. He helps them with gifts so that they can serve God well. See Acts Timothy received a gift from the Holy Spirit when they chose him as a leader for the church in Ephesus."
+      "text": "Remember the gift that God's Holy Spirit has given to you. You received that gift when the group of church leaders put their hands on you. They spoke messages from God about how you would serve him. So do not stop using that gift from God."
     },
     {
       "verse": "15",
@@ -272,7 +272,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Think carefully about how you live, and about the message that you teach. Continue to teach God's true message. Then God will save not only you, but also those people who listen to you. Print... Use screen font size Show All Comments 1 Timothy 31 Timothy 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Think carefully about how you live, and about the message that you teach. Continue to teach God's true message. Then God will save not only you, but also those people who listen to you."
     }
   ],
   "5": [
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Speak to older women as you would speak to your mother. Speak to younger women as you would speak to your sisters. Always respect them properly. Widows"
+      "text": "Speak to older women as you would speak to your mother. Speak to younger women as you would speak to your sisters. Always respect them properly."
     },
     {
       "verse": "3",
@@ -322,7 +322,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "As a result, they will stop doing what they had earlier promised to do for the church. That will make them guilty. The church had a list of widows who needed help. These were widows who could serve God's people in a good way. The church would help them with food or money. Probably those widows had to promise to serve the church in some way. They may have promised to serve Christ and not to marry again."
+      "text": "As a result, they will stop doing what they had earlier promised to do for the church. That will make them guilty."
     },
     {
       "verse": "13",
@@ -338,7 +338,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "A woman who believes in Christ should take care of any widows in her own family. Then the church will not have to do that work. Instead, the church will be able to help those widows who are really alone. Leaders in the church"
+      "text": "A woman who believes in Christ should take care of any widows in her own family. Then the church will not have to do that work. Instead, the church will be able to help those widows who are really alone."
     },
     {
       "verse": "17",
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Bible says: ‘Do not tie shut the mouth of a bull while it walks on your wheat seeds.’ The Bible also says: ‘You must pay a worker what his work is worth.’ Paul uses a word for a leader here that is different from the word in 1 Timothy It is a word meaning an older person. He may mean the same kind of leader in both places. See Deuteronomy Farmers used a bull to walk on the wheat that they had cut. They did that to remove the seeds for food. Moses' Law said that the farmer must let the bull eat some of the seeds for itself. Paul is saying that a good leader should receive something good for his work. See also Luke"
+      "text": "The Bible says: ‘Do not tie shut the mouth of a bull while it walks on your wheat seeds.’ The Bible also says: ‘You must pay a worker what his work is worth.’"
     },
     {
       "verse": "19",
@@ -374,17 +374,17 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "It is the same with the good things that people do. Many good things are clear for everyone to see. And even the good things that people do secretly will not remain a secret for ever. Print... Use screen font size Show All Comments 1 Timothy 41 Timothy 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "It is the same with the good things that people do. Many good things are clear for everyone to see. And even the good things that people do secretly will not remain a secret for ever."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "All slaves should know that it is right to respect their masters. Then other people will not insult God's name or the message that we teach."
+      "text": "All slaves should know that it is right to respect their masters. Then other people will not insult God's name or the message that we teach. Teach these things and tell people to obey them."
     },
     {
       "verse": "2",
-      "text": "Slaves who have masters who are also believers must continue to respect them. As believers, the slave and his master are like brothers together. But that slave must not refuse to obey his master because of that. Instead, he should work even better for his master. He should do that because he loves his master as a believer. Teach these things and tell people to obey them. About wrong teachers"
+      "text": "Slaves who have masters who are also believers must continue to respect them. As believers, the slave and his master are like brothers together. But that slave must not refuse to obey his master because of that. Instead, he should work even better for his master. He should do that because he loves his master as a believer.Teach these things and tell people to obey them."
     },
     {
       "verse": "3",
@@ -408,7 +408,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So, if we have enough food and clothes, we should be happy with that. Really rich’ does not mean that Christians will have lots of money. It means that they will receive good things from God to help them in their lives."
+      "text": "So, if we have enough food and clothes, we should be happy with that."
     },
     {
       "verse": "9",
@@ -416,7 +416,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "When people like to have lots of money, it causes all kinds of bad things to happen. Some people have stopped believing the message about Christ because they want to get more money. As a result, they have caused themselves to become sad with many troubles. Continue to serve God"
+      "text": "When people like to have lots of money, it causes all kinds of bad things to happen. Some people have stopped believing the message about Christ because they want to get more money. As a result, they have caused themselves to become sad with many troubles."
     },
     {
       "verse": "11",
@@ -440,7 +440,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "God alone lives for ever. He lives in very bright light that nobody can come near. Nobody has ever seen God. Nobody is able to see him. So we praise him! He will rule for ever with great authority! Amen! This is true. Pontius Pilate was a Roman officer. When the Jewish priests wanted to kill Jesus, Pilate had to decide whether Jesus should die. Jesus told Pilate what was true about himself and about God's purpose. See Matthew Mark Luke John Rich people must be careful how they live"
+      "text": "God alone lives for ever. He lives in very bright light that nobody can come near. Nobody has ever seen God. Nobody is able to see him. So we praise him! He will rule for ever with great authority! Amen! This is true."
     },
     {
       "verse": "17",
@@ -452,15 +452,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "In that way they will store valuable things for themselves in heaven. These things will be a strong help for them in the future. As a result, they will have true life with God. Timothy must continue to teach the true message"
+      "text": "In that way they will store valuable things for themselves in heaven. These things will be a strong help for them in the future. As a result, they will have true life with God."
     },
     {
       "verse": "20",
-      "text": "Timothy, God has given you his true message to tell people. You must keep that message safe. Do not listen to people who say a lot of silly things that are not important to God. Those people think that they have special knowledge. But their ideas are against God's true message."
+      "text": "Timothy, God has given you his true message to tell people. You must keep that message safe. Do not listen to people who say a lot of silly things that are not important to God. Those people think that they have special knowledge. But their ideas are against God's true message. I pray that God will continue to be very kind to all of you."
     },
     {
       "verse": "21",
-      "text": "Some people have believed those wrong ideas and now they no longer trust God. I pray that God will continue to be very kind to all of you. Print... Use screen font size Show All Comments 1 Timothy 52 Timothy Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Some people have believed those wrong ideas and now they no longer trust God.I pray that God will continue to be very kind to all of you."
     }
   ]
 };

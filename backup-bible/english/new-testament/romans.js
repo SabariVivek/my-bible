@@ -9,20 +9,16 @@ module.exports = {
       "text": "God promised this good news long ago, before it became true. His prophets wrote about it in the Bible."
     },
     {
-      "verse": "3-4",
-      "text": "This good news is about God's Son, who is Jesus Christ, our Lord. Jesus was born as a human baby from King David's family. But after Jesus died on the cross, God's Holy Spirit raised him to make him alive again. In that way God showed clearly that Jesus was his powerful Son."
-    },
-    {
       "verse": "5",
       "text": "Because of Jesus Christ, God has been very kind to us. He has chosen me to serve him as an apostle. He sent me to tell his message to people from all countries. As a result they would know that Jesus Christ is great. They would trust him and obey him."
     },
     {
       "verse": "6",
-      "text": "You Christians in Rome are also among those people! God has chosen you to belong to Jesus Christ. David was a great king of Israel, about 1,000 years before Jesus lived on earth."
+      "text": "You Christians in Rome are also among those people! God has chosen you to belong to Jesus Christ."
     },
     {
       "verse": "7",
-      "text": "So I am writing to all you Christians who are in Rome. God loves you and he has chosen you to be his own people. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. Paul wants to visit Rome"
+      "text": "So I am writing to all you Christians who are in Rome. God loves you and he has chosen you to be his own people.I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": "8",
@@ -54,15 +50,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Because of that, I want very much to tell God's good news also to you people who live in Rome. At that time, many people who worked in jobs spoke the Greek language. Everyone thought that these people were clever and important. They thought that other people who did not speak Greek were not so important. Paul is saying that he must tell the good news to all kinds of people."
+      "text": "Because of that, I want very much to tell God's good news also to you people who live in Rome."
     },
     {
       "verse": "16",
-      "text": "I am not ashamed to tell people the good news. God uses that good news to show his great power. He uses it to save all people who believe in Jesus Christ. First, God saves all Jews who are believers. And he also saves all Gentiles who are believers."
+      "text": "I am not ashamed to tell people the good news. God uses that good news to show his great power. He uses it to save all people who believe in Jesus Christ. First, God saves all Jews who are believers. And he also saves all Gentiles who are believers. ‘Everyone that God accepts as right will live, because they trust him.’"
     },
     {
       "verse": "17",
-      "text": "The good news explains how God accepts people as right with himself. He does this when they believe in Christ. It is only because of their faith. Nothing else. This is what was written in the Bible long ago: ‘Everyone that God accepts as right will live, because they trust him.’ These words from Habakkuk are also in Galatians and Hebrews See also Hebrews People are guilty"
+      "text": "The good news explains how God accepts people as right with himself. He does this when they believe in Christ. It is only because of their faith. Nothing else. This is what was written in the Bible long ago:‘Everyone that God accepts as right will live, because they trust him.’"
     },
     {
       "verse": "18",
@@ -122,7 +118,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "These people understand God's message about what is right. They know that people who do bad things like this ought to die. But they still continue to do those bad things. They are even happy when other people do those bad things too. Print... Use screen font size Show All Comments Romans IntroductionRomans 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "These people understand God's message about what is right. They know that people who do bad things like this ought to die. But they still continue to do those bad things. They are even happy when other people do those bad things too."
+    },
+    {
+      "verse": "3-4",
+      "text": "This good news is about God's Son, who is Jesus Christ, our Lord. Jesus was born as a human baby from King David's family. But after Jesus died on the cross, God's Holy Spirit raised him to make him alive again. In that way God showed clearly that Jesus was his powerful Son."
     }
   ],
   "2": [
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Who does God accept as right with himself? It is those people who obey his Law. It is not the people who only know his Law but do not obey them. Exodus 19-31 describes the time when God gave his Law to Moses."
+      "text": "Who does God accept as right with himself? It is those people who obey his Law. It is not the people who only know his Law but do not obey them."
     },
     {
       "verse": "14",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "That is the message that I tell people. God knows everything that people think secretly. One day he will judge everyone. He has given Jesus Christ the authority to do that. The Jews and God's Law"
+      "text": "That is the message that I tell people. God knows everything that people think secretly. One day he will judge everyone. He has given Jesus Christ the authority to do that."
     },
     {
       "verse": "17",
@@ -208,7 +208,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So you teach other people, do you? But do you teach yourself? You tell other people, ‘Do not rob anyone.’ But maybe you yourself rob other people."
+      "text": "So you teach other people, do you? But do you teach yourself? You tell other people, ‘Do not rob anyone.’ But maybe you yourself rob other people. ‘Because of you Jews, the Gentiles say bad things against God.’"
     },
     {
       "verse": "22",
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "This is written in the Bible: ‘Because of you Jews, the Gentiles say bad things against God.’"
+      "text": "This is written in the Bible:‘Because of you Jews, the Gentiles say bad things against God.’"
     },
     {
       "verse": "25",
@@ -232,7 +232,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "In that way, even Gentiles will show that you who are Jews are wrong. God's Law was written to help you Jews. They circumcised you to show that you belong to God. But if you refuse to obey God's Law, then God will punish you. The Gentiles who do obey God's Law will show that God is right to punish you. The Jews circumcised Jewish boys to show that they belonged to God's special people. See Genesis"
+      "text": "In that way, even Gentiles will show that you who are Jews are wrong. God's Law was written to help you Jews. They circumcised you to show that you belong to God. But if you refuse to obey God's Law, then God will punish you. The Gentiles who do obey God's Law will show that God is right to punish you."
     },
     {
       "verse": "28",
@@ -240,13 +240,13 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "No! A true Jew is someone who belongs to God in his spirit. He belongs to God because God's Spirit has changed his life. It is like God has circumcised him in his spirit, not in his body. The rules in God's Law cannot do that work in a person. Other people may not praise a person like that, but God will praise him. Print... Use screen font size Show All Comments Romans 1Romans 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "No! A true Jew is someone who belongs to God in his spirit. He belongs to God because God's Spirit has changed his life. It is like God has circumcised him in his spirit, not in his body. The rules in God's Law cannot do that work in a person. Other people may not praise a person like that, but God will praise him."
     }
   ],
   "3": [
     {
       "verse": "1",
-      "text": "So someone may ask, ‘Does it help a person if they are a Jew, rather than a Gentile? Does it help a person if someone has circumcised them?’"
+      "text": "So someone may ask, ‘Does it help a person if they are a Jew, rather than a Gentile? Does it help a person if someone has circumcised them?’ ‘Your message is true. It shows that you are right. People may say that you are wrong. But it will always be clear that you are right.’"
     },
     {
       "verse": "2",
@@ -258,7 +258,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "No, certainly it does not mean that! God will always do what he says. He will always say what is true, even if everyone in the world should tell lies. This is what is written in the Bible: ‘Your message is true. It shows that you are right. People may say that you are wrong. But it will always be clear that you are right.’ David spoke these words to God. See Psalm"
+      "text": "No, certainly it does not mean that! God will always do what he says. He will always say what is true, even if everyone in the world should tell lies. This is what is written in the Bible:‘Your message is true. It shows that you are right.People may say that you are wrong.But it will always be clear that you are right.’"
     },
     {
       "verse": "5",
@@ -274,31 +274,31 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But if that is true, you could also say, ‘We should do more and more bad things. Then something good will happen as a result.’ Some people even say that is the message which I teach. But if they say that, they are insulting me. It is right that God should punish those people. Nobody is right with God"
+      "text": "But if that is true, you could also say, ‘We should do more and more bad things. Then something good will happen as a result.’ Some people even say that is the message which I teach. But if they say that, they are insulting me. It is right that God should punish those people."
     },
     {
       "verse": "9",
-      "text": "So then, what do we learn from that? We cannot say that we Jews are better than other people. No, certainly we cannot say that! I have said already that sin has power over everyone. That is true for both Jews and Gentiles."
+      "text": "So then, what do we learn from that? We cannot say that we Jews are better than other people. No, certainly we cannot say that! I have said already that sin has power over everyone. That is true for both Jews and Gentiles. ‘There is nobody who is right with God. There is not even one person who is like that."
     },
     {
       "verse": "10",
-      "text": "This is written in the Bible: ‘There is nobody who is right with God. There is not even one person who is like that."
+      "text": "This is written in the Bible:‘There is nobody who is right with God.There is not even one person who is like that."
     },
     {
       "verse": "11",
-      "text": "There is nobody who understands what is true. There is nobody who wants to worship God."
+      "text": "There is nobody who understands what is true.There is nobody who wants to worship God. There is nobody who wants to worship God."
     },
     {
       "verse": "12",
-      "text": "Everyone has turned away from God. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that. See Psalm Psalm"
+      "text": "Everyone has turned away from God.All people have become completely bad.Nobody does what is good or kind.There is not even one person who is like that. All people have become completely bad. Nobody does what is good or kind. There is not even one person who is like that."
     },
     {
       "verse": "13",
-      "text": "Bad words come out of their mouth, like a very bad smell. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison. See Psalm"
+      "text": "Bad words come out of their mouth, like a very bad smell.They tell lies all the time,so that people do wrong things.The things that they say hurt people, like a snake's poison. They tell lies all the time, so that people do wrong things. The things that they say hurt people, like a snake's poison."
     },
     {
       "verse": "14",
-      "text": "They are always saying bad things against people, because they want to cause trouble for them. See Psalm"
+      "text": "They are always saying bad things against people,because they want to cause trouble for them. because they want to cause trouble for them."
     },
     {
       "verse": "15",
@@ -306,15 +306,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Everywhere they go, they destroy things. They only make people very sad."
+      "text": "Everywhere they go, they destroy things.They only make people very sad. They only make people very sad."
     },
     {
       "verse": "17",
-      "text": "They have never known how to live in peace. See Isaiah"
+      "text": "They have never known how to live in peace."
     },
     {
       "verse": "18",
-      "text": "They refuse to respect God in any way.’ See Psalm"
+      "text": "They refuse to respect God in any way.’"
     },
     {
       "verse": "19",
@@ -322,7 +322,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "God's Law shows people clearly that they have done wrong things. Nobody can become right with God because they obey that Law. How God accepts people"
+      "text": "God's Law shows people clearly that they have done wrong things. Nobody can become right with God because they obey that Law."
     },
     {
       "verse": "21",
@@ -366,7 +366,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "What does this show us about God's Law which he gave to Moses? When we say that all people need to believe in Jesus, does that mean that God's Law has no purpose? No! When we believe in Jesus, we are showing the true purpose of God's Law. Print... Use screen font size Show All Comments Romans 2Romans 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "What does this show us about God's Law which he gave to Moses? When we say that all people need to believe in Jesus, does that mean that God's Law has no purpose? No! When we believe in Jesus, we are showing the true purpose of God's Law."
     }
   ],
   "4": [
@@ -380,11 +380,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Remember what the Bible tells us. It says: ‘Abraham believed God. As a result, God accepted Abraham as right with him.’ See Genesis Genesis 12-22 tell us about how Abraham believed God."
+      "text": "Remember what the Bible tells us. It says: ‘Abraham believed God. As a result, God accepted Abraham as right with him.’"
     },
     {
       "verse": "4",
-      "text": "When a person works to get money, it is right for him to receive his money. That money is not a gift. It is what that person ought to receive as a result of his work."
+      "text": "When a person works to get money, it is right for him to receive his money. That money is not a gift. It is what that person ought to receive as a result of his work. ‘The people that God has forgiven are really happy. They have done wrong things, but he has forgiven them."
     },
     {
       "verse": "5",
@@ -396,11 +396,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "David says: ‘The people that God has forgiven are really happy. They have done wrong things, but he has forgiven them."
+      "text": "David says:‘The people that God has forgiven are really happy.They have done wrong things, but he has forgiven them."
     },
     {
       "verse": "8",
-      "text": "A person is really happy when the Lord accepts him. The Lord does not think about that person's sin any more.’ See Psalm"
+      "text": "A person is really happy when the Lord accepts him.The Lord does not think about that person's sin any more.’ The Lord does not think about that person's sin any more.’"
     },
     {
       "verse": "9",
@@ -416,7 +416,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "But Abraham is also like the father of all Jews who believe in God. Someone has circumcised those Jews, but they have copied Abraham's example. They have believed in God, as Abraham believed before anyone had circumcised him. See Genesis"
+      "text": "But Abraham is also like the father of all Jews who believe in God. Someone has circumcised those Jews, but they have copied Abraham's example. They have believed in God, as Abraham believed before anyone had circumcised him."
     },
     {
       "verse": "13",
@@ -428,7 +428,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The rules in Moses' Law say that God will punish people who do not obey those rules. But without any rules, there is nothing for people to obey. Genesis shows us what God promised to Abraham."
+      "text": "The rules in Moses' Law say that God will punish people who do not obey those rules. But without any rules, there is nothing for people to obey."
     },
     {
       "verse": "16",
@@ -436,15 +436,15 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "In the Bible, God said to Abraham, ‘I have chosen you to become the ancestor of many different people.’ That is what God himself promises, because Abraham believed in him. God is the one who causes dead people to become alive again. He speaks about things that are not yet there as if they were already there. See Genesis"
+      "text": "In the Bible, God said to Abraham, ‘I have chosen you to become the ancestor of many different people.’ That is what God himself promises, because Abraham believed in him. God is the one who causes dead people to become alive again. He speaks about things that are not yet there as if they were already there."
     },
     {
       "verse": "18",
-      "text": "Abraham continued to trust God. He hoped to receive what God had promised. He continued to hope even when he had no good reason to hope. That is why he became the ancestor of many different people. It happened just like God had said: ‘You will have very many descendants.’ See Genesis"
+      "text": "Abraham continued to trust God. He hoped to receive what God had promised. He continued to hope even when he had no good reason to hope. That is why he became the ancestor of many different people. It happened just like God had said: ‘You will have very many descendants.’"
     },
     {
       "verse": "19",
-      "text": "Abraham was about 100 years old. His body was already so old that it was nearly dead. His wife, Sarah, was unable to have children. Abraham understood all that, but he did not stop trusting God."
+      "text": "years old. His body was already so old that it was nearly dead. His wife, Sarah, was unable to have children. Abraham understood all that, but he did not stop trusting God."
     },
     {
       "verse": "20",
@@ -456,7 +456,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "So we see that it is true: Because Abraham believed God, God accepted Abraham as right with him. See Genesis"
+      "text": "So we see that it is true: Because Abraham believed God, God accepted Abraham as right with him."
     },
     {
       "verse": "23",
@@ -468,7 +468,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "God let people kill Jesus on the cross because of the wrong things that we have done. Then God raised Jesus from death, to show that he would accept us as right with him. Print... Use screen font size Show All Comments Romans 3Romans 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God let people kill Jesus on the cross because of the wrong things that we have done. Then God raised Jesus from death, to show that he would accept us as right with him."
     }
   ],
   "5": [
@@ -478,7 +478,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Also, because we trust Jesus Christ, he has caused us to know that God is very kind. That makes us strong in our lives here. We also are sure that we will live with God in heaven. So we are very happy. If we trust Jesus Christ and we believe that he died on the cross as a sacrifice on our behalf, then we are happy. We know that God is kind and he makes us strong in the life that we live here. We also know that one day we will live with God in heaven. We will see that God is very great and we will praise him."
+      "text": "Also, because we trust Jesus Christ, he has caused us to know that God is very kind. That makes us strong in our lives here. We also are sure that we will live with God in heaven. So we are very happy."
     },
     {
       "verse": "3",
@@ -514,7 +514,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "But that is not everything! We are very happy now because of what God has done for us. Our Lord Jesus Christ has made this possible. It is because of him that we have now become God's friends. Adam and Christ"
+      "text": "But that is not everything! We are very happy now because of what God has done for us. Our Lord Jesus Christ has made this possible. It is because of him that we have now become God's friends."
     },
     {
       "verse": "12",
@@ -526,7 +526,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "But still death ruled all people, from the time when Adam lived until the time when Moses lived. Everyone died, even those who did not fail in the same way that Adam failed. Adam was the first person that God made. See Genesis God told Adam that he must not eat any fruit from a certain tree. But Adam did not obey God. See Genesis Adam shows us something about God's special Messiah who would come at a future time."
+      "text": "But still death ruled all people, from the time when Adam lived until the time when Moses lived. Everyone died, even those who did not fail in the same way that Adam failed.Adam shows us something about God's special Messiah who would come at a future time."
     },
     {
       "verse": "15",
@@ -546,7 +546,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "One man did not obey God and, as a result, many people became guilty because of their sins. But, because one man did obey God, many people will become right with God. Jesus Christ died on the cross as a sacrifice, so that God would forgive people's sins. As a result, God forgives the sins of the many people who believe in Jesus. They become right with God. These people do not receive death as a punishment for sin. Instead, they receive true life as a gift from God, because he is kind."
+      "text": "One man did not obey God and, as a result, many people became guilty because of their sins. But, because one man did obey God, many people will become right with God."
     },
     {
       "verse": "20",
@@ -554,7 +554,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "We see that sin ruled people's lives and brought death to them. But God's gift makes people right with him, and that is what rules their lives. People receive that gift because God is kind. As a result, they will have life with God for ever, because of what our Lord Jesus Christ has done. Print... Use screen font size Show All Comments Romans 4Romans 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We see that sin ruled people's lives and brought death to them. But God's gift makes people right with him, and that is what rules their lives. People receive that gift because God is kind. As a result, they will have life with God for ever, because of what our Lord Jesus Christ has done."
     }
   ],
   "6": [
@@ -572,7 +572,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Your baptism shows that they buried you, just like they buried Christ after his death. It is like you died with him and they buried you with him. Because of that, God will also raise us, just as he raised Christ from death. God, the Father, is so great and powerful that he raised Christ to a new life. That means that we also can live our lives in a new way. Baptism shows that we are united with Christ in our spirits. In our spirits, we die with Christ and then we rise again, to live a new life. So we have a new nature because of Christ. See Colossians"
+      "text": "Your baptism shows that they buried you, just like they buried Christ after his death. It is like you died with him and they buried you with him. Because of that, God will also raise us, just as he raised Christ from death. God, the Father, is so great and powerful that he raised Christ to a new life. That means that we also can live our lives in a new way."
     },
     {
       "verse": "5",
@@ -612,7 +612,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Sin will no longer have authority over you. You do not have a new life because you obey the Law which God gave to Moses. You have a new life because God is very kind to you. Be careful to do what is right"
+      "text": "Sin will no longer have authority over you. You do not have a new life because you obey the Law which God gave to Moses. You have a new life because God is very kind to you."
     },
     {
       "verse": "15",
@@ -628,7 +628,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "As a result, God has made you free from the power of sin. You are now like slaves who serve everything that is right and good. When Paul talks about death here, he means that people die in their spirits. They have become separate from God and the true life which he gives to believers. See Romans"
+      "text": "As a result, God has made you free from the power of sin. You are now like slaves who serve everything that is right and good."
     },
     {
       "verse": "19",
@@ -648,7 +648,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "If you serve sin as your master, it will pay you with death. But if you belong to our Lord Jesus Christ, God gives you a gift! That gift is life with God for ever. Print... Use screen font size Show All Comments Romans 5Romans 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you serve sin as your master, it will pay you with death. But if you belong to our Lord Jesus Christ, God gives you a gift! That gift is life with God for ever."
     }
   ],
   "7": [
@@ -674,7 +674,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But now we have become free from the authority of the law. It is as if we have died. So those rules no longer control us. We do not still try to obey rules that someone has written down. That is the old way. Instead, we serve God in a new way. God's Spirit helps us to please him. When Paul talks about death here, he means that people die in their spirits. They have become separate from God and the true life which he gives to believers. See Romans God's Law teaches us about sin"
+      "text": "But now we have become free from the authority of the law. It is as if we have died. So those rules no longer control us. We do not still try to obey rules that someone has written down. That is the old way. Instead, we serve God in a new way. God's Spirit helps us to please him."
     },
     {
       "verse": "7",
@@ -682,7 +682,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But the command gave sin a chance to come into my thoughts. As a result, I started to want all kinds of wrong things. If there is no law to tell us what is wrong, then sin has no power to make us guilty. When Paul talks about ‘God's Law’, he means the laws and commands that God gave to Moses for the Israelites to obey. Here, he uses one command as an example. See Exodus and Deuteronomy"
+      "text": "But the command gave sin a chance to come into my thoughts. As a result, I started to want all kinds of wrong things. If there is no law to tell us what is wrong, then sin has no power to make us guilty."
     },
     {
       "verse": "9",
@@ -694,7 +694,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "That command gave sin a chance to deceive me. It caused me to become separate from God. Paul understood that he had not obeyed God's Law. He knew that he had become separate from God. He did not have the true life which God gives to believers. See Romans"
+      "text": "That command gave sin a chance to deceive me. It caused me to become separate from God."
     },
     {
       "verse": "12",
@@ -702,7 +702,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But someone might say, ‘This means that something good brought death to you.’ No! God's Law did not do that! It was sin that brought death to me. Sin used God's good Law to show that I was guilty. Because of that, we can see that sin is really very bad. The commands in God's Law help to show that sin is completely bad. The power of sin in our lives"
+      "text": "But someone might say, ‘This means that something good brought death to you.’ No! God's Law did not do that! It was sin that brought death to me. Sin used God's good Law to show that I was guilty. Because of that, we can see that sin is really very bad. The commands in God's Law help to show that sin is completely bad."
     },
     {
       "verse": "14",
@@ -734,7 +734,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So I understand what is happening in me. Whenever I want to do something good, I can only choose something bad."
+      "text": "So I understand what is happening in me. Whenever I want to do something good, I can only choose something bad. So with my mind I want to obey God's laws. But, at the same time, I serve sin as my master, because I am weak and human."
     },
     {
       "verse": "22",
@@ -750,7 +750,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I thank God! He has made me free, because of what Jesus Christ has done. So with my mind I want to obey God's laws. But, at the same time, I serve sin as my master, because I am weak and human. Print... Use screen font size Show All Comments Romans 6Romans 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I thank God! He has made me free, because of what Jesus Christ has done.So with my mind I want to obey God's laws. But, at the same time, I serve sin as my master, because I am weak and human."
     }
   ],
   "8": [
@@ -820,7 +820,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Because we are God's children, we also know that we will receive good things from him. Those are the things that he has promised to give to his children. Together with Christ, we will receive the things that God has kept for him. That is true if we agree to have troubles like Christ did. Then we will also enjoy life in heaven like Christ does. God has prepared great things for his people"
+      "text": "Because we are God's children, we also know that we will receive good things from him. Those are the things that he has promised to give to his children. Together with Christ, we will receive the things that God has kept for him. That is true if we agree to have troubles like Christ did. Then we will also enjoy life in heaven like Christ does."
     },
     {
       "verse": "18",
@@ -872,7 +872,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "God had already chosen those people to be his children. Because of that, he called them to come to him. He accepted those people as right with himself. And those that he accepted, he also caused them to become great. God loves us very much"
+      "text": "God had already chosen those people to be his children. Because of that, he called them to come to him. He accepted those people as right with himself. And those that he accepted, he also caused them to become great."
     },
     {
       "verse": "31",
@@ -888,15 +888,15 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "So nobody can say that God should still punish us. Nobody can say that, because Christ Jesus himself died on our behalf. And God raised him so that he became alive again after his death. Now Christ is sitting at God's right side in heaven. He himself is praying to God on our behalf. Jesus sits at the right side of God the Father. The right side is the most important place. This means that Jesus rules with the same power and authority as God himself."
+      "text": "So nobody can say that God should still punish us. Nobody can say that, because Christ Jesus himself died on our behalf. And God raised him so that he became alive again after his death. Now Christ is sitting at God's right side in heaven. He himself is praying to God on our behalf."
     },
     {
       "verse": "35",
-      "text": "Christ will always continue to love us. Nothing can stop that! We may have troubles. Things may make us sad or afraid. People may do bad things to us. We may have no food or no clothes. There may be great danger. People may even try to kill us. But none of these things can stop Christ from loving us."
+      "text": "Christ will always continue to love us. Nothing can stop that! We may have troubles. Things may make us sad or afraid. People may do bad things to us. We may have no food or no clothes. There may be great danger. People may even try to kill us. But none of these things can stop Christ from loving us. ‘Because we are your people, God, people try to kill us all the time. They think that we are like sheep, and we are ready to be killed.’"
     },
     {
       "verse": "36",
-      "text": "As it says in the Bible: ‘Because we are your people, God, people try to kill us all the time. They think that we are like sheep, and we are ready to be killed.’ See Psalm"
+      "text": "As it says in the Bible:‘Because we are your people, God,people try to kill us all the time.They think that we are like sheep,and we are ready to be killed.’"
     },
     {
       "verse": "37",
@@ -904,7 +904,7 @@ module.exports = {
     },
     {
       "verse": "38-39",
-      "text": "I am sure of this. Nothing can stop God from loving us. Death cannot do that. Life cannot do that. Angels cannot do that, nor can demons do that. Nothing that happens to us now, or that will happen in a future time can do that. No powerful spirits can do that. Nothing that is high above the world can do that, nor anything that is deep down below the ground. Nothing else in the whole universe can stop God from loving us. Because of our Lord Christ Jesus, we know how much God loves us. Print... Use screen font size Show All Comments Romans 7Romans 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I am sure of this. Nothing can stop God from loving us. Death cannot do that. Life cannot do that. Angels cannot do that, nor can demons do that. Nothing that happens to us now, or that will happen in a future time can do that. No powerful spirits can do that. Nothing that is high above the world can do that, nor anything that is deep down below the ground. Nothing else in the whole universe can stop God from loving us. Because of our Lord Christ Jesus, we know how much God loves us."
     }
   ],
   "9": [
@@ -926,7 +926,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "It was their ancestors that God chose to make great many years ago. And Christ himself, as a man, was born to an Israelite family. Christ is God, who rules over all things. We should praise him for ever! This is true! Amen. The ancestors of Israel's people were Abraham, Isaac and Jacob. See Genesis 12-49."
+      "text": "It was their ancestors that God chose to make great many years ago. And Christ himself, as a man, was born to an Israelite family. Christ is God, who rules over all things. We should praise him for ever! This is true! Amen."
     },
     {
       "verse": "6",
@@ -942,7 +942,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This is what God promised to Abraham: ‘At this time next year I will come back. Then Sarah, your wife, will have a son.’ See Genesis"
+      "text": "This is what God promised to Abraham: ‘At this time next year I will come back. Then Sarah, your wife, will have a son.’"
     },
     {
       "verse": "10",
@@ -958,7 +958,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "This is written in the Bible: ‘I loved Jacob, but I hated Esau.’ See Malachi Later, God gave Jacob the name ‘Israel’. Jacob was the ancestor of the Israelites."
+      "text": "This is written in the Bible: ‘I loved Jacob, but I hated Esau.’"
     },
     {
       "verse": "14",
@@ -970,7 +970,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So then, it is God who decides these things. It is not because of what people want. It is not because of what people do. It is because God chooses to be kind. See Exodus"
+      "text": "So then, it is God who decides these things. It is not because of what people want. It is not because of what people do. It is because God chooses to be kind."
     },
     {
       "verse": "17",
@@ -978,7 +978,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So we see this: God is kind to some people and he forgives them. But he causes some people, like Pharaoh, to turn against him. He chooses what he will do with each person. See Exodus God himself decides when he will be angry or kind"
+      "text": "So we see this: God is kind to some people and he forgives them. But he causes some people, like Pharaoh, to turn against him. He chooses what he will do with each person."
     },
     {
       "verse": "19",
@@ -994,7 +994,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "What does that teach us about God? Some people are like pots that are ready for God to destroy. God is angry with people like that. He is ready to show his power against them. But he has chosen to wait patiently. He keeps his anger for later."
+      "text": "What does that teach us about God? Some people are like pots that are ready for God to destroy. God is angry with people like that. He is ready to show his power against them. But he has chosen to wait patiently. He keeps his anger for later. ‘I will say to people who were not my people, “Now you are my people.” I will say to people that I did not love, “I love you.” ’"
     },
     {
       "verse": "23",
@@ -1006,27 +1006,27 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "God says this in the book of Hosea: ‘I will say to people who were not my people, “Now you are my people.” I will say to people that I did not love, “I love you.” ’ See Hosea"
+      "text": "God says this in the book of Hosea:‘I will say to people who were not my people,“Now you are my people.”I will say to people that I did not love,“I love you.” ’"
     },
     {
       "verse": "26",
-      "text": "‘God had said to them, “You are not my people.” In the same place where he said that, people will now call them “Children of God, who lives for ever.” ’ See Hosea"
+      "text": "‘God had said to them,“You are not my people.”In the same place where he said that,people will now call them “Children of God, who lives for ever.” ’ “You are not my people.” In the same place where he said that, people will now call them “Children of God, who lives for ever.” ’"
     },
     {
       "verse": "27",
-      "text": "Also, Isaiah, God's prophet, said this about Israel's people: ‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them."
+      "text": "Also, Isaiah, God's prophet, said this about Israel's people:‘There are so many of Israel's people, nobody can count them.They are as many as the bits of sand on the shore of the sea.But God will save only a few of them. ‘There are so many of Israel's people, nobody can count them. They are as many as the bits of sand on the shore of the sea. But God will save only a few of them."
     },
     {
       "verse": "28",
-      "text": "The Lord God will finish his work quickly. He has warned his people what he will do. And he will punish them completely.’ See Isaiah"
+      "text": "The Lord God will finish his work quickly.He has warned his people what he will do.And he will punish them completely.’ He has warned his people what he will do. And he will punish them completely.’"
     },
     {
       "verse": "29",
-      "text": "Isaiah had already said this: ‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah.’ See Isaiah and Genesis Sodom and Gomorrah were small towns. The people who lived there refused to obey God. So God destroyed those towns."
+      "text": "Isaiah had already said this:‘The Lord of great power has let some of our children live.If he had not done that, no descendants would remain.We would have become like the people in Sodom and Gomorrah.’ ‘The Lord of great power has let some of our children live. If he had not done that, no descendants would remain. We would have become like the people in Sodom and Gomorrah.’"
     },
     {
       "verse": "30",
-      "text": "So, we must think about what all this means. The Gentiles were not trying to become right with God. But some of them have now become right with him. God has accepted them as right, because they have believed in Jesus Christ."
+      "text": "So, we must think about what all this means. The Gentiles were not trying to become right with God. But some of them have now become right with him. God has accepted them as right, because they have believed in Jesus Christ. ‘Look, I am putting a special stone in Zion. That stone will cause people to fall to the ground. It is a rock that will make them fall down. But anyone who believes in him will never be disappointed.’"
     },
     {
       "verse": "31",
@@ -1038,7 +1038,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "It says this in the Bible: ‘Look, I am putting a special stone in Zion. That stone will cause people to fall to the ground. It is a rock that will make them fall down. But anyone who believes in him will never be disappointed.’ See Isaiah and 1 Peter Rock’ is one of God's names for Jesus. He is God's Messiah. It is difficult for people to believe that God will accept them only if they believe in Jesus Christ. They think that they can do good things and then he will accept them. This is why Jesus is like a rock that causes people to fall to the ground. Print... Use screen font size Show All Comments Romans 8Romans 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "It says this in the Bible:‘Look, I am putting a special stone in Zion.That stone will cause people to fall to the ground.It is a rock that will make them fall down.But anyone who believes in him will never be disappointed.’"
     }
   ],
   "10": [
@@ -1056,7 +1056,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "God gave his Law to Israel's people for a purpose. But Christ has finished that purpose. So now, every person who believes in Christ becomes right with God. God wants to save everyone"
+      "text": "God gave his Law to Israel's people for a purpose. But Christ has finished that purpose. So now, every person who believes in Christ becomes right with God."
     },
     {
       "verse": "5",
@@ -1072,11 +1072,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But the Bible says: ‘God's message is near you. You can talk about it, and you can think about it.’ That is the same message that we are teaching to people. We tell people to believe in Jesus Christ. See Leviticus See Deuteronomy"
+      "text": "But the Bible says: ‘God's message is near you. You can talk about it, and you can think about it.’ That is the same message that we are teaching to people. We tell people to believe in Jesus Christ."
     },
     {
       "verse": "9",
-      "text": "The message is this: You must say clearly that Jesus is the Lord. Also, you must believe deep inside yourself that God raised him to life again after his death. Then God will save you."
+      "text": "The message is this: You must say clearly that Jesus is the Lord. Also, you must believe deep inside yourself that God raised him to life again after his death. Then God will save you. ‘Everyone who believes in him will not be disappointed.’"
     },
     {
       "verse": "10",
@@ -1084,7 +1084,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "It says in the Bible: ‘Everyone who believes in him will not be disappointed.’ See Isaiah"
+      "text": "It says in the Bible:‘Everyone who believes in him will not be disappointed.’"
     },
     {
       "verse": "12",
@@ -1092,7 +1092,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "As it says in the Bible: ‘The Lord God will save everyone who asks him for help.’ See Joel"
+      "text": "As it says in the Bible: ‘The Lord God will save everyone who asks him for help.’"
     },
     {
       "verse": "14",
@@ -1100,7 +1100,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "And nobody can go to tell God's message to people unless God sends them. This is written in the Bible: ‘When people arrive to tell us good news, we say “welcome!” ’ See Isaiah"
+      "text": "And nobody can go to tell God's message to people unless God sends them. This is written in the Bible: ‘When people arrive to tell us good news, we say “welcome!” ’"
     },
     {
       "verse": "16",
@@ -1108,23 +1108,23 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "So then, people must hear the message before they can trust God. And people hear that message when someone tells them about Christ. See Isaiah"
+      "text": "So then, people must hear the message before they can trust God. And people hear that message when someone tells them about Christ."
     },
     {
       "verse": "18",
-      "text": "Let me ask you this: ‘Did Israel's people hear that message?’ They certainly did! The Bible says: ‘People have spoken God's message everywhere. People have heard his message in every part of the world.’ See Psalm"
+      "text": "Let me ask you this: ‘Did Israel's people hear that message?’ They certainly did! The Bible says:‘People have spoken God's message everywhere.People have heard his message in every part of the world.’ ‘People have spoken God's message everywhere. People have heard his message in every part of the world.’"
     },
     {
       "verse": "19",
-      "text": "So I ask this too: ‘When Israel's people heard God's message, did they understand it?’ First, think about what Moses wrote. God said to Israel's people: ‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me.’ See Deuteronomy"
+      "text": "So I ask this too: ‘When Israel's people heard God's message, did they understand it?’ First, think about what Moses wrote. God said to Israel's people:‘I will make you jealous because of people who are not my people.I will make you angry because of people who know nothing about me.’ ‘I will make you jealous because of people who are not my people. I will make you angry because of people who know nothing about me.’"
     },
     {
       "verse": "20",
-      "text": "Also, this is what Isaiah said very bravely: ‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me.’ See Isaiah Isaiah is speaking about the Gentiles. They were not waiting for Christ, God's Messiah, to come. They did not know anything about him. But because God is kind, he sent his good news to them."
+      "text": "Also, this is what Isaiah said very bravely:‘God says: Those people who were not looking for me have found me.I showed myself to people who were not even asking about me.’ ‘God says: Those people who were not looking for me have found me. I showed myself to people who were not even asking about me.’"
     },
     {
       "verse": "21",
-      "text": "But Isaiah says this about Israel's people: ‘God says: For a very long time, I have been asking my people to return to me. But they refused to obey me. They turned against me.’ See Isaiah The Jews should have been waiting for Christ. The Old Testament told them that he would come. But when he came, they did not recognize him. See John Print... Use screen font size Show All Comments Romans 9Romans 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But Isaiah says this about Israel's people:‘God says: For a very long time,I have been asking my people to return to me.But they refused to obey me.They turned against me.’"
     }
   ],
   "11": [
@@ -1142,7 +1142,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "This was God's answer to Elijah: ‘There are still 7,000 men that I have kept for myself. Those men have not worshipped the false god Baal.’ See 1 Kings"
+      "text": "This was God's answer to Elijah: ‘There are still 7,000 men that I have kept for myself. Those men have not worshipped the false god Baal.’"
     },
     {
       "verse": "5",
@@ -1154,19 +1154,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So we can say this: Israel's people did not all find what they were looking for. Only those people that God had chosen received it. But the other people of Israel became unable to understand God's message."
+      "text": "So we can say this: Israel's people did not all find what they were looking for. Only those people that God had chosen received it. But the other people of Israel became unable to understand God's message. ‘God caused them to be like people who are sleeping. Even until this day, their eyes cannot really see, and their ears cannot really hear.’"
     },
     {
       "verse": "8",
-      "text": "It says this in the Bible: ‘God caused them to be like people who are sleeping. Even until this day, their eyes cannot really see, and their ears cannot really hear.’ See Deuteronomy Isaiah"
+      "text": "It says this in the Bible:‘God caused them to be like people who are sleeping.Even until this day, their eyes cannot really see,and their ears cannot really hear.’"
     },
     {
       "verse": "9",
-      "text": "King David says this: ‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done."
+      "text": "King David says this:‘They enjoy eating lots of good food together.I pray that God will catch them while they are eating!I want those good things to lead them into trouble.I want God to punish them because of what they have done. ‘They enjoy eating lots of good food together. I pray that God will catch them while they are eating! I want those good things to lead them into trouble. I want God to punish them because of what they have done."
     },
     {
       "verse": "10",
-      "text": "I want their eyes to become dark so that they cannot see. I want their bodies always to be in pain, like slaves.’ See Psalm"
+      "text": "I want their eyes to become dark so that they cannot see.I want their bodies always to be in pain, like slaves.’ I want their bodies always to be in pain, like slaves.’"
     },
     {
       "verse": "11",
@@ -1174,7 +1174,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Because of their mistake, God has done good things for everyone in the world. Israel's people failed to receive what God wanted to give them. As a result, the Gentiles have received very many good things from God. That was the good result when Israel's people failed. So, when the complete number of Israel's people do turn to God, the result will be even better! Paul speaks to the Gentiles"
+      "text": "Because of their mistake, God has done good things for everyone in the world. Israel's people failed to receive what God wanted to give them. As a result, the Gentiles have received very many good things from God. That was the good result when Israel's people failed. So, when the complete number of Israel's people do turn to God, the result will be even better!"
     },
     {
       "verse": "13",
@@ -1222,19 +1222,19 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "God cut you like branches from a wild olive tree. Then he put you into the farmer's olive tree so that you became part of it. He could do that even though that was not your own tree before. So God will be able to do that for Israel's people. He can easily put them back into their own tree, that they were part of before. When Jesus lived on earth, most of Israel's people, the Jews, did not believe that Jesus was God's Messiah. They were no longer part of God's true people. God's true people were like an olive tree that God had planted long ago. The wild olive tree is like the Gentiles. If they believe in Jesus, they become part of God's people. If the Jews decide to believe in Jesus, then they also belong to God's people again. God will save the Jews"
+      "text": "God cut you like branches from a wild olive tree. Then he put you into the farmer's olive tree so that you became part of it. He could do that even though that was not your own tree before. So God will be able to do that for Israel's people. He can easily put them back into their own tree, that they were part of before."
     },
     {
       "verse": "25",
-      "text": "My Christian friends, I want to help you to understand about Israel's people. It is a secret that God has shown to us. If you really understand it, you will not be proud that you are so clever. Many of Israel's people have refused to believe in Christ. They will continue to refuse him until the complete number of Gentiles have believed."
+      "text": "My Christian friends, I want to help you to understand about Israel's people. It is a secret that God has shown to us. If you really understand it, you will not be proud that you are so clever. Many of Israel's people have refused to believe in Christ. They will continue to refuse him until the complete number of Gentiles have believed. ‘The one who rescues will come from Zion. He will turn Jacob's people away from their sins."
     },
     {
       "verse": "26",
-      "text": "When that has happened, God will save all Israel's people. This is written in the Bible: ‘The one who rescues will come from Zion. He will turn Jacob's people away from their sins. Zion is God's city, on earth (Jerusalem) or in heaven. See Revelation Jacob's people’ is another name for Israel's people, the Jews. Jacob was Abraham's grandson and God gave him the name ‘Israel’."
+      "text": "When that has happened, God will save all Israel's people. This is written in the Bible:‘The one who rescues will come from Zion.He will turn Jacob's people away from their sins."
     },
     {
       "verse": "27",
-      "text": "And I will make this agreement with them. I will forgive them for their sins.’ See Isaiah Jeremiah"
+      "text": "And I will make this agreement with them.I will forgive them for their sins.’ I will forgive them for their sins.’"
     },
     {
       "verse": "28",
@@ -1258,19 +1258,19 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Yes! God is very great! He has everything! He knows and he understands all things! Nobody can completely understand the things that he decides. Nobody can explain the ways in which he works."
+      "text": "Yes! God is very great! He has everything! He knows and he understands all things! Nobody can completely understand the things that he decides. Nobody can explain the ways in which he works. ‘Nobody knows the thoughts of the Lord God. Nobody is able to tell him what he should do.’"
     },
     {
       "verse": "34",
-      "text": "The Bible says this: ‘Nobody knows the thoughts of the Lord God. Nobody is able to tell him what he should do.’ See Isaiah"
+      "text": "The Bible says this:‘Nobody knows the thoughts of the Lord God.Nobody is able to tell him what he should do.’"
     },
     {
       "verse": "35",
-      "text": "‘Nobody has ever given anything to God, so that God had a debt to pay back to them.’ See Job"
+      "text": "‘Nobody has ever given anything to God,so that God had a debt to pay back to them.’ so that God had a debt to pay back to them.’"
     },
     {
       "verse": "36",
-      "text": "It is God who made all things. He also causes all things to continue. And all things are there to show how great he is. We praise him! He is great for ever! Amen. This is true! Print... Use screen font size Show All Comments Romans 10Romans 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "It is God who made all things. He also causes all things to continue. And all things are there to show how great he is.We praise him! He is great for ever! Amen. This is true!"
     }
   ],
   "12": [
@@ -1304,7 +1304,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "If God has helped you to make others strong, then you should do that. If God has helped you to share your things with others, do that seriously. If God has helped you to be a leader, do that carefully. If God has helped you to be kind to others, do that happily. Love people and help them"
+      "text": "If God has helped you to make others strong, then you should do that. If God has helped you to share your things with others, do that seriously. If God has helped you to be a leader, do that carefully. If God has helped you to be kind to others, do that happily."
     },
     {
       "verse": "9",
@@ -1348,15 +1348,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "My friends, if someone has done bad things to you, do not try to punish them yourselves. Instead, let God be angry and punish them. This is what is written in the Bible: See Deuteronomy The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back.” ’"
+      "text": "My friends, if someone has done bad things to you, do not try to punish them yourselves. Instead, let God be angry and punish them. This is what is written in the Bible:‘The Lord God says,“When people do something wrong,I am the one who will punish them.I will pay them back.” ’ ‘The Lord God says, “When people do something wrong, I am the one who will punish them. I will pay them back.” ’"
     },
     {
       "verse": "20",
-      "text": "But the Bible also says this: See Proverbs If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you.’"
+      "text": "But the Bible also says this:‘If your enemy is hungry, feed him.If he is thirsty, give him something to drink.If you help your enemy, he will become ashamed.He will be sorry because of what he did to you.’ ‘If your enemy is hungry, feed him. If he is thirsty, give him something to drink. If you help your enemy, he will become ashamed. He will be sorry because of what he did to you.’"
     },
     {
       "verse": "21",
-      "text": "Do not let evil things win against you! Instead, do good things. Then you will win against the evil things that people do. Print... Use screen font size Show All Comments Romans 11Romans 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not let evil things win against you! Instead, do good things. Then you will win against the evil things that people do."
     }
   ],
   "13": [
@@ -1386,7 +1386,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So you must give to each person what you ought to give them. Pay taxes to the people who receive taxes. Do that for every kind of tax. Respect those people that you should respect. Praise people that you should praise. Love other people"
+      "text": "So you must give to each person what you ought to give them. Pay taxes to the people who receive taxes. Do that for every kind of tax. Respect those people that you should respect. Praise people that you should praise."
     },
     {
       "verse": "8",
@@ -1406,7 +1406,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The night has nearly finished and the day is almost here. So we must stop doing the bad things that belong to the dark. Instead, we must take weapons like soldiers who are ready to fight in the light. Jesus gives us the power to win against bad things. This is like using weapons to fight against bad and wrong things. See Ephesians Timothy"
+      "text": "The night has nearly finished and the day is almost here. So we must stop doing the bad things that belong to the dark. Instead, we must take weapons like soldiers who are ready to fight in the light."
     },
     {
       "verse": "13",
@@ -1414,7 +1414,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Instead, you must live with the Lord Jesus Christ as your guide. Do not even think about the bad things that you may want to do to make yourself happy. Print... Use screen font size Show All Comments Romans 12Romans 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Instead, you must live with the Lord Jesus Christ as your guide. Do not even think about the bad things that you may want to do to make yourself happy."
     }
   ],
   "14": [
@@ -1456,15 +1456,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So then, if you eat only vegetables, you must not judge other believers. Also, if you eat anything, you must not think that you are better than other believers. Remember that all of us will have to stand in front of God. He will decide whether we have done what is right or wrong."
+      "text": "So then, if you eat only vegetables, you must not judge other believers. Also, if you eat anything, you must not think that you are better than other believers. Remember that all of us will have to stand in front of God. He will decide whether we have done what is right or wrong. ‘The Lord God says, “As surely as I live, this will certainly happen: Everyone will go down on their knees in front of me. Everyone will praise me that I am God.” ’"
     },
     {
       "verse": "11",
-      "text": "This is written in the Bible: ‘The Lord God says, “As surely as I live, this will certainly happen: Everyone will go down on their knees in front of me. Everyone will praise me that I am God.” ’ See Isaiah"
+      "text": "This is written in the Bible:‘The Lord God says,“As surely as I live, this will certainly happen:Everyone will go down on their knees in front of me.Everyone will praise me that I am God.” ’"
     },
     {
       "verse": "12",
-      "text": "So each of us will have to explain to God about the things that we have done. Do not cause trouble"
+      "text": "So each of us will have to explain to God about the things that we have done."
     },
     {
       "verse": "13",
@@ -1508,7 +1508,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But someone else may not be sure whether it is right to eat certain kinds of food. If that person does eat that kind of food, then he shows that he is guilty. He has not trusted God that it is right for him to do that. Whatever things we do, we must trust God about them. If we do not trust God that something is right, then it is a sin. Print... Use screen font size Show All Comments Romans 13Romans 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But someone else may not be sure whether it is right to eat certain kinds of food. If that person does eat that kind of food, then he shows that he is guilty. He has not trusted God that it is right for him to do that. Whatever things we do, we must trust God about them. If we do not trust God that something is right, then it is a sin."
     }
   ],
   "15": [
@@ -1522,7 +1522,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Even Christ did not just do things that would make himself happy. It is written in the Bible that he said this: ‘People have insulted you, God. In that way they have also insulted me.’ See Psalm"
+      "text": "Even Christ did not just do things that would make himself happy. It is written in the Bible that he said this: ‘People have insulted you, God. In that way they have also insulted me.’"
     },
     {
       "verse": "4",
@@ -1534,11 +1534,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "As a result, all of you will praise God together with the same thoughts. You will all agree that God, the Father of our Lord Jesus Christ, is very great. Christ saves both Jews and Gentiles"
+      "text": "As a result, all of you will praise God together with the same thoughts. You will all agree that God, the Father of our Lord Jesus Christ, is very great."
     },
     {
       "verse": "7",
-      "text": "Christ has accepted you, so you must accept each other. In that way you will be praising God."
+      "text": "Christ has accepted you, so you must accept each other. In that way you will be praising God. ‘I will tell the Gentiles about you, God. I will praise you with songs, to show how great you are.’"
     },
     {
       "verse": "8",
@@ -1546,23 +1546,23 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Gentiles also praise God because he has been kind to them. This is written in the Bible: God had promised to the Jews that he would send his Messiah to save them. Jesus showed them that he himself is God's Messiah. When Jesus lived on the earth, God's promise became true. ‘I will tell the Gentiles about you, God. I will praise you with songs, to show how great you are.’ King David said this in Psalm"
+      "text": "The Gentiles also praise God because he has been kind to them. This is written in the Bible:‘I will tell the Gentiles about you, God.I will praise you with songs, to show how great you are.’"
     },
     {
       "verse": "10",
-      "text": "It says also in the Bible: ‘Be very happy, you Gentiles! Praise God together with his people.’ See Deuteronomy"
+      "text": "It says also in the Bible:‘Be very happy, you Gentiles!Praise God together with his people.’ ‘Be very happy, you Gentiles! Praise God together with his people.’"
     },
     {
       "verse": "11",
-      "text": "It also says this: ‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is.’ See Psalm"
+      "text": "It also says this:‘Say how great the Lord is, all you Gentiles.All people, from every country, should say how great he is.’ ‘Say how great the Lord is, all you Gentiles. All people, from every country, should say how great he is.’"
     },
     {
       "verse": "12",
-      "text": "God's prophet Isaiah says this: ‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them.’ See Isaiah Jesse was King David's father. See 1 Samuel Jesus was born many years after Jesse and David lived on the earth. The ‘root of Jesse’ means that Jesus belonged to Jesse and David's family. See Matthew But it means also that Jesse and David come from Jesus. Jesus caused them to be alive, as a plant grows up from its root. Jesus is God. He has always been alive in God's home beyond the earth. He made everything and everyone."
+      "text": "God's prophet Isaiah says this:‘The root of Jesse will arrive.He will come to rule the Gentiles.The Gentiles will trust him to save them.’ ‘The root of Jesse will arrive. He will come to rule the Gentiles. The Gentiles will trust him to save them.’"
     },
     {
       "verse": "13",
-      "text": "God is the one who causes us to hope for good things. I pray that God will bless you very much. I pray that he will cause you to be happy and to have peace in your minds. He will do this because you believe in him. As a result, God's Holy Spirit will make you strong with his power, so that you hope even more certainly. Paul's reason for writing this letter"
+      "text": "God is the one who causes us to hope for good things. I pray that God will bless you very much. I pray that he will cause you to be happy and to have peace in your minds. He will do this because you believe in him. As a result, God's Holy Spirit will make you strong with his power, so that you hope even more certainly."
     },
     {
       "verse": "14",
@@ -1586,15 +1586,15 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "God's Holy Spirit used his power to do many miracles. He caused many great and powerful things to happen. As a result, I have told the whole good news about Christ to many people. I have told it while I travelled all the way from Jerusalem to Illyricum. Illyricum was a region near the Adriatic Sea, north and west from Greece. It was where the north part of Albania is now."
+      "text": "God's Holy Spirit used his power to do many miracles. He caused many great and powerful things to happen. As a result, I have told the whole good news about Christ to many people. I have told it while I travelled all the way from Jerusalem to Illyricum."
     },
     {
       "verse": "20",
-      "text": "I want to go to places where nobody has ever told people about Christ before. I want to tell the good news to people in those places. That is what I have always wanted to do. I do not want to work in a place where someone else has already started to teach God's message."
+      "text": "I want to go to places where nobody has ever told people about Christ before. I want to tell the good news to people in those places. That is what I have always wanted to do. I do not want to work in a place where someone else has already started to teach God's message. ‘Those people that nobody ever told them about him will now see. Those people who have never heard about him will now understand.’"
     },
     {
       "verse": "21",
-      "text": "This is written in the Bible about God's Messiah: ‘Those people that nobody ever told them about him will now see. Those people who have never heard about him will now understand.’ See Isaiah Paul hopes to visit Rome"
+      "text": "This is written in the Bible about God's Messiah:‘Those people that nobody ever told them about him will now see.Those people who have never heard about him will now understand.’"
     },
     {
       "verse": "22",
@@ -1618,7 +1618,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The Christians in Macedonia and Achaia were happy to share what they had. But really, they have a duty to help the Jewish Christians in Jerusalem. It is the Jews who shared good things from God to help the Gentiles in their spirits. So now the Gentiles ought to help the Jewish Christians with things that they need for their bodies. Macedonia included the north part of the country that we call Greece. It also included the south part of the country that we call North Macedonia. Achaia was the south part of Greece."
+      "text": "The Christians in Macedonia and Achaia were happy to share what they had. But really, they have a duty to help the Jewish Christians in Jerusalem. It is the Jews who shared good things from God to help the Gentiles in their spirits. So now the Gentiles ought to help the Jewish Christians with things that they need for their bodies."
     },
     {
       "verse": "28",
@@ -1634,7 +1634,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Pray that God will keep me safe from those people in Judea who have refused to believe in Jesus. Pray also that God's people at Jerusalem will happily accept the gift that I am taking to them. Judea was a region in the south part of Israel. Jerusalem, the capital city of Israel, was in Judea."
+      "text": "Pray that God will keep me safe from those people in Judea who have refused to believe in Jesus. Pray also that God's people at Jerusalem will happily accept the gift that I am taking to them."
     },
     {
       "verse": "32",
@@ -1642,7 +1642,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "I pray that God will give you peace in your minds. I pray that he will be with all of you and help you. Amen. Print... Use screen font size Show All Comments Romans 14Romans 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that God will give you peace in your minds. I pray that he will be with all of you and help you. Amen."
     }
   ],
   "16": [
@@ -1652,11 +1652,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Please be kind to her when she comes to you, because you belong to the Lord. Help her in the way that God's people ought to help one another. Give to her the things that she needs. She has worked to help me as well as many other people. We think that Phoebe took this letter to Rome for Paul. Cenchrea was a port in the south part of the country that we now call Greece. It was about 13 kilometres south and east from Corinth."
+      "text": "Please be kind to her when she comes to you, because you belong to the Lord. Help her in the way that God's people ought to help one another. Give to her the things that she needs. She has worked to help me as well as many other people."
     },
     {
       "verse": "3",
-      "text": "Say ‘hello’ on my behalf to Priscilla and Aquila. They have worked together with me as servants of Christ Jesus."
+      "text": "Say ‘hello’ on my behalf to Priscilla and Aquila. They have worked together with me as servants of Christ Jesus. Say ‘hello’ to my very good friend Epenetus. He was the first person in the region of Asia who believed in Christ."
     },
     {
       "verse": "4",
@@ -1664,7 +1664,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Also say ‘hello’ for me to the group of believers who meet in Priscilla and Aquila's house. Say ‘hello’ to my very good friend Epenetus. He was the first person in the region of Asia who believed in Christ."
+      "text": "Also say ‘hello’ for me to the group of believers who meet in Priscilla and Aquila's house.Say ‘hello’ to my very good friend Epenetus. He was the first person in the region of Asia who believed in Christ."
     },
     {
       "verse": "6",
@@ -1708,7 +1708,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "When you meet, kiss each other as Christian brothers and sisters. The people of all the Christian churches here say ‘hello’ to you. False teachers"
+      "text": "When you meet, kiss each other as Christian brothers and sisters. The people of all the Christian churches here say ‘hello’ to you."
     },
     {
       "verse": "17",
@@ -1724,7 +1724,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "God gives us peace in our minds. He will quickly help you to win against the power of Satan. I pray that our Lord Jesus will continue to be kind to you. Paul finishes his letter"
+      "text": "God gives us peace in our minds. He will quickly help you to win against the power of Satan. I pray that our Lord Jesus will continue to be kind to you."
     },
     {
       "verse": "21",
@@ -1732,15 +1732,15 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I, Tertius, have written down this letter for Paul. I also belong to the Lord and I say ‘hello’ to you. Tertius wrote this letter down on Paul's behalf. Paul told him what to write."
+      "text": "I, Tertius, have written down this letter for Paul. I also belong to the Lord and I say ‘hello’ to you."
     },
     {
       "verse": "23",
-      "text": "Gaius also says ‘hello’ to you. I, Paul, am staying in his house. The group of Christians here also meet together in his house. Erastus also says ‘hello’ to you. He is an officer who takes care of the city's money. Our Christian friend Quartus says ‘hello’ to you too. ["
+      "text": "Gaius also says ‘hello’ to you. I, Paul, am staying in his house. The group of Christians here also meet together in his house. Erastus also says ‘hello’ to you. He is an officer who takes care of the city's money. Our Christian friend Quartus says ‘hello’ to you too.["
     },
     {
       "verse": "24",
-      "text": "I pray that our Lord Jesus Christ will continue to be very kind to all of you.] This verse is not included in many copies of the Bible."
+      "text": "I pray that our Lord Jesus Christ will continue to be very kind to all of you.]"
     },
     {
       "verse": "25",
@@ -1752,7 +1752,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Yes, we praise God! Only he is completely wise. We praise him for ever, because of Jesus Christ! This is true. Amen. Print... Use screen font size Show All Comments Romans 151 Corinthians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, we praise God! Only he is completely wise. We praise him for ever, because of Jesus Christ! This is true. Amen."
     }
   ]
 };

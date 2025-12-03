@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds."
+      "text": "This letter is from Paul, Silas and Timothy.We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ.We pray that God will continue to help you. We pray that he will give you peace in your minds. We are writing to the people of the church in Thessalonica. You belong to God the Father and to the Lord Jesus Christ. We pray that God will continue to help you. We pray that he will give you peace in your minds."
     },
     {
       "verse": "2",
@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "As we pray to our Father God, we remember how you live. You do good things because you believe in Christ. You work hard to help other people because you love them and you love God. You are also strong and patient because you hope strongly in our Lord Jesus Christ. The believers at Thessalonica were sure that Jesus would save them completely. They were sure that he would return to the earth one day. They were sure that they would live with him always. They hoped strongly for these things because they trusted Jesus."
+      "text": "As we pray to our Father God, we remember how you live. You do good things because you believe in Christ. You work hard to help other people because you love them and you love God. You are also strong and patient because you hope strongly in our Lord Jesus Christ."
     },
     {
       "verse": "4",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "As a result, you became an example to all the believers in Macedonia and in Achaia. Macedonia included the north part of the country that we call Greece and part of the country that we call North Macedonia. Achaia was the south part of Greece."
+      "text": "As a result, you became an example to all the believers in Macedonia and in Achaia."
     },
     {
       "verse": "8",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "They also tell us that you are waiting patiently for God's Son to return from heaven. God raised him up after his death on the cross. He is Jesus. He saves us from God's punishment that will come one day. One day, God will judge all people. He will decide what happens to them after their death. He will be angry with people who have not believed in his Son, Jesus, and he will punish them. See Ephesians John and Colossians Print... Use screen font size Show All Comments 1 Thessalonians Introduction1 Thessalonians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They also tell us that you are waiting patiently for God's Son to return from heaven. God raised him up after his death on the cross. He is Jesus. He saves us from God's punishment that will come one day."
     }
   ],
   "2": [
@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "You know what happened to us before we came to you. The people at Philippi had done bad things to us. They had caused us to have trouble. When we came to you, our God helped us to be brave. We were not afraid to tell you his good news. Many people tried to stop us, but we told you God's message. Philippi was another city in Macedonia. It was about 115 kilometres east of Thessalonica. Paul and his friends had been at Philippi before they came to Thessalonica. Some people at Philippi had hurt Paul and Silas very much. Then they had put Paul and Silas in prison. See Acts"
+      "text": "You know what happened to us before we came to you. The people at Philippi had done bad things to us. They had caused us to have trouble. When we came to you, our God helped us to be brave. We were not afraid to tell you his good news. Many people tried to stop us, but we told you God's message."
     },
     {
       "verse": "3",
@@ -72,11 +72,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "We loved you very much, so we wanted to tell you God's good news. We wanted to share our lives with you too. Some people at Thessalonica may have said bad things about Paul and his friends. They may have told the Christians there that Paul did not really love them. They may have said that Paul only wanted power and money for himself. So Paul is explaining that he never had any wrong purpose like that. He only wanted to do what was best for the believers at Thessalonica."
+      "text": "We loved you very much, so we wanted to tell you God's good news. We wanted to share our lives with you too."
     },
     {
       "verse": "9",
-      "text": "Our Christian friends, remember how we worked so hard to help you. We worked during the day and even during the night. We did not want to cause any problems for you. So we taught you God's good news and we did not ask you to give us anything in return. While Paul, Silas and Timothy were at Thessalonica, they worked to get some money. We do not know the kind of work that they did. But we know that Paul could make tents. See Acts"
+      "text": "Our Christian friends, remember how we worked so hard to help you. We worked during the day and even during the night. We did not want to cause any problems for you. So we taught you God's good news and we did not ask you to give us anything in return."
     },
     {
       "verse": "10",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Our Christian friends, you have received the same kind of trouble that the people in the churches of Judea received. People in your own country have caused you to have trouble and pain. The same thing happened to the people in Judea who believed in Christ Jesus. They received trouble from their own Jewish people. Judea was the south part of Israel. The people who lived there were called Jews."
+      "text": "Our Christian friends, you have received the same kind of trouble that the people in the churches of Judea received. People in your own country have caused you to have trouble and pain. The same thing happened to the people in Judea who believed in Christ Jesus. They received trouble from their own Jewish people."
     },
     {
       "verse": "15",
@@ -104,7 +104,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "because they try to stop us speaking to Gentiles. They do not want God to save anyone from another nation. In this way, they continue to do more and more bad things. When their sins become too many, God has to stop them. He has become so angry that he has punished them completely. Paul wants to return to Thessalonica"
+      "text": "because they try to stop us speaking to Gentiles. They do not want God to save anyone from another nation. In this way, they continue to do more and more bad things. When their sins become too many, God has to stop them. He has become so angry that he has punished them completely."
     },
     {
       "verse": "17",
@@ -120,12 +120,12 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "You show the great results of our work. Yes, it is because of you that we are very happy. Print... Use screen font size Show All Comments 1 Thessalonians 11 Thessalonians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You show the great results of our work. Yes, it is because of you that we are very happy."
     }
   ],
   "3": [
     {
-      "verse": "1-2",
+      "verse": "1",
       "text": "After a long time, we could not be patient any longer. So we decided to send our friend Timothy to come to visit you. We ourselves would stay here in Athens. Timothy serves God with us here. He tells people the good news about Christ. We sent him to you so that he could help you to trust Christ more and more."
     },
     {
@@ -170,7 +170,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then God will cause you to become strong inside yourselves. You will live in a completely good way. One day our Lord Jesus will come back with all the people who belong to him. Then you will stand in front of God, our Father. He will say that you are not guilty of anything that is wrong. Print... Use screen font size Show All Comments 1 Thessalonians 21 Thessalonians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then God will cause you to become strong inside yourselves. You will live in a completely good way. One day our Lord Jesus will come back with all the people who belong to him. Then you will stand in front of God, our Father. He will say that you are not guilty of anything that is wrong."
     }
   ],
   "4": [
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "If you live in this way, other people who are not believers will respect you. Also, you will not have to ask anyone else to give you the things that you need. Jesus' return"
+      "text": "If you live in this way, other people who are not believers will respect you. Also, you will not have to ask anyone else to give you the things that you need."
     },
     {
       "verse": "13",
@@ -228,7 +228,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "We believe that Jesus died and he rose again after death. So we also believe that people who have died as Christians will rise again. When God brings Jesus back, he will take the Christians to go with Jesus. Timothy may have brought news that the Christians at Thessalonica were confused about Christ's return. They were sad about their Christian friends who had died already. They did not know what would happen to these people. Paul tells them here that they would all live with Christ for ever. It did not matter that some believers had died before Christ returned."
+      "text": "We believe that Jesus died and he rose again after death. So we also believe that people who have died as Christians will rise again. When God brings Jesus back, he will take the Christians to go with Jesus."
     },
     {
       "verse": "15",
@@ -244,7 +244,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Because this message is true, tell it to each other. Help one another to be strong, not sad. Print... Use screen font size Show All Comments 1 Thessalonians 31 Thessalonians 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Because this message is true, tell it to each other. Help one another to be strong, not sad."
     }
   ],
   "5": [
@@ -290,7 +290,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Because of that, you should help each other to become stronger as believers. I know that you are already doing that. Paul finishes his letter"
+      "text": "Because of that, you should help each other to become stronger as believers. I know that you are already doing that."
     },
     {
       "verse": "12",
@@ -302,7 +302,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Friends, you must warn lazy people that they should work. If people are afraid, help them to be brave. If people are weak, take care of them. Be patient with everyone. All the Christians at Thessalonica were waiting for Jesus to return. They thought that he would come soon. Some of them may have thought that they did not need to continue to work. But nobody knows when the Lord will return. So Paul is teaching them about that. They must continue to work. They must live in a way that makes God happy."
+      "text": "Friends, you must warn lazy people that they should work. If people are afraid, help them to be brave. If people are weak, take care of them. Be patient with everyone."
     },
     {
       "verse": "15",
@@ -358,7 +358,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "I pray that our Lord Jesus Christ will continue to be very kind to you. Print... Use screen font size Show All Comments 1 Thessalonians 42 Thessalonians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that our Lord Jesus Christ will continue to be very kind to you."
     }
   ]
 };

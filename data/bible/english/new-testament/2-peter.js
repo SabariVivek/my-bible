@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Simon Peter. I am Jesus Christ's servant and his apostle. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve."
+      "text": "This letter is from me, Simon Peter. I am Jesus Christ's servant and his apostle.I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve. I am writing to you people who believe in Jesus Christ, as we do. That is a valuable gift that God has given to us all. He has done this because Jesus is completely good and right. Jesus is the one who saves us. He is the God that we serve."
     },
     {
       "verse": "2",
@@ -58,15 +58,15 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "After I am no longer with you, I want you still to remember what I have told you. So I will make sure that you have something to help you not to forget. Peter himself saw how great Christ is"
+      "text": "After I am no longer with you, I want you still to remember what I have told you. So I will make sure that you have something to help you not to forget."
     },
     {
       "verse": "16",
       "text": "We told you that our Lord Jesus Christ is powerful. We also told you that he will return to earth again. We were not telling you false stories that came from people's clever ideas. Instead, we were telling you what we ourselves had seen. We ourselves saw that the Lord Jesus is very great."
     },
     {
-      "verse": "17-18",
-      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power. He said: ‘This is my Son and I love him. He makes me very happy.’ Peter, James and John saw Jesus when he shone brightly on the mountain. They heard God speak to Jesus. See Matthew Mark Luke God's messages in the Bible are very important"
+      "verse": "17",
+      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power. He said: ‘This is my Son and I love him. He makes me very happy.’"
     },
     {
       "verse": "19",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "None of the prophets' messages came because any person wanted to say something. Instead, God's Holy Spirit caused people to speak words that came from God. God's prophets spoke messages about the Messiah who would come in the future. That was like a light which shone in a dark place. But when Jesus returns to the earth, that will be like the dawn. Jesus brings the light of day. The morning star appears in the sky just before the sunrise. It is very bright. It shows us that the day is coming. In Revelation Jesus says that he is the morning star. Peter was talking about the prophets' messages that are written in the Old Testament. Print... Use screen font size Show All Comments 2 Peter Introduction2 Peter 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "None of the prophets' messages came because any person wanted to say something. Instead, God's Holy Spirit caused people to speak words that came from God."
     }
   ],
   "2": [
@@ -96,11 +96,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "God even punished the angels who refused to obey him. He threw them down into the deep hole of hell. He tied them up and he kept them in that completely dark place. They will remain there until the day when God will judge them. In the beginning of time, some of the angels who lived in heaven with God turned against him. So God sent them far away from him. See Jude"
+      "text": "God even punished the angels who refused to obey him. He threw them down into the deep hole of hell. He tied them up and he kept them in that completely dark place. They will remain there until the day when God will judge them."
     },
     {
       "verse": "5",
-      "text": "Also, a long time ago, God punished all the bad people who lived in the world. He sent water to cover over all the earth. All the people who had turned away from him drowned in the water. But God kept Noah safe. Noah had told people God's message that they should do right things. So God saved Noah, and seven other people, from the water. The story about Noah is in Genesis"
+      "text": "Also, a long time ago, God punished all the bad people who lived in the world. He sent water to cover over all the earth. All the people who had turned away from him drowned in the water. But God kept Noah safe. Noah had told people God's message that they should do right things. So God saved Noah, and seven other people, from the water."
     },
     {
       "verse": "6",
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Lot lived among those bad people. Every day, he saw the bad things that they did. Every day, he heard the bad things that they said. As a result, Lot had much trouble in his mind, because he was a good man. The stories about Sodom and Gomorrah, and about Lot, are in Genesis Peter is showing that God will destroy bad people. But God will help people who obey him."
+      "text": "Lot lived among those bad people. Every day, he saw the bad things that they did. Every day, he heard the bad things that they said. As a result, Lot had much trouble in his mind, because he was a good man."
     },
     {
       "verse": "9",
@@ -120,11 +120,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "God will certainly punish those people who want bad things for themselves. They do the wrong things that their bodies want to do. They do not want to obey anyone's authority. These false teachers are not afraid of what other people think about them. They think that they themselves are very important. They are not afraid to say many bad things against the great angels in heaven."
+      "text": "God will certainly punish those people who want bad things for themselves. They do the wrong things that their bodies want to do. They do not want to obey anyone's authority.These false teachers are not afraid of what other people think about them. They think that they themselves are very important. They are not afraid to say many bad things against the great angels in heaven."
     },
     {
       "verse": "11",
-      "text": "The angels are more powerful than the false teachers are. But even these angels will not say bad things against them when the Lord is present. This could mean angels. Or it could mean very important people, who have great authority."
+      "text": "The angels are more powerful than the false teachers are. But even these angels will not say bad things against them when the Lord is present."
     },
     {
       "verse": "12",
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But a donkey told him that he was not obeying God. We know that donkeys cannot talk. But that donkey spoke with a human voice. It stopped the prophet Balaam from doing more crazy things. We can read about Balaam and the donkey in the book called Numbers. Balaam caused Israel's people to do bad things. See Numbers 22-25; Deuteronomy and Revelation"
+      "text": "But a donkey told him that he was not obeying God. We know that donkeys cannot talk. But that donkey spoke with a human voice. It stopped the prophet Balaam from doing more crazy things."
     },
     {
       "verse": "17",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "You know these true proverbs: ‘After a dog has been sick, it returns to eat it again.’ Also: ‘After you wash a pig, it will quickly roll in the dirt again.’ These words describe how the false teachers live. The words about the dog come from Proverbs Print... Use screen font size Show All Comments 2 Peter 12 Peter 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You know these true proverbs: ‘After a dog has been sick, it returns to eat it again.’ Also: ‘After you wash a pig, it will quickly roll in the dirt again.’ These words describe how the false teachers live."
     }
   ],
   "3": [
@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "They will say: ‘Christ promised that he would return to this world. But he has not returned! Our ancestors have already died, but since God made the world in the beginning, nothing has changed.’ the last days’ are the time before Jesus will return to the earth."
+      "text": "They will say: ‘Christ promised that he would return to this world. But he has not returned! Our ancestors have already died, but since God made the world in the beginning, nothing has changed.’"
     },
     {
       "verse": "5",
@@ -198,7 +198,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But God has also spoken his word to say what will happen to the world in a future time. The sky and the earth that we see now will continue for a time. But God is keeping them until the day when he will destroy them with fire. On that day he will judge all people. He will destroy the people who have turned away from him. See Genesis See Genesis"
+      "text": "But God has also spoken his word to say what will happen to the world in a future time. The sky and the earth that we see now will continue for a time. But God is keeping them until the day when he will destroy them with fire. On that day he will judge all people. He will destroy the people who have turned away from him."
     },
     {
       "verse": "8",
@@ -210,7 +210,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The great day of the Lord will suddenly happen. That will surprise people, like when someone comes to rob them. There will be a very loud noise in the sky. The whole sky will go away. Fire will burn the whole universe and it will destroy everything. The earth and everything that people have made will then become clear. God sees clearly everything that people have done., after fire has destroyed everything else. He will then judge all people."
+      "text": "The great day of the Lord will suddenly happen. That will surprise people, like when someone comes to rob them. There will be a very loud noise in the sky. The whole sky will go away. Fire will burn the whole universe and it will destroy everything. The earth and everything that people have made will then become clear."
     },
     {
       "verse": "11",
@@ -222,7 +222,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But God has promised to make a new sky and a new earth. That is what we are waiting for. That will be a home for everything that is good and right. We can be sure that God will make a new earth and a new sky. The Bible tells us about them. See Revelation Peter finishes his letter"
+      "text": "But God has promised to make a new sky and a new earth. That is what we are waiting for. That will be a home for everything that is good and right."
     },
     {
       "verse": "14",
@@ -242,7 +242,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Instead, you must grow as believers in our Lord Jesus Christ, who saves us. Continue to know him better and better. He will be kind to you and he will help you more and more. We praise him as he deserves! He is great now and he will be great for ever! Print... Use screen font size Show All Comments 2 Peter 21 John Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Instead, you must grow as believers in our Lord Jesus Christ, who saves us. Continue to know him better and better. He will be kind to you and he will help you more and more. We praise him as he deserves! He is great now and he will be great for ever!"
     }
   ]
 };

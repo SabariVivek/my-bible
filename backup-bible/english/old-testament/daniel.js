@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The king's officer gave new names to them. Daniel was called Belteshazzar. Hananiah was called Shadrach. Mishael was called Meshach. Azariah was called Abednego. Daniel refuses to eat the king's food"
+      "text": "The king's officer gave new names to them. Daniel was called Belteshazzar. Hananiah was called Shadrach. Mishael was called Meshach. Azariah was called Abednego."
     },
     {
       "verse": "8",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So the guard no longer gave them the king's food and wine to eat. He gave vegetables and water to them instead. God makes Daniel and his friends wise"
+      "text": "So the guard no longer gave them the king's food and wine to eat. He gave vegetables and water to them instead."
     },
     {
       "verse": "17",
@@ -78,11 +78,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Whenever the king needed help to understand something important, these men showed how wise they were. They knew ten times more than any of the king's other wise men. Those men used magic or they studied the stars to know what would happen in the future. They came from all the different countries that Nebuchadnezzar ruled. Nebuchadnezzar was clever. He was able to ask the young men questions to see how wise they were."
+      "text": "Whenever the king needed help to understand something important, these men showed how wise they were. They knew ten times more than any of the king's other wise men. Those men used magic or they studied the stars to know what would happen in the future. They came from all the different countries that Nebuchadnezzar ruled."
     },
     {
       "verse": "21",
-      "text": "And Daniel lived in Babylon until the year when Cyrus became king. Print... Use screen font size Show All Comments Daniel IntroductionDaniel 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And Daniel lived in Babylon until the year when Cyrus became king."
     }
   ],
   "2": [
@@ -96,11 +96,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then the king said to them, ‘I have had a dream that gives me trouble in my mind. I want to know what the dream means.’ An enchanter tries to make things happen by speaking magic words."
+      "text": "Then the king said to them, ‘I have had a dream that gives me trouble in my mind. I want to know what the dream means.’"
     },
     {
       "verse": "4",
-      "text": "Then the wise men answered the king. (This is in the Aramaic language. ) They said, ‘King, live for ever! We are your servants. Tell us the dream. Then we will tell you what it means.’ From here, through to Daniel the book is written in the Aramaic language, instead of Hebrew."
+      "text": "Then the wise men answered the king. (This is in the Aramaic language. ) They said, ‘King, live for ever! We are your servants. Tell us the dream. Then we will tell you what it means.’"
     },
     {
       "verse": "5",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He sent a message to command them to kill all his wise men. Some men went to look for Daniel and his friends too. They wanted to punish them with death."
+      "text": "He sent a message to command them to kill all his wise men.Some men went to look for Daniel and his friends too. They wanted to punish them with death."
     },
     {
       "verse": "14",
@@ -148,11 +148,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So Daniel went to see the king. He asked the king for more time. Then he would be able to tell the king what the dream meant. God shows the dream to Daniel"
+      "text": "So Daniel went to see the king. He asked the king for more time. Then he would be able to tell the king what the dream meant."
     },
     {
       "verse": "17",
-      "text": "Then Daniel went to his home. He told his friends, Hananiah, Mishael and Azariah what had happened."
+      "text": "Then Daniel went to his home. He told his friends, Hananiah, Mishael and Azariah what had happened. ‘Praise God's great name for ever! He has great wisdom and great power."
     },
     {
       "verse": "18",
@@ -164,19 +164,19 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "He said, ‘Praise God's great name for ever! He has great wisdom and great power."
+      "text": "He said,‘Praise God's great name for ever!He has great wisdom and great power."
     },
     {
       "verse": "21",
-      "text": "He makes things happen at the right time. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn."
+      "text": "He makes things happen at the right time.He gives to some kings authority to rule.And he takes that authority away from other kings.He causes some people to become wise.He helps people to understand the things that they learn. He gives to some kings authority to rule. And he takes that authority away from other kings. He causes some people to become wise. He helps people to understand the things that they learn."
     },
     {
       "verse": "22",
-      "text": "He explains difficult problems and secret things. He knows about all things, even when they are in dark places. He himself lives in the light."
+      "text": "He explains difficult problems and secret things.He knows about all things,even when they are in dark places.He himself lives in the light. He knows about all things, even when they are in dark places. He himself lives in the light."
     },
     {
       "verse": "23",
-      "text": "My ancestors' God, I thank you and I praise you! You have made me wise and you have made me strong. We asked you to help us, and now you have shown me your answer. You have explained the king's problem to us. So I thank you.’"
+      "text": "My ancestors' God,I thank you and I praise you!You have made me wiseand you have made me strong.We asked you to help us,and now you have shown me your answer.You have explained the king's problem to us.So I thank you.’ I thank you and I praise you! You have made me wise and you have made me strong. We asked you to help us, and now you have shown me your answer. You have explained the king's problem to us. So I thank you.’"
     },
     {
       "verse": "24",
@@ -204,7 +204,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "I am not more wise than other people. But God has explained your secret dream to me, because he wants you to know what it means. He wants you to understand the thoughts in your mind.’ The dream"
+      "text": "I am not more wise than other people. But God has explained your secret dream to me, because he wants you to know what it means. He wants you to understand the thoughts in your mind.’"
     },
     {
       "verse": "31",
@@ -224,7 +224,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Then the iron, the clay, the bronze, the silver and the gold all broke into pieces. They became like chaff that the wind blows away. Nobody could see any of those pieces any more. But the stone that had hit the statue became a large mountain. It filled the whole earth.’ Daniel explains the dream to the king"
+      "text": "Then the iron, the clay, the bronze, the silver and the gold all broke into pieces. They became like chaff that the wind blows away. Nobody could see any of those pieces any more. But the stone that had hit the statue became a large mountain. It filled the whole earth.’"
     },
     {
       "verse": "36",
@@ -260,11 +260,11 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "During the time when those kings rule, the God of heaven will begin a new kingdom. That kingdom will continue for ever. No other people will ever have power over it. It will break up all those other kingdoms and it will destroy them. And it will continue for ever."
+      "text": "During the time when those kings rule, the God of heaven will begin a new kingdom. That kingdom will continue for ever. No other people will ever have power over it. It will break up all those other kingdoms and it will destroy them. And it will continue for ever. In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true.’"
     },
     {
       "verse": "45",
-      "text": "You saw the stone that came from the mountain. It was not a human hand that cut it out. That stone broke the iron, the bronze, the clay, the silver and the gold into pieces. In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true.’ The king thanks Daniel"
+      "text": "You saw the stone that came from the mountain. It was not a human hand that cut it out. That stone broke the iron, the bronze, the clay, the silver and the gold into pieces.In your dream, King Nebuchadnezzar, the great God has shown you what will happen in future years. I have told you the dream, and I have told you what it means. You can be sure that all this is true.’"
     },
     {
       "verse": "46",
@@ -280,7 +280,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "Daniel asked the king to give important jobs to Shadrach, Meshach and Abednego. So the king gave them authority over the region of Babylon. But Daniel himself stayed in the king's palace. Print... Use screen font size Show All Comments Daniel 1Daniel 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Daniel asked the king to give important jobs to Shadrach, Meshach and Abednego. So the king gave them authority over the region of Babylon. But Daniel himself stayed in the king's palace."
     }
   ],
   "3": [
@@ -354,7 +354,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But even if he does not save us, we still would not serve your gods. And we will not worship the gold statue that you have built. We want you to understand that very clearly, sir.’ The king punishes Daniel's three friends"
+      "text": "But even if he does not save us, we still would not serve your gods. And we will not worship the gold statue that you have built. We want you to understand that very clearly, sir.’"
     },
     {
       "verse": "19",
@@ -386,11 +386,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "King Nebuchadnezzar went near to the door of the oven where the very hot fire was. He shouted aloud to the men inside, ‘Shadrach, Meshach and Abednego, I see that you are servants of the powerful God who rules over everything. Now come out here!’ So Shadrach, Meshach and Abednego came out of the fire."
+      "text": "King Nebuchadnezzar went near to the door of the oven where the very hot fire was. He shouted aloud to the men inside, ‘Shadrach, Meshach and Abednego, I see that you are servants of the powerful God who rules over everything. Now come out here!’So Shadrach, Meshach and Abednego came out of the fire."
     },
     {
       "verse": "27",
-      "text": "Then the king's officers, his wise men and the government rulers and leaders came near to the three men. They saw that the fire had not hurt Shadrach, Meshach or Abednego. The fire had not even burnt their hair or their clothes. They did not even have any smell from the fire. Nebuchadnezzar's new command"
+      "text": "Then the king's officers, his wise men and the government rulers and leaders came near to the three men. They saw that the fire had not hurt Shadrach, Meshach or Abednego. The fire had not even burnt their hair or their clothes. They did not even have any smell from the fire."
     },
     {
       "verse": "28",
@@ -402,21 +402,21 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Then the king gave more authority to Shadrach, Meshach and Abednego to rule in the region of Babylon. Print... Use screen font size Show All Comments Daniel 2Daniel 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the king gave more authority to Shadrach, Meshach and Abednego to rule in the region of Babylon."
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "This is a message from King Nebuchadnezzar. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives."
+      "text": "This is a message from King Nebuchadnezzar.I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives. I am sending this message to everyone in the world, the people in every nation, who speak every language. I hope that you all may have good and happy lives."
     },
     {
       "verse": "2",
-      "text": "I am happy to tell you about the powerful God who rules over everything. He has done miracles and great things for me."
+      "text": "I am happy to tell you about the powerful God who rules over everything.He has done miracles and great things for me. He has done miracles and great things for me."
     },
     {
       "verse": "3",
-      "text": "His miracles show his great strength. They are very powerful. His kingdom will continue for ever. He will always rule."
+      "text": "His miracles show his great strength.They are very powerful.His kingdom will continue for ever.He will always rule. They are very powerful. His kingdom will continue for ever. He will always rule."
     },
     {
       "verse": "4",
@@ -464,7 +464,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But leave the base of the tree and its roots in the ground. Tie iron and bronze round it. Then leave it there in the grass. The tree was a picture of King Nebuchadnezzar. Make him wet with dew from the sky. Cause him to live with the animals in the fields of grass."
+      "text": "But leave the base of the tree and its roots in the ground. Tie iron and bronze round it. Then leave it there in the grass.Make him wet with dew from the sky. Cause him to live with the animals in the fields of grass."
     },
     {
       "verse": "16",
@@ -476,11 +476,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then I said to Belteshazzar, ‘This is the dream that I, King Nebuchadnezzar, had. Now, you must tell me what it means. None of the wise men in any region of my kingdom can tell me what it means. But you can tell me, because the spirit of the holy gods is in you.’ Daniel explains the king's dream"
+      "text": "Then I said to Belteshazzar, ‘This is the dream that I, King Nebuchadnezzar, had. Now, you must tell me what it means. None of the wise men in any region of my kingdom can tell me what it means. But you can tell me, because the spirit of the holy gods is in you.’"
     },
     {
       "verse": "19",
-      "text": "Daniel, whose other name was Belteshazzar, was upset for a short time. His thoughts caused him a lot of trouble. The king said, ‘Belteshazzar, do not let the dream or what it means cause you trouble.’ Then Belteshazzar answered the king. ‘Sir, I would like the dream to be about your enemies and not about you."
+      "text": "Daniel, whose other name was Belteshazzar, was upset for a short time. His thoughts caused him a lot of trouble. The king said, ‘Belteshazzar, do not let the dream or what it means cause you trouble.’Then Belteshazzar answered the king. ‘Sir, I would like the dream to be about your enemies and not about you."
     },
     {
       "verse": "20",
@@ -536,15 +536,15 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Immediately the message given to Nebuchadnezzar really happened. People chased him away from the city. He ate grass as cows do. Dew from the sky made his body wet. His hair grew very long, like the feathers of an eagle. His feet became like a bird's feet. God makes Nebuchadnezzar better"
+      "text": "Immediately the message given to Nebuchadnezzar really happened. People chased him away from the city. He ate grass as cows do. Dew from the sky made his body wet. His hair grew very long, like the feathers of an eagle. His feet became like a bird's feet."
     },
     {
       "verse": "34",
-      "text": "At the end of that time, I, Nebuchadnezzar, looked up towards heaven. My own mind returned to me again. I praised the powerful God above who lives for ever. I worshipped him as a great God. His kingdom will continue for ever. He will always have authority to rule."
+      "text": "At the end of that time, I, Nebuchadnezzar, looked up towards heaven. My own mind returned to me again. I praised the powerful God above who lives for ever. I worshipped him as a great God.His kingdom will continue for ever.He will always have authority to rule. His kingdom will continue for ever. He will always have authority to rule."
     },
     {
       "verse": "35",
-      "text": "All the people on the earth seem like nothing to him. He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that?’"
+      "text": "All the people on the earth seem like nothing to him.He does whatever he wants among the angels in heaven,and among the people on the earth too.Nobody can stop him.Nobody can ask him, ‘Why are you doing that?’ He does whatever he wants among the angels in heaven, and among the people on the earth too. Nobody can stop him. Nobody can ask him, ‘Why are you doing that?’"
     },
     {
       "verse": "36",
@@ -552,7 +552,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Now I, Nebuchadnezzar, praise the King of heaven as a great God. He always does what is right and fair. When people are proud, he can cause them to become humble. Print... Use screen font size Show All Comments Daniel 3Daniel 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Now I, Nebuchadnezzar, praise the King of heaven as a great God. He always does what is right and fair. When people are proud, he can cause them to become humble."
     }
   ],
   "5": [
@@ -570,7 +570,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "While they drank the wine, they praised their gods. Their gods were idols that were made from gold, silver, bronze, iron, wood and stone. A hand writes on the wall"
+      "text": "While they drank the wine, they praised their gods. Their gods were idols that were made from gold, silver, bronze, iron, wood and stone."
     },
     {
       "verse": "5",
@@ -582,7 +582,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The king called for his enchanters, his wise men and his diviners to come. When they arrived, the king said to them, ‘Who can read these words? Who can tell me what they mean? Whoever can do that, I will make him great. I will put valuable purple clothes on him and he will have a gold chain around his neck. I will make him the third ruler in the kingdom.’ An enchanter tries to make things happen by speaking magic words. Belshazzar was probably the second ruler, under the authority of Nabonidus."
+      "text": "The king called for his enchanters, his wise men and his diviners to come. When they arrived, the king said to them, ‘Who can read these words? Who can tell me what they mean? Whoever can do that, I will make him great. I will put valuable purple clothes on him and he will have a gold chain around his neck. I will make him the third ruler in the kingdom.’"
     },
     {
       "verse": "8",
@@ -590,7 +590,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So King Belshazzar became even more afraid. His face became even whiter. His officers did not know what to do. The queen tells Belshazzar about Daniel This queen was probably Belshazzar's mother, or Nabonidus's wife. She knew things about Daniel that the king did not know."
+      "text": "So King Belshazzar became even more afraid. His face became even whiter. His officers did not know what to do."
     },
     {
       "verse": "10",
@@ -602,7 +602,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "His name was Daniel, but the king called him Belteshazzar. He was very clever and he knew many things. He could explain what dreams mean. He could find the answer to difficult problems. Send somebody to bring Daniel here. He will tell you what these words mean.’ Belshazzar asks Daniel to explain the message"
+      "text": "His name was Daniel, but the king called him Belteshazzar. He was very clever and he knew many things. He could explain what dreams mean. He could find the answer to difficult problems. Send somebody to bring Daniel here. He will tell you what these words mean.’"
     },
     {
       "verse": "13",
@@ -618,7 +618,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "I have heard that you can tell people what their dreams mean. And I have heard that you can find the answer to difficult problems. So can you read these words? Can you tell me what they mean? If you can do that, then I will put valuable purple clothes on you. You will have a gold chain around your neck. You will become the third ruler in the kingdom.’ Daniel warns the king"
+      "text": "I have heard that you can tell people what their dreams mean. And I have heard that you can find the answer to difficult problems. So can you read these words? Can you tell me what they mean? If you can do that, then I will put valuable purple clothes on you. You will have a gold chain around your neck. You will become the third ruler in the kingdom.’"
     },
     {
       "verse": "17",
@@ -654,11 +654,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "These are the words: Mene, Mene, Tekel and Parsin."
+      "text": "These are the words:Mene, Mene, Tekel and Parsin."
     },
     {
       "verse": "26",
-      "text": "This is what the words mean: Mene means “counted”. It shows that God has counted the days of your kingdom. Now these days are finished. Your kingdom has come to an end."
+      "text": "This is what the words mean:Mene means “counted”. It shows that God has counted the days of your kingdom. Now these days are finished. Your kingdom has come to an end."
     },
     {
       "verse": "27",
@@ -666,7 +666,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Peres means “separate”. It shows that God has cut your kingdom into two separate parts. He has given it to the people from Media and Persia.’ Parsin and Peres are the same word. Peres is for one (singular) and Parsin is for many (plural). Peres also sounds like Persia. Persia was the country that we call Iran today."
+      "text": "Peres means “separate”. It shows that God has cut your kingdom into two separate parts. He has given it to the people from Media and Persia.’"
     },
     {
       "verse": "29",
@@ -678,13 +678,13 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Then Darius from Media received power as king. He was 62 years old. Print... Use screen font size Show All Comments Daniel 4Daniel 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Darius from Media received power as king. He was 62 years old."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "King Darius decided to choose 120 men to rule the regions of his nation. Together, they would rule the whole kingdom."
+      "text": "men to rule the regions of his nation. Together, they would rule the whole kingdom."
     },
     {
       "verse": "2",
@@ -716,7 +716,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "King Darius agreed. He wrote his name on this new law. After the king made a law, nobody could change it. That was the law of the Medes and Persians. Daniel refuses to obey the king's new law"
+      "text": "King Darius agreed. He wrote his name on this new law."
     },
     {
       "verse": "10",
@@ -724,11 +724,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the officers and rulers who were jealous of Daniel went to see what he would do. They saw that Daniel was praying to God and he was asking God for help."
+      "text": "Then the officers and rulers who were jealous of Daniel went to see what he would do. They saw that Daniel was praying to God and he was asking God for help. The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it.’"
     },
     {
       "verse": "12",
-      "text": "So they went to tell the king about this. They said, ‘Remember that you wrote a new law. You commanded that for 30 days, nobody must pray to any god or person, except to you, the king. If anyone prays to someone else, your servants must throw them into the cave where your lions live.’ The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it.’"
+      "text": "So they went to tell the king about this. They said, ‘Remember that you wrote a new law. You commanded that for 30 days, nobody must pray to any god or person, except to you, the king. If anyone prays to someone else, your servants must throw them into the cave where your lions live.’The king answered them, ‘It is true. It is a law of the Medes and the Persians and nobody can change it.’"
     },
     {
       "verse": "13",
@@ -740,7 +740,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then the officers agreed together and they went back to the king. They said, ‘Remember, sir, that nobody can change a law that the king has made. It is a law of the Medes and the Persians.’ The king knew that Daniel was a good, honest person. He realized that his officers had deceived him. So he did not want to punish Daniel."
+      "text": "Then the officers agreed together and they went back to the king. They said, ‘Remember, sir, that nobody can change a law that the king has made. It is a law of the Medes and the Persians.’"
     },
     {
       "verse": "16",
@@ -752,7 +752,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the king returned to his palace. He ate no food. Nobody brought anything to him to give him pleasure. He was unable to sleep. God shuts the lions' mouths"
+      "text": "Then the king returned to his palace. He ate no food. Nobody brought anything to him to give him pleasure. He was unable to sleep."
     },
     {
       "verse": "19",
@@ -772,7 +772,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The king was very happy when he heard Daniel's voice. He told his servants that they must pull Daniel up out of the lions' cave. So they lifted him out. When they looked at him, they saw that the lions had not hurt him at all. Daniel had trusted in his God, so God had kept him safe. King Darius punishes the jealous men"
+      "text": "The king was very happy when he heard Daniel's voice. He told his servants that they must pull Daniel up out of the lions' cave. So they lifted him out. When they looked at him, they saw that the lions had not hurt him at all. Daniel had trusted in his God, so God had kept him safe."
     },
     {
       "verse": "24",
@@ -780,25 +780,25 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "After that, King Darius wrote to all the people of every nation, who spoke all languages. He wrote: ‘I hope that you all have good and happy lives."
+      "text": "After that, King Darius wrote to all the people of every nation, who spoke all languages. He wrote:‘I hope that you all have good and happy lives. ‘I hope that you all have good and happy lives."
     },
     {
       "verse": "26",
-      "text": "I have made a law for every part of my kingdom. All people must respect the God that Daniel serves. They must respect him with fear. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever."
+      "text": "I have made a law for every part of my kingdom. All people must respect the God that Daniel serves. They must respect him with fear.He is the God who always lives.He will continue for ever.Nobody will ever destroy his kingdom.He will rule for ever. He is the God who always lives. He will continue for ever. Nobody will ever destroy his kingdom. He will rule for ever."
     },
     {
       "verse": "27",
-      "text": "He rescues his people and he keeps them safe. He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power!’"
+      "text": "He rescues his people and he keeps them safe.He does powerful miracles in the heavens and on the earth.He has saved Daniel from the lions' power!’ He does powerful miracles in the heavens and on the earth. He has saved Daniel from the lions' power!’"
     },
     {
       "verse": "28",
-      "text": "So Daniel continued to have authority while Darius was king, and also when Cyrus from Persia became king. Persia was the country that we call Iran today. Print... Use screen font size Show All Comments Daniel 5Daniel 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Daniel continued to have authority while Darius was king, and also when Cyrus from Persia became king."
     }
   ],
   "7": [
     {
       "verse": "1",
-      "text": "In the first year that King Belshazzar ruled Babylon, Daniel had a dream. He saw visions in his head while he lay on his bed. He wrote down what he saw in the dream. Belshazzar was the last Babylonian king. We read about his death in Daniel 5."
+      "text": "In the first year that King Belshazzar ruled Babylon, Daniel had a dream. He saw visions in his head while he lay on his bed. He wrote down what he saw in the dream."
     },
     {
       "verse": "2",
@@ -826,15 +826,15 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "I was thinking about the horns and what they might mean. Then I saw another little horn that came up among the other ten horns. It pulled out three of those other horns to make room for itself. This little horn had eyes that looked like a man's eyes. It had a mouth that spoke proud words. God's court"
+      "text": "I was thinking about the horns and what they might mean. Then I saw another little horn that came up among the other ten horns. It pulled out three of those other horns to make room for itself. This little horn had eyes that looked like a man's eyes. It had a mouth that spoke proud words."
     },
     {
       "verse": "9",
-      "text": "While I looked, people put some thrones in their places. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire."
+      "text": "While I looked, people put some thrones in their places.Then the God who has ruled for ever sat on his throne.His clothes were as white as snow.His hair was white like pure wool.His throne and the wheels under it burned with flames of fire. Then the God who has ruled for ever sat on his throne. His clothes were as white as snow. His hair was white like pure wool. His throne and the wheels under it burned with flames of fire."
     },
     {
       "verse": "10",
-      "text": "A river of fire poured out from the place where he was sitting. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them."
+      "text": "A river of fire poured out from the place where he was sitting.Thousands of servants were ready to do whatever he wanted.Many more thousands stood around, ready to serve him.Then the meeting of the court began.Someone opened the books to see what was in them. Thousands of servants were ready to do whatever he wanted. Many more thousands stood around, ready to serve him. Then the meeting of the court began. Someone opened the books to see what was in them."
     },
     {
       "verse": "11",
@@ -846,11 +846,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I continued to watch in my vision at night and this is what I saw: I saw someone who seemed like a son of man. Son of man’ means that he looked like a human. Jesus called himself the Son of Man. The ‘son of man’ that Daniel saw in his vision, shows the power and authority of Jesus Christ. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God."
+      "text": "I continued to watch in my vision at night and this is what I saw:I saw someone who seemed like a son of man.He was coming towards me, with the clouds of the sky around him.He came near to the God who has ruled for ever.People took him to stand in front of God. I saw someone who seemed like a son of man. He was coming towards me, with the clouds of the sky around him. He came near to the God who has ruled for ever. People took him to stand in front of God."
     },
     {
       "verse": "14",
-      "text": "God gave him great honour and authority to rule as king. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom. Daniel learns the meaning of his vision"
+      "text": "God gave him great honour and authority to rule as king.The people of all nations and those who spoke every language agreed to serve him.He has authority to rule for ever.He will never stop being king.Nobody will be able to destroy his kingdom. The people of all nations and those who spoke every language agreed to serve him. He has authority to rule for ever. He will never stop being king. Nobody will be able to destroy his kingdom."
     },
     {
       "verse": "15",
@@ -882,7 +882,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But then the God who has ruled for ever arrived. As judge, he said that the holy people of the Most High God were good and right. Then the time came for God's holy people to receive the kingdom, so that it belonged to them. Claws are the sharp points that many birds have on the toes of their feet. In the Bible, a horn often shows strength and power."
+      "text": "But then the God who has ruled for ever arrived. As judge, he said that the holy people of the Most High God were good and right. Then the time came for God's holy people to receive the kingdom, so that it belonged to them."
     },
     {
       "verse": "23",
@@ -898,7 +898,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then God's court will be ready to judge him. He will lose his authority to rule as king. That will be the end of his kingdom for ever! Three and a half times’ may mean 3½ years."
+      "text": "Then God's court will be ready to judge him. He will lose his authority to rule as king. That will be the end of his kingdom for ever!"
     },
     {
       "verse": "27",
@@ -906,13 +906,13 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "That is a report of everything that I saw in my vision. It caused me, Daniel, to have much trouble in my mind and my face became white. But I did not tell anyone about these things.’ Print... Use screen font size Show All Comments Daniel 6Daniel 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is a report of everything that I saw in my vision. It caused me, Daniel, to have much trouble in my mind and my face became white. But I did not tell anyone about these things.’"
     }
   ],
   "8": [
     {
       "verse": "1",
-      "text": "In the third year that King Belshazzar ruled Babylonia, I, Daniel, had another vision. That was after the vision that I had seen before. This happened about two years after the vision that we read about in chapter 7."
+      "text": "In the third year that King Belshazzar ruled Babylonia, I, Daniel, had another vision. That was after the vision that I had seen before."
     },
     {
       "verse": "2",
@@ -924,7 +924,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The sheep ran towards the west, the north and the south. He used his horns to push away all other animals. No other animal could stop him. Nobody could save them from his power. He did whatever he wanted to do. He boasted about his great strength. This was a river that people had dug to carry water. We call it a ‘canal’."
+      "text": "The sheep ran towards the west, the north and the south. He used his horns to push away all other animals. No other animal could stop him. Nobody could save them from his power. He did whatever he wanted to do. He boasted about his great strength."
     },
     {
       "verse": "5",
@@ -956,7 +956,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "God's people accepted the rule of the horn, because they had turned against God. They offered their sacrifices to the horn, instead of to God. The horn stopped people from believing the truth. It was able to do everything that it wanted to do. The Beautiful Land was the land that God had given to his people, the Israelites."
+      "text": "God's people accepted the rule of the horn, because they had turned against God. They offered their sacrifices to the horn, instead of to God. The horn stopped people from believing the truth. It was able to do everything that it wanted to do."
     },
     {
       "verse": "13",
@@ -964,7 +964,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The other angel answered, ‘It will continue for 2,300 evenings and mornings. After that, God's temple will be clean again.’ An angel explains Daniel's vision"
+      "text": "The other angel answered, ‘It will continue for 2,300 evenings and mornings. After that, God's temple will be clean again.’"
     },
     {
       "verse": "15",
@@ -1016,7 +1016,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "After I, Daniel, saw this vision, I became very weak. I was sick for many days. Then I got up. I returned to my work to serve the king. The vision caused me to be very upset. I could not understand it. Print... Use screen font size Show All Comments Daniel 7Daniel 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After I, Daniel, saw this vision, I became very weak. I was sick for many days. Then I got up. I returned to my work to serve the king. The vision caused me to be very upset. I could not understand it."
     }
   ],
   "9": [
@@ -1026,7 +1026,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "In the first year that Darius was king, I, Daniel, was reading God's book. I read the message that the Lord had given to his prophet, Jeremiah. He told Jeremiah that Jerusalem would continue to be a heap of stones for 70 years. Xerxes was also called Ahasuerus. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "In the first year that Darius was king, I, Daniel, was reading God's book. I read the message that the Lord had given to his prophet, Jeremiah. He told Jeremiah that Jerusalem would continue to be a heap of stones for 70 years."
     },
     {
       "verse": "3",
@@ -1034,7 +1034,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I prayed to the Lord my God. I agreed that we were guilty and I prayed this prayer: ‘Our Lord, you are a great God and we give you honour. In your covenant, you have promised to love your people. You continue to be faithful to those people who love you and obey your commands."
+      "text": "I prayed to the Lord my God. I agreed that we were guilty and I prayed this prayer:‘Our Lord, you are a great God and we give you honour. In your covenant, you have promised to love your people. You continue to be faithful to those people who love you and obey your commands."
     },
     {
       "verse": "5",
@@ -1094,7 +1094,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Lord, please listen! Lord, please forgive us. Lord, please do what we have asked you to do. My God, please do it quickly, so that people give you honour. Help your city and your people who belong to you.’ Gabriel speaks to Daniel"
+      "text": "Lord, please listen! Lord, please forgive us. Lord, please do what we have asked you to do. My God, please do it quickly, so that people give you honour. Help your city and your people who belong to you.’"
     },
     {
       "verse": "20",
@@ -1114,7 +1114,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "God has decided the time of punishment for your people and your holy city. It will continue for 70 weeks. That will finish the punishment for their sins. The people will no longer turn against God. They will have paid the price for their sins. God will cause them to live for ever in a way that is right. God will show that the visions and messages of the prophets are true. The Most Holy Place will belong to God again. Hebrew says ‘7 times 70’. This could mean 70 weeks (7 days times 70). Or it could mean 490 years (7 years times 70)."
+      "text": "God has decided the time of punishment for your people and your holy city. It will continue for 70 weeks. That will finish the punishment for their sins. The people will no longer turn against God. They will have paid the price for their sins. God will cause them to live for ever in a way that is right. God will show that the visions and messages of the prophets are true. The Most Holy Place will belong to God again."
     },
     {
       "verse": "25",
@@ -1122,17 +1122,17 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "After the 62 weeks have passed, people will kill the ruler that God had chosen. He will have nothing. Then a foreign ruler and his army will attack the city and the temple. He will destroy them quickly, like a flood of water. War and terrible trouble will continue until the end that God has decided. times 7’ could mean 7 weeks or 49 years. ‘62 times 7’ could mean 62 weeks or 434 years."
+      "text": "weeks have passed, people will kill the ruler that God had chosen. He will have nothing. Then a foreign ruler and his army will attack the city and the temple. He will destroy them quickly, like a flood of water. War and terrible trouble will continue until the end that God has decided."
     },
     {
       "verse": "27",
-      "text": "The foreign ruler will make an agreement with many people. That agreement will continue for one week. In the middle of that week, he will stop the sacrifices and offerings in the temple. Instead, he will put a disgusting thing there that causes trouble. It will remain there until God finally destroys the ruler who destroys. His end will happen at the time that God has decided.’ Print... Use screen font size Show All Comments Daniel 8Daniel 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The foreign ruler will make an agreement with many people. That agreement will continue for one week. In the middle of that week, he will stop the sacrifices and offerings in the temple. Instead, he will put a disgusting thing there that causes trouble. It will remain there until God finally destroys the ruler who destroys. His end will happen at the time that God has decided.’"
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "In the third year that King Cyrus ruled Persia, God gave a message to Daniel. (Daniel's other name was Belteshazzar.) The message was true. It was about a great war. Daniel had a vision which helped him to understand the message. Cyrus was the king of Persia after Darius. Babylon was now under the power of the kings of Persia."
+      "text": "In the third year that King Cyrus ruled Persia, God gave a message to Daniel. (Daniel's other name was Belteshazzar.) The message was true. It was about a great war. Daniel had a vision which helped him to understand the message."
     },
     {
       "verse": "2",
@@ -1180,11 +1180,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But the ruler of the kingdom of Persia stood against me for 21 days. Then Michael came to help me. He is one of God's most important angels. He helped me because the ruler of Persia was keeping me there."
+      "text": "days. Then Michael came to help me. He is one of God's most important angels. He helped me because the ruler of Persia was keeping me there."
     },
     {
       "verse": "14",
-      "text": "Now I have come to explain what will happen to your people in the future. The vision is about a future time.’ The ‘ruler of Persia’ means an angel or spirit that had power to rule over that kingdom. See also verses 20-21. The ‘ruler of Greece’ was also an angel or spirit."
+      "text": "Now I have come to explain what will happen to your people in the future. The vision is about a future time.’"
     },
     {
       "verse": "15",
@@ -1208,13 +1208,13 @@ module.exports = {
     },
     {
       "verse": "20-21",
-      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear. Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies. Print... Use screen font size Show All Comments Daniel 9Daniel 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear.Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "I myself helped Michael in the first year that Darius ruled as king. I fought with Michael against his enemies.’ Verse 1 continues from Daniel Darius became king when the Medes and Persians won against the Babylonians. Darius was a descendant of the Medes. See Daniel The angel gives his message to Daniel"
+      "text": "I myself helped Michael in the first year that Darius ruled as king. I fought with Michael against his enemies.’"
     },
     {
       "verse": "2",
@@ -1226,15 +1226,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "While he rules powerfully like that, his kingdom will quickly break into four parts. Those parts will be in all directions. His descendants will not rule his kingdom. Instead, other people will rule as kings, but their kingdoms will not be as powerful. This great king was Alexander the Great."
+      "text": "While he rules powerfully like that, his kingdom will quickly break into four parts. Those parts will be in all directions. His descendants will not rule his kingdom. Instead, other people will rule as kings, but their kingdoms will not be as powerful."
     },
     {
       "verse": "5",
-      "text": "Then the king who rules in the south will become strong. But one of his own army officers will become even stronger. That officer will rule a greater kingdom than the king of the south. The king of the south was the king of Egypt."
+      "text": "Then the king who rules in the south will become strong. But one of his own army officers will become even stronger. That officer will rule a greater kingdom than the king of the south."
     },
     {
       "verse": "6",
-      "text": "After some years, the king of the south and the king of the north will agree to be friends. The king of the south's daughter will go to marry the king of the north. That would make their agreement strong. But the plan will fail. She will lose her authority. Her husband will no longer rule as king. Someone will kill her, her husband, her child and the servants who helped her. The king of the north was the king of Syria."
+      "text": "After some years, the king of the south and the king of the north will agree to be friends. The king of the south's daughter will go to marry the king of the north. That would make their agreement strong. But the plan will fail. She will lose her authority. Her husband will no longer rule as king. Someone will kill her, her husband, her child and the servants who helped her."
     },
     {
       "verse": "7",
@@ -1250,7 +1250,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then his sons will prepare to fight a war. They will bring together a large army. Their soldiers will march forward like a powerful river. They will fight a battle all the way into the strong place of their enemy. Israel was in the middle, between Egypt and Syria. Perhaps Syria's army was moving south into Israel. But Egypt's army then marches north to attack them."
+      "text": "Then his sons will prepare to fight a war. They will bring together a large army. Their soldiers will march forward like a powerful river. They will fight a battle all the way into the strong place of their enemy."
     },
     {
       "verse": "11",
@@ -1274,7 +1274,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The king who attacked from the north will do whatever he wants to do. Nobody will be able to stop him. He will march into the Beautiful Land. He will have the power to destroy it. Soldiers built heaps of earth like this so that they could climb over the walls and attack the city. The Beautiful Land was Israel, the land that God had given to his people as their home."
+      "text": "The king who attacked from the north will do whatever he wants to do. Nobody will be able to stop him. He will march into the Beautiful Land. He will have the power to destroy it."
     },
     {
       "verse": "17",
@@ -1290,7 +1290,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then another king will rule in the north. He will try to make his kingdom even greater. He will send out a cruel man to take taxes from people. But that king will soon die. This will not happen in a battle or because people are angry with him. The evil king of the north"
+      "text": "Then another king will rule in the north. He will try to make his kingdom even greater. He will send out a cruel man to take taxes from people. But that king will soon die. This will not happen in a battle or because people are angry with him."
     },
     {
       "verse": "21",
@@ -1302,7 +1302,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He will agree to be friends with other leaders. But then he will deceive them. He will become more and more powerful, but he will rule only a few people. The leader of God's covenant’ may mean the leader of the priests at the temple in Jerusalem."
+      "text": "He will agree to be friends with other leaders. But then he will deceive them. He will become more and more powerful, but he will rule only a few people."
     },
     {
       "verse": "24",
@@ -1322,7 +1322,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Then the king of the north will return to his own country. He will take many valuable things with him. As he returns, he will cause trouble for the people who obey God's covenant. He will do whatever he wants to do against them. Then he will continue his journey back to his own country. The King of Syria travelled though Israel on his way home from Egypt. He wanted to stop God's people from worshipping the Lord."
+      "text": "Then the king of the north will return to his own country. He will take many valuable things with him. As he returns, he will cause trouble for the people who obey God's covenant. He will do whatever he wants to do against them. Then he will continue his journey back to his own country."
     },
     {
       "verse": "29",
@@ -1390,7 +1390,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "He will put up his royal tents between the seas, at the holy mountain. But he will die there and nobody will help him.’ The holy mountain was the place where they built the temple in Jerusalem. Jerusalem was ‘between the seas’, the Mediterranean Sea and the Dead Sea. Print... Use screen font size Show All Comments Daniel 10Daniel 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He will put up his royal tents between the seas, at the holy mountain. But he will die there and nobody will help him.’"
     }
   ],
   "12": [
@@ -1404,11 +1404,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "People who are wise will shine like the bright sky. Those who help many people to do what is right will also shine brightly for ever. They will shine like the stars in the sky at night. The book’ is God's book of life. See Philippians Revelation"
+      "text": "People who are wise will shine like the bright sky. Those who help many people to do what is right will also shine brightly for ever. They will shine like the stars in the sky at night."
     },
     {
       "verse": "4",
-      "text": "Daniel, you must now close this message. Put seals on the book so that nobody can open it until it is time for the end of this world. Many people will try to understand about these things. They will travel everywhere to get more knowledge.’ See Amos"
+      "text": "Daniel, you must now close this message. Put seals on the book so that nobody can open it until it is time for the end of this world. Many people will try to understand about these things. They will travel everywhere to get more knowledge.’"
     },
     {
       "verse": "5",
@@ -1420,7 +1420,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The man who wore linen clothes lifted up both his hands towards the sky. I heard him make a strong promise with the authority of God, who lives for ever. He said, ‘It will continue for three and a half times. Then the enemies of God's holy people will finally lose their power. That will be the end of all these events.’ Three and a half times’ may mean 3½ years. See Daniel"
+      "text": "The man who wore linen clothes lifted up both his hands towards the sky. I heard him make a strong promise with the authority of God, who lives for ever. He said, ‘It will continue for three and a half times. Then the enemies of God's holy people will finally lose their power. That will be the end of all these events.’"
     },
     {
       "verse": "8",
@@ -1440,11 +1440,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "But God will bless all those people who remain faithful until the 1,335 days come to an end. See Daniel"
+      "text": "But God will bless all those people who remain faithful until the 1,335 days come to an end."
     },
     {
       "verse": "13",
-      "text": "You yourself must serve God faithfully until the end of your life. You will die. But at the end of time you will rise to live again. Then you will receive the good things that God has prepared for you.’ Print... Use screen font size Show All Comments Daniel 11Hosea Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You yourself must serve God faithfully until the end of your life. You will die. But at the end of time you will rise to live again. Then you will receive the good things that God has prepared for you.’"
     }
   ]
 };

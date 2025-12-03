@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Lord replied, ‘Judah should attack first. I will give the land to them, to take for themselves.’ When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "The Lord replied, ‘Judah should attack first. I will give the land to them, to take for themselves.’"
     },
     {
       "verse": "3",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Judah's men also took for themselves the cities of Gaza, Ashkelon and Ekron, as well as the land around those cities. Hormah’ means ‘completely destroyed’."
+      "text": "Judah's men also took for themselves the cities of Gaza, Ashkelon and Ekron, as well as the land around those cities."
     },
     {
       "verse": "19",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Caleb received Hebron for his family, as Moses had promised him. Caleb had chased out the three clans of Anak who lived there. God chose Moses to lead the Israelites out of Egypt, and take them to Canaan. Caleb and Joshua were the two men who trusted God to give them the land that he had promised to the Israelites. They were the only two men still alive who had left Egypt when they were old enough to fight. See Joshua"
+      "text": "Caleb received Hebron for his family, as Moses had promised him. Caleb had chased out the three clans of Anak who lived there."
     },
     {
       "verse": "21",
@@ -98,7 +98,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "So the man showed them a secret entrance to the city. Joseph's two sons, Ephraim and Manasseh, each had their own tribes. The men of Joseph's tribes killed all the people in the city. But they kept the man and his family safe."
+      "text": "So the man showed them a secret entrance to the city.The men of Joseph's tribes killed all the people in the city. But they kept the man and his family safe."
     },
     {
       "verse": "26",
@@ -142,7 +142,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "The border of the Amorites' land went from Scorpion Hill and it continued beyond Sela. Print... Use screen font size Show All Comments Judges IntroductionJudges 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The border of the Amorites' land went from Scorpion Hill and it continued beyond Sela."
     }
   ],
   "2": [
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "They called that place Bokim. They offered sacrifices to the Lord there. Bokim’ means ‘people who weep’. Joshua dies"
+      "text": "They called that place Bokim. They offered sacrifices to the Lord there."
     },
     {
       "verse": "6",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Israelites continued to serve the Lord while Joshua and the old men were still alive. Joshua and those men had seen the great things that the Lord had done to help Israel. Joshua and the Israelite leaders had decided which parts of the land would belong to each tribe. See Joshua 13-21."
+      "text": "The Israelites continued to serve the Lord while Joshua and the old men were still alive. Joshua and those men had seen the great things that the Lord had done to help Israel."
     },
     {
       "verse": "8",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The people buried him in the land that had been given to his family. That was at Timnath Heres, in Ephraim's hill country, on the north side of Gaash mountain. A new generation turns away from the Lord"
+      "text": "The people buried him in the land that had been given to his family. That was at Timnath Heres, in Ephraim's hill country, on the north side of Gaash mountain."
     },
     {
       "verse": "10",
@@ -204,7 +204,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "When the Israelites went to fight against their enemies, the Lord turned against them. He punished them, as he said he would do. So the Israelites were in great trouble. God chooses leaders for his people"
+      "text": "When the Israelites went to fight against their enemies, the Lord turned against them. He punished them, as he said he would do. So the Israelites were in great trouble."
     },
     {
       "verse": "16",
@@ -236,7 +236,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So the Lord let some of the Canaanite nations continue to live in the land. He did not chase them all away. He did not put them all under Joshua's power. Print... Use screen font size Show All Comments Judges 1Judges 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the Lord let some of the Canaanite nations continue to live in the land. He did not chase them all away. He did not put them all under Joshua's power."
     }
   ],
   "3": [
@@ -250,7 +250,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The nations who remained were: the Philistines, with their five kings,all the Canaanites,the Sidonians,the Hivites who lived in the Lebanon mountains, from Mount Baal Hermon to Lebo-Hamath."
+      "text": "The nations who remained were:the Philistines, with their five kings,all the Canaanites,the Sidonians,the Hivites who lived in the Lebanon mountains, from Mount Baal Hermon to Lebo-Hamath."
     },
     {
       "verse": "4",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Some Israelites married young women from these nations. They also let their daughters marry Canaanite men. As a result, the Israelites started to worship the Canaanite gods. Many nations of people lived in Canaan before God gave it to the Israelites. The Philistines were sailors who lived in five cities near the Mediterranean Sea. The Moabites and the Ammonites were cousins of the Israelites. See Genesis All these people worshipped false gods. Othniel"
+      "text": "Some Israelites married young women from these nations. They also let their daughters marry Canaanite men. As a result, the Israelites started to worship the Canaanite gods."
     },
     {
       "verse": "7",
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "As a result, the land of Israel had peace for 40 years. Then Kenaz's son Othniel died. Ehud"
+      "text": "As a result, the land of Israel had peace for 40 years. Then Kenaz's son Othniel died."
     },
     {
       "verse": "12",
@@ -330,7 +330,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Ehud went out of the room and he locked the doors. Then he escaped from the palace. Ehud's sword was like a long knife, about 45 centimetres long."
+      "text": "Ehud went out of the room and he locked the doors. Then he escaped from the palace."
     },
     {
       "verse": "24",
@@ -358,11 +358,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The Israelites won the fight against Moab that day. The land of Israel had peace for 80 years. Shamgar"
+      "text": "The Israelites won the fight against Moab that day. The land of Israel had peace for 80 years."
     },
     {
       "verse": "31",
-      "text": "After this, Anath's son Shamgar became Israel's leader. One time, he used a stick with a sharp point to kill 600 Philistines. He rescued the Israelites from their enemies, as Ehud had done. They used sticks like this to push oxen to make them move and do work. Print... Use screen font size Show All Comments Judges 2Judges 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After this, Anath's son Shamgar became Israel's leader. One time, he used a stick with a sharp point to kill 600 Philistines. He rescued the Israelites from their enemies, as Ehud had done."
     }
   ],
   "4": [
@@ -376,7 +376,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He had 900 iron chariots for his army. He used his power to be cruel to the Israelites for 20 years. So they called out to the Lord for help. Hazor was a big city in the north of Canaan. The Israelite tribes of Zebulun, Naphtali and Issachar had their land in that region."
+      "text": "iron chariots for his army. He used his power to be cruel to the Israelites for 20 years. So they called out to the Lord for help."
     },
     {
       "verse": "4",
@@ -392,7 +392,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I will deceive Sisera, the leader of King Jabin's army. He will go to the Kishon river with his great army and all their chariots. I will put them all under your power.” ’ Mount Tabor was on the border of the lands of Zebulun, Naphtali and Issachar."
+      "text": "I will deceive Sisera, the leader of King Jabin's army. He will go to the Kishon river with his great army and all their chariots. I will put them all under your power.” ’"
     },
     {
       "verse": "8",
@@ -400,7 +400,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Deborah said, ‘Yes, I will go with you. But you will not receive honour for the battle. Instead, the Lord will put Sisera under the power of a woman.’ So Deborah went with Barak to Kedesh."
+      "text": "Deborah said, ‘Yes, I will go with you. But you will not receive honour for the battle. Instead, the Lord will put Sisera under the power of a woman.’So Deborah went with Barak to Kedesh."
     },
     {
       "verse": "10",
@@ -420,7 +420,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Then Deborah said to Barak, ‘Get ready! This is the day that the Lord will put Sisera under your power! The Lord will lead you into battle!’ So Barak led his 10,000 soldiers down from Mount Tabor."
+      "text": "Then Deborah said to Barak, ‘Get ready! This is the day that the Lord will put Sisera under your power! The Lord will lead you into battle!’So Barak led his 10,000 soldiers down from Mount Tabor."
     },
     {
       "verse": "15",
@@ -452,7 +452,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Barak had been chasing Sisera. Jael went out of her tent to say ‘hello’ to him. She said to Barak, ‘Come here! I will show you the man that you are looking for.’ Barak went with her into the tent. He saw Sisera there. He was lying on the ground and he was dead. Barak saw the peg that had gone through Sisera's head. The pegs which fixed the tent to the ground had sharp points."
+      "text": "Barak had been chasing Sisera. Jael went out of her tent to say ‘hello’ to him. She said to Barak, ‘Come here! I will show you the man that you are looking for.’ Barak went with her into the tent. He saw Sisera there. He was lying on the ground and he was dead. Barak saw the peg that had gone through Sisera's head."
     },
     {
       "verse": "23",
@@ -460,7 +460,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "From that time, the Israelite army became stronger, and King Jabin became weaker. Finally, the Israelites destroyed him. Print... Use screen font size Show All Comments Judges 3Judges 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "From that time, the Israelite army became stronger, and King Jabin became weaker. Finally, the Israelites destroyed him."
     }
   ],
   "5": [
@@ -470,123 +470,123 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘The leaders of Israel led their people out. The people were happy to follow them to the battle. Praise the Lord!"
+      "text": "‘The leaders of Israel led their people out.The people were happy to follow them to the battle.Praise the Lord! The people were happy to follow them to the battle. Praise the Lord!"
     },
     {
       "verse": "3",
-      "text": "Hear this, you kings! Listen, you rulers! I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God."
+      "text": "Hear this, you kings! Listen, you rulers!I will sing to worship the Lord.Yes, I will praise him with a song.He is the Lord, Israel's God. I will sing to worship the Lord. Yes, I will praise him with a song. He is the Lord, Israel's God."
     },
     {
       "verse": "4",
-      "text": "Lord, you came from Seir mountains. Yes, you marched from the land of Edom. Seir and Edom were different names for the same country. As you came, the earth shook. Rain poured down from the clouds in the sky."
+      "text": "Lord, you came from Seir mountains.Yes, you marched from the land of Edom.As you came, the earth shook.Rain poured down from the clouds in the sky. Yes, you marched from the land of Edom. As you came, the earth shook. Rain poured down from the clouds in the sky."
     },
     {
       "verse": "5",
-      "text": "The mountains shook when you appeared, as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel."
+      "text": "The mountains shook when you appeared,as they shook at Sinai mountain when you showed your power.You are the Lord, the God of Israel. as they shook at Sinai mountain when you showed your power. You are the Lord, the God of Israel."
     },
     {
       "verse": "6",
-      "text": "When Anath's son Shamgar ruled the land, nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid."
+      "text": "When Anath's son Shamgar ruled the land,nobody travelled on the roads.When Jael ruled, people walked on secret paths,because they were afraid. nobody travelled on the roads. When Jael ruled, people walked on secret paths, because they were afraid."
     },
     {
       "verse": "7",
-      "text": "Nobody lived in the small villages. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe."
+      "text": "Nobody lived in the small villages.Then I, Deborah, became their leader.I became like a mother for Israel's people,to keep them safe. Then I, Deborah, became their leader. I became like a mother for Israel's people, to keep them safe."
     },
     {
       "verse": "8",
-      "text": "When the Israelites chose new gods to worship, enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40,000 soldiers had a shield or a spear."
+      "text": "When the Israelites chose new gods to worship,enemies attacked their cities.No one in Israel was ready to fight.Not one of their 40,000 soldiers had a shield or a spear. enemies attacked their cities. No one in Israel was ready to fight. Not one of their 40,000 soldiers had a shield or a spear."
     },
     {
       "verse": "9",
-      "text": "I thank God for Israel's leaders, and the people who are ready to fight our enemies. Praise the Lord!"
+      "text": "I thank God for Israel's leaders,and the people who are ready to fight our enemies.Praise the Lord! and the people who are ready to fight our enemies. Praise the Lord!"
     },
     {
       "verse": "10",
-      "text": "Listen to me, you rich people who ride on white donkeys, with beautiful cloths to sit on. And you people who walk along the road, you should listen too!"
+      "text": "Listen to me, you rich people who ride on white donkeys,with beautiful cloths to sit on.And you people who walk along the road,you should listen too! with beautiful cloths to sit on. And you people who walk along the road, you should listen too!"
     },
     {
       "verse": "11",
-      "text": "Listen to the voices of the singers near the wells of water. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates."
+      "text": "Listen to the voices of the singers near the wells of water.They sing about the great things that the Lord has done.They tell how Israel's soldiers have won against their enemies.Then the Lord's people marched down to the city gates. They sing about the great things that the Lord has done. They tell how Israel's soldiers have won against their enemies. Then the Lord's people marched down to the city gates."
     },
     {
       "verse": "12",
-      "text": "“Wake up, Deborah! Wake up and sing a song! Get up, Barak, son of Abinoam! Take your enemies away as your prisoners.”"
+      "text": "“Wake up, Deborah! Wake up and sing a song!Get up, Barak, son of Abinoam!Take your enemies away as your prisoners.” Get up, Barak, son of Abinoam! Take your enemies away as your prisoners.”"
     },
     {
       "verse": "13",
-      "text": "The faithful men who remained returned to their leaders. The Lord's people came to me. They were ready to fight against our enemies."
+      "text": "The faithful men who remained returned to their leaders.The Lord's people came to me.They were ready to fight against our enemies. The Lord's people came to me. They were ready to fight against our enemies."
     },
     {
       "verse": "14",
-      "text": "Some men of Ephraim's tribe came to help, from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe."
+      "text": "Some men of Ephraim's tribe came to help,from the land where Amalek lived.They followed men of Benjamin's tribe, with their soldiers.Leaders also came from Makir.Army officers came from Zebulun's tribe. from the land where Amalek lived. They followed men of Benjamin's tribe, with their soldiers. Leaders also came from Makir. Army officers came from Zebulun's tribe."
     },
     {
       "verse": "15",
-      "text": "The leaders of Issachar's tribe were with Deborah. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do."
+      "text": "The leaders of Issachar's tribe were with Deborah.Yes, the men of Issachar joined with Barak.Barak led them into the valley.But the men of Reuben's tribe could not decide what to do. Yes, the men of Issachar joined with Barak. Barak led them into the valley. But the men of Reuben's tribe could not decide what to do."
     },
     {
       "verse": "16",
-      "text": "Instead, they stayed to take care of their sheep. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do."
+      "text": "Instead, they stayed to take care of their sheep.Did they want to listen to the shepherds as they called out to their sheep?The clans of Reuben's tribe could not agree what they should do. Did they want to listen to the shepherds as they called out to their sheep? The clans of Reuben's tribe could not agree what they should do."
     },
     {
       "verse": "17",
-      "text": "The men of Gilead stayed at home, on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea."
+      "text": "The men of Gilead stayed at home,on the east side of the Jordan River.The men of Dan's tribe stayed with their ships.The men of Asher's tribe also stayed in their homes near the sea. on the east side of the Jordan River. The men of Dan's tribe stayed with their ships. The men of Asher's tribe also stayed in their homes near the sea."
     },
     {
       "verse": "18",
-      "text": "But the men of Zebulun's tribe were not afraid to die in war. The men of Naphtali's tribe were also ready to attack the enemy."
+      "text": "But the men of Zebulun's tribe were not afraid to die in war.The men of Naphtali's tribe were also ready to attack the enemy. The men of Naphtali's tribe were also ready to attack the enemy."
     },
     {
       "verse": "19",
-      "text": "Kings of Canaan came and they fought against us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us."
+      "text": "Kings of Canaan came and they fought against us.They attacked us at Taanach, near the stream at Megiddo.But they could not take any valuable silver from us. They attacked us at Taanach, near the stream at Megiddo. But they could not take any valuable silver from us."
     },
     {
       "verse": "20",
-      "text": "Even the stars fought against Sisera! They travelled across the sky to attack him."
+      "text": "Even the stars fought against Sisera!They travelled across the sky to attack him. They travelled across the sky to attack him."
     },
     {
       "verse": "21",
-      "text": "The Kishon river carried away Sisera's soldiers. It used its power to stop them. So I will be brave and I will continue to fight!"
+      "text": "The Kishon river carried away Sisera's soldiers.It used its power to stop them.So I will be brave and I will continue to fight! It used its power to stop them. So I will be brave and I will continue to fight!"
     },
     {
       "verse": "22",
-      "text": "As for the horses of Sisera's army, their feet made a loud noise as they ran away."
+      "text": "As for the horses of Sisera's army,their feet made a loud noise as they ran away. their feet made a loud noise as they ran away."
     },
     {
       "verse": "23",
-      "text": "The Lord's angel says, “Punish Meroz! Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy.”"
+      "text": "The Lord's angel says, “Punish Meroz!Punish the people who live there,because they did not come to help the Lord.They did not agree to fight against the Lord's strong enemy.” Punish the people who live there, because they did not come to help the Lord. They did not agree to fight against the Lord's strong enemy.”"
     },
     {
       "verse": "24",
-      "text": "But Jael should receive great honour! Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents."
+      "text": "But Jael should receive great honour!Jael, the wife of Heber the Kenite,should receive more honour than all other women who live in tents. Jael, the wife of Heber the Kenite, should receive more honour than all other women who live in tents."
     },
     {
       "verse": "25",
-      "text": "Sisera asked her for water to drink, and she gave him milk. She gave him the best cream in a beautiful bowl."
+      "text": "Sisera asked her for water to drink, and she gave him milk.She gave him the best cream in a beautiful bowl. She gave him the best cream in a beautiful bowl."
     },
     {
       "verse": "26",
-      "text": "She took a tent peg in her left hand. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head."
+      "text": "She took a tent peg in her left hand.She took a worker's hammer in her right hand.She hit the peg through Sisera's head.She broke his skull. She broke it completely.She knocked the sharp peg through his head. She took a worker's hammer in her right hand. She hit the peg through Sisera's head. She broke his skull. She broke it completely. She knocked the sharp peg through his head."
     },
     {
       "verse": "27",
-      "text": "He fell to the floor at her feet. He lay there and he did not move. He died at the place where he fell. Jael had killed him!"
+      "text": "He fell to the floor at her feet.He lay there and he did not move.He died at the place where he fell.Jael had killed him! He lay there and he did not move. He died at the place where he fell. Jael had killed him!"
     },
     {
       "verse": "28",
-      "text": "Sisera's mother looked out from the window of her house. She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet?”"
+      "text": "Sisera's mother looked out from the window of her house.She waited for Sisera to return.She said, “His chariot has taken a long time to come!Why do I not yet hear the sound of his horse's feet?” She waited for Sisera to return. She said, “His chariot has taken a long time to come! Why do I not yet hear the sound of his horse's feet?”"
     },
     {
       "verse": "29",
-      "text": "Her wise ladies replied, and she herself thought the same thing:"
+      "text": "Her wise ladies replied,and she herself thought the same thing: and she herself thought the same thing:"
     },
     {
       "verse": "30",
-      "text": "“They are taking valuable things from their enemies. They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home.”"
+      "text": "“They are taking valuable things from their enemies.They are sharing the things between them.Each soldier will bring one or two women for himself.Sisera's share will be some beautiful cloth.Yes, he is bringing pieces of valuable cloth,and a beautiful necklace for me!That is why he is so late to return home.” They are sharing the things between them. Each soldier will bring one or two women for himself. Sisera's share will be some beautiful cloth. Yes, he is bringing pieces of valuable cloth, and a beautiful necklace for me! That is why he is so late to return home.”"
     },
     {
       "verse": "31",
-      "text": "I pray that all your enemies will die as Sisera died, Lord! But I pray that those who love you will shine brightly. May they be strong like the sun at dawn.’ After that, there was peace in Israel for 40 years. Print... Use screen font size Show All Comments Judges 4Judges 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that all your enemies will die as Sisera died, Lord!But I pray that those who love you will shine brightly.May they be strong like the sun at dawn.’After that, there was peace in Israel for 40 years."
     }
   ],
   "6": [
@@ -628,7 +628,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I said to you, ‘I am the Lord your God. You are now living in the land of the Amorites, but you must not worship their gods.’ But you have not obeyed me.” ’ The Lord chooses Gideon"
+      "text": "I said to you, ‘I am the Lord your God. You are now living in the land of the Amorites, but you must not worship their gods.’ But you have not obeyed me.” ’"
     },
     {
       "verse": "11",
@@ -640,7 +640,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Gideon replied, ‘But sir, if the Lord is with us, why has all this trouble happened to us? Our ancestors told us about all the great things that the Lord did for them. They told us how he brought them safely out of Egypt. But the Lord has not helped us like that. He has turned away from us. He has put us under the power of the Midianites.’ Gideon was afraid and hid from the Midianites. But God's angel called him a ‘brave fighter’. The Lord would help Gideon to be strong and brave."
+      "text": "Gideon replied, ‘But sir, if the Lord is with us, why has all this trouble happened to us? Our ancestors told us about all the great things that the Lord did for them. They told us how he brought them safely out of Egypt. But the Lord has not helped us like that. He has turned away from us. He has put us under the power of the Midianites.’"
     },
     {
       "verse": "14",
@@ -680,11 +680,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But the Lord said to him, ‘Do not worry. Do not be afraid. You will not die because of this.’ Gideon thought that he would die because he had seen God. The angel told Gideon that he must not be afraid. He accepted the gift that Gideon gave him."
+      "text": "But the Lord said to him, ‘Do not worry. Do not be afraid. You will not die because of this.’"
     },
     {
       "verse": "24",
-      "text": "So Gideon built an altar there to give honour to the Lord. He called it ‘The Lord is Peace’. The altar is still there, in Ophrah, on the land of Abiezer's clan. Gideon destroys Baal's altar"
+      "text": "So Gideon built an altar there to give honour to the Lord. He called it ‘The Lord is Peace’. The altar is still there, in Ophrah, on the land of Abiezer's clan."
     },
     {
       "verse": "25",
@@ -748,7 +748,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "That night God did what Gideon had asked. The sheep's wool was dry, but the ground around it was wet with dew. Print... Use screen font size Show All Comments Judges 5Judges 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That night God did what Gideon had asked. The sheep's wool was dry, but the ground around it was wet with dew."
     }
   ],
   "7": [
@@ -774,7 +774,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "300 men used their tongues to drink the water. The other men all went down on their knees to drink."
+      "text": "men used their tongues to drink the water. The other men all went down on their knees to drink."
     },
     {
       "verse": "7",
@@ -782,7 +782,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Gideon kept the 300 men with him. He took the food and trumpets from the other men and he gave it to the 300 men. Then Gideon sent the other men home. The camp of the Midianite army was in the valley below the Israelites."
+      "text": "men with him. He took the food and trumpets from the other men and he gave it to the 300 men. Then Gideon sent the other men home.The camp of the Midianite army was in the valley below the Israelites."
     },
     {
       "verse": "9",
@@ -814,7 +814,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "He divided his 300 men into three separate groups. He gave a trumpet and an empty pot to each soldier. Each man put a burning branch into his pot."
+      "text": "men into three separate groups. He gave a trumpet and an empty pot to each soldier. Each man put a burning branch into his pot."
     },
     {
       "verse": "17",
@@ -826,7 +826,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Gideon took 100 men with him to the edge of the Midianites' camp. It was the middle of the night. A new group of Midianite guards had just started their work. Gideon's men made a loud noise with their trumpets. They also broke the pots that they were holding."
+      "text": "men with him to the edge of the Midianites' camp. It was the middle of the night. A new group of Midianite guards had just started their work. Gideon's men made a loud noise with their trumpets. They also broke the pots that they were holding."
     },
     {
       "verse": "20",
@@ -850,13 +850,13 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They caught the two leaders of the Midianite army, Oreb and Zeeb. They killed Oreb at the rock of Oreb. They killed Zeeb at the winepress of Zeeb. They continued to chase the Midianites. They took the heads of Oreb and Zeeb to Gideon, who was now on the east side of the Jordan River. Print... Use screen font size Show All Comments Judges 6Judges 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They caught the two leaders of the Midianite army, Oreb and Zeeb. They killed Oreb at the rock of Oreb. They killed Zeeb at the winepress of Zeeb. They continued to chase the Midianites. They took the heads of Oreb and Zeeb to Gideon, who was now on the east side of the Jordan River."
     }
   ],
   "8": [
     {
       "verse": "1",
-      "text": "The men of Ephraim's tribe asked Gideon, ‘Why have you insulted us? You should have called us to join with you to fight against the Midianites.’ They were very angry and they argued with Gideon."
+      "text": "The men of Ephraim's tribe asked Gideon, ‘Why have you insulted us? You should have called us to join with you to fight against the Midianites.’ They were very angry and they argued with Gideon. When Gideon said that, the men of Ephraim stopped being angry."
     },
     {
       "verse": "2",
@@ -864,11 +864,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "God chose you to take power over the leaders of Midian's army. You killed Oreb and Zeeb! Nothing that I did was as great as that!’ When Gideon said that, the men of Ephraim stopped being angry. Zebah and Zalmunna"
+      "text": "God chose you to take power over the leaders of Midian's army. You killed Oreb and Zeeb! Nothing that I did was as great as that!’When Gideon said that, the men of Ephraim stopped being angry."
     },
     {
       "verse": "4",
-      "text": "Gideon and his 300 men were weak and tired. But they went across the Jordan and they continued to chase the Midianites."
+      "text": "men were weak and tired. But they went across the Jordan and they continued to chase the Midianites."
     },
     {
       "verse": "5",
@@ -932,11 +932,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Gideon said to his oldest son, Jether, ‘Kill them now!’ But Jether was only a boy. He was too afraid to do anything."
+      "text": "Gideon said to his oldest son, Jether, ‘Kill them now!’ But Jether was only a boy. He was too afraid to do anything. So Gideon did kill them. He took away the silver images from the necks of their camels."
     },
     {
       "verse": "21",
-      "text": "Zebah and Zalmunna said to Gideon, ‘Kill us yourself! Let us see if you are brave enough to do that!’ So Gideon did kill them. He took away the silver images from the necks of their camels. Gideon makes a gold ephod"
+      "text": "Zebah and Zalmunna said to Gideon, ‘Kill us yourself! Let us see if you are brave enough to do that!’So Gideon did kill them. He took away the silver images from the necks of their camels."
     },
     {
       "verse": "22",
@@ -952,15 +952,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The people replied, ‘We are happy to give them to you.’ So they put a coat on the ground. Each man threw a ring onto it."
+      "text": "The people replied, ‘We are happy to give them to you.’So they put a coat on the ground. Each man threw a ring onto it."
     },
     {
       "verse": "26",
-      "text": "The weight of all the rings was 20 kilograms. They also had valuable silver images and jewels. They had valuable clothes that the kings of Midian wore and necklaces from the camels."
+      "text": "kilograms. They also had valuable silver images and jewels. They had valuable clothes that the kings of Midian wore and necklaces from the camels."
     },
     {
       "verse": "27",
-      "text": "Gideon used the gold to make an image of an ephod. He put it in Ophrah, where he lived. All the Israelites came there and they worshipped the image. It caused them to turn away from the true God. It became like a trap that caught Gideon and his family. An ephod was something that the priests wore. See Exodus Gideon used gold to make an image. It was an idol that people worshipped. So it was not a real ephod. Gideon dies"
+      "text": "Gideon used the gold to make an image of an ephod. He put it in Ophrah, where he lived. All the Israelites came there and they worshipped the image. It caused them to turn away from the true God. It became like a trap that caught Gideon and his family."
     },
     {
       "verse": "28",
@@ -992,7 +992,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "The Israelites did not remain faithful to Gideon's family either. They did not remember all the good things that he had done to help Israel. Print... Use screen font size Show All Comments Judges 7Judges 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Israelites did not remain faithful to Gideon's family either. They did not remember all the good things that he had done to help Israel."
     }
   ],
   "9": [
@@ -1010,11 +1010,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So they gave him 70 pieces of silver from the temple of their god, Baal-Berith. Abimelech used this money to pay some wicked men to help him."
+      "text": "pieces of silver from the temple of their god, Baal-Berith. Abimelech used this money to pay some wicked men to help him."
     },
     {
       "verse": "5",
-      "text": "He went to his father's home in Ophrah. He killed his 70 brothers, the sons of Gideon. He killed them all on one rock. But Jotham, Gideon's youngest son, hid himself and he escaped. Abimelech's 70 brothers were his half-brothers. They were the true sons of Gideon. Abimelech was the son of Gideon's slave wife. See Judges"
+      "text": "He went to his father's home in Ophrah. He killed his 70 brothers, the sons of Gideon. He killed them all on one rock. But Jotham, Gideon's youngest son, hid himself and he escaped."
     },
     {
       "verse": "6",
@@ -1054,7 +1054,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The thorn bush said to the trees, “If you really want to choose me as your king, come here. Hide under my branches to keep safe. If not, I will cause fire to come out from the thorn bush. It will burn up all the big cedar trees in Lebanon!” All the trees in Jotham's story, except the thorn bush, were valuable. People kept them because they were valuable. Thorn bushes were only useful to burn on a fire. Jotham was telling them that Abimelech was useless."
+      "text": "The thorn bush said to the trees, “If you really want to choose me as your king, come here. Hide under my branches to keep safe. If not, I will cause fire to come out from the thorn bush. It will burn up all the big cedar trees in Lebanon!”"
     },
     {
       "verse": "16",
@@ -1078,7 +1078,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "After he said that, Jotham ran away to Beer. He lived there because he was afraid of his brother, Abimelech. Abimelech rules Israel"
+      "text": "After he said that, Jotham ran away to Beer. He lived there because he was afraid of his brother, Abimelech."
     },
     {
       "verse": "22",
@@ -1222,7 +1222,7 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "God was also punishing the people of Shechem for the evil things that they had done. When Gideon's son Jotham had cursed them, he said that these things would happen. Print... Use screen font size Show All Comments Judges 8Judges 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God was also punishing the people of Shechem for the evil things that they had done. When Gideon's son Jotham had cursed them, he said that these things would happen."
     }
   ],
   "10": [
@@ -1232,7 +1232,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Tola led Israel for 23 years. Then he died and they buried him in Shamir."
+      "text": "years. Then he died and they buried him in Shamir."
     },
     {
       "verse": "3",
@@ -1240,15 +1240,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He had 30 sons. They rode on 30 donkeys and they ruled 30 towns in Gilead. These towns are still called Havvoth-Jair (Jair's villages)."
+      "text": "sons. They rode on 30 donkeys and they ruled 30 towns in Gilead. These towns are still called Havvoth-Jair (Jair's villages)."
     },
     {
       "verse": "5",
-      "text": "Then Jair died and they buried him in Kamon. The Ammonites fight against Israel"
+      "text": "Then Jair died and they buried him in Kamon."
     },
     {
       "verse": "6",
-      "text": "The Israelites again did things that the Lord saw were evil. They worshipped idols of Baal and Ashtoreth. They also worshipped the gods of Syria, Sidon and Moab, as well as the gods of the Ammonites and the Philistines. They turned away from the Lord and they did not serve him any more. The Ammonites were the descendants of Ben-Ammi, who was the grandson of Lot. See Genesis"
+      "text": "The Israelites again did things that the Lord saw were evil. They worshipped idols of Baal and Ashtoreth. They also worshipped the gods of Syria, Sidon and Moab, as well as the gods of the Ammonites and the Philistines. They turned away from the Lord and they did not serve him any more."
     },
     {
       "verse": "7",
@@ -1267,7 +1267,7 @@ module.exports = {
       "text": "Then the Israelites called out to the Lord for help. They said, ‘We have turned against you. We have worshipped the idols of Baal instead of you.’"
     },
     {
-      "verse": "11-12",
+      "verse": "11",
       "text": "The Lord replied, ‘I have saved you many times when you called to me for help. I saved you from the power of the Egyptians, the Amorites, the Ammonites, the Philistines, the Sidonians, the Amalekites and the Midianites."
     },
     {
@@ -1276,7 +1276,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Go and ask those other gods to help you! They are the gods that you have chosen, so let them rescue you from your trouble!’ Midianites’ or ‘Maonites’"
+      "text": "Go and ask those other gods to help you! They are the gods that you have chosen, so let them rescue you from your trouble!’"
     },
     {
       "verse": "15",
@@ -1292,7 +1292,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The leaders of the people of Gilead asked each other, ‘Who will lead us to attack the Ammonites? Any man who agrees to do that will become the leader of everyone who lives in Gilead.’ Print... Use screen font size Show All Comments Judges 9Judges 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The leaders of the people of Gilead asked each other, ‘Who will lead us to attack the Ammonites? Any man who agrees to do that will become the leader of everyone who lives in Gilead.’"
     }
   ],
   "11": [
@@ -1338,7 +1338,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So Jephthah went back with them to Gilead. The people made him their ruler and leader of their army. In Mizpah, Jephthah repeated his promise to the Lord. Jephthah's message to the Ammonites"
+      "text": "So Jephthah went back with them to Gilead. The people made him their ruler and leader of their army. In Mizpah, Jephthah repeated his promise to the Lord."
     },
     {
       "verse": "12",
@@ -1398,7 +1398,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Israelites have been living here for 300 years! They have lived in Heshbon and Aroer and the villages around those towns. They have lived in all the towns along the Arnon river too. In all that time, you have not tried to take back those places for yourselves."
+      "text": "years! They have lived in Heshbon and Aroer and the villages around those towns. They have lived in all the towns along the Arnon river too. In all that time, you have not tried to take back those places for yourselves."
     },
     {
       "verse": "27",
@@ -1406,7 +1406,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "The Ammonite king refused to listen to the message that Jephthah had sent to him. Jephthah's promise"
+      "text": "The Ammonite king refused to listen to the message that Jephthah had sent to him."
     },
     {
       "verse": "29",
@@ -1454,7 +1454,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Because of that, the young women of Israel now go into the hills for four days every year. They do that to remember the daughter of Jephthah, the man from Gilead. Print... Use screen font size Show All Comments Judges 10Judges 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Because of that, the young women of Israel now go into the hills for four days every year. They do that to remember the daughter of Jephthah, the man from Gilead."
     }
   ],
   "12": [
@@ -1484,7 +1484,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Jephthah led Israel for six years. Then he died and they buried him in his own town in Gilead. Ibzan, Elon and Abdon"
+      "text": "Jephthah led Israel for six years. Then he died and they buried him in his own town in Gilead."
     },
     {
       "verse": "8",
@@ -1492,7 +1492,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He had 30 sons and 30 daughters. He let his daughters marry men from other clans. He also brought 30 young women from other clans to marry his sons. Ibzan led Israel for seven years."
+      "text": "sons and 30 daughters. He let his daughters marry men from other clans. He also brought 30 young women from other clans to marry his sons. Ibzan led Israel for seven years."
     },
     {
       "verse": "10",
@@ -1512,11 +1512,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He had 40 sons and 30 grandsons. They rode on 70 donkeys. Abdon led Israel for eight years."
+      "text": "sons and 30 grandsons. They rode on 70 donkeys. Abdon led Israel for eight years."
     },
     {
       "verse": "15",
-      "text": "Then he died. They buried him at Pirathon, a town in the land of Ephraim's tribe. That was in the hill country of the Amalekites. Print... Use screen font size Show All Comments Judges 11Judges 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then he died. They buried him at Pirathon, a town in the land of Ephraim's tribe. That was in the hill country of the Amalekites."
     }
   ],
   "13": [
@@ -1538,7 +1538,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Yes, you will give birth to a son. You must never cut the boy's hair. He is to be a Nazirite. He will belong to God from the time that he is born. He will begin to rescue the Israelites from the power of the Philistines.’ Nazirites were men who had made a promise to belong to God in a special way. They could not drink wine or cut their hair."
+      "text": "Yes, you will give birth to a son. You must never cut the boy's hair. He is to be a Nazirite. He will belong to God from the time that he is born. He will begin to rescue the Israelites from the power of the Philistines.’"
     },
     {
       "verse": "6",
@@ -1574,7 +1574,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "She must not eat anything that comes from vines. She must not drink wine or beer. She must not eat any food that is unclean. She must obey everything that I have commanded her to do.’ Grapes grew on vines, and they used grapes to make wine. The angel told Manoah's wife that she must not eat any grapes or dried grapes (raisins)."
+      "text": "She must not eat anything that comes from vines. She must not drink wine or beer. She must not eat any food that is unclean. She must obey everything that I have commanded her to do.’"
     },
     {
       "verse": "15",
@@ -1618,7 +1618,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The Lord's Spirit began to give Samson strength when he was living in Mahaneh Dan. That place was between Zorah and Eshtaol. Print... Use screen font size Show All Comments Judges 12Judges 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord's Spirit began to give Samson strength when he was living in Mahaneh Dan. That place was between Zorah and Eshtaol."
     }
   ],
   "14": [
@@ -1672,11 +1672,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But if you cannot tell me the answer, you will give me 30 linen shirts and 30 sets of clothes.’ The young men said, ‘Tell us your question.’ People often asked clever questions with a hidden answer at a marriage. It was a party game. But, at Samson's marriage, the prize was very big. A good set of clothes cost a lot of money."
+      "text": "But if you cannot tell me the answer, you will give me 30 linen shirts and 30 sets of clothes.’ The young men said, ‘Tell us your question.’"
     },
     {
       "verse": "14",
-      "text": "Samson said to them: ‘Out of the one who eats came something to eat. Out of the strong one came something sweet.’ After three days, the Philistine men could not find the answer."
+      "text": "Samson said to them:‘Out of the one who eats came something to eat.Out of the strong one came something sweet.’After three days, the Philistine men could not find the answer. ‘Out of the one who eats came something to eat. Out of the strong one came something sweet.’ After three days, the Philistine men could not find the answer."
     },
     {
       "verse": "15",
@@ -1684,7 +1684,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then Samson's wife went to him and she wept. She said to him, ‘It seems that you hate me. You do not really love me. You have asked my friends a clever question, but you have not told me the answer.’ Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you?’"
+      "text": "Then Samson's wife went to him and she wept. She said to him, ‘It seems that you hate me. You do not really love me. You have asked my friends a clever question, but you have not told me the answer.’Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you?’ Samson said to her, ‘I have not told the answer even to my father or mother. So why should I tell you?’"
     },
     {
       "verse": "17",
@@ -1692,7 +1692,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Before sunset on the seventh day, the men of the town gave their answer to Samson: ‘There is nothing sweeter than honey! There is nothing stronger than a lion!’ Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question.’"
+      "text": "Before sunset on the seventh day, the men of the town gave their answer to Samson:‘There is nothing sweeter than honey!There is nothing stronger than a lion!’Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question.’ ‘There is nothing sweeter than honey! There is nothing stronger than a lion!’ Samson said to them, ‘You have used my young cow to do your work! Without her you would not have found the answer to my question.’"
     },
     {
       "verse": "19",
@@ -1700,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Samson's wife became the wife of the man who had been his special friend at the party. Print... Use screen font size Show All Comments Judges 13Judges 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Samson's wife became the wife of the man who had been his special friend at the party."
     }
   ],
   "15": [
@@ -1718,7 +1718,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So he went out and he caught 300 foxes. He tied the foxes in pairs by their tails. He tied some dry grass to each pair of tails."
+      "text": "foxes. He tied the foxes in pairs by their tails. He tied some dry grass to each pair of tails."
     },
     {
       "verse": "5",
@@ -1726,15 +1726,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The Philistines asked, ‘Who did this?’ People said to them, ‘It was Samson, the man who married the young woman in Timnah. He did it because her father gave her to Samson's special friend instead of Samson.’ So the Philistines went and burned the man and his daughter to death."
+      "text": "The Philistines asked, ‘Who did this?’ People said to them, ‘It was Samson, the man who married the young woman in Timnah. He did it because her father gave her to Samson's special friend instead of Samson.’So the Philistines went and burned the man and his daughter to death."
     },
     {
       "verse": "7",
-      "text": "Samson said to them, ‘Because you have done this, I will punish you. I will not stop until your punishment is complete.’"
+      "text": "Samson said to them, ‘Because you have done this, I will punish you. I will not stop until your punishment is complete.’ After that, Samson went to live in a cave in the rock of Etam."
     },
     {
       "verse": "8",
-      "text": "He attacked them with great strength. He killed many of them. After that, Samson went to live in a cave in the rock of Etam."
+      "text": "He attacked them with great strength. He killed many of them.After that, Samson went to live in a cave in the rock of Etam."
     },
     {
       "verse": "9",
@@ -1742,19 +1742,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The men of Judah asked them, ‘Why have you come to attack us?’ The Philistines replied, ‘We have come to catch Samson and take him as our prisoner. We need to punish him in the same way that he has punished us.’ Judah’ was one of the Israelite tribes."
+      "text": "The men of Judah asked them, ‘Why have you come to attack us?’ The Philistines replied, ‘We have come to catch Samson and take him as our prisoner. We need to punish him in the same way that he has punished us.’"
     },
     {
       "verse": "11",
-      "text": "Then 3,000 men of Judah went to the cave where Samson was hiding. They said to him, ‘You know that the Philistines are our rulers. You are causing them to give us trouble.’ Samson said, ‘I have only done to them as they did to me.’"
+      "text": "Then 3,000 men of Judah went to the cave where Samson was hiding. They said to him, ‘You know that the Philistines are our rulers. You are causing them to give us trouble.’Samson said, ‘I have only done to them as they did to me.’ Samson said, ‘I have only done to them as they did to me.’"
     },
     {
       "verse": "12",
-      "text": "The men of Judah said to him, ‘We have come to tie you up as our prisoner. We must let the Philistines take you away.’ Samson said, ‘Promise me that you will not kill me yourselves.’"
+      "text": "The men of Judah said to him, ‘We have come to tie you up as our prisoner. We must let the Philistines take you away.’Samson said, ‘Promise me that you will not kill me yourselves.’ Samson said, ‘Promise me that you will not kill me yourselves.’"
     },
     {
       "verse": "13",
-      "text": "They said, ‘We agree. We will only tie you up and give you to them. We promise that we will not kill you.’ So they tied him up with two new ropes. They took him with them away from the cave."
+      "text": "They said, ‘We agree. We will only tie you up and give you to them. We promise that we will not kill you.’So they tied him up with two new ropes. They took him with them away from the cave. So they tied him up with two new ropes. They took him with them away from the cave."
     },
     {
       "verse": "14",
@@ -1766,11 +1766,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then Samson sang this song: ‘I have used a donkey's skull to kill 1,000 men. I have made them like many heaps of dead donkeys!’"
+      "text": "Then Samson sang this song:‘I have used a donkey's skull to kill 1,000 men.I have made them like many heaps of dead donkeys!’ ‘I have used a donkey's skull to kill 1,000 men. I have made them like many heaps of dead donkeys!’"
     },
     {
       "verse": "17",
-      "text": "After that, he threw away the bone from the donkey's skull. So people called that place ‘Ramath Lehi’. Ramath Lehi’ means ‘Skull-bone Hill’."
+      "text": "After that, he threw away the bone from the donkey's skull. So people called that place ‘Ramath Lehi’."
     },
     {
       "verse": "18",
@@ -1778,11 +1778,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "So God caused a hole to open in the ground near Lehi. Water poured out of it. Samson drank some water and he became strong again. Samson called the spring of water ‘En Hakkore’. It is still there in Lehi. En Hakkore’ means ‘The spring of one who calls out for help’."
+      "text": "So God caused a hole to open in the ground near Lehi. Water poured out of it. Samson drank some water and he became strong again. Samson called the spring of water ‘En Hakkore’. It is still there in Lehi."
     },
     {
       "verse": "20",
-      "text": "Samson led Israel for 20 years while the Philistines continued to rule the land. Print... Use screen font size Show All Comments Judges 14Judges 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years while the Philistines continued to rule the land."
     }
   ],
   "16": [
@@ -1792,11 +1792,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The people of Gaza heard that Samson was in their city. The men met together and they waited for Samson to leave. They hid themselves all night at the gate of the city. They waited there quietly and they thought, ‘We will kill him at dawn when he tries to leave the city.’ Gaza was one of the Philistine cities near the Mediterranean Sea."
+      "text": "The people of Gaza heard that Samson was in their city. The men met together and they waited for Samson to leave. They hid themselves all night at the gate of the city. They waited there quietly and they thought, ‘We will kill him at dawn when he tries to leave the city.’"
     },
     {
       "verse": "3",
-      "text": "But Samson only stayed with the woman until the middle of the night. Then he got up and he went to leave through the city gate. He took hold of its doors and the two posts that held them. He pulled them all down together, with the metal bar that locked them. He carried them all in one piece on his shoulders. He left them at the top of the hill near Hebron. Samson and Delilah"
+      "text": "But Samson only stayed with the woman until the middle of the night. Then he got up and he went to leave through the city gate. He took hold of its doors and the two posts that held them. He pulled them all down together, with the metal bar that locked them. He carried them all in one piece on his shoulders. He left them at the top of the hill near Hebron."
     },
     {
       "verse": "4",
@@ -1836,11 +1836,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then Delilah said to Samson, ‘You have deceived me again as if I was a fool. Now you must tell me the truth. Tell me how someone can make you weak.’ Samson replied, ‘You see that my long hair is tied in seven tails. You must tie them into the cloth that is on the loom. Fix them there very strongly. If you do that, I will become weak, like other men.’"
+      "text": "Then Delilah said to Samson, ‘You have deceived me again as if I was a fool. Now you must tell me the truth. Tell me how someone can make you weak.’Samson replied, ‘You see that my long hair is tied in seven tails. You must tie them into the cloth that is on the loom. Fix them there very strongly. If you do that, I will become weak, like other men.’"
     },
     {
       "verse": "14",
-      "text": "Delilah did this while Samson was asleep. She took the seven tails of his hair and she tied them into the cloth on the loom. She fixed them with a strong peg. Then she shouted, ‘Samson, the Philistines are here!’ He woke up and he pulled out the peg. He tore his hair away from the cloth on the loom so that he was free. Because Samson was a Nazirite, his hair was very long. It was tied together in seven pieces, or tails. Delilah had a loom that she used to make cloth. There was a piece of cloth on the loom that she had not finished making. She tied Samson's hair into the loom, as if she was using it to make the cloth. The peg was part of the loom."
+      "text": "Delilah did this while Samson was asleep. She took the seven tails of his hair and she tied them into the cloth on the loom. She fixed them with a strong peg. Then she shouted, ‘Samson, the Philistines are here!’ He woke up and he pulled out the peg. He tore his hair away from the cloth on the loom so that he was free."
     },
     {
       "verse": "15",
@@ -1872,7 +1872,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But after they had cut off Samson's hair, it began to grow again. Samson dies"
+      "text": "But after they had cut off Samson's hair, it began to grow again."
     },
     {
       "verse": "23",
@@ -1884,7 +1884,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The people were very happy at the feast. They shouted, ‘Bring Samson here for us to see him! He can help us to enjoy our party.’ So they brought Samson out of the prison. The people were happy to see him. They made him stand between the pillars of the temple."
+      "text": "The people were very happy at the feast. They shouted, ‘Bring Samson here for us to see him! He can help us to enjoy our party.’So they brought Samson out of the prison. The people were happy to see him. They made him stand between the pillars of the temple."
     },
     {
       "verse": "26",
@@ -1908,17 +1908,17 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Then his brothers and all his father's family came to get his body. They carried it back home. They buried him in the grave of his father, Manoah. That was between Zorah and Eshtaol. Samson had led Israel for 20 years. Print... Use screen font size Show All Comments Judges 15Judges 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then his brothers and all his father's family came to get his body. They carried it back home. They buried him in the grave of his father, Manoah. That was between Zorah and Eshtaol. Samson had led Israel for 20 years."
     }
   ],
   "17": [
     {
       "verse": "1",
-      "text": "There was a man who lived in the hill country of Ephraim. His name was Micah."
+      "text": "There was a man who lived in the hill country of Ephraim. His name was Micah. His mother said, ‘Thank you, my son. I pray that the Lord will bless you.’"
     },
     {
       "verse": "2",
-      "text": "He said to his mother, ‘I know about the 1,100 pieces of silver that somebody took from you. You cursed the person who had robbed you and I heard you. Look! Here are the pieces of silver. I took them myself. But now I am giving them back to you.’ His mother said, ‘Thank you, my son. I pray that the Lord will bless you.’"
+      "text": "He said to his mother, ‘I know about the 1,100 pieces of silver that somebody took from you. You cursed the person who had robbed you and I heard you. Look! Here are the pieces of silver. I took them myself. But now I am giving them back to you.’His mother said, ‘Thank you, my son. I pray that the Lord will bless you.’"
     },
     {
       "verse": "3",
@@ -1934,7 +1934,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "At that time, Israel had no king to rule over them. Everyone did what they thought was right. Micah and the Levite"
+      "text": "At that time, Israel had no king to rule over them. Everyone did what they thought was right."
     },
     {
       "verse": "7",
@@ -1962,7 +1962,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then Micah said, ‘Now I know that the Lord will bless me, because I have this Levite as my own priest.’ Print... Use screen font size Show All Comments Judges 16Judges 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Micah said, ‘Now I know that the Lord will bless me, because I have this Levite as my own priest.’"
     }
   ],
   "18": [
@@ -1972,7 +1972,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So the men of Dan sent five soldiers from the clans of their tribe to explore the land. The leaders sent them out from Zorah and Eshtaol. They told them, ‘Go and find some land for us.’ See Joshua The five men went into the hill country of Ephraim. They came to Micah's house and they stayed there for a night."
+      "text": "So the men of Dan sent five soldiers from the clans of their tribe to explore the land. The leaders sent them out from Zorah and Eshtaol. They told them, ‘Go and find some land for us.’The five men went into the hill country of Ephraim. They came to Micah's house and they stayed there for a night."
     },
     {
       "verse": "3",
@@ -2008,7 +2008,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So 600 men of Dan's tribe prepared for the fight. They marched out from Zorah and Eshtaol with their weapons."
+      "text": "men of Dan's tribe prepared for the fight. They marched out from Zorah and Eshtaol with their weapons."
     },
     {
       "verse": "12",
@@ -2016,7 +2016,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "From there they travelled through the hill country of Ephraim. They arrived at Micah's house. Mahaneh Dan’ means ‘Dan's camp’."
+      "text": "From there they travelled through the hill country of Ephraim. They arrived at Micah's house."
     },
     {
       "verse": "14",
@@ -2028,7 +2028,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The 600 men of Dan stood at the gate with their weapons."
+      "text": "men of Dan stood at the gate with their weapons."
     },
     {
       "verse": "17",
@@ -2076,7 +2076,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "No one came to rescue the people of Laish. The city was a long way from Sidon. They had no other friends to help them. Laish was in a valley near Beth Rehob. The Danites built the city again and they lived there."
+      "text": "No one came to rescue the people of Laish. The city was a long way from Sidon. They had no other friends to help them.Laish was in a valley near Beth Rehob. The Danites built the city again and they lived there."
     },
     {
       "verse": "29",
@@ -2088,7 +2088,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "They continued to worship Micah's idol in Dan all the time that God's special tent was in Shiloh. Shiloh was the place where people should go to worship God. The people of Dan's tribe decided to have their own place to worship their idol. Print... Use screen font size Show All Comments Judges 17Judges 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They continued to worship Micah's idol in Dan all the time that God's special tent was in Shiloh."
     }
   ],
   "19": [
@@ -2170,7 +2170,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The old man said, ‘Do not worry. I will take care of you. Please come into my house, but do not stay for the night in this public place.’ home’ or ‘to the Lord's house’"
+      "text": "The old man said, ‘Do not worry. I will take care of you. Please come into my house, but do not stay for the night in this public place.’"
     },
     {
       "verse": "21",
@@ -2210,13 +2210,13 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Everyone who saw what he had done said, ‘In all the time since the Israelites left Egypt, nothing as bad as this has ever happened before. We have never seen anything like it. Think carefully about it. We must decide what to do!’ Print... Use screen font size Show All Comments Judges 18Judges 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Everyone who saw what he had done said, ‘In all the time since the Israelites left Egypt, nothing as bad as this has ever happened before. We have never seen anything like it. Think carefully about it. We must decide what to do!’"
     }
   ],
   "20": [
     {
       "verse": "1",
-      "text": "Then all the Israelites agreed to come together. They came from everywhere in Israel, from Dan in the north as far as Beersheba in the south. They also came from the Gilead region on the east side of the Jordan River. They all came together at Mizpah, to meet with the Lord."
+      "text": "Then all the Israelites agreed to come together. They came from everywhere in Israel, from Dan in the north as far as Beersheba in the south. They also came from the Gilead region on the east side of the Jordan River. They all came together at Mizpah, to meet with the Lord. Then the Israelites asked, ‘Tell us how this evil thing happened.’"
     },
     {
       "verse": "2",
@@ -2224,7 +2224,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "By this time, the people of Benjamin's tribe had heard the news that the other tribes were meeting in Mizpah. Then the Israelites asked, ‘Tell us how this evil thing happened.’"
+      "text": "By this time, the people of Benjamin's tribe had heard the news that the other tribes were meeting in Mizpah.Then the Israelites asked, ‘Tell us how this evil thing happened.’"
     },
     {
       "verse": "4",
@@ -2236,7 +2236,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I took her body home and I cut it into 12 pieces. I sent the pieces everywhere in the land of Israel. I did this to show what a terrible thing these men had done."
+      "text": "pieces. I sent the pieces everywhere in the land of Israel. I did this to show what a terrible thing these men had done."
     },
     {
       "verse": "7",
@@ -2252,7 +2252,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We will take ten men from every 100 men in each tribe. We will take 100 men from every 1,000 men, and 1,000 men from every 10,000 men. Those men will find food for the other soldiers. That will be their job. Then the other soldiers will be able to attack Gibeah. They will punish Gibeah's people as they deserve for the terrible thing that they have done.’"
+      "text": "men in each tribe. We will take 100 men from every 1,000 men, and 1,000 men from every 10,000 men. Those men will find food for the other soldiers. That will be their job. Then the other soldiers will be able to attack Gibeah. They will punish Gibeah's people as they deserve for the terrible thing that they have done.’"
     },
     {
       "verse": "11",
@@ -2264,7 +2264,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Send those wicked men of Gibeah out to us. We must punish them with death. Only that will remove this terrible sin from Israel.’ But the people of Benjamin did not agree to do that."
+      "text": "Send those wicked men of Gibeah out to us. We must punish them with death. Only that will remove this terrible sin from Israel.’But the people of Benjamin did not agree to do that."
     },
     {
       "verse": "14",
@@ -2284,7 +2284,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They went to Bethel. They asked God which tribe should go first to attack Benjamin's army. The Lord replied, ‘Judah must go first.’ Bethel was then the place where the Israelites met with God at that time. The priest there would use the Urim and Thummim to find out what God was saying to them."
+      "text": "They went to Bethel. They asked God which tribe should go first to attack Benjamin's army. The Lord replied, ‘Judah must go first.’"
     },
     {
       "verse": "19",
@@ -2299,7 +2299,7 @@ module.exports = {
       "text": "Benjamin's soldiers came out of Gibeah to attack. They killed 22,000 Israelites in the battle that day."
     },
     {
-      "verse": "22-23",
+      "verse": "22",
       "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening. They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin?’ The Lord said, ‘Yes, attack them.’ So they went to stand in the same places around the city as they had done the day before."
     },
     {
@@ -2315,7 +2315,7 @@ module.exports = {
       "text": "Then the whole Israelite army went back to Bethel to meet with the Lord. They sat there and they wept. They did not eat any food that day until evening. They offered burnt offerings and peace offerings to the Lord."
     },
     {
-      "verse": "27-28",
+      "verse": "27",
       "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them?’ The Lord said, ‘Attack them. Tomorrow I will put them under your power.’"
     },
     {
@@ -2348,15 +2348,15 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Finally, the men of Benjamin realized that they had lost the battle. This is how it happened: Israel's soldiers let Benjamin's army chase after them. They trusted the soldiers who were hiding around Gibeah to attack the city."
+      "text": "Finally, the men of Benjamin realized that they had lost the battle.This is how it happened: Israel's soldiers let Benjamin's army chase after them. They trusted the soldiers who were hiding around Gibeah to attack the city."
     },
     {
-      "verse": "37-38",
+      "verse": "37",
       "text": "The Israelites had agreed a sign with their men who were hiding. When those men ran into Gibeah and they destroyed everything there, they would make the sign. They would light a big fire so that the smoke went up into the sky."
     },
     {
       "verse": "39",
-      "text": "Then the other Israelite soldiers would turn round to attack the soldiers who were chasing them. Benjamin's soldiers had begun to kill the Israelites. When they had killed about 30 of them, they said, ‘Look! We are winning again, as we always do!’"
+      "text": "Then the other Israelite soldiers would turn round to attack the soldiers who were chasing them.Benjamin's soldiers had begun to kill the Israelites. When they had killed about 30 of them, they said, ‘Look! We are winning again, as we always do!’"
     },
     {
       "verse": "40",
@@ -2388,11 +2388,11 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "But 600 soldiers turned and ran away to the rock of Rimmon. They stayed there for four months."
+      "text": "soldiers turned and ran away to the rock of Rimmon. They stayed there for four months."
     },
     {
       "verse": "48",
-      "text": "The Israelites returned to the land that belonged to Benjamin's tribe. They killed the people and animals in all the towns there. As they came to each town, they destroyed it with fire. Print... Use screen font size Show All Comments Judges 19Judges 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Israelites returned to the land that belonged to Benjamin's tribe. They killed the people and animals in all the towns there. As they came to each town, they destroyed it with fire."
     }
   ],
   "21": [
@@ -2470,7 +2470,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But every year there is a big feast at Shiloh to give honour to the Lord. That will happen soon.’ Shiloh is north of Bethel and south of Lebonah. It is on the east side of the road from Bethel to Shechem."
+      "text": "But every year there is a big feast at Shiloh to give honour to the Lord. That will happen soon.’Shiloh is north of Bethel and south of Lebonah. It is on the east side of the road from Bethel to Shechem."
     },
     {
       "verse": "20",
@@ -2486,7 +2486,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So that is what the 200 men of Benjamin did. Each of them caught a young woman as she was dancing at the feast. They took them home to their own land to be their wives. They built their towns again and they lived in them."
+      "text": "men of Benjamin did. Each of them caught a young woman as she was dancing at the feast. They took them home to their own land to be their wives. They built their towns again and they lived in them."
     },
     {
       "verse": "24",
@@ -2494,7 +2494,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "At that time, Israel had no king to rule over them. Everyone did what they thought was right. Print... Use screen font size Show All Comments Judges 20Ruth Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "At that time, Israel had no king to rule over them. Everyone did what they thought was right."
     }
   ]
 };

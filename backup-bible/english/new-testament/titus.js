@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I am writing to you, Titus. I told you the message about Jesus and now we both believe in him. So you are like my own child. I pray that God, the Father, and Christ Jesus, our Saviour, will continue to help you. I pray that they will give you peace in your mind. Titus's work in Crete"
+      "text": "I am writing to you, Titus. I told you the message about Jesus and now we both believe in him. So you are like my own child.I pray that God, the Father, and Christ Jesus, our Saviour, will continue to help you. I pray that they will give you peace in your mind. I pray that God, the Father, and Christ Jesus, our Saviour, will continue to help you. I pray that they will give you peace in your mind."
     },
     {
       "verse": "5",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Instead, he must be happy to have visitors in his home. He must want to do good things. He must be careful in how he lives. He must do what is right. He must want to serve God well. He must control himself well. children who respect him’ or: ‘children who are believers’."
+      "text": "Instead, he must be happy to have visitors in his home. He must want to do good things. He must be careful in how he lives. He must do what is right. He must want to serve God well. He must control himself well."
     },
     {
       "verse": "9",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Many years ago, there was a certain man who lived on Crete. The people there called him their prophet. Even he said, ‘People who live on Crete are always telling lies and doing wicked things. They are lazy and they eat too much food.’ Some Jewish Christians taught that the Christians must obey the Jews' rules. This group may have told everyone to be circumcised."
+      "text": "Many years ago, there was a certain man who lived on Crete. The people there called him their prophet. Even he said, ‘People who live on Crete are always telling lies and doing wicked things. They are lazy and they eat too much food.’"
     },
     {
       "verse": "13",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "People like that say that they know God. But they do disgusting things. This shows that they do not know him. They are completely bad. They refuse to obey God. They are not able to do anything good. Print... Use screen font size Show All Comments Titus IntroductionTitus 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People like that say that they know God. But they do disgusting things. This shows that they do not know him. They are completely bad. They refuse to obey God. They are not able to do anything good."
     }
   ],
   "2": [
@@ -84,7 +84,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The young women will control themselves well and be pure in how they live. They will be good housewives who are kind to other people. They will respect their husbands. If they live in a good way like that, nobody will be able to say bad things about God's message. A good housewife takes care of the home. She is a good wife for her husband. She is a good mother for her children."
+      "text": "The young women will control themselves well and be pure in how they live. They will be good housewives who are kind to other people. They will respect their husbands. If they live in a good way like that, nobody will be able to say bad things about God's message."
     },
     {
       "verse": "6",
@@ -104,7 +104,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Slaves must not take things that belong to their masters. Their masters must be able to trust them completely. Then people will respect the message that we teach about God, our Saviour. God gives believers a new life"
+      "text": "Slaves must not take things that belong to their masters. Their masters must be able to trust them completely. Then people will respect the message that we teach about God, our Saviour."
     },
     {
       "verse": "11",
@@ -124,7 +124,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "You must teach these things to the believers. Help them to live in a good way. Warn them when they do wrong things. Use all the authority that you have as a leader in the church. Make sure that everyone respects you properly. Print... Use screen font size Show All Comments Titus 1Titus 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You must teach these things to the believers. Help them to live in a good way. Warn them when they do wrong things. Use all the authority that you have as a leader in the church. Make sure that everyone respects you properly."
     }
   ],
   "3": [
@@ -170,11 +170,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "You know that a person like that has chosen not to believe the true message. He knows that he is doing a bad thing, but he continues to do it. Paul finishes his letter"
+      "text": "You know that a person like that has chosen not to believe the true message. He knows that he is doing a bad thing, but he continues to do it."
     },
     {
       "verse": "12",
-      "text": "I will send either Artemas or Tychicus to you. After one of them has arrived, please come to meet me in Nicopolis. Come as quickly as you can. I have decided that I will stay in Nicopolis during the winter. We do not know who Artemas was. Tychicus was a man who had travelled with Paul. See Acts Ephesians Colossians Timothy Nicopolis was a city on the west coast of the country that we call Greece."
+      "text": "I will send either Artemas or Tychicus to you. After one of them has arrived, please come to meet me in Nicopolis. Come as quickly as you can. I have decided that I will stay in Nicopolis during the winter."
     },
     {
       "verse": "13",
@@ -182,11 +182,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Our Christian friends there must learn to do good things. They should supply things to people who need help. That will show that their lives are really useful. The name ‘Apollos’ is also in Acts and in 1 Corinthians"
+      "text": "Our Christian friends there must learn to do good things. They should supply things to people who need help. That will show that their lives are really useful."
     },
     {
       "verse": "15",
-      "text": "Everyone who is here with me says ‘hello’ to you. Please say ‘hello’ on our behalf to the believers there who love us. I pray that God will continue to be very kind to all of you. Print... Use screen font size Show All Comments Titus 2Philemon Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Everyone who is here with me says ‘hello’ to you. Please say ‘hello’ on our behalf to the believers there who love us. I pray that God will continue to be very kind to all of you."
     }
   ]
 };

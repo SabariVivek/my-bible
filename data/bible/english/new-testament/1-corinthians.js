@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I pray that God, our Father, and the Lord Jesus Christ, will continue to help you. I pray that they will give you peace in your minds. Paul thanks God"
+      "text": "I pray that God, our Father, and the Lord Jesus Christ, will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": "4",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "God always does what he has promised to do. He has chosen you to be friends with his Son, Jesus Christ, who is our Lord. Christians must not quarrel"
+      "text": "God always does what he has promised to do. He has chosen you to be friends with his Son, Jesus Christ, who is our Lord."
     },
     {
       "verse": "10",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Christ did not send me to baptize people. But he did send me to tell God's good news to people. When I speak his message, I do not use clever words. It is Christ's death on the cross that has power to save people. I do not want to spoil that power with clever words. Christ's death on the cross"
+      "text": "Christ did not send me to baptize people. But he did send me to tell God's good news to people. When I speak his message, I do not use clever words. It is Christ's death on the cross that has power to save people. I do not want to spoil that power with clever words."
     },
     {
       "verse": "18",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "It says in the Bible: ‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless.’ See Isaiah"
+      "text": "It says in the Bible:‘I, God, will destroy all the clever thoughts of wise people.I will show that their clever ideas are useless.’ ‘I, God, will destroy all the clever thoughts of wise people. I will show that their clever ideas are useless.’"
     },
     {
       "verse": "20",
@@ -122,7 +122,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Remember what is written in the Bible: ‘If you want to be proud about something, be proud of what the Lord has done.’ See Jeremiah Print... Use screen font size Show All Comments 1 Corinthians Introduction1 Corinthians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Remember what is written in the Bible:‘If you want to be proud about something,be proud of what the Lord has done.’"
     }
   ],
   "2": [
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But we do speak about wise thoughts to those of you who know Christ very well. But those wise thoughts do not belong to this world. They are not the ideas that the rulers of this world think are important. Those rulers will not be powerful for long."
+      "text": "But we do speak about wise thoughts to those of you who know Christ very well. But those wise thoughts do not belong to this world. They are not the ideas that the rulers of this world think are important. Those rulers will not be powerful for long. ‘Nobody ever saw or heard anything about this. Nobody ever thought that it could happen. But these are the things that God has prepared for his people who love him.’"
     },
     {
       "verse": "7",
@@ -160,7 +160,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This is written in the Bible: ‘Nobody ever saw or heard anything about this. Nobody ever thought that it could happen. But these are the things that God has prepared for his people who love him.’ See Isaiah"
+      "text": "This is written in the Bible:‘Nobody ever saw or heard anything about this.Nobody ever thought that it could happen.But these are the things that God has prepared for his people who love him.’"
     },
     {
       "verse": "10",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "If someone does not believe in God, they cannot accept the message that comes from God's Spirit. They think that God's message is silly. They cannot even understand those things. Only God's Spirit can explain them to people."
+      "text": "If someone does not believe in God, they cannot accept the message that comes from God's Spirit. They think that God's message is silly. They cannot even understand those things. Only God's Spirit can explain them to people. ‘Nobody can know what the Lord God is thinking. Nobody can tell him what he should do.’ But we think about these things in the same way that Christ thinks."
     },
     {
       "verse": "15",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "As it says in the Bible: ‘Nobody can know what the Lord God is thinking. Nobody can tell him what he should do.’ See Isaiah But we think about these things in the same way that Christ thinks. Print... Use screen font size Show All Comments 1 Corinthians 11 Corinthians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As it says in the Bible:‘Nobody can know what the Lord God is thinking.Nobody can tell him what he should do.’But we think about these things in the same way that Christ thinks."
     }
   ],
   "3": [
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Apollos and I work together as God's servants. You are like God's field that we work in. You are also like a building that belongs to God."
+      "text": "Apollos and I work together as God's servants. You are like God's field that we work in.You are also like a building that belongs to God."
     },
     {
       "verse": "10",
@@ -234,7 +234,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "God has already put Jesus Christ as the only foundation of this building. So nobody can put any other foundation there. Paul was the first person to tell God's good news to the people in Corinth. Other people, like Apollos, helped the believers to understand more about God's message."
+      "text": "God has already put Jesus Christ as the only foundation of this building. So nobody can put any other foundation there."
     },
     {
       "verse": "12",
@@ -250,7 +250,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But if the fire destroys a builder's work, that person will lose everything. The person himself will be safe. But he will be like someone who has run through the fire to a safe place. That is the day when Christ will return and judge everyone."
+      "text": "But if the fire destroys a builder's work, that person will lose everything. The person himself will be safe. But he will be like someone who has run through the fire to a safe place."
     },
     {
       "verse": "16",
@@ -262,15 +262,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Be careful! Do not think that you are better than you really are. Maybe you think that you are wise, like people today want to be wise. But if you want to become truly wise, be ready for other people to think that you are a fool."
+      "text": "Be careful! Do not think that you are better than you really are. Maybe you think that you are wise, like people today want to be wise. But if you want to become truly wise, be ready for other people to think that you are a fool. ‘God causes the clever thoughts of wise people to confuse them.’"
     },
     {
       "verse": "19",
-      "text": "People in this world think that some people are wise. But God thinks that those wise people are fools. It says in the Bible: ‘God causes the clever thoughts of wise people to confuse them.’ See Job"
+      "text": "People in this world think that some people are wise. But God thinks that those wise people are fools. It says in the Bible:‘God causes the clever thoughts of wise people to confuse them.’"
     },
     {
       "verse": "20",
-      "text": "In another place, the Bible says: ‘The Lord knows that the thoughts of wise people have no value.’ See Psalm"
+      "text": "In another place, the Bible says:‘The Lord knows that the thoughts of wise people have no value.’ ‘The Lord knows that the thoughts of wise people have no value.’"
     },
     {
       "verse": "21",
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "you belong to Christ, and Christ belongs to God. Print... Use screen font size Show All Comments 1 Corinthians 21 Corinthians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "you belong to Christ, and Christ belongs to God."
     }
   ],
   "4": [
@@ -368,7 +368,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I will come and I will find out what is really true. So you must choose. Will I need to be angry and punish you? Or will I speak kind words to show that I love you? Which do you want me to do? Print... Use screen font size Show All Comments 1 Corinthians 31 Corinthians 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will come and I will find out what is really true. So you must choose. Will I need to be angry and punish you? Or will I speak kind words to show that I love you? Which do you want me to do?"
     }
   ],
   "5": [
@@ -402,7 +402,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "As a result, we can have our own Passover festival. We must remove everything that is bad from among us. That is like what the Israelites did when they removed all the old yeast from their homes. Instead we live in a way that is pure and honest. It is like we are eating bread which has no yeast in it. In the Bible, yeast is often a picture of something bad that causes many more bad things to happen. Israel's people ate a lamb and flat bread without any yeast in it for the Passover meal. The Passover festival was very special for Israel's people. They remembered when God saved them from Egypt. So they ate a special meal every year. See Exodus 12."
+      "text": "As a result, we can have our own Passover festival. We must remove everything that is bad from among us. That is like what the Israelites did when they removed all the old yeast from their homes. Instead we live in a way that is pure and honest. It is like we are eating bread which has no yeast in it."
     },
     {
       "verse": "9",
@@ -414,11 +414,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now I am telling you this: I was talking about people who say that they are believers. If they say that, but they have sex in a wrong way, do not be friends with them. It is the same if they want many things for themselves. They may worship idols. They may insult people. They may often get drunk. They may deceive people and rob them. If one of your own group does things like that, do not even agree to eat a meal with them."
+      "text": "Now I am telling you this: I was talking about people who say that they are believers. If they say that, but they have sex in a wrong way, do not be friends with them. It is the same if they want many things for themselves. They may worship idols. They may insult people. They may often get drunk. They may deceive people and rob them. If one of your own group does things like that, do not even agree to eat a meal with them. ‘Send the bad person away from among yourselves.’"
     },
     {
-      "verse": "12-13",
-      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group. Do what the Bible says: ‘Send the bad person away from among yourselves.’ See Deuteronomy Judges Print... Use screen font size Show All Comments 1 Corinthians 41 Corinthians 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "verse": "12",
+      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group. Do what the Bible says:‘Send the bad person away from among yourselves.’"
     }
   ],
   "6": [
@@ -464,7 +464,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "At one time, some of you were people like that. But God has now made you clean and pure, so that you belong to him. You have become right with God. Our God has done this with the power of his Spirit because you believe in the Lord Jesus Christ. Use your bodies in a good way"
+      "text": "At one time, some of you were people like that. But God has now made you clean and pure, so that you belong to him. You have become right with God. Our God has done this with the power of his Spirit because you believe in the Lord Jesus Christ."
     },
     {
       "verse": "12",
@@ -476,15 +476,15 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "God raised the Lord Jesus after he died. And God will use his power to make us alive again too. Some of the believers were saying that it did not matter what they did with their bodies, because one day God would destroy them. Paul says that God gave us our bodies. We should use our bodies in a way that pleases God. We must not use our bodies in a bad way. Paul shows that our bodies are important, because God will raise us to a new life with him."
+      "text": "God raised the Lord Jesus after he died. And God will use his power to make us alive again too."
     },
     {
       "verse": "15",
-      "text": "You know that your bodies are parts of Christ's own body. So you must never take your body and make it join with a prostitute's body. That is like you have done it with part of Christ's body. Never let that happen!"
+      "text": "You know that your bodies are parts of Christ's own body. So you must never take your body and make it join with a prostitute's body. That is like you have done it with part of Christ's body. Never let that happen! ‘The man and the woman become as one body.’"
     },
     {
       "verse": "16",
-      "text": "Anyone who makes his own body join to a prostitute becomes one body with that prostitute. You should know that. It says in the Bible: ‘The man and the woman become as one body.’ See Genesis"
+      "text": "Anyone who makes his own body join to a prostitute becomes one body with that prostitute. You should know that. It says in the Bible:‘The man and the woman become as one body.’"
     },
     {
       "verse": "17",
@@ -500,7 +500,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "God bought you for himself. He paid the price for you. So use your body to show how great God is. God's Son, Jesus, died on the cross as a sacrifice on our behalf. This is the price that God paid so that we could belong to him. Print... Use screen font size Show All Comments 1 Corinthians 51 Corinthians 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God bought you for himself. He paid the price for you. So use your body to show how great God is."
     }
   ],
   "7": [
@@ -598,7 +598,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "My Christian friends, each of you should continue as you were when God first called you to come to him. Remember that you serve God. Here, Paul tells Christians to continue as they were before they believed in Christ. He does not mean that they should continue to do bad things. He is talking about the place that they have in life: slaves or free people, Jews or Gentiles, married people or not. They should not try to change that."
+      "text": "My Christian friends, each of you should continue as you were when God first called you to come to him. Remember that you serve God."
     },
     {
       "verse": "25",
@@ -630,7 +630,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "I do not want you to worry about troubles. A man who has not married wants to serve the Lord. He wants to live in a way that makes the Lord happy."
+      "text": "I do not want you to worry about troubles. A man who has not married wants to serve the Lord. He wants to live in a way that makes the Lord happy. It is the same for a woman who has no husband, or a young girl who has not married. She wants to serve the Lord very well. She wants to be completely pure, both in her body and in her spirit. But a woman who has a husband has to think about this world's things. She wants to live in a way that makes her husband happy."
     },
     {
       "verse": "33",
@@ -638,7 +638,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "As a result, he thinks in two opposite ways. It is the same for a woman who has no husband, or a young girl who has not married. She wants to serve the Lord very well. She wants to be completely pure, both in her body and in her spirit. But a woman who has a husband has to think about this world's things. She wants to live in a way that makes her husband happy."
+      "text": "As a result, he thinks in two opposite ways.It is the same for a woman who has no husband, or a young girl who has not married. She wants to serve the Lord very well. She wants to be completely pure, both in her body and in her spirit. But a woman who has a husband has to think about this world's things. She wants to live in a way that makes her husband happy."
     },
     {
       "verse": "35",
@@ -662,7 +662,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "I do think that she would be happier if she remains without a husband. That is what I think, and God's Spirit also helps me with this. Print... Use screen font size Show All Comments 1 Corinthians 61 Corinthians 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I do think that she would be happier if she remains without a husband. That is what I think, and God's Spirit also helps me with this."
     }
   ],
   "8": [
@@ -716,7 +716,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I do not want to hurt any of my Christian friends. So, if the food that I eat causes them to do something wrong, I will never eat meat again. Print... Use screen font size Show All Comments 1 Corinthians 71 Corinthians 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I do not want to hurt any of my Christian friends. So, if the food that I eat causes them to do something wrong, I will never eat meat again."
     }
   ],
   "9": [
@@ -754,11 +754,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "God's Law that he gave to Moses says this: ‘Do not tie shut the mouth of your ox while it walks on your grain.’ See Deuteronomy Farmers used a bull to walk on the wheat that they had cut. They did that to remove the seeds for food. Moses' Law said that the farmer must let the bull eat some of the seeds. But God's Law does not teach this only to help bulls."
+      "text": "God's Law that he gave to Moses says this: ‘Do not tie shut the mouth of your ox while it walks on your grain.’But God's Law does not teach this only to help bulls."
     },
     {
       "verse": "10",
-      "text": "No, God wanted to help us too. That is why he gave this rule to Moses for his people. Any farmer who works hard to grow food should get some of the food for himself. He ploughs his fields and he prepares the seeds because he hopes to eat some of the food."
+      "text": "No, God wanted to help us too. That is why he gave this rule to Moses for his people. Any farmer who works hard to grow food should get some of the food for himself. He ploughs his fields and he prepares the seeds because he hopes to eat some of the food. But Barnabas and I have not used our authority to make you help us like that. Instead, we accept all these difficult things patiently. We want the good news about Christ to go everywhere. We do not want to do anything that might stop it."
     },
     {
       "verse": "11",
@@ -766,7 +766,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You agree to help other people who teach God's message to you. So surely we should receive even more help from you! But Barnabas and I have not used our authority to make you help us like that. Instead, we accept all these difficult things patiently. We want the good news about Christ to go everywhere. We do not want to do anything that might stop it."
+      "text": "You agree to help other people who teach God's message to you. So surely we should receive even more help from you!But Barnabas and I have not used our authority to make you help us like that. Instead, we accept all these difficult things patiently. We want the good news about Christ to go everywhere. We do not want to do anything that might stop it."
     },
     {
       "verse": "13",
@@ -826,7 +826,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "I make my body do what I want it to do. I make it like my slave. I have told God's message to other people. I do not want to lose the prize myself. So I try very much to obey the rules of the race. Print... Use screen font size Show All Comments 1 Corinthians 81 Corinthians 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I make my body do what I want it to do. I make it like my slave. I have told God's message to other people. I do not want to lose the prize myself. So I try very much to obey the rules of the race."
     }
   ],
   "10": [
@@ -848,7 +848,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "They all received the same help from God, but most of them did not please God. God caused most of them to die in the wilderness. See Exodus See Exodus See Exodus Numbers God gave food and drink to the Jews in the wilderness. This was a miracle that God did for them. They could see that God himself was with them. See Numbers Hebrews"
+      "text": "They all received the same help from God, but most of them did not please God. God caused most of them to die in the wilderness."
     },
     {
       "verse": "6",
@@ -856,19 +856,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Do not worship idols, as some of them did. The Bible says: ‘The people sat down to eat and to drink. After that, they got up from their meal and they danced.’ The people danced to worship their false gods. See Exodus"
+      "text": "Do not worship idols, as some of them did. The Bible says: ‘The people sat down to eat and to drink. After that, they got up from their meal and they danced.’"
     },
     {
       "verse": "8",
-      "text": "Nor must we ever have sex in wrong ways. Some of our ancestors did that, and 23,000 of them died in one day as a result. See Numbers"
+      "text": "Nor must we ever have sex in wrong ways. Some of our ancestors did that, and 23,000 of them died in one day as a result."
     },
     {
       "verse": "9",
-      "text": "Nor must we do bad things to see whether the Lord will punish us. Some of our ancestors did that, and God sent snakes to destroy them. See Numbers"
+      "text": "Nor must we do bad things to see whether the Lord will punish us. Some of our ancestors did that, and God sent snakes to destroy them."
     },
     {
       "verse": "10",
-      "text": "Do not complain against God. Some of our ancestors spoke like that, and God sent an angel of death to kill them. See Numbers"
+      "text": "Do not complain against God. Some of our ancestors spoke like that, and God sent an angel of death to kill them."
     },
     {
       "verse": "11",
@@ -932,7 +932,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The Bible says this: ‘The earth, and everything in it, belongs to the Lord.’ See Psalm"
+      "text": "The Bible says this: ‘The earth, and everything in it, belongs to the Lord.’"
     },
     {
       "verse": "27",
@@ -944,7 +944,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "It may not cause your own thoughts to have trouble. But the other person may not be sure if it is right to eat that kind of food. Perhaps you will say, ‘Why should another person's thoughts decide what is right for me? I am free to do what I want."
+      "text": "It may not cause your own thoughts to have trouble. But the other person may not be sure if it is right to eat that kind of food.Perhaps you will say, ‘Why should another person's thoughts decide what is right for me? I am free to do what I want."
     },
     {
       "verse": "30",
@@ -960,13 +960,13 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Copy my example. Whatever I do, I try to make other people happy. I do not try to do what will help me. Instead, I want to help other people. I live in that way so that God will save many people. Print... Use screen font size Show All Comments 1 Corinthians 91 Corinthians 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Copy my example. Whatever I do, I try to make other people happy. I do not try to do what will help me. Instead, I want to help other people. I live in that way so that God will save many people."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "Copy my example, in the same way that I copy Christ's example. Christian meetings"
+      "text": "Copy my example, in the same way that I copy Christ's example."
     },
     {
       "verse": "2",
@@ -1002,7 +1002,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "That is why a woman should cover her head. It shows that she has authority on her head. That makes the angels happy. See Genesis"
+      "text": "That is why a woman should cover her head. It shows that she has authority on her head. That makes the angels happy."
     },
     {
       "verse": "11",
@@ -1026,7 +1026,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Some people may want to argue about this. But I have told you what we do. And all of God's people in the different churches do the same thing. The Lord's Supper"
+      "text": "Some people may want to argue about this. But I have told you what we do. And all of God's people in the different churches do the same thing."
     },
     {
       "verse": "17",
@@ -1038,7 +1038,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Perhaps there must be separate groups among you. Then everyone can see clearly which group God accepts as right! They met in separate groups because they did not agree with one another. They argued and they quarrelled."
+      "text": "Perhaps there must be separate groups among you. Then everyone can see clearly which group God accepts as right!"
     },
     {
       "verse": "20",
@@ -1054,7 +1054,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "This is the message that I received from the Lord. I then told it to you. This is what happened on the night that Jesus' enemies took hold of him. The Lord Jesus picked up some bread to eat with his disciples."
+      "text": "This is the message that I received from the Lord. I then told it to you.This is what happened on the night that Jesus' enemies took hold of him. The Lord Jesus picked up some bread to eat with his disciples."
     },
     {
       "verse": "24",
@@ -1094,11 +1094,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "So, my Christian friends, be patient when you meet together to eat the Lord's Supper. Do not start to eat before everyone is ready."
+      "text": "So, my Christian friends, be patient when you meet together to eat the Lord's Supper. Do not start to eat before everyone is ready. I will talk about the other things when I come to visit you."
     },
     {
       "verse": "34",
-      "text": "If you are hungry, you should eat at home before you come. Then, when you meet together, God will not have any reason to punish you. I will talk about the other things when I come to visit you. Print... Use screen font size Show All Comments 1 Corinthians 101 Corinthians 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you are hungry, you should eat at home before you come. Then, when you meet together, God will not have any reason to punish you.I will talk about the other things when I come to visit you."
     }
   ],
   "12": [
@@ -1144,7 +1144,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "There is only one Holy Spirit. The same Spirit helps people to do all these different things. He decides which gifts he will give to each person. One body with many parts"
+      "text": "There is only one Holy Spirit. The same Spirit helps people to do all these different things. He decides which gifts he will give to each person."
     },
     {
       "verse": "12",
@@ -1196,7 +1196,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "But we do not need to do this with the beautiful parts of our body. God has put all these parts together in one body. Some parts seem to be not very special. But God has shown that those parts are very valuable."
+      "text": "But we do not need to do this with the beautiful parts of our body.God has put all these parts together in one body. Some parts seem to be not very special. But God has shown that those parts are very valuable."
     },
     {
       "verse": "25",
@@ -1216,7 +1216,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Not everyone in the church is an apostle. Not everyone speaks messages from God. Not everyone is a teacher. Not everyone can do miracles."
+      "text": "Not everyone in the church is an apostle. Not everyone speaks messages from God. Not everyone is a teacher. Not everyone can do miracles. Now I will show you a way that is better than anything else."
     },
     {
       "verse": "30",
@@ -1224,7 +1224,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But it is good if you really want the more valuable gifts from God. Now I will show you a way that is better than anything else. Print... Use screen font size Show All Comments 1 Corinthians 111 Corinthians 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But it is good if you really want the more valuable gifts from God.Now I will show you a way that is better than anything else."
     }
   ],
   "13": [
@@ -1238,7 +1238,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I may give all my things to help poor people. I may let other people take my body to burn it. But that would not help me if I do not love others. I may let other people take my body to burn it’ or ‘I may give my body as a sacrifice so that I can be proud.’"
+      "text": "I may give all my things to help poor people. I may let other people take my body to burn it. But that would not help me if I do not love others."
     },
     {
       "verse": "4",
@@ -1278,7 +1278,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "At this time there are three things that continue. We continue to trust God. We continue to hope for his good things. We continue to love other people. But the most important of these things is love. Print... Use screen font size Show All Comments 1 Corinthians 121 Corinthians 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "At this time there are three things that continue. We continue to trust God. We continue to hope for his good things. We continue to love other people. But the most important of these things is love."
     }
   ],
   "14": [
@@ -1360,11 +1360,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "My Christian friends, do not continue to think like children think. Instead, think properly like men and women should think. The only way you should be like babies is to keep away from evil things."
+      "text": "My Christian friends, do not continue to think like children think. Instead, think properly like men and women should think. The only way you should be like babies is to keep away from evil things. ‘I will send strangers to speak to my people. They will speak my message to them in strange languages. But even when I do this, my people will not listen to me.’ That is what the Lord God has said."
     },
     {
       "verse": "21",
-      "text": "This is written in the Bible: ‘I will send strangers to speak to my people. They will speak my message to them in strange languages. But even when I do this, my people will not listen to me.’ That is what the Lord God has said. See Isaiah"
+      "text": "This is written in the Bible:‘I will send strangers to speak to my people.They will speak my message to them in strange languages.But even when I do this, my people will not listen to me.’That is what the Lord God has said."
     },
     {
       "verse": "22",
@@ -1380,7 +1380,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "The visitor's secret thoughts will become clear. As a result, he will bend down to the ground and he will worship God. He will say, ‘God is really here among you!’ Church meetings"
+      "text": "The visitor's secret thoughts will become clear. As a result, he will bend down to the ground and he will worship God. He will say, ‘God is really here among you!’"
     },
     {
       "verse": "26",
@@ -1412,7 +1412,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "When we meet together as God's people, he wants there to be peace among us. He does not want to bring trouble. This is what happens in all the churches where God's people meet together."
+      "text": "When we meet together as God's people, he wants there to be peace among us. He does not want to bring trouble.This is what happens in all the churches where God's people meet together."
     },
     {
       "verse": "34",
@@ -1424,7 +1424,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Remember that God's message did not start from you in Corinth! You are not the only people who have heard it, either. See also 1 Corinthians Paul says that women may pray or speak a message in a meeting of the church. He may mean that women should not speak at certain times. That is, while a man is explaining messages from God."
+      "text": "Remember that God's message did not start from you in Corinth! You are not the only people who have heard it, either."
     },
     {
       "verse": "37",
@@ -1440,7 +1440,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "But you must do everything in a proper way that helps people. Print... Use screen font size Show All Comments 1 Corinthians 131 Corinthians 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But you must do everything in a proper way that helps people."
     }
   ],
   "15": [
@@ -1454,7 +1454,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I received the good news from Christ, and I told that message to you. I told you the most important things: Christ died as a sacrifice for our sins. The Bible already said how that would happen."
+      "text": "I received the good news from Christ, and I told that message to you. I told you the most important things:Christ died as a sacrifice for our sins. The Bible already said how that would happen."
     },
     {
       "verse": "4",
@@ -1486,7 +1486,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So then, all of us apostles teach the same good news about Christ. That is the message that you have believed. It does not matter which of us told it to you, whether it was me or someone else. People do live again after death"
+      "text": "So then, all of us apostles teach the same good news about Christ. That is the message that you have believed. It does not matter which of us told it to you, whether it was me or someone else."
     },
     {
       "verse": "12",
@@ -1538,7 +1538,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "After that, the end of everything will happen. Christ will win against every ruler and power and authority. He will give the kingdom to God, the Father. God will rule over everything. Adam was the first person that God made in the beginning. See Genesis"
+      "text": "After that, the end of everything will happen. Christ will win against every ruler and power and authority. He will give the kingdom to God, the Father. God will rule over everything."
     },
     {
       "verse": "25",
@@ -1550,7 +1550,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "It says in the Bible, ‘God has put all things under his authority.’ See Psalm But it is clear that the words ‘all things’ do not include God himself. No, because it is God who put all things under Christ's authority."
+      "text": "It says in the Bible, ‘God has put all things under his authority.’But it is clear that the words ‘all things’ do not include God himself. No, because it is God who put all things under Christ's authority."
     },
     {
       "verse": "28",
@@ -1558,11 +1558,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Think about this. Some of you have let people baptize you on behalf of believers who have already died. But if dead people do not rise up to a new life, there is no reason to baptize anyone on their behalf. It seems that some people in the church at Corinth did this. If a believer died before anyone baptized him, they might baptize another believer on behalf of the dead person. Paul does not say that this was a good thing to do. But it shows that they expected dead believers to rise to a new life."
+      "text": "Think about this. Some of you have let people baptize you on behalf of believers who have already died. But if dead people do not rise up to a new life, there is no reason to baptize anyone on their behalf."
     },
     {
       "verse": "30",
-      "text": "Also, think about us! All the time we are in great danger."
+      "text": "Also, think about us! All the time we are in great danger. ‘Tomorrow we will probably die. So we should just eat and drink as much as we like.’"
     },
     {
       "verse": "31",
@@ -1570,15 +1570,15 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "At Ephesus city, people attacked me like wild animals and I fought against them. But that would be worth nothing to me if dead people do not rise to a new life. If dead people do not live again, then we could say: Ephesus was a city in the country that we call Turkey now. ‘Tomorrow we will probably die. So we should just eat and drink as much as we like.’ See Isaiah"
+      "text": "At Ephesus city, people attacked me like wild animals and I fought against them. But that would be worth nothing to me if dead people do not rise to a new life. If dead people do not live again, then we could say:‘Tomorrow we will probably die.So we should just eat and drink as much as we like.’"
     },
     {
       "verse": "33",
-      "text": "Do not let anyone deceive you. Remember this: ‘If you become a friend of bad people, you also will live in a bad way.’"
+      "text": "Do not let anyone deceive you. Remember this:‘If you become a friend of bad people, you also will live in a bad way.’ ‘If you become a friend of bad people, you also will live in a bad way.’"
     },
     {
       "verse": "34",
-      "text": "So start thinking properly! Stop doing wrong things! Some of you do not really know God. I am saying this to make you feel ashamed. New bodies"
+      "text": "So start thinking properly! Stop doing wrong things! Some of you do not really know God. I am saying this to make you feel ashamed."
     },
     {
       "verse": "35",
@@ -1622,7 +1622,7 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "It says in the Bible, ‘The first man, Adam, became a person who received life.’ But Christ is like the last Adam. He is a spirit who gives life to people. See Genesis"
+      "text": "It says in the Bible, ‘The first man, Adam, became a person who received life.’ But Christ is like the last Adam. He is a spirit who gives life to people."
     },
     {
       "verse": "46",
@@ -1654,15 +1654,15 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "That has to happen. Our bodies that are becoming spoiled must change. They must change into bodies that never become spoiled. Our bodies that are dying must change into bodies that will never die."
+      "text": "That has to happen. Our bodies that are becoming spoiled must change. They must change into bodies that never become spoiled. Our bodies that are dying must change into bodies that will never die. ‘God has won against death. He has destroyed it completely!’"
     },
     {
       "verse": "54",
-      "text": "God will give us new bodies like that. When that happens, what is written in the Bible will become true. It says: ‘God has won against death. He has destroyed it completely!’ See Isaiah"
+      "text": "God will give us new bodies like that. When that happens, what is written in the Bible will become true. It says:‘God has won against death. He has destroyed it completely!’"
     },
     {
       "verse": "55",
-      "text": "‘Death, you can no longer win! Death, you no longer have any power to hurt us!’ See Hosea"
+      "text": "‘Death, you can no longer win!Death, you no longer have any power to hurt us!’ Death, you no longer have any power to hurt us!’"
     },
     {
       "verse": "56",
@@ -1674,7 +1674,7 @@ module.exports = {
     },
     {
       "verse": "58",
-      "text": "So you must continue to be strong in your spirits, my Christian friends that I love. Do not let anything move you away from your faith. Continue to work hard as you serve the Lord. You know that whatever you do for him will not be useless. Print... Use screen font size Show All Comments 1 Corinthians 141 Corinthians 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So you must continue to be strong in your spirits, my Christian friends that I love. Do not let anything move you away from your faith. Continue to work hard as you serve the Lord. You know that whatever you do for him will not be useless."
     }
   ],
   "16": [
@@ -1692,7 +1692,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I may also go myself, if that seems the right thing for me to do. Then they can travel with me. Galatia was part of the country that is called Turkey now."
+      "text": "I may also go myself, if that seems the right thing for me to do. Then they can travel with me."
     },
     {
       "verse": "5",
@@ -1712,7 +1712,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "God has given me the chance to do a great work here. But many people are against what I am doing. Macedonia was north from the country called Greece now. Ephesus was a city in the country that we call Turkey now. Pentecost was the special time each year when Israel's people thanked God for their food."
+      "text": "God has given me the chance to do a great work here. But many people are against what I am doing."
     },
     {
       "verse": "10",
@@ -1724,7 +1724,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "As for our Christian friend Apollos, I wanted him to visit you. I have often told him to come to you together with the other believers. But he does not think that this is the right time. He will come to you when he has the chance. Paul finishes his letter"
+      "text": "As for our Christian friend Apollos, I wanted him to visit you. I have often told him to come to you together with the other believers. But he does not think that this is the right time. He will come to you when he has the chance."
     },
     {
       "verse": "13",
@@ -1740,7 +1740,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "You must respect people like them. Do what they say. And also respect everyone who works hard to serve God together with them. Achaia was the south part of the country that we call Greece."
+      "text": "You must respect people like them. Do what they say. And also respect everyone who works hard to serve God together with them."
     },
     {
       "verse": "17",
@@ -1752,11 +1752,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The churches here in Asia region say ‘hello’ to you. Aquila and Priscilla, and the group of believers that meets in their house, also say ‘hello’ to you. They love you because you belong to the Lord, as they do."
+      "text": "The churches here in Asia region say ‘hello’ to you. Aquila and Priscilla, and the group of believers that meets in their house, also say ‘hello’ to you. They love you because you belong to the Lord, as they do. When you meet, kiss each other as Christian brothers and sisters."
     },
     {
       "verse": "20",
-      "text": "All the Christians here say ‘hello’ to you. When you meet, kiss each other as Christian brothers and sisters."
+      "text": "All the Christians here say ‘hello’ to you.When you meet, kiss each other as Christian brothers and sisters."
     },
     {
       "verse": "21",
@@ -1764,7 +1764,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "If anyone among you does not really love the Lord, I pray that God will curse that person. Our Lord, come now! We are waiting for you!"
+      "text": "If anyone among you does not really love the Lord, I pray that God will curse that person.Our Lord, come now! We are waiting for you! Our Lord, come now! We are waiting for you!"
     },
     {
       "verse": "23",
@@ -1772,7 +1772,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I love all of you who belong to Christ Jesus, as I do. Print... Use screen font size Show All Comments 1 Corinthians 152 Corinthians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I love all of you who belong to Christ Jesus, as I do."
     }
   ]
 };

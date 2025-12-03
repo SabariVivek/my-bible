@@ -1,8 +1,8 @@
 module.exports = {
   "1": [
     {
-      "verse": "1-2",
-      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests. Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me.’ When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. King Darius ruled over the country of Persia and over many other countries. Judah was one of those countries. It was where the Jews lived."
+      "verse": "1",
+      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests. Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me.’"
     },
     {
       "verse": "3",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I have stopped the rain, so that your fields and the hills have become dry. Your crops will not grow. There will be no grapes to make wine. You will not have olives to make oil. Nothing will grow in the ground. Your animals will not become fat. People and animals will all hurt. For all your work, you will get nothing.’ The people obey the Lord"
+      "text": "I have stopped the rain, so that your fields and the hills have become dry. Your crops will not grow. There will be no grapes to make wine. You will not have olives to make oil. Nothing will grow in the ground. Your animals will not become fat. People and animals will all hurt. For all your work, you will get nothing.’"
     },
     {
       "verse": "12",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "They started to work on the 24th day of that same month, in the second year after Darius had become king. Print... Use screen font size Show All Comments Haggai IntroductionHaggai 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They started to work on the 24th day of that same month, in the second year after Darius had become king."
     }
   ],
   "2": [
@@ -92,7 +92,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "This new temple will be even more beautiful than the old temple in past times. Here in this place I will bless my people.’ That is what the Almighty Lord says. The Lord will be good to his people"
+      "text": "This new temple will be even more beautiful than the old temple in past times. Here in this place I will bless my people.’ That is what the Almighty Lord says."
     },
     {
       "verse": "10",
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You have already eaten the crops that you stored. The grapes, figs, pomegranates and olives are not yet ready for you to pick. But after today, I will bless you. You will have many good things.’ Haggai explained why their lives had been so difficult. They had not done what was right. They had not done the things that the Lord had asked them to do. They had done what they themselves had decided. That is why their lives had been so difficult. But now they want to obey God. And they have started to build his temple. And so God promises that they will have enough food. He promises that they will have happy lives."
+      "text": "You have already eaten the crops that you stored. The grapes, figs, pomegranates and olives are not yet ready for you to pick. But after today, I will bless you. You will have many good things.’"
     },
     {
       "verse": "20",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But I, the Almighty Lord say this to you, Zerubbabel, son of Shealtiel. You are my servant and I have chosen you. On that special day, I will give to you the authority to rule on my behalf. That is the message of the Almighty Lord.’ Haggai gave this special message from the Lord to Zerubbabel. The Lord still ruled over everything. But he had chosen Zerubbabel to be his servant. The Lord wanted Zerubbabel to rule Judah on his behalf. Print... Use screen font size Show All Comments Haggai 1Zechariah Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But I, the Almighty Lord say this to you, Zerubbabel, son of Shealtiel. You are my servant and I have chosen you. On that special day, I will give to you the authority to rule on my behalf. That is the message of the Almighty Lord.’"
     }
   ]
 };

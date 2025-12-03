@@ -6,11 +6,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He said, ‘Go now to the great city of Nineveh. Tell the people in the city that I know how wicked they are. Tell them that I will punish them because of their sins.’ When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "He said, ‘Go now to the great city of Nineveh. Tell the people in the city that I know how wicked they are. Tell them that I will punish them because of their sins.’"
     },
     {
       "verse": "3",
-      "text": "But Jonah did not want to obey the Lord's command. He decided to run away to Tarshish. He went down to Joppa. There he found a ship that was ready to sail to Tarshish. After he had paid for the journey, he got into the ship. He wanted to go on the ship to Tarshish, to get far away from the Lord. Tarshish was a port that was far away to the west. Joppa was a port in Israel, on the shore of the Mediterranean Sea. A big storm"
+      "text": "But Jonah did not want to obey the Lord's command. He decided to run away to Tarshish. He went down to Joppa. There he found a ship that was ready to sail to Tarshish. After he had paid for the journey, he got into the ship. He wanted to go on the ship to Tarshish, to get far away from the Lord."
     },
     {
       "verse": "4",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So they said to Jonah, ‘Tell us, who has caused all this trouble for us? What is your job? Where do you come from? What country do you live in? Who is your family?’ The sailors were very afraid. They wanted to know who Jonah was. They wanted to know which gods he worshipped."
+      "text": "So they said to Jonah, ‘Tell us, who has caused all this trouble for us? What is your job? Where do you come from? What country do you live in? Who is your family?’"
     },
     {
       "verse": "9",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But the Lord sent a great fish to swallow Jonah. Jonah was inside the fish's stomach for three days and three nights. The great fish may have been what we call a whale. The Hebrew word could include whales as well as fish. ‘Swallow’ means that the fish took Jonah down into its stomach but it did not bite him. Print... Use screen font size Show All Comments Jonah IntroductionJonah 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the Lord sent a great fish to swallow Jonah. Jonah was inside the fish's stomach for three days and three nights."
     }
   ],
   "2": [
@@ -76,39 +76,39 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He said, ‘When I was in trouble, I called out to the Lord, and he answered my prayer. Yes, I called out to you for help from the deep hole of death, and you heard my prayer. The stomach of the great fish seemed as if it was Jonah's grave. He calls it the deep hole of death, the place where people go when they die."
+      "text": "He said,‘When I was in trouble, I called out to the Lord,and he answered my prayer.Yes, I called out to you for help from the deep hole of death,and you heard my prayer. ‘When I was in trouble, I called out to the Lord, and he answered my prayer. Yes, I called out to you for help from the deep hole of death, and you heard my prayer."
     },
     {
       "verse": "3",
-      "text": "You threw me into the deep water, and I fell into the middle of the sea. The deep water covered me. You sent big waves to roll over me."
+      "text": "You threw me into the deep water,and I fell into the middle of the sea.The deep water covered me.You sent big waves to roll over me. and I fell into the middle of the sea. The deep water covered me. You sent big waves to roll over me."
     },
     {
       "verse": "4",
-      "text": "I said to myself, “You have sent me far away from you. Now I will never see your holy temple again.” Or possibly: ‘But I know that I will see your holy temple again.’"
+      "text": "I said to myself,“You have sent me far away from you.Now I will never see your holy temple again.” “You have sent me far away from you. Now I will never see your holy temple again.”"
     },
     {
       "verse": "5",
-      "text": "The deep water of the sea covered me, so that my life was in danger. The plants in the sea were all around my head."
+      "text": "The deep water of the sea covered me,so that my life was in danger.The plants in the sea were all around my head. so that my life was in danger. The plants in the sea were all around my head."
     },
     {
       "verse": "6",
-      "text": "I went very deep in the water, as far as the bottom of the mountains. Deep in the earth, I was in a prison, and its gates had shut for ever. But, Lord, my God, you brought me up from that deep hole."
+      "text": "I went very deep in the water,as far as the bottom of the mountains.Deep in the earth, I was in a prison,and its gates had shut for ever.But, Lord, my God,you brought me up from that deep hole. as far as the bottom of the mountains. Deep in the earth, I was in a prison, and its gates had shut for ever. But, Lord, my God, you brought me up from that deep hole."
     },
     {
       "verse": "7",
-      "text": "When my life was nearly gone, I prayed to you, Lord. In your holy temple, you heard my prayer for help."
+      "text": "When my life was nearly gone, I prayed to you, Lord.In your holy temple, you heard my prayer for help. In your holy temple, you heard my prayer for help."
     },
     {
       "verse": "8",
-      "text": "Idols cannot help. People who worship them have turned away from a faithful God."
+      "text": "Idols cannot help.People who worship them have turned away from a faithful God. People who worship them have turned away from a faithful God."
     },
     {
       "verse": "9",
-      "text": "But as for me, I will sing to thank you. I will offer a sacrifice to you. I will do everything that I have promised to do. The Lord is the one who saves people!’"
+      "text": "But as for me, I will sing to thank you.I will offer a sacrifice to you.I will do everything that I have promised to do.The Lord is the one who saves people!’ I will offer a sacrifice to you. I will do everything that I have promised to do. The Lord is the one who saves people!’"
     },
     {
       "verse": "10",
-      "text": "Then the Lord told the great fish to spit Jonah out from its stomach. So it dropped Jonah onto the shore. Print... Use screen font size Show All Comments Jonah 1Jonah 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the Lord told the great fish to spit Jonah out from its stomach. So it dropped Jonah onto the shore."
     }
   ],
   "3": [
@@ -122,11 +122,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Jonah obeyed the Lord and he went to Nineveh. Nineveh was a very large city. Somebody would need three days to walk all through it."
+      "text": "Jonah obeyed the Lord and he went to Nineveh.Nineveh was a very large city. Somebody would need three days to walk all through it. Nineveh was a very large city. Somebody would need three days to walk all through it."
     },
     {
       "verse": "4",
-      "text": "When Jonah arrived in Nineveh, he walked for one day into the city. Then he shouted out to the people, ‘After 40 more days, God will destroy Nineveh.’ Jonah may have said more than these few words when he spoke God's message to the people in Nineveh."
+      "text": "When Jonah arrived in Nineveh, he walked for one day into the city. Then he shouted out to the people, ‘After 40 more days, God will destroy Nineveh.’"
     },
     {
       "verse": "5",
@@ -150,7 +150,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "God saw what the people in Nineveh did. He saw that they stopped doing evil things. He had said that he would punish them for their sins. But now he decided that he would not destroy them. Print... Use screen font size Show All Comments Jonah 2Jonah 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God saw what the people in Nineveh did. He saw that they stopped doing evil things. He had said that he would punish them for their sins. But now he decided that he would not destroy them."
     }
   ],
   "4": [
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jonah went out of Nineveh. He built a little hut on the east side of the city. He sat in the shade of the hut. He waited to see what would happen to the city. Jonah probably used sticks and leaves to build the hut, so that the sun would not burn him."
+      "text": "Jonah went out of Nineveh. He built a little hut on the east side of the city. He sat in the shade of the hut. He waited to see what would happen to the city."
     },
     {
       "verse": "6",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But God said to Jonah, ‘You are not right to be so angry about the plant.’ Jonah said, ‘I am right to be angry! I am so angry that I want to die.’"
+      "text": "But God said to Jonah, ‘You are not right to be so angry about the plant.’Jonah said, ‘I am right to be angry! I am so angry that I want to die.’ Jonah said, ‘I am right to be angry! I am so angry that I want to die.’"
     },
     {
       "verse": "10",
@@ -196,7 +196,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So it is right for me to be sorry about Nineveh. It is a great city. More than 120,000 people live in it. They cannot understand the difference between what is right and what is wrong. They also have many farm animals.’ Print... Use screen font size Show All Comments Jonah 3Micah Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So it is right for me to be sorry about Nineveh. It is a great city. More than 120,000 people live in it. They cannot understand the difference between what is right and what is wrong. They also have many farm animals.’"
     }
   ]
 };

@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. Our Christian friend Timothy is here with me as I write. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia."
+      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. Our Christian friend Timothy is here with me as I write.I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia. I am sending this letter to you, the people of the church in Corinth city. I am sending it also to all of God's people who live in other places in Achaia."
     },
     {
       "verse": "2",
-      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. God himself comforts us"
+      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": "3",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "We also know that you continue to help us as you pray for us. As many people pray for us, they will thank God when he answers their prayers. They will see that God is very kind to us, and they will thank him. Paul explains why he did not visit Corinth earlier"
+      "text": "We also know that you continue to help us as you pray for us. As many people pray for us, they will thank God when he answers their prayers. They will see that God is very kind to us, and they will thank him."
     },
     {
       "verse": "12",
@@ -57,12 +57,8 @@ module.exports = {
       "text": "You do not understand us completely yet. But I hope that you will understand completely on the day when our Lord Jesus returns. Then you can be proud of us in the same way that we will be proud of you."
     },
     {
-      "verse": "15-16",
-      "text": "So, because I was sure that you trusted me, I wanted to visit you twice. Then I could bring God's help to you twice. I decided to visit you first on my way to Macedonia. Then I would visit you again on my way back from Macedonia. After that, you could help to send me on my journey to Judea."
-    },
-    {
       "verse": "17",
-      "text": "I did not decide this in a careless way. I really wanted to do it. I do not decide to do things only to please myself, like someone who does not know God. I do not say ‘Yes,’ and then I immediately say ‘No’. Macedonia was north of the country that is called Greece now. Judea was the south region of Israel."
+      "text": "I did not decide this in a careless way. I really wanted to do it. I do not decide to do things only to please myself, like someone who does not know God. I do not say ‘Yes,’ and then I immediately say ‘No’."
     },
     {
       "verse": "18",
@@ -90,7 +86,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "We are not trying to tell you what you must believe, like masters would do. You are already strong in your spirits because you trust God. So we want to help you to be really happy. Print... Use screen font size Show All Comments 2 Corinthians Introduction2 Corinthians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We are not trying to tell you what you must believe, like masters would do. You are already strong in your spirits because you trust God. So we want to help you to be really happy."
+    },
+    {
+      "verse": "15-16",
+      "text": "So, because I was sure that you trusted me, I wanted to visit you twice. Then I could bring God's help to you twice. I decided to visit you first on my way to Macedonia. Then I would visit you again on my way back from Macedonia. After that, you could help to send me on my journey to Judea."
     }
   ],
   "2": [
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "We do not want Satan to win against us. He is very clever. We know how he likes to cause us to have trouble. The good news about Christ"
+      "text": "We do not want Satan to win against us. He is very clever. We know how he likes to cause us to have trouble."
     },
     {
       "verse": "12",
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But I was not happy in my thoughts because I could not find my friend Titus there. So I said ‘goodbye’ to those people and I travelled on to Macedonia. Troas was a city on the west coast of the country that is now called Turkey."
+      "text": "But I was not happy in my thoughts because I could not find my friend Titus there. So I said ‘goodbye’ to those people and I travelled on to Macedonia."
     },
     {
       "verse": "14",
@@ -156,11 +156,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "For the people who are dying, we are like a bad smell that brings a message of death. But for the people that God is saving, we are like a lovely smell that brings a message of new life. Nobody is really good enough to tell such an important message!"
+      "text": "For the people who are dying, we are like a bad smell that brings a message of death. But for the people that God is saving, we are like a lovely smell that brings a message of new life.Nobody is really good enough to tell such an important message!"
     },
     {
       "verse": "17",
-      "text": "Some people even tell God's message because they want to get a lot of money for themselves. But we are not like them. No, God himself has sent us to do this work. And he sees what we are doing. So we are honest and we speak God's message clearly, as Christ's servants should do. Print... Use screen font size Show All Comments 2 Corinthians 12 Corinthians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Some people even tell God's message because they want to get a lot of money for themselves. But we are not like them. No, God himself has sent us to do this work. And he sees what we are doing. So we are honest and we speak God's message clearly, as Christ's servants should do."
     }
   ],
   "3": [
@@ -174,7 +174,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "It is clear that you are a like a letter that Christ himself has written. We are the people who brought God's message to you. Now people see what God has done in your lives. That is like a letter that they read. But it is not a letter written on paper with ink. It is the Spirit of the living God who wrote it. He did not write it on pieces of stone. Instead, he wrote it deep inside you. Moses wrote the rules of God's Law on pieces of stone. See Exodus"
+      "text": "It is clear that you are a like a letter that Christ himself has written. We are the people who brought God's message to you. Now people see what God has done in your lives. That is like a letter that they read. But it is not a letter written on paper with ink. It is the Spirit of the living God who wrote it. He did not write it on pieces of stone. Instead, he wrote it deep inside you."
     },
     {
       "verse": "4",
@@ -186,7 +186,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God has made us his servants. So we are able to tell people the message of his new agreement. This new agreement is not about rules. Rules tell people what they must do and they bring death. But God's new agreement comes from his Spirit. And the Spirit brings new life to us, not death. This does not mean that God's rules themselves caused people to die. People saw that they were not good enough to obey those rules completely. So they could not, by themselves, please God. They needed God himself to save them from sin and death."
+      "text": "God has made us his servants. So we are able to tell people the message of his new agreement. This new agreement is not about rules. Rules tell people what they must do and they bring death. But God's new agreement comes from his Spirit. And the Spirit brings new life to us, not death."
     },
     {
       "verse": "7",
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But when a person turns to trust the Lord, then God takes the cloth away. See Exodus"
+      "text": "But when a person turns to trust the Lord, then God takes the cloth away."
     },
     {
       "verse": "17",
@@ -234,7 +234,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "We show the power of the Lord to other people. It is like God has removed a cloth from over our faces. He is changing us so that we become more and more like him. We show how great God is more and more clearly. It is the Lord who does all this, by the work of his Spirit. Print... Use screen font size Show All Comments 2 Corinthians 22 Corinthians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We show the power of the Lord to other people. It is like God has removed a cloth from over our faces. He is changing us so that we become more and more like him. We show how great God is more and more clearly. It is the Lord who does all this, by the work of his Spirit."
     }
   ],
   "4": [
@@ -260,7 +260,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God is the one who said, ‘Let light shine in the dark.’ And he is the one who has caused his light to shine deep inside us. Because of that, we know how great and powerful God is. We see that his power shines brightly in Christ's face. See Genesis Isaiah"
+      "text": "God is the one who said, ‘Let light shine in the dark.’ And he is the one who has caused his light to shine deep inside us. Because of that, we know how great and powerful God is. We see that his power shines brightly in Christ's face."
     },
     {
       "verse": "7",
@@ -296,7 +296,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "In everything that we do, we want to help you. As a result, more and more people are seeing how kind God is. So people are thanking God more and more. And that shows how great God is. See Psalm"
+      "text": "In everything that we do, we want to help you. As a result, more and more people are seeing how kind God is. So people are thanking God more and more. And that shows how great God is."
     },
     {
       "verse": "16",
@@ -308,7 +308,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So we do not look at the things that we can see in this world. Instead, we look at the things that people cannot see. The things that we can see are only here for a short time. But the things that we cannot see will continue for ever. Print... Use screen font size Show All Comments 2 Corinthians 32 Corinthians 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So we do not look at the things that we can see in this world. Instead, we look at the things that people cannot see. The things that we can see are only here for a short time. But the things that we cannot see will continue for ever."
     }
   ],
   "5": [
@@ -350,7 +350,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Because all of us must go and stand in front of Christ as our judge. He will decide about the things that we have done during our lives here on earth. Whether we have done good things or bad things, we will receive what is right for us. God makes us new people in Christ"
+      "text": "Because all of us must go and stand in front of Christ as our judge. He will decide about the things that we have done during our lives here on earth. Whether we have done good things or bad things, we will receive what is right for us."
     },
     {
       "verse": "11",
@@ -394,17 +394,17 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Christ never did any wrong thing, but God punished him as if he had. He died as punishment for our sins. As a result, we become right with God when we belong to Christ. We become right, because he is right. Print... Use screen font size Show All Comments 2 Corinthians 42 Corinthians 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Christ never did any wrong thing, but God punished him as if he had. He died as punishment for our sins. As a result, we become right with God when we belong to Christ. We become right, because he is right."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "So, as we work together with God, we tell you to be careful. Remember that God has been very kind and he has forgiven you. Do not waste that!"
+      "text": "So, as we work together with God, we tell you to be careful. Remember that God has been very kind and he has forgiven you. Do not waste that! ‘I listened to your prayer at the right time for me to help you. I helped you on the right day for me to save you.’ Listen! The right time is now! The day for God to save you is now!"
     },
     {
       "verse": "2",
-      "text": "In the Bible God says: ‘I listened to your prayer at the right time for me to help you. I helped you on the right day for me to save you.’ See Isaiah Listen! The right time is now! The day for God to save you is now!"
+      "text": "In the Bible God says:‘I listened to your prayer at the right time for me to help you.I helped you on the right day for me to save you.’Listen! The right time is now! The day for God to save you is now!"
     },
     {
       "verse": "3",
@@ -448,11 +448,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I am speaking to you as I would speak to my own children. Be fair to us! Accept us as your friends, just as we have accepted you. Believers belong to God"
+      "text": "I am speaking to you as I would speak to my own children. Be fair to us! Accept us as your friends, just as we have accepted you."
     },
     {
       "verse": "14",
-      "text": "Do not become united with people who do not believe in Christ. God has made you right with himself. Right and wrong cannot work together. Light and dark cannot join together."
+      "text": "Do not become united with people who do not believe in Christ. God has made you right with himself. Right and wrong cannot work together. Light and dark cannot join together. ‘I will make my home with them and I will live among them. I will be their God and they will be my people.’"
     },
     {
       "verse": "15",
@@ -460,15 +460,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Idols do not belong in God's house. Remember that we believers are the house of the God who lives for ever. This is what God has said: ‘I will make my home with them and I will live among them. I will be their God and they will be my people.’ See Leviticus Jeremiah Ezekiel"
+      "text": "Idols do not belong in God's house. Remember that we believers are the house of the God who lives for ever. This is what God has said:‘I will make my home with them and I will live among them.I will be their God and they will be my people.’"
     },
     {
       "verse": "17",
-      "text": "And so, the Lord says: ‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you.’ See Isaiah Ezekiel"
+      "text": "And so, the Lord says:‘Come out from among them and be separate.Do not touch anything that is disgusting.Then I will accept you.’ ‘Come out from among them and be separate. Do not touch anything that is disgusting. Then I will accept you.’"
     },
     {
       "verse": "18",
-      "text": "He also says: ‘I will be a Father to you. You will be my sons and my daughters. That is what the Almighty Lord God says.’ See 2 Samuel Print... Use screen font size Show All Comments 2 Corinthians 52 Corinthians 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He also says:‘I will be a Father to you.You will be my sons and my daughters.That is what the Almighty Lord God says.’"
     }
   ],
   "7": [
@@ -498,7 +498,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "God comforted us not only because Titus came to us. He comforted us also by what Titus told us about you. He said that you had helped him to be strong. He told us that you want to see me. He told us that you are very sad about what happened. He told us also that you are ready to help me. Because of what Titus told us about you, I was very happy. Macedonia was north from the country that we call Greece today."
+      "text": "God comforted us not only because Titus came to us. He comforted us also by what Titus told us about you. He said that you had helped him to be strong. He told us that you want to see me. He told us that you are very sad about what happened. He told us also that you are ready to help me. Because of what Titus told us about you, I was very happy."
     },
     {
       "verse": "8",
@@ -522,7 +522,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "That is how God has comforted us. It was not only us that God comforted. When Titus came, we were very happy to see how happy he was too. He was happy because all of you had taken care of him."
+      "text": "That is how God has comforted us.It was not only us that God comforted. When Titus came, we were very happy to see how happy he was too. He was happy because all of you had taken care of him."
     },
     {
       "verse": "14",
@@ -534,7 +534,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So now I am very happy because I trust you to do what is right. Print... Use screen font size Show All Comments 2 Corinthians 62 Corinthians 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So now I am very happy because I trust you to do what is right."
     }
   ],
   "8": [
@@ -572,7 +572,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "You know that our Lord Jesus Christ is very kind. He was rich, but he made himself poor to help you. So then, because he became poor, you could become rich. In heaven, Jesus had everything. When he came to the earth, he left all that he had with God in heaven. He lived as a poor person on the earth. Because he did what God wanted, we become rich if we believe in him. We have a new life and we share in all the good things of heaven. See Philippians"
+      "text": "You know that our Lord Jesus Christ is very kind. He was rich, but he made himself poor to help you. So then, because he became poor, you could become rich."
     },
     {
       "verse": "10",
@@ -588,7 +588,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "My purpose is not to bring trouble to you. You should not have pain while other people have plenty. Instead, both you and they should have enough."
+      "text": "My purpose is not to bring trouble to you. You should not have pain while other people have plenty. Instead, both you and they should have enough. ‘The person who picked up a lot did not have too much. And the person who picked up a small amount also had enough.’"
     },
     {
       "verse": "14",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "It says this in the Bible: ‘The person who picked up a lot did not have too much. And the person who picked up a small amount also had enough.’ See Exodus When the Israelite people were in the wilderness, God gave them manna for their food. They had to go out and pick up the manna each day. Each family had enough for them to eat that day. God always gave them just the right amount. Paul is sending Titus to Corinth"
+      "text": "It says this in the Bible:‘The person who picked up a lot did not have too much.And the person who picked up a small amount also had enough.’"
     },
     {
       "verse": "16",
@@ -620,7 +620,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Our purpose is to do only what is right. We want the Lord to see that, and people must see it as well. See Proverbs"
+      "text": "Our purpose is to do only what is right. We want the Lord to see that, and people must see it as well."
     },
     {
       "verse": "22",
@@ -632,7 +632,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "So show these men that you love them. Then all the churches will be sure about you. They will know that we were right to be proud of you. Print... Use screen font size Show All Comments 2 Corinthians 72 Corinthians 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So show these men that you love them. Then all the churches will be sure about you. They will know that we were right to be proud of you."
     }
   ],
   "9": [
@@ -654,7 +654,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So I decided to tell these men to visit you before I come myself. They will help you to prepare the gift that you promised. Then it will be ready when I arrive. Everyone will know that you really wanted to give this gift. Nobody has made you give it. It is good to give as much as you can"
+      "text": "So I decided to tell these men to visit you before I come myself. They will help you to prepare the gift that you promised. Then it will be ready when I arrive. Everyone will know that you really wanted to give this gift. Nobody has made you give it."
     },
     {
       "verse": "6",
@@ -666,11 +666,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Since God loves you, he is able to give you more than you need. You will always have every good thing that you need for yourselves. And you will have enough to do many good things to help other people."
+      "text": "Since God loves you, he is able to give you more than you need. You will always have every good thing that you need for yourselves. And you will have enough to do many good things to help other people. ‘He has shared his things with many poor people. God will always remember how kind that person has been.’"
     },
     {
       "verse": "9",
-      "text": "The Bible says this about someone who helps other people: ‘He has shared his things with many poor people. God will always remember how kind that person has been.’ See Psalm"
+      "text": "The Bible says this about someone who helps other people:‘He has shared his things with many poor people.God will always remember how kind that person has been.’"
     },
     {
       "verse": "10",
@@ -694,7 +694,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Yes, we should all thank God for his very great gift. That gift is too great to describe it with words! The great gift that God has given to us is his Son, Jesus Christ. God sent him to die, so that we could be forgiven. Print... Use screen font size Show All Comments 2 Corinthians 82 Corinthians 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, we should all thank God for his very great gift. That gift is too great to describe it with words!"
     }
   ],
   "10": [
@@ -756,7 +756,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "We do not praise ourselves for the work that other people have done. That would not be right. But we hope that you will continue to believe more and more strongly. In that way our work among you will become even greater. But it will still be the work that God has given to us, and no more than that."
+      "text": "We do not praise ourselves for the work that other people have done. That would not be right. But we hope that you will continue to believe more and more strongly. In that way our work among you will become even greater. But it will still be the work that God has given to us, and no more than that. ‘If you want to be proud about something, be proud of what the Lord has done.’"
     },
     {
       "verse": "16",
@@ -764,11 +764,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Bible says this: ‘If you want to be proud about something, be proud of what the Lord has done.’"
+      "text": "The Bible says this:‘If you want to be proud about something,be proud of what the Lord has done.’"
     },
     {
       "verse": "18",
-      "text": "Who is really good? It is not the person who praises himself. It is the person that the Lord says is a good person. Print... Use screen font size Show All Comments 2 Corinthians 92 Corinthians 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Who is really good? It is not the person who praises himself. It is the person that the Lord says is a good person."
     }
   ],
   "11": [
@@ -786,7 +786,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "You are ready to listen to any false teachers who come to you. They might tell you about a different Jesus from the Jesus that we told you about. They might want you to receive a different spirit from the Spirit that you received from us. They might tell you a different kind of good news from the message that you heard from us. You seem to accept all this! See Genesis 3."
+      "text": "You are ready to listen to any false teachers who come to you. They might tell you about a different Jesus from the Jesus that we told you about. They might want you to receive a different spirit from the Spirit that you received from us. They might tell you a different kind of good news from the message that you heard from us. You seem to accept all this!"
     },
     {
       "verse": "5",
@@ -830,7 +830,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So do not be surprised when Satan's servants do the same thing. They can also seem to be serving God. They may seem to be doing good things, but really what they do is bad. So God will punish them in the end. Paul speaks about his own work"
+      "text": "So do not be surprised when Satan's servants do the same thing. They can also seem to be serving God. They may seem to be doing good things, but really what they do is bad. So God will punish them in the end."
     },
     {
       "verse": "16",
@@ -854,7 +854,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But we were not brave enough to do things like that to you. Should I be ashamed of that? But other people are brave enough to praise themselves. So I will also be proud of the same things. (Now I am talking like a fool!)"
+      "text": "But we were not brave enough to do things like that to you. Should I be ashamed of that?But other people are brave enough to praise themselves. So I will also be proud of the same things. (Now I am talking like a fool!)"
     },
     {
       "verse": "22",
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Are they Christ's servants? I serve him even better than they do! (Now I am speaking like a crazy person.) I work much more than they have worked. I have been in prison more often than they have. People have hit me with whips very many times. I have nearly died many times. The Jews were also called Hebrews. At this time, most Jews spoke the Aramaic language. If they could also speak the Hebrew language, they were very proud."
+      "text": "Are they Christ's servants? I serve him even better than they do! (Now I am speaking like a crazy person.) I work much more than they have worked. I have been in prison more often than they have. People have hit me with whips very many times. I have nearly died many times."
     },
     {
       "verse": "24",
@@ -902,7 +902,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "But my friends put me in a basket on the end of a rope. They sent me out through a window in the city wall and they let me drop to the ground. That is how I got away from the ruler of the city. See Acts Print... Use screen font size Show All Comments 2 Corinthians 102 Corinthians 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But my friends put me in a basket on the end of a rope. They sent me out through a window in the city wall and they let me drop to the ground. That is how I got away from the ruler of the city."
     }
   ],
   "12": [
@@ -913,10 +913,6 @@ module.exports = {
     {
       "verse": "2",
       "text": "I know a certain man who belongs to Christ. 14 years ago, God quickly took this man up to the third heaven. Perhaps this man was still in his body. Perhaps he had gone away from his body. I do not know. Only God knows."
-    },
-    {
-      "verse": "3-4",
-      "text": "I know that God took this man up to paradise. I do not know whether this man was still in his body or not. Only God knows. When this man was in heaven, he heard about secret things. Those are things that no words can describe. God will not let any person speak about those things. They are too special. Paul is probably speaking about himself in these verses, but he speaks as if it is someone else. The third heaven (or highest heaven) is the place where God himself lives."
     },
     {
       "verse": "5",
@@ -936,11 +932,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But he said to me, ‘I will be kind to you and I will help you. That will be enough for you. When you are weak, I will show that I am completely powerful to help you.’ So I am happy to be proud about my weakness. Then I know that Christ's power will be with me."
+      "text": "But he said to me, ‘I will be kind to you and I will help you. That will be enough for you. When you are weak, I will show that I am completely powerful to help you.’So I am happy to be proud about my weakness. Then I know that Christ's power will be with me."
     },
     {
       "verse": "10",
-      "text": "That is why I am happy even when I am weak. People may insult me. They may bring me trouble. They may want to hurt me. I may have many kinds of trouble. But I am still happy because I am serving Christ. Yes, whenever I am weak, then I am strong. Paul is a true apostle"
+      "text": "That is why I am happy even when I am weak. People may insult me. They may bring me trouble. They may want to hurt me. I may have many kinds of trouble. But I am still happy because I am serving Christ. Yes, whenever I am weak, then I am strong."
     },
     {
       "verse": "11",
@@ -952,7 +948,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I worked among you in the same way as I did with the other churches. You were never less important to me than they are. The only difference is that I did not ask you to help me with money. So perhaps I should ask you to forgive me for that! See 2 Corinthians"
+      "text": "I worked among you in the same way as I did with the other churches. You were never less important to me than they are. The only difference is that I did not ask you to help me with money. So perhaps I should ask you to forgive me for that!"
     },
     {
       "verse": "14",
@@ -984,7 +980,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I am afraid that I may be very sad when I come back to you. My God may cause me to feel ashamed about you. Some of you may still be doing bad and disgusting things. You may be having sex with people that you are not married to, or in other wrong ways. Those are the bad things that many of you did at one time. If you have not turned away from those bad things, that will make me weep. Print... Use screen font size Show All Comments 2 Corinthians 112 Corinthians 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I am afraid that I may be very sad when I come back to you. My God may cause me to feel ashamed about you. Some of you may still be doing bad and disgusting things. You may be having sex with people that you are not married to, or in other wrong ways. Those are the bad things that many of you did at one time. If you have not turned away from those bad things, that will make me weep."
+    },
+    {
+      "verse": "3-4",
+      "text": "I know that God took this man up to paradise. I do not know whether this man was still in his body or not. Only God knows. When this man was in heaven, he heard about secret things. Those are things that no words can describe. God will not let any person speak about those things. They are too special."
     }
   ],
   "13": [
@@ -1002,7 +1002,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "People killed Christ on the cross as a weak person. But he now lives by God's power. We are also weak as we serve Christ, like he was weak. But we live, because he now lives. So, when we come to you, we will show God's power among you. See Deuteronomy Matthew"
+      "text": "People killed Christ on the cross as a weak person. But he now lives by God's power. We are also weak as we serve Christ, like he was weak. But we live, because he now lives. So, when we come to you, we will show God's power among you."
     },
     {
       "verse": "5",
@@ -1026,7 +1026,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "That is why I am writing these things to you now, while I am away from you. Then, when I arrive, I will not need to be angry with you. I will not have to use my authority to punish you. The Lord gave that authority to me to help you to become stronger as believers. He did not give it to me so that I could destroy you. Paul finishes his letter"
+      "text": "That is why I am writing these things to you now, while I am away from you. Then, when I arrive, I will not need to be angry with you. I will not have to use my authority to punish you. The Lord gave that authority to me to help you to become stronger as believers. He did not give it to me so that I could destroy you."
     },
     {
       "verse": "11",
@@ -1042,7 +1042,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I pray that the Lord Jesus Christ will continue to be very kind to you all. I pray that God's love will be with you. And I pray that the Holy Spirit will help you to serve each other as friends. Print... Use screen font size Show All Comments 2 Corinthians 12Galatians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that the Lord Jesus Christ will continue to be very kind to you all. I pray that God's love will be with you. And I pray that the Holy Spirit will help you to serve each other as friends."
     }
   ]
 };

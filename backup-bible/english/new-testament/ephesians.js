@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him."
+      "text": "This letter is from me, Paul. God chose me to be an apostle of Christ Jesus.I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him. I am writing to you, God's own people who live in Ephesus. You are those who continue to believe in Christ Jesus, and so you belong to him."
     },
     {
       "verse": "2",
-      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. God blesses us as Christians"
+      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": "3",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "God has put his Holy Spirit inside us now. As a result, we know that one day we will receive all the good things that God has promised. At that time we will be completely free, because we belong to God. So we praise God and we say that he is great! Paul probably means the first Jewish believers. Paul prays for the Ephesian Christians"
+      "text": "God has put his Holy Spirit inside us now. As a result, we know that one day we will receive all the good things that God has promised. At that time we will be completely free, because we belong to God. So we praise God and we say that he is great!"
     },
     {
       "verse": "15",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You will also know how very powerful God is. He uses that power to help us now, as we trust in Christ. God's power is greater than anything we could ever know."
+      "text": "You will also know how very powerful God is. He uses that power to help us now, as we trust in Christ.God's power is greater than anything we could ever know."
     },
     {
       "verse": "20",
@@ -90,7 +90,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The church is like Christ's body and he is its head. Christ fills all things everywhere and he causes the church to become complete. The right side is the most important place. Print... Use screen font size Show All Comments Ephesians IntroductionEphesians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The church is like Christ's body and he is its head. Christ fills all things everywhere and he causes the church to become complete."
     }
   ],
   "2": [
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "It is God who has worked in us to make us what we are. He has given us a new life because we are united with Christ Jesus. He saved us so that now we can do good things in our lives. Those are good things that he has already prepared for us to do. Christ has brought Jews and Gentiles together"
+      "text": "It is God who has worked in us to make us what we are. He has given us a new life because we are united with Christ Jesus. He saved us so that now we can do good things in our lives. Those are good things that he has already prepared for us to do."
     },
     {
       "verse": "11",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Now we all have received the same Holy Spirit, because of what Christ has done for us. As a result, we can all come near to God the Father. The Jews already knew about God. God had given them his Laws. He promised to take care of them if they obeyed him. He promised to send his special Messiah to save them. The Gentiles did not know about those things."
+      "text": "Now we all have received the same Holy Spirit, because of what Christ has done for us. As a result, we can all come near to God the Father."
     },
     {
       "verse": "19",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Because you belong to Christ, God is building you all together to become his house. That is where God lives by his Spirit. Print... Use screen font size Show All Comments Ephesians 1Ephesians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Because you belong to Christ, God is building you all together to become his house. That is where God lives by his Spirit."
     }
   ],
   "3": [
@@ -206,7 +206,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "This is the message of God's good news: Gentiles, as well as Jews, may receive the good things that God has prepared for his children. We may all belong to the same group of God's people, like we are his body. Everyone who is united with Christ Jesus receives the good things that God has promised. See Ephesians"
+      "text": "This is the message of God's good news: Gentiles, as well as Jews, may receive the good things that God has prepared for his children. We may all belong to the same group of God's people, like we are his body. Everyone who is united with Christ Jesus receives the good things that God has promised."
     },
     {
       "verse": "7",
@@ -234,7 +234,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "So do not become weak or afraid. I am now suffering so that I can help you. So you should be strong, so that God will bless you. Paul prays for the Christians at Ephesus"
+      "text": "So do not become weak or afraid. I am now suffering so that I can help you. So you should be strong, so that God will bless you."
     },
     {
       "verse": "14",
@@ -266,7 +266,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "We want all God's people to know that God is great! Everyone who belongs to his church and who trusts in Christ Jesus should praise him! We should praise him always and for ever. Amen. That is true! Print... Use screen font size Show All Comments Ephesians 2Ephesians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We want all God's people to know that God is great! Everyone who belongs to his church and who trusts in Christ Jesus should praise him! We should praise him always and for ever. Amen. That is true!"
     }
   ],
   "4": [
@@ -292,15 +292,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "There is one God, who is the Father of all of us. He has authority over all of us. He works through all of us. He is in all of us. Baptism shows that a Christian has been united with Christ. All Christians have died with Christ and they have risen up to a new life, as Christ did. This is the same for all Christians, so there is only one kind of baptism."
+      "text": "There is one God, who is the Father of all of us. He has authority over all of us. He works through all of us. He is in all of us."
     },
     {
       "verse": "7",
-      "text": "But God has been kind to all of us. Each of us has received a special gift, just as Christ has decided to give us."
+      "text": "But God has been kind to all of us. Each of us has received a special gift, just as Christ has decided to give us. ‘When he went up to the highest place, he led many prisoners with him. Then he gave gifts to his people.’"
     },
     {
       "verse": "8",
-      "text": "This is what it says about him: ‘When he went up to the highest place, he led many prisoners with him. Then he gave gifts to his people.’ This is like Psalm Or it may have been a song that the Christians sang. Christ takes things from his enemies and he gives them to his own people."
+      "text": "This is what it says about him:‘When he went up to the highest place,he led many prisoners with him.Then he gave gifts to his people.’"
     },
     {
       "verse": "9",
@@ -332,7 +332,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "As its head, he helps the whole body to grow well. Each part joins with the other parts so that the whole body becomes strong. As each separate part does its proper work, we love each other more and more. Live in a way that pleases God"
+      "text": "As its head, he helps the whole body to grow well. Each part joins with the other parts so that the whole body becomes strong. As each separate part does its proper work, we love each other more and more."
     },
     {
       "verse": "17",
@@ -396,7 +396,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Instead, help one another and be kind to each other. Forgive one another. Remember that God has forgiven you because of what Christ has done. Print... Use screen font size Show All Comments Ephesians 3Ephesians 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Instead, help one another and be kind to each other. Forgive one another. Remember that God has forgiven you because of what Christ has done."
     }
   ],
   "5": [
@@ -422,7 +422,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Do not let anyone have a chance to deceive you with a false message about those kinds of bad things. God will certainly punish people who do not obey him."
+      "text": "Do not let anyone have a chance to deceive you with a false message about those kinds of bad things. God will certainly punish people who do not obey him. ‘Wake up, you people who are asleep! Rise up from among the dead people! Then Christ will shine his light on you.’"
     },
     {
       "verse": "7",
@@ -454,7 +454,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Everything that becomes clear to see is in the light. That is why it says: ‘Wake up, you people who are asleep! Rise up from among the dead people! Then Christ will shine his light on you.’ These words may come from an old Christian song."
+      "text": "Everything that becomes clear to see is in the light. That is why it says:‘Wake up, you people who are asleep!Rise up from among the dead people!Then Christ will shine his light on you.’"
     },
     {
       "verse": "15",
@@ -478,7 +478,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "And always thank God, the Father, for everything, by our Lord Jesus Christ's name. Wives and husbands"
+      "text": "And always thank God, the Father, for everything, by our Lord Jesus Christ's name."
     },
     {
       "verse": "21",
@@ -530,7 +530,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "But each one of you husbands should understand this: love your own wife as you love yourself. And every wife among you must respect her husband. See Genesis Print... Use screen font size Show All Comments Ephesians 4Ephesians 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But each one of you husbands should understand this: love your own wife as you love yourself. And every wife among you must respect her husband."
     }
   ],
   "6": [
@@ -544,11 +544,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The promise is this: ‘As a result, you will be happy and you will live for a long time on the earth.’ See Exodus Deuteronomy"
+      "text": "The promise is this: ‘As a result, you will be happy and you will live for a long time on the earth.’"
     },
     {
       "verse": "4",
-      "text": "Fathers, do not do things that make your children angry. Instead, teach them carefully as they grow up. Help them to understand the message of the Lord, and help them to obey it. Slaves and masters"
+      "text": "Fathers, do not do things that make your children angry. Instead, teach them carefully as they grow up. Help them to understand the message of the Lord, and help them to obey it."
     },
     {
       "verse": "5",
@@ -568,7 +568,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "You who are masters, be good to your slaves in the same way. Do not frighten them with punishment. Remember that both you and your slaves have the same Master in heaven. And he is always fair when he judges people, whoever they are. How God helps us to be strong"
+      "text": "You who are masters, be good to your slaves in the same way. Do not frighten them with punishment. Remember that both you and your slaves have the same Master in heaven. And he is always fair when he judges people, whoever they are."
     },
     {
       "verse": "10",
@@ -600,7 +600,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Remember that God has saved you from your sins. That will be like a strong hat that keeps your head safe. Also, use God's message to help you. That will be like a sword that God's Spirit puts in your hand. People used belts to hold their long clothes up from the ground, so that they were ready to fight. The Devil says things against us that can hurt us. These are like arrows that soldiers use to fight their enemies. But if we trust God, he will keep us safe against the Devil's lies."
+      "text": "Remember that God has saved you from your sins. That will be like a strong hat that keeps your head safe. Also, use God's message to help you. That will be like a sword that God's Spirit puts in your hand."
     },
     {
       "verse": "18",
@@ -612,7 +612,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "God has sent me to tell people the good news on his behalf. And that is why I am now in prison. So pray that I will speak God's message bravely, as I ought to speak it. Paul finishes his letter"
+      "text": "God has sent me to tell people the good news on his behalf. And that is why I am now in prison. So pray that I will speak God's message bravely, as I ought to speak it."
     },
     {
       "verse": "21",
@@ -628,7 +628,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I pray that God will be very kind to everyone who continues to love our Lord Jesus Christ. Print... Use screen font size Show All Comments Ephesians 5Philippians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that God will be very kind to everyone who continues to love our Lord Jesus Christ."
     }
   ]
 };

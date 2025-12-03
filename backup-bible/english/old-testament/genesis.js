@@ -6,19 +6,19 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The earth was without shape and it was empty. Deep water covered the earth and everywhere was dark. The Spirit of God moved above the water. God was present before he made the universe. He made everything."
+      "text": "The earth was without shape and it was empty. Deep water covered the earth and everywhere was dark. The Spirit of God moved above the water."
     },
     {
       "verse": "3",
-      "text": "God said, ‘There will be light!’ And there was light."
+      "text": "God said, ‘There will be light!’And there was light. And there was light."
     },
     {
       "verse": "4",
-      "text": "God saw that the light was good. He caused the light and the dark to be separate."
+      "text": "God saw that the light was good.He caused the light and the dark to be separate. He caused the light and the dark to be separate."
     },
     {
       "verse": "5",
-      "text": "God called the light ‘day’. He called the dark ‘night’. Evening passed and then it was morning. That was the first day. Light appeared when it was morning. It was dark at night. One day is a time of light and a time of dark."
+      "text": "God called the light ‘day’. He called the dark ‘night’.Evening passed and then it was morning.That was the first day. Evening passed and then it was morning. That was the first day."
     },
     {
       "verse": "6",
@@ -30,35 +30,35 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "God called the wide space ‘sky’. Evening passed and then it was morning. That was the second day."
+      "text": "God called the wide space ‘sky’.Evening passed and then it was morning.That was the second day. Evening passed and then it was morning. That was the second day."
     },
     {
       "verse": "9",
-      "text": "God said, ‘The water that is under the sky will come together in one place. Then dry ground will appear.’ And what God said happened."
+      "text": "God said, ‘The water that is under the sky will come together in one place. Then dry ground will appear.’And what God said happened. And what God said happened."
     },
     {
       "verse": "10",
-      "text": "God called the dry ground ‘land’. He called the water that had come together ‘sea’. God looked at what he had made. He saw that it was good."
+      "text": "God called the dry ground ‘land’. He called the water that had come together ‘sea’.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "11",
-      "text": "Then God said, ‘The land will cause plants to grow. There will be plants with their seeds and trees with their fruits. Each kind of plant and tree will have its own seeds and fruits.’ And what God said happened."
+      "text": "Then God said, ‘The land will cause plants to grow. There will be plants with their seeds and trees with their fruits. Each kind of plant and tree will have its own seeds and fruits.’And what God said happened. And what God said happened."
     },
     {
       "verse": "12",
-      "text": "All kinds of plants and trees began to grow in the ground. The plants made seeds. The trees made fruits with seeds in them. Each plant made its own kind of seeds. God looked at what he had made. He saw that it was good."
+      "text": "All kinds of plants and trees began to grow in the ground. The plants made seeds. The trees made fruits with seeds in them. Each plant made its own kind of seeds.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "13",
-      "text": "Evening passed and then it was morning. That was the third day."
+      "text": "Evening passed and then it was morning.That was the third day. That was the third day."
     },
     {
       "verse": "14",
-      "text": "God said, ‘There will be lights all across the sky. They will make the day different from the night. They will show the seasons, days and years."
+      "text": "God said, ‘There will be lights all across the sky. They will make the day different from the night. They will show the seasons, days and years. And what God said happened."
     },
     {
       "verse": "15",
-      "text": "The lights in the sky will give light to the earth.’ Lights’ means bright things that shine. And what God said happened."
+      "text": "The lights in the sky will give light to the earth.’And what God said happened."
     },
     {
       "verse": "16",
@@ -70,11 +70,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They were to rule over the day and night. They were to make the time of light separate from the time of dark. God looked at what he had made. He saw that it was good."
+      "text": "They were to rule over the day and night. They were to make the time of light separate from the time of dark.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "19",
-      "text": "Evening passed and then it was morning. That was the fourth day."
+      "text": "Evening passed and then it was morning.That was the fourth day. That was the fourth day."
     },
     {
       "verse": "20",
@@ -82,35 +82,35 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "God made big animals to live in the sea. He made every different kind of living thing that filled the sea. He made every different kind of bird to fly in the sky. God looked at what he had made. He saw that it was good."
+      "text": "God made big animals to live in the sea. He made every different kind of living thing that filled the sea. He made every different kind of bird to fly in the sky.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "22",
-      "text": "God blessed the animals and the birds. He said to them, ‘Give birth to many young ones, so that you grow in number. Fill all the water in the seas. The birds also should become very many, all across the earth.’ Birds’ here may include any living thing that can fly, for example bats and insects."
+      "text": "God blessed the animals and the birds. He said to them, ‘Give birth to many young ones, so that you grow in number. Fill all the water in the seas. The birds also should become very many, all across the earth.’"
     },
     {
       "verse": "23",
-      "text": "Evening passed and then it was morning. That was the fifth day."
+      "text": "Evening passed and then it was morning.That was the fifth day. That was the fifth day."
     },
     {
       "verse": "24",
-      "text": "God said, ‘Different kinds of animals will now appear on the land. There will be farm animals and wild animals. There will also be other small animals that move along the ground. There will be many kinds of animals and each kind will be different.’ Farm animals are animals that usually live in a village or on a farm. People take care of them and they may use their milk or their meat as food. And what God said happened."
+      "text": "God said, ‘Different kinds of animals will now appear on the land. There will be farm animals and wild animals. There will also be other small animals that move along the ground. There will be many kinds of animals and each kind will be different.’And what God said happened. And what God said happened."
     },
     {
       "verse": "25",
-      "text": "God made the different kinds of wild animals and the different kinds of farm animals. He made all the different kinds of animals that move along the ground. God looked at what he had made. He saw that it was good."
+      "text": "God made the different kinds of wild animals and the different kinds of farm animals. He made all the different kinds of animals that move along the ground.God looked at what he had made. He saw that it was good. God looked at what he had made. He saw that it was good."
     },
     {
       "verse": "26",
-      "text": "Then God said, ‘We will make humans so that they are very much like us. They will rule over the fish in the sea and over the birds in the sky. They will rule over the farm animals. They will rule over the whole earth and all the animals that move along the ground.’ When God speaks about himself as ‘us’, he is speaking as the three persons of God. They are God the Father, God the Son (Jesus) and God the Holy Spirit. God was there as all three persons when he made the universe."
+      "text": "Then God said, ‘We will make humans so that they are very much like us. They will rule over the fish in the sea and over the birds in the sky. They will rule over the farm animals. They will rule over the whole earth and all the animals that move along the ground.’"
     },
     {
       "verse": "27",
-      "text": "God made humans. He made them to be like himself. He made some of them males and some of them females."
+      "text": "God made humans.He made them to be like himself.He made some of them males and some of them females. He made them to be like himself. He made some of them males and some of them females."
     },
     {
       "verse": "28",
-      "text": "God blessed them. He said to them, ‘Give birth to children. Grow in number. Fill the earth and rule over it. Rule over the fish in the sea. Rule over the birds in the sky. Rule over every different kind of living animal that moves along the ground.’ God told the man and the woman to rule over the earth. This means that they have authority over the earth and everything in it. It also means that they must take care of everything."
+      "text": "God blessed them. He said to them, ‘Give birth to children. Grow in number. Fill the earth and rule over it. Rule over the fish in the sea. Rule over the birds in the sky. Rule over every different kind of living animal that moves along the ground.’"
     },
     {
       "verse": "29",
@@ -118,11 +118,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "I give to the animals green plants for their food. It will be food for all the animals on the earth, all the birds in the sky and all the animals that move along the ground. Everything that has life may eat every kind of green plant.’ And what God said happened."
+      "text": "I give to the animals green plants for their food. It will be food for all the animals on the earth, all the birds in the sky and all the animals that move along the ground. Everything that has life may eat every kind of green plant.’And what God said happened. And what God said happened."
     },
     {
       "verse": "31",
-      "text": "God looked at everything that he had made. He saw that it was very good. Evening passed. And then it was morning. That was the sixth day. Print... Use screen font size Show All Comments Genesis IntroductionGenesis 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "God looked at everything that he had made. He saw that it was very good.Evening passed. And then it was morning.That was the sixth day."
     }
   ],
   "2": [
@@ -136,11 +136,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "God blessed the seventh day. He made it a special day, because he had finished making everything. He did not work on that day. God makes a man and a woman"
+      "text": "God blessed the seventh day. He made it a special day, because he had finished making everything. He did not work on that day."
     },
     {
       "verse": "4",
-      "text": "This is what happened when God made the heavens and the earth. When the Lord God made the heavens and the earth,"
+      "text": "This is what happened when God made the heavens and the earth.When the Lord God made the heavens and the earth,"
     },
     {
       "verse": "5",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But streams of water were coming up from the earth. The water made all the top of the ground wet. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It means ‘I am who I am’. This shows that God has always been alive and he will always be alive."
+      "text": "But streams of water were coming up from the earth. The water made all the top of the ground wet."
     },
     {
       "verse": "7",
@@ -160,7 +160,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Lord God made all kinds of trees grow from the ground there. The trees were beautiful to look at. The fruit from the trees was good for people to eat. In the middle of the garden were two special trees. One was the tree that gives life. The other was the tree that gives knowledge of what is good and what is evil. in the east’ means that it was east of the land of Canaan. Canaan was the land that God gave to his people as their home much later on. Eden was a very good place for the man to live. Everything that the man needed was there. Fruit from the first tree would cause people to live for ever with God. Fruit from the second tree would cause people to know about good things and bad things. They would understand the difference between these."
+      "text": "The Lord God made all kinds of trees grow from the ground there. The trees were beautiful to look at. The fruit from the trees was good for people to eat. In the middle of the garden were two special trees. One was the tree that gives life. The other was the tree that gives knowledge of what is good and what is evil."
     },
     {
       "verse": "10",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The gold there is very good. Bdellium and onyx stone are also in Havilah. Bdellium is something that has a nice smell. It comes from certain trees when you cut them. Onyx is a valuable stone."
+      "text": "The gold there is very good. Bdellium and onyx stone are also in Havilah."
     },
     {
       "verse": "13",
@@ -196,7 +196,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the Lord God said, ‘It is not good for the man to live alone. I will make a helper who is right for him.’ The helper was someone to live with the man. She would be the right person for him and would help him."
+      "text": "Then the Lord God said, ‘It is not good for the man to live alone. I will make a helper who is right for him.’"
     },
     {
       "verse": "19",
@@ -204,7 +204,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "So the man gave names to the farm animals, to the birds in the sky and to all the other animals. But none of these animals was the right helper for the man."
+      "text": "So the man gave names to the farm animals, to the birds in the sky and to all the other animals.But none of these animals was the right helper for the man."
     },
     {
       "verse": "21",
@@ -212,7 +212,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The Lord God used the man's rib to make a woman. He brought the woman to the man. The Lord God caused the man to sleep. The man did not just sleep because he was tired. He would sleep like that until God made him wake. A rib is a bone in the side of someone's body. God made the woman from the rib that he took from the man."
+      "text": "The Lord God used the man's rib to make a woman. He brought the woman to the man."
     },
     {
       "verse": "23",
@@ -220,11 +220,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Because of this, when a man marries, he leaves his father and his mother. Instead, God joins the man and his wife together. The two people become as one body. This verse tells us about how a man and his wife should live after their marriage. They become a new family that is separate from their parents' families."
+      "text": "Because of this, when a man marries, he leaves his father and his mother. Instead, God joins the man and his wife together. The two people become as one body."
     },
     {
       "verse": "25",
-      "text": "The man and his wife were not wearing any clothes. But they did not feel ashamed. Print... Use screen font size Show All Comments Genesis 1Genesis 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The man and his wife were not wearing any clothes. But they did not feel ashamed."
     }
   ],
   "3": [
@@ -246,7 +246,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "God knows that when you eat the fruit from this tree, you will understand things. You will become like God himself. You will know about good things and evil things.’ The snake did not want the woman to trust God. He wanted the woman not to obey God. The woman told the snake that they must not touch the tree in the middle of the garden. But God did not say this. God told the woman that she must not eat the fruit from that tree. The snake told a lie when he said that the man and the woman would not die. The snake told the woman another lie: if she ate the fruit she would be like God."
+      "text": "God knows that when you eat the fruit from this tree, you will understand things. You will become like God himself. You will know about good things and evil things.’"
     },
     {
       "verse": "6",
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then they understood what they had done. They realized that they were not wearing any clothes. So they took some leaves from fig trees. They tied them together to cover their bodies. When the man and the woman ate the fruit, they could then understand what is good and what is evil. That is how they became like God. When God made the man and the woman, there was nothing bad in them. So they did not know the difference between good things and evil things."
+      "text": "Then they understood what they had done. They realized that they were not wearing any clothes. So they took some leaves from fig trees. They tied them together to cover their bodies."
     },
     {
       "verse": "8",
@@ -282,11 +282,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The Lord God said to the snake, ‘Because you have done this, I will curse you. When God cursed the snake, it means that he punished the snake. Because he is God, what he says will certainly happen. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life."
+      "text": "The Lord God said to the snake,‘Because you have done this, I will curse you.Among all the farm animals and wild animals,you are the one that I will curse.From now on, you will move across the ground on your stomach.You will eat dust from the ground.You will do this for your whole life. ‘Because you have done this, I will curse you. Among all the farm animals and wild animals, you are the one that I will curse. From now on, you will move across the ground on your stomach. You will eat dust from the ground. You will do this for your whole life."
     },
     {
       "verse": "15",
-      "text": "I will cause you and the woman to become enemies. Your descendants and her descendants will always be enemies. One of her descendants will attack your head. God is speaking of a human descendant who would destroy the power of the snake. When God sent Jesus into the world, a woman gave birth to him. By his death on the cross, Jesus destroyed Satan's power. You will attack his heel.’ heel’ is a part of the foot. It is at the back of the foot."
+      "text": "I will cause you and the woman to become enemies.Your descendants and her descendants will always be enemies.One of her descendants will attack your head.You will attack his heel.’ Your descendants and her descendants will always be enemies. One of her descendants will attack your head. You will attack his heel.’"
     },
     {
       "verse": "16",
@@ -302,11 +302,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "You will have to work hard for a long time before you have any food to eat. You will do this for your whole life until you die. Then you will return into the ground. That is where you came from. I made you from the soil of the ground, and you will become soil again.’ Adam is the name of the man. In the Hebrew language, Adam means ‘man’. God cursed the ground. Thistles and thorn bushes are not food plants. They are weeds that grow quickly. They stop food plants from growing. Because God has cursed the ground, Adam's descendants have to work very hard to grow plants for their food."
+      "text": "You will have to work hard for a long time before you have any food to eat. You will do this for your whole life until you die. Then you will return into the ground. That is where you came from. I made you from the soil of the ground, and you will become soil again.’"
     },
     {
       "verse": "20",
-      "text": "Adam gave his wife a name. He called her Eve. This was because she would become the mother of all people. All humans on earth are descendants of Adam and Eve."
+      "text": "Adam gave his wife a name. He called her Eve. This was because she would become the mother of all people."
     },
     {
       "verse": "21",
@@ -322,13 +322,13 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then God put cherubs to be guards for the garden. God put them on the east side of the garden. There was also a sword of fire that moved quickly from side to side. As a result, nobody could go near to the tree that gives life. Print... Use screen font size Show All Comments Genesis 2Genesis 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then God put cherubs to be guards for the garden. God put them on the east side of the garden. There was also a sword of fire that moved quickly from side to side. As a result, nobody could go near to the tree that gives life."
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "Adam had sex with his wife, Eve. She became pregnant. She gave birth to Cain. She said, ‘With the Lord's help, I have given birth to a son.’ Eve knew that God has authority over life and death."
+      "text": "Adam had sex with his wife, Eve. She became pregnant. She gave birth to Cain. She said, ‘With the Lord's help, I have given birth to a son.’"
     },
     {
       "verse": "2",
@@ -344,7 +344,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But God was not pleased with Cain and his gift. So Cain became very angry. His face looked sad. Abel chose the firstborn young animals to give to God. He killed them, and then he gave God the fat pieces. This is the best part of the meat from the animal. Cain was angry because God was not happy with him and his gift. Cain did not try to learn what God really wanted as a gift. Instead, Cain showed God that he was angry."
+      "text": "But God was not pleased with Cain and his gift. So Cain became very angry. His face looked sad."
     },
     {
       "verse": "6",
@@ -352,7 +352,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "If you do what is right, I will accept you. But if you do not do the right thing, sin will be very near to you. It will be like a wild animal at your door that is ready to eat you. But you must become its master.’ God told Cain that, if he continued to do wrong things, sin would destroy him. God told Cain that he must turn away from his sins. Then he would accept Cain. Cain kills Abel"
+      "text": "If you do what is right, I will accept you. But if you do not do the right thing, sin will be very near to you. It will be like a wild animal at your door that is ready to eat you. But you must become its master.’"
     },
     {
       "verse": "8",
@@ -372,7 +372,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When you work hard to dig the ground, no plants will grow in it for your food. You will travel from place to place. You will not have your own home.’ God's question to Cain is like the question that he asked Adam and Eve. That was when they hid in the garden. God knew that Cain had killed Abel. He wanted Cain to say that he is sorry. But Cain was not sorry that he had killed his brother."
+      "text": "When you work hard to dig the ground, no plants will grow in it for your food. You will travel from place to place. You will not have your own home.’"
     },
     {
       "verse": "13",
@@ -384,11 +384,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But the Lord said to Cain, ‘No! If anyone kills Cain, I will punish that person seven times more than I have punished you.’ Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain."
+      "text": "But the Lord said to Cain, ‘No! If anyone kills Cain, I will punish that person seven times more than I have punished you.’Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain. Then the Lord put a special mark on Cain. This was to tell other people that they must not kill Cain."
     },
     {
       "verse": "16",
-      "text": "Cain went away from the Lord. He went to live in the land called Nod, which is east of Eden. The descendants of Cain"
+      "text": "Cain went away from the Lord. He went to live in the land called Nod, which is east of Eden."
     },
     {
       "verse": "17",
@@ -416,25 +416,25 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Lamech said to his two wives, ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me."
+      "text": "Lamech said to his two wives,‘Adah and Zillah, listen to me!My wives, hear my words!A man attacked me, so I killed him.Yes, I killed a young man because he hurt me. ‘Adah and Zillah, listen to me! My wives, hear my words! A man attacked me, so I killed him. Yes, I killed a young man because he hurt me."
     },
     {
       "verse": "24",
-      "text": "If someone kills Cain, God will punish that person seven times more. But if someone attacks me, I will punish that person 77 times more!’ Lamech is proud because he killed the young man. He wants to tell people what he has done. He does not think that he has done anything wrong. This shows that sin has become much worse in the world. The birth of Seth"
+      "text": "If someone kills Cain, God will punish that person seven times more.But if someone attacks me, I will punish that person 77 times more!’ But if someone attacks me, I will punish that person 77 times more!’"
     },
     {
       "verse": "25",
-      "text": "Adam again had sex with his wife, Eve. She gave birth to another son. She called him Seth. Eve said, ‘God has given me another child to take the place of Abel, because Cain killed Abel.’"
+      "text": "Adam again had sex with his wife, Eve. She gave birth to another son. She called him Seth. Eve said, ‘God has given me another child to take the place of Abel, because Cain killed Abel.’ At that time, people began to use the name of the Lord to worship him."
     },
     {
       "verse": "26",
-      "text": "Later Seth had a son and he called him Enosh. At that time, people began to use the name of the Lord to worship him. Print... Use screen font size Show All Comments Genesis 3Genesis 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Later Seth had a son and he called him Enosh.At that time, people began to use the name of the Lord to worship him."
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "This is the report about Adam and his family. When God made men and women, he made them like himself."
+      "text": "This is the report about Adam and his family.When God made men and women, he made them like himself."
     },
     {
       "verse": "2",
@@ -442,7 +442,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "When Adam was 130 years old, he had a son who was like him. Adam called him Seth."
+      "text": "years old, he had a son who was like him. Adam called him Seth."
     },
     {
       "verse": "4",
@@ -450,11 +450,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Adam was 930 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "6",
-      "text": "When Seth was 105 years old, he had a son. He called him Enosh."
+      "text": "years old, he had a son. He called him Enosh."
     },
     {
       "verse": "7",
@@ -462,11 +462,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Seth was 912 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "9",
-      "text": "When Enosh was 90 years old, he had a son. He called him Kenan."
+      "text": "years old, he had a son. He called him Kenan."
     },
     {
       "verse": "10",
@@ -474,11 +474,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Enosh was 905 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "12",
-      "text": "When Kenan was 70 years old, he had a son. He called him Mahalalel."
+      "text": "years old, he had a son. He called him Mahalalel."
     },
     {
       "verse": "13",
@@ -486,11 +486,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Kenan was 910 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "15",
-      "text": "When Mahalalel was 65 years old, he had a son. He called him Jared."
+      "text": "years old, he had a son. He called him Jared."
     },
     {
       "verse": "16",
@@ -498,11 +498,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Mahalalel was 895 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "18",
-      "text": "When Jared was 162 years old, he had a son. He called him Enoch."
+      "text": "years old, he had a son. He called him Enoch."
     },
     {
       "verse": "19",
@@ -510,11 +510,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Jared was 962 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "21",
-      "text": "When Enoch was 65 years old, he had a son. He called him Methuselah."
+      "text": "years old, he had a son. He called him Methuselah."
     },
     {
       "verse": "22",
@@ -522,15 +522,15 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Enoch lived on earth for 365 years."
+      "text": "years."
     },
     {
       "verse": "24",
-      "text": "Enoch lived to please God all this time, then Enoch was not there any more. God took Enoch to be with him. God took Enoch to be with him in heaven. So Enoch did not die like other people die."
+      "text": "Enoch lived to please God all this time, then Enoch was not there any more. God took Enoch to be with him."
     },
     {
       "verse": "25",
-      "text": "When Methuselah was 187 years old, he had a son. He called him Lamech."
+      "text": "years old, he had a son. He called him Lamech."
     },
     {
       "verse": "26",
@@ -538,11 +538,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Methuselah was 969 years old when he died. This is not the same Lamech as the one who killed a young man. See Genesis"
+      "text": "years old when he died."
     },
     {
       "verse": "28",
-      "text": "When Lamech was 182 years old, he had a son."
+      "text": "years old, he had a son."
     },
     {
       "verse": "29",
@@ -554,11 +554,11 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Lamech was 777 years old when he died."
+      "text": "years old when he died."
     },
     {
       "verse": "32",
-      "text": "After Noah was 500 years old, he became the father of Shem, Ham and Japheth. Print... Use screen font size Show All Comments Genesis 4Genesis 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years old, he became the father of Shem, Ham and Japheth."
     }
   ],
   "6": [
@@ -568,7 +568,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The sons of God saw that the daughters of men were beautiful. They chose for themselves any of them that they wanted to become their wives. We do not know who ‘the sons of God’ were. They may have been men on the earth who trusted God. They may have been men who belonged to God in heaven, like angels. The ‘daughters of men’ were women who lived on the earth."
+      "text": "The sons of God saw that the daughters of men were beautiful. They chose for themselves any of them that they wanted to become their wives."
     },
     {
       "verse": "3",
@@ -592,11 +592,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "But as for Noah, the Lord was happy about him. Men and women turned against God. God felt very sad. Noah was different from the other people on the earth at that time. God was happy with him. The next verses tell us why God was happy about Noah. God saves Noah"
+      "text": "But as for Noah, the Lord was happy about him."
     },
     {
       "verse": "9",
-      "text": "This is the report about Noah and his family. Noah was a good man. He was the only person at that time who lived in a completely right way. He stayed near to God in his life."
+      "text": "This is the report about Noah and his family.Noah was a good man. He was the only person at that time who lived in a completely right way. He stayed near to God in his life."
     },
     {
       "verse": "10",
@@ -616,7 +616,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "So make a ship for yourself. Use wood from cypress trees to make it. The ship must have rooms in it. Cover the inside and the outside of the ship with tar. Cypress trees are trees with hard wood. Tar stops water coming into the ship."
+      "text": "So make a ship for yourself. Use wood from cypress trees to make it. The ship must have rooms in it. Cover the inside and the outside of the ship with tar."
     },
     {
       "verse": "15",
@@ -648,7 +648,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Noah obeyed God. He did everything that God had told him to do. Print... Use screen font size Show All Comments Genesis 5Genesis 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Noah obeyed God. He did everything that God had told him to do."
     }
   ],
   "7": [
@@ -662,7 +662,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Take seven of every kind of bird. Take males and females. Do this so that they will give birth to young ones. Then each different kind of animal and bird will continue to live on the earth. Clean animals are the kinds of animal that God accepted as a sacrifice. God told Noah to take more clean animals so that Noah could offer a sacrifice to God. There would still be animals that remained to give birth to young animals."
+      "text": "Take seven of every kind of bird. Take males and females. Do this so that they will give birth to young ones. Then each different kind of animal and bird will continue to live on the earth."
     },
     {
       "verse": "4",
@@ -674,7 +674,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Noah was 600 years old when the deep water covered the earth."
+      "text": "years old when the deep water covered the earth."
     },
     {
       "verse": "7",
@@ -690,15 +690,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "After seven days had passed, God sent the deep water to cover the earth. God told the animals to go to Noah."
+      "text": "After seven days had passed, God sent the deep water to cover the earth."
     },
     {
       "verse": "11",
-      "text": "When Noah was 600 years old, on the 17th day of the second month, streams of water came up everywhere from below the earth. Also, the water in the heavens poured down on the earth."
+      "text": "years old, on the 17th day of the second month, streams of water came up everywhere from below the earth. Also, the water in the heavens poured down on the earth."
     },
     {
       "verse": "12",
-      "text": "Rain fell on the earth for 40 days and 40 nights."
+      "text": "days and 40 nights."
     },
     {
       "verse": "13",
@@ -714,11 +714,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Each pair was one male and one female. This happened in the way that God had told Noah. When they were all in the ship, the Lord shut the door. The fish and other beings that always live in the sea were safe in the deep water. See Genesis"
+      "text": "Each pair was one male and one female. This happened in the way that God had told Noah. When they were all in the ship, the Lord shut the door."
     },
     {
       "verse": "17",
-      "text": "For 40 days, the water on the earth became deeper. The water lifted the ship high above the ground."
+      "text": "days, the water on the earth became deeper. The water lifted the ship high above the ground."
     },
     {
       "verse": "18",
@@ -730,7 +730,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The water still became deeper so that it was more than 6 metres higher than the tops of the mountains."
+      "text": "metres higher than the tops of the mountains."
     },
     {
       "verse": "21",
@@ -746,7 +746,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The deep water covered the earth for 150 days. Print... Use screen font size Show All Comments Genesis 6Genesis 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "days."
     }
   ],
   "8": [
@@ -772,7 +772,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "After 40 more days, Noah opened a window in the ship."
+      "text": "more days, Noah opened a window in the ship."
     },
     {
       "verse": "7",
@@ -796,11 +796,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "He waited for seven more days. Then he sent the dove out again. This time, it did not return to Noah. A raven is a big black bird. A dove is a white or grey bird. Olives are small round fruits that grow on an olive tree."
+      "text": "He waited for seven more days. Then he sent the dove out again. This time, it did not return to Noah."
     },
     {
       "verse": "13",
-      "text": "Noah was now 601 years old. On the first day of the first month, the water that had covered the earth was now gone. The ground had become dry. Noah made a hole in the roof of the ship and he looked around. He saw that the top of the ground was dry."
+      "text": "years old. On the first day of the first month, the water that had covered the earth was now gone. The ground had become dry. Noah made a hole in the roof of the ship and he looked around. He saw that the top of the ground was dry."
     },
     {
       "verse": "14",
@@ -824,11 +824,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "All the living animals also went out of the ship. The birds and the living things that move across the ground all went out. Every different kind of animal came out of the ship, each of them in its own group. God makes a promise to Noah"
+      "text": "All the living animals also went out of the ship. The birds and the living things that move across the ground all went out. Every different kind of animal came out of the ship, each of them in its own group."
     },
     {
       "verse": "20",
-      "text": "Then Noah built an altar to make sacrifices to the Lord. He took one from each kind of clean animal and clean bird. He offered them to the Lord as sacrifices which he burned on the altar. When Noah left the ship, he worshipped God. He built an altar to do this. He offered a sacrifice to God on the altar. God had kept them safe and Noah wanted to thank God. He did this before he did anything else."
+      "text": "Then Noah built an altar to make sacrifices to the Lord. He took one from each kind of clean animal and clean bird. He offered them to the Lord as sacrifices which he burned on the altar."
     },
     {
       "verse": "21",
@@ -836,7 +836,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "As long as the earth continues to be here, the time for people to plant seeds will come each year. The time for harvest will come each year. Times of cold and heat will always come. Summer and winter will always come. Day and night will never stop.’ As long as the earth is here, the days and the seasons will continue to happen. God has promised this. He made the universe and he continues to cause it to work properly. Print... Use screen font size Show All Comments Genesis 7Genesis 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As long as the earth continues to be here,the time for people to plant seeds will come each year.The time for harvest will come each year.Times of cold and heat will always come.Summer and winter will always come.Day and night will never stop.’"
     }
   ],
   "9": [
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "God made people so that they were like himself. See Genesis So if anyone kills a human, another human must kill him."
+      "text": "God made people so that they were like himself.So if anyone kills a human,another human must kill him. So if anyone kills a human, another human must kill him."
     },
     {
       "verse": "7",
@@ -882,7 +882,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "This is the covenant that I promise to keep: I will never cause water to destroy all living things on the earth again. Deep water will never again come again to destroy the earth.’ A covenant is a special agreement that God makes with people. He promises that he will help them in a certain way."
+      "text": "This is the covenant that I promise to keep: I will never cause water to destroy all living things on the earth again. Deep water will never again come again to destroy the earth.’"
     },
     {
       "verse": "12",
@@ -906,7 +906,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then God said to Noah, ‘The rainbow will show you that I will certainly keep my promise. I will keep my covenant that is between me and everything that lives on the earth.’ Noah's sons"
+      "text": "Then God said to Noah, ‘The rainbow will show you that I will certainly keep my promise. I will keep my covenant that is between me and everything that lives on the earth.’"
     },
     {
       "verse": "18",
@@ -930,7 +930,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Then Shem and Japheth took Noah's coat and they put it between their shoulders. They walked into Noah's tent with their backs to Noah. In this way they covered their father with the coat. They looked away from their father so that they did not see him. They did this because Noah was not wearing any clothes. Vines grow a small round fruit called grapes. People use grapes to make wine. Wine is a drink containing alcohol."
+      "text": "Then Shem and Japheth took Noah's coat and they put it between their shoulders. They walked into Noah's tent with their backs to Noah. In this way they covered their father with the coat. They looked away from their father so that they did not see him. They did this because Noah was not wearing any clothes."
     },
     {
       "verse": "24",
@@ -946,21 +946,21 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "I pray that God will make the land of Japheth and his descendants grow bigger. I pray that the descendants of Japheth will share good things with Shem. I pray that Canaan will become Japheth's slave.’ Noah wanted God to bless Shem and Japheth, because they did the right thing. Noah asked for a curse on the descendants of Ham because he caused Noah to be ashamed."
+      "text": "I pray that God will make the land of Japheth and his descendants grow bigger. I pray that the descendants of Japheth will share good things with Shem. I pray that Canaan will become Japheth's slave.’"
     },
     {
       "verse": "28",
-      "text": "Noah lived for 350 years after God covered the earth with deep water."
+      "text": "years after God covered the earth with deep water."
     },
     {
       "verse": "29",
-      "text": "In his whole life, Noah lived for 950 years. Then he died. Print... Use screen font size Show All Comments Genesis 8Genesis 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "In his whole life, Noah lived for 950 years. Then he died."
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "This is the report about Noah's sons, Shem, Ham and Japheth, and their families. After the deep water went away, they all had children themselves. Japheth's family"
+      "text": "This is the report about Noah's sons, Shem, Ham and Japheth, and their families.After the deep water went away, they all had children themselves. After the deep water went away, they all had children themselves."
     },
     {
       "verse": "2",
@@ -972,11 +972,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "These are the sons of Javan: Elishah, Tarshish, the Kittim people and the Rodanim people. The Kittim are people who went to live in Cyprus."
+      "text": "These are the sons of Javan: Elishah, Tarshish, the Kittim people and the Rodanim people."
     },
     {
       "verse": "5",
-      "text": "These people lived by the sea. They lived in groups. Each group went to live in a different place. Each group spoke its own language. Ham's family"
+      "text": "These people lived by the sea. They lived in groups. Each group went to live in a different place. Each group spoke its own language."
     },
     {
       "verse": "6",
@@ -1012,7 +1012,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Pathrusites, Kasluhites and Caphtorites. The Philistines were descendants of the Kasluhites. All these groups of people came from the descendants of Mizraim. They all lived in their own land."
+      "text": "Pathrusites, Kasluhites and Caphtorites. The Philistines were descendants of the Kasluhites."
     },
     {
       "verse": "15",
@@ -1036,7 +1036,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "These are all descendants of Ham. They lived in groups in their own parts of the land. Each group spoke their own language. Shem's family"
+      "text": "These are all descendants of Ham. They lived in groups in their own parts of the land. Each group spoke their own language."
     },
     {
       "verse": "21",
@@ -1056,7 +1056,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Eber had two sons. The name of one son was Peleg. When he was alive, people began to live in different places on the earth. That is why his name was Peleg. Peleg's brother's name was Joktan. Peleg means to go away from each other."
+      "text": "Eber had two sons. The name of one son was Peleg. When he was alive, people began to live in different places on the earth. That is why his name was Peleg. Peleg's brother's name was Joktan."
     },
     {
       "verse": "26",
@@ -1084,7 +1084,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "All these people are descendants of Noah's sons, and their children. They went to live in different parts of the earth and their children became different nations. This happened after God covered the earth with water and then the water went away. Print... Use screen font size Show All Comments Genesis 9Genesis 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All these people are descendants of Noah's sons, and their children. They went to live in different parts of the earth and their children became different nations. This happened after God covered the earth with water and then the water went away."
     }
   ],
   "11": [
@@ -1098,7 +1098,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They said to each other, ‘We should make bricks and cook them until they are hard.’ These people used bricks instead of stones to build houses. They used tar to hold the bricks together, instead of cement. Tar is black and sticky. It becomes soft when it is hot and hard when it is cold. Cement is a material that many people use today to fix stones and bricks together in buildings."
+      "text": "They said to each other, ‘We should make bricks and cook them until they are hard.’ These people used bricks instead of stones to build houses. They used tar to hold the bricks together, instead of cement."
     },
     {
       "verse": "4",
@@ -1122,11 +1122,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "That is why people called the city Babel. It was because the Lord confused all the people of the world and he gave them different languages to speak. From that time, the Lord separated the people from each other so that they lived in different places all over the earth. Babel’ is like the word for ‘confused’. Shem's family"
+      "text": "That is why people called the city Babel. It was because the Lord confused all the people of the world and he gave them different languages to speak. From that time, the Lord separated the people from each other so that they lived in different places all over the earth."
     },
     {
       "verse": "10",
-      "text": "This is the report about Shem and his family. Two years after the deep water went away from the earth, Shem was 100 years old. He became the father of Arphaxad."
+      "text": "This is the report about Shem and his family.Two years after the deep water went away from the earth, Shem was 100 years old. He became the father of Arphaxad."
     },
     {
       "verse": "11",
@@ -1134,7 +1134,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When Arphaxad was 35 years old, he became the father of Shelah."
+      "text": "years old, he became the father of Shelah."
     },
     {
       "verse": "13",
@@ -1142,7 +1142,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "When Shelah was 30 years old, he became the father of Eber."
+      "text": "years old, he became the father of Eber."
     },
     {
       "verse": "15",
@@ -1150,7 +1150,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "When Eber was 34 years old, he became the father of Peleg."
+      "text": "years old, he became the father of Peleg."
     },
     {
       "verse": "17",
@@ -1158,7 +1158,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "When Peleg was 30 years old, he became the father of Reu."
+      "text": "years old, he became the father of Reu."
     },
     {
       "verse": "19",
@@ -1166,7 +1166,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When Reu was 32 years old, he became the father of Serug."
+      "text": "years old, he became the father of Serug."
     },
     {
       "verse": "21",
@@ -1174,7 +1174,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "When Serug was 30 years old, he became the father of Nahor."
+      "text": "years old, he became the father of Nahor."
     },
     {
       "verse": "23",
@@ -1182,7 +1182,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "When Nahor was 29 years old, he became the father of Terah."
+      "text": "years old, he became the father of Terah."
     },
     {
       "verse": "25",
@@ -1190,11 +1190,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "After Terah was 70 years old, he became the father of Abram, Nahor and Haran. Terah's family"
+      "text": "years old, he became the father of Abram, Nahor and Haran."
     },
     {
       "verse": "27",
-      "text": "This is the report about Terah and his family. Terah became the father of Abram, Nahor and Haran. Haran became the father of Lot."
+      "text": "This is the report about Terah and his family.Terah became the father of Abram, Nahor and Haran. Haran became the father of Lot."
     },
     {
       "verse": "28",
@@ -1214,13 +1214,13 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Terah lived for 205 years. Then he died in Haran. Print... Use screen font size Show All Comments Genesis 10Genesis 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years. Then he died in Haran."
     }
   ],
   "12": [
     {
       "verse": "1",
-      "text": "The Lord had said to Abram, ‘Leave your country and the people of your father's family. Go to the land that I will show you. The Lord had said this to Abram when he lived in Ur, among the Chaldeans. See Joshua"
+      "text": "The Lord had said to Abram, ‘Leave your country and the people of your father's family. Go to the land that I will show you."
     },
     {
       "verse": "2",
@@ -1228,7 +1228,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I will bless those people who bless you. But I will curse anyone who insults you. Through you, I will bless all the families of people on the earth.’ Jesus Christ is a descendant of Abram. Through Jesus, God blesses all the nations and families of people on the earth."
+      "text": "I will bless those people who bless you. But I will curse anyone who insults you. Through you, I will bless all the families of people on the earth.’"
     },
     {
       "verse": "4",
@@ -1236,7 +1236,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Abram took his wife Sarai, and his nephew Lot. He took everything that belonged to them. He also took the people that worked for them in Haran. They all left to go to the land of Canaan. When they arrived in Canaan,"
+      "text": "Abram took his wife Sarai, and his nephew Lot. He took everything that belonged to them. He also took the people that worked for them in Haran. They all left to go to the land of Canaan.When they arrived in Canaan,"
     },
     {
       "verse": "6",
@@ -1244,7 +1244,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord appeared to Abram there. He said, ‘I will give this land to your descendants.’ So Abram built an altar in that place to worship the Lord. He did that because the Lord had appeared to him. The Canaanites did not worship God. The oak tree of Moreh was a place where the Canaanites worshipped false gods. Abram built an altar to worship God. The Canaanites would see that Abram worshipped the Lord. But Abram was not afraid. He knew that this place belonged to God."
+      "text": "The Lord appeared to Abram there. He said, ‘I will give this land to your descendants.’ So Abram built an altar in that place to worship the Lord. He did that because the Lord had appeared to him."
     },
     {
       "verse": "8",
@@ -1252,11 +1252,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then Abram took his tent and he left that place. He continued to travel towards the Negev. The Negev is a dry land. It is between Egypt and Canaan. Abram and Sarai in Egypt"
+      "text": "Then Abram took his tent and he left that place. He continued to travel towards the Negev."
     },
     {
       "verse": "10",
-      "text": "There was a famine in the land of Canaan. So Abram went to live in Egypt for some time, because the famine was very bad. Egypt did not often have a famine because the River Nile went through the land."
+      "text": "There was a famine in the land of Canaan. So Abram went to live in Egypt for some time, because the famine was very bad."
     },
     {
       "verse": "11",
@@ -1268,7 +1268,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "So tell them that you are my sister. Then they will do good things to me, because they want to please you. They will not kill me because they will think that you are my sister.’ Abram thinks that the king of Egypt might want to take Sarai as one of his wives. If he knows that Sarai is Abram's wife, the king will have to kill Abram."
+      "text": "So tell them that you are my sister. Then they will do good things to me, because they want to please you. They will not kill me because they will think that you are my sister.’"
     },
     {
       "verse": "14",
@@ -1276,7 +1276,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The king's officers saw her. They told Pharaoh that she was very beautiful. They took her to the king's palace. A palace is a large house for a king."
+      "text": "The king's officers saw her. They told Pharaoh that she was very beautiful. They took her to the king's palace."
     },
     {
       "verse": "16",
@@ -1296,7 +1296,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Pharaoh told his officers what to do with Abram. They sent Abram away, with his wife and everything that belonged to them. Print... Use screen font size Show All Comments Genesis 11Genesis 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Pharaoh told his officers what to do with Abram. They sent Abram away, with his wife and everything that belonged to them."
     }
   ],
   "13": [
@@ -1326,7 +1326,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Abram's shepherds and Lot's shepherds began to quarrel with each other. (At that time, Canaanites and Perizzites also lived in the land.) The Canaanites and Perizzites did not worship God. It was not good for them to see people who worship God quarrelling with each other."
+      "text": "Abram's shepherds and Lot's shepherds began to quarrel with each other. (At that time, Canaanites and Perizzites also lived in the land.)"
     },
     {
       "verse": "8",
@@ -1342,7 +1342,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So Lot chose for himself the valley of the Jordan River. He travelled towards the east. Lot chose the land that he thought was the best."
+      "text": "So Lot chose for himself the valley of the Jordan River. He travelled towards the east."
     },
     {
       "verse": "12",
@@ -1370,14 +1370,10 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So Abram moved his tents. He went to live near the special oak trees of Mamre. That place is at Hebron. Abram built an altar to worship the Lord there. Print... Use screen font size Show All Comments Genesis 12Genesis 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Abram moved his tents. He went to live near the special oak trees of Mamre. That place is at Hebron. Abram built an altar to worship the Lord there."
     }
   ],
   "14": [
-    {
-      "verse": "1-4",
-      "text": "Now there were many kings living in that land, at that time. They fought against each other. One fight was when Kedorlaomer had ruled over the other kings for 12 years. And in the next year, five kings made one group like that and fought against him. Kedorlaomer joined with three other kings. So it was four kings against five other kings. The four kings were Amraphel king of Shinar, Arioch king of Ellasar, Kedorlaomer king of Elam and Tidal king of Goiim. Those kings fought a war against Bera king of Sodom, Birsha king of Gomorrah, Shinab king of Admah, Shemeber king of Zeboiim and the king of Bela. (Bela is another name for the town of Zoar.) They fought in the Valley of Siddim. (That is the Salt Sea.)"
-    },
     {
       "verse": "5",
       "text": "In the 14th year, Kedorlaomer and the kings with him won against the Rephaites. This was in Ashteroth Karnaim. They won against the Zuzites in Ham. They won against the Emites in Shaveh Kiriathaim."
@@ -1408,11 +1404,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Abram's nephew, Lot, was living in Sodom at that time. So they took him away from there, and everything that belonged to him. Abram and Melchizedek"
+      "text": "Abram's nephew, Lot, was living in Sodom at that time. So they took him away from there, and everything that belonged to him."
     },
     {
       "verse": "13",
-      "text": "At that time, Abram, the Hebrew man, was living near the special oak trees of Mamre. Mamre was an Amorite. He was the brother of Eshcol and Aner. These men had agreed to be Abram's friends. A man ran away from Sodom. He told Abram everything that had happened."
+      "text": "At that time, Abram, the Hebrew man, was living near the special oak trees of Mamre. Mamre was an Amorite. He was the brother of Eshcol and Aner. These men had agreed to be Abram's friends.A man ran away from Sodom. He told Abram everything that had happened."
     },
     {
       "verse": "14",
@@ -1432,7 +1428,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Melchizedek was the king of Salem, and he was a priest of the Most High God. He brought out bread and wine for Abram."
+      "text": "Melchizedek was the king of Salem, and he was a priest of the Most High God. He brought out bread and wine for Abram. After that, Abram gave Melchizedek a tenth part of everything."
     },
     {
       "verse": "19",
@@ -1440,7 +1436,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Praise the Most High God! He has given you power over your enemies.’ After that, Abram gave Melchizedek a tenth part of everything. Abram gave Melchizedek a 10th part of everything that he had taken in the fight. This was a king's part."
+      "text": "Praise the Most High God! He has given you power over your enemies.’After that, Abram gave Melchizedek a tenth part of everything."
     },
     {
       "verse": "21",
@@ -1456,7 +1452,23 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I myself will accept only the food that my young men have eaten. But Aner, Eshcol and Mamre went with me to help me to fight. They should take their part of the things that we brought back with us.’ In those days, the people who won a war took things from their enemies. Their leader gave these things to the men who had helped him to fight. Print... Use screen font size Show All Comments Genesis 13Genesis 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I myself will accept only the food that my young men have eaten. But Aner, Eshcol and Mamre went with me to help me to fight. They should take their part of the things that we brought back with us.’"
+    },
+    {
+      "verse": "1",
+      "text": "Now there were many kings living in that land, at that time.  They fought against each other.  One fight was when Kedorlaomer had ruled over the other kings for 12 years."
+    },
+    {
+      "verse": "2",
+      "text": "And in the next year, five kings made one group like that and fought against him.  Kedorlaomer joined with three other kings.  So it was four kings against five other kings."
+    },
+    {
+      "verse": "3",
+      "text": "The four kings were Amraphel king of Shinar, Arioch king of Ellasar, Kedorlaomer king of Elam and Tidal king of Goiim.  Those kings fought a war against Bera king of Sodom, Birsha king of Gomorrah, Shinab king of Admah, Shemeber king of Zeboiim and the king of Bela.  (Bela is another name for the town of Zoar."
+    },
+    {
+      "verse": "4",
+      "text": ") They fought in the Valley of Siddim.  (That is the Salt Sea."
     }
   ],
   "15": [
@@ -1470,7 +1482,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Because you have not given me any children, understand this: Everything that I have will one day belong to a servant in my house.’ Eliezer of Damascus was Abram's servant. Abram did not have any children. When Abram died, there was no son to continue the family."
+      "text": "Because you have not given me any children, understand this: Everything that I have will one day belong to a servant in my house.’"
     },
     {
       "verse": "4",
@@ -1522,11 +1534,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "After four generations, your descendants will come back here to Canaan. At that time, I will punish the Amorites because they do very bad things. But the time has not yet arrived that I will punish them.’ The Amorites lived in Canaan. They did not worship the Lord God. They worshipped false gods. They killed children and gave them as sacrifices to these gods. God told Abram that when his descendants returned to Canaan, he would punish the Amorites at that time."
+      "text": "After four generations, your descendants will come back here to Canaan. At that time, I will punish the Amorites because they do very bad things. But the time has not yet arrived that I will punish them.’"
     },
     {
       "verse": "17",
-      "text": "Then the sun went down and it became dark. Abram saw a pot that had coals in it. The coals were burning and making smoke. There was also a branch that burned with bright fire. These passed between the halves of the animals that Abram had cut in two pieces. The fire showed that God was passing between the halves of the animals. This showed that he was making a covenant with Abram."
+      "text": "Then the sun went down and it became dark. Abram saw a pot that had coals in it. The coals were burning and making smoke. There was also a branch that burned with bright fire. These passed between the halves of the animals that Abram had cut in two pieces."
     },
     {
       "verse": "18",
@@ -1542,7 +1554,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Amorites, Canaanites, Girgashites and Jebusites.’ These are the people who lived in the land of Canaan that God was giving to Abram and his descendants. Abram's descendants would win against these people. Then they would take the land for themselves to live in, because God had given it to them. Print... Use screen font size Show All Comments Genesis 14Genesis 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Amorites, Canaanites, Girgashites and Jebusites.’"
     }
   ],
   "16": [
@@ -1552,7 +1564,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Sarai said to Abram, ‘The Lord has not let me have any children. Go and sleep with my servant. Then if she gives birth, her children will be my family.’ Abram agreed to do this. Sarai wanted Abram to have a son. God had told Abram that he would have many descendants. But Abram and Sarai did not wait for God to keep his promise."
+      "text": "Sarai said to Abram, ‘The Lord has not let me have any children. Go and sleep with my servant. Then if she gives birth, her children will be my family.’ Abram agreed to do this."
     },
     {
       "verse": "3",
@@ -1588,11 +1600,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The angel of the Lord said to Hagar, ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”. The name ‘Ishmael’ means ‘God hears’."
+      "text": "The angel of the Lord said to Hagar,‘Now you are pregnant and you will give birth to a son.When you cried in pain, the Lord heard you,so you must give your son the name “Ishmael”. ‘Now you are pregnant and you will give birth to a son. When you cried in pain, the Lord heard you, so you must give your son the name “Ishmael”."
     },
     {
       "verse": "12",
-      "text": "Like a wild donkey, nobody will be able to rule him. He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers.’"
+      "text": "Like a wild donkey, nobody will be able to rule him.He will fight against everyone, and everyone will fight against him.He will think that everyone is his enemy.He will keep away from his brothers.’ He will fight against everyone, and everyone will fight against him. He will think that everyone is his enemy. He will keep away from his brothers.’"
     },
     {
       "verse": "13",
@@ -1600,7 +1612,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "That is why they called the well in that place ‘Beer Lahai Roi’. The well is between Kadesh and Bered. Beer Lahai Roi’ means ‘Well of the living One who sees me’."
+      "text": "That is why they called the well in that place ‘Beer Lahai Roi’. The well is between Kadesh and Bered."
     },
     {
       "verse": "15",
@@ -1608,17 +1620,17 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Abram was 86 years old when Hagar gave birth to Ishmael. Print... Use screen font size Show All Comments Genesis 15Genesis 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years old when Hagar gave birth to Ishmael."
     }
   ],
   "17": [
     {
       "verse": "1",
-      "text": "When Abram was 99 years old, the Lord appeared to him. The Lord said, ‘I am God Almighty. In all your life, obey me and do nothing wrong."
+      "text": "years old, the Lord appeared to him. The Lord said, ‘I am God Almighty. In all your life, obey me and do nothing wrong."
     },
     {
       "verse": "2",
-      "text": "Then I will certainly keep my covenant with you. I will make your descendants grow in number.’ God had already promised Abram that he would have very many descendants. See Genesis Here, God was helping Abram to remember his promise. Abram should continue to trust God."
+      "text": "Then I will certainly keep my covenant with you. I will make your descendants grow in number.’"
     },
     {
       "verse": "3",
@@ -1642,7 +1654,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "You are now living here in Canaan as a foreign person. But I will give all of this land to you and to your descendants. It will belong to them for ever. I will be their God.’ Circumcision"
+      "text": "You are now living here in Canaan as a foreign person. But I will give all of this land to you and to your descendants. It will belong to them for ever. I will be their God.’"
     },
     {
       "verse": "9",
@@ -1666,7 +1678,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "If any male person among you has not been circumcised, I will not accept him as one of my people. He must become separate from his people. He has not obeyed my covenant.’ Circumcision showed that a person trusted God. Every father had to circumcise his son. This showed that the family agreed to obey God's covenant. God changes Sarai's name to Sarah"
+      "text": "If any male person among you has not been circumcised, I will not accept him as one of my people. He must become separate from his people. He has not obeyed my covenant.’"
     },
     {
       "verse": "15",
@@ -1694,7 +1706,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "But I will make my covenant with Isaac, not with Ishmael. At about this time next year, Sarah will give birth to your son, Isaac.’ The name ‘Isaac’ means ‘he laughs’."
+      "text": "But I will make my covenant with Isaac, not with Ishmael. At about this time next year, Sarah will give birth to your son, Isaac.’"
     },
     {
       "verse": "22",
@@ -1706,7 +1718,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Abraham himself was circumcised when he was 99 years old."
+      "text": "years old."
     },
     {
       "verse": "25",
@@ -1718,7 +1730,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "As well as them, all the male people living in Abraham's house were circumcised. This included the male servants that had been born in his house and those that he had bought with money. Print... Use screen font size Show All Comments Genesis 16Genesis 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As well as them, all the male people living in Abraham's house were circumcised. This included the male servants that had been born in his house and those that he had bought with money."
     }
   ],
   "18": [
@@ -1728,7 +1740,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Abraham looked up and he saw three men. He ran in a hurry to meet them. He bent down to the ground to respect them. This was a visit from the Lord God himself, but Abraham did not know that until later in their meeting."
+      "text": "Abraham looked up and he saw three men. He ran in a hurry to meet them. He bent down to the ground to respect them."
     },
     {
       "verse": "3",
@@ -1760,7 +1772,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then one of the men said, ‘I will certainly return to you at about this time next year. At that time Sarah, your wife, will have a son!’ Sarah was listening to all this. She was at the door of the tent, near to where they were talking."
+      "text": "Then one of the men said, ‘I will certainly return to you at about this time next year. At that time Sarah, your wife, will have a son!’Sarah was listening to all this. She was at the door of the tent, near to where they were talking."
     },
     {
       "verse": "11",
@@ -1780,7 +1792,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Sarah was afraid. So she told a lie. She said, ‘I did not laugh.’ But the Lord said, ‘Yes, you did laugh.’ God decides to punish the people in Sodom"
+      "text": "Then Sarah was afraid. So she told a lie. She said, ‘I did not laugh.’ But the Lord said, ‘Yes, you did laugh.’"
     },
     {
       "verse": "16",
@@ -1796,7 +1808,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "I have chosen him so that he will teach my message to his children and their families. He will teach them to do what is right and what is fair. Then I, the Lord, will do for Abraham everything that I have promised to him.’ See Genesis"
+      "text": "I have chosen him so that he will teach my message to his children and their families. He will teach them to do what is right and what is fair. Then I, the Lord, will do for Abraham everything that I have promised to him.’"
     },
     {
       "verse": "20",
@@ -1816,7 +1828,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "There might be 50 people in the city who live in a good way. Will you still destroy the whole city? Or will you leave it there, because there are 50 good people in it?"
+      "text": "people in the city who live in a good way. Will you still destroy the whole city? Or will you leave it there, because there are 50 good people in it?"
     },
     {
       "verse": "25",
@@ -1832,7 +1844,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "But let me ask you this. What will you do if there are 45 good people in the city? Will you destroy the city, because there are only five fewer good people there?’ The Lord replied, ‘If I see that there are 45 good people in the city, I will not destroy it.’ Abraham said that he is not important enough to argue with the Lord God. He was only a human that God himself has made."
+      "text": "But let me ask you this. What will you do if there are 45 good people in the city? Will you destroy the city, because there are only five fewer good people there?’ The Lord replied, ‘If I see that there are 45 good people in the city, I will not destroy it.’"
     },
     {
       "verse": "29",
@@ -1848,11 +1860,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "After all that, Abraham said, ‘Please do not be angry, Lord. Let me speak just one more time. If there are only ten good people there, what will you do?’ The Lord replied, ‘Because of ten good people, I will not destroy the city.’ Abraham's nephew, Lot, was living in Sodom. Abraham did not want God to kill Lot and his family. This is why Abraham asked God not to kill everyone in the city."
+      "text": "After all that, Abraham said, ‘Please do not be angry, Lord. Let me speak just one more time. If there are only ten good people there, what will you do?’ The Lord replied, ‘Because of ten good people, I will not destroy the city.’"
     },
     {
       "verse": "33",
-      "text": "The Lord had finished speaking with Abraham. So he continued on his journey. Abraham returned home. Print... Use screen font size Show All Comments Genesis 17Genesis 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord had finished speaking with Abraham. So he continued on his journey. Abraham returned home."
     }
   ],
   "19": [
@@ -1918,7 +1930,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But Lot did not move. So the angels took hold of Lot's hand, as well as the hands of his wife and his two daughters. The Lord was very kind to Lot and his family and the angels led them away from the city. Lot and his family did not want to leave Sodom. They would be leaving everything that they had."
+      "text": "But Lot did not move. So the angels took hold of Lot's hand, as well as the hands of his wife and his two daughters. The Lord was very kind to Lot and his family and the angels led them away from the city."
     },
     {
       "verse": "17",
@@ -1954,11 +1966,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "In that way God destroyed those cities and everything in the valley. He killed all the people who lived in those cities. And he killed all the plants that grew on the land. God used hot sulphur to destroy the cities. Sulphur is yellow. It burns quickly with a lot of heat. But when it gets cold, it becomes like stone. Hot sulphur covered the cities and the people in them. It burnt them. It became like stone over everything in the city."
+      "text": "In that way God destroyed those cities and everything in the valley. He killed all the people who lived in those cities. And he killed all the plants that grew on the land."
     },
     {
       "verse": "26",
-      "text": "But as they ran away, Lot's wife looked back at the city. When she did that, she became a large piece of salt, like a pillar. The angel had told Lot and his family not to look back. See Genesis Lot's wife wanted to go back to the city because she liked living there."
+      "text": "But as they ran away, Lot's wife looked back at the city. When she did that, she became a large piece of salt, like a pillar."
     },
     {
       "verse": "27",
@@ -1970,7 +1982,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "When God destroyed the cities of the valley, he saved Lot from that punishment. God remembered what Abraham had asked him. He took Lot away from the cities where he had lived. Then God destroyed those cities. Lot and his daughters"
+      "text": "When God destroyed the cities of the valley, he saved Lot from that punishment. God remembered what Abraham had asked him. He took Lot away from the cities where he had lived. Then God destroyed those cities."
     },
     {
       "verse": "30",
@@ -2006,7 +2018,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "The younger daughter also gave birth to a son. She called him Ben-Ammi. He became the ancestor of the Ammonites. Print... Use screen font size Show All Comments Genesis 18Genesis 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The younger daughter also gave birth to a son. She called him Ben-Ammi. He became the ancestor of the Ammonites."
     }
   ],
   "20": [
@@ -2060,7 +2072,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "God told me to leave my father's house and to travel. At that time I said to Sarah, “This is how you can show that you love me. Everywhere we go, tell people that I am your brother.” ’ Verses 1-11 are like Genesis"
+      "text": "God told me to leave my father's house and to travel. At that time I said to Sarah, “This is how you can show that you love me. Everywhere we go, tell people that I am your brother.” ’"
     },
     {
       "verse": "14",
@@ -2072,7 +2084,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Abimelech said to Sarah, ‘I have given 1,000 pieces of silver to your brother. This is to show everyone that you yourself did nothing wrong. It will pay you for any trouble that you have received.’ Abimelech was very kind. He called Abraham ‘Sarah's brother’, just like Abraham had said. He showed that people in that place did respect God. So Abraham had been wrong to be afraid."
+      "text": "Abimelech said to Sarah, ‘I have given 1,000 pieces of silver to your brother. This is to show everyone that you yourself did nothing wrong. It will pay you for any trouble that you have received.’"
     },
     {
       "verse": "17",
@@ -2080,7 +2092,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Lord had made them unable to have children. He did this because of what happened to Abraham's wife, Sarah. Print... Use screen font size Show All Comments Genesis 19Genesis 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord had made them unable to have children. He did this because of what happened to Abraham's wife, Sarah."
     }
   ],
   "21": [
@@ -2090,7 +2102,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Sarah became pregnant. She gave birth to a son for Abraham when he was very old. This happened at the time when God had said that it would. See Genesis"
+      "text": "Sarah became pregnant. She gave birth to a son for Abraham when he was very old. This happened at the time when God had said that it would."
     },
     {
       "verse": "3",
@@ -2098,11 +2110,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "When Isaac was eight days old, Abraham circumcised him. That is what God had told him to do. See Genesis Genesis"
+      "text": "When Isaac was eight days old, Abraham circumcised him. That is what God had told him to do."
     },
     {
       "verse": "5",
-      "text": "Abraham was 100 years old when his son, Isaac, was born."
+      "text": "years old when his son, Isaac, was born."
     },
     {
       "verse": "6",
@@ -2138,7 +2150,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Abraham woke up early the next morning. He took some food and some water in a bottle that was made from animal skin. He gave them to Hagar and he put them on her shoulders. Then he sent Hagar away, with their son, Ishmael. She went and she travelled round the wilderness of Beersheba."
+      "text": "Abraham woke up early the next morning. He took some food and some water in a bottle that was made from animal skin. He gave them to Hagar and he put them on her shoulders. Then he sent Hagar away, with their son, Ishmael.She went and she travelled round the wilderness of Beersheba."
     },
     {
       "verse": "15",
@@ -2146,7 +2158,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "She herself went and sat down about 100 metres away from him. She thought, ‘I cannot watch the boy die.’ As she sat there, she began to cry. The wilderness of Beersheba is dry and hot. There is not much water there."
+      "text": "metres away from him. She thought, ‘I cannot watch the boy die.’ As she sat there, she began to cry."
     },
     {
       "verse": "17",
@@ -2154,7 +2166,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Go over to him and lift him up. Take hold of his hand and help him to stand. I will make him become a great nation of people.’ God had already told this to Hagar, when she ran away from Sarah. See Genesis"
+      "text": "Go over to him and lift him up. Take hold of his hand and help him to stand. I will make him become a great nation of people.’"
     },
     {
       "verse": "19",
@@ -2166,7 +2178,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He lived in the Paran wilderness. Hagar, his mother, found an Egyptian wife for him to marry. Abraham and Abimelech make an agreement together"
+      "text": "He lived in the Paran wilderness. Hagar, his mother, found an Egyptian wife for him to marry."
     },
     {
       "verse": "22",
@@ -2206,7 +2218,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Because of that, the name of the place became ‘Beersheba’, because the two men made a promise there. Beersheba’ means ‘well of seven’ or ‘well of the promise’."
+      "text": "Because of that, the name of the place became ‘Beersheba’, because the two men made a promise there."
     },
     {
       "verse": "32",
@@ -2214,11 +2226,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Abraham planted a tamarisk tree in Beersheba. In that place, he worshipped the Lord who is God for ever. A tamarisk tree can grow in dry places. It lives for a long time. Abraham was showing that he believed God's promises."
+      "text": "Abraham planted a tamarisk tree in Beersheba. In that place, he worshipped the Lord who is God for ever."
     },
     {
       "verse": "34",
-      "text": "Abraham lived in the land of the Philistines for a long time. Print... Use screen font size Show All Comments Genesis 20Genesis 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Abraham lived in the land of the Philistines for a long time."
     }
   ],
   "22": [
@@ -2240,7 +2252,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He said to his servants, ‘Stay here with the donkey. I will take the boy and we will go over there. We will worship God in that place and then we will come back to you.’ Abraham says, ‘we will come back to you’. He trusted God to keep his promise. God had promised that he would have descendants from Isaac. He did not know how God would do that, because he knew that he must offer Isaac to God as a sacrifice."
+      "text": "He said to his servants, ‘Stay here with the donkey. I will take the boy and we will go over there. We will worship God in that place and then we will come back to you.’"
     },
     {
       "verse": "6",
@@ -2248,11 +2260,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Isaac spoke to his father, Abraham. He said, ‘Father?’ Abraham replied ‘Yes my son, what is it?’ Isaac replied, ‘I see that the fire and the wood are here. But where is the lamb so that we can make the burnt offering?’ In those days, people killed lambs as sacrifices to God."
+      "text": "Isaac spoke to his father, Abraham. He said, ‘Father?’ Abraham replied ‘Yes my son, what is it?’ Isaac replied, ‘I see that the fire and the wood are here. But where is the lamb so that we can make the burnt offering?’"
     },
     {
       "verse": "8",
-      "text": "Abraham replied, ‘My son, God himself will bring the lamb for the burnt offering.’ The two of them continued to walk on together."
+      "text": "Abraham replied, ‘My son, God himself will bring the lamb for the burnt offering.’The two of them continued to walk on together."
     },
     {
       "verse": "9",
@@ -2268,15 +2280,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The angel said, ‘Do not hurt the boy! Do not do anything to him. Now I know that you respect God and you obey him. Isaac is your only son and you agreed to offer him to me as a sacrifice. You did not try to keep him safe.’ Abraham still believed that God would keep his promise. So he believed that God would bring Isaac back from death. See Hebrews"
+      "text": "The angel said, ‘Do not hurt the boy! Do not do anything to him. Now I know that you respect God and you obey him. Isaac is your only son and you agreed to offer him to me as a sacrifice. You did not try to keep him safe.’"
     },
     {
       "verse": "13",
-      "text": "Just then, Abraham looked round and he saw a male sheep behind him. Its horns were caught in some bushes. So he went and he took hold of the sheep. Abraham killed the sheep on the altar as a burnt offering to God. In that way, he killed the sheep as a sacrifice, instead of his son. See John"
+      "text": "Just then, Abraham looked round and he saw a male sheep behind him. Its horns were caught in some bushes. So he went and he took hold of the sheep. Abraham killed the sheep on the altar as a burnt offering to God. In that way, he killed the sheep as a sacrifice, instead of his son."
     },
     {
       "verse": "14",
-      "text": "Abraham called that place ‘The Lord will give me what I need.’ People still say today, ‘On the mountain of the Lord, he will give us what we need.’ In the Hebrew language, the name is sometimes written as ‘Jehovah Jireh’."
+      "text": "Abraham called that place ‘The Lord will give me what I need.’ People still say today, ‘On the mountain of the Lord, he will give us what we need.’"
     },
     {
       "verse": "15",
@@ -2316,13 +2328,13 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Nahor also had a slave wife. Her name was Reumah. She also gave birth to sons for Nahor. Their names were: Tebah, Gaham, Tahash and Maakah. Print... Use screen font size Show All Comments Genesis 21Genesis 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Nahor also had a slave wife. Her name was Reumah. She also gave birth to sons for Nahor. Their names were: Tebah, Gaham, Tahash and Maakah."
     }
   ],
   "23": [
     {
       "verse": "1",
-      "text": "Sarah lived for 127 years."
+      "text": "years."
     },
     {
       "verse": "2",
@@ -2378,7 +2390,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "‘Listen to me, sir. The land is worth 400 shekels of silver. But the price is not important, because we are friends. Now bury your dead wife there.’ People used shekels to measure weight. Ephron is telling Abraham how much the land will cost. He knows that Abraham will not accept the field as a gift. This is the way that people would agree to a price."
+      "text": "‘Listen to me, sir. The land is worth 400 shekels of silver. But the price is not important, because we are friends. Now bury your dead wife there.’"
     },
     {
       "verse": "16",
@@ -2398,7 +2410,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "That is how Abraham bought the field and the cave that was in it from the Hittite people. He bought it so that he could bury there his family who died. Print... Use screen font size Show All Comments Genesis 22Genesis 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is how Abraham bought the field and the cave that was in it from the Hittite people. He bought it so that he could bury there his family who died."
     }
   ],
   "24": [
@@ -2416,7 +2428,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Instead, you must go to my own country. Go to my family there to find a wife for my son Isaac.’ At that time, the people used this practice. It showed that a person was making a serious promise to another person."
+      "text": "Instead, you must go to my own country. Go to my family there to find a wife for my son Isaac.’"
     },
     {
       "verse": "5",
@@ -2440,7 +2452,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "After that, Abraham's servant left to go on his journey. He took with him ten of his master's camels. He also took many different kinds of valuable gifts that Abraham had given to him. He travelled towards Aram Naharaim. He arrived in the town of Nahor. The gifts were for the family of the woman who would agree to marry Isaac. This was the place where Abraham's brother Nahor had lived. It was in Mesopotamia."
+      "text": "After that, Abraham's servant left to go on his journey. He took with him ten of his master's camels. He also took many different kinds of valuable gifts that Abraham had given to him. He travelled towards Aram Naharaim. He arrived in the town of Nahor."
     },
     {
       "verse": "11",
@@ -2616,7 +2628,7 @@ module.exports = {
     },
     {
       "verse": "54",
-      "text": "After that, the servant ate a meal. The men who were with him also ate and drank. They stayed there for the night. When they woke up the next morning, the servant said, ‘Let me leave now so that I can go back to my master.’"
+      "text": "After that, the servant ate a meal. The men who were with him also ate and drank. They stayed there for the night.When they woke up the next morning, the servant said, ‘Let me leave now so that I can go back to my master.’"
     },
     {
       "verse": "55",
@@ -2636,11 +2648,11 @@ module.exports = {
     },
     {
       "verse": "59",
-      "text": "So they agreed to let their sister Rebekah go. Her nurse went with her. They left there with Abraham's servant, and his men."
+      "text": "So they agreed to let their sister Rebekah go. Her nurse went with her. They left there with Abraham's servant, and his men. ‘Our sister, may you become the mother of millions of descendants. May your descendants win against their enemies, and may they go into their enemies' cities.’"
     },
     {
       "verse": "60",
-      "text": "As Rebekah was leaving, her brother and her mother blessed her. They said, ‘Our sister, may you become the mother of millions of descendants. May your descendants win against their enemies, and may they go into their enemies' cities.’ Rebekah's mother and her brother are asking God that he will bless Rebekah. They want her to have many children."
+      "text": "As Rebekah was leaving, her brother and her mother blessed her. They said,‘Our sister, may you become the mother of millions of descendants.May your descendants win against their enemies,and may they go into their enemies' cities.’"
     },
     {
       "verse": "61",
@@ -2648,7 +2660,7 @@ module.exports = {
     },
     {
       "verse": "62",
-      "text": "At this time Isaac had returned from Beer Lahai Roi. He was now living in the Negev. Beer Lahai Roi is a well. See Genesis"
+      "text": "At this time Isaac had returned from Beer Lahai Roi. He was now living in the Negev."
     },
     {
       "verse": "63",
@@ -2660,7 +2672,7 @@ module.exports = {
     },
     {
       "verse": "65",
-      "text": "She asked Abraham's servant, ‘I see a man in the field who is coming towards us. Who is he?’ The servant replied, ‘He is my master’. Rebekah covered her face with a piece of cloth. She covered her face because she was not yet a married woman."
+      "text": "She asked Abraham's servant, ‘I see a man in the field who is coming towards us. Who is he?’ The servant replied, ‘He is my master’. Rebekah covered her face with a piece of cloth."
     },
     {
       "verse": "66",
@@ -2668,7 +2680,7 @@ module.exports = {
     },
     {
       "verse": "67",
-      "text": "Isaac took Rebekah into the tent that his mother Sarah had lived in. Rebekah became Isaac's wife. And Isaac loved Rebekah. So Isaac was happy again, after the death of his mother. Print... Use screen font size Show All Comments Genesis 23Genesis 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Isaac took Rebekah into the tent that his mother Sarah had lived in. Rebekah became Isaac's wife. And Isaac loved Rebekah. So Isaac was happy again, after the death of his mother."
     }
   ],
   "25": [
@@ -2698,7 +2710,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Abraham lived for 175 years."
+      "text": "years. So they buried Abraham there. It was in the cave where his wife, Sarah, had also been buried."
     },
     {
       "verse": "8",
@@ -2710,15 +2722,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Abraham had bought the field from the Hittites. So they buried Abraham there. It was in the cave where his wife, Sarah, had also been buried."
+      "text": "Abraham had bought the field from the Hittites.So they buried Abraham there. It was in the cave where his wife, Sarah, had also been buried."
     },
     {
       "verse": "11",
-      "text": "After Abraham's death, God blessed his son, Isaac. Isaac was living near Beer Lahai Roi. Ishmael's family"
+      "text": "After Abraham's death, God blessed his son, Isaac. Isaac was living near Beer Lahai Roi."
     },
     {
       "verse": "12",
-      "text": "This is the report about Abraham's son, Ishmael, and his family. Sarah's female servant gave birth to Ishmael. Her name was Hagar. She was from Egypt."
+      "text": "This is the report about Abraham's son, Ishmael, and his family.Sarah's female servant gave birth to Ishmael. Her name was Hagar. She was from Egypt."
     },
     {
       "verse": "13",
@@ -2738,19 +2750,19 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Ishmael lived for 137 years then he died. He joined his ancestors who had died before him."
+      "text": "years then he died. He joined his ancestors who had died before him."
     },
     {
       "verse": "18",
-      "text": "Ishmael's descendants lived in the lands from Havilah to Shur. These are near Egypt, towards Asshur. They were always at war with each other. The Lord had told Hagar about this in Genesis Jacob and Esau"
+      "text": "Ishmael's descendants lived in the lands from Havilah to Shur. These are near Egypt, towards Asshur. They were always at war with each other."
     },
     {
       "verse": "19",
-      "text": "This is the report about Abraham's son, Isaac, and his family. Abraham became the father of Isaac."
+      "text": "This is the report about Abraham's son, Isaac, and his family.Abraham became the father of Isaac."
     },
     {
       "verse": "20",
-      "text": "When Isaac was 40 years old, he married Rebekah. Rebekah was the daughter of Bethuel. Bethuel was an Aramean from Paddan Aram. She was the sister of Laban the Aramean."
+      "text": "years old, he married Rebekah. Rebekah was the daughter of Bethuel. Bethuel was an Aramean from Paddan Aram. She was the sister of Laban the Aramean."
     },
     {
       "verse": "21",
@@ -2762,7 +2774,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The Lord said to Rebekah, ‘The two children who are in your body will become two separate nations of people. One group will be stronger than the other. The older son will become a servant to the younger son.’ At that time, the youngest son would always be a servant to the oldest son. But this time, God chose the youngest son to be master over the oldest son."
+      "text": "The Lord said to Rebekah, ‘The two children who are in your body will become two separate nations of people. One group will be stronger than the other. The older son will become a servant to the younger son.’"
     },
     {
       "verse": "24",
@@ -2794,7 +2806,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Jacob said, ‘You must first sell me your birthright.’ Edom means red. In the Old Testament, the oldest son had the birthright. This means that he would be the leader of his family when his father died. And he would get two parts of the things that had belonged to his father."
+      "text": "Jacob said, ‘You must first sell me your birthright.’"
     },
     {
       "verse": "32",
@@ -2802,11 +2814,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jacob said, ‘First, make a serious promise to me.’ So Esau promised to sell his birthright to Jacob."
+      "text": "Jacob said, ‘First, make a serious promise to me.’ So Esau promised to sell his birthright to Jacob. In that way, Esau showed that he did not think that his birthright was important."
     },
     {
       "verse": "34",
-      "text": "Then Jacob gave Esau some bread and the soup made from grains. Esau ate the food and he drank. Then he got up and he left. In that way, Esau showed that he did not think that his birthright was important. Now Jacob had the birthright. Jacob was the younger son. Jacob would receive God's promise that he had made with Abraham. This promise was also for Isaac. When Isaac died, it would pass to Jacob. This is what God had told Rebekah. See verse 23. Print... Use screen font size Show All Comments Genesis 24Genesis 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Jacob gave Esau some bread and the soup made from grains. Esau ate the food and he drank. Then he got up and he left.In that way, Esau showed that he did not think that his birthright was important."
     }
   ],
   "26": [
@@ -2828,7 +2840,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "This will happen because Abraham obeyed me. He obeyed all my laws and rules, and he did what I told him to do.’ God made this promise become true when he sent Jesus Christ into the world. Through Jesus, God has blessed everyone on the earth."
+      "text": "This will happen because Abraham obeyed me. He obeyed all my laws and rules, and he did what I told him to do.’"
     },
     {
       "verse": "6",
@@ -2836,7 +2848,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The men of Gerar asked Isaac about his wife. He told them, ‘She is my sister.’ He was afraid to say, ‘She is my wife.’ He thought that the men of Gerar might kill him because Rebekah was very beautiful. See Genesis"
+      "text": "The men of Gerar asked Isaac about his wife. He told them, ‘She is my sister.’ He was afraid to say, ‘She is my wife.’ He thought that the men of Gerar might kill him because Rebekah was very beautiful."
     },
     {
       "verse": "8",
@@ -2844,7 +2856,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Abimelech called Isaac to come to him. He said, ‘Rebekah is your wife! Why did you say, “She is my sister”?’ Isaac replied, ‘I thought that someone might kill me because of her.’ Abimelech saw that Isaac and Rebekah were married."
+      "text": "Abimelech called Isaac to come to him. He said, ‘Rebekah is your wife! Why did you say, “She is my sister”?’ Isaac replied, ‘I thought that someone might kill me because of her.’"
     },
     {
       "verse": "10",
@@ -2856,7 +2868,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Isaac planted crops in the land and they grew very well. They made 100 times the amount of food that he had planted. This was because the Lord blessed him. The Lord kept his promise. He blessed Isaac because he did not go to Egypt. He blessed him, even when Isaac did not tell the truth to the Philistines about Rebekah."
+      "text": "Isaac planted crops in the land and they grew very well. They made 100 times the amount of food that he had planted. This was because the Lord blessed him."
     },
     {
       "verse": "13",
@@ -2888,15 +2900,15 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But the shepherds of Gerar quarrelled with Isaac's shepherds. They said, ‘The water belongs to us!’ So Isaac called that well Esek, because they quarrelled with him there. Esek means ‘quarrel’."
+      "text": "But the shepherds of Gerar quarrelled with Isaac's shepherds. They said, ‘The water belongs to us!’ So Isaac called that well Esek, because they quarrelled with him there."
     },
     {
       "verse": "21",
-      "text": "So Isaac's servants dug another well. But the shepherds of Gerar quarrelled about that one too. Isaac called that well Sitnah. Sitnah means ‘to be against someone’."
+      "text": "So Isaac's servants dug another well. But the shepherds of Gerar quarrelled about that one too. Isaac called that well Sitnah."
     },
     {
       "verse": "22",
-      "text": "Isaac moved away from Sitnah and he dug another well. No one quarrelled with him about this well. So he called it Rehoboth. He said, ‘Now the Lord has given us a place to live. We will have many good things in this land.’ Rehoboth means ‘to have space or room’."
+      "text": "Isaac moved away from Sitnah and he dug another well. No one quarrelled with him about this well. So he called it Rehoboth. He said, ‘Now the Lord has given us a place to live. We will have many good things in this land.’"
     },
     {
       "verse": "23",
@@ -2912,7 +2924,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "During that time, Abimelech came from Gerar to visit Isaac. He came with Ahuzzath his officer and with Phicol the leader of his army. Abimelech is a name for the kings of the Philistines. Phicol is a family name."
+      "text": "During that time, Abimelech came from Gerar to visit Isaac. He came with Ahuzzath his officer and with Phicol the leader of his army."
     },
     {
       "verse": "27",
@@ -2932,7 +2944,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Early the next morning, they promised each other to be friends. Then Isaac said ‘goodbye’ to them. They left as his friends. Eating a meal together showed that they all agreed to keep the promise."
+      "text": "Early the next morning, they promised each other to be friends. Then Isaac said ‘goodbye’ to them. They left as his friends."
     },
     {
       "verse": "32",
@@ -2940,15 +2952,15 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Isaac called the well Shibah. So the town is still called Beersheba. Shibah means ‘promise’ or ‘seven’. Beersheba means either ‘Well of the promise’ or ‘Well of seven’."
+      "text": "Isaac called the well Shibah. So the town is still called Beersheba."
     },
     {
       "verse": "34",
-      "text": "When Esau was 40 years old, he got married. He married Judith. She was the daughter of Beer the Hittite. He also married Basemath. She was the daughter of Elon the Hittite."
+      "text": "years old, he got married. He married Judith. She was the daughter of Beer the Hittite. He also married Basemath. She was the daughter of Elon the Hittite."
     },
     {
       "verse": "35",
-      "text": "Esau's wives brought a lot of trouble to Isaac and Rebekah. Esau lived in Canaan. Esau married women from Canaan. He did not go back to his own relatives to find a wife. Print... Use screen font size Show All Comments Genesis 25Genesis 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Esau's wives brought a lot of trouble to Isaac and Rebekah."
     }
   ],
   "27": [
@@ -2966,7 +2978,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then prepare the food that I like to eat. Bring it to me so that I can eat it. Then I will give you my blessing before I die.’ People use bows to shoot arrows. An arrow is like a stick with a sharp point at the end. At that time a father gave his blessing to the oldest son. This son had the birthright. Isaac did not know that Esau had sold his birthright. See Genesis"
+      "text": "Then prepare the food that I like to eat. Bring it to me so that I can eat it. Then I will give you my blessing before I die.’"
     },
     {
       "verse": "5",
@@ -3030,7 +3042,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Isaac asked his son, ‘My son, how did you find it so quickly?’ Jacob replied, ‘The Lord your God helped me find it.’ Jacob said ‘the Lord your God’. Jacob did not call God his own God."
+      "text": "Isaac asked his son, ‘My son, how did you find it so quickly?’ Jacob replied, ‘The Lord your God helped me find it.’"
     },
     {
       "verse": "21",
@@ -3054,19 +3066,19 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then Isaac said, ‘Come here my son and kiss me.’"
+      "text": "Then Isaac said, ‘Come here my son and kiss me.’ ‘The smell of my son is like the smell of a field. It is like a field that the Lord has blessed."
     },
     {
       "verse": "27",
-      "text": "So Jacob went to Isaac and kissed him. Isaac smelled the clothes that Jacob wore. Then Isaac blessed him. He said, ‘The smell of my son is like the smell of a field. It is like a field that the Lord has blessed."
+      "text": "So Jacob went to Isaac and kissed him. Isaac smelled the clothes that Jacob wore. Then Isaac blessed him. He said,‘The smell of my son is like the smell of a field.It is like a field that the Lord has blessed."
     },
     {
       "verse": "28",
-      "text": "May God give you rain for your crops, so that they grow well in the good ground. Crops are plants. They can be any plants that people or animals eat. Then you will have plenty of grain for food. And you will have grapes to make wine."
+      "text": "May God give you rain for your crops,so that they grow well in the good ground.Then you will have plenty of grain for food.And you will have grapes to make wine. so that they grow well in the good ground. Then you will have plenty of grain for food. And you will have grapes to make wine."
     },
     {
       "verse": "29",
-      "text": "May the people of many nations serve you. May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you.’ This is what God told Rebekah. See Genesis"
+      "text": "May the people of many nations serve you.May they respect you as their master.You will rule over your brothers.Yes, your mother's sons will bend down to respect you.May God curse anyone who curses you.And may he bless anyone who blesses you.’ May they respect you as their master. You will rule over your brothers. Yes, your mother's sons will bend down to respect you. May God curse anyone who curses you. And may he bless anyone who blesses you.’"
     },
     {
       "verse": "30",
@@ -3082,7 +3094,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Isaac's body shook very much. He asked, ‘Who was it who killed an animal and brought the meat to me? Just before you came, I ate all of it. And then I blessed him. And God will certainly bless him!’ Isaac's body shook. He now realizes what Jacob has done. He knows that he cannot remove his blessing from Jacob. The son that he loves cannot receive the blessing. Isaac knows that God will bless Jacob and not Esau."
+      "text": "Isaac's body shook very much. He asked, ‘Who was it who killed an animal and brought the meat to me? Just before you came, I ate all of it. And then I blessed him. And God will certainly bless him!’"
     },
     {
       "verse": "34",
@@ -3094,11 +3106,11 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Esau said, ‘Yes, “Jacob” is the right name for him. He has cheated me twice. First he took my birthright. Now he has taken my blessing as well!’ Then Esau asked his father, ‘You must still have some blessing left for me, don't you?’ Jacob means ‘He deceives’. This is what ‘deceives’ means. Jacob says things that are not true. And he does things that are not right."
+      "text": "Esau said, ‘Yes, “Jacob” is the right name for him. He has cheated me twice. First he took my birthright. Now he has taken my blessing as well!’ Then Esau asked his father, ‘You must still have some blessing left for me, don't you?’"
     },
     {
       "verse": "37",
-      "text": "Isaac replied, ‘I have made Jacob master over you. All his relatives will become his servants. I have given him crops and wine. So what can I still do to bless you, my son?’ Isaac was saying that there is now no blessing for Esau."
+      "text": "Isaac replied, ‘I have made Jacob master over you. All his relatives will become his servants. I have given him crops and wine. So what can I still do to bless you, my son?’"
     },
     {
       "verse": "38",
@@ -3106,11 +3118,11 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Isaac replied, ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow."
+      "text": "Isaac replied,‘You will not live in a place where the ground gives good food.You will not have rain to make your crops grow. ‘You will not live in a place where the ground gives good food. You will not have rain to make your crops grow."
     },
     {
       "verse": "40",
-      "text": "You will have to fight to get the things that you need. You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you.’ This was the only blessing that Isaac could give Esau. He could not take back the blessing that he gave to Jacob."
+      "text": "You will have to fight to get the things that you need.You will serve your brother as your master.But when you choose to turn against him,you will become free from his power over you.’ You will serve your brother as your master. But when you choose to turn against him, you will become free from his power over you.’"
     },
     {
       "verse": "41",
@@ -3130,11 +3142,11 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "He may forget what you did to him. Then I will send a message to you, so that you can come back from Haran. I do not want to lose both of my sons in one day.’ Rebekah thought that Esau and Jacob would kill each other. Or she thought that, if Esau killed Jacob, other people would have to kill Esau."
+      "text": "He may forget what you did to him. Then I will send a message to you, so that you can come back from Haran. I do not want to lose both of my sons in one day.’"
     },
     {
       "verse": "46",
-      "text": "Then Rebekah said to Isaac, ‘I do not like living in the same place as Esau's wives. It makes me very upset, because they are Hittites. If Jacob marries one of the Hittite women who live in this land, I will be very sad. I would rather die!’ Rebekah wanted Isaac to send Jacob away to find a wife. He would send Jacob to go to his relatives. Rebekah wanted that to happen so that Esau would not be able to kill Jacob. Jacob stayed in Haran for 20 years. Rebekah did not see Jacob again. Print... Use screen font size Show All Comments Genesis 26Genesis 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Rebekah said to Isaac, ‘I do not like living in the same place as Esau's wives. It makes me very upset, because they are Hittites. If Jacob marries one of the Hittite women who live in this land, I will be very sad. I would rather die!’"
     }
   ],
   "28": [
@@ -3172,7 +3184,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So Esau went to visit Abraham's son, Ishmael. He married Ishmael's daughter, Mahalath, the sister of Nebaioth. When Esau married Mahalath, he kept his Canaanite wives as well. Jacob's journey"
+      "text": "So Esau went to visit Abraham's son, Ishmael. He married Ishmael's daughter, Mahalath, the sister of Nebaioth. When Esau married Mahalath, he kept his Canaanite wives as well."
     },
     {
       "verse": "10",
@@ -3196,7 +3208,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I am with you. I will take care of you wherever you go. I will bring you back to this land. I will not leave you until I have done what I promised to do for you.’ This is the promise that God had made to Abraham. See Genesis"
+      "text": "I am with you. I will take care of you wherever you go. I will bring you back to this land. I will not leave you until I have done what I promised to do for you.’"
     },
     {
       "verse": "16",
@@ -3208,11 +3220,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Early in the morning Jacob got up. He took the stone that he had put under his head. He made it stand up straight in the ground. He poured oil on top of it. The oil poured onto the stone was olive oil. This practice was to show that it belonged to God."
+      "text": "Early in the morning Jacob got up. He took the stone that he had put under his head. He made it stand up straight in the ground. He poured oil on top of it."
     },
     {
       "verse": "19",
-      "text": "Jacob called that place Bethel. Before that, the name of the place had been Luz. Bethel means ‘house of God’."
+      "text": "Jacob called that place Bethel. Before that, the name of the place had been Luz."
     },
     {
       "verse": "20",
@@ -3224,7 +3236,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "This special stone that I have put here will be God's house. And from everything that God gives me, I will give God one tenth.’ Print... Use screen font size Show All Comments Genesis 27Genesis 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "This special stone that I have put here will be God's house. And from everything that God gives me, I will give God one tenth.’"
     }
   ],
   "29": [
@@ -3270,7 +3282,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then Jacob kissed Rachel. He began to weep loudly. Jacob cried because he was happy to find his relatives."
+      "text": "Then Jacob kissed Rachel. He began to weep loudly."
     },
     {
       "verse": "12",
@@ -3306,7 +3318,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Jacob worked for seven years to have Rachel as his wife. But the years passed very quickly because Jacob loved Rachel very much. Seven years seemed like only a few days to Jacob. Jacob marries Leah and Rachel"
+      "text": "Jacob worked for seven years to have Rachel as his wife. But the years passed very quickly because Jacob loved Rachel very much. Seven years seemed like only a few days to Jacob."
     },
     {
       "verse": "21",
@@ -3334,7 +3346,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "So finish this week of Leah's marriage. Then we will give you Rachel to marry too. But you must work for another seven years.’ Laban had deceived Jacob. A marriage week was the seven days of the feast. Jacob had to sleep with his wife Leah until the end of the week."
+      "text": "So finish this week of Leah's marriage. Then we will give you Rachel to marry too. But you must work for another seven years.’"
     },
     {
       "verse": "28",
@@ -3366,7 +3378,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Leah became pregnant again. She gave birth to another son. She said, ‘This time I will praise the Lord.’ She called this son Judah. Then she stopped giving birth to children. Print... Use screen font size Show All Comments Genesis 28Genesis 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Leah became pregnant again. She gave birth to another son. She said, ‘This time I will praise the Lord.’ She called this son Judah. Then she stopped giving birth to children."
     }
   ],
   "30": [
@@ -3380,7 +3392,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Rachel said, ‘Take my servant Bilhah and have sex with her. Then she can have children on my behalf. Through her, I can have a family.’ At the time of the Old Testament it was very important for women to have children. Sarah had said the same thing to Abraham about Hagar. See Genesis"
+      "text": "Rachel said, ‘Take my servant Bilhah and have sex with her. Then she can have children on my behalf. Through her, I can have a family.’"
     },
     {
       "verse": "4",
@@ -3428,7 +3440,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But Leah said to Rachel, ‘You took my husband from me. That was bad enough! Now you want to take my son's mandrakes too!’ Rachel said, ‘OK. If you give me some of your son's mandrakes, Jacob can sleep with you tonight.’ A mandrake is a plant that people eat. Its root has a shape like a human body. People thought that it helped them to enjoy sex. Rachel thought that the mandrake plants would help her to give birth to a child. That is why she wanted them."
+      "text": "But Leah said to Rachel, ‘You took my husband from me. That was bad enough! Now you want to take my son's mandrakes too!’ Rachel said, ‘OK. If you give me some of your son's mandrakes, Jacob can sleep with you tonight.’"
     },
     {
       "verse": "16",
@@ -3464,7 +3476,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Rachel called her son Joseph. She said, ‘I pray that the Lord will give me another son.’ Jacob's sheep"
+      "text": "Rachel called her son Joseph. She said, ‘I pray that the Lord will give me another son.’"
     },
     {
       "verse": "25",
@@ -3512,7 +3524,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "He sent those animals a long way away. It would take Jacob three days to reach them. While this was happening, Jacob was taking care of Laban's other animals. Laban deceived Jacob. He took all the animals that were Jacob's. He gave them to his own sons. He sent them away before Jacob knew what he had done."
+      "text": "He sent those animals a long way away. It would take Jacob three days to reach them. While this was happening, Jacob was taking care of Laban's other animals."
     },
     {
       "verse": "37",
@@ -3540,7 +3552,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "In this way, Jacob became very rich. Many sheep and goats belonged to him. He also had female servants and male servants, as well as camels and donkeys. Print... Use screen font size Show All Comments Genesis 29Genesis 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "In this way, Jacob became very rich. Many sheep and goats belonged to him. He also had female servants and male servants, as well as camels and donkeys."
     }
   ],
   "31": [
@@ -3618,7 +3630,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Before they left, Laban had gone to cut the wool from his sheep. While he was away from the house, Rachel took the idols that Laban worshipped in his house. These idols were small gods that someone had made from wood or metal. Laban worshipped these gods."
+      "text": "Before they left, Laban had gone to cut the wool from his sheep. While he was away from the house, Rachel took the idols that Laban worshipped in his house."
     },
     {
       "verse": "20",
@@ -3666,11 +3678,11 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Jacob replied, ‘I left secretly because I was afraid. I thought that you might fight me to take your daughters away from me."
+      "text": "Jacob replied, ‘I left secretly because I was afraid. I thought that you might fight me to take your daughters away from me. Jacob did not know that Rachel had taken her father's idols."
     },
     {
       "verse": "32",
-      "text": "But if you find your idols with anyone here, that person must die. While our relatives watch, you may look for anything that belongs to you. If you find anything then take it.’ Jacob did not know that Rachel had taken her father's idols."
+      "text": "But if you find your idols with anyone here, that person must die. While our relatives watch, you may look for anything that belongs to you. If you find anything then take it.’Jacob did not know that Rachel had taken her father's idols."
     },
     {
       "verse": "33",
@@ -3682,7 +3694,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Rachel said to him, ‘Do not be angry with me, sir. I cannot stand up in front of you. It is the time of my monthly blood loss.’ So Laban looked everywhere for the idols, but he did not find them. At the time of the Old Testament, when a woman had her monthly blood loss, she was unclean. And anything that she sat on became unclean. See Leviticus"
+      "text": "Rachel said to him, ‘Do not be angry with me, sir. I cannot stand up in front of you. It is the time of my monthly blood loss.’ So Laban looked everywhere for the idols, but he did not find them."
     },
     {
       "verse": "36",
@@ -3706,11 +3718,11 @@ module.exports = {
     },
     {
       "verse": "41",
-      "text": "It was like this for 20 years as I worked like a slave for you. I worked for 14 years to pay you for your two daughters. Then I worked for six years for your sheep and goats. You changed what you paid me at least ten times!"
+      "text": "years as I worked like a slave for you. I worked for 14 years to pay you for your two daughters. Then I worked for six years for your sheep and goats. You changed what you paid me at least ten times!"
     },
     {
       "verse": "42",
-      "text": "The God of my father, the God of Abraham and the Fear of Isaac was with me. If he had not helped me, then you would have sent me away with nothing. But God has seen what you have done to hurt me. He has seen how hard I have worked for you. So last night he told you that you had done wrong.’ The God of my father, the God of Abraham, and the Fear of Isaac are all names for God."
+      "text": "The God of my father, the God of Abraham and the Fear of Isaac was with me. If he had not helped me, then you would have sent me away with nothing. But God has seen what you have done to hurt me. He has seen how hard I have worked for you. So last night he told you that you had done wrong.’"
     },
     {
       "verse": "43",
@@ -3726,11 +3738,11 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "He said to his relatives, ‘Go and get some stones.’ So they brought some stones and they put them together on the ground. Then they all ate a meal together, near the heap of stones. When people made an agreement, they often ate a meal together."
+      "text": "He said to his relatives, ‘Go and get some stones.’ So they brought some stones and they put them together on the ground. Then they all ate a meal together, near the heap of stones."
     },
     {
       "verse": "47",
-      "text": "Laban called that place Jegar Sahadutha. Jacob called it Galeed. Jegar Sahadutha are Aramaic words. Galeed is a Hebrew word. Both mean that the stones showed that people made an agreement there."
+      "text": "Laban called that place Jegar Sahadutha. Jacob called it Galeed."
     },
     {
       "verse": "48",
@@ -3754,7 +3766,7 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "Let the God of Abraham, Nahor, and their ancestors decide if one of us is guilty.’ So Jacob made a promise in the name of the God that his father Isaac worshipped."
+      "text": "Let the God of Abraham, Nahor, and their ancestors decide if one of us is guilty.’So Jacob made a promise in the name of the God that his father Isaac worshipped."
     },
     {
       "verse": "54",
@@ -3762,7 +3774,7 @@ module.exports = {
     },
     {
       "verse": "55",
-      "text": "Early the next morning, Laban got up to return home. He kissed his grandchildren and his daughters. He said ‘goodbye’ and he blessed them. Then he left and he went back to his home. Print... Use screen font size Show All Comments Genesis 30Genesis 32 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Early the next morning, Laban got up to return home. He kissed his grandchildren and his daughters. He said ‘goodbye’ and he blessed them. Then he left and he went back to his home."
     }
   ],
   "32": [
@@ -3772,7 +3784,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "When Jacob saw them, he said, ‘This is where God's army has put up their tents!’ So he called that place Mahanaim. Jacob had seen the angels of God before. See Genesis Now God sent his angels to meet Jacob again, to show that he was with Jacob."
+      "text": "When Jacob saw them, he said, ‘This is where God's army has put up their tents!’ So he called that place Mahanaim."
     },
     {
       "verse": "3",
@@ -3812,7 +3824,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "But you have said, “I will give you many good things. I will give you so many descendants that nobody will be able to count them. They will be as many as the pieces of sand on the shore of the sea.” ’ See Genesis"
+      "text": "But you have said, “I will give you many good things. I will give you so many descendants that nobody will be able to count them. They will be as many as the pieces of sand on the shore of the sea.” ’"
     },
     {
       "verse": "13",
@@ -3820,11 +3832,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He chose 200 female goats, 20 male goats, 200 female sheep and 20 male sheep."
+      "text": "female goats, 20 male goats, 200 female sheep and 20 male sheep."
     },
     {
       "verse": "15",
-      "text": "He also chose 30 female camels, with their young ones, 40 cows and ten bulls, 20 female donkeys and ten male donkeys."
+      "text": "female camels, with their young ones, 40 cows and ten bulls, 20 female donkeys and ten male donkeys."
     },
     {
       "verse": "16",
@@ -3844,7 +3856,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "You must also say “Your servant Jacob is coming behind us.” ’ Jacob thought, ‘Esau will be happy to receive my gifts. He will no longer be angry with me. Then, when I meet him, he will not hurt me.’"
+      "text": "You must also say “Your servant Jacob is coming behind us.” ’Jacob thought, ‘Esau will be happy to receive my gifts. He will no longer be angry with me. Then, when I meet him, he will not hurt me.’"
     },
     {
       "verse": "21",
@@ -3860,7 +3872,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then Jacob was alone. A man came and fought with him for a long time. They continued until dawn. This part of the Jabbok river was not very deep. It was about 20 miles north of the Dead Sea. God came to Jacob as an angel. See Hosea"
+      "text": "Then Jacob was alone. A man came and fought with him for a long time. They continued until dawn."
     },
     {
       "verse": "25",
@@ -3868,7 +3880,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then the man said to Jacob, ‘Now let me go because dawn has come.’ But Jacob said, ‘I will not let you go unless you bless me.’ The hip is the top of a person's leg, where it joins his body."
+      "text": "Then the man said to Jacob, ‘Now let me go because dawn has come.’ But Jacob said, ‘I will not let you go unless you bless me.’"
     },
     {
       "verse": "27",
@@ -3876,7 +3888,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Then the man said, ‘Your name will not be Jacob any longer. Your name will now be Israel. That is because you have fought with God and you have fought with men. And you have won!’ Israel probably means ‘he fights with God’. God changed Jacob's name to give him a new beginning."
+      "text": "Then the man said, ‘Your name will not be Jacob any longer. Your name will now be Israel. That is because you have fought with God and you have fought with men. And you have won!’"
     },
     {
       "verse": "29",
@@ -3884,7 +3896,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "So Jacob called the place Peniel. He said, ‘I have seen God face to face, and I am still alive!’ Peniel means ‘face of God’."
+      "text": "So Jacob called the place Peniel. He said, ‘I have seen God face to face, and I am still alive!’"
     },
     {
       "verse": "31",
@@ -3892,7 +3904,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Even today, the Israelite people do not eat the meat of an animal where it joins to the hip. This is because God touched Jacob's hip. The Israelites were the descendants of Jacob, who was now called Israel. Jacob's 12 sons became the ancestors of Israel's 12 tribes. Print... Use screen font size Show All Comments Genesis 31Genesis 33 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Even today, the Israelite people do not eat the meat of an animal where it joins to the hip. This is because God touched Jacob's hip."
     }
   ],
   "33": [
@@ -3962,7 +3974,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But Jacob went to Succoth instead. He built a house for himself, and he made huts for his animals. That is why the place is called Succoth. Succoth means ‘huts’."
+      "text": "But Jacob went to Succoth instead. He built a house for himself, and he made huts for his animals. That is why the place is called Succoth."
     },
     {
       "verse": "18",
@@ -3974,7 +3986,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Jacob built an altar in that place. He called the altar ‘The God of Israel is the true God’. Print... Use screen font size Show All Comments Genesis 32Genesis 34 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jacob built an altar in that place. He called the altar ‘The God of Israel is the true God’."
     }
   ],
   "34": [
@@ -4016,7 +4028,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then you can live among us. You can live anywhere you want to in this land. You should live here, buy and sell things. Buy land and houses here.’ Hamor wanted the Hivites to have some of Jacob's riches."
+      "text": "Then you can live among us. You can live anywhere you want to in this land. You should live here, buy and sell things. Buy land and houses here.’"
     },
     {
       "verse": "11",
@@ -4100,7 +4112,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But Simeon and Levi replied, ‘Shechem should not have had sex with our sister as if she were a prostitute.’ Print... Use screen font size Show All Comments Genesis 33Genesis 35 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But Simeon and Levi replied, ‘Shechem should not have had sex with our sister as if she were a prostitute.’"
     }
   ],
   "35": [
@@ -4130,11 +4142,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Jacob built an altar there. He called the place El Bethel, because that was where God appeared to him. God had appeared to him when he was running away from his brother Esau. El Bethel means ‘God of Bethel’."
+      "text": "Jacob built an altar there. He called the place El Bethel, because that was where God appeared to him. God had appeared to him when he was running away from his brother Esau."
     },
     {
       "verse": "8",
-      "text": "Rebekah's nurse, Deborah, died at that time. Jacob buried her under the oak tree near Bethel. That is why they call the place Allon Bacuth. Allon Bacuth means ‘oak tree where people wept’."
+      "text": "Rebekah's nurse, Deborah, died at that time. Jacob buried her under the oak tree near Bethel. That is why they call the place Allon Bacuth."
     },
     {
       "verse": "9",
@@ -4142,7 +4154,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He said to Jacob, ‘Your name is Jacob, but you will no longer be called Jacob. Instead, your name will be Israel.’ So God gave the name Israel to Jacob. See Genesis"
+      "text": "He said to Jacob, ‘Your name is Jacob, but you will no longer be called Jacob. Instead, your name will be Israel.’ So God gave the name Israel to Jacob."
     },
     {
       "verse": "11",
@@ -4150,7 +4162,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "I give to you the land that I gave to Abraham and Isaac. Yes, I will give this land to your descendants that come after you.’ God is telling Jacob about the promise that he made to Abraham (Genesis and to Isaac (Genesis"
+      "text": "I give to you the land that I gave to Abraham and Isaac. Yes, I will give this land to your descendants that come after you.’"
     },
     {
       "verse": "13",
@@ -4174,7 +4186,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But Rachel was dying. With her last breath, she gave to her son the name Ben-Oni. But Jacob, his father, called him Benjamin. Ben-Oni means ‘son of my pain’. Benjamin means ‘son of my right hand’."
+      "text": "But Rachel was dying. With her last breath, she gave to her son the name Ben-Oni. But Jacob, his father, called him Benjamin."
     },
     {
       "verse": "19",
@@ -4182,7 +4194,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Jacob set up a special stone over the place where they buried Rachel. This stone still shows the place. Ephrath is now called Bethlehem."
+      "text": "Jacob set up a special stone over the place where they buried Rachel. This stone still shows the place."
     },
     {
       "verse": "21",
@@ -4190,7 +4202,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "While Israel stayed there, his son Reuben had sex with Bilhah. She was Israel's slave wife, and Israel heard what had happened. Jacob is now called Israel, but the Bible uses both names. Jacob had 12 sons:"
+      "text": "While Israel stayed there, his son Reuben had sex with Bilhah. She was Israel's slave wife, and Israel heard what had happened.Jacob had 12 sons:"
     },
     {
       "verse": "23",
@@ -4206,7 +4218,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The sons of Leah's servant, Zilpah, were Gad and Asher. Those were Jacob's sons who were born to him in Paddan Aram."
+      "text": "The sons of Leah's servant, Zilpah, were Gad and Asher.Those were Jacob's sons who were born to him in Paddan Aram. Those were Jacob's sons who were born to him in Paddan Aram."
     },
     {
       "verse": "27",
@@ -4214,11 +4226,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Isaac lived for 180 years."
+      "text": "years."
     },
     {
       "verse": "29",
-      "text": "Then he died and he joined his ancestors. He was an old man who had lived a long life. His sons, Esau and Jacob, buried him. Print... Use screen font size Show All Comments Genesis 34Genesis 36 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then he died and he joined his ancestors. He was an old man who had lived a long life. His sons, Esau and Jacob, buried him."
     }
   ],
   "36": [
@@ -4228,7 +4240,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Esau took women from Canaan to be his wives. They were: Adah, the daughter of Elon the Hittite,Oholibamah, the daughter of Anah and granddaughter of Zibeon the Hivite,"
+      "text": "Esau took women from Canaan to be his wives. They were:Adah, the daughter of Elon the Hittite,Oholibamah, the daughter of Anah and granddaughter of Zibeon the Hivite,"
     },
     {
       "verse": "3",
@@ -4260,7 +4272,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "These are the names of Esau's sons: Eliphaz, the son of Esau's wife, Adah,and Reuel, the son of Esau's wife, Basemath."
+      "text": "These are the names of Esau's sons:Eliphaz, the son of Esau's wife, Adah,and Reuel, the son of Esau's wife, Basemath."
     },
     {
       "verse": "11",
@@ -4380,7 +4392,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "These descendants of Esau were the leaders of their clans: Timna, Alvah, Jetheth,"
+      "text": "These descendants of Esau were the leaders of their clans: Timna, Alvah, Jetheth, All those people are the descendants of Esau, the ancestor of the Edomites."
     },
     {
       "verse": "41",
@@ -4392,17 +4404,17 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Magdiel and Iram. These were the leaders who lived with their families in different places in the land. Each place was called the same name as the clan leader who lived there. All those people are the descendants of Esau, the ancestor of the Edomites. Print... Use screen font size Show All Comments Genesis 35Genesis 37 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Magdiel and Iram. These were the leaders who lived with their families in different places in the land. Each place was called the same name as the clan leader who lived there.All those people are the descendants of Esau, the ancestor of the Edomites."
     }
   ],
   "37": [
     {
       "verse": "1",
-      "text": "Jacob lived in Canaan, the land where his father had lived. God gave Jacob the new name ‘Israel’. See Genesis The Bible uses both names for the same person, but here we have used ‘Jacob’."
+      "text": "Jacob lived in Canaan, the land where his father had lived."
     },
     {
       "verse": "2",
-      "text": "This is the report about Jacob and his family. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers."
+      "text": "This is the report about Jacob and his family.Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers. Joseph was Jacob's son. When he was 17 years old, he took care of his father's sheep and goats. He did this together with his brothers. These were the sons of his father's wives, Bilhah and Zilpah. Sometimes Joseph told his father bad things about his brothers."
     },
     {
       "verse": "3",
@@ -4462,7 +4474,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The man said, ‘They have moved away from here. I heard them say, “Let us go to Dothan.” ’ So Joseph went to look for his brothers. He found them at Dothan."
+      "text": "The man said, ‘They have moved away from here. I heard them say, “Let us go to Dothan.” ’So Joseph went to look for his brothers. He found them at Dothan."
     },
     {
       "verse": "18",
@@ -4514,7 +4526,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Reuben went back to his brothers. He said to them, ‘The boy is not in the well! What can I do now?’ Reuben was upset because he wanted to save Joseph. He was the oldest of all the brothers. Now he would have to tell his father that Joseph had gone."
+      "text": "Reuben went back to his brothers. He said to them, ‘The boy is not in the well! What can I do now?’"
     },
     {
       "verse": "31",
@@ -4538,7 +4550,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "While this was happening, the Midianites took Joseph into Egypt. They sold him to Potiphar, one of Pharaoh's officers. Potiphar had authority over all of Pharaoh's guards. Print... Use screen font size Show All Comments Genesis 36Genesis 38 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "While this was happening, the Midianites took Joseph into Egypt. They sold him to Potiphar, one of Pharaoh's officers. Potiphar had authority over all of Pharaoh's guards."
     }
   ],
   "38": [
@@ -4572,7 +4584,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then Judah said to Onan, ‘You should marry your dead brother's wife and have sex with her. You are her dead husband's brother. You must have a son who will become your dead brother's descendant.’ In those days, there was a custom. If a man died before his wife had had children, his brother had to marry the dead man's wife. The family would think of a new son born to those parents as the child of the dead brother. So this son would receive any land belonging to the dead man."
+      "text": "Then Judah said to Onan, ‘You should marry your dead brother's wife and have sex with her. You are her dead husband's brother. You must have a son who will become your dead brother's descendant.’"
     },
     {
       "verse": "9",
@@ -4612,7 +4624,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Judah asked her, ‘What should I give you?’ Tamar replied, ‘Give me your special ring and the string that holds it. And give me the stick that is in your hand.’ So Judah gave them to her. He had sex with her. As a result, she became pregnant. The special ring and the stick would have Judah's mark on them. So other people would know who they belonged to."
+      "text": "Judah asked her, ‘What should I give you?’ Tamar replied, ‘Give me your special ring and the string that holds it. And give me the stick that is in your hand.’ So Judah gave them to her. He had sex with her. As a result, she became pregnant."
     },
     {
       "verse": "19",
@@ -4624,7 +4636,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He asked some men who lived there, ‘Where is the temple prostitute who sat by the road at Enaim?’ But the men said, ‘There has not been any prostitute here.’ A temple prostitute sat at a place where people worshipped foreign gods."
+      "text": "He asked some men who lived there, ‘Where is the temple prostitute who sat by the road at Enaim?’ But the men said, ‘There has not been any prostitute here.’"
     },
     {
       "verse": "22",
@@ -4660,7 +4672,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Then his brother came out, with the red string on his arm. They gave him the name ‘Zerah’. Perez’ means ‘pushing out’. Print... Use screen font size Show All Comments Genesis 37Genesis 39 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then his brother came out, with the red string on his arm. They gave him the name ‘Zerah’."
     }
   ],
   "39": [
@@ -4686,7 +4698,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So Potiphar told Joseph to take care of everything that belonged to him. Potiphar did not worry about anything in his house. The only thing that he thought about was the food that he ate. Joseph was a strong and handsome man."
+      "text": "So Potiphar told Joseph to take care of everything that belonged to him. Potiphar did not worry about anything in his house. The only thing that he thought about was the food that he ate.Joseph was a strong and handsome man."
     },
     {
       "verse": "7",
@@ -4754,13 +4766,13 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The prison guard did not worry about anything that Joseph had authority over. He saw that the Lord was with Joseph. Whatever Joseph did, the Lord helped him to do it well. Print... Use screen font size Show All Comments Genesis 38Genesis 40 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The prison guard did not worry about anything that Joseph had authority over. He saw that the Lord was with Joseph. Whatever Joseph did, the Lord helped him to do it well."
     }
   ],
   "40": [
     {
       "verse": "1",
-      "text": "Some time later, two of the king's officers made him angry. One of them was the king's cupbearer. The other was the king's baker. The cupbearer had authority in the king's house. He would make sure that the king's wine was safe for the king to drink."
+      "text": "Some time later, two of the king's officers made him angry. One of them was the king's cupbearer. The other was the king's baker."
     },
     {
       "verse": "2",
@@ -4816,7 +4828,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Men took hold of me in the land of the Hebrews and they brought me here. Even here, I have not done anything wrong. I should not be in this prison.’ lift up your head’ means ‘you will be important again’."
+      "text": "Men took hold of me in the land of the Hebrews and they brought me here. Even here, I have not done anything wrong. I should not be in this prison.’"
     },
     {
       "verse": "16",
@@ -4844,11 +4856,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But Pharaoh hanged the baker to kill him. So it all happened in the way that Joseph said it would happen."
+      "text": "But Pharaoh hanged the baker to kill him.So it all happened in the way that Joseph said it would happen."
     },
     {
       "verse": "23",
-      "text": "But the cupbearer did not think about Joseph at all. He completely forgot about him. Print... Use screen font size Show All Comments Genesis 39Genesis 41 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the cupbearer did not think about Joseph at all. He completely forgot about him."
     }
   ],
   "41": [
@@ -4902,7 +4914,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "And everything happened as he had told us! You gave me my job as cupbearer again. But you hanged the baker to kill him.’ The cupbearer had authority in the king's house. He would make sure that the king's wine was safe for the king to drink."
+      "text": "And everything happened as he had told us! You gave me my job as cupbearer again. But you hanged the baker to kill him.’"
     },
     {
       "verse": "14",
@@ -4985,10 +4997,6 @@ module.exports = {
       "text": "Now Pharaoh should look for a clever man. He should look for a man who knows what is right and wrong. Tell him to rule over the land of Egypt."
     },
     {
-      "verse": "34-35",
-      "text": "This is what you should do: Choose some officers. Give them authority to store food during the good years when there is plenty. They must take a fifth part of all the food that grows everywhere in Egypt. They must store the extra food during the good years that will come soon. Give these officers authority to store and to take care of the food in the cities."
-    },
-    {
       "verse": "36",
       "text": "Then you will be ready for the seven years of famine that will happen everywhere in Egypt. The people in Egypt will have enough food, and the famine will not destroy the land.’"
     },
@@ -5018,7 +5026,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Pharaoh gave Joseph a chariot to ride in. It showed that Joseph was Pharaoh's most important officer. Only Pharaoh had more authority. As Joseph travelled, his servants shouted to the people, ‘Bend your knees to respect Joseph!’ In this way Pharaoh gave Joseph authority over everything in the land of Egypt."
+      "text": "Pharaoh gave Joseph a chariot to ride in. It showed that Joseph was Pharaoh's most important officer. Only Pharaoh had more authority. As Joseph travelled, his servants shouted to the people, ‘Bend your knees to respect Joseph!’In this way Pharaoh gave Joseph authority over everything in the land of Egypt."
     },
     {
       "verse": "44",
@@ -5026,11 +5034,11 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "Pharaoh gave Joseph the name Zaphenath-Paneah. He also gave Asenath to Joseph to be his wife. She was the daughter of Potiphera, who was a priest in Heliopolis. Everyone knew that Joseph had authority in all the land of Egypt. Heliopolis was a city where people worshipped the sun god. The city was also called On."
+      "text": "Pharaoh gave Joseph the name Zaphenath-Paneah. He also gave Asenath to Joseph to be his wife. She was the daughter of Potiphera, who was a priest in Heliopolis. Everyone knew that Joseph had authority in all the land of Egypt."
     },
     {
       "verse": "46",
-      "text": "Joseph was 30 years old when he began to serve Pharaoh, king of Egypt. Joseph then left Pharaoh's palace and he travelled all over Egypt."
+      "text": "years old when he began to serve Pharaoh, king of Egypt. Joseph then left Pharaoh's palace and he travelled all over Egypt."
     },
     {
       "verse": "47",
@@ -5074,7 +5082,15 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "People from all the other countries came to Egypt to buy food from Joseph. They came because the famine was very bad all over the world. Print... Use screen font size Show All Comments Genesis 40Genesis 42 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People from all the other countries came to Egypt to buy food from Joseph. They came because the famine was very bad all over the world."
+    },
+    {
+      "verse": "34",
+      "text": "This is what you should do: Choose some officers.  Give them authority to store food during the good years when there is plenty.  They must take a fifth part of all the food that grows everywhere in Egypt."
+    },
+    {
+      "verse": "35",
+      "text": "They must store the extra food during the good years that will come soon.  Give these officers authority to store and to take care of the food in the cities."
     }
   ],
   "42": [
@@ -5100,7 +5116,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Joseph had authority to rule Egypt at that time. He was the man who sold food to all the Egyptians. When Joseph's brothers arrived there, they bent down in front of him, with their faces to the ground. Joseph's first dream showed his brothers bending down to respect him."
+      "text": "Joseph had authority to rule Egypt at that time. He was the man who sold food to all the Egyptians. When Joseph's brothers arrived there, they bent down in front of him, with their faces to the ground."
     },
     {
       "verse": "7",
@@ -5108,7 +5124,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Joseph recognized his brothers, but they did not recognize him. Joseph was only 17 years old when they sold him as a slave. He now looked like an Egyptian. That is why they did not recognize him. Probably he spoke to his brothers in the language of Egypt. Then a man who could speak Hebrew told the brothers what Joseph had said."
+      "text": "Joseph recognized his brothers, but they did not recognize him."
     },
     {
       "verse": "9",
@@ -5140,7 +5156,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "One of you must go to bring your brother here. I will keep you others in prison. In that way I will know if what you said is true. If your youngest brother does not come, then I will certainly know that you are enemies!’ Joseph made a promise ‘by the life of Pharaoh’. He wanted to show his brothers that he meant what he said."
+      "text": "One of you must go to bring your brother here. I will keep you others in prison. In that way I will know if what you said is true. If your youngest brother does not come, then I will certainly know that you are enemies!’"
     },
     {
       "verse": "17",
@@ -5156,7 +5172,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But you must return to Egypt and you must bring your youngest brother to me. Then I will know that what you have said is true. Then you will not die.’ Joseph's brothers agreed to do what he told them. Joseph showed his brothers that he was under God's authority, so he would not cheat them."
+      "text": "But you must return to Egypt and you must bring your youngest brother to me. Then I will know that what you have said is true. Then you will not die.’ Joseph's brothers agreed to do what he told them."
     },
     {
       "verse": "21",
@@ -5168,7 +5184,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "While they said all this, they did not know that Joseph could understand them. Joseph had been speaking in the Egyptian language and someone else told the brothers his message in Hebrew. The brothers still did not know that the important officer was Joseph. They thought that he was an Egyptian. They did not know that he spoke Hebrew too."
+      "text": "While they said all this, they did not know that Joseph could understand them. Joseph had been speaking in the Egyptian language and someone else told the brothers his message in Hebrew."
     },
     {
       "verse": "24",
@@ -5180,7 +5196,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then the brothers put the bags of food on to their donkeys. Then they left. The brothers had brought the money to pay for the food."
+      "text": "Then the brothers put the bags of food on to their donkeys. Then they left."
     },
     {
       "verse": "27",
@@ -5204,7 +5220,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "We belong to a family of 12 brothers, all the sons of one father. One brother is not with us any more, and the youngest brother is at home with our father in Canaan.”"
+      "text": "brothers, all the sons of one father. One brother is not with us any more, and the youngest brother is at home with our father in Canaan.”"
     },
     {
       "verse": "33",
@@ -5228,7 +5244,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "But Jacob said, ‘My son will not go with you. His brother is already dead. Benjamin is the only one left. Something bad may happen to him on your journey. I am already an old man. If I lose Benjamin, I would be so sad that I would die.’ Benjamin is Jacob's youngest son. Benjamin's mother was Rachel. Jacob loved Rachel more than he loved his other wives. Jacob thinks that Joseph, Rachel's other son is dead. Jacob shows that he loves Benjamin more than he loves his other sons. Even when Simeon is in prison, Jacob does not want Benjamin to go to Egypt. Print... Use screen font size Show All Comments Genesis 41Genesis 43 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But Jacob said, ‘My son will not go with you. His brother is already dead. Benjamin is the only one left. Something bad may happen to him on your journey. I am already an old man. If I lose Benjamin, I would be so sad that I would die.’"
     }
   ],
   "43": [
@@ -5250,7 +5266,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "But if you do not send Benjamin, we will not go. The man clearly said to us, “Unless your brother is with you, you will not see me again.” ’ God had changed Jacob's name to ‘Israel’, but the Bible continues to use both names for the same person. We are using the name ‘Jacob’ here."
+      "text": "But if you do not send Benjamin, we will not go. The man clearly said to us, “Unless your brother is with you, you will not see me again.” ’"
     },
     {
       "verse": "6",
@@ -5270,7 +5286,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "We must go now! We have already talked for too long. By now, we could have gone to Egypt and returned twice!’ Judah says ‘we will not die’ because he would bring back food from Canaan. The famine would not kill them."
+      "text": "We must go now! We have already talked for too long. By now, we could have gone to Egypt and returned twice!’"
     },
     {
       "verse": "11",
@@ -5286,7 +5302,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I pray that God Almighty will help you. I pray that God will cause the man to be kind to you. Then he will let your older brother go free. He and Benjamin will return here with you. As for me, if I must lose my sons, then I will lose them. There is nothing that I can do to stop it.’ All these gifts were things that Egyptian people usually had to buy from other countries. Nuts are hard seeds that people eat, like almonds."
+      "text": "I pray that God Almighty will help you. I pray that God will cause the man to be kind to you. Then he will let your older brother go free. He and Benjamin will return here with you. As for me, if I must lose my sons, then I will lose them. There is nothing that I can do to stop it.’"
     },
     {
       "verse": "15",
@@ -5362,11 +5378,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "The brothers sat in a place where Joseph could see them. The servants told each of them where to sit, by their age. The oldest brother was at one end, all along to the youngest brother at the other end. The brothers were very surprised to see this. Only Joseph and Benjamin were sons of Rachel. Jacob's other wives had given birth to the other brothers. The brothers were surprised because Joseph knew their ages."
+      "text": "The brothers sat in a place where Joseph could see them. The servants told each of them where to sit, by their age. The oldest brother was at one end, all along to the youngest brother at the other end. The brothers were very surprised to see this."
     },
     {
       "verse": "34",
-      "text": "Then the servants took food from Joseph's table and they gave it to the brothers. Benjamin received the biggest amount of food. It was five times more than any of his brothers. The brothers also drank wine with Joseph and they were all very happy. Print... Use screen font size Show All Comments Genesis 42Genesis 44 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the servants took food from Joseph's table and they gave it to the brothers. Benjamin received the biggest amount of food. It was five times more than any of his brothers. The brothers also drank wine with Joseph and they were all very happy."
     }
   ],
   "44": [
@@ -5504,7 +5520,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "I cannot go back to my father if the boy is not with me. I never want to see how upset my father would be.’ In chapter 44, Joseph wants to see if his brothers have changed. Will they leave Benjamin in Egypt, so that they can return to Canaan? Judah shows that he has changed. He says that he will stay in Egypt, as a slave. He will stay so that Benjamin can go home to his father. Print... Use screen font size Show All Comments Genesis 43Genesis 45 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I cannot go back to my father if the boy is not with me. I never want to see how upset my father would be.’"
     }
   ],
   "45": [
@@ -5518,7 +5534,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Joseph said to his brothers, ‘I am Joseph! Is my father still alive?’ But his brothers could not answer him because they were too frightened. They could see Joseph was there in front of them! The brothers were frightened because they had sold Joseph, as a slave. They did not know what Joseph would do to them."
+      "text": "Joseph said to his brothers, ‘I am Joseph! Is my father still alive?’ But his brothers could not answer him because they were too frightened. They could see Joseph was there in front of them!"
     },
     {
       "verse": "4",
@@ -5550,7 +5566,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I will take care of you there. I will give food to you, because there will be five more years of famine. If you do not come here, you and all your family and servants will become very poor.” ’ Joseph knew that God had a plan for everything that had happened to him in Egypt. God wanted Jacob and his family to stay alive when there was a famine."
+      "text": "I will take care of you there. I will give food to you, because there will be five more years of famine. If you do not come here, you and all your family and servants will become very poor.” ’"
     },
     {
       "verse": "12",
@@ -5598,7 +5614,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Joseph also sent these things to his father: 10 donkeys that carried the best things from Egypt,10 female donkeys that carried food and grain,and other food for his father's journey."
+      "text": "Joseph also sent these things to his father:10 donkeys that carried the best things from Egypt,10 female donkeys that carried food and grain,and other food for his father's journey."
     },
     {
       "verse": "24",
@@ -5618,7 +5634,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Jacob said, ‘Now I believe you! My son Joseph is still alive! I will go and see him before I die.’ Print... Use screen font size Show All Comments Genesis 44Genesis 46 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jacob said, ‘Now I believe you! My son Joseph is still alive! I will go and see him before I die.’"
     }
   ],
   "46": [
@@ -5652,7 +5668,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "These are the names of the descendants of Israel who went to Egypt, (that is, the sons of Jacob): Israel is the new name that God gave to Jacob. We call the descendants of Jacob ‘Israelites.’ Jacob's 12 sons became the ancestors of the 12 tribes of Israel. Reuben was the firstborn son of Jacob."
+      "text": "These are the names of the descendants of Israel who went to Egypt, (that is, the sons of Jacob):Reuben was the firstborn son of Jacob."
     },
     {
       "verse": "9",
@@ -5756,7 +5772,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Then you should answer, “We have always taken care of cows and sheep since we were young men. Our ancestors have always done this work.” Egyptians do not want to live near people who take care of sheep. So Pharaoh will let you stay in the region called Goshen.’ Joseph wanted Pharaoh to know that his family would not cause any trouble to the Egyptians. They would take care of themselves. Print... Use screen font size Show All Comments Genesis 45Genesis 47 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then you should answer, “We have always taken care of cows and sheep since we were young men. Our ancestors have always done this work.” Egyptians do not want to live near people who take care of sheep. So Pharaoh will let you stay in the region called Goshen.’"
     }
   ],
   "47": [
@@ -5798,11 +5814,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then Jacob blessed Pharaoh again and he left. Abraham lived for 175 years (Genesis And Isaac lived for 180 years (Genesis"
+      "text": "Then Jacob blessed Pharaoh again and he left."
     },
     {
       "verse": "11",
-      "text": "So Joseph helped his father and his brothers to make their home in Egypt. He gave them a good place to live in the best region of Egypt. This was in the region that is now called Rameses. Joseph did for his family what Pharaoh had told him to do. Rameses is the Egyptian name for Goshen."
+      "text": "So Joseph helped his father and his brothers to make their home in Egypt. He gave them a good place to live in the best region of Egypt. This was in the region that is now called Rameses. Joseph did for his family what Pharaoh had told him to do."
     },
     {
       "verse": "12",
@@ -5862,7 +5878,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So Joseph made a law which everybody in Egypt has to obey. The law says that one fifth of all food that people grow belongs to Pharaoh. Only the priests' land did not become Pharaoh's land. This law still has authority today. still has authority today’ means that the law was still there when Genesis was written."
+      "text": "So Joseph made a law which everybody in Egypt has to obey. The law says that one fifth of all food that people grow belongs to Pharaoh. Only the priests' land did not become Pharaoh's land. This law still has authority today."
     },
     {
       "verse": "27",
@@ -5870,7 +5886,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Jacob lived in Egypt for 17 years. His whole life was 147 years."
+      "text": "years. His whole life was 147 years."
     },
     {
       "verse": "29",
@@ -5882,7 +5898,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Jacob said, ‘Promise me that you will do this.’ Then Joseph made a promise to him. After that, Jacob rested on his bed and he thanked God. See also Genesis Print... Use screen font size Show All Comments Genesis 46Genesis 48 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jacob said, ‘Promise me that you will do this.’ Then Joseph made a promise to him. After that, Jacob rested on his bed and he thanked God."
     }
   ],
   "48": [
@@ -5908,7 +5924,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Any children born to you after them will be your own children. They will receive part of the land that belongs to their brothers, Ephraim and Manasseh. Ephraim and Manasseh became ancestors of two of the 12 Israelite tribes."
+      "text": "Any children born to you after them will be your own children. They will receive part of the land that belongs to their brothers, Ephraim and Manasseh."
     },
     {
       "verse": "7",
@@ -5936,7 +5952,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He took his two sons near to Jacob. With his right hand, he put Ephraim beside Jacob's left hand. With his left hand, he put Manasseh beside Jacob's right hand. Manasseh was Joseph's firstborn son. This son usually received the blessing from his father. The father put his right hand on the head of the son who would receive his blessing."
+      "text": "He took his two sons near to Jacob. With his right hand, he put Ephraim beside Jacob's left hand. With his left hand, he put Manasseh beside Jacob's right hand."
     },
     {
       "verse": "14",
@@ -5944,11 +5960,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Jacob blessed Joseph. He said, ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day."
+      "text": "Then Jacob blessed Joseph. He said,‘May God bless these two boys.He is the God that my ancestors, Abraham and Isaac, served.Like a shepherd takes care of his sheep,God has taken care of me all my life, until this day. ‘May God bless these two boys. He is the God that my ancestors, Abraham and Isaac, served. Like a shepherd takes care of his sheep, God has taken care of me all my life, until this day."
     },
     {
       "verse": "16",
-      "text": "He is the Angel who has kept me safe. God appeared to Jacob as an angel. See Genesis I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth.’"
+      "text": "He is the Angel who has kept me safe.I pray that he will bless these boys.I pray that, because of them, people will remember my name,and the names of my ancestors, Abraham and Isaac.I pray that they will have many descendants who live all over the earth.’ I pray that he will bless these boys. I pray that, because of them, people will remember my name, and the names of my ancestors, Abraham and Isaac. I pray that they will have many descendants who live all over the earth.’"
     },
     {
       "verse": "17",
@@ -5964,7 +5980,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "So Jacob blessed both of Joseph's sons that day. He said, ‘In your name Israel's people will give this blessing: “May God be good to you, just like he was to Ephraim and Manasseh.” ’ Jacob is saying that God will do good things for Ephraim and Manasseh. And people will remember how good God was to them. In this way, Jacob put Ephraim before Manasseh when he blessed them."
+      "text": "So Jacob blessed both of Joseph's sons that day. He said, ‘In your name Israel's people will give this blessing:“May God be good to you, just like he was to Ephraim and Manasseh.” ’In this way, Jacob put Ephraim before Manasseh when he blessed them. “May God be good to you, just like he was to Ephraim and Manasseh.” ’ In this way, Jacob put Ephraim before Manasseh when he blessed them."
     },
     {
       "verse": "21",
@@ -5972,7 +5988,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I give to you more than I give to your brothers. I give to you the good part of the land that I took from the Amorites. I fought against them with my weapons to take that land.’ Jacob is giving to Joseph an extra part of the land of Canaan. Print... Use screen font size Show All Comments Genesis 47Genesis 49 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I give to you more than I give to your brothers. I give to you the good part of the land that I took from the Amorites. I fought against them with my weapons to take that land.’"
     }
   ],
   "49": [
@@ -5982,7 +5998,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "You sons of Jacob, come together now and listen to your father, Israel.’ Jacob told his sons what will happen to each of them and to their descendants. Reuben"
+      "text": "You sons of Jacob, come together now and listen to your father, Israel.’"
     },
     {
       "verse": "3",
@@ -5990,11 +6006,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Yet you are as wild as the sea. You had sex with your father's slave wife. This bad thing brought me shame. So you will not become great. See Genesis Simeon and Levi"
+      "text": "Yet you are as wild as the sea. You had sex with your father's slave wife. This bad thing brought me shame. So you will not become great."
     },
     {
       "verse": "5",
-      "text": "Simeon and Levi are brothers. They use their swords as weapons to destroy people. See Genesis"
+      "text": "Simeon and Levi are brothers. They use their swords as weapons to destroy people."
     },
     {
       "verse": "6",
@@ -6002,7 +6018,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Their anger is so strong that God will curse them. Their anger makes them do cruel things. So God will curse them. I will make your descendants separate from one another. They will live all over the country of Israel. Judah"
+      "text": "Their anger is so strong that God will curse them. Their anger makes them do cruel things. So God will curse them. I will make your descendants separate from one another. They will live all over the country of Israel."
     },
     {
       "verse": "8",
@@ -6014,19 +6030,19 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Judah's descendants will always rule as king. They will continue to hold the stick and the sceptre that show the king's authority. They will do that until the man comes who truly has that authority. People from all nations will obey that king. King David was from the tribe of Judah, and so was Jesus Christ. Jesus is the true king who rules for ever. A sceptre is something that a king holds. Its shape is like a stick with a ball on the top."
+      "text": "Judah's descendants will always rule as king. They will continue to hold the stick and the sceptre that show the king's authority. They will do that until the man comes who truly has that authority. People from all nations will obey that king."
     },
     {
       "verse": "11",
-      "text": "Judah will tie his young donkey to a vine. It will be a vine that has the best grapes. He will wash his clothes in the red wine that is made from those grapes. Vines were valuable plants in Old Testament times. Jacob is saying that Judah will be very rich. He will tie his donkey to the best of his valuable plants. He will wash his clothes in wine. He will be very rich."
+      "text": "Judah will tie his young donkey to a vine. It will be a vine that has the best grapes. He will wash his clothes in the red wine that is made from those grapes."
     },
     {
       "verse": "12",
-      "text": "His eyes will become red because he drinks so much wine. His teeth will become white because he drinks so much milk. Jacob is saying that Judah will have plenty of everything. Zebulun"
+      "text": "His eyes will become red because he drinks so much wine. His teeth will become white because he drinks so much milk."
     },
     {
       "verse": "13",
-      "text": "Zebulun will live by the shore of the sea. His town will be a safe place for ships to stay. His land will go as far as Sidon. Issachar"
+      "text": "Zebulun will live by the shore of the sea. His town will be a safe place for ships to stay. His land will go as far as Sidon."
     },
     {
       "verse": "14",
@@ -6034,11 +6050,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He will see that he has a good place to live, with good land. Then he will agree to work hard. He will work like a slave for other people. Jacob is saying that Issachar is strong. He is saying that he will work like a donkey. Donkeys carry heavy things in their bags. Issachar will work for other people, to get food and a nice place to stay. Dan"
+      "text": "He will see that he has a good place to live, with good land. Then he will agree to work hard. He will work like a slave for other people."
     },
     {
       "verse": "16",
-      "text": "Dan will be a ruler for his people. His descendants will be equal with the other tribes of Israel. The tribe of Dan was a small tribe, but they had the same authority as all the other tribes."
+      "text": "Dan will be a ruler for his people. His descendants will be equal with the other tribes of Israel."
     },
     {
       "verse": "17",
@@ -6046,23 +6062,23 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I trust you to save me from trouble, Lord. Jacob prays for himself and then he continues. Gad"
+      "text": "I trust you to save me from trouble, Lord."
     },
     {
       "verse": "19",
-      "text": "Robbers will attack Gad, but he will fight back against them. Asher"
+      "text": "Robbers will attack Gad, but he will fight back against them."
     },
     {
       "verse": "20",
-      "text": "Asher will have much good food. It will be good enough for kings to eat. Naphtali"
+      "text": "Asher will have much good food. It will be good enough for kings to eat."
     },
     {
       "verse": "21",
-      "text": "Naphtali is like a deer that runs freely and gives birth to beautiful babies. Joseph"
+      "text": "Naphtali is like a deer that runs freely and gives birth to beautiful babies."
     },
     {
       "verse": "22",
-      "text": "Joseph is like a vine that has lots of fruit. It grows near a well and its branches go over a wall. Jacob means that Joseph's descendants will go and live all over the land."
+      "text": "Joseph is like a vine that has lots of fruit. It grows near a well and its branches go over a wall."
     },
     {
       "verse": "23",
@@ -6070,7 +6086,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "But he will hold his own bow strongly. He will shoot his arrows well. The Mighty One of Jacob will give Joseph strength. God, who is Israel's Shepherd and Rock, will help him. Mighty One means the God who is very strong. It is a name for the Lord God. Shepherd is also a name for God (see Genesis Rock of Israel means that God is strong and does not change. Jacob knows that God will continue to help Joseph."
+      "text": "But he will hold his own bow strongly. He will shoot his arrows well. The Mighty One of Jacob will give Joseph strength. God, who is Israel's Shepherd and Rock, will help him."
     },
     {
       "verse": "25",
@@ -6078,19 +6094,19 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The blessings that I, your father, give to you are great! They are greater than any good things that the old mountains or hills can give to you. They are special blessings for you, Joseph, because you are the leader of your brothers. Benjamin"
+      "text": "The blessings that I, your father, give to you are great! They are greater than any good things that the old mountains or hills can give to you. They are special blessings for you, Joseph, because you are the leader of your brothers."
     },
     {
       "verse": "27",
-      "text": "Benjamin is like a hungry wolf. He kills an animal and eats it in the morning. In the evening, he gives what remains to his people.’ Jacob is saying that Benjamin will go out and kill his enemies in the morning. And he will return in the evening. In the evening, he will give what he has taken from his enemies to his people."
+      "text": "Benjamin is like a hungry wolf. He kills an animal and eats it in the morning. In the evening, he gives what remains to his people.’"
     },
     {
       "verse": "28",
-      "text": "All these are ancestors of the 12 tribes of Israel. This is what their father said to them when he blessed them. He told each of his sons what was right for them and their descendants. The descendants of each of Jacob's sons would become a separate group of people. Those are the tribes of Israel (Jacob). Jacob dies and Joseph buries him"
+      "text": "tribes of Israel. This is what their father said to them when he blessed them. He told each of his sons what was right for them and their descendants."
     },
     {
       "verse": "29",
-      "text": "Then Jacob said to his 12 sons, ‘I will soon die. You must take my dead body back to Canaan. Bury me there with my ancestors. Bury me in the cave in the field that belonged to Ephron the Hittite."
+      "text": "sons, ‘I will soon die. You must take my dead body back to Canaan. Bury me there with my ancestors. Bury me in the cave in the field that belonged to Ephron the Hittite."
     },
     {
       "verse": "30",
@@ -6106,7 +6122,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Jacob finished telling his sons what they should do. Then he lay down on his bed again. He breathed for the last time and he died there. Print... Use screen font size Show All Comments Genesis 48Genesis 50 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jacob finished telling his sons what they should do. Then he lay down on his bed again. He breathed for the last time and he died there."
     }
   ],
   "50": [
@@ -6120,7 +6136,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The servants took care of the body for 40 days, which is the usual time. The Egyptians wept for 70 days because of Jacob's death. The Egyptians wept for 70 days’ shows that they were very sad. They did this when someone important died. Jacob was an important person in Egypt because he was Joseph's father."
+      "text": "days, which is the usual time. The Egyptians wept for 70 days because of Jacob's death."
     },
     {
       "verse": "4",
@@ -6152,7 +6168,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Canaanite people who lived near there saw how sad Joseph and his people were. So they gave Atad's threshing floor a different name. They called it ‘Abel Mizraim’. They said, ‘The Egyptians are showing that they are very sad because an important person has died.’ Abel Mizraim’ means ‘Egyptians are sad’."
+      "text": "The Canaanite people who lived near there saw how sad Joseph and his people were. So they gave Atad's threshing floor a different name. They called it ‘Abel Mizraim’. They said, ‘The Egyptians are showing that they are very sad because an important person has died.’"
     },
     {
       "verse": "12",
@@ -6176,7 +6192,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He told us to say to you, “Please forgive your brothers for the very bad thing that they did against you. They did a very cruel thing to you.” So please forgive our sin. We are servants of your father's God.’ When Joseph received their message, he was very upset and he wept."
+      "text": "He told us to say to you, “Please forgive your brothers for the very bad thing that they did against you. They did a very cruel thing to you.” So please forgive our sin. We are servants of your father's God.’When Joseph received their message, he was very upset and he wept."
     },
     {
       "verse": "18",
@@ -6192,7 +6208,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So do not be afraid. I will continue to take care of you. You and your children will receive what you need.’ In this way Joseph comforted them and he spoke kind words to them. Joseph dies"
+      "text": "So do not be afraid. I will continue to take care of you. You and your children will receive what you need.’ In this way Joseph comforted them and he spoke kind words to them."
     },
     {
       "verse": "22",
@@ -6200,7 +6216,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "And he was still alive to see Ephraim's children and grandchildren. He also saw Makir's children. Makir was Manasseh's son. Joseph took Makir's children to be his own children. When Joseph died, Makir's children would receive what Joseph's own children received."
+      "text": "And he was still alive to see Ephraim's children and grandchildren. He also saw Makir's children. Makir was Manasseh's son. Joseph took Makir's children to be his own children."
     },
     {
       "verse": "24",
@@ -6212,7 +6228,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "So Joseph died when he was 110 years old. They put special oil on his body so that it would not become spoiled. Then they put his body in a box there in Egypt. See Exodus Print... Use screen font size Show All Comments Genesis 49Exodus Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years old. They put special oil on his body so that it would not become spoiled. Then they put his body in a box there in Egypt."
     }
   ]
 };

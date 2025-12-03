@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The feast continued for 180 days. King Xerxes wanted to show everyone how rich and powerful he was. He wanted to show that he was a great king."
+      "text": "days. King Xerxes wanted to show everyone how rich and powerful he was. He wanted to show that he was a great king."
     },
     {
       "verse": "5",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "At the same time, the king's wife, Queen Vashti, gave a feast for all the women in the palace. Queen Vashti had her feast in a different part of the palace than the king's feast."
+      "text": "At the same time, the king's wife, Queen Vashti, gave a feast for all the women in the palace."
     },
     {
       "verse": "10",
@@ -86,17 +86,17 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "He sent letters to all the regions of his kingdom. The letters were in the language of each region, so that all the people could read and understand the law. The law said that every man should be the ruler of his family and he should speak the language of his people. Print... Use screen font size Show All Comments Esther IntroductionEsther 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He sent letters to all the regions of his kingdom. The letters were in the language of each region, so that all the people could read and understand the law. The law said that every man should be the ruler of his family and he should speak the language of his people."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "Some time later, King Xerxes was not feeling so angry. He thought about Vashti and what she had done. He remembered the law that he had made, that she should not be queen any more. King Xerxes could not change the law. Because of this law he no longer had a queen."
+      "text": "Some time later, King Xerxes was not feeling so angry. He thought about Vashti and what she had done. He remembered the law that he had made, that she should not be queen any more."
     },
     {
       "verse": "2",
-      "text": "The king's servants who helped him in the palace said, ‘We think that the king should send some men to look for beautiful young women for him."
+      "text": "The king's servants who helped him in the palace said, ‘We think that the king should send some men to look for beautiful young women for him. King Xerxes thought that this was a good idea. He did everything that the servants said."
     },
     {
       "verse": "3",
@@ -104,7 +104,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The king may choose the young woman that pleases him most. She may take the place of Vashti as queen.’ Often kings at the time of this story had many wives. The harem was the part of the palace where the king's wives lived. — (2) It was also the name of the wives of a man who has several wives. The men who looked after a harem were eunuchs. King Xerxes thought that this was a good idea. He did everything that the servants said."
+      "text": "The king may choose the young woman that pleases him most. She may take the place of Vashti as queen.’King Xerxes thought that this was a good idea. He did everything that the servants said."
     },
     {
       "verse": "5",
@@ -112,11 +112,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When Nebuchadnezzar was king of Babylon, he had taken Kish away from Jerusalem as a prisoner. That was the time when Nebuchadnezzar also took Jeconiah, king of Judah, away to Babylon as well as other Jews. Judah was the south part of Israel."
+      "text": "When Nebuchadnezzar was king of Babylon, he had taken Kish away from Jerusalem as a prisoner. That was the time when Nebuchadnezzar also took Jeconiah, king of Judah, away to Babylon as well as other Jews."
     },
     {
       "verse": "7",
-      "text": "Mordecai was taking care of a young cousin called Hadassah. She was also called Esther. Esther's mother and father were no longer alive. She was the daughter of Mordecai's uncle. When her parents died, Mordecai took care of her, as if she was his own daughter. Esther was very beautiful. Hadassah was a Hebrew name. Esther was a Persian name."
+      "text": "Mordecai was taking care of a young cousin called Hadassah. She was also called Esther. Esther's mother and father were no longer alive. She was the daughter of Mordecai's uncle. When her parents died, Mordecai took care of her, as if she was his own daughter. Esther was very beautiful."
     },
     {
       "verse": "8",
@@ -136,15 +136,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "All the young women stayed in the harem for 12 months. For six months they received myrrh oil for their bodies. Then they received perfume and different kinds of oil for another six months. After that time they could each go to the king's bedroom."
+      "text": "months. For six months they received myrrh oil for their bodies. Then they received perfume and different kinds of oil for another six months. After that time they could each go to the king's bedroom."
     },
     {
       "verse": "13",
-      "text": "When the time came for a young woman to go to the king, she could take whatever she wanted with her. She would take those things with her from the harem to the king's room. Each young woman could choose what clothes and jewels she wanted to wear when she went to be with the king."
+      "text": "When the time came for a young woman to go to the king, she could take whatever she wanted with her. She would take those things with her from the harem to the king's room."
     },
     {
       "verse": "14",
-      "text": "She would go to be with the king in the evening. She would stay with him during that night. In the morning, she went to a different part of the harem. That was where the king's slave wives lived. One of the king's eunuchs, Shaashgaz, took care of them there. After that, the young woman would only see the king again if he was pleased with her. Then he would ask for her by name. These women did not have any authority in the house. In the king's harem, some of these women did not see the king again. They did not have the authority that the queen had."
+      "text": "She would go to be with the king in the evening. She would stay with him during that night. In the morning, she went to a different part of the harem. That was where the king's slave wives lived. One of the king's eunuchs, Shaashgaz, took care of them there. After that, the young woman would only see the king again if he was pleased with her. Then he would ask for her by name."
     },
     {
       "verse": "15",
@@ -160,11 +160,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The king gave a great feast for all the leaders and officers of his kingdom. He did it to give honour to Esther. He said that there would be a holiday for people in all the regions. He also gave expensive gifts to people. Mordecai saves the king"
+      "text": "The king gave a great feast for all the leaders and officers of his kingdom. He did it to give honour to Esther. He said that there would be a holiday for people in all the regions. He also gave expensive gifts to people."
     },
     {
       "verse": "19",
-      "text": "Some time later, the young women all came together again in the harem. At this time, Mordecai was sitting at the king's gate, as one of his officers. The king's gate at the palace was the place where the king's officers would meet."
+      "text": "Some time later, the young women all came together again in the harem. At this time, Mordecai was sitting at the king's gate, as one of his officers."
     },
     {
       "verse": "20",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The king sent his men to see if it was true. When he discovered that Mordecai had told the truth, he said that the two eunuchs must die. So his officers hanged them from a wooden tower until they were dead. They wrote about this event in the history book, while the king watched. Print... Use screen font size Show All Comments Esther 1Esther 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The king sent his men to see if it was true. When he discovered that Mordecai had told the truth, he said that the two eunuchs must die. So his officers hanged them from a wooden tower until they were dead. They wrote about this event in the history book, while the king watched."
     }
   ],
   "3": [
@@ -190,7 +190,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The king commanded that all the royal officers at the king's gate must bend down low down to Haman. So they all gave Haman honour when he passed them. Only Mordecai would not bend down and give honour to Haman. We do not know why Mordecai refused to give honour to Haman. Perhaps it was because Haman's father was a descendant of Amalek, through Agag. The Israelites and the Amalekites had been enemies for a long time. See Exodus"
+      "text": "The king commanded that all the royal officers at the king's gate must bend down low down to Haman. So they all gave Haman honour when he passed them. Only Mordecai would not bend down and give honour to Haman."
     },
     {
       "verse": "3",
@@ -206,7 +206,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But he did not want to destroy only Mordecai. Now he knew that Mordecai was a Jew, he decided to destroy all the Jews who lived in Xerxes' whole kingdom. Haman decides to kill all the Jews"
+      "text": "But he did not want to destroy only Mordecai. Now he knew that Mordecai was a Jew, he decided to destroy all the Jews who lived in Xerxes' whole kingdom."
     },
     {
       "verse": "7",
@@ -218,7 +218,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "If you agree, we should send out a command to destroy them. Then I will give 350 tons of silver to the king, so that your officers can do this work.’ This was a very large amount of silver. Haman probably expected to take it from the Jews when he had killed them all."
+      "text": "If you agree, we should send out a command to destroy them. Then I will give 350 tons of silver to the king, so that your officers can do this work.’"
     },
     {
       "verse": "10",
@@ -226,11 +226,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "He said to Haman, ‘Keep your money. You should do anything that you want with these people.’ Any law with the mark of the king's special ring on it had the king's authority. When the king gave his special ring to Haman, he was giving Haman his royal authority."
+      "text": "He said to Haman, ‘Keep your money. You should do anything that you want with these people.’"
     },
     {
       "verse": "12",
-      "text": "On the 13th day of the first month, Haman asked the king's secretaries to come to him. They wrote Haman's commands in letters to the king's rulers and officers in every region. They wrote the letters in the languages that people spoke in the different regions. Haman used the authority of King Xerxes and he marked the letters with the king's special ring. Haman used the king's authority to send the letters to destroy the Jews. But the king did not know that it was the Jews that Haman wanted to destroy. And he did not know that Queen Esther was a Jew."
+      "text": "On the 13th day of the first month, Haman asked the king's secretaries to come to him. They wrote Haman's commands in letters to the king's rulers and officers in every region. They wrote the letters in the languages that people spoke in the different regions. Haman used the authority of King Xerxes and he marked the letters with the king's special ring."
     },
     {
       "verse": "13",
@@ -242,7 +242,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "King Xerxes told his men to take the letters quickly to all the people. They also read the law to the people in Susa city. Then Haman and the king sat down to drink wine together. But the people in the city were very upset. Print... Use screen font size Show All Comments Esther 2Esther 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "King Xerxes told his men to take the letters quickly to all the people. They also read the law to the people in Susa city. Then Haman and the king sat down to drink wine together. But the people in the city were very upset."
     }
   ],
   "4": [
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Jews who lived in all the regions of Xerxes' kingdom heard the king's command. So they were very sad. They were weeping and they were fasting. Many of them lay on sackcloth and ashes. While the Jews fasted, they usually prayed to God. They fasted because they wanted to ask God for his help."
+      "text": "Jews who lived in all the regions of Xerxes' kingdom heard the king's command. So they were very sad. They were weeping and they were fasting. Many of them lay on sackcloth and ashes."
     },
     {
       "verse": "4",
@@ -264,7 +264,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Hathach was one of the king's eunuchs who served Esther. Esther asked him to discover what was the matter with Mordecai. Esther could not leave the palace because she was one of the king's wives. Mordecai could not come into the palace because he was wearing sackcloth."
+      "text": "Hathach was one of the king's eunuchs who served Esther. Esther asked him to discover what was the matter with Mordecai."
     },
     {
       "verse": "6",
@@ -276,7 +276,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Mordecai gave Hathach a copy of the law that they had read aloud to the people in Susa. He told Hathach to show the law to Esther and explain it to her. Mordecai also said that Esther must go and speak to the king. She must ask the king to let her people live. See Esther Haman had promised to give the king a lot of silver."
+      "text": "Mordecai gave Hathach a copy of the law that they had read aloud to the people in Susa. He told Hathach to show the law to Esther and explain it to her. Mordecai also said that Esther must go and speak to the king. She must ask the king to let her people live."
     },
     {
       "verse": "9",
@@ -288,7 +288,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "‘Everybody knows the law. People cannot go to meet the king in his own part of the palace unless the king asks them to come. All the king's officers and all his people know that that is the law. If somebody decides to go to the king when the king has not asked to see him, that person must die. He will only stay alive if the king holds out his gold sceptre towards him. As for me, the king has not asked me to go to him for the last 30 days.’ The king would let Queen Esther come near to him. But only if he asked for her. So it would be dangerous for Esther to go to him at another time."
+      "text": "‘Everybody knows the law. People cannot go to meet the king in his own part of the palace unless the king asks them to come. All the king's officers and all his people know that that is the law. If somebody decides to go to the king when the king has not asked to see him, that person must die. He will only stay alive if the king holds out his gold sceptre towards him. As for me, the king has not asked me to go to him for the last 30 days.’"
     },
     {
       "verse": "12",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "You must speak now on behalf of all the Jewish people. If you do not, they will receive help from another place to make them safe and free. Then you and your father's family will come to an end. But I think that perhaps you have become queen so that you can help at a time like this.’ Mordecai trusted God that God would save his people, the Jews. Mordecai thought that God had put Esther in the palace as queen. Because Esther was queen, she could speak to the king. She could ask him to save the Jews.'"
+      "text": "You must speak now on behalf of all the Jewish people. If you do not, they will receive help from another place to make them safe and free. Then you and your father's family will come to an end. But I think that perhaps you have become queen so that you can help at a time like this.’"
     },
     {
       "verse": "15",
@@ -312,7 +312,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then Mordecai left the king's gate. He did everything that Esther had told him to do. Print... Use screen font size Show All Comments Esther 3Esther 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Mordecai left the king's gate. He did everything that Esther had told him to do."
     }
   ],
   "5": [
@@ -334,7 +334,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The king said to his servants, ‘Bring Haman here quickly. Then we can do what Esther wants.’ The king and Haman went to the meal that Esther had prepared."
+      "text": "The king said to his servants, ‘Bring Haman here quickly. Then we can do what Esther wants.’The king and Haman went to the meal that Esther had prepared."
     },
     {
       "verse": "6",
@@ -346,7 +346,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "If the king is pleased with me, and if you agree, please do what I ask. I would like the king and Haman to come again tomorrow. Come to another meal that I will prepare for you. Then I will tell you what I want, as you have asked me to do.’ Mordecai makes Haman angry again"
+      "text": "If the king is pleased with me, and if you agree, please do what I ask. I would like the king and Haman to come again tomorrow. Come to another meal that I will prepare for you. Then I will tell you what I want, as you have asked me to do.’"
     },
     {
       "verse": "9",
@@ -354,7 +354,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Haman did not show that he was angry at that time. He went home. Then Haman told his friends and Zeresh, his wife, to meet with him."
+      "text": "Haman did not show that he was angry at that time. He went home.Then Haman told his friends and Zeresh, his wife, to meet with him."
     },
     {
       "verse": "11",
@@ -370,7 +370,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Haman's wife and all his friends said to him, ‘This will make you happy. Tell your men to build a wooden tower that is 22 metres high. In the morning, tell the king to hang Mordecai on the tower to kill him. Then you will enjoy Queen Esther's special meal.’ Haman liked their idea very much. So he told his men to build the tall tower. At that time, they would hang men to kill them when they had done something very bad. The tower was very high and everybody would see the bad person's punishment. Print... Use screen font size Show All Comments Esther 4Esther 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Haman's wife and all his friends said to him, ‘This will make you happy. Tell your men to build a wooden tower that is 22 metres high. In the morning, tell the king to hang Mordecai on the tower to kill him. Then you will enjoy Queen Esther's special meal.’Haman liked their idea very much. So he told his men to build the tall tower."
     }
   ],
   "6": [
@@ -384,11 +384,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "When the king heard this, he asked his servant, ‘When Mordecai saved my life, what great honour did we give to him?’ The king's servants replied, ‘We did not do anything for him.’ See Esther"
+      "text": "When the king heard this, he asked his servant, ‘When Mordecai saved my life, what great honour did we give to him?’ The king's servants replied, ‘We did not do anything for him.’"
     },
     {
       "verse": "4",
-      "text": "The king said, ‘Who is now in the palace yard?’ Haman had just arrived at the palace. His men had built the wooden tower. Now he wanted to ask the king to hang Mordecai on it to kill him."
+      "text": "The king said, ‘Who is now in the palace yard?’Haman had just arrived at the palace. His men had built the wooden tower. Now he wanted to ask the king to hang Mordecai on it to kill him."
     },
     {
       "verse": "5",
@@ -396,7 +396,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Haman came in to the king's room. The king asked him, ‘If I want to give great honour to a man, what should we do for that man?’ Haman thought to himself, ‘I am sure that I am that man. The king must want to give me honour.’"
+      "text": "Haman came in to the king's room. The king asked him, ‘If I want to give great honour to a man, what should we do for that man?’Haman thought to himself, ‘I am sure that I am that man. The king must want to give me honour.’"
     },
     {
       "verse": "7",
@@ -428,7 +428,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "While they were speaking, the king's eunuchs arrived. Very quickly they took Haman to the special meal that Esther had prepared. Print... Use screen font size Show All Comments Esther 5Esther 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "While they were speaking, the king's eunuchs arrived. Very quickly they took Haman to the special meal that Esther had prepared."
     }
   ],
   "7": [
@@ -454,29 +454,29 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Esther replied, ‘The enemy of our people is this wicked man Haman!’ Then Haman became very afraid, as he sat there with the king and the queen. Haman now realized that Queen Esther was a Jew. He knew that the king would be very angry because of the law that Haman had written."
+      "text": "Esther replied, ‘The enemy of our people is this wicked man Haman!’Then Haman became very afraid, as he sat there with the king and the queen. Then Haman became very afraid, as he sat there with the king and the queen."
     },
     {
       "verse": "7",
-      "text": "The king was very angry and he stood up. He left his wine and he went into the palace garden. Haman realized that the king wanted to destroy him. So he stayed with Queen Esther and he asked her to save his life."
+      "text": "The king was very angry and he stood up. He left his wine and he went into the palace garden. Haman realized that the king wanted to destroy him. So he stayed with Queen Esther and he asked her to save his life. While the king was still saying this, his servants covered Haman's head."
     },
     {
       "verse": "8",
-      "text": "Queen Esther was lying down on a bed. Haman threw himself down beside her. At that moment, the king returned from the garden. The king shouted, ‘What is this man doing? He even attacks the queen when she is with me in my palace!’ The king thought that Haman was trying to have sex with Queen Esther. While the king was still saying this, his servants covered Haman's head. This meant that officers would kill Haman."
+      "text": "Queen Esther was lying down on a bed. Haman threw himself down beside her. At that moment, the king returned from the garden. The king shouted, ‘What is this man doing? He even attacks the queen when she is with me in my palace!’While the king was still saying this, his servants covered Haman's head."
     },
     {
       "verse": "9",
-      "text": "One of the king's eunuchs, Harbona, said, ‘There is a wooden tower near Haman's home. It is 22 metres high. His men built it so that he could hang Mordecai on it. Mordecai is the man who saved the king's life.’ The king said, ‘Hang Haman on the tower until he is dead.’"
+      "text": "One of the king's eunuchs, Harbona, said, ‘There is a wooden tower near Haman's home. It is 22 metres high. His men built it so that he could hang Mordecai on it. Mordecai is the man who saved the king's life.’The king said, ‘Hang Haman on the tower until he is dead.’ The king said, ‘Hang Haman on the tower until he is dead.’"
     },
     {
       "verse": "10",
-      "text": "So they took Haman and they hanged him on the tower until he was dead. It was the same tower that Haman had wanted to kill Mordecai on. After that, the king did not feel so angry. Print... Use screen font size Show All Comments Esther 6Esther 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So they took Haman and they hanged him on the tower until he was dead. It was the same tower that Haman had wanted to kill Mordecai on. After that, the king did not feel so angry."
     }
   ],
   "8": [
     {
       "verse": "1",
-      "text": "That day, King Xerxes took everything that had belonged to Haman, the enemy of the Jews. He gave it all to Queen Esther. Esther told the king that Mordecai was her cousin. So Mordecai came to meet the king."
+      "text": "That day, King Xerxes took everything that had belonged to Haman, the enemy of the Jews. He gave it all to Queen Esther. Esther told the king that Mordecai was her cousin.So Mordecai came to meet the king."
     },
     {
       "verse": "2",
@@ -524,7 +524,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "A copy of the law would go to every region of the kingdom, so that everyone would know what the law said. Then the Jews would be ready on the right day to punish their enemies. This new law was the opposite to the law that Haman had made. See Esther That was the same day that Haman had wanted to kill all the Jews."
+      "text": "A copy of the law would go to every region of the kingdom, so that everyone would know what the law said. Then the Jews would be ready on the right day to punish their enemies."
     },
     {
       "verse": "14",
@@ -540,7 +540,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "When the new law reached every region and every city, the Jews became very happy. The other people who lived there were now afraid of the Jews. Because of that, many people said that they themselves had become Jews. Print... Use screen font size Show All Comments Esther 7Esther 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When the new law reached every region and every city, the Jews became very happy. The other people who lived there were now afraid of the Jews. Because of that, many people said that they themselves had become Jews."
     }
   ],
   "9": [
@@ -605,10 +605,6 @@ module.exports = {
       "text": "On the 14th day of the month called Adar the Jews in Susa all met together again. That day they killed 300 more men in Susa. But they did not take their enemies' things for themselves."
     },
     {
-      "verse": "16-17",
-      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75,000 of their enemies. But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
-    },
-    {
       "verse": "18",
       "text": "But the Jews in Susa did not rest until the 15th day of the month. That was because they killed their enemies on both the 13th day and the 14th day. On the 15th day they ate feasts and they were very happy."
     },
@@ -650,7 +646,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "From that time, every Jew must remember to keep the days of Purim as a holiday. Every Jewish family and their children must continue to do this. They must do it in all the cities and all the regions, wherever they lived. And their descendants must continue to do it every year, to remember what happened. Even today, Jews have a feast every year to remember everything that happened."
+      "text": "From that time, every Jew must remember to keep the days of Purim as a holiday. Every Jewish family and their children must continue to do this. They must do it in all the cities and all the regions, wherever they lived. And their descendants must continue to do it every year, to remember what happened."
     },
     {
       "verse": "29",
@@ -658,7 +654,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "So they sent letters to all the Jews who lived in the 127 regions of Xerxes' kingdom. The message was to help them live safely in peace."
+      "text": "regions of Xerxes' kingdom. The message was to help them live safely in peace."
     },
     {
       "verse": "31",
@@ -666,7 +662,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Queen Esther's command made those rules about the feast of Purim. The palace secretaries wrote it down in a book. Print... Use screen font size Show All Comments Esther 8Esther 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Queen Esther's command made those rules about the feast of Purim. The palace secretaries wrote it down in a book."
+    },
+    {
+      "verse": "16-17",
+      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75,000 of their enemies. But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
     }
   ],
   "10": [
@@ -680,7 +680,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Jewish man, Mordecai, was the most important Jew in the whole kingdom. Only King Xerxes himself had more authority than Mordecai. The other Jews respected Mordecai because he worked hard to help them. He made sure that all his people could live safely. Print... Use screen font size Show All Comments Esther 9Job Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Jewish man, Mordecai, was the most important Jew in the whole kingdom. Only King Xerxes himself had more authority than Mordecai. The other Jews respected Mordecai because he worked hard to help them. He made sure that all his people could live safely."
     }
   ]
 };

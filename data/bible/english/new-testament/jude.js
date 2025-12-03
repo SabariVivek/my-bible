@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Jude. I am Jesus Christ's servant and I am James's brother. I am writing to you people that God, the Father, loves. God has chosen you to be his own people. He is keeping you safe until the time when Jesus Christ returns. Most people think that Jude (also called Judas) was Jesus' brother. James and Jude were two of Jesus' four brothers. See Mark James became a leader of the Christians at Jerusalem. See Galatians and Acts But, in his letter, Jude does not say that he was Jesus' brother. He thought about himself as Jesus' servant. Jesus became his Master. Jude wanted people to obey Jesus. He did not want people to think that he himself was very important."
+      "text": "This letter is from me, Jude. I am Jesus Christ's servant and I am James's brother. I am writing to you people that God, the Father, loves. God has chosen you to be his own people. He is keeping you safe until the time when Jesus Christ returns."
     },
     {
       "verse": "2",
@@ -22,11 +22,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Also remember that some angels refused to obey God. They took more authority for themselves than God had given them. They left their own proper place with God in heaven. So God has tied them up as prisoners for ever in a completely dark place. He will keep them there until that great day when he will judge everyone. Israel's people were slaves in Egypt. God saved them when Moses led them out from there. But as they travelled through the wilderness, most of them did not trust God. So they did not go into the land that God had promised them. Instead, they died before they arrived there. That is how God punished them. See Numbers Some of the angels in heaven thought that they were very important. So they stopped obeying God and they left heaven. See Genesis Luke and Revelation"
+      "text": "Also remember that some angels refused to obey God. They took more authority for themselves than God had given them. They left their own proper place with God in heaven. So God has tied them up as prisoners for ever in a completely dark place. He will keep them there until that great day when he will judge everyone."
     },
     {
       "verse": "7",
-      "text": "Also, remember what happened to the cities called Sodom and Gomorrah, and the other cities that were near them. Like those bad angels, the people who lived in those places were also doing evil things. They were having sex with people who were not their husbands or their wives. They liked to have sex in other ways that are not right. God destroyed their cities. He has punished them with fire that never stops burning. That is an example of what will happen to wicked people like them. Jude uses Sodom and Gomorrah as examples of places where people did bad things. See Genesis"
+      "text": "Also, remember what happened to the cities called Sodom and Gomorrah, and the other cities that were near them. Like those bad angels, the people who lived in those places were also doing evil things. They were having sex with people who were not their husbands or their wives. They liked to have sex in other ways that are not right. God destroyed their cities. He has punished them with fire that never stops burning. That is an example of what will happen to wicked people like them."
     },
     {
       "verse": "8",
@@ -38,11 +38,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But these false teachers speak bad things against anything that they do not understand. They are like animals that cannot think properly. They just do the things that their nature causes them to do. Those are the things that are destroying them. Deuteronomy tells us about when Moses died."
+      "text": "But these false teachers speak bad things against anything that they do not understand. They are like animals that cannot think properly. They just do the things that their nature causes them to do. Those are the things that are destroying them."
     },
     {
       "verse": "11",
-      "text": "It will be terrible for them! They have lived in the way that Cain lived. They have made the same mistake that Balaam made, because they wanted to get money for themselves. Like Korah, they have refused to obey God. So God will destroy them. Cain killed his brother Abel. See Genesis Hebrews John Balaam caused Israel's people to do bad things. See Numbers 22-25; Deuteronomy Revelation Korah thought that he himself was very important. He thought that he knew better than Moses. He refused to obey what God had told Moses. See Numbers The false teachers are very dangerous"
+      "text": "It will be terrible for them! They have lived in the way that Cain lived. They have made the same mistake that Balaam made, because they wanted to get money for themselves. Like Korah, they have refused to obey God. So God will destroy them."
     },
     {
       "verse": "12",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Those people are always complaining. They like to accuse other people. They do any bad things that will make themselves happy. They speak great things about themselves, to show how important they are. They praise other people only so that they can get something good for themselves. Enoch was a man who lived many, many years ago. He lived in a good way that pleased God. See Genesis These words that Enoch wrote are not in the Bible. Enoch wrote them in a book called ‘The Book of Enoch’. Christians must continue to trust God"
+      "text": "Those people are always complaining. They like to accuse other people. They do any bad things that will make themselves happy. They speak great things about themselves, to show how important they are. They praise other people only so that they can get something good for themselves."
     },
     {
       "verse": "17",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They said to you, ‘In the last days of this world, some people will laugh at God's message. They will say that it is silly to obey God. Instead, they will do the bad things that they want to do. Those things do not please God.’ The last days of this world’ are the days before Jesus returns to the earth."
+      "text": "They said to you, ‘In the last days of this world, some people will laugh at God's message. They will say that it is silly to obey God. Instead, they will do the bad things that they want to do. Those things do not please God.’"
     },
     {
       "verse": "19",
@@ -90,7 +90,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Some people are in great danger. You must save them from the fire of God's punishment. Also be kind to people who have done wicked and disgusting things. But be careful! Do not let their sins make you bad too. See Jude Jude thanks God"
+      "text": "Some people are in great danger. You must save them from the fire of God's punishment. Also be kind to people who have done wicked and disgusting things. But be careful! Do not let their sins make you bad too."
     },
     {
       "verse": "24",
@@ -98,7 +98,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "He is the only God. He is the one who saves us because of our Lord Jesus Christ. So we praise him! We say that he is very great! He rules with power and authority. This has always been true. It is true now, and it will be true for ever. Amen! Print... Use screen font size Show All Comments Jude IntroductionRevelation Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He is the only God. He is the one who saves us because of our Lord Jesus Christ. So we praise him! We say that he is very great! He rules with power and authority. This has always been true. It is true now, and it will be true for ever. Amen!"
     }
   ]
 };

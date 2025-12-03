@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. I am in prison because I serve Christ Jesus. Our Christian friend Timothy is here with me. We are writing to you, Philemon. You are our friend, and we love you. You work on behalf of Christ, as we do."
+      "text": "This letter is from me, Paul. I am in prison because I serve Christ Jesus. Our Christian friend Timothy is here with me.We are writing to you, Philemon. You are our friend, and we love you. You work on behalf of Christ, as we do."
     },
     {
       "verse": "2",
@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. Paul thanks God because of Philemon"
+      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds."
     },
     {
       "verse": "4",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "My friend, you have helped God's people to feel stronger. Your love for them has made me very happy. It makes me feel stronger too. Paul asks Philemon to help Onesimus"
+      "text": "My friend, you have helped God's people to feel stronger. Your love for them has made me very happy. It makes me feel stronger too."
     },
     {
       "verse": "8",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Before he trusted Jesus, Onesimus did not really help you. But now he can help both you and me. The name Onesimus means ‘good helper’."
+      "text": "Before he trusted Jesus, Onesimus did not really help you. But now he can help both you and me."
     },
     {
       "verse": "12",
@@ -86,7 +86,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I want to ask you one more thing. Please prepare a room in your home where I can stay. I know that all of you are praying for God to let me go free. As a result, I hope that I will be able to visit you again. Paul finishes his letter"
+      "text": "I want to ask you one more thing. Please prepare a room in your home where I can stay. I know that all of you are praying for God to let me go free. As a result, I hope that I will be able to visit you again."
     },
     {
       "verse": "23",
@@ -98,7 +98,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I pray that the Lord Jesus Christ will continue to be very kind to all of you. Print... Use screen font size Show All Comments Philemon IntroductionHebrews Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that the Lord Jesus Christ will continue to be very kind to all of you."
     }
   ]
 };

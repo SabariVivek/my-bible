@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "I am writing to you, Timothy. You are like my own child, and I love you very much. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
+      "text": "I am writing to you, Timothy. You are like my own child, and I love you very much.I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind. I pray that God the Father and Christ Jesus our Lord will continue to help you and be kind to you. I pray that they will give you peace in your mind."
     },
     {
       "verse": "3",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Be strong, because God has given us his Spirit. And his Spirit does not cause us to be afraid. Instead, his Spirit causes us to be powerful to serve God. He helps us to love God and other people. And he helps us to control ourselves properly. The Christian leaders had put their hands on Timothy and they had prayed for him when he started to serve God. See 1 Timothy At that time, God had given Timothy a special gift so that he could be a good leader of the church and a teacher. That authority came from God's Spirit. Perhaps Timothy had been afraid to use that authority. So Paul tells him that he must use it. He must be brave to teach the true Christian message. Paul tells Timothy to be a brave teacher for Christ"
+      "text": "Be strong, because God has given us his Spirit. And his Spirit does not cause us to be afraid. Instead, his Spirit causes us to be powerful to serve God. He helps us to love God and other people. And he helps us to control ourselves properly."
     },
     {
       "verse": "8",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "That is why I have these troubles. But I am not ashamed to be in prison. I have believed in Christ and I know him well. I know that I can trust him to keep his message safe. God has given me the authority to speak that message to people at this time. Christ has the power to keep it safe until that great day when he comes back. It is not completely clear what this verse means. It could mean ‘Christ will keep safe what I have given to him’. Or it could mean ‘Christ will keep safe what he has given to me’. Christ had chosen Paul to teach his good news. So Paul is probably saying that he trusts Christ to keep that message safe. That great day when Jesus comes back is the day when he will judge everyone. He will decide what should happen to them after their death."
+      "text": "That is why I have these troubles. But I am not ashamed to be in prison. I have believed in Christ and I know him well. I know that I can trust him to keep his message safe. God has given me the authority to speak that message to people at this time. Christ has the power to keep it safe until that great day when he comes back."
     },
     {
       "verse": "13",
@@ -54,11 +54,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "God has given you his good message to keep safe. God's Holy Spirit, who lives in us, will help you to keep it safe. Onesiphorus"
+      "text": "God has given you his good message to keep safe. God's Holy Spirit, who lives in us, will help you to keep it safe."
     },
     {
       "verse": "15",
-      "text": "You know that almost all the believers in Asia region have turned against me. They include Phygelus and Hermogenes. Timothy was the leader of the believers in Ephesus. Ephesus was the capital city of the Roman region called Asia. It was in the country now called Turkey."
+      "text": "You know that almost all the believers in Asia region have turned against me. They include Phygelus and Hermogenes."
     },
     {
       "verse": "16",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I pray that the Lord will be kind to Onesiphorus on that great day when he judges people. You know very well how much Onesiphorus helped me in Ephesus. That great day’ means the day when Jesus will judge everyone. He will decide what should happen to them after their death. See also verse 12. Print... Use screen font size Show All Comments 2 Timothy Introduction2 Timothy 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that the Lord will be kind to Onesiphorus on that great day when he judges people. You know very well how much Onesiphorus helped me in Ephesus."
     }
   ],
   "2": [
@@ -100,7 +100,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Think carefully about what I am saying to you. The Lord will help you to understand all these things. An athlete is a strong person who runs in games and races."
+      "text": "Think carefully about what I am saying to you. The Lord will help you to understand all these things."
     },
     {
       "verse": "8",
@@ -108,7 +108,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "And I have many troubles because I tell that good news to people. They have even put me in a prison, like someone who has done something bad. But nobody can keep God's message in a prison! David was a great king of Israel's people, about 1,000 years before Christ came to the earth. See 1 Samuel Samuel"
+      "text": "And I have many troubles because I tell that good news to people. They have even put me in a prison, like someone who has done something bad. But nobody can keep God's message in a prison!"
     },
     {
       "verse": "10",
@@ -116,15 +116,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "We all know that this is true: ‘If we have died with Christ in this world, we will also live with him in the future world. We have died with Christ’ means that we belong to Christ and we know that he died on our behalf. When he died on the cross to save us from our sins, it is like we also died with him. God has forgiven us for our sins and we have become like new people. Our old lives have finished and we have started to live new lives."
+      "text": "We all know that this is true:‘If we have died with Christ in this world,we will also live with him in the future world. ‘If we have died with Christ in this world, we will also live with him in the future world."
     },
     {
       "verse": "12",
-      "text": "If we continue to be strong during troubles here, we will also rule with him there in heaven. But if we say that we do not know Christ, he will also say that he does not know us."
+      "text": "If we continue to be strong during troubles here,we will also rule with him there in heaven.But if we say that we do not know Christ,he will also say that he does not know us. we will also rule with him there in heaven. But if we say that we do not know Christ, he will also say that he does not know us."
     },
     {
       "verse": "13",
-      "text": "Even if we no longer trust him, he will still be someone that people can trust. He will always remain true to his nature.’ These words may be part of a song that the Christians knew. A good worker for God"
+      "text": "Even if we no longer trust him,he will still be someone that people can trust.He will always remain true to his nature.’ he will still be someone that people can trust. He will always remain true to his nature.’"
     },
     {
       "verse": "14",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But the group of true believers remains strong, like the foundation under a building. God has written his message there. It says, ‘The Lord knows who his own people are.’ It also says, ‘Everyone who says that he belongs to the Lord must stop doing bad things.’ See Numbers"
+      "text": "But the group of true believers remains strong, like the foundation under a building. God has written his message there. It says, ‘The Lord knows who his own people are.’ It also says, ‘Everyone who says that he belongs to the Lord must stop doing bad things.’"
     },
     {
       "verse": "20",
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Their minds will start to think clearly. It is the Devil who has made them believe wrong things. He has made them do what he wants. Now they can get free from his power. Print... Use screen font size Show All Comments 2 Timothy 12 Timothy 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Their minds will start to think clearly. It is the Devil who has made them believe wrong things. He has made them do what he wants. Now they can get free from his power."
     }
   ],
   "3": [
@@ -214,7 +214,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But they will not continue to do many more bad things. Everyone will see clearly that they are fools. That is what happened to Jannes and Jambres. The Bible does not tell us about Jannes and Jambres. They may have been Egyptian men many years ago. They did magic for the king of Egypt. See Exodus Timothy must copy Paul's example"
+      "text": "But they will not continue to do many more bad things. Everyone will see clearly that they are fools. That is what happened to Jannes and Jambres."
     },
     {
       "verse": "10",
@@ -222,7 +222,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "You also know what happened to me in the cities called Antioch, Iconium and Lystra. People caused me to have a lot of trouble and pain in those places. But I was patient and brave in those bad troubles! And the Lord kept me safe in all those dangerous times. See Acts Timothy's home was in Lystra. See Acts"
+      "text": "You also know what happened to me in the cities called Antioch, Iconium and Lystra. People caused me to have a lot of trouble and pain in those places. But I was patient and brave in those bad troubles! And the Lord kept me safe in all those dangerous times."
     },
     {
       "verse": "12",
@@ -230,7 +230,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Bad people like that will become even worse. Some of them will teach a false message and people will believe their lies. Those false teachers even believe their own lies! It is important for us to know the Bible"
+      "text": "Bad people like that will become even worse. Some of them will teach a false message and people will believe their lies. Those false teachers even believe their own lies!"
     },
     {
       "verse": "14",
@@ -246,7 +246,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "As a result, people who want to serve God can know how to live properly. They will be people who are ready to do all kinds of good things. When Paul wrote this letter to Timothy, people had only the first part of the Bible, that we call the Old Testament. That part describes what happened before Jesus came to the earth. Print... Use screen font size Show All Comments 2 Timothy 22 Timothy 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As a result, people who want to serve God can know how to live properly. They will be people who are ready to do all kinds of good things."
     }
   ],
   "4": [
@@ -280,7 +280,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So now a gift is waiting for me. The Lord will make me completely right with him. That will be like a crown which the Lord will give me on that great day when he judges people. He is the judge who is fair and right. He will not only give that gift to me. He will give it to all those people who love him. They will be happy to see him when he comes again. When the Israelites worshipped God, they offered gifts to him. These gifts included wine. They poured out the wine as a drink offering to God. See Numbers Paul is saying that he himself is like the drink offering. His life on earth will soon end. He has lived to serve God, and now he is ready to die for God. At that time, people often gave a crown to somebody who had won a race. So Paul is using the crown as a picture of what God will give his people. God will give a gift to everyone who really belongs to Christ. That gift is that we will be completely right and happy as we will live with him for ever. Paul's last words to Timothy"
+      "text": "So now a gift is waiting for me. The Lord will make me completely right with him. That will be like a crown which the Lord will give me on that great day when he judges people. He is the judge who is fair and right. He will not only give that gift to me. He will give it to all those people who love him. They will be happy to see him when he comes again."
     },
     {
       "verse": "9",
@@ -288,7 +288,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Demas has left me and he has gone to Thessalonica city. He wanted to enjoy the things of this world too much. Crescens has gone to Galatia region. Titus has gone to Dalmatia region. Paul writes about a man called Demas in Colossians and Philemon We do not know if this Demas was the same person. Thessalonica was a city in the north part of the country that we call Greece. We do not know who Crescens was. Galatia was the east part of the country that we call Turkey. Titus was a man who had worked with Paul to teach the Christian message. See Galatians Corinthians Titus Dalmatia was where the country called Albania is now, north and west from Greece."
+      "text": "Demas has left me and he has gone to Thessalonica city. He wanted to enjoy the things of this world too much. Crescens has gone to Galatia region. Titus has gone to Dalmatia region."
     },
     {
       "verse": "11",
@@ -296,11 +296,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "I have sent Tychicus to Ephesus. Luke had travelled and worked with Paul. He wrote the books in the Bible called Luke and Acts. See Acts Colossians Paul may have sent Tychicus to Ephesus to help with Timothy's work there."
+      "text": "I have sent Tychicus to Ephesus."
     },
     {
       "verse": "13",
-      "text": "I left a coat with Carpus in Troas. Bring it when you come. Also bring the books for me. If you cannot bring all of them, then be sure to bring my special papers. Troas was a city on the west coast of the country that we call Turkey."
+      "text": "I left a coat with Carpus in Troas. Bring it when you come. Also bring the books for me. If you cannot bring all of them, then be sure to bring my special papers."
     },
     {
       "verse": "14",
@@ -328,7 +328,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Erastus remained at Corinth city. I left Trophimus at Miletus city because he was ill. Priscilla and her husband, Aquila, had met Paul at Corinth city. See Acts Then they went with Paul to Ephesus and they stayed there for some time. See Acts and 1 Corinthians Later they went to Rome. See Romans They must have been in Ephesus again when Paul wrote this letter. Paul writes about Onesiphorus in 2 Timothy The Bible includes the name ‘Erastus’ in Acts and Romans We do not know whether this Erastus was the same person. Corinth was a city in the south part of the country that we call Greece. See Acts which include the name ‘Trophimus’. We do not know whether this Trophimus was the same person. Miletus was an important city on the coast, south from Ephesus (in the country now called Turkey)."
+      "text": "Erastus remained at Corinth city. I left Trophimus at Miletus city because he was ill."
     },
     {
       "verse": "21",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "I pray that the Lord will continue to make you strong in your spirit. I pray that he will be kind to all of you. Print... Use screen font size Show All Comments 2 Timothy 3Titus Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that the Lord will continue to make you strong in your spirit. I pray that he will be kind to all of you."
     }
   ]
 };

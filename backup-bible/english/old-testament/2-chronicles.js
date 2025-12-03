@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "David's son Solomon made himself a strong ruler over his kingdom. The Lord his God was with Solomon, so that he became a great king. King David died about 970 BC. A short time before his death, he made Solomon king of all Israel. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "David's son Solomon made himself a strong ruler over his kingdom. The Lord his God was with Solomon, so that he became a great king."
     },
     {
       "verse": "2",
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Solomon went up to the bronze altar which was in front of the Lord's special tent. He offered 1,000 burnt offerings on the altar to the Lord. God meets with Solomon"
+      "text": "Solomon went up to the bronze altar which was in front of the Lord's special tent. He offered 1,000 burnt offerings on the altar to the Lord."
     },
     {
       "verse": "7",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Solomon left the special tent in Gibeon where God met with his people. He returned to Jerusalem. There he ruled over Israel as king. Solomon buys horses and chariots"
+      "text": "Solomon left the special tent in Gibeon where God met with his people. He returned to Jerusalem. There he ruled over Israel as king."
     },
     {
       "verse": "14",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They paid 600 pieces of silver for each chariot that they bought in Egypt. They paid 150 pieces of silver for each horse. They also sold chariots and horses to all the kings of the Hittites and to the kings of Syria. The horses from Egypt were very big and strong. They were the best horses to pull chariots. Print... Use screen font size Show All Comments 2 Chronicles Introduction2 Chronicles 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "pieces of silver for each chariot that they bought in Egypt. They paid 150 pieces of silver for each horse. They also sold chariots and horses to all the kings of the Hittites and to the kings of Syria."
     }
   ],
   "2": [
@@ -76,11 +76,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He chose 70,000 men to carry the heavy things for the buildings, and 80,000 men to cut rocks in the hills. He also chose 3,600 men to lead these workers. Solomon asks Huram for help"
+      "text": "He chose 70,000 men to carry the heavy things for the buildings, and 80,000 men to cut rocks in the hills. He also chose 3,600 men to lead these workers."
     },
     {
       "verse": "3",
-      "text": "Solomon wrote this letter to King Huram of Tyre: ‘You helped my father King David when you sent him wood from cedar trees to build his palace. Please help me now."
+      "text": "Solomon wrote this letter to King Huram of Tyre:‘You helped my father King David when you sent him wood from cedar trees to build his palace. Please help me now."
     },
     {
       "verse": "4",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Please send me a man who has special skills to work with gold, silver, bronze and iron, as well as with valuable red, purple and blue materials. He must also know how to cut pictures on metal. He will help my own workers here in Judah and in Jerusalem. They are workers with special skills that my father David chose to do this work. Judah was the most important Israelite tribe."
+      "text": "Please send me a man who has special skills to work with gold, silver, bronze and iron, as well as with valuable red, purple and blue materials. He must also know how to cut pictures on metal. He will help my own workers here in Judah and in Jerusalem. They are workers with special skills that my father David chose to do this work."
     },
     {
       "verse": "8",
@@ -108,11 +108,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I will pay your men who cut down the trees. To pay them, I will send 2,000 tons of wheat, 2,000 tons of barley, 450,000 litres of wine and 450,000 litres of olive oil.’ Huram replies to Solomon's letter"
+      "text": "I will pay your men who cut down the trees. To pay them, I will send 2,000 tons of wheat, 2,000 tons of barley, 450,000 litres of wine and 450,000 litres of olive oil.’"
     },
     {
       "verse": "11",
-      "text": "King Huram of Tyre replied to Solomon with this letter: ‘Because the Lord loves his people, he has chosen you to be their king.’"
+      "text": "King Huram of Tyre replied to Solomon with this letter:‘Because the Lord loves his people, he has chosen you to be their king.’ ‘Because the Lord loves his people, he has chosen you to be their king.’"
     },
     {
       "verse": "12",
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then we will cut the wood that you need from the trees in Lebanon. We will tie the wood together to make boats. Then we will send them on the sea to Joppa. You can take the wood from there up to Jerusalem.’ Joppa was a town in Israel that was on the coast of the Mediterranean Sea. Tyre was also a city on the coast, north of Joppa. Solomon chooses men to build the temple"
+      "text": "Then we will cut the wood that you need from the trees in Lebanon. We will tie the wood together to make boats. Then we will send them on the sea to Joppa. You can take the wood from there up to Jerusalem.’"
     },
     {
       "verse": "17",
@@ -140,7 +140,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "He chose 70,000 of them to carry things for the buildings and 80,000 of them to cut rocks in the hills. He also chose 3,600 of them to lead the workers, to make sure that they finished the work properly. Print... Use screen font size Show All Comments 2 Chronicles 12 Chronicles 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He chose 70,000 of them to carry things for the buildings and 80,000 of them to cut rocks in the hills. He also chose 3,600 of them to lead the workers, to make sure that they finished the work properly."
     }
   ],
   "3": [
@@ -150,7 +150,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Solomon began to build the temple on the second day of the second month of the fourth year that he ruled Israel as king. Moriah was also the place where God had asked Abraham to sacrifice Isaac. See Genesis See 2 Samuel The fourth year of King Solomon's rule was about 966 BC."
+      "text": "Solomon began to build the temple on the second day of the second month of the fourth year that he ruled Israel as king."
     },
     {
       "verse": "3",
@@ -158,7 +158,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "There was an entrance room at the front of the temple's big hall. It was as wide as the temple, 9 metres wide. It was 9 metres high. Solomon's workers covered the inside of the entrance room with pure gold. Or possibly 54 metres high."
+      "text": "There was an entrance room at the front of the temple's big hall. It was as wide as the temple, 9 metres wide. It was 9 metres high. Solomon's workers covered the inside of the entrance room with pure gold."
     },
     {
       "verse": "5",
@@ -170,7 +170,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They used gold to cover all parts of the temple: the beams for its roof, the entrances, the walls and the doors. They cut pictures of cherubs on the walls. The Most Holy Place in the temple"
+      "text": "They used gold to cover all parts of the temple: the beams for its roof, the entrances, the walls and the doors. They cut pictures of cherubs on the walls."
     },
     {
       "verse": "8",
@@ -178,23 +178,19 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The gold nails weighed the same as 50 gold coins. They also covered the walls of the upstairs rooms with gold."
+      "text": "gold coins. They also covered the walls of the upstairs rooms with gold."
     },
     {
       "verse": "10",
       "text": "In the Most Holy Place, they made models of two cherubs. They covered them with gold."
     },
     {
-      "verse": "11-13",
-      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings. Each wing was 2.2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub. The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
-    },
-    {
       "verse": "14",
-      "text": "Solomon's workers used blue, purple and red material and good linen to make a special curtain. It had pictures of cherubs on it. The two pillars"
+      "text": "Solomon's workers used blue, purple and red material and good linen to make a special curtain. It had pictures of cherubs on it."
     },
     {
       "verse": "15",
-      "text": "Solomon's workers made two pillars to stand at the front of the temple. They were 16 metres high. There was a piece on the top of each pillar that was 2.2 metres high. Or possibly 8 metres high."
+      "text": "Solomon's workers made two pillars to stand at the front of the temple. They were 16 metres high. There was a piece on the top of each pillar that was 2.2 metres high."
     },
     {
       "verse": "16",
@@ -202,7 +198,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then they put the two pillars at the entrance of the temple. One pillar stood on the south side of the entrance. The other pillar stood on the north side. Solomon called the pillar on the south side ‘Jakin’. He called the pillar on the north side ‘Boaz’. Jakin probably means ‘God makes it strong’. Boaz probably means ‘with strength’. Print... Use screen font size Show All Comments 2 Chronicles 22 Chronicles 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then they put the two pillars at the entrance of the temple. One pillar stood on the south side of the entrance. The other pillar stood on the north side. Solomon called the pillar on the south side ‘Jakin’. He called the pillar on the north side ‘Boaz’."
+    },
+    {
+      "verse": "11-13",
+      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings. Each wing was 2.2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub. The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
     }
   ],
   "4": [
@@ -216,7 +216,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "All around its edge, below the top, there were two rows of images of things that looked like bulls. They were all part of the same piece of bronze as the big bath. There were 20 bulls for every metre around the edge. The Sea’ was full of water. The priests used this to wash themselves when they went into the temple."
+      "text": "All around its edge, below the top, there were two rows of images of things that looked like bulls. They were all part of the same piece of bronze as the big bath. There were 20 bulls for every metre around the edge."
     },
     {
       "verse": "4",
@@ -232,7 +232,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "They used gold to make ten lampstands. They made them in the way that Solomon told them. They put the lampstands in the temple, five lampstands on the south side and five lampstands on the north side. See 1 Chronicles"
+      "text": "They used gold to make ten lampstands. They made them in the way that Solomon told them. They put the lampstands in the temple, five lampstands on the south side and five lampstands on the north side."
     },
     {
       "verse": "8",
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "400 images of pomegranates for the two groups of chains (there were two rows of these images around the piece at the top of each pillar, which had the shape of a bowl);"
+      "text": "images of pomegranates for the two groups of chains (there were two rows of these images around the piece at the top of each pillar, which had the shape of a bowl);"
     },
     {
       "verse": "14",
@@ -276,11 +276,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Solomon did not weigh any of these things, because there were so many of them. No one ever knew the weight of the bronze. Inside the temple"
+      "text": "Solomon did not weigh any of these things, because there were so many of them. No one ever knew the weight of the bronze."
     },
     {
       "verse": "19",
-      "text": "Solomon's workers also made all these things for God's temple: the gold altar;the tables which had the special bread on them;"
+      "text": "Solomon's workers also made all these things for God's temple:the gold altar;the tables which had the special bread on them;"
     },
     {
       "verse": "20",
@@ -292,13 +292,13 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "the small tools of pure gold that they used for the lamps;the bowls for water;the dishes for ashes;the baskets that carried hot coals;the gold pieces that held the doors of the Most Holy Place;the gold pieces that held the doors of the temple's big hall. Print... Use screen font size Show All Comments 2 Chronicles 32 Chronicles 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "the small tools of pure gold that they used for the lamps;the bowls for water;the dishes for ashes;the baskets that carried hot coals;the gold pieces that held the doors of the Most Holy Place;the gold pieces that held the doors of the temple's big hall."
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "Solomon finished all the work for the Lord's temple. Then he brought into it all the holy things that belonged to his father, David. He stored all the valuable things in a safe place in God's temple. They included silver things and gold things. Solomon brings the Covenant Box to the temple"
+      "text": "Solomon finished all the work for the Lord's temple. Then he brought into it all the holy things that belonged to his father, David. He stored all the valuable things in a safe place in God's temple. They included silver things and gold things."
     },
     {
       "verse": "2",
@@ -306,7 +306,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So all the Israelite leaders came together to meet with King Solomon. This happened during the Festival of Huts in the seventh month of the year. Before they built the temple, King David had put the Covenant Box in a special tent."
+      "text": "So all the Israelite leaders came together to meet with King Solomon. This happened during the Festival of Huts in the seventh month of the year."
     },
     {
       "verse": "4",
@@ -334,11 +334,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "There was nothing in the Covenant Box, except the two flat pieces of stone that Moses had put there at Sinai mountain. That was where the Lord made a covenant with the Israelites after they came out from Egypt. See Deuteronomy Kings The priests sing to praise the Lord"
+      "text": "There was nothing in the Covenant Box, except the two flat pieces of stone that Moses had put there at Sinai mountain. That was where the Lord made a covenant with the Israelites after they came out from Egypt."
     },
     {
       "verse": "11",
-      "text": "Then the priests came out of the Holy Place. All the different groups of priests who were there had made themselves clean to serve God."
+      "text": "Then the priests came out of the Holy Place. All the different groups of priests who were there had made themselves clean to serve God. ‘He is good! His faithful love continues for ever!’"
     },
     {
       "verse": "12",
@@ -346,11 +346,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "All these musicians made nice music together. They joined together to praise the Lord and to thank him. The singers sang loudly to the music of the trumpets, the cymbals and the other musical instruments. They loudly sang these words to praise the Lord: ‘He is good! His faithful love continues for ever!’ Then a cloud filled the Lord's temple."
+      "text": "All these musicians made nice music together. They joined together to praise the Lord and to thank him. The singers sang loudly to the music of the trumpets, the cymbals and the other musical instruments. They loudly sang these words to praise the Lord:‘He is good!His faithful love continues for ever!’Then a cloud filled the Lord's temple."
     },
     {
       "verse": "14",
-      "text": "The priests could not do their work to serve the Lord, because of the cloud. The bright glory of the Lord filled his temple. Print... Use screen font size Show All Comments 2 Chronicles 42 Chronicles 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priests could not do their work to serve the Lord, because of the cloud. The bright glory of the Lord filled his temple."
     }
   ],
   "6": [
@@ -396,7 +396,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I have put the Covenant Box there. It contains the covenant that the Lord made with the Israelites.’ Solomon prays to God"
+      "text": "I have put the Covenant Box there. It contains the covenant that the Lord made with the Israelites.’"
     },
     {
       "verse": "12",
@@ -408,7 +408,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He prayed, ‘Lord, Israel's God, there is no God like you, either in heaven or on the earth. You continue to do what you have promised to do for your people. You faithfully love those who want to serve you."
+      "text": "He prayed,‘Lord, Israel's God, there is no God like you, either in heaven or on the earth. You continue to do what you have promised to do for your people. You faithfully love those who want to serve you."
     },
     {
       "verse": "15",
@@ -520,7 +520,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Lord God do not turn away from your special chosen king. Remember the faithful love that you promised to your servant David.’ Print... Use screen font size Show All Comments 2 Chronicles 52 Chronicles 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Lord God do not turn away from your special chosen king. Remember the faithful love that you promised to your servant David.’"
     }
   ],
   "7": [
@@ -562,7 +562,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then Solomon sent the people away to their homes. That was on the 23rd day of the seventh month. The people were very happy and full of joy because the Lord had done many good things for King David, for King Solomon and for his people, the Israelites. People came to the temple from everywhere in Israel. Lebo-Hamath was in the far north of Israel. The Stream of Egypt was the border on the south of Israel. The Lord speaks to Solomon"
+      "text": "Then Solomon sent the people away to their homes. That was on the 23rd day of the seventh month. The people were very happy and full of joy because the Lord had done many good things for King David, for King Solomon and for his people, the Israelites."
     },
     {
       "verse": "11",
@@ -610,7 +610,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "People will answer, “He has done it because they have turned away from the Lord, the God of their ancestors. He brought their ancestors out of Egypt. But now they have chosen to worship other gods and to serve them. That is why the Lord has caused this trouble to happen to them.” ’ Print... Use screen font size Show All Comments 2 Chronicles 62 Chronicles 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People will answer, “He has done it because they have turned away from the Lord, the God of their ancestors. He brought their ancestors out of Egypt. But now they have chosen to worship other gods and to serve them. That is why the Lord has caused this trouble to happen to them.” ’"
     }
   ],
   "8": [
@@ -652,11 +652,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "King Solomon had 250 Israelite officers who had authority over the workers. Solomon gives a house to Pharaoh's daughter"
+      "text": "Israelite officers who had authority over the workers."
     },
     {
       "verse": "11",
-      "text": "Solomon had built a palace for his wife, Pharaoh's daughter. When the palace was ready, he brought her up there from the City of David. He said, ‘My wife must not live in the palace of David, king of Israel. The Lord's Covenant Box has been there, so it is a holy place.’ The work of the priests and Levites"
+      "text": "Solomon had built a palace for his wife, Pharaoh's daughter. When the palace was ready, he brought her up there from the City of David. He said, ‘My wife must not live in the palace of David, king of Israel. The Lord's Covenant Box has been there, so it is a holy place.’"
     },
     {
       "verse": "12",
@@ -672,7 +672,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "All the priests and the Levites were careful to do exactly what the king had commanded. That included the rooms where they stored valuable things. See Deuteronomy"
+      "text": "All the priests and the Levites were careful to do exactly what the king had commanded. That included the rooms where they stored valuable things."
     },
     {
       "verse": "16",
@@ -684,7 +684,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "King Hiram had sailors who knew how to sail ships on the sea. He sent some of these men to work with Solomon's sailors. They sailed to Ophir and they brought back about 15 tons of gold. They gave it to King Solomon. Print... Use screen font size Show All Comments 2 Chronicles 72 Chronicles 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "King Hiram had sailors who knew how to sail ships on the sea. He sent some of these men to work with Solomon's sailors. They sailed to Ophir and they brought back about 15 tons of gold. They gave it to King Solomon."
     }
   ],
   "9": [
@@ -702,7 +702,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "She saw all the food that he ate in his palace. She saw all his servants and officers and their beautiful clothes. She saw the servants who prepared his food and wine. She saw the burnt offerings that he offered in the Lord's temple. All these things caused her to hold her breath in surprise. See 1 Kings"
+      "text": "She saw all the food that he ate in his palace. She saw all his servants and officers and their beautiful clothes. She saw the servants who prepared his food and wine. She saw the burnt offerings that he offered in the Lord's temple. All these things caused her to hold her breath in surprise."
     },
     {
       "verse": "5",
@@ -734,11 +734,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "King Solomon gave to the Queen of Sheba everything that she wanted. He gave more things to her than she had brought to him. Then she left with all her servants and she returned to her own country. Solomon's riches"
+      "text": "King Solomon gave to the Queen of Sheba everything that she wanted. He gave more things to her than she had brought to him. Then she left with all her servants and she returned to her own country."
     },
     {
       "verse": "13",
-      "text": "Solomon received 25 tons of gold each year."
+      "text": "tons of gold each year."
     },
     {
       "verse": "14",
@@ -750,7 +750,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They also made 300 small shields in the same way. They used about 2 kilograms of gold to cover each shield. He put these shields in the Palace of the Forest of Lebanon. See 1 Kings"
+      "text": "small shields in the same way. They used about 2 kilograms of gold to cover each shield. He put these shields in the Palace of the Forest of Lebanon."
     },
     {
       "verse": "17",
@@ -762,7 +762,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "There were 12 more images of lions on the six steps. There was one lion at each end of every step. There was no throne like it in any other kingdom."
+      "text": "more images of lions on the six steps. There was one lion at each end of every step. There was no throne like it in any other kingdom."
     },
     {
       "verse": "20",
@@ -770,7 +770,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The king had many large ships that King Hiram's men could sail across the seas. Every three years they returned to Solomon with their loads. They brought to him gold, silver and ivory. They also brought apes and monkeys. There was no sea at Jerusalem, so Solomon kept his ships with King Hiram. Hiram lived in Tyre, on the shore of the Mediterranean Sea. monkeys’ or ‘peacocks’. ‘Apes’ are animals like big monkeys. Peacocks are beautiful birds."
+      "text": "The king had many large ships that King Hiram's men could sail across the seas. Every three years they returned to Solomon with their loads. They brought to him gold, silver and ivory. They also brought apes and monkeys."
     },
     {
       "verse": "22",
@@ -798,7 +798,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "People brought horses to Solomon from Egypt and from all the other countries. Solomon dies"
+      "text": "People brought horses to Solomon from Egypt and from all the other countries."
     },
     {
       "verse": "29",
@@ -806,11 +806,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Solomon ruled over all Israel for 40 years while he lived in Jerusalem."
+      "text": "years while he lived in Jerusalem."
     },
     {
       "verse": "31",
-      "text": "Then he died. They buried him with his ancestors, in the city of his father David. His son Rehoboam became king after him. Print... Use screen font size Show All Comments 2 Chronicles 82 Chronicles 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then he died. They buried him with his ancestors, in the city of his father David. His son Rehoboam became king after him."
     }
   ],
   "10": [
@@ -832,7 +832,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Rehoboam answered them, ‘Go away for three days. Then come back to me.’ So the people went away. Rehoboam became king when his father Solomon died. See 2 Chronicles He went to Shechem for all the Israelites to accept him as king. Shechem was about 50 kilometres north of Jerusalem."
+      "text": "Rehoboam answered them, ‘Go away for three days. Then come back to me.’ So the people went away."
     },
     {
       "verse": "6",
@@ -856,7 +856,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "My father made you work hard. I will make you work even harder! My father punished you with little whips. I will punish you with whips that bite your skin!” ’ Rehoboam refuses to do what the people want"
+      "text": "My father made you work hard. I will make you work even harder! My father punished you with little whips. I will punish you with whips that bite your skin!” ’"
     },
     {
       "verse": "12",
@@ -872,29 +872,29 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So the king did not agree to do what the people wanted him to do. It was God who caused this to happen. He had already given his message about this to Nebat's son Jeroboam. The prophet Ahijah who came from Shiloh had spoken the Lord's message to Jeroboam. See 1 Kings Israel and Judah become separate kingdoms"
+      "text": "So the king did not agree to do what the people wanted him to do. It was God who caused this to happen. He had already given his message about this to Nebat's son Jeroboam. The prophet Ahijah who came from Shiloh had spoken the Lord's message to Jeroboam."
     },
     {
       "verse": "16",
-      "text": "All the Israelites realized that the king refused to listen to them. So they said to the king, ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family!’ So the Israelites went to their homes."
+      "text": "All the Israelites realized that the king refused to listen to them. So they said to the king,‘We can no longer serve the family of Jesse's son, David!Israelites, go back to your homes!You descendant of David, take care of your own family!’So the Israelites went to their homes. ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family!’"
     },
     {
       "verse": "17",
-      "text": "But Rehoboam continued to rule over the Israelites who lived in the towns of Judah. Rehoboam was now king over only two Israelite tribes, Judah and Benjamin. This was the kingdom in the south. Jeroboam became king over the other 10 tribes in the north."
+      "text": "But Rehoboam continued to rule over the Israelites who lived in the towns of Judah."
     },
     {
       "verse": "18",
-      "text": "King Rehoboam sent a man called Adoniram to talk to the Israelite people. Adoniram had authority over the men who had to work for Rehoboam. But the Israelites threw stones at Adoniram and they killed him. So King Rehoboam quickly got into his chariot and he escaped to Jerusalem. Adoniram was also called Hadoram."
+      "text": "King Rehoboam sent a man called Adoniram to talk to the Israelite people. Adoniram had authority over the men who had to work for Rehoboam. But the Israelites threw stones at Adoniram and they killed him. So King Rehoboam quickly got into his chariot and he escaped to Jerusalem."
     },
     {
       "verse": "19",
-      "text": "Since that time, the tribes in the north of Israel have not accepted the authority of King David's descendants. Print... Use screen font size Show All Comments 2 Chronicles 92 Chronicles 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Since that time, the tribes in the north of Israel have not accepted the authority of King David's descendants."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "Rehoboam arrived back in Jerusalem. He brought together all the men from the tribes of Judah and Benjamin who knew how to fight. There were 180,000 of them. Rehoboam wanted to attack the Israelite tribes so that he could rule them again as king."
+      "text": "Rehoboam arrived back in Jerusalem. He brought together all the men from the tribes of Judah and Benjamin who knew how to fight. There were 180,000 of them. Rehoboam wanted to attack the Israelite tribes so that he could rule them again as king. So they obeyed the Lord's message. They did not go to attack Jeroboam."
     },
     {
       "verse": "2",
@@ -906,7 +906,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "This is what the Lord says: “Do not go and attack your brothers. Do not fight against them. Instead, you must all go home. I, the Lord, have decided that this must happen.” ’ So they obeyed the Lord's message. They did not go to attack Jeroboam. By this time, Jeroboam had become the king of Israel's 10 northern tribes. See 1 Kings Rehoboam rules Judah as king"
+      "text": "This is what the Lord says: “Do not go and attack your brothers. Do not fight against them. Instead, you must all go home. I, the Lord, have decided that this must happen.” ’So they obeyed the Lord's message. They did not go to attack Jeroboam."
     },
     {
       "verse": "5",
@@ -958,7 +958,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "These people helped to make the kingdom of Judah stronger. They were faithful to Solomon's son Rehoboam for three years. During that time, they lived in the way that David and Solomon had taught them to live. Jerusalem was the capital city of Judah. King Rehoboam lived there. God's temple was also there. Rehoboam's family"
+      "text": "These people helped to make the kingdom of Judah stronger. They were faithful to Solomon's son Rehoboam for three years. During that time, they lived in the way that David and Solomon had taught them to live."
     },
     {
       "verse": "18",
@@ -982,7 +982,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He did a wise thing with his other sons. He sent many of them to the different regions of Judah and Benjamin, to live in all the strong cities. He supplied them with plenty of food. He also found many women to become their wives. Print... Use screen font size Show All Comments 2 Chronicles 102 Chronicles 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He did a wise thing with his other sons. He sent many of them to the different regions of Judah and Benjamin, to live in all the strong cities. He supplied them with plenty of food. He also found many women to become their wives."
     }
   ],
   "12": [
@@ -1028,7 +1028,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Every time that the king went to the Lord's temple, the guards carried the shields. After that, they took them back to the guards' room where they stored them. Rehoboam turns back to the Lord"
+      "text": "Every time that the king went to the Lord's temple, the guards carried the shields. After that, they took them back to the guards' room where they stored them."
     },
     {
       "verse": "12",
@@ -1048,17 +1048,17 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Rehoboam died and they buried him beside his ancestors in the City of David. His son Abijah became king after him. Rehoboam had chosen Abijah to be the next king. See 2 Chronicles Print... Use screen font size Show All Comments 2 Chronicles 112 Chronicles 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Rehoboam died and they buried him beside his ancestors in the City of David. His son Abijah became king after him."
     }
   ],
   "13": [
     {
       "verse": "1",
-      "text": "Abijah became king of Judah after Jeroboam had been king of Israel for 18 years."
+      "text": "years."
     },
     {
       "verse": "2",
-      "text": "Abijah ruled in Jerusalem as king for three years. His mother's name was Micaiah. She was the daughter of Uriel from Gibeah. Abijah and Jeroboam fought a war against each other."
+      "text": "Abijah ruled in Jerusalem as king for three years. His mother's name was Micaiah. She was the daughter of Uriel from Gibeah.Abijah and Jeroboam fought a war against each other."
     },
     {
       "verse": "3",
@@ -1138,13 +1138,13 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "All the other things that happened while Abijah ruled as king are written in the book of the prophet Iddo. It includes the things that Abijah did and the things that he said. Print... Use screen font size Show All Comments 2 Chronicles 122 Chronicles 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the other things that happened while Abijah ruled as king are written in the book of the prophet Iddo. It includes the things that Abijah did and the things that he said."
     }
   ],
   "14": [
     {
       "verse": "1",
-      "text": "Abijah died and they buried him beside his ancestors in the City of David. Abijah's son Asa became king after him. The country had peace for ten years while Asa was king. Asa rules Judah as king"
+      "text": "Abijah died and they buried him beside his ancestors in the City of David. Abijah's son Asa became king after him. The country had peace for ten years while Asa was king."
     },
     {
       "verse": "2",
@@ -1160,7 +1160,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He removed the altars on the hills. He also removed the altars in all Judah's cities where people burned incense. There was peace in his kingdom while he ruled. The stone pillars were from the time before the Israelites came to the land of Canaan. They were places where people worshipped false gods."
+      "text": "He removed the altars on the hills. He also removed the altars in all Judah's cities where people burned incense. There was peace in his kingdom while he ruled."
     },
     {
       "verse": "6",
@@ -1168,7 +1168,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Asa said to Judah's people, ‘We should build these towns and make them stronger. We must put walls around them, with towers and strong gates. Judah still belongs to us because we have obeyed the Lord our God. He has made us safe from our enemies all around us.’ So the people made these towns strong. Everything went well for them. Zerah attacks Asa"
+      "text": "Asa said to Judah's people, ‘We should build these towns and make them stronger. We must put walls around them, with towers and strong gates. Judah still belongs to us because we have obeyed the Lord our God. He has made us safe from our enemies all around us.’So the people made these towns strong. Everything went well for them. So the people made these towns strong. Everything went well for them."
     },
     {
       "verse": "8",
@@ -1200,7 +1200,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "They also attacked the tents of the people who took care of animals. They took away many sheep and camels from there. Then they returned to Jerusalem. Print... Use screen font size Show All Comments 2 Chronicles 132 Chronicles 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They also attacked the tents of the people who took care of animals. They took away many sheep and camels from there. Then they returned to Jerusalem."
     }
   ],
   "15": [
@@ -1234,7 +1234,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Asa felt strong again when he heard God's message from Azariah, son of the prophet Oded. He removed the disgusting idols from the whole land of Judah and Benjamin. He also removed them from the towns that he had taken in the hill country of Ephraim. He repaired the Lord's altar that was in the yard at the front of the Lord's temple. Asa brings all the people together in Jerusalem"
+      "text": "Asa felt strong again when he heard God's message from Azariah, son of the prophet Oded. He removed the disgusting idols from the whole land of Judah and Benjamin. He also removed them from the towns that he had taken in the hill country of Ephraim. He repaired the Lord's altar that was in the yard at the front of the Lord's temple."
     },
     {
       "verse": "9",
@@ -1242,7 +1242,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "All these people met together in Jerusalem in the 15th year after Asa had become king. They met in the third month of the year."
+      "text": "All these people met together in Jerusalem in the 15th year after Asa had become king. They met in the third month of the year. After that, the Lord made them safe from their enemies all around them."
     },
     {
       "verse": "11",
@@ -1262,7 +1262,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "All Judah's people were happy to make this promise, because they truly wanted to serve the Lord. They wanted him to help them and he answered them. After that, the Lord made them safe from their enemies all around them. Asa punishes Maakah because she worshipped idols"
+      "text": "All Judah's people were happy to make this promise, because they truly wanted to serve the Lord. They wanted him to help them and he answered them.After that, the Lord made them safe from their enemies all around them."
     },
     {
       "verse": "16",
@@ -1274,17 +1274,17 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "He brought into God's temple the things that he and his father had made as gifts for God. They used silver and gold to make some of these things. Maakah had been the wife of King Rehoboam. As ‘Queen Mother’, she had authority to make important decisions. The Kidron Valley was outside Jerusalem."
+      "text": "He brought into God's temple the things that he and his father had made as gifts for God. They used silver and gold to make some of these things."
     },
     {
       "verse": "19",
-      "text": "There were no more wars in Judah until Asa had been king for 35 years. Print... Use screen font size Show All Comments 2 Chronicles 142 Chronicles 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years."
     }
   ],
   "16": [
     {
       "verse": "1",
-      "text": "After Asa had been king of Judah for 36 years, King Baasha of Israel attacked Judah. He put a group of his soldiers in Ramah and he made it a strong town. As a result, nobody could travel into Judah or out of Judah, where King Asa ruled. King Baasha of Israel had been an enemy of Judah since he became king. See 1 Kings Ramah was on the main road about 8 kilometres north of Jerusalem. It was a town that was part of Asa's kingdom, in land that belonged to Benjamin's tribe."
+      "text": "years, King Baasha of Israel attacked Judah. He put a group of his soldiers in Ramah and he made it a strong town. As a result, nobody could travel into Judah or out of Judah, where King Asa ruled."
     },
     {
       "verse": "2",
@@ -1304,7 +1304,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then King Asa told all the men in Judah to do some hard work. They had to carry away from Ramah all the big stones and the wood that Baasha had been using there. Then King Asa used those things to make Geba and Mizpah strong towns again. Hanani warns King Asa"
+      "text": "Then King Asa told all the men in Judah to do some hard work. They had to carry away from Ramah all the big stones and the wood that Baasha had been using there. Then King Asa used those things to make Geba and Mizpah strong towns again."
     },
     {
       "verse": "7",
@@ -1320,7 +1320,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Asa was angry with the prophet, so he put him in prison. At that time Asa also started to do cruel things to some people. Asa dies"
+      "text": "Asa was angry with the prophet, so he put him in prison. At that time Asa also started to do cruel things to some people."
     },
     {
       "verse": "11",
@@ -1328,15 +1328,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When Asa had been king for 39 years, he had a disease in his feet. He became very ill, but he did not ask the Lord to help him. Instead, he asked doctors to make him better."
+      "text": "years, he had a disease in his feet. He became very ill, but he did not ask the Lord to help him. Instead, he asked doctors to make him better."
     },
     {
       "verse": "13",
-      "text": "Asa died when he had been king for 41 years."
+      "text": "years."
     },
     {
       "verse": "14",
-      "text": "His people buried him in the grave that he had prepared for himself in the City of David. They put him on a special bed that had spices and different kinds of perfume on it. They burned a large fire to give him honour. Print... Use screen font size Show All Comments 2 Chronicles 152 Chronicles 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "His people buried him in the grave that he had prepared for himself in the City of David. They put him on a special bed that had spices and different kinds of perfume on it. They burned a large fire to give him honour."
     }
   ],
   "17": [
@@ -1374,7 +1374,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "These men travelled everywhere in Judah to teach people. They took with them the book which was a copy of the Lord's law. They used it to teach people in all Judah's towns. Jehoshaphat becomes very strong as king"
+      "text": "These men travelled everywhere in Judah to teach people. They took with them the book which was a copy of the Lord's law. They used it to teach people in all Judah's towns."
     },
     {
       "verse": "10",
@@ -1386,7 +1386,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Jehoshaphat became more and more powerful. He built strong buildings and places to store things everywhere in Judah."
+      "text": "Jehoshaphat became more and more powerful. He built strong buildings and places to store things everywhere in Judah. From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300,000 soldiers, in groups of 1,000."
     },
     {
       "verse": "13",
@@ -1394,7 +1394,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "These are the groups of the soldiers in each clan: From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300,000 soldiers, in groups of 1,000."
+      "text": "These are the groups of the soldiers in each clan:From Judah's tribe, the officer who led the soldiers was Adnah. He had authority over 300,000 soldiers, in groups of 1,000."
     },
     {
       "verse": "15",
@@ -1414,7 +1414,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "All these men served as the king's soldiers in Jerusalem. He also had soldiers that he put in Judah's other strong cities. Print... Use screen font size Show All Comments 2 Chronicles 162 Chronicles 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All these men served as the king's soldiers in Jerusalem. He also had soldiers that he put in Judah's other strong cities."
     }
   ],
   "18": [
@@ -1424,7 +1424,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "After some years, he went to visit Ahab in Samaria. Ahab killed many sheep and cows to give honour to Jehoshaphat and the people who were with him. Ahab wanted to attack Ramoth Gilead, so he asked Jehoshaphat to help him. Ahab was the king of Israel, the kingdom north of Judah. He lived in the city of Samaria."
+      "text": "After some years, he went to visit Ahab in Samaria. Ahab killed many sheep and cows to give honour to Jehoshaphat and the people who were with him. Ahab wanted to attack Ramoth Gilead, so he asked Jehoshaphat to help him."
     },
     {
       "verse": "3",
@@ -1436,15 +1436,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So the king of Israel brought together 400 prophets. He asked them, ‘Should we attack Ramoth Gilead, or not?’ They answered, ‘Yes, go and attack it, because the God will give it to you, our king.’"
+      "text": "prophets. He asked them, ‘Should we attack Ramoth Gilead, or not?’ They answered, ‘Yes, go and attack it, because the God will give it to you, our king.’"
     },
     {
       "verse": "6",
-      "text": "But Jehoshaphat then asked, ‘Is there any other prophet of the Lord that we could ask?’ Jehoshaphat probably thought that the 400 prophets were false prophets. They were only saying something that would make the king of Israel happy."
+      "text": "But Jehoshaphat then asked, ‘Is there any other prophet of the Lord that we could ask?’"
     },
     {
       "verse": "7",
-      "text": "The king of Israel said to Jehoshaphat, ‘There is still one man. We could ask him what the Lord wants us to do. But I do not like him, because he never says that anything good will happen to me. He always says that I will have trouble. He is Imlah's son, Micaiah.’ Jehoshaphat said, ‘The king should not talk like that.’"
+      "text": "The king of Israel said to Jehoshaphat, ‘There is still one man. We could ask him what the Lord wants us to do. But I do not like him, because he never says that anything good will happen to me. He always says that I will have trouble. He is Imlah's son, Micaiah.’Jehoshaphat said, ‘The king should not talk like that.’ Jehoshaphat said, ‘The king should not talk like that.’"
     },
     {
       "verse": "8",
@@ -1456,7 +1456,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Kenaanah's son Zedekiah had used iron to make sharp points like a bull's horns. He said, ‘This is what the Lord says: “With these sharp horns you will attack Syria's army. You will destroy them all.” ’ The gate into a city was an important place. The leaders of the town had meetings there. Zedekiah was the leader of Ahab's prophets."
+      "text": "Kenaanah's son Zedekiah had used iron to make sharp points like a bull's horns. He said, ‘This is what the Lord says: “With these sharp horns you will attack Syria's army. You will destroy them all.” ’"
     },
     {
       "verse": "11",
@@ -1472,7 +1472,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "When Micaiah arrived, the king asked him, ‘Micaiah, should we attack Ramoth Gilead or not?’ Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city.’"
+      "text": "When Micaiah arrived, the king asked him, ‘Micaiah, should we attack Ramoth Gilead or not?’Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city.’ Micaiah answered, ‘Yes, attack it. You will surely win the fight. You will take power over the city.’"
     },
     {
       "verse": "15",
@@ -1496,7 +1496,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then a spirit came and stood in front of the Lord. The spirit said, “I will deceive Ahab.” The Lord asked, “How will you do it?”"
+      "text": "Then a spirit came and stood in front of the Lord. The spirit said, “I will deceive Ahab.”The Lord asked, “How will you do it?”"
     },
     {
       "verse": "21",
@@ -1512,7 +1512,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Micaiah answered him, ‘One day, you will know which of us has spoken the truth. That will be the day that you go to hide in a room at the back of a house.’ Micaiah probably meant that Zedekiah would be hiding from Syrian soldiers."
+      "text": "Micaiah answered him, ‘One day, you will know which of us has spoken the truth. That will be the day that you go to hide in a room at the back of a house.’"
     },
     {
       "verse": "25",
@@ -1524,7 +1524,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Micaiah said, ‘If you do return safely, it will show that I have not spoken the Lord's message.’ Then he said to all the people who were there, ‘Remember what I have said to King Ahab!’ Ahab and Jehoshaphat go to fight at Ramoth Gilead"
+      "text": "Micaiah said, ‘If you do return safely, it will show that I have not spoken the Lord's message.’ Then he said to all the people who were there, ‘Remember what I have said to King Ahab!’"
     },
     {
       "verse": "28",
@@ -1552,7 +1552,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The soldiers fought the battle all day. While they were fighting, King Ahab sat in his chariot where he could see the Syrian soldiers. Then, at sunset, he died. Print... Use screen font size Show All Comments 2 Chronicles 172 Chronicles 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The soldiers fought the battle all day. While they were fighting, King Ahab sat in his chariot where he could see the Syrian soldiers. Then, at sunset, he died."
     }
   ],
   "19": [
@@ -1566,7 +1566,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But you have done some good things. You have removed the Asherah poles from Judah's land. You have chosen to serve God.’ The Lord was angry because King Jehoshaphat had agreed to help King Ahab of Israel. See 2 Chronicles Jehoshaphat chooses some men to be judges"
+      "text": "But you have done some good things. You have removed the Asherah poles from Judah's land. You have chosen to serve God.’"
     },
     {
       "verse": "4",
@@ -1582,7 +1582,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Respect the Lord's authority. Be careful to do your job well. The Lord our God is always fair. So be fair to everyone, whoever they are. Do not cheat people. Do not accept bribes.’ Beersheba was in the south of Judah and the hill country of Ephraim was in the north."
+      "text": "Respect the Lord's authority. Be careful to do your job well. The Lord our God is always fair. So be fair to everyone, whoever they are. Do not cheat people. Do not accept bribes.’"
     },
     {
       "verse": "8",
@@ -1598,13 +1598,13 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Amariah, the most important priest, will have authority over you. He will tell you what the Lord's law says is right. But if it is an argument about the king's laws, Ishmael's son Zebadiah, the officer who rules Judah, will decide what is right. The Levites will serve as your officers. Be brave and do your work well. The Lord will help you to do what is right!’ Print... Use screen font size Show All Comments 2 Chronicles 182 Chronicles 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Amariah, the most important priest, will have authority over you. He will tell you what the Lord's law says is right. But if it is an argument about the king's laws, Ishmael's son Zebadiah, the officer who rules Judah, will decide what is right. The Levites will serve as your officers. Be brave and do your work well. The Lord will help you to do what is right!’"
     }
   ],
   "20": [
     {
       "verse": "1",
-      "text": "After that, armies from Moab and Ammon, as well as some Meunites, attacked Jehoshaphat. The Meunites came from Edom."
+      "text": "After that, armies from Moab and Ammon, as well as some Meunites, attacked Jehoshaphat."
     },
     {
       "verse": "2",
@@ -1616,7 +1616,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Judah's people came together to ask the Lord for his help. They came from every town in Judah to pray to the Lord. Jehoshaphat's prayer"
+      "text": "Judah's people came together to ask the Lord for his help. They came from every town in Judah to pray to the Lord."
     },
     {
       "verse": "5",
@@ -1648,7 +1648,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "So, our God, please punish these people! We are not strong enough to fight against this large army that is attacking us. We do not know what to do. But we are asking you to help us.’ The Lord speaks to Jahaziel"
+      "text": "So, our God, please punish these people! We are not strong enough to fight against this large army that is attacking us. We do not know what to do. But we are asking you to help us.’"
     },
     {
       "verse": "13",
@@ -1676,7 +1676,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then some Levites stood up. They praised the Lord, Israel's God, with loud voices. They belonged to the clans of Kohath and Korah. The Lord fights against Judah's enemies"
+      "text": "Then some Levites stood up. They praised the Lord, Israel's God, with loud voices. They belonged to the clans of Kohath and Korah."
     },
     {
       "verse": "20",
@@ -1704,7 +1704,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "On the fourth day they all met together in Berakah valley. There they praised the Lord. That is why that place is still called Berakah valley. Berakah means ‘Praise’ or ‘Blessing’. Judah's people return to Jerusalem"
+      "text": "On the fourth day they all met together in Berakah valley. There they praised the Lord. That is why that place is still called Berakah valley."
     },
     {
       "verse": "27",
@@ -1720,7 +1720,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "There was a time of peace in Jehoshaphat's kingdom. God kept them safe from the nations all around. Jehoshaphat continues to rule Judah"
+      "text": "There was a time of peace in Jehoshaphat's kingdom. God kept them safe from the nations all around."
     },
     {
       "verse": "31",
@@ -1740,7 +1740,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "While Jehoshaphat was king, he became a friend of King Ahaziah of Israel, who did evil things."
+      "text": "While Jehoshaphat was king, he became a friend of King Ahaziah of Israel, who did evil things. A storm destroyed the ships and they never went anywhere."
     },
     {
       "verse": "36",
@@ -1748,7 +1748,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Dodavahu's son Eliezer from Mareshah warned Jehoshaphat with a message from the Lord. He said, ‘You should not have become a friend of Ahaziah. Because of that, the Lord will destroy the things that you have made.’ A storm destroyed the ships and they never went anywhere. Print... Use screen font size Show All Comments 2 Chronicles 192 Chronicles 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Dodavahu's son Eliezer from Mareshah warned Jehoshaphat with a message from the Lord. He said, ‘You should not have become a friend of Ahaziah. Because of that, the Lord will destroy the things that you have made.’A storm destroyed the ships and they never went anywhere."
     }
   ],
   "21": [
@@ -1762,7 +1762,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Their father had given them many gifts of silver, gold and other valuable things. He gave them authority over the strong cities of Judah. But Jehoshaphat chose Jehoram be the next king because he was his oldest son. Judah was the Israelite kingdom in the south."
+      "text": "Their father had given them many gifts of silver, gold and other valuable things. He gave them authority over the strong cities of Judah. But Jehoshaphat chose Jehoram be the next king because he was his oldest son."
     },
     {
       "verse": "4",
@@ -1770,7 +1770,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He was 32 years old when he became king. He ruled in Jerusalem for eight years."
+      "text": "years old when he became king. He ruled in Jerusalem for eight years."
     },
     {
       "verse": "6",
@@ -1778,7 +1778,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "But the Lord did not want to destroy all David's descendants, because of his promise to David. He had promised that King David would always have descendants who would rule the nation. Edom fights against Judah"
+      "text": "But the Lord did not want to destroy all David's descendants, because of his promise to David. He had promised that King David would always have descendants who would rule the nation."
     },
     {
       "verse": "8",
@@ -1790,15 +1790,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Even today, Edom's people do not obey the rulers of Judah. The people of Libnah city also turned against Judah at the same time. That happened because Jehoram had turned away from the Lord, the God of his ancestors. Zair was a city just inside the border of Edom."
+      "text": "Even today, Edom's people do not obey the rulers of Judah. The people of Libnah city also turned against Judah at the same time. That happened because Jehoram had turned away from the Lord, the God of his ancestors."
     },
     {
       "verse": "11",
-      "text": "He also built altars on the hills of Judah. He caused the people of Judah and Jerusalem to turn away from the Lord and worship false gods. The altars on the hills were places where people made sacrifices to false gods. Elijah gives a message to King Jehoram"
+      "text": "He also built altars on the hills of Judah. He caused the people of Judah and Jerusalem to turn away from the Lord and worship false gods."
     },
     {
       "verse": "12",
-      "text": "The prophet Elijah wrote a letter to Jehoram. This is what it said: ‘The Lord, the God of your ancestor David says, “You have not lived in a good way as your father Jehoshaphat did and as King Asa of Judah did."
+      "text": "The prophet Elijah wrote a letter to Jehoram. This is what it said:‘The Lord, the God of your ancestor David says, “You have not lived in a good way as your father Jehoshaphat did and as King Asa of Judah did."
     },
     {
       "verse": "13",
@@ -1818,7 +1818,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They attacked Judah and they took power over the land. They took away all the valuable things in the king's palace. They took his sons and his wives as their prisoners. The only son of Jehoram that remained was his youngest son, Ahaziah. Ahaziah was also called Jehoahaz. Jehoram dies"
+      "text": "They attacked Judah and they took power over the land. They took away all the valuable things in the king's palace. They took his sons and his wives as their prisoners. The only son of Jehoram that remained was his youngest son, Ahaziah."
     },
     {
       "verse": "18",
@@ -1830,7 +1830,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Jehoram was 32 years old when he started to rule. He ruled in Jerusalem for eight years. When he died, nobody was sad. They buried him in the City of David, but not in the place where they had buried the other kings. Print... Use screen font size Show All Comments 2 Chronicles 202 Chronicles 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "years old when he started to rule. He ruled in Jerusalem for eight years. When he died, nobody was sad. They buried him in the City of David, but not in the place where they had buried the other kings."
     }
   ],
   "22": [
@@ -1840,7 +1840,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Ahaziah was 22 years old when he became king. He ruled in Jerusalem for one year. His mother's name was Athaliah. She was a granddaughter of Omri, king of Israel. Athaliah was a daughter of King Ahab of Israel."
+      "text": "years old when he became king. He ruled in Jerusalem for one year. His mother's name was Athaliah. She was a granddaughter of Omri, king of Israel."
     },
     {
       "verse": "3",
@@ -1856,11 +1856,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Joram returned to Jezreel, so that his wounds could get better after the battle. While he was there, King Ahaziah of Judah went to visit him, because of his wounds. Jehu kills Ahaziah and his people"
+      "text": "Joram returned to Jezreel, so that his wounds could get better after the battle. While he was there, King Ahaziah of Judah went to visit him, because of his wounds."
     },
     {
       "verse": "7",
-      "text": "When Ahaziah visited Joram, God used it to cause Ahaziah's death. When Ahaziah arrived, he went with Joram to meet Nimshi's son Jehu. But the Lord had chosen Jehu to kill all Ahab's family."
+      "text": "When Ahaziah visited Joram, God used it to cause Ahaziah's death. When Ahaziah arrived, he went with Joram to meet Nimshi's son Jehu. But the Lord had chosen Jehu to kill all Ahab's family. Now there was nobody in Ahaziah's family who had the authority to rule Judah as king."
     },
     {
       "verse": "8",
@@ -1868,7 +1868,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then he went to look for Ahaziah. Jehu's men caught him in the city of Samaria, where he was hiding. They took him to Jehu. Then they punished him with death. They buried him properly, because they said, ‘He was the grandson of King Jehoshaphat who served the Lord faithfully.’ Now there was nobody in Ahaziah's family who had the authority to rule Judah as king. Athaliah rules Judah"
+      "text": "Then he went to look for Ahaziah. Jehu's men caught him in the city of Samaria, where he was hiding. They took him to Jehu. Then they punished him with death. They buried him properly, because they said, ‘He was the grandson of King Jehoshaphat who served the Lord faithfully.’Now there was nobody in Ahaziah's family who had the authority to rule Judah as king."
     },
     {
       "verse": "10",
@@ -1880,7 +1880,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Joash stayed safely in a room in God's temple while Queen Athaliah ruled Judah for six years. Print... Use screen font size Show All Comments 2 Chronicles 212 Chronicles 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Joash stayed safely in a room in God's temple while Queen Athaliah ruled Judah for six years."
     }
   ],
   "23": [
@@ -1894,7 +1894,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They met together in God's temple to make a promise to the new king. Jehoiada said to them, ‘Here is the king's son. He must become king, as the Lord promised that David's descendants would be."
+      "text": "They met together in God's temple to make a promise to the new king.Jehoiada said to them, ‘Here is the king's son. He must become king, as the Lord promised that David's descendants would be."
     },
     {
       "verse": "4",
@@ -1910,7 +1910,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Levites must stand around the king. Each man must hold his weapon in his hand. If anyone tries to come into the temple, you must kill them. You must stay near to the king everywhere that he goes.’ Joash was now 7 years old."
+      "text": "The Levites must stand around the king. Each man must hold his weapon in his hand. If anyone tries to come into the temple, you must kill them. You must stay near to the king everywhere that he goes.’"
     },
     {
       "verse": "8",
@@ -1926,23 +1926,23 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Jehoiada and his sons brought the king's son out of the temple room. They put the crown onto Joash's head. They gave him a copy of the royal covenant. They poured olive oil on his head to show that he was now the king. They shouted, ‘May the king have a long life!’ Queen Athaliah dies"
+      "text": "Jehoiada and his sons brought the king's son out of the temple room. They put the crown onto Joash's head. They gave him a copy of the royal covenant. They poured olive oil on his head to show that he was now the king. They shouted, ‘May the king have a long life!’"
     },
     {
       "verse": "12",
-      "text": "Queen Athaliah heard the soldiers and the people as they shouted and praised the new king. So she went to the Lord's temple where all the people were."
+      "text": "Queen Athaliah heard the soldiers and the people as they shouted and praised the new king. So she went to the Lord's temple where all the people were. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
     },
     {
       "verse": "13",
-      "text": "Then she saw the king! He was standing in the king's place beside the pillar at the entrance of the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. There were musicians making music with trumpets and other musical instruments. They helped the people to sing and to praise God. This was the special place for a king to stand, to show that he had authority to rule. When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’ Treason’ is when people turn against their ruler."
+      "text": "Then she saw the king! He was standing in the king's place beside the pillar at the entrance of the temple. The army officers and the men with trumpets were standing beside the king. All the people of Judah were shouting with joy. There were musicians making music with trumpets and other musical instruments. They helped the people to sing and to praise God.When Athaliah saw this, she was very upset. She tore her clothes. She shouted, ‘Treason! Treason!’"
     },
     {
       "verse": "14",
-      "text": "Jehoiada the priest sent a message to the army officers who had authority over groups of 100 soldiers. He told them, ‘Bring her out of the temple to the line of guards outside. Use your swords to kill anyone who follows her.’ That was because Jehoiada had said, ‘You must not kill her inside the Lord's temple.’"
+      "text": "soldiers. He told them, ‘Bring her out of the temple to the line of guards outside. Use your swords to kill anyone who follows her.’ That was because Jehoiada had said, ‘You must not kill her inside the Lord's temple.’"
     },
     {
       "verse": "15",
-      "text": "So they took hold of Athaliah. They took her through the gate for the king's horses into the yard of the palace. They killed her there. Jehoiada helps the people to serve God"
+      "text": "So they took hold of Athaliah. They took her through the gate for the king's horses into the yard of the palace. They killed her there."
     },
     {
       "verse": "16",
@@ -1966,7 +1966,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "All the people were very happy. There was no longer any trouble in Jerusalem now that they had killed Athaliah as her punishment. Print... Use screen font size Show All Comments 2 Chronicles 222 Chronicles 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the people were very happy. There was no longer any trouble in Jerusalem now that they had killed Athaliah as her punishment."
     }
   ],
   "24": [
@@ -1984,19 +1984,19 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "After some time, Joash decided to repair the Lord's temple."
+      "text": "After some time, Joash decided to repair the Lord's temple. But the Levites did not do it immediately."
     },
     {
       "verse": "5",
-      "text": "He brought together the priests and the Levites. He told them, ‘Go around to all the towns in Judah. Bring here all the money that Israel's people offer each year for the temple. We will use it to repair the temple of your God. Go quickly and do it now!’ But the Levites did not do it immediately."
+      "text": "He brought together the priests and the Levites. He told them, ‘Go around to all the towns in Judah. Bring here all the money that Israel's people offer each year for the temple. We will use it to repair the temple of your God. Go quickly and do it now!’But the Levites did not do it immediately."
     },
     {
       "verse": "6",
-      "text": "So the king told Jehoiada, the leader of the priests, to come to him. He said to him, ‘You have not told the Levites to bring the money that the people of Judah and Jerusalem have given. Why have you not done that? The Lord's servant Moses and all Israel's people made the rule that people should give the money each year. It would be a tax to help with the tent of God's covenant.’ The tent of God's covenant was the special tent where they put the Covenant Box before they built the temple."
+      "text": "So the king told Jehoiada, the leader of the priests, to come to him. He said to him, ‘You have not told the Levites to bring the money that the people of Judah and Jerusalem have given. Why have you not done that? The Lord's servant Moses and all Israel's people made the rule that people should give the money each year. It would be a tax to help with the tent of God's covenant.’"
     },
     {
       "verse": "7",
-      "text": "The sons of wicked Queen Athaliah had broken the door of God's temple. They had gone in there and they had taken the holy things. They had used them to worship the idols of Baal. That is why Joash wanted to repair the Lord's temple. People bring money to the temple"
+      "text": "The sons of wicked Queen Athaliah had broken the door of God's temple. They had gone in there and they had taken the holy things. They had used them to worship the idols of Baal. That is why Joash wanted to repair the Lord's temple."
     },
     {
       "verse": "8",
@@ -2028,11 +2028,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But Jehoiada became very old and he died when he was 130 years old."
+      "text": "years old."
     },
     {
       "verse": "16",
-      "text": "They buried him beside the kings in the City of David. They gave him that honour, because he had done many good things in Israel for God and for the temple. Joash and the people turn away from the Lord"
+      "text": "They buried him beside the kings in the City of David. They gave him that honour, because he had done many good things in Israel for God and for the temple."
     },
     {
       "verse": "17",
@@ -2056,7 +2056,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "King Joash forgot that Zechariah's father Jehoiada had been a faithful servant. He killed Jehoiada's son. Zechariah said, as he was dying, ‘I pray that the Lord sees what you have done! May he punish you because of it!’ Joash dies"
+      "text": "King Joash forgot that Zechariah's father Jehoiada had been a faithful servant. He killed Jehoiada's son. Zechariah said, as he was dying, ‘I pray that the Lord sees what you have done! May he punish you because of it!’"
     },
     {
       "verse": "23",
@@ -2067,18 +2067,18 @@ module.exports = {
       "text": "Syria's army was very small but the Lord gave them power over Judah's large army. He did that because Judah's people had turned away from the Lord, the God of their ancestors. Syria's army punished Joash as he deserved."
     },
     {
-      "verse": "25-26",
-      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon. Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
+      "verse": "27",
+      "text": "The things that happened while Joash was king are written in a book. The book is called ‘The history of the kings’. It includes a list of Joash's sons, and the many messages that prophets spoke about him. It also includes a report of the work which he did on God's temple.Joash's son Amaziah became king after him."
     },
     {
-      "verse": "27",
-      "text": "The things that happened while Joash was king are written in a book. The book is called ‘The history of the kings’. It includes a list of Joash's sons, and the many messages that prophets spoke about him. It also includes a report of the work which he did on God's temple. Joash's son Amaziah became king after him. Print... Use screen font size Show All Comments 2 Chronicles 232 Chronicles 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "verse": "25-26",
+      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon. Jehozabad's mother was Shimrith, who came from Moab.Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
     }
   ],
   "25": [
     {
       "verse": "1",
-      "text": "Amaziah was 25 years old when he began to rule as king. He ruled in Jerusalem for 29 years. His mother's name was Jehoaddin. She was from Jerusalem."
+      "text": "years old when he began to rule as king. He ruled in Jerusalem for 29 years. His mother's name was Jehoaddin. She was from Jerusalem."
     },
     {
       "verse": "2",
@@ -2090,7 +2090,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins.’ See Deuteronomy Amaziah's army"
+      "text": "But he did not punish their sons with death. He obeyed the Lord's command that was written in the Book of the Law of Moses. The command says, ‘Do not punish fathers with death when their sons do bad things. Do not punish children with death when their fathers do bad things. Each person must die only because of his own sins.’"
     },
     {
       "verse": "5",
@@ -2098,7 +2098,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "He also paid 3,500 kilograms of silver for 100,000 soldiers from Israel to join his army. The kingdom of Judah had people from two tribes, Judah and Benjamin."
+      "text": "He also paid 3,500 kilograms of silver for 100,000 soldiers from Israel to join his army."
     },
     {
       "verse": "7",
@@ -2114,7 +2114,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So Amaziah sent away the soldiers who had come from Ephraim. He told them to go back to their homes. So they became very angry with Judah's people. As they went home, they had angry thoughts. The kingdom of Israel in the north had people from 10 tribes, but the most important tribe was Ephraim. The northern kingdom of Israel is sometimes called ‘Ephraim’. Amaziah fights against Edom"
+      "text": "So Amaziah sent away the soldiers who had come from Ephraim. He told them to go back to their homes. So they became very angry with Judah's people. As they went home, they had angry thoughts."
     },
     {
       "verse": "11",
@@ -2122,11 +2122,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "They also caught 10,000 soldiers as their prisoners. They took them to the top of a high rock. They threw their prisoners from the top. They all fell down onto the rocks below and they died. Edom was south and east of the Dead Sea. It was also called ‘Seir’."
+      "text": "They also caught 10,000 soldiers as their prisoners. They took them to the top of a high rock. They threw their prisoners from the top. They all fell down onto the rocks below and they died."
     },
     {
       "verse": "13",
-      "text": "But the soldiers from Israel that Amaziah had sent home attacked some towns in Judah. They were angry because Amaziah had not allowed them to join his army in the battle. They killed 3,000 men in Judah's towns between Samaria and Beth Horon. They took away many valuable things from those towns. Amaziah worships idols"
+      "text": "But the soldiers from Israel that Amaziah had sent home attacked some towns in Judah. They were angry because Amaziah had not allowed them to join his army in the battle. They killed 3,000 men in Judah's towns between Samaria and Beth Horon. They took away many valuable things from those towns."
     },
     {
       "verse": "14",
@@ -2138,7 +2138,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "While the prophet was still speaking, the king said to him, ‘We did not choose you to be the king's advisor! If you do not stop speaking, my men will kill you.’ So the prophet stopped. But then he said, ‘I know what God has decided to do. He will destroy you because you have done these bad things and you have not listened to my advice.’ Amaziah attacks Israel"
+      "text": "While the prophet was still speaking, the king said to him, ‘We did not choose you to be the king's advisor! If you do not stop speaking, my men will kill you.’ So the prophet stopped. But then he said, ‘I know what God has decided to do. He will destroy you because you have done these bad things and you have not listened to my advice.’"
     },
     {
       "verse": "17",
@@ -2170,7 +2170,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "He took away all the gold and the silver from the temple, including the valuable things that Obed-Edom was taking care of. Jehoash also took the valuable things from the king's palace. He also took some of the people away with him as prisoners. Then he returned to Samaria. Ahaziah was also called Jehoahaz. Amaziah dies"
+      "text": "He took away all the gold and the silver from the temple, including the valuable things that Obed-Edom was taking care of. Jehoash also took the valuable things from the king's palace. He also took some of the people away with him as prisoners. Then he returned to Samaria."
     },
     {
       "verse": "25",
@@ -2186,7 +2186,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "They carried his dead body back to Jerusalem on a horse. They buried him there beside his ancestors in the city of Judah. Jehoash, the king of Israel, died in about 782 BC. Then the son of Jehoash, Jeroboam II, ruled Israel in Samaria. He was the king there for the rest of Amaziah's rule. Amaziah died in about 767 BC. Print... Use screen font size Show All Comments 2 Chronicles 242 Chronicles 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They carried his dead body back to Jerusalem on a horse. They buried him there beside his ancestors in the city of Judah."
     }
   ],
   "26": [
@@ -2196,11 +2196,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "He built Elath again after King Amaziah had died. He made it a part of Judah again. Uzziah was also called Azariah. He ruled in Jerusalem from about 790 BC."
+      "text": "He built Elath again after King Amaziah had died. He made it a part of Judah again."
     },
     {
       "verse": "3",
-      "text": "Uzziah was 16 years old when he became king. And he ruled in Jerusalem for 52 years. His mother's name was Jecoliah. She came from Jerusalem."
+      "text": "years old when he became king. And he ruled in Jerusalem for 52 years. His mother's name was Jecoliah. She came from Jerusalem."
     },
     {
       "verse": "4",
@@ -2208,7 +2208,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He served God faithfully all the time that Zechariah was alive. Zechariah taught him to respect and obey God. As long as Uzziah served the Lord faithfully, God gave him success. God helps Uzziah"
+      "text": "He served God faithfully all the time that Zechariah was alive. Zechariah taught him to respect and obey God. As long as Uzziah served the Lord faithfully, God gave him success."
     },
     {
       "verse": "6",
@@ -2228,7 +2228,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He also built towers in the desert. He dug holes in the ground to contain water. He needed water for his animals on the low hills and in the valleys, because he had many of them. He also enjoyed growing crops. He had men who worked in the fields and in the vineyards. These were on the hills and in places where crops would grow well. Uzziah's army"
+      "text": "He also built towers in the desert. He dug holes in the ground to contain water. He needed water for his animals on the low hills and in the valleys, because he had many of them. He also enjoyed growing crops. He had men who worked in the fields and in the vineyards. These were on the hills and in places where crops would grow well."
     },
     {
       "verse": "11",
@@ -2248,7 +2248,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Men in Jerusalem who had special skills built machines that could shoot arrows and big stones. Uzziah put them on the towers and at the corners of the walls around Jerusalem. God helped him in many ways, so that he became very famous and powerful. Uzziah becomes proud and God punishes him"
+      "text": "Men in Jerusalem who had special skills built machines that could shoot arrows and big stones. Uzziah put them on the towers and at the corners of the walls around Jerusalem. God helped him in many ways, so that he became very famous and powerful."
     },
     {
       "verse": "16",
@@ -2256,7 +2256,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Azariah and 80 other brave priests of the Lord went into the temple after him."
+      "text": "other brave priests of the Lord went into the temple after him."
     },
     {
       "verse": "18",
@@ -2268,7 +2268,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Azariah, the leader of the priests, and all the other priests turned towards Uzziah. They saw the terrible disease on the skin at the front of his head. So they quickly took him out of the temple. Uzziah himself was also in a hurry to leave, because the Lord had punished him with this disease. The bad disease on Uzziah's skin was probably leprosy. If anyone had leprosy, they had to keep away from other people. King Uzziah dies"
+      "text": "Azariah, the leader of the priests, and all the other priests turned towards Uzziah. They saw the terrible disease on the skin at the front of his head. So they quickly took him out of the temple. Uzziah himself was also in a hurry to leave, because the Lord had punished him with this disease."
     },
     {
       "verse": "21",
@@ -2276,17 +2276,17 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "All the other things that happened while Uzziah was king are written in a book. The prophet Isaiah, Amoz's son, wrote down those things."
+      "text": "All the other things that happened while Uzziah was king are written in a book. The prophet Isaiah, Amoz's son, wrote down those things. His son Jotham became king after him."
     },
     {
       "verse": "23",
-      "text": "Uzziah died and they buried him near his ancestors. Because he had the terrible disease on his skin, they did not bury him beside the other kings that had died. Instead they buried him in a field for graves that belonged to the kings of Judah. His son Jotham became king after him. Print... Use screen font size Show All Comments 2 Chronicles 252 Chronicles 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Uzziah died and they buried him near his ancestors. Because he had the terrible disease on his skin, they did not bury him beside the other kings that had died. Instead they buried him in a field for graves that belonged to the kings of Judah.His son Jotham became king after him."
     }
   ],
   "27": [
     {
       "verse": "1",
-      "text": "Jotham was 25 years old when he became king. He ruled Judah as king in Jerusalem for 16 years. His mother's name was Jerusha. She was Zadok's daughter."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 16 years. His mother's name was Jerusha. She was Zadok's daughter."
     },
     {
       "verse": "2",
@@ -2298,7 +2298,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He built towns in the hill country of Judah. He also built strong buildings and towers in the forests. The strong buildings and towers were places where soldiers could stay to keep the country safe."
+      "text": "He built towns in the hill country of Judah. He also built strong buildings and towers in the forests."
     },
     {
       "verse": "5",
@@ -2306,25 +2306,25 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Jotham became a powerful king because he faithfully obeyed the Lord his God. Jotham dies"
+      "text": "Jotham became a powerful king because he faithfully obeyed the Lord his God."
     },
     {
       "verse": "7",
-      "text": "The other things that happened while Jotham was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the wars that Jotham fought and the other things that he did."
+      "text": "The other things that happened while Jotham was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the wars that Jotham fought and the other things that he did. His son Ahaz became king after him."
     },
     {
       "verse": "8",
-      "text": "He was 25 years old when he became king. He ruled Judah as king in Jerusalem for 16 years."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 16 years."
     },
     {
       "verse": "9",
-      "text": "Jotham died and his people buried him in the City of David. His son Ahaz became king after him. Print... Use screen font size Show All Comments 2 Chronicles 262 Chronicles 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jotham died and his people buried him in the City of David.His son Ahaz became king after him."
     }
   ],
   "28": [
     {
       "verse": "1",
-      "text": "Ahaz was 20 years old when he became king. He ruled Judah as king in Jerusalem for 16 years. He did not do the things that the Lord said were good. So he was not like his ancestor, King David. Ahaz ruled from about 731 BC."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 16 years. He did not do the things that the Lord said were good. So he was not like his ancestor, King David."
     },
     {
       "verse": "2",
@@ -2336,11 +2336,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Ahaz offered sacrifices and he burned incense on altars on the hills, as well as under all the big trees. The Ben-Hinnom Valley was to the south of Jerusalem. It was a place where Judah's people did disgusting things. ‘Walk through fire’ may mean that Ahaz burned his sons as a sacrifice to false gods. God punishes King Ahaz"
+      "text": "Ahaz offered sacrifices and he burned incense on altars on the hills, as well as under all the big trees."
     },
     {
       "verse": "5",
-      "text": "Because of this, the Lord his God put Ahaz under the power of the king of Syria. Syria's army won a battle against Ahaz's men. The king of Syria took many of Ahaz's people to Damascus as his prisoners. Damascus was the capital city of Syria. The Lord also allowed the king of Israel to attack Ahaz. Israel's soldiers completely won the battle against Ahaz."
+      "text": "Because of this, the Lord his God put Ahaz under the power of the king of Syria. Syria's army won a battle against Ahaz's men. The king of Syria took many of Ahaz's people to Damascus as his prisoners.The Lord also allowed the king of Israel to attack Ahaz. Israel's soldiers completely won the battle against Ahaz."
     },
     {
       "verse": "6",
@@ -2380,7 +2380,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "The leaders found clothes for each of the prisoners who had no clothes. They gave the prisoners clothes, shoes, food and drink, as well as oil to put on their skin. They took all these things from the things that the soldiers had brought from Judah. They put the prisoners who were too weak to walk on donkeys. Then they took them back to their relatives in Jericho, the city with many palm trees. After that, the Israelite leaders returned to Samaria. Ahaz asks the king of Assyria for help"
+      "text": "The leaders found clothes for each of the prisoners who had no clothes. They gave the prisoners clothes, shoes, food and drink, as well as oil to put on their skin. They took all these things from the things that the soldiers had brought from Judah. They put the prisoners who were too weak to walk on donkeys. Then they took them back to their relatives in Jericho, the city with many palm trees. After that, the Israelite leaders returned to Samaria."
     },
     {
       "verse": "16",
@@ -2392,7 +2392,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Philistine soldiers had also attacked towns in the low hills in the west of Judah and in the Negev in the south. They took these towns for themselves and they lived in them: Beth-Shemesh, Aijalon, Gederoth;Soco, Timnah and Gimzo with the villages around them."
+      "text": "Philistine soldiers had also attacked towns in the low hills in the west of Judah and in the Negev in the south. They took these towns for themselves and they lived in them:Beth-Shemesh, Aijalon, Gederoth;Soco, Timnah and Gimzo with the villages around them."
     },
     {
       "verse": "19",
@@ -2404,7 +2404,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Ahaz took valuable things from the Lord's temple, from the king's palace and from his officers. He gave those things to the king of Assyria. But the king of Assyria still did not help him. King Ahaz's sins"
+      "text": "Ahaz took valuable things from the Lord's temple, from the king's palace and from his officers. He gave those things to the king of Assyria. But the king of Assyria still did not help him."
     },
     {
       "verse": "22",
@@ -2420,25 +2420,25 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "He built altars in every town in Judah to offer sacrifices to other gods. In that way he made the Lord, the God of his ancestors, very angry. Ahaz dies"
+      "text": "He built altars in every town in Judah to offer sacrifices to other gods. In that way he made the Lord, the God of his ancestors, very angry."
     },
     {
       "verse": "26",
-      "text": "All the other things that happened while Ahaz was king are written in a book. The book is called ‘The history of the kings of Judah and Israel’. It tells about all the things that Ahaz did."
+      "text": "All the other things that happened while Ahaz was king are written in a book. The book is called ‘The history of the kings of Judah and Israel’. It tells about all the things that Ahaz did. His son Hezekiah became king after him."
     },
     {
       "verse": "27",
-      "text": "Ahaz died and his people buried him in the City of David. But they did not bury him near the graves of Israel's kings. His son Hezekiah became king after him. Print... Use screen font size Show All Comments 2 Chronicles 272 Chronicles 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Ahaz died and his people buried him in the City of David. But they did not bury him near the graves of Israel's kings.His son Hezekiah became king after him."
     }
   ],
   "29": [
     {
       "verse": "1",
-      "text": "Hezekiah was 25 years old when he became king. He ruled Judah as king in Jerusalem for 29 years. His mother's name was Abijah. She was the daughter of Zechariah."
+      "text": "years old when he became king. He ruled Judah as king in Jerusalem for 29 years. His mother's name was Abijah. She was the daughter of Zechariah."
     },
     {
       "verse": "2",
-      "text": "Hezekiah did things that the Lord said were good, as his ancestor King David had done. Hezekiah became king when Ahaz died in about 715 BC. The Levites make the temple a holy place again"
+      "text": "Hezekiah did things that the Lord said were good, as his ancestor King David had done."
     },
     {
       "verse": "3",
@@ -2478,7 +2478,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then these Levites started to work in the temple: From Kohath's clan: Amasai's son Mahath and Azariah's son Joel.From Merari's clan: Abdi's son Kish and Jehallelel's son Azariah.From Gershon's clan: Zimmah's son Joah and Joah's son Eden."
+      "text": "Then these Levites started to work in the temple:From Kohath's clan: Amasai's son Mahath and Azariah's son Joel.From Merari's clan: Abdi's son Kish and Jehallelel's son Azariah.From Gershon's clan: Zimmah's son Joah and Joah's son Eden."
     },
     {
       "verse": "13",
@@ -2506,7 +2506,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When Ahaz was king, he removed many things from the temple when he turned away from the Lord. We have made all those things clean again. We have put them in front of the Lord's altar so that the priests can use them again.’ People worship God again in his temple"
+      "text": "When Ahaz was king, he removed many things from the temple when he turned away from the Lord. We have made all those things clean again. We have put them in front of the Lord's altar so that the priests can use them again.’"
     },
     {
       "verse": "20",
@@ -2534,7 +2534,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The Levites held the musical instruments that King David had provided. The priests held their trumpets. See 1 Chronicles 6."
+      "text": "The Levites held the musical instruments that King David had provided. The priests held their trumpets."
     },
     {
       "verse": "27",
@@ -2562,7 +2562,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "They also brought 600 bulls and 3,000 sheep to offer to the Lord."
+      "text": "bulls and 3,000 sheep to offer to the Lord."
     },
     {
       "verse": "34",
@@ -2570,11 +2570,11 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "The people brought a lot of animals for burnt offerings. There was also the fat from the friendship offerings. And there were drink offerings too. The priests offered all those with the burnt offerings. That is how they started to worship the Lord again in his temple."
+      "text": "The people brought a lot of animals for burnt offerings. There was also the fat from the friendship offerings. And there were drink offerings too. The priests offered all those with the burnt offerings.That is how they started to worship the Lord again in his temple."
     },
     {
       "verse": "36",
-      "text": "Hezekiah and all the people were happy because God had helped them. They had been able to do the work on the temple very quickly. Print... Use screen font size Show All Comments 2 Chronicles 282 Chronicles 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Hezekiah and all the people were happy because God had helped them. They had been able to do the work on the temple very quickly."
     }
   ],
   "30": [
@@ -2596,11 +2596,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "So they sent a message with the king's command to all the people. They sent the message everywhere in Israel, from Beersheba to Dan. The message told the people to come to Jerusalem for the Passover festival to worship the Lord, Israel's God. Before that, they had not brought all the people together for the festival, as God's law taught them to do. The Passover feast was usually in the first month of the year, on the 14th day of Nisan (March or April)."
+      "text": "So they sent a message with the king's command to all the people. They sent the message everywhere in Israel, from Beersheba to Dan. The message told the people to come to Jerusalem for the Passover festival to worship the Lord, Israel's God. Before that, they had not brought all the people together for the festival, as God's law taught them to do."
     },
     {
       "verse": "6",
-      "text": "So men took the letters from the king and his officers to all the people in Israel and Judah. The king's command said this: ‘A message to the people of Israel who have escaped from the power of the kings of Assyria. Turn back now to the Lord, the God of Abraham, Isaac and Israel. Then he will turn back to you."
+      "text": "So men took the letters from the king and his officers to all the people in Israel and Judah. The king's command said this:‘A message to the people of Israel who have escaped from the power of the kings of Assyria. Turn back now to the Lord, the God of Abraham, Isaac and Israel. Then he will turn back to you."
     },
     {
       "verse": "7",
@@ -2624,7 +2624,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "As for the people of Judah, God caused them to accept the command that the king and his officers had given. They all agreed together to do what the Lord wanted them to do. The tribes of Ephraim, Manasseh, Zebulun and Asher belonged to the kingdom of Israel in the north. The people of the kingdom of Judah were more ready to do what King Hezekiah commanded."
+      "text": "As for the people of Judah, God caused them to accept the command that the king and his officers had given. They all agreed together to do what the Lord wanted them to do."
     },
     {
       "verse": "13",
@@ -2632,7 +2632,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "They removed the altars for false gods that were in Jerusalem. They also removed all the altars where people burned incense. They threw them into the Kidron Valley. The Passover feast came at the end of the festival of Flat Bread. During the seven days they ate bread which had no yeast in it."
+      "text": "They removed the altars for false gods that were in Jerusalem. They also removed all the altars where people burned incense. They threw them into the Kidron Valley."
     },
     {
       "verse": "15",
@@ -2684,13 +2684,13 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The priests and the Levites stood up and they asked God to bless the people. Their prayers reached the Lord's home in heaven, and he did what they asked for. Print... Use screen font size Show All Comments 2 Chronicles 292 Chronicles 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priests and the Levites stood up and they asked God to bless the people. Their prayers reached the Lord's home in heaven, and he did what they asked for."
     }
   ],
   "31": [
     {
       "verse": "1",
-      "text": "The Passover festival finished. Then the Israelites who were there went to all the towns in Judah. They knocked down the stone pillars that people worshipped. They also cut down the Asherah poles. They destroyed all the altars and places for worship on the hills. They did that everywhere in Judah, Benjamin, Ephraim and Manasseh. After they finished, all the Israelites returned to their homes in their own towns. Hezekiah helps his people to worship the Lord"
+      "text": "The Passover festival finished. Then the Israelites who were there went to all the towns in Judah. They knocked down the stone pillars that people worshipped. They also cut down the Asherah poles. They destroyed all the altars and places for worship on the hills. They did that everywhere in Judah, Benjamin, Ephraim and Manasseh. After they finished, all the Israelites returned to their homes in their own towns."
     },
     {
       "verse": "2",
@@ -2718,7 +2718,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Hezekiah and his officers went to the temple and they saw all the things. Then they praised the Lord and they asked him to bless his people, the Israelites. A tenth part means that for every 10 things that they had, they brought one thing to offer to God. We also call this a tithe."
+      "text": "Hezekiah and his officers went to the temple and they saw all the things. Then they praised the Lord and they asked him to bless his people, the Israelites."
     },
     {
       "verse": "9",
@@ -2758,7 +2758,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The young children, wives, sons and daughters of all the men in the lists also received gifts. That was because the men faithfully kept themselves clean to serve God in their work. Three years’ or ‘30 years’. The Levites must be 30 years old to serve in the temple. See Numbers Chronicles"
+      "text": "The young children, wives, sons and daughters of all the men in the lists also received gifts. That was because the men faithfully kept themselves clean to serve God in their work."
     },
     {
       "verse": "19",
@@ -2770,7 +2770,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He served God faithfully with all his strength. He helped the work in the temple and he obeyed God's law and his commands. So he was successful in the things that he did. Print... Use screen font size Show All Comments 2 Chronicles 302 Chronicles 32 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He served God faithfully with all his strength. He helped the work in the temple and he obeyed God's law and his commands. So he was successful in the things that he did."
     }
   ],
   "32": [
@@ -2796,7 +2796,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Hezekiah chose some men as captains to lead the men of his army. He told them to meet together in the open place near the city's gate. He said to them,"
+      "text": "Hezekiah chose some men as captains to lead the men of his army. He told them to meet together in the open place near the city's gate. He said to them, After King Hezekiah of Judah said that to his men, they felt brave and strong."
     },
     {
       "verse": "7",
@@ -2804,11 +2804,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He has only the strength of human soldiers to help him. But we have the Lord our God to help us and to fight our battles!’ After King Hezekiah of Judah said that to his men, they felt brave and strong. King Sennacherib warns the people of Jerusalem"
+      "text": "He has only the strength of human soldiers to help him. But we have the Lord our God to help us and to fight our battles!’After King Hezekiah of Judah said that to his men, they felt brave and strong."
     },
     {
       "verse": "9",
-      "text": "King Sennacherib of Assyria and his army were ready to attack Lachish. While he was there, he sent some men to Jerusalem with a message. The message was for King Hezekiah and all Judah's people who were in Jerusalem with him. The message said this: Lachish was a town about 40 kilometres to the south and west of Jerusalem."
+      "text": "King Sennacherib of Assyria and his army were ready to attack Lachish. While he was there, he sent some men to Jerusalem with a message. The message was for King Hezekiah and all Judah's people who were in Jerusalem with him. The message said this:"
     },
     {
       "verse": "10",
@@ -2848,7 +2848,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "They insulted the God of Jerusalem's people, as they insulted the gods of other nations. They spoke about him as if he was only a god that people had made for themselves. The people of Judah spoke the Hebrew language. Hezekiah and Isaiah pray to the Lord"
+      "text": "They insulted the God of Jerusalem's people, as they insulted the gods of other nations. They spoke about him as if he was only a god that people had made for themselves."
     },
     {
       "verse": "20",
@@ -2876,7 +2876,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "But then Hezekiah and the people who lived in Jerusalem made themselves humble. They stopped being proud, so the Lord did not punish them. He was not angry with them while Hezekiah continued to be king. You can read about the miracle in 2 Kings Isaiah"
+      "text": "But then Hezekiah and the people who lived in Jerusalem made themselves humble. They stopped being proud, so the Lord did not punish them. He was not angry with them while Hezekiah continued to be king."
     },
     {
       "verse": "27",
@@ -2896,7 +2896,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "After that, the rulers of Babylon sent some officers to visit Hezekiah. They wanted to ask him about the miracle that had happened in Judah. God let Hezekiah decide what to tell them. He wanted to test Hezekiah, to see if he would be faithful. King Hezekiah dies"
+      "text": "After that, the rulers of Babylon sent some officers to visit Hezekiah. They wanted to ask him about the miracle that had happened in Judah. God let Hezekiah decide what to tell them. He wanted to test Hezekiah, to see if he would be faithful."
     },
     {
       "verse": "32",
@@ -2904,13 +2904,13 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Hezekiah died and his people buried him beside the graves of King David's descendants, near the top of the hill. At his death, all the people of Judah and those who lived in Jerusalem gave him great honour. Hezekiah died in about 687 BC. Hezekiah's son Manasseh became king after him. Print... Use screen font size Show All Comments 2 Chronicles 312 Chronicles 33 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Hezekiah died and his people buried him beside the graves of King David's descendants, near the top of the hill. At his death, all the people of Judah and those who lived in Jerusalem gave him great honour.Hezekiah's son Manasseh became king after him."
     }
   ],
   "33": [
     {
       "verse": "1",
-      "text": "Manasseh was 12 years old when he became king. He ruled as king in Jerusalem for 55 years."
+      "text": "years old when he became king. He ruled as king in Jerusalem for 55 years."
     },
     {
       "verse": "2",
@@ -2930,7 +2930,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "He burnt his own sons with fire as a sacrifice in Ben Hinnom valley. He used magic and false gods to find out what would happen in the future. He took advice from magicians and people who talked to the spirits of dead people. He did many things that the Lord said were very evil. This made the Lord very angry. These were altars to give honour to false gods, not to the Lord."
+      "text": "He burnt his own sons with fire as a sacrifice in Ben Hinnom valley. He used magic and false gods to find out what would happen in the future. He took advice from magicians and people who talked to the spirits of dead people. He did many things that the Lord said were very evil. This made the Lord very angry."
     },
     {
       "verse": "7",
@@ -2942,7 +2942,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But Manasseh caused Judah's people and the people of Jerusalem to turn away from God. So they did more evil things than the people who lived in Canaan before them. The Lord had destroyed those nations so that the Israelites could live there. The Lord punishes Manasseh"
+      "text": "But Manasseh caused Judah's people and the people of Jerusalem to turn away from God. So they did more evil things than the people who lived in Canaan before them. The Lord had destroyed those nations so that the Israelites could live there."
     },
     {
       "verse": "10",
@@ -2974,7 +2974,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The people still offered sacrifices at the other altars in the country. But they only offered those sacrifices to the Lord their God. Manasseh dies"
+      "text": "The people still offered sacrifices at the other altars in the country. But they only offered those sacrifices to the Lord their God."
     },
     {
       "verse": "18",
@@ -2986,11 +2986,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Manasseh died and his people buried him in his palace. His son Amon became king after him. Amon rules Judah as king"
+      "text": "Manasseh died and his people buried him in his palace. His son Amon became king after him."
     },
     {
       "verse": "21",
-      "text": "Amon was 22 years old when he became king. He ruled as king in Jerusalem for two years."
+      "text": "years old when he became king. He ruled as king in Jerusalem for two years."
     },
     {
       "verse": "22",
@@ -2998,7 +2998,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But he did not make himself humble and turn back to the Lord, as his father Manasseh had done. Instead, Amon became guilty of even more sins. Amon was king for only two years from about 642 to 640 BC. Amon dies"
+      "text": "But he did not make himself humble and turn back to the Lord, as his father Manasseh had done. Instead, Amon became guilty of even more sins."
     },
     {
       "verse": "24",
@@ -3006,7 +3006,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Then the people of Judah punished all Amon's murderers with death. They chose his son Josiah to be king after him. Print... Use screen font size Show All Comments 2 Chronicles 322 Chronicles 34 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the people of Judah punished all Amon's murderers with death. They chose his son Josiah to be king after him."
     }
   ],
   "34": [
@@ -3016,7 +3016,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Josiah did things that the Lord said were right. He lived in the good ways of his ancestor, King David. He did not turn away from the Lord's teaching in any way. Josiah began to rule in about 640 BC. He died in about 609 BC."
+      "text": "Josiah did things that the Lord said were right. He lived in the good ways of his ancestor, King David. He did not turn away from the Lord's teaching in any way."
     },
     {
       "verse": "3",
@@ -3036,11 +3036,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "He knocked down the altars and the Asherah poles. He completely destroyed the idols and the altars for incense everywhere in the kingdom of Israel. Then he returned to Jerusalem. These tribes belonged to Israel, the kingdom in the north. Josiah repairs the temple"
+      "text": "He knocked down the altars and the Asherah poles. He completely destroyed the idols and the altars for incense everywhere in the kingdom of Israel. Then he returned to Jerusalem."
     },
     {
       "verse": "8",
-      "text": "When Josiah had been king for 18 years, he continued to make Judah and the temple clean places again. He sent three men to repair the temple of the Lord his God. They were Azaliah's son Shaphan, the city's officer Maaseiah, and Joah, son of Joahaz, the city's secretary."
+      "text": "years, he continued to make Judah and the temple clean places again. He sent three men to repair the temple of the Lord his God. They were Azaliah's son Shaphan, the city's officer Maaseiah, and Joah, son of Joahaz, the city's secretary."
     },
     {
       "verse": "9",
@@ -3060,7 +3060,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "had authority over the men who carried the wood and the stones. They told the workers what to do as they did their different jobs. Some Levites worked as secretaries, officers or guards. Hilkiah finds the book of God's laws"
+      "text": "had authority over the men who carried the wood and the stones. They told the workers what to do as they did their different jobs. Some Levites worked as secretaries, officers or guards."
     },
     {
       "verse": "14",
@@ -3068,7 +3068,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Hilkiah told Shaphan, the king's secretary, ‘I have found the book of the Law in the Lord's temple.’ He gave the book to Shaphan. They were using the money to pay the workers who were repairing the temple."
+      "text": "Hilkiah told Shaphan, the king's secretary, ‘I have found the book of the Law in the Lord's temple.’ He gave the book to Shaphan."
     },
     {
       "verse": "16",
@@ -3100,7 +3100,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "She said to them, ‘The Lord, Israel's God, says, “Tell this to the man who sent you here to me:"
+      "text": "She said to them, ‘The Lord, Israel's God, says, “Tell this to the man who sent you here to me: The men took Huldah's answer back to the king."
     },
     {
       "verse": "24",
@@ -3120,7 +3120,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place and the people who live here.” That is what the Lord says.’ The men took Huldah's answer back to the king. Josiah and the people promise to obey God's laws"
+      "text": "So I will let you die in peace and people will bury you beside your ancestors. You yourself will never see the great trouble that I will bring to this place and the people who live here.” That is what the Lord says.’The men took Huldah's answer back to the king."
     },
     {
       "verse": "29",
@@ -3132,7 +3132,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Then the king stood in his place beside the pillar in the temple. He promised the Lord that he would obey the covenant. He agreed to serve the Lord faithfully and to obey his commands, laws and rules. Josiah agreed to obey what was written in the book of God's covenant. He ‘went up’ because the temple was on a hill."
+      "text": "Then the king stood in his place beside the pillar in the temple. He promised the Lord that he would obey the covenant. He agreed to serve the Lord faithfully and to obey his commands, laws and rules. Josiah agreed to obey what was written in the book of God's covenant."
     },
     {
       "verse": "32",
@@ -3140,7 +3140,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Josiah removed all the disgusting idols from all the land of the Israelites. He told all the people of Israel to worship the Lord their God. All the time that Josiah ruled as king, the people continued to worship the Lord, the God of their ancestors. Print... Use screen font size Show All Comments 2 Chronicles 332 Chronicles 35 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Josiah removed all the disgusting idols from all the land of the Israelites. He told all the people of Israel to worship the Lord their God. All the time that Josiah ruled as king, the people continued to worship the Lord, the God of their ancestors."
     }
   ],
   "35": [
@@ -3166,7 +3166,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Kill the lambs for the Passover meal. Make yourselves clean to serve the Lord. Prepare the sacrifices for each Israelite family. Then they can eat the Passover meal, as the Lord told Moses they must do.’ See Exodus Many people give offerings"
+      "text": "Kill the lambs for the Passover meal. Make yourselves clean to serve the Lord. Prepare the sacrifices for each Israelite family. Then they can eat the Passover meal, as the Lord told Moses they must do.’"
     },
     {
       "verse": "7",
@@ -3178,7 +3178,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "These Levite officers gave 5,000 lambs and 500 bulls to the Levites for Passover sacrifices: Konaniah and his brothers, Shemaiah and Nethanel; Hashabiah, Jeiel and Jozabad. The Passover meal"
+      "text": "These Levite officers gave 5,000 lambs and 500 bulls to the Levites for Passover sacrifices: Konaniah and his brothers, Shemaiah and Nethanel; Hashabiah, Jeiel and Jozabad."
     },
     {
       "verse": "10",
@@ -3194,7 +3194,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The Levites cooked the lambs for the Passover meal over a fire, as the rules taught. They boiled the meat of the holy offerings in pots and pans. Then they quickly carried the meat to all the people. Pots and pans are things that hold water so that you can cook food in them."
+      "text": "The Levites cooked the lambs for the Passover meal over a fire, as the rules taught. They boiled the meat of the holy offerings in pots and pans. Then they quickly carried the meat to all the people."
     },
     {
       "verse": "14",
@@ -3218,7 +3218,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "This Passover festival happened in the 18th year that Josiah ruled Judah as king. Josiah dies"
+      "text": "This Passover festival happened in the 18th year that Josiah ruled Judah as king."
     },
     {
       "verse": "20",
@@ -3246,7 +3246,7 @@ module.exports = {
     },
     {
       "verse": "26-27",
-      "text": "All the other things that Josiah did while he was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells how Josiah faithfully obeyed what is written in the Law of the Lord. It includes all the good things that he did, from the beginning to the end of his time as king. Print... Use screen font size Show All Comments 2 Chronicles 342 Chronicles 36 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the other things that Josiah did while he was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells how Josiah faithfully obeyed what is written in the Law of the Lord. It includes all the good things that he did, from the beginning to the end of his time as king."
     }
   ],
   "36": [
@@ -3256,7 +3256,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Jehoahaz was 23 years old when he became king. He ruled as king in Jerusalem for three months."
+      "text": "years old when he became king. He ruled as king in Jerusalem for three months."
     },
     {
       "verse": "3",
@@ -3268,7 +3268,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Jehoiakim was 25 years old when he became king. He ruled for 11 years as king in Jerusalem. He did things that the Lord his God said were evil."
+      "text": "years old when he became king. He ruled for 11 years as king in Jerusalem. He did things that the Lord his God said were evil."
     },
     {
       "verse": "6",
@@ -3276,23 +3276,23 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "King Nebuchadnezzar took some valuable things from the Lord's temple. He took them to Babylon and he put them in his palace there. Jehoiakim ruled from about 609 to 598 BC."
+      "text": "King Nebuchadnezzar took some valuable things from the Lord's temple. He took them to Babylon and he put them in his palace there."
     },
     {
       "verse": "8",
-      "text": "The other things that happened while Jehoiakim was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the disgusting sins that he was guilty of. Jehoiakim's son Jehoiachin became king after him. Jehoiachin rules Judah as king"
+      "text": "The other things that happened while Jehoiakim was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells about the disgusting sins that he was guilty of.Jehoiakim's son Jehoiachin became king after him. Jehoiakim's son Jehoiachin became king after him."
     },
     {
       "verse": "9",
-      "text": "Jehoiachin was 18 years old when he became king. He ruled as king in Jerusalem for three months and ten days. He did things that the Lord said were evil."
+      "text": "years old when he became king. He ruled as king in Jerusalem for three months and ten days. He did things that the Lord said were evil."
     },
     {
       "verse": "10",
-      "text": "In the spring, King Nebuchadnezzar sent his soldiers to bring Jehoiachin to Babylon. They also took to Babylon some valuable things from the Lord's temple. Nebuchadnezzar chose Jehoiachin's relative, Zedekiah, to be king of Judah and Jerusalem. Zedekiah rules Judah as king"
+      "text": "In the spring, King Nebuchadnezzar sent his soldiers to bring Jehoiachin to Babylon. They also took to Babylon some valuable things from the Lord's temple. Nebuchadnezzar chose Jehoiachin's relative, Zedekiah, to be king of Judah and Jerusalem."
     },
     {
       "verse": "11",
-      "text": "Zedekiah was 21 years old when he became king. He ruled in Jerusalem for 11 years."
+      "text": "years old when he became king. He ruled in Jerusalem for 11 years."
     },
     {
       "verse": "12",
@@ -3304,7 +3304,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "All the leaders of the priests and the people also turned away from the Lord more and more. They did the same disgusting sins that the people in other nations did. They made the Lord's temple an unclean place. That was the place that the Lord himself had chosen as his special home in Jerusalem. Zedekiah was a son of Josiah. He became king at the age of 21 in about 597 BC. He was the last of the 20 rulers of the kingdom of Judah. Babylon's army attacks Jerusalem"
+      "text": "All the leaders of the priests and the people also turned away from the Lord more and more. They did the same disgusting sins that the people in other nations did. They made the Lord's temple an unclean place. That was the place that the Lord himself had chosen as his special home in Jerusalem."
     },
     {
       "verse": "15",
@@ -3316,7 +3316,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then the Lord sent the king of Babylon to attack them. His soldiers killed Jerusalem's young men in the temple, where they thought that they would be safe. They were not kind to anybody, the young men or women, or even the very old people. God put all the people of Jerusalem under the king of Babylon's power. Jeremiah describes how Babylon's army took Jerusalem for themselves. In 587 BC, the soldiers from Babylon broke down the walls of the city."
+      "text": "Then the Lord sent the king of Babylon to attack them. His soldiers killed Jerusalem's young men in the temple, where they thought that they would be safe. They were not kind to anybody, the young men or women, or even the very old people. God put all the people of Jerusalem under the king of Babylon's power."
     },
     {
       "verse": "18",
@@ -3332,15 +3332,15 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "In this way, the Lord's message that his prophet Jeremiah had spoken became true. The land of Judah was empty for 70 years. It was finally able to rest, like the rest on a Sabbath day. Farmers should have allowed their land to rest every seven years. See Leviticus If they did not do that, God had promised to send the people away from their land. See Leviticus King Cyrus of Persia"
+      "text": "In this way, the Lord's message that his prophet Jeremiah had spoken became true. The land of Judah was empty for 70 years. It was finally able to rest, like the rest on a Sabbath day."
     },
     {
       "verse": "22",
-      "text": "In the first year that Cyrus, king of Persia, was ruling Babylon, the Lord put a thought in his mind. King Cyrus decided to send a message to everybody who lived in his kingdom. His message would cause what God had already spoken to his prophet Jeremiah to become true. The message was written down and people took it all over Cyrus's kingdom. It said: In 539 BC, the army of King Cyrus of Persia fought against Babylon's army and won. So Cyrus became king of Babylon. See Ezra See Jeremiah"
+      "text": "In the first year that Cyrus, king of Persia, was ruling Babylon, the Lord put a thought in his mind. King Cyrus decided to send a message to everybody who lived in his kingdom. His message would cause what God had already spoken to his prophet Jeremiah to become true. The message was written down and people took it all over Cyrus's kingdom. It said:"
     },
     {
       "verse": "23",
-      "text": "‘This is what Cyrus, the king of Persia, says: The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah. Any of God's people who live among you may now return to Jerusalem. I pray that the Lord their God will be with them.’ Print... Use screen font size Show All Comments 2 Chronicles 35Ezra Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘This is what Cyrus, the king of Persia, says:The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah. Any of God's people who live among you may now return to Jerusalem. I pray that the Lord their God will be with them.’"
     }
   ]
 };

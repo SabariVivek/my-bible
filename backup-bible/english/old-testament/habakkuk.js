@@ -6,67 +6,67 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Lord, how long must I call out to you for help? When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. You do not listen to me! I shout aloud to you, ‘Violence is everywhere!’ but you do nothing to make us safe."
+      "text": "Lord, how long must I call out to you for help?You do not listen to me!I shout aloud to you, ‘Violence is everywhere!’but you do nothing to make us safe. You do not listen to me! I shout aloud to you, ‘Violence is everywhere!’ but you do nothing to make us safe."
     },
     {
       "verse": "3",
-      "text": "You cause me to see many things that are not right. You do not punish people who are doing wrong things. Why do you let that happen? People do cruel things and there is violence everywhere. They argue and they fight and they quarrel."
+      "text": "You cause me to see many things that are not right.You do not punish people who are doing wrong things.Why do you let that happen?People do cruel things and there is violence everywhere.They argue and they fight and they quarrel. You do not punish people who are doing wrong things. Why do you let that happen? People do cruel things and there is violence everywhere. They argue and they fight and they quarrel."
     },
     {
       "verse": "4",
-      "text": "The law has no power to make things right. There is no justice in the courts. Instead, wicked people win against good people. The judges decide that bad people are good. The Lord speaks"
+      "text": "The law has no power to make things right.There is no justice in the courts.Instead, wicked people win against good people.The judges decide that bad people are good. There is no justice in the courts. Instead, wicked people win against good people. The judges decide that bad people are good."
     },
     {
       "verse": "5",
-      "text": "‘All of you, look carefully at the other nations. You will be very surprised at what is happening. While you are still alive, I will do a very surprising thing. You would not believe it even if someone told you."
+      "text": "‘All of you, look carefully at the other nations.You will be very surprised at what is happening.While you are still alive, I will do a very surprising thing.You would not believe it even if someone told you. You will be very surprised at what is happening. While you are still alive, I will do a very surprising thing. You would not believe it even if someone told you."
     },
     {
       "verse": "6",
-      "text": "I will give more power to the Babylonians. They are a cruel nation with brave soldiers. They march across the whole earth. They take cities that do not belong to them."
+      "text": "I will give more power to the Babylonians.They are a cruel nation with brave soldiers.They march across the whole earth.They take cities that do not belong to them. They are a cruel nation with brave soldiers. They march across the whole earth. They take cities that do not belong to them."
     },
     {
       "verse": "7",
-      "text": "They cause people to be very afraid. They obey no laws except their own rules."
+      "text": "They cause people to be very afraid.They obey no laws except their own rules. They obey no laws except their own rules."
     },
     {
       "verse": "8",
-      "text": "Their horses run faster than leopards. They are more cruel than wolves that attack in the evening. Their riders come on fast horses from places that are far away. They quickly attack their enemies, like hungry eagles that fly down to catch chickens."
+      "text": "Their horses run faster than leopards.They are more cruel than wolvesthat attack in the evening.Their riders come on fast horsesfrom places that are far away.They quickly attack their enemies,like hungry eagles that fly down to catch chickens. They are more cruel than wolves that attack in the evening. Their riders come on fast horses from places that are far away. They quickly attack their enemies, like hungry eagles that fly down to catch chickens."
     },
     {
       "verse": "9",
-      "text": "Their whole army comes to do violent things. They march forward like a wind from the desert. They make people their prisoners, as easily as if they are picking up sand."
+      "text": "Their whole army comes to do violent things.They march forward like a wind from the desert.They make people their prisoners,as easily as if they are picking up sand. They march forward like a wind from the desert. They make people their prisoners, as easily as if they are picking up sand."
     },
     {
       "verse": "10",
-      "text": "They insult kings, and they laugh at rulers. They laugh at all the strong cities of their enemies. They build heaps of earth against the walls, and they take those cities for themselves."
+      "text": "They insult kings,and they laugh at rulers.They laugh at all the strong cities of their enemies.They build heaps of earth against the walls,and they take those cities for themselves. and they laugh at rulers. They laugh at all the strong cities of their enemies. They build heaps of earth against the walls, and they take those cities for themselves."
     },
     {
       "verse": "11",
-      "text": "Their army quickly moves on to another place, like a wind that blows. They think that their own god has made them strong, and so they are guilty.’ God says that he will use a cruel, wicked nation to punish his own people. Habakkuk has another problem"
+      "text": "Their army quickly moves on to another place,like a wind that blows.They think that their own god has made them strong,and so they are guilty.’ like a wind that blows. They think that their own god has made them strong, and so they are guilty.’"
     },
     {
       "verse": "12",
-      "text": "Lord, you have always been God, since the beginning. You are the God that I worship as holy, and you will never die. Lord, you have chosen the Babylonians as your weapon to punish your people. You are a strong rock to protect us, but you have decided to use them to punish us."
+      "text": "Lord, you have always been God,since the beginning.You are the God that I worship as holy,and you will never die.Lord, you have chosen the Babyloniansas your weapon to punish your people.You are a strong rock to protect us,but you have decided to use them to punish us. since the beginning. You are the God that I worship as holy, and you will never die. Lord, you have chosen the Babylonians as your weapon to punish your people. You are a strong rock to protect us, but you have decided to use them to punish us."
     },
     {
       "verse": "13",
-      "text": "But you are too holy to accept anything that is evil. You cannot agree with people who do wrong things. So why do you let these wicked people live? Why do you say nothing? They are killing people who are more righteous than themselves."
+      "text": "But you are too holy to accept anything that is evil.You cannot agree with people who do wrong things.So why do you let these wicked people live?Why do you say nothing?They are killing people who are more righteous than themselves. You cannot agree with people who do wrong things. So why do you let these wicked people live? Why do you say nothing? They are killing people who are more righteous than themselves."
     },
     {
       "verse": "14",
-      "text": "It seems that you have made people like fish in the sea. They are like animals that have no leader to rule them."
+      "text": "It seems that you have made people like fish in the sea.They are like animals that have no leader to rule them. They are like animals that have no leader to rule them."
     },
     {
       "verse": "15",
-      "text": "The Babylonians can easily catch them, like people who catch fish with hooks. They throw their nets into the water, and they catch as many as they want. When they store their fish in special nets, they sing happy songs."
+      "text": "The Babylonians can easily catch them,like people who catch fish with hooks.They throw their nets into the water,and they catch as many as they want.When they store their fish in special nets,they sing happy songs. like people who catch fish with hooks. They throw their nets into the water, and they catch as many as they want. When they store their fish in special nets, they sing happy songs."
     },
     {
       "verse": "16",
-      "text": "Their nets give them everything that they need, so they offer sacrifices to their nets. Their nets give them plenty of good food to eat, so they burn incense to thank their nets."
+      "text": "Their nets give them everything that they need,so they offer sacrifices to their nets.Their nets give them plenty of good food to eat,so they burn incense to thank their nets. so they offer sacrifices to their nets. Their nets give them plenty of good food to eat, so they burn incense to thank their nets."
     },
     {
       "verse": "17",
-      "text": "Will you let them continue to do that? Will they make their nets full of fish as many times as they want to? Will they continue to destroy other nations and never stop? Habakkuk cannot understand why God will use cruel people like the Babylonians as his weapon. The Babylonians catch prisoners, like men who catch fish with hooks and nets. Print... Use screen font size Show All Comments Habakkuk IntroductionHabakkuk 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Will you let them continue to do that?Will they make their nets full of fishas many times as they want to?Will they continue to destroy other nationsand never stop?"
     }
   ],
   "2": [
@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Lord answered me. He said: ‘Write down what I will show to you. Make it very clear on the page where you write it. Then someone can easily read it, and he can tell the message to other people."
+      "text": "The Lord answered me. He said:‘Write down what I will show to you. Make it very clear on the page where you write it. Then someone can easily read it, and he can tell the message to other people."
     },
     {
       "verse": "3",
@@ -84,11 +84,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Look now! The enemy is very proud. They do not want to do what is right. But righteous people will live because of their faith in God. The proud enemy is the Babylonian army. God will use them to punish his people. But in the end he will punish the Babylonians because they are proud and cruel."
+      "text": "Look now! The enemy is very proud. They do not want to do what is right. But righteous people will live because of their faith in God."
     },
     {
       "verse": "5",
-      "text": "Wine will destroy that proud enemy. They do not stop attacking other people. They never have enough for themselves. They are like death that is so hungry that it eats as much as it can. The deep hole of death eats everything. The cruel enemy is like that! They want all the nations to belong to them. They catch everyone to be their prisoners. Wine’ or ‘Riches’."
+      "text": "Wine will destroy that proud enemy. They do not stop attacking other people. They never have enough for themselves. They are like death that is so hungry that it eats as much as it can. The deep hole of death eats everything. The cruel enemy is like that! They want all the nations to belong to them. They catch everyone to be their prisoners."
     },
     {
       "verse": "6",
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But it is you who will become ashamed, not great. You will become drunk so that people see you with no clothes on! The Lord has a cup of wine in his right hand. He is ready to give it to you as a punishment. You will no longer be great, but you will be ashamed. The neighbours are probably the nations near to Babylon that Babylon has attacked."
+      "text": "But it is you who will become ashamed, not great. You will become drunk so that people see you with no clothes on! The Lord has a cup of wine in his right hand. He is ready to give it to you as a punishment. You will no longer be great, but you will be ashamed."
     },
     {
       "verse": "17",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But the Lord rules from his holy temple. Everybody on the earth should be quiet in front of him.’ Print... Use screen font size Show All Comments Habakkuk 1Habakkuk 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the Lord rules from his holy temple. Everybody on the earth should be quiet in front of him.’"
     }
   ],
   "3": [
@@ -158,75 +158,75 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Lord, I have heard the report about you. I see the things that you have done, Lord, and I respect your power. Please do great things like that again. Do them again now for us to see. When you are angry with us, please still remember to be kind!"
+      "text": "Lord, I have heard the report about you.I see the things that you have done, Lord,and I respect your power.Please do great things like that again.Do them again now for us to see.When you are angry with us,please still remember to be kind! I see the things that you have done, Lord, and I respect your power. Please do great things like that again. Do them again now for us to see. When you are angry with us, please still remember to be kind!"
     },
     {
       "verse": "3",
-      "text": "God is coming from Teman! The Holy God is coming from Paran mountain. In verses 3-15, Habakkuk says what he sees in a vision. Selah. His beautiful power covers the whole sky! People praise him all over the earth!"
+      "text": "God is coming from Teman!The Holy God is coming from Paran mountain.Selah.His beautiful power covers the whole sky!People praise him all over the earth! The Holy God is coming from Paran mountain. Selah. His beautiful power covers the whole sky! People praise him all over the earth!"
     },
     {
       "verse": "4",
-      "text": "He is as bright as the sunrise. His hands throw bright lightning! That is where he hides his power."
+      "text": "He is as bright as the sunrise.His hands throw bright lightning!That is where he hides his power. His hands throw bright lightning! That is where he hides his power."
     },
     {
       "verse": "5",
-      "text": "As he marches to war, bad disease marches with him."
+      "text": "As he marches to war,bad disease marches with him. bad disease marches with him."
     },
     {
       "verse": "6",
-      "text": "God stands ready to fight, and he causes the earth to shake. He looks at the nations and they shake with fear. The very old mountains break into pieces. The old hills fall down flat. He travels on roads that have been there for ever."
+      "text": "God stands ready to fight,and he causes the earth to shake.He looks at the nationsand they shake with fear.The very old mountains break into pieces.The old hills fall down flat.He travels on roads that have been there for ever. and he causes the earth to shake. He looks at the nations and they shake with fear. The very old mountains break into pieces. The old hills fall down flat. He travels on roads that have been there for ever."
     },
     {
       "verse": "7",
-      "text": "I see the tents where Cushan's people live, and the people are afraid. The people in Midian are shaking with fear."
+      "text": "I see the tents where Cushan's people live,and the people are afraid.The people in Midian are shaking with fear. and the people are afraid. The people in Midian are shaking with fear."
     },
     {
       "verse": "8",
-      "text": "Was it the rivers that made you angry, Lord? Did the sea make you so angry? You rode on your chariots as horses pulled them! You rode into battle to win against your enemies."
+      "text": "Was it the rivers that made you angry, Lord?Did the sea make you so angry?You rode on your chariots as horses pulled them!You rode into battle to win against your enemies. Did the sea make you so angry? You rode on your chariots as horses pulled them! You rode into battle to win against your enemies."
     },
     {
       "verse": "9",
-      "text": "You have prepared your bow. You are ready to shoot your arrows. Selah. You send rivers of water to cut the earth into pieces."
+      "text": "You have prepared your bow.You are ready to shoot your arrows.Selah.You send rivers of water to cut the earth into pieces. You are ready to shoot your arrows. Selah. You send rivers of water to cut the earth into pieces."
     },
     {
       "verse": "10",
-      "text": "The mountains see you and they shake. Rain pours down from the sky and it causes floods. The deep sea roars and it lifts its waves up high."
+      "text": "The mountains see you and they shake.Rain pours down from the sky and it causes floods.The deep sea roarsand it lifts its waves up high. Rain pours down from the sky and it causes floods. The deep sea roars and it lifts its waves up high."
     },
     {
       "verse": "11",
-      "text": "You shoot your bright arrows so that the sun and the moon stand still in the sky. Your bright spear flies like lightning, and the sun and the moon do not move!"
+      "text": "You shoot your bright arrowsso that the sun and the moon stand still in the sky.Your bright spear flies like lightning,and the sun and the moon do not move! so that the sun and the moon stand still in the sky. Your bright spear flies like lightning, and the sun and the moon do not move!"
     },
     {
       "verse": "12",
-      "text": "You angrily march across the earth. You knock down the armies of the nations, because you are so angry."
+      "text": "You angrily march across the earth.You knock down the armies of the nations,because you are so angry. You knock down the armies of the nations, because you are so angry."
     },
     {
       "verse": "13",
-      "text": "You have marched out to rescue your people, and to save your special servant. God's special servant is ‘Messiah’ in Hebrew. It may also mean Israel's king. You have knocked down the leader of the wicked nation. You have removed all his clothes, from head to foot. Selah."
+      "text": "You have marched out to rescue your people,and to save your special servant.You have knocked down the leader of the wicked nation.You have removed all his clothes,from head to foot.Selah. and to save your special servant. You have knocked down the leader of the wicked nation. You have removed all his clothes, from head to foot. Selah."
     },
     {
       "verse": "14",
-      "text": "You threw his own spear into his head, and you destroyed his army. When his soldiers rushed out to attack us, they were laughing. They thought that they would easily win against us, as if we were poor, weak people."
+      "text": "You threw his own spear into his head,and you destroyed his army.When his soldiers rushed out to attack us,they were laughing.They thought that they would easily win against us,as if we were poor, weak people. and you destroyed his army. When his soldiers rushed out to attack us, they were laughing. They thought that they would easily win against us, as if we were poor, weak people."
     },
     {
       "verse": "15",
-      "text": "But you, Lord, marched across the sea with your horses. You made the waters of the sea shake."
+      "text": "But you, Lord, marched across the sea with your horses.You made the waters of the sea shake. You made the waters of the sea shake."
     },
     {
       "verse": "16",
-      "text": "I listened to this and I was very afraid. My lips shook with fear when I heard the sound. My bones became weak. My legs would not let me walk. But I will be patient. I will wait for the day of trouble that will come. Yes, punishment will come to the people who are attacking us."
+      "text": "I listened to thisand I was very afraid.My lips shook with fearwhen I heard the sound.My bones became weak.My legs would not let me walk.But I will be patient.I will wait for the day of trouble that will come.Yes, punishment will come to the people who are attacking us. and I was very afraid. My lips shook with fear when I heard the sound. My bones became weak. My legs would not let me walk. But I will be patient. I will wait for the day of trouble that will come. Yes, punishment will come to the people who are attacking us."
     },
     {
       "verse": "17",
-      "text": "Whatever happens, I will continue to thank the Lord. If there are no flowers on the fig trees, if there are no grapes on the vines, if there are no olives on the olive trees, if there are no crops in the fields, if the sheep are dying in the hills, if there are no cows on the farms,"
+      "text": "Whatever happens, I will continue to thank the Lord.If there are no flowers on the fig trees,if there are no grapes on the vines,if there are no olives on the olive trees,if there are no crops in the fields,if the sheep are dying in the hills,if there are no cows on the farms, If there are no flowers on the fig trees, if there are no grapes on the vines, if there are no olives on the olive trees, if there are no crops in the fields, if the sheep are dying in the hills, if there are no cows on the farms,"
     },
     {
       "verse": "18",
-      "text": "I will still sing to thank the Lord! I will be happy because God is the one who makes me safe. Habakkuk says this: Whatever happens he will still praise the Lord. He knows that God still has authority to rule! So he will still praise the Lord, even when bad things are happening."
+      "text": "I will still sing to thank the Lord!I will be happy because God is the one who makes me safe. I will be happy because God is the one who makes me safe."
     },
     {
       "verse": "19",
-      "text": "The Lord God causes me to be strong. He makes my feet run safely over the rocks and hills, like a deer's feet. This prayer is for the music leader. He must use stringed instruments. Print... Use screen font size Show All Comments Habakkuk 2Zephaniah Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord God causes me to be strong.He makes my feet run safely over the rocks and hills,like a deer's feet.This prayer is for the music leader. He must use stringed instruments."
     }
   ]
 };

@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "These are the words of Nehemiah, Hacaliah's son. It was the month Kislev. This was when King Artaxerxes had ruled for 20 years. I was in the big city of Susa."
+      "text": "These are the words of Nehemiah, Hacaliah's son.It was the month Kislev. This was when King Artaxerxes had ruled for 20 years. I was in the big city of Susa."
     },
     {
       "verse": "2",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "We have done wicked things against you. We have not obeyed the commands, the laws and the rules that you gave to your servant Moses. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. See Exodus 20."
+      "text": "We have done wicked things against you. We have not obeyed the commands, the laws and the rules that you gave to your servant Moses."
     },
     {
       "verse": "8",
@@ -38,11 +38,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Lord, these are your people and your servants. You used your great power and strength to rescue them."
+      "text": "Lord, these are your people and your servants. You used your great power and strength to rescue them. I was the king's cupbearer."
     },
     {
       "verse": "11",
-      "text": "Please listen to my prayer, my Lord. Hear the prayers of your people who love to respect your name. Please cause the king to be kind to me. May he give me what I ask for.’ I was the king's cupbearer. A cupbearer took care of the king's wine. He would have to make sure that the wine was safe for the king to drink. As cupbearer, Nehemiah was an important servant of the king. Print... Use screen font size Show All Comments Nehemiah IntroductionNehemiah 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Please listen to my prayer, my Lord. Hear the prayers of your people who love to respect your name. Please cause the king to be kind to me. May he give me what I ask for.’I was the king's cupbearer."
     }
   ],
   "2": [
@@ -52,7 +52,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The king asked me, ‘Why are you sad? You are not ill. This must mean that you are very upset.’ I was very frightened. Nehemiah was afraid because the king might be angry with him. The king wanted his servants to look happy when they served him."
+      "text": "The king asked me, ‘Why are you sad? You are not ill. This must mean that you are very upset.’ I was very frightened."
     },
     {
       "verse": "3",
@@ -64,11 +64,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then I said to the king, ‘Please sir, if you think it is a good idea and you are pleased with me, let me go to Judah. If you agree to send me there, I can build again the city where my ancestors are buried.’ Nehemiah prayed quietly that God would show him what he should say to the king."
+      "text": "Then I said to the king, ‘Please sir, if you think it is a good idea and you are pleased with me, let me go to Judah. If you agree to send me there, I can build again the city where my ancestors are buried.’"
     },
     {
       "verse": "6",
-      "text": "The king was sitting with the queen next to him. The king asked me, ‘How long will you be away? When will you return?’ I told the king how long I would be away. Because the king was happy to send me, I told him when I would leave."
+      "text": "The king was sitting with the queen next to him. The king asked me, ‘How long will you be away? When will you return?’ I told the king how long I would be away. Because the king was happy to send me, I told him when I would leave. The king agreed to do what I asked him, because my God was with me."
     },
     {
       "verse": "7",
@@ -76,7 +76,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Also give me a letter for Asaph, who takes care of the king's forest there. Tell him to give me wood from the trees. I need to make beams to mend the gates of the strong place near the temple. I also need to mend the city's wall. And I need to build a house for myself to live in.’ The king agreed to do what I asked him, because my God was with me."
+      "text": "Also give me a letter for Asaph, who takes care of the king's forest there. Tell him to give me wood from the trees. I need to make beams to mend the gates of the strong place near the temple. I also need to mend the city's wall. And I need to build a house for myself to live in.’The king agreed to do what I asked him, because my God was with me."
     },
     {
       "verse": "9",
@@ -84,7 +84,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But two important men were not happy when they heard that I had come to help the Israelite people. They were Sanballat, who came from Horon, and Tobiah, an Ammonite officer. Sanballat and Tobiah thought that they might lose their authority over Jerusalem's people. They did not want the Jews to make the city strong again. Nehemiah looks at Jerusalem's walls"
+      "text": "But two important men were not happy when they heard that I had come to help the Israelite people. They were Sanballat, who came from Horon, and Tobiah, an Ammonite officer."
     },
     {
       "verse": "11",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I went through the Valley Gate to the Jackal Well and the Dung Gate. As I went, I looked carefully at Jerusalem's walls. They were broken. Fire had destroyed the city's gates. Each gate of the city had its own name. A jackal is a wild animal, like a dog."
+      "text": "I went through the Valley Gate to the Jackal Well and the Dung Gate. As I went, I looked carefully at Jerusalem's walls. They were broken. Fire had destroyed the city's gates."
     },
     {
       "verse": "14",
@@ -116,21 +116,21 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I told the people how God had helped me to come to Jerusalem. I told them what the king had said to me. Then the people said, ‘We will start to build now!’ The people prepared to start this good work."
+      "text": "I told the people how God had helped me to come to Jerusalem. I told them what the king had said to me. Then the people said, ‘We will start to build now!’The people prepared to start this good work."
     },
     {
       "verse": "19",
-      "text": "But Sanballat, Tobiah and an Arab man called Geshem heard about what we were doing. They laughed at us and they insulted us. They said, ‘What are you trying to do? Have you turned against the king's authority?’ Some time before Nehemiah went to Judah, enemies of the Jews had sent a letter to King Artaxerxes. The king had told the Jews to stop building the city. See Ezra"
+      "text": "But Sanballat, Tobiah and an Arab man called Geshem heard about what we were doing. They laughed at us and they insulted us. They said, ‘What are you trying to do? Have you turned against the king's authority?’"
     },
     {
       "verse": "20",
-      "text": "I replied to them, ‘Our God who rules from heaven will help us. We are his servants and we will start to build. But you have never been true citizens of Jerusalem.’ Print... Use screen font size Show All Comments Nehemiah 1Nehemiah 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I replied to them, ‘Our God who rules from heaven will help us. We are his servants and we will start to build. But you have never been true citizens of Jerusalem.’"
     }
   ],
   "3": [
     {
       "verse": "1",
-      "text": "The leader of the priests, Eliashib, and the other priests built the Sheep Gate. They fixed the doors in it again. They built the wall as far as the Tower of the Hundred and the Tower of Hananel. They dedicated it all to God. To dedicate something to God means that you give him something. Then it belongs to him for him to use. The Jews were telling God that they had built these parts of the wall on his behalf. They knew that it was God's city."
+      "text": "The leader of the priests, Eliashib, and the other priests built the Sheep Gate. They fixed the doors in it again. They built the wall as far as the Tower of the Hundred and the Tower of Hananel. They dedicated it all to God."
     },
     {
       "verse": "2",
@@ -162,7 +162,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Hur's son, Rephaiah, repaired the next part of the wall. Rephaiah ruled over part of Jerusalem. Even rulers worked to repair the wall. Those who worked with gold also did this work. So did those who made perfume. There was work for everybody. Nearly all the men helped to build the wall of Jerusalem again. Some women helped, too (verse 12)."
+      "text": "Hur's son, Rephaiah, repaired the next part of the wall. Rephaiah ruled over part of Jerusalem."
     },
     {
       "verse": "10",
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Between there and the Sheep Gate the traders and the men who worked with gold repaired the wall. Nehemiah wrote a record of everyone who helped to repair the city wall. He knew that it was a very important job. God was helping the Jews to repair the wall. Print... Use screen font size Show All Comments Nehemiah 2Nehemiah 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Between there and the Sheep Gate the traders and the men who worked with gold repaired the wall."
     }
   ],
   "4": [
@@ -348,7 +348,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I did not take my clothes off at night time, and neither did any of my friends. The workers and the guards who were with me kept their clothes on all the time. Everyone carried his own weapon whatever he was doing. Print... Use screen font size Show All Comments Nehemiah 3Nehemiah 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I did not take my clothes off at night time, and neither did any of my friends. The workers and the guards who were with me kept their clothes on all the time. Everyone carried his own weapon whatever he was doing."
     }
   ],
   "5": [
@@ -378,7 +378,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I thought carefully about what they had said. Then I said to the Jewish leaders and officers, ‘You are cheating your own people! You are taking back more money than you have lent to them.’ I told the Jews to come together for a big meeting."
+      "text": "I thought carefully about what they had said. Then I said to the Jewish leaders and officers, ‘You are cheating your own people! You are taking back more money than you have lent to them.’I told the Jews to come together for a big meeting."
     },
     {
       "verse": "8",
@@ -398,11 +398,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "The leaders replied, ‘We will give everything back to them. We will not make them pay back their debts to us. We will do everything that you have said.’ I told the priests to come to our meeting. While they were with us, I made the Jewish leaders and officers make a strong promise. They agreed to do what they had promised to do."
+      "text": "The leaders replied, ‘We will give everything back to them. We will not make them pay back their debts to us. We will do everything that you have said.’I told the priests to come to our meeting. While they were with us, I made the Jewish leaders and officers make a strong promise. They agreed to do what they had promised to do."
     },
     {
       "verse": "13",
-      "text": "I shook my coat so that everything fell out of its pockets. I said, ‘You must all do what you have promised to do. If not, I pray that God will shake you out like that! He will take away your homes and all your things. You will be left with nothing!’ Everyone at the meeting said, ‘Amen, we agree!’ They praised the Lord. All the people did what they had promised to do."
+      "text": "I shook my coat so that everything fell out of its pockets. I said, ‘You must all do what you have promised to do. If not, I pray that God will shake you out like that! He will take away your homes and all your things. You will be left with nothing!’ Everyone at the meeting said, ‘Amen, we agree!’ They praised the Lord.All the people did what they had promised to do. All the people did what they had promised to do."
     },
     {
       "verse": "14",
@@ -418,7 +418,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "150 Jews and their officers ate meals with me. There were also people who came to visit from countries that were near to us."
+      "text": "Jews and their officers ate meals with me. There were also people who came to visit from countries that were near to us."
     },
     {
       "verse": "18",
@@ -426,7 +426,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "My God, please remember the many things that I have done to help my people. Please bless me. Print... Use screen font size Show All Comments Nehemiah 4Nehemiah 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "My God, please remember the many things that I have done to help my people. Please bless me."
     }
   ],
   "6": [
@@ -436,7 +436,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Sanballat and Geshem sent this message to me: ‘Come and meet with us in a village on the low land of Ono.’ I realized that they wanted to cause trouble for me."
+      "text": "Sanballat and Geshem sent this message to me: ‘Come and meet with us in a village on the low land of Ono.’I realized that they wanted to cause trouble for me."
     },
     {
       "verse": "3",
@@ -464,11 +464,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "All our enemies wanted to frighten us. They thought, ‘The Jews will be so afraid that they will not be able to work well. They will not finish building the wall.’ So I prayed to God, ‘Give me strength to continue the work.’"
+      "text": "All our enemies wanted to frighten us. They thought, ‘The Jews will be so afraid that they will not be able to work well. They will not finish building the wall.’So I prayed to God, ‘Give me strength to continue the work.’ So I prayed to God, ‘Give me strength to continue the work.’"
     },
     {
       "verse": "10",
-      "text": "One day I went to Shemaiah's house. He was the son of Delaiah, Mehetabel's son. He could not go out of his house. He said to me, ‘Meet me inside the temple of God. We will close the temple's doors. Our enemies are coming to kill you. One night soon, they will come to kill you.’ Shemaiah was a friend of Tobiah. Even when they had finished the wall, Nehemiah's enemies wanted to cause trouble for him."
+      "text": "One day I went to Shemaiah's house. He was the son of Delaiah, Mehetabel's son. He could not go out of his house. He said to me, ‘Meet me inside the temple of God. We will close the temple's doors. Our enemies are coming to kill you. One night soon, they will come to kill you.’"
     },
     {
       "verse": "11",
@@ -480,11 +480,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "They wanted to frighten me so that I would hide in the temple. My enemies knew that this would be a sin. If I did that, I would be ashamed. People would no longer respect me. Nehemiah was not a priest. Only the priests could go into the temple. So it would be a sin if Nehemiah went into the temple."
+      "text": "They wanted to frighten me so that I would hide in the temple. My enemies knew that this would be a sin. If I did that, I would be ashamed. People would no longer respect me."
     },
     {
       "verse": "14",
-      "text": "My God, please remember all the bad things that Tobiah and Sanballat have done. Also remember the prophetess, Noadiah, and the other prophets who have tried to frighten me. The wall is finished"
+      "text": "My God, please remember all the bad things that Tobiah and Sanballat have done. Also remember the prophetess, Noadiah, and the other prophets who have tried to frighten me."
     },
     {
       "verse": "15",
@@ -492,7 +492,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "When our enemies heard this news, they were afraid. The people of all the nations who lived near Jerusalem were very afraid. They knew that our God had helped us to finish this great work. The name of a Jewish month, which comes in August – September."
+      "text": "When our enemies heard this news, they were afraid. The people of all the nations who lived near Jerusalem were very afraid. They knew that our God had helped us to finish this great work."
     },
     {
       "verse": "17",
@@ -504,7 +504,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The leaders would often speak about the good things that Tobiah had done. They would then go and tell Tobiah everything that I had said. So Tobiah continued to send letters to frighten me. Meshullam was one of the Jews who repaired Jerusalem's wall. See Nehemiah Print... Use screen font size Show All Comments Nehemiah 5Nehemiah 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The leaders would often speak about the good things that Tobiah had done. They would then go and tell Tobiah everything that I had said. So Tobiah continued to send letters to frighten me."
     }
   ],
   "7": [
@@ -518,7 +518,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I said to them, ‘Do not open Jerusalem's gates until the sun is high in the sky. Shut the gates and lock them while the guards are still there. Choose people who live in Jerusalem to be guards for the city. Some guards must stand at the city's gates. Other guards must stand near their own houses.’ People who came back from the exile"
+      "text": "I said to them, ‘Do not open Jerusalem's gates until the sun is high in the sky. Shut the gates and lock them while the guards are still there. Choose people who live in Jerusalem to be guards for the city. Some guards must stand at the city's gates. Other guards must stand near their own houses.’"
     },
     {
       "verse": "4",
@@ -526,15 +526,15 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "It was not easy to keep the city safe. Then God put an idea in my mind. I called the leaders, the officers and the other people to meet together. I wanted to check the lists of their families. I found the list of those people who had first returned to Jerusalem. It was very important that the Jews had family records. These showed that Jacob (Israel) was their ancestor."
+      "text": "It was not easy to keep the city safe. Then God put an idea in my mind. I called the leaders, the officers and the other people to meet together. I wanted to check the lists of their families. I found the list of those people who had first returned to Jerusalem."
     },
     {
       "verse": "6",
-      "text": "This is the list of the Jews who returned to Jerusalem and the other towns of Judah. King Nebuchadnezzar had taken them away as prisoners to Babylon. Now each of them had returned to live in his own town."
+      "text": "This is the list of the Jews who returned to Jerusalem and the other towns of Judah. King Nebuchadnezzar had taken them away as prisoners to Babylon. Now each of them had returned to live in his own town. This is a list of the number of men in each Israelite clan who returned:"
     },
     {
       "verse": "7",
-      "text": "These people came from Babylon with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah. This is a list of the number of men in each Israelite clan who returned:"
+      "text": "These people came from Babylon with Zerubbabel, Jeshua, Nehemiah, Azariah, Raamiah, Nahamani, Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah.This is a list of the number of men in each Israelite clan who returned:"
     },
     {
       "verse": "8",
@@ -610,7 +610,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The number of men who belonged to these towns: Bethlehem and Netophah: 188."
+      "text": "The number of men who belonged to these towns:Bethlehem and Netophah: 188."
     },
     {
       "verse": "27",
@@ -662,7 +662,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "These priests also returned: The clan of Jedaiah (descendants of Jeshua): 973."
+      "text": "These priests also returned:The clan of Jedaiah (descendants of Jeshua): 973."
     },
     {
       "verse": "40",
@@ -678,7 +678,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "These Levites also returned: The clans of Jeshua and Kadmiel (descendants of Hodaviah): 74."
+      "text": "These Levites also returned:The clans of Jeshua and Kadmiel (descendants of Hodaviah): 74."
     },
     {
       "verse": "44",
@@ -690,7 +690,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "These were the families of the temple servants who returned: Ziha, Hasupha, Tabbaoth,"
+      "text": "These were the families of the temple servants who returned:Ziha, Hasupha, Tabbaoth,"
     },
     {
       "verse": "47",
@@ -734,7 +734,7 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "These were the servants of King Solomon whose descendants returned: Sotai, Sophereth, Perida,"
+      "text": "These were the servants of King Solomon whose descendants returned:Sotai, Sophereth, Perida,"
     },
     {
       "verse": "58",
@@ -766,7 +766,7 @@ module.exports = {
     },
     {
       "verse": "65",
-      "text": "The officer who ruled in Judah said that they must not eat the priests' special food. They must wait until there was a priest who could use the Urim and Thummim to decide the right thing to do. Priests had to be descendants of Aaron. The Urim and Thummim were special stones. God used them to show the priests what he wanted."
+      "text": "The officer who ruled in Judah said that they must not eat the priests' special food. They must wait until there was a priest who could use the Urim and Thummim to decide the right thing to do."
     },
     {
       "verse": "66",
@@ -778,11 +778,11 @@ module.exports = {
     },
     {
       "verse": "68",
-      "text": "They had 736 horses and 245 mules,"
+      "text": "horses and 245 mules,"
     },
     {
       "verse": "69",
-      "text": "435 camels and 6,720 donkeys. Horses, mules, camels and donkeys are animals that carry luggage and people."
+      "text": "camels and 6,720 donkeys."
     },
     {
       "verse": "70",
@@ -790,15 +790,15 @@ module.exports = {
     },
     {
       "verse": "71",
-      "text": "Some family leaders gave 170 kilograms of gold and 1,300 kilograms of silver."
+      "text": "kilograms of gold and 1,300 kilograms of silver."
     },
     {
       "verse": "72",
-      "text": "The rest of the people gave 170 kilograms of gold and 1,300 kilograms of silver. They also gave 67 sets of special clothes for the priests."
+      "text": "kilograms of gold and 1,300 kilograms of silver. They also gave 67 sets of special clothes for the priests."
     },
     {
       "verse": "73",
-      "text": "The priests, the Levites, the temple guards, the singers and the temple servants now lived in towns near Jerusalem. The other people also lived in the towns of Judah. When the seventh month of the year arrived, all the Israelite people were living in their towns and cities. Print... Use screen font size Show All Comments Nehemiah 6Nehemiah 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priests, the Levites, the temple guards, the singers and the temple servants now lived in towns near Jerusalem. The other people also lived in the towns of Judah. When the seventh month of the year arrived, all the Israelite people were living in their towns and cities."
     }
   ],
   "8": [
@@ -832,11 +832,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "They read the book of the Law and they explained it to the people. They helped the people to understand what Ezra read to them. explained’ or ‘translated’ into Aramaic so that the people would understand it."
+      "text": "They read the book of the Law and they explained it to the people. They helped the people to understand what Ezra read to them."
     },
     {
       "verse": "9",
-      "text": "Then Ezra (the priest who studied God's Law), Nehemiah (the ruler) and the Levites who were teaching the people said to all the people, ‘Do not cry or weep. Today is a special holy day for the Lord your God.’ They said this because the people were weeping. The words of the Law had made them sad."
+      "text": "Then Ezra (the priest who studied God's Law), Nehemiah (the ruler) and the Levites who were teaching the people said to all the people, ‘Do not cry or weep. Today is a special holy day for the Lord your God.’They said this because the people were weeping. The words of the Law had made them sad."
     },
     {
       "verse": "10",
@@ -848,7 +848,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Then the people went away to eat and to drink. They shared their food with other people. They were very happy because they now understood God's word that they had heard. The feast of the seventh month"
+      "text": "Then the people went away to eat and to drink. They shared their food with other people. They were very happy because they now understood God's word that they had heard."
     },
     {
       "verse": "13",
@@ -856,7 +856,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "They discovered what the Lord had commanded about a certain feast. The Lord had told Moses that the Israelites should live in huts during this feast. They should do that in the seventh month of each year. God brought the Israelites out of Egypt in the seventh month. So they must remember this with a special feast. We read about this in Leviticus"
+      "text": "They discovered what the Lord had commanded about a certain feast. The Lord had told Moses that the Israelites should live in huts during this feast. They should do that in the seventh month of each year."
     },
     {
       "verse": "15",
@@ -872,13 +872,13 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Every day of the feast, Ezra read aloud from the book of God's Law. The feast continued for seven days. On the eighth day, the people all met together, as the Law said that they should do. Print... Use screen font size Show All Comments Nehemiah 7Nehemiah 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Every day of the feast, Ezra read aloud from the book of God's Law. The feast continued for seven days. On the eighth day, the people all met together, as the Law said that they should do."
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "On the 24th day of the same month, the Israelite people met together. They did not eat or drink. They wore sackcloth and they put dust on their heads. Sackcloth is rough cloth. It is not comfortable to wear. Jews wore sackcloth to show that they were sorry. They put dust on their heads to show that they were sad or in trouble."
+      "text": "On the 24th day of the same month, the Israelite people met together. They did not eat or drink. They wore sackcloth and they put dust on their heads."
     },
     {
       "verse": "2",
@@ -894,11 +894,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then the Levites (Jeshua, Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah and Pethahiah) said, ‘Stand up and praise the Lord your God. He lives always and for ever.’ They said, ‘Your name is great and wonderful. We praise you more than words could ever say."
+      "text": "Then the Levites (Jeshua, Kadmiel, Bani, Hashabneiah, Sherebiah, Hodiah, Shebaniah and Pethahiah) said, ‘Stand up and praise the Lord your God. He lives always and for ever.’They said, ‘Your name is great and wonderful. We praise you more than words could ever say."
     },
     {
       "verse": "6",
-      "text": "Only you are the Lord. You made the sky and the heavens above the sky. You made all the stars, the earth and everything on it. You made the seas and everything in them. You give life to everything. The great crowd of angels in heaven bend down low to worship you. They said’ or ‘Ezra said’"
+      "text": "Only you are the Lord. You made the sky and the heavens above the sky. You made all the stars, the earth and everything on it. You made the seas and everything in them. You give life to everything. The great crowd of angels in heaven bend down low to worship you."
     },
     {
       "verse": "7",
@@ -922,7 +922,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "During the day, you led your people with a pillar of cloud. At night, you led them with a pillar of fire to give them light. You showed them the way that they should travel. Pharaoh was Egypt's king."
+      "text": "During the day, you led your people with a pillar of cloud. At night, you led them with a pillar of fire to give them light. You showed them the way that they should travel."
     },
     {
       "verse": "13",
@@ -946,7 +946,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Our ancestors made an image of a young cow to be their god. They said to each other, “This is our god who brought us out of Egypt.” They insulted you in that way, but you still did not turn away from your people. A calf is a young cow. The Jews used gold to make something in the shape of a calf. Then they worshipped it."
+      "text": "Our ancestors made an image of a young cow to be their god. They said to each other, “This is our god who brought us out of Egypt.” They insulted you in that way, but you still did not turn away from your people."
     },
     {
       "verse": "19",
@@ -958,7 +958,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "During 40 years you took care of them in the desert. Their clothes did not spoil. Their feet did not become big with pain."
+      "text": "years you took care of them in the desert. Their clothes did not spoil. Their feet did not become big with pain."
     },
     {
       "verse": "22",
@@ -1022,17 +1022,17 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "But because of our sins you have caused foreign kings to rule over us. They take the food that grows in our fields. They use us and our animals in any way that they like. So we are very upset!’ The people promise to obey the Lord"
+      "text": "But because of our sins you have caused foreign kings to rule over us. They take the food that grows in our fields. They use us and our animals in any way that they like. So we are very upset!’"
     },
     {
       "verse": "38",
-      "text": "‘Because of this we Israelite people are all making a promise. We are writing down our agreement to serve the Lord. Our leaders, our Levites and our priests will write their names on it to give it their authority.’ Print... Use screen font size Show All Comments Nehemiah 8Nehemiah 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘Because of this we Israelite people are all making a promise. We are writing down our agreement to serve the Lord. Our leaders, our Levites and our priests will write their names on it to give it their authority.’"
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "These people put their mark of authority on the promise that they had written: Hacaliah's son, Nehemiah (the government officer), and Zedekiah."
+      "text": "These people put their mark of authority on the promise that they had written:Hacaliah's son, Nehemiah (the government officer), and Zedekiah."
     },
     {
       "verse": "2",
@@ -1064,7 +1064,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The Levites were: Azaniah's son, Jeshua, Binnui from the clan of Henadad, Kadmiel."
+      "text": "The Levites were:Azaniah's son, Jeshua, Binnui from the clan of Henadad, Kadmiel."
     },
     {
       "verse": "10",
@@ -1160,11 +1160,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "That will pay for the special bread on the table in the temple. It will also pay for grain offerings and burnt offerings each day, as well as offerings on Sabbath days, feasts at each new moon, and other festivals. We will also use it for the sin offerings that take away Israel's guilt. And we will use it for all the work in the temple of our God. A shekel was a silver coin that weighed 11.5 grams."
+      "text": "That will pay for the special bread on the table in the temple. It will also pay for grain offerings and burnt offerings each day, as well as offerings on Sabbath days, feasts at each new moon, and other festivals. We will also use it for the sin offerings that take away Israel's guilt. And we will use it for all the work in the temple of our God."
     },
     {
       "verse": "34",
-      "text": "Each year we will throw dice to decide when different families must bring wood to the temple of our God. The priests, the Levites and the other people must do this. The wood will burn sacrifices on the altar of the Lord our God. We will do this in the way that the Law of the Lord our God teaches."
+      "text": "Each year we will throw dice to decide when different families must bring wood to the temple of our God. The priests, the Levites and the other people must do this. The wood will burn sacrifices on the altar of the Lord our God. We will do this in the way that the Law of the Lord our God teaches. We agree that we will always take care of the temple of our God.’"
     },
     {
       "verse": "35",
@@ -1184,7 +1184,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "The Levites and the other Israelites will bring their gifts of grain, wine and olive oil to store in the temple's rooms. The priests will store them with the things that they use to serve God in the temple. That is the place where the priests who are working at that time, the temple guards and the singers stay. We agree that we will always take care of the temple of our God.’ Print... Use screen font size Show All Comments Nehemiah 9Nehemiah 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Levites and the other Israelites will bring their gifts of grain, wine and olive oil to store in the temple's rooms. The priests will store them with the things that they use to serve God in the temple. That is the place where the priests who are working at that time, the temple guards and the singers stay.We agree that we will always take care of the temple of our God.’"
     }
   ],
   "11": [
@@ -1198,11 +1198,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "These are the leaders of the region of Judah who went to live in Jerusalem. Other Israelites, priests, Levites, temple servants and descendants of King Solomon's servants lived in the other towns of Judah. Each of them lived in their own homes."
+      "text": "These are the leaders of the region of Judah who went to live in Jerusalem. Other Israelites, priests, Levites, temple servants and descendants of King Solomon's servants lived in the other towns of Judah. Each of them lived in their own homes. From the tribe of Judah:"
     },
     {
       "verse": "4",
-      "text": "But some of Judah's and Benjamin's descendants went to live in Jerusalem. This is who they were: Judah and Benjamin were the two Israelite tribes who had gone to Babylon as prisoners. Now they had returned to their homes in the country of Judah. From the tribe of Judah: Athaiah, son of Uzziah and Zechariah's grandson. His other ancestors were: Amariah, Shephatiah and Mahalalel. They were descendants of Judah's son, Perez."
+      "text": "But some of Judah's and Benjamin's descendants went to live in Jerusalem. This is who they were:From the tribe of Judah:Athaiah, son of Uzziah and Zechariah's grandson. His other ancestors were: Amariah, Shephatiah and Mahalalel. They were descendants of Judah's son, Perez."
     },
     {
       "verse": "5",
@@ -1210,11 +1210,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "There were 468 descendants of Perez who went to live in Jerusalem. They were all brave men."
+      "text": "descendants of Perez who went to live in Jerusalem. They were all brave men."
     },
     {
       "verse": "7",
-      "text": "From the tribe of Benjamin: Sallu, son of Meshullam and Joed's grandson. His other ancestors were: Pedaiah, Kolaiah, Maaseiah, Ithiel and Jeshaiah."
+      "text": "From the tribe of Benjamin:Sallu, son of Meshullam and Joed's grandson. His other ancestors were: Pedaiah, Kolaiah, Maaseiah, Ithiel and Jeshaiah."
     },
     {
       "verse": "8",
@@ -1226,7 +1226,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "From the priests: Joiarib's son, Jedaiah, and Jakin."
+      "text": "From the priests:Joiarib's son, Jedaiah, and Jakin."
     },
     {
       "verse": "11",
@@ -1246,7 +1246,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "From the Levites: Shemaiah, son of Hasshub and Azrikam's grandson. Azrikam was the son of Hashabiah, son of Bunni."
+      "text": "From the Levites:Shemaiah, son of Hasshub and Azrikam's grandson. Azrikam was the son of Hashabiah, son of Bunni."
     },
     {
       "verse": "16",
@@ -1258,11 +1258,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "284 Levites lived in the holy city, Jerusalem."
+      "text": "Levites lived in the holy city, Jerusalem."
     },
     {
       "verse": "19",
-      "text": "The temple guards were: Akkub, Talmon and their relatives. There were 172 guards who watched the gates."
+      "text": "The temple guards were:Akkub, Talmon and their relatives. There were 172 guards who watched the gates."
     },
     {
       "verse": "20",
@@ -1306,7 +1306,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Zanoah and Adullam and the villages near to those towns. Other people lived in Lachish and its fields, and in Azekah and its villages. The people were living everywhere from Beersheba to the Hinnom Valley. Beersheba was on the border of Judah in the south. The Hinnom Valley was near to Jerusalem."
+      "text": "Zanoah and Adullam and the villages near to those towns. Other people lived in Lachish and its fields, and in Azekah and its villages. The people were living everywhere from Beersheba to the Hinnom Valley."
     },
     {
       "verse": "31",
@@ -1330,13 +1330,13 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Some of the Levites' clans who belonged with Judah went to live in Benjamin's land. Print... Use screen font size Show All Comments Nehemiah 10Nehemiah 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Some of the Levites' clans who belonged with Judah went to live in Benjamin's land."
     }
   ],
   "12": [
     {
       "verse": "1",
-      "text": "This is a list of the priests and the Levites who returned with Zerubbabel, son of Shealtiel, and with Jeshua: Seraiah, Jeremiah, Ezra,"
+      "text": "This is a list of the priests and the Levites who returned with Zerubbabel, son of Shealtiel, and with Jeshua:Seraiah, Jeremiah, Ezra, These men were the leaders of the priests and the people who helped them in the time of Jeshua."
     },
     {
       "verse": "2",
@@ -1364,7 +1364,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Levites were: Jeshua, Binnui, Kadmiel, Sherebiah, Judah and Mattaniah.Mattaniah and his relatives had authority for the songs which they sang to thank God in the temple."
+      "text": "The Levites were:Jeshua, Binnui, Kadmiel, Sherebiah, Judah and Mattaniah.Mattaniah and his relatives had authority for the songs which they sang to thank God in the temple."
     },
     {
       "verse": "9",
@@ -1380,7 +1380,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "In the time of Joiakim, these were the priests who were leaders of their clans: Meraiah was the leader of Seraiah's clan.Hananiah was the leader of Jeremiah's clan."
+      "text": "In the time of Joiakim, these were the priests who were leaders of their clans:Meraiah was the leader of Seraiah's clan.Hananiah was the leader of Jeremiah's clan."
     },
     {
       "verse": "13",
@@ -1428,19 +1428,19 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The leaders of the Levites were: Hashabiah, Sherebiah, Kadmiel's son, Jeshua, and their relatives.The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded."
+      "text": "The leaders of the Levites were:Hashabiah, Sherebiah, Kadmiel's son, Jeshua, and their relatives.The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded. The two groups stood opposite each other to sing and praise and thank God. They did this in the way that God's servant, King David, had commanded."
     },
     {
       "verse": "25",
-      "text": "The guards for the temple gates were: Mattaniah, Bakbukiah, Obadiah, Meshullam, Talmon and Akkub.They watched the temple rooms near the gates, where they stored special things."
+      "text": "The guards for the temple gates were:Mattaniah, Bakbukiah, Obadiah, Meshullam, Talmon and Akkub.They watched the temple rooms near the gates, where they stored special things."
     },
     {
       "verse": "26",
-      "text": "They served as guards in the time of Joiakim, son of Jeshua and grandson of Jozadak. This was in the time when Nehemiah had authority over Judah, and Ezra the priest was teaching people God's Law. The people dedicate Jerusalem's wall to God"
+      "text": "They served as guards in the time of Joiakim, son of Jeshua and grandson of Jozadak. This was in the time when Nehemiah had authority over Judah, and Ezra the priest was teaching people God's Law."
     },
     {
       "verse": "27",
-      "text": "This is what happened when we dedicated the wall of Jerusalem to God. The people told the Levites to come to Jerusalem from the places where they lived. They wanted the Levites to help them to praise God with joy. The Levites would sing songs to thank God. They would make music with cymbals, harps and lyres. To dedicate something means that you are giving it to God, so that he will bless it."
+      "text": "This is what happened when we dedicated the wall of Jerusalem to God. The people told the Levites to come to Jerusalem from the places where they lived. They wanted the Levites to help them to praise God with joy. The Levites would sing songs to thank God. They would make music with cymbals, harps and lyres."
     },
     {
       "verse": "28",
@@ -1452,7 +1452,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The priests and the Levites made themselves clean to serve God. Then they made the people clean, as well as the city's gates and its wall. The Jews had special ways to make themselves clean. Sometimes they killed an animal for a sacrifice. When they had made themselves clean, they could serve God properly."
+      "text": "The priests and the Levites made themselves clean to serve God. Then they made the people clean, as well as the city's gates and its wall."
     },
     {
       "verse": "31",
@@ -1520,7 +1520,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "In the time of Zerubbabel and Nehemiah, all the Israelites shared their food with the singers and the guards. Every day they kept separate the part that was for the Levites. The Levites also kept separate the part that was for the priests. Print... Use screen font size Show All Comments Nehemiah 11Nehemiah 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "In the time of Zerubbabel and Nehemiah, all the Israelites shared their food with the singers and the guards. Every day they kept separate the part that was for the Levites. The Levites also kept separate the part that was for the priests."
     }
   ],
   "13": [
@@ -1530,7 +1530,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This was because they had not given the Israelites food and water. Instead, they had paid Balaam to curse the Israelites. But God did not agree to curse them. He blessed them instead. This was at the time when the Israelites had left Egypt. They were travelling to the land that God had promised to give them. See Deuteronomy Numbers"
+      "text": "This was because they had not given the Israelites food and water. Instead, they had paid Balaam to curse the Israelites. But God did not agree to curse them. He blessed them instead."
     },
     {
       "verse": "3",
@@ -1542,7 +1542,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Eliashib let Tobiah use one of these rooms in the temple. It was a large room where they had stored the grain offerings, the incense and the special plates and tools that they used in the temple. They also stored the tithes of grain, wine and olive oil in that room. These gifts were for the Levites, the temple singers and guards, and also for the priests. a friend’ or ‘a relative’"
+      "text": "Eliashib let Tobiah use one of these rooms in the temple. It was a large room where they had stored the grain offerings, the incense and the special plates and tools that they used in the temple. They also stored the tithes of grain, wine and olive oil in that room. These gifts were for the Levites, the temple singers and guards, and also for the priests."
     },
     {
       "verse": "6",
@@ -1558,7 +1558,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I gave a command that they must make the rooms clean again. Then I put back the special plates and tools that they used in the temple. I also put back the grain offerings and the incense. Because Tobiah was a foreigner and not a Jew, it was a very bad thing that Eliashib had done."
+      "text": "I gave a command that they must make the rooms clean again. Then I put back the special plates and tools that they used in the temple. I also put back the grain offerings and the incense."
     },
     {
       "verse": "10",
@@ -1582,7 +1582,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "In those days, I saw people in Judah who were working on Sabbath days. They were making wine. They were bringing their grain from the fields. They were making their donkeys carry the grain, as well as wine, grapes, figs and other things. They were bringing all those things into Jerusalem when it was a Sabbath day. I warned them that they must not sell things on any Sabbath day. God had told Moses that the Israelites must not work on the Sabbath day. They must make it a special day to worship God. See Exodus"
+      "text": "In those days, I saw people in Judah who were working on Sabbath days. They were making wine. They were bringing their grain from the fields. They were making their donkeys carry the grain, as well as wine, grapes, figs and other things. They were bringing all those things into Jerusalem when it was a Sabbath day. I warned them that they must not sell things on any Sabbath day."
     },
     {
       "verse": "16",
@@ -1602,7 +1602,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "A few times, some traders stayed outside Jerusalem all night, with the things that they wanted to sell."
+      "text": "A few times, some traders stayed outside Jerusalem all night, with the things that they wanted to sell. My God, please remember this good thing that I have done. Because of your faithful love, please be kind to me."
     },
     {
       "verse": "21",
@@ -1610,7 +1610,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then I told the Levites that they must make themselves ready to serve God. I told them to go and stand at the gates as guards. They must keep the Sabbath day as a special day for God. My God, please remember this good thing that I have done. Because of your faithful love, please be kind to me."
+      "text": "Then I told the Levites that they must make themselves ready to serve God. I told them to go and stand at the gates as guards. They must keep the Sabbath day as a special day for God.My God, please remember this good thing that I have done. Because of your faithful love, please be kind to me."
     },
     {
       "verse": "23",
@@ -1618,7 +1618,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Half of their children spoke the language of Ashdod, or a language of the other foreign nations. They did not know how to speak the language of Judah. God wants his people to worship only him. If the Israelites marry foreign wives, they may also start to worship foreign gods."
+      "text": "Half of their children spoke the language of Ashdod, or a language of the other foreign nations. They did not know how to speak the language of Judah."
     },
     {
       "verse": "25",
@@ -1642,11 +1642,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "After that, I made the priests and the Levites clean to serve God. I made them become separate from any foreign thing. I told each of them which job they should do."
+      "text": "After that, I made the priests and the Levites clean to serve God. I made them become separate from any foreign thing. I told each of them which job they should do. My God, please remember to bless me."
     },
     {
       "verse": "31",
-      "text": "I also made sure that people brought wood to the temple for sacrifices on the altar. I made them bring the first crops and fruits from their fields for the offerings. My God, please remember to bless me. Print... Use screen font size Show All Comments Nehemiah 12Esther Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I also made sure that people brought wood to the temple for sacrifices on the altar. I made them bring the first crops and fruits from their fields for the offerings.My God, please remember to bless me."
     }
   ]
 };

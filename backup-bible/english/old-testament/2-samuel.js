@@ -6,15 +6,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The next day, a man arrived from the camp of Saul's army. He had dirt on his head and he had torn his clothes. When the man met David, he threw himself down on the ground to give honour to David. See 1 Samuel The book of 2 Samuel continues the story from 1 Samuel. Saul's camp was about 130 kilometres (80 miles) north of Ziklag. The young man would have taken about three days to walk or run that distance."
+      "text": "The next day, a man arrived from the camp of Saul's army. He had dirt on his head and he had torn his clothes. When the man met David, he threw himself down on the ground to give honour to David."
     },
     {
       "verse": "3",
-      "text": "David asked him, ‘Where have you come from?’ The man replied, ‘I have run from the Israelite army's camp.’"
+      "text": "David asked him, ‘Where have you come from?’The man replied, ‘I have run from the Israelite army's camp.’ The man replied, ‘I have run from the Israelite army's camp.’"
     },
     {
       "verse": "4",
-      "text": "David said, ‘Tell me what happened in the battle.’ The man replied, ‘The Israelites ran away and the enemy killed many of them. Even Saul and his son Jonathan are dead.’"
+      "text": "David said, ‘Tell me what happened in the battle.’The man replied, ‘The Israelites ran away and the enemy killed many of them. Even Saul and his son Jonathan are dead.’ The man replied, ‘The Israelites ran away and the enemy killed many of them. Even Saul and his son Jonathan are dead.’"
     },
     {
       "verse": "5",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He asked me, “Who are you?” I said to him, “I am an Amalekite.”"
+      "text": "He asked me, “Who are you?”I said to him, “I am an Amalekite.” I said to him, “I am an Amalekite.”"
     },
     {
       "verse": "9",
@@ -46,11 +46,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "They cried and they wept until the evening. They did not eat any food. They were very upset about Saul and Jonathan, and all the Lord's people. They were sad because so many Israelites had died in the battle. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "They cried and they wept until the evening. They did not eat any food. They were very upset about Saul and Jonathan, and all the Lord's people. They were sad because so many Israelites had died in the battle."
     },
     {
       "verse": "13",
-      "text": "David asked the young man who had brought the report to him, ‘Where are you from?’ The man replied, ‘I am an Amalekite, the son of a foreign man who lives in Israel.’"
+      "text": "David asked the young man who had brought the report to him, ‘Where are you from?’The man replied, ‘I am an Amalekite, the son of a foreign man who lives in Israel.’ The man replied, ‘I am an Amalekite, the son of a foreign man who lives in Israel.’"
     },
     {
       "verse": "14",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "David had said to the Amalekite, ‘You deserve to die because of what you have said. Your own words show that you did a bad thing. You yourself said, “I have killed the Lord's chosen king.” ’ David's song to remember Saul and Jonathan"
+      "text": "David had said to the Amalekite, ‘You deserve to die because of what you have said. Your own words show that you did a bad thing. You yourself said, “I have killed the Lord's chosen king.” ’"
     },
     {
       "verse": "17",
@@ -70,49 +70,49 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "He said that the people in Judah should learn this song. Its name is ‘The Bow’. It is written down in the Book of Jashar. David was a musician. He wrote this poem and he sang it to sad music."
+      "text": "He said that the people in Judah should learn this song. Its name is ‘The Bow’. It is written down in the Book of Jashar."
     },
     {
       "verse": "19",
-      "text": "‘The greatest men of Israel now lie on the mountains. They are dead! Those brave men have fallen to the ground!"
+      "text": "‘The greatest men of Israel now lie on the mountains. They are dead!Those brave men have fallen to the ground! Those brave men have fallen to the ground!"
     },
     {
       "verse": "20",
-      "text": "Do not tell the people in Gath about it. Do not tell the news in the streets of Ashkelon. If you do, the daughters of the Philistines will sing with joy. Yes, those foreign people who do not worship God will be happy."
+      "text": "Do not tell the people in Gath about it.Do not tell the news in the streets of Ashkelon.If you do, the daughters of the Philistines will sing with joy.Yes, those foreign people who do not worship God will be happy. Do not tell the news in the streets of Ashkelon. If you do, the daughters of the Philistines will sing with joy. Yes, those foreign people who do not worship God will be happy."
     },
     {
       "verse": "21",
-      "text": "You mountains of Gilboa, I hope that no rain or dew will come on you now. I pray that no crops will grow in your fields to make grain offerings. In those fields, the shields of brave soldiers became useless. No longer will anyone clean Saul's shield with oil. The Israelites made shields from leather and wood. They rubbed oil into the leather to make it strong. Then the leather did not become hard."
+      "text": "You mountains of Gilboa, I hope that no rain or dew will come on you now.I pray that no crops will grow in your fields to make grain offerings.In those fields, the shields of brave soldiers became useless.No longer will anyone clean Saul's shield with oil. I pray that no crops will grow in your fields to make grain offerings. In those fields, the shields of brave soldiers became useless. No longer will anyone clean Saul's shield with oil."
     },
     {
       "verse": "22",
-      "text": "When Jonathan shot arrows from his bow, his enemies fell to the ground, dead. He would never turn away from them. Saul's sword also cut down his enemies. He always finished the job."
+      "text": "When Jonathan shot arrows from his bow,his enemies fell to the ground, dead.He would never turn away from them.Saul's sword also cut down his enemies.He always finished the job. his enemies fell to the ground, dead. He would never turn away from them. Saul's sword also cut down his enemies. He always finished the job."
     },
     {
       "verse": "23",
-      "text": "People loved Saul and Jonathan as great people while they lived. They were still together when they died. They moved faster than eagles They were stronger than lions."
+      "text": "People loved Saul and Jonathan as great people while they lived.They were still together when they died.They moved faster than eaglesThey were stronger than lions. They were still together when they died. They moved faster than eagles They were stronger than lions."
     },
     {
       "verse": "24",
-      "text": "You women of Israel, weep for Saul. He gave you beautiful clothes to wear. He gave you gold and jewels to fix on your clothes."
+      "text": "You women of Israel, weep for Saul.He gave you beautiful clothes to wear.He gave you gold and jewels to fix on your clothes. He gave you beautiful clothes to wear. He gave you gold and jewels to fix on your clothes."
     },
     {
       "verse": "25",
-      "text": "Brave soldiers have died as they fought a great battle! Jonathan's dead body lies on Gilboa's hills."
+      "text": "Brave soldiers have died as they fought a great battle!Jonathan's dead body lies on Gilboa's hills. Jonathan's dead body lies on Gilboa's hills."
     },
     {
       "verse": "26",
-      "text": "My brother, Jonathan! I am very sad about your death. You were my good friend. Your love for me was very special. It was better than the love of women."
+      "text": "My brother, Jonathan! I am very sad about your death.You were my good friend.Your love for me was very special.It was better than the love of women. You were my good friend. Your love for me was very special. It was better than the love of women."
     },
     {
       "verse": "27",
-      "text": "The brave men have fallen in the battle! Their weapons are now useless.’ Print... Use screen font size Show All Comments 2 Samuel Introduction2 Samuel 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The brave men have fallen in the battle!Their weapons are now useless.’"
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "After some time, David asked the Lord, ‘Should I go up to one of Judah's towns?’ The Lord said to him, ‘Go up.’ David asked, ‘Where should I go?’ The Lord replied, ‘Go to Hebron.’"
+      "text": "After some time, David asked the Lord, ‘Should I go up to one of Judah's towns?’The Lord said to him, ‘Go up.’David asked, ‘Where should I go?’The Lord replied, ‘Go to Hebron.’ The Lord said to him, ‘Go up.’ David asked, ‘Where should I go?’ The Lord replied, ‘Go to Hebron.’"
     },
     {
       "verse": "2",
@@ -124,7 +124,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then the men of Judah's tribe came to Hebron. They anointed David as king over Judah's people. David thanks the people of Jabesh GileadDavid heard that the people from Jabesh Gilead had buried Saul's body."
+      "text": "Then the men of Judah's tribe came to Hebron. They anointed David as king over Judah's people.David heard that the people from Jabesh Gilead had buried Saul's body."
     },
     {
       "verse": "5",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Saul, your master, is dead, so you must continue to be strong and brave. The people of Judah have now chosen me to rule them as king.’ David and his men fight against Saul's army"
+      "text": "Saul, your master, is dead, so you must continue to be strong and brave. The people of Judah have now chosen me to rule them as king.’"
     },
     {
       "verse": "8",
@@ -168,7 +168,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So they chose 12 men to fight on behalf of Benjamin and Ish-Bosheth. They also chose 12 of David's men to fight against them."
+      "text": "men to fight on behalf of Benjamin and Ish-Bosheth. They also chose 12 of David's men to fight against them."
     },
     {
       "verse": "16",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Zeruiah's three sons were there. They were Joab, Abishai and Asahel. Asahel could run as fast as a wild deer."
+      "text": "Zeruiah's three sons were there. They were Joab, Abishai and Asahel. Asahel could run as fast as a wild deer. ‘Yes, it is,’ he answered."
     },
     {
       "verse": "19",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Abner looked behind him and he asked, ‘Is that you, Asahel?’ ‘Yes, it is,’ he answered."
+      "text": "Abner looked behind him and he asked, ‘Is that you, Asahel?’‘Yes, it is,’ he answered."
     },
     {
       "verse": "21",
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So Joab made a loud noise with the trumpet. Then all his men stopped where they were. They did not continue to chase after the men of Israel. They stopped fighting. They used a trumpet to tell soldiers what to do when they were fighting a battle."
+      "text": "So Joab made a loud noise with the trumpet. Then all his men stopped where they were. They did not continue to chase after the men of Israel. They stopped fighting."
     },
     {
       "verse": "29",
@@ -236,7 +236,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "They took Asahel's body from the place where he died. They buried him in his father's grave at Bethlehem. Then Joab and his men marched all night. They arrived home at Hebron at dawn. Print... Use screen font size Show All Comments 2 Samuel 12 Samuel 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They took Asahel's body from the place where he died. They buried him in his father's grave at Bethlehem. Then Joab and his men marched all night. They arrived home at Hebron at dawn."
     }
   ],
   "3": [
@@ -246,7 +246,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "While David lived in Hebron he had several sons: The firstborn was Amnon. Ahinoam from Jezreel gave birth to him."
+      "text": "While David lived in Hebron he had several sons:The firstborn was Amnon. Ahinoam from Jezreel gave birth to him. These sons of David were all born in Hebron."
     },
     {
       "verse": "3",
@@ -258,7 +258,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The sixth son was Ithream. David's wife, Eglah, gave birth to him.These sons of David were all born in Hebron. Abner joins David's army"
+      "text": "The sixth son was Ithream. David's wife, Eglah, gave birth to him.These sons of David were all born in Hebron."
     },
     {
       "verse": "6",
@@ -266,7 +266,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Saul had had slave wife called Rizpah. She was Aiah's daughter. One day, Ish-Bosheth asked Abner, ‘Why did you sleep with my father's woman?’ Ish-Bosheth was King Saul's son. He was the king of the northern part of Israel. See 2 Samuel If Abner had slept with Saul's woman, it would show that he wanted to be king himself."
+      "text": "Saul had had slave wife called Rizpah. She was Aiah's daughter. One day, Ish-Bosheth asked Abner, ‘Why did you sleep with my father's woman?’"
     },
     {
       "verse": "8",
@@ -278,7 +278,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The Lord promised that David's family would rule as kings instead of Saul's family. He promised that David would be king over all the people of Israel and Judah, from Dan to Beersheba.’ Dan was at the north border of Israel. Beersheba was in the south, in Judah. So ‘from Dan to Beersheba’ means ‘everywhere’."
+      "text": "The Lord promised that David's family would rule as kings instead of Saul's family. He promised that David would be king over all the people of Israel and Judah, from Dan to Beersheba.’"
     },
     {
       "verse": "11",
@@ -318,11 +318,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Abner arrived in Hebron with 20 of his men to visit David. David prepared a feast for Abner and the men who were with him."
+      "text": "of his men to visit David. David prepared a feast for Abner and the men who were with him."
     },
     {
       "verse": "21",
-      "text": "Then Abner said to David, ‘Please let me go now to bring all the people of Israel together for my lord the king. Then they will make an agreement with you. Then you will rule over the whole land, as you really want to do.’ So David sent Abner away, with a promise that he would be safe. Saul belonged to Benjamin's tribe. David belonged to Judah's tribe. The people from Benjamin's tribe had always been faithful to Saul's family. Joab murders Abner"
+      "text": "Then Abner said to David, ‘Please let me go now to bring all the people of Israel together for my lord the king. Then they will make an agreement with you. Then you will rule over the whole land, as you really want to do.’ So David sent Abner away, with a promise that he would be safe."
     },
     {
       "verse": "22",
@@ -370,11 +370,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "The king sang this song about Abner's death: ‘Abner, you should not have died like a fool."
+      "text": "The king sang this song about Abner's death:‘Abner, you should not have died like a fool. ‘Abner, you should not have died like a fool."
     },
     {
       "verse": "34",
-      "text": "Nobody had tied your hands. Nobody had put chains on your feet. It was murder by wicked people that killed you.’ Then all the people started to weep again for Abner."
+      "text": "Nobody had tied your hands.Nobody had put chains on your feet.It was murder by wicked people that killed you.’Then all the people started to weep again for Abner. Nobody had put chains on your feet. It was murder by wicked people that killed you.’ Then all the people started to weep again for Abner."
     },
     {
       "verse": "35",
@@ -394,7 +394,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "I am God's chosen king, but even I am weak today. I cannot control these sons of Zeruiah! They have done a wicked thing. I pray that the Lord will punish them as they deserve.’ Zeruiah's sons were Joab and Abishai, as well as Asahel who was now dead. Print... Use screen font size Show All Comments 2 Samuel 22 Samuel 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I am God's chosen king, but even I am weak today. I cannot control these sons of Zeruiah! They have done a wicked thing. I pray that the Lord will punish them as they deserve.’"
     }
   ],
   "4": [
@@ -408,7 +408,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The people from Beeroth had run away to Gittaim. So Beeroth's people still live there as strangers. Saul's son here was Ish-Bosheth."
+      "text": "The people from Beeroth had run away to Gittaim. So Beeroth's people still live there as strangers."
     },
     {
       "verse": "4",
@@ -440,11 +440,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Now you wicked men have done a worse thing. You killed a good man in his own house while he was asleep! So I must surely punish you for his death. You must disappear from the earth!’ See 2 Samuel"
+      "text": "Now you wicked men have done a worse thing. You killed a good man in his own house while he was asleep! So I must surely punish you for his death. You must disappear from the earth!’"
     },
     {
       "verse": "12",
-      "text": "So David commanded his young men to kill Recab and Baanah. After they had killed them, they cut off their hands and their feet. They hung the dead bodies by the pool in Hebron. But they took Ish-Bosheth's head and they buried it in Abner's grave in Hebron. Print... Use screen font size Show All Comments 2 Samuel 32 Samuel 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So David commanded his young men to kill Recab and Baanah. After they had killed them, they cut off their hands and their feet. They hung the dead bodies by the pool in Hebron. But they took Ish-Bosheth's head and they buried it in Abner's grave in Hebron."
     }
   ],
   "5": [
@@ -462,15 +462,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "David was 30 years old when he became king. He ruled Israel as king for 40 years."
+      "text": "years old when he became king. He ruled Israel as king for 40 years."
     },
     {
       "verse": "5",
-      "text": "He ruled over Judah in Hebron for seven years and six months. And in Jerusalem he ruled over all Israel and Judah for 33 years. David wins Jerusalem from the Jebusites"
+      "text": "He ruled over Judah in Hebron for seven years and six months. And in Jerusalem he ruled over all Israel and Judah for 33 years."
     },
     {
       "verse": "6",
-      "text": "King David and his soldiers marched to Jerusalem. They went to attack the Jebusites who lived there. The Jebusites said to David, ‘You will never get into our city. Even blind men and those who are lame could keep you out.’ They thought, ‘David will never get in here.’"
+      "text": "King David and his soldiers marched to Jerusalem. They went to attack the Jebusites who lived there. The Jebusites said to David, ‘You will never get into our city. Even blind men and those who are lame could keep you out.’They thought, ‘David will never get in here.’ They thought, ‘David will never get in here.’"
     },
     {
       "verse": "7",
@@ -478,7 +478,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "On that day, David said to his men, ‘We must attack my enemies, the Jebusites. To do that, we must go into the city through the water tunnel. Then we will see if their blind and lame people can stop us! I hate them all.’ The ‘water tunnel’ was a hole through the rock that took water into the city. That is why people still say, ‘Anybody who is blind or lame must not go into the palace.’ the palace’ or ‘the temple’. David comes to live in Jerusalem"
+      "text": "On that day, David said to his men, ‘We must attack my enemies, the Jebusites. To do that, we must go into the city through the water tunnel. Then we will see if their blind and lame people can stop us! I hate them all.’That is why people still say, ‘Anybody who is blind or lame must not go into the palace.’ That is why people still say, ‘Anybody who is blind or lame must not go into the palace.’"
     },
     {
       "verse": "9",
@@ -494,7 +494,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "David knew that the Lord had made him strong as king over Israel. He knew that God had given honour to his kingdom, to help his people, the Israelites. God wanted his people to be safe and happy."
+      "text": "David knew that the Lord had made him strong as king over Israel. He knew that God had given honour to his kingdom, to help his people, the Israelites."
     },
     {
       "verse": "13",
@@ -510,7 +510,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Elishama, Eliada and Eliphelet. David fights against the Philistines"
+      "text": "Elishama, Eliada and Eliphelet."
     },
     {
       "verse": "17",
@@ -518,15 +518,15 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Philistine soldiers arrived at Rephaim valley. They covered all the ground there."
+      "text": "The Philistine soldiers arrived at Rephaim valley. They covered all the ground there. The Lord answered him, ‘Yes, go and attack the Philistines. I will certainly help you to win against them.’"
     },
     {
       "verse": "19",
-      "text": "So David asked the Lord, ‘Should I go and attack the Philistines? Will you put them under my power?’ The Lord answered him, ‘Yes, go and attack the Philistines. I will certainly help you to win against them.’"
+      "text": "So David asked the Lord, ‘Should I go and attack the Philistines? Will you put them under my power?’The Lord answered him, ‘Yes, go and attack the Philistines. I will certainly help you to win against them.’"
     },
     {
       "verse": "20",
-      "text": "So David went to Baal Perazim. He won the fight against the Philistines in that place. He said, ‘The Lord has swept away my enemy like a flood of water.’ So they called that place ‘Baal Perazim’. Baal Perazim means, ‘The Lord sweeps away’."
+      "text": "So David went to Baal Perazim. He won the fight against the Philistines in that place. He said, ‘The Lord has swept away my enemy like a flood of water.’ So they called that place ‘Baal Perazim’."
     },
     {
       "verse": "21",
@@ -546,7 +546,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "So David did as the Lord had commanded him to do. His men chased the Philistines all the way from Gibeon to Gezer. Print... Use screen font size Show All Comments 2 Samuel 42 Samuel 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So David did as the Lord had commanded him to do. His men chased the Philistines all the way from Gibeon to Gezer."
     }
   ],
   "6": [
@@ -568,7 +568,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "David and all Israel's people were singing and dancing with all their strength to praise the Lord. They made music with harps, lyres, tambourines, shakers and cymbals. These things all make music."
+      "text": "David and all Israel's people were singing and dancing with all their strength to praise the Lord. They made music with harps, lyres, tambourines, shakers and cymbals."
     },
     {
       "verse": "6",
@@ -576,11 +576,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord was very angry with Uzzah because he did not respect God's rules. He immediately knocked Uzzah down to the ground. Uzzah died there, beside the Covenant Box. Uzzah showed that he did not respect God's rules. Only Levites could touch the Covenant Box."
+      "text": "The Lord was very angry with Uzzah because he did not respect God's rules. He immediately knocked Uzzah down to the ground. Uzzah died there, beside the Covenant Box."
     },
     {
       "verse": "8",
-      "text": "David was angry because the Lord had punished Uzzah. So he called that place ‘Perez Uzzah’. That is still its name today. Perez Uzzah’ means ‘punishment of Uzzah’."
+      "text": "David was angry because the Lord had punished Uzzah. So he called that place ‘Perez Uzzah’. That is still its name today."
     },
     {
       "verse": "9",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "People told King David, ‘The Lord has blessed Obed-Edom's family and everything that belongs to him, because of the Covenant Box.’ So David went back to Obed-Edom's house. He was now happy to bring the Covenant Box from there to the City of David."
+      "text": "People told King David, ‘The Lord has blessed Obed-Edom's family and everything that belongs to him, because of the Covenant Box.’So David went back to Obed-Edom's house. He was now happy to bring the Covenant Box from there to the City of David."
     },
     {
       "verse": "13",
@@ -608,7 +608,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He and all the Israelites brought the Lord's Covenant Box to Jerusalem. They shouted and they made a loud noise with trumpets. An ephod was a small coat that the priests wore."
+      "text": "He and all the Israelites brought the Lord's Covenant Box to Jerusalem. They shouted and they made a loud noise with trumpets."
     },
     {
       "verse": "16",
@@ -640,7 +640,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Saul's daughter Michal gave birth to no children all her life. Print... Use screen font size Show All Comments 2 Samuel 52 Samuel 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Saul's daughter Michal gave birth to no children all her life."
     }
   ],
   "7": [
@@ -662,7 +662,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "‘Go and tell my servant David, “The Lord says this: Do not think that you are the right man to build a house for me to live in."
+      "text": "‘Go and tell my servant David,“The Lord says this: Do not think that you are the right man to build a house for me to live in."
     },
     {
       "verse": "6",
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "from the time that I chose leaders to rule my people Israel. But now I will keep you safe from all your enemies. I, the Lord, say to you, David: I will give you descendants who will rule as kings after you. That will be the royal house that I build for you!"
+      "text": "from the time that I chose leaders to rule my people Israel. But now I will keep you safe from all your enemies.I, the Lord, say to you, David: I will give you descendants who will rule as kings after you. That will be the royal house that I build for you!"
     },
     {
       "verse": "12",
@@ -710,11 +710,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Nathan told David the whole message that God had shown to him. David prays"
+      "text": "Nathan told David the whole message that God had shown to him."
     },
     {
       "verse": "18",
-      "text": "Then King David went into the Lord's tent. He sat down and he prayed to the Lord. David went into the special tent where the Covenant Box was. He said, ‘Almighty Lord, I am not a special person and my family is not special. You have helped me very much and I do not deserve it."
+      "text": "Then King David went into the Lord's tent. He sat down and he prayed to the Lord.He said, ‘Almighty Lord, I am not a special person and my family is not special. You have helped me very much and I do not deserve it."
     },
     {
       "verse": "19",
@@ -758,7 +758,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "I pray that you will be pleased to bless my family and my descendants. Then we will serve you faithfully for ever. Almighty Lord, you have promised to do this. So I know that you will continue to bless my descendants for ever.’ Print... Use screen font size Show All Comments 2 Samuel 62 Samuel 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that you will be pleased to bless my family and my descendants. Then we will serve you faithfully for ever. Almighty Lord, you have promised to do this. So I know that you will continue to bless my descendants for ever.’"
     }
   ],
   "8": [
@@ -816,7 +816,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He put groups of his soldiers in every part of Edom's land, so that David had authority over all the Edomites. The Lord helped David to win all the battles that he fought. David's officers"
+      "text": "He put groups of his soldiers in every part of Edom's land, so that David had authority over all the Edomites. The Lord helped David to win all the battles that he fought."
     },
     {
       "verse": "15",
@@ -832,7 +832,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Jehoiada's son Benaiah was the leader of David's personal guards. David's sons served as priests. David's personal guards (bodyguards) were men who belonged to the Kerethite and Pelethite people. David belonged to Judah's tribe, so his family could not be priests. Only Aaron's descendants could be priests. They belonged to Levi's tribe. Perhaps ‘priest’ here means that they helped David in a special way. Print... Use screen font size Show All Comments 2 Samuel 72 Samuel 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jehoiada's son Benaiah was the leader of David's personal guards. David's sons served as priests."
     }
   ],
   "9": [
@@ -842,15 +842,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Saul's family had a servant called Ziba. So they asked him to come to see David. The king said to him, ‘Are you Ziba?’ Ziba replied, ‘Yes, I am your servant.’"
+      "text": "Saul's family had a servant called Ziba. So they asked him to come to see David. The king said to him, ‘Are you Ziba?’Ziba replied, ‘Yes, I am your servant.’ Ziba replied, ‘Yes, I am your servant.’"
     },
     {
       "verse": "3",
-      "text": "The king asked him, ‘Is there anyone from Saul's family who is still alive? I want to be kind to them because of God's faithful love for his people.’ Jonathan was the son of King Saul. David and Jonathan had been very good friends. See 1 Samuel David had promised to show love to Jonathan's family, and now David remembered this promise. Ziba replied, ‘One of Jonathan's sons still lives. But both his feet are weak so that he cannot walk properly.’"
+      "text": "The king asked him, ‘Is there anyone from Saul's family who is still alive? I want to be kind to them because of God's faithful love for his people.’Ziba replied, ‘One of Jonathan's sons still lives. But both his feet are weak so that he cannot walk properly.’ Ziba replied, ‘One of Jonathan's sons still lives. But both his feet are weak so that he cannot walk properly.’"
     },
     {
       "verse": "4",
-      "text": "The king asked Ziba, ‘Where is he?’ Ziba answered, ‘He lives in the house of Ammiel's son, Makir, in Lo-Debar.’"
+      "text": "The king asked Ziba, ‘Where is he?’Ziba answered, ‘He lives in the house of Ammiel's son, Makir, in Lo-Debar.’ Ziba answered, ‘He lives in the house of Ammiel's son, Makir, in Lo-Debar.’"
     },
     {
       "verse": "5",
@@ -858,7 +858,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Then Jonathan's son Mephibosheth, grandson of Saul, came to David. He bent his body down to the ground to respect David. David said, ‘Mephibosheth!’ Mephibosheth replied, ‘Yes, I am your servant.’"
+      "text": "Then Jonathan's son Mephibosheth, grandson of Saul, came to David. He bent his body down to the ground to respect David.David said, ‘Mephibosheth!’Mephibosheth replied, ‘Yes, I am your servant.’ David said, ‘Mephibosheth!’ Mephibosheth replied, ‘Yes, I am your servant.’"
     },
     {
       "verse": "7",
@@ -886,17 +886,17 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "That is how Mephibosheth came to live in Jerusalem. He could always eat his meals at the king's table. He had two weak feet, so he could not walk properly. Print... Use screen font size Show All Comments 2 Samuel 82 Samuel 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is how Mephibosheth came to live in Jerusalem. He could always eat his meals at the king's table. He had two weak feet, so he could not walk properly."
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "Some time later, the king of the Ammonites died. His son Hanun became the new king."
+      "text": "Some time later, the king of the Ammonites died. His son Hanun became the new king. So David sent some of his officers to give a message to Hanun. David wanted to tell Hanun that he was sorry that Nahash had died. David's officers took his message to the land of the Ammonites."
     },
     {
       "verse": "2",
-      "text": "David thought, ‘I will be kind to Hanun, because his father Nahash was kind to me.’ The Ammonites were the descendants of Ben-Ammi who was the grandson of Lot. See Genesis They were the Israelites' enemies. The country of Ammon was on the east side of Israel, across the Jordan River. So David sent some of his officers to give a message to Hanun. David wanted to tell Hanun that he was sorry that Nahash had died. David's officers took his message to the land of the Ammonites."
+      "text": "David thought, ‘I will be kind to Hanun, because his father Nahash was kind to me.’So David sent some of his officers to give a message to Hanun. David wanted to tell Hanun that he was sorry that Nahash had died. David's officers took his message to the land of the Ammonites."
     },
     {
       "verse": "3",
@@ -904,7 +904,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "So Hanun took hold of David's officers. He cut off half the hair from their beards. He also cut off the lower half of their clothes up to their hips. Then he sent them away. The hip is the top of a person's leg, where it joins their body."
+      "text": "So Hanun took hold of David's officers. He cut off half the hair from their beards. He also cut off the lower half of their clothes up to their hips. Then he sent them away."
     },
     {
       "verse": "5",
@@ -964,13 +964,13 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "All the other kings who were under Hadadezer's authority saw that Israel had won the battle. So they made an agreement with Israel that they would not fight against them any more. They agreed to serve the Israelites. After that, the Syrians were afraid to help the Ammonites any more. Print... Use screen font size Show All Comments 2 Samuel 92 Samuel 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the other kings who were under Hadadezer's authority saw that Israel had won the battle. So they made an agreement with Israel that they would not fight against them any more. They agreed to serve the Israelites. After that, the Syrians were afraid to help the Ammonites any more."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "In the spring, David sent out his army to attack the Ammonites. That was the time of year when kings go out to fight battles. Joab led the whole Israelite army, together with his officers. They attacked the Ammonites, and they won the fight against them. Israel's army made their camp all around Rabbah city. But David had stayed in Jerusalem. Kings did not want to fight wars in the winter. It was wet and cold. Travel was difficult."
+      "text": "In the spring, David sent out his army to attack the Ammonites. That was the time of year when kings go out to fight battles. Joab led the whole Israelite army, together with his officers. They attacked the Ammonites, and they won the fight against them. Israel's army made their camp all around Rabbah city. But David had stayed in Jerusalem."
     },
     {
       "verse": "2",
@@ -978,7 +978,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "David sent a servant to ask who she was. The servant told him, ‘She is Eliam's daughter, Bathsheba. She is the wife of Uriah the Hittite.’ Many houses had flat roofs."
+      "text": "David sent a servant to ask who she was. The servant told him, ‘She is Eliam's daughter, Bathsheba. She is the wife of Uriah the Hittite.’"
     },
     {
       "verse": "4",
@@ -1034,7 +1034,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "When some of the Ammonite soldiers came out of the city to fight Joab's army, they killed some of David's men. Uriah the Hittite was one of the men who died there. Joab tells David that Uriah is dead"
+      "text": "When some of the Ammonite soldiers came out of the city to fight Joab's army, they killed some of David's men. Uriah the Hittite was one of the men who died there."
     },
     {
       "verse": "18",
@@ -1074,7 +1074,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The time for Uriah's wife to weep for her husband came to an end. Then David sent some of his men to bring her to his palace. She became David's wife. Later, she gave birth to a son. But the Lord was not pleased with David because of the bad things that David had done. Print... Use screen font size Show All Comments 2 Samuel 102 Samuel 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The time for Uriah's wife to weep for her husband came to an end. Then David sent some of his men to bring her to his palace. She became David's wife. Later, she gave birth to a son. But the Lord was not pleased with David because of the bad things that David had done."
     }
   ],
   "12": [
@@ -1088,7 +1088,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But the poor man had only one little female lamb. He had bought it and he had taken care of it. It had grown up with his own children. It ate his bits of food and it drank water from his cup. It even slept while he held it. It was like a daughter for him. Nathan was a prophet who spoke God's messages."
+      "text": "But the poor man had only one little female lamb. He had bought it and he had taken care of it. It had grown up with his own children. It ate his bits of food and it drank water from his cup. It even slept while he held it. It was like a daughter for him."
     },
     {
       "verse": "4",
@@ -1128,7 +1128,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then David said to Nathan, ‘I have sinned against the Lord.’ Nathan replied, ‘The Lord has forgiven your sin. He will not punish you with death."
+      "text": "Then David said to Nathan, ‘I have sinned against the Lord.’Nathan replied, ‘The Lord has forgiven your sin. He will not punish you with death."
     },
     {
       "verse": "14",
@@ -1136,7 +1136,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Nathan went home. David's son diesAfter that, the Lord caused the child of Uriah's wife to become very ill."
+      "text": "Then Nathan went home.After that, the Lord caused the child of Uriah's wife to become very ill."
     },
     {
       "verse": "16",
@@ -1152,7 +1152,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But David saw that his officers were speaking secretly to each other. So he realized that the child had died. He asked them, ‘Is the child dead?’ They replied, ‘Yes, he is dead.’"
+      "text": "But David saw that his officers were speaking secretly to each other. So he realized that the child had died. He asked them, ‘Is the child dead?’They replied, ‘Yes, he is dead.’ They replied, ‘Yes, he is dead.’"
     },
     {
       "verse": "20",
@@ -1176,7 +1176,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "so he sent a message to David with Nathan, the prophet. He told David to call his son Jedidiah, because the Lord loved him. Jedidiah means ‘The Lord loves him’. David wins Rabbah"
+      "text": "so he sent a message to David with Nathan, the prophet. He told David to call his son Jedidiah, because the Lord loved him."
     },
     {
       "verse": "26",
@@ -1192,7 +1192,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "So David brought all the soldiers of the army together. He led them to Rabbah. They attacked the city and they won against it."
+      "text": "So David brought all the soldiers of the army together. He led them to Rabbah. They attacked the city and they won against it. Then David and all his army returned to Jerusalem."
     },
     {
       "verse": "30",
@@ -1200,7 +1200,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "He brought the people out from the city to do hard work for him. He made them cut wood with saws, and use iron tools and axes. He also made them work at the brick ovens. He did the same thing to the people of all the other Ammonite cities. Then David and all his army returned to Jerusalem. Print... Use screen font size Show All Comments 2 Samuel 112 Samuel 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He brought the people out from the city to do hard work for him. He made them cut wood with saws, and use iron tools and axes. He also made them work at the brick ovens. He did the same thing to the people of all the other Ammonite cities.Then David and all his army returned to Jerusalem."
     }
   ],
   "13": [
@@ -1210,15 +1210,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Amnon was very upset because he loved his sister Tamar so much. He became ill because of this. Tamar had never had sex with any man, so Amnon knew that it would be difficult to get near her. David was the father of both Tamar and Amnon, but they had different mothers. So Tamar was Amnon's half-sister."
+      "text": "Amnon was very upset because he loved his sister Tamar so much. He became ill because of this. Tamar had never had sex with any man, so Amnon knew that it would be difficult to get near her."
     },
     {
       "verse": "3",
-      "text": "Amnon had a friend called Jonadab. He was the son of David's brother, Shimeah. Jonadab was a clever man."
+      "text": "Amnon had a friend called Jonadab. He was the son of David's brother, Shimeah. Jonadab was a clever man. Amnon said to him, ‘I love Tamar, my brother Absalom's sister.’"
     },
     {
       "verse": "4",
-      "text": "He said to Amnon, ‘You are the king's son! So why do you seem so sad every morning? Tell me about your trouble.’ Amnon said to him, ‘I love Tamar, my brother Absalom's sister.’"
+      "text": "He said to Amnon, ‘You are the king's son! So why do you seem so sad every morning? Tell me about your trouble.’Amnon said to him, ‘I love Tamar, my brother Absalom's sister.’"
     },
     {
       "verse": "5",
@@ -1242,7 +1242,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then Amnon said to Tamar, ‘Bring the food here into my bedroom. Then you can use your own hand to feed me.’ So Tamar took the cakes that she had made. She brought them to Amnon in his bedroom."
+      "text": "Then Amnon said to Tamar, ‘Bring the food here into my bedroom. Then you can use your own hand to feed me.’So Tamar took the cakes that she had made. She brought them to Amnon in his bedroom."
     },
     {
       "verse": "11",
@@ -1266,7 +1266,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "But Tamar replied, ‘No, I will not go! If you send me away, that would be even worse. It would be more evil that what you have already done to me.’ But Amnon refused to listen to her."
+      "text": "But Tamar replied, ‘No, I will not go! If you send me away, that would be even worse. It would be more evil that what you have already done to me.’But Amnon refused to listen to her."
     },
     {
       "verse": "17",
@@ -1282,7 +1282,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When her brother Absalom saw her, he said, ‘Has your brother Amnon done this to you? Now be quiet. Remember that he is your brother. So do not be too upset.’ After that, Tamar lived in her brother Absalom's house. She was sad and lonely."
+      "text": "When her brother Absalom saw her, he said, ‘Has your brother Amnon done this to you? Now be quiet. Remember that he is your brother. So do not be too upset.’After that, Tamar lived in her brother Absalom's house. She was sad and lonely. After that, Tamar lived in her brother Absalom's house. She was sad and lonely."
     },
     {
       "verse": "21",
@@ -1290,7 +1290,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But Absalom would not say anything to Amnon, good or bad. He hated Amnon because he had brought shame on his sister, Tamar. Absalom kills Amnon"
+      "text": "But Absalom would not say anything to Amnon, good or bad. He hated Amnon because he had brought shame on his sister, Tamar."
     },
     {
       "verse": "23",
@@ -1302,11 +1302,11 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "King David replied to Absalom, ‘No, my son, we should not all go. It would cause you too much trouble.’ Absalom asked him again, but the king still refused to go. Instead, he asked God to bless Absalom."
+      "text": "King David replied to Absalom, ‘No, my son, we should not all go. It would cause you too much trouble.’Absalom asked him again, but the king still refused to go. Instead, he asked God to bless Absalom. Absalom asked him again, but the king still refused to go. Instead, he asked God to bless Absalom."
     },
     {
       "verse": "26",
-      "text": "So Absalom said, ‘If you will not come with me, please let my brother Amnon come.’ The king said, ‘Why do you want him to go with you?’"
+      "text": "So Absalom said, ‘If you will not come with me, please let my brother Amnon come.’The king said, ‘Why do you want him to go with you?’"
     },
     {
       "verse": "27",
@@ -1338,7 +1338,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "While this was happening, Absalom had run away. There was an officer standing on the wall of Jerusalem to watch. When he looked, he saw a big group of people who were coming from the west. They were coming down the hill on the road from Horonaim. He went to the king and he told him the news."
+      "text": "While this was happening, Absalom had run away.There was an officer standing on the wall of Jerusalem to watch. When he looked, he saw a big group of people who were coming from the west. They were coming down the hill on the road from Horonaim. He went to the king and he told him the news. There was an officer standing on the wall of Jerusalem to watch. When he looked, he saw a big group of people who were coming from the west. They were coming down the hill on the road from Horonaim. He went to the king and he told him the news."
     },
     {
       "verse": "35",
@@ -1358,7 +1358,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "By this time, King David had stopped being so upset about Amnon's death. He wanted very much to see Absalom again. Print... Use screen font size Show All Comments 2 Samuel 122 Samuel 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "By this time, King David had stopped being so upset about Amnon's death. He wanted very much to see Absalom again."
     }
   ],
   "14": [
@@ -1380,7 +1380,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The king asked her, ‘What is your trouble?’ In those days, the king was like a judge. People could go to him if they had a difficult problem. She said, ‘My husband is dead, sir, and I am a widow."
+      "text": "The king asked her, ‘What is your trouble?’She said, ‘My husband is dead, sir, and I am a widow."
     },
     {
       "verse": "6",
@@ -1404,11 +1404,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then the woman said, ‘Sir, please stop my relative from punishing my son with death. I do not want this son to die as well as my other son. Please promise me in the name of the Lord your God that it will not happen.’ The king replied, ‘As surely as the Lord lives, I promise that nobody will touch even one hair of your son's head.’"
+      "text": "Then the woman said, ‘Sir, please stop my relative from punishing my son with death. I do not want this son to die as well as my other son. Please promise me in the name of the Lord your God that it will not happen.’The king replied, ‘As surely as the Lord lives, I promise that nobody will touch even one hair of your son's head.’ The king replied, ‘As surely as the Lord lives, I promise that nobody will touch even one hair of your son's head.’"
     },
     {
       "verse": "12",
-      "text": "Then the woman said, ‘Please sir, there is one other thing that I want to tell you.’ King David said, ‘Tell me.’"
+      "text": "Then the woman said, ‘Please sir, there is one other thing that I want to tell you.’King David said, ‘Tell me.’ King David said, ‘Tell me.’"
     },
     {
       "verse": "13",
@@ -1432,11 +1432,11 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then the king said to the woman, ‘Now I want to ask you a question. You must not hide the truth from me.’ She replied, ‘Ask me anything, sir.’"
+      "text": "Then the king said to the woman, ‘Now I want to ask you a question. You must not hide the truth from me.’She replied, ‘Ask me anything, sir.’ She replied, ‘Ask me anything, sir.’"
     },
     {
       "verse": "19",
-      "text": "The king asked her, ‘Is it Joab who has told you to do this?’ The woman answered, ‘My lord the king, as surely as you live, I cannot hide the truth from you. Yes, it was your servant Joab who told me what to do. He gave me the words to say."
+      "text": "The king asked her, ‘Is it Joab who has told you to do this?’The woman answered, ‘My lord the king, as surely as you live, I cannot hide the truth from you. Yes, it was your servant Joab who told me what to do. He gave me the words to say."
     },
     {
       "verse": "20",
@@ -1448,15 +1448,15 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Joab bent his body down low with his face towards the ground. He thanked the king. He said, ‘Now I know that you are pleased with me. You have agreed to do what I have asked you to do.’ Joab brings Absalom back to Jerusalem"
+      "text": "Joab bent his body down low with his face towards the ground. He thanked the king. He said, ‘Now I know that you are pleased with me. You have agreed to do what I have asked you to do.’"
     },
     {
       "verse": "23",
-      "text": "Then Joab went to Geshur. He brought Absalom back to Jerusalem."
+      "text": "Then Joab went to Geshur. He brought Absalom back to Jerusalem. So Absalom did not go to see the king. Instead, he went to live in his own house."
     },
     {
       "verse": "24",
-      "text": "But the king said, ‘Absalom must go to live in his own house. I do not want him to come to see me.’ So Absalom did not go to see the king. Instead, he went to live in his own house."
+      "text": "But the king said, ‘Absalom must go to live in his own house. I do not want him to come to see me.’So Absalom did not go to see the king. Instead, he went to live in his own house."
     },
     {
       "verse": "25",
@@ -1492,7 +1492,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "So Joab went to the king. He told the king what Absalom had said. King David then sent his men to bring Absalom to him. When Absalom arrived, he bent his body down low in front of the king, with his face towards the ground. The king was happy and he kissed Absalom. Print... Use screen font size Show All Comments 2 Samuel 132 Samuel 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Joab went to the king. He told the king what Absalom had said. King David then sent his men to bring Absalom to him. When Absalom arrived, he bent his body down low in front of the king, with his face towards the ground. The king was happy and he kissed Absalom."
     }
   ],
   "15": [
@@ -1538,11 +1538,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "200 men had gone with Absalom from Jerusalem. He had asked them to go with him as his friends. They trusted him and they did not know about his ideas."
+      "text": "men had gone with Absalom from Jerusalem. He had asked them to go with him as his friends. They trusted him and they did not know about his ideas."
     },
     {
       "verse": "12",
-      "text": "Absalom offered his sacrifices as he had promised to do. But at the same time he sent men to fetch Ahithophel from Giloh, where he lived. Ahithophel was King David's advisor. More and more people agreed to join Absalom and turn against David. So Absalom was becoming more powerful. David runs away from Jerusalem"
+      "text": "Absalom offered his sacrifices as he had promised to do. But at the same time he sent men to fetch Ahithophel from Giloh, where he lived. Ahithophel was King David's advisor. More and more people agreed to join Absalom and turn against David. So Absalom was becoming more powerful."
     },
     {
       "verse": "13",
@@ -1610,7 +1610,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "So Zadok and Abiathar took the Covenant Box back into Jerusalem. They stayed there. David sends Hushai to Jerusalem"
+      "text": "So Zadok and Abiathar took the Covenant Box back into Jerusalem. They stayed there."
     },
     {
       "verse": "30",
@@ -1618,7 +1618,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Someone told David that his advisor, Ahithophel, had now joined with Absalom and his men. So David prayed, ‘Lord, please cause Ahithophel to give them foolish advice.’ The Mount of Olives is on the east side of Jerusalem."
+      "text": "Someone told David that his advisor, Ahithophel, had now joined with Absalom and his men. So David prayed, ‘Lord, please cause Ahithophel to give them foolish advice.’"
     },
     {
       "verse": "32",
@@ -1638,29 +1638,29 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Their two sons, Ahimaaz and Jonathan, are with them. Send them to me to tell me any news that you hear.’ This showed that Hushai was very upset."
+      "text": "Their two sons, Ahimaaz and Jonathan, are with them. Send them to me to tell me any news that you hear.’"
     },
     {
       "verse": "37",
-      "text": "So David's friend Hushai arrived at Jerusalem at the same time that Absalom was coming into the city. Print... Use screen font size Show All Comments 2 Samuel 142 Samuel 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So David's friend Hushai arrived at Jerusalem at the same time that Absalom was coming into the city."
     }
   ],
   "16": [
     {
       "verse": "1",
-      "text": "When David had passed beyond the top of the Mount of Olives, he met Mephibosheth's servant Ziba. Ziba was waiting there for him with two donkeys. The donkeys were ready for people to ride them. They also carried 200 loaves of bread, 100 blocks of raisins, 100 blocks of figs and a leather bag of wine. Ziba looked after all Mephibosheth's land. See 2 Samuel"
+      "text": "When David had passed beyond the top of the Mount of Olives, he met Mephibosheth's servant Ziba. Ziba was waiting there for him with two donkeys. The donkeys were ready for people to ride them. They also carried 200 loaves of bread, 100 blocks of raisins, 100 blocks of figs and a leather bag of wine."
     },
     {
       "verse": "2",
-      "text": "The king asked Ziba, ‘Why have you brought all these things?’ Ziba answered, ‘The donkeys are for the king's family to ride. The bread and the fruit are for the young men to eat. The wine will help people who become weak when you travel through the desert.’"
+      "text": "The king asked Ziba, ‘Why have you brought all these things?’Ziba answered, ‘The donkeys are for the king's family to ride. The bread and the fruit are for the young men to eat. The wine will help people who become weak when you travel through the desert.’ Ziba answered, ‘The donkeys are for the king's family to ride. The bread and the fruit are for the young men to eat. The wine will help people who become weak when you travel through the desert.’"
     },
     {
       "verse": "3",
-      "text": "The king asked, ‘Where is your master's grandson?’ Mephibosheth was King Saul's grandson. Ziba answered, ‘He is staying in Jerusalem. He thinks that the Israelites will now give back to him his grandfather Saul's kingdom.’"
+      "text": "The king asked, ‘Where is your master's grandson?’Ziba answered, ‘He is staying in Jerusalem. He thinks that the Israelites will now give back to him his grandfather Saul's kingdom.’ Ziba answered, ‘He is staying in Jerusalem. He thinks that the Israelites will now give back to him his grandfather Saul's kingdom.’"
     },
     {
       "verse": "4",
-      "text": "Then the king said to Ziba, ‘Everything that Mephibosheth had will now belong to you.’ Ziba said, ‘Thank you, sir. I hope that you will always be pleased with me.’ Shimei curses David"
+      "text": "Then the king said to Ziba, ‘Everything that Mephibosheth had will now belong to you.’Ziba said, ‘Thank you, sir. I hope that you will always be pleased with me.’ Ziba said, ‘Thank you, sir. I hope that you will always be pleased with me.’"
     },
     {
       "verse": "5",
@@ -1676,7 +1676,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Lord has punished you because of all the people that you killed from Saul's family. You made yourself king, instead of Saul. But now the Lord has given the kingdom to your son, Absalom. All this trouble has come to you because you are a murderer!’ Bahurim was east of the Mount of Olives."
+      "text": "The Lord has punished you because of all the people that you killed from Saul's family. You made yourself king, instead of Saul. But now the Lord has given the kingdom to your son, Absalom. All this trouble has come to you because you are a murderer!’"
     },
     {
       "verse": "9",
@@ -1700,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "When King David and all the people who were with him reached the Jordan River, they were tired and weak. So they rested there. Ahithophel gives advice to Absalom"
+      "text": "When King David and all the people who were with him reached the Jordan River, they were tired and weak. So they rested there."
     },
     {
       "verse": "15",
@@ -1736,7 +1736,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "In those days, people thought that Ahithophel's words were as good as a message from God. So Absalom trusted Ahithophel as his advisor, as David had done too. Print... Use screen font size Show All Comments 2 Samuel 152 Samuel 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "In those days, people thought that Ahithophel's words were as good as a message from God. So Absalom trusted Ahithophel as his advisor, as David had done too."
     }
   ],
   "17": [
@@ -1802,7 +1802,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "So now quickly send a report to David. Warn him that he must not stay tonight at the place in the desert where the road crosses the river. Instead, he must cross the Jordan River immediately, together with all the people who are with him. If not, Absalom and his army may catch them all and destroy them.’ Jonathan and Ahimaaz take the message to David"
+      "text": "So now quickly send a report to David. Warn him that he must not stay tonight at the place in the desert where the road crosses the river. Instead, he must cross the Jordan River immediately, together with all the people who are with him. If not, Absalom and his army may catch them all and destroy them.’"
     },
     {
       "verse": "17",
@@ -1814,11 +1814,11 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "His wife took a lid and she put it over the top of the well. Then she put some grain on it. Nobody knew that the men were hiding there. Jonathan and Ahimaaz were sons of the priests, Zadok and Abiathar. En Rogel was a village near Jerusalem."
+      "text": "His wife took a lid and she put it over the top of the well. Then she put some grain on it. Nobody knew that the men were hiding there."
     },
     {
       "verse": "20",
-      "text": "Absalom's men came to the house. They asked the woman, ‘Where are Ahimaaz and Jonathan?’ The woman answered, ‘They went across the stream.’ Absalom's men looked everywhere for them, but they did not find them. So they returned to Jerusalem."
+      "text": "Absalom's men came to the house. They asked the woman, ‘Where are Ahimaaz and Jonathan?’The woman answered, ‘They went across the stream.’ Absalom's men looked everywhere for them, but they did not find them. So they returned to Jerusalem. The woman answered, ‘They went across the stream.’ Absalom's men looked everywhere for them, but they did not find them. So they returned to Jerusalem."
     },
     {
       "verse": "21",
@@ -1826,11 +1826,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "So David and all the people who were with him went across the Jordan River. When dawn came, they had all gone across to the other side. Ahithophel kills himself"
+      "text": "So David and all the people who were with him went across the Jordan River. When dawn came, they had all gone across to the other side."
     },
     {
       "verse": "23",
-      "text": "Ahithophel realized that Absalom had not agreed to his advice. So he got on his donkey and he went home to his own town. He told his family what he needed to tell them. Then he hanged himself. He died and his family buried him in his father's grave. Three friends help David"
+      "text": "Ahithophel realized that Absalom had not agreed to his advice. So he got on his donkey and he went home to his own town. He told his family what he needed to tell them. Then he hanged himself. He died and his family buried him in his father's grave."
     },
     {
       "verse": "24",
@@ -1854,7 +1854,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "honey, cream, sheep and cheese made from cows' milk. They said, ‘The people have travelled through the desert. So they must be tired, thirsty and hungry.’ Print... Use screen font size Show All Comments 2 Samuel 162 Samuel 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "honey, cream, sheep and cheese made from cows' milk. They said, ‘The people have travelled through the desert. So they must be tired, thirsty and hungry.’"
     }
   ],
   "18": [
@@ -1920,15 +1920,15 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then Joab made a sound with his trumpet to stop the battle. So his soldiers stopped chasing after Israel's soldiers."
+      "text": "Then Joab made a sound with his trumpet to stop the battle. So his soldiers stopped chasing after Israel's soldiers. All the Israelite soldiers ran back to their homes."
     },
     {
       "verse": "17",
-      "text": "They took Absalom's dead body and they threw it into a deep hole in the forest. They made a big heap of stones over the body. All the Israelite soldiers ran back to their homes."
+      "text": "They took Absalom's dead body and they threw it into a deep hole in the forest. They made a big heap of stones over the body.All the Israelite soldiers ran back to their homes."
     },
     {
       "verse": "18",
-      "text": "While Absalom was alive, he had built a tall pillar in the King's Valley. He built it so that people would remember him. He thought, ‘I have no son, so my family's name will not continue.’ He put his own name on the pillar, so people still call it Absalom's Pillar. David hears about Absalom's death"
+      "text": "While Absalom was alive, he had built a tall pillar in the King's Valley. He built it so that people would remember him. He thought, ‘I have no son, so my family's name will not continue.’ He put his own name on the pillar, so people still call it Absalom's Pillar."
     },
     {
       "verse": "19",
@@ -1944,27 +1944,27 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Zadok's son Ahimaaz spoke to Joab again. He said, ‘I am not afraid of what may happen to me. Please let me run after the Ethiopian man.’ But Joab replied, ‘Why do you want to go as well? The king will not give you any gift for this news.’"
+      "text": "Zadok's son Ahimaaz spoke to Joab again. He said, ‘I am not afraid of what may happen to me. Please let me run after the Ethiopian man.’But Joab replied, ‘Why do you want to go as well? The king will not give you any gift for this news.’ But Joab replied, ‘Why do you want to go as well? The king will not give you any gift for this news.’"
     },
     {
       "verse": "23",
-      "text": "Ahimaaz said, ‘But I do want to go, whatever happens.’ So Joab said, ‘Run after him, then!’ So Ahimaaz ran fast along a road in the Jordan Valley. He arrived near Mahanaim before the Ethiopian man."
+      "text": "Ahimaaz said, ‘But I do want to go, whatever happens.’So Joab said, ‘Run after him, then!’So Ahimaaz ran fast along a road in the Jordan Valley. He arrived near Mahanaim before the Ethiopian man. So Joab said, ‘Run after him, then!’ So Ahimaaz ran fast along a road in the Jordan Valley. He arrived near Mahanaim before the Ethiopian man."
     },
     {
       "verse": "24",
-      "text": "David was sitting between the two gates of Mahanaim city. A man went up to the top of the wall, on the roof above the gate. He was watching the road. As he looked, he saw a man who was running towards the city. He was running alone."
+      "text": "David was sitting between the two gates of Mahanaim city. A man went up to the top of the wall, on the roof above the gate. He was watching the road. As he looked, he saw a man who was running towards the city. He was running alone. The king said, ‘If the man is alone, he is bringing good news.’ The man who was running towards the city came much nearer."
     },
     {
       "verse": "25",
-      "text": "So the man on the wall shouted a message to the king, to say what he had seen. The city wall would be very thick. There would be two gates, one at the outside edge, and one at the inside edge. The king said, ‘If the man is alone, he is bringing good news.’ The man who was running towards the city came much nearer."
+      "text": "So the man on the wall shouted a message to the king, to say what he had seen.The king said, ‘If the man is alone, he is bringing good news.’ The man who was running towards the city came much nearer."
     },
     {
       "verse": "26",
-      "text": "Then the man on the wall saw another man who was running towards the city. He called down to the guard at the city's gate, ‘Look! There is another man who is running alone!’ The king said, ‘He will bring good news, too.’"
+      "text": "Then the man on the wall saw another man who was running towards the city. He called down to the guard at the city's gate, ‘Look! There is another man who is running alone!’The king said, ‘He will bring good news, too.’ The king said, ‘He will bring good news, too.’"
     },
     {
       "verse": "27",
-      "text": "The man on the wall said, ‘The first man is running like Zadok's son, Ahimaaz.’ The king said, ‘He is a good man. I am sure that he brings good news.’"
+      "text": "The man on the wall said, ‘The first man is running like Zadok's son, Ahimaaz.’The king said, ‘He is a good man. I am sure that he brings good news.’ The king said, ‘He is a good man. I am sure that he brings good news.’"
     },
     {
       "verse": "28",
@@ -1972,7 +1972,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "The king asked, ‘Is the young man Absalom safe?’ Ahimaaz answered, ‘When Joab sent me, your servant, I saw that many people had come together. There was a lot of noise, but I do not know what was happening.’"
+      "text": "The king asked, ‘Is the young man Absalom safe?’Ahimaaz answered, ‘When Joab sent me, your servant, I saw that many people had come together. There was a lot of noise, but I do not know what was happening.’ Ahimaaz answered, ‘When Joab sent me, your servant, I saw that many people had come together. There was a lot of noise, but I do not know what was happening.’"
     },
     {
       "verse": "30",
@@ -1984,11 +1984,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The king asked the Ethiopian man, ‘Is the young man Absalom safe?’ The man replied, ‘My lord the king, I hope that your enemies and all those who want to hurt you would be as dead as he is!’"
+      "text": "The king asked the Ethiopian man, ‘Is the young man Absalom safe?’The man replied, ‘My lord the king, I hope that your enemies and all those who want to hurt you would be as dead as he is!’ The man replied, ‘My lord the king, I hope that your enemies and all those who want to hurt you would be as dead as he is!’"
     },
     {
       "verse": "33",
-      "text": "The king became very upset. He went upstairs to the room above the gate. He wept loudly. As he went, he cried, ‘My son Absalom! My son, my son Absalom! It would be better if I had died instead of you! Absalom, my son, my son!’ Print... Use screen font size Show All Comments 2 Samuel 172 Samuel 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The king became very upset. He went upstairs to the room above the gate. He wept loudly. As he went, he cried, ‘My son Absalom! My son, my son Absalom! It would be better if I had died instead of you! Absalom, my son, my son!’"
     }
   ],
   "19": [
@@ -2022,7 +2022,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So the king went out from his room. He went to sit by the city's gate. People heard the news, ‘The king is sitting by the gate.’ So they all came there to listen to him. David returns to Jerusalem as kingAt this time, the Israelite soldiers had run back to their own homes."
+      "text": "So the king went out from his room. He went to sit by the city's gate. People heard the news, ‘The king is sitting by the gate.’ So they all came there to listen to him.At this time, the Israelite soldiers had run back to their own homes."
     },
     {
       "verse": "9",
@@ -2046,11 +2046,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Because of this message, all the people of Judah's tribe agreed to serve David as their king. They sent this message to the king: ‘Return to us, together with all your officers.’"
+      "text": "Because of this message, all the people of Judah's tribe agreed to serve David as their king. They sent this message to the king: ‘Return to us, together with all your officers.’ When David arrived at the Jordan River, the people of Judah had come to Gilgal to meet him there. They wanted to help him to cross the river."
     },
     {
       "verse": "15",
-      "text": "So the king left Mahanaim to return to Jerusalem. When David arrived at the Jordan River, the people of Judah had come to Gilgal to meet him there. They wanted to help him to cross the river."
+      "text": "So the king left Mahanaim to return to Jerusalem.When David arrived at the Jordan River, the people of Judah had come to Gilgal to meet him there. They wanted to help him to cross the river."
     },
     {
       "verse": "16",
@@ -2062,7 +2062,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They crossed the river where the water was not deep. They were ready to help the king and his people come across. They were ready to do whatever the king wanted. When Shimei had gone across the Jordan River, he bent down low to the ground in front of the king."
+      "text": "They crossed the river where the water was not deep. They were ready to help the king and his people come across. They were ready to do whatever the king wanted.When Shimei had gone across the Jordan River, he bent down low to the ground in front of the king."
     },
     {
       "verse": "19",
@@ -2070,7 +2070,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "I am your servant. I know that I did a bad thing. So I have come to meet you today. From all the descendants of Joseph, I am the first person to come to meet you here, my lord the king.’ Joseph's descendants here means the tribes in the north part of Israel."
+      "text": "I am your servant. I know that I did a bad thing. So I have come to meet you today. From all the descendants of Joseph, I am the first person to come to meet you here, my lord the king.’"
     },
     {
       "verse": "21",
@@ -2082,7 +2082,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The king made a strong promise to Shimei. He said to Shimei, ‘You will not die because of this.’ David is kind to Mephibosheth"
+      "text": "The king made a strong promise to Shimei. He said to Shimei, ‘You will not die because of this.’"
     },
     {
       "verse": "24",
@@ -2106,11 +2106,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "The king said, ‘You have said enough about this. I have decided that you and Ziba will share the fields that belonged to your grandfather, Saul.’"
+      "text": "The king said, ���You have said enough about this. I have decided that you and Ziba will share the fields that belonged to your grandfather, Saul.’"
     },
     {
       "verse": "30",
-      "text": "Mephibosheth said to the king, ‘That is not important to me. Ziba can take them all. You have returned home safely. That is what makes me happy.’ David and Barzillai"
+      "text": "Mephibosheth said to the king, ‘That is not important to me. Ziba can take them all. You have returned home safely. That is what makes me happy.’"
     },
     {
       "verse": "31",
@@ -2130,7 +2130,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "I am already 80 years old. I can no longer tell what is nice or what is bad. I cannot taste what I eat and drink. I cannot still hear people's voices when they sing. I would only cause trouble to you, my lord the king."
+      "text": "years old. I can no longer tell what is nice or what is bad. I cannot taste what I eat and drink. I cannot still hear people's voices when they sing. I would only cause trouble to you, my lord the king."
     },
     {
       "verse": "36",
@@ -2150,7 +2150,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "The king went across the river to Gilgal. Kimham went with him. All Judah's army and half of Israel's soldiers helped the king to cross the river. Gilgal was about 6 kilometres west of the Jordan River and about 26 kilometres north east of Jerusalem. The men from Israel are angry with the men from Judah"
+      "text": "The king went across the river to Gilgal. Kimham went with him. All Judah's army and half of Israel's soldiers helped the king to cross the river."
     },
     {
       "verse": "41",
@@ -2162,13 +2162,13 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "The men of Israel's tribes replied, ‘In Israel we are ten tribes, and Judah is only one tribe. So he is our king ten times more than he is your king! So why have you tried to insult us? We were the first people to say that we should bring the king back to Jerusalem.’ But the words that the men of Judah spoke were much stronger than the words of the men of Israel. Print... Use screen font size Show All Comments 2 Samuel 182 Samuel 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The men of Israel's tribes replied, ‘In Israel we are ten tribes, and Judah is only one tribe. So he is our king ten times more than he is your king! So why have you tried to insult us? We were the first people to say that we should bring the king back to Jerusalem.’But the words that the men of Judah spoke were much stronger than the words of the men of Israel."
     }
   ],
   "20": [
     {
       "verse": "1",
-      "text": "There was a wicked man there in Gilgal. His name was Sheba. He was Bicri's son, who belonged to Benjamin's tribe. He made a loud noise with a trumpet and then he shouted, ‘Israelite people, we have nothing to do with Jesse's son, David! We do not belong to his kingdom! So we should all return to our homes.’ Sheba was probably a relative of King Saul."
+      "text": "There was a wicked man there in Gilgal. His name was Sheba. He was Bicri's son, who belonged to Benjamin's tribe. He made a loud noise with a trumpet and then he shouted, ‘Israelite people, we have nothing to do with Jesse's son, David! We do not belong to his kingdom! So we should all return to our homes.’"
     },
     {
       "verse": "2",
@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "David returned to his palace in Jerusalem. Then he took the ten slave wives that he had left there to take care of his palace. Now he made them live in their own house, with guards to keep them safe. He gave them everything that they needed, but he did not sleep with them. They lived there on their own. They lived like widows until they died. David sends Amasa to fetch all the men from Judah"
+      "text": "David returned to his palace in Jerusalem. Then he took the ten slave wives that he had left there to take care of his palace. Now he made them live in their own house, with guards to keep them safe. He gave them everything that they needed, but he did not sleep with them. They lived there on their own. They lived like widows until they died."
     },
     {
       "verse": "4",
@@ -2184,7 +2184,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Amasa went to fetch Judah's men, but he did not return in three days. Amasa was the new leader of David's army. He was one of Joab's relatives."
+      "text": "Amasa went to fetch Judah's men, but he did not return in three days."
     },
     {
       "verse": "6",
@@ -2200,11 +2200,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Joab said to Amasa, ‘How are you, my brother?’ He took hold of Amasa's beard with his right hand. He pretended that he wanted to kiss him."
+      "text": "Joab said to Amasa, ‘How are you, my brother?’ He took hold of Amasa's beard with his right hand. He pretended that he wanted to kiss him. Then Joab and his brother Abishai continued to chase after Sheba."
     },
     {
       "verse": "10",
-      "text": "But Amasa did not see the knife in Joab's other hand. Joab pushed the knife into Amasa's stomach. His inside parts poured out onto the ground. He died immediately. Joab did not have to hit him again. Then Joab and his brother Abishai continued to chase after Sheba."
+      "text": "But Amasa did not see the knife in Joab's other hand. Joab pushed the knife into Amasa's stomach. His inside parts poured out onto the ground. He died immediately. Joab did not have to hit him again.Then Joab and his brother Abishai continued to chase after Sheba."
     },
     {
       "verse": "11",
@@ -2228,11 +2228,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Then a wise woman stood on the wall and she shouted to them, ‘Listen! Listen to me! Tell Joab to come near so that I can speak to him!’ The city called Abel Beth Maakah was more than 160 kilometres north of Jerusalem. It was near the city of Dan, which was at the north border of Israel's land."
+      "text": "Then a wise woman stood on the wall and she shouted to them, ‘Listen! Listen to me! Tell Joab to come near so that I can speak to him!’"
     },
     {
       "verse": "17",
-      "text": "So Joab went towards her. The woman asked him, ‘Are you Joab?’ He answered, ‘Yes, I am.’ She said to him, ‘Please listen to what I have to say.’ ‘I am listening, so tell me,’ he replied."
+      "text": "So Joab went towards her. The woman asked him, ‘Are you Joab?’He answered, ‘Yes, I am.’She said to him, ‘Please listen to what I have to say.’‘I am listening, so tell me,’ he replied. He answered, ‘Yes, I am.’ She said to him, ‘Please listen to what I have to say.’ ‘I am listening, so tell me,’ he replied."
     },
     {
       "verse": "18",
@@ -2244,31 +2244,31 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Joab answered her, ‘That is stupid! I would never do that! I am not trying to destroy anything."
+      "text": "Joab answered her, ‘That is stupid! I would never do that! I am not trying to destroy anything. The woman said to Joab, ‘Wait there! I will throw his head to you from the wall.’"
     },
     {
       "verse": "21",
-      "text": "That is not what we want. But there is a man in your city whose name is Sheba. He is Bicri's son and he comes from the hill country of Ephraim. He has turned against King David. If you will give me this one man, I will go away from your city. I will not destroy it.’ The woman said to Joab, ‘Wait there! I will throw his head to you from the wall.’"
+      "text": "That is not what we want. But there is a man in your city whose name is Sheba. He is Bicri's son and he comes from the hill country of Ephraim. He has turned against King David. If you will give me this one man, I will go away from your city. I will not destroy it.’The woman said to Joab, ‘Wait there! I will throw his head to you from the wall.’"
     },
     {
       "verse": "22",
-      "text": "Then the woman spoke to all the people in the city. She told them her wise advice. So they cut off Sheba's head and they threw it off the wall to Joab. Then Joab made a loud noise with his trumpet. So his soldiers went away from the city. Each of them went to his own home. Joab returned to King David in Jerusalem. David's officers"
+      "text": "Then the woman spoke to all the people in the city. She told them her wise advice. So they cut off Sheba's head and they threw it off the wall to Joab.Then Joab made a loud noise with his trumpet. So his soldiers went away from the city. Each of them went to his own home. Joab returned to King David in Jerusalem. Then Joab made a loud noise with his trumpet. So his soldiers went away from the city. Each of them went to his own home. Joab returned to King David in Jerusalem."
     },
     {
       "verse": "23",
-      "text": "Joab was the officer who led all Israel's army. Jehoiada's son Benaiah was the leader of the king's personal guards. The Pelethites and the Kerethites were David's own special guards."
+      "text": "Joab was the officer who led all Israel's army.Jehoiada's son Benaiah was the leader of the king's personal guards. Jehoiada's son Benaiah was the leader of the king's personal guards."
     },
     {
       "verse": "24",
-      "text": "Adoniram ruled over the men who had to work for the king. Ahilud's son Jehoshaphat wrote a report of everything that the king did."
+      "text": "Adoniram ruled over the men who had to work for the king.Ahilud's son Jehoshaphat wrote a report of everything that the king did. Ahilud's son Jehoshaphat wrote a report of everything that the king did."
     },
     {
       "verse": "25",
-      "text": "Sheva was the royal secretary. Zadok and Abiathar were the priests."
+      "text": "Sheva was the royal secretary.Zadok and Abiathar were the priests. Zadok and Abiathar were the priests."
     },
     {
       "verse": "26",
-      "text": "Ira from Jair was David's special priest. Print... Use screen font size Show All Comments 2 Samuel 192 Samuel 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Ira from Jair was David's special priest."
     }
   ],
   "21": [
@@ -2278,7 +2278,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The Gibeonites were not descendants of Israel. They were the only Amorite people who still lived. The Israelites had promised not to kill them. But Saul thought that he should kill them. He thought that this would help Israel and Judah to rule their land. See Joshua Now King David told the Gibeonites to come to speak with him."
+      "text": "The Gibeonites were not descendants of Israel. They were the only Amorite people who still lived. The Israelites had promised not to kill them. But Saul thought that he should kill them. He thought that this would help Israel and Judah to rule their land.Now King David told the Gibeonites to come to speak with him."
     },
     {
       "verse": "3",
@@ -2286,15 +2286,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Gibeonites answered David, ‘We do not want Saul's family to give us money or gold. And it would not be right for us to kill anyone in Israel.’ So David asked them, ‘What do you want me to do for you?’"
+      "text": "The Gibeonites answered David, ‘We do not want Saul's family to give us money or gold. And it would not be right for us to kill anyone in Israel.’So David asked them, ‘What do you want me to do for you?’ So David asked them, ‘What do you want me to do for you?’"
     },
     {
       "verse": "5",
-      "text": "They answered the king, ‘You know that Saul tried to destroy us. That man wanted to kill all of our family who were living in Israel."
+      "text": "They answered the king, ‘You know that Saul tried to destroy us. That man wanted to kill all of our family who were living in Israel. The king said, ‘I will give them to you.’"
     },
     {
       "verse": "6",
-      "text": "So we want you to give us seven of his male descendants. Then we will kill them. We will hang their bodies at the place where people worship the Lord in Gibeah. That was Saul's town, the man that the Lord had chosen to be king.’ The king said, ‘I will give them to you.’"
+      "text": "So we want you to give us seven of his male descendants. Then we will kill them. We will hang their bodies at the place where people worship the Lord in Gibeah. That was Saul's town, the man that the Lord had chosen to be king.’The king said, ‘I will give them to you.’"
     },
     {
       "verse": "7",
@@ -2322,11 +2322,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Now David brought the bones of Saul and Jonathan back from Jabesh Gilead. He also picked up the bones of the seven men that the Gibeonites had killed. See 1 Samuel"
+      "text": "Now David brought the bones of Saul and Jonathan back from Jabesh Gilead. He also picked up the bones of the seven men that the Gibeonites had killed."
     },
     {
       "verse": "14",
-      "text": "People buried the bones of Saul and Jonathan in the grave of Saul's father, Kish. The grave was in Zela, in land that belonged to Benjamin's tribe. The king had told them everything that they should do. After they had done all these things, God answered their prayers for their country. Wars against the Philistines"
+      "text": "People buried the bones of Saul and Jonathan in the grave of Saul's father, Kish. The grave was in Zela, in land that belonged to Benjamin's tribe. The king had told them everything that they should do. After they had done all these things, God answered their prayers for their country."
     },
     {
       "verse": "15",
@@ -2338,7 +2338,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But Zeruiah's son Abishai saved David. Abishai knocked down the Philistine and he killed him. So David's men said very strongly, ‘Our king, you must never again come out with us to fight a battle. You are like Israel's light. We do not want your life to finish.’ This was David's last battle as the leader of the army."
+      "text": "But Zeruiah's son Abishai saved David. Abishai knocked down the Philistine and he killed him. So David's men said very strongly, ‘Our king, you must never again come out with us to fight a battle. You are like Israel's light. We do not want your life to finish.’"
     },
     {
       "verse": "18",
@@ -2358,7 +2358,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Those four Philistines were descendants of Rapha and they lived in Gath. David and his soldiers killed all of them. The descendants of Rapha were all very big men. Print... Use screen font size Show All Comments 2 Samuel 202 Samuel 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Those four Philistines were descendants of Rapha and they lived in Gath. David and his soldiers killed all of them."
     }
   ],
   "22": [
@@ -2368,203 +2368,203 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This is what he sang: ‘The Lord keeps me safe. He is my great rock and my strong place."
+      "text": "This is what he sang:‘The Lord keeps me safe.He is my great rock and my strong place. ‘The Lord keeps me safe. He is my great rock and my strong place."
     },
     {
       "verse": "3",
-      "text": "My God is my high rock. I run to him to hide and be safe. He keeps me safe like a soldier's shield. He is the strong place where I can hide safely. God, you have saved me from men who want to attack me."
+      "text": "My God is my high rock.I run to him to hide and be safe.He keeps me safe like a soldier's shield.He is the strong place where I can hide safely.God, you have saved me from men who want to attack me. I run to him to hide and be safe. He keeps me safe like a soldier's shield. He is the strong place where I can hide safely. God, you have saved me from men who want to attack me."
     },
     {
       "verse": "4",
-      "text": "I praise the Lord because he deserves it! When I called to him for help, he saved me from my enemies."
+      "text": "I praise the Lord because he deserves it!When I called to him for help,he saved me from my enemies. When I called to him for help, he saved me from my enemies."
     },
     {
       "verse": "5",
-      "text": "Death was near enough to catch me! Danger was like a river that wanted to drown me."
+      "text": "Death was near enough to catch me!Danger was like a river that wanted to drown me. Danger was like a river that wanted to drown me."
     },
     {
       "verse": "6",
-      "text": "Death was tying me up with ropes, to pull me into the deep hole of the grave."
+      "text": "Death was tying me up with ropes,to pull me into the deep hole of the grave. to pull me into the deep hole of the grave."
     },
     {
       "verse": "7",
-      "text": "In my trouble I prayed to the Lord. I called to my God to help me. He heard my voice from his home in heaven. My prayer reached his ears."
+      "text": "In my trouble I prayed to the Lord.I called to my God to help me.He heard my voice from his home in heaven.My prayer reached his ears. I called to my God to help me. He heard my voice from his home in heaven. My prayer reached his ears."
     },
     {
       "verse": "8",
-      "text": "Then the earth moved and it shook. Even the sky shook, because God was angry."
+      "text": "Then the earth moved and it shook.Even the sky shook,because God was angry. Even the sky shook, because God was angry."
     },
     {
       "verse": "9",
-      "text": "He breathed out smoke from his nose. Fire and hot coals came out from his mouth, to destroy his enemies."
+      "text": "He breathed out smoke from his nose.Fire and hot coals came out from his mouth,to destroy his enemies. Fire and hot coals came out from his mouth, to destroy his enemies."
     },
     {
       "verse": "10",
-      "text": "God caused the sky to bend as he came down. Dark clouds were under his feet."
+      "text": "God caused the sky to bend as he came down.Dark clouds were under his feet. Dark clouds were under his feet."
     },
     {
       "verse": "11",
-      "text": "He sat on a cherub and he flew. He flew like the wind."
+      "text": "He sat on a cherub and he flew.He flew like the wind. He flew like the wind."
     },
     {
       "verse": "12",
-      "text": "God put darkness all round him. He hid himself under dark clouds that held rain."
+      "text": "God put darkness all round him.He hid himself under dark clouds that held rain. He hid himself under dark clouds that held rain."
     },
     {
       "verse": "13",
-      "text": "Bright light went in front of him. There was lightning like hot coals!"
+      "text": "Bright light went in front of him.There was lightning like hot coals! There was lightning like hot coals!"
     },
     {
       "verse": "14",
-      "text": "The Lord sent thunder from the sky. People everywhere heard the voice of the Most High God."
+      "text": "The Lord sent thunder from the sky.People everywhere heard the voice of the Most High God. People everywhere heard the voice of the Most High God."
     },
     {
       "verse": "15",
-      "text": "The Lord shot arrows of lightning. He caused his enemies to run away."
+      "text": "The Lord shot arrows of lightning.He caused his enemies to run away. He caused his enemies to run away."
     },
     {
       "verse": "16",
-      "text": "When the Lord shouted against his enemies, even the bottom of the deep sea appeared. People could see the deepest places of the earth, when he breathed out in anger."
+      "text": "When the Lord shouted against his enemies,even the bottom of the deep sea appeared.People could see the deepest places of the earth,when he breathed out in anger. even the bottom of the deep sea appeared. People could see the deepest places of the earth, when he breathed out in anger."
     },
     {
       "verse": "17",
-      "text": "The Lord reached down to me from above. He took hold of me and he pulled me up out of the deep water."
+      "text": "The Lord reached down to me from above.He took hold of me and he pulled me up out of the deep water. He took hold of me and he pulled me up out of the deep water."
     },
     {
       "verse": "18",
-      "text": "Yes, he saved me from my powerful enemies. The people who hated me were too strong for me, but the Lord saved me from their power."
+      "text": "Yes, he saved me from my powerful enemies.The people who hated me were too strong for me,but the Lord saved me from their power. The people who hated me were too strong for me, but the Lord saved me from their power."
     },
     {
       "verse": "19",
-      "text": "They attacked me when I was in trouble, but the Lord helped me."
+      "text": "They attacked me when I was in trouble,but the Lord helped me. but the Lord helped me."
     },
     {
       "verse": "20",
-      "text": "He led me out to an open place where I would be safe. He saved me because I made him happy."
+      "text": "He led me out to an open place where I would be safe.He saved me because I made him happy. He saved me because I made him happy."
     },
     {
       "verse": "21",
-      "text": "The Lord was kind to me because I do things that please him. He blesses me because I am not guilty of bad things."
+      "text": "The Lord was kind to mebecause I do things that please him.He blesses mebecause I am not guilty of bad things. because I do things that please him. He blesses me because I am not guilty of bad things."
     },
     {
       "verse": "22",
-      "text": "I have obeyed the Lord's commands. I have not turned against my God."
+      "text": "I have obeyed the Lord's commands.I have not turned against my God. I have not turned against my God."
     },
     {
       "verse": "23",
-      "text": "I understand all his rules, and I do not refuse to obey them."
+      "text": "I understand all his rules,and I do not refuse to obey them. and I do not refuse to obey them."
     },
     {
       "verse": "24",
-      "text": "He knows that I have done nothing that is wrong. I kept away from any sin."
+      "text": "He knows that I have done nothing that is wrong.I kept away from any sin. I kept away from any sin."
     },
     {
       "verse": "25",
-      "text": "The Lord was kind to me, because I did good things. He sees that I am not guilty."
+      "text": "The Lord was kind to me,because I did good things.He sees that I am not guilty. because I did good things. He sees that I am not guilty."
     },
     {
       "verse": "26",
-      "text": "Lord, if people are faithful to you, then you are faithful to them. If people do nothing that is bad, they can trust you to do nothing bad to them."
+      "text": "Lord, if people are faithful to you,then you are faithful to them.If people do nothing that is bad,they can trust you to do nothing bad to them. then you are faithful to them. If people do nothing that is bad, they can trust you to do nothing bad to them."
     },
     {
       "verse": "27",
-      "text": "If people keep themselves pure, they can trust you to do only good things. But if people are wicked, you turn against them."
+      "text": "If people keep themselves pure,they can trust you to do only good things.But if people are wicked,you turn against them. they can trust you to do only good things. But if people are wicked, you turn against them."
     },
     {
       "verse": "28",
-      "text": "You save people who are humble. But if people are proud, you cause them to fall."
+      "text": "You save people who are humble.But if people are proud, you cause them to fall. But if people are proud, you cause them to fall."
     },
     {
       "verse": "29",
-      "text": "Lord, you make my lamp burn brightly. You are my light in the dark."
+      "text": "Lord, you make my lamp burn brightly.You are my light in the dark. You are my light in the dark."
     },
     {
       "verse": "30",
-      "text": "You make me strong, so that I can chase a whole army! With the help of my God, I can climb over any high wall."
+      "text": "You make me strong,so that I can chase a whole army!With the help of my God,I can climb over any high wall. so that I can chase a whole army! With the help of my God, I can climb over any high wall."
     },
     {
       "verse": "31",
-      "text": "God's way is perfect. The Lord's promises are always true. He keeps safe everyone who goes to him for help, like a shield that keeps a soldier safe."
+      "text": "God's way is perfect.The Lord's promises are always true.He keeps safe everyone who goes to him for help,like a shield that keeps a soldier safe. The Lord's promises are always true. He keeps safe everyone who goes to him for help, like a shield that keeps a soldier safe."
     },
     {
       "verse": "32",
-      "text": "We know that the Lord is God, and no one else. Only our God can keep us safe, like a strong rock!"
+      "text": "We know that the Lord is God,and no one else.Only our God can keep us safe,like a strong rock! and no one else. Only our God can keep us safe, like a strong rock!"
     },
     {
       "verse": "33",
-      "text": "It is God who makes me strong. He shows me the safe way through my life."
+      "text": "It is God who makes me strong.He shows me the safe way through my life. He shows me the safe way through my life."
     },
     {
       "verse": "34",
-      "text": "He makes my feet stand strongly on the ground. Like a deer, I can stand on high hills and not fall."
+      "text": "He makes my feet stand strongly on the ground.Like a deer,I can stand on high hills and not fall. Like a deer, I can stand on high hills and not fall."
     },
     {
       "verse": "35",
-      "text": "He teaches me how to fight in war. He makes my arms strong to shoot arrows from a metal bow."
+      "text": "He teaches me how to fight in war.He makes my arms strongto shoot arrows from a metal bow. He makes my arms strong to shoot arrows from a metal bow."
     },
     {
       "verse": "36",
-      "text": "You keep me safe in the battle, like a shield. Your kind help has made me great."
+      "text": "You keep me safe in the battle,like a shield.Your kind help has made me great. like a shield. Your kind help has made me great."
     },
     {
       "verse": "37",
-      "text": "You have helped me to move safely, so that my feet do not slip."
+      "text": "You have helped me to move safely,so that my feet do not slip. so that my feet do not slip."
     },
     {
       "verse": "38",
-      "text": "I ran after my enemies and I destroyed them. I did not turn back until I had killed them."
+      "text": "I ran after my enemies and I destroyed them.I did not turn back until I had killed them. I did not turn back until I had killed them."
     },
     {
       "verse": "39",
-      "text": "I destroyed them completely. I knocked them down to the ground. They could not get up again. They fell under my feet."
+      "text": "I destroyed them completely.I knocked them down to the ground.They could not get up again.They fell under my feet. I knocked them down to the ground. They could not get up again. They fell under my feet."
     },
     {
       "verse": "40",
-      "text": "You have made me strong to fight battles so that I win against my enemies."
+      "text": "You have made me strong to fight battlesso that I win against my enemies. so that I win against my enemies."
     },
     {
       "verse": "41",
-      "text": "You caused my enemies to turn their backs, and they ran away from me. I destroyed those who hate me."
+      "text": "You caused my enemies to turn their backs,and they ran away from me.I destroyed those who hate me. and they ran away from me. I destroyed those who hate me."
     },
     {
       "verse": "42",
-      "text": "They called out for help, but nobody was there to save them. They called to the Lord, but he did not answer them."
+      "text": "They called out for help,but nobody was there to save them.They called to the Lord,but he did not answer them. but nobody was there to save them. They called to the Lord, but he did not answer them."
     },
     {
       "verse": "43",
-      "text": "I beat them until they became like dust. I walked over them, like dirt that lies on the streets."
+      "text": "I beat them until they became like dust.I walked over them,like dirt that lies on the streets. I walked over them, like dirt that lies on the streets."
     },
     {
       "verse": "44",
-      "text": "You have saved me when my people were attacking me. You have made me a ruler of other nations. People that I did not know before now serve me as their ruler."
+      "text": "You have saved me when my people were attacking me.You have made me a ruler of other nations.People that I did not know beforenow serve me as their ruler. You have made me a ruler of other nations. People that I did not know before now serve me as their ruler."
     },
     {
       "verse": "45",
-      "text": "Foreign people cannot stand against me, because they are afraid. When they hear about me, they choose to obey me."
+      "text": "Foreign people cannot stand against me,because they are afraid.When they hear about me,they choose to obey me. because they are afraid. When they hear about me, they choose to obey me."
     },
     {
       "verse": "46",
-      "text": "They are not brave enough to fight me. They shake with fear as they leave their strong cities."
+      "text": "They are not brave enough to fight me.They shake with fearas they leave their strong cities. They shake with fear as they leave their strong cities."
     },
     {
       "verse": "47",
-      "text": "The Lord is alive! He is my strong Rock! Everyone should praise him! He rules as king! He is the strong God who saves me."
+      "text": "The Lord is alive! He is my strong Rock!Everyone should praise him!He rules as king!He is the strong God who saves me. Everyone should praise him! He rules as king! He is the strong God who saves me."
     },
     {
       "verse": "48",
-      "text": "He is the true God who punishes my enemies. He makes the nations obey me."
+      "text": "He is the true God who punishes my enemies.He makes the nations obey me. He makes the nations obey me."
     },
     {
       "verse": "49",
-      "text": "He is the one who saves me from my enemies. Yes, God, you give me power to win against those who attack me. You keep me safe from angry and cruel men."
+      "text": "He is the one who saves me from my enemies.Yes, God, you give me powerto win against those who attack me.You keep me safe from angry and cruel men. Yes, God, you give me power to win against those who attack me. You keep me safe from angry and cruel men."
     },
     {
       "verse": "50",
-      "text": "Lord, I will thank you, so that all the nations know about you. I will sing to praise your name."
+      "text": "Lord, I will thank you,so that all the nations know about you.I will sing to praise your name. so that all the nations know about you. I will sing to praise your name."
     },
     {
       "verse": "51",
-      "text": "Yes, the Lord gives power to me, David, his king. He gives me great strength to win against my enemies. I am the special king that he has chosen. He will continue to be kind to me and to my descendants for ever.’ Print... Use screen font size Show All Comments 2 Samuel 212 Samuel 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, the Lord gives power to me, David, his king.He gives me great strength to win against my enemies.I am the special king that he has chosen.He will continue to be kind to meand to my descendants for ever.’"
     }
   ],
   "23": [
@@ -2574,31 +2574,31 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘The Spirit of the Lord gives me his message. I speak what he tells me to say."
+      "text": "‘The Spirit of the Lord gives me his message.I speak what he tells me to say. I speak what he tells me to say."
     },
     {
       "verse": "3",
-      "text": "Israel's God has spoken. The one who keeps Israel safe said to me, “A king should rule over people in a way that is right and fair. He should show that he respects and obeys God."
+      "text": "Israel's God has spoken.The one who keeps Israel safe said to me,“A king should rule over people in a way that is right and fair.He should show that he respects and obeys God. The one who keeps Israel safe said to me, “A king should rule over people in a way that is right and fair. He should show that he respects and obeys God."
     },
     {
       "verse": "4",
-      "text": "A king who rules like that is like the light of the sun at dawn. He is like the sky when it has no clouds in it in the morning. He is like bright sun after rain, that helps the grass to grow strongly.”"
+      "text": "A king who rules like that is like the light of the sun at dawn.He is like the sky when it has no clouds in it in the morning.He is like bright sun after rain,that helps the grass to grow strongly.” He is like the sky when it has no clouds in it in the morning. He is like bright sun after rain, that helps the grass to grow strongly.”"
     },
     {
       "verse": "5",
-      "text": "That is how God will bless my descendants. He has made a promise to me that will continue for ever. It is a strong promise that will never change. I know that he will always help me. He will do for me everything that I hope for."
+      "text": "That is how God will bless my descendants.He has made a promise to me that will continue for ever.It is a strong promise that will never change.I know that he will always help me.He will do for me everything that I hope for. He has made a promise to me that will continue for ever. It is a strong promise that will never change. I know that he will always help me. He will do for me everything that I hope for."
     },
     {
       "verse": "6",
-      "text": "But God will remove all wicked people. He will throw them away like weeds. They are like thorn bushes that you cannot pull out with your hands."
+      "text": "But God will remove all wicked people.He will throw them away like weeds.They are like thorn bushesthat you cannot pull out with your hands. He will throw them away like weeds. They are like thorn bushes that you cannot pull out with your hands."
     },
     {
       "verse": "7",
-      "text": "You need an iron tool or a spear to remove them. Then you burn them completely in a fire.’ David's brave soldiers"
+      "text": "You need an iron tool or a spear to remove them.Then you burn them completely in a fire.’ Then you burn them completely in a fire.’"
     },
     {
       "verse": "8",
-      "text": "These are the names of David's bravest soldiers: Josheb-Basshebeth was the leader of the ‘Three Brave Soldiers’. He belonged to Tahkemon's clan. He used his spear to fight against 800 men in one battle and he killed them all."
+      "text": "These are the names of David's bravest soldiers:Josheb-Basshebeth was the leader of the ‘Three Brave Soldiers’. He belonged to Tahkemon's clan. He used his spear to fight against 800 men in one battle and he killed them all. Josheb-Basshebeth was the leader of the ‘Three Brave Soldiers’. He belonged to Tahkemon's clan. He used his spear to fight against 800 men in one battle and he killed them all."
     },
     {
       "verse": "9",
@@ -2606,7 +2606,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "but Eleazar stood there. He knocked down the Philistine soldiers until his hand became tired. It became fixed to his sword. On that day, the Lord caused him to win a great battle. When the other Israelite soldiers returned to help him, they took things from the dead Philistines. That was the only thing left for them to do. Pas-Dammim’ see 1 Chronicles"
+      "text": "but Eleazar stood there. He knocked down the Philistine soldiers until his hand became tired. It became fixed to his sword. On that day, the Lord caused him to win a great battle. When the other Israelite soldiers returned to help him, they took things from the dead Philistines. That was the only thing left for them to do."
     },
     {
       "verse": "11",
@@ -2618,7 +2618,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "At the time of the harvest, three of David's 30 bravest soldiers went to be with David near Adullam. He was hiding there in a cave. A group of Philistine soldiers had made their camp in Rephaim valley."
+      "text": "At the time of the harvest, three of David's 30 bravest soldiers went to be with David near Adullam. He was hiding there in a cave. A group of Philistine soldiers had made their camp in Rephaim valley. Those were some of the great things that the three brave soldiers did."
     },
     {
       "verse": "14",
@@ -2634,7 +2634,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He said, ‘Lord, it is not right for me to drink this water. It would seem like the blood of the men who fetched it for me. The Philistines might have killed them on the way.’ So David refused to drink it. Those were some of the great things that the three brave soldiers did."
+      "text": "He said, ‘Lord, it is not right for me to drink this water. It would seem like the blood of the men who fetched it for me. The Philistines might have killed them on the way.’ So David refused to drink it.Those were some of the great things that the three brave soldiers did."
     },
     {
       "verse": "18",
@@ -2658,11 +2658,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He received more honour than the other 30 great soldiers, but he did not belong to the ‘Three Brave Soldiers’. David made him the leader of his own special soldiers who were his guards."
+      "text": "great soldiers, but he did not belong to the ‘Three Brave Soldiers’. David made him the leader of his own special soldiers who were his guards."
     },
     {
       "verse": "24",
-      "text": "These men were among David's 30 great soldiers: Great Soldiers’ was the name that people called this group of David's brave soldiers. There were probably more than 30 of them. See verse 39. Joab's brother Asahel,Elhanan, Dodo's son, from Bethlehem,"
+      "text": "These men were among David's 30 great soldiers:Joab's brother Asahel,Elhanan, Dodo's son, from Bethlehem, great soldiers if you count them all."
     },
     {
       "verse": "25",
@@ -2722,7 +2722,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "and Uriah the Hittite.There were 37 great soldiers if you count them all. Not all the ‘Great Soldiers’ are included in this list. Some of them had already died. Print... Use screen font size Show All Comments 2 Samuel 222 Samuel 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "and Uriah the Hittite.There were 37 great soldiers if you count them all."
     }
   ],
   "24": [
@@ -2732,7 +2732,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So the king said to Joab, the leader of his army, ‘Go from Dan to Beersheba, through all the tribes of Israel. Count all the men who can fight. I want to know how many men there are.’ from Dan to Beersheba’ was the whole country. Dan was at the north border of Israel. Beersheba was near the south border."
+      "text": "So the king said to Joab, the leader of his army, ‘Go from Dan to Beersheba, through all the tribes of Israel. Count all the men who can fight. I want to know how many men there are.’"
     },
     {
       "verse": "3",
@@ -2760,7 +2760,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Joab reported to the king about the number of soldiers who could fight. There were 800,000 men in Israel who could use a sword to fight. There were also 500,000 soldiers in Judah. The Lord punishes David"
+      "text": "Joab reported to the king about the number of soldiers who could fight. There were 800,000 men in Israel who could use a sword to fight. There were also 500,000 soldiers in Judah."
     },
     {
       "verse": "10",
@@ -2792,7 +2792,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "David saw the angel who was killing the people. So he said to the Lord, ‘I am the person who has done an evil thing. These people have followed me like sheep that follow a shepherd. They have not done anything wrong. You should only punish me and my family.’ David builds an altar"
+      "text": "David saw the angel who was killing the people. So he said to the Lord, ‘I am the person who has done an evil thing. These people have followed me like sheep that follow a shepherd. They have not done anything wrong. You should only punish me and my family.’"
     },
     {
       "verse": "18",
@@ -2808,23 +2808,23 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Araunah said, ‘My lord the king, why have you come here to me, your servant?’ David replied, ‘I have come to buy your threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people.’"
+      "text": "Araunah said, ‘My lord the king, why have you come here to me, your servant?’David replied, ‘I have come to buy your threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people.’ David replied, ‘I have come to buy your threshing floor from you. I want to build an altar here to worship the Lord. Then he will stop this bad disease from killing the people.’"
     },
     {
       "verse": "22",
-      "text": "Araunah said to David, ‘My lord the king, take anything that you would like to offer to the Lord. You can take these oxen to offer as sacrifices. You can use the wood from these tools and yokes to make a fire."
+      "text": "Araunah said to David, ‘My lord the king, take anything that you would like to offer to the Lord. You can take these oxen to offer as sacrifices. You can use the wood from these tools and yokes to make a fire. Araunah also said to the king, ‘I pray that the Lord your God will accept your offerings.’"
     },
     {
       "verse": "23",
-      "text": "I will give all these things to you sir, my lord the king.’ Araunah also said to the king, ‘I pray that the Lord your God will accept your offerings.’"
+      "text": "I will give all these things to you sir, my lord the king.’Araunah also said to the king, ‘I pray that the Lord your God will accept your offerings.’"
     },
     {
       "verse": "24",
-      "text": "But the king said to Araunah, ‘No, I must pay you for it. I will not burn as an offering to the Lord my God any sacrifice that costs me nothing.’ So David bought Araunah's threshing floor and his oxen for 50 silver coins."
+      "text": "But the king said to Araunah, ‘No, I must pay you for it. I will not burn as an offering to the Lord my God any sacrifice that costs me nothing.’So David bought Araunah's threshing floor and his oxen for 50 silver coins."
     },
     {
       "verse": "25",
-      "text": "Then he built an altar there to worship the Lord. He made burnt offerings and friendship offerings on the altar. Then the Lord answered David's prayer. The disease stopped killing people in Israel. Print... Use screen font size Show All Comments 2 Samuel 231 Kings Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then he built an altar there to worship the Lord. He made burnt offerings and friendship offerings on the altar.Then the Lord answered David's prayer. The disease stopped killing people in Israel."
     }
   ]
 };

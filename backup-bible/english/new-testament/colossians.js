@@ -6,7 +6,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "We are writing to you, God's own people who live in Colossae. You are like brothers and sisters to us because you continue to believe in Christ. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds. Paul thanks God for the believers"
+      "text": "We are writing to you, God's own people who live in Colossae. You are like brothers and sisters to us because you continue to believe in Christ.I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds. I pray that God, our Father, will continue to help you. I pray that he will give you peace in your minds."
     },
     {
       "verse": "3",
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You live like that because you hope to receive good things from God. You know that God has prepared those good things for you. He is keeping them safe in heaven. You learned that when people first told you God's true message, his good news. In the Bible, to ‘hope’ means to trust God for what will happen. We wait to receive the good things that he has promised to give us. We know that we will live with Christ for ever. As believers we can be completely sure that these things will happen to us."
+      "text": "You live like that because you hope to receive good things from God. You know that God has prepared those good things for you. He is keeping them safe in heaven. You learned that when people first told you God's true message, his good news."
     },
     {
       "verse": "6",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "He has told us about the love that God's Spirit has given to you. Paul prays that they will know God more and more"
+      "text": "He has told us about the love that God's Spirit has given to you."
     },
     {
       "verse": "9",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "God's Son, Jesus, paid the price for our sins and made us free. Yes, God has forgiven us. A place of light is a place where God rules. If we belong to God's kingdom, we live ‘in the light’. Any place where Satan rules is a dark place. Bad things happen in places like that. Jesus made believers free from their sins when he died on the cross. God has forgiven us because Jesus died as a sacrifice on our behalf. Who God's Son, Jesus Christ, is"
+      "text": "God's Son, Jesus, paid the price for our sins and made us free. Yes, God has forgiven us."
     },
     {
       "verse": "15",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The church is like Christ's body and he is its head. He is where it all begins. As God's special Son, he was the first person who became alive again after death. As a result, Christ is first and most important in all things. Christ gives his Spirit to those people who belong to him. He lives in his people because his Spirit is in them. They are united to him. They are like his body on earth. Other people had become alive again after they died, but Jesus never died again. He became alive again to show us that we also will become alive again after death, if we believe in him. So he was the first and believers will follow him."
+      "text": "The church is like Christ's body and he is its head. He is where it all begins. As God's special Son, he was the first person who became alive again after death. As a result, Christ is first and most important in all things."
     },
     {
       "verse": "19",
@@ -90,11 +90,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But you must continue to believe God's true message. Do not turn away from it. Continue to trust God, as you did when you first heard the good news. People have told this good news to everyone all over the world. And God has chosen me, Paul, as his servant to tell this good news. Paul's work for Christ's people"
+      "text": "But you must continue to believe God's true message. Do not turn away from it. Continue to trust God, as you did when you first heard the good news. People have told this good news to everyone all over the world. And God has chosen me, Paul, as his servant to tell this good news."
     },
     {
       "verse": "24",
-      "text": "At this time, I am suffering on your behalf, but I am still happy. Christ himself suffered on behalf of his people, the church. Now, while I live in my human body, I also suffer. I continue to receive the pain that Christ received, so that it may be complete. In that way, I help the church, which is like Christ's own body. The Bible says that Christians will have troubles and pain. See Acts and 1 Thessalonians Christians, like Paul, sometimes suffer because they are helping other Christians. Paul does not mean that we have to do anything else to save ourselves. Christ suffered on our behalf. His death saves us completely, if we believe in him. We also suffer because we are his people."
+      "text": "At this time, I am suffering on your behalf, but I am still happy. Christ himself suffered on behalf of his people, the church. Now, while I live in my human body, I also suffer. I continue to receive the pain that Christ received, so that it may be complete. In that way, I help the church, which is like Christ's own body."
     },
     {
       "verse": "25",
@@ -114,7 +114,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "That is why I work very hard. Christ works powerfully in me to make me strong for this difficult work. Print... Use screen font size Show All Comments Colossians IntroductionColossians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is why I work very hard. Christ works powerfully in me to make me strong for this difficult work."
     }
   ],
   "2": [
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "My body is not there with you, but I think about you a lot. I hear that you are living and working well together. I also hear that you continue to trust Christ strongly. That makes me very happy. How Christians should live"
+      "text": "My body is not there with you, but I think about you a lot. I hear that you are living and working well together. I also hear that you continue to trust Christ strongly. That makes me very happy."
     },
     {
       "verse": "6",
@@ -144,7 +144,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Get your strength from Christ himself, so that you become stronger and stronger. Continue to believe the true message that we taught you. And thank God very much for everything. When Christians are united to Christ, he makes them grow stronger in their spirits."
+      "text": "Get your strength from Christ himself, so that you become stronger and stronger. Continue to believe the true message that we taught you. And thank God very much for everything."
     },
     {
       "verse": "8",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When they baptized you, it was like God buried you with Christ. And God also raised you to a new life with Christ. You believed that God has great power to do that. You believed that God raised Jesus to life after he died. Because you believed, God raised you to have a new life. Paul says that Christians have something better than a mark on their bodies. The Israelites circumcised their boys to show that they belonged to God's people. But Christians are God's people because Christ died to save them and has given them a new life. It is like he has circumcised them in their spirits, not in their bodies. He has ‘cut off’ their old nature. They are free to do things which please God. Baptism shows what God has done when we believe in Jesus. We have been united with Christ. Our old life has died and God has given us a new life. When Christ died and they buried him, it is like our old nature also died with him. When God raised Christ after death, it is like he raised us to a new life. This is all true if we are united with Christ as believers. Then, what happened to him also happened to us. Now we have a new nature and a new life, because Christ died as a sacrifice on our behalf and he rose again after death. See also Romans"
+      "text": "When they baptized you, it was like God buried you with Christ. And God also raised you to a new life with Christ. You believed that God has great power to do that. You believed that God raised Jesus to life after he died. Because you believed, God raised you to have a new life."
     },
     {
       "verse": "13",
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "On the cross, Christ took away the power of the bad spirits that have authority to rule people. He showed clearly that he himself has won against them. Now everyone can see that those bad spirits have no power. Do not obey human ideas"
+      "text": "On the cross, Christ took away the power of the bad spirits that have authority to rule people. He showed clearly that he himself has won against them. Now everyone can see that those bad spirits have no power."
     },
     {
       "verse": "16",
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "They teach, ‘Do not touch things like that!’ Or, ‘Do not eat that kind of food!’ Or, ‘Keep away from that thing!’"
+      "text": "They teach, ‘Do not touch things like that!’ Or, ‘Do not eat that kind of food!�� Or, ‘Keep away from that thing!’"
     },
     {
       "verse": "22",
@@ -208,7 +208,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "They teach you ideas about what you must do to worship God. They teach you to serve other people like a slave. They say that you must hurt yourself. You must show that you control your body. Rules like that may seem to be wise, but really they are not worth anything. They cannot stop our weak human nature from doing the bad things that we want to do. Many of these rules were about what kinds of food people could eat. When we have eaten food, it is no longer there. These kinds of rules do not help us with the really important things. The important things are always there and they never finish. Our new life with God will never finish. Print... Use screen font size Show All Comments Colossians 1Colossians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They teach you ideas about what you must do to worship God. They teach you to serve other people like a slave. They say that you must hurt yourself. You must show that you control your body. Rules like that may seem to be wise, but really they are not worth anything. They cannot stop our weak human nature from doing the bad things that we want to do."
     }
   ],
   "3": [
@@ -278,7 +278,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Show that you belong to the Lord Jesus with everything that you do and with everything that you say. Always thank God the Father in the way that you serve Jesus. Do what is right, at home and at work"
+      "text": "Show that you belong to the Lord Jesus with everything that you do and with everything that you say. Always thank God the Father in the way that you serve Jesus."
     },
     {
       "verse": "18",
@@ -310,13 +310,13 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Remember that God will punish anyone who does wrong things. He always judges people correctly, whoever they are. Print... Use screen font size Show All Comments Colossians 2Colossians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Remember that God will punish anyone who does wrong things. He always judges people correctly, whoever they are."
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "Masters, be fair to your servants. Give them what is right. Remember that you also serve a master, and he is in heaven. Paul tells the believers to pray"
+      "text": "Masters, be fair to your servants. Give them what is right. Remember that you also serve a master, and he is in heaven."
     },
     {
       "verse": "2",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When you speak to people, always speak kind words. Say things that will help them. Then, when someone asks you a question, you will know how to reply. Paul finishes his letter"
+      "text": "When you speak to people, always speak kind words. Say things that will help them. Then, when someone asks you a question, you will know how to reply."
     },
     {
       "verse": "7",
@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I, Paul, am writing these words at the end of this letter with my own hand. Remember to pray for me while I am in prison. I pray that God will continue to be very kind to you. Print... Use screen font size Show All Comments Colossians 31 Thessalonians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I, Paul, am writing these words at the end of this letter with my own hand. Remember to pray for me while I am in prison. I pray that God will continue to be very kind to you."
     }
   ]
 };

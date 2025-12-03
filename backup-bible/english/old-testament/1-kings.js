@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "She was very beautiful. She took care of the king as his servant. But the king did not have sex with her. Shunem was a town near the Sea of Galilee."
+      "text": "She was very beautiful. She took care of the king as his servant. But the king did not have sex with her."
     },
     {
       "verse": "5",
@@ -26,19 +26,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Adonijah spoke with Zeruiah's son Joab and with Abiathar, the priest. They said that they would help Adonijah. Adonijah was the fourth son of David. See 2 Samuel David's first three sons were probably dead. Adonijah got the chariots, the horses and the guards to show that he was a very important man. Absalom and Adonijah had different mothers."
+      "text": "Adonijah spoke with Zeruiah's son Joab and with Abiathar, the priest. They said that they would help Adonijah."
     },
     {
       "verse": "8",
-      "text": "But these people did not join Adonijah's group: Zadok the priest,Jehoiada's son Benaiah,Nathan the prophet,Shimei and Rei.David's own special soldiers did not join Adonijah either."
+      "text": "But these people did not join Adonijah's group:Zadok the priest,Jehoiada's son Benaiah,Nathan the prophet,Shimei and Rei.David's own special soldiers did not join Adonijah either."
     },
     {
       "verse": "9",
-      "text": "Then Adonijah went to the Stone of Zoheleth that was near En Rogel. He killed sheep, cows and fat calves as sacrifices there. He asked these people to join him: There was a spring of water at En Rogel. It was near Jerusalem, to the south. all his brothers, who were King David's sons,all the men of Judah who were the king's officers."
+      "text": "Then Adonijah went to the Stone of Zoheleth that was near En Rogel. He killed sheep, cows and fat calves as sacrifices there. He asked these people to join him:all his brothers, who were King David's sons,all the men of Judah who were the king's officers."
     },
     {
       "verse": "10",
-      "text": "But he did not ask these people to come: Nathan the prophet,Benaiah,David's own special soldiers,his brother Solomon."
+      "text": "But he did not ask these people to come:Nathan the prophet,Benaiah,David's own special soldiers,his brother Solomon."
     },
     {
       "verse": "11",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But see what has happened! Adonijah has become king. But, my master the king, you do not even know about it! When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "But see what has happened! Adonijah has become king. But, my master the king, you do not even know about it!"
     },
     {
       "verse": "19",
@@ -106,7 +106,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Has my master the king decided this, but you have not told us, your servants? We must know who will sit on your throne to rule as king after you.’ King David chooses Solomon to be king"
+      "text": "Has my master the king decided this, but you have not told us, your servants? We must know who will sit on your throne to rule as king after you.’"
     },
     {
       "verse": "28",
@@ -174,7 +174,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "He sent these people to put Solomon onto the king's mule: Zadok the priest, Nathan the prophet, Jehoiada's son Benaiah, and the king's personal guards. They took Solomon to Gihon. Joab was the leader of Israel's army. David's personal guards (bodyguards) were men who belonged to the Kerethite and Pelethite people."
+      "text": "He sent these people to put Solomon onto the king's mule: Zadok the priest, Nathan the prophet, Jehoiada's son Benaiah, and the king's personal guards. They took Solomon to Gihon."
     },
     {
       "verse": "45",
@@ -206,11 +206,11 @@ module.exports = {
     },
     {
       "verse": "52",
-      "text": "Solomon said, ‘If he serves me faithfully, I will not hurt him at all. But if he turns against me, he will die.’ If someone took hold of the horns of the altar, he was safe from punishment."
+      "text": "Solomon said, ‘If he serves me faithfully, I will not hurt him at all. But if he turns against me, he will die.’"
     },
     {
       "verse": "53",
-      "text": "Then King Solomon sent men to the holy tent to bring Adonijah down from the altar. So Adonijah came. He bent down low to respect King Solomon. Solomon said to him, ‘Go to your home.’ Print... Use screen font size Show All Comments 1 Kings Introduction1 Kings 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then King Solomon sent men to the holy tent to bring Adonijah down from the altar. So Adonijah came. He bent down low to respect King Solomon. Solomon said to him, ‘Go to your home.’"
     }
   ],
   "2": [
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "‘Soon I will die, as everyone must die one day. Be strong and brave, as a man should be."
+      "text": "‘Soon I will die, as everyone must die one day. Be strong and brave, as a man should be. “Your descendants must be careful in how they live. They must serve me faithfully with all their mind and strength. If they do that, one of your descendants will always rule Israel as king.”"
     },
     {
       "verse": "3",
@@ -228,7 +228,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Lord will also do what he has promised me that he will do. He promised this to me: “Your descendants must be careful in how they live. They must serve me faithfully with all their mind and strength. If they do that, one of your descendants will always rule Israel as king.”"
+      "text": "The Lord will also do what he has promised me that he will do. He promised this to me:“Your descendants must be careful in how they live. They must serve me faithfully with all their mind and strength. If they do that, one of your descendants will always rule Israel as king.”"
     },
     {
       "verse": "5",
@@ -236,11 +236,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So you should punish him in a way that you think is right. Do not let him die in peace as an old man. Abner was the cousin of King Saul. Joab killed him, 2 Samuel David wrote a sad song about Abner, 2 Samuel Ner was the brother of Kish, 1 Chronicles Kish was the father of King Saul. Amasa was a son of Jether and Abigail. Joab killed him. See 2 Samuel"
+      "text": "So you should punish him in a way that you think is right. Do not let him die in peace as an old man."
     },
     {
       "verse": "7",
-      "text": "Be kind to the sons of Barzillai, who lived in Gilead. Let them eat meals at your table. Help them, because they helped me when I was running away from your brother Absalom. See 2 Samuel"
+      "text": "Be kind to the sons of Barzillai, who lived in Gilead. Let them eat meals at your table. Help them, because they helped me when I was running away from your brother Absalom."
     },
     {
       "verse": "8",
@@ -248,7 +248,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But remember that he is guilty! You are a wise man, so you will know what to do to him. Even if he is an old man, make sure that he has a violent death.’ See 2 Samuel"
+      "text": "But remember that he is guilty! You are a wise man, so you will know what to do to him. Even if he is an old man, make sure that he has a violent death.’"
     },
     {
       "verse": "10",
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "David had ruled Israel as king for 40 years. He ruled for seven years in Hebron. Then he ruled for 33 years in Jerusalem. Solomon makes his kingdom strong"
+      "text": "years. He ruled for seven years in Hebron. Then he ruled for 33 years in Jerusalem."
     },
     {
       "verse": "12",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But King Solomon said to his mother, ‘You are asking me to give Abishag to Adonijah as his wife! You should also ask me to give my kingdom to him, my older brother! That would be the same thing. Then he would rule together with Abiathar the priest and Zeruiah's son Joab!’ Adonijah thought that he should be king, because he was older than Solomon. If he could marry Abishag, that would show that he had taken David's place as king."
+      "text": "But King Solomon said to his mother, ‘You are asking me to give Abishag to Adonijah as his wife! You should also ask me to give my kingdom to him, my older brother! That would be the same thing. Then he would rule together with Abiathar the priest and Zeruiah's son Joab!’"
     },
     {
       "verse": "23",
@@ -320,11 +320,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Solomon sent Abiathar away so that he was no longer a priest who served the Lord. That was the punishment that the Lord had said would happen to Eli's family. So what the Lord had promised at Shiloh now happened. See 1 Samuel Now Zadok was the only important priest. See verse 35."
+      "text": "Solomon sent Abiathar away so that he was no longer a priest who served the Lord. That was the punishment that the Lord had said would happen to Eli's family. So what the Lord had promised at Shiloh now happened."
     },
     {
       "verse": "28",
-      "text": "When Adonijah had tried to become king, Joab had joined with him. (But he had not joined with Absalom.) Joab heard the news about what had happened to Adonijah and Abiathar. So he hurried to the Lord's holy tent. He took hold of the horns of the altar there."
+      "text": "When Adonijah had tried to become king, Joab had joined with him. (But he had not joined with Absalom.) Joab heard the news about what had happened to Adonijah and Abiathar. So he hurried to the Lord's holy tent. He took hold of the horns of the altar there. So Benaiah sent a message to tell the king what Joab had said."
     },
     {
       "verse": "29",
@@ -332,7 +332,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "So Benaiah went to the Lord's holy tent. When he arrived there, he said to Joab, ‘The king says, “Come out!” ’ But Joab answered, ‘No! I will die here!’ So Benaiah sent a message to tell the king what Joab had said."
+      "text": "So Benaiah went to the Lord's holy tent. When he arrived there, he said to Joab, ‘The king says, “Come out!” ’ But Joab answered, ‘No! I will die here!’So Benaiah sent a message to tell the king what Joab had said."
     },
     {
       "verse": "31",
@@ -364,7 +364,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Shimei said to the king, ‘My lord the king, your words are good. I will do as you have decided.’ So Shimei lived in Jerusalem for a long time."
+      "text": "Shimei said to the king, ‘My lord the king, your words are good. I will do as you have decided.’So Shimei lived in Jerusalem for a long time."
     },
     {
       "verse": "39",
@@ -396,13 +396,13 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "Then the king commanded Jehoiada's son Benaiah to punish Shimei with death. So Benaiah went and he killed Shimei. So Solomon now ruled the kingdom with complete authority. Print... Use screen font size Show All Comments 1 Kings 11 Kings 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the king commanded Jehoiada's son Benaiah to punish Shimei with death. So Benaiah went and he killed Shimei.So Solomon now ruled the kingdom with complete authority."
     }
   ],
   "3": [
     {
       "verse": "1",
-      "text": "Solomon made an agreement with Pharaoh, who was the king of Egypt. Solomon married Pharaoh's daughter. He brought her to live in the City of David. She lived there until Solomon could finish building his own house, the Lord's temple, and the wall around Jerusalem. In this kind of agreement, their countries agreed to be friends of each other. There should be no wars between them. Solomon's wife lived in her own house in the City of David. She lived there for 13 years, until Solomon built his palace. See 1 Kings"
+      "text": "Solomon made an agreement with Pharaoh, who was the king of Egypt. Solomon married Pharaoh's daughter. He brought her to live in the City of David. She lived there until Solomon could finish building his own house, the Lord's temple, and the wall around Jerusalem."
     },
     {
       "verse": "2",
@@ -418,7 +418,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "One night in Gibeon, the Lord showed himself to Solomon in a dream. God said, ‘Ask me to give you whatever you want.’ country places’ or ‘high places’. These were places where there was an altar for people to worship their gods. Sometimes they were on a hill. Gibeon was about 10 kilometres north-west of Jerusalem."
+      "text": "One night in Gibeon, the Lord showed himself to Solomon in a dream. God said, ‘Ask me to give you whatever you want.’"
     },
     {
       "verse": "6",
@@ -434,15 +434,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So please give me a wise mind that understands things well. Then I will be able to rule your people properly. I will know the difference between right things and wrong things. I will only be able to rule this great nation of your people if you do that for me.’ There was not yet a temple in Jerusalem with an altar to offer sacrifices to God. When they built the temple, it was the only right place for people to make sacrifices to God."
+      "text": "So please give me a wise mind that understands things well. Then I will be able to rule your people properly. I will know the difference between right things and wrong things. I will only be able to rule this great nation of your people if you do that for me.’"
     },
     {
       "verse": "10",
       "text": "The Lord God was pleased that Solomon had asked for this."
-    },
-    {
-      "verse": "11-12",
-      "text": "So God said to him, ‘You have not asked me to give you a long life, or to make you very rich. You have not asked me to punish your enemies with death. Instead you have asked for a wise mind so that you can rule well. Because of that, I will give you what you have asked for. Yes, I now give to you a wise mind that understands things well. You will be wiser than anyone who has already lived and wiser than anyone who will live after you."
     },
     {
       "verse": "13",
@@ -454,7 +450,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Then Solomon woke up. He realized that it was a dream. He returned to Jerusalem and he stood in front of the Lord's Covenant Box. He offered burnt offerings and peace offerings to God there. Then he gave a feast for all his officers. Solomon shows that he is wise"
+      "text": "Then Solomon woke up. He realized that it was a dream. He returned to Jerusalem and he stood in front of the Lord's Covenant Box. He offered burnt offerings and peace offerings to God there. Then he gave a feast for all his officers."
     },
     {
       "verse": "16",
@@ -482,7 +478,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then the other woman said, ‘No, that is not true! It is my son who is alive. Your son is dead!’ But the first woman answered, ‘No! The dead baby is your son. My son is alive!’ They continued to argue like that in front of the king."
+      "text": "Then the other woman said, ‘No, that is not true! It is my son who is alive. Your son is dead!’But the first woman answered, ‘No! The dead baby is your son. My son is alive!’They continued to argue like that in front of the king. But the first woman answered, ‘No! The dead baby is your son. My son is alive!’ They continued to argue like that in front of the king."
     },
     {
       "verse": "23",
@@ -498,7 +494,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Then the mother of the child who was alive spoke to the king. She loved her son very much. So she said to the king, ‘My lord, please do not kill the baby! Instead, give him to the other woman.’ But the other woman said, ‘Neither of us should have him. Cut him in two pieces!’"
+      "text": "Then the mother of the child who was alive spoke to the king. She loved her son very much. So she said to the king, ‘My lord, please do not kill the baby! Instead, give him to the other woman.’But the other woman said, ‘Neither of us should have him. Cut him in two pieces!’ But the other woman said, ‘Neither of us should have him. Cut him in two pieces!’"
     },
     {
       "verse": "27",
@@ -506,7 +502,11 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Everybody in Israel heard about what the king had decided. So they respected the king's authority. They realized that God had given him wisdom to judge fairly. Print... Use screen font size Show All Comments 1 Kings 21 Kings 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Everybody in Israel heard about what the king had decided. So they respected the king's authority. They realized that God had given him wisdom to judge fairly."
+    },
+    {
+      "verse": "11-12",
+      "text": "So God said to him, ‘You have not asked me to give you a long life, or to make you very rich. You have not asked me to punish your enemies with death. Instead you have asked for a wise mind so that you can rule well. Because of that, I will give you what you have asked for. Yes, I now give to you a wise mind that understands things well. You will be wiser than anyone who has already lived and wiser than anyone who will live after you."
     }
   ],
   "4": [
@@ -516,7 +516,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "These were his important officers: Zadok's son Azariah was the priest."
+      "text": "These were his important officers:Zadok's son Azariah was the priest."
     },
     {
       "verse": "3",
@@ -536,11 +536,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Solomon had 12 officers with authority in the regions of Israel. They supplied food for the king and for the people who lived in his palace. Each officer had to supply food to the king for one month in each year."
+      "text": "officers with authority in the regions of Israel. They supplied food for the king and for the people who lived in his palace. Each officer had to supply food to the king for one month in each year."
     },
     {
       "verse": "8",
-      "text": "These are their names: Ben-Hur had authority in Ephraim's hill country."
+      "text": "These are their names:Ben-Hur had authority in Ephraim's hill country."
     },
     {
       "verse": "9",
@@ -560,7 +560,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Ben-Geber had authority in Ramoth Gilead. That included the villages of Manasseh's son Jair in Gilead. It also included the region of Argob in Bashan with 60 large cities which had strong walls gates with bronze bars. The bars locked the gates so that people outside the city could not open them."
+      "text": "Ben-Geber had authority in Ramoth Gilead. That included the villages of Manasseh's son Jair in Gilead. It also included the region of Argob in Bashan with 60 large cities which had strong walls gates with bronze bars."
     },
     {
       "verse": "14",
@@ -584,7 +584,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Uri's son Geber had authority in Gilead. Gilead was the region where Sihon, king of the Amorites, and Og, king of Bashan, had ruled. The reports about Sihon and Og are in Numbers There was also one officer who had authority over the whole land.Solomon's kingdom"
+      "text": "Uri's son Geber had authority in Gilead. Gilead was the region where Sihon, king of the Amorites, and Og, king of Bashan, had ruled.There was also one officer who had authority over the whole land."
     },
     {
       "verse": "20",
@@ -596,11 +596,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "This is the food that Solomon and the people in his palace ate each day: 5,000 litres of flour.10,000 litres of grain."
+      "text": "This is the food that Solomon and the people in his palace ate each day:5,000 litres of flour.10,000 litres of grain."
     },
     {
       "verse": "23",
-      "text": "10 fat calves that they fed with grain.20 calves that ate grass in the fields.100 sheep.Many kinds of deer and fat birds."
+      "text": "fat calves that they fed with grain.20 calves that ate grass in the fields.100 sheep.Many kinds of deer and fat birds."
     },
     {
       "verse": "24",
@@ -616,11 +616,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The 12 officers in each region supplied food for King Solomon and for everybody that ate in his palace. Each region supplied food for one month each year so that there was enough for everyone."
+      "text": "officers in each region supplied food for King Solomon and for everybody that ate in his palace. Each region supplied food for one month each year so that there was enough for everyone."
     },
     {
       "verse": "28",
-      "text": "Each officer also supplied barley and straw for the king's horses. They took the right amount to the different places where the horses lived. or ‘40,000’. Solomon's wisdom"
+      "text": "Each officer also supplied barley and straw for the king's horses. They took the right amount to the different places where the horses lived."
     },
     {
       "verse": "29",
@@ -644,7 +644,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "People came from all countries to listen to Solomon's wise teaching. Kings of all the nations in the world who heard about Solomon's wisdom sent people to learn from him. See 1 Chronicles There is a whole book of Solomon's proverbs in the Bible. See Proverbs 1. insects’ or ‘snakes and lizards’. Print... Use screen font size Show All Comments 1 Kings 31 Kings 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People came from all countries to listen to Solomon's wise teaching. Kings of all the nations in the world who heard about Solomon's wisdom sent people to learn from him."
     }
   ],
   "5": [
@@ -654,7 +654,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Solomon then sent this message to Hiram: Tyre was a city on the coast of Lebanon. Sidon was another big city in Lebanon."
+      "text": "Solomon then sent this message to Hiram:"
     },
     {
       "verse": "3",
@@ -670,7 +670,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So please tell your men to cut down cedar trees in Lebanon for me. We ourselves do not have people who know how to cut wood from trees as well as your men from Sidon. So our men will help your men with the work. And I will pay your workers whatever you decide is right.’ The temple was God's special house in Jerusalem. Until this time there had only been a special tent. God did not let David build it, but now King Solomon could build it. See 1 Chronicles Samuel Lebanon was famous because of its big cedar trees."
+      "text": "So please tell your men to cut down cedar trees in Lebanon for me. We ourselves do not have people who know how to cut wood from trees as well as your men from Sidon. So our men will help your men with the work. And I will pay your workers whatever you decide is right.’"
     },
     {
       "verse": "7",
@@ -678,7 +678,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then Hiram sent this message to Solomon: ‘I have received the message that you sent to me. I will give you the wood that you have asked for. I will send you cedar wood and pine wood, as much as you need."
+      "text": "Then Hiram sent this message to Solomon:‘I have received the message that you sent to me. I will give you the wood that you have asked for. I will send you cedar wood and pine wood, as much as you need."
     },
     {
       "verse": "9",
@@ -718,17 +718,17 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Solomon's men and Hiram's men worked together with men from Gebal. They cut the stones and the wood and they prepared them to build the temple. Gebal’ or ‘Byblos’ Print... Use screen font size Show All Comments 1 Kings 41 Kings 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Solomon's men and Hiram's men worked together with men from Gebal. They cut the stones and the wood and they prepared them to build the temple."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "Solomon began to build the Lord's temple 480 years after the Israelites had left Egypt. It was in the fourth year that he had ruled Israel as king. He started the work in the month called Ziv, the second month of the year. This was probably in April or May 966 BC."
+      "text": "Solomon began to build the Lord's temple 480 years after the Israelites had left Egypt. It was in the fourth year that he had ruled Israel as king. He started the work in the month called Ziv, the second month of the year."
     },
     {
       "verse": "2",
-      "text": "The temple that King Solomon built for the Lord was 27 metres long. It was 9 metres wide. It was 13.5 metres high."
+      "text": "metres long. It was 9 metres wide. It was 13.5 metres high."
     },
     {
       "verse": "3",
@@ -744,7 +744,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The lowest level of rooms was 2.3 metres wide. The middle level was 2.7 metres wide and the top level was 3.2 metres wide. Each floor was built on wooden beams. The beams rested on stones in the temple walls, so that there were no holes that they cut into the walls. The windows were narrow. They may have let smoke out rather than let light in. There were only two rooms inside the temple. There was a big hall and a smaller room, called the ‘Most Holy Place’. Around the outside there were small rooms. They were on three levels. That means that they built the rooms above each other. There were stairs which went to the rooms that were above the ground level."
+      "text": "The lowest level of rooms was 2.3 metres wide. The middle level was 2.7 metres wide and the top level was 3.2 metres wide. Each floor was built on wooden beams. The beams rested on stones in the temple walls, so that there were no holes that they cut into the walls."
     },
     {
       "verse": "7",
@@ -752,7 +752,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The door to the lowest level of rooms on the sides of the temple was on the south side of the temple. Stairs went up to the middle level and to the top level. Each level was about 2.3 metres high. That is why the windows were high up (verse 4)."
+      "text": "The door to the lowest level of rooms on the sides of the temple was on the south side of the temple. Stairs went up to the middle level and to the top level."
     },
     {
       "verse": "9",
@@ -788,11 +788,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The big hall in front of the Most Holy Place was 18 metres long."
+      "text": "metres long."
     },
     {
       "verse": "18",
-      "text": "The inside of the temple was covered with boards made of cedar wood. The workers cut pictures of fruits and flowers on the wood. The cedar boards completely covered the stone walls, so you could not see any stone. The big hall of the temple was the Holy Place. At the back of the temple, the inside room was the Most Holy Place. Only the leader of the priests could go in there on one day every year."
+      "text": "The inside of the temple was covered with boards made of cedar wood. The workers cut pictures of fruits and flowers on the wood. The cedar boards completely covered the stone walls, so you could not see any stone."
     },
     {
       "verse": "19",
@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The inside room was 9 metres long, 9 metres wide and 9 metres high. Solomon used pure gold to cover the walls of this room. He also covered the cedar altar with gold."
+      "text": "metres long, 9 metres wide and 9 metres high. Solomon used pure gold to cover the walls of this room. He also covered the cedar altar with gold."
     },
     {
       "verse": "21",
@@ -872,7 +872,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "They finished building the temple in the 11th year that Solomon was king. It was the eighth month, the month called Bul. So they built the temple in seven years, exactly as the plans showed that it should be. Print... Use screen font size Show All Comments 1 Kings 51 Kings 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They finished building the temple in the 11th year that Solomon was king. It was the eighth month, the month called Bul. So they built the temple in seven years, exactly as the plans showed that it should be."
     }
   ],
   "7": [
@@ -894,7 +894,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "All the doors had square corners and four sides. There were three doors in each group. Solomon's palace had 5 parts: the Palace of the Forest of Lebanon (verses 2-5), the Hall of Pillars (verse 6), the room for the king's throne (verse 7), Solomon's own house and Solomon's wife's house (verse 8). The cedar wood came from the forests in Lebanon. The pillars caused it to look like a forest. This is why it is called the Palace of the Forest of Lebanon. Solomon had a large family and many servants. So his house was very large. Perhaps Solomon's house and his wife's house joined together."
+      "text": "All the doors had square corners and four sides. There were three doors in each group."
     },
     {
       "verse": "6",
@@ -922,7 +922,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "There was a wall around the great yard. This had three rows of special stones, then a row of cedar beams, and so on. It was like the wall around the yard of the Lord's temple and the entrance room. More work on the temple"
+      "text": "There was a wall around the great yard. This had three rows of special stones, then a row of cedar beams, and so on. It was like the wall around the yard of the Lord's temple and the entrance room."
     },
     {
       "verse": "13",
@@ -930,7 +930,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Hiram was the son of a widow from the tribe of Naphtali. His father was a worker who knew how to use bronze to make things. He lived in Tyre. Hiram also had special skills. He knew how to use bronze to make many kinds of things. So he came to work for King Solomon. He did all the work that Solomon asked him to do. The tribe of Naphtali was in the north of Israel, near to Tyre."
+      "text": "Hiram was the son of a widow from the tribe of Naphtali. His father was a worker who knew how to use bronze to make things. He lived in Tyre. Hiram also had special skills. He knew how to use bronze to make many kinds of things. So he came to work for King Solomon. He did all the work that Solomon asked him to do."
     },
     {
       "verse": "15",
@@ -954,7 +954,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "There were pictures of 200 pomegranates in two rows all around the top of each pillar. They were next to the chains above the round shape at the top of the pillar."
+      "text": "pomegranates in two rows all around the top of each pillar. They were next to the chains above the round shape at the top of the pillar."
     },
     {
       "verse": "21",
@@ -978,7 +978,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The walls of ‘the Sea’ were 7½ centimetres thick. Its top edge was like a cup in the shape of a lily flower. ‘The Sea’ contained about 40,000 litres of water. The Sea was something special. It was full of water. The priests used this to wash themselves when they went into the temple."
+      "text": "The walls of ‘the Sea’ were 7½ centimetres thick. Its top edge was like a cup in the shape of a lily flower. ‘The Sea’ contained about 40,000 litres of water."
     },
     {
       "verse": "27",
@@ -998,7 +998,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "On the top of the cart there was a round piece which held a bowl. This piece was 50 centimetres deep and 75 centimetres across. Hiram cut pictures into the metal all around it. The bronze sides of the carts were square. They were not round. They used the carts to take water to fill the Sea. An axle is the long bar or stick that joins two wheels on a cart."
+      "text": "On the top of the cart there was a round piece which held a bowl. This piece was 50 centimetres deep and 75 centimetres across. Hiram cut pictures into the metal all around it. The bronze sides of the carts were square. They were not round."
     },
     {
       "verse": "32",
@@ -1022,7 +1022,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "Hiram used bronze to make the ten carts so that they all had the same size and shape. Hiram made the bronze very hot. Then he poured it into shapes to make the axles and the parts of the wheels. When the metal became cold, it became hard again, in the right shape."
+      "text": "Hiram used bronze to make the ten carts so that they all had the same size and shape."
     },
     {
       "verse": "38",
@@ -1034,7 +1034,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Hiram also made dishes to carry ashes, small tools and bowls. So Hiram finished all the work in the Lord's temple that King Solomon had asked him to do. He made these things:"
+      "text": "Hiram also made dishes to carry ashes, small tools and bowls.So Hiram finished all the work in the Lord's temple that King Solomon had asked him to do. He made these things: So Hiram finished all the work in the Lord's temple that King Solomon had asked him to do. He made these things:"
     },
     {
       "verse": "41",
@@ -1042,7 +1042,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "400 images of pomegranates for the two groups of chains. (There were two rows of these images around the piece at the top of each pillar, which had the shape of a bowl.)"
+      "text": "images of pomegranates for the two groups of chains. (There were two rows of these images around the piece at the top of each pillar, which had the shape of a bowl.)"
     },
     {
       "verse": "43",
@@ -1066,7 +1066,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "Solomon also made all these things for the Lord's temple: The gold altar.The gold table which had the special bread on it."
+      "text": "Solomon also made all these things for the Lord's temple:The gold altar.The gold table which had the special bread on it."
     },
     {
       "verse": "49",
@@ -1078,7 +1078,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "King Solomon finished all the work for the Lord's temple. Then he brought into it all the holy things that belonged to his father, David. He stored all the valuable things in a safe place in the Lord's temple. They included silver things and gold things. Print... Use screen font size Show All Comments 1 Kings 61 Kings 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "King Solomon finished all the work for the Lord's temple. Then he brought into it all the holy things that belonged to his father, David. He stored all the valuable things in a safe place in the Lord's temple. They included silver things and gold things."
     }
   ],
   "8": [
@@ -1092,7 +1092,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "When all Israel's leaders had arrived, the priests lifted up the Covenant Box. Before they built the temple, King David had put the Covenant Box in a tent. See Leviticus"
+      "text": "When all Israel's leaders had arrived, the priests lifted up the Covenant Box."
     },
     {
       "verse": "4",
@@ -1112,7 +1112,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The poles were very long. The priests could see their ends from the Holy Place, if they stood in front of the Most Holy Place. But nobody could see the poles from outside the temple. And they are still there today. See 1 Kings"
+      "text": "The poles were very long. The priests could see their ends from the Holy Place, if they stood in front of the Most Holy Place. But nobody could see the poles from outside the temple. And they are still there today."
     },
     {
       "verse": "9",
@@ -1132,7 +1132,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Now I have built a great temple for you. It is a place where you can live for ever.’ Solomon speaks to his people"
+      "text": "Now I have built a great temple for you. It is a place where you can live for ever.’"
     },
     {
       "verse": "14",
@@ -1164,7 +1164,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I have made a place there for the Covenant Box. It contains the covenant that the Lord made with our ancestors when he brought them out of Egypt.’ Solomon prays in the temple"
+      "text": "I have made a place there for the Covenant Box. It contains the covenant that the Lord made with our ancestors when he brought them out of Egypt.’"
     },
     {
       "verse": "22",
@@ -1172,7 +1172,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He prayed, the sky’ or ‘heaven’ ‘Lord, Israel's God, there is no God like you, either in heaven above or down here on the earth. You continue to do what you have promised to do for your people. You faithfully love those who want to serve you."
+      "text": "He prayed,‘Lord, Israel's God, there is no God like you, either in heaven above or down here on the earth. You continue to do what you have promised to do for your people. You faithfully love those who want to serve you."
     },
     {
       "verse": "24",
@@ -1324,7 +1324,7 @@ module.exports = {
     },
     {
       "verse": "61",
-      "text": "I pray that you will continue to serve the Lord our God faithfully. You must continue to obey his rules and his commands, as you do now.’ Solomon offers the temple as a gift to God"
+      "text": "I pray that you will continue to serve the Lord our God faithfully. You must continue to obey his rules and his commands, as you do now.’"
     },
     {
       "verse": "62",
@@ -1332,7 +1332,7 @@ module.exports = {
     },
     {
       "verse": "63",
-      "text": "These are the friendship offerings that Solomon offered to the Lord: 22,000 cows.120,000 sheep and goats.In this way, King Solomon and all the Israelite people offered the temple as a gift to the Lord."
+      "text": "These are the friendship offerings that Solomon offered to the Lord:22,000 cows.120,000 sheep and goats.In this way, King Solomon and all the Israelite people offered the temple as a gift to the Lord. In this way, King Solomon and all the Israelite people offered the temple as a gift to the Lord."
     },
     {
       "verse": "64",
@@ -1344,13 +1344,13 @@ module.exports = {
     },
     {
       "verse": "66",
-      "text": "The day after the festival, Solomon sent the people away to their homes. They thanked God for the king and were very happy. They were full of joy because the Lord had done many good things for his servant David and for his people, the Israelites. See Leviticus 1-3. seven days’ or ‘14 days’. After seven days for the sacrifices for the temple, the Festival of Huts may have continued for another seven days. Print... Use screen font size Show All Comments 1 Kings 71 Kings 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The day after the festival, Solomon sent the people away to their homes. They thanked God for the king and were very happy. They were full of joy because the Lord had done many good things for his servant David and for his people, the Israelites."
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "Solomon had finished building the Lord's temple and the king's palace. He had built everything that he had wanted to build."
+      "text": "Solomon had finished building the Lord's temple and the king's palace. He had built everything that he had wanted to build. ‘I have heard your prayer and how you have asked me to help you. I have made this temple that you have built a special place for me. People will worship me there for ever. I will always be there to watch over it."
     },
     {
       "verse": "2",
@@ -1358,7 +1358,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Lord said to Solomon, See 1 Kings I have heard your prayer and how you have asked me to help you. I have made this temple that you have built a special place for me. People will worship me there for ever. I will always be there to watch over it."
+      "text": "The Lord said to Solomon,‘I have heard your prayer and how you have asked me to help you. I have made this temple that you have built a special place for me. People will worship me there for ever. I will always be there to watch over it."
     },
     {
       "verse": "4",
@@ -1382,7 +1382,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "People will answer, “He has done it because they have turned away from the Lord their God. He brought their ancestors out of Egypt. But they have chosen to worship other gods and to serve them. That is why the Lord has caused this trouble to happen to them.” ’ See 1 Kings Other things that Solomon did"
+      "text": "People will answer, “He has done it because they have turned away from the Lord their God. He brought their ancestors out of Egypt. But they have chosen to worship other gods and to serve them. That is why the Lord has caused this trouble to happen to them.” ’"
     },
     {
       "verse": "10",
@@ -1402,7 +1402,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Hiram had sent to King Solomon about 4,000 kilograms of gold. Kabul’ sounds like a Hebrew word that means ‘useless’. The towns were near Tyre."
+      "text": "Hiram had sent to King Solomon about 4,000 kilograms of gold."
     },
     {
       "verse": "15",
@@ -1422,7 +1422,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Solomon also made strong the cities where he stored things and the cities where he kept his chariots and horses. He built everything that he wanted to build in Jerusalem, in Lebanon and everywhere in his kingdom. The Canaanites were the people who lived in Israel's land before the Israelites came to live there."
+      "text": "Solomon also made strong the cities where he stored things and the cities where he kept his chariots and horses. He built everything that he wanted to build in Jerusalem, in Lebanon and everywhere in his kingdom."
     },
     {
       "verse": "20",
@@ -1458,7 +1458,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "They sailed to Ophir and they brought back about 14 tons of gold. They gave it to King Solomon. Print... Use screen font size Show All Comments 1 Kings 81 Kings 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "tons of gold. They gave it to King Solomon."
     }
   ],
   "10": [
@@ -1496,7 +1496,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So we praise the Lord your God! He is happy with you and he has chosen you to rule Israel. The Lord's love for Israel will continue for ever. So he has made you king to rule in a fair and honest way.’ Sheba may be in Africa. Bible students are not sure where it was. See 1 Kings"
+      "text": "So we praise the Lord your God! He is happy with you and he has chosen you to rule Israel. The Lord's love for Israel will continue for ever. So he has made you king to rule in a fair and honest way.’"
     },
     {
       "verse": "10",
@@ -1512,11 +1512,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "So King Solomon gave the Queen of Sheba all the gifts that he chose for her. He gave her everything that she wanted. Then she left Solomon and she returned to her own country with her servants. Solomon's riches"
+      "text": "So King Solomon gave the Queen of Sheba all the gifts that he chose for her. He gave her everything that she wanted. Then she left Solomon and she returned to her own country with her servants."
     },
     {
       "verse": "14",
-      "text": "Solomon received 25 tons of gold each year."
+      "text": "tons of gold each year."
     },
     {
       "verse": "15",
@@ -1528,7 +1528,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They also made 300 small shields in the same way. They used about 2 kilograms of gold to cover each shield. He put these shields in the Palace of the Forest of Lebanon. See 1 Kings"
+      "text": "small shields in the same way. They used about 2 kilograms of gold to cover each shield. He put these shields in the Palace of the Forest of Lebanon."
     },
     {
       "verse": "18",
@@ -1540,7 +1540,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "There were 12 more images of lions on the six steps. There was one lion at each end of every step. There was no throne like it in any other kingdom."
+      "text": "more images of lions on the six steps. There was one lion at each end of every step. There was no throne like it in any other kingdom."
     },
     {
       "verse": "21",
@@ -1548,7 +1548,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The king had many large ships that could sail across the seas. They sailed with King Hiram's ships. Every three years they returned to Solomon with their loads. They brought to him gold, silver and ivory. They also brought apes and monkeys. There was no sea at Jerusalem, so Solomon kept his ships with King Hiram. Hiram lived in Tyre, on the shore of the Mediterranean Sea. monkeys’ or ‘peacocks’. ‘Apes’ are animals like big monkeys. Peacocks are beautiful birds."
+      "text": "The king had many large ships that could sail across the seas. They sailed with King Hiram's ships. Every three years they returned to Solomon with their loads. They brought to him gold, silver and ivory. They also brought apes and monkeys."
     },
     {
       "verse": "23",
@@ -1576,7 +1576,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Each chariot that they bought in Egypt cost 600 pieces of silver. Each horse cost 150 pieces of silver. They also sold chariots and horses to all the kings of the Hittites and to the kings of Syria. Print... Use screen font size Show All Comments 1 Kings 91 Kings 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "pieces of silver. Each horse cost 150 pieces of silver. They also sold chariots and horses to all the kings of the Hittites and to the kings of Syria."
     }
   ],
   "11": [
@@ -1590,11 +1590,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Solomon had 700 royal wives. He also had 300 slave wives. His wives caused him to turn away from the Lord."
+      "text": "royal wives. He also had 300 slave wives. His wives caused him to turn away from the Lord."
     },
     {
       "verse": "4",
-      "text": "When Solomon became old, his wives caused him to serve other gods. Solomon no longer completely loved the Lord his God as his father David had done. The royal wives were daughters of kings or important people in foreign nations."
+      "text": "When Solomon became old, his wives caused him to serve other gods. Solomon no longer completely loved the Lord his God as his father David had done."
     },
     {
       "verse": "5",
@@ -1630,7 +1630,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "But I will not take away the whole kingdom from him. I will leave one tribe for him to rule as king. I will do this because King David served me faithfully, and because I have chosen Jerusalem as my special city.’ Solomon's son ruled the tribe called Judah. He may also have ruled Benjamin's tribe. Jerusalem was in Judah. Solomon's enemies"
+      "text": "But I will not take away the whole kingdom from him. I will leave one tribe for him to rule as king. I will do this because King David served me faithfully, and because I have chosen Jerusalem as my special city.’"
     },
     {
       "verse": "14",
@@ -1658,7 +1658,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Tahpenes's sister gave birth to Hadad's son, called Genubath. Queen Tahpenes took care of Genubath in the king's palace. Genubath lived there with Pharaoh's own children. Edom was a country to the south-east of Israel. The story of David's war against Edom is in 1 Samuel 8."
+      "text": "Tahpenes's sister gave birth to Hadad's son, called Genubath. Queen Tahpenes took care of Genubath in the king's palace. Genubath lived there with Pharaoh's own children."
     },
     {
       "verse": "21",
@@ -1678,7 +1678,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Rezon was Israel's enemy all the time that Solomon was alive. He caused trouble for Solomon, as Hadad also did. Rezon ruled in Syria and he hated the Israelite people. Damascus was the capital city of Syria."
+      "text": "Rezon was Israel's enemy all the time that Solomon was alive. He caused trouble for Solomon, as Hadad also did. Rezon ruled in Syria and he hated the Israelite people."
     },
     {
       "verse": "26",
@@ -1690,7 +1690,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Jeroboam was a strong young man. Solomon saw that he did his work very well. So he made Jeroboam the leader of the workers who belonged to Joseph's tribe. Ephraim's land was north east of Jerusalem. It was one of the biggest tribes of Israel."
+      "text": "Jeroboam was a strong young man. Solomon saw that he did his work very well. So he made Jeroboam the leader of the workers who belonged to Joseph's tribe."
     },
     {
       "verse": "29",
@@ -1734,11 +1734,11 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "Because of Solomon's sins I will punish David's descendants. But I will not punish them for ever.” ’ Israel’ means the 10 tribes that were north of Judah and Benjamin."
+      "text": "Because of Solomon's sins I will punish David's descendants. But I will not punish them for ever.” ’"
     },
     {
       "verse": "40",
-      "text": "Solomon then tried to kill Jeroboam, but Jeroboam escaped to Egypt. Shishak, the king of Egypt, kept Jeroboam safe. Jeroboam stayed in Egypt until Solomon died. Solomon dies"
+      "text": "Solomon then tried to kill Jeroboam, but Jeroboam escaped to Egypt. Shishak, the king of Egypt, kept Jeroboam safe. Jeroboam stayed in Egypt until Solomon died."
     },
     {
       "verse": "41",
@@ -1746,11 +1746,11 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Solomon ruled over all Israel for 40 years while he lived in Jerusalem."
+      "text": "years while he lived in Jerusalem."
     },
     {
       "verse": "43",
-      "text": "Then he died. They buried him with his ancestors, in the city of his father David. His son Rehoboam became king after him. Print... Use screen font size Show All Comments 1 Kings 101 Kings 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then he died. They buried him with his ancestors, in the city of his father David. His son Rehoboam became king after him."
     }
   ],
   "12": [
@@ -1816,11 +1816,11 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "All the Israelites realized that the king refused to listen to them. So they said to the king, ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family!’ So the Israelites went to their homes."
+      "text": "All the Israelites realized that the king refused to listen to them. So they said to the king,‘We can no longer serve the family of Jesse's son, David!Israelites, go back to your homes!You descendant of David, take care of your own family!’So the Israelites went to their homes. ‘We can no longer serve the family of Jesse's son, David! Israelites, go back to your homes! You descendant of David, take care of your own family!’ So the Israelites went to their homes."
     },
     {
       "verse": "17",
-      "text": "But Rehoboam continued to rule over the Israelites who lived in the towns of Judah. Rehoboam was now king over only two Israelite tribes, Judah and Benjamin. This was the kingdom in the south. Jeroboam became king over the other 10 tribes in the north."
+      "text": "But Rehoboam continued to rule over the Israelites who lived in the towns of Judah."
     },
     {
       "verse": "18",
@@ -1836,7 +1836,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Rehoboam arrived back in Jerusalem. He brought together all the men from the tribes of Judah and Benjamin who knew how to fight. There were 180,000 of them. Solomon's son Rehoboam wanted to attack the Israelite tribes so that he could rule them again as king."
+      "text": "Rehoboam arrived back in Jerusalem. He brought together all the men from the tribes of Judah and Benjamin who knew how to fight. There were 180,000 of them. Solomon's son Rehoboam wanted to attack the Israelite tribes so that he could rule them again as king. So they obeyed the Lord's message. They went back to their homes, as the Lord had commanded them to do."
     },
     {
       "verse": "22",
@@ -1848,7 +1848,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "This is what the Lord says: “Do not attack your brothers, the Israelites. Do not fight against them. Instead, you must all go home. I, the Lord, have decided that this must happen.” ’ So they obeyed the Lord's message. They went back to their homes, as the Lord had commanded them to do. King Jeroboam"
+      "text": "This is what the Lord says: “Do not attack your brothers, the Israelites. Do not fight against them. Instead, you must all go home. I, the Lord, have decided that this must happen.” ’So they obeyed the Lord's message. They went back to their homes, as the Lord had commanded them to do."
     },
     {
       "verse": "25",
@@ -1872,7 +1872,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "But that caused the Israelite people to do a very bad thing. They went to Bethel and to Dan to worship the gold cows. The Book of Deuteronomy said that each Israelite must go to Jerusalem three times in every year. Jeroboam made other places for them to go to instead. The places were Bethel and Dan. It was easier for most Israelites to travel to Bethel (in the south) and to Dan (in the north)."
+      "text": "But that caused the Israelite people to do a very bad thing. They went to Bethel and to Dan to worship the gold cows."
     },
     {
       "verse": "31",
@@ -1880,11 +1880,11 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "He decided to have a festival on the 15th day of the eighth month each year. He wanted it to be like the festival that they had in Judah. He offered sacrifices on the altar in Bethel to the gold cows that he had made. He also chose priests to serve at the places that he built for people to worship. The festival in Judah was probably the Feast of Huts."
+      "text": "He decided to have a festival on the 15th day of the eighth month each year. He wanted it to be like the festival that they had in Judah. He offered sacrifices on the altar in Bethel to the gold cows that he had made. He also chose priests to serve at the places that he built for people to worship."
     },
     {
       "verse": "33",
-      "text": "On the 15th day of the eighth month, Jeroboam offered sacrifices on the altar that he had made at Bethel. That was the special day that he himself had decided to choose as a festival for the Israelites. On that day, he burned incense on the altar. Print... Use screen font size Show All Comments 1 Kings 111 Kings 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "On the 15th day of the eighth month, Jeroboam offered sacrifices on the altar that he had made at Bethel. That was the special day that he himself had decided to choose as a festival for the Israelites. On that day, he burned incense on the altar."
     }
   ],
   "13": [
@@ -1926,7 +1926,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So God's servant started to travel home on a different road. He did not go on the same road that he came to Bethel. An old prophet in Bethel"
+      "text": "So God's servant started to travel home on a different road. He did not go on the same road that he came to Bethel."
     },
     {
       "verse": "11",
@@ -1970,7 +1970,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He spoke this message to the servant of God who had come from Judah: ‘This is what the Lord says: You have not obeyed the Lord. You have not done what the Lord your God commanded you to do."
+      "text": "He spoke this message to the servant of God who had come from Judah:‘This is what the Lord says: You have not obeyed the Lord. You have not done what the Lord your God commanded you to do."
     },
     {
       "verse": "22",
@@ -2014,7 +2014,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "The Lord's message that he spoke will certainly become true. He spoke against the altar in Bethel and against all the altars on the hills of Samaria's towns.’ Samaria is another name for the kingdom of Israel in the north that Jeroboam ruled."
+      "text": "The Lord's message that he spoke will certainly become true. He spoke against the altar in Bethel and against all the altars on the hills of Samaria's towns.’"
     },
     {
       "verse": "33",
@@ -2022,7 +2022,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "This sin caused Jeroboam's family to disappear from the earth. He would no longer have descendants to rule the kingdom. God's Law said that only Levites who were descendants of Aaron could be priests. Print... Use screen font size Show All Comments 1 Kings 121 Kings 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "This sin caused Jeroboam's family to disappear from the earth. He would no longer have descendants to rule the kingdom."
     }
   ],
   "14": [
@@ -2036,7 +2036,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Take ten loaves of bread with you. Also take some cakes and a pot of honey. When you visit Ahijah, he will tell you what will happen to our son.’ See 1 Kings"
+      "text": "Take ten loaves of bread with you. Also take some cakes and a pot of honey. When you visit Ahijah, he will tell you what will happen to our son.’"
     },
     {
       "verse": "4",
@@ -2096,7 +2096,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "They buried him and all the Israelites cried because of his death. The Lord had told his servant the prophet Ahijah what would happen. And that is what happened. King Jeroboam dies"
+      "text": "They buried him and all the Israelites cried because of his death. The Lord had told his servant the prophet Ahijah what would happen. And that is what happened."
     },
     {
       "verse": "19",
@@ -2104,7 +2104,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Jeroboam ruled as king for 22 years. Then he died and they buried him beside his ancestors. His son Nadab became king after him. King Rehoboam dies"
+      "text": "years. Then he died and they buried him beside his ancestors. His son Nadab became king after him."
     },
     {
       "verse": "21",
@@ -2148,7 +2148,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Rehoboam died and they buried him beside his ancestors in the City of David. Rehoboam's mother was an Ammonite woman. Her name was Naamah. Rehoboam's son Abijah became king after him. Print... Use screen font size Show All Comments 1 Kings 131 Kings 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Rehoboam died and they buried him beside his ancestors in the City of David. Rehoboam's mother was an Ammonite woman. Her name was Naamah. Rehoboam's son Abijah became king after him."
     }
   ],
   "15": [
@@ -2170,7 +2170,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "David had always done things that pleased the Lord. David had obeyed the Lord's commands in his whole life, except what he did to Uriah, the Hittite man. Abishalom may be another way to write Absalom, who was King David's son. So maybe Maakah was the granddaughter of King David. David sent Uriah to his death, so that he could marry Uriah's wife, Bathsheba. See 2 Samuel 11."
+      "text": "David had always done things that pleased the Lord. David had obeyed the Lord's commands in his whole life, except what he did to Uriah, the Hittite man."
     },
     {
       "verse": "6",
@@ -2182,15 +2182,15 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Abijah died and they buried him beside his ancestors in the City of David. Abijah's son Asa became king after him. Asa, king of Judah"
+      "text": "Abijah died and they buried him beside his ancestors in the City of David. Abijah's son Asa became king after him."
     },
     {
       "verse": "9",
-      "text": "Asa became king of Judah when Jeroboam had been king of Israel for 20 years."
+      "text": "years."
     },
     {
       "verse": "10",
-      "text": "Asa ruled in Jerusalem as king for 41 years. His grandmother was Maakah. She was the daughter of Abishalom."
+      "text": "years. His grandmother was Maakah. She was the daughter of Abishalom."
     },
     {
       "verse": "11",
@@ -2210,7 +2210,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He brought into the Lord's temple the things that he and his father had made as gifts to the Lord. They used silver and gold to make some of these things. Queen Mother’ was the wife of a king that had now died. She had authority to make important decisions. The Kidron Valley was outside Jerusalem."
+      "text": "He brought into the Lord's temple the things that he and his father had made as gifts to the Lord. They used silver and gold to make some of these things."
     },
     {
       "verse": "16",
@@ -2238,7 +2238,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then King Asa commanded all the men in Judah to do some hard work. Everyone had to do this: They must carry away from Ramah all the big stones and the wood that Baasha had been using there. Then King Asa used those things to make Geba (in Benjamin's land) and Mizpah strong towns again. Ramah was near to Jerusalem, in Benjamin's land. It was part of King Asa's kingdom."
+      "text": "Then King Asa commanded all the men in Judah to do some hard work. Everyone had to do this: They must carry away from Ramah all the big stones and the wood that Baasha had been using there. Then King Asa used those things to make Geba (in Benjamin's land) and Mizpah strong towns again."
     },
     {
       "verse": "23",
@@ -2246,7 +2246,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Asa died and they buried him beside his ancestors in the City of David, his ancestor. Asa's son Jehoshaphat became king after him. Nadab, king of Israel"
+      "text": "Asa died and they buried him beside his ancestors in the City of David, his ancestor. Asa's son Jehoshaphat became king after him."
     },
     {
       "verse": "25",
@@ -2270,7 +2270,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "This happened because of Jeroboam's sins, and the sins which he caused the Israelites to do. These sins had made the Lord, Israel's God, very angry. Ahijah's message to Jeroboam is in 1 Kings"
+      "text": "This happened because of Jeroboam's sins, and the sins which he caused the Israelites to do. These sins had made the Lord, Israel's God, very angry."
     },
     {
       "verse": "31",
@@ -2278,7 +2278,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "There was always a war between the armies of King Asa and King Nadab. Baasha, king of Israel"
+      "text": "There was always a war between the armies of King Asa and King Nadab."
     },
     {
       "verse": "33",
@@ -2286,7 +2286,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "Baasha did things that the Lord said were evil. He did the same sins that Jeroboam had done. He also caused the Israelites to do those bad things. Tirzah was a beautiful place. See Song of Songs Perhaps that is why Israel's kings lived there instead of in Shechem. Print... Use screen font size Show All Comments 1 Kings 141 Kings 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Baasha did things that the Lord said were evil. He did the same sins that Jeroboam had done. He also caused the Israelites to do those bad things."
     }
   ],
   "16": [
@@ -2316,11 +2316,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Hanani's son Jehu, the prophet, had received a message from the Lord about Baasha and his family. Baasha had done many things that the Lord said were evil, in the same way that Jeroboam had done. Baasha had even destroyed Jeroboam's whole family. These bad things made the Lord very angry. Elah, king of Israel"
+      "text": "Hanani's son Jehu, the prophet, had received a message from the Lord about Baasha and his family. Baasha had done many things that the Lord said were evil, in the same way that Jeroboam had done. Baasha had even destroyed Jeroboam's whole family. These bad things made the Lord very angry."
     },
     {
       "verse": "8",
-      "text": "When Asa had been king of Judah for 26 years, Baasha's son Elah became king of Israel. He ruled as king in Tirzah for two years."
+      "text": "years, Baasha's son Elah became king of Israel. He ruled as king in Tirzah for two years."
     },
     {
       "verse": "9",
@@ -2344,11 +2344,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The other things that happened while Elah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about all the things that Elah did. Zimri, king of Israel"
+      "text": "The other things that happened while Elah was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about all the things that Elah did."
     },
     {
       "verse": "15",
-      "text": "When Asa had been king of Judah for 27 years, Zimri became king of Israel. He ruled as king in Tirzah for seven days. When Zimri killed King Elah, Israel's army was attacking a Philistine town called Gibbethon."
+      "text": "years, Zimri became king of Israel. He ruled as king in Tirzah for seven days.When Zimri killed King Elah, Israel's army was attacking a Philistine town called Gibbethon."
     },
     {
       "verse": "16",
@@ -2368,7 +2368,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The other things that happened while Zimri was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about how he killed King Elah, as well as the other things that he did. Omri, king of Israel"
+      "text": "The other things that happened while Zimri was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about how he killed King Elah, as well as the other things that he did."
     },
     {
       "verse": "21",
@@ -2376,15 +2376,15 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But the group who wanted Omri to be king was stronger than the other group. As a result, Tibni died. Then Omri became the king of Israel. It seems that the fight between the two groups continued for four years. See verse 15 and verse 23."
+      "text": "But the group who wanted Omri to be king was stronger than the other group. As a result, Tibni died. Then Omri became the king of Israel."
     },
     {
       "verse": "23",
-      "text": "Omri became king of Israel when Asa had been king of Judah for 31 years. Omri ruled Israel as king for 12 years. He lived in Tirzah for the first six years."
+      "text": "years. Omri ruled Israel as king for 12 years. He lived in Tirzah for the first six years."
     },
     {
       "verse": "24",
-      "text": "Then Omri bought a hill from a man called Shemer. He paid Shemer 70 kilograms of silver for it. He built a city on the hill and he called the city Samaria. That was because the hill had belonged to Shemer. Samaria and Shemer have the same sound."
+      "text": "Then Omri bought a hill from a man called Shemer. He paid Shemer 70 kilograms of silver for it. He built a city on the hill and he called the city Samaria. That was because the hill had belonged to Shemer."
     },
     {
       "verse": "25",
@@ -2400,7 +2400,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Omri died and they buried him in Samaria. His son Ahab became king of Israel after him. Ahab, king of Israel"
+      "text": "Omri died and they buried him in Samaria. His son Ahab became king of Israel after him."
     },
     {
       "verse": "29",
@@ -2424,7 +2424,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "While Ahab ruled as king, Hiel built Jericho city again. Hiel came from Bethel. Abiram, his firstborn son, died when Hiel built the city's foundation. Segub, his youngest son, died when he built the gates in the city's wall. The Lord had told Nun's son Joshua that this would happen. See Joshua Print... Use screen font size Show All Comments 1 Kings 151 Kings 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "While Ahab ruled as king, Hiel built Jericho city again. Hiel came from Bethel. Abiram, his firstborn son, died when Hiel built the city's foundation. Segub, his youngest son, died when he built the gates in the city's wall. The Lord had told Nun's son Joshua that this would happen."
     }
   ],
   "17": [
@@ -2450,7 +2450,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "The ravens brought him bread and meat to eat, every morning and every evening. He drank water from the stream. The Kerith valley is about 40 miles north of the Dead Sea."
+      "text": "The ravens brought him bread and meat to eat, every morning and every evening. He drank water from the stream."
     },
     {
       "verse": "7",
@@ -2474,7 +2474,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "She replied, ‘As surely as the Lord your God lives, I do not have any bread. I have only a small amount of flour in a bowl and some olive oil in a small jar. I am now picking up a few sticks to take home. Then I will cook a meal for myself and for my son. We will eat it. Then we will die because there is nothing else to eat.’ Towns had walls around them. The entrance was through the ‘town gate’."
+      "text": "She replied, ‘As surely as the Lord your God lives, I do not have any bread. I have only a small amount of flour in a bowl and some olive oil in a small jar. I am now picking up a few sticks to take home. Then I will cook a meal for myself and for my son. We will eat it. Then we will die because there is nothing else to eat.’"
     },
     {
       "verse": "13",
@@ -2522,7 +2522,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then the woman said to Elijah, ‘Now I know that you are a servant of God. The words that you speak are truly a message from the Lord.’ Print... Use screen font size Show All Comments 1 Kings 161 Kings 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the woman said to Elijah, ‘Now I know that you are a servant of God. The words that you speak are truly a message from the Lord.’"
     }
   ],
   "18": [
@@ -2532,15 +2532,15 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So Elijah went to meet Ahab. At that time, the famine in Samaria was very bad."
+      "text": "So Elijah went to meet Ahab.At that time, the famine in Samaria was very bad."
     },
     {
       "verse": "3",
-      "text": "King Ahab told his officer Obadiah to come and meet him. Obadiah had authority over the king's palace. Obadiah obeyed the Lord very faithfully."
+      "text": "King Ahab told his officer Obadiah to come and meet him. Obadiah had authority over the king's palace.Obadiah obeyed the Lord very faithfully."
     },
     {
       "verse": "4",
-      "text": "At one time, Ahab's wife Jezebel was killing many of the Lord's prophets. While she was doing this, Obadiah had kept 100 prophets safe. He had hidden them in two caves, with 50 prophets in each cave. He had also given them food and water. The name Obadiah means ‘servant of the Lord’."
+      "text": "At one time, Ahab's wife Jezebel was killing many of the Lord's prophets. While she was doing this, Obadiah had kept 100 prophets safe. He had hidden them in two caves, with 50 prophets in each cave. He had also given them food and water."
     },
     {
       "verse": "5",
@@ -2572,7 +2572,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When I leave you, I do not know where the Lord's Spirit will take you. I may not be able to find you again. Then if I tell Ahab that I have seen you, he still will not find you. So he will kill me. But I have served the Lord faithfully since I was a young man."
+      "text": "When I leave you, I do not know where the Lord's Spirit will take you. I may not be able to find you again. Then if I tell Ahab that I have seen you, he still will not find you. So he will kill me.But I have served the Lord faithfully since I was a young man."
     },
     {
       "verse": "13",
@@ -2584,7 +2584,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Elijah said, ‘I serve the Lord Almighty. As surely as he lives, I promise that I will meet with King Ahab today.’ Elijah and Baal's prophets"
+      "text": "Elijah said, ‘I serve the Lord Almighty. As surely as he lives, I promise that I will meet with King Ahab today.’"
     },
     {
       "verse": "16",
@@ -2620,7 +2620,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then, you pray to your god, and I will pray to the Lord. The god who answers and who sends fire to light the wood, he is the true God!’ All the people agreed that this was a good idea. There were more of the Lord's prophets, but they were not at Mount Carmel."
+      "text": "Then, you pray to your god, and I will pray to the Lord. The god who answers and who sends fire to light the wood, he is the true God!’ All the people agreed that this was a good idea."
     },
     {
       "verse": "25",
@@ -2648,11 +2648,11 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "Elijah picked up 12 stones, one for each of the tribes that were Jacob's descendants. Jacob was the man that the Lord had given the new name ‘Israel’."
+      "text": "stones, one for each of the tribes that were Jacob's descendants. Jacob was the man that the Lord had given the new name ‘Israel’."
     },
     {
       "verse": "32",
-      "text": "Elijah used the 12 stones to build an altar that would give honour to the Lord. He dug a hole in the ground all around it. The hole was big enough to contain 15 litres of seeds."
+      "text": "stones to build an altar that would give honour to the Lord. He dug a hole in the ground all around it. The hole was big enough to contain 15 litres of seeds."
     },
     {
       "verse": "33",
@@ -2684,7 +2684,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Then Elijah said, ‘Take hold of Baal's prophets! Do not let any of them run away!’ So they caught them. Then Elijah took the prophets down to the Kishon Valley. There, he punished them with death. Elijah waits for rain"
+      "text": "Then Elijah said, ‘Take hold of Baal's prophets! Do not let any of them run away!’ So they caught them. Then Elijah took the prophets down to the Kishon Valley. There, he punished them with death."
     },
     {
       "verse": "41",
@@ -2704,11 +2704,11 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "As Elijah said this, the sky became very dark with black clouds. The wind started to blow and there was a heavy storm of rain. From the top of Mount Carmel, you can see the Mediterranean Sea in the west. The rain was coming from that direction. King Ahab rode away towards Jezreel."
+      "text": "As Elijah said this, the sky became very dark with black clouds. The wind started to blow and there was a heavy storm of rain.King Ahab rode away towards Jezreel."
     },
     {
       "verse": "46",
-      "text": "Then the Lord gave Elijah special power. Elijah tied his robe into his belt and he ran all the way to Jezreel. Ahab followed him. Print... Use screen font size Show All Comments 1 Kings 171 Kings 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the Lord gave Elijah special power. Elijah tied his robe into his belt and he ran all the way to Jezreel. Ahab followed him."
     }
   ],
   "19": [
@@ -2742,7 +2742,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So Elijah got up. He ate the food and he drank the water. The meal made him strong enough to travel for 40 days and 40 nights. He travelled to Sinai, the mountain of God. Beersheba was in the south of Judah. Sinai was the mountain where God met Moses. See Exodus Moses, Elijah and Jesus all lived without food for 40 days and 40 nights. See Deuteronomy Matthew The Lord appears to Elijah"
+      "text": "So Elijah got up. He ate the food and he drank the water. The meal made him strong enough to travel for 40 days and 40 nights. He travelled to Sinai, the mountain of God."
     },
     {
       "verse": "9",
@@ -2754,7 +2754,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Lord said, ‘Go out from the cave and stand on the mountain, in front of me. I, the Lord, will pass in front of you.’ The covenant that they turned away from is in Exodus It says, ‘You must not have any other gods except me.’ One of the altars that they destroyed was in Carmel, 1 Kings Then a very strong wind broke the mountain apart. It broke the rocks into pieces as the Lord came near. But the Lord was not in the wind. After the wind, there was an earthquake. But the Lord was not in the earthquake."
+      "text": "The Lord said, ‘Go out from the cave and stand on the mountain, in front of me. I, the Lord, will pass in front of you.’Then a very strong wind broke the mountain apart. It broke the rocks into pieces as the Lord came near. But the Lord was not in the wind. After the wind, there was an earthquake. But the Lord was not in the earthquake."
     },
     {
       "verse": "12",
@@ -2766,7 +2766,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Elijah said, ‘The Israelites have turned away from the covenant that you made with them. They have destroyed your altars. They have killed your prophets with swords. But I have always served the Lord God Almighty faithfully. Now I am the only prophet that is still alive and they are trying to kill me too.’ The question in verse 13 is the same as the question in verse 9. Elijah's answer is also the same."
+      "text": "Elijah said, ‘The Israelites have turned away from the covenant that you made with them. They have destroyed your altars. They have killed your prophets with swords. But I have always served the Lord God Almighty faithfully. Now I am the only prophet that is still alive and they are trying to kill me too.’"
     },
     {
       "verse": "15",
@@ -2782,19 +2782,19 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But remember this: I still have 7,000 people in Israel who have not worshipped Baal. They have not kissed his idols.’ Elisha becomes Elijah's servant"
+      "text": "But remember this: I still have 7,000 people in Israel who have not worshipped Baal. They have not kissed his idols.’"
     },
     {
       "verse": "19",
-      "text": "Elijah went away from Sinai. He found Shaphat's son, Elisha. Elisha was ploughing a field with 12 pairs of oxen. Elisha himself was using the 12th pair of oxen to plough. Elijah went to Elisha and he threw his robe over him."
+      "text": "Elijah went away from Sinai. He found Shaphat's son, Elisha. Elisha was ploughing a field with 12 pairs of oxen. Elisha himself was using the 12th pair of oxen to plough. Elijah went to Elisha and he threw his robe over him. Elisha said, ‘Let me go home first to kiss my father and my mother and say “goodbye”. Then I will come with you.’ Elijah replied, ‘Yes, go back home. But do not forget about what I have done to you.’"
     },
     {
       "verse": "20",
-      "text": "So Elisha left his oxen in the field and he ran after Elijah. Elijah's robe was a prophet's robe. He put it on Elisha to show him that he would now be a prophet. Elisha said, ‘Let me go home first to kiss my father and my mother and say “goodbye”. Then I will come with you.’ Elijah replied, ‘Yes, go back home. But do not forget about what I have done to you.’"
+      "text": "So Elisha left his oxen in the field and he ran after Elijah.Elisha said, ‘Let me go home first to kiss my father and my mother and say “goodbye”. Then I will come with you.’ Elijah replied, ‘Yes, go back home. But do not forget about what I have done to you.’"
     },
     {
       "verse": "21",
-      "text": "So Elisha went back to his field. He took his pair of oxen and he killed them as a sacrifice. He burned wood from the plough to cook the meat. He gave the meat to the people who were there and they ate it. Then he left home to go with Elijah and to become his helper. Print... Use screen font size Show All Comments 1 Kings 181 Kings 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Elisha went back to his field. He took his pair of oxen and he killed them as a sacrifice. He burned wood from the plough to cook the meat. He gave the meat to the people who were there and they ate it. Then he left home to go with Elijah and to become his helper."
     }
   ],
   "20": [
@@ -2808,7 +2808,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The message said: ‘This message is from King Ben-Hadad. He says, “Your silver and your gold now belong to me. Your best wives and your strongest children will also be mine.” ’ Syria was a country north of Israel."
+      "text": "The message said: ‘This message is from King Ben-Hadad. He says, “Your silver and your gold now belong to me. Your best wives and your strongest children will also be mine.” ’"
     },
     {
       "verse": "4",
@@ -2832,7 +2832,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So King Ahab said to the men who brought the messages from King Ben-Hadad, ‘Say this to my master, the king of Syria: “I agree to do everything that you asked for the first time. But I will not let you take the other things that you want.” ’ So the men took Ahab's answer back to Ben-Hadad."
+      "text": "So King Ahab said to the men who brought the messages from King Ben-Hadad, ‘Say this to my master, the king of Syria: “I agree to do everything that you asked for the first time. But I will not let you take the other things that you want.” ’So the men took Ahab's answer back to Ben-Hadad."
     },
     {
       "verse": "10",
@@ -2844,7 +2844,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "When Ben-Hadad received Ahab's message, he and the other kings were drinking wine in their tents. Ben-Hadad told his officers, ‘Prepare to attack!’ So they prepared to attack the city of Samaria. The Lord rescues Israel"
+      "text": "When Ben-Hadad received Ahab's message, he and the other kings were drinking wine in their tents. Ben-Hadad told his officers, ‘Prepare to attack!’ So they prepared to attack the city of Samaria."
     },
     {
       "verse": "13",
@@ -2864,7 +2864,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The young soldiers of each region's officers went in front of the Israelite army. Ben-Hadad had sent men out to watch the Israelites. They told him, ‘Men are marching out from Samaria.’"
+      "text": "The young soldiers of each region's officers went in front of the Israelite army.Ben-Hadad had sent men out to watch the Israelites. They told him, ‘Men are marching out from Samaria.’"
     },
     {
       "verse": "18",
@@ -2928,11 +2928,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "When Ben-Hadad's men heard this, they thought that it was a friendly answer. So they quickly agreed, ‘Yes! Ben-Hadad is like your own brother.’ King Ahab said, ‘Go and fetch him.’ They wore these clothes to show that they were sorry. Maybe they put the ropes around their necks. like my brother’ means that both of them were equal as kings. So Ben-Hadad came out from Aphek city. Ahab took him up into his chariot."
+      "text": "When Ben-Hadad's men heard this, they thought that it was a friendly answer. So they quickly agreed, ‘Yes! Ben-Hadad is like your own brother.’ King Ahab said, ‘Go and fetch him.’So Ben-Hadad came out from Aphek city. Ahab took him up into his chariot."
     },
     {
       "verse": "34",
-      "text": "Ben-Hadad said, ‘I will give back to you the cities that my father took from your father. Your traders can have their own markets in Damascus, as my father had in Samaria.’ Ahab answered, ‘If you do that, I will agree to let you go as a free man.’ So King Ahab made an agreement with King Ben-Hadad. Then he let him go home. A prophet warns King Ahab"
+      "text": "Ben-Hadad said, ‘I will give back to you the cities that my father took from your father. Your traders can have their own markets in Damascus, as my father had in Samaria.’ Ahab answered, ‘If you do that, I will agree to let you go as a free man.’ So King Ahab made an agreement with King Ben-Hadad. Then he let him go home."
     },
     {
       "verse": "35",
@@ -2940,7 +2940,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "So the prophet said to him, ‘You have not obeyed the Lord's command. Because of that, a lion will kill you as soon as you leave here.’ After the man left the prophet, a lion attacked him and it killed him. The prophet wanted people to think that someone had hurt him in the battle."
+      "text": "So the prophet said to him, ‘You have not obeyed the Lord's command. Because of that, a lion will kill you as soon as you leave here.’ After the man left the prophet, a lion attacked him and it killed him."
     },
     {
       "verse": "37",
@@ -2952,11 +2952,11 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "When the king came along the road, the prophet shouted to him, ‘Please sir, I went to fight in the middle of the battle. Then someone brought an enemy soldier to me as a prisoner. He said to me, “Keep this prisoner safe. If he escapes for any reason, you will die! To save your life, you will have to pay 3,000 silver coins.”"
+      "text": "When the king came along the road, the prophet shouted to him, ‘Please sir, I went to fight in the middle of the battle. Then someone brought an enemy soldier to me as a prisoner. He said to me, “Keep this prisoner safe. If he escapes for any reason, you will die! To save your life, you will have to pay 3,000 silver coins.” King Ahab replied, ‘What you have just said shows that you deserve your punishment.’"
     },
     {
       "verse": "40",
-      "text": "But I had other things to do, sir. While I was doing them, the prisoner escaped.’ King Ahab replied, ‘What you have just said shows that you deserve your punishment.’"
+      "text": "But I had other things to do, sir. While I was doing them, the prisoner escaped.’King Ahab replied, ‘What you have just said shows that you deserve your punishment.’"
     },
     {
       "verse": "41",
@@ -2968,7 +2968,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "So King Ahab of Israel went home to his palace in Samaria. He was angry and upset. Print... Use screen font size Show All Comments 1 Kings 191 Kings 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So King Ahab of Israel went home to his palace in Samaria. He was angry and upset."
     }
   ],
   "21": [
@@ -2982,7 +2982,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Naboth replied to Ahab, ‘The Lord will never allow that to happen! It belongs to me because it belonged to my ancestors.’ Naboth was doing what the Lord said was right. See Numbers"
+      "text": "Naboth replied to Ahab, ‘The Lord will never allow that to happen! It belongs to me because it belonged to my ancestors.’"
     },
     {
       "verse": "4",
@@ -3066,7 +3066,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "If people of Ahab's family die in the city, dogs will eat their bodies. If they die in the country, vultures will eat them.’ Kings tells us what happened to Jezebel."
+      "text": "If people of Ahab's family die in the city, dogs will eat their bodies. If they die in the country, vultures will eat them.’"
     },
     {
       "verse": "25",
@@ -3078,7 +3078,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "When Ahab heard Elijah's message, he tore his clothes into pieces. He dressed himself in sackcloth and he did not eat any food. He even wore sackcloth when he slept on his bed. He walked slowly with a sad face. People who were sorry for their sins wore sackcloth which was very rough. They also ate no food."
+      "text": "When Ahab heard Elijah's message, he tore his clothes into pieces. He dressed himself in sackcloth and he did not eat any food. He even wore sackcloth when he slept on his bed. He walked slowly with a sad face."
     },
     {
       "verse": "28",
@@ -3086,7 +3086,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "‘You have surely seen that Ahab now respects me. Because he has become humble, I will not destroy his family while he is alive. I will wait until his son rules as king. Then I will bring great trouble on Ahab's descendants.’ Print... Use screen font size Show All Comments 1 Kings 201 Kings 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘You have surely seen that Ahab now respects me. Because he has become humble, I will not destroy his family while he is alive. I will wait until his son rules as king. Then I will bring great trouble on Ahab's descendants.’"
     }
   ],
   "22": [
@@ -3112,7 +3112,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So the king of Israel brought together about 400 prophets. He asked them, ‘Should I attack Ramoth Gilead, or not?’ They answered, ‘Yes, go and attack it, because the Lord God will give it to you, our king.’"
+      "text": "prophets. He asked them, ‘Should I attack Ramoth Gilead, or not?’ They answered, ‘Yes, go and attack it, because the Lord God will give it to you, our king.’"
     },
     {
       "verse": "7",
@@ -3124,7 +3124,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So the king of Israel said to one of his officers, ‘Bring Imlah's son Micaiah here quickly.’ Jehoshaphat probably thought that the 400 prophets were false prophets. They were only saying something that would make the king of Israel happy."
+      "text": "So the king of Israel said to one of his officers, ‘Bring Imlah's son Micaiah here quickly.’"
     },
     {
       "verse": "10",
@@ -3136,7 +3136,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "All the other prophets were speaking the same message. They said, ‘Attack Ramoth Gilead. You will win the fight. The Lord will give the city to you, our king.’ The gate into a city was an important place. The leaders of the town had meetings there. Zedekiah was the leader of Ahab's prophets."
+      "text": "All the other prophets were speaking the same message. They said, ‘Attack Ramoth Gilead. You will win the fight. The Lord will give the city to you, our king.’"
     },
     {
       "verse": "13",
@@ -3176,7 +3176,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The spirit said, “I will give a message to all Ahab's prophets. I will cause them to speak lies.” The Lord said, “Go and deceive King Ahab, as you have said. He will do what you say.” This may have been a special spirit who told prophets messages that would deceive people."
+      "text": "The spirit said, “I will give a message to all Ahab's prophets. I will cause them to speak lies.” The Lord said, “Go and deceive King Ahab, as you have said. He will do what you say.”"
     },
     {
       "verse": "23",
@@ -3188,7 +3188,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Micaiah answered him, ‘One day, you will know which of us has spoken the truth. That will be the day that you go to hide in a room at the back of a house.’ Micaiah probably meant that Zedekiah would be hiding from Syrian soldiers."
+      "text": "Micaiah answered him, ‘One day, you will know which of us has spoken the truth. That will be the day that you go to hide in a room at the back of a house.’"
     },
     {
       "verse": "26",
@@ -3200,7 +3200,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Micaiah said, ‘If you do return safely, it will show that I have not spoken the Lord's message.’ Then he said to all the people who were there, ‘Remember what I have said to King Ahab!’ King Ahab dies in battle"
+      "text": "Micaiah said, ‘If you do return safely, it will show that I have not spoken the Lord's message.’ Then he said to all the people who were there, ‘Remember what I have said to King Ahab!’"
     },
     {
       "verse": "29",
@@ -3212,7 +3212,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The king of Syria had said to his 32 chariot officers, ‘Only fight the king of Israel. Do not fight against anyone else, whoever they are.’"
+      "text": "chariot officers, ‘Only fight the king of Israel. Do not fight against anyone else, whoever they are.’"
     },
     {
       "verse": "32",
@@ -3220,7 +3220,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Then the chariot officers realized that he was not the king of Israel. So they did not chase him any more. The 32 chariot officers were important leaders in the Syrian army."
+      "text": "Then the chariot officers realized that he was not the king of Israel. So they did not chase him any more."
     },
     {
       "verse": "34",
@@ -3240,7 +3240,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "They washed his blood from the chariot at the pool of water in Samaria. It was the place where the prostitutes washed themselves. The dogs drank Ahab's blood there. The Lord had said that this would happen. See 1 Kings"
+      "text": "They washed his blood from the chariot at the pool of water in Samaria. It was the place where the prostitutes washed themselves. The dogs drank Ahab's blood there. The Lord had said that this would happen."
     },
     {
       "verse": "39",
@@ -3248,7 +3248,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Ahab died and they buried him beside his ancestors. His son Ahaziah became king after him. King Jehoshaphat of Judah"
+      "text": "Ahab died and they buried him beside his ancestors. His son Ahaziah became king after him."
     },
     {
       "verse": "41",
@@ -3256,7 +3256,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Jehoshaphat was 35 years old when he became king. He ruled in Jerusalem for 25 years. His mother's name was Azubah. She was the daughter of Shilhi."
+      "text": "years old when he became king. He ruled in Jerusalem for 25 years. His mother's name was Azubah. She was the daughter of Shilhi."
     },
     {
       "verse": "43",
@@ -3272,7 +3272,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "He also removed the male prostitutes who lived near the special altars. His father Asa had removed many of them when he ruled as king. Jehoshaphat removed those who were still there. The male prostitutes served the false god Baal."
+      "text": "He also removed the male prostitutes who lived near the special altars. His father Asa had removed many of them when he ruled as king. Jehoshaphat removed those who were still there."
     },
     {
       "verse": "47",
@@ -3288,11 +3288,11 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "Jehoshaphat died and they buried him beside his ancestors in the City of David, his ancestor. Jehoshaphat's son Jehoram became king after him. King Ahaziah of Israel"
+      "text": "Jehoshaphat died and they buried him beside his ancestors in the City of David, his ancestor. Jehoshaphat's son Jehoram became king after him."
     },
     {
       "verse": "51",
-      "text": "When Jehoshaphat had ruled Judah for 17 years, Ahab's son Ahaziah became the king of Israel in Samaria. Ahaziah ruled Israel as king for two years."
+      "text": "years, Ahab's son Ahaziah became the king of Israel in Samaria. Ahaziah ruled Israel as king for two years."
     },
     {
       "verse": "52",
@@ -3300,7 +3300,7 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "Ahaziah served Baal as his god and he worshipped him. He made the Lord, Israel's God, very angry, as his father had also done. The story of King Ahaziah is continued in 2 Kings 1. Print... Use screen font size Show All Comments 1 Kings 212 Kings Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Ahaziah served Baal as his god and he worshipped him. He made the Lord, Israel's God, very angry, as his father had also done."
     }
   ]
 };

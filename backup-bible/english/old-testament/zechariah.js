@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "When Darius had been king of Persia for two years, Zechariah the prophet heard a message from the Lord. It was the eighth month of the year. Zechariah was the son of Berekiah, and Berekiah was the son of Iddo. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "When Darius had been king of Persia for two years, Zechariah the prophet heard a message from the Lord. It was the eighth month of the year. Zechariah was the son of Berekiah, and Berekiah was the son of Iddo."
     },
     {
       "verse": "2",
-      "text": "This was the Lord's message: ‘I, the Lord, was very angry with your ancestors."
+      "text": "This was the Lord's message:‘I, the Lord, was very angry with your ancestors."
     },
     {
       "verse": "3",
@@ -22,7 +22,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I told my prophets to speak my message and my commands. I punished your ancestors, as I warned them I would do. Then they turned back to me. They said, “The Lord Almighty has punished us for our sins, as he said he would do.” ’ The man on the red horse"
+      "text": "I told my prophets to speak my message and my commands. I punished your ancestors, as I warned them I would do. Then they turned back to me. They said, “The Lord Almighty has punished us for our sins, as he said he would do.” ’"
     },
     {
       "verse": "7",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The angel told me that I must say this: ‘The Lord Almighty says, “My towns will be rich again. I will again speak kind words to Jerusalem. I will choose Jerusalem again as my own city.” ’ Four horns and four workers In this story, a horn means a country that is powerful."
+      "text": "The angel told me that I must say this: ‘The Lord Almighty says, “My towns will be rich again. I will again speak kind words to Jerusalem. I will choose Jerusalem again as my own city.” ’"
     },
     {
       "verse": "18",
@@ -82,7 +82,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I said, ‘What are these men coming to do?’ The Lord answered, ‘The horns are the enemies that destroyed Judah. They destroyed Judah and they made the people ashamed. The workers came to frighten and to destroy the enemies because they killed many of my people. The enemies took many of my people out of Judah.’ Print... Use screen font size Show All Comments Zechariah IntroductionZechariah 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I said, ‘What are these men coming to do?’ The Lord answered, ‘The horns are the enemies that destroyed Judah. They destroyed Judah and they made the people ashamed. The workers came to frighten and to destroy the enemies because they killed many of my people. The enemies took many of my people out of Judah.’"
     }
   ],
   "2": [
@@ -104,7 +104,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The Lord himself promises that he will be like a wall of fire round Jerusalem. He will shine as a beautiful light inside the city.’ The Lord will be among his people"
+      "text": "The Lord himself promises that he will be like a wall of fire round Jerusalem. He will shine as a beautiful light inside the city.’"
     },
     {
       "verse": "6",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Be quiet, all people, because the Lord has left his home in heaven to come among you.’ Print... Use screen font size Show All Comments Zechariah 1Zechariah 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Be quiet, all people, because the Lord has left his home in heaven to come among you.’"
     }
   ],
   "3": [
@@ -158,7 +158,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then Zechariah said, ‘Put a clean hat on his head.’ So they put a clean hat on his head and they dressed him in clean clothes. The angel of the Lord stood near to them. The angel of the Lord was watching everything that they were doing."
+      "text": "Then Zechariah said, ‘Put a clean hat on his head.’ So they put a clean hat on his head and they dressed him in clean clothes. The angel of the Lord stood near to them."
     },
     {
       "verse": "6",
@@ -178,7 +178,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "“On that day”, says the Lord Almighty, “each of you will ask your friends to come. You will ask them to come and to sit under your own vines and fig trees.” ’ The Branch is another name for Jesus. See also Isaiah and Jeremiah This means that they will have plenty of good things. They will ask their friends to enjoy those good things with them. Print... Use screen font size Show All Comments Zechariah 2Zechariah 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "“On that day”, says the Lord Almighty, “each of you will ask your friends to come. You will ask them to come and to sit under your own vines and fig trees.” ’"
     }
   ],
   "4": [
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "He said, ‘Do you not know what these are?’ I said, ‘No, my lord.’"
+      "text": "He said, ‘Do you not know what these are?’I said, ‘No, my lord.’ I said, ‘No, my lord.’"
     },
     {
       "verse": "6",
@@ -208,7 +208,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "“Big mountain, you are no problem. You will become flat ground in front of Zerubbabel. Then he will bring out the last and biggest stone of my house. The people will shout, ‘God bless it! God bless it!’ ” ’ Zerubbabel came from the family of King David. The Jews' enemies took Zerubbabel's father to Babylon. Zerubbabel was born there. He came from Babylon to build the second temple with other people at Jerusalem."
+      "text": "“Big mountain, you are no problem. You will become flat ground in front of Zerubbabel. Then he will bring out the last and biggest stone of my house. The people will shout, ‘God bless it! God bless it!’ ” ’"
     },
     {
       "verse": "8",
@@ -216,11 +216,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "‘Zerubbabel has put down the first stone of my house. He will also finish it.’ Then you will know that the Lord Almighty has sent me to you. Some people thought that the work on the house of God was not important. But they were wrong. God wanted the people to build his house. The Holy Spirit would help Zerubbabel to finish it."
+      "text": "‘Zerubbabel has put down the first stone of my house. He will also finish it.’ Then you will know that the Lord Almighty has sent me to you."
     },
     {
       "verse": "10",
-      "text": "Everyone should know that the day of small things is important. Men will see Zerubbabel. Then they will sing and they will be happy. They will see him with a line in his hand to measure the walls. The Lord sees everything in the whole earth. (The seven lights are the seven eyes of the Lord.)"
+      "text": "Everyone should know that the day of small things is important.Men will see Zerubbabel. Then they will sing and they will be happy. They will see him with a line in his hand to measure the walls.The Lord sees everything in the whole earth. (The seven lights are the seven eyes of the Lord.) Men will see Zerubbabel. Then they will sing and they will be happy. They will see him with a line in his hand to measure the walls. The Lord sees everything in the whole earth. (The seven lights are the seven eyes of the Lord.)"
     },
     {
       "verse": "11",
@@ -232,11 +232,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The angel replied, ‘Do you not know what these olive trees mean?’ ‘No, my lord,’ I said."
+      "text": "The angel replied, ‘Do you not know what these olive trees mean?’‘No, my lord,’ I said. ‘No, my lord,’ I said."
     },
     {
       "verse": "14",
-      "text": "So the angel said, ‘These are the two men that the Lord of all the earth has chosen to be his servants.’ We think that the two men are Zerubbabel the ruler and Joshua the priest. Print... Use screen font size Show All Comments Zechariah 3Zechariah 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the angel said, ‘These are the two men that the Lord of all the earth has chosen to be his servants.’"
     }
   ],
   "5": [
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Lord Almighty says, “I will cause bad things to happen in the house of the man that robs anyone. I will cause bad things to happen in the house of the man that speaks false words. It is as if the words on the paper will destroy the houses of those bad people.” ’ The woman in the basket"
+      "text": "The Lord Almighty says, “I will cause bad things to happen in the house of the man that robs anyone. I will cause bad things to happen in the house of the man that speaks false words. It is as if the words on the paper will destroy the houses of those bad people.” ’"
     },
     {
       "verse": "5",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I said, ‘What is it?’ He said, ‘It is a basket that people measure with.’ Then he said, ‘It is the sin of all the people in this country.’"
+      "text": "I said, ‘What is it?’He said, ‘It is a basket that people measure with.’ Then he said, ‘It is the sin of all the people in this country.’ He said, ‘It is a basket that people measure with.’ Then he said, ‘It is the sin of all the people in this country.’"
     },
     {
       "verse": "7",
@@ -282,7 +282,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The angel said to me, ‘They will take the basket to the country called Babylon. They will build a house for it there. When the house is ready, they will put the basket inside the house. They will put it where people can see it.’ Print... Use screen font size Show All Comments Zechariah 4Zechariah 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The angel said to me, ‘They will take the basket to the country called Babylon. They will build a house for it there. When the house is ready, they will put the basket inside the house. They will put it where people can see it.’"
     }
   ],
   "6": [
@@ -316,7 +316,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then the Lord told me, ‘The chariot that goes to the north country has caused my Spirit to rest in the north country. I am now no longer angry about the north country.’ A crown for Joshua"
+      "text": "Then the Lord told me, ‘The chariot that goes to the north country has caused my Spirit to rest in the north country. I am now no longer angry about the north country.’"
     },
     {
       "verse": "9",
@@ -344,7 +344,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "People will come a long way and they will help to build the house of the Lord. Then you will know that the Lord Almighty has sent me to you. All this will happen if you completely obey the Lord your God.’ Print... Use screen font size Show All Comments Zechariah 5Zechariah 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People will come a long way and they will help to build the house of the Lord. Then you will know that the Lord Almighty has sent me to you. All this will happen if you completely obey the Lord your God.’"
     }
   ],
   "7": [
@@ -358,7 +358,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They came to the house of the Lord Almighty to speak to the priests and to the prophets. They asked, ‘Should we cry and not eat our food in the fifth month? We have done this for many years.’ These people wanted to be in Jerusalem, but for 70 years they had to live in Babylon."
+      "text": "They came to the house of the Lord Almighty to speak to the priests and to the prophets. They asked, ‘Should we cry and not eat our food in the fifth month? We have done this for many years.’"
     },
     {
       "verse": "4",
@@ -402,7 +402,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "As a storm takes things away, I took my people away to strange countries. The country that they left became an empty country. Nobody lived in it. That is how they made the good country an empty country.’ Print... Use screen font size Show All Comments Zechariah 6Zechariah 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As a storm takes things away, I took my people away to strange countries. The country that they left became an empty country. Nobody lived in it. That is how they made the good country an empty country.’"
     }
   ],
   "8": [
@@ -496,13 +496,13 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "‘Then, ten men from foreign countries will hold the coat of one Jew,’ says the Lord Almighty. ‘They will say, “People have told us that the Lord is with you. So we want to go with you.” ’ Print... Use screen font size Show All Comments Zechariah 7Zechariah 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘Then, ten men from foreign countries will hold the coat of one Jew,’ says the Lord Almighty. ‘They will say, “People have told us that the Lord is with you. So we want to go with you.” ’"
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "The Lord speaks against the land of Hadrach, and against the city of Damascus. The Lord watches all men and all the groups of people in Israel."
+      "text": "The Lord speaks against the land of Hadrach, and against the city of Damascus.The Lord watches all men and all the groups of people in Israel. The Lord watches all men and all the groups of people in Israel."
     },
     {
       "verse": "2",
@@ -510,35 +510,35 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tyre's people have built strong walls to keep enemies out. They have swept up rich metals like dirt. They have swept up gold like dirt in the streets."
+      "text": "Tyre's people have built strong walls to keep enemies out.They have swept up rich metals like dirt.They have swept up gold like dirt in the streets. They have swept up rich metals like dirt. They have swept up gold like dirt in the streets."
     },
     {
       "verse": "4",
-      "text": "The Lord will take away all the things that Tyre's people have. And he will remove their ships from the sea. Fire will burn every part of the city."
+      "text": "The Lord will take away all the things that Tyre's people have.And he will remove their ships from the sea.Fire will burn every part of the city. And he will remove their ships from the sea. Fire will burn every part of the city."
     },
     {
       "verse": "5",
-      "text": "The people in Ashkelon city will see it and they will be afraid. The people in Gaza city will see it and they will be afraid. The things that the people in Ekron city hope for will not happen. The king of Gaza will die and there will be no people in Ashkelon any longer."
+      "text": "The people in Ashkelon city will see it and they will be afraid.The people in Gaza city will see it and they will be afraid.The things that the people in Ekron city hope for will not happen.The king of Gaza will dieand there will be no people in Ashkelon any longer. The people in Gaza city will see it and they will be afraid. The things that the people in Ekron city hope for will not happen. The king of Gaza will die and there will be no people in Ashkelon any longer."
     },
     {
       "verse": "6",
-      "text": "Foreign people will live in Ashdod city. I will show the Philistines that they are not clever. They are not as clever as they believe."
+      "text": "Foreign people will live in Ashdod city.I will show the Philistines that they are not clever. They are not as clever as they believe. I will show the Philistines that they are not clever. They are not as clever as they believe."
     },
     {
       "verse": "7",
-      "text": "I will take the blood from their mouths. I will take the food from their teeth, because it is bad food. Those that remain will still be my people. They will become leaders in Judah. Ekron will be like a part of Judah, as the Jebusites were."
+      "text": "I will take the blood from their mouths.I will take the food from their teeth, because it is bad food.Those that remain will still be my people.They will become leaders in Judah.Ekron will be like a part of Judah, as the Jebusites were. I will take the food from their teeth, because it is bad food. Those that remain will still be my people. They will become leaders in Judah. Ekron will be like a part of Judah, as the Jebusites were."
     },
     {
       "verse": "8",
-      "text": "Then I will keep my house safe against my enemies. No army will ever again beat my people, because I am watching them. The king of Zion comes"
+      "text": "Then I will keep my house safe against my enemies.No army will ever again beat my people,because I am watching them. No army will ever again beat my people, because I am watching them."
     },
     {
       "verse": "9",
-      "text": "Sing loudly, people in Zion. Shout, people in Jerusalem. Look! Your king comes to you. He will save you because he does everything well. But he is quiet and he is riding on a donkey. He will ride on a young animal. Its mother is a donkey."
+      "text": "Sing loudly, people in Zion.Shout, people in Jerusalem.Look! Your king comes to you.He will save you because he does everything well.But he is quiet and he is riding on a donkey.He will ride on a young animal. Its mother is a donkey. Shout, people in Jerusalem. Look! Your king comes to you. He will save you because he does everything well. But he is quiet and he is riding on a donkey. He will ride on a young animal. Its mother is a donkey."
     },
     {
       "verse": "10",
-      "text": "I will take away the chariots from Ephraim, Ephraim was the name that people used for the Northern Kingdom of Israel. and the horses of war from Jerusalem. The bows of war will be broken. He will speak to all the countries and wars will finish. He will rule from sea to sea. He will rule from the river Euphrates to the ends of the earth."
+      "text": "I will take away the chariots from Ephraim,and the horses of war from Jerusalem.The bows of war will be broken.He will speak to all the countries and wars will finish.He will rule from sea to sea. He will rule from the river Euphrates to the ends of the earth. and the horses of war from Jerusalem. The bows of war will be broken. He will speak to all the countries and wars will finish. He will rule from sea to sea. He will rule from the river Euphrates to the ends of the earth."
     },
     {
       "verse": "11",
@@ -546,91 +546,91 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "All you people who hoped to see your own country again, return to Jerusalem. I tell you this now: I will give back to you twice as much as you have lost."
+      "text": "All you people who hoped to see your own country again, return to Jerusalem.I tell you this now: I will give back to you twice as much as you have lost. I tell you this now: I will give back to you twice as much as you have lost."
     },
     {
       "verse": "13",
-      "text": "I will use Judah and Israel to attack my enemies. I will use you, men from Zion, to attack the men from Greece. I will make you like the long metal knife of a soldier. The Lord will appear"
+      "text": "I will use Judah and Israel to attack my enemies.I will use you, men from Zion, to attack the men from Greece.I will make you like the long metal knife of a soldier. I will use you, men from Zion, to attack the men from Greece. I will make you like the long metal knife of a soldier."
     },
     {
       "verse": "14",
-      "text": "Then the Lord will appear above his people. His arrows will be as fast as lightning in the sky. The Lord God will make a loud sound with a trumpet. He will march in a storm from the south to attack."
+      "text": "Then the Lord will appear above his people.His arrows will be as fast as lightning in the sky.The Lord God will make a loud sound with a trumpet.He will march in a storm from the south to attack. His arrows will be as fast as lightning in the sky. The Lord God will make a loud sound with a trumpet. He will march in a storm from the south to attack."
     },
     {
       "verse": "15",
-      "text": "And the Lord Almighty will help his people. They will throw great stones at their enemies. When they go to war, they will shout loudly, like men who have drunk too much wine. They will be as full of joy as the priest's bowl is full of blood, when he pours it on the altar."
+      "text": "And the Lord Almighty will help his people.They will throw great stones at their enemies.When they go to war, they will shout loudly,like men who have drunk too much wine.They will be as full of joy as the priest's bowl is full of blood,when he pours it on the altar. They will throw great stones at their enemies. When they go to war, they will shout loudly, like men who have drunk too much wine. They will be as full of joy as the priest's bowl is full of blood, when he pours it on the altar."
     },
     {
       "verse": "16",
-      "text": "On that day, the Lord will save them. They are his people. They will shine in his country like beautiful stones that shine in a crown."
+      "text": "On that day, the Lord will save them.They are his people.They will shine in his countrylike beautiful stones that shine in a crown. They are his people. They will shine in his country like beautiful stones that shine in a crown."
     },
     {
       "verse": "17",
-      "text": "The people will be beautiful and good. The young people will become strong when they eat good bread. The young women will become strong when they drink new wine. Print... Use screen font size Show All Comments Zechariah 8Zechariah 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The people will be beautiful and good.The young people will become strongwhen they eat good bread.The young women will become strongwhen they drink new wine."
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "Ask the Lord for rain in spring. It is the Lord who makes the clouds and the storms. He gives the rain to men. He gives the plants of the field to everyone."
+      "text": "Ask the Lord for rain in spring.It is the Lord who makes the clouds and the storms.He gives the rain to men.He gives the plants of the field to everyone. It is the Lord who makes the clouds and the storms. He gives the rain to men. He gives the plants of the field to everyone."
     },
     {
       "verse": "2",
-      "text": "People ask idols for help, but the idols do not speak true words. Some people explain what a dream means. But they do not speak true words. The help that they give is not good. So the people move from place to place like sheep. They are not safe. They have no leaders."
+      "text": "People ask idols for help,but the idols do not speak true words.Some people explain what a dream means.But they do not speak true words.The help that they give is not good.So the people move from place to place like sheep.They are not safe. They have no leaders. but the idols do not speak true words. Some people explain what a dream means. But they do not speak true words. The help that they give is not good. So the people move from place to place like sheep. They are not safe. They have no leaders."
     },
     {
       "verse": "3",
-      "text": "‘I am angry with the leaders. I will cause them to be sorry. Judah's people are mine,’ says the Lord Almighty. ‘I will watch over them. I will make them as strong as horses that are ready for war."
+      "text": "‘I am angry with the leaders.I will cause them to be sorry.Judah's people are mine,’ says the Lord Almighty. ‘I will watch over them.I will make them as strong as horses that are ready for war. I will cause them to be sorry. Judah's people are mine,’ says the Lord Almighty. ‘I will watch over them. I will make them as strong as horses that are ready for war."
     },
     {
       "verse": "4",
-      "text": "From Judah's descendants will come a strong leader. He is like a strong stone at the corner of a building. He is like a strong peg in a wall. He is like a bow that is ready to shoot arrows. Every strong ruler will come from Judah's descendants."
+      "text": "From Judah's descendants will come a strong leader.He is like a strong stone at the corner of a building.He is like a strong peg in a wall.He is like a bow that is ready to shoot arrows.Every strong ruler will come from Judah's descendants. He is like a strong stone at the corner of a building. He is like a strong peg in a wall. He is like a bow that is ready to shoot arrows. Every strong ruler will come from Judah's descendants."
     },
     {
       "verse": "5",
-      "text": "Together they will be like brave soldiers who march through the mud in the streets of their enemies. The Lord is with them and they will fight their enemies. They will pull down the soldiers from their horses."
+      "text": "Together they will be like brave soldierswho march through the mud in the streets of their enemies.The Lord is with them and they will fight their enemies.They will pull down the soldiers from their horses. who march through the mud in the streets of their enemies. The Lord is with them and they will fight their enemies. They will pull down the soldiers from their horses."
     },
     {
       "verse": "6",
-      "text": "I will make Judah's people strong, and I will make Israel's people become free. I will bring them back to me, because I am sorry for them. I am their God, and I will answer them. It will be as if I had never turned away from them."
+      "text": "I will make Judah's people strong,and I will make Israel's people become free.I will bring them back to me,because I am sorry for them.I am their God,and I will answer them.It will be as if I had never turned away from them. and I will make Israel's people become free. I will bring them back to me, because I am sorry for them. I am their God, and I will answer them. It will be as if I had never turned away from them."
     },
     {
       "verse": "7",
-      "text": "Israel's people will become like strong men. They will be as happy as men that drink wine. Their children will see their happy fathers and so the children will be happy. They will sing to the Lord."
+      "text": "Israel's people will become like strong men.They will be as happy as men that drink wine.Their children will see their happy fathersand so the children will be happy.They will sing to the Lord. They will be as happy as men that drink wine. Their children will see their happy fathers and so the children will be happy. They will sing to the Lord."
     },
     {
       "verse": "8",
-      "text": "I will cause my people to come to me and I will bring them all together. I will buy them and I will make them free people. And there will be as many people as there were before."
+      "text": "I will cause my people to come to me and I will bring them all together.I will buy them and I will make them free people.And there will be as many people as there were before. I will buy them and I will make them free people. And there will be as many people as there were before."
     },
     {
       "verse": "9",
-      "text": "I will send them to foreign countries among foreign people. But, in these far countries, they will remember me. They and their children will not die. They will return to Jerusalem."
+      "text": "I will send them to foreign countries among foreign people.But, in these far countries, they will remember me.They and their children will not die.They will return to Jerusalem. But, in these far countries, they will remember me. They and their children will not die. They will return to Jerusalem."
     },
     {
       "verse": "10",
-      "text": "I will bring my people back from Egypt, and I will bring them here together from Assyria. I will bring them to Gilead and to Lebanon. There will not be enough room for them all."
+      "text": "I will bring my people back from Egypt,and I will bring them here together from Assyria.I will bring them to Gilead and to Lebanon.There will not be enough room for them all. and I will bring them here together from Assyria. I will bring them to Gilead and to Lebanon. There will not be enough room for them all."
     },
     {
       "verse": "11",
-      "text": "And he will come to the difficult sea. But it will be no trouble to him. He will stop the waves in the sea. He will make the river Nile dry. Many years ago, Moses led Israel's people out of Egypt. The Lord made a dry path for them through the Red Sea. The Lord will make the river Nile dry as he did to the Red Sea then. Proud Assyria will have nothing to be proud about and the power of Egypt's people will finish.’"
+      "text": "And he will come to the difficult sea.But it will be no trouble to him.He will stop the waves in the sea.He will make the river Nile dry.Proud Assyria will have nothing to be proud about andthe power of Egypt's people will finish.’ But it will be no trouble to him. He will stop the waves in the sea. He will make the river Nile dry. Proud Assyria will have nothing to be proud about and the power of Egypt's people will finish.’"
     },
     {
       "verse": "12",
-      "text": "‘I will make my people strong. They will obey me because they love my name.’ Print... Use screen font size Show All Comments Zechariah 9Zechariah 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘I will make my people strong.They will obey me because they love my name.’"
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "Open your gates, Lebanon, so that the fires can burn down your cedar trees."
+      "text": "Open your gates, Lebanon,so that the fires can burn down your cedar trees. so that the fires can burn down your cedar trees."
     },
     {
       "verse": "2",
-      "text": "Cry aloud, cypress tree, because the cedar tree has fallen. Enemies have cut down the tall and beautiful trees. Cry aloud, oak trees in Bashan, because they have cut down the thick forest."
+      "text": "Cry aloud, cypress tree, because the cedar tree has fallen.Enemies have cut down the tall and beautiful trees.Cry aloud, oak trees in Bashan,because they have cut down the thick forest. Enemies have cut down the tall and beautiful trees. Cry aloud, oak trees in Bashan, because they have cut down the thick forest."
     },
     {
       "verse": "3",
-      "text": "Listen to the shepherds! They are crying because enemies have destroyed their fields. Listen to the noise of the lions! They are roaring because the trees beside the Jordan River are no longer there. The two shepherds Zechariah will now talk about shepherds. But now he means the rulers who should help their people."
+      "text": "Listen to the shepherds!They are crying because enemies have destroyed their fields.Listen to the noise of the lions!They are roaring because the trees beside the Jordan Riverare no longer there. They are crying because enemies have destroyed their fields. Listen to the noise of the lions! They are roaring because the trees beside the Jordan River are no longer there."
     },
     {
       "verse": "4",
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Bad things will happen to the bad shepherd who leaves his sheep. His enemy's knife will cut his arm and his right eye. His arm will become like a dry stick. And his right eye will no longer be able to see anything.’ Print... Use screen font size Show All Comments Zechariah 10Zechariah 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Bad things will happen to the bad shepherd who leaves his sheep.His enemy's knife will cut his arm and his right eye.His arm will become like a dry stick. And his right eye will no longer be able to see anything.’"
     }
   ],
   "12": [
@@ -716,7 +716,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The Lord will save the homes of the people from Judah first. So David's family and the people who live in Jerusalem will not be greater than the people from Judah. King David was the greatest king of Israel."
+      "text": "The Lord will save the homes of the people from Judah first. So David's family and the people who live in Jerusalem will not be greater than the people from Judah."
     },
     {
       "verse": "8",
@@ -724,7 +724,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "On that day, I will destroy all the countries that fight against Israel. They will weep for the man that they killed"
+      "text": "On that day, I will destroy all the countries that fight against Israel."
     },
     {
       "verse": "10",
@@ -732,7 +732,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "On that day, people will weep loudly in Jerusalem. It will be like when they were weeping about Hadad-Rimmon in the fields of Megiddo. Some Bible students think that this means 2 Chronicles Some students think that it means Judges"
+      "text": "On that day, people will weep loudly in Jerusalem. It will be like when they were weeping about Hadad-Rimmon in the fields of Megiddo."
     },
     {
       "verse": "12",
@@ -744,7 +744,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "And all the families that have not died will weep by themselves. And their wives will weep by themselves.’ Print... Use screen font size Show All Comments Zechariah 11Zechariah 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And all the families that have not died will weep by themselves. And their wives will weep by themselves.’"
     }
   ],
   "13": [
@@ -770,19 +770,19 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "If someone asks him, “Who cut your body?” he will answer, “My friends cut me when I was at their house.” ’ Kill the shepherd and the sheep will run away"
+      "text": "If someone asks him, “Who cut your body?” he will answer, “My friends cut me when I was at their house.” ’"
     },
     {
       "verse": "7",
-      "text": "‘Attack my shepherd with a sharp knife. Attack the man that is next to me,’ says the Lord Almighty. ‘Kill the shepherd and then the sheep will run away. Then I will attack the young sheep."
+      "text": "‘Attack my shepherd with a sharp knife.Attack the man that is next to me,’says the Lord Almighty.‘Kill the shepherd and then the sheep will run away.Then I will attack the young sheep. Attack the man that is next to me,’ says the Lord Almighty. ‘Kill the shepherd and then the sheep will run away. Then I will attack the young sheep."
     },
     {
       "verse": "8",
-      "text": "In the whole country,’ says the Lord, ‘two thirds of the people will die. But one third will still be living there."
+      "text": "In the whole country,’ says the Lord,‘two thirds of the people will die.But one third will still be living there. ‘two thirds of the people will die. But one third will still be living there."
     },
     {
       "verse": "9",
-      "text": "I will bring these people through fire. As men clean silver in the fire, so I will clean them. As men test gold in the fire, so I will test them. They will speak my name and I will answer them. I will say, “They are my people.” They will say, “The Lord is our God.” ’ Print... Use screen font size Show All Comments Zechariah 12Zechariah 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will bring these people through fire.As men clean silver in the fire, so I will clean them.As men test gold in the fire, so I will test them.They will speak my name and I will answer them.I will say, “They are my people.”They will say, “The Lord is our God.” ’"
     }
   ],
   "14": [
@@ -804,7 +804,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "In the time of Uzziah, king of Judah, you ran away when the earth moved. You will do this again. Then the Lord will come. And all those who are holy will come with him. We are not sure what ‘those who are holy’ means. Some students think that these are people. And some students think that they are angels."
+      "text": "In the time of Uzziah, king of Judah, you ran away when the earth moved. You will do this again. Then the Lord will come. And all those who are holy will come with him."
     },
     {
       "verse": "6",
@@ -848,7 +848,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Some of the soldiers from the countries that attacked Jerusalem will not die. They will go to Jerusalem year after year to worship the King, the Lord Almighty. They will worship him at the Feast of Huts. During the Feast of Huts, the Jews remember that the Lord was kind to his people when they left Egypt many years ago. See Leviticus"
+      "text": "Some of the soldiers from the countries that attacked Jerusalem will not die. They will go to Jerusalem year after year to worship the King, the Lord Almighty. They will worship him at the Feast of Huts."
     },
     {
       "verse": "17",
@@ -868,7 +868,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Every pot in Jerusalem and Judah will be for the Lord Almighty. All the people who come to offer animals to the Lord will cook in those pots. On that day, nobody who sells things will come into the house of the Lord Almighty. Print... Use screen font size Show All Comments Zechariah 13Malachi Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Every pot in Jerusalem and Judah will be for the Lord Almighty. All the people who come to offer animals to the Lord will cook in those pots. On that day, nobody who sells things will come into the house of the Lord Almighty."
     }
   ]
 };

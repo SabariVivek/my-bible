@@ -1,8 +1,8 @@
 module.exports = {
   "1": [
     {
-      "verse": "1-2",
-      "text": "There was a time when judges ruled Israel. During that time there was a famine in Judah. A man who lived in Bethlehem, in Judah, had a wife and two sons. His name was Elimelech. Elimelech's wife was called Naomi, and his sons were called Mahlon and Kilion. They were from Ephrathah's clan. Because there was not enough food in Judah, Elimelech and his family left Bethlehem. They went to live as strangers in Moab. Moab was a good place to grow food. Wheat grew well in one part of Moab. Grass grew well in another part of the country. So the cows could become fat."
+      "verse": "1",
+      "text": "There was a time when judges ruled Israel. During that time there was a famine in Judah. A man who lived in Bethlehem, in Judah, had a wife and two sons. His name was Elimelech. Elimelech's wife was called Naomi, and his sons were called Mahlon and Kilion. They were from Ephrathah's clan. Because there was not enough food in Judah, Elimelech and his family left Bethlehem. They went to live as strangers in Moab."
     },
     {
       "verse": "3",
@@ -14,11 +14,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "After they had all lived in Moab for about ten years, both Mahlon and Kilion died. Now Naomi was completely alone, without her husband or her sons. When the women had no husbands, they could no longer work on their land. They needed help from the men in their families."
+      "text": "After they had all lived in Moab for about ten years, both Mahlon and Kilion died. Now Naomi was completely alone, without her husband or her sons."
     },
     {
       "verse": "6",
-      "text": "Naomi received news from Judah that the Lord had helped his people. There was now enough food in Judah again. So Naomi decided to leave Moab and return to Judah with Ruth and Orpah. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "Naomi received news from Judah that the Lord had helped his people. There was now enough food in Judah again. So Naomi decided to leave Moab and return to Judah with Ruth and Orpah."
     },
     {
       "verse": "7",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Then Naomi understood that Ruth would not agree to return to her own country. So she stopped saying that Ruth should leave her. Naomi and Ruth arrive in Bethlehem"
+      "text": "Then Naomi understood that Ruth would not agree to return to her own country. So she stopped saying that Ruth should leave her."
     },
     {
       "verse": "19",
@@ -78,11 +78,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I left here with everything that I needed. Now the Lord has brought me back here with nothing. The Almighty Lord has turned against me, so that I have suffered. It is not right for you to call me Naomi.’ The name Naomi means ‘happy’. The name Mara means ‘sad’."
+      "text": "I left here with everything that I needed. Now the Lord has brought me back here with nothing. The Almighty Lord has turned against me, so that I have suffered. It is not right for you to call me Naomi.’"
     },
     {
       "verse": "22",
-      "text": "That is how Naomi returned from Moab with Ruth. Ruth was from Moab. She was the wife of Naomi's son Mahlon. Naomi and Ruth arrived in Bethlehem when the harvest of barley was beginning. Print... Use screen font size Show All Comments Ruth IntroductionRuth 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "That is how Naomi returned from Moab with Ruth. Ruth was from Moab. She was the wife of Naomi's son Mahlon. Naomi and Ruth arrived in Bethlehem when the harvest of barley was beginning."
     }
   ],
   "2": [
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "So Ruth went to the fields. She began to pick up the grains of barley that the men dropped on the ground. It happened that she was in part of a field that belonged to Boaz. Boaz was from Elimelech's clan. When the workers cut the crops of grain in the fields, they did not take it all. They left some on the ground for poor people and foreign people to pick up. God's Law said that they must do that. See Leviticus Deuteronomy"
+      "text": "So Ruth went to the fields. She began to pick up the grains of barley that the men dropped on the ground. It happened that she was in part of a field that belonged to Boaz. Boaz was from Elimelech's clan."
     },
     {
       "verse": "4",
@@ -152,7 +152,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Ruth picked up grains in Boaz's field until evening. Then she hit the grains with a stick so that the seeds came out. The grains of barley that she took home filled a large basket. About 13 kilograms. This was a very large amount of seeds for one day's work."
+      "text": "Ruth picked up grains in Boaz's field until evening. Then she hit the grains with a stick so that the seeds came out. The grains of barley that she took home filled a large basket."
     },
     {
       "verse": "18",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Naomi said to Ruth, ‘He has been kind to us! He has thought about our husbands who have died and he has helped us who are still alive. I pray that the Lord will bless him in return. That man is our relative. He is one of our family-redeemers.’ A family-redeemer was the nearest male relative. If there were poor people in the family, he should take care of them. If his brother died, he had to marry his brother's wife. Someone in the family might have to sell themselves as a servant or as a slave. So the family-redeemer would buy them back. A poor person in the family might have to sell their land. So the family-redeemer would buy the land back so that the family would not lose its land. See Leviticus Deuteronomy"
+      "text": "Naomi said to Ruth, ‘He has been kind to us! He has thought about our husbands who have died and he has helped us who are still alive. I pray that the Lord will bless him in return. That man is our relative. He is one of our family-redeemers.’"
     },
     {
       "verse": "21",
@@ -176,7 +176,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So Ruth worked beside Boaz's women workers until they finished the harvest of barley and wheat. She continued to live with Naomi. Print... Use screen font size Show All Comments Ruth 1Ruth 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Ruth worked beside Boaz's women workers until they finished the harvest of barley and wheat. She continued to live with Naomi."
     }
   ],
   "3": [
@@ -194,7 +194,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "After that, he will lie down to sleep. Then you will see where he is lying. Go and lift the cloth from over his feet. Lie down there. Then he will tell you what you should do.’ Boaz had brought all his barley from his fields to a place called the threshing floor. The grains of barley had two parts called the seed and the chaff. People used the seeds to make food. So they had to make the seed separate from the chaff. Boaz would take all the good seed from the barley. Then he would keep it safe to eat later that year."
+      "text": "After that, he will lie down to sleep. Then you will see where he is lying. Go and lift the cloth from over his feet. Lie down there. Then he will tell you what you should do.’"
     },
     {
       "verse": "5",
@@ -214,7 +214,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He asked, ‘Who are you?’ Ruth replied, ‘I am your servant, Ruth. You are our family-redeemer, so please cover me with the corner of your cloth.’ This was a way that a woman could ask a man to marry her. Naomi wanted Boaz to marry Ruth. So she had told Ruth to do this."
+      "text": "He asked, ‘Who are you?’ Ruth replied, ‘I am your servant, Ruth. You are our family-redeemer, so please cover me with the corner of your cloth.’"
     },
     {
       "verse": "10",
@@ -250,13 +250,13 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Naomi said, ‘My daughter, you must be patient. We must wait to see what will happen. Boaz will surely do what he needs to do today.’ Print... Use screen font size Show All Comments Ruth 2Ruth 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Naomi said, ‘My daughter, you must be patient. We must wait to see what will happen. Boaz will surely do what he needs to do today.’"
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "In the morning, Boaz went to the gate of the town and he sat down there. Later, the family-redeemer that Boaz had talked about to Ruth came there. Boaz said to him, ‘Come here, my friend, and sit down.’ So the man went to sit with Boaz. The gate of the town was an important place. The town's leaders met there to decide important things."
+      "text": "In the morning, Boaz went to the gate of the town and he sat down there. Later, the family-redeemer that Boaz had talked about to Ruth came there. Boaz said to him, ‘Come here, my friend, and sit down.’ So the man went to sit with Boaz."
     },
     {
       "verse": "2",
@@ -276,7 +276,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When Boaz said that, the relative replied, ‘If that is true, I cannot buy the land. It would not belong to my own children when I die. You may buy the land instead of me. I cannot buy it myself.’ The family-redeemer might marry Ruth and have a son. If the family-redeemer had no other sons, then Ruth's son would receive all his land. His land would then be in Elimelech's family. This would be the same for Boaz."
+      "text": "When Boaz said that, the relative replied, ‘If that is true, I cannot buy the land. It would not belong to my own children when I die. You may buy the land instead of me. I cannot buy it myself.’"
     },
     {
       "verse": "7",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "We pray that this woman will give birth to many children for you. Then the Lord will give you many descendants, so that you have a large family. We pray that your family will be like the family of Perez, who was the son of Judah and his wife, Tamar.’ Rachel and Leah were the wives of Jacob. God had promised that Israel would be his people. He promised that the 12 sons of Rachel and Leah would begin large families. These families would be the 12 important families in Israel. Perez was one of Boaz's ancestors. His father, Judah, had been a family-redeemer for Tamar. Ruth gives birth to a son"
+      "text": "We pray that this woman will give birth to many children for you. Then the Lord will give you many descendants, so that you have a large family. We pray that your family will be like the family of Perez, who was the son of Judah and his wife, Tamar.’"
     },
     {
       "verse": "13",
@@ -320,11 +320,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The women who lived there said, ‘Now Naomi has a son again!’ They called the boy Obed. He became the father of Jesse, who became the father of David. King David's family"
+      "text": "The women who lived there said, ‘Now Naomi has a son again!’ They called the boy Obed. He became the father of Jesse, who became the father of David."
     },
     {
       "verse": "18",
-      "text": "These are the descendants of Perez: Perez was the father of Hezron."
+      "text": "These are the descendants of Perez:Perez was the father of Hezron."
     },
     {
       "verse": "19",
@@ -340,7 +340,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Obed was the father of Jesse.Jesse was the father of David. Print... Use screen font size Show All Comments Ruth 31 Samuel Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Obed was the father of Jesse.Jesse was the father of David."
     }
   ]
 };

@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "Paul and Timothy write this letter to you. We are servants of Christ Jesus. We are writing to you, God's own people who live in Philippi. You belong to God because you are united with Christ Jesus. We are writing to all of you. This includes the leaders and the deacons in the church there. Paul wrote to Timothy about leaders and deacons in the churches. See also 1 Timothy"
+      "text": "Paul and Timothy write this letter to you. We are servants of Christ Jesus.We are writing to you, God's own people who live in Philippi. You belong to God because you are united with Christ Jesus. We are writing to all of you. This includes the leaders and the deacons in the church there. We are writing to you, God's own people who live in Philippi. You belong to God because you are united with Christ Jesus. We are writing to all of you. This includes the leaders and the deacons in the church there."
     },
     {
       "verse": "2",
-      "text": "We pray that God our Father and the Lord Jesus Christ will continue to help you. We pray that they will give you peace in your minds. Paul thanks God for the believers at Philippi"
+      "text": "We pray that God our Father and the Lord Jesus Christ will continue to help you. We pray that they will give you peace in your minds."
     },
     {
       "verse": "3",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Because of the work that Jesus Christ has done in you, you will be right with God. And your lives will be full of good things. As a result, people will praise God and they will say that he is very great. Paul has served God in prison"
+      "text": "Because of the work that Jesus Christ has done in you, you will be right with God. And your lives will be full of good things. As a result, people will praise God and they will say that he is very great."
     },
     {
       "verse": "12",
@@ -54,7 +54,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Also, because I am in a prison, most of the other believers here trust the Lord even more. The Lord has made them brave, so that they are not afraid to speak God's message to people. Paul is in a prison in Rome while he is writing this letter. He does not know what will happen to him."
+      "text": "Also, because I am in a prison, most of the other believers here trust the Lord even more. The Lord has made them brave, so that they are not afraid to speak God's message to people."
     },
     {
       "verse": "15",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But it does not matter to me! All of them are telling people about Christ. That is the most important thing. Whether they speak because of wrong reasons or because of right reasons, they are speaking the message about Christ! Because of that, I am happy. Yes, I will continue to be happy."
+      "text": "But it does not matter to me! All of them are telling people about Christ. That is the most important thing. Whether they speak because of wrong reasons or because of right reasons, they are speaking the message about Christ! Because of that, I am happy.Yes, I will continue to be happy."
     },
     {
       "verse": "19",
@@ -118,7 +118,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "You are receiving the same kinds of trouble that I myself receive. You saw that when I was with you. Now you hear that it is still happening to me. Print... Use screen font size Show All Comments Philippians IntroductionPhilippians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You are receiving the same kinds of trouble that I myself receive. You saw that when I was with you. Now you hear that it is still happening to me."
     }
   ],
   "2": [
@@ -144,27 +144,27 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Christ had the same nature as God. He was completely equal with God. But he did not try to keep hold of that."
+      "text": "Christ had the same nature as God.He was completely equal with God.But he did not try to keep hold of that. He was completely equal with God. But he did not try to keep hold of that."
     },
     {
       "verse": "7",
-      "text": "Instead, he chose to leave heaven. He took for himself the nature of a slave. He became like a human."
+      "text": "Instead, he chose to leave heaven.He took for himself the nature of a slave.He became like a human. He took for himself the nature of a slave. He became like a human."
     },
     {
       "verse": "8",
-      "text": "And when he lived as a man, he made himself even less important. He obeyed God completely, so that he died. He even died on a cross! People were fixed to a cross to die when they were guilty of doing a very bad thing. Christ agreed to die like that, but he had not done any wrong thing."
+      "text": "And when he lived as a man,he made himself even less important.He obeyed God completely, so that he died.He even died on a cross! he made himself even less important. He obeyed God completely, so that he died. He even died on a cross!"
     },
     {
       "verse": "9",
-      "text": "Because of that, God then raised Jesus Christ to the most important place. God gave him the name that is greater than every other name."
+      "text": "Because of that, God then raised Jesus Christ to the most important place.God gave him the name that is greater than every other name. God gave him the name that is greater than every other name."
     },
     {
       "verse": "10",
-      "text": "As a result, when people hear Jesus' name, they must worship him. Everyone will have to go down on their knees in front of him. That includes everything that is in heaven, everything on the earth and everything under the earth."
+      "text": "As a result, when people hear Jesus' name, they must worship him.Everyone will have to go down on their knees in front of him.That includes everything that is in heaven,everything on the earth and everything under the earth. Everyone will have to go down on their knees in front of him. That includes everything that is in heaven, everything on the earth and everything under the earth."
     },
     {
       "verse": "11",
-      "text": "Everyone will have to agree that Jesus Christ is Lord. When they say that aloud, they will show that God the Father is very great. Verses 6-11 may have been a song that Paul knew. Christians must be like lights in the world"
+      "text": "Everyone will have to agree that Jesus Christ is Lord.When they say that aloud, they will show that God the Father is very great. When they say that aloud, they will show that God the Father is very great."
     },
     {
       "verse": "12",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "It is God himself who is working in you. Now you want to obey him, and he makes you strong to do that. When you obey him, that makes him very happy. obey God’ or ‘obey me’."
+      "text": "It is God himself who is working in you. Now you want to obey him, and he makes you strong to do that. When you obey him, that makes him very happy."
     },
     {
       "verse": "14",
@@ -192,7 +192,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Yes, it is right that you should be happy, and I will also be happy with you. Timothy and Epaphroditus"
+      "text": "Yes, it is right that you should be happy, and I will also be happy with you."
     },
     {
       "verse": "19",
@@ -232,7 +232,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So I want even more to send him back to you. Then you can be really happy, and I will not feel sad any more. Epaphroditus belonged to the group of Christians at Philippi. The Christians at Philippi had sent him to Rome. He had brought gifts from them to Paul. See Philippians"
+      "text": "So I want even more to send him back to you. Then you can be really happy, and I will not feel sad any more."
     },
     {
       "verse": "29",
@@ -240,7 +240,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "He nearly died because he was working to serve Christ. He came to help me, because you could not help me yourselves. He was even ready to die so that he could do that on your behalf. Epaphroditus had been very ill while he was with Paul in Rome. But God had made him well again. Epaphroditus had been helping Paul on behalf of all the Christians at Philippi. Print... Use screen font size Show All Comments Philippians 1Philippians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He nearly died because he was working to serve Christ. He came to help me, because you could not help me yourselves. He was even ready to die so that he could do that on your behalf."
     }
   ],
   "3": [
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But we are truly God's people. And it is not because someone has circumcised us. It is God's own Spirit that leads us to worship God. We thank God because of what Christ Jesus has done for us. We know that it is not human ideas that can save us. If we believe in Christ, we become God's people because Christ died on our behalf. God gives us his Holy Spirit to lead us. So we have something much better than a mark on our bodies. Some false teachers were saying that Christians had to be circumcised. They said, ‘Unless that happens, you do not belong to God's people.’ Paul is telling the Christians that they must not believe these people."
+      "text": "But we are truly God's people. And it is not because someone has circumcised us. It is God's own Spirit that leads us to worship God. We thank God because of what Christ Jesus has done for us. We know that it is not human ideas that can save us."
     },
     {
       "verse": "4",
@@ -286,7 +286,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then I hope that I also will become alive again after death. Christians do not belong to this world"
+      "text": "Then I hope that I also will become alive again after death."
     },
     {
       "verse": "12",
@@ -326,7 +326,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "He will change these weak bodies that we have now on this earth. He will make them become strong and beautiful, like his own body that he has in heaven. Christ will use his great power to do this. That is the power that he uses to rule over everything. Print... Use screen font size Show All Comments Philippians 2Philippians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He will change these weak bodies that we have now on this earth. He will make them become strong and beautiful, like his own body that he has in heaven. Christ will use his great power to do this. That is the power that he uses to rule over everything."
     }
   ],
   "4": [
@@ -340,7 +340,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "I ask you too, my true friend, please help these two women to agree together. They have worked with me to tell people the good news. They have worked very hard to help me. They worked together with Clement, and with the other people who helped me in the work. All those workers' names are written in God's book of life. Paul is speaking to someone who is his special friend. He does not say what his friend's name is. He may be a leader in the church at Philippi. God's book of life’ has the names of people who will live with God for ever."
+      "text": "I ask you too, my true friend, please help these two women to agree together. They have worked with me to tell people the good news. They have worked very hard to help me. They worked together with Clement, and with the other people who helped me in the work. All those workers' names are written in God's book of life."
     },
     {
       "verse": "4",
@@ -364,7 +364,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Remember what I have taught you. Remember the message that you heard from me. Remember what you saw when I lived among you. You also must do those same things. God is the one who gives us peace in our minds. He will be with you. Paul thanks the believers at Philippi"
+      "text": "Remember what I have taught you. Remember the message that you heard from me. Remember what you saw when I lived among you. You also must do those same things. God is the one who gives us peace in our minds. He will be with you."
     },
     {
       "verse": "10",
@@ -392,7 +392,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Even when I was at Thessalonica, you helped me. More than once, you sent gifts to me because I needed things. Macedonia was the north part of the country called Greece now. Philippi was a city in Macedonia. Thessalonica was also a city in Macedonia. Paul had taught the good news at Thessalonica too."
+      "text": "Even when I was at Thessalonica, you helped me. More than once, you sent gifts to me because I needed things."
     },
     {
       "verse": "17",
@@ -408,7 +408,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Our Father God is very great! It is right that everyone should praise him always and for ever! Amen. This is true. Paul finishes his letter"
+      "text": "Our Father God is very great! It is right that everyone should praise him always and for ever! Amen. This is true."
     },
     {
       "verse": "21",
@@ -420,7 +420,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "We pray that the Lord Jesus Christ will continue to be kind to you, so that your spirits are strong. Print... Use screen font size Show All Comments Philippians 3Colossians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We pray that the Lord Jesus Christ will continue to be kind to you, so that your spirits are strong."
     }
   ]
 };

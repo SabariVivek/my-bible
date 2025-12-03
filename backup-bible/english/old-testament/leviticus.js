@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The person must wash the legs and the inside parts with water. Then the priest will burn the whole animal on the altar. The smell of it while it is burning will give the Lord pleasure. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. The first three offerings in Leviticus are about burning things to give pleasure to God."
+      "text": "The person must wash the legs and the inside parts with water. Then the priest will burn the whole animal on the altar. The smell of it while it is burning will give the Lord pleasure."
     },
     {
       "verse": "10",
@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The person must wash the legs and the inside parts with water. The priest will burn the whole animal on the altar. It is a burnt offering. The smell of it while it is burning will give the Lord pleasure. Moses tells Israel's people what to do with gifts that are birds"
+      "text": "The person must wash the legs and the inside parts with water. The priest will burn the whole animal on the altar. It is a burnt offering. The smell of it while it is burning will give the Lord pleasure."
     },
     {
       "verse": "14",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He will hold the parts that the bird uses to fly. And then he will tear open the body. But he must not tear it completely. He will burn all of it on the fire that is on the altar. The smell of it while it is burning will give the Lord pleasure. Print... Use screen font size Show All Comments Leviticus IntroductionLeviticus 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He will hold the parts that the bird uses to fly. And then he will tear open the body. But he must not tear it completely. He will burn all of it on the fire that is on the altar. The smell of it while it is burning will give the Lord pleasure."
     }
   ],
   "2": [
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "A person must put salt in all his gifts of grain. Salt is a mark of God's promise to Israel's people. People in the east ‘ate salt’ together when they were friends. They poured a little salt onto bread when they ate together. Salt made this offering a friendship offering."
+      "text": "A person must put salt in all his gifts of grain. Salt is a mark of God's promise to Israel's people."
     },
     {
       "verse": "14",
@@ -132,7 +132,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The priest will burn a part of the grain with all the incense. It is a burnt offering to the Lord. Print... Use screen font size Show All Comments Leviticus 1Leviticus 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priest will burn a part of the grain with all the incense. It is a burnt offering to the Lord."
     }
   ],
   "3": [
@@ -154,7 +154,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The priests, Aaron's sons, will take the pieces. They must put them on top of the gift on the altar. The smell of them while they are burning will give the Lord pleasure. This is another ‘nice smell’ offering. It is not about sin. It is about a person who wants to please God."
+      "text": "The priests, Aaron's sons, will take the pieces. They must put them on top of the gift on the altar. The smell of them while they are burning will give the Lord pleasure."
     },
     {
       "verse": "6",
@@ -202,7 +202,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Israel's people must not eat any fat or drink any blood. This rule is for them and for their children everywhere. They must obey this rule always.’ Print... Use screen font size Show All Comments Leviticus 2Leviticus 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Israel's people must not eat any fat or drink any blood. This rule is for them and for their children everywhere. They must obey this rule always.’"
     }
   ],
   "4": [
@@ -344,7 +344,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "The priest will cut all the fat from the sheep as he did with the friendship offering. He will burn it on the altar. He must burn it on top of the burnt offerings. This is how the priest will make atonement for the person's sin. Then the Lord will forgive the person. Print... Use screen font size Show All Comments Leviticus 3Leviticus 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priest will cut all the fat from the sheep as he did with the friendship offering. He will burn it on the altar. He must burn it on top of the burnt offerings. This is how the priest will make atonement for the person's sin. Then the Lord will forgive the person."
     }
   ],
   "5": [
@@ -370,11 +370,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "He must give a sheep or a goat for a sin offering. Then the Lord will not be angry with him. The priest will kill the animal as a sacrifice to atone for that sin. What the people should do if they do not have much money"
+      "text": "He must give a sheep or a goat for a sin offering. Then the Lord will not be angry with him. The priest will kill the animal as a sacrifice to atone for that sin."
     },
     {
       "verse": "7",
-      "text": "A person may not have money to buy a sheep or a goat. If he does not, he must buy two doves or two pigeons. He must give them to the Lord. One bird will be a sin offering. The second bird will be a burnt offering. Doves and pigeons are birds that God let people eat."
+      "text": "A person may not have money to buy a sheep or a goat. If he does not, he must buy two doves or two pigeons. He must give them to the Lord. One bird will be a sin offering. The second bird will be a burnt offering."
     },
     {
       "verse": "8",
@@ -398,7 +398,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He will forgive the person when the priest does this. The flour that he did not burn is like the grain offering. It belongs to the priests.” ’ The gift to the Lord when a person does wrong things"
+      "text": "He will forgive the person when the priest does this. The flour that he did not burn is like the grain offering. It belongs to the priests.” ’"
     },
     {
       "verse": "14",
@@ -422,7 +422,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The sheep is an offering because the person did not obey the Lord.’ Print... Use screen font size Show All Comments Leviticus 4Leviticus 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The sheep is an offering because the person did not obey the Lord.’"
     }
   ],
   "6": [
@@ -452,7 +452,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The priest will give the sheep to the Lord. It is an atonement for the wrong things that the person has done. Then the Lord will forgive the person.’ Rules for the priests"
+      "text": "The priest will give the sheep to the Lord. It is an atonement for the wrong things that the person has done. Then the Lord will forgive the person.’"
     },
     {
       "verse": "8",
@@ -516,7 +516,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "All of the gifts that the priests give to God must be burnt completely. Nobody should eat them.’ The sin offering"
+      "text": "All of the gifts that the priests give to God must be burnt completely. Nobody should eat them.’"
     },
     {
       "verse": "24",
@@ -544,7 +544,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "They must take the blood of a sin offering into the Tent of Meeting. It is a sacrifice to atone for sin. Nobody should eat any of that offering. The priest must burn it. In these verses, ‘holy’ does not mean ‘very, very good’. It means that it now belongs to the Lord. Print... Use screen font size Show All Comments Leviticus 5Leviticus 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They must take the blood of a sin offering into the Tent of Meeting. It is a sacrifice to atone for sin. Nobody should eat any of that offering. The priest must burn it."
     }
   ],
   "7": [
@@ -586,7 +586,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Grain that is dry is also a gift. And grain that a man mixes with oil is also a gift. They should give them to Aaron's sons. The Friendship offering"
+      "text": "Grain that is dry is also a gift. And grain that a man mixes with oil is also a gift. They should give them to Aaron's sons."
     },
     {
       "verse": "11",
@@ -630,7 +630,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "A person might touch something that is not clean. He must not eat the meat of the offering to the Lord. That person must not eat it if he has touched an unclean animal or an unclean person. If he does eat it, they must send him away. They must send him away from Israel's people.’ Israel's people must not eat blood or fat"
+      "text": "A person might touch something that is not clean. He must not eat the meat of the offering to the Lord. That person must not eat it if he has touched an unclean animal or an unclean person. If he does eat it, they must send him away. They must send him away from Israel's people.’"
     },
     {
       "verse": "22",
@@ -654,7 +654,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "You must send away from Israel's people any person who eats blood.’ Moses tells the priests which parts of the animal they can eat"
+      "text": "You must send away from Israel's people any person who eats blood.’"
     },
     {
       "verse": "28",
@@ -698,7 +698,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "Israel's people were in the Sinai desert. The Lord gave the rules to Moses on Sinai mountain. That was on the day that the Lord spoke to the people. He told them that they should bring their offerings to him there. Print... Use screen font size Show All Comments Leviticus 6Leviticus 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Israel's people were in the Sinai desert. The Lord gave the rules to Moses on Sinai mountain. That was on the day that the Lord spoke to the people. He told them that they should bring their offerings to him there."
     }
   ],
   "8": [
@@ -712,7 +712,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Cause all the people to come to the door of the Tent of Meeting.’ Aaron was Moses' brother."
+      "text": "Cause all the people to come to the door of the Tent of Meeting.’"
     },
     {
       "verse": "4",
@@ -736,7 +736,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Moses tied a piece of linen as a hat round Aaron's head. On the front of this linen he put a plate of gold with valuable stones on it. The Lord had said that Moses must do this. Urim and Thummim were valuable stones. The leader of the priests put them in the pocket of the ephod. God used the stones to show the people what was right. We do not know how he did this. The ephod was a special robe that the priest wore over his other robe."
+      "text": "Moses tied a piece of linen as a hat round Aaron's head. On the front of this linen he put a plate of gold with valuable stones on it. The Lord had said that Moses must do this."
     },
     {
       "verse": "10",
@@ -816,7 +816,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Moses took his part of the animal, the meat of the ribs, and he lifted it up to the Lord. The Lord had said that Moses must do this. Moses puts blood on three important parts of the priests' bodies. The priest's ear: he must always listen to what God is saying to him. The priest's hand: he must always do what God wants him to do. The priest's foot: he must always go where God tells him to go."
+      "text": "Moses took his part of the animal, the meat of the ribs, and he lifted it up to the Lord. The Lord had said that Moses must do this."
     },
     {
       "verse": "30",
@@ -844,7 +844,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "So Aaron and his sons did everything that the Lord had told Moses. Print... Use screen font size Show All Comments Leviticus 7Leviticus 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So Aaron and his sons did everything that the Lord had told Moses."
     }
   ],
   "9": [
@@ -862,7 +862,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Tell Israel's people that they must bring a bull and a male sheep. They must bring them to sacrifice as a friendship offering to the Lord. They will sacrifice them. They must mix grain and oil to offer with them. They must do that because the Lord will appear to them today.’ Aaron was now the leader of the priests."
+      "text": "Tell Israel's people that they must bring a bull and a male sheep. They must bring them to sacrifice as a friendship offering to the Lord. They will sacrifice them. They must mix grain and oil to offer with them. They must do that because the Lord will appear to them today.’"
     },
     {
       "verse": "5",
@@ -942,13 +942,13 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then the Lord sent a fire to show that he accepted the gifts. It completely burnt all the fat and the offerings that were on the altar. The people were very happy when they saw this. They shouted and they fell down with their faces to the ground. Any gift that the people gave to the Lord must be pure. This was very important. The people had to see that the Lord was holy. Nothing that was not good or pure could come near him. Print... Use screen font size Show All Comments Leviticus 8Leviticus 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the Lord sent a fire to show that he accepted the gifts. It completely burnt all the fat and the offerings that were on the altar. The people were very happy when they saw this. They shouted and they fell down with their faces to the ground."
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "Nadab and Abihu were sons of Aaron. They put hot material in the pots that they used to burn incense. They threw incense over the hot material. They offered the incense to the Lord. This was a wrong thing to do. The Lord had not told them that they should do it. So it was wrong."
+      "text": "Nadab and Abihu were sons of Aaron. They put hot material in the pots that they used to burn incense. They threw incense over the hot material. They offered the incense to the Lord. This was a wrong thing to do. The Lord had not told them that they should do it. So it was wrong. “People may come near to me. But those people must see that I am holy. All the people must give honour to me.” ’ Aaron did not reply."
     },
     {
       "verse": "2",
@@ -956,7 +956,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then Moses said to Aaron, ‘This is what the Lord said, Nadab and Abihu were the oldest of Aaron's 4 sons. “People may come near to me. But those people must see that I am holy. All the people must give honour to me.” ’ Aaron did not reply."
+      "text": "Then Moses said to Aaron, ‘This is what the Lord said,“People may come near to me. But those people must see that I am holy.All the people must give honour to me.” ’Aaron did not reply."
     },
     {
       "verse": "4",
@@ -1024,7 +1024,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "When Moses heard this, he was not angry any longer. Print... Use screen font size Show All Comments Leviticus 9Leviticus 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When Moses heard this, he was not angry any longer."
     }
   ],
   "11": [
@@ -1074,7 +1074,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Animals from the sea and the river may have fins and scales on their bodies. Those are the only ones that you can eat. Those without fins or scales are unclean. Most fish have fins and scales on the side of their bodies. They use their fins when they are swimming. The scales are hard pieces of skin that cover the fish's body."
+      "text": "Animals from the sea and the river may have fins and scales on their bodies. Those are the only ones that you can eat. Those without fins or scales are unclean."
     },
     {
       "verse": "13",
@@ -1102,7 +1102,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "They must not eat the heron, the hoopoe or the bat. The people must not eat them nor touch their dead bodies. They are not clean. These birds all eat meat."
+      "text": "They must not eat the heron, the hoopoe or the bat. The people must not eat them nor touch their dead bodies. They are not clean."
     },
     {
       "verse": "20",
@@ -1214,7 +1214,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "The people must learn to know which animals are clean. They must recognize which animals they can eat. And they must recognize which animals they must not eat. The Lord gave clear rules about clean and unclean foods. Not to obey these rules made a person unclean. This meant that the person was not able to get near to God. His sin kept him away from the Lord. Print... Use screen font size Show All Comments Leviticus 10Leviticus 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The people must learn to know which animals are clean. They must recognize which animals they can eat. And they must recognize which animals they must not eat."
     }
   ],
   "12": [
@@ -1232,7 +1232,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The woman must wait for 35 days after the boy is born. All this time she must not touch anything that is holy. She must not go into the Tent of Meeting. After this time, she will become clean."
+      "text": "days after the boy is born. All this time she must not touch anything that is holy. She must not go into the Tent of Meeting. After this time, she will become clean."
     },
     {
       "verse": "5",
@@ -1248,7 +1248,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "If the woman does not have money to buy a sheep she can give two doves or pigeons. The priest will use one bird for a sin offering and he will burn the other one. That is how he will make atonement for her. Then she will be clean.’ Print... Use screen font size Show All Comments Leviticus 11Leviticus 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If the woman does not have money to buy a sheep she can give two doves or pigeons. The priest will use one bird for a sin offering and he will burn the other one. That is how he will make atonement for her. Then she will be clean.’"
     }
   ],
   "13": [
@@ -1434,7 +1434,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "He must be alone all the time that he has a disease. He must live outside the camp. Rules for clothes that have mildew"
+      "text": "He must be alone all the time that he has a disease. He must live outside the camp."
     },
     {
       "verse": "47",
@@ -1458,7 +1458,7 @@ module.exports = {
     },
     {
       "verse": "52",
-      "text": "The priest must burn the wool, leather or linen clothes. They have a disease that will destroy them. When material is wet and warm, mildew can grow on it. Mildew is a very small mould. It is soft and white and destroys the material."
+      "text": "The priest must burn the wool, leather or linen clothes. They have a disease that will destroy them."
     },
     {
       "verse": "53",
@@ -1486,7 +1486,7 @@ module.exports = {
     },
     {
       "verse": "59",
-      "text": "These are the rules for mildew in linen cloth. They are rules for wool or leather clothes. They tell the priest how to know whether they are clean or not clean. Print... Use screen font size Show All Comments Leviticus 12Leviticus 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "These are the rules for mildew in linen cloth. They are rules for wool or leather clothes. They tell the priest how to know whether they are clean or not clean."
     }
   ],
   "14": [
@@ -1616,7 +1616,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "These are the rules for a person who had a disease in his skin. They are for a disease that he might give to other people. They are for people who are too poor to buy three sheep.’ Rules for a house that has a disease called mildew"
+      "text": "These are the rules for a person who had a disease in his skin. They are for a disease that he might give to other people. They are for people who are too poor to buy three sheep.’"
     },
     {
       "verse": "33",
@@ -1656,7 +1656,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "The person who lives in the house must get some more stones. He must get some more clay. Then he can mend the wall. When material is wet and warm, mildew can grow on it. Mildew is a very small mould. It is soft and white and destroys the material."
+      "text": "The person who lives in the house must get some more stones. He must get some more clay. Then he can mend the wall."
     },
     {
       "verse": "43",
@@ -1700,7 +1700,7 @@ module.exports = {
     },
     {
       "verse": "53",
-      "text": "Then the priest will take the living bird outside the town. He will let the bird fly away. That will make atonement for the house. The person may then live in the house again.’ Moses tells the people what these rules are for"
+      "text": "Then the priest will take the living bird outside the town. He will let the bird fly away. That will make atonement for the house. The person may then live in the house again.’"
     },
     {
       "verse": "54",
@@ -1716,7 +1716,7 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "These rules decide when a person has a disease. And they decide when he is clean. They show when a house has a disease. They are the rules for diseases in the skin and for mildew. Print... Use screen font size Show All Comments Leviticus 13Leviticus 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "These rules decide when a person has a disease. And they decide when he is clean. They show when a house has a disease. They are the rules for diseases in the skin and for mildew."
     }
   ],
   "15": [
@@ -1850,7 +1850,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "These are the rules for a woman when she bleeds each month. These are the rules for a man who has sex with an unclean woman. Print... Use screen font size Show All Comments Leviticus 14Leviticus 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "These are the rules for a woman when she bleeds each month. These are the rules for a man who has sex with an unclean woman."
     }
   ],
   "16": [
@@ -1892,7 +1892,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He must not kill the other goat. It is an atonement to the Lord. It will pay for the bad things that the people have done. It is to take away the people's punishment. He must send it away into the desert.’ The special stones were called Urim and Thummim. See Deuteronomy"
+      "text": "He must not kill the other goat. It is an atonement to the Lord. It will pay for the bad things that the people have done. It is to take away the people's punishment. He must send it away into the desert.’"
     },
     {
       "verse": "11",
@@ -1928,7 +1928,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "He must shake blood on the altar seven times to make it clean. A goat will carry away all the bad things that the people have done"
+      "text": "He must shake blood on the altar seven times to make it clean."
     },
     {
       "verse": "20",
@@ -1988,7 +1988,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "He will make atonement for all the Israelites' sins once every year. This rule is for now and for all time.’ The people did everything in the way that the Lord had commanded Moses. Print... Use screen font size Show All Comments Leviticus 15Leviticus 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He will make atonement for all the Israelites' sins once every year. This rule is for now and for all time.’The people did everything in the way that the Lord had commanded Moses."
     }
   ],
   "17": [
@@ -2038,7 +2038,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "For this reason, Israel's people must not eat blood. And the people who are travelling with them must not eat blood. Jews still obey this rule. They call meat with no blood in it ‘kosher meat’."
+      "text": "For this reason, Israel's people must not eat blood. And the people who are travelling with them must not eat blood."
     },
     {
       "verse": "13",
@@ -2054,7 +2054,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "If that person does not wash his clothes and his body, it is his own mistake.’ Animals that have died have the blood in them. And animals that other animals have killed have the blood in them. So they will not be clean. Print... Use screen font size Show All Comments Leviticus 16Leviticus 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If that person does not wash his clothes and his body, it is his own mistake.’"
     }
   ],
   "18": [
@@ -2080,7 +2080,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Tell them this: A person must not have sex with anyone who belongs to his own family. I am the Lord."
+      "text": "Tell them this:A person must not have sex with anyone who belongs to his own family. I am the Lord."
     },
     {
       "verse": "7",
@@ -2176,7 +2176,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "All the people must obey my rules. They must not do the bad things that the people in Canaan did. If they did them, my people would become unclean. I am the Lord your God.’ Print... Use screen font size Show All Comments Leviticus 17Leviticus 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All the people must obey my rules. They must not do the bad things that the people in Canaan did. If they did them, my people would become unclean. I am the Lord your God.’"
     }
   ],
   "19": [
@@ -2326,7 +2326,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "They must obey all my rules. I am the Lord.’ Print... Use screen font size Show All Comments Leviticus 18Leviticus 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They must obey all my rules. I am the Lord.’"
     }
   ],
   "20": [
@@ -2436,7 +2436,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "A man or a woman who uses magic is doing a wrong thing. People must throw stones at that person until they die. Their sin will cause their death.’ Print... Use screen font size Show All Comments Leviticus 19Leviticus 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "A man or a woman who uses magic is doing a wrong thing. People must throw stones at that person until they die. Their sin will cause their death.’"
     }
   ],
   "21": [
@@ -2534,7 +2534,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Moses told all these rules to Aaron, to his sons and to all Israel's people. Print... Use screen font size Show All Comments Leviticus 20Leviticus 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses told all these rules to Aaron, to his sons and to all Israel's people."
     }
   ],
   "22": [
@@ -2600,7 +2600,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "If the people eat them they are sinning. They will have to pay for their sin. I am the Lord and I make them holy.’ Offerings that the Lord will not accept"
+      "text": "If the people eat them they are sinning. They will have to pay for their sin. I am the Lord and I make them holy.’"
     },
     {
       "verse": "17",
@@ -2668,7 +2668,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "I brought you out of Egypt and I became your God. I am the Lord.’ Print... Use screen font size Show All Comments Leviticus 21Leviticus 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I brought you out of Egypt and I became your God. I am the Lord.’"
     }
   ],
   "23": [
@@ -2682,7 +2682,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "There are six days when a person can work. The seventh day is the Sabbath day. A person must not do any work on that day. It is a day when people meet together for worship. You must not work in any place where you live. It is the Sabbath to the Lord, a day of rest. Passover and bread without yeast"
+      "text": "There are six days when a person can work. The seventh day is the Sabbath day. A person must not do any work on that day. It is a day when people meet together for worship. You must not work in any place where you live. It is the Sabbath to the Lord, a day of rest."
     },
     {
       "verse": "4",
@@ -2702,7 +2702,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "For seven days the people must give burnt offerings to the Lord. On the seventh day they must stop work and they must worship the Lord.’ The Lord caused Israel's people to stay in their houses for their last night in Egypt. They had to put a mark on their doors with blood. The Lord's servant who was a spirit killed the oldest son in each house of Egypt's people. But he passed over the houses with blood round the doors. So the Lord saved the sons of the Israelites. That is why this is called the Passover feast. (See Exodus Gifts of new grain"
+      "text": "For seven days the people must give burnt offerings to the Lord. On the seventh day they must stop work and they must worship the Lord.’"
     },
     {
       "verse": "9",
@@ -2734,7 +2734,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They must count 50 days until the day after the seventh Sabbath. Then they must give another gift of new grain to the Lord."
+      "text": "days until the day after the seventh Sabbath. Then they must give another gift of new grain to the Lord."
     },
     {
       "verse": "17",
@@ -2754,7 +2754,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "On this day, the people must not do any work. They must not work anywhere that they live. It is a special day to God now and for all time to come. This day is called ‘Pentecost’. The word ‘Pentecost’ means ‘50th’."
+      "text": "On this day, the people must not do any work. They must not work anywhere that they live. It is a special day to God now and for all time to come."
     },
     {
       "verse": "22",
@@ -2770,7 +2770,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They must not work. They must burn an offering to the Lord.’ The Day of Atonement"
+      "text": "They must not work. They must burn an offering to the Lord.’"
     },
     {
       "verse": "26",
@@ -2798,7 +2798,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "It is a Sabbath rest for all the people. They must not eat any food. They must rest from the evening of the ninth day until the evening of the tenth day.’ The Feast of Huts The people used sticks and branches to make huts that were like tents."
+      "text": "It is a Sabbath rest for all the people. They must not eat any food. They must rest from the evening of the ninth day until the evening of the tenth day.’"
     },
     {
       "verse": "33",
@@ -2846,7 +2846,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "Moses told the people all that the Lord had told him. Print... Use screen font size Show All Comments Leviticus 22Leviticus 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses told the people all that the Lord had told him."
     }
   ],
   "24": [
@@ -2864,11 +2864,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The lamps on the gold lampstand must burn always in front of the Lord. The lampstand had seven arms, like the branches of a tree. There was a lamp on the end of each branch."
+      "text": "The lamps on the gold lampstand must burn always in front of the Lord."
     },
     {
       "verse": "5",
-      "text": "The people must bake 12 loaves of bread. They must use the best flour. They must weigh the flour for each loaf. They must use two tenths (2/10) of an ephah (4 litres)."
+      "text": "loaves of bread. They must use the best flour. They must weigh the flour for each loaf. They must use two tenths (2/10) of an ephah (4 litres)."
     },
     {
       "verse": "6",
@@ -2884,7 +2884,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The bread is for Aaron and for his sons. They must eat it in a holy place. It is their holy part of the burnt offering to the Lord.’ The story of a man who said bad things about the Lord"
+      "text": "The bread is for Aaron and for his sons. They must eat it in a holy place. It is their holy part of the burnt offering to the Lord.’"
     },
     {
       "verse": "10",
@@ -2940,7 +2940,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Moses spoke to Israel's people. A man had said bad things about God. They took him outside the camp. They threw stones at him until he died. Israel's people did as the Lord had told Moses. Print... Use screen font size Show All Comments Leviticus 23Leviticus 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Moses spoke to Israel's people. A man had said bad things about God. They took him outside the camp. They threw stones at him until he died. Israel's people did as the Lord had told Moses."
     }
   ],
   "25": [
@@ -2970,7 +2970,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "The wild animals also can eat anything that grows by itself in the Sabbath year. The Jubilee Year"
+      "text": "The wild animals also can eat anything that grows by itself in the Sabbath year."
     },
     {
       "verse": "8",
@@ -3078,7 +3078,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The Levites must not sell the fields that belong to their towns. God gave to them their towns and cities to live in for all time. People who have a lot of money must lend it to the poor people"
+      "text": "The Levites must not sell the fields that belong to their towns. God gave to them their towns and cities to live in for all time."
     },
     {
       "verse": "35",
@@ -3162,7 +3162,7 @@ module.exports = {
     },
     {
       "verse": "55",
-      "text": "Israel's people belong to me. I brought them out of Egypt. They are my servants. I am the Lord. Print... Use screen font size Show All Comments Leviticus 24Leviticus 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Israel's people belong to me. I brought them out of Egypt. They are my servants. I am the Lord."
     }
   ],
   "26": [
@@ -3196,7 +3196,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Five of you will run after 100 of them. And 100 of you will run after 1,000 enemies. You will kill all your enemies."
+      "text": "of them. And 100 of you will run after 1,000 enemies. You will kill all your enemies."
     },
     {
       "verse": "9",
@@ -3216,7 +3216,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I am the Lord your God. I brought you out of Egypt. You will not be the slaves of people in Egypt. I saved you so that you need not be ashamed. People who do not obey the rules will not give any pleasure to the Lord"
+      "text": "I am the Lord your God. I brought you out of Egypt. You will not be the slaves of people in Egypt. I saved you so that you need not be ashamed."
     },
     {
       "verse": "14",
@@ -3348,7 +3348,7 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "These are the rules that the Lord gave to Moses on Sinai mountain. They are his covenant with Israel's people. See Exodus 20 and Deuteronomy 6. Print... Use screen font size Show All Comments Leviticus 25Leviticus 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "These are the rules that the Lord gave to Moses on Sinai mountain. They are his covenant with Israel's people."
     }
   ],
   "27": [
@@ -3370,7 +3370,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "For a male between five years and 20 years old, they must give to God 20 pieces of silver. For a female, they must give ten pieces of silver."
+      "text": "years old, they must give to God 20 pieces of silver. For a female, they must give ten pieces of silver."
     },
     {
       "verse": "6",
@@ -3378,7 +3378,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "If a man is older than 60 years, they must give 15 pieces of silver. For a woman, they must give ten pieces of silver."
+      "text": "years, they must give 15 pieces of silver. For a woman, they must give ten pieces of silver."
     },
     {
       "verse": "8",
@@ -3486,7 +3486,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "These are the rules that the Lord gave to Moses on Sinai mountain. They are the rules for Israel's people. Print... Use screen font size Show All Comments Leviticus 26Numbers Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "These are the rules that the Lord gave to Moses on Sinai mountain. They are the rules for Israel's people."
     }
   ]
 };

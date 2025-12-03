@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "In the first year that Cyrus, king of Persia, was ruling Babylon, the Lord put a thought in his mind. King Cyrus decided to send a message to everybody who lived in his kingdom. His message would cause what God had already spoken to his prophet Jeremiah to become true. The message was written down and people took it all over Cyrus's kingdom. It said: When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there. See Jeremiah"
+      "text": "In the first year that Cyrus, king of Persia, was ruling Babylon, the Lord put a thought in his mind. King Cyrus decided to send a message to everybody who lived in his kingdom. His message would cause what God had already spoken to his prophet Jeremiah to become true. The message was written down and people took it all over Cyrus's kingdom. It said:"
     },
     {
       "verse": "2",
-      "text": "‘This is what Cyrus, the king of Persia says: The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah."
+      "text": "‘This is what Cyrus, the king of Persia says:The Lord, the God of heaven, has given me power over all the kingdoms of the earth. He has said that I must build a temple for him in Jerusalem, the city that is in Judah."
     },
     {
       "verse": "3",
@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "In places where there are some Israelites who want to return, their neighbours must help them with gifts. They should give them silver, gold and other things for their journey. They should also give them animals. They may also give them special gifts for God's temple that is in Jerusalem.’ Judah was the most important Israelite tribe."
+      "text": "In places where there are some Israelites who want to return, their neighbours must help them with gifts. They should give them silver, gold and other things for their journey. They should also give them animals. They may also give them special gifts for God's temple that is in Jerusalem.’"
     },
     {
       "verse": "5",
@@ -30,19 +30,19 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Cyrus told his officer, Mithredath, to count all the valuable things. Mithredath was the officer who took care of all Persia's riches. As he counted the things, he gave them to Sheshbazzar, the leader of Judah's people. See Daniel"
+      "text": "Cyrus told his officer, Mithredath, to count all the valuable things. Mithredath was the officer who took care of all Persia's riches. As he counted the things, he gave them to Sheshbazzar, the leader of Judah's people."
     },
     {
       "verse": "9",
-      "text": "They counted the things and they made this list: 30 gold dishes.1,000 silver dishes.29 special tools."
+      "text": "They counted the things and they made this list:30 gold dishes.1,000 silver dishes.29 special tools."
     },
     {
       "verse": "10",
-      "text": "30 gold bowls.410 silver bowls.1,000 other things."
+      "text": "gold bowls.410 silver bowls.1,000 other things."
     },
     {
       "verse": "11",
-      "text": "There were 5,400 things made from gold and silver. Sheshbazzar took them all with him when he left Babylon to return to Jerusalem with the other exiles. Print... Use screen font size Show All Comments Ezra IntroductionEzra 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "There were 5,400 things made from gold and silver. Sheshbazzar took them all with him when he left Babylon to return to Jerusalem with the other exiles."
     }
   ],
   "2": [
@@ -60,11 +60,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "372 descendants of Shephatiah."
+      "text": "descendants of Shephatiah."
     },
     {
       "verse": "5",
-      "text": "775 descendants of Arah."
+      "text": "descendants of Arah."
     },
     {
       "verse": "6",
@@ -76,19 +76,19 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "945 descendants of Zattu."
+      "text": "descendants of Zattu."
     },
     {
       "verse": "9",
-      "text": "760 descendants of Zaccai."
+      "text": "descendants of Zaccai."
     },
     {
       "verse": "10",
-      "text": "642 descendants of Bani."
+      "text": "descendants of Bani."
     },
     {
       "verse": "11",
-      "text": "623 descendants of Bebai."
+      "text": "descendants of Bebai."
     },
     {
       "verse": "12",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "666 descendants of Adonikam."
+      "text": "descendants of Adonikam."
     },
     {
       "verse": "14",
@@ -104,67 +104,67 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "454 descendants of Adin."
+      "text": "descendants of Adin."
     },
     {
       "verse": "16",
-      "text": "98 descendants of Ater (from Hezekiah's family)."
+      "text": "descendants of Ater (from Hezekiah's family)."
     },
     {
       "verse": "17",
-      "text": "323 descendants of Bezai."
+      "text": "descendants of Bezai."
     },
     {
       "verse": "18",
-      "text": "112 descendants of Jorah."
+      "text": "descendants of Jorah."
     },
     {
       "verse": "19",
-      "text": "223 descendants of Hashum."
+      "text": "descendants of Hashum."
     },
     {
       "verse": "20",
-      "text": "95 descendants of Gibbar."
+      "text": "descendants of Gibbar."
     },
     {
       "verse": "21",
-      "text": "123 men from Bethlehem."
+      "text": "men from Bethlehem."
     },
     {
       "verse": "22",
-      "text": "56 men from Netophah."
+      "text": "men from Netophah."
     },
     {
       "verse": "23",
-      "text": "128 men from Anathoth."
+      "text": "men from Anathoth."
     },
     {
       "verse": "24",
-      "text": "42 men from Azmaveth."
+      "text": "men from Azmaveth."
     },
     {
       "verse": "25",
-      "text": "743 men from Kiriath-Jearim, Kephirah and Beeroth."
+      "text": "men from Kiriath-Jearim, Kephirah and Beeroth."
     },
     {
       "verse": "26",
-      "text": "621 men from Ramah and Geba."
+      "text": "men from Ramah and Geba."
     },
     {
       "verse": "27",
-      "text": "122 men from Michmash."
+      "text": "men from Michmash."
     },
     {
       "verse": "28",
-      "text": "223 men from Bethel and Ai."
+      "text": "men from Bethel and Ai."
     },
     {
       "verse": "29",
-      "text": "52 men from Nebo."
+      "text": "men from Nebo."
     },
     {
       "verse": "30",
-      "text": "156 men from Magbish."
+      "text": "men from Magbish."
     },
     {
       "verse": "31",
@@ -172,15 +172,15 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "320 men from Harim."
+      "text": "men from Harim."
     },
     {
       "verse": "33",
-      "text": "725 men from Lod, Hadid and Ono."
+      "text": "men from Lod, Hadid and Ono."
     },
     {
       "verse": "34",
-      "text": "345 men from Jericho."
+      "text": "men from Jericho."
     },
     {
       "verse": "35",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "These were the priests: 973 descendants of Jedaiah (from Jeshua's family)."
+      "text": "These were the priests:973 descendants of Jedaiah (from Jeshua's family)."
     },
     {
       "verse": "37",
@@ -204,19 +204,19 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "These were the Levites: 74 descendants of Jeshua and Kadmiel (from Hodaviah's family)."
+      "text": "These were the Levites:74 descendants of Jeshua and Kadmiel (from Hodaviah's family)."
     },
     {
       "verse": "41",
-      "text": "The singers: 128 descendants of Asaph."
+      "text": "The singers:128 descendants of Asaph."
     },
     {
       "verse": "42",
-      "text": "The guards for the temple gates: 139 descendants of Shallum, Ater, Talmon, Akkub, Hatita and Shobai."
+      "text": "The guards for the temple gates:139 descendants of Shallum, Ater, Talmon, Akkub, Hatita and Shobai."
     },
     {
       "verse": "43",
-      "text": "The temple servants: the descendants of Ziha, Hasupha, Tabbaoth,"
+      "text": "The temple servants:the descendants of Ziha, Hasupha, Tabbaoth,"
     },
     {
       "verse": "44",
@@ -264,7 +264,7 @@ module.exports = {
     },
     {
       "verse": "55",
-      "text": "The descendants of King Solomon's servants: the descendants of Sotai, Hassophereth, Peruda,"
+      "text": "The descendants of King Solomon's servants:the descendants of Sotai, Hassophereth, Peruda,"
     },
     {
       "verse": "56",
@@ -276,15 +276,15 @@ module.exports = {
     },
     {
       "verse": "58",
-      "text": "There were 392 men who were temple servants and the descendants of Solomon's servants."
+      "text": "men who were temple servants and the descendants of Solomon's servants."
     },
     {
       "verse": "59",
-      "text": "Some people came from the towns of Tel Melah, Tel Harsha, Kerub, Addon and Immer. But these people could not show that they belonged to Israelite families. They may not have been descendants of Israel. Jacob was the ancestor of all the Israelites. God gave him the name ‘Israel’."
+      "text": "Some people came from the towns of Tel Melah, Tel Harsha, Kerub, Addon and Immer. But these people could not show that they belonged to Israelite families. They may not have been descendants of Israel."
     },
     {
       "verse": "60",
-      "text": "These people included 652 descendants of Delaiah, Tobiah and Nekoda."
+      "text": "descendants of Delaiah, Tobiah and Nekoda."
     },
     {
       "verse": "61",
@@ -296,7 +296,7 @@ module.exports = {
     },
     {
       "verse": "63",
-      "text": "The officer in Judah said that they could not eat the priests' special food. They must wait until there was a leader of the priests who could use the Urim and Thummim to decide the right thing to do. The Urim and Thummim were special stones. God used them to show the priests what he wanted."
+      "text": "The officer in Judah said that they could not eat the priests' special food. They must wait until there was a leader of the priests who could use the Urim and Thummim to decide the right thing to do."
     },
     {
       "verse": "64",
@@ -308,11 +308,11 @@ module.exports = {
     },
     {
       "verse": "66",
-      "text": "They had 736 horses, 245 mules,"
+      "text": "horses, 245 mules,"
     },
     {
       "verse": "67",
-      "text": "435 camels and 6,720 donkeys. Horses, mules, camels and donkeys are all big animals that can carry people and heavy bags on their backs."
+      "text": "camels and 6,720 donkeys."
     },
     {
       "verse": "68",
@@ -324,7 +324,7 @@ module.exports = {
     },
     {
       "verse": "70",
-      "text": "The priests, the Levites, the singers, temple guards and other workers lived in their towns near Jerusalem. The other Israelites went to live in the towns where their ancestors had lived. Print... Use screen font size Show All Comments Ezra 1Ezra 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priests, the Levites, the singers, temple guards and other workers lived in their towns near Jerusalem. The other Israelites went to live in the towns where their ancestors had lived."
     }
   ],
   "3": [
@@ -350,7 +350,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "They began to offer those burnt offerings on the first day of the seventh month. That was before they had started to build the temple. See Leviticus They prepare to build the temple"
+      "text": "They began to offer those burnt offerings on the first day of the seventh month. That was before they had started to build the temple."
     },
     {
       "verse": "7",
@@ -362,15 +362,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "These are their names: Jeshua, his sons and his brothers.Kadmiel and his sons. (They were descendants of Hodaviah.)Henadad's sons, with their sons and brothers, who were Levites."
+      "text": "These are their names:Jeshua, his sons and his brothers.Kadmiel and his sons. (They were descendants of Hodaviah.)Henadad's sons, with their sons and brothers, who were Levites."
     },
     {
       "verse": "10",
-      "text": "The men who were building the Lord's temple finished the foundations. Then the priests put on their special clothes. They made a noise with their trumpets. The Levites (sons of Asaph) made a noise with their cymbals. They all stood to praise the Lord, in the way that Israel's King David had told them many years before."
+      "text": "The men who were building the Lord's temple finished the foundations. Then the priests put on their special clothes. They made a noise with their trumpets. The Levites (sons of Asaph) made a noise with their cymbals. They all stood to praise the Lord, in the way that Israel's King David had told them many years before. ‘He is good. His love for Israel will continue for ever.’ Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
     },
     {
       "verse": "11",
-      "text": "They sang together to praise the Lord. Group by group, they sang these words: Cymbals and trumpets are musical instruments. ‘He is good. His love for Israel will continue for ever.’ Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
+      "text": "They sang together to praise the Lord. Group by group, they sang these words:‘He is good.His love for Israel will continue for ever.’Then all the people shouted loudly to praise the Lord. They praised him because they had finished work on the temple's foundation."
     },
     {
       "verse": "12",
@@ -378,7 +378,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The happy shouts and the noise of people who were weeping were both very loud. People far away could hear the noise. The different sounds mixed together, so nobody could say which was which. Print... Use screen font size Show All Comments Ezra 2Ezra 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The happy shouts and the noise of people who were weeping were both very loud. People far away could hear the noise. The different sounds mixed together, so nobody could say which was which."
     }
   ],
   "4": [
@@ -388,7 +388,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They went to speak to Zerubbabel and to the leaders of the Israelite families. They said, ‘Let us help you to build the temple. We also want to worship your God. We have lived in this country since Esarhaddon, king of Assyria, brought us here. All this time we have made sacrifices to your God.’ Judah and Benjamin were the two Israelite tribes that had been taken to Babylon as prisoners. Now they had returned to Jerusalem and the other towns of their home country."
+      "text": "They went to speak to Zerubbabel and to the leaders of the Israelite families. They said, ‘Let us help you to build the temple. We also want to worship your God. We have lived in this country since Esarhaddon, king of Assyria, brought us here. All this time we have made sacrifices to your God.’"
     },
     {
       "verse": "3",
@@ -400,11 +400,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "They paid bribes to government officers to work against the Israelite builders. Then they could not do the work. They continued to do this all the time that King Cyrus ruled Persia, until Darius became king. More trouble for the Jews"
+      "text": "They paid bribes to government officers to work against the Israelite builders. Then they could not do the work. They continued to do this all the time that King Cyrus ruled Persia, until Darius became king."
     },
     {
       "verse": "6",
-      "text": "When Xerxes became king of Persia, Judah's enemies wrote a letter to him. They said that the people who lived in Jerusalem and the rest of Judah were doing a bad thing. Xerxes was the son of King Darius. He was also called Ahasuerus. In this part of his book, Ezra is describing things that happened later, after the temple had been built. Now they were building the city's walls (verse 12)."
+      "text": "When Xerxes became king of Persia, Judah's enemies wrote a letter to him. They said that the people who lived in Jerusalem and the rest of Judah were doing a bad thing."
     },
     {
       "verse": "7",
@@ -420,11 +420,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "It also comes from people of other nations who came to live in Samaria's cities. The great King Ashurbanipal sent those people to live in Samaria and in the region that is on the west side of the River Euphrates. Elamites were people who lived in a country east of Israel. The kings of Assyria moved prisoners to go and live a long way from their homes. Foreign people had come to live in Samaria, which had been part of Israel's kingdom. The Assyrians did not want the Israelites to take back the land for themselves."
+      "text": "It also comes from people of other nations who came to live in Samaria's cities. The great King Ashurbanipal sent those people to live in Samaria and in the region that is on the west side of the River Euphrates."
     },
     {
       "verse": "11",
-      "text": "This is the letter that they sent to Artaxerxes: ‘To King Artaxerxes, from your servants in the land west of the Euphrates river."
+      "text": "This is the letter that they sent to Artaxerxes:‘To King Artaxerxes,from your servants in the land west of the Euphrates river. ‘To King Artaxerxes, from your servants in the land west of the Euphrates river."
     },
     {
       "verse": "12",
@@ -448,7 +448,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The king of Persia sent this reply: ‘To Rehum, my ruler, Shimshai, his officer, and all their friends in Samaria and in other parts of the region west of the Euphrates river. I thank you for your news."
+      "text": "The king of Persia sent this reply:‘To Rehum, my ruler, Shimshai, his officer, and all their friends in Samaria and in other parts of the region west of the Euphrates river. I thank you for your news. ‘To Rehum, my ruler, Shimshai, his officer, and all their friends in Samaria and in other parts of the region west of the Euphrates river. I thank you for your news."
     },
     {
       "verse": "18",
@@ -476,7 +476,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "So the people did no more work on God's temple in Jerusalem. The work stopped until the second year that King Darius ruled Persia. Print... Use screen font size Show All Comments Ezra 3Ezra 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the people did no more work on God's temple in Jerusalem. The work stopped until the second year that King Darius ruled Persia."
     }
   ],
   "5": [
@@ -502,11 +502,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Tattenai, the city's ruler, Shethar-Bozenai and their friends who had authority in the region west of the Euphrates river wrote to King Darius."
+      "text": "Tattenai, the city's ruler, Shethar-Bozenai and their friends who had authority in the region west of the Euphrates river wrote to King Darius. King Darius, we hope that you are well."
     },
     {
       "verse": "7",
-      "text": "This is what they said: King Darius, we hope that you are well."
+      "text": "This is what they said:King Darius, we hope that you are well."
     },
     {
       "verse": "8",
@@ -522,7 +522,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "This is the answer that they gave to us: ‘We are servants of the God who rules heaven and earth. A great king of Israel built this temple and finished it many years ago. Now we are building it again."
+      "text": "This is the answer that they gave to us:‘We are servants of the God who rules heaven and earth. A great king of Israel built this temple and finished it many years ago. Now we are building it again."
     },
     {
       "verse": "12",
@@ -534,7 +534,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "He gave back to us the gold and silver things that belong in our God's temple. King Nebuchadnezzar had taken those things away from the temple in Jerusalem. He took them to Babylon and he put them in his own temple. But King Cyrus gave our valuable things to Sheshbazzar. He had given authority to this man to rule over Judah."
+      "text": "He gave back to us the gold and silver things that belong in our God's temple. King Nebuchadnezzar had taken those things away from the temple in Jerusalem. He took them to Babylon and he put them in his own temple.But King Cyrus gave our valuable things to Sheshbazzar. He had given authority to this man to rule over Judah."
     },
     {
       "verse": "15",
@@ -546,21 +546,21 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "If the king should choose, he may look in the books in Babylon's royal library. You should see whether King Cyrus did give a command about God's temple in Jerusalem. See if he said that the Jews should build it again. When you know what is true, you should decide what is right. Please tell us what we should do. Print... Use screen font size Show All Comments Ezra 4Ezra 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If the king should choose, he may look in the books in Babylon's royal library. You should see whether King Cyrus did give a command about God's temple in Jerusalem. See if he said that the Jews should build it again. When you know what is true, you should decide what is right. Please tell us what we should do."
     }
   ],
   "6": [
     {
       "verse": "1",
-      "text": "King Darius told his officers to look in the books in the royal library. That was in Babylon, in the place where they stored important things."
+      "text": "King Darius told his officers to look in the books in the royal library. That was in Babylon, in the place where they stored important things. ‘This is an important note."
     },
     {
       "verse": "2",
-      "text": "But it was in the region of Media that they found a scroll about the temple in Jerusalem. It was stored in a strong building in Ecbatana. This is what the scroll said: ‘This is an important note."
+      "text": "But it was in the region of Media that they found a scroll about the temple in Jerusalem. It was stored in a strong building in Ecbatana. This is what the scroll said:‘This is an important note."
     },
     {
       "verse": "3",
-      "text": "King Cyrus gave a command about God's temple in Jerusalem, in the first year that he ruled in Babylon. He said: “The Jews must build their temple as a place where they can offer sacrifices to their God. They must build it on its foundations. They must make it 30 metres wide and 30 metres high."
+      "text": "King Cyrus gave a command about God's temple in Jerusalem, in the first year that he ruled in Babylon. He said:“The Jews must build their temple as a place where they can offer sacrifices to their God. They must build it on its foundations. They must make it 30 metres wide and 30 metres high."
     },
     {
       "verse": "4",
@@ -596,7 +596,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "No king or nation should try to change my command. They must never destroy God's temple in Jerusalem. That is the place that he has chosen for people to worship him. I pray that he will remove anyone who tries to attack that place. I, Darius, have made this command. Everyone must obey it completely.’ They finish the temple"
+      "text": "No king or nation should try to change my command. They must never destroy God's temple in Jerusalem. That is the place that he has chosen for people to worship him. I pray that he will remove anyone who tries to attack that place.I, Darius, have made this command. Everyone must obey it completely.’ I, Darius, have made this command. Everyone must obey it completely.’"
     },
     {
       "verse": "13",
@@ -616,11 +616,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They offered 100 bulls, 200 male sheep and 400 lambs. Then they sacrificed 12 male goats as a sin offering for all Israel. There was one goat for each of the 12 tribes of Israel."
+      "text": "bulls, 200 male sheep and 400 lambs. Then they sacrificed 12 male goats as a sin offering for all Israel. There was one goat for each of the 12 tribes of Israel."
     },
     {
       "verse": "18",
-      "text": "They decided how each group of priests and Levites should work in God's temple in Jerusalem. Moses had written in his book how they should do this. The Passover feast"
+      "text": "They decided how each group of priests and Levites should work in God's temple in Jerusalem. Moses had written in his book how they should do this."
     },
     {
       "verse": "19",
@@ -636,13 +636,13 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Then they ate the Feast of Flat Bread for seven days. The Lord had caused them to be very happy, because the king of Assyria had helped them. The Lord had made the king think in a different way about the Jews in Jerusalem. He had decided to help them to build the God of Israel's temple. The Passover feast was to help the Israelites. They needed to remember how God had saved them from being slaves in Egypt. God had sent an angel to kill all the oldest sons of the people in Egypt. But he told the Israelites to put the blood of a lamb round their doors. They had to stay inside their houses. Then the angel passed over their houses and he did not kill their sons. Then the Egyptians sent the Israelites out of Egypt. See Numbers Exodus The Feast of Flat Bread began the day after the Passover Feast. Flat bread is bread that has no yeast in it. Print... Use screen font size Show All Comments Ezra 5Ezra 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then they ate the Feast of Flat Bread for seven days. The Lord had caused them to be very happy, because the king of Assyria had helped them. The Lord had made the king think in a different way about the Jews in Jerusalem. He had decided to help them to build the God of Israel's temple."
     }
   ],
   "7": [
     {
       "verse": "1",
-      "text": "After these things, Ezra came to Jerusalem from Babylon. This happened while Artaxerxes was king of Persia. This is the list of Ezra's ancestors: He was the son of Seraiah, the son of Azariah, the son of Hilkiah."
+      "text": "After these things, Ezra came to Jerusalem from Babylon. This happened while Artaxerxes was king of Persia.This is the list of Ezra's ancestors: He was the son of Seraiah, the son of Azariah, the son of Hilkiah."
     },
     {
       "verse": "2",
@@ -678,7 +678,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "God was kind to Ezra because Ezra had decided to study the law of the Lord. Ezra always obeyed its rules. He also taught the law and its rules to the Israelite people. King Artaxerxes' letter to Ezra"
+      "text": "God was kind to Ezra because Ezra had decided to study the law of the Lord. Ezra always obeyed its rules. He also taught the law and its rules to the Israelite people."
     },
     {
       "verse": "11",
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "‘From Artaxerxes, king of all kings. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well."
+      "text": "‘From Artaxerxes, king of all kings.To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well. To Ezra the priest, who has studied very well the law of the God of heaven. I hope that you are well."
     },
     {
       "verse": "13",
@@ -726,7 +726,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "This is how much you may give to him: 3,400 kilograms of silver,22,000 litres of grain,2,200 litres of wine,2,200 litres of oil,and all the salt that he wants."
+      "text": "This is how much you may give to him:3,400 kilograms of silver,22,000 litres of grain,2,200 litres of wine,2,200 litres of oil,and all the salt that he wants."
     },
     {
       "verse": "23",
@@ -742,7 +742,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Everyone must obey the laws of your God and also the laws of the king. If they do not obey, they deserve the right punishment. They may have to die. They may have to leave the country. They may have to lose their valuable things. They may have to go to prison.’ Ezra praises God"
+      "text": "Everyone must obey the laws of your God and also the laws of the king. If they do not obey, they deserve the right punishment. They may have to die. They may have to leave the country. They may have to lose their valuable things. They may have to go to prison.’"
     },
     {
       "verse": "27",
@@ -750,7 +750,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "The Lord has been kind to me, so that the king, his helpers and his powerful officers have helped me. Because the Lord my God has been with me, he has helped me to be strong. I have been able to bring many of the leaders of Israel to Jerusalem with me. Print... Use screen font size Show All Comments Ezra 6Ezra 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord has been kind to me, so that the king, his helpers and his powerful officers have helped me. Because the Lord my God has been with me, he has helped me to be strong. I have been able to bring many of the leaders of Israel to Jerusalem with me."
     }
   ],
   "8": [
@@ -808,7 +808,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Uthai, Zaccur, and 70 other men, from Bigvai's clan.The journey to Jerusalem"
+      "text": "Uthai, Zaccur, and 70 other men, from Bigvai's clan."
     },
     {
       "verse": "15",
@@ -832,7 +832,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "220 temple servants also came. King David had first chosen this group to help the Levites with their work. We made a list of all their names."
+      "text": "temple servants also came. King David had first chosen this group to help the Levites with their work. We made a list of all their names."
     },
     {
       "verse": "21",
@@ -848,7 +848,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I chose 12 of the most important priests to do an important job, as well as Sherebiah, Hashabiah and ten of their brothers."
+      "text": "of the most important priests to do an important job, as well as Sherebiah, Hashabiah and ten of their brothers."
     },
     {
       "verse": "25",
@@ -860,7 +860,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "and 20 gold bowls that weighed 8.5 kilograms. I also gave to them two beautiful bowls made from bronze. They shone brightly and they were as valuable as gold."
+      "text": "gold bowls that weighed 8.5 kilograms. I also gave to them two beautiful bowls made from bronze. They shone brightly and they were as valuable as gold."
     },
     {
       "verse": "28",
@@ -896,7 +896,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "They also gave the king's letter with its commands to his officers and rulers in the region west of the Euphrates river. The king's officers helped the Israelite people and the work of God's temple. Print... Use screen font size Show All Comments Ezra 7Ezra 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They also gave the king's letter with its commands to his officers and rulers in the region west of the Euphrates river. The king's officers helped the Israelite people and the work of God's temple."
     }
   ],
   "9": [
@@ -922,7 +922,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I said, ‘My God, I am too ashamed to look up at you. Our sins are very great. They are so many that they reach far above us. We are completely guilty."
+      "text": "I said,‘My God, I am too ashamed to look up at you. Our sins are very great. They are so many that they reach far above us. We are completely guilty."
     },
     {
       "verse": "7",
@@ -958,7 +958,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Lord God of Israel, you are righteous. Only a few of us escaped from exile and remain as your people today. Now we stand before you as guilty people. Because of our sins, we do not deserve to come near to you.’ Print... Use screen font size Show All Comments Ezra 8Ezra 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Lord God of Israel, you are righteous. Only a few of us escaped from exile and remain as your people today. Now we stand before you as guilty people. Because of our sins, we do not deserve to come near to you.’"
     }
   ],
   "10": [
@@ -968,7 +968,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then Shecaniah spoke to Ezra. Shecaniah was Jehiel's son, a descendant of Elam. Shecaniah said, ‘We have not been faithful to our God. We have married foreign women from the nations who live near us. But Israel may still hope that God will forgive us."
+      "text": "Then Shecaniah spoke to Ezra. Shecaniah was Jehiel's son, a descendant of Elam.Shecaniah said, ‘We have not been faithful to our God. We have married foreign women from the nations who live near us. But Israel may still hope that God will forgive us."
     },
     {
       "verse": "3",
@@ -996,7 +996,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "All the men from the tribes of Judah and Benjamin reached Jerusalem in three days. It was the 20th day of the ninth month. All the people sat in the yard in front of God's temple. Their bodies were shaking because they were afraid. It was also raining. Judah and Benjamin were the two tribes that belonged to the kingdom of Judah. They were the two Israelite tribes who had been taken as prisoners to Babylon. Now God had brought them back to their homes in Judah."
+      "text": "All the men from the tribes of Judah and Benjamin reached Jerusalem in three days. It was the 20th day of the ninth month. All the people sat in the yard in front of God's temple. Their bodies were shaking because they were afraid. It was also raining."
     },
     {
       "verse": "10",
@@ -1028,11 +1028,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They finished on the first day of the first month of the new year. A list of the men with foreign wives"
+      "text": "They finished on the first day of the first month of the new year."
     },
     {
       "verse": "18",
-      "text": "These are the priests who had married foreign wives. From the clan of Jozadak's son, Jeshua, and his brothers: Maaseiah, Eliezer, Jarib, Gedaliah."
+      "text": "These are the priests who had married foreign wives.From the clan of Jozadak's son, Jeshua, and his brothers:Maaseiah, Eliezer, Jarib, Gedaliah. From the clan of Jozadak's son, Jeshua, and his brothers:"
     },
     {
       "verse": "19",
@@ -1040,51 +1040,51 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "From the clan of Immer: Hanani, Zebadiah."
+      "text": "From the clan of Immer:Hanani, Zebadiah."
     },
     {
       "verse": "21",
-      "text": "From the clan of Harim: Maaseiah, Elijah, Shemaiah, Jehiel, Uzziah."
+      "text": "From the clan of Harim:Maaseiah, Elijah, Shemaiah, Jehiel, Uzziah."
     },
     {
       "verse": "22",
-      "text": "From the clan of Pashhur: Elioenai, Maaseiah, Ishmael, Nethanel, Jozabad, Elasah."
+      "text": "From the clan of Pashhur:Elioenai, Maaseiah, Ishmael, Nethanel, Jozabad, Elasah."
     },
     {
       "verse": "23",
-      "text": "From the Levites: Jozabad, Shimei, Kelaiah (also called Kelita), Pethahiah, Judah, Eliezer."
+      "text": "From the Levites:Jozabad, Shimei, Kelaiah (also called Kelita), Pethahiah, Judah, Eliezer."
     },
     {
       "verse": "24",
-      "text": "From the singers: Eliashib.From the men who were guards at the temple gate: Shallum, Telem, Uri."
+      "text": "From the singers:Eliashib.From the men who were guards at the temple gate:Shallum, Telem, Uri. From the men who were guards at the temple gate:"
     },
     {
       "verse": "25",
-      "text": "These are the other Israelites who had married foreign wives. From the clan of Parosh: Ramiah, Izziah, Malkijah, Mijamin, Eleazar, Malkijah, Benaiah."
+      "text": "These are the other Israelites who had married foreign wives.From the clan of Parosh:Ramiah, Izziah, Malkijah, Mijamin, Eleazar, Malkijah, Benaiah. From the clan of Parosh:"
     },
     {
       "verse": "26",
-      "text": "From the clan of Elam: Mattaniah, Zechariah, Jehiel, Abdi, Jeremoth, Elijah."
+      "text": "From the clan of Elam:Mattaniah, Zechariah, Jehiel, Abdi, Jeremoth, Elijah."
     },
     {
       "verse": "27",
-      "text": "From the clan of Zattu: Elioenai, Eliashib, Mattaniah, Jeremoth, Zabad, Aziza."
+      "text": "From the clan of Zattu:Elioenai, Eliashib, Mattaniah, Jeremoth, Zabad, Aziza."
     },
     {
       "verse": "28",
-      "text": "From the clan of Bebai: Jehohanan, Hananiah, Zabbai, Athlai."
+      "text": "From the clan of Bebai:Jehohanan, Hananiah, Zabbai, Athlai."
     },
     {
       "verse": "29",
-      "text": "From the clan of Bani: Meshullam, Malluch, Adaiah, Jashub, Sheal, Jeremoth."
+      "text": "From the clan of Bani:Meshullam, Malluch, Adaiah, Jashub, Sheal, Jeremoth."
     },
     {
       "verse": "30",
-      "text": "From the clan of Pahath-Moab: Adna, Kelal, Benaiah, Maaseiah, Mattaniah, Bezalel, Binnui, Manasseh."
+      "text": "From the clan of Pahath-Moab:Adna, Kelal, Benaiah, Maaseiah, Mattaniah, Bezalel, Binnui, Manasseh."
     },
     {
       "verse": "31",
-      "text": "From the clan of Harim: Eliezer, Ishijah, Malkijah, Shemaiah, Shimeon,"
+      "text": "From the clan of Harim:Eliezer, Ishijah, Malkijah, Shemaiah, Shimeon,"
     },
     {
       "verse": "32",
@@ -1092,11 +1092,11 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "From the clan of Hashum: Mattenai, Mattattah, Zabad, Eliphelet, Jeremai, Manasseh, Shimei."
+      "text": "From the clan of Hashum:Mattenai, Mattattah, Zabad, Eliphelet, Jeremai, Manasseh, Shimei."
     },
     {
       "verse": "34",
-      "text": "From the clan of Bani: Maadai, Amram, Uel,"
+      "text": "From the clan of Bani:Maadai, Amram, Uel,"
     },
     {
       "verse": "35",
@@ -1112,7 +1112,7 @@ module.exports = {
     },
     {
       "verse": "38",
-      "text": "From the clan of Binnui: Shimei,"
+      "text": "From the clan of Binnui:Shimei,"
     },
     {
       "verse": "39",
@@ -1132,11 +1132,11 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "From the clan of Nebo: Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel, Benaiah."
+      "text": "From the clan of Nebo:Jeiel, Mattithiah, Zabad, Zebina, Jaddai, Joel, Benaiah."
     },
     {
       "verse": "44",
-      "text": "All these men had married foreign women. They sent them away, together with their children. Print... Use screen font size Show All Comments Ezra 9Nehemiah Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All these men had married foreign women. They sent them away, together with their children."
     }
   ]
 };

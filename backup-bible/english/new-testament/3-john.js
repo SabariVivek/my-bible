@@ -14,7 +14,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I am happy when I hear that my children are living like that. When they obey God's true message, it makes me very happy. Continue to help people"
+      "text": "I am happy when I hear that my children are living like that. When they obey God's true message, it makes me very happy."
     },
     {
       "verse": "5",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Because of that, we Christians must help them with the things that they need. In this way we will be working together with them as they tell people the true message about Christ. Diotrephes is causing problems"
+      "text": "Because of that, we Christians must help them with the things that they need. In this way we will be working together with them as they tell people the true message about Christ."
     },
     {
       "verse": "9",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So, when I arrive there myself, I will speak to the believers about this. I will tell them clearly about the bad things that Diotrephes is doing. He tells other people bad things about us that are not true. Even that is not enough for him. He himself refuses to welcome the believers who are visiting. He also stops anyone else who wants to welcome those visitors. Instead, he sends them away from the group of believers. These visitors are Christians who are travelling to different places to teach the message about Jesus Christ. See 3 John Copy what good people do"
+      "text": "So, when I arrive there myself, I will speak to the believers about this. I will tell them clearly about the bad things that Diotrephes is doing. He tells other people bad things about us that are not true. Even that is not enough for him. He himself refuses to welcome the believers who are visiting. He also stops anyone else who wants to welcome those visitors. Instead, he sends them away from the group of believers."
     },
     {
       "verse": "11",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "All the believers say that Demetrius is a good person. He obeys God's true message. That also shows clearly that he is a good person. We also say the same thing about him. You know very well that what we say about him is true. John finishes his letter"
+      "text": "All the believers say that Demetrius is a good person. He obeys God's true message. That also shows clearly that he is a good person. We also say the same thing about him. You know very well that what we say about him is true."
     },
     {
       "verse": "13",
@@ -54,11 +54,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Instead, I hope to come and visit you soon. Then I can see you and we can talk together."
-    },
-    {
-      "verse": "15",
-      "text": "I pray that God will give you peace. All your Christian friends here say ‘hello’ to you. Say ‘hello’ for me to each of my friends there, one by one. Print... Use screen font size Show All Comments 3 John IntroductionJude Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Instead, I hope to come and visit you soon. Then I can see you and we can talk together. I pray that God will give you peace. All your Christian friends here say ‘hello’ to you. Say ‘hello’ for me to each of my friends there, one by one."
     }
   ]
 };

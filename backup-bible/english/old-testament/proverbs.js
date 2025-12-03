@@ -22,11 +22,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "People will learn to understand what proverbs and picture stories mean. They will understand the teaching and clever messages of wise people. Good teaching for life"
+      "text": "People will learn to understand what proverbs and picture stories mean. They will understand the teaching and clever messages of wise people."
     },
     {
       "verse": "7",
-      "text": "If you want to know how to live in a good way, you must first learn to respect the Lord with fear. Fools refuse to listen to wise teaching. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "If you want to know how to live in a good way, you must first learn to respect the Lord with fear. Fools refuse to listen to wise teaching."
     },
     {
       "verse": "8",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Their teaching will bring you honour, like a beautiful crown or a valuable necklace. Keep away from sin"
+      "text": "Their teaching will bring you honour, like a beautiful crown or a valuable necklace."
     },
     {
       "verse": "10",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "That is what happens to those who cheat other people to become rich themselves. The riches that they have taken from others will destroy their own lives. Wisdom warns foolish people"
+      "text": "That is what happens to those who cheat other people to become rich themselves. The riches that they have taken from others will destroy their own lives."
     },
     {
       "verse": "20",
@@ -86,51 +86,51 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "‘Listen to me! Will you silly people continue to be so silly? You people who laugh at God, will you always be like that? Will fools always refuse to learn anything?"
+      "text": "‘Listen to me!Will you silly people continue to be so silly?You people who laugh at God, will you always be like that?Will fools always refuse to learn anything? Will you silly people continue to be so silly? You people who laugh at God, will you always be like that? Will fools always refuse to learn anything?"
     },
     {
       "verse": "23",
-      "text": "Listen to me as I warn you of danger! Then I will let you know my thoughts. I will let you hear my message."
+      "text": "Listen to me as I warn you of danger!Then I will let you know my thoughts.I will let you hear my message. Then I will let you know my thoughts. I will let you hear my message."
     },
     {
       "verse": "24",
-      "text": "I called out to you, but you refused to listen. I reached out to you, but you turned your backs to me."
+      "text": "I called out to you, but you refused to listen.I reached out to you, but you turned your backs to me. I reached out to you, but you turned your backs to me."
     },
     {
       "verse": "25",
-      "text": "You would not accept my teaching. When I warned you, you did nothing."
+      "text": "You would not accept my teaching.When I warned you, you did nothing. When I warned you, you did nothing."
     },
     {
       "verse": "26",
-      "text": "So, when trouble comes to you, I will laugh. I will laugh at you when you are afraid."
+      "text": "So, when trouble comes to you, I will laugh.I will laugh at you when you are afraid. I will laugh at you when you are afraid."
     },
     {
       "verse": "27",
-      "text": "Fear may hit you like a strong wind. Trouble may knock you down, like a storm. Your problems may make you very afraid. But I will laugh at you."
+      "text": "Fear may hit you like a strong wind.Trouble may knock you down, like a storm.Your problems may make you very afraid.But I will laugh at you. Trouble may knock you down, like a storm. Your problems may make you very afraid. But I will laugh at you."
     },
     {
       "verse": "28",
-      "text": "Foolish people will call to me for help, but I will not answer. They will look for me everywhere, but they will not find me."
+      "text": "Foolish people will call to me for help, but I will not answer.They will look for me everywhere, but they will not find me. They will look for me everywhere, but they will not find me."
     },
     {
       "verse": "29",
-      "text": "They have refused to learn what is right. They have refused to respect the Lord."
+      "text": "They have refused to learn what is right.They have refused to respect the Lord. They have refused to respect the Lord."
     },
     {
       "verse": "30",
-      "text": "They have not agreed to my advice. When I warned them, they turned away."
+      "text": "They have not agreed to my advice.When I warned them, they turned away. When I warned them, they turned away."
     },
     {
       "verse": "31",
-      "text": "So now they will receive the trouble that they deserve. Their own wicked ideas will make them sick."
+      "text": "So now they will receive the trouble that they deserve.Their own wicked ideas will make them sick. Their own wicked ideas will make them sick."
     },
     {
       "verse": "32",
-      "text": "Silly people have turned away from me, and that will kill them. Fools like an easy life, and that will destroy them."
+      "text": "Silly people have turned away from me, and that will kill them.Fools like an easy life, and that will destroy them. Fools like an easy life, and that will destroy them."
     },
     {
       "verse": "33",
-      "text": "But whoever listens to me, Wisdom, will live safely. That person will have peace in his mind. He will not be afraid of trouble.’ Print... Use screen font size Show All Comments Proverbs IntroductionProverbs 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But whoever listens to me, Wisdom, will live safely.That person will have peace in his mind.He will not be afraid of trouble.’"
     }
   ],
   "2": [
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "But God will remove wicked people from the land. He will throw out all those who are not faithful. Print... Use screen font size Show All Comments Proverbs 1Proverbs 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But God will remove wicked people from the land. He will throw out all those who are not faithful."
     }
   ],
   "3": [
@@ -270,7 +270,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "He is doing it because he loves you. When a father loves his son very much, he warns him when he does something wrong. Wisdom is a blessing"
+      "text": "He is doing it because he loves you. When a father loves his son very much, he warns him when he does something wrong."
     },
     {
       "verse": "13",
@@ -282,11 +282,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Wisdom is more valuable than the most expensive jewels. Nothing that you might want for yourself is as good as wisdom."
+      "text": "Wisdom is more valuable than the most expensive jewels.Nothing that you might want for yourself is as good as wisdom. Nothing that you might want for yourself is as good as wisdom."
     },
     {
       "verse": "16",
-      "text": "Wisdom is ready to give you a long life. She will also give you riches and honour. She’. In the Book of Proverbs, wisdom is like a woman. See Proverbs"
+      "text": "Wisdom is ready to give you a long life. She will also give you riches and honour."
     },
     {
       "verse": "17",
@@ -326,7 +326,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The Lord is the one who will take care of you. He will protect you, so that no danger can hurt you. Wisdom causes you to help other people"
+      "text": "The Lord is the one who will take care of you. He will protect you, so that no danger can hurt you."
     },
     {
       "verse": "27",
@@ -362,7 +362,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Wise people will receive honour. But fools will only have shame. Print... Use screen font size Show All Comments Proverbs 2Proverbs 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Wise people will receive honour. But fools will only have shame."
     }
   ],
   "4": [
@@ -375,24 +375,20 @@ module.exports = {
       "text": "My teaching will help you, so do not refuse it."
     },
     {
-      "verse": "3-4",
-      "text": "My father taught me when I was a little boy. My mother loved me as her only child. My father said to me, ‘Think carefully about what I tell you. If you obey my commands, you will live well."
-    },
-    {
       "verse": "5",
-      "text": "Learn to be wise and to understand things properly. Do not forget my teaching or turn away from it."
+      "text": "Learn to be wise and to understand things properly.Do not forget my teaching or turn away from it. Do not forget my teaching or turn away from it."
     },
     {
       "verse": "6",
-      "text": "If you keep hold of wisdom, she will keep you safe. She will protect you if you love her. She’. In the Book of Proverbs, wisdom is like a woman. See Proverbs"
+      "text": "If you keep hold of wisdom, she will keep you safe.She will protect you if you love her. She will protect you if you love her."
     },
     {
       "verse": "7",
-      "text": "Learn to be wise, because wisdom is the most important thing to have. Make sure that you learn to understand things well."
+      "text": "Learn to be wise, because wisdom is the most important thing to have.Make sure that you learn to understand things well. Make sure that you learn to understand things well."
     },
     {
       "verse": "8",
-      "text": "Respect wisdom as very valuable, then she will make you great. If you make her your friend, she will give you honour."
+      "text": "Respect wisdom as very valuable, then she will make you great.If you make her your friend, she will give you honour. If you make her your friend, she will give you honour."
     },
     {
       "verse": "9",
@@ -468,7 +464,11 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "Do not walk off your path, to the right side or the left side. Keep away from everything that is evil. Print... Use screen font size Show All Comments Proverbs 3Proverbs 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not walk off your path, to the right side or the left side. Keep away from everything that is evil."
+    },
+    {
+      "verse": "3-4",
+      "text": "My father taught me when I was a little boy. My mother loved me as her only child. My father said to me,‘Think carefully about what I tell you.If you obey my commands, you will live well. ‘Think carefully about what I tell you. If you obey my commands, you will live well."
     }
   ],
   "5": [
@@ -486,7 +486,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But in the end, she gives you bitter food, like poison. She gives you pain like a sharp sword. Chapter 5 tells about a woman who likes to have sex with different men. She tries to deceive men so that they will have sex with her."
+      "text": "But in the end, she gives you bitter food, like poison. She gives you pain like a sharp sword."
     },
     {
       "verse": "5",
@@ -526,7 +526,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Now I will be completely ashamed when I meet together with all the people.’ Be faithful to your wife"
+      "text": "Now I will be completely ashamed when I meet together with all the people.’"
     },
     {
       "verse": "15",
@@ -562,7 +562,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "He cannot control his sins, so he will die. He will become lost, because he does such stupid things. Print... Use screen font size Show All Comments Proverbs 4Proverbs 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He cannot control his sins, so he will die. He will become lost, because he does such stupid things."
     }
   ],
   "6": [
@@ -688,7 +688,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "But if someone catches him, he must pay back seven times what he took. He may lose everything that he has in his house. To steal something means to take something that does not belong to you."
+      "text": "But if someone catches him, he must pay back seven times what he took. He may lose everything that he has in his house."
     },
     {
       "verse": "32",
@@ -704,7 +704,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "He will not accept any money or bribe to pay the debt, even if it is a lot of money. Print... Use screen font size Show All Comments Proverbs 5Proverbs 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He will not accept any money or bribe to pay the debt, even if it is a lot of money."
     }
   ],
   "7": [
@@ -726,7 +726,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "If you do that, it will keep you safe from sin. You will not agree to sleep with an adulteress or a prostitute when she speaks sweet words to you. The adulteress This is the first part of Solomon's final lesson to his son. It is about a woman who deceives a foolish man. This man is a fool, because he is destroying his life. He does not realize what will happen to him. We can choose to listen to the woman who is ‘Wisdom’ (Chapter 8), or we can choose to listen to the woman who leads us into sin. This is a picture of the decisions that we make in life."
+      "text": "If you do that, it will keep you safe from sin. You will not agree to sleep with an adulteress or a prostitute when she speaks sweet words to you."
     },
     {
       "verse": "6",
@@ -814,7 +814,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "If you go to her house, you are on the road to death. You will soon be in your grave. Print... Use screen font size Show All Comments Proverbs 6Proverbs 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you go to her house, you are on the road to death. You will soon be in your grave."
     }
   ],
   "8": [
@@ -836,47 +836,47 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You who are silly, learn to be wise! You who are fools, learn to understand what is right."
+      "text": "You who are silly, learn to be wise!You who are fools, learn to understand what is right. You who are fools, learn to understand what is right."
     },
     {
       "verse": "6",
-      "text": "Listen! I have important things to tell you. Everything that I will speak is right."
+      "text": "Listen! I have important things to tell you.Everything that I will speak is right. Everything that I will speak is right."
     },
     {
       "verse": "7",
-      "text": "I say only things that are true. I hate all wicked lies."
+      "text": "I say only things that are true.I hate all wicked lies. I hate all wicked lies."
     },
     {
       "verse": "8",
-      "text": "Everything that I say is right and true. I say nothing that will deceive you."
+      "text": "Everything that I say is right and true.I say nothing that will deceive you. I say nothing that will deceive you."
     },
     {
       "verse": "9",
-      "text": "If you understand what is right, you will understand all my words. If you have knowledge, you will know that they are true."
+      "text": "If you understand what is right, you will understand all my words.If you have knowledge, you will know that they are true. If you have knowledge, you will know that they are true."
     },
     {
       "verse": "10",
-      "text": "Receive my wise teaching and knowledge as valuable things. They are more valuable than silver or the best gold."
+      "text": "Receive my wise teaching and knowledge as valuable things.They are more valuable than silver or the best gold. They are more valuable than silver or the best gold."
     },
     {
       "verse": "11",
-      "text": "Wisdom is more valuable than jewels. Nothing that you might ever want is equal to it."
+      "text": "Wisdom is more valuable than jewels.Nothing that you might ever want is equal to it. Nothing that you might ever want is equal to it."
     },
     {
       "verse": "12",
-      "text": "I, wisdom, live with an honest mind as my friend. I have knowledge and I understand what is right."
+      "text": "I, wisdom, live with an honest mind as my friend.I have knowledge and I understand what is right. I have knowledge and I understand what is right."
     },
     {
       "verse": "13",
-      "text": "If you respect the Lord with fear, then you will hate anything that is evil. I hate proud people who boast. I hate people who live evil lives. I hate people who say things to deceive others."
+      "text": "If you respect the Lord with fear, then you will hate anything that is evil.I hate proud people who boast.I hate people who live evil lives.I hate people who say things to deceive others. I hate proud people who boast. I hate people who live evil lives. I hate people who say things to deceive others."
     },
     {
       "verse": "14",
-      "text": "I tell people how to do wise things that are right. I understand what is right and I am strong."
+      "text": "I tell people how to do wise things that are right.I understand what is right and I am strong. I understand what is right and I am strong."
     },
     {
       "verse": "15",
-      "text": "I help kings to rule well. I help rulers to make fair laws."
+      "text": "I help kings to rule well.I help rulers to make fair laws. I help rulers to make fair laws."
     },
     {
       "verse": "16",
@@ -884,35 +884,35 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I love those people who love me. Whoever looks for me will find me."
+      "text": "I love those people who love me.Whoever looks for me will find me. Whoever looks for me will find me."
     },
     {
       "verse": "18",
-      "text": "I am able to give people riches and honour. I help people to use their money well and to do what is right."
+      "text": "I am able to give people riches and honour.I help people to use their money well and to do what is right. I help people to use their money well and to do what is right."
     },
     {
       "verse": "19",
-      "text": "What you receive from me is better than the best gold. It is better than the best silver."
+      "text": "What you receive from me is better than the best gold.It is better than the best silver. It is better than the best silver."
     },
     {
       "verse": "20",
-      "text": "I walk along the way that is righteous. I follow the path of justice."
+      "text": "I walk along the way that is righteous.I follow the path of justice. I follow the path of justice."
     },
     {
       "verse": "21",
-      "text": "In that way, people who love me will receive riches. I fill their houses with valuable things."
+      "text": "In that way, people who love me will receive riches.I fill their houses with valuable things. I fill their houses with valuable things."
     },
     {
       "verse": "22",
-      "text": "The Lord created me as the first thing that he did. That was the first of his acts long ago."
+      "text": "The Lord created me as the first thing that he did.That was the first of his acts long ago. That was the first of his acts long ago."
     },
     {
       "verse": "23",
-      "text": "He chose me as his servant from the beginning of time. That was before the world began."
+      "text": "He chose me as his servant from the beginning of time.That was before the world began. That was before the world began."
     },
     {
       "verse": "24",
-      "text": "I was born before the deep seas were there. There were not yet springs that poured out water."
+      "text": "I was born before the deep seas were there.There were not yet springs that poured out water. There were not yet springs that poured out water."
     },
     {
       "verse": "25",
@@ -920,47 +920,47 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "I was born before the Lord made the earth and its fields, before there was soil on the earth."
+      "text": "I was born before the Lord made the earth and its fields,before there was soil on the earth. before there was soil on the earth."
     },
     {
       "verse": "27",
-      "text": "I was there when he put the heavens in their place. I was there when he made the border of the sea where it meets the sky."
+      "text": "I was there when he put the heavens in their place.I was there when he made the border of the sea where it meets the sky. I was there when he made the border of the sea where it meets the sky."
     },
     {
       "verse": "28",
-      "text": "I was there when he put the clouds in the sky. I was there when he made streams of water fill the seas."
+      "text": "I was there when he put the clouds in the sky.I was there when he made streams of water fill the seas. I was there when he made streams of water fill the seas."
     },
     {
       "verse": "29",
-      "text": "He gave his command to the seas, that they should obey him. The waters of the sea must stay inside its borders. I was there when he built the foundations of the earth."
+      "text": "He gave his command to the seas, that they should obey him.The waters of the sea must stay inside its borders.I was there when he built the foundations of the earth. The waters of the sea must stay inside its borders. I was there when he built the foundations of the earth."
     },
     {
       "verse": "30",
-      "text": "When the Lord made all that happen, I was beside him as his faithful helper. I pleased him every day, and I was happy to be with him."
+      "text": "When the Lord made all that happen,I was beside him as his faithful helper.I pleased him every day, and I was happy to be with him. I was beside him as his faithful helper. I pleased him every day, and I was happy to be with him."
     },
     {
       "verse": "31",
-      "text": "The world that he had made gave me great joy. The people who lived on it made me happy."
+      "text": "The world that he had made gave me great joy.The people who lived on it made me happy. The people who lived on it made me happy."
     },
     {
       "verse": "32",
-      "text": "So listen to me, my children. Anyone who obeys my teaching will be happy."
+      "text": "So listen to me, my children.Anyone who obeys my teaching will be happy. Anyone who obeys my teaching will be happy."
     },
     {
       "verse": "33",
-      "text": "Listen when I tell you what is right for you to do. Then you will be wise. Do not forget what I tell you."
+      "text": "Listen when I tell you what is right for you to do.Then you will be wise.Do not forget what I tell you. Then you will be wise. Do not forget what I tell you."
     },
     {
       "verse": "34",
-      "text": "Anyone who listens to me is in a happy place. You can wait outside my home each day, and I will teach you."
+      "text": "Anyone who listens to me is in a happy place.You can wait outside my home each day, and I will teach you. You can wait outside my home each day, and I will teach you."
     },
     {
       "verse": "35",
-      "text": "Anyone who finds me, wisdom, finds true life. The Lord will bless that person."
+      "text": "Anyone who finds me, wisdom, finds true life.The Lord will bless that person. The Lord will bless that person."
     },
     {
       "verse": "36",
-      "text": "But anyone who does not find me brings trouble on himself. Everybody who hates me loves death.’ Print... Use screen font size Show All Comments Proverbs 7Proverbs 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But anyone who does not find me brings trouble on himself.Everybody who hates me loves death.’"
     }
   ],
   "9": [
@@ -978,7 +978,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "She says to foolish people, ‘Come here to me.’ She says to people who do not understand what is right,"
+      "text": "She says to foolish people, ‘Come here to me.’She says to people who do not understand what is right,"
     },
     {
       "verse": "5",
@@ -994,7 +994,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So do not warn proud people. They will only hate you. But if you warn a wise person, he will love you."
+      "text": "So do not warn proud people. They will only hate you.But if you warn a wise person, he will love you."
     },
     {
       "verse": "9",
@@ -1034,1037 +1034,1037 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "But those foolish people do not realize that her home is a place for dead people. Her visitors are already in their graves. Print... Use screen font size Show All Comments Proverbs 8Proverbs 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But those foolish people do not realize that her home is a place for dead people. Her visitors are already in their graves."
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "These are the proverbs of Solomon. A wise child makes his father happy. But a foolish child causes his mother to be sad."
+      "text": "These are the proverbs of Solomon.A wise child makes his father happy.But a foolish child causes his mother to be sad. A wise child makes his father happy. But a foolish child causes his mother to be sad."
     },
     {
       "verse": "2",
-      "text": "If you are not honest, your money will not help you. But if you are righteous, it will save you from death."
+      "text": "If you are not honest, your money will not help you.But if you are righteous, it will save you from death. But if you are righteous, it will save you from death."
     },
     {
       "verse": "3",
-      "text": "The Lord will not let righteous people be hungry. But he will not let bad people get what they want."
+      "text": "The Lord will not let righteous people be hungry.But he will not let bad people get what they want. But he will not let bad people get what they want."
     },
     {
       "verse": "4",
-      "text": "If a man is lazy, he will soon be poor. But if he works hard, he will become rich."
+      "text": "If a man is lazy, he will soon be poor.But if he works hard, he will become rich. But if he works hard, he will become rich."
     },
     {
       "verse": "5",
-      "text": "A wise man cuts his crops at harvest time and he stores them. But anyone who does no work at harvest time brings shame."
+      "text": "A wise man cuts his crops at harvest time and he stores them.But anyone who does no work at harvest time brings shame. But anyone who does no work at harvest time brings shame."
     },
     {
       "verse": "6",
-      "text": "God blesses righteous people. But the words of wicked people hide their anger."
+      "text": "God blesses righteous people.But the words of wicked people hide their anger. But the words of wicked people hide their anger."
     },
     {
       "verse": "7",
-      "text": "It is a pleasure to remember righteous people. But when wicked people die, people soon forget their name."
+      "text": "It is a pleasure to remember righteous people.But when wicked people die, people soon forget their name. But when wicked people die, people soon forget their name."
     },
     {
       "verse": "8",
-      "text": "Wise people accept good teaching. But people who talk in a foolish way destroy themselves."
+      "text": "Wise people accept good teaching.But people who talk in a foolish way destroy themselves. But people who talk in a foolish way destroy themselves."
     },
     {
       "verse": "9",
-      "text": "If people are honest, their lives are safe. But those who are not honest will receive punishment."
+      "text": "If people are honest, their lives are safe.But those who are not honest will receive punishment. But those who are not honest will receive punishment."
     },
     {
       "verse": "10",
-      "text": "Someone who deceives his friends causes trouble. And someone who speaks in foolish ways will destroy himself."
+      "text": "Someone who deceives his friends causes trouble.And someone who speaks in foolish ways will destroy himself. And someone who speaks in foolish ways will destroy himself."
     },
     {
       "verse": "11",
-      "text": "The teaching of righteous people gives life, like a spring of water. But the words of wicked people hide their anger."
+      "text": "The teaching of righteous people gives life, like a spring of water.But the words of wicked people hide their anger. But the words of wicked people hide their anger."
     },
     {
       "verse": "12",
-      "text": "When people hate others, it causes arguments. But love covers over all sins."
+      "text": "When people hate others, it causes arguments.But love covers over all sins. But love covers over all sins."
     },
     {
       "verse": "13",
-      "text": "People who understand what is right speak wise words. But silly people receive the punishment that they deserve."
+      "text": "People who understand what is right speak wise words.But silly people receive the punishment that they deserve. But silly people receive the punishment that they deserve."
     },
     {
       "verse": "14",
-      "text": "Wise people store knowledge in their minds. But when foolish people speak, trouble is near."
+      "text": "Wise people store knowledge in their minds.But when foolish people speak, trouble is near. But when foolish people speak, trouble is near."
     },
     {
       "verse": "15",
-      "text": "Money keeps rich people safe, like a strong city. But poor people die because they have no one to help them."
+      "text": "Money keeps rich people safe, like a strong city.But poor people die because they have no one to help them. But poor people die because they have no one to help them."
     },
     {
       "verse": "16",
-      "text": "Righteous people receive life as their wages. You do work and someone pays you for it. That money is called wages. Wicked people receive only punishment."
+      "text": "Righteous people receive life as their wages.Wicked people receive only punishment. Wicked people receive only punishment."
     },
     {
       "verse": "17",
-      "text": "People who listen when people warn them are on the road to life. But those who refuse to listen are on a different road."
+      "text": "People who listen when people warn them are on the road to life.But those who refuse to listen are on a different road. But those who refuse to listen are on a different road."
     },
     {
       "verse": "18",
-      "text": "If you hate somebody but you try to hide it, you are telling lies. And if you say false things about other people, you are a fool."
+      "text": "If you hate somebody but you try to hide it, you are telling lies.And if you say false things about other people, you are a fool. And if you say false things about other people, you are a fool."
     },
     {
       "verse": "19",
-      "text": "If you talk too much, you will soon do something wrong. But if you are wise, you will stop talking."
+      "text": "If you talk too much, you will soon do something wrong.But if you are wise, you will stop talking. But if you are wise, you will stop talking."
     },
     {
       "verse": "20",
-      "text": "The words of righteous people are as valuable as the best silver. But the thoughts of wicked people are useless."
+      "text": "The words of righteous people are as valuable as the best silver.But the thoughts of wicked people are useless. But the thoughts of wicked people are useless."
     },
     {
       "verse": "21",
-      "text": "The teaching of righteous people will help many people. But foolish people die because they are so stupid."
+      "text": "The teaching of righteous people will help many people.But foolish people die because they are so stupid. But foolish people die because they are so stupid."
     },
     {
       "verse": "22",
-      "text": "If the Lord blesses you, you are really rich. Hard work will not make you any richer."
+      "text": "If the Lord blesses you, you are really rich.Hard work will not make you any richer. Hard work will not make you any richer."
     },
     {
       "verse": "23",
-      "text": "A foolish person is happy when he does wicked things. But a wise person enjoys doing things that are right."
+      "text": "A foolish person is happy when he does wicked things.But a wise person enjoys doing things that are right. But a wise person enjoys doing things that are right."
     },
     {
       "verse": "24",
-      "text": "The trouble that wicked people are afraid of will certainly happen to them. But righteous people will receive the things that they want."
+      "text": "The trouble that wicked people are afraid of will certainly happen to them.But righteous people will receive the things that they want. But righteous people will receive the things that they want."
     },
     {
       "verse": "25",
-      "text": "When the storm has finished, wicked people are no longer there. But righteous people are still standing safely."
+      "text": "When the storm has finished, wicked people are no longer there.But righteous people are still standing safely. But righteous people are still standing safely."
     },
     {
       "verse": "26",
-      "text": "Do not send a lazy person with a message. He will bring you pain, like the taste of bitter wine, or like smoke in your eyes."
+      "text": "Do not send a lazy person with a message.He will bring you pain, like the taste of bitter wine,or like smoke in your eyes. He will bring you pain, like the taste of bitter wine, or like smoke in your eyes."
     },
     {
       "verse": "27",
-      "text": "If you respect and obey the Lord, you will live longer. But wicked people will die before they are old."
+      "text": "If you respect and obey the Lord, you will live longer.But wicked people will die before they are old. But wicked people will die before they are old."
     },
     {
       "verse": "28",
-      "text": "What good people hope to receive causes them to be happy. But wicked people never receive what they hope for."
+      "text": "What good people hope to receive causes them to be happy.But wicked people never receive what they hope for. But wicked people never receive what they hope for."
     },
     {
       "verse": "29",
-      "text": "The Lord keeps honest people safe. But he punishes people who do wrong things."
+      "text": "The Lord keeps honest people safe.But he punishes people who do wrong things. But he punishes people who do wrong things."
     },
     {
       "verse": "30",
-      "text": "Righteous people will always have a safe place to live. But wicked people will not continue to live in the land."
+      "text": "Righteous people will always have a safe place to live.But wicked people will not continue to live in the land. But wicked people will not continue to live in the land."
     },
     {
       "verse": "31",
-      "text": "Righteous people speak wise words. But those who speak evil things will lose their tongues!"
+      "text": "Righteous people speak wise words.But those who speak evil things will lose their tongues! But those who speak evil things will lose their tongues!"
     },
     {
       "verse": "32",
-      "text": "Righteous people say kind things. But wicked people say things that hurt others. Print... Use screen font size Show All Comments Proverbs 9Proverbs 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Righteous people say kind things.But wicked people say things that hurt others."
     }
   ],
   "11": [
     {
       "verse": "1",
-      "text": "The Lord hates traders who do not use true weights. He is happy when they are honest and they use true weights."
+      "text": "The Lord hates traders who do not use true weights.He is happy when they are honest and they use true weights. He is happy when they are honest and they use true weights."
     },
     {
       "verse": "2",
-      "text": "If people are proud, they will soon become ashamed. But if people are humble, they become wise."
+      "text": "If people are proud, they will soon become ashamed.But if people are humble, they become wise. But if people are humble, they become wise."
     },
     {
       "verse": "3",
-      "text": "Good people are honest, and that shows them the right way to live. But wicked people are not honest, and that destroys them."
+      "text": "Good people are honest, and that shows them the right way to live.But wicked people are not honest, and that destroys them. But wicked people are not honest, and that destroys them."
     },
     {
       "verse": "4",
-      "text": "When it is time for God to punish you, money will not help you to escape. But if you are righteous, that will save you from death."
+      "text": "When it is time for God to punish you, money will not help you to escape.But if you are righteous, that will save you from death. But if you are righteous, that will save you from death."
     },
     {
       "verse": "5",
-      "text": "An honest man who is righteous has a straight path to walk on. But the sins of a wicked person will cause him to fall down."
+      "text": "An honest man who is righteous has a straight path to walk on.But the sins of a wicked person will cause him to fall down. But the sins of a wicked person will cause him to fall down."
     },
     {
       "verse": "6",
-      "text": "When honest people are righteous, that will keep them safe. But the bad things that wicked people want will catch them in a trap."
+      "text": "When honest people are righteous, that will keep them safe.But the bad things that wicked people want will catch them in a trap. But the bad things that wicked people want will catch them in a trap."
     },
     {
       "verse": "7",
-      "text": "When a wicked person dies, he has no hope for anything good. Everything that he hoped his strength would give him disappears!"
+      "text": "When a wicked person dies, he has no hope for anything good.Everything that he hoped his strength would give him disappears! Everything that he hoped his strength would give him disappears!"
     },
     {
       "verse": "8",
-      "text": "Righteous people escape from trouble. The trouble happens to wicked people instead."
+      "text": "Righteous people escape from trouble.The trouble happens to wicked people instead. The trouble happens to wicked people instead."
     },
     {
       "verse": "9",
-      "text": "People who do not respect God say things that destroy their friends. But the knowledge that righteous people have keeps them safe."
+      "text": "People who do not respect God say things that destroy their friends.But the knowledge that righteous people have keeps them safe. But the knowledge that righteous people have keeps them safe."
     },
     {
       "verse": "10",
-      "text": "When righteous people do well, everyone in the city is happy. And people shout with joy when wicked people die."
+      "text": "When righteous people do well, everyone in the city is happy.And people shout with joy when wicked people die. And people shout with joy when wicked people die."
     },
     {
       "verse": "11",
-      "text": "A city becomes great when honest men bring God's blessing to it. But when wicked people give bad advice, they will destroy the city."
+      "text": "A city becomes great when honest men bring God's blessing to it.But when wicked people give bad advice, they will destroy the city. But when wicked people give bad advice, they will destroy the city."
     },
     {
       "verse": "12",
-      "text": "When someone insults his neighbour, it shows that he is foolish. But a wise person stays quiet."
+      "text": "When someone insults his neighbour, it shows that he is foolish.But a wise person stays quiet. But a wise person stays quiet."
     },
     {
       "verse": "13",
-      "text": "If a person talks too much about other people, he will soon tell their secrets. But someone that you can trust will not tell your secrets to other people."
+      "text": "If a person talks too much about other people, he will soon tell their secrets.But someone that you can trust will not tell your secrets to other people. But someone that you can trust will not tell your secrets to other people."
     },
     {
       "verse": "14",
-      "text": "A nation will fall if it has no wise leaders. But it will do well if there are people who give good advice."
+      "text": "A nation will fall if it has no wise leaders.But it will do well if there are people who give good advice. But it will do well if there are people who give good advice."
     },
     {
       "verse": "15",
-      "text": "If you promise to pay a stranger's debt, you will be sorry. You will be safe if you do not agree to do that."
+      "text": "If you promise to pay a stranger's debt, you will be sorry.You will be safe if you do not agree to do that. You will be safe if you do not agree to do that."
     },
     {
       "verse": "16",
-      "text": "A kind woman receives honour, but cruel men only get riches for themselves."
+      "text": "A kind woman receives honour,but cruel men only get riches for themselves. but cruel men only get riches for themselves."
     },
     {
       "verse": "17",
-      "text": "A faithful person helps himself with good things, but a cruel person brings trouble on himself."
+      "text": "A faithful person helps himself with good things,but a cruel person brings trouble on himself. but a cruel person brings trouble on himself."
     },
     {
       "verse": "18",
-      "text": "A wicked person gets riches that soon disappear. But someone who lives in a good way will surely receive good things."
+      "text": "A wicked person gets riches that soon disappear.But someone who lives in a good way will surely receive good things. But someone who lives in a good way will surely receive good things."
     },
     {
       "verse": "19",
-      "text": "If someone continues to do what is right, he will live. But if someone loves to do evil things, he will die."
+      "text": "If someone continues to do what is right, he will live.But if someone loves to do evil things, he will die. But if someone loves to do evil things, he will die."
     },
     {
       "verse": "20",
-      "text": "The Lord hates people who have wrong thoughts. But he is pleased with people who live in an honest way."
+      "text": "The Lord hates people who have wrong thoughts.But he is pleased with people who live in an honest way. But he is pleased with people who live in an honest way."
     },
     {
       "verse": "21",
-      "text": "Be sure about this: Evil people will receive the punishment that they deserve. But people who are righteous will escape."
+      "text": "Be sure about this: Evil people will receive the punishment that they deserve.But people who are righteous will escape. But people who are righteous will escape."
     },
     {
       "verse": "22",
-      "text": "A beautiful woman who turns away from wisdom is like a gold ring in a pig's nose."
+      "text": "A beautiful woman who turns away from wisdomis like a gold ring in a pig's nose. is like a gold ring in a pig's nose."
     },
     {
       "verse": "23",
-      "text": "Righteous people want good things to happen. Wicked people only hope to cause anger."
+      "text": "Righteous people want good things to happen.Wicked people only hope to cause anger. Wicked people only hope to cause anger."
     },
     {
       "verse": "24",
-      "text": "Somebody may share his things with other people, but he still becomes richer. Somebody else may keep the things that he should give to others, but he still becomes poor."
+      "text": "Somebody may share his things with other people,but he still becomes richer.Somebody else may keep the things that he should give to others,but he still becomes poor. but he still becomes richer. Somebody else may keep the things that he should give to others, but he still becomes poor."
     },
     {
       "verse": "25",
-      "text": "If you help other people with your money, you will do well. If you give water to thirsty people, you will not be thirsty yourself."
+      "text": "If you help other people with your money, you will do well.If you give water to thirsty people, you will not be thirsty yourself. If you give water to thirsty people, you will not be thirsty yourself."
     },
     {
       "verse": "26",
-      "text": "If you refuse to sell food to hungry people, they will curse you. But if you sell it to them, they will praise you."
+      "text": "If you refuse to sell food to hungry people, they will curse you.But if you sell it to them, they will praise you. But if you sell it to them, they will praise you."
     },
     {
       "verse": "27",
-      "text": "If you try to do good things, people will respect you. But if you want evil things to happen, they will happen to you!"
+      "text": "If you try to do good things, people will respect you.But if you want evil things to happen, they will happen to you! But if you want evil things to happen, they will happen to you!"
     },
     {
       "verse": "28",
-      "text": "If somebody trusts his riches to keep him safe, he will fall like a leaf that falls from a tree. But a righteous person will grow strong, like a fresh green leaf."
+      "text": "If somebody trusts his riches to keep him safe,he will fall like a leaf that falls from a tree.But a righteous person will grow strong,like a fresh green leaf. he will fall like a leaf that falls from a tree. But a righteous person will grow strong, like a fresh green leaf."
     },
     {
       "verse": "29",
-      "text": "Anyone who causes trouble for his family will not receive any good thing from them. A foolish person like that will become the servant of a wise person."
+      "text": "Anyone who causes trouble for his family will not receive any good thing from them.A foolish person like that will become the servant of a wise person. A foolish person like that will become the servant of a wise person."
     },
     {
       "verse": "30",
-      "text": "The good things that a righteous person does bring life. A person who saves people's lives shows that he is wise."
+      "text": "The good things that a righteous person does bring life.A person who saves people's lives shows that he is wise. A person who saves people's lives shows that he is wise."
     },
     {
       "verse": "31",
-      "text": "Righteous people receive what they deserve, here on this earth. So you can be sure that cruel and wicked people will receive their punishment. Print... Use screen font size Show All Comments Proverbs 10Proverbs 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Righteous people receive what they deserve, here on this earth.So you can be sure that cruel and wicked people will receive their punishment."
     }
   ],
   "12": [
     {
       "verse": "1",
-      "text": "Do you want to know the right way to live? Then you must accept it when people warn you that you have done something wrong. Only stupid people hate it when people warn them."
+      "text": "Do you want to know the right way to live?Then you must accept it when people warn you that you have done something wrong.Only stupid people hate it when people warn them. Then you must accept it when people warn you that you have done something wrong. Only stupid people hate it when people warn them."
     },
     {
       "verse": "2",
-      "text": "The Lord helps good people. But he punishes people who want to do evil things."
+      "text": "The Lord helps good people.But he punishes people who want to do evil things. But he punishes people who want to do evil things."
     },
     {
       "verse": "3",
-      "text": "No one can use wicked things to make himself safe. But a righteous person has strong roots."
+      "text": "No one can use wicked things to make himself safe.But a righteous person has strong roots. But a righteous person has strong roots."
     },
     {
       "verse": "4",
-      "text": "A good wife will bring honour to her husband, like a crown. But a wife who brings shame to her husband will take away his strength."
+      "text": "A good wife will bring honour to her husband, like a crown.But a wife who brings shame to her husband will take away his strength. But a wife who brings shame to her husband will take away his strength."
     },
     {
       "verse": "5",
-      "text": "Righteous people want to do things that are right. But do not trust the advice of wicked people."
+      "text": "Righteous people want to do things that are right.But do not trust the advice of wicked people. But do not trust the advice of wicked people."
     },
     {
       "verse": "6",
-      "text": "The words of wicked people are like a trap that will kill good people. But the words of honest people will save people's lives."
+      "text": "The words of wicked people are like a trap that will kill good people.But the words of honest people will save people's lives. But the words of honest people will save people's lives."
     },
     {
       "verse": "7",
-      "text": "Wicked people soon come to an end and they disappear. But the families of righteous people will continue to be strong."
+      "text": "Wicked people soon come to an end and they disappear.But the families of righteous people will continue to be strong. But the families of righteous people will continue to be strong."
     },
     {
       "verse": "8",
-      "text": "People will praise a wise person, as much as his wisdom deserves. But no one will respect a person who is stupid."
+      "text": "People will praise a wise person, as much as his wisdom deserves.But no one will respect a person who is stupid. But no one will respect a person who is stupid."
     },
     {
       "verse": "9",
-      "text": "It is better to be a humble person who has a servant than a proud person who has no food to eat."
+      "text": "It is better to be a humble person who has a servantthan a proud person who has no food to eat. than a proud person who has no food to eat."
     },
     {
       "verse": "10",
-      "text": "Righteous people take care of their animals. But wicked people are cruel even when they think they are kind."
+      "text": "Righteous people take care of their animals.But wicked people are cruel even when they think they are kind. But wicked people are cruel even when they think they are kind."
     },
     {
       "verse": "11",
-      "text": "A farmer who works hard will have plenty of food to eat. But anyone who works only on useless things is foolish."
+      "text": "A farmer who works hard will have plenty of food to eat.But anyone who works only on useless things is foolish. But anyone who works only on useless things is foolish."
     },
     {
       "verse": "12",
-      "text": "Wicked people want to take the things that other bad people have. But righteous people remain strong, with deep roots."
+      "text": "Wicked people want to take the things that other bad people have.But righteous people remain strong, with deep roots. But righteous people remain strong, with deep roots."
     },
     {
       "verse": "13",
-      "text": "The lies of evil people put them in trouble. But righteous people escape from trouble."
+      "text": "The lies of evil people put them in trouble.But righteous people escape from trouble. But righteous people escape from trouble."
     },
     {
       "verse": "14",
-      "text": "If you say good things, you will receive good things that make you happy. You will receive what you deserve from the things that you do."
+      "text": "If you say good things, you will receive good things that make you happy.You will receive what you deserve from the things that you do. You will receive what you deserve from the things that you do."
     },
     {
       "verse": "15",
-      "text": "Foolish people always do what seems right to them. But wise people listen to advice from others."
+      "text": "Foolish people always do what seems right to them.But wise people listen to advice from others. But wise people listen to advice from others."
     },
     {
       "verse": "16",
-      "text": "When a fool becomes angry, everybody knows it! But a careful person keeps quiet when someone insults him."
+      "text": "When a fool becomes angry, everybody knows it!But a careful person keeps quiet when someone insults him. But a careful person keeps quiet when someone insults him."
     },
     {
       "verse": "17",
-      "text": "Honest people speak the truth in court. But a person who tells lies never says what is true."
+      "text": "Honest people speak the truth in court.But a person who tells lies never says what is true. But a person who tells lies never says what is true."
     },
     {
       "verse": "18",
-      "text": "If you speak in a careless way, you may hurt other people. But when wise people speak, it makes people feel well."
+      "text": "If you speak in a careless way, you may hurt other people.But when wise people speak, it makes people feel well. But when wise people speak, it makes people feel well."
     },
     {
       "verse": "19",
-      "text": "True words continue to be true for ever. But people quickly see that lies are lies."
+      "text": "True words continue to be true for ever.But people quickly see that lies are lies. But people quickly see that lies are lies."
     },
     {
       "verse": "20",
-      "text": "Someone who wants to cause trouble has a mind that is full of lies. But someone who wants to bring peace has a mind that is full of joy."
+      "text": "Someone who wants to cause trouble has a mind that is full of lies.But someone who wants to bring peace has a mind that is full of joy. But someone who wants to bring peace has a mind that is full of joy."
     },
     {
       "verse": "21",
-      "text": "Trouble keeps away from righteous people. But wicked people have trouble all the time."
+      "text": "Trouble keeps away from righteous people.But wicked people have trouble all the time. But wicked people have trouble all the time."
     },
     {
       "verse": "22",
-      "text": "The Lord hates people who tell lies. But he is pleased with people who do what they promise to do."
+      "text": "The Lord hates people who tell lies.But he is pleased with people who do what they promise to do. But he is pleased with people who do what they promise to do."
     },
     {
       "verse": "23",
-      "text": "Careful people keep quiet about how much they know. But foolish people show everyone how silly they are."
+      "text": "Careful people keep quiet about how much they know.But foolish people show everyone how silly they are. But foolish people show everyone how silly they are."
     },
     {
       "verse": "24",
-      "text": "If you work hard, you will become a leader. But if you are lazy, you will become a slave."
+      "text": "If you work hard, you will become a leader.But if you are lazy, you will become a slave. But if you are lazy, you will become a slave."
     },
     {
       "verse": "25",
-      "text": "If you worry all the time, it will make you sad. But kind words will make you happy."
+      "text": "If you worry all the time, it will make you sad.But kind words will make you happy. But kind words will make you happy."
     },
     {
       "verse": "26",
-      "text": "A righteous person gives good advice to his friends. But wicked people are always taking the wrong path."
+      "text": "A righteous person gives good advice to his friends.But wicked people are always taking the wrong path. But wicked people are always taking the wrong path."
     },
     {
       "verse": "27",
-      "text": "A lazy person does not cook the animals that he has caught. But if you work hard, you will enjoy many valuable things."
+      "text": "A lazy person does not cook the animals that he has caught.But if you work hard, you will enjoy many valuable things. But if you work hard, you will enjoy many valuable things."
     },
     {
       "verse": "28",
-      "text": "If you do what is right, you will find true life. Along that path, there is no death. Print... Use screen font size Show All Comments Proverbs 11Proverbs 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you do what is right, you will find true life.Along that path, there is no death."
     }
   ],
   "13": [
     {
       "verse": "1",
-      "text": "A wise son listens to his father's teaching. But if you tell a proud person that he is wrong, he will not listen."
+      "text": "A wise son listens to his father's teaching.But if you tell a proud person that he is wrong, he will not listen. But if you tell a proud person that he is wrong, he will not listen."
     },
     {
       "verse": "2",
-      "text": "If you say kind words, you will eat good things. But wicked people only want to be cruel."
+      "text": "If you say kind words, you will eat good things.But wicked people only want to be cruel. But wicked people only want to be cruel."
     },
     {
       "verse": "3",
-      "text": "Someone who thinks before he speaks will keep his life safe. But someone who talks too much will destroy himself."
+      "text": "Someone who thinks before he speaks will keep his life safe.But someone who talks too much will destroy himself. But someone who talks too much will destroy himself."
     },
     {
       "verse": "4",
-      "text": "A lazy person always wants to have more, but he will not get it. If a person works hard, he will have more than he needs."
+      "text": "A lazy person always wants to have more, but he will not get it.If a person works hard, he will have more than he needs. If a person works hard, he will have more than he needs."
     },
     {
       "verse": "5",
-      "text": "Honest people hate anything that is false. But wicked people do things that bring them shame."
+      "text": "Honest people hate anything that is false.But wicked people do things that bring them shame. But wicked people do things that bring them shame."
     },
     {
       "verse": "6",
-      "text": "When honest people do what is right, it keeps them safe. But when sinners do evil things, it destroys them."
+      "text": "When honest people do what is right, it keeps them safe.But when sinners do evil things, it destroys them. But when sinners do evil things, it destroys them."
     },
     {
       "verse": "7",
-      "text": "Somebody who has nothing may still pretend to be rich. Somebody else may pretend to be poor, but he is very rich."
+      "text": "Somebody who has nothing may still pretend to be rich.Somebody else may pretend to be poor, but he is very rich. Somebody else may pretend to be poor, but he is very rich."
     },
     {
       "verse": "8",
-      "text": "A rich person may have to use his money to save his life. But poor people do not have that problem."
+      "text": "A rich person may have to use his money to save his life.But poor people do not have that problem. But poor people do not have that problem."
     },
     {
       "verse": "9",
-      "text": "Righteous people have joy that shines like a bright light. But wicked people have a light that will quickly go out."
+      "text": "Righteous people have joy that shines like a bright light.But wicked people have a light that will quickly go out. But wicked people have a light that will quickly go out."
     },
     {
       "verse": "10",
-      "text": "A person who boasts only causes trouble. But if you accept good advice, it shows that you are wise."
+      "text": "A person who boasts only causes trouble.But if you accept good advice, it shows that you are wise. But if you accept good advice, it shows that you are wise."
     },
     {
       "verse": "11",
-      "text": "If you try to get money quickly, you will not stay rich for long. But if you are patient, you will become rich little by little."
+      "text": "If you try to get money quickly, you will not stay rich for long.But if you are patient, you will become rich little by little. But if you are patient, you will become rich little by little."
     },
     {
       "verse": "12",
-      "text": "When you do not receive the things that you hope for, it makes you sad. But when you receive what you have always wanted, you are very happy."
+      "text": "When you do not receive the things that you hope for, it makes you sad.But when you receive what you have always wanted, you are very happy. But when you receive what you have always wanted, you are very happy."
     },
     {
       "verse": "13",
-      "text": "If you do not accept good teaching, you will destroy yourself. If you accept good advice, it will help you to do well."
+      "text": "If you do not accept good teaching, you will destroy yourself.If you accept good advice, it will help you to do well. If you accept good advice, it will help you to do well."
     },
     {
       "verse": "14",
-      "text": "The teaching of wise people is like a spring of water that gives life. It will keep you away from death's dangerous traps."
+      "text": "The teaching of wise people is like a spring of water that gives life.It will keep you away from death's dangerous traps. It will keep you away from death's dangerous traps."
     },
     {
       "verse": "15",
-      "text": "People respect a person who has wise thoughts. But the way that wicked people live destroys them."
+      "text": "People respect a person who has wise thoughts.But the way that wicked people live destroys them. But the way that wicked people live destroys them."
     },
     {
       "verse": "16",
-      "text": "Careful people need to understand what they are doing. But a fool quickly shows how foolish he is."
+      "text": "Careful people need to understand what they are doing.But a fool quickly shows how foolish he is. But a fool quickly shows how foolish he is."
     },
     {
       "verse": "17",
-      "text": "If you send a message with a wicked person, he will cause trouble. But if you send someone that you can trust, he will bring peace."
+      "text": "If you send a message with a wicked person, he will cause trouble.But if you send someone that you can trust, he will bring peace. But if you send someone that you can trust, he will bring peace."
     },
     {
       "verse": "18",
-      "text": "Anyone who turns away from good teaching will become poor and ashamed. But if you accept advice when you do something wrong, people will respect you."
+      "text": "Anyone who turns away from good teaching will become poor and ashamed.But if you accept advice when you do something wrong, people will respect you. But if you accept advice when you do something wrong, people will respect you."
     },
     {
       "verse": "19",
-      "text": "It is very nice to receive the things that you want. But foolish people refuse to stop doing evil things."
+      "text": "It is very nice to receive the things that you want.But foolish people refuse to stop doing evil things. But foolish people refuse to stop doing evil things."
     },
     {
       "verse": "20",
-      "text": "If you have wise people as your friends, you will become wise yourself. But if you have foolish friends, you will hurt yourself."
+      "text": "If you have wise people as your friends, you will become wise yourself.But if you have foolish friends, you will hurt yourself. But if you have foolish friends, you will hurt yourself."
     },
     {
       "verse": "21",
-      "text": "Trouble chases sinners and it catches them. But righteous people will receive good things."
+      "text": "Trouble chases sinners and it catches them.But righteous people will receive good things. But righteous people will receive good things."
     },
     {
       "verse": "22",
-      "text": "When a good person dies, he leaves good things for his grandchildren. But a sinner's riches will belong to righteous people in the end."
+      "text": "When a good person dies, he leaves good things for his grandchildren.But a sinner's riches will belong to righteous people in the end. But a sinner's riches will belong to righteous people in the end."
     },
     {
       "verse": "23",
-      "text": "Even a poor man's field may give him enough food. But he loses it because wicked people rob him."
+      "text": "Even a poor man's field may give him enough food.But he loses it because wicked people rob him. But he loses it because wicked people rob him."
     },
     {
       "verse": "24",
-      "text": "If you do not punish your child, you show that you hate him. If you really love your child, you will punish him when he does something wrong."
+      "text": "If you do not punish your child, you show that you hate him.If you really love your child, you will punish him when he does something wrong. If you really love your child, you will punish him when he does something wrong."
     },
     {
       "verse": "25",
-      "text": "Righteous people have plenty of food to eat. But wicked people have an empty stomach. Print... Use screen font size Show All Comments Proverbs 12Proverbs 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Righteous people have plenty of food to eat.But wicked people have an empty stomach."
     }
   ],
   "14": [
     {
       "verse": "1",
-      "text": "Every wise woman makes her home strong. But a foolish woman destroys her home with her own hands."
+      "text": "Every wise woman makes her home strong.But a foolish woman destroys her home with her own hands. But a foolish woman destroys her home with her own hands."
     },
     {
       "verse": "2",
-      "text": "An honest person respects and obeys the Lord. But anyone who deceives other people shows that he does not respect the Lord."
+      "text": "An honest person respects and obeys the Lord.But anyone who deceives other people shows that he does not respect the Lord. But anyone who deceives other people shows that he does not respect the Lord."
     },
     {
       "verse": "3",
-      "text": "When fools boast, they bring punishment on themselves. But the words of wise people keep them safe."
+      "text": "When fools boast, they bring punishment on themselves.But the words of wise people keep them safe. But the words of wise people keep them safe."
     },
     {
       "verse": "4",
-      "text": "When a farmer has no oxen to plough his fields, he does not have to feed them. But he needs strong oxen to grow plenty of crops."
+      "text": "When a farmer has no oxen to plough his fields,he does not have to feed them.But he needs strong oxen to grow plenty of crops. he does not have to feed them. But he needs strong oxen to grow plenty of crops."
     },
     {
       "verse": "5",
-      "text": "A faithful person will not tell lies in court. But someone who says false things, always deceives."
+      "text": "A faithful person will not tell lies in court.But someone who says false things, always deceives. But someone who says false things, always deceives."
     },
     {
       "verse": "6",
-      "text": "If you only pretend that you want wisdom, you will not find it. But if you are careful, you will easily understand what is right."
+      "text": "If you only pretend that you want wisdom, you will not find it.But if you are careful, you will easily understand what is right. But if you are careful, you will easily understand what is right."
     },
     {
       "verse": "7",
-      "text": "Stay away from foolish people. They will stop you from learning anything that is wise."
+      "text": "Stay away from foolish people.They will stop you from learning anything that is wise. They will stop you from learning anything that is wise."
     },
     {
       "verse": "8",
-      "text": "A careful person understands what is right and he does it. But a foolish person's silly thoughts deceive him."
+      "text": "A careful person understands what is right and he does it.But a foolish person's silly thoughts deceive him. But a foolish person's silly thoughts deceive him."
     },
     {
       "verse": "9",
-      "text": "Fools think that they do not need to do anything about their sins. But God is pleased with people who do what is right."
+      "text": "Fools think that they do not need to do anything about their sins.But God is pleased with people who do what is right. But God is pleased with people who do what is right."
     },
     {
       "verse": "10",
-      "text": "When you are upset, you yourself know how sad you are. No one else can know what you are feeling, sad or happy."
+      "text": "When you are upset, you yourself know how sad you are.No one else can know what you are feeling, sad or happy. No one else can know what you are feeling, sad or happy."
     },
     {
       "verse": "11",
-      "text": "A wicked person's home will come to an end. But the home of a good person will continue to be strong."
+      "text": "A wicked person's home will come to an end.But the home of a good person will continue to be strong. But the home of a good person will continue to be strong."
     },
     {
       "verse": "12",
-      "text": "You may think that you are on a good, straight road. But in the end, that road may lead you to death."
+      "text": "You may think that you are on a good, straight road.But in the end, that road may lead you to death. But in the end, that road may lead you to death."
     },
     {
       "verse": "13",
-      "text": "Somebody may be upset, even when he is laughing. After his joy has gone, he will still be sad."
+      "text": "Somebody may be upset, even when he is laughing.After his joy has gone, he will still be sad. After his joy has gone, he will still be sad."
     },
     {
       "verse": "14",
-      "text": "If someone turns away from what is right, he will receive the punishment that he deserves. But good people will receive the good things that they deserve."
+      "text": "If someone turns away from what is right,he will receive the punishment that he deserves.But good people will receive the good things that they deserve. he will receive the punishment that he deserves. But good people will receive the good things that they deserve."
     },
     {
       "verse": "15",
-      "text": "A silly person will believe anything. But a careful person will think before he does anything."
+      "text": "A silly person will believe anything.But a careful person will think before he does anything. But a careful person will think before he does anything."
     },
     {
       "verse": "16",
-      "text": "A wise person is careful to keep away from trouble. But a fool is careless and he thinks that he is always right."
+      "text": "A wise person is careful to keep away from trouble.But a fool is careless and he thinks that he is always right. But a fool is careless and he thinks that he is always right."
     },
     {
       "verse": "17",
-      "text": "A person who quickly becomes angry does silly things. And people hate anyone with cruel ideas."
+      "text": "A person who quickly becomes angry does silly things.And people hate anyone with cruel ideas. And people hate anyone with cruel ideas."
     },
     {
       "verse": "18",
-      "text": "Silly people do foolish things, and they receive what they deserve. But wise people receive honour for their knowledge."
+      "text": "Silly people do foolish things, and they receive what they deserve.But wise people receive honour for their knowledge. But wise people receive honour for their knowledge."
     },
     {
       "verse": "19",
-      "text": "Evil people will respect good people. Wicked people will ask righteous people to be kind to them."
+      "text": "Evil people will respect good people.Wicked people will ask righteous people to be kind to them. Wicked people will ask righteous people to be kind to them."
     },
     {
       "verse": "20",
-      "text": "Even the neighbours of poor people do not like them. But rich people have many friends."
+      "text": "Even the neighbours of poor people do not like them.But rich people have many friends. But rich people have many friends."
     },
     {
       "verse": "21",
-      "text": "It is a sin if you do not respect your neighbour. But if you are kind to helpless people, God will bless you."
+      "text": "It is a sin if you do not respect your neighbour.But if you are kind to helpless people, God will bless you. But if you are kind to helpless people, God will bless you."
     },
     {
       "verse": "22",
-      "text": "People who want to do evil things have lost their way. But those who want to do good things show faithful love."
+      "text": "People who want to do evil things have lost their way.But those who want to do good things show faithful love. But those who want to do good things show faithful love."
     },
     {
       "verse": "23",
-      "text": "If you work hard, something good will come. But if you only talk about it, you will become poor."
+      "text": "If you work hard, something good will come.But if you only talk about it, you will become poor. But if you only talk about it, you will become poor."
     },
     {
       "verse": "24",
-      "text": "For wise people, their riches are like a crown of honour. But fools only work to get foolish things."
+      "text": "For wise people, their riches are like a crown of honour.But fools only work to get foolish things. But fools only work to get foolish things."
     },
     {
       "verse": "25",
-      "text": "Someone who speaks the truth in court may save a life. But someone who always tells lies deceives everyone."
+      "text": "Someone who speaks the truth in court may save a life.But someone who always tells lies deceives everyone. But someone who always tells lies deceives everyone."
     },
     {
       "verse": "26",
-      "text": "Someone who respects and obeys the Lord knows that he will be safe. His family also will be in a safe place."
+      "text": "Someone who respects and obeys the Lord knows that he will be safe.His family also will be in a safe place. His family also will be in a safe place."
     },
     {
       "verse": "27",
-      "text": "If you respect and obey the Lord, that is like a spring of water that gives you life. It will keep you safe from death's traps."
+      "text": "If you respect and obey the Lord,that is like a spring of water that gives you life.It will keep you safe from death's traps. that is like a spring of water that gives you life. It will keep you safe from death's traps."
     },
     {
       "verse": "28",
-      "text": "A king who rules many people will receive great honour. But a ruler with only a few people will have nothing in the end."
+      "text": "A king who rules many people will receive great honour.But a ruler with only a few people will have nothing in the end. But a ruler with only a few people will have nothing in the end."
     },
     {
       "verse": "29",
-      "text": "A patient man shows that he understands what is right. But someone who quickly becomes angry shows that he is foolish."
+      "text": "A patient man shows that he understands what is right.But someone who quickly becomes angry shows that he is foolish. But someone who quickly becomes angry shows that he is foolish."
     },
     {
       "verse": "30",
-      "text": "If you have peace in your mind, your body will be healthy. But if you are jealous, it will eat away your body."
+      "text": "If you have peace in your mind, your body will be healthy.But if you are jealous, it will eat away your body. But if you are jealous, it will eat away your body."
     },
     {
       "verse": "31",
-      "text": "If you are cruel to poor people, you are insulting God who created them. But if you are kind to helpless people, it shows that you respect God."
+      "text": "If you are cruel to poor people,you are insulting God who created them.But if you are kind to helpless people,it shows that you respect God. you are insulting God who created them. But if you are kind to helpless people, it shows that you respect God."
     },
     {
       "verse": "32",
-      "text": "When wicked people are in trouble, they cannot stand. But righteous people still trust God, even when they are in danger of death."
+      "text": "When wicked people are in trouble, they cannot stand.But righteous people still trust God,even when they are in danger of death. But righteous people still trust God, even when they are in danger of death."
     },
     {
       "verse": "33",
-      "text": "People who understand what is right have true wisdom. Even fools may sometimes show wisdom. Or: ‘Fools do not know anything about wisdom.’"
+      "text": "People who understand what is right have true wisdom.Even fools may sometimes show wisdom. Even fools may sometimes show wisdom."
     },
     {
       "verse": "34",
-      "text": "A nation will receive honour when its people do what is right. But sin will bring shame on its people."
+      "text": "A nation will receive honour when its people do what is right.But sin will bring shame on its people. But sin will bring shame on its people."
     },
     {
       "verse": "35",
-      "text": "A king will be pleased with a wise servant. But he will be angry with any servant who brings shame. Print... Use screen font size Show All Comments Proverbs 13Proverbs 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "A king will be pleased with a wise servant.But he will be angry with any servant who brings shame."
     }
   ],
   "15": [
     {
       "verse": "1",
-      "text": "If you answer people in a kind way, it stops them being angry. But if you say cruel things, it makes people angry."
+      "text": "If you answer people in a kind way, it stops them being angry.But if you say cruel things, it makes people angry. But if you say cruel things, it makes people angry."
     },
     {
       "verse": "2",
-      "text": "When wise people speak, they show that knowledge is good. But when fools speak, they only say foolish things."
+      "text": "When wise people speak, they show that knowledge is good.But when fools speak, they only say foolish things. But when fools speak, they only say foolish things."
     },
     {
       "verse": "3",
-      "text": "The Lord sees what happens everywhere. He is watching what evil people do, and good people too."
+      "text": "The Lord sees what happens everywhere.He is watching what evil people do, and good people too. He is watching what evil people do, and good people too."
     },
     {
       "verse": "4",
-      "text": "Kind words are like the fruit of a tree that gives life. But words that are not honest make people sad and weak."
+      "text": "Kind words are like the fruit of a tree that gives life.But words that are not honest make people sad and weak. But words that are not honest make people sad and weak."
     },
     {
       "verse": "5",
-      "text": "A fool hates his father's rules. But a wise child learns when his father warns him."
+      "text": "A fool hates his father's rules.But a wise child learns when his father warns him. But a wise child learns when his father warns him."
     },
     {
       "verse": "6",
-      "text": "Righteous people have many valuable things in their homes. But the riches of wicked people bring trouble to them."
+      "text": "Righteous people have many valuable things in their homes.But the riches of wicked people bring trouble to them. But the riches of wicked people bring trouble to them."
     },
     {
       "verse": "7",
-      "text": "When wise people speak, they give knowledge, but the minds of fools have nothing to give."
+      "text": "When wise people speak, they give knowledge,but the minds of fools have nothing to give. but the minds of fools have nothing to give."
     },
     {
       "verse": "8",
-      "text": "When wicked people offer sacrifices to the Lord, he hates it. But he is pleased when good people pray to him."
+      "text": "When wicked people offer sacrifices to the Lord, he hates it.But he is pleased when good people pray to him. But he is pleased when good people pray to him."
     },
     {
       "verse": "9",
-      "text": "The Lord hates the way that wicked people live. But he loves people who want to do what is right."
+      "text": "The Lord hates the way that wicked people live.But he loves people who want to do what is right. But he loves people who want to do what is right."
     },
     {
       "verse": "10",
-      "text": "If you leave God's way, you will receive strong punishment. When people warn you, accept it or you will die."
+      "text": "If you leave God's way, you will receive strong punishment.When people warn you, accept it or you will die. When people warn you, accept it or you will die."
     },
     {
       "verse": "11",
-      "text": "The Lord sees clearly into the deep hole of death. So you can be sure that he knows people's secret thoughts."
+      "text": "The Lord sees clearly into the deep hole of death.So you can be sure that he knows people's secret thoughts. So you can be sure that he knows people's secret thoughts."
     },
     {
       "verse": "12",
-      "text": "Proud people do not like it when someone warns them. They will not ask wise people to give them advice."
+      "text": "Proud people do not like it when someone warns them.They will not ask wise people to give them advice. They will not ask wise people to give them advice."
     },
     {
       "verse": "13",
-      "text": "When someone is happy, their face smiles. But when someone is sad, their spirit hurts."
+      "text": "When someone is happy, their face smiles.But when someone is sad, their spirit hurts. But when someone is sad, their spirit hurts."
     },
     {
       "verse": "14",
-      "text": "Wise people want to learn more. But fools only want to know useless things."
+      "text": "Wise people want to learn more.But fools only want to know useless things. But fools only want to know useless things."
     },
     {
       "verse": "15",
-      "text": "Every day is difficult, if you have trouble in your mind. But if you are happy, every day is like a feast."
+      "text": "Every day is difficult, if you have trouble in your mind.But if you are happy, every day is like a feast. But if you are happy, every day is like a feast."
     },
     {
       "verse": "16",
-      "text": "You may be poor, but you respect and obey the Lord. That is better than if you are very rich, but you have a lot of trouble."
+      "text": "You may be poor, but you respect and obey the Lord.That is better than if you are very rich, but you have a lot of trouble. That is better than if you are very rich, but you have a lot of trouble."
     },
     {
       "verse": "17",
-      "text": "It is better to eat vegetables with people who love each other than to eat good meat with people who hate each other."
+      "text": "It is better to eat vegetables with people who love each otherthan to eat good meat with people who hate each other. than to eat good meat with people who hate each other."
     },
     {
       "verse": "18",
-      "text": "Angry people bring quarrels, but patient people bring peace."
+      "text": "Angry people bring quarrels,but patient people bring peace. but patient people bring peace."
     },
     {
       "verse": "19",
-      "text": "A lazy person always has problems, as if he is walking through thorn bushes. But an honest person walks on a straight road through life."
+      "text": "A lazy person always has problems,as if he is walking through thorn bushes.But an honest person walks on a straight road through life. as if he is walking through thorn bushes. But an honest person walks on a straight road through life."
     },
     {
       "verse": "20",
-      "text": "A wise child makes his father happy. But a foolish person does not respect his mother."
+      "text": "A wise child makes his father happy.But a foolish person does not respect his mother. But a foolish person does not respect his mother."
     },
     {
       "verse": "21",
-      "text": "Stupid people are happy when they do foolish things. But wise people walk on a straight path."
+      "text": "Stupid people are happy when they do foolish things.But wise people walk on a straight path. But wise people walk on a straight path."
     },
     {
       "verse": "22",
-      "text": "Without good advice, your ideas will never happen. But you will do well if you have many advisors."
+      "text": "Without good advice, your ideas will never happen.But you will do well if you have many advisors. But you will do well if you have many advisors."
     },
     {
       "verse": "23",
-      "text": "It makes you happy when you give a good answer to a question. It is good when you find the right thing to say at the right time."
+      "text": "It makes you happy when you give a good answer to a question.It is good when you find the right thing to say at the right time. It is good when you find the right thing to say at the right time."
     },
     {
       "verse": "24",
-      "text": "A wise person walks on a path that leads him up to a long life. He keeps away from the path that would lead him down to death."
+      "text": "A wise person walks on a path that leads him up to a long life.He keeps away from the path that would lead him down to death. He keeps away from the path that would lead him down to death."
     },
     {
       "verse": "25",
-      "text": "The Lord destroys the homes of proud men. But he keeps the land of widows safe."
+      "text": "The Lord destroys the homes of proud men.But he keeps the land of widows safe. But he keeps the land of widows safe."
     },
     {
       "verse": "26",
-      "text": "The Lord hates the thoughts of wicked people. But kind words please him."
+      "text": "The Lord hates the thoughts of wicked people.But kind words please him. But kind words please him."
     },
     {
       "verse": "27",
-      "text": "Anyone who cheats people to become rich will cause trouble for his family. But anyone who refuses to accept bribes will live safely."
+      "text": "Anyone who cheats people to become richwill cause trouble for his family.But anyone who refuses to accept bribeswill live safely. will cause trouble for his family. But anyone who refuses to accept bribes will live safely."
     },
     {
       "verse": "28",
-      "text": "Righteous people think carefully before they answer someone. But when wicked people speak, the result is only trouble."
+      "text": "Righteous people think carefully before they answer someone.But when wicked people speak, the result is only trouble. But when wicked people speak, the result is only trouble."
     },
     {
       "verse": "29",
-      "text": "The Lord does not answer the prayers of wicked people. But when righteous people pray, he listens."
+      "text": "The Lord does not answer the prayers of wicked people.But when righteous people pray, he listens. But when righteous people pray, he listens."
     },
     {
       "verse": "30",
-      "text": "If someone smiles at you, it makes you happy. Good news makes you feel strong."
+      "text": "If someone smiles at you, it makes you happy.Good news makes you feel strong. Good news makes you feel strong."
     },
     {
       "verse": "31",
-      "text": "If anyone accepts teaching that helps him to live in a good way, he becomes a friend of wise people."
+      "text": "If anyone accepts teaching that helps him to live in a good way,he becomes a friend of wise people. he becomes a friend of wise people."
     },
     {
       "verse": "32",
-      "text": "If you refuse to accept it when people warn you, you are hurting yourself. But if you agree to listen, you will learn to do what is right."
+      "text": "If you refuse to accept it when people warn you,you are hurting yourself.But if you agree to listen,you will learn to do what is right. you are hurting yourself. But if you agree to listen, you will learn to do what is right."
     },
     {
       "verse": "33",
-      "text": "If you respect and obey the Lord, that will teach you wisdom. If you want to receive honour, first learn to be humble. Print... Use screen font size Show All Comments Proverbs 14Proverbs 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you respect and obey the Lord,that will teach you wisdom.If you want to receive honour,first learn to be humble."
     }
   ],
   "16": [
     {
       "verse": "1",
-      "text": "People make plans in their minds, but the Lord gives them the right words to say."
+      "text": "People make plans in their minds,but the Lord gives them the right words to say. but the Lord gives them the right words to say."
     },
     {
       "verse": "2",
-      "text": "You may think that everything you do is right, but the Lord knows exactly why you are doing it."
+      "text": "You may think that everything you do is right,but the Lord knows exactly why you are doing it. but the Lord knows exactly why you are doing it."
     },
     {
       "verse": "3",
-      "text": "Put your plans in front of the Lord, so that what you want to do will go well."
+      "text": "Put your plans in front of the Lord,so that what you want to do will go well. so that what you want to do will go well."
     },
     {
       "verse": "4",
-      "text": "The Lord causes everything to have its proper result. Even wicked people will come to bad trouble in the end."
+      "text": "The Lord causes everything to have its proper result.Even wicked people will come to bad trouble in the end. Even wicked people will come to bad trouble in the end."
     },
     {
       "verse": "5",
-      "text": "The Lord hates everyone who boasts. Be sure of this: They will receive the punishment that they deserve."
+      "text": "The Lord hates everyone who boasts.Be sure of this: They will receive the punishment that they deserve. Be sure of this: They will receive the punishment that they deserve."
     },
     {
       "verse": "6",
-      "text": "If you love the Lord faithfully, he will forgive your sins. If you respect and obey him, you will not do evil things."
+      "text": "If you love the Lord faithfully,he will forgive your sins.If you respect and obey him,you will not do evil things. he will forgive your sins. If you respect and obey him, you will not do evil things."
     },
     {
       "verse": "7",
-      "text": "If you live in a way that pleases the Lord, even your enemies will become your friends."
+      "text": "If you live in a way that pleases the Lord,even your enemies will become your friends. even your enemies will become your friends."
     },
     {
       "verse": "8",
-      "text": "If you do what is right but you are not rich, that is better than to be rich because you cheat people."
+      "text": "If you do what is right but you are not rich,that is better than to be rich because you cheat people. that is better than to be rich because you cheat people."
     },
     {
       "verse": "9",
-      "text": "People make plans for what they will do, but it is the Lord who leads them in the right way."
+      "text": "People make plans for what they will do,but it is the Lord who leads them in the right way. but it is the Lord who leads them in the right way."
     },
     {
       "verse": "10",
-      "text": "A king speaks with God's authority. He must judge people in a fair way."
+      "text": "A king speaks with God's authority.He must judge people in a fair way. He must judge people in a fair way."
     },
     {
       "verse": "11",
-      "text": "The Lord wants people to use true weights and measures. He knows all the weights that a trader uses."
+      "text": "The Lord wants people to use true weights and measures.He knows all the weights that a trader uses. He knows all the weights that a trader uses."
     },
     {
       "verse": "12",
-      "text": "Kings hate all wicked acts, because justice makes their government strong."
+      "text": "Kings hate all wicked acts,because justice makes their government strong. because justice makes their government strong."
     },
     {
       "verse": "13",
-      "text": "Kings are happy to hear honest advice. They love people who speak true words."
+      "text": "Kings are happy to hear honest advice.They love people who speak true words. They love people who speak true words."
     },
     {
       "verse": "14",
-      "text": "Someone may die if the king becomes angry with him. So a wise person will try to stop the king's anger."
+      "text": "Someone may die if the king becomes angry with him.So a wise person will try to stop the king's anger. So a wise person will try to stop the king's anger."
     },
     {
       "verse": "15",
-      "text": "If the king smiles at you, your life will go well. If he is pleased with you, that is like a cloud which gives rain in the spring."
+      "text": "If the king smiles at you, your life will go well.If he is pleased with you, that is like a cloud which gives rain in the spring. If he is pleased with you, that is like a cloud which gives rain in the spring."
     },
     {
       "verse": "16",
-      "text": "It is better to have wisdom than gold or silver. You should want to understand what is right."
+      "text": "It is better to have wisdom than gold or silver.You should want to understand what is right. You should want to understand what is right."
     },
     {
       "verse": "17",
-      "text": "Honest people follow a straight road that keeps them away from evil things. If you want to keep your life safe, watch where you are going."
+      "text": "Honest people follow a straight road that keeps them away from evil things.If you want to keep your life safe, watch where you are going. If you want to keep your life safe, watch where you are going."
     },
     {
       "verse": "18",
-      "text": "If you are proud, you will soon come to an end. Anyone who boasts will soon fall down."
+      "text": "If you are proud, you will soon come to an end.Anyone who boasts will soon fall down. Anyone who boasts will soon fall down."
     },
     {
       "verse": "19",
-      "text": "You may be humble and have poor people as your friends. But that is better than if you have proud friends who give you things that they have robbed from others."
+      "text": "You may be humble and have poor people as your friends.But that is better than if you have proud friendswho give you things that they have robbed from others. But that is better than if you have proud friends who give you things that they have robbed from others."
     },
     {
       "verse": "20",
-      "text": "If you listen carefully to good teaching, you will do well. If you trust in the Lord, you are in a happy place."
+      "text": "If you listen carefully to good teaching, you will do well.If you trust in the Lord, you are in a happy place. If you trust in the Lord, you are in a happy place."
     },
     {
       "verse": "21",
-      "text": "If you have wise thoughts, people will say that you know what is right. If you speak kind words, people will accept your teaching."
+      "text": "If you have wise thoughts,people will say that you know what is right.If you speak kind words,people will accept your teaching. people will say that you know what is right. If you speak kind words, people will accept your teaching."
     },
     {
       "verse": "22",
-      "text": "Wisdom is like a spring of fresh water that gives life to those who have it. But the silly things that fools do brings them punishment."
+      "text": "Wisdom is like a spring of fresh water that gives life to those who have it.But the silly things that fools do brings them punishment. But the silly things that fools do brings them punishment."
     },
     {
       "verse": "23",
-      "text": "Wise people think carefully and they speak wise words. Then other people will accept their teaching."
+      "text": "Wise people think carefully and they speak wise words.Then other people will accept their teaching. Then other people will accept their teaching."
     },
     {
       "verse": "24",
-      "text": "Kind words are as sweet as honey. They also bring health and strength."
+      "text": "Kind words are as sweet as honey.They also bring health and strength. They also bring health and strength."
     },
     {
       "verse": "25",
-      "text": "You may think that you are on a good, straight road. But in the end, that road may lead you to death."
+      "text": "You may think that you are on a good, straight road.But in the end, that road may lead you to death. But in the end, that road may lead you to death."
     },
     {
       "verse": "26",
-      "text": "When a worker feels hungry, it causes him to work more. So it helps him to get food to eat."
+      "text": "When a worker feels hungry, it causes him to work more.So it helps him to get food to eat. So it helps him to get food to eat."
     },
     {
       "verse": "27",
-      "text": "Wicked people look for ways to hurt other people. The cruel things that they say are like flames of fire."
+      "text": "Wicked people look for ways to hurt other people.The cruel things that they say are like flames of fire. The cruel things that they say are like flames of fire."
     },
     {
       "verse": "28",
-      "text": "People who tell lies cause arguments. If you tell people's secrets, you will lose all your friends."
+      "text": "People who tell lies cause arguments.If you tell people's secrets, you will lose all your friends. If you tell people's secrets, you will lose all your friends."
     },
     {
       "verse": "29",
-      "text": "Violent people deceive their friends. They lead their friends to do wrong things."
+      "text": "Violent people deceive their friends.They lead their friends to do wrong things. They lead their friends to do wrong things."
     },
     {
       "verse": "30",
-      "text": "If someone sends secret messages with his eyes, he has a plan to hurt someone. If he squeezes his lips together, he is ready to do an evil thing."
+      "text": "If someone sends secret messages with his eyes,he has a plan to hurt someone.If he squeezes his lips together,he is ready to do an evil thing. he has a plan to hurt someone. If he squeezes his lips together, he is ready to do an evil thing."
     },
     {
       "verse": "31",
-      "text": "Grey hair is like a beautiful crown on your head! People who live in a righteous way may wear it."
+      "text": "Grey hair is like a beautiful crown on your head!People who live in a righteous way may wear it. People who live in a righteous way may wear it."
     },
     {
       "verse": "32",
-      "text": "A person who is patient is better than a brave soldier. If you can control your anger, you can win any battle."
+      "text": "A person who is patient is better than a brave soldier.If you can control your anger, you can win any battle. If you can control your anger, you can win any battle."
     },
     {
       "verse": "33",
-      "text": "People throw dice to choose what is right. But it is the Lord who decides the answer. Print... Use screen font size Show All Comments Proverbs 15Proverbs 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People throw dice to choose what is right.But it is the Lord who decides the answer."
     }
   ],
   "17": [
     {
       "verse": "1",
-      "text": "It is better to eat a piece of dry bread in a quiet place, than to eat a big feast in a house full of arguments."
+      "text": "It is better to eat a piece of dry bread in a quiet place,than to eat a big feast in a house full of arguments. than to eat a big feast in a house full of arguments."
     },
     {
       "verse": "2",
-      "text": "A slave who is wise will have authority over a son who does stupid things. When his master dies, that slave will receive some of his valuable things."
+      "text": "A slave who is wise will have authority over a son who does stupid things.When his master dies, that slave will receive some of his valuable things. When his master dies, that slave will receive some of his valuable things."
     },
     {
       "verse": "3",
-      "text": "You need a hot fire to make silver and gold become pure. It is the Lord who does that for people, to show what they are really like."
+      "text": "You need a hot fire to make silver and gold become pure.It is the Lord who does that for people,to show what they are really like. It is the Lord who does that for people, to show what they are really like."
     },
     {
       "verse": "4",
-      "text": "People who do evil things listen to evil advice. People who tell lies listen to other people's lies."
+      "text": "People who do evil things listen to evil advice.People who tell lies listen to other people's lies. People who tell lies listen to other people's lies."
     },
     {
       "verse": "5",
-      "text": "If you laugh at poor people, you are insulting God, who made them. If you are happy when trouble happens to other people, you will receive the punishment that you deserve."
+      "text": "If you laugh at poor people,you are insulting God, who made them.If you are happy when trouble happens to other people,you will receive the punishment that you deserve. you are insulting God, who made them. If you are happy when trouble happens to other people, you will receive the punishment that you deserve."
     },
     {
       "verse": "6",
-      "text": "Old people should be proud of their grandchildren. In the same way, children should be proud of their parents."
+      "text": "Old people should be proud of their grandchildren.In the same way, children should be proud of their parents. In the same way, children should be proud of their parents."
     },
     {
       "verse": "7",
-      "text": "It does not seem right when a fool says clever things. It is certainly not right when a ruler tells lies."
+      "text": "It does not seem right when a fool says clever things.It is certainly not right when a ruler tells lies. It is certainly not right when a ruler tells lies."
     },
     {
       "verse": "8",
-      "text": "Somebody who offers a bribe thinks that it will work like magic. It will help him to do whatever he wants to do."
+      "text": "Somebody who offers a bribe thinks that it will work like magic.It will help him to do whatever he wants to do. It will help him to do whatever he wants to do."
     },
     {
       "verse": "9",
-      "text": "If you forgive people when they hurt you, they will still love you. But if you continue to talk about what they have done, they will no longer be your friends."
+      "text": "If you forgive people when they hurt you,they will still love you.But if you continue to talk about what they have done,they will no longer be your friends. they will still love you. But if you continue to talk about what they have done, they will no longer be your friends."
     },
     {
       "verse": "10",
-      "text": "You can warn a wise person once and he will learn what is right. But a fool never learns, even if you hit him a hundred times."
+      "text": "You can warn a wise person once and he will learn what is right.But a fool never learns, even if you hit him a hundred times. But a fool never learns, even if you hit him a hundred times."
     },
     {
       "verse": "11",
-      "text": "An evil person never obeys authority, so a cruel messenger will come to punish him."
+      "text": "An evil person never obeys authority,so a cruel messenger will come to punish him. so a cruel messenger will come to punish him."
     },
     {
       "verse": "12",
-      "text": "Do not go near a fool who is doing stupid things. It would be safer to meet a mother bear who has lost her babies."
+      "text": "Do not go near a fool who is doing stupid things.It would be safer to meet a mother bear who has lost her babies. It would be safer to meet a mother bear who has lost her babies."
     },
     {
       "verse": "13",
-      "text": "If people are kind to you, do not do evil things in return. Anyone who does that will always have trouble in his home."
+      "text": "If people are kind to you, do not do evil things in return.Anyone who does that will always have trouble in his home. Anyone who does that will always have trouble in his home."
     },
     {
       "verse": "14",
-      "text": "It is difficult to stop a quarrel once it has started. It is like water that pours out of a broken pot. Stop it quickly!"
+      "text": "It is difficult to stop a quarrel once it has started.It is like water that pours out of a broken pot. Stop it quickly! It is like water that pours out of a broken pot. Stop it quickly!"
     },
     {
       "verse": "15",
-      "text": "If a judge says that a guilty person is not guilty, the Lord hates it. If a judge punishes someone who is not guilty, the Lord hates that too."
+      "text": "If a judge says that a guilty person is not guilty,the Lord hates it.If a judge punishes someone who is not guilty,the Lord hates that too. the Lord hates it. If a judge punishes someone who is not guilty, the Lord hates that too."
     },
     {
       "verse": "16",
-      "text": "Money does not help a foolish person, because he does not want to become wise."
+      "text": "Money does not help a foolish person,because he does not want to become wise. because he does not want to become wise."
     },
     {
       "verse": "17",
-      "text": "A friend will always show that he loves you. Relatives are there to help you when you are in trouble."
+      "text": "A friend will always show that he loves you.Relatives are there to help you when you are in trouble. Relatives are there to help you when you are in trouble."
     },
     {
       "verse": "18",
-      "text": "Only a stupid person promises to pay someone else's debts, even if he is a friend or a neighbour."
+      "text": "Only a stupid person promises to pay someone else's debts,even if he is a friend or a neighbour. even if he is a friend or a neighbour."
     },
     {
       "verse": "19",
-      "text": "Someone who loves to argue loves sin. Someone who boasts causes trouble for himself."
+      "text": "Someone who loves to argue loves sin.Someone who boasts causes trouble for himself. Someone who boasts causes trouble for himself."
     },
     {
       "verse": "20",
-      "text": "Anyone who thinks about bad things will not do well in life. Anyone who deceives people with lies will have a lot of trouble."
+      "text": "Anyone who thinks about bad things will not do well in life.Anyone who deceives people with lies will have a lot of trouble. Anyone who deceives people with lies will have a lot of trouble."
     },
     {
       "verse": "21",
-      "text": "To have a foolish son makes parents sad. The father of a fool is never happy."
+      "text": "To have a foolish son makes parents sad.The father of a fool is never happy. The father of a fool is never happy."
     },
     {
       "verse": "22",
-      "text": "If you are happy in life, you will be healthy. But if you are sad and upset, your body will be weak."
+      "text": "If you are happy in life, you will be healthy.But if you are sad and upset, your body will be weak. But if you are sad and upset, your body will be weak."
     },
     {
       "verse": "23",
-      "text": "Wicked judges secretly accept bribes. Then they are not fair when they judge."
+      "text": "Wicked judges secretly accept bribes.Then they are not fair when they judge. Then they are not fair when they judge."
     },
     {
       "verse": "24",
-      "text": "A person who knows what is right can easily find wisdom. But a foolish person looks everywhere and never finds it."
+      "text": "A person who knows what is right can easily find wisdom.But a foolish person looks everywhere and never finds it. But a foolish person looks everywhere and never finds it."
     },
     {
       "verse": "25",
-      "text": "To have a foolish son makes his father sad. It makes his mother very upset."
+      "text": "To have a foolish son makes his father sad.It makes his mother very upset. It makes his mother very upset."
     },
     {
       "verse": "26",
-      "text": "It is not right to punish a person who has done nothing wrong. It is wrong to beat honest people with sticks."
+      "text": "It is not right to punish a person who has done nothing wrong.It is wrong to beat honest people with sticks. It is wrong to beat honest people with sticks."
     },
     {
       "verse": "27",
-      "text": "A wise person does not talk too much. Anyone who keeps quiet shows that he understands things."
+      "text": "A wise person does not talk too much.Anyone who keeps quiet shows that he understands things. Anyone who keeps quiet shows that he understands things."
     },
     {
       "verse": "28",
-      "text": "Even a fool seems to be wise if he keeps quiet. If he keeps his mouth shut, people will think that he is clever. Print... Use screen font size Show All Comments Proverbs 16Proverbs 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Even a fool seems to be wise if he keeps quiet.If he keeps his mouth shut, people will think that he is clever."
     }
   ],
   "18": [
     {
       "verse": "1",
-      "text": "People who do not have any friends think only about themselves. They refuse to listen to good advice."
+      "text": "People who do not have any friends think only about themselves.They refuse to listen to good advice. They refuse to listen to good advice."
     },
     {
       "verse": "2",
-      "text": "A fool does not try to understand what is right. He only likes to tell people his own ideas."
+      "text": "A fool does not try to understand what is right.He only likes to tell people his own ideas. He only likes to tell people his own ideas."
     },
     {
       "verse": "3",
-      "text": "When a wicked person arrives, shame comes with him. And shame causes people to speak against you."
+      "text": "When a wicked person arrives, shame comes with him.And shame causes people to speak against you. And shame causes people to speak against you."
     },
     {
       "verse": "4",
-      "text": "The words that you speak are like the deep water of the sea. If they are wise words, they are like a cool stream."
+      "text": "The words that you speak are like the deep water of the sea.If they are wise words, they are like a cool stream. If they are wise words, they are like a cool stream."
     },
     {
       "verse": "5",
-      "text": "Do not refuse to punish wicked people. That would not be good. Also, do not punish anyone who has not done anything wrong."
+      "text": "Do not refuse to punish wicked people. That would not be good.Also, do not punish anyone who has not done anything wrong. Also, do not punish anyone who has not done anything wrong."
     },
     {
       "verse": "6",
-      "text": "When a fool speaks, he starts an argument. He is asking for someone to beat him with a stick."
+      "text": "When a fool speaks, he starts an argument.He is asking for someone to beat him with a stick. He is asking for someone to beat him with a stick."
     },
     {
       "verse": "7",
-      "text": "When a fool speaks, he is destroying himself. His own words are a trap that catches him."
+      "text": "When a fool speaks, he is destroying himself.His own words are a trap that catches him. His own words are a trap that catches him."
     },
     {
       "verse": "8",
-      "text": "We love to hear other people's secrets. They seem like good food that we can enjoy."
+      "text": "We love to hear other people's secrets.They seem like good food that we can enjoy. They seem like good food that we can enjoy."
     },
     {
       "verse": "9",
@@ -2072,23 +2072,23 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The name of the Lord is like a strong tower. Righteous people can run there, and then they will be safe."
+      "text": "The name of the Lord is like a strong tower.Righteous people can run there, and then they will be safe. Righteous people can run there, and then they will be safe."
     },
     {
       "verse": "11",
-      "text": "Rich people think that their money makes them safe, like high, strong walls round a city."
+      "text": "Rich people think that their money makes them safe,like high, strong walls round a city. like high, strong walls round a city."
     },
     {
       "verse": "12",
-      "text": "If you become proud, something will soon destroy you. But if you are humble, you will soon receive honour."
+      "text": "If you become proud, something will soon destroy you.But if you are humble, you will soon receive honour. But if you are humble, you will soon receive honour."
     },
     {
       "verse": "13",
-      "text": "Listen carefully before you answer. If you answer too quickly, you will be ashamed like a fool."
+      "text": "Listen carefully before you answer.If you answer too quickly, you will be ashamed like a fool. If you answer too quickly, you will be ashamed like a fool."
     },
     {
       "verse": "14",
-      "text": "When someone is ill, his spirit will keep him strong. But if his spirit has lost hope, he cannot stay strong."
+      "text": "When someone is ill, his spirit will keep him strong.But if his spirit has lost hope, he cannot stay strong. But if his spirit has lost hope, he cannot stay strong."
     },
     {
       "verse": "15",
@@ -2096,471 +2096,471 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "A gift will give you a chance to meet new people. Important people may become your friends."
+      "text": "A gift will give you a chance to meet new people.Important people may become your friends. Important people may become your friends."
     },
     {
       "verse": "17",
-      "text": "You will always believe the first person to speak in court, until the other person starts to ask him questions."
+      "text": "You will always believe the first person to speak in court,until the other person starts to ask him questions. until the other person starts to ask him questions."
     },
     {
       "verse": "18",
-      "text": "If two powerful people have an argument, you may have to throw dice to decide who is right."
+      "text": "If two powerful people have an argument,you may have to throw dice to decide who is right. you may have to throw dice to decide who is right."
     },
     {
       "verse": "19",
-      "text": "If you insult a relative, it will be difficult to become friends with him again. Arguments keep people apart, like the walls of a strong city."
+      "text": "If you insult a relative,it will be difficult to become friends with him again.Arguments keep people apart,like the walls of a strong city. it will be difficult to become friends with him again. Arguments keep people apart, like the walls of a strong city."
     },
     {
       "verse": "20",
-      "text": "If you speak words that help people, they are like good food."
+      "text": "If you speak words that help people,they are like good food. they are like good food."
     },
     {
       "verse": "21",
-      "text": "Words have the power to bring life or death. So be careful if you talk a lot!"
+      "text": "Words have the power to bring life or death.So be careful if you talk a lot! So be careful if you talk a lot!"
     },
     {
       "verse": "22",
-      "text": "If you find a wife, you find a good thing. The Lord has given you something to enjoy."
+      "text": "If you find a wife, you find a good thing.The Lord has given you something to enjoy. The Lord has given you something to enjoy."
     },
     {
       "verse": "23",
-      "text": "A poor person has to ask for help. But a rich person can insult people."
+      "text": "A poor person has to ask for help.But a rich person can insult people. But a rich person can insult people."
     },
     {
       "verse": "24",
-      "text": "A man with many friends may lose them. But there is a friend who is more faithful than a brother. Print... Use screen font size Show All Comments Proverbs 17Proverbs 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "A man with many friends may lose them.But there is a friend who is more faithful than a brother."
     }
   ],
   "19": [
     {
       "verse": "1",
-      "text": "It is better to be poor and honest, than to be a fool who speaks lies."
+      "text": "It is better to be poor and honest,than to be a fool who speaks lies. than to be a fool who speaks lies."
     },
     {
       "verse": "2",
-      "text": "If you want to do something but you do not know how to do it, that is dangerous! If you hurry to do it, you will get into trouble."
+      "text": "If you want to do something but you do not know how to do it,that is dangerous!If you hurry to do it, you will get into trouble. that is dangerous! If you hurry to do it, you will get into trouble."
     },
     {
       "verse": "3",
-      "text": "Some people do silly things and so they destroy themselves. Then they get angry with the Lord."
+      "text": "Some people do silly things and so they destroy themselves.Then they get angry with the Lord. Then they get angry with the Lord."
     },
     {
       "verse": "4",
-      "text": "Rich people can easily find new friends. But poor people will easily lose their friends."
+      "text": "Rich people can easily find new friends.But poor people will easily lose their friends. But poor people will easily lose their friends."
     },
     {
       "verse": "5",
-      "text": "If you tell lies in court, the judge will certainly punish you. You will not go free!"
+      "text": "If you tell lies in court, the judge will certainly punish you.You will not go free! You will not go free!"
     },
     {
       "verse": "6",
-      "text": "Many people want an important person to like them. Everyone wants to be the friend of someone who gives lots of gifts."
+      "text": "Many people want an important person to like them.Everyone wants to be the friend of someone who gives lots of gifts. Everyone wants to be the friend of someone who gives lots of gifts."
     },
     {
       "verse": "7",
-      "text": "If someone is poor, all his family hate him. His friends stay away from him. Even if he goes to ask them for help, he cannot find them anywhere."
+      "text": "If someone is poor, all his family hate him.His friends stay away from him.Even if he goes to ask them for help,he cannot find them anywhere. His friends stay away from him. Even if he goes to ask them for help, he cannot find them anywhere."
     },
     {
       "verse": "8",
-      "text": "If you learn to be wise, it shows that you love yourself. If you understand what is right, you will do well."
+      "text": "If you learn to be wise,it shows that you love yourself.If you understand what is right,you will do well. it shows that you love yourself. If you understand what is right, you will do well."
     },
     {
       "verse": "9",
-      "text": "If you tell lies in court, the judge will certainly punish you. That will be the end of you!"
+      "text": "If you tell lies in court, the judge will certainly punish you.That will be the end of you! That will be the end of you!"
     },
     {
       "verse": "10",
-      "text": "Fools should not live like rich people. Even worse, slaves should never have authority over rulers."
+      "text": "Fools should not live like rich people.Even worse, slaves should never have authority over rulers. Even worse, slaves should never have authority over rulers."
     },
     {
       "verse": "11",
-      "text": "If someone is wise, he controls his anger. When anyone hurts him, he is careful to forget it."
+      "text": "If someone is wise, he controls his anger.When anyone hurts him, he is careful to forget it. When anyone hurts him, he is careful to forget it."
     },
     {
       "verse": "12",
-      "text": "When the king is angry, he makes people afraid, like a lion that roars. But when he is pleased with you, that is like dew on fresh grass."
+      "text": "When the king is angry, he makes people afraid,like a lion that roars.But when he is pleased with you,that is like dew on fresh grass. like a lion that roars. But when he is pleased with you, that is like dew on fresh grass."
     },
     {
       "verse": "13",
-      "text": "A foolish child will destroy his father. A woman who quarrels with her husband is like rain that never stops."
+      "text": "A foolish child will destroy his father.A woman who quarrels with her husband is like rain that never stops. A woman who quarrels with her husband is like rain that never stops."
     },
     {
       "verse": "14",
-      "text": "Your parents may give you riches and a house to live in. But only the Lord can give you a wise wife."
+      "text": "Your parents may give you riches and a house to live in.But only the Lord can give you a wise wife. But only the Lord can give you a wise wife."
     },
     {
       "verse": "15",
-      "text": "A lazy person cannot wake up from sleep. If he does no work, he will always be hungry."
+      "text": "A lazy person cannot wake up from sleep.If he does no work, he will always be hungry. If he does no work, he will always be hungry."
     },
     {
       "verse": "16",
-      "text": "If you obey God's commands, you will keep your life safe. If you do not respect his teaching, you will die."
+      "text": "If you obey God's commands, you will keep your life safe.If you do not respect his teaching, you will die. If you do not respect his teaching, you will die."
     },
     {
       "verse": "17",
-      "text": "If you are kind to poor people, you are lending money to the Lord. He will pay back the debt to you."
+      "text": "If you are kind to poor people, you are lending money to the Lord.He will pay back the debt to you. He will pay back the debt to you."
     },
     {
       "verse": "18",
-      "text": "When your children do wrong things, warn them while you still have the chance. If you do not punish them, you are helping them to go to an early death."
+      "text": "When your children do wrong things,warn them while you still have the chance.If you do not punish them,you are helping them to go to an early death. warn them while you still have the chance. If you do not punish them, you are helping them to go to an early death."
     },
     {
       "verse": "19",
-      "text": "Anyone who cannot control his anger is always getting into trouble. If you try to help him once, you will have to do it every time."
+      "text": "Anyone who cannot control his anger is always getting into trouble.If you try to help him once, you will have to do it every time. If you try to help him once, you will have to do it every time."
     },
     {
       "verse": "20",
-      "text": "Accept advice and good teaching. Then you will become wise one day."
+      "text": "Accept advice and good teaching.Then you will become wise one day. Then you will become wise one day."
     },
     {
       "verse": "21",
-      "text": "You may have lots of ideas about what you want to do. But it is the Lord's plans that are important."
+      "text": "You may have lots of ideas about what you want to do.But it is the Lord's plans that are important. But it is the Lord's plans that are important."
     },
     {
       "verse": "22",
-      "text": "We all want other people to show faithful love. It is better to be poor than to deceive other people."
+      "text": "We all want other people to show faithful love.It is better to be poor than to deceive other people. It is better to be poor than to deceive other people."
     },
     {
       "verse": "23",
-      "text": "If you respect and obey the Lord, you will enjoy life. You will have peace in your mind and no trouble will destroy you."
+      "text": "If you respect and obey the Lord,you will enjoy life.You will have peace in your mindand no trouble will destroy you. you will enjoy life. You will have peace in your mind and no trouble will destroy you."
     },
     {
       "verse": "24",
-      "text": "A lazy person pushes his hand into his bowl of food. But then he is too lazy to lift his hand up to his mouth."
+      "text": "A lazy person pushes his hand into his bowl of food.But then he is too lazy to lift his hand up to his mouth. But then he is too lazy to lift his hand up to his mouth."
     },
     {
       "verse": "25",
-      "text": "If you beat a proud fool, a silly person may learn to be careful. If you warn a wise person, he himself will learn a lesson."
+      "text": "If you beat a proud fool,a silly person may learn to be careful.If you warn a wise person,he himself will learn a lesson. a silly person may learn to be careful. If you warn a wise person, he himself will learn a lesson."
     },
     {
       "verse": "26",
-      "text": "Anyone who robs his father or chases away his mother is a bad son who brings shame to his family."
+      "text": "Anyone who robs his father or chases away his motheris a bad son who brings shame to his family. is a bad son who brings shame to his family."
     },
     {
       "verse": "27",
-      "text": "My child, never stop learning about what is right. If you stop learning, you will soon forget what you already know."
+      "text": "My child, never stop learning about what is right.If you stop learning, you will soon forget what you already know. If you stop learning, you will soon forget what you already know."
     },
     {
       "verse": "28",
-      "text": "If someone tells lies in court, he is laughing at justice. Evil things are food that wicked people love to eat."
+      "text": "If someone tells lies in court, he is laughing at justice.Evil things are food that wicked people love to eat. Evil things are food that wicked people love to eat."
     },
     {
       "verse": "29",
-      "text": "People who laugh at what is right will receive their punishment. Fools will be beaten, as they deserve. Print... Use screen font size Show All Comments Proverbs 18Proverbs 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "People who laugh at what is right will receive their punishment.Fools will be beaten, as they deserve."
     }
   ],
   "20": [
     {
       "verse": "1",
-      "text": "If you drink too much wine or strong drink, you do stupid things and you fight. It is not wise to become drunk."
+      "text": "If you drink too much wine or strong drink,you do stupid things and you fight.It is not wise to become drunk. you do stupid things and you fight. It is not wise to become drunk."
     },
     {
       "verse": "2",
-      "text": "When the king is angry, he is as dangerous as a lion that roars. If you make him angry, you will lose your life."
+      "text": "When the king is angry, he is as dangerous as a lion that roars.If you make him angry, you will lose your life. If you make him angry, you will lose your life."
     },
     {
       "verse": "3",
-      "text": "If you keep away from arguments, you will receive honour. Only fools love to quarrel."
+      "text": "If you keep away from arguments, you will receive honour.Only fools love to quarrel. Only fools love to quarrel."
     },
     {
       "verse": "4",
-      "text": "A lazy farmer does not plough his fields in winter. As a result, he has nothing to eat when harvest time arrives."
+      "text": "A lazy farmer does not plough his fields in winter.As a result, he has nothing to eat when harvest time arrives. As a result, he has nothing to eat when harvest time arrives."
     },
     {
       "verse": "5",
-      "text": "A person's thoughts are like deep waters. But a wise person can bring them into the open."
+      "text": "A person's thoughts are like deep waters.But a wise person can bring them into the open. But a wise person can bring them into the open."
     },
     {
       "verse": "6",
-      "text": "Many people say that you can trust them. But it is difficult to find a truly faithful person."
+      "text": "Many people say that you can trust them.But it is difficult to find a truly faithful person. But it is difficult to find a truly faithful person."
     },
     {
       "verse": "7",
-      "text": "Righteous people live in an honest way. Their children will also be happy."
+      "text": "Righteous people live in an honest way.Their children will also be happy. Their children will also be happy."
     },
     {
       "verse": "8",
-      "text": "When a king sits on his throne as judge, he sees what is evil and he removes it."
+      "text": "When a king sits on his throne as judge,he sees what is evil and he removes it. he sees what is evil and he removes it."
     },
     {
       "verse": "9",
-      "text": "Nobody can say, ‘My thoughts are completely pure. There is no sin in me.’"
+      "text": "Nobody can say, ‘My thoughts are completely pure.There is no sin in me.’ There is no sin in me.’"
     },
     {
       "verse": "10",
-      "text": "If people use false weights and measures, the Lord hates anything like that."
+      "text": "If people use false weights and measures,the Lord hates anything like that. the Lord hates anything like that."
     },
     {
       "verse": "11",
-      "text": "Even children show what they are like by the things that they do. You can see if they are honest and good."
+      "text": "Even children show what they are like by the things that they do.You can see if they are honest and good. You can see if they are honest and good."
     },
     {
       "verse": "12",
-      "text": "The Lord has made us with ears to hear with and eyes to see with. They are both his gift to us."
+      "text": "The Lord has made us with ears to hear with and eyes to see with.They are both his gift to us. They are both his gift to us."
     },
     {
       "verse": "13",
-      "text": "If you love to sleep too much, you will become poor. Keep awake so that you have food on the table!"
+      "text": "If you love to sleep too much, you will become poor.Keep awake so that you have food on the table! Keep awake so that you have food on the table!"
     },
     {
       "verse": "14",
-      "text": "When somebody is buying something, he says, ‘It is worth nothing!’ But later he boasts about the cheap price!"
+      "text": "When somebody is buying something, he says, ‘It is worth nothing!’But later he boasts about the cheap price! But later he boasts about the cheap price!"
     },
     {
       "verse": "15",
-      "text": "Words that help you to learn things are very valuable. They are more valuable than gold or jewels."
+      "text": "Words that help you to learn things are very valuable.They are more valuable than gold or jewels. They are more valuable than gold or jewels."
     },
     {
       "verse": "16",
-      "text": "If someone promises to pay the debts of a stranger, take his coat as a guarantee that he will pay."
+      "text": "If someone promises to pay the debts of a stranger,take his coat as a guarantee that he will pay. take his coat as a guarantee that he will pay."
     },
     {
       "verse": "17",
-      "text": "If you cheat someone to get food to eat, it may seem good when you taste it. But soon it will be like sand in your mouth."
+      "text": "If you cheat someone to get food to eat,it may seem good when you taste it.But soon it will be like sand in your mouth. it may seem good when you taste it. But soon it will be like sand in your mouth."
     },
     {
       "verse": "18",
-      "text": "Things will go well if you receive good advice. If you want to fight a war, ask wise people to be your advisors."
+      "text": "Things will go well if you receive good advice.If you want to fight a war, ask wise people to be your advisors. If you want to fight a war, ask wise people to be your advisors."
     },
     {
       "verse": "19",
-      "text": "Keep away from people who talk too much. They will tell everybody about your secrets."
+      "text": "Keep away from people who talk too much.They will tell everybody about your secrets. They will tell everybody about your secrets."
     },
     {
       "verse": "20",
-      "text": "If you insult your parents, your life will quickly finish, like a lamp that suddenly goes out and leaves you in complete darkness."
+      "text": "If you insult your parents, your life will quickly finish,like a lamp that suddenly goes outand leaves you in complete darkness. like a lamp that suddenly goes out and leaves you in complete darkness."
     },
     {
       "verse": "21",
-      "text": "If you receive riches too early in life, it will do you no good in the end."
+      "text": "If you receive riches too early in life,it will do you no good in the end. it will do you no good in the end."
     },
     {
       "verse": "22",
-      "text": "Do not say, ‘I will pay you back for the evil thing you did to me.’ Trust the Lord to make it right for you."
+      "text": "Do not say, ‘I will pay you back for the evil thing you did to me.’Trust the Lord to make it right for you. Trust the Lord to make it right for you."
     },
     {
       "verse": "23",
-      "text": "The Lord hates traders who use false weights. He hates scales that do not weigh things properly."
+      "text": "The Lord hates traders who use false weights.He hates scales that do not weigh things properly. He hates scales that do not weigh things properly."
     },
     {
       "verse": "24",
-      "text": "The Lord chooses the way that we take through life. We cannot understand what will happen to us."
+      "text": "The Lord chooses the way that we take through life.We cannot understand what will happen to us. We cannot understand what will happen to us."
     },
     {
       "verse": "25",
-      "text": "Do not be too quick to promise to give something to God. If you want to change your mind, you have made a trap for yourself."
+      "text": "Do not be too quick to promise to give something to God.If you want to change your mind, you have made a trap for yourself. If you want to change your mind, you have made a trap for yourself."
     },
     {
       "verse": "26",
-      "text": "A wise king can pick out wicked people, and he will punish them as they deserve."
+      "text": "A wise king can pick out wicked people,and he will punish them as they deserve. and he will punish them as they deserve."
     },
     {
       "verse": "27",
-      "text": "The Lord makes our human spirit like his lamp inside us. It shows us what we are really like."
+      "text": "The Lord makes our human spirit like his lamp inside us.It shows us what we are really like. It shows us what we are really like."
     },
     {
       "verse": "28",
-      "text": "A king should rule with faithful love and truth. If he is honest and fair, he will continue to rule."
+      "text": "A king should rule with faithful love and truth.If he is honest and fair, he will continue to rule. If he is honest and fair, he will continue to rule."
     },
     {
       "verse": "29",
-      "text": "Young men boast about their strength. Old men are proud of their beautiful grey hair."
+      "text": "Young men boast about their strength.Old men are proud of their beautiful grey hair. Old men are proud of their beautiful grey hair."
     },
     {
       "verse": "30",
-      "text": "Painful punishment stops you from doing evil things. It makes you change to a better way of life. Print... Use screen font size Show All Comments Proverbs 19Proverbs 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Painful punishment stops you from doing evil things.It makes you change to a better way of life."
     }
   ],
   "21": [
     {
       "verse": "1",
-      "text": "The Lord controls the things that a king decides to do. He can change the king's thoughts, like the direction of a stream."
+      "text": "The Lord controls the things that a king decides to do.He can change the king's thoughts, like the direction of a stream. He can change the king's thoughts, like the direction of a stream."
     },
     {
       "verse": "2",
-      "text": "People think that everything they do is right, but the Lord knows exactly why they are doing it."
+      "text": "People think that everything they do is right,but the Lord knows exactly why they are doing it. but the Lord knows exactly why they are doing it."
     },
     {
       "verse": "3",
-      "text": "If you do what is right and fair, it pleases the Lord more than sacrifices."
+      "text": "If you do what is right and fair,it pleases the Lord more than sacrifices. it pleases the Lord more than sacrifices."
     },
     {
       "verse": "4",
-      "text": "Wicked people are proud and they boast. Sin is their guide through life."
+      "text": "Wicked people are proud and they boast.Sin is their guide through life. Sin is their guide through life."
     },
     {
       "verse": "5",
-      "text": "A careful person makes good plans and he has everything that he needs. But anyone who works in a hurry will soon become poor."
+      "text": "A careful person makes good plansand he has everything that he needs.But anyone who works in a hurry will soon become poor. and he has everything that he needs. But anyone who works in a hurry will soon become poor."
     },
     {
       "verse": "6",
-      "text": "If you deceive people to become rich, it will soon all disappear. It will lead you to an early death."
+      "text": "If you deceive people to become rich,it will soon all disappear.It will lead you to an early death. it will soon all disappear. It will lead you to an early death."
     },
     {
       "verse": "7",
-      "text": "When wicked people do violent things, it destroys them. They refuse to do what is right."
+      "text": "When wicked people do violent things, it destroys them.They refuse to do what is right. They refuse to do what is right."
     },
     {
       "verse": "8",
-      "text": "Guilty people are always going the wrong way. Good people keep on the right way."
+      "text": "Guilty people are always going the wrong way.Good people keep on the right way. Good people keep on the right way."
     },
     {
       "verse": "9",
-      "text": "It is better to live on the roof of your house than to live with a wife who always argues."
+      "text": "It is better to live on the roof of your housethan to live with a wife who always argues. than to live with a wife who always argues."
     },
     {
       "verse": "10",
-      "text": "Evil things are the food that wicked people eat to live. They are not kind to anyone, even their friends."
+      "text": "Evil things are the food that wicked people eat to live.They are not kind to anyone, even their friends. They are not kind to anyone, even their friends."
     },
     {
       "verse": "11",
-      "text": "When a proud person receives punishment, silly people become wise. When you teach a wise person, he learns more knowledge."
+      "text": "When a proud person receives punishment,silly people become wise.When you teach a wise person,he learns more knowledge. silly people become wise. When you teach a wise person, he learns more knowledge."
     },
     {
       "verse": "12",
-      "text": "The Righteous One knows what happens in the homes of wicked people. The Righteous One’ means God, who is always fair and right. He punishes them as they deserve."
+      "text": "The Righteous One knows what happens in the homes of wicked people.He punishes them as they deserve. He punishes them as they deserve."
     },
     {
       "verse": "13",
-      "text": "If you refuse to listen when poor people ask for help, you too will receive no help when you need it."
+      "text": "If you refuse to listen when poor people ask for help,you too will receive no help when you need it. you too will receive no help when you need it."
     },
     {
       "verse": "14",
-      "text": "If someone is angry with you, give him a gift secretly. A secret bribe will make him quiet, even if he is very angry."
+      "text": "If someone is angry with you, give him a gift secretly.A secret bribe will make him quiet, even if he is very angry. A secret bribe will make him quiet, even if he is very angry."
     },
     {
       "verse": "15",
-      "text": "When there is justice, righteous people are happy, but wicked people are afraid."
+      "text": "When there is justice, righteous people are happy,but wicked people are afraid. but wicked people are afraid."
     },
     {
       "verse": "16",
-      "text": "If someone decides to turn away from wisdom, he will soon be in his grave."
+      "text": "If someone decides to turn away from wisdom,he will soon be in his grave. he will soon be in his grave."
     },
     {
       "verse": "17",
-      "text": "Anyone who loves only pleasure will become poor. People who love wine and big feasts will never become rich."
+      "text": "Anyone who loves only pleasure will become poor.People who love wine and big feasts will never become rich. People who love wine and big feasts will never become rich."
     },
     {
       "verse": "18",
-      "text": "When trouble comes, wicked people receive the pain instead of righteous people."
+      "text": "When trouble comes,wicked people receive the pain instead of righteous people. wicked people receive the pain instead of righteous people."
     },
     {
       "verse": "19",
-      "text": "It is better to live alone in a desert than to live with a wife who quarrels and complains."
+      "text": "It is better to live alone in a desertthan to live with a wife who quarrels and complains. than to live with a wife who quarrels and complains."
     },
     {
       "verse": "20",
-      "text": "Wise people store valuable things and good food in their houses. But foolish people waste everything immediately."
+      "text": "Wise people store valuable things and good food in their houses.But foolish people waste everything immediately. But foolish people waste everything immediately."
     },
     {
       "verse": "21",
-      "text": "If you are kind and faithful, you will live a long life! Other people will respect you and they will be kind to you."
+      "text": "If you are kind and faithful, you will live a long life!Other people will respect you and they will be kind to you. Other people will respect you and they will be kind to you."
     },
     {
       "verse": "22",
-      "text": "A wise person can win against a city that is full of strong men. He can destroy the strong place that they trust to keep them safe."
+      "text": "A wise person can win against a city that is full of strong men.He can destroy the strong place that they trust to keep them safe. He can destroy the strong place that they trust to keep them safe."
     },
     {
       "verse": "23",
-      "text": "If you want to keep away from trouble, always be careful about what you say."
+      "text": "If you want to keep away from trouble,always be careful about what you say. always be careful about what you say."
     },
     {
       "verse": "24",
-      "text": "If you are proud, people will call you ‘Boaster’, because you think that you are better than all other people."
+      "text": "If you are proud, people will call you ‘Boaster’,because you think that you are better than all other people. because you think that you are better than all other people."
     },
     {
       "verse": "25",
-      "text": "Lazy people want many things but they refuse to work, so they are killing themselves."
+      "text": "Lazy people want many things but they refuse to work,so they are killing themselves. so they are killing themselves."
     },
     {
       "verse": "26",
-      "text": "They think only about more things that they want for themselves. But righteous people are happy to give their things to other people."
+      "text": "They think only about more things that they want for themselves.But righteous people are happy to give their things to other people. But righteous people are happy to give their things to other people."
     },
     {
       "verse": "27",
-      "text": "The Lord hates it when wicked people offer sacrifices to him. He hates it even more when they do it with an evil purpose."
+      "text": "The Lord hates itwhen wicked people offer sacrifices to him.He hates it even morewhen they do it with an evil purpose. when wicked people offer sacrifices to him. He hates it even more when they do it with an evil purpose."
     },
     {
       "verse": "28",
-      "text": "Anyone who tells lies in court will come to nothing. But if someone listens to the truth, his report will remain for ever."
+      "text": "Anyone who tells lies in court will come to nothing.But if someone listens to the truth, his report will remain for ever. But if someone listens to the truth, his report will remain for ever."
     },
     {
       "verse": "29",
-      "text": "Wicked people do not show what they are really thinking. But righteous people think carefully about what they are doing."
+      "text": "Wicked people do not show what they are really thinking.But righteous people think carefully about what they are doing. But righteous people think carefully about what they are doing."
     },
     {
       "verse": "30",
-      "text": "There is no wisdom, no knowledge and no advice that can win against the Lord."
+      "text": "There is no wisdom, no knowledge and no advicethat can win against the Lord. that can win against the Lord."
     },
     {
       "verse": "31",
-      "text": "You can prepare your horses to fight in a battle, but only the Lord can help you to win. Print... Use screen font size Show All Comments Proverbs 20Proverbs 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You can prepare your horses to fight in a battle,but only the Lord can help you to win."
     }
   ],
   "22": [
     {
       "verse": "1",
-      "text": "It is better to receive honour from people than to be very rich. If people respect you, that is better than silver or gold."
+      "text": "It is better to receive honour from people than to be very rich.If people respect you, that is better than silver or gold. If people respect you, that is better than silver or gold."
     },
     {
       "verse": "2",
-      "text": "This is true about rich people and poor people: The Lord created them all."
+      "text": "This is true about rich people and poor people:The Lord created them all. The Lord created them all."
     },
     {
       "verse": "3",
-      "text": "A careful person can see danger and he will hide himself. But a silly person never stops, and he walks into trouble."
+      "text": "A careful person can see danger and he will hide himself.But a silly person never stops, and he walks into trouble. But a silly person never stops, and he walks into trouble."
     },
     {
       "verse": "4",
-      "text": "You should be humble. You should respect and obey the Lord. Then you will receive riches, honour and a long life."
+      "text": "You should be humble. You should respect and obey the Lord.Then you will receive riches, honour and a long life. Then you will receive riches, honour and a long life."
     },
     {
       "verse": "5",
-      "text": "Wicked people go through a lot of trouble, like thorn bushes and traps in their way. So be careful to keep far away from them."
+      "text": "Wicked people go through a lot of trouble,like thorn bushes and traps in their way.So be careful to keep far away from them. like thorn bushes and traps in their way. So be careful to keep far away from them."
     },
     {
       "verse": "6",
-      "text": "If you teach children the right way to live, they will not forget it when they are older."
+      "text": "If you teach children the right way to live,they will not forget it when they are older. they will not forget it when they are older."
     },
     {
       "verse": "7",
-      "text": "Rich people have authority over poor people. People who borrow money have to serve those who lend it to them."
+      "text": "Rich people have authority over poor people.People who borrow money have to serve those who lend it to them. People who borrow money have to serve those who lend it to them."
     },
     {
       "verse": "8",
-      "text": "If you plant evil things, your harvest will be trouble. If you are angry and you hurt people, it will never help you."
+      "text": "If you plant evil things,your harvest will be trouble.If you are angry and you hurt people,it will never help you. your harvest will be trouble. If you are angry and you hurt people, it will never help you."
     },
     {
       "verse": "9",
-      "text": "If you are kind to poor people and you share your food with them, God will bless you."
+      "text": "If you are kind to poor people and you share your food with them,God will bless you. God will bless you."
     },
     {
       "verse": "10",
-      "text": "If someone laughs at what is right, send him away. Then there will be no more arguments, quarrels and insults."
+      "text": "If someone laughs at what is right, send him away.Then there will be no more arguments, quarrels and insults. Then there will be no more arguments, quarrels and insults."
     },
     {
       "verse": "11",
-      "text": "If you live in a pure way, and you speak kind words, you will have the king as your friend."
+      "text": "If you live in a pure way, and you speak kind words,you will have the king as your friend. you will have the king as your friend."
     },
     {
       "verse": "12",
-      "text": "The Lord watches over truth, to keep it safe. But when people tell lies, he makes them useless."
+      "text": "The Lord watches over truth, to keep it safe.But when people tell lies, he makes them useless. But when people tell lies, he makes them useless."
     },
     {
       "verse": "13",
-      "text": "A lazy person stays in his house. He says, ‘There is a lion outside in the street! If I go out, it will kill me!’"
+      "text": "A lazy person stays in his house.He says, ‘There is a lion outside in the street!If I go out, it will kill me!’ He says, ‘There is a lion outside in the street! If I go out, it will kill me!’"
     },
     {
       "verse": "14",
-      "text": "The mouth of an adulteress is like a deep hole. If you make the Lord angry, you will fall into it!"
+      "text": "The mouth of an adulteress is like a deep hole.If you make the Lord angry, you will fall into it! If you make the Lord angry, you will fall into it!"
     },
     {
       "verse": "15",
-      "text": "Children love to do foolish things. To stop them, you must warn and punish them."
+      "text": "Children love to do foolish things.To stop them, you must warn and punish them. To stop them, you must warn and punish them."
     },
     {
       "verse": "16",
-      "text": "Someone may be cruel to poor people to make himself rich. Someone else may give gifts to rich people to make them his friends. But both those people will become poor in the end. 30 wise thoughts"
+      "text": "Someone may be cruel to poor people to make himself rich.Someone else may give gifts to rich people to make them his friends.But both those people will become poor in the end. Someone else may give gifts to rich people to make them his friends. But both those people will become poor in the end."
     },
     {
       "verse": "17",
@@ -2576,11 +2576,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "I have written down 30 wise thoughts for you. They will teach you what is right, so that you know how to live well."
+      "text": "wise thoughts for you. They will teach you what is right, so that you know how to live well."
     },
     {
       "verse": "21",
-      "text": "You can trust these words because they are true. Then you can give a good answer to the people who sent you to me. We have put in the numbers (1 to 30)."
+      "text": "You can trust these words because they are true. Then you can give a good answer to the people who sent you to me."
     },
     {
       "verse": "22",
@@ -2612,7 +2612,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "5. A worker with special skills may work for a king. He will no longer have to work for ordinary people. Print... Use screen font size Show All Comments Proverbs 21Proverbs 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "5. A worker with special skills may work for a king. He will no longer have to work for ordinary people."
     }
   ],
   "23": [
@@ -2729,10 +2729,6 @@ module.exports = {
       "text": "They are like robbers who wait to attack people. They take more and more men away from their wives."
     },
     {
-      "verse": "29-30",
-      "text": "18. People who drink too much wine have many problems. Do you see someone who is in trouble? Someone who is very sad? Someone who argues or complains all the time? Do you see someone with wounds on his body for no reason, or someone with red eyes? Then you are looking at someone who likes to drink wine until late at night. He is someone who likes to try different drinks."
-    },
-    {
       "verse": "31",
       "text": "So do not even look at that beautiful red wine! Do not think about the pleasure it would give to you."
     },
@@ -2750,7 +2746,11 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "You will say, ‘Somebody must have hit me, but I do not remember what happened. I need to wake up soon and have another drink.’ Print... Use screen font size Show All Comments Proverbs 22Proverbs 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You will say, ‘Somebody must have hit me, but I do not remember what happened. I need to wake up soon and have another drink.’"
+    },
+    {
+      "verse": "29-30",
+      "text": "18. People who drink too much wine have many problems. Do you see someone who is in trouble? Someone who is very sad? Someone who argues or complains all the time? Do you see someone with wounds on his body for no reason, or someone with red eyes? Then you are looking at someone who likes to drink wine until late at night. He is someone who likes to try different drinks."
     }
   ],
   "24": [
@@ -2768,7 +2768,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Knowledge will help him to fill its rooms with beautiful and valuable things. house’ or ‘family’"
+      "text": "Knowledge will help him to fill its rooms with beautiful and valuable things."
     },
     {
       "verse": "5",
@@ -2840,11 +2840,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Both the Lord and the king have the power to give strong punishment. In a moment they can destroy people who turn against them. More wise thoughts"
+      "text": "Both the Lord and the king have the power to give strong punishment. In a moment they can destroy people who turn against them."
     },
     {
       "verse": "23",
-      "text": "These are more things that wise people have said: When you judge people, be fair. It is not good to respect some people more than others."
+      "text": "These are more things that wise people have said:When you judge people, be fair. It is not good to respect some people more than others."
     },
     {
       "verse": "24",
@@ -2888,13 +2888,13 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "But while you sleep you will suddenly become poor. You will have nothing, as if someone has robbed you. Print... Use screen font size Show All Comments Proverbs 23Proverbs 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But while you sleep you will suddenly become poor. You will have nothing, as if someone has robbed you."
     }
   ],
   "25": [
     {
       "verse": "1",
-      "text": "These are more of Solomon's proverbs. Hezekiah's men wrote them down when Hezekiah was king of Judah. Some of these proverbs are longer than the proverbs in chapters 10 to 22. Many of them are written down in groups, not one by one. King Hezekiah lived 250 years after King Solomon."
+      "text": "These are more of Solomon's proverbs. Hezekiah's men wrote them down when Hezekiah was king of Judah."
     },
     {
       "verse": "2",
@@ -3002,77 +3002,77 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Somebody who cannot control his anger is in danger. He is like a city that no longer has a strong wall round it. Print... Use screen font size Show All Comments Proverbs 24Proverbs 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Somebody who cannot control his anger is in danger. He is like a city that no longer has a strong wall round it."
     }
   ],
   "26": [
     {
       "verse": "1",
-      "text": "It is not right to give honour to a fool. It is as silly as snow that falls in summer, or rain that falls at the time of harvest."
+      "text": "It is not right to give honour to a fool.It is as silly as snow that falls in summer,or rain that falls at the time of harvest. It is as silly as snow that falls in summer, or rain that falls at the time of harvest."
     },
     {
       "verse": "2",
-      "text": "If someone curses you for no reason, it will not stay with you. Their words will be like birds that never stop to rest."
+      "text": "If someone curses you for no reason, it will not stay with you.Their words will be like birds that never stop to rest. Their words will be like birds that never stop to rest."
     },
     {
       "verse": "3",
-      "text": "There are right ways to punish a horse or a donkey. The right way to punish a fool is to beat him with a stick."
+      "text": "There are right ways to punish a horse or a donkey.The right way to punish a fool is to beat him with a stick. The right way to punish a fool is to beat him with a stick."
     },
     {
       "verse": "4",
-      "text": "If someone asks you a silly question, do not give him a silly answer. Be careful that you do not become as silly as he is."
+      "text": "If someone asks you a silly question, do not give him a silly answer.Be careful that you do not become as silly as he is. Be careful that you do not become as silly as he is."
     },
     {
       "verse": "5",
-      "text": "If someone asks you a silly question, give him a silly answer. Then he will know that he is not as wise as he thinks he is. Verses 4 and 5 seem to say opposite things. But they look at the same truth in different ways. Do not think in the same silly way that a foolish person thinks (verse 4). But also, do not let a foolish person think that he is wise when he says silly things (verse 5)."
+      "text": "If someone asks you a silly question, give him a silly answer.Then he will know that he is not as wise as he thinks he is. Then he will know that he is not as wise as he thinks he is."
     },
     {
       "verse": "6",
-      "text": "If you send a message with a fool, there will be trouble. It would be better to cut off your own feet!"
+      "text": "If you send a message with a fool, there will be trouble.It would be better to cut off your own feet! It would be better to cut off your own feet!"
     },
     {
       "verse": "7",
-      "text": "A lame person cannot use his legs properly. A fool cannot use a proverb properly."
+      "text": "A lame person cannot use his legs properly.A fool cannot use a proverb properly. A fool cannot use a proverb properly."
     },
     {
       "verse": "8",
-      "text": "If you tie a stone into a sling, it will be a useless weapon. It is also useless to give honour to a fool."
+      "text": "If you tie a stone into a sling, it will be a useless weapon.It is also useless to give honour to a fool. It is also useless to give honour to a fool."
     },
     {
       "verse": "9",
-      "text": "A fool who speaks a proverb is like a drunk person with a thorn in his finger. He does not know what to do with it."
+      "text": "A fool who speaks a proverb is like a drunk person with a thorn in his finger.He does not know what to do with it. He does not know what to do with it."
     },
     {
       "verse": "10",
-      "text": "A soldier who shoots his arrows everywhere is useless. It is the same if you ask a stupid person to do work for you."
+      "text": "A soldier who shoots his arrows everywhere is useless.It is the same if you ask a stupid person to do work for you. It is the same if you ask a stupid person to do work for you."
     },
     {
       "verse": "11",
-      "text": "A sick dog goes back to eat what it could not keep in its stomach. A fool goes back and makes the same mistakes again."
+      "text": "A sick dog goes back to eat what it could not keep in its stomach.A fool goes back and makes the same mistakes again. A fool goes back and makes the same mistakes again."
     },
     {
       "verse": "12",
-      "text": "Some men think that they are already wise. A fool is more likely to learn something than they are."
+      "text": "Some men think that they are already wise.A fool is more likely to learn something than they are. A fool is more likely to learn something than they are."
     },
     {
       "verse": "13",
-      "text": "A lazy person does not go out of his house. He says, ‘There is a lion outside in the street!’"
+      "text": "A lazy person does not go out of his house.He says, ‘There is a lion outside in the street!’ He says, ‘There is a lion outside in the street!’"
     },
     {
       "verse": "14",
-      "text": "A lazy person turns over in his bed, like a door that continues to open and close."
+      "text": "A lazy person turns over in his bed,like a door that continues to open and close. like a door that continues to open and close."
     },
     {
       "verse": "15",
-      "text": "A lazy person pushes his hand into his bowl of food. But then he is too tired to lift his hand up to his mouth."
+      "text": "A lazy person pushes his hand into his bowl of food.But then he is too tired to lift his hand up to his mouth. But then he is too tired to lift his hand up to his mouth."
     },
     {
       "verse": "16",
-      "text": "A lazy person thinks that he is very wise. He thinks that he is wiser than seven people who can answer questions well."
+      "text": "A lazy person thinks that he is very wise.He thinks that he is wiser than seven people who can answer questions well. He thinks that he is wiser than seven people who can answer questions well."
     },
     {
       "verse": "17",
-      "text": "When strangers are arguing, only a fool joins the argument. It would be better if he took hold of a wild dog's ears!"
+      "text": "When strangers are arguing, only a fool joins the argument.It would be better if he took hold of a wild dog's ears! It would be better if he took hold of a wild dog's ears!"
     },
     {
       "verse": "18",
@@ -3080,133 +3080,133 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "If a person deceives his friend and then laughs about it, he is as bad as that crazy person."
+      "text": "If a person deceives his friend and then laughs about it,he is as bad as that crazy person. he is as bad as that crazy person."
     },
     {
       "verse": "20",
-      "text": "Without wood, a fire stops burning. When people do not tell their friends' secrets, quarrels stop."
+      "text": "Without wood, a fire stops burning.When people do not tell their friends' secrets, quarrels stop. When people do not tell their friends' secrets, quarrels stop."
     },
     {
       "verse": "21",
-      "text": "But when a fire has wood, it continues to burn. When people love to quarrel, there will always be arguments."
+      "text": "But when a fire has wood, it continues to burn.When people love to quarrel, there will always be arguments. When people love to quarrel, there will always be arguments."
     },
     {
       "verse": "22",
-      "text": "We love to hear other people's secrets. They seem like good food that we can really enjoy."
+      "text": "We love to hear other people's secrets.They seem like good food that we can really enjoy. They seem like good food that we can really enjoy."
     },
     {
       "verse": "23",
-      "text": "When a hypocrite says nice words, that is like a cheap pot with silver paint."
+      "text": "When a hypocrite says nice words,that is like a cheap pot with silver paint. that is like a cheap pot with silver paint."
     },
     {
       "verse": "24",
-      "text": "A hypocrite can say nice things to hide his thoughts, but he is still thinking about ways to hurt people."
+      "text": "A hypocrite can say nice things to hide his thoughts,but he is still thinking about ways to hurt people. but he is still thinking about ways to hurt people."
     },
     {
       "verse": "25",
-      "text": "Do not believe him when he speaks kind words. His mind is still full of evil things."
+      "text": "Do not believe him when he speaks kind words.His mind is still full of evil things. His mind is still full of evil things."
     },
     {
       "verse": "26",
-      "text": "He may not seem to hate people, but he is telling lies. In a public meeting, everyone will recognize his sins."
+      "text": "He may not seem to hate people, but he is telling lies.In a public meeting, everyone will recognize his sins. In a public meeting, everyone will recognize his sins."
     },
     {
       "verse": "27",
-      "text": "If a man digs a deep hole as a trap, he will fall into it himself. If a man pushes a stone to fall on someone, it will fall back on him."
+      "text": "If a man digs a deep hole as a trap, he will fall into it himself.If a man pushes a stone to fall on someone, it will fall back on him. If a man pushes a stone to fall on someone, it will fall back on him."
     },
     {
       "verse": "28",
-      "text": "If you tell lies, it shows that you hate other people. If you deceive people with sweet words, you will destroy them. Print... Use screen font size Show All Comments Proverbs 25Proverbs 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you tell lies, it shows that you hate other people.If you deceive people with sweet words, you will destroy them."
     }
   ],
   "27": [
     {
       "verse": "1",
-      "text": "Do not boast about what you will do tomorrow. You do not know what might happen."
+      "text": "Do not boast about what you will do tomorrow.You do not know what might happen. You do not know what might happen."
     },
     {
       "verse": "2",
-      "text": "Let other people praise you. Do not boast about yourself."
+      "text": "Let other people praise you.Do not boast about yourself. Do not boast about yourself."
     },
     {
       "verse": "3",
-      "text": "A stone is heavy to carry and sand also weighs a lot. But the silly acts of a fool give more pain than both of those."
+      "text": "A stone is heavy to carry and sand also weighs a lot.But the silly acts of a fool give more pain than both of those. But the silly acts of a fool give more pain than both of those."
     },
     {
       "verse": "4",
-      "text": "An angry person does cruel things that can destroy people. But a jealous person is much worse."
+      "text": "An angry person does cruel things that can destroy people.But a jealous person is much worse. But a jealous person is much worse."
     },
     {
       "verse": "5",
-      "text": "When a friend is not afraid to warn you that you are wrong, it shows that he really loves you."
+      "text": "When a friend is not afraid to warn you that you are wrong,it shows that he really loves you. it shows that he really loves you."
     },
     {
       "verse": "6",
-      "text": "You can trust a friend when he says things that hurt you. But when an enemy kisses you, he is deceiving you."
+      "text": "You can trust a friend when he says things that hurt you.But when an enemy kisses you, he is deceiving you. But when an enemy kisses you, he is deceiving you."
     },
     {
       "verse": "7",
-      "text": "A person who has eaten enough food will refuse honey. But even bitter food seems sweet to a hungry person."
+      "text": "A person who has eaten enough food will refuse honey.But even bitter food seems sweet to a hungry person. But even bitter food seems sweet to a hungry person."
     },
     {
       "verse": "8",
-      "text": "A person who travels away from his home is like a bird that flies away from its nest."
+      "text": "A person who travels away from his homeis like a bird that flies away from its nest. is like a bird that flies away from its nest."
     },
     {
       "verse": "9",
-      "text": "Beautiful oil and perfume may give you joy. But good advice from a friend is even better."
+      "text": "Beautiful oil and perfume may give you joy.But good advice from a friend is even better. But good advice from a friend is even better."
     },
     {
       "verse": "10",
-      "text": "Do not forget your friends or your father's friends. If you are in trouble, do not ask your relatives to help you. A friend who is a neighbour will be more help than a relative who lives far away."
+      "text": "Do not forget your friends or your father's friends.If you are in trouble, do not ask your relatives to help you.A friend who is a neighbour will be more help than a relative who lives far away. If you are in trouble, do not ask your relatives to help you. A friend who is a neighbour will be more help than a relative who lives far away."
     },
     {
       "verse": "11",
-      "text": "My son, if you are wise, I will be happy. I will be able to answer anyone who insults me."
+      "text": "My son, if you are wise, I will be happy.I will be able to answer anyone who insults me. I will be able to answer anyone who insults me."
     },
     {
       "verse": "12",
-      "text": "A careful person can see danger and he will hide himself. But a silly person never stops, and he walks into trouble."
+      "text": "A careful person can see danger and he will hide himself.But a silly person never stops, and he walks into trouble. But a silly person never stops, and he walks into trouble."
     },
     {
       "verse": "13",
-      "text": "If someone promises to pay the debts of a stranger, take his coat as a guarantee that he will pay."
+      "text": "If someone promises to pay the debts of a stranger,take his coat as a guarantee that he will pay. take his coat as a guarantee that he will pay."
     },
     {
       "verse": "14",
-      "text": "If you shout a blessing to your neighbour early in the morning, he will think it is no better than a curse."
+      "text": "If you shout a blessing to your neighbour early in the morning,he will think it is no better than a curse. he will think it is no better than a curse."
     },
     {
       "verse": "15",
-      "text": "A wife who is always arguing with you is as bad as rain that never stops falling."
+      "text": "A wife who is always arguing with youis as bad as rain that never stops falling. is as bad as rain that never stops falling."
     },
     {
       "verse": "16",
-      "text": "Can you catch the wind? Can you hold oil in your hand? No! And you cannot keep that woman quiet."
+      "text": "Can you catch the wind? Can you hold oil in your hand?No! And you cannot keep that woman quiet. No! And you cannot keep that woman quiet."
     },
     {
       "verse": "17",
-      "text": "People learn from each other, as one iron tool can make another one sharp."
+      "text": "People learn from each other,as one iron tool can make another one sharp. as one iron tool can make another one sharp."
     },
     {
       "verse": "18",
-      "text": "If you take care of a fig tree, it will give you fruit to eat. If you take care of your master, he will give you honour."
+      "text": "If you take care of a fig tree, it will give you fruit to eat.If you take care of your master, he will give you honour. If you take care of your master, he will give you honour."
     },
     {
       "verse": "19",
-      "text": "A man can see his face in a mirror. But his thoughts show what he is really like."
+      "text": "A man can see his face in a mirror.But his thoughts show what he is really like. But his thoughts show what he is really like."
     },
     {
       "verse": "20",
-      "text": "The deep hole of death always wants more dead people to fill it. In the same way, a person wants to have everything that he sees."
+      "text": "The deep hole of death always wants more dead people to fill it.In the same way, a person wants to have everything that he sees. In the same way, a person wants to have everything that he sees."
     },
     {
       "verse": "21",
-      "text": "You need a hot fire to see if silver and gold are pure. In the same way, when people praise you, they can see what you are really like."
+      "text": "You need a hot fire to see if silver and gold are pure.In the same way, when people praise you,they can see what you are really like. In the same way, when people praise you, they can see what you are really like."
     },
     {
       "verse": "22",
-      "text": "Even if you beat a fool with a big stick, as hard as you beat grain, you will never remove all his silly ideas."
+      "text": "Even if you beat a fool with a big stick, as hard as you beat grain,you will never remove all his silly ideas. you will never remove all his silly ideas."
     },
     {
       "verse": "23",
@@ -3226,237 +3226,237 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "You will have enough milk from your goats to feed yourself, your family and your female servants. The last proverb in this chapter (verses 23-27) shows that God will give us what we need, if we are careful to take care of the things that he has given to us. Print... Use screen font size Show All Comments Proverbs 26Proverbs 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You will have enough milk from your goats to feed yourself, your family and your female servants."
     }
   ],
   "28": [
     {
       "verse": "1",
-      "text": "A wicked person runs away even when nobody is chasing him. But a righteous person is as brave as a lion."
+      "text": "A wicked person runs away even when nobody is chasing him.But a righteous person is as brave as a lion. But a righteous person is as brave as a lion."
     },
     {
       "verse": "2",
-      "text": "When the people in a country refuse to obey the law, they will have many rulers. But if a country has a wise ruler who understands what is right, it will continue to be strong."
+      "text": "When the people in a country refuse to obey the law,they will have many rulers.But if a country has a wise ruler who understands what is right,it will continue to be strong. they will have many rulers. But if a country has a wise ruler who understands what is right, it will continue to be strong."
     },
     {
       "verse": "3",
-      "text": "A poor person who is cruel to helpless people is like a storm that destroys crops. A poor person’ or ‘A wicked ruler’."
+      "text": "A poor person who is cruel to helpless peopleis like a storm that destroys crops. is like a storm that destroys crops."
     },
     {
       "verse": "4",
-      "text": "People who do not obey the law praise wicked people. But people who obey the law speak against wicked people."
+      "text": "People who do not obey the law praise wicked people.But people who obey the law speak against wicked people. But people who obey the law speak against wicked people."
     },
     {
       "verse": "5",
-      "text": "Evil people do not understand justice. But people who serve the Lord understand all about it."
+      "text": "Evil people do not understand justice.But people who serve the Lord understand all about it. But people who serve the Lord understand all about it."
     },
     {
       "verse": "6",
-      "text": "It is better to be poor and live in an honest way than to be a rich hypocrite."
+      "text": "It is better to be poor and live in an honest waythan to be a rich hypocrite. than to be a rich hypocrite."
     },
     {
       "verse": "7",
-      "text": "If you obey the law, you are a wise child. But if you make friends with greedy people, you will make your parents ashamed."
+      "text": "If you obey the law, you are a wise child.But if you make friends with greedy people,you will make your parents ashamed. But if you make friends with greedy people, you will make your parents ashamed."
     },
     {
       "verse": "8",
-      "text": "If you make people pay more when you lend money to them, you may become rich. But someone else will enjoy your riches. They will go to someone who is kind to poor people."
+      "text": "If you make people pay more when you lend money to them,you may become rich.But someone else will enjoy your riches.They will go to someone who is kind to poor people. you may become rich. But someone else will enjoy your riches. They will go to someone who is kind to poor people."
     },
     {
       "verse": "9",
-      "text": "If you refuse to listen to God's law, God will refuse to listen to your prayers."
+      "text": "If you refuse to listen to God's law,God will refuse to listen to your prayers. God will refuse to listen to your prayers."
     },
     {
       "verse": "10",
-      "text": "If you cause a good person to do evil things, your own evil trap will catch you. But people who do nothing wrong will receive good things."
+      "text": "If you cause a good person to do evil things,your own evil trap will catch you.But people who do nothing wrong will receive good things. your own evil trap will catch you. But people who do nothing wrong will receive good things."
     },
     {
       "verse": "11",
-      "text": "A rich person thinks that he knows everything. But a poor person who understands people knows what he is really like."
+      "text": "A rich person thinks that he knows everything.But a poor person who understands people knows what he is really like. But a poor person who understands people knows what he is really like."
     },
     {
       "verse": "12",
-      "text": "When righteous people have power, everybody is happy. But when wicked people have power, good people run away to hide."
+      "text": "When righteous people have power,everybody is happy.But when wicked people have power,good people run away to hide. everybody is happy. But when wicked people have power, good people run away to hide."
     },
     {
       "verse": "13",
-      "text": "Anyone who hides his sins will never do well. But God will forgive somebody, if he agrees that he has done wrong things, and if he turns away from his sins."
+      "text": "Anyone who hides his sins will never do well.But God will forgive somebody,if he agrees that he has done wrong things,and if he turns away from his sins. But God will forgive somebody, if he agrees that he has done wrong things, and if he turns away from his sins."
     },
     {
       "verse": "14",
-      "text": "If you are afraid to do wrong things, God will bless you. But trouble will happen to anyone who refuses to obey."
+      "text": "If you are afraid to do wrong things, God will bless you.But trouble will happen to anyone who refuses to obey. But trouble will happen to anyone who refuses to obey."
     },
     {
       "verse": "15",
-      "text": "A wicked ruler brings danger to poor people. He is as dangerous as an angry lion or a hungry bear."
+      "text": "A wicked ruler brings danger to poor people.He is as dangerous as an angry lion or a hungry bear. He is as dangerous as an angry lion or a hungry bear."
     },
     {
       "verse": "16",
-      "text": "If a ruler is cruel, it shows that he is not wise. But a ruler who refuses bribes will rule for a long time."
+      "text": "If a ruler is cruel, it shows that he is not wise.But a ruler who refuses bribes will rule for a long time. But a ruler who refuses bribes will rule for a long time."
     },
     {
       "verse": "17",
-      "text": "Someone who is guilty of murder will be running until he dies. Nobody should help him to escape."
+      "text": "Someone who is guilty of murder will be running until he dies.Nobody should help him to escape. Nobody should help him to escape."
     },
     {
       "verse": "18",
-      "text": "If you live in an honest way, you will be safe. But the hypocrite will suddenly fall into trouble."
+      "text": "If you live in an honest way, you will be safe.But the hypocrite will suddenly fall into trouble. But the hypocrite will suddenly fall into trouble."
     },
     {
       "verse": "19",
-      "text": "A farmer who works hard will have plenty of food to eat. But anyone who works only on useless things will always be poor."
+      "text": "A farmer who works hard will have plenty of food to eat.But anyone who works only on useless things will always be poor. But anyone who works only on useless things will always be poor."
     },
     {
       "verse": "20",
-      "text": "A faithful person will receive many blessings. But anyone who hurries to become rich will only receive punishment."
+      "text": "A faithful person will receive many blessings.But anyone who hurries to become rich will only receive punishment. But anyone who hurries to become rich will only receive punishment."
     },
     {
       "verse": "21",
-      "text": "When you judge people, you must always be fair. That is the right thing to do. But even a small bribe can make some people do the wrong thing."
+      "text": "When you judge people, you must always be fair. That is the right thing to do.But even a small bribe can make some people do the wrong thing. But even a small bribe can make some people do the wrong thing."
     },
     {
       "verse": "22",
-      "text": "Greedy people hurry to become rich. They do not know that they will soon be poor."
+      "text": "Greedy people hurry to become rich.They do not know that they will soon be poor. They do not know that they will soon be poor."
     },
     {
       "verse": "23",
-      "text": "If you warn someone that he has done a wrong thing, he will thank you in the end. He will like you more than if you only say sweet words to him."
+      "text": "If you warn someone that he has done a wrong thing,he will thank you in the end.He will like you more than if you only say sweet words to him. he will thank you in the end. He will like you more than if you only say sweet words to him."
     },
     {
       "verse": "24",
-      "text": "If anyone cheats his parents, he may say that he has done nothing wrong. But a person like that is as bad as a robber."
+      "text": "If anyone cheats his parents,he may say that he has done nothing wrong.But a person like that is as bad as a robber. he may say that he has done nothing wrong. But a person like that is as bad as a robber."
     },
     {
       "verse": "25",
-      "text": "Greedy people cause a lot of trouble. But someone who trusts the Lord will enjoy many good things."
+      "text": "Greedy people cause a lot of trouble.But someone who trusts the Lord will enjoy many good things. But someone who trusts the Lord will enjoy many good things."
     },
     {
       "verse": "26",
-      "text": "If you trust your own thoughts, you are a fool. But if you live in a wise way, you will be safe from danger."
+      "text": "If you trust your own thoughts, you are a fool.But if you live in a wise way, you will be safe from danger. But if you live in a wise way, you will be safe from danger."
     },
     {
       "verse": "27",
-      "text": "If you give things to poor people, you will still have enough for yourself. But everyone will curse you if you refuse to help poor people."
+      "text": "If you give things to poor people, you will still have enough for yourself.But everyone will curse you if you refuse to help poor people. But everyone will curse you if you refuse to help poor people."
     },
     {
       "verse": "28",
-      "text": "When wicked people become powerful, everyone runs away to hide. But when wicked people lose their power, righteous people do well again. Print... Use screen font size Show All Comments Proverbs 27Proverbs 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When wicked people become powerful,everyone runs away to hide.But when wicked people lose their power,righteous people do well again."
     }
   ],
   "29": [
     {
       "verse": "1",
-      "text": "You may warn a proud person many times, but he will not listen to you. Trouble will suddenly happen to him and he will not escape."
+      "text": "You may warn a proud person many times, but he will not listen to you.Trouble will suddenly happen to him and he will not escape. Trouble will suddenly happen to him and he will not escape."
     },
     {
       "verse": "2",
-      "text": "When righteous people are doing well, everyone is happy. But when wicked people rule, everyone is sad."
+      "text": "When righteous people are doing well, everyone is happy.But when wicked people rule, everyone is sad. But when wicked people rule, everyone is sad."
     },
     {
       "verse": "3",
-      "text": "A man who loves wisdom makes his father happy. But anyone who is a friend of prostitutes is wasting his father's money."
+      "text": "A man who loves wisdom makes his father happy.But anyone who is a friend of prostitutes is wasting his father's money. But anyone who is a friend of prostitutes is wasting his father's money."
     },
     {
       "verse": "4",
-      "text": "A king who rules with justice makes his country strong. But a king who takes lots of taxes destroys his country."
+      "text": "A king who rules with justice makes his country strong.But a king who takes lots of taxes destroys his country. But a king who takes lots of taxes destroys his country."
     },
     {
       "verse": "5",
-      "text": "If you always praise your friends with sweet words, that will be a trap that you walk into yourself."
+      "text": "If you always praise your friends with sweet words,that will be a trap that you walk into yourself. that will be a trap that you walk into yourself."
     },
     {
       "verse": "6",
-      "text": "The sin of an evil person becomes a trap that catches him. But a righteous person sings with joy."
+      "text": "The sin of an evil person becomes a trap that catches him.But a righteous person sings with joy. But a righteous person sings with joy."
     },
     {
       "verse": "7",
-      "text": "Righteous people want poor people to receive justice. But wicked people do not understand things like that."
+      "text": "Righteous people want poor people to receive justice.But wicked people do not understand things like that. But wicked people do not understand things like that."
     },
     {
       "verse": "8",
-      "text": "People who insult their friends bring trouble to a city. But wise people stop arguments."
+      "text": "People who insult their friends bring trouble to a city.But wise people stop arguments. But wise people stop arguments."
     },
     {
       "verse": "9",
-      "text": "If a wise person accuses a foolish person in court, there will be no agreement. The fool will only laugh or he will become angry."
+      "text": "If a wise person accuses a foolish person in court,there will be no agreement.The fool will only laugh or he will become angry. there will be no agreement. The fool will only laugh or he will become angry."
     },
     {
       "verse": "10",
-      "text": "Murderers hate honest people. They try to kill any good person."
+      "text": "Murderers hate honest people.They try to kill any good person. They try to kill any good person."
     },
     {
       "verse": "11",
-      "text": "Foolish people cannot control their anger. But wise people are patient."
+      "text": "Foolish people cannot control their anger.But wise people are patient. But wise people are patient."
     },
     {
       "verse": "12",
-      "text": "When a ruler listens to lies, all his officers will be wicked."
+      "text": "When a ruler listens to lies,all his officers will be wicked. all his officers will be wicked."
     },
     {
       "verse": "13",
-      "text": "The Lord gives light to all people so that they can see. He does that for poor people and also those who are cruel to them."
+      "text": "The Lord gives light to all people so that they can see.He does that for poor people and also those who are cruel to them. He does that for poor people and also those who are cruel to them."
     },
     {
       "verse": "14",
-      "text": "If a king judges poor people in a true way, he will always have the power to rule."
+      "text": "If a king judges poor people in a true way,he will always have the power to rule. he will always have the power to rule."
     },
     {
       "verse": "15",
-      "text": "If you want your children to be wise, warn them and punish them when they do wrong things. If you let them do anything that they want to do, they will make their mother ashamed."
+      "text": "If you want your children to be wise,warn them and punish them when they do wrong things.If you let them do anything that they want to do,they will make their mother ashamed. warn them and punish them when they do wrong things. If you let them do anything that they want to do, they will make their mother ashamed."
     },
     {
       "verse": "16",
-      "text": "When wicked people receive more power, there is also more sin. But those wicked people will fall while righteous people watch."
+      "text": "When wicked people receive more power, there is also more sin.But those wicked people will fall while righteous people watch. But those wicked people will fall while righteous people watch."
     },
     {
       "verse": "17",
-      "text": "Warn your children when they do wrong things, so that you have peace in your mind. They will make you very happy."
+      "text": "Warn your children when they do wrong things,so that you have peace in your mind.They will make you very happy. so that you have peace in your mind. They will make you very happy."
     },
     {
       "verse": "18",
-      "text": "If people do not hear God's message, there is no law to control them. But if someone obeys God's law, he is in a happy place."
+      "text": "If people do not hear God's message,there is no law to control them.But if someone obeys God's law,he is in a happy place. there is no law to control them. But if someone obeys God's law, he is in a happy place."
     },
     {
       "verse": "19",
-      "text": "You must use more than words to show a servant what is right. Even if he understands what you say, he will not obey you."
+      "text": "You must use more than words to show a servant what is right.Even if he understands what you say, he will not obey you. Even if he understands what you say, he will not obey you."
     },
     {
       "verse": "20",
-      "text": "Do you know anyone who speaks before he thinks? A foolish person is more likely to become wise than that person."
+      "text": "Do you know anyone who speaks before he thinks?A foolish person is more likely to become wise than that person. A foolish person is more likely to become wise than that person."
     },
     {
       "verse": "21",
-      "text": "You may give a servant everything that he wants from his birth. But if you do that, he will be useless in the end."
+      "text": "You may give a servant everything that he wants from his birth.But if you do that, he will be useless in the end. But if you do that, he will be useless in the end."
     },
     {
       "verse": "22",
-      "text": "An angry person causes arguments. When he is angry, he causes many sins to happen."
+      "text": "An angry person causes arguments.When he is angry, he causes many sins to happen. When he is angry, he causes many sins to happen."
     },
     {
       "verse": "23",
-      "text": "A person's pride will bring shame to him. But a humble person will receive honour."
+      "text": "A person's pride will bring shame to him.But a humble person will receive honour. But a humble person will receive honour."
     },
     {
       "verse": "24",
-      "text": "If you help a robber, you are bringing punishment on yourself. If you tell the truth in court, or if you keep quiet, you will receive your punishment. In court, people had to ask God to curse them if they did not tell the truth. So the judge will punish you if you say that you helped a robber. God will punish you if you do not say anything."
+      "text": "If you help a robber, you are bringing punishment on yourself.If you tell the truth in court, or if you keep quiet,you will receive your punishment. If you tell the truth in court, or if you keep quiet, you will receive your punishment."
     },
     {
       "verse": "25",
-      "text": "If you are afraid of what people think about you, you will never feel safe. But if you trust in the Lord, he will keep you safe."
+      "text": "If you are afraid of what people think about you,you will never feel safe.But if you trust in the Lord,he will keep you safe. you will never feel safe. But if you trust in the Lord, he will keep you safe."
     },
     {
       "verse": "26",
-      "text": "Many people want the king to be their friend. But only the Lord can give you true justice."
+      "text": "Many people want the king to be their friend.But only the Lord can give you true justice. But only the Lord can give you true justice."
     },
     {
       "verse": "27",
-      "text": "Righteous people hate wicked people. Wicked people also hate people who live in a good way. Print... Use screen font size Show All Comments Proverbs 28Proverbs 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Righteous people hate wicked people.Wicked people also hate people who live in a good way."
     }
   ],
   "30": [
     {
       "verse": "1",
-      "text": "These are the words of Jakeh's son, Agur. It is an important message. The man says this to Ithiel: God, I am weak and tired. I cannot continue to stand."
+      "text": "These are the words of Jakeh's son, Agur. It is an important message. The man says this to Ithiel:God, I am weak and tired. I cannot continue to stand. God, I am weak and tired. I cannot continue to stand."
     },
     {
       "verse": "2",
@@ -3484,11 +3484,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Do not let me ever deceive people with lies. Do not let me be too rich or too poor. Give me only as much food as I need each day."
+      "text": "Do not let me ever deceive people with lies.Do not let me be too rich or too poor. Give me only as much food as I need each day. Do not let me be too rich or too poor. Give me only as much food as I need each day."
     },
     {
       "verse": "9",
-      "text": "If I have more than enough, I might say that I do not know you. I might say, ‘Who is the Lord?’ But if I am poor, I might rob people. That would insult my God's good name."
+      "text": "If I have more than enough, I might say that I do not know you. I might say, ‘Who is the Lord?’But if I am poor, I might rob people. That would insult my God's good name. But if I am poor, I might rob people. That would insult my God's good name."
     },
     {
       "verse": "10",
@@ -3512,7 +3512,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "A greedy leech has two daughters. They are always saying, ‘Give me more!’ A leech is a little animal that drinks blood. There are three things that never have enough for themselves, even four things:"
+      "text": "A greedy leech has two daughters. They are always saying, ‘Give me more!’There are three things that never have enough for themselves, even four things: There are three things that never have enough for themselves, even four things:"
     },
     {
       "verse": "16",
@@ -3584,13 +3584,13 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "If you beat milk for a long time, it will become butter. If you hit someone's nose, it will bleed. In the same way, if you make people angry, it will cause trouble. Print... Use screen font size Show All Comments Proverbs 29Proverbs 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you beat milk for a long time, it will become butter. If you hit someone's nose, it will bleed. In the same way, if you make people angry, it will cause trouble."
     }
   ],
   "31": [
     {
       "verse": "1",
-      "text": "These are the words that King Lemuel's mother said to him. It is an important message: Lemuel was not a king of Israel. But his name means ‘he belongs to God’."
+      "text": "These are the words that King Lemuel's mother said to him. It is an important message:"
     },
     {
       "verse": "2",
@@ -3622,7 +3622,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Speak clearly to help them. Judge people in a way that is fair and right. Help poor and helpless people to receive justice. A poem about a good wife This poem at the end of the Book of Proverbs tells us what it means to be really wise. It does not mean that you know everything. It means that you live in a good way that helps other people. Verses 10-31 are an alphabet poem. Each line starts with the next letter of the Hebrew alphabet, starting with Aleph."
+      "text": "Speak clearly to help them. Judge people in a way that is fair and right. Help poor and helpless people to receive justice."
     },
     {
       "verse": "10",
@@ -3706,11 +3706,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "A woman may seem to be beautiful, but that can deceive people. Her body will not be beautiful for ever. But a woman who respects the Lord with fear will receive honour."
+      "text": "A woman may seem to be beautiful, but that can deceive people. Her body will not be beautiful for ever.But a woman who respects the Lord with fear will receive honour. But a woman who respects the Lord with fear will receive honour."
     },
     {
       "verse": "31",
-      "text": "Praise her for everything that she has done. Everyone in the city should know about her, and they should praise her as she deserves. Print... Use screen font size Show All Comments Proverbs 30Ecclesiastes Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Praise her for everything that she has done.Everyone in the city should know about her, and they should praise her as she deserves."
     }
   ]
 };

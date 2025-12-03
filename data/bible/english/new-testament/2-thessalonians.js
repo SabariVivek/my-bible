@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from Paul, Silas and Timothy. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ."
+      "text": "This letter is from Paul, Silas and Timothy.We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ. We are writing to the people of the church in Thessalonica. You belong to God our Father, and to the Lord Jesus Christ."
     },
     {
       "verse": "2",
-      "text": "We pray that God, the Father, and the Lord Jesus Christ will continue to help you. We pray that they will give you peace in your minds. Paul thanks God because of the believers at Thessalonica"
+      "text": "We pray that God, the Father, and the Lord Jesus Christ will continue to help you. We pray that they will give you peace in your minds."
     },
     {
       "verse": "3",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This will happen when Jesus comes on that special day. His own people will praise him for the great things that he has done for them. All of us who are believers will be surprised when we see his great power. This includes you, because you believed our message about the Lord Jesus. Paul prays for the believers"
+      "text": "This will happen when Jesus comes on that special day. His own people will praise him for the great things that he has done for them. All of us who are believers will be surprised when we see his great power. This includes you, because you believed our message about the Lord Jesus."
     },
     {
       "verse": "11",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "As a result, people will praise our Lord Jesus because of how you live. You also will receive praise, because you belong to Jesus. All this is possible because our God and the Lord Jesus Christ are very kind. Print... Use screen font size Show All Comments 2 Thessalonians Introduction2 Thessalonians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "As a result, people will praise our Lord Jesus because of how you live. You also will receive praise, because you belong to Jesus. All this is possible because our God and the Lord Jesus Christ are very kind."
     }
   ],
   "2": [
@@ -56,7 +56,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Please do not become easily confused about this. Do not let yourselves become afraid because of false messages about the Lord's return. Some people are telling you that the great day of the Lord's return has already happened. Some of these people say that God's Spirit has shown them a message like that. Other people might say that the message came from us. Or they might say that we wrote it in a letter. The ‘great day of the Lord's return’ includes many events. It will be a time when God will win against all his enemies. See Zephaniah He will punish them. See Isaiah This will cause trouble on the earth. See Isaiah Amos But it will be a very good time for those who love God. It is a time when God will make his people free. See Jeremiah Joel It is the time when Jesus will return and he will start to rule on the earth. When he was with them, Paul had taught the Christians at Thessalonica about Jesus' return. See verse 5. He had said more about it in his first letter to them. See 1 Thessalonians But other people were now teaching that it had already happened. So Paul is explaining that certain things must happen before Jesus returns."
+      "text": "Please do not become easily confused about this. Do not let yourselves become afraid because of false messages about the Lord's return. Some people are telling you that the great day of the Lord's return has already happened. Some of these people say that God's Spirit has shown them a message like that. Other people might say that the message came from us. Or they might say that we wrote it in a letter."
     },
     {
       "verse": "3",
@@ -64,7 +64,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "This man will be God's great enemy. He will say that he is greater than everything that people call their gods. He will say that he is greater than everything that people worship. As a result, he will even go into the temple. He will sit down there like a king. He will tell everyone that he himself is God. The ‘man who is completely against God’ is God's great enemy. See 1 John The book in the Bible called Daniel tells about a very bad ruler like this. See Daniel The Bible describes a strange wild animal that may also be like a picture of this person. See Revelation"
+      "text": "This man will be God's great enemy. He will say that he is greater than everything that people call their gods. He will say that he is greater than everything that people worship. As a result, he will even go into the temple. He will sit down there like a king. He will tell everyone that he himself is God."
     },
     {
       "verse": "5",
@@ -80,7 +80,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then the man who is against God will appear. But the Lord Jesus will come, and he will kill that man. Jesus will blow him away with breath from his mouth. When Jesus appears with great power, that enemy of God will be there no longer! Something (verse 6) or someone (verse 7) is making it impossible for the enemy of God to come yet. The Christians at Thessalonica knew what Paul meant. But we do not know exactly what Paul means here. He may mean the governments that rule people in this world. God chooses to let governments rule people. And good governments make good rules. Those rules help people do what is right."
+      "text": "Then the man who is against God will appear. But the Lord Jesus will come, and he will kill that man. Jesus will blow him away with breath from his mouth. When Jesus appears with great power, that enemy of God will be there no longer!"
     },
     {
       "verse": "9",
@@ -96,7 +96,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "As a result, God will punish all of them. They have refused to believe what is true. Instead, they have enjoyed doing very bad things. The believers must continue to trust God"
+      "text": "As a result, God will punish all of them. They have refused to believe what is true. Instead, they have enjoyed doing very bad things."
     },
     {
       "verse": "13",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "We pray that he will continue to help you and make you strong. Then you will always be able to do good things and to say good things. Print... Use screen font size Show All Comments 2 Thessalonians 12 Thessalonians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We pray that he will continue to help you and make you strong. Then you will always be able to do good things and to say good things."
     }
   ],
   "3": [
@@ -138,7 +138,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "We pray that the Lord will lead you in your thoughts. Then you will understand God's love better and better. And you will be patient and strong, as Christ is. Believers must not refuse to work"
+      "text": "We pray that the Lord will lead you in your thoughts. Then you will understand God's love better and better. And you will be patient and strong, as Christ is."
     },
     {
       "verse": "6",
@@ -158,7 +158,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Even when we were there with you, we told you this rule: ‘If anyone refuses to work, you should not give food to him.’ See 1 Thessalonians"
+      "text": "Even when we were there with you, we told you this rule: ‘If anyone refuses to work, you should not give food to him.’"
     },
     {
       "verse": "11",
@@ -166,7 +166,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "We have something to say to people who are lazy like that. We warn them with the authority that the Lord Jesus Christ gives to us. They must stop causing trouble. They must work properly, so that they get their own food to eat. In his first letter to them, Paul told the Christians at Thessalonica that they must work. See 1 Thessalonians But some of them were still refusing to work. They thought that Jesus would return to the earth very soon. So they may have thought that they did not need to work. In this letter, Paul has already explained that Jesus will not return so very soon. Certain things must happen first. See 2 Thessalonians So now, Paul tells them again that it is right for them to work."
+      "text": "We have something to say to people who are lazy like that. We warn them with the authority that the Lord Jesus Christ gives to us. They must stop causing trouble. They must work properly, so that they get their own food to eat."
     },
     {
       "verse": "13",
@@ -178,7 +178,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "But remember that he is a believer, as you are. So warn him carefully. Paul finishes his letter"
+      "text": "But remember that he is a believer, as you are. So warn him carefully."
     },
     {
       "verse": "16",
@@ -190,7 +190,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "I pray that our Lord Jesus Christ will continue to be very kind to all of you. Print... Use screen font size Show All Comments 2 Thessalonians 21 Timothy Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I pray that our Lord Jesus Christ will continue to be very kind to all of you."
     }
   ]
 };

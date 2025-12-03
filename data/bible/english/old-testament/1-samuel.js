@@ -6,11 +6,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Elkanah had two wives. One wife was called Hannah and the other wife was called Peninnah. Peninnah had children but Hannah did not have any children. Ramah was also called Ramathaim."
+      "text": "Elkanah had two wives. One wife was called Hannah and the other wife was called Peninnah. Peninnah had children but Hannah did not have any children."
     },
     {
       "verse": "3",
-      "text": "Every year, Elkanah left his home in Ramah to go to the town of Shiloh. He went there to worship the Lord Almighty and to offer sacrifices to him. Hophni and Phinehas served the Lord at Shiloh as his priests. Eli was their father. Israelite men had to go to a special place to offer sacrifices to God three times every year. See Exodus Deuteronomy This place was in Shiloh at this time. Shiloh was about 24 kilometres (15 miles) east of Ramah. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "Every year, Elkanah left his home in Ramah to go to the town of Shiloh. He went there to worship the Lord Almighty and to offer sacrifices to him. Hophni and Phinehas served the Lord at Shiloh as his priests. Eli was their father."
     },
     {
       "verse": "4",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Hannah's husband, Elkanah, said to her, ‘Why should you weep and refuse to eat? Do not be so sad. I love you, and that is better than ten sons.’ Hannah and Eli"
+      "text": "Hannah's husband, Elkanah, said to her, ‘Why should you weep and refuse to eat? Do not be so sad. I love you, and that is better than ten sons.’"
     },
     {
       "verse": "9",
@@ -42,7 +42,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "She made a promise to God. She prayed, ‘Lord Almighty, you can see how sad I am. Please be kind to me, your servant. Remember me and do not forget me. Please give a son to me, your servant. If you do that, I will give him to serve you for all of his life. Nobody will ever cut his hair.’ At this time, the temple where people worshipped the Lord was a tent. Nobody will ever cut his hair.’ This is a sign of the Nazirite promise (Numbers The person promised to give his life to God."
+      "text": "She made a promise to God. She prayed, ‘Lord Almighty, you can see how sad I am. Please be kind to me, your servant. Remember me and do not forget me. Please give a son to me, your servant. If you do that, I will give him to serve you for all of his life. Nobody will ever cut his hair.’"
     },
     {
       "verse": "12",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Hannah said to him, ‘I will try to do what pleases you, sir.’ Then Hannah went away and she ate some food. Her face was not sad now."
+      "text": "Hannah said to him, ‘I will try to do what pleases you, sir.’Then Hannah went away and she ate some food. Her face was not sad now. Then Hannah went away and she ate some food. Her face was not sad now."
     },
     {
       "verse": "19",
@@ -78,7 +78,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Hannah became pregnant. Later, she gave birth to a son. She gave him the name ‘Samuel’. She said, ‘His name is Samuel because I asked the Lord for him.’ The name Samuel means ‘God's gift’. Hannah gives Samuel to serve God"
+      "text": "Hannah became pregnant. Later, she gave birth to a son. She gave him the name ‘Samuel’. She said, ‘His name is Samuel because I asked the Lord for him.’"
     },
     {
       "verse": "21",
@@ -90,11 +90,11 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Elkanah said to Hannah, ‘You must do what seems right to you. Stay here at home until the boy begins to eat proper food. May the Lord help you, as he has promised.’ So Hannah stayed at home with her son while he continued to drink milk from her breasts."
+      "text": "Elkanah said to Hannah, ‘You must do what seems right to you. Stay here at home until the boy begins to eat proper food. May the Lord help you, as he has promised.’So Hannah stayed at home with her son while he continued to drink milk from her breasts. So Hannah stayed at home with her son while he continued to drink milk from her breasts."
     },
     {
       "verse": "24",
-      "text": "When Samuel started to eat proper food, Hannah took him to Shiloh. She took him to the Lord's house there when he was still a young boy. She took with her a bull that was three years old. She also took a big bag of flour and a leather bag full of wine."
+      "text": "When Samuel started to eat proper food, Hannah took him to Shiloh. She took him to the Lord's house there when he was still a young boy. She took with her a bull that was three years old. She also took a big bag of flour and a leather bag full of wine. Then Elkanah's family worshipped the Lord there."
     },
     {
       "verse": "25",
@@ -110,53 +110,53 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Now I will give this child to serve the Lord. He will be the Lord's servant for his whole life.’ Then Elkanah's family worshipped the Lord there. Print... Use screen font size Show All Comments 1 Samuel Introduction1 Samuel 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Now I will give this child to serve the Lord. He will be the Lord's servant for his whole life.’Then Elkanah's family worshipped the Lord there."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "Hannah prayed and she said, ‘I am very happy when I think about what the Lord has done. The Lord has made me very strong. I can laugh at my enemies because you, Lord, have saved me. That makes me very happy."
+      "text": "Hannah prayed and she said,‘I am very happy when I think about what the Lord has done.The Lord has made me very strong.I can laugh at my enemies because you, Lord, have saved me.That makes me very happy. ‘I am very happy when I think about what the Lord has done. The Lord has made me very strong. I can laugh at my enemies because you, Lord, have saved me. That makes me very happy."
     },
     {
       "verse": "2",
-      "text": "Nobody else is holy like the Lord. There is no other God except you, our God. You are the only Rock where we can be safe. The Lord is often called a rock, because he is a strong place where we can hide and be safe."
+      "text": "Nobody else is holy like the Lord.There is no other God except you, our God.You are the only Rock where we can be safe. There is no other God except you, our God. You are the only Rock where we can be safe."
     },
     {
       "verse": "3",
-      "text": "Do not boast or speak proud words! The Lord is a God who knows everything. He judges everything that people do."
+      "text": "Do not boast or speak proud words!The Lord is a God who knows everything.He judges everything that people do. The Lord is a God who knows everything. He judges everything that people do."
     },
     {
       "verse": "4",
-      "text": "The weapons of brave soldiers may break. But weak people who fall become strong again."
+      "text": "The weapons of brave soldiers may break.But weak people who fall become strong again. But weak people who fall become strong again."
     },
     {
       "verse": "5",
-      "text": "People who had plenty of food to eat have to work for it now. But the people who were hungry have enough food now. Women who could not have any children have now given birth to seven children. But those who had many children are now alone."
+      "text": "People who had plenty of food to eat have to work for it now.But the people who were hungry have enough food now.Women who could not have any children have now given birth to seven children.But those who had many children are now alone. But the people who were hungry have enough food now. Women who could not have any children have now given birth to seven children. But those who had many children are now alone."
     },
     {
       "verse": "6",
-      "text": "The Lord gives both life and death. He sends some people to their graves, and he raises other people up."
+      "text": "The Lord gives both life and death.He sends some people to their graves,and he raises other people up. He sends some people to their graves, and he raises other people up."
     },
     {
       "verse": "7",
-      "text": "The Lord makes some people poor and he makes other people rich. He causes some people to be important and he puts other people low down."
+      "text": "The Lord makes some people poorand he makes other people rich.He causes some people to be importantand he puts other people low down. and he makes other people rich. He causes some people to be important and he puts other people low down."
     },
     {
       "verse": "8",
-      "text": "He raises up weak people from the ground. He lifts poor people up out of the dirt. He makes them become friends of princes. He puts them in places of honour. The deep places of the earth belong to the Lord. He built the world on a strong foundation."
+      "text": "He raises up weak people from the ground.He lifts poor people up out of the dirt.He makes them become friends of princes.He puts them in places of honour.The deep places of the earth belong to the Lord.He built the world on a strong foundation. He lifts poor people up out of the dirt. He makes them become friends of princes. He puts them in places of honour. The deep places of the earth belong to the Lord. He built the world on a strong foundation."
     },
     {
       "verse": "9",
-      "text": "He takes care of his faithful people. But he puts wicked people in a dark place where they can do nothing. It is not a person's own strength that makes him great."
+      "text": "He takes care of his faithful people.But he puts wicked people in a dark place where they can do nothing.It is not a person's own strength that makes him great. But he puts wicked people in a dark place where they can do nothing. It is not a person's own strength that makes him great."
     },
     {
       "verse": "10",
-      "text": "The Lord will destroy his enemies. He will shout against them from heaven like loud thunder. The Lord will judge everyone on earth. He will make his king strong. He will give power to the king that he has chosen to rule.’"
+      "text": "The Lord will destroy his enemies.He will shout against them from heaven like loud thunder.The Lord will judge everyone on earth.He will make his king strong.He will give power to the king that he has chosen to rule.’ He will shout against them from heaven like loud thunder. The Lord will judge everyone on earth. He will make his king strong. He will give power to the king that he has chosen to rule.’"
     },
     {
       "verse": "11",
-      "text": "Then Elkanah went back to his home at Ramah with his family. But the young boy, Samuel, stayed in Shiloh. He served the Lord there, while Eli the priest took care of him. Eli's wicked sons"
+      "text": "Then Elkanah went back to his home at Ramah with his family. But the young boy, Samuel, stayed in Shiloh. He served the Lord there, while Eli the priest took care of him."
     },
     {
       "verse": "12",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "They did not do what the priests should do. People brought sacrifices to offer to the Lord at Shiloh. When the meat was still boiling in a pot, a servant of the priest would come. He would bring a fork that had three points."
+      "text": "They did not do what the priests should do.People brought sacrifices to offer to the Lord at Shiloh. When the meat was still boiling in a pot, a servant of the priest would come. He would bring a fork that had three points."
     },
     {
       "verse": "14",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The Lord knew what Eli's sons were doing. They did not respect the sacrifices that people were offering to the Lord. The Lord saw that their sin was very bad. Samuel at Shiloh"
+      "text": "The Lord knew what Eli's sons were doing. They did not respect the sacrifices that people were offering to the Lord. The Lord saw that their sin was very bad."
     },
     {
       "verse": "18",
@@ -192,7 +192,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Each year, Eli blessed Elkanah and his wife. He said, ‘I pray that the Lord will give you more children to take the place of Samuel. Hannah has given her son to serve the Lord, so may she give birth to other children too.’ Then they would return to their own home."
+      "text": "Each year, Eli blessed Elkanah and his wife. He said, ‘I pray that the Lord will give you more children to take the place of Samuel. Hannah has given her son to serve the Lord, so may she give birth to other children too.’Then they would return to their own home."
     },
     {
       "verse": "21",
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Eli was very old now. He heard about everything that his sons were doing to all the Israelites. He knew that his sons had sex with some of the women helpers. Those women worked at the door of the Tent of Meeting."
+      "text": "Eli was very old now. He heard about everything that his sons were doing to all the Israelites. He knew that his sons had sex with some of the women helpers. Those women worked at the door of the Tent of Meeting. Eli's sons did not listen to their father. The Lord had already decided to kill them."
     },
     {
       "verse": "23",
@@ -212,15 +212,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "If you do something bad to another person, God can speak on your behalf. But if you do something bad against the Lord, nobody can speak on your behalf.’ Eli's sons did not listen to their father. The Lord had already decided to kill them."
+      "text": "If you do something bad to another person, God can speak on your behalf. But if you do something bad against the Lord, nobody can speak on your behalf.’Eli's sons did not listen to their father. The Lord had already decided to kill them."
     },
     {
       "verse": "26",
-      "text": "The young boy Samuel continued to grow. The Lord was pleased with him, and so were the people. God's message to Eli"
+      "text": "The young boy Samuel continued to grow. The Lord was pleased with him, and so were the people."
     },
     {
       "verse": "27",
-      "text": "A servant of God came and he spoke to Eli. This is what he said: Servant of God’ is another name for a prophet who speaks God's messages. We do not know the name of this prophet. ‘The Lord says, “A long time ago, when your ancestors were in Egypt, I showed myself to them. At that time they were slaves of Egypt's king."
+      "text": "A servant of God came and he spoke to Eli. This is what he said:‘The Lord says, “A long time ago, when your ancestors were in Egypt, I showed myself to them. At that time they were slaves of Egypt's king."
     },
     {
       "verse": "28",
@@ -228,7 +228,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "But you and your sons do not respect the sacrifices that I have commanded people to offer in my house. Eli, you give more honour to your sons than you give to me. Your family eat all the best parts of the offerings that the Israelites bring to me. You have all become fat!” The priests wore special clothes when they were in God's house. An ephod was like a coat which had no sleeves."
+      "text": "But you and your sons do not respect the sacrifices that I have commanded people to offer in my house. Eli, you give more honour to your sons than you give to me. Your family eat all the best parts of the offerings that the Israelites bring to me. You have all become fat!”"
     },
     {
       "verse": "30",
@@ -256,7 +256,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Everyone in your family who continues to live will have to bend down low to this priest. They will ask him for a few coins and a piece of bread. ‘Please let me help the priests so that I can have something to eat,’ they will say.” ’ Print... Use screen font size Show All Comments 1 Samuel 11 Samuel 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Everyone in your family who continues to live will have to bend down low to this priest. They will ask him for a few coins and a piece of bread. ‘Please let me help the priests so that I can have something to eat,’ they will say.” ’"
     }
   ],
   "3": [
@@ -266,7 +266,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Eli's eyes had become weak. He could not see very well. One night, he was sleeping in his usual place."
+      "text": "Eli's eyes had become weak. He could not see very well. One night, he was sleeping in his usual place. But Eli said, ‘I did not call your name. Go back and lie down again.’ So Samuel went and he lay down again."
     },
     {
       "verse": "3",
@@ -278,11 +278,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Samuel ran to Eli and he said, ‘You called my name. Here I am.’ The lamp of God’. See Exodus But Eli said, ‘I did not call your name. Go back and lie down again.’ So Samuel went and he lay down again."
+      "text": "Samuel ran to Eli and he said, ‘You called my name. Here I am.’But Eli said, ‘I did not call your name. Go back and lie down again.’ So Samuel went and he lay down again."
     },
     {
       "verse": "6",
-      "text": "Again the Lord called out, ‘Samuel’. So Samuel went to Eli and he said, ‘You called my name. Here I am.’ Eli answered, ‘My son, I did not call your name. Go back and lie down again.’"
+      "text": "Again the Lord called out, ‘Samuel’. So Samuel went to Eli and he said, ‘You called my name. Here I am.’Eli answered, ‘My son, I did not call your name. Go back and lie down again.’ Eli answered, ‘My son, I did not call your name. Go back and lie down again.’"
     },
     {
       "verse": "7",
@@ -290,7 +290,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Then the Lord called Samuel's name for the third time. Samuel got up again. He went to Eli and he said, ‘You called my name. Here I am.’ Then Eli realized that it was the Lord who was calling the boy's name."
+      "text": "Then the Lord called Samuel's name for the third time. Samuel got up again. He went to Eli and he said, ‘You called my name. Here I am.’Then Eli realized that it was the Lord who was calling the boy's name."
     },
     {
       "verse": "9",
@@ -298,7 +298,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The Lord came and he stood near to Samuel. He called Samuel's name again, as he had done before. He said, ‘Samuel, Samuel’. Samuel said, ‘Speak. I am your servant and I am listening.’ This is the first time that God spoke to Samuel. It is the start of his work as a prophet of God."
+      "text": "The Lord came and he stood near to Samuel. He called Samuel's name again, as he had done before. He said, ‘Samuel, Samuel’. Samuel said, ‘Speak. I am your servant and I am listening.’"
     },
     {
       "verse": "11",
@@ -342,13 +342,13 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The Lord continued to appear at Shiloh. He showed himself to Samuel and he spoke to him there. from the north to the south’ or ‘from Dan to Beersheba’. Print... Use screen font size Show All Comments 1 Samuel 21 Samuel 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord continued to appear at Shiloh. He showed himself to Samuel and he spoke to him there."
     }
   ],
   "4": [
     {
       "verse": "1",
-      "text": "Samuel spoke the Lord's messages to all the Israelites. The Philistines take God's Covenant BoxThe Israelites went out to fight against the Philistines. The Israelite army put up their tents near the place called Ebenezer. The Philistine army put up their tents at Aphek."
+      "text": "Samuel spoke the Lord's messages to all the Israelites.The Israelites went out to fight against the Philistines. The Israelite army put up their tents near the place called Ebenezer. The Philistine army put up their tents at Aphek."
     },
     {
       "verse": "2",
@@ -356,7 +356,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Israelite soldiers returned to their tents. The leaders of Israel said to each other, ‘Why did the Lord let the Philistines win against us today? We should bring the Lord's Covenant Box here from Shiloh. We will take it with us into the battle. Then it will save us from our enemies.’ The Covenant Box was where the Lord met with his people. So they thought that the Lord would be with them in the battle. See Exodus"
+      "text": "The Israelite soldiers returned to their tents. The leaders of Israel said to each other, ‘Why did the Lord let the Philistines win against us today? We should bring the Lord's Covenant Box here from Shiloh. We will take it with us into the battle. Then it will save us from our enemies.’"
     },
     {
       "verse": "4",
@@ -380,7 +380,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Philistine soldiers, you must be brave! You must fight as strong men! If not, we will become slaves of these Hebrew people, as they were once our slaves. So be ready to fight bravely!’ The Israelites were also called Hebrews."
+      "text": "Philistine soldiers, you must be brave! You must fight as strong men! If not, we will become slaves of these Hebrew people, as they were once our slaves. So be ready to fight bravely!’"
     },
     {
       "verse": "10",
@@ -388,11 +388,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "The Philistines took God's Covenant Box for themselves. Eli's two sons, Hophni and Phinehas, also died. Eli dies"
+      "text": "The Philistines took God's Covenant Box for themselves. Eli's two sons, Hophni and Phinehas, also died."
     },
     {
       "verse": "12",
-      "text": "That same day, a soldier from the tribe of Benjamin ran from the battle. He ran to Shiloh. He had torn his clothes and he had put dirt on his head. People tore their clothes and they put dirt on their heads to show that they were very upset."
+      "text": "That same day, a soldier from the tribe of Benjamin ran from the battle. He ran to Shiloh. He had torn his clothes and he had put dirt on his head."
     },
     {
       "verse": "13",
@@ -404,7 +404,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Eli was now 98 years old and he could not see at all."
+      "text": "years old and he could not see at all."
     },
     {
       "verse": "16",
@@ -432,7 +432,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "She said, ‘God's glory has gone away from Israel because the Covenant Box has gone.’ Print... Use screen font size Show All Comments 1 Samuel 31 Samuel 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "She said, ‘God's glory has gone away from Israel because the Covenant Box has gone.’"
     }
   ],
   "5": [
@@ -446,7 +446,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The next morning, the people in Ashdod got up early. They saw that Dagon had fallen down in front of the Lord's Covenant Box. The idol's face was touching the ground. So they took Dagon and they put him back in his place. Ashdod is about 48 kilometres (30 miles) south of where they had their battle."
+      "text": "The next morning, the people in Ashdod got up early. They saw that Dagon had fallen down in front of the Lord's Covenant Box. The idol's face was touching the ground. So they took Dagon and they put him back in his place."
     },
     {
       "verse": "4",
@@ -462,11 +462,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "When the people in Ashdod saw what was happening, they said, ‘The Covenant Box of Israel's God must not stay here with us. He is punishing us and our god Dagon.’ A tumour is a lump that grows in your body. It makes you very ill."
+      "text": "When the people in Ashdod saw what was happening, they said, ‘The Covenant Box of Israel's God must not stay here with us. He is punishing us and our god Dagon.’"
     },
     {
       "verse": "8",
-      "text": "So the Philistine rulers met together. Ashdod's people asked them, ‘What should we do with the Covenant Box of Israel's God?’ The rulers answered, ‘Take it away to Gath.’ So the men took it to that city. Gath was a city that belonged to the Philistines."
+      "text": "So the Philistine rulers met together. Ashdod's people asked them, ‘What should we do with the Covenant Box of Israel's God?’The rulers answered, ‘Take it away to Gath.’ So the men took it to that city. The rulers answered, ‘Take it away to Gath.’ So the men took it to that city."
     },
     {
       "verse": "9",
@@ -474,15 +474,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So then they took God's Covenant Box to Ekron. Ekron was another town that belonged to the Philistines. When God's Covenant Box arrived in Ekron, the people screamed. They said, ‘They have brought the Covenant Box of Israel's God here! They want to kill us all!’"
+      "text": "So then they took God's Covenant Box to Ekron.When God's Covenant Box arrived in Ekron, the people screamed. They said, ‘They have brought the Covenant Box of Israel's God here! They want to kill us all!’"
     },
     {
       "verse": "11",
-      "text": "So they called the Philistine rulers to meet together. Ekron's people said to them, ‘Take away the Covenant Box of Israel's God! Send it back to its proper place. If you leave it here, it will kill us and all our families.’ All the people in the town were afraid of death. God had already started to punish them a lot."
+      "text": "So they called the Philistine rulers to meet together. Ekron's people said to them, ‘Take away the Covenant Box of Israel's God! Send it back to its proper place. If you leave it here, it will kill us and all our families.’All the people in the town were afraid of death. God had already started to punish them a lot."
     },
     {
       "verse": "12",
-      "text": "Many people had already died. All the other people in the town had tumours on their bodies. So they cried loudly up to the skies for help. Print... Use screen font size Show All Comments 1 Samuel 41 Samuel 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Many people had already died. All the other people in the town had tumours on their bodies. So they cried loudly up to the skies for help."
     }
   ],
   "6": [
@@ -500,7 +500,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The people asked, ‘What offering should we send to their God, so that he will forgive us?’ The priests and magicians replied, ‘You must send gold images of five tumours and five mice. You must make five images of each one because the Philistines have five rulers. They have the same disease that all of you have."
+      "text": "The people asked, ‘What offering should we send to their God, so that he will forgive us?’The priests and magicians replied, ‘You must send gold images of five tumours and five mice. You must make five images of each one because the Philistines have five rulers. They have the same disease that all of you have."
     },
     {
       "verse": "5",
@@ -508,7 +508,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Do not be like the Egyptians and Pharaoh, their king. They did not agree to obey God. So God punished them a lot until they let the Israelites leave Egypt. A tumour is a lump that grows in your body. It makes you very ill. See 1 Samuel"
+      "text": "Do not be like the Egyptians and Pharaoh, their king. They did not agree to obey God. So God punished them a lot until they let the Israelites leave Egypt."
     },
     {
       "verse": "7",
@@ -539,12 +539,16 @@ module.exports = {
       "text": "The people who lived in Beth Shemesh were working in their fields in the valley. They were cutting their wheat at harvest time. They looked up and they saw the Lord's Covenant Box. It made them very happy."
     },
     {
-      "verse": "14-15",
-      "text": "The cows pulled the cart into a field. It belonged to Joshua, who lived in Beth Shemesh. The cows stopped next to a large rock. The Levites took the Lord's Covenant Box off the cart. They put it on the large rock. They also put the box which contained the gold images on the rock. The people from Beth Shemesh cut up the cart. They used the wood to make a fire. Then they killed the cows. They burnt them on the fire as a burnt offering to the Lord. That day the people of Beth Shemesh offered many burnt offerings and other sacrifices to the Lord."
+      "verse": "14",
+      "text": "The cows pulled the cart into a field.  It belonged to Joshua, who lived in Beth Shemesh.  The cows stopped next to a large rock.  The Levites took the Lord's Covenant Box off the cart.  They put it on the large rock.  They also put the box which contained the gold images on the rock."
+    },
+    {
+      "verse": "15",
+      "text": "The people from Beth Shemesh cut up the cart.  They used the wood to make a fire.  Then they killed the cows.  They burnt them on the fire as a burnt offering to the Lord.  That day the people of Beth Shemesh offered many burnt offerings and other sacrifices to the Lord."
     },
     {
       "verse": "16",
-      "text": "The five Philistine rulers watched them as they did that. Then they returned to Ekron on the same day. The people took in their wheat in the months of May and June."
+      "text": "The five Philistine rulers watched them as they did that. Then they returned to Ekron on the same day."
     },
     {
       "verse": "17",
@@ -564,13 +568,13 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So they sent people to Kiriath-Jearim with a message. They said, ‘The Philistines have sent the Lord's Covenant Box back to Israel. Please come and take it from us. Take it to your town.’ Kiriath-Jearim was about 24 kilometres (15 miles) from Beth Shemesh. Print... Use screen font size Show All Comments 1 Samuel 51 Samuel 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So they sent people to Kiriath-Jearim with a message. They said, ‘The Philistines have sent the Lord's Covenant Box back to Israel. Please come and take it from us. Take it to your town.’"
     }
   ],
   "7": [
     {
       "verse": "1",
-      "text": "So men came from Kiriath-Jearim to fetch the Lord's Covenant Box. They took it to Abinadab's house. His house was on a hill. They chose his son, Eleazar, to take care of the Lord's Covenant Box as his special job. Samuel rules in Israel"
+      "text": "So men came from Kiriath-Jearim to fetch the Lord's Covenant Box. They took it to Abinadab's house. His house was on a hill. They chose his son, Eleazar, to take care of the Lord's Covenant Box as his special job."
     },
     {
       "verse": "2",
@@ -578,7 +582,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then Samuel said to all the Israelite people, ‘If you truly want to turn back to the Lord, you must show that you mean it. You must remove all your foreign gods and the images of Ashtoreth. You must give your lives completely to the Lord. You must worship only the Lord. If you do that, he will save you from the power of the Philistines.’ Ashtoreth was a false god that the Canaanite people worshipped."
+      "text": "Then Samuel said to all the Israelite people, ‘If you truly want to turn back to the Lord, you must show that you mean it. You must remove all your foreign gods and the images of Ashtoreth. You must give your lives completely to the Lord. You must worship only the Lord. If you do that, he will save you from the power of the Philistines.’"
     },
     {
       "verse": "4",
@@ -590,7 +594,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "So they all met together at Mizpah. They got water from a well and they poured it out for the Lord. They did not eat food that day. They prayed and they said, ‘We have done bad things against the Lord.’ Samuel became leader of the Israelite people at Mizpah."
+      "text": "So they all met together at Mizpah. They got water from a well and they poured it out for the Lord. They did not eat food that day. They prayed and they said, ‘We have done bad things against the Lord.’Samuel became leader of the Israelite people at Mizpah. Samuel became leader of the Israelite people at Mizpah."
     },
     {
       "verse": "7",
@@ -614,7 +618,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "After that, Samuel took a stone. He fixed it in the ground between Mizpah and Shen. He called the stone Ebenezer. He said, ‘The Lord has helped us all this way.’ Ebenezer means ‘stone of help’. Samuel put up this stone to give honour to God as Israel's helper."
+      "text": "After that, Samuel took a stone. He fixed it in the ground between Mizpah and Shen. He called the stone Ebenezer. He said, ‘The Lord has helped us all this way.’"
     },
     {
       "verse": "13",
@@ -634,7 +638,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "But he always returned to his home at Ramah. He was a judge for the Israelite people there too. He built an altar in Ramah to worship the Lord there. Print... Use screen font size Show All Comments 1 Samuel 61 Samuel 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But he always returned to his home at Ramah. He was a judge for the Israelite people there too. He built an altar in Ramah to worship the Lord there."
     }
   ],
   "8": [
@@ -648,7 +652,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But Samuel's sons did not live in a good way, as Samuel had done. They took money from people in ways that were not honest. They accepted bribes so that they did not judge in a fair way. At least 20 years had passed since the battle at Mizpah in chapter 7."
+      "text": "But Samuel's sons did not live in a good way, as Samuel had done. They took money from people in ways that were not honest. They accepted bribes so that they did not judge in a fair way."
     },
     {
       "verse": "4",
@@ -720,11 +724,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Samuel listened to everything that the people said. Then he told the Lord about it all."
+      "text": "Samuel listened to everything that the people said. Then he told the Lord about it all. Then Samuel told Israel's people, ‘Return to your own towns, each of you.’"
     },
     {
       "verse": "22",
-      "text": "The Lord said to Samuel, ‘You must do what they want. You must give a king to them.’ Then Samuel told Israel's people, ‘Return to your own towns, each of you.’ Print... Use screen font size Show All Comments 1 Samuel 71 Samuel 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord said to Samuel, ‘You must do what they want. You must give a king to them.’Then Samuel told Israel's people, ‘Return to your own towns, each of you.’"
     }
   ],
   "9": [
@@ -762,7 +766,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "(That was the custom in Israel. If someone needed to hear a message from God, he would say, ‘We should go and talk with the seer.’ The man that we now call a prophet was called a ‘seer’ at that time.) A seer could see things that other people could not. God sometimes gave special dreams to a seer about things a long way away in time or in space."
+      "text": "(That was the custom in Israel. If someone needed to hear a message from God, he would say, ‘We should go and talk with the seer.’ The man that we now call a prophet was called a ‘seer’ at that time.)"
     },
     {
       "verse": "10",
@@ -778,7 +782,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When you go into the town, you will find him before he goes up there. The people will not start to eat until he comes. First, he must bless the sacrifice. Then he will eat with the people who are there. Go up into the town now and you will find him.’ Saul meets Samuel"
+      "text": "When you go into the town, you will find him before he goes up there. The people will not start to eat until he comes. First, he must bless the sacrifice. Then he will eat with the people who are there. Go up into the town now and you will find him.’"
     },
     {
       "verse": "14",
@@ -822,7 +826,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "So the cook brought the leg of meat and he put it down in front of Saul. Samuel said to Saul, ‘I kept this special piece of meat for you to eat. Eat it now. I kept it separate for this time when we would eat together. I chose it for you when I asked the people to come and eat this special meal.’ So Saul ate the meal with Samuel that day."
+      "text": "So the cook brought the leg of meat and he put it down in front of Saul. Samuel said to Saul, ‘I kept this special piece of meat for you to eat. Eat it now. I kept it separate for this time when we would eat together. I chose it for you when I asked the people to come and eat this special meal.’So Saul ate the meal with Samuel that day. So Saul ate the meal with Samuel that day."
     },
     {
       "verse": "25",
@@ -830,17 +834,17 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "They got up at dawn the next day. Saul had been sleeping on the roof. Samuel shouted up to him, ‘Get up and prepare to leave. I will send you on your journey.’ The roofs of their houses were flat and people could sit or lie down on them. Saul got ready to leave to go home. Saul and Samuel went out into the street together."
+      "text": "They got up at dawn the next day. Saul had been sleeping on the roof. Samuel shouted up to him, ‘Get up and prepare to leave. I will send you on your journey.’Saul got ready to leave to go home. Saul and Samuel went out into the street together."
     },
     {
       "verse": "27",
-      "text": "They walked to the edge of the town. Samuel said to Saul, ‘Tell your servant to go on in front of us.’ So he did that. Then Samuel said, ‘Stay here for a moment. I need to tell you God's message.’ Print... Use screen font size Show All Comments 1 Samuel 81 Samuel 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They walked to the edge of the town. Samuel said to Saul, ‘Tell your servant to go on in front of us.’ So he did that.Then Samuel said, ‘Stay here for a moment. I need to tell you God's message.’"
     }
   ],
   "10": [
     {
       "verse": "1",
-      "text": "Then Samuel took a jar of oil and he poured the oil on Saul's head. He kissed Saul. He said: ‘The Lord has anointed you as the leader of his people. You will rule over them and you will rescue them from the power of their enemies. This is how you will know that the Lord has chosen you to be the leader of the Israelite people: his people’ means the Israelite people."
+      "text": "Then Samuel took a jar of oil and he poured the oil on Saul's head. He kissed Saul. He said:‘The Lord has anointed you as the leader of his people. You will rule over them and you will rescue them from the power of their enemies. This is how you will know that the Lord has chosen you to be the leader of the Israelite people: ‘The Lord has anointed you as the leader of his people. You will rule over them and you will rescue them from the power of their enemies. This is how you will know that the Lord has chosen you to be the leader of the Israelite people:"
     },
     {
       "verse": "2",
@@ -900,7 +904,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Saul replied, ‘He told us that someone had found the donkeys.’ But Saul did not tell his uncle that Samuel had said that he would become the king. Saul becomes the first king of Israel"
+      "text": "Saul replied, ‘He told us that someone had found the donkeys.’ But Saul did not tell his uncle that Samuel had said that he would become the king."
     },
     {
       "verse": "17",
@@ -944,7 +948,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "But some wicked men were complaining. They said, ‘This man will never be able to save us.’ They did not respect Saul. They did not bring him any gifts. But Saul did not say anything against them. Print... Use screen font size Show All Comments 1 Samuel 91 Samuel 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But some wicked men were complaining. They said, ‘This man will never be able to save us.’ They did not respect Saul. They did not bring him any gifts. But Saul did not say anything against them."
     }
   ],
   "11": [
@@ -954,7 +958,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Nahash said, ‘I will make an agreement with you only if you let me do this. I must cut out the right eye of every person in your town. I want to bring shame on all Israel's people.’ The Ammonites were the descendants of Ben-Ammi, who was the grandson of Lot. See Genesis The Ammonites had attacked Israel in the past. See Judges"
+      "text": "Nahash said, ‘I will make an agreement with you only if you let me do this. I must cut out the right eye of every person in your town. I want to bring shame on all Israel's people.’"
     },
     {
       "verse": "3",
@@ -978,11 +982,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "They met together at Bezek. Saul counted 300,000 men from Israel and 30,000 men from Judah. Judah was the most important Israelite tribe."
+      "text": "They met together at Bezek. Saul counted 300,000 men from Israel and 30,000 men from Judah."
     },
     {
       "verse": "9",
-      "text": "Saul said to the men who had brought the news from Jabesh, ‘Return to Jabesh. Tell the people, “We will come to rescue you tomorrow, before midday.” ’ So the men took the message to the people in Jabesh. The people were very happy."
+      "text": "Saul said to the men who had brought the news from Jabesh, ‘Return to Jabesh. Tell the people, “We will come to rescue you tomorrow, before midday.” ’So the men took the message to the people in Jabesh. The people were very happy."
     },
     {
       "verse": "10",
@@ -1006,7 +1010,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So everyone went to Gilgal. They went to the place where they worshipped the Lord. They all agreed that Saul would be their king. They offered peace offerings to the Lord. Saul and all the Israelites were very happy. Print... Use screen font size Show All Comments 1 Samuel 101 Samuel 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So everyone went to Gilgal. They went to the place where they worshipped the Lord. They all agreed that Saul would be their king. They offered peace offerings to the Lord. Saul and all the Israelites were very happy."
     }
   ],
   "12": [
@@ -1028,7 +1032,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Samuel said to them, ‘The Lord and his chosen king have heard what you have said today. They know that I have not done a wrong thing against any of you.’ The people replied, ‘Yes, the Lord knows what we have said.’"
+      "text": "Samuel said to them, ‘The Lord and his chosen king have heard what you have said today. They know that I have not done a wrong thing against any of you.’The people replied, ‘Yes, the Lord knows what we have said.’ The people replied, ‘Yes, the Lord knows what we have said.’"
     },
     {
       "verse": "6",
@@ -1052,7 +1056,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So the Lord sent Gideon, Barak, Jephthah and Samuel to help you. The Lord saved you from all your enemies so that you could live safely. Baal and Ashtoreth were false gods that the Canaanite people worshipped."
+      "text": "So the Lord sent Gideon, Barak, Jephthah and Samuel to help you. The Lord saved you from all your enemies so that you could live safely."
     },
     {
       "verse": "12",
@@ -1076,7 +1080,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "This is the time of the wheat harvest. I will ask the Lord to send thunder and rain. Then you will understand that you have done an evil thing against the Lord. You asked for a king to rule over you.’ They cut down the wheat in the months of May and June. They did not have storms or rain in Israel at that time of the year."
+      "text": "This is the time of the wheat harvest. I will ask the Lord to send thunder and rain. Then you will understand that you have done an evil thing against the Lord. You asked for a king to rule over you.’"
     },
     {
       "verse": "18",
@@ -1108,17 +1112,17 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "If you continue to do evil things, that will be the end of you and your king.’ Print... Use screen font size Show All Comments 1 Samuel 111 Samuel 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you continue to do evil things, that will be the end of you and your king.’"
     }
   ],
   "13": [
     {
       "verse": "1",
-      "text": "Saul was 30 years old when he became king. He ruled Israel as king for 42 years."
+      "text": "years old when he became king. He ruled Israel as king for 42 years."
     },
     {
       "verse": "2",
-      "text": "He chose 3,000 men from Israel's army to be with him. 2,000 of those men stayed with him at Michmash and in the hill country of Bethel. Then 1,000 men were with his son Jonathan at Gibeah, in the land of Benjamin's tribe. Saul sent all the other men of the army back to their homes. We are not sure if 30 and 42 are the right numbers."
+      "text": "He chose 3,000 men from Israel's army to be with him. 2,000 of those men stayed with him at Michmash and in the hill country of Bethel. Then 1,000 men were with his son Jonathan at Gibeah, in the land of Benjamin's tribe. Saul sent all the other men of the army back to their homes."
     },
     {
       "verse": "3",
@@ -1126,7 +1130,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Everyone in Israel heard this message: ‘Saul has attacked the Philistines' camp. Now the Philistines hate the Israelites even more than they did before.’ So all the soldiers in Israel came to join Saul at Gilgal. Hebrew people’ was another way to speak about the Israelites. Saul prepares to fight the Philistines"
+      "text": "Everyone in Israel heard this message: ‘Saul has attacked the Philistines' camp. Now the Philistines hate the Israelites even more than they did before.’ So all the soldiers in Israel came to join Saul at Gilgal."
     },
     {
       "verse": "5",
@@ -1138,7 +1142,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Some of the Israelite soldiers crossed the Jordan River. They escaped to the land of Gad and Gilead. Saul himself stayed at Gilgal. All the soldiers that were still with him were shaking with fear."
+      "text": "Some of the Israelite soldiers crossed the Jordan River. They escaped to the land of Gad and Gilead.Saul himself stayed at Gilgal. All the soldiers that were still with him were shaking with fear."
     },
     {
       "verse": "8",
@@ -1154,7 +1158,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Samuel asked Saul, ‘What have you done?’ Saul replied, ‘The soldiers were starting to leave me. You had not arrived here at the time that you said you would come. I could see that the Philistine soldiers were preparing for battle at Michmash."
+      "text": "Samuel asked Saul, ‘What have you done?’Saul replied, ‘The soldiers were starting to leave me. You had not arrived here at the time that you said you would come. I could see that the Philistine soldiers were preparing for battle at Michmash."
     },
     {
       "verse": "12",
@@ -1174,7 +1178,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Saul and his son Jonathan were staying in Geba, in the land of Benjamin's tribe. They had their soldiers with them there. The Philistines had their camp at Michmash."
+      "text": "Saul and his son Jonathan were staying in Geba, in the land of Benjamin's tribe. They had their soldiers with them there.The Philistines had their camp at Michmash."
     },
     {
       "verse": "17",
@@ -1194,15 +1198,15 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "The Israelites had to pay eight grams of silver for the Philistines to make each plough or hoe sharp again. They paid four grams of silver for each axe, knife or ox-goad. A hoe is a sharp tool. An ox-goad is a metal stick with a point. Farmers used them."
+      "text": "The Israelites had to pay eight grams of silver for the Philistines to make each plough or hoe sharp again. They paid four grams of silver for each axe, knife or ox-goad."
     },
     {
       "verse": "22",
-      "text": "So when the fight started, the soldiers that were with Saul and Jonathan did not have any swords or spears. Only Saul and his son Jonathan had them. Jonathan attacks the Philistines"
+      "text": "So when the fight started, the soldiers that were with Saul and Jonathan did not have any swords or spears. Only Saul and his son Jonathan had them."
     },
     {
       "verse": "23",
-      "text": "A group of Philistine soldiers went to the narrow road across the hills at Michmash. Print... Use screen font size Show All Comments 1 Samuel 121 Samuel 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "A group of Philistine soldiers went to the narrow road across the hills at Michmash."
     }
   ],
   "14": [
@@ -1216,7 +1220,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The priest Ahijah was with Saul. Ahijah wore the priest's ephod. Ahijah was the son of Ichabod's brother, Ahitub. Ahitub was the son of Phinehas and the grandson of Eli. Eli was the priest who had served the Lord in Shiloh. See 1 Samuel Nobody knew that Jonathan had left."
+      "text": "The priest Ahijah was with Saul. Ahijah wore the priest's ephod. Ahijah was the son of Ichabod's brother, Ahitub. Ahitub was the son of Phinehas and the grandson of Eli. Eli was the priest who had served the Lord in Shiloh.Nobody knew that Jonathan had left."
     },
     {
       "verse": "4",
@@ -1248,11 +1252,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Jonathan and the young man stood where the Philistine soldiers could see them. The Philistines said, ‘Look! The Hebrews are coming out of the holes where they have been hiding.’"
+      "text": "Jonathan and the young man stood where the Philistine soldiers could see them. The Philistines said, ‘Look! The Hebrews are coming out of the holes where they have been hiding.’ Jonathan said to the young man, ‘Follow me as I climb up to them. The Lord has put those men under Israel's power!’"
     },
     {
       "verse": "12",
-      "text": "They shouted to Jonathan and the young man, ‘Come up here to fight against us! We will teach you how to fight!’ Jonathan said to the young man, ‘Follow me as I climb up to them. The Lord has put those men under Israel's power!’"
+      "text": "They shouted to Jonathan and the young man, ‘Come up here to fight against us! We will teach you how to fight!’Jonathan said to the young man, ‘Follow me as I climb up to them. The Lord has put those men under Israel's power!’"
     },
     {
       "verse": "13",
@@ -1280,7 +1284,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "While Saul was saying this, the Philistine soldiers were making more and more noise. They were all very confused. So Saul said to the priest, ‘Take your hand out of the ephod. It is time to go!’ They used special stones in the ephod to find out what God wanted them to do."
+      "text": "While Saul was saying this, the Philistine soldiers were making more and more noise. They were all very confused. So Saul said to the priest, ‘Take your hand out of the ephod. It is time to go!’"
     },
     {
       "verse": "20",
@@ -1296,7 +1300,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "In that way, the Lord saved Israel's people on that day. The battle moved all the way to Beth Aven and beyond it. After the battle"
+      "text": "In that way, the Lord saved Israel's people on that day. The battle moved all the way to Beth Aven and beyond it."
     },
     {
       "verse": "24",
@@ -1336,7 +1340,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Someone told Saul, ‘Look at what the army is doing. They are eating meat that still has blood in it. That is a sin against the Lord.’ Saul said to his soldiers, ‘You have turned against the Lord! Find a large stone and roll it here to me.’"
+      "text": "Someone told Saul, ‘Look at what the army is doing. They are eating meat that still has blood in it. That is a sin against the Lord.’Saul said to his soldiers, ‘You have turned against the Lord! Find a large stone and roll it here to me.’ Saul said to his soldiers, ‘You have turned against the Lord! Find a large stone and roll it here to me.’"
     },
     {
       "verse": "34",
@@ -1348,7 +1352,7 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Then Saul said, ‘We will go tonight and we will attack the Philistines again. We will chase them all night until dawn. We will kill all of them.’ The men answered, ‘Do whatever you think is right.’ But the priest said, ‘We should ask God first.’"
+      "text": "Then Saul said, ‘We will go tonight and we will attack the Philistines again. We will chase them all night until dawn. We will kill all of them.’The men answered, ‘Do whatever you think is right.’But the priest said, ‘We should ask God first.’ The men answered, ‘Do whatever you think is right.’ But the priest said, ‘We should ask God first.’"
     },
     {
       "verse": "37",
@@ -1364,11 +1368,11 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Saul said to all the Israelites, ‘You stand on this side. My son Jonathan and I will stand on the other side.’ The people answered, ‘Do what you think is right.’"
+      "text": "Saul said to all the Israelites, ‘You stand on this side. My son Jonathan and I will stand on the other side.’The people answered, ‘Do what you think is right.’ The people answered, ‘Do what you think is right.’"
     },
     {
       "verse": "41",
-      "text": "Then Saul prayed to the Lord, Israel's God. He said, ‘Please show us who has done this sin. Let the special stones, Urim and Thummim, show who has done it.’ The stones chose Jonathan and Saul. They did not choose the soldiers of the army. The Urim and Thummim were special stones that the priest used. God used them to show the people what was right."
+      "text": "Then Saul prayed to the Lord, Israel's God. He said, ‘Please show us who has done this sin. Let the special stones, Urim and Thummim, show who has done it.’ The stones chose Jonathan and Saul. They did not choose the soldiers of the army."
     },
     {
       "verse": "42",
@@ -1376,7 +1380,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Saul said to Jonathan, ‘Tell me what you have done.’ Jonathan told him, ‘I pushed the end of my stick into some honey. I ate a little bit. You have said that I must die.’"
+      "text": "Saul said to Jonathan, ‘Tell me what you have done.’Jonathan told him, ‘I pushed the end of my stick into some honey. I ate a little bit. You have said that I must die.’ Jonathan told him, ‘I pushed the end of my stick into some honey. I ate a little bit. You have said that I must die.’"
     },
     {
       "verse": "44",
@@ -1384,11 +1388,11 @@ module.exports = {
     },
     {
       "verse": "45",
-      "text": "But the soldiers said to Saul, ‘No! Jonathan must not die! He has rescued Israel in battle. As surely as the Lord lives, we promise that he will not lose even one hair on his head. It is God who has helped Jonathan to win the fight today.’ In that way, the army saved Jonathan from death."
+      "text": "But the soldiers said to Saul, ‘No! Jonathan must not die! He has rescued Israel in battle. As surely as the Lord lives, we promise that he will not lose even one hair on his head. It is God who has helped Jonathan to win the fight today.’In that way, the army saved Jonathan from death. In that way, the army saved Jonathan from death."
     },
     {
       "verse": "46",
-      "text": "After that, Saul stopped fighting against the Philistines. The Philistines returned to their homes. Saul leads Israel as their king"
+      "text": "After that, Saul stopped fighting against the Philistines. The Philistines returned to their homes."
     },
     {
       "verse": "47",
@@ -1408,11 +1412,11 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Abiel was the father of both Saul's father, Kish, and Abner's father, Ner. Ishvi was probably another name for Abinadab. See 1 Chronicles Esh-Baal was probably born after the time of 1 Samuel 14."
+      "text": "Abiel was the father of both Saul's father, Kish, and Abner's father, Ner."
     },
     {
       "verse": "52",
-      "text": "During all of Saul's life there were wars between the Philistines and the Israelites. If Saul found a strong soldier or a brave man, he caused the man to join his army. Print... Use screen font size Show All Comments 1 Samuel 131 Samuel 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "During all of Saul's life there were wars between the Philistines and the Israelites. If Saul found a strong soldier or a brave man, he caused the man to join his army."
     }
   ],
   "15": [
@@ -1438,7 +1442,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Saul said to the Kenite people, ‘Go away from here! I will kill the Amalekites, but I do not want to kill you. You were kind to the Israelites when they came out from Egypt.’ So the Kenites moved away from the Amalekites. The Kenite tribe probably lived among the Amalekites."
+      "text": "Saul said to the Kenite people, ‘Go away from here! I will kill the Amalekites, but I do not want to kill you. You were kind to the Israelites when they came out from Egypt.’ So the Kenites moved away from the Amalekites."
     },
     {
       "verse": "7",
@@ -1450,15 +1454,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "But Saul and the army let King Agag live. Also, they did not kill the best sheep, lambs, cows and fat calves. They kept all the good things and they did not agree to destroy them. But they killed everything that was weak and useless. Samuel tells Saul God's message"
+      "text": "But Saul and the army let King Agag live. Also, they did not kill the best sheep, lambs, cows and fat calves. They kept all the good things and they did not agree to destroy them. But they killed everything that was weak and useless."
     },
     {
       "verse": "10",
-      "text": "Then the Lord gave this message to Samuel:"
+      "text": "Then the Lord gave this message to Samuel: When Samuel heard that, he was very upset. He prayed aloud to the Lord all that night."
     },
     {
       "verse": "11",
-      "text": "‘I am sorry that I chose Saul to be king. He has turned away from me. He has not obeyed my commands.’ When Samuel heard that, he was very upset. He prayed aloud to the Lord all that night."
+      "text": "‘I am sorry that I chose Saul to be king. He has turned away from me. He has not obeyed my commands.’When Samuel heard that, he was very upset. He prayed aloud to the Lord all that night."
     },
     {
       "verse": "12",
@@ -1542,7 +1546,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Then Samuel said, ‘Bring Agag, king of the Amalekites, to me.’ Agag came to Samuel. Agag was happy because he thought, ‘I am sure that now I will not have to die a painful death.’"
+      "text": "Then Samuel said, ‘Bring Agag, king of the Amalekites, to me.’Agag came to Samuel. Agag was happy because he thought, ‘I am sure that now I will not have to die a painful death.’ Agag came to Samuel. Agag was happy because he thought, ‘I am sure that now I will not have to die a painful death.’"
     },
     {
       "verse": "33",
@@ -1554,17 +1558,17 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "Until Samuel died, he never saw Saul again. Samuel was very sad about Saul. But the Lord was sorry that he had chosen Saul to be king of Israel. Print... Use screen font size Show All Comments 1 Samuel 141 Samuel 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Until Samuel died, he never saw Saul again. Samuel was very sad about Saul. But the Lord was sorry that he had chosen Saul to be king of Israel."
     }
   ],
   "16": [
     {
       "verse": "1",
-      "text": "The Lord said to Samuel, ‘Stop being sad about Saul. I have decided that he will no longer be the king of Israel. Fill your horn with olive oil and go. I am sending you to a man whose name is Jesse. He lives in Bethlehem. I have chosen one of his sons to become king.’ He used the horn to contain oil, like a jar. He would use the oil to anoint a new king."
+      "text": "The Lord said to Samuel, ‘Stop being sad about Saul. I have decided that he will no longer be the king of Israel. Fill your horn with olive oil and go. I am sending you to a man whose name is Jesse. He lives in Bethlehem. I have chosen one of his sons to become king.’"
     },
     {
       "verse": "2",
-      "text": "Samuel said, ‘If I go to do that, people will tell Saul about it. Then he will kill me.’ The Lord said, ‘Take a calf with you. Tell the people that you have come to offer a sacrifice to the Lord."
+      "text": "Samuel said, ‘If I go to do that, people will tell Saul about it. Then he will kill me.’The Lord said, ‘Take a calf with you. Tell the people that you have come to offer a sacrifice to the Lord."
     },
     {
       "verse": "3",
@@ -1576,7 +1580,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Samuel replied, ‘Yes. I do not bring any trouble. I have come to offer a sacrifice to the Lord. Make yourselves clean. Then come to the sacrifice with me.’ Samuel made Jesse and his sons clean to worship the Lord. Then he took them with him to the sacrifice."
+      "text": "Samuel replied, ‘Yes. I do not bring any trouble. I have come to offer a sacrifice to the Lord. Make yourselves clean. Then come to the sacrifice with me.’Samuel made Jesse and his sons clean to worship the Lord. Then he took them with him to the sacrifice. Samuel made Jesse and his sons clean to worship the Lord. Then he took them with him to the sacrifice."
     },
     {
       "verse": "6",
@@ -1600,15 +1604,15 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Samuel asked Jesse, ‘Are those all of your sons?’ Jesse answered, ‘I have one more son. He is the youngest. He is taking care of my sheep.’ Samuel said, ‘Send someone to bring him here. We cannot continue to offer the sacrifice until he arrives.’"
+      "text": "Samuel asked Jesse, ‘Are those all of your sons?’Jesse answered, ‘I have one more son. He is the youngest. He is taking care of my sheep.’Samuel said, ‘Send someone to bring him here. We cannot continue to offer the sacrifice until he arrives.’ Jesse answered, ‘I have one more son. He is the youngest. He is taking care of my sheep.’ Samuel said, ‘Send someone to bring him here. We cannot continue to offer the sacrifice until he arrives.’"
     },
     {
       "verse": "12",
-      "text": "So Jesse told his men to bring his youngest son for Samuel to see. This young man was handsome and strong and he had beautiful eyes. The Lord said to Samuel, ‘I have chosen this man. Now anoint him as king.’"
+      "text": "So Jesse told his men to bring his youngest son for Samuel to see. This young man was handsome and strong and he had beautiful eyes.The Lord said to Samuel, ‘I have chosen this man. Now anoint him as king.’ The Lord said to Samuel, ‘I have chosen this man. Now anoint him as king.’"
     },
     {
       "verse": "13",
-      "text": "Samuel took the horn that was full of olive oil. He poured the oil over David's head to anoint him. Samuel did this in front of David's brothers. From that moment, the Spirit of the Lord came on David with great power. Then Samuel returned to his home in Ramah. David becomes Saul's servant"
+      "text": "Samuel took the horn that was full of olive oil. He poured the oil over David's head to anoint him. Samuel did this in front of David's brothers. From that moment, the Spirit of the Lord came on David with great power.Then Samuel returned to his home in Ramah. Then Samuel returned to his home in Ramah."
     },
     {
       "verse": "14",
@@ -1648,7 +1652,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So, when the evil spirit brought trouble to Saul, David made music on his harp. Then Saul would feel happier and the evil spirit would leave him. Print... Use screen font size Show All Comments 1 Samuel 151 Samuel 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So, when the evil spirit brought trouble to Saul, David made music on his harp. Then Saul would feel happier and the evil spirit would leave him."
     }
   ],
   "17": [
@@ -1662,7 +1666,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Philistines were standing on one hill. The Israelites were on another hill. The valley was between the two armies. Socoh is about 27 kilometres south-west of Jerusalem. The land belonged to the Israelites but the Philistines were attacking it."
+      "text": "The Philistines were standing on one hill. The Israelites were on another hill. The valley was between the two armies."
     },
     {
       "verse": "4",
@@ -1714,7 +1718,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "For 40 days, Goliath would stand up and insult the Israelite army every morning and every evening."
+      "text": "days, Goliath would stand up and insult the Israelite army every morning and every evening."
     },
     {
       "verse": "17",
@@ -1786,7 +1790,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "But David said to Saul, ‘Sir, I have been a shepherd who takes care of his father's sheep. Sometimes a lion or a bear would come to take a lamb from among the sheep."
+      "text": "But David said to Saul, ‘Sir, I have been a shepherd who takes care of his father's sheep. Sometimes a lion or a bear would come to take a lamb from among the sheep. So Saul said to David, ‘Then do it! I pray that the Lord will help you.’"
     },
     {
       "verse": "35",
@@ -1798,15 +1802,15 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "The Lord has kept me safe from lions and bears. He will also save me from the power of this Philistine soldier.’ So Saul said to David, ‘Then do it! I pray that the Lord will help you.’"
+      "text": "The Lord has kept me safe from lions and bears. He will also save me from the power of this Philistine soldier.’So Saul said to David, ‘Then do it! I pray that the Lord will help you.’"
     },
     {
       "verse": "38",
-      "text": "Saul took his own clothes and armour and he put them on David. He put his bronze helmet on David's head."
+      "text": "Saul took his own clothes and armour and he put them on David. He put his bronze helmet on David's head. So David said to Saul, ‘I cannot wear all this armour to fight. I have not used armour before.’ So David took it all off."
     },
     {
       "verse": "39",
-      "text": "David tied Saul's sword on top of the armour. Then he tried to walk. But he had not worn heavy armour like that before. So David said to Saul, ‘I cannot wear all this armour to fight. I have not used armour before.’ So David took it all off."
+      "text": "David tied Saul's sword on top of the armour. Then he tried to walk. But he had not worn heavy armour like that before.So David said to Saul, ‘I cannot wear all this armour to fight. I have not used armour before.’ So David took it all off."
     },
     {
       "verse": "40",
@@ -1850,11 +1854,11 @@ module.exports = {
     },
     {
       "verse": "50",
-      "text": "In that way, David used a sling and a stone to win against the Philistine soldier. He knocked down the Philistine and he killed him. And David did not even hold a sword in his hand!"
+      "text": "In that way, David used a sling and a stone to win against the Philistine soldier. He knocked down the Philistine and he killed him. And David did not even hold a sword in his hand! The Philistines saw that their best soldier was now dead. So they ran away."
     },
     {
       "verse": "51",
-      "text": "David then ran and stood over Goliath. He pulled Goliath's sword out and he killed him. Then he used it to cut off Goliath's head. The Philistines saw that their best soldier was now dead. So they ran away."
+      "text": "David then ran and stood over Goliath. He pulled Goliath's sword out and he killed him. Then he used it to cut off Goliath's head.The Philistines saw that their best soldier was now dead. So they ran away."
     },
     {
       "verse": "52",
@@ -1870,7 +1874,7 @@ module.exports = {
     },
     {
       "verse": "55",
-      "text": "Saul had watched David when he went out to fight the strong Philistine soldier. Saul said to Abner, the leader of his army, ‘Tell me Abner, who is that young man? Who is his father?’ Abner replied, ‘My king, I cannot tell you a lie. I do not know who he is.’"
+      "text": "Saul had watched David when he went out to fight the strong Philistine soldier. Saul said to Abner, the leader of his army, ‘Tell me Abner, who is that young man? Who is his father?’Abner replied, ‘My king, I cannot tell you a lie. I do not know who he is.’"
     },
     {
       "verse": "56",
@@ -1882,7 +1886,7 @@ module.exports = {
     },
     {
       "verse": "58",
-      "text": "Saul asked him, ‘Young man, who is your father?’ David answered, ‘I am the son of your servant Jesse, who lives in Bethlehem.’ Print... Use screen font size Show All Comments 1 Samuel 161 Samuel 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Saul asked him, ‘Young man, who is your father?’ David answered, ‘I am the son of your servant Jesse, who lives in Bethlehem.’"
     }
   ],
   "18": [
@@ -1908,11 +1912,11 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "After David had killed the Philistine, Goliath, he and the soldiers returned to their homes. Women came out from all the towns in Israel to meet King Saul. The women were happy as they sang songs and they danced. They made music with tambourines and lyres."
+      "text": "After David had killed the Philistine, Goliath, he and the soldiers returned to their homes. Women came out from all the towns in Israel to meet King Saul. The women were happy as they sang songs and they danced. They made music with tambourines and lyres. ‘Saul has killed thousands of his enemies. And David has killed tens of thousands of his enemies.’"
     },
     {
       "verse": "7",
-      "text": "They sang this song while they danced: ‘Saul has killed thousands of his enemies. And David has killed tens of thousands of his enemies.’"
+      "text": "They sang this song while they danced:‘Saul has killed thousands of his enemies.And David has killed tens of thousands of his enemies.’"
     },
     {
       "verse": "8",
@@ -1948,7 +1952,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "All the people in Israel and Judah loved David because he led the army in their battles. Saul hoped that David would die in a battle. David marries Saul's daughter"
+      "text": "All the people in Israel and Judah loved David because he led the army in their battles."
     },
     {
       "verse": "17",
@@ -1976,15 +1980,15 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Saul's servants said this to David. But David replied, ‘It is a great honour for someone to marry the king's daughter. But I am poor. I am not important enough.’ Men had to give money to the father of the woman they wanted to marry. And a king would want a lot of money for his daughter. David did not have enough money for that."
+      "text": "Saul's servants said this to David. But David replied, ‘It is a great honour for someone to marry the king's daughter. But I am poor. I am not important enough.’"
     },
     {
       "verse": "24",
-      "text": "Saul's servants told him what David had said."
+      "text": "Saul's servants told him what David had said. In this way, Saul thought that he would use the Philistines to kill David."
     },
     {
       "verse": "25",
-      "text": "Saul said, ‘Tell David this: The king does not want David to pay money to marry the king's daughter. He can pay for her with the foreskins of 100 dead Philistines. Saul wants David to punish his enemies.’ In this way, Saul thought that he would use the Philistines to kill David."
+      "text": "Saul said, ‘Tell David this: The king does not want David to pay money to marry the king's daughter. He can pay for her with the foreskins of 100 dead Philistines. Saul wants David to punish his enemies.’In this way, Saul thought that he would use the Philistines to kill David."
     },
     {
       "verse": "26",
@@ -2004,7 +2008,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "The Philistine army continued to march out and attack the Israelites. Every time that they fought, David won more fights than any of Saul's other officers. So David became very famous. Print... Use screen font size Show All Comments 1 Samuel 171 Samuel 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Philistine army continued to march out and attack the Israelites. Every time that they fought, David won more fights than any of Saul's other officers. So David became very famous."
     }
   ],
   "19": [
@@ -2078,7 +2082,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "David ran away and he escaped from Saul. He went to visit Samuel at Ramah. David told Samuel everything that Saul had done to him. Then David and Samuel went to live in Naioth. Naioth was probably a place at the edge of Ramah town where the prophets lived."
+      "text": "David ran away and he escaped from Saul. He went to visit Samuel at Ramah. David told Samuel everything that Saul had done to him. Then David and Samuel went to live in Naioth."
     },
     {
       "verse": "19",
@@ -2102,7 +2106,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "When he met Samuel, he took off his clothes and he continued to prophesy. He lay on the ground with no clothes all that day and all that night. So people still say, ‘Has Saul really become one of the prophets?’ Print... Use screen font size Show All Comments 1 Samuel 181 Samuel 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When he met Samuel, he took off his clothes and he continued to prophesy. He lay on the ground with no clothes all that day and all that night. So people still say, ‘Has Saul really become one of the prophets?’"
     }
   ],
   "20": [
@@ -2136,7 +2140,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Jonathan, please show that you love me. The Lord knows about the promise that you made, to be my friend. If I am guilty of a sin, please kill me yourself. Do not let your father kill me.’ Numbers tell us about the special offerings at the time of the new moon."
+      "text": "Jonathan, please show that you love me. The Lord knows about the promise that you made, to be my friend. If I am guilty of a sin, please kill me yourself. Do not let your father kill me.’"
     },
     {
       "verse": "9",
@@ -2212,7 +2216,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The next day after the new moon, David's seat was still empty at the meal. So Saul said to his son Jonathan, ‘Why has Jesse's son not come to the meal? He did not come yesterday or today.’ Because it was a special meal, the people who came to eat it must be clean."
+      "text": "The next day after the new moon, David's seat was still empty at the meal. So Saul said to his son Jonathan, ‘Why has Jesse's son not come to the meal? He did not come yesterday or today.’"
     },
     {
       "verse": "28",
@@ -2228,7 +2232,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "You will never rule as king while that son of Jesse is still alive. Send men to go and bring him to me now. He must die!’ King Saul speaks about David as ‘that son of Jesse’ because he does not want to say David's name. He hates David too much."
+      "text": "You will never rule as king while that son of Jesse is still alive. Send men to go and bring him to me now. He must die!’"
     },
     {
       "verse": "32",
@@ -2272,7 +2276,7 @@ module.exports = {
     },
     {
       "verse": "42",
-      "text": "Jonathan said to David, ‘Go now and God will keep you safe. We have promised each other in the Lord's name that we will always be friends. The Lord will watch us to make sure that we always keep this promise. He will watch our descendants too, for ever.’ Then David left. Jonathan returned to the town. Print... Use screen font size Show All Comments 1 Samuel 191 Samuel 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Jonathan said to David, ‘Go now and God will keep you safe. We have promised each other in the Lord's name that we will always be friends. The Lord will watch us to make sure that we always keep this promise. He will watch our descendants too, for ever.’Then David left. Jonathan returned to the town."
     },
     {
       "verse": "43",
@@ -2282,7 +2286,7 @@ module.exports = {
   "21": [
     {
       "verse": "1",
-      "text": "David went to visit Ahimelech the priest. He lived in the town of Nob. Ahimelech shook with fear when he saw David. He asked David, ‘Why are you alone? Why is nobody with you?’ David went three kilometres (two miles) to the town of Nob. The priests now lived in Nob because the Philistines had destroyed Shiloh. Ahimelech was the leader of the priests at that time. He was the great-grandson of Eli the priest."
+      "text": "David went to visit Ahimelech the priest. He lived in the town of Nob. Ahimelech shook with fear when he saw David. He asked David, ‘Why are you alone? Why is nobody with you?’"
     },
     {
       "verse": "2",
@@ -2314,15 +2318,15 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Ahimelech answered, ‘The sword of Goliath the Philistine is here. After you killed him in the valley of Elah, we kept the sword here. We covered it with a cloth and we put it behind the ephod. If you want it, you can take it. We do not have any other weapon except that one.’ David said, ‘Give it to me. There is no sword as good as that one.’ David goes to Gath"
+      "text": "Ahimelech answered, ‘The sword of Goliath the Philistine is here. After you killed him in the valley of Elah, we kept the sword here. We covered it with a cloth and we put it behind the ephod. If you want it, you can take it. We do not have any other weapon except that one.’David said, ‘Give it to me. There is no sword as good as that one.’ David said, ‘Give it to me. There is no sword as good as that one.’"
     },
     {
       "verse": "10",
-      "text": "So on that day, David escaped from Saul. He went to Gath and he visited King Achish there."
+      "text": "So on that day, David escaped from Saul. He went to Gath and he visited King Achish there. “Saul has killed thousands of his enemies. But David has killed tens of thousands of his enemies.” ’"
     },
     {
       "verse": "11",
-      "text": "The servants of King Achish said to him, ‘This man is David, the king of his country! The people sing this song about him when they dance: “Saul has killed thousands of his enemies. But David has killed tens of thousands of his enemies.” ’ See 1 Samuel"
+      "text": "The servants of King Achish said to him, ‘This man is David, the king of his country! The people sing this song about him when they dance:“Saul has killed thousands of his enemies.But David has killed tens of thousands of his enemies.” ’"
     },
     {
       "verse": "12",
@@ -2338,7 +2342,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I have enough fools around me already. I do not need to see this crazy man as well. Keep him away from my house.’ Print... Use screen font size Show All Comments 1 Samuel 201 Samuel 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I have enough fools around me already. I do not need to see this crazy man as well. Keep him away from my house.’"
     }
   ],
   "22": [
@@ -2348,7 +2352,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Everybody who had trouble went to stay with David. People who had debts and those who were angry also went to him. About 400 men went to be with David and he became their leader. David's family was from the town of Bethlehem in the land that belonged to Judah's tribe. Adullam was between Gath and Bethlehem. So David was now returning to his home region."
+      "text": "Everybody who had trouble went to stay with David. People who had debts and those who were angry also went to him. About 400 men went to be with David and he became their leader."
     },
     {
       "verse": "3",
@@ -2360,7 +2364,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The prophet Gad said to David, ‘Do not stay and hide here. Go to the land of Judah.’ So David left his safe place and he went to Hereth forest. Saul kills Ahimelech's family at Nob"
+      "text": "The prophet Gad said to David, ‘Do not stay and hide here. Go to the land of Judah.’ So David left his safe place and he went to Hereth forest."
     },
     {
       "verse": "6",
@@ -2432,17 +2436,17 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Please stay here with me. Do not be afraid. Saul wants to kill you and he wants to kill me too. You will be safe with me.’ Print... Use screen font size Show All Comments 1 Samuel 211 Samuel 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Please stay here with me. Do not be afraid. Saul wants to kill you and he wants to kill me too. You will be safe with me.’"
     }
   ],
   "23": [
     {
       "verse": "1",
-      "text": "The Philistines were attacking the town of Keilah. They were taking away the grain that the people had brought from their fields. Someone told David about this."
+      "text": "The Philistines were attacking the town of Keilah. They were taking away the grain that the people had brought from their fields. Someone told David about this. The Lord answered him, ‘Go and attack the Philistines. Save Keilah town.’"
     },
     {
       "verse": "2",
-      "text": "So David asked the Lord, ‘Should I go and attack those Philistines?’ Keilah was about 29 kilometres (18 miles) south-west of Jerusalem. It was about 5 kilometres (3 miles) from Adullam's cave. See 1 Samuel The Lord answered him, ‘Go and attack the Philistines. Save Keilah town.’"
+      "text": "So David asked the Lord, ‘Should I go and attack those Philistines?’The Lord answered him, ‘Go and attack the Philistines. Save Keilah town.’"
     },
     {
       "verse": "3",
@@ -2458,7 +2462,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "When Ahimelech's son Abiathar had run away, he had come to David at Keilah. And he had brought the priests' ephod with him. David escapes from Saul again"
+      "text": "When Ahimelech's son Abiathar had run away, he had come to David at Keilah. And he had brought the priests' ephod with him."
     },
     {
       "verse": "7",
@@ -2466,7 +2470,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "So Saul called his army to join him. They prepared to go to Keilah and to attack David and his men. Keilah had a wall around it. The only way to go in and out of the town was through its gates."
+      "text": "So Saul called his army to join him. They prepared to go to Keilah and to attack David and his men."
     },
     {
       "verse": "9",
@@ -2482,15 +2486,15 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "David asked the Lord again, ‘Will the leaders in Keilah give me and my men to Saul?’ The Lord said, ‘They will do that.’ The ephod had some special stones that showed the Lord's answer to David's questions."
+      "text": "David asked the Lord again, ‘Will the leaders in Keilah give me and my men to Saul?’ The Lord said, ‘They will do that.’"
     },
     {
       "verse": "13",
-      "text": "So David and his 600 men left Keilah. They moved around to stay in different places. People told Saul that David had escaped from Keilah. So Saul decided that he would not go there."
+      "text": "men left Keilah. They moved around to stay in different places. People told Saul that David had escaped from Keilah. So Saul decided that he would not go there."
     },
     {
       "verse": "14",
-      "text": "David stayed in places where he would be safe. They were in the desert, and in the hill country of Ziph. Saul always tried to find David. But God did not let Saul catch David. Ziph was in David's home region of Judah."
+      "text": "David stayed in places where he would be safe. They were in the desert, and in the hill country of Ziph. Saul always tried to find David. But God did not let Saul catch David."
     },
     {
       "verse": "15",
@@ -2550,7 +2554,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "David left that place. He went to hide in the safe places at En Gedi. Print... Use screen font size Show All Comments 1 Samuel 221 Samuel 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "David left that place. He went to hide in the safe places at En Gedi."
     }
   ],
   "24": [
@@ -2564,7 +2568,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Saul came to the place near the road where the shepherds keep their sheep. There was a cave near to this place. Saul went in there to use it as a toilet. David and his men were hiding at the back of the same cave."
+      "text": "Saul came to the place near the road where the shepherds keep their sheep. There was a cave near to this place. Saul went in there to use it as a toilet.David and his men were hiding at the back of the same cave."
     },
     {
       "verse": "4",
@@ -2572,7 +2576,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "After that, David thought that he had done something wrong. He felt sorry that he had cut a piece of cloth from Saul's coat."
+      "text": "After that, David thought that he had done something wrong. He felt sorry that he had cut a piece of cloth from Saul's coat. Then Saul left the cave and he started to travel along the road."
     },
     {
       "verse": "6",
@@ -2580,7 +2584,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "David spoke like this to stop his men from attacking Saul. Then Saul left the cave and he started to travel along the road."
+      "text": "David spoke like this to stop his men from attacking Saul.Then Saul left the cave and he started to travel along the road."
     },
     {
       "verse": "8",
@@ -2640,17 +2644,21 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "So David made a strong promise to Saul. Then Saul returned to his home. But David and his men went back to the place where they had been hiding. Print... Use screen font size Show All Comments 1 Samuel 231 Samuel 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So David made a strong promise to Saul. Then Saul returned to his home. But David and his men went back to the place where they had been hiding."
     }
   ],
   "25": [
     {
       "verse": "1",
-      "text": "Then Samuel died. All the Israelites met together and they were very sad. Then they buried Samuel at his home in Ramah. David went down to the Paran desert. Nabal insults David"
+      "text": "Then Samuel died. All the Israelites met together and they were very sad. Then they buried Samuel at his home in Ramah.David went down to the Paran desert. David went down to the Paran desert."
     },
     {
-      "verse": "2-3",
-      "text": "There was a very rich man who lived at Maon. His name was Nabal. He was a descendant of Caleb. His wife's name was Abigail. She was wise and beautiful. But Nabal was a cruel man who did evil things. Nabal had some land near Carmel. He had 3,000 sheep and 1,000 goats. He was with his men in Carmel as they cut the wool from his sheep."
+      "verse": "2",
+      "text": "There was a very rich man who lived at Maon.  His name was Nabal.  He was a descendant of Caleb.  His wife's name was Abigail.  She was wise and beautiful.  But Nabal was a cruel man who did evil things."
+    },
+    {
+      "verse": "3",
+      "text": "Nabal had some land near Carmel.  He had 3,000 sheep and 1,000 goats.  He was with his men in Carmel as they cut the wool from his sheep.  Nabal had some land near Carmel.  He had 3,000 sheep and 1,000 goats.  He was with his men in Carmel as they cut the wool from his sheep."
     },
     {
       "verse": "4",
@@ -2778,7 +2786,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "David accepted Abigail's gifts that she had brought with her. He said to her, ‘Go back to your home and do not be afraid. I have listened to what you have said. I will do what you have asked for.’ Nabal dies"
+      "text": "David accepted Abigail's gifts that she had brought with her. He said to her, ‘Go back to your home and do not be afraid. I have listened to what you have said. I will do what you have asked for.’"
     },
     {
       "verse": "36",
@@ -2794,7 +2802,7 @@ module.exports = {
     },
     {
       "verse": "39",
-      "text": "David heard the news that Nabal had died. He said, ‘I praise the Lord. He has shown that I was right. Nabal insulted me but the Lord has punished him for that. The Lord stopped me from doing an evil thing. Now he has punished Nabal for the evil thing that he did.’ Then David sent a message to Abigail to ask her to marry him."
+      "text": "David heard the news that Nabal had died. He said, ‘I praise the Lord. He has shown that I was right. Nabal insulted me but the Lord has punished him for that. The Lord stopped me from doing an evil thing. Now he has punished Nabal for the evil thing that he did.’Then David sent a message to Abigail to ask her to marry him."
     },
     {
       "verse": "40",
@@ -2814,7 +2822,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "Saul's daughter Michal had been David's wife. But Saul had then given her to Palti as his wife. Palti was the son of Laish, who came from Gallim town. Print... Use screen font size Show All Comments 1 Samuel 241 Samuel 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Saul's daughter Michal had been David's wife. But Saul had then given her to Palti as his wife. Palti was the son of Laish, who came from Gallim town."
     }
   ],
   "26": [
@@ -2840,7 +2848,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "David spoke to two of his men. One of them was Ahimelech, a Hittite man. The other man was Abishai, who was Joab's brother (Zeruiah was their mother). David asked them, ‘Which one of you will go down into Saul's camp with me?’ Zeruiah was David's older sister. Abishai said, ‘I will come with you.’"
+      "text": "David spoke to two of his men. One of them was Ahimelech, a Hittite man. The other man was Abishai, who was Joab's brother (Zeruiah was their mother). David asked them, ‘Which one of you will go down into Saul's camp with me?’Abishai said, ‘I will come with you.’ Abishai said, ‘I will come with you.’"
     },
     {
       "verse": "7",
@@ -2868,11 +2876,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "David and Abishai then went across the valley to the other side of the hill. David stood on the top of the hill. He was far away from Saul's soldiers."
+      "text": "David and Abishai then went across the valley to the other side of the hill. David stood on the top of the hill. He was far away from Saul's soldiers. Abner replied, ‘Who is shouting to wake up the king? Who are you?’"
     },
     {
       "verse": "14",
-      "text": "David shouted to Saul's army and to Ner's son, Abner, ‘Abner, wake up! Answer me!’ Abner replied, ‘Who is shouting to wake up the king? Who are you?’"
+      "text": "David shouted to Saul's army and to Ner's son, Abner, ‘Abner, wake up! Answer me!’Abner replied, ‘Who is shouting to wake up the king? Who are you?’"
     },
     {
       "verse": "15",
@@ -2884,7 +2892,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Saul recognized David's voice. He said, ‘Is that you David, my son?’ David answered, ‘Yes, my master and my king, it is my voice that you can hear.’"
+      "text": "Saul recognized David's voice. He said, ‘Is that you David, my son?’David answered, ‘Yes, my master and my king, it is my voice that you can hear.’ David answered, ‘Yes, my master and my king, it is my voice that you can hear.’"
     },
     {
       "verse": "18",
@@ -2916,7 +2924,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Then Saul said to David, ‘I pray that the Lord will bless you, my son. I know that you will do great things.’ So David left there and Saul returned to his home. Print... Use screen font size Show All Comments 1 Samuel 251 Samuel 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Saul said to David, ‘I pray that the Lord will bless you, my son. I know that you will do great things.’So David left there and Saul returned to his home."
     }
   ],
   "27": [
@@ -2926,7 +2934,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "So David and his 600 men went across the border of Israel to Gath town. Maoch's son Achish was the king there."
+      "text": "men went across the border of Israel to Gath town. Maoch's son Achish was the king there."
     },
     {
       "verse": "3",
@@ -2946,7 +2954,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "David lived in the country of the Philistines for one year and four months. Ziklag was near the border of Judah. But it was far away from Saul's town of Gibeah and the five important Philistine towns."
+      "text": "David lived in the country of the Philistines for one year and four months."
     },
     {
       "verse": "8",
@@ -2962,11 +2970,11 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "David killed all the people in the places that he attacked. He never took anyone back to Gath. He thought, ‘If any of the people are still alive, they might go to Gath and tell people what we have done.’ That is what David did for the whole time that he lived among the Philistines."
+      "text": "David killed all the people in the places that he attacked. He never took anyone back to Gath. He thought, ‘If any of the people are still alive, they might go to Gath and tell people what we have done.’That is what David did for the whole time that he lived among the Philistines."
     },
     {
       "verse": "12",
-      "text": "So King Achish trusted David. He thought, ‘The Israelites must now hate David very much. So David will have to be my servant for ever.’ Print... Use screen font size Show All Comments 1 Samuel 261 Samuel 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So King Achish trusted David. He thought, ‘The Israelites must now hate David very much. So David will have to be my servant for ever.’"
     }
   ],
   "28": [
@@ -2976,7 +2984,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "David said, ‘Yes, sir. Then you will see how well I can fight!’ Achish replied, ‘Good. Then you will always be my guard to keep me safe.’ King Saul visits a woman who uses magic"
+      "text": "David said, ‘Yes, sir. Then you will see how well I can fight!’Achish replied, ‘Good. Then you will always be my guard to keep me safe.’ Achish replied, ‘Good. Then you will always be my guard to keep me safe.’"
     },
     {
       "verse": "3",
@@ -2984,7 +2992,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Philistine army came together and they put up their tents at Shunem. Saul called together the whole Israelite army. They put up their tents at Gilboa."
+      "text": "The Philistine army came together and they put up their tents at Shunem. Saul called together the whole Israelite army. They put up their tents at Gilboa. His servants replied, ‘There is a woman at Endor who can do that.’"
     },
     {
       "verse": "5",
@@ -2996,7 +3004,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So Saul said to his servants, ‘Look for a woman who can talk to dead people. Then I will go and ask her what will happen.’ His servants replied, ‘There is a woman at Endor who can do that.’"
+      "text": "So Saul said to his servants, ‘Look for a woman who can talk to dead people. Then I will go and ask her what will happen.’His servants replied, ‘There is a woman at Endor who can do that.’"
     },
     {
       "verse": "8",
@@ -3008,7 +3016,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Then Saul promised the woman very strongly. He said, ‘As surely as the Lord lives, nobody will punish you if you do this.’ God had said to Israel's people that nobody should try to speak with dead people. They must kill anyone who spoke with dead people. See Deuteronomy Leviticus Leviticus Leviticus Saul was not obeying God."
+      "text": "Then Saul promised the woman very strongly. He said, ‘As surely as the Lord lives, nobody will punish you if you do this.’"
     },
     {
       "verse": "11",
@@ -3020,15 +3028,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "The king said to her, ‘Do not be afraid. Tell me what you can see.’ She replied, ‘I can see a spirit that is coming up from the ground.’"
+      "text": "The king said to her, ‘Do not be afraid. Tell me what you can see.’She replied, ‘I can see a spirit that is coming up from the ground.’ She replied, ‘I can see a spirit that is coming up from the ground.’"
     },
     {
       "verse": "14",
-      "text": "Saul asked, ‘What does he look like?’ She said, ‘I see an old man who is wearing a long coat.’ Saul realized that this was Samuel. He bent down low on his knees with his face towards the ground."
+      "text": "Saul asked, ‘What does he look like?’ She said, ‘I see an old man who is wearing a long coat.’Saul realized that this was Samuel. He bent down low on his knees with his face towards the ground. Saul realized that this was Samuel. He bent down low on his knees with his face towards the ground."
     },
     {
       "verse": "15",
-      "text": "Samuel said to Saul, ‘Why have you caused this trouble for me? Why have you brought me back?’ Saul said, ‘I have a lot of trouble. The Philistines are fighting against me. God has turned away from me. He will not use the prophets or give me dreams to answer my questions. So I have called you to come here. Please tell me what I should do.’"
+      "text": "Samuel said to Saul, ‘Why have you caused this trouble for me? Why have you brought me back?’Saul said, ‘I have a lot of trouble. The Philistines are fighting against me. God has turned away from me. He will not use the prophets or give me dreams to answer my questions. So I have called you to come here. Please tell me what I should do.’ Saul said, ‘I have a lot of trouble. The Philistines are fighting against me. God has turned away from me. He will not use the prophets or give me dreams to answer my questions. So I have called you to come here. Please tell me what I should do.’"
     },
     {
       "verse": "16",
@@ -3068,13 +3076,13 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "She gave the food to Saul and to his men and they ate it. Then they left her house that night. Print... Use screen font size Show All Comments 1 Samuel 271 Samuel 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "She gave the food to Saul and to his men and they ate it. Then they left her house that night."
     }
   ],
   "29": [
     {
       "verse": "1",
-      "text": "The Philistine army put up their tents at Aphek. The Israelites made their camp near the spring of water at Jezreel."
+      "text": "The Philistine army put up their tents at Aphek. The Israelites made their camp near the spring of water at Jezreel. Achish said to them, ‘This is David. He was the servant of Israel's King Saul. But he came to me more than a year ago. Since he turned against King Saul and came to me, he has always been faithful to me.’"
     },
     {
       "verse": "2",
@@ -3082,15 +3090,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "The Philistine leaders asked, ‘Why are these Hebrew people here?’ Achish said to them, ‘This is David. He was the servant of Israel's King Saul. But he came to me more than a year ago. Since he turned against King Saul and came to me, he has always been faithful to me.’"
+      "text": "The Philistine leaders asked, ‘Why are these Hebrew people here?’Achish said to them, ‘This is David. He was the servant of Israel's King Saul. But he came to me more than a year ago. Since he turned against King Saul and came to me, he has always been faithful to me.’"
     },
     {
       "verse": "4",
-      "text": "But the Philistine leaders were angry with Achish. They said to him, ‘Send David back to the town that you gave to him. He must not go with us to fight the battle. He might turn against us and become our enemy. Then he would start to kill our own soldiers. That would make his master, Saul, very happy!"
+      "text": "But the Philistine leaders were angry with Achish. They said to him, ‘Send David back to the town that you gave to him. He must not go with us to fight the battle. He might turn against us and become our enemy. Then he would start to kill our own soldiers. That would make his master, Saul, very happy! “Saul has killed thousands of his enemies. And David has killed tens of thousands of his enemies.” ’"
     },
     {
       "verse": "5",
-      "text": "Remember who this man David is! The Israelites sing this about him when they dance: “Saul has killed thousands of his enemies. And David has killed tens of thousands of his enemies.” ’"
+      "text": "Remember who this man David is! The Israelites sing this about him when they dance:“Saul has killed thousands of his enemies.And David has killed tens of thousands of his enemies.” ’"
     },
     {
       "verse": "6",
@@ -3114,7 +3122,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So David and his men got up early in the morning. They returned along the road back to Ziklag. The Philistine army went to Jezreel. Print... Use screen font size Show All Comments 1 Samuel 281 Samuel 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So David and his men got up early in the morning. They returned along the road back to Ziklag. The Philistine army went to Jezreel."
     }
   ],
   "30": [
@@ -3124,7 +3132,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "They had caught the women and the other people who were in the town, both young people and old people. They did not kill any of them, but they took them away as prisoners. God had told Saul that he must kill all the Amalekites. See 1 Samuel But Saul did not obey God. Now the Amalekites caused trouble for David."
+      "text": "They had caught the women and the other people who were in the town, both young people and old people. They did not kill any of them, but they took them away as prisoners."
     },
     {
       "verse": "3",
@@ -3144,15 +3152,19 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then David spoke to Abiathar the priest, Ahimelech's son. David said to him, ‘Bring the priests' ephod to me.’ So Abiathar took the ephod to David."
+      "text": "Then David spoke to Abiathar the priest, Ahimelech's son. David said to him, ‘Bring the priests' ephod to me.’ So Abiathar took the ephod to David. The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families.’"
     },
     {
       "verse": "8",
-      "text": "David asked the Lord, ‘Should I chase after the men who attacked our town? Will I catch them?’ The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families.’ David used the special stones in the ephod (Urim and Thummim) to find out God's answer."
+      "text": "David asked the Lord, ‘Should I chase after the men who attacked our town? Will I catch them?’The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families.’"
     },
     {
-      "verse": "9-10",
-      "text": "So David and his 600 men left Ziklag. They arrived at Besor stream. Some of the men were too tired to go across the valley. So 200 men remained there. David and the other 400 men continued to chase after the Amalekites. Besor was a small stream in a valley that was about 19 kilometres (12 miles) south-west of Ziklag."
+      "verse": "9",
+      "text": "men left Ziklag.  They arrived at Besor stream.  Some of the men were too tired to go across the valley."
+    },
+    {
+      "verse": "10",
+      "text": "So 200 men remained there.  David and the other 400 men continued to chase after the Amalekites."
     },
     {
       "verse": "11",
@@ -3164,15 +3176,15 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "David asked the man, ‘Who is your master? Where do you come from?’ The young man answered, ‘I am an Egyptian, the slave of an Amalekite man. My master left me here three days ago because I was ill."
+      "text": "David asked the man, ‘Who is your master? Where do you come from?’The young man answered, ‘I am an Egyptian, the slave of an Amalekite man. My master left me here three days ago because I was ill."
     },
     {
       "verse": "14",
-      "text": "We had attacked the south part of Judah, where the Kerethites live. We also attacked the land where the people of Caleb's clan live. We destroyed Ziklag with fire too.’ The Kerethites were a Philistine tribe that helped David. See 2 Samuel Caleb's land was to the south of Hebron town."
+      "text": "We had attacked the south part of Judah, where the Kerethites live. We also attacked the land where the people of Caleb's clan live. We destroyed Ziklag with fire too.’"
     },
     {
       "verse": "15",
-      "text": "David said to him, ‘Can you take me to find these men?’ The man said, ‘Please promise me in God's name that you will not kill me. Promise me that you will not take me back to my master. If you do that, I will lead you to find them.’"
+      "text": "David said to him, ‘Can you take me to find these men?’The man said, ‘Please promise me in God's name that you will not kill me. Promise me that you will not take me back to my master. If you do that, I will lead you to find them.’ The man said, ‘Please promise me in God's name that you will not kill me. Promise me that you will not take me back to my master. If you do that, I will lead you to find them.’"
     },
     {
       "verse": "16",
@@ -3196,7 +3208,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "David returned to the 200 men who had stayed beside the Besor stream. These men had been too tired to go with David. They came to meet David and the men who were with him. When David met them, he happily said ‘hello’ to them."
+      "text": "men who had stayed beside the Besor stream. These men had been too tired to go with David. They came to meet David and the men who were with him. When David met them, he happily said ‘hello’ to them."
     },
     {
       "verse": "22",
@@ -3220,7 +3232,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "David sent gifts to the leaders in these towns: Bethel, Ramoth in the desert in the south, Jattir,"
+      "text": "David sent gifts to the leaders in these towns:Bethel, Ramoth in the desert in the south, Jattir, David also sent gifts to the people in the towns that he and his men had visited."
     },
     {
       "verse": "28",
@@ -3236,7 +3248,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "and Hebron.David also sent gifts to the people in the towns that he and his men had visited. Print... Use screen font size Show All Comments 1 Samuel 291 Samuel 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "and Hebron.David also sent gifts to the people in the towns that he and his men had visited."
     }
   ],
   "31": [
@@ -3278,7 +3290,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "They put Saul's armour in the temple of their god Ashtoreth. Then they hung Saul's dead body on the wall of Beth Shan town. Beth Shan was a town in the valley of Jezreel, about 13 kilometres (8 miles) east of Gilboa mountain. See 1 Samuel"
+      "text": "They put Saul's armour in the temple of their god Ashtoreth. Then they hung Saul's dead body on the wall of Beth Shan town."
     },
     {
       "verse": "11",
@@ -3290,7 +3302,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then they took the bones and they buried them under a tamarisk tree at Jabesh Gilead. The men did not eat any food for seven days because they were so sad. The town of Jabesh Gilead was about 16 kilometres (10 miles) south-east of Beth Shan, on the other side of the Jordan River. Print... Use screen font size Show All Comments 1 Samuel 302 Samuel Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then they took the bones and they buried them under a tamarisk tree at Jabesh Gilead. The men did not eat any food for seven days because they were so sad."
     }
   ]
 };

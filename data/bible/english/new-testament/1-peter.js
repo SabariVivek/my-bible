@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Peter. I am an apostle of Jesus Christ. I am writing to you, God's own people that he has chosen. You are now living in many different places, in the regions called Pontus, Galatia, Cappadocia, Asia and Bithynia. You are living in these foreign places as strangers."
+      "text": "This letter is from me, Peter. I am an apostle of Jesus Christ.I am writing to you, God's own people that he has chosen. You are now living in many different places, in the regions called Pontus, Galatia, Cappadocia, Asia and Bithynia. You are living in these foreign places as strangers."
     },
     {
       "verse": "2",
-      "text": "God, the Father, already decided that you should be his people. God's Spirit has made you special people who would obey Jesus Christ. God chose you so that Jesus Christ's blood would make you really clean. Pontus, Galatia, Cappadocia, Asia and Bithynia were all parts of the country that we now call Turkey. There was too much trouble for the Christians to live safely in their own land. Jesus died as a sacrifice so that God would forgive us for our sins. The blood of his sacrifice makes us clean. Our sins do not make us unclean any more because God has forgiven us. I pray that God will help you and give you peace in your minds more and more."
+      "text": "God, the Father, already decided that you should be his people. God's Spirit has made you special people who would obey Jesus Christ. God chose you so that Jesus Christ's blood would make you really clean.I pray that God will help you and give you peace in your minds more and more. I pray that God will help you and give you peace in your minds more and more."
     },
     {
       "verse": "3",
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "You are happy now because God is saving you from sin. You believe in Jesus, and you know that God saves you because of that. God tells us that Jesus died to save us from our sin. If we believe in Jesus, sin no longer has power over us. Also, God will not punish us for our sins because he has punished Jesus instead, on the cross."
+      "text": "You are happy now because God is saving you from sin. You believe in Jesus, and you know that God saves you because of that."
     },
     {
       "verse": "10",
@@ -46,7 +46,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "God showed his prophets that his messages about these things were not really to help them. Instead, God sent his message to the prophets to help you. That message is the good news about Jesus Christ which you have now heard. God sent his Holy Spirit from heaven to help people to tell the good news to you. Even the angels would like to understand more about these things. Christians should do what is good"
+      "text": "God showed his prophets that his messages about these things were not really to help them. Instead, God sent his message to the prophets to help you. That message is the good news about Jesus Christ which you have now heard. God sent his Holy Spirit from heaven to help people to tell the good news to you. Even the angels would like to understand more about these things."
     },
     {
       "verse": "13",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "In the Bible God says this: ‘You must be completely good, because I am completely good.’ In the book of Leviticus, God says five times that we should be completely good, like him. See Leviticus"
+      "text": "In the Bible God says this: ‘You must be completely good, because I am completely good.’"
     },
     {
       "verse": "17",
@@ -74,7 +74,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Instead, he bought you with the very valuable blood of Christ, who died as a sacrifice for our sins. He died like a lamb that is completely good and has nothing wrong with it. blood of Christ’ means his death as a sacrifice on the cross. Christ was completely good. He never did anything wrong. He died on our behalf. He did much more than any dead animal could ever do. He took away all the wrong things that anyone has ever done. Many years ago, God told the Israelites to kill lambs and other animals and to offer them to him as sacrifices. The animals should have nothing wrong with their bodies. They offered animals to God so that he would forgive their sins."
+      "text": "Instead, he bought you with the very valuable blood of Christ, who died as a sacrifice for our sins. He died like a lamb that is completely good and has nothing wrong with it."
     },
     {
       "verse": "20",
@@ -86,7 +86,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "You have obeyed God's true message. As a result, you have become clean inside, and now you can really love other believers. So continue to love each other very well, with honest thoughts."
+      "text": "You have obeyed God's true message. As a result, you have become clean inside, and now you can really love other believers. So continue to love each other very well, with honest thoughts. ‘All people are like grass. They may seem beautiful for a short time, like flowers that grow in the fields. But grass soon becomes dry and it dies. Flowers soon fall to the ground."
     },
     {
       "verse": "23",
@@ -94,11 +94,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The Bible says: ‘All people are like grass. They may seem beautiful for a short time, like flowers that grow in the fields. But grass soon becomes dry and it dies. Flowers soon fall to the ground."
+      "text": "The Bible says:‘All people are like grass.They may seem beautiful for a short time,like flowers that grow in the fields.But grass soon becomes dry and it dies.Flowers soon fall to the ground."
     },
     {
       "verse": "25",
-      "text": "But the Lord God's message will continue for ever.’ That message is the good news about Jesus Christ, which people have taught you. Print... Use screen font size Show All Comments 1 Peter Introduction1 Peter 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the Lord God's message will continue for ever.’That message is the good news about Jesus Christ, which people have taught you."
     }
   ],
   "2": [
@@ -112,7 +112,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Do this, because you have already begun to know how kind the Lord is to you. Jesus is like the most important stone in God's house"
+      "text": "Do this, because you have already begun to know how kind the Lord is to you."
     },
     {
       "verse": "4",
@@ -120,19 +120,19 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "You yourselves are also like stones that are alive. God is using you, like stones, to build a house where his Spirit lives. You will serve him like his special priests who offer sacrifices to him. God will be happy with the spiritual offerings that you give to him, because you belong to Jesus Christ. In God's house in Jerusalem, Israel's priests offered sacrifices to God on behalf of the people. The sacrifices were special gifts to thank God, or to show that the people were sorry. They were sorry about the wrong things that they had done. We offer ‘spiritual sacrifices’ to God when we obey him completely. We choose always to believe God. We thank him. We do good things, to help other people. These are the kind of ‘spiritual sacrifices’ that we offer."
+      "text": "You yourselves are also like stones that are alive. God is using you, like stones, to build a house where his Spirit lives. You will serve him like his special priests who offer sacrifices to him. God will be happy with the spiritual offerings that you give to him, because you belong to Jesus Christ."
     },
     {
       "verse": "6",
-      "text": "In the Bible, God says this: ‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Zion is another name for the city of Jerusalem, either on earth or in heaven. Jerusalem, the capital of Israel, was the place where the Israelites built the Temple. Anyone who believes in him will never be disappointed.’ See Isaiah"
+      "text": "In the Bible, God says this:‘Look, I have chosen a stone that is very valuable.I have chosen this stone as the most important stone,for the corner of my house in Zion.Anyone who believes in him will never be disappointed.’ ‘Look, I have chosen a stone that is very valuable. I have chosen this stone as the most important stone, for the corner of my house in Zion. Anyone who believes in him will never be disappointed.’"
     },
     {
       "verse": "7",
-      "text": "This stone is very valuable to you who believe in Jesus. But the Bible says this about people who do not believe in him: ‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building.’ See Psalm Many years before Jesus lived on the earth, the Israelites built a special house for God. See 1 Kings 6-8. The stone at the corner of the house was the most important stone. It made the whole building strong and safe. It was the first stone that the builders put into its place. Then they put other stones next to it and above it, to build the walls. It was a big, square stone with very straight sides. So it made all the walls of the house straight and strong. Jesus is like the stone at the corner of God's house. God's true house is a spiritual house. God builds his true house with people who belong to Jesus Christ."
+      "text": "This stone is very valuable to you who believe in Jesus. But the Bible says this about people who do not believe in him:‘The builders refused to use a certain stone.They thought that it had no value.But now that stone has become the most important stone at the corner of the building.’ ‘The builders refused to use a certain stone. They thought that it had no value. But now that stone has become the most important stone at the corner of the building.’"
     },
     {
       "verse": "8",
-      "text": "The Bible also says this: ‘This stone will cause people to fall to the ground. It is a rock that will make them fall down.’ See Isaiah They fall down like that because they refuse to obey God's message. God already decided that this would happen to them."
+      "text": "The Bible also says this:‘This stone will cause people to fall to the ground.It is a rock that will make them fall down.’They fall down like that because they refuse to obey God's message. God already decided that this would happen to them. ‘This stone will cause people to fall to the ground. It is a rock that will make them fall down.’ They fall down like that because they refuse to obey God's message. God already decided that this would happen to them."
     },
     {
       "verse": "9",
@@ -140,7 +140,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "In past times, you were not people who knew God. But now you are God's people. In past times, God did not forgive you. But now he has been very kind to you and he has forgiven you. See Hosea"
+      "text": "In past times, you were not people who knew God. But now you are God's people. In past times, God did not forgive you. But now he has been very kind to you and he has forgiven you."
     },
     {
       "verse": "11",
@@ -148,7 +148,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You are living among people who do not know God. So be very careful that you always live in a good way. Sometimes these people may wrongly say that you do bad things. But if you continue to live in a good way, they will see that you really do good things. As a result, on the day when God comes as judge, they will give honour to him. Obey people who have authority over you"
+      "text": "You are living among people who do not know God. So be very careful that you always live in a good way. Sometimes these people may wrongly say that you do bad things. But if you continue to live in a good way, they will see that you really do good things. As a result, on the day when God comes as judge, they will give honour to him."
     },
     {
       "verse": "13",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "You who are slaves must obey your masters. Always respect them. Do that to every kind of master. Obey those who are good and kind. But also obey masters who are not fair to you."
+      "text": "You who are slaves must obey your masters. Always respect them. Do that to every kind of master. Obey those who are good and kind. But also obey masters who are not fair to you. ‘He never did anything that was wrong. He never said anything that was not true.’"
     },
     {
       "verse": "19",
@@ -188,7 +188,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "The Bible says this: ‘He never did anything that was wrong. He never said anything that was not true.’"
+      "text": "The Bible says this:‘He never did anything that was wrong.He never said anything that was not true.’"
     },
     {
       "verse": "23",
@@ -200,7 +200,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Before, you were like sheep that were going the wrong way. But now you have turned round and come to Christ. He is your Shepherd, and he keeps you completely safe. See Isaiah Well’ means that we become well in our spirits. Print... Use screen font size Show All Comments 1 Peter 11 Peter 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Before, you were like sheep that were going the wrong way. But now you have turned round and come to Christ. He is your Shepherd, and he keeps you completely safe."
     }
   ],
   "3": [
@@ -226,15 +226,15 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Sarah was a woman like that. She obeyed her husband, Abraham. She called him, ‘My master’. So you wives also should do what is right. Do not let anything make you afraid. Then you will be like true daughters of Sarah. Abraham was the ancestor of Israel's people. Sarah was his wife. See Genesis"
+      "text": "Sarah was a woman like that. She obeyed her husband, Abraham. She called him, ‘My master’. So you wives also should do what is right. Do not let anything make you afraid. Then you will be like true daughters of Sarah."
     },
     {
       "verse": "7",
-      "text": "You husbands must also respect your wives. Be kind to your wife and help her. Remember that she is not as strong as you are. Because God is very kind, she has received his gift of true life, as you have. So you should respect her. Then God will answer you when you pray to him. Christians must be ready to have trouble"
+      "text": "You husbands must also respect your wives. Be kind to your wife and help her. Remember that she is not as strong as you are. Because God is very kind, she has received his gift of true life, as you have. So you should respect her. Then God will answer you when you pray to him."
     },
     {
       "verse": "8",
-      "text": "Now I want to say this to you before I finish my letter. All of you should agree with each other in what you think. You should try to understand how other people are feeling. Love each other as brothers and sisters. Be kind to each other. Do not think that you are more important than other people."
+      "text": "Now I want to say this to you before I finish my letter. All of you should agree with each other in what you think. You should try to understand how other people are feeling. Love each other as brothers and sisters. Be kind to each other. Do not think that you are more important than other people. ‘Do you want to enjoy your life? Do you want to be happy? Then you must be careful not to say evil things. Do not tell any lies."
     },
     {
       "verse": "9",
@@ -242,15 +242,15 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "The Bible says this: ‘Do you want to enjoy your life? Do you want to be happy? Then you must be careful not to say evil things. Do not tell any lies."
+      "text": "The Bible says this:‘Do you want to enjoy your life?Do you want to be happy?Then you must be careful not to say evil things.Do not tell any lies."
     },
     {
       "verse": "11",
-      "text": "Stop doing evil things. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other."
+      "text": "Stop doing evil things.Instead, do things that are good.Try to be friends with people.Help people to live in peace with each other. Instead, do things that are good. Try to be friends with people. Help people to live in peace with each other."
     },
     {
       "verse": "12",
-      "text": "Remember that the Lord God sees what everyone does. He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things.’ See Psalm"
+      "text": "Remember that the Lord God sees what everyone does.He takes care of people who do what is right.When they pray, he listens to them.But the Lord God turns against people who do evil things.’ He takes care of people who do what is right. When they pray, he listens to them. But the Lord God turns against people who do evil things.’"
     },
     {
       "verse": "13",
@@ -290,7 +290,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "After that, Jesus went into heaven. Now he is sitting at God's right side. He rules over angels and over everything that has authority and power. The story about Noah and the large ship starts in Genesis 6. The ‘spirits who were in prison’ may mean all the people who drowned in the water. Or it may mean the angels who did not obey God. The right side means the most important place. It shows that Jesus has the same authority as his Father. Print... Use screen font size Show All Comments 1 Peter 21 Peter 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After that, Jesus went into heaven. Now he is sitting at God's right side. He rules over angels and over everything that has authority and power."
     }
   ],
   "4": [
@@ -304,7 +304,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "You have already had enough time in your life to do bad things. Those are the kinds of things that people who do not know God like to do. You did many evil things that your bodies wanted to do. You had sex in a wrong way. You often became drunk. You went to wild parties where you drank too much alcohol. You also worshipped useless idols. There is only one true God. He is the only one that we should worship."
+      "text": "You have already had enough time in your life to do bad things. Those are the kinds of things that people who do not know God like to do. You did many evil things that your bodies wanted to do. You had sex in a wrong way. You often became drunk. You went to wild parties where you drank too much alcohol. You also worshipped useless idols."
     },
     {
       "verse": "4",
@@ -316,7 +316,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "That is why even dead people needed to hear the good news about Christ. Their bodies had to die, as all people must die. But they heard the good news so that their spirits could live, as God wants them to live. The ‘dead people’ may mean all the believers who had died during the time that the New Testament describes. Or, the ‘dead people’ may mean all the people who died before Christ came to live on earth. They had no chance to hear the good news about Christ while they lived on earth. So this may mean that Christ went to tell them about what he had done on their behalf. Then they had the chance to believe in him, as we do. We must use God's gifts properly"
+      "text": "That is why even dead people needed to hear the good news about Christ. Their bodies had to die, as all people must die. But they heard the good news so that their spirits could live, as God wants them to live."
     },
     {
       "verse": "7",
@@ -336,7 +336,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Has God helped you to speak well? Then speak God's messages to people. Or has God helped you to serve other people? Then let God make you strong to do that. Do everything so that people will praise God. They will say that God is great, because of Jesus Christ. He is the one who has all authority and power for ever. Everyone should praise him! Amen! This is true! Christians must be ready to have trouble and pain"
+      "text": "Has God helped you to speak well? Then speak God's messages to people. Or has God helped you to serve other people? Then let God make you strong to do that. Do everything so that people will praise God. They will say that God is great, because of Jesus Christ. He is the one who has all authority and power for ever. Everyone should praise him! Amen! This is true!"
     },
     {
       "verse": "12",
@@ -360,15 +360,15 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The time has come when God will start to judge people. He will first judge the people who belong to him. If he will start with his own people, what will happen to other people? They have refused to obey God's good news, so it will surely be very bad for them."
+      "text": "The time has come when God will start to judge people. He will first judge the people who belong to him. If he will start with his own people, what will happen to other people? They have refused to obey God's good news, so it will surely be very bad for them. ‘When God saves righteous people, that is a difficult thing. It will surely be much worse for people who turn away from God and who do bad things.’"
     },
     {
       "verse": "18",
-      "text": "The Bible says: ‘When God saves righteous people, that is a difficult thing. It will surely be much worse for people who turn away from God and who do bad things.’ See Proverbs"
+      "text": "The Bible says:‘When God saves righteous people, that is a difficult thing.It will surely be much worse for people who turn away from God and who do bad things.’"
     },
     {
       "verse": "19",
-      "text": "So remember this. If you receive trouble because that is what God wants, you should continue to trust him. God made you and he always does what he has promised. So you should continue to do what is good. Print... Use screen font size Show All Comments 1 Peter 31 Peter 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So remember this. If you receive trouble because that is what God wants, you should continue to trust him. God made you and he always does what he has promised. So you should continue to do what is good."
     }
   ],
   "5": [
@@ -386,11 +386,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then our master, Christ, will give you a beautiful crown when he appears. That is a great gift that will never become old or less beautiful. He is the great Shepherd who takes care of us. A crown is a special hat someone receives when they win a race. It shows that the winner has done well. This crown is a picture of what God will give to each believer. He will cause us to live with him always."
+      "text": "Then our master, Christ, will give you a beautiful crown when he appears. That is a great gift that will never become old or less beautiful. He is the great Shepherd who takes care of us."
     },
     {
       "verse": "5",
-      "text": "I want to say the same thing to you who are young men. You must respect the authority of the leaders. All of you who are believers must respect one another. Do not think that you are more important than other people. The Bible says: ‘God is against proud people. But he is kind to humble people.’ See Proverbs"
+      "text": "I want to say the same thing to you who are young men. You must respect the authority of the leaders. All of you who are believers must respect one another. Do not think that you are more important than other people. The Bible says:‘God is against proud people.But he is kind to humble people.’ ‘God is against proud people. But he is kind to humble people.’"
     },
     {
       "verse": "6",
@@ -398,7 +398,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "If you have any kind of trouble in your mind, give it to God. God has promised to take care of you. See Psalm"
+      "text": "If you have any kind of trouble in your mind, give it to God. God has promised to take care of you."
     },
     {
       "verse": "8",
@@ -414,19 +414,19 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Yes, God rules with power for ever! Amen! This is true! Peter finishes his letter"
+      "text": "Yes, God rules with power for ever! Amen! This is true!"
     },
     {
       "verse": "12",
-      "text": "Silas has helped me to write this short letter to you. I know that he continues to trust Christ well. I have written to you because I want you to be strong. I have told you how God is kind to us and he helps us. This is God's true message to you. So continue to believe it and be strong. Silas was a leader of the Christians who were at Jerusalem, along with Peter. See Acts"
+      "text": "Silas has helped me to write this short letter to you. I know that he continues to trust Christ well. I have written to you because I want you to be strong. I have told you how God is kind to us and he helps us. This is God's true message to you. So continue to believe it and be strong."
     },
     {
       "verse": "13",
-      "text": "The believers here in Babylon say ‘hello’ to you. God has chosen them as his people, together with you. Mark, who is like my son, also says ‘hello’ to you."
+      "text": "The believers here in Babylon say ‘hello’ to you. God has chosen them as his people, together with you. Mark, who is like my son, also says ‘hello’ to you. I pray for all of you who belong to Christ. I pray that God will give you peace in your minds."
     },
     {
       "verse": "14",
-      "text": "When you meet, kiss each other as Christian brothers and sisters. Babylon’ here probably means Rome, the capital city of Italy. At that time, the king of Rome (Caesar) ruled many countries. His soldiers were causing a lot of trouble for Christians. Many years earlier, people from Babylon had caused a lot of trouble for Israel's people. So the Christians used Babylon as a secret name for Rome. I pray for all of you who belong to Christ. I pray that God will give you peace in your minds. Print... Use screen font size Show All Comments 1 Peter 42 Peter Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When you meet, kiss each other as Christian brothers and sisters.I pray for all of you who belong to Christ. I pray that God will give you peace in your minds."
     }
   ]
 };

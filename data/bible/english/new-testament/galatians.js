@@ -2,11 +2,11 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "This letter is from me, Paul. I am an apostle of Jesus Christ. It is not any group of people or any one person that has given that authority to me. It is Jesus Christ himself who has chosen me to serve him. And God our Father, who raised Jesus to become alive again after his death, has also sent me."
+      "text": "This letter is from me, Paul. I am an apostle of Jesus Christ. It is not any group of people or any one person that has given that authority to me. It is Jesus Christ himself who has chosen me to serve him. And God our Father, who raised Jesus to become alive again after his death, has also sent me. I am writing to you, the people of the churches that are in Galatia."
     },
     {
       "verse": "2",
-      "text": "All the believers who are here say ‘hello’ to you. We all send this letter to you. I am writing to you, the people of the churches that are in Galatia."
+      "text": "All the believers who are here say ‘hello’ to you. We all send this letter to you.I am writing to you, the people of the churches that are in Galatia."
     },
     {
       "verse": "3",
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "God is great and we should praise him for ever. Amen. This is true. The true message of good news"
+      "text": "God is great and we should praise him for ever. Amen. This is true."
     },
     {
       "verse": "6",
@@ -38,7 +38,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "When I say these things, I am not trying to please people. No, it is God that I want to please. If I only wanted to make people happy, then I would not be a servant of Christ. Paul's message is from God"
+      "text": "When I say these things, I am not trying to please people. No, it is God that I want to please. If I only wanted to make people happy, then I would not be a servant of Christ."
     },
     {
       "verse": "11",
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Nor did I go to Jerusalem to see Christ's apostles there. Those men were already his apostles before I was. But I did not go to talk to them. Instead, I went immediately to the region of Arabia. Later, I went back to the city of Damascus. God showed Jesus to Paul near the city of Damascus. Damascus was in Syria, not very far from the north part of Israel. Paul had gone there from Jerusalem to cause trouble against the Christians. Arabia was a place south and east from Israel."
+      "text": "Nor did I go to Jerusalem to see Christ's apostles there. Those men were already his apostles before I was. But I did not go to talk to them. Instead, I went immediately to the region of Arabia. Later, I went back to the city of Damascus."
     },
     {
       "verse": "18",
@@ -94,13 +94,13 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "When the believers in Judea heard that, they praised God because of me. Syria and Cilicia were places north from Israel, south and east from Galatia, near to the Mediterranean Sea. Judea was the south region of Israel. Jerusalem, the capital city of Israel, was in Judea. Print... Use screen font size Show All Comments Galatians IntroductionGalatians 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When the believers in Judea heard that, they praised God because of me."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "14 years later, I went to Jerusalem again. This time I went with Barnabas, and I also took Titus with me."
+      "text": "years later, I went to Jerusalem again. This time I went with Barnabas, and I also took Titus with me."
     },
     {
       "verse": "2",
@@ -108,7 +108,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Titus was with me then. He is a Greek person and nobody had circumcised him. But the leaders in Jerusalem did not say that we must circumcise him. Titus was not a Jew, and nobody had ever circumcised him. Some Jewish Christians said that all believers must be circumcised. But the apostles in Jerusalem did not say that this must happen."
+      "text": "Titus was with me then. He is a Greek person and nobody had circumcised him. But the leaders in Jerusalem did not say that we must circumcise him."
     },
     {
       "verse": "4",
@@ -136,7 +136,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "They only asked us to do this: We should remember to help the poor people among their group. That is something that I myself wanted very much to do. Paul argues with Peter"
+      "text": "They only asked us to do this: We should remember to help the poor people among their group. That is something that I myself wanted very much to do."
     },
     {
       "verse": "11",
@@ -172,7 +172,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But God's Law showed me that I could never obey all its rules. So I became like a dead person, free from the authority of those rules. That means that I can now live to please God. God gave his Law to the Jews. This helped them to live as God's special people. But the Jews could never completely obey all those rules. Those rules could never make them completely right with God. People needed another way to become right with God. That other way is Christ's sacrifice on our behalf."
+      "text": "But God's Law showed me that I could never obey all its rules. So I became like a dead person, free from the authority of those rules. That means that I can now live to please God."
     },
     {
       "verse": "20",
@@ -180,7 +180,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "So I do not refuse to accept the kind gift of God. If the rules of God's Law could make me right with him, then Christ would have died for no reason! Print... Use screen font size Show All Comments Galatians 1Galatians 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So I do not refuse to accept the kind gift of God. If the rules of God's Law could make me right with him, then Christ would have died for no reason!"
     }
   ],
   "3": [
@@ -218,7 +218,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "So then, God did not bless only Abraham when he trusted God. God also blesses all people who trust him like Abraham did. See Genesis"
+      "text": "So then, God did not bless only Abraham when he trusted God. God also blesses all people who trust him like Abraham did."
     },
     {
       "verse": "10",
@@ -226,7 +226,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "We know that the Law can not cause anyone to become right with God. That is clear because the Bible says, ‘The person that God has accepted as right will live because they trust him.’ See Deuteronomy These words from Habakkuk are also in Romans and Hebrews It is very important to trust God. See also Hebrews"
+      "text": "We know that the Law can not cause anyone to become right with God. That is clear because the Bible says, ‘The person that God has accepted as right will live because they trust him.’"
     },
     {
       "verse": "12",
@@ -238,7 +238,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Christ died in that way so that God would bless the Gentiles in the way that he blessed Abraham. Also, if we believe in Christ, we can then receive God's Spirit that he promised. See Deuteronomy God's promise to Abraham still has authority"
+      "text": "Christ died in that way so that God would bless the Gentiles in the way that he blessed Abraham. Also, if we believe in Christ, we can then receive God's Spirit that he promised."
     },
     {
       "verse": "15",
@@ -254,7 +254,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "God has promised to give good things to his children. But that does not happen as a result of God's Law. If that were true, then we would not receive God's good things as a result of his promise. But God gave those good things to Abraham as a gift, because he had promised to bless Abraham. See Genesis The purpose of God's Law"
+      "text": "God has promised to give good things to his children. But that does not happen as a result of God's Law. If that were true, then we would not receive God's good things as a result of his promise. But God gave those good things to Abraham as a gift, because he had promised to bless Abraham."
     },
     {
       "verse": "19",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But God himself gave his promise to Abraham. It was not necessary to have somebody in between, like Moses. The Jews believed that God sent angels to Moses on Sinai mountain. See Exodus 19-20, and Acts"
+      "text": "But God himself gave his promise to Abraham. It was not necessary to have somebody in between, like Moses."
     },
     {
       "verse": "21",
@@ -298,7 +298,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "And if you belong to Christ, then you are descendants of Abraham. Because of that, you will receive all the good things that God promised to Abraham. Print... Use screen font size Show All Comments Galatians 2Galatians 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And if you belong to Christ, then you are descendants of Abraham. Because of that, you will receive all the good things that God promised to Abraham."
     }
   ],
   "4": [
@@ -328,7 +328,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So you are not slaves any more, but you are God's children. And because of that, you will receive all the good things that God has promised. Continue to trust Christ"
+      "text": "So you are not slaves any more, but you are God's children. And because of that, you will receive all the good things that God has promised."
     },
     {
       "verse": "8",
@@ -380,7 +380,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "I want very much to be there with you now. Then I would know better how to speak to you. As it is, I do not know what to think about you. A picture of Hagar and Sarah"
+      "text": "I want very much to be there with you now. Then I would know better how to speak to you. As it is, I do not know what to think about you."
     },
     {
       "verse": "21",
@@ -392,7 +392,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Hagar was a slave. Her son was born as a result of what Abraham himself decided. But Abraham's wife, Sarah, gave birth to the other son. That son was born as a result of what God had promised to Abraham. See Genesis 16;"
+      "text": "Hagar was a slave. Her son was born as a result of what Abraham himself decided. But Abraham's wife, Sarah, gave birth to the other son. That son was born as a result of what God had promised to Abraham."
     },
     {
       "verse": "24",
@@ -400,15 +400,15 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Hagar is like a picture of Sinai mountain in Arabia. Also, she is like the city of Jerusalem here on earth now, because that city and its people are slaves under the authority of God's Law. Sinai mountain was the place where God gave his Law to Israel's people. God's agreement with his people at that time was that they must obey all the rules in his Law. So Israel's people were like slaves under the authority of God's Law. Arabia was south and east from Israel."
+      "text": "Hagar is like a picture of Sinai mountain in Arabia. Also, she is like the city of Jerusalem here on earth now, because that city and its people are slaves under the authority of God's Law."
     },
     {
       "verse": "26",
-      "text": "But Abraham's wife, Sarah, is a picture of the new Jerusalem that is above. Sarah was a free person, not a slave, and she is like our mother."
+      "text": "But Abraham's wife, Sarah, is a picture of the new Jerusalem that is above. Sarah was a free person, not a slave, and she is like our mother. ‘Be happy, you woman who could not have any children! You have never known the pain of a child's birth. But now shout loudly because you are so happy! Yes, be happy, because the lonely woman now has more children than the woman who has a husband.’"
     },
     {
       "verse": "27",
-      "text": "It says in the Bible: ‘Be happy, you woman who could not have any children! You have never known the pain of a child's birth. But now shout loudly because you are so happy! Yes, be happy, because the lonely woman now has more children than the woman who has a husband.’ See Isaiah"
+      "text": "It says in the Bible:‘Be happy, you woman who could not have any children!You have never known the pain of a child's birth.But now shout loudly because you are so happy!Yes, be happy, because the lonely woman now has more childrenthan the woman who has a husband.’"
     },
     {
       "verse": "28",
@@ -424,7 +424,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "So then, my Christian friends, we are not children of the woman who is a slave. No, we are children of the free woman. See Genesis Hagar's son was called Ishmael. Sarah's son was called Isaac. Hagar and Ishmael caused much trouble to Sarah and Isaac. Print... Use screen font size Show All Comments Galatians 3Galatians 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So then, my Christian friends, we are not children of the woman who is a slave. No, we are children of the free woman."
     }
   ],
   "5": [
@@ -466,7 +466,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But I feel sure about you, because we belong to the Lord. I know that you will agree with what I say about this. But as for the man who is confusing you, God will punish him. It does not matter who he is, God will punish him. In the Bible, yeast is often a picture of something bad that causes more bad things to happen."
+      "text": "But I feel sure about you, because we belong to the Lord. I know that you will agree with what I say about this. But as for the man who is confusing you, God will punish him. It does not matter who he is, God will punish him."
     },
     {
       "verse": "11",
@@ -474,7 +474,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Those people who are causing trouble and want to circumcise you should cut their own bodies! Yes, that is what they should do! Live by God's Spirit"
+      "text": "Those people who are causing trouble and want to circumcise you should cut their own bodies! Yes, that is what they should do!"
     },
     {
       "verse": "13",
@@ -486,7 +486,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "So you must not live like wild animals. Wild animals fight and they eat each other. If you live like that, be very careful! You may destroy one another completely. See Leviticus"
+      "text": "So you must not live like wild animals. Wild animals fight and they eat each other. If you live like that, be very careful! You may destroy one another completely."
     },
     {
       "verse": "16",
@@ -530,7 +530,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "We must not become proud. We must not be jealous of each other, so that we cause trouble to one another. Print... Use screen font size Show All Comments Galatians 4Galatians 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We must not become proud. We must not be jealous of each other, so that we cause trouble to one another."
     }
   ],
   "6": [
@@ -552,7 +552,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Each person must live in a way that they know is right for them. Christ gave this rule to his disciples: ‘Love each other.’ See John"
+      "text": "Each person must live in a way that they know is right for them."
     },
     {
       "verse": "6",
@@ -572,7 +572,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "Because of all that, we must help everyone when we have the chance. Certainly we must do good things to help our friends who believe in Christ, as we do. Paul finishes his letter"
+      "text": "Because of all that, we must help everyone when we have the chance. Certainly we must do good things to help our friends who believe in Christ, as we do."
     },
     {
       "verse": "11",
@@ -604,7 +604,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "My Christian friends, I pray that our Lord Jesus Christ will continue to be very kind to you. I pray that he will help you in your spirits. Amen. This is true! Print... Use screen font size Show All Comments Galatians 5Ephesians Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "My Christian friends, I pray that our Lord Jesus Christ will continue to be very kind to you. I pray that he will help you in your spirits. Amen. This is true!"
     }
   ]
 };

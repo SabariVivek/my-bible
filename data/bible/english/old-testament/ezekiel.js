@@ -2,7 +2,7 @@ module.exports = {
   "1": [
     {
       "verse": "1",
-      "text": "It was the 30th year. God spoke to me on the fifth day of the fourth month. I was among the prisoners from Judah at the side of the Kebar river. At that time the skies opened and I saw visions from God. This probably means that Ezekiel was 30 years old. The 4th month would be what we call June or July. King Nebuchadnezzar of Babylon had taken Israelite people from Jerusalem as prisoners. The Kebar river joined the Euphrates river at Babylon. It was big enough for large boats."
+      "text": "It was the 30th year. God spoke to me on the fifth day of the fourth month. I was among the prisoners from Judah at the side of the Kebar river. At that time the skies opened and I saw visions from God."
     },
     {
       "verse": "2",
@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "the Lord spoke to Ezekiel, the priest. He was the son of Buzi. He was standing beside the River Kebar in Babylon. While Ezekiel was there, the Lord came to him with power. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "the Lord spoke to Ezekiel, the priest. He was the son of Buzi. He was standing beside the River Kebar in Babylon. While Ezekiel was there, the Lord came to him with power."
     },
     {
       "verse": "4",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The wheels had high edges. Eyes completely covered the edges of all the wheels. See Daniel"
+      "text": "The wheels had high edges. Eyes completely covered the edges of all the wheels."
     },
     {
       "verse": "19",
@@ -98,7 +98,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "While they stood with their wings down at their sides, I heard a voice. It came from above the roof over their heads."
+      "text": "While they stood with their wings down at their sides, I heard a voice. It came from above the roof over their heads. When I saw this, I bent down low with my face on the ground. I heard a voice that was speaking to me."
     },
     {
       "verse": "26",
@@ -110,7 +110,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "It shone with the colours of a rainbow in the clouds when there is rain. This bright light showed the glory of the Lord, who was there. When I saw this, I bent down low with my face on the ground. I heard a voice that was speaking to me. Print... Use screen font size Show All Comments Ezekiel IntroductionEzekiel 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "It shone with the colours of a rainbow in the clouds when there is rain. This bright light showed the glory of the Lord, who was there.When I saw this, I bent down low with my face on the ground. I heard a voice that was speaking to me."
     }
   ],
   "2": [
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "A spirit came into me while he spoke. He made me stand up and I heard him speak to me. A spirit’ or ‘a wind’. The same Hebrew word may mean either of these."
+      "text": "A spirit came into me while he spoke. He made me stand up and I heard him speak to me."
     },
     {
       "verse": "3",
@@ -152,7 +152,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "He opened the scroll so that I could see inside it. I saw words that were written on both sides of the scroll. There were sad funeral songs, and words about great trouble that make you weep. In those days, people wrote books on scrolls. Usually they would only write on one side of the skin or paper. But here there were words written on both sides. Print... Use screen font size Show All Comments Ezekiel 1Ezekiel 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "He opened the scroll so that I could see inside it. I saw words that were written on both sides of the scroll. There were sad funeral songs, and words about great trouble that make you weep."
     }
   ],
   "3": [
@@ -166,7 +166,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He said, ‘Son of man, I am giving you this scroll. Eat it all and fill your stomach with it.’ So I ate it. It had a sweet taste like honey in my mouth. See Revelation"
+      "text": "He said, ‘Son of man, I am giving you this scroll. Eat it all and fill your stomach with it.’ So I ate it. It had a sweet taste like honey in my mouth."
     },
     {
       "verse": "4",
@@ -214,7 +214,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I came to Tel Abib near the Kedar river, where the Israelite prisoners lived. I stayed with them for seven days. I was very upset as I sat among them. a spirit’ or ‘a wind’. Also in verse 14. Ezekiel must warn the Lord's people"
+      "text": "I came to Tel Abib near the Kedar river, where the Israelite prisoners lived. I stayed with them for seven days. I was very upset as I sat among them."
     },
     {
       "verse": "16",
@@ -262,7 +262,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "But sometimes I will speak to you. Then you will be able to open your mouth and give them my message. You must tell them, “This is what the Almighty Lord says.” Some of them will listen to my message. But other people will refuse to listen. They are a nation of people who refuse to obey me.’ God made Ezekiel dumb for 7 years. That time continued until the people of Babylon destroyed Jerusalem. But during that time, Ezekiel had to speak many messages from God. Print... Use screen font size Show All Comments Ezekiel 2Ezekiel 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But sometimes I will speak to you. Then you will be able to open your mouth and give them my message. You must tell them, “This is what the Almighty Lord says.” Some of them will listen to my message. But other people will refuse to listen. They are a nation of people who refuse to obey me.’"
     }
   ],
   "4": [
@@ -276,10 +276,10 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Then you must do this. Take a flat plate of iron and put it between you and the brick. It will be like a wall between you and the city. Look towards the city. Show that soldiers are around the city and they are ready to attack it. Nobody can escape. This will be a picture to show Israel's people what will happen to them. The people of Babylon did not have paper to write on. Instead, they made their records on bricks that were made from clay. They would write on the soft brick. Then they would bake the brick to make it hard. God gave this prophecy to Ezekiel. He told Ezekiel to make a model of a city and to do certain things with it. Ezekiel did those things to show what would happen to Jerusalem."
+      "text": "Then you must do this. Take a flat plate of iron and put it between you and the brick. It will be like a wall between you and the city. Look towards the city. Show that soldiers are around the city and they are ready to attack it. Nobody can escape. This will be a picture to show Israel's people what will happen to them."
     },
     {
-      "verse": "4-5",
+      "verse": "4",
       "text": "Then lie down on your left side. Show that you are receiving the punishment for the sins of the Israelites. You will suffer like that for 390 days. It will show the number of years that I have decided to punish Israel's people. Each day that you suffer will show one year of their punishment."
     },
     {
@@ -292,7 +292,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Listen! I will use ropes to tie around you. You will not be able to turn from one side to another. You will lie on one side until you have finished all the days to attack the city. This means that Ezekiel had to lie on his side for a part of each day."
+      "text": "Listen! I will use ropes to tie around you. You will not be able to turn from one side to another. You will lie on one side until you have finished all the days to attack the city."
     },
     {
       "verse": "9",
@@ -300,7 +300,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "You should eat 220 grams of food each day. Eat it at the same time each day."
+      "text": "grams of food each day. Eat it at the same time each day."
     },
     {
       "verse": "11",
@@ -308,11 +308,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Prepare your food like a cake that is made from barley. Bake it on a fire that you have made with human dung. Do this where the people can see you.’ Ezekiel did not bake the cake in an oven, but on hot stones. God told him to use human dung to make the fire to heat the stones. God's law said that would make the food unclean."
+      "text": "Prepare your food like a cake that is made from barley. Bake it on a fire that you have made with human dung. Do this where the people can see you.’"
     },
     {
       "verse": "13",
-      "text": "The Lord also said, ‘I will send Israel's people away to live in foreign lands. Then they will have to eat unclean food, as you will do now.’ When God sent the Israelites away to live among foreign people, they would have to eat unclean food."
+      "text": "The Lord also said, ‘I will send Israel's people away to live in foreign lands. Then they will have to eat unclean food, as you will do now.’"
     },
     {
       "verse": "14",
@@ -328,13 +328,13 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "They will not have enough food or water. Everyone will be very upset. Their bodies will become very thin when I punish them for their sins.’ See Leviticus Print... Use screen font size Show All Comments Ezekiel 3Ezekiel 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They will not have enough food or water. Everyone will be very upset. Their bodies will become very thin when I punish them for their sins.’"
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "‘Son of man, take a sharp sword. Use it like a knife to cut off your hair and your beard. Then use some scales to weigh the hair. Put it into three separate parts that are the same weight. To cut all the hair from his head was a sign of shame. It meant that Ezekiel could not serve God as a priest. But Ezekiel obeyed God and he cut his hair and his beard."
+      "text": "‘Son of man, take a sharp sword. Use it like a knife to cut off your hair and your beard. Then use some scales to weigh the hair. Put it into three separate parts that are the same weight."
     },
     {
       "verse": "2",
@@ -378,7 +378,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Illness or famine will kill one third of your people inside the city. The soldiers who are around the city will kill a third of your people. And I will chase away a third of them to all parts of the earth. I will cause their enemies to run after them with their swords. See Jeremiah"
+      "text": "Illness or famine will kill one third of your people inside the city. The soldiers who are around the city will kill a third of your people. And I will chase away a third of them to all parts of the earth. I will cause their enemies to run after them with their swords."
     },
     {
       "verse": "13",
@@ -398,7 +398,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Famine or wild animals will kill you. Your children will no longer live. Illness and war will destroy you. I will send soldiers to attack you. I, the Lord, say this!’ Print... Use screen font size Show All Comments Ezekiel 4Ezekiel 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Famine or wild animals will kill you. Your children will no longer live. Illness and war will destroy you. I will send soldiers to attack you. I, the Lord, say this!’"
     }
   ],
   "6": [
@@ -420,7 +420,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The dead bodies of you people of Israel will lie in front of your idols. I will cause soldiers to throw your bones on the ground around the altars. The events in this prophecy happened in the year 586 BC. See Leviticus"
+      "text": "The dead bodies of you people of Israel will lie in front of your idols. I will cause soldiers to throw your bones on the ground around the altars."
     },
     {
       "verse": "6",
@@ -456,7 +456,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will punish them very much. I will destroy their land from the desert in the south as far as Diblah. I will make it a place where nobody can live. Then they will know that I am the Lord.’ Print... Use screen font size Show All Comments Ezekiel 5Ezekiel 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will punish them very much. I will destroy their land from the desert in the south as far as Diblah. I will make it a place where nobody can live. Then they will know that I am the Lord.’"
     }
   ],
   "7": [
@@ -558,7 +558,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Terrible trouble is coming to my people! When they are afraid, they will look for peace. But they will not find it."
+      "text": "Terrible trouble is coming to my people! When they are afraid, they will look for peace. But they will not find it. I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord.’"
     },
     {
       "verse": "26",
@@ -566,13 +566,13 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The king will be very sad. His son will not hope for anything good to happen. The people will shake with fear. I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord.’ Print... Use screen font size Show All Comments Ezekiel 6Ezekiel 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The king will be very sad. His son will not hope for anything good to happen. The people will shake with fear.I will punish them as they deserve for the way that they have lived. I will judge them in the same way that they have judged other people. Then they will know that I am the Lord.’"
     }
   ],
   "8": [
     {
       "verse": "1",
-      "text": "On the fifth day of the sixth month of the sixth year, I was sitting in my house. The leaders of Judah were sitting in front of me. While I sat there, the Almighty Lord took hold of me with great power. Ezekiel records the exact date. It was during September in the year 592 BC. God gave Ezekiel a vision which continues from chapter 8 to chapter 11."
+      "text": "On the fifth day of the sixth month of the sixth year, I was sitting in my house. The leaders of Judah were sitting in front of me. While I sat there, the Almighty Lord took hold of me with great power."
     },
     {
       "verse": "2",
@@ -584,7 +584,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then I saw that the bright glory of Israel's God was there. It was like the glory that I had seen beside the River Kebar. The Spirit’ or ‘a wind’."
+      "text": "Then I saw that the bright glory of Israel's God was there. It was like the glory that I had seen beside the River Kebar."
     },
     {
       "verse": "5",
@@ -612,7 +612,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "70 of Israel's leaders were there. Shaphan's son Jaazaniah, was also among them. Each of them held a pot to burn incense. The smell of the incense rose up above them."
+      "text": "of Israel's leaders were there. Shaphan's son Jaazaniah, was also among them. Each of them held a pot to burn incense. The smell of the incense rose up above them."
     },
     {
       "verse": "12",
@@ -628,11 +628,11 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He said to me, ‘Son of man, look at that! But you will see even worse things than these.’ Tammuz was a false god that the Babylonian people worshipped. Every year, Babylonian women would remember his death and they would weep. Now Ezekiel could see that Israelite women were also doing this in the Lord's temple."
+      "text": "He said to me, ‘Son of man, look at that! But you will see even worse things than these.’"
     },
     {
       "verse": "16",
-      "text": "Then the Lord took me to the inside yard of his temple. I could see about 25 men who were standing between the altar and the front of the temple. Their backs were turned towards the Lord's temple. Their faces looked towards the east. They were bending down low to worship the sun that was rising in the east! The inside yard of the temple was a holy place for Israelites to worship the Lord. But these men were worshipping the sun god of Babylon."
+      "text": "Then the Lord took me to the inside yard of his temple. I could see about 25 men who were standing between the altar and the front of the temple. Their backs were turned towards the Lord's temple. Their faces looked towards the east. They were bending down low to worship the sun that was rising in the east!"
     },
     {
       "verse": "17",
@@ -640,7 +640,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So now I will punish them in my great anger. I will not be sorry for them. I will not be kind to them. They may shout at me for help, but I will not listen to them.’ Print... Use screen font size Show All Comments Ezekiel 7Ezekiel 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So now I will punish them in my great anger. I will not be sorry for them. I will not be kind to them. They may shout at me for help, but I will not listen to them.’"
     }
   ],
   "9": [
@@ -650,7 +650,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Then I looked and I saw six men. They were coming from the higher gate that is on the north side of the temple. Each man carried his weapon and he was ready to kill. A man who was wearing white linen clothes was among them. At his side he had a small box with pens in it. They came in and they stood next to the bronze altar. The bronze altar was where the priests burned sacrifices to offer to God. See 2 Kings"
+      "text": "Then I looked and I saw six men. They were coming from the higher gate that is on the north side of the temple. Each man carried his weapon and he was ready to kill. A man who was wearing white linen clothes was among them. At his side he had a small box with pens in it. They came in and they stood next to the bronze altar."
     },
     {
       "verse": "3",
@@ -662,11 +662,11 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "While I listened, the Lord said to the other men, ‘Follow that man through the city. Kill people who do not have his mark on their heads. Do not be sorry for them. Do not be kind to them."
+      "text": "While I listened, the Lord said to the other men, ‘Follow that man through the city. Kill people who do not have his mark on their heads. Do not be sorry for them. Do not be kind to them. So the men started to kill. The first people that they killed were the city's leaders who were in front of the temple."
     },
     {
       "verse": "6",
-      "text": "Kill the old men, young men and girls. Kill the women and the children. Destroy them all! But do not touch anyone who has the mark on their head.’ So the men started to kill. The first people that they killed were the city's leaders who were in front of the temple."
+      "text": "Kill the old men, young men and girls. Kill the women and the children. Destroy them all! But do not touch anyone who has the mark on their head.’So the men started to kill. The first people that they killed were the city's leaders who were in front of the temple."
     },
     {
       "verse": "7",
@@ -686,7 +686,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Then I saw again the man who was wearing linen clothes, with the box of pens. He brought this message to the Lord: ‘I have done what you commanded me to do.’ Print... Use screen font size Show All Comments Ezekiel 8Ezekiel 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then I saw again the man who was wearing linen clothes, with the box of pens. He brought this message to the Lord: ‘I have done what you commanded me to do.’"
     }
   ],
   "10": [
@@ -708,7 +708,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The noise of the cherubs' wings was very loud. It reached as far as the outside yard. The noise was like the voice of Almighty God when he speaks. The temple had several yards around it. The inside yard was at the front of the temple building. It was a special place where only priests and Levites were allowed to go."
+      "text": "The noise of the cherubs' wings was very loud. It reached as far as the outside yard. The noise was like the voice of Almighty God when he speaks."
     },
     {
       "verse": "6",
@@ -740,7 +740,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I heard someone call the wheels, ‘wheels that turn very fast’. See Ezekiel"
+      "text": "I heard someone call the wheels, ‘wheels that turn very fast’."
     },
     {
       "verse": "14",
@@ -764,7 +764,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Then the cherubs lifted up their wings and they rose up from the ground. The wheels also moved with them. I watched them do this. They stopped by the east gate of the Lord's temple. The glory of Israel's God stayed above them. The Lord was Israel's God."
+      "text": "Then the cherubs lifted up their wings and they rose up from the ground. The wheels also moved with them. I watched them do this. They stopped by the east gate of the Lord's temple. The glory of Israel's God stayed above them."
     },
     {
       "verse": "20",
@@ -776,7 +776,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "They had the same four faces that I had seen beside the River Kebar. Each of them moved forward and they did not turn. Print... Use screen font size Show All Comments Ezekiel 9Ezekiel 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They had the same four faces that I had seen beside the River Kebar. Each of them moved forward and they did not turn."
     }
   ],
   "11": [
@@ -790,7 +790,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "They say, “It is not the right time now to build houses. This city is like a pot to cook meat on a fire. We are like the meat in that pot.” A spirit’ or ‘a wind’."
+      "text": "They say, “It is not the right time now to build houses. This city is like a pot to cook meat on a fire. We are like the meat in that pot.”"
     },
     {
       "verse": "4",
@@ -878,7 +878,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I told the Israelites everything that the Lord had shown me in the vision. Print... Use screen font size Show All Comments Ezekiel 10Ezekiel 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I told the Israelites everything that the Lord had shown me in the vision."
     }
   ],
   "12": [
@@ -936,7 +936,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will cause all his officers and soldiers to run away in different directions. Then their enemies will chase after them, to kill them with their swords. King Zedekiah escaped from Jerusalem but the soldiers of Babylon caught him. They took his eyes out so that he could not see anything. See 2 Kings Jeremiah"
+      "text": "I will cause all his officers and soldiers to run away in different directions. Then their enemies will chase after them, to kill them with their swords."
     },
     {
       "verse": "15",
@@ -992,7 +992,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "So say to them, “This is what the Almighty Lord says: I will not wait any longer to do what I have said. I will do everything that I have told you. That is what the Almighty Lord says.” ’ Print... Use screen font size Show All Comments Ezekiel 11Ezekiel 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So say to them, “This is what the Almighty Lord says: I will not wait any longer to do what I have said. I will do everything that I have told you. That is what the Almighty Lord says.” ’"
     }
   ],
   "13": [
@@ -1042,7 +1042,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "After the wall has fallen down, people will say, ‘That white paint was useless!’ Mortar’ is like cement that is used to fix bricks together."
+      "text": "After the wall has fallen down, people will say, ‘That white paint was useless!’"
     },
     {
       "verse": "13",
@@ -1058,7 +1058,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "They were prophets of Israel who told lies. They promised that Jerusalem would have peace. But there was really no peace.’ That is what the Almighty Lord says.” The wall shows what God will do to the city of Jerusalem. God will destroy it, as well as the false prophets."
+      "text": "They were prophets of Israel who told lies. They promised that Jerusalem would have peace. But there was really no peace.’ That is what the Almighty Lord says.”"
     },
     {
       "verse": "17",
@@ -1086,7 +1086,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "So you women will not see any more false visions. You will no longer pretend that you know future events. I will rescue my people from your power. Then you will know that I am the Lord.” ’ Print... Use screen font size Show All Comments Ezekiel 12Ezekiel 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So you women will not see any more false visions. You will no longer pretend that you know future events. I will rescue my people from your power. Then you will know that I am the Lord.” ’"
     }
   ],
   "14": [
@@ -1180,7 +1180,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Yes, when you see what they are like, you will no longer be upset. You will know that I have punished the people of Jerusalem as they deserved. That is what the Almighty Lord says.’ Print... Use screen font size Show All Comments Ezekiel 13Ezekiel 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, when you see what they are like, you will no longer be upset. You will know that I have punished the people of Jerusalem as they deserved. That is what the Almighty Lord says.’"
     }
   ],
   "15": [
@@ -1202,7 +1202,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "It was useless before you put it on the fire. It is even more useless after the fire has burnt it. You cannot make anything with it. In the picture language of the Bible, a vine often means Israel."
+      "text": "It was useless before you put it on the fire. It is even more useless after the fire has burnt it. You cannot make anything with it."
     },
     {
       "verse": "6",
@@ -1214,7 +1214,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "They have not served me faithfully. So I will destroy their land. That is what the Almighty Lord says.’ Print... Use screen font size Show All Comments Ezekiel 14Ezekiel 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They have not served me faithfully. So I will destroy their land. That is what the Almighty Lord says.’"
     }
   ],
   "16": [
@@ -1236,7 +1236,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Nobody was kind enough to do any of these things for you. Instead, they threw you out into a field. Nobody loved you on the day that you were born. Amorite and Hittite were names for the people who lived in Canaan before the time of Abraham. The people of Jerusalem were not really Canaanites, but they were doing bad things as if they were Canaanites. That is why God is angry with them. The custom in those days was to wash the new baby. The nurse would cut the baby's cord. She would wash it with salt and oil. Then she would put cloths around the baby. She would repeat this every seven days until the baby was 40 days old."
+      "text": "Nobody was kind enough to do any of these things for you. Instead, they threw you out into a field. Nobody loved you on the day that you were born."
     },
     {
       "verse": "6",
@@ -1332,7 +1332,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "You also had sex with the traders from Babylon. Like a prostitute, you sold yourself to more and more people. But they could still not make you happy. The Lord is telling Jerusalem's people that they have not been faithful to him. They have been like a woman who is not faithful to her husband. Like a prostitute, they have loved foreign people and foreign gods."
+      "text": "You also had sex with the traders from Babylon. Like a prostitute, you sold yourself to more and more people. But they could still not make you happy."
     },
     {
       "verse": "30",
@@ -1408,7 +1408,7 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "Your sister Sodom and her daughters never did such wicked things as you and your daughters have done. That is true as surely as I live, says the Almighty Lord. See note on verse 3. The Lord is calling these other cities the ‘sisters’ of Jerusalem. When he speaks about the ‘daughters’ of those cities, he may mean the smaller towns and villages that were around them. He is talking about the sins of the people in those places."
+      "text": "Your sister Sodom and her daughters never did such wicked things as you and your daughters have done. That is true as surely as I live, says the Almighty Lord."
     },
     {
       "verse": "49",
@@ -1420,7 +1420,7 @@ module.exports = {
     },
     {
       "verse": "51",
-      "text": "Samaria's people did less than half as many sins as you have done. You have done many more disgusting things than they did. The many wicked things that you have done make your sisters seem righteous! God destroyed the city of Sodom because the people were so wicked. See Genesis 19."
+      "text": "Samaria's people did less than half as many sins as you have done. You have done many more disgusting things than they did. The many wicked things that you have done make your sisters seem righteous!"
     },
     {
       "verse": "52",
@@ -1468,7 +1468,7 @@ module.exports = {
     },
     {
       "verse": "63",
-      "text": "I will forgive you for your sins so that you are no longer guilty. Then you will remember your sins. You will be too ashamed to say anything. That is what the Almighty Lord says.” ’ Print... Use screen font size Show All Comments Ezekiel 15Ezekiel 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will forgive you for your sins so that you are no longer guilty. Then you will remember your sins. You will be too ashamed to say anything. That is what the Almighty Lord says.” ’"
     }
   ],
   "17": [
@@ -1522,7 +1522,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "He made an agreement with one man from the king of Israel's family. He made that man promise to serve Babylon's king. Then he could rule as king in Jerusalem. King Nebuchadnezzar of Babylon attacked Jerusalem. He took King Jehoiachin of Judah away as his prisoner to Babylon. He chose King Jehoiachin's uncle, Zedekiah, to rule as king in Jerusalem instead. See 2 Kings The king of Babylon also took away the leaders of Jerusalem as his prisoners."
+      "text": "He made an agreement with one man from the king of Israel's family. He made that man promise to serve Babylon's king. Then he could rule as king in Jerusalem.The king of Babylon also took away the leaders of Jerusalem as his prisoners."
     },
     {
       "verse": "14",
@@ -1554,11 +1554,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "All the brave soldiers in his army will die in the battle. The soldiers who escape will run away in all directions. Then you will know that I, the Lord, have spoken this message. See 2 Kings"
+      "text": "All the brave soldiers in his army will die in the battle. The soldiers who escape will run away in all directions. Then you will know that I, the Lord, have spoken this message."
     },
     {
       "verse": "22",
-      "text": "The Almighty Lord says this: I myself will take a new branch from the top of a tall cedar tree. I will break off one of its small fresh branches. Then I will plant it on the top of a high mountain."
+      "text": "The Almighty Lord says this: I myself will take a new branch from the top of a tall cedar tree. I will break off one of its small fresh branches. Then I will plant it on the top of a high mountain. I, the Lord, have said this and I will surely do it.” ’"
     },
     {
       "verse": "23",
@@ -1566,7 +1566,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Then all the trees of the forest will know that I am the Lord. I cause tall trees to fall down. I cause small trees to grow tall. I cause green trees to become dry. I cause dry trees to make fresh leaves. I, the Lord, have said this and I will surely do it.” ’ Print... Use screen font size Show All Comments Ezekiel 16Ezekiel 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then all the trees of the forest will know that I am the Lord. I cause tall trees to fall down. I cause small trees to grow tall. I cause green trees to become dry. I cause dry trees to make fresh leaves.I, the Lord, have said this and I will surely do it.” ’"
     }
   ],
   "18": [
@@ -1584,11 +1584,11 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Everyone who lives belong to me. I have authority over the life of the father and over the life of the son. It is the people who do wrong things who will die because of their sins. The people in Jerusalem were also saying the same thing. See Jeremiah"
+      "text": "Everyone who lives belong to me. I have authority over the life of the father and over the life of the son. It is the people who do wrong things who will die because of their sins."
     },
     {
       "verse": "5",
-      "text": "There may be a truly good man who does what is right and fair."
+      "text": "There may be a truly good man who does what is right and fair. A man like that is righteous. He will continue to live. That is what the Almighty Lord says."
     },
     {
       "verse": "6",
@@ -1604,11 +1604,11 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "He faithfully obeys my laws and my rules. A man like that is righteous. He will continue to live. That is what the Almighty Lord says."
+      "text": "He faithfully obeys my laws and my rules.A man like that is righteous. He will continue to live. That is what the Almighty Lord says."
     },
     {
       "verse": "10",
-      "text": "But that man may have a son who is cruel and violent. He may kill other people. He may do those bad things that his father never did."
+      "text": "But that man may have a son who is cruel and violent. He may kill other people. He may do those bad things that his father never did. A man like that will not continue to live! He will certainly die, because he himself has done all these disgusting things. He is guilty, so he himself must die as his punishment."
     },
     {
       "verse": "11",
@@ -1620,7 +1620,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "When he lends money to people, he wants them to pay back a lot more money to him. A man like that will not continue to live! He will certainly die, because he himself has done all these disgusting things. He is guilty, so he himself must die as his punishment."
+      "text": "When he lends money to people, he wants them to pay back a lot more money to him.A man like that will not continue to live! He will certainly die, because he himself has done all these disgusting things. He is guilty, so he himself must die as his punishment."
     },
     {
       "verse": "14",
@@ -1636,7 +1636,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He refuses to do anything that is wrong. When he lends money to people, he does not take more back money back from them. He obeys my rules and my laws. This man will certainly continue to live. He will not die because of his father's sins."
+      "text": "He refuses to do anything that is wrong. When he lends money to people, he does not take more back money back from them. He obeys my rules and my laws.This man will certainly continue to live. He will not die because of his father's sins."
     },
     {
       "verse": "18",
@@ -1696,7 +1696,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "It does not make me happy when anyone has to die. Turn away from your sins so that you continue to live! That is what the Almighty Lord says.’ See Ezekiel Print... Use screen font size Show All Comments Ezekiel 17Ezekiel 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "It does not make me happy when anyone has to die. Turn away from your sins so that you continue to live! That is what the Almighty Lord says.’"
     }
   ],
   "19": [
@@ -1706,61 +1706,61 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "Say this: “Your mother was like a great lion among the other lions. She lay among strong young lions. She helped her children to grow safely."
+      "text": "Say this:“Your mother was like a great lion among the other lions.She lay among strong young lions.She helped her children to grow safely. “Your mother was like a great lion among the other lions. She lay among strong young lions. She helped her children to grow safely."
     },
     {
       "verse": "3",
-      "text": "She taught one of her children to catch animals for food. As he grew, he started to eat people."
+      "text": "She taught one of her children to catch animals for food.As he grew, he started to eat people. As he grew, he started to eat people."
     },
     {
       "verse": "4",
-      "text": "The people of other nations heard about him. They dug a hole and they caught him in their trap. They put hooks in him and they took him to Egypt."
+      "text": "The people of other nations heard about him.They dug a hole and they caught him in their trap.They put hooks in him and they took him to Egypt. They dug a hole and they caught him in their trap. They put hooks in him and they took him to Egypt."
     },
     {
       "verse": "5",
-      "text": "His mother waited for him to return home. He did not come and she stopped hoping for him. She helped another of her sons to become a strong young lion."
+      "text": "His mother waited for him to return home.He did not come and she stopped hoping for him.She helped another of her sons to become a strong young lion. He did not come and she stopped hoping for him. She helped another of her sons to become a strong young lion."
     },
     {
       "verse": "6",
-      "text": "He grew to be strong among the other lions. He learned to catch wild animals and to eat them. He also learned to eat people."
+      "text": "He grew to be strong among the other lions.He learned to catch wild animals and to eat them.He also learned to eat people. He learned to catch wild animals and to eat them. He also learned to eat people."
     },
     {
       "verse": "7",
-      "text": "He attacked their strong buildings and he destroyed their cities. When he roared, the noise frightened everyone in the land."
+      "text": "He attacked their strong buildings and he destroyed their cities.When he roared, the noise frightened everyone in the land. When he roared, the noise frightened everyone in the land."
     },
     {
       "verse": "8",
-      "text": "Men from other nations near there came to attack him. They threw a net over him. They caught him in their trap."
+      "text": "Men from other nations near there came to attack him.They threw a net over him.They caught him in their trap. They threw a net over him. They caught him in their trap."
     },
     {
       "verse": "9",
-      "text": "They tied hooks around his neck. They took him to the king of Babylon. There they put him in prison to stop him roaring. The people on the hills of Israel could not hear his voice any longer."
+      "text": "They tied hooks around his neck.They took him to the king of Babylon.There they put him in prison to stop him roaring.The people on the hills of Israel could not hear his voice any longer. They took him to the king of Babylon. There they put him in prison to stop him roaring. The people on the hills of Israel could not hear his voice any longer."
     },
     {
       "verse": "10",
-      "text": "Your mother was like a vine that was growing near a stream. It grew well because there was plenty of water there. It made many branches and it had a lot of fruit."
+      "text": "Your mother was like a vine that was growing near a stream.It grew well because there was plenty of water there.It made many branches and it had a lot of fruit. It grew well because there was plenty of water there. It made many branches and it had a lot of fruit."
     },
     {
       "verse": "11",
-      "text": "Its branches became big and strong. They were strong enough to make a ruler's stick of authority. The vine grew taller than all the other trees around it. Everyone could see that it was very tall and strong."
+      "text": "Its branches became big and strong.They were strong enough to make a ruler's stick of authority.The vine grew taller than all the other trees around it.Everyone could see that it was very tall and strong. They were strong enough to make a ruler's stick of authority. The vine grew taller than all the other trees around it. Everyone could see that it was very tall and strong."
     },
     {
       "verse": "12",
-      "text": "But the Lord became angry with that vine. He pulled up its roots and he threw it down to the ground. The east wind made it dry and destroyed its fruit. Its strong branches broke and they became useless. Fire destroyed them."
+      "text": "But the Lord became angry with that vine.He pulled up its roots and he threw it down to the ground.The east wind made it dry and destroyed its fruit.Its strong branches broke and they became useless.Fire destroyed them. He pulled up its roots and he threw it down to the ground. The east wind made it dry and destroyed its fruit. Its strong branches broke and they became useless. Fire destroyed them."
     },
     {
       "verse": "13",
-      "text": "Now that vine is growing in a desert. It is in a hot, dry place where there is no water."
+      "text": "Now that vine is growing in a desert.It is in a hot, dry place where there is no water. It is in a hot, dry place where there is no water."
     },
     {
       "verse": "14",
-      "text": "Fire started to burn its strongest branch. From there the fire destroyed its other branches and its fruit. No strong branch remained in the vine. Now there was nothing to make a ruler's stick of authority.” This is a funeral song. It tells a very sad story.’ Print... Use screen font size Show All Comments Ezekiel 18Ezekiel 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Fire started to burn its strongest branch.From there the fire destroyed its other branches and its fruit.No strong branch remained in the vine.Now there was nothing to make a ruler's stick of authority.”This is a funeral song. It tells a very sad story.’"
     }
   ],
   "20": [
     {
       "verse": "1",
-      "text": "On the tenth day of the fifth month some of Israel's leaders came to me. That was in the seventh year that we had been prisoners in Babylon. The leaders sat in front of me. They wanted me to ask for a message from the Lord. The 5th month is July to August in our calendar."
+      "text": "On the tenth day of the fifth month some of Israel's leaders came to me. That was in the seventh year that we had been prisoners in Babylon. The leaders sat in front of me. They wanted me to ask for a message from the Lord."
     },
     {
       "verse": "2",
@@ -1784,7 +1784,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I said to them, ‘You must each destroy the disgusting idols that you worship. Those are the idols of Egypt and they cause you to be unclean. Remember that I am the Lord your God.’ God gave Jacob the new name ‘Israel’. So Israel's people are Jacob's descendants."
+      "text": "I said to them, ‘You must each destroy the disgusting idols that you worship. Those are the idols of Egypt and they cause you to be unclean. Remember that I am the Lord your God.’"
     },
     {
       "verse": "8",
@@ -1804,7 +1804,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "I also gave them Sabbath days when they would rest. It would help them to remember that they belong to me. They would know that I, the Lord, have made them my holy people. See Deuteronomy"
+      "text": "I also gave them Sabbath days when they would rest. It would help them to remember that they belong to me. They would know that I, the Lord, have made them my holy people."
     },
     {
       "verse": "13",
@@ -1872,7 +1872,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "I asked them, ‘Why do you go to these high places?’ ” (That is why people still call them “high places”.)"
+      "text": "I asked them, ���Why do you go to these high places?’ ” (That is why people still call them “high places”.)"
     },
     {
       "verse": "30",
@@ -1932,7 +1932,7 @@ module.exports = {
     },
     {
       "verse": "44",
-      "text": "At that time, I will help you. I will not punish you as you deserve for your wicked and evil acts. Instead, I will do things that bring honour to my name. Then, Israel's people, you will know that I am the Lord. That is what the Almighty Lord says.” ’ A message about the south of Israel"
+      "text": "At that time, I will help you. I will not punish you as you deserve for your wicked and evil acts. Instead, I will do things that bring honour to my name. Then, Israel's people, you will know that I am the Lord. That is what the Almighty Lord says.” ’"
     },
     {
       "verse": "45",
@@ -1948,11 +1948,11 @@ module.exports = {
     },
     {
       "verse": "48",
-      "text": "Everyone will see that I, the Lord, started the fire. Nobody will be able to stop it burning.” ’ Chapter 21 explains the meaning of this picture of a strong fire."
+      "text": "Everyone will see that I, the Lord, started the fire. Nobody will be able to stop it burning.” ’"
     },
     {
       "verse": "49",
-      "text": "Then I said, ‘Almighty Lord, “The people are already saying that my stories make them confused.” ’ Print... Use screen font size Show All Comments Ezekiel 19Ezekiel 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then I said, ‘Almighty Lord, “The people are already saying that my stories make them confused.” ’"
     }
   ],
   "21": [
@@ -1986,43 +1986,43 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The Lord gave this message to me:"
+      "text": "The Lord gave this message to me: Look at my sword! It is sharp and it shines brightly."
     },
     {
       "verse": "9",
-      "text": "‘Son of man, speak my message to the people. Say, “This is what the Lord says: Look at my sword! It is sharp and it shines brightly."
+      "text": "‘Son of man, speak my message to the people. Say, “This is what the Lord says:Look at my sword! It is sharp and it shines brightly."
     },
     {
       "verse": "10",
-      "text": "It is sharp and it is ready to kill people. It shines as bright as lightning! Should we trust in the power of our king? No! This sword does not respect any kingdom."
+      "text": "It is sharp and it is ready to kill people.It shines as bright as lightning!Should we trust in the power of our king?No! This sword does not respect any kingdom. It shines as bright as lightning! Should we trust in the power of our king? No! This sword does not respect any kingdom."
     },
     {
       "verse": "11",
-      "text": "Now it is sharp and it shines. It is ready for someone to take in their hand. It is ready for the killer to use it.”"
+      "text": "Now it is sharp and it shines.It is ready for someone to take in their hand.It is ready for the killer to use it.” It is ready for someone to take in their hand. It is ready for the killer to use it.”"
     },
     {
       "verse": "12",
-      "text": "Cry aloud, son of man! This sword is ready to attack my people. It will attack all the leaders of Israel. It will destroy my people and their leaders. Because of that, show that you are very upset."
+      "text": "Cry aloud, son of man!This sword is ready to attack my people.It will attack all the leaders of Israel.It will destroy my people and their leaders.Because of that, show that you are very upset. This sword is ready to attack my people. It will attack all the leaders of Israel. It will destroy my people and their leaders. Because of that, show that you are very upset."
     },
     {
       "verse": "13",
-      "text": "I am ready to test my people. My sword does not respect the power of any king. So my people will not escape punishment. That is what the Almighty Lord says."
+      "text": "I am ready to test my people.My sword does not respect the power of any king.So my people will not escape punishment.That is what the Almighty Lord says. My sword does not respect the power of any king. So my people will not escape punishment. That is what the Almighty Lord says."
     },
     {
       "verse": "14",
-      "text": "So speak my message to warn my people, son of man. Then clap your hands together. My sword must attack them many times. It is ready to kill many people. It will attack them from all directions."
+      "text": "So speak my message to warn my people, son of man.Then clap your hands together.My sword must attack them many times.It is ready to kill many people.It will attack them from all directions. Then clap your hands together. My sword must attack them many times. It is ready to kill many people. It will attack them from all directions."
     },
     {
       "verse": "15",
-      "text": "So people will shake with fear. Many of them will fall down. My sword is ready to kill them at every gate of the city. It shines like lightning. It is ready to kill!"
+      "text": "So people will shake with fear. Many of them will fall down.My sword is ready to kill them at every gate of the city.It shines like lightning. It is ready to kill! My sword is ready to kill them at every gate of the city. It shines like lightning. It is ready to kill!"
     },
     {
       "verse": "16",
-      "text": "My sword, attack quickly on your right side! Now turn and attack on your left side! Attack in every direction that you turn!"
+      "text": "My sword, attack quickly on your right side!Now turn and attack on your left side!Attack in every direction that you turn! Now turn and attack on your left side! Attack in every direction that you turn!"
     },
     {
       "verse": "17",
-      "text": "Then I, too, will clap my hands together. Finally, my anger will finish. I, the Lord, have spoken.’"
+      "text": "Then I, too, will clap my hands together.Finally, my anger will finish.I, the Lord, have spoken.’ Finally, my anger will finish. I, the Lord, have spoken.’"
     },
     {
       "verse": "18",
@@ -2046,7 +2046,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The people in Jerusalem had promised to serve the king of Babylon. So they think that he will not attack them. But he will tell them about the wrong things that they have done. Because of that he will take them as his prisoners. These were different kinds of magic that they used to find out what their false gods said. A liver is an inside part of an animal. See Ezekiel"
+      "text": "The people in Jerusalem had promised to serve the king of Babylon. So they think that he will not attack them. But he will tell them about the wrong things that they have done. Because of that he will take them as his prisoners."
     },
     {
       "verse": "24",
@@ -2054,35 +2054,35 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "I say this to you, wicked king of Israel. The time for your final punishment has now arrived."
+      "text": "I say this to you, wicked king of Israel. The time for your final punishment has now arrived. Take off the special cloth from the king's head. Remove his crown! Everything will change! Give honour to humble people! Make proud people ashamed!"
     },
     {
       "verse": "26",
-      "text": "This is what the Almighty Lord says: Take off the special cloth from the king's head. Remove his crown! Everything will change! Give honour to humble people! Make proud people ashamed!"
+      "text": "This is what the Almighty Lord says:Take off the special cloth from the king's head.Remove his crown!Everything will change!Give honour to humble people!Make proud people ashamed!"
     },
     {
       "verse": "27",
-      "text": "I will cause your city to become a heap of stones. I will destroy the kingdom. This will happen when my chosen man comes. I have chosen him to punish the city. Then I will give him authority over the city, because it belongs to him."
+      "text": "I will cause your city to become a heap of stones.I will destroy the kingdom.This will happen when my chosen man comes.I have chosen him to punish the city.Then I will give him authority over the city, because it belongs to him. I will destroy the kingdom. This will happen when my chosen man comes. I have chosen him to punish the city. Then I will give him authority over the city, because it belongs to him."
     },
     {
       "verse": "28",
-      "text": "You, son of man, must speak my message about the Ammonites. They have insulted Israel. This is what the Almighty Lord says: A sword is ready to destroy them. It shines brightly like lightning and it is ready to kill."
+      "text": "You, son of man, must speak my message about the Ammonites. They have insulted Israel. This is what the Almighty Lord says:A sword is ready to destroy them.It shines brightly like lightning and it is ready to kill. A sword is ready to destroy them. It shines brightly like lightning and it is ready to kill."
     },
     {
       "verse": "29",
-      "text": "Their visions about the battle have deceived them. What they think will happen is only lies. The sword will punish wicked people with death. The time for their final punishment has now arrived."
+      "text": "Their visions about the battle have deceived them.What they think will happen is only lies.The sword will punish wicked people with death.The time for their final punishment has now arrived. What they think will happen is only lies. The sword will punish wicked people with death. The time for their final punishment has now arrived."
     },
     {
       "verse": "30",
-      "text": "Now put the sword back in its place! Verses 30-32 are probably God's message to the army of Babylon. When they have finished punishing the people of Jerusalem and the Ammonites, they must go back to their own land. Then God will punish them there. I will judge you in your own land, in the place where you were born."
+      "text": "Now put the sword back in its place!I will judge you in your own land,in the place where you were born. I will judge you in your own land, in the place where you were born."
     },
     {
       "verse": "31",
-      "text": "I will punish you very strongly, because I am so angry with you. I will put you under the power of cruel men who know how to destroy people."
+      "text": "I will punish you very strongly,because I am so angry with you.I will put you under the power of cruel menwho know how to destroy people. because I am so angry with you. I will put you under the power of cruel men who know how to destroy people."
     },
     {
       "verse": "32",
-      "text": "You will be like wood that helps a fire to burn. You will die a violent death in your own land. Nobody will remember you any more. I, the Lord, have said this.’ Print... Use screen font size Show All Comments Ezekiel 20Ezekiel 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You will be like wood that helps a fire to burn.You will die a violent death in your own land.Nobody will remember you any more.I, the Lord, have said this.’"
     }
   ],
   "22": [
@@ -2188,7 +2188,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The priests in the land do not obey my law. They do not respect my holy things. They do not think that holy things are different from ordinary things. They say that unclean things and clean things are the same. They refuse to make my Sabbath days special. Because of this, people do not give me any honour. Holy things are clean in a special way. People must respect them because they belong to the Lord. If people use them in the same way as other things, they are no longer special and holy. Nobody can use them for the Lord's work."
+      "text": "The priests in the land do not obey my law. They do not respect my holy things. They do not think that holy things are different from ordinary things. They say that unclean things and clean things are the same. They refuse to make my Sabbath days special. Because of this, people do not give me any honour."
     },
     {
       "verse": "27",
@@ -2208,7 +2208,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "So I will certainly destroy them. I will punish them with my great anger, like a fire that burns them completely. I will now punish them as they deserve for their sins. That is what the Almighty Lord says.’ Print... Use screen font size Show All Comments Ezekiel 21Ezekiel 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So I will certainly destroy them. I will punish them with my great anger, like a fire that burns them completely. I will now punish them as they deserve for their sins. That is what the Almighty Lord says.’"
     }
   ],
   "23": [
@@ -2226,7 +2226,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The older sister was called Oholah. The younger one was called Oholibah. In this story, Oholah is Samaria. Oholibah is Jerusalem. They became my wives, and later they gave birth to sons and daughters for me. The two sisters, Oholah and Oholibah are God's pictures of Israel (Samaria) and Judah (Jerusalem). He is saying that their people are not faithful to him. Israel and Judah belong to God. But they have lived like wives who are not faithful to their husbands."
+      "text": "The older sister was called Oholah. The younger one was called Oholibah. In this story, Oholah is Samaria. Oholibah is Jerusalem. They became my wives, and later they gave birth to sons and daughters for me."
     },
     {
       "verse": "5",
@@ -2338,15 +2338,15 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "This is what the Lord God says: “You will drink from the same cup of punishment that I gave to your sister. It is a cup that holds a lot of punishment. People will laugh at you and they will insult you."
+      "text": "This is what the Lord God says:“You will drink from the same cup of punishment that I gave to your sister.It is a cup that holds a lot of punishment.People will laugh at you and they will insult you. “You will drink from the same cup of punishment that I gave to your sister. It is a cup that holds a lot of punishment. People will laugh at you and they will insult you."
     },
     {
       "verse": "33",
-      "text": "You will suffer very much. You will be drunk and very sad. The cup of your punishment will destroy you. Like your sister Samaria, nothing will remain in you."
+      "text": "You will suffer very much.You will be drunk and very sad.The cup of your punishment will destroy you.Like your sister Samaria, nothing will remain in you. You will be drunk and very sad. The cup of your punishment will destroy you. Like your sister Samaria, nothing will remain in you."
     },
     {
       "verse": "34",
-      "text": "You will have to drink all the punishment that is in that cup! Then you will break the cup into pieces. You will cut your breasts to show that you are very upset. I, the Almighty Lord, have said this.”"
+      "text": "You will have to drink all the punishment that is in that cup!Then you will break the cup into pieces.You will cut your breasts to show that you are very upset.I, the Almighty Lord, have said this.” Then you will break the cup into pieces. You will cut your breasts to show that you are very upset. I, the Almighty Lord, have said this.”"
     },
     {
       "verse": "35",
@@ -2406,13 +2406,13 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "And you, Oholah and Oholibah, will receive the punishment that you deserve. You have lived as prostitutes, and you have not been faithful to me. Instead, you have worshipped idols. So I will punish you. Then you will know that I am the Almighty Lord. ’ Print... Use screen font size Show All Comments Ezekiel 22Ezekiel 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "And you, Oholah and Oholibah, will receive the punishment that you deserve. You have lived as prostitutes, and you have not been faithful to me. Instead, you have worshipped idols. So I will punish you. Then you will know that I am the Almighty Lord. ’"
     }
   ],
   "24": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me on the tenth day of the tenth month in the ninth year:"
+      "text": "The Lord gave this message to me on the tenth day of the tenth month in the ninth year: Put the pot on the fire. Put it there now. Pour some water into the pot."
     },
     {
       "verse": "2",
@@ -2420,43 +2420,43 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tell a story to these people who refuse to obey me. Say to them, “This is what the Almighty Lord says: Put the pot on the fire. Put it there now. Pour some water into the pot."
+      "text": "Tell a story to these people who refuse to obey me. Say to them, “This is what the Almighty Lord says:Put the pot on the fire. Put it there now.Pour some water into the pot."
     },
     {
       "verse": "4",
-      "text": "Put the pieces of meat into it. Put in all the good pieces of meat. Put in the leg and the shoulder. Fill it with all the best bones."
+      "text": "Put the pieces of meat into it.Put in all the good pieces of meat.Put in the leg and the shoulder.Fill it with all the best bones. Put in all the good pieces of meat. Put in the leg and the shoulder. Fill it with all the best bones."
     },
     {
       "verse": "5",
-      "text": "Use meat and bones from the best sheep. Put more wood on the fire under the pot. Cause the water in the pot to boil well. Cook the bones and the meat."
+      "text": "Use meat and bones from the best sheep.Put more wood on the fire under the pot.Cause the water in the pot to boil well.Cook the bones and the meat. Put more wood on the fire under the pot. Cause the water in the pot to boil well. Cook the bones and the meat."
     },
     {
       "verse": "6",
-      "text": "This is what the Almighty Lord says: Terrible trouble will come to the city that is full of murderers! It is like a pot that has become dirty. Nobody has tried to clean it. Take out each piece of meat, one by one. No piece is special."
+      "text": "This is what the Almighty Lord says:Terrible trouble will come to the city that is full of murderers!It is like a pot that has become dirty.Nobody has tried to clean it.Take out each piece of meat, one by one.No piece is special. Terrible trouble will come to the city that is full of murderers! It is like a pot that has become dirty. Nobody has tried to clean it. Take out each piece of meat, one by one. No piece is special."
     },
     {
       "verse": "7",
-      "text": "You can see the blood of people that men killed in the city. It lies on the rocks where everyone can see it. Those murderers did not leave the blood on the ground, where dirt would hide it."
+      "text": "You can see the blood of people that men killed in the city.It lies on the rocks where everyone can see it.Those murderers did not leave the blood on the ground,where dirt would hide it. It lies on the rocks where everyone can see it. Those murderers did not leave the blood on the ground, where dirt would hide it."
     },
     {
       "verse": "8",
-      "text": "I have put the blood on the rocks where everyone can see it. Nothing will be able to hide it. When I see it, I am very angry. I will punish the people of that city as they deserve."
+      "text": "I have put the blood on the rocks where everyone can see it.Nothing will be able to hide it.When I see it, I am very angry.I will punish the people of that city as they deserve. Nothing will be able to hide it. When I see it, I am very angry. I will punish the people of that city as they deserve."
     },
     {
       "verse": "9",
-      "text": "So this is what the Almighty Lord says: Terrible trouble will come to the city that is full of murderers! I will put more wood on the fire to destroy it."
+      "text": "So this is what the Almighty Lord says:Terrible trouble will come to the city that is full of murderers!I will put more wood on the fire to destroy it. Terrible trouble will come to the city that is full of murderers! I will put more wood on the fire to destroy it."
     },
     {
       "verse": "10",
-      "text": "Yes, make a big heap of wood. Make the fire burn hot! Cook the meat well! Mix in some spices! Let the bones burn."
+      "text": "Yes, make a big heap of wood.Make the fire burn hot! Cook the meat well!Mix in some spices!Let the bones burn. Make the fire burn hot! Cook the meat well! Mix in some spices! Let the bones burn."
     },
     {
       "verse": "11",
-      "text": "Then put the empty pot on the coals of the fire. Make the pot very hot, so that its metal is bright red. Burn all the dirt to remove it. Make the pot clean again!"
+      "text": "Then put the empty pot on the coals of the fire.Make the pot very hot, so that its metal is bright red.Burn all the dirt to remove it.Make the pot clean again! Make the pot very hot, so that its metal is bright red. Burn all the dirt to remove it. Make the pot clean again!"
     },
     {
       "verse": "12",
-      "text": "Yes, I have tried to make it clean. But the disgusting dirt is still there. So throw the pot and all its dirt on the fire!"
+      "text": "Yes, I have tried to make it clean.But the disgusting dirt is still there.So throw the pot and all its dirt on the fire! But the disgusting dirt is still there. So throw the pot and all its dirt on the fire!"
     },
     {
       "verse": "13",
@@ -2464,7 +2464,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I, the Lord have said what I will do. Now I will do it! The time for your punishment has come! I will not change my mind. I will not be kind to you. I will not be sorry for you. I will judge you as you deserve for the things that you have done. That is what the Almighty Lord says.” ’ Ezekiel's wife dies"
+      "text": "I, the Lord have said what I will do. Now I will do it! The time for your punishment has come! I will not change my mind. I will not be kind to you. I will not be sorry for you. I will judge you as you deserve for the things that you have done. That is what the Almighty Lord says.” ’"
     },
     {
       "verse": "15",
@@ -2476,7 +2476,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Cry inside yourself but do not cry aloud. Do not show that you are sad because someone has died. Do not remove the cloth from your head. Keep your shoes on your feet. Do not cover the lower part of your face. Do not eat the food that people eat at funerals.’ God told Ezekiel that he should not do the things that people usually did when someone had died. He should not show people that he was sad."
+      "text": "Cry inside yourself but do not cry aloud. Do not show that you are sad because someone has died. Do not remove the cloth from your head. Keep your shoes on your feet. Do not cover the lower part of your face. Do not eat the food that people eat at funerals.’"
     },
     {
       "verse": "18",
@@ -2504,7 +2504,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Ezekiel is an example to you. You must do the same as he has done when his wife died. When this happens, you will know that I am the Almighty Lord.” God had taken Ezekiel's wife from him. He had loved her very much. Now God says to the people of Jerusalem that he will take away from them the temple that they love. But they will be like Ezekiel was when his wife died. They will not show that they are sad, even though they have lost what they loved very much."
+      "text": "Ezekiel is an example to you. You must do the same as he has done when his wife died. When this happens, you will know that I am the Almighty Lord.”"
     },
     {
       "verse": "25",
@@ -2516,7 +2516,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "At that time, you will be able to speak again. You will talk with that man. You will no longer have to be quiet. You will be an example to the people, and they will know that I am the Lord. ’ For some years, Ezekiel had been unable to speak, except when the Lord gave him a message to tell to the people. See Ezekiel Print... Use screen font size Show All Comments Ezekiel 23Ezekiel 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "At that time, you will be able to speak again. You will talk with that man. You will no longer have to be quiet. You will be an example to the people, and they will know that I am the Lord. ’"
     }
   ],
   "25": [
@@ -2546,7 +2546,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So listen! I will now use my power to punish you. I will allow other nations to take all your valuable things. I will completely remove you so that you will not be a nation any longer. I will destroy you. Then you will know that I am the Lord.” Ammon was a country to the north east of Judah. It was on the edge of the desert that is east of the Jordan River. Rabbah was the capital city of Ammon. It was in the place that is now called Amman, in Jordan. The Lord warns Moab"
+      "text": "So listen! I will now use my power to punish you. I will allow other nations to take all your valuable things. I will completely remove you so that you will not be a nation any longer. I will destroy you. Then you will know that I am the Lord.”"
     },
     {
       "verse": "8",
@@ -2562,7 +2562,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "I will also punish Moab's people. Then they will know that I am the Lord. Moab was south of the Arnon River. It was to the east of the Dead Sea. The Lord warns Edom"
+      "text": "I will also punish Moab's people. Then they will know that I am the Lord."
     },
     {
       "verse": "12",
@@ -2574,7 +2574,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will use my people, the Israelites, to punish Edom. The Edomites will know that I am very angry with them. They will know that their punishment comes from me. That is what the Almighty Lord says. Edom was south of Moab. The Lord warns the Philistines"
+      "text": "I will use my people, the Israelites, to punish Edom. The Edomites will know that I am very angry with them. They will know that their punishment comes from me. That is what the Almighty Lord says."
     },
     {
       "verse": "15",
@@ -2586,7 +2586,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "I will punish them very much because of the things that they have done. I will show them that I am very angry with them. When and I punish them as they deserve, they will know that I am the Lord. ’ The Philistines were sailors who lived on the coast of the Mediterranean Sea, on the west side of Judah. They were also called Kerethites because they had come from Crete. Print... Use screen font size Show All Comments Ezekiel 24Ezekiel 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will punish them very much because of the things that they have done. I will show them that I am very angry with them. When and I punish them as they deserve, they will know that I am the Lord. ’"
     }
   ],
   "26": [
@@ -2648,7 +2648,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "This is what the Almighty Lord says to Tyre: All the people who live on the coast of the sea will hear the news. When they know that you have fallen to the ground, they will shake with fear. They will hear the loud cries of your people when they die in the battle."
+      "text": "This is what the Almighty Lord says to Tyre: All the people who live on the coast of the sea will hear the news. When they know that you have fallen to the ground, they will shake with fear. They will hear the loud cries of your people when they die in the battle. “City that was famous for your great sailors, now your power has gone! In the past, you made many people afraid, as your brave men travelled across the sea."
     },
     {
       "verse": "16",
@@ -2656,11 +2656,11 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Then they will sing this funeral song about you: Many small nations along the coast and on the islands needed help from Tyre. “City that was famous for your great sailors, now your power has gone! In the past, you made many people afraid, as your brave men travelled across the sea."
+      "text": "Then they will sing this funeral song about you:“City that was famous for your great sailors,now your power has gone!In the past, you made many people afraid,as your brave men travelled across the sea."
     },
     {
       "verse": "18",
-      "text": "Now you have fallen to the ground and people who live on the coast shake with fear. Now your power has gone and those people are very afraid.”"
+      "text": "Now you have fallen to the groundand people who live on the coast shake with fear.Now your power has goneand those people are very afraid.” and people who live on the coast shake with fear. Now your power has gone and those people are very afraid.”"
     },
     {
       "verse": "19",
@@ -2672,13 +2672,13 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "I will cause terrible things to happen to you. You will come to a complete end. People will look for you, but they will never find you. That is what the Almighty Lord says.’ Print... Use screen font size Show All Comments Ezekiel 25Ezekiel 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will cause terrible things to happen to you. You will come to a complete end. People will look for you, but they will never find you. That is what the Almighty Lord says.’"
     }
   ],
   "27": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me:"
+      "text": "The Lord gave this message to me: “Tyre, you say that you are completely beautiful."
     },
     {
       "verse": "2",
@@ -2686,39 +2686,39 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tyre is a city on the coast of the sea. From there, traders go across the sea to sell things to people in many other countries. This is what the Almighty Lord says to Tyre: “Tyre, you say that you are completely beautiful."
+      "text": "Tyre is a city on the coast of the sea. From there, traders go across the sea to sell things to people in many other countries. This is what the Almighty Lord says to Tyre:“Tyre, you say that you are completely beautiful."
     },
     {
       "verse": "4",
-      "text": "Your borders reached into the middle of the sea. Your builders made you like a great ship."
+      "text": "Your borders reached into the middle of the sea.Your builders made you like a great ship. Your builders made you like a great ship."
     },
     {
       "verse": "5",
-      "text": "They used wood from the pine trees of Senir. They used a cedar tree from Lebanon to make your mast. The mast of a ship is a tall pole to hold the sails."
+      "text": "They used wood from the pine trees of Senir.They used a cedar tree from Lebanon to make your mast. They used a cedar tree from Lebanon to make your mast."
     },
     {
       "verse": "6",
-      "text": "They used oak trees from Bashan to make your oars. They used pine wood from the coasts of Cyprus to make your deck. The deck of a ship is the floor. They made it beautiful with ivory."
+      "text": "They used oak trees from Bashan to make your oars.They used pine wood from the coasts of Cyprus to make your deck.They made it beautiful with ivory. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory."
     },
     {
       "verse": "7",
-      "text": "They used good linen from Egypt to make your sail. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island."
+      "text": "They used good linen from Egypt to make your sail.They made it pretty with many colours.The sail was like a flag that everyone could see.They made tents of cloth to cover your deck.It was blue and purple cloth that came from Cyprus island. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island."
     },
     {
       "verse": "8",
-      "text": "Men from Sidon and Arvad used the oars to move the ship. Your own clever men from Tyre were your sailors."
+      "text": "Men from Sidon and Arvad used the oars to move the ship.Your own clever men from Tyre were your sailors. Your own clever men from Tyre were your sailors."
     },
     {
       "verse": "9",
-      "text": "Leaders from Gebal went with you. They brought men who knew how to mend the ship. Sailors of ships from many countries came to buy things from you."
+      "text": "Leaders from Gebal went with you.They brought men who knew how to mend the ship.Sailors of ships from many countriescame to buy things from you. They brought men who knew how to mend the ship. Sailors of ships from many countries came to buy things from you."
     },
     {
       "verse": "10",
-      "text": "There were brave soldiers from Persia, Lydia and Libya in your army. They hung their shields and their helmets on your walls. They caused people to give you honour."
+      "text": "There were brave soldiers from Persia, Lydia and Libya in your army.They hung their shields and their helmets on your walls.They caused people to give you honour. They hung their shields and their helmets on your walls. They caused people to give you honour."
     },
     {
       "verse": "11",
-      "text": "Men from Arvad and Helech were guards who stood on your walls. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful."
+      "text": "Men from Arvad and Helech were guards who stood on your walls.Soldiers from Gammad were in your strong towers.They hung their weapons on your walls.They made you look very beautiful. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful."
     },
     {
       "verse": "12",
@@ -2734,7 +2734,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Traders came to you from Rhodes and from other countries beside the sea. They paid you with ivory and with ebony wood. Ebony is a hard black wood."
+      "text": "Traders came to you from Rhodes and from other countries beside the sea. They paid you with ivory and with ebony wood."
     },
     {
       "verse": "16",
@@ -2766,7 +2766,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Traders came to you from Haran, Canneh and Eden, as well as from Sheba, Asshur and Kilmad."
+      "text": "Traders came to you from Haran, Canneh and Eden, as well as from Sheba, Asshur and Kilmad. You, Tyre, were like a great ship in the middle of the sea. You were full with a heavy load of many things."
     },
     {
       "verse": "24",
@@ -2774,133 +2774,133 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Big ships from Tarshish carried your valuable things across the sea. Threads are very thin strings that people use to make cloth. You, Tyre, were like a great ship in the middle of the sea. You were full with a heavy load of many things."
+      "text": "Big ships from Tarshish carried your valuable things across the sea.You, Tyre, were like a great ship in the middle of the sea.You were full with a heavy load of many things."
     },
     {
       "verse": "26",
-      "text": "Your sailors took you into the great waves of the sea. There, a strong east wind has caused you to break into small pieces."
+      "text": "Your sailors took you into the great waves of the sea.There, a strong east wind has caused you to break into small pieces. There, a strong east wind has caused you to break into small pieces."
     },
     {
       "verse": "27",
-      "text": "All your valuable things and your riches will fall into the deep sea. All your sailors, your captains, your traders and your soldiers will also fall into the sea. Yes, everyone in you will drown in the sea on that day when you break into pieces."
+      "text": "All your valuable things and your riches will fall into the deep sea.All your sailors, your captains, your traders and your soldierswill also fall into the sea.Yes, everyone in you will drown in the seaon that day when you break into pieces. All your sailors, your captains, your traders and your soldiers will also fall into the sea. Yes, everyone in you will drown in the sea on that day when you break into pieces."
     },
     {
       "verse": "28",
-      "text": "When your sailors call out for help, the cities on the coast of the sea will shake."
+      "text": "When your sailors call out for help,the cities on the coast of the sea will shake. the cities on the coast of the sea will shake."
     },
     {
       "verse": "29",
-      "text": "All the sailors of other ships will leave their ships. The sailors and their captains will stand on the shore of the sea."
+      "text": "All the sailors of other ships will leave their ships.The sailors and their captains will stand on the shore of the sea. The sailors and their captains will stand on the shore of the sea."
     },
     {
       "verse": "30",
-      "text": "They will weep loudly because they are very upset about you. They will throw dirt on their heads. They will lie down in ashes."
+      "text": "They will weep loudly because they are very upset about you.They will throw dirt on their heads.They will lie down in ashes. They will throw dirt on their heads. They will lie down in ashes."
     },
     {
       "verse": "31",
-      "text": "They will cut all the hair off their heads. They will wear sackcloth. They will weep and be very upset because of the terrible thing that has happened to you."
+      "text": "They will cut all the hair off their heads.They will wear sackcloth.They will weep and be very upsetbecause of the terrible thing that has happened to you. They will wear sackcloth. They will weep and be very upset because of the terrible thing that has happened to you."
     },
     {
       "verse": "32",
-      "text": "As they weep, they will sing this funeral song about you: ‘Tyre was the greatest city. But now it lies at the bottom of the sea and nobody knows that it is there.’"
+      "text": "As they weep, they will sing this funeral song about you:‘Tyre was the greatest city.But now it lies at the bottom of the seaand nobody knows that it is there.’ ‘Tyre was the greatest city. But now it lies at the bottom of the sea and nobody knows that it is there.’"
     },
     {
       "verse": "33",
-      "text": "Your valuable things went to many people in nations across the sea. People were happy with the things that they received from you. Even kings in far places became rich because of you."
+      "text": "Your valuable things went to many peoplein nations across the sea.People were happy with the things that they received from you.Even kings in far places became rich because of you. in nations across the sea. People were happy with the things that they received from you. Even kings in far places became rich because of you."
     },
     {
       "verse": "34",
-      "text": "Now the sea has broken you into pieces. You have fallen to the bottom of the deep sea. All your valuable things and the people who worked in you lie at the bottom of the sea."
+      "text": "Now the sea has broken you into pieces.You have fallen to the bottom of the deep sea.All your valuable things and the people who worked in youlie at the bottom of the sea. You have fallen to the bottom of the deep sea. All your valuable things and the people who worked in you lie at the bottom of the sea."
     },
     {
       "verse": "35",
-      "text": "The people who live on the coast of the sea are afraid, because of what has happened to you. Their kings shake with fear. Their faces look very sad."
+      "text": "The people who live on the coast of the sea are afraid,because of what has happened to you.Their kings shake with fear.Their faces look very sad. because of what has happened to you. Their kings shake with fear. Their faces look very sad."
     },
     {
       "verse": "36",
-      "text": "Traders from other nations keep away from you. A terrible thing has happened to you. It will be the end of you for ever.” ’ Print... Use screen font size Show All Comments Ezekiel 26Ezekiel 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Traders from other nations keep away from you.A terrible thing has happened to you.It will be the end of you for ever.” ’"
     }
   ],
   "28": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me:"
+      "text": "The Lord gave this message to me: You are a very proud man. You say, ‘I am a god and Tyre is my throne. I rule over all the seas around me.’ But, whatever you think, you are only a man. You are not a god."
     },
     {
       "verse": "2",
-      "text": "‘Son of man, say this to the ruler of Tyre. “This is what the Almighty Lord says: You are a very proud man. You say, ‘I am a god and Tyre is my throne. I rule over all the seas around me.’ But, whatever you think, you are only a man. You are not a god."
+      "text": "‘Son of man, say this to the ruler of Tyre. “This is what the Almighty Lord says:You are a very proud man.You say, ‘I am a god and Tyre is my throne.I rule over all the seas around me.’But, whatever you think, you are only a man. You are not a god."
     },
     {
       "verse": "3",
-      "text": "You think that you are wiser than Daniel, and that you know all secrets."
+      "text": "You think that you are wiser than Daniel,and that you know all secrets. and that you know all secrets."
     },
     {
       "verse": "4",
-      "text": "You have been wise and clever enough to make yourself rich. You have stored much gold and silver in your palace."
+      "text": "You have been wise and clever enough to make yourself rich.You have stored much gold and silver in your palace. You have stored much gold and silver in your palace."
     },
     {
       "verse": "5",
-      "text": "Because you are a clever trader, you have become even richer. And because of your riches, you have become very proud."
+      "text": "Because you are a clever trader,you have become even richer.And because of your riches, you have become very proud. you have become even richer. And because of your riches, you have become very proud."
     },
     {
       "verse": "6",
-      "text": "So this is what the Almighty Lord says: You think that you are as wise as a god."
+      "text": "So this is what the Almighty Lord says:You think that you are as wise as a god. You think that you are as wise as a god."
     },
     {
       "verse": "7",
-      "text": "So listen! I will bring a foreign army to attack you. They will be a very cruel enemy. They will use their swords to destroy your beautiful city. They will spoil the beautiful things that you have used your wisdom to get for yourselves."
+      "text": "So listen! I will bring a foreign army to attack you.They will be a very cruel enemy.They will use their swords to destroy your beautiful city.They will spoil the beautiful things that you have used your wisdom to get for yourselves. They will be a very cruel enemy. They will use their swords to destroy your beautiful city. They will spoil the beautiful things that you have used your wisdom to get for yourselves."
     },
     {
       "verse": "8",
-      "text": "They will kill you violently in battle, and the sea will become your grave."
+      "text": "They will kill you violently in battle,and the sea will become your grave. and the sea will become your grave."
     },
     {
       "verse": "9",
-      "text": "When your enemies attack you, you will no longer say, ‘I am a god.’ When they are ready to kill you, you will know that you are only human."
+      "text": "When your enemies attack you,you will no longer say, ‘I am a god.’When they are ready to kill you,you will know that you are only human. you will no longer say, ‘I am a god.’ When they are ready to kill you, you will know that you are only human."
     },
     {
       "verse": "10",
-      "text": "Foreign people will kill you. You will die like people who do not belong to me. I, the Almighty Lord have said this.” ’"
+      "text": "Foreign people will kill you.You will die like people who do not belong to me.I, the Almighty Lord have said this.” ’ You will die like people who do not belong to me. I, the Almighty Lord have said this.” ’"
     },
     {
       "verse": "11",
-      "text": "The Lord gave this message to me:"
+      "text": "The Lord gave this message to me: At one time, you were the example of a good man. You were completely wise and beautiful."
     },
     {
       "verse": "12",
-      "text": "‘Son of man, sing this funeral song about the king of Tyre. Tell him, “This is what the Almighty Lord says: At one time, you were the example of a good man. You were completely wise and beautiful."
+      "text": "‘Son of man, sing this funeral song about the king of Tyre. Tell him, “This is what the Almighty Lord says:At one time, you were the example of a good man.You were completely wise and beautiful."
     },
     {
       "verse": "13",
-      "text": "You lived in God's beautiful garden, Eden. You wore valuable jewels on your clothes. The jewels were ruby, topaz, emerald, chrysolite, onyx, jasper, sapphire, turquoise and beryl. These are all names of jewels. See Exodus Revelation They were fixed to pieces of gold. They were ready for you to wear on the day that you were born."
+      "text": "You lived in God's beautiful garden, Eden.You wore valuable jewels on your clothes.The jewels were ruby, topaz, emerald,chrysolite, onyx, jasper,sapphire, turquoise and beryl.They were fixed to pieces of gold.They were ready for you to wear on the day that you were born. You wore valuable jewels on your clothes. The jewels were ruby, topaz, emerald, chrysolite, onyx, jasper, sapphire, turquoise and beryl. They were fixed to pieces of gold. They were ready for you to wear on the day that you were born."
     },
     {
       "verse": "14",
-      "text": "I put you there with a cherub to be your guard. You lived on my holy mountain. You walked among the stones that burned with fire."
+      "text": "I put you there with a cherub to be your guard.You lived on my holy mountain.You walked among the stones that burned with fire. You lived on my holy mountain. You walked among the stones that burned with fire."
     },
     {
       "verse": "15",
-      "text": "Everything that you did was completely good from the day that you were born. But later, you started to do wicked things."
+      "text": "Everything that you did was completely goodfrom the day that you were born.But later, you started to do wicked things. from the day that you were born. But later, you started to do wicked things."
     },
     {
       "verse": "16",
-      "text": "As a trader, you bought and sold many things. As a result, you became violent and you did evil things. So I sent you away in shame. I would not allow you to remain on my mountain. The cherub that had been your guard chased you out. You could no longer walk among the stones that burned with fire."
+      "text": "As a trader, you bought and sold many things.As a result, you became violent and you did evil things.So I sent you away in shame.I would not allow you to remain on my mountain.The cherub that had been your guard chased you out.You could no longer walk among the stones that burned with fire. As a result, you became violent and you did evil things. So I sent you away in shame. I would not allow you to remain on my mountain. The cherub that had been your guard chased you out. You could no longer walk among the stones that burned with fire."
     },
     {
       "verse": "17",
-      "text": "But because you were so beautiful, you were very proud. You used your wisdom to do bad things, because you loved to have beautiful things. So I threw you down to the ground. I let other kings see what had happened to you."
+      "text": "But because you were so beautiful, you were very proud.You used your wisdom to do bad things,because you loved to have beautiful things.So I threw you down to the ground.I let other kings see what had happened to you. You used your wisdom to do bad things, because you loved to have beautiful things. So I threw you down to the ground. I let other kings see what had happened to you."
     },
     {
       "verse": "18",
-      "text": "As a trader, you did many wrong things to cheat people. Your holy places became unclean. So I caused fire to completely destroy your city. Everyone could see that only ashes remained on the ground."
+      "text": "As a trader, you did many wrong things to cheat people.Your holy places became unclean.So I caused fire to completely destroy your city.Everyone could see that only ashes remained on the ground. Your holy places became unclean. So I caused fire to completely destroy your city. Everyone could see that only ashes remained on the ground."
     },
     {
       "verse": "19",
-      "text": "All the people of other nations who knew you are very afraid. They have seen the terrible thing that has happened to you. You have come to a complete end and you will never return.” ’ God warns Sidon Sidon was a city on the coast about 25 miles north of Tyre."
+      "text": "All the people of other nations who knew you are very afraid.They have seen the terrible thing that has happened to you.You have come to a complete end and you will never return.” ’ They have seen the terrible thing that has happened to you. You have come to a complete end and you will never return.” ’"
     },
     {
       "verse": "20",
-      "text": "The Lord gave this message to me:"
+      "text": "The Lord gave this message to me: Listen! I have become your enemy, Sidon. I will show your people how great I am. Then they will know that I am the Lord. I will punish your people for their sins so that they know that I am a holy God."
     },
     {
       "verse": "21",
@@ -2908,11 +2908,11 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Say, “This is what the Almighty Lord says: Listen! I have become your enemy, Sidon. I will show your people how great I am. Then they will know that I am the Lord. I will punish your people for their sins so that they know that I am a holy God."
+      "text": "Say, “This is what the Almighty Lord says:Listen! I have become your enemy, Sidon.I will show your people how great I am.Then they will know that I am the Lord.I will punish your people for their sinsso that they know that I am a holy God."
     },
     {
       "verse": "23",
-      "text": "I will cause disease to kill people in the city. Enemies will attack from all around the city, and people will die in the streets. Then they will know that I am the Lord."
+      "text": "I will cause disease to kill people in the city.Enemies will attack from all around the city,and people will die in the streets.Then they will know that I am the Lord. Enemies will attack from all around the city, and people will die in the streets. Then they will know that I am the Lord."
     },
     {
       "verse": "24",
@@ -2924,13 +2924,13 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "They will live there safely. They will build houses and they will plant vineyards. I will punish all the nations around them who have insulted them. Then my people will live safely in their homes. And they will know that I am the Lord their God.” ’ Jacob was the ancestor of the Israelite people. Print... Use screen font size Show All Comments Ezekiel 27Ezekiel 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "They will live there safely. They will build houses and they will plant vineyards. I will punish all the nations around them who have insulted them. Then my people will live safely in their homes. And they will know that I am the Lord their God.” ’"
     }
   ],
   "29": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me on the 12th day of the 10th month of the 10th year:"
+      "text": "The Lord gave this message to me on the 12th day of the 10th month of the 10th year: Listen, Pharaoh, king of Egypt, I have become your enemy. You are like the great monster that lies in Egypt's streams. You say, ‘The Nile river belongs to me! I made it for myself.’"
     },
     {
       "verse": "2",
@@ -2938,15 +2938,15 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Tell them, “The Almighty Lord says this: Listen, Pharaoh, king of Egypt, I have become your enemy. You are like the great monster that lies in Egypt's streams. You say, ‘The Nile river belongs to me! I made it for myself.’"
+      "text": "Tell them, “The Almighty Lord says this:Listen, Pharaoh, king of Egypt, I have become your enemy.You are like the great monster that lies in Egypt's streams.You say, ‘The Nile river belongs to me! I made it for myself.’"
     },
     {
       "verse": "4",
-      "text": "But I will put hooks into your mouth and catch you. I will cause the fish in your streams to hang on your scales. Scales cover the bodies of most fish. They are like hard plates of skin. I will pull you out from the streams with all those fish on you."
+      "text": "But I will put hooks into your mouth and catch you.I will cause the fish in your streams to hang on your scales.I will pull you out from the streams with all those fish on you. I will cause the fish in your streams to hang on your scales. I will pull you out from the streams with all those fish on you."
     },
     {
       "verse": "5",
-      "text": "I will leave you in the wilderness with all your fish. You will lie on the ground in the open fields. Nobody will pick you up or take care of you. I will give you to the wild animals and birds to be their food."
+      "text": "I will leave you in the wilderness with all your fish.You will lie on the ground in the open fields.Nobody will pick you up or take care of you.I will give you to the wild animals and birds to be their food. You will lie on the ground in the open fields. Nobody will pick you up or take care of you. I will give you to the wild animals and birds to be their food."
     },
     {
       "verse": "6",
@@ -2962,7 +2962,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "The land of Egypt will become an empty place. Then they will know that I am the Lord. You said, ‘The Nile river belongs to me. I made it for myself.’"
+      "text": "The land of Egypt will become an empty place. Then they will know that I am the Lord.You said, ‘The Nile river belongs to me. I made it for myself.’"
     },
     {
       "verse": "10",
@@ -3010,41 +3010,41 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "At that time, I will make Israel a powerful nation again. Then I will give you a message to speak to them, Ezekiel. They will listen to what you say. Then they will know that I am the Lord.’ Print... Use screen font size Show All Comments Ezekiel 28Ezekiel 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "At that time, I will make Israel a powerful nation again. Then I will give you a message to speak to them, Ezekiel. They will listen to what you say. Then they will know that I am the Lord.’"
     }
   ],
   "30": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me:"
+      "text": "The Lord gave this message to me: Weep and cry aloud, ‘Help! The day of great trouble is coming!’"
     },
     {
       "verse": "2",
-      "text": "‘Son of man, prophesy to the people. Say to them, “This is what the Almighty Lord says: Weep and cry aloud, ‘Help! The day of great trouble is coming!’"
+      "text": "‘Son of man, prophesy to the people. Say to them, “This is what the Almighty Lord says:Weep and cry aloud, ‘Help! The day of great trouble is coming!’"
     },
     {
       "verse": "3",
-      "text": "Yes, that day will be very soon. It is the day of the Lord. It will be a day of dark clouds, when the Lord will punish the nations."
+      "text": "Yes, that day will be very soon. It is the day of the Lord.It will be a day of dark clouds,when the Lord will punish the nations. It will be a day of dark clouds, when the Lord will punish the nations."
     },
     {
       "verse": "4",
-      "text": "An enemy army will attack Egypt. The people of Ethiopia will be afraid. Many people in Egypt will die in the battle. Enemies will carry away Egypt's riches. They will knock down Egypt's buildings."
+      "text": "An enemy army will attack Egypt.The people of Ethiopia will be afraid.Many people in Egypt will die in the battle.Enemies will carry away Egypt's riches.They will knock down Egypt's buildings. The people of Ethiopia will be afraid. Many people in Egypt will die in the battle. Enemies will carry away Egypt's riches. They will knock down Egypt's buildings."
     },
     {
       "verse": "5",
-      "text": "Soldiers from other nations will also die in the battle. They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia, as well as men who belong to my own people."
+      "text": "Soldiers from other nations will also die in the battle.They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia,as well as men who belong to my own people. They are soldiers from Ethiopia, Put, Lydia, Libya, and Arabia, as well as men who belong to my own people."
     },
     {
       "verse": "6",
-      "text": "This is what the Lord says: All the people who help Egypt will die in the battle. Egypt will no longer be proud of her great power. Egypt's soldiers will die everywhere, from Migdol to Aswan. That is what the Almighty Lord says."
+      "text": "This is what the Lord says:All the people who help Egypt will die in the battle.Egypt will no longer be proud of her great power.Egypt's soldiers will die everywhere, from Migdol to Aswan.That is what the Almighty Lord says. All the people who help Egypt will die in the battle. Egypt will no longer be proud of her great power. Egypt's soldiers will die everywhere, from Migdol to Aswan. That is what the Almighty Lord says."
     },
     {
       "verse": "7",
-      "text": "Egypt will become like a desert among other deserts. Its cities will become heaps of stones."
+      "text": "Egypt will become like a desert among other deserts.Its cities will become heaps of stones. Its cities will become heaps of stones."
     },
     {
       "verse": "8",
-      "text": "I will burn Egypt with fire. I will destroy all those who fight to help Egypt. Then they will know that I am the Lord."
+      "text": "I will burn Egypt with fire.I will destroy all those who fight to help Egypt.Then they will know that I am the Lord. I will destroy all those who fight to help Egypt. Then they will know that I am the Lord."
     },
     {
       "verse": "9",
@@ -3052,43 +3052,43 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This is what the Almighty Lord says: I will use King Nebuchadnezzar of Babylon to destroy Egypt's army."
+      "text": "This is what the Almighty Lord says:I will use King Nebuchadnezzar of Babylon to destroy Egypt's army. I will use King Nebuchadnezzar of Babylon to destroy Egypt's army."
     },
     {
       "verse": "11",
-      "text": "The king and his army will come to destroy the land. They are a nation of cruel people. They will attack Egypt's people with their swords. They will fill the land with dead bodies."
+      "text": "The king and his army will come to destroy the land.They are a nation of cruel people.They will attack Egypt's people with their swords.They will fill the land with dead bodies. They are a nation of cruel people. They will attack Egypt's people with their swords. They will fill the land with dead bodies."
     },
     {
       "verse": "12",
-      "text": "I will cause the Nile river to become dry. I will put the land under the power of evil men. Foreigners will destroy the land of Egypt and everything that is in it. That is what I, the Lord, say."
+      "text": "I will cause the Nile river to become dry.I will put the land under the power of evil men.Foreigners will destroy the land of Egyptand everything that is in it.That is what I, the Lord, say. I will put the land under the power of evil men. Foreigners will destroy the land of Egypt and everything that is in it. That is what I, the Lord, say."
     },
     {
       "verse": "13",
-      "text": "The Almighty Lord says this: I will destroy Egypt's idols and the false gods in Memphis. Egypt will no longer have its own ruler. I will cause Egypt's people to be very afraid."
+      "text": "The Almighty Lord says this:I will destroy Egypt's idols and the false gods in Memphis.Egypt will no longer have its own ruler.I will cause Egypt's people to be very afraid. I will destroy Egypt's idols and the false gods in Memphis. Egypt will no longer have its own ruler. I will cause Egypt's people to be very afraid."
     },
     {
       "verse": "14",
-      "text": "I will make Pathros a desert. I will burn Zoan with fire. I will punish the city of Thebes."
+      "text": "I will make Pathros a desert.I will burn Zoan with fire.I will punish the city of Thebes. I will burn Zoan with fire. I will punish the city of Thebes."
     },
     {
       "verse": "15",
-      "text": "I will punish Egypt's strong city of Pelusium. I will show the people there that I am very angry. I will destroy all the soldiers in Thebes."
+      "text": "I will punish Egypt's strong city of Pelusium.I will show the people there that I am very angry.I will destroy all the soldiers in Thebes. I will show the people there that I am very angry. I will destroy all the soldiers in Thebes."
     },
     {
       "verse": "16",
-      "text": "Yes, I will destroy all of Egypt with fire! The people of Pelusium will suffer with great pain. Enemies will knock down the walls of Thebes. The people of Memphis will live in fear every day."
+      "text": "Yes, I will destroy all of Egypt with fire!The people of Pelusium will suffer with great pain.Enemies will knock down the walls of Thebes.The people of Memphis will live in fear every day. The people of Pelusium will suffer with great pain. Enemies will knock down the walls of Thebes. The people of Memphis will live in fear every day."
     },
     {
       "verse": "17",
-      "text": "The young men of Heliopolis and Bubastis will die in the war. Enemies will take the other people from those cities as their prisoners."
+      "text": "The young men of Heliopolis and Bubastis will die in the war.Enemies will take the other people from those cities as their prisoners. Enemies will take the other people from those cities as their prisoners."
     },
     {
       "verse": "18",
-      "text": "It will be a very dark day in Tahpanhes when I destroy Egypt's strength. Egypt will not be proud of her great power any more. A dark cloud will cover the land. Enemies will take away the people from Egypt's villages as prisoners."
+      "text": "It will be a very dark day in Tahpanheswhen I destroy Egypt's strength.Egypt will not be proud of her great power any more.A dark cloud will cover the land.Enemies will take away the people from Egypt's villages as prisoners. when I destroy Egypt's strength. Egypt will not be proud of her great power any more. A dark cloud will cover the land. Enemies will take away the people from Egypt's villages as prisoners."
     },
     {
       "verse": "19",
-      "text": "That is how I will punish Egypt. Then they will know that I am the Lord.” ’"
+      "text": "That is how I will punish Egypt.Then they will know that I am the Lord.” ’ Then they will know that I am the Lord.” ’"
     },
     {
       "verse": "20",
@@ -3116,49 +3116,49 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "I will send the Egyptian people away to many different countries. They will live among other nations. Then they will know that I am the Lord. ’ Print... Use screen font size Show All Comments Ezekiel 29Ezekiel 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will send the Egyptian people away to many different countries. They will live among other nations. Then they will know that I am the Lord. ’"
     }
   ],
   "31": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me on the first day of the 3rd month, in the 11th year:"
+      "text": "The Lord gave this message to me on the first day of the 3rd month, in the 11th year: “You think that you are as powerful as any other country!"
     },
     {
       "verse": "2",
-      "text": "‘Son of man, say this to Pharaoh, king of Egypt, and all his people: “You think that you are as powerful as any other country!"
+      "text": "‘Son of man, say this to Pharaoh, king of Egypt, and all his people:“You think that you are as powerful as any other country!"
     },
     {
       "verse": "3",
-      "text": "Think about how powerful Assyria was. At one time, it was as strong as a great cedar tree in Lebanon. It had beautiful branches that gave shade in the forest. It was very tall. Its top reached up to the clouds."
+      "text": "Think about how powerful Assyria was.At one time, it was as strong as a great cedar tree in Lebanon.It had beautiful branches that gave shade in the forest.It was very tall. Its top reached up to the clouds. At one time, it was as strong as a great cedar tree in Lebanon. It had beautiful branches that gave shade in the forest. It was very tall. Its top reached up to the clouds."
     },
     {
       "verse": "4",
-      "text": "Springs of water from under the ground helped it to grow very tall. Rivers passed around the place where the tree was. Streams from there gave water to all the trees in the forest."
+      "text": "Springs of water from under the ground helped it to grow very tall.Rivers passed around the place where the tree was.Streams from there gave water to all the trees in the forest. Rivers passed around the place where the tree was. Streams from there gave water to all the trees in the forest."
     },
     {
       "verse": "5",
-      "text": "So this cedar tree grew taller than all the other trees. Its branches became large and very long. It grew very well because it had plenty of water."
+      "text": "So this cedar tree grew taller than all the other trees.Its branches became large and very long.It grew very well because it had plenty of water. Its branches became large and very long. It grew very well because it had plenty of water."
     },
     {
       "verse": "6",
-      "text": "All kinds of birds built their nests among its leaves. Under its branches, the wild animals gave birth. All the great nations lived in its shade."
+      "text": "All kinds of birds built their nests among its leaves.Under its branches, the wild animals gave birth.All the great nations lived in its shade. Under its branches, the wild animals gave birth. All the great nations lived in its shade."
     },
     {
       "verse": "7",
-      "text": "It was great and beautiful, with long branches. Its roots went down deep into the ground and they drank plenty of water."
+      "text": "It was great and beautiful, with long branches.Its roots went down deep into the groundand they drank plenty of water. Its roots went down deep into the ground and they drank plenty of water."
     },
     {
       "verse": "8",
-      "text": "The cedar trees in God's garden were not as beautiful. The branches of the pine trees were not as strong. No other tree in God's garden was nearly as great or as beautiful."
+      "text": "The cedar trees in God's garden were not as beautiful.The branches of the pine trees were not as strong.No other tree in God's garden was nearly as great or as beautiful. The branches of the pine trees were not as strong. No other tree in God's garden was nearly as great or as beautiful."
     },
     {
       "verse": "9",
-      "text": "I made that tree beautiful, with all its strong branches. All the trees in Eden, God's garden, were jealous of that tree."
+      "text": "I made that tree beautiful, with all its strong branches.All the trees in Eden, God's garden, were jealous of that tree. All the trees in Eden, God's garden, were jealous of that tree."
     },
     {
       "verse": "10",
-      "text": "So this is what the Almighty Lord says: That great tree, Assyria, was very tall. Its top reached up to the clouds. It was very proud because it was so great."
+      "text": "So this is what the Almighty Lord says:That great tree, Assyria, was very tall. Its top reached up to the clouds. It was very proud because it was so great."
     },
     {
       "verse": "11",
@@ -3190,69 +3190,69 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Yes, Egypt is very strong, like the great trees of Eden. You are as great and powerful as any nation. But you will fall to the ground and go into your grave. It happened to Assyria and the other nations, and it will happen to you. You will lie under the ground among people who do not belong to me and who have died in war. This is a picture of what will happen to Pharaoh and all his people. That is what the Almighty Lord says.” ’ Pharaoh, the king of Egypt, is very proud that his country is so powerful. God tells him that he should remember what happened to Assyria. Assyria was a very strong nation, like a great cedar tree. But even a powerful nation like Assyria lost its power one day. So Pharaoh should realize that his power will not continue for ever. Print... Use screen font size Show All Comments Ezekiel 30Ezekiel 32 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, Egypt is very strong, like the great trees of Eden. You are as great and powerful as any nation. But you will fall to the ground and go into your grave. It happened to Assyria and the other nations, and it will happen to you. You will lie under the ground among people who do not belong to me and who have died in war.This is a picture of what will happen to Pharaoh and all his people. That is what the Almighty Lord says.” ’"
     }
   ],
   "32": [
     {
       "verse": "1",
-      "text": "The Lord gave this message to me on the first day of the 12th month, in the 12th year:"
+      "text": "The Lord gave this message to me on the first day of the 12th month, in the 12th year: “You have shown your power among the nations, like a strong lion. But really you are a monster who lives in the sea. You live in the rivers of your country. You beat the water with your feet. The water of your streams becomes dirty."
     },
     {
       "verse": "2",
-      "text": "‘Son of man, sing a funeral song about Pharaoh, king of Egypt. Say this to him: “You have shown your power among the nations, like a strong lion. But really you are a monster who lives in the sea. You live in the rivers of your country. You beat the water with your feet. The water of your streams becomes dirty."
+      "text": "‘Son of man, sing a funeral song about Pharaoh, king of Egypt. Say this to him:“You have shown your power among the nations,like a strong lion.But really you are a monster who lives in the sea.You live in the rivers of your country.You beat the water with your feet.The water of your streams becomes dirty."
     },
     {
       "verse": "3",
-      "text": "This is what the Almighty Lord says: I will bring a big crowd of people together to catch you in my net. They will use my net to pull you out of the water."
+      "text": "This is what the Almighty Lord says:I will bring a big crowd of people togetherto catch you in my net.They will use my net to pull you out of the water. I will bring a big crowd of people together to catch you in my net. They will use my net to pull you out of the water."
     },
     {
       "verse": "4",
-      "text": "I will throw you onto dry ground and I will leave you there. I will bring the birds to fly down from the sky and sit on you. I will bring the wild animals to feed themselves on you, and eat as much as they want."
+      "text": "I will throw you onto dry groundand I will leave you there.I will bring the birds to fly down from the skyand sit on you.I will bring the wild animals to feed themselves on you,and eat as much as they want. and I will leave you there. I will bring the birds to fly down from the sky and sit on you. I will bring the wild animals to feed themselves on you, and eat as much as they want."
     },
     {
       "verse": "5",
-      "text": "I will put the meat of your body on the mountains. Your bones will fill the valleys."
+      "text": "I will put the meat of your body on the mountains.Your bones will fill the valleys. Your bones will fill the valleys."
     },
     {
       "verse": "6",
-      "text": "I will make the ground wet with your blood. It will pour out of you, up to the mountains. And it will fill the deep valleys."
+      "text": "I will make the ground wet with your blood.It will pour out of you, up to the mountains.And it will fill the deep valleys. It will pour out of you, up to the mountains. And it will fill the deep valleys."
     },
     {
       "verse": "7",
-      "text": "When I completely destroy you, I will cover the sky and make the stars become dark. I will cover the sun with a cloud. The moon will no longer give any light."
+      "text": "When I completely destroy you,I will cover the sky and make the stars become dark.I will cover the sun with a cloud.The moon will no longer give any light. I will cover the sky and make the stars become dark. I will cover the sun with a cloud. The moon will no longer give any light."
     },
     {
       "verse": "8",
-      "text": "I will make the sky over you become dark, with no lights in it. Your whole country will become dark. That is what the Almighty Lord says."
+      "text": "I will make the sky over you become dark,with no lights in it.Your whole country will become dark.That is what the Almighty Lord says. with no lights in it. Your whole country will become dark. That is what the Almighty Lord says."
     },
     {
       "verse": "9",
-      "text": "When many other nations know that I have destroyed you, they will be afraid. Foreign nations that you do not know will be very upset."
+      "text": "When many other nations know that I have destroyed you,they will be afraid.Foreign nations that you do not know will be very upset. they will be afraid. Foreign nations that you do not know will be very upset."
     },
     {
       "verse": "10",
-      "text": "The people of many countries will be afraid when they see what I have done to you. Their kings will shake with fear. When I wave my sword in front of them, they will not stop shaking! At the time that your life finishes, they will also fear death."
+      "text": "The people of many countries will be afraidwhen they see what I have done to you.Their kings will shake with fear.When I wave my sword in front of them,they will not stop shaking!At the time that your life finishes,they will also fear death. when they see what I have done to you. Their kings will shake with fear. When I wave my sword in front of them, they will not stop shaking! At the time that your life finishes, they will also fear death."
     },
     {
       "verse": "11",
-      "text": "This is what the Almighty Lord says: The king of Babylon will attack you with his army."
+      "text": "This is what the Almighty Lord says:The king of Babylon will attack you with his army. The king of Babylon will attack you with his army."
     },
     {
       "verse": "12",
-      "text": "His brave soldiers will fight against you. I will cause them to destroy your army. They are the most cruel of all the nations. They will stop Egypt's people being proud of their power. They will destroy all Egypt's armies."
+      "text": "His brave soldiers will fight against you.I will cause them to destroy your army.They are the most cruel of all the nations.They will stop Egypt's people being proud of their power.They will destroy all Egypt's armies. I will cause them to destroy your army. They are the most cruel of all the nations. They will stop Egypt's people being proud of their power. They will destroy all Egypt's armies."
     },
     {
       "verse": "13",
-      "text": "I will destroy all Egypt's cows that live beside its great rivers. So no people or animals will walk in the water any more. They will not cause the water to become dirty."
+      "text": "I will destroy all Egypt's cows that live beside its great rivers.So no people or animals will walk in the water any more.They will not cause the water to become dirty. So no people or animals will walk in the water any more. They will not cause the water to become dirty."
     },
     {
       "verse": "14",
-      "text": "Then I will cause the water in the rivers to be clean again. The water will move freely like olive oil. That is what the Almighty Lord says."
+      "text": "Then I will cause the water in the rivers to be clean again.The water will move freely like olive oil.That is what the Almighty Lord says. The water will move freely like olive oil. That is what the Almighty Lord says."
     },
     {
       "verse": "15",
-      "text": "I will cause Egypt to become an empty place. I will remove everything that grows on the land. I will kill all the people who live there. Then they will know that I am the Lord.”"
+      "text": "I will cause Egypt to become an empty place.I will remove everything that grows on the land.I will kill all the people who live there.Then they will know that I am the Lord.” I will remove everything that grows on the land. I will kill all the people who live there. Then they will know that I am the Lord.”"
     },
     {
       "verse": "16",
@@ -3320,7 +3320,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "When he was alive, I caused him to make people very afraid. But Pharaoh and all his great army will lie in their graves among other people who died in battle. They will lie with people who do not belong to God. That is what I, the Almighty Lord, have said.’ Print... Use screen font size Show All Comments Ezekiel 31Ezekiel 33 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When he was alive, I caused him to make people very afraid. But Pharaoh and all his great army will lie in their graves among other people who died in battle. They will lie with people who do not belong to God. That is what I, the Almighty Lord, have said.’"
     }
   ],
   "33": [
@@ -3346,7 +3346,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "But the guard might not blow the trumpet when he sees the enemy. He might not warn his people that the enemy is ready to attack them. Then enemy soldiers might kill some of his people. Those people will die because of their sins. But the guard will be guilty of their death, because he did not warn them of danger.” During a war, a city had to be ready to protect itself. The people would choose a guard to watch for the enemy. This guard would stand on the wall of the city and he would carry a trumpet. When he saw the enemy, he would blow the trumpet. Then the people would prepare to fight."
+      "text": "But the guard might not blow the trumpet when he sees the enemy. He might not warn his people that the enemy is ready to attack them. Then enemy soldiers might kill some of his people. Those people will die because of their sins. But the guard will be guilty of their death, because he did not warn them of danger.”"
     },
     {
       "verse": "7",
@@ -3402,15 +3402,15 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But you Israelites continue to say, “The Lord is not fair!” But I will judge each of you in a way that you deserve for the things that you have done.’ Ezekiel hears news about Jerusalem"
+      "text": "But you Israelites continue to say, “The Lord is not fair!” But I will judge each of you in a way that you deserve for the things that you have done.’"
     },
     {
       "verse": "21",
-      "text": "This is what happened 12 years after we had come to Babylon as prisoners. It was on the 5th day of the 10th month of that year. A man who had escaped from Jerusalem came to me in Babylon. He said, ‘Enemies have taken Jerusalem for themselves.’"
+      "text": "years after we had come to Babylon as prisoners. It was on the 5th day of the 10th month of that year. A man who had escaped from Jerusalem came to me in Babylon. He said, ‘Enemies have taken Jerusalem for themselves.’"
     },
     {
       "verse": "22",
-      "text": "Before that man arrived, the Lord had taken hold of me in the night. He had opened my mouth so that I was able to speak again. It had probably taken this man many months to bring the news from Jerusalem to Babylon. It was a long and difficult journey for him. See 2 Kings Jeremiah See Ezekiel"
+      "text": "Before that man arrived, the Lord had taken hold of me in the night. He had opened my mouth so that I was able to speak again."
     },
     {
       "verse": "23",
@@ -3454,7 +3454,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "All these things that I have said will certainly happen. When my people see them happen, they will know that a prophet has lived among them.’ Print... Use screen font size Show All Comments Ezekiel 32Ezekiel 34 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "All these things that I have said will certainly happen. When my people see them happen, they will know that a prophet has lived among them.’"
     }
   ],
   "34": [
@@ -3480,7 +3480,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "My sheep went over all the mountains and the high hills. They went to places everywhere on the earth. And nobody went to look for them and bring them back again. A ruler should take care of his people, like a shepherd takes care of his sheep. Here, the leaders of Israel were called the shepherds of Israel."
+      "text": "My sheep went over all the mountains and the high hills. They went to places everywhere on the earth. And nobody went to look for them and bring them back again."
     },
     {
       "verse": "7",
@@ -3552,7 +3552,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "I, the Lord, will be their God. My servant David will be their ruler. I, the Lord, have said this. Ezekiel is speaking God's message about the Messiah, God's special King. King David had died long before Ezekiel lived. Here, God says that the Messiah will be one ruler for all his people. God sent his Son, Jesus, into the world as a descendant of King David. See Isaiah Jeremiah Hosea Micah"
+      "text": "I, the Lord, will be their God. My servant David will be their ruler. I, the Lord, have said this."
     },
     {
       "verse": "25",
@@ -3580,7 +3580,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "You are my people and I take care of you, as a shepherd takes care of his sheep. You are my people and I am your God. That is what the Almighty Lord says.” ’ Print... Use screen font size Show All Comments Ezekiel 33Ezekiel 35 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You are my people and I take care of you, as a shepherd takes care of his sheep. You are my people and I am your God. That is what the Almighty Lord says.” ’"
     }
   ],
   "35": [
@@ -3598,7 +3598,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "I will destroy your towns. They will become heaps of stones where nobody lives. Then you will know that I am the Lord. Mount Seir is another name for Edom. The people in Edom were the descendants of Esau. He was Jacob's brother. They were enemies of Israel."
+      "text": "I will destroy your towns. They will become heaps of stones where nobody lives. Then you will know that I am the Lord."
     },
     {
       "verse": "5",
@@ -3618,7 +3618,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "I will make you a desert for ever and nobody will live in your towns. Then you will know that I am the Lord. The people of Edom were happy when Babylon's army attacked Jerusalem. They watched the enemy attack the Israelites and they did not try to help them. God was using Babylon's army to punish his people."
+      "text": "I will make you a desert for ever and nobody will live in your towns. Then you will know that I am the Lord."
     },
     {
       "verse": "10",
@@ -3642,7 +3642,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "You were happy when you saw me punish Israel's people so that their land became a desert. Because you were happy, I will punish you as you deserve. Mount Seir and all the land of Edom will become an empty desert. Then Edom's people will know that I am the Lord.” ’ Print... Use screen font size Show All Comments Ezekiel 34Ezekiel 36 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You were happy when you saw me punish Israel's people so that their land became a desert. Because you were happy, I will punish you as you deserve. Mount Seir and all the land of Edom will become an empty desert. Then Edom's people will know that I am the Lord.” ’"
     }
   ],
   "36": [
@@ -3788,11 +3788,11 @@ module.exports = {
     },
     {
       "verse": "36",
-      "text": "Then the nations that still live around you will see what has happened. They will know that I, the Lord, have mended the broken cities. They will know that I have planted crops again in the fields that were empty. I, the Lord, have said this, and I will do it!” See Genesis"
+      "text": "Then the nations that still live around you will see what has happened. They will know that I, the Lord, have mended the broken cities. They will know that I have planted crops again in the fields that were empty. I, the Lord, have said this, and I will do it!”"
     },
     {
-      "verse": "37-38",
-      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival. I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord.’ Print... Use screen font size Show All Comments Ezekiel 35Ezekiel 37 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "verse": "37",
+      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival. I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord.’"
     }
   ],
   "37": [
@@ -3806,7 +3806,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He asked me, ‘Son of man, can these bones become alive again?’ I said, ‘Almighty Lord, only you know the answer.’"
+      "text": "He asked me, ‘Son of man, can these bones become alive again?’I said, ‘Almighty Lord, only you know the answer.’ I said, ‘Almighty Lord, only you know the answer.’"
     },
     {
       "verse": "4",
@@ -3818,7 +3818,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "I will join you together and I will put meat on you. I will cover you with skin. I will put breath into you and you will become alive. Then you will know that I am the Lord.” ’ The Hebrew word that means breath also means wind or spirit."
+      "text": "I will join you together and I will put meat on you. I will cover you with skin. I will put breath into you and you will become alive. Then you will know that I am the Lord.” ’"
     },
     {
       "verse": "7",
@@ -3850,7 +3850,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "I will put the breath of my Spirit in you, and you will become alive. I will let you live safely in your own land. Then you will know that I, the Lord, have spoken. You will know that I have done what I said I would do. That is what the Lordsays.” ’ The Lord is promising that he will bring his people back from exile in Babylon. As prisoners in Babylon, the Israelites think that they have no hope for good things in the future. They are like bones that are dead and dry. But God promises to give them new life."
+      "text": "I will put the breath of my Spirit in you, and you will become alive. I will let you live safely in your own land. Then you will know that I, the Lord, have spoken. You will know that I have done what I said I would do. That is what the Lordsays.” ’"
     },
     {
       "verse": "15",
@@ -3870,7 +3870,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "When they ask that, say to them, “This is what the Almighty Lord says: I will take Joseph's stick that belongs to Ephraim and the Israelite tribes that are with him. I will cause it to join together with Judah's stick. I will make them become one stick in my hand.” Judah was the Israelite kingdom in the south. Ephraim was a name for the Israelite kingdom in the north."
+      "text": "When they ask that, say to them, “This is what the Almighty Lord says: I will take Joseph's stick that belongs to Ephraim and the Israelite tribes that are with him. I will cause it to join together with Judah's stick. I will make them become one stick in my hand.”"
     },
     {
       "verse": "20",
@@ -3894,7 +3894,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They will live in the land that I gave to my servant Jacob. It is the land where your ancestors lived. My people, their children and their grandchildren will live there. They will live there for ever. My servant David will rule over them for ever. God is telling Ezekiel about a future time when Jesus will be the leader of God's people. King David himself died a long time before Ezekiel was alive. Jesus was a descendant of King David who would rule his people as king for ever. He would take care of them, as a shepherd takes care of his sheep."
+      "text": "They will live in the land that I gave to my servant Jacob. It is the land where your ancestors lived. My people, their children and their grandchildren will live there. They will live there for ever. My servant David will rule over them for ever."
     },
     {
       "verse": "26",
@@ -3906,7 +3906,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "Then the nations will know that I, the Lord, have chosen the Israelites as my own people. The nations will see that I have put my temple among my people for ever.” ’ Print... Use screen font size Show All Comments Ezekiel 36Ezekiel 38 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then the nations will know that I, the Lord, have chosen the Israelites as my own people. The nations will see that I have put my temple among my people for ever.” ’"
     }
   ],
   "38": [
@@ -4000,7 +4000,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "I will show all the nations that I am great and I am holy. Then they will know that I am the Lord.” ’ Print... Use screen font size Show All Comments Ezekiel 37Ezekiel 39 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "I will show all the nations that I am great and I am holy. Then they will know that I am the Lord.” ’"
     }
   ],
   "39": [
@@ -4030,11 +4030,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "My people, Israel will know that my name is holy. No longer will I let them say bad things about me. And the nations round you will know that I, the Lord am the holy God in Israel."
+      "text": "My people, Israel will know that my name is holy. No longer will I let them say bad things about me. And the nations round you will know that I, the Lord am the holy God in Israel. I told you that this day would come."
     },
     {
       "verse": "8",
-      "text": "I promise that I will cause this to happen. You can be sure that this day will come, says the Lord God. I told you that this day would come."
+      "text": "I promise that I will cause this to happen. You can be sure that this day will come, says the Lord God.I told you that this day would come."
     },
     {
       "verse": "9",
@@ -4118,7 +4118,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "No longer will I turn away from them. I will pour my Spirit over Israel's people, says the Lord God.’ Print... Use screen font size Show All Comments Ezekiel 38Ezekiel 40 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "No longer will I turn away from them. I will pour my Spirit over Israel's people, says the Lord God.’"
     }
   ],
   "40": [
@@ -4136,7 +4136,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The man said to me, ‘Son of man, watch and listen carefully to me. Remember everything that I will show you. God has brought you here so that I can show these things to you. Tell Israel's people about everything that you see.’ The east gate"
+      "text": "The man said to me, ‘Son of man, watch and listen carefully to me. Remember everything that I will show you. God has brought you here so that I can show these things to you. Tell Israel's people about everything that you see.’"
     },
     {
       "verse": "5",
@@ -4156,7 +4156,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "It was 4 metres long. It had pillars that were 1 metre thick. It was the nearest part of the gate to the temple."
+      "text": "metres long. It had pillars that were 1 metre thick. It was the nearest part of the gate to the temple."
     },
     {
       "verse": "10",
@@ -4176,15 +4176,15 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The entrance room had pillars on the outside that were 30 metres high. The yard was all around three sides of the room."
+      "text": "metres high. The yard was all around three sides of the room."
     },
     {
       "verse": "15",
-      "text": "The passage was 25 metres long, from the gate at the front to the entrance room into the yard."
+      "text": "metres long, from the gate at the front to the entrance room into the yard."
     },
     {
       "verse": "16",
-      "text": "The rooms for the guards all had small windows in their outside walls. The walls between the rooms also had small windows. The entrance room to the yard also had windows of the same kind. Men had cut pictures of palm trees on the inside walls of the passage. The plan of these gates was like the gates in Solomon's temple. See 1 Kings The outside yard"
+      "text": "The rooms for the guards all had small windows in their outside walls. The walls between the rooms also had small windows. The entrance room to the yard also had windows of the same kind. Men had cut pictures of palm trees on the inside walls of the passage."
     },
     {
       "verse": "17",
@@ -4196,7 +4196,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "The man measured across the outside yard. He measured from the lower gate to the higher gate that went into the inside yard. The man measured 50 metres between the two gates. The north gate"
+      "text": "The man measured across the outside yard. He measured from the lower gate to the higher gate that went into the inside yard. The man measured 50 metres between the two gates."
     },
     {
       "verse": "20",
@@ -4212,7 +4212,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Opposite this gate, across the yard, was the gate to the inside yard. It was the same as on the east side. The man measured 50 metres between the two gates. The south gate"
+      "text": "Opposite this gate, across the yard, was the gate to the inside yard. It was the same as on the east side. The man measured 50 metres between the two gates."
     },
     {
       "verse": "24",
@@ -4228,7 +4228,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "The inside yard of the temple also had a gate on the south side. The man measured 50 metres between the two gates. The south gate of the inside yard"
+      "text": "The inside yard of the temple also had a gate on the south side. The man measured 50 metres between the two gates."
     },
     {
       "verse": "28",
@@ -4244,7 +4244,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The entrance room of this gate opened towards the outside yard. There were pictures of palm trees on the walls of the passage. Eight steps went up to this gate. The east gate of the inside yard"
+      "text": "The entrance room of this gate opened towards the outside yard. There were pictures of palm trees on the walls of the passage. Eight steps went up to this gate."
     },
     {
       "verse": "32",
@@ -4256,7 +4256,7 @@ module.exports = {
     },
     {
       "verse": "34",
-      "text": "The entrance room of this gate opened towards the outside yard. There were pictures of palm trees on the walls of the passage. Eight steps went up to this gate. The north gate of the inside yard"
+      "text": "The entrance room of this gate opened towards the outside yard. There were pictures of palm trees on the walls of the passage. Eight steps went up to this gate."
     },
     {
       "verse": "35",
@@ -4268,7 +4268,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "The door of the entrance room opened towards the outside yard. There were pictures of palm trees on the walls of the passage, on both sides. Eight steps went up to this gate. Buildings near the north gate"
+      "text": "The door of the entrance room opened towards the outside yard. There were pictures of palm trees on the walls of the passage, on both sides. Eight steps went up to this gate."
     },
     {
       "verse": "38",
@@ -4304,11 +4304,11 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "The room beside the south gate is for the priests who serve God at the altar. These priests are descendants of Zadok. They are the only descendants of Levi who may come near to the Lord to serve him.’ These priests had to belong to the family of Zadok. See Ezekiel 44."
+      "text": "The room beside the south gate is for the priests who serve God at the altar. These priests are descendants of Zadok. They are the only descendants of Levi who may come near to the Lord to serve him.’"
     },
     {
       "verse": "47",
-      "text": "The man measured the inside yard. It was square, 50 metres long and 50 metres wide. There was an altar in front of the temple. The temple building"
+      "text": "The man measured the inside yard. It was square, 50 metres long and 50 metres wide. There was an altar in front of the temple."
     },
     {
       "verse": "48",
@@ -4316,7 +4316,7 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "The entrance room was 10 metres wide and 6 metres long. Steps went up to the entrance room. There were two pillars, one on each side of the entrance. Print... Use screen font size Show All Comments Ezekiel 39Ezekiel 41 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "metres wide and 6 metres long. Steps went up to the entrance room. There were two pillars, one on each side of the entrance."
     }
   ],
   "41": [
@@ -4326,7 +4326,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "The entrance itself was 5 metres wide. The walls on each side were 2½ metres wide. The big hall was 20 metres long and 10 metres wide. The big hall was the Holy Place. Ezekiel was a priest, so he could go into it."
+      "text": "metres wide. The walls on each side were 2½ metres wide. The big hall was 20 metres long and 10 metres wide."
     },
     {
       "verse": "3",
@@ -4334,7 +4334,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "He measured the inside room. It was 10 metres long and 10 metres wide. It was at the back of the big hall. The man said to me, ‘This is the Most Holy Place.’ The man did not take Ezekiel into the Most Holy Place. Ezekiel was a priest but only the chief priest could go into this room."
+      "text": "He measured the inside room. It was 10 metres long and 10 metres wide. It was at the back of the big hall. The man said to me, ‘This is the Most Holy Place.’"
     },
     {
       "verse": "5",
@@ -4353,12 +4353,12 @@ module.exports = {
       "text": "I saw that there was a stone base all around the temple. The side rooms stood on this base as their foundation. It was 3 metres high."
     },
     {
-      "verse": "9-10",
+      "verse": "9",
       "text": "The outside wall of the side rooms was 2½ metres thick. There was an open space between these rooms and the rooms that the priests used. It was 10 metres wide, all around the temple building."
     },
     {
       "verse": "11",
-      "text": "There were two doors for the side rooms. One door opened towards the north. The other door opened towards the south. They opened into a space that was 2½ metres wide. These rooms were like the rooms in Solomon's temple. See 1 Kings"
+      "text": "There were two doors for the side rooms. One door opened towards the north. The other door opened towards the south. They opened into a space that was 2½ metres wide."
     },
     {
       "verse": "12",
@@ -4374,14 +4374,14 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "He measured the building at the back of the temple yard, on the west side. That was also 50 metres, including the side rooms at each end. Wooden boards covered the walls of the big hall, the inside room and the entrance room of the temple."
+      "text": "He measured the building at the back of the temple yard, on the west side. That was also 50 metres, including the side rooms at each end.Wooden boards covered the walls of the big hall, the inside room and the entrance room of the temple."
     },
     {
       "verse": "16",
       "text": "The boards covered the walls from the floor up to the windows, and above the windows. They used wood to make the edges of the windows. They also covered the windows."
     },
     {
-      "verse": "17-18",
+      "verse": "17",
       "text": "Workers had cut pictures in the wood above the doors and all over the walls. They were pictures of palm trees and cherubs. There was a picture of a palm tree between each cherub. They covered all the inside walls of the temple. Each cherub had two faces."
     },
     {
@@ -4414,7 +4414,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "The entrance room had narrow windows in the walls on each side. The windows had pictures of palm trees on each side. Workers had cut shapes of palm trees on its walls. The side rooms around the temple also had roofs over the outside of their doors. Print... Use screen font size Show All Comments Ezekiel 40Ezekiel 42 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The entrance room had narrow windows in the walls on each side. The windows had pictures of palm trees on each side. Workers had cut shapes of palm trees on its walls. The side rooms around the temple also had roofs over the outside of their doors."
     }
   ],
   "42": [
@@ -4424,11 +4424,11 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This building was 50 metres long and 25 metres wide. Its entrance was towards the north."
+      "text": "metres long and 25 metres wide. Its entrance was towards the north."
     },
     {
       "verse": "3",
-      "text": "There was a 10 metre space between one side of this building and the temple in the inside yard. The building's other side was opposite the path in the outside yard. It had three levels of rooms in two rows that were opposite each other."
+      "text": "metre space between one side of this building and the temple in the inside yard. The building's other side was opposite the path in the outside yard. It had three levels of rooms in two rows that were opposite each other."
     },
     {
       "verse": "4",
@@ -4448,7 +4448,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The row of rooms in the outside yard was also 25 metres long. But the other row of rooms in the inside yard, opposite the temple, was 50 metres long."
+      "text": "metres long. But the other row of rooms in the inside yard, opposite the temple, was 50 metres long."
     },
     {
       "verse": "9",
@@ -4456,7 +4456,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "This entrance was at the end of the wall in the outside yard. There was another building like this one on the south side of the temple. It was opposite the other building and it also had two rows of rooms."
+      "text": "This entrance was at the end of the wall in the outside yard.There was another building like this one on the south side of the temple. It was opposite the other building and it also had two rows of rooms."
     },
     {
       "verse": "11",
@@ -4483,12 +4483,12 @@ module.exports = {
       "text": "He used his stick to measure the wall on the east side. It was 250 metres."
     },
     {
-      "verse": "17-19",
+      "verse": "17",
       "text": "Then he measured the north side and the south side and the west side. Each side measured the same as the east side."
     },
     {
       "verse": "20",
-      "text": "So the wall made a square around the place where the temple was. Each side was 250 metres. The wall made the holy place separate from the ordinary places around it. Print... Use screen font size Show All Comments Ezekiel 41Ezekiel 43 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the wall made a square around the place where the temple was. Each side was 250 metres. The wall made the holy place separate from the ordinary places around it."
     }
   ],
   "43": [
@@ -4510,7 +4510,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Then a spirit lifted me up and took me into the temple's inside yard. As I watched, the Lord's glory filled the temple. See Ezekiel A spirit’ or ‘a wind’. The same Hebrew word may mean either of these."
+      "text": "Then a spirit lifted me up and took me into the temple's inside yard. As I watched, the Lord's glory filled the temple."
     },
     {
       "verse": "6",
@@ -4538,7 +4538,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "This is the most important law about the temple: All the top of the mountain around the temple will be most holy. The great altar"
+      "text": "This is the most important law about the temple: All the top of the mountain around the temple will be most holy."
     },
     {
       "verse": "13",
@@ -4550,7 +4550,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "This top part is 2 metres high. They burn the sacrifices on this top part. Its four corners have points like horns that go up."
+      "text": "metres high. They burn the sacrifices on this top part. Its four corners have points like horns that go up."
     },
     {
       "verse": "16",
@@ -4558,7 +4558,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The middle part is also square, with each side 7 metres long. It has a border around its edge that is 25 centimetres high. There is a hole all around that is 50 centimetres wide. There are steps up to the top of the altar on the east side.’ See Ezekiel They must make the altar holy"
+      "text": "The middle part is also square, with each side 7 metres long. It has a border around its edge that is 25 centimetres high. There is a hole all around that is 50 centimetres wide. There are steps up to the top of the altar on the east side.’"
     },
     {
       "verse": "18",
@@ -4598,7 +4598,7 @@ module.exports = {
     },
     {
       "verse": "27",
-      "text": "When the seven days have finished, the priests can begin to offer burnt offerings and peace offerings on the altar. They can do this for you on the eighth day and after that. Then I will accept you as my own people. That is what I, the Almighty Lord, say.’ Print... Use screen font size Show All Comments Ezekiel 42Ezekiel 44 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When the seven days have finished, the priests can begin to offer burnt offerings and peace offerings on the altar. They can do this for you on the eighth day and after that. Then I will accept you as my own people. That is what I, the Almighty Lord, say.’"
     }
   ],
   "44": [
@@ -4664,7 +4664,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "Only they can come into my holy place and serve me at the altar. They will do what I tell them to do. Zadok was a priest at the time of David. He was faithful to David when David's sons, Absalom and Adonijah, turned against their father (2 Samuel Samuel Kings David's son Solomon chose Zadok to be the chief priest (1 Kings"
+      "text": "Only they can come into my holy place and serve me at the altar. They will do what I tell them to do."
     },
     {
       "verse": "17",
@@ -4676,7 +4676,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "Before they go out to the outside yard to meet the ordinary people, they must take off their special clothes. They must leave the clothes that they wore when they were serving me in one of the rooms in the holy place. They must put on other clothes before they go out. Then their special clothes will not touch the people and make them holy. Sweat makes your skin wet when your body becomes very hot."
+      "text": "Before they go out to the outside yard to meet the ordinary people, they must take off their special clothes. They must leave the clothes that they wore when they were serving me in one of the rooms in the holy place. They must put on other clothes before they go out. Then their special clothes will not touch the people and make them holy."
     },
     {
       "verse": "20",
@@ -4724,7 +4724,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "The priests must not eat any bird or any animal that people find dead. They must not eat anything that a wild animal has killed.” ’ Print... Use screen font size Show All Comments Ezekiel 43Ezekiel 45 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The priests must not eat any bird or any animal that people find dead. They must not eat anything that a wild animal has killed.” ’"
     }
   ],
   "45": [
@@ -4774,7 +4774,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "20 gerahs will be equal to one shekel. 60 shekels will be equal to one mina. A mina was about 600 grams. An ephah was about 22 litres. A homer was about 220 litres. In the days of Ezekiel, a shekel was about 11 grams. Offerings and holy days"
+      "text": "gerahs will be equal to one shekel. 60 shekels will be equal to one mina."
     },
     {
       "verse": "13",
@@ -4782,11 +4782,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Take one litre of olive oil from every 100 litres."
+      "text": "litres."
     },
     {
       "verse": "15",
-      "text": "Take one sheep from every 200 sheep that feed on the grass in Israel. These gifts will be for grain offerings, for burnt offerings and for friendship offerings. These offerings will cause me to forgive you for your sins. I, the Almighty Lord, tell you to do this."
+      "text": "sheep that feed on the grass in Israel. These gifts will be for grain offerings, for burnt offerings and for friendship offerings. These offerings will cause me to forgive you for your sins. I, the Almighty Lord, tell you to do this."
     },
     {
       "verse": "16",
@@ -4810,7 +4810,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Each year, on the 14th day of the first month, you must start the Passover festival. The festival will continue for seven days. During that time you must not eat any bread that has yeast in it. During the Passover festival, the Israelites remember how God brought them out of Egypt. See Exodus 12."
+      "text": "Each year, on the 14th day of the first month, you must start the Passover festival. The festival will continue for seven days. During that time you must not eat any bread that has yeast in it."
     },
     {
       "verse": "22",
@@ -4822,11 +4822,11 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "With each bull and each sheep, the ruler must also provide an ephah of grain. He must provide a hin of olive oil with each ephah of grain. A hin was about 3 litres."
+      "text": "With each bull and each sheep, the ruler must also provide an ephah of grain. He must provide a hin of olive oil with each ephah of grain."
     },
     {
       "verse": "25",
-      "text": "You will have another festival that starts on the 15th day of the 7th month. It will continue for seven days. Each day, the ruler must provide the same things for sin offerings, burnt offerings and grain offerings, as well as the olive oil.’ Print... Use screen font size Show All Comments Ezekiel 44Ezekiel 46 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "You will have another festival that starts on the 15th day of the 7th month. It will continue for seven days. Each day, the ruler must provide the same things for sin offerings, burnt offerings and grain offerings, as well as the olive oil.’"
     }
   ],
   "46": [
@@ -4848,7 +4848,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "The ruler will also bring grain offerings. He will offer an ephah of grain with the male sheep. For each of the lambs, he may give as much grain as he chooses. For each ephah of grain, he will offer a hin of olive oil. An ephah was about 22 litres. A hin was about 3 litres."
+      "text": "The ruler will also bring grain offerings. He will offer an ephah of grain with the male sheep. For each of the lambs, he may give as much grain as he chooses. For each ephah of grain, he will offer a hin of olive oil."
     },
     {
       "verse": "6",
@@ -4900,7 +4900,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The king must not take for himself any land that belongs to the people. He must not take them away from their own land. He can only give his own land to his sons. Nobody may take any of my people away from the land that belongs to them.’ The year of Jubilee came every 50 years. See Leviticus"
+      "text": "The king must not take for himself any land that belongs to the people. He must not take them away from their own land. He can only give his own land to his sons. Nobody may take any of my people away from the land that belongs to them.’"
     },
     {
       "verse": "19",
@@ -4916,7 +4916,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "These four small yards were 20 metres long and 15 metres wide. They were all the same size."
+      "text": "metres long and 15 metres wide. They were all the same size."
     },
     {
       "verse": "23",
@@ -4924,7 +4924,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "The man said to me, ‘The temple servants will use these kitchens to cook meat that the people bring for sacrifices.’ Print... Use screen font size Show All Comments Ezekiel 45Ezekiel 47 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The man said to me, ‘The temple servants will use these kitchens to cook meat that the people bring for sacrifices.’"
     }
   ],
   "47": [
@@ -4942,15 +4942,15 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "Then he measured another 500 metres along the stream. He took me through the water again. Here, the water was as high as my knees. He measured another 500 metres. He took me through the water and it was now as high as my belt."
+      "text": "metres along the stream. He took me through the water again. Here, the water was as high as my knees. He measured another 500 metres. He took me through the water and it was now as high as my belt."
     },
     {
       "verse": "5",
-      "text": "Then he measured another 500 metres. Here the water had become a deep river. It was too deep for me to go across. Nobody could walk through it. They would need to swim."
+      "text": "metres. Here the water had become a deep river. It was too deep for me to go across. Nobody could walk through it. They would need to swim."
     },
     {
       "verse": "6",
-      "text": "The man said to me, ‘Son of man, you must remember what you have seen.’ Then he took me back to the river's edge."
+      "text": "The man said to me, ‘Son of man, you must remember what you have seen.’Then he took me back to the river's edge."
     },
     {
       "verse": "7",
@@ -4974,7 +4974,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "All kinds of fruit trees will live on each side of the river. Their leaves will never become dry. They will always give fruit every month. This is because the water that feeds them comes from the holy temple. The fruit from these trees will provide food. And their leaves will make sick people well.’ The Salt Sea is called the Dead Sea today. The borders of Israel's land"
+      "text": "All kinds of fruit trees will live on each side of the river. Their leaves will never become dry. They will always give fruit every month. This is because the water that feeds them comes from the holy temple. The fruit from these trees will provide food. And their leaves will make sick people well.’"
     },
     {
       "verse": "13",
@@ -4982,11 +4982,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Share the land in equal parts for each tribe. I promised your ancestors that I would give them this land to live in. So now it will belong to you and your descendants. Joseph's two sons were Ephraim and Manasseh. They each made a tribe."
+      "text": "Share the land in equal parts for each tribe. I promised your ancestors that I would give them this land to live in. So now it will belong to you and your descendants."
     },
     {
       "verse": "15",
-      "text": "These will be the borders of your land: The north border goes from the Mediterranean Sea to the city of Hethlon. It continues to go east, past Lebo-Hamath and to Zedad."
+      "text": "These will be the borders of your land:The north border goes from the Mediterranean Sea to the city of Hethlon. It continues to go east, past Lebo-Hamath and to Zedad."
     },
     {
       "verse": "16",
@@ -5010,7 +5010,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "You must share this land among yourselves so that each tribe of Israel receives a part."
+      "text": "You must share this land among yourselves so that each tribe of Israel receives a part. That is what the Almighty Lord says."
     },
     {
       "verse": "22",
@@ -5018,13 +5018,13 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "Give them land among the tribe where they have decided to live.’ That is what the Almighty Lord says. Print... Use screen font size Show All Comments Ezekiel 46Ezekiel 48 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Give them land among the tribe where they have decided to live.’That is what the Almighty Lord says."
     }
   ],
   "48": [
     {
       "verse": "1",
-      "text": "‘This is the list of Israel's tribes, with the land that each tribe will receive: Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath. Dan's part of the land goes all the way from Israel's border in the east to the Mediterranean Sea in the west."
+      "text": "‘This is the list of Israel's tribes, with the land that each tribe will receive:Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath.Dan's part of the land goes all the way from Israel's border in the east to the Mediterranean Sea in the west. Dan will receive land at the north border of Israel. Their north border goes east from the Mediterranean Sea along the road to Hethlon, as far as Lebo-Hamath. From there, it goes to Hazar-Enan, on the border between Damascus and Hamath."
     },
     {
       "verse": "2",
@@ -5088,7 +5088,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "You must leave an open space 125 metres wide on each side of the city."
+      "text": "metres wide on each side of the city."
     },
     {
       "verse": "18",
@@ -5112,7 +5112,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The other tribes will each have a part of the land that is south of this special part. The land for each of these tribes will go all the way from Israel's border in the east to the Mediterranean Sea in the west. South of the special land will be the land for Benjamin."
+      "text": "The other tribes will each have a part of the land that is south of this special part. The land for each of these tribes will go all the way from Israel's border in the east to the Mediterranean Sea in the west.South of the special land will be the land for Benjamin."
     },
     {
       "verse": "24",
@@ -5136,11 +5136,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "That is how you must share the land among Israel's tribes. Each part will belong to one tribe and their descendants. I, the Almighty Lord, say this. The gates of the city"
+      "text": "That is how you must share the land among Israel's tribes. Each part will belong to one tribe and their descendants. I, the Almighty Lord, say this."
     },
     {
       "verse": "30",
-      "text": "These will be the entrance gates on each side of the city. The wall on the north side of the city will be 2,250 metres long."
+      "text": "These will be the entrance gates on each side of the city. The wall on the north side of the city will be 2,250 metres long. From that time on, the name of the city will be, “The Lord is there.” ’"
     },
     {
       "verse": "31",
@@ -5160,7 +5160,7 @@ module.exports = {
     },
     {
       "verse": "35",
-      "text": "So the walls all around the city will measure 9,000 metres. From that time on, the name of the city will be, “The Lord is there.” ’ Print... Use screen font size Show All Comments Ezekiel 47Daniel Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So the walls all around the city will measure 9,000 metres.From that time on, the name of the city will be, “The Lord is there.” ’"
     }
   ]
 };

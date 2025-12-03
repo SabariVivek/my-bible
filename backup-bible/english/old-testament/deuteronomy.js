@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "Moses spoke to the Israelites on the first day of the 11th month, in the 40th year of their journey. He told the Israelites the message that the Lord had commanded him to speak. These people are the children of the Israelites who left Egypt. They were born while their parents travelled in the desert. The journey from Sinai should only have been 11 days. The Israelites had travelled through the desert for 40 years because they did not trust God. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+      "text": "Moses spoke to the Israelites on the first day of the 11th month, in the 40th year of their journey. He told the Israelites the message that the Lord had commanded him to speak."
     },
     {
       "verse": "4",
@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "Moses began to speak the Lord's message on the east side of the Jordan River, in Moab's country. This is what he said: The Amorites were a group of people who lived in Canaan before the Israelites lived there. They lived on both sides of the Jordan River. They were enemies of the Israelites."
+      "text": "Moses began to speak the Lord's message on the east side of the Jordan River, in Moab's country. This is what he said:"
     },
     {
       "verse": "6",
@@ -30,7 +30,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Look! I have given you all this land. Go there and take it for yourselves. I, the Lord, promised to give this land to your ancestors, Abraham, Isaac and Jacob, and to their descendants.’ Moses chooses leaders"
+      "text": "Look! I have given you all this land. Go there and take it for yourselves. I, the Lord, promised to give this land to your ancestors, Abraham, Isaac and Jacob, and to their descendants.’"
     },
     {
       "verse": "9",
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "So, at that time, I told you about everything that you should do. Moses sends out men to explore"
+      "text": "So, at that time, I told you about everything that you should do."
     },
     {
       "verse": "19",
@@ -98,7 +98,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "They picked some of the fruit that they found there and they brought it back to us. They told us, ‘The land that the Lord our God is giving to us is a very good land.’ The people refuse to obey the Lord"
+      "text": "They picked some of the fruit that they found there and they brought it back to us. They told us, ‘The land that the Lord our God is giving to us is a very good land.’"
     },
     {
       "verse": "26",
@@ -110,7 +110,7 @@ module.exports = {
     },
     {
       "verse": "28",
-      "text": "We do not know what will happen to us now. Our brothers who explored the land have made us afraid. They say, “Those people in Canaan are taller and stronger than we are. Their cities are big and strong. They have walls around them that reach up to the sky. We even saw some men there who are descendants of Anak.” ’ The Israelites did not believe that God would fight for them. They did not trust God to do what he said he would do."
+      "text": "We do not know what will happen to us now. Our brothers who explored the land have made us afraid. They say, “Those people in Canaan are taller and stronger than we are. Their cities are big and strong. They have walls around them that reach up to the sky. We even saw some men there who are descendants of Anak.” ’"
     },
     {
       "verse": "29",
@@ -158,7 +158,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "But now you must all turn back towards the desert. Travel along the road to the Red Sea.’ See Numbers"
+      "text": "But now you must all turn back towards the desert. Travel along the road to the Red Sea.’"
     },
     {
       "verse": "41",
@@ -182,13 +182,13 @@ module.exports = {
     },
     {
       "verse": "46",
-      "text": "So you stayed in Kadesh for a long time, until it was time to leave. Print... Use screen font size Show All Comments Deuteronomy IntroductionDeuteronomy 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So you stayed in Kadesh for a long time, until it was time to leave."
     }
   ],
   "2": [
     {
       "verse": "1",
-      "text": "Then we turned back to travel towards the desert. We went along the road to the Red Sea, as the Lord had told me. For many days, we walked around the region of Mount Seir. Mount Seir was in Edom."
+      "text": "Then we turned back to travel towards the desert. We went along the road to the Red Sea, as the Lord had told me. For many days, we walked around the region of Mount Seir."
     },
     {
       "verse": "2",
@@ -212,7 +212,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "I, the Lord your God, have blessed you in everything that you have done. I have taken care of you as you travelled through this great desert. I have been with you for 40 years. You have received everything that you needed.” ’ Esau was the brother of Jacob. We can read about the birth of Jacob and Esau in Genesis The Israelites were the descendants of Jacob. So they should not fight against the descendants of Esau."
+      "text": "I, the Lord your God, have blessed you in everything that you have done. I have taken care of you as you travelled through this great desert. I have been with you for 40 years. You have received everything that you needed.” ’"
     },
     {
       "verse": "8",
@@ -220,7 +220,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Then the Lord said to me, ‘Do not make the people of Moab angry. Do not start a fight against them. I will not give any part of their land to you. I have given Ar to Lot's descendants to be their city.’ Lot was a nephew of Abraham. Lot's descendants were the Moabites and the Ammonites. We can read about Lot in Genesis"
+      "text": "Then the Lord said to me, ‘Do not make the people of Moab angry. Do not start a fight against them. I will not give any part of their land to you. I have given Ar to Lot's descendants to be their city.’"
     },
     {
       "verse": "10",
@@ -240,11 +240,11 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "38 years had passed since we left Kadesh-Barnea. By the time we crossed the Zered valley, all the men who had been old enough to fight had now died. The Lord had said that this would happen."
+      "text": "years had passed since we left Kadesh-Barnea. By the time we crossed the Zered valley, all the men who had been old enough to fight had now died. The Lord had said that this would happen."
     },
     {
       "verse": "15",
-      "text": "The Lord himself removed them so that they all died, one by one. See Deuteronomy"
+      "text": "The Lord himself removed them so that they all died, one by one."
     },
     {
       "verse": "16",
@@ -276,7 +276,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The same thing happened to the Avvites. They had lived in villages as far west as Gaza. But Philistines came from Crete island and they killed the Avvites. The Philistines lived there instead.) The Avvites were a group of people who lived near Canaan."
+      "text": "The same thing happened to the Avvites. They had lived in villages as far west as Gaza. But Philistines came from Crete island and they killed the Avvites. The Philistines lived there instead.)"
     },
     {
       "verse": "24",
@@ -284,7 +284,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "Today I will begin to make all the people in the world afraid of you. They will hear reports about you. That will cause them to be very frightened. They will shake with fear!’ Sihon, king of Heshbon"
+      "text": "Today I will begin to make all the people in the world afraid of you. They will hear reports about you. That will cause them to be very frightened. They will shake with fear!’"
     },
     {
       "verse": "26",
@@ -332,7 +332,7 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "But we did not go into the Ammonites' country. We did not go into the Jabbok valley. We did not go near the towns in the hill country. The Lord our God had commanded us not to attack those places. Print... Use screen font size Show All Comments Deuteronomy 1Deuteronomy 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But we did not go into the Ammonites' country. We did not go into the Jabbok valley. We did not go near the towns in the hill country. The Lord our God had commanded us not to attack those places."
     }
   ],
   "3": [
@@ -378,7 +378,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "Og, king of Bashan, was the only descendant of the Rephaites who had still been alive. He had an iron bed that is still in the Ammonites' town, Rabbah. It was 4 metres long and 2 metres wide. Moses gives land to three tribes"
+      "text": "Og, king of Bashan, was the only descendant of the Rephaites who had still been alive. He had an iron bed that is still in the Ammonites' town, Rabbah. It was 4 metres long and 2 metres wide."
     },
     {
       "verse": "12",
@@ -386,7 +386,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "I gave the other part of Gilead to one half of the tribe of Manasseh. I also gave Og's kingdom, Bashan, to them. People called all the region of Argob in Bashan the land of the Rephaites. The land that Moses gave to these tribes was not in Canaan. It was on the east side of the Jordan River. Half the tribe of Manasseh went to live in Canaan, and half the tribe lived on land east of the Jordan River."
+      "text": "I gave the other part of Gilead to one half of the tribe of Manasseh. I also gave Og's kingdom, Bashan, to them. People called all the region of Argob in Bashan the land of the Rephaites."
     },
     {
       "verse": "14",
@@ -402,7 +402,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "The valley of the Jordan River was also a border of their land. It went from Lake Galilee as far as the Salt Sea, with Mount Pisgah to the east. The Salt Sea is called the Dead Sea today."
+      "text": "The valley of the Jordan River was also a border of their land. It went from Lake Galilee as far as the Salt Sea, with Mount Pisgah to the east."
     },
     {
       "verse": "18",
@@ -414,7 +414,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Your men must fight to help the other Israelites until the Lord gives them a safe place to live. He has already given you a safe place to live. Now you must help the other Israelites to take the land which the Lord your God is giving to them. That land is on the other side of the Jordan River. When they take the land for themselves, you may return here to the land that I have given to you.’ Moses will not cross the Jordan River"
+      "text": "Your men must fight to help the other Israelites until the Lord gives them a safe place to live. He has already given you a safe place to live. Now you must help the other Israelites to take the land which the Lord your God is giving to them. That land is on the other side of the Jordan River. When they take the land for themselves, you may return here to the land that I have given to you.’"
     },
     {
       "verse": "21",
@@ -450,7 +450,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "After that, we stayed in the valley near Beth-Peor. Print... Use screen font size Show All Comments Deuteronomy 2Deuteronomy 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "After that, we stayed in the valley near Beth-Peor."
     }
   ],
   "4": [
@@ -468,7 +468,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "But each of you who continued to trust the Lord your God is still alive today. See Numbers"
+      "text": "But each of you who continued to trust the Lord your God is still alive today."
     },
     {
       "verse": "5",
@@ -508,7 +508,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "At that time, the Lord commanded me to teach you his rules and his laws. You must obey them in the land that you will now go in to live there. Idols"
+      "text": "At that time, the Lord commanded me to teach you his rules and his laws. You must obey them in the land that you will now go in to live there."
     },
     {
       "verse": "15",
@@ -576,7 +576,7 @@ module.exports = {
     },
     {
       "verse": "31",
-      "text": "That is because the Lord your God is very kind. So he will not leave you alone. He will never destroy you. He will never forget the covenant that he made with your ancestors. That was a serious promise that he made to them. The Lord is God"
+      "text": "That is because the Lord your God is very kind. So he will not leave you alone. He will never destroy you. He will never forget the covenant that he made with your ancestors. That was a serious promise that he made to them."
     },
     {
       "verse": "32",
@@ -612,7 +612,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Obey his commands and his rules that I am giving you today. If you do that, everything will be well for you and for your descendants. You will continue to live for a long time in the land that the Lord your God is giving to you. It will belong to you for ever. Safe cities"
+      "text": "Obey his commands and his rules that I am giving you today. If you do that, everything will be well for you and for your descendants. You will continue to live for a long time in the land that the Lord your God is giving to you. It will belong to you for ever."
     },
     {
       "verse": "41",
@@ -624,7 +624,7 @@ module.exports = {
     },
     {
       "verse": "43",
-      "text": "Moses chose these cities: For Reuben's tribe, he chose Bezer, in the high land of the desert. For Gad's tribe, he chose Ramoth, in Gilead. For Manasseh's tribe, he chose Golan, in Bashan. Moses starts to teach God's Law to the Israelites"
+      "text": "Moses chose these cities: For Reuben's tribe, he chose Bezer, in the high land of the desert. For Gad's tribe, he chose Ramoth, in Gilead. For Manasseh's tribe, he chose Golan, in Bashan."
     },
     {
       "verse": "44",
@@ -648,17 +648,17 @@ module.exports = {
     },
     {
       "verse": "49",
-      "text": "This land included all the Jordan Valley on the east side of the river, as far south as the Salt Sea, near Mount Pisgah. The Salt Sea is called the Dead Sea today. Print... Use screen font size Show All Comments Deuteronomy 3Deuteronomy 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "This land included all the Jordan Valley on the east side of the river, as far south as the Salt Sea, near Mount Pisgah."
     }
   ],
   "5": [
     {
       "verse": "1",
-      "text": "Moses called all the Israelites to come together. He said to them: Listen, Israelites, to the rules and commands that I am teaching to you today. Learn them. Be careful to obey them."
+      "text": "Moses called all the Israelites to come together. He said to them:Listen, Israelites, to the rules and commands that I am teaching to you today. Learn them. Be careful to obey them."
     },
     {
       "verse": "2",
-      "text": "The Lord our God made a covenant with us at Sinai."
+      "text": "The Lord our God made a covenant with us at Sinai. God said this:"
     },
     {
       "verse": "3",
@@ -670,7 +670,7 @@ module.exports = {
     },
     {
       "verse": "5",
-      "text": "(At that time, I stood between the Lord and you. I repeated the Lord's message to you. You were afraid of the fire, so you did not go up the mountain.) God said this:"
+      "text": "(At that time, I stood between the Lord and you. I repeated the Lord's message to you. You were afraid of the fire, so you did not go up the mountain.)God said this:"
     },
     {
       "verse": "6",
@@ -782,7 +782,7 @@ module.exports = {
     },
     {
       "verse": "33",
-      "text": "Live in the way that he has commanded you. If you do that, you will be happy in the land where you are going. You will live for a long time in the land that will be your home. Print... Use screen font size Show All Comments Deuteronomy 4Deuteronomy 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Live in the way that he has commanded you. If you do that, you will be happy in the land where you are going. You will live for a long time in the land that will be your home."
     }
   ],
   "6": [
@@ -884,7 +884,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "We must be careful to obey all the commands of the Lord our God. If we do what he has told us, he will be pleased with us as people who do what is right.’ Print... Use screen font size Show All Comments Deuteronomy 5Deuteronomy 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "We must be careful to obey all the commands of the Lord our God. If we do what he has told us, he will be pleased with us as people who do what is right.’"
     }
   ],
   "7": [
@@ -910,7 +910,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "Remember that you are a special people who belong to the Lord your God. He has chosen you for himself out of all the other people who live on the earth. He loves you as his special people. The altars, pillars and poles were all places where the other nations worshipped their false gods."
+      "text": "Remember that you are a special people who belong to the Lord your God. He has chosen you for himself out of all the other people who live on the earth. He loves you as his special people."
     },
     {
       "verse": "7",
@@ -930,7 +930,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "So be careful to obey all the commands, rules and laws that I am teaching you today. The Lord's blessings"
+      "text": "So be careful to obey all the commands, rules and laws that I am teaching you today."
     },
     {
       "verse": "12",
@@ -974,7 +974,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "He will chase out the people of those nations, one at a time. He will not let you destroy them all immediately. If you did that, wild animals would become so many that they would be a danger to you. fear’ or ‘insects that bite’."
+      "text": "He will chase out the people of those nations, one at a time. He will not let you destroy them all immediately. If you did that, wild animals would become so many that they would be a danger to you."
     },
     {
       "verse": "23",
@@ -990,7 +990,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "Do not bring anything that God hates into your house. If you do that, God will be ready to destroy you as well as the thing itself. God has said that he hates things like that, so you must hate them too. Print... Use screen font size Show All Comments Deuteronomy 6Deuteronomy 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not bring anything that God hates into your house. If you do that, God will be ready to destroy you as well as the thing itself. God has said that he hates things like that, so you must hate them too."
     }
   ],
   "8": [
@@ -1004,11 +1004,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "He caused you to become hungry and then he fed you with manna. Neither you nor your ancestors had ever seen this food before. In this way, he taught you that food alone cannot cause people to live. They need to hear every word that the Lord speaks. That is what gives them true life. In Exodus we can read how God sent manna for the Israelites to eat in the desert."
+      "text": "He caused you to become hungry and then he fed you with manna. Neither you nor your ancestors had ever seen this food before. In this way, he taught you that food alone cannot cause people to live. They need to hear every word that the Lord speaks. That is what gives them true life."
     },
     {
       "verse": "4",
-      "text": "During those 40 years in the desert, your clothes did not spoil. Your feet did not become big with pain."
+      "text": "years in the desert, your clothes did not spoil. Your feet did not become big with pain."
     },
     {
       "verse": "5",
@@ -1023,12 +1023,8 @@ module.exports = {
       "text": "Remember that the Lord your God is bringing you into a good land. It is a land that has many streams, pools and springs of water. There is water that runs in the valleys and in the hills."
     },
     {
-      "verse": "8-9",
-      "text": "It is a land where you will have plenty of food to eat. There is wheat, barley, grapes, figs, pomegranates, olives and honey. You will have everything that you need. The rocks have iron in them. You can dig copper out of the hills."
-    },
-    {
       "verse": "10",
-      "text": "You can eat all the food that you want. Then remember to thank the Lord your God for the good land that he has given to you. Remember that God has blessed you"
+      "text": "You can eat all the food that you want. Then remember to thank the Lord your God for the good land that he has given to you."
     },
     {
       "verse": "11",
@@ -1068,13 +1064,17 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "The Lord will do the same thing to you as he does to your enemies. Like those nations, he will completely destroy you if you do not obey him. Print... Use screen font size Show All Comments Deuteronomy 7Deuteronomy 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord will do the same thing to you as he does to your enemies. Like those nations, he will completely destroy you if you do not obey him."
+    },
+    {
+      "verse": "8-9",
+      "text": "It is a land where you will have plenty of food to eat. There is wheat, barley, grapes, figs, pomegranates, olives and honey. You will have everything that you need. The rocks have iron in them. You can dig copper out of the hills."
     }
   ],
   "9": [
     {
       "verse": "1",
-      "text": "Moses said: Listen, Israelites! You will soon go across the Jordan River. You will chase away the people who live there in large cities with very high walls around them. Those nations of people are greater and stronger than you are."
+      "text": "Moses said:Listen, Israelites! You will soon go across the Jordan River. You will chase away the people who live there in large cities with very high walls around them. Those nations of people are greater and stronger than you are."
     },
     {
       "verse": "2",
@@ -1086,7 +1086,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "The Lord your God will chase them away. After he has done that, be careful! Do not say to yourselves, ‘The Lord has brought us into this land because we do right things.’ No! It is because these nations are doing wicked things. That is why the Lord is chasing them out of the land so that you can live there."
+      "text": "The Lord your God will chase them away. After he has done that, be careful! Do not say to yourselves, ‘The Lord has brought us into this land because we do right things.’No! It is because these nations are doing wicked things. That is why the Lord is chasing them out of the land so that you can live there."
     },
     {
       "verse": "5",
@@ -1094,7 +1094,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You must understand this. The Lord your God is not giving you this good land to live in because you are doing right things. No! You are proud people who do not want to obey me. The gold calf"
+      "text": "You must understand this. The Lord your God is not giving you this good land to live in because you are doing right things. No! You are proud people who do not want to obey me."
     },
     {
       "verse": "7",
@@ -1114,7 +1114,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "After those 40 days and nights, the Lord gave me the two flat stones. They had his covenant on them."
+      "text": "days and nights, the Lord gave me the two flat stones. They had his covenant on them."
     },
     {
       "verse": "12",
@@ -1170,7 +1170,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "So I lay down on the ground for those 40 days and nights. I prayed to the Lord because he had said that he would destroy you."
+      "text": "days and nights. I prayed to the Lord because he had said that he would destroy you."
     },
     {
       "verse": "26",
@@ -1186,7 +1186,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Please remember that they belong to you as your own special people. You used your strength and your power to rescue them.’ Print... Use screen font size Show All Comments Deuteronomy 8Deuteronomy 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Please remember that they belong to you as your own special people. You used your strength and your power to rescue them.’"
     }
   ],
   "10": [
@@ -1228,11 +1228,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "I stayed on the mountain for 40 days and nights, as I did the first time. The Lord listened to my prayer. He decided that he would not destroy you."
+      "text": "days and nights, as I did the first time. The Lord listened to my prayer. He decided that he would not destroy you."
     },
     {
       "verse": "11",
-      "text": "Then the Lord said to me, ‘Go now! Lead the people on their journey. Then they can go into the land and take it for themselves. It is the land that I promised to their ancestors that I would give to them.’ Love the Lord and serve him"
+      "text": "Then the Lord said to me, ‘Go now! Lead the people on their journey. Then they can go into the land and take it for themselves. It is the land that I promised to their ancestors that I would give to them.’"
     },
     {
       "verse": "12",
@@ -1276,7 +1276,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "When your ancestors went to Egypt, they were only 70 people. Now the Lord your God has caused you to become very many people. You are as many as the stars in the sky! When there was a famine, God told Jacob and his family to go to Egypt to live. God promised to bring them out again. See Genesis Print... Use screen font size Show All Comments Deuteronomy 9Deuteronomy 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When your ancestors went to Egypt, they were only 70 people. Now the Lord your God has caused you to become very many people. You are as many as the stars in the sky!"
     }
   ],
   "11": [
@@ -1306,7 +1306,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Remember that I am speaking to you, the people who have seen the Lord's powerful acts. God's blessings in Canaan"
+      "text": "Remember that I am speaking to you, the people who have seen the Lord's powerful acts."
     },
     {
       "verse": "8",
@@ -1338,7 +1338,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "I will make grass grow in your fields for your animals to eat. You will have as much food as you want to eat.’ Most plants in Canaan needed two seasons of rain to grow. It rained in the autumn and it rained in the spring."
+      "text": "I will make grass grow in your fields for your animals to eat. You will have as much food as you want to eat.’"
     },
     {
       "verse": "16",
@@ -1406,7 +1406,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "When you are there, be careful to obey his laws and his teaching that I am giving to you today. Print... Use screen font size Show All Comments Deuteronomy 10Deuteronomy 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "When you are there, be careful to obey his laws and his teaching that I am giving to you today."
     }
   ],
   "12": [
@@ -1484,7 +1484,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "As long as you live in the land, be careful to take care of the Levites. The Levites were the special servants of God. They did not have their own land. So the Israelites must give them some of the food that they offered to God. The Israelites must always remember to do this."
+      "text": "As long as you live in the land, be careful to take care of the Levites."
     },
     {
       "verse": "20",
@@ -1536,7 +1536,7 @@ module.exports = {
     },
     {
       "verse": "32",
-      "text": "Be careful to do everything that I am telling you. Do not add anything to these commands. Do not remove anything from them. Print... Use screen font size Show All Comments Deuteronomy 11Deuteronomy 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Be careful to do everything that I am telling you. Do not add anything to these commands. Do not remove anything from them."
     }
   ],
   "13": [
@@ -1610,13 +1610,13 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "The Lord your God will bless you if you listen to what he says. You must obey all his commands that I am giving you today. You must do the things that he says are right. Print... Use screen font size Show All Comments Deuteronomy 12Deuteronomy 14 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord your God will bless you if you listen to what he says. You must obey all his commands that I am giving you today. You must do the things that he says are right."
     }
   ],
   "14": [
     {
       "verse": "1",
-      "text": "You are people who belong to the Lord your God. When someone dies, you are sad. But do not cut your bodies. Do not cut off all the hair from the front of your head. People from other nations would cut their bodies or their hair when their friends died."
+      "text": "You are people who belong to the Lord your God. When someone dies, you are sad. But do not cut your bodies. Do not cut off all the hair from the front of your head."
     },
     {
       "verse": "2",
@@ -1636,7 +1636,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "You may eat any animal with feet that have two separate parts. They must also bring their food back into their mouths and eat it again. All the animals in verses 4 and 5 have feet that grow in two parts. They also bring their food back into their mouths and eat it again. God said that these were ‘clean’ animals. That means that the Israelites could eat them."
+      "text": "You may eat any animal with feet that have two separate parts. They must also bring their food back into their mouths and eat it again."
     },
     {
       "verse": "7",
@@ -1652,15 +1652,11 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But other things that live in the water do not have fins or scales. Those are not clean food for you. Do not eat them. Most fish have fins and scales on their bodies. They use their fins when they are swimming. The scales are hard pieces of skin that cover the fish's body."
+      "text": "But other things that live in the water do not have fins or scales. Those are not clean food for you. Do not eat them."
     },
     {
       "verse": "11",
       "text": "You may eat any clean bird."
-    },
-    {
-      "verse": "12-18",
-      "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats. These birds eat dirty pieces of dead animals as their food. We do not have the exact names in English for all these birds."
     },
     {
       "verse": "19",
@@ -1672,7 +1668,7 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "You must not eat anything that you find dead already. You may give it to a foreign person who lives in any of your towns. He may eat it. You may give it to him or sell it to him. But you yourselves are special people who belong to the Lord your God. You must not cook a young goat in the milk from its mother. Regular gifts to the Lord"
+      "text": "You must not eat anything that you find dead already. You may give it to a foreign person who lives in any of your towns. He may eat it. You may give it to him or sell it to him. But you yourselves are special people who belong to the Lord your God.You must not cook a young goat in the milk from its mother. You must not cook a young goat in the milk from its mother."
     },
     {
       "verse": "22",
@@ -1704,7 +1700,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Keep this food for the Levites, who have no land of their own. It is also for the foreign people, the widows, and the children who have no family. These people in your town can eat as much as they want. If you do that, the Lord your God will bless you in all your work. Print... Use screen font size Show All Comments Deuteronomy 13Deuteronomy 15 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Keep this food for the Levites, who have no land of their own. It is also for the foreign people, the widows, and the children who have no family. These people in your town can eat as much as they want. If you do that, the Lord your God will bless you in all your work."
+    },
+    {
+      "verse": "12-18",
+      "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats."
     }
   ],
   "15": [
@@ -1714,7 +1714,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This is how you must do it: Every person who has lent money to someone must remove that debt. He must not demand to get his money back from any other Israelite. It is the Lord's time to remove debts."
+      "text": "This is how you must do it:Every person who has lent money to someone must remove that debt. He must not demand to get his money back from any other Israelite. It is the Lord's time to remove debts."
     },
     {
       "verse": "3",
@@ -1738,7 +1738,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Instead, be generous. Lend him the money that he needs. Generous’ means that you do not want to keep things for yourself if someone else needs them more. See verses 10 and 14."
+      "text": "Instead, be generous. Lend him the money that he needs."
     },
     {
       "verse": "9",
@@ -1750,7 +1750,7 @@ module.exports = {
     },
     {
       "verse": "11",
-      "text": "There will always be some poor people among you in the land where you are going. So I command you to be generous to other Israelites who are poor. Help them with the things that they need. Slaves"
+      "text": "There will always be some poor people among you in the land where you are going. So I command you to be generous to other Israelites who are poor. Help them with the things that they need."
     },
     {
       "verse": "12",
@@ -1778,7 +1778,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "Do not think that it will be difficult for you if he goes free. Remember that he has served you well for six years. He has been worth twice as much as a servant that you pay to do your work. The Lord your God will bless you in everything that you do. The first animals that are born"
+      "text": "Do not think that it will be difficult for you if he goes free. Remember that he has served you well for six years. He has been worth twice as much as a servant that you pay to do your work. The Lord your God will bless you in everything that you do."
     },
     {
       "verse": "19",
@@ -1798,7 +1798,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "But you must not eat the animal's blood. You must pour it on the ground like water. Print... Use screen font size Show All Comments Deuteronomy 14Deuteronomy 16 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But you must not eat the animal's blood. You must pour it on the ground like water."
     }
   ],
   "16": [
@@ -1816,7 +1816,7 @@ module.exports = {
     },
     {
       "verse": "4",
-      "text": "During those seven days, no one may keep any yeast in their house. There must not be any yeast in the whole land. On the first day, you will kill your animal to eat in the evening. You must eat all the meat that same night, so that there is no meat left in the morning. Abib was a month in the Hebrew calendar that came in March and April. See Leviticus"
+      "text": "During those seven days, no one may keep any yeast in their house. There must not be any yeast in the whole land. On the first day, you will kill your animal to eat in the evening. You must eat all the meat that same night, so that there is no meat left in the morning."
     },
     {
       "verse": "5",
@@ -1832,7 +1832,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "For the next six days, you must eat bread that you make without yeast. On the seventh day, you must all come together to worship the Lord your God. You must not do any work on that day. The Festival of Weeks This was a festival to thank God for the harvest. See Leviticus"
+      "text": "For the next six days, you must eat bread that you make without yeast. On the seventh day, you must all come together to worship the Lord your God. You must not do any work on that day."
     },
     {
       "verse": "9",
@@ -1848,7 +1848,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Remember that you were once slaves in Egypt. So be careful to obey these commands. The Festival of Huts See Leviticus"
+      "text": "Remember that you were once slaves in Egypt. So be careful to obey these commands."
     },
     {
       "verse": "13",
@@ -1868,7 +1868,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "Give to the Lord as much as you are able to. Your gifts may be large or small, as much as the Lord has blessed you. Judges"
+      "text": "Give to the Lord as much as you are able to. Your gifts may be large or small, as much as the Lord has blessed you."
     },
     {
       "verse": "18",
@@ -1880,7 +1880,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Make sure that there is justice for everyone in the land that the Lord your God is giving to you. Then the land will belong to you and you will enjoy life in it. Do not worship other gods"
+      "text": "Make sure that there is justice for everyone in the land that the Lord your God is giving to you. Then the land will belong to you and you will enjoy life in it."
     },
     {
       "verse": "21",
@@ -1888,13 +1888,13 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Do not put up any stone pillar as an idol. The Lord your God hates everything like that. People who prayed to false gods used poles and pillars as their idols. They put them up in the places where they prayed. Print... Use screen font size Show All Comments Deuteronomy 15Deuteronomy 17 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not put up any stone pillar as an idol. The Lord your God hates everything like that."
     }
   ],
   "17": [
     {
       "verse": "1",
-      "text": "When you offer an animal as a sacrifice to the Lord your God, it must be perfect. Do not bring any sheep or bull that has something wrong with it. The Lord hates any gift like that. Justice"
+      "text": "When you offer an animal as a sacrifice to the Lord your God, it must be perfect. Do not bring any sheep or bull that has something wrong with it. The Lord hates any gift like that."
     },
     {
       "verse": "2",
@@ -1942,7 +1942,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Then all the people will hear what has happened. They will be afraid. They will no longer be too proud to obey the judge. Rules for a king"
+      "text": "Then all the people will hear what has happened. They will be afraid. They will no longer be too proud to obey the judge."
     },
     {
       "verse": "14",
@@ -1970,7 +1970,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "If he does that, he will not become proud. He will not think that he is better than other Israelites. He will continue to obey the Lord's commands. Then he and his descendants will rule Israel as kings for many years. Print... Use screen font size Show All Comments Deuteronomy 16Deuteronomy 18 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If he does that, he will not become proud. He will not think that he is better than other Israelites. He will continue to obey the Lord's commands. Then he and his descendants will rule Israel as kings for many years."
     }
   ],
   "18": [
@@ -2004,7 +2004,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "A Levite may have sold some of his family's valuable things. He may keep that money and he may receive the same amount of food as the other Levites. Evil acts"
+      "text": "A Levite may have sold some of his family's valuable things. He may keep that money and he may receive the same amount of food as the other Levites."
     },
     {
       "verse": "9",
@@ -2028,7 +2028,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "The people of the nations that you will chase away get help from magicians and diviners. But the Lord your God has commanded you not to do those things. Moses speaks about a future prophet"
+      "text": "The people of the nations that you will chase away get help from magicians and diviners. But the Lord your God has commanded you not to do those things."
     },
     {
       "verse": "15",
@@ -2060,17 +2060,13 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "A prophet may say that he speaks with my authority, and he may say what will happen. But if it does not happen, you will know that his message has not come from me. He has not spoken my message. That prophet has spoken his own ideas. So do not be afraid of him! Print... Use screen font size Show All Comments Deuteronomy 17Deuteronomy 19 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "A prophet may say that he speaks with my authority, and he may say what will happen. But if it does not happen, you will know that his message has not come from me. He has not spoken my message. That prophet has spoken his own ideas. So do not be afraid of him!"
     }
   ],
   "19": [
     {
       "verse": "1",
       "text": "The Lord your God will destroy the nations who now live in the land that he is giving to you. You will chase them out and you will live in their cities and in their houses."
-    },
-    {
-      "verse": "2-3",
-      "text": "Make the land into three separate regions. Then choose three special cities, one city in each region. Build good roads to each city so that people can easily travel to them. Then anyone who kills a person can run to one of these cities to be safe. See Joshua"
     },
     {
       "verse": "4",
@@ -2086,7 +2082,7 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "So I command you to choose three cities to be safe cities for yourselves. The dead person's relative’ is the man from the dead person's family who has to get justice. Moses had already chosen three cities on the east side of the Jordan River. So there would be six safe cities."
+      "text": "So I command you to choose three cities to be safe cities for yourselves."
     },
     {
       "verse": "8",
@@ -2110,7 +2106,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Do not be sorry for him. You must punish murderers with death. Then Israel will not be guilty of evil acts. If you do that, everything will be well for you. More rules"
+      "text": "Do not be sorry for him. You must punish murderers with death. Then Israel will not be guilty of evil acts. If you do that, everything will be well for you."
     },
     {
       "verse": "14",
@@ -2142,7 +2138,11 @@ module.exports = {
     },
     {
       "verse": "21",
-      "text": "Do not be sorry for people who are guilty. Punish people as they deserve: a life for a life, an eye for an eye, a tooth for a tooth, a hand for a hand, a foot for a foot. See Exodus Leviticus Print... Use screen font size Show All Comments Deuteronomy 18Deuteronomy 20 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Do not be sorry for people who are guilty. Punish people as they deserve: a life for a life, an eye for an eye, a tooth for a tooth, a hand for a hand, a foot for a foot."
+    },
+    {
+      "verse": "2-3",
+      "text": "Make the land into three separate regions. Then choose three special cities, one city in each region. Build good roads to each city so that people can easily travel to them. Then anyone who kills a person can run to one of these cities to be safe."
     }
   ],
   "20": [
@@ -2216,7 +2216,7 @@ module.exports = {
     },
     {
       "verse": "18",
-      "text": "If not, they would teach you all the evil things that they do to worship their gods. They would cause you to do bad things against the Lord your God. God had promised to give the whole of Canaan to the Israelites. They must kill the people of other nations who were living there. Israelites must not mix with them by marriage and they must not pray to their gods."
+      "text": "If not, they would teach you all the evil things that they do to worship their gods. They would cause you to do bad things against the Lord your God."
     },
     {
       "verse": "19",
@@ -2224,7 +2224,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "But you can cut down the other trees that do not provide any food. You can use the wood to make things that will help you to attack the city. You can do this until you go into the city and you take it for yourselves. Print... Use screen font size Show All Comments Deuteronomy 19Deuteronomy 21 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But you can cut down the other trees that do not provide any food. You can use the wood to make things that will help you to attack the city. You can do this until you go into the city and you take it for yourselves."
     }
   ],
   "21": [
@@ -2250,7 +2250,7 @@ module.exports = {
     },
     {
       "verse": "6",
-      "text": "After the leaders of the town have broken the cow's neck, they must wash their hands over it. When an Israelite washed his hands in clean water, he was showing something to everyone. He had not done the bad thing and he had not agreed to it."
+      "text": "After the leaders of the town have broken the cow's neck, they must wash their hands over it."
     },
     {
       "verse": "7",
@@ -2258,11 +2258,11 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Please Lord, accept this animal from your people, Israel, that you have rescued. Do not say that we are guilty of this murder. This person did not deserve to die like this.’ When they do that, the Lord will accept their gift and he will forgive you."
+      "text": "Please Lord, accept this animal from your people, Israel, that you have rescued. Do not say that we are guilty of this murder. This person did not deserve to die like this.’When they do that, the Lord will accept their gift and he will forgive you."
     },
     {
       "verse": "9",
-      "text": "In this way, you will not be guilty of the murder. You will remove this evil act from among you. You must do what the Lord says is right. Marriage"
+      "text": "In this way, you will not be guilty of the murder. You will remove this evil act from among you. You must do what the Lord says is right."
     },
     {
       "verse": "10",
@@ -2282,7 +2282,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "Later, you may not be pleased with her. If so, you must let her go wherever she wants. You must never sell her or make her become a slave. You must not do that, because you have made her have sex with you, as your wife. Fingernails’ are the hard pieces at the end of a person's fingers. Firstborn sons"
+      "text": "Later, you may not be pleased with her. If so, you must let her go wherever she wants. You must never sell her or make her become a slave. You must not do that, because you have made her have sex with you, as your wife."
     },
     {
       "verse": "15",
@@ -2294,7 +2294,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He must recognize that his firstborn son is the son of the wife that he does not love. This son was the first son born to that man. So he must receive the double share of his father's things. That is what God's Law says must happen. Double share’ means that the firstborn son would receive twice as much as other sons when his father died. A son who turns against his parents"
+      "text": "He must recognize that his firstborn son is the son of the wife that he does not love. This son was the first son born to that man. So he must receive the double share of his father's things. That is what God's Law says must happen."
     },
     {
       "verse": "18",
@@ -2318,7 +2318,7 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "you must not leave it there during the night. Be careful to bury it on the same day that he died. If someone's body is hanging on a tree, it shows that God has cursed him. So do not leave it there. The Lord your God is giving the land to you so that it belongs to you. So do not let evil things spoil your land. Print... Use screen font size Show All Comments Deuteronomy 20Deuteronomy 22 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "you must not leave it there during the night. Be careful to bury it on the same day that he died. If someone's body is hanging on a tree, it shows that God has cursed him. So do not leave it there. The Lord your God is giving the land to you so that it belongs to you. So do not let evil things spoil your land."
     }
   ],
   "22": [
@@ -2368,7 +2368,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "You must fix tassels on the four corners of your coat. Rules for marriage"
+      "text": "You must fix tassels on the four corners of your coat."
     },
     {
       "verse": "13",
@@ -2396,7 +2396,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "They must make the man pay 100 pieces of silver to the young woman's father. The man has told lies. He has accused a pure Israelite girl to say that she is bad. After that, she will continue to be his wife. He may never send her away as long as he lives."
+      "text": "pieces of silver to the young woman's father. The man has told lies. He has accused a pure Israelite girl to say that she is bad. After that, she will continue to be his wife. He may never send her away as long as he lives."
     },
     {
       "verse": "20",
@@ -2440,7 +2440,7 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "A man must not marry a woman who was his father's wife. That would bring shame on his father. Print... Use screen font size Show All Comments Deuteronomy 21Deuteronomy 23 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "A man must not marry a woman who was his father's wife. That would bring shame on his father."
     }
   ],
   "23": [
@@ -2474,7 +2474,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "The third generation of their descendants can join with the Lord's people when they meet together to worship him. Keep the camp clean"
+      "text": "The third generation of their descendants can join with the Lord's people when they meet together to worship him."
     },
     {
       "verse": "9",
@@ -2542,7 +2542,7 @@ module.exports = {
     },
     {
       "verse": "25",
-      "text": "If you go into your neighbour's field of grain, you may eat some of it. You may pick some grain with your hands, but do not use a knife to cut it down. See Matthew Mark Luke Print... Use screen font size Show All Comments Deuteronomy 22Deuteronomy 24 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you go into your neighbour's field of grain, you may eat some of it. You may pick some grain with your hands, but do not use a knife to cut it down."
     }
   ],
   "24": [
@@ -2580,7 +2580,7 @@ module.exports = {
     },
     {
       "verse": "9",
-      "text": "Remember what the Lord your God did to Miriam after you left Egypt. See Numbers Leprosy was a bad disease of the skin. Other people could get the disease very easily."
+      "text": "Remember what the Lord your God did to Miriam after you left Egypt."
     },
     {
       "verse": "10",
@@ -2596,7 +2596,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "You must always give his coat back to him before sunset. Then he can sleep in it to keep himself warm. He will ask God to bless you because you have been kind. The Lord your God will know that you have done the right thing. The guarantee is to make sure that the person pays back what he should pay."
+      "text": "You must always give his coat back to him before sunset. Then he can sleep in it to keep himself warm. He will ask God to bless you because you have been kind. The Lord your God will know that you have done the right thing."
     },
     {
       "verse": "14",
@@ -2632,7 +2632,7 @@ module.exports = {
     },
     {
       "verse": "22",
-      "text": "Remember that you were slaves in Egypt. That is why I am commanding you to do all these things. Print... Use screen font size Show All Comments Deuteronomy 23Deuteronomy 25 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Remember that you were slaves in Egypt. That is why I am commanding you to do all these things."
     }
   ],
   "25": [
@@ -2646,11 +2646,11 @@ module.exports = {
     },
     {
       "verse": "3",
-      "text": "But they must not hit him more than 40 times as his punishment. If it is more than that, nobody would respect him any more."
+      "text": "times as his punishment. If it is more than that, nobody would respect him any more."
     },
     {
       "verse": "4",
-      "text": "Do not tie shut the mouth of your ox while it walks on your grain to prepare it for you. Paul uses this verse when he writes about Christian workers. See 1 Corinthians"
+      "text": "Do not tie shut the mouth of your ox while it walks on your grain to prepare it for you."
     },
     {
       "verse": "5",
@@ -2698,7 +2698,7 @@ module.exports = {
     },
     {
       "verse": "16",
-      "text": "The Lord your God hates anyone who cheats other people and is not honest. The Amalekites"
+      "text": "The Lord your God hates anyone who cheats other people and is not honest."
     },
     {
       "verse": "17",
@@ -2710,7 +2710,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "But the Lord your God will chase away all your enemies. He will give you a safe place to rest in the land that he is giving to you as your new home. When he does that, do not forget to destroy all the Amalekites. Make sure that nobody in the whole world will remember them any more. The Amalekites attacked the Israelites at Rephidim. See Exodus Print... Use screen font size Show All Comments Deuteronomy 24Deuteronomy 26 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "But the Lord your God will chase away all your enemies. He will give you a safe place to rest in the land that he is giving to you as your new home. When he does that, do not forget to destroy all the Amalekites. Make sure that nobody in the whole world will remember them any more."
     }
   ],
   "26": [
@@ -2752,7 +2752,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "So now I am bringing the first food that has grown in my fields. You, Lord, have given it to me.’ Then you must put the basket down in front of the Lord's altar. Worship him there."
+      "text": "So now I am bringing the first food that has grown in my fields. You, Lord, have given it to me.’Then you must put the basket down in front of the Lord's altar. Worship him there."
     },
     {
       "verse": "11",
@@ -2760,7 +2760,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "Every third year you must keep safe a tenth part of all your crops. In the third year, you must give that tithe to the Levites, the foreigners who live among you, widows and the children who have no family. Then everyone who lives in your towns can eat all the food that they need. See Deuteronomy"
+      "text": "Every third year you must keep safe a tenth part of all your crops. In the third year, you must give that tithe to the Levites, the foreigners who live among you, widows and the children who have no family. Then everyone who lives in your towns can eat all the food that they need."
     },
     {
       "verse": "13",
@@ -2772,7 +2772,7 @@ module.exports = {
     },
     {
       "verse": "15",
-      "text": "Please look down from your home in heaven and bless your people, Israel. Please bless the land that you have given to us. You promised our ancestors that you would do that. It is a land where there is plenty of food and drink, enough for everyone.’ Moses warns the people"
+      "text": "Please look down from your home in heaven and bless your people, Israel. Please bless the land that you have given to us. You promised our ancestors that you would do that. It is a land where there is plenty of food and drink, enough for everyone.’"
     },
     {
       "verse": "16",
@@ -2788,7 +2788,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "If you do that, he will make you greater than all the other nations that he has made. Other nations will see that you are great. They will praise you and give you honour. You will be a nation that belongs to the Lord your God as his own special people. He has promised to do this. Print... Use screen font size Show All Comments Deuteronomy 25Deuteronomy 27 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "If you do that, he will make you greater than all the other nations that he has made. Other nations will see that you are great. They will praise you and give you honour. You will be a nation that belongs to the Lord your God as his own special people. He has promised to do this."
     }
   ],
   "27": [
@@ -2822,7 +2822,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "Write all the words of this law on the stones that you will put there. Be sure to write them very clearly.’ The messages from Mount Ebal and Mount Gerizim"
+      "text": "Write all the words of this law on the stones that you will put there. Be sure to write them very clearly.’"
     },
     {
       "verse": "9",
@@ -2842,7 +2842,7 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "These tribes must stand on Mount Ebal: Reuben, Gad, Asher, Zebulun, Dan and Naphtali. They will speak aloud God's curses.’ Curses"
+      "text": "These tribes must stand on Mount Ebal: Reuben, Gad, Asher, Zebulun, Dan and Naphtali. They will speak aloud God's curses.’"
     },
     {
       "verse": "14",
@@ -2858,7 +2858,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "‘God will curse anyone who moves the stones at the edge of his neighbour's land.’ Then all the people will say, ‘Yes, we agree!’ They used stones to show where the edge of someone's land started. If you moved one of these stones, it showed that you were trying to take the person's land for yourself."
+      "text": "‘God will curse anyone who moves the stones at the edge of his neighbour's land.’ Then all the people will say, ‘Yes, we agree!’"
     },
     {
       "verse": "18",
@@ -2894,7 +2894,7 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "‘God will curse anyone who refuses to obey all the words of this law.’ Then all the people will say, ‘Yes, we agree!’ Print... Use screen font size Show All Comments Deuteronomy 26Deuteronomy 28 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "‘God will curse anyone who refuses to obey all the words of this law.’ Then all the people will say, ‘Yes, we agree!’"
     }
   ],
   "28": [
@@ -2952,7 +2952,7 @@ module.exports = {
     },
     {
       "verse": "14",
-      "text": "You must continue to obey all the commands that I am giving you today. Do not turn away from them to do anything else. Do not try to worship other gods. Curses"
+      "text": "You must continue to obey all the commands that I am giving you today. Do not turn away from them to do anything else. Do not try to worship other gods."
     },
     {
       "verse": "15",
@@ -2972,7 +2972,7 @@ module.exports = {
     },
     {
       "verse": "19",
-      "text": "God will curse you in your homes and when you go outside. Illness"
+      "text": "God will curse you in your homes and when you go outside."
     },
     {
       "verse": "20",
@@ -2992,7 +2992,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "There will be clouds of dust instead of rain. Dirt will come down from the sky until it has destroyed you. Enemies and other troubles"
+      "text": "There will be clouds of dust instead of rain. Dirt will come down from the sky until it has destroyed you."
     },
     {
       "verse": "25",
@@ -3012,7 +3012,7 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Even at midday, you will not see your way. You will be in the dark, like a blind person. You will not be able to go anywhere, whatever you do. Every day, people will be cruel to you. People will rob you. No one will be there to save you. A tumour is a lump that grows in your body. It makes you very ill."
+      "text": "Even at midday, you will not see your way. You will be in the dark, like a blind person. You will not be able to go anywhere, whatever you do. Every day, people will be cruel to you. People will rob you. No one will be there to save you."
     },
     {
       "verse": "30",
@@ -3124,7 +3124,7 @@ module.exports = {
     },
     {
       "verse": "57",
-      "text": "But now she will be so hungry that she will eat her new baby and the afterbirth. She will eat them secretly because there is nothing else for her to eat. She will not share anything with her family because your enemy will be too strong. The soldiers will stop any food from coming into your towns. The ‘afterbirth’ is the part that comes out of the mother when a baby is born. Moses warns the people again"
+      "text": "But now she will be so hungry that she will eat her new baby and the afterbirth. She will eat them secretly because there is nothing else for her to eat. She will not share anything with her family because your enemy will be too strong. The soldiers will stop any food from coming into your towns."
     },
     {
       "verse": "58",
@@ -3168,7 +3168,7 @@ module.exports = {
     },
     {
       "verse": "68",
-      "text": "The Lord told you that you must never travel on the road back to Egypt. But he will send you back to Egypt in ships. In Egypt, you will try to sell yourselves to your enemies, as slaves. But no one will agree to buy you. Print... Use screen font size Show All Comments Deuteronomy 27Deuteronomy 29 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "The Lord told you that you must never travel on the road back to Egypt. But he will send you back to Egypt in ships. In Egypt, you will try to sell yourselves to your enemies, as slaves. But no one will agree to buy you."
     }
   ],
   "29": [
@@ -3178,7 +3178,7 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "This is what Moses said to all the Israelites when they met together: You have seen everything that the Lord did in Egypt. You saw how he punished Egypt's king, his officers and his whole country."
+      "text": "This is what Moses said to all the Israelites when they met together:You have seen everything that the Lord did in Egypt. You saw how he punished Egypt's king, his officers and his whole country."
     },
     {
       "verse": "3",
@@ -3202,7 +3202,7 @@ module.exports = {
     },
     {
       "verse": "8",
-      "text": "We took their land and we gave it to the tribes of Reuben, Gad and half the tribe of Manasseh. That would be their new home. See Deuteronomy"
+      "text": "We took their land and we gave it to the tribes of Reuben, Gad and half the tribe of Manasseh. That would be their new home."
     },
     {
       "verse": "9",
@@ -3223,10 +3223,6 @@ module.exports = {
     {
       "verse": "13",
       "text": "By this covenant, the Lord says again today that you are his people and he is your God. He has already made that promise to you and to your ancestors, Abraham, Isaac and Jacob."
-    },
-    {
-      "verse": "14-15",
-      "text": "The Lord our God is making this strong covenant with you people who are standing here with him today. But it is not only with you. He also makes this covenant with those people who are not here today. those people who are not here today’ probably means their descendants who had not yet been born."
     },
     {
       "verse": "16",
@@ -3282,7 +3278,11 @@ module.exports = {
     },
     {
       "verse": "29",
-      "text": "Some secret things belong to the Lord our God. He does not let us understand everything. But he has shown us many things clearly. Those things belong to us and to our descendants for all time. They are the words of his Law that we need to obey. Print... Use screen font size Show All Comments Deuteronomy 28Deuteronomy 30 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Some secret things belong to the Lord our God. He does not let us understand everything. But he has shown us many things clearly. Those things belong to us and to our descendants for all time. They are the words of his Law that we need to obey."
+    },
+    {
+      "verse": "14-15",
+      "text": "The Lord our God is making this strong covenant with you people who are standing here with him today. But it is not only with you. He also makes this covenant with those people who are not here today."
     }
   ],
   "30": [
@@ -3324,7 +3324,7 @@ module.exports = {
     },
     {
       "verse": "10",
-      "text": "But you must obey his commands and his rules that are written in this book of his Law. You must turn back to him. You must serve him in everything that you think and in everything that you do. God offers life or death"
+      "text": "But you must obey his commands and his rules that are written in this book of his Law. You must turn back to him. You must serve him in everything that you think and in everything that you do."
     },
     {
       "verse": "11",
@@ -3364,7 +3364,7 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Yes, love the Lord your God. Obey him and serve him faithfully. He is the one who gives you life. He will let you live for a long time in the land that he is giving to you. That is the land that he promised to your ancestors, Abraham, Isaac and Jacob. Print... Use screen font size Show All Comments Deuteronomy 29Deuteronomy 31 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Yes, love the Lord your God. Obey him and serve him faithfully. He is the one who gives you life. He will let you live for a long time in the land that he is giving to you. That is the land that he promised to your ancestors, Abraham, Isaac and Jacob."
     }
   ],
   "31": [
@@ -3394,19 +3394,15 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Then Moses fetched Joshua. While all the Israelites listened, Moses said this to Joshua: ‘Be strong and very brave! You will go with these people into the land that the Lord promised to give to their ancestors. You will give them the land which will be their new home."
+      "text": "Then Moses fetched Joshua. While all the Israelites listened, Moses said this to Joshua:‘Be strong and very brave! You will go with these people into the land that the Lord promised to give to their ancestors. You will give them the land which will be their new home."
     },
     {
       "verse": "8",
-      "text": "The Lord himself goes in front of you. He will always be with you, to help you. He will never leave you. So do not be afraid. Be brave!’ Do not forget God's Law"
+      "text": "The Lord himself goes in front of you. He will always be with you, to help you. He will never leave you. So do not be afraid. Be brave!’"
     },
     {
       "verse": "9",
       "text": "Moses wrote down all the rules of God's Law. He gave them to the Levite priests who carry the Lord's Covenant Box. He also gave them to the leaders of the Israelites."
-    },
-    {
-      "verse": "10-11",
-      "text": "Then Moses said to them, ‘You must read this Law to all the Israelites. Read it every seven years at the Feast of Huts, in the year when you forgive people's debts. At that time all the Israelites will go to the place that the Lord your God will choose. When they meet there to worship the Lord, they must listen to this Law."
     },
     {
       "verse": "12",
@@ -3414,11 +3410,11 @@ module.exports = {
     },
     {
       "verse": "13",
-      "text": "Their children will hear this Law for the first time. They will learn to respect and obey the Lord your God. You must do this for as long as you live in the land. You will soon go across the Jordan River to live there.’ See Leviticus Deuteronomy Joshua becomes the new leader"
+      "text": "Their children will hear this Law for the first time. They will learn to respect and obey the Lord your God. You must do this for as long as you live in the land. You will soon go across the Jordan River to live there.’"
     },
     {
       "verse": "14",
-      "text": "The Lord said to Moses, ‘You will soon die. Fetch Joshua and come with him to the Tent of Meeting. When you meet with me there, I will give Joshua authority to be the leader of my people.’ So Moses and Joshua went to meet the Lord at his special tent."
+      "text": "The Lord said to Moses, ‘You will soon die. Fetch Joshua and come with him to the Tent of Meeting. When you meet with me there, I will give Joshua authority to be the leader of my people.’So Moses and Joshua went to meet the Lord at his special tent. So Moses and Joshua went to meet the Lord at his special tent."
     },
     {
       "verse": "15",
@@ -3482,7 +3478,11 @@ module.exports = {
     },
     {
       "verse": "30",
-      "text": "Then Moses spoke the words of this song, from the beginning to the end. All the Israelites met together and they listened to him. Print... Use screen font size Show All Comments Deuteronomy 30Deuteronomy 32 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Then Moses spoke the words of this song, from the beginning to the end. All the Israelites met together and they listened to him."
+    },
+    {
+      "verse": "10-11",
+      "text": "Then Moses said to them, ‘You must read this Law to all the Israelites. Read it every seven years at the Feast of Huts, in the year when you forgive people's debts. At that time all the Israelites will go to the place that the Lord your God will choose. When they meet there to worship the Lord, they must listen to this Law."
     }
   ],
   "32": [
@@ -3492,171 +3492,171 @@ module.exports = {
     },
     {
       "verse": "2",
-      "text": "My teaching will be like the rain that falls. My messages will help the people who hear them, as rain helps new grass to grow."
+      "text": "My teaching will be like the rain that falls.My messages will help the people who hear them,as rain helps new grass to grow. My messages will help the people who hear them, as rain helps new grass to grow."
     },
     {
       "verse": "3",
-      "text": "I will praise the Lord's name. Everyone must know that our God is very great!"
+      "text": "I will praise the Lord's name.Everyone must know that our God is very great! Everyone must know that our God is very great!"
     },
     {
       "verse": "4",
-      "text": "He is the strong Rock where we can be safe. Everything that he does is perfect. He only does what is right and fair. We can trust him to be faithful."
+      "text": "He is the strong Rock where we can be safe.Everything that he does is perfect.He only does what is right and fair.We can trust him to be faithful. Everything that he does is perfect. He only does what is right and fair. We can trust him to be faithful."
     },
     {
       "verse": "5",
-      "text": "But you, his people, have not served him faithfully. Because of your sins, you cannot continue to be his children. You have turned against him. You enjoy doing bad things."
+      "text": "But you, his people, have not served him faithfully.Because of your sins, you cannot continue to be his children.You have turned against him.You enjoy doing bad things. Because of your sins, you cannot continue to be his children. You have turned against him. You enjoy doing bad things."
     },
     {
       "verse": "6",
-      "text": "You are fools who do not understand what is right. You should not do these things against the Lord. He is your Father, the one who created you. He made you become a strong nation."
+      "text": "You are fools who do not understand what is right.You should not do these things against the Lord.He is your Father, the one who created you.He made you become a strong nation. You should not do these things against the Lord. He is your Father, the one who created you. He made you become a strong nation."
     },
     {
       "verse": "7",
-      "text": "Remember what happened a long time ago. Think about the lives of your ancestors. Ask your father or the old men. They will tell you what happened in the past."
+      "text": "Remember what happened a long time ago.Think about the lives of your ancestors.Ask your father or the old men.They will tell you what happened in the past. Think about the lives of your ancestors. Ask your father or the old men. They will tell you what happened in the past."
     },
     {
       "verse": "8",
-      "text": "The Most High God gave land to be the home of each nation. When he made people into separate groups, he decided where their borders should be. See Genesis He did that to match the number of angels in heaven. angels in heaven’ or ‘Israel's people’."
+      "text": "The Most High God gave land to be the home of each nation.When he made people into separate groups,he decided where their borders should be.He did that to match the number of angels in heaven. When he made people into separate groups, he decided where their borders should be. He did that to match the number of angels in heaven."
     },
     {
       "verse": "9",
-      "text": "But the Lord himself takes care of his own people. Jacob's descendants are his special people."
+      "text": "But the Lord himself takes care of his own people.Jacob's descendants are his special people. Jacob's descendants are his special people."
     },
     {
       "verse": "10",
-      "text": "The Lord found them in a desert place. It was a place where strong winds blew and nobody lived. He took care of them and he kept them safe. He protected them, like someone protects their own eyes."
+      "text": "The Lord found them in a desert place.It was a place where strong winds blew and nobody lived.He took care of them and he kept them safe.He protected them, like someone protects their own eyes. It was a place where strong winds blew and nobody lived. He took care of them and he kept them safe. He protected them, like someone protects their own eyes."
     },
     {
       "verse": "11",
-      "text": "The Lord took care of his people, like an eagle takes care of its babies. As an eagle flies with its babies on its back, the Lord helped his people to be safe."
+      "text": "The Lord took care of his people,like an eagle takes care of its babies.As an eagle flies with its babies on its back,the Lord helped his people to be safe. like an eagle takes care of its babies. As an eagle flies with its babies on its back, the Lord helped his people to be safe."
     },
     {
       "verse": "12",
-      "text": "The Lord alone was a guide for his people. He needed no foreign god to help him."
+      "text": "The Lord alone was a guide for his people.He needed no foreign god to help him. He needed no foreign god to help him."
     },
     {
       "verse": "13",
-      "text": "The Lord helped them to travel over the high places in the land. He fed them with food from the fields. He made them strong with honey from the rocks. He gave them olive oil from trees in ground with many stones."
+      "text": "The Lord helped them to travel over the high places in the land.He fed them with food from the fields.He made them strong with honey from the rocks.He gave them olive oil from trees in ground with many stones. He fed them with food from the fields. He made them strong with honey from the rocks. He gave them olive oil from trees in ground with many stones."
     },
     {
       "verse": "14",
-      "text": "Their cows and their goats gave them plenty of milk and butter. Their lambs, sheep and goats became fat, so they ate the best meat. They ate the best bread from their wheat. They drank the best wine from their grapes."
+      "text": "Their cows and their goats gave them plenty of milk and butter.Their lambs, sheep and goats became fat,so they ate the best meat.They ate the best bread from their wheat.They drank the best wine from their grapes. Their lambs, sheep and goats became fat, so they ate the best meat. They ate the best bread from their wheat. They drank the best wine from their grapes."
     },
     {
       "verse": "15",
-      "text": "The Israelites became rich and fat. The Israelites are here called by a special name, ‘Jeshurun’. They turned against God. They were full of good food, but they turned away from God. He was the one who made them. He was the strong Rock who kept them safe. But they no longer respected him."
+      "text": "The Israelites became rich and fat.They turned against God.They were full of good food, but they turned away from God.He was the one who made them.He was the strong Rock who kept them safe.But they no longer respected him. They turned against God. They were full of good food, but they turned away from God. He was the one who made them. He was the strong Rock who kept them safe. But they no longer respected him."
     },
     {
       "verse": "16",
-      "text": "They worshipped foreign gods. So the Lord became angry and jealous. They made idols which he hated."
+      "text": "They worshipped foreign gods.So the Lord became angry and jealous.They made idols which he hated. So the Lord became angry and jealous. They made idols which he hated."
     },
     {
       "verse": "17",
-      "text": "They offered sacrifices to demons, instead of to God. They worshipped new gods which they had not known before. Your ancestors had never respected those gods."
+      "text": "They offered sacrifices to demons, instead of to God.They worshipped new gods which they had not known before.Your ancestors had never respected those gods. They worshipped new gods which they had not known before. Your ancestors had never respected those gods."
     },
     {
       "verse": "18",
-      "text": "You forgot about your strong Rock, the God who gave you life."
+      "text": "You forgot about your strong Rock,the God who gave you life. the God who gave you life."
     },
     {
       "verse": "19",
-      "text": "When the Lord saw this, he turned away from them. His sons and daughters had made him angry."
+      "text": "When the Lord saw this, he turned away from them.His sons and daughters had made him angry. His sons and daughters had made him angry."
     },
     {
       "verse": "20",
-      "text": "He said, ‘I will not continue to help them. I will see what happens to them when I leave them alone. They are children who do not obey me. They have not served me faithfully."
+      "text": "He said, ‘I will not continue to help them.I will see what happens to them when I leave them alone.They are children who do not obey me.They have not served me faithfully. I will see what happens to them when I leave them alone. They are children who do not obey me. They have not served me faithfully."
     },
     {
       "verse": "21",
-      "text": "They have made me jealous as they serve false gods. They have made me angry as they worship useless idols. So I will make them jealous as I help a useless nation. I will make them angry as I bless a foolish nation."
+      "text": "They have made me jealous as they serve false gods.They have made me angry as they worship useless idols.So I will make them jealous as I help a useless nation.I will make them angry as I bless a foolish nation. They have made me angry as they worship useless idols. So I will make them jealous as I help a useless nation. I will make them angry as I bless a foolish nation."
     },
     {
       "verse": "22",
-      "text": "I will become so angry that I punish them very much. I will destroy them like a hot fire. It will be like a fire that reaches deep down into the place of dead people. It will destroy the ground and everything that grows on it. It will burn deep down to the foundations of the mountains."
+      "text": "I will become so angry that I punish them very much.I will destroy them like a hot fire.It will be like a fire that reaches deep down into the place of dead people.It will destroy the ground and everything that grows on it.It will burn deep down to the foundations of the mountains. I will destroy them like a hot fire. It will be like a fire that reaches deep down into the place of dead people. It will destroy the ground and everything that grows on it. It will burn deep down to the foundations of the mountains."
     },
     {
       "verse": "23",
-      "text": "I will cause them to have many kinds of trouble. I will attack them like a soldier who shoots all his arrows."
+      "text": "I will cause them to have many kinds of trouble.I will attack them like a soldier who shoots all his arrows. I will attack them like a soldier who shoots all his arrows."
     },
     {
       "verse": "24",
-      "text": "They will become weak and hungry. They will have bad diseases that give them much pain. I will cause wild animals to attack them. Snakes will bite them and they will die."
+      "text": "They will become weak and hungry.They will have bad diseases that give them much pain.I will cause wild animals to attack them.Snakes will bite them and they will die. They will have bad diseases that give them much pain. I will cause wild animals to attack them. Snakes will bite them and they will die."
     },
     {
       "verse": "25",
-      "text": "If they go out of their homes, their enemies will kill them. If they stay at home, they will die from fear. Young men and young women will die. Babies and old men will also die."
+      "text": "If they go out of their homes, their enemies will kill them.If they stay at home, they will die from fear.Young men and young women will die.Babies and old men will also die. If they stay at home, they will die from fear. Young men and young women will die. Babies and old men will also die."
     },
     {
       "verse": "26",
-      "text": "I wanted to remove my people completely, so that nobody would ever remember them."
+      "text": "I wanted to remove my people completely,so that nobody would ever remember them. so that nobody would ever remember them."
     },
     {
       "verse": "27",
-      "text": "But then their enemies would boast. They would not understand. They would say, “We have destroyed these people with our own strength! The Lord has not done this!” ’"
+      "text": "But then their enemies would boast.They would not understand.They would say, “We have destroyed these people with our own strength!The Lord has not done this!” ’ They would not understand. They would say, “We have destroyed these people with our own strength! The Lord has not done this!” ’"
     },
     {
       "verse": "28",
-      "text": "Israel is a nation without wisdom. They do not understand what will happen to them."
+      "text": "Israel is a nation without wisdom.They do not understand what will happen to them. They do not understand what will happen to them."
     },
     {
       "verse": "29",
-      "text": "If they were wise, they would understand. They would know what would happen to them in the end."
+      "text": "If they were wise, they would understand.They would know what would happen to them in the end. They would know what would happen to them in the end."
     },
     {
       "verse": "30",
-      "text": "One man can chase away 1,000 of my people! Two men can chase away 10,000 of them! How can that happen? God, their strong Rock, has left them. The Lord has given their enemies power over them."
+      "text": "One man can chase away 1,000 of my people!Two men can chase away 10,000 of them!How can that happen? God, their strong Rock, has left them.The Lord has given their enemies power over them. Two men can chase away 10,000 of them! How can that happen? God, their strong Rock, has left them. The Lord has given their enemies power over them."
     },
     {
       "verse": "31",
-      "text": "The gods of our enemies are not strong like our Rock. Even our enemies know that their own gods are weak."
+      "text": "The gods of our enemies are not strong like our Rock.Even our enemies know that their own gods are weak. Even our enemies know that their own gods are weak."
     },
     {
       "verse": "32",
-      "text": "Our enemies are like grapes full of poison. They are like grapes that have grown in the fields of Sodom and Gomorrah. The people of Sodom and Gomorrah did wicked things. God punished them and he destroyed the cities. See Genesis"
+      "text": "Our enemies are like grapes full of poison.They are like grapes that have grown in the fields of Sodom and Gomorrah. They are like grapes that have grown in the fields of Sodom and Gomorrah."
     },
     {
       "verse": "33",
-      "text": "The wine from their grapes kills people, like dangerous poison from snakes."
+      "text": "The wine from their grapes kills people,like dangerous poison from snakes. like dangerous poison from snakes."
     },
     {
       "verse": "34",
-      "text": "The Lord says, ‘I will not forget to punish Israel's enemies. I have already decided what I will do, and I will do it!"
+      "text": "The Lord says, ‘I will not forget to punish Israel's enemies.I have already decided what I will do, and I will do it! I have already decided what I will do, and I will do it!"
     },
     {
       "verse": "35",
-      "text": "When the right time comes, I will punish them as they deserve. They will suddenly fall and great trouble will quickly destroy them.’"
+      "text": "When the right time comes,I will punish them as they deserve.They will suddenly falland great trouble will quickly destroy them.’ I will punish them as they deserve. They will suddenly fall and great trouble will quickly destroy them.’"
     },
     {
       "verse": "36",
-      "text": "At that time, the Lord will bring justice for his people. He will forgive his servants. He will rescue them when he sees that they are weak, and very few of them remain, as slaves or free people."
+      "text": "At that time, the Lord will bring justice for his people.He will forgive his servants.He will rescue them when he sees that they are weak,and very few of them remain, as slaves or free people. He will forgive his servants. He will rescue them when he sees that they are weak, and very few of them remain, as slaves or free people."
     },
     {
       "verse": "37",
-      "text": "Then the Lord will ask his people, ‘Why could your gods not help you? Those were the gods that you thought would keep you safe."
+      "text": "Then the Lord will ask his people,‘Why could your gods not help you?Those were the gods that you thought would keep you safe. ‘Why could your gods not help you? Those were the gods that you thought would keep you safe."
     },
     {
       "verse": "38",
-      "text": "You fed them with the best part of your sacrifices. You let them drink the wine from your offerings. So they should be there to help you! They should keep you safe!"
+      "text": "You fed them with the best part of your sacrifices.You let them drink the wine from your offerings.So they should be there to help you!They should keep you safe! You let them drink the wine from your offerings. So they should be there to help you! They should keep you safe!"
     },
     {
       "verse": "39",
-      "text": "Realize the truth! I alone am God. There is no other god as well as me. I can kill and I can give life. I can hurt people and I can make them well again. Nobody can stop me doing what I choose to do."
+      "text": "Realize the truth! I alone am God.There is no other god as well as me.I can kill and I can give life.I can hurt people and I can make them well again.Nobody can stop me doing what I choose to do. There is no other god as well as me. I can kill and I can give life. I can hurt people and I can make them well again. Nobody can stop me doing what I choose to do."
     },
     {
       "verse": "40",
-      "text": "I lift up my hand to heaven and I make this strong promise: “I promise you this, as surely as I live for ever:"
+      "text": "I lift up my hand to heaven and I make this strong promise:“I promise you this, as surely as I live for ever: “I promise you this, as surely as I live for ever:"
     },
     {
       "verse": "41",
-      "text": "I will make my sword very sharp. It will move like lightning as I hold it in my hand. I will punish my enemies as they deserve. I will pay back everyone who hates me."
+      "text": "I will make my sword very sharp.It will move like lightning as I hold it in my hand.I will punish my enemies as they deserve.I will pay back everyone who hates me. It will move like lightning as I hold it in my hand. I will punish my enemies as they deserve. I will pay back everyone who hates me."
     },
     {
       "verse": "42",
-      "text": "My arrows will have blood all over them. My sword will cut into the bodies of my enemies. Everyone that I take hold of will die. I will cut off the heads of their leaders.” ’"
+      "text": "My arrows will have blood all over them.My sword will cut into the bodies of my enemies.Everyone that I take hold of will die.I will cut off the heads of their leaders.” ’ My sword will cut into the bodies of my enemies. Everyone that I take hold of will die. I will cut off the heads of their leaders.” ’"
     },
     {
       "verse": "43",
-      "text": "So you people of other nations, join with God's people to praise him! He will punish those who have killed his servants. He will punish all his enemies. But he will forgive the sins of his people, and he will make their land clean again. Moses and Joshua warn the people"
+      "text": "So you people of other nations,join with God's people to praise him!He will punish those who have killed his servants.He will punish all his enemies.But he will forgive the sins of his people,and he will make their land clean again. join with God's people to praise him! He will punish those who have killed his servants. He will punish all his enemies. But he will forgive the sins of his people, and he will make their land clean again."
     },
     {
       "verse": "44",
@@ -3672,7 +3672,7 @@ module.exports = {
     },
     {
       "verse": "47",
-      "text": "These are not just useless words. This is a message that gives life! If you obey it, you will live for many years in the land on the other side of the Jordan River. That is the land that will be your new home.’ Moses will die on Mount Nebo"
+      "text": "These are not just useless words. This is a message that gives life! If you obey it, you will live for many years in the land on the other side of the Jordan River. That is the land that will be your new home.’"
     },
     {
       "verse": "48",
@@ -3692,125 +3692,125 @@ module.exports = {
     },
     {
       "verse": "52",
-      "text": "So you will not go into the land that I am giving to the Israelites. You will only see it from far away.’ See Numbers Print... Use screen font size Show All Comments Deuteronomy 31Deuteronomy 33 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "So you will not go into the land that I am giving to the Israelites. You will only see it from far away.’"
     }
   ],
   "33": [
     {
       "verse": "1",
-      "text": "Before his death, God's servant Moses spoke this blessing to all the Israelites."
+      "text": "Before his death, God's servant Moses spoke this blessing to all the Israelites. ‘The Lord came from Sinai. He appeared to his people like the sun that rises over the hills of Edom. He shone on his people from Mount Paran. Thousands of angels came with him. In his right hand, he held his Law that burned with fire."
     },
     {
       "verse": "2",
-      "text": "He said this: ‘The Lord came from Sinai. He appeared to his people like the sun that rises over the hills of Edom. He shone on his people from Mount Paran. Thousands of angels came with him. In his right hand, he held his Law that burned with fire."
+      "text": "He said this:‘The Lord came from Sinai.He appeared to his peoplelike the sun that rises over the hills of Edom.He shone on his people from Mount Paran.Thousands of angels came with him.In his right hand, he held his Law that burned with fire."
     },
     {
       "verse": "3",
-      "text": "Yes, the Lord loves his people. He takes care of all his holy people. They sit near to him and they listen to his teaching."
+      "text": "Yes, the Lord loves his people.He takes care of all his holy people.They sit near to him and they listen to his teaching. He takes care of all his holy people. They sit near to him and they listen to his teaching."
     },
     {
       "verse": "4",
-      "text": "Moses gave us the Lord's teaching. It is very valuable to us, the descendants of Jacob."
+      "text": "Moses gave us the Lord's teaching.It is very valuable to us, the descendants of Jacob. It is very valuable to us, the descendants of Jacob."
     },
     {
       "verse": "5",
-      "text": "When the leaders of the people and all the tribes met together, the Lord became king of Israel. Israel is here called by a special name, ‘Jeshurun’."
+      "text": "When the leaders of the people and all the tribes met together,the Lord became king of Israel. the Lord became king of Israel."
     },
     {
       "verse": "6",
-      "text": "I pray this for the tribe of Reuben: May they continue to live and have many descendants."
+      "text": "I pray this for the tribe of Reuben:May they continue to live and have many descendants. May they continue to live and have many descendants."
     },
     {
       "verse": "7",
-      "text": "I pray this for the tribe of Judah: Lord, please listen to their prayers for help. May they join again with the other tribes. Please make them strong, so that they can fight against their enemies."
+      "text": "I pray this for the tribe of Judah:Lord, please listen to their prayers for help.May they join again with the other tribes.Please make them strong,so that they can fight against their enemies. Lord, please listen to their prayers for help. May they join again with the other tribes. Please make them strong, so that they can fight against their enemies."
     },
     {
       "verse": "8",
-      "text": "I pray this for the tribe of Levi: Lord, your Urim and Thummim belong to your faithful servants, the Levites. You tested them at Massah. You argued with them at the springs of water at Meribah. See Exodus"
+      "text": "I pray this for the tribe of Levi:Lord, your Urim and Thummim belong to your faithful servants, the Levites.You tested them at Massah.You argued with them at the springs of water at Meribah. Lord, your Urim and Thummim belong to your faithful servants, the Levites. You tested them at Massah. You argued with them at the springs of water at Meribah."
     },
     {
       "verse": "9",
-      "text": "The Levites left their own families so that they could serve you well. They obeyed your word. They were faithful to your covenant."
+      "text": "The Levites left their own familiesso that they could serve you well.They obeyed your word.They were faithful to your covenant. so that they could serve you well. They obeyed your word. They were faithful to your covenant."
     },
     {
       "verse": "10",
-      "text": "They teach your rules and your laws to Jacob's descendants, the Israelites. They offer incense to you, as a sweet smell. They burn offerings on your altar."
+      "text": "They teach your rules and your laws to Jacob's descendants, the Israelites.They offer incense to you, as a sweet smell.They burn offerings on your altar. They offer incense to you, as a sweet smell. They burn offerings on your altar."
     },
     {
       "verse": "11",
-      "text": "Lord, please bless their work. May everything that they do give you pleasure. Knock down anyone who attacks them. Destroy all their enemies completely."
+      "text": "Lord, please bless their work.May everything that they do give you pleasure.Knock down anyone who attacks them.Destroy all their enemies completely. May everything that they do give you pleasure. Knock down anyone who attacks them. Destroy all their enemies completely."
     },
     {
       "verse": "12",
-      "text": "I pray this for the tribe of Benjamin: The Lord loves the tribe of Benjamin. They will live with him and they will be safe. The Lord protects them all the time. He keeps them near to him."
+      "text": "I pray this for the tribe of Benjamin:The Lord loves the tribe of Benjamin.They will live with him and they will be safe.The Lord protects them all the time.He keeps them near to him. The Lord loves the tribe of Benjamin. They will live with him and they will be safe. The Lord protects them all the time. He keeps them near to him."
     },
     {
       "verse": "13",
-      "text": "I pray this for the tribe of Joseph: Lord, please bless their land. Send rain from the sky above, and springs of water from under the ground."
+      "text": "I pray this for the tribe of Joseph:Lord, please bless their land.Send rain from the sky above,and springs of water from under the ground. Lord, please bless their land. Send rain from the sky above, and springs of water from under the ground."
     },
     {
       "verse": "14",
-      "text": "May the sun give them a good harvest of food, with the best crops every month."
+      "text": "May the sun give them a good harvest of food,with the best crops every month. with the best crops every month."
     },
     {
       "verse": "15",
-      "text": "May they have a harvest of good fruits from the mountains and hills that have been there since long ago."
+      "text": "May they have a harvest of good fruitsfrom the mountains and hills that have been there since long ago. from the mountains and hills that have been there since long ago."
     },
     {
       "verse": "16",
-      "text": "Please fill their land with many good things. Lord who appeared in the burning bush, please be kind to them. Please bless Joseph's descendants. He became a leader, separate from his brothers. May this blessing be like a crown on his head!"
+      "text": "Please fill their land with many good things.Lord who appeared in the burning bush,please be kind to them.Please bless Joseph's descendants.He became a leader, separate from his brothers.May this blessing be like a crown on his head! Lord who appeared in the burning bush, please be kind to them. Please bless Joseph's descendants. He became a leader, separate from his brothers. May this blessing be like a crown on his head!"
     },
     {
       "verse": "17",
-      "text": "Joseph is as strong as a bull. He has horns like a wild ox. Those two horns are the armies of Ephraim and Manasseh! Ephraim and Manasseh were Joseph's two sons. They each became separate tribes. With them, he attacks other nations. He chases them to the edges of the world."
+      "text": "Joseph is as strong as a bull.He has horns like a wild ox.Those two horns are the armies of Ephraim and Manasseh!With them, he attacks other nations.He chases them to the edges of the world. He has horns like a wild ox. Those two horns are the armies of Ephraim and Manasseh! With them, he attacks other nations. He chases them to the edges of the world."
     },
     {
       "verse": "18",
-      "text": "I pray this for the tribes of Zebulun and Issachar: Be happy, Zebulun's people, as you travel far from home. Be happy, Issachar's people, as you live in your homes."
+      "text": "I pray this for the tribes of Zebulun and Issachar:Be happy, Zebulun's people, as you travel far from home.Be happy, Issachar's people, as you live in your homes. Be happy, Zebulun's people, as you travel far from home. Be happy, Issachar's people, as you live in your homes."
     },
     {
       "verse": "19",
-      "text": "They will call other people to come to their mountain. They will offer the right sacrifices there. They will become rich from their work on the seas, and from things that are hidden in the sand on the shore."
+      "text": "They will call other people to come to their mountain.They will offer the right sacrifices there.They will become rich from their work on the seas,and from things that are hidden in the sand on the shore. They will offer the right sacrifices there. They will become rich from their work on the seas, and from things that are hidden in the sand on the shore."
     },
     {
       "verse": "20",
-      "text": "I pray this for the tribe of Gad: Praise the Lord, who will give more land to Gad's people! Gad lives there like a hungry lion. He will tear off the arm or the head of his enemies."
+      "text": "I pray this for the tribe of Gad:Praise the Lord, who will give more land to Gad's people!Gad lives there like a hungry lion.He will tear off the arm or the head of his enemies. Praise the Lord, who will give more land to Gad's people! Gad lives there like a hungry lion. He will tear off the arm or the head of his enemies."
     },
     {
       "verse": "21",
-      "text": "He has chosen the best part of the land for himself. When Israel's leaders met together, Gad's tribe received the land that a leader deserves. Gad's people obeyed the Lord's good laws. They obeyed the Lord's commands for Israel."
+      "text": "He has chosen the best part of the land for himself.When Israel's leaders met together,Gad's tribe received the land that a leader deserves.Gad's people obeyed the Lord's good laws.They obeyed the Lord's commands for Israel. When Israel's leaders met together, Gad's tribe received the land that a leader deserves. Gad's people obeyed the Lord's good laws. They obeyed the Lord's commands for Israel."
     },
     {
       "verse": "22",
-      "text": "I pray this for the tribe of Dan: Dan's tribe is like a young lion. They jump out from Bashan to attack their enemies."
+      "text": "I pray this for the tribe of Dan:Dan's tribe is like a young lion.They jump out from Bashan to attack their enemies. Dan's tribe is like a young lion. They jump out from Bashan to attack their enemies."
     },
     {
       "verse": "23",
-      "text": "I pray this for the tribe of Naphtali: The Lord has blessed Naphtali's tribe very much. He has been very kind to them. Land in the west and in the south will belong to them."
+      "text": "I pray this for the tribe of Naphtali:The Lord has blessed Naphtali's tribe very much.He has been very kind to them.Land in the west and in the south will belong to them. The Lord has blessed Naphtali's tribe very much. He has been very kind to them. Land in the west and in the south will belong to them."
     },
     {
       "verse": "24",
-      "text": "I pray this for the tribe of Asher: May the Lord bless Asher's tribe more than the other tribes. May their brothers be pleased with them. May Asher's people be rich enough to wash their feet in olive oil."
+      "text": "I pray this for the tribe of Asher:May the Lord bless Asher's tribe more than the other tribes.May their brothers be pleased with them.May Asher's people be rich enough to wash their feet in olive oil. May the Lord bless Asher's tribe more than the other tribes. May their brothers be pleased with them. May Asher's people be rich enough to wash their feet in olive oil."
     },
     {
       "verse": "25",
-      "text": "They will use iron and bronze to make the gates of their towns strong. May they be strong for as long as they live."
+      "text": "They will use iron and bronze to make the gates of their towns strong.May they be strong for as long as they live. May they be strong for as long as they live."
     },
     {
       "verse": "26",
-      "text": "Israelites, there is no god like your God. The Israelites are here called by a special name, ‘Jeshurun’. He rides across the sky to help you. He travels with great authority on the clouds."
+      "text": "Israelites, there is no god like your God.He rides across the sky to help you.He travels with great authority on the clouds. He rides across the sky to help you. He travels with great authority on the clouds."
     },
     {
       "verse": "27",
-      "text": "He is the God who lives for ever. He is the safe place where you can hide. His strong arms are always there, to hold you safely. He will chase away your enemies as you attack them. He says to you, “Destroy them!”"
+      "text": "He is the God who lives for ever.He is the safe place where you can hide.His strong arms are always there, to hold you safely.He will chase away your enemies as you attack them.He says to you, “Destroy them!” He is the safe place where you can hide. His strong arms are always there, to hold you safely. He will chase away your enemies as you attack them. He says to you, “Destroy them!”"
     },
     {
       "verse": "28",
-      "text": "So Israel's people can now live safely. Jacob's descendants have a safe place to live. They have a land that will give them grain and wine. Rain falls from the sky to make the ground wet."
+      "text": "So Israel's people can now live safely.Jacob's descendants have a safe place to live.They have a land that will give them grain and wine.Rain falls from the sky to make the ground wet. Jacob's descendants have a safe place to live. They have a land that will give them grain and wine. Rain falls from the sky to make the ground wet."
     },
     {
       "verse": "29",
-      "text": "Israelites, how happy you are! There is no other nation like you. The Lord himself has rescued you. He is the one who keeps you safe, like a soldier's shield. He is like a sword that you use to win against your enemies. Your enemies will fall down with fear in front of you. You will walk all over them.’ Print... Use screen font size Show All Comments Deuteronomy 32Deuteronomy 34 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "Israelites, how happy you are!There is no other nation like you.The Lord himself has rescued you.He is the one who keeps you safe, like a soldier's shield.He is like a sword that you use to win against your enemies.Your enemies will fall down with fear in front of you.You will walk all over them.’"
     }
   ],
   "34": [
@@ -3840,11 +3840,11 @@ module.exports = {
     },
     {
       "verse": "7",
-      "text": "Moses was 120 years old when he died. But he could still see well. His body was still strong."
+      "text": "years old when he died. But he could still see well. His body was still strong."
     },
     {
       "verse": "8",
-      "text": "The Israelites wept for 30 days because of Moses' death. They wept in Moab's desert land until the time for them to be sad came to an end."
+      "text": "days because of Moses' death. They wept in Moab's desert land until the time for them to be sad came to an end."
     },
     {
       "verse": "9",
@@ -3860,7 +3860,7 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "No other prophet has shown such great power and authority for all the Israelites to see. Print... Use screen font size Show All Comments Deuteronomy 33Joshua Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+      "text": "No other prophet has shown such great power and authority for all the Israelites to see."
     }
   ]
 };
