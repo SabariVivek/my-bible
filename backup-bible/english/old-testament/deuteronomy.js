@@ -1067,8 +1067,12 @@ module.exports = {
       "text": "The Lord will do the same thing to you as he does to your enemies. Like those nations, he will completely destroy you if you do not obey him."
     },
     {
-      "verse": "8-9",
-      "text": "It is a land where you will have plenty of food to eat. There is wheat, barley, grapes, figs, pomegranates, olives and honey. You will have everything that you need. The rocks have iron in them. You can dig copper out of the hills."
+      "verse": "8",
+      "text": "It is a land where you will have plenty of food to eat. There is wheat, barley, grapes, figs, pomegranates, olives and honey. You will have everything that you need."
+    },
+    {
+      "verse": "9",
+      "text": "The rocks have iron in them. You can dig copper out of the hills."
     }
   ],
   "9": [
@@ -1703,7 +1707,7 @@ module.exports = {
       "text": "Keep this food for the Levites, who have no land of their own. It is also for the foreign people, the widows, and the children who have no family. These people in your town can eat as much as they want. If you do that, the Lord your God will bless you in all your work."
     },
     {
-      "verse": "12-18",
+      "verse": "12",
       "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats."
     }
   ],
@@ -2141,8 +2145,12 @@ module.exports = {
       "text": "Do not be sorry for people who are guilty. Punish people as they deserve: a life for a life, an eye for an eye, a tooth for a tooth, a hand for a hand, a foot for a foot."
     },
     {
-      "verse": "2-3",
-      "text": "Make the land into three separate regions. Then choose three special cities, one city in each region. Build good roads to each city so that people can easily travel to them. Then anyone who kills a person can run to one of these cities to be safe."
+      "verse": "2",
+      "text": "Make the land into three separate regions. Then choose three special cities, one city in each region."
+    },
+    {
+      "verse": "3",
+      "text": "Build good roads to each city so that people can easily travel to them. Then anyone who kills a person can run to one of these cities to be safe."
     }
   ],
   "20": [
@@ -3281,8 +3289,12 @@ module.exports = {
       "text": "Some secret things belong to the Lord our God. He does not let us understand everything. But he has shown us many things clearly. Those things belong to us and to our descendants for all time. They are the words of his Law that we need to obey."
     },
     {
-      "verse": "14-15",
-      "text": "The Lord our God is making this strong covenant with you people who are standing here with him today. But it is not only with you. He also makes this covenant with those people who are not here today."
+      "verse": "14",
+      "text": "The Lord our God is making this strong covenant with you people who are standing here with him today. But it is not only with you."
+    },
+    {
+      "verse": "15",
+      "text": "He also makes this covenant with those people who are not here today."
     }
   ],
   "30": [
@@ -3481,8 +3493,12 @@ module.exports = {
       "text": "Then Moses spoke the words of this song, from the beginning to the end. All the Israelites met together and they listened to him."
     },
     {
-      "verse": "10-11",
-      "text": "Then Moses said to them, ‘You must read this Law to all the Israelites. Read it every seven years at the Feast of Huts, in the year when you forgive people's debts. At that time all the Israelites will go to the place that the Lord your God will choose. When they meet there to worship the Lord, they must listen to this Law."
+      "verse": "10",
+      "text": "Then Moses said to them, ‘You must read this Law to all the Israelites. Read it every seven years at the Feast of Huts, in the year when you forgive people's debts."
+    },
+    {
+      "verse": "11",
+      "text": "At that time all the Israelites will go to the place that the Lord your God will choose. When they meet there to worship the Lord, they must listen to this Law."
     }
   ],
   "32": [

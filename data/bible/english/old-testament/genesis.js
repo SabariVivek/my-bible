@@ -433,50 +433,6 @@ module.exports = {
   ],
   "5": [
     {
-      "verse": "1",
-      "text": "This is the report about Adam and his family. When God made men and women, he made them like himself."
-    },
-    {
-      "verse": "2",
-      "text": "God made male and female people and he called them ‘human’. He blessed them."
-    },
-    {
-      "verse": "3",
-      "text": "years old, he had a son who was like him. Adam called him Seth."
-    },
-    {
-      "verse": "4",
-      "text": "After Seth was born, Adam lived for 800 years. During this time, he had other sons and daughters."
-    },
-    {
-      "verse": "5",
-      "text": "years old when he died."
-    },
-    {
-      "verse": "6",
-      "text": "years old, he had a son. He called him Enosh."
-    },
-    {
-      "verse": "7",
-      "text": "After Enosh was born, Seth lived for 807 years. During this time, he had other sons and daughters."
-    },
-    {
-      "verse": "8",
-      "text": "years old when he died."
-    },
-    {
-      "verse": "9",
-      "text": "years old, he had a son. He called him Kenan."
-    },
-    {
-      "verse": "10",
-      "text": "After Kenan was born, Enosh lived for 815 years. During this time, he had other sons and daughters."
-    },
-    {
-      "verse": "11",
-      "text": "years old when he died."
-    },
-    {
       "verse": "12",
       "text": "years old, he had a son. He called him Mahalalel."
     },
@@ -559,6 +515,50 @@ module.exports = {
     {
       "verse": "32",
       "text": "years old, he became the father of Shem, Ham and Japheth."
+    },
+    {
+      "verse": "1",
+      "text": "This is the report about Adam and his family. When God made men and women, he made them like himself."
+    },
+    {
+      "verse": "2",
+      "text": "God made male and female people and he called them ‘human’. He blessed them."
+    },
+    {
+      "verse": "3",
+      "text": "years old, he had a son who was like him. Adam called him Seth."
+    },
+    {
+      "verse": "4",
+      "text": "After Seth was born, Adam lived for 800 years. During this time, he had other sons and daughters."
+    },
+    {
+      "verse": "5",
+      "text": "years old when he died."
+    },
+    {
+      "verse": "6",
+      "text": "years old, he had a son. He called him Enosh."
+    },
+    {
+      "verse": "7",
+      "text": "After Enosh was born, Seth lived for 807 years. During this time, he had other sons and daughters."
+    },
+    {
+      "verse": "8",
+      "text": "years old when he died."
+    },
+    {
+      "verse": "9",
+      "text": "years old, he had a son. He called him Kenan."
+    },
+    {
+      "verse": "10",
+      "text": "After Kenan was born, Enosh lived for 815 years. During this time, he had other sons and daughters."
+    },
+    {
+      "verse": "11",
+      "text": "years old when he died."
     }
   ],
   "6": [
@@ -1375,22 +1375,6 @@ module.exports = {
   ],
   "14": [
     {
-      "verse": "1",
-      "text": "Now there were many kings living in that land, at that time. They fought against each other. One fight was when Kedorlaomer had ruled over the other kings for 12 years."
-    },
-    {
-      "verse": "2",
-      "text": "And in the next year, five kings made one group like that and fought against him. Kedorlaomer joined with three other kings. So it was four kings against five other kings."
-    },
-    {
-      "verse": "3",
-      "text": "The four kings were Amraphel king of Shinar, Arioch king of Ellasar, Kedorlaomer king of Elam and Tidal king of Goiim. Those kings fought a war against Bera king of Sodom, Birsha king of Gomorrah, Shinab king of Admah, Shemeber king of Zeboiim and the king of Bela. (Bela is another name for the town of Zoar."
-    },
-    {
-      "verse": "4",
-      "text": ") They fought in the Valley of Siddim. (That is the Salt Sea."
-    },
-    {
       "verse": "5",
       "text": "In the 14th year, Kedorlaomer and the kings with him won against the Rephaites. This was in Ashteroth Karnaim. They won against the Zuzites in Ham. They won against the Emites in Shaveh Kiriathaim."
     },
@@ -1469,6 +1453,22 @@ module.exports = {
     {
       "verse": "24",
       "text": "I myself will accept only the food that my young men have eaten. But Aner, Eshcol and Mamre went with me to help me to fight. They should take their part of the things that we brought back with us. ’"
+    },
+    {
+      "verse": "1",
+      "text": "Now there were many kings living in that land, at that time. They fought against each other. One fight was when Kedorlaomer had ruled over the other kings for 12 years."
+    },
+    {
+      "verse": "2",
+      "text": "And in the next year, five kings made one group like that and fought against him. Kedorlaomer joined with three other kings. So it was four kings against five other kings."
+    },
+    {
+      "verse": "3",
+      "text": "The four kings were Amraphel king of Shinar, Arioch king of Ellasar, Kedorlaomer king of Elam and Tidal king of Goiim. Those kings fought a war against Bera king of Sodom, Birsha king of Gomorrah, Shinab king of Admah, Shemeber king of Zeboiim and the king of Bela. (Bela is another name for the town of Zoar."
+    },
+    {
+      "verse": "4",
+      "text": ") They fought in the Valley of Siddim. (That is the Salt Sea."
     }
   ],
   "15": [
@@ -2415,6 +2415,18 @@ module.exports = {
   ],
   "24": [
     {
+      "verse": "26",
+      "text": "Then the man turned his face towards the ground. He worshipped the Lord."
+    },
+    {
+      "verse": "27",
+      "text": "He said, ‘I praise the Lord who is the God of my master, Abraham. He has been very kind to my master. He has done what he promised to do for him. The Lord has been kind to me too. He has led me here to the house of my master's family. ’"
+    },
+    {
+      "verse": "28",
+      "text": "Rebekah quickly ran back home. She told her mother and her family about what had happened."
+    },
+    {
       "verse": "1",
       "text": "Abraham was now a very old man. The Lord had blessed him in every way."
     },
@@ -2513,18 +2525,6 @@ module.exports = {
     {
       "verse": "25",
       "text": "We have plenty of grass and food for the camels. And there is a room for you to stay with us for the night. ’"
-    },
-    {
-      "verse": "26",
-      "text": "Then the man turned his face towards the ground. He worshipped the Lord."
-    },
-    {
-      "verse": "27",
-      "text": "He said, ‘I praise the Lord who is the God of my master, Abraham. He has been very kind to my master. He has done what he promised to do for him. The Lord has been kind to me too. He has led me here to the house of my master's family. ’"
-    },
-    {
-      "verse": "28",
-      "text": "Rebekah quickly ran back home. She told her mother and her family about what had happened."
     },
     {
       "verse": "29",
@@ -4409,6 +4409,18 @@ module.exports = {
   ],
   "37": [
     {
+      "verse": "34",
+      "text": "Jacob was so upset that he tore his own clothes. He put on clothes made from sackcloth to show how sad he was. He wept for many days because his son had died."
+    },
+    {
+      "verse": "35",
+      "text": "All Jacob's sons and daughters came to comfort him. But Jacob was very sad, so they could not make him happy. Jacob said, ‘I will be sad until the day that I die, because my son is dead. ’ Jacob wept because Joseph was dead."
+    },
+    {
+      "verse": "36",
+      "text": "While this was happening, the Midianites took Joseph into Egypt. They sold him to Potiphar, one of Pharaoh's officers. Potiphar had authority over all of Pharaoh's guards."
+    },
+    {
       "verse": "1",
       "text": "Jacob lived in Canaan, the land where his father had lived."
     },
@@ -4539,18 +4551,6 @@ module.exports = {
     {
       "verse": "33",
       "text": "Jacob saw that it was Joseph's coat. He said, ‘It is my son's coat! A wild animal must have eaten him! The animal has torn Joseph's body into pieces. ’"
-    },
-    {
-      "verse": "34",
-      "text": "Jacob was so upset that he tore his own clothes. He put on clothes made from sackcloth to show how sad he was. He wept for many days because his son had died."
-    },
-    {
-      "verse": "35",
-      "text": "All Jacob's sons and daughters came to comfort him. But Jacob was very sad, so they could not make him happy. Jacob said, ‘I will be sad until the day that I die, because my son is dead. ’ Jacob wept because Joseph was dead."
-    },
-    {
-      "verse": "36",
-      "text": "While this was happening, the Midianites took Joseph into Egypt. They sold him to Potiphar, one of Pharaoh's officers. Potiphar had authority over all of Pharaoh's guards."
     }
   ],
   "38": [
@@ -4997,14 +4997,6 @@ module.exports = {
       "text": "Now Pharaoh should look for a clever man. He should look for a man who knows what is right and wrong. Tell him to rule over the land of Egypt."
     },
     {
-      "verse": "34",
-      "text": "This is what you should do: Choose some officers. Give them authority to store food during the good years when there is plenty. They must take a fifth part of all the food that grows everywhere in Egypt."
-    },
-    {
-      "verse": "35",
-      "text": "They must store the extra food during the good years that will come soon. Give these officers authority to store and to take care of the food in the cities."
-    },
-    {
       "verse": "36",
       "text": "Then you will be ready for the seven years of famine that will happen everywhere in Egypt. The people in Egypt will have enough food, and the famine will not destroy the land. ’"
     },
@@ -5091,6 +5083,14 @@ module.exports = {
     {
       "verse": "57",
       "text": "People from all the other countries came to Egypt to buy food from Joseph. They came because the famine was very bad all over the world."
+    },
+    {
+      "verse": "34",
+      "text": "This is what you should do: Choose some officers. Give them authority to store food during the good years when there is plenty. They must take a fifth part of all the food that grows everywhere in Egypt."
+    },
+    {
+      "verse": "35",
+      "text": "They must store the extra food during the good years that will come soon. Give these officers authority to store and to take care of the food in the cities."
     }
   ],
   "42": [

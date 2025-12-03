@@ -467,8 +467,12 @@ module.exports = {
       "text": "Do not walk off your path, to the right side or the left side. Keep away from everything that is evil."
     },
     {
-      "verse": "3-4",
-      "text": "My father taught me when I was a little boy. My mother loved me as her only child. My father said to me, ‘Think carefully about what I tell you. If you obey my commands, you will live well. ‘Think carefully about what I tell you. If you obey my commands, you will live well."
+      "verse": "3",
+      "text": "My father taught me when I was a little boy. My mother loved me as her only child. My father said to me, ‘Think carefully about what I tell you."
+    },
+    {
+      "verse": "4",
+      "text": "If you obey my commands, you will live well. ‘Think carefully about what I tell you. If you obey my commands, you will live well."
     }
   ],
   "5": [
@@ -2749,8 +2753,12 @@ module.exports = {
       "text": "You will say, ‘Somebody must have hit me, but I do not remember what happened. I need to wake up soon and have another drink. ’"
     },
     {
-      "verse": "29-30",
-      "text": "18. People who drink too much wine have many problems. Do you see someone who is in trouble? Someone who is very sad? Someone who argues or complains all the time? Do you see someone with wounds on his body for no reason, or someone with red eyes? Then you are looking at someone who likes to drink wine until late at night. He is someone who likes to try different drinks."
+      "verse": "29",
+      "text": "18. People who drink too much wine have many problems."
+    },
+    {
+      "verse": "30",
+      "text": "Do you see someone who is in trouble? Someone who is very sad? Someone who argues or complains all the time? Do you see someone with wounds on his body for no reason, or someone with red eyes? Then you are looking at someone who likes to drink wine until late at night. He is someone who likes to try different drinks."
     }
   ],
   "24": [

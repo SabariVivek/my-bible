@@ -187,8 +187,12 @@ module.exports = {
       "text": "So Joseph went there and he lived in a town called Nazareth. Long ago God's prophets had said about God's Messiah, ‘He will be called a person from Nazareth. ’ Now this had become true."
     },
     {
-      "verse": "9-10",
-      "text": "After the men had heard the king, they left to go to Bethlehem. They could see the same star that they had seen before. They were very happy when they saw the star. It moved along in front of them. Then it stopped above the place where the child was staying."
+      "verse": "9",
+      "text": "After the men had heard the king, they left to go to Bethlehem. They could see the same star that they had seen before. They were very happy when they saw the star."
+    },
+    {
+      "verse": "10",
+      "text": "It moved along in front of them. Then it stopped above the place where the child was staying."
     }
   ],
   "3": [

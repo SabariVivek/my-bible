@@ -201,8 +201,16 @@ module.exports = {
       "text": "Then they put the two pillars at the entrance of the temple. One pillar stood on the south side of the entrance. The other pillar stood on the north side. Solomon called the pillar on the south side ‘Jakin’. He called the pillar on the north side ‘Boaz’."
     },
     {
-      "verse": "11-13",
-      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings. Each wing was 2. 2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub. The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
+      "verse": "11",
+      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings."
+    },
+    {
+      "verse": "12",
+      "text": "Each wing was 2. 2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub."
+    },
+    {
+      "verse": "13",
+      "text": "The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
     }
   ],
   "4": [
@@ -2071,8 +2079,12 @@ module.exports = {
       "text": "The things that happened while Joash was king are written in a book. The book is called ‘The history of the kings’. It includes a list of Joash's sons, and the many messages that prophets spoke about him. It also includes a report of the work which he did on God's temple. Joash's son Amaziah became king after him."
     },
     {
-      "verse": "25-26",
-      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon. Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
+      "verse": "25",
+      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon."
+    },
+    {
+      "verse": "26",
+      "text": "Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
     }
   ],
   "25": [
@@ -3245,8 +3257,12 @@ module.exports = {
       "text": "Jeremiah wrote sad songs about Josiah's death. The male and female singers still sing these songs to remember Josiah, even today. The songs have become something that the people of Israel always like to sing. They are written in a book called ‘The book of sad songs’."
     },
     {
-      "verse": "26-27",
-      "text": "All the other things that Josiah did while he was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells how Josiah faithfully obeyed what is written in the Law of the Lord. It includes all the good things that he did, from the beginning to the end of his time as king."
+      "verse": "26",
+      "text": "All the other things that Josiah did while he was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’."
+    },
+    {
+      "verse": "27",
+      "text": "It tells how Josiah faithfully obeyed what is written in the Law of the Lord. It includes all the good things that he did, from the beginning to the end of his time as king."
     }
   ],
   "36": [

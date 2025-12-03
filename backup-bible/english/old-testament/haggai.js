@@ -53,8 +53,12 @@ module.exports = {
       "text": "They started to work on the 24th day of that same month, in the second year after Darius had become king."
     },
     {
-      "verse": "1-2",
-      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests. Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me. ’"
+      "verse": "1",
+      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests."
+    },
+    {
+      "verse": "2",
+      "text": "Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me. ’."
     }
   ],
   "2": [

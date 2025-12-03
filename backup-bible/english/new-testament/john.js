@@ -659,8 +659,16 @@ module.exports = {
       "text": "This was the second miracle that Jesus did after he returned from Judea to Galilee."
     },
     {
-      "verse": "6-8",
-      "text": "Jacob's well was there. Jesus was tired after his journey and he sat down by the well. It was about midday. His disciples had gone to buy food in the town. A woman from Samaria came to the well to get some water. Jesus said to her, ‘Please give a drink to me. ’"
+      "verse": "6",
+      "text": "Jacob's well was there. Jesus was tired after his journey and he sat down by the well. It was about midday."
+    },
+    {
+      "verse": "7",
+      "text": "His disciples had gone to buy food in the town. A woman from Samaria came to the well to get some water."
+    },
+    {
+      "verse": "8",
+      "text": "Jesus said to her, ‘Please give a drink to me. ’."
     }
   ],
   "5": [

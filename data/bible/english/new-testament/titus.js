@@ -1,14 +1,6 @@
 module.exports = {
   "1": [
     {
-      "verse": "1",
-      "text": "This letter is from me, Paul. I am God's servant and an apostle of Jesus Christ. God has sent me to help the people that he has chosen. I teach them to understand his true message and to trust him. As a result they will live in a way that pleases God."
-    },
-    {
-      "verse": "2",
-      "text": "They will also be sure that they will live with God for ever. Before the world began, God promised that his people would have life with him. And God never tells lies."
-    },
-    {
       "verse": "3",
       "text": "God is the one who saves us. Now, at the proper time, he has made his message clear. He has given his message to me so that I can tell it to people. That is what he has told me to do."
     },
@@ -63,6 +55,14 @@ module.exports = {
     {
       "verse": "16",
       "text": "People like that say that they know God. But they do disgusting things. This shows that they do not know him. They are completely bad. They refuse to obey God. They are not able to do anything good."
+    },
+    {
+      "verse": "1",
+      "text": "This letter is from me, Paul. I am God's servant and an apostle of Jesus Christ. God has sent me to help the people that he has chosen. I teach them to understand his true message and to trust him. As a result they will live in a way that pleases God."
+    },
+    {
+      "verse": "2",
+      "text": "They will also be sure that they will live with God for ever. Before the world began, God promised that his people would have life with him. And God never tells lies."
     }
   ],
   "2": [

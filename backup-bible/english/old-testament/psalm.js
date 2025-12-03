@@ -293,8 +293,16 @@ module.exports = {
       "text": "So I will thank the Lordbecause he does what is right. The Lord is the Most High God, so I will sing to praise his name!"
     },
     {
-      "verse": "3-5",
-      "text": "Lord, my God, if I have done a wrong thing, then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me. If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt. Selah. then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me. If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt. Selah."
+      "verse": "3",
+      "text": "Lord, my God, if I have done a wrong thing, then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me. If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt."
+    },
+    {
+      "verse": "4",
+      "text": "Selah. then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me."
+    },
+    {
+      "verse": "5",
+      "text": "If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt. Selah."
     }
   ],
   "8": [
@@ -327,8 +335,12 @@ module.exports = {
       "text": "Lord, our ruler, your name is famous all over the world."
     },
     {
-      "verse": "7-8",
-      "text": "Yes! Humans rule them all: Farm animals and wild animals, birds, fish and all the things that swim in the sea. Farm animals and wild animals, birds, fish and all the things that swim in the sea."
+      "verse": "7",
+      "text": "Yes! Humans rule them all: Farm animals and wild animals, birds, fish and all the things that swim in the sea."
+    },
+    {
+      "verse": "8",
+      "text": "Farm animals and wild animals, birds, fish and all the things that swim in the sea."
     }
   ],
   "9": [
@@ -5119,8 +5131,12 @@ module.exports = {
       "text": "David took care of them with an honest heart. He was wise in the way that he led them."
     },
     {
-      "verse": "30-31",
-      "text": "But God became very angry with them, even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died. even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died."
+      "verse": "30",
+      "text": "But God became very angry with them, even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died."
+    },
+    {
+      "verse": "31",
+      "text": "even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died."
     }
   ],
   "79": [
@@ -5909,8 +5925,12 @@ module.exports = {
       "text": "Praise the Lord as he deserves! Yes! Amen! We agree!"
     },
     {
-      "verse": "30-31",
-      "text": "But I will punish his descendants, if they do not accept my laws. If they do not obey my teaching, my rules, or my commands, if they do not accept my laws. If they do not obey my teaching, my rules, or my commands,"
+      "verse": "30",
+      "text": "But I will punish his descendants, if they do not accept my laws. If they do not obey my teaching, my rules, or my commands, if they do not accept my laws."
+    },
+    {
+      "verse": "31",
+      "text": "If they do not obey my teaching, my rules, or my commands,."
     }
   ],
   "90": [
@@ -6615,8 +6635,12 @@ module.exports = {
       "text": "As your servants, our children will live here safely. Their children too will be safe, as they live near to you. ’"
     },
     {
-      "verse": "9-10",
-      "text": "Because you are so angry with me, I eat ashes as my food. My tears dropinto the water that I drink. It seems that you have picked me up, and then you have thrown me away. I eat ashes as my food. My tears drop into the water that I drink. It seems that you have picked me up, and then you have thrown me away."
+      "verse": "9",
+      "text": "Because you are so angry with me, I eat ashes as my food. My tears dropinto the water that I drink. It seems that you have picked me up, and then you have thrown me away."
+    },
+    {
+      "verse": "10",
+      "text": "I eat ashes as my food. My tears drop into the water that I drink. It seems that you have picked me up, and then you have thrown me away."
     }
   ],
   "103": [
@@ -7393,8 +7417,12 @@ module.exports = {
       "text": "Wise people should think about these things. They should understand the Lord's faithful love for his people."
     },
     {
-      "verse": "33-34",
-      "text": "In places where people are wicked, God makes the streams and rivers become dry, so that the land becomes a desert. He makes good landbecome a salty wilderness. God makes the streams and rivers become dry, so that the land becomes a desert. He makes good land become a salty wilderness."
+      "verse": "33",
+      "text": "In places where people are wicked, God makes the streams and rivers become dry, so that the land becomes a desert. He makes good landbecome a salty wilderness."
+    },
+    {
+      "verse": "34",
+      "text": "God makes the streams and rivers become dry, so that the land becomes a desert. He makes good land become a salty wilderness."
     }
   ],
   "108": [
@@ -9291,20 +9319,28 @@ module.exports = {
       "text": "Yes, thank the God of heaven! His faithful love will always continue."
     },
     {
-      "verse": "4-9",
+      "verse": "4",
       "text": "The Lord himself does great miracles. He was wise when he made the skies. He put the earth across the water of the seas. He made the great lights to shine in the sky. He made the sun to rule over the day. He made the moon and the stars to rule the night. So thank the Lord! His faithful love will always continue. He was wise when he made the skies. He put the earth across the water of the seas. He made the great lights to shine in the sky. He made the sun to rule over the day. He made the moon and the stars to rule the night. So thank the Lord! His faithful love will always continue."
     },
     {
-      "verse": "10-16",
+      "verse": "10",
       "text": "The Lord destroyed the firstborn sons in Egypt. He brought the Israelites out from among the Egyptians. He did this with his great power and strength. He cut the Red Sea into two separate parts. He led the Israelites through the middle of the sea. He threw Pharaoh and his army into the Red Sea to drown. The Lord led his people through the wilderness. So thank the Lord! His faithful love will always continue. He brought the Israelites out from among the Egyptians. He did this with his great power and strength. He cut the Red Sea into two separate parts. He led the Israelites through the middle of the sea. He threw Pharaoh and his army into the Red Sea to drown. The Lord led his people through the wilderness. So thank the Lord! His faithful love will always continue."
     },
     {
-      "verse": "17-22",
+      "verse": "17",
       "text": "The Lord destroyed great kings. Yes, he killed powerful kings. He killed Sihon, king of the Amorites. He killed Og, the king of Bashan. He gave their land to his people, the Israelites. He gave it to them as their own land. So thank the Lord! His faithful love will always continue. Yes, he killed powerful kings. He killed Sihon, king of the Amorites. He killed Og, the king of Bashan. He gave their land to his people, the Israelites. He gave it to them as their own land. So thank the Lord! His faithful love will always continue."
     },
     {
-      "verse": "23-25",
-      "text": "The Lord thought about us when we were upset. He saved us from the power of our enemies. He gives food to everything that lives. So thank the Lord! His faithful love will always continue. He saved us from the power of our enemies. He gives food to everything that lives. So thank the Lord! His faithful love will always continue."
+      "verse": "23",
+      "text": "The Lord thought about us when we were upset. He saved us from the power of our enemies. He gives food to everything that lives."
+    },
+    {
+      "verse": "24",
+      "text": "So thank the Lord! His faithful love will always continue. He saved us from the power of our enemies."
+    },
+    {
+      "verse": "25",
+      "text": "He gives food to everything that lives. So thank the Lord! His faithful love will always continue."
     }
   ],
   "137": [

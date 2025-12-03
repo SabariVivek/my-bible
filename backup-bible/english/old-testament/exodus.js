@@ -2105,8 +2105,12 @@ module.exports = {
       "text": "So Moses went down to the people. He told them what the Lord had said."
     },
     {
-      "verse": "1-2",
-      "text": "After the Israelites left Rephidim, they went into the Sinai desert. The Israelites put up their tents in the desert, at the side of Sinai mountain. That happened on the first day of the third month since they came out of Egypt."
+      "verse": "1",
+      "text": "After the Israelites left Rephidim, they went into the Sinai desert. The Israelites put up their tents in the desert, at the side of Sinai mountain."
+    },
+    {
+      "verse": "2",
+      "text": "That happened on the first day of the third month since they came out of Egypt."
     }
   ],
   "20": [
@@ -3085,8 +3089,12 @@ module.exports = {
       "text": "Aaron and his sons must make sure that the lamps always give light from evening until morning. The lampstand will be in the Tent of Meeting, outside the curtain that hangs in front of the Covenant Box. The lamps must always give light there, where the Lord is. This will always be a rule for the Israelites, now and in the future."
     },
     {
-      "verse": "14-15",
-      "text": "metres of curtain on each side of the entrance. There will be three poles with their bases to hold the curtains on each side."
+      "verse": "14",
+      "text": "metres of curtain on each side of the entrance."
+    },
+    {
+      "verse": "15",
+      "text": "There will be three poles with their bases to hold the curtains on each side."
     }
   ],
   "28": [
@@ -4587,8 +4595,12 @@ module.exports = {
       "text": "They used this bronze to make the bases for the curtains around the yard and for the entrance to the yard. They used it to make the pegs to fix the tabernacle and the curtain around the yard to the ground."
     },
     {
-      "verse": "14-15",
-      "text": "metres of curtain on each side of the entrance. Three poles with their bases held the curtains on each side."
+      "verse": "14",
+      "text": "metres of curtain on each side of the entrance."
+    },
+    {
+      "verse": "15",
+      "text": "Three poles with their bases held the curtains on each side."
     }
   ],
   "39": [

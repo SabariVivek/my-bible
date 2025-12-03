@@ -101,8 +101,12 @@ module.exports = {
       "text": "If you want to serve God in a completely good way, do things like this: Help children who have no parents and women who are widows. Help them in their troubles. If you serve God our Father like that, he will be pleased with you. Do not let the bad people in this world make you bad too."
     },
     {
-      "verse": "7-8",
-      "text": "A person who is like that never knows what to do. He has many ideas in his mind. He should not think that he will receive anything from the Lord."
+      "verse": "7",
+      "text": "A person who is like that never knows what to do. He has many ideas in his mind."
+    },
+    {
+      "verse": "8",
+      "text": "He should not think that he will receive anything from the Lord."
     }
   ],
   "2": [

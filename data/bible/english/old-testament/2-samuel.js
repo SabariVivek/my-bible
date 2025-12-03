@@ -1647,6 +1647,22 @@ module.exports = {
   ],
   "16": [
     {
+      "verse": "20",
+      "text": "Then Absalom said to Ahithophel, ‘What do you think that we should do now? What is your advice? ’"
+    },
+    {
+      "verse": "21",
+      "text": "Ahithophel answered, ‘Sleep with your father's slave wives that are here. He left them to take care of his palace. Then all the people in Israel will know that you have insulted your father. They will know that he must now hate you. That will help your own men to be strong. ’"
+    },
+    {
+      "verse": "22",
+      "text": "So they put up a tent for Absalom on the roof of the palace. There he had sex with his father's slave wives, and all the Israelites could see him."
+    },
+    {
+      "verse": "23",
+      "text": "In those days, people thought that Ahithophel's words were as good as a message from God. So Absalom trusted Ahithophel as his advisor, as David had done too."
+    },
+    {
       "verse": "1",
       "text": "When David had passed beyond the top of the Mount of Olives, he met Mephibosheth's servant Ziba. Ziba was waiting there for him with two donkeys. The donkeys were ready for people to ride them. They also carried 200 loaves of bread, 100 blocks of raisins, 100 blocks of figs and a leather bag of wine."
     },
@@ -1721,22 +1737,6 @@ module.exports = {
     {
       "verse": "19",
       "text": "I served your father when he was king. So now it is surely right for me to serve you, his son. ’"
-    },
-    {
-      "verse": "20",
-      "text": "Then Absalom said to Ahithophel, ‘What do you think that we should do now? What is your advice? ’"
-    },
-    {
-      "verse": "21",
-      "text": "Ahithophel answered, ‘Sleep with your father's slave wives that are here. He left them to take care of his palace. Then all the people in Israel will know that you have insulted your father. They will know that he must now hate you. That will help your own men to be strong. ’"
-    },
-    {
-      "verse": "22",
-      "text": "So they put up a tent for Absalom on the roof of the palace. There he had sex with his father's slave wives, and all the Israelites could see him."
-    },
-    {
-      "verse": "23",
-      "text": "In those days, people thought that Ahithophel's words were as good as a message from God. So Absalom trusted Ahithophel as his advisor, as David had done too."
     }
   ],
   "17": [

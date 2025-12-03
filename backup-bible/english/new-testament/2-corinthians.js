@@ -89,8 +89,12 @@ module.exports = {
       "text": "We are not trying to tell you what you must believe, like masters would do. You are already strong in your spirits because you trust God. So we want to help you to be really happy."
     },
     {
-      "verse": "15-16",
-      "text": "So, because I was sure that you trusted me, I wanted to visit you twice. Then I could bring God's help to you twice. I decided to visit you first on my way to Macedonia. Then I would visit you again on my way back from Macedonia. After that, you could help to send me on my journey to Judea."
+      "verse": "15",
+      "text": "So, because I was sure that you trusted me, I wanted to visit you twice. Then I could bring God's help to you twice. I decided to visit you first on my way to Macedonia."
+    },
+    {
+      "verse": "16",
+      "text": "Then I would visit you again on my way back from Macedonia. After that, you could help to send me on my journey to Judea."
     }
   ],
   "2": [
@@ -983,8 +987,12 @@ module.exports = {
       "text": "I am afraid that I may be very sad when I come back to you. My God may cause me to feel ashamed about you. Some of you may still be doing bad and disgusting things. You may be having sex with people that you are not married to, or in other wrong ways. Those are the bad things that many of you did at one time. If you have not turned away from those bad things, that will make me weep."
     },
     {
-      "verse": "3-4",
-      "text": "I know that God took this man up to paradise. I do not know whether this man was still in his body or not. Only God knows. When this man was in heaven, he heard about secret things. Those are things that no words can describe. God will not let any person speak about those things. They are too special."
+      "verse": "3",
+      "text": "I know that God took this man up to paradise. I do not know whether this man was still in his body or not. Only God knows. When this man was in heaven, he heard about secret things."
+    },
+    {
+      "verse": "4",
+      "text": "Those are things that no words can describe. God will not let any person speak about those things. They are too special."
     }
   ],
   "13": [

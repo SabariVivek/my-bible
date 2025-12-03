@@ -997,6 +997,42 @@ module.exports = {
   ],
   "9": [
     {
+      "verse": "49",
+      "text": "So all the men cut branches and they followed Abimelech. They put the branches around the strong building. Then they brought fire to burn down the building. There were about 1, 000 men and women in the tower of Shechem. They all died in the fire."
+    },
+    {
+      "verse": "50",
+      "text": "Then Abimelech and his men went to Thebez. They made their camp around the city to attack it."
+    },
+    {
+      "verse": "51",
+      "text": "There was a strong tower in the middle of the city. All the leaders of the city, as well as all the men and women, ran there to hide. They locked the door. They went up onto the roof of the tower."
+    },
+    {
+      "verse": "52",
+      "text": "Abimelech and his men came to attack the tower. Abimelech went near to the door of the tower, to put a fire there."
+    },
+    {
+      "verse": "53",
+      "text": "A woman on the roof dropped a heavy rock down on his head. It broke Abimelech's skull."
+    },
+    {
+      "verse": "54",
+      "text": "Abimelech quickly said to the young man who carried his weapons, ‘Take hold of your sword and kill me! I do not want people to say that a woman killed me! ’ So the young man killed him with his sword."
+    },
+    {
+      "verse": "55",
+      "text": "When the Israelites saw that Abimelech was dead, they went home."
+    },
+    {
+      "verse": "56",
+      "text": "That was how God punished Abimelech. He had done an evil thing against his father when he killed his 70 brothers."
+    },
+    {
+      "verse": "57",
+      "text": "God was also punishing the people of Shechem for the evil things that they had done. When Gideon's son Jotham had cursed them, he said that these things would happen."
+    },
+    {
       "verse": "1",
       "text": "Gideon's son Abimelech went to Shechem to speak to his mother's brothers. He said to them and to her family's clan,"
     },
@@ -1187,42 +1223,6 @@ module.exports = {
     {
       "verse": "48",
       "text": "He took all his men up to Mount Zalmon. He used an axe to cut some branches off a tree. He put the branches on his shoulders. Then he said to his men, ‘Be quick! Do the same thing as you have seen me do! ’"
-    },
-    {
-      "verse": "49",
-      "text": "So all the men cut branches and they followed Abimelech. They put the branches around the strong building. Then they brought fire to burn down the building. There were about 1, 000 men and women in the tower of Shechem. They all died in the fire."
-    },
-    {
-      "verse": "50",
-      "text": "Then Abimelech and his men went to Thebez. They made their camp around the city to attack it."
-    },
-    {
-      "verse": "51",
-      "text": "There was a strong tower in the middle of the city. All the leaders of the city, as well as all the men and women, ran there to hide. They locked the door. They went up onto the roof of the tower."
-    },
-    {
-      "verse": "52",
-      "text": "Abimelech and his men came to attack the tower. Abimelech went near to the door of the tower, to put a fire there."
-    },
-    {
-      "verse": "53",
-      "text": "A woman on the roof dropped a heavy rock down on his head. It broke Abimelech's skull."
-    },
-    {
-      "verse": "54",
-      "text": "Abimelech quickly said to the young man who carried his weapons, ‘Take hold of your sword and kill me! I do not want people to say that a woman killed me! ’ So the young man killed him with his sword."
-    },
-    {
-      "verse": "55",
-      "text": "When the Israelites saw that Abimelech was dead, they went home."
-    },
-    {
-      "verse": "56",
-      "text": "That was how God punished Abimelech. He had done an evil thing against his father when he killed his 70 brothers."
-    },
-    {
-      "verse": "57",
-      "text": "God was also punishing the people of Shechem for the evil things that they had done. When Gideon's son Jotham had cursed them, he said that these things would happen."
     }
   ],
   "10": [
@@ -1267,10 +1267,6 @@ module.exports = {
       "text": "Then the Israelites called out to the Lord for help. They said, ‘We have turned against you. We have worshipped the idols of Baal instead of you. ’"
     },
     {
-      "verse": "11",
-      "text": "The Lord replied, ‘I have saved you many times when you called to me for help. I saved you from the power of the Egyptians, the Amorites, the Ammonites, the Philistines, the Sidonians, the Amalekites and the Midianites."
-    },
-    {
       "verse": "13",
       "text": "But now you have turned away from me and you worship other gods instead. So I will not rescue you again."
     },
@@ -1293,6 +1289,14 @@ module.exports = {
     {
       "verse": "18",
       "text": "The leaders of the people of Gilead asked each other, ‘Who will lead us to attack the Ammonites? Any man who agrees to do that will become the leader of everyone who lives in Gilead. ’"
+    },
+    {
+      "verse": "11",
+      "text": "The Lord replied, ‘I have saved you many times when you called to me for help."
+    },
+    {
+      "verse": "12",
+      "text": "I saved you from the power of the Egyptians, the Amorites, the Ammonites, the Philistines, the Sidonians, the Amalekites and the Midianites."
     }
   ],
   "11": [
@@ -2299,10 +2303,6 @@ module.exports = {
       "text": "Benjamin's soldiers came out of Gibeah to attack. They killed 22, 000 Israelites in the battle that day."
     },
     {
-      "verse": "22",
-      "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening. They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin? ’ The Lord said, ‘Yes, attack them. ’ So they went to stand in the same places around the city as they had done the day before."
-    },
-    {
       "verse": "24",
       "text": "The Israelites went to fight against Benjamin's army on the second day."
     },
@@ -2313,10 +2313,6 @@ module.exports = {
     {
       "verse": "26",
       "text": "Then the whole Israelite army went back to Bethel to meet with the Lord. They sat there and they wept. They did not eat any food that day until evening. They offered burnt offerings and peace offerings to the Lord."
-    },
-    {
-      "verse": "27",
-      "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them? ’ The Lord said, ‘Attack them. Tomorrow I will put them under your power. ’"
     },
     {
       "verse": "29",
@@ -2349,10 +2345,6 @@ module.exports = {
     {
       "verse": "36",
       "text": "Finally, the men of Benjamin realized that they had lost the battle. This is how it happened: Israel's soldiers let Benjamin's army chase after them. They trusted the soldiers who were hiding around Gibeah to attack the city."
-    },
-    {
-      "verse": "37",
-      "text": "The Israelites had agreed a sign with their men who were hiding. When those men ran into Gibeah and they destroyed everything there, they would make the sign. They would light a big fire so that the smoke went up into the sky."
     },
     {
       "verse": "39",
@@ -2393,6 +2385,30 @@ module.exports = {
     {
       "verse": "48",
       "text": "The Israelites returned to the land that belonged to Benjamin's tribe. They killed the people and animals in all the towns there. As they came to each town, they destroyed it with fire."
+    },
+    {
+      "verse": "22",
+      "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening."
+    },
+    {
+      "verse": "23",
+      "text": "They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin? ’ The Lord said, ‘Yes, attack them. ’ So they went to stand in the same places around the city as they had done the day before."
+    },
+    {
+      "verse": "27",
+      "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them? ’ The Lord said, ‘Attack them."
+    },
+    {
+      "verse": "28",
+      "text": "Tomorrow I will put them under your power. ’."
+    },
+    {
+      "verse": "37",
+      "text": "The Israelites had agreed a sign with their men who were hiding. When those men ran into Gibeah and they destroyed everything there, they would make the sign."
+    },
+    {
+      "verse": "38",
+      "text": "They would light a big fire so that the smoke went up into the sky."
     }
   ],
   "21": [

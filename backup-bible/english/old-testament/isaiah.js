@@ -297,7 +297,7 @@ module.exports = {
       "text": "The city's gates will see all this and they will weep! The city will be empty. Zion will be like a poor woman who sits on the ground, completely alone."
     },
     {
-      "verse": "18-23",
+      "verse": "18",
       "text": "On that day, the Lord God will take away the beautiful rings that they wear on their ankles. He will remove all the valuable rings and bright stones that they wear on their heads, their necks, their ears, their arms, their fingers and their noses. He will take away their beautiful clothes, their belts, their perfumes and their magic rings."
     }
   ],

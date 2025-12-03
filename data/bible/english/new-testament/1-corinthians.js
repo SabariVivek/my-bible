@@ -418,7 +418,11 @@ module.exports = {
     },
     {
       "verse": "12",
-      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group. Do what the Bible says:‘Send the bad person away from among yourselves. ’"
+      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group."
+    },
+    {
+      "verse": "13",
+      "text": "Do what the Bible says:‘Send the bad person away from among yourselves. ’."
     }
   ],
   "6": [

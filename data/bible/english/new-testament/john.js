@@ -475,10 +475,6 @@ module.exports = {
       "text": "He came to a town in Samaria called Sychar. It was near to the piece of land that Jacob had given to his son, Joseph, many years earlier."
     },
     {
-      "verse": "6",
-      "text": "Jacob's well was there. Jesus was tired after his journey and he sat down by the well. It was about midday. His disciples had gone to buy food in the town. A woman from Samaria came to the well to get some water. Jesus said to her, ‘Please give a drink to me. ’"
-    },
-    {
       "verse": "9",
       "text": "The woman from Samaria said to him, ‘You are a Jew and I am a woman from Samaria. Why would you ask me to give you a drink? ’ (The Jews usually do not talk to people who come from Samaria. )"
     },
@@ -661,6 +657,18 @@ module.exports = {
     {
       "verse": "54",
       "text": "This was the second miracle that Jesus did after he returned from Judea to Galilee."
+    },
+    {
+      "verse": "6",
+      "text": "Jacob's well was there. Jesus was tired after his journey and he sat down by the well. It was about midday."
+    },
+    {
+      "verse": "7",
+      "text": "His disciples had gone to buy food in the town. A woman from Samaria came to the well to get some water."
+    },
+    {
+      "verse": "8",
+      "text": "Jesus said to her, ‘Please give a drink to me. ’."
     }
   ],
   "5": [
@@ -854,6 +862,54 @@ module.exports = {
     }
   ],
   "6": [
+    {
+      "verse": "60",
+      "text": "Many of Jesus' disciples did not like these words. They said, ‘This thing that he teaches is too difficult. Nobody can agree with it! ’"
+    },
+    {
+      "verse": "61",
+      "text": "Jesus himself knew that the disciples did not like his message. He did not need anyone to tell him. He said to them, ‘This seems to make you angry."
+    },
+    {
+      "verse": "62",
+      "text": "Think about this: The Son of Man will go up again to the place where he was before. And you will see him go up. Will you agree to that?"
+    },
+    {
+      "verse": "63",
+      "text": "It is the Spirit that gives you life. People cannot do that. The words that I have spoken to you come from the Spirit. They give you life."
+    },
+    {
+      "verse": "64",
+      "text": "But some of you do not believe my message. ’Jesus had known from the beginning which of them would not believe in him. Also, he had always known who would sell him to his enemies."
+    },
+    {
+      "verse": "65",
+      "text": "Then Jesus said to them, ‘That is why I told you that only the Father can bring people to me. Nobody can come to me unless the Father makes them able to come. ’"
+    },
+    {
+      "verse": "66",
+      "text": "From that time, many of Jesus' disciples left him. They did not go with him any longer."
+    },
+    {
+      "verse": "67",
+      "text": "apostles, ‘Do you want to go away from me, too? ’"
+    },
+    {
+      "verse": "68",
+      "text": "Simon Peter answered him, ‘Lord, there is nobody else that we could go to. You speak the words that give us life for ever."
+    },
+    {
+      "verse": "69",
+      "text": "We believe that you are the Holy One that God has sent. We are sure about that. ’"
+    },
+    {
+      "verse": "70",
+      "text": "Jesus replied, ‘I have chosen the 12 of you. But one of you is a servant of Satan! ’"
+    },
+    {
+      "verse": "71",
+      "text": "He was speaking about Judas, the son of Simon Iscariot. Judas was one of the 12 apostles, but later he would sell Jesus to Jesus' enemies."
+    },
     {
       "verse": "1",
       "text": "Some time after that, Jesus went across Lake Galilee, which is also called Lake Tiberias."
@@ -1089,54 +1145,6 @@ module.exports = {
     {
       "verse": "59",
       "text": "Jesus said these things while he was teaching in the Jewish meeting place at Capernaum."
-    },
-    {
-      "verse": "60",
-      "text": "Many of Jesus' disciples did not like these words. They said, ‘This thing that he teaches is too difficult. Nobody can agree with it! ’"
-    },
-    {
-      "verse": "61",
-      "text": "Jesus himself knew that the disciples did not like his message. He did not need anyone to tell him. He said to them, ‘This seems to make you angry."
-    },
-    {
-      "verse": "62",
-      "text": "Think about this: The Son of Man will go up again to the place where he was before. And you will see him go up. Will you agree to that?"
-    },
-    {
-      "verse": "63",
-      "text": "It is the Spirit that gives you life. People cannot do that. The words that I have spoken to you come from the Spirit. They give you life."
-    },
-    {
-      "verse": "64",
-      "text": "But some of you do not believe my message. ’Jesus had known from the beginning which of them would not believe in him. Also, he had always known who would sell him to his enemies."
-    },
-    {
-      "verse": "65",
-      "text": "Then Jesus said to them, ‘That is why I told you that only the Father can bring people to me. Nobody can come to me unless the Father makes them able to come. ’"
-    },
-    {
-      "verse": "66",
-      "text": "From that time, many of Jesus' disciples left him. They did not go with him any longer."
-    },
-    {
-      "verse": "67",
-      "text": "apostles, ‘Do you want to go away from me, too? ’"
-    },
-    {
-      "verse": "68",
-      "text": "Simon Peter answered him, ‘Lord, there is nobody else that we could go to. You speak the words that give us life for ever."
-    },
-    {
-      "verse": "69",
-      "text": "We believe that you are the Holy One that God has sent. We are sure about that. ’"
-    },
-    {
-      "verse": "70",
-      "text": "Jesus replied, ‘I have chosen the 12 of you. But one of you is a servant of Satan! ’"
-    },
-    {
-      "verse": "71",
-      "text": "He was speaking about Judas, the son of Simon Iscariot. Judas was one of the 12 apostles, but later he would sell Jesus to Jesus' enemies."
     }
   ],
   "7": [
@@ -1750,7 +1758,7 @@ module.exports = {
     },
     {
       "verse": "40",
-      "text": "Some of the Pharisees who were there with him heard this. They asked Jesus, ‘Do you mean that we are also blind? ’"
+      "text": "Some of the Pharisees who were there with him heard this. They asked Jesus, ���Do you mean that we are also blind? ’"
     },
     {
       "verse": "41",
@@ -2991,6 +2999,26 @@ module.exports = {
   ],
   "18": [
     {
+      "verse": "32",
+      "text": "Jesus had already told people how he would die. These things happened to make his words become true."
+    },
+    {
+      "verse": "33",
+      "text": "Pilate went back inside his palace. He told Jesus to come and stand in front of him. He asked Jesus, ‘Are you the king of the Jews? ’"
+    },
+    {
+      "verse": "34",
+      "text": "Jesus said, ‘Is that your own idea, or have other people spoken to you about me? ’"
+    },
+    {
+      "verse": "35",
+      "text": "Pilate replied, ‘I am not a Jew, am I? It was your own people and the leaders of your priests who brought you to me. What have you done? ’"
+    },
+    {
+      "verse": "36",
+      "text": "Jesus said, ‘My kingdom does not belong to this world. If it did, my disciples would have fought for me. They would have fought so that the Jewish leaders could not take hold of me. No, my kingdom belongs to another place. ’"
+    },
+    {
       "verse": "1",
       "text": "When Jesus had finished praying, he and his disciples went out. They went across the Kidron valley. On the other side, there was a garden. Jesus and his disciples went into it."
     },
@@ -3113,26 +3141,6 @@ module.exports = {
     {
       "verse": "31",
       "text": "Pilate said to them, ‘You yourselves take him away. You should judge him by your own laws. ’ The Jewish leaders replied, ‘We do not have authority to kill anyone when they have done something bad. ’"
-    },
-    {
-      "verse": "32",
-      "text": "Jesus had already told people how he would die. These things happened to make his words become true."
-    },
-    {
-      "verse": "33",
-      "text": "Pilate went back inside his palace. He told Jesus to come and stand in front of him. He asked Jesus, ‘Are you the king of the Jews? ’"
-    },
-    {
-      "verse": "34",
-      "text": "Jesus said, ‘Is that your own idea, or have other people spoken to you about me? ’"
-    },
-    {
-      "verse": "35",
-      "text": "Pilate replied, ‘I am not a Jew, am I? It was your own people and the leaders of your priests who brought you to me. What have you done? ’"
-    },
-    {
-      "verse": "36",
-      "text": "Jesus said, ‘My kingdom does not belong to this world. If it did, my disciples would have fought for me. They would have fought so that the Jewish leaders could not take hold of me. No, my kingdom belongs to another place. ’"
     },
     {
       "verse": "37",

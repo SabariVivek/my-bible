@@ -1207,8 +1207,12 @@ module.exports = {
       "text": "He said to me, ‘Do not be afraid. God loves you very much. Have peace in your mind. Now be strong and brave! ’ When he said this, I felt stronger. I said, ‘Sir, please speak to me now. You have made me strong again. ’"
     },
     {
-      "verse": "20-21",
-      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear. Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
+      "verse": "20",
+      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear."
+    },
+    {
+      "verse": "21",
+      "text": "Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
     }
   ],
   "11": [

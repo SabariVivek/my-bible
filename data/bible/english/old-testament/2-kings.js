@@ -575,10 +575,6 @@ module.exports = {
   ],
   "6": [
     {
-      "verse": "1",
-      "text": "One day, the group of prophets said to Elisha, ‘The place where we meet with you is too small for us."
-    },
-    {
       "verse": "2",
       "text": "We must go to the Jordan River to cut down some trees. Each one of us can bring back some wood to build a new place for us to meet in. ’ Elisha agreed and he told them to go."
     },
@@ -681,6 +677,10 @@ module.exports = {
     {
       "verse": "27",
       "text": "The king replied, ‘Why do you ask me? Only the Lord can help you. I have no wheat or wine to give you. ’"
+    },
+    {
+      "verse": "1",
+      "text": "One day, the group of prophets said to Elisha, ‘The place where we meet with you is too small for us."
     },
     {
       "verse": "28",

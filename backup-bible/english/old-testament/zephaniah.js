@@ -127,8 +127,12 @@ module.exports = {
       "text": "All this will happen to that city, the proud city. That city's people said in their minds, ‘Here we are. We are greater than all the other people. ’But then, other people will destroy their city! Only bits of it will still be there. Then wild animals will come and they will lie down in it. People will see this. So any people who pass by the city will make noises with their lips. And they will hold their fists up. In this way, they will show that they think bad things about the city."
     },
     {
-      "verse": "2-3",
-      "text": "The wind takes away the dry parts of a plant that covered the seed. It will be like that when I punish you. Before it is the time for me to punish you, look for me. Before this time is past, look for me. Look for me, before I become very, very angry with you. There will be a day when the Lord will be angry. Look for me, before that day. Yes, look for the Lord, all you people who want to make him happy. You have done what the Lord wants. Continue to do what is good. But do not think that you are great. Perhaps you will find a safe placeon the day when the Lord is angry. It will be like that when I punish you. Before it is the time for me to punish you, look for me. Before this time is past, look for me. Look for me, before I become very, very angry with you. There will be a day when the Lord will be angry. Look for me, before that day. Yes, look for the Lord, all you people who want to make him happy. You have done what the Lord wants. Continue to do what is good. But do not think that you are great. Perhaps you will find a safe place on the day when the Lord is angry."
+      "verse": "2",
+      "text": "The wind takes away the dry parts of a plant that covered the seed. It will be like that when I punish you. Before it is the time for me to punish you, look for me. Before this time is past, look for me. Look for me, before I become very, very angry with you. There will be a day when the Lord will be angry. Look for me, before that day. Yes, look for the Lord, all you people who want to make him happy. You have done what the Lord wants. Continue to do what is good. But do not think that you are great. Perhaps you will find a safe placeon the day when the Lord is angry."
+    },
+    {
+      "verse": "3",
+      "text": "It will be like that when I punish you. Before it is the time for me to punish you, look for me. Before this time is past, look for me. Look for me, before I become very, very angry with you. There will be a day when the Lord will be angry. Look for me, before that day. Yes, look for the Lord, all you people who want to make him happy. You have done what the Lord wants. Continue to do what is good. But do not think that you are great. Perhaps you will find a safe place on the day when the Lord is angry."
     }
   ],
   "3": [

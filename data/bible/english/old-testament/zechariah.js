@@ -691,6 +691,22 @@ module.exports = {
   ],
   "12": [
     {
+      "verse": "11",
+      "text": "On that day, people will weep loudly in Jerusalem. It will be like when they were weeping about Hadad-Rimmon in the fields of Megiddo."
+    },
+    {
+      "verse": "12",
+      "text": "All the people will weep. Each family will weep by itself. The family of King David will weep by itself. And their wives will weep by themselves. The family of Nathan will weep by itself. And their wives will weep by themselves."
+    },
+    {
+      "verse": "13",
+      "text": "The family of Levi will weep by itself. And their wives will weep by themselves. The family of Shimei will weep by itself. And their wives will weep by themselves."
+    },
+    {
+      "verse": "14",
+      "text": "And all the families that have not died will weep by themselves. And their wives will weep by themselves. ’"
+    },
+    {
       "verse": "1",
       "text": "This is the Lord's message about Israel. The Lord made the skies and the whole wide earth. He makes men and women."
     },
@@ -729,22 +745,6 @@ module.exports = {
     {
       "verse": "10",
       "text": "I will cause the family of David and the people in Jerusalem to think seriously about me. Then they will know that I am kind to them. And they will want to pray to me. They will look at me whom they pierced (made holes in). They will weep about him as those that weep after the death of their only son. They will cry aloud as if their only son was dead."
-    },
-    {
-      "verse": "11",
-      "text": "On that day, people will weep loudly in Jerusalem. It will be like when they were weeping about Hadad-Rimmon in the fields of Megiddo."
-    },
-    {
-      "verse": "12",
-      "text": "All the people will weep. Each family will weep by itself. The family of King David will weep by itself. And their wives will weep by themselves. The family of Nathan will weep by itself. And their wives will weep by themselves."
-    },
-    {
-      "verse": "13",
-      "text": "The family of Levi will weep by itself. And their wives will weep by themselves. The family of Shimei will weep by itself. And their wives will weep by themselves."
-    },
-    {
-      "verse": "14",
-      "text": "And all the families that have not died will weep by themselves. And their wives will weep by themselves. ’"
     }
   ],
   "13": [

@@ -245,10 +245,6 @@ module.exports = {
       "text": "If you do not keep me safe, my enemies will tear me into pieces. They will attack me like lions do, and nobody will be able to save me. my enemies will tear me into pieces. They will attack me like lions do, and nobody will be able to save me."
     },
     {
-      "verse": "3",
-      "text": "Lord, my God, if I have done a wrong thing, then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me. If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt. Selah. then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me. If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt. Selah."
-    },
-    {
       "verse": "6",
       "text": "But Lord, now do something! Wake up and help me! Show how angry you are against my enemies. Punish them in the way that you know is right! Wake up and help me! Show how angry you are against my enemies. Punish them in the way that you know is right!"
     },
@@ -295,6 +291,18 @@ module.exports = {
     {
       "verse": "17",
       "text": "So I will thank the Lordbecause he does what is right. The Lord is the Most High God, so I will sing to praise his name!"
+    },
+    {
+      "verse": "3",
+      "text": "Lord, my God, if I have done a wrong thing, then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me. If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt."
+    },
+    {
+      "verse": "4",
+      "text": "Selah. then let my enemies chase me and catch me. If I have done a bad thing against a friend, let my enemies catch me."
+    },
+    {
+      "verse": "5",
+      "text": "If I have helped a friend's enemy to attack him, let my enemies catch me! If I am guilty of any of these things, let my enemies knock me down to the ground. They should leave me there, so that I lie as a dead person in the dirt. Selah."
     }
   ],
   "8": [
@@ -323,12 +331,16 @@ module.exports = {
       "text": "You have chosen them to rule everything that you have made. You have put everything under their authority. You have put everything under their authority."
     },
     {
-      "verse": "7",
-      "text": "Yes! Humans rule them all: Farm animals and wild animals, birds, fish and all the things that swim in the sea. Farm animals and wild animals, birds, fish and all the things that swim in the sea."
-    },
-    {
       "verse": "9",
       "text": "Lord, our ruler, your name is famous all over the world."
+    },
+    {
+      "verse": "7",
+      "text": "Yes! Humans rule them all: Farm animals and wild animals, birds, fish and all the things that swim in the sea."
+    },
+    {
+      "verse": "8",
+      "text": "Farm animals and wild animals, birds, fish and all the things that swim in the sea."
     }
   ],
   "9": [
@@ -1285,6 +1297,42 @@ module.exports = {
   ],
   "25": [
     {
+      "verse": "14",
+      "text": "The Lord is a guide for those who serve him. He teaches them to obey his covenant. He teaches them to obey his covenant."
+    },
+    {
+      "verse": "15",
+      "text": "I always look to the Lord for help. He will keep me safe from my enemies, so that their traps do not catch me. He will keep me safe from my enemies, so that their traps do not catch me."
+    },
+    {
+      "verse": "16",
+      "text": "Please turn towards me, Lord, and be kind to me. I feel very weak and lonely. and be kind to me. I feel very weak and lonely."
+    },
+    {
+      "verse": "17",
+      "text": "I worry a lot about my troubles. Please rescue me from them! Please rescue me from them!"
+    },
+    {
+      "verse": "18",
+      "text": "Look at all my pain! See how I am suffering! Forgive me for all my sins. See how I am suffering! Forgive me for all my sins."
+    },
+    {
+      "verse": "19",
+      "text": "Look at all my enemies! There are very many of them! They hate me so muchthat they want to hurt me. There are very many of them! They hate me so much that they want to hurt me."
+    },
+    {
+      "verse": "20",
+      "text": "Keep my life safe and take care of me. I have come to you to keep me safe, so do not let me be ashamed. I have come to you to keep me safe, so do not let me be ashamed."
+    },
+    {
+      "verse": "21",
+      "text": "I trust you to save me. Please take care of me, because I am honest and good. Please take care of me, because I am honest and good."
+    },
+    {
+      "verse": "22",
+      "text": "God, save Israel's people from all their troubles!"
+    },
+    {
       "verse": "1",
       "text": "Lord, I offer myself to you."
     },
@@ -1335,42 +1383,6 @@ module.exports = {
     {
       "verse": "13",
       "text": "People like that will enjoy a good life. The land will belong to their descendants. The land will belong to their descendants."
-    },
-    {
-      "verse": "14",
-      "text": "The Lord is a guide for those who serve him. He teaches them to obey his covenant. He teaches them to obey his covenant."
-    },
-    {
-      "verse": "15",
-      "text": "I always look to the Lord for help. He will keep me safe from my enemies, so that their traps do not catch me. He will keep me safe from my enemies, so that their traps do not catch me."
-    },
-    {
-      "verse": "16",
-      "text": "Please turn towards me, Lord, and be kind to me. I feel very weak and lonely. and be kind to me. I feel very weak and lonely."
-    },
-    {
-      "verse": "17",
-      "text": "I worry a lot about my troubles. Please rescue me from them! Please rescue me from them!"
-    },
-    {
-      "verse": "18",
-      "text": "Look at all my pain! See how I am suffering! Forgive me for all my sins. See how I am suffering! Forgive me for all my sins."
-    },
-    {
-      "verse": "19",
-      "text": "Look at all my enemies! There are very many of them! They hate me so muchthat they want to hurt me. There are very many of them! They hate me so much that they want to hurt me."
-    },
-    {
-      "verse": "20",
-      "text": "Keep my life safe and take care of me. I have come to you to keep me safe, so do not let me be ashamed. I have come to you to keep me safe, so do not let me be ashamed."
-    },
-    {
-      "verse": "21",
-      "text": "I trust you to save me. Please take care of me, because I am honest and good. Please take care of me, because I am honest and good."
-    },
-    {
-      "verse": "22",
-      "text": "God, save Israel's people from all their troubles!"
     }
   ],
   "26": [
@@ -3363,6 +3375,10 @@ module.exports = {
   ],
   "56": [
     {
+      "verse": "10",
+      "text": "By God's help, I will praise his promise. Yes, by the Lord's help, I will praise his word. Yes, by the Lord's help, I will praise his word."
+    },
+    {
       "verse": "1",
       "text": "God, please be kind to me, and help me, because people are fighting me. My enemies are attacking me every day. because people are fighting me. My enemies are attacking me every day."
     },
@@ -3397,10 +3413,6 @@ module.exports = {
     {
       "verse": "9",
       "text": "When I call to you for help, my enemies will turn back. I am sure of this: God is with me, to fight for me. my enemies will turn back. I am sure of this: God is with me, to fight for me."
-    },
-    {
-      "verse": "10",
-      "text": "By God's help, I will praise his promise. Yes, by the Lord's help, I will praise his word. Yes, by the Lord's help, I will praise his word."
     },
     {
       "verse": "11",
@@ -4955,10 +4967,6 @@ module.exports = {
       "text": "They ate as much as they could eat. Yes, God gave them what they had demanded! Yes, God gave them what they had demanded!"
     },
     {
-      "verse": "30",
-      "text": "But God became very angry with them, even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died. even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died."
-    },
-    {
       "verse": "32",
       "text": "Even when this happened, the people continued to do bad things. When God had done these miracles, they still did not trust him to help them. the people continued to do bad things. When God had done these miracles, they still did not trust him to help them."
     },
@@ -5121,6 +5129,14 @@ module.exports = {
     {
       "verse": "72",
       "text": "David took care of them with an honest heart. He was wise in the way that he led them."
+    },
+    {
+      "verse": "30",
+      "text": "But God became very angry with them, even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died."
+    },
+    {
+      "verse": "31",
+      "text": "even before they had finished eating. While the food was still in their mouths, he killed the strongest men among them. Many of the best young Israelite men died."
     }
   ],
   "79": [
@@ -5431,26 +5447,6 @@ module.exports = {
   ],
   "84": [
     {
-      "verse": "1",
-      "text": "Lord Almighty, the temple where you live is beautiful! the temple where you live is beautiful!"
-    },
-    {
-      "verse": "2",
-      "text": "I want very much to go to the Lord's temple. I very much want to be in the temple yards. With all that I am, and with great joy, I sing to you, the God who lives for ever! I very much want to be in the temple yards. With all that I am, and with great joy, I sing to you, the God who lives for ever!"
-    },
-    {
-      "verse": "3",
-      "text": "In your temple, even sparrows have their homes. Swallows builds their nests there, to take care of their babies. They can be near to your altars, Lord Almighty, my king and my God. even sparrows have their homes. Swallows builds their nests there, to take care of their babies. They can be near to your altars, Lord Almighty, my king and my God."
-    },
-    {
-      "verse": "4",
-      "text": "You have truly blessed those peoplewho live in your temple. They can praise you all the time! Selah. who live in your temple. They can praise you all the time! Selah."
-    },
-    {
-      "verse": "5",
-      "text": "You have blessed those peoplewho come to you to make them strong. They love to travel to your temple in Zion. who come to you to make them strong. They love to travel to your temple in Zion."
-    },
-    {
       "verse": "6",
       "text": "As they go through the dry Baka valley, springs of water appear there! The autumn rain covers the valley with pools. springs of water appear there! The autumn rain covers the valley with pools."
     },
@@ -5477,6 +5473,26 @@ module.exports = {
     {
       "verse": "12",
       "text": "Lord Almighty, you have truly blessed everyone who trusts in you!"
+    },
+    {
+      "verse": "1",
+      "text": "Lord Almighty, the temple where you live is beautiful! the temple where you live is beautiful!"
+    },
+    {
+      "verse": "2",
+      "text": "I want very much to go to the Lord's temple. I very much want to be in the temple yards. With all that I am, and with great joy, I sing to you, the God who lives for ever! I very much want to be in the temple yards. With all that I am, and with great joy, I sing to you, the God who lives for ever!"
+    },
+    {
+      "verse": "3",
+      "text": "In your temple, even sparrows have their homes. Swallows builds their nests there, to take care of their babies. They can be near to your altars, Lord Almighty, my king and my God. even sparrows have their homes. Swallows builds their nests there, to take care of their babies. They can be near to your altars, Lord Almighty, my king and my God."
+    },
+    {
+      "verse": "4",
+      "text": "You have truly blessed those peoplewho live in your temple. They can praise you all the time! Selah. who live in your temple. They can praise you all the time! Selah."
+    },
+    {
+      "verse": "5",
+      "text": "You have blessed those peoplewho come to you to make them strong. They love to travel to your temple in Zion. who come to you to make them strong. They love to travel to your temple in Zion."
     }
   ],
   "85": [
@@ -5825,10 +5841,6 @@ module.exports = {
       "text": "Someone from his family will always be king. They will rule for ever, as long as there are skies above us. They will rule for ever, as long as there are skies above us."
     },
     {
-      "verse": "30",
-      "text": "But I will punish his descendants, if they do not accept my laws. If they do not obey my teaching, my rules, or my commands, if they do not accept my laws. If they do not obey my teaching, my rules, or my commands,"
-    },
-    {
       "verse": "32",
       "text": "I will punish them. Because of their sins, I will give them much pain. Because of their sins, I will give them much pain."
     },
@@ -5911,6 +5923,14 @@ module.exports = {
     {
       "verse": "52",
       "text": "Praise the Lord as he deserves! Yes! Amen! We agree!"
+    },
+    {
+      "verse": "30",
+      "text": "But I will punish his descendants, if they do not accept my laws. If they do not obey my teaching, my rules, or my commands, if they do not accept my laws."
+    },
+    {
+      "verse": "31",
+      "text": "If they do not obey my teaching, my rules, or my commands,."
     }
   ],
   "90": [
@@ -6543,10 +6563,6 @@ module.exports = {
       "text": "All day my enemies insult me. They laugh at meand they use my name as a curse. They laugh at me and they use my name as a curse."
     },
     {
-      "verse": "9",
-      "text": "Because you are so angry with me, I eat ashes as my food. My tears dropinto the water that I drink. It seems that you have picked me up, and then you have thrown me away. I eat ashes as my food. My tears drop into the water that I drink. It seems that you have picked me up, and then you have thrown me away."
-    },
-    {
       "verse": "11",
       "text": "My days are disappearing, like a shadow in the evening. Like dry grass, I will soon die. like a shadow in the evening. Like dry grass, I will soon die."
     },
@@ -6617,6 +6633,14 @@ module.exports = {
     {
       "verse": "28",
       "text": "As your servants, our children will live here safely. Their children too will be safe, as they live near to you. ’"
+    },
+    {
+      "verse": "9",
+      "text": "Because you are so angry with me, I eat ashes as my food. My tears dropinto the water that I drink. It seems that you have picked me up, and then you have thrown me away."
+    },
+    {
+      "verse": "10",
+      "text": "I eat ashes as my food. My tears drop into the water that I drink. It seems that you have picked me up, and then you have thrown me away."
     }
   ],
   "103": [
@@ -7357,10 +7381,6 @@ module.exports = {
       "text": "They should praise the Lordwhen they meet together. They should praise himat the meeting of their leaders. when they meet together. They should praise him at the meeting of their leaders."
     },
     {
-      "verse": "33",
-      "text": "In places where people are wicked, God makes the streams and rivers become dry, so that the land becomes a desert. He makes good landbecome a salty wilderness. God makes the streams and rivers become dry, so that the land becomes a desert. He makes good land become a salty wilderness."
-    },
-    {
       "verse": "35",
       "text": "But for his people, he changes desertsto become pools of water. He makes springs of water in dry land. to become pools of water. He makes springs of water in dry land."
     },
@@ -7395,6 +7415,14 @@ module.exports = {
     {
       "verse": "43",
       "text": "Wise people should think about these things. They should understand the Lord's faithful love for his people."
+    },
+    {
+      "verse": "33",
+      "text": "In places where people are wicked, God makes the streams and rivers become dry, so that the land becomes a desert. He makes good landbecome a salty wilderness."
+    },
+    {
+      "verse": "34",
+      "text": "God makes the streams and rivers become dry, so that the land becomes a desert. He makes good land become a salty wilderness."
     }
   ],
   "108": [
@@ -7453,42 +7481,6 @@ module.exports = {
   ],
   "109": [
     {
-      "verse": "1",
-      "text": "You are the God that I praise. Let me hear you speak! Let me hear you speak!"
-    },
-    {
-      "verse": "2",
-      "text": "Wicked people are saying bad things against me. They are telling lies about me. They are telling lies about me."
-    },
-    {
-      "verse": "3",
-      "text": "They are all round me, and they say cruel things. I have done nothing against them, but they still attack me. and they say cruel things. I have done nothing against them, but they still attack me."
-    },
-    {
-      "verse": "4",
-      "text": "I have loved them, but they still accuse me. I will continue to pray for them. but they still accuse me. I will continue to pray for them."
-    },
-    {
-      "verse": "5",
-      "text": "I have been kind to them, but they do bad things to me in return. I have loved them, but they hate me in return. but they do bad things to me in return. I have loved them, but they hate me in return."
-    },
-    {
-      "verse": "6",
-      "text": "Find an evil man to judge my enemy! Put somebody at his right side to accuse him! Put somebody at his right side to accuse him!"
-    },
-    {
-      "verse": "7",
-      "text": "When they judge him, show that he is guilty. Show that even his prayers are a sin. show that he is guilty. Show that even his prayers are a sin."
-    },
-    {
-      "verse": "8",
-      "text": "Make his life very short! Let somebody else do the job which he did. Let somebody else do the job which he did."
-    },
-    {
-      "verse": "9",
-      "text": "May he soon die, so that his children have no father, and his wife has no husband. so that his children have no father, and his wife has no husband."
-    },
-    {
       "verse": "10",
       "text": "Cause his children to have no home, so that they go from place to place, and ask people to give them food. so that they go from place to place, and ask people to give them food."
     },
@@ -7523,6 +7515,42 @@ module.exports = {
     {
       "verse": "18",
       "text": "He always cursed others, as he always put on clothes. So those curses have become like his food and drink. May they go deep inside him, like olive oil that goes into his bones. as he always put on clothes. So those curses have become like his food and drink. May they go deep inside him, like olive oil that goes into his bones."
+    },
+    {
+      "verse": "1",
+      "text": "You are the God that I praise. Let me hear you speak! Let me hear you speak!"
+    },
+    {
+      "verse": "2",
+      "text": "Wicked people are saying bad things against me. They are telling lies about me. They are telling lies about me."
+    },
+    {
+      "verse": "3",
+      "text": "They are all round me, and they say cruel things. I have done nothing against them, but they still attack me. and they say cruel things. I have done nothing against them, but they still attack me."
+    },
+    {
+      "verse": "4",
+      "text": "I have loved them, but they still accuse me. I will continue to pray for them. but they still accuse me. I will continue to pray for them."
+    },
+    {
+      "verse": "5",
+      "text": "I have been kind to them, but they do bad things to me in return. I have loved them, but they hate me in return. but they do bad things to me in return. I have loved them, but they hate me in return."
+    },
+    {
+      "verse": "6",
+      "text": "Find an evil man to judge my enemy! Put somebody at his right side to accuse him! Put somebody at his right side to accuse him!"
+    },
+    {
+      "verse": "7",
+      "text": "When they judge him, show that he is guilty. Show that even his prayers are a sin. show that he is guilty. Show that even his prayers are a sin."
+    },
+    {
+      "verse": "8",
+      "text": "Make his life very short! Let somebody else do the job which he did. Let somebody else do the job which he did."
+    },
+    {
+      "verse": "9",
+      "text": "May he soon die, so that his children have no father, and his wife has no husband. so that his children have no father, and his wife has no husband."
     },
     {
       "verse": "19",
@@ -9287,6 +9315,10 @@ module.exports = {
       "text": "Thank the Lord who rules all lords. His faithful love will always continue. His faithful love will always continue."
     },
     {
+      "verse": "26",
+      "text": "Yes, thank the God of heaven! His faithful love will always continue."
+    },
+    {
       "verse": "4",
       "text": "The Lord himself does great miracles. He was wise when he made the skies. He put the earth across the water of the seas. He made the great lights to shine in the sky. He made the sun to rule over the day. He made the moon and the stars to rule the night. So thank the Lord! His faithful love will always continue. He was wise when he made the skies. He put the earth across the water of the seas. He made the great lights to shine in the sky. He made the sun to rule over the day. He made the moon and the stars to rule the night. So thank the Lord! His faithful love will always continue."
     },
@@ -9300,11 +9332,15 @@ module.exports = {
     },
     {
       "verse": "23",
-      "text": "The Lord thought about us when we were upset. He saved us from the power of our enemies. He gives food to everything that lives. So thank the Lord! His faithful love will always continue. He saved us from the power of our enemies. He gives food to everything that lives. So thank the Lord! His faithful love will always continue."
+      "text": "The Lord thought about us when we were upset. He saved us from the power of our enemies. He gives food to everything that lives."
     },
     {
-      "verse": "26",
-      "text": "Yes, thank the God of heaven! His faithful love will always continue."
+      "verse": "24",
+      "text": "So thank the Lord! His faithful love will always continue. He saved us from the power of our enemies."
+    },
+    {
+      "verse": "25",
+      "text": "He gives food to everything that lives. So thank the Lord! His faithful love will always continue."
     }
   ],
   "137": [
@@ -9533,18 +9569,6 @@ module.exports = {
   ],
   "141": [
     {
-      "verse": "1",
-      "text": "Lord, I am calling to you for help. Come to me quickly! Please listen to what I am saying. Come to me quickly! Please listen to what I am saying."
-    },
-    {
-      "verse": "2",
-      "text": "I offer my prayer to you like incense. Please accept it when I raise my hands to you. Accept it like a gift that I offer to you in the evening. Please accept it when I raise my hands to you. Accept it like a gift that I offer to you in the evening."
-    },
-    {
-      "verse": "3",
-      "text": "Lord, keep my mouth safe, so that I do not speak bad things. so that I do not speak bad things."
-    },
-    {
       "verse": "4",
       "text": "Do not let my mind want evil things. Do not let me join with wicked people, to do the same bad things that they do. I do not even want to eat their good food. Do not let me join with wicked people, to do the same bad things that they do. I do not even want to eat their good food."
     },
@@ -9571,6 +9595,18 @@ module.exports = {
     {
       "verse": "10",
       "text": "May those bad people fall into their own traps! Then I will be free from their power."
+    },
+    {
+      "verse": "1",
+      "text": "Lord, I am calling to you for help. Come to me quickly! Please listen to what I am saying. Come to me quickly! Please listen to what I am saying."
+    },
+    {
+      "verse": "2",
+      "text": "I offer my prayer to you like incense. Please accept it when I raise my hands to you. Accept it like a gift that I offer to you in the evening. Please accept it when I raise my hands to you. Accept it like a gift that I offer to you in the evening."
+    },
+    {
+      "verse": "3",
+      "text": "Lord, keep my mouth safe, so that I do not speak bad things. so that I do not speak bad things."
     }
   ],
   "142": [

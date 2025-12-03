@@ -279,10 +279,6 @@ module.exports = {
       "text": "Then you must do this. Take a flat plate of iron and put it between you and the brick. It will be like a wall between you and the city. Look towards the city. Show that soldiers are around the city and they are ready to attack it. Nobody can escape. This will be a picture to show Israel's people what will happen to them."
     },
     {
-      "verse": "4",
-      "text": "Then lie down on your left side. Show that you are receiving the punishment for the sins of the Israelites. You will suffer like that for 390 days. It will show the number of years that I have decided to punish Israel's people. Each day that you suffer will show one year of their punishment."
-    },
-    {
       "verse": "6",
       "text": "After you have finished all those days, lie down again. This time, lie down on your right side for 40 days. You will suffer like that to show the punishment for the sins of Judah's people. Each day will show one year of their punishment."
     },
@@ -329,6 +325,14 @@ module.exports = {
     {
       "verse": "17",
       "text": "They will not have enough food or water. Everyone will be very upset. Their bodies will become very thin when I punish them for their sins. ’"
+    },
+    {
+      "verse": "4",
+      "text": "Then lie down on your left side. Show that you are receiving the punishment for the sins of the Israelites. You will suffer like that for 390 days."
+    },
+    {
+      "verse": "5",
+      "text": "It will show the number of years that I have decided to punish Israel's people. Each day that you suffer will show one year of their punishment."
     }
   ],
   "5": [
@@ -691,10 +695,6 @@ module.exports = {
   ],
   "10": [
     {
-      "verse": "1",
-      "text": "In the vision, I saw something that looked like a throne. It was made from a blue jewel called sapphire. It was above the roof and it was high over the heads of the cherubs."
-    },
-    {
       "verse": "2",
       "text": "The Lord said to the man who was wearing linen clothes, ‘Go between the wheels that are under the cherubs. Pick up some of the hot coals that are burning among the cherubs. Fill your hands with them. Then throw them everywhere over the city. ’ Then the man did this, as I watched him."
     },
@@ -753,6 +753,10 @@ module.exports = {
     {
       "verse": "16",
       "text": "When they moved, the wheels that were beside them also moved. When the cherubs lifted up their wings to fly into the air, the wheels moved beside them."
+    },
+    {
+      "verse": "1",
+      "text": "In the vision, I saw something that looked like a throne. It was made from a blue jewel called sapphire. It was above the roof and it was high over the heads of the cherubs."
     },
     {
       "verse": "17",
@@ -2677,58 +2681,6 @@ module.exports = {
   ],
   "27": [
     {
-      "verse": "1",
-      "text": "The Lord gave this message to me: “Tyre, you say that you are completely beautiful."
-    },
-    {
-      "verse": "2",
-      "text": "‘Son of man, sing a funeral song about Tyre."
-    },
-    {
-      "verse": "3",
-      "text": "Tyre is a city on the coast of the sea. From there, traders go across the sea to sell things to people in many other countries. This is what the Almighty Lord says to Tyre:“Tyre, you say that you are completely beautiful."
-    },
-    {
-      "verse": "4",
-      "text": "Your borders reached into the middle of the sea. Your builders made you like a great ship. Your builders made you like a great ship."
-    },
-    {
-      "verse": "5",
-      "text": "They used wood from the pine trees of Senir. They used a cedar tree from Lebanon to make your mast. They used a cedar tree from Lebanon to make your mast."
-    },
-    {
-      "verse": "6",
-      "text": "They used oak trees from Bashan to make your oars. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory."
-    },
-    {
-      "verse": "7",
-      "text": "They used good linen from Egypt to make your sail. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island."
-    },
-    {
-      "verse": "8",
-      "text": "Men from Sidon and Arvad used the oars to move the ship. Your own clever men from Tyre were your sailors. Your own clever men from Tyre were your sailors."
-    },
-    {
-      "verse": "9",
-      "text": "Leaders from Gebal went with you. They brought men who knew how to mend the ship. Sailors of ships from many countriescame to buy things from you. They brought men who knew how to mend the ship. Sailors of ships from many countries came to buy things from you."
-    },
-    {
-      "verse": "10",
-      "text": "There were brave soldiers from Persia, Lydia and Libya in your army. They hung their shields and their helmets on your walls. They caused people to give you honour. They hung their shields and their helmets on your walls. They caused people to give you honour."
-    },
-    {
-      "verse": "11",
-      "text": "Men from Arvad and Helech were guards who stood on your walls. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful."
-    },
-    {
-      "verse": "12",
-      "text": "You had many valuable things to sell. So traders came from Tarshish to buy things from you. They brought silver and other good metals to pay for those things."
-    },
-    {
-      "verse": "13",
-      "text": "Traders from Greece, Tubal and Meshech also came to buy things from you. They paid you with slaves and with things made of bronze."
-    },
-    {
       "verse": "14",
       "text": "Men from Beth Togarmah came. They paid you with horses to use in war or for work, and also with mules."
     },
@@ -2779,6 +2731,58 @@ module.exports = {
     {
       "verse": "26",
       "text": "Your sailors took you into the great waves of the sea. There, a strong east wind has caused you to break into small pieces. There, a strong east wind has caused you to break into small pieces."
+    },
+    {
+      "verse": "1",
+      "text": "The Lord gave this message to me: “Tyre, you say that you are completely beautiful."
+    },
+    {
+      "verse": "2",
+      "text": "‘Son of man, sing a funeral song about Tyre."
+    },
+    {
+      "verse": "3",
+      "text": "Tyre is a city on the coast of the sea. From there, traders go across the sea to sell things to people in many other countries. This is what the Almighty Lord says to Tyre:“Tyre, you say that you are completely beautiful."
+    },
+    {
+      "verse": "4",
+      "text": "Your borders reached into the middle of the sea. Your builders made you like a great ship. Your builders made you like a great ship."
+    },
+    {
+      "verse": "5",
+      "text": "They used wood from the pine trees of Senir. They used a cedar tree from Lebanon to make your mast. They used a cedar tree from Lebanon to make your mast."
+    },
+    {
+      "verse": "6",
+      "text": "They used oak trees from Bashan to make your oars. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory. They used pine wood from the coasts of Cyprus to make your deck. They made it beautiful with ivory."
+    },
+    {
+      "verse": "7",
+      "text": "They used good linen from Egypt to make your sail. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island. They made it pretty with many colours. The sail was like a flag that everyone could see. They made tents of cloth to cover your deck. It was blue and purple cloth that came from Cyprus island."
+    },
+    {
+      "verse": "8",
+      "text": "Men from Sidon and Arvad used the oars to move the ship. Your own clever men from Tyre were your sailors. Your own clever men from Tyre were your sailors."
+    },
+    {
+      "verse": "9",
+      "text": "Leaders from Gebal went with you. They brought men who knew how to mend the ship. Sailors of ships from many countriescame to buy things from you. They brought men who knew how to mend the ship. Sailors of ships from many countries came to buy things from you."
+    },
+    {
+      "verse": "10",
+      "text": "There were brave soldiers from Persia, Lydia and Libya in your army. They hung their shields and their helmets on your walls. They caused people to give you honour. They hung their shields and their helmets on your walls. They caused people to give you honour."
+    },
+    {
+      "verse": "11",
+      "text": "Men from Arvad and Helech were guards who stood on your walls. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful. Soldiers from Gammad were in your strong towers. They hung their weapons on your walls. They made you look very beautiful."
+    },
+    {
+      "verse": "12",
+      "text": "You had many valuable things to sell. So traders came from Tarshish to buy things from you. They brought silver and other good metals to pay for those things."
+    },
+    {
+      "verse": "13",
+      "text": "Traders from Greece, Tubal and Meshech also came to buy things from you. They paid you with slaves and with things made of bronze."
     },
     {
       "verse": "27",
@@ -3792,7 +3796,11 @@ module.exports = {
     },
     {
       "verse": "37",
-      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival. I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord. ’"
+      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival."
+    },
+    {
+      "verse": "38",
+      "text": "I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord. ’."
     }
   ],
   "37": [
@@ -4353,10 +4361,6 @@ module.exports = {
       "text": "I saw that there was a stone base all around the temple. The side rooms stood on this base as their foundation. It was 3 metres high."
     },
     {
-      "verse": "9",
-      "text": "The outside wall of the side rooms was 2½ metres thick. There was an open space between these rooms and the rooms that the priests used. It was 10 metres wide, all around the temple building."
-    },
-    {
       "verse": "11",
       "text": "There were two doors for the side rooms. One door opened towards the north. The other door opened towards the south. They opened into a space that was 2½ metres wide."
     },
@@ -4379,10 +4383,6 @@ module.exports = {
     {
       "verse": "16",
       "text": "The boards covered the walls from the floor up to the windows, and above the windows. They used wood to make the edges of the windows. They also covered the windows."
-    },
-    {
-      "verse": "17",
-      "text": "Workers had cut pictures in the wood above the doors and all over the walls. They were pictures of palm trees and cherubs. There was a picture of a palm tree between each cherub. They covered all the inside walls of the temple. Each cherub had two faces."
     },
     {
       "verse": "19",
@@ -4415,6 +4415,22 @@ module.exports = {
     {
       "verse": "26",
       "text": "The entrance room had narrow windows in the walls on each side. The windows had pictures of palm trees on each side. Workers had cut shapes of palm trees on its walls. The side rooms around the temple also had roofs over the outside of their doors."
+    },
+    {
+      "verse": "9",
+      "text": "The outside wall of the side rooms was 2½ metres thick. There was an open space between these rooms and the rooms that the priests used."
+    },
+    {
+      "verse": "10",
+      "text": "It was 10 metres wide, all around the temple building."
+    },
+    {
+      "verse": "17",
+      "text": "Workers had cut pictures in the wood above the doors and all over the walls. They were pictures of palm trees and cherubs. There was a picture of a palm tree between each cherub."
+    },
+    {
+      "verse": "18",
+      "text": "They covered all the inside walls of the temple. Each cherub had two faces."
     }
   ],
   "42": [
@@ -4483,12 +4499,20 @@ module.exports = {
       "text": "He used his stick to measure the wall on the east side. It was 250 metres."
     },
     {
-      "verse": "17",
-      "text": "Then he measured the north side and the south side and the west side. Each side measured the same as the east side."
-    },
-    {
       "verse": "20",
       "text": "So the wall made a square around the place where the temple was. Each side was 250 metres. The wall made the holy place separate from the ordinary places around it."
+    },
+    {
+      "verse": "17",
+      "text": "Then he measured the north side and the south side and the west side."
+    },
+    {
+      "verse": "18",
+      "text": "Each side measured the same as the east side."
+    },
+    {
+      "verse": "19",
+      "text": "."
     }
   ],
   "43": [

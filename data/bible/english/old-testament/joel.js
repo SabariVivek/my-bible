@@ -213,6 +213,10 @@ module.exports = {
   ],
   "3": [
     {
+      "verse": "21",
+      "text": "I will forgive all the wrong things that they have done. ’The Lord has made his home in Zion!"
+    },
+    {
       "verse": "1",
       "text": "‘Judah and Jerusalem were once great. One day, at that time, I will make them great again. One day, at that time, I will make them great again."
     },
@@ -291,10 +295,6 @@ module.exports = {
     {
       "verse": "20",
       "text": "My people will always live in Jerusalem and Judah."
-    },
-    {
-      "verse": "21",
-      "text": "I will forgive all the wrong things that they have done. ’The Lord has made his home in Zion!"
     }
   ]
 };

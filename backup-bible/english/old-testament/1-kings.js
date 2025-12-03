@@ -505,8 +505,12 @@ module.exports = {
       "text": "Everybody in Israel heard about what the king had decided. So they respected the king's authority. They realized that God had given him wisdom to judge fairly."
     },
     {
-      "verse": "11-12",
-      "text": "So God said to him, ‘You have not asked me to give you a long life, or to make you very rich. You have not asked me to punish your enemies with death. Instead you have asked for a wise mind so that you can rule well. Because of that, I will give you what you have asked for. Yes, I now give to you a wise mind that understands things well. You will be wiser than anyone who has already lived and wiser than anyone who will live after you."
+      "verse": "11",
+      "text": "So God said to him, ‘You have not asked me to give you a long life, or to make you very rich. You have not asked me to punish your enemies with death. Instead you have asked for a wise mind so that you can rule well."
+    },
+    {
+      "verse": "12",
+      "text": "Because of that, I will give you what you have asked for. Yes, I now give to you a wise mind that understands things well. You will be wiser than anyone who has already lived and wiser than anyone who will live after you."
     }
   ],
   "4": [

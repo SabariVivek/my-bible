@@ -71,22 +71,6 @@ module.exports = {
   ],
   "2": [
     {
-      "verse": "1",
-      "text": "A person may want to give grain as a gift to the Lord. He must make it into flour. He must put oil and incense on the flour."
-    },
-    {
-      "verse": "2",
-      "text": "He must take it to Aaron's sons, the priests. The priest will take some of the flour and oil and all the incense in his hand. He will burn them on the altar as a gift to the Lord. The smell of them while they are burning will give the Lord pleasure."
-    },
-    {
-      "verse": "3",
-      "text": "The flour that he did not burn is for the priests. It is very holy. That is because it is part of an offering to the Lord."
-    },
-    {
-      "verse": "4",
-      "text": "A person must not use yeast if he bakes his gift of grain. He must make cakes or biscuits with flour and oil."
-    },
-    {
       "verse": "5",
       "text": "He must not use yeast if he cooks his cake on a flat plate. He must make it with flour and oil."
     },
@@ -101,6 +85,22 @@ module.exports = {
     {
       "verse": "8",
       "text": "He must give the cake to the priest. The priest will take it to the altar."
+    },
+    {
+      "verse": "1",
+      "text": "A person may want to give grain as a gift to the Lord. He must make it into flour. He must put oil and incense on the flour."
+    },
+    {
+      "verse": "2",
+      "text": "He must take it to Aaron's sons, the priests. The priest will take some of the flour and oil and all the incense in his hand. He will burn them on the altar as a gift to the Lord. The smell of them while they are burning will give the Lord pleasure."
+    },
+    {
+      "verse": "3",
+      "text": "The flour that he did not burn is for the priests. It is very holy. That is because it is part of an offering to the Lord."
+    },
+    {
+      "verse": "4",
+      "text": "A person must not use yeast if he bakes his gift of grain. He must make cakes or biscuits with flour and oil."
     },
     {
       "verse": "9",
@@ -2059,66 +2059,6 @@ module.exports = {
   ],
   "18": [
     {
-      "verse": "1",
-      "text": "The Lord said to Moses,"
-    },
-    {
-      "verse": "2",
-      "text": "‘Tell Israel's people that I am the Lord their God."
-    },
-    {
-      "verse": "3",
-      "text": "They were living in Egypt, but they must not do as the people in Egypt do. Now I am bringing them to live in Canaan. They must not live in the way that the people in Canaan live. They must not do the things that those people do."
-    },
-    {
-      "verse": "4",
-      "text": "They must obey my rules. I am the Lord their God."
-    },
-    {
-      "verse": "5",
-      "text": "If they obey my rules and my laws, they will continue to live safely. I am the Lord."
-    },
-    {
-      "verse": "6",
-      "text": "Tell them this: A person must not have sex with anyone who belongs to his own family. I am the Lord."
-    },
-    {
-      "verse": "7",
-      "text": "Do not have sex with your mother. That would cause your father to be ashamed."
-    },
-    {
-      "verse": "8",
-      "text": "Do not have sex with any wife of your father. Your father would be ashamed."
-    },
-    {
-      "verse": "9",
-      "text": "Do not have sex with your sister. Do not have sex with a sister who is your mother's daughter or your father's daughter. It does not matter if she was born in your house or in another house. Do not have sex with any sister."
-    },
-    {
-      "verse": "10",
-      "text": "Do not have sex with any granddaughter. That would make you ashamed."
-    },
-    {
-      "verse": "11",
-      "text": "Do not have sex with the daughter of your father and his wife. She is your sister."
-    },
-    {
-      "verse": "12",
-      "text": "Do not have sex with your father's sister. She is his near relative."
-    },
-    {
-      "verse": "13",
-      "text": "Do not have sex with your mother's sister. She is her near relative."
-    },
-    {
-      "verse": "14",
-      "text": "Do not have sex with the wife of your father's brother. That would make your uncle ashamed. His wife is your aunt."
-    },
-    {
-      "verse": "15",
-      "text": "Do not have sex with your son's wife."
-    },
-    {
       "verse": "16",
       "text": "Do not have sex with your brother's wife. That would make your brother ashamed."
     },
@@ -2177,6 +2117,66 @@ module.exports = {
     {
       "verse": "30",
       "text": "All the people must obey my rules. They must not do the bad things that the people in Canaan did. If they did them, my people would become unclean. I am the Lord your God. ’"
+    },
+    {
+      "verse": "1",
+      "text": "The Lord said to Moses,"
+    },
+    {
+      "verse": "2",
+      "text": "‘Tell Israel's people that I am the Lord their God."
+    },
+    {
+      "verse": "3",
+      "text": "They were living in Egypt, but they must not do as the people in Egypt do. Now I am bringing them to live in Canaan. They must not live in the way that the people in Canaan live. They must not do the things that those people do."
+    },
+    {
+      "verse": "4",
+      "text": "They must obey my rules. I am the Lord their God."
+    },
+    {
+      "verse": "5",
+      "text": "If they obey my rules and my laws, they will continue to live safely. I am the Lord."
+    },
+    {
+      "verse": "6",
+      "text": "Tell them this: A person must not have sex with anyone who belongs to his own family. I am the Lord."
+    },
+    {
+      "verse": "7",
+      "text": "Do not have sex with your mother. That would cause your father to be ashamed."
+    },
+    {
+      "verse": "8",
+      "text": "Do not have sex with any wife of your father. Your father would be ashamed."
+    },
+    {
+      "verse": "9",
+      "text": "Do not have sex with your sister. Do not have sex with a sister who is your mother's daughter or your father's daughter. It does not matter if she was born in your house or in another house. Do not have sex with any sister."
+    },
+    {
+      "verse": "10",
+      "text": "Do not have sex with any granddaughter. That would make you ashamed."
+    },
+    {
+      "verse": "11",
+      "text": "Do not have sex with the daughter of your father and his wife. She is your sister."
+    },
+    {
+      "verse": "12",
+      "text": "Do not have sex with your father's sister. She is his near relative."
+    },
+    {
+      "verse": "13",
+      "text": "Do not have sex with your mother's sister. She is her near relative."
+    },
+    {
+      "verse": "14",
+      "text": "Do not have sex with the wife of your father's brother. That would make your uncle ashamed. His wife is your aunt."
+    },
+    {
+      "verse": "15",
+      "text": "Do not have sex with your son's wife."
     }
   ],
   "19": [

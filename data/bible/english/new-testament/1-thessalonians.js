@@ -125,10 +125,6 @@ module.exports = {
   ],
   "3": [
     {
-      "verse": "1",
-      "text": "After a long time, we could not be patient any longer. So we decided to send our friend Timothy to come to visit you. We ourselves would stay here in Athens. Timothy serves God with us here. He tells people the good news about Christ. We sent him to you so that he could help you to trust Christ more and more."
-    },
-    {
       "verse": "3",
       "text": "You are receiving many troubles. We did not want anyone among you to turn away from Christ because of that. You already know that we who are believers must receive troubles like that."
     },
@@ -171,6 +167,14 @@ module.exports = {
     {
       "verse": "13",
       "text": "Then God will cause you to become strong inside yourselves. You will live in a completely good way. One day our Lord Jesus will come back with all the people who belong to him. Then you will stand in front of God, our Father. He will say that you are not guilty of anything that is wrong."
+    },
+    {
+      "verse": "1",
+      "text": "After a long time, we could not be patient any longer. So we decided to send our friend Timothy to come to visit you. We ourselves would stay here in Athens."
+    },
+    {
+      "verse": "2",
+      "text": "Timothy serves God with us here. He tells people the good news about Christ. We sent him to you so that he could help you to trust Christ more and more."
     }
   ],
   "4": [

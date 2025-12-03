@@ -77,8 +77,12 @@ module.exports = {
       "text": "None of the prophets' messages came because any person wanted to say something. Instead, God's Holy Spirit caused people to speak words that came from God."
     },
     {
-      "verse": "17-18",
-      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power. He said: ‘This is my Son and I love him. He makes me very happy. ’"
+      "verse": "17",
+      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power."
+    },
+    {
+      "verse": "18",
+      "text": "He said: ‘This is my Son and I love him. He makes me very happy. ’."
     }
   ],
   "2": [

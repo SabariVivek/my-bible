@@ -57,10 +57,6 @@ module.exports = {
       "text": "You do not understand us completely yet. But I hope that you will understand completely on the day when our Lord Jesus returns. Then you can be proud of us in the same way that we will be proud of you."
     },
     {
-      "verse": "15",
-      "text": "So, because I was sure that you trusted me, I wanted to visit you twice. Then I could bring God's help to you twice. I decided to visit you first on my way to Macedonia. Then I would visit you again on my way back from Macedonia. After that, you could help to send me on my journey to Judea."
-    },
-    {
       "verse": "17",
       "text": "I did not decide this in a careless way. I really wanted to do it. I do not decide to do things only to please myself, like someone who does not know God. I do not say ‘Yes, ’ and then I immediately say ‘No’."
     },
@@ -91,6 +87,14 @@ module.exports = {
     {
       "verse": "24",
       "text": "We are not trying to tell you what you must believe, like masters would do. You are already strong in your spirits because you trust God. So we want to help you to be really happy."
+    },
+    {
+      "verse": "15",
+      "text": "So, because I was sure that you trusted me, I wanted to visit you twice. Then I could bring God's help to you twice. I decided to visit you first on my way to Macedonia."
+    },
+    {
+      "verse": "16",
+      "text": "Then I would visit you again on my way back from Macedonia. After that, you could help to send me on my journey to Judea."
     }
   ],
   "2": [
@@ -915,10 +919,6 @@ module.exports = {
       "text": "I know a certain man who belongs to Christ. 14 years ago, God quickly took this man up to the third heaven. Perhaps this man was still in his body. Perhaps he had gone away from his body. I do not know. Only God knows."
     },
     {
-      "verse": "3",
-      "text": "I know that God took this man up to paradise. I do not know whether this man was still in his body or not. Only God knows. When this man was in heaven, he heard about secret things. Those are things that no words can describe. God will not let any person speak about those things. They are too special."
-    },
-    {
       "verse": "5",
       "text": "I will say proud things about a man like that. But I will not be proud of anything good about myself. I will only be proud of things that show my weakness."
     },
@@ -985,6 +985,14 @@ module.exports = {
     {
       "verse": "21",
       "text": "I am afraid that I may be very sad when I come back to you. My God may cause me to feel ashamed about you. Some of you may still be doing bad and disgusting things. You may be having sex with people that you are not married to, or in other wrong ways. Those are the bad things that many of you did at one time. If you have not turned away from those bad things, that will make me weep."
+    },
+    {
+      "verse": "3",
+      "text": "I know that God took this man up to paradise. I do not know whether this man was still in his body or not. Only God knows. When this man was in heaven, he heard about secret things."
+    },
+    {
+      "verse": "4",
+      "text": "Those are things that no words can describe. God will not let any person speak about those things. They are too special."
     }
   ],
   "13": [

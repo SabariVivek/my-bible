@@ -1,6 +1,26 @@
 module.exports = {
   "1": [
     {
+      "verse": "39",
+      "text": "seph's son): 32, 200 m"
+    },
+    {
+      "verse": "40",
+      "text": "en. Benjamin: 35, 400 m"
+    },
+    {
+      "verse": "41",
+      "text": "en. Dan: 62, 700 men. As"
+    },
+    {
+      "verse": "42",
+      "text": "her: 41, 500 men. Napht"
+    },
+    {
+      "verse": "43",
+      "text": "ali: 53, 400 men."
+    },
+    {
       "verse": "1",
       "text": "The Israelites were in the Sinai desert. It was the first day of the second month of the second year after they left Egypt. Moses was in the Tent of Meeting. The Lord said to Moses,"
     },
@@ -77,6 +97,50 @@ module.exports = {
       "text": "They did the things that the Lord had told Moses to do. So Moses recorded the names there in the Sinai desert."
     },
     {
+      "verse": "44",
+      "text": "Moses and Aaron counted the numbers of the men in each tribe. The 12 leaders of the Israelites helped them to do it. That was one man from each tribe."
+    },
+    {
+      "verse": "45",
+      "text": "They recorded the names of all the men in each family. All the men who were 20 years old or older were on the list. Those men could fight in the army."
+    },
+    {
+      "verse": "46",
+      "text": "The number of all the men was 603, 550."
+    },
+    {
+      "verse": "47",
+      "text": "But Moses and Aaron did not count the descendants of Levi among the other tribes."
+    },
+    {
+      "verse": "48",
+      "text": "The Lord had said to Moses,"
+    },
+    {
+      "verse": "49",
+      "text": "‘You must not count the tribe of Levi. You must not put the Levites on the list with the other Israelites."
+    },
+    {
+      "verse": "50",
+      "text": "The Levites' work will be in the special Tent of Meeting. They must take care of the Tent and everything that is in it. They must carry it everywhere. Their work is with all those things. They must put their own tents round the special Tent."
+    },
+    {
+      "verse": "51",
+      "text": "When the people move to another place, the Levites must pack the Tent. When the people arrive at a new place, the Levites must put the Tent up again. If any other person, not a Levite, comes near to the special Tent, they must die."
+    },
+    {
+      "verse": "52",
+      "text": "All the other Israelites must put up their tents in groups. Each man must live among his own group. Each group must put up its own flag."
+    },
+    {
+      "verse": "53",
+      "text": "But the Levites must put up their tents around the Tent of Meeting. They must take care of it. Then I, the Lord, will not be angry with the people. ’"
+    },
+    {
+      "verse": "54",
+      "text": "The Israelites did everything that the Lord had told Moses to do."
+    },
+    {
       "verse": "20",
       "text": "years old or older. T"
     },
@@ -151,70 +215,6 @@ module.exports = {
     {
       "verse": "38",
       "text": ", 500 men. Manasseh (Jo"
-    },
-    {
-      "verse": "39",
-      "text": "seph's son): 32, 200 m"
-    },
-    {
-      "verse": "40",
-      "text": "en. Benjamin: 35, 400 m"
-    },
-    {
-      "verse": "41",
-      "text": "en. Dan: 62, 700 men. As"
-    },
-    {
-      "verse": "42",
-      "text": "her: 41, 500 men. Napht"
-    },
-    {
-      "verse": "43",
-      "text": "ali: 53, 400 men."
-    },
-    {
-      "verse": "44",
-      "text": "Moses and Aaron counted the numbers of the men in each tribe. The 12 leaders of the Israelites helped them to do it. That was one man from each tribe."
-    },
-    {
-      "verse": "45",
-      "text": "They recorded the names of all the men in each family. All the men who were 20 years old or older were on the list. Those men could fight in the army."
-    },
-    {
-      "verse": "46",
-      "text": "The number of all the men was 603, 550."
-    },
-    {
-      "verse": "47",
-      "text": "But Moses and Aaron did not count the descendants of Levi among the other tribes."
-    },
-    {
-      "verse": "48",
-      "text": "The Lord had said to Moses,"
-    },
-    {
-      "verse": "49",
-      "text": "‘You must not count the tribe of Levi. You must not put the Levites on the list with the other Israelites."
-    },
-    {
-      "verse": "50",
-      "text": "The Levites' work will be in the special Tent of Meeting. They must take care of the Tent and everything that is in it. They must carry it everywhere. Their work is with all those things. They must put their own tents round the special Tent."
-    },
-    {
-      "verse": "51",
-      "text": "When the people move to another place, the Levites must pack the Tent. When the people arrive at a new place, the Levites must put the Tent up again. If any other person, not a Levite, comes near to the special Tent, they must die."
-    },
-    {
-      "verse": "52",
-      "text": "All the other Israelites must put up their tents in groups. Each man must live among his own group. Each group must put up its own flag."
-    },
-    {
-      "verse": "53",
-      "text": "But the Levites must put up their tents around the Tent of Meeting. They must take care of it. Then I, the Lord, will not be angry with the people. ’"
-    },
-    {
-      "verse": "54",
-      "text": "The Israelites did everything that the Lord had told Moses to do."
     }
   ],
   "2": [
@@ -873,16 +873,16 @@ module.exports = {
       "text": "But, if she did not do those wrong things, the water will not hurt her. She will be able to have babies."
     },
     {
+      "verse": "31",
+      "text": "If the woman did not do those wrong things, you must not punish her husband. But if the woman did do those wrong things, you must punish her. ’"
+    },
+    {
       "verse": "29",
       "text": "Perhaps a man is jealous because his wife has had sex with another man. Or he may only think that his wife has had sex with another man."
     },
     {
       "verse": "30",
       "text": "This is what the law says that the priest must do: The man must bring her in front of the Lord."
-    },
-    {
-      "verse": "31",
-      "text": "If the woman did not do those wrong things, you must not punish her husband. But if the woman did do those wrong things, you must punish her. ’"
     }
   ],
   "6": [
@@ -2183,14 +2183,6 @@ module.exports = {
       "text": "I, the Lord, have spoken! I will certainly do all these things to punish these evil people. That is because they have all joined together to speak against me. In this desert they will die. Yes, that will be the end of them! ” ’"
     },
     {
-      "verse": "36",
-      "text": "The men who had given a bad report to the people about the land of Canaan died immediately. Moses had sent them to explore the land, but they had caused all the people to turn against the Lord."
-    },
-    {
-      "verse": "37",
-      "text": "So the Lord sent a bad disease to kill those men."
-    },
-    {
       "verse": "38",
       "text": "Only two men who had gone to explore the land did not die. They were Joshua, the son of Nun, and Caleb, the son of Jephunneh."
     },
@@ -2221,6 +2213,14 @@ module.exports = {
     {
       "verse": "45",
       "text": "Then the Amalekites and the Canaanites who lived in those hills ran down. They attacked the Israelite men and they chased them to Hormah."
+    },
+    {
+      "verse": "36",
+      "text": "The men who had given a bad report to the people about the land of Canaan died immediately. Moses had sent them to explore the land, but they had caused all the people to turn against the Lord."
+    },
+    {
+      "verse": "37",
+      "text": "So the Lord sent a bad disease to kill those men."
     }
   ],
   "15": [
@@ -4235,6 +4235,10 @@ module.exports = {
   ],
   "30": [
     {
+      "verse": "6",
+      "text": "But a young woman like that might make a promise to God and then marry a husband. She might have promised something when she had not thought carefully about it."
+    },
+    {
       "verse": "1",
       "text": "Moses said to the leaders of the Israelite tribes: ‘The Lord commands this:"
     },
@@ -4253,10 +4257,6 @@ module.exports = {
     {
       "verse": "5",
       "text": "But her father may refuse to let her do it. Then she does not have to do what she promised to do. The Lord will understand why she does not do it."
-    },
-    {
-      "verse": "6",
-      "text": "But a young woman like that might make a promise to God and then marry a husband. She might have promised something when she had not thought carefully about it."
     },
     {
       "verse": "7",

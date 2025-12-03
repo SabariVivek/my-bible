@@ -417,8 +417,12 @@ module.exports = {
       "text": "Now I am telling you this: I was talking about people who say that they are believers. If they say that, but they have sex in a wrong way, do not be friends with them. It is the same if they want many things for themselves. They may worship idols. They may insult people. They may often get drunk. They may deceive people and rob them. If one of your own group does things like that, do not even agree to eat a meal with them. ‘Send the bad person away from among yourselves. ’"
     },
     {
-      "verse": "12-13",
-      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group. Do what the Bible says:‘Send the bad person away from among yourselves. ’"
+      "verse": "12",
+      "text": "It is not right for me to decide about people who do not belong to the church group. God will judge those people. But you should decide what is right for the people who do belong to your group."
+    },
+    {
+      "verse": "13",
+      "text": "Do what the Bible says:‘Send the bad person away from among yourselves. ’."
     }
   ],
   "6": [

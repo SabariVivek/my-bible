@@ -103,6 +103,42 @@ module.exports = {
   ],
   "2": [
     {
+      "verse": "17",
+      "text": "In this way, these words that God's prophet Jeremiah spoke long ago became true:"
+    },
+    {
+      "verse": "18",
+      "text": "‘People heard a sad noise in Ramah. Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’ Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’"
+    },
+    {
+      "verse": "19",
+      "text": "After Herod died, Joseph had a dream in Egypt. In the dream he saw one of the Lord God's angels."
+    },
+    {
+      "verse": "20",
+      "text": "The angel said to Joseph, ‘Get up. The people who wanted to kill the child are dead. Take the child and his mother. You can now return with them to Israel. ’"
+    },
+    {
+      "verse": "21",
+      "text": "So Joseph got up. He took the child and his mother and they travelled to Israel."
+    },
+    {
+      "verse": "22",
+      "text": "But then Joseph heard that Herod's son, Archelaus, was now king of Judea instead of his father. So Joseph was afraid to go to Judea. In another dream God showed Joseph that he should go to Galilee instead."
+    },
+    {
+      "verse": "23",
+      "text": "So Joseph went there and he lived in a town called Nazareth. Long ago God's prophets had said about God's Messiah, ‘He will be called a person from Nazareth. ’ Now this had become true."
+    },
+    {
+      "verse": "9",
+      "text": "After the men had heard the king, they left to go to Bethlehem. They could see the same star that they had seen before. They were very happy when they saw the star."
+    },
+    {
+      "verse": "10",
+      "text": "It moved along in front of them. Then it stopped above the place where the child was staying."
+    },
+    {
       "verse": "1",
       "text": "Jesus was born in a town called Bethlehem, in Judea. King Herod ruled Judea at that time. After Jesus was born, some wise men came to Jerusalem from a country in the east."
     },
@@ -135,10 +171,6 @@ module.exports = {
       "text": "Herod sent the men to Bethlehem. He said to them, ‘Go and look everywhere for this child. When you find him, come back here and tell me where he is. Then I can also go and worship him. ’"
     },
     {
-      "verse": "9",
-      "text": "After the men had heard the king, they left to go to Bethlehem. They could see the same star that they had seen before. They were very happy when they saw the star. It moved along in front of them. Then it stopped above the place where the child was staying."
-    },
-    {
       "verse": "11",
       "text": "The men went into the house and they saw the child. He was with Mary, his mother. They went down on their knees in front of the child and they worshipped him. Then they opened their bags. They took out valuable gifts and they gave them to the child. The gifts were gold, incense called frankincense, and also myrrh."
     },
@@ -161,34 +193,6 @@ module.exports = {
     {
       "verse": "16",
       "text": "When the wise men did not return to Herod, he was very angry. He knew that they had deceived him. So he sent his men to Bethlehem. He said to them, ‘Kill all the baby boys in Bethlehem. Kill the boys who live near there too. Kill all the boys who are two years old or younger than that. ’ The wise men had told Herod how long ago they had first seen the special star. So he decided to kill the baby boys of that age."
-    },
-    {
-      "verse": "17",
-      "text": "In this way, these words that God's prophet Jeremiah spoke long ago became true:"
-    },
-    {
-      "verse": "18",
-      "text": "‘People heard a sad noise in Ramah. Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’ Someone is weeping with a loud voice. It is Rachel and she is weeping for her children. Nobody can help her to stop weeping, because her children are dead. ’"
-    },
-    {
-      "verse": "19",
-      "text": "After Herod died, Joseph had a dream in Egypt. In the dream he saw one of the Lord God's angels."
-    },
-    {
-      "verse": "20",
-      "text": "The angel said to Joseph, ‘Get up. The people who wanted to kill the child are dead. Take the child and his mother. You can now return with them to Israel. ’"
-    },
-    {
-      "verse": "21",
-      "text": "So Joseph got up. He took the child and his mother and they travelled to Israel."
-    },
-    {
-      "verse": "22",
-      "text": "But then Joseph heard that Herod's son, Archelaus, was now king of Judea instead of his father. So Joseph was afraid to go to Judea. In another dream God showed Joseph that he should go to Galilee instead."
-    },
-    {
-      "verse": "23",
-      "text": "So Joseph went there and he lived in a town called Nazareth. Long ago God's prophets had said about God's Messiah, ‘He will be called a person from Nazareth. ’ Now this had become true."
     }
   ],
   "3": [
@@ -2139,50 +2143,6 @@ module.exports = {
   ],
   "16": [
     {
-      "verse": "1",
-      "text": "Some Pharisees and Sadducees went to see Jesus. They wanted to test him to see what he would do. They asked him, ‘Do something powerful for us to see. Then we will believe that God has sent you. ’"
-    },
-    {
-      "verse": "2",
-      "text": "Jesus answered them, ‘Sometimes the sky is red in the evening. Then you say, “Tomorrow the weather will be good. ” Then Jesus went away and left them."
-    },
-    {
-      "verse": "3",
-      "text": "Sometimes in the morning the sky is red and there are dark clouds. Then you say, “Today there will be a storm. ” So you look at the sky and you know what the weather will be. But special things are happening now. And you do not understand what they mean."
-    },
-    {
-      "verse": "4",
-      "text": "The people who are alive today are very bad. They do not obey God. They want God to show them something powerful. But God will not do this for them. They will only see the same powerful thing that God did for Jonah. ’Then Jesus went away and left them."
-    },
-    {
-      "verse": "5",
-      "text": "Jesus and his disciples sailed over to the other side of the lake. His disciples forgot to take any bread with them."
-    },
-    {
-      "verse": "6",
-      "text": "Jesus said to them, ‘Be careful! Do not accept the yeast of the Pharisees and the Sadducees. ’"
-    },
-    {
-      "verse": "7",
-      "text": "The disciples began to talk to each other about this. ‘Jesus is saying this because we did not bring any bread with us, ’ they said."
-    },
-    {
-      "verse": "8",
-      "text": "Jesus knew what they were talking about. So he said to them, ‘You should not be arguing with each other about the bread. You should trust me more than you do."
-    },
-    {
-      "verse": "9",
-      "text": "You still do not understand. You should remember that I used five loaves of bread to feed 5, 000 men. Think about how many baskets you filled with pieces of food after the meal."
-    },
-    {
-      "verse": "10",
-      "text": "Also remember that I used seven loaves of bread to give food to 4, 000 men. And think about how many baskets you filled with pieces of food then."
-    },
-    {
-      "verse": "11",
-      "text": "I spoke to you about the yeast of the Pharisees and the Sadducees. I said that you must not accept it. You should understand now that I was not speaking about bread. ’"
-    },
-    {
       "verse": "12",
       "text": "Then the disciples understood what Jesus was talking about. They did not need to be careful about the yeast that they used in their bread. Instead, they must be careful about what the Pharisees and Sadducees were teaching. They must not accept it."
     },
@@ -2249,6 +2209,50 @@ module.exports = {
     {
       "verse": "28",
       "text": "I tell you this: When I, the Son of Man, come with power, some people who are standing here will see me at that time. Before they die, they will see me begin to rule in my kingdom. ’"
+    },
+    {
+      "verse": "1",
+      "text": "Some Pharisees and Sadducees went to see Jesus. They wanted to test him to see what he would do. They asked him, ‘Do something powerful for us to see. Then we will believe that God has sent you. ’"
+    },
+    {
+      "verse": "2",
+      "text": "Jesus answered them, ‘Sometimes the sky is red in the evening. Then you say, “Tomorrow the weather will be good. ” Then Jesus went away and left them."
+    },
+    {
+      "verse": "3",
+      "text": "Sometimes in the morning the sky is red and there are dark clouds. Then you say, “Today there will be a storm. ” So you look at the sky and you know what the weather will be. But special things are happening now. And you do not understand what they mean."
+    },
+    {
+      "verse": "4",
+      "text": "The people who are alive today are very bad. They do not obey God. They want God to show them something powerful. But God will not do this for them. They will only see the same powerful thing that God did for Jonah. ’Then Jesus went away and left them."
+    },
+    {
+      "verse": "5",
+      "text": "Jesus and his disciples sailed over to the other side of the lake. His disciples forgot to take any bread with them."
+    },
+    {
+      "verse": "6",
+      "text": "Jesus said to them, ‘Be careful! Do not accept the yeast of the Pharisees and the Sadducees. ’"
+    },
+    {
+      "verse": "7",
+      "text": "The disciples began to talk to each other about this. ‘Jesus is saying this because we did not bring any bread with us, ’ they said."
+    },
+    {
+      "verse": "8",
+      "text": "Jesus knew what they were talking about. So he said to them, ‘You should not be arguing with each other about the bread. You should trust me more than you do."
+    },
+    {
+      "verse": "9",
+      "text": "You still do not understand. You should remember that I used five loaves of bread to feed 5, 000 men. Think about how many baskets you filled with pieces of food after the meal."
+    },
+    {
+      "verse": "10",
+      "text": "Also remember that I used seven loaves of bread to give food to 4, 000 men. And think about how many baskets you filled with pieces of food then."
+    },
+    {
+      "verse": "11",
+      "text": "I spoke to you about the yeast of the Pharisees and the Sadducees. I said that you must not accept it. You should understand now that I was not speaking about bread. ’"
     }
   ],
   "17": [
@@ -3989,6 +3993,54 @@ module.exports = {
   ],
   "27": [
     {
+      "verse": "55",
+      "text": "There were also many women there. They were standing a long way away and they were watching these events. They had come with Jesus from Galilee to help him."
+    },
+    {
+      "verse": "56",
+      "text": "Mary from Magdala was there. Mary the mother of James and Joses, and Mary the mother of Zebedee's sons, were also there."
+    },
+    {
+      "verse": "57",
+      "text": "That evening a rich man who came from a town called Arimathea went to Pilate. The man's name was Joseph, and he had become a disciple of Jesus."
+    },
+    {
+      "verse": "58",
+      "text": "Joseph asked Pilate for the dead body of Jesus. Pilate told his soldiers to give Jesus' body to Joseph."
+    },
+    {
+      "verse": "59",
+      "text": "So Joseph took Jesus' body. He put a clean piece of linen cloth around it."
+    },
+    {
+      "verse": "60",
+      "text": "Then he put the body in a large hole in a rock. He had made the hole for his own body when he died. After he put Jesus' body there, he rolled a very big stone across the front of the hole to shut it. Then he went away."
+    },
+    {
+      "verse": "61",
+      "text": "Mary from Magdala and Mary the mother of James were there. They were sitting where they could see the hole in the rock where Joseph had put Jesus' body."
+    },
+    {
+      "verse": "62",
+      "text": "The next day was the Jewish day of rest. The leaders of the priests and the Pharisees met together with Pilate."
+    },
+    {
+      "verse": "63",
+      "text": "They said to him, ‘Sir, that man told lies. When he was still living, he said, “Three days after I die, I will become alive again. ” We know that is what he said."
+    },
+    {
+      "verse": "64",
+      "text": "So you should tell some soldiers to watch the place where Joseph put Jesus' body. They should watch there for the next three days. Then his disciples cannot come to take his body away. If they did that, then they could say to the people, “God has caused Jesus to become alive again. ” This will be worse than the lies that Jesus told when he was alive. ’"
+    },
+    {
+      "verse": "65",
+      "text": "Pilate said to them, ‘OK. You may take a group of soldiers to watch the place. Let them fix the rock well, so that nobody can open it. ’"
+    },
+    {
+      "verse": "66",
+      "text": "So the Jewish leaders and the soldiers went to the place where Joseph had put Jesus' body. They fixed the big stone that closed the front of the hole with a seal. Then they would know if someone had moved it. The soldiers stayed there to watch the place very carefully."
+    },
+    {
       "verse": "1",
       "text": "Early the next morning, all the leaders of the priests and the important Jews met together. They decided how to make the Roman rulers kill Jesus."
     },
@@ -4203,54 +4255,6 @@ module.exports = {
     {
       "verse": "54",
       "text": "The captain and his soldiers had been watching Jesus. They saw the ground shaking. They saw everything that had happened. They were very frightened and they said, ‘It must be true! This man really was the Son of God. ’"
-    },
-    {
-      "verse": "55",
-      "text": "There were also many women there. They were standing a long way away and they were watching these events. They had come with Jesus from Galilee to help him."
-    },
-    {
-      "verse": "56",
-      "text": "Mary from Magdala was there. Mary the mother of James and Joses, and Mary the mother of Zebedee's sons, were also there."
-    },
-    {
-      "verse": "57",
-      "text": "That evening a rich man who came from a town called Arimathea went to Pilate. The man's name was Joseph, and he had become a disciple of Jesus."
-    },
-    {
-      "verse": "58",
-      "text": "Joseph asked Pilate for the dead body of Jesus. Pilate told his soldiers to give Jesus' body to Joseph."
-    },
-    {
-      "verse": "59",
-      "text": "So Joseph took Jesus' body. He put a clean piece of linen cloth around it."
-    },
-    {
-      "verse": "60",
-      "text": "Then he put the body in a large hole in a rock. He had made the hole for his own body when he died. After he put Jesus' body there, he rolled a very big stone across the front of the hole to shut it. Then he went away."
-    },
-    {
-      "verse": "61",
-      "text": "Mary from Magdala and Mary the mother of James were there. They were sitting where they could see the hole in the rock where Joseph had put Jesus' body."
-    },
-    {
-      "verse": "62",
-      "text": "The next day was the Jewish day of rest. The leaders of the priests and the Pharisees met together with Pilate."
-    },
-    {
-      "verse": "63",
-      "text": "They said to him, ‘Sir, that man told lies. When he was still living, he said, “Three days after I die, I will become alive again. ” We know that is what he said."
-    },
-    {
-      "verse": "64",
-      "text": "So you should tell some soldiers to watch the place where Joseph put Jesus' body. They should watch there for the next three days. Then his disciples cannot come to take his body away. If they did that, then they could say to the people, “God has caused Jesus to become alive again. ” This will be worse than the lies that Jesus told when he was alive. ’"
-    },
-    {
-      "verse": "65",
-      "text": "Pilate said to them, ‘OK. You may take a group of soldiers to watch the place. Let them fix the rock well, so that nobody can open it. ’"
-    },
-    {
-      "verse": "66",
-      "text": "So the Jewish leaders and the soldiers went to the place where Joseph had put Jesus' body. They fixed the big stone that closed the front of the hole with a seal. Then they would know if someone had moved it. The soldiers stayed there to watch the place very carefully."
     }
   ],
   "28": [

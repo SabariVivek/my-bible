@@ -1,30 +1,6 @@
 module.exports = {
   "1": [
     {
-      "verse": "1",
-      "text": "This book tells about Hilkiah's son, Jeremiah, and the words that he spoke. Jeremiah was a priest. He lived at Anathoth, a town in the land that belonged to the tribe of Benjamin."
-    },
-    {
-      "verse": "2",
-      "text": "The Lord first spoke to him when Amon's son Josiah had been king of Judah for 13 years."
-    },
-    {
-      "verse": "3",
-      "text": "The Lord also spoke to him while Josiah's son, Jehoiakim, ruled Judah as king. He continued to speak to Jeremiah until Josiah's son Zedekiah had ruled Judah for 11 years. In the fifth month of that year, Judah's enemies took the people of Jerusalem away as their prisoners."
-    },
-    {
-      "verse": "4",
-      "text": "The Lord gave me this message:"
-    },
-    {
-      "verse": "5",
-      "text": "‘I already knew you before I made you inside your mother's body. I chose you to be special before you were born. I chose you to be my prophet, to speak my message to other nations. ’"
-    },
-    {
-      "verse": "6",
-      "text": "I answered, ‘Lord God, I do not know how to speak. I am only a child. ’"
-    },
-    {
       "verse": "7",
       "text": "The Lord said to me, ‘Do not say, “I am only a child. ” You must go to everyone that I send you to. You must say whatever I tell you to say."
     },
@@ -75,6 +51,30 @@ module.exports = {
     {
       "verse": "19",
       "text": "They will attack you. But they will not win against you, because I will be with you. I will keep you safe. That is what the Lord says. ’"
+    },
+    {
+      "verse": "1",
+      "text": "This book tells about Hilkiah's son, Jeremiah, and the words that he spoke. Jeremiah was a priest. He lived at Anathoth, a town in the land that belonged to the tribe of Benjamin."
+    },
+    {
+      "verse": "2",
+      "text": "The Lord first spoke to him when Amon's son Josiah had been king of Judah for 13 years."
+    },
+    {
+      "verse": "3",
+      "text": "The Lord also spoke to him while Josiah's son, Jehoiakim, ruled Judah as king. He continued to speak to Jeremiah until Josiah's son Zedekiah had ruled Judah for 11 years. In the fifth month of that year, Judah's enemies took the people of Jerusalem away as their prisoners."
+    },
+    {
+      "verse": "4",
+      "text": "The Lord gave me this message:"
+    },
+    {
+      "verse": "5",
+      "text": "‘I already knew you before I made you inside your mother's body. I chose you to be special before you were born. I chose you to be my prophet, to speak my message to other nations. ’"
+    },
+    {
+      "verse": "6",
+      "text": "I answered, ‘Lord God, I do not know how to speak. I am only a child. ’"
     }
   ],
   "2": [
@@ -2017,6 +2017,14 @@ module.exports = {
   ],
   "21": [
     {
+      "verse": "13",
+      "text": "‘I have turned against you, Jerusalem's palace. Kings sit there on their thrones, on a high rock above the valley. You say, “We are safe here in our strong building. No enemy can get in here to attack us. ” Kings sit there on their thrones, on a high rock above the valley. You say, “We are safe here in our strong building. No enemy can get in here to attack us. ”"
+    },
+    {
+      "verse": "14",
+      "text": "But I will punish you for everything that you have done. I will destroy your palace with fire. That fire will destroy everything that is around you. ’That is what the Lord says."
+    },
+    {
       "verse": "1",
       "text": "The Lord gave another message to Jeremiah. King Zedekiah sent Malkijah's son Pashhur, to speak to Jeremiah. He also sent the priest Zephaniah, Maaseiah's son. They went to say to Jeremiah,"
     },
@@ -2063,14 +2071,6 @@ module.exports = {
     {
       "verse": "12",
       "text": "‘Descendants of King David, the Lord says this to you: Every day you must be fair as you judge people. Punish those who rob other people. Punish those who are cruel to other people. Help the people that they have hurt. If you do not do judge in a fair way, I will be very angry. My anger will burn like a hot firethat nobody can stop. It will destroy youbecause of the evil things that you have done. ’The Lord says: Every day you must be fair as you judge people. Punish those who rob other people. Punish those who are cruel to other people. Help the people that they have hurt. If you do not do judge in a fair way, I will be very angry. My anger will burn like a hot fire that nobody can stop. It will destroy you because of the evil things that you have done. ’ The Lord says:"
-    },
-    {
-      "verse": "13",
-      "text": "‘I have turned against you, Jerusalem's palace. Kings sit there on their thrones, on a high rock above the valley. You say, “We are safe here in our strong building. No enemy can get in here to attack us. ” Kings sit there on their thrones, on a high rock above the valley. You say, “We are safe here in our strong building. No enemy can get in here to attack us. ”"
-    },
-    {
-      "verse": "14",
-      "text": "But I will punish you for everything that you have done. I will destroy your palace with fire. That fire will destroy everything that is around you. ’That is what the Lord says."
     }
   ],
   "22": [
@@ -4059,6 +4059,26 @@ module.exports = {
   ],
   "40": [
     {
+      "verse": "12",
+      "text": "As a result, all those people returned to their homes in Judah. On their way, they stopped in Mizpah to meet Gedaliah. When they arrived, they picked a big harvest of dates, figs and grapes to make wine."
+    },
+    {
+      "verse": "13",
+      "text": "Kareah's son Johanan came to Mizpah to see Gedaliah. He came with the other army officers who had been hiding in the country."
+    },
+    {
+      "verse": "14",
+      "text": "They said to Gedaliah, ‘You should know that King Baalis of Ammon has sent Nethaniah's son Ishmael to kill you. ’ But Gedaliah did not believe them."
+    },
+    {
+      "verse": "15",
+      "text": "So while Johanan was in Mizpah, he went to speak to Gedaliah alone. He said, ‘Let me go and kill Nethaniah's son Ishmael. Nobody will know who did it. If I do not kill him, he will surely kill you. Then the people of Judah who are here with you will run away. The few people who still remain in Judah will all disappear. ’"
+    },
+    {
+      "verse": "16",
+      "text": "But Ahikam's son Gedaliah, said to Kareah's son Johanan, ‘Do not do that! I do not believe the things that you tell me about Ishmael. ’"
+    },
+    {
       "verse": "1",
       "text": "The Lord spoke to Jeremiah again after Captain Nebuzaradan let him go free at Ramah. Jeremiah was with all the other people of Jerusalem and Judah that Captain Nebuzaradan was taking to Babylon. He was taking them in chains, as his prisoners. But he removed the chains from Jeremiah in Ramah."
     },
@@ -4101,26 +4121,6 @@ module.exports = {
     {
       "verse": "11",
       "text": "There were people of Judah who had run away to live in Moab, Ammon, Edom and other countries. They heard the news that the king of Babylon had let some people continue to live in Judah. They also heard that he had chosen Ahikam's son Gedaliah to be their ruler."
-    },
-    {
-      "verse": "12",
-      "text": "As a result, all those people returned to their homes in Judah. On their way, they stopped in Mizpah to meet Gedaliah. When they arrived, they picked a big harvest of dates, figs and grapes to make wine."
-    },
-    {
-      "verse": "13",
-      "text": "Kareah's son Johanan came to Mizpah to see Gedaliah. He came with the other army officers who had been hiding in the country."
-    },
-    {
-      "verse": "14",
-      "text": "They said to Gedaliah, ‘You should know that King Baalis of Ammon has sent Nethaniah's son Ishmael to kill you. ’ But Gedaliah did not believe them."
-    },
-    {
-      "verse": "15",
-      "text": "So while Johanan was in Mizpah, he went to speak to Gedaliah alone. He said, ‘Let me go and kill Nethaniah's son Ishmael. Nobody will know who did it. If I do not kill him, he will surely kill you. Then the people of Judah who are here with you will run away. The few people who still remain in Judah will all disappear. ’"
-    },
-    {
-      "verse": "16",
-      "text": "But Ahikam's son Gedaliah, said to Kareah's son Johanan, ‘Do not do that! I do not believe the things that you tell me about Ishmael. ’"
     }
   ],
   "41": [

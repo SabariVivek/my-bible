@@ -53,10 +53,6 @@ module.exports = {
       "text": "The angel said to him, ‘Zechariah, do not be afraid. God has heard what you prayed. He will give you what you asked for. Your wife Elizabeth will give birth to a baby boy. You will give him the name “John”."
     },
     {
-      "verse": "14",
-      "text": "He will be very important to the Lord God. So he will make you very happy. Many other people will also be very happy because he has been born. He must never drink anything with alcohol in it. From the time that he is born, the Holy Spirit will live inside him."
-    },
-    {
       "verse": "16",
       "text": "He will teach many people in Israel. Then they will turn their lives back to the Lord their God and they will obey God again."
     },
@@ -315,6 +311,14 @@ module.exports = {
     {
       "verse": "80",
       "text": "Zechariah's child grew. God made him strong in his mind. He went into the wilderness and he lived there for many years. Later, God sent him to Israel's people, to teach them."
+    },
+    {
+      "verse": "14",
+      "text": "He will be very important to the Lord God. So he will make you very happy. Many other people will also be very happy because he has been born."
+    },
+    {
+      "verse": "15",
+      "text": "He must never drink anything with alcohol in it. From the time that he is born, the Holy Spirit will live inside him."
     }
   ],
   "2": [
@@ -1419,70 +1423,6 @@ module.exports = {
   ],
   "8": [
     {
-      "verse": "1",
-      "text": "After this, Jesus went to visit many towns and villages. He told people the good news about the kingdom of God. The 12 disciples were travelling with him."
-    },
-    {
-      "verse": "2",
-      "text": "Some women also went with them. These women had been ill, but Jesus had made them well again. One of the women was Mary from Magdala. Jesus had sent seven bad spirits away from her."
-    },
-    {
-      "verse": "3",
-      "text": "Another of the women was Joanna, the wife of Chuza. Chuza had authority over all the people that worked in the house of King Herod. Another of the women was Susanna. There were also many others. These women were using their own money to help Jesus and his disciples."
-    },
-    {
-      "verse": "4",
-      "text": "Lots of people were coming to Jesus from many towns. A large crowd had already come together when Jesus told this story:"
-    },
-    {
-      "verse": "5",
-      "text": "‘A farmer went out to plant seeds in his field. While he was throwing the seeds, some of them fell on the path. Then people walked on them. Birds came down and they ate those seeds. When Jesus finished the story, he said, ‘You have ears, so listen well to what I say! ’"
-    },
-    {
-      "verse": "6",
-      "text": "Some seeds fell on ground which had rocks. The seeds started to grow. But the young plants died because the ground was not wet enough in that place."
-    },
-    {
-      "verse": "7",
-      "text": "Some seeds fell among thorn bushes. Those bushes grew up with the young plants. They stopped the seeds from growing into strong plants."
-    },
-    {
-      "verse": "8",
-      "text": "But some seeds fell on good soil. Strong plants grew from those seeds. Each of these plants made 100 seeds. ’When Jesus finished the story, he said, ‘You have ears, so listen well to what I say! ’"
-    },
-    {
-      "verse": "9",
-      "text": "Jesus' disciples asked him about this story. They asked him what it meant."
-    },
-    {
-      "verse": "10",
-      "text": "Jesus replied, ‘God has let you know what these stories mean. You understand how God rules in the lives of his people. But other people only listen to my stories. They look, but they do not really see clearly. They hear the words, but they do not really understand. ’"
-    },
-    {
-      "verse": "11",
-      "text": "Jesus then said, ‘This is what the story means: The seeds are like the message from God."
-    },
-    {
-      "verse": "12",
-      "text": "Some seeds fell on the path. That is like some people who hear the message, but they do not think about it. The Devil comes and he takes the message away from their minds. He takes it away so that they cannot believe it. Because they do not believe the message, God does not save them."
-    },
-    {
-      "verse": "13",
-      "text": "Some seeds fell on ground with rocks in it. This is like people who hear the message from God and they are very happy for a time. But they are like plants that have not grown down well into the soil. They believe in God for a short time. But when they have problems, they stop believing."
-    },
-    {
-      "verse": "14",
-      "text": "Some seeds fell among thorn bushes. This is like some other people who hear the message from God. But they start to have many troubles in their minds about how they will live. They want to get more money and more things. They think that this will make them happy. So they do not let God's message change them. They are like plants that do not grow into strong plants."
-    },
-    {
-      "verse": "15",
-      "text": "But some seed fell on good soil. This is like other people that hear the message from God. They understand the message and they keep it in their minds. They are good and honest. They continue to believe. These people are like a good plant that grows well and makes lots of new seeds. ’"
-    },
-    {
-      "verse": "16",
-      "text": "Jesus then said, ‘People do not light a lamp and then cover it. They do not put the lamp under a pot or under a bed. Instead, they put it in a high place. Then other people that come into the room can see the light from the lamp."
-    },
-    {
       "verse": "17",
       "text": "God hides some things now. But there will be a time when people will see them. God keeps some things secret now. But there will be a time when people will understand those things clearly."
     },
@@ -1573,6 +1513,70 @@ module.exports = {
     {
       "verse": "39",
       "text": "You must return to your home. Tell everyone about all that God has done for you. ’So the man went away. He went everywhere in the town and told all the people, ‘Jesus has done very good things for me. ’"
+    },
+    {
+      "verse": "1",
+      "text": "After this, Jesus went to visit many towns and villages. He told people the good news about the kingdom of God. The 12 disciples were travelling with him."
+    },
+    {
+      "verse": "2",
+      "text": "Some women also went with them. These women had been ill, but Jesus had made them well again. One of the women was Mary from Magdala. Jesus had sent seven bad spirits away from her."
+    },
+    {
+      "verse": "3",
+      "text": "Another of the women was Joanna, the wife of Chuza. Chuza had authority over all the people that worked in the house of King Herod. Another of the women was Susanna. There were also many others. These women were using their own money to help Jesus and his disciples."
+    },
+    {
+      "verse": "4",
+      "text": "Lots of people were coming to Jesus from many towns. A large crowd had already come together when Jesus told this story:"
+    },
+    {
+      "verse": "5",
+      "text": "‘A farmer went out to plant seeds in his field. While he was throwing the seeds, some of them fell on the path. Then people walked on them. Birds came down and they ate those seeds. When Jesus finished the story, he said, ‘You have ears, so listen well to what I say! ’"
+    },
+    {
+      "verse": "6",
+      "text": "Some seeds fell on ground which had rocks. The seeds started to grow. But the young plants died because the ground was not wet enough in that place."
+    },
+    {
+      "verse": "7",
+      "text": "Some seeds fell among thorn bushes. Those bushes grew up with the young plants. They stopped the seeds from growing into strong plants."
+    },
+    {
+      "verse": "8",
+      "text": "But some seeds fell on good soil. Strong plants grew from those seeds. Each of these plants made 100 seeds. ’When Jesus finished the story, he said, ‘You have ears, so listen well to what I say! ’"
+    },
+    {
+      "verse": "9",
+      "text": "Jesus' disciples asked him about this story. They asked him what it meant."
+    },
+    {
+      "verse": "10",
+      "text": "Jesus replied, ‘God has let you know what these stories mean. You understand how God rules in the lives of his people. But other people only listen to my stories. They look, but they do not really see clearly. They hear the words, but they do not really understand. ’"
+    },
+    {
+      "verse": "11",
+      "text": "Jesus then said, ‘This is what the story means: The seeds are like the message from God."
+    },
+    {
+      "verse": "12",
+      "text": "Some seeds fell on the path. That is like some people who hear the message, but they do not think about it. The Devil comes and he takes the message away from their minds. He takes it away so that they cannot believe it. Because they do not believe the message, God does not save them."
+    },
+    {
+      "verse": "13",
+      "text": "Some seeds fell on ground with rocks in it. This is like people who hear the message from God and they are very happy for a time. But they are like plants that have not grown down well into the soil. They believe in God for a short time. But when they have problems, they stop believing."
+    },
+    {
+      "verse": "14",
+      "text": "Some seeds fell among thorn bushes. This is like some other people who hear the message from God. But they start to have many troubles in their minds about how they will live. They want to get more money and more things. They think that this will make them happy. So they do not let God's message change them. They are like plants that do not grow into strong plants."
+    },
+    {
+      "verse": "15",
+      "text": "But some seed fell on good soil. This is like other people that hear the message from God. They understand the message and they keep it in their minds. They are good and honest. They continue to believe. These people are like a good plant that grows well and makes lots of new seeds. ’"
+    },
+    {
+      "verse": "16",
+      "text": "Jesus then said, ‘People do not light a lamp and then cover it. They do not put the lamp under a pot or under a bed. Instead, they put it in a high place. Then other people that come into the room can see the light from the lamp."
     },
     {
       "verse": "40",
@@ -3197,12 +3201,16 @@ module.exports = {
       "text": "I tell you this. At that time, two men will be sleeping in one bed. God will take one of them away but he will leave the other man behind."
     },
     {
-      "verse": "35",
-      "text": "Two women will be preparing food together in the same place. God will take one of them away but he will leave the other one behind. ’"
-    },
-    {
       "verse": "37",
       "text": "Jesus' disciples asked him, ‘Where will this happen? ’ Jesus replied, ‘If a dead body is lying somewhere, vultures will come together in that place. ’"
+    },
+    {
+      "verse": "35",
+      "text": "Two women will be preparing food together in the same place. God will take one of them away but he will leave the other one behind."
+    },
+    {
+      "verse": "36",
+      "text": "’."
     }
   ],
   "18": [

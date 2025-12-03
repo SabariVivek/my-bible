@@ -539,14 +539,6 @@ module.exports = {
       "text": "The people who lived in Beth Shemesh were working in their fields in the valley. They were cutting their wheat at harvest time. They looked up and they saw the Lord's Covenant Box. It made them very happy."
     },
     {
-      "verse": "14",
-      "text": "The cows pulled the cart into a field. It belonged to Joshua, who lived in Beth Shemesh. The cows stopped next to a large rock. The Levites took the Lord's Covenant Box off the cart. They put it on the large rock. They also put the box which contained the gold images on the rock."
-    },
-    {
-      "verse": "15",
-      "text": "The people from Beth Shemesh cut up the cart. They used the wood to make a fire. Then they killed the cows. They burnt them on the fire as a burnt offering to the Lord. That day the people of Beth Shemesh offered many burnt offerings and other sacrifices to the Lord."
-    },
-    {
       "verse": "16",
       "text": "The five Philistine rulers watched them as they did that. Then they returned to Ekron on the same day."
     },
@@ -569,6 +561,14 @@ module.exports = {
     {
       "verse": "21",
       "text": "So they sent people to Kiriath-Jearim with a message. They said, ‘The Philistines have sent the Lord's Covenant Box back to Israel. Please come and take it from us. Take it to your town. ’"
+    },
+    {
+      "verse": "14",
+      "text": "The cows pulled the cart into a field. It belonged to Joshua, who lived in Beth Shemesh. The cows stopped next to a large rock. The Levites took the Lord's Covenant Box off the cart. They put it on the large rock. They also put the box which contained the gold images on the rock."
+    },
+    {
+      "verse": "15",
+      "text": "The people from Beth Shemesh cut up the cart. They used the wood to make a fire. Then they killed the cows. They burnt them on the fire as a burnt offering to the Lord. That day the people of Beth Shemesh offered many burnt offerings and other sacrifices to the Lord."
     }
   ],
   "7": [
@@ -1117,14 +1117,6 @@ module.exports = {
   ],
   "13": [
     {
-      "verse": "1",
-      "text": "years old when he became king. He ruled Israel as king for 42 years."
-    },
-    {
-      "verse": "2",
-      "text": "He chose 3, 000 men from Israel's army to be with him. 2, 000 of those men stayed with him at Michmash and in the hill country of Bethel. Then 1, 000 men were with his son Jonathan at Gibeah, in the land of Benjamin's tribe. Saul sent all the other men of the army back to their homes."
-    },
-    {
       "verse": "3",
       "text": "Some Philistine soldiers had a camp at Geba. Jonathan attacked them there and all the Philistines heard about it. Saul sent a message through all Israel to warn people of the danger. He said, ‘Listen, all you Hebrew people! ’"
     },
@@ -1159,6 +1151,14 @@ module.exports = {
     {
       "verse": "11",
       "text": "Samuel asked Saul, ‘What have you done? ’Saul replied, ‘The soldiers were starting to leave me. You had not arrived here at the time that you said you would come. I could see that the Philistine soldiers were preparing for battle at Michmash."
+    },
+    {
+      "verse": "1",
+      "text": "years old when he became king. He ruled Israel as king for 42 years."
+    },
+    {
+      "verse": "2",
+      "text": "He chose 3, 000 men from Israel's army to be with him. 2, 000 of those men stayed with him at Michmash and in the hill country of Bethel. Then 1, 000 men were with his son Jonathan at Gibeah, in the land of Benjamin's tribe. Saul sent all the other men of the army back to their homes."
     },
     {
       "verse": "12",
@@ -2653,14 +2653,6 @@ module.exports = {
       "text": "Then Samuel died. All the Israelites met together and they were very sad. Then they buried Samuel at his home in Ramah. David went down to the Paran desert. David went down to the Paran desert."
     },
     {
-      "verse": "2",
-      "text": "There was a very rich man who lived at Maon. His name was Nabal. He was a descendant of Caleb. His wife's name was Abigail. She was wise and beautiful. But Nabal was a cruel man who did evil things."
-    },
-    {
-      "verse": "3",
-      "text": "Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep. Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep."
-    },
-    {
       "verse": "4",
       "text": "While David was in the desert, he heard that Nabal was cutting the wool from his sheep."
     },
@@ -2823,6 +2815,14 @@ module.exports = {
     {
       "verse": "44",
       "text": "Saul's daughter Michal had been David's wife. But Saul had then given her to Palti as his wife. Palti was the son of Laish, who came from Gallim town."
+    },
+    {
+      "verse": "2",
+      "text": "There was a very rich man who lived at Maon. His name was Nabal. He was a descendant of Caleb. His wife's name was Abigail. She was wise and beautiful. But Nabal was a cruel man who did evil things."
+    },
+    {
+      "verse": "3",
+      "text": "Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep. Nabal had some land near Carmel. He had 3, 000 sheep and 1, 000 goats. He was with his men in Carmel as they cut the wool from his sheep."
     }
   ],
   "26": [
@@ -3127,46 +3127,6 @@ module.exports = {
   ],
   "30": [
     {
-      "verse": "1",
-      "text": "David and his men arrived at Ziklag three days after they left King Achish. They found that the Amalekites had attacked Ziklag and towns in the south of Judah. The Amalekites had destroyed Ziklag with fire."
-    },
-    {
-      "verse": "2",
-      "text": "They had caught the women and the other people who were in the town, both young people and old people. They did not kill any of them, but they took them away as prisoners."
-    },
-    {
-      "verse": "3",
-      "text": "So when David and his men arrived at Ziklag, they saw that the Amalekites had destroyed the city. The Amalekites had taken away their wives, their sons and their daughters as prisoners."
-    },
-    {
-      "verse": "4",
-      "text": "David and his men wept loudly. They continued to weep until they had no strength to weep any more."
-    },
-    {
-      "verse": "5",
-      "text": "The Amalekites had taken both of David's wives: Ahinoam from Jezreel and Abigail from Carmel, who was Nabal's widow."
-    },
-    {
-      "verse": "6",
-      "text": "David was very upset because his men were complaining. They wanted to kill him with stones. His men were very upset because they had lost their sons and their daughters. But David trusted the Lord his God to make him strong."
-    },
-    {
-      "verse": "7",
-      "text": "Then David spoke to Abiathar the priest, Ahimelech's son. David said to him, ‘Bring the priests' ephod to me. ’ So Abiathar took the ephod to David. The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families. ’"
-    },
-    {
-      "verse": "8",
-      "text": "David asked the Lord, ‘Should I chase after the men who attacked our town? Will I catch them? ’The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families. ’"
-    },
-    {
-      "verse": "9",
-      "text": "men left Ziklag. They arrived at Besor stream. Some of the men were too tired to go across the valley."
-    },
-    {
-      "verse": "10",
-      "text": "So 200 men remained there. David and the other 400 men continued to chase after the Amalekites."
-    },
-    {
       "verse": "11",
       "text": "David's men found an Egyptian man in a field. They took him to David. They gave the man some water to drink and food to eat."
     },
@@ -3197,6 +3157,38 @@ module.exports = {
     {
       "verse": "18",
       "text": "David got back everything that the Amalekites had taken. And he rescued his two wives."
+    },
+    {
+      "verse": "1",
+      "text": "David and his men arrived at Ziklag three days after they left King Achish. They found that the Amalekites had attacked Ziklag and towns in the south of Judah. The Amalekites had destroyed Ziklag with fire."
+    },
+    {
+      "verse": "2",
+      "text": "They had caught the women and the other people who were in the town, both young people and old people. They did not kill any of them, but they took them away as prisoners."
+    },
+    {
+      "verse": "3",
+      "text": "So when David and his men arrived at Ziklag, they saw that the Amalekites had destroyed the city. The Amalekites had taken away their wives, their sons and their daughters as prisoners."
+    },
+    {
+      "verse": "4",
+      "text": "David and his men wept loudly. They continued to weep until they had no strength to weep any more."
+    },
+    {
+      "verse": "5",
+      "text": "The Amalekites had taken both of David's wives: Ahinoam from Jezreel and Abigail from Carmel, who was Nabal's widow."
+    },
+    {
+      "verse": "6",
+      "text": "David was very upset because his men were complaining. They wanted to kill him with stones. His men were very upset because they had lost their sons and their daughters. But David trusted the Lord his God to make him strong."
+    },
+    {
+      "verse": "7",
+      "text": "Then David spoke to Abiathar the priest, Ahimelech's son. David said to him, ‘Bring the priests' ephod to me. ’ So Abiathar took the ephod to David. The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families. ’"
+    },
+    {
+      "verse": "8",
+      "text": "David asked the Lord, ‘Should I chase after the men who attacked our town? Will I catch them? ’The Lord answered, ‘Yes, chase after them and you will certainly catch them. You will rescue your families. ’"
     },
     {
       "verse": "19",
@@ -3249,6 +3241,14 @@ module.exports = {
     {
       "verse": "31",
       "text": "and Hebron. David also sent gifts to the people in the towns that he and his men had visited."
+    },
+    {
+      "verse": "9",
+      "text": "men left Ziklag. They arrived at Besor stream. Some of the men were too tired to go across the valley."
+    },
+    {
+      "verse": "10",
+      "text": "So 200 men remained there. David and the other 400 men continued to chase after the Amalekites."
     }
   ],
   "31": [

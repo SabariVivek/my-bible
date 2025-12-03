@@ -315,26 +315,6 @@ module.exports = {
   ],
   "4": [
     {
-      "verse": "1",
-      "text": "Masters, be fair to your servants. Give them what is right. Remember that you also serve a master, and he is in heaven."
-    },
-    {
-      "verse": "2",
-      "text": "Continue to pray seriously. Stay awake, like people who watch carefully. And remember to thank God."
-    },
-    {
-      "verse": "3",
-      "text": "Also pray for us. Ask God to make it possible for us to tell people his message. We want people to understand the message about Christ that was a secret before. I am now in a prison because I taught people those things."
-    },
-    {
-      "verse": "4",
-      "text": "Pray that I will be able to tell people this message clearly. That is what I should do."
-    },
-    {
-      "verse": "5",
-      "text": "When you are with people who do not believe in Christ, be careful how you live. Use every chance to do good things."
-    },
-    {
       "verse": "6",
       "text": "When you speak to people, always speak kind words. Say things that will help them. Then, when someone asks you a question, you will know how to reply."
     },
@@ -385,6 +365,26 @@ module.exports = {
     {
       "verse": "18",
       "text": "I, Paul, am writing these words at the end of this letter with my own hand. Remember to pray for me while I am in prison. I pray that God will continue to be very kind to you."
+    },
+    {
+      "verse": "1",
+      "text": "Masters, be fair to your servants. Give them what is right. Remember that you also serve a master, and he is in heaven."
+    },
+    {
+      "verse": "2",
+      "text": "Continue to pray seriously. Stay awake, like people who watch carefully. And remember to thank God."
+    },
+    {
+      "verse": "3",
+      "text": "Also pray for us. Ask God to make it possible for us to tell people his message. We want people to understand the message about Christ that was a secret before. I am now in a prison because I taught people those things."
+    },
+    {
+      "verse": "4",
+      "text": "Pray that I will be able to tell people this message clearly. That is what I should do."
+    },
+    {
+      "verse": "5",
+      "text": "When you are with people who do not believe in Christ, be careful how you live. Use every chance to do good things."
     }
   ]
 };

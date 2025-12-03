@@ -185,26 +185,6 @@ module.exports = {
   ],
   "3": [
     {
-      "verse": "1",
-      "text": "After some time, King Xerxes gave one of his officers greater authority. The officer's name was Haman. He was the son of Hammedatha, a descendant of Agag. Haman became the most important officer who served the king."
-    },
-    {
-      "verse": "2",
-      "text": "The king commanded that all the royal officers at the king's gate must bend down low down to Haman. So they all gave Haman honour when he passed them. Only Mordecai would not bend down and give honour to Haman."
-    },
-    {
-      "verse": "3",
-      "text": "The officers at the king's gate asked Mordecai, ‘Why do you not obey the king's command? ’"
-    },
-    {
-      "verse": "4",
-      "text": "They warned Mordecai every day. But he would not agree to bend down low to Haman. So the officers told Haman about this. Mordecai had told them that he was a Jew. So they wanted to know if Haman would let Mordecai do this."
-    },
-    {
-      "verse": "5",
-      "text": "When Haman realized that Mordecai would not give him honour, he became very angry."
-    },
-    {
       "verse": "6",
       "text": "But he did not want to destroy only Mordecai. Now he knew that Mordecai was a Jew, he decided to destroy all the Jews who lived in Xerxes' whole kingdom."
     },
@@ -235,6 +215,26 @@ module.exports = {
     {
       "verse": "13",
       "text": "Men delivered the letters to all the regions of the kingdom. Haman's command said that on the 13th day of the 12th month (Adar) people should completely destroy and kill all the Jews. They should kill old people and young people, women and children. Then they should take all the Jews' valuable things for themselves."
+    },
+    {
+      "verse": "1",
+      "text": "After some time, King Xerxes gave one of his officers greater authority. The officer's name was Haman. He was the son of Hammedatha, a descendant of Agag. Haman became the most important officer who served the king."
+    },
+    {
+      "verse": "2",
+      "text": "The king commanded that all the royal officers at the king's gate must bend down low down to Haman. So they all gave Haman honour when he passed them. Only Mordecai would not bend down and give honour to Haman."
+    },
+    {
+      "verse": "3",
+      "text": "The officers at the king's gate asked Mordecai, ‘Why do you not obey the king's command? ’"
+    },
+    {
+      "verse": "4",
+      "text": "They warned Mordecai every day. But he would not agree to bend down low to Haman. So the officers told Haman about this. Mordecai had told them that he was a Jew. So they wanted to know if Haman would let Mordecai do this."
+    },
+    {
+      "verse": "5",
+      "text": "When Haman realized that Mordecai would not give him honour, he became very angry."
     },
     {
       "verse": "14",
@@ -605,10 +605,6 @@ module.exports = {
       "text": "On the 14th day of the month called Adar the Jews in Susa all met together again. That day they killed 300 more men in Susa. But they did not take their enemies' things for themselves."
     },
     {
-      "verse": "16",
-      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75, 000 of their enemies. But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
-    },
-    {
       "verse": "18",
       "text": "But the Jews in Susa did not rest until the 15th day of the month. That was because they killed their enemies on both the 13th day and the 14th day. On the 15th day they ate feasts and they were very happy."
     },
@@ -667,6 +663,14 @@ module.exports = {
     {
       "verse": "32",
       "text": "Queen Esther's command made those rules about the feast of Purim. The palace secretaries wrote it down in a book."
+    },
+    {
+      "verse": "16",
+      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75, 000 of their enemies."
+    },
+    {
+      "verse": "17",
+      "text": "But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
     }
   ],
   "10": [

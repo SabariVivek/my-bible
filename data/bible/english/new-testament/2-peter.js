@@ -65,10 +65,6 @@ module.exports = {
       "text": "We told you that our Lord Jesus Christ is powerful. We also told you that he will return to earth again. We were not telling you false stories that came from people's clever ideas. Instead, we were telling you what we ourselves had seen. We ourselves saw that the Lord Jesus is very great."
     },
     {
-      "verse": "17",
-      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power. He said: ‘This is my Son and I love him. He makes me very happy. ’"
-    },
-    {
       "verse": "19",
       "text": "As well as that, we have the prophets' messages from long ago. They also show us very clearly that these things are true. The prophets' words are like a light that shines in a dark place. That light continues to shine in the dark until the dawn comes. So you need to think about those messages carefully. Then the morning star will rise and it will bring light deep inside you."
     },
@@ -79,6 +75,14 @@ module.exports = {
     {
       "verse": "21",
       "text": "None of the prophets' messages came because any person wanted to say something. Instead, God's Holy Spirit caused people to speak words that came from God."
+    },
+    {
+      "verse": "17",
+      "text": "We were with him on the holy mountain when his Father God spoke to him. God gave honour to his Son, Jesus, and he said that Jesus is great. We ourselves heard God's voice speak to Jesus from heaven above where God rules with power."
+    },
+    {
+      "verse": "18",
+      "text": "He said: ‘This is my Son and I love him. He makes me very happy. ’."
     }
   ],
   "2": [

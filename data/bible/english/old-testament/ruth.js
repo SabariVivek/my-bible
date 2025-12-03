@@ -1,10 +1,6 @@
 module.exports = {
   "1": [
     {
-      "verse": "1",
-      "text": "There was a time when judges ruled Israel. During that time there was a famine in Judah. A man who lived in Bethlehem, in Judah, had a wife and two sons. His name was Elimelech. Elimelech's wife was called Naomi, and his sons were called Mahlon and Kilion. They were from Ephrathah's clan. Because there was not enough food in Judah, Elimelech and his family left Bethlehem. They went to live as strangers in Moab."
-    },
-    {
       "verse": "3",
       "text": "Elimelech died while they were living in Moab. Naomi and her two sons remained there alone."
     },
@@ -83,6 +79,14 @@ module.exports = {
     {
       "verse": "22",
       "text": "That is how Naomi returned from Moab with Ruth. Ruth was from Moab. She was the wife of Naomi's son Mahlon. Naomi and Ruth arrived in Bethlehem when the harvest of barley was beginning."
+    },
+    {
+      "verse": "1",
+      "text": "There was a time when judges ruled Israel. During that time there was a famine in Judah. A man who lived in Bethlehem, in Judah, had a wife and two sons. His name was Elimelech."
+    },
+    {
+      "verse": "2",
+      "text": "Elimelech's wife was called Naomi, and his sons were called Mahlon and Kilion. They were from Ephrathah's clan. Because there was not enough food in Judah, Elimelech and his family left Bethlehem. They went to live as strangers in Moab."
     }
   ],
   "2": [

@@ -449,10 +449,6 @@ module.exports = {
       "text": "The Levite priests receive gifts, and they are people who one day will die. Melchizedek also received gifts, but we are told that he continues to live."
     },
     {
-      "verse": "9",
-      "text": "The Levite priests receive their gifts from the people. But we could say that Levi himself gave a tenth part of what he had to Melchizedek. When Abraham gave his tenth part to Melchizedek, it was like Levi was there inside him. At that time, Levi was not yet born, but Abraham was his ancestor."
-    },
-    {
       "verse": "11",
       "text": "The Levite priests were a necessary part of God's Law for Israel's people. But those priests could not make the people completely right with God. If that had been possible, the Levite priests could have continued their work. But we see that God has chosen a different kind of priest to serve him. That priest is not someone from Aaron's family, as the Levites were. Instead, he is a priest in the same way that Melchizedek was God's priest."
     },
@@ -523,6 +519,14 @@ module.exports = {
     {
       "verse": "28",
       "text": "In the old agreement, Moses' laws decide who will become special priests. Because those men are weak, they often do wrong things. But God's very strong promise came after the Law that he gave to Moses. With that promise, God chose his Son to be his special priest. And his Son has become everything that God wants him to be, completely and for ever."
+    },
+    {
+      "verse": "9",
+      "text": "The Levite priests receive their gifts from the people. But we could say that Levi himself gave a tenth part of what he had to Melchizedek."
+    },
+    {
+      "verse": "10",
+      "text": "When Abraham gave his tenth part to Melchizedek, it was like Levi was there inside him. At that time, Levi was not yet born, but Abraham was his ancestor."
     }
   ],
   "8": [
@@ -695,6 +699,14 @@ module.exports = {
   ],
   "10": [
     {
+      "verse": "14",
+      "text": "So, as a result of his one sacrifice, Christ has made God's people completely clean for all time."
+    },
+    {
+      "verse": "15",
+      "text": "God's Holy Spirit also shows us that these things are true. He says this first:"
+    },
+    {
       "verse": "1",
       "text": "God's laws which he gave to Moses are like a shadow of the good things that would come later. But those laws do not show exactly what those good things are like. They say that the priests must continue to offer the same sacrifices on behalf of the people, year after year. So those sacrifices can never make the people completely clean when they come to worship God. ‘You have not wanted people to offer sacrifices and other gifts to you. Instead, you have prepared a body for me to offer to you."
     },
@@ -745,14 +757,6 @@ module.exports = {
     {
       "verse": "13",
       "text": "Since then, he waits for God to win against his enemies completely. They will become like a place for him to put his feet."
-    },
-    {
-      "verse": "14",
-      "text": "So, as a result of his one sacrifice, Christ has made God's people completely clean for all time."
-    },
-    {
-      "verse": "15",
-      "text": "God's Holy Spirit also shows us that these things are true. He says this first:"
     },
     {
       "verse": "16",

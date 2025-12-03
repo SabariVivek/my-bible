@@ -125,14 +125,6 @@ module.exports = {
       "text": "So Jesus went to her and he held her hand. Then he helped her to sit up and she was well again. Immediately she prepared food for her visitors."
     },
     {
-      "verse": "32",
-      "text": "That evening, when the sun had gone down, people in the town came to Jesus. They brought to him everyone who was ill."
-    },
-    {
-      "verse": "33",
-      "text": "And they brought people with bad spirits in them. All these people were standing together near the door of the house."
-    },
-    {
       "verse": "34",
       "text": "Jesus caused many sick people to become well. They had many different kinds of illness. He also caused many bad spirits to leave people. The spirits knew who he was. So Jesus did not let them speak."
     },
@@ -179,6 +171,14 @@ module.exports = {
     {
       "verse": "45",
       "text": "But instead, the man went away and he talked to everybody. He told them what had happened to him. Because he did this, it became too difficult for Jesus to go into the towns. Everybody knew him. So Jesus stayed in places in the wilderness. People came from all the places around there to see him."
+    },
+    {
+      "verse": "32",
+      "text": "That evening, when the sun had gone down, people in the town came to Jesus. They brought to him everyone who was ill."
+    },
+    {
+      "verse": "33",
+      "text": "And they brought people with bad spirits in them. All these people were standing together near the door of the house."
     }
   ],
   "2": [
@@ -609,18 +609,6 @@ module.exports = {
       "text": "Jesus and his disciples came to the other side of the lake. They came to a place where the Gerasene people lived."
     },
     {
-      "verse": "2",
-      "text": "Jesus got out of the boat. Immediately, a man with a bad spirit in him came to him. This man lived outside, among some graves."
-    },
-    {
-      "verse": "3",
-      "text": "He was very strong and nobody could hold him. People often put chains around his ankles to hold him."
-    },
-    {
-      "verse": "4",
-      "text": "They wanted to keep him in a safe place. But he broke the chains that held him."
-    },
-    {
       "verse": "5",
       "text": "The man often walked in the place where the dead people were and on the hills. Every day and every night, he screamed and he used stones to cut himself."
     },
@@ -775,109 +763,21 @@ module.exports = {
     {
       "verse": "43",
       "text": "Jesus said to them, ‘You must not tell anyone what has happened here. Now give the girl something to eat. ’"
-    }
-  ],
-  "6": [
-    {
-      "verse": "1",
-      "text": "Jesus left that place. He went to his own town. His disciples went with him."
     },
     {
       "verse": "2",
-      "text": "When it was the Jewish day of rest, Jesus went to their meeting place. He began to teach the people who were there. Many of them were surprised about the things that he was saying to them. They said to each other, ‘How did this man learn all these things? How did he become so wise? How does he do all these powerful things?"
+      "text": "Jesus got out of the boat. Immediately, a man with a bad spirit in him came to him. This man lived outside, among some graves."
     },
     {
       "verse": "3",
-      "text": "We know he is an ordinary man. He is the carpenter. He is the son of Mary and the brother of James, Joses, Simon and Judas. His sisters live here in the town among us. Isn't that true? ’ So the people there turned against Jesus."
+      "text": "He was very strong and nobody could hold him. People often put chains around his ankles to hold him."
     },
     {
       "verse": "4",
-      "text": "Then Jesus said to them, ‘If a man is a prophet from God, people everywhere will respect him. But the people in his own town will not accept him. Even his own people and his own family will not respect him. ’"
-    },
-    {
-      "verse": "5",
-      "text": "Jesus could not do any powerful miracles in his own town. But he did put his hands on a few sick people and he made them well. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
-    },
-    {
-      "verse": "6",
-      "text": "Jesus was very surprised because the people there would not believe in him. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
-    },
-    {
-      "verse": "7",
-      "text": "apostles to come to him. He started to send them out to tell God's message to people. He sent them out two by two and he gave them authority over bad spirits."
-    },
-    {
-      "verse": "8",
-      "text": "Jesus told the disciples, ‘Only take a stick for the journey, nothing else. Do not take any bread or a bag. Do not take any money in your pockets."
-    },
-    {
-      "verse": "9",
-      "text": "Wear shoes but do not take extra clothes."
-    },
-    {
-      "verse": "10",
-      "text": "In each town, stay at the first house that you go into. Continue to stay there until you leave that town."
-    },
-    {
-      "verse": "11",
-      "text": "Perhaps you might go to a town where the people do not accept you. They will not listen to you. So you should leave that town. Clean that town's dirt off your feet. Then it will be clear that they have done something wrong. ’"
-    },
-    {
-      "verse": "12",
-      "text": "apostles went out. They told people that they must change the way that they live. They must stop doing wrong things."
-    },
-    {
-      "verse": "13",
-      "text": "The disciples caused many bad spirits to come out of people. They also put olive oil on many sick people, and the sick people became well."
-    },
-    {
-      "verse": "14",
-      "text": "People were talking about Jesus. King Herod heard about what was happening. Some people were saying that Jesus was really John the Baptist. They said that John had died, but he had become alive again. ‘That is why this man can do these very powerful things, ’ they said."
-    },
-    {
-      "verse": "15",
-      "text": "Other people said, ‘This man is Elijah. ’ And other people said, ‘He is a prophet. He is like one of God's prophets who lived a long time ago. ’"
-    },
-    {
-      "verse": "16",
-      "text": "But when someone told Herod, he said, ‘This man is surely John. I sent a soldier to cut off his head. But he has become alive again! ’"
-    },
-    {
-      "verse": "17",
-      "text": "Herod himself had sent his soldiers to take hold of John. He had said to his soldiers, ‘Tie his hands and feet and put him in prison. ’ Herod had done that because of his wife, Herodias. She had been the wife of Herod's brother, Philip. But Herod had married her."
-    },
-    {
-      "verse": "18",
-      "text": "John had said to him, ‘Herodias is your brother's wife. It is not right for you to have her as your wife. ’"
-    },
-    {
-      "verse": "19",
-      "text": "So Herodias was angry with John. She wanted to kill him. But she could not do that,"
-    },
-    {
-      "verse": "20",
-      "text": "because Herod was afraid of John. Herod knew that John was a good man and a servant of God. So Herod kept John safe. Herod liked to listen to the things that John said. But he did not know what to think about those things."
-    },
-    {
-      "verse": "21",
-      "text": "One day, Herodias had her chance. It was Herod's birthday and he asked many people to come to a special meal. Important men and officers came. The rulers from Galilee were also there."
-    },
-    {
-      "verse": "22",
-      "text": "The daughter of Herodias came in and she danced. Herod and his visitors were very happy when they saw her dance. King Herod said to the girl, ‘Ask me for anything that you want. I will give it to you. ’"
-    },
-    {
-      "verse": "23",
-      "text": "He made a strong promise, ‘I will give you anything that you ask me to give to you. I will even give you half of everything that I rule over. ’"
-    },
-    {
-      "verse": "24",
-      "text": "The girl went out and she said to her mother, ‘What should I ask him for? ’ Her mother replied, ‘Ask for the head of John the Baptist. ’"
-    },
-    {
-      "verse": "25",
-      "text": "The girl went quickly to Herod and she said to him, ‘I want the head of John the Baptist. Put it on a plate! Do it now! ’"
-    },
+      "text": "They wanted to keep him in a safe place. But he broke the chains that held him."
+    }
+  ],
+  "6": [
     {
       "verse": "26",
       "text": "Then Herod felt very sad. Because he had made a special promise, he did not want to refuse her. All his visitors had heard him."
@@ -1001,6 +901,106 @@ module.exports = {
     {
       "verse": "56",
       "text": "Jesus went to villages, towns and farms. Everywhere that he went, they brought sick people to the market places. The sick people asked Jesus for help. They wanted to touch even the edge of his coat. Every sick person who touched him became well."
+    },
+    {
+      "verse": "1",
+      "text": "Jesus left that place. He went to his own town. His disciples went with him."
+    },
+    {
+      "verse": "2",
+      "text": "When it was the Jewish day of rest, Jesus went to their meeting place. He began to teach the people who were there. Many of them were surprised about the things that he was saying to them. They said to each other, ‘How did this man learn all these things? How did he become so wise? How does he do all these powerful things?"
+    },
+    {
+      "verse": "3",
+      "text": "We know he is an ordinary man. He is the carpenter. He is the son of Mary and the brother of James, Joses, Simon and Judas. His sisters live here in the town among us. Isn't that true? ’ So the people there turned against Jesus."
+    },
+    {
+      "verse": "4",
+      "text": "Then Jesus said to them, ‘If a man is a prophet from God, people everywhere will respect him. But the people in his own town will not accept him. Even his own people and his own family will not respect him. ’"
+    },
+    {
+      "verse": "5",
+      "text": "Jesus could not do any powerful miracles in his own town. But he did put his hands on a few sick people and he made them well. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
+    },
+    {
+      "verse": "6",
+      "text": "Jesus was very surprised because the people there would not believe in him. Then he went to visit the other villages that were near there. He was teaching the people who lived in those villages."
+    },
+    {
+      "verse": "7",
+      "text": "apostles to come to him. He started to send them out to tell God's message to people. He sent them out two by two and he gave them authority over bad spirits."
+    },
+    {
+      "verse": "8",
+      "text": "Jesus told the disciples, ‘Only take a stick for the journey, nothing else. Do not take any bread or a bag. Do not take any money in your pockets."
+    },
+    {
+      "verse": "9",
+      "text": "Wear shoes but do not take extra clothes."
+    },
+    {
+      "verse": "10",
+      "text": "In each town, stay at the first house that you go into. Continue to stay there until you leave that town."
+    },
+    {
+      "verse": "11",
+      "text": "Perhaps you might go to a town where the people do not accept you. They will not listen to you. So you should leave that town. Clean that town's dirt off your feet. Then it will be clear that they have done something wrong. ’"
+    },
+    {
+      "verse": "12",
+      "text": "apostles went out. They told people that they must change the way that they live. They must stop doing wrong things."
+    },
+    {
+      "verse": "13",
+      "text": "The disciples caused many bad spirits to come out of people. They also put olive oil on many sick people, and the sick people became well."
+    },
+    {
+      "verse": "14",
+      "text": "People were talking about Jesus. King Herod heard about what was happening. Some people were saying that Jesus was really John the Baptist. They said that John had died, but he had become alive again. ‘That is why this man can do these very powerful things, ’ they said."
+    },
+    {
+      "verse": "15",
+      "text": "Other people said, ‘This man is Elijah. ’ And other people said, ‘He is a prophet. He is like one of God's prophets who lived a long time ago. ’"
+    },
+    {
+      "verse": "16",
+      "text": "But when someone told Herod, he said, ‘This man is surely John. I sent a soldier to cut off his head. But he has become alive again! ’"
+    },
+    {
+      "verse": "17",
+      "text": "Herod himself had sent his soldiers to take hold of John. He had said to his soldiers, ‘Tie his hands and feet and put him in prison. ’ Herod had done that because of his wife, Herodias. She had been the wife of Herod's brother, Philip. But Herod had married her."
+    },
+    {
+      "verse": "18",
+      "text": "John had said to him, ‘Herodias is your brother's wife. It is not right for you to have her as your wife. ’"
+    },
+    {
+      "verse": "19",
+      "text": "So Herodias was angry with John. She wanted to kill him. But she could not do that,"
+    },
+    {
+      "verse": "20",
+      "text": "because Herod was afraid of John. Herod knew that John was a good man and a servant of God. So Herod kept John safe. Herod liked to listen to the things that John said. But he did not know what to think about those things."
+    },
+    {
+      "verse": "21",
+      "text": "One day, Herodias had her chance. It was Herod's birthday and he asked many people to come to a special meal. Important men and officers came. The rulers from Galilee were also there."
+    },
+    {
+      "verse": "22",
+      "text": "The daughter of Herodias came in and she danced. Herod and his visitors were very happy when they saw her dance. King Herod said to the girl, ‘Ask me for anything that you want. I will give it to you. ’"
+    },
+    {
+      "verse": "23",
+      "text": "He made a strong promise, ‘I will give you anything that you ask me to give to you. I will even give you half of everything that I rule over. ’"
+    },
+    {
+      "verse": "24",
+      "text": "The girl went out and she said to her mother, ‘What should I ask him for? ’ Her mother replied, ‘Ask for the head of John the Baptist. ’"
+    },
+    {
+      "verse": "25",
+      "text": "The girl went quickly to Herod and she said to him, ‘I want the head of John the Baptist. Put it on a plate! Do it now! ’"
     }
   ],
   "7": [
@@ -1477,22 +1477,6 @@ module.exports = {
       "text": "A person who believes in me may not seem important. But you should never make that person do wrong things. Do not do that! It would be better if someone tied a big stone around your neck and then he threw you into the sea!"
     },
     {
-      "verse": "43",
-      "text": "If your hand causes you to do wrong things, you should cut it off. You will only have one hand, but you can have God's true life."
-    },
-    {
-      "verse": "44",
-      "text": "It will be much worse for you if you keep both your hands and go to hell. There, the fire always burns and never stops."
-    },
-    {
-      "verse": "45",
-      "text": "If your foot causes you to do wrong things, you should cut it off. You will only have one foot, but you can have God's true life."
-    },
-    {
-      "verse": "46",
-      "text": "It will be much worse if you keep your two feet and go to hell."
-    },
-    {
       "verse": "47",
       "text": "If your eye causes you to do wrong things, then you should remove it. Then you will only have one eye, but you can go into the kingdom of God. It will be much worse if you keep both your eyes and God throws you into hell."
     },
@@ -1507,6 +1491,22 @@ module.exports = {
     {
       "verse": "50",
       "text": "Salt is good. But if your salt is not salty any more, you cannot make it salty again. You should be like good salt and love each other. Do not cause trouble among yourselves. ’"
+    },
+    {
+      "verse": "43",
+      "text": "If your hand causes you to do wrong things, you should cut it off. You will only have one hand, but you can have God's true life."
+    },
+    {
+      "verse": "44",
+      "text": "It will be much worse for you if you keep both your hands and go to hell. There, the fire always burns and never stops."
+    },
+    {
+      "verse": "45",
+      "text": "If your foot causes you to do wrong things, you should cut it off. You will only have one foot, but you can have God's true life."
+    },
+    {
+      "verse": "46",
+      "text": "It will be much worse if you keep your two feet and go to hell."
     }
   ],
   "10": [

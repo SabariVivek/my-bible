@@ -441,10 +441,6 @@ module.exports = {
       "text": "The Lord God was pleased that Solomon had asked for this."
     },
     {
-      "verse": "11",
-      "text": "So God said to him, ‘You have not asked me to give you a long life, or to make you very rich. You have not asked me to punish your enemies with death. Instead you have asked for a wise mind so that you can rule well. Because of that, I will give you what you have asked for. Yes, I now give to you a wise mind that understands things well. You will be wiser than anyone who has already lived and wiser than anyone who will live after you."
-    },
-    {
       "verse": "13",
       "text": "I will give you even more than this. I will make you rich and famous, even though you did not ask for that. As long as you live, there will be no other king who is greater than you."
     },
@@ -507,6 +503,14 @@ module.exports = {
     {
       "verse": "28",
       "text": "Everybody in Israel heard about what the king had decided. So they respected the king's authority. They realized that God had given him wisdom to judge fairly."
+    },
+    {
+      "verse": "11",
+      "text": "So God said to him, ‘You have not asked me to give you a long life, or to make you very rich. You have not asked me to punish your enemies with death. Instead you have asked for a wise mind so that you can rule well."
+    },
+    {
+      "verse": "12",
+      "text": "Because of that, I will give you what you have asked for. Yes, I now give to you a wise mind that understands things well. You will be wiser than anyone who has already lived and wiser than anyone who will live after you."
     }
   ],
   "4": [
@@ -2291,6 +2295,42 @@ module.exports = {
   ],
   "16": [
     {
+      "verse": "26",
+      "text": "He did the same bad things that Nebat's son Jeroboam had done and that he caused the Israelites to do. The useless idols that they worshipped caused the Lord, Israel's God, to be very angry."
+    },
+    {
+      "verse": "27",
+      "text": "The other things that happened while Omri was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that he did and the power that he had."
+    },
+    {
+      "verse": "28",
+      "text": "Omri died and they buried him in Samaria. His son Ahab became king of Israel after him."
+    },
+    {
+      "verse": "29",
+      "text": "Omri's son Ahab became king of Israel when Asa had been king of Judah for 38 years. Ahab ruled Israel as king in Samaria for 22 years."
+    },
+    {
+      "verse": "30",
+      "text": "Omri's son Ahab did many things that the Lord said were evil. He did more evil things than all the kings of Israel who lived before him."
+    },
+    {
+      "verse": "31",
+      "text": "He did the same bad things that Nebat's son Jeroboam had done. He even did something that was even worse. He married Jezebel, the daughter of Ethbaal, the king of Sidon. Ahab served Baal as his god and he worshipped him."
+    },
+    {
+      "verse": "32",
+      "text": "Ahab built a temple for Baal in Samaria. He made an altar for Baal in this temple."
+    },
+    {
+      "verse": "33",
+      "text": "Ahab also made an Asherah pole to worship. He did many bad things that made the Lord, Israel's God, angry. He did more bad things than all the kings of Israel who lived before him."
+    },
+    {
+      "verse": "34",
+      "text": "While Ahab ruled as king, Hiel built Jericho city again. Hiel came from Bethel. Abiram, his firstborn son, died when Hiel built the city's foundation. Segub, his youngest son, died when he built the gates in the city's wall. The Lord had told Nun's son Joshua that this would happen."
+    },
+    {
       "verse": "1",
       "text": "Then God gave a message to Hanani's son Jehu about punishment for King Baasha."
     },
@@ -2389,42 +2429,6 @@ module.exports = {
     {
       "verse": "25",
       "text": "But Omri did many things that the Lord said were evil. He did more evil things than all the kings of Israel who lived before him."
-    },
-    {
-      "verse": "26",
-      "text": "He did the same bad things that Nebat's son Jeroboam had done and that he caused the Israelites to do. The useless idols that they worshipped caused the Lord, Israel's God, to be very angry."
-    },
-    {
-      "verse": "27",
-      "text": "The other things that happened while Omri was king are written in a book. The book is called ‘The history of Israel's kings’. It tells about the things that he did and the power that he had."
-    },
-    {
-      "verse": "28",
-      "text": "Omri died and they buried him in Samaria. His son Ahab became king of Israel after him."
-    },
-    {
-      "verse": "29",
-      "text": "Omri's son Ahab became king of Israel when Asa had been king of Judah for 38 years. Ahab ruled Israel as king in Samaria for 22 years."
-    },
-    {
-      "verse": "30",
-      "text": "Omri's son Ahab did many things that the Lord said were evil. He did more evil things than all the kings of Israel who lived before him."
-    },
-    {
-      "verse": "31",
-      "text": "He did the same bad things that Nebat's son Jeroboam had done. He even did something that was even worse. He married Jezebel, the daughter of Ethbaal, the king of Sidon. Ahab served Baal as his god and he worshipped him."
-    },
-    {
-      "verse": "32",
-      "text": "Ahab built a temple for Baal in Samaria. He made an altar for Baal in this temple."
-    },
-    {
-      "verse": "33",
-      "text": "Ahab also made an Asherah pole to worship. He did many bad things that made the Lord, Israel's God, angry. He did more bad things than all the kings of Israel who lived before him."
-    },
-    {
-      "verse": "34",
-      "text": "While Ahab ruled as king, Hiel built Jericho city again. Hiel came from Bethel. Abiram, his firstborn son, died when Hiel built the city's foundation. Segub, his youngest son, died when he built the gates in the city's wall. The Lord had told Nun's son Joshua that this would happen."
     }
   ],
   "17": [

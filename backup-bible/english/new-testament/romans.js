@@ -121,8 +121,12 @@ module.exports = {
       "text": "These people understand God's message about what is right. They know that people who do bad things like this ought to die. But they still continue to do those bad things. They are even happy when other people do those bad things too."
     },
     {
-      "verse": "3-4",
-      "text": "This good news is about God's Son, who is Jesus Christ, our Lord. Jesus was born as a human baby from King David's family. But after Jesus died on the cross, God's Holy Spirit raised him to make him alive again. In that way God showed clearly that Jesus was his powerful Son."
+      "verse": "3",
+      "text": "This good news is about God's Son, who is Jesus Christ, our Lord. Jesus was born as a human baby from King David's family."
+    },
+    {
+      "verse": "4",
+      "text": "But after Jesus died on the cross, God's Holy Spirit raised him to make him alive again. In that way God showed clearly that Jesus was his powerful Son."
     }
   ],
   "2": [
@@ -903,8 +907,12 @@ module.exports = {
       "text": "Because God loves us, none of these troubles can ever beat us. He makes us win against them."
     },
     {
-      "verse": "38-39",
-      "text": "I am sure of this. Nothing can stop God from loving us. Death cannot do that. Life cannot do that. Angels cannot do that, nor can demons do that. Nothing that happens to us now, or that will happen in a future time can do that. No powerful spirits can do that. Nothing that is high above the world can do that, nor anything that is deep down below the ground. Nothing else in the whole universe can stop God from loving us. Because of our Lord Christ Jesus, we know how much God loves us."
+      "verse": "38",
+      "text": "I am sure of this. Nothing can stop God from loving us. Death cannot do that. Life cannot do that. Angels cannot do that, nor can demons do that."
+    },
+    {
+      "verse": "39",
+      "text": "Nothing that happens to us now, or that will happen in a future time can do that. No powerful spirits can do that. Nothing that is high above the world can do that, nor anything that is deep down below the ground. Nothing else in the whole universe can stop God from loving us. Because of our Lord Christ Jesus, we know how much God loves us."
     }
   ],
   "9": [

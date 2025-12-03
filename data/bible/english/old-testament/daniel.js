@@ -285,6 +285,50 @@ module.exports = {
   ],
   "3": [
     {
+      "verse": "13",
+      "text": "When King Nebuchadnezzar heard this, he was very angry. He told his servants to bring Shadrach, Meshach and Abednego to him. So they brought those men to stand in front of the king."
+    },
+    {
+      "verse": "14",
+      "text": "Nebuchadnezzar said to them, ‘Shadrach, Meshach and Abednego, is it true that you do not give honour to my gods? And you do not worship the gold statue that I have built?"
+    },
+    {
+      "verse": "15",
+      "text": "Next time you hear the sound of the special music, you must obey my rule. You must bend down and you must worship the statue that I have built. If you do not worship the statue, my servants will throw you immediately into the middle of a very hot fire. There is no god who can save you from my power. ’"
+    },
+    {
+      "verse": "16",
+      "text": "Shadrach, Meshach and Abednego answered the king, ‘King Nebuchadnezzar, we do not need to say anything to show you that we are not guilty."
+    },
+    {
+      "verse": "17",
+      "text": "We serve a great God. If you throw us into the very hot fire, he is able to keep us safe. Yes, sir, he will keep us safe from your power too."
+    },
+    {
+      "verse": "18",
+      "text": "But even if he does not save us, we still would not serve your gods. And we will not worship the gold statue that you have built. We want you to understand that very clearly, sir. ’"
+    },
+    {
+      "verse": "19",
+      "text": "Then Nebuchadnezzar was even more angry with Shadrach, Meshach and Abednego. His face became red. He said to his servants, ‘Make the fire in the oven seven times hotter than usual. ’"
+    },
+    {
+      "verse": "20",
+      "text": "He told the strongest men in his army, ‘Tie up Shadrach, Meshach and Abednego. Then throw them into the very hot fire! ’"
+    },
+    {
+      "verse": "21",
+      "text": "So the soldiers tied up Shadrach, Meshach and Abednego with ropes. They were still wearing their coats, their hats and their other clothes when the soldiers took hold of them. The soldiers threw them into the middle of the hot fire with all their clothes on."
+    },
+    {
+      "verse": "22",
+      "text": "The soldiers needed to obey the king in a hurry. The fire was very hot. As a result, flames from the fire killed the men who threw Shadrach, Meshach and Abednego into it."
+    },
+    {
+      "verse": "23",
+      "text": "So the three men, Shadrach, Meshach and Abednego, fell into the middle of the hot fire. The ropes still held them very strongly."
+    },
+    {
       "verse": "1",
       "text": "King Nebuchadnezzar caused his workers to make a gold statue. It was 30 metres high and 3 metres wide. He built it on the flat land called Dura, in the Babylon region."
     },
@@ -331,50 +375,6 @@ module.exports = {
     {
       "verse": "12",
       "text": "But there are some Jewish men who do not obey you. They are Shadrach, Meshach and Abednego. You gave them authority to take care of everything in Babylon region. Those men do not respect your authority. They do not give honour to your gods. They do not worship your gold statue. ’"
-    },
-    {
-      "verse": "13",
-      "text": "When King Nebuchadnezzar heard this, he was very angry. He told his servants to bring Shadrach, Meshach and Abednego to him. So they brought those men to stand in front of the king."
-    },
-    {
-      "verse": "14",
-      "text": "Nebuchadnezzar said to them, ‘Shadrach, Meshach and Abednego, is it true that you do not give honour to my gods? And you do not worship the gold statue that I have built?"
-    },
-    {
-      "verse": "15",
-      "text": "Next time you hear the sound of the special music, you must obey my rule. You must bend down and you must worship the statue that I have built. If you do not worship the statue, my servants will throw you immediately into the middle of a very hot fire. There is no god who can save you from my power. ’"
-    },
-    {
-      "verse": "16",
-      "text": "Shadrach, Meshach and Abednego answered the king, ‘King Nebuchadnezzar, we do not need to say anything to show you that we are not guilty."
-    },
-    {
-      "verse": "17",
-      "text": "We serve a great God. If you throw us into the very hot fire, he is able to keep us safe. Yes, sir, he will keep us safe from your power too."
-    },
-    {
-      "verse": "18",
-      "text": "But even if he does not save us, we still would not serve your gods. And we will not worship the gold statue that you have built. We want you to understand that very clearly, sir. ’"
-    },
-    {
-      "verse": "19",
-      "text": "Then Nebuchadnezzar was even more angry with Shadrach, Meshach and Abednego. His face became red. He said to his servants, ‘Make the fire in the oven seven times hotter than usual. ’"
-    },
-    {
-      "verse": "20",
-      "text": "He told the strongest men in his army, ‘Tie up Shadrach, Meshach and Abednego. Then throw them into the very hot fire! ’"
-    },
-    {
-      "verse": "21",
-      "text": "So the soldiers tied up Shadrach, Meshach and Abednego with ropes. They were still wearing their coats, their hats and their other clothes when the soldiers took hold of them. The soldiers threw them into the middle of the hot fire with all their clothes on."
-    },
-    {
-      "verse": "22",
-      "text": "The soldiers needed to obey the king in a hurry. The fire was very hot. As a result, flames from the fire killed the men who threw Shadrach, Meshach and Abednego into it."
-    },
-    {
-      "verse": "23",
-      "text": "So the three men, Shadrach, Meshach and Abednego, fell into the middle of the hot fire. The ropes still held them very strongly."
     },
     {
       "verse": "24",
@@ -1208,7 +1208,11 @@ module.exports = {
     },
     {
       "verse": "20",
-      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear. Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
+      "text": "Then the angel said to me, ‘I will tell you why I have come to you. I will explain to you what the words in the book of God's truth mean. But now I must return to fight a battle against the ruler of Persia. After I have won that battle, the ruler of Greece will appear."
+    },
+    {
+      "verse": "21",
+      "text": "Only Michael will help me. He is the angel who keeps your own people safe. Nobody else will be there to help me fight against God's enemies."
     }
   ],
   "11": [

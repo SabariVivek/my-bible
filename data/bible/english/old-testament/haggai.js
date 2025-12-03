@@ -1,10 +1,6 @@
 module.exports = {
   "1": [
     {
-      "verse": "1",
-      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests. Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me. ’"
-    },
-    {
       "verse": "3",
       "text": "The Lord told his prophet Haggai to say this to the people:"
     },
@@ -55,9 +51,57 @@ module.exports = {
     {
       "verse": "15",
       "text": "They started to work on the 24th day of that same month, in the second year after Darius had become king."
+    },
+    {
+      "verse": "1",
+      "text": "The Lord spoke his message to Haggai, his prophet. At that time, Darius was king of Persia. He had been king for 1 year and five months. On the first day of the next month, the Lord told Haggai to speak to Zerubbabel, Judah's ruler, and to Joshua, the leader of God's priests."
+    },
+    {
+      "verse": "2",
+      "text": "Zerubbabel was the son of Shealtiel. Joshua was the son of Jehozadak. This was the Almighty Lord's message: ‘Judah's people say that this is not the right time to build a temple for me. ’."
     }
   ],
   "2": [
+    {
+      "verse": "14",
+      "text": "So Haggai told them, ‘This is what the Lord says: This nation and its people are just like that. They are unclean. So everything that they do is also unclean. All the gifts that they offer to me are unclean. I could not accept them."
+    },
+    {
+      "verse": "15",
+      "text": "Think carefully what life was like before you started again to build the Lord's temple. Do not forget that."
+    },
+    {
+      "verse": "16",
+      "text": "In those days, you hoped to get 20 bags of grain from your fields. But you only got ten bags. You hoped to get 50 jars of wine from your grapes. But you only got 20 jars."
+    },
+    {
+      "verse": "17",
+      "text": "I sent bad weather and other problems to destroy all your crops. All your hard work came to nothing. But you still did not return to worship me, your Lord."
+    },
+    {
+      "verse": "18",
+      "text": "Remember today, the 24th day of the ninth month. You have started again to build my temple. Now you have built its foundation, think about what will happen from today."
+    },
+    {
+      "verse": "19",
+      "text": "You have already eaten the crops that you stored. The grapes, figs, pomegranates and olives are not yet ready for you to pick. But after today, I will bless you. You will have many good things. ’"
+    },
+    {
+      "verse": "20",
+      "text": "On the same day, the Lord spoke to Haggai again. He said:"
+    },
+    {
+      "verse": "21",
+      "text": "‘Speak to Zerubbabel, the ruler of Judah. Tell him that I will cause the sky and the whole earth to shake."
+    },
+    {
+      "verse": "22",
+      "text": "Tell him that I will destroy the power of foreign kings. I will destroy their armies. Their horses and chariots will fall down. Their soldiers will fight against each other. They will kill each other with their swords."
+    },
+    {
+      "verse": "23",
+      "text": "But I, the Almighty Lord say this to you, Zerubbabel, son of Shealtiel. You are my servant and I have chosen you. On that special day, I will give to you the authority to rule on my behalf. That is the message of the Almighty Lord. ’"
+    },
     {
       "verse": "1",
       "text": "On the 21st day of the seventh month, the Lord spoke again to Haggai, his prophet."
@@ -109,46 +153,6 @@ module.exports = {
     {
       "verse": "13",
       "text": "Haggai asked the priests another question: ‘If anyone touches a dead body, you know that you become unclean. If an unclean person touches any of these foods, would they also become unclean? ’ The priests replied, ‘Yes, those things would be unclean. ’"
-    },
-    {
-      "verse": "14",
-      "text": "So Haggai told them, ‘This is what the Lord says: This nation and its people are just like that. They are unclean. So everything that they do is also unclean. All the gifts that they offer to me are unclean. I could not accept them."
-    },
-    {
-      "verse": "15",
-      "text": "Think carefully what life was like before you started again to build the Lord's temple. Do not forget that."
-    },
-    {
-      "verse": "16",
-      "text": "In those days, you hoped to get 20 bags of grain from your fields. But you only got ten bags. You hoped to get 50 jars of wine from your grapes. But you only got 20 jars."
-    },
-    {
-      "verse": "17",
-      "text": "I sent bad weather and other problems to destroy all your crops. All your hard work came to nothing. But you still did not return to worship me, your Lord."
-    },
-    {
-      "verse": "18",
-      "text": "Remember today, the 24th day of the ninth month. You have started again to build my temple. Now you have built its foundation, think about what will happen from today."
-    },
-    {
-      "verse": "19",
-      "text": "You have already eaten the crops that you stored. The grapes, figs, pomegranates and olives are not yet ready for you to pick. But after today, I will bless you. You will have many good things. ’"
-    },
-    {
-      "verse": "20",
-      "text": "On the same day, the Lord spoke to Haggai again. He said:"
-    },
-    {
-      "verse": "21",
-      "text": "‘Speak to Zerubbabel, the ruler of Judah. Tell him that I will cause the sky and the whole earth to shake."
-    },
-    {
-      "verse": "22",
-      "text": "Tell him that I will destroy the power of foreign kings. I will destroy their armies. Their horses and chariots will fall down. Their soldiers will fight against each other. They will kill each other with their swords."
-    },
-    {
-      "verse": "23",
-      "text": "But I, the Almighty Lord say this to you, Zerubbabel, son of Shealtiel. You are my servant and I have chosen you. On that special day, I will give to you the authority to rule on my behalf. That is the message of the Almighty Lord. ’"
     }
   ]
 };

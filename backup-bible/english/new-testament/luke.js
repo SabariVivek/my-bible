@@ -313,8 +313,12 @@ module.exports = {
       "text": "Zechariah's child grew. God made him strong in his mind. He went into the wilderness and he lived there for many years. Later, God sent him to Israel's people, to teach them."
     },
     {
-      "verse": "14-15",
-      "text": "He will be very important to the Lord God. So he will make you very happy. Many other people will also be very happy because he has been born. He must never drink anything with alcohol in it. From the time that he is born, the Holy Spirit will live inside him."
+      "verse": "14",
+      "text": "He will be very important to the Lord God. So he will make you very happy. Many other people will also be very happy because he has been born."
+    },
+    {
+      "verse": "15",
+      "text": "He must never drink anything with alcohol in it. From the time that he is born, the Holy Spirit will live inside him."
     }
   ],
   "2": [
@@ -3201,8 +3205,12 @@ module.exports = {
       "text": "Jesus' disciples asked him, ‘Where will this happen? ’ Jesus replied, ‘If a dead body is lying somewhere, vultures will come together in that place. ’"
     },
     {
-      "verse": "35-36",
-      "text": "Two women will be preparing food together in the same place. God will take one of them away but he will leave the other one behind. ’"
+      "verse": "35",
+      "text": "Two women will be preparing food together in the same place. God will take one of them away but he will leave the other one behind."
+    },
+    {
+      "verse": "36",
+      "text": "’."
     }
   ],
   "18": [

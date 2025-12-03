@@ -1455,6 +1455,18 @@ module.exports = {
   ],
   "14": [
     {
+      "verse": "27",
+      "text": "So Moses lifted up his hand over the sea. At dawn, the sea returned to its proper place. The Egyptians tried to run away from the water, but the Lord made them drown in the middle of the sea."
+    },
+    {
+      "verse": "28",
+      "text": "The water returned to its proper place. It covered all of Pharaoh's army that had followed the Israelites into the sea. It covered all the chariots, the horses and their riders. Not one of Pharaoh's soldiers was still alive!"
+    },
+    {
+      "verse": "29",
+      "text": "But the Israelites walked on dry ground through the middle of the sea. The water was like a wall on their right side and on their left side."
+    },
+    {
       "verse": "1",
       "text": "Then the Lord said to Moses, The Israelites did what God said."
     },
@@ -1557,18 +1569,6 @@ module.exports = {
     {
       "verse": "26",
       "text": "Then the Lord said to Moses, ‘Lift up your hand over the sea. Then the water will return back. The sea will cover the Egyptians, their chariots, their horses and their riders. ’"
-    },
-    {
-      "verse": "27",
-      "text": "So Moses lifted up his hand over the sea. At dawn, the sea returned to its proper place. The Egyptians tried to run away from the water, but the Lord made them drown in the middle of the sea."
-    },
-    {
-      "verse": "28",
-      "text": "The water returned to its proper place. It covered all of Pharaoh's army that had followed the Israelites into the sea. It covered all the chariots, the horses and their riders. Not one of Pharaoh's soldiers was still alive!"
-    },
-    {
-      "verse": "29",
-      "text": "But the Israelites walked on dry ground through the middle of the sea. The water was like a wall on their right side and on their left side."
     },
     {
       "verse": "30",
@@ -2013,10 +2013,6 @@ module.exports = {
   ],
   "19": [
     {
-      "verse": "1",
-      "text": "After the Israelites left Rephidim, they went into the Sinai desert. The Israelites put up their tents in the desert, at the side of Sinai mountain. That happened on the first day of the third month since they came out of Egypt."
-    },
-    {
       "verse": "3",
       "text": "Moses went up the mountain to speak with God. The Lord spoke to him from the mountain. He said, ‘This is what you must say to the Israelites, Jacob's descendants:"
     },
@@ -2107,6 +2103,14 @@ module.exports = {
     {
       "verse": "25",
       "text": "So Moses went down to the people. He told them what the Lord had said."
+    },
+    {
+      "verse": "1",
+      "text": "After the Israelites left Rephidim, they went into the Sinai desert. The Israelites put up their tents in the desert, at the side of Sinai mountain."
+    },
+    {
+      "verse": "2",
+      "text": "That happened on the first day of the third month since they came out of Egypt."
     }
   ],
   "20": [
@@ -3061,10 +3065,6 @@ module.exports = {
       "text": "The entrance to the yard is at its east end. That end must also be 23 metres long."
     },
     {
-      "verse": "14",
-      "text": "metres of curtain on each side of the entrance. There will be three poles with their bases to hold the curtains on each side."
-    },
-    {
       "verse": "16",
       "text": "metres wide for the entrance to the yard. Make it out of blue, purple and red material, as well as good linen. Choose a worker who can use special skills to make the curtain look beautiful. Make four poles and their bases to hold the curtain at the entrance."
     },
@@ -3087,6 +3087,14 @@ module.exports = {
     {
       "verse": "21",
       "text": "Aaron and his sons must make sure that the lamps always give light from evening until morning. The lampstand will be in the Tent of Meeting, outside the curtain that hangs in front of the Covenant Box. The lamps must always give light there, where the Lord is. This will always be a rule for the Israelites, now and in the future."
+    },
+    {
+      "verse": "14",
+      "text": "metres of curtain on each side of the entrance."
+    },
+    {
+      "verse": "15",
+      "text": "There will be three poles with their bases to hold the curtains on each side."
     }
   ],
   "28": [
@@ -4523,10 +4531,6 @@ module.exports = {
       "text": "The entrance of the yard was at its east end. That end was also 23 metres long."
     },
     {
-      "verse": "14",
-      "text": "metres of curtain on each side of the entrance. Three poles with their bases held the curtains on each side."
-    },
-    {
       "verse": "16",
       "text": "The workers used good linen to make all the curtains around the yard."
     },
@@ -4589,6 +4593,14 @@ module.exports = {
     {
       "verse": "31",
       "text": "They used this bronze to make the bases for the curtains around the yard and for the entrance to the yard. They used it to make the pegs to fix the tabernacle and the curtain around the yard to the ground."
+    },
+    {
+      "verse": "14",
+      "text": "metres of curtain on each side of the entrance."
+    },
+    {
+      "verse": "15",
+      "text": "Three poles with their bases held the curtains on each side."
     }
   ],
   "39": [

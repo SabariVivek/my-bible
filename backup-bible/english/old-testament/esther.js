@@ -665,8 +665,12 @@ module.exports = {
       "text": "Queen Esther's command made those rules about the feast of Purim. The palace secretaries wrote it down in a book."
     },
     {
-      "verse": "16-17",
-      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75, 000 of their enemies. But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
+      "verse": "16",
+      "text": "In the other regions of the kingdom, the Jews came together on the 13th day of Adar. They did that to protect themselves against their enemies. They killed 75, 000 of their enemies."
+    },
+    {
+      "verse": "17",
+      "text": "But they did not take their enemies' things for themselves. Then, on the 14th day of Adar, the Jews in the regions rested. They ate feasts and they were very happy."
     }
   ],
   "10": [

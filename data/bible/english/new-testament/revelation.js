@@ -1317,6 +1317,14 @@ module.exports = {
   ],
   "19": [
     {
+      "verse": "20",
+      "text": "But the rider and his army caught the wild animal. They also caught the false prophet who had done miracles to help the wild animal. He used those miracles to deceive the people who had the wild animal's mark on them. Those people worshipped his image. Now the rider and his army threw the wild animal and the false prophet into the lake of fire. They were still alive when they threw them into the lake that burns with sulphur."
+    },
+    {
+      "verse": "21",
+      "text": "The rider of the white horse then killed all his other enemies. He killed them with the sword that came out of his mouth. So then all the birds ate the meat from the dead bodies until they were completely full."
+    },
+    {
       "verse": "1",
       "text": "After these things, I heard a sound like the voices of a great crowd of people in heaven. They were shouting, ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great! ‘Praise the Lord our God! He has saved us! He is very powerful! We say that he is great!"
     },
@@ -1391,14 +1399,6 @@ module.exports = {
     {
       "verse": "19",
       "text": "Then I saw the wild animal and the kings of the earth and their armies. They had come together to fight a war. They were ready to fight a battle against the man who rode on the white horse and his army."
-    },
-    {
-      "verse": "20",
-      "text": "But the rider and his army caught the wild animal. They also caught the false prophet who had done miracles to help the wild animal. He used those miracles to deceive the people who had the wild animal's mark on them. Those people worshipped his image. Now the rider and his army threw the wild animal and the false prophet into the lake of fire. They were still alive when they threw them into the lake that burns with sulphur."
-    },
-    {
-      "verse": "21",
-      "text": "The rider of the white horse then killed all his other enemies. He killed them with the sword that came out of his mouth. So then all the birds ate the meat from the dead bodies until they were completely full."
     }
   ],
   "20": [

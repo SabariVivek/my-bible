@@ -521,8 +521,12 @@ module.exports = {
       "text": "In the old agreement, Moses' laws decide who will become special priests. Because those men are weak, they often do wrong things. But God's very strong promise came after the Law that he gave to Moses. With that promise, God chose his Son to be his special priest. And his Son has become everything that God wants him to be, completely and for ever."
     },
     {
-      "verse": "9-10",
-      "text": "The Levite priests receive their gifts from the people. But we could say that Levi himself gave a tenth part of what he had to Melchizedek. When Abraham gave his tenth part to Melchizedek, it was like Levi was there inside him. At that time, Levi was not yet born, but Abraham was his ancestor."
+      "verse": "9",
+      "text": "The Levite priests receive their gifts from the people. But we could say that Levi himself gave a tenth part of what he had to Melchizedek."
+    },
+    {
+      "verse": "10",
+      "text": "When Abraham gave his tenth part to Melchizedek, it was like Levi was there inside him. At that time, Levi was not yet born, but Abraham was his ancestor."
     }
   ],
   "8": [

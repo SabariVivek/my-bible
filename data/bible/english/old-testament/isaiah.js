@@ -285,10 +285,6 @@ module.exports = {
       "text": "Because of that, the Lord God will give them sores on their heads. Those beautiful women will be bald! ’"
     },
     {
-      "verse": "18",
-      "text": "On that day, the Lord God will take away the beautiful rings that they wear on their ankles. He will remove all the valuable rings and bright stones that they wear on their heads, their necks, their ears, their arms, their fingers and their noses. He will take away their beautiful clothes, their belts, their perfumes and their magic rings."
-    },
-    {
       "verse": "24",
       "text": "Instead of a nice smell of perfume, there will be a smell of dead animals. Instead of a beautiful belt, they will tie a rope round themselves. Instead of lovely hair, they will be bald. They will wear rough sackcloth instead of beautiful dresses. They will have the mark of a prisoner on their skin, instead of beauty."
     },
@@ -299,6 +295,10 @@ module.exports = {
     {
       "verse": "26",
       "text": "The city's gates will see all this and they will weep! The city will be empty. Zion will be like a poor woman who sits on the ground, completely alone."
+    },
+    {
+      "verse": "18",
+      "text": "On that day, the Lord God will take away the beautiful rings that they wear on their ankles. He will remove all the valuable rings and bright stones that they wear on their heads, their necks, their ears, their arms, their fingers and their noses. He will take away their beautiful clothes, their belts, their perfumes and their magic rings."
     }
   ],
   "4": [
@@ -1103,6 +1103,38 @@ module.exports = {
   ],
   "14": [
     {
+      "verse": "25",
+      "text": "I will destroy the Assyrians who are in my land. I will knock them down on my mountains. They will no longer be cruel to my people. My people will not be their slaves any more."
+    },
+    {
+      "verse": "26",
+      "text": "That is what I have decided for the whole earth. I am ready to show my power against all the nations. ’"
+    },
+    {
+      "verse": "27",
+      "text": "Yes, the Lord Almighty has decided what he will do. Nobody can change it. He is ready to show his power. Nobody can stop it."
+    },
+    {
+      "verse": "28",
+      "text": "In the year that King Ahaz died, God showed this message to Isaiah:"
+    },
+    {
+      "verse": "29",
+      "text": "Do not feel happy, you Philistine people. God has destroyed the king who was attacking you. That king hit you with a big stick, but a dangerous snake will follow! And that snake will give birth to an even more dangerous snake that moves very fast."
+    },
+    {
+      "verse": "30",
+      "text": "The Lord will give food to the poorest of his people. The weak and helpless people will live safely. But you Philistine people will die from famine. I will destroy you all, so that nobody remains."
+    },
+    {
+      "verse": "31",
+      "text": "Gate of the city, weep! City, cry out in pain! You Philistine people should be very afraid! See that cloud of smoke in the north! It is the dust of an army that is marching towards you. Their soldiers are ready to fight, and none of them is afraid."
+    },
+    {
+      "verse": "32",
+      "text": "When a foreign nation sends a message, what should we say? Say that the Lord has made Zion very strong. When his people have trouble, they will be safe there."
+    },
+    {
       "verse": "1",
       "text": "The Lord will once again be kind to Jacob's descendants. He will choose to help the Israelite people again, as his own people. He will put them back in their land. Foreign people will join them and they will become a part of Jacob's family."
     },
@@ -1197,38 +1229,6 @@ module.exports = {
     {
       "verse": "24",
       "text": "The Lord Almighty promises this: ‘It will happen exactly as I have decided. Yes, it will really happen like that."
-    },
-    {
-      "verse": "25",
-      "text": "I will destroy the Assyrians who are in my land. I will knock them down on my mountains. They will no longer be cruel to my people. My people will not be their slaves any more."
-    },
-    {
-      "verse": "26",
-      "text": "That is what I have decided for the whole earth. I am ready to show my power against all the nations. ’"
-    },
-    {
-      "verse": "27",
-      "text": "Yes, the Lord Almighty has decided what he will do. Nobody can change it. He is ready to show his power. Nobody can stop it."
-    },
-    {
-      "verse": "28",
-      "text": "In the year that King Ahaz died, God showed this message to Isaiah:"
-    },
-    {
-      "verse": "29",
-      "text": "Do not feel happy, you Philistine people. God has destroyed the king who was attacking you. That king hit you with a big stick, but a dangerous snake will follow! And that snake will give birth to an even more dangerous snake that moves very fast."
-    },
-    {
-      "verse": "30",
-      "text": "The Lord will give food to the poorest of his people. The weak and helpless people will live safely. But you Philistine people will die from famine. I will destroy you all, so that nobody remains."
-    },
-    {
-      "verse": "31",
-      "text": "Gate of the city, weep! City, cry out in pain! You Philistine people should be very afraid! See that cloud of smoke in the north! It is the dust of an army that is marching towards you. Their soldiers are ready to fight, and none of them is afraid."
-    },
-    {
-      "verse": "32",
-      "text": "When a foreign nation sends a message, what should we say? Say that the Lord has made Zion very strong. When his people have trouble, they will be safe there."
     }
   ],
   "15": [
@@ -3249,16 +3249,16 @@ module.exports = {
   ],
   "41": [
     {
-      "verse": "1",
-      "text": "‘You islands, be quiet as you listen to me. The nations need to come and stand in front of me. So they must be brave and speak to me. We must meet together to decide who is right. The nations need to come and stand in front of me. So they must be brave and speak to me. We must meet together to decide who is right."
-    },
-    {
       "verse": "2",
       "text": "Tell me, who has woken up that king in the east? Who has chosen that king to serve him? He has given that king power over many nations, so that the kings of those nations must obey him. He uses that king's weapons to destroy other nations. He blows them away like dust or straw. Who has chosen that king to serve him? He has given that king power over many nations, so that the kings of those nations must obey him. He uses that king's weapons to destroy other nations. He blows them away like dust or straw."
     },
     {
       "verse": "3",
       "text": "That king chases quickly after them, and nothing hurts him. His feet do not seem to touch the ground! and nothing hurts him. His feet do not seem to touch the ground!"
+    },
+    {
+      "verse": "1",
+      "text": "‘You islands, be quiet as you listen to me. The nations need to come and stand in front of me. So they must be brave and speak to me. We must meet together to decide who is right. The nations need to come and stand in front of me. So they must be brave and speak to me. We must meet together to decide who is right."
     },
     {
       "verse": "4",
@@ -4098,7 +4098,7 @@ module.exports = {
     },
     {
       "verse": "24",
-      "text": "Can anyone rob a brave soldier? Can anyone rescue prisoners from a cruel ruler? ’ Can anyone rescue prisoners from a cruel ruler? ’"
+      "text": "Can anyone rob a brave soldier? Can anyone rescue prisoners from a cruel ruler? �� Can anyone rescue prisoners from a cruel ruler? ’"
     },
     {
       "verse": "25",

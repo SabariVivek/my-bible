@@ -185,10 +185,6 @@ module.exports = {
       "text": "In the Most Holy Place, they made models of two cherubs. They covered them with gold."
     },
     {
-      "verse": "11",
-      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings. Each wing was 2. 2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub. The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
-    },
-    {
       "verse": "14",
       "text": "Solomon's workers used blue, purple and red material and good linen to make a special curtain. It had pictures of cherubs on it."
     },
@@ -203,6 +199,18 @@ module.exports = {
     {
       "verse": "17",
       "text": "Then they put the two pillars at the entrance of the temple. One pillar stood on the south side of the entrance. The other pillar stood on the north side. Solomon called the pillar on the south side ‘Jakin’. He called the pillar on the north side ‘Boaz’."
+    },
+    {
+      "verse": "11",
+      "text": "The cherubs stood side by side in the Most Holy Place. Their faces looked towards the big hall. Each cherub had two wings."
+    },
+    {
+      "verse": "12",
+      "text": "Each wing was 2. 2 metres long. They held their wings out so that one wing of each cherub touched a wing of the other cherub."
+    },
+    {
+      "verse": "13",
+      "text": "The other wing of each cherub touched a wall of the Most Holy Place. The four wings of the two cherubs reached across 9 metres."
     }
   ],
   "4": [
@@ -1885,20 +1893,20 @@ module.exports = {
   ],
   "23": [
     {
-      "verse": "1",
-      "text": "In the seventh year that Queen Athaliah ruled Judah, the priest Jehoiada decided to be brave. He made an agreement with some officers in the army. Each of these men had authority over 100 soldiers. They were: Jeroham's son Azariah, Jehohanan's son Ishmael, Obed's son Azariah, Adaiah's son Maaseiah and Zikri's son Elishaphat."
-    },
-    {
-      "verse": "2",
-      "text": "They travelled around all the land of Judah. They brought together the Levites from the different cities and the leaders of Israel's clans. They all came to Jerusalem."
-    },
-    {
       "verse": "3",
       "text": "They met together in God's temple to make a promise to the new king. Jehoiada said to them, ‘Here is the king's son. He must become king, as the Lord promised that David's descendants would be."
     },
     {
       "verse": "4",
       "text": "This is what you must do: The priests and Levites who come to work on the Sabbath day must make three groups. One group must be guards who watch at the doors of the temple."
+    },
+    {
+      "verse": "1",
+      "text": "In the seventh year that Queen Athaliah ruled Judah, the priest Jehoiada decided to be brave. He made an agreement with some officers in the army. Each of these men had authority over 100 soldiers. They were: Jeroham's son Azariah, Jehohanan's son Ishmael, Obed's son Azariah, Adaiah's son Maaseiah and Zikri's son Elishaphat."
+    },
+    {
+      "verse": "2",
+      "text": "They travelled around all the land of Judah. They brought together the Levites from the different cities and the leaders of Israel's clans. They all came to Jerusalem."
     },
     {
       "verse": "5",
@@ -2067,12 +2075,16 @@ module.exports = {
       "text": "Syria's army was very small but the Lord gave them power over Judah's large army. He did that because Judah's people had turned away from the Lord, the God of their ancestors. Syria's army punished Joash as he deserved."
     },
     {
-      "verse": "25",
-      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon. Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
-    },
-    {
       "verse": "27",
       "text": "The things that happened while Joash was king are written in a book. The book is called ‘The history of the kings’. It includes a list of Joash's sons, and the many messages that prophets spoke about him. It also includes a report of the work which he did on God's temple. Joash's son Amaziah became king after him."
+    },
+    {
+      "verse": "25",
+      "text": "Joash had received bad wounds in the battle. When Syria's army went away, Joash's officers decided to kill him. They were angry because he had killed Zechariah, the son of Jehoiada the priest. So they murdered him in his bed. The two officers who did this were Zabad and Jehozabad. Zabad's mother was Shimeath, who came from Ammon."
+    },
+    {
+      "verse": "26",
+      "text": "Jehozabad's mother was Shimrith, who came from Moab. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings. Joash's people buried him in the City of David. But they did not bury him beside the graves of the other kings."
     }
   ],
   "25": [
@@ -3246,7 +3258,11 @@ module.exports = {
     },
     {
       "verse": "26",
-      "text": "All the other things that Josiah did while he was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’. It tells how Josiah faithfully obeyed what is written in the Law of the Lord. It includes all the good things that he did, from the beginning to the end of his time as king."
+      "text": "All the other things that Josiah did while he was king are written in a book. The book is called ‘The history of the kings of Israel and Judah’."
+    },
+    {
+      "verse": "27",
+      "text": "It tells how Josiah faithfully obeyed what is written in the Law of the Lord. It includes all the good things that he did, from the beginning to the end of his time as king."
     }
   ],
   "36": [

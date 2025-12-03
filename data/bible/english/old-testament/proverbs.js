@@ -375,10 +375,6 @@ module.exports = {
       "text": "My teaching will help you, so do not refuse it."
     },
     {
-      "verse": "3",
-      "text": "My father taught me when I was a little boy. My mother loved me as her only child. My father said to me, ‘Think carefully about what I tell you. If you obey my commands, you will live well. ‘Think carefully about what I tell you. If you obey my commands, you will live well."
-    },
-    {
       "verse": "5",
       "text": "Learn to be wise and to understand things properly. Do not forget my teaching or turn away from it. Do not forget my teaching or turn away from it."
     },
@@ -469,6 +465,14 @@ module.exports = {
     {
       "verse": "27",
       "text": "Do not walk off your path, to the right side or the left side. Keep away from everything that is evil."
+    },
+    {
+      "verse": "3",
+      "text": "My father taught me when I was a little boy. My mother loved me as her only child. My father said to me, ‘Think carefully about what I tell you."
+    },
+    {
+      "verse": "4",
+      "text": "If you obey my commands, you will live well. ‘Think carefully about what I tell you. If you obey my commands, you will live well."
     }
   ],
   "5": [
@@ -965,14 +969,6 @@ module.exports = {
   ],
   "9": [
     {
-      "verse": "1",
-      "text": "The woman who is called ‘Wisdom’ has built her house with seven pillars to make it strong."
-    },
-    {
-      "verse": "2",
-      "text": "She has killed an animal for a big meal. She has mixed her wine. She has also prepared her table."
-    },
-    {
       "verse": "3",
       "text": "She has sent her servants to shout a message from the highest places in the town."
     },
@@ -1027,6 +1023,14 @@ module.exports = {
     {
       "verse": "16",
       "text": "She says to people who do not understand what is right, ‘Anyone who is foolish should come in here."
+    },
+    {
+      "verse": "1",
+      "text": "The woman who is called ‘Wisdom’ has built her house with seven pillars to make it strong."
+    },
+    {
+      "verse": "2",
+      "text": "She has killed an animal for a big meal. She has mixed her wine. She has also prepared her table."
     },
     {
       "verse": "17",
@@ -2729,10 +2733,6 @@ module.exports = {
       "text": "They are like robbers who wait to attack people. They take more and more men away from their wives."
     },
     {
-      "verse": "29",
-      "text": "18. People who drink too much wine have many problems. Do you see someone who is in trouble? Someone who is very sad? Someone who argues or complains all the time? Do you see someone with wounds on his body for no reason, or someone with red eyes? Then you are looking at someone who likes to drink wine until late at night. He is someone who likes to try different drinks."
-    },
-    {
       "verse": "31",
       "text": "So do not even look at that beautiful red wine! Do not think about the pleasure it would give to you."
     },
@@ -2751,6 +2751,14 @@ module.exports = {
     {
       "verse": "35",
       "text": "You will say, ‘Somebody must have hit me, but I do not remember what happened. I need to wake up soon and have another drink. ’"
+    },
+    {
+      "verse": "29",
+      "text": "18. People who drink too much wine have many problems."
+    },
+    {
+      "verse": "30",
+      "text": "Do you see someone who is in trouble? Someone who is very sad? Someone who argues or complains all the time? Do you see someone with wounds on his body for no reason, or someone with red eyes? Then you are looking at someone who likes to drink wine until late at night. He is someone who likes to try different drinks."
     }
   ],
   "24": [
@@ -2893,6 +2901,10 @@ module.exports = {
   ],
   "25": [
     {
+      "verse": "28",
+      "text": "Somebody who cannot control his anger is in danger. He is like a city that no longer has a strong wall round it."
+    },
+    {
       "verse": "1",
       "text": "These are more of Solomon's proverbs. Hezekiah's men wrote them down when Hezekiah was king of Judah."
     },
@@ -2999,10 +3011,6 @@ module.exports = {
     {
       "verse": "27",
       "text": "It is bad for you to eat too much honey. If you always want people to praise you, it is also bad for you."
-    },
-    {
-      "verse": "28",
-      "text": "Somebody who cannot control his anger is in danger. He is like a city that no longer has a strong wall round it."
     }
   ],
   "26": [

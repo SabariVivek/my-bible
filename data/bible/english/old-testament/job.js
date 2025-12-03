@@ -569,18 +569,6 @@ module.exports = {
   ],
   "7": [
     {
-      "verse": "1",
-      "text": "People have to work very hard on this earth. They have to work every day, like servants. They have to work every day, like servants."
-    },
-    {
-      "verse": "2",
-      "text": "A servant waits for the end of the day so that he can rest. A worker waits for his master to pay him. A worker waits for his master to pay him."
-    },
-    {
-      "verse": "3",
-      "text": "But there is nothing for me to wait for. I wait for many months and nothing happens. Every night, I am always sad. I wait for many months and nothing happens. Every night, I am always sad."
-    },
-    {
       "verse": "4",
       "text": "When I lie down at night to sleep, I think, “How soon will the night end? ”But the night continues and I cannot sleep. Finally, dawn comes. I think, “How soon will the night end? ” But the night continues and I cannot sleep. Finally, dawn comes."
     },
@@ -651,6 +639,18 @@ module.exports = {
     {
       "verse": "21",
       "text": "You should agree to forgive my sins. You should say that I am not guilty. I will soon die and I will go into my grave. Then you will carefully look for me, but I will not be there. ’"
+    },
+    {
+      "verse": "1",
+      "text": "People have to work very hard on this earth. They have to work every day, like servants. They have to work every day, like servants."
+    },
+    {
+      "verse": "2",
+      "text": "A servant waits for the end of the day so that he can rest. A worker waits for his master to pay him. A worker waits for his master to pay him."
+    },
+    {
+      "verse": "3",
+      "text": "But there is nothing for me to wait for. I wait for many months and nothing happens. Every night, I am always sad. I wait for many months and nothing happens. Every night, I am always sad."
     }
   ],
   "8": [
@@ -2595,34 +2595,6 @@ module.exports = {
   ],
   "28": [
     {
-      "verse": "1",
-      "text": "‘If people want to find silver, they can dig it out of the ground. They also have places where they can make gold pure. they can dig it out of the ground. They also have places where they can make gold pure."
-    },
-    {
-      "verse": "2",
-      "text": "They know how to take iron from under the ground. They can also use heat to get copper from rocks. They can also use heat to get copper from rocks."
-    },
-    {
-      "verse": "3",
-      "text": "People take light into dark places under the ground. They look carefully for valuable metals. They look carefully for valuable metals."
-    },
-    {
-      "verse": "4",
-      "text": "They dig deep holes in the groundfar away from places where people live. Other people do not know about those places. People hang on ropes as they go deep down into the earth. far away from places where people live. Other people do not know about those places. People hang on ropes as they go deep down into the earth."
-    },
-    {
-      "verse": "5",
-      "text": "We grow our food on the earth above. But deep under the ground, people use fire to break the rocks. But deep under the ground, people use fire to break the rocks."
-    },
-    {
-      "verse": "6",
-      "text": "Sapphires come from the rocks in those places. The dust there contains gold. The dust there contains gold."
-    },
-    {
-      "verse": "7",
-      "text": "Even eagles or other birds with good eyesdo not see those places. do not see those places."
-    },
-    {
       "verse": "8",
       "text": "Lions and other wild animals do not walk there."
     },
@@ -2661,6 +2633,34 @@ module.exports = {
     {
       "verse": "17",
       "text": "Neither gold nor beautiful glass is as valuable as wisdom. A whole pot full of gold could not buy it. A whole pot full of gold could not buy it."
+    },
+    {
+      "verse": "1",
+      "text": "‘If people want to find silver, they can dig it out of the ground. They also have places where they can make gold pure. they can dig it out of the ground. They also have places where they can make gold pure."
+    },
+    {
+      "verse": "2",
+      "text": "They know how to take iron from under the ground. They can also use heat to get copper from rocks. They can also use heat to get copper from rocks."
+    },
+    {
+      "verse": "3",
+      "text": "People take light into dark places under the ground. They look carefully for valuable metals. They look carefully for valuable metals."
+    },
+    {
+      "verse": "4",
+      "text": "They dig deep holes in the groundfar away from places where people live. Other people do not know about those places. People hang on ropes as they go deep down into the earth. far away from places where people live. Other people do not know about those places. People hang on ropes as they go deep down into the earth."
+    },
+    {
+      "verse": "5",
+      "text": "We grow our food on the earth above. But deep under the ground, people use fire to break the rocks. But deep under the ground, people use fire to break the rocks."
+    },
+    {
+      "verse": "6",
+      "text": "Sapphires come from the rocks in those places. The dust there contains gold. The dust there contains gold."
+    },
+    {
+      "verse": "7",
+      "text": "Even eagles or other birds with good eyesdo not see those places. do not see those places."
     },
     {
       "verse": "18",

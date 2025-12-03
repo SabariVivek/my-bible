@@ -1291,8 +1291,12 @@ module.exports = {
       "text": "The leaders of the people of Gilead asked each other, ‘Who will lead us to attack the Ammonites? Any man who agrees to do that will become the leader of everyone who lives in Gilead. ’"
     },
     {
-      "verse": "11-12",
-      "text": "The Lord replied, ‘I have saved you many times when you called to me for help. I saved you from the power of the Egyptians, the Amorites, the Ammonites, the Philistines, the Sidonians, the Amalekites and the Midianites."
+      "verse": "11",
+      "text": "The Lord replied, ‘I have saved you many times when you called to me for help."
+    },
+    {
+      "verse": "12",
+      "text": "I saved you from the power of the Egyptians, the Amorites, the Ammonites, the Philistines, the Sidonians, the Amalekites and the Midianites."
     }
   ],
   "11": [
@@ -2383,16 +2387,28 @@ module.exports = {
       "text": "The Israelites returned to the land that belonged to Benjamin's tribe. They killed the people and animals in all the towns there. As they came to each town, they destroyed it with fire."
     },
     {
-      "verse": "22-23",
-      "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening. They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin? ’ The Lord said, ‘Yes, attack them. ’ So they went to stand in the same places around the city as they had done the day before."
+      "verse": "22",
+      "text": "The Israelite soldiers told each other to be brave. They went to meet with the Lord and they wept until the evening."
     },
     {
-      "verse": "27-28",
-      "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them? ’ The Lord said, ‘Attack them. Tomorrow I will put them under your power. ’"
+      "verse": "23",
+      "text": "They asked the Lord, ‘Should we march out again to fight against our relatives, the men of Benjamin? ’ The Lord said, ‘Yes, attack them. ’ So they went to stand in the same places around the city as they had done the day before."
     },
     {
-      "verse": "37-38",
-      "text": "The Israelites had agreed a sign with their men who were hiding. When those men ran into Gibeah and they destroyed everything there, they would make the sign. They would light a big fire so that the smoke went up into the sky."
+      "verse": "27",
+      "text": "The Covenant Box was in Bethel at that time. Phinehas, son of Eleazar and grandson of Aaron, was the priest who served the Lord there. The Israelites asked the Lord, ‘Should we march out to fight against our relatives, the men of Benjamin, again? Or should we leave them? ’ The Lord said, ‘Attack them."
+    },
+    {
+      "verse": "28",
+      "text": "Tomorrow I will put them under your power. ’."
+    },
+    {
+      "verse": "37",
+      "text": "The Israelites had agreed a sign with their men who were hiding. When those men ran into Gibeah and they destroyed everything there, they would make the sign."
+    },
+    {
+      "verse": "38",
+      "text": "They would light a big fire so that the smoke went up into the sky."
     }
   ],
   "21": [

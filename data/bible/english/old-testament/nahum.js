@@ -1,14 +1,6 @@
 module.exports = {
   "1": [
     {
-      "verse": "1",
-      "text": "Nahum lives in Elkosh and this is his prophecy about the people in Nineveh."
-    },
-    {
-      "verse": "2",
-      "text": "God is angry with the people in Nineveh. The Lord loves his people. But he is very angry with his enemies. He is so angry with them that he must punish them. He will be angry until he has killed his enemies."
-    },
-    {
       "verse": "3",
       "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people. He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
     },
@@ -31,6 +23,14 @@ module.exports = {
     {
       "verse": "8",
       "text": "But the people in Nineveh are his enemies and he will kill them."
+    },
+    {
+      "verse": "1",
+      "text": "Nahum lives in Elkosh and this is his prophecy about the people in Nineveh."
+    },
+    {
+      "verse": "2",
+      "text": "God is angry with the people in Nineveh. The Lord loves his people. But he is very angry with his enemies. He is so angry with them that he must punish them. He will be angry until he has killed his enemies."
     },
     {
       "verse": "9",

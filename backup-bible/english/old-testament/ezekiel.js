@@ -327,8 +327,12 @@ module.exports = {
       "text": "They will not have enough food or water. Everyone will be very upset. Their bodies will become very thin when I punish them for their sins. ’"
     },
     {
-      "verse": "4-5",
-      "text": "Then lie down on your left side. Show that you are receiving the punishment for the sins of the Israelites. You will suffer like that for 390 days. It will show the number of years that I have decided to punish Israel's people. Each day that you suffer will show one year of their punishment."
+      "verse": "4",
+      "text": "Then lie down on your left side. Show that you are receiving the punishment for the sins of the Israelites. You will suffer like that for 390 days."
+    },
+    {
+      "verse": "5",
+      "text": "It will show the number of years that I have decided to punish Israel's people. Each day that you suffer will show one year of their punishment."
     }
   ],
   "5": [
@@ -3791,8 +3795,12 @@ module.exports = {
       "text": "Then the nations that still live around you will see what has happened. They will know that I, the Lord, have mended the broken cities. They will know that I have planted crops again in the fields that were empty. I, the Lord, have said this, and I will do it! ”"
     },
     {
-      "verse": "37-38",
-      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival. I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord. ’"
+      "verse": "37",
+      "text": "This is what the Almighty Lord says: I will listen to what Israel's people are asking me to do for them. I will allow them to grow in number, like a big crowd of sheep. They will be as many as the sheep that people brought to Jerusalem as offerings at a festival."
+    },
+    {
+      "verse": "38",
+      "text": "I will fill the broken cities with crowds of people, as many as those sheep. Then they will know that I am the Lord. ’."
     }
   ],
   "37": [
@@ -4409,12 +4417,20 @@ module.exports = {
       "text": "The entrance room had narrow windows in the walls on each side. The windows had pictures of palm trees on each side. Workers had cut shapes of palm trees on its walls. The side rooms around the temple also had roofs over the outside of their doors."
     },
     {
-      "verse": "9-10",
-      "text": "The outside wall of the side rooms was 2½ metres thick. There was an open space between these rooms and the rooms that the priests used. It was 10 metres wide, all around the temple building."
+      "verse": "9",
+      "text": "The outside wall of the side rooms was 2½ metres thick. There was an open space between these rooms and the rooms that the priests used."
     },
     {
-      "verse": "17-18",
-      "text": "Workers had cut pictures in the wood above the doors and all over the walls. They were pictures of palm trees and cherubs. There was a picture of a palm tree between each cherub. They covered all the inside walls of the temple. Each cherub had two faces."
+      "verse": "10",
+      "text": "It was 10 metres wide, all around the temple building."
+    },
+    {
+      "verse": "17",
+      "text": "Workers had cut pictures in the wood above the doors and all over the walls. They were pictures of palm trees and cherubs. There was a picture of a palm tree between each cherub."
+    },
+    {
+      "verse": "18",
+      "text": "They covered all the inside walls of the temple. Each cherub had two faces."
     }
   ],
   "42": [
@@ -4487,8 +4503,16 @@ module.exports = {
       "text": "So the wall made a square around the place where the temple was. Each side was 250 metres. The wall made the holy place separate from the ordinary places around it."
     },
     {
-      "verse": "17-19",
-      "text": "Then he measured the north side and the south side and the west side. Each side measured the same as the east side."
+      "verse": "17",
+      "text": "Then he measured the north side and the south side and the west side."
+    },
+    {
+      "verse": "18",
+      "text": "Each side measured the same as the east side."
+    },
+    {
+      "verse": "19",
+      "text": "."
     }
   ],
   "43": [

@@ -889,6 +889,22 @@ module.exports = {
   ],
   "7": [
     {
+      "verse": "7",
+      "text": "Why did the Lord choose you as the people who would give him pleasure? It was not because you were the largest nation on the earth. No, you were the smallest of all nations!"
+    },
+    {
+      "verse": "8",
+      "text": "Instead, it was because of the Lord's love for you. Also, he had made a serious promise to your ancestors and he was faithful to that promise. So he used his great power to bring you out of Egypt, where you were slaves. He rescued you from the power of Pharaoh, Egypt's king."
+    },
+    {
+      "verse": "9",
+      "text": "Remember that the Lord your God is the only true God. So love him and obey his commands. Then you can trust him to be faithful to his covenant. He made that covenant with you, his people, and with your descendants for ever."
+    },
+    {
+      "verse": "10",
+      "text": "But if his people turn against him, he will punish them as they deserve. He will quickly destroy them."
+    },
+    {
       "verse": "1",
       "text": "The Lord your God will now bring you into the land that will be your home. As you go in, he will chase out seven nations that now live there. Those nations are larger and more powerful than you are. They are the Hittites, the Girgashites, the Amorites, the Canaanites, the Perizzites, the Hivites and the Jebusites."
     },
@@ -911,22 +927,6 @@ module.exports = {
     {
       "verse": "6",
       "text": "Remember that you are a special people who belong to the Lord your God. He has chosen you for himself out of all the other people who live on the earth. He loves you as his special people."
-    },
-    {
-      "verse": "7",
-      "text": "Why did the Lord choose you as the people who would give him pleasure? It was not because you were the largest nation on the earth. No, you were the smallest of all nations!"
-    },
-    {
-      "verse": "8",
-      "text": "Instead, it was because of the Lord's love for you. Also, he had made a serious promise to your ancestors and he was faithful to that promise. So he used his great power to bring you out of Egypt, where you were slaves. He rescued you from the power of Pharaoh, Egypt's king."
-    },
-    {
-      "verse": "9",
-      "text": "Remember that the Lord your God is the only true God. So love him and obey his commands. Then you can trust him to be faithful to his covenant. He made that covenant with you, his people, and with your descendants for ever."
-    },
-    {
-      "verse": "10",
-      "text": "But if his people turn against him, he will punish them as they deserve. He will quickly destroy them."
     },
     {
       "verse": "11",
@@ -1023,10 +1023,6 @@ module.exports = {
       "text": "Remember that the Lord your God is bringing you into a good land. It is a land that has many streams, pools and springs of water. There is water that runs in the valleys and in the hills."
     },
     {
-      "verse": "8",
-      "text": "It is a land where you will have plenty of food to eat. There is wheat, barley, grapes, figs, pomegranates, olives and honey. You will have everything that you need. The rocks have iron in them. You can dig copper out of the hills."
-    },
-    {
       "verse": "10",
       "text": "You can eat all the food that you want. Then remember to thank the Lord your God for the good land that he has given to you."
     },
@@ -1069,6 +1065,14 @@ module.exports = {
     {
       "verse": "20",
       "text": "The Lord will do the same thing to you as he does to your enemies. Like those nations, he will completely destroy you if you do not obey him."
+    },
+    {
+      "verse": "8",
+      "text": "It is a land where you will have plenty of food to eat. There is wheat, barley, grapes, figs, pomegranates, olives and honey. You will have everything that you need."
+    },
+    {
+      "verse": "9",
+      "text": "The rocks have iron in them. You can dig copper out of the hills."
     }
   ],
   "9": [
@@ -1659,10 +1663,6 @@ module.exports = {
       "text": "You may eat any clean bird."
     },
     {
-      "verse": "12",
-      "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats."
-    },
-    {
       "verse": "19",
       "text": "Some insects have wings but they walk on the ground. Insects like that are unclean food for you. You must not eat them."
     },
@@ -1705,6 +1705,10 @@ module.exports = {
     {
       "verse": "29",
       "text": "Keep this food for the Levites, who have no land of their own. It is also for the foreign people, the widows, and the children who have no family. These people in your town can eat as much as they want. If you do that, the Lord your God will bless you in all your work."
+    },
+    {
+      "verse": "12",
+      "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats."
     }
   ],
   "15": [
@@ -2069,10 +2073,6 @@ module.exports = {
       "text": "The Lord your God will destroy the nations who now live in the land that he is giving to you. You will chase them out and you will live in their cities and in their houses."
     },
     {
-      "verse": "2",
-      "text": "Make the land into three separate regions. Then choose three special cities, one city in each region. Build good roads to each city so that people can easily travel to them. Then anyone who kills a person can run to one of these cities to be safe."
-    },
-    {
       "verse": "4",
       "text": "This is the rule when anyone has killed another person: If it was a mistake, he can run to a safe city. He can do that if he has killed someone that he did not already hate."
     },
@@ -2143,6 +2143,14 @@ module.exports = {
     {
       "verse": "21",
       "text": "Do not be sorry for people who are guilty. Punish people as they deserve: a life for a life, an eye for an eye, a tooth for a tooth, a hand for a hand, a foot for a foot."
+    },
+    {
+      "verse": "2",
+      "text": "Make the land into three separate regions. Then choose three special cities, one city in each region."
+    },
+    {
+      "verse": "3",
+      "text": "Build good roads to each city so that people can easily travel to them. Then anyone who kills a person can run to one of these cities to be safe."
     }
   ],
   "20": [
@@ -2388,7 +2396,7 @@ module.exports = {
     },
     {
       "verse": "17",
-      "text": "He accuses her that she is bad. He says, “I discovered that your daughter had sex before I married her. ” But look at her cloth. This shows that she had never had sex before. ’ Then her parents must hold the cloth in front of the leaders of the town."
+      "text": "He accuses her that she is bad. He says, “I discovered that your daughter had sex before I married her. �� But look at her cloth. This shows that she had never had sex before. ’ Then her parents must hold the cloth in front of the leaders of the town."
     },
     {
       "verse": "18",
@@ -2899,54 +2907,6 @@ module.exports = {
   ],
   "28": [
     {
-      "verse": "1",
-      "text": "Today I am giving you the commands of the Lord your God. You must be careful to obey all of them completely. If you do that, he will make you greater than any other nation of people in the world."
-    },
-    {
-      "verse": "2",
-      "text": "If you obey the Lord your God, he will bless you in very many ways."
-    },
-    {
-      "verse": "3",
-      "text": "God will bless you in your cities and in your fields."
-    },
-    {
-      "verse": "4",
-      "text": "God will bless your children and the crops that you grow. Your cows and your sheep will have many babies."
-    },
-    {
-      "verse": "5",
-      "text": "God will bless you with lots of grain to make bread."
-    },
-    {
-      "verse": "6",
-      "text": "God will bless you in your homes and when you go outside."
-    },
-    {
-      "verse": "7",
-      "text": "When your enemies attack you, the Lord will knock them down. They will come from one direction to attack you, but they will run away from you in seven different directions!"
-    },
-    {
-      "verse": "8",
-      "text": "The Lord will bless you with lots of food to store. He will bless all the work that you do. He will bless you very much in the land that he is giving to you."
-    },
-    {
-      "verse": "9",
-      "text": "The Lord will continue to help you as his special people, as he has promised to do. But you must obey his commands. You must live in a way that pleases him."
-    },
-    {
-      "verse": "10",
-      "text": "If you do that, everyone in the world will see that you belong to the Lord. They will respect you with fear."
-    },
-    {
-      "verse": "11",
-      "text": "The Lord will give you many children. Your animals will have many babies. Your fields will give you a lot of food. The Lord will do this in the land that he promised your ancestors he would give you."
-    },
-    {
-      "verse": "12",
-      "text": "The Lord will send rain from the clouds where he stores it. He will cause the rain to fall at the time when the land needs it. He will bless all the work that you do. You will lend money to the people of many nations. But you will not need anyone to lend money to you."
-    },
-    {
       "verse": "13",
       "text": "The Lord will make you the leaders of other people. You will not have to follow at the back. You will become more powerful, not weaker. But you must obey the commands of the Lord your God. I am telling you today, you must be very careful to do that."
     },
@@ -3065,6 +3025,54 @@ module.exports = {
     {
       "verse": "42",
       "text": "Crowds of locusts will eat all your trees and the food from your fields."
+    },
+    {
+      "verse": "1",
+      "text": "Today I am giving you the commands of the Lord your God. You must be careful to obey all of them completely. If you do that, he will make you greater than any other nation of people in the world."
+    },
+    {
+      "verse": "2",
+      "text": "If you obey the Lord your God, he will bless you in very many ways."
+    },
+    {
+      "verse": "3",
+      "text": "God will bless you in your cities and in your fields."
+    },
+    {
+      "verse": "4",
+      "text": "God will bless your children and the crops that you grow. Your cows and your sheep will have many babies."
+    },
+    {
+      "verse": "5",
+      "text": "God will bless you with lots of grain to make bread."
+    },
+    {
+      "verse": "6",
+      "text": "God will bless you in your homes and when you go outside."
+    },
+    {
+      "verse": "7",
+      "text": "When your enemies attack you, the Lord will knock them down. They will come from one direction to attack you, but they will run away from you in seven different directions!"
+    },
+    {
+      "verse": "8",
+      "text": "The Lord will bless you with lots of food to store. He will bless all the work that you do. He will bless you very much in the land that he is giving to you."
+    },
+    {
+      "verse": "9",
+      "text": "The Lord will continue to help you as his special people, as he has promised to do. But you must obey his commands. You must live in a way that pleases him."
+    },
+    {
+      "verse": "10",
+      "text": "If you do that, everyone in the world will see that you belong to the Lord. They will respect you with fear."
+    },
+    {
+      "verse": "11",
+      "text": "The Lord will give you many children. Your animals will have many babies. Your fields will give you a lot of food. The Lord will do this in the land that he promised your ancestors he would give you."
+    },
+    {
+      "verse": "12",
+      "text": "The Lord will send rain from the clouds where he stores it. He will cause the rain to fall at the time when the land needs it. He will bless all the work that you do. You will lend money to the people of many nations. But you will not need anyone to lend money to you."
     },
     {
       "verse": "43",
@@ -3225,10 +3233,6 @@ module.exports = {
       "text": "By this covenant, the Lord says again today that you are his people and he is your God. He has already made that promise to you and to your ancestors, Abraham, Isaac and Jacob."
     },
     {
-      "verse": "14",
-      "text": "The Lord our God is making this strong covenant with you people who are standing here with him today. But it is not only with you. He also makes this covenant with those people who are not here today."
-    },
-    {
       "verse": "16",
       "text": "You remember how we lived when we were in Egypt. You remember how we travelled through other countries as we came here."
     },
@@ -3283,6 +3287,14 @@ module.exports = {
     {
       "verse": "29",
       "text": "Some secret things belong to the Lord our God. He does not let us understand everything. But he has shown us many things clearly. Those things belong to us and to our descendants for all time. They are the words of his Law that we need to obey."
+    },
+    {
+      "verse": "14",
+      "text": "The Lord our God is making this strong covenant with you people who are standing here with him today. But it is not only with you."
+    },
+    {
+      "verse": "15",
+      "text": "He also makes this covenant with those people who are not here today."
     }
   ],
   "30": [
@@ -3405,10 +3417,6 @@ module.exports = {
       "text": "Moses wrote down all the rules of God's Law. He gave them to the Levite priests who carry the Lord's Covenant Box. He also gave them to the leaders of the Israelites."
     },
     {
-      "verse": "10",
-      "text": "Then Moses said to them, ‘You must read this Law to all the Israelites. Read it every seven years at the Feast of Huts, in the year when you forgive people's debts. At that time all the Israelites will go to the place that the Lord your God will choose. When they meet there to worship the Lord, they must listen to this Law."
-    },
-    {
       "verse": "12",
       "text": "Bring all the men, women and children together. Also bring the foreign people who live in your towns. They must all hear God's Law as it is read to them. Then they can learn to respect and obey the Lord your God. They will be careful to obey all the teaching of his Law."
     },
@@ -3483,6 +3491,14 @@ module.exports = {
     {
       "verse": "30",
       "text": "Then Moses spoke the words of this song, from the beginning to the end. All the Israelites met together and they listened to him."
+    },
+    {
+      "verse": "10",
+      "text": "Then Moses said to them, ‘You must read this Law to all the Israelites. Read it every seven years at the Feast of Huts, in the year when you forgive people's debts."
+    },
+    {
+      "verse": "11",
+      "text": "At that time all the Israelites will go to the place that the Lord your God will choose. When they meet there to worship the Lord, they must listen to this Law."
     }
   ],
   "32": [

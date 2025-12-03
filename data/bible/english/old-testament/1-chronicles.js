@@ -415,10 +415,6 @@ module.exports = {
       "text": "Shaaph and Sheva. Shaaph became the father of Madmannah. Sheva became the father of Makbenah and Gibea. Caleb had a daughter called Aksah."
     },
     {
-      "verse": "50",
-      "text": "Those people were Caleb's descendants. The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader. The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader."
-    },
-    {
       "verse": "52",
       "text": "The sons of Shobal, the ancestor of Kiriath-Jearim, were: Haroeh, half the Manahath people"
     },
@@ -433,6 +429,14 @@ module.exports = {
     {
       "verse": "55",
       "text": "His descendants also included the people who lived in Jabez. They were people who could write down important things. Their clans were called the Tirathites, Shimeathites and Sucathites. These clans were descendants of Hammath, the Kenite man. He was also the ancestor of the Rekabites."
+    },
+    {
+      "verse": "50",
+      "text": "Those people were Caleb's descendants. The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader."
+    },
+    {
+      "verse": "51",
+      "text": "The sons of Ephrath's firstborn son, Hur, were: Shobal, Salma and Hareph. Shobal became the ancestor of Kiriath-Jearim. Salma became the ancestor of Bethlehem. Hareph became the ancestor of Beth-Gader."
     }
   ],
   "3": [
@@ -543,10 +547,6 @@ module.exports = {
       "text": "Shobal's son Reaiah became the father of Jahath. Jahath became the father of Ahumai and Lahad. Those were the ancestors of the Zorathite clans."
     },
     {
-      "verse": "3",
-      "text": "Caleb's wife Ephrathah gave birth to their firstborn son, Hur. Hur was the ancestor of the people of Bethlehem. His three sons were Etam, Penuel and Ezer. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah."
-    },
-    {
       "verse": "5",
       "text": "Tekoa's father Ashhur had two wives called Helah and Naarah."
     },
@@ -595,20 +595,12 @@ module.exports = {
       "text": "Jehallelel's sons were: Ziph, Ziphah, Tiria and Asarel."
     },
     {
-      "verse": "17",
-      "text": "Ezrah's sons were: Jether, Mered, Epher and Jalon. Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah. Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah."
-    },
-    {
       "verse": "19",
       "text": "Hodiah's wife was Naham's sister. She gave birth to two sons. One of them became the father of Keilah, the ancestor of the Garmites. The other son became the father of Eshtemoa, the ancestor of the Maakathites."
     },
     {
       "verse": "20",
       "text": "Shimon's sons were: Amnon, Rinnah, Ben-Hanan and Tilon. Ishi's descendants were Zoheth and Ben-Zoheth. Ishi's descendants were Zoheth and Ben-Zoheth."
-    },
-    {
-      "verse": "21",
-      "text": "These were the sons of Judah's son, Shelah: Er, Laadah, Jokim, Joash, Saraph and Jashubi-Lehem. Er became the father of Lecah. Laadah became the father of Mareshah. Joash and Saraph both married women from Moab and they returned to live in Lehem. Other clans that were descendants of Shelah worked with linen at Beth-Ashbea, and some lived in Cozeba. (These lists are from old history books. )"
     },
     {
       "verse": "23",
@@ -693,6 +685,30 @@ module.exports = {
     {
       "verse": "43",
       "text": "They killed all the descendants of Amalek who were still alive. They took their land and they still live there now."
+    },
+    {
+      "verse": "3",
+      "text": "Caleb's wife Ephrathah gave birth to their firstborn son, Hur. Hur was the ancestor of the people of Bethlehem. His three sons were Etam, Penuel and Ezer. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor."
+    },
+    {
+      "verse": "4",
+      "text": "Ezer became the father of Hushah. Etam's sons were: Jezreel, Ishma and Idbash. Their sister was Hazzelelponi. Penuel became the father of Gedor. Ezer became the father of Hushah."
+    },
+    {
+      "verse": "17",
+      "text": "Ezrah's sons were: Jether, Mered, Epher and Jalon. Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah."
+    },
+    {
+      "verse": "18",
+      "text": "Mered married Bithiah. Her father was the king of Egypt. The children of Mered and Bithiah were: Miriam, Shammai and Ishbah. Ishbah became the father of Eshtemoa. Mered had another wife who belonged to Judah's tribe. Her sons were Jered, Heber and Jekuthiel. Jered became the father of Gedor. Heber became the father of Soco. And Jekuthiel became the father of Zanoah."
+    },
+    {
+      "verse": "21",
+      "text": "These were the sons of Judah's son, Shelah: Er, Laadah, Jokim, Joash, Saraph and Jashubi-Lehem. Er became the father of Lecah. Laadah became the father of Mareshah. Joash and Saraph both married women from Moab and they returned to live in Lehem."
+    },
+    {
+      "verse": "22",
+      "text": "Other clans that were descendants of Shelah worked with linen at Beth-Ashbea, and some lived in Cozeba. (These lists are from old history books. )."
     }
   ],
   "5": [
@@ -1269,10 +1285,6 @@ module.exports = {
       "text": "Shemer's brother was Helem and Helem's sons were Zophah, Imna, Shelesh and Amal."
     },
     {
-      "verse": "36",
-      "text": "Zophah's sons were Suah, Harnepher, Shual, Beri, Imrah, Bezer, Hod, Shamma, Shilshah, Ithran and Beera."
-    },
-    {
       "verse": "38",
       "text": "Jether's sons were Jephunneh, Pispah and Ara."
     },
@@ -1283,6 +1295,14 @@ module.exports = {
     {
       "verse": "40",
       "text": "All those men were descendants of Asher. They were leaders of their clans. They were great and brave soldiers and great leaders. They had 26, 000 men ready to fight in the army. There were lists that showed those men's names with their clans."
+    },
+    {
+      "verse": "36",
+      "text": "Zophah's sons were Suah, Harnepher, Shual, Beri, Imrah, Bezer, Hod, Shamma, Shilshah, Ithran and Beera."
+    },
+    {
+      "verse": "37",
+      "text": "."
     }
   ],
   "8": [
@@ -1313,14 +1333,6 @@ module.exports = {
     {
       "verse": "7",
       "text": "Ehud's descendants were: Naaman, Ahijah and Gera. It was Gera who led them to Manahath. He became the father of Uzza and Ahihud."
-    },
-    {
-      "verse": "8",
-      "text": "Shaharaim and his wife Hushim had sons called Abitub and Elpaal. In Moab, Shaharaim sent away his two wives, Hushim and Baara. After that, Shaharaim married Hodesh. They had sons called Jobab, Zibia, Mesha, Malcam, Jeuz, Sakia and Mirmah. They were leaders of their clans."
-    },
-    {
-      "verse": "12",
-      "text": "Elpaal's sons were: Eber, Misham, Shemed, Beriah and Shema. Shemed built the towns of Ono and Lod, and the villages around them. Beriah and Shema were leaders of the clans that lived in Aijalon city. They chased the people of Gath out of their city."
     },
     {
       "verse": "14",
@@ -1429,6 +1441,30 @@ module.exports = {
     {
       "verse": "40",
       "text": "Ulam's sons were brave soldiers. They could shoot arrows very well. They had 150 sons and grandsons. All those men were descendants of Benjamin."
+    },
+    {
+      "verse": "8",
+      "text": "Shaharaim and his wife Hushim had sons called Abitub and Elpaal. In Moab, Shaharaim sent away his two wives, Hushim and Baara."
+    },
+    {
+      "verse": "9",
+      "text": "After that, Shaharaim married Hodesh."
+    },
+    {
+      "verse": "10",
+      "text": "They had sons called Jobab, Zibia, Mesha, Malcam, Jeuz, Sakia and Mirmah."
+    },
+    {
+      "verse": "11",
+      "text": "They were leaders of their clans."
+    },
+    {
+      "verse": "12",
+      "text": "Elpaal's sons were: Eber, Misham, Shemed, Beriah and Shema. Shemed built the towns of Ono and Lod, and the villages around them."
+    },
+    {
+      "verse": "13",
+      "text": "Beriah and Shema were leaders of the clans that lived in Aijalon city. They chased the people of Gath out of their city."
     }
   ],
   "9": [
@@ -1439,10 +1475,6 @@ module.exports = {
     {
       "verse": "2",
       "text": "The first people who returned to their home towns after that were some priests, Levites, servants in the temple and other Israelites."
-    },
-    {
-      "verse": "3",
-      "text": "Some people from the tribes of Judah, Benjamin, Ephraim and Manasseh lived in Jerusalem. Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez. Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez."
     },
     {
       "verse": "5",
@@ -1603,6 +1635,14 @@ module.exports = {
     {
       "verse": "44",
       "text": "Azel had six sons: Azrikam, Bokeru, Ishmael, Sheariah, Obadiah and Hanan. That is the list of Azel's sons."
+    },
+    {
+      "verse": "3",
+      "text": "Some people from the tribes of Judah, Benjamin, Ephraim and Manasseh lived in Jerusalem. Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez."
+    },
+    {
+      "verse": "4",
+      "text": "Those people included: Uthai, son of Ammihud and grandson of Omri. Omri was Imri's son. Imri was Bani's son. Bani was a descendant of Judah's son, Perez."
     }
   ],
   "10": [
@@ -3083,10 +3123,6 @@ module.exports = {
       "text": "Shemaiah was the secretary who wrote down the names in each group. He was the son of Nethanel, a Levite. Shemaiah wrote down the names while the king and his officers watched. Zadok the priest, Abiathar's son Ahimelech and the leaders of the priests' clans and of the other Levite clans were also watching. When they threw the lots, they would choose a family from Eleazar's descendants, then a family from Ithamar's descendants, and so on."
     },
     {
-      "verse": "7",
-      "text": "This is the list of the group leaders as they chose them, one by one:1. Jehoiarib2. Jedaiah3. Harim4. Seorim5. Malkijah6. Mijamin7. Hakkoz8. Abijah9. Jeshua10. Shecaniah11. Eliashib12. Jakim13. Huppah14. Jeshebeab15. Bilgah16. Immer17. Hezir18. Happizzez19. Pethahiah20. Jehezkel21. Jakin22. Gamul23. Delaiah24. Maaziah."
-    },
-    {
       "verse": "19",
       "text": "Each of these leaders, with their group, had their jobs to do in the temple. They had to obey the rules that their ancestor Aaron had given. The Lord, Israel's God, had told him what they must do."
     },
@@ -3137,6 +3173,10 @@ module.exports = {
     {
       "verse": "31",
       "text": "They also used lots to choose their different jobs, as their relatives, Aaron's descendants, had done. King David, Zadok, Ahimelech and the family leaders of the priests and the other Levites watched them. They chose work for the family leaders in the same way that they did for their younger brothers."
+    },
+    {
+      "verse": "7",
+      "text": "This is the list of the group leaders as they chose them, one by one:1. Jehoiarib2. Jedaiah3. Harim4. Seorim5. Malkijah6. Mijamin7. Hakkoz8. Abijah9. Jeshua10. Shecaniah11. Eliashib12. Jakim13. Huppah14. Jeshebeab15. Bilgah16. Immer17. Hezir18. Happizzez19. Pethahiah20. Jehezkel21. Jakin22. Gamul23. Delaiah24. Maaziah."
     }
   ],
   "25": [
@@ -3197,10 +3237,6 @@ module.exports = {
     {
       "verse": "5",
       "text": "Ammiel (his sixth son), Issachar (his seventh son) and Peullethai (his eighth son). God blessed Obed-Edom with those eight sons."
-    },
-    {
-      "verse": "6",
-      "text": "Obed-Edom's son Shemaiah had four sons. They were called Othni, Rephael, Obed and Elzabad. They were leaders in their clan, because they were brave men. People respected them very much. People also respected their relatives, Elihu and Semakiah."
     },
     {
       "verse": "8",
@@ -3301,6 +3337,14 @@ module.exports = {
     {
       "verse": "32",
       "text": "There were 2, 700 men from Jeriah's clan who were good leaders in their families. King David chose them to be officers with authority for the tribes of Reuben, Gad and the half tribe of Manasseh. They had authority for all the work that people did to serve the Lord and the king."
+    },
+    {
+      "verse": "6",
+      "text": "Obed-Edom's son Shemaiah had four sons. They were called Othni, Rephael, Obed and Elzabad. They were leaders in their clan, because they were brave men."
+    },
+    {
+      "verse": "7",
+      "text": "People respected them very much. People also respected their relatives, Elihu and Semakiah."
     }
   ],
   "27": [
