@@ -5792,6 +5792,13 @@ body.dark-theme .add-character-btn:hover {
     opacity: 0.8;
 }
 
+.verse-bottom-action:disabled {
+    background: #f8f9fa;
+    color: #1a1a1a;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
 .verse-bottom-action svg {
     width: 20px;
     height: 20px;
@@ -6006,6 +6013,13 @@ body.dark-theme .verse-bottom-action {
 
 body.dark-theme .verse-bottom-action:hover {
     background: #4d5156;
+}
+
+body.dark-theme .verse-bottom-action:disabled {
+    background: #3c4043;
+    color: #e8eaed;
+    cursor: not-allowed;
+    opacity: 1;
 }
 
 body.dark-theme .add-memory-action.memory-verse-active {
@@ -7431,7 +7445,7 @@ body.dark-theme .sermon-view-all-btn:hover {
 
 body.dark-theme .sermon-modal-footer {
     border-top-color: #404040;
-    background: #1a1a1a;
+    background: #2a2a2a;
 }
 
 .sermon-modal-btn {
