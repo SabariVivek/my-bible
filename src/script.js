@@ -6687,9 +6687,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    
+    // Helper function to close right sidebar drawer
+    function closeRightSidebar() {
+        if (rightSidebar) {
+            rightSidebar.classList.add('hidden');
+            rightSidebar.classList.remove('drawer-open');
+        }
+    }
+    
     // Bible Reading option - navigate to Bible Reading page
     if (bibleReadingOption) {
         bibleReadingOption.addEventListener('click', () => {
+            closeRightSidebar();
             // Navigate to the Bible Reading HTML file with cache-busting parameter
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
             window.location.href = `src/bible-reading.html?cb=${cacheBuster}`;
@@ -6709,30 +6719,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bible Notes option - navigate to docs
     if (rightNotesOption) {
         rightNotesOption.addEventListener('click', () => {
+            closeRightSidebar();
             window.location.href = 'docs/docs.html';
         });
     }
     // Kings option - navigate to Bible-Study Kings page
     if (rightKingsOption) {
         rightKingsOption.addEventListener('click', () => {
+            closeRightSidebar();
             window.location.href = `Bible-Study/index.html#/kings`;
         });
     }
     // Prophets option - navigate to Bible-Study Prophets page
     if (rightProphetsOption) {
         rightProphetsOption.addEventListener('click', () => {
+            closeRightSidebar();
             window.location.href = `Bible-Study/index.html#/prophets`;
         });
     }
     // Timeline option - navigate to Bible-Study Timeline page
     if (rightTimelineOption) {
         rightTimelineOption.addEventListener('click', () => {
+            closeRightSidebar();
             window.location.href = `Bible-Study/index.html#/timeline`;
         });
     }
     // Character Study option - navigate to Bible-Study Character Study page
     if (rightCharacterOption) {
         rightCharacterOption.addEventListener('click', () => {
+            closeRightSidebar();
             // Navigate directly with hash
             window.location.href = `Bible-Study/index.html#/genealogy`;
         });
@@ -6740,6 +6755,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Life of Jesus option - navigate to Bible-Study Life of Christ page
     if (rightLifeOfJesusOption) {
         rightLifeOfJesusOption.addEventListener('click', () => {
+            closeRightSidebar();
             // Navigate directly with hash
             window.location.href = `Bible-Study/index.html#/life-of-christ`;
         });
@@ -6747,6 +6763,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sermon option - navigate to Sermon page
     if (rightSermonOption) {
         rightSermonOption.addEventListener('click', () => {
+            closeRightSidebar();
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
             window.location.href = `src/sermon.html?cb=${cacheBuster}`;
         });
@@ -6754,6 +6771,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // WMSCOG Cult option - navigate to secret page
     if (rightCultOption) {
         rightCultOption.addEventListener('click', () => {
+            closeRightSidebar();
             window.location.href = 'config/secret.html';
         });
     }
