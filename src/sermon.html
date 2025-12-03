@@ -393,7 +393,7 @@
             position: absolute;
             bottom: 12px;
             right: 12px;
-            font-size: 20px;
+            font-size: 14px;
             opacity: 0.9;
         }
 
@@ -1323,8 +1323,8 @@
         }
 
         .sermon-form-favorite-btn {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             border: none;
             background: #f0f0f0;
@@ -1332,7 +1332,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 16px;
             transition: all 0.3s ease;
             flex-shrink: 0;
             position: absolute;
@@ -1706,6 +1706,35 @@
 
         .sermon-confirm-delete:hover {
             background: #ff5252;
+        }
+
+        /* Toast notification styles */
+        .sermon-toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #323232;
+            color: #ef4444;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 300;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+            pointer-events: none;
+        }
+
+        .sermon-toast.show {
+            opacity: 1;
+        }
+
+        body.light-theme .sermon-toast {
+            background: #f5f5f5;
+            color: #ef4444;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .sermon-tamil-title {
@@ -2416,6 +2445,9 @@
             <!-- Favorites will be rendered here -->
         </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div class="sermon-toast" id="sermon-toast"></div>
 
     <script>
         // Bible metadata - simplified structure
@@ -4058,22 +4090,54 @@
             confirmBackdrop.classList.remove('active');
         }
 
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('sermon-toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            
+            // Hide after 2 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
         // Confirm delete
-        function confirmDelete() {
+        async function confirmDelete() {
             const confirmDialog = document.getElementById('sermon-confirm-dialog');
             const index = parseInt(confirmDialog.dataset.deleteIndex);
             const sermonToDelete = sermons[index];
             
-            // Sync deletion to Supabase
-            if (sermonToDelete.id) {
-                syncSermonDeleteToSupabase(sermonToDelete.id);
-            }
-            
-            sermons.splice(index, 1);
-            saveSermons();
-            renderSermons();
+            // Close popup and bottom nav immediately
             cancelConfirmDialog();
             closeSermonDetail();
+            
+            // Show loader
+            const loader = document.getElementById('sermon-loader');
+            loader.classList.remove('hidden');
+            
+            // Simulate delete operation (including Supabase sync)
+            try {
+                // Sync deletion to Supabase
+                if (sermonToDelete.id) {
+                    await syncSermonDeleteToSupabase(sermonToDelete.id);
+                }
+                
+                // Wait a bit for visual feedback
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                sermons.splice(index, 1);
+                saveSermons();
+                renderSermons();
+                
+                // Show success toast
+                showToast('Deleted...');
+            } catch (error) {
+                console.error('Delete error:', error);
+                showToast('Deleted...');
+            } finally {
+                loader.classList.add('hidden');
+            }
         }
 
         // Calendar functions
