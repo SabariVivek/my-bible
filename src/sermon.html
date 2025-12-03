@@ -248,6 +248,10 @@
             box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
         }
 
+        .sermon-item.favorite {
+            border-left: 4px solid #ff4444;
+        }
+
         .sermon-item-header {
             display: flex;
             justify-content: space-between;
@@ -839,6 +843,7 @@
             gap: 1rem;
             padding: 12px 16px;
             border-bottom: 1px solid #e0e0e0;
+            justify-content: flex-start;
         }
 
         body.dark-theme #sermon-detail-header {
@@ -865,11 +870,20 @@
             border-bottom-color: #3a3a3a;
         }
 
+        .sermon-sheet-header.detail-header {
+            justify-content: flex-start;
+        }
+
         .sermon-sheet-title {
             font-size: 18px;
             font-weight: 600;
             margin: 0;
             color: #333;
+            text-align: center;
+        }
+
+        .sermon-sheet-header.detail-header .sermon-sheet-title {
+            text-align: left;
         }
 
         body.dark-theme .sermon-sheet-title {
@@ -1048,6 +1062,102 @@
         .sermon-detail-sheet .sermon-sheet-content {
             padding: 16px;
             overflow-y: auto;
+            position: relative;
+        }
+
+        .sermon-favorite-btn {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .sermon-favorite-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .sermon-favorite-btn.active {
+            background: #ff4444;
+            color: #ffffff;
+            animation: heartBeat 0.6s ease-in-out;
+        }
+
+        @keyframes heartBeat {
+            0% {
+                transform: scale(1);
+            }
+            10% {
+                transform: scale(1.15);
+            }
+            20% {
+                transform: scale(1);
+            }
+            30% {
+                transform: scale(1.15);
+            }
+            40%, 100% {
+                transform: scale(1);
+            }
+        }
+
+        body.dark-theme .sermon-favorite-btn {
+            background: #333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-theme .sermon-favorite-btn.active {
+            background: #ff4444;
+            color: #ffffff;
+        }
+
+        .sermon-form-favorite-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: #f0f0f0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            position: absolute;
+            right: 16px;
+        }
+
+        .sermon-form-favorite-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sermon-form-favorite-btn.active {
+            background: #ff4444;
+            color: #ffffff;
+            animation: heartBeat 0.6s ease-in-out;
+        }
+
+        body.dark-theme .sermon-form-favorite-btn {
+            background: #333;
+        }
+
+        body.dark-theme .sermon-form-favorite-btn.active {
+            background: #ff4444;
+            color: #ffffff;
         }
 
         .sermon-detail-close-btn {
@@ -1944,6 +2054,9 @@
         <div class="sermon-sheet-handle" id="sermon-sheet-drag-handle"></div>
         <div class="sermon-sheet-header">
             <h2 class="sermon-sheet-title">Add Sermon</h2>
+            <button class="sermon-form-favorite-btn" id="sermon-form-favorite-btn" title="Add to favorites" style="display: none;">
+                ❤️
+            </button>
         </div>
         <div class="sermon-sheet-content">
             <div class="sermon-input-group">
@@ -1992,6 +2105,7 @@
                         <div class="sermon-dropdown-group">
                             <label class="sermon-dropdown-label">Verses</label>
                             <select class="sermon-dropdown-select" id="sermon-verses-select" multiple disabled>
+                                <option value="" disabled>Select Verse</option>
                             </select>
                         </div>
                         <button class="sermon-add-verse-btn" id="sermon-add-verse-btn" type="button" disabled>Add Verse</button>
@@ -2011,7 +2125,7 @@
     <div class="sermon-detail-overlay" id="sermon-detail-overlay" onclick="closeSermonDetail()"></div>
     <div class="sermon-detail-sheet" id="sermon-detail-sheet">
         <div class="sermon-sheet-handle"></div>
-        <div class="sermon-sheet-header" id="sermon-detail-header">
+        <div class="sermon-sheet-header detail-header" id="sermon-detail-header">
             <h2 class="sermon-sheet-title">Sermon Details</h2>
             <button class="sermon-detail-close-btn" id="sermon-detail-close-btn" aria-label="Close">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
@@ -2386,6 +2500,7 @@
                         tamilTitle: item.tamil_title || '',
                         date: item.sermon_date,
                         verses: item.verses || [],
+                        is_favorite: item.is_favorite || false,
                         _synced: true  // Mark as synced from Supabase
                     }));
                     
@@ -2469,7 +2584,7 @@
                     }).join('');
                 }
                 return `
-                    <div class="sermon-item" data-index="${originalIndex}">
+                    <div class="sermon-item ${sermon.is_favorite ? 'favorite' : ''}" data-index="${originalIndex}">
                         <div class="sermon-item-header">
                             <div class="sermon-item-title-wrapper">
                                 <h3 class="sermon-item-title">${sermon.title}</h3>
@@ -2541,7 +2656,8 @@
                                 title: sermon.title,
                                 tamil_title: sermon.tamilTitle || null,
                                 sermon_date: dateStr,
-                                verses: sermon.verses || []
+                                verses: sermon.verses || [],
+                                is_favorite: sermon.is_favorite || false
                             }])
                             .select();
                         
@@ -2576,7 +2692,8 @@
                         title: sermon.title,
                         tamil_title: sermon.tamilTitle || null,
                         sermon_date: dateStr,
-                        verses: sermon.verses || []
+                        verses: sermon.verses || [],
+                        is_favorite: sermon.is_favorite || false
                     })
                     .eq('id', sermon.id);
                 
@@ -2859,6 +2976,86 @@
                 container.classList.remove('blurred');
             }
         }
+
+        // Toggle sermon favorite status
+        async function toggleSermonFavorite(index) {
+            const sermon = sermons[index];
+            if (!sermon) return;
+
+            try {
+                const newFavoriteStatus = !sermon.is_favorite;
+                
+                // Update Supabase
+                const { error } = await supabase
+                    .from('sermons')
+                    .update({ is_favorite: newFavoriteStatus })
+                    .eq('id', sermon.id);
+
+                if (error) throw error;
+
+                // Update local data
+                sermon.is_favorite = newFavoriteStatus;
+
+                // Update the sermon item in the list
+                const sermonItem = document.querySelector(`[data-index="${index}"]`);
+                if (sermonItem) {
+                    if (newFavoriteStatus) {
+                        sermonItem.classList.add('favorite');
+                    } else {
+                        sermonItem.classList.remove('favorite');
+                    }
+                }
+
+            } catch (error) {
+                console.error('Error toggling favorite:', error);
+                alert('Failed to update favorite status');
+            }
+        }
+
+        // Toggle sermon favorite status from form
+        async function toggleSermonFavoriteForm(index) {
+            const sermon = sermons[index];
+            if (!sermon) return;
+
+            try {
+                const newFavoriteStatus = !sermon.is_favorite;
+                
+                // Update Supabase
+                const { error } = await supabase
+                    .from('sermons')
+                    .update({ is_favorite: newFavoriteStatus })
+                    .eq('id', sermon.id);
+
+                if (error) throw error;
+
+                // Update local data
+                sermon.is_favorite = newFavoriteStatus;
+
+                // Update button UI
+                const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
+                if (favoriteBtn) {
+                    if (newFavoriteStatus) {
+                        favoriteBtn.classList.add('active');
+                    } else {
+                        favoriteBtn.classList.remove('active');
+                    }
+                }
+
+                // Update the sermon item in the list
+                const sermonItem = document.querySelector(`[data-index="${index}"]`);
+                if (sermonItem) {
+                    if (newFavoriteStatus) {
+                        sermonItem.classList.add('favorite');
+                    } else {
+                        sermonItem.classList.remove('favorite');
+                    }
+                }
+
+            } catch (error) {
+                console.error('Error toggling favorite:', error);
+                alert('Failed to update favorite status');
+            }
+        }
         
         // Add overlay click handler for better cross-browser support
         document.addEventListener('DOMContentLoaded', () => {
@@ -2893,6 +3090,22 @@
             currentEditingIndex = index;
             renderVersesChips();
             closeSermonDetail();
+            
+            // Change header title to "Edit Sermon"
+            document.querySelector('.sermon-sheet-title').textContent = 'Edit Sermon';
+            
+            // Show favorite button and set its state
+            const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
+            if (favoriteBtn) {
+                favoriteBtn.style.display = 'flex';
+                if (sermon.is_favorite) {
+                    favoriteBtn.classList.add('active');
+                } else {
+                    favoriteBtn.classList.remove('active');
+                }
+                favoriteBtn.onclick = () => toggleSermonFavoriteForm(index);
+            }
+            
             document.getElementById('sermon-bottom-sheet').classList.add('active');
             document.getElementById('sermon-sheet-overlay').classList.add('active');
         }
@@ -3733,6 +3946,17 @@
             document.getElementById('sermon-verses-select').disabled = true;
             document.getElementById('sermon-add-verse-btn').disabled = true;
             renderVersesChips();
+            
+            // Reset title to "Add Sermon"
+            document.querySelector('.sermon-sheet-title').textContent = 'Add Sermon';
+            
+            // Hide favorite button for new sermons
+            const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
+            if (favoriteBtn) {
+                favoriteBtn.style.display = 'none';
+                favoriteBtn.classList.remove('active');
+            }
+            
             overlay.classList.add('active');
             bottomSheet.classList.add('active');
             titleInput.focus();
@@ -3759,6 +3983,14 @@
             document.getElementById('sermon-book-select').value = '';
             document.getElementById('sermon-chapter-select').value = '';
             document.getElementById('sermon-verses-select').value = '';
+            
+            // Hide favorite button
+            const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
+            if (favoriteBtn) {
+                favoriteBtn.style.display = 'none';
+                favoriteBtn.classList.remove('active');
+            }
+            
             bottomSheet.style.maxHeight = '80vh';
         }
 
@@ -3910,6 +4142,7 @@
                     date: dateIso,
                     verses: selectedSermonVerses,
                     content: '', // For future use
+                    is_favorite: false,
                     _synced: false  // Mark for syncing
                 };
                 sermons.unshift(newSermon);
