@@ -285,6 +285,30 @@ module.exports = {
       "text": "Because of that, the Lord God will give them sores on their heads. Those beautiful women will be bald! ’"
     },
     {
+      "verse": "18",
+      "text": "On that day, the Lord God will take away the beautiful rings that they wear on their ankles. He will remove all the valuable rings and bright stones that they wear on their heads, their necks, their ears, their arms, their fingers and their noses. He will take away their beautiful clothes, their belts, their perfumes and their magic rings."
+    },
+    {
+      "verse": "19",
+      "text": "He will remove all the valuable rings and bright stones that they wear on their heads, their necks, their ears, their arms, their fingers and their noses."
+    },
+    {
+      "verse": "20",
+      "text": "He will take away their beautiful clothes, their belts, their perfumes and their magic rings."
+    },
+    {
+      "verse": "21",
+      "text": "Instead of a nice smell of perfume, there will be a smell of dead animals."
+    },
+    {
+      "verse": "22",
+      "text": "Instead of a beautiful belt, they will tie a rope round themselves. Instead of lovely hair, they will be bald. They will wear rough sackcloth instead of beautiful dresses. They will have the mark of a prisoner on their skin, instead of beauty."
+    },
+    {
+      "verse": "23",
+      "text": "The men of your city will die in war. Yes, your strong brave men will die in battle."
+    },
+    {
       "verse": "24",
       "text": "Instead of a nice smell of perfume, there will be a smell of dead animals. Instead of a beautiful belt, they will tie a rope round themselves. Instead of lovely hair, they will be bald. They will wear rough sackcloth instead of beautiful dresses. They will have the mark of a prisoner on their skin, instead of beauty."
     },
@@ -295,10 +319,6 @@ module.exports = {
     {
       "verse": "26",
       "text": "The city's gates will see all this and they will weep! The city will be empty. Zion will be like a poor woman who sits on the ground, completely alone."
-    },
-    {
-      "verse": "18",
-      "text": "On that day, the Lord God will take away the beautiful rings that they wear on their ankles. He will remove all the valuable rings and bright stones that they wear on their heads, their necks, their ears, their arms, their fingers and their noses. He will take away their beautiful clothes, their belts, their perfumes and their magic rings."
     }
   ],
   "4": [

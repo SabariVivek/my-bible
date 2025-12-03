@@ -1,195 +1,195 @@
 module.exports = {
   "1": [
     {
-      "verse": "3",
-      "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people. He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
-    },
-    {
-      "verse": "4",
-      "text": "He can cause the sea and the rivers to become dry by one word. The fertile places of Bashan and Carmel become dry and the green forests of Lebanon die too."
-    },
-    {
-      "verse": "5",
-      "text": "He causes the mountains to shake and he causes the hills to become flat. The earth and all the people in the world are afraid of God."
-    },
-    {
-      "verse": "6",
-      "text": "Nobody can fight God when he is very angry. The Lord pours his anger out like fire and he breaks the rocks in his path."
-    },
-    {
-      "verse": "7",
-      "text": "The Lord loves those who believe him. When they are in trouble, they can put their hope in God."
-    },
-    {
-      "verse": "8",
-      "text": "But the people in Nineveh are his enemies and he will kill them."
-    },
-    {
-      "verse": "1",
+      "verse": 1,
       "text": "Nahum lives in Elkosh and this is his prophecy about the people in Nineveh."
     },
     {
-      "verse": "2",
+      "verse": 2,
       "text": "God is angry with the people in Nineveh. The Lord loves his people. But he is very angry with his enemies. He is so angry with them that he must punish them. He will be angry until he has killed his enemies."
     },
     {
-      "verse": "9",
+      "verse": 3,
+      "text": "The Lord will punish those who do wrong things. But he does not get angry quickly. He is a powerful God. The Lord does not get angry quickly. But he gets angry when people do wrong things. Then he punishes those people. He is very powerful. You can see his power in the wind and the storms. The clouds are like dust that his feet shake."
+    },
+    {
+      "verse": 4,
+      "text": "He can cause the sea and the rivers to become dry by one word. The fertile places of Bashan and Carmel become dry and the green forests of Lebanon die too."
+    },
+    {
+      "verse": 5,
+      "text": "He causes the mountains to shake and he causes the hills to become flat. The earth and all the people in the world are afraid of God."
+    },
+    {
+      "verse": 6,
+      "text": "Nobody can fight God when he is very angry. The Lord pours his anger out like fire and he breaks the rocks in his path."
+    },
+    {
+      "verse": 7,
+      "text": "The Lord loves those who believe him. When they are in trouble, they can put their hope in God."
+    },
+    {
+      "verse": 8,
+      "text": "But the people in Nineveh are his enemies and he will kill them."
+    },
+    {
+      "verse": 9,
       "text": "The Lord will stop anything that you decide to do immediately. He does not let his enemies have a second chance."
     },
     {
-      "verse": "10",
+      "verse": 10,
       "text": "He will kill them. And then it will be like when thorn bushes have caught people. Or it will be like when they have drunk too much alcohol. It will be like when someone burns dry straw."
     },
     {
-      "verse": "11",
+      "verse": 11,
       "text": "The Lord tells the king of Nineveh that he has done bad things against God. And the king has told his people that they should do wrong things."
     },
     {
-      "verse": "12",
+      "verse": 12,
       "text": "The Lord has said, ‘The people in Nineveh are many. And they think that they are safe. But I will kill them. I have punished you, my people, before now. But I will not punish you any more."
     },
     {
-      "verse": "13",
+      "verse": 13,
       "text": "Now I will make you free from the people from Nineveh. And I will break the things that are holding you like iron. ’"
     },
     {
-      "verse": "14",
+      "verse": 14,
       "text": "Nineveh, the Lord has said what will happen to you. He has said, ‘You will have no children and your family name will have an end. I will destroy the statues that you made from wood and metal. You worship those statues in your temples. There I will make graves for you because you are bad. ’"
     },
     {
-      "verse": "15",
+      "verse": 15,
       "text": "People in Judah, look at the mountains. You will see the feet of the person who will bring good news. He causes peace. You can have your special festivals again now. And now you can do what you promised to me. The bad people will not win a war against you because I have killed them."
     }
   ],
   "2": [
     {
-      "verse": "1",
+      "verse": 1,
       "text": "An enemy is coming to attack you, people of Nineveh. Watch carefully from the city's walls! Prepare your army to protect the city. Watch the road. Get ready to fight with all your strength!"
     },
     {
-      "verse": "2",
+      "verse": 2,
       "text": "Your soldiers have destroyed the great nations of Israel and Jacob. They have destroyed their fields and their vineyards. But, the Lord will make Israel and Jacob great again."
     },
     {
-      "verse": "3",
+      "verse": 3,
       "text": "Strong soldiers are coming to attack Nineveh! They have red shields and bright red clothes. The soldiers wave their spears in the air. The metal on their chariots shines brightly."
     },
     {
-      "verse": "4",
+      "verse": 4,
       "text": "When the soldiers are ready for war they move quickly through the streets. Their chariots move very fast, like lightning in the sky."
     },
     {
-      "verse": "5",
+      "verse": 5,
       "text": "The army leader chooses his best soldiers to go forward. They almost fall as they run! They hurry to the city wall and they prepare to attack."
     },
     {
-      "verse": "6",
+      "verse": 6,
       "text": "They open the river gates and the water rushes into the city. It destroys the palace."
     },
     {
-      "verse": "7",
+      "verse": 7,
       "text": "Nineveh's people must be led away to another country. They are ashamed. Her female slaves cry like doves and they hit themselves."
     },
     {
-      "verse": "8",
+      "verse": 8,
       "text": "Nineveh is like a pool of water. But now its people run away, like water that is pouring away. ‘Stop, stop! ’ they shout, but nobody comes back."
     },
     {
-      "verse": "9",
+      "verse": 9,
       "text": "Take the silver. Take the gold. The city has so many valuable things."
     },
     {
-      "verse": "10",
+      "verse": 10,
       "text": "They take the valuable things from the city. They take everything that they can. And they destroy everything else. The people are very sad. Their knees and their bodies shake. Their faces become white because they are afraid."
     },
     {
-      "verse": "11",
+      "verse": 11,
       "text": "The home of the lions has gone. The place where they fed their young lions has gone. This was the place where whole families of lions once lived. It is here where their young lions were not afraid."
     },
     {
-      "verse": "12",
+      "verse": 12,
       "text": "The lion killed to give enough food to his young lions and he strangled animals to feed his female lion. He filled his home with the animals that he had killed."
     },
     {
-      "verse": "13",
+      "verse": 13,
       "text": "The Lord Almighty says, ‘I am against you. I will burn your chariots and the sword will kill your young lions. I will take away all the animals that you attack. Nobody will hear the voices of your messengers. ’"
     }
   ],
   "3": [
     {
-      "verse": "1",
+      "verse": 1,
       "text": "Terrible things will happen to you, Nineveh. Your people are murderers and they love to tell lies. The city is full of valuable things that they have taken from other people."
     },
     {
-      "verse": "2",
+      "verse": 2,
       "text": "Listen to the loud noises of the whips, the chariots, the wheels and the feet of the horses. The chariots are moving fast towards Nineveh."
     },
     {
-      "verse": "3",
+      "verse": 3,
       "text": "See the bright swords and spears in the hands of the horses' riders. There are dead bodies that are lying in the streets. It is like mountains of dead bodies everywhere. There are so many dead bodies that men fall over the bodies."
     },
     {
-      "verse": "4",
+      "verse": 4,
       "text": "This is because Nineveh has sold herself to the enemies of God. She is like a beautiful prostitute. She uses her body and her bad magic to make all the people in other countries her slaves."
     },
     {
-      "verse": "5",
+      "verse": 5,
       "text": "This is why I am against you, says the Lord Almighty. I will make you like a woman whose skirt is up over her face. I will show the countries that you are like that woman. You will be like a woman who is not wearing any clothes."
     },
     {
-      "verse": "6",
+      "verse": 6,
       "text": "I will throw dirt at you. I will do with you like you were nothing. And I will make everyone ashamed of you."
     },
     {
-      "verse": "7",
+      "verse": 7,
       "text": "When people see you, they will run away. And they will say, ‘They have destroyed Nineveh. Nobody will be sad. ’ There will be nobody to help you."
     },
     {
-      "verse": "8",
+      "verse": 8,
       "text": "Remember the city of Thebes that was near the River Nile. It had water all round it. The river kept it safe, like a wall. Nineveh is not better than Thebes was."
     },
     {
-      "verse": "9",
+      "verse": 9,
       "text": "The countries of Ethiopia and Egypt were strong friends. And Put and Libya were strong friends too."
     },
     {
-      "verse": "10",
+      "verse": 10,
       "text": "But the enemies of Thebes took its people away and they made them slaves. They cut their babies to pieces in every street. They played games with the great men from Thebes and they put them in iron chains."
     },
     {
-      "verse": "11",
+      "verse": 11,
       "text": "You will be like a man who has drunk too much alcohol. And you will try to hide. You will try to get help from your enemy."
     },
     {
-      "verse": "12",
+      "verse": 12,
       "text": "All your strong places are like fig trees. They will fall very easily when the enemies shake them. And your valuable things will be like figs that fall into people's mouths."
     },
     {
-      "verse": "13",
+      "verse": 13,
       "text": "Look at your soldiers, they are all like women! Your enemies have burned your gates and they have pushed them wide open."
     },
     {
-      "verse": "14",
+      "verse": 14,
       "text": "Take as much water as you can for the attack. Make your walls strong. Do repairs to your buildings."
     },
     {
-      "verse": "15",
+      "verse": 15,
       "text": "The fire will burn you. The sword will cut you and it will kill you like grasshoppers. Grow in number like the grasshoppers and locusts."
     },
     {
-      "verse": "16",
+      "verse": 16,
       "text": "You welcomed traders into your city until there were more than all the stars in the sky. But they are like locusts. They take everything from the land and then they fly away."
     },
     {
-      "verse": "17",
+      "verse": 17,
       "text": "Your army and officers are so many that they are like locusts. Locusts stay on the walls on a cold day. But when the sun comes out, they fly away. And then nobody knows where they go."
     },
     {
-      "verse": "18",
+      "verse": 18,
       "text": "King of Assyria, the people who keep your people safe are asleep. Also, your powerful men are lying down to rest. Your people have run away to the mountains with nobody to get them together."
     },
     {
-      "verse": "19",
+      "verse": 19,
       "text": "You have received a bad wound and nobody can make it better. People have heard about what happened to you. All of them are very happy and they clap their hands. That is because you have done cruel things to all of them."
     }
   ]

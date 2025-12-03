@@ -3123,6 +3123,54 @@ module.exports = {
       "text": "Shemaiah was the secretary who wrote down the names in each group. He was the son of Nethanel, a Levite. Shemaiah wrote down the names while the king and his officers watched. Zadok the priest, Abiathar's son Ahimelech and the leaders of the priests' clans and of the other Levite clans were also watching. When they threw the lots, they would choose a family from Eleazar's descendants, then a family from Ithamar's descendants, and so on."
     },
     {
+      "verse": "7",
+      "text": "This is the list of the group leaders as they chose them, one by one:1. Jehoiarib2. Jedaiah3. Harim4. Seorim5. Malkijah6. Mijamin7. Hakkoz8. Abijah9. Jeshua10. Shecaniah11. Eliashib12. Jakim13. Huppah14. Jeshebeab15. Bilgah16. Immer17. Hezir18. Happizzez19. Pethahiah20. Jehezkel21. Jakin22. Gamul23. Delaiah24. Maaziah."
+    },
+    {
+      "verse": "8",
+      "text": "Abijah"
+    },
+    {
+      "verse": "9",
+      "text": "Jeshua"
+    },
+    {
+      "verse": "10",
+      "text": "Shecaniah"
+    },
+    {
+      "verse": "11",
+      "text": "Eliashib"
+    },
+    {
+      "verse": "12",
+      "text": "Jakim"
+    },
+    {
+      "verse": "13",
+      "text": "Huppah"
+    },
+    {
+      "verse": "14",
+      "text": "Jeshebeab"
+    },
+    {
+      "verse": "15",
+      "text": "Bilgah"
+    },
+    {
+      "verse": "16",
+      "text": "Immer"
+    },
+    {
+      "verse": "17",
+      "text": "Hezir"
+    },
+    {
+      "verse": "18",
+      "text": "Happizzez"
+    },
+    {
       "verse": "19",
       "text": "Each of these leaders, with their group, had their jobs to do in the temple. They had to obey the rules that their ancestor Aaron had given. The Lord, Israel's God, had told him what they must do."
     },
@@ -3173,10 +3221,6 @@ module.exports = {
     {
       "verse": "31",
       "text": "They also used lots to choose their different jobs, as their relatives, Aaron's descendants, had done. King David, Zadok, Ahimelech and the family leaders of the priests and the other Levites watched them. They chose work for the family leaders in the same way that they did for their younger brothers."
-    },
-    {
-      "verse": "7",
-      "text": "This is the list of the group leaders as they chose them, one by one:1. Jehoiarib2. Jedaiah3. Harim4. Seorim5. Malkijah6. Mijamin7. Hakkoz8. Abijah9. Jeshua10. Shecaniah11. Eliashib12. Jakim13. Huppah14. Jeshebeab15. Bilgah16. Immer17. Hezir18. Happizzez19. Pethahiah20. Jehezkel21. Jakin22. Gamul23. Delaiah24. Maaziah."
     }
   ],
   "25": [
@@ -3215,6 +3259,94 @@ module.exports = {
     {
       "verse": "9",
       "text": "groups of musicians. There were 12 musicians in each group and each group had its leader. These were the names of the leaders of each group, from the first to the last that they chose:1. Asaph's descendant Joseph, with his sons and his relatives. 2. Gedaliah, with his sons and his relatives. 3. Zaccur, with his sons and his relatives. 4. Izri, with his sons and his relatives. 5. Nethaniah, with his sons and his relatives. 6. Bukkiah, with his sons and his relatives. 7. Jesarelah, with his sons and his relatives. 8. Jeshaiah with his sons and his relatives. 9. Mattaniah with his sons and his relatives. 10. Shimei with his sons and his relatives. 11. Azarel with his sons and his relatives. 12. Hashabiah with his sons and his relatives. 13. Shubael with his sons and his relatives. 14. Mattithiah with his sons and his relatives. 15. Jeremoth with his sons and his relatives. 16. Hananiah with his sons and his relatives. 17. Joshbekashah with his sons and his relatives. 18. Hanani with his sons and his relatives. 19. Mallothi with his sons and his relatives. 20. Eliathah with his sons and his relatives. 21. Hothir with his sons and his relatives. 22. Giddalti with his sons and his relatives. 23. Mahazioth with his sons and his relatives. 24. Romamti-Ezer with his sons and his relatives."
+    },
+    {
+      "verse": "10",
+      "text": "Asaph's descendant Joseph, with his sons and his relatives. Gedaliah, with his sons and his relatives."
+    },
+    {
+      "verse": "11",
+      "text": "Zaccur, with his sons and his relatives."
+    },
+    {
+      "verse": "12",
+      "text": "Izri, with his sons and his relatives."
+    },
+    {
+      "verse": "13",
+      "text": "Nethaniah, with his sons and his relatives."
+    },
+    {
+      "verse": "14",
+      "text": "Bukkiah, with his sons and his relatives."
+    },
+    {
+      "verse": "15",
+      "text": "Jesarelah, with his sons and his relatives."
+    },
+    {
+      "verse": "16",
+      "text": "Jeshaiah, with his sons and his relatives."
+    },
+    {
+      "verse": "17",
+      "text": "Mattaniah, with his sons and his relatives."
+    },
+    {
+      "verse": "18",
+      "text": "Shimei, with his sons and his relatives."
+    },
+    {
+      "verse": "19",
+      "text": "Azarel, with his sons and his relatives."
+    },
+    {
+      "verse": "20",
+      "text": "Hashabiah, with his sons and his relatives."
+    },
+    {
+      "verse": "21",
+      "text": "Shubael, with his sons and his relatives."
+    },
+    {
+      "verse": "22",
+      "text": "Mattithiah, with his sons and his relatives."
+    },
+    {
+      "verse": "23",
+      "text": "Jeremoth, with his sons and his relatives."
+    },
+    {
+      "verse": "24",
+      "text": "Hananiah, with his sons and his relatives."
+    },
+    {
+      "verse": "25",
+      "text": "Joshbekashah, with his sons and his relatives."
+    },
+    {
+      "verse": "26",
+      "text": "Hanani, with his sons and his relatives."
+    },
+    {
+      "verse": "27",
+      "text": "Mallothi, with his sons and his relatives."
+    },
+    {
+      "verse": "28",
+      "text": "Eliathah, with his sons and his relatives."
+    },
+    {
+      "verse": "29",
+      "text": "Hothir, with his sons and his relatives."
+    },
+    {
+      "verse": "30",
+      "text": "Giddalti, with his sons and his relatives."
+    },
+    {
+      "verse": "31",
+      "text": "Mahazioth with his sons and his relatives. Romamti-Ezer with his sons and his relatives."
     }
   ],
   "26": [

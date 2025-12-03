@@ -9315,20 +9315,80 @@ module.exports = {
       "text": "Thank the Lord who rules all lords. His faithful love will always continue. His faithful love will always continue."
     },
     {
-      "verse": "26",
-      "text": "Yes, thank the God of heaven! His faithful love will always continue."
-    },
-    {
       "verse": "4",
       "text": "The Lord himself does great miracles. He was wise when he made the skies. He put the earth across the water of the seas. He made the great lights to shine in the sky. He made the sun to rule over the day. He made the moon and the stars to rule the night. So thank the Lord! His faithful love will always continue. He was wise when he made the skies. He put the earth across the water of the seas. He made the great lights to shine in the sky. He made the sun to rule over the day. He made the moon and the stars to rule the night. So thank the Lord! His faithful love will always continue."
+    },
+    {
+      "verse": "5",
+      "text": "He was wise when he made the skies.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "6",
+      "text": "He put the earth across the water of the seas.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "7",
+      "text": "He made the great lights to shine in the sky.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "8",
+      "text": "He made the sun to rule over the day.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "9",
+      "text": "He made the moon and the stars to rule the night.\nHis faithful love will always continue."
     },
     {
       "verse": "10",
       "text": "The Lord destroyed the firstborn sons in Egypt. He brought the Israelites out from among the Egyptians. He did this with his great power and strength. He cut the Red Sea into two separate parts. He led the Israelites through the middle of the sea. He threw Pharaoh and his army into the Red Sea to drown. The Lord led his people through the wilderness. So thank the Lord! His faithful love will always continue. He brought the Israelites out from among the Egyptians. He did this with his great power and strength. He cut the Red Sea into two separate parts. He led the Israelites through the middle of the sea. He threw Pharaoh and his army into the Red Sea to drown. The Lord led his people through the wilderness. So thank the Lord! His faithful love will always continue."
     },
     {
+      "verse": "11",
+      "text": "He brought the Israelites out from among the Egyptians.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "12",
+      "text": "He did this with his great power and strength.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "13",
+      "text": "He cut the Red Sea into two separate parts.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "14",
+      "text": "He led the Israelites through the middle of the sea.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "15",
+      "text": "He threw Pharaoh and his army into the Red Sea to drown.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "16",
+      "text": "The Lord led his people through the wilderness.\nHis faithful love will always continue."
+    },
+    {
       "verse": "17",
       "text": "The Lord destroyed great kings. Yes, he killed powerful kings. He killed Sihon, king of the Amorites. He killed Og, the king of Bashan. He gave their land to his people, the Israelites. He gave it to them as their own land. So thank the Lord! His faithful love will always continue. Yes, he killed powerful kings. He killed Sihon, king of the Amorites. He killed Og, the king of Bashan. He gave their land to his people, the Israelites. He gave it to them as their own land. So thank the Lord! His faithful love will always continue."
+    },
+    {
+      "verse": "18",
+      "text": "Yes, he killed powerful kings.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "19",
+      "text": "He killed Sihon, king of the Amorites.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "20",
+      "text": "He killed Og, the king of Bashan.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "21",
+      "text": "He gave their land to his people, the Israelites.\nHis faithful love will always continue."
+    },
+    {
+      "verse": "22",
+      "text": "He gave it to them as their own land.\nHis faithful love will always continue."
     },
     {
       "verse": "23",
@@ -9341,6 +9401,10 @@ module.exports = {
     {
       "verse": "25",
       "text": "He gives food to everything that lives. So thank the Lord! His faithful love will always continue."
+    },
+    {
+      "verse": "26",
+      "text": "Yes, thank the God of heaven! His faithful love will always continue."
     }
   ],
   "137": [

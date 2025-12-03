@@ -1663,6 +1663,34 @@ module.exports = {
       "text": "You may eat any clean bird."
     },
     {
+      "verse": "12",
+      "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats."
+    },
+    {
+      "verse": "13",
+      "text": "owls, hawks, falcons,"
+    },
+    {
+      "verse": "14",
+      "text": "buzzards, ostriches, seagulls,"
+    },
+    {
+      "verse": "15",
+      "text": "storks, herons, pelicans,"
+    },
+    {
+      "verse": "16",
+      "text": "cormorants, hoopoes"
+    },
+    {
+      "verse": "17",
+      "text": "and bats."
+    },
+    {
+      "verse": "18",
+      "text": "(verse included in the list above as part of the prohibited birds)"
+    },
+    {
       "verse": "19",
       "text": "Some insects have wings but they walk on the ground. Insects like that are unclean food for you. You must not eat them."
     },
@@ -1705,10 +1733,6 @@ module.exports = {
     {
       "verse": "29",
       "text": "Keep this food for the Levites, who have no land of their own. It is also for the foreign people, the widows, and the children who have no family. These people in your town can eat as much as they want. If you do that, the Lord your God will bless you in all your work."
-    },
-    {
-      "verse": "12",
-      "text": "But these birds you must not eat: eagles, vultures, kites, owls, hawks, falcons, buzzards, ostriches, seagulls, storks, herons, pelicans, cormorants, hoopoes and bats."
     }
   ],
   "15": [
