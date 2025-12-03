@@ -1,0 +1,1236 @@
+module.exports = {
+  "1": [
+    {
+      "verse": "1",
+      "text": "Many years ago, God spoke to our ancestors by his prophets. He spoke many times and in many different ways."
+    },
+    {
+      "verse": "2",
+      "text": "But in these last days, he has spoken to us in his Son. In the beginning, God worked through his Son to make the whole universe. He decided that everything should belong to his Son."
+    },
+    {
+      "verse": "3",
+      "text": "The Son shows us completely what God is like. He shines with God's great glory. His nature is the same as God's nature. The Son's powerful word causes everything to continue. He himself made it possible for us to be clean from our sins. After he had done that, he returned to heaven. He went and he sat at the right side of God, who rules with all authority. Before Jesus came, God sent his prophets to speak his messages to his people, the Israelites. Jesus was much greater than any of the prophets. He did not just bring a message from God. He clearly showed God himself. He could do this because he is God's Son, not just a servant. After Jesus died on the cross as a sacrifice for our sins, he rose up and went to sit ‘at the right side of God’. The right side is the most important place. This means that Jesus rules with the same power and authority as God himself. God's Son is greater than the angels"
+    },
+    {
+      "verse": "4",
+      "text": "That shows us that God's Son is much greater than the angels. God has given him a name that shows he is more important than they are."
+    },
+    {
+      "verse": "5",
+      "text": "God never said this to any angel: ‘You are my Son. Today I have become your Father.’ See Psalm In another place in the Bible, God says, ‘I will be his Father, and he will be my Son.’ See 2 Samuel Chronicles"
+    },
+    {
+      "verse": "6",
+      "text": "Also, when God was ready to bring his greatest Son into the world, he said: ‘All God's angels must worship him.’"
+    },
+    {
+      "verse": "7",
+      "text": "God speaks about the angels like this: ‘God makes his angels like winds. They serve him like fires that burn brightly.’"
+    },
+    {
+      "verse": "8",
+      "text": "But this is what God says to his Son: ‘You are God and you will rule as King for ever! You will rule your kingdom in a completely good way."
+    },
+    {
+      "verse": "9",
+      "text": "You love everything that is right. And you hate everything that is wrong. Because of that, you will be completely happy. I am your God and I have blessed you. I have chosen you to be greater than others who are with you.’"
+    },
+    {
+      "verse": "10",
+      "text": "The Bible also says this: ‘Lord, in the beginning you made the earth. With your own power, you also made everything above the earth."
+    },
+    {
+      "verse": "11",
+      "text": "All these things will come to an end. But as for you, you will continue for ever. Like clothes, those things will all become old."
+    },
+    {
+      "verse": "12",
+      "text": "Then you will put them away like an old coat. You will change them, like people change clothes. But you will always continue to be the same. Your life will never come to an end.’"
+    },
+    {
+      "verse": "13",
+      "text": "Also, God has never said this to any of the angels: ‘Sit at my right side until I win against your enemies completely. Then you will be able to put your feet on them.’"
+    },
+    {
+      "verse": "14",
+      "text": "So we see that all the angels are spirits who serve God. God sends them as his servants to help the people that he will save. Print... Use screen font size Show All Comments Hebrews IntroductionHebrews 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "2": [
+    {
+      "verse": "1",
+      "text": "So we must be very careful. We must continue to remember the message that we have heard about God's Son. Then we will not go in the wrong direction, and turn away from God."
+    },
+    {
+      "verse": "2",
+      "text": "The message that God spoke by angels was certainly powerful. God punished people when they did not obey the Law that he gave to Moses. In a completely right way he punished people who did anything wrong. The Bible says that an angel gave God's Law to Moses on Sinai mountain many years ago. See Exodus 19-20, Acts and Galatians"
+    },
+    {
+      "verse": "3",
+      "text": "As for us, God has shown us the way that he will save us from our sins. So we must not forget God's message about his great way to save us. If we do, he will certainly punish us. The Lord Jesus himself first spoke that message about how God would save people. Then the people who heard Jesus told the message to us. That is how we know that it is true."
+    },
+    {
+      "verse": "4",
+      "text": "God himself also showed clearly that what these people said is true. He did many miracles and powerful things which showed that he was with them. He also helped them with gifts from the Holy Spirit, in the way that he wanted. The writer wrote this letter only 30-40 years after Jesus died. The writer had heard about Jesus from other people who had met Jesus himself. They had listened to him while he taught them. Jesus became human like us, to save us"
+    },
+    {
+      "verse": "5",
+      "text": "We are speaking about the new world that will come. God did not choose angels to rule over that world."
+    },
+    {
+      "verse": "6",
+      "text": "No! Instead, someone wrote this somewhere in the Bible: ‘Lord God, why do you even think about people? You take care of men and women, even though they seem to be so small."
+    },
+    {
+      "verse": "7",
+      "text": "For a short time, you made them less important than the angels But then you made them great and powerful, like kings."
+    },
+    {
+      "verse": "8",
+      "text": "You caused them to rule over everything.’ This is what David wrote in the Bible. See Psalm It says that God has caused people to rule over everything. That means that there is nothing that people do not have authority over. But at this time, we do not yet see that people rule over everything."
+    },
+    {
+      "verse": "9",
+      "text": "But we do see Jesus! God made him less important than the angels for a short time. And now God has made him the great and powerful king. God did this because Jesus died as a sacrifice on behalf of all people. His death showed that God is very kind. The writer is saying that the words from this Psalm are speaking about Jesus."
+    },
+    {
+      "verse": "10",
+      "text": "It was right that God should bring Jesus back to heaven as king. All things belong to God, and he causes all things to continue. God wanted many people to become his children. He wanted them to live with him in heaven. Jesus made this possible because he died with much pain as a sacrifice."
+    },
+    {
+      "verse": "11",
+      "text": "Jesus is the one who makes people clean in front of God. Jesus himself and all the people that he makes clean have the same Father. So Jesus is not ashamed to call all those people his brothers and sisters."
+    },
+    {
+      "verse": "12",
+      "text": "He says this to God: ‘I will tell my brothers and sisters that you are great. When your people meet together, I will stand with them, and I will praise you with songs.’ See Psalm"
+    },
+    {
+      "verse": "13",
+      "text": "He also says this: ‘I will trust God completely.’ He says this too: ‘I stand here with the children that God has given me.’ These words are in Isaiah The writer takes all these words from the Old Testament as if Jesus is speaking them. They show that Jesus thinks about us as his family. He became human, like us. As a man, Jesus trusted God. He believed that God would bring him safely through great trouble and death. He believed that, after his death, God would bring him back to heaven."
+    },
+    {
+      "verse": "14",
+      "text": "So, those people who become God's children are human. They have human bodies. Because of that, Jesus himself became human like us. In that way, when he died he was able to destroy the Devil. It is the Devil who has power over death."
+    },
+    {
+      "verse": "15",
+      "text": "Before, we were like slaves all our lives because we were afraid of death. But now, Jesus' death makes us free."
+    },
+    {
+      "verse": "16",
+      "text": "It is clear that Jesus did not come to help the angels. He came to help people who are from Abraham's family. Abraham was the ancestor of God's people in the Old Testament. He chose to believe God, even when that was very difficult. So he is like the father of everyone else who believes in God. In this verse, ‘people who are from Abraham's family’ means people who believe in Jesus. See Genesis Hebrews and John"
+    },
+    {
+      "verse": "17",
+      "text": "Because of that, it was necessary for Jesus to become completely like us, his brothers and sisters. He had to become God's servant on our behalf, like God's most important priest. In that way, he could serve God well and be kind to us. He died as a sacrifice so that God could forgive us for our sins."
+    },
+    {
+      "verse": "18",
+      "text": "While Jesus lived on earth, the Devil tried to make him do wrong things. This caused Jesus to have much pain and trouble. But because of that, he can now help us not to do wrong things. Print... Use screen font size Show All Comments Hebrews 1Hebrews 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "3": [
+    {
+      "verse": "1",
+      "text": "So, Christian friends, think carefully about who Jesus is. Like us, God has chosen you to belong to him. We tell people that we believe in Jesus as the messenger that God has sent. He helps us as God's most important priest."
+    },
+    {
+      "verse": "2",
+      "text": "That is what God sent Jesus to do. Jesus did everything that God wanted, just like Moses. Moses served God well when he was the leader of God's people long ago."
+    },
+    {
+      "verse": "3",
+      "text": "We know that someone who builds a house is more important than the house itself. In the same way, we should praise Jesus more than we praise Moses, because Jesus is greater."
+    },
+    {
+      "verse": "4",
+      "text": "Every house has someone who built it. But God is the one who has built all things."
+    },
+    {
+      "verse": "5",
+      "text": "We say that Moses served God well, like a servant in God's house. He took care of all God's people. In this way, Moses showed clearly the message that God would speak later."
+    },
+    {
+      "verse": "6",
+      "text": "But Christ serves in God's house as a son, not as a servant. He is the leader of God's people today. And we are God's people. We belong to his house if we continue to believe in Christ. We must be brave. We must continue to show people clearly that we trust God. He will do what he has promised to do. A place where God's people can rest"
+    },
+    {
+      "verse": "7",
+      "text": "God's Holy Spirit says this: ‘You must listen when you hear God speak today."
+    },
+    {
+      "verse": "8",
+      "text": "Do not refuse to obey him. Do not be like God's people many years ago. When they travelled in the wilderness, they turned against me. They wanted to see if I would punish them."
+    },
+    {
+      "verse": "9",
+      "text": "For 40 years your ancestors saw the great things that I did. But still they did not obey me."
+    },
+    {
+      "verse": "10",
+      "text": "That is why I became angry with them. I said, “They always want to do what is wrong. They refuse to understand my message.”"
+    },
+    {
+      "verse": "11",
+      "text": "Because of that, I promised to punish them. Because I was angry with them, I said, “They will never arrive in my special place of rest.” ’ Many years before, Moses led Israel's people away from Egypt, where they had been slaves. God wanted to bring the people to their own country, where they could make new homes. He wanted them to rest there. He wanted them to be happy. But they had to walk a long way through a wilderness to get there. The people were often angry with God. Many times, they would neither believe God nor obey him. See Exodus Numbers So God did not let those people go into the country that he had promised them. He waited 40 years, until all of them were dead. Only their children arrived in the new country."
+    },
+    {
+      "verse": "12",
+      "text": "So be careful, my Christian friends. Do not refuse to trust God. That would be a very bad thing to do. Do not turn away from the God who lives for ever."
+    },
+    {
+      "verse": "13",
+      "text": "Instead, help each other to be strong every day. Today, you can still hear God's message. While that is still true, do not refuse to obey God. Do not think that sin will not hurt you. That is a lie."
+    },
+    {
+      "verse": "14",
+      "text": "We must continue to trust Christ very well, as we did when we first believed in him. We must continue to trust him until the end of our lives. Then we will share in everything that is his."
+    },
+    {
+      "verse": "15",
+      "text": "We have seen what the Bible says: ‘You must listen when you hear God speak today. Do not refuse to obey him. Do not be like God's people many years ago, when they turned against God.’"
+    },
+    {
+      "verse": "16",
+      "text": "Who were those people who heard God speak? All of them were the people that Moses led away from Egypt. They heard God's message, but they refused to obey him."
+    },
+    {
+      "verse": "17",
+      "text": "Who was God angry with for 40 years? He was angry with those same people. They did what was wrong. So they died and their bodies remained in the wilderness."
+    },
+    {
+      "verse": "18",
+      "text": "God promised to punish them, because they refused to obey him. He said, ‘They will never arrive in my special place of rest.’"
+    },
+    {
+      "verse": "19",
+      "text": "So we must be careful ourselves! Those people did not trust God. As a result, they never arrived in God's special place. Print... Use screen font size Show All Comments Hebrews 2Hebrews 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "4": [
+    {
+      "verse": "1",
+      "text": "God promised his people that they could go to his special place of rest. That promise is still true for us today. So we must be very careful. Do not fail to arrive in that place. We certainly do not want that to happen."
+    },
+    {
+      "verse": "2",
+      "text": "We have heard God's good news, just like God's people in the wilderness heard his message. But that message did not help them, because they did not believe it. They did not trust God, like those who obeyed him."
+    },
+    {
+      "verse": "3",
+      "text": "But those of us who trust God do enjoy his special place of rest. This is what God said: ‘Because I was very angry with them, I promised this: “They will never arrive in my special place of rest.” ’ See Psalm God said that, even though he had finished his work when he made the world."
+    },
+    {
+      "verse": "4",
+      "text": "In the Bible God has spoken about the seventh day like this: ‘God rested from all his work on the seventh day.’ See Genesis"
+    },
+    {
+      "verse": "5",
+      "text": "As we have already seen, God said something later about his rest: ‘They will never arrive in my special place of rest.’"
+    },
+    {
+      "verse": "6",
+      "text": "So we see that there is still a chance for people to go to God's place of rest. But those people who first heard God's message in the wilderness refused to obey him. As a result, they did not arrive in his special place of rest."
+    },
+    {
+      "verse": "7",
+      "text": "So God chose another time for people to go to his place of rest. He called it ‘Today’. A long time after Moses, David spoke God's message. As we have already seen, he said: ‘You must listen when you hear God speak today. Do not refuse to obey him.’"
+    },
+    {
+      "verse": "8",
+      "text": "This shows that Joshua did not bring God's people to the place where they could rest. Later, God had to speak again about another day of rest."
+    },
+    {
+      "verse": "9",
+      "text": "So we see this: God still has a place ready for his people, where they can rest. They will rest as God rested on the seventh day."
+    },
+    {
+      "verse": "10",
+      "text": "When God made the world and everything, he rested after he had finished his work. It is the same for everyone who goes to God's place of rest. They too will rest. They will no longer need to work. After Moses died, Joshua led God's people, Israel. See Joshua He led them into the land that God had promised to give to them. Israel's people lived there, in their own country, for several hundred years. But that country was a picture of the place of rest that God wants to give us. God still has a special place of rest for his people. This is not a place on earth where we can rest. He wants us to rest with him for ever in the place that he has prepared for us. Even during our lives here on earth, God gives us a place of rest with himself. We know he loves us because Christ died on our behalf. There is no work that we need to do to make him love us. We can rest like this if we really believe in Jesus and we know that God has forgiven us."
+    },
+    {
+      "verse": "11",
+      "text": "So we must do everything possible to arrive in God's special place of rest. God's people in the wilderness did not obey him. We must not be like them. If we do not obey God, we also will fail to arrive in that place."
+    },
+    {
+      "verse": "12",
+      "text": "So be careful! God's message to us is alive and powerful. It is like a sword that has two sharp edges. Even more than a sword, God's message goes very deep into us. It cuts between our soul and our spirit. It is like a sharp knife that can cut deep into our body between our bones. God's message shows what we are really thinking. It shows what we really want."
+    },
+    {
+      "verse": "13",
+      "text": "There is nothing in the whole world that can hide from God. He sees everything clearly and he knows everything. We will have to explain to him everything that we have done during our lives. Jesus is our great priest"
+    },
+    {
+      "verse": "14",
+      "text": "Jesus, the Son of God, helps us as God's most important priest. He is our great priest who has gone up into heaven. We say that we believe in him. So we must continue to show people that we trust him."
+    },
+    {
+      "verse": "15",
+      "text": "Jesus, our great priest understands us. He knows how weak we are. He knows that we sometimes want to do wrong things. The Devil tried to make him do all those same kinds of wrong things. But Jesus never did anything wrong."
+    },
+    {
+      "verse": "16",
+      "text": "So we should come near to God and we should not be afraid. God is our King. We can ask him to help us when we need help. We know that he will forgive us and he will be kind to us in whatever way we need. Jesus died to save us from our sins. Now he is with God in heaven. So we can come to God and we can pray to him. We do not need to be afraid, because Jesus is there. We can ask God to help us. We can be sure that he will help us when we ask him. Print... Use screen font size Show All Comments Hebrews 3Hebrews 5 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "5": [
+    {
+      "verse": "1",
+      "text": "Every leader of God's priests comes from among the people. That special priest's work is to serve God on behalf of God's people. He offers gifts and sacrifices to God, so that God will forgive the people's sins."
+    },
+    {
+      "verse": "2",
+      "text": "That priest himself may often do wrong things, because he is weak and human. As a result, he understands other people who make mistakes. He can be kind to people who do wrong things."
+    },
+    {
+      "verse": "3",
+      "text": "But, because he himself does wrong things, he must offer sacrifices to God on behalf of himself, as well as on behalf of the people."
+    },
+    {
+      "verse": "4",
+      "text": "Nobody decides for himself to become a leader of the priests. God himself must choose him. That is how Aaron became a priest. Aaron was Moses' brother. He lived many years before Jesus was born. He was the first priest for Israel's people. After that, everyone who became a priest needed to be from Aaron's family. See Exodus Chronicles"
+    },
+    {
+      "verse": "5",
+      "text": "It is the same with Christ. He did not choose himself to be God's special priest. He did not choose to make himself important like that. God chose him. God showed that Christ was very important. God said to him: ‘You are my Son. Today I have become your Father.’ See Psalm"
+    },
+    {
+      "verse": "6",
+      "text": "And in another place in the Bible God says this: ‘You will be a priest for ever, in the same way that Melchizedek was a priest long ago.’ Long ago, Melchizedek was a priest and a king. Abraham met him and gave gifts to him. See Genesis Also see Hebrews"
+    },
+    {
+      "verse": "7",
+      "text": "When Jesus Christ lived on earth as a man, he often prayed to God. He asked God to help him. He prayed strongly and he cried loudly with many tears. He knew that God could save him from death. And God listened to Jesus when he prayed, because Jesus served God. In this verse the writer remembers when Jesus prayed in the garden. Jesus knew that he would die soon. He was very sad. He asked his Father to make him strong. And God did what Jesus asked. See Luke"
+    },
+    {
+      "verse": "8",
+      "text": "Jesus is God's Son. But he still had trouble and pain. In that way, he learned to obey God completely."
+    },
+    {
+      "verse": "9",
+      "text": "As a result, Jesus became the person who can save everyone who obeys him. Because of Jesus, God forgives their sins for ever."
+    },
+    {
+      "verse": "10",
+      "text": "God has chosen Jesus to be his special priest in the same way that Melchizedek was. We must be careful that we do not go away from Christ"
+    },
+    {
+      "verse": "11",
+      "text": "We have a lot more to say to you about these things. But you are slow to understand things. As a result, it is difficult to explain any more to you now."
+    },
+    {
+      "verse": "12",
+      "text": "After all this time as believers in Jesus, you ought to be teachers. Instead of that, you still need someone to teach you the first lessons about God's message. You have become like babies, who need milk instead of proper food."
+    },
+    {
+      "verse": "13",
+      "text": "Anyone who still thinks like a baby does not yet understand God's message about what is right. It is as if they are still drinking only milk."
+    },
+    {
+      "verse": "14",
+      "text": "People who have grown up eat proper food. In the same way, people who have been believers for a long time should understand more about God's message. They should have learned about what is good and about what is bad. They should know the difference between those. Print... Use screen font size Show All Comments Hebrews 4Hebrews 6 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "6": [
+    {
+      "verse": "1",
+      "text": "So we must go on from the first lessons that we learned about Christ. We must grow as believers so that we understand more and more. We should not go back to those first lessons again and again. We already know that we must turn away from wrong things that lead to death. We know that we must trust God."
+    },
+    {
+      "verse": "2",
+      "text": "We have already learned about how to become clean. We know that leaders put their hands on other Christians to pray for God's help. We know that God will raise dead people to live again. And we know that God will judge every person one day at the end of time. In the Old Testament God gave his people special rules to make themselves and other things clean. See Numbers This may also mean Christian baptism. This shows that, if someone is a Christian, God has made that person clean and new. The Bible tells us that Christian leaders often put their hands on somebody. Then they prayed for them. It was often when God chose that person for special work. See Acts Or the leaders might pray in that way for someone who was ill. They prayed that God would help that person. In the Old Testament Israel's people also did this at certain times. See Numbers Leviticus"
+    },
+    {
+      "verse": "3",
+      "text": "Yes, we must choose to go on from those early lessons! God is ready to help us to do that. We must not turn away from Jesus"
+    },
+    {
+      "verse": "4",
+      "text": "That is important, because we must not turn away from Christ, after we have first believed in him. Some people have come into God's light. They have understood God's message. They have started to enjoy the true life that God has given them. They have received the Holy Spirit, like other believers."
+    },
+    {
+      "verse": "5",
+      "text": "They have understood that God's message is good for them. They have seen powerful things that belong to the future time."
+    },
+    {
+      "verse": "6",
+      "text": "But after all that, they have turned against God. Then it is impossible for anyone to help them to turn away from their sins again. It is like they are killing the Son of God on the cross again for themselves. They show other people that they do not think Christ is important."
+    },
+    {
+      "verse": "7",
+      "text": "Think about a field where rain has fallen many times. That ground helps the plants in it to grow well. As a result, the farmer receives good things. It shows that God has blessed that ground."
+    },
+    {
+      "verse": "8",
+      "text": "But a field where only weeds and thorn bushes grow is worth nothing. God will very soon speak against that ground. In the end, fire will burn all of it."
+    },
+    {
+      "verse": "9",
+      "text": "We are telling you this, our good friends, because we want you to continue well. We are sure that God has saved you and that he will continue to bless you."
+    },
+    {
+      "verse": "10",
+      "text": "God is always right and fair. He will not forget all the good things that you have done. You have shown that you love him very much, because you have helped the other believers. And you continue to help them as God's servants."
+    },
+    {
+      "verse": "11",
+      "text": "But we very much want each of you to continue to trust God to the end. Show that you really want to serve him. Be sure that, in the end, you will receive all the good things that you hope for."
+    },
+    {
+      "verse": "12",
+      "text": "Then you will not be slow to learn. Instead, you will copy the example of those people who continue to trust God. They continue to be patient when trouble happens to them. People like that receive what God has promised to his people. God's promise to Abraham"
+    },
+    {
+      "verse": "13",
+      "text": "God made a promise to Abraham many years ago. God used the authority of his own name to show that his promise was true. He did that because there was nobody greater than God himself. His name showed that the promise was very serious."
+    },
+    {
+      "verse": "14",
+      "text": "God said to Abraham, ‘I will certainly bless you. I will give you many children and many, many grandchildren.’"
+    },
+    {
+      "verse": "15",
+      "text": "Abraham waited patiently for a long time. In the end, he received what God had promised to give him. Abraham and his wife wanted a son. But they could not have a child, and they were becoming very old. Then God promised to give Abraham a son, and many grandchildren. See Genesis Even though it was difficult to believe that he would have children, Abraham believed what God said."
+    },
+    {
+      "verse": "16",
+      "text": "When someone makes a strong promise, he uses the authority of a person who is greater than himself. This shows that he will certainly obey his promise. Then nobody can argue about it."
+    },
+    {
+      "verse": "17",
+      "text": "God wanted to show very clearly that he would never change his purpose. He wanted his people to know that he would certainly bless them. So when he made this promise, he also used his own name to make it strong."
+    },
+    {
+      "verse": "18",
+      "text": "Those two things can never change. God cannot tell a lie. As a result, we can be brave and strong. We have trusted God to keep us safe with him. We should also expect to receive the good things that he has promised to give us."
+    },
+    {
+      "verse": "19",
+      "text": "We can be completely sure about those good things that we hope to receive. That keeps our thoughts strong, because we know that our life is safe with God. It is like an anchor that keeps a ship safe. When we hope like that, we know that we will one day arrive in God's special place in heaven. That is like the special place behind the curtain in the tabernacle."
+    },
+    {
+      "verse": "20",
+      "text": "Jesus has already gone in there. He has gone there before us, on our behalf. He has become our special priest for ever, in the same way that Melchizedek was God's priest. A ship with an anchor is safe, because it cannot move. When we trust Jesus, we can be completely sure about what God has promised us. God has promised to give us life with him for ever because of Jesus. In the Old Testament God told his people to build a special house where they could worship him. Behind a curtain in that house there was a very special place that belonged to God himself. Only the leader of the priests could go into that room, on one special day each year. See Leviticus and Hebrews That special house was like a picture of what is really true in heaven, where God himself lives. Jesus is our special priest. When he died on the cross, God tore that curtain into two pieces. See Matthew This showed that Jesus had opened the way to heaven for us. Jesus brings us near to God himself. See also Hebrews Print... Use screen font size Show All Comments Hebrews 5Hebrews 7 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "7": [
+    {
+      "verse": "1",
+      "text": "Melchizedek was the king of a city called Salem. He was also a priest of God who rules over all. Melchizedek met Abraham when Abraham was returning from a war. Abraham's men had just won a battle against four kings with their armies. At that time, Melchizedek asked God to bless Abraham."
+    },
+    {
+      "verse": "2",
+      "text": "Abraham gave Melchizedek a tenth part of everything that he had won in the fight. The name ‘Melchizedek’ means ‘king of everything that is right’. His other name, ‘king of Salem’, means ‘king of peace’."
+    },
+    {
+      "verse": "3",
+      "text": "Nobody wrote down that Melchizedek had a father or a mother. Nobody wrote down that he had any ancestors. Nobody wrote about when he was born or when he died. In that way, it seems like Melchizedek was a priest for ever. He is like the Son of God who continues to be a priest for all time. Genesis describes the time when Melchizedek met Abraham."
+    },
+    {
+      "verse": "4",
+      "text": "So think about how great this man, Melchizedek, was! Even Abraham, the ancestor of all Israel's people, gave gifts to Melchizedek. Abraham gave him a tenth part of everything that he had won in the fight."
+    },
+    {
+      "verse": "5",
+      "text": "Men from Levi's family group who become priests receive gifts from their own people. God's Law says that the people must give the Levite priests a tenth part of what they have. But the priests and the other people are all Israelites. They all come from Abraham's family."
+    },
+    {
+      "verse": "6",
+      "text": "As for Melchizedek, he did not come from Levi's family. But he still received a tenth part of what Abraham had. He also asked God to bless Abraham. But Abraham was the one who had already received God's promises."
+    },
+    {
+      "verse": "7",
+      "text": "It is always the more important person who asks God to bless a less important person. We certainly know that!"
+    },
+    {
+      "verse": "8",
+      "text": "The Levite priests receive gifts, and they are people who one day will die. Melchizedek also received gifts, but we are told that he continues to live."
+    },
+    {
+      "verse": "9-10",
+      "text": "The Levite priests receive their gifts from the people. But we could say that Levi himself gave a tenth part of what he had to Melchizedek. When Abraham gave his tenth part to Melchizedek, it was like Levi was there inside him. At that time, Levi was not yet born, but Abraham was his ancestor. Levi was one of the sons of Jacob. He was ancestor of one of Israel's tribes. All the men from Levi's family served God in his house. Levi had a grandson, Aaron. Only Aaron and his family could become priests. See Numbers Exodus All Israel's people had to give a tenth part of what they had to the men from Levi's family. Then all the other men in Levi's family gave a tenth part of this to the priests. See Numbers"
+    },
+    {
+      "verse": "11",
+      "text": "The Levite priests were a necessary part of God's Law for Israel's people. But those priests could not make the people completely right with God. If that had been possible, the Levite priests could have continued their work. But we see that God has chosen a different kind of priest to serve him. That priest is not someone from Aaron's family, as the Levites were. Instead, he is a priest in the same way that Melchizedek was God's priest."
+    },
+    {
+      "verse": "12",
+      "text": "When there is a change in the kind of priest like that, there must also be a change in the law."
+    },
+    {
+      "verse": "13",
+      "text": "It is the Lord Jesus Christ that the Bible speaks about in this way, as God's special priest. But he belongs to a different tribe. He is not a Levite. Nobody else from his tribe ever served God as a priest."
+    },
+    {
+      "verse": "14",
+      "text": "We know that our Lord came from Judah's tribe. Moses never said that priests could come from Judah's tribe. So we see that the old law has changed. Jesus is a different kind of priest"
+    },
+    {
+      "verse": "15",
+      "text": "What we have said becomes even clearer now. Another kind of priest has come, who is a priest like Melchizedek."
+    },
+    {
+      "verse": "16",
+      "text": "Jesus did not become a priest because of a law about which family he came from. He became God's priest because of his powerful life that nothing could ever destroy."
+    },
+    {
+      "verse": "17",
+      "text": "The Bible speaks about him as a priest like this: ‘You will be a priest for ever, in the same way that Melchizedek was God's priest.’ See Psalm"
+    },
+    {
+      "verse": "18",
+      "text": "So the old law about priests no longer has authority. It was weak and it could not help people."
+    },
+    {
+      "verse": "19",
+      "text": "God's Laws that he gave to Moses could not make anything completely right. But now God has brought us something better to hope for. And in that way, we ourselves can come near to God."
+    },
+    {
+      "verse": "20",
+      "text": "Also, when God said that Jesus would be his special priest, he made a strong promise. When the Levites became priests, he did not make a strong promise like that."
+    },
+    {
+      "verse": "21",
+      "text": "But when Jesus became God's priest, God made a strong promise. God said: ‘The Lord God has promised this strongly. He will not change his mind. You will be a priest for ever.’"
+    },
+    {
+      "verse": "22",
+      "text": "Because God promised that to Jesus, we know that his new agreement with his people is very strong. It is a much better agreement than the old one."
+    },
+    {
+      "verse": "23",
+      "text": "In the old way, there were many Levite priests. Each one of them died, so that they could not continue to serve God as priests."
+    },
+    {
+      "verse": "24",
+      "text": "But Jesus lives for ever, so he will never stop being a priest."
+    },
+    {
+      "verse": "25",
+      "text": "Jesus is always alive and he asks God to help his people. So he can completely save everyone who believes in him. He will lead them to God."
+    },
+    {
+      "verse": "26",
+      "text": "Jesus is the kind of special priest that we need. He completely belongs to God. He has never done anything wrong. He is completely good and clean. He is separate from everyone who does wrong things. God has raised him up to the most important place in heaven."
+    },
+    {
+      "verse": "27",
+      "text": "Jesus is not like the Levite priests. They need to offer sacrifices to God every day. First, they offer sacrifices so that God will forgive their own sins. Then they offer sacrifices on behalf of the other people, so that God will forgive their sins too. But Jesus offered one sacrifice for all time. That sacrifice was himself."
+    },
+    {
+      "verse": "28",
+      "text": "In the old agreement, Moses' laws decide who will become special priests. Because those men are weak, they often do wrong things. But God's very strong promise came after the Law that he gave to Moses. With that promise, God chose his Son to be his special priest. And his Son has become everything that God wants him to be, completely and for ever. When Jesus died on the cross, he gave himself to God as a sacrifice. Because Jesus never did anything wrong, his sacrifice has power for ever. No more sacrifices are needed. Now he lives for ever in heaven. Print... Use screen font size Show All Comments Hebrews 6Hebrews 8 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "8": [
+    {
+      "verse": "1",
+      "text": "The most important thing that we are saying is this: In Jesus, we do have this kind of special priest. He has now sat down to rule with God in heaven. He sits at the right side of God, who rules with all authority."
+    },
+    {
+      "verse": "2",
+      "text": "He serves as priest in heaven on our behalf. He is in God's very special place, near to God himself. That is like the special place in the tabernacle of long ago. But it is not a tent that people have made. The Lord himself has made this special place, and it is the true one."
+    },
+    {
+      "verse": "3",
+      "text": "It is the duty of every special priest to offer gifts and sacrifices to God. So Jesus, as our special priest, must also have something to offer."
+    },
+    {
+      "verse": "4",
+      "text": "If he was living on earth, then he would not be a priest. There are already priests on earth who offer gifts to God. They do this in the way that Moses' law tells them."
+    },
+    {
+      "verse": "5",
+      "text": "But the way that those Levite priests work is only like a picture of the true things in heaven. It is like a shadow of what would happen in heaven. Long ago, when Moses was ready to make the tabernacle, God warned him about it. God said to Moses, ‘Be careful to make everything just like the plan which I showed you on the mountain.’ Many years ago, God met Moses on Sinai mountain. In that place, God gave Moses his laws. God told Moses to make a special tent, called the tabernacle. He told him everything about how he should make it. See Exodus"
+    },
+    {
+      "verse": "6",
+      "text": "But now God has given Jesus a much better way to serve him as a priest. The new agreement that God makes with his people is possible because of Jesus. Because of Jesus' work on our behalf, the new agreement is better than the old one. It is much better because it started with better promises."
+    },
+    {
+      "verse": "7",
+      "text": "If there had been nothing wrong with that first agreement, then nobody would have needed a second agreement."
+    },
+    {
+      "verse": "8",
+      "text": "But God did find something wrong with it. As a result, he said this to his people: ‘Listen to this! The Lord says: A time will come when I make a new agreement with my people. That is, with Israel's people and with Judah's people. Judah was one of Jacob's 12 sons. God gave Jacob the name Israel. When Jeremiah spoke this, Judah's people and Israel's people were two separate kingdoms. See Jeremiah"
+    },
+    {
+      "verse": "9",
+      "text": "It will not be like the old agreement that I made with their ancestors. At that time, I brought my people safely out of Egypt. I led them like a father who takes his child's hand. But they did not continue to obey my agreement with them. So I turned away from them. That is what the Lord says."
+    },
+    {
+      "verse": "10",
+      "text": "But now the Lord says this: After the time of that old agreement I will make a new agreement with Israel's people. It will be like this: I will put my laws into their thoughts. I will write my laws deep inside them. I will be their God and they will be my people."
+    },
+    {
+      "verse": "11",
+      "text": "As a result, nobody will have to teach their friends or their family about me. They will never need to say, “You should know the Lord.” This is because everyone will already know me. The most important people will know me, as well as the least important people."
+    },
+    {
+      "verse": "12",
+      "text": "I will be kind to them. I will forgive them for the wicked things that they have done. I will not continue to think about their sins. That is what the Lord says.’ God's prophet Jeremiah spoke this message from God long ago. See Jeremiah"
+    },
+    {
+      "verse": "13",
+      "text": "We see that God was speaking about a new agreement. That shows that he has caused the first agreement to become old. And anything that is becoming old like that will soon finish. The old agreement that God made with his people included many rules. If the people obeyed all those rules, then their lives would be happy. See Deuteronomy But the people could not obey all the rules. Those rules could not really make them right with God. The rules could not make them become new people. The rules could not make them love God. So they needed a better agreement, that could make them different inside. Jesus has made that new agreement possible for us. We can become right with God and we can know him because of Jesus. Print... Use screen font size Show All Comments Hebrews 7Hebrews 9 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "9": [
+    {
+      "verse": "1",
+      "text": "The first agreement included rules about how people should worship God. It also spoke about a special place for people to worship God on this earth."
+    },
+    {
+      "verse": "2",
+      "text": "Israel's people made a special tent for God. The first room in that tent was called the holy place. The special lampstand was in this room. The special table with the bread which they offered to God was there too. Exodus 26; describe the special tent that God told Moses to make. Exodus describe the gold lampstand and the special table for bread."
+    },
+    {
+      "verse": "3",
+      "text": "Behind a second curtain, there was a very special room. It was called the Most Holy Place."
+    },
+    {
+      "verse": "4",
+      "text": "The gold altar for incense was in there. The Covenant Box was there too. The box had gold on all its sides. Inside the box was the gold pot that contained the special food called manna. The box also contained Aaron's stick that had grown leaves. It also contained the two flat stones on which God had written the rules of his agreement with his people."
+    },
+    {
+      "verse": "5",
+      "text": "The shapes of two special angels stood on the top of the box. They were made from gold and they showed that God was there with great power. The angels held out their wings over the lid of the box. That lid was the place where God forgave the people's sins. But we cannot explain everything about these things now. Exodus describes the gold table where they burned incense. Exodus describes the special Covenant Box. Exodus describes how God supplied manna for Israel's people to eat in the wilderness. Exodus describes how Aaron put some of this special food in a pot to keep it. Numbers describes how Aaron's stick grew leaves, flowers and fruit. This showed people that God had really chosen Moses and Aaron to be the leaders of Israel's people."
+    },
+    {
+      "verse": "6",
+      "text": "So that was how they prepared the special tent. Then the priests would go into the first room of the tent every day. They went in there to serve God, as his rules taught."
+    },
+    {
+      "verse": "7",
+      "text": "But only the special leader of the priests could go into the second room. He went in there only once every year. He had to take with him blood from an animal that they had killed. He offered the blood to God on his own behalf, so that God would forgive his sins. He also offered it on behalf of the people. Then God would forgive their mistakes too. Leviticus 16 describes how the chief priest went into the Most Holy Place once a year."
+    },
+    {
+      "verse": "8",
+      "text": "In this way, God's Holy Spirit was showing that the most holy place was not yet open to everyone. While the tent with its first room was still there, those were the rules for people to worship God."
+    },
+    {
+      "verse": "9",
+      "text": "This is like a picture that means something for us today. It teaches us about the gifts and sacrifices that people offered to God, to worship him. When someone gave those things to God, it could not make him clean again in his mind."
+    },
+    {
+      "verse": "10",
+      "text": "The old rules taught people about different kinds of food and drink. They taught about how people should wash in special ways. Those rules were about people's bodies. They had authority only until the time when God would make things new and better. God's new agreement"
+    },
+    {
+      "verse": "11",
+      "text": "But now Christ has come as our special priest. He brings us the good things that are now here. He has gone into God's own place in heaven. That is a greater and much better tent than the old tabernacle. No person made this tent. It does not belong to this world at all."
+    },
+    {
+      "verse": "12",
+      "text": "Christ went into the Most Holy Place on our behalf. He did this once, for all time. He did not take with him the blood of goats or young cows when he went in there. Instead, he took the blood of his own death to offer to God. In that way, he made us free from sin for ever."
+    },
+    {
+      "verse": "13",
+      "text": "The old rules said that the priest must use the blood of goats or bulls to make people clean. Or he could burn a young cow and mix the ashes with water. He would then splash the blood or the ashes over the people who were unclean. Then those people became clean again in their bodies, and they could worship God. Numbers describes how the ashes of a young, red cow could make people clean for God."
+    },
+    {
+      "verse": "14",
+      "text": "But the blood of Christ's sacrifice will do much more than that! Christ offered himself to God, in the power of his Spirit, who lives for ever. That sacrifice was completely good. There was no wrong thing in Christ. He offered his own blood to make us completely clean inside ourselves. We no longer have to do things that lead to death. Instead, we can serve the God who lives for ever."
+    },
+    {
+      "verse": "15",
+      "text": "So, by Christ's death, God brings a new agreement between him and his people. God's people receive from him the good things that will be with them for ever. God has promised to give those things to the people that he has chosen. Christ's death has made them free from their sins. God will no longer punish them like the first agreement says should happen."
+    },
+    {
+      "verse": "16",
+      "text": "Think about this. A person may make an agreement about who will receive his things after his death. But nobody receives anything until it is clear that the person has really died."
+    },
+    {
+      "verse": "17",
+      "text": "The agreement only has authority after the death of the person who made it. It has no authority while that person is still alive."
+    },
+    {
+      "verse": "18",
+      "text": "So even God's first agreement with his people needed the blood of an animal. The agreement only had authority after a death."
+    },
+    {
+      "verse": "19",
+      "text": "It was like this. Moses read God's laws aloud to all Israel's people. He told them every rule that God had given them. After that, Moses killed some young cows and goats. He took some of their blood and he mixed it with water. He threw some of the blood to drop onto the book of God's laws. He also caused some to drop onto all the people. He used red sheep's hair and some small branches of a plant called hyssop to throw the blood and water."
+    },
+    {
+      "verse": "20",
+      "text": "When Moses did this, he said to the people, ‘This blood shows that God's agreement with you has authority.’"
+    },
+    {
+      "verse": "21",
+      "text": "In the same way, Moses threw some of the blood onto the tabernacle. He also caused blood to drop onto all the things that the priests used to serve God there."
+    },
+    {
+      "verse": "22",
+      "text": "God's Law taught that blood was necessary to make almost everything clean. We see that God does not forgive people for their sins unless there is blood from a death. Exodus describes the events that these verses are talking about. Christ's sacrifice on the cross"
+    },
+    {
+      "verse": "23",
+      "text": "The tabernacle and the things that were in it needed animals' blood to make them clean. That was a picture of the true place in heaven where people worship God. But the true things in heaven need better sacrifices to make them clean than the sacrifices of animals."
+    },
+    {
+      "verse": "24",
+      "text": "Christ did not go into a holy place that people had made on earth. A place like that is only a picture of the true place in heaven. No, Christ went into heaven itself, where God is. Now he is there with God and he speaks to God on our behalf."
+    },
+    {
+      "verse": "25",
+      "text": "The leader of the priests here on earth goes into the Most Holy Place every year. Each time, he takes with him the blood of an animal and he offers it to God. But when Christ went into heaven to offer himself to God, he did not do that again and again."
+    },
+    {
+      "verse": "26",
+      "text": "To do that, he would need to die again and again, many times since the world began. No! Christ has appeared just once. He has appeared now, when time is near its end. He came and he died as a sacrifice. In that way, he has removed the power of sin."
+    },
+    {
+      "verse": "27",
+      "text": "Every person must die once. After death, God will judge each person."
+    },
+    {
+      "verse": "28",
+      "text": "Christ also died only once as a sacrifice. In this way, he took God's punishment for the sins of many people. Christ will return to earth a second time, but that will not be as a sacrifice for sins. That time, he will come to save those people who are waiting patiently for him. Print... Use screen font size Show All Comments Hebrews 8Hebrews 10 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "10": [
+    {
+      "verse": "1",
+      "text": "God's laws which he gave to Moses are like a shadow of the good things that would come later. But those laws do not show exactly what those good things are like. They say that the priests must continue to offer the same sacrifices on behalf of the people, year after year. So those sacrifices can never make the people completely clean when they come to worship God."
+    },
+    {
+      "verse": "2",
+      "text": "If the old rules could do that, the priests would have stopped offering sacrifices. The people who came to worship God would have become completely clean once, for all time. They would no longer have trouble in their minds about their sins."
+    },
+    {
+      "verse": "3",
+      "text": "But as it is, those sacrifices every year cause people to remember their sins."
+    },
+    {
+      "verse": "4",
+      "text": "We know that the blood of bulls and of goats cannot remove the punishment for sins."
+    },
+    {
+      "verse": "5",
+      "text": "So, when Christ came into the world, he said to his Father, ‘You have not wanted people to offer sacrifices and other gifts to you. Instead, you have prepared a body for me to offer to you."
+    },
+    {
+      "verse": "6",
+      "text": "Sacrifices do not make you happy. If people burn whole animals as a sacrifice, or if they offer a sacrifice to make them clean from their sins, that does not make you happy."
+    },
+    {
+      "verse": "7",
+      "text": "Then I said, “Here I am, my God. I have come to do what you want. That is what it says about me in the Bible.” ’ See Psalm"
+    },
+    {
+      "verse": "8",
+      "text": "So think about what Christ said there. First he said to God, ‘You have not wanted gifts and sacrifices of animals. Any kind of sacrifice like that does not make you happy.’ But we know that Moses' rules taught about those sacrifices. God's law said that they were necessary."
+    },
+    {
+      "verse": "9",
+      "text": "Then Christ said, ‘Here I am. I have come to do what you want.’ In that way, Christ took away the first agreement and its rules about sacrifices. Christ's sacrifice of his own body is the new way that God forgives our sins."
+    },
+    {
+      "verse": "10",
+      "text": "Jesus Christ was ready to do what God wanted. He offered his own body to God once, for all time. Because of Christ's sacrifice, God has made us clean so that we belong to him."
+    },
+    {
+      "verse": "11",
+      "text": "Every day, the priests do their work to serve God. They offer the same sacrifices to God again and again. But those sacrifices can never take away people's sins."
+    },
+    {
+      "verse": "12",
+      "text": "But Christ, our special priest, offered one sacrifice to take away our sins. He did that once, for all time. After that, he sat down at God's right side to rule with him."
+    },
+    {
+      "verse": "13",
+      "text": "Since then, he waits for God to win against his enemies completely. They will become like a place for him to put his feet."
+    },
+    {
+      "verse": "14",
+      "text": "So, as a result of his one sacrifice, Christ has made God's people completely clean for all time."
+    },
+    {
+      "verse": "15",
+      "text": "God's Holy Spirit also shows us that these things are true. He says this first: See Jeremiah"
+    },
+    {
+      "verse": "16",
+      "text": "‘The Lord God says: After the time of the old agreement, I will make a new agreement with my people. It will be like this: I will put my laws deep inside them. I will put them into their thoughts.’"
+    },
+    {
+      "verse": "17",
+      "text": "Then he says this: See Jeremiah I will not continue to think about their sins when they do not obey my laws.’"
+    },
+    {
+      "verse": "18",
+      "text": "So that is the way that God forgives our sins. When God has done that, we do not need to have any other sacrifice to take away our sins. We must continue to trust God"
+    },
+    {
+      "verse": "19",
+      "text": "So then, Christian friends, we see that Jesus died as a sacrifice on our behalf. Because of that, we may go into God's Most Holy Place. We are not afraid to do that."
+    },
+    {
+      "verse": "20",
+      "text": "Jesus has opened a new way for us to come near to God. That way gives us life with God. It leads us through the curtain into God's Most Holy Place. Jesus opened that curtain for us when he offered his own body to God as a sacrifice."
+    },
+    {
+      "verse": "21",
+      "text": "We have a great priest who rules the people of God's house."
+    },
+    {
+      "verse": "22",
+      "text": "So we should come near to God and we should not be afraid. But we must be honest and we must continue to trust him. He has made us clean from the dirt of our sins. Our thoughts no longer give us trouble about our sins. We have become clean. It is like he has washed our bodies with clean water. The curtain in the tabernacle was like a door to the Most Holy Place. When Jesus died on the cross, the curtain tore into two pieces. See Matthew That is a picture of what is really true in heaven. When Jesus died on our behalf, he opened the way to God. The blood of his sacrifice makes us clean because God has forgiven our sins if we believe in Jesus. So now, we do not need to be afraid when we come to God. We can come near to him and he will not punish us. We are like people who can go into the Most Holy Place in the tabernacle. In the old agreement, they threw the blood of a sacrifice on the priests to show that they were clean. But in the new agreement, God has made us completely clean, not just on the outside. At a Christian baptism, they use water to show that a person now believes in Christ. That person is now clean because of the death of Christ as a sacrifice on his behalf."
+    },
+    {
+      "verse": "23",
+      "text": "We know that we can trust God to do the things that he has promised. So we must continue to expect those things. We must tell other people that we trust God. We should not stop doing that."
+    },
+    {
+      "verse": "24",
+      "text": "We should think about how we can help one another. We want everyone to show love to each other. We want everyone to do good things to help one another."
+    },
+    {
+      "verse": "25",
+      "text": "Some people have stopped meeting with the group of Christians. But that is not good. We should all continue to meet together. We need to help one another to be strong and brave. That is now even more important, because the Lord's great day is coming. You know that the Lord will return soon. We must not turn away from Jesus Christ"
+    },
+    {
+      "verse": "26",
+      "text": "Now that we have learned what is true, we must continue to believe in Jesus. If we know God's true message, but we still choose to do wrong things, God will not forgive us. There is no other sacrifice that will take away our sins."
+    },
+    {
+      "verse": "27",
+      "text": "We know that God will judge us, and that will make us very afraid. Because we know that God will punish everyone who is against him. That punishment will be a very hot fire that destroys people."
+    },
+    {
+      "verse": "28",
+      "text": "In the old agreement, anyone who refused to obey Moses' rules had to die. If two or three people said that he had done a bad thing, that person had to die. They would not forgive him. Israel's people could not punish someone unless there were two or three people who saw him do a bad thing. If these people could say that he had done a bad thing against God's laws, then the person had to be punished. If someone killed another person, that person should die. See Deuteronomy Numbers"
+    },
+    {
+      "verse": "29",
+      "text": "So think about a person who has turned against the Son of God. That person's punishment will surely be much worse! He says that Christ's sacrifice has no value for him. He has made God's new agreement seem like something bad. It was Christ's death on the cross that made that person clean, so that he belonged to God. But now that person has insulted God's Spirit, who brings God's kind help to us."
+    },
+    {
+      "verse": "30",
+      "text": "We know God and his message. And God said this: ‘I am the one who will punish people for their sins. I will give them the punishment that they ought to receive.’ God also said this: ‘The Lord will judge his people.’"
+    },
+    {
+      "verse": "31",
+      "text": "Yes, if God takes hold of you to punish you, that will make you very afraid! He is the powerful God who lives for ever. See Deuteronomy See Psalm"
+    },
+    {
+      "verse": "32",
+      "text": "Remember what happened to you in those early days. When you first understood the message about Christ, you had many troubles. But you continued to be strong."
+    },
+    {
+      "verse": "33",
+      "text": "Sometimes people insulted you. They made you ashamed in front of other people. Sometimes you chose to help other Christians who had trouble like that. Their troubles became your troubles."
+    },
+    {
+      "verse": "34",
+      "text": "You were kind to Christians who were in prison. When people took away your own things, you still chose to be happy. You knew that you had something better that would belong to you for ever. People who were enemies of these Christians had taken away the Christians' own things. But nobody can take away what God has given to Christians. God had forgiven these Christians because of Jesus' sacrifice. And he had given them new lives, with a new purpose. They knew that they would always live with God."
+    },
+    {
+      "verse": "35",
+      "text": "So continue to be strong in your thoughts. If you continue to trust God, you will receive great things."
+    },
+    {
+      "verse": "36",
+      "text": "You need to be patient and strong. Then you will continue to do what God wants. As a result, you will receive what God has promised."
+    },
+    {
+      "verse": "37",
+      "text": "This is what the Bible says: ‘In a very short time, my special servant will come. He is the one that I promised to send to you. He will not be late. See Habakkuk"
+    },
+    {
+      "verse": "38",
+      "text": "The person that I have accepted as right will live. That person will live because he trusts me. But if anyone is afraid and he turns back, I will not be happy with that person.’ See Habakkuk Christians must continue to trust God when troubles come."
+    },
+    {
+      "verse": "39",
+      "text": "But we are not like those people who are afraid and who turn back. If we were, God would destroy us. But we are people who continue to trust God. And so, our lives are safe with God. Print... Use screen font size Show All Comments Hebrews 9Hebrews 11 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "11": [
+    {
+      "verse": "1",
+      "text": "This is what it means to trust God: We will be sure about the things that we hope for. We will be sure in our minds about things that we cannot even see."
+    },
+    {
+      "verse": "2",
+      "text": "It was because of their faith that God said good things about the people of long ago."
+    },
+    {
+      "verse": "3",
+      "text": "Because of faith, we understand about how God made the universe. He spoke his word to make it happen. In that way, God made all the things that we can see. He made them from things that nobody could see."
+    },
+    {
+      "verse": "4",
+      "text": "Abel believed God. So he offered a better sacrifice to God than Cain did. And because of Abel's faith, God accepted him as right with him. God said that he was happy with Abel's gifts. Because Abel trusted God, we can still learn from his faith. Abel died long ago, but it is like he is still speaking to us. See Genesis"
+    },
+    {
+      "verse": "5",
+      "text": "Enoch also believed God. Because of Enoch's faith, God took him away to heaven. He did not die like other people. As a result, nobody could ever find him, because God had taken him away. Before God took him away, it was clear that Enoch had made God happy. See Genesis"
+    },
+    {
+      "verse": "6",
+      "text": "Unless we trust God, it is impossible for us to make God happy. Anyone who comes to God must believe that God is there. They must also believe that God helps everyone who wants to know him."
+    },
+    {
+      "verse": "7",
+      "text": "Noah believed God too. God told Noah about bad things that would happen. Nobody could see what would happen, but Noah believed God's message. He was careful to do exactly what God told him. He built a large ship to save his family. As a result of his faith, Noah showed that everyone else in the world was wrong. Noah himself became one of those people that God accepted as right with him. They are right with God because they trust him. See Genesis"
+    },
+    {
+      "verse": "8",
+      "text": "Abraham also believed God. When God told him to leave his home, he obeyed God. He left his home to go to another country, but he did not know where he was going. It was the place that God had promised to give to Abraham."
+    },
+    {
+      "verse": "9",
+      "text": "Because of his faith, Abraham went to live like a stranger in that foreign country. God had promised to give that country to him, but Abraham lived there in tents. Isaac and Jacob also lived there in tents like strangers. God had also promised them that the land would belong to them one day."
+    },
+    {
+      "verse": "10",
+      "text": "We see that Abraham was waiting to live in God's special place. That is the city that God himself has built. God has made it very strong so that it will be there for ever. See Genesis Isaac was Abraham's son. Jacob was Isaac's son. Abraham believed God. So he knew that his home was really in heaven with God. The Bible tells us about God's city. See Psalm 48; 122; Isaiah Revelation"
+    },
+    {
+      "verse": "11",
+      "text": "Abraham and his wife, Sarah, were too old to have children. But Abraham believed God's promise that they would have children. He trusted God to do what he had promised. As a result of his faith, God made it possible for him and Sarah to have a baby."
+    },
+    {
+      "verse": "12",
+      "text": "Abraham was so old that he was almost like a dead man. But from this one man there came very many grandchildren. His family became so large that nobody could count them. They were like the number of stars in the sky. They were as many as the bits of sand on the shore of the sea. It is not clear whether this verse is telling us about Abraham's faith or about Sarah's faith. See Genesis See Genesis and Romans"
+    },
+    {
+      "verse": "13",
+      "text": "All these people continued to believe God until they died. But they did not receive all the things that God had promised to give them. They were like people who saw those things far away. That made them happy. These people understood that they lived as strangers and travellers on the earth."
+    },
+    {
+      "verse": "14",
+      "text": "People who live in that way show that they expect to live somewhere else one day. That is the place where they will really be at home."
+    },
+    {
+      "verse": "15",
+      "text": "They were not thinking about the country that they had left. They could have gone back there if they really wanted to."
+    },
+    {
+      "verse": "16",
+      "text": "No, they wanted very much to go to a better place, in heaven. For that reason, God is not ashamed for them to call him their God. He has already prepared a city for them to live in."
+    },
+    {
+      "verse": "17",
+      "text": "Here is another example of Abraham's faith. God wanted to see whether Abraham really trusted him. Because Abraham believed God, he offered his son, Isaac, as a sacrifice. God had promised Abraham that he would have many grandchildren. But Abraham was still ready to offer his only son as a sacrifice."
+    },
+    {
+      "verse": "18",
+      "text": "God had said to Abraham, ‘It is through Isaac that your family will continue.’"
+    },
+    {
+      "verse": "19",
+      "text": "But Abraham was sure that, if Isaac died, God could raise Isaac to life again. We could even say that is a picture of what really happened. It was like Abraham did receive Isaac back from death. See Genesis"
+    },
+    {
+      "verse": "20",
+      "text": "Isaac himself also believed God. As a result of his faith, he asked God to bless his sons, Jacob and Esau. He trusted that God would help them in the future time. Jacob and Esau were Isaac's sons. See Genesis"
+    },
+    {
+      "verse": "21",
+      "text": "Jacob believed God. As a result of his faith, he asked God to bless each of Joseph's sons. Jacob did that when he was dying. At that time, he used his stick to hold himself up while he worshipped God. Joseph was one of Jacob's sons. See Genesis"
+    },
+    {
+      "verse": "22",
+      "text": "Joseph also believed God. At the end of his life, he spoke about what would happen to the family of Israel's people after his death. He understood that they would leave Egypt one day. As a result of his faith, he told his family where they should bury his bones. See Genesis"
+    },
+    {
+      "verse": "23",
+      "text": "Moses' parents believed God. When Moses was born, they hid him for three months. They saw that he was a very special child. As a result of their faith, they did not obey Egypt's king. They were not afraid to do that. The king of Egypt had said that all the baby boys of Israel's family must die. See Exodus"
+    },
+    {
+      "verse": "24",
+      "text": "Moses himself also believed God. When he became a man, he refused to be called the son of the king's daughter."
+    },
+    {
+      "verse": "25",
+      "text": "Instead, Moses chose to join with God's people. He chose to receive trouble and pain together with them. He did not want to live in the king's house and do wrong things. He would only be happy for a short time there."
+    },
+    {
+      "verse": "26",
+      "text": "Moses could have been very rich in Egypt. But instead, he let people insult him. He chose to receive trouble because of God's special Messiah. He thought that was worth more than if he had a lot of money. He thought carefully about what God would give him at a future time."
+    },
+    {
+      "verse": "27",
+      "text": "As a result of his faith, Moses left Egypt. He knew that the king would be angry, but Moses was not afraid of him. Instead, he continued strongly to trust God. Nobody can see God, but Moses lived like someone who could see God. See Exodus God's special Messiah, Jesus Christ, did not come to live on earth until many years after Moses died. But Moses believed that God had a great purpose to save his people. Because of that Moses chose to obey God. He obeyed God even when it caused him a lot of trouble. That was more important than if he became very rich. The writer of this book knew that God had now saved his people because of Jesus' death. That was God's great purpose from the beginning. So that was the true reason why Moses chose to obey God. That was why he received trouble and pain. Moses left Egypt when he led Israel's people away from that country. See Exodus"
+    },
+    {
+      "verse": "28",
+      "text": "As a result of his faith, Moses told Israel's people to prepare the first Passover meal. He told them to put blood from the sacrifice round their doors. Then the angel who destroyed people came to every home. When he saw the blood, he did not kill the oldest sons in the families of Israel's people. The Passover became an important day for the Jews. They ate a special meal on this day every year. They did this to remember that God had brought them out from Egypt. They had been slaves in Egypt, and God made them free. Exodus 12 explains about the Passover."
+    },
+    {
+      "verse": "29",
+      "text": "Because of their faith, Israel's people walked across the Red Sea. They walked through there as if they were walking on dry land. But when the soldiers from Egypt tried to cross the same place, they drowned. See Exodus"
+    },
+    {
+      "verse": "30",
+      "text": "Because of their faith, Israel's people marched round Jericho city for seven days. Then the city's walls fell down. See Joshua"
+    },
+    {
+      "verse": "31",
+      "text": "Rahab, who had been a prostitute in Jericho, also trusted God. She helped the men from Israel who had come to that city earlier. They wanted to discover how to attack the city. Rahab was kind to them. As a result of her faith, she did not die with all the other people in Jericho who did not obey God. See Joshua"
+    },
+    {
+      "verse": "32",
+      "text": "I could say even more about other people who trusted God. But there is not enough time to talk about all of them. I could tell you about Gideon, Barak, Samson, Jephthah, David, Samuel and all the prophets."
+    },
+    {
+      "verse": "33",
+      "text": "As a result of their faith, they did great things. Some of them won wars against other countries. Others ruled in a way that is right and fair. They received the good things that God had promised. Some of them caused lions to shut their mouths."
+    },
+    {
+      "verse": "34",
+      "text": "Some of them put out fires that were burning very strongly. Some of them got away from people who wanted to kill them with a sword. Other people who were weak became strong. They became powerful to fight wars. They won against foreign armies so that those armies ran away. The writer gives the names of six men who were Israelite leaders: Gideon (Judges Barak (Judges Samson (Judges Jephthah (Judges David (1 Samuel Samuel Samuel (1 Samuel Samson and David both killed lions, when lions attacked them. See Judges Samuel Daniel also ‘caused lions to shut their mouths’. See Daniel The king of Babylon put Daniel's three friends into a very hot fire because they would not worship him. But because they trusted God, the fire did not hurt them. See Daniel 3."
+    },
+    {
+      "verse": "35",
+      "text": "Some women who trusted God received their friends and family back from death. God raised those people who had died to become alive again. Other people refused to turn against God so that their enemies would not hurt them. As a result, their enemies killed them. These people agreed to die because they were sure that they would live again with God. They knew that would be better for them."
+    },
+    {
+      "verse": "36",
+      "text": "Other people who trusted God received insults. Some of them were hit with whips. Enemies of God tied these people up and they put them in prison."
+    },
+    {
+      "verse": "37",
+      "text": "Some of them died when people killed them with stones. Some of them died when people cut them into two pieces. Some of them died when people killed them with swords. Some of these people wore the skins of sheep and goats while they travelled about. They were very poor and they had a lot of trouble. People did bad things to them."
+    },
+    {
+      "verse": "38",
+      "text": "These people who trusted God were too good for this world. Some of them had to travel about in the wilderness and on the hills. Some had to live in holes in the rocks and in the ground."
+    },
+    {
+      "verse": "39",
+      "text": "God said good things about all these people because they trusted him. But they still did not receive everything that God had promised to give to them."
+    },
+    {
+      "verse": "40",
+      "text": "God had already decided to prepare something better for all of us. As a result, those people did not receive everything until we could join with them. Many people who trusted God had a lot of trouble in their lives. But they continued to believe God, and God made them strong. The writer wants us to remember how these people lived. He wants us to be strong, even when trouble comes. All the people that the writer has described in Chapter 11 lived before Jesus came into the world. So they could not completely understand God's purpose during their lives on earth. But we live after the time when Jesus lived on earth. God saves us and forgives us because of Jesus' death on our behalf. We can now see that God had prepared something better for his people, because Jesus came to give us a new life with God for ever. Print... Use screen font size Show All Comments Hebrews 10Hebrews 12 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "12": [
+    {
+      "verse": "1",
+      "text": "So we have learned about many people who trusted God long ago. They are like a very big crowd all round us and we should copy their example. We must be like people who run in a race. We must throw away everything that stops us from running well. The sins that we do make us fall down very easily. We must not let those sins rule us. God has prepared the way that is in front of us. We must continue to be strong while we run along that way. We must choose to run that race well."
+    },
+    {
+      "verse": "2",
+      "text": "As we run, we must always look towards Jesus. He is the one who trusted God completely. Our faith starts with him, and he will help us to trust God all the way to the end. Jesus accepted punishment on the cross. He chose to receive much pain. He did not think about being ashamed to die like that. He knew that God had prepared something very good for him that would make him happy. Now he has sat down at the right side of God to rule with him in heaven. Our lives as Christians on earth are like a race. It is very important that each of us finishes the race. We must never stop obeying God. When sins give us trouble, we must stop doing those bad things. When we reach the end of the race and we have left this earth, we will then have life with God for ever."
+    },
+    {
+      "verse": "3",
+      "text": "So think carefully about how Jesus lived on earth. Bad people did very bad things against him, but he continued to be strong. Think about him, and then you will not become weak as Christians. You will not stop trusting God."
+    },
+    {
+      "verse": "4",
+      "text": "You have been fighting against sin in your lives. But you have not yet had to fight like that until someone killed you."
+    },
+    {
+      "verse": "5",
+      "text": "God speaks to you as his children. Do not ever forget these words in the Bible that will make you strong: See Proverbs My son, when the Lord shows you what is right, do not easily forget it. Do not be upset when he punishes you."
+    },
+    {
+      "verse": "6",
+      "text": "The Lord does that to everyone that he loves. He punishes everyone that he accepts as a son.’"
+    },
+    {
+      "verse": "7",
+      "text": "When you have troubles in your life, you must be patient and strong. Remember that God is teaching you what is right because you are his children. There has never been any son whose father did not punish him."
+    },
+    {
+      "verse": "8",
+      "text": "God teaches all his children not to do wrong things. So if he does not punish you, it shows that you are not really his children. Instead, you are like children who do not really belong to him."
+    },
+    {
+      "verse": "9",
+      "text": "Also, we have all had human fathers who punished us. As a result, we respected them. So think about our Father that our spirits belong to. We must surely obey him, and then he will give us true life."
+    },
+    {
+      "verse": "10",
+      "text": "Our human fathers punished us for a few years. They did this in a way that they thought was good. But God punishes us in a way that will really help us. As a result, we can become completely good, like he is."
+    },
+    {
+      "verse": "11",
+      "text": "Punishment never makes us happy at the time when we receive it. No, the pain makes us sad. But later we know that the punishment has taught us good things. It helps us to live in a right way that gives us peace in our minds."
+    },
+    {
+      "verse": "12",
+      "text": "So be strong as servants of God! If your hands feel weak, lift them up! If your knees are not strong, stand up straight!"
+    },
+    {
+      "verse": "13",
+      "text": "Walk straight in front of you, step by step! Your example will help other Christians to serve God well. People who cannot walk well will not become worse and fall down. Instead, their legs will become strong again. Our life as Christians is like a journey. We need to walk strongly as we serve God. When we feel weak, we must be brave and continue to walk well. If the stronger Christians serve God well, then weaker Christians will copy their example. The weak Christians will become strong and serve God well too. We must not refuse to do what God says"
+    },
+    {
+      "verse": "14",
+      "text": "Do everything that you can to live in peace with other people. Make yourself separate from bad things. Nobody will see the Lord unless their life is good and clean."
+    },
+    {
+      "verse": "15",
+      "text": "Remember that God is very kind. Nobody should refuse to let God help them. Make sure that nobody among you causes trouble so that people turn against God. A person who is angry against God is like poison. He spoils many other people's lives so that God does not accept them."
+    },
+    {
+      "verse": "16",
+      "text": "Make sure that nobody among you has sex in a wrong way. Be careful that nobody is careless about God's rules, like Esau was long ago. He gave away everything that he would have received as his father's first son. He gave it all away so that he could get only one meal."
+    },
+    {
+      "verse": "17",
+      "text": "As you know, after that, he still wanted to receive those good things from his father. He wanted his father to ask God to bless him. But his father refused to do that. Esau cried very much when he asked his father to give him those good things. But there was no way that Esau could change what he had done. Esau was Isaac's first son. The oldest son in a family was very important. He received the biggest part of his father's land and money when his father died. Also, the father asked God to bless that son and give him good things. But Esau gave away all these things to his brother, Jacob. See Genesis A picture of two mountains"
+    },
+    {
+      "verse": "18",
+      "text": "You have come near to God. But you have not come to a place that you can touch, like Sinai mountain. That mountain burned with fire. But where the people stood, it was completely dark. They could not see at all. There was also a very strong wind and a storm."
+    },
+    {
+      "verse": "19",
+      "text": "There was the loud sound of a trumpet. There was a powerful voice that spoke to them. When the people heard that voice, they were very afraid. So they asked that the voice would not speak to them any more."
+    },
+    {
+      "verse": "20",
+      "text": "They were very afraid of what God had told them. God had said, ‘If even an animal touches the mountain, you must kill it with stones.’"
+    },
+    {
+      "verse": "21",
+      "text": "Even Moses was very afraid when he saw God's great power. He said, ‘I am full of fear!’ Israel's people came near to Sinai mountain after they left Egypt. That was where Moses received God's laws for the people. See Exodus Deuteronomy"
+    },
+    {
+      "verse": "22",
+      "text": "But as believers in Christ, you have not come to God in that way. You have come to Mount Zion. You have come to the city of the true God who lives. You have come to the city of Jerusalem that is in heaven. There are many thousands of happy angels all together in that place."
+    },
+    {
+      "verse": "23",
+      "text": "All God's people meet together there. They are like his most important sons. They belong in heaven because God has written down their names. You have come to God himself, who will judge all people. You have come to the place where the spirits of God's people are. Those people have become right with God. God has now finished his work in them."
+    },
+    {
+      "verse": "24",
+      "text": "You have come to Jesus, who brought the new agreement from God to his people. In that agreement, the blood of Jesus' death makes us clean from our sins. It tells us that God has forgiven us. When Cain killed his brother Abel, Abel's blood brought God's punishment. So we see that Jesus' blood brought us something much better than that. The Bible often uses the name Zion to mean Jerusalem. But Christians belong to God's city in heaven. They belong with all of God's people, who will live with God for ever. Everyone who believed God in earlier times is also part of his people. Those people are dead now, and their spirits are with God. We are not dead yet. But it is like our spirits are already there too, with them. Jesus chose to die. But Abel died when his brother killed him. Abel's brother, Cain, killed Abel, and Abel's blood came out onto the ground. See Genesis So Abel's blood only shows us about bad things. It shows us that God had to punish Cain. But Jesus died for us so that God does not have to punish us any more."
+    },
+    {
+      "verse": "25",
+      "text": "So be careful! Always be ready to listen when God speaks. God used Moses as his servant on the earth to speak to Israel's people. When they refused to obey, God punished them. They could not get away. As for us, God speaks to us from heaven. So we will certainly not get away from God's punishment if we turn away from him."
+    },
+    {
+      "verse": "26",
+      "text": "At Sinai mountain many years ago, God's voice caused the earth to shake. But now God has promised this: ‘Once again I will cause the earth to shake. But this time I will also cause heaven to shake.’"
+    },
+    {
+      "verse": "27",
+      "text": "These words, ‘once again,’ show us that God will take away the things that he has made. All things on the earth that he causes to shake will finish. After that, everything that nobody can shake will continue to be there. At some future time, God will destroy this earth that he has made. After that, he has promised to make a new earth and a new sky. See Isaiah and Revelation All the things that we can see must come to an end. But the things that we cannot see are much, much more important. They will never come to an end. They include the place that God has prepared for us to live with him in heaven."
+    },
+    {
+      "verse": "28",
+      "text": "But we are receiving a place where we will rule with God. We belong to God's kingdom, and nobody can ever shake that! So we should thank God. We should worship him in a way that makes him happy. He is great, and we should serve him well and respect him."
+    },
+    {
+      "verse": "29",
+      "text": "Remember that our God is like a fire. He destroys everything that is not good. Print... Use screen font size Show All Comments Hebrews 11Hebrews 13 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "13": [
+    {
+      "verse": "1",
+      "text": "Continue to love each other like brothers and sisters."
+    },
+    {
+      "verse": "2",
+      "text": "Always remember to be kind to strangers. Let them stay in your homes. In this way, some people have received angels as visitors, and they did not know that they were angels. The Bible tells us about some people who received angels as visitors. See Genesis"
+    },
+    {
+      "verse": "3",
+      "text": "Remember to help those believers who are in prison. Think about what that would be like, if you were there with them. Remember those believers who are receiving trouble from people. Think about them as if you were receiving the same pain in your own body. At the time when this book was written, Christians received a lot of trouble from other people. Many of them were in prison. People did many bad things to them."
+    },
+    {
+      "verse": "4",
+      "text": "When a man and a woman have married each other, they must each respect the marriage. Husbands and wives must only have sex with each other. God will punish anyone who has sex with another person's husband or wife. He will punish anyone who has sex in a wrong way."
+    },
+    {
+      "verse": "5",
+      "text": "In the way that you live, do not want lots of money. Be happy with the things that you have. Be happy, because God has said this: ‘I will never leave you; I will always be there with you.’"
+    },
+    {
+      "verse": "6",
+      "text": "Because of that, we can bravely say this: See Psalm The Lord is the one who helps me, so I will not be afraid. I will not be afraid of anything that people can do to me.’"
+    },
+    {
+      "verse": "7",
+      "text": "Remember your leaders, who taught God's message to you. Think about the way in which they have lived and the good things that they have done. They have trusted God, so you should have faith like they have."
+    },
+    {
+      "verse": "8",
+      "text": "Jesus Christ is always the same, yesterday, today and for ever."
+    },
+    {
+      "verse": "9",
+      "text": "Some people teach all kinds of strange new things. Do not let them lead you away from God's true message. It is good that God is very kind to us. That is what makes us strong inside ourselves. Rules about what foods we should eat do not make us strong like that. Those rules have never helped the people who tried to obey them. Some people were teaching that Christians should obey certain rules about food. They thought that Christians should obey the old rules about meals at the Jewish sacrifices. Food can make our bodies strong but it cannot help our spirits. Only God can help us like that. Only God can make us really strong inside ourselves."
+    },
+    {
+      "verse": "10",
+      "text": "Jesus Christ is the sacrifice that saves us. Jewish priests do not have the authority to receive anything from his sacrifice."
+    },
+    {
+      "verse": "11",
+      "text": "In the old agreement, the leader of the priests brings the blood from the animal sacrifices into the Most Holy Place. He does that so that God will forgive the sins of the people. But they take the bodies of those animals away from there. They burn them outside the town."
+    },
+    {
+      "verse": "12",
+      "text": "In the same way, Jesus also died outside the city. He died as a sacrifice on our behalf. His blood has made his people clean from their sins."
+    },
+    {
+      "verse": "13",
+      "text": "Jesus died like that in a place where people insulted him. So we must go out to that place too. We must be ready for people to insult us, as they insulted him."
+    },
+    {
+      "verse": "14",
+      "text": "Here on earth, we who are believers do not have a city that will always be our home. But we are waiting for God's city that will come. Jewish priests could eat some of the meat from animals that people brought as sacrifices. See Leviticus But Jesus' sacrifice was not like that. It was a special sacrifice to take away sins. See Leviticus The priests did not have authority to eat any meat from that kind of sacrifice. Only people who trust Jesus will receive anything from his sacrifice. They killed Jesus outside the city of Jerusalem. See John The Israelites thought that a place ‘outside the city’ was a dirty place. It was a place where people were ashamed to go."
+    },
+    {
+      "verse": "15",
+      "text": "So we should always praise God, because of what Jesus has done for us. We should say clearly that we trust Jesus. That is like our sacrifice which we offer to God all the time."
+    },
+    {
+      "verse": "16",
+      "text": "Remember to be kind to other people. Share with them the things that you have. God is happy with sacrifices like that."
+    },
+    {
+      "verse": "17",
+      "text": "Respect your leaders and obey them. They watch over your lives on God's behalf. God will check to see if they have done their work well. So respect them, and then they will be happy as they serve God. Do not say bad things against them, because that will never help you."
+    },
+    {
+      "verse": "18",
+      "text": "Pray to God for us. We are sure in our minds that we have done nothing wrong. We always want to do only what is right."
+    },
+    {
+      "verse": "19",
+      "text": "The most important thing is this: Pray that I may come back to you soon."
+    },
+    {
+      "verse": "20",
+      "text": "I pray that God will help you. He is the one who gives us peace in our minds. He caused our Lord Jesus Christ to become alive again after death. God forgives us because of the blood of Jesus' death on the cross. That is God's new agreement with his people that will be true for ever. Jesus is our great shepherd. He takes care of us like his sheep."
+    },
+    {
+      "verse": "21",
+      "text": "I pray that God will give you every good thing that you need to serve him. Then you can do everything that he wants. I pray that God will help us to serve him in a way that will make him happy. He will do that because we belong to Jesus Christ. Jesus is very great, and we should praise him always and for ever! Amen. This is true."
+    },
+    {
+      "verse": "22",
+      "text": "My Christian friends, please listen patiently to my message. This is only a short letter and I want to help you to be strong."
+    },
+    {
+      "verse": "23",
+      "text": "I want to tell you about Timothy, who is like a brother to us. They have let him go out of prison, so that he is free now. If he arrives here soon, he will come with me when I travel to see you."
+    },
+    {
+      "verse": "24",
+      "text": "Say ‘hello’ on my behalf to your leaders and to all God's people. The Christians who have come here from Italy say ‘hello’ to you too."
+    },
+    {
+      "verse": "25",
+      "text": "I pray that God will be very kind to all of you. Print... Use screen font size Show All Comments Hebrews 12James Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ]
+};

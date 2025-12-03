@@ -1,0 +1,230 @@
+module.exports = {
+  "1": [
+    {
+      "verse": "1",
+      "text": "This is the message that the Lord told to Malachi. Malachi knew that he must tell this message to the Israelites. When we write Lord like this, it is a special name for God. Sometimes people write it as ‘Yahweh’, or as ‘Jehovah’. It is his own name that he told Moses. See Exodus It means ‘I am who I am’. This shows that God has always been there and he always will be there."
+    },
+    {
+      "verse": "2",
+      "text": "The Lord says, ‘I have loved you.’ But you ask, ‘How have you loved us?’ God says that he loves the Israelites because they are his special people. The Lord says, ‘I chose to love Jacob and his descendants. Esau was Jacob's brother."
+    },
+    {
+      "verse": "3",
+      "text": "But I have not loved Esau and his descendants. Esau and Jacob were brothers who were twins. Esau was born first. So he should have received God's special blessing. But Esau sold his blessing to Jacob. Instead, I have caused trouble for Esau. I caused Esau's mountains to become a wilderness. Nobody uses that land any longer. Now there are only jackals in the land that belongs to Esau.’"
+    },
+    {
+      "verse": "4",
+      "text": "Esau's descendants in Edom may say, ‘They have destroyed our towns, but we will build our houses again.’ But the Lord Almighty says, ‘They may build again, but I will knock everything down. People will call Edom, “The Evil Land”. They will call them, “The Nation that the Lord is angry with for ever”."
+    },
+    {
+      "verse": "5",
+      "text": "You will see with your own eyes what I will do to them. Then you will say, “The Lord has great power, even beyond Israel's borders.” ’ The people of Edom were Esau's descendants. They lived in the mountains. Then powerful enemies fought them. The Edomites had to leave their homes. Nobody lived there any longer. The priests do not respect God"
+    },
+    {
+      "verse": "6",
+      "text": "The Lord Almighty says this to the priests: ‘A son respects his father. A servant respects his master. If I am really your father and your master, why do you not respect me? You are my priests, but you insult my name. When an Israelite spoke about God's name, he was speaking about God himself. So to insult the name of God was to show no respect for God himself. But then you ask, “What have we done to insult your name?”"
+    },
+    {
+      "verse": "7",
+      "text": "You insult my name when you offer unclean sacrifices to me on my altar. But you ask, “How have we offered unclean sacrifices to you?” You have shown that you do not respect the Lord's altar as important."
+    },
+    {
+      "verse": "8",
+      "text": "You offer blind animals as a sacrifice to me. You know that is wrong. You offer to me animals that cannot walk or animals that are ill. That is also a wrong thing to do. You would not give gifts like that to your city's ruler. If you did, he would surely not accept them. He would not be happy with your gifts.’ The Israelites gave gifts as sacrifices to God. God told them in his Law how they should do that. They brought their gifts to the priests, who then made the sacrifices. Malachi says that the people and the priests were trying to cheat God. The gifts that they offered were not good and pure in the way that God said they should be. That is what the Lord Almighty says."
+    },
+    {
+      "verse": "9",
+      "text": "‘Now you ask me to be kind to you. You want me to forgive you. But when you offer unclean animals as gifts to me, I will not be happy with your gifts.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "10",
+      "text": "‘It would be better if one of you shut the temple doors! Then you would not be able to offer useless sacrifices on my altar. I am not happy with you. I will not accept any more gifts from you.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "11",
+      "text": "‘People in every nation of the whole world will respect my name. People everywhere will offer incense and pure sacrifices to worship me. They will all know that I am great.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "12",
+      "text": "‘But you priests insult my name. You say that the Lord's altar is not special. You think that the food which you offer to me has no value."
+    },
+    {
+      "verse": "13",
+      "text": "You also say, “It is too much trouble to serve the Lord.” You think that you are too important to serve me.’ That is what the Lord Almighty says. ‘You offer to me animals that cannot walk or that are ill. You have even robbed other people to get some of these animals. Do you think that I will accept these unclean animals from you? Will I be happy with them?’ That is what the Lord says."
+    },
+    {
+      "verse": "14",
+      "text": "‘You may promise to offer to me a valuable male animal from among your sheep. But then you change your mind. Instead, you offer to me an animal that has no value. I will surely punish you when you cheat me like that. Remember that I am a great king. People of all nations in the world respect my name with fear.’ That is what the Lord Almighty says. Print... Use screen font size Show All Comments Malachi IntroductionMalachi 2 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "2": [
+    {
+      "verse": "1",
+      "text": "The Lord Almighty says this to the priests:"
+    },
+    {
+      "verse": "2",
+      "text": "‘Listen carefully to what I say to you. You must respect my name properly. If not, I will punish you. I will no longer bless you but I will curse you. I am already doing that because you do not respect my name as you should."
+    },
+    {
+      "verse": "3",
+      "text": "I will punish your descendants. When you offer an animal as a sacrifice at your festivals, I will cover your faces with its dirty bits. Then they will throw you away with all the other dirty bits. Those are the bits that I cannot accept as clean.’ The dirty bits of the animals were the things that were inside its stomach. Those things could not be part of the sacrifice that they offered to God. They had to take those bits away and put them on the heap of rubbish."
+    },
+    {
+      "verse": "4",
+      "text": "The Lord Almighty says, ‘When I punish you like that, you will know that I have warned you. Then the covenant that I made with Levi and his descendants, the priests, can continue."
+    },
+    {
+      "verse": "5",
+      "text": "I promised to give them a good life with many blessings. Levi received what I promised to him. He served me and he respected me, as a priest should do."
+    },
+    {
+      "verse": "6",
+      "text": "He taught my true message. He did not teach people anything that was bad. He lived in a good and honest way as he served me. He helped many people to stop doing wrong things. Levi was one of Jacob's sons. From his family, God chose the first priest, Aaron. God promised to bless the priests if they obeyed him."
+    },
+    {
+      "verse": "7",
+      "text": "Priests should help people to know the truth about God. People should ask the priests to teach them, because the Lord Almighty has chosen priests to speak his message."
+    },
+    {
+      "verse": "8",
+      "text": "But you priests do not serve me in the right way. What you teach causes many people to do wrong things. In that way, you have spoiled the covenant that I made with Levi.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "9",
+      "text": "‘So I have caused all the people to insult you. They no longer respect you, because you do not obey my rules. When you teach my people, you are kind to some of them but you cheat others.’ The priests may have been more kind to rich people than they were to poor people. Judah's people do not obey God"
+    },
+    {
+      "verse": "10",
+      "text": "You know that we all have one Father. It is God himself who made all of us. But now we turn against each other. We do not respect the covenant that God made with our ancestors. Malachi was talking to the Israelites. Their ancestors were Abraham, Isaac and Jacob. God changed Jacob's name to become ‘Israel’."
+    },
+    {
+      "verse": "11",
+      "text": "Judah's people have turned against God. As a result, people have done disgusting things in Jerusalem and in all Israel. You have spoiled the holy place, the temple that the Lord loves. You have turned away from the Lord and you worship foreign gods."
+    },
+    {
+      "verse": "12",
+      "text": "I pray that the Lord will remove all people like that from among his people. Not one of them will continue to belong to the family of Jacob. They will no longer be able to offer gifts to the Lord Almighty. Judah was one of the sons of Jacob. He was the ancestor of the Israelite tribe called Judah. Jerusalem was the capital city of Judah. God's temple was in Jerusalem. The family of Jacob’ is another way to say the Israelites."
+    },
+    {
+      "verse": "13",
+      "text": "Also, you weep so much that your tears cover the Lord's altar! You cry because the Lord no longer accepts your gifts. He is not happy with the gifts that you offer to him."
+    },
+    {
+      "verse": "14",
+      "text": "You ask, ‘Why is the Lord not happy with our gifts?’ The Lord knows that you men have not done the right thing with your wives. When you married as a young man, you promised to take care of your wife always. But you have sent her away, when the law says that you must stay with her as your wife."
+    },
+    {
+      "verse": "15",
+      "text": "The Lord has joined you together, as a man with his wife. Your body and your spirit belong to him. Why did God put you together? He wanted you to have children who would belong to him. So think carefully about how you live. Do not leave the wife that you married when you were a young man."
+    },
+    {
+      "verse": "16",
+      "text": "The Lord God of Israel says this: ‘If a man sends his wife away from him, I hate that! He has been cruel to his wife when he should take care of her. So be very careful! Remember your promise to take care of your wife.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "17",
+      "text": "The Lord has become tired as he listens to your words. You ask, ‘Why is he tired? What have we done to cause that?’ You say, ‘The Lord thinks that all people who do evil things are good! He does not punish them but he is happy with them.’ You also say, ‘God is not here to bring justice!’ Print... Use screen font size Show All Comments Malachi 1Malachi 3 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "3": [
+    {
+      "verse": "1",
+      "text": "‘Look! I will send someone to speak my message. He will prepare the way before me. Then the Lord that you are waiting for will quickly return to his temple. The one who brings the message about the covenant will certainly come. He is the one that you really want to see.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "2",
+      "text": "‘But when he comes, he will be like a hot fire that makes metal pure. He will be like strong soap that makes clothes completely clean. Nobody will be able to stand in front of him when he appears. On that day, nobody will remain the same."
+    },
+    {
+      "verse": "3",
+      "text": "He will work like a man who uses a hot fire to make gold and silver pure. He will make the Levites clean and pure. He will remove their dirt. Then they can offer proper sacrifices to the Lord."
+    },
+    {
+      "verse": "4",
+      "text": "The Lord will accept the gifts that the people of Judah and Jerusalem offer to him. He will be happy with them as he was in earlier times. The purpose of the hot fire is not to destroy the metal but to make it pure. So on this difficult day the Lord will remove from people everything that is not good."
+    },
+    {
+      "verse": "5",
+      "text": "At that time, I will come among you as your judge. I will speak clearly against those who have done wrong things. I will punish the magicians, the adulterers and those who tell lies against other people. I will punish those people who are cruel to their workers, or they deceive widows or children who have no family. And I will punish those who do not help foreigners who live among them. People who do those things show that they do not respect me.’ That is what the Lord Almighty says. The Israelites are robbing God"
+    },
+    {
+      "verse": "6",
+      "text": "‘I am the Lord and I do not change. Because of my promises to my people, I have not destroyed you, descendants of Jacob."
+    },
+    {
+      "verse": "7",
+      "text": "I have told you my commands. But you do not listen to me any longer. You have not obeyed me, even since the time of your ancestors. Now, return to me! Then I will return to bless you.’ That is what the Lord Almighty says. ‘But you ask, “How do we return to you?”"
+    },
+    {
+      "verse": "8",
+      "text": "I say to you, “A man should not rob God. But you are robbing me.” But you ask, “How do we rob you?” I say, “You do not give to me the tithes and the offerings that you should give.”"
+    },
+    {
+      "verse": "9",
+      "text": "Yes, all of you are robbing me. The whole nation of Israel is guilty. So you will receive the punishment of a curse."
+    },
+    {
+      "verse": "10",
+      "text": "Now you must bring the whole tithe that belongs to me. Store it in my temple, so that there will be food in my house. Obey me and then see what I will do.’ The Israelites had to give some of their crops to the temple to take care of it. They also had to give something to the priests and the Levites, because they worked there. Each year they gave one part in ten (a tithe) of the crops and money that they had received. They could give more if they wanted to. The temple is the place where the Israelites worshipped God. That is what the Lord Almighty says. ‘You will see how much I will bless you! You will not have enough room to store all the good things that I will give to you. I will pour blessings out of the sky like rain."
+    },
+    {
+      "verse": "11",
+      "text": "I will stop insects from eating your crops. The grapes will not fall from your vines before they are ready to eat."
+    },
+    {
+      "verse": "12",
+      "text": "You will be happy to live in your land. The people of all the other nations will see that God has blessed you.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "13",
+      "text": "The Lord says, ‘You have spoken bad words against me. But you ask, “What have we said against you?”"
+    },
+    {
+      "verse": "14",
+      "text": "You have said, “We serve God, but that has not helped us at all. We are careful to do what he tells us to do. When we do wrong things, we have sad faces to show the Lord Almighty that we are sorry."
+    },
+    {
+      "verse": "15",
+      "text": "But it is proud people that God blesses! Yes, it is the people who do evil things who become rich! God does not even punish people who like to test him. That is what we think.” ’ The great day of the Lord"
+    },
+    {
+      "verse": "16",
+      "text": "Then the people who respected the Lord talked to each other. The Lord listened to what they said. While the Lord watched, someone wrote names on a scroll. Those were the names of the people who worshipped the Lord and respected the Lord's name. They wrote down their names so that people would remember them."
+    },
+    {
+      "verse": "17",
+      "text": "The Lord Almighty says, ‘These people will belong to me. One day I will come to judge everyone. At that time I will bring together all my own special people. I will not punish them. I will take care of them, like a father takes care of his son who serves him."
+    },
+    {
+      "verse": "18",
+      "text": "Because of that, you will see again that I am kind to good people, but I punish wicked people. I show the difference between people who serve me well and those who do not.’ Print... Use screen font size Show All Comments Malachi 2Malachi 4 Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ],
+  "4": [
+    {
+      "verse": "1",
+      "text": "‘The great day when I come to judge people will certainly happen. Punishment will come like the great fire of a hot oven. It will destroy all the proud people who do evil things. It will completely destroy them, like a fire that destroys dry grass. Nothing will remain.’ That is what the Lord Almighty says."
+    },
+    {
+      "verse": "2",
+      "text": "‘But it will be different for you who respect my name. My power to make you well again will come to you. It will be like the sun that rises to shine on you. When that happens, you will be very happy. You will jump up and down like young cows when someone lets them go free."
+    },
+    {
+      "verse": "3",
+      "text": "Then you will walk over the wicked people. They will be like ashes under your feet. That will happen on the day when I do these things.’ The sun can burn with a strong heat and it can cause a fire. But the sun can also make people well. When Jesus appears on the great day of the Lord, people who worship the Lord will become completely well. They will be very happy. That is what the Lord Almighty says."
+    },
+    {
+      "verse": "4",
+      "text": "‘Remember the rules that I gave to my servant Moses at Sinai mountain. Those rules and laws were for all the Israelites to obey. See Exodus"
+    },
+    {
+      "verse": "5",
+      "text": "Look! I will send my prophet Elijah to you. He will come before that great day of the Lord arrives. That will be a day that makes people afraid."
+    },
+    {
+      "verse": "6",
+      "text": "He will speak my message, so that fathers and their children return together to me. Then I will not have to come and bring punishment on the land.’ Elijah was a prophet who spoke God's message to the people. See 1 Kings Here, God promises that another ‘Elijah’ will come before the day of the Lord. About 460 years after Malachi wrote his book, John the Baptist was born. People thought that he was like Elijah. He prepared the way for Jesus to come. return together to me or return to each other as friends. Print... Use screen font size Show All Comments Malachi 3Matthew Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ]
+};

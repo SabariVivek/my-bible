@@ -1,0 +1,104 @@
+module.exports = {
+  "1": [
+    {
+      "verse": "1",
+      "text": "This letter is from me, Paul. I am in prison because I serve Christ Jesus. Our Christian friend Timothy is here with me. We are writing to you, Philemon. You are our friend, and we love you. You work on behalf of Christ, as we do."
+    },
+    {
+      "verse": "2",
+      "text": "We say ‘hello’ also to Apphia, who is like a sister to us. And we say ‘hello’ to Archippus, who serves Christ like a soldier, as we do. We also say ‘hello’ to the group of Christians who meet in your home."
+    },
+    {
+      "verse": "3",
+      "text": "I pray that God, our Father, and the Lord Jesus Christ will continue to help you. I pray that they will give you peace in your minds. Paul thanks God because of Philemon"
+    },
+    {
+      "verse": "4",
+      "text": "When I pray for you, I always thank my God when I think about you."
+    },
+    {
+      "verse": "5",
+      "text": "I thank God because people tell me good things about you. You love all God's people and you trust in the Lord Jesus."
+    },
+    {
+      "verse": "6",
+      "text": "We each have the same faith in Christ as we serve him. So I pray that, as a result, you will become strong. I pray that you will understand more about every good thing that is ours because of Christ."
+    },
+    {
+      "verse": "7",
+      "text": "My friend, you have helped God's people to feel stronger. Your love for them has made me very happy. It makes me feel stronger too. Paul asks Philemon to help Onesimus"
+    },
+    {
+      "verse": "8",
+      "text": "I want to ask you to do something. I am sure that Christ has given me authority. So I could tell you strongly what you should do."
+    },
+    {
+      "verse": "9",
+      "text": "But instead, because of love, I will ask you, ‘Please do it.’ I, Paul, am an old man. Also, I am in prison now because I serve Christ Jesus."
+    },
+    {
+      "verse": "10",
+      "text": "So I am asking you to help Onesimus, who is like my own child. I taught him about Jesus while I was in prison. Because of that, he now has life with God. I am like his father."
+    },
+    {
+      "verse": "11",
+      "text": "Before he trusted Jesus, Onesimus did not really help you. But now he can help both you and me. The name Onesimus means ‘good helper’."
+    },
+    {
+      "verse": "12",
+      "text": "So I am now sending him back to you. Because I love him, it is like I am sending you my own heart."
+    },
+    {
+      "verse": "13",
+      "text": "I wanted to keep him here with me, to help me on your behalf. I am in prison here because I taught people the good news about Jesus."
+    },
+    {
+      "verse": "14",
+      "text": "But I did not want to do anything unless you agreed. I wanted you to help me because you really want to help. I did not want to make you do it."
+    },
+    {
+      "verse": "15",
+      "text": "When Onesimus ran away from you, perhaps God let that happen. Onesimus left you for a short time so that you could now have him back for ever."
+    },
+    {
+      "verse": "16",
+      "text": "You can have him back again not only as your slave. He will be something much better than a slave for you. He will be like a brother that you love. I love him very much. But now you will love him even more. He will serve you as a slave, but he will also serve the Lord, as you do."
+    },
+    {
+      "verse": "17",
+      "text": "I am your friend. Together we serve God. If you agree with that, please be kind to Onesimus. Accept him in the same way that you would accept me."
+    },
+    {
+      "verse": "18",
+      "text": "If Onesimus has done anything wrong to you, I will make it right again. If he took money from you, I will pay it back."
+    },
+    {
+      "verse": "19",
+      "text": "I, Paul, am writing this myself: ‘I will pay the money back to you.’ But you should remember what I have given to you already. You have life with God because I told you the good news about Jesus."
+    },
+    {
+      "verse": "20",
+      "text": "Yes, my friend, please help me now, because we both belong to the Lord. As a Christian friend, help me to feel happier."
+    },
+    {
+      "verse": "21",
+      "text": "I am sure that you will do what I ask. That is why I have written this letter to you. I know that you will do even more than this to help me."
+    },
+    {
+      "verse": "22",
+      "text": "I want to ask you one more thing. Please prepare a room in your home where I can stay. I know that all of you are praying for God to let me go free. As a result, I hope that I will be able to visit you again. Paul finishes his letter"
+    },
+    {
+      "verse": "23",
+      "text": "Epaphras is also here in prison with me because he serves Christ Jesus. He says ‘hello’ to you."
+    },
+    {
+      "verse": "24",
+      "text": "Mark, Aristarchus, Demas and Luke, who work with me here, also say ‘hello’ to you."
+    },
+    {
+      "verse": "25",
+      "text": "I pray that the Lord Jesus Christ will continue to be very kind to all of you. Print... Use screen font size Show All Comments Philemon IntroductionHebrews Introduction Find us on social https://www.facebook.com/BibleEasyEnglish/ &copy; MissionAssist 2025 Charitable Incorporated Organisation 1162807 Design by Tiger Finch Creatives Email us: ask@easyenglish.bibleFAQSite MapComment and register for newsCopyright and Licensing"
+    }
+  ]
+};
