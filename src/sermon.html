@@ -1138,6 +1138,7 @@
             flex-shrink: 0;
             position: absolute;
             right: 16px;
+            color: inherit;
         }
 
         .sermon-form-favorite-btn:hover {
@@ -1146,18 +1147,37 @@
         }
 
         .sermon-form-favorite-btn.active {
-            background: #ff4444;
-            color: #ffffff;
             animation: heartBeat 0.6s ease-in-out;
         }
 
         body.dark-theme .sermon-form-favorite-btn {
             background: #333;
+            color: inherit;
         }
 
         body.dark-theme .sermon-form-favorite-btn.active {
-            background: #ff4444;
-            color: #ffffff;
+            background: #333;
+            color: inherit;
+        }
+
+        .sermon-form-favorite-btn .heart-empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sermon-form-favorite-btn .heart-filled {
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sermon-form-favorite-btn.active .heart-empty {
+            display: none;
+        }
+
+        .sermon-form-favorite-btn.active .heart-filled {
+            display: flex;
         }
 
         .sermon-detail-close-btn {
@@ -2055,7 +2075,7 @@
         <div class="sermon-sheet-header">
             <h2 class="sermon-sheet-title">Add Sermon</h2>
             <button class="sermon-form-favorite-btn" id="sermon-form-favorite-btn" title="Add to favorites" style="display: none;">
-                ❤️
+                <span class="heart-empty">🤍</span><span class="heart-filled">❤️</span>
             </button>
         </div>
         <div class="sermon-sheet-content">
@@ -2985,13 +3005,15 @@
             try {
                 const newFavoriteStatus = !sermon.is_favorite;
                 
-                // Update Supabase
-                const { error } = await supabase
-                    .from('sermons')
-                    .update({ is_favorite: newFavoriteStatus })
-                    .eq('id', sermon.id);
+                // Update Supabase if available
+                if (supabase && sermon.id) {
+                    const { error } = await supabase
+                        .from('sermons')
+                        .update({ is_favorite: newFavoriteStatus })
+                        .eq('id', sermon.id);
 
-                if (error) throw error;
+                    if (error) throw error;
+                }
 
                 // Update local data
                 sermon.is_favorite = newFavoriteStatus;
@@ -3019,17 +3041,24 @@
 
             try {
                 const newFavoriteStatus = !sermon.is_favorite;
+                let supabaseError = false;
                 
-                // Update Supabase
-                const { error } = await supabase
-                    .from('sermons')
-                    .update({ is_favorite: newFavoriteStatus })
-                    .eq('id', sermon.id);
+                // Update Supabase if available and sermon has an ID
+                if (supabase && sermon.id) {
+                    const { error } = await supabase
+                        .from('sermons')
+                        .update({ is_favorite: newFavoriteStatus })
+                        .eq('id', sermon.id);
 
-                if (error) throw error;
+                    if (error) {
+                        console.error('Supabase update error:', error);
+                        supabaseError = true;
+                    }
+                }
 
                 // Update local data
                 sermon.is_favorite = newFavoriteStatus;
+                saveSermons();  // Save to localStorage
 
                 // Update button UI
                 const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
@@ -3049,6 +3078,11 @@
                     } else {
                         sermonItem.classList.remove('favorite');
                     }
+                }
+
+                // Only show error if Supabase failed but local update succeeded
+                if (supabaseError) {
+                    console.warn('Favorite updated locally but failed to sync to Supabase');
                 }
 
             } catch (error) {
@@ -3103,7 +3137,7 @@
                 } else {
                     favoriteBtn.classList.remove('active');
                 }
-                favoriteBtn.onclick = () => toggleSermonFavoriteForm(index);
+                favoriteBtn.onclick = () => toggleSermonFavoriteForm(currentEditingIndex);
             }
             
             document.getElementById('sermon-bottom-sheet').classList.add('active');
@@ -3111,6 +3145,20 @@
         }
 
         let currentEditingIndex = null;
+        let newSermonIsFavorite = false;  // Track favorite status for new sermons
+
+        // Toggle favorite for new sermon being added
+        function toggleNewSermonFavorite() {
+            newSermonIsFavorite = !newSermonIsFavorite;
+            const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
+            if (favoriteBtn) {
+                if (newSermonIsFavorite) {
+                    favoriteBtn.classList.add('active');
+                } else {
+                    favoriteBtn.classList.remove('active');
+                }
+            }
+        }
 
         // Open verse in modal popup
         // Map book names to database book_file identifiers
@@ -3950,11 +3998,13 @@
             // Reset title to "Add Sermon"
             document.querySelector('.sermon-sheet-title').textContent = 'Add Sermon';
             
-            // Hide favorite button for new sermons
+            // Show favorite button for new sermons (unfilled by default)
             const favoriteBtn = document.getElementById('sermon-form-favorite-btn');
             if (favoriteBtn) {
-                favoriteBtn.style.display = 'none';
+                favoriteBtn.style.display = 'flex';
                 favoriteBtn.classList.remove('active');
+                // Use a temporary index tracker for new sermons
+                favoriteBtn.onclick = () => toggleNewSermonFavorite();
             }
             
             overlay.classList.add('active');
@@ -4142,7 +4192,7 @@
                     date: dateIso,
                     verses: selectedSermonVerses,
                     content: '', // For future use
-                    is_favorite: false,
+                    is_favorite: newSermonIsFavorite,
                     _synced: false  // Mark for syncing
                 };
                 sermons.unshift(newSermon);
@@ -4151,6 +4201,7 @@
             saveSermons();
             renderSermons();
             closeBottomSheet();
+            newSermonIsFavorite = false;  // Reset for next add
         });
 
         // Allow Enter key to save
