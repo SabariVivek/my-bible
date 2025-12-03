@@ -4249,6 +4249,8 @@
             newSermonIsFavorite = false;
             overlay.classList.add('active');
             bottomSheet.classList.add('active');
+            // Disable scroll on main content
+            document.querySelector('.sermon-content').style.overflow = 'hidden';
             titleInput.focus();
         }
 
@@ -4305,6 +4307,8 @@
             const favoritesSheet = document.getElementById('sermon-favorites-sheet');
             favoritesOverlay.classList.add('active');
             favoritesSheet.classList.add('active');
+            // Disable scroll on main content
+            document.querySelector('.sermon-content').style.overflow = 'hidden';
         }
 
         // Close favorites sheet
@@ -4313,6 +4317,8 @@
             const favoritesSheet = document.getElementById('sermon-favorites-sheet');
             favoritesOverlay.classList.remove('active');
             favoritesSheet.classList.remove('active');
+            // Re-enable scroll on main content
+            document.querySelector('.sermon-content').style.overflow = 'auto';
         }
 
         // Close favorites sheet on overlay click
@@ -4346,6 +4352,8 @@
         function closeBottomSheet() {
             overlay.classList.remove('active');
             bottomSheet.classList.remove('active');
+            // Re-enable scroll on main content
+            document.querySelector('.sermon-content').style.overflow = 'auto';
             // Reset form state and drag height
             currentEditingIndex = null;
             selectedSermonDate = null;
