@@ -4630,6 +4630,31 @@
         // Close favorites sheet on overlay click
         document.getElementById('sermon-favorites-overlay').addEventListener('click', closeFavoritesSheet);
 
+        // Bottom sheet swipe-down to close
+        let sheetStartY = 0;
+        const favoritesSheet = document.getElementById('sermon-favorites-sheet');
+        const favoritesContent = favoritesSheet ? favoritesSheet.querySelector('.sermon-favorites-list') : null;
+        
+        if (favoritesSheet) {
+            favoritesSheet.addEventListener('touchstart', (e) => {
+                sheetStartY = e.touches[0].clientY;
+            }, false);
+
+            favoritesSheet.addEventListener('touchend', (e) => {
+                const sheetEndY = e.changedTouches[0].clientY;
+                const diffY = sheetEndY - sheetStartY;
+                
+                // If swiped down more than 50px, close the sheet
+                if (diffY > 50) {
+                    closeFavoritesSheet();
+                }
+                // If at top of content and trying to scroll up, close the sheet
+                else if (diffY < -20 && favoritesContent && favoritesContent.scrollTop === 0) {
+                    closeFavoritesSheet();
+                }
+            }, false);
+        }
+
         // Clear error on title input
         titleInput.addEventListener('input', () => {
             if (titleInput.value.trim()) {
@@ -4718,6 +4743,31 @@
             }
         }, false);
 
+        // Swipe down anywhere on the sheet to close (complement to drag handle)
+        let addSheetStartY = 0;
+        const addSheetContent = bottomSheet.querySelector('.sermon-sheet-content');
+        
+        bottomSheet.addEventListener('touchstart', (e) => {
+            // Only track if not on drag handle
+            if (!e.target.closest('#sermon-sheet-drag-handle')) {
+                addSheetStartY = e.touches[0].clientY;
+            }
+        }, false);
+
+        bottomSheet.addEventListener('touchend', (e) => {
+            const sheetEndY = e.changedTouches[0].clientY;
+            const diffY = sheetEndY - addSheetStartY;
+            
+            // If swiped down more than 50px, close the sheet
+            if (diffY > 50 && !e.target.closest('#sermon-sheet-drag-handle')) {
+                closeBottomSheet();
+            }
+            // If at top of content and trying to scroll up, close the sheet
+            else if (diffY < -20 && addSheetContent && addSheetContent.scrollTop === 0 && !e.target.closest('#sermon-sheet-drag-handle')) {
+                closeBottomSheet();
+            }
+        }, false);
+
         // Drag to expand/collapse functionality for detail sheet
         let detailDragStartY = 0;
         let detailDragStartHeight = 0;
@@ -4765,6 +4815,31 @@
 
         // Initialize detail sheet drag
         initializeDetailSheetDrag();
+
+        // Swipe down anywhere on the detail sheet to close (complement to drag handle)
+        let detailSheetStartY = 0;
+        const detailSheetContent = detailSheet.querySelector('.sermon-detail-content');
+        
+        detailSheet.addEventListener('touchstart', (e) => {
+            // Only track if not on drag handle or header
+            if (!e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
+                detailSheetStartY = e.touches[0].clientY;
+            }
+        }, false);
+
+        detailSheet.addEventListener('touchend', (e) => {
+            const sheetEndY = e.changedTouches[0].clientY;
+            const diffY = sheetEndY - detailSheetStartY;
+            
+            // If swiped down more than 50px, close the sheet
+            if (diffY > 50 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
+                closeSermonDetail();
+            }
+            // If at top of content and trying to scroll up, close the sheet
+            else if (diffY < -20 && detailSheetContent && detailSheetContent.scrollTop === 0 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
+                closeSermonDetail();
+            }
+        }, false);
 
         cancelBtn.addEventListener('click', closeBottomSheet);
         overlay.addEventListener('click', closeBottomSheet);
