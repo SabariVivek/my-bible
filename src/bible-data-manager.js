@@ -62,6 +62,11 @@ class BibleDataManager {
         }
         // Try to load the specific file dynamically
         try {
+            // Skip if running in file:// protocol to avoid random fetch failures
+            if (window.location.protocol === 'file:') {
+                return null;
+            }
+            
             await new Promise((resolve, reject) => {
                 const script = document.createElement('script');
                 script.src = `./data/bible/${language}/${bookFile}.js`;
@@ -80,6 +85,7 @@ class BibleDataManager {
                 return window[varName];
             }
         } catch (error) {
+            // Silent fail - return null and let fallback handlers take over
         }
         return null;
     }

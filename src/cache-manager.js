@@ -43,6 +43,11 @@ class CacheManager {
     // Prevent multiple simultaneous checks
     if (this.isUpdating) return;
     
+    // Skip check if running locally (file:// protocol)
+    if (window.location.protocol === 'file:') {
+      return;
+    }
+    
     // Don't check too frequently (respects 5 min interval)
     const lastCheck = localStorage.getItem(this.LAST_CHECK_KEY);
     if (lastCheck && Date.now() - parseInt(lastCheck) < this.CHECK_INTERVAL) {
