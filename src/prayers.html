@@ -2031,7 +2031,8 @@
 
         // Store prayers in localStorage
         let prayers = JSON.parse(localStorage.getItem('prayers')) || [];
-        let currentCategory = 'Family'; // Track current active tab
+        let currentCategory = 'Family'; // Track current active tab in main list
+        let sheetCategory = 'Family'; // Track current category in add prayer sheet
         let currentMembers = []; // Track members being added
 
         // Get next prayer ID (starting from 10001)
@@ -2163,7 +2164,7 @@
                 let badge = '';
                 let isValid = true;
                 
-                if (currentCategory === 'Family') {
+                if (sheetCategory === 'Family') {
                     prayerName = prayerNameInput.value.trim();
                     const familyNameGroup = prayerNameInput.closest('.prayers-input-group');
                     if (!prayerName) {
@@ -2172,7 +2173,7 @@
                     } else {
                         familyNameGroup.classList.remove('error');
                     }
-                } else if (currentCategory === 'Others') {
+                } else if (sheetCategory === 'Others') {
                     prayerName = document.getElementById('prayer-name-others-input').value.trim();
                     const othersNameGroup = document.getElementById('prayer-name-others-input').closest('.prayers-input-group');
                     if (!prayerName) {
@@ -2183,7 +2184,7 @@
                     }
                     description = document.getElementById('prayer-description-input').value.trim();
                     badge = document.getElementById('prayer-badge-input').value.trim();
-                } else if (currentCategory === 'World') {
+                } else if (sheetCategory === 'World') {
                     prayerName = document.getElementById('prayer-name-world-input').value.trim();
                     const worldNameGroup = document.getElementById('prayer-name-world-input').closest('.prayers-input-group');
                     if (!prayerName) {
@@ -2209,7 +2210,7 @@
                     const prayerIndex = prayers.findIndex(p => p.id === editingPrayerId);
                     if (prayerIndex !== -1) {
                         prayers[prayerIndex].name = prayerName;
-                        if (currentCategory === 'Family') {
+                        if (sheetCategory === 'Family') {
                             prayers[prayerIndex].members = [...currentMembers];
                             prayers[prayerIndex].description = undefined;
                             prayers[prayerIndex].badge = undefined;
@@ -2227,7 +2228,7 @@
                                 prayer_name: prayerName,
                                 description: description || null,
                                 badge: badge || null,
-                                members: currentCategory === 'Family' ? [...currentMembers] : null
+                                members: sheetCategory === 'Family' ? [...currentMembers] : null
                             }).then(() => {
                                 console.log('Prayer updated in Supabase');
                             }).catch(error => {
@@ -2248,16 +2249,16 @@
                     const newPrayer = {
                         id: getNextPrayerId(),
                         name: prayerName,
-                        category: currentCategory,
+                        category: sheetCategory,
                         createdAt: new Date().toISOString()
                     };
 
                     // Add category-specific fields
-                    if (currentCategory === 'Family') {
+                    if (sheetCategory === 'Family') {
                         if (currentMembers.length > 0) {
                             newPrayer.members = [...currentMembers];
                         }
-                    } else if (currentCategory === 'Others' || currentCategory === 'World') {
+                    } else if (sheetCategory === 'Others' || sheetCategory === 'World') {
                         if (description) newPrayer.description = description;
                         if (badge) newPrayer.badge = badge;
                     }
@@ -2271,15 +2272,19 @@
                     if (window.PrayerDB) {
                         window.PrayerDB.createPrayer(
                             prayerName,
-                            currentCategory,
+                            sheetCategory,
                             description || null,
                             badge || null,
-                            currentCategory === 'Family' ? [...currentMembers] : null
+                            sheetCategory === 'Family' ? [...currentMembers] : null
                         ).then(supabasePrayer => {
                             // Update local ID with Supabase ID
-                            newPrayer.id = supabasePrayer.id;
-                            prayers[prayers.length - 1].id = supabasePrayer.id;
+                            const localPrayer = prayers.find(p => p.id === newPrayer.id);
+                            if (localPrayer) {
+                                localPrayer.id = supabasePrayer.id;
+                            }
                             localStorage.setItem('prayers', JSON.stringify(prayers));
+                            // Re-render to update the DOM with the correct ID
+                            renderPrayersList();
                             console.log('Prayer saved to Supabase with ID:', supabasePrayer.id);
                         }).catch(error => {
                             console.error('Error saving prayer to Supabase:', error);
@@ -2526,6 +2531,7 @@
                 const inputGroups = document.querySelectorAll('.prayers-input-group.error');
                 inputGroups.forEach(group => group.classList.remove('error'));
                 // Reset sheet tabs to the current category when adding new prayer
+                sheetCategory = categoryToShow;
                 switchSheetCategory(categoryToShow);
             }
             prayerNameInput.focus();
@@ -2576,7 +2582,7 @@
         sheetTabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const category = tab.dataset.category;
-                currentCategory = category;
+                sheetCategory = category;
                 switchSheetCategory(category);
             });
         });
