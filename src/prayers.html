@@ -3003,45 +3003,47 @@
             // Show loader while loading content
             showLoader();
             
-            // Check if user is authenticated with Supabase
+            // Always try to load from Supabase (works with unauthenticated access)
             if (window.PrayerDB && window.supabase) {
                 try {
-                    const { data: { user } } = await window.supabase.auth.getUser();
-                    if (user) {
-                        currentUserId = user.id;
-                        useSupabase = true;
-                        console.log('Supabase user authenticated:', user.id);
-                        
-                        // Load all prayers from Supabase and sync with local storage
-                        try {
-                            const supabasePrayers = await window.PrayerDB.loadPrayersFromSupabase();
-                            if (supabasePrayers && supabasePrayers.length > 0) {
-                                // Merge with local prayers (Supabase data takes precedence)
-                                const localPrayers = JSON.parse(localStorage.getItem('prayers')) || [];
-                                const mergedPrayers = [...localPrayers];
-                                
-                                // Add/update prayers from Supabase
-                                for (const supabasePrayer of supabasePrayers) {
-                                    const existingIndex = mergedPrayers.findIndex(p => p.id === supabasePrayer.id);
-                                    if (existingIndex !== -1) {
-                                        mergedPrayers[existingIndex] = supabasePrayer;
-                                    } else {
-                                        mergedPrayers.push(supabasePrayer);
-                                    }
-                                }
-                                
-                                prayers = mergedPrayers;
-                                localStorage.setItem('prayers', JSON.stringify(prayers));
-                                console.log('Loaded', supabasePrayers.length, 'prayers from Supabase');
-                            }
-                        } catch (error) {
-                            console.warn('Error loading from Supabase, using local data:', error);
+                    // Check if user is authenticated (optional, since RLS allows unauthenticated access)
+                    try {
+                        const { data: { user } } = await window.supabase.auth.getUser();
+                        if (user) {
+                            currentUserId = user.id;
+                            useSupabase = true;
+                            console.log('Supabase user authenticated:', user.id);
                         }
+                    } catch (authError) {
+                        console.log('Not authenticated, will use unauthenticated access');
+                    }
+                    
+                    // Load all prayers from Supabase (works for both authenticated and unauthenticated users)
+                    const supabasePrayers = await window.PrayerDB.loadPrayersFromSupabase();
+                    if (supabasePrayers && supabasePrayers.length > 0) {
+                        // Merge with local prayers (Supabase data takes precedence)
+                        const localPrayers = JSON.parse(localStorage.getItem('prayers')) || [];
+                        const mergedPrayers = [...localPrayers];
+                        
+                        // Add/update prayers from Supabase
+                        for (const supabasePrayer of supabasePrayers) {
+                            const existingIndex = mergedPrayers.findIndex(p => p.id === supabasePrayer.id);
+                            if (existingIndex !== -1) {
+                                mergedPrayers[existingIndex] = supabasePrayer;
+                            } else {
+                                mergedPrayers.push(supabasePrayer);
+                            }
+                        }
+                        
+                        prayers = mergedPrayers;
+                        localStorage.setItem('prayers', JSON.stringify(prayers));
+                        console.log('Loaded', supabasePrayers.length, 'prayers from Supabase');
+                        useSupabase = true; // Enable Supabase syncing if we successfully loaded
                     } else {
-                        console.log('No authenticated user, using local storage only');
+                        console.log('No prayers found in Supabase');
                     }
                 } catch (error) {
-                    console.warn('Supabase auth check failed:', error);
+                    console.warn('Error loading from Supabase:', error);
                 }
             }
             
