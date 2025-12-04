@@ -200,6 +200,25 @@ function initializeHistoryManagement() {
     history.replaceState({ page: 'bible' }, '', window.location.href);
     // Handle browser back button
     window.addEventListener('popstate', (event) => {
+        // Check if prayers sheet is open
+        const prayersFrame = document.querySelector('iframe[src="src/prayers.html"]');
+        if (prayersFrame) {
+            try {
+                const prayersDoc = prayersFrame.contentDocument || prayersFrame.contentWindow.document;
+                const bottomSheet = prayersDoc.querySelector('.prayers-bottom-sheet');
+                const sheetOverlay = prayersDoc.querySelector('.prayers-bottom-sheet-overlay');
+                
+                // If sheet is open, close it and prevent back navigation
+                if (bottomSheet && bottomSheet.classList.contains('active')) {
+                    bottomSheet.classList.remove('active');
+                    sheetOverlay.classList.remove('active');
+                    return;
+                }
+            } catch (e) {
+                // Frame access denied, continue with normal navigation
+            }
+        }
+        
         // Skip admin pages in history
         if (event.state && event.state.adminPage) {
             history.back();

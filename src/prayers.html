@@ -318,7 +318,7 @@
         }
 
         body.dark-theme .prayers-sheet-title {
-            color: #f0f0f0;
+            color: #78aaff;
         }
 
         /* Sheet tabs for category switching */
@@ -2654,6 +2654,30 @@
             sheetOverlay.addEventListener('click', () => {
                 closeAddPrayerSheet();
             });
+        }
+
+        // Bottom sheet swipe-down to close
+        let sheetStartY = 0;
+        if (bottomSheet) {
+            const sheetContent = bottomSheet.querySelector('.prayers-sheet-content');
+            
+            bottomSheet.addEventListener('touchstart', (e) => {
+                sheetStartY = e.touches[0].clientY;
+            }, false);
+
+            bottomSheet.addEventListener('touchend', (e) => {
+                const sheetEndY = e.changedTouches[0].clientY;
+                const diffY = sheetEndY - sheetStartY;
+                
+                // If swiped down more than 50px, close the sheet
+                if (diffY > 50) {
+                    closeAddPrayerSheet();
+                }
+                // If at top of content and trying to scroll up, close the sheet
+                else if (diffY < -20 && sheetContent && sheetContent.scrollTop === 0) {
+                    closeAddPrayerSheet();
+                }
+            }, false);
         }
 
         // Prayer Detail Sheet Functions
