@@ -388,7 +388,7 @@
             flex-direction: column;
             gap: 0.5rem;
             position: relative;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .prayers-input-label {
@@ -680,24 +680,23 @@
 
         /* Input with icon */
         .prayers-input-with-icon {
-            position: relative;
             display: flex;
             align-items: center;
             width: 100%;
+            gap: 8px;
         }
 
         .prayers-input-with-icon .prayers-input-text {
-            width: 100%;
-            padding-right: 40px;
+            flex: 1;
+            padding-right: 12px;
             padding-left: 12px;
             box-sizing: border-box;
         }
 
         .prayers-input-icon-btn {
-            position: absolute;
-            right: 8px;
             background: #e3f2fd;
             border: none;
+            flex-shrink: 0;
             color: #78aaff;
             font-size: 20px;
             cursor: pointer;
@@ -766,14 +765,63 @@
         .prayers-members-list {
             margin-top: 12px;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .prayers-member-tag-wrapper-container {
+            display: flex;
+            align-items: flex-start;
             gap: 8px;
         }
 
         .prayers-member-tag-wrapper {
-            display: inline-block;
-            margin-right: 8px;
-            margin-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            transition: background 0.2s, box-shadow 0.2s;
+            flex: 1;
+        }
+
+        body.dark-theme .prayers-member-tag-wrapper {
+            background: #252525;
+            border-color: #3a3a3a;
+        }
+
+        .prayers-member-tag-wrapper:hover {
+            background: #f3f3f3;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.3), inset 0 0 8px rgba(120, 170, 255, 0.1);
+        }
+
+        body.dark-theme .prayers-member-tag-wrapper:hover {
+            background: #2d2d2d;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        .prayers-member-remove-btn {
+            background: none;
+            border: none;
+            color: #78aaff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s;
+            margin-top: 2px;
+        }
+
+        .prayers-member-remove-btn:hover {
+            opacity: 0.7;
+        }
+
+        body.dark-theme .prayers-member-remove-btn {
+            color: #8ab8ff;
         }
 
         .prayers-member-tag {
@@ -811,6 +859,13 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 0;
+        }
+
+        .prayers-member-badges-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
         }
 
         .prayers-family-badge-tag {
@@ -1045,6 +1100,26 @@
         body.dark-theme .prayers-detail-member-card:hover {
             background: #2d2d2d;
             box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        .prayers-detail-member {
+            padding: 1rem 0 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .prayers-member-separator {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right, transparent, rgba(120, 170, 255, 0.3), transparent);
+            margin: 0;
+        }
+
+        body.dark-theme .prayers-member-separator {
+            background: linear-gradient(to right, transparent, rgba(120, 170, 255, 0.2), transparent);
         }
 
         .prayers-detail-member-icon {
@@ -2121,12 +2196,14 @@
                     ? `<div class="prayers-family-badges-list">${member.badges.map(badge => `<span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>`).join('')}</div>`
                     : '';
                 return `
-                    <div class="prayers-member-tag-wrapper">
-                        <div class="prayers-member-tag" onclick="selectMemberForBadges(${index})" style="cursor: pointer;">
-                            <span>${escapeHtml(member.name)}</span>
-                            <button onclick="removeMember(event, ${index})" type="button">×</button>
+                    <div class="prayers-member-tag-wrapper-container">
+                        <div class="prayers-member-tag-wrapper" onclick="selectMemberForBadges(${index})" style="cursor: pointer;">
+                            <div class="prayers-member-tag">
+                                <span>${escapeHtml(member.name)}</span>
+                            </div>
+                            ${memberBadgesHTML}
                         </div>
-                        ${memberBadgesHTML}
+                        <button class="prayers-member-remove-btn" onclick="removeMember(event, ${index})" type="button">×</button>
                     </div>
                 `;
             }).join('');
@@ -2439,19 +2516,21 @@
             // Build content HTML based on category
             let contentHTML = '';
             if (prayer.category === 'Family') {
-                // Show members as cards with their individual badges
+                // Show members with fancy separator instead of cards
                 if (prayer.members && prayer.members.length > 0) {
                     contentHTML = `
                         <div class="prayers-detail-members-list">
-                            ${prayer.members.map(member => {
+                            ${prayer.members.map((member, idx) => {
                                 const memberBadgesHTML = member.badges && member.badges.length > 0
                                     ? `<div class="prayers-family-badges-list">${member.badges.map(badge => `<span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>`).join('')}</div>`
                                     : '';
+                                const separator = idx < prayer.members.length - 1 ? '<div class="prayers-member-separator"></div>' : '';
                                 return `
-                                    <div class="prayers-detail-member-card">
+                                    <div class="prayers-detail-member">
                                         <div class="prayers-detail-member-name">${escapeHtml(member.name)}</div>
                                         ${memberBadgesHTML}
                                     </div>
+                                    ${separator}
                                 `;
                             }).join('')}
                         </div>
