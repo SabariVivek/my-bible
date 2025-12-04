@@ -6584,6 +6584,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightCharacterOption = document.getElementById('right-character-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightSermonOption = document.getElementById('right-sermon-option');
+    const rightPrayersOption = document.getElementById('right-prayers-option');
     const rightCultOption = document.getElementById('right-cult-option');
     // Initialize right sidebar (hidden by default)
     if (rightSidebar) {
@@ -6707,6 +6708,14 @@ document.addEventListener('DOMContentLoaded', () => {
             closeRightSidebar();
             const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
             window.location.href = `src/sermon.html?cb=${cacheBuster}`;
+        });
+    }
+    // Prayers option - navigate to Prayers page
+    if (rightPrayersOption) {
+        rightPrayersOption.addEventListener('click', () => {
+            closeRightSidebar();
+            const cacheBuster = window.CACHE_BUSTER || new Date().getTime();
+            window.location.href = `src/prayers.html?cb=${cacheBuster}`;
         });
     }
     // WMSCOG Cult option - navigate to secret page

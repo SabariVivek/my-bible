@@ -1,0 +1,2251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2a2a2a">
+    <title>Prayers</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            touch-action: manipulation;
+        }
+
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .prayers-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            background-color: #ffffff;
+            transition: filter 0.3s ease;
+        }
+
+        .prayers-container.blurred {
+            filter: blur(4px);
+            pointer-events: none;
+        }
+
+        body.dark-theme .prayers-container {
+            background-color: #1a1a1a;
+        }
+
+        /* Header styles matching Sermon page */
+        .prayers-top-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 16px;
+            background: #2a2a2a;
+            border-bottom: 1px solid #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin: 0;
+            transition: background 0.3s ease;
+        }
+
+        body.light-theme .prayers-top-nav {
+            background: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .prayers-back-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: none;
+            cursor: pointer;
+            color: #ffffff;
+            flex-shrink: 0;
+            font-size: 20px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            background: none;
+        }
+
+        .prayers-back-btn:hover {
+            opacity: 0.8;
+        }
+
+        .prayers-back-btn:active {
+            opacity: 0.6;
+        }
+
+        body.light-theme .prayers-back-btn {
+            color: #333;
+        }
+
+        .prayers-back-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .prayers-nav-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+            flex: 1;
+            white-space: nowrap;
+            transition: opacity 0.2s ease;
+        }
+
+        body.light-theme .prayers-nav-title {
+            color: #333;
+        }
+
+        .prayers-tabs {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        body.dark-theme .prayers-tabs {
+            background: #1a1a1a;
+            border-bottom-color: #3a3a3a;
+        }
+
+        .prayers-tab {
+            flex: 1;
+            padding: 16px;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            color: #666;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        body.dark-theme .prayers-tab {
+            color: #999;
+        }
+
+        .prayers-tab.active {
+            color: #78aaff;
+            border-bottom-color: #78aaff;
+        }
+
+        body.dark-theme .prayers-tab.active {
+            color: #8ab8ff;
+            border-bottom-color: #8ab8ff;
+        }
+
+        .prayers-tab:hover {
+            background: #f5f5f5;
+        }
+
+        body.dark-theme .prayers-tab:hover {
+            background: #252525;
+        }
+
+        .prayers-content-wrapper {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .prayers-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+            position: relative;
+            scrollbar-width: none;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prayers-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        body.dark-theme .prayers-content {
+            background-color: #1a1a1a;
+        }
+
+        .prayers-content-inner {
+            padding: 2rem 1rem 120px 1rem;
+            min-height: 100%;
+            flex: 1;
+        }
+
+        /* Prayers loader styles */
+        .prayers-loader-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .prayers-loader-wrapper.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .prayers-loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #333333;
+            border-top: 5px solid #ffffff;
+            border-right: 5px solid #cccccc;
+            border-radius: 50%;
+            animation: prayers-spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .prayers-loader-text {
+            color: #cccccc;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        @keyframes prayers-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .prayers-bottom-sheet-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 200;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .prayers-bottom-sheet-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .prayers-bottom-sheet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 16px 16px 0 0;
+            z-index: 222;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+            touch-action: none;
+            user-select: none;
+        }
+
+        body.dark-theme .prayers-bottom-sheet {
+            background: #2a2a2a;
+        }
+
+        .prayers-bottom-sheet.active {
+            transform: translateY(0);
+        }
+
+        .prayers-sheet-handle {
+            width: 40px;
+            height: 4px;
+            background: #ccc;
+            border-radius: 2px;
+            margin: 12px auto 0;
+        }
+
+        body.dark-theme .prayers-sheet-handle {
+            background: #555;
+        }
+
+        .prayers-sheet-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        body.dark-theme .prayers-sheet-header {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .prayers-sheet-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        body.dark-theme .prayers-sheet-title {
+            color: #f0f0f0;
+        }
+
+        /* Sheet tabs for category switching */
+        .prayers-sheet-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .prayers-sheet-tabs.hidden {
+            display: none;
+        }
+
+        body.dark-theme .prayers-sheet-tabs {
+            background-color: #252525;
+            border-bottom-color: #3a3a3a;
+        }
+
+        .prayers-sheet-tab {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme .prayers-sheet-tab {
+            color: #999;
+        }
+
+        .prayers-sheet-tab.active {
+            color: #78aaff;
+            border-bottom-color: #78aaff;
+        }
+
+        .prayers-sheet-tab:active {
+            opacity: 0.8;
+        }
+
+        .prayers-category-content {
+            display: block;
+        }
+
+        .prayers-category-content.hidden {
+            display: none;
+        }
+
+        .prayers-sheet-content {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            overflow-x: visible;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .prayers-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .prayers-input-label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        body.dark-theme .prayers-input-label {
+            color: #f0f0f0;
+        }
+
+        .prayers-input-text {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #333;
+            background: #ffffff;
+            transition: all 0.2s;
+        }
+
+        body.dark-theme .prayers-input-text {
+            background: #252525;
+            border-color: #404040;
+            color: #f0f0f0;
+        }
+
+        .prayers-input-text:focus {
+            outline: none;
+            border-color: #78aaff;
+            background-color: #f5f5f5;
+        }
+
+        body.dark-theme .prayers-input-text:focus {
+            border-color: #78aaff;
+            background-color: #252525;
+        }
+
+        .prayers-textarea {
+            min-height: 100px;
+            resize: vertical;
+            max-height: 200px;
+        }
+
+        /* Badge Selector */
+        .prayers-badge-selector {
+            position: relative;
+            width: 100%;
+        }
+
+        .prayers-badge-btn {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background: #222;
+            color: #ddd;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: border-color 0.2s;
+        }
+
+        .prayers-badge-btn:hover {
+            border-color: #666;
+        }
+
+        .prayers-badge-btn::after {
+            content: '▼';
+            font-size: 0.8rem;
+            margin-left: 8px;
+        }
+
+        .prayers-badge-btn.active::after {
+            transform: rotate(180deg);
+        }
+
+        .prayers-badge-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 4px);
+            left: 0;
+            right: 0;
+            background: #222;
+            border: 1px solid #444;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .prayers-badge-dropdown.show {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prayers-badge-group {
+            padding: 8px 0;
+        }
+
+        .prayers-badge-group:not(:last-child) {
+            border-bottom: 1px solid #444;
+        }
+
+        .prayers-badge-group-title {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .prayers-badge-option {
+            width: 100%;
+            padding: 10px 12px;
+            background: none;
+            border: none;
+            color: #ddd;
+            font-size: 1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+        }
+
+        .prayers-badge-option:hover {
+            background: #333;
+        }
+
+        .prayers-badge-option.selected {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        body.light-theme .prayers-badge-btn {
+            background: #f5f5f5;
+            border-color: #ddd;
+            color: #333;
+        }
+
+        body.light-theme .prayers-badge-btn:hover {
+            border-color: #999;
+        }
+
+        body.light-theme .prayers-badge-dropdown {
+            background: #f5f5f5;
+            border-color: #ddd;
+        }
+
+        body.light-theme .prayers-badge-group:not(:last-child) {
+            border-color: #ddd;
+        }
+
+        body.light-theme .prayers-badge-group-title {
+            color: #666;
+        }
+
+        body.light-theme .prayers-badge-option {
+            color: #333;
+        }
+
+        body.light-theme .prayers-badge-option:hover {
+            background: #e5e5e5;
+        }
+
+        body.light-theme .prayers-badge-option.selected {
+            background: #0066cc;
+            color: #fff;
+        }
+
+        .prayers-select {
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            background-color: transparent;
+            padding-right: 40px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .prayers-select::-ms-expand {
+            display: none;
+        }
+
+        body.dark-theme .prayers-select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        }
+
+        /* Input with icon */
+        .prayers-input-with-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .prayers-input-with-icon .prayers-input-text {
+            width: 100%;
+            padding-right: 40px;
+            padding-left: 12px;
+            box-sizing: border-box;
+        }
+
+        .prayers-input-icon-btn {
+            position: absolute;
+            right: 8px;
+            background: #e3f2fd;
+            border: none;
+            color: #78aaff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            line-height: 1;
+            height: 28px;
+            width: 28px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        .prayers-input-icon-btn:hover {
+            background-color: #bbdefb;
+        }
+
+        .prayers-input-icon-btn:active {
+            transform: scale(0.95);
+        }
+
+        body.dark-theme .prayers-input-icon-btn {
+            background: #1a3a5c;
+            color: #78aaff;
+        }
+
+        body.dark-theme .prayers-input-icon-btn:hover {
+            background-color: #2a4a7c;
+        }
+
+        /* Input error styles */
+        .prayers-input-group.error .prayers-input-label {
+            color: #ef4444;
+        }
+
+        .prayers-input-error {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .prayers-input-group.error .prayers-input-error {
+            display: block;
+        }
+
+        .prayers-input-group.error .prayers-input-text {
+            border-color: #ef4444;
+        }
+
+        .prayers-input-icon-btn:hover {
+            color: #5a94e6;
+        }
+
+        body.dark-theme .prayers-input-icon-btn:hover {
+            color: #78aaff;
+        }
+
+        .prayers-input-icon-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Members list styles */
+        .prayers-members-list {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .prayers-member-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #78aaff;
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .prayers-member-tag button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .prayers-member-tag button:hover {
+            opacity: 0.8;
+        }
+
+        .prayers-sheet-buttons {
+            display: flex;
+            gap: 1rem;
+            padding: 16px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .prayers-sheet-buttons {
+            border-top-color: #3a3a3a;
+        }
+
+        .prayers-btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .prayers-btn-cancel {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        body.dark-theme .prayers-btn-cancel {
+            background: #3a3a3a;
+            color: #f0f0f0;
+        }
+
+        .prayers-btn-cancel:hover {
+            background: #e0e0e0;
+        }
+
+        body.dark-theme .prayers-btn-cancel:hover {
+            background: #444;
+        }
+
+        .prayers-btn-save {
+            background: #78aaff;
+            color: #ffffff;
+        }
+
+        .prayers-btn-save:hover {
+            background: #5a94e6;
+        }
+
+        .prayers-btn-save:active {
+            background: #4a84d6;
+        }
+
+        /* Toast notification styles */
+        .prayers-toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #323232;
+            color: #22c55e;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 300;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+            pointer-events: none;
+        }
+
+        .prayers-toast.show {
+            opacity: 1;
+        }
+
+        body.light-theme .prayers-toast {
+            background: #f5f5f5;
+            color: #22c55e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Detail Sheet Overlay */
+        .prayers-detail-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 99;
+        }
+
+        .prayers-detail-sheet.active ~ .prayers-detail-overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Detail Sheet */
+        .prayers-detail-sheet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #ffffff;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            max-height: 80vh;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.dark-theme .prayers-detail-sheet {
+            background: #1a1a1a;
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .prayers-detail-sheet.active {
+            transform: translateY(0);
+        }
+
+        .prayers-detail-sheet .prayers-sheet-handle {
+            width: 40px;
+            height: 4px;
+            background: #ddd;
+            border-radius: 2px;
+            margin: 12px auto 0;
+        }
+
+        body.dark-theme .prayers-detail-sheet .prayers-sheet-handle {
+            background: #3a3a3a;
+        }
+
+        .prayers-detail-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .prayers-detail-header {
+            border-bottom-color: #3a3a3a;
+        }
+
+        .prayers-detail-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            scrollbar-width: none;
+        }
+
+        .prayers-detail-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        .prayers-detail-info {
+            margin-bottom: 16px;
+        }
+
+        .prayers-detail-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .prayers-detail-value {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            word-break: break-word;
+        }
+
+        body.dark-theme .prayers-detail-value {
+            color: #f0f0f0;
+        }
+
+        .prayers-detail-buttons {
+            display: flex;
+            gap: 1rem;
+            padding: 16px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        body.dark-theme .prayers-detail-buttons {
+            border-top-color: #3a3a3a;
+        }
+
+        .prayers-detail-btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .prayers-detail-edit {
+            background: #78aaff;
+            color: #ffffff;
+        }
+
+        .prayers-detail-edit:hover {
+            background: #5a94e6;
+        }
+
+        .prayers-detail-delete {
+            background: #ff6b6b;
+            color: #ffffff;
+        }
+
+        .prayers-detail-delete:hover {
+            background: #ff5252;
+        }
+
+        .prayers-menu-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: none;
+            cursor: pointer;
+            background: none;
+            color: #ffffff;
+            flex-shrink: 0;
+            font-size: 20px;
+            padding: 0;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        body.light-theme .prayers-menu-btn {
+            color: #333;
+        }
+
+        .prayers-menu-btn:hover {
+            opacity: 0.8;
+        }
+
+        .prayers-menu-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .prayers-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            min-width: 160px;
+            display: none;
+            overflow: hidden;
+            margin-top: 8px;
+            margin-right: 8px;
+        }
+
+        body.light-theme .prayers-dropdown-menu {
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .prayers-dropdown-menu.show {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prayers-menu-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            background: none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+
+        body.light-theme .prayers-menu-item {
+            color: #333;
+        }
+
+        .prayers-menu-item:hover {
+            background: #3a3a3a;
+        }
+
+        body.light-theme .prayers-menu-item:hover {
+            background: #f0f0f0;
+        }
+
+        .prayers-menu-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Add Prayer - Blue color */
+        #prayers-menu-add svg {
+            color: #3b82f6;
+        }
+
+        .prayers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .prayers-item {
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            transition: background 0.2s, box-shadow 0.2s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        body.dark-theme .prayers-item {
+            background: #252525;
+            border-color: #3a3a3a;
+        }
+
+        .prayers-item:hover {
+            background: #f3f3f3;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.3), inset 0 0 8px rgba(120, 170, 255, 0.1);
+        }
+
+        body.dark-theme .prayers-item:hover {
+            background: #2d2d2d;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        .prayers-item.active {
+            background: #e8f0ff;
+            border-color: #78aaff;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        body.dark-theme .prayers-item.active {
+            background: #1a2a40;
+            border-color: #78aaff;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
+        }
+
+        .prayers-item-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0 0 8px 0;
+            color: #333;
+        }
+
+        body.dark-theme .prayers-item-title {
+            color: #f0f0f0;
+        }
+
+        .prayers-item-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .prayers-item-title {
+            flex: 1;
+            margin: 0;
+        }
+
+        .prayers-badge-display {
+            display: inline-block;
+            background: #fffacd;
+            border: none;
+            color: #0d47a1;
+            padding: 3px 8px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        body.light-theme .prayers-badge-display {
+            background: #fffacd;
+            border: none;
+            color: #0d47a1;
+        }
+
+        body.dark-theme .prayers-badge-display {
+            background: #fffacd;
+            border: none;
+            color: #0d47a1;
+        }
+
+        .prayers-item-badge {
+            display: inline-block;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .prayers-item-description {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        body.dark-theme .prayers-item-description {
+            color: #aaa;
+        }
+
+        /* Member badges */
+        .prayers-members-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            align-items: center;
+        }
+
+        .prayers-member-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        body.dark-theme .prayers-member-badge {
+            background: rgba(120, 170, 255, 0.1);
+            color: #8ab8ff;
+            border-color: rgba(120, 170, 255, 0.2);
+        }
+
+        .prayers-empty-state {
+            text-align: center;
+            color: #999;
+            padding: 2rem;
+        }
+
+        body.dark-theme .prayers-empty-state {
+            color: #666;
+        }
+
+        .prayers-empty-state p {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) { 
+            .prayers-top-nav {
+                padding: 10px 12px;
+            }
+
+            .prayers-nav-title {
+                font-size: 18px;
+            }
+
+            .prayers-content-inner {
+                padding: 1rem;
+            }
+        }
+
+        /* Bottom Navigation Menu - WhatsApp Style */
+        .prayers-bottom-nav {
+            display: flex;
+            border-top: 1px solid #e0e0e0;
+            background: #ffffff;
+            height: 56px;
+            position: sticky;
+            bottom: 0;
+            z-index: 99;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        body.dark-theme .prayers-bottom-nav {
+            background: #1a1a1a;
+            border-top-color: #3a3a3a;
+        }
+
+        .prayers-bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            height: 100%;
+            cursor: pointer;
+            color: #666;
+            transition: all 0.2s ease;
+            position: relative;
+            gap: 2px;
+        }
+
+        body.dark-theme .prayers-bottom-nav-item {
+            color: #999;
+        }
+
+        .prayers-bottom-nav-item:hover {
+            background: #f5f5f5;
+        }
+
+        body.dark-theme .prayers-bottom-nav-item:hover {
+            background: #252525;
+        }
+
+        .prayers-bottom-nav-item.active {
+            color: #78aaff;
+        }
+
+        body.dark-theme .prayers-bottom-nav-item.active {
+            color: #8ab8ff;
+        }
+
+        .prayers-bottom-nav-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prayers-bottom-nav-label {
+            font-size: 10px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prayers-container">
+        <nav class="prayers-top-nav">
+            <button class="prayers-back-btn" onclick="goBack()" title="Back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <h1 class="prayers-nav-title">Prayers</h1>
+            <button class="prayers-menu-btn" id="prayers-menu-btn" aria-label="Menu">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="5" r="2" />
+                    <circle cx="12" cy="12" r="2" />
+                    <circle cx="12" cy="19" r="2" />
+                </svg>
+            </button>
+            <div class="prayers-dropdown-menu" id="prayers-dropdown-menu">
+                <button class="prayers-menu-item" id="prayers-menu-add">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Add Prayer</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="prayers-content" id="prayers-content">
+            <div class="prayers-content-inner">
+                <div class="prayers-list" id="prayers-list">
+                    <div class="prayers-empty-state">
+                        <p>No prayers yet</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Tap the + button to add a prayer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Menu - WhatsApp Style -->
+        <div class="prayers-bottom-nav" id="prayers-bottom-nav">
+            <div class="prayers-bottom-nav-item active" data-category="Family">
+                <div class="prayers-bottom-nav-icon">❤️</div>
+                <div class="prayers-bottom-nav-label">Family</div>
+            </div>
+            <div class="prayers-bottom-nav-item" data-category="Others">
+                <div class="prayers-bottom-nav-icon">✨</div>
+                <div class="prayers-bottom-nav-label">Others</div>
+            </div>
+            <div class="prayers-bottom-nav-item" data-category="World">
+                <div class="prayers-bottom-nav-icon">🌍</div>
+                <div class="prayers-bottom-nav-label">World</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Sheet for Adding Prayer -->
+    <div class="prayers-bottom-sheet-overlay" id="prayers-sheet-overlay"></div>
+    <div class="prayers-bottom-sheet" id="prayers-bottom-sheet">
+        <div class="prayers-sheet-handle" id="prayers-sheet-drag-handle"></div>
+        <div class="prayers-sheet-header">
+            <h2 class="prayers-sheet-title">Add Prayer</h2>
+        </div>
+        
+        <!-- Category tabs in add sheet -->
+        <div class="prayers-sheet-tabs">
+            <button class="prayers-sheet-tab active" data-category="Family">Family</button>
+            <button class="prayers-sheet-tab" data-category="Others">Others</button>
+            <button class="prayers-sheet-tab" data-category="World">World</button>
+        </div>
+        
+        <div class="prayers-sheet-content">
+            <!-- Family Category Fields -->
+            <div class="prayers-category-content" id="family-content">
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Family Name</label>
+                    <input type="text" class="prayers-input-text" id="prayer-name-input" placeholder="Enter family name..."
+                        autocomplete="off">
+                </div>
+
+                <div class="prayers-input-group" id="members-input-group">
+                    <label class="prayers-input-label">Members</label>
+                    <div class="prayers-input-with-icon">
+                        <input type="text" class="prayers-input-text" id="prayer-member-input" placeholder="Enter member name"
+                            autocomplete="off">
+                        <button class="prayers-input-icon-btn" id="add-member-btn" type="button">+</button>
+                    </div>
+                    <div class="prayers-input-error">Member name is required</div>
+                    <div class="prayers-members-list" id="members-list"></div>
+                </div>
+            </div>
+            
+            <!-- Others Category Fields -->
+            <div class="prayers-category-content hidden" id="others-content">
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Prayer Name</label>
+                    <input type="text" class="prayers-input-text" id="prayer-name-others-input" placeholder="Enter prayer name..."
+                        autocomplete="off">
+                </div>
+
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Description</label>
+                    <textarea class="prayers-input-text prayers-textarea" id="prayer-description-input" placeholder="Enter description..."
+                        autocomplete="off"></textarea>
+                </div>
+
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Badge</label>
+                    <div class="prayers-badge-selector">
+                        <button type="button" class="prayers-badge-btn" id="prayer-badge-btn">Select a badge</button>
+                        <div class="prayers-badge-dropdown" id="prayer-badge-dropdown">
+                            <div class="prayers-badge-group">
+                                <div class="prayers-badge-group-title">Health & Medical</div>
+                                <button type="button" class="prayers-badge-option" data-value="🆘 Emergency">🆘 Emergency</button>
+                                <button type="button" class="prayers-badge-option" data-value="❤️‍🩹 Healing">❤️‍🩹 Healing</button>
+                                <button type="button" class="prayers-badge-option" data-value="🩺 Medical Help">🩺 Medical Help</button>
+                                <button type="button" class="prayers-badge-option" data-value="🤒 Sick Person">🤒 Sick Person</button>
+                                <button type="button" class="prayers-badge-option" data-value="🤕 Injury">🤕 Injury</button>
+                                <button type="button" class="prayers-badge-option" data-value="🚑 Ambulance Case">🚑 Ambulance Case</button>
+                                <button type="button" class="prayers-badge-option" data-value="🏥 Hospital">🏥 Hospital</button>
+                                <button type="button" class="prayers-badge-option" data-value="🧑‍⚕️ Surgery">🧑‍⚕️ Surgery</button>
+                                <button type="button" class="prayers-badge-option" data-value="🛌 ICU Patient">🛌 ICU Patient</button>
+                                <button type="button" class="prayers-badge-option" data-value="💉 Treatment Needed">💉 Treatment Needed</button>
+                                <button type="button" class="prayers-badge-option" data-value="🧠 Mental Crisis">🧠 Mental Crisis</button>
+                                <button type="button" class="prayers-badge-option" data-value="😰 Anxiety / Panic">😰 Anxiety / Panic</button>
+                                <button type="button" class="prayers-badge-option" data-value="🌡️ High Fever">🌡️ High Fever</button>
+                                <button type="button" class="prayers-badge-option" data-value="💔 Heart Issue">💔 Heart Issue</button>
+                                <button type="button" class="prayers-badge-option" data-value="🎗️ Chronic Illness Flare">🎗️ Chronic Illness Flare</button>
+                            </div>
+                            <div class="prayers-badge-group">
+                                <div class="prayers-badge-group-title">Accidents & Life</div>
+                                <button type="button" class="prayers-badge-option" data-value="🚗 Accident">🚗 Accident</button>
+                                <button type="button" class="prayers-badge-option" data-value="🚒 Fire Accident">🚒 Fire Accident</button>
+                                <button type="button" class="prayers-badge-option" data-value="🌊 Drowning / Water Rescue">🌊 Drowning / Water Rescue</button>
+                                <button type="button" class="prayers-badge-option" data-value="🏚️ Building Collapse">🏚️ Building Collapse</button>
+                                <button type="button" class="prayers-badge-option" data-value="⚡ Electric Shock">⚡ Electric Shock</button>
+                                <button type="button" class="prayers-badge-option" data-value="🥵 Heat Stroke">🥵 Heat Stroke</button>
+                                <button type="button" class="prayers-badge-option" data-value="🩸 Blood Loss">🩸 Blood Loss</button>
+                                <button type="button" class="prayers-badge-option" data-value="🎯 Critical Condition">🎯 Critical Condition</button>
+                                <button type="button" class="prayers-badge-option" data-value="⚠️ Danger">⚠️ Danger</button>
+                                <button type="button" class="prayers-badge-option" data-value="🛡️ Protection Needed">🛡️ Protection Needed</button>
+                            </div>
+                            <div class="prayers-badge-group">
+                                <div class="prayers-badge-group-title">Family / Personal</div>
+                                <button type="button" class="prayers-badge-option" data-value="👨‍👩‍👧 Family Emergency">👨‍👩‍👧 Family Emergency</button>
+                                <button type="button" class="prayers-badge-option" data-value="😢 Bereavement / Death in Family">😢 Bereavement / Death in Family</button>
+                                <button type="button" class="prayers-badge-option" data-value="👶 Baby Emergency">👶 Baby Emergency</button>
+                                <button type="button" class="prayers-badge-option" data-value="👴 Elder Emergency">👴 Elder Emergency</button>
+                                <button type="button" class="prayers-badge-option" data-value="💔 Broken Situation">💔 Broken Situation</button>
+                                <button type="button" class="prayers-badge-option" data-value="🏡 Home Crisis">🏡 Home Crisis</button>
+                                <button type="button" class="prayers-badge-option" data-value="🧒 Missing Child">🧒 Missing Child</button>
+                                <button type="button" class="prayers-badge-option" data-value="🧑‍🤝‍🧑 Domestic Issue">🧑‍🤝‍🧑 Domestic Issue</button>
+                                <button type="button" class="prayers-badge-option" data-value="💥 Conflict / Fight">💥 Conflict / Fight</button>
+                                <button type="button" class="prayers-badge-option" data-value="😭 Emotional Breakdown">😭 Emotional Breakdown</button>
+                            </div>
+                            <div class="prayers-badge-group">
+                                <div class="prayers-badge-group-title">Financial & Daily Life</div>
+                                <button type="button" class="prayers-badge-option" data-value="💰 Financial Crisis">💰 Financial Crisis</button>
+                                <button type="button" class="prayers-badge-option" data-value="🧾 Bill / Debt Emergency">🧾 Bill / Debt Emergency</button>
+                                <button type="button" class="prayers-badge-option" data-value="🍞 Food Need">🍞 Food Need</button>
+                                <button type="button" class="prayers-badge-option" data-value="🛖 Homeless Situation">🛖 Homeless Situation</button>
+                                <button type="button" class="prayers-badge-option" data-value="🔍 Job Loss">🔍 Job Loss</button>
+                                <button type="button" class="prayers-badge-option" data-value="🛠️ Sudden Problem">🛠️ Sudden Problem</button>
+                                <button type="button" class="prayers-badge-option" data-value="💧 Water Shortage">💧 Water Shortage</button>
+                                <button type="button" class="prayers-badge-option" data-value="⚡ Power Crisis">⚡ Power Crisis</button>
+                                <button type="button" class="prayers-badge-option" data-value="🔧 Unexpected Breakdown">🔧 Unexpected Breakdown</button>
+                            </div>
+                            <div class="prayers-badge-group">
+                                <div class="prayers-badge-group-title">Spiritual & Emotional</div>
+                                <button type="button" class="prayers-badge-option" data-value="🙏 Urgent Prayer">🙏 Urgent Prayer</button>
+                                <button type="button" class="prayers-badge-option" data-value="🕊️ Peace Needed">🕊️ Peace Needed</button>
+                                <button type="button" class="prayers-badge-option" data-value="🔥 Deliverance">🔥 Deliverance</button>
+                                <button type="button" class="prayers-badge-option" data-value="🧭 Lost / No Direction">🧭 Lost / No Direction</button>
+                                <button type="button" class="prayers-badge-option" data-value="😨 Fear">😨 Fear</button>
+                                <button type="button" class="prayers-badge-option" data-value="🌪️ Overwhelmed / Trouble">🌪️ Overwhelmed / Trouble</button>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="prayer-badge-input" value="">
+                </div>
+            </div>
+
+            <!-- World Category Fields -->
+            <div class="prayers-category-content hidden" id="world-content">
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Prayer Name</label>
+                    <input type="text" class="prayers-input-text" id="prayer-name-world-input" placeholder="Enter prayer name..."
+                        autocomplete="off">
+                </div>
+
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Description</label>
+                    <textarea class="prayers-input-text prayers-textarea" id="prayer-description-world-input" placeholder="Enter description..."
+                        autocomplete="off"></textarea>
+                </div>
+
+                <div class="prayers-input-group">
+                    <label class="prayers-input-label">Badge</label>
+                    <div class="prayers-badge-selector">
+                        <button type="button" class="prayers-badge-btn" id="prayer-badge-world-btn">Select a badge</button>
+                        <div class="prayers-badge-dropdown" id="prayer-badge-world-dropdown">
+                            <div class="prayers-badge-group">
+                                <div class="prayers-badge-group-title">Status</div>
+                                <button type="button" class="prayers-badge-option" data-value="🔥 Urgent">🔥 Urgent</button>
+                                <button type="button" class="prayers-badge-option" data-value="🟢 Answered">🟢 Answered</button>
+                                <button type="button" class="prayers-badge-option" data-value="🟡 In Progress">🟡 In Progress</button>
+                                <button type="button" class="prayers-badge-option" data-value="🔵 Ongoing">🔵 Ongoing</button>
+                                <button type="button" class="prayers-badge-option" data-value="🔴 Critical">🔴 Critical</button>
+                                <button type="button" class="prayers-badge-option" data-value="⚪ Pending">⚪ Pending</button>
+                                <button type="button" class="prayers-badge-option" data-value="⏳ Waiting">⏳ Waiting</button>
+                                <button type="button" class="prayers-badge-option" data-value="💭 Thinking">💭 Thinking</button>
+                                <button type="button" class="prayers-badge-option" data-value="🎯 Focusing">🎯 Focusing</button>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="prayer-badge-world-input" value="">
+                </div>
+            </div>
+        </div>
+        <div class="prayers-sheet-buttons">
+            <button class="prayers-btn prayers-btn-cancel" id="prayers-btn-cancel">Cancel</button>
+            <button class="prayers-btn prayers-btn-save" id="prayers-btn-save">Save</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="prayers-toast" id="prayers-toast"></div>
+
+    <!-- Prayer Detail Sheet -->
+    <div class="prayers-detail-sheet" id="prayers-detail-sheet">
+        <div class="prayers-sheet-handle"></div>
+        <div class="prayers-detail-header">
+            <h2 class="prayers-sheet-title" id="prayers-detail-title">Prayer</h2>
+        </div>
+        <div class="prayers-detail-content" id="prayers-detail-content"></div>
+        <div class="prayers-detail-buttons">
+            <button class="prayers-detail-btn prayers-detail-edit" id="prayers-detail-edit-btn">Edit</button>
+            <button class="prayers-detail-btn prayers-detail-delete" id="prayers-detail-delete-btn">Delete</button>
+        </div>
+    </div>
+    <div class="prayers-detail-overlay" id="prayers-detail-overlay" onclick="closePrayerDetail()"></div>
+
+    <script>
+        // Apply theme on page load
+        function applyTheme() {
+            const isDarkTheme = localStorage.getItem('theme') === 'dark' || !localStorage.getItem('theme');
+            if (isDarkTheme) {
+                document.body.classList.add('dark-theme');
+                document.body.classList.remove('light-theme');
+            } else {
+                document.body.classList.add('light-theme');
+                document.body.classList.remove('dark-theme');
+            }
+        }
+
+        // Apply theme on load
+        applyTheme();
+
+        // Listen for theme changes from other pages
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'theme') {
+                applyTheme();
+            }
+        });
+
+        // Badge Dropdown Handler - Others
+        const badgeBtn = document.getElementById('prayer-badge-btn');
+        const badgeDropdown = document.getElementById('prayer-badge-dropdown');
+        const badgeInput = document.getElementById('prayer-badge-input');
+        const badgeOptions = document.querySelectorAll('#others-content .prayers-badge-option');
+
+        if (badgeBtn) {
+            badgeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                badgeDropdown.classList.toggle('show');
+                badgeBtn.classList.toggle('active');
+            });
+        }
+
+        badgeOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const value = option.dataset.value;
+                badgeInput.value = value;
+                badgeBtn.textContent = value;
+                badgeBtn.classList.remove('active');
+                badgeDropdown.classList.remove('show');
+                
+                // Update selected state
+                badgeOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.prayers-badge-selector')) {
+                badgeDropdown.classList.remove('show');
+                badgeBtn.classList.remove('active');
+            }
+        });
+
+        // Badge Dropdown Handler - World
+        const worldBadgeBtn = document.getElementById('prayer-badge-world-btn');
+        const worldBadgeDropdown = document.getElementById('prayer-badge-world-dropdown');
+        const worldBadgeInput = document.getElementById('prayer-badge-world-input');
+        const worldBadgeOptions = document.querySelectorAll('#world-content .prayers-badge-option');
+
+        if (worldBadgeBtn) {
+            worldBadgeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                worldBadgeDropdown.classList.toggle('show');
+                worldBadgeBtn.classList.toggle('active');
+            });
+        }
+
+        worldBadgeOptions.forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const value = option.dataset.value;
+                worldBadgeInput.value = value;
+                worldBadgeBtn.textContent = value;
+                worldBadgeBtn.classList.remove('active');
+                worldBadgeDropdown.classList.remove('show');
+                
+                // Update selected state
+                worldBadgeOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+        // Go back to previous page
+        function goBack() {
+            window.history.back();
+        }
+
+        // Swipe gesture handling for back navigation
+        let touchStartX = 0;
+        let touchStartY = 0;
+        const swipeThreshold = 50; // Minimum distance for swipe to register
+        const swipeTimeThreshold = 500; // Maximum time for swipe (in ms)
+        let touchStartTime = 0;
+
+        // (Swipe handling moved to bottom of script, see below)
+
+        // Menu and bottom sheet functionality
+        const menuBtn = document.getElementById('prayers-menu-btn');
+        const dropdownMenu = document.getElementById('prayers-dropdown-menu');
+        const sheetOverlay = document.getElementById('prayers-sheet-overlay');
+        const bottomSheet = document.getElementById('prayers-bottom-sheet');
+        const addPrayerBtn = document.getElementById('prayers-menu-add');
+        const cancelBtn = document.getElementById('prayers-btn-cancel');
+        const saveBtn = document.getElementById('prayers-btn-save');
+        const prayerNameInput = document.getElementById('prayer-name-input');
+        const toast = document.getElementById('prayers-toast');
+        const prayersList = document.getElementById('prayers-list');
+
+        // Store prayers in localStorage
+        let prayers = JSON.parse(localStorage.getItem('prayers')) || [];
+        let currentCategory = 'Family'; // Track current active tab
+        let currentMembers = []; // Track members being added
+
+        // Get next prayer ID (starting from 10001)
+        function getNextPrayerId() {
+            if (prayers.length === 0) {
+                return 10001;
+            }
+            const maxId = Math.max(...prayers.map(p => p.id));
+            return maxId + 1;
+        }
+
+        // Render prayers list based on current category
+        function renderPrayersList() {
+            const filteredPrayers = prayers.filter(p => p.category === currentCategory);
+            
+            if (filteredPrayers.length === 0) {
+                prayersList.innerHTML = `
+                    <div class="prayers-empty-state">
+                        <p>No prayers yet in ${currentCategory}</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Tap the + button to add a prayer</p>
+                    </div>
+                `;
+                return;
+            }
+
+            prayersList.innerHTML = filteredPrayers.map((prayer, index) => {
+                let contentHTML = '';
+                let badgeHTML = '';
+                
+                if (prayer.category === 'Family' && prayer.members && prayer.members.length > 0) {
+                    // Show members for Family category
+                    contentHTML = `
+                        <div class="prayers-members-badges">
+                            ${prayer.members.map(member => `
+                                <span class="prayers-member-badge">${escapeHtml(member)}</span>
+                            `).join('')}
+                        </div>
+                    `;
+                } else if (prayer.category === 'Others') {
+                    // Show badge beside title for Others
+                    if (prayer.badge) {
+                        badgeHTML = `<span class="prayers-badge-display">${escapeHtml(prayer.badge)}</span>`;
+                    }
+                    // Show description for Others category
+                    if (prayer.description) {
+                        contentHTML = `
+                            <div class="prayers-item-description">${escapeHtml(prayer.description)}</div>
+                        `;
+                    }
+                }
+                
+                return `
+                    <div class="prayers-item" data-prayer-id="${prayer.id}" onclick="openPrayerDetail(${prayer.id})">
+                        <div class="prayers-item-header">
+                            <h3 class="prayers-item-title">${escapeHtml(prayer.name)}</h3>
+                            ${badgeHTML}
+                        </div>
+                        ${contentHTML}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Toggle menu dropdown
+        if (menuBtn) {
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+            });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (dropdownMenu && menuBtn && !dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+
+        // Open bottom sheet for adding prayer
+        if (addPrayerBtn) {
+            addPrayerBtn.addEventListener('click', () => {
+                dropdownMenu.classList.remove('show');
+                openAddPrayerSheet();
+            });
+        }
+
+        // Cancel button
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                closeAddPrayerSheet();
+            });
+        }
+
+        // Save button
+        if (saveBtn) {
+            saveBtn.addEventListener('click', () => {
+                let prayerName = '';
+                let description = '';
+                let badge = '';
+                
+                if (currentCategory === 'Family') {
+                    prayerName = prayerNameInput.value.trim();
+                } else if (currentCategory === 'Others') {
+                    prayerName = document.getElementById('prayer-name-others-input').value.trim();
+                    description = document.getElementById('prayer-description-input').value.trim();
+                    badge = document.getElementById('prayer-badge-input').value.trim();
+                } else if (currentCategory === 'World') {
+                    prayerName = document.getElementById('prayer-name-world-input').value.trim();
+                    description = document.getElementById('prayer-description-world-input').value.trim();
+                    badge = document.getElementById('prayer-badge-world-input').value.trim();
+                }
+                
+                if (!prayerName) {
+                    showToast('Please enter a prayer name');
+                    return;
+                }
+
+                // Check if we're in edit mode
+                if (isEditMode && editingPrayerId) {
+                    // Update existing prayer
+                    const prayerIndex = prayers.findIndex(p => p.id === editingPrayerId);
+                    if (prayerIndex !== -1) {
+                        prayers[prayerIndex].name = prayerName;
+                        if (currentCategory === 'Family') {
+                            prayers[prayerIndex].members = [...currentMembers];
+                            prayers[prayerIndex].description = undefined;
+                            prayers[prayerIndex].badge = undefined;
+                        } else {
+                            prayers[prayerIndex].description = description;
+                            prayers[prayerIndex].badge = badge;
+                            prayers[prayerIndex].members = undefined;
+                        }
+                        localStorage.setItem('prayers', JSON.stringify(prayers));
+                        closeAddPrayerSheet();
+                        renderPrayersList();
+                        showToast('Updated');
+                        saveBtn.textContent = 'Save';
+                        isEditMode = false;
+                        editingPrayerId = null;
+                    }
+                } else {
+                    // Create new prayer
+                    const newPrayer = {
+                        id: getNextPrayerId(),
+                        name: prayerName,
+                        category: currentCategory,
+                        createdAt: new Date().toISOString()
+                    };
+
+                    // Add category-specific fields
+                    if (currentCategory === 'Family' && currentMembers.length > 0) {
+                        newPrayer.members = [...currentMembers];
+                    } else if (currentCategory === 'Others' || currentCategory === 'World') {
+                        if (description) newPrayer.description = description;
+                        if (badge) newPrayer.badge = badge;
+                    }
+
+                    prayers.push(newPrayer);
+
+                    // Save to localStorage
+                    localStorage.setItem('prayers', JSON.stringify(prayers));
+
+                    // Update UI
+                    saveBtn.disabled = true;
+                    setTimeout(() => {
+                        closeAddPrayerSheet();
+                        renderPrayersList();
+                        showToast('Saved');
+                        prayerNameInput.value = '';
+                        currentMembers = [];
+                        renderMembersList();
+                        saveBtn.disabled = false;
+                    }, 300);
+                }
+            });
+        }
+
+        // Member management functions
+        function renderMembersList() {
+            const membersList = document.getElementById('members-list');
+            if (!membersList) return;
+
+            if (currentMembers.length === 0) {
+                membersList.innerHTML = '';
+                return;
+            }
+
+            membersList.innerHTML = currentMembers.map((member, index) => `
+                <div class="prayers-member-tag">
+                    <span>${escapeHtml(member)}</span>
+                    <button onclick="removeMember(${index})" type="button">×</button>
+                </div>
+            `).join('');
+        }
+
+        function addMember() {
+            const memberInput = document.getElementById('prayer-member-input');
+            const membersInputGroup = document.getElementById('members-input-group');
+            if (!memberInput || !membersInputGroup) return;
+
+            const memberName = memberInput.value.trim();
+            
+            if (!memberName) {
+                membersInputGroup.classList.add('error');
+                return;
+            }
+
+            // Remove error state when user enters a valid name
+            membersInputGroup.classList.remove('error');
+
+            if (currentMembers.includes(memberName)) {
+                showToast('Member already added');
+                return;
+            }
+
+            currentMembers.push(memberName);
+            memberInput.value = '';
+            renderMembersList();
+        }
+
+        function removeMember(index) {
+            currentMembers.splice(index, 1);
+            renderMembersList();
+        }
+
+        // Add member button click
+        const addMemberBtn = document.getElementById('add-member-btn');
+        if (addMemberBtn) {
+            addMemberBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                addMember();
+            });
+        }
+
+        // Allow Enter key to add member
+        const memberInput = document.getElementById('prayer-member-input');
+        if (memberInput) {
+            memberInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addMember();
+                }
+            });
+            // Remove error state when user starts typing
+            memberInput.addEventListener('input', () => {
+                const membersInputGroup = document.getElementById('members-input-group');
+                if (membersInputGroup && memberInput.value.trim()) {
+                    membersInputGroup.classList.remove('error');
+                }
+            });
+        }
+
+        function openAddPrayerSheet() {
+            sheetOverlay.classList.add('active');
+            bottomSheet.classList.add('active');
+            // Only clear if not in edit mode
+            if (!isEditMode) {
+                currentMembers = [];
+                renderMembersList();
+                // Reset sheet tabs to Family when adding new prayer
+                switchSheetCategory('Family');
+            }
+            prayerNameInput.focus();
+        }
+
+        function switchSheetCategory(category, hideNav = false) {
+            // Update tab styles
+            const tabs = document.querySelectorAll('.prayers-sheet-tab');
+            const tabsContainer = document.querySelector('.prayers-sheet-tabs');
+            
+            // Show/hide tab navigation
+            if (hideNav && tabsContainer) {
+                tabsContainer.classList.add('hidden');
+            } else if (tabsContainer) {
+                tabsContainer.classList.remove('hidden');
+            }
+            
+            tabs.forEach(tab => {
+                if (tab.dataset.category === category) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Show/hide content
+            const familyContent = document.getElementById('family-content');
+            const othersContent = document.getElementById('others-content');
+            const worldContent = document.getElementById('world-content');
+
+            if (category === 'Family') {
+                familyContent.classList.remove('hidden');
+                othersContent.classList.add('hidden');
+                worldContent.classList.add('hidden');
+            } else if (category === 'World') {
+                familyContent.classList.add('hidden');
+                othersContent.classList.add('hidden');
+                worldContent.classList.remove('hidden');
+            } else {
+                familyContent.classList.add('hidden');
+                othersContent.classList.remove('hidden');
+                worldContent.classList.add('hidden');
+            }
+        }
+
+        // Sheet tab click handlers
+        const sheetTabs = document.querySelectorAll('.prayers-sheet-tab');
+        sheetTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.dataset.category;
+                currentCategory = category;
+                switchSheetCategory(category);
+            });
+        });
+
+        function closeAddPrayerSheet() {
+            sheetOverlay.classList.remove('active');
+            bottomSheet.classList.remove('active');
+            prayerNameInput.value = '';
+            document.getElementById('prayer-name-others-input').value = '';
+            document.getElementById('prayer-description-input').value = '';
+            document.getElementById('prayer-badge-input').value = '';
+            document.getElementById('prayer-name-world-input').value = '';
+            document.getElementById('prayer-description-world-input').value = '';
+            document.getElementById('prayer-badge-world-input').value = '';
+            badgeBtn.textContent = 'Select a badge';
+            badgeBtn.classList.remove('active');
+            badgeDropdown.classList.remove('show');
+            badgeOptions.forEach(opt => opt.classList.remove('selected'));
+            currentMembers = [];
+            renderMembersList();
+            saveBtn.textContent = 'Save';
+            isEditMode = false;
+            editingPrayerId = null;
+        }
+
+        // Overlay click to close sheet
+        if (sheetOverlay) {
+            sheetOverlay.addEventListener('click', () => {
+                closeAddPrayerSheet();
+            });
+        }
+
+        // Prayer Detail Sheet Functions
+        let selectedPrayerId = null;
+
+        function openPrayerDetail(prayerId) {
+            selectedPrayerId = prayerId;
+            const prayer = prayers.find(p => p.id === prayerId);
+            if (!prayer) return;
+
+            const detailSheet = document.getElementById('prayers-detail-sheet');
+            const detailOverlay = document.getElementById('prayers-detail-overlay');
+            const detailContent = document.getElementById('prayers-detail-content');
+            const detailTitle = document.getElementById('prayers-detail-title');
+
+            // Set prayer name as title
+            detailTitle.textContent = escapeHtml(prayer.name);
+
+            // Build content HTML based on category
+            let contentHTML = '';
+            if (prayer.category === 'Family') {
+                // Show members for Family category
+                if (prayer.members && prayer.members.length > 0) {
+                    contentHTML = `
+                        <div class="prayers-detail-info">
+                            <div class="prayers-detail-label">Members</div>
+                            <div class="prayers-detail-value">
+                                ${prayer.members.map(member => `👤 ${escapeHtml(member)}`).join('<br>')}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    contentHTML = `<div class="prayers-empty-state"><p>No members added</p></div>`;
+                }
+            } else {
+                // Show description for Others category
+                let othersContent = '';
+                
+                if (prayer.description) {
+                    othersContent += `
+                        <div class="prayers-detail-info">
+                            <div class="prayers-detail-value">
+                                ${escapeHtml(prayer.description)}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                contentHTML = othersContent || `<div class="prayers-empty-state"><p>No details added</p></div>`;
+            }
+
+            detailContent.innerHTML = contentHTML;
+            
+            // Add active class to clicked prayer item
+            const prayerItem = document.querySelector(`[data-prayer-id="${prayerId}"]`);
+            if (prayerItem) {
+                prayerItem.classList.add('active');
+            }
+            
+            // Show overlay
+            if (detailOverlay) {
+                detailOverlay.classList.add('active');
+            }
+            
+            // Add blur to container
+            const container = document.querySelector('.prayers-container');
+            if (container) {
+                container.classList.add('blurred');
+            }
+            
+            detailSheet.classList.add('active');
+        }
+
+        function closePrayerDetail() {
+            const detailSheet = document.getElementById('prayers-detail-sheet');
+            const detailOverlay = document.getElementById('prayers-detail-overlay');
+            const container = document.querySelector('.prayers-container');
+            
+            // Remove active class from prayer item
+            if (selectedPrayerId) {
+                const prayerItem = document.querySelector(`[data-prayer-id="${selectedPrayerId}"]`);
+                if (prayerItem) {
+                    prayerItem.classList.remove('active');
+                }
+            }
+            
+            detailSheet.classList.remove('active');
+            detailOverlay.classList.remove('active');
+            if (container) {
+                container.classList.remove('blurred');
+            }
+            selectedPrayerId = null;
+        }
+
+        // Edit button - show update form
+        let isEditMode = false;
+        let editingPrayerId = null;
+        const editBtn = document.getElementById('prayers-detail-edit-btn');
+        if (editBtn) {
+            editBtn.addEventListener('click', () => {
+                if (!selectedPrayerId) return;
+                const prayer = prayers.find(p => p.id === selectedPrayerId);
+                if (!prayer) return;
+
+                // Save the prayer ID before closing detail
+                editingPrayerId = selectedPrayerId;
+                
+                // Pre-fill the form
+                closePrayerDetail();
+                
+                // Set edit mode
+                isEditMode = true;
+                saveBtn.textContent = 'Update';
+                
+                openAddPrayerSheet();
+                
+                // Switch to correct category tab and HIDE nav
+                switchSheetCategory(prayer.category, true);
+                
+                if (prayer.category === 'Family') {
+                    prayerNameInput.value = prayer.name;
+                    currentMembers = prayer.members ? [...prayer.members] : [];
+                    renderMembersList();
+                    prayerNameInput.focus();
+                } else if (prayer.category === 'Others') {
+                    document.getElementById('prayer-name-others-input').value = prayer.name;
+                    document.getElementById('prayer-description-input').value = prayer.description || '';
+                    document.getElementById('prayer-badge-input').value = prayer.badge || '';
+                    
+                    // Set badge button text
+                    if (prayer.badge) {
+                        badgeBtn.textContent = prayer.badge;
+                        // Mark the selected option
+                        badgeOptions.forEach(opt => {
+                            if (opt.dataset.value === prayer.badge) {
+                                opt.classList.add('selected');
+                            } else {
+                                opt.classList.remove('selected');
+                            }
+                        });
+                    } else {
+                        badgeBtn.textContent = 'Select a badge';
+                        badgeOptions.forEach(opt => opt.classList.remove('selected'));
+                    }
+                    
+                    document.getElementById('prayer-name-others-input').focus();
+                } else if (prayer.category === 'World') {
+                    document.getElementById('prayer-name-world-input').value = prayer.name;
+                    document.getElementById('prayer-description-world-input').value = prayer.description || '';
+                    document.getElementById('prayer-badge-world-input').value = prayer.badge || '';
+                    
+                    // Set badge button text for World
+                    const worldBadgeBtn = document.getElementById('prayer-badge-world-btn');
+                    const worldBadgeOptions = document.querySelectorAll('#world-content .prayers-badge-option');
+                    if (prayer.badge) {
+                        worldBadgeBtn.textContent = prayer.badge;
+                        // Mark the selected option
+                        worldBadgeOptions.forEach(opt => {
+                            if (opt.dataset.value === prayer.badge) {
+                                opt.classList.add('selected');
+                            } else {
+                                opt.classList.remove('selected');
+                            }
+                        });
+                    } else {
+                        worldBadgeBtn.textContent = 'Select a badge';
+                        worldBadgeOptions.forEach(opt => opt.classList.remove('selected'));
+                    }
+                    
+                    document.getElementById('prayer-name-world-input').focus();
+                }
+            });
+        }
+
+        // Delete button
+        const deleteBtn = document.getElementById('prayers-detail-delete-btn');
+        if (deleteBtn) {
+            deleteBtn.addEventListener('click', () => {
+                if (!selectedPrayerId) return;
+                
+                if (confirm('Are you sure you want to delete this prayer?')) {
+                    prayers = prayers.filter(p => p.id !== selectedPrayerId);
+                    localStorage.setItem('prayers', JSON.stringify(prayers));
+                    closePrayerDetail();
+                    renderPrayersList();
+                    showToast('Deleted');
+                }
+            });
+        }
+
+        function showToast(message) {
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // Handle tab switching (bottom navigation only)
+        function switchCategory(category) {
+            currentCategory = category;
+            
+            // Update bottom nav items
+            const bottomNavItems = document.querySelectorAll('.prayers-bottom-nav-item');
+            bottomNavItems.forEach(item => {
+                if (item.dataset.category === category) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Scroll to top of prayers list
+            const prayersContent = document.getElementById('prayers-content');
+            if (prayersContent) {
+                prayersContent.scrollTop = 0;
+            }
+
+            // Re-render list for new category
+            renderPrayersList();
+        }
+
+        // Add click event listeners to bottom nav items
+        const bottomNavItems = document.querySelectorAll('.prayers-bottom-nav-item');
+        bottomNavItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const category = item.dataset.category;
+                switchCategory(category);
+            });
+        });
+
+        // Enhanced swipe gesture handling for tab switching
+        let swipeStartIndex = 0;
+        const categories = ['Family', 'Others'];
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+            swipeStartIndex = categories.indexOf(currentCategory);
+        }, false);
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const touchEndTime = Date.now();
+
+            const diffX = touchEndX - touchStartX;
+            const diffY = touchEndY - touchStartY;
+            const timeDiff = touchEndTime - touchStartTime;
+
+            // Only trigger if it's a horizontal swipe
+            if (Math.abs(diffX) > swipeThreshold && Math.abs(diffY) < 30 && timeDiff < swipeTimeThreshold) {
+                // Left to right swipe (positive diffX) - go to previous tab or back
+                if (diffX > swipeThreshold) {
+                    if (swipeStartIndex > 0) {
+                        switchCategory(categories[swipeStartIndex - 1]);
+                    } else {
+                        goBack();
+                    }
+                }
+                // Right to left swipe (negative diffX) - go to next tab
+                else if (diffX < -swipeThreshold) {
+                    if (swipeStartIndex < categories.length - 1) {
+                        switchCategory(categories[swipeStartIndex + 1]);
+                    }
+                }
+            }
+        }, false);
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render initial prayers list
+            renderPrayersList();
+            console.log('Prayers page loaded');
+        });
+    </script>
+</body>
+
+</html>
