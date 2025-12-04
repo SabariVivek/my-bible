@@ -1545,6 +1545,7 @@ function showVerseActionsBottomSheet(verseNum) {
                     <span>Note</span>
                 </button>
                 ` : ''}
+                ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -1554,6 +1555,7 @@ function showVerseActionsBottomSheet(verseNum) {
                     </svg>
                     <span>Sermon</span>
                 </button>
+                ` : ''}
                 <button class="verse-bottom-action add-favorite-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
@@ -1658,34 +1660,37 @@ function showVerseActionsBottomSheet(verseNum) {
         });
     }
     
-    // Add sermon button
-    bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
-        closeBottomSheet();
-        
-        // Get all selected verses from the verses column
-        const versesColumn = document.querySelector('.verses-column');
-        const selectedVerseElements = versesColumn.querySelectorAll('.number-item.active');
-        const selectedVerses = Array.from(selectedVerseElements).map(item => {
-            const verseNum = parseInt(item.dataset.verse);
-            return {
+    // Add sermon button (only if admin access enabled)
+    const sermonBtn = bottomSheet.querySelector('.add-sermon-action');
+    if (sermonBtn) {
+        sermonBtn.addEventListener('click', () => {
+            closeBottomSheet();
+            
+            // Get all selected verses from the verses column
+            const versesColumn = document.querySelector('.verses-column');
+            const selectedVerseElements = versesColumn.querySelectorAll('.number-item.active');
+            const selectedVerses = Array.from(selectedVerseElements).map(item => {
+                const verseNum = parseInt(item.dataset.verse);
+                return {
+                    book: bibleBooks[currentBook].name,
+                    chapter: currentChapter,
+                    verse: verseNum,
+                    display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+                };
+            });
+            
+            // If no verses are selected, add the current verse only
+            const versesToAdd = selectedVerses.length > 0 ? selectedVerses : [{
                 book: bibleBooks[currentBook].name,
                 chapter: currentChapter,
                 verse: verseNum,
                 display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
-            };
+            }];
+            
+            // Show sermon selection sheet
+            showSermonSelectionSheet(versesToAdd);
         });
-        
-        // If no verses are selected, add the current verse only
-        const versesToAdd = selectedVerses.length > 0 ? selectedVerses : [{
-            book: bibleBooks[currentBook].name,
-            chapter: currentChapter,
-            verse: verseNum,
-            display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
-        }];
-        
-        // Show sermon selection sheet
-        showSermonSelectionSheet(versesToAdd);
-    });
+    }
     
     // Add bookmark button
     const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
@@ -1865,6 +1870,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     </svg>
                     <span>Copy</span>
                 </button>
+                ${isAdmin() ? `
                 <button class="verse-bottom-action add-note-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
@@ -1872,6 +1878,8 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     </svg>
                     <span>Note</span>
                 </button>
+                ` : ''}
+                ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -1881,6 +1889,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     </svg>
                     <span>Sermon</span>
                 </button>
+                ` : ''}
                 <button class="verse-bottom-action add-favorite-action">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
@@ -2004,21 +2013,24 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         });
     }
     
-    // Add sermon button
-    bottomSheet.querySelector('.add-sermon-action').addEventListener('click', () => {
-        closeBottomSheet();
-        
-        // For multi-select, use the selectedVerses array
-        const versesToAdd = selectedVerses.map(verseNum => ({
-            book: bibleBooks[currentBook].name,
-            chapter: currentChapter,
-            verse: verseNum,
-            display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
-        }));
-        
-        // Show sermon selection sheet
-        showSermonSelectionSheet(versesToAdd);
-    });
+    // Add sermon button (only if admin access enabled)
+    const multiSermonBtn = bottomSheet.querySelector('.add-sermon-action');
+    if (multiSermonBtn) {
+        multiSermonBtn.addEventListener('click', () => {
+            closeBottomSheet();
+            
+            // For multi-select, use the selectedVerses array
+            const versesToAdd = selectedVerses.map(verseNum => ({
+                book: bibleBooks[currentBook].name,
+                chapter: currentChapter,
+                verse: verseNum,
+                display: `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`
+            }));
+            
+            // Show sermon selection sheet
+            showSermonSelectionSheet(versesToAdd);
+        });
+    }
     
     // Add bookmark button (color picker for all selected verses)
     const bookmarkBtn = bottomSheet.querySelector('.add-favorite-action');
