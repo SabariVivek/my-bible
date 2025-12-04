@@ -1649,6 +1649,12 @@ function showVerseActionsBottomSheet(verseNum) {
     // Copy verse button
     bottomSheet.querySelector('.copy-verse-action').addEventListener('click', function() {
         handleVersesCopy(this);
+        
+        // Clear verse selection for single-verse copy
+        const versesColumn = document.querySelector('.verses-column');
+        if (versesColumn) {
+            versesColumn.querySelectorAll('.number-item.active').forEach(item => item.classList.remove('active'));
+        }
     });
     
     // Add note button (only if admin access enabled)
