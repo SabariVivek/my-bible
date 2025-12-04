@@ -435,15 +435,35 @@
             max-height: 200px;
         }
 
+        .prayers-input-group.error .prayers-input-text {
+            border-color: #ef4444 !important;
+            border-width: 2px;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.5), inset 0 0 4px rgba(239, 68, 68, 0.1);
+        }
+
+        .prayers-input-group.error .prayers-input-label {
+            color: #ef4444;
+        }
+
+        .prayers-input-error {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: -0.25rem;
+            display: none;
+        }
+
+        .prayers-input-group.error .prayers-input-error {
+            display: block;
+        }
+
         /* Badge Selector */
         .prayers-badge-selector {
             position: relative;
             width: 100%;
         }
 
-        .prayers-badge-btn {
+        .prayers-badge-btn-wrapper {
             width: 100%;
-            padding: 12px;
             border: 1px solid #444;
             border-radius: 8px;
             background: #222;
@@ -454,20 +474,63 @@
             align-items: center;
             justify-content: space-between;
             transition: border-color 0.2s;
+            position: relative;
+            padding: 0;
         }
 
-        .prayers-badge-btn:hover {
+        .prayers-badge-btn-wrapper:hover {
             border-color: #666;
         }
 
-        .prayers-badge-btn::after {
+        .prayers-badge-btn-text {
+            flex: 1;
+            background: none;
+            border: none;
+            color: #ddd;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 12px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .prayers-badge-btn-text::after {
             content: '▼';
             font-size: 0.8rem;
             margin-left: 8px;
+            flex-shrink: 0;
         }
 
-        .prayers-badge-btn.active::after {
+        .prayers-badge-btn-text:hover {
+            background: none;
+        }
+
+        .prayers-badge-btn-wrapper.active .prayers-badge-btn-text::after {
             transform: rotate(180deg);
+        }
+
+        .prayers-badge-clear {
+            display: none;
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-left: auto;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .prayers-badge-clear:hover {
+            color: #fff;
+        }
+
+        .prayers-badge-btn-wrapper.has-value .prayers-badge-clear {
+            display: block;
         }
 
         .prayers-badge-dropdown {
@@ -529,14 +592,18 @@
             color: #fff;
         }
 
-        body.light-theme .prayers-badge-btn {
+        body.light-theme .prayers-badge-btn-wrapper {
             background: #f5f5f5;
             border-color: #ddd;
             color: #333;
         }
 
-        body.light-theme .prayers-badge-btn:hover {
+        body.light-theme .prayers-badge-btn-wrapper:hover {
             border-color: #999;
+        }
+
+        body.light-theme .prayers-badge-btn-text {
+            color: #333;
         }
 
         body.light-theme .prayers-badge-dropdown {
@@ -563,6 +630,14 @@
         body.light-theme .prayers-badge-option.selected {
             background: #0066cc;
             color: #fff;
+        }
+
+        body.light-theme .prayers-badge-clear {
+            color: #666;
+        }
+
+        body.light-theme .prayers-badge-clear:hover {
+            color: #333;
         }
 
         .prayers-select {
@@ -1149,12 +1224,12 @@
 
         .prayers-member-badge {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 4px 8px;
             background: rgba(120, 170, 255, 0.15);
             color: #78aaff;
             border: 1px solid rgba(120, 170, 255, 0.25);
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 500;
         }
 
@@ -1339,6 +1414,7 @@
                     <label class="prayers-input-label">Family Name</label>
                     <input type="text" class="prayers-input-text" id="prayer-name-input" placeholder="Enter family name..."
                         autocomplete="off">
+                    <div class="prayers-input-error">Family name is required</div>
                 </div>
 
                 <div class="prayers-input-group" id="members-input-group">
@@ -1359,6 +1435,7 @@
                     <label class="prayers-input-label">Prayer Name</label>
                     <input type="text" class="prayers-input-text" id="prayer-name-others-input" placeholder="Enter prayer name..."
                         autocomplete="off">
+                    <div class="prayers-input-error">Prayer name is required</div>
                 </div>
 
                 <div class="prayers-input-group">
@@ -1370,7 +1447,12 @@
                 <div class="prayers-input-group">
                     <label class="prayers-input-label">Badge</label>
                     <div class="prayers-badge-selector">
-                        <button type="button" class="prayers-badge-btn" id="prayer-badge-btn">Select a badge</button>
+                        <div class="prayers-badge-btn-wrapper" id="prayer-badge-btn">
+                            <button type="button" class="prayers-badge-btn-text">
+                                <span id="prayer-badge-text">Select a badge</span>
+                            </button>
+                            <button type="button" class="prayers-badge-clear" id="prayer-badge-clear">✕</button>
+                        </div>
                         <div class="prayers-badge-dropdown" id="prayer-badge-dropdown">
                             <div class="prayers-badge-group">
                                 <div class="prayers-badge-group-title">Health & Medical</div>
@@ -1449,6 +1531,7 @@
                     <label class="prayers-input-label">Prayer Name</label>
                     <input type="text" class="prayers-input-text" id="prayer-name-world-input" placeholder="Enter prayer name..."
                         autocomplete="off">
+                    <div class="prayers-input-error">Prayer name is required</div>
                 </div>
 
                 <div class="prayers-input-group">
@@ -1460,7 +1543,12 @@
                 <div class="prayers-input-group">
                     <label class="prayers-input-label">Badge</label>
                     <div class="prayers-badge-selector">
-                        <button type="button" class="prayers-badge-btn" id="prayer-badge-world-btn">Select a badge</button>
+                        <div class="prayers-badge-btn-wrapper" id="prayer-badge-world-btn">
+                            <button type="button" class="prayers-badge-btn-text">
+                                <span id="prayer-badge-world-text">Select a badge</span>
+                            </button>
+                            <button type="button" class="prayers-badge-clear" id="prayer-badge-world-clear">✕</button>
+                        </div>
                         <div class="prayers-badge-dropdown" id="prayer-badge-world-dropdown">
                             <div class="prayers-badge-group">
                                 <div class="prayers-badge-group-title">Status</div>
@@ -1531,12 +1619,38 @@
         const badgeDropdown = document.getElementById('prayer-badge-dropdown');
         const badgeInput = document.getElementById('prayer-badge-input');
         const badgeOptions = document.querySelectorAll('#others-content .prayers-badge-option');
+        const badgeClearBtn = document.getElementById('prayer-badge-clear');
+        const badgeBtnText = badgeBtn.querySelector('.prayers-badge-btn-text');
 
-        if (badgeBtn) {
-            badgeBtn.addEventListener('click', (e) => {
+        function updateBadgeButton(btn, value) {
+            if (value) {
+                btn.classList.add('has-value');
+                document.getElementById('prayer-badge-text').textContent = value;
+            } else {
+                btn.classList.remove('has-value');
+                document.getElementById('prayer-badge-text').textContent = 'Select a badge';
+            }
+        }
+
+        if (badgeBtnText) {
+            badgeBtnText.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 badgeDropdown.classList.toggle('show');
                 badgeBtn.classList.toggle('active');
+            });
+        }
+
+        if (badgeClearBtn) {
+            badgeClearBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                badgeInput.value = '';
+                badgeBtn.classList.remove('has-value');
+                updateBadgeButton(badgeBtn, '');
+                badgeBtn.classList.remove('active');
+                badgeDropdown.classList.remove('show');
+                badgeOptions.forEach(opt => opt.classList.remove('selected'));
             });
         }
 
@@ -1545,7 +1659,7 @@
                 e.preventDefault();
                 const value = option.dataset.value;
                 badgeInput.value = value;
-                badgeBtn.textContent = value;
+                updateBadgeButton(badgeBtn, value);
                 badgeBtn.classList.remove('active');
                 badgeDropdown.classList.remove('show');
                 
@@ -1568,12 +1682,38 @@
         const worldBadgeDropdown = document.getElementById('prayer-badge-world-dropdown');
         const worldBadgeInput = document.getElementById('prayer-badge-world-input');
         const worldBadgeOptions = document.querySelectorAll('#world-content .prayers-badge-option');
+        const worldBadgeClearBtn = document.getElementById('prayer-badge-world-clear');
+        const worldBadgeBtnText = worldBadgeBtn.querySelector('.prayers-badge-btn-text');
 
-        if (worldBadgeBtn) {
-            worldBadgeBtn.addEventListener('click', (e) => {
+        function updateWorldBadgeButton(btn, value) {
+            if (value) {
+                btn.classList.add('has-value');
+                document.getElementById('prayer-badge-world-text').textContent = value;
+            } else {
+                btn.classList.remove('has-value');
+                document.getElementById('prayer-badge-world-text').textContent = 'Select a badge';
+            }
+        }
+
+        if (worldBadgeBtnText) {
+            worldBadgeBtnText.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 worldBadgeDropdown.classList.toggle('show');
                 worldBadgeBtn.classList.toggle('active');
+            });
+        }
+
+        if (worldBadgeClearBtn) {
+            worldBadgeClearBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                worldBadgeInput.value = '';
+                worldBadgeBtn.classList.remove('has-value');
+                updateWorldBadgeButton(worldBadgeBtn, '');
+                worldBadgeBtn.classList.remove('active');
+                worldBadgeDropdown.classList.remove('show');
+                worldBadgeOptions.forEach(opt => opt.classList.remove('selected'));
             });
         }
 
@@ -1582,7 +1722,7 @@
                 e.preventDefault();
                 const value = option.dataset.value;
                 worldBadgeInput.value = value;
-                worldBadgeBtn.textContent = value;
+                updateWorldBadgeButton(worldBadgeBtn, value);
                 worldBadgeBtn.classList.remove('active');
                 worldBadgeDropdown.classList.remove('show');
                 
@@ -1659,12 +1799,12 @@
                             `).join('')}
                         </div>
                     `;
-                } else if (prayer.category === 'Others') {
-                    // Show badge beside title for Others
+                } else if (prayer.category === 'Others' || prayer.category === 'World') {
+                    // Show badge beside title for Others and World
                     if (prayer.badge) {
                         badgeHTML = `<span class="prayers-badge-display">${escapeHtml(prayer.badge)}</span>`;
                     }
-                    // Show description for Others category
+                    // Show description for Others and World categories
                     if (prayer.description) {
                         contentHTML = `
                             <div class="prayers-item-description">${escapeHtml(prayer.description)}</div>
@@ -1727,21 +1867,42 @@
                 let prayerName = '';
                 let description = '';
                 let badge = '';
+                let isValid = true;
                 
                 if (currentCategory === 'Family') {
                     prayerName = prayerNameInput.value.trim();
+                    const familyNameGroup = prayerNameInput.closest('.prayers-input-group');
+                    if (!prayerName) {
+                        familyNameGroup.classList.add('error');
+                        isValid = false;
+                    } else {
+                        familyNameGroup.classList.remove('error');
+                    }
                 } else if (currentCategory === 'Others') {
                     prayerName = document.getElementById('prayer-name-others-input').value.trim();
+                    const othersNameGroup = document.getElementById('prayer-name-others-input').closest('.prayers-input-group');
+                    if (!prayerName) {
+                        othersNameGroup.classList.add('error');
+                        isValid = false;
+                    } else {
+                        othersNameGroup.classList.remove('error');
+                    }
                     description = document.getElementById('prayer-description-input').value.trim();
                     badge = document.getElementById('prayer-badge-input').value.trim();
                 } else if (currentCategory === 'World') {
                     prayerName = document.getElementById('prayer-name-world-input').value.trim();
+                    const worldNameGroup = document.getElementById('prayer-name-world-input').closest('.prayers-input-group');
+                    if (!prayerName) {
+                        worldNameGroup.classList.add('error');
+                        isValid = false;
+                    } else {
+                        worldNameGroup.classList.remove('error');
+                    }
                     description = document.getElementById('prayer-description-world-input').value.trim();
                     badge = document.getElementById('prayer-badge-world-input').value.trim();
                 }
                 
-                if (!prayerName) {
-                    showToast('Please enter a prayer name');
+                if (!isValid) {
                     return;
                 }
 
@@ -1880,6 +2041,36 @@
             });
         }
 
+        // Clear error on Family name input
+        prayerNameInput.addEventListener('input', () => {
+            if (prayerNameInput.value.trim()) {
+                const familyNameGroup = prayerNameInput.closest('.prayers-input-group');
+                familyNameGroup.classList.remove('error');
+            }
+        });
+
+        // Clear error on Others name input
+        const othersNameInput = document.getElementById('prayer-name-others-input');
+        if (othersNameInput) {
+            othersNameInput.addEventListener('input', () => {
+                if (othersNameInput.value.trim()) {
+                    const othersNameGroup = othersNameInput.closest('.prayers-input-group');
+                    othersNameGroup.classList.remove('error');
+                }
+            });
+        }
+
+        // Clear error on World name input
+        const worldNameInput = document.getElementById('prayer-name-world-input');
+        if (worldNameInput) {
+            worldNameInput.addEventListener('input', () => {
+                if (worldNameInput.value.trim()) {
+                    const worldNameGroup = worldNameInput.closest('.prayers-input-group');
+                    worldNameGroup.classList.remove('error');
+                }
+            });
+        }
+
         function openAddPrayerSheet() {
             sheetOverlay.classList.add('active');
             bottomSheet.classList.add('active');
@@ -1887,6 +2078,9 @@
             if (!isEditMode) {
                 currentMembers = [];
                 renderMembersList();
+                // Clear all error messages
+                const inputGroups = document.querySelectorAll('.prayers-input-group.error');
+                inputGroups.forEach(group => group.classList.remove('error'));
                 // Reset sheet tabs to Family when adding new prayer
                 switchSheetCategory('Family');
             }
@@ -1946,6 +2140,7 @@
         function closeAddPrayerSheet() {
             sheetOverlay.classList.remove('active');
             bottomSheet.classList.remove('active');
+            // Clear all input fields
             prayerNameInput.value = '';
             document.getElementById('prayer-name-others-input').value = '';
             document.getElementById('prayer-description-input').value = '';
@@ -1953,10 +2148,18 @@
             document.getElementById('prayer-name-world-input').value = '';
             document.getElementById('prayer-description-world-input').value = '';
             document.getElementById('prayer-badge-world-input').value = '';
-            badgeBtn.textContent = 'Select a badge';
-            badgeBtn.classList.remove('active');
+            // Reset badge buttons
+            badgeBtn.classList.remove('active', 'has-value');
+            updateBadgeButton(badgeBtn, '');
             badgeDropdown.classList.remove('show');
             badgeOptions.forEach(opt => opt.classList.remove('selected'));
+            worldBadgeBtn.classList.remove('active', 'has-value');
+            updateWorldBadgeButton(worldBadgeBtn, '');
+            worldBadgeDropdown.classList.remove('show');
+            worldBadgeOptions.forEach(opt => opt.classList.remove('selected'));
+            // Clear error messages
+            const inputGroups = document.querySelectorAll('.prayers-input-group.error');
+            inputGroups.forEach(group => group.classList.remove('error'));
             currentMembers = [];
             renderMembersList();
             saveBtn.textContent = 'Save';
@@ -2098,9 +2301,10 @@
                     document.getElementById('prayer-description-input').value = prayer.description || '';
                     document.getElementById('prayer-badge-input').value = prayer.badge || '';
                     
-                    // Set badge button text
+                    // Set badge button text and update has-value class
                     if (prayer.badge) {
-                        badgeBtn.textContent = prayer.badge;
+                        updateBadgeButton(badgeBtn, prayer.badge);
+                        badgeBtn.classList.add('has-value');
                         // Mark the selected option
                         badgeOptions.forEach(opt => {
                             if (opt.dataset.value === prayer.badge) {
@@ -2110,7 +2314,8 @@
                             }
                         });
                     } else {
-                        badgeBtn.textContent = 'Select a badge';
+                        updateBadgeButton(badgeBtn, '');
+                        badgeBtn.classList.remove('has-value');
                         badgeOptions.forEach(opt => opt.classList.remove('selected'));
                     }
                     
@@ -2120,11 +2325,12 @@
                     document.getElementById('prayer-description-world-input').value = prayer.description || '';
                     document.getElementById('prayer-badge-world-input').value = prayer.badge || '';
                     
-                    // Set badge button text for World
+                    // Set badge button text and update has-value class for World
                     const worldBadgeBtn = document.getElementById('prayer-badge-world-btn');
                     const worldBadgeOptions = document.querySelectorAll('#world-content .prayers-badge-option');
                     if (prayer.badge) {
-                        worldBadgeBtn.textContent = prayer.badge;
+                        updateWorldBadgeButton(worldBadgeBtn, prayer.badge);
+                        worldBadgeBtn.classList.add('has-value');
                         // Mark the selected option
                         worldBadgeOptions.forEach(opt => {
                             if (opt.dataset.value === prayer.badge) {
@@ -2134,7 +2340,8 @@
                             }
                         });
                     } else {
-                        worldBadgeBtn.textContent = 'Select a badge';
+                        updateWorldBadgeButton(worldBadgeBtn, '');
+                        worldBadgeBtn.classList.remove('has-value');
                         worldBadgeOptions.forEach(opt => opt.classList.remove('selected'));
                     }
                     
