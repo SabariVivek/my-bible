@@ -2670,15 +2670,30 @@
                 sheetStartY = e.touches[0].clientY;
             }, false);
 
+            bottomSheet.addEventListener('touchmove', (e) => {
+                const currentY = e.touches[0].clientY;
+                const swipeDist = currentY - sheetStartY;
+                
+                // Only prevent default if swiping up AND content is at top
+                // This allows normal scrolling when there's content to scroll
+                if (swipeDist < -20 && sheetContent && sheetContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+                // Only prevent default if swiping down AND content is at top
+                else if (swipeDist > 20 && sheetContent && sheetContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+            }, false);
+
             bottomSheet.addEventListener('touchend', (e) => {
                 const sheetEndY = e.changedTouches[0].clientY;
                 const diffY = sheetEndY - sheetStartY;
                 
-                // If swiped down more than 50px, close the sheet
-                if (diffY > 50) {
+                // Only close if swiped down AND content is at top
+                if (diffY > 50 && sheetContent && sheetContent.scrollTop === 0) {
                     closeAddPrayerSheet();
                 }
-                // If at top of content and trying to scroll up, close the sheet
+                // Only close if trying to scroll up AND content is already at top
                 else if (diffY < -20 && sheetContent && sheetContent.scrollTop === 0) {
                     closeAddPrayerSheet();
                 }
@@ -2821,8 +2836,14 @@
             detailSheet.addEventListener('touchmove', (e) => {
                 const currentY = e.touches[0].clientY;
                 const swipeDist = currentY - detailSheetStartY;
-                // Prevent default when swiping down to disable browser pull-to-refresh
-                if (swipeDist > 20) {
+                
+                // Only prevent default if swiping up AND content is at top
+                // This allows normal scrolling when there's content to scroll
+                if (swipeDist < -20 && detailContent && detailContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+                // Only prevent default if swiping down AND content is at top
+                else if (swipeDist > 20 && detailContent && detailContent.scrollTop === 0) {
                     e.preventDefault();
                 }
             }, false);
@@ -2831,11 +2852,11 @@
                 const sheetEndY = e.changedTouches[0].clientY;
                 const diffY = sheetEndY - detailSheetStartY;
                 
-                // If swiped down more than 50px, close the sheet
-                if (diffY > 50) {
+                // Only close if swiped down AND content is at top
+                if (diffY > 50 && detailContent && detailContent.scrollTop === 0) {
                     closePrayerDetail();
                 }
-                // If at top of content and trying to scroll up, close the sheet
+                // Only close if trying to scroll up AND content is already at top
                 else if (diffY < -20 && detailContent && detailContent.scrollTop === 0) {
                     closePrayerDetail();
                 }

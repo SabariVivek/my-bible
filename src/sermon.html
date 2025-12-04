@@ -4640,15 +4640,29 @@
                 sheetStartY = e.touches[0].clientY;
             }, false);
 
+            favoritesSheet.addEventListener('touchmove', (e) => {
+                const currentY = e.touches[0].clientY;
+                const swipeDist = currentY - sheetStartY;
+                
+                // Only prevent default if swiping up AND content is at top
+                if (swipeDist < -20 && favoritesContent && favoritesContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+                // Only prevent default if swiping down AND content is at top
+                else if (swipeDist > 20 && favoritesContent && favoritesContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+            }, false);
+
             favoritesSheet.addEventListener('touchend', (e) => {
                 const sheetEndY = e.changedTouches[0].clientY;
                 const diffY = sheetEndY - sheetStartY;
                 
-                // If swiped down more than 50px, close the sheet
-                if (diffY > 50) {
+                // Only close if swiped down AND content is at top
+                if (diffY > 50 && favoritesContent && favoritesContent.scrollTop === 0) {
                     closeFavoritesSheet();
                 }
-                // If at top of content and trying to scroll up, close the sheet
+                // Only close if trying to scroll up AND content is already at top
                 else if (diffY < -20 && favoritesContent && favoritesContent.scrollTop === 0) {
                     closeFavoritesSheet();
                 }
@@ -4754,15 +4768,31 @@
             }
         }, false);
 
+        bottomSheet.addEventListener('touchmove', (e) => {
+            if (!e.target.closest('#sermon-sheet-drag-handle')) {
+                const currentY = e.touches[0].clientY;
+                const swipeDist = currentY - addSheetStartY;
+                
+                // Only prevent default if swiping up AND content is at top
+                if (swipeDist < -20 && addSheetContent && addSheetContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+                // Only prevent default if swiping down AND content is at top
+                else if (swipeDist > 20 && addSheetContent && addSheetContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+            }
+        }, false);
+
         bottomSheet.addEventListener('touchend', (e) => {
             const sheetEndY = e.changedTouches[0].clientY;
             const diffY = sheetEndY - addSheetStartY;
             
-            // If swiped down more than 50px, close the sheet
-            if (diffY > 50 && !e.target.closest('#sermon-sheet-drag-handle')) {
+            // Only close if swiped down AND content is at top
+            if (diffY > 50 && addSheetContent && addSheetContent.scrollTop === 0 && !e.target.closest('#sermon-sheet-drag-handle')) {
                 closeBottomSheet();
             }
-            // If at top of content and trying to scroll up, close the sheet
+            // Only close if trying to scroll up AND content is already at top
             else if (diffY < -20 && addSheetContent && addSheetContent.scrollTop === 0 && !e.target.closest('#sermon-sheet-drag-handle')) {
                 closeBottomSheet();
             }
@@ -4827,15 +4857,31 @@
             }
         }, false);
 
+        detailSheet.addEventListener('touchmove', (e) => {
+            if (!e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
+                const currentY = e.touches[0].clientY;
+                const swipeDist = currentY - detailSheetStartY;
+                
+                // Only prevent default if swiping up AND content is at top
+                if (swipeDist < -20 && detailSheetContent && detailSheetContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+                // Only prevent default if swiping down AND content is at top
+                else if (swipeDist > 20 && detailSheetContent && detailSheetContent.scrollTop === 0) {
+                    e.preventDefault();
+                }
+            }
+        }, false);
+
         detailSheet.addEventListener('touchend', (e) => {
             const sheetEndY = e.changedTouches[0].clientY;
             const diffY = sheetEndY - detailSheetStartY;
             
-            // If swiped down more than 50px, close the sheet
-            if (diffY > 50 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
+            // Only close if swiped down AND content is at top
+            if (diffY > 50 && detailSheetContent && detailSheetContent.scrollTop === 0 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
                 closeSermonDetail();
             }
-            // If at top of content and trying to scroll up, close the sheet
+            // Only close if trying to scroll up AND content is already at top
             else if (diffY < -20 && detailSheetContent && detailSheetContent.scrollTop === 0 && !e.target.closest('.sermon-sheet-handle') && !e.target.closest('#sermon-detail-header')) {
                 closeSermonDetail();
             }
