@@ -324,6 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
     const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
     const rightMenuBtn = document.getElementById('right-menu-btn');
+    const bibleReadingOption = document.getElementById('bible-reading-option');
+    const rightSermonOption = document.getElementById('right-sermon-option');
     const rightNotesOption = document.getElementById('right-notes-option');
     const rightKingsOption = document.getElementById('right-kings-option');
     const rightProphetsOption = document.getElementById('right-prophets-option');
@@ -337,6 +339,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Always show right-menu-btn (the button that opens right sidebar)
     if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
+    
+    // Always show public menu items (not admin-only)
+    if (bibleReadingOption) bibleReadingOption.style.display = 'flex';
+    if (rightSermonOption) rightSermonOption.style.display = 'flex';
     
     // Show/hide admin-only menu items based on admin status
     
@@ -465,6 +471,39 @@ document.addEventListener('DOMContentLoaded', () => {
                         rightCultOption.style.pointerEvents = '';
                     }, 2000);
                 }
+                if (rightPrayersOption) {
+                    rightPrayersOption.style.pointerEvents = 'none';
+                    rightPrayersOption.style.opacity = '0';
+                    rightPrayersOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightPrayersOption.style.display = 'none';
+                        rightPrayersOption.style.opacity = '1';
+                        rightPrayersOption.style.transition = '';
+                        rightPrayersOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightCharacterOption) {
+                    rightCharacterOption.style.pointerEvents = 'none';
+                    rightCharacterOption.style.opacity = '0';
+                    rightCharacterOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightCharacterOption.style.display = 'none';
+                        rightCharacterOption.style.opacity = '1';
+                        rightCharacterOption.style.transition = '';
+                        rightCharacterOption.style.pointerEvents = '';
+                    }, 2000);
+                }
+                if (rightLifeOfJesusOption) {
+                    rightLifeOfJesusOption.style.pointerEvents = 'none';
+                    rightLifeOfJesusOption.style.opacity = '0';
+                    rightLifeOfJesusOption.style.transition = 'opacity 2s ease';
+                    setTimeout(() => {
+                        rightLifeOfJesusOption.style.display = 'none';
+                        rightLifeOfJesusOption.style.opacity = '1';
+                        rightLifeOfJesusOption.style.transition = '';
+                        rightLifeOfJesusOption.style.pointerEvents = '';
+                    }, 2000);
+                }
                 // Close right sidebar if open
                 const rightSidebar = document.querySelector('.right-sidebar');
                 if (rightSidebar && !rightSidebar.classList.contains('hidden')) {
@@ -481,9 +520,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 isFadingOut = false;
                 localStorage.setItem('isAdmin', 'true');
                 
-                // Show admin-only menu items
-                if (rightNotesOption) rightNotesOption.style.display = 'flex';
-                if (rightCultOption) rightCultOption.style.display = 'flex';
+                // Show admin-only menu items - clear any conflicting styles
+                if (rightNotesOption) {
+                    rightNotesOption.style.display = 'flex';
+                    rightNotesOption.style.opacity = '';
+                    rightNotesOption.style.transition = '';
+                    rightNotesOption.style.pointerEvents = '';
+                }
+                if (rightCultOption) {
+                    rightCultOption.style.display = 'flex';
+                    rightCultOption.style.opacity = '';
+                    rightCultOption.style.transition = '';
+                    rightCultOption.style.pointerEvents = '';
+                }
+                if (rightPrayersOption) {
+                    rightPrayersOption.style.display = 'flex';
+                    rightPrayersOption.style.opacity = '';
+                    rightPrayersOption.style.transition = '';
+                    rightPrayersOption.style.pointerEvents = '';
+                }
+                if (rightCharacterOption) {
+                    rightCharacterOption.style.display = 'flex';
+                    rightCharacterOption.style.opacity = '';
+                    rightCharacterOption.style.transition = '';
+                    rightCharacterOption.style.pointerEvents = '';
+                }
+                if (rightLifeOfJesusOption) {
+                    rightLifeOfJesusOption.style.display = 'flex';
+                    rightLifeOfJesusOption.style.opacity = '';
+                    rightLifeOfJesusOption.style.transition = '';
+                    rightLifeOfJesusOption.style.pointerEvents = '';
+                }
                 
                 updateAdminUI();
             }
@@ -5029,6 +5096,7 @@ function updateAdminUI() {
     const rightCharacterOption = document.getElementById('right-character-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
+    const rightPrayersOption = document.getElementById('right-prayers-option');
     
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
@@ -5060,6 +5128,10 @@ function updateAdminUI() {
     }
     if (rightCultOption) {
         rightCultOption.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    
+    if (rightPrayersOption) {
+        rightPrayersOption.style.display = isAdminMode ? 'flex' : 'none';
     }
     
     // Update admin toggle button state
