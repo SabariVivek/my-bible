@@ -3059,7 +3059,17 @@
 
         // Load and cache verses in background
         async function preloadVersesCached(book, chapter, verseStart, verseEnd, language) {
-            const cacheKey = `${book}|${chapter}|${verseStart}|${verseEnd}`;
+            // Validate inputs - ensure verseStart and verseEnd are valid numbers
+            const validStart = parseInt(verseStart, 10);
+            const validEnd = parseInt(verseEnd, 10);
+            
+            // Skip if invalid
+            if (isNaN(validStart) || isNaN(validEnd)) {
+                console.warn(`Skipping preload: invalid verse numbers for ${book} ${chapter}:${verseStart}-${verseEnd}`);
+                return;
+            }
+            
+            const cacheKey = `${book}|${chapter}|${validStart}|${validEnd}`;
             
             // Check if already cached
             if (verseCache[language][cacheKey]) {
@@ -3075,8 +3085,8 @@
                     .eq('book_file', bookFile)
                     .eq('chapter', chapter)
                     .eq('language', language)
-                    .gte('verse', verseStart)
-                    .lte('verse', verseEnd)
+                    .gte('verse', validStart)
+                    .lte('verse', validEnd)
                     .order('verse', { ascending: true });
 
                 if (error) {
@@ -3087,7 +3097,7 @@
                 // Cache the results
                 if (data && data.length > 0) {
                     verseCache[language][cacheKey] = data;
-                    console.log(`✓ Preloaded ${language} verses: ${book} ${chapter}:${verseStart}-${verseEnd}`);
+                    console.log(`✓ Preloaded ${language} verses: ${book} ${chapter}:${validStart}-${validEnd}`);
                 }
             } catch (error) {
                 console.error('Error preloading verses:', error);
@@ -3096,10 +3106,22 @@
 
         // Preload all verses in background when sermon opens
         function preloadVersesInBackground(verses) {
+            // Filter out verses with invalid verse numbers
+            const validVerses = verses.filter(v => {
+                const start = parseInt(v.verseStart, 10);
+                const end = parseInt(v.verseEnd, 10);
+                return !isNaN(start) && !isNaN(end) && v.book && v.chapter;
+            });
+
+            if (validVerses.length === 0) {
+                console.warn('No valid verses to preload');
+                return;
+            }
+
             // Group verses by book and chapter
             const versesByBookChapter = {};
 
-            verses.forEach(v => {
+            validVerses.forEach(v => {
                 const key = `${v.book}|${v.chapter}`;
                 if (!versesByBookChapter[key]) {
                     versesByBookChapter[key] = {
@@ -3109,8 +3131,10 @@
                         verseEnds: []
                     };
                 }
-                versesByBookChapter[key].verseStarts.push(v.verseStart);
-                versesByBookChapter[key].verseEnds.push(v.verseEnd);
+                const start = parseInt(v.verseStart, 10);
+                const end = parseInt(v.verseEnd, 10);
+                versesByBookChapter[key].verseStarts.push(start);
+                versesByBookChapter[key].verseEnds.push(end);
             });
 
             // Load each book/chapter combination in background
@@ -3420,8 +3444,34 @@
         }
 
         // Open verse in modal popup
+        // Normalize book names - convert "I Chronicles" to "1 Chronicles", etc.
+        function normalizeBookName(bookName) {
+            if (!bookName) return bookName;
+            
+            // Convert Roman numerals at the start to Arabic numerals
+            const romanToNumMap = {
+                'I ': '1 ',
+                'II ': '2 ',
+                'III ': '3 ',
+                'IV ': '4 ',
+                'V ': '5 '
+            };
+            
+            let normalized = bookName;
+            for (const [roman, num] of Object.entries(romanToNumMap)) {
+                if (normalized.startsWith(roman)) {
+                    normalized = num + normalized.substring(roman.length);
+                    break;
+                }
+            }
+            return normalized;
+        }
+
         // Map book names to database book_file identifiers
         function getBookFileIdentifier(bookName) {
+            // Normalize the book name first
+            const normalizedName = normalizeBookName(bookName);
+            
             const bookMapping = {
                 '1 Corinthians': 'i_corinthians',
                 '2 Corinthians': 'ii_corinthians',
@@ -3439,20 +3489,51 @@
                 '2 Peter': 'ii_peter',
                 '1 John': 'i_john',
                 '2 John': 'ii_john',
-                '3 John': 'iii_john',
-                '1 Thessalonians': 'i_thessalonians',
-                '2 Thessalonians': 'ii_thessalonians'
+                '3 John': 'iii_john'
             };
             
-            // Return mapped value if exists, otherwise convert to lowercase with underscores
-            return bookMapping[bookName] || bookName.toLowerCase().replace(/\s+/g, '_');
+            // Return mapped value if exists
+            if (bookMapping[normalizedName]) {
+                return bookMapping[normalizedName];
+            }
+            
+            // Handle numbered books in fallback by converting number to roman numeral
+            const bookLowercase = normalizedName.toLowerCase();
+            const numberMatch = bookLowercase.match(/^(\d+)\s+(.+)$/);
+            if (numberMatch) {
+                const number = parseInt(numberMatch[1], 10);
+                const restOfName = numberMatch[2];
+                const romanNumerals = ['', 'i', 'ii', 'iii', 'iv', 'v'];
+                const romanNum = romanNumerals[number] || number.toString();
+                return `${romanNum}_${restOfName}`;
+            }
+            
+            // Default: convert to lowercase with underscores
+            return bookLowercase.replace(/\s+/g, '_');
+        }
+
+        // Get book file identifier for ENGLISH language (uses numbers and hyphens)
+        function getBookFileIdentifierEnglish(bookName) {
+            // Normalize the book name first
+            const normalizedName = normalizeBookName(bookName);
+            const bookLowercase = normalizedName.toLowerCase();
+            // Replace spaces with hyphens for English
+            return bookLowercase.replace(/\s+/g, '-');
         }
 
         function openVerseInBible(book, chapter, verseStart, verseEnd) {
-            const verseRef = `${book} ${chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
+            // Ensure verseStart and verseEnd are valid numbers
+            const start = parseInt(verseStart, 10);
+            const end = parseInt(verseEnd, 10);
+            
+            // If either is invalid, use them as is or set to 1 as fallback
+            const validStart = isNaN(start) ? 1 : start;
+            const validEnd = isNaN(end) ? validStart : end;
+            
+            const verseRef = `${book} ${chapter}:${validStart}${validStart !== validEnd ? '-' + validEnd : ''}`;
             
             // Load and display the verse from cache or Supabase
-            loadVersesFromSupabaseSermon(book, chapter, verseStart, verseEnd, verseRef);
+            loadVersesFromSupabaseSermon(book, chapter, validStart, validEnd, verseRef);
         }
 
         // Load verses from cache or Supabase and display in modal
@@ -3461,6 +3542,18 @@
             const content = document.getElementById('passageContent');
             
             if (!badge || !content) return;
+
+            // Validate inputs - ensure verseStart and verseEnd are numbers
+            if (isNaN(verseStart) || isNaN(verseEnd) || verseStart === undefined || verseEnd === undefined) {
+                badge.textContent = verseRef;
+                content.innerHTML = '<p class="passage-no-data">Invalid verse reference</p>';
+                const modal = document.getElementById('passagePopup');
+                if (modal) {
+                    modal.classList.add('show');
+                    document.body.classList.add('modal-open');
+                }
+                return;
+            }
 
             // Store for language switching
             currentSermonVerseRef = verseRef;
@@ -3502,7 +3595,7 @@
                         .order('verse', { ascending: true });
 
                     if (error) {
-                        throw error;
+                        console.error('Tamil query error:', error);
                     }
                     data = fetchedData;
                     
@@ -3513,14 +3606,16 @@
                 }
 
                 if (!data || data.length === 0) {
+                    console.log('No Tamil data, trying English...');
                     // No Tamil data found, try English
                     let engData = verseCache.english[cacheKey];
                     
                     if (!engData) {
+                        const bookFileEnglish = getBookFileIdentifierEnglish(book);
                         const { data: fetchedData, error } = await supabase
                             .from('bible_verses')
                             .select('verse, text')
-                            .eq('book_file', bookFile)
+                            .eq('book_file', bookFileEnglish)
                             .eq('chapter', chapter)
                             .eq('language', 'english')
                             .gte('verse', verseStart)
@@ -3528,7 +3623,7 @@
                             .order('verse', { ascending: true });
 
                         if (error) {
-                            throw error;
+                            console.error('English query error:', error);
                         }
                         engData = fetchedData;
                         if (engData && engData.length > 0) {
@@ -3538,6 +3633,7 @@
 
                     if (!engData || engData.length === 0) {
                         // No data found
+                        console.log('No data found in either language');
                         badge.textContent = verseRef;
                         content.innerHTML = '<p class="passage-no-data">Data yet to be seeded</p>';
                         setTimeout(() => {
@@ -3631,12 +3727,62 @@
 
             if (!badge || !content || !modal) return;
 
+            // Filter out verses with invalid verse numbers and convert to standard format
+            const validVerses = sermon.verses.filter(v => {
+                // Handle both formats:
+                // Old format: {book, chapter, verseStart, verseEnd}
+                // New format: {book, chapter, verses: [], ranges: []}
+                
+                let start, end;
+                
+                if (v.verseStart !== undefined && v.verseEnd !== undefined) {
+                    // Old format
+                    start = parseInt(v.verseStart, 10);
+                    end = parseInt(v.verseEnd, 10);
+                } else if (Array.isArray(v.verses) && v.verses.length > 0) {
+                    // New format - get min and max from verses array
+                    start = Math.min(...v.verses);
+                    end = Math.max(...v.verses);
+                } else {
+                    return false;
+                }
+                
+                return !isNaN(start) && !isNaN(end) && v.book && v.chapter;
+            }).map(v => {
+                // Normalize to standard format
+                if (v.verseStart !== undefined && v.verseEnd !== undefined) {
+                    return v; // Already in standard format
+                } else if (Array.isArray(v.verses)) {
+                    // Convert new format to standard format
+                    return {
+                        book: v.book,
+                        chapter: v.chapter,
+                        verseStart: Math.min(...v.verses),
+                        verseEnd: Math.max(...v.verses),
+                        display: v.display || `${v.book} ${v.chapter}`
+                    };
+                }
+                return v;
+            });
+
+            if (validVerses.length === 0) {
+                badge.textContent = `All Verses - ${sermon.title}`;
+                content.innerHTML = '<p class="passage-no-data">No valid verses to display</p>';
+                if (modalCard) {
+                    modalCard.style.maxHeight = '85vh';
+                    modalCard.style.transition = 'max-height 0.3s ease';
+                }
+                modal.classList.add('show');
+                document.body.classList.add('modal-open');
+                return;
+            }
+
             // Set title
             badge.textContent = `All Verses - ${sermon.title}`;
 
             // Set flags for "Show All" mode
             isShowAllMode = true;
-            currentSermonAllVerses = sermon.verses;
+            currentSermonAllVerses = validVerses;
 
             // Show loader
             content.innerHTML = '<div class="passage-loader"><div class="passage-loader-spinner"></div></div>';
@@ -3655,13 +3801,17 @@
                 let htmlContent = '';
 
                 // Load each verse with title and separator
-                for (let i = 0; i < sermon.verses.length; i++) {
-                    const verse = sermon.verses[i];
-                    const verseTitle = `${verse.book} ${verse.chapter}:${verse.verseStart}${verse.verseStart !== verse.verseEnd ? '-' + verse.verseEnd : ''}`;
+                for (let i = 0; i < validVerses.length; i++) {
+                    const verse = validVerses[i];
+                    const verseStart = parseInt(verse.verseStart, 10);
+                    const verseEnd = parseInt(verse.verseEnd, 10);
+                    const verseTitle = `${verse.book} ${verse.chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
+
+                    console.log(`[Show All] Loading: ${verseTitle}`);
 
                     // Fetch verse text from Supabase
                     const bookFile = getBookFileIdentifier(verse.book);
-                    const cacheKey = `${verse.book}|${verse.chapter}|${verse.verseStart}|${verse.verseEnd}`;
+                    const cacheKey = `${verse.book}|${verse.chapter}|${verseStart}|${verseEnd}`;
 
                     // Try Tamil first
                     let data = verseCache.tamil[cacheKey];
@@ -3672,8 +3822,8 @@
                             .eq('book_file', bookFile)
                             .eq('chapter', verse.chapter)
                             .eq('language', 'tamil')
-                            .gte('verse', verse.verseStart)
-                            .lte('verse', verse.verseEnd)
+                            .gte('verse', verseStart)
+                            .lte('verse', verseEnd)
                             .order('verse', { ascending: true });
 
                         data = fetchedData;
@@ -3686,14 +3836,15 @@
                     if (!data || data.length === 0) {
                         let engData = verseCache.english[cacheKey];
                         if (!engData) {
+                            const bookFileEnglish = getBookFileIdentifierEnglish(verse.book);
                             const { data: fetchedData } = await supabase
                                 .from('bible_verses')
                                 .select('verse, text')
-                                .eq('book_file', bookFile)
+                                .eq('book_file', bookFileEnglish)
                                 .eq('chapter', verse.chapter)
                                 .eq('language', 'english')
-                                .gte('verse', verse.verseStart)
-                                .lte('verse', verse.verseEnd)
+                                .gte('verse', verseStart)
+                                .lte('verse', verseEnd)
                                 .order('verse', { ascending: true });
 
                             engData = fetchedData;
@@ -3849,13 +4000,24 @@
             if (isShowAllMode && currentSermonAllVerses && currentSermonAllVerses.length > 0) {
                 try {
                     let htmlContent = '';
+                    let verseCount = 0;
 
                     // Load each verse with title and separator
                     for (let i = 0; i < currentSermonAllVerses.length; i++) {
                         const verse = currentSermonAllVerses[i];
-                        const verseTitle = `${verse.book} ${verse.chapter}:${verse.verseStart}${verse.verseStart !== verse.verseEnd ? '-' + verse.verseEnd : ''}`;
+                        
+                        // Validate verse numbers
+                        const verseStart = parseInt(verse.verseStart, 10);
+                        const verseEnd = parseInt(verse.verseEnd, 10);
+                        
+                        if (isNaN(verseStart) || isNaN(verseEnd)) {
+                            console.warn(`Skipping invalid verse: ${verse.book} ${verse.chapter}:${verse.verseStart}-${verse.verseEnd}`);
+                            continue;
+                        }
+                        
+                        const verseTitle = `${verse.book} ${verse.chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
                         const bookFile = getBookFileIdentifier(verse.book);
-                        const cacheKey = `${verse.book}|${verse.chapter}|${verse.verseStart}|${verse.verseEnd}`;
+                        const cacheKey = `${verse.book}|${verse.chapter}|${verseStart}|${verseEnd}`;
 
                         if (language === 'dual') {
                             // Load both English and Tamil
@@ -3863,14 +4025,15 @@
                             let tamData = verseCache.tamil[cacheKey];
 
                             if (!engData) {
+                                const bookFileEnglish = getBookFileIdentifierEnglish(verse.book);
                                 const { data } = await supabase
                                     .from('bible_verses')
                                     .select('verse, text')
-                                    .eq('book_file', bookFile)
+                                    .eq('book_file', bookFileEnglish)
                                     .eq('chapter', verse.chapter)
                                     .eq('language', 'english')
-                                    .gte('verse', verse.verseStart)
-                                    .lte('verse', verse.verseEnd)
+                                    .gte('verse', verseStart)
+                                    .lte('verse', verseEnd)
                                     .order('verse', { ascending: true });
                                 engData = data;
                                 if (data) verseCache.english[cacheKey] = data;
@@ -3883,15 +4046,15 @@
                                     .eq('book_file', bookFile)
                                     .eq('chapter', verse.chapter)
                                     .eq('language', 'tamil')
-                                    .gte('verse', verse.verseStart)
-                                    .lte('verse', verse.verseEnd)
+                                    .gte('verse', verseStart)
+                                    .lte('verse', verseEnd)
                                     .order('verse', { ascending: true });
                                 tamData = data;
                                 if (data) verseCache.tamil[cacheKey] = data;
                             }
 
                             // Add separator before verse (except for first verse)
-                            if (i > 0) {
+                            if (verseCount > 0) {
                                 htmlContent += `<hr class="verse-separator" />`;
                             }
 
@@ -3911,23 +4074,42 @@
                             } else {
                                 htmlContent += `<p class="passage-no-data">Verse not found</p>`;
                             }
+                            verseCount++;
                         } else {
                             // Load single language
                             const langCode = language === 'tamil' ? 'tamil' : 'english';
                             let data = verseCache[langCode][cacheKey];
 
                             if (!data) {
+                                const langBookFile = langCode === 'english' ? getBookFileIdentifierEnglish(verse.book) : bookFile;
                                 const { data: fetchedData } = await supabase
                                     .from('bible_verses')
                                     .select('verse, text')
-                                    .eq('book_file', bookFile)
+                                    .eq('book_file', langBookFile)
                                     .eq('chapter', verse.chapter)
                                     .eq('language', langCode)
-                                    .gte('verse', verse.verseStart)
-                                    .lte('verse', verse.verseEnd)
+                                    .gte('verse', verseStart)
+                                    .lte('verse', verseEnd)
                                     .order('verse', { ascending: true });
                                 data = fetchedData;
                                 if (fetchedData) verseCache[langCode][cacheKey] = fetchedData;
+                                
+                                // If English not found and we're looking for English, try fallback to Tamil
+                                if (!data && langCode === 'english') {
+                                    const { data: tamData } = await supabase
+                                        .from('bible_verses')
+                                        .select('verse, text')
+                                        .eq('book_file', bookFile)
+                                        .eq('chapter', verse.chapter)
+                                        .eq('language', 'tamil')
+                                        .gte('verse', verseStart)
+                                        .lte('verse', verseEnd)
+                                        .order('verse', { ascending: true });
+                                    if (tamData) {
+                                        data = tamData;
+                                        verseCache.tamil[cacheKey] = tamData;
+                                    }
+                                }
                             }
 
                             // Add verse title
@@ -3944,6 +4126,7 @@
                             } else {
                                 htmlContent += `<p class="passage-no-data">Verse not found</p>`;
                             }
+                            verseCount++;
                         }
                     }
 
@@ -3958,6 +4141,12 @@
             }
 
             try {
+                // Validate currentSermonVerseStart and currentSermonVerseEnd
+                if (isNaN(currentSermonVerseStart) || isNaN(currentSermonVerseEnd) || currentSermonVerseStart === undefined || currentSermonVerseEnd === undefined) {
+                    content.innerHTML = '<p class="passage-no-data">Invalid verse reference</p>';
+                    return;
+                }
+
                 const bookFile = getBookFileIdentifier(currentSermonBook);
                 const cacheKey = `${currentSermonBook}|${currentSermonChapter}|${currentSermonVerseStart}|${currentSermonVerseEnd}`;
 
@@ -3968,10 +4157,11 @@
 
                     // Fetch if not in cache
                     if (!engData) {
+                        const bookFileEnglish = getBookFileIdentifierEnglish(currentSermonBook);
                         const { data } = await supabase
                             .from('bible_verses')
                             .select('verse, text')
-                            .eq('book_file', bookFile)
+                            .eq('book_file', bookFileEnglish)
                             .eq('chapter', currentSermonChapter)
                             .eq('language', 'english')
                             .gte('verse', currentSermonVerseStart)
@@ -4023,29 +4213,76 @@
 
                     content.innerHTML = dualHtml || '<p class="passage-no-data">Translations not available</p>';
                 } else {
-                    // Load single language
+                    // Load single language with proper fallback logic matching loadVersesFromSupabaseSermon
                     const langCode = language === 'tamil' ? 'tamil' : 'english';
                     let data = verseCache[langCode][cacheKey];
 
                     // Fetch if not in cache
                     if (!data) {
-                        const { data: fetchedData, error } = await supabase
+                        const langBookFile = langCode === 'english' ? getBookFileIdentifierEnglish(currentSermonBook) : bookFile;
+                        const { data: fetchedData } = await supabase
                             .from('bible_verses')
                             .select('verse, text')
-                            .eq('book_file', bookFile)
+                            .eq('book_file', langBookFile)
                             .eq('chapter', currentSermonChapter)
                             .eq('language', langCode)
                             .gte('verse', currentSermonVerseStart)
                             .lte('verse', currentSermonVerseEnd)
                             .order('verse', { ascending: true });
 
-                        if (error) throw error;
                         data = fetchedData;
-                        if (data) verseCache[langCode][cacheKey] = data;
+                        if (data && data.length > 0) {
+                            verseCache[langCode][cacheKey] = data;
+                        }
+                    } else {
+                        console.log(`Using cached ${langCode} data: ${data.length} verses`);
                     }
 
+                    // If requested language not found, try the other language (same as loadVersesFromSupabaseSermon)
                     if (!data || data.length === 0) {
-                        content.innerHTML = `<p class="passage-no-data">${language === 'tamil' ? 'Tamil' : 'English'} translation not available</p>`;
+                        console.log(`${langCode} data not found, trying fallback language...`);
+                        const fallbackLangCode = langCode === 'tamil' ? 'english' : 'tamil';
+                        let fallbackData = verseCache[fallbackLangCode][cacheKey];
+                        
+                        if (!fallbackData) {
+                            const fallbackBookFile = fallbackLangCode === 'english' ? getBookFileIdentifierEnglish(currentSermonBook) : bookFile;
+                            const { data: fetchedData } = await supabase
+                                .from('bible_verses')
+                                .select('verse, text')
+                                .eq('book_file', fallbackBookFile)
+                                .eq('chapter', currentSermonChapter)
+                                .eq('language', fallbackLangCode)
+                                .gte('verse', currentSermonVerseStart)
+                                .lte('verse', currentSermonVerseEnd)
+                                .order('verse', { ascending: true });
+
+                            fallbackData = fetchedData;
+                            if (fallbackData && fallbackData.length > 0) {
+                                verseCache[fallbackLangCode][cacheKey] = fallbackData;
+                            }
+                        } else {
+                        }
+
+                        if (fallbackData && fallbackData.length > 0) {
+                            // Switch to fallback language button
+                            const buttons = document.querySelectorAll('.passage-lang-btn');
+                            buttons.forEach(btn => {
+                                if (btn.dataset.lang === fallbackLangCode) {
+                                    btn.classList.add('active');
+                                } else {
+                                    btn.classList.remove('active');
+                                }
+                            });
+                            
+                            let htmlContent = '';
+                            const className = fallbackLangCode === 'tamil' ? 'tamil-verse' : 'bible-verse';
+                            fallbackData.forEach(row => {
+                                htmlContent += `<p class="${className}">${row.verse}. ${row.text}</p>`;
+                            });
+                            content.innerHTML = htmlContent;
+                        } else {
+                            content.innerHTML = `<p class="passage-no-data">${language === 'tamil' ? 'Tamil' : 'English'} translation not available</p>`;
+                        }
                     } else {
                         let htmlContent = '';
                         const className = language === 'tamil' ? 'tamil-verse' : 'bible-verse';
