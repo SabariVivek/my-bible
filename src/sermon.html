@@ -3068,7 +3068,7 @@
                 console.warn(`Skipping preload: invalid verse numbers for ${book} ${chapter}:${verseStart}-${verseEnd}`);
                 return;
             }
-            
+
             const cacheKey = `${book}|${chapter}|${validStart}|${validEnd}`;
             
             // Check if already cached
@@ -3077,7 +3077,10 @@
             }
 
             try {
-                const bookFile = book.toLowerCase().replace(/\s+/g, '_');
+                // Use the proper book identifier functions based on language
+                const bookFile = language === 'english' ? 
+                    getBookFileIdentifierEnglish(book) : 
+                    getBookFileIdentifier(book);
                 
                 const { data, error } = await supabase
                     .from('bible_verses')
@@ -3106,11 +3109,42 @@
 
         // Preload all verses in background when sermon opens
         function preloadVersesInBackground(verses) {
-            // Filter out verses with invalid verse numbers
+            // Filter out verses with invalid verse numbers and convert to standard format
             const validVerses = verses.filter(v => {
-                const start = parseInt(v.verseStart, 10);
-                const end = parseInt(v.verseEnd, 10);
+                // Handle both formats:
+                // Old format: {book, chapter, verseStart, verseEnd}
+                // New format: {book, chapter, verses: [], ranges: []}
+                
+                let start, end;
+                
+                if (v.verseStart !== undefined && v.verseEnd !== undefined) {
+                    // Old format
+                    start = parseInt(v.verseStart, 10);
+                    end = parseInt(v.verseEnd, 10);
+                } else if (Array.isArray(v.verses) && v.verses.length > 0) {
+                    // New format - get min and max from verses array
+                    start = Math.min(...v.verses);
+                    end = Math.max(...v.verses);
+                } else {
+                    return false;
+                }
+                
                 return !isNaN(start) && !isNaN(end) && v.book && v.chapter;
+            }).map(v => {
+                // Normalize to standard format
+                if (v.verseStart !== undefined && v.verseEnd !== undefined) {
+                    return v; // Already in standard format
+                } else if (Array.isArray(v.verses)) {
+                    // Convert new format to standard format
+                    return {
+                        book: v.book,
+                        chapter: v.chapter,
+                        verseStart: Math.min(...v.verses),
+                        verseEnd: Math.max(...v.verses),
+                        display: v.display || `${v.book} ${v.chapter}`
+                    };
+                }
+                return v;
             });
 
             if (validVerses.length === 0) {
