@@ -770,8 +770,14 @@
             gap: 8px;
         }
 
+        .prayers-member-tag-wrapper {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
         .prayers-member-tag {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             gap: 6px;
             background: #78aaff;
@@ -780,6 +786,8 @@
             border-radius: 20px;
             font-size: 13px;
             font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 4px;
         }
 
         .prayers-member-tag button {
@@ -802,7 +810,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 10px;
+            margin-top: 0;
         }
 
         .prayers-family-badge-tag {
@@ -812,9 +820,9 @@
             background: rgba(120, 170, 255, 0.15);
             color: #78aaff;
             border: 1px solid rgba(120, 170, 255, 0.25);
-            padding: 6px 12px;
+            padding: 4px 8px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 0.75rem;
             font-weight: 500;
         }
 
@@ -1013,20 +1021,20 @@
         }
 
         .prayers-detail-member-card {
-            padding: 14px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            background: #fafafa;
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
             display: flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.2s;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            transition: background 0.2s, box-shadow 0.2s;
         }
 
         .prayers-detail-member-card:hover {
-            border-color: #78aaff;
-            background: #f5f8ff;
-            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.15);
+            background: #f3f3f3;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.3), inset 0 0 8px rgba(120, 170, 255, 0.1);
         }
 
         body.dark-theme .prayers-detail-member-card {
@@ -1035,9 +1043,8 @@
         }
 
         body.dark-theme .prayers-detail-member-card:hover {
-            border-color: #78aaff;
-            background: #2a2a3a;
-            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.25);
+            background: #2d2d2d;
+            box-shadow: 0 0 12px rgba(120, 170, 255, 0.4), inset 0 0 8px rgba(120, 170, 255, 0.15);
         }
 
         .prayers-detail-member-icon {
@@ -1046,11 +1053,11 @@
         }
 
         .prayers-detail-member-name {
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 0.9rem;
+            font-weight: 600;
             color: #333;
-            flex: 1;
             word-break: break-word;
+            margin: 0;
         }
 
         body.dark-theme .prayers-detail-member-name {
@@ -1545,14 +1552,14 @@
                     <div class="prayers-members-list" id="members-list"></div>
                 </div>
 
-                <div class="prayers-input-group" id="badges-input-group">
-                    <label class="prayers-input-label">Badges (Optional)</label>
+                <div class="prayers-input-group" id="member-badges-input-group" style="display: none;">
+                    <label class="prayers-input-label">Badges for <span id="selected-member-name"></span> (Optional)</label>
                     <div class="prayers-input-with-icon">
-                        <input type="text" class="prayers-input-text" id="prayer-family-badge-input" placeholder="Enter badge text"
+                        <input type="text" class="prayers-input-text" id="prayer-member-badge-input" placeholder="Enter badge text"
                             autocomplete="off">
-                        <button class="prayers-input-icon-btn" id="add-family-badge-btn" type="button">+</button>
+                        <button class="prayers-input-icon-btn" id="add-member-badge-btn" type="button">+</button>
                     </div>
-                    <div class="prayers-family-badges-list" id="family-badges-list"></div>
+                    <div class="prayers-member-badges-list" id="member-badges-list"></div>
                 </div>
             </div>
             
@@ -1918,25 +1925,14 @@
                 let badgeHTML = '';
                 
                 if (prayer.category === 'Family' && prayer.members && prayer.members.length > 0) {
-                    // Show members for Family category
+                    // Show members for Family category (only member names)
                     contentHTML = `
                         <div class="prayers-members-badges">
                             ${prayer.members.map(member => `
-                                <span class="prayers-member-badge">${escapeHtml(member)}</span>
+                                <span class="prayers-member-badge">${escapeHtml(member.name)}</span>
                             `).join('')}
                         </div>
                     `;
-                    
-                    // Add family badges if available
-                    if (prayer.familyBadges && prayer.familyBadges.length > 0) {
-                        contentHTML += `
-                            <div class="prayers-family-badges-list">
-                                ${prayer.familyBadges.map(badge => `
-                                    <span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>
-                                `).join('')}
-                            </div>
-                        `;
-                    }
                 } else if (prayer.category === 'Others' || prayer.category === 'World') {
                     // Show badge beside title for Others and World
                     if (prayer.badge) {
@@ -2052,18 +2048,12 @@
                         prayers[prayerIndex].name = prayerName;
                         if (currentCategory === 'Family') {
                             prayers[prayerIndex].members = [...currentMembers];
-                            if (currentFamilyBadges.length > 0) {
-                                prayers[prayerIndex].familyBadges = [...currentFamilyBadges];
-                            } else {
-                                prayers[prayerIndex].familyBadges = undefined;
-                            }
                             prayers[prayerIndex].description = undefined;
                             prayers[prayerIndex].badge = undefined;
                         } else {
                             prayers[prayerIndex].description = description;
                             prayers[prayerIndex].badge = badge;
                             prayers[prayerIndex].members = undefined;
-                            prayers[prayerIndex].familyBadges = undefined;
                         }
                         localStorage.setItem('prayers', JSON.stringify(prayers));
                         closeAddPrayerSheet();
@@ -2087,9 +2077,6 @@
                         if (currentMembers.length > 0) {
                             newPrayer.members = [...currentMembers];
                         }
-                        if (currentFamilyBadges.length > 0) {
-                            newPrayer.familyBadges = [...currentFamilyBadges];
-                        }
                     } else if (currentCategory === 'Others' || currentCategory === 'World') {
                         if (description) newPrayer.description = description;
                         if (badge) newPrayer.badge = badge;
@@ -2108,9 +2095,9 @@
                         showToast('Saved');
                         prayerNameInput.value = '';
                         currentMembers = [];
-                        currentFamilyBadges = [];
+                        currentSelectedMemberIndex = null;
                         renderMembersList();
-                        renderFamilyBadgesList();
+                        renderMemberBadgesList();
                         saveBtn.disabled = false;
                     }, 300);
                 }
@@ -2124,15 +2111,25 @@
 
             if (currentMembers.length === 0) {
                 membersList.innerHTML = '';
+                const memberBadgesGroup = document.getElementById('member-badges-input-group');
+                if (memberBadgesGroup) memberBadgesGroup.style.display = 'none';
                 return;
             }
 
-            membersList.innerHTML = currentMembers.map((member, index) => `
-                <div class="prayers-member-tag">
-                    <span>${escapeHtml(member)}</span>
-                    <button onclick="removeMember(${index})" type="button">×</button>
-                </div>
-            `).join('');
+            membersList.innerHTML = currentMembers.map((member, index) => {
+                const memberBadgesHTML = member.badges && member.badges.length > 0
+                    ? `<div class="prayers-family-badges-list">${member.badges.map(badge => `<span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>`).join('')}</div>`
+                    : '';
+                return `
+                    <div class="prayers-member-tag-wrapper">
+                        <div class="prayers-member-tag" onclick="selectMemberForBadges(${index})" style="cursor: pointer;">
+                            <span>${escapeHtml(member.name)}</span>
+                            <button onclick="removeMember(event, ${index})" type="button">×</button>
+                        </div>
+                        ${memberBadgesHTML}
+                    </div>
+                `;
+            }).join('');
         }
 
         function addMember() {
@@ -2150,19 +2147,89 @@
             // Remove error state when user enters a valid name
             membersInputGroup.classList.remove('error');
 
-            if (currentMembers.includes(memberName)) {
+            if (currentMembers.some(m => m.name === memberName)) {
                 showToast('Member already added');
                 return;
             }
 
-            currentMembers.push(memberName);
+            currentMembers.push({ name: memberName, badges: [] });
             memberInput.value = '';
             renderMembersList();
         }
 
-        function removeMember(index) {
+        function removeMember(event, index) {
+            event.stopPropagation();
             currentMembers.splice(index, 1);
+            currentSelectedMemberIndex = null;
             renderMembersList();
+            renderMemberBadgesList();
+        }
+
+        let currentSelectedMemberIndex = null;
+
+        function selectMemberForBadges(index) {
+            currentSelectedMemberIndex = index;
+            const memberBadgesGroup = document.getElementById('member-badges-input-group');
+            const selectedMemberName = document.getElementById('selected-member-name');
+            
+            if (memberBadgesGroup && selectedMemberName) {
+                selectedMemberName.textContent = currentMembers[index].name;
+                memberBadgesGroup.style.display = 'block';
+                renderMemberBadgesList();
+            }
+        }
+
+        function renderMemberBadgesList() {
+            const badgesList = document.getElementById('member-badges-list');
+            if (!badgesList || currentSelectedMemberIndex === null) {
+                if (badgesList) badgesList.innerHTML = '';
+                return;
+            }
+
+            const selectedMember = currentMembers[currentSelectedMemberIndex];
+            if (!selectedMember || !selectedMember.badges || selectedMember.badges.length === 0) {
+                badgesList.innerHTML = '';
+                return;
+            }
+
+            badgesList.innerHTML = selectedMember.badges.map((badge, index) => `
+                <div class="prayers-family-badge-tag">
+                    <span>${escapeHtml(badge)}</span>
+                    <button onclick="removeMemberBadge(${index})" type="button">×</button>
+                </div>
+            `).join('');
+        }
+
+        function addMemberBadge() {
+            if (currentSelectedMemberIndex === null) {
+                showToast('Select a member first');
+                return;
+            }
+
+            const badgeInput = document.getElementById('prayer-member-badge-input');
+            if (!badgeInput) return;
+
+            const badgeText = badgeInput.value.trim();
+            
+            if (!badgeText) {
+                return;
+            }
+
+            const selectedMember = currentMembers[currentSelectedMemberIndex];
+            if (selectedMember.badges.includes(badgeText)) {
+                showToast('Badge already added for this member');
+                return;
+            }
+
+            selectedMember.badges.push(badgeText);
+            badgeInput.value = '';
+            renderMemberBadgesList();
+        }
+
+        function removeMemberBadge(index) {
+            if (currentSelectedMemberIndex === null) return;
+            currentMembers[currentSelectedMemberIndex].badges.splice(index, 1);
+            renderMemberBadgesList();
         }
 
         // Add member button click
@@ -2192,67 +2259,22 @@
             });
         }
 
-        // Family badges management
-        let currentFamilyBadges = [];
-
-        function renderFamilyBadgesList() {
-            const badgesList = document.getElementById('family-badges-list');
-            if (!badgesList) return;
-
-            if (currentFamilyBadges.length === 0) {
-                badgesList.innerHTML = '';
-                return;
-            }
-
-            badgesList.innerHTML = currentFamilyBadges.map((badge, index) => `
-                <div class="prayers-family-badge-tag">
-                    <span>${escapeHtml(badge)}</span>
-                    <button onclick="removeFamilyBadge(${index})" type="button">×</button>
-                </div>
-            `).join('');
-        }
-
-        function addFamilyBadge() {
-            const badgeInput = document.getElementById('prayer-family-badge-input');
-            if (!badgeInput) return;
-
-            const badgeText = badgeInput.value.trim();
-            
-            if (!badgeText) {
-                return;
-            }
-
-            if (currentFamilyBadges.includes(badgeText)) {
-                showToast('Badge already added');
-                return;
-            }
-
-            currentFamilyBadges.push(badgeText);
-            badgeInput.value = '';
-            renderFamilyBadgesList();
-        }
-
-        function removeFamilyBadge(index) {
-            currentFamilyBadges.splice(index, 1);
-            renderFamilyBadgesList();
-        }
-
-        // Add family badge button click
-        const addFamilyBadgeBtn = document.getElementById('add-family-badge-btn');
-        if (addFamilyBadgeBtn) {
-            addFamilyBadgeBtn.addEventListener('click', (e) => {
+        // Add member badge button click
+        const addMemberBadgeBtn = document.getElementById('add-member-badge-btn');
+        if (addMemberBadgeBtn) {
+            addMemberBadgeBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                addFamilyBadge();
+                addMemberBadge();
             });
         }
 
-        // Allow Enter key to add family badge
-        const familyBadgeInput = document.getElementById('prayer-family-badge-input');
-        if (familyBadgeInput) {
-            familyBadgeInput.addEventListener('keypress', (e) => {
+        // Allow Enter key to add member badge
+        const memberBadgeInput = document.getElementById('prayer-member-badge-input');
+        if (memberBadgeInput) {
+            memberBadgeInput.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
-                    addFamilyBadge();
+                    addMemberBadge();
                 }
             });
         }
@@ -2293,9 +2315,11 @@
             // Only clear if not in edit mode
             if (!isEditMode) {
                 currentMembers = [];
-                currentFamilyBadges = [];
+                currentSelectedMemberIndex = null;
                 renderMembersList();
-                renderFamilyBadgesList();
+                renderMemberBadgesList();
+                document.getElementById('member-badges-input-group').style.display = 'none';
+                document.getElementById('prayer-member-badge-input').value = '';
                 // Clear all error messages
                 const inputGroups = document.querySelectorAll('.prayers-input-group.error');
                 inputGroups.forEach(group => group.classList.remove('error'));
@@ -2366,7 +2390,7 @@
             document.getElementById('prayer-name-world-input').value = '';
             document.getElementById('prayer-description-world-input').value = '';
             document.getElementById('prayer-badge-world-input').value = '';
-            document.getElementById('prayer-family-badge-input').value = '';
+            document.getElementById('prayer-member-badge-input').value = '';
             // Reset badge buttons
             badgeBtn.classList.remove('active', 'has-value');
             updateBadgeButton(badgeBtn, '');
@@ -2380,9 +2404,10 @@
             const inputGroups = document.querySelectorAll('.prayers-input-group.error');
             inputGroups.forEach(group => group.classList.remove('error'));
             currentMembers = [];
-            currentFamilyBadges = [];
+            currentSelectedMemberIndex = null;
             renderMembersList();
-            renderFamilyBadgesList();
+            renderMemberBadgesList();
+            document.getElementById('member-badges-input-group').style.display = 'none';
             saveBtn.textContent = 'Save';
             isEditMode = false;
             editingPrayerId = null;
@@ -2414,30 +2439,25 @@
             // Build content HTML based on category
             let contentHTML = '';
             if (prayer.category === 'Family') {
-                // Show members as cards
+                // Show members as cards with their individual badges
                 if (prayer.members && prayer.members.length > 0) {
                     contentHTML = `
                         <div class="prayers-detail-members-list">
-                            ${prayer.members.map(member => `
-                                <div class="prayers-detail-member-card">
-                                    <div class="prayers-detail-member-name">${escapeHtml(member)}</div>
-                                </div>
-                            `).join('')}
+                            ${prayer.members.map(member => {
+                                const memberBadgesHTML = member.badges && member.badges.length > 0
+                                    ? `<div class="prayers-family-badges-list">${member.badges.map(badge => `<span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>`).join('')}</div>`
+                                    : '';
+                                return `
+                                    <div class="prayers-detail-member-card">
+                                        <div class="prayers-detail-member-name">${escapeHtml(member.name)}</div>
+                                        ${memberBadgesHTML}
+                                    </div>
+                                `;
+                            }).join('')}
                         </div>
                     `;
                 } else {
                     contentHTML = `<div class="prayers-empty-state"><p>No members added</p></div>`;
-                }
-                
-                // Add family badges if available
-                if (prayer.familyBadges && prayer.familyBadges.length > 0) {
-                    contentHTML += `
-                        <div class="prayers-family-badges-list">
-                            ${prayer.familyBadges.map(badge => `
-                                <span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>
-                            `).join('')}
-                        </div>
-                    `;
                 }
             } else if (prayer.category === 'Others') {
                 // Show description if available
@@ -2549,9 +2569,7 @@
                 if (prayer.category === 'Family') {
                     prayerNameInput.value = prayer.name;
                     currentMembers = prayer.members ? [...prayer.members] : [];
-                    currentFamilyBadges = prayer.familyBadges ? [...prayer.familyBadges] : [];
                     renderMembersList();
-                    renderFamilyBadgesList();
                     prayerNameInput.focus();
                 } else if (prayer.category === 'Others') {
                     document.getElementById('prayer-name-others-input').value = prayer.name;
