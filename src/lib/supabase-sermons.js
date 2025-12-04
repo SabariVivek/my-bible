@@ -36,7 +36,6 @@ async function createSermon(userId, title, tamilTitle, sermonDate, verses) {
         .single();
     
     if (error) {
-        console.error('Error creating sermon:', error);
         throw error;
     }
     return data;
@@ -55,7 +54,6 @@ async function getUserSermons(userId) {
         .order('sermon_date', { ascending: false });
     
     if (error) {
-        console.error('Error fetching sermons:', error);
         throw error;
     }
     return data;
@@ -74,7 +72,6 @@ async function getSermon(sermonId) {
         .single();
     
     if (error) {
-        console.error('Error fetching sermon:', error);
         throw error;
     }
     return data;
@@ -102,7 +99,6 @@ async function updateSermon(sermonId, updates) {
         .single();
     
     if (error) {
-        console.error('Error updating sermon:', error);
         throw error;
     }
     return data;
@@ -120,7 +116,6 @@ async function deleteSermon(sermonId) {
         .eq('id', sermonId);
     
     if (error) {
-        console.error('Error deleting sermon:', error);
         throw error;
     }
 }
@@ -174,7 +169,6 @@ async function syncSermonsToSupabase(userId, localSermons) {
             ...results
         };
     } catch (error) {
-        console.error('Error syncing sermons:', error);
         return {
             success: false,
             error: error.message
@@ -200,7 +194,6 @@ async function loadSermonsFromSupabase(userId) {
             content: s.content || ''
         }));
     } catch (error) {
-        console.error('Error loading sermons from Supabase:', error);
         return [];
     }
 }

@@ -641,7 +641,6 @@ function updateVerseMemoryVerseIndicators() {
     });
     
     if (memoryVersesInChapter.length > 0) {
-        console.log(`📌 Memory verses in ${bookName} ${currentChapter}: ${memoryVersesInChapter.join(', ')}`);
     }
 }
 // Update book names based on language
@@ -917,7 +916,6 @@ function updateVerses() {
                         verseLine.classList.remove('multi-highlighted');
                         verseLine.style.backgroundColor = '';
                     }
-                    console.log(`🗑️ Removed highlight from verse ${verse} immediately`);
                 } else {
                     // Add left-pane-selected color for newly selected verse
                     const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verse}"]`);
@@ -925,7 +923,6 @@ function updateVerses() {
                         verseLine.classList.add('left-pane-selected');
                         verseLine.classList.remove('multi-highlighted');
                     }
-                    console.log(`✨ Added highlight to verse ${verse} immediately`);
                 }
                 
                 // Now toggle the verse selection state
@@ -933,12 +930,8 @@ function updateVerses() {
                 
                 // Get updated selected verses
                 const updatedSelectedVerses = Array.from(versesColumn.querySelectorAll('.number-item.active')).map(v => parseInt(v.dataset.verse));
-                
-                console.log('📌 Selected verses:', updatedSelectedVerses);
                 if (wasSelected) {
-                    console.log(`🗑️ Deselected verse ${verse}`);
                 } else {
-                    console.log(`✔️ Selected verse ${verse}`);
                 }
                 
                 // Update all selected verses with left-pane-selected grey color and remove underline
@@ -981,7 +974,6 @@ function updateVerses() {
                 if (verseContainer) {
                     verseContainer.classList.add('left-pane-selected');
                 }
-                console.log(`✔️ Selected verse ${verse}`);
             }
             
             // Close drawer on mobile after selecting verse
@@ -1123,7 +1115,6 @@ function displayChapter() {
                                 verseContainer.classList.remove('left-pane-selected');
                                 verseContainer.style.backgroundColor = '';
                             }
-                            console.log(`🗑️ Removed highlight from verse ${verseNum} immediately`);
                         }
                         
                         // Now toggle the verse selection
@@ -1163,16 +1154,8 @@ function displayChapter() {
                         
                         // Debug: Check what verse elements exist
                         const allVerseElements = contentArea.querySelectorAll('.verse-line');
-                        console.log(`📚 Total verse elements in DOM: ${allVerseElements.length}`);
-                        console.log('First few verse elements:', Array.from(allVerseElements).slice(0, 3).map(v => ({
-                            verseNum: v.getAttribute('data-verse'),
-                            text: v.textContent.substring(0, 50)
-                        })));
-                        
                         // Debug: Show all highlighted verses after update
                         const allHighlighted = contentArea.querySelectorAll('.verse-line.highlighted');
-                        console.log(`🎨 Total highlighted verses in DOM: ${allHighlighted.length}`);
-                        
                         // Update the bottom sheet with current selections
                         if (updatedSelectedVerses.length > 1) {
                             // Multiple verses selected
@@ -1217,9 +1200,6 @@ function displayChapter() {
                         if (verseLine) {
                             verseLine.classList.add('multi-highlighted');
                         }
-                        
-                        console.log(`✔️ Selected verse ${verseNum}`);
-                        
                         // Show bottom sheet for single verse
                         showVerseActionsBottomSheet(verseNum);
                     }
@@ -1391,7 +1371,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             try {
                 await saveNotesToSupabase();
             } catch (error) {
-                console.error('Error saving to Supabase:', error);
             }
             
             // Close the color picker after selection
@@ -1404,8 +1383,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
 
 // Universal copy handler for both single and multi-verse
 function handleVersesCopy(copyBtn) {
-    console.log('🔥 COPY BUTTON CLICKED!');
-    
     const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     const contentArea = document.querySelector('.scripture-text');
     const book = bibleBooks[currentBook];
@@ -1427,14 +1404,11 @@ function handleVersesCopy(copyBtn) {
             const verseText = verseElement.textContent || '';
             const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
             versesToCopy.push({verseNum, text: cleanVerseText});
-            console.log(`📖 Single verse ${verseNum}:`, cleanVerseText);
             copyText = `[${verseNum}] ${cleanVerseText}\n\n${bookName} ${currentChapter} : ${verseNum}`;
         }
     } else if (isMultiVerse) {
         // Multi-verse - get all multi-highlighted verses
         const highlightedVerses = Array.from(contentArea.querySelectorAll('.verse-line.multi-highlighted'));
-        console.log('Total highlighted verses:', highlightedVerses.length);
-        
         const verseNumbers = [];
         highlightedVerses.forEach((verseLine, index) => {
             const verseNum = verseLine.getAttribute('data-verse');
@@ -1442,8 +1416,6 @@ function handleVersesCopy(copyBtn) {
             const verseText = verseLine.textContent || '';
             const cleanVerseText = verseText.trim().replace(/^\d+/, '').trim();
             versesToCopy.push({verseNum, text: cleanVerseText});
-            console.log(`📖 Verse ${verseNum}:`, cleanVerseText);
-            
             // Add verse reference with text and space between verses
             if (index > 0) {
                 copyText += '\n'; // Space between verses
@@ -1457,18 +1429,12 @@ function handleVersesCopy(copyBtn) {
             : verseNumbers[0];
         copyText += `\n${bookName} ${currentChapter} : ${verseRange}`;
     }
-    
-    console.log('📋 Final copy text:', copyText);
-    console.log('📌 Verses copied:', versesToCopy);
-    
     // Add animation
     copyBtn.style.transform = 'scale(0.9)';
     copyBtn.style.opacity = '0.7';
     
     navigator.clipboard.writeText(copyText).then(() => {
         showToast(isSingleVerse ? 'Copied...' : 'Verses copied...', 'success');
-        console.log('✅ Successfully copied to clipboard!');
-        
         // Restore animation
         setTimeout(() => {
             copyBtn.style.transform = 'scale(1)';
@@ -1501,7 +1467,6 @@ function handleVersesCopy(copyBtn) {
             }
         }, 300);
     }).catch((err) => {
-        console.error('❌ Failed to copy:', err);
         showToast(isSingleVerse ? 'Failed to copy verse' : 'Failed to copy verses', 'error');
         
         // Restore animation on error
@@ -1513,8 +1478,6 @@ function handleVersesCopy(copyBtn) {
 
 // Show verse actions in a bottom sheet modal
 function showVerseActionsBottomSheet(verseNum) {
-    console.log('📄 showVerseActionsBottomSheet called with verse:', verseNum);
-    
     // Create or get the bottom sheet modal
     let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     if (!bottomSheet) {
@@ -1769,7 +1732,6 @@ function showVerseActionsBottomSheet(verseNum) {
             try {
                 await saveNotesToSupabase();
             } catch (error) {
-                console.error('Error saving to Supabase:', error);
             }
         } else {
             // Show color picker for new bookmark
@@ -1845,8 +1807,6 @@ function showVerseActionsBottomSheet(verseNum) {
 
 // Show bottom sheet for multiple selected verses
 function showMultiVerseActionsBottomSheet(selectedVerses) {
-    console.log('🎯 showMultiVerseActionsBottomSheet called with verses:', selectedVerses);
-    
     // Create or get the bottom sheet modal
     let bottomSheet = document.getElementById('verse-actions-bottom-sheet');
     if (!bottomSheet) {
@@ -2180,7 +2140,6 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
             try {
                 await saveNotesToSupabase();
             } catch (error) {
-                console.error('Error saving notes to Supabase:', error);
             }
             
             // Update bookmark button appearance
@@ -4471,12 +4430,10 @@ async function loadMemoryVersesFromSupabase() {
     if (localVerses) {
         try {
             window.memoryVerses = JSON.parse(localVerses);
-            console.log(`📚 Loaded ${window.memoryVerses.length} memory verses from localStorage:`, window.memoryVerses);
             markBooksWithMemoryVerses();
             updateVerseMemoryVerseIndicators();
             displayChapter(); // Refresh chapter display to show memory verse styling
         } catch (e) {
-            console.error('Error parsing localStorage memoryVerses:', e);
         }
     }
     
@@ -4493,32 +4450,25 @@ async function loadMemoryVersesFromSupabase() {
         });
         if (response.ok) {
             const data = await response.json();
-            console.log(`🔄 Fetched ${data.length} rows from Supabase memory_verses table:`, data);
             if (data && data.length > 0) {
                 // Extract verse_reference from each row to create array of strings
                 const supabaseVerses = data.map(row => row.verse_reference).filter(ref => ref);
-                console.log(`📝 Extracted ${supabaseVerses.length} verse references:`, supabaseVerses);
                 // Update if Supabase has different data
                 if (JSON.stringify(supabaseVerses) !== JSON.stringify(window.memoryVerses)) {
-                    console.log('✅ Supabase data differs from local - updating...');
                     window.memoryVerses = supabaseVerses;
                     localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
                     markBooksWithMemoryVerses();
                     updateVerseMemoryVerseIndicators();
                     displayChapter();
                 } else {
-                    console.log('✓ Supabase data matches local data');
                 }
                 return true;
             } else {
-                console.warn('⚠️ No memory verses found in Supabase!');
             }
         } else {
-            console.error('❌ Supabase fetch failed with status:', response.status);
         }
         return false;
     } catch (error) {
-        console.error('Error loading memory verses from Supabase:', error);
         return false;
     }
 }
@@ -4562,14 +4512,12 @@ async function toggleMemoryVerse() {
     
     // Async save to Supabase (non-blocking) - don't await
     saveMemoryVersesToSupabase().catch(error => {
-        console.error('Error saving memory verses to Supabase:', error);
     });
 }
 
 async function saveMemoryVersesToSupabase() {
     // Save to localStorage immediately
     localStorage.setItem('memoryVerses', JSON.stringify(window.memoryVerses));
-    console.log(`💾 Saving ${window.memoryVerses.length} memory verses to Supabase:`, window.memoryVerses);
     try {
         // Delete all existing rows first
         // Using id>=0 to match all rows (since id is auto-increment starting from 1)
@@ -4583,10 +4531,8 @@ async function saveMemoryVersesToSupabase() {
             }
         });
         if (!deleteResponse.ok) {
-            console.error('❌ Failed to delete old memory verses:', deleteResponse.status);
             const errorText = await deleteResponse.text();
         } else {
-            console.log('✓ Deleted old memory verses');
         }
         // Only insert if we have verses to save
         if (window.memoryVerses && window.memoryVerses.length > 0) {
@@ -4594,7 +4540,6 @@ async function saveMemoryVersesToSupabase() {
             const rows = window.memoryVerses.map(verse => ({
                 verse_reference: verse
             }));
-            console.log(`📤 Inserting ${rows.length} rows to Supabase...`);
             const response = await fetch(`${SUPABASE_MEMORY_CONFIG.url}/rest/v1/${SUPABASE_MEMORY_CONFIG.tableName}`, {
                 method: 'POST',
                 headers: {
@@ -4606,19 +4551,15 @@ async function saveMemoryVersesToSupabase() {
                 body: JSON.stringify(rows)
             });
             if (response.ok) {
-                console.log('✅ Memory verses saved to Supabase successfully');
                 return true;
             } else {
-                console.error('❌ Failed to insert memory verses:', response.status);
                 const error = await response.text();
                 return false;
             }
         } else {
-            console.log('⚠️ No memory verses to save');
             return true;
         }
     } catch (error) {
-        console.error('❌ Error saving to Supabase:', error);
         return false;
     }
 }
@@ -6912,7 +6853,6 @@ async function getRecentSermons() {
     try {
         // Check if supabase is available
         if (!window.supabase) {
-            console.warn('Supabase not available');
             return [];
         }
         
@@ -6928,13 +6868,11 @@ async function getRecentSermons() {
             .limit(10);
         
         if (error) {
-            console.error('Error fetching sermons:', error);
             return [];
         }
         
         return data || [];
     } catch (error) {
-        console.error('Error in getRecentSermons:', error);
         return [];
     }
 }
@@ -7124,7 +7062,6 @@ async function showSermonSelectionSheet(versesToAdd) {
             closeModal();
             showToast('Added...', 'success');
         } catch (error) {
-            console.error('Error adding verses to sermon:', error);
             showToast('Failed to add verses to sermon', 'error');
         }
     });
@@ -7160,7 +7097,6 @@ async function updateSermon(sermonId, updates) {
         
         return data;
     } catch (error) {
-        console.error('Error updating sermon:', error);
         throw error;
     }
 }

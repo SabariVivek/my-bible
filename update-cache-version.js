@@ -34,7 +34,6 @@ function updateServiceWorker() {
   );
   
   fs.writeFileSync(swPath, content, 'utf8');
-  console.log(`✓ Updated service-worker.js with timestamp: ${timestamp}`);
   return timestamp;
 }
 
@@ -56,7 +55,6 @@ function updateIndexHTML(timestamp) {
   );
   
   fs.writeFileSync(indexPath, content, 'utf8');
-  console.log(`✓ Updated index.html with cache-bust parameters`);
 }
 
 function updateManifest(timestamp) {
@@ -68,19 +66,13 @@ function updateManifest(timestamp) {
   manifest.last_updated = new Date().toISOString();
   
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), 'utf8');
-  console.log(`✓ Updated manifest.json with version metadata`);
 }
 
 // Main execution
 try {
-  console.log('🔄 Updating cache version...\n');
   const timestamp = updateServiceWorker();
   updateIndexHTML(timestamp);
   updateManifest(timestamp);
-  console.log(`\n✅ Cache version updated successfully!`);
-  console.log(`   Timestamp: ${timestamp}`);
-  console.log(`   All users will get the latest version on next load.`);
 } catch (error) {
-  console.error('❌ Error updating cache version:', error.message);
   process.exit(1);
 }

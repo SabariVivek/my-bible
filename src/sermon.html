@@ -2614,13 +2614,10 @@
                 if (window.supabase && window.supabase.createClient) {
                     supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                     syncEnabled = true;
-                    console.log('Supabase initialized successfully');
                 } else {
-                    console.warn('Supabase library not loaded yet');
                     syncEnabled = false;
                 }
             } catch (error) {
-                console.warn('Supabase initialization failed:', error);
                 syncEnabled = false;
             }
         }
@@ -2776,21 +2773,18 @@
             if (loader) loader.classList.remove('hidden');
 
             if (!supabase) {
-                console.log('Supabase not available, loading from localStorage');
                 loadSermonsFromLocalStorage();
                 if (loader) loader.classList.add('hidden');
                 return;
             }
 
             try {
-                console.log('Loading sermons from Supabase...');
                 const { data, error } = await supabase
                     .from('sermons')
                     .select('*')
                     .order('sermon_date', { ascending: false });
 
                 if (error) {
-                    console.error('Error loading sermons from Supabase:', error);
                     loadSermonsFromLocalStorage();
                     if (loader) loader.classList.add('hidden');
                     return;
@@ -2807,13 +2801,9 @@
                         is_favorite: item.is_favorite || false,
                         _synced: true  // Mark as synced from Supabase
                     }));
-                    
-                    console.log('Loaded', sermons.length, 'sermons from Supabase');
-                    
                     // Save to localStorage as backup
                     localStorage.setItem('sermons', JSON.stringify(sermons));
                 } else {
-                    console.log('No sermons found in Supabase, loading from localStorage');
                     loadSermonsFromLocalStorage();
                     if (loader) loader.classList.add('hidden');
                     return;
@@ -2822,7 +2812,6 @@
                 renderSermons();
                 if (loader) loader.classList.add('hidden');
             } catch (error) {
-                console.error('Error loading sermons from Supabase:', error);
                 loadSermonsFromLocalStorage();
                 if (loader) loader.classList.add('hidden');
             }
@@ -2834,9 +2823,7 @@
             if (saved) {
                 try {
                     sermons = JSON.parse(saved);
-                    console.log('Loaded', sermons.length, 'sermons from localStorage');
                 } catch (e) {
-                    console.error('Error loading sermons from localStorage:', e);
                 }
             }
         }
@@ -2934,12 +2921,8 @@
         // Sync sermons to Supabase
         async function syncSermonsToSupabase() {
             if (!supabase) {
-                console.log('Sync skipped - supabase not available');
                 return;
             }
-            
-            console.log('Starting sermon sync, total sermons:', sermons.length);
-            
             try {
                 for (const sermon of sermons) {
                     // Skip if already synced to Supabase
@@ -2953,7 +2936,6 @@
                     
                     // Sync new sermons (with sequential IDs like 10001, 10002, etc)
                     if (sermon.id && sermon.id >= 10001) {
-                        console.log('Syncing new sermon:', sermon.title, 'ID:', sermon.id);
                         const { data, error } = await supabase
                             .from('sermons')
                             .insert([{
@@ -2967,15 +2949,12 @@
                             .select();
                         
                         if (error) {
-                            console.error('Error syncing sermon to Supabase:', error);
                         } else if (data && data.length > 0) {
-                            console.log('Successfully synced sermon to Supabase with ID:', data[0].id);
                             sermon._synced = true;  // Mark as synced
                         }
                     }
                 }
             } catch (error) {
-                console.error('Sync error:', error);
             }
         }
         
@@ -3003,12 +2982,9 @@
                     .eq('id', sermon.id);
                 
                 if (error) {
-                    console.error('Error updating sermon in Supabase:', error);
                 } else {
-                    console.log('Successfully updated sermon in Supabase:', sermon.id);
                 }
             } catch (error) {
-                console.error('Sync update error:', error);
             }
         }
         
@@ -3018,24 +2994,19 @@
             
             // Only delete from Supabase if it's a synced sermon (sequential IDs starting from 10001)
             if (sermonId < 10001) {
-                console.log('Skipping Supabase delete for non-synced sermon:', sermonId);
                 return;
             }
             
             try {
-                console.log('Deleting sermon from Supabase:', sermonId);
                 const { error } = await supabase
                     .from('sermons')
                     .delete()
                     .eq('id', sermonId);
                 
                 if (error) {
-                    console.error('Error deleting sermon from Supabase:', error);
                 } else {
-                    console.log('Successfully deleted sermon from Supabase:', sermonId);
                 }
             } catch (error) {
-                console.error('Sync delete error:', error);
             }
         }
 
@@ -3056,14 +3027,9 @@
 
                 const currentTime = new Date().getTime();
                 const timeSinceLastTap = lastTapTime !== null ? currentTime - lastTapTime : Infinity;
-                
-                console.log('Click on sermon item. timeSinceLastTap:', timeSinceLastTap, 'same element:', lastTappedElement === sermonItem);
-
                 // Check for double tap: within 500ms and on same element
                 if (timeSinceLastTap < 500 && lastTappedElement === sermonItem) {
-                    console.log('✅ DOUBLE TAP DETECTED!');
                     const index = sermonItem.dataset.index;
-                    console.log('Opening sermon:', index);
                     showSermonDetails(parseInt(index));
                     lastTapTime = null;
                     lastTappedElement = null;
@@ -3071,7 +3037,6 @@
                     // Single tap - record this as potential first tap of double tap
                     lastTapTime = currentTime;
                     lastTappedElement = sermonItem;
-                    console.log('First tap recorded');
                 }
             }, { passive: true });
         }
@@ -3091,7 +3056,6 @@
             
             // Skip if invalid
             if (isNaN(validStart) || isNaN(validEnd)) {
-                console.warn(`Skipping preload: invalid verse numbers for ${book} ${chapter}:${verseStart}-${verseEnd}`);
                 return;
             }
 
@@ -3119,17 +3083,14 @@
                     .order('verse', { ascending: true });
 
                 if (error) {
-                    console.warn(`Error preloading verses: ${error.message}`);
                     return;
                 }
 
                 // Cache the results
                 if (data && data.length > 0) {
                     verseCache[language][cacheKey] = data;
-                    console.log(`✓ Preloaded ${language} verses: ${book} ${chapter}:${validStart}-${validEnd}`);
                 }
             } catch (error) {
-                console.error('Error preloading verses:', error);
             }
         }
 
@@ -3174,7 +3135,6 @@
             });
 
             if (validVerses.length === 0) {
-                console.warn('No valid verses to preload');
                 return;
             }
 
@@ -3372,7 +3332,6 @@
                 }
 
             } catch (error) {
-                console.error('Error toggling favorite:', error);
                 alert('Failed to update favorite status');
             }
         }
@@ -3394,7 +3353,6 @@
                         .eq('id', sermon.id);
 
                     if (error) {
-                        console.error('Supabase update error:', error);
                         supabaseError = true;
                     }
                 }
@@ -3425,11 +3383,9 @@
 
                 // Only show error if Supabase failed but local update succeeded
                 if (supabaseError) {
-                    console.warn('Favorite updated locally but failed to sync to Supabase');
                 }
 
             } catch (error) {
-                console.error('Error toggling favorite:', error);
                 alert('Failed to update favorite status');
             }
         }
@@ -3441,7 +3397,6 @@
             
             if (detailOverlay) {
                 detailOverlay.addEventListener('click', (e) => {
-                    console.log('Overlay clicked, target:', e.target, 'overlay:', detailOverlay);
                     // Close on any click on the overlay
                     closeSermonDetail();
                 });
@@ -3655,7 +3610,6 @@
                         .order('verse', { ascending: true });
 
                     if (error) {
-                        console.error('Tamil query error:', error);
                     }
                     data = fetchedData;
                     
@@ -3666,7 +3620,6 @@
                 }
 
                 if (!data || data.length === 0) {
-                    console.log('No Tamil data, trying English...');
                     // No Tamil data found, try English
                     let engData = verseCache.english[cacheKey];
                     
@@ -3683,7 +3636,6 @@
                             .order('verse', { ascending: true });
 
                         if (error) {
-                            console.error('English query error:', error);
                         }
                         engData = fetchedData;
                         if (engData && engData.length > 0) {
@@ -3693,7 +3645,6 @@
 
                     if (!engData || engData.length === 0) {
                         // No data found
-                        console.log('No data found in either language');
                         badge.textContent = verseRef;
                         content.innerHTML = '<p class="passage-no-data">Data yet to be seeded</p>';
                         setTimeout(() => {
@@ -3754,7 +3705,6 @@
                 }
 
             } catch (error) {
-                console.error('Error loading verses:', error);
                 badge.textContent = verseRef;
                 content.innerHTML = '<p class="passage-no-data">Error loading verse. Please try again.</p>';
                 
@@ -3872,9 +3822,6 @@
                     const verseStart = parseInt(verse.verseStart, 10);
                     const verseEnd = parseInt(verse.verseEnd, 10);
                     const verseTitle = `${verse.book} ${verse.chapter}:${verseStart}${verseStart !== verseEnd ? '-' + verseEnd : ''}`;
-
-                    console.log(`[Show All] Loading: ${verseTitle}`);
-
                     // Fetch verse text from Supabase
                     const bookFile = getBookFileIdentifier(verse.book);
                     const cacheKey = `${verse.book}|${verse.chapter}|${verseStart}|${verseEnd}`;
@@ -3956,7 +3903,6 @@
                 setTimeout(() => initPassageModalDrag(), 100);
 
             } catch (error) {
-                console.error('Error loading all verses:', error);
                 content.innerHTML = '<p class="passage-no-data">Error loading verses. Please try again.</p>';
                 modal.classList.add('show');
                 document.body.classList.add('modal-open');
@@ -4077,7 +4023,6 @@
                         const verseEnd = parseInt(verse.verseEnd, 10);
                         
                         if (isNaN(verseStart) || isNaN(verseEnd)) {
-                            console.warn(`Skipping invalid verse: ${verse.book} ${verse.chapter}:${verse.verseStart}-${verse.verseEnd}`);
                             continue;
                         }
                         
@@ -4200,7 +4145,6 @@
                     content.scrollTop = 0;
 
                 } catch (error) {
-                    console.error('Error loading verses:', error);
                     content.innerHTML = '<p class="passage-no-data">Error loading verses. Please try again.</p>';
                 }
                 return;
@@ -4301,12 +4245,10 @@
                             verseCache[langCode][cacheKey] = data;
                         }
                     } else {
-                        console.log(`Using cached ${langCode} data: ${data.length} verses`);
                     }
 
                     // If requested language not found, try the other language (same as loadVersesFromSupabaseSermon)
                     if (!data || data.length === 0) {
-                        console.log(`${langCode} data not found, trying fallback language...`);
                         const fallbackLangCode = langCode === 'tamil' ? 'english' : 'tamil';
                         let fallbackData = verseCache[fallbackLangCode][cacheKey];
                         
@@ -4365,7 +4307,6 @@
                 }, 50);
 
             } catch (error) {
-                console.error('Error switching language:', error);
                 content.innerHTML = `<p class="passage-no-data">Error loading ${language} translation. Please try again.</p>`;
             }
         }
@@ -4435,7 +4376,6 @@
                 // Show success toast
                 showToast('Deleted...');
             } catch (error) {
-                console.error('Delete error:', error);
                 showToast('Deleted...');
             } finally {
                 loader.classList.add('hidden');

@@ -78,9 +78,6 @@ class CacheManager {
   handleVersionChange(newVersion) {
     if (this.isUpdating) return;
     this.isUpdating = true;
-
-    console.log(`🔄 Cache Manager: New version detected (${newVersion}), refreshing...`);
-    
     // Update stored version
     this.setVersion(newVersion);
     
@@ -119,8 +116,6 @@ class CacheManager {
         this.checkForUpdates();
       }
     });
-
-    console.log('✅ Cache Manager: Ready (auto-checking for updates)');
   }
 
   /**
