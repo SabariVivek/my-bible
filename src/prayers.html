@@ -798,6 +798,48 @@
             opacity: 0.8;
         }
 
+        .prayers-family-badges-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .prayers-family-badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        body.dark-theme .prayers-family-badge-tag {
+            background: rgba(120, 170, 255, 0.1);
+            color: #8ab8ff;
+            border-color: rgba(120, 170, 255, 0.2);
+        }
+
+        .prayers-family-badge-tag button {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .prayers-family-badge-tag button:hover {
+            opacity: 0.8;
+        }
+
         .prayers-sheet-buttons {
             display: flex;
             gap: 1rem;
@@ -1026,7 +1068,7 @@
 
         .prayers-detail-value {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
             color: #333;
             word-break: break-word;
         }
@@ -1237,10 +1279,10 @@
 
         .prayers-badge-display {
             display: inline-block;
-            background: #fffacd;
-            border: none;
-            color: #0d47a1;
-            padding: 3px 8px;
+            padding: 4px 8px;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
             border-radius: 20px;
             font-size: 0.65rem;
             font-weight: 700;
@@ -1249,15 +1291,15 @@
         }
 
         body.light-theme .prayers-badge-display {
-            background: #fffacd;
-            border: none;
-            color: #0d47a1;
+            background: rgba(120, 170, 255, 0.15);
+            color: #78aaff;
+            border: 1px solid rgba(120, 170, 255, 0.25);
         }
 
         body.dark-theme .prayers-badge-display {
-            background: #fffacd;
-            border: none;
-            color: #0d47a1;
+            background: rgba(120, 170, 255, 0.1);
+            color: #8ab8ff;
+            border: 1px solid rgba(120, 170, 255, 0.2);
         }
 
         .prayers-item-badge {
@@ -1384,8 +1426,16 @@
             color: #78aaff;
         }
 
+        .prayers-bottom-nav-item.active:hover {
+            background: #f5f5f5;
+        }
+
         body.dark-theme .prayers-bottom-nav-item.active {
             color: #8ab8ff;
+        }
+
+        body.dark-theme .prayers-bottom-nav-item.active:hover {
+            background: #252525;
         }
 
         .prayers-bottom-nav-icon {
@@ -1493,6 +1543,16 @@
                     </div>
                     <div class="prayers-input-error">Member name is required</div>
                     <div class="prayers-members-list" id="members-list"></div>
+                </div>
+
+                <div class="prayers-input-group" id="badges-input-group">
+                    <label class="prayers-input-label">Badges (Optional)</label>
+                    <div class="prayers-input-with-icon">
+                        <input type="text" class="prayers-input-text" id="prayer-family-badge-input" placeholder="Enter badge text"
+                            autocomplete="off">
+                        <button class="prayers-input-icon-btn" id="add-family-badge-btn" type="button">+</button>
+                    </div>
+                    <div class="prayers-family-badges-list" id="family-badges-list"></div>
                 </div>
             </div>
             
@@ -1866,6 +1926,17 @@
                             `).join('')}
                         </div>
                     `;
+                    
+                    // Add family badges if available
+                    if (prayer.familyBadges && prayer.familyBadges.length > 0) {
+                        contentHTML += `
+                            <div class="prayers-family-badges-list">
+                                ${prayer.familyBadges.map(badge => `
+                                    <span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>
+                                `).join('')}
+                            </div>
+                        `;
+                    }
                 } else if (prayer.category === 'Others' || prayer.category === 'World') {
                     // Show badge beside title for Others and World
                     if (prayer.badge) {
@@ -1981,12 +2052,18 @@
                         prayers[prayerIndex].name = prayerName;
                         if (currentCategory === 'Family') {
                             prayers[prayerIndex].members = [...currentMembers];
+                            if (currentFamilyBadges.length > 0) {
+                                prayers[prayerIndex].familyBadges = [...currentFamilyBadges];
+                            } else {
+                                prayers[prayerIndex].familyBadges = undefined;
+                            }
                             prayers[prayerIndex].description = undefined;
                             prayers[prayerIndex].badge = undefined;
                         } else {
                             prayers[prayerIndex].description = description;
                             prayers[prayerIndex].badge = badge;
                             prayers[prayerIndex].members = undefined;
+                            prayers[prayerIndex].familyBadges = undefined;
                         }
                         localStorage.setItem('prayers', JSON.stringify(prayers));
                         closeAddPrayerSheet();
@@ -2006,8 +2083,13 @@
                     };
 
                     // Add category-specific fields
-                    if (currentCategory === 'Family' && currentMembers.length > 0) {
-                        newPrayer.members = [...currentMembers];
+                    if (currentCategory === 'Family') {
+                        if (currentMembers.length > 0) {
+                            newPrayer.members = [...currentMembers];
+                        }
+                        if (currentFamilyBadges.length > 0) {
+                            newPrayer.familyBadges = [...currentFamilyBadges];
+                        }
                     } else if (currentCategory === 'Others' || currentCategory === 'World') {
                         if (description) newPrayer.description = description;
                         if (badge) newPrayer.badge = badge;
@@ -2026,7 +2108,9 @@
                         showToast('Saved');
                         prayerNameInput.value = '';
                         currentMembers = [];
+                        currentFamilyBadges = [];
                         renderMembersList();
+                        renderFamilyBadgesList();
                         saveBtn.disabled = false;
                     }, 300);
                 }
@@ -2108,6 +2192,71 @@
             });
         }
 
+        // Family badges management
+        let currentFamilyBadges = [];
+
+        function renderFamilyBadgesList() {
+            const badgesList = document.getElementById('family-badges-list');
+            if (!badgesList) return;
+
+            if (currentFamilyBadges.length === 0) {
+                badgesList.innerHTML = '';
+                return;
+            }
+
+            badgesList.innerHTML = currentFamilyBadges.map((badge, index) => `
+                <div class="prayers-family-badge-tag">
+                    <span>${escapeHtml(badge)}</span>
+                    <button onclick="removeFamilyBadge(${index})" type="button">×</button>
+                </div>
+            `).join('');
+        }
+
+        function addFamilyBadge() {
+            const badgeInput = document.getElementById('prayer-family-badge-input');
+            if (!badgeInput) return;
+
+            const badgeText = badgeInput.value.trim();
+            
+            if (!badgeText) {
+                return;
+            }
+
+            if (currentFamilyBadges.includes(badgeText)) {
+                showToast('Badge already added');
+                return;
+            }
+
+            currentFamilyBadges.push(badgeText);
+            badgeInput.value = '';
+            renderFamilyBadgesList();
+        }
+
+        function removeFamilyBadge(index) {
+            currentFamilyBadges.splice(index, 1);
+            renderFamilyBadgesList();
+        }
+
+        // Add family badge button click
+        const addFamilyBadgeBtn = document.getElementById('add-family-badge-btn');
+        if (addFamilyBadgeBtn) {
+            addFamilyBadgeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                addFamilyBadge();
+            });
+        }
+
+        // Allow Enter key to add family badge
+        const familyBadgeInput = document.getElementById('prayer-family-badge-input');
+        if (familyBadgeInput) {
+            familyBadgeInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addFamilyBadge();
+                }
+            });
+        }
+
         // Clear error on Family name input
         prayerNameInput.addEventListener('input', () => {
             if (prayerNameInput.value.trim()) {
@@ -2144,7 +2293,9 @@
             // Only clear if not in edit mode
             if (!isEditMode) {
                 currentMembers = [];
+                currentFamilyBadges = [];
                 renderMembersList();
+                renderFamilyBadgesList();
                 // Clear all error messages
                 const inputGroups = document.querySelectorAll('.prayers-input-group.error');
                 inputGroups.forEach(group => group.classList.remove('error'));
@@ -2215,6 +2366,7 @@
             document.getElementById('prayer-name-world-input').value = '';
             document.getElementById('prayer-description-world-input').value = '';
             document.getElementById('prayer-badge-world-input').value = '';
+            document.getElementById('prayer-family-badge-input').value = '';
             // Reset badge buttons
             badgeBtn.classList.remove('active', 'has-value');
             updateBadgeButton(badgeBtn, '');
@@ -2228,7 +2380,9 @@
             const inputGroups = document.querySelectorAll('.prayers-input-group.error');
             inputGroups.forEach(group => group.classList.remove('error'));
             currentMembers = [];
+            currentFamilyBadges = [];
             renderMembersList();
+            renderFamilyBadgesList();
             saveBtn.textContent = 'Save';
             isEditMode = false;
             editingPrayerId = null;
@@ -2266,7 +2420,6 @@
                         <div class="prayers-detail-members-list">
                             ${prayer.members.map(member => `
                                 <div class="prayers-detail-member-card">
-                                    <div class="prayers-detail-member-icon">👤</div>
                                     <div class="prayers-detail-member-name">${escapeHtml(member)}</div>
                                 </div>
                             `).join('')}
@@ -2274,6 +2427,17 @@
                     `;
                 } else {
                     contentHTML = `<div class="prayers-empty-state"><p>No members added</p></div>`;
+                }
+                
+                // Add family badges if available
+                if (prayer.familyBadges && prayer.familyBadges.length > 0) {
+                    contentHTML += `
+                        <div class="prayers-family-badges-list">
+                            ${prayer.familyBadges.map(badge => `
+                                <span class="prayers-family-badge-tag">${escapeHtml(badge)}</span>
+                            `).join('')}
+                        </div>
+                    `;
                 }
             } else if (prayer.category === 'Others') {
                 // Show description if available
@@ -2343,6 +2507,17 @@
             if (container) {
                 container.classList.remove('blurred');
             }
+            
+            // Restore bottom nav active state
+            const bottomNavItems = document.querySelectorAll('.prayers-bottom-nav-item');
+            bottomNavItems.forEach(item => {
+                if (item.dataset.category === currentCategory) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
             selectedPrayerId = null;
         }
 
@@ -2374,7 +2549,9 @@
                 if (prayer.category === 'Family') {
                     prayerNameInput.value = prayer.name;
                     currentMembers = prayer.members ? [...prayer.members] : [];
+                    currentFamilyBadges = prayer.familyBadges ? [...prayer.familyBadges] : [];
                     renderMembersList();
+                    renderFamilyBadgesList();
                     prayerNameInput.focus();
                 } else if (prayer.category === 'Others') {
                     document.getElementById('prayer-name-others-input').value = prayer.name;
