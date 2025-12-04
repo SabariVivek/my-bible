@@ -306,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeBookList();
     updateBookNames(); // Update book names based on saved language preference
     initializeMobileDrawer();
-    initializeMobileLanguageModal();
+    initializeMobileLanguageModal(); // Initialize language modal/bottom sheet
     initializeSearch();
     initializeSiteTitle();
     initializeHomeOptions();
@@ -2471,17 +2471,30 @@ function initializeMobileLanguageModal() {
     const modalOptions = document.querySelectorAll('.language-modal-option');
     const colorPaletteSection = document.querySelector('.color-palette-section');
     const colorOptions = document.querySelectorAll('.color-option');
+    const languageBottomSheetOverlay = document.getElementById('language-bottom-sheet-overlay');
+    const sheetOptions = document.querySelectorAll('.language-sheet-option');
+    const sheetColorPalette = document.getElementById('language-sheet-color-palette');
+    const sheetColorOptions = document.querySelectorAll('.language-sheet-color-option');
+    
     if (!langBtn || !modalOverlay) return;
+    
     // Ensure currentLanguage is properly initialized
     if (!currentLanguage || !['english', 'tamil', 'both'].includes(currentLanguage)) {
         currentLanguage = 'tamil';
         localStorage.setItem('currentLanguage', 'tamil');
     }
+    
     // Ensure englishTextColor is properly initialized
     if (!englishTextColor || !['default', 'blue', 'red'].includes(englishTextColor)) {
         englishTextColor = 'default';
         localStorage.setItem('englishTextColor', 'default');
     }
+    
+    // Check if mobile
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
     // Update active state based on current language
     function updateModalActiveState() {
         modalOptions.forEach(option => {
@@ -2498,6 +2511,35 @@ function initializeMobileLanguageModal() {
             colorPaletteSection.classList.remove('visible');
         }
     }
+    
+    // Update sheet active state
+    function updateSheetActiveState() {
+        sheetOptions.forEach(option => {
+            if (option.dataset.lang === currentLanguage) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+        // Show/hide color palette based on 'both' selection
+        if (currentLanguage === 'both') {
+            sheetColorPalette.style.display = 'block';
+        } else {
+            sheetColorPalette.style.display = 'none';
+        }
+    }
+    
+    // Update sheet color active state
+    function updateSheetColorActiveState() {
+        sheetColorOptions.forEach(option => {
+            if (option.dataset.color === englishTextColor) {
+                option.classList.add('active');
+            } else {
+                option.classList.remove('active');
+            }
+        });
+    }
+    
     // Update color option active state
     function updateColorActiveState() {
         colorOptions.forEach(option => {
@@ -2508,27 +2550,75 @@ function initializeMobileLanguageModal() {
             }
         });
     }
-    // Open modal
+    // Open modal/sheet based on device
     langBtn.addEventListener('click', (e) => {
         closeBottomSheet();
         e.stopPropagation();
-        updateModalActiveState();
-        modalOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        
+        if (isMobile()) {
+            // Mobile: Show bottom sheet
+            updateSheetActiveState();
+            updateSheetColorActiveState();
+            languageBottomSheetOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Desktop: Show modal
+            updateModalActiveState();
+            updateColorActiveState();
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     });
+    
     // Close modal
     function closeModal() {
         modalOverlay.classList.remove('active');
         document.body.style.overflow = '';
     }
+    
+    // Close bottom sheet
+    function closeLanguageSheet() {
+        languageBottomSheetOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
     modalCloseBtn.addEventListener('click', closeModal);
+    
     // Close when clicking overlay
     modalOverlay.addEventListener('click', (e) => {
         if (e.target === modalOverlay) {
             closeModal();
         }
     });
-    // Handle language selection
+    
+    // Close sheet when clicking overlay
+    languageBottomSheetOverlay.addEventListener('click', (e) => {
+        if (e.target === languageBottomSheetOverlay) {
+            closeLanguageSheet();
+        }
+    });
+    
+    // Swipe down to close sheet
+    let touchStartY = 0;
+    const languageBottomSheet = document.querySelector('.language-bottom-sheet');
+    
+    if (languageBottomSheet) {
+        languageBottomSheet.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        });
+        
+        languageBottomSheet.addEventListener('touchmove', (e) => {
+            const touchCurrentY = e.touches[0].clientY;
+            const diff = touchCurrentY - touchStartY;
+            
+            // Only close if swiping down and at top of sheet
+            if (diff > 50 && languageBottomSheet.scrollTop === 0) {
+                closeLanguageSheet();
+            }
+        });
+    }
+    
+    // Handle language selection from modal
     modalOptions.forEach(option => {
         option.addEventListener('click', () => {
             const selectedLang = option.dataset.lang;
@@ -2550,6 +2640,47 @@ function initializeMobileLanguageModal() {
             // If 'both' selected but no color chosen yet, keep modal open for first-time selection
         });
     });
+    
+    // Handle language selection from bottom sheet (mobile)
+    sheetOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedLang = option.dataset.lang;
+            currentLanguage = selectedLang;
+            localStorage.setItem('currentLanguage', selectedLang);
+            
+            // Update active state
+            updateSheetActiveState();
+            updateBookNames();
+            
+            // If 'both' is selected, show color palette and don't close
+            if (selectedLang === 'both') {
+                // Wait for animation to complete
+                return;
+            }
+            
+            // For other languages, close sheet and reload
+            closeLanguageSheet();
+            loadBook(currentBook, currentChapter);
+        });
+    });
+    
+    // Handle color selection in bottom sheet
+    sheetColorOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const selectedColor = option.dataset.color;
+            englishTextColor = selectedColor;
+            localStorage.setItem('englishTextColor', selectedColor);
+            
+            // Update active state
+            updateSheetColorActiveState();
+            updateBookNames();
+            
+            // Close sheet and reload
+            closeLanguageSheet();
+            loadBook(currentBook, currentChapter);
+        });
+    });
+    
     // Handle color selection
     colorOptions.forEach(option => {
         option.addEventListener('click', () => {
@@ -2570,6 +2701,8 @@ function initializeMobileLanguageModal() {
     updateModalActiveState();
     updateColorActiveState();
 }
+
+// Language Bottom Sheet (Mobile Only)
 // Search functionality
 function initializeSearch() {
     const searchBtn = document.getElementById('search-btn');
