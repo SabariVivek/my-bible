@@ -959,7 +959,7 @@
         /* Toast notification styles */
         .prayers-toast {
             position: fixed;
-            bottom: 24px;
+            bottom: 90px;
             left: 50%;
             transform: translateX(-50%);
             background: #323232;
@@ -1800,6 +1800,12 @@
     </div>
     <div class="prayers-detail-overlay" id="prayers-detail-overlay" onclick="closePrayerDetail()"></div>
 
+    <!-- Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Supabase Prayer Module -->
+    <script src="./lib/supabase-prayers.js"></script>
+
     <script>
         // Apply theme on page load
         function applyTheme() {
@@ -1815,6 +1821,10 @@
 
         // Apply theme on load
         applyTheme();
+        
+        // Supabase user tracking
+        let currentUserId = null;
+        let useSupabase = false; // Flag to use Supabase if user is authenticated
 
         // Listen for theme changes from other pages
         window.addEventListener('storage', (e) => {
@@ -2063,6 +2073,14 @@
             });
         }
 
+        // Sync button - sync local prayers to Supabase
+        // const syncBtn = document.getElementById('prayers-menu-sync');
+        // Removed - not needed
+
+        // Export button - download prayers as JSON
+        // const exportBtn = document.getElementById('prayers-menu-export');
+        // Removed - not needed
+
         // Cancel button
         if (cancelBtn) {
             cancelBtn.addEventListener('click', () => {
@@ -2072,7 +2090,7 @@
 
         // Save button
         if (saveBtn) {
-            saveBtn.addEventListener('click', () => {
+            saveBtn.addEventListener('click', async () => {
                 let prayerName = '';
                 let description = '';
                 let badge = '';
@@ -2131,6 +2149,23 @@
                             prayers[prayerIndex].members = undefined;
                         }
                         localStorage.setItem('prayers', JSON.stringify(prayers));
+                        
+                        // Update in Supabase if available
+                        if (window.PrayerDB) {
+                            try {
+                                await window.PrayerDB.updatePrayer(editingPrayerId, {
+                                    prayer_name: prayerName,
+                                    description: description || null,
+                                    badge: badge || null,
+                                    members: currentCategory === 'Family' ? [...currentMembers] : null
+                                });
+                                console.log('Prayer updated in Supabase');
+                            } catch (error) {
+                                console.error('Error updating prayer in Supabase:', error);
+                                // Continue anyway - localStorage has the data
+                            }
+                        }
+                        
                         closeAddPrayerSheet();
                         renderPrayersList();
                         showToast('Updated');
@@ -2161,6 +2196,27 @@
 
                     // Save to localStorage
                     localStorage.setItem('prayers', JSON.stringify(prayers));
+                    
+                    // Always try to save to Supabase
+                    if (window.PrayerDB) {
+                        try {
+                            const supabasePrayer = await window.PrayerDB.createPrayer(
+                                prayerName,
+                                currentCategory,
+                                description || null,
+                                badge || null,
+                                currentCategory === 'Family' ? [...currentMembers] : null
+                            );
+                            // Update local ID with Supabase ID if it's a new prayer
+                            newPrayer.id = supabasePrayer.id;
+                            prayers[prayers.length - 1].id = supabasePrayer.id;
+                            localStorage.setItem('prayers', JSON.stringify(prayers));
+                            console.log('Prayer saved to Supabase with ID:', supabasePrayer.id);
+                        } catch (error) {
+                            console.error('Error saving prayer to Supabase:', error);
+                            // Continue anyway - localStorage has the data
+                        }
+                    }
 
                     // Update UI
                     saveBtn.disabled = true;
@@ -2707,12 +2763,24 @@
         // Delete button
         const deleteBtn = document.getElementById('prayers-detail-delete-btn');
         if (deleteBtn) {
-            deleteBtn.addEventListener('click', () => {
+            deleteBtn.addEventListener('click', async () => {
                 if (!selectedPrayerId) return;
                 
                 if (confirm('Are you sure you want to delete this prayer?')) {
                     prayers = prayers.filter(p => p.id !== selectedPrayerId);
                     localStorage.setItem('prayers', JSON.stringify(prayers));
+                    
+                    // Delete from Supabase if available
+                    if (window.PrayerDB) {
+                        try {
+                            await window.PrayerDB.deletePrayer(selectedPrayerId);
+                            console.log('Prayer deleted from Supabase');
+                        } catch (error) {
+                            console.error('Error deleting prayer from Supabase:', error);
+                            // Continue anyway - localStorage has been updated
+                        }
+                    }
+                    
                     closePrayerDetail();
                     renderPrayersList();
                     showToast('Deleted');
@@ -2801,7 +2869,49 @@
         }, false);
 
         // Initialize page
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Check if user is authenticated with Supabase
+            if (window.PrayerDB && window.supabase) {
+                try {
+                    const { data: { user } } = await window.supabase.auth.getUser();
+                    if (user) {
+                        currentUserId = user.id;
+                        useSupabase = true;
+                        console.log('Supabase user authenticated:', user.id);
+                        
+                        // Load all prayers from Supabase and sync with local storage
+                        try {
+                            const supabasePrayers = await window.PrayerDB.loadPrayersFromSupabase();
+                            if (supabasePrayers && supabasePrayers.length > 0) {
+                                // Merge with local prayers (Supabase data takes precedence)
+                                const localPrayers = JSON.parse(localStorage.getItem('prayers')) || [];
+                                const mergedPrayers = [...localPrayers];
+                                
+                                // Add/update prayers from Supabase
+                                for (const supabasePrayer of supabasePrayers) {
+                                    const existingIndex = mergedPrayers.findIndex(p => p.id === supabasePrayer.id);
+                                    if (existingIndex !== -1) {
+                                        mergedPrayers[existingIndex] = supabasePrayer;
+                                    } else {
+                                        mergedPrayers.push(supabasePrayer);
+                                    }
+                                }
+                                
+                                prayers = mergedPrayers;
+                                localStorage.setItem('prayers', JSON.stringify(prayers));
+                                console.log('Loaded', supabasePrayers.length, 'prayers from Supabase');
+                            }
+                        } catch (error) {
+                            console.warn('Error loading from Supabase, using local data:', error);
+                        }
+                    } else {
+                        console.log('No authenticated user, using local storage only');
+                    }
+                } catch (error) {
+                    console.warn('Supabase auth check failed:', error);
+                }
+            }
+            
             // Render initial prayers list
             renderPrayersList();
             console.log('Prayers page loaded');
