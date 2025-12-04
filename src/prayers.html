@@ -2075,7 +2075,12 @@
                 return;
             }
 
-            prayersList.innerHTML = filteredPrayers.map((prayer, index) => {
+            // Sort prayers alphabetically by name
+            const sortedPrayers = filteredPrayers.sort((a, b) => {
+                return a.name.localeCompare(b.name);
+            });
+
+            prayersList.innerHTML = sortedPrayers.map((prayer, index) => {
                 let contentHTML = '';
                 let badgeHTML = '';
                 
@@ -2801,6 +2806,40 @@
             });
             
             selectedPrayerId = null;
+        }
+
+        // Detail sheet swipe-down to close
+        const detailSheet = document.getElementById('prayers-detail-sheet');
+        const detailContent = detailSheet ? detailSheet.querySelector('.prayers-detail-content') : null;
+        let detailSheetStartY = 0;
+        
+        if (detailSheet) {
+            detailSheet.addEventListener('touchstart', (e) => {
+                detailSheetStartY = e.touches[0].clientY;
+            }, false);
+
+            detailSheet.addEventListener('touchmove', (e) => {
+                const currentY = e.touches[0].clientY;
+                const swipeDist = currentY - detailSheetStartY;
+                // Prevent default when swiping down to disable browser pull-to-refresh
+                if (swipeDist > 20) {
+                    e.preventDefault();
+                }
+            }, false);
+
+            detailSheet.addEventListener('touchend', (e) => {
+                const sheetEndY = e.changedTouches[0].clientY;
+                const diffY = sheetEndY - detailSheetStartY;
+                
+                // If swiped down more than 50px, close the sheet
+                if (diffY > 50) {
+                    closePrayerDetail();
+                }
+                // If at top of content and trying to scroll up, close the sheet
+                else if (diffY < -20 && detailContent && detailContent.scrollTop === 0) {
+                    closePrayerDetail();
+                }
+            }, false);
         }
 
         // Edit button - show update form
