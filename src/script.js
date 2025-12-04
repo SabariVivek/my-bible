@@ -166,6 +166,18 @@ function isMemoryVerse(bookName, chapter, verse) {
         return normalizedMemBook === normalizedBookName && parseInt(chapterPart) === chapter && parseInt(versePart) === verse;
     });
 }
+// Helper function to convert book file name based on language
+// Tamil uses i_samuel, english uses 1-samuel
+function getBookFileForLanguage(bookFile, language) {
+    if (language === 'english') {
+        return bookFile
+            .replace(/^i_/, '1-')
+            .replace(/^ii_/, '2-')
+            .replace(/^iii_/, '3-')
+            .replace(/_/g, '-');
+    }
+    return bookFile;
+}
 // Initialize
 // Register service worker for PWA (only on http/https, not file://)
 if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
@@ -829,14 +841,15 @@ async function loadBook(bookIndex, chapter) {
     try {
         if (currentLanguage === 'both') {
             // Load entire book for both languages
+            const englishBookFile = getBookFileForLanguage(book.file, 'english');
             await Promise.all([
                 bibleDataManager.loadEntireBook(book.file, 'tamil'),
-                bibleDataManager.loadEntireBook(book.file, 'english')
+                bibleDataManager.loadEntireBook(englishBookFile, 'english')
             ]);
             // Get current chapter data from cache
             const [tamilData, englishData] = await Promise.all([
                 bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
-                bibleDataManager.getChapterData(book.file, chapter, 'english')
+                bibleDataManager.getChapterData(englishBookFile, chapter, 'english')
             ]);
             if (tamilData && englishData) {
                 currentTamilData = { [`chapter_${chapter}`]: tamilData };
@@ -848,13 +861,14 @@ async function loadBook(bookIndex, chapter) {
         } else {
             // Single language mode - load entire book
             const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
-            const bookData = await bibleDataManager.loadEntireBook(book.file, language);
+            const bookFile = getBookFileForLanguage(book.file, language);
+            const bookData = await bibleDataManager.loadEntireBook(bookFile, language);
             if (!bookData) {
                 hideLoader();
                 return;
             }
             // Get current chapter data from cache
-            const chapterData = await bibleDataManager.getChapterData(book.file, chapter, language);
+            const chapterData = await bibleDataManager.getChapterData(bookFile, chapter, language);
             if (chapterData) {
                 currentData = { [`chapter_${chapter}`]: chapterData };
                 currentTamilData = null;
@@ -877,25 +891,27 @@ async function updateUI() {
         showLoader();
         try {
             if (currentLanguage === 'both') {
+                const englishBookFile = getBookFileForLanguage(book.file, 'english');
                 const [tamilData, englishData] = await Promise.all([
                     bibleDataManager.getChapterData(book.file, currentChapter, 'tamil'),
-                    bibleDataManager.getChapterData(book.file, currentChapter, 'english')
+                    bibleDataManager.getChapterData(englishBookFile, currentChapter, 'english')
                 ]);
                 if (tamilData && englishData) {
                     currentTamilData = { [`chapter_${currentChapter}`]: tamilData };
                     currentData = { [`chapter_${currentChapter}`]: englishData };
                     // Preload adjacent chapters
                     bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, 'tamil', book.chapters);
-                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, 'english', book.chapters);
+                    bibleDataManager.preloadAdjacentChapters(englishBookFile, currentChapter, 'english', book.chapters);
                 }
             } else {
                 const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
-                const chapterData = await bibleDataManager.getChapterData(book.file, currentChapter, language);
+                const bookFile = getBookFileForLanguage(book.file, language);
+                const chapterData = await bibleDataManager.getChapterData(bookFile, currentChapter, language);
                 if (chapterData) {
                     currentData = { [`chapter_${currentChapter}`]: chapterData };
                     currentTamilData = null;
                     // Preload adjacent chapters
-                    bibleDataManager.preloadAdjacentChapters(book.file, currentChapter, language, book.chapters);
+                    bibleDataManager.preloadAdjacentChapters(bookFile, currentChapter, language, book.chapters);
                 }
             }
         } catch (error) {
@@ -961,9 +977,10 @@ function updateChapters() {
             // Get chapter data from cache (already loaded)
             const book = bibleBooks[currentBook];
             if (currentLanguage === 'both') {
+                const englishBookFile = getBookFileForLanguage(book.file, 'english');
                 const [tamilData, englishData] = await Promise.all([
                     bibleDataManager.getChapterData(book.file, chapter, 'tamil'),
-                    bibleDataManager.getChapterData(book.file, chapter, 'english')
+                    bibleDataManager.getChapterData(englishBookFile, chapter, 'english')
                 ]);
                 if (tamilData && englishData) {
                     currentTamilData = { [`chapter_${chapter}`]: tamilData };
@@ -971,7 +988,8 @@ function updateChapters() {
                 }
             } else {
                 const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
-                const chapterData = await bibleDataManager.getChapterData(book.file, chapter, language);
+                const bookFile = getBookFileForLanguage(book.file, language);
+                const chapterData = await bibleDataManager.getChapterData(bookFile, chapter, language);
                 if (chapterData) {
                     currentData = { [`chapter_${chapter}`]: chapterData };
                     currentTamilData = null;
@@ -3518,9 +3536,11 @@ function loadRandomMemoryVerse() {
 async function loadVerseFromSupabase(book, verseData, verseReference, scriptureText) {
     try {
         // Get language
-        const language = currentLanguage === 'tamil' ? 'tamil' : 'easy-english';
+        const language = currentLanguage === 'tamil' ? 'tamil' : 'english';
+        // Convert book file name based on language
+        const bookFile = getBookFileForLanguage(book.file, language);
         // Load chapter data from BibleDataManager
-        const chapterData = await bibleDataManager.getChapterData(book.file, verseData.chapter, language);
+        const chapterData = await bibleDataManager.getChapterData(bookFile, verseData.chapter, language);
         if (!chapterData) {
             scriptureText.style.display = 'block';
             scriptureText.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: center; color: var(--text-secondary);">Failed to load verse</div>';
