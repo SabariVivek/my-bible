@@ -1714,7 +1714,7 @@
             left: 50%;
             transform: translateX(-50%);
             background: #323232;
-            color: #ef4444;
+            color: #22c55e;
             padding: 12px 24px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -1732,7 +1732,7 @@
 
         body.light-theme .sermon-toast {
             background: #f5f5f5;
-            color: #ef4444;
+            color: #22c55e;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
@@ -2130,6 +2130,32 @@
 
         body.dark-theme .passage-badge {
             color: #f0f0f0;
+        }
+
+        .passage-badge-content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .passage-badge-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        body.dark-theme .passage-badge-title {
+            color: #f0f0f0;
+        }
+
+        .passage-badge-subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            color: #666;
+        }
+
+        body.dark-theme .passage-badge-subtitle {
+            color: #aaa;
         }
 
         /* Reduce badge size only in passage modal verses */
@@ -3800,7 +3826,10 @@
             });
 
             if (validVerses.length === 0) {
-                badge.textContent = `All Verses - ${sermon.title}`;
+                badge.innerHTML = `<div class="passage-badge-content">
+                    <div class="passage-badge-title">${sermon.title}</div>
+                    ${sermon.tamilTitle ? `<div class="passage-badge-subtitle">${sermon.tamilTitle}</div>` : ''}
+                </div>`;
                 content.innerHTML = '<p class="passage-no-data">No valid verses to display</p>';
                 if (modalCard) {
                     modalCard.style.maxHeight = '85vh';
@@ -3811,8 +3840,11 @@
                 return;
             }
 
-            // Set title
-            badge.textContent = `All Verses - ${sermon.title}`;
+            // Set title with sermon title and Tamil title
+            badge.innerHTML = `<div class="passage-badge-content">
+                <div class="passage-badge-title">${sermon.title}</div>
+                ${sermon.tamilTitle ? `<div class="passage-badge-subtitle">${sermon.tamilTitle}</div>` : ''}
+            </div>`;
 
             // Set flags for "Show All" mode
             isShowAllMode = true;
@@ -4832,6 +4864,8 @@
                 ? selectedSermonDate.toISOString() 
                 : selectedSermonDate;
 
+            let isNewSermon = true;
+
             if (currentEditingIndex !== null) {
                 // Update existing sermon
                 const updatedSermon = {
@@ -4849,6 +4883,7 @@
                 }
                 
                 currentEditingIndex = null;
+                isNewSermon = false;
             } else {
                 // Create new sermon with sequential ID
                 const newSermon = {
@@ -4862,12 +4897,20 @@
                     _synced: false  // Mark for syncing
                 };
                 sermons.unshift(newSermon);
+                isNewSermon = true;
             }
 
             saveSermons();
             renderSermons();
             closeBottomSheet();
             newSermonIsFavorite = false;  // Reset for next add
+
+            // Show toast notification
+            if (isNewSermon) {
+                showToast('Added...');
+            } else {
+                showToast('Edited...');
+            }
         });
 
         // Allow Enter key to save
