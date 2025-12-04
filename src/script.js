@@ -672,6 +672,49 @@ function initializeMobileDrawer() {
     if (drawerCloseBtn) {
         drawerCloseBtn.addEventListener('click', closeDrawer);
     }
+    
+    // Left swipe to open drawer (ultra smooth) - from anywhere on screen
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const swipeThreshold = 50; // Minimum swipe distance
+    
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, false);
+    
+    document.addEventListener('touchmove', (e) => {
+        // Only handle if drawer is not already open
+        if (drawerOverlay.classList.contains('active')) {
+            return;
+        }
+        
+        const touchCurrentX = e.touches[0].clientX;
+        const touchCurrentY = e.touches[0].clientY;
+        const deltaX = touchCurrentX - touchStartX;
+        const deltaY = Math.abs(touchCurrentY - touchStartY);
+        
+        // Check if it's a horizontal swipe (not vertical) from right to left
+        if (Math.abs(deltaX) > deltaY && deltaX > swipeThreshold) {
+            // Left swipe detected - open drawer
+            if (window.innerWidth <= 768) {
+                drawerOverlay.classList.add('active');
+                booksSidebar.classList.add('drawer-open');
+                chaptersColumn.classList.add('drawer-open');
+                versesColumn.classList.add('drawer-open');
+                const menuBtn = document.querySelector('.mobile-only');
+                if (menuBtn) {
+                    const hamburgerIcon = menuBtn.querySelector('.hamburger-icon');
+                    const closeIcon = menuBtn.querySelector('.close-icon');
+                    if (hamburgerIcon) hamburgerIcon.style.display = 'none';
+                    if (closeIcon) closeIcon.style.display = 'block';
+                }
+                document.body.style.overflow = 'hidden';
+                // Prevent further swipe events
+                touchStartX = window.innerWidth;
+            }
+        }
+    }, false);
 }
 // Initialize book list with click handlers
 function initializeBookList() {
