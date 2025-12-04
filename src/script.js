@@ -312,6 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightCharacterOption = document.getElementById('right-character-option');
     const rightLifeOfJesusOption = document.getElementById('right-life-of-jesus-option');
     const rightCultOption = document.getElementById('right-cult-option');
+    const rightPrayersOption = document.getElementById('right-prayers-option');
     const isMobile = window.innerWidth <= 768;
     let isFadingOut = false; // Flag to prevent re-showing during fade
     
@@ -336,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (rightCharacterOption) rightCharacterOption.style.display = 'flex';
         if (rightLifeOfJesusOption) rightLifeOfJesusOption.style.display = 'flex';
         if (rightCultOption) rightCultOption.style.display = 'flex';
+        if (rightPrayersOption) rightPrayersOption.style.display = 'flex';
     } else {
         // Hide admin-only menu items
         if (rightNotesOption) rightNotesOption.style.display = 'none';
@@ -345,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (rightCharacterOption) rightCharacterOption.style.display = 'none';
         if (rightLifeOfJesusOption) rightLifeOfJesusOption.style.display = 'none';
         if (rightCultOption) rightCultOption.style.display = 'none';
+        if (rightPrayersOption) rightPrayersOption.style.display = 'none';
     }
     // Admin toggle button click handler
     if (adminToggle) {
@@ -2900,52 +2903,78 @@ function initializeSearch() {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 }
-// Site title click to show secret icon after 5 clicks and activate admin mode
+// Site title hold to activate admin mode after 5 seconds
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
     const secretIcon = document.getElementById('secret-icon');
-    let clickCount = 0;
-    let clickTimer = null;
+    let holdTimer = null;
+    let isHolding = false;
+    
     if (siteTitle) {
-        siteTitle.addEventListener('click', () => {
-            // Don't count clicks if admin mode is already active
+        // Handle mousedown/touchstart - start the hold timer
+        siteTitle.addEventListener('mousedown', startHold);
+        siteTitle.addEventListener('touchstart', startHold);
+        
+        // Handle mouseup/touchend - clear the hold timer
+        siteTitle.addEventListener('mouseup', endHold);
+        siteTitle.addEventListener('touchend', endHold);
+        siteTitle.addEventListener('mouseleave', endHold);
+        
+        function startHold() {
+            // Don't start hold if admin mode is already active
             if (isAdmin()) {
                 return;
             }
-            clickCount++;
-            // Clear existing timer
-            if (clickTimer) {
-                clearTimeout(clickTimer);
-            }
-            // Set timer to reset counter if no click within 2 seconds
-            clickTimer = setTimeout(() => {
-                clickCount = 0;
-            }, 2000);
-            // Check click count
-            if (clickCount >= 5) {
-                const adminToggle = document.getElementById('admin-toggle');
-                const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
-                const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
-                const isMobile = window.innerWidth <= 768;
-                // Show appropriate admin UI based on device
-                if (isMobile) {
-                    // On mobile, show admin menu wrapper and toggle
-                    if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-                    if (adminToggle) adminToggle.style.display = 'flex';
-                } else {
-                    // On desktop, show admin menu wrapper and toggle
-                    if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-                    if (adminToggle) adminToggle.style.display = 'flex';
+            
+            isHolding = true;
+            let holdDuration = 0;
+            const holdInterval = 50; // Check every 50ms
+            const totalHoldTime = 5000; // 5 seconds
+            
+            holdTimer = setInterval(() => {
+                holdDuration += holdInterval;
+                
+                // Check if hold time reached 5 seconds
+                if (holdDuration >= totalHoldTime && isHolding) {
+                    clearInterval(holdTimer);
+                    activateAdminMode();
+                    isHolding = false;
                 }
-                // Activate admin mode
-                localStorage.setItem('isAdmin', 'true');
-                updateAdminUI();
-                showAdminNotification();
-                clickCount = 0; // Reset counter
-                clearTimeout(clickTimer); // Clear timer after completion
+            }, holdInterval);
+        }
+        
+        function endHold() {
+            isHolding = false;
+            if (holdTimer) {
+                clearInterval(holdTimer);
+                holdTimer = null;
             }
-        });
+        }
+        
+        function activateAdminMode() {
+            const adminToggle = document.getElementById('admin-toggle');
+            const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
+            const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+            const isMobile = window.innerWidth <= 768;
+            
+            // Show appropriate admin UI based on device
+            if (isMobile) {
+                // On mobile, show admin menu wrapper and toggle
+                if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+                if (adminToggle) adminToggle.style.display = 'flex';
+            } else {
+                // On desktop, show admin menu wrapper and toggle
+                if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+                if (adminToggle) adminToggle.style.display = 'flex';
+            }
+            
+            // Activate admin mode
+            localStorage.setItem('isAdmin', 'true');
+            updateAdminUI();
+            showAdminNotification();
+        }
     }
+    
     // Add click handler for secret icon
     if (secretIcon) {
         secretIcon.addEventListener('click', () => {
