@@ -4922,15 +4922,23 @@
             
             // Hide/show admin buttons based on admin status
             const menuBtn = document.getElementById('sermon-menu-btn');
+            const menuAddBtn = document.getElementById('sermon-menu-add');
             if (menuBtn) {
                 menuBtn.style.display = isAdmin() ? 'flex' : 'none';
+            }
+            if (menuAddBtn) {
+                menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
             }
             
             // Listen for admin status changes
             window.addEventListener('storage', () => {
                 const menuBtn = document.getElementById('sermon-menu-btn');
+                const menuAddBtn = document.getElementById('sermon-menu-add');
                 if (menuBtn) {
                     menuBtn.style.display = isAdmin() ? 'flex' : 'none';
+                }
+                if (menuAddBtn) {
+                    menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
                 }
             });
         });
@@ -4944,8 +4952,12 @@
                 
                 // Hide/show admin buttons based on admin status
                 const menuBtn = document.getElementById('sermon-menu-btn');
+                const menuAddBtn = document.getElementById('sermon-menu-add');
                 if (menuBtn) {
                     menuBtn.style.display = isAdmin() ? 'flex' : 'none';
+                }
+                if (menuAddBtn) {
+                    menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
                 }
             });
         } else {
@@ -4956,8 +4968,12 @@
             
             // Hide/show admin buttons based on admin status
             const menuBtn = document.getElementById('sermon-menu-btn');
+            const menuAddBtn = document.getElementById('sermon-menu-add');
             if (menuBtn) {
                 menuBtn.style.display = isAdmin() ? 'flex' : 'none';
+            }
+            if (menuAddBtn) {
+                menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
             }
         }
     </script>

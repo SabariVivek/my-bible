@@ -988,51 +988,63 @@
         }
 
         /* Loader styles */
-        .prayers-loader {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .prayers-loader.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .prayers-loader-overlay {
-            position: fixed;
+        .prayers-loader-wrapper {
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 999;
+            background: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        body.light-theme .prayers-loader-wrapper {
+            background: #ffffff;
+        }
+
+        .prayers-loader-wrapper.hidden {
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease-out;
         }
 
-        .prayers-loader.show ~ .prayers-loader-overlay,
-        .prayers-loader-overlay.show {
-            opacity: 1;
-        }
-
-        .spinner {
+        .prayers-loader-spinner {
             width: 50px;
             height: 50px;
-            border: 4px solid rgba(120, 170, 255, 0.2);
-            border-top-color: #78aaff;
+            border: 5px solid #333333;
+            border-top: 5px solid #ffffff;
+            border-right: 5px solid #cccccc;
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+            animation: prayers-spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        body.light-theme .prayers-loader-spinner {
+            border: 5px solid #e0e0e0;
+            border-top: 5px solid #333333;
+            border-right: 5px solid #666666;
+        }
+
+        .prayers-loader-text {
+            color: #cccccc;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        body.light-theme .prayers-loader-text {
+            color: #666666;
+        }
+
+        @keyframes prayers-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Detail Sheet Overlay */
@@ -1528,7 +1540,7 @@
 
         body.dark-theme .prayers-bottom-nav {
             background: #2A2A29;
-            border-top-color: #e0e0e0;
+            border-top-color: #404040;
         }
 
         .prayers-bottom-nav-item {
@@ -1837,10 +1849,10 @@
     </div>
 
     <!-- Toast Notification -->
-    <div class="prayers-loader" id="prayers-loader">
-        <div class="spinner"></div>
+    <div class="prayers-loader-wrapper hidden" id="prayers-loader">
+        <div class="prayers-loader-spinner"></div>
+        <p class="prayers-loader-text">Loading...</p>
     </div>
-    <div class="prayers-loader-overlay" id="prayers-loader-overlay"></div>
     <div class="prayers-toast" id="prayers-toast"></div>
 
     <!-- Prayer Detail Sheet -->
@@ -2109,18 +2121,26 @@
         }
 
         // Loader helper functions
+        let loaderStartTime = 0;
+
         function showLoader() {
             const loader = document.getElementById('prayers-loader');
-            const overlay = document.getElementById('prayers-loader-overlay');
-            if (loader) loader.classList.add('show');
-            if (overlay) overlay.classList.add('show');
+            if (loader) {
+                loaderStartTime = Date.now();
+                loader.classList.remove('hidden');
+            }
         }
 
         function hideLoader() {
             const loader = document.getElementById('prayers-loader');
-            const overlay = document.getElementById('prayers-loader-overlay');
-            if (loader) loader.classList.remove('show');
-            if (overlay) overlay.classList.remove('show');
+            if (loader) {
+                const elapsed = Date.now() - loaderStartTime;
+                const remainingTime = Math.max(0, 500 - elapsed); // Minimum 500ms (0.5 sec)
+                
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                }, remainingTime);
+            }
         }
 
         // Toggle menu dropdown
@@ -2956,6 +2976,9 @@
 
         // Initialize page
         document.addEventListener('DOMContentLoaded', async () => {
+            // Show loader while loading content
+            showLoader();
+            
             // Check if user is authenticated with Supabase
             if (window.PrayerDB && window.supabase) {
                 try {
@@ -3000,6 +3023,10 @@
             
             // Render initial prayers list
             renderPrayersList();
+            
+            // Hide loader after content is loaded
+            hideLoader();
+            
             console.log('Prayers page loaded');
         });
     </script>
