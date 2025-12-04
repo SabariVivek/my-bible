@@ -2236,13 +2236,16 @@
                             });
                         }
                         
-                        closeAddPrayerSheet();
-                        renderPrayersList();
-                        hideLoader();
-                        showToast('Updated');
-                        saveBtn.textContent = 'Save';
-                        isEditMode = false;
-                        editingPrayerId = null;
+                        // Hide loader and show success after a brief moment
+                        setTimeout(() => {
+                            closeAddPrayerSheet();
+                            renderPrayersList();
+                            hideLoader();
+                            showToast('Updated');
+                            saveBtn.textContent = 'Save';
+                            isEditMode = false;
+                            editingPrayerId = null;
+                        }, 300);
                     }
                 } else {
                     // Create new prayer
