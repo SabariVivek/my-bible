@@ -494,7 +494,8 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            width: 100%;
+            min-width: 0;
+            overflow: hidden;
         }
 
         .prayers-badge-btn-text::after {
@@ -502,6 +503,21 @@
             font-size: 0.8rem;
             margin-left: 8px;
             flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        #prayer-badge-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+        }
+
+        #prayer-badge-world-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
         }
 
         .prayers-badge-btn-text:hover {
@@ -946,6 +962,57 @@
 
         .prayers-detail-info {
             margin-bottom: 16px;
+        }
+
+        .prayers-detail-members-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .prayers-detail-member-card {
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s;
+        }
+
+        .prayers-detail-member-card:hover {
+            border-color: #78aaff;
+            background: #f5f8ff;
+            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.15);
+        }
+
+        body.dark-theme .prayers-detail-member-card {
+            border-color: #3a3a3a;
+            background: #252525;
+        }
+
+        body.dark-theme .prayers-detail-member-card:hover {
+            border-color: #78aaff;
+            background: #2a2a3a;
+            box-shadow: 0 2px 8px rgba(120, 170, 255, 0.25);
+        }
+
+        .prayers-detail-member-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .prayers-detail-member-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            flex: 1;
+            word-break: break-word;
+        }
+
+        body.dark-theme .prayers-detail-member-name {
+            color: #f0f0f0;
         }
 
         .prayers-detail-label {
@@ -2193,34 +2260,47 @@
             // Build content HTML based on category
             let contentHTML = '';
             if (prayer.category === 'Family') {
-                // Show members for Family category
+                // Show members as cards
                 if (prayer.members && prayer.members.length > 0) {
                     contentHTML = `
-                        <div class="prayers-detail-info">
-                            <div class="prayers-detail-label">Members</div>
-                            <div class="prayers-detail-value">
-                                ${prayer.members.map(member => `👤 ${escapeHtml(member)}`).join('<br>')}
-                            </div>
+                        <div class="prayers-detail-members-list">
+                            ${prayer.members.map(member => `
+                                <div class="prayers-detail-member-card">
+                                    <div class="prayers-detail-member-icon">👤</div>
+                                    <div class="prayers-detail-member-name">${escapeHtml(member)}</div>
+                                </div>
+                            `).join('')}
                         </div>
                     `;
                 } else {
                     contentHTML = `<div class="prayers-empty-state"><p>No members added</p></div>`;
                 }
-            } else {
-                // Show description for Others category
-                let othersContent = '';
-                
+            } else if (prayer.category === 'Others') {
+                // Show description if available
                 if (prayer.description) {
-                    othersContent += `
+                    contentHTML = `
                         <div class="prayers-detail-info">
                             <div class="prayers-detail-value">
                                 ${escapeHtml(prayer.description)}
                             </div>
                         </div>
                     `;
+                } else {
+                    contentHTML = `<div class="prayers-empty-state"><p>No details added</p></div>`;
                 }
-                
-                contentHTML = othersContent || `<div class="prayers-empty-state"><p>No details added</p></div>`;
+            } else if (prayer.category === 'World') {
+                // Show description if available
+                if (prayer.description) {
+                    contentHTML = `
+                        <div class="prayers-detail-info">
+                            <div class="prayers-detail-value">
+                                ${escapeHtml(prayer.description)}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    contentHTML = `<div class="prayers-empty-state"><p>No details added</p></div>`;
+                }
             }
 
             detailContent.innerHTML = contentHTML;
