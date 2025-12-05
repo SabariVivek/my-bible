@@ -1626,8 +1626,6 @@ body.dark-theme .mobile-chapter-header {
     background-color: rgba(0, 0, 0, 0.06) !important;
     border: 1px solid #00000055 !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
-    padding: 10px 14px !important;
-    margin-bottom: 12px !important;
     transition: all 0.25s ease !important;
     text-decoration: none !important;
 }
@@ -1636,12 +1634,14 @@ body.dark-theme .mobile-chapter-header {
     background-color: rgba(0, 0, 0, 0.06) !important;
     border: 1px solid #00000055 !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.25s ease !important;
 }
 
 .verse-line.multi-highlighted:focus {
     background-color: rgba(0, 0, 0, 0.06) !important;
     border: 1px solid #00000055 !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.25s ease !important;
 }
 
 /* Selection color applied on top of bookmark colors (light theme) */
@@ -1649,6 +1649,7 @@ body.dark-theme .mobile-chapter-header {
     background-color: rgba(0, 0, 0, 0.06) !important;
     border: 1px solid #00000055 !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.25s ease !important;
 }
 
 /* Left pane selection - grey background */
@@ -3024,45 +3025,46 @@ body.dark-theme .verse-line:focus {
 }
 
 body.dark-theme .verse-line.multi-highlighted {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid #ffffffaa !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
-    padding: 10px 14px !important;
-    margin-bottom: 12px !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
     transition: all 0.25s ease !important;
     text-decoration: none !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:active {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid #ffffffaa !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    transition: all 0.25s ease !important;
 }
 
 body.dark-theme .verse-line.multi-highlighted:focus {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid #ffffffaa !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    transition: all 0.25s ease !important;
 }
 
 /* Selection color applied on top of bookmark colors (dark theme) */
 body.dark-theme .verse-line.has-note.multi-highlighted {
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border: 1px solid #ffffffaa !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.25) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35) !important;
+    transition: all 0.25s ease !important;
 }
 
 /* Left pane selection - grey background in dark theme */
 body.dark-theme .verse-line.left-pane-selected {
-    background-color: #2a2d30 !important;
+    background-color: #3a3f45 !important;
 }
 
 body.dark-theme .verse-line.left-pane-selected:active {
-    background-color: #2a2d30 !important;
+    background-color: #3a3f45 !important;
 }
 
 body.dark-theme .verse-line.left-pane-selected:focus {
-    background-color: #2a2d30 !important;
+    background-color: #3a3f45 !important;
 }
 
 /* Override selection color in dark theme */
