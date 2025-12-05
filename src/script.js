@@ -688,7 +688,7 @@ function initializeMobileDrawer() {
     // Left swipe to open drawer (ultra smooth) - from anywhere on screen
     let touchStartX = 0;
     let touchStartY = 0;
-    const swipeThreshold = 100; // Minimum swipe distance
+    const swipeThreshold = 150; // Minimum swipe distance
     
     document.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
@@ -698,6 +698,22 @@ function initializeMobileDrawer() {
     document.addEventListener('touchmove', (e) => {
         // Only handle if drawer is not already open
         if (drawerOverlay.classList.contains('active')) {
+            return;
+        }
+        
+        // Don't allow swipe to open drawer if any bottom sheet is active
+        const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
+        const notesModal = document.getElementById('notes-modal');
+        const bookmarkColorPicker = document.getElementById('bookmark-color-picker-overlay');
+        const languageSheet = document.getElementById('language-bottom-sheet-overlay');
+        
+        const isAnySheetOpen = 
+            (verseActionsSheet && verseActionsSheet.classList.contains('visible')) ||
+            (notesModal && notesModal.classList.contains('visible')) ||
+            (bookmarkColorPicker && bookmarkColorPicker.classList.contains('active')) ||
+            (languageSheet && languageSheet.classList.contains('active'));
+        
+        if (isAnySheetOpen) {
             return;
         }
         
@@ -1420,10 +1436,11 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
     // Open bookmark color picker bottom sheet
     const overlay = document.getElementById('bookmark-color-picker-overlay');
     const sheet = document.querySelector('.bookmark-color-picker-sheet');
+    const closeBtn = document.getElementById('bookmark-color-close-btn');
     
     if (!overlay || !sheet) return;
     
-    // Show the overlay and sheet
+    // Show the overlay and sheet with smooth animation
     overlay.classList.add('active');
     sheet.classList.add('visible');
     sheet.classList.remove('closing');
@@ -1455,7 +1472,7 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             e.stopPropagation();
             const selectedColor = colorBtn.dataset.color;
             
-            // Update selected state
+            // Show selection animation
             updatedColorOptions.forEach(option => {
                 option.classList.remove('selected');
             });
@@ -1499,15 +1516,25 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
             }
             
-            // Close the bottom sheet after selection
+            // Close the bottom sheet after selection with smooth animation
             setTimeout(() => {
                 closeBookmarkColorPicker();
-            }, 300);
+            }, 400);
         });
     });
     
+    // Add close button handler
+    closeBtn.removeEventListener('click', closeButtonHandler);
+    closeBtn.addEventListener('click', closeButtonHandler);
+    
     // Initialize drag-to-close gestures
     initializeBookmarkColorPickerGestures();
+}
+
+// Close button handler
+function closeButtonHandler(e) {
+    e.stopPropagation();
+    closeBookmarkColorPicker();
 }
 
 // Close bookmark color picker bottom sheet
@@ -1581,7 +1608,8 @@ function initializeBookmarkColorPickerGestures() {
             // Close the sheet
             closeBookmarkColorPicker();
         } else {
-            // Snap back
+            // Snap back with smooth spring easing
+            sheet.style.transition = 'transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)';
             sheet.style.transform = 'translateY(0)';
             overlay.style.background = 'rgba(0, 0, 0, 0.32)';
         }
