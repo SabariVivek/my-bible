@@ -3935,19 +3935,25 @@ body.dark-theme .notes-spinner {
     border-top-color: #8ab4f8;
 }
 
-/* Notes Modal */
+/* Notes Modal - Android Style Bottom Sheet */
 .notes-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.32);
     z-index: 220;
     display: flex;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.notes-modal-overlay.visible {
+    opacity: 1;
 }
 
 .notes-modal {
@@ -3962,48 +3968,93 @@ body.dark-theme .notes-spinner {
     touch-action: none;
     user-select: none;
     z-index: 222;
+    position: relative;
+    /* GPU acceleration for drag animations */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
-/* Mobile bottom sheet styles (≤768px) */
+/* Mobile bottom sheet styles (≤768px) - Android Style */
 @media (max-width: 768px) {
     .notes-modal-overlay {
         align-items: flex-end;
         justify-content: center;
         animation: none;
+        padding: 0;
     }
     
     .notes-modal {
         width: 100%;
         max-width: 100%;
-        max-height: 85vh;
+        max-height: 95vh;
         border-radius: 16px 16px 0 0;
-        box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+        /* Android Material shadow elevation 16 */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
+                    0 16px 32px rgba(0, 0, 0, 0.1);
         will-change: transform;
+        transform: translateY(0);
+        /* Material Design spring easing */
+        transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+    }
+    
+    .notes-modal.dragging {
+        transition: none;
+    }
+    
+    .notes-modal.closing {
+        transform: translateY(100vh);
+        transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
     }
 }
 
-/* Handle bar for mobile bottom sheet */
+/* Handle bar for mobile bottom sheet - Android Style */
 .notes-sheet-handle {
-    width: 40px;
-    height: 4px;
-    background: #d0d0d0;
-    border-radius: 2px;
-    margin: 12px auto 0;
-    cursor: grab;
+    width: 100%;
+    height: 40px;
     display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    flex-shrink: 0;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .notes-sheet-handle:active {
     cursor: grabbing;
 }
 
-body.dark-theme .notes-sheet-handle {
+.notes-handle-bar {
+    width: 40px;
+    height: 4px;
+    background: #d0d0d0;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.notes-sheet-handle:hover .notes-handle-bar {
+    background: #b0b0b0;
+}
+
+.notes-sheet-handle:active .notes-handle-bar {
+    background: #808080;
+}
+
+body.dark-theme .notes-handle-bar {
     background: #555;
+}
+
+body.dark-theme .notes-sheet-handle:hover .notes-handle-bar {
+    background: #666;
+}
+
+body.dark-theme .notes-sheet-handle:active .notes-handle-bar {
+    background: #777;
 }
 
 @media (max-width: 768px) {
     .notes-sheet-handle {
-        display: block;
+        display: flex;
     }
 }
 
@@ -4013,6 +4064,7 @@ body.dark-theme .notes-sheet-handle {
     align-items: center;
     padding: 20px 24px;
     border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
 }
 
 /* Mobile header styling */
@@ -4047,8 +4099,17 @@ body.dark-theme .notes-sheet-handle {
     background-color: #f1f3f4;
 }
 
+.notes-modal-close-btn:active {
+    background-color: #e8eaed;
+}
+
 .notes-modal-close-btn svg {
     color: #5f6368;
+    transition: color 0.2s ease;
+}
+
+.notes-modal-close-btn:hover svg {
+    color: #202124;
 }
 
 /* Mobile close button positioning */
@@ -4063,7 +4124,9 @@ body.dark-theme .notes-sheet-handle {
 .notes-modal-content {
     padding: 24px;
     overflow-y: auto;
+    overflow-x: hidden;
     flex: 1;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Custom scrollbar for notes modal */

@@ -4950,17 +4950,30 @@ async function cleanupDuplicateMemoryVerses() {
     }
 }
 
-// Notes functionality
+// Notes functionality - Android-style bottom sheet
 function openNotesModal(verseNum = null) {
     // Check admin mode
     if (!isAdmin()) {
         return; // Silently prevent opening in non-admin mode
     }
-    const modal = document.querySelector('.notes-modal-overlay');
+    
+    const overlay = document.getElementById('notes-modal-overlay');
+    const modal = document.getElementById('notes-modal');
     const textarea = document.getElementById('notes-textarea');
     const verseRef = document.getElementById('notes-verse-ref');
     const deleteBtn = document.getElementById('delete-note-btn');
-    if (!modal) return;
+    
+    if (!overlay || !modal) return;
+    
+    // Reset modal state before opening (in case it was previously open)
+    modal.classList.remove('closing');
+    modal.classList.remove('dragging');
+    modal.style.transform = 'translateY(0)';
+    modal.style.transition = '';
+    overlay.classList.remove('visible');
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.32)';
+    overlay.style.transition = '';
+    
     // If verseNum provided, use it, otherwise check for highlighted verse
     if (verseNum === null) {
         const highlightedVerse = document.querySelector('.verse-line.highlighted');
@@ -4971,9 +4984,11 @@ function openNotesModal(verseNum = null) {
             return;
         }
     }
+    
     currentNoteVerse = verseNum;
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
     const existingNote = verseNotes[noteKey];
+    
     // Set verse reference
     verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     
@@ -4987,123 +5002,222 @@ function openNotesModal(verseNum = null) {
         currentNoteColor = null;
         deleteBtn.style.display = 'none';
     }
-    // Update active color button
-    // Color buttons removed - note colors no longer available
     
     // Save current scroll position before preventing body scroll
     const scrollY = window.scrollY;
     document.body.style.top = `-${scrollY}px`;
     document.body.classList.add('modal-open');
+    
     // Track navigation
     navigateToPage('notes');
-    modal.style.display = 'flex';
+    
+    // Show overlay with fade-in animation
+    overlay.style.display = 'flex';
+    
+    // Trigger animation on next frame
+    requestAnimationFrame(() => {
+        overlay.classList.add('visible');
+        initializeAndroidBottomSheetGestures();
+    });
 }
+
 function closeNotesModal() {
-    const modal = document.querySelector('.notes-modal-overlay');
+    const overlay = document.getElementById('notes-modal-overlay');
+    const modal = document.getElementById('notes-modal');
+    
+    if (!overlay || !modal) return;
+    
+    // Trigger close animation on mobile
+    if (window.innerWidth <= 768) {
+        modal.classList.add('closing');
+        overlay.classList.remove('visible');
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            finishClosing();
+        }, 300);
+    } else {
+        overlay.classList.remove('visible');
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            finishClosing();
+        }, 300);
+    }
+}
+
+function finishClosing() {
+    const modal = document.getElementById('notes-modal');
+    const overlay = document.getElementById('notes-modal-overlay');
+    
     // Restore scroll position
     const scrollYStyle = document.body.style.top;
     document.body.classList.remove('modal-open');
     document.body.style.top = '';
     
     if (scrollYStyle) {
-        // scrollYStyle is in format like "-1234px", extract the number and negate it
         const scrollY = Math.abs(parseInt(scrollYStyle));
         window.scrollTo(0, scrollY);
     }
     
+    // Reset modal state for next open
     if (modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('closing');
+        modal.classList.remove('dragging');
+        modal.style.transform = '';
+        modal.style.transition = '';
     }
+    
+    // Reset overlay state
+    if (overlay) {
+        overlay.style.backgroundColor = '';
+        overlay.style.transition = '';
+        overlay.classList.remove('visible');
+    }
+    
     // Track navigation back to bible page
     navigateToBiblePage();
 }
-// Handle bottom sheet swipe gesture for mobile
-function initializeNotesBottomSheetSwipe() {
-    if (window.innerWidth > 768) return; // Only for mobile
+
+/**
+ * Android-style bottom sheet drag and swipe gestures
+ * Uses pointer events for better support (mouse, touch, pen)
+ * GPU-accelerated with transform: translateY
+ * Snap behavior with spring easing
+ */
+function initializeAndroidBottomSheetGestures() {
+    if (window.innerWidth > 768) return; // Desktop doesn't need drag
     
-    const modal = document.querySelector('.notes-modal-overlay');
-    const sheet = document.querySelector('.notes-modal');
+    const overlay = document.getElementById('notes-modal-overlay');
+    const sheet = document.getElementById('notes-modal');
     const dragHandle = document.getElementById('notes-sheet-drag-handle');
     const contentArea = document.getElementById('notes-modal-content');
     
-    if (!modal || !sheet || !dragHandle || !contentArea) return;
+    if (!overlay || !sheet || !dragHandle || !contentArea) return;
     
+    let isDragging = false;
     let dragStartY = 0;
-    let dragStartHeight = 0;
+    let currentTranslateY = 0;
     let sheetStartY = 0;
+    let contentScrolled = false;
     
-    // Drag handle to expand/collapse height
-    dragHandle.addEventListener('touchstart', (e) => {
-        dragStartY = e.touches[0].clientY;
-        dragStartHeight = sheet.offsetHeight;
-        sheet.style.transition = 'none';
-    }, false);
-
-    dragHandle.addEventListener('touchmove', (e) => {
-        const currentY = e.touches[0].clientY;
-        const diff = dragStartY - currentY;
-        const newHeight = dragStartHeight + diff;
-        const maxHeight = window.innerHeight * 0.95;
-        const minHeight = 250;
-
-        if (newHeight >= minHeight && newHeight <= maxHeight) {
-            sheet.style.maxHeight = newHeight + 'px';
-        }
-    }, false);
-
-    dragHandle.addEventListener('touchend', (e) => {
-        sheet.style.transition = 'max-height 0.3s ease';
-        const currentHeight = sheet.offsetHeight;
-        const maxHeight = window.innerHeight * 0.95;
-        const threshold = maxHeight * 0.4;
-
-        if (currentHeight < threshold) {
-            closeNotesModal();
-        } else {
-            sheet.style.maxHeight = '85vh';
-        }
-    }, false);
-
-    // Swipe down anywhere on the sheet to close
-    sheet.addEventListener('touchstart', (e) => {
-        // Only track if not on drag handle
-        if (!e.target.closest('#notes-sheet-drag-handle')) {
-            sheetStartY = e.touches[0].clientY;
-        }
-    }, false);
-
-    sheet.addEventListener('touchmove', (e) => {
-        if (!e.target.closest('#notes-sheet-drag-handle')) {
-            const currentY = e.touches[0].clientY;
-            const swipeDist = currentY - sheetStartY;
-            
-            // Only prevent default if swiping up AND content is at top
-            if (swipeDist < -20 && contentArea && contentArea.scrollTop === 0) {
-                e.preventDefault();
-            }
-            // Only prevent default if swiping down AND content is at top
-            else if (swipeDist > 20 && contentArea && contentArea.scrollTop === 0) {
-                e.preventDefault();
-            }
-        }
-    }, false);
-
-    sheet.addEventListener('touchend', (e) => {
-        const sheetEndY = e.changedTouches[0].clientY;
-        const diffY = sheetEndY - sheetStartY;
+    // Get sheet initial position
+    const getSheetRect = () => sheet.getBoundingClientRect();
+    
+    /**
+     * Pointer down - start drag
+     * Use pointer events for mouse, touch, and pen support
+     */
+    function onPointerDown(e) {
+        // Only handle primary pointer (left mouse button or first touch)
+        if (e.isPrimary === false) return;
         
-        // Only close if swiped down more than 50px AND content is at top
-        if (diffY > 50 && contentArea && contentArea.scrollTop === 0 && !e.target.closest('#notes-sheet-drag-handle')) {
-            sheet.style.transition = 'max-height 0.3s ease';
-            closeNotesModal();
+        dragStartY = e.clientY;
+        sheetStartY = getSheetRect().top;
+        isDragging = true;
+        contentScrolled = false;
+        
+        // Remove transition for smooth dragging
+        sheet.classList.add('dragging');
+        sheet.style.transition = 'none';
+        
+        // Prevent text selection during drag
+        e.preventDefault();
+    }
+    
+    /**
+     * Pointer move - drag the sheet
+     * Only animate transform property for GPU acceleration
+     */
+    function onPointerMove(e) {
+        if (!isDragging) return;
+        
+        const deltaY = e.clientY - dragStartY;
+        
+        // Check if content is scrolled to top
+        const isContentAtTop = contentArea.scrollTop === 0;
+        
+        // Only allow dragging down if content is at top or dragging down
+        if (isContentAtTop || deltaY > 0) {
+            contentScrolled = false;
+            // Clamp translation to prevent dragging too high
+            const clampedTranslate = Math.max(0, deltaY);
+            currentTranslateY = clampedTranslate;
+            sheet.style.transform = `translateY(${clampedTranslate}px)`;
+            
+            // Reduce backdrop opacity as user drags down
+            const opacity = Math.max(0.1, 0.32 - (clampedTranslate / 500) * 0.22);
+            overlay.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+        } else {
+            contentScrolled = true;
         }
-        // Only close if trying to scroll up AND content is already at top
-        else if (diffY < -20 && contentArea && contentArea.scrollTop === 0 && !e.target.closest('#notes-sheet-drag-handle')) {
-            sheet.style.transition = 'max-height 0.3s ease';
-            closeNotesModal();
+    }
+    
+    /**
+     * Pointer up - snap back or close
+     * Uses Material Design spring easing for buttery animation
+     */
+    function onPointerUp(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        // Calculate close threshold (25% of sheet height or 100px, whichever is larger)
+        const sheetHeight = getSheetRect().height;
+        const closeThreshold = Math.max(100, sheetHeight * 0.25);
+        
+        sheet.classList.remove('dragging');
+        
+        // Decide: snap back or close
+        if (currentTranslateY > closeThreshold) {
+            // Close the sheet
+            sheet.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
+            sheet.style.transform = `translateY(${window.innerHeight}px)`;
+            overlay.style.backgroundColor = `rgba(0, 0, 0, 0)`;
+            overlay.style.transition = 'background-color 0.3s cubic-bezier(0.2, 0, 0, 1)';
+            
+            setTimeout(() => {
+                closeNotesModal();
+            }, 300);
+        } else {
+            // Snap back with spring easing
+            sheet.style.transition = 'transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)';
+            sheet.style.transform = `translateY(0)`;
+            overlay.style.backgroundColor = `rgba(0, 0, 0, 0.32)`;
+            overlay.style.transition = 'background-color 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)';
+            currentTranslateY = 0;
         }
+    }
+    
+    // Attach pointer events to drag handle and sheet
+    dragHandle.addEventListener('pointerdown', onPointerDown, false);
+    document.addEventListener('pointermove', onPointerMove, false);
+    document.addEventListener('pointerup', onPointerUp, false);
+    
+    // Alternative: Also support touch events for better mobile support
+    dragHandle.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        onPointerDown({ 
+            clientY: touch.clientY, 
+            isPrimary: true, 
+            preventDefault: () => e.preventDefault() 
+        });
+    }, false);
+    
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const touch = e.touches[0];
+        onPointerMove({ clientY: touch.clientY });
+    }, false);
+    
+    document.addEventListener('touchend', (e) => {
+        onPointerUp(e);
     }, false);
 }
+
+// Handle bottom sheet swipe gesture for mobile
+function initializeNotesBottomSheetSwipe() {
+    // Now handled by initializeAndroidBottomSheetGestures
+    if (window.innerWidth > 768) return;
+}
+
 async function saveNote() {
     const textarea = document.getElementById('notes-textarea');
     const noteText = textarea.value.trim();

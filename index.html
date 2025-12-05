@@ -304,10 +304,14 @@
         </div>
     </div>
 
-    <!-- Notes Modal -->
-    <div class="notes-modal-overlay" style="display: none;">
-        <div class="notes-modal">
-            <div class="notes-sheet-handle" id="notes-sheet-drag-handle"></div>
+    <!-- Notes Modal with Android-style Bottom Sheet -->
+    <div class="notes-modal-overlay" id="notes-modal-overlay" style="display: none;">
+        <div class="notes-modal" id="notes-modal">
+            <!-- Handle bar for drag gesture (Android-style) -->
+            <div class="notes-sheet-handle" id="notes-sheet-drag-handle">
+                <div class="notes-handle-bar"></div>
+            </div>
+            
             <div class="notes-modal-header">
                 <h3>Add Note</h3>
                 <button class="notes-modal-close-btn" aria-label="Close">
@@ -318,6 +322,7 @@
                     </svg>
                 </button>
             </div>
+            
             <div class="notes-modal-content" id="notes-modal-content">
                 <div class="notes-verse-ref-wrapper">
                     <div class="notes-verse-ref" id="notes-verse-ref"></div>
@@ -328,6 +333,7 @@
                     <button id="save-note-btn" class="notes-btn-save">Save Note</button>
                 </div>
             </div>
+            
             <!-- Loading Overlay -->
             <div class="notes-loading" id="notes-loading">
                 <div class="notes-spinner"></div>
