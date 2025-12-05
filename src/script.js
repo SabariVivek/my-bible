@@ -1415,60 +1415,51 @@ function updateMobileChapterHeader() {
 // Show color picker for bookmark selection
 async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
-    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
-    const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
     const currentColor = verseNotes[noteKey]?.color;
     
-    // Get or create color picker container
-    let colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
-    if (!colorPickerContainer) {
-        colorPickerContainer = document.createElement('div');
-        colorPickerContainer.className = 'bookmark-color-picker-container';
-        colorPickerContainer.style.display = 'flex';
-        colorPickerContainer.style.width = '100%';
-        colorPickerContainer.style.justifyContent = 'center';
-        colorPickerContainer.style.padding = '10px 0';
-        colorPickerContainer.style.marginTop = '10px';
-        colorPickerContainer.style.borderTop = '1px solid #e0e0e0';
-        colorPickerContainer.innerHTML = `
-            <div class="color-picker-scroll">
-                <button class="color-option" data-color="burgundy" style="background: #78aaff !important;" title="Blue"></button>
-                <button class="color-option" data-color="forest" style="background: #e6c45a !important;" title="Gold"></button>
-                <button class="color-option" data-color="navy" style="background: #72e6a4 !important;" title="Mint"></button>
-                <button class="color-option" data-color="amber" style="background: #ff8fc1 !important;" title="Rose"></button>
-                <button class="color-option" data-color="violet" style="background: #ff9a54 !important;" title="Orange"></button>
-                <button class="color-option" data-color="teal" style="background: #b38aff !important;" title="Purple"></button>
-                <button class="color-option" data-color="rust" style="background: #5ed0d9 !important;" title="Teal"></button>
-                <button class="color-option" data-color="olive" style="background: #ff7a7a !important;" title="Red"></button>
-                <button class="color-option" data-color="indigo" style="background: #b4c76f !important;" title="Olive"></button>
-                <button class="color-option" data-color="slate" style="background: #9d9d9d !important;" title="Grey"></button>
-                <button class="color-option" data-color="yellow" style="background: #78aaff !important;" title="Blue"></button>
-                <button class="color-option" data-color="green" style="background: #e6c45a !important;" title="Gold"></button>
-            </div>
-        `;
-        buttonsContainer.appendChild(colorPickerContainer);
-    }
+    // Open bookmark color picker bottom sheet
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
     
-    // Always show the color picker (don't toggle it)
-    colorPickerContainer.style.display = 'flex';
+    if (!overlay || !sheet) return;
     
-    // Remove previous event listeners and add new ones
-    const colorOptions = colorPickerContainer.querySelectorAll('.color-option');
+    // Show the overlay and sheet
+    overlay.classList.add('active');
+    sheet.classList.add('visible');
+    sheet.classList.remove('closing');
+    
+    // Set up color option click handlers
+    const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
+    
+    // Remove and re-add event listeners to prevent duplicates
     colorOptions.forEach(option => {
         const newOption = option.cloneNode(true);
         option.parentNode.replaceChild(newOption, option);
     });
     
-    // Add event listeners to color options
-    colorPickerContainer.querySelectorAll('.color-option').forEach(colorBtn => {
+    // Re-query after replacing nodes
+    const updatedColorOptions = sheet.querySelectorAll('.bookmark-color-option');
+    
+    // Mark currently selected color
+    updatedColorOptions.forEach(option => {
+        if (option.dataset.color === currentColor) {
+            option.classList.add('selected');
+        } else {
+            option.classList.remove('selected');
+        }
+    });
+    
+    // Add click handlers
+    updatedColorOptions.forEach(colorBtn => {
         colorBtn.addEventListener('click', async (e) => {
             e.stopPropagation();
             const selectedColor = colorBtn.dataset.color;
             
-            // Remove checkmark from all color options
-            colorPickerContainer.querySelectorAll('.color-checkmark').forEach(checkmark => {
-                checkmark.remove();
+            // Update selected state
+            updatedColorOptions.forEach(option => {
+                option.classList.remove('selected');
             });
+            colorBtn.classList.add('selected');
             
             // Create or update note entry with selected color
             if (!verseNotes[noteKey]) {
@@ -1501,12 +1492,6 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             const colorHex = colorBtn.style.background;
             bookmarkBtn.style.setProperty('--bookmark-color', colorHex);
             
-            // Add checkmark to selected color
-            const checkmark = document.createElement('div');
-            checkmark.className = 'color-checkmark';
-            checkmark.innerHTML = '✓';
-            colorBtn.appendChild(checkmark);
-            
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
@@ -1514,12 +1499,111 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             } catch (error) {
             }
             
-            // Close the color picker after selection
+            // Close the bottom sheet after selection
             setTimeout(() => {
-                colorPickerContainer.style.display = 'none';
+                closeBookmarkColorPicker();
             }, 300);
         });
     });
+    
+    // Initialize drag-to-close gestures
+    initializeBookmarkColorPickerGestures();
+}
+
+// Close bookmark color picker bottom sheet
+function closeBookmarkColorPicker() {
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
+    
+    if (!sheet || !overlay) return;
+    
+    sheet.classList.add('closing');
+    sheet.classList.remove('visible');
+    
+    setTimeout(() => {
+        overlay.classList.remove('active');
+        sheet.classList.remove('closing');
+    }, 300);
+}
+
+// Initialize drag-to-close for bookmark color picker
+function initializeBookmarkColorPickerGestures() {
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
+    const handle = document.getElementById('bookmark-color-sheet-handle');
+    const content = document.querySelector('.bookmark-color-sheet-content');
+    
+    if (!sheet || !handle || !overlay || !content) {
+        console.warn('Bookmark color picker elements not found');
+        return;
+    }
+    
+    let startY = 0;
+    let currentTranslate = 0;
+    let isDragging = false;
+    
+    // Clean up existing listeners by using a named handler
+    const handlePointerDown = (e) => {
+        isDragging = true;
+        startY = e.clientY;
+        currentTranslate = 0;
+        overlay.classList.add('dragging');
+        sheet.style.transition = 'none';
+    };
+    
+    const handlePointerMove = (e) => {
+        if (!isDragging) return;
+        
+        const deltaY = e.clientY - startY;
+        if (deltaY > 0) {
+            currentTranslate = deltaY;
+            sheet.style.transform = `translateY(${currentTranslate}px)`;
+            
+            // Update overlay opacity proportionally
+            const sheetHeight = sheet.offsetHeight;
+            const opacity = Math.max(0.32 - (deltaY / sheetHeight) * 0.32, 0);
+            overlay.style.background = `rgba(0, 0, 0, ${opacity})`;
+        }
+    };
+    
+    const handlePointerUp = () => {
+        if (!isDragging) return;
+        
+        isDragging = false;
+        overlay.classList.remove('dragging');
+        sheet.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
+        
+        // Check if content is scrollable
+        const isContentScrollable = content.scrollHeight > content.clientHeight;
+        const threshold = isContentScrollable ? 100 : 50;
+        
+        if (currentTranslate > threshold) {
+            // Close the sheet
+            closeBookmarkColorPicker();
+        } else {
+            // Snap back
+            sheet.style.transform = 'translateY(0)';
+            overlay.style.background = 'rgba(0, 0, 0, 0.32)';
+        }
+    };
+    
+    const handleOverlayClick = (e) => {
+        if (e.target === overlay) {
+            closeBookmarkColorPicker();
+        }
+    };
+    
+    // Remove old listeners to prevent duplicates
+    handle.removeEventListener('pointerdown', handlePointerDown);
+    document.removeEventListener('pointermove', handlePointerMove);
+    document.removeEventListener('pointerup', handlePointerUp);
+    overlay.removeEventListener('click', handleOverlayClick);
+    
+    // Add listeners
+    handle.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('pointermove', handlePointerMove);
+    document.addEventListener('pointerup', handlePointerUp);
+    overlay.addEventListener('click', handleOverlayClick);
 }
 
 // Universal copy handler for both single and multi-verse
@@ -2211,54 +2295,40 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
 
 // Show color picker for multiple bookmark selection
 async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
-    const bottomSheet = document.getElementById('verse-actions-bottom-sheet');
-    const buttonsContainer = bottomSheet.querySelector('.verse-actions-buttons');
+    // Open bookmark color picker bottom sheet
+    const overlay = document.getElementById('bookmark-color-picker-overlay');
+    const sheet = document.querySelector('.bookmark-color-picker-sheet');
     
-    // Get or create color picker container
-    let colorPickerContainer = buttonsContainer.querySelector('.bookmark-color-picker-container');
-    if (!colorPickerContainer) {
-        colorPickerContainer = document.createElement('div');
-        colorPickerContainer.className = 'bookmark-color-picker-container';
-        colorPickerContainer.style.display = 'flex';
-        colorPickerContainer.style.width = '100%';
-        colorPickerContainer.style.justifyContent = 'center';
-        colorPickerContainer.style.padding = '10px 0';
-        colorPickerContainer.style.marginTop = '10px';
-        colorPickerContainer.style.borderTop = '1px solid #e0e0e0';
-        colorPickerContainer.innerHTML = `
-            <div class="color-picker-scroll">
-                <button class="color-option" data-color="burgundy" style="background: #78aaff !important;" title="Blue"></button>
-                <button class="color-option" data-color="forest" style="background: #e6c45a !important;" title="Gold"></button>
-                <button class="color-option" data-color="navy" style="background: #72e6a4 !important;" title="Mint"></button>
-                <button class="color-option" data-color="amber" style="background: #ff8fc1 !important;" title="Rose"></button>
-                <button class="color-option" data-color="violet" style="background: #ff9a54 !important;" title="Orange"></button>
-                <button class="color-option" data-color="teal" style="background: #b38aff !important;" title="Purple"></button>
-                <button class="color-option" data-color="rust" style="background: #5ed0d9 !important;" title="Teal"></button>
-                <button class="color-option" data-color="olive" style="background: #ff7a7a !important;" title="Red"></button>
-                <button class="color-option" data-color="indigo" style="background: #b4c76f !important;" title="Olive"></button>
-                <button class="color-option" data-color="slate" style="background: #9d9d9d !important;" title="Grey"></button>
-                <button class="color-option" data-color="yellow" style="background: #78aaff !important;" title="Blue"></button>
-                <button class="color-option" data-color="green" style="background: #e6c45a !important;" title="Gold"></button>
-            </div>
-        `;
-        buttonsContainer.appendChild(colorPickerContainer);
-    }
+    if (!overlay || !sheet) return;
     
-    // Toggle color picker visibility
-    if (colorPickerContainer.style.display === 'none' || colorPickerContainer.style.display === '') {
-        colorPickerContainer.style.display = 'flex';
-    } else {
-        colorPickerContainer.style.display = 'none';
-        return;
-    }
+    // Show the overlay and sheet
+    overlay.classList.add('active');
+    sheet.classList.add('visible');
+    sheet.classList.remove('closing');
     
-    // Handle color selection
-    colorPickerContainer.querySelectorAll('.color-option').forEach(option => {
+    // Set up color option click handlers
+    const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
+    
+    // Remove and re-add event listeners to prevent duplicates
+    colorOptions.forEach(option => {
         const newOption = option.cloneNode(true);
         option.parentNode.replaceChild(newOption, option);
-        
-        newOption.addEventListener('click', async () => {
-            const selectedColor = newOption.dataset.color;
+    });
+    
+    // Re-query after replacing nodes
+    const updatedColorOptions = sheet.querySelectorAll('.bookmark-color-option');
+    
+    // Add click handlers
+    updatedColorOptions.forEach(colorBtn => {
+        colorBtn.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            const selectedColor = colorBtn.dataset.color;
+            
+            // Update selected state
+            updatedColorOptions.forEach(option => {
+                option.classList.remove('selected');
+            });
+            colorBtn.classList.add('selected');
             
             // Update all selected verses with the color
             for (const verseNum of selectedVerses) {
@@ -2304,12 +2374,15 @@ async function showColorPickerForMultiBookmark(selectedVerses, bookmarkBtn) {
             // Update bookmark button appearance
             bookmarkBtn.classList.add('bookmarked');
             
-            // Close color picker after selection
+            // Close the bottom sheet after selection
             setTimeout(() => {
-                colorPickerContainer.style.display = 'none';
+                closeBookmarkColorPicker();
             }, 300);
         });
     });
+    
+    // Initialize drag-to-close gestures
+    initializeBookmarkColorPickerGestures();
 }
 
 // Update single verse bottom sheet in place

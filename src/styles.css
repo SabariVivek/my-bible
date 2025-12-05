@@ -7897,3 +7897,162 @@ body.dark-theme .sermon-modal-cancel:hover {
 body.sermon-modal-open {
     overflow: hidden;
 }
+
+/* Bookmark Color Picker Bottom Sheet */
+.bookmark-color-picker-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
+    display: block;
+}
+
+.bookmark-color-picker-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+.bookmark-color-picker-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e0e0e0;
+    border-radius: 16px 16px 0 0;
+    z-index: 9999;
+    /* GPU acceleration for smooth animations */
+    will-change: transform;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookmark-color-picker-sheet.visible {
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+.bookmark-color-picker-sheet.closing {
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.bookmark-color-picker-overlay.dragging .bookmark-color-picker-sheet {
+    transition: none;
+}
+
+.bookmark-color-sheet-handle {
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+}
+
+.bookmark-color-sheet-handle:active {
+    cursor: grabbing;
+}
+
+.bookmark-color-handle-bar {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: #9d9d9d;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.bookmark-color-sheet-handle:hover .bookmark-color-handle-bar {
+    opacity: 0.7;
+}
+
+.bookmark-color-sheet-handle:active .bookmark-color-handle-bar {
+    opacity: 1;
+}
+
+.bookmark-color-sheet-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.bookmark-color-sheet-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #202124;
+}
+
+.bookmark-color-sheet-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bookmark-color-options-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.bookmark-color-option {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+
+.bookmark-color-option:active {
+    transform: scale(0.95);
+}
+
+.bookmark-color-option.selected {
+    border-color: #202124;
+    box-shadow: 0 0 0 3px rgba(32, 33, 36, 0.2);
+}
+
+/* Dark theme styles */
+body.dark-theme .bookmark-color-picker-sheet {
+    background: #282828;
+}
+
+body.dark-theme .bookmark-color-sheet-header {
+    border-bottom-color: #3c4043;
+}
+
+body.dark-theme .bookmark-color-sheet-header h3 {
+    color: #e8eaed;
+}
+
+body.dark-theme .bookmark-color-handle-bar {
+    background: #6a6a6a;
+}
+
+body.dark-theme .bookmark-color-option.selected {
+    border-color: #e8eaed;
+    box-shadow: 0 0 0 3px rgba(232, 234, 237, 0.2);
+}
+
+@media (max-width: 600px) {
+    .bookmark-color-options-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+    }
+}
