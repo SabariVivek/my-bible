@@ -4994,6 +4994,93 @@ function closeNotesModal() {
     // Track navigation back to bible page
     navigateToBiblePage();
 }
+// Handle bottom sheet swipe gesture for mobile
+function initializeNotesBottomSheetSwipe() {
+    if (window.innerWidth > 768) return; // Only for mobile
+    
+    const modal = document.querySelector('.notes-modal-overlay');
+    const sheet = document.querySelector('.notes-modal');
+    const dragHandle = document.getElementById('notes-sheet-drag-handle');
+    const contentArea = document.getElementById('notes-modal-content');
+    
+    if (!modal || !sheet || !dragHandle || !contentArea) return;
+    
+    let dragStartY = 0;
+    let dragStartHeight = 0;
+    let sheetStartY = 0;
+    
+    // Drag handle to expand/collapse height
+    dragHandle.addEventListener('touchstart', (e) => {
+        dragStartY = e.touches[0].clientY;
+        dragStartHeight = sheet.offsetHeight;
+        sheet.style.transition = 'none';
+    }, false);
+
+    dragHandle.addEventListener('touchmove', (e) => {
+        const currentY = e.touches[0].clientY;
+        const diff = dragStartY - currentY;
+        const newHeight = dragStartHeight + diff;
+        const maxHeight = window.innerHeight * 0.95;
+        const minHeight = 250;
+
+        if (newHeight >= minHeight && newHeight <= maxHeight) {
+            sheet.style.maxHeight = newHeight + 'px';
+        }
+    }, false);
+
+    dragHandle.addEventListener('touchend', (e) => {
+        sheet.style.transition = 'max-height 0.3s ease';
+        const currentHeight = sheet.offsetHeight;
+        const maxHeight = window.innerHeight * 0.95;
+        const threshold = maxHeight * 0.4;
+
+        if (currentHeight < threshold) {
+            closeNotesModal();
+        } else {
+            sheet.style.maxHeight = '85vh';
+        }
+    }, false);
+
+    // Swipe down anywhere on the sheet to close
+    sheet.addEventListener('touchstart', (e) => {
+        // Only track if not on drag handle
+        if (!e.target.closest('#notes-sheet-drag-handle')) {
+            sheetStartY = e.touches[0].clientY;
+        }
+    }, false);
+
+    sheet.addEventListener('touchmove', (e) => {
+        if (!e.target.closest('#notes-sheet-drag-handle')) {
+            const currentY = e.touches[0].clientY;
+            const swipeDist = currentY - sheetStartY;
+            
+            // Only prevent default if swiping up AND content is at top
+            if (swipeDist < -20 && contentArea && contentArea.scrollTop === 0) {
+                e.preventDefault();
+            }
+            // Only prevent default if swiping down AND content is at top
+            else if (swipeDist > 20 && contentArea && contentArea.scrollTop === 0) {
+                e.preventDefault();
+            }
+        }
+    }, false);
+
+    sheet.addEventListener('touchend', (e) => {
+        const sheetEndY = e.changedTouches[0].clientY;
+        const diffY = sheetEndY - sheetStartY;
+        
+        // Only close if swiped down more than 50px AND content is at top
+        if (diffY > 50 && contentArea && contentArea.scrollTop === 0 && !e.target.closest('#notes-sheet-drag-handle')) {
+            sheet.style.transition = 'max-height 0.3s ease';
+            closeNotesModal();
+        }
+        // Only close if trying to scroll up AND content is already at top
+        else if (diffY < -20 && contentArea && contentArea.scrollTop === 0 && !e.target.closest('#notes-sheet-drag-handle')) {
+            sheet.style.transition = 'max-height 0.3s ease';
+            closeNotesModal();
+        }
+    }, false);
+}
 async function saveNote() {
     const textarea = document.getElementById('notes-textarea');
     const noteText = textarea.value.trim();
@@ -5272,6 +5359,10 @@ function initializeNotesModal() {
             deleteNote();
         }
     });
+    
+    // Add swipe-down to close for mobile bottom sheet
+    initializeNotesBottomSheetSwipe();
+    
     // Color selection removed - note colors no longer available
     
     // Color navigation buttons
