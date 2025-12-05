@@ -246,16 +246,17 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.32);
             z-index: 200;
             display: none;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
         }
 
         .prayers-bottom-sheet-overlay.active {
             display: flex;
             opacity: 1;
+            transition: opacity 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
         }
 
         .prayers-bottom-sheet {
@@ -270,10 +271,11 @@
             display: flex;
             flex-direction: column;
             transform: translateY(100%);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
             touch-action: none;
             user-select: none;
+            will-change: transform;
         }
 
         body.dark-theme .prayers-bottom-sheet {
@@ -282,6 +284,7 @@
 
         .prayers-bottom-sheet.active {
             transform: translateY(0);
+            transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
         }
 
         .prayers-sheet-handle {
