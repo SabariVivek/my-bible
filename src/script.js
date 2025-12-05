@@ -1308,17 +1308,8 @@ function displayChapter() {
                         const allHighlighted = contentArea.querySelectorAll('.verse-line.highlighted');
                         // Update the bottom sheet with current selections
                         if (updatedSelectedVerses.length > 1) {
-                            // Multiple verses selected
-                            const copyBtn = existingBottomSheet.querySelector('.copy-multi-verses-action');
-                            if (!copyBtn) {
-                                // It's a single-verse sheet, recreate as multi-verse
-                                existingBottomSheet.classList.remove('visible');
-                                document.body.classList.remove('bottom-sheet-open');
-                                showMultiVerseActionsBottomSheet(updatedSelectedVerses);
-                            } else {
-                                // Already a multi-verse sheet, just update it
-                                updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
-                            }
+                            // Multiple verses selected - update in place
+                            updateMultiVerseActionsBottomSheet(updatedSelectedVerses);
                         } else if (updatedSelectedVerses.length === 1) {
                             // Single verse - update the existing sheet
                             updateSingleVerseActionsBottomSheet(updatedSelectedVerses[0]);
@@ -2335,6 +2326,22 @@ function updateSingleVerseActionsBottomSheet(verseNum) {
     if (headerRef) {
         headerRef.textContent = verseReference;
     }
+    
+    // Enable note button for single verse
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        noteBtn.disabled = false;
+        noteBtn.style.opacity = '1';
+        noteBtn.style.cursor = 'pointer';
+    }
+    
+    // Enable memory button for single verse
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    if (memoryBtn) {
+        memoryBtn.disabled = false;
+        memoryBtn.style.opacity = '1';
+        memoryBtn.style.cursor = 'pointer';
+    }
 }
 
 // Update multi-verse bottom sheet in place
@@ -2350,6 +2357,22 @@ function updateMultiVerseActionsBottomSheet(selectedVerses) {
     const headerRef = bottomSheet.querySelector('.verse-reference');
     if (headerRef) {
         headerRef.textContent = verseReference;
+    }
+    
+    // Disable note button for multi-verse
+    const noteBtn = bottomSheet.querySelector('.add-note-action');
+    if (noteBtn) {
+        noteBtn.disabled = true;
+        noteBtn.style.opacity = '0.5';
+        noteBtn.style.cursor = 'not-allowed';
+    }
+    
+    // Disable memory button for multi-verse
+    const memoryBtn = bottomSheet.querySelector('.add-memory-action');
+    if (memoryBtn) {
+        memoryBtn.disabled = true;
+        memoryBtn.style.opacity = '0.5';
+        memoryBtn.style.cursor = 'not-allowed';
     }
 }
 
