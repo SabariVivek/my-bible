@@ -688,7 +688,7 @@ function initializeMobileDrawer() {
     // Left swipe to open drawer (ultra smooth) - from anywhere on screen
     let touchStartX = 0;
     let touchStartY = 0;
-    const swipeThreshold = 50; // Minimum swipe distance
+    const swipeThreshold = 100; // Minimum swipe distance
     
     document.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
