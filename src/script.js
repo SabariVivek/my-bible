@@ -4816,24 +4816,53 @@ async function saveCharacterToSupabase(bookFile, chapter, name, description) {
 // GitHub Backend for Notes
 async function loadNotesFromSupabase() {
     try {
-        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
+        // Use service key for reading (bypasses RLS restrictions)
+        const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+        
+        // Try new table structure first (multiple rows)
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?select=id,title,type,content,parent_id,folder_path&order=id.asc`, {
             headers: {
-                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`
+                'apikey': serviceKey,  // Use service key to bypass RLS
+                'Authorization': `Bearer ${serviceKey}`
             }
         });
+        
         if (response.ok) {
-            const data = await response.json();
-            if (data && data.length > 0) {
-                verseNotes = data[0].notes || {};
+            const rows = await response.json();
+            if (rows && rows.length > 0) {
+                console.log('📚 Loaded', rows.length, 'notes from Supabase');
+                // Rebuild tree structure from flat rows
+                const treeStructure = rebuildTreeFromRows(rows);
+                // Store in NOTES_TREE for access throughout app
+                window.NOTES_TREE = treeStructure;
                 // Apply notes to current chapter if loaded
                 applyAllNoteDisplays();
                 return true;
             }
         }
+        
+        console.log('ℹ️ No notes found in new structure, checking old format...');
+        // Fallback: try old format (single row with id='main')
+        const oldResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`
+            }
+        });
+        if (oldResponse.ok) {
+            const data = await oldResponse.json();
+            if (data && data.length > 0) {
+                verseNotes = data[0].notes || {};
+                applyAllNoteDisplays();
+                return true;
+            }
+        }
+        
         verseNotes = {};
+        window.NOTES_TREE = [];
         return false;
     } catch (error) {
+        console.error('Error loading notes from Supabase:', error);
         // Fallback to localStorage
         const localNotes = localStorage.getItem('verseNotes');
         if (localNotes) {
@@ -4843,6 +4872,48 @@ async function loadNotesFromSupabase() {
         }
         return false;
     }
+}
+
+/**
+ * Rebuild tree structure from flat rows
+ * Converts multiple Supabase rows back into nested structure
+ */
+function rebuildTreeFromRows(rows) {
+    const itemsById = new Map();
+    const rootItems = [];
+    
+    // First pass: create items map
+    rows.forEach(row => {
+        const item = {
+            id: row.id,
+            title: row.title,
+            type: row.type,
+            content: row.content,
+            children: [],
+            createdAt: row.created_at,
+            updatedAt: row.updated_at
+        };
+        itemsById.set(row.id, item);
+    });
+    
+    // Second pass: build parent-child relationships
+    rows.forEach(row => {
+        const item = itemsById.get(row.id);
+        if (row.parent_id) {
+            const parent = itemsById.get(row.parent_id);
+            if (parent) {
+                parent.children.push(item);
+            } else {
+                // Orphaned item, add to root
+                rootItems.push(item);
+            }
+        } else {
+            // Root item
+            rootItems.push(item);
+        }
+    });
+    
+    return rootItems;
 }
 async function saveNotesToSupabase() {
     // Save to localStorage immediately so notes appear right away

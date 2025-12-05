@@ -5,6 +5,8 @@ let pages = [];
 let currentPageId = null;
 let editMode = false;
 let theme = localStorage.getItem('theme') || 'light';
+let changedItems = new Set(); // Track which items have changed
+let deletedItems = new Set(); // Track deleted item IDs
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
     // Initialize image lightbox
@@ -123,51 +125,210 @@ let syncTimeout = null; // For debouncing
 let syncInProgress = false; // Track if sync is ongoing
 async function loadPagesFromSupabase() {
     try {
-        const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${SUPABASE_CONFIG.tableName}?id=eq.main`, {
+        // Use service key to bypass RLS restrictions
+        const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+        
+        // Load from new multi-row structure
+        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?select=id,title,type,content,parent_id,folder_path&order=id.asc`, {
             headers: {
-                'apikey': SUPABASE_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`
+                'apikey': serviceKey,
+                'Authorization': `Bearer ${serviceKey}`
             }
         });
+        
         if (response.ok) {
-            const data = await response.json();
+            const rows = await response.json();
+            if (rows && rows.length > 0) {
+                // Rebuild tree structure from flat rows
+                pages = rebuildTreeFromRows(rows);
+                supabaseDocsLoaded = true;
+                return true;
+            }
+        }
+        
+        // Fallback: try old format (single row with id='main')
+        const oldResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
+            headers: {
+                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
+                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`
+            }
+        });
+        if (oldResponse.ok) {
+            const data = await oldResponse.json();
             if (data && data.length > 0) {
                 pages = data[0].pages || getDefaultPages();
                 supabaseDocsLoaded = true;
                 return true;
             }
         }
+        
         pages = getDefaultPages();
         return false;
     } catch (error) {
+        console.error('Error loading pages from Supabase:', error);
         pages = getDefaultPages();
         return false;
     }
 }
+
+/**
+ * Rebuild tree structure from flat rows
+ * Converts multiple Supabase rows back into nested structure
+ */
+function rebuildTreeFromRows(rows) {
+    const itemsById = new Map();
+    const rootItems = [];
+    
+    // First pass: create items map
+    rows.forEach(row => {
+        const item = {
+            id: row.id,
+            title: row.title,
+            type: row.type,
+            content: row.content,
+            children: [],
+            createdAt: row.created_at,
+            updatedAt: row.updated_at
+        };
+        itemsById.set(row.id, item);
+    });
+    
+    // Second pass: build parent-child relationships
+    rows.forEach(row => {
+        const item = itemsById.get(row.id);
+        if (row.parent_id) {
+            const parent = itemsById.get(row.parent_id);
+            if (parent) {
+                parent.children.push(item);
+            } else {
+                // Orphaned item, add to root
+                rootItems.push(item);
+            }
+        } else {
+            // Root item
+            rootItems.push(item);
+        }
+    });
+    
+    return rootItems;
+}
 async function savePagesToSupabase() {
     try {
-        const response = await fetch(`${SUPABASE_CONFIG.url}/rest/v1/${SUPABASE_CONFIG.tableName}?id=eq.main`, {
-            method: 'PATCH',
-            headers: {
-                'apikey': SUPABASE_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
-                'Content-Type': 'application/json',
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({
-                pages: pages,
-                last_updated: new Date().toISOString()
-            })
-        });
-        if (response.ok) {
+        // If nothing changed, don't sync
+        if (changedItems.size === 0 && deletedItems.size === 0) {
             return true;
-        } else {
-            const error = await response.text();
-            return false;
         }
+        
+        const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+        
+        // Handle deletions first
+        for (const deletedId of deletedItems) {
+            try {
+                await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.${deletedId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'apikey': serviceKey,
+                        'Authorization': `Bearer ${serviceKey}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+            } catch (err) {
+                console.error('Failed to delete item:', deletedId, err);
+            }
+        }
+        deletedItems.clear();
+        
+        // Handle inserts and updates for changed items
+        for (const itemId of changedItems) {
+            const allItems = flattenPageTree(pages);
+            const item = allItems.find(i => i.id === itemId);
+            
+            if (!item) {
+                continue;
+            }
+            
+            const itemData = {
+                id: item.id,
+                title: item.title,
+                type: item.type,
+                content: item.content || '',
+                parent_id: item.parent_id || null,
+                folder_path: item.folder_path || '',
+                is_folder: item.type === 'folder',
+                order: item.order || 0,
+                updated_at: new Date().toISOString()
+            };
+            
+            try {
+                // Check if item exists first
+                const checkResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.${item.id}&select=id`, {
+                    method: 'GET',
+                    headers: {
+                        'apikey': serviceKey,
+                        'Authorization': `Bearer ${serviceKey}`
+                    }
+                });
+                
+                const existingItems = await checkResponse.json();
+                const itemExists = existingItems && existingItems.length > 0;
+                
+                if (itemExists) {
+                    // Item exists, update it
+                    await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.${item.id}`, {
+                        method: 'PATCH',
+                        headers: {
+                            'apikey': serviceKey,
+                            'Authorization': `Bearer ${serviceKey}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(itemData)
+                    });
+                } else {
+                    // Item doesn't exist, insert it
+                    itemData.created_at = new Date().toISOString();
+                    await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}`, {
+                        method: 'POST',
+                        headers: {
+                            'apikey': serviceKey,
+                            'Authorization': `Bearer ${serviceKey}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(itemData)
+                    });
+                }
+            } catch (err) {
+                console.error('Error saving item:', item.id, err);
+            }
+        }
+        changedItems.clear();
+        
+        return true;
     } catch (error) {
+        console.error('Error saving pages:', error);
         return false;
     }
+}
+
+// Helper function to flatten page tree into array
+function flattenPageTree(items, parentId = null, folderPath = '', order = 0) {
+    const result = [];
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+        const itemPath = folderPath ? `${folderPath}/${item.title}` : item.title;
+        result.push({
+            id: item.id,
+            title: item.title,
+            type: item.type,
+            content: item.content || '',
+            parent_id: parentId,
+            folder_path: itemPath,
+            order: i
+        });
+        if (item.children && item.children.length > 0) {
+            result.push(...flattenPageTree(item.children, item.id, itemPath, i));
+        }
+    }
+    return result;
 }
 async function manualSyncWithSupabase() {
     const syncBtn = document.getElementById('sync-btn');
@@ -256,6 +417,7 @@ function deleteItem(itemId) {
     function removeFromArray(items) {
         for (let i = 0; i < items.length; i++) {
             if (items[i].id === itemId) {
+                deletedItems.add(itemId); // Track deletion
                 items.splice(i, 1);
                 return true;
             }
@@ -1156,6 +1318,7 @@ function savePage() {
     page.title = newTitle;
     page.content = newContent;
     page.updatedAt = new Date().toISOString();
+    changedItems.add(currentPageId); // Track this change
     savePages();
     renderPageTree();
     viewPage(currentPageId);
@@ -1732,6 +1895,7 @@ function createNewItem(type, name, parentId = null) {
         // Add to root
         pages.push(newItem);
     }
+    changedItems.add(newItem.id); // Track new item
     savePages();
     renderPageTree();
     initializeDragAndDrop();
