@@ -4648,13 +4648,18 @@
                 const currentY = e.touches[0].clientY;
                 const swipeDist = currentY - sheetStartY;
                 
-                // Only prevent default if swiping up AND content is at top
-                if (swipeDist < -20 && favoritesContent && favoritesContent.scrollTop === 0) {
-                    e.preventDefault();
-                }
-                // Only prevent default if swiping down AND content is at top
-                else if (swipeDist > 20 && favoritesContent && favoritesContent.scrollTop === 0) {
-                    e.preventDefault();
+                // Check if content is scrollable
+                const isContentScrollable = favoritesContent && favoritesContent.scrollHeight > favoritesContent.clientHeight;
+                const isAtTop = favoritesContent && favoritesContent.scrollTop === 0;
+                
+                // Only prevent default if content is NOT scrollable OR already scrolled to top
+                // AND only if swiping down significantly
+                if (isAtTop && swipeDist > 20) {
+                    // If content is scrollable, let natural scroll happen
+                    // If content is not scrollable, prevent default to allow drag-to-close
+                    if (!isContentScrollable) {
+                        e.preventDefault();
+                    }
                 }
             }, false);
 
@@ -4662,13 +4667,21 @@
                 const sheetEndY = e.changedTouches[0].clientY;
                 const diffY = sheetEndY - sheetStartY;
                 
-                // Only close if swiped down AND content is at top
-                if (diffY > 50 && favoritesContent && favoritesContent.scrollTop === 0) {
-                    closeFavoritesSheet();
-                }
-                // Only close if trying to scroll up AND content is already at top
-                else if (diffY < -20 && favoritesContent && favoritesContent.scrollTop === 0) {
-                    closeFavoritesSheet();
+                // Check if content is scrollable
+                const isContentScrollable = favoritesContent && favoritesContent.scrollHeight > favoritesContent.clientHeight;
+                const isAtTop = favoritesContent && favoritesContent.scrollTop === 0;
+                
+                // Only close if:
+                // 1. Content is not scrollable, OR
+                // 2. Content is scrollable but already at top AND swipe is significant (>100px)
+                if (diffY > 50) {
+                    if (!isContentScrollable) {
+                        // No scrollable content, close on any significant swipe
+                        closeFavoritesSheet();
+                    } else if (isAtTop && diffY > 100) {
+                        // Content is scrollable but at top, require larger swipe (100px) to close
+                        closeFavoritesSheet();
+                    }
                 }
             }, false);
         }
