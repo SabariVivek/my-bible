@@ -452,6 +452,34 @@ body.dark-theme .create-btn-icon:hover {
     padding-bottom: 24px;
 }
 
+/* iPad Specific - Add bottom padding for sidebar */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sidebar-content {
+        padding-bottom: 40px;
+    }
+
+    /* iPad: Use mobile-style collapse with slide out */
+    .sidebar {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 150;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.collapsed {
+        width: 100%;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
 /* Page Tree */
 .page-tree {
     list-style: none;

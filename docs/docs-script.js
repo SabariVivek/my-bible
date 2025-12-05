@@ -613,11 +613,11 @@ function setupRenameModal() {
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
     if (!sidebar) return;
-    const isMobile = window.innerWidth <= 768;
-    if (isMobile) {
-        // Mobile: slide in/out behavior
+    const isMobileOrTablet = window.innerWidth <= 1024;
+    if (isMobileOrTablet) {
+        // Mobile and iPad: slide in/out behavior
         const isOpen = sidebar.classList.toggle('open');
-        // Close sidebar when clicking outside on mobile
+        // Close sidebar when clicking outside on mobile/tablet
         if (isOpen) {
             const closeOnClickOutside = (e) => {
                 if (!sidebar.contains(e.target) && !e.target.closest('.sidebar-toggle')) {
@@ -630,7 +630,7 @@ function toggleSidebar() {
             }, 0);
         }
     } else {
-        // Desktop: collapse/expand behavior
+        // Desktop (> 1024px): collapse/expand behavior
         const isCollapsed = sidebar.classList.toggle('collapsed');
     }
 }
@@ -1826,8 +1826,8 @@ function showToast(message, type = 'success') {
 // Drag and Drop
 // ===================================
 function initializeDragAndDrop() {
-    // Disable drag and drop on mobile
-    if (window.innerWidth <= 768) return;
+    // Disable drag and drop on mobile and iPad
+    if (window.innerWidth <= 1024) return;
     const pageTree = document.getElementById('page-tree');
     if (!pageTree || typeof Sortable === 'undefined') return;
     const sortableOptions = {
