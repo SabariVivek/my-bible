@@ -1512,8 +1512,10 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
-                await saveNotesToSupabase();
+                console.log('💾 Saving bookmark from color picker:', { noteKey, verseNotes: verseNotes[noteKey] });
+                await saveSingleBookmarkToSupabase(noteKey, verseNotes[noteKey]);
             } catch (error) {
+                console.error('❌ Error saving bookmark:', error);
             }
             
             // Close the bottom sheet after selection with smooth animation
@@ -1994,7 +1996,21 @@ function showVerseActionsBottomSheet(verseNum) {
             // Save changes
             localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
             try {
-                await saveNotesToSupabase();
+                // Delete bookmark from Supabase
+                const parts = noteKey.split('_');
+                if (parts.length === 3) {
+                    await fetch(
+                        `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${parts[0]}&chapter=eq.${parts[1]}&verse=eq.${parts[2]}`,
+                        {
+                            method: 'DELETE',
+                            headers: {
+                                'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                                'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    );
+                }
             } catch (error) {
             }
         } else {
@@ -4813,63 +4829,112 @@ async function saveCharacterToSupabase(bookFile, chapter, name, description) {
         throw error;
     }
 }
-// GitHub Backend for Notes
+// Load Notes and Bookmarks from Supabase
 async function loadNotesFromSupabase() {
     try {
-        // Use service key for reading (bypasses RLS restrictions)
-        const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
-        
-        // Try new table structure first (multiple rows)
-        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?select=id,title,type,content,parent_id,folder_path&order=id.asc`, {
-            headers: {
-                'apikey': serviceKey,  // Use service key to bypass RLS
-                'Authorization': `Bearer ${serviceKey}`
-            }
-        });
-        
-        if (response.ok) {
-            const rows = await response.json();
-            if (rows && rows.length > 0) {
-                console.log('📚 Loaded', rows.length, 'notes from Supabase');
-                // Rebuild tree structure from flat rows
-                const treeStructure = rebuildTreeFromRows(rows);
-                // Store in NOTES_TREE for access throughout app
-                window.NOTES_TREE = treeStructure;
-                // Apply notes to current chapter if loaded
-                applyAllNoteDisplays();
-                return true;
-            }
-        }
-        
-        console.log('ℹ️ No notes found in new structure, checking old format...');
-        // Fallback: try old format (single row with id='main')
-        const oldResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
-            headers: {
-                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`
-            }
-        });
-        if (oldResponse.ok) {
-            const data = await oldResponse.json();
-            if (data && data.length > 0) {
-                verseNotes = data[0].notes || {};
-                applyAllNoteDisplays();
-                return true;
-            }
-        }
-        
-        verseNotes = {};
-        window.NOTES_TREE = [];
-        return false;
-    } catch (error) {
-        console.error('Error loading notes from Supabase:', error);
-        // Fallback to localStorage
+        // First, always load from localStorage as fallback
         const localNotes = localStorage.getItem('verseNotes');
         if (localNotes) {
-            verseNotes = JSON.parse(localNotes);
-        } else {
+            try {
+                verseNotes = JSON.parse(localNotes);
+            } catch (e) {
+                verseNotes = {};
+            }
+        }
+        
+        // Load bookmarks from bible_verse_bookmarks table
+        try {
+            const bookmarksResponse = await fetch(`${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?select=*`, {
+                headers: {
+                    'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            if (bookmarksResponse.ok) {
+                const bookmarks = await bookmarksResponse.json();
+                if (bookmarks && bookmarks.length > 0) {
+                    console.log('📌 Loaded', bookmarks.length, 'bookmarks from Supabase');
+                    // Convert bookmarks to verseNotes format
+                    bookmarks.forEach(bookmark => {
+                        const noteKey = `${bookmark.book_file}_${bookmark.chapter}_${bookmark.verse}`;
+                        if (!verseNotes[noteKey]) {
+                            verseNotes[noteKey] = {};
+                        }
+                        // Only update color from bookmarks table
+                        verseNotes[noteKey].color = bookmark.color;
+                        verseNotes[noteKey].chapter = bookmark.chapter;
+                        verseNotes[noteKey].verse = bookmark.verse;
+                    });
+                }
+            }
+        } catch (error) {
+            console.log('ℹ️ Could not load bookmarks from Supabase:', error.message);
+        }
+        
+        // Load notes from bible_verse_notes table
+        try {
+            const notesResponse = await fetch(`${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?select=*`, {
+                headers: {
+                    'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            if (notesResponse.ok) {
+                const notes = await notesResponse.json();
+                if (notes && notes.length > 0) {
+                    console.log('📝 Loaded', notes.length, 'verse notes from Supabase');
+                    // Convert notes to verseNotes format
+                    notes.forEach(note => {
+                        const noteKey = `${note.book_file}_${note.chapter}_${note.verse}`;
+                        if (!verseNotes[noteKey]) {
+                            verseNotes[noteKey] = {};
+                        }
+                        // Only update text from notes table
+                        verseNotes[noteKey].text = note.text;
+                        verseNotes[noteKey].chapter = note.chapter;
+                        verseNotes[noteKey].verse = note.verse;
+                    });
+                }
+            }
+        } catch (error) {
+            console.log('ℹ️ Could not load verse notes from Supabase:', error.message);
+        }
+        
+        // Load documentation/notes structure from bible_notes_pages table (separate feature)
+        try {
+            const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+            
+            const docsResponse = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?select=id,title,type,content,parent_id,folder_path&order=id.asc`, {
+                headers: {
+                    'apikey': serviceKey,
+                    'Authorization': `Bearer ${serviceKey}`
+                }
+            });
+            
+            if (docsResponse.ok) {
+                const rows = await docsResponse.json();
+                if (rows && rows.length > 0) {
+                    console.log('📚 Loaded', rows.length, 'documentation notes from Supabase');
+                    const treeStructure = rebuildTreeFromRows(rows);
+                    window.NOTES_TREE = treeStructure;
+                }
+            }
+        } catch (error) {
+            console.log('ℹ️ Could not load documentation notes:', error.message);
+        }
+        
+        applyAllNoteDisplays();
+        return Object.keys(verseNotes).length > 0;
+    } catch (error) {
+        console.error('Error loading from Supabase:', error);
+        if (Object.keys(verseNotes).length === 0) {
             verseNotes = {};
         }
+        applyAllNoteDisplays();
         return false;
     }
 }
@@ -4915,31 +4980,185 @@ function rebuildTreeFromRows(rows) {
     
     return rootItems;
 }
+// Save a single bookmark to Supabase (optimized for individual verse updates)
+async function saveSingleBookmarkToSupabase(noteKey, note) {
+    if (!note || !note.color) {
+        console.log('⏭️ Skipping save - no note or color:', { note });
+        return true;
+    }
+    
+    try {
+        // noteKey format: "bookFile_chapter_verse" where bookFile might contain underscores
+        // Extract chapter and verse (last two numbers)
+        const lastUnderscoreIndex = noteKey.lastIndexOf('_');
+        const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
+        
+        const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
+        const chapter = noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex);
+        const verse = noteKey.substring(lastUnderscoreIndex + 1);
+        
+        if (!bookFile || !chapter || !verse) {
+            console.error('❌ Invalid noteKey format:', noteKey);
+            return false;
+        }
+        
+        const bookmark = {
+            color: note.color,
+            timestamp: note.timestamp || new Date().toISOString()
+        };
+        
+        console.log('📤 Attempting to save bookmark:', { noteKey, bookFile, chapter, verse, bookmark });
+        
+        // Try to update existing bookmark first (PATCH)
+        const updateResponse = await fetch(
+            `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${parseInt(chapter)}&verse=eq.${parseInt(verse)}`,
+            {
+                method: 'PATCH',
+                headers: {
+                    'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json',
+                    'Prefer': 'return=minimal'
+                },
+                body: JSON.stringify(bookmark)
+            }
+        );
+        
+        console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
+        
+        // 204 means success but may not have matched any rows, so always try POST
+        if (updateResponse.status === 204) {
+            // 204 = No Content (could mean no rows matched), try POST
+            console.log('⚠️ PATCH returned 204, attempting POST...');
+        } else if (updateResponse.ok) {
+            // Other success status, assume it worked
+            console.log('✅ Bookmark updated:', `${bookFile} ${chapter}:${verse}`);
+            return true;
+        } else {
+            console.log('⚠️ PATCH failed, attempting POST...');
+        }
+        
+        // Always try POST (either PATCH failed or returned 204)
+        if (updateResponse.status === 204 || !updateResponse.ok) {
+            // If update fails (row doesn't exist), insert new bookmark
+            const insertResponse = await fetch(
+                `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                        'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        ...bookmark,
+                        book_file: bookFile,
+                        chapter: parseInt(chapter),
+                        verse: parseInt(verse)
+                    })
+                }
+            );
+            
+            console.log('POST Response:', { status: insertResponse.status, ok: insertResponse.ok });
+            
+            if (!insertResponse.ok) {
+                const error = await insertResponse.text();
+                console.error('❌ Failed to save bookmark:', error, insertResponse.status);
+                return false;
+            }
+            
+            console.log('✅ Bookmark created:', `${bookFile} ${chapter}:${verse}`);
+            return true;
+        }
+    } catch (error) {
+        console.error('❌ Error syncing bookmark to Supabase:', error);
+        return true; // Return true since it's saved in localStorage
+    }
+}
 async function saveNotesToSupabase() {
     // Save to localStorage immediately so notes appear right away
     localStorage.setItem('verseNotes', JSON.stringify(verseNotes));
+    
+    // Save bookmarks to Supabase table (one row per verse)
     try {
-        const response = await fetch(`${SUPABASE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_NOTES_CONFIG.tableName}?id=eq.main`, {
-            method: 'PATCH',
-            headers: {
-                'apikey': SUPABASE_NOTES_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_NOTES_CONFIG.anonKey}`,
-                'Content-Type': 'application/json',
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({
-                notes: verseNotes,
-                last_updated: new Date().toISOString()
-            })
+        // Get all bookmarks from verseNotes
+        const bookmarks = [];
+        Object.keys(verseNotes).forEach(noteKey => {
+            const note = verseNotes[noteKey];
+            if (note && note.color) {
+                // noteKey format: "bookFile_chapter_verse"
+                const parts = noteKey.split('_');
+                if (parts.length === 3) {
+                    bookmarks.push({
+                        book_file: parts[0],
+                        book: note.book || '',
+                        chapter: parseInt(parts[1]),
+                        verse: parseInt(parts[2]),
+                        color: note.color,
+                        text: note.text || null,
+                        timestamp: note.timestamp || new Date().toISOString()
+                    });
+                }
+            }
         });
-        if (response.ok) {
+        
+        // If there are bookmarks to save
+        if (bookmarks.length > 0) {
+            // First, delete existing bookmarks to avoid conflicts
+            // Then insert the new ones
+            for (const bookmark of bookmarks) {
+                try {
+                    // Delete existing bookmark if it exists
+                    await fetch(
+                        `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}?book_file=eq.${bookmark.book_file}&chapter=eq.${bookmark.chapter}&verse=eq.${bookmark.verse}`,
+                        {
+                            method: 'DELETE',
+                            headers: {
+                                'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                                'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    );
+                } catch (e) {
+                    // Ignore delete errors
+                }
+                
+                // Insert the bookmark
+                try {
+                    const response = await fetch(
+                        `${SUPABASE_BOOKMARKS_CONFIG.url}/rest/v1/${SUPABASE_BOOKMARKS_CONFIG.tableName}`,
+                        {
+                            method: 'POST',
+                            headers: {
+                                'apikey': SUPABASE_BOOKMARKS_CONFIG.anonKey,
+                                'Authorization': `Bearer ${SUPABASE_BOOKMARKS_CONFIG.anonKey}`,
+                                'Content-Type': 'application/json',
+                                'Prefer': 'return=minimal'
+                            },
+                            body: JSON.stringify(bookmark)
+                        }
+                    );
+                    
+                    if (!response.ok) {
+                        const error = await response.text();
+                        console.error('Failed to save bookmark:', error);
+                    }
+                } catch (e) {
+                    console.error('Error inserting bookmark:', e);
+                }
+            }
+            
+            console.log('✅ Bookmarks synced to Supabase:', bookmarks.length);
             return true;
-        } else {
-            const error = await response.text();
-            return false;
         }
+        
+        return true;
     } catch (error) {
-        return false;
+        console.error('Error syncing bookmarks to Supabase:', error);
+        // Fail silently - bookmarks are still saved in localStorage
+        return true;
     }
 }
 // Memory Verses - Load from Supabase
@@ -5165,10 +5384,10 @@ function openNotesModal(verseNum = null) {
     verseRef.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     
     // Load existing note if available
-    if (existingNote && existingNote.text) {
-        textarea.value = existingNote.text;
+    if (existingNote) {
+        textarea.value = existingNote.text || '';
         currentNoteColor = existingNote.color || null;
-        deleteBtn.style.display = 'block';
+        deleteBtn.style.display = existingNote.text ? 'block' : 'none';
     } else {
         textarea.value = '';
         currentNoteColor = null;
@@ -5399,21 +5618,106 @@ async function saveNote() {
     if (loadingEl) loadingEl.classList.add('active');
     try {
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
-        // Allow saving if there's text OR a color is selected
-        if (noteText || currentNoteColor) {
-            verseNotes[noteKey] = {
-                text: noteText,
-                color: currentNoteColor,
-                book: bibleBooks[currentBook].name,
-                chapter: currentChapter,
-                verse: currentNoteVerse,
-                timestamp: new Date().toISOString()
-            };
+        const lastUnderscoreIndex = noteKey.lastIndexOf('_');
+        const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
+        
+        const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
+        const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
+        const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
+        
+        console.log('💾 Saving note:', { noteKey, bookFile, chapter, verse, noteText });
+        
+        if (noteText) {
+            // Create or update note entry
+            if (!verseNotes[noteKey]) {
+                verseNotes[noteKey] = {};
+            }
+            verseNotes[noteKey].text = noteText;
+            verseNotes[noteKey].chapter = chapter;
+            verseNotes[noteKey].verse = verse;
+            
+            // Try to update existing note first (PATCH)
+            const updateResponse = await fetch(
+                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${chapter}&verse=eq.${verse}`,
+                {
+                    method: 'PATCH',
+                    headers: {
+                        'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
+                        'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify({
+                        text: noteText,
+                        updated_at: new Date().toISOString()
+                    })
+                }
+            );
+            
+            console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
+            
+            // 204 means success but may not have matched any rows, so always try POST
+            // Only skip POST if we got a different success code
+            if (updateResponse.status === 204) {
+                // 204 = No Content (could mean no rows matched), try POST
+                console.log('⚠️ PATCH returned 204, attempting POST...');
+            } else if (updateResponse.ok) {
+                // Other success status, assume it worked
+                console.log('✅ Note updated:', `${bookFile} ${chapter}:${verse}`);
+            } else {
+                console.log('⚠️ PATCH failed, attempting POST...');
+            }
+            
+            // Always try POST (either PATCH failed or returned 204)
+            if (updateResponse.status === 204 || !updateResponse.ok) {
+                const insertResponse = await fetch(
+                    `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
+                            'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
+                            'Content-Type': 'application/json',
+                            'Prefer': 'return=minimal'
+                        },
+                        body: JSON.stringify({
+                            book_file: bookFile,
+                            chapter: chapter,
+                            verse: verse,
+                            text: noteText,
+                            timestamp: new Date().toISOString()
+                        })
+                    }
+                );
+                
+                console.log('POST Response:', { status: insertResponse.status, ok: insertResponse.ok });
+                
+                if (insertResponse.ok) {
+                    console.log('✅ Note created:', `${bookFile} ${chapter}:${verse}`);
+                } else {
+                    const error = await insertResponse.text();
+                    console.error('❌ Failed to save note:', error, insertResponse.status);
+                }
+            }
         } else {
+            // Delete note if text is empty
+            console.log('🗑️ Deleting note (empty text)');
             delete verseNotes[noteKey];
+            
+            const deleteResponse = await fetch(
+                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${chapter}&verse=eq.${verse}`,
+                {
+                    method: 'DELETE',
+                    headers: {
+                        'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
+                        'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
+                        'Content-Type': 'application/json'
+                    }
+                }
+            );
+            console.log('✅ Note deleted:', `${bookFile} ${chapter}:${verse}`);
         }
-        // Save to Supabase (will also save locally as fallback)
-        await saveNotesToSupabase();
+        
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
     } finally {
@@ -5429,8 +5733,27 @@ async function deleteNote() {
     try {
         const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentNoteVerse}`;
         delete verseNotes[noteKey];
-        // Save to Supabase (will also save locally as fallback)
-        await saveNotesToSupabase();
+        // Delete from Supabase notes table (not bookmarks)
+        const lastUnderscoreIndex = noteKey.lastIndexOf('_');
+        const secondLastUnderscoreIndex = noteKey.lastIndexOf('_', lastUnderscoreIndex - 1);
+        
+        const bookFile = noteKey.substring(0, secondLastUnderscoreIndex);
+        const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
+        const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
+        
+        if (bookFile && chapter && verse) {
+            await fetch(
+                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${chapter}&verse=eq.${verse}`,
+                {
+                    method: 'DELETE',
+                    headers: {
+                        'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
+                        'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
+                        'Content-Type': 'application/json'
+                    }
+                }
+            );
+        }
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
     } finally {
