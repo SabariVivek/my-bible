@@ -466,6 +466,7 @@ function setupEventListeners() {
     setupDeleteModal();
     setupRenameModal();
     setupModalCloseListeners();
+    setupMoveDialogListeners();
     setupContextMenu();
 }
 function setupContextMenu() {
@@ -480,6 +481,8 @@ function setupContextMenu() {
         menu.style.display = 'none';
         if (action === 'rename') {
             showRenameModal(itemId, itemTitle);
+        } else if (action === 'move') {
+            showMoveDialog(itemId, itemTitle);
         } else if (action === 'delete') {
             showDeleteModal(itemId, itemTitle);
         }
@@ -497,6 +500,54 @@ function setupModalCloseListeners() {
         });
     });
 }
+function setupMoveDialogListeners() {
+    // Desktop modal
+    const moveModalOverlay = document.getElementById('move-modal-overlay');
+    if (moveModalOverlay) {
+        // Close button in header
+        const closeBtn = moveModalOverlay.querySelector('.close-move-modal');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                moveModalOverlay.style.display = 'none';
+            });
+        }
+        
+        // Cancel button in footer
+        const cancelBtn = moveModalOverlay.querySelector('#cancel-move-btn');
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                moveModalOverlay.style.display = 'none';
+            });
+        }
+        
+        // Close on backdrop click
+        moveModalOverlay.addEventListener('click', (e) => {
+            if (e.target === moveModalOverlay) {
+                moveModalOverlay.style.display = 'none';
+            }
+        });
+    }
+    
+    // Mobile/iPad bottom sheet
+    const moveSheetOverlay = document.getElementById('move-sheet-overlay');
+    if (moveSheetOverlay) {
+        // Close button in header
+        const closeBtn = moveSheetOverlay.querySelector('.close-move-sheet');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                moveSheetOverlay.style.display = 'none';
+            });
+        }
+        
+        // Close on backdrop click
+        moveSheetOverlay.addEventListener('click', (e) => {
+            if (e.target === moveSheetOverlay) {
+                moveSheetOverlay.style.display = 'none';
+            }
+        });
+    }
+}
+
 function setupCreateModal() {
     const createModal = document.getElementById('create-modal');
     if (!createModal) return;
@@ -605,6 +656,53 @@ function setupRenameModal() {
                 confirmRename();
             }
         });
+    }
+}
+function setupMoveDialogListeners() {
+    // Move Modal (Desktop)
+    const moveModalOverlay = document.getElementById('move-modal-overlay');
+    if (moveModalOverlay) {
+        // Close on overlay click
+        moveModalOverlay.addEventListener('click', (e) => {
+            if (e.target === moveModalOverlay) {
+                moveModalOverlay.style.display = 'none';
+            }
+        });
+        
+        // Close button
+        const closeBtn = moveModalOverlay.querySelector('.close-move-modal');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                moveModalOverlay.style.display = 'none';
+            });
+        }
+        
+        // Cancel button
+        const cancelBtn = moveModalOverlay.querySelector('#cancel-move-btn');
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', () => {
+                moveModalOverlay.style.display = 'none';
+            });
+        }
+    }
+    
+    // Move Bottom Sheet (Mobile/iPad)
+    const moveSheetOverlay = document.getElementById('move-sheet-overlay');
+    if (moveSheetOverlay) {
+        // Close on overlay click
+        moveSheetOverlay.addEventListener('click', (e) => {
+            if (e.target === moveSheetOverlay) {
+                moveSheetOverlay.style.display = 'none';
+            }
+        });
+        
+        // Close button
+        const closeBtn = moveSheetOverlay.querySelector('.close-move-sheet');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                moveSheetOverlay.style.display = 'none';
+            });
+        }
     }
 }
 // ===================================
@@ -1698,6 +1796,189 @@ function showDeleteModal(itemId, itemTitle) {
         message.textContent = `Are you sure you want to delete "${itemTitle}"?`;
     }
     modal.style.display = 'flex';
+}
+function showMoveDialog(itemId, itemTitle) {
+    // Determine which UI to show based on window width
+    const isDesktop = window.innerWidth > 1024;
+    
+    if (isDesktop) {
+        // Show modal on desktop
+        const modalOverlay = document.getElementById('move-modal-overlay');
+        if (!modalOverlay) return;
+        
+        // Set item name in header
+        const itemNameSpan = modalOverlay.querySelector('#move-item-name');
+        if (itemNameSpan) itemNameSpan.textContent = itemTitle;
+        
+        // Store item ID
+        modalOverlay.dataset.itemId = itemId;
+        
+        // Populate folder list
+        populateFolderListForMove(itemId, 'move-folder-list');
+        
+        // Show modal
+        modalOverlay.style.display = 'flex';
+    } else {
+        // Show bottom sheet on mobile/iPad
+        const sheetOverlay = document.getElementById('move-sheet-overlay');
+        if (!sheetOverlay) return;
+        
+        // Set item name in header
+        const itemNameSpan = sheetOverlay.querySelector('#move-item-name-sheet');
+        if (itemNameSpan) itemNameSpan.textContent = itemTitle;
+        
+        // Store item ID
+        sheetOverlay.dataset.itemId = itemId;
+        
+        // Populate folder list
+        populateFolderListForMove(itemId, 'move-folder-list-sheet');
+        
+        // Show sheet
+        sheetOverlay.style.display = 'flex';
+    }
+}
+function populateFolderListForMove(itemId, listContainerId) {
+    const listContainer = document.getElementById(listContainerId);
+    if (!listContainer) return;
+    
+    // Clear existing items
+    listContainer.innerHTML = '';
+    
+    // Get the item being moved
+    const movingItem = findPageById(itemId);
+    if (!movingItem) return;
+    
+    // Create array of folders (only folders, not pages)
+    const folders = [];
+    
+    function collectFolders(items, depth = 0) {
+        items.forEach(item => {
+            // Don't show the item being moved or its children as targets
+            if (item.id !== itemId && !isChildOf(itemId, item.id)) {
+                // Only add if it's a folder
+                if (item.type === 'folder') {
+                    folders.push({ ...item, depth });
+                    // Add subfolders if any
+                    if (item.children && item.children.length > 0) {
+                        collectFolders(item.children, depth + 1);
+                    }
+                }
+            }
+        });
+    }
+    
+    collectFolders(pages);
+    
+    if (folders.length === 0) {
+        const emptyMsg = document.createElement('div');
+        emptyMsg.style.cssText = 'padding: 20px; text-align: center; color: #5f6368; font-size: 14px;';
+        emptyMsg.textContent = 'No folders available';
+        listContainer.appendChild(emptyMsg);
+        return;
+    }
+    
+    // Render folders with proper indentation and color coding
+    folders.forEach(folder => {
+        const folderItem = document.createElement('button');
+        folderItem.className = `move-folder-item depth-${Math.min(folder.depth, 2)}`;
+        
+        // Add depth class for styling
+        folderItem.dataset.depth = folder.depth;
+        
+        folderItem.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span class="move-folder-item-label">${folder.title}</span>
+        `;
+        
+        folderItem.addEventListener('click', () => {
+            moveItemToFolder(itemId, folder.id);
+        });
+        
+        listContainer.appendChild(folderItem);
+    });
+}
+function isChildOf(parentId, childId) {
+    const parent = findPageById(parentId);
+    if (!parent || !parent.children) return false;
+    
+    function checkChildren(items) {
+        return items.some(item => {
+            if (item.id === childId) return true;
+            if (item.children && item.children.length > 0) {
+                return checkChildren(item.children);
+            }
+            return false;
+        });
+    }
+    
+    return checkChildren(parent.children);
+}
+function moveItemToFolder(itemId, targetFolderId) {
+    // Find the item
+    const item = findPageById(itemId);
+    const targetFolder = findPageById(targetFolderId);
+    
+    if (!item || !targetFolder) {
+        showToast('Error: Item or folder not found', 'error');
+        return;
+    }
+    
+    if (targetFolder.type !== 'folder') {
+        showToast('Error: Target is not a folder', 'error');
+        return;
+    }
+    
+    // Remove item from its current location
+    function removeItem(items, id) {
+        const index = items.findIndex(i => i.id === id);
+        if (index !== -1) {
+            return items.splice(index, 1)[0];
+        }
+        for (let item of items) {
+            if (item.children) {
+                const removed = removeItem(item.children, id);
+                if (removed) return removed;
+            }
+        }
+        return null;
+    }
+    
+    const removedItem = removeItem(pages, itemId);
+    if (!removedItem) {
+        showToast('Error: Could not find item to move', 'error');
+        return;
+    }
+    
+    // Add item to target folder
+    if (!targetFolder.children) {
+        targetFolder.children = [];
+    }
+    
+    // Check if already exists in target
+    if (targetFolder.children.some(i => i.id === itemId)) {
+        // Re-add it to pages since we removed it
+        pages.push(removedItem);
+        showToast('Item already in this folder', 'error');
+        return;
+    }
+    
+    targetFolder.children.push(removedItem);
+    removedItem.updatedAt = new Date().toISOString();
+    
+    // Save and refresh
+    savePages();
+    renderPageTree();
+    initializeDragAndDrop();
+    
+    // Close move dialog
+    const modalOverlay = document.getElementById('move-modal-overlay');
+    const sheetOverlay = document.getElementById('move-sheet-overlay');
+    if (modalOverlay) modalOverlay.style.display = 'none';
+    if (sheetOverlay) sheetOverlay.style.display = 'none';
+    
+    showToast(`Moved to ${targetFolder.title}`);
 }
 function closeModal(modal) {
     if (modal) {
