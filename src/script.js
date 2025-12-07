@@ -601,6 +601,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Initialize voice command functionality
     initializeVoiceCommand();
+    
+    // Initialize pinned verses button
+    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
+    if (pinnedVersesBtn) {
+        pinnedVersesBtn.addEventListener('click', () => {
+            showPinnedVersesBottomSheet();
+        });
+    }
+    
     // Always load Bible directly on all devices (mobile, tablet, desktop)
     loadBook(currentBook, currentChapter);
     // Start background preload after initial load (non-blocking, silent)
@@ -1406,6 +1415,10 @@ function displayChapter() {
     }
     // Note: Scroll to top is now handled by updateUI() and navigation buttons only
     // Don't scroll here to prevent jumping when interacting with verses or adding notes
+    
+    // Initialize and render pinned verses bar
+    initializePinnedVerses();
+    renderPinnedVersesBar();
 }
 // Update mobile chapter header
 function updateMobileChapterHeader() {
@@ -1813,6 +1826,12 @@ function showVerseActionsBottomSheet(verseNum) {
                     </svg>
                     <span>Share</span>
                 </button>
+                ${isAdmin() ? `
+                <button class="verse-bottom-action pin-verse-action" data-verse="${verseNum}">
+                    <span class="pin-icon-emoji">🖈</span>
+                    <span>Pin</span>
+                </button>
+                ` : ''}
             </div>
         </div>
     `;
@@ -2083,6 +2102,31 @@ function showVerseActionsBottomSheet(verseNum) {
             });
         }
     });
+    
+    // Pin verse button
+    const pinBtn = bottomSheet.querySelector('.pin-verse-action');
+    if (pinBtn) {
+        // Check if verse is already pinned and update button appearance
+        const pinState = isPinned(verseNum);
+        updatePinButtonAppearance(pinBtn, pinState);
+        
+        pinBtn.addEventListener('click', () => {
+            const isCurrentlyPinned = isPinned(verseNum);
+            if (isCurrentlyPinned) {
+                // Unpin verse
+                unpinVerse(verseNum);
+                updatePinButtonAppearance(pinBtn, false);
+                showToast(`Verse unpinned`, 'info');
+            } else {
+                // Pin verse
+                pinVerse(verseNum);
+                updatePinButtonAppearance(pinBtn, true);
+                showToast(`Verse pinned to top`, 'success');
+            }
+            // Refresh pinned bar
+            renderPinnedVersesBar();
+        });
+    }
 }
 
 // Show bottom sheet for multiple selected verses
@@ -2166,6 +2210,13 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                     </svg>
                     <span>Share</span>
+                </button>
+                <button class="verse-bottom-action pin-multi-verses-action">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L8 6L8 14C8 18.4 10 20 12 21C14 20 16 18.4 16 14L16 6L12 2Z"></path>
+                        <line x1="12" y1="6" x2="12" y2="13"></line>
+                    </svg>
+                    <span>Pin</span>
                 </button>
             </div>
         </div>
@@ -2333,6 +2384,24 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     showToast('Share not available on this device', 'error');
                 });
             }
+        });
+    }
+    
+    // Pin button for multiple verses
+    const pinBtn = bottomSheet.querySelector('.pin-multi-verses-action');
+    if (pinBtn) {
+        pinBtn.addEventListener('click', () => {
+            // Pin all selected verses
+            selectedVerses.forEach(verseNum => {
+                if (!pinnedVerses.includes(verseNum)) {
+                    pinnedVerses.push(verseNum);
+                }
+            });
+            savePinnedVersesToStorage();
+            renderPinnedVersesBar();
+            
+            const count = selectedVerses.length;
+            showToast(`${count} verse${count > 1 ? 's' : ''} pinned to top`, 'success');
         });
     }
 }
@@ -5870,6 +5939,7 @@ function updateAdminUI() {
     const adminToggle = document.getElementById('admin-toggle');
     const adminCheck = adminToggle?.querySelector('.admin-check');
     const voiceBtn = document.getElementById('voice-btn');
+    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
     const rightMenuBtn = document.getElementById('right-menu-btn');
     const rightNotesOption = document.getElementById('right-notes-option');
     const rightKingsOption = document.getElementById('right-kings-option');
@@ -5886,6 +5956,10 @@ function updateAdminUI() {
     // Update voice button visibility
     if (voiceBtn) {
         voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
+    }
+    // Show/hide pinned verses button (admin only)
+    if (pinnedVersesBtn) {
+        pinnedVersesBtn.style.display = isAdminMode ? 'flex' : 'none';
     }
     // Right menu button should always be visible (removed admin check)
     
@@ -8166,3 +8240,270 @@ async function updateSermon(sermonId, updates) {
         throw error;
     }
 }
+
+// ===== PIN VERSES FUNCTIONALITY =====
+
+// Storage for pinned verses
+let pinnedVerses = [];
+
+// Initialize pinned verses from localStorage on page load
+function initializePinnedVerses() {
+    try {
+        const stored = localStorage.getItem('pinnedVerses');
+        pinnedVerses = stored ? JSON.parse(stored) : [];
+    } catch (e) {
+        pinnedVerses = [];
+    }
+}
+
+// Check if a verse is pinned
+function isPinned(verseNum) {
+    return pinnedVerses.includes(verseNum);
+}
+
+// Pin a verse
+function pinVerse(verseNum) {
+    if (!pinnedVerses.includes(verseNum)) {
+        pinnedVerses.push(verseNum);
+        savePinnedVersesToStorage();
+    }
+}
+
+// Unpin a verse
+function unpinVerse(verseNum) {
+    pinnedVerses = pinnedVerses.filter(v => v !== verseNum);
+    savePinnedVersesToStorage();
+}
+
+// Save pinned verses to localStorage
+function savePinnedVersesToStorage() {
+    localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
+}
+
+// Clear all pinned verses
+function clearAllPinnedVerses() {
+    pinnedVerses = [];
+    savePinnedVersesToStorage();
+}
+
+// Update pin button appearance (filled or outline)
+function updatePinButtonAppearance(btn, isPinned) {
+    const emoji = btn.querySelector('.pin-icon-emoji');
+    if (emoji) {
+        if (isPinned) {
+            btn.classList.add('pinned-active');
+            emoji.textContent = '📌';
+        } else {
+            btn.classList.remove('pinned-active');
+            emoji.textContent = '🖈';
+        }
+    }
+}
+
+// Render the pinned verses bar at the very top (under main header)
+function renderPinnedVersesBar() {
+    // Update the pinned verses badge
+    const badge = document.getElementById('pinned-verses-badge');
+    if (badge) {
+        if (pinnedVerses.length > 0) {
+            badge.textContent = pinnedVerses.length;
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
+    }
+}
+
+// Scroll to a specific verse and highlight it with gradient color
+function scrollToVerseWithHighlight(verseNum) {
+    const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (verseElement) {
+        // Get the top bar height and add padding
+        const topBar = document.querySelector('.top-bar');
+        const offset = topBar ? topBar.offsetHeight + 20 : 100; // 20px extra padding
+        
+        // Scroll with offset to account for top nav
+        const elementPosition = verseElement.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+        });
+        
+        // Apply the same highlight style as left-pane selection (permanent)
+        verseElement.classList.add('left-pane-selected');
+    }
+}
+
+// Scroll to a specific verse in the scripture text
+function scrollToVerse(verseNum) {
+    const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (verseElement) {
+        verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Highlight the verse briefly
+        verseElement.classList.add('verse-scroll-highlight');
+        setTimeout(() => {
+            verseElement.classList.remove('verse-scroll-highlight');
+        }, 1500);
+    }
+}
+
+// Show pinned verses as bottom sheet
+function showPinnedVersesBottomSheet() {
+    // Create or get the bottom sheet modal
+    let bottomSheet = document.getElementById('pinned-verses-modal-overlay');
+    if (!bottomSheet) {
+        bottomSheet = document.createElement('div');
+        bottomSheet.id = 'pinned-verses-modal-overlay';
+        bottomSheet.className = 'pinned-verses-modal-overlay';
+        document.body.appendChild(bottomSheet);
+    }
+    
+    if (pinnedVerses.length === 0) {
+        showToast('No pinned verses yet', 'info');
+        return;
+    }
+    
+    // Build the content
+    let versesHtml = '';
+    pinnedVerses.forEach(verseNum => {
+        const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        if (verseElement) {
+            const verseText = verseElement.textContent.trim().replace(/^\d+/, '').trim();
+            const book = bibleBooks[currentBook];
+            const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+            
+            versesHtml += `
+                <div class="pinned-verse-list-item" data-verse="${verseNum}">
+                    <div class="pinned-verse-list-header">
+                        <div class="pinned-verse-list-ref">${bookName} ${currentChapter}:${verseNum}</div>
+                        <button class="pinned-verse-list-unpin" title="Unpin verse" data-verse="${verseNum}">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="pinned-verse-list-text">${verseText}</div>
+                </div>
+            `;
+        }
+    });
+    
+    // Set up the bottom sheet content
+    bottomSheet.innerHTML = `
+        <div class="pinned-verses-backdrop"></div>
+        <div class="pinned-verses-modal">
+            <div class="pinned-verses-sheet-handle">
+                <div class="pinned-verses-handle-bar"></div>
+            </div>
+            <div class="pinned-verses-sheet-header">
+                <h3><span style="margin-right: 8px;">📌</span>Pinned Verses</h3>
+                <button class="pinned-verses-close-btn" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="pinned-verses-list">
+                ${versesHtml}
+            </div>
+        </div>
+    `;
+    
+    // Show the bottom sheet
+    bottomSheet.classList.add('visible');
+    document.body.classList.add('pinned-verses-sheet-open');
+    
+    // Add event listeners
+    const closeBtn = bottomSheet.querySelector('.pinned-verses-close-btn');
+    const backdrop = bottomSheet.querySelector('.pinned-verses-backdrop');
+    const modal = bottomSheet.querySelector('.pinned-verses-modal');
+    const handle = bottomSheet.querySelector('.pinned-verses-sheet-handle');
+    
+    const closePinnedSheet = () => {
+        bottomSheet.classList.remove('visible');
+        document.body.classList.remove('pinned-verses-sheet-open');
+    };
+    
+    closeBtn.addEventListener('click', closePinnedSheet);
+    backdrop.addEventListener('click', closePinnedSheet);
+    
+    // Add swipe-down to close functionality
+    let touchStartY = 0;
+    let isDragging = false;
+    
+    modal.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+        isDragging = true;
+        modal.style.transition = 'none';
+    }, { passive: true });
+    
+    modal.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const currentY = e.touches[0].clientY;
+        const diff = currentY - touchStartY;
+        
+        // Only allow dragging downward
+        if (diff > 0) {
+            modal.style.transform = `translateY(${diff}px)`;
+        }
+    }, { passive: true });
+    
+    modal.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const currentY = e.changedTouches[0].clientY;
+        const diff = currentY - touchStartY;
+        const threshold = 100; // 100px threshold to close
+        
+        // Restore transition for smooth animation
+        modal.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        
+        if (diff > threshold) {
+            // Swipe down far enough, close the sheet
+            closePinnedSheet();
+        } else {
+            // Snap back to original position
+            modal.style.transform = 'translateY(0)';
+        }
+    }, { passive: true });
+    
+    // Add event listeners to unpin buttons
+    const unpinBtns = bottomSheet.querySelectorAll('.pinned-verse-list-unpin');
+    unpinBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const verseNum = parseInt(btn.dataset.verse);
+            const verseItem = btn.closest('.pinned-verse-list-item');
+            
+            // Add animation class
+            verseItem.classList.add('pinned-verse-removing');
+            
+            // Wait for animation to complete before unpinning (matches CSS animation duration)
+            setTimeout(() => {
+                unpinVerse(verseNum);
+                showToast('Verse unpinned', 'info');
+                // Remove the card from DOM smoothly
+                verseItem.remove();
+            }, 600);
+        });
+    });
+    
+    // Add event listeners to verse items
+    const verseItems = bottomSheet.querySelectorAll('.pinned-verse-list-item');
+    verseItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (!e.target.closest('.pinned-verse-list-unpin')) {
+                const verseNum = parseInt(item.dataset.verse);
+                // Close sheet immediately
+                closePinnedSheet();
+                // Navigate to and highlight the verse in the main scripture area
+                scrollToVerseWithHighlight(verseNum);
+            }
+        });
+    });
+}
+
+

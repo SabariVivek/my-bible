@@ -39,6 +39,15 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
     }
 }
 
+@keyframes slideDownToBottom {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1979,6 +1988,7 @@ body.dark-theme .jesus-name {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .nav-btn:hover {
@@ -8103,5 +8113,561 @@ body.dark-theme .bookmark-color-option.selected {
     .bookmark-color-options-grid {
         grid-template-columns: repeat(6, 1fr);
         gap: 10px;
+    }
+}
+
+/* ===== PINNED VERSES BAR STYLES ===== */
+
+.pinned-verses-bar {
+    position: relative;
+    z-index: 50;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background: linear-gradient(90deg, #8B6F47 0%, #9A7E60 25%, #b8956f 50%, rgba(184, 149, 111, 0.8) 75%, rgba(184, 149, 111, 0.3) 100%);
+}
+
+body.dark-theme .pinned-verses-bar {
+    background: linear-gradient(90deg, #2a4a3a 0%, #2d5a47 25%, #3a7a5f 50%, rgba(58, 122, 95, 0.8) 75%, rgba(58, 122, 95, 0.2) 100%);
+}
+
+.pinned-verses-container {
+    padding: 0;
+}
+
+.pinned-verses-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 12px 0;
+    padding-left: 12px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pinned-verses-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.pinned-verses-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.pinned-verses-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.pinned-verses-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.pinned-verse-item {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #a89470 0%, #c9a877 50%, rgba(201, 168, 119, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 10px 14px;
+    min-width: 150px;
+    max-width: 190px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pinned-verse-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+body.dark-theme .pinned-verse-item {
+    background: linear-gradient(135deg, #3d6b50 0%, #4a8a68 50%, rgba(74, 138, 104, 0.8) 100%);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .pinned-verse-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.pinned-verse-ref {
+    font-weight: 700;
+    font-size: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .pinned-verse-ref {
+    color: #e8f5e9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pinned-verse-text {
+    font-size: 11px;
+    color: #ffffff;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .pinned-verse-text {
+    color: #f1f8f6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.unpin-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unpin-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+}
+
+body.dark-theme .unpin-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: #e8f5e9;
+}
+
+body.dark-theme .unpin-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.unpin-btn svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 2.5;
+}
+
+/* Verse scroll highlight animation */
+@keyframes verseScrollHighlight {
+    0% {
+        background-color: rgba(212, 165, 116, 0.3);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.verse-scroll-highlight {
+    animation: verseScrollHighlight 1.5s ease-out forwards;
+}
+
+/* Verse pinned highlight animation (2 seconds with gradient color) */
+@keyframes versePinnedHighlight {
+    0% {
+        background: linear-gradient(90deg, #a89470 0%, #c9a877 50%, rgba(201, 168, 119, 0.8) 100%);
+    }
+    50% {
+        background: linear-gradient(90deg, #b8a478 0%, #d4b588 50%, rgba(212, 181, 136, 0.9) 100%);
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+body.dark-theme @keyframes versePinnedHighlightDark {
+    0% {
+        background: linear-gradient(90deg, #3d6b50 0%, #4a8a68 50%, rgba(74, 138, 104, 0.8) 100%);
+    }
+    50% {
+        background: linear-gradient(90deg, #4a7a5d 0%, #5a9a78 50%, rgba(90, 154, 120, 0.9) 100%);
+    }
+    100% {
+        background: transparent;
+    }
+}
+
+.verse-pinned-highlight {
+    animation: versePinnedHighlight 2s ease-out forwards;
+}
+
+body.dark-theme .verse-pinned-highlight {
+    animation: versePinnedHighlightDark 2s ease-out forwards;
+}
+
+/* Pin icon styling */
+.pin-verse-action .pin-icon-emoji {
+    font-size: 1.7em;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Active pin button state - pinned */
+.pin-verse-action.pinned-active .pin-icon-emoji {
+    content: '📌';
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Mobile-specific pinned bar styling */
+@media (max-width: 768px) {
+    .pinned-verses-bar {
+        background: linear-gradient(90deg, #8B6F47 0%, #9A7E60 50%, rgba(154, 126, 96, 0.4) 100%);
+    }
+    
+    body.dark-theme .pinned-verses-bar {
+        background: linear-gradient(90deg, #2a4a3a 0%, #2d5a47 100%);
+    }
+    
+    .pinned-verses-scroll {
+        padding: 10px;
+        gap: 6px;
+    }
+    
+    .pinned-verse-item {
+        min-width: 130px;
+        max-width: 170px;
+        padding: 8px 12px;
+    }
+    
+    .pinned-verse-ref {
+        font-size: 9px;
+    }
+    
+    .pinned-verse-text {
+        font-size: 10px;
+    }
+}
+
+/* ===== PINNED VERSES BOTTOM SHEET STYLES ===== */
+
+body.pinned-verses-sheet-open .main-layout,
+body.pinned-verses-sheet-open .books-sidebar,
+body.pinned-verses-sheet-open .bottom-nav {
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+.pinned-verses-modal-overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.pinned-verses-modal-overlay.visible {
+    pointer-events: auto;
+}
+
+.pinned-verses-backdrop {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pinned-verses-modal-overlay.visible .pinned-verses-backdrop {
+    opacity: 1;
+}
+
+.pinned-verses-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color, #ffffff);
+    border-radius: 16px 16px 0 0;
+    max-height: 65vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(100%);
+    z-index: 1001;
+}
+
+body.dark-theme .pinned-verses-modal {
+    background: #1e1e1e;
+}
+
+.pinned-verses-modal-overlay.visible .pinned-verses-modal {
+    animation: slideUp 0.3s ease forwards;
+}
+
+.pinned-verses-modal-overlay:not(.visible) .pinned-verses-modal {
+    animation: slideDownToBottom 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.pinned-verses-sheet-handle {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 4px 0;
+    background: var(--bg-color, #ffffff);
+    border-radius: 16px 16px 0 0;
+}
+
+body.dark-theme .pinned-verses-sheet-handle {
+    background: #1e1e1e;
+}
+
+.pinned-verses-handle-bar {
+    width: 40px;
+    height: 4px;
+    background: #ccc;
+    border-radius: 2px;
+}
+
+body.dark-theme .pinned-verses-handle-bar {
+    background: #555;
+}
+
+.pinned-verses-sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--bg-color, #ffffff);
+}
+
+body.dark-theme .pinned-verses-sheet-header {
+    background: #1e1e1e;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.pinned-verses-sheet-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color, #000);
+}
+
+body.dark-theme .pinned-verses-sheet-header h3 {
+    color: #ffffff;
+}
+
+.pinned-verses-close-btn {
+    background: rgba(0, 0, 0, 0.05);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color, #000);
+    transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+body.dark-theme .pinned-verses-close-btn {
+    color: #ffffff;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pinned-verses-close-btn:hover {
+    opacity: 0.8;
+    border-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.dark-theme .pinned-verses-close-btn:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.pinned-verses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+    overflow-y: auto;
+    background: var(--bg-color, #ffffff);
+}
+
+body.dark-theme .pinned-verses-list {
+    background: #1e1e1e;
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideUpFromBottom {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+
+.pinned-verse-list-item {
+    padding: 12px;
+    margin: 0 12px 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    /* Smooth butter-like transitions */
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                margin 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pinned-verse-list-item.pinned-verse-removing {
+    animation: slideOutLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transition: none !important;
+}
+
+body.dark-theme .pinned-verse-list-item {
+    background: #313235;
+    border: 1px solid #404447;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                margin 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body.dark-theme .pinned-verse-list-item.pinned-verse-removing {
+    animation: slideOutLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transition: none !important;
+}
+
+.pinned-verse-list-item:active {
+    transform: scale(0.98);
+}
+
+.pinned-verse-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.pinned-verse-list-ref {
+    font-size: 13px;
+    font-weight: 600;
+    color: #d4a04c;
+}
+
+body.dark-theme .pinned-verse-list-ref {
+    color: #d4a04c;
+}
+
+.pinned-verse-list-text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-color, #000);
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+body.dark-theme .pinned-verse-list-text {
+    color: #b8b8b8;
+}
+
+.pinned-verse-list-unpin {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color, #000);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.pinned-verse-list-unpin svg {
+    width: 20px;
+    height: 20px;
+    stroke: #d32f2f;
+    color: #d32f2f;
+}
+
+.pinned-verse-list-unpin:hover {
+    opacity: 1;
+}
+
+.pinned-verses-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #757575;
+    color: #e8eaed;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .pinned-verses-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+        top: -4px;
+        right: -4px;
+    }
+}
+
+/* Pinned verses button animation */
+#pinned-verses-btn {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.pinned-verses-sheet-open #pinned-verses-btn {
+    transform: scale(1.15) rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .pinned-verses-modal {
+        max-height: 65vh;
     }
 }
