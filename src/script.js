@@ -2618,7 +2618,7 @@ function scrollToVerse(verseNum) {
             });
         } else {
             // Desktop: use scrollIntoView on content-area
-            verseLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            verseLine.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     } else {
         // Verse doesn't exist in this chapter - silently ignore
@@ -8440,7 +8440,7 @@ function scrollToVerseWithHighlight(verseNum) {
 function scrollToVerse(verseNum) {
     const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseElement) {
-        verseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        verseElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         // Highlight the verse briefly
         verseElement.classList.add('verse-scroll-highlight');
         setTimeout(() => {
