@@ -6409,6 +6409,11 @@ body.dark-theme .verse-bottom-action:disabled {
     opacity: 1;
 }
 
+/* Dark theme pin icon */
+body.dark-theme .pin-verse-action .pin-icon-emoji {
+    color: currentColor;
+}
+
 body.dark-theme .add-memory-action.memory-verse-active {
 }
 
@@ -8317,6 +8322,8 @@ body.dark-theme .verse-pinned-highlight {
     transition: opacity 0.2s ease, transform 0.2s ease;
     display: inline-block;
     line-height: 1;
+    color: currentColor;
+    filter: contrast(1.2);
 }
 
 /* Active pin button state - pinned */
@@ -8424,7 +8431,7 @@ body.dark-theme .pinned-verses-modal {
 .pinned-verses-sheet-handle {
     display: flex;
     justify-content: center;
-    padding: 8px 0 4px 0;
+    padding: 16px 0 4px 0;
     background: var(--bg-color, #ffffff);
     border-radius: 16px 16px 0 0;
 }

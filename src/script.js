@@ -1835,7 +1835,7 @@ function showVerseActionsBottomSheet(verseNum) {
                 </button>
                 ${isAdmin() ? `
                 <button class="verse-bottom-action pin-verse-action" data-verse="${verseNum}">
-                    <span class="pin-icon-emoji">🖈</span>
+                    <span class="pin-icon-emoji">✏️</span>
                     <span>Pin</span>
                 </button>
                 ` : ''}
@@ -8399,7 +8399,7 @@ function updatePinButtonBar() {
 }
 
 /**
- * Update pin button appearance in bottom sheet (📌 or 🖈)
+ * Update pin button appearance in bottom sheet (📌 or ✏️)
  * @param {HTMLElement} btn - The pin button element
  * @param {boolean} isPinned - Whether the verse is pinned
  */
@@ -8411,7 +8411,7 @@ function updatePinButtonAppearance(btn, isPinned) {
             emoji.textContent = '📌';
         } else {
             btn.classList.remove('pinned-active');
-            emoji.textContent = '🖈';
+            emoji.textContent = '✏️';
         }
     }
 }
