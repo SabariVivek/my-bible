@@ -8437,10 +8437,21 @@ function scrollToVerseWithHighlight(verseNum) {
 }
 
 // Scroll to a specific verse in the scripture text
-function scrollToVerse(verseNum) {
+function scrollToVerseWithHighlight(verseNum) {
     const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (verseElement) {
-        verseElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Add padding to prevent scrolling behind top nav
+        const topNavHeight = 80; // height of top bar with padding
+        const extraPadding = 20; // additional padding
+        const totalOffset = topNavHeight + extraPadding;
+        
+        const versePosition = verseElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = versePosition - totalOffset;
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+        
         // Highlight the verse briefly
         verseElement.classList.add('verse-scroll-highlight');
         setTimeout(() => {
