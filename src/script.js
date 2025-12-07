@@ -1220,7 +1220,9 @@ function displayChapter() {
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
-            html += `<div class="verse-container" data-verse="${verseNum}">
+            const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
+            const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
+            html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
                     <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
                     <span class="english-text ${englishTextColor}">${englishText}</span>
@@ -1237,12 +1239,17 @@ function displayChapter() {
             const isMemVerse = isMemoryVerse(bookName, currentChapter, parseInt(verseNum));
             const memoryVerseClass = isMemVerse ? ' memory-verse' : '';
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
-            html += `<div class="verse-container" data-verse="${verseNum}">
+            const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
+            const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
+            html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
             </div>`;
         });
     }
     contentArea.innerHTML = html;
+    
+    // Update pin button visibility for current chapter
+    updatePinButtonBar();
     
     // Add click handlers to verse containers to show bottom sheet
     contentArea.querySelectorAll('.verse-container').forEach(container => {
@@ -1416,9 +1423,9 @@ function displayChapter() {
     // Note: Scroll to top is now handled by updateUI() and navigation buttons only
     // Don't scroll here to prevent jumping when interacting with verses or adding notes
     
-    // Initialize and render pinned verses bar
+    // Initialize pinned verses and update button visibility
     initializePinnedVerses();
-    renderPinnedVersesBar();
+    updatePinButtonBar();
 }
 // Update mobile chapter header
 function updateMobileChapterHeader() {
@@ -2107,24 +2114,24 @@ function showVerseActionsBottomSheet(verseNum) {
     const pinBtn = bottomSheet.querySelector('.pin-verse-action');
     if (pinBtn) {
         // Check if verse is already pinned and update button appearance
-        const pinState = isPinned(verseNum);
+        const pinState = isPinnedInCurrentChapter(verseNum);
         updatePinButtonAppearance(pinBtn, pinState);
         
         pinBtn.addEventListener('click', () => {
-            const isCurrentlyPinned = isPinned(verseNum);
+            const isCurrentlyPinned = isPinnedInCurrentChapter(verseNum);
             if (isCurrentlyPinned) {
                 // Unpin verse
-                unpinVerse(verseNum);
+                unpinVerseFromCurrentChapter(verseNum);
                 updatePinButtonAppearance(pinBtn, false);
                 showToast(`Verse unpinned`, 'info');
             } else {
                 // Pin verse
                 pinVerse(verseNum);
                 updatePinButtonAppearance(pinBtn, true);
-                showToast(`Verse pinned to top`, 'success');
+                showToast(`Verse pinned`, 'success');
             }
-            // Refresh pinned bar
-            renderPinnedVersesBar();
+            // Update pin button visibility
+            updatePinButtonBar();
         });
     }
 }
@@ -2393,15 +2400,10 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         pinBtn.addEventListener('click', () => {
             // Pin all selected verses
             selectedVerses.forEach(verseNum => {
-                if (!pinnedVerses.includes(verseNum)) {
-                    pinnedVerses.push(verseNum);
-                }
+                pinVerse(verseNum);
             });
-            savePinnedVersesToStorage();
-            renderPinnedVersesBar();
-            
-            const count = selectedVerses.length;
-            showToast(`${count} verse${count > 1 ? 's' : ''} pinned to top`, 'success');
+            showToast(`${selectedVerses.length} verse${selectedVerses.length > 1 ? 's' : ''} pinned`, 'success');
+            updatePinButtonBar();
         });
     }
 }
@@ -5957,9 +5959,9 @@ function updateAdminUI() {
     if (voiceBtn) {
         voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
     }
-    // Show/hide pinned verses button (admin only)
+    // Show/hide pinned verses button (admin only AND has pinned verses)
     if (pinnedVersesBtn) {
-        pinnedVersesBtn.style.display = isAdminMode ? 'flex' : 'none';
+        pinnedVersesBtn.style.display = (isAdminMode && pinnedVerses.length > 0) ? 'flex' : 'none';
     }
     // Right menu button should always be visible (removed admin check)
     
@@ -8243,50 +8245,164 @@ async function updateSermon(sermonId, updates) {
 
 // ===== PIN VERSES FUNCTIONALITY =====
 
+// ============================================
+// PIN VERSES FEATURE - Complete Rewrite
+// ============================================
+
 // Storage for pinned verses
 let pinnedVerses = [];
 
-// Initialize pinned verses from localStorage on page load
+/**
+ * Initialize pinned verses from localStorage
+ * Data structure: Array of {verse, book, chapter}
+ */
 function initializePinnedVerses() {
     try {
         const stored = localStorage.getItem('pinnedVerses');
         pinnedVerses = stored ? JSON.parse(stored) : [];
+        console.log('Pinned verses loaded from localStorage:', pinnedVerses.length);
     } catch (e) {
+        console.error('Error loading pinned verses:', e);
         pinnedVerses = [];
     }
-}
-
-// Check if a verse is pinned
-function isPinned(verseNum) {
-    return pinnedVerses.includes(verseNum);
-}
-
-// Pin a verse
-function pinVerse(verseNum) {
-    if (!pinnedVerses.includes(verseNum)) {
-        pinnedVerses.push(verseNum);
-        savePinnedVersesToStorage();
+    
+    // Load from Supabase asynchronously (non-blocking)
+    if (window.loadPinnedVersesFromSupabase) {
+        setTimeout(() => {
+            try {
+                loadPinnedVersesFromSupabase().then(supabaseVerses => {
+                    if (supabaseVerses && supabaseVerses.length > 0) {
+                        pinnedVerses = supabaseVerses.map(v => ({
+                            verse: v.verse,
+                            book: v.book,
+                            chapter: v.chapter
+                        }));
+                        console.log('Pinned verses loaded from Supabase:', pinnedVerses.length);
+                        updatePinButtonBar();
+                    }
+                }).catch(err => {
+                    console.warn('Failed to load from Supabase:', err);
+                });
+            } catch (e) {
+                console.error('Error calling loadPinnedVersesFromSupabase:', e);
+            }
+        }, 3000); // Wait 3 seconds after page load
     }
 }
 
-// Unpin a verse
-function unpinVerse(verseNum) {
-    pinnedVerses = pinnedVerses.filter(v => v !== verseNum);
-    savePinnedVersesToStorage();
+/**
+ * Check if a specific verse is pinned in the CURRENT chapter
+ * @param {number} verseNum - The verse number to check
+ * @returns {boolean} - True if verse is pinned in current book/chapter
+ */
+function isPinnedInCurrentChapter(verseNum) {
+    return pinnedVerses.some(v => 
+        v.verse === verseNum && 
+        v.book === currentBook && 
+        v.chapter === currentChapter
+    );
 }
 
-// Save pinned verses to localStorage
+/**
+ * Get all pinned verses for the current chapter
+ * @returns {Array} - Array of pinned verse objects for current book/chapter
+ */
+function getPinnedVersesForCurrentChapter() {
+    return pinnedVerses.filter(v => 
+        v.book === currentBook && 
+        v.chapter === currentChapter
+    );
+}
+
+/**
+ * Pin a verse with full context (book, chapter)
+ * @param {number} verseNum - The verse number to pin
+ */
+function pinVerse(verseNum) {
+    const pinnedVerse = {
+        verse: verseNum,
+        book: currentBook,
+        chapter: currentChapter
+    };
+    
+    // Check if already pinned in this chapter
+    const exists = pinnedVerses.some(v => 
+        v.verse === verseNum && 
+        v.book === currentBook && 
+        v.chapter === currentChapter
+    );
+    
+    if (!exists) {
+        pinnedVerses.push(pinnedVerse);
+        savePinnedVersesToStorage();
+        
+        // Sync to Supabase if user is authenticated
+        if (window.addPinnedVerseToSupabase) {
+            addPinnedVerseToSupabase(verseNum, currentBook, currentChapter).catch(err => {
+                console.warn('Failed to sync to Supabase:', err);
+            });
+        }
+        
+        updatePinButtonBar();
+    }
+}
+
+/**
+ * Unpin a verse from a specific book/chapter
+ * @param {number} verseNum - The verse number to unpin
+ */
+function unpinVerseFromCurrentChapter(verseNum) {
+    pinnedVerses = pinnedVerses.filter(v => 
+        !(v.verse === verseNum && v.book === currentBook && v.chapter === currentChapter)
+    );
+    savePinnedVersesToStorage();
+    
+    // Sync to Supabase if user is authenticated
+    if (window.removePinnedVerseFromSupabase) {
+        removePinnedVerseFromSupabase(verseNum, currentBook, currentChapter).catch(err => {
+            console.warn('Failed to sync to Supabase:', err);
+        });
+    }
+    
+    updatePinButtonBar();
+}
+
+/**
+ * Save pinned verses to localStorage
+ */
 function savePinnedVersesToStorage() {
     localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
 }
 
-// Clear all pinned verses
-function clearAllPinnedVerses() {
-    pinnedVerses = [];
-    savePinnedVersesToStorage();
+/**
+ * Update the pin button visibility in bottom nav
+ * Show only if: (1) Admin, (2) Current chapter has pinned verses
+ */
+function updatePinButtonBar() {
+    const pinnedVersesBtn = document.getElementById('pinned-verses-btn');
+    if (!pinnedVersesBtn) return;
+    
+    const isAdminMode = isAdmin();
+    const currentChapterPinned = getPinnedVersesForCurrentChapter();
+    
+    // Show button only if admin AND there are pinned verses in current chapter
+    if (isAdminMode && currentChapterPinned.length > 0) {
+        pinnedVersesBtn.style.display = 'flex';
+        const badge = document.getElementById('pinned-verses-badge');
+        if (badge) {
+            badge.textContent = currentChapterPinned.length;
+            badge.style.display = 'flex';
+        }
+    } else {
+        pinnedVersesBtn.style.display = 'none';
+    }
 }
 
-// Update pin button appearance (filled or outline)
+/**
+ * Update pin button appearance in bottom sheet (📌 or 🖈)
+ * @param {HTMLElement} btn - The pin button element
+ * @param {boolean} isPinned - Whether the verse is pinned
+ */
 function updatePinButtonAppearance(btn, isPinned) {
     const emoji = btn.querySelector('.pin-icon-emoji');
     if (emoji) {
@@ -8296,20 +8412,6 @@ function updatePinButtonAppearance(btn, isPinned) {
         } else {
             btn.classList.remove('pinned-active');
             emoji.textContent = '🖈';
-        }
-    }
-}
-
-// Render the pinned verses bar at the very top (under main header)
-function renderPinnedVersesBar() {
-    // Update the pinned verses badge
-    const badge = document.getElementById('pinned-verses-badge');
-    if (badge) {
-        if (pinnedVerses.length > 0) {
-            badge.textContent = pinnedVerses.length;
-            badge.style.display = 'flex';
-        } else {
-            badge.style.display = 'none';
         }
     }
 }
@@ -8358,35 +8460,53 @@ function showPinnedVersesBottomSheet() {
         document.body.appendChild(bottomSheet);
     }
     
-    if (pinnedVerses.length === 0) {
-        showToast('No pinned verses yet', 'info');
+    // Get only pinned verses for the CURRENT chapter
+    const currentChapterPinned = getPinnedVersesForCurrentChapter();
+    
+    if (currentChapterPinned.length === 0) {
+        showToast('No pinned verses in this chapter', 'info');
         return;
     }
     
-    // Build the content
+    // Build the content - only for current chapter verses
     let versesHtml = '';
-    pinnedVerses.forEach(verseNum => {
+    currentChapterPinned.forEach(pinnedVerse => {
+        const verseNum = pinnedVerse.verse;
+        const savedBook = pinnedVerse.book;
+        const savedChapter = pinnedVerse.chapter;
+        
+        // Get verse text from current view
         const verseElement = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+        let verseText = '';
+        
         if (verseElement) {
-            const verseText = verseElement.textContent.trim().replace(/^\d+/, '').trim();
-            const book = bibleBooks[currentBook];
-            const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
-            
-            versesHtml += `
-                <div class="pinned-verse-list-item" data-verse="${verseNum}">
-                    <div class="pinned-verse-list-header">
-                        <div class="pinned-verse-list-ref">${bookName} ${currentChapter}:${verseNum}</div>
-                        <button class="pinned-verse-list-unpin" title="Unpin verse" data-verse="${verseNum}">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="pinned-verse-list-text">${verseText}</div>
-                </div>
-            `;
+            verseText = verseElement.textContent.trim().replace(/^\d+/, '').trim();
+        } else {
+            verseText = '(Verse text not available)';
         }
+        
+        // Get the book name from the saved book index
+        const book = bibleBooks[savedBook];
+        if (!book) {
+            console.warn(`Book index ${savedBook} not found in bibleBooks array`);
+            return; // Skip this verse if book data is invalid
+        }
+        const bookName = currentLanguage === 'tamil' ? book.tamilName : book.name;
+        
+        versesHtml += `
+            <div class="pinned-verse-list-item" data-verse="${verseNum}">
+                <div class="pinned-verse-list-header">
+                    <div class="pinned-verse-list-ref">${bookName} ${savedChapter}:${verseNum}</div>
+                    <button class="pinned-verse-list-unpin" title="Unpin verse" data-verse="${verseNum}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="pinned-verse-list-text">${verseText}</div>
+            </div>
+        `;
     });
     
     // Set up the bottom sheet content
@@ -8483,7 +8603,7 @@ function showPinnedVersesBottomSheet() {
             
             // Wait for animation to complete before unpinning (matches CSS animation duration)
             setTimeout(() => {
-                unpinVerse(verseNum);
+                unpinVerseFromCurrentChapter(verseNum);
                 showToast('Verse unpinned', 'info');
                 // Remove the card from DOM smoothly
                 verseItem.remove();

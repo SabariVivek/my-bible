@@ -8472,7 +8472,7 @@ body.dark-theme .pinned-verses-sheet-header h3 {
 .pinned-verses-close-btn {
     background: rgba(0, 0, 0, 0.05);
     border: 0.5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
     padding: 6px;
     display: flex;
@@ -8666,8 +8666,35 @@ body.pinned-verses-sheet-open #pinned-verses-btn {
     transform: scale(1.15) rotate(15deg);
 }
 
+/* Pinned verse indicator */
+.pinned-indicator {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 14px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.pinned-verse-highlight {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Dark theme for pinned verse highlight */
+body.dark-theme .pinned-verse-highlight {
+    background-color: rgba(255, 215, 0, 0.15);
+}
+
 @media (max-width: 768px) {
     .pinned-verses-modal {
         max-height: 65vh;
     }
 }
+
