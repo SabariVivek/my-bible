@@ -8930,25 +8930,24 @@ function showPinnedVersesBottomSheet() {
     let velocityY = 0;
     let lastY = 0;
     let lastTime = 0;
-    let startScrollTop = 0;
     
     function handleStart(clientY) {
         const scrollTop = body.scrollTop;
         
-        // Only allow dragging if at the top of scroll
+        // Only allow dragging if content is at the very top
         if (scrollTop > 5) {
             isDragging = false;
+            currentY = 0;
             return;
         }
 
-        isDragging = true;
+        // Start potential drag
         startY = clientY;
         currentY = 0;
         lastY = clientY;
         lastTime = Date.now();
-        startScrollTop = scrollTop;
         velocityY = 0;
-
+        isDragging = true;
         content.classList.add('dragging');
     }
 
@@ -8957,7 +8956,6 @@ function showPinnedVersesBottomSheet() {
 
         const deltaY = clientY - startY;
         const scrollTop = body.scrollTop;
-        const scrollChanged = scrollTop !== startScrollTop;
 
         // Calculate velocity
         const now = Date.now();
@@ -8968,34 +8966,35 @@ function showPinnedVersesBottomSheet() {
             lastTime = now;
         }
 
-        // If content scrolled (scroll position changed), stop dragging
-        if (scrollChanged) {
-            isDragging = false;
-            content.classList.remove('dragging');
-            return;
-        }
-
-        // If content is scrolled down, allow normal scrolling
+        // If user scrolled the content (scrollTop increased), cancel drag
         if (scrollTop > 5) {
             isDragging = false;
+            currentY = 0;
             content.classList.remove('dragging');
+            content.style.transform = '';
             return;
         }
 
-        // If trying to drag up when at top, allow content to scroll
+        // If trying to drag UP (negative delta), let the content scroll naturally
         if (deltaY < 0) {
             isDragging = false;
+            currentY = 0;
             content.classList.remove('dragging');
+            content.style.transform = '';
             return;
         }
 
-        // Move sheet down only when at top and dragging down
+        // Only allow dragging DOWN when at top
         currentY = deltaY;
         content.style.transform = `translateY(${currentY}px)`;
     }
 
     function handleEnd() {
-        if (!isDragging) return;
+        if (!isDragging) {
+            currentY = 0;
+            return;
+        }
+        
         isDragging = false;
         content.classList.remove('dragging');
         
@@ -9008,6 +9007,7 @@ function showPinnedVersesBottomSheet() {
         } else {
             content.style.transform = '';
         }
+        currentY = 0;
     }
 
     // Touch events
