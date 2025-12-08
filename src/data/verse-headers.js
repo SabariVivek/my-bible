@@ -1,6 +1,955 @@
 // Verse headers/section titles that appear before specific verses
 // Format: "Book Chapter:Verse": "Header Title"
 const verseHeaders = {
+    // ===========================
+    // OLD TESTAMENT
+    // ===========================
+    
+    // Genesis Chapter 1
+    "Genesis 1:1": "The Creation of the Heavens and the Earth",
+    "Genesis 1:3": "Day 1 — Light",
+    "Genesis 1:6": "Day 2 — Sky and Waters",
+    "Genesis 1:9": "Day 3 — Land, Seas, and Vegetation",
+    "Genesis 1:14": "Day 4 — Sun, Moon, and Stars",
+    "Genesis 1:20": "Day 5 — Sea Creatures and Birds",
+    "Genesis 1:24": "Day 6 — Land Animals and Mankind",
+    "Genesis 1:26": "Man Created in God's Image",
+    "Genesis 1:31": "God Saw All He Made Was Very Good",
+    
+    // Genesis Chapter 2
+    "Genesis 2:1": "Day 7 — God Rested",
+    "Genesis 2:4": "The Garden of Eden",
+    "Genesis 2:7": "The LORD God Forms Man",
+    "Genesis 2:15": "Man Placed in the Garden",
+    "Genesis 2:18": "Creation of Woman",
+    "Genesis 2:23": "This Is Now Bone of My Bones",
+    "Genesis 2:25": "They Were Both Naked and Not Ashamed",
+    
+    // Genesis Chapter 3
+    "Genesis 3:1": "The Temptation and Fall",
+    "Genesis 3:6": "The First Sin",
+    "Genesis 3:8": "God Confronts Adam and Eve",
+    "Genesis 3:14": "Curses Pronounced",
+    "Genesis 3:15": "Promise of the Seed",
+    "Genesis 3:20": "Adam Names His Wife Eve",
+    "Genesis 3:22": "Expelled from Eden",
+    
+    // Genesis Chapter 4
+    "Genesis 4:1": "Cain and Abel",
+    "Genesis 4:8": "Cain Murders Abel",
+    "Genesis 4:9": "Am I My Brother's Keeper?",
+    "Genesis 4:13": "Cain's Punishment",
+    "Genesis 4:17": "The Descendants of Cain",
+    "Genesis 4:25": "Seth Is Born",
+    
+    // Genesis Chapter 5
+    "Genesis 5:1": "The Genealogy from Adam to Noah",
+    "Genesis 5:21": "Enoch Walked with God",
+    "Genesis 5:28": "The Birth of Noah",
+    
+    // Genesis Chapter 6
+    "Genesis 6:1": "Wickedness on Earth",
+    "Genesis 6:5": "The LORD's Grief Over Man's Sin",
+    "Genesis 6:8": "Noah Found Favor",
+    "Genesis 6:9": "Noah's Righteousness",
+    "Genesis 6:13": "God Commands Noah to Build the Ark",
+    
+    // Genesis Chapter 7
+    "Genesis 7:1": "Entering the Ark",
+    "Genesis 7:6": "The Flood Begins",
+    "Genesis 7:11": "The Waters Prevail",
+    "Genesis 7:17": "The Flood Covers the Earth",
+    
+    // Genesis Chapter 8
+    "Genesis 8:1": "The Waters Recede",
+    "Genesis 8:6": "Noah Sends Out a Raven and Dove",
+    "Genesis 8:13": "The Earth Dries",
+    "Genesis 8:15": "Leaving the Ark",
+    "Genesis 8:20": "Noah's Sacrifice and God's Promise",
+    
+    // Genesis Chapter 9
+    "Genesis 9:1": "God's Covenant with Noah",
+    "Genesis 9:8": "The Sign of the Rainbow",
+    "Genesis 9:18": "Noah's Sons",
+    "Genesis 9:20": "Noah's Drunkenness and Ham's Sin",
+    "Genesis 9:25": "The Curse of Canaan",
+    
+    // Genesis Chapter 10
+    "Genesis 10:1": "The Table of Nations",
+    "Genesis 10:6": "The Sons of Ham",
+    "Genesis 10:21": "The Sons of Shem",
+    
+    // Genesis Chapter 11
+    "Genesis 11:1": "The Tower of Babel",
+    "Genesis 11:5": "God Confuses the Languages",
+    "Genesis 11:10": "Genealogy from Shem to Abram",
+    "Genesis 11:27": "Terah's Family",
+    "Genesis 11:31": "Terah Leaves Ur",
+    
+    // Genesis Chapter 12
+    "Genesis 12:1": "The Call of Abram",
+    "Genesis 12:4": "Abram Departs from Haran",
+    "Genesis 12:6": "The Promise of the Land",
+    "Genesis 12:10": "Abram in Egypt",
+    
+    // Genesis Chapter 13
+    "Genesis 13:1": "Abram Returns from Egypt",
+    "Genesis 13:5": "Abram and Lot Separate",
+    "Genesis 13:14": "God Renews His Promise to Abram",
+    
+    // Genesis Chapter 14
+    "Genesis 14:1": "War of the Kings",
+    "Genesis 14:12": "Lot Taken Captive",
+    "Genesis 14:14": "Abram Rescues Lot",
+    "Genesis 14:18": "Melchizedek Blesses Abram",
+    
+    // Genesis Chapter 15
+    "Genesis 15:1": "God's Covenant with Abram",
+    "Genesis 15:6": "Abram Believed and It Was Credited as Righteousness",
+    "Genesis 15:12": "The Promise Confirmed",
+    
+    // Genesis Chapter 16
+    "Genesis 16:1": "Hagar and Ishmael",
+    "Genesis 16:7": "The Angel of the LORD Appears to Hagar",
+    "Genesis 16:15": "Ishmael Is Born",
+    
+    // Genesis Chapter 17
+    "Genesis 17:1": "The Covenant of Circumcision",
+    "Genesis 17:5": "Abram Becomes Abraham",
+    "Genesis 17:9": "The Sign of Circumcision",
+    "Genesis 17:15": "Sarai Becomes Sarah",
+    "Genesis 17:17": "Abraham Laughs",
+    "Genesis 17:23": "Abraham Obeys God",
+    
+    // Genesis Chapter 18
+    "Genesis 18:1": "The LORD Visits Abraham",
+    "Genesis 18:9": "The Promise of Isaac",
+    "Genesis 18:16": "Abraham Intercedes for Sodom",
+    
+    // Genesis Chapter 19
+    "Genesis 19:1": "Lot Welcomes the Angels",
+    "Genesis 19:4": "The Wickedness of Sodom",
+    "Genesis 19:12": "Lot and His Family Urged to Flee",
+    "Genesis 19:23": "Destruction of Sodom and Gomorrah",
+    "Genesis 19:30": "Lot and His Daughters",
+    
+    // Genesis Chapter 20
+    "Genesis 20:1": "Abraham and Abimelech",
+    "Genesis 20:3": "God Warns Abimelech in a Dream",
+    "Genesis 20:14": "Abraham and Sarah Restored",
+    
+    // Genesis Chapter 21
+    "Genesis 21:1": "The Birth of Isaac",
+    "Genesis 21:8": "Ishmael Mocks Isaac",
+    "Genesis 21:9": "Hagar and Ishmael Sent Away",
+    "Genesis 21:14": "God Provides for Hagar",
+    "Genesis 21:22": "Abraham's Covenant with Abimelech",
+    
+    // Genesis Chapter 22
+    "Genesis 22:1": "God Tests Abraham",
+    "Genesis 22:3": "Abraham Obeys",
+    "Genesis 22:9": "Isaac on the Altar",
+    "Genesis 22:11": "The Angel Stops Abraham",
+    "Genesis 22:13": "God Provides a Ram",
+    "Genesis 22:15": "The LORD Reaffirms His Promise",
+    "Genesis 22:20": "The Family of Nahor",
+    
+    // Genesis Chapter 23
+    "Genesis 23:1": "The Death of Sarah",
+    "Genesis 23:3": "Abraham Buys a Burial Site",
+    "Genesis 23:19": "Sarah Is Buried",
+    
+    // Genesis Chapter 24
+    "Genesis 24:1": "A Bride for Isaac",
+    "Genesis 24:10": "The Servant's Journey",
+    "Genesis 24:15": "Rebekah at the Well",
+    "Genesis 24:29": "Laban Welcomes Abraham's Servant",
+    "Genesis 24:50": "Rebekah's Family Consents",
+    "Genesis 24:62": "Isaac Meets Rebekah",
+    
+    // Genesis Chapter 25
+    "Genesis 25:1": "Abraham's Death",
+    "Genesis 25:12": "The Descendants of Ishmael",
+    "Genesis 25:19": "The Birth of Esau and Jacob",
+    "Genesis 25:27": "Esau Sells His Birthright",
+    
+    // Genesis Chapter 26
+    "Genesis 26:1": "Isaac and Abimelech",
+    "Genesis 26:12": "Isaac Prospers",
+    "Genesis 26:26": "A Covenant with Abimelech",
+    "Genesis 26:34": "Esau's Wives",
+    
+    // Genesis Chapter 27
+    "Genesis 27:1": "Jacob Deceives Isaac",
+    "Genesis 27:30": "Esau's Lost Blessing",
+    "Genesis 27:41": "Esau Plans to Kill Jacob",
+    
+    // Genesis Chapter 28
+    "Genesis 28:1": "Isaac Sends Jacob Away",
+    "Genesis 28:10": "Jacob's Dream at Bethel",
+    "Genesis 28:16": "This Is the House of God",
+    "Genesis 28:20": "Jacob's Vow",
+    
+    // Genesis Chapter 29
+    "Genesis 29:1": "Jacob Meets Rachel",
+    "Genesis 29:14": "Jacob Serves Laban",
+    "Genesis 29:21": "Jacob Marries Leah and Rachel",
+    "Genesis 29:31": "Leah's Children",
+    
+    // Genesis Chapter 30
+    "Genesis 30:1": "Rachel and Bilhah",
+    "Genesis 30:9": "Leah and Zilpah",
+    "Genesis 30:22": "The Birth of Joseph",
+    "Genesis 30:25": "Jacob Prospers",
+    
+    // Genesis Chapter 31
+    "Genesis 31:1": "Jacob Flees from Laban",
+    "Genesis 31:22": "Laban Pursues Jacob",
+    "Genesis 31:43": "The Covenant at Mizpah",
+    
+    // Genesis Chapter 32
+    "Genesis 32:1": "Jacob Prepares to Meet Esau",
+    "Genesis 32:9": "Jacob's Prayer",
+    "Genesis 32:22": "Jacob Wrestles with God",
+    "Genesis 32:28": "Your Name Shall Be Israel",
+    
+    // Genesis Chapter 33
+    "Genesis 33:1": "Jacob Meets Esau",
+    "Genesis 33:18": "Jacob Settles in Shechem",
+    
+    // Genesis Chapter 34
+    "Genesis 34:1": "The Defilement of Dinah",
+    "Genesis 34:13": "The Deceit of Jacob's Sons",
+    "Genesis 34:25": "The Revenge of Simeon and Levi",
+    
+    // Genesis Chapter 35
+    "Genesis 35:1": "Jacob Returns to Bethel",
+    "Genesis 35:16": "The Death of Rachel",
+    "Genesis 35:27": "The Death of Isaac",
+    
+    // Genesis Chapter 36
+    "Genesis 36:1": "The Descendants of Esau",
+    
+    // Genesis Chapter 37
+    "Genesis 37:1": "Joseph's Dreams",
+    "Genesis 37:12": "Joseph Sent to His Brothers",
+    "Genesis 37:18": "The Plot Against Joseph",
+    "Genesis 37:28": "Joseph Sold into Slavery",
+    "Genesis 37:31": "Jacob Mourns for Joseph",
+    
+    // Genesis Chapter 38
+    "Genesis 38:1": "Judah and Tamar",
+    
+    // Genesis Chapter 39
+    "Genesis 39:1": "Joseph in Potiphar's House",
+    "Genesis 39:6": "Joseph and Potiphar's Wife",
+    "Genesis 39:19": "Joseph Imprisoned",
+    
+    // Genesis Chapter 40
+    "Genesis 40:1": "Joseph Interprets Two Dreams",
+    "Genesis 40:20": "The Dreams Come True",
+    
+    // Genesis Chapter 41
+    "Genesis 41:1": "Pharaoh's Dreams",
+    "Genesis 41:14": "Joseph Brought Before Pharaoh",
+    "Genesis 41:25": "Joseph Interprets the Dreams",
+    "Genesis 41:37": "Joseph Exalted",
+    "Genesis 41:46": "The Seven Years of Plenty",
+    "Genesis 41:50": "Joseph's Sons",
+    
+    // Genesis Chapter 42
+    "Genesis 42:1": "Joseph's Brothers Go to Egypt",
+    "Genesis 42:6": "Joseph Recognizes His Brothers",
+    "Genesis 42:18": "Simeon Held as Hostage",
+    "Genesis 42:29": "The Brothers Return to Jacob",
+    
+    // Genesis Chapter 43
+    "Genesis 43:1": "The Second Journey to Egypt",
+    "Genesis 43:16": "Joseph's Brothers Feast with Him",
+    
+    // Genesis Chapter 44
+    "Genesis 44:1": "The Silver Cup",
+    "Genesis 44:14": "Judah Pleads for Benjamin",
+    
+    // Genesis Chapter 45
+    "Genesis 45:1": "Joseph Reveals Himself",
+    "Genesis 45:16": "Pharaoh Invites Jacob's Family",
+    "Genesis 45:25": "Jacob Is Told Joseph Lives",
+    
+    // Genesis Chapter 46
+    "Genesis 46:1": "Jacob's Journey to Egypt",
+    "Genesis 46:8": "Jacob's Family Listed",
+    "Genesis 46:28": "Jacob Arrives in Egypt",
+    
+    // Genesis Chapter 47
+    "Genesis 47:1": "Jacob's Family Settles in Goshen",
+    "Genesis 47:7": "Jacob Blesses Pharaoh",
+    "Genesis 47:13": "Joseph's Management During Famine",
+    "Genesis 47:27": "Jacob's Final Days",
+    
+    // Genesis Chapter 48
+    "Genesis 48:1": "Jacob Blesses Joseph's Sons",
+    "Genesis 48:17": "Ephraim Before Manasseh",
+    
+    // Genesis Chapter 49
+    "Genesis 49:1": "Jacob Blesses His Sons",
+    "Genesis 49:29": "Jacob's Death",
+    
+    // Genesis Chapter 50
+    "Genesis 50:1": "Jacob's Burial",
+    "Genesis 50:15": "Joseph Reassures His Brothers",
+    "Genesis 50:22": "The Death of Joseph",
+    
+    // Exodus Chapter 1
+    "Exodus 1:1": "Israel Multiplies in Egypt",
+    "Exodus 1:8": "A New Pharaoh Oppresses Israel",
+    "Exodus 1:15": "The Hebrew Midwives",
+    
+    // Exodus Chapter 2
+    "Exodus 2:1": "The Birth of Moses",
+    "Exodus 2:5": "Pharaoh's Daughter Finds Moses",
+    "Exodus 2:11": "Moses Flees to Midian",
+    "Exodus 2:16": "Moses Meets Zipporah",
+    "Exodus 2:23": "God Hears Israel's Cry",
+    
+    // Exodus Chapter 3
+    "Exodus 3:1": "The Burning Bush",
+    "Exodus 3:7": "God's Compassion for Israel",
+    "Exodus 3:10": "Moses Commissioned",
+    "Exodus 3:13": "I AM WHO I AM",
+    
+    // Exodus Chapter 4
+    "Exodus 4:1": "Three Signs for Moses",
+    "Exodus 4:10": "Moses' Objections",
+    "Exodus 4:14": "Aaron to Speak for Moses",
+    "Exodus 4:18": "Moses Returns to Egypt",
+    "Exodus 4:24": "The Bridegroom of Blood",
+    "Exodus 4:27": "Moses Meets Aaron",
+    
+    // Exodus Chapter 5
+    "Exodus 5:1": "Moses and Aaron Before Pharaoh",
+    "Exodus 5:6": "Israel's Burden Increased",
+    "Exodus 5:19": "The Foremen Complain to Moses",
+    
+    // Exodus Chapter 6
+    "Exodus 6:1": "God Promises Deliverance",
+    "Exodus 6:10": "Moses Speaks to Pharaoh Again",
+    "Exodus 6:14": "The Genealogy of Moses and Aaron",
+    
+    // Exodus Chapter 7
+    "Exodus 7:1": "Moses and Aaron Commissioned",
+    "Exodus 7:8": "Aaron's Staff Becomes a Serpent",
+    "Exodus 7:14": "First Plague — Water Turned to Blood",
+    
+    // Exodus Chapter 8
+    "Exodus 8:1": "Second Plague — Frogs",
+    "Exodus 8:16": "Third Plague — Gnats",
+    "Exodus 8:20": "Fourth Plague — Flies",
+    
+    // Exodus Chapter 9
+    "Exodus 9:1": "Fifth Plague — Livestock Disease",
+    "Exodus 9:8": "Sixth Plague — Boils",
+    "Exodus 9:13": "Seventh Plague — Hail",
+    
+    // Exodus Chapter 10
+    "Exodus 10:1": "Eighth Plague — Locusts",
+    "Exodus 10:21": "Ninth Plague — Darkness",
+    
+    // Exodus Chapter 11
+    "Exodus 11:1": "The Tenth Plague Announced",
+    "Exodus 11:4": "Death of the Firstborn Foretold",
+    
+    // Exodus Chapter 12
+    "Exodus 12:1": "The Passover Instituted",
+    "Exodus 12:21": "Instructions for the Passover",
+    "Exodus 12:29": "Tenth Plague — Death of the Firstborn",
+    "Exodus 12:37": "The Exodus Begins",
+    "Exodus 12:43": "Passover Regulations",
+    
+    // Exodus Chapter 13
+    "Exodus 13:1": "The Consecration of the Firstborn",
+    "Exodus 13:17": "God Leads Israel by a Pillar of Cloud and Fire",
+    
+    // Exodus Chapter 14
+    "Exodus 14:1": "Pharaoh Pursues Israel",
+    "Exodus 14:10": "Israel's Fear",
+    "Exodus 14:13": "The LORD Will Fight for You",
+    "Exodus 14:21": "The Red Sea Parted",
+    "Exodus 14:26": "The Egyptians Drowned",
+    
+    // Exodus Chapter 15
+    "Exodus 15:1": "The Song of Moses",
+    "Exodus 15:20": "The Song of Miriam",
+    "Exodus 15:22": "The Bitter Waters of Marah",
+    "Exodus 15:27": "Twelve Springs at Elim",
+    
+    // Exodus Chapter 16
+    "Exodus 16:1": "The Wilderness of Sin",
+    "Exodus 16:4": "God Provides Manna and Quail",
+    "Exodus 16:22": "The Sabbath Rest",
+    "Exodus 16:31": "The Manna Described",
+    
+    // Exodus Chapter 17
+    "Exodus 17:1": "Water from the Rock",
+    "Exodus 17:8": "Israel Defeats Amalek",
+    
+    // Exodus Chapter 18
+    "Exodus 18:1": "Jethro Visits Moses",
+    "Exodus 18:13": "Jethro's Advice",
+    
+    // Exodus Chapter 19
+    "Exodus 19:1": "Israel at Mount Sinai",
+    "Exodus 19:3": "The LORD's Proposal",
+    "Exodus 19:16": "The LORD Descends on Sinai",
+    
+    // Exodus Chapter 20
+    "Exodus 20:1": "The Ten Commandments",
+    "Exodus 20:18": "The People's Fear",
+    "Exodus 20:22": "Instructions About Altars",
+    
+    // Exodus Chapter 21
+    "Exodus 21:1": "Laws About Servants",
+    "Exodus 21:12": "Laws About Personal Injury",
+    "Exodus 21:28": "Laws About Property Damage",
+    
+    // Exodus Chapter 22
+    "Exodus 22:1": "Laws About Restitution",
+    "Exodus 22:16": "Laws About Social Responsibility",
+    "Exodus 22:21": "Laws About Mercy and Justice",
+    
+    // Exodus Chapter 23
+    "Exodus 23:1": "Laws About Justice",
+    "Exodus 23:10": "Sabbath Laws",
+    "Exodus 23:14": "Three Annual Feasts",
+    "Exodus 23:20": "God's Angel to Lead Israel",
+    
+    // Exodus Chapter 24
+    "Exodus 24:1": "The Covenant Confirmed",
+    "Exodus 24:9": "Moses Sees God",
+    "Exodus 24:12": "Moses on the Mountain",
+    
+    // Exodus Chapter 25
+    "Exodus 25:1": "Offerings for the Tabernacle",
+    "Exodus 25:10": "The Ark of the Covenant",
+    "Exodus 25:23": "The Table of Showbread",
+    "Exodus 25:31": "The Golden Lampstand",
+    
+    // Exodus Chapter 26
+    "Exodus 26:1": "The Tabernacle Curtains",
+    "Exodus 26:15": "The Frames and Bases",
+    "Exodus 26:31": "The Veil",
+    
+    // Exodus Chapter 27
+    "Exodus 27:1": "The Altar of Burnt Offering",
+    "Exodus 27:9": "The Courtyard",
+    "Exodus 27:20": "Oil for the Lampstand",
+    
+    // Exodus Chapter 28
+    "Exodus 28:1": "The Priestly Garments",
+    "Exodus 28:6": "The Ephod",
+    "Exodus 28:15": "The Breastpiece",
+    "Exodus 28:31": "The Robe",
+    "Exodus 28:36": "The Turban",
+    
+    // Exodus Chapter 29
+    "Exodus 29:1": "Consecration of the Priests",
+    "Exodus 29:38": "The Daily Offerings",
+    
+    // Exodus Chapter 30
+    "Exodus 30:1": "The Altar of Incense",
+    "Exodus 30:11": "The Census Tax",
+    "Exodus 30:17": "The Bronze Basin",
+    "Exodus 30:22": "The Anointing Oil",
+    "Exodus 30:34": "The Incense",
+    
+    // Exodus Chapter 31
+    "Exodus 31:1": "Bezalel and Oholiab",
+    "Exodus 31:12": "The Sign of the Sabbath",
+    "Exodus 31:18": "The Two Tablets",
+    
+    // Exodus Chapter 32
+    "Exodus 32:1": "The Golden Calf",
+    "Exodus 32:7": "God's Anger",
+    "Exodus 32:11": "Moses Intercedes",
+    "Exodus 32:19": "Moses' Anger",
+    "Exodus 32:25": "The Levites' Zeal",
+    "Exodus 32:30": "Moses Returns to the Mountain",
+    
+    // Exodus Chapter 33
+    "Exodus 33:1": "God Commands Israel to Leave Sinai",
+    "Exodus 33:7": "The Tent of Meeting",
+    "Exodus 33:12": "Moses and God's Presence",
+    "Exodus 33:18": "God's Glory Passes By",
+    
+    // Exodus Chapter 34
+    "Exodus 34:1": "New Stone Tablets",
+    "Exodus 34:5": "The LORD Proclaims His Name",
+    "Exodus 34:10": "The Covenant Renewed",
+    "Exodus 34:27": "Moses Writes the Covenant",
+    "Exodus 34:29": "Moses' Radiant Face",
+    
+    // Exodus Chapter 35
+    "Exodus 35:1": "The Sabbath Reminder",
+    "Exodus 35:4": "Offerings for the Tabernacle",
+    "Exodus 35:30": "Bezalel and Oholiab Called",
+    
+    // Exodus Chapter 36
+    "Exodus 36:1": "The Tabernacle Construction Begins",
+    "Exodus 36:8": "The Curtains and Coverings",
+    
+    // Exodus Chapter 37
+    "Exodus 37:1": "The Ark",
+    "Exodus 37:10": "The Table",
+    "Exodus 37:17": "The Lampstand",
+    "Exodus 37:25": "The Altar of Incense",
+    
+    // Exodus Chapter 38
+    "Exodus 38:1": "The Altar of Burnt Offering",
+    "Exodus 38:8": "The Bronze Basin",
+    "Exodus 38:9": "The Courtyard",
+    "Exodus 38:21": "The Inventory",
+    
+    // Exodus Chapter 39
+    "Exodus 39:1": "The Priestly Garments Completed",
+    "Exodus 39:32": "Moses Inspects the Work",
+    
+    // Exodus Chapter 40
+    "Exodus 40:1": "The Tabernacle Set Up",
+    "Exodus 40:34": "The Glory of the LORD Fills the Tabernacle",
+    
+    // Leviticus Chapter 1
+    "Leviticus 1:1": "The Burnt Offering",
+    
+    // Leviticus Chapter 2
+    "Leviticus 2:1": "The Grain Offering",
+    
+    // Leviticus Chapter 3
+    "Leviticus 3:1": "The Peace Offering",
+    
+    // Leviticus Chapter 4
+    "Leviticus 4:1": "The Sin Offering",
+    "Leviticus 4:13": "Sin Offering for the Congregation",
+    "Leviticus 4:22": "Sin Offering for a Leader",
+    "Leviticus 4:27": "Sin Offering for a Common Person",
+    
+    // Leviticus Chapter 5
+    "Leviticus 5:1": "Cases Requiring a Sin Offering",
+    "Leviticus 5:14": "The Guilt Offering",
+    
+    // Leviticus Chapter 6
+    "Leviticus 6:1": "The Guilt Offering for Deception",
+    "Leviticus 6:8": "Instructions for the Burnt Offering",
+    "Leviticus 6:14": "Instructions for the Grain Offering",
+    "Leviticus 6:24": "Instructions for the Sin Offering",
+    
+    // Leviticus Chapter 7
+    "Leviticus 7:1": "Instructions for the Guilt Offering",
+    "Leviticus 7:11": "Instructions for the Peace Offering",
+    "Leviticus 7:22": "Prohibition Against Fat and Blood",
+    "Leviticus 7:28": "The Priests' Portion",
+    
+    // Leviticus Chapter 8
+    "Leviticus 8:1": "The Consecration of Aaron and His Sons",
+    
+    // Leviticus Chapter 9
+    "Leviticus 9:1": "The First Offerings of Aaron",
+    "Leviticus 9:23": "The Glory of the LORD Appears",
+    
+    // Leviticus Chapter 10
+    "Leviticus 10:1": "Nadab and Abihu Killed",
+    "Leviticus 10:8": "Restrictions for Priests",
+    "Leviticus 10:16": "Moses' Anger at Aaron's Sons",
+    
+    // Leviticus Chapter 11
+    "Leviticus 11:1": "Clean and Unclean Animals",
+    "Leviticus 11:24": "Laws About Carcasses",
+    "Leviticus 11:46": "Summary of Food Laws",
+    
+    // Leviticus Chapter 12
+    "Leviticus 12:1": "Purification After Childbirth",
+    
+    // Leviticus Chapter 13
+    "Leviticus 13:1": "Laws About Skin Diseases",
+    "Leviticus 13:47": "Laws About Mildew",
+    
+    // Leviticus Chapter 14
+    "Leviticus 14:1": "Cleansing of Skin Diseases",
+    "Leviticus 14:33": "Cleansing of Mildew in Houses",
+    
+    // Leviticus Chapter 15
+    "Leviticus 15:1": "Laws About Bodily Discharges",
+    
+    // Leviticus Chapter 16
+    "Leviticus 16:1": "The Day of Atonement",
+    "Leviticus 16:29": "An Eternal Statute",
+    
+    // Leviticus Chapter 17
+    "Leviticus 17:1": "The Sanctity of Blood",
+    
+    // Leviticus Chapter 18
+    "Leviticus 18:1": "Unlawful Sexual Relations",
+    
+    // Leviticus Chapter 19
+    "Leviticus 19:1": "You Shall Be Holy",
+    "Leviticus 19:9": "Laws About Harvest",
+    "Leviticus 19:11": "Laws About Honesty",
+    "Leviticus 19:18": "Love Your Neighbor as Yourself",
+    "Leviticus 19:23": "Various Laws",
+    
+    // Leviticus Chapter 20
+    "Leviticus 20:1": "Punishments for Disobedience",
+    
+    // Leviticus Chapter 21
+    "Leviticus 21:1": "Holiness Required of Priests",
+    
+    // Leviticus Chapter 22
+    "Leviticus 22:1": "Regulations for Holy Offerings",
+    
+    // Leviticus Chapter 23
+    "Leviticus 23:1": "The Appointed Feasts",
+    "Leviticus 23:3": "The Sabbath",
+    "Leviticus 23:4": "Passover and Unleavened Bread",
+    "Leviticus 23:9": "Firstfruits",
+    "Leviticus 23:15": "The Feast of Weeks",
+    "Leviticus 23:23": "The Feast of Trumpets",
+    "Leviticus 23:26": "The Day of Atonement",
+    "Leviticus 23:33": "The Feast of Tabernacles",
+    
+    // Leviticus Chapter 24
+    "Leviticus 24:1": "The Oil and the Bread",
+    "Leviticus 24:10": "The Punishment for Blasphemy",
+    
+    // Leviticus Chapter 25
+    "Leviticus 25:1": "The Sabbath Year",
+    "Leviticus 25:8": "The Year of Jubilee",
+    "Leviticus 25:23": "Redemption of Property",
+    "Leviticus 25:39": "Redemption of the Poor",
+    
+    // Leviticus Chapter 26
+    "Leviticus 26:1": "Blessings for Obedience",
+    "Leviticus 26:14": "Curses for Disobedience",
+    "Leviticus 26:40": "Repentance and Restoration",
+    
+    // Leviticus Chapter 27
+    "Leviticus 27:1": "Laws About Vows and Tithes",
+    
+    // Numbers Chapter 1
+    "Numbers 1:1": "The Census of Israel",
+    
+    // Numbers Chapter 2
+    "Numbers 2:1": "The Arrangement of the Camps",
+    
+    // Numbers Chapter 3
+    "Numbers 3:1": "The Sons of Aaron",
+    "Numbers 3:5": "The Duties of the Levites",
+    "Numbers 3:40": "The Redemption of the Firstborn",
+    
+    // Numbers Chapter 4
+    "Numbers 4:1": "The Duties of the Kohathites",
+    "Numbers 4:21": "The Duties of the Gershonites",
+    "Numbers 4:29": "The Duties of the Merarites",
+    
+    // Numbers Chapter 5
+    "Numbers 5:1": "The Purity of the Camp",
+    "Numbers 5:5": "Restitution for Wrongs",
+    "Numbers 5:11": "The Test for an Unfaithful Wife",
+    
+    // Numbers Chapter 6
+    "Numbers 6:1": "The Nazirite Vow",
+    "Numbers 6:22": "The Priestly Blessing",
+    
+    // Numbers Chapter 7
+    "Numbers 7:1": "Offerings for the Tabernacle",
+    
+    // Numbers Chapter 8
+    "Numbers 8:1": "The Lampstand",
+    "Numbers 8:5": "The Cleansing of the Levites",
+    
+    // Numbers Chapter 9
+    "Numbers 9:1": "The Second Passover",
+    "Numbers 9:15": "The Cloud Above the Tabernacle",
+    
+    // Numbers Chapter 10
+    "Numbers 10:1": "The Silver Trumpets",
+    "Numbers 10:11": "Israel Departs from Sinai",
+    "Numbers 10:29": "Moses Invites Hobab",
+    
+    // Numbers Chapter 11
+    "Numbers 11:1": "The Complaining at Taberah",
+    "Numbers 11:4": "The Craving for Meat",
+    "Numbers 11:16": "Seventy Elders Appointed",
+    "Numbers 11:31": "The Quail Provided",
+    
+    // Numbers Chapter 12
+    "Numbers 12:1": "Miriam and Aaron Oppose Moses",
+    "Numbers 12:9": "Miriam Struck with Leprosy",
+    
+    // Numbers Chapter 13
+    "Numbers 13:1": "The Twelve Spies Sent",
+    "Numbers 13:17": "The Spies Explore Canaan",
+    "Numbers 13:25": "The Report of the Spies",
+    
+    // Numbers Chapter 14
+    "Numbers 14:1": "Israel Rebels",
+    "Numbers 14:10": "Moses Intercedes",
+    "Numbers 14:20": "God's Judgment Pronounced",
+    "Numbers 14:39": "Israel's Presumptuous Attempt to Enter",
+    
+    // Numbers Chapter 15
+    "Numbers 15:1": "Laws About Offerings",
+    "Numbers 15:22": "Unintentional Sin",
+    "Numbers 15:32": "The Sabbath Breaker Stoned",
+    "Numbers 15:37": "Tassels on Garments",
+    
+    // Numbers Chapter 16
+    "Numbers 16:1": "Korah's Rebellion",
+    "Numbers 16:23": "God's Judgment on the Rebels",
+    "Numbers 16:41": "The Plague",
+    
+    // Numbers Chapter 17
+    "Numbers 17:1": "Aaron's Staff Buds",
+    
+    // Numbers Chapter 18
+    "Numbers 18:1": "Duties and Privileges of Priests and Levites",
+    
+    // Numbers Chapter 19
+    "Numbers 19:1": "The Water of Purification",
+    
+    // Numbers Chapter 20
+    "Numbers 20:1": "Miriam's Death",
+    "Numbers 20:2": "Water from the Rock",
+    "Numbers 20:14": "Edom Refuses Passage",
+    "Numbers 20:22": "Aaron's Death",
+    
+    // Numbers Chapter 21
+    "Numbers 21:1": "Victory Over the Canaanites",
+    "Numbers 21:4": "The Bronze Serpent",
+    "Numbers 21:10": "Journey to Moab",
+    "Numbers 21:21": "Victory Over Sihon",
+    "Numbers 21:33": "Victory Over Og",
+    
+    // Numbers Chapter 22
+    "Numbers 22:1": "Balak Summons Balaam",
+    "Numbers 22:22": "Balaam's Donkey",
+    
+    // Numbers Chapter 23
+    "Numbers 23:1": "Balaam's First Oracle",
+    "Numbers 23:13": "Balaam's Second Oracle",
+    
+    // Numbers Chapter 24
+    "Numbers 24:1": "Balaam's Third Oracle",
+    "Numbers 24:15": "Balaam's Fourth Oracle",
+    
+    // Numbers Chapter 25
+    "Numbers 25:1": "Israel's Idolatry at Peor",
+    "Numbers 25:10": "Phinehas' Zeal",
+    
+    // Numbers Chapter 26
+    "Numbers 26:1": "The Second Census",
+    
+    // Numbers Chapter 27
+    "Numbers 27:1": "The Daughters of Zelophehad",
+    "Numbers 27:12": "Joshua to Succeed Moses",
+    
+    // Numbers Chapter 28
+    "Numbers 28:1": "Daily Offerings",
+    "Numbers 28:9": "Sabbath Offerings",
+    "Numbers 28:11": "Monthly Offerings",
+    "Numbers 28:16": "Passover and Unleavened Bread",
+    "Numbers 28:26": "Feast of Weeks",
+    
+    // Numbers Chapter 29
+    "Numbers 29:1": "Feast of Trumpets",
+    "Numbers 29:7": "Day of Atonement",
+    "Numbers 29:12": "Feast of Tabernacles",
+    
+    // Numbers Chapter 30
+    "Numbers 30:1": "Laws About Vows",
+    
+    // Numbers Chapter 31
+    "Numbers 31:1": "Vengeance on Midian",
+    "Numbers 31:25": "Division of the Spoil",
+    
+    // Numbers Chapter 32
+    "Numbers 32:1": "Reuben and Gad Settle East of Jordan",
+    
+    // Numbers Chapter 33
+    "Numbers 33:1": "Israel's Journey from Egypt",
+    "Numbers 33:50": "Instructions for Canaan",
+    
+    // Numbers Chapter 34
+    "Numbers 34:1": "The Boundaries of Canaan",
+    "Numbers 34:16": "Leaders to Divide the Land",
+    
+    // Numbers Chapter 35
+    "Numbers 35:1": "Cities for the Levites",
+    "Numbers 35:9": "Cities of Refuge",
+    
+    // Numbers Chapter 36
+    "Numbers 36:1": "Inheritance of Zelophehad's Daughters",
+    
+    // Deuteronomy Chapter 1
+    "Deuteronomy 1:1": "Moses Recounts Israel's History",
+    "Deuteronomy 1:6": "The Command to Leave Horeb",
+    "Deuteronomy 1:9": "The Appointment of Leaders",
+    "Deuteronomy 1:19": "Israel's Refusal to Enter Canaan",
+    
+    // Deuteronomy Chapter 2
+    "Deuteronomy 2:1": "Wandering in the Wilderness",
+    "Deuteronomy 2:24": "Victory Over Sihon",
+    
+    // Deuteronomy Chapter 3
+    "Deuteronomy 3:1": "Victory Over Og",
+    "Deuteronomy 3:12": "The Land Divided",
+    "Deuteronomy 3:23": "Moses Forbidden to Cross Jordan",
+    
+    // Deuteronomy Chapter 4
+    "Deuteronomy 4:1": "Obedience Commanded",
+    "Deuteronomy 4:15": "Warning Against Idolatry",
+    "Deuteronomy 4:41": "Cities of Refuge East of Jordan",
+    
+    // Deuteronomy Chapter 5
+    "Deuteronomy 5:1": "The Ten Commandments Repeated",
+    "Deuteronomy 5:22": "Moses the Mediator",
+    
+    // Deuteronomy Chapter 6
+    "Deuteronomy 6:1": "The Greatest Commandment",
+    "Deuteronomy 6:4": "Hear, O Israel: The LORD Our God Is One",
+    "Deuteronomy 6:10": "Warning Against Forgetting God",
+    "Deuteronomy 6:20": "Teach Your Children",
+    
+    // Deuteronomy Chapter 7
+    "Deuteronomy 7:1": "Destroy the Nations",
+    "Deuteronomy 7:7": "God's Love for Israel",
+    "Deuteronomy 7:12": "Blessings of Obedience",
+    
+    // Deuteronomy Chapter 8
+    "Deuteronomy 8:1": "Remember the LORD",
+    "Deuteronomy 8:11": "Warning Against Pride",
+    
+    // Deuteronomy Chapter 9
+    "Deuteronomy 9:1": "Not Because of Israel's Righteousness",
+    "Deuteronomy 9:7": "The Golden Calf Remembered",
+    "Deuteronomy 9:25": "Moses' Intercession",
+    
+    // Deuteronomy Chapter 10
+    "Deuteronomy 10:1": "New Tablets of Stone",
+    "Deuteronomy 10:12": "What Does the LORD Require?",
+    
+    // Deuteronomy Chapter 11
+    "Deuteronomy 11:1": "Love and Obey the LORD",
+    "Deuteronomy 11:26": "Blessing and Curse",
+    
+    // Deuteronomy Chapter 12
+    "Deuteronomy 12:1": "One Place for Worship",
+    "Deuteronomy 12:29": "Warning Against Idolatry",
+    
+    // Deuteronomy Chapter 13
+    "Deuteronomy 13:1": "Punishment for Idolatry",
+    
+    // Deuteronomy Chapter 14
+    "Deuteronomy 14:1": "Clean and Unclean Food",
+    "Deuteronomy 14:22": "Tithes",
+    
+    // Deuteronomy Chapter 15
+    "Deuteronomy 15:1": "The Sabbath Year",
+    "Deuteronomy 15:7": "Generosity to the Poor",
+    "Deuteronomy 15:12": "Release of Hebrew Servants",
+    "Deuteronomy 15:19": "Firstborn Animals",
+    
+    // Deuteronomy Chapter 16
+    "Deuteronomy 16:1": "Passover",
+    "Deuteronomy 16:9": "Feast of Weeks",
+    "Deuteronomy 16:13": "Feast of Tabernacles",
+    "Deuteronomy 16:18": "Judges and Officers",
+    
+    // Deuteronomy Chapter 17
+    "Deuteronomy 17:1": "Sacrifices Must Be Unblemished",
+    "Deuteronomy 17:2": "Punishment for Idolatry",
+    "Deuteronomy 17:8": "Difficult Cases",
+    "Deuteronomy 17:14": "Instructions About a King",
+    
+    // Deuteronomy Chapter 18
+    "Deuteronomy 18:1": "Provision for Priests and Levites",
+    "Deuteronomy 18:9": "Detestable Practices Forbidden",
+    "Deuteronomy 18:15": "A Prophet Like Moses",
+    
+    // Deuteronomy Chapter 19
+    "Deuteronomy 19:1": "Cities of Refuge",
+    "Deuteronomy 19:14": "Property Boundaries",
+    "Deuteronomy 19:15": "Witnesses",
+    
+    // Deuteronomy Chapter 20
+    "Deuteronomy 20:1": "Laws About Warfare",
+    
+    // Deuteronomy Chapter 21
+    "Deuteronomy 21:1": "Atonement for Unsolved Murder",
+    "Deuteronomy 21:10": "Marrying a Captive Woman",
+    "Deuteronomy 21:15": "Rights of the Firstborn",
+    "Deuteronomy 21:18": "A Rebellious Son",
+    "Deuteronomy 21:22": "Hanging on a Tree",
+    
+    // Deuteronomy Chapter 22
+    "Deuteronomy 22:1": "Various Laws",
+    
+    // Deuteronomy Chapter 23
+    "Deuteronomy 23:1": "Exclusion from the Assembly",
+    "Deuteronomy 23:9": "Uncleanness in the Camp",
+    "Deuteronomy 23:15": "Miscellaneous Laws",
+    
+    // Deuteronomy Chapter 24
+    "Deuteronomy 24:1": "Laws About Marriage and Divorce",
+    "Deuteronomy 24:5": "Miscellaneous Laws",
+    "Deuteronomy 24:14": "Justice for the Oppressed",
+    
+    // Deuteronomy Chapter 25
+    "Deuteronomy 25:1": "Fairness in Punishment",
+    "Deuteronomy 25:5": "Levirate Marriage",
+    "Deuteronomy 25:13": "Honest Weights",
+    "Deuteronomy 25:17": "Blot Out Amalek",
+    
+    // Deuteronomy Chapter 26
+    "Deuteronomy 26:1": "Firstfruits and Tithes",
+    "Deuteronomy 26:16": "You Are God's Treasured Possession",
+    
+    // Deuteronomy Chapter 27
+    "Deuteronomy 27:1": "The Altar on Mount Ebal",
+    "Deuteronomy 27:11": "Curses from Mount Ebal",
+    
+    // Deuteronomy Chapter 28
+    "Deuteronomy 28:1": "Blessings for Obedience",
+    "Deuteronomy 28:15": "Curses for Disobedience",
+    
+    // Deuteronomy Chapter 29
+    "Deuteronomy 29:1": "The Covenant in Moab",
+    "Deuteronomy 29:22": "Consequences of Breaking the Covenant",
+    
+    // Deuteronomy Chapter 30
+    "Deuteronomy 30:1": "Restoration Promised",
+    "Deuteronomy 30:11": "Choose Life",
+    
+    // Deuteronomy Chapter 31
+    "Deuteronomy 31:1": "Joshua to Succeed Moses",
+    "Deuteronomy 31:9": "The Reading of the Law",
+    "Deuteronomy 31:14": "Moses and Joshua Commissioned",
+    "Deuteronomy 31:24": "The Law Placed Beside the Ark",
+    
+    // Deuteronomy Chapter 32
+    "Deuteronomy 32:1": "The Song of Moses",
+    "Deuteronomy 32:48": "Moses to Die on Mount Nebo",
+    
+    // Deuteronomy Chapter 33
+    "Deuteronomy 33:1": "Moses Blesses the Tribes",
+    
+    // Deuteronomy Chapter 34
+    "Deuteronomy 34:1": "The Death of Moses",
+    "Deuteronomy 34:9": "Joshua Filled with Wisdom",
+    "Deuteronomy 34:10": "Moses' Greatness",
+    
+    // ===========================
+    // NEW TESTAMENT
+    // ===========================
+    
     // Matthew Chapter 1
     "Matthew 1:1": "The Record of Jesus Christ's Genealogy",
     "Matthew 1:2": "The Line from Abraham to David",
