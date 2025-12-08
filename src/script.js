@@ -6317,16 +6317,23 @@ function initializeNotesModal() {
         }
     });
     noteViewerCloseBtn?.addEventListener('click', hideNoteViewer);
-    // Close note viewer when clicking on overlay background
-    const noteViewerOverlay = document.getElementById('note-viewer-popup');
-    noteViewerOverlay?.addEventListener('click', (e) => {
-        if (e.target === noteViewerOverlay) {
-            hideNoteViewer();
-        }
-    });
     // Mobile drag functionality - expand/collapse bottom sheet
     const noteViewerModal = document.querySelector('.note-viewer-modal');
     const noteViewerHeader = document.querySelector('.note-viewer-header');
+    
+    // Prevent clicks inside modal from closing it (must be set first)
+    noteViewerModal?.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+    
+    // Close note viewer when clicking on overlay background only
+    const noteViewerOverlay = document.getElementById('note-viewer-popup');
+    noteViewerOverlay?.addEventListener('click', (e) => {
+        // Only close if clicking directly on overlay, not on modal or its children
+        if (e.target.classList.contains('note-viewer-overlay')) {
+            hideNoteViewer();
+        }
+    });
     let startY = 0;
     let currentY = 0;
     let isDragging = false;
