@@ -1251,6 +1251,9 @@ function displayChapter() {
     // Update pin button visibility for current chapter
     updatePinButtonBar();
     
+    // Refresh pinned verse display (in case data was loaded after initial render)
+    refreshPinnedVerseDisplay();
+    
     // Add click handlers to verse containers to show bottom sheet
     contentArea.querySelectorAll('.verse-container').forEach(container => {
         const verseLine = container.querySelector('.verse-line');
@@ -8602,6 +8605,8 @@ function initializePinnedVerses() {
                         }));
                         console.log('Pinned verses loaded from Supabase:', pinnedVerses.length);
                         updatePinButtonBar();
+                        // Refresh the current chapter display to show pinned icons
+                        refreshPinnedVerseDisplay();
                     }
                 }).catch(err => {
                     console.warn('Failed to load from Supabase:', err);
@@ -8625,6 +8630,34 @@ function isPinnedInCurrentChapter(verseNum) {
         v.chapter === currentChapter
     );
 }
+
+/**
+ * Refresh the pinned verse display for the current chapter
+ * This updates the styling of verses that are pinned after data is loaded
+ */
+function refreshPinnedVerseDisplay() {
+    const contentArea = document.querySelector('.scripture-text');
+    if (!contentArea) return;
+    
+    // Get all verse containers in the current chapter
+    contentArea.querySelectorAll('.verse-container').forEach(container => {
+        const verseNum = parseInt(container.dataset.verse);
+        
+        // Check if this verse is pinned
+        const isPinned = isPinnedInCurrentChapter(verseNum);
+        
+        if (isPinned) {
+            // Add the pinned-verse-highlight class if not already present
+            if (!container.classList.contains('pinned-verse-highlight')) {
+                container.classList.add('pinned-verse-highlight');
+            }
+        } else {
+            // Remove the class if the verse is not pinned
+            container.classList.remove('pinned-verse-highlight');
+        }
+    });
+}
+
 
 /**
  * Get all pinned verses for the current chapter
