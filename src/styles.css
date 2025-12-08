@@ -3620,8 +3620,7 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 0;
-    margin-bottom: 8px;
+    padding: 12px 0;
     cursor: grab;
     flex-shrink: 0;
 }
@@ -3753,22 +3752,24 @@ body.dark-theme .note-viewer-content::-webkit-scrollbar-thumb:hover {
 }
 
 .note-viewer-edit-btn {
-    background-color: transparent;
+    background-color: #e8f0fe;
     color: #1a73e8;
-    border: none;
-    padding: 4px 8px;
-    border-radius: 4px;
+    border: 1px solid #1a73e8;
+    padding: 6px 12px;
+    border-radius: 6px;
     cursor: pointer;
     display: none; /* Hidden by default, shown only in admin mode */
     align-items: center;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(26, 115, 232, 0.15);
 }
 
 .note-viewer-edit-btn:hover {
-    background-color: rgba(26, 115, 232, 0.1);
-    color: #1557b0;
+    background-color: #1a73e8;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(26, 115, 232, 0.3);
 }
 
 /* Dark theme for note viewer */
@@ -3802,13 +3803,16 @@ body.dark-theme .note-viewer-footer {
 }
 
 body.dark-theme .note-viewer-edit-btn {
-    background-color: transparent;
+    background-color: #1a3a52;
     color: #8ab4f8;
+    border-color: #8ab4f8;
+    box-shadow: 0 1px 3px rgba(138, 180, 248, 0.15);
 }
 
 body.dark-theme .note-viewer-edit-btn:hover {
-    background-color: rgba(138, 180, 248, 0.1);
-    color: #aecbfa;
+    background-color: #8ab4f8;
+    color: #1a1a1a;
+    box-shadow: 0 2px 6px rgba(138, 180, 248, 0.3);
 }
 
 
@@ -5949,11 +5953,16 @@ body.dark-theme .add-character-btn:hover {
     color: currentColor;
 }
 
+.memory-star-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
 .add-memory-action.memory-verse-active {
 }
 
-.add-memory-action.memory-verse-active svg {
-    color: #FFD700;
+.add-memory-action.memory-verse-active .memory-star-icon {
+    /* Emoji already colored, no need for color override */
     fill: #FFD700;
 }
 
@@ -8418,7 +8427,7 @@ body.dark-theme .verse-pinned-highlight {
 
 /* Pin icon styling */
 .pin-verse-action .pin-icon-emoji {
-    font-size: 1.7em;
+    font-size: 1.5em;
     transition: opacity 0.2s ease, transform 0.2s ease;
     display: inline-block;
     line-height: 1;

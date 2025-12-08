@@ -1912,11 +1912,7 @@ function showVerseActionsBottomSheet(verseNum) {
                     <span>Bookmark</span>
                 </button>
                 <button class="verse-bottom-action add-memory-action" data-verse="${verseNum}">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 21H9v-2a6 6 0 0 1 6 0v2Z"></path>
-                        <path d="M17 13a5 5 0 0 0-10 0"></path>
-                        <path d="M12 5V2m5 3l-3.5-3.5M7 8L3.5 4.5"></path>
-                    </svg>
+                    <span class="memory-star-icon" style="font-size: 20px;">☆</span>
                     <span>Memory</span>
                 </button>
                 <button class="verse-bottom-action share-verse-action" data-verse="${verseNum}">
@@ -2147,21 +2143,19 @@ function showVerseActionsBottomSheet(verseNum) {
     
     // Function to update memory verse button appearance
     const updateMemoryButtonAppearance = (isMemory) => {
-        const svgIcon = memoryBtn.querySelector('svg');
+        const starIcon = memoryBtn.querySelector('.memory-star-icon');
         
         if (isMemory) {
             memoryBtn.classList.add('memory-verse-active');
-            // Show filled star
-            if (svgIcon) {
-                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor"/>';
-                svgIcon.style.display = 'block';
+            // Show filled star emoji
+            if (starIcon) {
+                starIcon.textContent = '⭐';
             }
         } else {
             memoryBtn.classList.remove('memory-verse-active');
             // Show outline star
-            if (svgIcon) {
-                svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
-                svgIcon.style.display = 'block';
+            if (starIcon) {
+                starIcon.textContent = '☆';
             }
         }
     };
@@ -2297,11 +2291,7 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
                     <span>Bookmark</span>
                 </button>
                 <button class="verse-bottom-action add-memory-action">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 21H9v-2a6 6 0 0 1 6 0v2Z"></path>
-                        <path d="M17 13a5 5 0 0 0-10 0"></path>
-                        <path d="M12 5V2m5 3l-3.5-3.5M7 8L3.5 4.5"></path>
-                    </svg>
+                    <span class="memory-star-icon" style="font-size: 20px;">☆</span>
                     <span>Memory</span>
                 </button>
                 <button class="verse-bottom-action share-verses-action">
@@ -2405,11 +2395,10 @@ function showMultiVerseActionsBottomSheet(selectedVerses) {
         memoryBtn.style.opacity = '0.5';
         memoryBtn.style.cursor = 'not-allowed';
         
-        // Update to show filled star icon (active state)
-        const svgIcon = memoryBtn.querySelector('svg');
-        if (svgIcon) {
-            // Filled star icon
-            svgIcon.innerHTML = '<path d="M12 2l3.618 7.323L24 9.127l-6 5.845 1.418 8.268L12 20.309l-7.418 3.931L6 15.972 0 10.127l8.382-0.196L12 2z" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter"/>';
+        // Update to show filled star emoji (active state)
+        const starIcon = memoryBtn.querySelector('.memory-star-icon');
+        if (starIcon) {
+            starIcon.textContent = '⭐';
         }
         
         memoryBtn.addEventListener('click', async () => {
@@ -5935,6 +5924,51 @@ function initializeAndroidBottomSheetGestures() {
     });
 }
 
+// Handle paste events for notes textarea - preserves formatting like docs.html
+function handleNotesPaste(e) {
+    e.preventDefault();
+    const clipboardData = e.clipboardData || window.clipboardData;
+    const htmlData = clipboardData.getData('text/html');
+    const textData = clipboardData.getData('text/plain');
+    
+    if (htmlData) {
+        const cleaned = cleanPastedHtml(htmlData);
+        document.execCommand('insertHTML', false, cleaned);
+    } else if (textData) {
+        document.execCommand('insertHTML', false, textData.replace(/\n/g, '<br>'));
+    }
+}
+
+// Clean pasted HTML to preserve formatting but remove dangerous elements
+function cleanPastedHtml(html) {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    
+    // Remove only dangerous elements
+    div.querySelectorAll('script, style, meta, link').forEach(el => el.remove());
+    
+    // Clean attributes but preserve styling
+    div.querySelectorAll('*').forEach(el => {
+        const allowedAttrs = ['href', 'src', 'alt', 'title', 'style', 'class'];
+        Array.from(el.attributes).forEach(attr => {
+            if (!allowedAttrs.includes(attr.name)) {
+                el.removeAttribute(attr.name);
+            }
+        });
+        
+        // Preserve common formatting tags
+        if (el.tagName === 'SPAN' && !el.style.cssText && !el.className) {
+            // Unwrap empty spans
+            while (el.firstChild) {
+                el.parentNode.insertBefore(el.firstChild, el);
+            }
+            el.remove();
+        }
+    });
+    
+    return div.innerHTML;
+}
+
 async function saveNote() {
     const textarea = document.getElementById('notes-textarea');
     const noteText = textarea.innerHTML.trim();
@@ -5962,61 +5996,35 @@ async function saveNote() {
             verseNotes[noteKey].chapter = chapter;
             verseNotes[noteKey].verse = verse;
             
-            // Try to update existing note first (PATCH)
-            const updateResponse = await fetch(
-                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${chapter}&verse=eq.${verse}`,
+            // Use upsert (insert or update) with on_conflict to handle both create and update
+            const upsertResponse = await fetch(
+                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}`,
                 {
-                    method: 'PATCH',
+                    method: 'POST',
                     headers: {
                         'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
                         'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
                         'Content-Type': 'application/json',
-                        'Prefer': 'return=minimal'
+                        'Prefer': 'resolution=merge-duplicates'
                     },
                     body: JSON.stringify({
+                        book_file: bookFile,
+                        chapter: chapter,
+                        verse: verse,
                         text: noteText,
+                        timestamp: new Date().toISOString(),
                         updated_at: new Date().toISOString()
                     })
                 }
             );
             
-            console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
+            console.log('UPSERT Response:', { status: upsertResponse.status, ok: upsertResponse.ok });
             
-            // Check if PATCH succeeded (204 or 2xx status)
-            if (updateResponse.ok || updateResponse.status === 204) {
-                console.log('✅ Note updated:', `${bookFile} ${chapter}:${verse}`);
+            if (upsertResponse.ok || upsertResponse.status === 201) {
+                console.log('✅ Note saved:', `${bookFile} ${chapter}:${verse}`);
             } else {
-                // PATCH failed, try POST for new note
-                console.log('⚠️ PATCH failed, attempting POST...');
-                
-                const insertResponse = await fetch(
-                    `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}`,
-                    {
-                        method: 'POST',
-                        headers: {
-                            'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
-                            'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
-                            'Content-Type': 'application/json',
-                            'Prefer': 'return=minimal'
-                        },
-                        body: JSON.stringify({
-                            book_file: bookFile,
-                            chapter: chapter,
-                            verse: verse,
-                            text: noteText,
-                            timestamp: new Date().toISOString()
-                        })
-                    }
-                );
-                
-                console.log('POST Response:', { status: insertResponse.status, ok: insertResponse.ok });
-                
-                if (insertResponse.ok) {
-                    console.log('✅ Note created:', `${bookFile} ${chapter}:${verse}`);
-                } else {
-                    const error = await insertResponse.text();
-                    console.error('❌ Failed to save note:', error, insertResponse.status);
-                }
+                const error = await upsertResponse.text();
+                console.error('❌ Failed to save note:', error, upsertResponse.status);
             }
         } else {
             // Delete note if text is empty
@@ -6300,7 +6308,15 @@ function initializeNotesModal() {
     const closeBtn = document.querySelector('.notes-modal-close-btn');
     const saveBtn = document.getElementById('save-note-btn');
     const deleteBtn = document.getElementById('delete-note-btn');
+    const textarea = document.getElementById('notes-textarea');
+    
     if (!modal) return;
+    
+    // Add paste event listener to preserve formatting
+    if (textarea) {
+        textarea.addEventListener('paste', handleNotesPaste);
+    }
+    
     // Close modal handlers
     closeBtn?.addEventListener('click', closeNotesModal);
     modal.addEventListener('click', (e) => {
