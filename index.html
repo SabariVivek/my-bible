@@ -282,13 +282,13 @@
     <!-- Note Viewer Modal -->
     <div class="note-viewer-overlay" id="note-viewer-popup" style="display: none;">
         <div class="note-viewer-modal">
+            <div class="note-viewer-handle">
+                <div class="note-viewer-handle-bar"></div>
+            </div>
             <div class="note-viewer-header">
                 <span class="note-viewer-ref" id="note-viewer-ref"></span>
                 <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit Note">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
+                    Edit
                 </button>
                 <button class="note-viewer-close-btn" id="note-viewer-close-btn" title="Close">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -326,7 +326,7 @@
                 <div class="notes-verse-ref-wrapper">
                     <div class="notes-verse-ref" id="notes-verse-ref"></div>
                 </div>
-                <textarea id="notes-textarea" class="notes-textarea" placeholder="Type your note here..."></textarea>
+                <div id="notes-textarea" class="notes-textarea" contenteditable="true" data-placeholder="Type your note here..."></div>
                 <div class="notes-modal-actions">
                     <button id="delete-note-btn" class="notes-btn-delete" style="display: none;">Delete</button>
                     <button id="save-note-btn" class="notes-btn-save">Save Note</button>

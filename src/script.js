@@ -5684,11 +5684,11 @@ function openNotesModal(verseNum = null) {
     
     // Load existing note if available
     if (existingNote) {
-        textarea.value = existingNote.text || '';
+        textarea.innerHTML = existingNote.text || '';
         currentNoteColor = existingNote.color || null;
         deleteBtn.style.display = existingNote.text ? 'block' : 'none';
     } else {
-        textarea.value = '';
+        textarea.innerHTML = '';
         currentNoteColor = null;
         deleteBtn.style.display = 'none';
     }
@@ -5709,6 +5709,22 @@ function openNotesModal(verseNum = null) {
     requestAnimationFrame(() => {
         overlay.classList.add('visible');
         initializeAndroidBottomSheetGestures();
+        
+        // Focus textarea after modal is visible
+        setTimeout(() => {
+            if (textarea) {
+                textarea.focus();
+                // Move cursor to end of content
+                const range = document.createRange();
+                const sel = window.getSelection();
+                if (textarea.childNodes.length > 0) {
+                    range.selectNodeContents(textarea);
+                    range.collapse(false);
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                }
+            }
+        }, 300);
     });
 }
 
@@ -5781,8 +5797,18 @@ function initializeAndroidBottomSheetGestures() {
     const overlay = document.getElementById('notes-modal-overlay');
     const sheet = document.getElementById('notes-modal');
     const contentArea = document.getElementById('notes-modal-content');
+    const textarea = document.getElementById('notes-textarea');
     
     if (!overlay || !sheet || !contentArea) return;
+    
+    // Ensure textarea is always clickable and editable
+    if (textarea) {
+        textarea.style.pointerEvents = 'auto';
+        textarea.addEventListener('click', (e) => {
+            e.stopPropagation();
+            textarea.focus();
+        });
+    }
     
     let startY = 0;
     let currentY = 0;
@@ -5911,7 +5937,7 @@ function initializeAndroidBottomSheetGestures() {
 
 async function saveNote() {
     const textarea = document.getElementById('notes-textarea');
-    const noteText = textarea.value.trim();
+    const noteText = textarea.innerHTML.trim();
     const loadingEl = document.getElementById('notes-loading');
     if (!currentNoteVerse) return;
     // Show loading
@@ -6109,7 +6135,7 @@ function showNoteViewer(verseNum, note) {
     if (!popup) return;
     
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
-    content.textContent = note.text;
+    content.innerHTML = note.text;
     
     // Reset modal transform
     if (modal) {

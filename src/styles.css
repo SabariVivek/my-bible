@@ -3614,6 +3614,42 @@ body.modal-open {
     transition: none !important;
 }
 
+/* Handle bar for note viewer */
+.note-viewer-handle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    cursor: grab;
+    flex-shrink: 0;
+}
+
+.note-viewer-handle:active {
+    cursor: grabbing;
+}
+
+.note-viewer-handle-bar {
+    width: 40px;
+    height: 4px;
+    background: #d0d0d0;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+}
+
+.note-viewer-handle:hover .note-viewer-handle-bar {
+    background: #b0b0b0;
+}
+
+body.dark-theme .note-viewer-handle-bar {
+    background: #555;
+}
+
+body.dark-theme .note-viewer-handle:hover .note-viewer-handle-bar {
+    background: #666;
+}
+
 .note-viewer-header {
     display: flex;
     justify-content: space-between;
@@ -3718,27 +3754,21 @@ body.dark-theme .note-viewer-content::-webkit-scrollbar-thumb:hover {
 
 .note-viewer-edit-btn {
     background-color: transparent;
-    color: #5f6368;
+    color: #1a73e8;
     border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
     cursor: pointer;
     display: none; /* Hidden by default, shown only in admin mode */
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     transition: all 0.2s ease;
 }
 
 .note-viewer-edit-btn:hover {
-    background-color: #f1f3f4;
-}
-
-.note-viewer-edit-btn svg {
-    width: 16px;
-    height: 16px;
-    color: #5f6368;
+    background-color: rgba(26, 115, 232, 0.1);
+    color: #1557b0;
 }
 
 /* Dark theme for note viewer */
@@ -3772,16 +3802,13 @@ body.dark-theme .note-viewer-footer {
 }
 
 body.dark-theme .note-viewer-edit-btn {
-    background-color: #3c4043;
-    color: #e8eaed;
+    background-color: transparent;
+    color: #8ab4f8;
 }
 
 body.dark-theme .note-viewer-edit-btn:hover {
-    background-color: #5f6368;
-}
-
-body.dark-theme .note-viewer-edit-btn svg {
-    color: #e8eaed;
+    background-color: rgba(138, 180, 248, 0.1);
+    color: #aecbfa;
 }
 
 
@@ -3824,25 +3851,6 @@ body.dark-theme .note-viewer-edit-btn svg {
         display: none;
     }
 
-    /* Hide edit button by default (shown only in admin mode) */
-    .note-viewer-header .note-viewer-edit-btn {
-        display: none;
-    }
-
-    .note-viewer-header .note-viewer-edit-btn svg {
-        width: 15px;
-        height: 15px;
-        color: #5f6368;
-    }
-
-    body.dark-theme .note-viewer-header .note-viewer-edit-btn {
-        color: #9aa0a6;
-    }
-
-    body.dark-theme .note-viewer-header .note-viewer-edit-btn svg {
-        color: #9aa0a6;
-    }
-
     /* Content area */
     .note-viewer-content {
         padding: 16px 24px;
@@ -3865,46 +3873,7 @@ body.dark-theme .note-viewer-edit-btn svg {
         border-top-color: #3c4043;
     }
 
-    /* Small icon-only Edit button on right */
-    .note-viewer-edit-btn {
-        width: 36px;
-        height: 36px;
-        min-width: 36px;
-        min-height: 36px;
-        padding: 8px;
-        font-size: 0;
-        display: none; /* Hidden by default, shown only in admin mode */
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background: transparent;
-        border: 1.5px solid #dadce0;
-    }
 
-    .note-viewer-edit-btn:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-        border-color: #5f6368;
-    }
-
-    body.dark-theme .note-viewer-edit-btn {
-        border-color: #5f6368;
-    }
-
-    body.dark-theme .note-viewer-edit-btn:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-        border-color: #9aa0a6;
-    }
-
-    .note-viewer-edit-btn svg {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-        color: #5f6368;
-    }
-
-    body.dark-theme .note-viewer-edit-btn svg {
-        color: #9aa0a6;
-    }
 
 /* Loading Spinner for Notes */
 .notes-loading {
@@ -3983,8 +3952,6 @@ body.dark-theme .notes-spinner {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    touch-action: none;
-    user-select: none;
     z-index: 222;
     position: relative;
     overflow: hidden;
@@ -4150,6 +4117,9 @@ body.dark-theme .notes-sheet-handle:active .notes-handle-bar {
     overflow-x: hidden;
     flex: 1;
     -webkit-overflow-scrolling: touch;
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    pointer-events: auto !important;
 }
 
 /* Custom scrollbar for notes modal */
@@ -4234,20 +4204,36 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 .notes-textarea {
     width: 100%;
     min-height: 120px;
+    max-height: 400px;
     padding: 12px;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-family: inherit;
     font-size: 14px;
     color: #202124;
-    resize: vertical;
     margin-bottom: 20px;
     transition: border-color 0.2s ease;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    cursor: text !important;
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    pointer-events: auto !important;
+    touch-action: auto !important;
 }
 
 .notes-textarea:focus {
     outline: none;
     border-color: #1a73e8;
+}
+
+/* Placeholder for contenteditable */
+.notes-textarea:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    pointer-events: none;
+    display: block;
 }
 
 .notes-color-section h4 {
@@ -4515,6 +4501,10 @@ body.dark-theme .notes-textarea {
     background-color: #202124;
     border-color: #3c4043;
     color: #e8eaed;
+}
+
+body.dark-theme .notes-textarea:empty:before {
+    color: #666;
 }
 
 body.dark-theme .notes-textarea:focus {
