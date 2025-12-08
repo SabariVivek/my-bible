@@ -8592,29 +8592,29 @@ function initializePinnedVerses() {
         pinnedVerses = [];
     }
     
-    // Load from Supabase asynchronously (non-blocking)
+    // Load from Supabase immediately (no delay)
     if (window.loadPinnedVersesFromSupabase) {
-        setTimeout(() => {
-            try {
-                loadPinnedVersesFromSupabase().then(supabaseVerses => {
-                    if (supabaseVerses && supabaseVerses.length > 0) {
-                        pinnedVerses = supabaseVerses.map(v => ({
-                            verse: v.verse,
-                            book: v.book,
-                            chapter: v.chapter
-                        }));
-                        console.log('Pinned verses loaded from Supabase:', pinnedVerses.length);
-                        updatePinButtonBar();
-                        // Refresh the current chapter display to show pinned icons
-                        refreshPinnedVerseDisplay();
-                    }
-                }).catch(err => {
-                    console.warn('Failed to load from Supabase:', err);
-                });
-            } catch (e) {
-                console.error('Error calling loadPinnedVersesFromSupabase:', e);
-            }
-        }, 3000); // Wait 3 seconds after page load
+        try {
+            loadPinnedVersesFromSupabase().then(supabaseVerses => {
+                if (supabaseVerses && supabaseVerses.length > 0) {
+                    pinnedVerses = supabaseVerses.map(v => ({
+                        verse: v.verse,
+                        book: v.book,
+                        chapter: v.chapter
+                    }));
+                    // Also save to localStorage for faster loading next time
+                    localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
+                    console.log('Pinned verses loaded from Supabase:', pinnedVerses.length);
+                    updatePinButtonBar();
+                    // Refresh the current chapter display to show pinned icons
+                    refreshPinnedVerseDisplay();
+                }
+            }).catch(err => {
+                console.warn('Failed to load from Supabase:', err);
+            });
+        } catch (e) {
+            console.error('Error calling loadPinnedVersesFromSupabase:', e);
+        }
     }
 }
 
