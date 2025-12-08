@@ -3594,6 +3594,7 @@ body.modal-open {
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 1101; /* Above overlay to prevent blur from affecting modal */
     width: 90%;
     max-width: 600px;
     max-height: 80vh;
