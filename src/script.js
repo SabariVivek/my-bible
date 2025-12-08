@@ -9099,8 +9099,32 @@ function showPinnedVersesBottomSheet() {
                 const verseNum = parseInt(item.dataset.verse);
                 // Close sheet immediately
                 closePinnedSheet();
-                // Navigate to and highlight the verse in the main scripture area
-                scrollToVerseWithHighlight(verseNum);
+                
+                // Clear any previous selections
+                const contentArea = document.querySelector('.scripture-text');
+                if (contentArea) {
+                    contentArea.querySelectorAll('.verse-line').forEach(v => {
+                        v.classList.remove('left-pane-selected');
+                        v.style.backgroundColor = '';
+                    });
+                    contentArea.querySelectorAll('.verse-container').forEach(v => {
+                        v.classList.remove('left-pane-selected');
+                        v.style.backgroundColor = '';
+                    });
+                    
+                    // Add highlight to the selected verse (same as left pane)
+                    const verseLine = contentArea.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+                    const verseContainer = contentArea.querySelector(`.verse-container[data-verse="${verseNum}"]`);
+                    if (verseLine) {
+                        verseLine.classList.add('left-pane-selected');
+                    }
+                    if (verseContainer) {
+                        verseContainer.classList.add('left-pane-selected');
+                    }
+                }
+                
+                // Scroll to verse (same as left pane)
+                scrollToVerse(verseNum);
             }
         });
     });
