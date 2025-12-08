@@ -8909,19 +8909,33 @@ function showPinnedVersesBottomSheet() {
     const content = bottomSheet.querySelector('.pinned-verses-content');
     const body = bottomSheet.querySelector('.pinned-verses-body');
     
-    const closePinnedSheet = () => {
-        bottomSheet.classList.remove('visible');
-        document.body.classList.remove('pinned-verses-sheet-open');
-        document.body.style.overflow = '';
-        
-        // Clear inline transform after transition completes
-        setTimeout(() => {
-            content.style.transform = '';
-        }, 300); // Match the 0.3s transition duration
+    const closePinnedSheet = (isDragClose = false) => {
+        if (isDragClose) {
+            // When closing via drag, animate smoothly by setting transform
+            content.style.transform = 'translateY(100%)';
+            
+            // After animation completes, clean up
+            setTimeout(() => {
+                bottomSheet.classList.remove('visible');
+                document.body.classList.remove('pinned-verses-sheet-open');
+                document.body.style.overflow = '';
+                content.style.transform = '';
+            }, 300);
+        } else {
+            // Normal close (button/backdrop) - let CSS handle animation
+            bottomSheet.classList.remove('visible');
+            document.body.classList.remove('pinned-verses-sheet-open');
+            document.body.style.overflow = '';
+            
+            // Clear inline transform after transition completes
+            setTimeout(() => {
+                content.style.transform = '';
+            }, 300);
+        }
     };
     
-    closeBtn.addEventListener('click', closePinnedSheet);
-    backdrop.addEventListener('click', closePinnedSheet);
+    closeBtn.addEventListener('click', () => closePinnedSheet(false));
+    backdrop.addEventListener('click', () => closePinnedSheet(false));
     
     // Add drag-to-close functionality
     let startY = 0;
@@ -9004,7 +9018,7 @@ function showPinnedVersesBottomSheet() {
         const shouldClose = currentY > 150 || velocityY > 0.3;
 
         if (shouldClose) {
-            closePinnedSheet();
+            closePinnedSheet(true); // Pass true for drag close animation
         } else {
             content.style.transform = '';
         }
