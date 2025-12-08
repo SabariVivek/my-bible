@@ -1206,6 +1206,20 @@ function displayChapter() {
         const numB = parseInt(b.replace('verse_', ''));
         return numA - numB;
     });
+    
+    // Update verse count banner
+    const verseCount = verses.length;
+    const verseCountBanner = document.getElementById('verse-count-banner');
+    const verseCountText = verseCountBanner.querySelector('.verse-count-text');
+    const mainContentArea = document.querySelector('.content-area');
+    if (verseCountBanner && verseCountText) {
+        verseCountText.textContent = `${verseCount}  ${verseCount === 1 ? 'verse' : 'verses'}`;
+        verseCountBanner.style.display = 'block';
+        if (mainContentArea) {
+            mainContentArea.classList.add('with-verse-banner');
+        }
+    }
+    
     const bookName = bibleBooks[currentBook].name;
     if (currentLanguage === 'both' && currentTamilData) {
         // Display both Tamil and English

@@ -48,6 +48,39 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
     }
 }
 
+/* Verse Count Bookmark - Right side top bookmark design */
+.verse-count-banner-container {
+    position: absolute;
+    right: 0;
+    top: 95px;
+    z-index: 99;
+    display: none;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #0f3d19;
+    font-family: system-ui, sans-serif;
+    background: #b8f5c1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.verse-count-icon {
+    display: none;
+}
+
+.verse-count-text {
+    letter-spacing: 0;
+}
+
+body.dark-theme .verse-count-banner-container {
+    background: #2d5a34;
+    color: #b8f5c1;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.40);
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1515,7 +1548,12 @@ body.dark-theme .right-sidebar:hover::-webkit-scrollbar-thumb {
     padding: 2rem 1rem 2rem 2rem;
     background-color: #fefefe;
     position: relative;
-    transition: margin-right 0.3s ease;
+    transition: margin-right 0.3s ease, padding-top 0.3s ease;
+}
+
+/* No padding adjustment needed for right-side bookmark */
+.content-area.with-verse-banner {
+    padding-top: 2rem;
 }
 
 /* Mobile Chapter Header */
@@ -8501,9 +8539,9 @@ body.pinned-verses-sheet-open .bottom-nav {
     left: 0;
     right: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
