@@ -8911,16 +8911,22 @@ function showPinnedVersesBottomSheet() {
     
     const closePinnedSheet = (isDragClose = false) => {
         if (isDragClose) {
-            // When closing via drag, animate smoothly by setting transform
-            content.style.transform = 'translateY(100%)';
+            // When closing via drag, we need to animate from current position to off-screen
+            // The dragging class is still on, so we remove it and set transform in same frame
+            content.classList.remove('dragging');
             
-            // After animation completes, clean up
-            setTimeout(() => {
-                bottomSheet.classList.remove('visible');
-                document.body.classList.remove('pinned-verses-sheet-open');
-                document.body.style.overflow = '';
-                content.style.transform = '';
-            }, 300);
+            // Use requestAnimationFrame to ensure transition is enabled before animating
+            requestAnimationFrame(() => {
+                content.style.transform = 'translateY(100%)';
+                
+                // After animation completes, clean up
+                setTimeout(() => {
+                    bottomSheet.classList.remove('visible');
+                    document.body.classList.remove('pinned-verses-sheet-open');
+                    document.body.style.overflow = '';
+                    content.style.transform = '';
+                }, 300);
+            });
         } else {
             // Normal close (button/backdrop) - let CSS handle animation
             bottomSheet.classList.remove('visible');
@@ -9012,14 +9018,16 @@ function showPinnedVersesBottomSheet() {
         if (!isDragging) return;
 
         isDragging = false;
-        content.classList.remove('dragging');
 
         // Close if dragged down enough or velocity is high
         const shouldClose = currentY > 150 || velocityY > 0.3;
 
         if (shouldClose) {
-            closePinnedSheet(true); // Pass true for drag close animation
+            // Don't remove dragging class here - closePinnedSheet will handle it
+            closePinnedSheet(true);
         } else {
+            // Snap back - remove dragging class to enable transition
+            content.classList.remove('dragging');
             content.style.transform = '';
         }
     }
