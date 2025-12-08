@@ -946,6 +946,1892 @@ const verseHeaders = {
     "Deuteronomy 34:9": "Joshua Filled with Wisdom",
     "Deuteronomy 34:10": "Moses' Greatness",
     
+    // Joshua Chapter 1
+    "Joshua 1:1": "God Commissions Joshua",
+    "Joshua 1:10": "Preparations to Cross Jordan",
+    
+    // Joshua Chapter 2
+    "Joshua 2:1": "Rahab and the Spies",
+    "Joshua 2:15": "Rahab Helps the Spies Escape",
+    "Joshua 2:22": "The Spies Return",
+    
+    // Joshua Chapter 3
+    "Joshua 3:1": "Crossing the Jordan",
+    "Joshua 3:14": "The Waters of Jordan Cut Off",
+    
+    // Joshua Chapter 4
+    "Joshua 4:1": "Twelve Stones Taken from Jordan",
+    "Joshua 4:14": "The LORD Exalts Joshua",
+    "Joshua 4:19": "The Stones Set Up at Gilgal",
+    
+    // Joshua Chapter 5
+    "Joshua 5:1": "Circumcision at Gilgal",
+    "Joshua 5:10": "The First Passover in Canaan",
+    "Joshua 5:13": "The Commander of the LORD's Army",
+    
+    // Joshua Chapter 6
+    "Joshua 6:1": "The Fall of Jericho",
+    "Joshua 6:15": "The Seventh Day",
+    "Joshua 6:22": "Rahab and Her Family Spared",
+    "Joshua 6:26": "The Curse on Jericho",
+    
+    // Joshua Chapter 7
+    "Joshua 7:1": "Achan's Sin",
+    "Joshua 7:2": "Defeat at Ai",
+    "Joshua 7:6": "Joshua's Prayer",
+    "Joshua 7:10": "Achan Discovered and Punished",
+    
+    // Joshua Chapter 8
+    "Joshua 8:1": "The Conquest of Ai",
+    "Joshua 8:30": "The Altar on Mount Ebal",
+    
+    // Joshua Chapter 9
+    "Joshua 9:1": "The Gibeonite Deception",
+    "Joshua 9:16": "The Deception Discovered",
+    
+    // Joshua Chapter 10
+    "Joshua 10:1": "Five Kings Attack Gibeon",
+    "Joshua 10:6": "Joshua Defeats the Five Kings",
+    "Joshua 10:12": "The Sun Stands Still",
+    "Joshua 10:16": "The Five Kings Executed",
+    "Joshua 10:28": "Conquest of Southern Canaan",
+    
+    // Joshua Chapter 11
+    "Joshua 11:1": "Northern Kings Defeated",
+    "Joshua 11:16": "Summary of Conquests",
+    
+    // Joshua Chapter 12
+    "Joshua 12:1": "Kings Defeated East of Jordan",
+    "Joshua 12:7": "Kings Defeated West of Jordan",
+    
+    // Joshua Chapter 13
+    "Joshua 13:1": "Land Still to Be Conquered",
+    "Joshua 13:8": "The Land East of Jordan",
+    "Joshua 13:15": "Reuben's Inheritance",
+    "Joshua 13:24": "Gad's Inheritance",
+    "Joshua 13:29": "Half-Tribe of Manasseh's Inheritance",
+    
+    // Joshua Chapter 14
+    "Joshua 14:1": "The Land West of Jordan",
+    "Joshua 14:6": "Caleb's Inheritance",
+    
+    // Joshua Chapter 15
+    "Joshua 15:1": "Judah's Inheritance",
+    "Joshua 15:13": "Caleb Conquers Hebron",
+    "Joshua 15:20": "The Cities of Judah",
+    
+    // Joshua Chapter 16
+    "Joshua 16:1": "Ephraim's Inheritance",
+    
+    // Joshua Chapter 17
+    "Joshua 17:1": "Manasseh's Inheritance",
+    "Joshua 17:14": "More Land for Joseph's Tribes",
+    
+    // Joshua Chapter 18
+    "Joshua 18:1": "The Tabernacle at Shiloh",
+    "Joshua 18:2": "Seven Tribes Receive Their Land",
+    "Joshua 18:11": "Benjamin's Inheritance",
+    
+    // Joshua Chapter 19
+    "Joshua 19:1": "Simeon's Inheritance",
+    "Joshua 19:10": "Zebulun's Inheritance",
+    "Joshua 19:17": "Issachar's Inheritance",
+    "Joshua 19:24": "Asher's Inheritance",
+    "Joshua 19:32": "Naphtali's Inheritance",
+    "Joshua 19:40": "Dan's Inheritance",
+    "Joshua 19:49": "Joshua's Inheritance",
+    
+    // Joshua Chapter 20
+    "Joshua 20:1": "The Cities of Refuge",
+    
+    // Joshua Chapter 21
+    "Joshua 21:1": "Cities for the Levites",
+    "Joshua 21:43": "The LORD Gives Rest to Israel",
+    
+    // Joshua Chapter 22
+    "Joshua 22:1": "Eastern Tribes Return Home",
+    "Joshua 22:10": "The Altar of Witness",
+    "Joshua 22:21": "The Eastern Tribes Explain",
+    
+    // Joshua Chapter 23
+    "Joshua 23:1": "Joshua's Farewell to Leaders",
+    
+    // Joshua Chapter 24
+    "Joshua 24:1": "The Covenant at Shechem",
+    "Joshua 24:14": "Choose This Day Whom You Will Serve",
+    "Joshua 24:29": "Joshua's Death",
+    
+    // Judges Chapter 1
+    "Judges 1:1": "Judah and Simeon Fight the Canaanites",
+    "Judges 1:22": "The House of Joseph Captures Bethel",
+    "Judges 1:27": "Failure to Complete the Conquest",
+    
+    // Judges Chapter 2
+    "Judges 2:1": "The Angel of the LORD at Bokim",
+    "Judges 2:6": "The Death of Joshua",
+    "Judges 2:10": "Israel's Disobedience",
+    "Judges 2:16": "The Pattern of the Judges",
+    
+    // Judges Chapter 3
+    "Judges 3:1": "Nations Left to Test Israel",
+    "Judges 3:7": "Othniel",
+    "Judges 3:12": "Ehud",
+    "Judges 3:31": "Shamgar",
+    
+    // Judges Chapter 4
+    "Judges 4:1": "Deborah and Barak",
+    "Judges 4:17": "Jael Kills Sisera",
+    
+    // Judges Chapter 5
+    "Judges 5:1": "The Song of Deborah",
+    
+    // Judges Chapter 6
+    "Judges 6:1": "Midian Oppresses Israel",
+    "Judges 6:11": "The Call of Gideon",
+    "Judges 6:25": "Gideon Destroys Baal's Altar",
+    "Judges 6:33": "Gideon Asks for a Sign",
+    
+    // Judges Chapter 7
+    "Judges 7:1": "Gideon's Army Reduced",
+    "Judges 7:9": "Gideon Reassured",
+    "Judges 7:15": "Gideon's Victory Over Midian",
+    
+    // Judges Chapter 8
+    "Judges 8:1": "Ephraim's Complaint",
+    "Judges 8:4": "Pursuit of Zebah and Zalmunna",
+    "Judges 8:22": "Gideon's Ephod",
+    "Judges 8:29": "Gideon's Death",
+    
+    // Judges Chapter 9
+    "Judges 9:1": "Abimelech Becomes King",
+    "Judges 9:7": "Jotham's Parable",
+    "Judges 9:22": "Gaal's Rebellion",
+    "Judges 9:50": "Abimelech's Death",
+    
+    // Judges Chapter 10
+    "Judges 10:1": "Tola and Jair",
+    "Judges 10:6": "Israel Oppressed Again",
+    
+    // Judges Chapter 11
+    "Judges 11:1": "Jephthah Called to Lead",
+    "Judges 11:12": "Jephthah Negotiates",
+    "Judges 11:29": "Jephthah's Vow",
+    "Judges 11:34": "Jephthah's Daughter",
+    
+    // Judges Chapter 12
+    "Judges 12:1": "Ephraim's Jealousy",
+    "Judges 12:8": "Ibzan, Elon, and Abdon",
+    
+    // Judges Chapter 13
+    "Judges 13:1": "The Birth of Samson",
+    "Judges 13:24": "Samson's Birth",
+    
+    // Judges Chapter 14
+    "Judges 14:1": "Samson's Marriage",
+    "Judges 14:10": "Samson's Riddle",
+    
+    // Judges Chapter 15
+    "Judges 15:1": "Samson's Revenge",
+    "Judges 15:9": "Samson Defeats the Philistines",
+    
+    // Judges Chapter 16
+    "Judges 16:1": "Samson at Gaza",
+    "Judges 16:4": "Samson and Delilah",
+    "Judges 16:23": "Samson's Death",
+    
+    // Judges Chapter 17
+    "Judges 17:1": "Micah's Idols",
+    
+    // Judges Chapter 18
+    "Judges 18:1": "The Danites Seek Territory",
+    "Judges 18:14": "The Danites Take Micah's Idols",
+    
+    // Judges Chapter 19
+    "Judges 19:1": "The Levite and His Concubine",
+    "Judges 19:22": "The Crime at Gibeah",
+    
+    // Judges Chapter 20
+    "Judges 20:1": "War Against Benjamin",
+    "Judges 20:29": "Benjamin Defeated",
+    
+    // Judges Chapter 21
+    "Judges 21:1": "Wives for the Benjamites",
+    
+    // Ruth Chapter 1
+    "Ruth 1:1": "Naomi and Her Family in Moab",
+    "Ruth 1:6": "Naomi Returns with Ruth",
+    "Ruth 1:19": "Naomi and Ruth Arrive in Bethlehem",
+    
+    // Ruth Chapter 2
+    "Ruth 2:1": "Ruth Meets Boaz",
+    "Ruth 2:17": "Ruth Returns to Naomi",
+    
+    // Ruth Chapter 3
+    "Ruth 3:1": "Ruth's Appeal to Boaz",
+    "Ruth 3:14": "Ruth Returns to Naomi",
+    
+    // Ruth Chapter 4
+    "Ruth 4:1": "Boaz Redeems Ruth",
+    "Ruth 4:13": "Boaz Marries Ruth",
+    "Ruth 4:18": "The Genealogy of David",
+    
+    // 1 Samuel Chapter 1
+    "1 Samuel 1:1": "Elkanah and His Wives",
+    "1 Samuel 1:9": "Hannah's Prayer",
+    "1 Samuel 1:19": "The Birth of Samuel",
+    
+    // 1 Samuel Chapter 2
+    "1 Samuel 2:1": "Hannah's Prayer of Thanksgiving",
+    "1 Samuel 2:12": "Eli's Wicked Sons",
+    "1 Samuel 2:18": "Samuel's Ministry",
+    "1 Samuel 2:22": "Eli Rebukes His Sons",
+    "1 Samuel 2:27": "A Prophecy Against Eli's House",
+    
+    // 1 Samuel Chapter 3
+    "1 Samuel 3:1": "The LORD Calls Samuel",
+    "1 Samuel 3:11": "The LORD's Message to Samuel",
+    "1 Samuel 3:19": "Samuel Established as a Prophet",
+    
+    // 1 Samuel Chapter 4
+    "1 Samuel 4:1": "The Ark Captured by the Philistines",
+    "1 Samuel 4:12": "The Death of Eli",
+    
+    // 1 Samuel Chapter 5
+    "1 Samuel 5:1": "The Ark in Philistine Territory",
+    
+    // 1 Samuel Chapter 6
+    "1 Samuel 6:1": "The Ark Returned to Israel",
+    "1 Samuel 6:19": "Judgment at Beth Shemesh",
+    
+    // 1 Samuel Chapter 7
+    "1 Samuel 7:1": "The Ark at Kiriath Jearim",
+    "1 Samuel 7:3": "Samuel Leads Israel to Victory",
+    "1 Samuel 7:15": "Samuel as Judge",
+    
+    // 1 Samuel Chapter 8
+    "1 Samuel 8:1": "Israel Demands a King",
+    "1 Samuel 8:10": "Samuel Warns the People",
+    
+    // 1 Samuel Chapter 9
+    "1 Samuel 9:1": "Saul Meets Samuel",
+    "1 Samuel 9:15": "The LORD Reveals His Plan",
+    
+    // 1 Samuel Chapter 10
+    "1 Samuel 10:1": "Samuel Anoints Saul",
+    "1 Samuel 10:9": "Saul Prophesies",
+    "1 Samuel 10:17": "Saul Chosen as King",
+    
+    // 1 Samuel Chapter 11
+    "1 Samuel 11:1": "Saul Defeats the Ammonites",
+    "1 Samuel 11:12": "Saul Confirmed as King",
+    
+    // 1 Samuel Chapter 12
+    "1 Samuel 12:1": "Samuel's Farewell Speech",
+    
+    // 1 Samuel Chapter 13
+    "1 Samuel 13:1": "Saul's Unlawful Sacrifice",
+    "1 Samuel 13:15": "Israel Without Weapons",
+    
+    // 1 Samuel Chapter 14
+    "1 Samuel 14:1": "Jonathan's Victory",
+    "1 Samuel 14:24": "Saul's Rash Oath",
+    "1 Samuel 14:47": "Saul's Military Victories",
+    
+    // 1 Samuel Chapter 15
+    "1 Samuel 15:1": "Saul Defeats Amalek",
+    "1 Samuel 15:10": "Saul Rejected as King",
+    "1 Samuel 15:32": "Samuel Kills Agag",
+    
+    // 1 Samuel Chapter 16
+    "1 Samuel 16:1": "David Anointed King",
+    "1 Samuel 16:14": "David Serves Saul",
+    
+    // 1 Samuel Chapter 17
+    "1 Samuel 17:1": "Goliath's Challenge",
+    "1 Samuel 17:12": "David Accepts the Challenge",
+    "1 Samuel 17:41": "David Kills Goliath",
+    
+    // 1 Samuel Chapter 18
+    "1 Samuel 18:1": "Jonathan and David's Friendship",
+    "1 Samuel 18:6": "Saul's Jealousy of David",
+    "1 Samuel 18:17": "David Marries Michal",
+    
+    // 1 Samuel Chapter 19
+    "1 Samuel 19:1": "Saul Tries to Kill David",
+    "1 Samuel 19:8": "Michal Saves David",
+    "1 Samuel 19:18": "David Flees to Samuel",
+    
+    // 1 Samuel Chapter 20
+    "1 Samuel 20:1": "Jonathan Helps David",
+    "1 Samuel 20:24": "Jonathan Confirms Saul's Intent",
+    "1 Samuel 20:41": "David and Jonathan's Farewell",
+    
+    // 1 Samuel Chapter 21
+    "1 Samuel 21:1": "David at Nob",
+    "1 Samuel 21:10": "David at Gath",
+    
+    // 1 Samuel Chapter 22
+    "1 Samuel 22:1": "David at Adullam and Mizpah",
+    "1 Samuel 22:6": "Saul Kills the Priests of Nob",
+    "1 Samuel 22:20": "Abiathar Escapes to David",
+    
+    // 1 Samuel Chapter 23
+    "1 Samuel 23:1": "David Saves Keilah",
+    "1 Samuel 23:14": "Saul Pursues David",
+    "1 Samuel 23:19": "David Betrayed by the Ziphites",
+    
+    // 1 Samuel Chapter 24
+    "1 Samuel 24:1": "David Spares Saul's Life",
+    "1 Samuel 24:16": "Saul's Remorse",
+    
+    // 1 Samuel Chapter 25
+    "1 Samuel 25:1": "The Death of Samuel",
+    "1 Samuel 25:2": "David, Nabal, and Abigail",
+    "1 Samuel 25:39": "David Marries Abigail",
+    
+    // 1 Samuel Chapter 26
+    "1 Samuel 26:1": "David Spares Saul Again",
+    "1 Samuel 26:17": "David Rebukes Saul",
+    
+    // 1 Samuel Chapter 27
+    "1 Samuel 27:1": "David Lives Among the Philistines",
+    
+    // 1 Samuel Chapter 28
+    "1 Samuel 28:1": "Saul and the Medium at Endor",
+    "1 Samuel 28:15": "Samuel's Spirit Appears",
+    
+    // 1 Samuel Chapter 29
+    "1 Samuel 29:1": "The Philistines Reject David",
+    
+    // 1 Samuel Chapter 30
+    "1 Samuel 30:1": "David Defeats the Amalekites",
+    "1 Samuel 30:21": "The Spoil Divided",
+    
+    // 1 Samuel Chapter 31
+    "1 Samuel 31:1": "Saul's Death",
+    "1 Samuel 31:11": "The Men of Jabesh Gilead Rescue Saul's Body",
+    
+    // 2 Samuel Chapter 1
+    "2 Samuel 1:1": "David Learns of Saul's Death",
+    "2 Samuel 1:17": "David's Lament for Saul and Jonathan",
+    
+    // 2 Samuel Chapter 2
+    "2 Samuel 2:1": "David Anointed King of Judah",
+    "2 Samuel 2:8": "Ish-bosheth Made King of Israel",
+    "2 Samuel 2:12": "The Battle of Gibeon",
+    "2 Samuel 2:18": "Asahel Killed",
+    
+    // 2 Samuel Chapter 3
+    "2 Samuel 3:1": "David's Sons",
+    "2 Samuel 3:6": "Abner Defects to David",
+    "2 Samuel 3:22": "Joab Murders Abner",
+    "2 Samuel 3:31": "David Mourns Abner",
+    
+    // 2 Samuel Chapter 4
+    "2 Samuel 4:1": "Ish-bosheth Murdered",
+    
+    // 2 Samuel Chapter 5
+    "2 Samuel 5:1": "David Anointed King of Israel",
+    "2 Samuel 5:6": "David Conquers Jerusalem",
+    "2 Samuel 5:11": "David's Palace and Family",
+    "2 Samuel 5:17": "David Defeats the Philistines",
+    
+    // 2 Samuel Chapter 6
+    "2 Samuel 6:1": "The Ark Brought to Jerusalem",
+    "2 Samuel 6:12": "David Dances Before the LORD",
+    "2 Samuel 6:20": "Michal's Contempt",
+    
+    // 2 Samuel Chapter 7
+    "2 Samuel 7:1": "God's Covenant with David",
+    "2 Samuel 7:18": "David's Prayer",
+    
+    // 2 Samuel Chapter 8
+    "2 Samuel 8:1": "David's Military Victories",
+    "2 Samuel 8:15": "David's Officials",
+    
+    // 2 Samuel Chapter 9
+    "2 Samuel 9:1": "David's Kindness to Mephibosheth",
+    
+    // 2 Samuel Chapter 10
+    "2 Samuel 10:1": "David Defeats Ammon and Aram",
+    
+    // 2 Samuel Chapter 11
+    "2 Samuel 11:1": "David and Bathsheba",
+    "2 Samuel 11:14": "David's Plot Against Uriah",
+    "2 Samuel 11:26": "David Marries Bathsheba",
+    
+    // 2 Samuel Chapter 12
+    "2 Samuel 12:1": "Nathan Rebukes David",
+    "2 Samuel 12:13": "David's Son Dies",
+    "2 Samuel 12:24": "Solomon Is Born",
+    "2 Samuel 12:26": "David Captures Rabbah",
+    
+    // 2 Samuel Chapter 13
+    "2 Samuel 13:1": "Amnon and Tamar",
+    "2 Samuel 13:23": "Absalom Kills Amnon",
+    
+    // 2 Samuel Chapter 14
+    "2 Samuel 14:1": "Absalom Returns",
+    "2 Samuel 14:25": "Absalom's Appearance",
+    "2 Samuel 14:28": "Absalom Reconciled to David",
+    
+    // 2 Samuel Chapter 15
+    "2 Samuel 15:1": "Absalom's Conspiracy",
+    "2 Samuel 15:13": "David Flees Jerusalem",
+    
+    // 2 Samuel Chapter 16
+    "2 Samuel 16:1": "Ziba Deceives David",
+    "2 Samuel 16:5": "Shimei Curses David",
+    "2 Samuel 16:15": "Absalom Enters Jerusalem",
+    
+    // 2 Samuel Chapter 17
+    "2 Samuel 17:1": "Ahithophel's Counsel",
+    "2 Samuel 17:15": "Hushai Warns David",
+    "2 Samuel 17:23": "Ahithophel Hangs Himself",
+    
+    // 2 Samuel Chapter 18
+    "2 Samuel 18:1": "Absalom Defeated and Killed",
+    "2 Samuel 18:19": "David Mourns Absalom",
+    
+    // 2 Samuel Chapter 19
+    "2 Samuel 19:1": "Joab Rebukes David",
+    "2 Samuel 19:9": "David Returns to Jerusalem",
+    "2 Samuel 19:24": "Mephibosheth Meets David",
+    "2 Samuel 19:31": "David's Kindness to Barzillai",
+    "2 Samuel 19:40": "Israel and Judah Quarrel",
+    
+    // 2 Samuel Chapter 20
+    "2 Samuel 20:1": "Sheba's Rebellion",
+    "2 Samuel 20:14": "Sheba Beheaded",
+    "2 Samuel 20:23": "David's Officials",
+    
+    // 2 Samuel Chapter 21
+    "2 Samuel 21:1": "The Gibeonites Avenged",
+    "2 Samuel 21:15": "Wars with the Philistines",
+    
+    // 2 Samuel Chapter 22
+    "2 Samuel 22:1": "David's Song of Deliverance",
+    
+    // 2 Samuel Chapter 23
+    "2 Samuel 23:1": "David's Last Words",
+    "2 Samuel 23:8": "David's Mighty Men",
+    
+    // 2 Samuel Chapter 24
+    "2 Samuel 24:1": "David's Census",
+    "2 Samuel 24:10": "David's Repentance",
+    "2 Samuel 24:18": "David Builds an Altar",
+    
+    // 1 Kings Chapter 1
+    "1 Kings 1:1": "Adonijah Seeks the Throne",
+    "1 Kings 1:11": "Nathan and Bathsheba's Plan",
+    "1 Kings 1:28": "David Proclaims Solomon King",
+    "1 Kings 1:41": "Adonijah's Submission",
+    
+    // 1 Kings Chapter 2
+    "1 Kings 2:1": "David's Charge to Solomon",
+    "1 Kings 2:10": "David's Death",
+    "1 Kings 2:13": "Solomon Consolidates His Rule",
+    
+    // 1 Kings Chapter 3
+    "1 Kings 3:1": "Solomon Marries Pharaoh's Daughter",
+    "1 Kings 3:3": "Solomon Asks for Wisdom",
+    "1 Kings 3:16": "Solomon's Wise Judgment",
+    
+    // 1 Kings Chapter 4
+    "1 Kings 4:1": "Solomon's Officials",
+    "1 Kings 4:20": "Solomon's Prosperity",
+    "1 Kings 4:29": "Solomon's Wisdom",
+    
+    // 1 Kings Chapter 5
+    "1 Kings 5:1": "Preparations for the Temple",
+    
+    // 1 Kings Chapter 6
+    "1 Kings 6:1": "Solomon Builds the Temple",
+    "1 Kings 6:11": "God's Promise to Solomon",
+    "1 Kings 6:14": "The Temple Completed",
+    
+    // 1 Kings Chapter 7
+    "1 Kings 7:1": "Solomon's Palace",
+    "1 Kings 7:13": "The Temple Furnishings",
+    
+    // 1 Kings Chapter 8
+    "1 Kings 8:1": "The Ark Brought to the Temple",
+    "1 Kings 8:12": "Solomon's Prayer of Dedication",
+    "1 Kings 8:62": "The Dedication Sacrifice",
+    
+    // 1 Kings Chapter 9
+    "1 Kings 9:1": "God's Second Appearance to Solomon",
+    "1 Kings 9:10": "Solomon's Other Activities",
+    
+    // 1 Kings Chapter 10
+    "1 Kings 10:1": "The Queen of Sheba",
+    "1 Kings 10:14": "Solomon's Wealth",
+    
+    // 1 Kings Chapter 11
+    "1 Kings 11:1": "Solomon's Wives Turn His Heart",
+    "1 Kings 11:9": "God Raises Up Adversaries",
+    "1 Kings 11:26": "Jeroboam Rebels",
+    "1 Kings 11:41": "Solomon's Death",
+    
+    // 1 Kings Chapter 12
+    "1 Kings 12:1": "The Kingdom Divided",
+    "1 Kings 12:25": "Jeroboam's Golden Calves",
+    
+    // 1 Kings Chapter 13
+    "1 Kings 13:1": "A Man of God from Judah",
+    "1 Kings 13:11": "The Old Prophet's Lie",
+    "1 Kings 13:33": "Jeroboam's Continued Sin",
+    
+    // 1 Kings Chapter 14
+    "1 Kings 14:1": "Jeroboam's Son Dies",
+    "1 Kings 14:21": "Rehoboam King of Judah",
+    
+    // 1 Kings Chapter 15
+    "1 Kings 15:1": "Abijam King of Judah",
+    "1 Kings 15:9": "Asa King of Judah",
+    "1 Kings 15:25": "Nadab King of Israel",
+    "1 Kings 15:33": "Baasha King of Israel",
+    
+    // 1 Kings Chapter 16
+    "1 Kings 16:1": "Prophecy Against Baasha",
+    "1 Kings 16:8": "Elah King of Israel",
+    "1 Kings 16:15": "Zimri King of Israel",
+    "1 Kings 16:21": "Omri King of Israel",
+    "1 Kings 16:29": "Ahab King of Israel",
+    
+    // 1 Kings Chapter 17
+    "1 Kings 17:1": "Elijah Fed by Ravens",
+    "1 Kings 17:8": "The Widow of Zarephath",
+    "1 Kings 17:17": "Elijah Raises the Widow's Son",
+    
+    // 1 Kings Chapter 18
+    "1 Kings 18:1": "Elijah Returns to Ahab",
+    "1 Kings 18:16": "Elijah Challenges the Prophets of Baal",
+    "1 Kings 18:41": "The LORD Sends Rain",
+    
+    // 1 Kings Chapter 19
+    "1 Kings 19:1": "Elijah Flees from Jezebel",
+    "1 Kings 19:9": "The LORD Appears to Elijah",
+    "1 Kings 19:19": "The Call of Elisha",
+    
+    // 1 Kings Chapter 20
+    "1 Kings 20:1": "Ben-Hadad Attacks Samaria",
+    "1 Kings 20:13": "Israel Defeats Aram",
+    "1 Kings 20:31": "Ahab Spares Ben-Hadad",
+    
+    // 1 Kings Chapter 21
+    "1 Kings 21:1": "Naboth's Vineyard",
+    "1 Kings 21:17": "Elijah Pronounces Judgment on Ahab",
+    
+    // 1 Kings Chapter 22
+    "1 Kings 22:1": "Micaiah Prophesies Against Ahab",
+    "1 Kings 22:29": "Ahab Killed at Ramoth Gilead",
+    "1 Kings 22:41": "Jehoshaphat King of Judah",
+    "1 Kings 22:51": "Ahaziah King of Israel",
+    
+    // 2 Kings Chapter 1
+    "2 Kings 1:1": "Ahaziah Seeks Baal-Zebub",
+    "2 Kings 1:9": "Fire from Heaven",
+    
+    // 2 Kings Chapter 2
+    "2 Kings 2:1": "Elijah Taken Up to Heaven",
+    "2 Kings 2:13": "Elisha's Ministry Begins",
+    "2 Kings 2:19": "Elisha Purifies the Water",
+    "2 Kings 2:23": "Elisha Mocked and Bears",
+    
+    // 2 Kings Chapter 3
+    "2 Kings 3:1": "Joram King of Israel",
+    "2 Kings 3:4": "Moab Rebels Against Israel",
+    
+    // 2 Kings Chapter 4
+    "2 Kings 4:1": "The Widow's Oil",
+    "2 Kings 4:8": "The Shunammite Woman's Son",
+    "2 Kings 4:38": "Death in the Pot",
+    "2 Kings 4:42": "Feeding of a Hundred Men",
+    
+    // 2 Kings Chapter 5
+    "2 Kings 5:1": "Naaman Healed of Leprosy",
+    "2 Kings 5:20": "Gehazi's Greed and Leprosy",
+    
+    // 2 Kings Chapter 6
+    "2 Kings 6:1": "The Ax Head Floats",
+    "2 Kings 6:8": "The Blinded Arameans",
+    "2 Kings 6:24": "The Siege of Samaria",
+    
+    // 2 Kings Chapter 7
+    "2 Kings 7:1": "Elisha Prophesies Deliverance",
+    "2 Kings 7:3": "The Lepers Discover the Abandoned Camp",
+    
+    // 2 Kings Chapter 8
+    "2 Kings 8:1": "The Shunammite's Land Restored",
+    "2 Kings 8:7": "Elisha Predicts Hazael's Cruelty",
+    "2 Kings 8:16": "Jehoram King of Judah",
+    "2 Kings 8:25": "Ahaziah King of Judah",
+    
+    // 2 Kings Chapter 9
+    "2 Kings 9:1": "Jehu Anointed King of Israel",
+    "2 Kings 9:14": "Jehu Kills Joram and Ahaziah",
+    "2 Kings 9:30": "Jezebel Killed",
+    
+    // 2 Kings Chapter 10
+    "2 Kings 10:1": "Ahab's Family Destroyed",
+    "2 Kings 10:18": "Jehu Destroys the Worshipers of Baal",
+    "2 Kings 10:32": "Jehu's Death",
+    
+    // 2 Kings Chapter 11
+    "2 Kings 11:1": "Athaliah Usurps the Throne",
+    "2 Kings 11:4": "Joash Made King",
+    
+    // 2 Kings Chapter 12
+    "2 Kings 12:1": "Joash Repairs the Temple",
+    "2 Kings 12:17": "Hazael Threatens Jerusalem",
+    "2 Kings 12:19": "Joash Assassinated",
+    
+    // 2 Kings Chapter 13
+    "2 Kings 13:1": "Jehoahaz King of Israel",
+    "2 Kings 13:10": "Jehoash King of Israel",
+    "2 Kings 13:14": "Elisha's Final Prophecy",
+    "2 Kings 13:20": "Elisha's Death",
+    
+    // 2 Kings Chapter 14
+    "2 Kings 14:1": "Amaziah King of Judah",
+    "2 Kings 14:8": "Israel Defeats Judah",
+    "2 Kings 14:23": "Jeroboam II King of Israel",
+    
+    // 2 Kings Chapter 15
+    "2 Kings 15:1": "Azariah (Uzziah) King of Judah",
+    "2 Kings 15:8": "Zechariah King of Israel",
+    "2 Kings 15:13": "Shallum King of Israel",
+    "2 Kings 15:17": "Menahem King of Israel",
+    "2 Kings 15:23": "Pekahiah King of Israel",
+    "2 Kings 15:27": "Pekah King of Israel",
+    "2 Kings 15:32": "Jotham King of Judah",
+    
+    // 2 Kings Chapter 16
+    "2 Kings 16:1": "Ahaz King of Judah",
+    "2 Kings 16:10": "Ahaz's Altar",
+    
+    // 2 Kings Chapter 17
+    "2 Kings 17:1": "Hoshea King of Israel",
+    "2 Kings 17:5": "The Fall of Samaria",
+    "2 Kings 17:24": "Foreigners Resettled in Samaria",
+    
+    // 2 Kings Chapter 18
+    "2 Kings 18:1": "Hezekiah King of Judah",
+    "2 Kings 18:13": "Sennacherib Invades Judah",
+    
+    // 2 Kings Chapter 19
+    "2 Kings 19:1": "Hezekiah Seeks Isaiah's Help",
+    "2 Kings 19:14": "Hezekiah's Prayer",
+    "2 Kings 19:20": "Isaiah's Prophecy",
+    "2 Kings 19:35": "The Angel Destroys the Assyrian Army",
+    
+    // 2 Kings Chapter 20
+    "2 Kings 20:1": "Hezekiah's Illness and Recovery",
+    "2 Kings 20:12": "Envoys from Babylon",
+    
+    // 2 Kings Chapter 21
+    "2 Kings 21:1": "Manasseh King of Judah",
+    "2 Kings 21:19": "Amon King of Judah",
+    
+    // 2 Kings Chapter 22
+    "2 Kings 22:1": "Josiah King of Judah",
+    "2 Kings 22:8": "The Book of the Law Found",
+    
+    // 2 Kings Chapter 23
+    "2 Kings 23:1": "Josiah's Reforms",
+    "2 Kings 23:28": "Josiah's Death",
+    "2 Kings 23:31": "Jehoahaz King of Judah",
+    "2 Kings 23:36": "Jehoiakim King of Judah",
+    
+    // 2 Kings Chapter 24
+    "2 Kings 24:1": "Jehoiakim's Rebellion",
+    "2 Kings 24:8": "Jehoiachin King of Judah",
+    "2 Kings 24:17": "Zedekiah King of Judah",
+    
+    // 2 Kings Chapter 25
+    "2 Kings 25:1": "The Fall of Jerusalem",
+    "2 Kings 25:8": "The Temple Destroyed",
+    "2 Kings 25:22": "Gedaliah Governor of Judah",
+    "2 Kings 25:27": "Jehoiachin Released",
+    
+    // 1 Chronicles Chapter 1
+    "1 Chronicles 1:1": "From Adam to Abraham",
+    "1 Chronicles 1:28": "The Sons of Abraham",
+    "1 Chronicles 1:34": "The Sons of Isaac",
+    
+    // 1 Chronicles Chapter 2
+    "1 Chronicles 2:1": "The Sons of Israel",
+    "1 Chronicles 2:13": "The Family of Jesse",
+    
+    // 1 Chronicles Chapter 3
+    "1 Chronicles 3:1": "The Sons of David",
+    "1 Chronicles 3:10": "The Kings of Judah",
+    
+    // 1 Chronicles Chapter 4
+    "1 Chronicles 4:1": "The Descendants of Judah",
+    "1 Chronicles 4:24": "The Descendants of Simeon",
+    
+    // 1 Chronicles Chapter 5
+    "1 Chronicles 5:1": "The Descendants of Reuben",
+    "1 Chronicles 5:11": "The Descendants of Gad",
+    "1 Chronicles 5:23": "The Half-Tribe of Manasseh",
+    
+    // 1 Chronicles Chapter 6
+    "1 Chronicles 6:1": "The Descendants of Levi",
+    "1 Chronicles 6:49": "The Descendants of Aaron",
+    "1 Chronicles 6:54": "The Levitical Cities",
+    
+    // 1 Chronicles Chapter 7
+    "1 Chronicles 7:1": "The Descendants of Issachar",
+    "1 Chronicles 7:6": "The Descendants of Benjamin",
+    "1 Chronicles 7:13": "The Descendants of Naphtali",
+    "1 Chronicles 7:14": "The Descendants of Manasseh",
+    "1 Chronicles 7:20": "The Descendants of Ephraim",
+    "1 Chronicles 7:30": "The Descendants of Asher",
+    
+    // 1 Chronicles Chapter 8
+    "1 Chronicles 8:1": "The Descendants of Benjamin",
+    
+    // 1 Chronicles Chapter 9
+    "1 Chronicles 9:1": "The Returning Exiles",
+    "1 Chronicles 9:35": "The Genealogy of Saul",
+    
+    // 1 Chronicles Chapter 10
+    "1 Chronicles 10:1": "Saul's Death",
+    "1 Chronicles 10:13": "Saul's Unfaithfulness",
+    
+    // 1 Chronicles Chapter 11
+    "1 Chronicles 11:1": "David Becomes King",
+    "1 Chronicles 11:4": "David Conquers Jerusalem",
+    "1 Chronicles 11:10": "David's Mighty Men",
+    
+    // 1 Chronicles Chapter 12
+    "1 Chronicles 12:1": "David's Supporters",
+    
+    // 1 Chronicles Chapter 13
+    "1 Chronicles 13:1": "The Ark Brought from Kiriath Jearim",
+    
+    // 1 Chronicles Chapter 14
+    "1 Chronicles 14:1": "David's Palace and Family",
+    "1 Chronicles 14:8": "David Defeats the Philistines",
+    
+    // 1 Chronicles Chapter 15
+    "1 Chronicles 15:1": "Preparations to Move the Ark",
+    "1 Chronicles 15:25": "The Ark Brought to Jerusalem",
+    
+    // 1 Chronicles Chapter 16
+    "1 Chronicles 16:1": "The Ark Placed in the Tent",
+    "1 Chronicles 16:7": "David's Psalm of Thanksgiving",
+    "1 Chronicles 16:37": "Worship Before the Ark",
+    
+    // 1 Chronicles Chapter 17
+    "1 Chronicles 17:1": "God's Covenant with David",
+    "1 Chronicles 17:16": "David's Prayer",
+    
+    // 1 Chronicles Chapter 18
+    "1 Chronicles 18:1": "David's Victories",
+    "1 Chronicles 18:14": "David's Officials",
+    
+    // 1 Chronicles Chapter 19
+    "1 Chronicles 19:1": "David Defeats Ammon and Aram",
+    
+    // 1 Chronicles Chapter 20
+    "1 Chronicles 20:1": "The Capture of Rabbah",
+    "1 Chronicles 20:4": "Wars with the Philistines",
+    
+    // 1 Chronicles Chapter 21
+    "1 Chronicles 21:1": "David's Census",
+    "1 Chronicles 21:9": "Judgment for the Census",
+    "1 Chronicles 21:18": "David Builds an Altar",
+    
+    // 1 Chronicles Chapter 22
+    "1 Chronicles 22:1": "Preparations for the Temple",
+    "1 Chronicles 22:6": "David Charges Solomon",
+    
+    // 1 Chronicles Chapter 23
+    "1 Chronicles 23:1": "The Divisions of the Levites",
+    
+    // 1 Chronicles Chapter 24
+    "1 Chronicles 24:1": "The Divisions of the Priests",
+    
+    // 1 Chronicles Chapter 25
+    "1 Chronicles 25:1": "The Singers",
+    
+    // 1 Chronicles Chapter 26
+    "1 Chronicles 26:1": "The Gatekeepers",
+    "1 Chronicles 26:20": "The Treasurers",
+    
+    // 1 Chronicles Chapter 27
+    "1 Chronicles 27:1": "The Army Divisions",
+    "1 Chronicles 27:16": "The Leaders of the Tribes",
+    "1 Chronicles 27:25": "David's Officials",
+    
+    // 1 Chronicles Chapter 28
+    "1 Chronicles 28:1": "David's Charge to Israel",
+    "1 Chronicles 28:9": "David's Charge to Solomon",
+    "1 Chronicles 28:11": "Plans for the Temple",
+    
+    // 1 Chronicles Chapter 29
+    "1 Chronicles 29:1": "Gifts for the Temple",
+    "1 Chronicles 29:10": "David's Prayer",
+    "1 Chronicles 29:20": "Solomon Anointed King",
+    "1 Chronicles 29:26": "David's Death",
+    
+    // 2 Chronicles Chapter 1
+    "2 Chronicles 1:1": "Solomon Asks for Wisdom",
+    "2 Chronicles 1:14": "Solomon's Wealth",
+    
+    // 2 Chronicles Chapter 2
+    "2 Chronicles 2:1": "Preparations for the Temple",
+    
+    // 2 Chronicles Chapter 3
+    "2 Chronicles 3:1": "Solomon Builds the Temple",
+    
+    // 2 Chronicles Chapter 4
+    "2 Chronicles 4:1": "The Temple Furnishings",
+    
+    // 2 Chronicles Chapter 5
+    "2 Chronicles 5:1": "The Ark Brought to the Temple",
+    
+    // 2 Chronicles Chapter 6
+    "2 Chronicles 6:1": "Solomon's Prayer of Dedication",
+    
+    // 2 Chronicles Chapter 7
+    "2 Chronicles 7:1": "Fire from Heaven",
+    "2 Chronicles 7:11": "God Appears to Solomon",
+    
+    // 2 Chronicles Chapter 8
+    "2 Chronicles 8:1": "Solomon's Other Activities",
+    
+    // 2 Chronicles Chapter 9
+    "2 Chronicles 9:1": "The Queen of Sheba",
+    "2 Chronicles 9:13": "Solomon's Wealth",
+    "2 Chronicles 9:29": "Solomon's Death",
+    
+    // 2 Chronicles Chapter 10
+    "2 Chronicles 10:1": "The Kingdom Divided",
+    
+    // 2 Chronicles Chapter 11
+    "2 Chronicles 11:1": "Rehoboam Forbidden to Fight",
+    "2 Chronicles 11:5": "Rehoboam Fortifies Cities",
+    "2 Chronicles 11:13": "Priests and Levites Move to Judah",
+    
+    // 2 Chronicles Chapter 12
+    "2 Chronicles 12:1": "Shishak Attacks Jerusalem",
+    "2 Chronicles 12:13": "Rehoboam's Reign",
+    
+    // 2 Chronicles Chapter 13
+    "2 Chronicles 13:1": "Abijah King of Judah",
+    "2 Chronicles 13:3": "War Between Abijah and Jeroboam",
+    
+    // 2 Chronicles Chapter 14
+    "2 Chronicles 14:1": "Asa King of Judah",
+    "2 Chronicles 14:9": "Asa Defeats the Cushites",
+    
+    // 2 Chronicles Chapter 15
+    "2 Chronicles 15:1": "Asa's Religious Reforms",
+    
+    // 2 Chronicles Chapter 16
+    "2 Chronicles 16:1": "Asa's Treaty with Aram",
+    "2 Chronicles 16:11": "Asa's Death",
+    
+    // 2 Chronicles Chapter 17
+    "2 Chronicles 17:1": "Jehoshaphat King of Judah",
+    
+    // 2 Chronicles Chapter 18
+    "2 Chronicles 18:1": "Micaiah Prophesies Against Ahab",
+    
+    // 2 Chronicles Chapter 19
+    "2 Chronicles 19:1": "Jehoshaphat Appoints Judges",
+    
+    // 2 Chronicles Chapter 20
+    "2 Chronicles 20:1": "Jehoshaphat Defeats Moab and Ammon",
+    "2 Chronicles 20:31": "Jehoshaphat's Reign Ends",
+    
+    // 2 Chronicles Chapter 21
+    "2 Chronicles 21:1": "Jehoram King of Judah",
+    "2 Chronicles 21:12": "Elijah's Letter to Jehoram",
+    
+    // 2 Chronicles Chapter 22
+    "2 Chronicles 22:1": "Ahaziah King of Judah",
+    "2 Chronicles 22:10": "Athaliah Usurps the Throne",
+    
+    // 2 Chronicles Chapter 23
+    "2 Chronicles 23:1": "Joash Made King",
+    
+    // 2 Chronicles Chapter 24
+    "2 Chronicles 24:1": "Joash Repairs the Temple",
+    "2 Chronicles 24:17": "Joash's Apostasy",
+    "2 Chronicles 24:23": "Joash Killed",
+    
+    // 2 Chronicles Chapter 25
+    "2 Chronicles 25:1": "Amaziah King of Judah",
+    "2 Chronicles 25:14": "Amaziah's Idolatry",
+    
+    // 2 Chronicles Chapter 26
+    "2 Chronicles 26:1": "Uzziah King of Judah",
+    "2 Chronicles 26:16": "Uzziah's Pride and Leprosy",
+    
+    // 2 Chronicles Chapter 27
+    "2 Chronicles 27:1": "Jotham King of Judah",
+    
+    // 2 Chronicles Chapter 28
+    "2 Chronicles 28:1": "Ahaz King of Judah",
+    "2 Chronicles 28:16": "Ahaz's Unfaithfulness",
+    
+    // 2 Chronicles Chapter 29
+    "2 Chronicles 29:1": "Hezekiah Purifies the Temple",
+    
+    // 2 Chronicles Chapter 30
+    "2 Chronicles 30:1": "Hezekiah Celebrates Passover",
+    
+    // 2 Chronicles Chapter 31
+    "2 Chronicles 31:1": "Hezekiah's Religious Reforms",
+    
+    // 2 Chronicles Chapter 32
+    "2 Chronicles 32:1": "Sennacherib Invades Judah",
+    "2 Chronicles 32:24": "Hezekiah's Illness and Pride",
+    "2 Chronicles 32:32": "Hezekiah's Death",
+    
+    // 2 Chronicles Chapter 33
+    "2 Chronicles 33:1": "Manasseh King of Judah",
+    "2 Chronicles 33:21": "Amon King of Judah",
+    
+    // 2 Chronicles Chapter 34
+    "2 Chronicles 34:1": "Josiah King of Judah",
+    "2 Chronicles 34:8": "The Book of the Law Found",
+    
+    // 2 Chronicles Chapter 35
+    "2 Chronicles 35:1": "Josiah Celebrates Passover",
+    "2 Chronicles 35:20": "Josiah's Death",
+    
+    // 2 Chronicles Chapter 36
+    "2 Chronicles 36:1": "Jehoahaz King of Judah",
+    "2 Chronicles 36:5": "Jehoiakim King of Judah",
+    "2 Chronicles 36:9": "Jehoiachin King of Judah",
+    "2 Chronicles 36:11": "Zedekiah King of Judah",
+    "2 Chronicles 36:15": "The Fall of Jerusalem",
+    "2 Chronicles 36:22": "Cyrus Allows the Exiles to Return",
+    
+    // Ezra Chapter 1
+    "Ezra 1:1": "Cyrus Sends the Exiles Home",
+    "Ezra 1:5": "Gifts for the Temple",
+    
+    // Ezra Chapter 2
+    "Ezra 2:1": "The Returning Exiles",
+    "Ezra 2:68": "Offerings for the Temple",
+    
+    // Ezra Chapter 3
+    "Ezra 3:1": "The Altar Rebuilt",
+    "Ezra 3:7": "Temple Reconstruction Begins",
+    "Ezra 3:10": "The Foundation Laid",
+    
+    // Ezra Chapter 4
+    "Ezra 4:1": "Opposition to the Rebuilding",
+    "Ezra 4:7": "Letters to Artaxerxes",
+    "Ezra 4:17": "The King's Reply",
+    
+    // Ezra Chapter 5
+    "Ezra 5:1": "The Rebuilding Resumes",
+    "Ezra 5:3": "Tattenai's Letter to Darius",
+    
+    // Ezra Chapter 6
+    "Ezra 6:1": "Darius Supports the Rebuilding",
+    "Ezra 6:13": "The Temple Completed",
+    "Ezra 6:19": "Passover Celebrated",
+    
+    // Ezra Chapter 7
+    "Ezra 7:1": "Ezra Comes to Jerusalem",
+    "Ezra 7:11": "Artaxerxes' Letter to Ezra",
+    
+    // Ezra Chapter 8
+    "Ezra 8:1": "The Returning Exiles with Ezra",
+    "Ezra 8:21": "Fasting and Prayer",
+    "Ezra 8:31": "The Journey to Jerusalem",
+    
+    // Ezra Chapter 9
+    "Ezra 9:1": "Ezra's Prayer About Intermarriage",
+    
+    // Ezra Chapter 10
+    "Ezra 10:1": "The People's Confession",
+    "Ezra 10:9": "The Assembly",
+    "Ezra 10:18": "Those Guilty of Intermarriage",
+    
+    // Nehemiah Chapter 1
+    "Nehemiah 1:1": "Nehemiah's Prayer",
+    
+    // Nehemiah Chapter 2
+    "Nehemiah 2:1": "Nehemiah Sent to Jerusalem",
+    "Nehemiah 2:11": "Nehemiah Inspects the Walls",
+    
+    // Nehemiah Chapter 3
+    "Nehemiah 3:1": "The Rebuilding of the Wall",
+    
+    // Nehemiah Chapter 4
+    "Nehemiah 4:1": "Opposition to the Rebuilding",
+    "Nehemiah 4:15": "The Work Continues",
+    
+    // Nehemiah Chapter 5
+    "Nehemiah 5:1": "Nehemiah Defends the Oppressed",
+    
+    // Nehemiah Chapter 6
+    "Nehemiah 6:1": "The Wall Completed Despite Opposition",
+    
+    // Nehemiah Chapter 7
+    "Nehemiah 7:1": "Guards Appointed",
+    "Nehemiah 7:5": "The List of Returning Exiles",
+    
+    // Nehemiah Chapter 8
+    "Nehemiah 8:1": "Ezra Reads the Law",
+    "Nehemiah 8:13": "The Feast of Tabernacles",
+    
+    // Nehemiah Chapter 9
+    "Nehemiah 9:1": "The Israelites Confess Their Sins",
+    "Nehemiah 9:5": "The Levites' Prayer",
+    
+    // Nehemiah Chapter 10
+    "Nehemiah 10:1": "The Covenant Renewed",
+    
+    // Nehemiah Chapter 11
+    "Nehemiah 11:1": "The Resettlement of Jerusalem",
+    
+    // Nehemiah Chapter 12
+    "Nehemiah 12:1": "Priests and Levites",
+    "Nehemiah 12:27": "Dedication of the Wall",
+    
+    // Nehemiah Chapter 13
+    "Nehemiah 13:1": "Nehemiah's Final Reforms",
+    
+    // Esther Chapter 1
+    "Esther 1:1": "Queen Vashti Deposed",
+    
+    // Esther Chapter 2
+    "Esther 2:1": "Esther Made Queen",
+    "Esther 2:19": "Mordecai Uncovers a Plot",
+    
+    // Esther Chapter 3
+    "Esther 3:1": "Haman's Plot to Destroy the Jews",
+    
+    // Esther Chapter 4
+    "Esther 4:1": "Mordecai Asks Esther to Help",
+    "Esther 4:13": "For Such a Time as This",
+    
+    // Esther Chapter 5
+    "Esther 5:1": "Esther's Banquet",
+    "Esther 5:9": "Haman's Rage Against Mordecai",
+    
+    // Esther Chapter 6
+    "Esther 6:1": "Mordecai Honored",
+    
+    // Esther Chapter 7
+    "Esther 7:1": "Haman Hanged",
+    
+    // Esther Chapter 8
+    "Esther 8:1": "The King's Edict on Behalf of the Jews",
+    
+    // Esther Chapter 9
+    "Esther 9:1": "The Jews Destroy Their Enemies",
+    "Esther 9:20": "The Feast of Purim Instituted",
+    
+    // Esther Chapter 10
+    "Esther 10:1": "Mordecai's Greatness",
+    
+    // Job Chapter 1
+    "Job 1:1": "Job's Character and Wealth",
+    "Job 1:6": "Satan Tests Job",
+    "Job 1:13": "Job Loses His Property and Children",
+    "Job 1:20": "Job's Faithful Response",
+    
+    // Job Chapter 2
+    "Job 2:1": "Satan Attacks Job's Health",
+    "Job 2:11": "Job's Three Friends Arrive",
+    
+    // Job Chapter 3
+    "Job 3:1": "Job Curses the Day of His Birth",
+    
+    // Job Chapter 4
+    "Job 4:1": "Eliphaz Speaks — The Innocent Do Not Suffer",
+    
+    // Job Chapter 5
+    "Job 5:1": "Eliphaz Continues — Call Upon God",
+    "Job 5:17": "God Disciplines and Restores",
+    
+    // Job Chapter 6
+    "Job 6:1": "Job Replies — My Complaint Is Just",
+    
+    // Job Chapter 7
+    "Job 7:1": "Job Continues — Life Is Hard",
+    "Job 7:11": "Job Questions God",
+    
+    // Job Chapter 8
+    "Job 8:1": "Bildad Speaks — God Is Just",
+    
+    // Job Chapter 9
+    "Job 9:1": "Job Replies — How Can Man Be Just Before God?",
+    
+    // Job Chapter 10
+    "Job 10:1": "Job's Complaint to God",
+    
+    // Job Chapter 11
+    "Job 11:1": "Zophar Speaks — Repent and Be Restored",
+    
+    // Job Chapter 12
+    "Job 12:1": "Job Replies — I Am Not Inferior to You",
+    
+    // Job Chapter 13
+    "Job 13:1": "Job Continues — I Will Argue My Case Before God",
+    
+    // Job Chapter 14
+    "Job 14:1": "Job Reflects on Human Mortality",
+    
+    // Job Chapter 15
+    "Job 15:1": "Eliphaz's Second Speech — The Wicked Suffer",
+    
+    // Job Chapter 16
+    "Job 16:1": "Job Replies — Miserable Comforters",
+    
+    // Job Chapter 17
+    "Job 17:1": "Job Continues — My Spirit Is Broken",
+    
+    // Job Chapter 18
+    "Job 18:1": "Bildad's Second Speech — The Fate of the Wicked",
+    
+    // Job Chapter 19
+    "Job 19:1": "Job Replies — My Redeemer Lives",
+    
+    // Job Chapter 20
+    "Job 20:1": "Zophar's Second Speech — The Triumph of the Wicked Is Brief",
+    
+    // Job Chapter 21
+    "Job 21:1": "Job Replies — The Wicked Often Prosper",
+    
+    // Job Chapter 22
+    "Job 22:1": "Eliphaz's Third Speech — Submit to God",
+    
+    // Job Chapter 23
+    "Job 23:1": "Job Replies — Oh, That I Could Find God",
+    
+    // Job Chapter 24
+    "Job 24:1": "Job Continues — Why Does God Allow Injustice?",
+    
+    // Job Chapter 25
+    "Job 25:1": "Bildad's Third Speech — Man Cannot Be Righteous",
+    
+    // Job Chapter 26
+    "Job 26:1": "Job Replies — God's Power Is Beyond Understanding",
+    
+    // Job Chapter 27
+    "Job 27:1": "Job's Final Defense",
+    
+    // Job Chapter 28
+    "Job 28:1": "The Place of Wisdom",
+    
+    // Job Chapter 29
+    "Job 29:1": "Job's Former Blessings",
+    
+    // Job Chapter 30
+    "Job 30:1": "Job's Present Misery",
+    
+    // Job Chapter 31
+    "Job 31:1": "Job's Final Oath of Innocence",
+    
+    // Job Chapter 32
+    "Job 32:1": "Elihu Speaks — His Anger Against Job and His Friends",
+    
+    // Job Chapter 33
+    "Job 33:1": "Elihu Continues — God Speaks in Various Ways",
+    
+    // Job Chapter 34
+    "Job 34:1": "Elihu Continues — God Is Just",
+    
+    // Job Chapter 35
+    "Job 35:1": "Elihu Continues — God Does Not Answer Pride",
+    
+    // Job Chapter 36
+    "Job 36:1": "Elihu Continues — God Is Great and Just",
+    
+    // Job Chapter 37
+    "Job 37:1": "Elihu Continues — God's Majesty in the Storm",
+    
+    // Job Chapter 38
+    "Job 38:1": "The LORD Answers Job — Where Were You?",
+    "Job 38:22": "God Questions Job About Nature",
+    
+    // Job Chapter 39
+    "Job 39:1": "God Questions Job About Animals",
+    
+    // Job Chapter 40
+    "Job 40:1": "Job's Response to God",
+    "Job 40:6": "The LORD's Second Speech — Behemoth",
+    
+    // Job Chapter 41
+    "Job 41:1": "Can You Draw Out Leviathan?",
+    
+    // Job Chapter 42
+    "Job 42:1": "Job's Repentance and Restoration",
+    "Job 42:10": "The LORD Restores Job's Fortunes",
+    
+    // Psalms Chapter 1
+    "Psalms 1:1": "The Two Ways",
+    
+    // Psalms Chapter 2
+    "Psalms 2:1": "The LORD's Anointed King",
+    
+    // Psalms Chapter 3
+    "Psalms 3:1": "A Morning Prayer for Deliverance",
+    
+    // Psalms Chapter 4
+    "Psalms 4:1": "An Evening Prayer of Trust",
+    
+    // Psalms Chapter 5
+    "Psalms 5:1": "A Morning Prayer for Guidance",
+    
+    // Psalms Chapter 6
+    "Psalms 6:1": "Prayer in Deep Distress",
+    
+    // Psalms Chapter 7
+    "Psalms 7:1": "Prayer for Vindication",
+    
+    // Psalms Chapter 8
+    "Psalms 8:1": "The Majesty of God and the Dignity of Man",
+    
+    // Psalms Chapter 9
+    "Psalms 9:1": "Thanksgiving for God's Justice",
+    
+    // Psalms Chapter 10
+    "Psalms 10:1": "Why Do You Hide, O LORD?",
+    
+    // Psalms Chapter 11
+    "Psalms 11:1": "In the LORD I Take Refuge",
+    
+    // Psalms Chapter 12
+    "Psalms 12:1": "A Plea Against the Wicked",
+    
+    // Psalms Chapter 13
+    "Psalms 13:1": "How Long, O LORD?",
+    
+    // Psalms Chapter 14
+    "Psalms 14:1": "The Fool Says There Is No God",
+    
+    // Psalms Chapter 15
+    "Psalms 15:1": "Who May Dwell in Your Sanctuary?",
+    
+    // Psalms Chapter 16
+    "Psalms 16:1": "The Path of Life",
+    
+    // Psalms Chapter 17
+    "Psalms 17:1": "A Prayer for Protection",
+    
+    // Psalms Chapter 18
+    "Psalms 18:1": "The LORD Is My Rock and Fortress",
+    
+    // Psalms Chapter 19
+    "Psalms 19:1": "The Heavens Declare God's Glory",
+    "Psalms 19:7": "The Perfection of God's Law",
+    
+    // Psalms Chapter 20
+    "Psalms 20:1": "Prayer for Victory",
+    
+    // Psalms Chapter 21
+    "Psalms 21:1": "Thanksgiving for Victory",
+    
+    // Psalms Chapter 22
+    "Psalms 22:1": "My God, My God, Why Have You Forsaken Me?",
+    "Psalms 22:22": "Praise in the Assembly",
+    
+    // Psalms Chapter 23
+    "Psalms 23:1": "The LORD Is My Shepherd",
+    
+    // Psalms Chapter 24
+    "Psalms 24:1": "The King of Glory",
+    
+    // Psalms Chapter 25
+    "Psalms 25:1": "Teach Me Your Paths",
+    
+    // Psalms Chapter 26
+    "Psalms 26:1": "Vindicate Me, O LORD",
+    
+    // Psalms Chapter 27
+    "Psalms 27:1": "The LORD Is My Light and Salvation",
+    
+    // Psalms Chapter 28
+    "Psalms 28:1": "A Cry for Help",
+    
+    // Psalms Chapter 29
+    "Psalms 29:1": "The Voice of the LORD",
+    
+    // Psalms Chapter 30
+    "Psalms 30:1": "Thanksgiving for Deliverance",
+    
+    // Psalms Chapter 31
+    "Psalms 31:1": "Into Your Hand I Commit My Spirit",
+    
+    // Psalms Chapter 32
+    "Psalms 32:1": "Blessed Is the One Whose Sin Is Forgiven",
+    
+    // Psalms Chapter 33
+    "Psalms 33:1": "Sing to the LORD a New Song",
+    
+    // Psalms Chapter 34
+    "Psalms 34:1": "Taste and See That the LORD Is Good",
+    
+    // Psalms Chapter 35
+    "Psalms 35:1": "Contend with Those Who Contend with Me",
+    
+    // Psalms Chapter 36
+    "Psalms 36:1": "How Precious Is Your Steadfast Love",
+    
+    // Psalms Chapter 37
+    "Psalms 37:1": "Trust in the LORD and Do Good",
+    
+    // Psalms Chapter 38
+    "Psalms 38:1": "A Psalm of Confession and Distress",
+    
+    // Psalms Chapter 39
+    "Psalms 39:1": "The Brevity of Life",
+    
+    // Psalms Chapter 40
+    "Psalms 40:1": "I Waited Patiently for the LORD",
+    
+    // Psalms Chapter 41
+    "Psalms 41:1": "Blessed Is the One Who Considers the Poor",
+    
+    // Psalms Chapter 42
+    "Psalms 42:1": "As a Deer Pants for Water",
+    
+    // Psalms Chapter 43
+    "Psalms 43:1": "Send Out Your Light and Truth",
+    
+    // Psalms Chapter 44
+    "Psalms 44:1": "We Have Heard with Our Ears, O God",
+    
+    // Psalms Chapter 45
+    "Psalms 45:1": "A Royal Wedding Song",
+    
+    // Psalms Chapter 46
+    "Psalms 46:1": "God Is Our Refuge and Strength",
+    
+    // Psalms Chapter 47
+    "Psalms 47:1": "Clap Your Hands, All Peoples",
+    
+    // Psalms Chapter 48
+    "Psalms 48:1": "Great Is the LORD in Zion",
+    
+    // Psalms Chapter 49
+    "Psalms 49:1": "Riches Cannot Ransom",
+    
+    // Psalms Chapter 50
+    "Psalms 50:1": "The Mighty One Summons the Earth",
+    
+    // Psalms Chapter 51
+    "Psalms 51:1": "Create in Me a Clean Heart, O God",
+    
+    // Psalms Chapter 52
+    "Psalms 52:1": "The Fate of the Wicked",
+    
+    // Psalms Chapter 53
+    "Psalms 53:1": "The Fool Says There Is No God",
+    
+    // Psalms Chapter 54
+    "Psalms 54:1": "Save Me, O God, by Your Name",
+    
+    // Psalms Chapter 55
+    "Psalms 55:1": "Cast Your Burden on the LORD",
+    
+    // Psalms Chapter 56
+    "Psalms 56:1": "In God I Trust",
+    
+    // Psalms Chapter 57
+    "Psalms 57:1": "Be Merciful to Me, O God",
+    
+    // Psalms Chapter 58
+    "Psalms 58:1": "God the Righteous Judge",
+    
+    // Psalms Chapter 59
+    "Psalms 59:1": "Deliver Me from My Enemies",
+    
+    // Psalms Chapter 60
+    "Psalms 60:1": "A Prayer After Defeat",
+    
+    // Psalms Chapter 61
+    "Psalms 61:1": "Lead Me to the Rock",
+    
+    // Psalms Chapter 62
+    "Psalms 62:1": "My Soul Waits in Silence for God",
+    
+    // Psalms Chapter 63
+    "Psalms 63:1": "My Soul Thirsts for You",
+    
+    // Psalms Chapter 64
+    "Psalms 64:1": "Hide Me from the Wicked",
+    
+    // Psalms Chapter 65
+    "Psalms 65:1": "You Crown the Year with Bounty",
+    
+    // Psalms Chapter 66
+    "Psalms 66:1": "Come and See What God Has Done",
+    
+    // Psalms Chapter 67
+    "Psalms 67:1": "May God Be Gracious to Us",
+    
+    // Psalms Chapter 68
+    "Psalms 68:1": "God's Triumphant March",
+    
+    // Psalms Chapter 69
+    "Psalms 69:1": "Save Me, O God",
+    
+    // Psalms Chapter 70
+    "Psalms 70:1": "Make Haste to Help Me",
+    
+    // Psalms Chapter 71
+    "Psalms 71:1": "A Prayer in Old Age",
+    
+    // Psalms Chapter 72
+    "Psalms 72:1": "A Prayer for the King",
+    
+    // Psalms Chapter 73
+    "Psalms 73:1": "God Is Good to the Pure in Heart",
+    
+    // Psalms Chapter 74
+    "Psalms 74:1": "A Plea for God to Remember His People",
+    
+    // Psalms Chapter 75
+    "Psalms 75:1": "God the Righteous Judge",
+    
+    // Psalms Chapter 76
+    "Psalms 76:1": "God Is Known in Judah",
+    
+    // Psalms Chapter 77
+    "Psalms 77:1": "I Will Remember the Deeds of the LORD",
+    
+    // Psalms Chapter 78
+    "Psalms 78:1": "Tell the Coming Generation",
+    
+    // Psalms Chapter 79
+    "Psalms 79:1": "How Long, O LORD?",
+    
+    // Psalms Chapter 80
+    "Psalms 80:1": "Restore Us, O God",
+    
+    // Psalms Chapter 81
+    "Psalms 81:1": "Sing Aloud to God Our Strength",
+    
+    // Psalms Chapter 82
+    "Psalms 82:1": "God Presides in the Divine Council",
+    
+    // Psalms Chapter 83
+    "Psalms 83:1": "O God, Do Not Keep Silence",
+    
+    // Psalms Chapter 84
+    "Psalms 84:1": "How Lovely Is Your Dwelling Place",
+    
+    // Psalms Chapter 85
+    "Psalms 85:1": "Restore Us Again, O God",
+    
+    // Psalms Chapter 86
+    "Psalms 86:1": "Teach Me Your Way, O LORD",
+    
+    // Psalms Chapter 87
+    "Psalms 87:1": "Glorious Things Are Spoken of Zion",
+    
+    // Psalms Chapter 88
+    "Psalms 88:1": "A Prayer in Deep Darkness",
+    
+    // Psalms Chapter 89
+    "Psalms 89:1": "I Will Sing of Your Steadfast Love Forever",
+    
+    // Psalms Chapter 90
+    "Psalms 90:1": "Teach Us to Number Our Days",
+    
+    // Psalms Chapter 91
+    "Psalms 91:1": "He Who Dwells in the Shelter of the Most High",
+    
+    // Psalms Chapter 92
+    "Psalms 92:1": "It Is Good to Give Thanks to the LORD",
+    
+    // Psalms Chapter 93
+    "Psalms 93:1": "The LORD Reigns",
+    
+    // Psalms Chapter 94
+    "Psalms 94:1": "O LORD, God of Vengeance",
+    
+    // Psalms Chapter 95
+    "Psalms 95:1": "Come, Let Us Worship and Bow Down",
+    
+    // Psalms Chapter 96
+    "Psalms 96:1": "Sing to the LORD a New Song",
+    
+    // Psalms Chapter 97
+    "Psalms 97:1": "The LORD Reigns, Let the Earth Rejoice",
+    
+    // Psalms Chapter 98
+    "Psalms 98:1": "Make a Joyful Noise to the LORD",
+    
+    // Psalms Chapter 99
+    "Psalms 99:1": "The LORD Is King, Holy Is He",
+    
+    // Psalms Chapter 100
+    "Psalms 100:1": "Make a Joyful Noise, All the Earth",
+    
+    // Psalms Chapter 101
+    "Psalms 101:1": "I Will Walk with Integrity",
+    
+    // Psalms Chapter 102
+    "Psalms 102:1": "A Prayer of the Afflicted",
+    
+    // Psalms Chapter 103
+    "Psalms 103:1": "Bless the LORD, O My Soul",
+    
+    // Psalms Chapter 104
+    "Psalms 104:1": "O LORD, How Manifold Are Your Works",
+    
+    // Psalms Chapter 105
+    "Psalms 105:1": "Give Thanks to the LORD",
+    
+    // Psalms Chapter 106
+    "Psalms 106:1": "Praise the LORD for His Faithfulness",
+    
+    // Psalms Chapter 107
+    "Psalms 107:1": "Give Thanks to the LORD, for He Is Good",
+    
+    // Psalms Chapter 108
+    "Psalms 108:1": "My Heart Is Steadfast, O God",
+    
+    // Psalms Chapter 109
+    "Psalms 109:1": "A Cry Against Enemies",
+    
+    // Psalms Chapter 110
+    "Psalms 110:1": "Sit at My Right Hand",
+    
+    // Psalms Chapter 111
+    "Psalms 111:1": "Great Are the Works of the LORD",
+    
+    // Psalms Chapter 112
+    "Psalms 112:1": "Blessed Is the Man Who Fears the LORD",
+    
+    // Psalms Chapter 113
+    "Psalms 113:1": "Who Is Like the LORD Our God?",
+    
+    // Psalms Chapter 114
+    "Psalms 114:1": "When Israel Went Out from Egypt",
+    
+    // Psalms Chapter 115
+    "Psalms 115:1": "Not to Us, O LORD",
+    
+    // Psalms Chapter 116
+    "Psalms 116:1": "I Love the LORD",
+    
+    // Psalms Chapter 117
+    "Psalms 117:1": "Praise the LORD, All Nations",
+    
+    // Psalms Chapter 118
+    "Psalms 118:1": "His Steadfast Love Endures Forever",
+    "Psalms 118:22": "The Stone the Builders Rejected",
+    
+    // Psalms Chapter 119
+    "Psalms 119:1": "Aleph — Blessed Are Those Who Walk in the Law",
+    "Psalms 119:9": "Beth — How Can a Young Man Keep His Way Pure?",
+    "Psalms 119:17": "Gimel — Deal Bountifully with Your Servant",
+    "Psalms 119:25": "Daleth — My Soul Clings to the Dust",
+    "Psalms 119:33": "He — Teach Me, O LORD",
+    "Psalms 119:41": "Waw — Let Your Steadfast Love Come to Me",
+    "Psalms 119:49": "Zayin — Remember Your Word to Your Servant",
+    "Psalms 119:57": "Heth — The LORD Is My Portion",
+    "Psalms 119:65": "Teth — You Have Dealt Well with Your Servant",
+    "Psalms 119:73": "Yodh — Your Hands Have Made Me",
+    "Psalms 119:81": "Kaph — My Soul Longs for Your Salvation",
+    "Psalms 119:89": "Lamedh — Forever, O LORD, Your Word Is Firm",
+    "Psalms 119:97": "Mem — Oh How I Love Your Law",
+    "Psalms 119:105": "Nun — Your Word Is a Lamp to My Feet",
+    "Psalms 119:113": "Samekh — I Hate the Double-Minded",
+    "Psalms 119:121": "Ayin — I Have Done What Is Just and Right",
+    "Psalms 119:129": "Pe — Your Testimonies Are Wonderful",
+    "Psalms 119:137": "Tsadhe — Righteous Are You, O LORD",
+    "Psalms 119:145": "Qoph — I Cry with My Whole Heart",
+    "Psalms 119:153": "Resh — Look on My Affliction",
+    "Psalms 119:161": "Sin/Shin — Princes Persecute Me",
+    "Psalms 119:169": "Taw — Let My Cry Come Before You",
+    
+    // Psalms Chapter 120
+    "Psalms 120:1": "Deliver Me, O LORD",
+    
+    // Psalms Chapter 121
+    "Psalms 121:1": "I Lift Up My Eyes to the Hills",
+    
+    // Psalms Chapter 122
+    "Psalms 122:1": "Pray for the Peace of Jerusalem",
+    
+    // Psalms Chapter 123
+    "Psalms 123:1": "Our Eyes Look to the LORD",
+    
+    // Psalms Chapter 124
+    "Psalms 124:1": "If the LORD Had Not Been on Our Side",
+    
+    // Psalms Chapter 125
+    "Psalms 125:1": "Those Who Trust in the LORD",
+    
+    // Psalms Chapter 126
+    "Psalms 126:1": "Those Who Sow in Tears",
+    
+    // Psalms Chapter 127
+    "Psalms 127:1": "Unless the LORD Builds the House",
+    
+    // Psalms Chapter 128
+    "Psalms 128:1": "Blessed Is Everyone Who Fears the LORD",
+    
+    // Psalms Chapter 129
+    "Psalms 129:1": "They Have Greatly Oppressed Me",
+    
+    // Psalms Chapter 130
+    "Psalms 130:1": "Out of the Depths I Cry to You",
+    
+    // Psalms Chapter 131
+    "Psalms 131:1": "My Heart Is Not Proud",
+    
+    // Psalms Chapter 132
+    "Psalms 132:1": "Remember David's Hardships",
+    
+    // Psalms Chapter 133
+    "Psalms 133:1": "How Good It Is When Brothers Dwell in Unity",
+    
+    // Psalms Chapter 134
+    "Psalms 134:1": "Bless the LORD, All You Servants",
+    
+    // Psalms Chapter 135
+    "Psalms 135:1": "Praise the LORD",
+    
+    // Psalms Chapter 136
+    "Psalms 136:1": "His Steadfast Love Endures Forever",
+    
+    // Psalms Chapter 137
+    "Psalms 137:1": "By the Waters of Babylon",
+    
+    // Psalms Chapter 138
+    "Psalms 138:1": "I Give You Thanks with My Whole Heart",
+    
+    // Psalms Chapter 139
+    "Psalms 139:1": "You Have Searched Me and Known Me",
+    
+    // Psalms Chapter 140
+    "Psalms 140:1": "Deliver Me from Evil Men",
+    
+    // Psalms Chapter 141
+    "Psalms 141:1": "Set a Guard Over My Mouth",
+    
+    // Psalms Chapter 142
+    "Psalms 142:1": "No One Cares for My Soul",
+    
+    // Psalms Chapter 143
+    "Psalms 143:1": "Hear My Prayer, O LORD",
+    
+    // Psalms Chapter 144
+    "Psalms 144:1": "Blessed Be the LORD, My Rock",
+    
+    // Psalms Chapter 145
+    "Psalms 145:1": "I Will Extol You, My God and King",
+    
+    // Psalms Chapter 146
+    "Psalms 146:1": "Praise the LORD, O My Soul",
+    
+    // Psalms Chapter 147
+    "Psalms 147:1": "How Good It Is to Sing Praises",
+    
+    // Psalms Chapter 148
+    "Psalms 148:1": "Praise the LORD from the Heavens",
+    
+    // Psalms Chapter 149
+    "Psalms 149:1": "Sing to the LORD a New Song",
+    
+    // Psalms Chapter 150
+    "Psalms 150:1": "Praise the LORD! Let Everything Praise the LORD",
+    
+    // Proverbs Chapter 1
+    "Proverbs 1:1": "The Purpose of Proverbs",
+    "Proverbs 1:7": "The Fear of the LORD Is the Beginning of Knowledge",
+    "Proverbs 1:8": "Warning Against Sinful Enticements",
+    "Proverbs 1:20": "Wisdom Calls Out",
+    
+    // Proverbs Chapter 2
+    "Proverbs 2:1": "The Value of Wisdom",
+    
+    // Proverbs Chapter 3
+    "Proverbs 3:1": "Trust in the LORD with All Your Heart",
+    "Proverbs 3:11": "The LORD's Discipline",
+    "Proverbs 3:13": "Blessed Is the One Who Finds Wisdom",
+    "Proverbs 3:21": "Do Not Let Wisdom Depart from Your Eyes",
+    
+    // Proverbs Chapter 4
+    "Proverbs 4:1": "A Father's Instruction",
+    "Proverbs 4:10": "The Path of the Righteous",
+    "Proverbs 4:20": "Guard Your Heart",
+    
+    // Proverbs Chapter 5
+    "Proverbs 5:1": "Warning Against Adultery",
+    
+    // Proverbs Chapter 6
+    "Proverbs 6:1": "Practical Warnings",
+    "Proverbs 6:6": "Go to the Ant, You Sluggard",
+    "Proverbs 6:12": "The Worthless Person",
+    "Proverbs 6:16": "Seven Things the LORD Hates",
+    "Proverbs 6:20": "Warning Against Adultery",
+    
+    // Proverbs Chapter 7
+    "Proverbs 7:1": "Warning Against the Adulteress",
+    
+    // Proverbs Chapter 8
+    "Proverbs 8:1": "Wisdom's Call",
+    "Proverbs 8:22": "Wisdom's Role in Creation",
+    
+    // Proverbs Chapter 9
+    "Proverbs 9:1": "Wisdom's Invitation",
+    "Proverbs 9:13": "Folly's Invitation",
+    
+    // Proverbs Chapter 10
+    "Proverbs 10:1": "The Proverbs of Solomon",
+    
+    // Proverbs Chapter 11
+    "Proverbs 11:1": "A False Balance Is an Abomination",
+    
+    // Proverbs Chapter 12
+    "Proverbs 12:1": "Whoever Loves Discipline Loves Knowledge",
+    
+    // Proverbs Chapter 13
+    "Proverbs 13:1": "A Wise Son Hears His Father's Instruction",
+    
+    // Proverbs Chapter 14
+    "Proverbs 14:1": "The Wise Woman Builds Her House",
+    
+    // Proverbs Chapter 15
+    "Proverbs 15:1": "A Soft Answer Turns Away Wrath",
+    
+    // Proverbs Chapter 16
+    "Proverbs 16:1": "The Plans of the Heart Belong to Man",
+    
+    // Proverbs Chapter 17
+    "Proverbs 17:1": "Better Is a Dry Morsel with Quiet",
+    
+    // Proverbs Chapter 18
+    "Proverbs 18:1": "Whoever Isolates Himself Seeks His Own Desire",
+    
+    // Proverbs Chapter 19
+    "Proverbs 19:1": "Better Is a Poor Person Who Walks in Integrity",
+    
+    // Proverbs Chapter 20
+    "Proverbs 20:1": "Wine Is a Mocker",
+    
+    // Proverbs Chapter 21
+    "Proverbs 21:1": "The King's Heart Is in the Hand of the LORD",
+    
+    // Proverbs Chapter 22
+    "Proverbs 22:1": "A Good Name Is to Be Chosen",
+    "Proverbs 22:17": "The Sayings of the Wise",
+    
+    // Proverbs Chapter 23
+    "Proverbs 23:1": "When You Sit to Eat with a Ruler",
+    "Proverbs 23:19": "Listen, My Son",
+    
+    // Proverbs Chapter 24
+    "Proverbs 24:1": "Be Not Envious of Evil Men",
+    "Proverbs 24:23": "Further Sayings of the Wise",
+    
+    // Proverbs Chapter 25
+    "Proverbs 25:1": "More Proverbs of Solomon",
+    
+    // Proverbs Chapter 26
+    "Proverbs 26:1": "Like Snow in Summer",
+    
+    // Proverbs Chapter 27
+    "Proverbs 27:1": "Do Not Boast About Tomorrow",
+    
+    // Proverbs Chapter 28
+    "Proverbs 28:1": "The Wicked Flee When No One Pursues",
+    
+    // Proverbs Chapter 29
+    "Proverbs 29:1": "He Who Is Often Reproved",
+    
+    // Proverbs Chapter 30
+    "Proverbs 30:1": "The Words of Agur",
+    
+    // Proverbs Chapter 31
+    "Proverbs 31:1": "The Words of King Lemuel",
+    "Proverbs 31:10": "The Excellent Wife",
+    
+    // Ecclesiastes Chapter 1
+    "Ecclesiastes 1:1": "All Is Vanity",
+    "Ecclesiastes 1:12": "The Vanity of Wisdom",
+    
+    // Ecclesiastes Chapter 2
+    "Ecclesiastes 2:1": "The Vanity of Pleasure",
+    "Ecclesiastes 2:12": "The Vanity of Wisdom and Folly",
+    "Ecclesiastes 2:18": "The Vanity of Toil",
+    
+    // Ecclesiastes Chapter 3
+    "Ecclesiastes 3:1": "A Time for Everything",
+    "Ecclesiastes 3:16": "The Injustice of Life",
+    
+    // Ecclesiastes Chapter 4
+    "Ecclesiastes 4:1": "Oppression, Toil, and Friendlessness",
+    
+    // Ecclesiastes Chapter 5
+    "Ecclesiastes 5:1": "Fear God",
+    "Ecclesiastes 5:8": "The Vanity of Wealth",
+    
+    // Ecclesiastes Chapter 6
+    "Ecclesiastes 6:1": "The Vanity of Wealth and Honor",
+    
+    // Ecclesiastes Chapter 7
+    "Ecclesiastes 7:1": "The Value of Wisdom",
+    
+    // Ecclesiastes Chapter 8
+    "Ecclesiastes 8:1": "Obey the King",
+    "Ecclesiastes 8:9": "The Wicked and the Righteous",
+    
+    // Ecclesiastes Chapter 9
+    "Ecclesiastes 9:1": "Death Comes to All",
+    "Ecclesiastes 9:13": "Wisdom Better Than Folly",
+    
+    // Ecclesiastes Chapter 10
+    "Ecclesiastes 10:1": "Miscellaneous Observations",
+    
+    // Ecclesiastes Chapter 11
+    "Ecclesiastes 11:1": "Cast Your Bread Upon the Waters",
+    "Ecclesiastes 11:7": "Rejoice in Your Youth",
+    
+    // Ecclesiastes Chapter 12
+    "Ecclesiastes 12:1": "Remember Your Creator",
+    "Ecclesiastes 12:9": "The Conclusion",
+    
+    // Song of Solomon Chapter 1
+    "Song of Solomon 1:1": "The Song of Songs",
+    "Song of Solomon 1:2": "The Bride's Desire",
+    
+    // Song of Solomon Chapter 2
+    "Song of Solomon 2:1": "The Bride and the Bridegroom",
+    "Song of Solomon 2:8": "The Bride Hears Her Beloved",
+    
+    // Song of Solomon Chapter 3
+    "Song of Solomon 3:1": "The Bride's Dream",
+    "Song of Solomon 3:6": "Solomon's Wedding Procession",
+    
+    // Song of Solomon Chapter 4
+    "Song of Solomon 4:1": "The Bridegroom Praises the Bride",
+    
+    // Song of Solomon Chapter 5
+    "Song of Solomon 5:1": "The Bride and Bridegroom Feast",
+    "Song of Solomon 5:2": "The Bride's Second Dream",
+    
+    // Song of Solomon Chapter 6
+    "Song of Solomon 6:1": "Where Has Your Beloved Gone?",
+    "Song of Solomon 6:4": "The Bridegroom Praises the Bride",
+    
+    // Song of Solomon Chapter 7
+    "Song of Solomon 7:1": "How Beautiful Are Your Feet",
+    
+    // Song of Solomon Chapter 8
+    "Song of Solomon 8:1": "The Bride's Love",
+    "Song of Solomon 8:8": "We Have a Little Sister",
+    
     // ===========================
     // NEW TESTAMENT
     // ===========================
