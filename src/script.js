@@ -8902,61 +8902,63 @@ function showPinnedVersesBottomSheet() {
     const handleDragStart = (clientY) => {
         const scrollTop = modal.scrollTop;
         
-        // Only allow dragging if at the absolute top of scroll (no scrolling has occurred)
-        if (scrollTop !== 0) {
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
             isDragging = false;
             return;
         }
-        
+
+        isDragging = true;
         startY = clientY;
+        currentY = 0;
         lastY = clientY;
         lastTime = Date.now();
         startScrollTop = scrollTop;
-        isDragging = true;
+        velocityY = 0;
+
         modal.classList.add('dragging');
     };
     
     const handleDragMove = (clientY) => {
         if (!isDragging) return;
-        
+
         const deltaY = clientY - startY;
         const scrollTop = modal.scrollTop;
         const scrollChanged = scrollTop !== startScrollTop;
-        const timeDiff = Date.now() - lastTime;
-        
+
         // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
         if (timeDiff > 0) {
             velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
         }
-        lastY = clientY;
-        lastTime = Date.now();
-        
+
         // If content scrolled (scroll position changed), stop dragging
         if (scrollChanged) {
             isDragging = false;
             modal.classList.remove('dragging');
             return;
         }
-        
-        // If content is scrolled down, stop dragging and allow normal scroll
-        if (scrollTop !== 0) {
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
             isDragging = false;
             modal.classList.remove('dragging');
             return;
         }
-        
+
         // If trying to drag up when at top, allow content to scroll
         if (deltaY < 0) {
             isDragging = false;
             modal.classList.remove('dragging');
             return;
         }
-        
-        // Only allow dragging downward
-        if (deltaY > 0) {
-            currentY = deltaY;
-            modal.style.transform = `translateY(${deltaY}px)`;
-        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        modal.style.transform = `translateY(${currentY}px)`;
     };
     
     const handleDragEnd = () => {
