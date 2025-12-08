@@ -1786,8 +1786,8 @@ body.dark-theme .mobile-chapter-header {
 
 /* Verse header/section title */
 .verse-header {
-    font-size: 0.5rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     color: #2c5f2d;
     margin: 1.5rem 0 0.8rem 0;
     padding: 0.5rem 0.8rem;
@@ -1797,8 +1797,8 @@ body.dark-theme .mobile-chapter-header {
 }
 
 body.dark-theme .verse-header {
-    font-size: 0.5rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
     color: #81c784;
     background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%);
     border-left-color: #66bb6a;
@@ -4240,6 +4240,73 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
     color: #999;
     pointer-events: none;
     display: block;
+}
+
+/* Mobile: Larger font-size for better readability - covers all mobile sizes */
+@media screen and (max-width: 1024px) {
+    .notes-modal-content {
+        font-size: 16px !important;
+    }
+    
+    .notes-textarea {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        padding: 16px !important;
+    }
+    
+    /* Apply font-size to all content inside contenteditable */
+    .notes-textarea *,
+    .notes-textarea p,
+    .notes-textarea div,
+    .notes-textarea span,
+    .notes-textarea li,
+    .notes-textarea ul,
+    .notes-textarea ol {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* Tablets and mobile phones */
+@media screen and (max-width: 768px) {
+    .notes-modal-content {
+        font-size: 18px !important;
+    }
+    
+    .notes-textarea {
+        font-size: 18px !important;
+    }
+    
+    .notes-textarea *,
+    .notes-textarea p,
+    .notes-textarea div,
+    .notes-textarea span,
+    .notes-textarea li,
+    .notes-textarea ul,
+    .notes-textarea ol {
+        font-size: 18px !important;
+    }
+}
+
+/* Small mobile phones */
+@media screen and (max-width: 480px) {
+    .notes-modal-content {
+        font-size: 17px !important;
+    }
+    
+    .notes-textarea {
+        font-size: 17px !important;
+    }
+    
+    .notes-textarea *,
+    .notes-textarea p,
+    .notes-textarea div,
+    .notes-textarea span,
+    .notes-textarea li,
+    .notes-textarea ul,
+    .notes-textarea ol {
+        font-size: 17px !important;
+    }
 }
 
 .notes-color-section h4 {
