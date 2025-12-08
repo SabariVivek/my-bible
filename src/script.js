@@ -1226,6 +1226,13 @@ function displayChapter() {
         const tamilChapterData = currentTamilData[chapterKey];
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
+            
+            // Check for verse header
+            const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
+            if (header) {
+                html += `<div class="verse-header">${header}</div>`;
+            }
+            
             let tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
             let englishText = chapterData[verseKey];
             // Apply highlighting
@@ -1247,6 +1254,13 @@ function displayChapter() {
         // Display single language
         verses.forEach(verseKey => {
             const verseNum = verseKey.replace('verse_', '');
+            
+            // Check for verse header
+            const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
+            if (header) {
+                html += `<div class="verse-header">${header}</div>`;
+            }
+            
             let verseText = chapterData[verseKey];
             // Apply highlighting based on current language
             verseText = highlightSpecialText(verseText, currentLanguage);

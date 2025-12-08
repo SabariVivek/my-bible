@@ -52,7 +52,7 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
 .verse-count-banner-container {
     position: absolute;
     right: 0;
-    top: 95px;
+    top: 36px;
     z-index: 99;
     display: none;
     padding: 6px 16px;
@@ -1784,6 +1784,24 @@ body.dark-theme .mobile-chapter-header {
     border-radius: 4px;
 }
 
+/* Verse header/section title */
+.verse-header {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c5f2d;
+    margin: 1.5rem 0 0.8rem 0;
+    padding: 0.5rem 0.8rem;
+    background: linear-gradient(90deg, #f0f9f1 0%, transparent 100%);
+    border-left: 3px solid #4caf50;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body.dark-theme .verse-header {
+    color: #81c784;
+    background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%);
+    border-left-color: #66bb6a;
+}
+
 /* Verse actions panel */
 .verse-actions {
     position: absolute;
@@ -3034,6 +3052,10 @@ body.dark-theme .scripture-text::-moz-selection {
 
 body.dark-theme .scripture-text * {
     background: none;
+}
+
+body.dark-theme .scripture-text .verse-header {
+    background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%) !important;
 }
 
 body.dark-theme .scripture-text *::selection {
@@ -6500,8 +6522,6 @@ body.dark-theme .language-sheet-color-option.active {
     border-color: #4a90e2;
     box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.4);
 }
-    background-color: #3c4043;
-}
 
 body.dark-theme .verse-actions-buttons::-webkit-scrollbar-track {
     background: transparent;
@@ -8443,7 +8463,7 @@ body.dark-theme .unpin-btn:hover {
     }
 }
 
-body.dark-theme @keyframes versePinnedHighlightDark {
+@keyframes versePinnedHighlightDark {
     0% {
         background: linear-gradient(90deg, #3d6b50 0%, #4a8a68 50%, rgba(74, 138, 104, 0.8) 100%);
     }
