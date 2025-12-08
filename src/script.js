@@ -5646,6 +5646,7 @@ function openNotesModal(verseNum = null) {
     const textarea = document.getElementById('notes-textarea');
     const verseRef = document.getElementById('notes-verse-ref');
     const deleteBtn = document.getElementById('delete-note-btn');
+    const loadingEl = document.getElementById('notes-loading');
     
     if (!overlay || !modal) return;
     
@@ -5657,6 +5658,11 @@ function openNotesModal(verseNum = null) {
     overlay.classList.remove('visible');
     overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.32)';
     overlay.style.transition = '';
+    
+    // Clear loading state
+    if (loadingEl) {
+        loadingEl.classList.remove('active');
+    }
     
     // If verseNum provided, use it, otherwise check for highlighted verse
     if (verseNum === null) {
@@ -5950,20 +5956,13 @@ async function saveNote() {
             
             console.log('PATCH Response:', { status: updateResponse.status, ok: updateResponse.ok });
             
-            // 204 means success but may not have matched any rows, so always try POST
-            // Only skip POST if we got a different success code
-            if (updateResponse.status === 204) {
-                // 204 = No Content (could mean no rows matched), try POST
-                console.log('⚠️ PATCH returned 204, attempting POST...');
-            } else if (updateResponse.ok) {
-                // Other success status, assume it worked
+            // Check if PATCH succeeded (204 or 2xx status)
+            if (updateResponse.ok || updateResponse.status === 204) {
                 console.log('✅ Note updated:', `${bookFile} ${chapter}:${verse}`);
             } else {
+                // PATCH failed, try POST for new note
                 console.log('⚠️ PATCH failed, attempting POST...');
-            }
-            
-            // Always try POST (either PATCH failed or returned 204)
-            if (updateResponse.status === 204 || !updateResponse.ok) {
+                
                 const insertResponse = await fetch(
                     `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}`,
                     {
@@ -6106,19 +6105,25 @@ function showNoteViewer(verseNum, note) {
     const ref = document.getElementById('note-viewer-ref');
     const content = document.getElementById('note-viewer-content');
     const modal = document.querySelector('.note-viewer-modal');
+    
     if (!popup) return;
+    
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     content.textContent = note.text;
-    // Reset modal height to default
+    
+    // Reset modal transform
     if (modal) {
-        modal.style.height = '';
         modal.style.transform = '';
     }
-    // Save current scroll position before preventing body scroll
-    const scrollY = window.scrollY;
-    document.body.style.top = `-${scrollY}px`;
-    document.body.classList.add('modal-open');
+    
+    // First set display to flex (required for visibility)
     popup.style.display = 'flex';
+    
+    // Show the bottom sheet with visible class
+    popup.classList.add('visible');
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+    
     // Update admin UI to show/hide edit button
     updateAdminUI();
     // Store current viewing verse for edit button
@@ -6127,26 +6132,21 @@ function showNoteViewer(verseNum, note) {
 function hideNoteViewer() {
     const popup = document.getElementById('note-viewer-popup');
     const modal = document.querySelector('.note-viewer-modal');
-    // Only restore scroll position if modal was actually open
-    if (document.body.classList.contains('modal-open')) {
-        const scrollYStyle = document.body.style.top;
-        document.body.classList.remove('modal-open');
-        document.body.style.top = '';
-        
-        if (scrollYStyle) {
-            // scrollYStyle is in format like "-1234px", extract the number and negate it
-            const scrollY = Math.abs(parseInt(scrollYStyle));
-            window.scrollTo(0, scrollY);
-        }
-    }
-    if (popup) {
+    
+    if (!popup) return;
+    
+    // Remove visible class to trigger slide down animation
+    popup.classList.remove('visible');
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    
+    // Hide after animation completes
+    setTimeout(() => {
         popup.style.display = 'none';
-    }
-    if (modal) {
-        modal.style.transform = '';
-        modal.style.transition = '';
-        modal.style.height = '';
-    }
+        if (modal) {
+            modal.style.transform = '';
+        }
+    }, 300);
 }
 // Admin Mode Functions
 function isAdmin() {

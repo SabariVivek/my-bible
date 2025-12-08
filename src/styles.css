@@ -3572,56 +3572,46 @@ body.modal-open {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1100;
-    animation: fadeIn 0.2s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.note-viewer-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-/* Base modal styles */
+/* Base modal styles - Bottom sheet for all devices */
 .note-viewer-modal {
     background: #ffffff;
     display: flex;
     flex-direction: column;
-    position: relative;
-    z-index: 1101; /* Above overlay to prevent blur from affecting modal */
-    width: 90%;
-    max-width: 600px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     max-height: 80vh;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1101;
+    /* GPU acceleration for smooth animations */
+    will-change: transform;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    overflow: visible;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Desktop specific animation */
-@media (min-width: 769px) {
-    .note-viewer-modal {
-        animation: scaleIn 0.3s ease;
-    }
+.note-viewer-overlay.visible .note-viewer-modal {
+    transform: translateY(0);
+}
 
-    @keyframes scaleIn {
-        from {
-            opacity: 0;
-            transform: scale(0.9);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-    
-    .note-viewer-header {
-        padding: 20px 24px;
-        border-radius: 12px 12px 0 0;
-    }
+.note-viewer-modal.dragging {
+    transition: none !important;
 }
 
 .note-viewer-header {
@@ -3794,56 +3784,7 @@ body.dark-theme .note-viewer-edit-btn svg {
     color: #e8eaed;
 }
 
-/* ===== MOBILE BOTTOM SHEET ===== */
-@media (max-width: 768px) {
-    /* Override overlay for mobile - bottom alignment */
-    .note-viewer-overlay {
-        display: flex;
-        align-items: flex-end;
-        justify-content: stretch;
-    }
 
-    /* Bottom sheet container */
-    .note-viewer-modal {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 50vh;
-        max-height: 95vh;
-        min-height: 30vh;
-        border-radius: 24px 24px 0 0;
-        box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.2);
-        animation: slideUpFromBottom 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        overflow: hidden;
-        transition: height 0.2s ease;
-    }
-
-    /* Slide up animation */
-    @keyframes slideUpFromBottom {
-        0% {
-            transform: translateY(100%);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    /* Closing animation */
-    .note-viewer-modal.closing {
-        animation: slideDownToBottom 0.25s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
-    }
-
-    @keyframes slideDownToBottom {
-        0% {
-            transform: translateY(0);
-        }
-        100% {
-            transform: translateY(100%);
-        }
-    }
 
     /* Header with drag handle */
     .note-viewer-header {
@@ -3964,7 +3905,6 @@ body.dark-theme .note-viewer-edit-btn svg {
     body.dark-theme .note-viewer-edit-btn svg {
         color: #9aa0a6;
     }
-}
 
 /* Loading Spinner for Notes */
 .notes-loading {
@@ -4047,6 +3987,7 @@ body.dark-theme .notes-spinner {
     user-select: none;
     z-index: 222;
     position: relative;
+    overflow: hidden;
     /* GPU acceleration for drag animations */
     will-change: transform;
     transform: translateZ(0);
@@ -4070,7 +4011,7 @@ body.dark-theme .notes-spinner {
         will-change: transform;
         transform: translateY(100%);
         transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
-        overflow: visible;
+        overflow: hidden;
         backface-visibility: hidden;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
