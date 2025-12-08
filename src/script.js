@@ -1595,6 +1595,7 @@ function initializeBookmarkColorPickerGestures() {
     let velocityY = 0;
     let lastY = 0;
     let lastTime = 0;
+    let startScrollTop = 0;
     
     function handleStart(clientY) {
         const scrollTop = content.scrollTop;
@@ -1610,6 +1611,7 @@ function initializeBookmarkColorPickerGestures() {
         currentY = 0;
         lastY = clientY;
         lastTime = Date.now();
+        startScrollTop = scrollTop;
         velocityY = 0;
 
         overlay.classList.add('dragging');
@@ -1620,6 +1622,7 @@ function initializeBookmarkColorPickerGestures() {
 
         const deltaY = clientY - startY;
         const scrollTop = content.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
 
         // Calculate velocity
         const now = Date.now();
@@ -1628,6 +1631,13 @@ function initializeBookmarkColorPickerGestures() {
             velocityY = (clientY - lastY) / timeDiff;
             lastY = clientY;
             lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            overlay.classList.remove('dragging');
+            return;
         }
 
         // If content is scrolled down, allow normal scrolling
@@ -3038,6 +3048,7 @@ function initializeMobileLanguageModal() {
 
         const deltaY = clientY - startY;
         const scrollTop = languageBottomSheet.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
 
         // Calculate velocity
         const now = Date.now();
@@ -3046,6 +3057,13 @@ function initializeMobileLanguageModal() {
             velocityY = (clientY - lastY) / timeDiff;
             lastY = clientY;
             lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            languageBottomSheet.classList.remove('dragging');
+            return;
         }
 
         // If content is scrolled down, allow normal scrolling
@@ -5735,6 +5753,7 @@ function initializeAndroidBottomSheetGestures() {
     let velocityY = 0;
     let lastY = 0;
     let lastTime = 0;
+    let startScrollTop = 0;
     
     function handleStart(clientY) {
         const scrollTop = contentArea.scrollTop;
@@ -5750,6 +5769,7 @@ function initializeAndroidBottomSheetGestures() {
         currentY = 0;
         lastY = clientY;
         lastTime = Date.now();
+        startScrollTop = scrollTop;
         velocityY = 0;
 
         sheet.classList.add('dragging');
@@ -5760,6 +5780,7 @@ function initializeAndroidBottomSheetGestures() {
 
         const deltaY = clientY - startY;
         const scrollTop = contentArea.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
 
         // Calculate velocity
         const now = Date.now();
@@ -5768,6 +5789,13 @@ function initializeAndroidBottomSheetGestures() {
             velocityY = (clientY - lastY) / timeDiff;
             lastY = clientY;
             lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            sheet.classList.remove('dragging');
+            return;
         }
 
         // If content is scrolled down, allow normal scrolling
@@ -8334,6 +8362,7 @@ async function showSermonSelectionSheet(versesToAdd) {
     let velocityY = 0;
     let lastY = 0;
     let lastTime = 0;
+    let startScrollTop = 0;
     
     function handleStart(clientY) {
         const scrollTop = modalBody.scrollTop;
@@ -8349,6 +8378,7 @@ async function showSermonSelectionSheet(versesToAdd) {
         currentY = 0;
         lastY = clientY;
         lastTime = Date.now();
+        startScrollTop = scrollTop;
         velocityY = 0;
 
         content.classList.add('dragging');
@@ -8359,6 +8389,7 @@ async function showSermonSelectionSheet(versesToAdd) {
 
         const deltaY = clientY - startY;
         const scrollTop = modalBody.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
 
         // Calculate velocity
         const now = Date.now();
@@ -8367,6 +8398,13 @@ async function showSermonSelectionSheet(versesToAdd) {
             velocityY = (clientY - lastY) / timeDiff;
             lastY = clientY;
             lastTime = now;
+        }
+
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
         }
 
         // If content is scrolled down, allow normal scrolling
@@ -8883,6 +8921,7 @@ function showPinnedVersesBottomSheet() {
         
         const deltaY = clientY - startY;
         const scrollTop = modal.scrollTop;
+        const scrollChanged = scrollTop !== startScrollTop;
         const timeDiff = Date.now() - lastTime;
         
         // Calculate velocity
@@ -8892,7 +8931,14 @@ function showPinnedVersesBottomSheet() {
         lastY = clientY;
         lastTime = Date.now();
         
-        // If content scrolled down, stop dragging and allow normal scroll
+        // If content scrolled (scroll position changed), stop dragging
+        if (scrollChanged) {
+            isDragging = false;
+            modal.classList.remove('dragging');
+            return;
+        }
+        
+        // If content is scrolled down, stop dragging and allow normal scroll
         if (scrollTop > 5) {
             isDragging = false;
             modal.classList.remove('dragging');
