@@ -1915,6 +1915,12 @@ body.dark-theme .verse-header {
     .verse-actions-row {
         gap: 0.3rem;
     }
+
+    .verse-header {
+        font-size: 0.9rem !important;
+        padding: 0.4rem 0.6rem;
+        margin: 1rem 0 0.5rem 0;
+    }
 }
 
 @media (max-width: 480px) {
