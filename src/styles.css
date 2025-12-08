@@ -1786,17 +1786,18 @@ body.dark-theme .mobile-chapter-header {
 
 /* Verse header/section title */
 .verse-header {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #2c5f2d;
     margin: 1.5rem 0 0.8rem 0;
     padding: 0.5rem 0.8rem;
     background: linear-gradient(90deg, #f0f9f1 0%, transparent 100%);
     border-left: 3px solid #4caf50;
-    font-family: system-ui, -apple-system, sans-serif;
 }
 
 body.dark-theme .verse-header {
+    font-size: 1.1rem;
+    font-weight: 500;
     color: #81c784;
     background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%);
     border-left-color: #66bb6a;
