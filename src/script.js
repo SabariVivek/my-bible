@@ -8859,20 +8859,30 @@ function showPinnedVersesBottomSheet() {
     let velocityY = 0;
     let lastY = 0;
     let lastTime = 0;
+    let startScrollTop = 0;
     
     const handleDragStart = (clientY) => {
-        if (modal.scrollTop > 5) return; // Only drag if at top
+        const scrollTop = modal.scrollTop;
+        
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+        
         startY = clientY;
         lastY = clientY;
         lastTime = Date.now();
+        startScrollTop = scrollTop;
         isDragging = true;
         modal.classList.add('dragging');
     };
     
     const handleDragMove = (clientY) => {
         if (!isDragging) return;
-        currentY = clientY;
-        const deltaY = currentY - startY;
+        
+        const deltaY = clientY - startY;
+        const scrollTop = modal.scrollTop;
         const timeDiff = Date.now() - lastTime;
         
         // Calculate velocity
@@ -8882,8 +8892,23 @@ function showPinnedVersesBottomSheet() {
         lastY = clientY;
         lastTime = Date.now();
         
+        // If content scrolled down, stop dragging and allow normal scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            modal.classList.remove('dragging');
+            return;
+        }
+        
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            modal.classList.remove('dragging');
+            return;
+        }
+        
         // Only allow dragging downward
         if (deltaY > 0) {
+            currentY = deltaY;
             modal.style.transform = `translateY(${deltaY}px)`;
         }
     };
@@ -8893,11 +8918,10 @@ function showPinnedVersesBottomSheet() {
         isDragging = false;
         modal.classList.remove('dragging');
         
-        const deltaY = currentY - startY;
         const threshold = 150; // 150px threshold to close
         
         // Close if dragged far enough or velocity is high enough
-        if (deltaY > threshold || velocityY > 0.3) {
+        if (currentY > threshold || velocityY > 0.3) {
             modal.style.transform = ''; // Clear inline transform to trigger animation
             closePinnedSheet();
         } else {
@@ -8912,8 +8936,15 @@ function showPinnedVersesBottomSheet() {
     }, { passive: true });
     
     modal.addEventListener('touchmove', (e) => {
+        const scrollTop = modal.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+        
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
         handleDragMove(e.touches[0].clientY);
-    }, { passive: true });
+    }, { passive: false });
     
     modal.addEventListener('touchend', handleDragEnd, { passive: true });
     
@@ -8923,7 +8954,10 @@ function showPinnedVersesBottomSheet() {
     });
     
     document.addEventListener('mousemove', (e) => {
-        if (isDragging) handleDragMove(e.clientY);
+        if (isDragging) {
+            e.preventDefault();
+            handleDragMove(e.clientY);
+        }
     });
     
     document.addEventListener('mouseup', handleDragEnd);
