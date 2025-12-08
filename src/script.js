@@ -8663,6 +8663,7 @@ function showPinnedVersesBottomSheet() {
     // Show the bottom sheet
     bottomSheet.classList.add('visible');
     document.body.classList.add('pinned-verses-sheet-open');
+    document.body.style.overflow = 'hidden';
     
     // Add event listeners
     const closeBtn = bottomSheet.querySelector('.pinned-verses-close-btn');
@@ -8673,51 +8674,92 @@ function showPinnedVersesBottomSheet() {
     const closePinnedSheet = () => {
         bottomSheet.classList.remove('visible');
         document.body.classList.remove('pinned-verses-sheet-open');
+        document.body.style.overflow = '';
+        
+        // Clear inline transform after transition completes
+        setTimeout(() => {
+            modal.style.transform = '';
+        }, 300); // Match the 0.3s transition duration
     };
     
     closeBtn.addEventListener('click', closePinnedSheet);
     backdrop.addEventListener('click', closePinnedSheet);
     
-    // Add swipe-down to close functionality
-    let touchStartY = 0;
+    // Add drag-to-close functionality with velocity tracking
+    let startY = 0;
+    let currentY = 0;
     let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
     
-    modal.addEventListener('touchstart', (e) => {
-        touchStartY = e.touches[0].clientY;
+    const handleDragStart = (clientY) => {
+        if (modal.scrollTop > 5) return; // Only drag if at top
+        startY = clientY;
+        lastY = clientY;
+        lastTime = Date.now();
         isDragging = true;
-        modal.style.transition = 'none';
-    }, { passive: true });
+        modal.classList.add('dragging');
+    };
     
-    modal.addEventListener('touchmove', (e) => {
+    const handleDragMove = (clientY) => {
         if (!isDragging) return;
-        const currentY = e.touches[0].clientY;
-        const diff = currentY - touchStartY;
+        currentY = clientY;
+        const deltaY = currentY - startY;
+        const timeDiff = Date.now() - lastTime;
+        
+        // Calculate velocity
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+        }
+        lastY = clientY;
+        lastTime = Date.now();
         
         // Only allow dragging downward
-        if (diff > 0) {
-            modal.style.transform = `translateY(${diff}px)`;
+        if (deltaY > 0) {
+            modal.style.transform = `translateY(${deltaY}px)`;
         }
-    }, { passive: true });
+    };
     
-    modal.addEventListener('touchend', (e) => {
+    const handleDragEnd = () => {
         if (!isDragging) return;
         isDragging = false;
+        modal.classList.remove('dragging');
         
-        const currentY = e.changedTouches[0].clientY;
-        const diff = currentY - touchStartY;
-        const threshold = 100; // 100px threshold to close
+        const deltaY = currentY - startY;
+        const threshold = 150; // 150px threshold to close
         
-        // Restore transition for smooth animation
-        modal.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        
-        if (diff > threshold) {
-            // Swipe down far enough, close the sheet
+        // Close if dragged far enough or velocity is high enough
+        if (deltaY > threshold || velocityY > 0.3) {
+            modal.style.transform = ''; // Clear inline transform to trigger animation
             closePinnedSheet();
         } else {
             // Snap back to original position
-            modal.style.transform = 'translateY(0)';
+            modal.style.transform = '';
         }
+    };
+    
+    // Touch events
+    modal.addEventListener('touchstart', (e) => {
+        handleDragStart(e.touches[0].clientY);
     }, { passive: true });
+    
+    modal.addEventListener('touchmove', (e) => {
+        handleDragMove(e.touches[0].clientY);
+    }, { passive: true });
+    
+    modal.addEventListener('touchend', handleDragEnd, { passive: true });
+    
+    // Mouse events for desktop
+    modal.addEventListener('mousedown', (e) => {
+        handleDragStart(e.clientY);
+    });
+    
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) handleDragMove(e.clientY);
+    });
+    
+    document.addEventListener('mouseup', handleDragEnd);
     
     // Add event listeners to unpin buttons
     const unpinBtns = bottomSheet.querySelectorAll('.pinned-verse-list-unpin');
