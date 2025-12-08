@@ -1100,6 +1100,411 @@ const verseHeaders = {
     "2 Corinthians 13:5": "Examine Yourselves",
     "2 Corinthians 13:11": "Final Greetings and Benediction",
     
+    // Galatians Chapter 1
+    "Galatians 1:1": "Greeting",
+    "Galatians 1:6": "No Other Gospel",
+    "Galatians 1:11": "Paul's Calling and Conversion",
+    
+    // Galatians Chapter 2
+    "Galatians 2:1": "Paul Accepted by the Apostles",
+    "Galatians 2:11": "Paul Confronts Peter",
+    "Galatians 2:15": "Justified by Faith, Not Works",
+    
+    // Galatians Chapter 3
+    "Galatians 3:1": "Faith, Not Law",
+    "Galatians 3:10": "Christ Redeems from the Curse",
+    "Galatians 3:15": "The Promise Comes Before the Law",
+    "Galatians 3:23": "Children of God Through Faith",
+    
+    // Galatians Chapter 4
+    "Galatians 4:1": "Sons and Heirs Through Christ",
+    "Galatians 4:8": "Paul's Concern for the Galatians",
+    "Galatians 4:21": "Hagar and Sarah — Two Covenants",
+    
+    // Galatians Chapter 5
+    "Galatians 5:1": "Freedom in Christ",
+    "Galatians 5:13": "Walk by the Spirit",
+    
+    // Galatians Chapter 6
+    "Galatians 6:1": "Bear One Another's Burdens",
+    "Galatians 6:11": "Boast Only in the Cross",
+    
+    // Ephesians Chapter 1
+    "Ephesians 1:1": "Greeting",
+    "Ephesians 1:3": "Spiritual Blessings in Christ",
+    "Ephesians 1:15": "Prayer for Wisdom and Revelation",
+    
+    // Ephesians Chapter 2
+    "Ephesians 2:1": "Saved by Grace Through Faith",
+    "Ephesians 2:11": "One New Man in Christ",
+    
+    // Ephesians Chapter 3
+    "Ephesians 3:1": "Paul's Ministry to the Gentiles",
+    "Ephesians 3:14": "Prayer for Spiritual Strength",
+    
+    // Ephesians Chapter 4
+    "Ephesians 4:1": "Unity and Gifts in the Body",
+    "Ephesians 4:17": "The New Life in Christ",
+    
+    // Ephesians Chapter 5
+    "Ephesians 5:1": "Walk in Love and Wisdom",
+    "Ephesians 5:22": "Marriage — Christ and the Church",
+    
+    // Ephesians Chapter 6
+    "Ephesians 6:1": "Instructions for Families",
+    "Ephesians 6:10": "Armor of God",
+    "Ephesians 6:21": "Final Greetings",
+    
+    // Philippians Chapter 1
+    "Philippians 1:1": "Greeting",
+    "Philippians 1:3": "Thanksgiving and Prayer",
+    "Philippians 1:12": "The Gospel Advances",
+    "Philippians 1:19": "To Live Is Christ",
+    
+    // Philippians Chapter 2
+    "Philippians 2:1": "Christ's Humility",
+    "Philippians 2:12": "Shine as Lights",
+    "Philippians 2:19": "Timothy and Epaphroditus",
+    
+    // Philippians Chapter 3
+    "Philippians 3:1": "Righteousness Through Faith",
+    "Philippians 3:12": "Press Toward the Goal",
+    
+    // Philippians Chapter 4
+    "Philippians 4:1": "Encouragement to Stand Firm",
+    "Philippians 4:10": "Contentment in Christ",
+    "Philippians 4:21": "Final Greetings",
+    
+    // Colossians Chapter 1
+    "Colossians 1:1": "Thanksgiving and Prayer",
+    "Colossians 1:15": "Christ the Supreme Creator and Redeemer",
+    "Colossians 1:24": "Paul's Ministry",
+    
+    // Colossians Chapter 2
+    "Colossians 2:1": "Christ, the Mystery of God",
+    "Colossians 2:6": "Alive in Christ",
+    "Colossians 2:16": "Let No One Disqualify You",
+    
+    // Colossians Chapter 3
+    "Colossians 3:1": "Put On the New Self",
+    "Colossians 3:18": "Rules for Christian Households",
+    
+    // Colossians Chapter 4
+    "Colossians 4:1": "Prayer and Conduct",
+    "Colossians 4:7": "Final Greetings",
+    
+    // 1 Thessalonians Chapter 1
+    "1 Thessalonians 1:1": "Greeting and Thanksgiving",
+    
+    // 1 Thessalonians Chapter 2
+    "1 Thessalonians 2:1": "Paul's Ministry in Thessalonica",
+    "1 Thessalonians 2:13": "Reception of the Word",
+    "1 Thessalonians 2:17": "Paul's Longing to Visit",
+    
+    // 1 Thessalonians Chapter 3
+    "1 Thessalonians 3:1": "Encouragement Amid Trial",
+    
+    // 1 Thessalonians Chapter 4
+    "1 Thessalonians 4:1": "A Life Pleasing to God",
+    "1 Thessalonians 4:13": "The Coming of the Lord",
+    
+    // 1 Thessalonians Chapter 5
+    "1 Thessalonians 5:1": "The Day of the Lord",
+    "1 Thessalonians 5:12": "Final Instructions and Blessing",
+    
+    // 2 Thessalonians Chapter 1
+    "2 Thessalonians 1:1": "Thanksgiving",
+    "2 Thessalonians 1:5": "God's Judgment and Glory",
+    
+    // 2 Thessalonians Chapter 2
+    "2 Thessalonians 2:1": "Man of Lawlessness",
+    "2 Thessalonians 2:13": "Stand Firm",
+    
+    // 2 Thessalonians Chapter 3
+    "2 Thessalonians 3:1": "Request for Prayer",
+    "2 Thessalonians 3:6": "Warning Against Idleness",
+    "2 Thessalonians 3:16": "Final Blessing",
+    
+    // 1 Timothy Chapter 1
+    "1 Timothy 1:1": "Greeting",
+    "1 Timothy 1:3": "Charge Against False Teachers",
+    "1 Timothy 1:12": "Christ's Mercy to Paul",
+    
+    // 1 Timothy Chapter 2
+    "1 Timothy 2:1": "Pray for All People",
+    "1 Timothy 2:8": "Order in Worship",
+    
+    // 1 Timothy Chapter 3
+    "1 Timothy 3:1": "Qualifications for Overseers",
+    "1 Timothy 3:8": "Qualifications for Deacons",
+    
+    // 1 Timothy Chapter 4
+    "1 Timothy 4:1": "Warnings Against False Teaching",
+    "1 Timothy 4:6": "Be a Good Servant of Christ",
+    
+    // 1 Timothy Chapter 5
+    "1 Timothy 5:1": "Instructions for Widows",
+    "1 Timothy 5:17": "Instructions for Elders",
+    
+    // 1 Timothy Chapter 6
+    "1 Timothy 6:1": "Warning Against Greed",
+    "1 Timothy 6:11": "Fight the Good Fight",
+    
+    // 2 Timothy Chapter 1
+    "2 Timothy 1:1": "Encouragement to Boldness",
+    "2 Timothy 1:8": "Do Not Be Ashamed",
+    
+    // 2 Timothy Chapter 2
+    "2 Timothy 2:1": "Be Strong in Grace",
+    "2 Timothy 2:14": "Rightly Handling the Word",
+    
+    // 2 Timothy Chapter 3
+    "2 Timothy 3:1": "Godlessness in the Last Days",
+    "2 Timothy 3:10": "All Scripture Is God-Breathed",
+    
+    // 2 Timothy Chapter 4
+    "2 Timothy 4:1": "Preach the Word",
+    "2 Timothy 4:9": "Final Instructions",
+    
+    // Titus Chapter 1
+    "Titus 1:1": "Greeting",
+    "Titus 1:5": "Qualifications for Elders",
+    
+    // Titus Chapter 2
+    "Titus 2:1": "Teaching Sound Doctrine",
+    
+    // Titus Chapter 3
+    "Titus 3:1": "Live Rightly",
+    "Titus 3:12": "Final Instructions",
+    
+    // Philemon Chapter 1
+    "Philemon 1:1": "Greeting and Thanksgiving",
+    "Philemon 1:8": "Appeal for Onesimus",
+    "Philemon 1:17": "Paul's Promise and Closing",
+    
+    // Hebrews Chapter 1
+    "Hebrews 1:1": "God Speaks Through His Son",
+    "Hebrews 1:5": "The Son Superior to Angels",
+    
+    // Hebrews Chapter 2
+    "Hebrews 2:1": "Warning Against Drifting",
+    "Hebrews 2:5": "Jesus Made Like His Brothers",
+    
+    // Hebrews Chapter 3
+    "Hebrews 3:1": "Jesus Superior to Moses",
+    "Hebrews 3:7": "Warning Against Unbelief",
+    
+    // Hebrews Chapter 4
+    "Hebrews 4:1": "Rest for God's People",
+    "Hebrews 4:14": "Jesus the Great High Priest",
+    
+    // Hebrews Chapter 5
+    "Hebrews 5:1": "High Priest Like Melchizedek",
+    "Hebrews 5:11": "Spiritual Immaturity",
+    
+    // Hebrews Chapter 6
+    "Hebrews 6:1": "Warning and Encouragement",
+    "Hebrews 6:13": "God's Unchanging Promise",
+    
+    // Hebrews Chapter 7
+    "Hebrews 7:1": "Melchizedek and Christ",
+    
+    // Hebrews Chapter 8
+    "Hebrews 8:1": "Christ Mediates a Better Covenant",
+    
+    // Hebrews Chapter 9
+    "Hebrews 9:1": "Earthly vs Heavenly Sanctuary",
+    
+    // Hebrews Chapter 10
+    "Hebrews 10:1": "Christ's Once-for-All Sacrifice",
+    "Hebrews 10:19": "Draw Near, Hold Fast",
+    
+    // Hebrews Chapter 11
+    "Hebrews 11:1": "Faith of the Ancients (Faith Chapter)",
+    
+    // Hebrews Chapter 12
+    "Hebrews 12:1": "Run the Race with Endurance",
+    "Hebrews 12:14": "Warning Against Refusing God",
+    
+    // Hebrews Chapter 13
+    "Hebrews 13:1": "Sacrifices Pleasing to God",
+    "Hebrews 13:20": "Benediction and Closing",
+    
+    // James Chapter 1
+    "James 1:1": "Greeting",
+    "James 1:2": "Steadfastness in Trials",
+    "James 1:19": "Be Doers of the Word",
+    
+    // James Chapter 2
+    "James 2:1": "Warning Against Partiality",
+    "James 2:14": "Faith Without Works Is Dead",
+    
+    // James Chapter 3
+    "James 3:1": "Taming the Tongue",
+    "James 3:13": "Two Types of Wisdom",
+    
+    // James Chapter 4
+    "James 4:1": "Warning Against Worldliness",
+    "James 4:11": "Boasting About Tomorrow",
+    
+    // James Chapter 5
+    "James 5:1": "Warning to the Rich",
+    "James 5:7": "Patience in Suffering",
+    "James 5:13": "Prayer and Restoration",
+    
+    // 1 Peter Chapter 1
+    "1 Peter 1:1": "Living Hope Through Christ",
+    "1 Peter 1:13": "Called to Be Holy",
+    
+    // 1 Peter Chapter 2
+    "1 Peter 2:1": "Chosen People",
+    "1 Peter 2:11": "Submission to Authority",
+    
+    // 1 Peter Chapter 3
+    "1 Peter 3:1": "Instructions for Families",
+    "1 Peter 3:8": "Suffering for Righteousness",
+    
+    // 1 Peter Chapter 4
+    "1 Peter 4:1": "Living for God",
+    "1 Peter 4:12": "Sharing Christ's Sufferings",
+    
+    // 1 Peter Chapter 5
+    "1 Peter 5:1": "Shepherd the Flock",
+    "1 Peter 5:12": "Final Greetings",
+    
+    // 2 Peter Chapter 1
+    "2 Peter 1:1": "Confirm Your Calling",
+    "2 Peter 1:12": "The Prophetic Word Confirmed",
+    
+    // 2 Peter Chapter 2
+    "2 Peter 2:1": "Warning Against False Teachers",
+    
+    // 2 Peter Chapter 3
+    "2 Peter 3:1": "The Day of the Lord",
+    "2 Peter 3:14": "Final Exhortations",
+    
+    // 1 John Chapter 1
+    "1 John 1:1": "The Word of Life",
+    "1 John 1:5": "Walking in the Light",
+    
+    // 1 John Chapter 2
+    "1 John 2:1": "Christ Our Advocate",
+    "1 John 2:15": "Do Not Love the World",
+    "1 John 2:18": "Warning About Antichrists",
+    "1 John 2:28": "Children of God",
+    
+    // 1 John Chapter 3
+    "1 John 3:1": "Children of God vs Children of the Devil",
+    "1 John 3:11": "Love One Another",
+    
+    // 1 John Chapter 4
+    "1 John 4:1": "Test the Spirits",
+    "1 John 4:7": "God Is Love",
+    
+    // 1 John Chapter 5
+    "1 John 5:1": "Faith in the Son of God",
+    "1 John 5:13": "Confidence in Prayer",
+    
+    // 2 John Chapter 1
+    "2 John 1:1": "Greeting",
+    "2 John 1:4": "Walk in the Truth",
+    "2 John 1:7": "Warning Against Deceivers",
+    "2 John 1:12": "Final Greetings",
+    
+    // 3 John Chapter 1
+    "3 John 1:1": "Gaius Commended",
+    "3 John 1:9": "Diotrephes and Demetrius",
+    "3 John 1:13": "Final Greetings",
+    
+    // Jude Chapter 1
+    "Jude 1:1": "Greeting and Warning",
+    "Jude 1:5": "Judgment on False Teachers",
+    "Jude 1:17": "Persevere in the Faith",
+    "Jude 1:24": "Doxology",
+    
+    // Revelation Chapter 1
+    "Revelation 1:1": "Prologue — Vision of Christ",
+    "Revelation 1:9": "The Son of Man Appears",
+    
+    // Revelation Chapter 2
+    "Revelation 2:1": "Message to Ephesus",
+    "Revelation 2:8": "Message to Smyrna",
+    "Revelation 2:12": "Message to Pergamum",
+    "Revelation 2:18": "Message to Thyatira",
+    
+    // Revelation Chapter 3
+    "Revelation 3:1": "Message to Sardis",
+    "Revelation 3:7": "Message to Philadelphia",
+    "Revelation 3:14": "Message to Laodicea",
+    
+    // Revelation Chapter 4
+    "Revelation 4:1": "Vision of God's Throne",
+    
+    // Revelation Chapter 5
+    "Revelation 5:1": "The Lamb and the Scroll",
+    
+    // Revelation Chapter 6
+    "Revelation 6:1": "The Six Seals",
+    
+    // Revelation Chapter 7
+    "Revelation 7:1": "144,000 Sealed",
+    "Revelation 7:9": "Great Multitude in White Robes",
+    
+    // Revelation Chapter 8
+    "Revelation 8:1": "Seventh Seal and Silence",
+    "Revelation 8:6": "Four Trumpets",
+    
+    // Revelation Chapter 9
+    "Revelation 9:1": "Fifth Trumpet — Locusts",
+    "Revelation 9:13": "Sixth Trumpet — Angels Released",
+    
+    // Revelation Chapter 10
+    "Revelation 10:1": "The Mighty Angel and the Little Scroll",
+    
+    // Revelation Chapter 11
+    "Revelation 11:1": "Two Witnesses",
+    "Revelation 11:15": "Seventh Trumpet",
+    
+    // Revelation Chapter 12
+    "Revelation 12:1": "Woman, Child, and Dragon",
+    
+    // Revelation Chapter 13
+    "Revelation 13:1": "Beast from the Sea",
+    "Revelation 13:11": "Beast from the Earth",
+    
+    // Revelation Chapter 14
+    "Revelation 14:1": "The Lamb and 144,000",
+    "Revelation 14:6": "Three Angels' Messages",
+    "Revelation 14:14": "Harvest of the Earth",
+    
+    // Revelation Chapter 15
+    "Revelation 15:1": "Seven Angels with Seven Plagues",
+    
+    // Revelation Chapter 16
+    "Revelation 16:1": "Seven Bowls of Wrath",
+    
+    // Revelation Chapter 17
+    "Revelation 17:1": "The Woman on the Scarlet Beast",
+    
+    // Revelation Chapter 18
+    "Revelation 18:1": "Fall of Babylon",
+    
+    // Revelation Chapter 19
+    "Revelation 19:1": "Marriage of the Lamb",
+    "Revelation 19:11": "Christ the Warrior King",
+    
+    // Revelation Chapter 20
+    "Revelation 20:1": "The Thousand Years",
+    "Revelation 20:11": "Final Judgment",
+    
+    // Revelation Chapter 21
+    "Revelation 21:1": "New Heaven and New Earth",
+    "Revelation 21:9": "New Jerusalem",
+    
+    // Revelation Chapter 22
+    "Revelation 22:1": "River of Life",
+    "Revelation 22:10": "Final Warnings and Benediction",
+    
     // Add more headers as needed
 };
 
