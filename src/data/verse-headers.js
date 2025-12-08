@@ -5296,6 +5296,12 @@ const verseHeaders = {
 
 // Helper function to get header for a specific verse
 function getVerseHeader(bookName, chapter, verse) {
-    const key = `${bookName} ${chapter}:${verse}`;
+    // Normalize book name: Convert "I Samuel" → "1 Samuel", "II Kings" → "2 Kings", etc.
+    const normalizedBookName = bookName
+        .replace(/^I\s+/, '1 ')
+        .replace(/^II\s+/, '2 ')
+        .replace(/^III\s+/, '3 ');
+    
+    const key = `${normalizedBookName} ${chapter}:${verse}`;
     return verseHeaders[key] || null;
 }
