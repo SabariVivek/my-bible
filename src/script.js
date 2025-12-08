@@ -1464,6 +1464,7 @@ async function showColorPickerForBookmark(verseNum, bookmarkBtn) {
     overlay.classList.add('active');
     sheet.classList.add('visible');
     sheet.classList.remove('closing');
+    document.body.style.overflow = 'hidden';
     
     // Set up color option click handlers
     const colorOptions = sheet.querySelectorAll('.bookmark-color-option');
@@ -1568,10 +1569,12 @@ function closeBookmarkColorPicker() {
     
     sheet.classList.add('closing');
     sheet.classList.remove('visible');
+    document.body.style.overflow = '';
     
     setTimeout(() => {
         overlay.classList.remove('active');
         sheet.classList.remove('closing');
+        sheet.style.transform = ''; // Clear inline transform
     }, 300);
 }
 
@@ -1579,81 +1582,133 @@ function closeBookmarkColorPicker() {
 function initializeBookmarkColorPickerGestures() {
     const overlay = document.getElementById('bookmark-color-picker-overlay');
     const sheet = document.querySelector('.bookmark-color-picker-sheet');
-    const handle = document.getElementById('bookmark-color-sheet-handle');
     const content = document.querySelector('.bookmark-color-sheet-content');
     
-    if (!sheet || !handle || !overlay || !content) {
+    if (!sheet || !overlay || !content) {
         console.warn('Bookmark color picker elements not found');
         return;
     }
     
     let startY = 0;
-    let currentTranslate = 0;
+    let currentY = 0;
     let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
     
-    // Clean up existing listeners by using a named handler
-    const handlePointerDown = (e) => {
-        isDragging = true;
-        startY = e.clientY;
-        currentTranslate = 0;
-        overlay.classList.add('dragging');
-        sheet.style.transition = 'none';
-    };
-    
-    const handlePointerMove = (e) => {
-        if (!isDragging) return;
+    function handleStart(clientY) {
+        const scrollTop = content.scrollTop;
         
-        const deltaY = e.clientY - startY;
-        if (deltaY > 0) {
-            currentTranslate = deltaY;
-            sheet.style.transform = `translateY(${currentTranslate}px)`;
-            
-            // Update overlay opacity proportionally
-            const sheetHeight = sheet.offsetHeight;
-            const opacity = Math.max(0.32 - (deltaY / sheetHeight) * 0.32, 0);
-            overlay.style.background = `rgba(0, 0, 0, ${opacity})`;
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
         }
-    };
-    
-    const handlePointerUp = () => {
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        velocityY = 0;
+
+        overlay.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
         if (!isDragging) return;
-        
+
+        const deltaY = clientY - startY;
+        const scrollTop = content.scrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            overlay.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            overlay.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        sheet.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
         isDragging = false;
         overlay.classList.remove('dragging');
-        sheet.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
-        
-        // Check if content is scrollable
-        const isContentScrollable = content.scrollHeight > content.clientHeight;
-        const threshold = isContentScrollable ? 100 : 50;
-        
-        if (currentTranslate > threshold) {
-            // Close the sheet
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
             closeBookmarkColorPicker();
         } else {
-            // Snap back with smooth spring easing
-            sheet.style.transition = 'transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)';
-            sheet.style.transform = 'translateY(0)';
-            overlay.style.background = 'rgba(0, 0, 0, 0.32)';
+            sheet.style.transform = '';
         }
-    };
+    }
+
+    // Touch events
+    sheet.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    sheet.addEventListener('touchmove', (e) => {
+        const scrollTop = content.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+        
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    sheet.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    sheet.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
     
-    const handleOverlayClick = (e) => {
+    // Overlay click to close
+    overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
             closeBookmarkColorPicker();
         }
-    };
-    
-    // Remove old listeners to prevent duplicates
-    handle.removeEventListener('pointerdown', handlePointerDown);
-    document.removeEventListener('pointermove', handlePointerMove);
-    document.removeEventListener('pointerup', handlePointerUp);
-    overlay.removeEventListener('click', handleOverlayClick);
-    
-    // Add listeners
-    handle.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('pointermove', handlePointerMove);
-    document.addEventListener('pointerup', handlePointerUp);
-    overlay.addEventListener('click', handleOverlayClick);
+    });
 }
 
 // Universal copy handler for both single and multi-verse
@@ -5587,6 +5642,7 @@ function openNotesModal(verseNum = null) {
     const scrollY = window.scrollY;
     document.body.style.top = `-${scrollY}px`;
     document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
     
     // Track navigation
     navigateToPage('notes');
@@ -5632,6 +5688,7 @@ function finishClosing() {
     const scrollYStyle = document.body.style.top;
     document.body.classList.remove('modal-open');
     document.body.style.top = '';
+    document.body.style.overflow = '';
     
     if (scrollYStyle) {
         const scrollY = Math.abs(parseInt(scrollYStyle));
@@ -5668,134 +5725,123 @@ function initializeAndroidBottomSheetGestures() {
     
     const overlay = document.getElementById('notes-modal-overlay');
     const sheet = document.getElementById('notes-modal');
-    const dragHandle = document.getElementById('notes-sheet-drag-handle');
     const contentArea = document.getElementById('notes-modal-content');
     
-    if (!overlay || !sheet || !dragHandle || !contentArea) return;
+    if (!overlay || !sheet || !contentArea) return;
     
+    let startY = 0;
+    let currentY = 0;
     let isDragging = false;
-    let dragStartY = 0;
-    let currentTranslateY = 0;
-    let sheetStartY = 0;
-    let contentScrolled = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
     
-    // Get sheet initial position
-    const getSheetRect = () => sheet.getBoundingClientRect();
-    
-    /**
-     * Pointer down - start drag
-     * Use pointer events for mouse, touch, and pen support
-     */
-    function onPointerDown(e) {
-        // Only handle primary pointer (left mouse button or first touch)
-        if (e.isPrimary === false) return;
+    function handleStart(clientY) {
+        const scrollTop = contentArea.scrollTop;
         
-        dragStartY = e.clientY;
-        sheetStartY = getSheetRect().top;
-        isDragging = true;
-        contentScrolled = false;
-        
-        // Remove transition for smooth dragging
-        sheet.classList.add('dragging');
-        sheet.style.transition = 'none';
-        
-        // Prevent text selection during drag
-        e.preventDefault();
-    }
-    
-    /**
-     * Pointer move - drag the sheet
-     * Only animate transform property for GPU acceleration
-     */
-    function onPointerMove(e) {
-        if (!isDragging) return;
-        
-        const deltaY = e.clientY - dragStartY;
-        
-        // Check if content is scrolled to top
-        const isContentAtTop = contentArea.scrollTop === 0;
-        
-        // Only allow dragging down if content is at top or dragging down
-        if (isContentAtTop || deltaY > 0) {
-            contentScrolled = false;
-            // Clamp translation to prevent dragging too high
-            const clampedTranslate = Math.max(0, deltaY);
-            currentTranslateY = clampedTranslate;
-            sheet.style.transform = `translateY(${clampedTranslate}px)`;
-            
-            // Reduce backdrop opacity as user drags down
-            const opacity = Math.max(0.1, 0.32 - (clampedTranslate / 500) * 0.22);
-            overlay.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
-        } else {
-            contentScrolled = true;
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
         }
-    }
-    
-    /**
-     * Pointer up - snap back or close
-     * Uses Material Design spring easing for buttery animation
-     */
-    function onPointerUp(e) {
-        if (!isDragging) return;
-        isDragging = false;
-        
-        // Calculate close threshold (25% of sheet height or 100px, whichever is larger)
-        const sheetHeight = getSheetRect().height;
-        const closeThreshold = Math.max(100, sheetHeight * 0.25);
-        
-        sheet.classList.remove('dragging');
-        
-        // Decide: snap back or close
-        if (currentTranslateY > closeThreshold) {
-            // Close the sheet
-            sheet.style.transition = 'transform 0.3s cubic-bezier(0.2, 0, 0, 1)';
-            sheet.style.transform = `translateY(${window.innerHeight}px)`;
-            overlay.style.backgroundColor = `rgba(0, 0, 0, 0)`;
-            overlay.style.transition = 'background-color 0.3s cubic-bezier(0.2, 0, 0, 1)';
-            
-            setTimeout(() => {
-                closeNotesModal();
-            }, 300);
-        } else {
-            // Snap back with spring easing
-            sheet.style.transition = 'transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)';
-            sheet.style.transform = `translateY(0)`;
-            overlay.style.backgroundColor = `rgba(0, 0, 0, 0.32)`;
-            overlay.style.transition = 'background-color 0.4s cubic-bezier(0.05, 0.7, 0.1, 1)';
-            currentTranslateY = 0;
-        }
-    }
-    
-    // Attach pointer events to drag handle and sheet
-    dragHandle.addEventListener('pointerdown', onPointerDown, false);
-    document.addEventListener('pointermove', onPointerMove, false);
-    document.addEventListener('pointerup', onPointerUp, false);
-    
-    // Alternative: Also support touch events for better mobile support
-    dragHandle.addEventListener('touchstart', (e) => {
-        const touch = e.touches[0];
-        onPointerDown({ 
-            clientY: touch.clientY, 
-            isPrimary: true, 
-            preventDefault: () => e.preventDefault() 
-        });
-    }, false);
-    
-    document.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        const touch = e.touches[0];
-        onPointerMove({ clientY: touch.clientY });
-    }, false);
-    
-    document.addEventListener('touchend', (e) => {
-        onPointerUp(e);
-    }, false);
-}
 
-// Handle bottom sheet swipe gesture for mobile
-function initializeNotesBottomSheetSwipe() {
-    // Now handled by initializeAndroidBottomSheetGestures
-    if (window.innerWidth > 768) return;
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        velocityY = 0;
+
+        sheet.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = contentArea.scrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            sheet.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            sheet.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        sheet.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        sheet.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeNotesModal();
+        } else {
+            sheet.style.transform = '';
+        }
+    }
+
+    // Touch events
+    sheet.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    sheet.addEventListener('touchmove', (e) => {
+        const scrollTop = contentArea.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+        
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    sheet.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    sheet.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
 }
 
 async function saveNote() {
@@ -6185,9 +6231,6 @@ function initializeNotesModal() {
             deleteNote();
         }
     });
-    
-    // Add swipe-down to close for mobile bottom sheet
-    initializeNotesBottomSheetSwipe();
     
     // Color selection removed - note colors no longer available
     
@@ -8183,6 +8226,7 @@ async function showSermonSelectionSheet(versesToAdd) {
     
     sermonModal.classList.add('visible');
     document.body.classList.add('sermon-modal-open');
+    document.body.style.overflow = 'hidden';
     
     // Fetch recent sermons
     const sermons = await getRecentSermons();
@@ -8269,11 +8313,134 @@ async function showSermonSelectionSheet(versesToAdd) {
     const closeModal = () => {
         sermonModal.classList.remove('visible');
         document.body.classList.remove('sermon-modal-open');
+        document.body.style.overflow = '';
+        
+        // Clear inline transform after transition completes
+        setTimeout(() => {
+            sermonModal.querySelector('.sermon-modal-content').style.transform = '';
+        }, 300); // Match the 0.3s transition duration
     };
     
     sermonModal.querySelector('.sermon-modal-close').addEventListener('click', closeModal);
     sermonModal.querySelector('.sermon-modal-backdrop').addEventListener('click', closeModal);
     sermonModal.querySelector('.sermon-modal-cancel').addEventListener('click', closeModal);
+    
+    // Add drag-to-close functionality
+    const content = sermonModal.querySelector('.sermon-modal-content');
+    const modalBody = sermonModal.querySelector('.sermon-modal-body');
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+    
+    function handleStart(clientY) {
+        const scrollTop = modalBody.scrollTop;
+        
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
+        }
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        lastY = clientY;
+        lastTime = Date.now();
+        velocityY = 0;
+
+        content.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = modalBody.scrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            content.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        content.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        content.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeModal();
+        } else {
+            content.style.transform = '';
+        }
+    }
+
+    // Touch events
+    content.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
+    }, { passive: true });
+
+    content.addEventListener('touchmove', (e) => {
+        const scrollTop = modalBody.scrollTop;
+        const deltaY = e.touches[0].clientY - startY;
+        
+        // Only prevent default when actually dragging the sheet (at top and dragging down)
+        if (isDragging && scrollTop <= 5 && deltaY > 0) {
+            e.preventDefault();
+        }
+        handleMove(e.touches[0].clientY);
+    }, { passive: false });
+
+    content.addEventListener('touchend', () => {
+        handleEnd();
+    });
+
+    // Mouse events
+    content.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            e.preventDefault();
+            handleMove(e.clientY);
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            handleEnd();
+        }
+    });
     
     // Save to sermon
     sermonModal.querySelector('.sermon-modal-save').addEventListener('click', async () => {

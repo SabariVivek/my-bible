@@ -3954,18 +3954,22 @@ body.dark-theme .notes-spinner {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.32);
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 220;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(4px);
     opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: opacity;
 }
 
 .notes-modal-overlay.visible {
     opacity: 1;
+    pointer-events: auto;
 }
 
 .notes-modal {
@@ -4000,22 +4004,26 @@ body.dark-theme .notes-spinner {
         max-width: 100%;
         max-height: 95vh;
         border-radius: 16px 16px 0 0;
-        /* Android Material shadow elevation 16 */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15),
-                    0 16px 32px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
         will-change: transform;
+        transform: translateY(100%);
+        transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+        overflow: visible;
+        backface-visibility: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .notes-modal-overlay.visible .notes-modal {
         transform: translateY(0);
-        /* Material Design spring easing */
-        transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
     }
     
     .notes-modal.dragging {
-        transition: none;
+        transition: none !important;
     }
     
     .notes-modal.closing {
         transform: translateY(100vh);
-        transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
     }
 }
 
@@ -7698,16 +7706,19 @@ body.dark-theme .color-option:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
     opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: opacity;
 }
 
 .sermon-selection-modal.visible .sermon-modal-backdrop {
     opacity: 1;
-    transition: opacity 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+    pointer-events: auto;
 }
 
 .sermon-modal-content {
@@ -7715,27 +7726,33 @@ body.dark-theme .color-option:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #ffffff;
+    background: #e0e0e0;
     border-radius: 16px 16px 0 0;
     z-index: 1001;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
     /* GPU acceleration for smooth animations */
     will-change: transform;
     transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    overflow: visible;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .sermon-selection-modal.visible .sermon-modal-content {
     transform: translateY(0);
-    transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+}
+
+.sermon-modal-content.dragging {
+    transition: none !important;
 }
 
 body.dark-theme .sermon-modal-content {
-    background: #2a2a2a;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+    background: #292a2d;
 }
 
 .sermon-modal-handle {
@@ -8009,20 +8026,20 @@ body.sermon-modal-open {
     left: 0;
     right: 0;
     bottom: 0;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 9998;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s cubic-bezier(0.2, 0, 0, 1);
+    transition: opacity 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: opacity;
     display: block;
 }
 
 .bookmark-color-picker-overlay.active {
     opacity: 1;
     pointer-events: auto;
-    background: rgba(0, 0, 0, 0.32);
-    backdrop-filter: blur(4px);
-    transition: opacity 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
 }
 
 .bookmark-color-picker-sheet {
@@ -8036,24 +8053,27 @@ body.sermon-modal-open {
     /* GPU acceleration for smooth animations */
     will-change: transform;
     transform: translateY(100%);
-    transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
     max-height: 70vh;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .bookmark-color-picker-sheet.visible {
     transform: translateY(0);
-    transition: transform 0.4s cubic-bezier(0.05, 0.7, 0.1, 1);
 }
 
 .bookmark-color-picker-sheet.closing {
     transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .bookmark-color-picker-overlay.dragging .bookmark-color-picker-sheet {
-    transition: none;
+    transition: none !important;
 }
 
 .bookmark-color-sheet-handle {
@@ -8183,7 +8203,7 @@ body.dark-theme .bookmark-color-close-btn:hover {
 }
 
 body.dark-theme .bookmark-color-picker-sheet {
-    background: #282828;
+    background: #292a2d;
 }
 
 body.dark-theme .bookmark-color-sheet-header {
