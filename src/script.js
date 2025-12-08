@@ -8902,8 +8902,8 @@ function showPinnedVersesBottomSheet() {
     const handleDragStart = (clientY) => {
         const scrollTop = modal.scrollTop;
         
-        // Only allow dragging if at the top of scroll
-        if (scrollTop > 5) {
+        // Only allow dragging if at the absolute top of scroll (no scrolling has occurred)
+        if (scrollTop !== 0) {
             isDragging = false;
             return;
         }
@@ -8939,7 +8939,7 @@ function showPinnedVersesBottomSheet() {
         }
         
         // If content is scrolled down, stop dragging and allow normal scroll
-        if (scrollTop > 5) {
+        if (scrollTop !== 0) {
             isDragging = false;
             modal.classList.remove('dragging');
             return;
