@@ -2898,8 +2898,7 @@ function initializeMobileLanguageModal() {
             // Mobile: Show bottom sheet
             updateSheetActiveState();
             updateSheetColorActiveState();
-            languageBottomSheetOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
+            openLanguageSheet();
         } else {
             // Desktop: Show modal
             updateModalActiveState();
@@ -2930,32 +2929,151 @@ function initializeMobileLanguageModal() {
         }
     });
     
-    // Close sheet when clicking overlay
-    languageBottomSheetOverlay.addEventListener('click', (e) => {
-        if (e.target === languageBottomSheetOverlay) {
-            closeLanguageSheet();
+    // Language bottom sheet variables
+    const languageBackdrop = document.getElementById('language-bottom-sheet-overlay');
+    const languageBottomSheet = document.getElementById('language-bottom-sheet');
+    
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+    let startScrollTop = 0;
+    let velocityY = 0;
+    let lastY = 0;
+    let lastTime = 0;
+
+    function openLanguageSheet() {
+        languageBackdrop.classList.add('active');
+        languageBottomSheet.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLanguageSheet() {
+        languageBackdrop.classList.remove('active');
+        languageBottomSheet.classList.remove('active');
+        document.body.style.overflow = '';
+        
+        // Clear inline transform after transition completes
+        setTimeout(() => {
+            languageBottomSheet.style.transform = '';
+        }, 300); // Match the 0.3s transition duration
+    }
+
+    function handleStart(clientY) {
+        const scrollTop = languageBottomSheet.scrollTop;
+        
+        // Only allow dragging if at the top of scroll
+        if (scrollTop > 5) {
+            isDragging = false;
+            return;
         }
-    });
-    
-    // Swipe down to close sheet
-    let touchStartY = 0;
-    const languageBottomSheet = document.querySelector('.language-bottom-sheet');
-    
+
+        isDragging = true;
+        startY = clientY;
+        currentY = 0;
+        startScrollTop = scrollTop;
+        lastY = clientY;
+        lastTime = Date.now();
+        velocityY = 0;
+
+        languageBottomSheet.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
+        if (!isDragging) return;
+
+        const deltaY = clientY - startY;
+        const scrollTop = languageBottomSheet.scrollTop;
+
+        // Calculate velocity
+        const now = Date.now();
+        const timeDiff = now - lastTime;
+        if (timeDiff > 0) {
+            velocityY = (clientY - lastY) / timeDiff;
+            lastY = clientY;
+            lastTime = now;
+        }
+
+        // If content is scrolled down, allow normal scrolling
+        if (scrollTop > 5) {
+            isDragging = false;
+            languageBottomSheet.classList.remove('dragging');
+            return;
+        }
+
+        // If trying to drag up when at top, allow content to scroll
+        if (deltaY < 0) {
+            isDragging = false;
+            languageBottomSheet.classList.remove('dragging');
+            return;
+        }
+
+        // Move sheet down only when at top and dragging down
+        currentY = deltaY;
+        languageBottomSheet.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+
+        isDragging = false;
+        languageBottomSheet.classList.remove('dragging');
+
+        // Close if dragged down enough or velocity is high
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            closeLanguageSheet();
+        } else {
+            languageBottomSheet.style.transform = '';
+        }
+    }
+
+    // Touch events
     if (languageBottomSheet) {
         languageBottomSheet.addEventListener('touchstart', (e) => {
-            touchStartY = e.touches[0].clientY;
-        });
-        
+            handleStart(e.touches[0].clientY);
+        }, { passive: true });
+
         languageBottomSheet.addEventListener('touchmove', (e) => {
-            const touchCurrentY = e.touches[0].clientY;
-            const diff = touchCurrentY - touchStartY;
+            const scrollTop = languageBottomSheet.scrollTop;
+            const deltaY = e.touches[0].clientY - startY;
             
-            // Only close if swiping down and at top of sheet
-            if (diff > 50 && languageBottomSheet.scrollTop === 0) {
-                closeLanguageSheet();
+            // Only prevent default when actually dragging the sheet (at top and dragging down)
+            if (isDragging && scrollTop <= 5 && deltaY > 0) {
+                e.preventDefault();
+            }
+            handleMove(e.touches[0].clientY);
+        }, { passive: false });
+
+        languageBottomSheet.addEventListener('touchend', () => {
+            handleEnd();
+        });
+
+        // Mouse events
+        languageBottomSheet.addEventListener('mousedown', (e) => {
+            handleStart(e.clientY);
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                handleMove(e.clientY);
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                handleEnd();
             }
         });
     }
+
+    // Close sheet when clicking backdrop
+    languageBackdrop.addEventListener('click', (e) => {
+        if (e.target === languageBackdrop) {
+            closeLanguageSheet();
+        }
+    });
     
     // Handle language selection from modal
     modalOptions.forEach(option => {
