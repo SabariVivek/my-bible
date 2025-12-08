@@ -2832,6 +2832,957 @@ const verseHeaders = {
     "Song of Solomon 8:1": "The Bride's Love",
     "Song of Solomon 8:8": "We Have a Little Sister",
     
+    // Isaiah Chapter 1
+    "Isaiah 1:1": "The Vision of Isaiah",
+    "Isaiah 1:2": "Israel's Rebellion",
+    "Isaiah 1:10": "The Worthlessness of Israel's Worship",
+    "Isaiah 1:18": "Come, Let Us Reason Together",
+    "Isaiah 1:21": "The Unfaithful City",
+    
+    // Isaiah Chapter 2
+    "Isaiah 2:1": "The Mountain of the LORD",
+    "Isaiah 2:6": "The Day of the LORD",
+    
+    // Isaiah Chapter 3
+    "Isaiah 3:1": "Judgment on Judah and Jerusalem",
+    "Isaiah 3:16": "Judgment on the Daughters of Zion",
+    
+    // Isaiah Chapter 4
+    "Isaiah 4:1": "Seven Women",
+    "Isaiah 4:2": "The Branch of the LORD",
+    
+    // Isaiah Chapter 5
+    "Isaiah 5:1": "The Song of the Vineyard",
+    "Isaiah 5:8": "Woes Upon the Wicked",
+    "Isaiah 5:26": "The LORD's Anger Against Israel",
+    
+    // Isaiah Chapter 6
+    "Isaiah 6:1": "Isaiah's Vision of the LORD",
+    "Isaiah 6:8": "Here Am I! Send Me",
+    
+    // Isaiah Chapter 7
+    "Isaiah 7:1": "The Sign of Immanuel",
+    
+    // Isaiah Chapter 8
+    "Isaiah 8:1": "The Coming Assyrian Invasion",
+    "Isaiah 8:11": "Fear God, Wait for the LORD",
+    
+    // Isaiah Chapter 9
+    "Isaiah 9:1": "For to Us a Child Is Born",
+    "Isaiah 9:8": "Judgment on Israel's Arrogance",
+    
+    // Isaiah Chapter 10
+    "Isaiah 10:1": "Woe to the Unjust",
+    "Isaiah 10:5": "Assyria, the Rod of God's Anger",
+    "Isaiah 10:20": "The Remnant of Israel Will Return",
+    
+    // Isaiah Chapter 11
+    "Isaiah 11:1": "The Righteous Reign of the Branch",
+    "Isaiah 11:10": "The Remnant Recovered",
+    
+    // Isaiah Chapter 12
+    "Isaiah 12:1": "A Song of Thanksgiving",
+    
+    // Isaiah Chapter 13
+    "Isaiah 13:1": "The Burden Against Babylon",
+    
+    // Isaiah Chapter 14
+    "Isaiah 14:1": "Israel's Restoration",
+    "Isaiah 14:4": "The Fall of the King of Babylon",
+    "Isaiah 14:12": "How You Have Fallen from Heaven, O Lucifer",
+    "Isaiah 14:24": "Assyria Will Be Destroyed",
+    "Isaiah 14:28": "The Burden Against Philistia",
+    
+    // Isaiah Chapter 15
+    "Isaiah 15:1": "The Burden Against Moab",
+    
+    // Isaiah Chapter 16
+    "Isaiah 16:1": "Moab's Plea for Refuge",
+    "Isaiah 16:13": "The Prophecy Against Moab",
+    
+    // Isaiah Chapter 17
+    "Isaiah 17:1": "The Burden Against Damascus",
+    
+    // Isaiah Chapter 18
+    "Isaiah 18:1": "The Burden Against Cush",
+    
+    // Isaiah Chapter 19
+    "Isaiah 19:1": "The Burden Against Egypt",
+    "Isaiah 19:16": "The LORD Will Strike and Heal Egypt",
+    
+    // Isaiah Chapter 20
+    "Isaiah 20:1": "Isaiah Walks Naked as a Sign",
+    
+    // Isaiah Chapter 21
+    "Isaiah 21:1": "The Burden Against Babylon",
+    "Isaiah 21:11": "The Burden Against Edom",
+    "Isaiah 21:13": "The Burden Against Arabia",
+    
+    // Isaiah Chapter 22
+    "Isaiah 22:1": "The Burden Against the Valley of Vision",
+    "Isaiah 22:15": "Shebna's Disgrace and Eliakim's Promotion",
+    
+    // Isaiah Chapter 23
+    "Isaiah 23:1": "The Burden Against Tyre",
+    
+    // Isaiah Chapter 24
+    "Isaiah 24:1": "The LORD's Judgment on the Earth",
+    
+    // Isaiah Chapter 25
+    "Isaiah 25:1": "Praise for the LORD's Favor",
+    "Isaiah 25:6": "A Feast for All Peoples",
+    
+    // Isaiah Chapter 26
+    "Isaiah 26:1": "A Song of Salvation",
+    
+    // Isaiah Chapter 27
+    "Isaiah 27:1": "The Deliverance of Israel",
+    
+    // Isaiah Chapter 28
+    "Isaiah 28:1": "Woe to Ephraim",
+    "Isaiah 28:14": "A Cornerstone in Zion",
+    
+    // Isaiah Chapter 29
+    "Isaiah 29:1": "Woe to the City of David",
+    "Isaiah 29:13": "Hypocrisy Rebuked",
+    
+    // Isaiah Chapter 30
+    "Isaiah 30:1": "Woe to the Rebellious Children",
+    "Isaiah 30:18": "The LORD Will Be Gracious",
+    
+    // Isaiah Chapter 31
+    "Isaiah 31:1": "Woe to Those Who Trust in Egypt",
+    
+    // Isaiah Chapter 32
+    "Isaiah 32:1": "A Righteous King",
+    "Isaiah 32:9": "The Women of Jerusalem",
+    
+    // Isaiah Chapter 33
+    "Isaiah 33:1": "Woe to the Destroyer",
+    "Isaiah 33:13": "The Sinners in Zion",
+    
+    // Isaiah Chapter 34
+    "Isaiah 34:1": "God's Judgment on the Nations",
+    
+    // Isaiah Chapter 35
+    "Isaiah 35:1": "The Glory of Zion",
+    
+    // Isaiah Chapter 36
+    "Isaiah 36:1": "Sennacherib Threatens Jerusalem",
+    
+    // Isaiah Chapter 37
+    "Isaiah 37:1": "Hezekiah's Prayer",
+    "Isaiah 37:21": "Isaiah's Prophecy",
+    "Isaiah 37:36": "The Angel Destroys the Assyrians",
+    
+    // Isaiah Chapter 38
+    "Isaiah 38:1": "Hezekiah's Illness and Recovery",
+    "Isaiah 38:9": "Hezekiah's Song of Thanksgiving",
+    
+    // Isaiah Chapter 39
+    "Isaiah 39:1": "Envoys from Babylon",
+    
+    // Isaiah Chapter 40
+    "Isaiah 40:1": "Comfort for God's People",
+    "Isaiah 40:9": "Here Is Your God",
+    "Isaiah 40:12": "Who Can Be Compared to God?",
+    "Isaiah 40:27": "The LORD Is the Everlasting God",
+    
+    // Isaiah Chapter 41
+    "Isaiah 41:1": "God's Help to Israel",
+    "Isaiah 41:21": "The Futility of Idols",
+    
+    // Isaiah Chapter 42
+    "Isaiah 42:1": "The Servant of the LORD",
+    "Isaiah 42:10": "A New Song of Praise",
+    "Isaiah 42:18": "Israel's Blindness",
+    
+    // Isaiah Chapter 43
+    "Isaiah 43:1": "Israel's Only Savior",
+    "Isaiah 43:14": "Deliverance Promised",
+    "Isaiah 43:22": "Israel's Unfaithfulness",
+    
+    // Isaiah Chapter 44
+    "Isaiah 44:1": "The LORD Has Chosen Israel",
+    "Isaiah 44:9": "The Folly of Idolatry",
+    "Isaiah 44:21": "The LORD Redeems Israel",
+    "Isaiah 44:24": "Jerusalem to Be Restored",
+    
+    // Isaiah Chapter 45
+    "Isaiah 45:1": "Cyrus God's Instrument",
+    "Isaiah 45:9": "Woe to Him Who Quarrels with His Maker",
+    "Isaiah 45:14": "The LORD, the Only Savior",
+    
+    // Isaiah Chapter 46
+    "Isaiah 46:1": "The Idols of Babylon",
+    "Isaiah 46:5": "To Whom Will You Compare Me?",
+    
+    // Isaiah Chapter 47
+    "Isaiah 47:1": "The Humiliation of Babylon",
+    
+    // Isaiah Chapter 48
+    "Isaiah 48:1": "Deliverance Promised",
+    "Isaiah 48:12": "The LORD's Ancient Plan",
+    
+    // Isaiah Chapter 49
+    "Isaiah 49:1": "The Servant's Mission",
+    "Isaiah 49:14": "Zion Restored",
+    
+    // Isaiah Chapter 50
+    "Isaiah 50:1": "Israel's Sin",
+    "Isaiah 50:4": "The Obedience of the Servant",
+    
+    // Isaiah Chapter 51
+    "Isaiah 51:1": "Salvation for Zion",
+    "Isaiah 51:17": "The Cup of the LORD's Wrath",
+    
+    // Isaiah Chapter 52
+    "Isaiah 52:1": "Awake, Awake, O Zion",
+    "Isaiah 52:7": "How Beautiful Are the Feet",
+    "Isaiah 52:13": "The Suffering Servant",
+    
+    // Isaiah Chapter 53
+    "Isaiah 53:1": "Who Has Believed Our Message?",
+    "Isaiah 53:4": "He Was Pierced for Our Transgressions",
+    "Isaiah 53:10": "The LORD's Good Plan",
+    
+    // Isaiah Chapter 54
+    "Isaiah 54:1": "The Future Glory of Zion",
+    
+    // Isaiah Chapter 55
+    "Isaiah 55:1": "The Invitation to Abundant Life",
+    "Isaiah 55:6": "Seek the LORD While He May Be Found",
+    
+    // Isaiah Chapter 56
+    "Isaiah 56:1": "Salvation for Foreigners",
+    "Isaiah 56:9": "Israel's Blind Watchmen",
+    
+    // Isaiah Chapter 57
+    "Isaiah 57:1": "The Righteous Perish",
+    "Isaiah 57:14": "Healing for the Repentant",
+    
+    // Isaiah Chapter 58
+    "Isaiah 58:1": "True Fasting",
+    
+    // Isaiah Chapter 59
+    "Isaiah 59:1": "Sin Separates from God",
+    "Isaiah 59:15": "The Redeemer Will Come to Zion",
+    
+    // Isaiah Chapter 60
+    "Isaiah 60:1": "Arise, Shine, for Your Light Has Come",
+    
+    // Isaiah Chapter 61
+    "Isaiah 61:1": "The Year of the LORD's Favor",
+    "Isaiah 61:10": "Clothed with Salvation",
+    
+    // Isaiah Chapter 62
+    "Isaiah 62:1": "Zion's New Name",
+    
+    // Isaiah Chapter 63
+    "Isaiah 63:1": "God's Vengeance on the Nations",
+    "Isaiah 63:7": "God's Mercy Remembered",
+    
+    // Isaiah Chapter 64
+    "Isaiah 64:1": "Prayer for Mercy",
+    
+    // Isaiah Chapter 65
+    "Isaiah 65:1": "Judgment and Salvation",
+    "Isaiah 65:17": "New Heavens and a New Earth",
+    
+    // Isaiah Chapter 66
+    "Isaiah 66:1": "Heaven Is My Throne",
+    "Isaiah 66:10": "Rejoice with Jerusalem",
+    "Isaiah 66:18": "All Nations Will Come",
+    
+    // Jeremiah Chapter 1
+    "Jeremiah 1:1": "The Call of Jeremiah",
+    "Jeremiah 1:11": "Two Visions",
+    
+    // Jeremiah Chapter 2
+    "Jeremiah 2:1": "Israel's Apostasy",
+    "Jeremiah 2:14": "The Results of Israel's Sin",
+    
+    // Jeremiah Chapter 3
+    "Jeremiah 3:1": "Unfaithful Israel",
+    "Jeremiah 3:11": "A Call to Repentance",
+    
+    // Jeremiah Chapter 4
+    "Jeremiah 4:1": "A Call to Repentance",
+    "Jeremiah 4:5": "Disaster from the North",
+    
+    // Jeremiah Chapter 5
+    "Jeremiah 5:1": "Jerusalem's Godlessness",
+    "Jeremiah 5:14": "Coming Judgment",
+    
+    // Jeremiah Chapter 6
+    "Jeremiah 6:1": "The Siege of Jerusalem",
+    "Jeremiah 6:16": "Stand at the Crossroads",
+    
+    // Jeremiah Chapter 7
+    "Jeremiah 7:1": "Trust Not in Lying Words",
+    "Jeremiah 7:21": "Obedience, Not Sacrifice",
+    
+    // Jeremiah Chapter 8
+    "Jeremiah 8:1": "The Sin and Punishment of Judah",
+    "Jeremiah 8:18": "Jeremiah's Grief",
+    
+    // Jeremiah Chapter 9
+    "Jeremiah 9:1": "Jeremiah Weeps for the People",
+    "Jeremiah 9:17": "A Lament for Zion",
+    "Jeremiah 9:23": "Let Him Who Boasts Boast in the LORD",
+    
+    // Jeremiah Chapter 10
+    "Jeremiah 10:1": "Idols and the True God",
+    "Jeremiah 10:17": "The Coming Exile",
+    
+    // Jeremiah Chapter 11
+    "Jeremiah 11:1": "The Broken Covenant",
+    "Jeremiah 11:18": "The Plot Against Jeremiah",
+    
+    // Jeremiah Chapter 12
+    "Jeremiah 12:1": "Jeremiah's Question",
+    "Jeremiah 12:7": "The LORD's Answer",
+    
+    // Jeremiah Chapter 13
+    "Jeremiah 13:1": "The Linen Belt",
+    "Jeremiah 13:12": "The Wineskins",
+    "Jeremiah 13:15": "The Captivity Threatened",
+    
+    // Jeremiah Chapter 14
+    "Jeremiah 14:1": "The Drought",
+    "Jeremiah 14:7": "Prayer for Mercy",
+    "Jeremiah 14:13": "Lying Prophets",
+    
+    // Jeremiah Chapter 15
+    "Jeremiah 15:1": "The LORD's Answer",
+    "Jeremiah 15:10": "Jeremiah's Complaint",
+    
+    // Jeremiah Chapter 16
+    "Jeremiah 16:1": "Jeremiah Forbidden to Marry",
+    "Jeremiah 16:14": "Restoration Promised",
+    
+    // Jeremiah Chapter 17
+    "Jeremiah 17:1": "Judah's Sin Written with an Iron Pen",
+    "Jeremiah 17:5": "Trust in Man Versus Trust in God",
+    "Jeremiah 17:9": "The Heart Is Deceitful",
+    "Jeremiah 17:19": "Hallow the Sabbath",
+    
+    // Jeremiah Chapter 18
+    "Jeremiah 18:1": "The Potter and the Clay",
+    "Jeremiah 18:18": "A Plot Against Jeremiah",
+    
+    // Jeremiah Chapter 19
+    "Jeremiah 19:1": "The Broken Flask",
+    
+    // Jeremiah Chapter 20
+    "Jeremiah 20:1": "Jeremiah Persecuted",
+    "Jeremiah 20:7": "Jeremiah's Complaint",
+    
+    // Jeremiah Chapter 21
+    "Jeremiah 21:1": "Jerusalem Will Fall to Babylon",
+    
+    // Jeremiah Chapter 22
+    "Jeremiah 22:1": "Message to the House of David",
+    "Jeremiah 22:10": "Messages Concerning Kings",
+    
+    // Jeremiah Chapter 23
+    "Jeremiah 23:1": "The Righteous Branch",
+    "Jeremiah 23:9": "Lying Prophets",
+    
+    // Jeremiah Chapter 24
+    "Jeremiah 24:1": "The Good and Bad Figs",
+    
+    // Jeremiah Chapter 25
+    "Jeremiah 25:1": "Seventy Years of Captivity",
+    "Jeremiah 25:15": "The Cup of God's Wrath",
+    
+    // Jeremiah Chapter 26
+    "Jeremiah 26:1": "Jeremiah Threatened with Death",
+    
+    // Jeremiah Chapter 27
+    "Jeremiah 27:1": "The Yoke of Babylon",
+    
+    // Jeremiah Chapter 28
+    "Jeremiah 28:1": "Hananiah's False Prophecy",
+    
+    // Jeremiah Chapter 29
+    "Jeremiah 29:1": "Letter to the Exiles",
+    "Jeremiah 29:15": "False Prophets in Babylon",
+    
+    // Jeremiah Chapter 30
+    "Jeremiah 30:1": "Restoration Promised",
+    
+    // Jeremiah Chapter 31
+    "Jeremiah 31:1": "Israel's Restoration",
+    "Jeremiah 31:15": "Rachel Weeping for Her Children",
+    "Jeremiah 31:27": "A New Covenant",
+    
+    // Jeremiah Chapter 32
+    "Jeremiah 32:1": "Jeremiah Buys a Field",
+    "Jeremiah 32:16": "Jeremiah's Prayer",
+    "Jeremiah 32:26": "The LORD's Answer",
+    
+    // Jeremiah Chapter 33
+    "Jeremiah 33:1": "The LORD's Assurance",
+    "Jeremiah 33:14": "The Righteous Branch",
+    
+    // Jeremiah Chapter 34
+    "Jeremiah 34:1": "Zedekiah Warned",
+    "Jeremiah 34:8": "The Broken Covenant with the Slaves",
+    
+    // Jeremiah Chapter 35
+    "Jeremiah 35:1": "The Rechabites' Obedience",
+    
+    // Jeremiah Chapter 36
+    "Jeremiah 36:1": "Jeremiah's Scroll Read",
+    "Jeremiah 36:20": "The King Burns the Scroll",
+    
+    // Jeremiah Chapter 37
+    "Jeremiah 37:1": "Jeremiah Warns Zedekiah",
+    "Jeremiah 37:11": "Jeremiah Imprisoned",
+    
+    // Jeremiah Chapter 38
+    "Jeremiah 38:1": "Jeremiah Thrown into a Cistern",
+    "Jeremiah 38:14": "Zedekiah Questions Jeremiah",
+    
+    // Jeremiah Chapter 39
+    "Jeremiah 39:1": "The Fall of Jerusalem",
+    "Jeremiah 39:11": "Jeremiah Released",
+    
+    // Jeremiah Chapter 40
+    "Jeremiah 40:1": "Jeremiah Remains in Judah",
+    "Jeremiah 40:7": "Gedaliah Made Governor",
+    
+    // Jeremiah Chapter 41
+    "Jeremiah 41:1": "Gedaliah Assassinated",
+    
+    // Jeremiah Chapter 42
+    "Jeremiah 42:1": "The People Ask Jeremiah to Pray",
+    "Jeremiah 42:7": "The LORD's Answer",
+    
+    // Jeremiah Chapter 43
+    "Jeremiah 43:1": "The Flight to Egypt",
+    "Jeremiah 43:8": "Jeremiah Prophesies Against Egypt",
+    
+    // Jeremiah Chapter 44
+    "Jeremiah 44:1": "Judgment for Idolatry",
+    
+    // Jeremiah Chapter 45
+    "Jeremiah 45:1": "A Message to Baruch",
+    
+    // Jeremiah Chapter 46
+    "Jeremiah 46:1": "Prophecies Against Egypt",
+    "Jeremiah 46:27": "The LORD Will Save Israel",
+    
+    // Jeremiah Chapter 47
+    "Jeremiah 47:1": "Prophecy Against the Philistines",
+    
+    // Jeremiah Chapter 48
+    "Jeremiah 48:1": "Prophecy Against Moab",
+    
+    // Jeremiah Chapter 49
+    "Jeremiah 49:1": "Prophecy Against Ammon",
+    "Jeremiah 49:7": "Prophecy Against Edom",
+    "Jeremiah 49:23": "Prophecy Against Damascus",
+    "Jeremiah 49:28": "Prophecy Against Kedar and Hazor",
+    "Jeremiah 49:34": "Prophecy Against Elam",
+    
+    // Jeremiah Chapter 50
+    "Jeremiah 50:1": "Prophecy Against Babylon",
+    
+    // Jeremiah Chapter 51
+    "Jeremiah 51:1": "The Destruction of Babylon",
+    "Jeremiah 51:59": "Jeremiah's Command to Seraiah",
+    
+    // Jeremiah Chapter 52
+    "Jeremiah 52:1": "The Fall of Jerusalem Recounted",
+    "Jeremiah 52:31": "Jehoiachin Released",
+    
+    // Lamentations Chapter 1
+    "Lamentations 1:1": "How Lonely Sits the City",
+    
+    // Lamentations Chapter 2
+    "Lamentations 2:1": "God's Anger Against Jerusalem",
+    
+    // Lamentations Chapter 3
+    "Lamentations 3:1": "Hope in the LORD's Faithfulness",
+    "Lamentations 3:22": "Great Is Your Faithfulness",
+    
+    // Lamentations Chapter 4
+    "Lamentations 4:1": "The Horrors of the Siege",
+    
+    // Lamentations Chapter 5
+    "Lamentations 5:1": "A Prayer for Restoration",
+    
+    // Ezekiel Chapter 1
+    "Ezekiel 1:1": "Ezekiel's Vision of God's Glory",
+    "Ezekiel 1:15": "The Four Wheels",
+    
+    // Ezekiel Chapter 2
+    "Ezekiel 2:1": "Ezekiel's Call",
+    
+    // Ezekiel Chapter 3
+    "Ezekiel 3:1": "Ezekiel Eats the Scroll",
+    "Ezekiel 3:16": "Ezekiel a Watchman",
+    
+    // Ezekiel Chapter 4
+    "Ezekiel 4:1": "The Siege of Jerusalem Portrayed",
+    
+    // Ezekiel Chapter 5
+    "Ezekiel 5:1": "Jerusalem's Judgment",
+    
+    // Ezekiel Chapter 6
+    "Ezekiel 6:1": "Prophecy Against the Mountains",
+    
+    // Ezekiel Chapter 7
+    "Ezekiel 7:1": "The End Has Come",
+    
+    // Ezekiel Chapter 8
+    "Ezekiel 8:1": "Idolatry in the Temple",
+    
+    // Ezekiel Chapter 9
+    "Ezekiel 9:1": "The Slaughter of the Idolaters",
+    
+    // Ezekiel Chapter 10
+    "Ezekiel 10:1": "God's Glory Leaves the Temple",
+    
+    // Ezekiel Chapter 11
+    "Ezekiel 11:1": "Judgment on Israel's Leaders",
+    "Ezekiel 11:14": "Promise of Restoration",
+    "Ezekiel 11:22": "God's Glory Departs",
+    
+    // Ezekiel Chapter 12
+    "Ezekiel 12:1": "The Exile Symbolized",
+    "Ezekiel 12:21": "The Fulfillment Is at Hand",
+    
+    // Ezekiel Chapter 13
+    "Ezekiel 13:1": "False Prophets Condemned",
+    
+    // Ezekiel Chapter 14
+    "Ezekiel 14:1": "Idolaters Condemned",
+    "Ezekiel 14:12": "Four Severe Judgments",
+    
+    // Ezekiel Chapter 15
+    "Ezekiel 15:1": "Jerusalem a Useless Vine",
+    
+    // Ezekiel Chapter 16
+    "Ezekiel 16:1": "Jerusalem's Unfaithfulness",
+    "Ezekiel 16:44": "Like Mother, Like Daughter",
+    "Ezekiel 16:59": "The LORD's Covenant Remembered",
+    
+    // Ezekiel Chapter 17
+    "Ezekiel 17:1": "The Parable of Two Eagles",
+    "Ezekiel 17:22": "A Tender Twig",
+    
+    // Ezekiel Chapter 18
+    "Ezekiel 18:1": "The Soul Who Sins Shall Die",
+    "Ezekiel 18:30": "Repent and Live",
+    
+    // Ezekiel Chapter 19
+    "Ezekiel 19:1": "A Lament for Israel's Princes",
+    
+    // Ezekiel Chapter 20
+    "Ezekiel 20:1": "Israel's History of Rebellion",
+    "Ezekiel 20:45": "Prophecy Against the South",
+    
+    // Ezekiel Chapter 21
+    "Ezekiel 21:1": "The Sword of the LORD",
+    "Ezekiel 21:18": "The Sword of Babylon",
+    
+    // Ezekiel Chapter 22
+    "Ezekiel 22:1": "Jerusalem's Sins",
+    "Ezekiel 22:17": "Israel Like Dross",
+    
+    // Ezekiel Chapter 23
+    "Ezekiel 23:1": "Two Adulterous Sisters",
+    
+    // Ezekiel Chapter 24
+    "Ezekiel 24:1": "The Parable of the Cooking Pot",
+    "Ezekiel 24:15": "Ezekiel's Wife Dies",
+    
+    // Ezekiel Chapter 25
+    "Ezekiel 25:1": "Prophecies Against Ammon, Moab, Edom, and Philistia",
+    
+    // Ezekiel Chapter 26
+    "Ezekiel 26:1": "Prophecy Against Tyre",
+    
+    // Ezekiel Chapter 27
+    "Ezekiel 27:1": "A Lament for Tyre",
+    
+    // Ezekiel Chapter 28
+    "Ezekiel 28:1": "Prophecy Against the Prince of Tyre",
+    "Ezekiel 28:11": "A Lament for the King of Tyre",
+    "Ezekiel 28:20": "Prophecy Against Sidon",
+    
+    // Ezekiel Chapter 29
+    "Ezekiel 29:1": "Prophecy Against Egypt",
+    
+    // Ezekiel Chapter 30
+    "Ezekiel 30:1": "A Lament for Egypt",
+    
+    // Ezekiel Chapter 31
+    "Ezekiel 31:1": "Egypt Like a Cedar in Lebanon",
+    
+    // Ezekiel Chapter 32
+    "Ezekiel 32:1": "A Lament for Pharaoh",
+    "Ezekiel 32:17": "Egypt in Sheol",
+    
+    // Ezekiel Chapter 33
+    "Ezekiel 33:1": "Ezekiel a Watchman",
+    "Ezekiel 33:10": "Why Will You Die?",
+    "Ezekiel 33:21": "Jerusalem's Fall Announced",
+    
+    // Ezekiel Chapter 34
+    "Ezekiel 34:1": "Prophecy Against the Shepherds",
+    "Ezekiel 34:11": "The LORD the True Shepherd",
+    
+    // Ezekiel Chapter 35
+    "Ezekiel 35:1": "Prophecy Against Mount Seir",
+    
+    // Ezekiel Chapter 36
+    "Ezekiel 36:1": "Prophecy to the Mountains of Israel",
+    "Ezekiel 36:16": "A New Heart and Spirit",
+    
+    // Ezekiel Chapter 37
+    "Ezekiel 37:1": "The Valley of Dry Bones",
+    "Ezekiel 37:15": "The Two Sticks",
+    
+    // Ezekiel Chapter 38
+    "Ezekiel 38:1": "Prophecy Against Gog",
+    
+    // Ezekiel Chapter 39
+    "Ezekiel 39:1": "The Destruction of Gog",
+    "Ezekiel 39:21": "Israel to Be Restored",
+    
+    // Ezekiel Chapter 40
+    "Ezekiel 40:1": "The Vision of the New Temple",
+    
+    // Ezekiel Chapter 41
+    "Ezekiel 41:1": "The Inner Temple",
+    
+    // Ezekiel Chapter 42
+    "Ezekiel 42:1": "The Chambers for the Priests",
+    
+    // Ezekiel Chapter 43
+    "Ezekiel 43:1": "The Glory of the LORD Returns",
+    "Ezekiel 43:13": "The Altar",
+    
+    // Ezekiel Chapter 44
+    "Ezekiel 44:1": "The East Gate",
+    "Ezekiel 44:9": "The Levites and Priests",
+    
+    // Ezekiel Chapter 45
+    "Ezekiel 45:1": "The Portion for the LORD",
+    "Ezekiel 45:18": "The Feasts",
+    
+    // Ezekiel Chapter 46
+    "Ezekiel 46:1": "The Prince's Offerings",
+    "Ezekiel 46:19": "The Temple Kitchens",
+    
+    // Ezekiel Chapter 47
+    "Ezekiel 47:1": "The River from the Temple",
+    "Ezekiel 47:13": "The Boundaries of the Land",
+    
+    // Ezekiel Chapter 48
+    "Ezekiel 48:1": "The Division of the Land",
+    "Ezekiel 48:30": "The Gates of the City",
+    
+    // Daniel Chapter 1
+    "Daniel 1:1": "Daniel Taken to Babylon",
+    "Daniel 1:8": "Daniel's Faithfulness",
+    
+    // Daniel Chapter 2
+    "Daniel 2:1": "Nebuchadnezzar's Dream",
+    "Daniel 2:14": "Daniel Interprets the Dream",
+    "Daniel 2:31": "The Dream Revealed",
+    "Daniel 2:46": "Daniel Promoted",
+    
+    // Daniel Chapter 3
+    "Daniel 3:1": "The Image of Gold",
+    "Daniel 3:8": "The Three Hebrews Accused",
+    "Daniel 3:13": "Into the Fiery Furnace",
+    "Daniel 3:24": "Delivered from the Furnace",
+    
+    // Daniel Chapter 4
+    "Daniel 4:1": "Nebuchadnezzar's Second Dream",
+    "Daniel 4:19": "Daniel Interprets the Dream",
+    "Daniel 4:28": "The Dream Fulfilled",
+    
+    // Daniel Chapter 5
+    "Daniel 5:1": "Belshazzar's Feast",
+    "Daniel 5:5": "The Writing on the Wall",
+    "Daniel 5:13": "Daniel Interprets the Writing",
+    
+    // Daniel Chapter 6
+    "Daniel 6:1": "The Plot Against Daniel",
+    "Daniel 6:16": "Daniel in the Lions' Den",
+    
+    // Daniel Chapter 7
+    "Daniel 7:1": "Daniel's Vision of Four Beasts",
+    "Daniel 7:15": "The Interpretation of the Vision",
+    
+    // Daniel Chapter 8
+    "Daniel 8:1": "Daniel's Vision of the Ram and Goat",
+    "Daniel 8:15": "The Interpretation of the Vision",
+    
+    // Daniel Chapter 9
+    "Daniel 9:1": "Daniel's Prayer",
+    "Daniel 9:20": "The Seventy Weeks",
+    
+    // Daniel Chapter 10
+    "Daniel 10:1": "Daniel's Vision of a Man",
+    
+    // Daniel Chapter 11
+    "Daniel 11:1": "Kings of the South and North",
+    
+    // Daniel Chapter 12
+    "Daniel 12:1": "The Time of the End",
+    "Daniel 12:5": "How Long Until the End?",
+    
+    // Hosea Chapter 1
+    "Hosea 1:1": "Hosea's Wife and Children",
+    
+    // Hosea Chapter 2
+    "Hosea 2:1": "Israel's Unfaithfulness",
+    "Hosea 2:14": "The LORD's Mercy on Israel",
+    
+    // Hosea Chapter 3
+    "Hosea 3:1": "Hosea Redeems His Wife",
+    
+    // Hosea Chapter 4
+    "Hosea 4:1": "The Charge Against Israel",
+    
+    // Hosea Chapter 5
+    "Hosea 5:1": "Judgment on Israel and Judah",
+    
+    // Hosea Chapter 6
+    "Hosea 6:1": "A Call to Repentance",
+    "Hosea 6:4": "Faithless Israel",
+    
+    // Hosea Chapter 7
+    "Hosea 7:1": "Israel's Corruption",
+    
+    // Hosea Chapter 8
+    "Hosea 8:1": "Israel Will Reap the Whirlwind",
+    
+    // Hosea Chapter 9
+    "Hosea 9:1": "Punishment for Israel",
+    
+    // Hosea Chapter 10
+    "Hosea 10:1": "Israel's Sin and Captivity",
+    
+    // Hosea Chapter 11
+    "Hosea 11:1": "The LORD's Love for Israel",
+    
+    // Hosea Chapter 12
+    "Hosea 12:1": "The LORD's Indictment of Israel",
+    
+    // Hosea Chapter 13
+    "Hosea 13:1": "The LORD's Anger Against Israel",
+    
+    // Hosea Chapter 14
+    "Hosea 14:1": "A Plea to Return to the LORD",
+    "Hosea 14:4": "Healing for the Repentant",
+    
+    // Joel Chapter 1
+    "Joel 1:1": "The Invasion of Locusts",
+    "Joel 1:13": "A Call to Repentance",
+    
+    // Joel Chapter 2
+    "Joel 2:1": "The Day of the LORD",
+    "Joel 2:12": "Return to the LORD",
+    "Joel 2:18": "The LORD's Response",
+    "Joel 2:28": "The Outpouring of the Spirit",
+    
+    // Joel Chapter 3
+    "Joel 3:1": "Judgment on the Nations",
+    "Joel 3:14": "The Valley of Decision",
+    
+    // Amos Chapter 1
+    "Amos 1:1": "Judgment on Israel's Neighbors",
+    
+    // Amos Chapter 2
+    "Amos 2:1": "Judgment on Moab",
+    "Amos 2:4": "Judgment on Judah",
+    "Amos 2:6": "Judgment on Israel",
+    
+    // Amos Chapter 3
+    "Amos 3:1": "Witnesses Against Israel",
+    
+    // Amos Chapter 4
+    "Amos 4:1": "Israel Has Not Returned to the LORD",
+    
+    // Amos Chapter 5
+    "Amos 5:1": "A Lament for Israel",
+    "Amos 5:18": "The Day of the LORD Is Darkness",
+    
+    // Amos Chapter 6
+    "Amos 6:1": "Woe to the Complacent",
+    
+    // Amos Chapter 7
+    "Amos 7:1": "Five Visions of Judgment",
+    "Amos 7:10": "Amaziah Opposes Amos",
+    
+    // Amos Chapter 8
+    "Amos 8:1": "The Vision of the Basket of Fruit",
+    "Amos 8:4": "The Unscrupulous Merchant",
+    
+    // Amos Chapter 9
+    "Amos 9:1": "The Destruction of Israel",
+    "Amos 9:11": "The Restoration of Israel",
+    
+    // Obadiah Chapter 1
+    "Obadiah 1:1": "Edom's Destruction",
+    "Obadiah 1:15": "The Day of the LORD",
+    
+    // Jonah Chapter 1
+    "Jonah 1:1": "Jonah Flees from the LORD",
+    
+    // Jonah Chapter 2
+    "Jonah 2:1": "Jonah's Prayer",
+    
+    // Jonah Chapter 3
+    "Jonah 3:1": "Jonah Goes to Nineveh",
+    
+    // Jonah Chapter 4
+    "Jonah 4:1": "Jonah's Anger at the LORD's Compassion",
+    
+    // Micah Chapter 1
+    "Micah 1:1": "Judgment on Samaria and Jerusalem",
+    
+    // Micah Chapter 2
+    "Micah 2:1": "Woe to Oppressors",
+    "Micah 2:12": "A Promise of Restoration",
+    
+    // Micah Chapter 3
+    "Micah 3:1": "Rulers and Prophets Rebuked",
+    
+    // Micah Chapter 4
+    "Micah 4:1": "The Mountain of the LORD",
+    "Micah 4:9": "The LORD Will Rescue Zion",
+    
+    // Micah Chapter 5
+    "Micah 5:1": "A Ruler from Bethlehem",
+    "Micah 5:7": "The Remnant of Jacob",
+    
+    // Micah Chapter 6
+    "Micah 6:1": "The LORD's Case Against Israel",
+    "Micah 6:6": "What Does the LORD Require?",
+    
+    // Micah Chapter 7
+    "Micah 7:1": "Misery Turned to Hope",
+    "Micah 7:14": "God's Compassion on Israel",
+    
+    // Nahum Chapter 1
+    "Nahum 1:1": "The LORD Is Slow to Anger",
+    "Nahum 1:9": "The Destruction of Nineveh",
+    
+    // Nahum Chapter 2
+    "Nahum 2:1": "The Destruction of Nineveh",
+    
+    // Nahum Chapter 3
+    "Nahum 3:1": "Woe to Nineveh",
+    
+    // Habakkuk Chapter 1
+    "Habakkuk 1:1": "Habakkuk's Complaint",
+    "Habakkuk 1:5": "The LORD's Answer",
+    "Habakkuk 1:12": "Habakkuk's Second Complaint",
+    
+    // Habakkuk Chapter 2
+    "Habakkuk 2:1": "The LORD's Answer",
+    "Habakkuk 2:6": "Woe to the Wicked",
+    "Habakkuk 2:18": "The Futility of Idols",
+    
+    // Habakkuk Chapter 3
+    "Habakkuk 3:1": "Habakkuk's Prayer",
+    "Habakkuk 3:16": "Trust in God's Salvation",
+    
+    // Zephaniah Chapter 1
+    "Zephaniah 1:1": "The Great Day of the LORD",
+    
+    // Zephaniah Chapter 2
+    "Zephaniah 2:1": "A Call to Repentance",
+    "Zephaniah 2:4": "Judgment on the Nations",
+    
+    // Zephaniah Chapter 3
+    "Zephaniah 3:1": "Woe to Jerusalem",
+    "Zephaniah 3:8": "The Purification of the Nations",
+    "Zephaniah 3:14": "The Joy of Zion",
+    
+    // Haggai Chapter 1
+    "Haggai 1:1": "A Call to Rebuild the Temple",
+    
+    // Haggai Chapter 2
+    "Haggai 2:1": "The Coming Glory of the Temple",
+    "Haggai 2:10": "Blessings for a Defiled People",
+    "Haggai 2:20": "Zerubbabel the LORD's Signet Ring",
+    
+    // Zechariah Chapter 1
+    "Zechariah 1:1": "A Call to Return to the LORD",
+    "Zechariah 1:7": "The Vision of the Horses",
+    "Zechariah 1:18": "The Vision of the Horns and Craftsmen",
+    
+    // Zechariah Chapter 2
+    "Zechariah 2:1": "The Vision of the Measuring Line",
+    
+    // Zechariah Chapter 3
+    "Zechariah 3:1": "The Vision of Joshua the High Priest",
+    
+    // Zechariah Chapter 4
+    "Zechariah 4:1": "The Vision of the Golden Lampstand",
+    
+    // Zechariah Chapter 5
+    "Zechariah 5:1": "The Vision of the Flying Scroll",
+    "Zechariah 5:5": "The Vision of the Woman in a Basket",
+    
+    // Zechariah Chapter 6
+    "Zechariah 6:1": "The Vision of the Four Chariots",
+    "Zechariah 6:9": "The Crowning of Joshua",
+    
+    // Zechariah Chapter 7
+    "Zechariah 7:1": "A Question About Fasting",
+    
+    // Zechariah Chapter 8
+    "Zechariah 8:1": "The LORD Promises to Bless Jerusalem",
+    
+    // Zechariah Chapter 9
+    "Zechariah 9:1": "Judgment on Israel's Enemies",
+    "Zechariah 9:9": "Your King Comes to You",
+    
+    // Zechariah Chapter 10
+    "Zechariah 10:1": "The Restoration of Judah and Israel",
+    
+    // Zechariah Chapter 11
+    "Zechariah 11:1": "The Fall of Israel's Oppressors",
+    "Zechariah 11:4": "The Two Shepherds",
+    
+    // Zechariah Chapter 12
+    "Zechariah 12:1": "The Coming Deliverance of Jerusalem",
+    
+    // Zechariah Chapter 13
+    "Zechariah 13:1": "A Fountain for Cleansing",
+    "Zechariah 13:7": "The Shepherd Struck",
+    
+    // Zechariah Chapter 14
+    "Zechariah 14:1": "The Day of the LORD",
+    
+    // Malachi Chapter 1
+    "Malachi 1:1": "The LORD's Love for Israel",
+    "Malachi 1:6": "Polluted Offerings",
+    
+    // Malachi Chapter 2
+    "Malachi 2:1": "The Priests Rebuked",
+    "Malachi 2:10": "Judah's Unfaithfulness",
+    
+    // Malachi Chapter 3
+    "Malachi 3:1": "The Messenger of the Covenant",
+    "Malachi 3:6": "Robbing God",
+    "Malachi 3:13": "The Book of Remembrance",
+    
+    // Malachi Chapter 4
+    "Malachi 4:1": "The Day of the LORD",
+    "Malachi 4:4": "Behold, I Will Send Elijah",
+    
     // ===========================
     // NEW TESTAMENT
     // ===========================
