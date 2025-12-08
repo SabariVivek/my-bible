@@ -8524,7 +8524,6 @@ body.pinned-verses-sheet-open .bottom-nav {
     background: var(--bg-color, #e0e0e0);
     border-radius: 16px 16px 0 0;
     max-height: 65vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     transform: translateY(100%);
@@ -8538,107 +8537,110 @@ body.pinned-verses-sheet-open .bottom-nav {
     -moz-osx-font-smoothing: grayscale;
 }
 
-body.dark-theme .pinned-verses-modal {
-    background: #292a2d;
+.pinned-verses-content {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e0e0e0;
+    border-radius: 16px 16px 0 0;
+    z-index: 1001;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.5);
+    /* GPU acceleration for smooth animations */
+    will-change: transform;
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    overflow: visible;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.pinned-verses-modal-overlay.visible .pinned-verses-modal {
+.pinned-verses-modal-overlay.visible .pinned-verses-content {
     transform: translateY(0);
 }
 
-.pinned-verses-modal.dragging {
+.pinned-verses-content.dragging {
     transition: none !important;
 }
 
-.pinned-verses-sheet-handle {
-    display: flex;
-    justify-content: center;
-    padding: 16px 0 4px 0;
-    background: var(--bg-color, #ffffff);
-    border-radius: 16px 16px 0 0;
+body.dark-theme .pinned-verses-content {
+    background: #292a2d;
 }
 
-body.dark-theme .pinned-verses-sheet-handle {
-    background: #1e1e1e;
-}
-
-.pinned-verses-handle-bar {
+.pinned-verses-handle {
     width: 40px;
     height: 4px;
     background: #ccc;
     border-radius: 2px;
+    margin: 12px auto 0;
 }
 
-body.dark-theme .pinned-verses-handle-bar {
+body.dark-theme .pinned-verses-handle {
     background: #555;
 }
 
-.pinned-verses-sheet-header {
+.pinned-verses-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background: var(--bg-color, #ffffff);
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
 }
 
-body.dark-theme .pinned-verses-sheet-header {
-    background: #1e1e1e;
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+body.dark-theme .pinned-verses-header {
+    border-bottom-color: #404040;
 }
 
-.pinned-verses-sheet-header h3 {
-    margin: 0;
+.pinned-verses-header h3 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--text-color, #000);
+    margin: 0;
+    color: #333;
 }
 
-body.dark-theme .pinned-verses-sheet-header h3 {
-    color: #ffffff;
+body.dark-theme .pinned-verses-header h3 {
+    color: #f0f0f0;
 }
 
 .pinned-verses-close-btn {
-    background: rgba(0, 0, 0, 0.05);
-    border: 0.5px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    background: none;
+    border: none;
     cursor: pointer;
+    color: #999;
     padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color, #000);
-    transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-}
-
-body.dark-theme .pinned-verses-close-btn {
-    color: #ffffff;
-    border: 0.5px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    width: 36px;
+    height: 36px;
 }
 
 .pinned-verses-close-btn:hover {
-    opacity: 0.8;
-    border-color: rgba(0, 0, 0, 0.4);
-    background: rgba(0, 0, 0, 0.08);
+    background: #f0f0f0;
+    color: #333;
 }
 
 body.dark-theme .pinned-verses-close-btn:hover {
-    border-color: rgba(255, 255, 255, 0.4);
-    background: rgba(255, 255, 255, 0.12);
+    background: #3a3a3a;
+    color: #f0f0f0;
 }
 
-.pinned-verses-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 12px 0;
+.pinned-verses-close-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.pinned-verses-body {
+    flex: 1;
     overflow-y: auto;
-    background: var(--bg-color, #ffffff);
-}
-
-body.dark-theme .pinned-verses-list {
-    background: #1e1e1e;
+    padding: 12px 0;
 }
 
 @keyframes slideOutLeft {

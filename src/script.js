@@ -8876,14 +8876,14 @@ function showPinnedVersesBottomSheet() {
         `;
     });
     
-    // Set up the bottom sheet content
+    // Set up the bottom sheet content - matching sermon modal structure
     bottomSheet.innerHTML = `
         <div class="pinned-verses-backdrop"></div>
-        <div class="pinned-verses-modal">
-            <div class="pinned-verses-sheet-handle">
+        <div class="pinned-verses-content">
+            <div class="pinned-verses-handle">
                 <div class="pinned-verses-handle-bar"></div>
             </div>
-            <div class="pinned-verses-sheet-header">
+            <div class="pinned-verses-header">
                 <h3><span style="margin-right: 8px;">📌</span>Pinned Verses</h3>
                 <button class="pinned-verses-close-btn" aria-label="Close">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -8892,7 +8892,7 @@ function showPinnedVersesBottomSheet() {
                     </svg>
                 </button>
             </div>
-            <div class="pinned-verses-list">
+            <div class="pinned-verses-body">
                 ${versesHtml}
             </div>
         </div>
@@ -8906,8 +8906,8 @@ function showPinnedVersesBottomSheet() {
     // Add event listeners
     const closeBtn = bottomSheet.querySelector('.pinned-verses-close-btn');
     const backdrop = bottomSheet.querySelector('.pinned-verses-backdrop');
-    const modal = bottomSheet.querySelector('.pinned-verses-modal');
-    const handle = bottomSheet.querySelector('.pinned-verses-sheet-handle');
+    const content = bottomSheet.querySelector('.pinned-verses-content');
+    const body = bottomSheet.querySelector('.pinned-verses-body');
     
     const closePinnedSheet = () => {
         bottomSheet.classList.remove('visible');
@@ -8916,14 +8916,14 @@ function showPinnedVersesBottomSheet() {
         
         // Clear inline transform after transition completes
         setTimeout(() => {
-            modal.style.transform = '';
+            content.style.transform = '';
         }, 300); // Match the 0.3s transition duration
     };
     
     closeBtn.addEventListener('click', closePinnedSheet);
     backdrop.addEventListener('click', closePinnedSheet);
     
-    // Add drag-to-close functionality with velocity tracking
+    // Add drag-to-close functionality - matching sermon modal pattern
     let startY = 0;
     let currentY = 0;
     let isDragging = false;
@@ -8932,8 +8932,8 @@ function showPinnedVersesBottomSheet() {
     let lastTime = 0;
     let startScrollTop = 0;
     
-    const handleDragStart = (clientY) => {
-        const scrollTop = modal.scrollTop;
+    function handleStart(clientY) {
+        const scrollTop = body.scrollTop;
         
         // Only allow dragging if at the top of scroll
         if (scrollTop > 5) {
@@ -8949,14 +8949,14 @@ function showPinnedVersesBottomSheet() {
         startScrollTop = scrollTop;
         velocityY = 0;
 
-        modal.classList.add('dragging');
-    };
-    
-    const handleDragMove = (clientY) => {
+        content.classList.add('dragging');
+    }
+
+    function handleMove(clientY) {
         if (!isDragging) return;
 
         const deltaY = clientY - startY;
-        const scrollTop = modal.scrollTop;
+        const scrollTop = body.scrollTop;
         const scrollChanged = scrollTop !== startScrollTop;
 
         // Calculate velocity
@@ -8971,77 +8971,68 @@ function showPinnedVersesBottomSheet() {
         // If content scrolled (scroll position changed), stop dragging
         if (scrollChanged) {
             isDragging = false;
-            modal.classList.remove('dragging');
+            content.classList.remove('dragging');
             return;
         }
 
         // If content is scrolled down, allow normal scrolling
         if (scrollTop > 5) {
             isDragging = false;
-            modal.classList.remove('dragging');
+            content.classList.remove('dragging');
             return;
         }
 
         // If trying to drag up when at top, allow content to scroll
         if (deltaY < 0) {
             isDragging = false;
-            modal.classList.remove('dragging');
+            content.classList.remove('dragging');
             return;
         }
 
         // Move sheet down only when at top and dragging down
         currentY = deltaY;
-        modal.style.transform = `translateY(${currentY}px)`;
-    };
-    
-    const handleDragEnd = () => {
+        content.style.transform = `translateY(${currentY}px)`;
+    }
+
+    function handleEnd() {
         if (!isDragging) return;
         isDragging = false;
-        modal.classList.remove('dragging');
-        
-        const threshold = 150; // 150px threshold to close
+        content.classList.remove('dragging');
         
         // Close if dragged far enough or velocity is high enough
-        if (currentY > threshold || velocityY > 0.3) {
-            modal.style.transform = ''; // Clear inline transform to trigger animation
+        const shouldClose = currentY > 150 || velocityY > 0.3;
+
+        if (shouldClose) {
+            content.style.transform = '';
             closePinnedSheet();
         } else {
-            // Snap back to original position
-            modal.style.transform = '';
+            content.style.transform = '';
         }
-    };
-    
+    }
+
     // Touch events
-    modal.addEventListener('touchstart', (e) => {
-        handleDragStart(e.touches[0].clientY);
+    content.addEventListener('touchstart', (e) => {
+        handleStart(e.touches[0].clientY);
     }, { passive: true });
-    
-    modal.addEventListener('touchmove', (e) => {
-        const scrollTop = modal.scrollTop;
-        const deltaY = e.touches[0].clientY - startY;
-        
-        // Only prevent default when actually dragging the sheet (at top and dragging down)
-        if (isDragging && scrollTop <= 5 && deltaY > 0) {
-            e.preventDefault();
-        }
-        handleDragMove(e.touches[0].clientY);
+
+    content.addEventListener('touchmove', (e) => {
+        handleMove(e.touches[0].clientY);
     }, { passive: false });
-    
-    modal.addEventListener('touchend', handleDragEnd, { passive: true });
-    
+
+    content.addEventListener('touchend', handleEnd, { passive: true });
+
     // Mouse events for desktop
-    modal.addEventListener('mousedown', (e) => {
-        handleDragStart(e.clientY);
+    content.addEventListener('mousedown', (e) => {
+        handleStart(e.clientY);
     });
-    
+
     document.addEventListener('mousemove', (e) => {
         if (isDragging) {
-            e.preventDefault();
-            handleDragMove(e.clientY);
+            handleMove(e.clientY);
         }
     });
-    
-    document.addEventListener('mouseup', handleDragEnd);
+
+    document.addEventListener('mouseup', handleEnd);
     
     // Add event listeners to unpin buttons
     const unpinBtns = bottomSheet.querySelectorAll('.pinned-verse-list-unpin');
