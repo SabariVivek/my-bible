@@ -73,7 +73,7 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
     line-height: 1;
     position: absolute;
     top: 0;
-    right: -24px;
+    right: -28px;
 }
 
 body.dark-theme .mobile-verse-count-badge {
