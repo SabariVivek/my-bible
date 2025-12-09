@@ -1207,17 +1207,18 @@ function displayChapter() {
         return numA - numB;
     });
     
-    // Update verse count banner
+    // Update verse count badge in mobile chapter header
     const verseCount = verses.length;
+    const verseCountBadge = document.getElementById('mobile-verse-count-badge');
+    if (verseCountBadge) {
+        verseCountBadge.textContent = verseCount;
+        verseCountBadge.style.display = 'inline-block';
+    }
+    
+    // Keep old banner hidden
     const verseCountBanner = document.getElementById('verse-count-banner');
-    const verseCountText = verseCountBanner.querySelector('.verse-count-text');
-    const mainContentArea = document.querySelector('.content-area');
-    if (verseCountBanner && verseCountText) {
-        verseCountText.textContent = `${verseCount}  ${verseCount === 1 ? 'verse' : 'verses'}`;
-        verseCountBanner.style.display = 'block';
-        if (mainContentArea) {
-            mainContentArea.classList.add('with-verse-banner');
-        }
+    if (verseCountBanner) {
+        verseCountBanner.style.display = 'none';
     }
     
     const bookName = bibleBooks[currentBook].name;

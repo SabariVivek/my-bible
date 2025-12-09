@@ -50,21 +50,7 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
 
 /* Verse Count Bookmark - Right side top bookmark design */
 .verse-count-banner-container {
-    position: absolute;
-    right: 0;
-    top: 36px;
-    z-index: 99;
-    display: none;
-    padding: 6px 16px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #0f3d19;
-    font-family: system-ui, sans-serif;
-    background: #b8f5c1;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    display: none !important; /* Moved to mobile chapter header badge */
 }
 
 .verse-count-icon {
@@ -73,6 +59,26 @@ html, body, .main-layout, .content-area, .scripture-text, .verse-text {
 
 .verse-count-text {
     letter-spacing: 0;
+}
+
+.mobile-verse-count-badge {
+    display: none;
+    padding: 2px 6px;
+    background: #4caf50;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 8px;
+    font-family: system-ui, sans-serif;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: -24px;
+}
+
+body.dark-theme .mobile-verse-count-badge {
+    background: #2d5a34;
+    color: #b8f5c1;
 }
 
 body.dark-theme .verse-count-banner-container {
@@ -1563,6 +1569,7 @@ body.dark-theme .right-sidebar:hover::-webkit-scrollbar-thumb {
     text-align: center;
     padding: 8px 8px 8px 8px;
     margin-bottom: 8px;
+    position: relative;
 }
 
 .mobile-chapter-title {
@@ -1573,11 +1580,17 @@ body.dark-theme .right-sidebar:hover::-webkit-scrollbar-thumb {
     letter-spacing: 0.5px;
 }
 
+.mobile-chapter-number-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
 .mobile-chapter-number {
     font-size: 4rem;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1;
+    display: inline-block;
 }
 
 body.dark-theme .mobile-chapter-header {
