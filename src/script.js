@@ -1955,6 +1955,15 @@ function showVerseActionsBottomSheet(verseNum) {
                 </button>
                 ` : ''}
                 ${isAdmin() ? `
+                <button class="verse-bottom-action add-reference-action" data-verse="${verseNum}">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                    <span>Reference</span>
+                </button>
+                ` : ''}
+                ${isAdmin() ? `
                 <button class="verse-bottom-action add-sermon-action" data-verse="${verseNum}">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
@@ -2074,6 +2083,17 @@ function showVerseActionsBottomSheet(verseNum) {
         noteBtn.addEventListener('click', () => {
             openNotesModal(verseNum);
             closeBottomSheet();
+        });
+    }
+    
+    // Add reference button (only if admin access enabled)
+    const refBtn = bottomSheet.querySelector('.add-reference-action');
+    if (refBtn) {
+        refBtn.addEventListener('click', () => {
+            closeBottomSheet();
+            // Set the current verse for the reference dialog
+            currentAddRefVerseNum = verseNum;
+            openAddRefSheet();
         });
     }
     
@@ -9775,6 +9795,7 @@ async function saveReference() {
     }
     
     // Update display: add cross-ref icon if not already present
+    console.log('🔍 updateCrossRefDisplay - verseNum:', currentAddRefVerseNum, 'currentChapter:', currentChapter, 'currentBook:', currentBook);
     updateCrossRefDisplay(currentAddRefVerseNum);
     
     // Refresh note viewer if it's open
@@ -9819,24 +9840,43 @@ async function saveReference() {
 }
 
 function updateCrossRefDisplay(verseNum) {
+    console.log('🔍 updateCrossRefDisplay called - verseNum:', verseNum, 'currentBook:', currentBook, 'currentChapter:', currentChapter);
+    
+    // Get the cross-references for this verse
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+    const crossRefs = crossReferences[crossRefKey];
+    
+    console.log('🔍 crossRefKey:', crossRefKey, 'crossRefs:', crossRefs);
+    
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
-    if (!verseLine) return;
+    console.log('🔍 verseLine found:', !!verseLine, 'HTML:', verseLine?.outerHTML?.substring(0, 100));
+    
+    if (!verseLine) {
+        console.log(`❌ Verse ${verseNum} not found in current view`);
+        return;
+    }
     
     // Check if cross-ref icon already exists
     let crossRefIcon = verseLine.querySelector('.cross-ref-icon');
+    console.log('🔍 Existing cross-ref icon:', !!crossRefIcon);
     
-    if (!crossRefIcon) {
+    if (!crossRefIcon && crossRefs && crossRefs.length > 0) {
         // Create and add cross-ref icon
         crossRefIcon = document.createElement('span');
         crossRefIcon.className = 'cross-ref-icon';
         crossRefIcon.textContent = '🔗';
         crossRefIcon.title = 'This verse has cross-references';
+        crossRefIcon.dataset.verse = verseNum;
+        crossRefIcon.dataset.crossRefs = JSON.stringify(crossRefs);
         
-        // Insert after verse number
-        const verseNumber = verseLine.querySelector('.verse-number');
-        if (verseNumber) {
-            verseNumber.insertAdjacentElement('afterend', crossRefIcon);
-        }
+        // Append at the end of the verse line (like the initial render does)
+        verseLine.appendChild(crossRefIcon);
+        console.log(`✅ Added cross-ref icon to verse ${verseNum}`, crossRefs);
+    } else if (crossRefIcon && crossRefs && crossRefs.length > 0) {
+        // Update existing icon's data
+        crossRefIcon.dataset.crossRefs = JSON.stringify(crossRefs);
+        console.log(`✅ Updated cross-ref icon for verse ${verseNum}`, crossRefs);
     }
 }
 
