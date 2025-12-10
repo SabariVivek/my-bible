@@ -4878,7 +4878,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Joel",
-        "chapters": "1"
+        "chapters": "1-3"
       },
       {
         "book": "Revelation",
@@ -4948,7 +4948,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Jonah",
-        "chapters": "1"
+        "chapters": "1-4"
       },
       {
         "book": "Revelation",
@@ -5004,7 +5004,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Nahum",
-        "chapters": "1"
+        "chapters": "1-3"
       },
       {
         "book": "Revelation",
@@ -5018,7 +5018,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Habakkuk",
-        "chapters": "1"
+        "chapters": "1-3"
       },
       {
         "book": "Revelation",
@@ -5032,7 +5032,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Zephaniah",
-        "chapters": "1"
+        "chapters": "1-3"
       },
       {
         "book": "Revelation",
@@ -5046,7 +5046,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Haggai",
-        "chapters": "1"
+        "chapters": "1-2"
       },
       {
         "book": "Revelation",
@@ -5116,7 +5116,7 @@ const yearlyReadingPlan = [
     "portions": [
       {
         "book": "Malachi",
-        "chapters": "1"
+        "chapters": "1-4"
       },
       {
         "book": "Revelation",
