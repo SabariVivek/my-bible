@@ -9764,6 +9764,7 @@ function closeAddRefSheet() {
     // Reset state
     currentAddRefVerseNum = null;
     selectedRefVerses = [];
+    window.refsWhenSheetOpened = null; // Clear tracking variable
 }
 
 function displayExistingReferences() {
@@ -9777,6 +9778,11 @@ function displayExistingReferences() {
     const crossRefKey = `${book.name} ${currentChapter}:${currentAddRefVerseNum}`;
     
     const existingRefs = crossReferences[crossRefKey] || [];
+    
+    // Store the initial refs when sheet opens (for validation)
+    if (!window.refsWhenSheetOpened) {
+        window.refsWhenSheetOpened = [...existingRefs];
+    }
     
     if (existingRefs.length === 0) {
         existingRefsSection.classList.remove('active');
@@ -9808,7 +9814,8 @@ function removeExistingReference(ref, crossRefKey) {
     crossReferences[crossRefKey] = crossReferences[crossRefKey].filter(r => r !== ref);
     
     // If no more references, delete the key
-    if (crossReferences[crossRefKey].length === 0) {
+    const hasReferencesLeft = crossReferences[crossRefKey].length > 0;
+    if (!hasReferencesLeft) {
         delete crossReferences[crossRefKey];
     }
     
@@ -9817,7 +9824,21 @@ function removeExistingReference(ref, crossRefKey) {
     
     // Refresh display
     displayExistingReferences();
-    updateCrossRefDisplay(currentAddRefVerseNum);
+    
+    // Remove the cross-ref icon if no references remain
+    if (!hasReferencesLeft) {
+        const verseLine = document.querySelector(`.verse-line[data-verse="${currentAddRefVerseNum}"]`);
+        if (verseLine) {
+            const crossRefIcon = verseLine.querySelector('.cross-ref-icon');
+            if (crossRefIcon) {
+                crossRefIcon.remove();
+                console.log('🗑️ Cross-ref icon removed from verse', currentAddRefVerseNum);
+            }
+        }
+    } else {
+        // If some references still exist, just update the display
+        updateCrossRefDisplay(currentAddRefVerseNum);
+    }
     
     console.log('✅ Reference removed and saved');
 }
@@ -10018,12 +10039,22 @@ async function saveReference() {
     const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
     const currentRefs = crossReferences[crossRefKey] || [];
     
-    // Allow save if:
-    // 1. User is adding new verse references, OR
-    // 2. References exist (user may have only deleted some)
+    // Allow save if user hasn't made any changes (no new verses added AND no deletion attempts)
+    // If both are empty and no deletion button was clicked, ask user to add at least one
+    // But if references existed before and user deleted them all via X buttons, that's allowed
+    
+    // Only show alert if user opens sheet WITHOUT any existing references and tries to save without adding any
     if (selectedRefVerses.length === 0 && currentRefs.length === 0) {
-        alert('Please add at least one verse reference.');
-        return;
+        // Check if there were references when sheet opened
+        // If deleteCount or user clicked X, allow save (currentRefs will be empty)
+        // Only block if truly nothing was done
+        const refsWhenOpened = window.refsWhenSheetOpened || [];
+        const userDeletedAll = refsWhenOpened.length > 0 && currentRefs.length === 0;
+        
+        if (!userDeletedAll) {
+            alert('Please add at least one verse reference.');
+            return;
+        }
     }
     
     if (currentAddRefVerseNum === null) {
