@@ -4093,8 +4093,8 @@ body.dark-theme .note-viewer-content::-webkit-scrollbar-thumb:hover {
 }
 
 .note-viewer-add-ref-icon-btn {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     background: #1a73e8;
     border: none;
     border-radius: 50%;
@@ -9528,7 +9528,7 @@ body.dark-theme .add-ref-sheet-handle {
 }
 
 .add-ref-sheet-header {
-    padding: 12px 16px;
+    padding: 20px 16px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
     align-items: center;
@@ -9541,11 +9541,11 @@ body.dark-theme .add-ref-sheet-header {
 }
 
 .add-ref-sheet-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin: 0;
     color: #333;
-    text-align: center;
+    text-align: left;
 }
 
 body.dark-theme .add-ref-sheet-title {
@@ -9561,8 +9561,8 @@ body.dark-theme .add-ref-sheet-title {
     border: none;
     cursor: pointer;
     color: #999;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9682,10 +9682,11 @@ body.dark-theme .add-ref-dropdown-select option[value=""] {
 }
 
 .add-ref-dropdown-select option {
-    padding: 10px;
+    padding: 8px;
     background: #ffffff;
     color: #333;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 400;
     line-height: 1.5;
 }
 

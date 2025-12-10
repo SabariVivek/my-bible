@@ -5239,6 +5239,15 @@ async function loadNotesFromSupabase() {
                         verseNotes[noteKey].text = note.text;
                         verseNotes[noteKey].chapter = note.chapter;
                         verseNotes[noteKey].verse = note.verse;
+                        
+                        // Load cross-references and populate crossReferences object
+                        if (note.cross_references && note.cross_references.length > 0) {
+                            const bookMeta = bibleBooks.find(b => b.file === note.book_file);
+                            if (bookMeta) {
+                                const crossRefKey = `${bookMeta.name} ${note.chapter}:${note.verse}`;
+                                crossReferences[crossRefKey] = note.cross_references;
+                            }
+                        }
                     });
                 }
             }
@@ -6056,6 +6065,10 @@ async function saveNote() {
             verseNotes[noteKey].chapter = chapter;
             verseNotes[noteKey].verse = verse;
             
+            // Get cross-references for this verse
+            const crossRefKey = `${bibleBooks[currentBook].name} ${chapter}:${verse}`;
+            const crossRefs = crossReferences[crossRefKey] || [];
+            
             // Use Supabase client's upsert method
             const { data, error } = await bibleDataManager.supabaseClient
                 .from('bible_verse_notes')
@@ -6064,6 +6077,7 @@ async function saveNote() {
                     chapter: chapter,
                     verse: verse,
                     text: noteText,
+                    cross_references: crossRefs,
                     updated_at: new Date().toISOString()
                 }, {
                     onConflict: 'book_file,chapter,verse'
@@ -6216,44 +6230,65 @@ function showNoteViewer(verseNum, note) {
     const crossRefs = crossReferences[crossRefKey];
     const hasRefs = crossRefs && crossRefs.length > 0;
     const hasNote = note && note.text && note.text.trim();
+    const isAdminMode = isAdmin();
     
-    // Handle tab visibility based on what content exists
-    if (hasNote && hasRefs) {
-        // Both note and references - show both tabs
+    // Handle tab visibility based on admin mode and content
+    if (isAdminMode) {
+        // Admin mode: Always show both tabs
         if (noteTab) noteTab.style.display = 'block';
         if (refTab) refTab.style.display = 'block';
         if (tabsContainer) tabsContainer.style.display = 'flex';
         if (singleTitle) singleTitle.style.display = 'none';
-        window.currentNoteRefs = { refs: crossRefs, verseNum };
-        switchNoteViewerTab('note');
-    } else if (hasRefs && !hasNote) {
-        // Only references - hide tabs, show title "References"
-        if (noteTab) noteTab.style.display = 'none';
-        if (refTab) refTab.style.display = 'none';
-        if (tabsContainer) tabsContainer.style.display = 'none';
-        if (singleTitle) {
-            singleTitle.textContent = 'References';
-            singleTitle.style.display = 'block';
+        
+        if (hasRefs) {
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
         }
-        window.currentNoteRefs = { refs: crossRefs, verseNum };
-        switchNoteViewerTab('references');
-    } else if (hasNote && !hasRefs) {
-        // Only note - hide tabs, show title "Note"
-        if (noteTab) noteTab.style.display = 'none';
-        if (refTab) refTab.style.display = 'none';
-        if (tabsContainer) tabsContainer.style.display = 'none';
-        if (singleTitle) {
-            singleTitle.textContent = 'Note';
-            singleTitle.style.display = 'block';
+        
+        // Switch to note tab by default, or references if no note but has refs
+        if (hasNote || !hasRefs) {
+            switchNoteViewerTab('note');
+        } else {
+            switchNoteViewerTab('references');
         }
-        switchNoteViewerTab('note');
     } else {
-        // No content - shouldn't happen, but default to note tab
-        if (noteTab) noteTab.style.display = 'block';
-        if (refTab) refTab.style.display = 'none';
-        if (tabsContainer) tabsContainer.style.display = 'flex';
-        if (singleTitle) singleTitle.style.display = 'none';
-        switchNoteViewerTab('note');
+        // Non-admin mode: Show tabs based on content
+        if (hasNote && hasRefs) {
+            // Both note and references - show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
+            switchNoteViewerTab('note');
+        } else if (hasRefs && !hasNote) {
+            // Only references - hide tabs, show title "References"
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.textContent = 'References';
+                singleTitle.style.display = 'block';
+            }
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
+            switchNoteViewerTab('references');
+        } else if (hasNote && !hasRefs) {
+            // Only note - hide tabs, show title "Note"
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.textContent = 'Note';
+                singleTitle.style.display = 'block';
+            }
+            switchNoteViewerTab('note');
+        } else {
+            // No content - shouldn't happen in non-admin mode
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+            switchNoteViewerTab('note');
+        }
     }
     
     // Reset modal transform
@@ -9540,7 +9575,7 @@ function onRefBookChange() {
     addVerseBtn.disabled = true;
 }
 
-async function onRefChapterChange() {
+function onRefChapterChange() {
     const bookSelect = document.getElementById('add-ref-book-select');
     const chapterSelect = document.getElementById('add-ref-chapter-select');
     const versesSelect = document.getElementById('add-ref-verses-select');
@@ -9558,16 +9593,31 @@ async function onRefChapterChange() {
     
     const book = bibleBooks[bookIndex];
     
-    // Load chapter data to get verse count
-    const chapterData = await bibleDataManager.loadChapter(book.file, chapter, 'english');
-    if (!chapterData) {
-        versesSelect.disabled = true;
-        versesSelect.value = '';
-        addVerseBtn.disabled = true;
-        return;
+    // Map book name to match bible-meta.js format (I Samuel -> 1 Samuel, etc.)
+    let bookName = book.name;
+    if (bookName.startsWith('I ')) {
+        bookName = bookName.replace('I ', '1 ');
+    } else if (bookName.startsWith('II ')) {
+        bookName = bookName.replace('II ', '2 ');
+    } else if (bookName.startsWith('III ')) {
+        bookName = bookName.replace('III ', '3 ');
     }
     
-    const verseCount = Object.keys(chapterData).length;
+    // Get verse count from bible-meta.js or fallback to bibleBooks chapters count
+    let verseCount = 0;
+    
+    if (window.bibleMeta) {
+        const bookMeta = window.bibleMeta.find(b => b.book === bookName);
+        if (bookMeta && bookMeta.chapters[chapter - 1]) {
+            verseCount = bookMeta.chapters[chapter - 1];
+        }
+    }
+    
+    // Fallback: estimate max verses as 180 (safe upper limit for any chapter)
+    if (verseCount === 0) {
+        console.warn('bible-meta.js not loaded, using fallback verse count');
+        verseCount = 180; // Maximum verses in any Bible chapter
+    }
     
     // Populate verses dropdown
     versesSelect.innerHTML = '';
@@ -9597,15 +9647,44 @@ function addRefVerse() {
     
     if (selectedOptions.length === 0) return;
     
-    selectedOptions.forEach(option => {
-        const verse = parseInt(option.value);
-        const refString = `${book.name} ${chapter}:${verse}`;
-        
-        // Check if already added
-        if (!selectedRefVerses.includes(refString)) {
-            selectedRefVerses.push(refString);
+    // Sort verses numerically
+    const verses = selectedOptions.map(opt => parseInt(opt.value)).sort((a, b) => a - b);
+    
+    // Create verse ranges for consecutive verses
+    let refString = '';
+    if (verses.length === 1) {
+        refString = `${book.name} ${chapter}:${verses[0]}`;
+    } else {
+        // Check if verses are consecutive
+        let isConsecutive = true;
+        for (let i = 1; i < verses.length; i++) {
+            if (verses[i] !== verses[i - 1] + 1) {
+                isConsecutive = false;
+                break;
+            }
         }
-    });
+        
+        if (isConsecutive) {
+            // Create range format: "Book Chapter:Start-End"
+            refString = `${book.name} ${chapter}:${verses[0]}-${verses[verses.length - 1]}`;
+        } else {
+            // Non-consecutive verses, create individual references
+            verses.forEach(verse => {
+                const ref = `${book.name} ${chapter}:${verse}`;
+                if (!selectedRefVerses.includes(ref)) {
+                    selectedRefVerses.push(ref);
+                }
+            });
+            versesSelect.value = '';
+            renderRefVersesChips();
+            return;
+        }
+    }
+    
+    // Check if already added
+    if (!selectedRefVerses.includes(refString)) {
+        selectedRefVerses.push(refString);
+    }
     
     // Clear verse selection
     versesSelect.value = '';
@@ -9636,7 +9715,7 @@ function renderRefVersesChips() {
     `).join('');
 }
 
-function saveReference() {
+async function saveReference() {
     if (selectedRefVerses.length === 0) {
         alert('Please add at least one verse reference.');
         return;
@@ -9665,17 +9744,68 @@ function saveReference() {
     
     console.log('✅ Cross-reference saved:', crossRefKey, '→', crossReferences[crossRefKey]);
     
+    // Save to Supabase
+    try {
+        const bookFile = bibleBooks[currentBook].file;
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_verse_notes')
+            .upsert({
+                book_file: bookFile,
+                chapter: currentChapter,
+                verse: currentAddRefVerseNum,
+                cross_references: crossReferences[crossRefKey],
+                updated_at: new Date().toISOString()
+            }, {
+                onConflict: 'book_file,chapter,verse'
+            });
+        
+        if (error) {
+            console.error('❌ Failed to save cross-reference:', error);
+        } else {
+            console.log('✅ Cross-reference saved to Supabase:', `${bookFile} ${currentChapter}:${currentAddRefVerseNum}`);
+        }
+    } catch (error) {
+        console.error('❌ Error saving cross-reference:', error);
+    }
+    
     // Update display: add cross-ref icon if not already present
     updateCrossRefDisplay(currentAddRefVerseNum);
     
     // Refresh note viewer if it's open
     const noteViewerPopup = document.getElementById('note-viewer-popup');
-    if (noteViewerPopup && noteViewerPopup.classList.contains('show')) {
-        // Reload references in the viewer
-        if (window.currentNoteRefs) {
-            window.currentNoteRefs.refs = crossReferences[crossRefKey];
-            loadNoteReferences(window.currentNoteRefs.refs);
+    if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+        // Update the stored references
+        window.currentNoteRefs = { refs: crossReferences[crossRefKey], verseNum: currentAddRefVerseNum };
+        
+        // Update header to show both tabs
+        const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${currentAddRefVerseNum}`;
+        const note = verseNotes[noteKey];
+        const hasNote = note && note.text && note.text.trim();
+        const isAdminMode = isAdmin();
+        
+        const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
+        const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+        const tabsContainer = document.querySelector('.note-viewer-tabs');
+        const singleTitle = document.getElementById('note-viewer-single-title');
+        
+        if (isAdminMode) {
+            // Admin: Always show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+        } else if (hasNote) {
+            // Non-admin with note: Show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
         }
+        // If non-admin with no note, keep single title mode
+        
+        // Switch to references tab and load the new references
+        switchNoteViewerTab('references');
+        loadNoteReferences(crossReferences[crossRefKey]);
     }
     
     // Close sheet
@@ -9746,6 +9876,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const addRefSaveBtn = document.getElementById('add-ref-btn-save');
     if (addRefSaveBtn) {
         addRefSaveBtn.addEventListener('click', saveReference);
+    }
+    
+    // Verses multi-select - enable single-click selection
+    const addRefVersesSelect = document.getElementById('add-ref-verses-select');
+    if (addRefVersesSelect) {
+        addRefVersesSelect.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            const option = e.target;
+            if (option.tagName === 'OPTION') {
+                option.selected = !option.selected;
+                this.focus();
+            }
+        });
+        
+        // Prevent default click behavior
+        addRefVersesSelect.addEventListener('click', function(e) {
+            e.preventDefault();
+        });
     }
 });
 

@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS bible_verse_notes (
     chapter INTEGER NOT NULL,
     verse INTEGER NOT NULL,
     text TEXT,
+    cross_references TEXT[] DEFAULT '{}',
     timestamp TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     
@@ -42,10 +43,11 @@ CREATE POLICY "Allow public delete" ON bible_verse_notes
     FOR DELETE USING (true);
 
 -- Add table comment
-COMMENT ON TABLE bible_verse_notes IS 'Stores text notes for individual Bible verses. Notes are separate from bookmarks (colors).';
+COMMENT ON TABLE bible_verse_notes IS 'Stores text notes and cross-references for individual Bible verses. Notes are separate from bookmarks (colors).';
 COMMENT ON COLUMN bible_verse_notes.book_file IS 'Book file identifier (e.g., "genesis", "ii_peter")';
 COMMENT ON COLUMN bible_verse_notes.chapter IS 'Chapter number';
 COMMENT ON COLUMN bible_verse_notes.verse IS 'Verse number';
 COMMENT ON COLUMN bible_verse_notes.text IS 'Note text content';
+COMMENT ON COLUMN bible_verse_notes.cross_references IS 'Array of cross-reference strings (e.g., ["Genesis 12:3", "Exodus 2:23-24"])';
 COMMENT ON COLUMN bible_verse_notes.timestamp IS 'Creation timestamp';
 COMMENT ON COLUMN bible_verse_notes.updated_at IS 'Last update timestamp';

@@ -1,4 +1,4 @@
-export const bibleMeta = [
+const bibleMeta = [
   { book: "Genesis", chapters: [31,25,24,26,32,22,24,22,29,32,32,20,18,24,21,16,27,33,38,18,34,24,20,67,34,35,46,22,35,43,55,32,20,29,23,29,43,36,30,23,23,18,22,28,34,34,28,34,31,22] },
   { book: "Exodus", chapters: [22,25,22,31,23,30,25,32,35,29,10,51,22,31,27,36,16,27,25,26,36,31,33,18,40,37,21,43,46,38,18,35,23,35,35,38,29,31,43,38] },
   { book: "Leviticus", chapters: [17,16,17,35,19,30,38,36,24,20,47,8,59,57,33,34,16,30,37,27,24,33,44,23,55,46,34] },
@@ -68,20 +68,26 @@ export const bibleMeta = [
 ];
 
 // Helper function to get books list
-export function getBooks() {
+function getBooks() {
   return bibleMeta.map(b => b.book);
 }
 
 // Helper function to get chapters for a book
-export function getChapters(bookName) {
+function getChapters(bookName) {
   const book = bibleMeta.find(b => b.book === bookName);
   return book ? book.chapters.map((_, i) => i + 1) : [];
 }
 
 // Helper function to get verses for a book chapter
-export function getVerses(bookName, chapterNum) {
+function getVerses(bookName, chapterNum) {
   const book = bibleMeta.find(b => b.book === bookName);
   if (!book) return [];
   const verseCount = book.chapters[chapterNum - 1];
   return Array.from({ length: verseCount }, (_, i) => i + 1);
 }
+
+// Make available globally
+window.bibleMeta = bibleMeta;
+window.getBooks = getBooks;
+window.getChapters = getChapters;
+window.getVerses = getVerses;
