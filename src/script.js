@@ -1447,9 +1447,22 @@ function displayChapter() {
                 // Double tap - show note viewer for this verse
                 const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
                 const note = verseNotes[noteKey];
-                // Show the note viewer if note exists and has text
-                if (note && note.text && note.text.trim()) {
-                    showNoteViewer(verseNum, note);
+                
+                // Check if this verse has cross-references
+                const bookName = bibleBooks[currentBook].name;
+                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+                const crossRefs = crossReferences[crossRefKey];
+                const hasCrossRefs = crossRefs && crossRefs.length > 0;
+                
+                // Show the note viewer if note exists with text OR if verse has cross-references
+                if ((note && note.text && note.text.trim()) || hasCrossRefs) {
+                    if (hasCrossRefs && (!note || !note.text || !note.text.trim())) {
+                        // If only has cross-refs, show note viewer with refs tab active
+                        showNoteViewer(verseNum, note || {});
+                    } else {
+                        // Has note text, show normally
+                        showNoteViewer(verseNum, note);
+                    }
                 }
                 tapCount = 0;
             }
@@ -6103,18 +6116,21 @@ async function deleteNote() {
         const chapter = parseInt(noteKey.substring(secondLastUnderscoreIndex + 1, lastUnderscoreIndex));
         const verse = parseInt(noteKey.substring(lastUnderscoreIndex + 1));
         
+        console.log('🗑️ Deleting note from Supabase:', { bookFile, chapter, verse });
+        
         if (bookFile && chapter && verse) {
-            await fetch(
-                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${chapter}&verse=eq.${verse}`,
-                {
-                    method: 'DELETE',
-                    headers: {
-                        'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
-                        'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
-                        'Content-Type': 'application/json'
-                    }
-                }
-            );
+            const { error } = await bibleDataManager.supabaseClient
+                .from('bible_verse_notes')
+                .delete()
+                .eq('book_file', bookFile)
+                .eq('chapter', chapter)
+                .eq('verse', verse);
+            
+            if (error) {
+                console.error('❌ Failed to delete note from Supabase:', error);
+            } else {
+                console.log('✅ Note deleted from Supabase:', `${bookFile} ${chapter}:${verse}`);
+            }
         }
         updateVerseNoteDisplay(currentNoteVerse);
         closeNotesModal();
@@ -6127,8 +6143,18 @@ function updateVerseNoteDisplay(verseNum) {
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
     const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
     if (!verseLine) return;
+    
+    console.log('Updating verse note display:', { verseNum, noteKey, noteExists: !!verseNotes[noteKey] });
+    
     // Remove all note classes
     verseLine.classList.remove('has-note', 'has-text', 'note-burgundy', 'note-forest', 'note-navy', 'note-amber', 'note-violet', 'note-teal', 'note-rust', 'note-olive', 'note-indigo', 'note-slate');
+    
+    // Remove note indicator if it exists
+    const noteIndicator = verseLine.querySelector('.note-indicator');
+    if (noteIndicator) {
+        noteIndicator.remove();
+    }
+    
     // Add note classes if note exists
     if (verseNotes[noteKey]) {
         verseLine.classList.add('has-note');
@@ -6175,27 +6201,59 @@ function showNoteViewer(verseNum, note) {
     const content = document.getElementById('note-viewer-content');
     const modal = document.querySelector('.note-viewer-modal');
     const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+    const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
+    const tabsContainer = document.querySelector('.note-viewer-tabs');
+    const singleTitle = document.getElementById('note-viewer-single-title');
     
     if (!popup) return;
     
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
-    content.innerHTML = note.text;
+    content.innerHTML = note.text || '';
     
     // Check if this verse has cross-references
     const bookName = bibleBooks[currentBook].name;
     const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
     const crossRefs = crossReferences[crossRefKey];
+    const hasRefs = crossRefs && crossRefs.length > 0;
+    const hasNote = note && note.text && note.text.trim();
     
-    // Show/hide References tab based on cross-references existence
-    if (refTab) {
-        if (crossRefs && crossRefs.length > 0) {
-            refTab.style.display = 'block';
-            window.currentNoteRefs = { refs: crossRefs, verseNum };
-            // Make sure Note tab is active
-            switchNoteViewerTab('note');
-        } else {
-            refTab.style.display = 'none';
+    // Handle tab visibility based on what content exists
+    if (hasNote && hasRefs) {
+        // Both note and references - show both tabs
+        if (noteTab) noteTab.style.display = 'block';
+        if (refTab) refTab.style.display = 'block';
+        if (tabsContainer) tabsContainer.style.display = 'flex';
+        if (singleTitle) singleTitle.style.display = 'none';
+        window.currentNoteRefs = { refs: crossRefs, verseNum };
+        switchNoteViewerTab('note');
+    } else if (hasRefs && !hasNote) {
+        // Only references - hide tabs, show title "References"
+        if (noteTab) noteTab.style.display = 'none';
+        if (refTab) refTab.style.display = 'none';
+        if (tabsContainer) tabsContainer.style.display = 'none';
+        if (singleTitle) {
+            singleTitle.textContent = 'References';
+            singleTitle.style.display = 'block';
         }
+        window.currentNoteRefs = { refs: crossRefs, verseNum };
+        switchNoteViewerTab('references');
+    } else if (hasNote && !hasRefs) {
+        // Only note - hide tabs, show title "Note"
+        if (noteTab) noteTab.style.display = 'none';
+        if (refTab) refTab.style.display = 'none';
+        if (tabsContainer) tabsContainer.style.display = 'none';
+        if (singleTitle) {
+            singleTitle.textContent = 'Note';
+            singleTitle.style.display = 'block';
+        }
+        switchNoteViewerTab('note');
+    } else {
+        // No content - shouldn't happen, but default to note tab
+        if (noteTab) noteTab.style.display = 'block';
+        if (refTab) refTab.style.display = 'none';
+        if (tabsContainer) tabsContainer.style.display = 'flex';
+        if (singleTitle) singleTitle.style.display = 'none';
+        switchNoteViewerTab('note');
     }
     
     // Reset modal transform
@@ -6203,13 +6261,20 @@ function showNoteViewer(verseNum, note) {
         modal.style.transform = '';
     }
     
+    // Save current scroll position before hiding overflow
+    const scrollY = window.scrollY;
+    
     // First set display to flex (required for visibility)
     popup.style.display = 'flex';
     
     // Show the bottom sheet with visible class
     popup.classList.add('visible');
     document.body.classList.add('modal-open');
-    document.body.style.overflow = 'hidden';
+    
+    // Preserve scroll position when setting overflow hidden
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
     
     // Update admin UI to show/hide edit button
     updateAdminUI();
@@ -6225,7 +6290,15 @@ function hideNoteViewer() {
     // Remove visible class to trigger slide down animation
     popup.classList.remove('visible');
     document.body.classList.remove('modal-open');
-    document.body.style.overflow = '';
+    
+    // Restore scroll position
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
     
     // Hide after animation completes
     setTimeout(() => {
@@ -9353,11 +9426,328 @@ function switchNoteRefLanguage(lang) {
     }
 }
 
+// === Add Reference Bottom Sheet Functions ===
+
+let currentAddRefVerseNum = null;
+let selectedRefVerses = [];
+
 function showAddReferenceDialog() {
-    // Placeholder function for adding references
-    // This will allow users to add cross-references to verses
-    alert('Add Reference feature coming soon! This will allow you to add cross-references to the current verse.');
+    // Get current verse from note viewer
+    const refElement = document.getElementById('note-viewer-ref');
+    if (!refElement) return;
+    
+    const refText = refElement.textContent; // e.g., "Matthew 1:1"
+    const match = refText.match(/(\d+):(\d+)/);
+    if (!match) return;
+    
+    currentAddRefVerseNum = parseInt(match[2]);
+    selectedRefVerses = [];
+    
+    // Open bottom sheet
+    openAddRefSheet();
 }
+
+function openAddRefSheet() {
+    const overlay = document.getElementById('add-ref-sheet-overlay');
+    const sheet = document.getElementById('add-ref-sheet');
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
+    
+    if (!overlay || !sheet) return;
+    
+    // Reset form
+    bookSelect.value = '';
+    chapterSelect.value = '';
+    chapterSelect.disabled = true;
+    versesSelect.value = '';
+    versesSelect.disabled = true;
+    addVerseBtn.disabled = true;
+    selectedRefVerses = [];
+    renderRefVersesChips();
+    
+    // Populate book dropdown
+    populateRefBookDropdown();
+    
+    // Show overlay and sheet
+    overlay.classList.add('active');
+    sheet.classList.add('active');
+}
+
+function closeAddRefSheet() {
+    const overlay = document.getElementById('add-ref-sheet-overlay');
+    const sheet = document.getElementById('add-ref-sheet');
+    
+    if (!overlay || !sheet) return;
+    
+    overlay.classList.remove('active');
+    sheet.classList.remove('active');
+    
+    // Reset state
+    currentAddRefVerseNum = null;
+    selectedRefVerses = [];
+}
+
+function populateRefBookDropdown() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    if (!bookSelect) return;
+    
+    // Clear existing options except placeholder
+    bookSelect.innerHTML = '<option value="">Select Book</option>';
+    
+    // Add all books from bibleBooks array
+    bibleBooks.forEach((book, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = book.name;
+        bookSelect.appendChild(option);
+    });
+}
+
+function onRefBookChange() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
+    
+    const bookIndex = parseInt(bookSelect.value);
+    
+    if (isNaN(bookIndex)) {
+        chapterSelect.disabled = true;
+        chapterSelect.value = '';
+        versesSelect.disabled = true;
+        versesSelect.value = '';
+        addVerseBtn.disabled = true;
+        return;
+    }
+    
+    const book = bibleBooks[bookIndex];
+    
+    // Populate chapter dropdown
+    chapterSelect.innerHTML = '<option value="">Select Chapter</option>';
+    for (let i = 1; i <= book.chapters; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        chapterSelect.appendChild(option);
+    }
+    
+    chapterSelect.disabled = false;
+    versesSelect.disabled = true;
+    versesSelect.value = '';
+    versesSelect.innerHTML = '<option value="" disabled>Select Verse</option>';
+    addVerseBtn.disabled = true;
+}
+
+async function onRefChapterChange() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    const addVerseBtn = document.getElementById('add-ref-add-verse-btn');
+    
+    const bookIndex = parseInt(bookSelect.value);
+    const chapter = parseInt(chapterSelect.value);
+    
+    if (isNaN(bookIndex) || isNaN(chapter)) {
+        versesSelect.disabled = true;
+        versesSelect.value = '';
+        addVerseBtn.disabled = true;
+        return;
+    }
+    
+    const book = bibleBooks[bookIndex];
+    
+    // Load chapter data to get verse count
+    const chapterData = await bibleDataManager.loadChapter(book.file, chapter, 'english');
+    if (!chapterData) {
+        versesSelect.disabled = true;
+        versesSelect.value = '';
+        addVerseBtn.disabled = true;
+        return;
+    }
+    
+    const verseCount = Object.keys(chapterData).length;
+    
+    // Populate verses dropdown
+    versesSelect.innerHTML = '';
+    for (let i = 1; i <= verseCount; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        versesSelect.appendChild(option);
+    }
+    
+    versesSelect.disabled = false;
+    addVerseBtn.disabled = false;
+}
+
+function addRefVerse() {
+    const bookSelect = document.getElementById('add-ref-book-select');
+    const chapterSelect = document.getElementById('add-ref-chapter-select');
+    const versesSelect = document.getElementById('add-ref-verses-select');
+    
+    const bookIndex = parseInt(bookSelect.value);
+    const chapter = parseInt(chapterSelect.value);
+    
+    if (isNaN(bookIndex) || isNaN(chapter)) return;
+    
+    const book = bibleBooks[bookIndex];
+    const selectedOptions = Array.from(versesSelect.selectedOptions);
+    
+    if (selectedOptions.length === 0) return;
+    
+    selectedOptions.forEach(option => {
+        const verse = parseInt(option.value);
+        const refString = `${book.name} ${chapter}:${verse}`;
+        
+        // Check if already added
+        if (!selectedRefVerses.includes(refString)) {
+            selectedRefVerses.push(refString);
+        }
+    });
+    
+    // Clear verse selection
+    versesSelect.value = '';
+    
+    // Render chips
+    renderRefVersesChips();
+}
+
+function removeRefChip(index) {
+    selectedRefVerses.splice(index, 1);
+    renderRefVersesChips();
+}
+
+function renderRefVersesChips() {
+    const chipsContainer = document.getElementById('add-ref-verses-chips');
+    if (!chipsContainer) return;
+    
+    if (selectedRefVerses.length === 0) {
+        chipsContainer.innerHTML = '';
+        return;
+    }
+    
+    chipsContainer.innerHTML = selectedRefVerses.map((verse, index) => `
+        <div class="add-ref-verse-chip">
+            <span>${verse}</span>
+            <button class="add-ref-verse-chip-remove" onclick="removeRefChip(${index})" type="button">×</button>
+        </div>
+    `).join('');
+}
+
+function saveReference() {
+    if (selectedRefVerses.length === 0) {
+        alert('Please add at least one verse reference.');
+        return;
+    }
+    
+    if (currentAddRefVerseNum === null) {
+        alert('Unable to determine current verse.');
+        return;
+    }
+    
+    // Get current verse reference
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
+    
+    // Add or update cross-reference
+    if (!crossReferences[crossRefKey]) {
+        crossReferences[crossRefKey] = [];
+    }
+    
+    // Merge new references with existing ones (avoid duplicates)
+    selectedRefVerses.forEach(ref => {
+        if (!crossReferences[crossRefKey].includes(ref)) {
+            crossReferences[crossRefKey].push(ref);
+        }
+    });
+    
+    console.log('✅ Cross-reference saved:', crossRefKey, '→', crossReferences[crossRefKey]);
+    
+    // Update display: add cross-ref icon if not already present
+    updateCrossRefDisplay(currentAddRefVerseNum);
+    
+    // Refresh note viewer if it's open
+    const noteViewerPopup = document.getElementById('note-viewer-popup');
+    if (noteViewerPopup && noteViewerPopup.classList.contains('show')) {
+        // Reload references in the viewer
+        if (window.currentNoteRefs) {
+            window.currentNoteRefs.refs = crossReferences[crossRefKey];
+            loadNoteReferences(window.currentNoteRefs.refs);
+        }
+    }
+    
+    // Close sheet
+    closeAddRefSheet();
+}
+
+function updateCrossRefDisplay(verseNum) {
+    const verseLine = document.querySelector(`.verse-line[data-verse="${verseNum}"]`);
+    if (!verseLine) return;
+    
+    // Check if cross-ref icon already exists
+    let crossRefIcon = verseLine.querySelector('.cross-ref-icon');
+    
+    if (!crossRefIcon) {
+        // Create and add cross-ref icon
+        crossRefIcon = document.createElement('span');
+        crossRefIcon.className = 'cross-ref-icon';
+        crossRefIcon.textContent = '🔗';
+        crossRefIcon.title = 'This verse has cross-references';
+        
+        // Insert after verse number
+        const verseNumber = verseLine.querySelector('.verse-number');
+        if (verseNumber) {
+            verseNumber.insertAdjacentElement('afterend', crossRefIcon);
+        }
+    }
+}
+
+// Wire up event listeners for Add Reference bottom sheet
+document.addEventListener('DOMContentLoaded', () => {
+    // Close overlay click
+    const addRefOverlay = document.getElementById('add-ref-sheet-overlay');
+    if (addRefOverlay) {
+        addRefOverlay.addEventListener('click', closeAddRefSheet);
+    }
+    
+    // Close button
+    const addRefCloseBtn = document.getElementById('add-ref-close-btn');
+    if (addRefCloseBtn) {
+        addRefCloseBtn.addEventListener('click', closeAddRefSheet);
+    }
+    
+    // Book dropdown change
+    const addRefBookSelect = document.getElementById('add-ref-book-select');
+    if (addRefBookSelect) {
+        addRefBookSelect.addEventListener('change', onRefBookChange);
+    }
+    
+    // Chapter dropdown change
+    const addRefChapterSelect = document.getElementById('add-ref-chapter-select');
+    if (addRefChapterSelect) {
+        addRefChapterSelect.addEventListener('change', onRefChapterChange);
+    }
+    
+    // Add Verse button
+    const addRefAddVerseBtn = document.getElementById('add-ref-add-verse-btn');
+    if (addRefAddVerseBtn) {
+        addRefAddVerseBtn.addEventListener('click', addRefVerse);
+    }
+    
+    // Cancel button
+    const addRefCancelBtn = document.getElementById('add-ref-btn-cancel');
+    if (addRefCancelBtn) {
+        addRefCancelBtn.addEventListener('click', closeAddRefSheet);
+    }
+    
+    // Save button
+    const addRefSaveBtn = document.getElementById('add-ref-btn-save');
+    if (addRefSaveBtn) {
+        addRefSaveBtn.addEventListener('click', saveReference);
+    }
+});
 
 async function loadNoteReferences(crossRefs) {
     console.log('loadNoteReferences called with:', crossRefs);

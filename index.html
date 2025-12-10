@@ -19,7 +19,7 @@
     <title>My Bible</title>
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
-    <link rel="stylesheet" href="src/styles.css?cb=20251126003722">
+    <link rel="stylesheet" href="src/styles.css?cb=20251210006000">
     <!-- Cache Management -->
     <script src="src/cache-manager.js?cb=20251126003722"></script>
     <script>
@@ -288,6 +288,9 @@
             <div class="note-viewer-header">
                 <span class="note-viewer-ref" id="note-viewer-ref"></span>
                 
+                <!-- Single Title (shown when tabs are hidden) -->
+                <span class="note-viewer-single-title" id="note-viewer-single-title" style="display: none;"></span>
+                
                 <!-- Segmented Control in Header -->
                 <div class="note-viewer-tabs">
                     <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')">Note</button>
@@ -319,7 +322,7 @@
                         <button class="note-viewer-ref-lang-btn" data-lang="english" onclick="switchNoteRefLanguage('english')">English</button>
                         <button class="note-viewer-ref-lang-btn" data-lang="dual" onclick="switchNoteRefLanguage('dual')">Both</button>
                     </div>
-                    <button class="note-viewer-add-ref-icon-btn" title="Add Reference" onclick="showAddReferenceDialog()">
+                    <button class="note-viewer-add-ref-icon-btn" id="note-viewer-add-ref-btn" title="Add Reference" onclick="showAddReferenceDialog()">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="12" y1="5" x2="12" y2="19"></line>
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -331,6 +334,55 @@
             
             <div class="note-viewer-footer">
             </div>
+        </div>
+    </div>
+
+    <!-- Add Reference Bottom Sheet -->
+    <div class="add-ref-sheet-overlay" id="add-ref-sheet-overlay"></div>
+    <div class="add-ref-sheet" id="add-ref-sheet">
+        <div class="add-ref-sheet-handle"></div>
+        <div class="add-ref-sheet-header">
+            <h2 class="add-ref-sheet-title">Add Reference</h2>
+            <button class="add-ref-close-btn" id="add-ref-close-btn" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="add-ref-sheet-content">
+            <div class="add-ref-input-group">
+                <div class="add-ref-dropdowns-container">
+                    <div class="add-ref-dropdowns-row">
+                        <div class="add-ref-dropdown-group">
+                            <label class="add-ref-dropdown-label">Book</label>
+                            <select class="add-ref-dropdown-select" id="add-ref-book-select">
+                                <option value="">Select Book</option>
+                            </select>
+                        </div>
+                        <div class="add-ref-dropdown-group">
+                            <label class="add-ref-dropdown-label">Chapter</label>
+                            <select class="add-ref-dropdown-select" id="add-ref-chapter-select" disabled>
+                                <option value="">Select Chapter</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add-ref-verses-row">
+                        <div class="add-ref-dropdown-group">
+                            <label class="add-ref-dropdown-label">Verses</label>
+                            <select class="add-ref-dropdown-select" id="add-ref-verses-select" multiple disabled>
+                                <option value="" disabled>Select Verse</option>
+                            </select>
+                        </div>
+                        <button class="add-ref-add-verse-btn" id="add-ref-add-verse-btn" type="button" disabled>Add Verse</button>
+                    </div>
+                </div>
+                <div class="add-ref-verses-chips" id="add-ref-verses-chips"></div>
+            </div>
+        </div>
+        <div class="add-ref-sheet-buttons">
+            <button class="add-ref-btn add-ref-btn-cancel" id="add-ref-btn-cancel">Cancel</button>
+            <button class="add-ref-btn add-ref-btn-save" id="add-ref-btn-save">Save</button>
         </div>
     </div>
 
@@ -967,7 +1019,7 @@
     <script src="src/bible-data-manager.js?cb=20251126003722"></script>
     <script src="src/voice-command.js?cb=20251126003722"></script>
     <script src="src/data/verse-headers.js?cb=20251126003722"></script>
-    <script src="src/script.js?cb=20251210004000"></script>
+    <script src="src/script.js?cb=20251210006000"></script>
     <script>
         // Mobile search button handler
         document.addEventListener('DOMContentLoaded', () => {
