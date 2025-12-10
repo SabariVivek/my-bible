@@ -2923,7 +2923,7 @@ function initializeTheme() {
             // Update theme color meta tag
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', theme === 'dark' ? '#202124' : '#ffffff');
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
             }
             return;
         }
@@ -2935,7 +2935,7 @@ function initializeTheme() {
             // Update theme color meta tag
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', theme === 'dark' ? '#202124' : '#ffffff');
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
             }
         });
         // Wait for transition to be ready
