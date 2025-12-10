@@ -355,7 +355,7 @@ body.dark-theme .book-loader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 1.5rem;
+    padding: 0 1.5rem 0.75rem 1.5rem;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -2027,7 +2027,7 @@ body.dark-theme .jesus-name {
     left: 350px; /* Books sidebar (190px) + Chapters (80px) + Verses (80px) */
     right: 0;
     height: 3.75rem;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     border-top: 2px solid #d0d0d0;
     display: flex;
     align-items: center;
@@ -3288,7 +3288,7 @@ body.dark-theme .english-text.red {
 }
 
 body.dark-theme .bottom-nav {
-    background-color: #292a2d;
+    background-color: #1e1f22;
     border-top: 1px solid #3a3a3a;
 }
 
