@@ -287,9 +287,13 @@
             </div>
             <div class="note-viewer-header">
                 <span class="note-viewer-ref" id="note-viewer-ref"></span>
-                <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit Note">
-                    Edit
-                </button>
+                
+                <!-- Segmented Control in Header -->
+                <div class="note-viewer-tabs">
+                    <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')">Note</button>
+                    <button class="note-viewer-tab" data-tab="references" onclick="switchNoteViewerTab('references')" style="display: none;">Ref</button>
+                </div>
+                
                 <button class="note-viewer-close-btn" id="note-viewer-close-btn" title="Close">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -297,7 +301,34 @@
                     </svg>
                 </button>
             </div>
-            <div class="note-viewer-content" id="note-viewer-content"></div>
+            
+            <!-- Tab Content -->
+            <div class="note-viewer-tab-content active" id="note-tab-content">
+                <div class="note-viewer-section">
+                    <div class="note-viewer-content" id="note-viewer-content"></div>
+                </div>
+                <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit Note">
+                    Edit
+                </button>
+            </div>
+            
+            <div class="note-viewer-tab-content" id="references-tab-content">
+                <div class="note-viewer-ref-lang-wrapper">
+                    <div class="note-viewer-ref-lang-buttons">
+                        <button class="note-viewer-ref-lang-btn active" data-lang="tamil" onclick="switchNoteRefLanguage('tamil')">Tamil</button>
+                        <button class="note-viewer-ref-lang-btn" data-lang="english" onclick="switchNoteRefLanguage('english')">English</button>
+                        <button class="note-viewer-ref-lang-btn" data-lang="dual" onclick="switchNoteRefLanguage('dual')">Both</button>
+                    </div>
+                    <button class="note-viewer-add-ref-icon-btn" title="Add Reference" onclick="showAddReferenceDialog()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="note-viewer-references-content" id="note-viewer-references-content"></div>
+            </div>
+            
             <div class="note-viewer-footer">
             </div>
         </div>
@@ -901,6 +932,28 @@
         </div>
     </div>
 
+    <!-- Cross Reference Bottom Sheet -->
+    <div class="cross-ref-sheet-overlay" id="cross-ref-sheet-overlay"></div>
+    <div class="cross-ref-detail-sheet" id="cross-ref-detail-sheet">
+        <div class="cross-ref-sheet-handle"></div>
+        <div class="cross-ref-sheet-header detail-header" id="cross-ref-detail-header">
+            <h2 class="cross-ref-sheet-title">Cross References</h2>
+            <button class="cross-ref-detail-close-btn" id="cross-ref-detail-close-btn" aria-label="Close">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+        
+        <div class="cross-ref-language-buttons">
+            <button class="cross-ref-lang-btn" data-lang="tamil" onclick="switchCrossRefLanguage('tamil')">Tamil</button>
+            <button class="cross-ref-lang-btn active" data-lang="english" onclick="switchCrossRefLanguage('english')">English</button>
+            <button class="cross-ref-lang-btn" data-lang="dual" onclick="switchCrossRefLanguage('dual')">Both</button>
+        </div>
+        
+        <div class="cross-ref-sheet-content" id="cross-ref-detail-content"></div>
+    </div>
+
     <!-- Bundled Bible Data (loads all books) -->
     <script src="data/bible/bible-data-loader.js?cb=20251126003722"></script>
     
@@ -914,7 +967,7 @@
     <script src="src/bible-data-manager.js?cb=20251126003722"></script>
     <script src="src/voice-command.js?cb=20251126003722"></script>
     <script src="src/data/verse-headers.js?cb=20251126003722"></script>
-    <script src="src/script.js?cb=20251126003722"></script>
+    <script src="src/script.js?cb=20251210003000"></script>
     <script>
         // Mobile search button handler
         document.addEventListener('DOMContentLoaded', () => {

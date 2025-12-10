@@ -83,6 +83,12 @@ let currentNoteVerse = null;
 let currentNoteColor = null;
 let githubNotesLoaded = false;
 let notesSha = null; // Required for updating GitHub file
+
+// Cross References - Format: "Book Chapter:Verse": ["Reference 1", "Reference 2"]
+const crossReferences = {
+    "Matthew 1:1": ["Genesis 12:3", "2 Samuel 7:12–16"]
+    // Add more cross-references as needed
+};
 // Helper function to normalize book names for comparison
 function normalizeBookName(bookName) {
     if (!bookName || typeof bookName !== 'string') return '';
@@ -1244,10 +1250,20 @@ function displayChapter() {
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
+            
+            // Check for cross-references
+            const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+            const crossRefs = crossReferences[crossRefKey];
+            if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
+                console.log('Cross-ref debug (both mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+            }
+            const hasCrossRef = crossRefs && crossRefs.length > 0;
+            const crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
+            
             html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
                     <sup class="v-num">${verseNum}</sup><span class="tamil-text">${tamilText}</span><br>
-                    <span class="english-text ${englishTextColor}">${englishText}</span>
+                    <span class="english-text ${englishTextColor}">${englishText}</span>${crossRefIcon}
                 </p>
             </div>`;
         });
@@ -1270,8 +1286,18 @@ function displayChapter() {
             const tooltip = isMemVerse ? ' title="Memory Verse"' : '';
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
+            
+            // Check for cross-references
+            const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+            const crossRefs = crossReferences[crossRefKey];
+            if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
+                console.log('Cross-ref debug (single mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+            }
+            const hasCrossRef = crossRefs && crossRefs.length > 0;
+            const crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
+            
             html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
-                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}</p>
+                <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}${crossRefIcon}</p>
             </div>`;
         });
     }
@@ -1293,6 +1319,11 @@ function displayChapter() {
         let tapCount = 0;
         
         verseLine.addEventListener('click', (e) => {
+            // Skip verse actions if clicking cross-ref icon
+            if (e.target.classList.contains('cross-ref-icon')) {
+                return;
+            }
+            
             e.stopPropagation();
             tapCount++;
             
@@ -1429,6 +1460,10 @@ function displayChapter() {
     
     // Apply note displays to verses
     applyAllNoteDisplays();
+    
+    // Initialize swipe gestures for cross-references
+    initializeCrossReferenceSwipe();
+    
     // Update mobile chapter header
     updateMobileChapterHeader();
     // Update navigation text
@@ -1459,6 +1494,17 @@ function displayChapter() {
     initializePinnedVerses();
     updatePinButtonBar();
 }
+
+// Initialize cross-reference display with click handler
+let noteRefCurrentLang = 'tamil';
+
+function initializeCrossReferenceSwipe() {
+    // Cross-reference icons are now just visual indicators
+    // References are accessed through the note viewer's Ref tab
+    const crossRefIcons = document.querySelectorAll('.cross-ref-icon');
+    console.log('Cross-reference icons found (visual only):', crossRefIcons.length);
+}
+
 // Update mobile chapter header
 function updateMobileChapterHeader() {
     const mobileHeader = document.getElementById('mobile-chapter-header');
@@ -6140,11 +6186,29 @@ function showNoteViewer(verseNum, note) {
     const ref = document.getElementById('note-viewer-ref');
     const content = document.getElementById('note-viewer-content');
     const modal = document.querySelector('.note-viewer-modal');
+    const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
     
     if (!popup) return;
     
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
     content.innerHTML = note.text;
+    
+    // Check if this verse has cross-references
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+    const crossRefs = crossReferences[crossRefKey];
+    
+    // Show/hide References tab based on cross-references existence
+    if (refTab) {
+        if (crossRefs && crossRefs.length > 0) {
+            refTab.style.display = 'block';
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
+            // Make sure Note tab is active
+            switchNoteViewerTab('note');
+        } else {
+            refTab.style.display = 'none';
+        }
+    }
     
     // Reset modal transform
     if (modal) {
@@ -6195,6 +6259,7 @@ function isAdmin() {
 }
 function updateAdminUI() {
     const editButtons = document.querySelectorAll('.note-viewer-edit-btn');
+    const addRefButton = document.getElementById('note-viewer-add-ref-btn');
     const isAdminMode = isAdmin();
     const adminToggle = document.getElementById('admin-toggle');
     const adminCheck = adminToggle?.querySelector('.admin-check');
@@ -6213,6 +6278,11 @@ function updateAdminUI() {
     editButtons.forEach(btn => {
         btn.style.display = isAdminMode ? 'flex' : 'none';
     });
+    
+    // Show/hide Add Reference button for admin
+    if (addRefButton) {
+        addRefButton.style.display = isAdminMode ? 'flex' : 'none';
+    }
     // Update voice button visibility
     if (voiceBtn) {
         voiceBtn.style.display = isAdminMode ? 'flex' : 'none';
@@ -9207,5 +9277,297 @@ function showPinnedVersesBottomSheet() {
         });
     });
 }
+
+// Cross Reference in Note Viewer Tab Functions
+function openNoteViewerWithReferences(verseNum, crossRefs) {
+    console.log('openNoteViewerWithReferences called:', { verseNum, crossRefs });
+    
+    const overlay = document.getElementById('note-viewer-popup');
+    const refElement = document.getElementById('note-viewer-ref');
+    const editBtn = document.getElementById('note-viewer-edit-btn');
+    const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+    
+    console.log('Elements found:', { overlay: !!overlay, refElement: !!refElement, refTab: !!refTab });
+    
+    if (!overlay || !refElement) {
+        console.error('Missing overlay or refElement');
+        return;
+    }
+    
+    // Update verse reference
+    const bookName = bibleBooks[currentBook].name;
+    refElement.textContent = `${bookName} ${currentChapter}:${verseNum}`;
+    
+    // Hide edit button (no note to edit)
+    if (editBtn) editBtn.style.display = 'none';
+    
+    // Show references tab
+    if (refTab) {
+        refTab.style.display = 'block';
+        console.log('References tab shown');
+    }
+    
+    // Switch to references tab
+    switchNoteViewerTab('references');
+    
+    // Ensure language button states match current language
+    document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
+    });
+    
+    // Store current refs for language switching
+    window.currentNoteRefs = { refs: crossRefs, verseNum };
+    
+    // Load references
+    console.log('About to load references with noteRefCurrentLang:', noteRefCurrentLang);
+    loadNoteReferences(crossRefs);
+    
+    // Show modal
+    overlay.style.display = 'flex';
+    setTimeout(() => overlay.classList.add('show'), 10);
+}
+
+function switchNoteViewerTab(tabName) {
+    // Update tab buttons
+    document.querySelectorAll('.note-viewer-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.tab === tabName);
+    });
+    
+    // Update tab content
+    document.querySelectorAll('.note-viewer-tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === `${tabName}-tab-content`);
+    });
+    
+    // Load references when switching to references tab
+    if (tabName === 'references' && window.currentNoteRefs) {
+        // Ensure language button states match current language
+        document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
+        });
+        
+        // Load references with current language
+        console.log('Loading references on tab switch with lang:', noteRefCurrentLang);
+        loadNoteReferences(window.currentNoteRefs.refs);
+    }
+}
+
+function switchNoteRefLanguage(lang) {
+    noteRefCurrentLang = lang;
+    
+    // Update button states
+    document.querySelectorAll('.note-viewer-ref-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // Reload references with new language
+    if (window.currentNoteRefs) {
+        loadNoteReferences(window.currentNoteRefs.refs);
+    }
+}
+
+function showAddReferenceDialog() {
+    // Placeholder function for adding references
+    // This will allow users to add cross-references to verses
+    alert('Add Reference feature coming soon! This will allow you to add cross-references to the current verse.');
+}
+
+async function loadNoteReferences(crossRefs) {
+    console.log('loadNoteReferences called with:', crossRefs);
+    
+    const content = document.getElementById('note-viewer-references-content');
+    if (!content) {
+        console.error('note-viewer-references-content not found');
+        return;
+    }
+    
+    content.innerHTML = '<div class="note-ref-loader"><div class="note-ref-loader-spinner"></div></div>';
+    
+    let allHtml = '';
+    
+    for (const ref of crossRefs) {
+        console.log('Processing reference:', ref);
+        const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
+        if (!match) {
+            console.warn('Reference did not match pattern:', ref);
+            continue;
+        }
+        
+        const [, bookName, chapter, verseStart, verseEnd] = match;
+        console.log('Parsed reference:', { bookName, chapter, verseStart, verseEnd });
+        
+        // Normalize book name to handle both Roman and Arabic numerals
+        const normalizedName = bookName
+            .replace(/^1\s+/, 'I ')
+            .replace(/^2\s+/, 'II ')
+            .replace(/^3\s+/, 'III ');
+        
+        const book = bibleBooks.find(b => 
+            b.name === bookName || 
+            b.shortName === bookName || 
+            b.name === normalizedName ||
+            b.shortName === normalizedName
+        );
+        if (!book) {
+            console.warn('Book not found:', bookName, 'Tried:', normalizedName);
+            continue;
+        }
+        
+        let bookFile = book.file;
+        
+        // Convert Roman numeral book files to Arabic for database lookup
+        // ii_samuel -> 2-samuel, i_samuel -> 1-samuel, etc.
+        const bookFileAlternatives = [
+            bookFile,
+            bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-'),
+            bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
+        ];
+        
+        const startVerse = parseInt(verseStart);
+        const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
+        console.log('Fetching verses:', { bookFile, alternatives: bookFileAlternatives, chapter, startVerse, endVerse, lang: noteRefCurrentLang });
+        
+        let englishData = null;
+        let tamilDataForDual = null;
+        
+        try {
+            if (noteRefCurrentLang === 'english' || noteRefCurrentLang === 'dual') {
+                // Try all book file alternatives until we find data
+                for (const fileVariant of bookFileAlternatives) {
+                    const { data, error } = await bibleDataManager.supabaseClient
+                        .from('bible_verses')
+                        .select('verse, text')
+                        .eq('book_file', fileVariant)
+                        .eq('chapter', parseInt(chapter))
+                        .eq('language', 'english')
+                        .gte('verse', startVerse)
+                        .lte('verse', endVerse)
+                        .order('verse', { ascending: true });
+                    
+                    if (data && data.length > 0) {
+                        englishData = data;
+                        bookFile = fileVariant; // Use the working variant for Tamil query
+                        console.log('English query success with:', { fileVariant, data });
+                        break;
+                    }
+                }
+                
+                console.log('English query result:', { bookFile, chapter, englishData });
+                
+                if (englishData && englishData.length > 0) {
+                    const englishText = englishData.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
+                    
+                    if (noteRefCurrentLang === 'dual') {
+                        // Try all book file alternatives for Tamil data too
+                        let tamilData = null;
+                        for (const fileVariant of bookFileAlternatives) {
+                            const { data } = await bibleDataManager.supabaseClient
+                                .from('bible_verses')
+                                .select('verse, text')
+                                .eq('book_file', fileVariant)
+                                .eq('chapter', parseInt(chapter))
+                                .eq('language', 'tamil')
+                                .gte('verse', startVerse)
+                                .lte('verse', endVerse)
+                                .order('verse', { ascending: true });
+                            
+                            if (data && data.length > 0) {
+                                tamilData = data;
+                                console.log('Tamil query success with:', { fileVariant, data });
+                                break;
+                            }
+                        }
+                        
+                        const tamilText = tamilData && tamilData.length > 0 ? 
+                            tamilData.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
+                        
+                        allHtml += `
+                            <div class="note-ref-item">
+                                <div class="note-ref-title">${ref}</div>
+                                <div class="note-ref-text">
+                                    <span class="tamil-text">${tamilText}</span>
+                                    <span class="english-text">${englishText}</span>
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        allHtml += `
+                            <div class="note-ref-item">
+                                <div class="note-ref-title">${ref}</div>
+                                <div class="note-ref-text">${englishText}</div>
+                            </div>
+                        `;
+                    }
+                }
+            } else if (noteRefCurrentLang === 'tamil') {
+                console.log('Tamil mode activated, current lang:', noteRefCurrentLang);
+                // Try all book file alternatives until we find data
+                let tamilData = null;
+                for (const fileVariant of bookFileAlternatives) {
+                    console.log('Trying Tamil with file variant:', fileVariant);
+                    const { data, error } = await bibleDataManager.supabaseClient
+                        .from('bible_verses')
+                        .select('verse, text')
+                        .eq('book_file', fileVariant)
+                        .eq('chapter', parseInt(chapter))
+                        .eq('language', 'tamil')
+                        .gte('verse', startVerse)
+                        .lte('verse', endVerse)
+                        .order('verse', { ascending: true });
+                    
+                    console.log('Tamil query result:', { fileVariant, dataLength: data?.length, error });
+                    
+                    if (data && data.length > 0) {
+                        tamilData = data;
+                        bookFile = fileVariant;
+                        console.log('Tamil data found:', data);
+                        break;
+                    }
+                }
+                
+                if (tamilData && tamilData.length > 0) {
+                    const tamilText = tamilData.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
+                    allHtml += `
+                        <div class="note-ref-item">
+                            <div class="note-ref-title">${ref}</div>
+                            <div class="note-ref-text">${tamilText}</div>
+                        </div>
+                    `;
+                }
+            }
+        } catch (error) {
+            console.error('Error loading reference:', ref, error);
+        }
+    }
+    
+    console.log('Final HTML length:', allHtml.length);
+    content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
+}
+
+function navigateToRef(bookFile, chapter, verse) {
+    // Find book index
+    const bookIndex = bibleBooks.findIndex(b => b.file === bookFile);
+    if (bookIndex === -1) return;
+    
+    // Close note viewer
+    const overlay = document.getElementById('note-viewer-popup');
+    if (overlay) {
+        overlay.classList.remove('show');
+        setTimeout(() => overlay.style.display = 'none', 300);
+    }
+    
+    // Navigate to the verse
+    currentBook = bookIndex;
+    currentChapter = chapter;
+    loadChapterData();
+    
+    // Scroll to verse after a short delay
+    setTimeout(() => {
+        scrollToVerse(verse);
+    }, 300);
+}
+
+
+
+
 
 
