@@ -77,12 +77,17 @@ let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
 let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
 let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
+// Preloaded verse data cache for references
+let verseDataCache = {};
+// Cache for rendered references (key: reference string, value: {english, tamil, dual} objects)
+let renderedReferencesCache = {};
 // Notes storage
 let verseNotes = {};
 let currentNoteVerse = null;
 let currentNoteColor = null;
 let githubNotesLoaded = false;
 let notesSha = null; // Required for updating GitHub file
+let referencesLoadedInViewer = false; // Track if references have been loaded in current note viewer session
 
 // Cross References - Format: "Book Chapter:Verse": ["Reference 1", "Reference 2"]
 const crossReferences = {
@@ -956,6 +961,12 @@ async function updateUI() {
     displayChapter();
     applyAllNoteDisplays();
     updateDrawerContent();
+    
+    // Preload notes and references for current chapter in background
+    preloadChapterNotesAndReferences();
+    
+    // Preload all referenced verse data in background (so references display instantly when clicked)
+    preloadReferencedVerseData();
 }
 // Update book selection
 function updateBookSelection() {
@@ -6218,6 +6229,173 @@ function applyAllNoteDisplays() {
         }
     });
 }
+
+// Preload all notes and references for current chapter from Supabase
+async function preloadChapterNotesAndReferences() {
+    try {
+        const book = bibleBooks[currentBook];
+        const bookFile = book.file;
+        
+        // Fetch all notes/references for this book and chapter from Supabase
+        const { data, error } = await bibleDataManager.supabaseClient
+            .from('bible_verse_notes')
+            .select('*')
+            .eq('book_file', bookFile)
+            .eq('chapter', currentChapter);
+        
+        if (error) {
+            console.error('❌ Error preloading notes:', error);
+            return;
+        }
+        
+        if (data && data.length > 0) {
+            console.log(`📚 Preloaded ${data.length} notes/references for ${bookFile} chapter ${currentChapter}`);
+            
+            // Update verseNotes and crossReferences objects
+            data.forEach(note => {
+                const noteKey = `${bookFile}_${note.chapter}_${note.verse}`;
+                
+                // Update or create note entry
+                if (!verseNotes[noteKey]) {
+                    verseNotes[noteKey] = {};
+                }
+                
+                // Store note text if exists
+                if (note.text) {
+                    verseNotes[noteKey].text = note.text;
+                    verseNotes[noteKey].chapter = note.chapter;
+                    verseNotes[noteKey].verse = note.verse;
+                }
+                
+                // Store cross-references if exist
+                if (note.cross_references && note.cross_references.length > 0) {
+                    const crossRefKey = `${book.name} ${note.chapter}:${note.verse}`;
+                    crossReferences[crossRefKey] = note.cross_references;
+                    console.log(`📖 Loaded ${note.cross_references.length} references for ${crossRefKey}`);
+                }
+            });
+            
+            // Refresh note displays with newly loaded data
+            applyAllNoteDisplays();
+        }
+    }
+    catch (error) {
+        console.error('❌ Error preloading chapter notes and references:', error);
+    }
+}
+
+// Preload all referenced verse data for the current chapter (background task)
+async function preloadReferencedVerseData() {
+    try {
+        // Collect all unique references from current chapter
+        const book = bibleBooks[currentBook];
+        const bookFile = book.file;
+        const allReferencesToPreload = new Set();
+        
+        // Go through all cross-references in current chapter
+        for (const [crossRefKey, references] of Object.entries(crossReferences)) {
+            // Only process references from current chapter (format: "BookName Chapter:Verse")
+            const matches = crossRefKey.match(/^(.+?)\s+(\d+):(\d+)$/);
+            if (matches) {
+                const refBook = matches[1];
+                const refChapter = parseInt(matches[2]);
+                const refVerse = parseInt(matches[3]);
+                
+                // Check if this reference is from current chapter
+                if (refBook === book.name) {
+                    if (references && Array.isArray(references)) {
+                        references.forEach(ref => {
+                            allReferencesToPreload.add(ref);
+                        });
+                    }
+                }
+            }
+        }
+        
+        if (allReferencesToPreload.size === 0) {
+            console.log('📚 No references to preload for current chapter');
+            return;
+        }
+        
+        console.log(`🔄 Starting to preload ${allReferencesToPreload.size} referenced verses...`);
+        
+        // For each reference, preload both English and Tamil verse data
+        for (const reference of allReferencesToPreload) {
+            const parsed = parseReference(reference);
+            if (!parsed) continue;
+            
+            const { bookName, chapter, startVerse, endVerse } = parsed;
+            const bookMeta = bibleBooks.find(b => b.name === bookName);
+            
+            if (!bookMeta) {
+                console.log(`⚠️ Book not found: ${bookName}`);
+                continue;
+            }
+            
+            // Preload English verse data
+            await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'english');
+            
+            // Preload Tamil verse data
+            await preloadVerseDataForLanguage(bookMeta.file, chapter, startVerse, endVerse, 'tamil');
+        }
+        
+        console.log('✅ Finished preloading referenced verse data');
+    } catch (error) {
+        console.error('❌ Error preloading referenced verse data:', error);
+    }
+}
+
+// Helper function to preload verse data for a specific language
+async function preloadVerseDataForLanguage(bookFile, chapter, startVerse, endVerse, language) {
+    try {
+        // Try multiple book file alternatives
+        const bookFileAlternatives = [
+            bookFile,
+            bookFile.replace('-', '_'),
+            bookFile.replace('_', '-')
+        ];
+        
+        for (const fileVariant of bookFileAlternatives) {
+            const { data } = await bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('verse, text')
+                .eq('book_file', fileVariant)
+                .eq('chapter', parseInt(chapter))
+                .eq('language', language)
+                .gte('verse', startVerse)
+                .lte('verse', endVerse);
+            
+            if (data && data.length > 0) {
+                // Store in cache object based on language
+                const cacheKey = `${fileVariant}_${chapter}_${language}`;
+                verseDataCache[cacheKey] = data;
+                console.log(`📦 Preloaded ${data.length} ${language} verses for ${fileVariant} ${chapter}:${startVerse}-${endVerse}`);
+                return;
+            }
+        }
+    } catch (error) {
+        console.log(`⚠️ Could not preload ${language} verses for ${bookFile} ${chapter}:${startVerse}-${endVerse}`);
+    }
+}
+
+// Helper function to parse reference strings like "Genesis 12:3" or "Exodus 2:23-24"
+function parseReference(reference) {
+    try {
+        const match = reference.match(/^(.+?)\s+(\d+):(\d+)(?:-(\d+))?$/);
+        if (!match) return null;
+        
+        const bookName = match[1];
+        const chapter = parseInt(match[2]);
+        const startVerse = parseInt(match[3]);
+        const endVerse = match[4] ? parseInt(match[4]) : startVerse;
+        
+        return { bookName, chapter, startVerse, endVerse };
+    } catch (error) {
+        console.error('Error parsing reference:', reference, error);
+        return null;
+    }
+}
+
 // Show note viewer for a verse if it has a note
 function showNoteViewerIfExists(verseNum) {
     const noteKey = `${bibleBooks[currentBook].file}_${currentChapter}_${verseNum}`;
@@ -6254,21 +6432,43 @@ function showNoteViewer(verseNum, note) {
     
     // Handle tab visibility based on admin mode and content
     if (isAdminMode) {
-        // Admin mode: Always show both tabs
-        if (noteTab) noteTab.style.display = 'block';
-        if (refTab) refTab.style.display = 'block';
-        if (tabsContainer) tabsContainer.style.display = 'flex';
-        if (singleTitle) singleTitle.style.display = 'none';
-        
-        if (hasRefs) {
+        // Admin mode: Always show both tabs UNLESS there's only references and no note
+        if (hasNote && hasRefs) {
+            // Both note and references - show both tabs
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
             window.currentNoteRefs = { refs: crossRefs, verseNum };
-        }
-        
-        // Switch to note tab by default, or references if no note but has refs
-        if (hasNote || !hasRefs) {
+            switchNoteViewerTab('note');
+        } else if (hasRefs && !hasNote) {
+            // Only references - hide tabs, show title "References"
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.textContent = 'References';
+                singleTitle.style.display = 'block';
+            }
+            window.currentNoteRefs = { refs: crossRefs, verseNum };
+            switchNoteViewerTab('references');
+        } else if (hasNote && !hasRefs) {
+            // Only note - hide tabs, show title "Note"
+            if (noteTab) noteTab.style.display = 'none';
+            if (refTab) refTab.style.display = 'none';
+            if (tabsContainer) tabsContainer.style.display = 'none';
+            if (singleTitle) {
+                singleTitle.textContent = 'Note';
+                singleTitle.style.display = 'block';
+            }
             switchNoteViewerTab('note');
         } else {
-            switchNoteViewerTab('references');
+            // No content - shouldn't happen in admin mode when opening
+            if (noteTab) noteTab.style.display = 'block';
+            if (refTab) refTab.style.display = 'block';
+            if (tabsContainer) tabsContainer.style.display = 'flex';
+            if (singleTitle) singleTitle.style.display = 'none';
+            switchNoteViewerTab('note');
         }
     } else {
         // Non-admin mode: Show tabs based on content
@@ -6361,6 +6561,8 @@ function hideNoteViewer() {
         if (modal) {
             modal.style.transform = '';
         }
+        // Reset flag so next note viewer shows loader on first references load
+        referencesLoadedInViewer = false;
     }, 300);
 }
 // Admin Mode Functions
@@ -9461,9 +9663,11 @@ function switchNoteViewerTab(tabName) {
             btn.classList.toggle('active', btn.dataset.lang === noteRefCurrentLang);
         });
         
-        // Load references with current language
-        console.log('Loading references on tab switch with lang:', noteRefCurrentLang);
-        loadNoteReferences(window.currentNoteRefs.refs);
+        // Show loader on first load, not on subsequent tab switches
+        const showLoader = !referencesLoadedInViewer;
+        console.log('Loading references on tab switch with lang:', noteRefCurrentLang, 'showLoader:', showLoader);
+        loadNoteReferences(window.currentNoteRefs.refs, showLoader);
+        referencesLoadedInViewer = true; // Mark as loaded after first time
     }
 }
 
@@ -9475,9 +9679,22 @@ function switchNoteRefLanguage(lang) {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
     
-    // Reload references with new language
+    // Re-render from cache without fetching or showing loader
     if (window.currentNoteRefs) {
-        loadNoteReferences(window.currentNoteRefs.refs);
+        const content = document.getElementById('note-viewer-references-content');
+        if (!content) return;
+        
+        const cacheKey = JSON.stringify(window.currentNoteRefs.refs.sort());
+        if (renderedReferencesCache[cacheKey]) {
+            console.log('🎨 Re-rendering references in', lang, 'mode from cache');
+            const allHtml = window.currentNoteRefs.refs.map(ref => 
+                renderReference(renderedReferencesCache[cacheKey][ref], lang)
+            ).join('');
+            content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
+        } else {
+            console.log('⚠️ Cache not found for language switch, reloading...');
+            loadNoteReferences(window.currentNoteRefs.refs, false);
+        }
     }
 }
 
@@ -9527,6 +9744,9 @@ function openAddRefSheet() {
     // Populate book dropdown
     populateRefBookDropdown();
     
+    // Show existing references
+    displayExistingReferences();
+    
     // Show overlay and sheet
     overlay.classList.add('active');
     sheet.classList.add('active');
@@ -9544,6 +9764,62 @@ function closeAddRefSheet() {
     // Reset state
     currentAddRefVerseNum = null;
     selectedRefVerses = [];
+}
+
+function displayExistingReferences() {
+    const existingRefsSection = document.getElementById('add-ref-existing-refs');
+    const existingList = document.getElementById('add-ref-existing-list');
+    
+    if (!existingRefsSection || !existingList) return;
+    
+    // Get current verse cross-reference key
+    const book = bibleBooks[currentBook];
+    const crossRefKey = `${book.name} ${currentChapter}:${currentAddRefVerseNum}`;
+    
+    const existingRefs = crossReferences[crossRefKey] || [];
+    
+    if (existingRefs.length === 0) {
+        existingRefsSection.classList.remove('active');
+        return;
+    }
+    
+    // Populate existing references list
+    existingList.innerHTML = existingRefs.map(ref => `
+        <div class="add-ref-existing-item">
+            <span class="add-ref-existing-text">${ref}</span>
+            <button class="add-ref-existing-remove" onclick="removeExistingReference('${ref.replace(/'/g, "\\'")}', '${crossRefKey.replace(/'/g, "\\'")}')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    `).join('');
+    
+    existingRefsSection.classList.add('active');
+}
+
+function removeExistingReference(ref, crossRefKey) {
+    console.log('Removing reference:', ref, 'from', crossRefKey);
+    
+    if (!crossReferences[crossRefKey]) return;
+    
+    // Remove from crossReferences object
+    crossReferences[crossRefKey] = crossReferences[crossRefKey].filter(r => r !== ref);
+    
+    // If no more references, delete the key
+    if (crossReferences[crossRefKey].length === 0) {
+        delete crossReferences[crossRefKey];
+    }
+    
+    // Save to Supabase
+    saveNote();
+    
+    // Refresh display
+    displayExistingReferences();
+    updateCrossRefDisplay(currentAddRefVerseNum);
+    
+    console.log('✅ Reference removed and saved');
 }
 
 function populateRefBookDropdown() {
@@ -9738,7 +10014,14 @@ function renderRefVersesChips() {
 }
 
 async function saveReference() {
-    if (selectedRefVerses.length === 0) {
+    const bookName = bibleBooks[currentBook].name;
+    const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
+    const currentRefs = crossReferences[crossRefKey] || [];
+    
+    // Allow save if:
+    // 1. User is adding new verse references, OR
+    // 2. References exist (user may have only deleted some)
+    if (selectedRefVerses.length === 0 && currentRefs.length === 0) {
         alert('Please add at least one verse reference.');
         return;
     }
@@ -9747,10 +10030,6 @@ async function saveReference() {
         alert('Unable to determine current verse.');
         return;
     }
-    
-    // Get current verse reference
-    const bookName = bibleBooks[currentBook].name;
-    const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
     
     console.log('🔍 saveReference - Saving for verse:', crossRefKey);
     console.log('🔍 saveReference - currentBook:', currentBook, 'currentChapter:', currentChapter, 'currentAddRefVerseNum:', currentAddRefVerseNum);
@@ -9943,7 +10222,179 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-async function loadNoteReferences(crossRefs) {
+// Fetch verse data for a single reference (used only on first load)
+async function fetchReferenceVerseData(ref) {
+    const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
+    if (!match) return null;
+    
+    const [, bookName, chapter, verseStart, verseEnd] = match;
+    const normalizedName = bookName
+        .replace(/^1\s+/, 'I ')
+        .replace(/^2\s+/, 'II ')
+        .replace(/^3\s+/, 'III ');
+    
+    const book = bibleBooks.find(b => 
+        b.name === bookName || 
+        b.shortName === bookName || 
+        b.name === normalizedName ||
+        b.shortName === normalizedName
+    );
+    
+    if (!book) return null;
+    
+    let bookFile = book.file;
+    const bookFileAlternatives = [
+        bookFile,
+        bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-'),
+        bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
+    ];
+    
+    const startVerse = parseInt(verseStart);
+    const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
+    
+    const data = { english: null, tamil: null };
+    
+    // Fetch English data
+    if (!data.english) {
+        if (currentBook === bibleBooks.findIndex(b => b.file === bookFile) && parseInt(chapter) === currentChapter && currentData) {
+            const chapterData = currentData[`chapter_${chapter}`];
+            if (chapterData) {
+                data.english = [];
+                for (let v = startVerse; v <= endVerse; v++) {
+                    if (chapterData[`verse_${v}`]) {
+                        data.english.push({ verse: v, text: chapterData[`verse_${v}`] });
+                    }
+                }
+            }
+        }
+    }
+    
+    if (!data.english) {
+        for (const fileVariant of bookFileAlternatives) {
+            const cacheKey = `${fileVariant}_${chapter}_english`;
+            if (verseDataCache[cacheKey]) {
+                data.english = verseDataCache[cacheKey];
+                bookFile = fileVariant;
+                break;
+            }
+        }
+    }
+    
+    if (!data.english) {
+        for (const fileVariant of bookFileAlternatives) {
+            const { data: result } = await bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('verse, text')
+                .eq('book_file', fileVariant)
+                .eq('chapter', parseInt(chapter))
+                .eq('language', 'english')
+                .gte('verse', startVerse)
+                .lte('verse', endVerse)
+                .order('verse', { ascending: true });
+            
+            if (result && result.length > 0) {
+                data.english = result;
+                bookFile = fileVariant;
+                break;
+            }
+        }
+    }
+    
+    // Fetch Tamil data
+    if (!data.tamil) {
+        if (currentBook === bibleBooks.findIndex(b => b.file === bookFile) && parseInt(chapter) === currentChapter && currentTamilData) {
+            const chapterData = currentTamilData[`chapter_${chapter}`];
+            if (chapterData) {
+                data.tamil = [];
+                for (let v = startVerse; v <= endVerse; v++) {
+                    if (chapterData[`verse_${v}`]) {
+                        data.tamil.push({ verse: v, text: chapterData[`verse_${v}`] });
+                    }
+                }
+            }
+        }
+    }
+    
+    if (!data.tamil) {
+        for (const fileVariant of bookFileAlternatives) {
+            const cacheKey = `${fileVariant}_${chapter}_tamil`;
+            if (verseDataCache[cacheKey]) {
+                data.tamil = verseDataCache[cacheKey];
+                break;
+            }
+        }
+    }
+    
+    if (!data.tamil) {
+        for (const fileVariant of bookFileAlternatives) {
+            const { data: result } = await bibleDataManager.supabaseClient
+                .from('bible_verses')
+                .select('verse, text')
+                .eq('book_file', fileVariant)
+                .eq('chapter', parseInt(chapter))
+                .eq('language', 'tamil')
+                .gte('verse', startVerse)
+                .lte('verse', endVerse)
+                .order('verse', { ascending: true });
+            
+            if (result && result.length > 0) {
+                data.tamil = result;
+                break;
+            }
+        }
+    }
+    
+    return { ref, data };
+}
+
+// Render a reference in a specific language using cached data
+function renderReference(cachedData, language) {
+    if (!cachedData || !cachedData.data) return '';
+    
+    const { ref, data } = cachedData;
+    
+    if (language === 'english') {
+        if (!data.english || data.english.length === 0) return '';
+        const englishText = data.english.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
+        return `
+            <div class="note-ref-item">
+                <div class="note-ref-title">${ref}</div>
+                <div class="note-ref-text">${englishText}</div>
+            </div>
+        `;
+    }
+    
+    if (language === 'tamil') {
+        if (!data.tamil || data.tamil.length === 0) return '';
+        const tamilText = data.tamil.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
+        return `
+            <div class="note-ref-item">
+                <div class="note-ref-title">${ref}</div>
+                <div class="note-ref-text">${tamilText}</div>
+            </div>
+        `;
+    }
+    
+    if (language === 'dual') {
+        if ((!data.english || data.english.length === 0) && (!data.tamil || data.tamil.length === 0)) return '';
+        const englishText = data.english?.length > 0 ? data.english.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
+        const tamilText = data.tamil?.length > 0 ? data.tamil.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
+        return `
+            <div class="note-ref-item">
+                <div class="note-ref-title">${ref}</div>
+                <div class="note-ref-text">
+                    <span class="tamil-text">${tamilText}</span>
+                    <span class="english-text">${englishText}</span>
+                </div>
+            </div>
+        `;
+    }
+    
+    return '';
+}
+
+// Main function: Load and cache references, then display in current language
+async function loadNoteReferences(crossRefs, showLoader = true) {
     console.log('loadNoteReferences called with:', crossRefs);
     
     const content = document.getElementById('note-viewer-references-content');
@@ -9952,167 +10403,42 @@ async function loadNoteReferences(crossRefs) {
         return;
     }
     
-    content.innerHTML = '<div class="note-ref-loader"><div class="note-ref-loader-spinner"></div></div>';
-    
-    let allHtml = '';
-    
-    for (const ref of crossRefs) {
-        console.log('Processing reference:', ref);
-        const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
-        if (!match) {
-            console.warn('Reference did not match pattern:', ref);
-            continue;
-        }
-        
-        const [, bookName, chapter, verseStart, verseEnd] = match;
-        console.log('Parsed reference:', { bookName, chapter, verseStart, verseEnd });
-        
-        // Normalize book name to handle both Roman and Arabic numerals
-        const normalizedName = bookName
-            .replace(/^1\s+/, 'I ')
-            .replace(/^2\s+/, 'II ')
-            .replace(/^3\s+/, 'III ');
-        
-        const book = bibleBooks.find(b => 
-            b.name === bookName || 
-            b.shortName === bookName || 
-            b.name === normalizedName ||
-            b.shortName === normalizedName
-        );
-        if (!book) {
-            console.warn('Book not found:', bookName, 'Tried:', normalizedName);
-            continue;
-        }
-        
-        let bookFile = book.file;
-        
-        // Convert Roman numeral book files to Arabic for database lookup
-        // ii_samuel -> 2-samuel, i_samuel -> 1-samuel, etc.
-        const bookFileAlternatives = [
-            bookFile,
-            bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-'),
-            bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
-        ];
-        
-        const startVerse = parseInt(verseStart);
-        const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
-        console.log('Fetching verses:', { bookFile, alternatives: bookFileAlternatives, chapter, startVerse, endVerse, lang: noteRefCurrentLang });
-        
-        let englishData = null;
-        let tamilDataForDual = null;
-        
-        try {
-            if (noteRefCurrentLang === 'english' || noteRefCurrentLang === 'dual') {
-                // Try all book file alternatives until we find data
-                for (const fileVariant of bookFileAlternatives) {
-                    const { data, error } = await bibleDataManager.supabaseClient
-                        .from('bible_verses')
-                        .select('verse, text')
-                        .eq('book_file', fileVariant)
-                        .eq('chapter', parseInt(chapter))
-                        .eq('language', 'english')
-                        .gte('verse', startVerse)
-                        .lte('verse', endVerse)
-                        .order('verse', { ascending: true });
-                    
-                    if (data && data.length > 0) {
-                        englishData = data;
-                        bookFile = fileVariant; // Use the working variant for Tamil query
-                        console.log('English query success with:', { fileVariant, data });
-                        break;
-                    }
-                }
-                
-                console.log('English query result:', { bookFile, chapter, englishData });
-                
-                if (englishData && englishData.length > 0) {
-                    const englishText = englishData.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
-                    
-                    if (noteRefCurrentLang === 'dual') {
-                        // Try all book file alternatives for Tamil data too
-                        let tamilData = null;
-                        for (const fileVariant of bookFileAlternatives) {
-                            const { data } = await bibleDataManager.supabaseClient
-                                .from('bible_verses')
-                                .select('verse, text')
-                                .eq('book_file', fileVariant)
-                                .eq('chapter', parseInt(chapter))
-                                .eq('language', 'tamil')
-                                .gte('verse', startVerse)
-                                .lte('verse', endVerse)
-                                .order('verse', { ascending: true });
-                            
-                            if (data && data.length > 0) {
-                                tamilData = data;
-                                console.log('Tamil query success with:', { fileVariant, data });
-                                break;
-                            }
-                        }
-                        
-                        const tamilText = tamilData && tamilData.length > 0 ? 
-                            tamilData.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>') : '';
-                        
-                        allHtml += `
-                            <div class="note-ref-item">
-                                <div class="note-ref-title">${ref}</div>
-                                <div class="note-ref-text">
-                                    <span class="tamil-text">${tamilText}</span>
-                                    <span class="english-text">${englishText}</span>
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        allHtml += `
-                            <div class="note-ref-item">
-                                <div class="note-ref-title">${ref}</div>
-                                <div class="note-ref-text">${englishText}</div>
-                            </div>
-                        `;
-                    }
-                }
-            } else if (noteRefCurrentLang === 'tamil') {
-                console.log('Tamil mode activated, current lang:', noteRefCurrentLang);
-                // Try all book file alternatives until we find data
-                let tamilData = null;
-                for (const fileVariant of bookFileAlternatives) {
-                    console.log('Trying Tamil with file variant:', fileVariant);
-                    const { data, error } = await bibleDataManager.supabaseClient
-                        .from('bible_verses')
-                        .select('verse, text')
-                        .eq('book_file', fileVariant)
-                        .eq('chapter', parseInt(chapter))
-                        .eq('language', 'tamil')
-                        .gte('verse', startVerse)
-                        .lte('verse', endVerse)
-                        .order('verse', { ascending: true });
-                    
-                    console.log('Tamil query result:', { fileVariant, dataLength: data?.length, error });
-                    
-                    if (data && data.length > 0) {
-                        tamilData = data;
-                        bookFile = fileVariant;
-                        console.log('Tamil data found:', data);
-                        break;
-                    }
-                }
-                
-                if (tamilData && tamilData.length > 0) {
-                    const tamilText = tamilData.map(v => `<sup>${v.verse}</sup>${v.text}`).join('<br><br>');
-                    allHtml += `
-                        <div class="note-ref-item">
-                            <div class="note-ref-title">${ref}</div>
-                            <div class="note-ref-text">${tamilText}</div>
-                        </div>
-                    `;
-                }
-            }
-        } catch (error) {
-            console.error('Error loading reference:', ref, error);
-        }
+    // Check if we already have cached data for these references
+    const cacheKey = JSON.stringify(crossRefs.sort());
+    if (renderedReferencesCache[cacheKey]) {
+        console.log('✅ Using cached rendered references');
+        const allHtml = crossRefs.map(ref => renderReference(renderedReferencesCache[cacheKey][ref], noteRefCurrentLang)).join('');
+        content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
+        return;
     }
     
-    console.log('Final HTML length:', allHtml.length);
+    // First load - fetch and cache all reference data
+    if (showLoader) {
+        content.innerHTML = '<div class="note-ref-loader"><div class="note-ref-loader-spinner"></div></div>';
+    }
+    
+    console.log('📥 First load - fetching reference data...');
+    
+    // Initialize cache for this reference set
+    if (!renderedReferencesCache[cacheKey]) {
+        renderedReferencesCache[cacheKey] = {};
+    }
+    
+    // Fetch data for all references in parallel
+    const fetchPromises = crossRefs.map(ref => fetchReferenceVerseData(ref));
+    const results = await Promise.all(fetchPromises);
+    
+    // Store all results in cache
+    results.forEach(result => {
+        if (result) {
+            renderedReferencesCache[cacheKey][result.ref] = result;
+        }
+    });
+    
+    // Now render with current language preference
+    const allHtml = crossRefs.map(ref => renderReference(renderedReferencesCache[cacheKey][ref], noteRefCurrentLang)).join('');
     content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
+    console.log('✅ References loaded and cached');
 }
 
 function navigateToRef(bookFile, chapter, verse) {

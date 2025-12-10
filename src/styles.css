@@ -90,7 +90,7 @@ body.dark-theme .verse-count-banner-container {
 /* Cross Reference Icon - Inline span for positioning at end of verse */
 .cross-ref-icon {
     display: inline-block;
-    font-size: 16px;
+    font-size: 12px;
     margin-left: 4px;
     vertical-align: middle;
     cursor: pointer;
@@ -4681,8 +4681,8 @@ body.dark-theme .notes-modal-content::-webkit-scrollbar-thumb:hover {
 .verse-line.has-note.has-text::after {
     content: '';
     display: inline-block;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     margin-left: 4px;
     background-image: url('../resources/icons/note.png');
     background-size: contain;
@@ -9498,7 +9498,7 @@ body.dark-theme .cross-ref-loader-spinner {
     background: #ffffff;
     border-radius: 16px 16px 0 0;
     z-index: 1202;
-    max-height: 70vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     transform: translateY(100%);
@@ -9592,6 +9592,81 @@ body.dark-theme .add-ref-close-btn:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.add-ref-existing-refs {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+body.dark-theme .add-ref-existing-refs {
+    border-bottom-color: #444;
+}
+
+.add-ref-existing-refs.active {
+    display: flex;
+}
+
+.add-ref-existing-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+body.dark-theme .add-ref-existing-label {
+    color: #aaa;
+}
+
+.add-ref-existing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.add-ref-existing-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+body.dark-theme .add-ref-existing-item {
+    background: #333;
+    color: #e0e0e0;
+}
+
+.add-ref-existing-text {
+    flex: 1;
+}
+
+.add-ref-existing-remove {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.add-ref-existing-remove:hover {
+    background: rgba(211, 47, 47, 0.1);
+}
+
+body.dark-theme .add-ref-existing-remove:hover {
+    background: rgba(211, 47, 47, 0.2);
 }
 
 .add-ref-input-group {
