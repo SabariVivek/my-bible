@@ -9472,10 +9472,12 @@ function showAddReferenceDialog() {
     if (!refElement) return;
     
     const refText = refElement.textContent; // e.g., "Matthew 1:1"
+    console.log('🔍 showAddReferenceDialog - refText:', refText);
     const match = refText.match(/(\d+):(\d+)/);
     if (!match) return;
     
     currentAddRefVerseNum = parseInt(match[2]);
+    console.log('🔍 showAddReferenceDialog - currentAddRefVerseNum:', currentAddRefVerseNum);
     selectedRefVerses = [];
     
     // Open bottom sheet
@@ -9729,6 +9731,10 @@ async function saveReference() {
     // Get current verse reference
     const bookName = bibleBooks[currentBook].name;
     const crossRefKey = `${bookName} ${currentChapter}:${currentAddRefVerseNum}`;
+    
+    console.log('🔍 saveReference - Saving for verse:', crossRefKey);
+    console.log('🔍 saveReference - currentBook:', currentBook, 'currentChapter:', currentChapter, 'currentAddRefVerseNum:', currentAddRefVerseNum);
+    console.log('🔍 saveReference - selectedRefVerses:', selectedRefVerses);
     
     // Add or update cross-reference
     if (!crossReferences[crossRefKey]) {
