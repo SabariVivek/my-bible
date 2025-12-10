@@ -6043,53 +6043,41 @@ async function saveNote() {
             verseNotes[noteKey].chapter = chapter;
             verseNotes[noteKey].verse = verse;
             
-            // Use upsert (insert or update) with on_conflict to handle both create and update
-            const upsertResponse = await fetch(
-                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
-                        'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
-                        'Content-Type': 'application/json',
-                        'Prefer': 'resolution=merge-duplicates'
-                    },
-                    body: JSON.stringify({
-                        book_file: bookFile,
-                        chapter: chapter,
-                        verse: verse,
-                        text: noteText,
-                        timestamp: new Date().toISOString(),
-                        updated_at: new Date().toISOString()
-                    })
-                }
-            );
+            // Use Supabase client's upsert method
+            const { data, error } = await bibleDataManager.supabaseClient
+                .from('bible_verse_notes')
+                .upsert({
+                    book_file: bookFile,
+                    chapter: chapter,
+                    verse: verse,
+                    text: noteText,
+                    updated_at: new Date().toISOString()
+                }, {
+                    onConflict: 'book_file,chapter,verse'
+                });
             
-            console.log('UPSERT Response:', { status: upsertResponse.status, ok: upsertResponse.ok });
-            
-            if (upsertResponse.ok || upsertResponse.status === 201) {
-                console.log('✅ Note saved:', `${bookFile} ${chapter}:${verse}`);
+            if (error) {
+                console.error('❌ Failed to save note:', error);
             } else {
-                const error = await upsertResponse.text();
-                console.error('❌ Failed to save note:', error, upsertResponse.status);
+                console.log('✅ Note saved:', `${bookFile} ${chapter}:${verse}`);
             }
         } else {
             // Delete note if text is empty
             console.log('🗑️ Deleting note (empty text)');
             delete verseNotes[noteKey];
             
-            const deleteResponse = await fetch(
-                `${SUPABASE_VERSE_NOTES_CONFIG.url}/rest/v1/${SUPABASE_VERSE_NOTES_CONFIG.tableName}?book_file=eq.${bookFile}&chapter=eq.${chapter}&verse=eq.${verse}`,
-                {
-                    method: 'DELETE',
-                    headers: {
-                        'apikey': SUPABASE_VERSE_NOTES_CONFIG.anonKey,
-                        'Authorization': `Bearer ${SUPABASE_VERSE_NOTES_CONFIG.anonKey}`,
-                        'Content-Type': 'application/json'
-                    }
-                }
-            );
-            console.log('✅ Note deleted:', `${bookFile} ${chapter}:${verse}`);
+            const { error } = await bibleDataManager.supabaseClient
+                .from('bible_verse_notes')
+                .delete()
+                .eq('book_file', bookFile)
+                .eq('chapter', chapter)
+                .eq('verse', verse);
+            
+            if (error) {
+                console.error('❌ Failed to delete note:', error);
+            } else {
+                console.log('✅ Note deleted:', `${bookFile} ${chapter}:${verse}`);
+            }
         }
         
         updateVerseNoteDisplay(currentNoteVerse);
