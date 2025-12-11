@@ -1591,6 +1591,7 @@ body.dark-theme .right-sidebar:hover::-webkit-scrollbar-thumb {
     background-color: #fefefe;
     position: relative;
     transition: margin-right 0.3s ease, padding-top 0.3s ease;
+    scroll-padding-top: 150px;
 }
 
 /* No padding adjustment needed for right-side bookmark */
