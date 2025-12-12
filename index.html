@@ -313,30 +313,32 @@
             </div>
             
             <!-- Tab Content -->
-            <div class="note-viewer-tab-content active" id="note-tab-content">
-                <div class="note-viewer-section">
-                    <div class="note-viewer-content" id="note-viewer-content"></div>
-                </div>
-                <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit Note">
-                    Edit
-                </button>
-            </div>
-            
-            <div class="note-viewer-tab-content" id="references-tab-content">
-                <div class="note-viewer-ref-lang-wrapper">
-                    <div class="note-viewer-ref-lang-buttons">
-                        <button class="note-viewer-ref-lang-btn active" data-lang="tamil" onclick="switchNoteRefLanguage('tamil')">Tamil</button>
-                        <button class="note-viewer-ref-lang-btn" data-lang="english" onclick="switchNoteRefLanguage('english')">English</button>
-                        <button class="note-viewer-ref-lang-btn" data-lang="dual" onclick="switchNoteRefLanguage('dual')">Both</button>
+            <div class="note-viewer-content-wrapper">
+                <div class="note-viewer-tab-content active" id="note-tab-content">
+                    <div class="note-viewer-section">
+                        <div class="note-viewer-content" id="note-viewer-content"></div>
                     </div>
-                    <button class="note-viewer-add-ref-icon-btn" id="note-viewer-add-ref-btn" title="Add Reference" onclick="showAddReferenceDialog()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                        </svg>
+                    <button class="note-viewer-edit-btn" id="note-viewer-edit-btn" title="Edit Note">
+                        Edit
                     </button>
                 </div>
-                <div class="note-viewer-references-content" id="note-viewer-references-content"></div>
+                
+                <div class="note-viewer-tab-content" id="references-tab-content">
+                    <div class="note-viewer-ref-lang-wrapper">
+                        <div class="note-viewer-ref-lang-buttons">
+                            <button class="note-viewer-ref-lang-btn active" data-lang="tamil" onclick="switchNoteRefLanguage('tamil')">Tamil</button>
+                            <button class="note-viewer-ref-lang-btn" data-lang="english" onclick="switchNoteRefLanguage('english')">English</button>
+                            <button class="note-viewer-ref-lang-btn" data-lang="dual" onclick="switchNoteRefLanguage('dual')">Both</button>
+                        </div>
+                        <button class="note-viewer-add-ref-icon-btn" id="note-viewer-add-ref-btn" title="Add Reference" onclick="showAddReferenceDialog()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="note-viewer-references-content" id="note-viewer-references-content"></div>
+                </div>
             </div>
             
             <div class="note-viewer-footer">

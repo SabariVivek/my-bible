@@ -726,12 +726,14 @@ function initializeMobileDrawer() {
         const notesModal = document.getElementById('notes-modal');
         const bookmarkColorPicker = document.getElementById('bookmark-color-picker-overlay');
         const languageSheet = document.getElementById('language-bottom-sheet-overlay');
+        const noteViewerOverlay = document.getElementById('note-viewer-popup');
         
         const isAnySheetOpen = 
             (verseActionsSheet && verseActionsSheet.classList.contains('visible')) ||
             (notesModal && notesModal.classList.contains('visible')) ||
             (bookmarkColorPicker && bookmarkColorPicker.classList.contains('active')) ||
-            (languageSheet && languageSheet.classList.contains('active'));
+            (languageSheet && languageSheet.classList.contains('active')) ||
+            (noteViewerOverlay && noteViewerOverlay.classList.contains('visible'));
         
         if (isAnySheetOpen) {
             return;
@@ -9662,15 +9664,41 @@ function openNoteViewerWithReferences(verseNum, crossRefs) {
 }
 
 function switchNoteViewerTab(tabName) {
+    const currentActive = document.querySelector('.note-viewer-tab-content.active');
+    const newActive = document.getElementById(`${tabName}-tab-content`);
+    
+    if (!currentActive || !newActive) return;
+    if (currentActive.id === newActive.id) return; // Already on this tab
+    
+    // Determine swipe direction
+    const isMovingToRight = currentActive.id === 'references-tab-content'; // References to Note = right
+    
+    // Add exit animation to current tab
+    currentActive.classList.remove('active');
+    if (isMovingToRight) {
+        currentActive.classList.add('slide-out-right');
+    } else {
+        currentActive.classList.add('slide-out-left');
+    }
+    
+    // Add entrance animation to new tab
+    newActive.classList.add('active');
+    if (isMovingToRight) {
+        newActive.classList.add('slide-in-right');
+    } else {
+        newActive.classList.add('slide-in-left');
+    }
+    
     // Update tab buttons
     document.querySelectorAll('.note-viewer-tab').forEach(tab => {
         tab.classList.toggle('active', tab.dataset.tab === tabName);
     });
     
-    // Update tab content
-    document.querySelectorAll('.note-viewer-tab-content').forEach(content => {
-        content.classList.toggle('active', content.id === `${tabName}-tab-content`);
-    });
+    // Clean up animation classes after transition
+    setTimeout(() => {
+        currentActive.classList.remove('slide-out-right', 'slide-out-left');
+        newActive.classList.remove('slide-in-right', 'slide-in-left');
+    }, 350);
     
     // Load references when switching to references tab
     if (tabName === 'references' && window.currentNoteRefs) {
@@ -10510,6 +10538,50 @@ function navigateToRef(bookFile, chapter, verse) {
         scrollToVerse(verse);
     }, 300);
 }
+
+// Swipe functionality for note viewer modal
+let noteViewerSwipeStartX = 0;
+let noteViewerSwipeStartY = 0;
+
+document.addEventListener('touchstart', (e) => {
+    const modal = document.querySelector('.note-viewer-modal');
+    if (!modal || !modal.offsetParent) return; // Modal not visible
+    
+    noteViewerSwipeStartX = e.touches[0].clientX;
+    noteViewerSwipeStartY = e.touches[0].clientY;
+}, false);
+
+document.addEventListener('touchend', (e) => {
+    const modal = document.querySelector('.note-viewer-modal');
+    if (!modal || !modal.offsetParent) return; // Modal not visible
+    
+    const swipeEndX = e.changedTouches[0].clientX;
+    const swipeEndY = e.changedTouches[0].clientY;
+    const deltaX = swipeEndX - noteViewerSwipeStartX;
+    const deltaY = Math.abs(swipeEndY - noteViewerSwipeStartY);
+    const swipeThreshold = 50;
+    const verticalThreshold = 50;
+    
+    // Only handle horizontal swipes (ignore vertical swipes)
+    if (Math.abs(deltaX) > swipeThreshold && deltaY < verticalThreshold) {
+        const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
+        const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
+        
+        // Check if both tabs are visible
+        if (noteTab && refTab && noteTab.style.display !== 'none' && refTab.style.display !== 'none') {
+            const isNoteTabActive = noteTab.classList.contains('active');
+            
+            // Swipe left: go to references (if currently on note)
+            if (deltaX < -swipeThreshold && isNoteTabActive) {
+                switchNoteViewerTab('references');
+            }
+            // Swipe right: go to note (if currently on references)
+            else if (deltaX > swipeThreshold && !isNoteTabActive) {
+                switchNoteViewerTab('note');
+            }
+        }
+    }
+}, false);
 
 
 
