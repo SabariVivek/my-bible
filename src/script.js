@@ -536,6 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Update UI and reset flag after fade completes
                 setTimeout(() => {
                     updateAdminUI();
+                    displayChapter(); // Refresh to hide cross-ref icons for non-admin
                     isFadingOut = false;
                 }, 2000);
             } else {
@@ -576,6 +577,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 updateAdminUI();
+                // Slight delay to ensure localStorage is set before refresh
+                setTimeout(() => {
+                    displayChapter(); // Refresh to show cross-ref icons for admin
+                }, 50);
             }
         });
     }
@@ -726,14 +731,12 @@ function initializeMobileDrawer() {
         const notesModal = document.getElementById('notes-modal');
         const bookmarkColorPicker = document.getElementById('bookmark-color-picker-overlay');
         const languageSheet = document.getElementById('language-bottom-sheet-overlay');
-        const noteViewerOverlay = document.getElementById('note-viewer-popup');
         
         const isAnySheetOpen = 
             (verseActionsSheet && verseActionsSheet.classList.contains('visible')) ||
             (notesModal && notesModal.classList.contains('visible')) ||
             (bookmarkColorPicker && bookmarkColorPicker.classList.contains('active')) ||
-            (languageSheet && languageSheet.classList.contains('active')) ||
-            (noteViewerOverlay && noteViewerOverlay.classList.contains('visible'));
+            (languageSheet && languageSheet.classList.contains('active'));
         
         if (isAnySheetOpen) {
             return;
@@ -1264,14 +1267,17 @@ function displayChapter() {
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
             
-            // Check for cross-references
-            const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
-            const crossRefs = crossReferences[crossRefKey];
-            if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
-                console.log('Cross-ref debug (both mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+            // Check for cross-references (admin only)
+            let crossRefIcon = '';
+            if (isAdmin()) {
+                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+                const crossRefs = crossReferences[crossRefKey];
+                if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
+                    console.log('Cross-ref debug (both mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+                }
+                const hasCrossRef = crossRefs && crossRefs.length > 0;
+                crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
             }
-            const hasCrossRef = crossRefs && crossRefs.length > 0;
-            const crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
             
             html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}>
@@ -1300,14 +1306,17 @@ function displayChapter() {
             const isPinnedVerse = isPinnedInCurrentChapter(parseInt(verseNum));
             const pinnedClass = isPinnedVerse ? ' pinned-verse-highlight' : '';
             
-            // Check for cross-references
-            const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
-            const crossRefs = crossReferences[crossRefKey];
-            if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
-                console.log('Cross-ref debug (single mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+            // Check for cross-references (admin only)
+            let crossRefIcon = '';
+            if (isAdmin()) {
+                const crossRefKey = `${bookName} ${currentChapter}:${verseNum}`;
+                const crossRefs = crossReferences[crossRefKey];
+                if (bookName === 'Matthew' && currentChapter === 1 && verseNum === '1') {
+                    console.log('Cross-ref debug (single mode):', { crossRefKey, crossRefs, allKeys: Object.keys(crossReferences) });
+                }
+                const hasCrossRef = crossRefs && crossRefs.length > 0;
+                crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
             }
-            const hasCrossRef = crossRefs && crossRefs.length > 0;
-            const crossRefIcon = hasCrossRef ? `<span class="cross-ref-icon" data-cross-refs='${JSON.stringify(crossRefs)}' data-verse="${verseNum}">🔗</span>` : '';
             
             html += `<div class="verse-container${pinnedClass}" data-verse="${verseNum}">
                 <p class="verse-line${memoryVerseClass}" data-verse="${verseNum}"${tooltip}><sup class="v-num">${verseNum}</sup>${verseText}${crossRefIcon}</p>
@@ -6489,28 +6498,12 @@ function showNoteViewer(verseNum, note) {
             switchNoteViewerTab('note');
         }
     } else {
-        // Non-admin mode: Show tabs based on content
-        if (hasNote && hasRefs) {
-            // Both note and references - show both tabs
-            if (noteTab) noteTab.style.display = 'block';
-            if (refTab) refTab.style.display = 'block';
-            if (tabsContainer) tabsContainer.style.display = 'flex';
-            if (singleTitle) singleTitle.style.display = 'none';
-            window.currentNoteRefs = { refs: crossRefs, verseNum };
-            switchNoteViewerTab('note');
-        } else if (hasRefs && !hasNote) {
-            // Only references - hide tabs, show title "References"
-            if (noteTab) noteTab.style.display = 'none';
-            if (refTab) refTab.style.display = 'none';
-            if (tabsContainer) tabsContainer.style.display = 'none';
-            if (singleTitle) {
-                singleTitle.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>';
-                singleTitle.style.display = 'flex';
-            }
-            window.currentNoteRefs = { refs: crossRefs, verseNum };
-            switchNoteViewerTab('references');
-        } else if (hasNote && !hasRefs) {
-            // Only note - hide tabs, show title "Note"
+        // Non-admin mode: Hide all references, show only notes
+        // References are admin-only feature
+        window.currentNoteRefs = null; // Clear any reference data
+        
+        if (hasNote) {
+            // Show only note
             if (noteTab) noteTab.style.display = 'none';
             if (refTab) refTab.style.display = 'none';
             if (tabsContainer) tabsContainer.style.display = 'none';
@@ -6520,7 +6513,8 @@ function showNoteViewer(verseNum, note) {
             }
             switchNoteViewerTab('note');
         } else {
-            // No content - shouldn't happen in non-admin mode
+            // No note and references hidden - shouldn't show modal
+            // but keep minimal display just in case
             if (noteTab) noteTab.style.display = 'block';
             if (refTab) refTab.style.display = 'none';
             if (tabsContainer) tabsContainer.style.display = 'flex';
@@ -6529,9 +6523,11 @@ function showNoteViewer(verseNum, note) {
         }
     }
     
-    // Reset modal transform
+    // Reset modal transform and height
     if (modal) {
         modal.style.transform = '';
+        modal.style.height = '';
+        modal.style.transition = '';
     }
     
     // Save current scroll position before hiding overflow
@@ -6559,6 +6555,12 @@ function hideNoteViewer() {
     const modal = document.querySelector('.note-viewer-modal');
     
     if (!popup) return;
+    
+    // Hide language wrapper when closing
+    const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
+    if (langWrapper) {
+        langWrapper.classList.remove('active');
+    }
     
     // Remove visible class to trigger slide down animation
     popup.classList.remove('visible');
@@ -6795,7 +6797,14 @@ function initializeNotesModal() {
         }
     }
     if (noteViewerHeader && window.innerWidth <= 768) {
+        let dragThreshold = 5; // pixels
         noteViewerHeader.addEventListener('touchstart', (e) => {
+            // Only start dragging if not clicking on an interactive element
+            const target = e.target;
+            if (target.tagName === 'BUTTON' || target.closest('button')) {
+                isDragging = false;
+                return;
+            }
             startY = e.touches[0].clientY;
             isDragging = true;
             initialHeight = noteViewerModal.offsetHeight;
@@ -6805,6 +6814,8 @@ function initializeNotesModal() {
             if (!isDragging) return;
             currentY = e.touches[0].clientY;
             const deltaY = currentY - startY;
+            // Only start applying drag styles if threshold is exceeded
+            if (Math.abs(deltaY) < dragThreshold) return;
             // Calculate new height based on drag direction
             const newHeight = initialHeight - deltaY;
             const maxHeight = window.innerHeight * 0.95;
@@ -6838,6 +6849,11 @@ function initializeNotesModal() {
             } else {
                 // Snap back to valid height
                 noteViewerModal.style.transform = '';
+                noteViewerModal.style.height = '';
+                // Remove transition after snap-back completes
+                setTimeout(() => {
+                    noteViewerModal.style.transition = '';
+                }, 300);
             }
         });
     }
@@ -9664,41 +9680,21 @@ function openNoteViewerWithReferences(verseNum, crossRefs) {
 }
 
 function switchNoteViewerTab(tabName) {
-    const currentActive = document.querySelector('.note-viewer-tab-content.active');
-    const newActive = document.getElementById(`${tabName}-tab-content`);
-    
-    if (!currentActive || !newActive) return;
-    if (currentActive.id === newActive.id) return; // Already on this tab
-    
-    // Determine swipe direction
-    const isMovingToRight = currentActive.id === 'references-tab-content'; // References to Note = right
-    
-    // Add exit animation to current tab
-    currentActive.classList.remove('active');
-    if (isMovingToRight) {
-        currentActive.classList.add('slide-out-right');
-    } else {
-        currentActive.classList.add('slide-out-left');
-    }
-    
-    // Add entrance animation to new tab
-    newActive.classList.add('active');
-    if (isMovingToRight) {
-        newActive.classList.add('slide-in-right');
-    } else {
-        newActive.classList.add('slide-in-left');
-    }
-    
     // Update tab buttons
     document.querySelectorAll('.note-viewer-tab').forEach(tab => {
         tab.classList.toggle('active', tab.dataset.tab === tabName);
     });
     
-    // Clean up animation classes after transition
-    setTimeout(() => {
-        currentActive.classList.remove('slide-out-right', 'slide-out-left');
-        newActive.classList.remove('slide-in-right', 'slide-in-left');
-    }, 350);
+    // Update tab content
+    document.querySelectorAll('.note-viewer-tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === `${tabName}-tab-content`);
+    });
+    
+    // Hide language wrapper when switching away from references tab
+    const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
+    if (tabName !== 'references' && langWrapper) {
+        langWrapper.classList.remove('active');
+    }
     
     // Load references when switching to references tab
     if (tabName === 'references' && window.currentNoteRefs) {
@@ -10299,15 +10295,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Fetch verse data for a single reference (used only on first load)
 async function fetchReferenceVerseData(ref) {
-    const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
-    if (!match) return null;
+    console.log('🔍 fetchReferenceVerseData called with:', ref);
     
-    const [, bookName, chapter, verseStart, verseEnd] = match;
+    const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[-–](\d+))?$/);
+    if (!match) {
+        console.error('❌ Failed to parse reference:', ref);
+        return null;
+    }
+    
+    let bookName = match[1].trim();
+    const chapter = match[2];
+    const verseStart = match[3];
+    const verseEnd = match[4];
+    
+    console.log('📖 Parsed - bookName:', bookName, 'chapter:', chapter, 'verseStart:', verseStart, 'verseEnd:', verseEnd);
+    
+    // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
     const normalizedName = bookName
         .replace(/^1\s+/, 'I ')
         .replace(/^2\s+/, 'II ')
         .replace(/^3\s+/, 'III ');
     
+    console.log('🔄 Normalized name:', normalizedName);
+    
+    // Find book in bibleBooks
     const book = bibleBooks.find(b => 
         b.name === bookName || 
         b.shortName === bookName || 
@@ -10315,7 +10326,13 @@ async function fetchReferenceVerseData(ref) {
         b.shortName === normalizedName
     );
     
-    if (!book) return null;
+    if (!book) {
+        console.error('❌ Book not found:', bookName, 'or normalized:', normalizedName);
+        console.log('📚 First 10 books:', bibleBooks.slice(0, 10).map(b => ({ name: b.name, shortName: b.shortName })));
+        return null;
+    }
+    
+    console.log('✅ Found book:', book.name, 'file:', book.file);
     
     let bookFile = book.file;
     const bookFileAlternatives = [
@@ -10323,6 +10340,8 @@ async function fetchReferenceVerseData(ref) {
         bookFile.replace(/^i_/, '1-').replace(/^ii_/, '2-').replace(/^iii_/, '3-'),
         bookFile.replace(/^i_/, '1_').replace(/^ii_/, '2_').replace(/^iii_/, '3_')
     ];
+    
+    console.log('🔗 Book file alternatives:', bookFileAlternatives);
     
     const startVerse = parseInt(verseStart);
     const endVerse = verseEnd ? parseInt(verseEnd) : startVerse;
@@ -10350,6 +10369,7 @@ async function fetchReferenceVerseData(ref) {
             if (verseDataCache[cacheKey]) {
                 data.english = verseDataCache[cacheKey];
                 bookFile = fileVariant;
+                console.log('✅ Found English data in cache:', data.english.length, 'verses');
                 break;
             }
         }
@@ -10357,7 +10377,8 @@ async function fetchReferenceVerseData(ref) {
     
     if (!data.english) {
         for (const fileVariant of bookFileAlternatives) {
-            const { data: result } = await bibleDataManager.supabaseClient
+            console.log(`   Trying to fetch from database with fileVariant: ${fileVariant}`);
+            const { data: result, error } = await bibleDataManager.supabaseClient
                 .from('bible_verses')
                 .select('verse, text')
                 .eq('book_file', fileVariant)
@@ -10367,9 +10388,14 @@ async function fetchReferenceVerseData(ref) {
                 .lte('verse', endVerse)
                 .order('verse', { ascending: true });
             
+            if (error) {
+                console.log(`   Error fetching from ${fileVariant}:`, error.message);
+            }
+            
             if (result && result.length > 0) {
                 data.english = result;
                 bookFile = fileVariant;
+                console.log('✅ Fetched English data from DB:', result.length, 'verses');
                 break;
             }
         }
@@ -10395,6 +10421,7 @@ async function fetchReferenceVerseData(ref) {
             const cacheKey = `${fileVariant}_${chapter}_tamil`;
             if (verseDataCache[cacheKey]) {
                 data.tamil = verseDataCache[cacheKey];
+                console.log('✅ Found Tamil data in cache:', data.tamil.length, 'verses');
                 break;
             }
         }
@@ -10402,7 +10429,7 @@ async function fetchReferenceVerseData(ref) {
     
     if (!data.tamil) {
         for (const fileVariant of bookFileAlternatives) {
-            const { data: result } = await bibleDataManager.supabaseClient
+            const { data: result, error } = await bibleDataManager.supabaseClient
                 .from('bible_verses')
                 .select('verse, text')
                 .eq('book_file', fileVariant)
@@ -10412,14 +10439,21 @@ async function fetchReferenceVerseData(ref) {
                 .lte('verse', endVerse)
                 .order('verse', { ascending: true });
             
+            if (error) {
+                console.log(`   Error fetching Tamil from ${fileVariant}:`, error.message);
+            }
+            
             if (result && result.length > 0) {
                 data.tamil = result;
+                console.log('✅ Fetched Tamil data from DB:', result.length, 'verses');
                 break;
             }
         }
     }
     
-    return { ref, data };
+    const returnValue = { ref, data };
+    console.log('📤 Returning from fetchReferenceVerseData:', returnValue);
+    return returnValue;
 }
 
 // Render a reference in a specific language using cached data
@@ -10478,42 +10512,216 @@ async function loadNoteReferences(crossRefs, showLoader = true) {
         return;
     }
     
-    // Check if we already have cached data for these references
-    const cacheKey = JSON.stringify(crossRefs.sort());
-    if (renderedReferencesCache[cacheKey]) {
-        console.log('✅ Using cached rendered references');
-        const allHtml = crossRefs.map(ref => renderReference(renderedReferencesCache[cacheKey][ref], noteRefCurrentLang)).join('');
-        content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
-        return;
-    }
+    // Create badges immediately without waiting for data fetch
+    let badgesHtml = '<div style="padding: 12px; text-align: left;">';
     
-    // First load - fetch and cache all reference data
-    if (showLoader) {
-        content.innerHTML = '<div class="note-ref-loader"><div class="note-ref-loader-spinner"></div></div>';
-    }
+    crossRefs.forEach((ref) => {
+        badgesHtml += `<span class="note-viewer-verse-badge" onclick="loadAndOpenNotePassageModal('${ref}')">${ref}</span>`;
+    });
     
-    console.log('📥 First load - fetching reference data...');
+    badgesHtml += '</div>';
+    content.innerHTML = badgesHtml;
     
-    // Initialize cache for this reference set
-    if (!renderedReferencesCache[cacheKey]) {
-        renderedReferencesCache[cacheKey] = {};
-    }
-    
-    // Fetch data for all references in parallel
+    // Fetch data in background without blocking UI
     const fetchPromises = crossRefs.map(ref => fetchReferenceVerseData(ref));
     const results = await Promise.all(fetchPromises);
     
-    // Store all results in cache
-    results.forEach(result => {
-        if (result) {
-            renderedReferencesCache[cacheKey][result.ref] = result;
-        }
-    });
+    console.log('📊 Fetched results in background:', results);
     
-    // Now render with current language preference
-    const allHtml = crossRefs.map(ref => renderReference(renderedReferencesCache[cacheKey][ref], noteRefCurrentLang)).join('');
-    content.innerHTML = allHtml || '<p style="text-align:center;color:#999;">No verses found</p>';
-    console.log('✅ References loaded and cached');
+    // Store results for later use when clicking badges
+    window.noteViewerVerseData = results;
+    
+    console.log('✅ References loaded with badges');
+}
+
+function parseVerseReference(ref) {
+    // Parse "Book Chapter:Verse" format (e.g., "Matthew 5:7" or "Matthew 5:7-10" or "2 Samuel 7:12–16")
+    // Handle both hyphen (-) and en-dash (–)
+    const match = ref.match(/^(.+?)\s+(\d+):(\d+)(?:[\-–](\d+))?$/);
+    if (!match) {
+        console.error('Failed to parse verse reference:', ref);
+        return null;
+    }
+    
+    let bookName = match[1].trim();
+    const chapter = parseInt(match[2]);
+    const verseStart = parseInt(match[3]);
+    const verseEnd = match[4] ? parseInt(match[4]) : verseStart;
+    
+    // Normalize book name - convert "1", "2", "3" to "I", "II", "III"
+    bookName = bookName
+        .replace(/^1\s+/, 'I ')
+        .replace(/^2\s+/, 'II ')
+        .replace(/^3\s+/, 'III ');
+    
+    console.log('🔍 Parsing - original:', match[1], 'normalized:', bookName);
+    
+    // Find book file name - try both original and normalized
+    let book = bibleBooks.find(b => 
+        b.name === match[1] || 
+        b.shortName === match[1] || 
+        b.name === bookName ||
+        b.shortName === bookName
+    );
+    
+    if (!book) {
+        console.error('Book not found for:', match[1], 'or normalized:', bookName);
+        console.log('📚 Looking for match in bibleBooks...');
+        bibleBooks.forEach((b, idx) => {
+            if (b.name.includes('Samuel') || match[1].includes('Samuel')) {
+                console.log(`  [${idx}]`, b.name, b.shortName);
+            }
+        });
+        return null;
+    }
+    
+    console.log('✅ Found book:', book.name);
+    
+    return {
+        book: book.file,
+        bookName: book.name,
+        chapter: chapter,
+        verseStart: verseStart,
+        verseEnd: verseEnd
+    };
+}
+
+// Load verse data when clicking on badge and open modal
+async function loadAndOpenNotePassageModal(verseRef) {
+    console.log('Loading and opening passage modal for:', verseRef);
+    
+    // Check if data is already cached
+    let verseDataItem = window.noteViewerVerseData?.find(v => v && (v.reference || v.ref) === verseRef);
+    
+    // If not cached, fetch it
+    if (!verseDataItem) {
+        verseDataItem = await fetchReferenceVerseData(verseRef);
+        
+        // Store in cache for future use
+        if (!window.noteViewerVerseData) {
+            window.noteViewerVerseData = [];
+        }
+        window.noteViewerVerseData.push(verseDataItem);
+    }
+    
+    // Now open the modal with the data
+    if (verseDataItem && verseDataItem.data) {
+        openNotePassageModalWithData(verseRef, verseDataItem);
+    } else {
+        console.error('Failed to load verse data for:', verseRef);
+    }
+}
+
+function openNotePassageModalWithData(verseRef, verseDataItem) {
+    console.log('Opening passage modal with data for:', verseRef);
+    
+    if (!verseDataItem || !verseDataItem.data) {
+        console.error('Verse data not found:', verseRef);
+        return;
+    }
+    
+    console.log('🔍 Found verse data:', verseDataItem);
+    
+    // Update passage modal with verse data
+    const passageBadge = document.getElementById('notePassageBadge');
+    const passageContent = document.getElementById('notePassageContent');
+    
+    if (passageBadge) {
+        passageBadge.textContent = verseRef;
+    }
+    
+    // Build passage content in both languages
+    let englishHtml = '';
+    let tamilHtml = '';
+    
+    const verseData = verseDataItem.data;
+    
+    // English verses
+    if (verseData.english && Array.isArray(verseData.english)) {
+        verseData.english.forEach(v => {
+            englishHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #d0d0d0;">
+                <sup style="color: #7ac97a; font-weight: 600; margin-right: 4px;">${v.verse}</sup>${v.text}
+            </p>`;
+        });
+    }
+    
+    // Tamil verses
+    if (verseData.tamil && Array.isArray(verseData.tamil)) {
+        verseData.tamil.forEach(v => {
+            tamilHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #d0d0d0;">
+                <sup style="color: #7ac97a; font-weight: 600; margin-right: 4px;">${v.verse}</sup>${v.text}
+            </p>`;
+        });
+    }
+    
+    // Store verse data in window for language switching
+    window.currentNotePassageData = {
+        english: englishHtml,
+        tamil: tamilHtml,
+        dual: `<div style="display: flex; flex-direction: column; gap: 16px;">
+            <div>
+                <h3 style="font-size: 13px; font-weight: 600; color: #7ac97a; margin: 0 0 12px 0;">English</h3>
+                <div>${englishHtml}</div>
+            </div>
+            <div>
+                <h3 style="font-size: 13px; font-weight: 600; color: #7ac97a; margin: 0 0 12px 0;">Tamil</h3>
+                <div>${tamilHtml}</div>
+            </div>
+        </div>`
+    };
+    
+    // Display English by default
+    if (passageContent) {
+        passageContent.innerHTML = window.currentNotePassageData.english;
+    }
+    
+    // Reset language buttons
+    document.querySelectorAll('#notePassagePopup .passage-lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector('#notePassagePopup [data-lang="english"]')?.classList.add('active');
+    
+    // Show the language wrapper when verse is clicked
+    const langWrapper = document.querySelector('.note-viewer-ref-lang-wrapper');
+    if (langWrapper) {
+        langWrapper.classList.add('active');
+    }
+    
+    // Show passage modal
+    const passagePopup = document.getElementById('notePassagePopup');
+    if (passagePopup) {
+        passagePopup.classList.add('show');
+    }
+}
+
+function switchNotePassageLanguage(lang) {
+    console.log('Switching passage language to:', lang);
+    
+    if (!window.currentNotePassageData) return;
+    
+    const passageContent = document.getElementById('notePassageContent');
+    if (passageContent) {
+        passageContent.innerHTML = window.currentNotePassageData[lang] || '';
+    }
+    
+    // Update button states
+    document.querySelectorAll('#notePassagePopup .passage-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+}
+
+function closeNotePassageModal() {
+    const passagePopup = document.getElementById('notePassagePopup');
+    if (passagePopup) {
+        passagePopup.classList.remove('show');
+    }
+}
+
+function handleNotePassagePopupClick(event) {
+    // Close when clicking on the overlay background
+    if (event.target.id === 'notePassagePopup') {
+        closeNotePassageModal();
+    }
 }
 
 function navigateToRef(bookFile, chapter, verse) {
@@ -10538,50 +10746,6 @@ function navigateToRef(bookFile, chapter, verse) {
         scrollToVerse(verse);
     }, 300);
 }
-
-// Swipe functionality for note viewer modal
-let noteViewerSwipeStartX = 0;
-let noteViewerSwipeStartY = 0;
-
-document.addEventListener('touchstart', (e) => {
-    const modal = document.querySelector('.note-viewer-modal');
-    if (!modal || !modal.offsetParent) return; // Modal not visible
-    
-    noteViewerSwipeStartX = e.touches[0].clientX;
-    noteViewerSwipeStartY = e.touches[0].clientY;
-}, false);
-
-document.addEventListener('touchend', (e) => {
-    const modal = document.querySelector('.note-viewer-modal');
-    if (!modal || !modal.offsetParent) return; // Modal not visible
-    
-    const swipeEndX = e.changedTouches[0].clientX;
-    const swipeEndY = e.changedTouches[0].clientY;
-    const deltaX = swipeEndX - noteViewerSwipeStartX;
-    const deltaY = Math.abs(swipeEndY - noteViewerSwipeStartY);
-    const swipeThreshold = 50;
-    const verticalThreshold = 50;
-    
-    // Only handle horizontal swipes (ignore vertical swipes)
-    if (Math.abs(deltaX) > swipeThreshold && deltaY < verticalThreshold) {
-        const noteTab = document.querySelector('.note-viewer-tab[data-tab="note"]');
-        const refTab = document.querySelector('.note-viewer-tab[data-tab="references"]');
-        
-        // Check if both tabs are visible
-        if (noteTab && refTab && noteTab.style.display !== 'none' && refTab.style.display !== 'none') {
-            const isNoteTabActive = noteTab.classList.contains('active');
-            
-            // Swipe left: go to references (if currently on note)
-            if (deltaX < -swipeThreshold && isNoteTabActive) {
-                switchNoteViewerTab('references');
-            }
-            // Swipe right: go to note (if currently on references)
-            else if (deltaX > swipeThreshold && !isNoteTabActive) {
-                switchNoteViewerTab('note');
-            }
-        }
-    }
-}, false);
 
 
 

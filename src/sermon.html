@@ -3996,6 +3996,22 @@
         let currentSermonAllVerses = null;  // Track all verses for "Show All" mode
         let isShowAllMode = false;  // Flag to track if we're in "Show All" view
 
+        // Handle passage language switch - delegates to appropriate function
+        async function handlePassageLanguageSwitch(language) {
+            // Check if this is a note passage (from note viewer) or sermon passage
+            if (window.currentNotePassageData) {
+                // This is from note viewer
+                if (typeof switchNotePassageLanguage === 'function') {
+                    switchNotePassageLanguage(language);
+                }
+            } else {
+                // This is from sermon viewer
+                if (typeof switchPassageLanguageSermon === 'function') {
+                    switchPassageLanguageSermon(language);
+                }
+            }
+        }
+
         // Switch passage language (English, Tamil, or Dual)
         async function switchPassageLanguageSermon(language) {
             // Update active button
@@ -5129,9 +5145,9 @@
             </div>
             
             <div class="passage-language-buttons">
-                <button class="passage-lang-btn" data-lang="tamil" onclick="switchPassageLanguageSermon('tamil')">Tamil</button>
-                <button class="passage-lang-btn active" data-lang="english" onclick="switchPassageLanguageSermon('english')">English</button>
-                <button class="passage-lang-btn" data-lang="dual" onclick="switchPassageLanguageSermon('dual')">Both</button>
+                <button class="passage-lang-btn" data-lang="tamil" onclick="handlePassageLanguageSwitch('tamil')">Tamil</button>
+                <button class="passage-lang-btn active" data-lang="english" onclick="handlePassageLanguageSwitch('english')">English</button>
+                <button class="passage-lang-btn" data-lang="dual" onclick="handlePassageLanguageSwitch('dual')">Both</button>
             </div>
             
             <div class="passage-content" id="passageContent"></div>
