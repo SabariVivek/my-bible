@@ -289,12 +289,19 @@
                 <span class="note-viewer-ref" id="note-viewer-ref"></span>
                 
                 <!-- Single Title (shown when tabs are hidden) -->
-                <span class="note-viewer-single-title" id="note-viewer-single-title" style="display: none;"></span>
+                <div class="note-viewer-single-title" id="note-viewer-single-title" style="display: none;"></div>
                 
                 <!-- Segmented Control in Header -->
                 <div class="note-viewer-tabs">
-                    <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')">Note</button>
-                    <button class="note-viewer-tab" data-tab="references" onclick="switchNoteViewerTab('references')" style="display: none;">Ref</button>
+                    <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')" title="Note">
+                        <img src="resources/icons/note.png" alt="Note" class="note-viewer-tab-icon">
+                    </button>
+                    <button class="note-viewer-tab" data-tab="references" onclick="switchNoteViewerTab('references')" style="display: none;" title="References">
+                        <svg class="note-viewer-tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                    </button>
                 </div>
                 
                 <button class="note-viewer-close-btn" id="note-viewer-close-btn" title="Close">
