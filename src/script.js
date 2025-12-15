@@ -2845,8 +2845,12 @@ document.addEventListener('click', (e) => {
             document.body.style.overflow = 'hidden';
         }
     }
-    // Previous chapter
+    // Previous chapter (disabled if note viewer is open)
     if (e.target.closest('.nav-btn[aria-label="Previous"]')) {
+        const noteViewerPopup = document.getElementById('note-viewer-popup');
+        if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+            return; // Don't navigate if note viewer is open
+        }
         if (currentChapter > 1) {
             currentChapter--;
             localStorage.setItem('currentChapter', currentChapter);
@@ -2862,8 +2866,12 @@ document.addEventListener('click', (e) => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
-    // Next chapter
+    // Next chapter (disabled if note viewer is open)
     if (e.target.closest('.nav-btn[aria-label="Next"]')) {
+        const noteViewerPopup = document.getElementById('note-viewer-popup');
+        if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+            return; // Don't navigate if note viewer is open
+        }
         const book = bibleBooks[currentBook];
         if (currentChapter < book.chapters) {
             currentChapter++;
@@ -2883,6 +2891,11 @@ document.addEventListener('click', (e) => {
 });
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
+    // Disable arrow key navigation if note viewer is open
+    const noteViewerPopup = document.getElementById('note-viewer-popup');
+    if (noteViewerPopup && noteViewerPopup.classList.contains('visible')) {
+        return; // Don't navigate if note viewer is open
+    }
     if (e.key === 'ArrowLeft') {
         document.querySelector('.nav-btn[aria-label="Previous"]').click();
     } else if (e.key === 'ArrowRight') {
@@ -6434,6 +6447,32 @@ function showNoteViewerIfExists(verseNum) {
         hideNoteViewer();
     }
 }
+
+// Format note content: style chapter:verse headings and **highlighted** text
+function formatNoteContent(text) {
+    if (!text) return '';
+    
+    // Handle both <br> tags and newlines as paragraph separators
+    // First convert <br> tags to newlines for consistent processing
+    text = text.replace(/<br\s*\/?>/gi, '\n');
+    
+    // Split text into paragraphs (by single or multiple newlines)
+    let paragraphs = text.split(/\n+/).filter(p => p.trim());
+    
+    // Convert each paragraph to a bullet point and handle formatting
+    const bulletPoints = paragraphs.map(para => {
+        // Handle **text** highlighting - replace with green colored span
+        para = para.replace(/\*\*(.+?)\*\*/g, '<span style="color: #7ac97a; font-weight: 600;">$1</span>');
+        
+        // Handle chapter:verse patterns inline with a dash
+        para = para.replace(/^(\d+:\d+)\s*/, '<span style="color: #7ac97a; font-weight: 600;">$1</span> - ');
+        
+        return `<li style="line-height: 2.2; margin-bottom: 12px;">${para}</li>`;
+    }).join('');
+    
+    // Wrap in ul with proper styling
+    return `<ul style="margin: 0; padding-left: 20px; line-height: 2.2;">${bulletPoints}</ul>`;
+}
 function showNoteViewer(verseNum, note) {
     const popup = document.getElementById('note-viewer-popup');
     const ref = document.getElementById('note-viewer-ref');
@@ -6447,7 +6486,7 @@ function showNoteViewer(verseNum, note) {
     if (!popup) return;
     
     ref.textContent = `${bibleBooks[currentBook].name} ${currentChapter}:${verseNum}`;
-    content.innerHTML = note.text || '';
+    content.innerHTML = formatNoteContent(note.text || '');
     
     // Check if this verse has cross-references
     const bookName = bibleBooks[currentBook].name;
