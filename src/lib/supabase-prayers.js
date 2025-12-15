@@ -43,15 +43,26 @@ async function createPrayer(prayerName, category, description, badge, members) {
  * @returns {Promise<Array>} Array of prayer records
  */
 async function getAllPrayers() {
-    const { data, error } = await supabase
-        .from('prayers')
-        .select('*')
-        .order('created_at', { ascending: false });
-    
-    if (error) {
+    try {
+        // Add 10 second timeout to prevent indefinite hanging
+        const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Supabase query timeout')), 10000)
+        );
+
+        const queryPromise = supabase
+            .from('prayers')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+        const { data, error } = await Promise.race([queryPromise, timeoutPromise]);
+        
+        if (error) {
+            throw error;
+        }
+        return data;
+    } catch (error) {
         throw error;
     }
-    return data;
 }
 
 /**
@@ -60,16 +71,27 @@ async function getAllPrayers() {
  * @returns {Promise<Array>} Array of prayer records
  */
 async function getPrayersByCategory(category) {
-    const { data, error } = await supabase
-        .from('prayers')
-        .select('*')
-        .eq('category', category)
-        .order('created_at', { ascending: false });
-    
-    if (error) {
+    try {
+        // Add 10 second timeout to prevent indefinite hanging
+        const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Supabase query timeout')), 10000)
+        );
+
+        const queryPromise = supabase
+            .from('prayers')
+            .select('*')
+            .eq('category', category)
+            .order('created_at', { ascending: false });
+        
+        const { data, error } = await Promise.race([queryPromise, timeoutPromise]);
+        
+        if (error) {
+            throw error;
+        }
+        return data;
+    } catch (error) {
         throw error;
     }
-    return data;
 }
 
 /**

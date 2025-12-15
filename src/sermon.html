@@ -2785,10 +2785,17 @@
             }
 
             try {
-                const { data, error } = await supabase
+                // Add 10 second timeout to prevent indefinite hanging
+                const timeoutPromise = new Promise((_, reject) => 
+                    setTimeout(() => reject(new Error('Supabase query timeout')), 10000)
+                );
+
+                const queryPromise = supabase
                     .from('sermons')
                     .select('*')
                     .order('sermon_date', { ascending: false });
+
+                const { data, error } = await Promise.race([queryPromise, timeoutPromise]);
 
                 if (error) {
                     loadSermonsFromLocalStorage();
