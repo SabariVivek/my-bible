@@ -2051,6 +2051,7 @@ body.dark-theme .jesus-name {
     box-sizing: border-box;
     z-index: 10;
     transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 1px solid #e0e0e0;
 }
 
 /* Adjust bottom nav when sidebar is hidden */
