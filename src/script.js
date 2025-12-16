@@ -10678,7 +10678,7 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
     // English verses
     if (verseData.english && Array.isArray(verseData.english)) {
         verseData.english.forEach(v => {
-            englishHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #d0d0d0;">
+            englishHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #5f6368;">
                 <sup style="color: #7ac97a; font-weight: 600; margin-right: 4px;">${v.verse}</sup>${v.text}
             </p>`;
         });
@@ -10687,7 +10687,7 @@ function openNotePassageModalWithData(verseRef, verseDataItem) {
     // Tamil verses
     if (verseData.tamil && Array.isArray(verseData.tamil)) {
         verseData.tamil.forEach(v => {
-            tamilHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #d0d0d0;">
+            tamilHtml += `<p style="margin: 8px 0; line-height: 1.8; color: #5f6368;">
                 <sup style="color: #7ac97a; font-weight: 600; margin-right: 4px;">${v.verse}</sup>${v.text}
             </p>`;
         });
