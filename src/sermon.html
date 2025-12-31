@@ -5104,6 +5104,20 @@
                     menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
                 }
             });
+            
+            // Refresh sermon data when page becomes visible again (e.g., returning from Bible page)
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) {
+                    // Page became visible, refresh sermons
+                    loadSermons();
+                }
+            });
+            
+            // Fallback for browsers that don't support visibilitychange
+            window.addEventListener('pageshow', (event) => {
+                // Always reload sermons when returning to this page
+                loadSermons();
+            });
         });
 
         // Initialize if DOM is already ready
@@ -5122,6 +5136,18 @@
                 if (menuAddBtn) {
                     menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
                 }
+                
+                // Refresh sermon data when page becomes visible again
+                document.addEventListener('visibilitychange', () => {
+                    if (!document.hidden) {
+                        loadSermons();
+                    }
+                });
+                
+                // Fallback for browsers that don't support visibilitychange
+                window.addEventListener('pageshow', (event) => {
+                    loadSermons();
+                });
             });
         } else {
             initSupabase();
@@ -5138,6 +5164,18 @@
             if (menuAddBtn) {
                 menuAddBtn.style.display = isAdmin() ? 'flex' : 'none';
             }
+            
+            // Refresh sermon data when page becomes visible again
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) {
+                    loadSermons();
+                }
+            });
+            
+            // Fallback for browsers that don't support visibilitychange
+            window.addEventListener('pageshow', (event) => {
+                loadSermons();
+            });
         }
     </script>
 
