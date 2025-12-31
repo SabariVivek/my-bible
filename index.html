@@ -9,7 +9,9 @@
         window.CACHE_BUSTER = localStorage.getItem('appVersion') || new Date().getTime();
         
         // Set theme color BEFORE meta tag is parsed
-        document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#1e1f22' : '#ffffff') + '" id="theme-color-meta">');
+        const isDarkTheme = localStorage.getItem('theme') === 'dark';
+        document.write('<meta name="theme-color" content="' + (isDarkTheme ? '#1e1f22' : '#ffffff') + '" id="theme-color-meta">');
+        document.write('<meta name="color-scheme" content="' + (isDarkTheme ? 'dark' : 'light') + '" id="color-scheme-meta">');
         // Only load manifest on http/https, not file://
         if (window.location.protocol !== 'file:') {
             document.write('<link rel="manifest" href="manifest.json?cb=' + window.CACHE_BUSTER + '">');

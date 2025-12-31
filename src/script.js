@@ -2960,10 +2960,14 @@ function initializeTheme() {
             document.body.classList.toggle('dark-theme');
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
-            // Update theme color meta tag
+            // Update theme color meta tags
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
                 metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
+            }
+            if (metaColorScheme) {
+                metaColorScheme.setAttribute('content', theme);
             }
             return;
         }
@@ -2972,10 +2976,14 @@ function initializeTheme() {
             document.body.classList.toggle('dark-theme');
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
-            // Update theme color meta tag
+            // Update theme color meta tags
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
                 metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
+            }
+            if (metaColorScheme) {
+                metaColorScheme.setAttribute('content', theme);
             }
         });
         // Wait for transition to be ready
