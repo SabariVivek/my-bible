@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
 /* Disable copy functionality globally */
 html, body, .main-layout, .content-area, .scripture-text, .verse-text {
     user-select: none;
@@ -368,11 +381,11 @@ body.dark-theme .book-loader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem 0.75rem 1.5rem;
+    padding: max(0.5rem, env(safe-area-inset-top)) 1.5rem 0.75rem 1.5rem;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    padding-top: 0;
     margin: 0;
+    position: relative;
 }
 
 .logo-container {
