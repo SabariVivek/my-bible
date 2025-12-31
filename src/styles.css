@@ -368,16 +368,11 @@ body.dark-theme .book-loader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: env(safe-area-inset-top) 1.5rem 0.75rem 1.5rem;
+    padding: 0 1.5rem 0.75rem 1.5rem;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
+    padding-top: 0;
     margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1002;
-    width: 100%;
 }
 
 .logo-container {
@@ -1298,7 +1293,6 @@ body:not(.dark-theme) .moon-icon {
     overflow: hidden;
     position: relative;
     background-color: #f8f9fa;
-    margin-top: calc(60px + env(safe-area-inset-top));
 }
 
 /* Books Sidebar */
@@ -2713,12 +2707,6 @@ body.dark-theme .read-bible-button:hover {
 body.dark-theme .top-bar {
     background-color: #202124;
     border-bottom: 1px solid #3c4043;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1002;
-    width: 100%;
 }
 
 body.dark-theme .logo-icon,
