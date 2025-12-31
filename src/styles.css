@@ -368,10 +368,9 @@ body.dark-theme .book-loader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1.5rem 0.75rem 1.5rem;
+    padding: max(0px, env(safe-area-inset-top)) 1.5rem 0.75rem 1.5rem;
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    padding-top: 0;
+    border-bottom: none;
     margin: 0;
 }
 
@@ -2533,7 +2532,7 @@ body.dark-theme .jesus-name {
 
 @media (max-width: 480px) {
     .top-bar {
-        padding: 0.5rem 1rem;
+        padding: max(0.5rem, env(safe-area-inset-top)) 1rem 0.5rem 1rem;
     }
     
     .site-title {
@@ -2706,7 +2705,7 @@ body.dark-theme .read-bible-button:hover {
 
 body.dark-theme .top-bar {
     background-color: #202124;
-    border-bottom: 1px solid #3c4043;
+    border-bottom: none;
 }
 
 body.dark-theme .logo-icon,
