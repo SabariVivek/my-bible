@@ -383,6 +383,7 @@ body.dark-theme .book-loader {
     align-items: center;
     padding: max(0.5rem, env(safe-area-inset-top)) 1.5rem 0.75rem 1.5rem;
     background-color: #ffffff;
+    border-top: 4px solid #ffffff;
     border-bottom: 1px solid #e0e0e0;
     margin: 0;
     position: relative;
@@ -2317,6 +2318,7 @@ body.dark-theme .jesus-name {
         right: 0;
         z-index: 1001;
         padding-top: max(0.5rem, env(safe-area-inset-top));
+        border-top: 4px solid #ffffff;
     }
 
     /* Adjust main layout to account for fixed header */
@@ -2339,6 +2341,7 @@ body.dark-theme .jesus-name {
         right: 0;
         z-index: 1001;
         padding-top: max(0.5rem, env(safe-area-inset-top));
+        border-top: 4px solid #ffffff;
     }
     
     /* Show mobile menu button and drawer header */
@@ -2721,6 +2724,7 @@ body.dark-theme .read-bible-button:hover {
 
 body.dark-theme .top-bar {
     background-color: #202124;
+    border-top: 4px solid #202124;
     border-bottom: 1px solid #3c4043;
 }
 
