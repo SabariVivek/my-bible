@@ -383,7 +383,6 @@ body.dark-theme .book-loader {
     align-items: center;
     padding: max(0.5rem, env(safe-area-inset-top)) 1.5rem 0.75rem 1.5rem;
     background-color: #ffffff;
-    border-top: 1px solid #ffffff;
     margin: 0;
     position: relative;
 }
@@ -2719,7 +2718,6 @@ body.dark-theme .read-bible-button:hover {
 
 body.dark-theme .top-bar {
     background-color: #202124;
-    border-top: 1px solid #202124;
 }
 
 body.dark-theme .logo-icon,
