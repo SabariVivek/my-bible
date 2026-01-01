@@ -1967,6 +1967,9 @@
         // Load progress for a specific user
         async function loadUserProgress(user) {
             try {
+                // Check and reset yearly progress if needed (only once per year per user)
+                await BibleReadingDB.checkAndResetYearlyProgress(user.id);
+                
                 // Load progress and dates in parallel
                 const [progress, dates] = await Promise.all([
                     BibleReadingDB.getUserProgress(user.id),

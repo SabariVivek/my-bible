@@ -78,10 +78,15 @@ async function markChaptersAsReadBatch(userId, chapters) {
 }
 async function getUserProgress(userId) {
     // Fetch all records using pagination (Supabase default limit is 1000)
+    // Only return progress from the current year
     let allData = [];
     let from = 0;
     const pageSize = 1000;
     let hasMore = true;
+    
+    const currentYear = new Date().getFullYear();
+    const startOfYear = new Date(currentYear, 0, 1).toISOString();
+    const endOfYear = new Date(currentYear, 11, 31, 23, 59, 59).toISOString();
     
     while (hasMore) {
         const { data, error } = await supabase
@@ -89,6 +94,8 @@ async function getUserProgress(userId) {
             .select('*')
             .eq('user_id', userId)
             .eq('status', 'read')
+            .gte('marked_at', startOfYear)
+            .lte('marked_at', endOfYear)
             .range(from, from + pageSize - 1)
             .order('id', { ascending: true });
         
@@ -190,10 +197,17 @@ async function markDatesAsCompletedBatch(userId, dates) {
     return data;
 }
 async function getCompletedDates(userId) {
+    // Only return completed dates from the current year
+    const currentYear = new Date().getFullYear();
+    const startOfYear = `${currentYear}-01-01`;
+    const endOfYear = `${currentYear}-12-31`;
+    
     const { data, error } = await supabase
         .from('completed_dates')
         .select('completed_date')
         .eq('user_id', userId)
+        .gte('completed_date', startOfYear)
+        .lte('completed_date', endOfYear)
         .order('completed_date', { ascending: false })
         .limit(366);  // Max 366 days in a year (including leap year)
     if (error) throw error;
@@ -259,6 +273,64 @@ async function syncLocalDataToSupabase() {
         return { success: false, error: error.message };
     }
 }
+
+// Get yearly progress summary for a specific year
+async function getUserYearlyProgress(userId, year) {
+    const startDate = `${year}-01-01`;
+    const endDate = `${year}-12-31`;
+    
+    const { data, error } = await supabase
+        .from('reading_progress')
+        .select('*')
+        .eq('user_id', userId)
+        .eq('status', 'read')
+        .gte('marked_at', `${startDate}T00:00:00Z`)
+        .lte('marked_at', `${endDate}T23:59:59Z`);
+    
+    if (error) throw error;
+    return data || [];
+}
+
+// Check if this is the start of a new year and user has old data
+async function checkAndResetYearlyProgress(userId) {
+    try {
+        const today = new Date();
+        const currentYear = today.getFullYear();
+        const startOfYear = new Date(currentYear, 0, 1);
+        
+        // Only check if we're within the first week of the year
+        const daysIntoYear = Math.floor((today - startOfYear) / (1000 * 60 * 60 * 24));
+        if (daysIntoYear > 7) return; // Don't auto-reset after first week
+        
+        // Check if there's a localStorage flag for this year
+        const resetFlag = `yearlyResetDone_${currentYear}`;
+        if (localStorage.getItem(resetFlag)) return; // Already done this year
+        
+        // Delete old year data (previous year)
+        const previousYear = currentYear - 1;
+        const startOfPreviousYear = `${previousYear}-01-01`;
+        const endOfPreviousYear = `${previousYear}-12-31`;
+        
+        // Delete reading progress from previous year
+        await supabase
+            .from('reading_progress')
+            .delete()
+            .eq('user_id', userId)
+            .lt('marked_at', `${currentYear}-01-01T00:00:00Z`);
+        
+        // Delete completed dates from previous year
+        await supabase
+            .from('completed_dates')
+            .delete()
+            .eq('user_id', userId)
+            .lt('completed_date', `${currentYear}-01-01`);
+        
+        // Set flag so we don't do this again this year
+        localStorage.setItem(resetFlag, 'true');
+    } catch (error) {
+        console.error('Error during yearly reset:', error);
+    }
+}
 // Export functions
 window.BibleReadingDB = {
     // Users
@@ -271,6 +343,8 @@ window.BibleReadingDB = {
     markChaptersAsReadBatch,
     getUserProgress,
     clearChapterProgress,
+    getUserYearlyProgress,
+    checkAndResetYearlyProgress,
     // Daily Portions
     markPortionAsCompleted,
     unmarkPortionAsCompleted,
