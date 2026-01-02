@@ -2663,102 +2663,54 @@
                             ${(() => {
                                 const progress = calculateTimelineProgress();
                                 
-                                // Generate segmented progress bar
-                                const totalSegments = 48; // Number of segments in the circle
-                                const filledSegments = Math.round((progress.percentage / 100) * totalSegments);
-                                const segments = Array.from({ length: totalSegments }, (_, i) => i < filledSegments);
-                                
-                                // Color selection based on progress
-                                let progressColor = '#3b82f6'; // blue
-                                if (progress.percentage > 25) progressColor = '#06b6d4'; // cyan
-                                if (progress.percentage > 50) progressColor = '#10b981'; // emerald
-                                if (progress.percentage > 75) progressColor = '#f59e0b'; // amber
+                                // Progress color - yellowish red orange
+                                const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
                                     <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                        <div class="flex items-center justify-between mb-4">
+                                        <div class="flex items-center justify-between mb-6">
                                             <div class="flex items-center gap-3">
                                                 ${icons.trendingUp || '📈'}
                                                 <h3 class="text-lg font-bold">Yearly Progress</h3>
                                             </div>
-                                            <button onclick="state.showYearlyProgressDetails = !state.showYearlyProgressDetails; render();" class="text-sm font-semibold text-blue-500 hover:text-blue-400 hover:underline transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer">
-                                                ${state.showYearlyProgressDetails ? 'Hide' : 'Show'}
-                                                <span class="transition-transform ${state.showYearlyProgressDetails ? 'rotate-180' : ''}">${icons.chevronDown}</span>
-                                            </button>
                                         </div>
 
-                                        ${state.showYearlyProgressDetails ? `
-                                            <div class="mb-4">
-                                                <p class="${theme.textSecondary} text-sm mb-6">Day ${progress.dayOfYear} of 365</p>
-                                                
-                                                <!-- Segmented Circular Progress Bar -->
-                                                <div class="flex justify-center">
-                                                    <div style="width: 150px; height: 150px; position: relative;">
-                                                        <svg viewBox="0 0 200 200" class="w-full h-full" style="transform: rotate(-90deg)">
-                                                            ${segments.map((filled, i) => {
-                                                                const angle = (i / totalSegments) * 360;
-                                                                const startAngle = angle;
-                                                                const endAngle = angle + (360 / totalSegments) - 2;
-                                                                
-                                                                const radius = 70;
-                                                                const innerRadius = 55;
-                                                                
-                                                                const startRad = (startAngle * Math.PI) / 180;
-                                                                const endRad = (endAngle * Math.PI) / 180;
-                                                                
-                                                                const x1 = 100 + radius * Math.cos(startRad);
-                                                                const y1 = 100 + radius * Math.sin(startRad);
-                                                                const x2 = 100 + radius * Math.cos(endRad);
-                                                                const y2 = 100 + radius * Math.sin(endRad);
-                                                                
-                                                                const ix1 = 100 + innerRadius * Math.cos(startRad);
-                                                                const iy1 = 100 + innerRadius * Math.sin(startRad);
-                                                                const ix2 = 100 + innerRadius * Math.cos(endRad);
-                                                                const iy2 = 100 + innerRadius * Math.sin(endRad);
-                                                                
-                                                                const largeArc = (360 / totalSegments) > 180 ? 1 : 0;
-                                                                const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 ' + largeArc + ' 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 ' + largeArc + ' 0 ' + ix1 + ' ' + iy1 + ' Z';
-                                                                
-                                                                return '<path d="' + path + '" fill="' + (filled ? progressColor : (state.darkMode ? '#334155' : '#e5e7eb')) + '" opacity="' + (filled ? '1' : '0.3') + '" style="transition: fill 0.5s ease;" />';
-                                                            }).join('')}
-                                                        </svg>
-                                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                                                            <div style="font-size: 1.5em; font-weight: bold;">${progress.percentage}%</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <!-- Overall Progress Bar Only -->
+                                        <div class="mb-8">
+                                            <div class="flex items-center justify-between mb-2">
+                                                <p class="text-sm ${theme.textSecondary}">Day ${progress.dayOfYear} of 365</p>
+                                                <span class="text-2xl font-bold" style="color: ${progressColor};">${progress.percentage}%</span>
                                             </div>
-                                            
-                                            <!-- Progress details -->
-                                            <div class="grid grid-cols-2 gap-4 mt-6 pt-4 border-t ${theme.border}">
-                                                <div>
-                                                    <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Old Testament</p>
-                                                    <p class="text-xl font-bold">${progress.otChapters}/929</p>
-                                                </div>
-                                                <div>
-                                                    <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">New Testament</p>
-                                                    <p class="text-xl font-bold">${progress.ntChapters}/260</p>
-                                                </div>
+                                            <!-- Segmented Progress Bar -->
+                                            <div class="flex gap-0.5 w-full">
+                                                ${Array.from({ length: 26 }, (_, i) => {
+                                                    const segmentStart = (i * 365) / 26;
+                                                    const segmentEnd = ((i + 1) * 365) / 26;
+                                                    const isCompleted = progress.dayOfYear > segmentEnd;
+                                                    const isPartial = progress.dayOfYear > segmentStart && progress.dayOfYear <= segmentEnd;
+                                                    const partialWidth = isPartial ? ((progress.dayOfYear - segmentStart) / (segmentEnd - segmentStart)) * 100 : 0;
+                                                    
+                                                    return `<div class="flex-1 h-2 bg-gray-300 dark:bg-gray-600 rounded-sm overflow-hidden">
+                                                        <div class="h-full transition-all duration-500 ease-out" style="width: ${isCompleted ? '100' : partialWidth}%; background-color: ${isCompleted || isPartial ? progressColor : 'transparent'};"></div>
+                                                    </div>`;
+                                                }).join('')}
                                             </div>
-                                        ` : `
-                                            <div class="flex items-center justify-between">
-                                                <div>
-                                                    <p class="${theme.textSecondary} text-sm mb-1">Day ${progress.dayOfYear} of 365</p>
-                                                    <p class="text-3xl font-bold ${
-                                                        progress.percentage <= 25 ? 'text-blue-500' : 
-                                                        progress.percentage <= 50 ? 'text-cyan-500' : 
-                                                        progress.percentage <= 75 ? 'text-emerald-500' : 
-                                                        'text-amber-500'
-                                                    }">${progress.percentage}%</p>
-                                                </div>
-                                                <div class="text-right">
-                                                    <p class="${theme.textSecondary} text-sm mb-1">${progress.chaptersScheduled}/${progress.totalChapters}</p>
-                                                    <p class="${theme.textSecondary} text-xs">Chapters</p>
-                                                </div>
+                                            <!-- Horizontal bar underneath -->
+                                            <div class="mt-6 mb-8 h-px w-full bg-gray-200 dark:bg-gray-700 rounded-full"></div>
+                                        </div>
+
+                                        <!-- Testament Progress Text -->
+                                        <div class="grid grid-cols-2 gap-6">
+                                            <div>
+                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Old Testament</p>
+                                                <p class="text-xl font-bold">${progress.otChapters}/929</p>
                                             </div>
-                                        `}
-                                    </div>
-                                `;
+                                            <div>
+                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">New Testament</p>
+                                                <p class="text-xl font-bold">${progress.ntChapters}/260</p>
+                                            </div>
+                                        </div>
+                                    </div>`;
                             })()}
                         ` : `
                             <!-- Top Readers Section (This Year) -->
@@ -2823,27 +2775,27 @@
 
                             <!-- Pending Users Section -->
                             ${stats.pendingCount > 0 ? `
-                                <div class="${theme.card} rounded-xl p-6 border border-red-500 shadow-sm bg-red-50 dark:bg-red-950">
+                                <div class="rounded-xl p-6 border shadow-sm dark:bg-red-950 dark:border-red-500" style="${document.documentElement.classList.contains('dark-theme') ? '' : 'background-color: #ffe5e5; border-color: #ff7a7a;'}">
                                     <div class="flex items-center gap-3 mb-4">
                                         ${icons.clock || '⏱️'}
                                         <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
                                     </div>
-                                    <div class="grid grid-cols-2 gap-3">
+                                    <div class="space-y-3">
                                         ${stats.pendingUsers.map(user => {
                                             const userStats = getUserStats(user);
                                             return `
-                                                <div class="flex items-center justify-between p-4 bg-red-100 dark:bg-red-900 rounded-lg hover:bg-red-200 dark:hover:bg-red-800 transition-colors">
+                                                <div class="flex items-center justify-between p-4 rounded-lg transition-colors dark:bg-red-900 dark:hover:bg-red-800" style="${document.documentElement.classList.contains('dark-theme') ? '' : 'background-color: rgba(255, 122, 122, 0.2);'}">
                                                     <div class="flex items-center gap-3">
                                                         <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                        <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-sm" style="display: none;">
+                                                        <div class="w-10 h-10 rounded-full dark:bg-red-600 flex items-center justify-center text-white font-bold text-sm" style="display: none; ${document.documentElement.classList.contains('dark-theme') ? '' : 'background-color: #ff7a7a;'}">
                                                             ${user.name.charAt(0).toUpperCase()}
                                                         </div>
                                                         <div>
                                                             <h3 class="font-semibold">${user.name}</h3>
                                                             <p class="text-sm ${theme.textSecondary}">
-                                                                ${userStats.daysPending === 0 ? 'Not started' : 
-                                                                  userStats.daysPending === 1 ? '1 day' : 
-                                                                  `${userStats.daysPending} days`}
+                                                                ${userStats.daysPending === 0 ? 'Not started Yet' : 
+                                                                  userStats.daysPending === 1 ? '1 day pending' : 
+                                                                  `${userStats.daysPending} days pending`}
                                                             </p>
                                                         </div>
                                                     </div>
