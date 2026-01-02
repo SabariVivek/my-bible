@@ -2736,18 +2736,20 @@
                                 const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
-                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} ${theme.border}">
+                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} ${theme.border} relative overflow-hidden" style="background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
+                                        <div class="absolute inset-0 ${state.darkMode ? 'bg-black/60' : 'bg-slate-700/50'}"></div>
+                                        <div class="relative z-10">
                                         <div class="flex items-center justify-between mb-6">
                                             <div class="flex items-center gap-3">
                                                 ${icons.trendingUp || '📈'}
-                                                <h3 class="text-lg font-bold">Yearly Progress</h3>
+                                                <h3 class="text-lg font-bold text-gray-100">Yearly Progress</h3>
                                             </div>
                                         </div>
 
                                         <!-- Overall Progress Bar Only -->
                                         <div class="mb-8">
                                             <div class="flex items-center justify-between mb-2">
-                                                <p class="text-sm ${theme.textSecondary}">Day ${progress.dayOfYear} of 365</p>
+                                                <p class="text-sm text-gray-400">Day ${progress.dayOfYear} of 365</p>
                                                 <span class="text-2xl font-bold" style="color: ${progressColor};">${progress.percentage}%</span>
                                             </div>
                                             <!-- Segmented Progress Bar -->
@@ -2771,13 +2773,14 @@
                                         <!-- Testament Progress Text -->
                                         <div class="grid grid-cols-2 gap-6">
                                             <div>
-                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">Old Testament</p>
-                                                <p class="text-xl font-bold">${progress.otChapters}/929</p>
+                                                <p class="text-gray-400 text-xs uppercase tracking-wide mb-1">Old Testament</p>
+                                                <p class="text-xl font-bold text-gray-100">${progress.otChapters}/929</p>
                                             </div>
                                             <div>
-                                                <p class="${theme.textSecondary} text-xs uppercase tracking-wide mb-1">New Testament</p>
-                                                <p class="text-xl font-bold">${progress.ntChapters}/260</p>
+                                                <p class="text-gray-400 text-xs uppercase tracking-wide mb-1">New Testament</p>
+                                                <p class="text-xl font-bold text-gray-100">${progress.ntChapters}/260</p>
                                             </div>
+                                        </div>
                                         </div>
                                     </div>`;
                             })()}
