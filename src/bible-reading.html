@@ -2475,17 +2475,26 @@
         }
 
         // Create confetti animation
-        function createConfetti() {
+        function createConfetti(originElement = null) {
             const colors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
             const confettiCount = 50;
             
-            // Get button position for confetti origin
-            const button = document.querySelector('button[onclick="markTodayComplete()"]');
-            if (!button) return;
+            let originX, originY;
             
-            const rect = button.getBoundingClientRect();
-            const originX = rect.left + rect.width / 2;
-            const originY = rect.top + rect.height / 2;
+            if (originElement) {
+                // Get element position for confetti origin
+                const rect = originElement.getBoundingClientRect();
+                originX = rect.left + rect.width / 2;
+                originY = rect.top + rect.height / 2;
+            } else {
+                // Get button position for confetti origin (mark as completed)
+                const button = document.querySelector('button[onclick="markTodayComplete()"]');
+                if (!button) return;
+                
+                const rect = button.getBoundingClientRect();
+                originX = rect.left + rect.width / 2;
+                originY = rect.top + rect.height / 2;
+            }
             
             for (let i = 0; i < confettiCount; i++) {
                 const confetti = document.createElement('div');
@@ -2726,7 +2735,7 @@
                             })()}
                         ` : `
                             <!-- Top Readers Section (This Year) -->
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="flex items-center gap-3 mb-4">
                                     ${icons.clock || '⏱️'}
                                     <h2 class="text-lg font-bold">Top Readers</h2>
@@ -3906,6 +3915,15 @@
                 }
                 if (document.querySelector('.dashboard-container')) {
                     initDashboardTabSwipeListeners();
+                }
+                
+                // Trigger confetti when family tab is first opened
+                if (state.dashboardTab === 'family' && !state.confettiTriggeredForFamily) {
+                    const topReadersSection = document.getElementById('topReadersSection');
+                    if (topReadersSection) {
+                        createConfetti(topReadersSection);
+                        state.confettiTriggeredForFamily = true;
+                    }
                 }
             }, 0);
 
