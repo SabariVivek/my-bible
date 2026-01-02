@@ -2771,6 +2771,46 @@
             renderVersesChips();
         };
 
+        // Normalize verse data - ensure all properties are correct types
+        function normalizeVerses(verses) {
+            if (!Array.isArray(verses)) {
+                return [];
+            }
+            
+            return verses.map(v => {
+                // Handle both old and new verse formats
+                let normalized = {
+                    book: String(v.book || '').trim(),
+                    chapter: parseInt(v.chapter, 10) || 1
+                };
+                
+                // Handle old format with verseStart/verseEnd
+                if (v.verseStart !== undefined && v.verseEnd !== undefined) {
+                    normalized.verseStart = parseInt(v.verseStart, 10) || 1;
+                    normalized.verseEnd = parseInt(v.verseEnd, 10) || 1;
+                }
+                // Handle new format with verses array
+                else if (Array.isArray(v.verses) && v.verses.length > 0) {
+                    const verseNums = v.verses.map(num => parseInt(num, 10)).filter(num => !isNaN(num));
+                    if (verseNums.length > 0) {
+                        normalized.verseStart = Math.min(...verseNums);
+                        normalized.verseEnd = Math.max(...verseNums);
+                        normalized.verses = verseNums;
+                    }
+                }
+                
+                // Regenerate display text based on actual verse numbers
+                if (normalized.verseStart && normalized.verseEnd) {
+                    const verseRange = normalized.verseStart === normalized.verseEnd 
+                        ? normalized.verseStart 
+                        : `${normalized.verseStart} – ${normalized.verseEnd}`;
+                    normalized.display = `${normalized.book} ${normalized.chapter}:${verseRange}`;
+                }
+                
+                return normalized;
+            }).filter(v => v.book && !isNaN(v.verseStart) && !isNaN(v.verseEnd));
+        }
+
         // Load sermons from Supabase
         async function loadSermonsFromSupabase() {
             const loader = document.getElementById('sermon-loader');
@@ -2808,7 +2848,7 @@
                         title: item.title,
                         tamilTitle: item.tamil_title || '',
                         date: item.sermon_date,
-                        verses: item.verses || [],
+                        verses: normalizeVerses(item.verses || []),
                         is_favorite: item.is_favorite || false,
                         _synced: true  // Mark as synced from Supabase
                     }));
@@ -2833,7 +2873,12 @@
             const saved = localStorage.getItem('sermons');
             if (saved) {
                 try {
-                    sermons = JSON.parse(saved);
+                    const loaded = JSON.parse(saved);
+                    // Normalize verse data for all loaded sermons
+                    sermons = loaded.map(s => ({
+                        ...s,
+                        verses: normalizeVerses(s.verses || [])
+                    }));
                 } catch (e) {
                 }
             }
