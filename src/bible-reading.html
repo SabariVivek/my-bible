@@ -2753,6 +2753,48 @@
                                 `;
                             })()}
                         ` : `
+                            <!-- Top Readers Section (This Year) -->
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    ${icons.clock || '⏱️'}
+                                    <h2 class="text-lg font-bold">Top Readers</h2>
+                                </div>
+                                <div class="flex gap-3 overflow-x-auto pb-4">
+                                    ${state.users
+                                        .map(user => {
+                                            // Calculate streak
+                                            let streak = 0;
+                                            if (user.completedDates) {
+                                                const today = new Date();
+                                                for (let i = 0; i < 365; i++) {
+                                                    const checkDate = new Date(today);
+                                                    checkDate.setDate(checkDate.getDate() - i);
+                                                    const dateKey = `${checkDate.getFullYear()}-${checkDate.getMonth() + 1}-${checkDate.getDate()}`;
+                                                    if (user.completedDates[dateKey]) {
+                                                        streak++;
+                                                    } else if (i > 0) {
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            return { user, stats: getUserStats(user), streak };
+                                        })
+                                        .filter(({ streak }) => streak >= 1)
+                                        .sort((a, b) => b.streak - a.streak)
+                                        .map(({ user, stats, streak }) => {
+                                            return `
+                                                <div class="flex flex-col items-center p-3 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors flex-shrink-0">
+                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover mb-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                    <div class="w-10 h-10 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm mb-2" style="display: none;">
+                                                        ${user.name.charAt(0).toUpperCase()}
+                                                    </div>
+                                                    <p class="text-sm font-semibold">🔥 ${streak}</p>
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                </div>
+                            </div>
+
                             <!-- Yearly Progress (Simplified) - TOP OF FAMILY TAB -->
                             ${(() => {
                                 const progress = calculateTimelineProgress();
@@ -2875,33 +2917,33 @@
 
                             <!-- Pending Users Section -->
                             ${stats.pendingCount > 0 ? `
-                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="${theme.card} rounded-xl p-6 border border-red-500 shadow-sm bg-red-50 dark:bg-red-950">
                                     <div class="flex items-center gap-3 mb-4">
                                         ${icons.clock || '⏱️'}
                                         <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
                                     </div>
-                                    <div class="space-y-3">
+                                    <div class="grid grid-cols-2 gap-3">
                                         ${stats.pendingUsers.map(user => {
                                             const userStats = getUserStats(user);
                                             return `
-                                                <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
+                                                <div class="flex items-center justify-between p-4 bg-red-100 dark:bg-red-900 rounded-lg hover:bg-red-200 dark:hover:bg-red-800 transition-colors">
                                                     <div class="flex items-center gap-3">
                                                         <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                        <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm" style="display: none;">
+                                                        <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white font-bold text-sm" style="display: none;">
                                                             ${user.name.charAt(0).toUpperCase()}
                                                         </div>
                                                         <div>
                                                             <h3 class="font-semibold">${user.name}</h3>
                                                             <p class="text-sm ${theme.textSecondary}">
-                                                                ${userStats.daysPending === 0 ? 'Not started today' : 
-                                                                  userStats.daysPending === 1 ? '1 day pending' : 
-                                                                  `${userStats.daysPending} days pending`}
+                                                                ${userStats.daysPending === 0 ? 'Not started' : 
+                                                                  userStats.daysPending === 1 ? '1 day' : 
+                                                                  `${userStats.daysPending} days`}
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    <button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center justify-center" title="View user progress">
+                                                    ${state.isAdmin ? `<button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center justify-center" title="View user progress">
                                                         ${icons.chevronRight || '→'}
-                                                    </button>
+                                                    </button>` : ''}
                                                 </div>
                                             `;
                                         }).join('')}
@@ -2915,33 +2957,27 @@
                                 </div>
                             `}
 
-                            <!-- Top Readers Section (All Time) -->
+                            <!-- All Users Section -->
                             <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="flex items-center gap-3 mb-4">
-                                    ${icons.clock || '⏱️'}
-                                    <h2 class="text-lg font-bold">Top Readers (This Year)</h2>
+                                    ${icons.users || '👥'}
+                                    <h2 class="text-lg font-bold">All Users</h2>
                                 </div>
-                                <div class="space-y-3">
+                                <div class="grid grid-cols-2 gap-4">
                                     ${state.users
                                         .map(user => ({ user, stats: getUserStats(user) }))
                                         .sort((a, b) => b.stats.totalProgress - a.stats.totalProgress)
                                         .map(({ user, stats }) => {
                                             const lastReadDate = stats.lastReadDate ? stats.lastReadDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Never';
                                             return `
-                                                <div class="flex items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors">
-                                                    <div class="flex items-center gap-3 flex-1">
-                                                        <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                        <div class="w-10 h-10 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm" style="display: none;">
-                                                            ${user.name.charAt(0).toUpperCase()}
-                                                        </div>
-                                                        <div class="flex-1">
-                                                            <h3 class="font-semibold">${user.name}</h3>
-                                                            <p class="text-sm ${theme.textSecondary}">Last read: ${lastReadDate}</p>
-                                                        </div>
+                                                <div class="flex flex-col items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-center">
+                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover mb-3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                    <div class="w-12 h-12 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm mb-3" style="display: none;">
+                                                        ${user.name.charAt(0).toUpperCase()}
                                                     </div>
-                                                    <div class="text-right">
-                                                        <p class="text-base font-bold text-blue-500">${stats.totalProgress.toFixed(1)}%</p>
-                                                    </div>
+                                                    <h3 class="font-semibold text-sm">${user.name}</h3>
+                                                    <p class="text-xs ${theme.textSecondary} mb-2">Last read: ${lastReadDate}</p>
+                                                    <p class="text-sm font-bold text-blue-500">${stats.totalProgress.toFixed(1)}%</p>
                                                 </div>
                                             `;
                                         }).join('')}
