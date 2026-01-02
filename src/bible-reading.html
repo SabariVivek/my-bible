@@ -2669,10 +2669,10 @@
                         const userStats = state.currentUser ? getUserStats(state.currentUser) : null;
                         return (userStats && userStats.daysPending > 0) ? `
                             <div class="py-0">
-                                <div class="p-4" style="${document.documentElement.classList.contains('dark-theme') ? 'background: linear-gradient(to right, #9f1212, #b91c1c);' : 'background: linear-gradient(to right, #ffcccc, #ffe5e5);'}">
+                                <div class="p-4 ${state.darkMode ? 'bg-red-900' : 'bg-red-100'}">
                                     <div class="flex items-center justify-center gap-3 max-w-7xl mx-auto">
                                         ${icons.clock || '⏱️'}
-                                        <p class="font-semibold text-sm">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
+                                        <p class="font-semibold text-sm ${state.darkMode ? 'text-white' : 'text-gray-900'}">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
                                     </div>
                                 </div>
                             </div>
@@ -2736,7 +2736,7 @@
                                 const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
-                                    <div class="rounded-xl p-6 border shadow-sm" style="${document.documentElement.classList.contains('dark-theme') ? 'background-color: rgba(34, 197, 94, 0.12); border: 1px solid #22c55eaa;' : 'background-color: #f0fdf4; border: 1px solid #86efac;'}">
+                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} ${theme.border}">
                                         <div class="flex items-center justify-between mb-6">
                                             <div class="flex items-center gap-3">
                                                 ${icons.trendingUp || '📈'}
