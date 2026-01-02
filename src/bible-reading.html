@@ -1460,7 +1460,7 @@
 
         // State
         let state = {
-            darkMode: localStorage.getItem('readingTrackerTheme') === 'dark' || !localStorage.getItem('readingTrackerTheme'),
+            darkMode: localStorage.getItem('bibleTrackerTheme') !== 'light',
             currentUser: null,
             users: [],
             showUserModal: false,
