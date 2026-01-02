@@ -2659,143 +2659,7 @@
                                 </div>
                             ` : ''}
 
-                            <!-- Individual Progress Section -->
-                            ${(() => {
-                                const otProgress = calculateProgress('old');
-                                const ntProgress = calculateProgress('new');
-                                return `
-                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                    <div class="flex items-center gap-3 mb-6">
-                                        ${icons.trendingUp}
-                                        <h3 class="text-lg font-bold">Track My Progress</h3>
-                                    </div>
-                                    <div class="grid grid-cols-2 gap-6">
-                                        <!-- Old Testament -->
-                                        <div class="flex flex-col items-center p-4 ${theme.accent} rounded-lg">
-                                            <div class="w-24 h-24 flex-shrink-0 mb-4 relative">
-                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
-                                                    ${(() => {
-                                                        const segments = [];
-                                                        const totalSegments = 24;
-                                                        const filledSegments = Math.round((otProgress.percentage / 100) * totalSegments);
-                                                        for (let i = 0; i < totalSegments; i++) {
-                                                            const filled = i < filledSegments;
-                                                            const angle = (i / totalSegments) * 360;
-                                                            const startAngle = angle;
-                                                            const endAngle = angle + (360 / totalSegments) - 2;
-                                                            const radius = 70;
-                                                            const innerRadius = 55;
-                                                            const startRad = (startAngle * Math.PI) / 180;
-                                                            const endRad = (endAngle * Math.PI) / 180;
-                                                            const x1 = 100 + radius * Math.cos(startRad);
-                                                            const y1 = 100 + radius * Math.sin(startRad);
-                                                            const x2 = 100 + radius * Math.cos(endRad);
-                                                            const y2 = 100 + radius * Math.sin(endRad);
-                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
-                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
-                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
-                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
-                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
-                                                            const segmentColor = filled ? '#f59e0b' : (state.darkMode ? '#475569' : '#cbd5e1');
-                                                            segments.push('<path d=\"' + path + '\" fill=\"' + segmentColor + '\" opacity=\"' + (filled ? '1' : '0.5') + '\" />');
-                                                        }
-                                                        return segments.join('');
-                                                    })()}
-                                                </svg>
-                                                <div class="absolute inset-0 flex items-center justify-center">
-                                                    <span class="text-sm font-bold text-amber-500">${otProgress.percentage}%</span>
-                                                </div>
-                                            </div>
-                                            <p class="${theme.textSecondary} text-xs font-semibold mb-2">Old Testament</p>
-                                            <p class="text-sm font-bold">${otProgress.read}/${otProgress.total}</p>
-                                        </div>
-                                        <!-- New Testament -->
-                                        <div class="flex flex-col items-center p-4 ${theme.accent} rounded-lg">
-                                            <div class="w-24 h-24 flex-shrink-0 mb-4 relative">
-                                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
-                                                    ${(() => {
-                                                        const segments = [];
-                                                        const totalSegments = 24;
-                                                        const filledSegments = Math.round((ntProgress.percentage / 100) * totalSegments);
-                                                        for (let i = 0; i < totalSegments; i++) {
-                                                            const filled = i < filledSegments;
-                                                            const angle = (i / totalSegments) * 360;
-                                                            const startAngle = angle;
-                                                            const endAngle = angle + (360 / totalSegments) - 2;
-                                                            const radius = 70;
-                                                            const innerRadius = 55;
-                                                            const startRad = (startAngle * Math.PI) / 180;
-                                                            const endRad = (endAngle * Math.PI) / 180;
-                                                            const x1 = 100 + radius * Math.cos(startRad);
-                                                            const y1 = 100 + radius * Math.sin(startRad);
-                                                            const x2 = 100 + radius * Math.cos(endRad);
-                                                            const y2 = 100 + radius * Math.sin(endRad);
-                                                            const ix1 = 100 + innerRadius * Math.cos(startRad);
-                                                            const iy1 = 100 + innerRadius * Math.sin(startRad);
-                                                            const ix2 = 100 + innerRadius * Math.cos(endRad);
-                                                            const iy2 = 100 + innerRadius * Math.sin(endRad);
-                                                            const path = 'M ' + x1 + ' ' + y1 + ' A ' + radius + ' ' + radius + ' 0 0 1 ' + x2 + ' ' + y2 + ' L ' + ix2 + ' ' + iy2 + ' A ' + innerRadius + ' ' + innerRadius + ' 0 0 0 ' + ix1 + ' ' + iy1 + ' Z';
-                                                            const segmentColor = filled ? '#10b981' : (state.darkMode ? '#475569' : '#cbd5e1');
-                                                            segments.push('<path d=\"' + path + '\" fill=\"' + segmentColor + '\" opacity=\"' + (filled ? '1' : '0.5') + '\" />');
-                                                        }
-                                                        return segments.join('');
-                                                    })()}
-                                                </svg>
-                                                <div class="absolute inset-0 flex items-center justify-center">
-                                                    <span class="text-sm font-bold text-emerald-500">${ntProgress.percentage}%</span>
-                                                </div>
-                                            </div>
-                                            <p class="${theme.textSecondary} text-xs font-semibold mb-2">New Testament</p>
-                                            <p class="text-sm font-bold">${ntProgress.read}/${ntProgress.total}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                `;
-                            })()}
-                        ` : `
-                            <!-- Top Readers Section (This Year) -->
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                <div class="flex items-center gap-3 mb-4">
-                                    ${icons.clock || '⏱️'}
-                                    <h2 class="text-lg font-bold">Top Readers</h2>
-                                </div>
-                                <div class="flex gap-3 overflow-x-auto pb-4">
-                                    ${state.users
-                                        .map(user => {
-                                            // Calculate streak
-                                            let streak = 0;
-                                            if (user.completedDates) {
-                                                const today = new Date();
-                                                for (let i = 0; i < 365; i++) {
-                                                    const checkDate = new Date(today);
-                                                    checkDate.setDate(checkDate.getDate() - i);
-                                                    const dateKey = `${checkDate.getFullYear()}-${checkDate.getMonth() + 1}-${checkDate.getDate()}`;
-                                                    if (user.completedDates[dateKey]) {
-                                                        streak++;
-                                                    } else if (i > 0) {
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                            return { user, stats: getUserStats(user), streak };
-                                        })
-                                        .filter(({ streak }) => streak >= 1)
-                                        .sort((a, b) => b.streak - a.streak)
-                                        .map(({ user, stats, streak }) => {
-                                            return `
-                                                <div class="flex flex-col items-center p-3 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors flex-shrink-0">
-                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover mb-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                    <div class="w-10 h-10 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm mb-2" style="display: none;">
-                                                        ${user.name.charAt(0).toUpperCase()}
-                                                    </div>
-                                                    <p class="text-sm font-semibold">🔥 ${streak}</p>
-                                                </div>
-                                            `;
-                                        }).join('')}
-                                </div>
-                            </div>
-
-                            <!-- Yearly Progress (Simplified) - TOP OF FAMILY TAB -->
+                            <!-- Yearly Progress - IN MY PLAN TAB -->
                             ${(() => {
                                 const progress = calculateTimelineProgress();
                                 
@@ -2896,6 +2760,48 @@
                                     </div>
                                 `;
                             })()}
+                        ` : `
+                            <!-- Top Readers Section (This Year) -->
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                <div class="flex items-center gap-3 mb-4">
+                                    ${icons.clock || '⏱️'}
+                                    <h2 class="text-lg font-bold">Top Readers</h2>
+                                </div>
+                                <div class="flex gap-3 overflow-x-auto pb-4">
+                                    ${state.users
+                                        .map(user => {
+                                            // Calculate streak
+                                            let streak = 0;
+                                            if (user.completedDates) {
+                                                const today = new Date();
+                                                for (let i = 0; i < 365; i++) {
+                                                    const checkDate = new Date(today);
+                                                    checkDate.setDate(checkDate.getDate() - i);
+                                                    const dateKey = `${checkDate.getFullYear()}-${checkDate.getMonth() + 1}-${checkDate.getDate()}`;
+                                                    if (user.completedDates[dateKey]) {
+                                                        streak++;
+                                                    } else if (i > 0) {
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            return { user, stats: getUserStats(user), streak };
+                                        })
+                                        .filter(({ streak }) => streak >= 1)
+                                        .sort((a, b) => b.streak - a.streak)
+                                        .map(({ user, stats, streak }) => {
+                                            return `
+                                                <div class="flex flex-col items-center p-3 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors flex-shrink-0">
+                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover mb-2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                    <div class="w-10 h-10 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm mb-2" style="display: none;">
+                                                        ${user.name.charAt(0).toUpperCase()}
+                                                    </div>
+                                                    <p class="text-sm font-semibold">🔥 ${streak}</p>
+                                                </div>
+                                            `;
+                                        }).join('')}
+                                </div>
+                            </div>
 
                             <!-- Stats Grid -->
                             <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
