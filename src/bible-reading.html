@@ -1492,6 +1492,7 @@
             } else if (state.currentUser && !state.showDashboard) {
                 // If we're in a profile detail page, go back to dashboard
                 state.showDashboard = true;
+                startDashboardSync();  // Restart sync when returning to dashboard
                 render();
                 // Push a new state so the next back button works correctly
                 window.history.pushState({ page: 'dashboard' }, '', window.location.href);
@@ -1499,6 +1500,11 @@
                 // If we're in dashboard or user selection, exit the Bible Reading page
                 window.location.href = '../index.html';
             }
+        });
+
+        // Stop sync when leaving the page
+        window.addEventListener('beforeunload', () => {
+            stopDashboardSync();
         });
 
         // Push initial state to history so back button behavior works correctly
@@ -1591,10 +1597,6 @@
             }
             
             const totalProgress = (totalChaptersRead / 1189) * 100;
-            
-            if (user.name === 'Anuradha' || user.name === 'Udhay') {
-                console.log(`${user.name} - chaptersRead: ${totalChaptersRead}, progress: ${user.progress ? Object.keys(user.progress).length : 'no progress'}, totalProgress: ${totalProgress.toFixed(2)}%`);
-            }
             
             return {
                 hasReadToday,
@@ -2009,6 +2011,47 @@
 
         // Load all users' progress in background (non-blocking)
         let loadingAllUsersPromise = null;
+        let dashboardSyncInterval = null;
+
+        // Start periodic sync for dashboard data
+        function startDashboardSync() {
+            // Clear any existing interval
+            if (dashboardSyncInterval) {
+                clearInterval(dashboardSyncInterval);
+            }
+
+            // Sync every 5 seconds when dashboard is visible
+            dashboardSyncInterval = setInterval(async () => {
+                if (state.showDashboard && !state.showAdminView && state.currentUser) {
+                    try {
+                        // Reload all users' progress data
+                        const refreshPromises = state.users.map(user => 
+                            loadUserProgress(user).catch(error => {
+                                console.error(`Error syncing ${user.name}:`, error);
+                            })
+                        );
+                        
+                        await Promise.all(refreshPromises);
+                        
+                        // Re-render dashboard to reflect changes
+                        if (state.showDashboard && !state.showAdminView) {
+                            renderDashboardOnly();
+                        }
+                    } catch (error) {
+                        console.error('Error in dashboard sync:', error);
+                    }
+                }
+            }, 5000); // Sync every 5 seconds
+        }
+
+        // Stop periodic sync
+        function stopDashboardSync() {
+            if (dashboardSyncInterval) {
+                clearInterval(dashboardSyncInterval);
+                dashboardSyncInterval = null;
+            }
+        }
+
         async function loadAllUsersProgressInBackground() {
             // If already loading, return existing promise
             if (loadingAllUsersPromise) {
@@ -2127,6 +2170,7 @@
             state.currentUser = user;
             state.showDashboard = true;  // Show dashboard after selecting user
             state.dashboardStatsLoaded = false;  // Reset stats loading flag
+            startDashboardSync();  // Start periodic sync for real-time updates
             
             try {
                 // Load user's progress if not already loaded
@@ -2165,6 +2209,7 @@
                 state.currentUser = user;
                 state.showDashboard = true;
                 state.dashboardStatsLoaded = false;
+                startDashboardSync();  // Start periodic sync for real-time updates
                 
                 // Save selected user to localStorage for auto-loading on next visit
                 localStorage.setItem('selectedNonAdminUserId', userId.toString());
@@ -2600,7 +2645,7 @@
                                             ${icons.settings}
                                         </button>
                                     ` : `
-                                        <button onclick="state.currentUser = null; state.showDashboard = false; render();" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all" title="Change Profile">
+                                        <button onclick="state.currentUser = null; state.showDashboard = false; stopDashboardSync(); render();" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all" title="Change Profile">
                                             ${(state.currentUser) ? `
                                                 <img src="../resources/profiles/${state.currentUser.name.toLowerCase()}.png" alt="${state.currentUser.name}" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                                 <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white" style="display: none;">
@@ -2673,7 +2718,7 @@
                                 }).join('')}
                             </div>                                            <!-- Action Buttons -->
                                             <div class="mt-6">
-                                                <button onclick="state.showDashboard = false; render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
+                                                <button onclick="state.showDashboard = false; stopDashboardSync(); render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
                                                     ${icons.checkCircle}
                                                     Track My Progress
                                                 </button>
@@ -2740,7 +2785,7 @@
                             <!-- Top Readers Section (This Year) -->
                             <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="flex items-center gap-3 mb-4">
-                                    ${icons.clock || '⏱️'}
+                                    ${icons.trophy || '🏆'}
                                     <h2 class="text-lg font-bold">Top Readers</h2>
                                 </div>
                                 <div class="flex gap-3 overflow-x-auto pb-4">
@@ -2823,7 +2868,7 @@
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    ${state.isAdmin ? `<button onclick="switchUser(${user.id}); state.showDashboard = false; render();" class="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center justify-center" title="View user progress">
+                                                    ${state.isAdmin ? `<button onclick="switchUser(${user.id}); state.showDashboard = false; stopDashboardSync(); render();" class="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center justify-center" title="View user progress">
                                                         ${icons.chevronRight || '→'}
                                                     </button>` : ''}
                                                 </div>
@@ -2858,7 +2903,6 @@
                                                         ${user.name.charAt(0).toUpperCase()}
                                                     </div>
                                                     <h3 class="font-semibold text-sm">${user.name}</h3>
-                                                    <p class="text-xs ${theme.textSecondary} mb-2">Last read: ${lastReadDate}</p>
                                                     <p class="text-sm font-bold text-blue-500">${stats.totalProgress.toFixed(1)}%</p>
                                                 </div>
                                             `;
@@ -2870,7 +2914,7 @@
                     </div>
 
                     <!-- Bottom Navigation Bar -->
-                    <div class="fixed bottom-0 left-0 right-0 ${theme.card} border-t ${theme.border} z-40">
+                    <div class="fixed bottom-0 left-0 right-0 ${theme.card} ${theme.border} z-40" style="border-top-width: 1.5px;">
                         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600' : theme.textSecondary}" data-tab="my-plan">
                                 ${icons.calendar || '📅'}
@@ -3992,6 +4036,7 @@
                             state.currentUser = savedUser;
                             state.showDashboard = true;
                             state.skipLoadingScreen = true;
+                            startDashboardSync();  // Start periodic sync for real-time updates
                             await loadUserProgress(savedUser);
                         } else {
                             // Saved user doesn't exist anymore, clear the saved preference
