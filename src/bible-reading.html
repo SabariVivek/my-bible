@@ -2667,7 +2667,7 @@
                                 const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
-                                    <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                    <div class="rounded-xl p-6 border shadow-sm" style="${document.documentElement.classList.contains('dark-theme') ? 'background-color: rgba(120, 170, 255, 0.12); border: 1px solid #78aaffaa;' : 'background-color: #e7f1ff; border: 1px solid #78aaff;'}">
                                         <div class="flex items-center justify-between mb-6">
                                             <div class="flex items-center gap-3">
                                                 ${icons.trendingUp || '📈'}
