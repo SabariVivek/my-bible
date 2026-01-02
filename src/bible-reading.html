@@ -2789,7 +2789,7 @@
                             <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="flex items-center gap-3 mb-4">
                                     ${icons.trophy || '🏆'}
-                                    <h2 class="text-lg font-bold">Top Readers</h2>
+                                    <h2 class="text-lg font-bold">Current Streaks</h2>
                                 </div>
                                 <div class="flex gap-3 overflow-x-auto pb-4">
                                     ${state.users
@@ -2917,13 +2917,13 @@
                     </div>
 
                     <!-- Bottom Navigation Bar -->
-                    <div class="fixed bottom-0 left-0 right-0 ${theme.card} ${theme.border} z-40" style="border-top-width: 1.5px;">
-                        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'my-plan' ? 'text-blue-600' : theme.textSecondary}" data-tab="my-plan">
+                    <div class="fixed bottom-0 left-0 right-0 ${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.border} z-40" style="border-top-width: 1.5px;">
+                        <div class="flex items-center justify-between h-16">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'my-plan' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="my-plan">
                                 ${icons.calendar || '📅'}
                                 <span class="text-xs font-semibold">My Plan</span>
                             </button>
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'family' ? 'text-blue-600' : theme.textSecondary}" data-tab="family">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'family' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="family">
                                 ${icons.users || '👥'}
                                 <span class="text-xs font-semibold">Family</span>
                             </button>
