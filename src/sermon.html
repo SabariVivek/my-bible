@@ -3214,7 +3214,7 @@
 
             // Populate detail sheet
             const versesHtml = sermon.verses && sermon.verses.length > 0
-                ? sermon.verses.map(v => `<span class="sermon-verse-badge sermon-verse-clickable" onclick="openVerseInBible('${v.book}', ${v.chapter}, ${v.verseStart}, ${v.verseEnd})" style="cursor: pointer;">${v.display}</span>`).join('')
+                ? sermon.verses.map(v => `<span class="sermon-verse-badge sermon-verse-clickable" onclick="openVerseInBible('${v.book}', ${parseInt(v.chapter)}, ${parseInt(v.verseStart)}, ${parseInt(v.verseEnd)})" style="cursor: pointer;">${v.display}</span>`).join('')
                 : 'No verses added';
 
             // Build action buttons based on admin status
