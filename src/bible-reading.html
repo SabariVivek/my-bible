@@ -2619,24 +2619,27 @@
                         </div>
                     </div>
 
+                    <!-- Pending Days Banner - Docked to bottom of header -->
+                    ${(() => {
+                        const userStats = state.currentUser ? getUserStats(state.currentUser) : null;
+                        return (userStats && userStats.daysPending > 0) ? `
+                            <div class="py-0">
+                                <div class="p-4" style="${document.documentElement.classList.contains('dark-theme') ? 'background: linear-gradient(to right, #9f1212, #b91c1c);' : 'background: linear-gradient(to right, #ffcccc, #ffe5e5);'}">
+                                    <div class="flex items-center justify-center gap-3 max-w-7xl mx-auto">
+                                        ${icons.clock || '⏱️'}
+                                        <p class="font-semibold text-sm">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ` : '';
+                    })()}
+
                     <!-- Tab Navigation - Removed from top -->
 
                     <div class="dashboard-tabs-content">
                         <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
                         ${state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
-                            <!-- Pending Days Banner -->
-                            ${(() => {
-                                const userStats = getUserStats(state.currentUser);
-                                return userStats.daysPending > 0 ? `
-                                    <div class="rounded-lg p-4 border-l-4" style="${document.documentElement.classList.contains('dark-theme') ? 'background-color: rgb(127 29 29 / var(--tw-bg-opacity, 1)); border-left-color: #d3caca;' : 'background-color: #ffe5e5; border-left-color: #d3caca;'} border-left-width: 4px;">
-                                        <div class="flex items-center gap-3">
-                                            ${icons.clock || '⏱️'}
-                                            <p class="font-semibold text-sm">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
-                                        </div>
-                                    </div>
-                                ` : '';
-                            })()}
                             ${todayReading ? `
                                 <div class="reading-card-container">
                                     <div class="reading-card-wrapper dashboard-reading-card-wrapper">
