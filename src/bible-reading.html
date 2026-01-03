@@ -2950,15 +2950,15 @@
                             <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                 <div class="grid grid-cols-3 gap-6">
                                     <div class="text-center">
-                                        <p class="text-3xl font-bold text-emerald-500 mb-2">${stats.completedCount}</p>
+                                        <p class="text-3xl font-bold text-green-500 mb-2">${stats.completedCount}</p>
                                         <p class="${theme.textSecondary} text-sm">Completed</p>
                                     </div>
                                     <div class="text-center border-l border-r ${theme.border}">
-                                        <p class="text-3xl font-bold text-orange-500 mb-2">${stats.pendingCount}</p>
+                                        <p class="text-3xl font-bold text-rose-500 mb-2">${stats.pendingCount}</p>
                                         <p class="${theme.textSecondary} text-sm">Pending</p>
                                     </div>
                                     <div class="text-center">
-                                        <p class="text-3xl font-bold text-blue-500 mb-2">${stats.totalUsers}</p>
+                                        <p class="text-3xl font-bold text-violet-500 mb-2">${stats.totalUsers}</p>
                                         <p class="${theme.textSecondary} text-sm">Total Users</p>
                                     </div>
                                 </div>
@@ -2972,7 +2972,13 @@
                                         <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
                                     </div>
                                     <div class="space-y-3">
-                                        ${stats.pendingUsers.map(user => {
+                                        ${stats.pendingUsers
+                                            .sort((a, b) => {
+                                                const aStats = getUserStats(a);
+                                                const bStats = getUserStats(b);
+                                                return bStats.daysPending - aStats.daysPending;
+                                            })
+                                            .map(user => {
                                             const userStats = getUserStats(user);
                                             return `
                                                 <div class="pending-user-item flex items-center justify-between p-4 rounded-lg transition-colors dark:bg-red-900 dark:hover:bg-red-800 bg-red-100">
