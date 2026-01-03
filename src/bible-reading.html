@@ -2930,7 +2930,7 @@
 
                             <!-- Pending Users Section -->
                             ${stats.pendingCount > 0 ? `
-                                <div class="rounded-xl p-6 border shadow-sm dark:bg-red-950 dark:border-red-500" style="${document.documentElement.classList.contains('dark-theme') ? '' : 'background-color: #ffe5e5; border-color: #ff7a7a;'}">
+                                <div class="pending-users-container rounded-xl p-6 border shadow-sm dark:bg-red-950 dark:border-red-500 bg-red-50 border-red-300">
                                     <div class="flex items-center gap-3 mb-4">
                                         ${icons.clock || '⏱️'}
                                         <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
@@ -2939,10 +2939,10 @@
                                         ${stats.pendingUsers.map(user => {
                                             const userStats = getUserStats(user);
                                             return `
-                                                <div class="flex items-center justify-between p-4 rounded-lg transition-colors dark:bg-red-900 dark:hover:bg-red-800" style="${document.documentElement.classList.contains('dark-theme') ? '' : 'background-color: rgba(255, 122, 122, 0.2);'}">
+                                                <div class="pending-user-item flex items-center justify-between p-4 rounded-lg transition-colors dark:bg-red-900 dark:hover:bg-red-800 bg-red-100">
                                                     <div class="flex items-center gap-3">
                                                         <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-10 h-10 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                        <div class="w-10 h-10 rounded-full dark:bg-red-600 flex items-center justify-center text-white font-bold text-sm" style="display: none; ${document.documentElement.classList.contains('dark-theme') ? '' : 'background-color: #ff7a7a;'}">
+                                                        <div class="pending-user-avatar w-10 h-10 rounded-full dark:bg-red-600 bg-red-400 flex items-center justify-center text-white font-bold text-sm" style="display: none;">
                                                             ${user.name.charAt(0).toUpperCase()}
                                                         </div>
                                                         <div>
