@@ -13,13 +13,13 @@
       "src": "resources/icons/bible.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "resources/icons/bible.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ],
   "categories": [
@@ -28,6 +28,6 @@
     "lifestyle"
   ],
   "screenshots": [],
-  "version": "20260103125645",
-  "last_updated": "2026-01-03T07:26:45.320Z"
+  "version": "20260103132148",
+  "last_updated": "2026-01-03T07:51:48.551Z"
 }
