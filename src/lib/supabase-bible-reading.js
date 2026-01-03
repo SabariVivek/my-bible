@@ -331,6 +331,63 @@ async function checkAndResetYearlyProgress(userId) {
         console.error('Error during yearly reset:', error);
     }
 }
+// Store active subscriptions
+let activeSubscriptions = [];
+
+// Real-time subscriptions for live updates
+async function subscribeToCompletedDates(onDataChange) {
+    const subscription = supabase
+        .on('postgres_changes', {
+            event: '*',
+            schema: 'public',
+            table: 'completed_dates'
+        }, (payload) => {
+            onDataChange(payload);
+        })
+        .subscribe();
+    
+    activeSubscriptions.push(subscription);
+    return subscription;
+}
+
+async function subscribeToReadingProgress(onDataChange) {
+    const subscription = supabase
+        .on('postgres_changes', {
+            event: '*',
+            schema: 'public',
+            table: 'reading_progress'
+        }, (payload) => {
+            onDataChange(payload);
+        })
+        .subscribe();
+    
+    activeSubscriptions.push(subscription);
+    return subscription;
+}
+
+async function subscribeToDailyPortions(onDataChange) {
+    const subscription = supabase
+        .on('postgres_changes', {
+            event: '*',
+            schema: 'public',
+            table: 'daily_portions'
+        }, (payload) => {
+            onDataChange(payload);
+        })
+        .subscribe();
+    
+    activeSubscriptions.push(subscription);
+    return subscription;
+}
+
+// Cleanup subscriptions
+function unsubscribeAll() {
+    activeSubscriptions.forEach(sub => {
+        supabase.removeSubscription(sub);
+    });
+    activeSubscriptions = [];
+}
+
 // Export functions
 window.BibleReadingDB = {
     // Users
@@ -357,5 +414,10 @@ window.BibleReadingDB = {
     getUserProgressSummary,
     getAllUsersProgressSummary,
     // Sync
-    syncLocalDataToSupabase
+    syncLocalDataToSupabase,
+    // Real-time subscriptions
+    subscribeToCompletedDates,
+    subscribeToReadingProgress,
+    subscribeToDailyPortions,
+    unsubscribeAll
 };

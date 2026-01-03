@@ -1358,6 +1358,11 @@
                     await BibleReadingDB.markPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
                 }
                 
+                // Update both current view and dashboard if visible
+                if (state.showDashboard) {
+                    renderDashboardOnly();
+                }
+                
                 // Only update UI - don't auto-complete the entire day
                 render();
             } catch (error) {
@@ -2052,6 +2057,79 @@
             }
         }
 
+        // Setup real-time subscriptions for live updates
+        function setupRealtimeSubscriptions() {
+            if (!window.BibleReadingDB) return;
+            
+            // Subscribe to completed dates changes
+            BibleReadingDB.subscribeToCompletedDates((payload) => {
+                console.log('Completed dates changed:', payload);
+                
+                // Update affected user's completedDates in state
+                const user = state.users.find(u => u.id === payload.new?.user_id || payload.old?.user_id);
+                if (user && payload.new) {
+                    const date = payload.new.completed_date;
+                    if (!user.completedDates) user.completedDates = {};
+                    user.completedDates[date] = true;
+                    
+                    // Re-render if on dashboard
+                    if (state.showDashboard) {
+                        renderDashboardOnly();
+                    }
+                }
+            });
+            
+            // Subscribe to reading progress changes
+            BibleReadingDB.subscribeToReadingProgress((payload) => {
+                console.log('Reading progress changed:', payload);
+                
+                // Update affected user's progress in state
+                const user = state.users.find(u => u.id === payload.new?.user_id || payload.old?.user_id);
+                if (user && payload.new) {
+                    const key = `${payload.new.book_name}-${payload.new.chapter_number}`;
+                    if (!user.progress) user.progress = {};
+                    user.progress[key] = payload.new.status;
+                    
+                    // Re-render if viewing this user or on dashboard
+                    if ((state.currentUser && state.currentUser.id === user.id) || state.showDashboard) {
+                        if (state.showDashboard) {
+                            renderDashboardOnly();
+                        } else {
+                            render();
+                        }
+                    }
+                }
+            });
+            
+            // Subscribe to daily portions changes
+            BibleReadingDB.subscribeToDailyPortions((payload) => {
+                console.log('Daily portions changed:', payload);
+                
+                // This would trigger reload of portions for affected user
+                const user = state.users.find(u => u.id === payload.new?.user_id || payload.old?.user_id);
+                if (user) {
+                    // Reload completed portions if current user
+                    if (state.currentUser && state.currentUser.id === user.id) {
+                        loadCompletedPortionsForDate();
+                        render();
+                    }
+                    
+                    // Update dashboard if visible
+                    if (state.showDashboard) {
+                        renderDashboardOnly();
+                    }
+                }
+            });
+        }
+
+        // Helper function to render only dashboard without full page render
+        function renderDashboardOnly() {
+            const mainContent = document.getElementById('mainContent');
+            if (mainContent && state.showDashboard) {
+                mainContent.innerHTML = renderDashboard();
+            }
+        }
+
         async function loadAllUsersProgressInBackground() {
             // If already loading, return existing promise
             if (loadingAllUsersPromise) {
@@ -2507,6 +2585,11 @@
                 }
 
                 saveData();
+                
+                // Trigger immediate dashboard update for other users
+                if (state.showDashboard) {
+                    renderDashboardOnly();
+                }
                 
                 // Trigger confetti animation
                 createConfetti();
@@ -4026,6 +4109,9 @@
                 
                 // Load base data
                 await loadData();
+                
+                // Setup real-time subscriptions for live updates across browsers
+                setupRealtimeSubscriptions();
                 
                 // For non-admin users, check if a user was previously selected and auto-load it
                 if (!state.isAdmin) {
