@@ -1552,7 +1552,7 @@
             showAllUsers: false,  // Track if all users should be shown in dashboard
             loadedUserData: new Set(),  // Track which users have their progress loaded
             userModalError: '',  // Error message for user modal
-            dashboardTab: 'my-plan',  // 'my-plan' or 'family' - for tabbed dashboard view
+            dashboardTab: 'my-plan',  // 'my-plan', 'family', or 'notes' - for tabbed dashboard view
             skipLoadingScreen: false,  // Skip loading screen when switching views
             dashboardStatsLoaded: false,  // Only load dashboard stats once per session
             isInitializing: true,  // Track if app is still initializing
@@ -2831,7 +2831,7 @@
                     <!-- Pending Days Banner - Docked to bottom of header -->
                     ${(() => {
                         const userStats = state.currentUser ? getUserStats(state.currentUser) : null;
-                        return (userStats && userStats.daysPending > 0) ? `
+                        return (userStats && userStats.daysPending > 0 && (state.dashboardTab === 'my-plan' || state.dashboardTab === 'family')) ? `
                             <div class="py-0">
                                 <div class="p-4 ${state.darkMode ? 'bg-red-900' : 'bg-red-100'}">
                                     <div class="flex items-center justify-center gap-3 max-w-7xl mx-auto">
@@ -2953,6 +2953,13 @@
                                         </div>
                                     </div>`;
                             })()}
+                        ` : state.dashboardTab === 'notes' ? `
+                            <!-- NOTES TAB - EMPTY PAGE -->
+                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
+                                <div class="text-gray-400 text-5xl mb-4">📝</div>
+                                <h3 class="text-xl font-bold mb-2">Notes</h3>
+                                <p class="${theme.textSecondary}">Notes section - coming soon</p>
+                            </div>
                         ` : `
                             <!-- Top Readers Section (This Year) -->
                             <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
@@ -3015,7 +3022,7 @@
                             </div>
 
                             <!-- Pending Users Section -->
-                            ${stats.pendingCount > 0 ? `
+                            ${(state.dashboardTab === 'family' || state.dashboardTab === 'my-plan') && stats.pendingCount > 0 ? `
                                 <div class="pending-users-container rounded-xl p-6 border shadow-sm dark:bg-red-950 dark:border-red-500 bg-red-50 border-red-300">
                                     <div class="flex items-center gap-3 mb-4">
                                         ${icons.clock || '⏱️'}
@@ -3099,6 +3106,10 @@
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'family'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'family' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="family">
                                 ${icons.users || '👥'}
                                 <span class="text-xs font-semibold">Family</span>
+                            </button>
+            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'notes'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'notes' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="notes">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z"/><polyline points="13 2 13 10 21 10"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+                                <span class="text-xs font-semibold">Notes</span>
                             </button>
                         </div>
                     </div>
