@@ -339,6 +339,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadNotesFromSupabase(); // Load shared notes from Supabase
     // Load memory verses from Supabase
     loadMemoryVersesFromSupabase();
+    // CRITICAL: Disable admin mode on app load/update to revoke access for all users
+    localStorage.setItem('isAdmin', 'false');
     updateAdminUI(); // Initialize admin UI based on saved state
     // Show admin toggle and admin menu wrapper if admin mode was previously activated
     const adminToggle = document.getElementById('admin-toggle');
@@ -3762,52 +3764,111 @@ function initializeSearch() {
         return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 }
-// Site title hold to activate admin mode after 5 seconds
+// Site title click detection for admin mode (5 clicks required)
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
     const secretIcon = document.getElementById('secret-icon');
-    let holdTimer = null;
-    let isHolding = false;
+    let clickCount = 0;
+    let clickTimer = null;
+    const CLICKS_REQUIRED = 5;
+    const CLICK_TIMEOUT = 3000; // 3 seconds between clicks
+    const ADMIN_PASSWORD = '030593'; // 6-digit password
     
     if (siteTitle) {
-        // Handle mousedown/touchstart - start the hold timer
-        siteTitle.addEventListener('mousedown', startHold);
-        siteTitle.addEventListener('touchstart', startHold);
+        // Handle click - track consecutive clicks
+        siteTitle.addEventListener('click', handleLogoClick);
         
-        // Handle mouseup/touchend - clear the hold timer
-        siteTitle.addEventListener('mouseup', endHold);
-        siteTitle.addEventListener('touchend', endHold);
-        siteTitle.addEventListener('mouseleave', endHold);
-        
-        function startHold() {
-            // Don't start hold if admin mode is already active
+        function handleLogoClick() {
+            // Don't trigger if admin mode is already active
             if (isAdmin()) {
                 return;
             }
             
-            isHolding = true;
-            let holdDuration = 0;
-            const holdInterval = 50; // Check every 50ms
-            const totalHoldTime = 5000; // 5 seconds
+            clickCount++;
             
-            holdTimer = setInterval(() => {
-                holdDuration += holdInterval;
-                
-                // Check if hold time reached 5 seconds
-                if (holdDuration >= totalHoldTime && isHolding) {
-                    clearInterval(holdTimer);
-                    activateAdminMode();
-                    isHolding = false;
-                }
-            }, holdInterval);
+            // Reset click count after timeout
+            if (clickTimer) {
+                clearTimeout(clickTimer);
+            }
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+            }, CLICK_TIMEOUT);
+            
+            // Check if 5 clicks reached
+            if (clickCount >= CLICKS_REQUIRED) {
+                clickCount = 0;
+                clearTimeout(clickTimer);
+                showPasswordModal();
+            }
         }
         
-        function endHold() {
-            isHolding = false;
-            if (holdTimer) {
-                clearInterval(holdTimer);
-                holdTimer = null;
+        function showPasswordModal() {
+            // Create password modal
+            const modal = document.createElement('div');
+            modal.className = 'admin-password-modal';
+            modal.id = 'admin-password-modal';
+            modal.innerHTML = `
+                <div class="admin-password-modal-content">
+                    <div class="admin-password-header">
+                        <h2>Admin Access</h2>
+                        <button class="admin-password-close" aria-label="Close">&times;</button>
+                    </div>
+                    <div class="admin-password-body">
+                        <p>Enter 6-digit password to enable admin mode</p>
+                        <input type="password" id="admin-password-input" class="admin-password-input" placeholder="••••••" maxlength="6" inputmode="numeric" />
+                        <div class="admin-password-error" id="admin-password-error" style="display: none;">Incorrect password</div>
+                    </div>
+                    <div class="admin-password-footer">
+                        <button class="admin-password-cancel-btn">Cancel</button>
+                        <button class="admin-password-submit-btn">Submit</button>
+                    </div>
+                </div>
+                <div class="admin-password-overlay"></div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            const input = modal.querySelector('#admin-password-input');
+            const errorDiv = modal.querySelector('#admin-password-error');
+            const closeBtn = modal.querySelector('.admin-password-close');
+            const cancelBtn = modal.querySelector('.admin-password-cancel-btn');
+            const submitBtn = modal.querySelector('.admin-password-submit-btn');
+            const overlay = modal.querySelector('.admin-password-overlay');
+            
+            // Focus on input
+            setTimeout(() => input.focus(), 100);
+            
+            // Handle submit
+            function handleSubmit() {
+                const password = input.value;
+                if (password === ADMIN_PASSWORD) {
+                    // Correct password
+                    activateAdminMode();
+                    closeModal();
+                } else {
+                    // Wrong password
+                    errorDiv.style.display = 'block';
+                    input.value = '';
+                    input.focus();
+                    setTimeout(() => {
+                        errorDiv.style.display = 'none';
+                    }, 3000);
+                }
             }
+            
+            function closeModal() {
+                modal.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => modal.remove(), 300);
+            }
+            
+            // Event listeners
+            submitBtn.addEventListener('click', handleSubmit);
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handleSubmit();
+            });
+            closeBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', closeModal);
         }
         
         function activateAdminMode() {
