@@ -1146,8 +1146,8 @@
                     metaThemeColor.setAttribute('content', isDark ? '#1e293b' : '#ffffff');
                 }
                 
-                // Re-render dashboard only to update theme colors, without loading statistics
-                renderDashboardOnly();
+                // Re-render entire page to apply theme to all sections
+                render();
                 return;
             }
             
@@ -1164,8 +1164,8 @@
                     metaThemeColor.setAttribute('content', isDark ? '#1e293b' : '#ffffff');
                 }
                 
-                // Re-render dashboard only to update theme colors, without loading statistics
-                renderDashboardOnly();
+                // Re-render entire page to apply theme to all sections
+                render();
             });
             
             // Wait for transition to be ready
