@@ -473,6 +473,51 @@
             }
         }
 
+        @keyframes fillAnimationRed {
+            0% {
+                background-color: transparent;
+                color: #ef4444;
+            }
+            100% {
+                background-color: #ef4444;
+                color: white;
+            }
+        }
+
+        @keyframes fillAnimationGreen {
+            0% {
+                background-color: transparent;
+                color: #22c55e;
+            }
+            100% {
+                background-color: #22c55e;
+                color: white;
+            }
+        }
+
+        @keyframes fillAnimationBlue {
+            0% {
+                background-color: transparent;
+                color: #2563eb;
+            }
+            100% {
+                background-color: #2563eb;
+                color: white;
+            }
+        }
+
+        .btn-fill-red {
+            animation: fillAnimationRed 0.3s ease-in-out forwards;
+        }
+
+        .btn-fill-green {
+            animation: fillAnimationGreen 0.3s ease-in-out forwards;
+        }
+
+        .btn-fill-blue {
+            animation: fillAnimationBlue 0.3s ease-in-out forwards;
+        }
+
         .pulse-animation {
             animation: pulse 2s infinite;
         }
@@ -2836,10 +2881,15 @@
                                 `;
                                 }).join('')}
                             </div>                                            <!-- Action Buttons -->
-                                            <div class="mt-6">
-                                                <button onclick="state.showDashboard = false; stopDashboardSync(); render();" class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-4 flex items-center justify-center gap-2 font-semibold transition-colors shadow-lg">
-                                                    ${icons.checkCircle}
-                                                    Track My Progress
+                                            <div class="mt-6 flex items-center justify-between gap-4">
+                                                <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" class="bg-white dark:bg-slate-800 border-2 border-red-500 text-red-500 dark:text-red-400 rounded-lg px-4 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-sm">
+                                                    Back
+                                                </button>
+                                                <button onclick="this.classList.add('btn-fill-blue'); setTimeout(() => { state.showDashboard = false; stopDashboardSync(); render(); }, 300);" class="bg-blue-600 dark:bg-blue-700 text-white rounded-lg px-8 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base">
+                                                    Track
+                                                </button>
+                                                <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" class="bg-white dark:bg-slate-800 border-2 border-green-500 text-green-500 dark:text-green-400 rounded-lg px-4 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-sm">
+                                                    Next
                                                 </button>
                                             </div>
                                         </div>
