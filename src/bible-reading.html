@@ -1754,12 +1754,16 @@
             const today = new Date();
             const dateKey = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
             
+            // Use daysPending from getUserStats to check if user has ANY pending days
             const pendingUsers = state.users.filter(user => {
-                return !user.completedDates || !user.completedDates[dateKey];
+                const userStats = getUserStats(user);
+                return userStats.daysPending > 0;
             });
             
+            // Completed today means they have zero pending days
             const completedUsers = state.users.filter(user => {
-                return user.completedDates && user.completedDates[dateKey];
+                const userStats = getUserStats(user);
+                return userStats.daysPending === 0;
             });
             
             return {
@@ -2733,6 +2737,8 @@
                 }, duration * 1000);
             }
         }
+
+        // Load and display chapter notes
 
         // Render Functions
         function renderDashboard() {
