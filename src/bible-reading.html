@@ -3012,20 +3012,18 @@
                                     ${icons.users || '👥'}
                                     <h2 class="text-lg font-bold">All Users</h2>
                                 </div>
-                                <div class="grid grid-cols-2 gap-4">
+                                <div class="grid grid-cols-3 gap-4">
                                     ${state.users
                                         .map(user => ({ user, stats: getUserStats(user) }))
-                                        .sort((a, b) => b.stats.totalProgress - a.stats.totalProgress)
+                                        .sort((a, b) => a.user.name.localeCompare(b.user.name))
                                         .map(({ user, stats }) => {
-                                            const lastReadDate = stats.lastReadDate ? stats.lastReadDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Never';
                                             return `
-                                                <div class="flex flex-col items-center justify-between p-4 ${theme.accent} rounded-lg ${theme.cardHover} transition-colors text-center">
-                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-12 h-12 rounded-full object-cover mb-3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                                    <div class="w-12 h-12 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-sm mb-3" style="display: none;">
+                                                <div class="flex flex-col items-center gap-2">
+                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" class="w-16 h-16 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                                    <div class="w-16 h-16 rounded-full ${stats.totalProgress >= 80 ? 'bg-emerald-500' : stats.totalProgress >= 60 ? 'bg-blue-500' : 'bg-slate-600'} flex items-center justify-center text-white font-bold text-lg" style="display: none;">
                                                         ${user.name.charAt(0).toUpperCase()}
                                                     </div>
-                                                    <h3 class="font-semibold text-sm">${user.name}</h3>
-                                                    <p class="text-sm font-bold text-blue-500">${stats.totalProgress.toFixed(1)}%</p>
+                                                    <h3 class="font-semibold text-sm text-center">${user.name}</h3>
                                                 </div>
                                             `;
                                         }).join('')}
