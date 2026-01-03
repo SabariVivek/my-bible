@@ -41,7 +41,9 @@
     <!-- Supabase Client Library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
+    <script src="lib/supabase-quiz.js?v=20251126003722"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
+    <script src="../data/quiz-questions.js?v=20251126003722"></script>
     <script>
         // Force cache refresh for updated reading plan
         const APP_VERSION = '20251126003722';
@@ -1552,10 +1554,14 @@
             showAllUsers: false,  // Track if all users should be shown in dashboard
             loadedUserData: new Set(),  // Track which users have their progress loaded
             userModalError: '',  // Error message for user modal
-            dashboardTab: 'my-plan',  // 'my-plan', 'family', or 'notes' - for tabbed dashboard view
+            dashboardTab: 'my-plan',  // 'my-plan', 'family', 'notes', or 'quiz' - for tabbed dashboard view
             skipLoadingScreen: false,  // Skip loading screen when switching views
             dashboardStatsLoaded: false,  // Only load dashboard stats once per session
             isInitializing: true,  // Track if app is still initializing
+            quizSubmitted: {},  // Track quiz submissions by date
+            quizLeaderboard: [],  // Store today's quiz leaderboard
+            quizTabVisible: false,  // Show quiz tab only after 3 clicks on dashboard title
+            dashboardTitleClicks: 0,  // Track clicks on dashboard title
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
@@ -1773,6 +1779,69 @@
                 pendingUsers,
                 completedUsers
             };
+        }
+
+        async function submitQuiz(questions, dateKey) {
+            try {
+                // Get all form inputs and calculate score
+                const form = document.getElementById('quizForm');
+                const formData = new FormData(form);
+                let score = 0;
+                const userAnswers = {};
+
+                questions.forEach(q => {
+                    const answer = formData.get(`q${q.id}`);
+                    userAnswers[q.id] = answer;
+                    if (answer !== null && parseInt(answer) === q.correctAnswer) {
+                        score++;
+                    }
+                });
+
+                // Get currently logged-in user
+                const { data: { user: authUser } } = await supabase.auth.getUser();
+                let selectedUserName = null;
+
+                if (authUser) {
+                    // Try to get name from user metadata
+                    selectedUserName = authUser.user_metadata?.name || authUser.email?.split('@')[0];
+                }
+
+                if (!selectedUserName) throw new Error('No user found');
+
+                // Store in state
+                state.quizSubmitted[dateKey] = {
+                    score: score,
+                    totalQuestions: questions.length
+                };
+
+                // Update user's quiz score in local state (use auth user's name)
+                const userIndex = state.users.findIndex(u => u.name === selectedUserName);
+                if (userIndex !== -1) {
+                    if (!state.users[userIndex].quizScores) {
+                        state.users[userIndex].quizScores = {};
+                    }
+                    state.users[userIndex].quizScores[dateKey] = {
+                        score: score,
+                        totalQuestions: questions.length
+                    };
+                }
+
+                // Build local leaderboard from all users' scores
+                state.quizLeaderboard = state.users
+                    .map(user => ({
+                        name: user.name,
+                        score: user.quizScores?.[dateKey]?.score || 0,
+                        total_questions: user.quizScores?.[dateKey]?.totalQuestions || 0
+                    }))
+                    .filter(entry => entry.score > 0 || entry.total_questions > 0)
+                    .sort((a, b) => b.score - a.score)
+                    .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
+
+                render();
+            } catch (error) {
+                console.error('Error submitting quiz:', error);
+                alert('Error submitting quiz: ' + error.message);
+            }
         }
 
         function getTodayReading(date) {
@@ -2793,13 +2862,13 @@
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
                                     ${state.currentUser ? `
-                                        <button onclick="window.location.href = '../index.html';" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Bible Reading">
+                                        <button onclick="window.location.href = '../index.html'; state.quizTabVisible = false; state.dashboardTitleClicks = 0;" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Bible Reading">
                                             ${icons.chevronLeft}
                                         </button>
                                     ` : ''}
                                     <div>
                                         <div class="flex items-center gap-2 items-center">
-                                            <h1 class="text-xl font-bold">Dashboard</h1>
+                                            <h1 class="text-xl font-bold cursor-pointer select-none" onclick="state.dashboardTitleClicks = (state.dashboardTitleClicks || 0) + 1; if (state.dashboardTitleClicks === 3) { state.quizTabVisible = true; state.dashboardTitleClicks = 0; } render();">Dashboard</h1>
                                             ${state.currentUser ? `
                                                 <span class="text-xs font-normal px-1 py-0.5 rounded text-xs ${state.darkMode ? 'bg-blue-500/15 text-blue-300' : 'bg-blue-100 text-blue-600'}">
                                                     ${state.currentUser.name}
@@ -2815,7 +2884,7 @@
                                             ${icons.settings}
                                         </button>
                                     ` : `
-                                        <button onclick="state.currentUser = null; state.showDashboard = false; stopDashboardSync(); render();" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all" title="Change Profile">
+                                        <button onclick="state.currentUser = null; state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); render();" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all" title="Change Profile">
                                             ${(state.currentUser) ? `
                                                 <img src="../resources/profiles/${state.currentUser.name.toLowerCase()}.png" alt="${state.currentUser.name}" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                                 <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white" style="display: none;">
@@ -2891,7 +2960,7 @@
                                                 <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" class="bg-white dark:bg-slate-800 border-2 border-red-500 text-red-500 dark:text-red-400 rounded-lg px-4 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-sm">
                                                     Back
                                                 </button>
-                                                <button onclick="this.classList.add('btn-fill-blue'); setTimeout(() => { state.showDashboard = false; stopDashboardSync(); render(); }, 300);" class="bg-blue-600 dark:bg-blue-700 text-white rounded-lg px-8 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base">
+                                                <button onclick="this.classList.add('btn-fill-blue'); setTimeout(() => { state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); render(); }, 300);" class="bg-blue-600 dark:bg-blue-700 text-white rounded-lg px-8 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base">
                                                     Track
                                                 </button>
                                                 <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" class="bg-white dark:bg-slate-800 border-2 border-green-500 text-green-500 dark:text-green-400 rounded-lg px-4 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-sm">
@@ -2966,6 +3035,89 @@
                                 <h3 class="text-xl font-bold mb-2">Notes</h3>
                                 <p class="${theme.textSecondary}">Notes section - coming soon</p>
                             </div>
+                        ` : state.dashboardTab === 'quiz' ? `
+                            ${(() => {
+                                // Get today's date for tracking submissions
+                                const today = new Date();
+                                const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+                                
+                                // Get default quiz questions (same for all days and all users)
+                                const quizQuestionList = [];
+                                if (window.quizQuestions && window.quizQuestions['matthew'] && window.quizQuestions['matthew']['3']) {
+                                    const defaultQuestions = window.quizQuestions['matthew']['3'].questions;
+                                    defaultQuestions.forEach((q, idx) => {
+                                        quizQuestionList.push({
+                                            ...q,
+                                            id: `default-${idx}`,
+                                            chapter: 'Daily Quiz'
+                                        });
+                                    });
+                                }
+
+                                if (quizQuestionList.length === 0) {
+                                    return `
+                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
+                                            <div class="text-gray-400 text-5xl mb-4">🔨</div>
+                                            <h3 class="text-xl font-bold mb-2">Quiz Not Ready</h3>
+                                            <p class="${theme.textSecondary}">Questions not loaded</p>
+                                        </div>
+                                    `;
+                                }
+
+                                // Check if already submitted
+                                const alreadySubmitted = state.quizSubmitted?.[dateKey];
+
+                                if (alreadySubmitted) {
+                                    return `
+                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                            <div class="text-center mb-6">
+                                                <div class="text-6xl mb-4">✅</div>
+                                                <h3 class="text-2xl font-bold mb-2">Quiz Complete!</h3>
+                                                <p class="text-green-400 font-bold text-lg">Score: ${alreadySubmitted.score}/${alreadySubmitted.totalQuestions}</p>
+                                            </div>
+                                            <div class="border-t ${theme.border} pt-6">
+                                                <h4 class="font-bold mb-4">Today's Leaderboard</h4>
+                                                <div class="space-y-2 max-h-96 overflow-y-auto">
+                                                    ${state.quizLeaderboard?.map((user, idx) => `
+                                                        <div class="flex items-center justify-between p-3 ${theme.accent} rounded-lg">
+                                                            <div class="flex items-center gap-3">
+                                                                <span class="font-bold text-lg text-yellow-400">#${idx + 1}</span>
+                                                                <span>${user.name || 'User'}</span>
+                                                            </div>
+                                                            <span class="font-bold text-green-400">${user.score}/${user.total_questions}</span>
+                                                        </div>
+                                                    `).join('') || 'Loading leaderboard...'}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+                                }
+
+                                // Show quiz questions
+                                return `
+                                    <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                        <form id="quizForm" class="space-y-6">
+                                            ${quizQuestionList.map((q, idx) => `
+                                                <div class="border-b ${theme.border} pb-6">
+                                                    <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
+                                                    <div class="space-y-3">
+                                                        ${q.options.map((option, optIdx) => `
+                                                            <label class="flex items-center p-3 ${theme.accent} rounded-lg cursor-pointer hover:bg-opacity-80 transition-colors">
+                                                                <input type="radio" name="q${q.id}" value="${optIdx}" class="w-4 h-4" required>
+                                                                <span class="ml-3">${option}</span>
+                                                            </label>
+                                                        `).join('')}
+                                                    </div>
+                                                </div>
+                                            `).join('')}
+                                        </form>
+
+                                        <button onclick="submitQuiz(${JSON.stringify(quizQuestionList).replace(/"/g, '&quot;')}, '${dateKey}')" class="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+                                            Submit Quiz
+                                        </button>
+                                    </div>
+                                `;
+                            })()}
                         ` : `
                             <!-- Top Readers Section (This Year) -->
                             <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
@@ -2976,20 +3128,10 @@
                                 <div class="flex gap-3 overflow-x-auto pb-4">
                                     ${state.users
                                         .map(user => {
-                                            // Calculate streak
+                                            // Calculate streak - count total number of days read
                                             let streak = 0;
                                             if (user.completedDates) {
-                                                const today = new Date();
-                                                for (let i = 0; i < 365; i++) {
-                                                    const checkDate = new Date(today);
-                                                    checkDate.setDate(checkDate.getDate() - i);
-                                                    const dateKey = `${checkDate.getFullYear()}-${checkDate.getMonth() + 1}-${checkDate.getDate()}`;
-                                                    if (user.completedDates[dateKey]) {
-                                                        streak++;
-                                                    } else if (i > 0) {
-                                                        break;
-                                                    }
-                                                }
+                                                streak = Object.keys(user.completedDates).length;
                                             }
                                             return { user, stats: getUserStats(user), streak };
                                         })
@@ -3117,6 +3259,12 @@
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z"/><polyline points="13 2 13 10 21 10"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
                                 <span class="text-xs font-semibold">Notes</span>
                             </button>
+                            ${state.quizTabVisible ? `
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
+                                <span class="text-xs font-semibold">Quiz</span>
+                            </button>
+                            ` : ''}
                         </div>
                     </div>
 
