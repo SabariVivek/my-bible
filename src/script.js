@@ -339,8 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadNotesFromSupabase(); // Load shared notes from Supabase
     // Load memory verses from Supabase
     loadMemoryVersesFromSupabase();
-    // CRITICAL: Disable admin mode on app load/update to revoke access for all users
-    localStorage.setItem('isAdmin', 'false');
     updateAdminUI(); // Initialize admin UI based on saved state
     // Show admin toggle and admin menu wrapper if admin mode was previously activated
     const adminToggle = document.getElementById('admin-toggle');
