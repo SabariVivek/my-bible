@@ -336,7 +336,8 @@ let activeSubscriptions = [];
 
 // Real-time subscriptions for live updates
 async function subscribeToCompletedDates(onDataChange) {
-    const subscription = supabase
+    const channel = supabase
+        .channel('public:completed_dates')
         .on('postgres_changes', {
             event: '*',
             schema: 'public',
@@ -346,12 +347,13 @@ async function subscribeToCompletedDates(onDataChange) {
         })
         .subscribe();
     
-    activeSubscriptions.push(subscription);
-    return subscription;
+    activeSubscriptions.push(channel);
+    return channel;
 }
 
 async function subscribeToReadingProgress(onDataChange) {
-    const subscription = supabase
+    const channel = supabase
+        .channel('public:reading_progress')
         .on('postgres_changes', {
             event: '*',
             schema: 'public',
@@ -361,12 +363,13 @@ async function subscribeToReadingProgress(onDataChange) {
         })
         .subscribe();
     
-    activeSubscriptions.push(subscription);
-    return subscription;
+    activeSubscriptions.push(channel);
+    return channel;
 }
 
 async function subscribeToDailyPortions(onDataChange) {
-    const subscription = supabase
+    const channel = supabase
+        .channel('public:daily_portions')
         .on('postgres_changes', {
             event: '*',
             schema: 'public',
@@ -376,14 +379,14 @@ async function subscribeToDailyPortions(onDataChange) {
         })
         .subscribe();
     
-    activeSubscriptions.push(subscription);
-    return subscription;
+    activeSubscriptions.push(channel);
+    return channel;
 }
 
 // Cleanup subscriptions
 function unsubscribeAll() {
     activeSubscriptions.forEach(sub => {
-        supabase.removeSubscription(sub);
+        supabase.removeChannel(sub);
     });
     activeSubscriptions = [];
 }

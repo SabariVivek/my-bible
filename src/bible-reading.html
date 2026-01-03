@@ -2153,7 +2153,16 @@
         function renderDashboardOnly() {
             const mainContent = document.getElementById('mainContent');
             if (mainContent && state.showDashboard) {
+                // Save current scroll position
+                const scrollPosition = window.scrollY || window.pageYOffset;
+                
+                // Update content
                 mainContent.innerHTML = renderDashboard();
+                
+                // Restore scroll position after a brief delay to allow DOM to settle
+                setTimeout(() => {
+                    window.scrollTo(0, scrollPosition);
+                }, 0);
             }
         }
 
