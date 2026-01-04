@@ -1562,6 +1562,11 @@
             quizLeaderboard: [],  // Store today's quiz leaderboard
             quizTabVisible: false,  // Show quiz tab only after 3 clicks on dashboard title
             dashboardTitleClicks: 0,  // Track clicks on dashboard title
+            quizStarted: false,  // Track if user has started the quiz (to show questions)
+            selectedQuizChapter: null,  // Track selected chapter for quiz
+            completedQuizChapters: {},  // Track completed chapters per user per day
+            chapterScores: {},  // Track scores for each chapter per user per day
+            quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
@@ -1780,8 +1785,7 @@
                 completedUsers
             };
         }
-
-        async function submitQuiz(questions, dateKey) {
+        async function submitQuiz(questions, dateKey, chapter) {
             try {
                 // Get all form inputs and calculate score
                 const form = document.getElementById('quizForm');
@@ -1797,16 +1801,27 @@
                     }
                 });
 
-                // Get currently logged-in user
-                const { data: { user: authUser } } = await supabase.auth.getUser();
-                let selectedUserName = null;
-
-                if (authUser) {
-                    // Try to get name from user metadata
-                    selectedUserName = authUser.user_metadata?.name || authUser.email?.split('@')[0];
+                // Get currently selected user from state
+                if (!state.currentUser) throw new Error('No user selected');
+                const selectedUserName = state.currentUser.name;
+                
+                // Mark chapter as completed (per-user tracking)
+                if (!state.completedQuizChapters[dateKey]) {
+                    state.completedQuizChapters[dateKey] = {};
                 }
-
-                if (!selectedUserName) throw new Error('No user found');
+                if (!state.completedQuizChapters[dateKey][state.currentUser.id]) {
+                    state.completedQuizChapters[dateKey][state.currentUser.id] = {};
+                }
+                state.completedQuizChapters[dateKey][state.currentUser.id][chapter] = true;
+                
+                // Store chapter score
+                if (!state.chapterScores[dateKey]) {
+                    state.chapterScores[dateKey] = {};
+                }
+                if (!state.chapterScores[dateKey][state.currentUser.id]) {
+                    state.chapterScores[dateKey][state.currentUser.id] = {};
+                }
+                state.chapterScores[dateKey][state.currentUser.id][chapter] = score;
 
                 // Store in state
                 state.quizSubmitted[dateKey] = {
@@ -1837,10 +1852,174 @@
                     .sort((a, b) => b.score - a.score)
                     .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
 
+                // Save to Supabase (non-blocking)
+                if (state.currentUser && state.currentUser.id) {
+                    try {
+                        // Get existing quiz data to preserve other chapters
+                        const { data: existingData } = await supabase
+                            .from('quiz_scores')
+                            .select('chapters_data')
+                            .eq('user_id', state.currentUser.id)
+                            .eq('quiz_date', dateKey)
+                            .single();
+                        
+                        // Merge with existing chapter data
+                        const chaptersData = existingData?.chapters_data || {};
+                        chaptersData[chapter] = {
+                            score: score,
+                            total_questions: questions.length,
+                            userAnswers: userAnswers,
+                            completed_at: new Date().toISOString()
+                        };
+                        
+                        // Save using the selected family member's ID
+                        const quizData = {
+                            user_id: state.currentUser.id,
+                            quiz_date: dateKey,
+                            score: score,
+                            total_questions: questions.length,
+                            chapters_data: chaptersData
+                        };
+                        
+                        console.log('Saving quiz data:', quizData);
+                        
+                        const { data, error } = await supabase
+                            .from('quiz_scores')
+                            .upsert(quizData, { onConflict: 'user_id,quiz_date' });
+                        
+                        if (error) {
+                            console.error('Supabase error details:', error);
+                            throw error;
+                        }
+                        
+                        console.log('Quiz saved successfully:', data);
+                    } catch (supabaseError) {
+                        console.error('Error saving to Supabase:', supabaseError.message);
+                        console.error('Error status:', supabaseError.status);
+                        console.error('Full error:', supabaseError);
+                        // Continue anyway - data is stored locally
+                    }
+                }
+                
+                // Store summary data in local state for displaying review
+                state.quizSummaryData = {
+                    chapter: chapter,
+                    questions: questions,
+                    userAnswers: userAnswers,
+                    score: score
+                };
+
+                // Reset to show chapter selection (not leaderboard)
+                state.quizStarted = true;
+                state.selectedQuizChapter = null;
+
                 render();
             } catch (error) {
                 console.error('Error submitting quiz:', error);
                 alert('Error submitting quiz: ' + error.message);
+            }
+        }
+
+        async function loadQuizProgress(user) {
+            if (!user || !user.id) return;
+            
+            try {
+                // Get today's date
+                const today = new Date();
+                const dateKey = today.toISOString().split('T')[0];
+                
+                // Fetch quiz data for this user for today
+                const { data: quizData, error } = await supabase
+                    .from('quiz_scores')
+                    .select('chapters_data')
+                    .eq('user_id', user.id)
+                    .eq('quiz_date', dateKey)
+                    .single();
+                
+                if (error && error.code !== 'PGRST116') {
+                    console.error('Error loading quiz progress:', error);
+                    return;
+                }
+                
+                if (quizData && quizData.chapters_data) {
+                    // Initialize the data structures if needed
+                    if (!state.completedQuizChapters[dateKey]) {
+                        state.completedQuizChapters[dateKey] = {};
+                    }
+                    if (!state.completedQuizChapters[dateKey][user.id]) {
+                        state.completedQuizChapters[dateKey][user.id] = {};
+                    }
+                    if (!state.chapterScores[dateKey]) {
+                        state.chapterScores[dateKey] = {};
+                    }
+                    if (!state.chapterScores[dateKey][user.id]) {
+                        state.chapterScores[dateKey][user.id] = {};
+                    }
+                    
+                    // Restore completed chapters and scores from saved data
+                    Object.keys(quizData.chapters_data).forEach(chapter => {
+                        const chapterNum = parseInt(chapter);
+                        state.completedQuizChapters[dateKey][user.id][chapterNum] = true;
+                        state.chapterScores[dateKey][user.id][chapterNum] = quizData.chapters_data[chapter].score;
+                    });
+                    
+                    console.log('Quiz progress loaded for user', user.id, 'on', dateKey);
+                }
+            } catch (error) {
+                console.error('Error loading quiz progress:', error);
+            }
+        }
+
+        async function loadQuizSummary(chapter) {
+            try {
+                const today = new Date();
+                const dateKey = today.toISOString().split('T')[0];
+                
+                // Set the selected chapter first
+                state.selectedQuizChapter = chapter;
+                
+                // Get the questions for this chapter
+                if (!window.quizQuestions || !window.quizQuestions['matthew'] || !window.quizQuestions['matthew'][chapter]) {
+                    console.error('Questions not found for chapter', chapter);
+                    return;
+                }
+                
+                const questions = window.quizQuestions['matthew'][chapter].questions;
+                
+                // Fetch user answers from Supabase
+                const { data: quizData, error } = await supabase
+                    .from('quiz_scores')
+                    .select('chapters_data')
+                    .eq('user_id', state.currentUser.id)
+                    .eq('quiz_date', dateKey)
+                    .single();
+                
+                if (error) {
+                    console.error('Error loading quiz summary:', error);
+                    return;
+                }
+                
+                if (quizData && quizData.chapters_data && quizData.chapters_data[chapter]) {
+                    const chapterData = quizData.chapters_data[chapter];
+                    const userAnswers = chapterData.userAnswers || {};
+                    
+                    // Format questions with IDs for display
+                    const formattedQuestions = questions.map((q, idx) => ({
+                        ...q,
+                        id: `ch${chapter}-${idx}`
+                    }));
+                    
+                    state.quizSummaryData = {
+                        chapter: chapter,
+                        questions: formattedQuestions,
+                        userAnswers: userAnswers,
+                        score: chapterData.score
+                    };
+                    
+                    render();
+                }
+            } catch (error) {
+                console.error('Error loading quiz summary:', error);
             }
         }
 
@@ -2332,6 +2511,82 @@
             // Data is now saved to Supabase in real-time, no need to save here
         }
 
+        async function loadTodayQuizScoresFromSupabase() {
+            try {
+                const today = new Date();
+                const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+                
+                // Fetch all quiz scores for today
+                const { data, error } = await supabase
+                    .from('quiz_scores')
+                    .select('*')
+                    .eq('quiz_date', dateKey);
+                
+                if (error) {
+                    console.error('Error loading quiz scores:', error);
+                    return;
+                }
+
+                if (data && data.length > 0) {
+                    // Update local state with Supabase data
+                    data.forEach(record => {
+                        // Find user and update their quiz score
+                        const userIndex = state.users.findIndex(u => u.id === record.user_id);
+                        if (userIndex !== -1) {
+                            if (!state.users[userIndex].quizScores) {
+                                state.users[userIndex].quizScores = {};
+                            }
+                            state.users[userIndex].quizScores[dateKey] = {
+                                score: record.score,
+                                totalQuestions: record.total_questions
+                            };
+                        }
+                        
+                        // Also restore per-chapter data
+                        if (record.chapters_data && Object.keys(record.chapters_data).length > 0) {
+                            if (!state.completedQuizChapters[dateKey]) {
+                                state.completedQuizChapters[dateKey] = {};
+                            }
+                            if (!state.completedQuizChapters[dateKey][record.user_id]) {
+                                state.completedQuizChapters[dateKey][record.user_id] = {};
+                            }
+                            if (!state.chapterScores[dateKey]) {
+                                state.chapterScores[dateKey] = {};
+                            }
+                            if (!state.chapterScores[dateKey][record.user_id]) {
+                                state.chapterScores[dateKey][record.user_id] = {};
+                            }
+                            
+                            // Restore each chapter's score and completion status
+                            Object.keys(record.chapters_data).forEach(chapter => {
+                                const chapterNum = parseInt(chapter);
+                                state.completedQuizChapters[dateKey][record.user_id][chapterNum] = true;
+                                state.chapterScores[dateKey][record.user_id][chapterNum] = record.chapters_data[chapter].score;
+                            });
+                        }
+                    });
+
+                    // Rebuild leaderboard from updated data
+                    state.quizLeaderboard = state.users
+                        .map(user => ({
+                            name: user.name,
+                            score: user.quizScores?.[dateKey]?.score || 0,
+                            total_questions: user.quizScores?.[dateKey]?.totalQuestions || 0
+                        }))
+                        .filter(entry => entry.score > 0 || entry.total_questions > 0)
+                        .sort((a, b) => b.score - a.score)
+                        .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
+
+                    // Re-render if on dashboard
+                    if (state.showDashboard) {
+                        render();
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading quiz scores from Supabase:', error);
+            }
+        }
+
         // User Functions
         function handleAddUser() {
             const input = document.getElementById('newUserName');
@@ -2408,6 +2663,7 @@
                 // Load user's progress if not already loaded
                 await loadUserProgress(user);
                 await loadCompletedPortionsForDate();
+                await loadQuizProgress(user);
                 
                 saveData();
             } finally {
@@ -3041,44 +3297,27 @@
                                 const today = new Date();
                                 const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
                                 
-                                // Get default quiz questions (same for all days and all users)
-                                const quizQuestionList = [];
-                                if (window.quizQuestions && window.quizQuestions['matthew'] && window.quizQuestions['matthew']['3']) {
-                                    const defaultQuestions = window.quizQuestions['matthew']['3'].questions;
-                                    defaultQuestions.forEach((q, idx) => {
-                                        quizQuestionList.push({
-                                            ...q,
-                                            id: `default-${idx}`,
-                                            chapter: 'Daily Quiz'
-                                        });
-                                    });
+                                // Initialize completed chapters for today if not exists
+                                if (!state.completedQuizChapters[dateKey]) {
+                                    state.completedQuizChapters[dateKey] = {};
                                 }
-
-                                if (quizQuestionList.length === 0) {
-                                    return `
-                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
-                                            <div class="text-gray-400 text-5xl mb-4">🔨</div>
-                                            <h3 class="text-xl font-bold mb-2">Quiz Not Ready</h3>
-                                            <p class="${theme.textSecondary}">Questions not loaded</p>
-                                        </div>
-                                    `;
-                                }
-
-                                // Check if already submitted
-                                const alreadySubmitted = state.quizSubmitted?.[dateKey];
-
-                                if (alreadySubmitted) {
+                                
+                                // Show leaderboard first with Take Quiz button
+                                if (!state.quizStarted && !state.selectedQuizChapter) {
                                     return `
                                         <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                             <div class="text-center mb-6">
-                                                <div class="text-6xl mb-4">✅</div>
-                                                <h3 class="text-2xl font-bold mb-2">Quiz Complete!</h3>
-                                                <p class="text-green-400 font-bold text-lg">Score: ${alreadySubmitted.score}/${alreadySubmitted.totalQuestions}</p>
+                                                <div class="text-5xl mb-4">🏆</div>
+                                                <h3 class="text-2xl font-bold mb-2">Daily Quiz Leaderboard</h3>
+                                                <p class="${theme.textSecondary} mb-6">See how everyone performed today</p>
+                                                <button onclick="state.quizStarted = true; render();" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                                                    Take Quiz
+                                                </button>
                                             </div>
                                             <div class="border-t ${theme.border} pt-6">
-                                                <h4 class="font-bold mb-4">Today's Leaderboard</h4>
+                                                <h4 class="font-bold mb-4">Rankings</h4>
                                                 <div class="space-y-2 max-h-96 overflow-y-auto">
-                                                    ${state.quizLeaderboard?.map((user, idx) => `
+                                                    ${state.quizLeaderboard && state.quizLeaderboard.length > 0 ? state.quizLeaderboard?.map((user, idx) => `
                                                         <div class="flex items-center justify-between p-3 ${theme.accent} rounded-lg">
                                                             <div class="flex items-center gap-3">
                                                                 <span class="font-bold text-lg text-yellow-400">#${idx + 1}</span>
@@ -3086,37 +3325,177 @@
                                                             </div>
                                                             <span class="font-bold text-green-400">${user.score}/${user.total_questions}</span>
                                                         </div>
-                                                    `).join('') || 'Loading leaderboard...'}
+                                                    `).join('') : '<p class="text-center ${theme.textSecondary} py-4">No one has taken the quiz yet</p>'}
                                                 </div>
                                             </div>
                                         </div>
                                     `;
                                 }
-
-                                // Show quiz questions
-                                return `
-                                    <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                        <form id="quizForm" class="space-y-6">
-                                            ${quizQuestionList.map((q, idx) => `
-                                                <div class="border-b ${theme.border} pb-6">
-                                                    <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
-                                                    <div class="space-y-3">
-                                                        ${q.options.map((option, optIdx) => `
-                                                            <label class="flex items-center p-3 ${theme.accent} rounded-lg cursor-pointer hover:bg-opacity-80 transition-colors">
-                                                                <input type="radio" name="q${q.id}" value="${optIdx}" class="w-4 h-4" required>
-                                                                <span class="ml-3">${option}</span>
-                                                            </label>
-                                                        `).join('')}
+                                
+                                // Show chapter selection
+                                if (state.quizStarted && !state.selectedQuizChapter) {
+                                    return `
+                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                            <button onclick="state.quizStarted = false; render();" class="mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                ${icons.chevronLeft} Back to Leaderboard
+                                            </button>
+                                            <div class="book-card bg-slate-800 border border-slate-700 rounded-xl p-4 mb-6">
+                                                <div class="book-header flex items-center justify-between mb-4">
+                                                    <div class="book-title font-bold text-lg">
+                                                        <div>Matthew</div>
+                                                        <div class="text-xs font-normal text-gray-400">Gospel</div>
                                                     </div>
                                                 </div>
-                                            `).join('')}
-                                        </form>
+                                                <div class="chapters-grid grid grid-cols-5 gap-2">
+                                                    ${[1, 2, 3, 4, 5, 6, 7, 8].map(ch => {
+                                                        const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[ch];
+                                                        const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[ch];
+                                                        return `
+                                                            <div class="flex flex-col items-center">
+                                                                <button 
+                                                                    onclick="${isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizChapter = '${ch}'; render();`}" 
+                                                                    class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : 'bg-slate-700 text-white hover:bg-blue-600'}"
+                                                                    title="Chapter ${ch}${isCompleted ? ' (View Summary)' : ''}"
+                                                                >
+                                                                    ${ch}
+                                                                </button>
+                                                                ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                            </div>
+                                                        `;
+                                                    }).join('')}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+                                }
+                                
+                                // Show questions for selected chapter
+                                if (state.selectedQuizChapter) {
+                                    const chapter = state.selectedQuizChapter;
+                                    
+                                    // Check if viewing summary of completed chapter
+                                    if (state.quizSummaryData && state.quizSummaryData.chapter == chapter) {
+                                        const { questions, userAnswers, score } = state.quizSummaryData;
+                                        
+                                        if (!questions || questions.length === 0) {
+                                            return `
+                                                <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
+                                                    <div class="text-gray-400 text-5xl mb-4">📋</div>
+                                                    <h3 class="text-xl font-bold mb-2">Summary Not Available</h3>
+                                                    <p class="${theme.textSecondary}">Could not load the summary for this chapter</p>
+                                                    <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Chapters</button>
+                                                </div>
+                                            `;
+                                        }
+                                        
+                                        return `
+                                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                    ${icons.chevronLeft} Back to Chapters
+                                                </button>
+                                                <div class="mb-6">
+                                                    <h3 class="text-2xl font-bold mb-2">Matthew Chapter ${chapter} - Summary</h3>
+                                                    <div class="text-lg font-semibold text-emerald-400">Score: ${score}/${questions.length}</div>
+                                                </div>
+                                                <div class="space-y-6">
+                                                    ${questions.map((q, idx) => {
+                                                        const userAnswer = userAnswers[q.id];
+                                                        const selectedAnswerIndex = userAnswer !== null && userAnswer !== undefined ? parseInt(userAnswer) : null;
+                                                        const isCorrect = selectedAnswerIndex === q.correctAnswer;
+                                                        
+                                                        return `
+                                                            <div class="border-l-4 ${isCorrect ? 'border-emerald-500' : 'border-red-500'} pl-4 pb-4 border-b ${theme.border}">
+                                                                <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
+                                                                <div class="space-y-2 mb-4">
+                                                                    ${q.options.map((option, optIdx) => {
+                                                                        const isSelectedOption = selectedAnswerIndex === optIdx;
+                                                                        const isCorrectOption = optIdx === q.correctAnswer;
+                                                                        let bgColor = 'bg-slate-700';
+                                                                        let textColor = 'text-white';
+                                                                        
+                                                                        if (isCorrectOption) {
+                                                                            bgColor = 'bg-emerald-600';
+                                                                            textColor = 'text-white';
+                                                                        } else if (isSelectedOption && !isCorrect) {
+                                                                            bgColor = 'bg-red-600';
+                                                                            textColor = 'text-white';
+                                                                        }
+                                                                        
+                                                                        return `
+                                                                            <div class="p-3 rounded-lg ${bgColor} ${textColor}">
+                                                                                ${option}
+                                                                            </div>
+                                                                        `;
+                                                                    }).join('')}
+                                                                </div>
+                                                                <div class="bg-slate-800 rounded-lg p-4 text-sm text-gray-300">
+                                                                    <div class="font-semibold text-blue-400 mb-2">💡 Explanation:</div>
+                                                                    <p class="mb-3">${q.explanation || 'No explanation available'}</p>
+                                                                    <div class="font-semibold text-yellow-400 mb-1">📖 Verse:</div>
+                                                                    <p>${q.verse || 'No verse reference available'}</p>
+                                                                </div>
+                                                            </div>
+                                                        `;
+                                                    }).join('')}
+                                                </div>
+                                            </div>
+                                        `;
+                                    }
+                                    
+                                    // Load the quiz questions for this chapter
+                                    const quizQuestionList = [];
+                                    if (window.quizQuestions && window.quizQuestions['matthew'] && window.quizQuestions['matthew'][chapter]) {
+                                        const chapterQuestions = window.quizQuestions['matthew'][chapter].questions;
+                                        chapterQuestions.forEach((q, idx) => {
+                                            quizQuestionList.push({
+                                                ...q,
+                                                id: `ch${chapter}-${idx}`,
+                                                chapter: chapter
+                                            });
+                                        });
+                                    }
 
-                                        <button onclick="submitQuiz(${JSON.stringify(quizQuestionList).replace(/"/g, '&quot;')}, '${dateKey}')" class="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
-                                            Submit Quiz
-                                        </button>
-                                    </div>
-                                `;
+                                    if (quizQuestionList.length === 0) {
+                                        return `
+                                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm text-center">
+                                                <div class="text-gray-400 text-5xl mb-4">🔨</div>
+                                                <h3 class="text-xl font-bold mb-2">Questions Not Found</h3>
+                                                <p class="${theme.textSecondary}">This chapter's questions are not available yet</p>
+                                                <button onclick="state.selectedQuizChapter = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Chapters</button>
+                                            </div>
+                                        `;
+                                    }
+
+                                    return `
+                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                            <button onclick="state.selectedQuizChapter = null; render();" class="mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                ${icons.chevronLeft} Back to Chapters
+                                            </button>
+                                            <h3 class="text-2xl font-bold mb-6">Matthew Chapter ${chapter}</h3>
+                                            <form id="quizForm" class="space-y-6">
+                                                ${quizQuestionList.map((q, idx) => `
+                                                    <div class="border-b ${theme.border} pb-6">
+                                                        <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
+                                                        <div class="space-y-3">
+                                                            ${q.options.map((option, optIdx) => `
+                                                                <label class="flex items-center p-3 ${theme.accent} rounded-lg cursor-pointer hover:bg-opacity-80 transition-colors">
+                                                                    <input type="radio" name="q${q.id}" value="${optIdx}" class="w-4 h-4" required>
+                                                                    <span class="ml-3">${option}</span>
+                                                                </label>
+                                                            `).join('')}
+                                                        </div>
+                                                    </div>
+                                                `).join('')}
+                                            </form>
+
+                                            <button onclick="submitQuiz(${JSON.stringify(quizQuestionList).replace(/"/g, '&quot;')}, '${dateKey}', '${chapter}')" class="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+                                                Submit Quiz
+                                            </button>
+                                        </div>
+                                    `;
+                                }
+
+                                return `<div class="${theme.card} rounded-xl p-6">${theme.textSecondary}Loading...</div>`;
                             })()}
                         ` : `
                             <!-- Top Readers Section (This Year) -->
@@ -3260,7 +3639,7 @@
                                 <span class="text-xs font-semibold">Notes</span>
                             </button>
                             ${state.quizTabVisible ? `
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadTodayQuizScoresFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
                                 <span class="text-xs font-semibold">Quiz</span>
                             </button>
