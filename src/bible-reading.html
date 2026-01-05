@@ -1867,24 +1867,31 @@
                 // Get currently selected user from state
                 if (!state.currentUser) throw new Error('No user selected');
                 const selectedUserName = state.currentUser.name;
+                const bookName = state.selectedQuizBook; // Include book name
                 
-                // Mark chapter as completed (per-user tracking)
+                // Mark chapter as completed (per-user, per-book tracking)
                 if (!state.completedQuizChapters[dateKey]) {
                     state.completedQuizChapters[dateKey] = {};
                 }
                 if (!state.completedQuizChapters[dateKey][state.currentUser.id]) {
                     state.completedQuizChapters[dateKey][state.currentUser.id] = {};
                 }
-                state.completedQuizChapters[dateKey][state.currentUser.id][chapter] = true;
+                if (!state.completedQuizChapters[dateKey][state.currentUser.id][bookName]) {
+                    state.completedQuizChapters[dateKey][state.currentUser.id][bookName] = {};
+                }
+                state.completedQuizChapters[dateKey][state.currentUser.id][bookName][chapter] = true;
                 
-                // Store chapter score
+                // Store chapter score (per-user, per-book)
                 if (!state.chapterScores[dateKey]) {
                     state.chapterScores[dateKey] = {};
                 }
                 if (!state.chapterScores[dateKey][state.currentUser.id]) {
                     state.chapterScores[dateKey][state.currentUser.id] = {};
                 }
-                state.chapterScores[dateKey][state.currentUser.id][chapter] = score;
+                if (!state.chapterScores[dateKey][state.currentUser.id][bookName]) {
+                    state.chapterScores[dateKey][state.currentUser.id][bookName] = {};
+                }
+                state.chapterScores[dateKey][state.currentUser.id][bookName][chapter] = score;
 
                 // Store in state
                 state.quizSubmitted[dateKey] = {
@@ -1926,9 +1933,12 @@
                             .eq('quiz_date', dateKey)
                             .single();
                         
-                        // Merge with existing chapter data
+                        // Merge with existing chapter data (now organized by book)
                         const chaptersData = existingData?.chapters_data || {};
-                        chaptersData[chapter] = {
+                        if (!chaptersData[bookName]) {
+                            chaptersData[bookName] = {};
+                        }
+                        chaptersData[bookName][chapter] = {
                             score: score,
                             total_questions: questions.length,
                             userAnswers: userAnswers,
@@ -1976,6 +1986,9 @@
                 state.quizStarted = true;
                 state.selectedQuizChapter = null;
 
+                // Reload all users' quiz progress to refresh leaderboard
+                await loadTodayQuizScoresFromSupabase();
+
                 render();
             } catch (error) {
                 console.error('Error submitting quiz:', error);
@@ -2020,10 +2033,50 @@
                     }
                     
                     // Restore completed chapters and scores from saved data
-                    Object.keys(quizData.chapters_data).forEach(chapter => {
-                        const chapterNum = parseInt(chapter);
-                        state.completedQuizChapters[dateKey][user.id][chapterNum] = true;
-                        state.chapterScores[dateKey][user.id][chapterNum] = quizData.chapters_data[chapter].score;
+                    // Handle both old format (chapters as direct keys) and new format (bookName as key)
+                    Object.keys(quizData.chapters_data).forEach(keyName => {
+                        const dataValue = quizData.chapters_data[keyName];
+                        
+                        // Try to determine if this is old format (chapter number) or new format (book name)
+                        // Old format: keyName is a number like "1", "2", etc and dataValue has .score directly
+                        // New format: keyName is a string like "Matthew", "Mark" and dataValue is an object of chapters
+                        
+                        const isChapterNumber = !isNaN(parseInt(keyName));
+                        const hasScoreProperty = dataValue && typeof dataValue === 'object' && 'score' in dataValue;
+                        
+                        if (isChapterNumber && hasScoreProperty) {
+                            // Old format: keyName is chapter number, data has .score property
+                            const bookName = 'Matthew'; // Assume Matthew for old data
+                            const chapterNum = parseInt(keyName);
+                            
+                            if (!state.completedQuizChapters[dateKey][user.id][bookName]) {
+                                state.completedQuizChapters[dateKey][user.id][bookName] = {};
+                            }
+                            if (!state.chapterScores[dateKey][user.id][bookName]) {
+                                state.chapterScores[dateKey][user.id][bookName] = {};
+                            }
+                            
+                            state.completedQuizChapters[dateKey][user.id][bookName][chapterNum] = true;
+                            state.chapterScores[dateKey][user.id][bookName][chapterNum] = dataValue.score;
+                        } else if (!isChapterNumber && typeof dataValue === 'object') {
+                            // New format: keyName is book name, data is object of chapters
+                            const bookName = keyName;
+                            
+                            if (!state.completedQuizChapters[dateKey][user.id][bookName]) {
+                                state.completedQuizChapters[dateKey][user.id][bookName] = {};
+                            }
+                            if (!state.chapterScores[dateKey][user.id][bookName]) {
+                                state.chapterScores[dateKey][user.id][bookName] = {};
+                            }
+                            
+                            Object.keys(dataValue).forEach(chapter => {
+                                const chapterNum = parseInt(chapter);
+                                if (!isNaN(chapterNum) && dataValue[chapter] && typeof dataValue[chapter] === 'object') {
+                                    state.completedQuizChapters[dateKey][user.id][bookName][chapterNum] = true;
+                                    state.chapterScores[dateKey][user.id][bookName][chapterNum] = dataValue[chapter].score;
+                                }
+                            });
+                        }
                     });
                     
                     console.log('Quiz progress loaded for user', user.id, 'on', dateKey);
@@ -2040,14 +2093,15 @@
                 
                 // Set the selected chapter first
                 state.selectedQuizChapter = chapter;
+                const bookKey = state.selectedQuizBook.toLowerCase();
                 
                 // Get the questions for this chapter
-                if (!window.quizQuestions || !window.quizQuestions['matthew'] || !window.quizQuestions['matthew'][chapter]) {
+                if (!window.quizQuestions || !window.quizQuestions[bookKey] || !window.quizQuestions[bookKey][chapter]) {
                     console.error('Questions not found for chapter', chapter);
                     return;
                 }
                 
-                const questions = window.quizQuestions['matthew'][chapter].questions;
+                const questions = window.quizQuestions[bookKey][chapter].questions;
                 
                 // Fetch user answers from Supabase
                 const { data: quizData, error } = await supabase
@@ -2062,8 +2116,8 @@
                     return;
                 }
                 
-                if (quizData && quizData.chapters_data && quizData.chapters_data[chapter]) {
-                    const chapterData = quizData.chapters_data[chapter];
+                if (quizData && quizData.chapters_data && quizData.chapters_data[state.selectedQuizBook] && quizData.chapters_data[state.selectedQuizBook][chapter]) {
+                    const chapterData = quizData.chapters_data[state.selectedQuizBook][chapter];
                     const userAnswers = chapterData.userAnswers || {};
                     
                     // Format questions with IDs for display
@@ -2618,7 +2672,7 @@
                                 };
                             }
                             
-                            // Restore per-chapter data for today
+                            // Restore per-chapter data for today (handle both old and new formats)
                             if (record.chapters_data && Object.keys(record.chapters_data).length > 0) {
                                 if (!state.completedQuizChapters[dateKey]) {
                                     state.completedQuizChapters[dateKey] = {};
@@ -2633,10 +2687,46 @@
                                     state.chapterScores[dateKey][record.user_id] = {};
                                 }
                                 
-                                Object.keys(record.chapters_data).forEach(chapter => {
-                                    const chapterNum = parseInt(chapter);
-                                    state.completedQuizChapters[dateKey][record.user_id][chapterNum] = true;
-                                    state.chapterScores[dateKey][record.user_id][chapterNum] = record.chapters_data[chapter].score;
+                                Object.keys(record.chapters_data).forEach(keyName => {
+                                    const dataValue = record.chapters_data[keyName];
+                                    
+                                    // Check if old format (chapter number key with score) or new format (book name with nested chapters)
+                                    const isChapterNumber = !isNaN(parseInt(keyName));
+                                    const hasScoreProperty = dataValue && typeof dataValue === 'object' && 'score' in dataValue;
+                                    
+                                    if (isChapterNumber && hasScoreProperty) {
+                                        // Old format: keyName is chapter, assume Matthew
+                                        const bookName = 'Matthew';
+                                        const chapterNum = parseInt(keyName);
+                                        
+                                        if (!state.completedQuizChapters[dateKey][record.user_id][bookName]) {
+                                            state.completedQuizChapters[dateKey][record.user_id][bookName] = {};
+                                        }
+                                        if (!state.chapterScores[dateKey][record.user_id][bookName]) {
+                                            state.chapterScores[dateKey][record.user_id][bookName] = {};
+                                        }
+                                        
+                                        state.completedQuizChapters[dateKey][record.user_id][bookName][chapterNum] = true;
+                                        state.chapterScores[dateKey][record.user_id][bookName][chapterNum] = dataValue.score;
+                                    } else if (!isChapterNumber && typeof dataValue === 'object') {
+                                        // New format: keyName is book name
+                                        const bookName = keyName;
+                                        
+                                        if (!state.completedQuizChapters[dateKey][record.user_id][bookName]) {
+                                            state.completedQuizChapters[dateKey][record.user_id][bookName] = {};
+                                        }
+                                        if (!state.chapterScores[dateKey][record.user_id][bookName]) {
+                                            state.chapterScores[dateKey][record.user_id][bookName] = {};
+                                        }
+                                        
+                                        Object.keys(dataValue).forEach(chapter => {
+                                            const chapterNum = parseInt(chapter);
+                                            if (!isNaN(chapterNum) && dataValue[chapter] && typeof dataValue[chapter] === 'object') {
+                                                state.completedQuizChapters[dateKey][record.user_id][bookName][chapterNum] = true;
+                                                state.chapterScores[dateKey][record.user_id][bookName][chapterNum] = dataValue[chapter].score;
+                                            }
+                                        });
+                                    }
                                 });
                             }
                         }
@@ -3384,6 +3474,15 @@
                                 
                                 // Show leaderboard first with Take Quiz button
                                 if (!state.quizStarted && !state.selectedQuizChapter) {
+                                    // Load leaderboard data if not already loaded
+                                    if (!state.quizLeaderboard || state.quizLeaderboard.length === 0) {
+                                        (async () => {
+                                            await loadTodayQuizScoresFromSupabase();
+                                            render();
+                                        })();
+                                        return `<div class="text-center py-8"><div class="text-gray-400">Loading leaderboard...</div></div>`;
+                                    }
+                                    
                                     const topThree = state.quizLeaderboard && state.quizLeaderboard.length > 0 ? state.quizLeaderboard.slice(0, 3) : [];
                                     const others = state.quizLeaderboard && state.quizLeaderboard.length > 3 ? state.quizLeaderboard.slice(3) : [];
                                     
@@ -3668,7 +3767,19 @@
                                     const ntBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'];
                                     const otBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
                                     const allBooks = state.selectedTestament === 'NT' ? ntBooks : otBooks;
-                                    const matthewChapters = [1, 2, 3, 4, 5, 6, 7, 8];
+                                    
+                                    // Book chapter counts
+                                    const bookChapterCounts = {
+                                        'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28, 'Romans': 16,
+                                        '1 Corinthians': 16, '2 Corinthians': 13, 'Galatians': 6, 'Ephesians': 6, 'Philippians': 4, 'Colossians': 4,
+                                        '1 Thessalonians': 5, '2 Thessalonians': 3, '1 Timothy': 6, '2 Timothy': 4, 'Titus': 3, 'Philemon': 1,
+                                        'Hebrews': 13, 'James': 5, '1 Peter': 5, '2 Peter': 3, '1 John': 5, '2 John': 1, '3 John': 1, 'Jude': 1, 'Revelation': 22,
+                                        'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34, 'Joshua': 24, 'Judges': 21, 'Ruth': 4,
+                                        '1 Samuel': 31, '2 Samuel': 24, '1 Kings': 22, '2 Kings': 25, '1 Chronicles': 29, '2 Chronicles': 36, 'Ezra': 10, 'Nehemiah': 13,
+                                        'Esther': 10, 'Job': 42, 'Psalms': 150, 'Proverbs': 31, 'Ecclesiastes': 12, 'Song of Solomon': 8,
+                                        'Isaiah': 66, 'Jeremiah': 52, 'Lamentations': 5, 'Ezekiel': 48, 'Daniel': 12, 'Hosea': 14, 'Joel': 3, 'Amos': 9,
+                                        'Obadiah': 1, 'Jonah': 4, 'Micah': 7, 'Nahum': 3, 'Habakkuk': 3, 'Zephaniah': 3, 'Haggai': 2, 'Zechariah': 14, 'Malachi': 4
+                                    };
 
                                     return `
                                         <div id="quizContainer">
@@ -3677,44 +3788,42 @@
                                             </button>
                                             
                                             ${allBooks.map(book => {
-                                                // Matthew gets special treatment with chapters
-                                                if (book === 'Matthew') {
-                                                    return `
-                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4">
-                                                            <div class="book-header mb-4">
-                                                                <div class="font-bold text-lg">
-                                                                    <div>${book}</div>
-                                                                    <div class="text-xs font-normal text-gray-400">Gospel</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="chapters-grid grid grid-cols-5 gap-2">
-                                                                ${matthewChapters.map(ch => {
-                                                                    const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[ch];
-                                                                    const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[ch];
-                                                                    return `
-                                                                        <div class="flex flex-col items-center">
-                                                                            <button 
-                                                                                onclick="${isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizBook = '${book}'; state.selectedQuizChapter = '${ch}'; render();`}" 
-                                                                                class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : 'bg-slate-700 text-white hover:bg-blue-600'}"
-                                                                                title="Chapter ${ch}${isCompleted ? ' (View Summary)' : ''}"
-                                                                            >
-                                                                                ${ch}
-                                                                            </button>
-                                                                            ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
-                                                                        </div>
-                                                                    `;
-                                                                }).join('')}
+                                                const bookKey = book.toLowerCase().replace(/\s+/g, '-');
+                                                const hasQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey].questions;
+                                                const chapterCount = bookChapterCounts[book] || 1;
+                                                const chaptersArray = Array.from({length: chapterCount}, (_, i) => i + 1);
+                                                
+                                                return `
+                                                    <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasQuizData ? 'opacity-60' : ''}">
+                                                        <div class="book-header mb-4">
+                                                            <div class="font-bold text-lg">
+                                                                <div>${book}</div>
+                                                                ${book === 'Matthew' ? '<div class="text-xs font-normal text-gray-400">Gospel</div>' : ''}
                                                             </div>
                                                         </div>
-                                                    `;
-                                                } else {
-                                                    // Other books in separate containers
-                                                    return `
-                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 opacity-60">
-                                                            <div class="font-bold text-lg">${book}</div>
+                                                        <div class="chapters-grid grid grid-cols-5 gap-2">
+                                                            ${chaptersArray.map(ch => {
+                                                                const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
+                                                                const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
+                                                                const isEnabled = hasQuizData || (book === 'Matthew' && ch <= 8);
+                                                                
+                                                                return `
+                                                                    <div class="flex flex-col items-center">
+                                                                        <button 
+                                                                            onclick="${isEnabled ? (isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizBook = '${book}'; state.selectedQuizChapter = '${ch}'; render();`) : ''}" 
+                                                                            class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : (isEnabled ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-600 text-gray-400 cursor-not-allowed')}"
+                                                                            title="Chapter ${ch}${isCompleted ? ' (View Summary)' : (isEnabled ? '' : ' (Coming Soon)')}"
+                                                                            ${!isEnabled ? 'disabled' : ''}
+                                                                        >
+                                                                            ${ch}
+                                                                        </button>
+                                                                        ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                                    </div>
+                                                                `;
+                                                            }).join('')}
                                                         </div>
-                                                    `;
-                                                }
+                                                    </div>
+                                                `;
                                             }).join('')}
                                         </div>
                                     `;
