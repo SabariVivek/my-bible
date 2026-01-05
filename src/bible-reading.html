@@ -1126,6 +1126,17 @@
             }
         }
 
+        /* Mobile/Desktop back button styling */
+        .back-button-desktop {
+            display: flex !important;
+        }
+
+        @media (max-width: 768px) {
+            .back-button-desktop {
+                display: none !important;
+            }
+        }
+
         @keyframes pageFlipRight {
             0% {
                 transform: rotateY(0deg) translateX(0);
@@ -1411,6 +1422,22 @@
                 touchEndX = e.changedTouches[0].screenX;
                 handleDashboardSwipeGesture();
             }, { passive: true });
+        }
+
+        function handleQuizSwipeGesture() {
+            const container = document.getElementById('quizContainer');
+            if (!container) return;
+
+            const diffX = touchStartX - touchEndX;
+            
+            // Swipe right gesture (more than 50px movement)
+            if (diffX < -minSwipeDistance) {
+                const backBtn = container.querySelector('.back-button-desktop');
+                if (backBtn && window.innerWidth <= 768) {
+                    // Simulate back button click
+                    backBtn.click();
+                }
+            }
         }
 
         function initDashboardTabSwipeListeners() {
@@ -1785,6 +1812,40 @@
                 completedUsers
             };
         }
+
+        function checkAllAnswered() {
+            const form = document.getElementById('quizForm');
+            if (!form) return;
+            
+            const quizInputs = form.querySelectorAll('.quiz-input');
+            const answeredCount = Array.from(quizInputs).filter(input => input.checked).length;
+            const totalQuestions = new Set(Array.from(quizInputs).map(input => input.name)).size;
+            
+            const submitBtn = document.getElementById('submitQuizBtn');
+            if (submitBtn) {
+                submitBtn.disabled = answeredCount !== totalQuestions;
+            }
+        }
+
+        function handleSwipe() {
+            const container = document.getElementById('quizContainer');
+            if (!container) return;
+
+            const diffX = touchStartX - touchEndX;
+            
+            // Swipe right gesture (more than 50px to the left)
+            if (diffX < -50) {
+                const backBtn = container.querySelector('.back-button-desktop');
+                if (backBtn) {
+                    // Check if we're on mobile
+                    if (window.innerWidth <= 768) {
+                        // Simulate back button click
+                        backBtn.click();
+                    }
+                }
+            }
+        }
+
         async function submitQuiz(questions, dateKey, chapter) {
             try {
                 // Get all form inputs and calculate score
@@ -3331,10 +3392,10 @@
                                                     max-width: 500px;
                                                     margin: 0 auto;
                                                     background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
-                                                    border: 2px solid #00d4ff;
+                                                    border: 2px solid #c0c0c0;
                                                     border-radius: 20px;
                                                     padding: 30px;
-                                                    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), inset 0 0 20px rgba(0, 212, 255, 0.1);
+                                                    box-shadow: 0 0 30px rgba(192, 192, 192, 0.3), inset 0 0 20px rgba(192, 192, 192, 0.1);
                                                 }
                                                 
                                                 .leaderboard-title {
@@ -3342,12 +3403,12 @@
                                                     font-size: 28px;
                                                     font-weight: bold;
                                                     margin-bottom: 30px;
-                                                    color: #00d4ff;
-                                                    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
-                                                    border: 2px solid #00d4ff;
+                                                    color: #c0c0c0;
+                                                    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.3), transparent);
+                                                    border: 2px solid #c0c0c0;
                                                     border-radius: 12px;
                                                     padding: 12px;
-                                                    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+                                                    box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
                                                 }
                                                 
                                                 .top-three {
@@ -3366,14 +3427,14 @@
                                                     color: #fff;
                                                     position: relative;
                                                     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
-                                                    border: 2px solid #00d4ff;
-                                                    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+                                                    border: 2px solid #c0c0c0;
+                                                    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
                                                     transition: all 0.3s;
                                                 }
                                                 
                                                 .leaderboard-card:hover {
                                                     transform: translateY(-5px);
-                                                    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+                                                    box-shadow: 0 0 25px rgba(192, 192, 192, 0.6);
                                                 }
                                                 
                                                 .leaderboard-card.first-place {
@@ -3381,20 +3442,23 @@
                                                     order: 2;
                                                     transform: scale(1.15);
                                                     z-index: 10;
-                                                    border-color: #fbbf24;
-                                                    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+                                                    border-color: #ffd700;
+                                                    background: linear-gradient(135deg, #b8860b 0%, #ffd700 50%, #b8860b 100%);
+                                                    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
                                                 }
                                                 
                                                 .leaderboard-card.second-place {
                                                     order: 1;
-                                                    border-color: #e5e7eb;
-                                                    box-shadow: 0 0 15px rgba(229, 231, 235, 0.3);
+                                                    border-color: #c0c0c0;
+                                                    background: linear-gradient(135deg, #808080 0%, #c0c0c0 50%, #808080 100%);
+                                                    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
                                                 }
                                                 
                                                 .leaderboard-card.third-place {
                                                     order: 3;
-                                                    border-color: #f97316;
-                                                    box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+                                                    border-color: #cd7f32;
+                                                    background: linear-gradient(135deg, #8b4513 0%, #cd7f32 50%, #8b4513 100%);
+                                                    box-shadow: 0 0 15px rgba(205, 127, 50, 0.3);
                                                 }
                                                 
                                                 .rank-badge {
@@ -3409,13 +3473,14 @@
                                                     height: 55px;
                                                     border-radius: 50%;
                                                     margin: 0 auto 6px;
-                                                    border: 3px solid #00d4ff;
+                                                    border: 3px solid #c0c0c0;
                                                 }
                                                 
                                                 .leaderboard-card h4 {
                                                     font-weight: 600;
                                                     margin: 6px 0 3px 0;
                                                     font-size: 12px;
+                                                    color: #000;
                                                 }
                                                 
                                                 .leaderboard-card p {
@@ -3438,15 +3503,15 @@
                                                     padding: 14px 16px;
                                                     margin-bottom: 12px;
                                                     background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
-                                                    border: 1.5px solid #00d4ff;
+                                                    border: 1.5px solid #c0c0c0;
                                                     border-radius: 10px;
-                                                    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+                                                    box-shadow: 0 0 10px rgba(192, 192, 192, 0.2);
                                                     transition: all 0.3s;
                                                 }
                                                 
                                                 .leaderboard-list li:hover {
-                                                    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-                                                    border-color: #22d3ee;
+                                                    box-shadow: 0 0 20px rgba(192, 192, 192, 0.4);
+                                                    border-color: #e8e8e8;
                                                 }
                                                 
                                                 .leaderboard-list li:last-child {
@@ -3454,7 +3519,7 @@
                                                 }
                                                 
                                                 .rank-number {
-                                                    color: #00d4ff;
+                                                    color: #c0c0c0;
                                                     font-weight: 700;
                                                     font-size: 18px;
                                                     min-width: 30px;
@@ -3465,7 +3530,7 @@
                                                     width: 40px;
                                                     height: 40px;
                                                     border-radius: 50%;
-                                                    border: 2px solid #00d4ff;
+                                                    border: 2px solid #c0c0c0;
                                                     flex-shrink: 0;
                                                     display: flex;
                                                     align-items: center;
@@ -3500,7 +3565,6 @@
                                             </style>
                                             
                                             <div class="leaderboard-container">
-                                                <div class="leaderboard-title">LEADERBOARD</div>
                                                 
                                                 ${topThree.length > 0 ? `
                                                     <div class="top-three">
@@ -3579,35 +3643,33 @@
                                 // Show chapter selection
                                 if (state.quizStarted && !state.selectedQuizChapter) {
                                     return `
-                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <button onclick="state.quizStarted = false; render();" class="mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                        <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                            <button onclick="state.quizStarted = false; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                 ${icons.chevronLeft} Back to Leaderboard
                                             </button>
-                                            <div class="book-card bg-slate-800 border border-slate-700 rounded-xl p-4 mb-6">
-                                                <div class="book-header flex items-center justify-between mb-4">
-                                                    <div class="book-title font-bold text-lg">
-                                                        <div>Matthew</div>
-                                                        <div class="text-xs font-normal text-gray-400">Gospel</div>
-                                                    </div>
+                                            <div class="book-header flex items-center justify-between mb-4">
+                                                <div class="book-title font-bold text-lg">
+                                                    <div>Matthew</div>
+                                                    <div class="text-xs font-normal text-gray-400">Gospel</div>
                                                 </div>
-                                                <div class="chapters-grid grid grid-cols-5 gap-2">
-                                                    ${[1, 2, 3, 4, 5, 6, 7, 8].map(ch => {
-                                                        const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[ch];
-                                                        const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[ch];
-                                                        return `
-                                                            <div class="flex flex-col items-center">
-                                                                <button 
-                                                                    onclick="${isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizChapter = '${ch}'; render();`}" 
-                                                                    class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : 'bg-slate-700 text-white hover:bg-blue-600'}"
-                                                                    title="Chapter ${ch}${isCompleted ? ' (View Summary)' : ''}"
-                                                                >
-                                                                    ${ch}
-                                                                </button>
-                                                                ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
-                                                            </div>
-                                                        `;
-                                                    }).join('')}
-                                                </div>
+                                            </div>
+                                            <div class="chapters-grid grid grid-cols-5 gap-2">
+                                                ${[1, 2, 3, 4, 5, 6, 7, 8].map(ch => {
+                                                    const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[ch];
+                                                    const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[ch];
+                                                    return `
+                                                        <div class="flex flex-col items-center">
+                                                            <button 
+                                                                onclick="${isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizChapter = '${ch}'; render();`}" 
+                                                                class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : 'bg-slate-700 text-white hover:bg-blue-600'}"
+                                                                title="Chapter ${ch}${isCompleted ? ' (View Summary)' : ''}"
+                                                            >
+                                                                ${ch}
+                                                            </button>
+                                                            ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                        </div>
+                                                    `;
+                                                }).join('')}
                                             </div>
                                         </div>
                                     `;
@@ -3633,8 +3695,8 @@
                                         }
                                         
                                         return `
-                                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                            <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                     ${icons.chevronLeft} Back to Chapters
                                                 </button>
                                                 <div class="mb-6">
@@ -3711,8 +3773,8 @@
                                     }
 
                                     return `
-                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <button onclick="state.selectedQuizChapter = null; render();" class="mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                        <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                                            <button onclick="state.selectedQuizChapter = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                 ${icons.chevronLeft} Back to Chapters
                                             </button>
                                             <h3 class="text-2xl font-bold mb-6">Matthew Chapter ${chapter}</h3>
@@ -3723,7 +3785,7 @@
                                                         <div class="space-y-3">
                                                             ${q.options.map((option, optIdx) => `
                                                                 <label class="flex items-center p-3 ${theme.accent} rounded-lg cursor-pointer hover:bg-opacity-80 transition-colors">
-                                                                    <input type="radio" name="q${q.id}" value="${optIdx}" class="w-4 h-4" required>
+                                                                    <input type="radio" name="q${q.id}" value="${optIdx}" class="w-4 h-4 quiz-input" required onchange="checkAllAnswered()">
                                                                     <span class="ml-3">${option}</span>
                                                                 </label>
                                                             `).join('')}
@@ -3732,7 +3794,7 @@
                                                 `).join('')}
                                             </form>
 
-                                            <button onclick="submitQuiz(${JSON.stringify(quizQuestionList).replace(/"/g, '&quot;')}, '${dateKey}', '${chapter}')" class="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+                                            <button id="submitQuizBtn" onclick="submitQuiz(${JSON.stringify(quizQuestionList).replace(/"/g, '&quot;')}, '${dateKey}', '${chapter}')" class="w-full mt-8 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition-colors" disabled>
                                                 Submit Quiz
                                             </button>
                                         </div>
@@ -4926,6 +4988,19 @@
                 }
                 if (document.querySelector('.dashboard-container')) {
                     initDashboardTabSwipeListeners();
+                }
+                
+                // Initialize swipe listeners for quiz pages
+                const quizContainer = document.getElementById('quizContainer');
+                if (quizContainer) {
+                    quizContainer.addEventListener('touchstart', (e) => {
+                        touchStartX = e.changedTouches[0].screenX;
+                    }, { passive: true });
+
+                    quizContainer.addEventListener('touchend', (e) => {
+                        touchEndX = e.changedTouches[0].screenX;
+                        handleQuizSwipeGesture();
+                    }, { passive: true });
                 }
                 
                 // Trigger confetti when family tab is first opened
