@@ -1926,12 +1926,17 @@
                 if (state.currentUser && state.currentUser.id) {
                     try {
                         // Get existing quiz data to preserve other chapters
-                        const { data: existingData } = await supabase
+                        const { data: existingData, error: fetchError } = await supabase
                             .from('quiz_scores')
                             .select('chapters_data')
                             .eq('user_id', state.currentUser.id)
                             .eq('quiz_date', dateKey)
                             .single();
+                        
+                        // Ignore 406 errors (not found) and treat as no existing data
+                        if (fetchError && fetchError.code !== 'PGRST116') {
+                            console.error('Error fetching existing data:', fetchError);
+                        }
                         
                         // Merge with existing chapter data (now organized by book)
                         const chaptersData = existingData?.chapters_data || {};
@@ -1982,9 +1987,11 @@
                     score: score
                 };
 
-                // Reset to show chapter selection (not leaderboard)
-                state.quizStarted = true;
+                // Reset to show leaderboard with updated scores
+                state.quizStarted = false;
                 state.selectedQuizChapter = null;
+                state.selectedQuizBook = null;
+                state.selectedTestament = null;
 
                 // Reload all users' quiz progress to refresh leaderboard
                 await loadTodayQuizScoresFromSupabase();
@@ -2655,8 +2662,41 @@
                                 quizzesCompleted: 0
                             };
                         }
-                        userScoreTotals[record.user_id].totalScore += record.score || 0;
-                        userScoreTotals[record.user_id].totalQuestions += record.total_questions || 0;
+                        
+                        // Calculate score from chapters_data if available, otherwise use record.score
+                        let dailyScore = 0;
+                        let dailyQuestions = 0;
+                        
+                        if (record.chapters_data && typeof record.chapters_data === 'object') {
+                            Object.keys(record.chapters_data).forEach(bookOrChapter => {
+                                const dataValue = record.chapters_data[bookOrChapter];
+                                
+                                if (typeof dataValue === 'object') {
+                                    // Check if this is a book (nested chapters) or direct chapter with score
+                                    if (dataValue.score !== undefined && dataValue.total_questions !== undefined) {
+                                        // Direct chapter data (old format or nested)
+                                        dailyScore += dataValue.score || 0;
+                                        dailyQuestions += dataValue.total_questions || 0;
+                                    } else {
+                                        // New format: bookName with nested chapters
+                                        Object.keys(dataValue).forEach(chapter => {
+                                            const chapterData = dataValue[chapter];
+                                            dailyScore += chapterData.score || 0;
+                                            dailyQuestions += chapterData.total_questions || 0;
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                        
+                        // If no chapters_data score found, use the record.score
+                        if (dailyScore === 0 && record.score) {
+                            dailyScore = record.score;
+                            dailyQuestions = record.total_questions || 0;
+                        }
+                        
+                        userScoreTotals[record.user_id].totalScore += dailyScore;
+                        userScoreTotals[record.user_id].totalQuestions += dailyQuestions;
                         userScoreTotals[record.user_id].quizzesCompleted += 1;
                         
                         // Also restore today's per-chapter data for the current view
@@ -3850,7 +3890,7 @@
                                         
                                         return `
                                             <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; state.quizSummaryData = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                     ${icons.chevronLeft} Back to Books
                                                 </button>
                                                 <div class="mb-6">
@@ -3921,14 +3961,14 @@
                                                 <div class="text-gray-400 text-5xl mb-4">🔨</div>
                                                 <h3 class="text-xl font-bold mb-2">Questions Not Found</h3>
                                                 <p class="${theme.textSecondary}">This chapter's questions are not available yet</p>
-                                                <button onclick="state.selectedQuizChapter = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Books</button>
+                                                <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Books</button>
                                             </div>
                                         `;
                                     }
 
                                     return `
                                         <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <button onclick="state.selectedQuizChapter = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                            <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                 ${icons.chevronLeft} Back to Books
                                             </button>
                                             <h3 class="text-2xl font-bold mb-6">Matthew Chapter ${chapter}</h3>
