@@ -2513,67 +2513,84 @@
 
         async function loadTodayQuizScoresFromSupabase() {
             try {
-                const today = new Date();
-                const dateKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-                
-                // Fetch all quiz scores for today
+                // Fetch ALL quiz scores (all dates, all users, all chapters)
                 const { data, error } = await supabase
                     .from('quiz_scores')
-                    .select('*')
-                    .eq('quiz_date', dateKey);
+                    .select('*');
                 
                 if (error) {
                     console.error('Error loading quiz scores:', error);
                     return;
                 }
 
+                // Calculate all-time scores for each user by summing all their quiz attempts
+                const userScoreTotals = {};
+                const today = new Date();
+                const dateKey = today.toISOString().split('T')[0];
+                
                 if (data && data.length > 0) {
-                    // Update local state with Supabase data
+                    // Sum up all scores for each user across all dates
                     data.forEach(record => {
-                        // Find user and update their quiz score
-                        const userIndex = state.users.findIndex(u => u.id === record.user_id);
-                        if (userIndex !== -1) {
-                            if (!state.users[userIndex].quizScores) {
-                                state.users[userIndex].quizScores = {};
-                            }
-                            state.users[userIndex].quizScores[dateKey] = {
-                                score: record.score,
-                                totalQuestions: record.total_questions
+                        if (!userScoreTotals[record.user_id]) {
+                            userScoreTotals[record.user_id] = {
+                                totalScore: 0,
+                                totalQuestions: 0,
+                                quizzesCompleted: 0
                             };
                         }
+                        userScoreTotals[record.user_id].totalScore += record.score || 0;
+                        userScoreTotals[record.user_id].totalQuestions += record.total_questions || 0;
+                        userScoreTotals[record.user_id].quizzesCompleted += 1;
                         
-                        // Also restore per-chapter data
-                        if (record.chapters_data && Object.keys(record.chapters_data).length > 0) {
-                            if (!state.completedQuizChapters[dateKey]) {
-                                state.completedQuizChapters[dateKey] = {};
-                            }
-                            if (!state.completedQuizChapters[dateKey][record.user_id]) {
-                                state.completedQuizChapters[dateKey][record.user_id] = {};
-                            }
-                            if (!state.chapterScores[dateKey]) {
-                                state.chapterScores[dateKey] = {};
-                            }
-                            if (!state.chapterScores[dateKey][record.user_id]) {
-                                state.chapterScores[dateKey][record.user_id] = {};
+                        // Also restore today's per-chapter data for the current view
+                        if (record.quiz_date === dateKey) {
+                            const userIndex = state.users.findIndex(u => u.id === record.user_id);
+                            if (userIndex !== -1) {
+                                if (!state.users[userIndex].quizScores) {
+                                    state.users[userIndex].quizScores = {};
+                                }
+                                state.users[userIndex].quizScores[dateKey] = {
+                                    score: record.score,
+                                    totalQuestions: record.total_questions
+                                };
                             }
                             
-                            // Restore each chapter's score and completion status
-                            Object.keys(record.chapters_data).forEach(chapter => {
-                                const chapterNum = parseInt(chapter);
-                                state.completedQuizChapters[dateKey][record.user_id][chapterNum] = true;
-                                state.chapterScores[dateKey][record.user_id][chapterNum] = record.chapters_data[chapter].score;
-                            });
+                            // Restore per-chapter data for today
+                            if (record.chapters_data && Object.keys(record.chapters_data).length > 0) {
+                                if (!state.completedQuizChapters[dateKey]) {
+                                    state.completedQuizChapters[dateKey] = {};
+                                }
+                                if (!state.completedQuizChapters[dateKey][record.user_id]) {
+                                    state.completedQuizChapters[dateKey][record.user_id] = {};
+                                }
+                                if (!state.chapterScores[dateKey]) {
+                                    state.chapterScores[dateKey] = {};
+                                }
+                                if (!state.chapterScores[dateKey][record.user_id]) {
+                                    state.chapterScores[dateKey][record.user_id] = {};
+                                }
+                                
+                                Object.keys(record.chapters_data).forEach(chapter => {
+                                    const chapterNum = parseInt(chapter);
+                                    state.completedQuizChapters[dateKey][record.user_id][chapterNum] = true;
+                                    state.chapterScores[dateKey][record.user_id][chapterNum] = record.chapters_data[chapter].score;
+                                });
+                            }
                         }
                     });
 
-                    // Rebuild leaderboard from updated data
+                    // Build all-time leaderboard from combined scores
                     state.quizLeaderboard = state.users
-                        .map(user => ({
-                            name: user.name,
-                            score: user.quizScores?.[dateKey]?.score || 0,
-                            total_questions: user.quizScores?.[dateKey]?.totalQuestions || 0
-                        }))
-                        .filter(entry => entry.score > 0 || entry.total_questions > 0)
+                        .map(user => {
+                            const totals = userScoreTotals[user.id];
+                            return {
+                                name: user.name,
+                                score: totals?.totalScore || 0,
+                                total_questions: totals?.totalQuestions || 0,
+                                quizzesCompleted: totals?.quizzesCompleted || 0
+                            };
+                        })
+                        .filter(entry => entry.score > 0)
                         .sort((a, b) => b.score - a.score)
                         .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
 
@@ -3304,30 +3321,257 @@
                                 
                                 // Show leaderboard first with Take Quiz button
                                 if (!state.quizStarted && !state.selectedQuizChapter) {
+                                    const topThree = state.quizLeaderboard && state.quizLeaderboard.length > 0 ? state.quizLeaderboard.slice(0, 3) : [];
+                                    const others = state.quizLeaderboard && state.quizLeaderboard.length > 3 ? state.quizLeaderboard.slice(3) : [];
+                                    
                                     return `
-                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <div class="text-center mb-6">
-                                                <div class="text-5xl mb-4">🏆</div>
-                                                <h3 class="text-2xl font-bold mb-2">Daily Quiz Leaderboard</h3>
-                                                <p class="${theme.textSecondary} mb-6">See how everyone performed today</p>
-                                                <button onclick="state.quizStarted = true; render();" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                                                    Take Quiz
-                                                </button>
+                                        <div class="space-y-6">
+                                            <style>
+                                                .leaderboard-container {
+                                                    max-width: 500px;
+                                                    margin: 0 auto;
+                                                    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+                                                    border: 2px solid #00d4ff;
+                                                    border-radius: 20px;
+                                                    padding: 30px;
+                                                    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), inset 0 0 20px rgba(0, 212, 255, 0.1);
+                                                }
+                                                
+                                                .leaderboard-title {
+                                                    text-align: center;
+                                                    font-size: 28px;
+                                                    font-weight: bold;
+                                                    margin-bottom: 30px;
+                                                    color: #00d4ff;
+                                                    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+                                                    border: 2px solid #00d4ff;
+                                                    border-radius: 12px;
+                                                    padding: 12px;
+                                                    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+                                                }
+                                                
+                                                .top-three {
+                                                    display: flex;
+                                                    align-items: flex-end;
+                                                    justify-content: center;
+                                                    gap: 12px;
+                                                    margin-bottom: 30px;
+                                                }
+                                                
+                                                .leaderboard-card {
+                                                    width: 100px;
+                                                    text-align: center;
+                                                    border-radius: 12px;
+                                                    padding: 12px 8px;
+                                                    color: #fff;
+                                                    position: relative;
+                                                    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
+                                                    border: 2px solid #00d4ff;
+                                                    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+                                                    transition: all 0.3s;
+                                                }
+                                                
+                                                .leaderboard-card:hover {
+                                                    transform: translateY(-5px);
+                                                    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+                                                }
+                                                
+                                                .leaderboard-card.first-place {
+                                                    width: 120px;
+                                                    order: 2;
+                                                    transform: scale(1.15);
+                                                    z-index: 10;
+                                                    border-color: #fbbf24;
+                                                    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+                                                }
+                                                
+                                                .leaderboard-card.second-place {
+                                                    order: 1;
+                                                    border-color: #e5e7eb;
+                                                    box-shadow: 0 0 15px rgba(229, 231, 235, 0.3);
+                                                }
+                                                
+                                                .leaderboard-card.third-place {
+                                                    order: 3;
+                                                    border-color: #f97316;
+                                                    box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+                                                }
+                                                
+                                                .rank-badge {
+                                                    position: absolute;
+                                                    top: -14px;
+                                                    right: 8px;
+                                                    font-size: 20px;
+                                                }
+                                                
+                                                .leaderboard-card img, .leaderboard-card > div:first-of-type {
+                                                    width: 55px;
+                                                    height: 55px;
+                                                    border-radius: 50%;
+                                                    margin: 0 auto 6px;
+                                                    border: 3px solid #00d4ff;
+                                                }
+                                                
+                                                .leaderboard-card h4 {
+                                                    font-weight: 600;
+                                                    margin: 6px 0 3px 0;
+                                                    font-size: 12px;
+                                                }
+                                                
+                                                .leaderboard-card p {
+                                                    font-size: 13px;
+                                                    font-weight: 600;
+                                                    margin: 0;
+                                                }
+                                                
+                                                .leaderboard-list {
+                                                    list-style: none;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    space-y: 12px;
+                                                }
+                                                
+                                                .leaderboard-list li {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 12px;
+                                                    padding: 14px 16px;
+                                                    margin-bottom: 12px;
+                                                    background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
+                                                    border: 1.5px solid #00d4ff;
+                                                    border-radius: 10px;
+                                                    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+                                                    transition: all 0.3s;
+                                                }
+                                                
+                                                .leaderboard-list li:hover {
+                                                    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+                                                    border-color: #22d3ee;
+                                                }
+                                                
+                                                .leaderboard-list li:last-child {
+                                                    margin-bottom: 0;
+                                                }
+                                                
+                                                .rank-number {
+                                                    color: #00d4ff;
+                                                    font-weight: 700;
+                                                    font-size: 18px;
+                                                    min-width: 30px;
+                                                    text-align: center;
+                                                }
+                                                
+                                                .player-avatar {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    border-radius: 50%;
+                                                    border: 2px solid #00d4ff;
+                                                    flex-shrink: 0;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    overflow: hidden;
+                                                }
+                                                
+                                                .player-info {
+                                                    flex: 1;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 8px;
+                                                }
+                                                
+                                                .player-name {
+                                                    color: #fff;
+                                                    font-weight: 600;
+                                                }
+                                                
+                                                .stars {
+                                                    color: #fbbf24;
+                                                    font-size: 12px;
+                                                    letter-spacing: 2px;
+                                                }
+                                                
+                                                .score {
+                                                    color: #fff;
+                                                    font-weight: 700;
+                                                    font-size: 16px;
+                                                    margin-left: auto;
+                                                }
+                                            </style>
+                                            
+                                            <div class="leaderboard-container">
+                                                <div class="leaderboard-title">LEADERBOARD</div>
+                                                
+                                                ${topThree.length > 0 ? `
+                                                    <div class="top-three">
+                                                        ${topThree.map((user, idx) => {
+                                                            let cardClass = '';
+                                                            let rankBadge = '';
+                                                            
+                                                            if (idx === 0) {
+                                                                cardClass = 'first-place';
+                                                                rankBadge = '🥇';
+                                                            } else if (idx === 1) {
+                                                                cardClass = 'second-place';
+                                                                rankBadge = '🥈';
+                                                            } else {
+                                                                cardClass = 'third-place';
+                                                                rankBadge = '🥉';
+                                                            }
+                                                            
+                                                            // Get user initials as fallback
+                                                            const initials = (user.name || 'U').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+                                                            
+                                                            // Generate a color based on user name for fallback
+                                                            const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316'];
+                                                            const colorIndex = user.name.charCodeAt(0) % colors.length;
+                                                            const bgColor = colors[colorIndex];
+                                                            
+                                                            return `
+                                                                <div class="leaderboard-card ${cardClass}">
+                                                                    <span class="rank-badge">${rankBadge}</span>
+                                                                    <div style="width: 55px; height: 55px; border-radius: 50%; margin: 0 auto 8px; border: 3px solid #00d4ff; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                                                                        <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                                                                    </div>
+                                                                    <h4>${user.name || 'User'}</h4>
+                                                                    <p>${user.score}</p>
+                                                                </div>
+                                                            `;
+                                                        }).join('')}
+                                                    </div>
+                                                ` : ''}
+                                                
+                                                ${others.length > 0 ? `
+                                                    <ul class="leaderboard-list">
+                                                        ${others.map((user, idx) => {
+                                                            const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316'];
+                                                            const colorIndex = user.name.charCodeAt(0) % colors.length;
+                                                            const bgColor = colors[colorIndex];
+                                                            const initials = (user.name || 'U').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+                                                            
+                                                            return `
+                                                                <li>
+                                                                    <div class="rank-number">${idx + 4}</div>
+                                                                    <div class="player-avatar">
+                                                                        <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                                                                    </div>
+                                                                    <div class="player-info">
+                                                                        <div class="player-name">${user.name || 'User'}</div>
+                                                                    </div>
+                                                                    <div class="score">${user.score}</div>
+                                                                </li>
+                                                            `;
+                                                        }).join('')}
+                                                    </ul>
+                                                ` : `
+                                                    <div class="text-center text-gray-400 py-8">No quizzes completed yet</div>
+                                                `}
                                             </div>
-                                            <div class="border-t ${theme.border} pt-6">
-                                                <h4 class="font-bold mb-4">Rankings</h4>
-                                                <div class="space-y-2 max-h-96 overflow-y-auto">
-                                                    ${state.quizLeaderboard && state.quizLeaderboard.length > 0 ? state.quizLeaderboard?.map((user, idx) => `
-                                                        <div class="flex items-center justify-between p-3 ${theme.accent} rounded-lg">
-                                                            <div class="flex items-center gap-3">
-                                                                <span class="font-bold text-lg text-yellow-400">#${idx + 1}</span>
-                                                                <span>${user.name || 'User'}</span>
-                                                            </div>
-                                                            <span class="font-bold text-green-400">${user.score}/${user.total_questions}</span>
-                                                        </div>
-                                                    `).join('') : '<p class="text-center ${theme.textSecondary} py-4">No one has taken the quiz yet</p>'}
-                                                </div>
-                                            </div>
+                                            
+                                            <!-- Take Quiz Button -->
+                                            <button onclick="state.quizStarted = true; render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                                                🎯 Take Quiz
+                                            </button>
                                         </div>
                                     `;
                                 }
