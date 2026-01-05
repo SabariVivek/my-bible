@@ -1722,6 +1722,7 @@
             quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
             selectedChapter: 1,  // Track selected revelation chapter
             selectedVerse: null,  // Track selected revelation verse
+            isSavingProgress: false,  // Track if a database operation is in progress
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
@@ -2590,11 +2591,15 @@
                     BibleReadingDB.getCompletedDates(user.id)
                 ]);
 
-                // Clear existing progress to avoid stale data
-                user.progress = {};
-                user.completedDates = {};
+                // Initialize objects if they don't exist
+                if (!user.progress) {
+                    user.progress = {};
+                }
+                if (!user.completedDates) {
+                    user.completedDates = {};
+                }
 
-                // Process progress
+                // Process progress - merge with existing to preserve any local updates
                 progress.forEach(p => {
                     // Normalize book name to match local state format
                     const normalizedBook = normalizeBookName(p.book_name) || p.book_name;
@@ -2607,7 +2612,7 @@
                     user.progress[key] = p.status;
                 });
 
-                // Process completed dates
+                // Process completed dates - merge with existing to preserve any recent updates
                 dates.forEach(dateStr => {
                     const [year, month, day] = dateStr.split('-').map(Number);
                     const dateKey = `${year}-${month}-${day}`;
@@ -2618,6 +2623,9 @@
                 state.loadedUserData.add(user.id);
             } catch (error) {
                 console.error('Error loading user progress:', error);
+                // Ensure the objects exist even if loading fails
+                if (!user.progress) user.progress = {};
+                if (!user.completedDates) user.completedDates = {};
             }
         }
 
@@ -3305,6 +3313,9 @@
             const reading = getTodayReading(state.selectedDate);
             if (!reading || !state.currentUser) return;
 
+            // Prevent multiple simultaneous saves
+            if (state.isSavingProgress) return;
+
             const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
 
             // Check if already completed
@@ -3317,6 +3328,7 @@
                 completedPortions.add(`${dateKey}-${idx}`);
             });
 
+            state.isSavingProgress = true;
             showLoading('Saving progress...');
             try {
                 // Mark all chapters in Supabase
@@ -3357,6 +3369,20 @@
                 }
                 state.currentUser.completedDates[dateKey] = true;
 
+                // Verify the data was saved to database by fetching it back
+                try {
+                    const savedDates = await BibleReadingDB.getCompletedDates(state.currentUser.id);
+                    state.currentUser.completedDates = {};
+                    savedDates.forEach(dateStr => {
+                        const [year, month, day] = dateStr.split('-').map(Number);
+                        const key = `${year}-${month}-${day}`;
+                        state.currentUser.completedDates[key] = true;
+                    });
+                } catch (verifyError) {
+                    console.error('Error verifying saved data:', verifyError);
+                    // Keep local state if verification fails
+                }
+
                 // Update in users array
                 const userIndex = state.users.findIndex(u => u.id === state.currentUser.id);
                 if (userIndex !== -1) {
@@ -3377,7 +3403,9 @@
             } catch (error) {
                 alert('Failed to save progress. Please try again.');
             } finally {
+                state.isSavingProgress = false;
                 hideLoading();
+                render();  // Re-render to enable the back button again
             }
         }
 
@@ -4683,7 +4711,7 @@
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
-                                    <button onclick="state.showDashboard = true; render();" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors" title="Back to Dashboard">
+                                    <button onclick="if (!state.isSavingProgress) { state.showDashboard = true; render(); }" class="${theme.card} border ${theme.border} rounded-lg p-2 hover:bg-opacity-80 transition-colors ${state.isSavingProgress ? 'opacity-50 cursor-not-allowed' : ''}" title="${state.isSavingProgress ? 'Wait for save to complete...' : 'Back to Dashboard'}" ${state.isSavingProgress ? 'disabled' : ''}>
                                         ${icons.chevronLeft}
                                     </button>
                                     <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold">
