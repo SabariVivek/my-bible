@@ -1722,11 +1722,41 @@
             quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
             selectedChapter: 1,  // Track selected revelation chapter
             selectedVerse: null,  // Track selected revelation verse
+            previousRevealTab: 'revelation',  // Track previous revelation tab for back navigation
             isSavingProgress: false,  // Track if a database operation is in progress
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
         window.addEventListener('popstate', (event) => {
+            // If we're in the revelation view, navigate back within the revelation flow instead of exiting
+            if (state.dashboardTab === 'revelation' || state.dashboardTab === 'revelation-chapters' || state.dashboardTab === 'revelation-introduction') {
+                event.preventDefault();
+                
+                // Navigate backwards through the revelation states
+                if (state.dashboardTab === 'revelation-introduction') {
+                    // From revelation introduction/verse -> back to previous reveal tab (chapters or main)
+                    state.dashboardTab = state.previousRevealTab;
+                    state.selectedVerse = null;
+                    render();
+                } else if (state.dashboardTab === 'revelation-chapters') {
+                    // From revelation chapters -> back to revelation main view
+                    state.dashboardTab = 'revelation';
+                    state.selectedChapter = 1;
+                    state.selectedVerse = null;
+                    state.previousRevealTab = 'revelation';  // Reset for next back
+                    render();
+                } else if (state.dashboardTab === 'revelation') {
+                    // From revelation main -> back to dashboard
+                    state.dashboardTab = 'my-plan';
+                    state.selectedChapter = 1;
+                    state.selectedVerse = null;
+                    state.previousRevealTab = 'revelation';  // Reset for next cycle
+                    render();
+                }
+                
+                return;
+            }
+            
             // If we're in the quiz, navigate back within the quiz flow instead of exiting
             if (state.quizStarted || state.selectedQuizChapter || state.selectedQuizBook || state.selectedTestament) {
                 event.preventDefault();
@@ -3693,7 +3723,7 @@
                             <div class="${theme.card} rounded-xl overflow-hidden border ${theme.border} shadow-sm">
                                 <img src="../resources/images/revelation.png" alt="The Revelation of Jesus Christ" class="w-full h-auto object-cover rounded-xl">
                             </div>
-                            <button onclick="state.dashboardTab = 'revelation-chapters'; render();" class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">Want to Read?</button>
+                            <button onclick="state.previousRevealTab = 'revelation'; state.dashboardTab = 'revelation-chapters'; render(); window.history.pushState({ page: 'revelation-chapters' }, '', window.location.href);" class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">Want to Read?</button>
                         ` : state.dashboardTab === 'revelation-chapters' ? `
                             <!-- REVELATION CHAPTERS VIEW -->
                             ${(() => {
@@ -3725,7 +3755,7 @@
                                 return `
                                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                         ${Array.from({ length: 22 }, (_, i) => i + 1).map(chapter => `
-                                            <div class="${theme.card} rounded-xl p-4 border ${theme.border} shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="state.selectedChapter = ${chapter}; state.dashboardTab = 'revelation-introduction'; render();">
+                                            <div class="${theme.card} rounded-xl p-4 border ${theme.border} shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="state.selectedChapter = ${chapter}; state.previousRevealTab = 'revelation-chapters'; state.dashboardTab = 'revelation-introduction'; render(); window.history.pushState({ page: 'revelation-introduction' }, '', window.location.href);">
                                                 <h3 class="${theme.text} font-bold text-lg mb-2">Chapter ${chapter}</h3>
                                                 <ul class="text-sm leading-relaxed space-y-1">
                                                     ${chapterDescriptions[chapter]?.split(',').map((point, index) => index === 0 ? `<li class="text-blue-300 pb-2" style="background: linear-gradient(90deg, transparent 0%, #93c5fd 50%, transparent 100%); background-position: bottom; background-repeat: no-repeat; background-size: 100% 0.5px; padding-top: 0.5rem; padding-bottom: 0.5rem;">${point.trim()}</li>` : `<li class="text-gray-400">• ${point.trim()}</li>`).join('') || ''}
@@ -3763,7 +3793,7 @@
                                     </div>
                                 </div>
                                 
-                                <button onclick="state.dashboardTab = 'revelation-chapters'; render();" class="hidden md:block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mb-6">← Back</button>
+                                <button onclick="state.dashboardTab = state.previousRevealTab; state.selectedVerse = null; render(); window.history.pushState({ page: state.previousRevealTab }, '', window.location.href);" class="hidden md:block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mb-6">← Back</button>
                                 
                                 <!-- INTRODUCTION SECTION - STYLED LIKE DOCS.HTML -->
                                 <div id="intro-content" class="intro-content"></div>
@@ -4457,7 +4487,7 @@
                     </div>
 
                     <!-- Bottom Navigation Bar -->
-                    <div class="fixed bottom-0 left-0 right-0 ${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.border} z-40" style="border-top-width: 1.5px;">
+                    <div class="fixed bottom-0 left-0 right-0 ${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.border} z-40 ${(state.dashboardTab === 'revelation-chapters' || state.dashboardTab === 'revelation-introduction') ? 'hidden' : ''}" style="border-top-width: 1.5px;">
                         <div class="flex items-center justify-between h-16">
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'my-plan' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="my-plan">
                                 ${icons.calendar || '📅'}
@@ -4473,7 +4503,7 @@
                             </button>
                             ${state.revelationTabVisible ? `
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'revelation'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'revelation' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="revelation">
-                                🐑
+                                <span style="font-size: 16px; line-height: 1;">🐑</span>
                                 <span class="text-xs font-semibold">Revelation</span>
                             </button>
                             ` : ''}
