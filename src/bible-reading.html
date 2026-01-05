@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" id="root">
 
 <head>
@@ -35,6 +35,119 @@
         
         html.dark-theme .modal {
             background: #1e293b !important;
+        }
+
+        /* Intro Content Styling - Like docs.html page-content */
+        .intro-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #3c4043;
+            background-color: #ffffff;
+            padding: 0 0 24px 0;
+            border-radius: 0;
+            margin-bottom: 24px;
+            margin-left: -1rem;
+            margin-right: -1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        html.dark-theme .intro-content {
+            color: #bdc1c6;
+            background-color: #1e293b;
+        }
+
+        /* Content Typography */
+        .intro-content h1,
+        .intro-content h2,
+        .intro-content h3,
+        .intro-content h4,
+        .intro-content h5,
+        .intro-content h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            color: #1a202c;
+        }
+
+        html.dark-theme .intro-content h1,
+        html.dark-theme .intro-content h2,
+        html.dark-theme .intro-content h3,
+        html.dark-theme .intro-content h4,
+        html.dark-theme .intro-content h5,
+        html.dark-theme .intro-content h6 {
+            color: #e3e3e3;
+        }
+
+        .intro-content h1 { font-size: 28px; }
+        .intro-content h2 { font-size: 24px; }
+        .intro-content h3 { font-size: 20px; }
+        .intro-content h4 { font-size: 18px; }
+        .intro-content h5 { font-size: 16px; }
+        .intro-content h6 { font-size: 14px; }
+
+        .intro-content p {
+            margin-bottom: 16px;
+        }
+
+        .intro-content a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .intro-content a:hover {
+            text-decoration: underline;
+        }
+
+        html.dark-theme .intro-content a {
+            color: #8ab4f8;
+        }
+
+        .intro-content ul {
+            list-style-type: disc;
+            margin-bottom: 16px;
+            padding-left: 32px;
+        }
+
+        .intro-content ol {
+            list-style-type: decimal;
+            margin-bottom: 16px;
+            padding-left: 32px;
+        }
+
+        .intro-content li {
+            margin-bottom: 8px;
+            margin-left: 0;
+            color: inherit;
+        }
+
+        .intro-content code {
+            background-color: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: #d73a49;
+        }
+
+        html.dark-theme .intro-content code {
+            background-color: #2d2d2d;
+            color: #85e89d;
+        }
+
+        .intro-content blockquote {
+            border-left: 4px solid #1a73e8;
+            padding-left: 16px;
+            margin-left: 0;
+            margin-bottom: 16px;
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        html.dark-theme .intro-content blockquote {
+            border-left-color: #8ab4f8;
+            color: #cbd5e0;
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -3534,6 +3647,86 @@
                                 <h3 class="text-xl font-bold mb-2">Notes</h3>
                                 <p class="${theme.textSecondary}">Notes section - coming soon</p>
                             </div>
+                        ` : state.dashboardTab === 'revelation' ? `
+                            <!-- REVELATION TAB - IMAGE -->
+                            <div class="${theme.card} rounded-xl overflow-hidden border ${theme.border} shadow-sm">
+                                <img src="../resources/images/revelation.png" alt="The Revelation of Jesus Christ" class="w-full h-auto object-cover rounded-xl">
+                            </div>
+                            <button onclick="state.dashboardTab = 'revelation-chapters'; render();" class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">Want to Read?</button>
+                        ` : state.dashboardTab === 'revelation-chapters' ? `
+                            <!-- REVELATION CHAPTERS VIEW -->
+                            ${(() => {
+                                const chapterDescriptions = {
+                                    1: "சீக்கிரத்தில் சம்பவிக்கவேண்டியவை, வாழ்த்துதல், பத்மு தீவில் யோவான், கிறிஸ்து மகிமையில் வெளிப்படுதல், யோவானுடன் பேசும் தேவகுமாரன்",
+                                    2: "சபைகளுக்கு கிறிஸ்து எழுதும் கடிதங்கள், ❤️ அன்பற்ற சபை – எபேசு, 🔥 நெருக்கப்பட்ட சபை – சிமிர்னா, ⚔️ ஒத்துப்போகும் சபை – பெர்கமு, 🔄 பின்மாற்ற சபை – தியத்தீரா",
+                                    3: "கடைசி கால சபைகள், ☠️ மரித்த சபை – சர்தை, ✅ உண்மையுள்ள சபை – பிலதெல்பியா, ❄️ அனலற்ற சபை – லவோதிக்கேயா, 📣 விசுவாசிகளுக்கு கிறிஸ்துவின் நேரடியான அழைப்பு",
+                                    4: "இவைகளுக்குப் பின் சம்பவிப்பவை, இரகசிய வருகையும்,  கிறிஸ்துவின் நியாயாசனமும், சிங்காசனத்தில் வீற்றிருப்பவர், 24 மூப்பர்கள், 4 ஜீவன்கள், பரலோகத்தில் பிதாவுக்கு ஆராதனை",
+                                    5: "முத்திரிக்கப்பட்ட புஸ்தகம், மீட்பின் அத்தாட்சிப் பத்திரம், ஆட்டுக்குட்டியானவருக்கு ஆராதனை",
+                                    6: "தேவகோபாக்கினை நாளின் துவக்கம், 6 முத்திரைகள், 🕊️ 1️⃣ போலியான சமாதானம், ⚔️ 2️⃣ யுத்தம், 🍞 3️⃣ பஞ்சம், ☠️ 4️⃣ மரணம், 🩸 5️⃣ பலிபீடத்தின் கீழ் ஆத்துமாக்கள், 🌍 6️⃣ பேரழிவு",
+                                    7: "உபத்திரவ காலத்து ஊழியக்காரர்கள், ✡️ 144000 யூத ஊழியக்காரர்கள், 👕 வெள்ளங்கி அணிந்த பரிசுத்தவான்கள், 🌟 மீட்கப்பட்டவர்களின் மேன்மை",
+                                    8: "7வது முத்திரை & முதல் 4 எக்காளங்கள்,  பரலோகத்தில் அமைதி, எக்காளத் தீர்ப்புகள் தொடக்கம்",
+                                    9: "5 & 6 எக்காளங்களின் பேரழிவுகள்,  பாதாளக்குழி திறப்பு, வெட்டுக்கிளிகளின் சேனை",
+                                    10: "பலமுள்ள தூதன் & சிறு புஸ்தகம்,  பலமுள்ள தூதன் வெளிப்பாடு, திறக்கப்பட்ட சிறு புஸ்தகம்",
+                                    11: "இரண்டு சாட்சிகள்,  தேவாலயம் அளக்கப்படுகிறது, இரட்டு வஸ்திரத்தில் இரண்டு சாட்சிகள், 7வது எக்காளம்",
+                                    12: "வானத்திலும் பூமியிலும் யுத்தம், சூரியனை அணிந்த ஸ்திரீ, சாத்தானின் தோல்வி",
+                                    13: "அந்திக்கிறிஸ்து & கள்ளத் தீர்க்கதரிசி, சமுத்திரத்திலிருந்து மிருகம், பூமியிலிருந்து மிருகம்",
+                                    14: "சீயோனில் ஆட்டுக்குட்டியானவர், 144000 பேர் – யார்?, மீட்கப்பட்டவர்களின் பாடல், தேவதூதர்களின் அறிவிப்புகள், பூமி அறுவடையாகுதல்",
+                                    15: "கோபக்கலசங்கள், 7 தூதர்கள், இரத்தச் சாட்சிகளின் பாடல்",
+                                    16: "மகா உபத்திரவம் & அர்மகெதோன், இறுதி தீர்ப்புகள், அர்மகெதோன் யுத்தம்",
+                                    17: "மதரீதியான பாபிலோன், மிருகத்தின் மேல் ஸ்திரீ, இரகசியத்தின் விளக்கம், வணிக வ்যவஸ்థையின் தீர்ப்பு",
+                                    18: "அரசியல் & வியாபார பாபிலோன், உலகத் தலைநகரத்தின் அழிவு, வானபரியந்தம் எட்டிய பாவம், நியாயந்தீர்க்கும் தேவன்",
+                                    19: "ஆட்டுக்குட்டியானவரின் கலியாணம், 🎉 அல்லேலூயா துதி, 👰 ஆயத்தமான மனைவி, 🐎 வெள்ளைக் குதிரையில் கிறிஸ்து, இரண்டாம் வருகை",
+                                    20: "ஆயிர வருஷ அரசாட்சியும் தீர்ப்பும், ஆயிர வருஷ ஆட்சி, முதலாம் உயிர்த்தெழுதல், வெள்ளை சிங்காசன நியாயத்தீர்ப்பு, இரண்டாம் மரணம்",
+                                    21: "புதிய வானமும் புதிய பூமியும், நித்திய ஆட்சி, பரம எருசலேம், புதிய எருசலேம்",
+                                    22: "இதோ சீக்கிரமாய் வருகிறேன், 🌳 ஜீவ விருட்சம், ⏳ காலம் சமீபமாயிருக்கிறது"
+                                };
+                                
+                                return `
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        ${Array.from({ length: 22 }, (_, i) => i + 1).map(chapter => `
+                                            <div class="${theme.card} rounded-xl p-4 border ${theme.border} shadow-sm hover:shadow-md transition-shadow cursor-pointer" onclick="state.selectedChapter = ${chapter}; state.dashboardTab = 'revelation-introduction'; render();">
+                                                <h3 class="${theme.text} font-bold text-lg mb-2">Chapter ${chapter}</h3>
+                                                <ul class="text-sm leading-relaxed space-y-1">
+                                                    ${chapterDescriptions[chapter]?.split(',').map((point, index) => index === 0 ? `<li class="text-blue-300 pb-2" style="background: linear-gradient(90deg, transparent 0%, #93c5fd 50%, transparent 100%); background-position: bottom; background-repeat: no-repeat; background-size: 100% 0.5px; padding-top: 0.5rem; padding-bottom: 0.5rem;">${point.trim()}</li>` : `<li class="text-gray-400">• ${point.trim()}</li>`).join('') || ''}
+                                                </ul>
+                                            </div>
+                                        `).join('')}
+                                    </div>
+                                `;
+                            })()}
+                        ` : state.dashboardTab === 'revelation-introduction' ? `
+                            <!-- REVELATION INTRODUCTION VIEW -->
+                            <div class="space-y-6 -mt-6" style="margin-top: -1.5rem;">
+                                <!-- TOP PANE AND VERSE SCROLL DOCKED -->
+                                <div class="py-0 -mx-4" style="margin-left: -1rem; margin-right: -1rem; background-color: ${theme.cardBg || 'rgb(30 41 59)'}; border: 1px solid ${theme.borderColor || '#333'};">
+                                    <!-- VERSES SCROLL SECTION -->
+                                    <div class="px-4 py-4 overflow-x-auto">
+                                        <div class="flex gap-2" style="min-width: min-content;">
+                                            <button onclick="state.selectedVerse = null; render();" class="flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all ${!state.selectedVerse ? `${theme.text} bg-blue-600 text-white` : `${theme.textSecondary} border ${theme.border} hover:bg-opacity-50`}">
+                                                Intro
+                                            </button>
+                                            ${(() => {
+                                                const verseCountMap = { 1: 20, 2: 29, 3: 22, 4: 11, 5: 14, 6: 17, 7: 17, 8: 13, 9: 21, 10: 11, 11: 19, 12: 17, 13: 18, 14: 20, 15: 8, 16: 21, 17: 18, 18: 24, 19: 21, 20: 15, 21: 27, 22: 21 };
+                                                const verseCount = verseCountMap[state.selectedChapter] || 30;
+                                                return Array.from({ length: verseCount }, (_, i) => i + 1).map(verse => `
+                                                    <button onclick="state.selectedVerse = ${verse}; render();" class="flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all ${state.selectedVerse === verse ? `${theme.text} bg-blue-600 text-white` : `${theme.textSecondary} border ${theme.border} hover:bg-opacity-50`}">
+                                                        ${verse}
+                                                    </button>
+                                                `).join('');
+                                            })()}
+                                        </div>
+                                    </div>
+                                    <!-- CHAPTER TITLE WITH VERSE -->
+                                    <div class="px-4 py-4 text-center border-t" style="border-color: ${theme.borderColor || '#333'};">
+                                        <h2 class="${theme.text} text-2xl font-bold">Chapter ${state.selectedChapter}${state.selectedVerse ? ` : ${state.selectedVerse}` : ' : Intro'}</h2>
+                                    </div>
+                                </div>
+                                
+                                <button onclick="state.dashboardTab = 'revelation-chapters'; render();" class="hidden md:block px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors mb-6">← Back</button>
+                                
+                                <!-- INTRODUCTION SECTION - STYLED LIKE DOCS.HTML -->
+                                <div id="intro-content" class="intro-content"></div>
+                            </div>
                         ` : state.dashboardTab === 'quiz' ? `
                             ${(() => {
                                 // Get today's date for tracking submissions
@@ -4236,6 +4429,10 @@
             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'notes'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'notes' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="notes">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z"/><polyline points="13 2 13 10 21 10"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
                                 <span class="text-xs font-semibold">Notes</span>
+                            </button>
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'revelation'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'revelation' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="revelation">
+                                🐑
+                                <span class="text-xs font-semibold">Revelation</span>
                             </button>
                             ${state.quizTabVisible ? `
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadTodayQuizScoresFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
@@ -5110,6 +5307,74 @@
             `;
         }
 
+        async function loadIntroContent() {
+            if (!state.selectedVerse && state.selectedChapter) {
+                const introDiv = document.getElementById('intro-content');
+                if (introDiv) {
+                    try {
+                        const folderPath = `Bible Summary/Revelation/Chapter - ${state.selectedChapter}/Intro`;
+                        const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+                        
+                        const response = await fetch(`https://encjogfdbrfcatvytpir.supabase.co/rest/v1/bible_notes_pages?select=content&folder_path=eq.${encodeURIComponent(folderPath)}`, {
+                            headers: {
+                                'apikey': serviceKey,
+                                'Authorization': `Bearer ${serviceKey}`
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            const data = await response.json();
+                            if (data && data.length > 0 && data[0].content) {
+                                introDiv.innerHTML = data[0].content;
+                            } else {
+                                introDiv.innerHTML = '<div class="text-gray-400 italic">No introduction available for this chapter yet.</div>';
+                            }
+                        } else {
+                            console.error('HTTP error:', response.status);
+                            introDiv.innerHTML = '<div class="text-gray-400 italic">No introduction available for this chapter yet.</div>';
+                        }
+                    } catch (err) {
+                        console.error('Error loading intro:', err);
+                        introDiv.innerHTML = '<div class="text-gray-400 italic">No introduction available for this chapter yet.</div>';
+                    }
+                }
+            }
+        }
+
+        async function loadVerseContent() {
+            if (state.selectedVerse && state.selectedChapter) {
+                const verseDiv = document.getElementById('intro-content');
+                if (verseDiv) {
+                    try {
+                        const folderPath = `Bible Summary/Revelation/Chapter - ${state.selectedChapter}/Verse - ${state.selectedVerse}`;
+                        const serviceKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVuY2pvZ2ZkYnJmY2F0dnl0cGlyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MzU0MzYzOSwiZXhwIjoyMDc5MTE5NjM5fQ.WGtQxBTBcJh96Y4ppTiHGQygztdJduf5O4-JNTZBP90';
+                        
+                        const response = await fetch(`https://encjogfdbrfcatvytpir.supabase.co/rest/v1/bible_notes_pages?select=content&folder_path=eq.${encodeURIComponent(folderPath)}`, {
+                            headers: {
+                                'apikey': serviceKey,
+                                'Authorization': `Bearer ${serviceKey}`
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            const data = await response.json();
+                            if (data && data.length > 0 && data[0].content) {
+                                verseDiv.innerHTML = data[0].content;
+                            } else {
+                                verseDiv.innerHTML = '<div class="text-gray-400 italic">No content available for this verse yet.</div>';
+                            }
+                        } else {
+                            console.error('HTTP error:', response.status);
+                            verseDiv.innerHTML = '<div class="text-gray-400 italic">No content available for this verse yet.</div>';
+                        }
+                    } catch (err) {
+                        console.error('Error loading verse:', err);
+                        verseDiv.innerHTML = '<div class="text-gray-400 italic">No content available for this verse yet.</div>';
+                    }
+                }
+            }
+        }
+
         async function render() {
             const app = document.getElementById('app');
             console.log('render() called - showAdminView:', state.showAdminView, 'currentUser:', state.currentUser?.name, 'users count:', state.users.length, 'isAdmin:', state.isAdmin);
@@ -5238,6 +5503,14 @@
                 
                 // Show dashboard when user is selected and dashboard view is active
                 app.innerHTML = renderDashboard();
+                // Load intro content if viewing revelation chapter intro
+                if (state.dashboardTab === 'revelation-introduction') {
+                    if (state.selectedVerse) {
+                        await loadVerseContent();
+                    } else {
+                        await loadIntroContent();
+                    }
+                }
                 // Scroll to top when showing dashboard
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 // Focus input if modal is open
@@ -5652,3 +5925,4 @@
 </body>
 
 </html>
+
