@@ -42,8 +42,8 @@
             font-size: 16px;
             line-height: 1.8;
             color: #3c4043;
-            background-color: #ffffff;
-            padding: 0 0 24px 0;
+            background-color: #f5f5f5;
+            padding: 16px 0 24px 0;
             border-radius: 0;
             margin-bottom: 24px;
             margin-left: -1rem;
@@ -54,7 +54,7 @@
 
         html.dark-theme .intro-content {
             color: #bdc1c6;
-            background-color: #1e293b;
+            background-color: #243447;
         }
 
         /* Content Typography */
@@ -86,6 +86,16 @@
         .intro-content h4 { font-size: 18px; }
         .intro-content h5 { font-size: 16px; }
         .intro-content h6 { font-size: 14px; }
+
+        /* Remove top margin from first child */
+        .intro-content > :first-child {
+            margin-top: 0 !important;
+        }
+
+        /* Override space-y-6 margin specifically for intro-content */
+        .intro-content {
+            margin-top: 0 !important;
+        }
 
         .intro-content p {
             margin-bottom: 16px;
@@ -1701,6 +1711,7 @@
             quizSubmitted: {},  // Track quiz submissions by date
             quizLeaderboard: [],  // Store today's quiz leaderboard
             quizTabVisible: false,  // Show quiz tab only after 3 clicks on dashboard title
+            revelationTabVisible: false,  // Show revelation tab only after 3 clicks on dashboard title
             dashboardTitleClicks: 0,  // Track clicks on dashboard title
             quizStarted: false,  // Track if user has started the quiz (to show questions)
             selectedTestament: null,  // Track selected testament (OT or NT)
@@ -1709,6 +1720,8 @@
             completedQuizChapters: {},  // Track completed chapters per user per day
             chapterScores: {},  // Track scores for each chapter per user per day
             quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
+            selectedChapter: 1,  // Track selected revelation chapter
+            selectedVerse: null,  // Track selected revelation verse
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
@@ -3480,7 +3493,7 @@
                                     ` : ''}
                                     <div>
                                         <div class="flex items-center gap-2 items-center">
-                                            <h1 class="text-xl font-bold cursor-pointer select-none" onclick="state.dashboardTitleClicks = (state.dashboardTitleClicks || 0) + 1; if (state.dashboardTitleClicks === 3) { state.quizTabVisible = true; state.dashboardTitleClicks = 0; } render();">Dashboard</h1>
+                                            <h1 class="text-xl font-bold cursor-pointer select-none" onclick="state.dashboardTitleClicks = (state.dashboardTitleClicks || 0) + 1; if (state.dashboardTitleClicks === 3) { state.quizTabVisible = !state.quizTabVisible; state.revelationTabVisible = !state.revelationTabVisible; state.dashboardTitleClicks = 0; } render();">Dashboard</h1>
                                             ${state.currentUser ? `
                                                 <span class="text-xs font-normal px-1 py-0.5 rounded text-xs ${state.darkMode ? 'bg-blue-500/15 text-blue-300' : 'bg-blue-100 text-blue-600'}">
                                                     ${state.currentUser.name}
@@ -3698,9 +3711,9 @@
                             <!-- REVELATION INTRODUCTION VIEW -->
                             <div class="space-y-6 -mt-6" style="margin-top: -1.5rem;">
                                 <!-- TOP PANE AND VERSE SCROLL DOCKED -->
-                                <div class="py-0 -mx-4" style="margin-left: -1rem; margin-right: -1rem; background-color: ${theme.cardBg || 'rgb(30 41 59)'}; border: 1px solid ${theme.borderColor || '#333'};">
+                                <div class="py-0 -mx-4" style="margin-left: -1rem; margin-right: -1rem; background-color: ${state.darkMode ? '#243447' : '#f5f5f5'}; border: 1px solid ${theme.borderColor || '#333'};">
                                     <!-- VERSES SCROLL SECTION -->
-                                    <div class="px-4 py-4 overflow-x-auto">
+                                    <div class="px-4 py-4 overflow-x-auto" style="background-color: ${theme.cardBg || 'rgb(30 41 59)'};">
                                         <div class="flex gap-2" style="min-width: min-content;">
                                             <button onclick="state.selectedVerse = null; render();" class="flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all ${!state.selectedVerse ? `${theme.text} bg-blue-600 text-white` : `${theme.textSecondary} border ${theme.border} hover:bg-opacity-50`}">
                                                 Intro
@@ -4430,10 +4443,12 @@
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z"/><polyline points="13 2 13 10 21 10"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
                                 <span class="text-xs font-semibold">Notes</span>
                             </button>
+                            ${state.revelationTabVisible ? `
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'revelation'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'revelation' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="revelation">
                                 🐑
                                 <span class="text-xs font-semibold">Revelation</span>
                             </button>
+                            ` : ''}
                             ${state.quizTabVisible ? `
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadTodayQuizScoresFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
