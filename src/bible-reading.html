@@ -1610,8 +1610,9 @@
                     state.selectedQuizChapter = null;
                     state.quizSummaryData = null;
                 } else if (state.selectedQuizBook) {
-                    // From books selection -> back to testament
+                    // From books selection -> back to testament selection
                     state.selectedQuizBook = null;
+                    state.selectedTestament = null;
                 } else if (state.selectedTestament) {
                     // From testament selection -> back to leaderboard
                     state.selectedTestament = null;
@@ -2124,13 +2125,14 @@
             }
         }
 
-        async function loadQuizSummary(chapter) {
+        async function loadQuizSummary(chapter, book) {
             try {
                 const today = new Date();
                 const dateKey = today.toISOString().split('T')[0];
                 
-                // Set the selected chapter first
+                // Set the selected chapter and book
                 state.selectedQuizChapter = chapter;
+                state.selectedQuizBook = book || state.selectedQuizBook;  // Use passed book or current selected book
                 const bookKey = state.selectedQuizBook.toLowerCase();
                 
                 // Get the questions for this chapter
@@ -3545,15 +3547,7 @@
                                 
                                 // Show leaderboard first with Take Quiz button
                                 if (!state.quizStarted && !state.selectedQuizChapter) {
-                                    // Load leaderboard data if not already loaded
-                                    if (!state.quizLeaderboard || state.quizLeaderboard.length === 0) {
-                                        (async () => {
-                                            await loadTodayQuizScoresFromSupabase();
-                                            render();
-                                        })();
-                                        return `<div class="text-center py-8"><div class="text-gray-400">Loading leaderboard...</div></div>`;
-                                    }
-                                    
+                                    // If leaderboard is empty, show a default state (don't try to reload)
                                     const topThree = state.quizLeaderboard && state.quizLeaderboard.length > 0 ? state.quizLeaderboard.slice(0, 3) : [];
                                     const others = state.quizLeaderboard && state.quizLeaderboard.length > 3 ? state.quizLeaderboard.slice(3) : [];
                                     
@@ -3822,10 +3816,10 @@
                                             </button>
                                             <h3 class="text-2xl font-bold mb-8 text-center">Select Testament</h3>
                                             <div class="flex flex-col gap-4">
-                                                <button onclick="state.selectedTestament = 'OT'; render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+                                                <button onclick="state.selectedTestament = 'OT'; window.history.pushState({ page: 'quiz', level: 'testament' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
                                                     📖 Old Testament
                                                 </button>
-                                                <button onclick="state.selectedTestament = 'NT'; render();" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+                                                <button onclick="state.selectedTestament = 'NT'; window.history.pushState({ page: 'quiz', level: 'testament' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
                                                     📖 New Testament
                                                 </button>
                                             </div>
@@ -3852,52 +3846,126 @@
                                         'Obadiah': 1, 'Jonah': 4, 'Micah': 7, 'Nahum': 3, 'Habakkuk': 3, 'Zephaniah': 3, 'Haggai': 2, 'Zechariah': 14, 'Malachi': 4
                                     };
 
-                                    return `
-                                        <div id="quizContainer">
-                                            <button onclick="state.selectedTestament = null; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
-                                                ${icons.chevronLeft} Back to Testament
-                                            </button>
-                                            
-                                            ${allBooks.map(book => {
-                                                const bookKey = book.toLowerCase().replace(/\s+/g, '-');
-                                                const hasQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey].questions;
-                                                const chapterCount = bookChapterCounts[book] || 1;
-                                                const chaptersArray = Array.from({length: chapterCount}, (_, i) => i + 1);
+                                    function renderBooksContainer(books, counts) {
+                                        return `
+                                            <div id="quizContainer">
+                                                <button onclick="state.selectedTestament = null; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                    ${icons.chevronLeft} Back to Testament
+                                                </button>
                                                 
-                                                return `
-                                                    <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasQuizData ? 'opacity-60' : ''}">
-                                                        <div class="book-header mb-4">
-                                                            <div class="font-bold text-lg">
-                                                                <div>${book}</div>
-                                                                ${book === 'Matthew' ? '<div class="text-xs font-normal text-gray-400">Gospel</div>' : ''}
+                                                ${books.map(book => {
+                                                    const bookKey = book.toLowerCase().replace(/\s+/g, '-');
+                                                    const hasQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey].questions;
+                                                    const chapterCount = counts[book] || 1;
+                                                    const chaptersArray = Array.from({length: chapterCount}, (_, i) => i + 1);
+                                                    
+                                                    return `
+                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasQuizData ? 'opacity-60' : ''}">
+                                                            <div class="book-header mb-4">
+                                                                <div class="font-bold text-lg">
+                                                                    <div>${book}</div>
+                                                                    ${book === 'Matthew' ? '<div class="text-xs font-normal text-gray-400">Gospel</div>' : ''}
+                                                                </div>
+                                                            </div>
+                                                            <div class="chapters-grid grid grid-cols-5 gap-2">
+                                                                ${chaptersArray.map(ch => {
+                                                                    const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
+                                                                    const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
+                                                                    const isEnabled = hasQuizData || (book === 'Matthew' && ch <= 8);
+                                                                    
+                                                                    return `
+                                                                        <div class="flex flex-col items-center">
+                                                                            <button 
+                                                                                onclick="${isEnabled ? (isCompleted ? `loadQuizSummary('${ch}', '${book}');` : `state.selectedQuizBook = '${book}'; state.selectedQuizChapter = '${ch}'; window.history.pushState({ page: 'quiz', level: 'chapter' }, '', window.location.href); render();`) : ''}" 
+                                                                                class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : (isEnabled ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-600 text-gray-400 cursor-not-allowed')}"
+                                                                                title="Chapter ${ch}${isCompleted ? ' (View Summary)' : (isEnabled ? '' : ' (Coming Soon)')}"
+                                                                                ${!isEnabled ? 'disabled' : ''}
+                                                                            >
+                                                                                ${ch}
+                                                                            </button>
+                                                                            ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                                        </div>
+                                                                    `;
+                                                                }).join('')}
                                                             </div>
                                                         </div>
-                                                        <div class="chapters-grid grid grid-cols-5 gap-2">
-                                                            ${chaptersArray.map(ch => {
-                                                                const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
-                                                                const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
-                                                                const isEnabled = hasQuizData || (book === 'Matthew' && ch <= 8);
-                                                                
-                                                                return `
-                                                                    <div class="flex flex-col items-center">
-                                                                        <button 
-                                                                            onclick="${isEnabled ? (isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizBook = '${book}'; state.selectedQuizChapter = '${ch}'; render();`) : ''}" 
-                                                                            class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : (isEnabled ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-600 text-gray-400 cursor-not-allowed')}"
-                                                                            title="Chapter ${ch}${isCompleted ? ' (View Summary)' : (isEnabled ? '' : ' (Coming Soon)')}"
-                                                                            ${!isEnabled ? 'disabled' : ''}
-                                                                        >
-                                                                            ${ch}
-                                                                        </button>
-                                                                        ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
-                                                                    </div>
-                                                                `;
-                                                            }).join('')}
+                                                    `;
+                                                }).join('')}
+                                            </div>
+                                        `;
+                                    }
+
+                                    return renderBooksContainer(allBooks, bookChapterCounts);
+                                }
+
+                                // Also show books container when returning from chapter view (selectedQuizBook set but no chapter)
+                                if (state.quizStarted && state.selectedTestament && state.selectedQuizBook && !state.selectedQuizChapter) {
+                                    const ntBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'];
+                                    const otBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+                                    const allBooks = state.selectedTestament === 'NT' ? ntBooks : otBooks;
+                                    
+                                    const bookChapterCounts = {
+                                        'Matthew': 28, 'Mark': 16, 'Luke': 24, 'John': 21, 'Acts': 28, 'Romans': 16,
+                                        '1 Corinthians': 16, '2 Corinthians': 13, 'Galatians': 6, 'Ephesians': 6, 'Philippians': 4, 'Colossians': 4,
+                                        '1 Thessalonians': 5, '2 Thessalonians': 3, '1 Timothy': 6, '2 Timothy': 4, 'Titus': 3, 'Philemon': 1,
+                                        'Hebrews': 13, 'James': 5, '1 Peter': 5, '2 Peter': 3, '1 John': 5, '2 John': 1, '3 John': 1, 'Jude': 1, 'Revelation': 22,
+                                        'Genesis': 50, 'Exodus': 40, 'Leviticus': 27, 'Numbers': 36, 'Deuteronomy': 34, 'Joshua': 24, 'Judges': 21, 'Ruth': 4,
+                                        '1 Samuel': 31, '2 Samuel': 24, '1 Kings': 22, '2 Kings': 25, '1 Chronicles': 29, '2 Chronicles': 36, 'Ezra': 10, 'Nehemiah': 13,
+                                        'Esther': 10, 'Job': 42, 'Psalms': 150, 'Proverbs': 31, 'Ecclesiastes': 12, 'Song of Solomon': 8,
+                                        'Isaiah': 66, 'Jeremiah': 52, 'Lamentations': 5, 'Ezekiel': 48, 'Daniel': 12, 'Hosea': 14, 'Joel': 3, 'Amos': 9,
+                                        'Obadiah': 1, 'Jonah': 4, 'Micah': 7, 'Nahum': 3, 'Habakkuk': 3, 'Zephaniah': 3, 'Haggai': 2, 'Zechariah': 14, 'Malachi': 4
+                                    };
+
+                                    function renderBooksContainer(books, counts) {
+                                        return `
+                                            <div id="quizContainer">
+                                                <button onclick="state.selectedTestament = null; state.selectedQuizBook = null; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                    ${icons.chevronLeft} Back to Testament
+                                                </button>
+                                                
+                                                ${books.map(book => {
+                                                    const bookKey = book.toLowerCase().replace(/\s+/g, '-');
+                                                    const hasQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey].questions;
+                                                    const chapterCount = counts[book] || 1;
+                                                    const chaptersArray = Array.from({length: chapterCount}, (_, i) => i + 1);
+                                                    
+                                                    return `
+                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasQuizData ? 'opacity-60' : ''}">
+                                                            <div class="book-header mb-4">
+                                                                <div class="font-bold text-lg">
+                                                                    <div>${book}</div>
+                                                                    ${book === 'Matthew' ? '<div class="text-xs font-normal text-gray-400">Gospel</div>' : ''}
+                                                                </div>
+                                                            </div>
+                                                            <div class="chapters-grid grid grid-cols-5 gap-2">
+                                                                ${chaptersArray.map(ch => {
+                                                                    const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
+                                                                    const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
+                                                                    const isEnabled = hasQuizData || (book === 'Matthew' && ch <= 8);
+                                                                    
+                                                                    return `
+                                                                        <div class="flex flex-col items-center">
+                                                                            <button 
+                                                                                onclick="${isEnabled ? (isCompleted ? `loadQuizSummary('${ch}', '${book}');` : `state.selectedQuizBook = '${book}'; state.selectedQuizChapter = '${ch}'; window.history.pushState({ page: 'quiz', level: 'chapter' }, '', window.location.href); render();`) : ''}" 
+                                                                                class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : (isEnabled ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-600 text-gray-400 cursor-not-allowed')}"
+                                                                                title="Chapter ${ch}${isCompleted ? ' (View Summary)' : (isEnabled ? '' : ' (Coming Soon)')}"
+                                                                                ${!isEnabled ? 'disabled' : ''}
+                                                                            >
+                                                                                ${ch}
+                                                                            </button>
+                                                                            ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                                        </div>
+                                                                    `;
+                                                                }).join('')}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                `;
-                                            }).join('')}
-                                        </div>
-                                    `;
+                                                    `;
+                                                }).join('')}
+                                            </div>
+                                        `;
+                                    }
+
+                                    return renderBooksContainer(allBooks, bookChapterCounts);
                                 }
                                 
                                 // Show questions for selected chapter
@@ -3921,7 +3989,7 @@
                                         
                                         return `
                                             <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                                <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; state.quizSummaryData = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                     ${icons.chevronLeft} Back to Books
                                                 </button>
                                                 <div class="mb-6">
