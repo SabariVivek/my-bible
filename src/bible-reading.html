@@ -1600,6 +1600,37 @@
 
         // Handle back navigation (mobile swipe back, browser back button)
         window.addEventListener('popstate', (event) => {
+            // If we're in the quiz, navigate back within the quiz flow instead of exiting
+            if (state.quizStarted || state.selectedQuizChapter || state.selectedQuizBook || state.selectedTestament) {
+                event.preventDefault();
+                
+                // Navigate backwards through the quiz states
+                if (state.selectedQuizChapter) {
+                    // From quiz questions/summary -> back to books
+                    state.selectedQuizChapter = null;
+                    state.quizSummaryData = null;
+                } else if (state.selectedQuizBook) {
+                    // From books selection -> back to testament
+                    state.selectedQuizBook = null;
+                } else if (state.selectedTestament) {
+                    // From testament selection -> back to leaderboard
+                    state.selectedTestament = null;
+                    state.quizStarted = false;
+                } else if (state.quizStarted) {
+                    // From any quiz state -> back to leaderboard
+                    state.quizStarted = false;
+                    state.selectedTestament = null;
+                    state.selectedQuizBook = null;
+                    state.selectedQuizChapter = null;
+                    state.quizSummaryData = null;
+                }
+                
+                render();
+                // Push state again so back works for next navigation
+                window.history.pushState({ page: 'quiz' }, '', window.location.href);
+                return;
+            }
+            
             // If we're in the admin view, go back to dashboard
             if (state.showAdminView) {
                 state.showAdminView = false;
@@ -3774,7 +3805,7 @@
                                             </div>
                                             
                                             <!-- Take Quiz Button -->
-                                            <button onclick="state.quizStarted = true; render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                                            <button onclick="state.quizStarted = true; window.history.pushState({ page: 'quiz' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
                                                 🎯 Take Quiz
                                             </button>
                                         </div>
