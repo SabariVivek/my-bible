@@ -1590,6 +1590,8 @@
             quizTabVisible: false,  // Show quiz tab only after 3 clicks on dashboard title
             dashboardTitleClicks: 0,  // Track clicks on dashboard title
             quizStarted: false,  // Track if user has started the quiz (to show questions)
+            selectedTestament: null,  // Track selected testament (OT or NT)
+            selectedQuizBook: null,  // Track selected book (Matthew, Mark, etc)
             selectedQuizChapter: null,  // Track selected chapter for quiz
             completedQuizChapters: {},  // Track completed chapters per user per day
             chapterScores: {},  // Track scores for each chapter per user per day
@@ -3641,36 +3643,79 @@
                                 }
                                 
                                 // Show chapter selection
-                                if (state.quizStarted && !state.selectedQuizChapter) {
+                                // Show testament selection
+                                if (state.quizStarted && !state.selectedTestament && !state.selectedQuizBook && !state.selectedQuizChapter) {
                                     return `
                                         <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                             <button onclick="state.quizStarted = false; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                 ${icons.chevronLeft} Back to Leaderboard
                                             </button>
-                                            <div class="book-header flex items-center justify-between mb-4">
-                                                <div class="book-title font-bold text-lg">
-                                                    <div>Matthew</div>
-                                                    <div class="text-xs font-normal text-gray-400">Gospel</div>
-                                                </div>
+                                            <h3 class="text-2xl font-bold mb-8 text-center">Select Testament</h3>
+                                            <div class="flex flex-col gap-4">
+                                                <button onclick="state.selectedTestament = 'OT'; render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+                                                    📖 Old Testament
+                                                </button>
+                                                <button onclick="state.selectedTestament = 'NT'; render();" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+                                                    📖 New Testament
+                                                </button>
                                             </div>
-                                            <div class="chapters-grid grid grid-cols-5 gap-2">
-                                                ${[1, 2, 3, 4, 5, 6, 7, 8].map(ch => {
-                                                    const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[ch];
-                                                    const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[ch];
+                                        </div>
+                                    `;
+                                }
+
+                                // Show books selection
+                                if (state.quizStarted && state.selectedTestament && !state.selectedQuizBook && !state.selectedQuizChapter) {
+                                    const ntBooks = ['Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans', '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians', 'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians', '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews', 'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John', 'Jude', 'Revelation'];
+                                    const otBooks = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi'];
+                                    const allBooks = state.selectedTestament === 'NT' ? ntBooks : otBooks;
+                                    const matthewChapters = [1, 2, 3, 4, 5, 6, 7, 8];
+
+                                    return `
+                                        <div id="quizContainer">
+                                            <button onclick="state.selectedTestament = null; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                ${icons.chevronLeft} Back to Testament
+                                            </button>
+                                            
+                                            ${allBooks.map(book => {
+                                                // Matthew gets special treatment with chapters
+                                                if (book === 'Matthew') {
                                                     return `
-                                                        <div class="flex flex-col items-center">
-                                                            <button 
-                                                                onclick="${isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizChapter = '${ch}'; render();`}" 
-                                                                class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : 'bg-slate-700 text-white hover:bg-blue-600'}"
-                                                                title="Chapter ${ch}${isCompleted ? ' (View Summary)' : ''}"
-                                                            >
-                                                                ${ch}
-                                                            </button>
-                                                            ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4">
+                                                            <div class="book-header mb-4">
+                                                                <div class="font-bold text-lg">
+                                                                    <div>${book}</div>
+                                                                    <div class="text-xs font-normal text-gray-400">Gospel</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chapters-grid grid grid-cols-5 gap-2">
+                                                                ${matthewChapters.map(ch => {
+                                                                    const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[ch];
+                                                                    const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[ch];
+                                                                    return `
+                                                                        <div class="flex flex-col items-center">
+                                                                            <button 
+                                                                                onclick="${isCompleted ? `loadQuizSummary('${ch}');` : `state.selectedQuizBook = '${book}'; state.selectedQuizChapter = '${ch}'; render();`}" 
+                                                                                class="w-full h-14 rounded-lg font-bold text-base transition-all ${isCompleted ? 'bg-emerald-600 text-white cursor-pointer hover:bg-emerald-700' : 'bg-slate-700 text-white hover:bg-blue-600'}"
+                                                                                title="Chapter ${ch}${isCompleted ? ' (View Summary)' : ''}"
+                                                                            >
+                                                                                ${ch}
+                                                                            </button>
+                                                                            ${chapterScore !== undefined ? `<span class="text-xs font-semibold mt-1 text-emerald-400">${chapterScore}/10</span>` : ''}
+                                                                        </div>
+                                                                    `;
+                                                                }).join('')}
+                                                            </div>
                                                         </div>
                                                     `;
-                                                }).join('')}
-                                            </div>
+                                                } else {
+                                                    // Other books in separate containers
+                                                    return `
+                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 opacity-60">
+                                                            <div class="font-bold text-lg">${book}</div>
+                                                        </div>
+                                                    `;
+                                                }
+                                            }).join('')}
                                         </div>
                                     `;
                                 }
@@ -3689,7 +3734,7 @@
                                                     <div class="text-gray-400 text-5xl mb-4">📋</div>
                                                     <h3 class="text-xl font-bold mb-2">Summary Not Available</h3>
                                                     <p class="${theme.textSecondary}">Could not load the summary for this chapter</p>
-                                                    <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Chapters</button>
+                                                    <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Books</button>
                                                 </div>
                                             `;
                                         }
@@ -3697,10 +3742,10 @@
                                         return `
                                             <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                                 <button onclick="state.selectedQuizChapter = null; state.quizSummaryData = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
-                                                    ${icons.chevronLeft} Back to Chapters
+                                                    ${icons.chevronLeft} Back to Books
                                                 </button>
                                                 <div class="mb-6">
-                                                    <h3 class="text-2xl font-bold mb-2">Matthew Chapter ${chapter} - Summary</h3>
+                                                    <h3 class="text-lg font-bold mb-2">Matthew ${chapter} - Summary</h3>
                                                     <div class="text-lg font-semibold text-emerald-400">Score: ${score}/${questions.length}</div>
                                                 </div>
                                                 <div class="space-y-6">
@@ -3767,7 +3812,7 @@
                                                 <div class="text-gray-400 text-5xl mb-4">🔨</div>
                                                 <h3 class="text-xl font-bold mb-2">Questions Not Found</h3>
                                                 <p class="${theme.textSecondary}">This chapter's questions are not available yet</p>
-                                                <button onclick="state.selectedQuizChapter = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Chapters</button>
+                                                <button onclick="state.selectedQuizChapter = null; render();" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Back to Books</button>
                                             </div>
                                         `;
                                     }
@@ -3775,7 +3820,7 @@
                                     return `
                                         <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
                                             <button onclick="state.selectedQuizChapter = null; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
-                                                ${icons.chevronLeft} Back to Chapters
+                                                ${icons.chevronLeft} Back to Books
                                             </button>
                                             <h3 class="text-2xl font-bold mb-6">Matthew Chapter ${chapter}</h3>
                                             <form id="quizForm" class="space-y-6">
