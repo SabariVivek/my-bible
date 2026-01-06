@@ -3464,7 +3464,11 @@
                     });
                 } catch (verifyError) {
                     console.error('Error verifying saved data:', verifyError);
-                    // Keep local state if verification fails
+                    // Keep local state if verification fails - ensure the current date is still marked
+                    if (!state.currentUser.completedDates) {
+                        state.currentUser.completedDates = {};
+                    }
+                    state.currentUser.completedDates[dateKey] = true;
                 }
 
                 // Update in users array
@@ -3483,6 +3487,8 @@
                 // Trigger confetti animation
                 createConfetti();
                 
+                // Small delay to ensure state is fully updated before rendering
+                await new Promise(resolve => setTimeout(resolve, 100));
                 render();
             } catch (error) {
                 alert('Failed to save progress. Please try again.');
