@@ -4430,10 +4430,14 @@
                                 <div class="flex gap-3 overflow-x-auto pb-4">
                                     ${state.users
                                         .map(user => {
-                                            // Calculate streak - count total number of days read
+                                            // Calculate streak - count only this year's completed days
                                             let streak = 0;
+                                            const currentYear = new Date().getFullYear();
                                             if (user.completedDates) {
-                                                streak = Object.keys(user.completedDates).length;
+                                                streak = Object.keys(user.completedDates).filter(dateStr => {
+                                                    const [year] = dateStr.split('-').map(Number);
+                                                    return year === currentYear;
+                                                }).length;
                                             }
                                             return { user, stats: getUserStats(user), streak };
                                         })
@@ -5255,7 +5259,11 @@
                                 const progressKeys = Object.keys(user.progress || {}).filter(k => user.progress[k] === 'read');
                                 const totalRead = progressKeys.length;
                                 const percentage = Math.round((totalRead / 1189) * 100);
-                                const completedDays = Object.keys(user.completedDates || {}).length;
+                                const currentYear = new Date().getFullYear();
+                                const completedDays = Object.keys(user.completedDates || {}).filter(dateStr => {
+                                    const [year] = dateStr.split('-').map(Number);
+                                    return year === currentYear;
+                                }).length;
 
                                 return `
                                     <div class="${theme.card} border ${theme.border} rounded-2xl p-6 shadow-sm">
@@ -5382,7 +5390,11 @@
                 // Use preloaded chapter count from dashboard loading
                 const totalRead = user.readChaptersCount || 0;
                 const percentage = Math.round((totalRead / 1449) * 100);
-                const completedDays = Object.keys(user.completedDates || {}).length;
+                const currentYear = new Date().getFullYear();
+                const completedDays = Object.keys(user.completedDates || {}).filter(dateStr => {
+                    const [year] = dateStr.split('-').map(Number);
+                    return year === currentYear;
+                }).length;
 
                 return `
                                     <div class="${theme.card} border ${theme.border} rounded-2xl p-6">
