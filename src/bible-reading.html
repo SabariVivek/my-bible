@@ -3700,14 +3700,14 @@
                                 }).join('')}
                             </div>                                            <!-- Action Buttons -->
                                             <div class="mt-6 flex items-center justify-between gap-4">
-                                                <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" class="bg-white dark:bg-slate-800 border-2 border-red-500 text-red-500 dark:text-red-400 rounded-lg px-4 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-sm">
-                                                    Back
+                                                <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" class="bg-gray-500 dark:bg-gray-600 border-2 border-gray-500 text-white rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:bg-gray-600 dark:hover:bg-gray-700" style="display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; width: 40px; height: 40px; flex-shrink: 0;">
+                                                    ←
                                                 </button>
                                                 <button onclick="(async () => { this.classList.add('btn-fill-blue'); state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); await loadCompletedPortionsForDate(); render(); })()" class="bg-blue-600 dark:bg-blue-700 text-white rounded-lg px-8 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base">
-                                                    Track
+                                                    Mark Progress
                                                 </button>
-                                                <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" class="bg-white dark:bg-slate-800 border-2 border-green-500 text-green-500 dark:text-green-400 rounded-lg px-4 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-sm">
-                                                    Next
+                                                <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" class="bg-gray-500 dark:bg-gray-600 border-2 border-gray-500 text-white rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:bg-gray-600 dark:hover:bg-gray-700" style="display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; width: 40px; height: 40px; flex-shrink: 0;">
+                                                    →
                                                 </button>
                                             </div>
                                         </div>
@@ -4832,12 +4832,12 @@
                                 <div class="reading-card-wrapper">
                                     <div id="dailyReadingCard" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-6">
                                         <div class="flex items-center justify-between mb-4">
-                                            <div class="flex items-center gap-3">
-                                                ${icons.bookmark}
-                                                <h2 class="text-lg font-bold">${isToday ? "Today's Reading" : state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
-                                            </div>
-                                            <button id="calendarButton" style="display: none;" class="calendar-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 transition-colors" type="button" onclick="openCalendarModal()">
-                                                ${icons.calendar}
+                                            <button onclick="navigateToPreviousDate()" title="Previous Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="padding: 10px; border-radius: 6px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; width: 40px; height: 40px;">
+                                                <span style="font-weight: 900; font-size: 20px;">‹</span>
+                                            </button>
+                                            <h2 class="text-lg font-bold">${isToday ? "Today's Reading" : state.selectedDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
+                                            <button onclick="navigateToNextDate()" title="Next Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="padding: 10px; border-radius: 6px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; width: 40px; height: 40px;">
+                                                <span style="font-weight: 900; font-size: 20px;">›</span>
                                             </button>
                                         </div>
                                         <div class="space-y-3">
@@ -4864,18 +4864,10 @@
                                             `}).join('')}
                                         </div>
                                         
-                                        <div style="display: flex; align-items: center; gap: 8px; margin-top: 16px;">
-                                            <button onclick="navigateToPreviousDate()" title="Previous Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="flex: 0 0 auto; padding: 8px 10px; border-radius: 8px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px;">
-                                                ←
-                                            </button>
-                                            <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} style="flex: 1; padding: 8px 12px; border-radius: 8px; border: 2px solid transparent; font-weight: 600; font-size: 13px; transition-colors duration-200; display: flex; align-items: center; justify-content: center;" class="${isDateCompleted ? 'bg-emerald-500/20 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
-                                                ${icons.checkCircle}
-                                                <span style="margin-left: 4px; font-size: 12px;">${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}</span>
-                                            </button>
-                                            <button onclick="navigateToNextDate()" title="Next Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="flex: 0 0 auto; padding: 8px 10px; border-radius: 8px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px;">
-                                                →
-                                            </button>
-                                        </div>
+                                        <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 2px solid transparent; font-weight: 600; font-size: 14px; transition-colors duration-200; display: flex; align-items: center; justify-content: center; margin-top: 16px;" class="${isDateCompleted ? 'bg-emerald-500/20 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
+                                            ${icons.checkCircle}
+                                            <span style="margin-left: 6px; font-size: 14px;">${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}</span>
+                                        </button>
                                 </div>
                             </div>
                         </div>
