@@ -123,7 +123,15 @@ async function clearChapterProgress(userId, bookName, chapterNumber) {
 }
 // Daily Portions
 async function markPortionAsCompleted(userId, date, portionIndex) {
-    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    let dateStr;
+    if (date instanceof Date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        dateStr = `${year}-${month}-${day}`;
+    } else {
+        dateStr = date;
+    }
     const { data, error } = await supabase
         .from('daily_portions')
         .upsert([{
@@ -142,7 +150,15 @@ async function markPortionAsCompleted(userId, date, portionIndex) {
 }
 
 async function unmarkPortionAsCompleted(userId, date, portionIndex) {
-    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    let dateStr;
+    if (date instanceof Date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        dateStr = `${year}-${month}-${day}`;
+    } else {
+        dateStr = date;
+    }
     const { error } = await supabase
         .from('daily_portions')
         .delete()
@@ -153,7 +169,15 @@ async function unmarkPortionAsCompleted(userId, date, portionIndex) {
 }
 
 async function getCompletedPortions(userId, date) {
-    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    let dateStr;
+    if (date instanceof Date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        dateStr = `${year}-${month}-${day}`;
+    } else {
+        dateStr = date;
+    }
     const { data, error } = await supabase
         .from('daily_portions')
         .select('portion_index')
@@ -166,7 +190,15 @@ async function getCompletedPortions(userId, date) {
 
 // Completed Dates
 async function markDateAsCompleted(userId, date) {
-    const dateStr = date instanceof Date ? date.toISOString().split('T')[0] : date;
+    let dateStr;
+    if (date instanceof Date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        dateStr = `${year}-${month}-${day}`;
+    } else {
+        dateStr = date;
+    }
     const { data, error } = await supabase
         .from('completed_dates')
         .upsert([{
@@ -182,10 +214,21 @@ async function markDateAsCompleted(userId, date) {
 
 // Batch mark multiple dates as completed (more efficient)
 async function markDatesAsCompletedBatch(userId, dates) {
-    const records = dates.map(date => ({
-        user_id: userId,
-        completed_date: date instanceof Date ? date.toISOString().split('T')[0] : date
-    }));
+    const records = dates.map(date => {
+        let dateStr;
+        if (date instanceof Date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            dateStr = `${year}-${month}-${day}`;
+        } else {
+            dateStr = date;
+        }
+        return {
+            user_id: userId,
+            completed_date: dateStr
+        };
+    });
     
     const { data, error } = await supabase
         .from('completed_dates')

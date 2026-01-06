@@ -1748,19 +1748,45 @@
         }
 
         async function togglePortionComplete(portionIndex) {
-            if (!state.currentUser) return;
+            console.log('togglePortionComplete called with portionIndex:', portionIndex);
+            console.log('state.selectedDate:', state.selectedDate);
+            console.log('state.selectedDate.toDateString():', state.selectedDate.toDateString());
+            console.log('Year:', state.selectedDate.getFullYear(), 'Month:', state.selectedDate.getMonth() + 1, 'Date:', state.selectedDate.getDate());
+            console.log('state.currentUser:', state.currentUser);
+            console.log('state.isInitializing:', state.isInitializing);
+            
+            if (!state.currentUser) {
+                console.log('No current user');
+                return;
+            }
+            
+            // Prevent clicking during page load
+            if (state.isInitializing) {
+                alert('Page is still loading, please wait...');
+                return;
+            }
             
             const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
             const portionKey = `${dateKey}-${portionIndex}`;
             
+            console.log('dateKey:', dateKey);
+            console.log('portionKey:', portionKey);
+            console.log('completedPortions before:', completedPortions);
+            
             try {
                 if (completedPortions.has(portionKey)) {
+                    console.log('Unmarking portion as completed');
                     completedPortions.delete(portionKey);
-                    await BibleReadingDB.unmarkPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
+                    const result = await BibleReadingDB.unmarkPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
+                    console.log('Unmark result:', result);
                 } else {
+                    console.log('Marking portion as completed');
                     completedPortions.add(portionKey);
-                    await BibleReadingDB.markPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
+                    const result = await BibleReadingDB.markPortionAsCompleted(state.currentUser.id, state.selectedDate, portionIndex);
+                    console.log('Mark result:', result);
                 }
+                
+                console.log('completedPortions after:', completedPortions);
                 
                 // Update both current view and dashboard if visible
                 if (state.showDashboard) {
@@ -1770,7 +1796,8 @@
                 // Only update UI - don't auto-complete the entire day
                 render();
             } catch (error) {
-                alert('Failed to save progress. Please try again.');
+                console.error('Error toggling portion:', error);
+                alert('Failed to save progress. Error: ' + error.message);
             }
         }
 
@@ -3567,9 +3594,10 @@
                 }
 
                 // Mark date as completed in Supabase
+                const localDateStr = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
                 await BibleReadingDB.markDateAsCompleted(
                     state.currentUser.id,
-                    state.selectedDate.toISOString().split('T')[0]
+                    localDateStr
                 );
 
                 // Update local state
