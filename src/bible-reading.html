@@ -3799,6 +3799,17 @@
                     <div class="dashboard-tabs-content">
                         <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
                         ${state.dashboardTab === 'my-plan' ? `
+                            <!-- SERMON ON THE MOUNT CARD -->
+                            <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32">
+                                <img src="../resources/images/sermon-on-the-mount.png" alt="Sermon on the Mount" class="w-full h-full object-cover" style="object-position: center 30%;">
+                                <div class="absolute top-0 left-0 p-3">
+                                    <p class="text-xs font-semibold" style="background: linear-gradient(135deg, #8B0000 0%, #2F4F4F 50%, #1C1C1C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: none;">மலைப்பிரசங்கம்</p>
+                                    <p class="text-black text-[10px]" style="text-shadow: 0px 1px 2px rgba(255,255,255,0.5); line-height: 2.2;">Matthew 5 - 7</p>
+                                </div>
+                                <div class="absolute bottom-2 right-2">
+                                    <img src="../resources/images/coming-soon.png" alt="Coming soon" class="h-16 w-auto">
+                                </div>
+                            </div>
                             <!-- MY PLAN TAB -->
                             ${todayReading ? `
                                 <div class="reading-card-container">
