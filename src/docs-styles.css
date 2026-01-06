@@ -2531,7 +2531,18 @@ html.context-revelation .icon-btn.edit-btn {
     display: none !important;
 }
 
-html.context-revelation .tree-item-actions {
+html.context-revelation .tree-item-actions,
+html.context-revelation .tree-action-btn,
+html.context-revelation .tree-menu-btn {
     display: none !important;
+}
+
+/* Adjust tree item spacing in revelation context when action buttons are hidden */
+html.context-revelation .tree-item-header {
+    padding: 10px 14px;
+}
+
+html.context-revelation .tree-item-title {
+    padding-right: 16px;
 }
 
