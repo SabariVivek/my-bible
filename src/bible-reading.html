@@ -4555,16 +4555,16 @@
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10z"/><polyline points="13 2 13 10 21 10"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
                                 <span class="text-xs font-semibold">Notes</span>
                             </button>
-                            ${state.revelationTabVisible ? `
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'revelation'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'revelation' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="revelation">
-                                <span style="font-size: 16px; line-height: 1;">🐑</span>
-                                <span class="text-xs font-semibold">Revelation</span>
-                            </button>
-                            ` : ''}
                             ${state.quizTabVisible ? `
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadTodayQuizScoresFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><circle cx="9" cy="10" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg>
                                 <span class="text-xs font-semibold">Quiz</span>
+                            </button>
+                            ` : ''}
+                            ${state.revelationTabVisible ? `
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'revelation'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 py-3 transition-colors ${state.dashboardTab === 'revelation' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="revelation">
+                                <span style="font-size: 20px; line-height: 1;">⚖️</span>
+                                <span class="text-xs font-semibold">Revelation</span>
                             </button>
                             ` : ''}
                         </div>
@@ -4859,14 +4859,14 @@
                                         </div>
                                         
                                         <div style="display: flex; align-items: center; gap: 8px; margin-top: 16px;">
-                                            <button onclick="navigateToPreviousDate()" title="Previous Day" style="flex: 0 0 auto; padding: 8px 10px; border-radius: 8px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 16px; hover:opacity-80;">
+                                            <button onclick="navigateToPreviousDate()" title="Previous Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="flex: 0 0 auto; padding: 8px 10px; border-radius: 8px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px;">
                                                 ←
                                             </button>
                                             <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} style="flex: 1; padding: 8px 12px; border-radius: 8px; border: 2px solid transparent; font-weight: 600; font-size: 13px; transition-colors duration-200; display: flex; align-items: center; justify-content: center;" class="${isDateCompleted ? 'bg-emerald-500/20 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
                                                 ${icons.checkCircle}
                                                 <span style="margin-left: 4px; font-size: 12px;">${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}</span>
                                             </button>
-                                            <button onclick="navigateToNextDate()" title="Next Day" style="flex: 0 0 auto; padding: 8px 10px; border-radius: 8px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 16px; hover:opacity-80;">
+                                            <button onclick="navigateToNextDate()" title="Next Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(59, 130, 246, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="flex: 0 0 auto; padding: 8px 10px; border-radius: 8px; border: 1px solid #3b82f6; background: #3b82f6; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px;">
                                                 →
                                             </button>
                                         </div>
