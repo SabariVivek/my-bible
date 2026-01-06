@@ -3704,7 +3704,7 @@
                                                     ←
                                                 </button>
                                                 <button onclick="(async () => { this.classList.add('btn-fill-blue'); state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); await loadCompletedPortionsForDate(); render(); })()" class="bg-blue-600 dark:bg-blue-700 text-white rounded-lg px-8 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base">
-                                                    Mark Progress
+                                                    Track
                                                 </button>
                                                 <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" class="bg-gray-500 dark:bg-gray-600 border-2 border-gray-500 text-white rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:bg-gray-600 dark:hover:bg-gray-700" style="display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; width: 40px; height: 40px; flex-shrink: 0;">
                                                     →
@@ -4787,6 +4787,7 @@
             const isFutureDate = selectedDate > today;
             const isToday = selectedDate.getTime() === today.getTime();
             const isPastDate = selectedDate < today;
+            const isLastYearDate = selectedDate.getFullYear() < today.getFullYear();
 
             const allBooks = state.activeTestament === 'all'
                 ? [...oldTestamentBooks, ...newTestamentBooks]
@@ -4855,19 +4856,23 @@
                                                             ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${formatChaptersWithSpaces(portion.chapters)}</div>` : ''}
                                                         </div>
                                                     </div>
+                                                    ${!isLastYearDate ? `
                                                     <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
                                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                                                             <polyline points="20 6 9 17 4 12"/>
                                                         </svg>
                                                     </div>
+                                                    ` : ''}
                                                 </div>
                                             `}).join('')}
                                         </div>
                                         
+                                        ${!isLastYearDate ? `
                                         <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 2px solid transparent; font-weight: 600; font-size: 14px; transition-colors duration-200; display: flex; align-items: center; justify-content: center; margin-top: 16px;" class="${isDateCompleted ? 'bg-emerald-500/20 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
                                             ${icons.checkCircle}
                                             <span style="margin-left: 6px; font-size: 14px;">${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}</span>
                                         </button>
+                                        ` : ''}
                                 </div>
                             </div>
                         </div>
