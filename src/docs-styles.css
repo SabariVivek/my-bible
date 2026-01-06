@@ -2523,3 +2523,15 @@ body.dark-theme ::-webkit-scrollbar-thumb:hover {
     }
 }
 
+/* Hide create button and context menu in revelation context */
+html.context-revelation .create-btn,
+html.context-revelation #create-btn-desktop,
+html.context-revelation #welcome-create-btn,
+html.context-revelation .icon-btn.edit-btn {
+    display: none !important;
+}
+
+html.context-revelation .tree-item-actions {
+    display: none !important;
+}
+

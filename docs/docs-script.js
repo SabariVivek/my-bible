@@ -7,6 +7,18 @@ let editMode = false;
 let theme = localStorage.getItem('theme') || 'light';
 let changedItems = new Set(); // Track which items have changed
 let deletedItems = new Set(); // Track deleted item IDs
+
+// Get context from URL parameters (e.g., ?context=revelation)
+const urlParams = new URLSearchParams(window.location.search);
+const navigationContext = urlParams.get('context'); // 'revelation' or null
+
+// Store context in sessionStorage for back button handling
+if (navigationContext) {
+    sessionStorage.setItem('docs-navigation-context', navigationContext);
+    // Add class to html element for styling purposes
+    document.documentElement.classList.add(`context-${navigationContext}`);
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', async () => {
     // Initialize image lightbox
@@ -605,6 +617,11 @@ function setupEventListeners() {
             executeCommand(this.dataset.action);
         });
     });
+    // Back/Leave button - check navigation context
+    const leaveBtn = document.querySelector('.leave-btn');
+    if (leaveBtn) {
+        leaveBtn.addEventListener('click', handleBackButton);
+    }
     // Heading select
     const headingSelect = document.getElementById('heading-select');
     if (headingSelect) headingSelect.addEventListener('change', formatHeading);
@@ -650,6 +667,26 @@ function setupContextMenu() {
         }
     });
 }
+
+// Handle back button - if coming from Revelation, go back to bible-reading.html
+function handleBackButton(e) {
+    e.preventDefault();
+    const context = sessionStorage.getItem('docs-navigation-context');
+    if (context === 'revelation') {
+        // Clear the context and go back to bible-reading.html
+        sessionStorage.removeItem('docs-navigation-context');
+        window.location.href = '../src/bible-reading.html';
+    } else {
+        // Normal back behavior
+        history.back();
+        setTimeout(function() {
+            if (window.location.pathname.includes('docs.html')) {
+                window.location.replace('../index.html');
+            }
+        }, 100);
+    }
+}
+
 function setupModalCloseListeners() {
     document.querySelectorAll('.modal').forEach(modal => {
         const overlay = modal.querySelector('.modal-overlay');
@@ -916,7 +953,27 @@ function renderPageTree() {
     const treeContainer = document.getElementById('page-tree');
     if (!treeContainer) return;
     treeContainer.innerHTML = '';
-    pages.forEach(item => {
+    
+    // Filter pages based on navigation context
+    let pagesToRender = pages;
+    if (navigationContext === 'revelation') {
+        // Only show pages/folders that contain "revelation" in the title (case-insensitive)
+        pagesToRender = pages.filter(item => {
+            // For folders, check if they or their children contain revelation content
+            if (item.type === 'folder') {
+                const folderName = item.title.toLowerCase();
+                const hasRevealationInName = folderName.includes('revelation');
+                const hasRevealationChild = item.children && item.children.some(child => 
+                    child.title.toLowerCase().includes('revelation')
+                );
+                return hasRevealationInName || hasRevealationChild;
+            }
+            // For pages, check the title
+            return item.title.toLowerCase().includes('revelation');
+        });
+    }
+    
+    pagesToRender.forEach(item => {
         treeContainer.appendChild(createTreeItem(item));
     });
 }
@@ -2130,6 +2187,7 @@ function moveItemToFolder(itemId, targetFolderId) {
     
     targetFolder.children.push(removedItem);
     removedItem.updatedAt = new Date().toISOString();
+    changedItems.add(itemId); // Track this change
     
     // Save and refresh
     savePages();
@@ -2162,6 +2220,7 @@ function confirmRename() {
     if (item) {
         item.title = newName;
         item.updatedAt = new Date().toISOString();
+        changedItems.add(itemId); // Track this change
         savePages();
         renderPageTree();
         initializeDragAndDrop();
