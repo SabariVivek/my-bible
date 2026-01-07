@@ -1949,6 +1949,7 @@
             selectedVerse: null,  // Track selected revelation verse
             previousRevealTab: 'revelation',  // Track previous revelation tab for back navigation
             isSavingProgress: false,  // Track if a database operation is in progress
+            scrollGuardActive: false,  // Prevent accidental back button clicks while scrolling
         };
 
         // Handle back navigation (mobile swipe back, browser back button)
@@ -2329,6 +2330,11 @@
                     .sort((a, b) => b.score - a.score)
                     .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
 
+                // Trigger confetti when user completes a quiz
+                setTimeout(() => {
+                    createConfetti();
+                }, 500);
+
                 // Save to Supabase (non-blocking)
                 if (state.currentUser && state.currentUser.id) {
                     try {
@@ -2410,6 +2416,36 @@
             }
         }
 
+        function setupScrollGuard(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const backButtons = container.querySelectorAll('.back-button-desktop');
+            
+            backButtons.forEach(button => {
+                // Track if we're scrolling
+                let isScrolling = false;
+                
+                container.addEventListener('scroll', () => {
+                    isScrolling = true;
+                    clearTimeout(button._scrollTimeout);
+                    button._scrollTimeout = setTimeout(() => {
+                        isScrolling = false;
+                    }, 200); // 200ms grace period after scroll ends
+                }, { passive: true });
+
+                // Prevent click during scroll
+                const originalClickHandler = button.onclick;
+                button.addEventListener('click', (e) => {
+                    if (isScrolling) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        return false;
+                    }
+                });
+            });
+        }
+
         async function loadQuizProgress(user) {
             if (!user || !user.id) return;
             
@@ -2426,8 +2462,8 @@
                     .eq('quiz_date', dateKey)
                     .single();
                 
-                if (error && error.code !== 'PGRST116') {
-                    console.error('Error loading quiz progress:', error);
+                if (error && error.code !== 'PGRST116' && error.status !== 406) {
+                    console.warn('Warning loading quiz progress:', error);
                     return;
                 }
                 
@@ -2527,7 +2563,8 @@
                     .single();
                 
                 if (error) {
-                    console.error('Error loading quiz summary:', error);
+                    // Handle 406 and other errors gracefully - quiz_scores table may not exist yet
+                    console.warn('Warning loading quiz summary:', error);
                     return;
                 }
                 
@@ -3059,7 +3096,9 @@
                     .select('*');
                 
                 if (error) {
-                    console.error('Error loading quiz scores:', error);
+                    // Handle 406 and other errors gracefully - quiz_scores table may not exist yet
+                    console.warn('Warning loading quiz scores:', error);
+                    // Continue without remote data - use local state only
                     return;
                 }
 
@@ -3776,7 +3815,7 @@
                 </style>
                 <div class="dashboard-container min-h-screen ${theme.bg} ${theme.text} transition-colors duration-300">
                     <!-- Header -->
-                    <div class="${theme.card} border-b ${theme.border} sticky top-0 z-40">
+                    <div class="${theme.card} border-b ${theme.border} sticky top-0 z-40 ${state.dashboardTab === 'quiz' ? 'hidden' : ''}">
                         <div class="max-w-7xl mx-auto px-4 py-4">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap-3">
@@ -4073,257 +4112,411 @@
                                     const topThree = state.quizLeaderboard && state.quizLeaderboard.length > 0 ? state.quizLeaderboard.slice(0, 3) : [];
                                     const others = state.quizLeaderboard && state.quizLeaderboard.length > 3 ? state.quizLeaderboard.slice(3) : [];
                                     
+                                    // Trigger confetti when user first sees the leaderboard
+                                    if (!state.quizLeaderboardViewed) {
+                                        state.quizLeaderboardViewed = true;
+                                        setTimeout(() => {
+                                            createConfetti();
+                                        }, 800);
+                                    }
+                                    
                                     return `
                                         <div class="space-y-6">
+                                            <div class="flex items-center justify-center mb-8">
+                                                <h1 style="font-size: 28px; font-weight: 800; font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin: 0; padding: 0; text-align: center; letter-spacing: 1px;">Leaderboard</h1>
+                                            </div>
+                                            
+                                            <!-- Start Quiz Button -->
+                                            <div class="flex justify-center mb-2">
+                                                <button onclick="state.quizStarted = true; window.history.pushState({ page: 'quiz' }, '', window.location.href); render();" class="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-2 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                                                    Start
+                                                </button>
+                                            </div>
+                                            
                                             <style>
-                                                .leaderboard-container {
-                                                    max-width: 500px;
-                                                    margin: 0 auto;
-                                                    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
-                                                    border: 2px solid #c0c0c0;
-                                                    border-radius: 20px;
-                                                    padding: 30px;
-                                                    box-shadow: 0 0 30px rgba(192, 192, 192, 0.3), inset 0 0 20px rgba(192, 192, 192, 0.1);
-                                                }
-                                                
-                                                .leaderboard-title {
+                                                .leaderboard-header {
                                                     text-align: center;
-                                                    font-size: 28px;
-                                                    font-weight: bold;
-                                                    margin-bottom: 30px;
-                                                    color: #c0c0c0;
-                                                    background: linear-gradient(90deg, transparent, rgba(192, 192, 192, 0.3), transparent);
-                                                    border: 2px solid #c0c0c0;
-                                                    border-radius: 12px;
-                                                    padding: 12px;
-                                                    box-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
+                                                    margin-bottom: 40px;
                                                 }
-                                                
-                                                .top-three {
+
+                                                .leaderboard-header h1 {
+                                                    font-size: 28px;
+                                                    color: #000;
+                                                    margin-bottom: 5px;
+                                                    font-weight: 700;
+                                                }
+
+                                                html.dark-theme .leaderboard-header h1 {
+                                                    color: white;
+                                                }
+
+                                                .leaderboard-header p {
+                                                    font-size: 14px;
+                                                    color: #888;
+                                                }
+
+                                                .podium-wrapper {
+                                                    border-radius: 20px;
+                                                    padding: 30px 20px 0;
+                                                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+                                                    margin-bottom: 20px;
+                                                }
+
+                                                html.dark-theme .podium-wrapper {
+                                                }
+
+                                                .podium-container {
                                                     display: flex;
                                                     align-items: flex-end;
                                                     justify-content: center;
-                                                    gap: 12px;
-                                                    margin-bottom: 30px;
-                                                }
-                                                
-                                                .leaderboard-card {
-                                                    width: 100px;
-                                                    text-align: center;
-                                                    border-radius: 12px;
-                                                    padding: 12px 8px;
-                                                    color: #fff;
+                                                    gap: 0;
                                                     position: relative;
-                                                    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e3a8a 100%);
-                                                    border: 2px solid #c0c0c0;
-                                                    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
-                                                    transition: all 0.3s;
+                                                    padding-bottom: 0;
                                                 }
-                                                
-                                                .leaderboard-card:hover {
-                                                    transform: translateY(-5px);
-                                                    box-shadow: 0 0 25px rgba(192, 192, 192, 0.6);
-                                                }
-                                                
-                                                .leaderboard-card.first-place {
-                                                    width: 120px;
-                                                    order: 2;
-                                                    transform: scale(1.15);
-                                                    z-index: 10;
-                                                    border-color: #ffd700;
-                                                    background: linear-gradient(135deg, #b8860b 0%, #ffd700 50%, #b8860b 100%);
-                                                    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-                                                }
-                                                
-                                                .leaderboard-card.second-place {
-                                                    order: 1;
-                                                    border-color: #c0c0c0;
-                                                    background: linear-gradient(135deg, #808080 0%, #c0c0c0 50%, #808080 100%);
-                                                    box-shadow: 0 0 15px rgba(192, 192, 192, 0.3);
-                                                }
-                                                
-                                                .leaderboard-card.third-place {
-                                                    order: 3;
-                                                    border-color: #cd7f32;
-                                                    background: linear-gradient(135deg, #8b4513 0%, #cd7f32 50%, #8b4513 100%);
-                                                    box-shadow: 0 0 15px rgba(205, 127, 50, 0.3);
-                                                }
-                                                
-                                                .rank-badge {
-                                                    position: absolute;
-                                                    top: -14px;
-                                                    right: 8px;
-                                                    font-size: 20px;
-                                                }
-                                                
-                                                .leaderboard-card img, .leaderboard-card > div:first-of-type {
-                                                    width: 55px;
-                                                    height: 55px;
-                                                    border-radius: 50%;
-                                                    margin: 0 auto 6px;
-                                                    border: 3px solid #c0c0c0;
-                                                }
-                                                
-                                                .leaderboard-card h4 {
-                                                    font-weight: 600;
-                                                    margin: 6px 0 3px 0;
-                                                    font-size: 12px;
-                                                    color: #000;
-                                                }
-                                                
-                                                .leaderboard-card p {
-                                                    font-size: 13px;
-                                                    font-weight: 600;
-                                                    margin: 0;
-                                                }
-                                                
-                                                .leaderboard-list {
-                                                    list-style: none;
-                                                    margin: 0;
-                                                    padding: 0;
-                                                    space-y: 12px;
-                                                }
-                                                
-                                                .leaderboard-list li {
+
+                                                .podium-place {
+                                                    flex: 1;
                                                     display: flex;
+                                                    flex-direction: column;
                                                     align-items: center;
-                                                    gap: 12px;
-                                                    padding: 14px 16px;
-                                                    margin-bottom: 12px;
-                                                    background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
-                                                    border: 1.5px solid #c0c0c0;
-                                                    border-radius: 10px;
-                                                    box-shadow: 0 0 10px rgba(192, 192, 192, 0.2);
-                                                    transition: all 0.3s;
                                                 }
-                                                
-                                                .leaderboard-list li:hover {
-                                                    box-shadow: 0 0 20px rgba(192, 192, 192, 0.4);
-                                                    border-color: #e8e8e8;
+
+                                                .podium-place.second {
+                                                    order: 1;
                                                 }
-                                                
-                                                .leaderboard-list li:last-child {
-                                                    margin-bottom: 0;
+
+                                                .podium-place.first {
+                                                    order: 2;
                                                 }
-                                                
-                                                .rank-number {
-                                                    color: #c0c0c0;
-                                                    font-weight: 700;
-                                                    font-size: 18px;
-                                                    min-width: 30px;
-                                                    text-align: center;
+
+                                                .podium-place.third {
+                                                    order: 3;
                                                 }
-                                                
-                                                .player-avatar {
-                                                    width: 40px;
-                                                    height: 40px;
+
+                                                .avatar-wrapper {
+                                                    margin-bottom: 10px;
+                                                    position: relative;
+                                                }
+
+                                                .crown {
+                                                    position: absolute;
+                                                    top: -20px;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    font-size: 24px;
+                                                    z-index: 2;
+                                                }
+
+                                                .podium-avatar {
+                                                    width: 65px;
+                                                    height: 65px;
                                                     border-radius: 50%;
-                                                    border: 2px solid #c0c0c0;
-                                                    flex-shrink: 0;
                                                     display: flex;
                                                     align-items: center;
                                                     justify-content: center;
+                                                    font-size: 30px;
+                                                    position: relative;
+                                                    z-index: 1;
+                                                    border: 4px solid white;
+                                                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                                                     overflow: hidden;
                                                 }
-                                                
-                                                .player-info {
-                                                    flex: 1;
+
+                                                .podium-avatar img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                }
+
+                                                .podium-place.first .podium-avatar {
+                                                    width: 75px;
+                                                    height: 75px;
+                                                    font-size: 35px;
+                                                    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+                                                    border: 4px solid #a78bfa;
+                                                    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+                                                }
+
+                                                .podium-place.second .podium-avatar {
+                                                    width: 60px;
+                                                    height: 60px;
+                                                    font-size: 28px;
+                                                    background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+                                                    border: 3px solid #fcd34d;
+                                                }
+
+                                                .podium-place.third .podium-avatar {
+                                                    width: 60px;
+                                                    height: 60px;
+                                                    font-size: 28px;
+                                                    background: linear-gradient(135deg, #86efac 0%, #22c55e 100%);
+                                                    border: 3px solid #86efac;
+                                                }
+
+                                                .podium-player-name {
+                                                    font-size: 13px;
+                                                    font-weight: 600;
+                                                    color: white;
+                                                    text-align: center;
+                                                    margin-bottom: 3px;
+                                                    max-width: 100px;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                }
+
+                                                .podium-place.first .podium-player-name {
+                                                    font-size: 14px;
+                                                    font-weight: 700;
+                                                }
+
+                                                .podium-player-score {
+                                                    font-size: 12px;
+                                                    color: #a0a0a0;
+                                                    font-weight: 600;
+                                                    margin-bottom: 12px;
+                                                }
+
+                                                .podium {
+                                                    width: 100%;
+                                                    border-radius: 0;
                                                     display: flex;
                                                     align-items: center;
-                                                    gap: 8px;
+                                                    justify-content: center;
+                                                    font-size: 48px;
+                                                    font-weight: 700;
+                                                    color: rgba(255, 255, 255, 0.4);
+                                                    position: relative;
+                                                    background: #8b5cf6;
+                                                    box-shadow: 
+                                                        inset 3px 0 8px rgba(255, 255, 255, 0.3),
+                                                        inset -3px 0 8px rgba(0, 0, 0, 0.3),
+                                                        0 4px 0 rgba(0, 0, 0, 0.2);
                                                 }
-                                                
-                                                .player-name {
-                                                    color: #fff;
+
+                                                .podium::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    right: 0;
+                                                    height: 25%;
+                                                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, transparent 100%);
+                                                    pointer-events: none;
+                                                }
+
+                                                .podium::after {
+                                                    content: '';
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    left: 0;
+                                                    right: 0;
+                                                    height: 20%;
+                                                    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+                                                    pointer-events: none;
+                                                }
+
+                                                .podium-place.second .podium {
+                                                    height: 100px;
+                                                    background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+                                                    border: 2px solid transparent;
+                                                }
+
+                                                .podium-place.first .podium {
+                                                    height: 130px;
+                                                    background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+                                                }
+
+                                                .podium-place.third .podium {
+                                                    height: 80px;
+                                                    background: linear-gradient(135deg, #86efac 0%, #22c55e 100%);
+                                                    border: 2px solid transparent;
+                                                }
+
+                                                .other-players {
+                                                    border-radius: 20px;
+                                                    padding: 20px;
+                                                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+                                                    background: #f3f4f6;
+                                                }
+
+                                                html.dark-theme .other-players {
+                                                    background: #1a1a2e;
+                                                }
+
+                                                .players-section-title {
+                                                    font-size: 16px;
+                                                    font-weight: 600;
+                                                    color: #1f2937;
+                                                    margin: 0 0 15px 0;
+                                                    text-align: center;
+                                                }
+
+                                                html.dark-theme .players-section-title {
+                                                    color: white;
+                                                }
+
+                                                .player-card {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    padding: 12px;
+                                                    margin-bottom: 10px;
+                                                    border-radius: 12px;
+                                                    background: #e5e7eb;
+                                                    transition: all 0.3s ease;
+                                                }
+
+                                                html.dark-theme .player-card {
+                                                    background: rgba(30, 58, 138, 0.4);
+                                                }
+
+                                                .player-card:hover {
+                                                    background: #d1d5db;
+                                                    transform: translateX(3px);
+                                                }
+
+                                                html.dark-theme .player-card:hover {
+                                                    background: rgba(30, 58, 138, 0.7);
+                                                }
+
+                                                html.dark-theme .player-card:hover {
+                                                    background: rgba(26, 26, 46, 0.9);
+                                                }
+
+                                                .player-card:last-child {
+                                                    margin-bottom: 0;
+                                                }
+
+                                                .rank-badge {
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    border-radius: 10px;
+                                                    background: #d1d5db;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    font-weight: 700;
+                                                    font-size: 14px;
+                                                    color: #1f2937;
+                                                    flex-shrink: 0;
+                                                    margin-right: 12px;
+                                                }
+
+                                                html.dark-theme .rank-badge {
+                                                    background: rgba(36, 58, 82, 0.8);
+                                                    color: #fbbf24;
+                                                }
+
+                                                .card-player-info {
+                                                    flex: 1;
+                                                    margin-left: 12px;
+                                                }
+
+                                                .card-player-avatar {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    border-radius: 50%;
+                                                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    border: 2px solid rgba(255, 255, 255, 0.3);
+                                                    font-size: 18px;
+                                                    flex-shrink: 0;
+                                                    overflow: hidden;
+                                                    margin-right: 12px;
+                                                }
+
+                                                .card-player-avatar img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: cover;
+                                                }
+
+                                                .card-player-name {
+                                                    font-size: 14px;
+                                                    color: #1f2937;
+                                                    margin-bottom: 2px;
                                                     font-weight: 600;
                                                 }
-                                                
-                                                .stars {
-                                                    color: #fbbf24;
-                                                    font-size: 12px;
-                                                    letter-spacing: 2px;
+
+                                                html.dark-theme .card-player-name {
+                                                    color: white;
                                                 }
-                                                
-                                                .score {
-                                                    color: #fff;
-                                                    font-weight: 700;
+
+                                                .card-player-stats {
+                                                    font-size: 12px;
+                                                    color: #888;
+                                                }
+
+                                                .card-score {
                                                     font-size: 16px;
-                                                    margin-left: auto;
+                                                    font-weight: 700;
+                                                    color: #1f2937;
+                                                    flex-shrink: 0;
+                                                    margin-right: 10px;
+                                                }
+
+                                                html.dark-theme .card-score {
+                                                    color: #fbbf24;
+                                                }
+                                                }
+
+                                                .no-players-message {
+                                                    text-align: center;
+                                                    color: #888;
+                                                    padding: 20px;
                                                 }
                                             </style>
                                             
-                                            <div class="leaderboard-container">
-                                                
-                                                ${topThree.length > 0 ? `
-                                                    <div class="top-three">
+                                            <div class="podium-wrapper">
+                                                <div class="podium-container">
+                                                    ${topThree.length > 0 ? `
                                                         ${topThree.map((user, idx) => {
-                                                            let cardClass = '';
-                                                            let rankBadge = '';
-                                                            
-                                                            if (idx === 0) {
-                                                                cardClass = 'first-place';
-                                                                rankBadge = '🥇';
-                                                            } else if (idx === 1) {
-                                                                cardClass = 'second-place';
-                                                                rankBadge = '🥈';
-                                                            } else {
-                                                                cardClass = 'third-place';
-                                                                rankBadge = '🥉';
-                                                            }
-                                                            
-                                                            // Get user initials as fallback
-                                                            const initials = (user.name || 'U').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
-                                                            
-                                                            // Generate a color based on user name for fallback
-                                                            const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316'];
-                                                            const colorIndex = user.name.charCodeAt(0) % colors.length;
-                                                            const bgColor = colors[colorIndex];
+                                                            const placeClass = idx === 0 ? 'first' : (idx === 1 ? 'second' : 'third');
+                                                            const badge = idx === 0 ? '👑' : '';
                                                             
                                                             return `
-                                                                <div class="leaderboard-card ${cardClass}">
-                                                                    <span class="rank-badge">${rankBadge}</span>
-                                                                    <div style="width: 55px; height: 55px; border-radius: 50%; margin: 0 auto 8px; border: 3px solid #00d4ff; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
-                                                                        <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                                                                <div class="podium-place ${placeClass}">
+                                                                    <div class="avatar-wrapper">
+                                                                        ${badge ? `<div class="crown">${badge}</div>` : ''}
+                                                                        <div class="podium-avatar">
+                                                                            <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" onerror="this.parentElement.textContent = '👤'">
+                                                                        </div>
                                                                     </div>
-                                                                    <h4>${user.name || 'User'}</h4>
-                                                                    <p>${user.score}</p>
+                                                                    <div class="podium-player-name">${user.name || 'User'}</div>
+                                                                    <div class="podium-player-score">🏆 ${user.score}</div>
+                                                                    <div class="podium">${idx + 1}</div>
                                                                 </div>
                                                             `;
                                                         }).join('')}
-                                                    </div>
-                                                ` : ''}
-                                                
-                                                ${others.length > 0 ? `
-                                                    <ul class="leaderboard-list">
-                                                        ${others.map((user, idx) => {
-                                                            const colors = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#14b8a6', '#f97316'];
-                                                            const colorIndex = user.name.charCodeAt(0) % colors.length;
-                                                            const bgColor = colors[colorIndex];
-                                                            const initials = (user.name || 'U').split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
-                                                            
-                                                            return `
-                                                                <li>
-                                                                    <div class="rank-number">${idx + 4}</div>
-                                                                    <div class="player-avatar">
-                                                                        <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" style="width: 100%; height: 100%; object-fit: cover;">
-                                                                    </div>
-                                                                    <div class="player-info">
-                                                                        <div class="player-name">${user.name || 'User'}</div>
-                                                                    </div>
-                                                                    <div class="score">${user.score}</div>
-                                                                </li>
-                                                            `;
-                                                        }).join('')}
-                                                    </ul>
-                                                ` : `
-                                                    <div class="text-center text-gray-400 py-8">No quizzes completed yet</div>
-                                                `}
+                                                    ` : `
+                                                        <div class="text-center text-gray-400 py-12 w-full">No quizzes completed yet</div>
+                                                    `}
+                                                </div>
                                             </div>
-                                            
-                                            <!-- Take Quiz Button -->
-                                            <button onclick="state.quizStarted = true; window.history.pushState({ page: 'quiz' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
-                                                🎯 Take Quiz
-                                            </button>
+
+                                            ${others.length > 0 ? `
+                                                <div class="other-players">
+                                                    <div class="players-section-title">Other Players</div>
+
+                                                    ${others.map((user, idx) => {
+                                                        return `
+                                                            <div class="player-card">
+                                                                <div class="rank-badge">${idx + 4}</div>
+                                                                <div class="card-player-avatar">
+                                                                    <img src="../resources/profiles/${user.name.toLowerCase()}.png" alt="${user.name}" onerror="this.parentElement.textContent = '👤'">
+                                                                </div>
+                                                                <div class="card-player-info">
+                                                                    <div class="card-player-name">${user.name || 'User'}</div>
+                                                                    <div class="card-player-stats">${user.total_questions || 0} questions</div>
+                                                                </div>
+                                                                <div class="card-score">${user.score}</div>
+                                                            </div>
+                                                        `;
+                                                    }).join('')}
+                                                </div>
+                                            ` : ''}
                                         </div>
                                     `;
                                 }
@@ -4332,18 +4525,20 @@
                                 // Show testament selection
                                 if (state.quizStarted && !state.selectedTestament && !state.selectedQuizBook && !state.selectedQuizChapter) {
                                     return `
-                                        <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <button onclick="state.quizStarted = false; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
-                                                ${icons.chevronLeft} Back to Leaderboard
-                                            </button>
-                                            <h3 class="text-2xl font-bold mb-8 text-center">Select Testament</h3>
-                                            <div class="flex flex-col gap-4">
-                                                <button onclick="state.selectedTestament = 'OT'; window.history.pushState({ page: 'quiz', level: 'testament' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
-                                                    📖 Old Testament
+                                        <div class="flex items-center justify-center min-h-screen">
+                                            <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm max-w-md w-full">
+                                                <button onclick="state.quizStarted = false; render();" class="back-button-desktop mb-6 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                                    ${icons.chevronLeft} Back to Leaderboard
                                                 </button>
-                                                <button onclick="state.selectedTestament = 'NT'; window.history.pushState({ page: 'quiz', level: 'testament' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
-                                                    📖 New Testament
-                                                </button>
+                                                <h3 class="text-2xl font-bold mb-8 text-center">Select Testament</h3>
+                                                <div class="flex flex-col gap-4">
+                                                    <button onclick="state.selectedTestament = 'OT'; window.history.pushState({ page: 'quiz', level: 'testament' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+                                                        📖 Old Testament
+                                                    </button>
+                                                    <button onclick="state.selectedTestament = 'NT'; window.history.pushState({ page: 'quiz', level: 'testament' }, '', window.location.href); render();" class="w-full bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+                                                        📖 New Testament
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     `;
@@ -4377,12 +4572,16 @@
                                                 
                                                 ${books.map(book => {
                                                     const bookKey = book.toLowerCase().replace(/\s+/g, '-');
-                                                    const hasQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey].questions;
                                                     const chapterCount = counts[book] || 1;
                                                     const chaptersArray = Array.from({length: chapterCount}, (_, i) => i + 1);
                                                     
+                                                    // Check if any chapter has quiz data for this book
+                                                    const hasAnyChapterData = chaptersArray.some(ch => 
+                                                        window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey][String(ch)] && window.quizQuestions[bookKey][String(ch)].questions
+                                                    );
+                                                    
                                                     return `
-                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasQuizData ? 'opacity-60' : ''}">
+                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasAnyChapterData ? 'opacity-60' : ''}">
                                                             <div class="book-header mb-4">
                                                                 <div class="font-bold text-lg">
                                                                     <div>${book}</div>
@@ -4393,7 +4592,8 @@
                                                                 ${chaptersArray.map(ch => {
                                                                     const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
                                                                     const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
-                                                                    const isEnabled = hasQuizData || (book === 'Matthew' && ch <= 8);
+                                                                    const hasChapterQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey][String(ch)] && window.quizQuestions[bookKey][String(ch)].questions;
+                                                                    const isEnabled = hasChapterQuizData;
                                                                     
                                                                     return `
                                                                         <div class="flex flex-col items-center">
@@ -4447,12 +4647,16 @@
                                                 
                                                 ${books.map(book => {
                                                     const bookKey = book.toLowerCase().replace(/\s+/g, '-');
-                                                    const hasQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey].questions;
                                                     const chapterCount = counts[book] || 1;
                                                     const chaptersArray = Array.from({length: chapterCount}, (_, i) => i + 1);
                                                     
+                                                    // Check if any chapter has quiz data for this book
+                                                    const hasAnyChapterData = chaptersArray.some(ch => 
+                                                        window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey][String(ch)] && window.quizQuestions[bookKey][String(ch)].questions
+                                                    );
+                                                    
                                                     return `
-                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasQuizData ? 'opacity-60' : ''}">
+                                                        <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm mb-4 ${!hasAnyChapterData ? 'opacity-60' : ''}">
                                                             <div class="book-header mb-4">
                                                                 <div class="font-bold text-lg">
                                                                     <div>${book}</div>
@@ -4463,7 +4667,8 @@
                                                                 ${chaptersArray.map(ch => {
                                                                     const isCompleted = state.completedQuizChapters[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
                                                                     const chapterScore = state.chapterScores[dateKey]?.[state.currentUser.id]?.[book]?.[ch];
-                                                                    const isEnabled = hasQuizData || (book === 'Matthew' && ch <= 8);
+                                                                    const hasChapterQuizData = window.quizQuestions && window.quizQuestions[bookKey] && window.quizQuestions[bookKey][String(ch)] && window.quizQuestions[bookKey][String(ch)].questions;
+                                                                    const isEnabled = hasChapterQuizData;
                                                                     
                                                                     return `
                                                                         <div class="flex flex-col items-center">
@@ -4565,8 +4770,9 @@
                                     
                                     // Load the quiz questions for this chapter
                                     const quizQuestionList = [];
-                                    if (window.quizQuestions && window.quizQuestions['matthew'] && window.quizQuestions['matthew'][chapter]) {
-                                        const chapterQuestions = window.quizQuestions['matthew'][chapter].questions;
+                                    const selectedBookKey = state.selectedQuizBook.toLowerCase().replace(/\s+/g, '-');
+                                    if (window.quizQuestions && window.quizQuestions[selectedBookKey] && window.quizQuestions[selectedBookKey][String(chapter)]) {
+                                        const chapterQuestions = window.quizQuestions[selectedBookKey][String(chapter)].questions;
                                         chapterQuestions.forEach((q, idx) => {
                                             quizQuestionList.push({
                                                 ...q,
@@ -5927,6 +6133,9 @@
                         touchEndX = e.changedTouches[0].screenX;
                         handleQuizSwipeGesture();
                     }, { passive: true });
+                    
+                    // Setup scroll guard to prevent accidental back button clicks while scrolling
+                    setupScrollGuard('quizContainer');
                 }
                 
                 // Trigger confetti when family tab is first opened
