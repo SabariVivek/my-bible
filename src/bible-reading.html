@@ -1934,7 +1934,8 @@
             quizTabVisible: false,  // Show quiz tab only after 3 clicks on dashboard title
             revelationTabVisible: false,  // Show revelation tab only after 3 clicks on dashboard title
             dashboardTitleClicks: 0,  // Track clicks on dashboard title
-            profileButtonVisible: false,  // Track if change profile button is visible (enabled by 10s long press)
+            profileButtonVisible: true,  // Track if change profile button is visible
+            profileButtonClickable: false,  // Track if change profile button is clickable (enabled by 10s long press)
             dashboardTitlePressTime: 0,  // Track when dashboard title was pressed
             dashboardTitlePressTimeout: null,  // Store timeout ID for long press
             quizStarted: false,  // Track if user has started the quiz (to show questions)
@@ -2672,25 +2673,26 @@
         }
 
         // Get chapter status: 'completed', 'today', 'overdue', 'future'
-        function getChapterStatus(bookName, chapter) {
+        function getChapterStatus(bookName, chapter, checkDate = null) {
             if (!state.currentUser) return 'future';
 
-            // Check if chapter is completed
+            // Check if chapter is completed (highest priority)
             const key = `${bookName}-${chapter}`;
             if (state.currentUser.progress[key] === 'read') return 'completed';
 
+            // Use today's date for determining overdue status (not the selected date)
             const today = new Date();
             const todayMonth = today.getMonth() + 1;
             const todayDay = today.getDate();
-            const year = today.getFullYear();
-            const isLeapYear = (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+            const todayYear = today.getFullYear();
+            const isLeapYear = (todayYear % 4 === 0 && todayYear % 100 !== 0) || (todayYear % 400 === 0);
 
-            // Check all reading plan entries up to today
+            // Check all reading plan entries up to TODAY
             for (const entry of yearlyReadingPlan) {
                 // Skip leap year entries if not a leap year
                 if (entry.leapYearOnly && !isLeapYear) continue;
                 
-                // Skip future dates
+                // Skip future dates (dates beyond today)
                 if (entry.month > todayMonth || (entry.month === todayMonth && entry.day > todayDay)) {
                     break;
                 }
@@ -2704,7 +2706,7 @@
                             if (entry.month === todayMonth && entry.day === todayDay) {
                                 return 'today';
                             }
-                            // It's overdue (past date and not completed)
+                            // It's overdue (past date and not completed - we already checked completion above)
                             return 'overdue';
                         }
                     }
@@ -3629,6 +3631,13 @@
                         const key = `${year}-${month}-${day}`;
                         state.currentUser.completedDates[key] = true;
                     });
+                    
+                    // Also reload progress chapters to ensure consistency with database
+                    const userProgress = await BibleReadingDB.getUserProgress(state.currentUser.id);
+                    if (userProgress) {
+                        // Merge with existing progress instead of replacing
+                        Object.assign(state.currentUser.progress, userProgress);
+                    }
                 } catch (verifyError) {
                     console.error('Error verifying saved data:', verifyError);
                     // Keep local state if verification fails - ensure the current date is still marked
@@ -3779,10 +3788,10 @@
                                     <div>
                                         <div class="flex items-center gap-2 items-center">
                                             <h1 class="text-xl font-bold cursor-pointer select-none" 
-                                                onmousedown="state.dashboardTitlePressTime = Date.now(); state.dashboardTitlePressTimeout = setTimeout(() => { state.profileButtonVisible = true; render(); }, 10000);"
+                                                onmousedown="state.dashboardTitlePressTime = Date.now(); state.dashboardTitlePressTimeout = setTimeout(() => { state.profileButtonClickable = true; render(); }, 10000);"
                                                 onmouseup="clearTimeout(state.dashboardTitlePressTimeout);"
                                                 onmouseleave="clearTimeout(state.dashboardTitlePressTimeout);"
-                                                ontouchstart="state.dashboardTitlePressTime = Date.now(); state.dashboardTitlePressTimeout = setTimeout(() => { state.profileButtonVisible = true; render(); }, 10000);"
+                                                ontouchstart="state.dashboardTitlePressTime = Date.now(); state.dashboardTitlePressTimeout = setTimeout(() => { state.profileButtonClickable = true; render(); }, 10000);"
                                                 ontouchend="clearTimeout(state.dashboardTitlePressTimeout);"
                                                 onclick="state.dashboardTitleClicks = (state.dashboardTitleClicks || 0) + 1; if (state.dashboardTitleClicks === 3) { state.quizTabVisible = !state.quizTabVisible; state.revelationTabVisible = !state.revelationTabVisible; state.dashboardTitleClicks = 0; } render();">Dashboard</h1>
                                             ${state.currentUser ? `
@@ -3801,7 +3810,7 @@
                                         </button>
                                     ` : `
                                         ${state.profileButtonVisible ? `
-                                            <button onclick="state.currentUser = null; state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; state.profileButtonVisible = false; stopDashboardSync(); render();" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all" title="Change Profile">
+                                            <button onclick="${state.profileButtonClickable ? "state.currentUser = null; state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; state.profileButtonClickable = false; stopDashboardSync(); render();" : ""}" class="${theme.card} border ${theme.border} rounded-lg p-1.5 hover:shadow-lg transition-all ${state.profileButtonClickable ? 'cursor-pointer' : 'cursor-not-allowed'}" title="${state.profileButtonClickable ? 'Change Profile' : 'Hold Dashboard title for 10s to enable'}">
                                                 ${(state.currentUser) ? `
                                                     <img src="../resources/profiles/${state.currentUser.name.toLowerCase()}.png" alt="${state.currentUser.name}" class="w-6 h-6 rounded-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                                     <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white" style="display: none;">
@@ -3841,6 +3850,7 @@
                     <div class="dashboard-tabs-content">
                         <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
                         ${state.dashboardTab === 'my-plan' ? `
+                            <!-- MY PLAN TAB -->
                             <!-- SERMON ON THE MOUNT CARD -->
                             <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32">
                                 <img src="../resources/images/sermon-on-the-mount.png" alt="Sermon on the Mount" class="w-full h-full object-cover" style="object-position: center 30%;">
@@ -3852,32 +3862,25 @@
                                     <img src="../resources/images/coming-soon.png" alt="Coming soon" class="h-16 w-auto">
                                 </div>
                             </div>
-                            <!-- MY PLAN TAB -->
+
                             ${todayReading ? `
                                 <div class="reading-card-container">
                                     <div class="reading-card-wrapper dashboard-reading-card-wrapper">
-                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <div class="flex items-center justify-between mb-6">
-                                                <div class="flex items-center gap-2">
-                                                    ${icons.bookmark}
-                                                    <div>
-                                                        <h2 class="text-lg font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
-                                                    </div>
-                                                </div>
-                                                <button id="copyButton" class="copy-button ${theme.card} ${theme.text} border ${theme.border} rounded-lg p-2 hover:border-blue-500 hover:scale-110 transition-all duration-200" type="button" onclick="copyTodayReading()" title="Copy reading to clipboard">
-                                                    ${icons.copy}
-                                                </button>
+                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-3 border border-blue-500 shadow-sm">
+                                            <div class="flex items-center justify-center mb-5 gap-2 mt-3">
+                                                <img src="../resources/images/calendar.png" alt="Calendar" class="w-5 h-5 -mt-0.5">
+                                                <h2 class="text-base font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
                                             </div>
-                            <div class="space-y-3">
+                            <div class="space-y-2 mb-5">
                                 ${getTodayReading(dashboardDate).portions.map((portion, idx) => {
                                     const tamilName = getTamilName(portion.book);
                                     const testament = getTestament(portion.book);
                                     const testamentShort = testament === 'Old Testament' ? 'Old' : 'New';
                                     return `
-                                    <div class="flex items-start gap-3 p-4 ${theme.accent} rounded-lg">
-                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
+                                    <div class="flex items-start gap-2 p-3 ${theme.accent} rounded-lg mx-2">
+                                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
                                         <div class="flex-1 min-w-0">
-                                            <div class="font-semibold text-base mb-1">${portion.book} ${formatChaptersWithSpaces(portion.chapters)}</div>
+                                            <div class="font-semibold text-sm mb-0.5">${portion.book} ${formatChaptersWithSpaces(portion.chapters)}</div>
                                             ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${formatChaptersWithSpaces(portion.chapters)}</div>` : ''}
                                         </div>
                                         <span class="inline-block text-xs px-2 py-1 rounded bg-blue-600 text-white dark:bg-blue-500 dark:text-white whitespace-nowrap flex-shrink-0">${testamentShort}</span>
@@ -3885,15 +3888,15 @@
                                 `;
                                 }).join('')}
                             </div>                                            <!-- Action Buttons -->
-                                            <div class="mt-6 flex items-center justify-between gap-4">
-                                                <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" class="bg-gray-500 dark:bg-gray-600 border-2 border-gray-500 text-white rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:bg-gray-600 dark:hover:bg-gray-700" style="display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; width: 40px; height: 40px; flex-shrink: 0;">
-                                                    ←
+                                            <div class="mt-5 flex items-center justify-between gap-3 mb-2">
+                                                <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" title="Previous Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(107, 114, 128, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="padding: 10px; border-radius: 6px; border: 1px solid #6b7280; background: #6b7280; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; width: 40px; height: 40px; margin-left: 6px;">
+                                                    <span style="font-weight: 900; font-size: 20px;">‹</span>
                                                 </button>
-                                                <button onclick="(async () => { this.classList.add('btn-fill-blue'); state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); await loadCompletedPortionsForDate(); render(); })()" class="bg-blue-600 dark:bg-blue-700 text-white rounded-lg px-8 py-2 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base">
-                                                    Track
+                                                <button onclick="(async () => { this.classList.add('btn-fill-blue'); state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); await loadCompletedPortionsForDate(); render(); })()" class="flex-1 bg-blue-500 dark:bg-blue-500 text-white rounded-lg px-6 py-3 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base hover:opacity-90">
+                                                    Track Progress
                                                 </button>
-                                                <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" class="bg-gray-500 dark:bg-gray-600 border-2 border-gray-500 text-white rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg hover:bg-gray-600 dark:hover:bg-gray-700" style="display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; width: 40px; height: 40px; flex-shrink: 0;">
-                                                    →
+                                                <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" title="Next Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(107, 114, 128, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="padding: 10px; border-radius: 6px; border: 1px solid #6b7280; background: #6b7280; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; width: 40px; height: 40px; margin-right: 6px;">
+                                                    <span style="font-weight: 900; font-size: 20px;">›</span>
                                                 </button>
                                             </div>
                                         </div>
