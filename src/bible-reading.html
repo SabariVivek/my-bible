@@ -3866,7 +3866,7 @@
                             ${todayReading ? `
                                 <div class="reading-card-container">
                                     <div class="reading-card-wrapper dashboard-reading-card-wrapper">
-                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-3 border border-blue-500 shadow-sm">
+                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-3 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
                                             <div class="flex items-center justify-center mb-5 gap-2 mt-3">
                                                 <img src="../resources/images/calendar.png" alt="Calendar" class="w-5 h-5 -mt-0.5">
                                                 <h2 class="text-base font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
@@ -3912,7 +3912,7 @@
                                 const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
-                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} ${theme.border} relative overflow-hidden" style="background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
+                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} relative overflow-hidden" style="border-width: 0.5px; border-color: rgb(76 98 128); background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
                                         <div class="absolute inset-0 ${state.darkMode ? 'bg-black/60' : 'bg-slate-700/50'}"></div>
                                         <div class="relative z-10">
                                         <div class="flex items-center justify-between mb-6">
@@ -4620,7 +4620,7 @@
                             })()}
                         ` : `
                             <!-- Top Readers Section (This Year) -->
-                            <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
                                 <div class="flex items-center gap-3 mb-4">
                                     ${icons.trophy || '🏆'}
                                     <h2 class="text-lg font-bold">Current Streaks</h2>
@@ -4656,7 +4656,7 @@
                             </div>
 
                             <!-- Stats Grid -->
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <div class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
                                 <div class="grid grid-cols-3 gap-6">
                                     <div class="text-center">
                                         <p class="text-3xl font-bold text-green-500 mb-2">${stats.completedCount}</p>
@@ -4722,7 +4722,7 @@
                             `}
 
                             <!-- All Users Section -->
-                            <div class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
+                            <div class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
                                 <div class="flex items-center gap-3 mb-4">
                                     ${icons.users || '👥'}
                                     <h2 class="text-lg font-bold">All Users</h2>
