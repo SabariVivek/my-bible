@@ -2024,9 +2024,13 @@
 
         // Long press handler for reading plan
         let readingPlanPressTimer = null;
+        let readingPlanTouchStart = { x: 0, y: 0 };
+        
         function handleReadingPlanPress(event) {
-            // Prevent default behavior
-            event.preventDefault();
+            if (event.type === 'touchstart') {
+                readingPlanTouchStart.x = event.touches[0].clientX;
+                readingPlanTouchStart.y = event.touches[0].clientY;
+            }
             
             readingPlanPressTimer = setTimeout(() => {
                 openReadingPlanSheet();
@@ -2034,11 +2038,25 @@
             }, 2000); // 2 seconds
         }
 
-        function handleReadingPlanRelease() {
-            // Clear timer if released before 2 seconds
-            if (readingPlanPressTimer) {
-                clearTimeout(readingPlanPressTimer);
-                readingPlanPressTimer = null;
+        function handleReadingPlanRelease(event) {
+            // Check if this was a scroll (movement > 10px)
+            if (event.type === 'touchend' && readingPlanTouchStart) {
+                const moveX = Math.abs(event.changedTouches[0].clientX - readingPlanTouchStart.x);
+                const moveY = Math.abs(event.changedTouches[0].clientY - readingPlanTouchStart.y);
+                
+                // If user moved more than 10px, it's a scroll, not a long press
+                if (moveX > 10 || moveY > 10) {
+                    if (readingPlanPressTimer) {
+                        clearTimeout(readingPlanPressTimer);
+                        readingPlanPressTimer = null;
+                    }
+                }
+            } else {
+                // Clear timer if released before 2 seconds (for mouse)
+                if (readingPlanPressTimer) {
+                    clearTimeout(readingPlanPressTimer);
+                    readingPlanPressTimer = null;
+                }
             }
         }
 
