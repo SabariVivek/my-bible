@@ -1392,6 +1392,420 @@
             }
         }
 
+        /* Right Sidebar Drawer Styles */
+        .reading-plan-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(2px);
+            z-index: 9998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .reading-plan-backdrop.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .reading-plan-bottom-sheet {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: 450px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.3s ease;
+            border-left: 1px solid #e0e0e0;
+        }
+
+        .reading-plan-bottom-sheet.show {
+            right: 0;
+        }
+
+        html.dark-theme .reading-plan-bottom-sheet {
+            background: #1e293b;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
+            border-left-color: #334155;
+        }
+
+        .reading-plan-header {
+            padding: 20px 20px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        html.dark-theme .reading-plan-header {
+            border-bottom-color: #334155;
+        }
+
+        .reading-plan-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        html.dark-theme .reading-plan-title {
+            color: #f1f5f9;
+        }
+
+        .reading-plan-close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #64748b;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+
+        .reading-plan-close-btn:hover {
+            color: #1e293b;
+        }
+
+        html.dark-theme .reading-plan-close-btn {
+            color: #94a3b8;
+        }
+
+        html.dark-theme .reading-plan-close-btn:hover {
+            color: #f1f5f9;
+        }
+
+        .reading-plan-content {
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 16px 0;
+        }
+
+        .reading-plan-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .reading-plan-content::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .reading-plan-content::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+
+        .reading-plan-content::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        html.dark-theme .reading-plan-content::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+
+        html.dark-theme .reading-plan-content::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+        .reading-plan-day-item {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f1f5f9;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .reading-plan-day-item:hover {
+            background: #f8fafc;
+        }
+
+        html.dark-theme .reading-plan-day-item {
+            border-bottom-color: #334155;
+        }
+
+        html.dark-theme .reading-plan-day-item:hover {
+            background: #334155;
+        }
+
+        .reading-plan-day-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .reading-plan-day-date {
+            font-weight: 600;
+            color: #1e293b;
+            min-width: 120px;
+        }
+
+        html.dark-theme .reading-plan-day-date {
+            color: #f1f5f9;
+        }
+
+        .reading-plan-day-status {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .reading-plan-day-status.completed {
+            background: #10b981;
+            color: white;
+        }
+
+        .reading-plan-day-status.pending {
+            background: #e2e8f0;
+            color: #64748b;
+        }
+
+        html.dark-theme .reading-plan-day-status.pending {
+            background: #475569;
+            color: #cbd5e1;
+        }
+
+        .reading-plan-day-portions {
+            margin-left: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .reading-plan-portion {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.4;
+        }
+
+        html.dark-theme .reading-plan-portion {
+            color: #cbd5e1;
+        }
+
+        .reading-plan-book-name {
+            font-weight: 500;
+        }
+
+        .reading-plan-chapters {
+            color: #64748b;
+        }
+
+        html.dark-theme .reading-plan-chapters {
+            color: #94a3b8;
+        }
+
+        /* Timeline Visualization Styles */
+        .timeline-visualization {
+            padding: 8px 0;
+        }
+
+        .timeline-month-section {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        html.dark-theme .timeline-month-section {
+            border-bottom-color: #334155;
+        }
+
+        .timeline-month-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        html.dark-theme .timeline-month-header {
+            border-bottom-color: #475569;
+        }
+
+        .timeline-month-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        html.dark-theme .timeline-month-title {
+            color: #f1f5f9;
+        }
+
+        .timeline-month-progress {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        html.dark-theme .timeline-month-progress {
+            color: #cbd5e1;
+        }
+
+        .progress-count {
+            background: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        html.dark-theme .progress-count {
+            background: #334155;
+        }
+
+        .timeline-month-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+        }
+
+        .timeline-month-content::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3b82f6, #10b981);
+        }
+
+        .timeline-day-node {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            z-index: 1;
+            margin-left: 8px;
+        }
+
+        .timeline-day-node:hover {
+            background: #f8fafc;
+        }
+
+        html.dark-theme .timeline-day-node:hover {
+            background: #334155;
+        }
+
+        .timeline-day-node.completed {
+            background: rgba(16, 185, 129, 0.08);
+        }
+
+        html.dark-theme .timeline-day-node.completed {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .timeline-day-node.pending-past {
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        html.dark-theme .timeline-day-node.pending-past {
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .timeline-day-node.pending-future {
+            background: rgba(59, 130, 246, 0.08);
+        }
+
+        html.dark-theme .timeline-day-node.pending-future {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .timeline-node-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #3b82f6;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .timeline-day-node.completed .timeline-node-dot {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .timeline-day-node.pending-past .timeline-node-dot {
+            background: #ef4444;
+            border-color: #ef4444;
+            color: white;
+        }
+
+        .timeline-day-node.pending-future .timeline-node-dot {
+            background: #e5e7eb;
+            border-color: #e5e7eb;
+            color: #9ca3af;
+        }
+
+        .timeline-node-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .timeline-day-date {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        html.dark-theme .timeline-day-date {
+            color: #f1f5f9;
+        }
+
+        .timeline-day-books {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+        
+        .timeline-day-books .book-badge {
+            font-size: 10px;
+            color: #475569;
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 500;
+            width: fit-content;
+        }
+
+        html.dark-theme .timeline-day-books .book-badge {
+            color: #cbd5e1;
+            background: #475569;
+        }
+
+        .timeline-book-item {
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        html.dark-theme .timeline-book-item {
+            color: #cbd5e1;
+        }
+
         /* Mobile/Desktop back button styling */
         .back-button-desktop {
             display: flex !important;
@@ -1400,6 +1814,11 @@
         @media (max-width: 768px) {
             .back-button-desktop {
                 display: none !important;
+            }
+            
+            .reading-plan-bottom-sheet {
+                width: 85vw;
+                right: -85vw;
             }
         }
 
@@ -1601,6 +2020,206 @@
                     </div>
                 </div>
             `;
+        }
+
+        // Long press handler for reading plan
+        let readingPlanPressTimer = null;
+        function handleReadingPlanPress(event) {
+            // Prevent default behavior
+            event.preventDefault();
+            
+            readingPlanPressTimer = setTimeout(() => {
+                openReadingPlanSheet();
+                readingPlanPressTimer = null;
+            }, 2000); // 2 seconds
+        }
+
+        function handleReadingPlanRelease() {
+            // Clear timer if released before 2 seconds
+            if (readingPlanPressTimer) {
+                clearTimeout(readingPlanPressTimer);
+                readingPlanPressTimer = null;
+            }
+        }
+
+        // Reading Plan Bottom Sheet Functions
+        function openReadingPlanSheet() {
+            console.log('Opening reading plan sheet...');
+            const backdrop = document.getElementById('readingPlanBackdrop');
+            const sheet = document.getElementById('readingPlanSheet');
+            
+            console.log('Backdrop element:', backdrop);
+            console.log('Sheet element:', sheet);
+            
+            if (!backdrop || !sheet) {
+                console.error('Bottom sheet elements not found in DOM');
+                return;
+            }
+            
+            // Generate reading plan content
+            const contentDiv = document.getElementById('readingPlanContent');
+            if (!contentDiv) {
+                console.error('Content div not found');
+                return;
+            }
+            
+            console.log('Current user:', state.currentUser);
+            console.log('Completed dates:', state.currentUser ? state.currentUser.completedDates : 'No user');
+            
+            try {
+                contentDiv.innerHTML = generateReadingPlanContent();
+                console.log('Content generated successfully');
+            } catch (error) {
+                console.error('Error generating content:', error);
+                contentDiv.innerHTML = `<div style="padding: 20px; color: red;">Error loading reading plan: ${error.message}</div>`;
+            }
+            
+            // Show with animation
+            backdrop.classList.add('show');
+            sheet.classList.add('show');
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            console.log('Reading plan sheet opened');
+        }
+
+        function closeReadingPlanSheet() {
+            console.log('Closing reading plan sheet...');
+            const backdrop = document.getElementById('readingPlanBackdrop');
+            const sheet = document.getElementById('readingPlanSheet');
+            
+            if (!backdrop || !sheet) return;
+            
+            // Hide with animation
+            backdrop.classList.remove('show');
+            sheet.classList.remove('show');
+            
+            // Allow body scroll
+            document.body.style.overflow = '';
+        }
+
+        function generateReadingPlanContent() {
+            console.log('Generating reading plan content...');
+            
+            // Check if yearlyReadingPlan exists
+            if (typeof yearlyReadingPlan === 'undefined') {
+                console.error('yearlyReadingPlan is not defined');
+                return '<div style="padding: 20px; color: red;">Error: Reading plan data not loaded</div>';
+            }
+            
+            // Get current year or use 2026
+            const currentYear = new Date().getFullYear();
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            
+            console.log(`Generating timeline for year ${currentYear}, total days: ${yearlyReadingPlan.length}`);
+            
+            // Group data by months for better timeline visualization
+            const timelineByMonth = {};
+            
+            yearlyReadingPlan.forEach((day, index) => {
+                const monthKey = `Month ${day.month}`;
+                if (!timelineByMonth[monthKey]) {
+                    timelineByMonth[monthKey] = [];
+                }
+                
+                // Create date for this day (set to midnight)
+                const date = new Date(currentYear, day.month - 1, day.day);
+                date.setHours(0, 0, 0, 0);
+                
+                // Check if this day has been marked as completed
+                let completionStatus = 'pending-future';
+                const dateKey = `${currentYear}-${day.month}-${day.day}`;
+                
+                if (state.currentUser && state.currentUser.completedDates) {
+                    if (state.currentUser.completedDates[dateKey]) {
+                        completionStatus = 'completed';
+                    }
+                }
+                
+                // If not completed and date is today or in the past, mark as red
+                if (completionStatus !== 'completed' && date <= today) {
+                    completionStatus = 'pending-past';
+                    if (index < 10) { // Log first 10 days only to avoid console spam
+                        console.log(`Day ${day.day}: dateKey=${dateKey}, status=${completionStatus}`);
+                    }
+                }
+                
+                timelineByMonth[monthKey].push({
+                    day: day.day,
+                    month: day.month,
+                    portions: day.portions,
+                    date: date,
+                    completionStatus: completionStatus,
+                    dateKey: dateKey,
+                    index: index
+                });
+            });
+            
+            // Generate timeline HTML
+            let timelineHTML = '<div class="timeline-visualization">';
+            
+            Object.entries(timelineByMonth).forEach(([monthLabel, days]) => {
+                const monthNum = parseInt(monthLabel.split(' ')[1]);
+                const monthName = new Date(currentYear, monthNum - 1).toLocaleDateString('en-US', { month: 'long' });
+                
+                timelineHTML += `
+                    <div class="timeline-month-section">
+                        <div class="timeline-month-header">
+                            <h3 class="timeline-month-title">${monthName} 2026</h3>
+                            <div class="timeline-month-progress">
+                                <span class="progress-count">${days.filter(d => d.completionStatus === 'completed').length}/${days.length}</span>
+                            </div>
+                        </div>
+                        <div class="timeline-month-content">
+                            ${days.map(dayData => {
+                                const dateStr = dayData.date.toLocaleDateString('en-US', { 
+                                    weekday: 'short', 
+                                    month: 'short', 
+                                    day: 'numeric'
+                                });
+                                
+                                const statusClass = dayData.completionStatus; // Use the actual status directly
+                                const statusIcon = dayData.completionStatus === 'completed' ? '✓' : (dayData.completionStatus === 'pending-past' ? '✕' : '');
+                                
+                                return `
+                                    <div class="timeline-day-node ${statusClass}" onclick="selectDateAndNavigate(${currentYear}, ${dayData.month}, ${dayData.day})">
+                                        <div class="timeline-node-dot">${statusIcon}</div>
+                                        <div class="timeline-node-content">
+                                            <div class="timeline-day-date">${dateStr}</div>
+                                            <div class="timeline-day-books">
+                                                ${dayData.portions.map(p => `<div class="book-badge">${p.book} ${p.chapters}</div>`).join('')}
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            timelineHTML += '</div>';
+            
+            return timelineHTML;
+        }
+
+        function selectDateAndNavigate(year, month, day) {
+            console.log(`Navigating to ${year}-${month}-${day}`);
+            // Close the bottom sheet
+            closeReadingPlanSheet();
+            
+            // Set the selected date
+            state.selectedDate = new Date(year, month - 1, day);
+            
+            // Navigate away from dashboard
+            state.showDashboard = false;
+            
+            // Reload data for this date
+            loadCompletedPortionsForDate();
+            
+            // Re-render to show the selected date's reading
+            render();
         }
 
         // Swipe Gesture Handling
@@ -3951,7 +4570,7 @@
                                 const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
-                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} relative overflow-hidden" style="border-width: 0.5px; border-color: rgb(76 98 128); background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
+                                    <div onmousedown="handleReadingPlanPress(event)" onmouseup="handleReadingPlanRelease()" onmouseleave="handleReadingPlanRelease()" ontouchstart="handleReadingPlanPress(event)" ontouchend="handleReadingPlanRelease()" class="rounded-xl p-6 border shadow-sm ${theme.card} relative overflow-hidden cursor-pointer transition-transform hover:scale-105 hover:shadow-lg" style="border-width: 0.5px; border-color: rgb(76 98 128); background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
                                         <div class="absolute inset-0 ${state.darkMode ? 'bg-black/60' : 'bg-slate-700/50'}"></div>
                                         <div class="relative z-10">
                                         <div class="flex items-center justify-between mb-6">
@@ -6108,6 +6727,24 @@
                     const input = document.getElementById('newUserName');
                     if (input) input.focus();
                 }, 100);
+            }
+
+            // Ensure reading plan bottom sheet is always in DOM
+            if (!document.getElementById('readingPlanSheet')) {
+                document.body.insertAdjacentHTML('beforeend', `
+                    <div id="readingPlanBackdrop" class="reading-plan-backdrop" onclick="closeReadingPlanSheet()"></div>
+                    <div id="readingPlanSheet" class="reading-plan-bottom-sheet">
+                        <div class="reading-plan-header">
+                            <h2 class="reading-plan-title">Reading Plan</h2>
+                            <button class="reading-plan-close-btn" onclick="closeReadingPlanSheet()" title="Close">
+                                ✕
+                            </button>
+                        </div>
+                        <div id="readingPlanContent" class="reading-plan-content">
+                            <!-- Content will be generated here -->
+                        </div>
+                    </div>
+                `);
             }
 
             // Initialize swipe listeners for reading card (with delay to ensure DOM is ready)
