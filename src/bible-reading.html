@@ -1331,14 +1331,49 @@
             border-color: #475569;
         }
 
-        .portion-checkbox:hover {
+        .portion-checkbox:hover:not(.disabled) {
             border-color: #3b82f6;
             background: rgba(59, 130, 246, 0.1);
+        }
+
+        .portion-checkbox.disabled {
+            border-color: #d1d5db;
+            background: #f3f4f6;
+            opacity: 0.5;
+            cursor: not-allowed !important;
+        }
+
+        html.dark-theme .portion-checkbox.disabled {
+            border-color: #4b5563;
+            background: #374151;
+            opacity: 0.4;
+        }
+
+        .portion-checkbox.disabled:hover {
+            border-color: #d1d5db;
+            background: #f3f4f6;
+        }
+
+        html.dark-theme .portion-checkbox.disabled:hover {
+            border-color: #4b5563;
+            background: #374151;
         }
 
         .portion-checkbox.checked {
             background: #10b981;
             border-color: #10b981;
+        }
+
+        .portion-checkbox.checked.disabled {
+            opacity: 0.4;
+            background: #a7f3d0;
+            border-color: #a7f3d0;
+        }
+
+        html.dark-theme .portion-checkbox.checked.disabled {
+            opacity: 0.3;
+            background: #6ee7b7;
+            border-color: #6ee7b7;
         }
 
         .portion-checkbox.checked svg {
@@ -2554,7 +2589,7 @@
             selectedDate: new Date(),
             activeTestament: 'new',
             isAdmin: localStorage.getItem('isAdmin') === 'true',
-            showProgressDetails: false,
+            showProgressDetails: true,
             isLoadingProfiles: false,
             showDashboard: true,  // Show dashboard by default
             showAdminView: false,  // Show admin profile management view
@@ -4257,6 +4292,8 @@
             });
 
             state.isSavingProgress = true;
+            // Immediately render to disable the button and show loading state
+            render();
             showLoading('Saving progress...');
             try {
                 // Mark all chapters in Supabase
@@ -5865,6 +5902,15 @@
                         </div>
                     </div>
 
+                    <!-- Navigation Banner - Docked to header -->
+                    <div class="py-0">
+                        <div class="p-4 ${state.darkMode ? 'bg-blue-900' : 'bg-blue-100'}">
+                            <div class="flex items-center justify-center max-w-7xl mx-auto">
+                                <p class="font-semibold text-sm ${state.darkMode ? 'text-white' : 'text-gray-900'}">Use navigation buttons for other days</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="max-w-7xl mx-auto px-4 py-6 pb-24">
                         <!-- Daily Reading Card -->
                         ${todayReading ? `
@@ -5896,7 +5942,7 @@
                                                         </div>
                                                     </div>
                                                     ${!isLastYearDate ? `
-                                                    <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}" style="${isDateCompleted || isFutureDate ? 'cursor: not-allowed;' : ''}">
+                                                    <div class="portion-checkbox ${isPortionChecked ? 'checked' : ''} ${isDateCompleted || isFutureDate ? 'disabled' : ''}" onclick="${!isDateCompleted && !isFutureDate ? `togglePortionComplete(${idx})` : ''}">
                                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                                                             <polyline points="20 6 9 17 4 12"/>
                                                         </svg>
@@ -5907,9 +5953,9 @@
                                         </div>
                                         
                                         ${!isLastYearDate ? `
-                                        <button id="markCompleteButton" onclick="markTodayComplete()" ${isDateCompleted || isFutureDate ? 'disabled' : ''} style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 2px solid transparent; font-weight: 600; font-size: 14px; transition-colors duration-200; display: flex; align-items: center; justify-content: center; margin-top: 16px;" class="${isDateCompleted ? 'bg-emerald-500/20 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
+                                        <button id="markCompleteButton" onclick="if (!state.isSavingProgress) { markTodayComplete(); }" ontouchstart="if (!state.isSavingProgress) { this.style.transform='scale(0.98)'; }" ontouchend="this.style.transform='scale(1)';" ${isDateCompleted || isFutureDate || state.isSavingProgress ? 'disabled' : ''} style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 2px solid transparent; font-weight: 600; font-size: 14px; transition-colors duration-200; display: flex; align-items: center; justify-content: center; margin-top: 16px; user-select: none; -webkit-user-select: none;" class="${isDateCompleted || state.isSavingProgress ? 'bg-emerald-500/20 border-emerald-500 text-emerald-500 cursor-not-allowed' : isFutureDate ? 'bg-gray-500/20 border-gray-500 text-gray-500 cursor-not-allowed' : 'bg-emerald-600 text-white hover:opacity-90'}">
                                             ${icons.checkCircle}
-                                            <span style="margin-left: 6px; font-size: 14px;">${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : 'Mark as Complete'}</span>
+                                            <span style="margin-left: 6px; font-size: 14px;">${isDateCompleted ? (isToday ? 'Completed' : 'Already Completed') : isFutureDate ? 'Future Date' : state.isSavingProgress ? 'Saving...' : 'Mark as Complete'}</span>
                                         </button>
                                         ` : ''}
                                 </div>
@@ -6768,10 +6814,10 @@
             // Initialize swipe listeners for reading card (with delay to ensure DOM is ready)
             setTimeout(() => {
                 if (document.getElementById('dailyReadingCard')) {
-                    initSwipeListeners();
+                    // initSwipeListeners(); // DISABLED: Swipe functionality
                 }
                 if (document.getElementById('dashboardReadingCard')) {
-                    initDashboardSwipeListeners();
+                    // initDashboardSwipeListeners(); // DISABLED: Swipe functionality
                 }
                 if (document.querySelector('.dashboard-container')) {
                     initDashboardTabSwipeListeners();
