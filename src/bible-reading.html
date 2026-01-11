@@ -4525,22 +4525,10 @@
                         <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
                         ${state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
-                            <!-- SERMON ON THE MOUNT CARD -->
-                            <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32">
-                                <img src="../resources/images/sermon-on-the-mount.png" alt="Sermon on the Mount" class="w-full h-full object-cover" style="object-position: center 30%;">
-                                <div class="absolute top-0 left-0 p-3">
-                                    <p class="text-xs font-semibold" style="background: linear-gradient(135deg, #8B0000 0%, #2F4F4F 50%, #1C1C1C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: none;">மலைப்பிரசங்கம்</p>
-                                    <p class="text-black text-[10px]" style="text-shadow: 0px 1px 2px rgba(255,255,255,0.5); line-height: 2.2;">Matthew 5 - 7</p>
-                                </div>
-                                <div class="absolute bottom-2 right-2">
-                                    <img src="../resources/images/coming-soon.png" alt="Coming soon" class="h-16 w-auto">
-                                </div>
-                            </div>
-
                             ${todayReading ? `
                                 <div class="reading-card-container">
                                     <div class="reading-card-wrapper dashboard-reading-card-wrapper">
-                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-3 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
+                                        <div id="dashboardReadingCard" class="${theme.card} rounded-xl p-3 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
                                             <div class="flex items-center justify-center mb-5 gap-2 mt-3">
                                                 <img src="../resources/images/calendar.png" alt="Calendar" class="w-5 h-5 -mt-0.5">
                                                 <h2 class="text-base font-bold">${isDashboardToday ? "Today's Reading" : dashboardDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</h2>
@@ -4551,32 +4539,42 @@
                                     const testament = getTestament(portion.book);
                                     const testamentShort = testament === 'Old Testament' ? 'Old' : 'New';
                                     return `
-                                    <div class="flex items-start gap-2 p-3 ${theme.accent} rounded-lg mx-2">
-                                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
+                                    <div class="flex items-start gap-3 p-3 mx-2 rounded-lg" style="background: transparent; border: 1px solid ${state.darkMode ? '#404855' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};\"">
+                                        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">${idx + 1}</span>
                                         <div class="flex-1 min-w-0">
-                                            <div class="font-semibold text-sm mb-0.5">${portion.book} ${formatChaptersWithSpaces(portion.chapters)}</div>
-                                            ${tamilName ? `<div class="text-xs ${theme.textSecondary}">${tamilName} ${formatChaptersWithSpaces(portion.chapters)}</div>` : ''}
+                                            <div class="font-semibold text-sm mb-0.5" style="color: ${state.darkMode ? '#ffffff' : '#1f2937'};\">${portion.book} ${formatChaptersWithSpaces(portion.chapters)}</div>
+                                            ${tamilName ? `<div class="text-xs" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">${tamilName} ${formatChaptersWithSpaces(portion.chapters)}</div>` : ''}
                                         </div>
-                                        <span class="inline-block text-xs px-2 py-1 rounded bg-blue-600 text-white dark:bg-blue-500 dark:text-white whitespace-nowrap flex-shrink-0">${testamentShort}</span>
+                                        <span class="inline-block text-xs px-2 py-1 rounded bg-blue-600 text-white whitespace-nowrap flex-shrink-0">${testamentShort}</span>
                                     </div>
                                 `;
                                 }).join('')}
-                            </div>                                            <!-- Action Buttons -->
-                                            <div class="mt-5 flex items-center justify-between gap-3 mb-2">
-                                                <button onclick="this.classList.add('btn-fill-red'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 300);" title="Previous Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(107, 114, 128, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="padding: 10px; border-radius: 6px; border: 1px solid #6b7280; background: #6b7280; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; width: 40px; height: 40px; margin-left: 6px;">
-                                                    <span style="font-weight: 900; font-size: 20px;">‹</span>
-                                                </button>
-                                                <button onclick="(async () => { this.classList.add('btn-fill-blue'); state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); await loadCompletedPortionsForDate(); render(); })()" class="flex-1 bg-blue-500 dark:bg-blue-500 text-white rounded-lg px-6 py-3 font-semibold transition-all transform hover:scale-105 hover:shadow-lg text-base hover:opacity-90">
-                                                    Track Progress
-                                                </button>
-                                                <button onclick="this.classList.add('btn-fill-green'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 300);" title="Next Day" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 4px 12px rgba(107, 114, 128, 0.4)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)'; this.style.boxShadow='none';" onmousedown="this.style.transform='scale(0.95)';" onmouseup="this.style.transform='scale(1.05)';" style="padding: 10px; border-radius: 6px; border: 1px solid #6b7280; background: #6b7280; color: #ffffff; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; flex-shrink: 0; width: 40px; height: 40px; margin-right: 6px;">
-                                                    <span style="font-weight: 900; font-size: 20px;">›</span>
-                                                </button>
-                                            </div>
+                            </div>
+                            
+                            <!-- Annual Progress Section -->
+                            <div class="mt-5 px-2">
+                                <!-- Track Progress Button -->
+                                <button onclick="(async () => { this.classList.add('btn-fill-blue'); state.showDashboard = false; state.quizTabVisible = false; state.dashboardTitleClicks = 0; stopDashboardSync(); await loadCompletedPortionsForDate(); render(); })()" style="width: 100%; padding: 12px 14px; border-radius: 8px; border: 2px solid #1e40af; background-color: #1e40af; color: white; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; margin-bottom: 6px; user-select: none; -webkit-user-select: none;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';">
+                                    Track Progress
+                                </button>
+                                
+                                <!-- Navigation Buttons -->
+                                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0;" id="navButtonsContainer">
+                                    <button onclick="document.querySelectorAll('#navButtonsContainer button').forEach(btn => btn.classList.remove('btn-fill-blue')); this.classList.add('btn-fill-blue'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() - 1); render(); }, 150);" style="background: none; border: none; color: ${state.darkMode ? '#94a3b8' : '#94a3b8'}; cursor: pointer; font-weight: 400; font-size: 15px; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px;" onmouseover="this.style.backgroundColor='${state.darkMode ? 'rgba(59,130,246,0.1)' : 'rgba(59,130,246,0.05)'}';" onmouseout="if(!this.classList.contains('btn-fill-blue')) this.style.backgroundColor='transparent';">
+                                        <span style="font-weight: 900; font-size: 20px; line-height: 1; display: flex; align-items: center;">‹</span>
+                                        Previous Day
+                                    </button>
+                                    <button onclick="document.querySelectorAll('#navButtonsContainer button').forEach(btn => btn.classList.remove('btn-fill-blue')); this.classList.add('btn-fill-blue'); setTimeout(() => { dashboardDate.setDate(dashboardDate.getDate() + 1); render(); }, 150);" style="background: none; border: none; color: ${state.darkMode ? '#94a3b8' : '#94a3b8'}; cursor: pointer; font-weight: 400; font-size: 15px; transition: all 0.2s ease; display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 8px;" onmouseover="this.style.backgroundColor='${state.darkMode ? 'rgba(59,130,246,0.1)' : 'rgba(59,130,246,0.05)'}';" onmouseout="if(!this.classList.contains('btn-fill-blue')) this.style.backgroundColor='transparent';">
+                                        Next Day
+                                        <span style="font-weight: 900; font-size: 20px; line-height: 1; display: flex; align-items: center;">›</span>
+                                    </button>
+                                </div>
+                            </div>
                                         </div>
                                     </div>
                                 </div>
                             ` : ''}
+                            
 
                             <!-- Yearly Progress - IN MY PLAN TAB -->
                             ${(() => {
@@ -4586,7 +4584,7 @@
                                 const progressColor = '#f59e0b'; // amber/orange
                                 
                                 return `
-                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} relative overflow-hidden cursor-pointer transition-transform" style="border-width: 0.5px; border-color: rgb(76 98 128); background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
+                                    <div class="rounded-xl p-6 border shadow-sm ${theme.card} relative overflow-hidden cursor-pointer transition-transform" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'}; background-image: url('../resources/images/bible-reading-dashboard.png'); background-size: cover; background-position: center;">
                                         <div class="absolute inset-0 ${state.darkMode ? 'bg-black/60' : 'bg-slate-700/50'}"></div>
                                         <div class="relative z-10">
                                         <div class="flex items-center justify-between mb-6">
@@ -4635,7 +4633,19 @@
                                     </div>`;
                             })()}
                         ` : state.dashboardTab === 'notes' ? `
-                            <!-- NOTES TAB - REVELATION, HEBREW AND JOHN CONTENT -->
+                            <!-- NOTES TAB - REVELATION, HEBREW, JOHN AND SERMON ON THE MOUNT -->
+                            <!-- SERMON ON THE MOUNT CARD -->
+                            <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32 mb-4">
+                                <img src="../resources/images/sermon-on-the-mount.png" alt="Sermon on the Mount" class="w-full h-full object-cover" style="object-position: center 30%;">
+                                <div class="absolute top-0 left-0 p-3">
+                                    <p class="text-xs font-semibold" style="background: linear-gradient(135deg, #8B0000 0%, #2F4F4F 50%, #1C1C1C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: none;">மலைப்பிரசங்கம்</p>
+                                    <p class="text-black text-[10px]" style="text-shadow: 0px 1px 2px rgba(255,255,255,0.5); line-height: 2.2;">Matthew 5 - 7</p>
+                                </div>
+                                <div class="absolute bottom-2 right-2">
+                                    <img src="../resources/images/coming-soon.png" alt="Coming soon" class="h-16 w-auto">
+                                </div>
+                            </div>
+                            
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <a href="../docs/docs.html?context=revelation" class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56 cursor-pointer group">
                                     <img src="../resources/images/revelation.png" alt="The Revelation of Jesus Christ" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity">
@@ -5461,7 +5471,7 @@
                             })()}
                         ` : `
                             <!-- Top Readers Section (This Year) -->
-                            <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
+                            <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
                                 <div class="flex items-center gap-3 mb-4">
                                     ${icons.trophy || '🏆'}
                                     <h2 class="text-lg font-bold">Current Streaks</h2>
@@ -5497,7 +5507,7 @@
                             </div>
 
                             <!-- Stats Grid -->
-                            <div class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 0.5px; border-color: rgb(76 98 128);">
+                            <div class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
                                 <div class="grid grid-cols-3 gap-6">
                                     <div class="text-center">
                                         <p class="text-3xl font-bold text-green-500 mb-2">${stats.completedCount}</p>
