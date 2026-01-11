@@ -4335,6 +4335,20 @@
                 }
                 state.currentUser.completedDates[dateKey] = true;
 
+                // Immediately re-render to show the button as completed
+                render();
+                
+                // Force DOM to paint on mobile by waiting for next frame
+                await new Promise(resolve => {
+                    if (window.requestAnimationFrame) {
+                        requestAnimationFrame(() => {
+                            requestAnimationFrame(resolve);
+                        });
+                    } else {
+                        setTimeout(resolve, 0);
+                    }
+                });
+
                 // Verify the data was saved to database by fetching it back
                 try {
                     const savedDates = await BibleReadingDB.getCompletedDates(state.currentUser.id);
@@ -4402,7 +4416,7 @@
                 originY = rect.top + rect.height / 2;
             } else {
                 // Get button position for confetti origin (mark as completed)
-                const button = document.querySelector('button[onclick="markTodayComplete()"]');
+                const button = document.getElementById('markCompleteButton');
                 if (!button) return;
                 
                 const rect = button.getBoundingClientRect();
