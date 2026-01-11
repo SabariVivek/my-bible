@@ -4273,9 +4273,6 @@
             const reading = getTodayReading(state.selectedDate);
             if (!reading || !state.currentUser) return;
 
-            // Prevent multiple simultaneous saves
-            if (state.isSavingProgress) return;
-
             const dateKey = `${state.selectedDate.getFullYear()}-${state.selectedDate.getMonth() + 1}-${state.selectedDate.getDate()}`;
 
             // Check if already completed
@@ -4283,26 +4280,22 @@
                 return;
             }
 
-            // Expand chapter ranges to get the actual number of portions to mark
-            const expandedPortions = expandChapterRanges(reading.portions);
-            
-            // Mark all portions as checked (using expanded portions count)
-            expandedPortions.forEach((_, idx) => {
+            // Mark all portions as checked
+            reading.portions.forEach((_, idx) => {
                 completedPortions.add(`${dateKey}-${idx}`);
             });
 
-            state.isSavingProgress = true;
             showLoading('Saving progress...');
             try {
                 // Mark all chapters in Supabase
-                for (const portion of expandedPortions) {
+                for (const portion of reading.portions) {
                     const chapters = parseChapterRange(portion.chapters);
-                    
+
                     // Handle combined book entries like "2 John & 3 John"
                     const bookNames = portion.book.includes('&') 
                         ? portion.book.split('&').map(b => b.trim())
                         : [portion.book];
-                    
+
                     for (const rawBookName of bookNames) {
                         const bookName = normalizeBookName(rawBookName);
                         if (bookName) {
@@ -4312,7 +4305,7 @@
                                     bookName,
                                     ch
                                 );
-                                
+
                                 // Update local state
                                 state.currentUser.progress[`${bookName}-${ch}`] = 'read';
                             }
@@ -4321,10 +4314,9 @@
                 }
 
                 // Mark date as completed in Supabase
-                const localDateStr = `${state.selectedDate.getFullYear()}-${String(state.selectedDate.getMonth() + 1).padStart(2, '0')}-${String(state.selectedDate.getDate()).padStart(2, '0')}`;
                 await BibleReadingDB.markDateAsCompleted(
                     state.currentUser.id,
-                    localDateStr
+                    state.selectedDate.toISOString().split('T')[0]
                 );
 
                 // Update local state
@@ -4333,31 +4325,6 @@
                 }
                 state.currentUser.completedDates[dateKey] = true;
 
-                // Verify the data was saved to database by fetching it back
-                try {
-                    const savedDates = await BibleReadingDB.getCompletedDates(state.currentUser.id);
-                    state.currentUser.completedDates = {};
-                    savedDates.forEach(dateStr => {
-                        const [year, month, day] = dateStr.split('-').map(Number);
-                        const key = `${year}-${month}-${day}`;
-                        state.currentUser.completedDates[key] = true;
-                    });
-                    
-                    // Also reload progress chapters to ensure consistency with database
-                    const userProgress = await BibleReadingDB.getUserProgress(state.currentUser.id);
-                    if (userProgress) {
-                        // Merge with existing progress instead of replacing
-                        Object.assign(state.currentUser.progress, userProgress);
-                    }
-                } catch (verifyError) {
-                    console.error('Error verifying saved data:', verifyError);
-                    // Keep local state if verification fails - ensure the current date is still marked
-                    if (!state.currentUser.completedDates) {
-                        state.currentUser.completedDates = {};
-                    }
-                    state.currentUser.completedDates[dateKey] = true;
-                }
-
                 // Update in users array
                 const userIndex = state.users.findIndex(u => u.id === state.currentUser.id);
                 if (userIndex !== -1) {
@@ -4365,24 +4332,20 @@
                 }
 
                 saveData();
-                
+
                 // Trigger immediate dashboard update for other users
                 if (state.showDashboard) {
                     renderDashboardOnly();
                 }
-                
+
                 // Trigger confetti animation
                 createConfetti();
-                
-                // Small delay to ensure state is fully updated before rendering
-                await new Promise(resolve => setTimeout(resolve, 100));
+
                 render();
             } catch (error) {
                 alert('Failed to save progress. Please try again.');
             } finally {
-                state.isSavingProgress = false;
                 hideLoading();
-                render();  // Re-render to enable the back button again
             }
         }
 
