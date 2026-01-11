@@ -4349,6 +4349,12 @@
                     }
                 });
 
+                // Update in users array
+                const userIndex = state.users.findIndex(u => u.id === state.currentUser.id);
+                if (userIndex !== -1) {
+                    state.users[userIndex] = state.currentUser;
+                }
+
                 // Verify the data was saved to database by fetching it back
                 try {
                     const savedDates = await BibleReadingDB.getCompletedDates(state.currentUser.id);
@@ -4365,6 +4371,9 @@
                         // Merge with existing progress instead of replacing
                         Object.assign(state.currentUser.progress, userProgress);
                     }
+                    
+                    // Re-render after verification to reflect the completed state
+                    render();
                 } catch (verifyError) {
                     console.error('Error verifying saved data:', verifyError);
                     // Keep local state if verification fails - ensure the current date is still marked
@@ -4374,12 +4383,7 @@
                     state.currentUser.completedDates[dateKey] = true;
                 }
 
-                // Update in users array
-                const userIndex = state.users.findIndex(u => u.id === state.currentUser.id);
-                if (userIndex !== -1) {
-                    state.users[userIndex] = state.currentUser;
-                }
-
+                // Save data AFTER verification completes
                 saveData();
                 
                 // Trigger immediate dashboard update for other users
@@ -4389,10 +4393,6 @@
                 
                 // Trigger confetti animation
                 createConfetti();
-                
-                // Small delay to ensure state is fully updated before rendering
-                await new Promise(resolve => setTimeout(resolve, 100));
-                render();
             } catch (error) {
                 alert('Failed to save progress. Please try again.');
             } finally {
