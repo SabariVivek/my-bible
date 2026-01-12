@@ -2580,3 +2580,99 @@ html.context-revelation .tree-item-title {
     padding-right: 16px;
 }
 
+/* ===================================
+   Styled Number Circles (Emoji Replacement)
+   =================================== */
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 50%;
+    background-color: #1a73e8;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0 2px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+body.dark-theme .step-number {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+/* Variants for different colors */
+.step-number.primary {
+    background-color: #1a73e8;
+    color: #ffffff;
+}
+
+body.dark-theme .step-number.primary {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+.step-number.success {
+    background-color: #0d652d;
+    color: #ffffff;
+}
+
+body.dark-theme .step-number.success {
+    background-color: #81c995;
+    color: #202124;
+}
+
+.step-number.warning {
+    background-color: #e37400;
+    color: #ffffff;
+}
+
+body.dark-theme .step-number.warning {
+    background-color: #fcc934;
+    color: #202124;
+}
+
+.step-number.danger {
+    background-color: #d93025;
+    color: #ffffff;
+}
+
+body.dark-theme .step-number.danger {
+    background-color: #f8b500;
+    color: #202124;
+}
+
+.step-number.info {
+    background-color: #1967d2;
+    color: #ffffff;
+}
+
+body.dark-theme .step-number.info {
+    background-color: #aac7f8;
+    color: #202124;
+}
+
+/* Larger variant for headers */
+.step-number.large {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 18px;
+}
+
+/* Smaller variant for inline text */
+.step-number.small {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    font-size: 12px;
+}
+
