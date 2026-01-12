@@ -83,6 +83,8 @@ body.dark-theme .loader-text {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-variant-numeric: normal;
+    font-feature-settings: normal;
 }
 
 /* Remove blue focus outline */
@@ -102,6 +104,8 @@ body {
     color: #000000;
     overflow: hidden;
     height: 100vh;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 /* Dark Theme */
@@ -809,6 +813,9 @@ body.dark-theme .page-title {
     font-size: 16px;
     line-height: 1.8;
     color: #3c4043;
+    font-family: Georgia, 'Times New Roman', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.dark-theme .page-content {
@@ -1302,6 +1309,9 @@ body.dark-theme .editor-container {
     font-size: 16px;
     line-height: 1.8;
     color: #000000;
+    font-family: Georgia, 'Times New Roman', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.dark-theme .editor {
