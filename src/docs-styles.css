@@ -898,6 +898,9 @@ body.dark-theme .page-content a {
 
 .page-content li {
     margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .page-content code {
@@ -2581,7 +2584,7 @@ html.context-revelation .tree-item-title {
 }
 
 /* ===================================
-   Styled Number Circles (Emoji Replacement)
+   Styled Number Boxes (Emoji Replacement)
    =================================== */
 .step-number {
     display: inline-flex;
@@ -2591,20 +2594,24 @@ html.context-revelation .tree-item-title {
     height: 28px;
     min-width: 28px;
     min-height: 28px;
-    border-radius: 50%;
+    border-radius: 4px;
     background-color: #1a73e8;
     color: #ffffff;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 13px;
     line-height: 1;
     margin: 0 2px;
     vertical-align: middle;
     flex-shrink: 0;
+    position: relative;
+    top: -2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.3px;
 }
 
 body.dark-theme .step-number {
-    background-color: #8ab4f8;
-    color: #202124;
+    background-color: #d946a6;
+    color: #ffffff;
 }
 
 /* Variants for different colors */
@@ -2614,8 +2621,8 @@ body.dark-theme .step-number {
 }
 
 body.dark-theme .step-number.primary {
-    background-color: #8ab4f8;
-    color: #202124;
+    background-color: #d946a6;
+    color: #ffffff;
 }
 
 .step-number.success {
@@ -2624,8 +2631,8 @@ body.dark-theme .step-number.primary {
 }
 
 body.dark-theme .step-number.success {
-    background-color: #81c995;
-    color: #202124;
+    background-color: #1e6e3f;
+    color: #ffffff;
 }
 
 .step-number.warning {
@@ -2634,8 +2641,8 @@ body.dark-theme .step-number.success {
 }
 
 body.dark-theme .step-number.warning {
-    background-color: #fcc934;
-    color: #202124;
+    background-color: #d97706;
+    color: #ffffff;
 }
 
 .step-number.danger {
@@ -2644,8 +2651,8 @@ body.dark-theme .step-number.warning {
 }
 
 body.dark-theme .step-number.danger {
-    background-color: #f8b500;
-    color: #202124;
+    background-color: #c5221f;
+    color: #ffffff;
 }
 
 .step-number.info {
@@ -2654,8 +2661,8 @@ body.dark-theme .step-number.danger {
 }
 
 body.dark-theme .step-number.info {
-    background-color: #aac7f8;
-    color: #202124;
+    background-color: #1557b0;
+    color: #ffffff;
 }
 
 /* Larger variant for headers */
@@ -2665,6 +2672,7 @@ body.dark-theme .step-number.info {
     min-width: 40px;
     min-height: 40px;
     font-size: 18px;
+    border-radius: 4px;
 }
 
 /* Smaller variant for inline text */
@@ -2673,6 +2681,7 @@ body.dark-theme .step-number.info {
     height: 24px;
     min-width: 24px;
     min-height: 24px;
+    border-radius: 3px;
     font-size: 12px;
 }
 

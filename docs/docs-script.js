@@ -1211,6 +1211,63 @@ function convertUrlsToLinks(html) {
     return container.innerHTML;
 }
 
+// Convert emoji numbers to styled boxes
+function convertEmojiNumbersToStyledCircles(htmlContent) {
+    // Map of emoji numbers to their numeric values
+    const emojiMap = {
+        '1️⃣': '1',
+        '2️⃣': '2',
+        '3️⃣': '3',
+        '4️⃣': '4',
+        '5️⃣': '5',
+        '6️⃣': '6',
+        '7️⃣': '7',
+        '8️⃣': '8',
+        '9️⃣': '9',
+        '🔟': '10',
+        '10️⃣': '10'
+    };
+    
+    // First pass: replace each emoji number with a placeholder
+    let result = htmlContent;
+    const placeholders = {};
+    let placeholderIndex = 0;
+    
+    for (const [emoji, number] of Object.entries(emojiMap)) {
+        const regex = new RegExp(emoji, 'g');
+        result = result.replace(regex, (match) => {
+            const placeholder = `__NUM_${placeholderIndex}__`;
+            placeholders[placeholder] = number;
+            placeholderIndex++;
+            return placeholder;
+        });
+    }
+    
+    // Second pass: combine consecutive number placeholders
+    let combined = true;
+    while (combined) {
+        combined = false;
+        for (let i = 0; i < placeholderIndex - 1; i++) {
+            const placeholder1 = `__NUM_${i}__`;
+            const placeholder2 = `__NUM_${i + 1}__`;
+            if (result.includes(placeholder1 + placeholder2)) {
+                const combinedNum = placeholders[placeholder1] + placeholders[placeholder2];
+                const newPlaceholder = `__NUM_COMBINED_${i}__`;
+                placeholders[newPlaceholder] = combinedNum;
+                result = result.replace(placeholder1 + placeholder2, newPlaceholder);
+                combined = true;
+            }
+        }
+    }
+    
+    // Third pass: replace all placeholders with styled spans
+    for (const [placeholder, number] of Object.entries(placeholders)) {
+        result = result.replace(new RegExp(placeholder, 'g'), `<span class="step-number">${number}</span>`);
+    }
+    
+    return result;
+}
+
 function viewPage(pageId) {
     const page = findPageById(pageId);
     if (!page || page.type !== 'page') {
@@ -1260,7 +1317,8 @@ function viewPage(pageId) {
     }
     if (pageContent) {
         const contentWithLinks = convertUrlsToLinks(page.content || '<p>This page is empty. Click Edit to add content.</p>');
-        pageContent.innerHTML = contentWithLinks;
+        const contentWithStyledNumbers = convertEmojiNumbersToStyledCircles(contentWithLinks);
+        pageContent.innerHTML = contentWithStyledNumbers;
         
         // Setup image lightbox handlers for page content
         if (window.imageLightbox) {
