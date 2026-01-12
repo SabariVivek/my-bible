@@ -108,7 +108,7 @@ select:active {
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', serif;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', Georgia, 'Times New Roman', serif;
     background-color: rgb(248, 249, 250);
     color: #000000;
     overflow: hidden;
@@ -152,7 +152,7 @@ body.dark-theme .top-bar {
     font-size: 1.5rem;
     font-weight: 400;
     color: #000000;
-    font-family: Merriweather, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', serif;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', Merriweather, serif;
     user-select: none;
 }
 
@@ -822,7 +822,7 @@ body.dark-theme .page-title {
     font-size: 16px;
     line-height: 1.8;
     color: #3c4043;
-    font-family: Georgia, 'Times New Roman', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', serif;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', Georgia, 'Times New Roman', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     word-wrap: break-word;
@@ -1333,7 +1333,7 @@ body.dark-theme .editor-container {
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
-    font-family: Georgia, 'Times New Roman', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', serif;
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', Georgia, 'Times New Roman', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
