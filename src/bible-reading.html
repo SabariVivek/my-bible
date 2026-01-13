@@ -301,8 +301,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.26.0/dist/umd/supabase.min.js"></script>
     <script src="lib/supabase-bible-reading.js?v=20251126003722"></script>
     <script src="lib/supabase-quiz.js?v=20251126003722"></script>
+    <script src="lib/quiz-questions-formatter.js?v=20251126003722"></script>
     <script src="yearlyReadingPlan.js?v=20251126003722"></script>
-    <script src="../data/quiz-questions.js?v=20251126003722"></script>
     <script>
         // Force cache refresh for updated reading plan
         const APP_VERSION = '20251126003722';
@@ -339,6 +339,17 @@
                     e.preventDefault();
                 }
             }, false);
+
+            // Initialize quiz questions from Supabase
+            if (typeof initializeQuizQuestions === 'function') {
+                initializeQuizQuestions().then(quizData => {
+                    window.quizQuestions = quizData;
+                    console.log('Quiz questions loaded from Supabase');
+                }).catch(error => {
+                    console.warn('Failed to load quiz from Supabase, using local data:', error);
+                    // Falls back to local window.quizQuestions already loaded
+                });
+            }
         });
     </script>
     <style>
@@ -2928,6 +2939,39 @@
             }
         }
 
+        async function loadChapterQuiz(book, chapter) {
+            state.selectedQuizBook = book;
+            state.selectedQuizChapter = chapter;
+            state.loadingChapterQuiz = true;
+            window.history.pushState({ page: 'quiz', level: 'chapter' }, '', window.location.href);
+            render();
+
+            // Load from Supabase if available
+            if (typeof loadQuizQuestionsFromSupabase === 'function' && typeof supabase !== 'undefined') {
+                try {
+                    const bookKey = book.toLowerCase();
+                    const questions = await loadQuizQuestionsFromSupabase(bookKey, chapter);
+                    
+                    if (questions && questions.length > 0) {
+                        // Store in window.quizQuestions for use in render
+                        if (!window.quizQuestions) {
+                            window.quizQuestions = {};
+                        }
+                        const bookKeyFormatted = book.toLowerCase().replace(/\s+/g, '-');
+                        if (!window.quizQuestions[bookKeyFormatted]) {
+                            window.quizQuestions[bookKeyFormatted] = {};
+                        }
+                        window.quizQuestions[bookKeyFormatted][String(chapter)] = { questions: questions };
+                    }
+                } catch (error) {
+                    console.error('Error loading chapter quiz from Supabase:', error);
+                }
+            }
+            
+            state.loadingChapterQuiz = false;
+            render();
+        }
+
         async function submitQuiz(questions, dateKey, chapter) {
             try {
                 // Get all form inputs and calculate score
@@ -5399,14 +5443,27 @@
                                                                     }).join('')}
                                                                 </div>
                                                                 <div class="bg-slate-800 rounded-lg p-4 text-sm text-gray-300">
-                                                                    <div class="font-semibold text-blue-400 mb-2">💡 Explanation:</div>
-                                                                    <p class="mb-3">${q.explanation || 'No explanation available'}</p>
-                                                                    <div class="font-semibold text-yellow-400 mb-1">📖 Verse:</div>
+                                                                    <div class="font-semibold text-yellow-400 mb-1">🔖 Verse :</div>
                                                                     <p>${q.verse || 'No verse reference available'}</p>
                                                                 </div>
                                                             </div>
                                                         `;
                                                     }).join('')}
+                                                </div>
+                                            </div>
+                                        `;
+                                    }
+                                    
+                                    // Show loader while loading from Supabase
+                                    if (state.loadingChapterQuiz) {
+                                        return `
+                                            <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm flex flex-col items-center justify-center">
+                                                <button onclick="state.selectedQuizChapter = null; state.loadingChapterQuiz = false; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors self-start">
+                                                    ${icons.chevronLeft} Back to Books
+                                                </button>
+                                                <div class="flex flex-col items-center justify-center py-12">
+                                                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+                                                    <p class="text-lg font-semibold">${theme.textSecondary}Loading Questions...</p>
                                                 </div>
                                             </div>
                                         `;
