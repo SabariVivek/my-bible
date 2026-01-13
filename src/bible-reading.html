@@ -2620,6 +2620,7 @@
             completedQuizChapters: {},  // Track completed chapters per user per day
             chapterScores: {},  // Track scores for each chapter per user per day
             quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
+            showQuizBackConfirmation: false,  // Show confirmation modal when going back from quiz
             selectedChapter: 1,  // Track selected revelation chapter
             selectedVerse: null,  // Track selected revelation verse
             previousRevealTab: 'revelation',  // Track previous revelation tab for back navigation
@@ -2657,17 +2658,19 @@
                 
                 // Navigate backwards through the quiz states
                 if (state.selectedQuizChapter) {
-                    // From quiz questions/summary -> back to books
-                    state.selectedQuizChapter = null;
-                    state.quizSummaryData = null;
+                    // From quiz questions/summary -> show confirmation dialog
+                    state.showQuizBackConfirmation = true;
+                    render();
                 } else if (state.selectedQuizBook) {
                     // From books selection -> back to testament selection
                     state.selectedQuizBook = null;
                     state.selectedTestament = null;
+                    render();
                 } else if (state.selectedTestament) {
                     // From testament selection -> back to leaderboard
                     state.selectedTestament = null;
                     state.quizStarted = false;
+                    render();
                 } else if (state.quizStarted) {
                     // From any quiz state -> back to leaderboard
                     state.quizStarted = false;
@@ -2675,6 +2678,7 @@
                     state.selectedQuizBook = null;
                     state.selectedQuizChapter = null;
                     state.quizSummaryData = null;
+                    render();
                 }
                 
                 render();
@@ -5371,7 +5375,7 @@
 
                                     return `
                                         <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm">
-                                            <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; state.quizSummaryData = null; state.quizTestamentTab = 'NT'; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
+                                            <button onclick="state.showQuizBackConfirmation = true; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors">
                                                 ${icons.chevronLeft} Back to Books
                                             </button>
                                             <div class="text-center mb-6">
@@ -5571,6 +5575,26 @@
                                     </button>
                                     <button onclick="handleAddUser()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded-lg py-3 font-semibold transition-colors">
                                         Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ` : ''}
+                    
+                    ${state.showQuizBackConfirmation ? `
+                        <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+                            <div class="${theme.card} rounded-2xl p-6 max-w-md w-full">
+                                <div class="text-center mb-6">
+                                    <div class="text-5xl mb-4">⚠️</div>
+                                    <h2 class="text-2xl font-bold mb-2">Go Back?</h2>
+                                    <p class="${theme.textSecondary} text-sm">You haven't completed this quiz. Your progress will be lost if you go back.</p>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button onclick="state.selectedQuizChapter = null; state.selectedQuizBook = null; state.quizSummaryData = null; state.quizTestamentTab = 'NT'; state.showQuizBackConfirmation = false; render();" class="flex-1 bg-red-600 hover:bg-red-700 text-white rounded-lg py-3 font-semibold transition-colors">
+                                        OK, Go Back
+                                    </button>
+                                    <button onclick="state.showQuizBackConfirmation = false; render();" class="flex-1 ${theme.card} border ${theme.border} rounded-lg py-3 font-semibold hover:opacity-80 transition-colors">
+                                        Cancel
                                     </button>
                                 </div>
                             </div>
