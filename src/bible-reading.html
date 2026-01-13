@@ -61,7 +61,6 @@
             margin-bottom: 24px;
             margin-left: -1rem;
             margin-right: -1rem;
-            padding-left: 1rem;
             padding-right: 1rem;
         }
 
@@ -2939,39 +2938,6 @@
             }
         }
 
-        async function loadChapterQuiz(book, chapter) {
-            state.selectedQuizBook = book;
-            state.selectedQuizChapter = chapter;
-            state.loadingChapterQuiz = true;
-            window.history.pushState({ page: 'quiz', level: 'chapter' }, '', window.location.href);
-            render();
-
-            // Load from Supabase if available
-            if (typeof loadQuizQuestionsFromSupabase === 'function' && typeof supabase !== 'undefined') {
-                try {
-                    const bookKey = book.toLowerCase();
-                    const questions = await loadQuizQuestionsFromSupabase(bookKey, chapter);
-                    
-                    if (questions && questions.length > 0) {
-                        // Store in window.quizQuestions for use in render
-                        if (!window.quizQuestions) {
-                            window.quizQuestions = {};
-                        }
-                        const bookKeyFormatted = book.toLowerCase().replace(/\s+/g, '-');
-                        if (!window.quizQuestions[bookKeyFormatted]) {
-                            window.quizQuestions[bookKeyFormatted] = {};
-                        }
-                        window.quizQuestions[bookKeyFormatted][String(chapter)] = { questions: questions };
-                    }
-                } catch (error) {
-                    console.error('Error loading chapter quiz from Supabase:', error);
-                }
-            }
-            
-            state.loadingChapterQuiz = false;
-            render();
-        }
-
         async function submitQuiz(questions, dateKey, chapter) {
             try {
                 // Get all form inputs and calculate score
@@ -3057,7 +3023,7 @@
                         // Get existing quiz data to preserve other chapters
                         const { data: existingData, error: fetchError } = await supabase
                             .from('quiz_scores')
-                            .select('chapters_data')
+                            .select('chapters_quiz')
                             .eq('user_id', state.currentUser.id)
                             .eq('quiz_date', dateKey)
                             .single();
@@ -3068,7 +3034,7 @@
                         }
                         
                         // Merge with existing chapter data (now organized by book)
-                        const chaptersData = existingData?.chapters_data || {};
+                        const chaptersData = existingData?.chapters_quiz || {};
                         if (!chaptersData[bookName]) {
                             chaptersData[bookName] = {};
                         }
@@ -3085,7 +3051,7 @@
                             quiz_date: dateKey,
                             score: score,
                             total_questions: questions.length,
-                            chapters_data: chaptersData
+                            chapters_quiz: chaptersData
                         };
                         
                         console.log('Saving quiz data:', quizData);
@@ -3173,7 +3139,7 @@
                 // Fetch quiz data for this user for today
                 const { data: quizData, error } = await supabase
                     .from('quiz_scores')
-                    .select('chapters_data')
+                    .select('chapters_quiz')
                     .eq('user_id', user.id)
                     .eq('quiz_date', dateKey)
                     .single();
@@ -3183,7 +3149,7 @@
                     return;
                 }
                 
-                if (quizData && quizData.chapters_data) {
+                if (quizData && quizData.chapters_quiz) {
                     // Initialize the data structures if needed
                     if (!state.completedQuizChapters[dateKey]) {
                         state.completedQuizChapters[dateKey] = {};
@@ -3200,8 +3166,8 @@
                     
                     // Restore completed chapters and scores from saved data
                     // Handle both old format (chapters as direct keys) and new format (bookName as key)
-                    Object.keys(quizData.chapters_data).forEach(keyName => {
-                        const dataValue = quizData.chapters_data[keyName];
+                    Object.keys(quizData.chapters_quiz).forEach(keyName => {
+                        const dataValue = quizData.chapters_quiz[keyName];
                         
                         // Try to determine if this is old format (chapter number) or new format (book name)
                         // Old format: keyName is a number like "1", "2", etc and dataValue has .score directly
@@ -3273,7 +3239,7 @@
                 // Fetch user answers from Supabase
                 const { data: quizData, error } = await supabase
                     .from('quiz_scores')
-                    .select('chapters_data')
+                    .select('chapters_quiz')
                     .eq('user_id', state.currentUser.id)
                     .eq('quiz_date', dateKey)
                     .single();
@@ -3284,8 +3250,8 @@
                     return;
                 }
                 
-                if (quizData && quizData.chapters_data && quizData.chapters_data[state.selectedQuizBook] && quizData.chapters_data[state.selectedQuizBook][chapter]) {
-                    const chapterData = quizData.chapters_data[state.selectedQuizBook][chapter];
+                if (quizData && quizData.chapters_quiz && quizData.chapters_quiz[state.selectedQuizBook] && quizData.chapters_quiz[state.selectedQuizBook][chapter]) {
+                    const chapterData = quizData.chapters_quiz[state.selectedQuizBook][chapter];
                     const userAnswers = chapterData.userAnswers || {};
                     
                     // Format questions with IDs for display
@@ -3834,13 +3800,13 @@
                             };
                         }
                         
-                        // Calculate score from chapters_data if available, otherwise use record.score
+                        // Calculate score from chapters_quiz if available, otherwise use record.score
                         let dailyScore = 0;
                         let dailyQuestions = 0;
                         
-                        if (record.chapters_data && typeof record.chapters_data === 'object') {
-                            Object.keys(record.chapters_data).forEach(bookOrChapter => {
-                                const dataValue = record.chapters_data[bookOrChapter];
+                        if (record.chapters_quiz && typeof record.chapters_quiz === 'object') {
+                            Object.keys(record.chapters_quiz).forEach(bookOrChapter => {
+                                const dataValue = record.chapters_quiz[bookOrChapter];
                                 
                                 if (typeof dataValue === 'object') {
                                     // Check if this is a book (nested chapters) or direct chapter with score
@@ -3860,7 +3826,7 @@
                             });
                         }
                         
-                        // If no chapters_data score found, use the record.score
+                        // If no chapters_quiz score found, use the record.score
                         if (dailyScore === 0 && record.score) {
                             dailyScore = record.score;
                             dailyQuestions = record.total_questions || 0;
@@ -3884,7 +3850,7 @@
                             }
                             
                             // Restore per-chapter data for today (handle both old and new formats)
-                            if (record.chapters_data && Object.keys(record.chapters_data).length > 0) {
+                            if (record.chapters_quiz && Object.keys(record.chapters_quiz).length > 0) {
                                 if (!state.completedQuizChapters[dateKey]) {
                                     state.completedQuizChapters[dateKey] = {};
                                 }
@@ -3898,8 +3864,8 @@
                                     state.chapterScores[dateKey][record.user_id] = {};
                                 }
                                 
-                                Object.keys(record.chapters_data).forEach(keyName => {
-                                    const dataValue = record.chapters_data[keyName];
+                                Object.keys(record.chapters_quiz).forEach(keyName => {
+                                    const dataValue = record.chapters_quiz[keyName];
                                     
                                     // Check if old format (chapter number key with score) or new format (book name with nested chapters)
                                     const isChapterNumber = !isNaN(parseInt(keyName));
@@ -5418,7 +5384,7 @@
                                                         const isCorrect = selectedAnswerIndex === q.correctAnswer;
                                                         
                                                         return `
-                                                            <div class="border-l-4 ${isCorrect ? 'border-emerald-500' : 'border-red-500'} pl-4 pb-4 border-b ${theme.border}">
+                                                            <div class="pb-4 border-b ${theme.border}">
                                                                 <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
                                                                 <div class="space-y-2 mb-4">
                                                                     ${q.options.map((option, optIdx) => {
@@ -5443,27 +5409,11 @@
                                                                     }).join('')}
                                                                 </div>
                                                                 <div class="bg-slate-800 rounded-lg p-4 text-sm text-gray-300">
-                                                                    <div class="font-semibold text-yellow-400 mb-1">🔖 Verse :</div>
-                                                                    <p>${q.verse || 'No verse reference available'}</p>
+                                                                    <div class="font-semibold text-yellow-400">🔖 Verse : ${q.verse || 'No verse reference available'}</div>
                                                                 </div>
                                                             </div>
                                                         `;
                                                     }).join('')}
-                                                </div>
-                                            </div>
-                                        `;
-                                    }
-                                    
-                                    // Show loader while loading from Supabase
-                                    if (state.loadingChapterQuiz) {
-                                        return `
-                                            <div id="quizContainer" class="${theme.card} rounded-xl p-6 border ${theme.border} shadow-sm flex flex-col items-center justify-center">
-                                                <button onclick="state.selectedQuizChapter = null; state.loadingChapterQuiz = false; render();" class="back-button-desktop mb-4 text-blue-500 hover:text-blue-700 flex items-center gap-2 transition-colors self-start">
-                                                    ${icons.chevronLeft} Back to Books
-                                                </button>
-                                                <div class="flex flex-col items-center justify-center py-12">
-                                                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
-                                                    <p class="text-lg font-semibold">${theme.textSecondary}Loading Questions...</p>
                                                 </div>
                                             </div>
                                         `;
@@ -5506,7 +5456,7 @@
                                                         <h4 class="font-bold mb-4 text-base leading-loose">${q.question}</h4>
                                                         <div class="space-y-3">
                                                             ${q.options.map((option, optIdx) => `
-                                                                <label class="flex items-center p-3 ${theme.accent} rounded-lg cursor-pointer hover:bg-opacity-80 transition-colors">
+                                                                <label class="flex items-center p-3 rounded-lg cursor-pointer transition-colors has-[:checked]:bg-slate-700">
                                                                     <input type="radio" name="q${q.id}" value="${optIdx}" class="w-4 h-4 quiz-input" required onchange="checkAllAnswered()">
                                                                     <span class="ml-3">${option}</span>
                                                                 </label>

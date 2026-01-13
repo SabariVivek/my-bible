@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions to SQL Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        select, textarea {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            min-height: 300px;
+            resize: vertical;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-convert {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-convert:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-copy {
+            background: #4caf50;
+            color: white;
+        }
+
+        .btn-copy:hover {
+            background: #45a049;
+        }
+
+        .btn-clear {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-clear:hover {
+            background: #da190b;
+        }
+
+        .output-section {
+            display: none;
+        }
+
+        .output-section.active {
+            display: block;
+        }
+
+        .output-box {
+            background: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .output-box code {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #1565c0;
+        }
+
+        .error {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            color: #c62828;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .success {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            color: #2e7d32;
+            display: none;
+        }
+
+        .success.show {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Quiz Questions to SQL Converter</h1>
+            <p>Convert JSON quiz questions to Supabase SQL insert statements</p>
+        </div>
+
+        <div class="content">
+            <div class="info-box">
+                💡 Paste your quiz questions JSON array below, select the book and chapter, and click "Convert to SQL" to generate the insert statement for Supabase.
+            </div>
+
+            <div class="section">
+                <div class="section-title">Select Book & Chapter</div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="book">Bible Book:</label>
+                        <select id="book">
+                            <option value="">-- Select Book --</option>
+                            <optgroup label="New Testament">
+                                <option value="matthew">Matthew (மத்தேயு)</option>
+                                <option value="mark">Mark (மாற்கு)</option>
+                                <option value="luke">Luke (லூக்காஸ்)</option>
+                                <option value="john">John (யோவான்)</option>
+                                <option value="acts">Acts (அப்போஸ்தலர்)</option>
+                                <option value="romans">Romans (உரோமையர்)</option>
+                                <option value="1-corinthians">1 Corinthians (1 கொரிந்தியர்)</option>
+                                <option value="2-corinthians">2 Corinthians (2 கொரிந்தியர்)</option>
+                                <option value="galatians">Galatians (கலாத்தியர்)</option>
+                                <option value="ephesians">Ephesians (எபேசியர்)</option>
+                                <option value="philippians">Philippians (பிலிப்பியர்)</option>
+                                <option value="colossians">Colossians (கொலோசெயர்)</option>
+                            </optgroup>
+                            <optgroup label="Old Testament">
+                                <option value="genesis">Genesis (ஆதியாகமம்)</option>
+                                <option value="exodus">Exodus (யாத்திராகமம்)</option>
+                                <option value="leviticus">Leviticus (லேவியர்)</option>
+                                <option value="numbers">Numbers (எண்ணாகமம்)</option>
+                                <option value="deuteronomy">Deuteronomy (உபாகமம்)</option>
+                                <option value="joshua">Joshua (யோசுவ)</option>
+                                <option value="judges">Judges (நீதிபதிகள்)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="chapter">Chapter Number:</label>
+                        <input type="number" id="chapter" placeholder="e.g., 1, 2, 3..." min="1" max="200">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Paste JSON Questions</div>
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="jsonInput">Paste your questions JSON array here:</label>
+                        <textarea id="jsonInput" placeholder="Paste the entire JSON array here..."></textarea>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn-convert" onclick="convertToSQL()">Convert to SQL</button>
+                    <button class="btn-clear" onclick="clearAll()">Clear All</button>
+                </div>
+                <div class="error" id="error"></div>
+                <div class="success" id="success"></div>
+            </div>
+
+            <div class="section output-section" id="outputSection">
+                <div class="section-title">Generated SQL Statement</div>
+                <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Copy this SQL and paste it into your Supabase SQL Editor:</p>
+                <div class="output-box">
+                    <code id="sqlOutput"></code>
+                </div>
+                <div class="button-group">
+                    <button class="btn-copy" onclick="copySQLToClipboard()">📋 Copy SQL to Clipboard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function convertToSQL() {
+            const book = document.getElementById('book').value;
+            const chapter = document.getElementById('chapter').value;
+            let jsonInput = document.getElementById('jsonInput').value;
+            const errorDiv = document.getElementById('error');
+            const successDiv = document.getElementById('success');
+
+            // Reset messages
+            errorDiv.classList.remove('show');
+            successDiv.classList.remove('show');
+
+            // Validate inputs
+            if (!book) {
+                showError('Please select a book');
+                return;
+            }
+
+            if (!chapter) {
+                showError('Please enter a chapter number');
+                return;
+            }
+
+            if (!jsonInput.trim()) {
+                showError('Please paste the JSON questions');
+                return;
+            }
+
+            try {
+                // Convert JavaScript object notation to valid JSON
+                // 1. Add quotes around unquoted property names
+                jsonInput = jsonInput.replace(/([{,]\s*)([a-zA-Z_][a-zA-Z0-9_]*)\s*:/g, '$1"$2":');
+                
+                // 2. Convert single quotes to double quotes
+                jsonInput = jsonInput.replace(/'/g, '"');
+
+                // Parse JSON
+                let questions = JSON.parse(jsonInput);
+
+                // Handle both array and object wrapped in array
+                if (!Array.isArray(questions)) {
+                    throw new Error('Input must be a JSON array of questions');
+                }
+
+                if (questions.length === 0) {
+                    throw new Error('No questions found in the array');
+                }
+
+                // Generate SQL
+                let sqlLines = [
+                    "-- Insert " + book.toUpperCase() + " Chapter " + chapter + " Quiz Questions into Supabase",
+                    "-- Copy and paste this into the Supabase SQL Editor and run",
+                    "",
+                    "INSERT INTO quiz_questions (book, chapter, question_number, question_text, option_a, option_b, option_c, option_d, correct_answer, verse_reference)",
+                    "VALUES"
+                ];
+
+                questions.forEach((q, index) => {
+                    // Extract question number from question text if it starts with a number
+                    const questionNum = index + 1;
+                    const questionText = q.question ? q.question.replace(/^[\d]+\.\s*/, '') : '';
+                    
+                    if (!q.options || q.options.length < 4) {
+                        throw new Error(`Question ${questionNum} does not have 4 options`);
+                    }
+                    
+                    // Escape single quotes for SQL
+                    const escapedQuestion = questionText.replace(/'/g, "''");
+                    const optionA = (q.options[0] ? q.options[0].replace(/^[A-D]\.\s*/, '') : '').replace(/'/g, "''");
+                    const optionB = (q.options[1] ? q.options[1].replace(/^[A-D]\.\s*/, '') : '').replace(/'/g, "''");
+                    const optionC = (q.options[2] ? q.options[2].replace(/^[A-D]\.\s*/, '') : '').replace(/'/g, "''");
+                    const optionD = (q.options[3] ? q.options[3].replace(/^[A-D]\.\s*/, '') : '').replace(/'/g, "''");
+                    
+                    // Convert correctAnswer to 0-indexed
+                    let correctAnswer = q.correctAnswer;
+                    if (correctAnswer > 0) {
+                        correctAnswer = correctAnswer - 1; // Convert from 1-indexed to 0-indexed
+                    }
+                    
+                    const verse = (q.verse || '').replace(/'/g, "''");
+
+                    const values = `('${book}', ${chapter}, ${questionNum}, '${escapedQuestion}', '${optionA}', '${optionB}', '${optionC}', '${optionD}', ${correctAnswer}, '${verse}')`;
+                    
+                    if (index < questions.length - 1) {
+                        sqlLines.push(values + ',');
+                    } else {
+                        sqlLines.push(values);
+                    }
+                });
+
+                sqlLines.push("ON CONFLICT (book, chapter, question_number) DO UPDATE SET");
+                sqlLines.push("  question_text = EXCLUDED.question_text,");
+                sqlLines.push("  option_a = EXCLUDED.option_a,");
+                sqlLines.push("  option_b = EXCLUDED.option_b,");
+                sqlLines.push("  option_c = EXCLUDED.option_c,");
+                sqlLines.push("  option_d = EXCLUDED.option_d,");
+                sqlLines.push("  correct_answer = EXCLUDED.correct_answer,");
+                sqlLines.push("  verse_reference = EXCLUDED.verse_reference;");
+
+                const sqlOutput = sqlLines.join('\n');
+                document.getElementById('sqlOutput').textContent = sqlOutput;
+                document.getElementById('outputSection').classList.add('active');
+
+                showSuccess(`✓ Successfully converted ${questions.length} questions to SQL!`);
+            } catch (error) {
+                showError('Error: ' + error.message);
+                console.error('Conversion error details:', error);
+            }
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+
+        function showSuccess(message) {
+            const successDiv = document.getElementById('success');
+            successDiv.textContent = message;
+            successDiv.classList.add('show');
+        }
+
+        function copySQLToClipboard() {
+            const sqlText = document.getElementById('sqlOutput').textContent;
+            
+            if (!sqlText) {
+                showError('Please convert questions first');
+                return;
+            }
+
+            navigator.clipboard.writeText(sqlText).then(() => {
+                showSuccess('✓ SQL copied to clipboard! Paste it into Supabase SQL Editor.');
+                setTimeout(() => {
+                    document.getElementById('success').classList.remove('show');
+                }, 3000);
+            }).catch(() => {
+                showError('Failed to copy. Please try manually selecting and copying the text.');
+            });
+        }
+
+        function clearAll() {
+            document.getElementById('book').value = '';
+            document.getElementById('chapter').value = '';
+            document.getElementById('jsonInput').value = '';
+            document.getElementById('outputSection').classList.remove('active');
+            document.getElementById('error').classList.remove('show');
+            document.getElementById('success').classList.remove('show');
+        }
+
+        // Format JSON input as user types
+        document.getElementById('jsonInput').addEventListener('paste', function(e) {
+            // Allow paste to work normally
+            setTimeout(() => {
+                try {
+                    const value = this.value;
+                    const trimmed = value.trim();
+                    // Basic validation
+                    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+                        JSON.parse(trimmed);
+                    }
+                } catch (e) {
+                    // Will be caught during conversion
+                }
+            }, 10);
+        });
+    </script>
+</body>
+</html>
