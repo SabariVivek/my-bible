@@ -2428,9 +2428,11 @@
             if (!container) return;
 
             const diffX = touchStartX - touchEndX;
+            const edgeThreshold = 50; // Only allow swipe back from left edge (50px from left)
             
-            // Swipe right gesture (more than 50px movement)
-            if (diffX < -minSwipeDistance) {
+            // Only trigger back on right-to-left swipe from the LEFT EDGE of the screen
+            // This is the standard Android back gesture
+            if (diffX < -minSwipeDistance && touchStartX < edgeThreshold) {
                 const backBtn = container.querySelector('.back-button-desktop');
                 if (backBtn && window.innerWidth <= 768) {
                     // Simulate back button click
