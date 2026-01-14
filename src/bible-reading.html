@@ -3055,73 +3055,33 @@
                     createConfetti();
                 }, 500);
 
-                // Save to Supabase (non-blocking)
+                // Save to Supabase (non-blocking) - one row per chapter
                 if (state.currentUser && state.currentUser.id) {
                     try {
-                        // Get existing quiz data to preserve other chapters
-                        const { data: existingDataArray, error: fetchError } = await supabase
-                            .from('quiz_scores')
-                            .select('chapters_quiz')
-                            .eq('user_id', state.currentUser.id)
-                            .eq('quiz_date', dateKey);
-                        
-                        // No need to log errors - this is expected when no data exists
-                        const existingData = existingDataArray && existingDataArray.length > 0 ? existingDataArray[0] : null;
-                        
-                        // Merge with existing chapter data (now organized by book)
-                        let chaptersData = existingData?.chapters_quiz || {};
-                        
-                        // Parse if it's a string (stored as JSON in DB)
-                        if (typeof chaptersData === 'string') {
-                            try {
-                                chaptersData = JSON.parse(chaptersData);
-                            } catch (e) {
-                                console.error('Error parsing existing chapters_quiz:', e);
-                                chaptersData = {};
-                            }
-                        }
-                        
-                        if (!chaptersData[bookName]) {
-                            chaptersData[bookName] = {};
-                        }
-                        chaptersData[bookName][chapter] = {
+                        // Save individual chapter result to new quiz_chapter_results table
+                        const chapterResultData = {
+                            user_id: state.currentUser.id,
+                            quiz_date: dateKey,
+                            book: bookName,
+                            chapter: chapter,
                             score: score,
                             total_questions: questions.length,
-                            userAnswers: userAnswers,
+                            user_answers: userAnswers,
                             completed_at: new Date().toISOString()
                         };
                         
-                        // Calculate total accumulated score from all chapters
-                        let accumulatedScore = 0;
-                        let accumulatedTotalQuestions = 0;
-                        Object.keys(chaptersData).forEach(book => {
-                            Object.keys(chaptersData[book]).forEach(ch => {
-                                accumulatedScore += chaptersData[book][ch].score || 0;
-                                accumulatedTotalQuestions += chaptersData[book][ch].total_questions || 0;
-                            });
-                        });
-                        
-                        // Save using the selected family member's ID
-                        const quizData = {
-                            user_id: state.currentUser.id,
-                            quiz_date: dateKey,
-                            score: accumulatedScore,
-                            total_questions: accumulatedTotalQuestions,
-                            chapters_quiz: chaptersData
-                        };
-                        
-                        console.log('Saving quiz data:', quizData);
+                        console.log('Saving chapter result:', chapterResultData);
                         
                         const { data, error } = await supabase
-                            .from('quiz_scores')
-                            .upsert(quizData, { onConflict: 'user_id,quiz_date' });
+                            .from('quiz_chapter_results')
+                            .upsert(chapterResultData, { onConflict: 'user_id,quiz_date,book,chapter' });
                         
                         if (error) {
                             console.error('Supabase error details:', error);
                             throw error;
                         }
                         
-                        console.log('Quiz saved successfully:', data);
+                        console.log('Chapter result saved successfully:', data);
                     } catch (supabaseError) {
                         console.error('Error saving to Supabase:', supabaseError.message);
                         console.error('Error status:', supabaseError.status);
@@ -3147,7 +3107,7 @@
                 state.selectedTestament = null;
 
                 // Reload all users' quiz progress to refresh leaderboard
-                await loadTodayQuizScoresFromSupabase();
+                await loadQuizChaptersFromSupabase();
 
                 render();
             } catch (error) {
@@ -3194,28 +3154,14 @@
                 const today = new Date();
                 const dateKey = today.toISOString().split('T')[0];
                 
-                // Fetch quiz data for this user for today
-                const { data: quizDataArray, error } = await supabase
-                    .from('quiz_scores')
-                    .select('chapters_quiz')
+                // Fetch quiz chapter results from new table for today
+                const { data: chapterResults, error } = await supabase
+                    .from('quiz_chapter_results')
+                    .select('*')
                     .eq('user_id', user.id)
                     .eq('quiz_date', dateKey);
                 
-                // Extract first result if it exists, no error handling needed for empty results
-                const quizData = quizDataArray && quizDataArray.length > 0 ? quizDataArray[0] : null;
-                
-                if (quizData && quizData.chapters_quiz) {
-                    // Parse chapters_quiz if it's a string (stored as JSON in DB)
-                    let chaptersQuizData = quizData.chapters_quiz;
-                    if (typeof chaptersQuizData === 'string') {
-                        try {
-                            chaptersQuizData = JSON.parse(chaptersQuizData);
-                        } catch (e) {
-                            console.error('Error parsing chapters_quiz:', e);
-                            chaptersQuizData = {};
-                        }
-                    }
-                    
+                if (chapterResults && chapterResults.length > 0) {
                     // Initialize the data structures if needed
                     if (!state.completedQuizChapters[dateKey]) {
                         state.completedQuizChapters[dateKey] = {};
@@ -3230,51 +3176,20 @@
                         state.chapterScores[dateKey][user.id] = {};
                     }
                     
-                    // Restore completed chapters and scores from saved data
-                    // Handle both old format (chapters as direct keys) and new format (bookName as key)
-                    Object.keys(chaptersQuizData).forEach(keyName => {
-                        const dataValue = chaptersQuizData[keyName];
+                    // Process each chapter result
+                    chapterResults.forEach(result => {
+                        const bookName = result.book;
+                        const chapterNum = result.chapter;
                         
-                        // Try to determine if this is old format (chapter number) or new format (book name)
-                        // Old format: keyName is a number like "1", "2", etc and dataValue has .score directly
-                        // New format: keyName is a string like "Matthew", "Mark" and dataValue is an object of chapters
-                        
-                        const isChapterNumber = !isNaN(parseInt(keyName));
-                        const hasScoreProperty = dataValue && typeof dataValue === 'object' && 'score' in dataValue;
-                        
-                        if (isChapterNumber && hasScoreProperty) {
-                            // Old format: keyName is chapter number, data has .score property
-                            const bookName = 'Matthew'; // Assume Matthew for old data
-                            const chapterNum = parseInt(keyName);
-                            
-                            if (!state.completedQuizChapters[dateKey][user.id][bookName]) {
-                                state.completedQuizChapters[dateKey][user.id][bookName] = {};
-                            }
-                            if (!state.chapterScores[dateKey][user.id][bookName]) {
-                                state.chapterScores[dateKey][user.id][bookName] = {};
-                            }
-                            
-                            state.completedQuizChapters[dateKey][user.id][bookName][chapterNum] = true;
-                            state.chapterScores[dateKey][user.id][bookName][chapterNum] = dataValue.score;
-                        } else if (!isChapterNumber && typeof dataValue === 'object') {
-                            // New format: keyName is book name, data is object of chapters
-                            const bookName = keyName;
-                            
-                            if (!state.completedQuizChapters[dateKey][user.id][bookName]) {
-                                state.completedQuizChapters[dateKey][user.id][bookName] = {};
-                            }
-                            if (!state.chapterScores[dateKey][user.id][bookName]) {
-                                state.chapterScores[dateKey][user.id][bookName] = {};
-                            }
-                            
-                            Object.keys(dataValue).forEach(chapter => {
-                                const chapterNum = parseInt(chapter);
-                                if (!isNaN(chapterNum) && dataValue[chapter] && typeof dataValue[chapter] === 'object') {
-                                    state.completedQuizChapters[dateKey][user.id][bookName][chapterNum] = true;
-                                    state.chapterScores[dateKey][user.id][bookName][chapterNum] = dataValue[chapter].score;
-                                }
-                            });
+                        if (!state.completedQuizChapters[dateKey][user.id][bookName]) {
+                            state.completedQuizChapters[dateKey][user.id][bookName] = {};
                         }
+                        if (!state.chapterScores[dateKey][user.id][bookName]) {
+                            state.chapterScores[dateKey][user.id][bookName] = {};
+                        }
+                        
+                        state.completedQuizChapters[dateKey][user.id][bookName][chapterNum] = true;
+                        state.chapterScores[dateKey][user.id][bookName][chapterNum] = result.score;
                     });
                     
                     console.log('Quiz progress loaded for user', user.id, 'on', dateKey);
@@ -3302,32 +3217,24 @@
                 
                 const questions = window.quizQuestions[bookKey][chapter].questions;
                 
-                // Fetch user answers from Supabase - get ALL quiz records for this user to find the completed chapter
-                const { data: quizDataArray, error } = await supabase
-                    .from('quiz_scores')
-                    .select('chapters_quiz, quiz_date')
+                // Fetch user answers from new quiz_chapter_results table
+                const { data: chapterResults, error } = await supabase
+                    .from('quiz_chapter_results')
+                    .select('*')
                     .eq('user_id', state.currentUser.id)
+                    .eq('book', state.selectedQuizBook)
+                    .eq('chapter', chapter)
                     .order('quiz_date', { ascending: false });
                 
-                // Search through all records to find the one with this chapter completed
+                // Get the most recent completion for this chapter
                 let foundChapterData = null;
-                if (quizDataArray && quizDataArray.length > 0) {
-                    for (const quizRecord of quizDataArray) {
-                        let chaptersQuizData = quizRecord.chapters_quiz;
-                        if (typeof chaptersQuizData === 'string') {
-                            try {
-                                chaptersQuizData = JSON.parse(chaptersQuizData);
-                            } catch (e) {
-                                console.error('Error parsing chapters_quiz:', e);
-                                continue;
-                            }
-                        }
-                        
-                        if (chaptersQuizData[state.selectedQuizBook] && chaptersQuizData[state.selectedQuizBook][chapter]) {
-                            foundChapterData = chaptersQuizData[state.selectedQuizBook][chapter];
-                            break;
-                        }
-                    }
+                if (chapterResults && chapterResults.length > 0) {
+                    const latestResult = chapterResults[0];
+                    foundChapterData = {
+                        score: latestResult.score,
+                        total_questions: latestResult.total_questions,
+                        userAnswers: latestResult.user_answers || {}
+                    };
                 }
                 
                 if (foundChapterData) {
@@ -3852,27 +3759,58 @@
             // Data is now saved to Supabase in real-time, no need to save here
         }
 
-        async function loadTodayQuizScoresFromSupabase() {
+        async function loadQuizChaptersFromSupabase() {
             try {
-                // Fetch ALL quiz scores (all dates, all users, all chapters)
+                // Fetch ALL quiz chapter results from the new table
                 const { data, error } = await supabase
-                    .from('quiz_scores')
+                    .from('quiz_chapter_results')
                     .select('*');
                 
                 if (error) {
-                    // Handle 406 and other errors gracefully - quiz_scores table may not exist yet
-                    console.warn('Warning loading quiz scores:', error);
-                    // Continue without remote data - use local state only
+                    // Handle errors gracefully - table may not exist yet
+                    console.warn('Warning loading quiz chapters:', error);
                     return;
                 }
 
-                // Calculate all-time scores for each user by summing all their quiz attempts
-                const userScoreTotals = {};
-                const today = new Date();
-                const dateKey = today.toISOString().split('T')[0];
-                
                 if (data && data.length > 0) {
-                    // Sum up all scores for each user across all dates
+                    // Populate state with chapter results
+                    data.forEach(record => {
+                        const dateKey = record.quiz_date;
+                        const userId = record.user_id;
+                        const bookName = record.book;
+                        const chapterNum = record.chapter;
+                        
+                        // Initialize nested structure if needed
+                        if (!state.completedQuizChapters[dateKey]) {
+                            state.completedQuizChapters[dateKey] = {};
+                        }
+                        if (!state.completedQuizChapters[dateKey][userId]) {
+                            state.completedQuizChapters[dateKey][userId] = {};
+                        }
+                        if (!state.completedQuizChapters[dateKey][userId][bookName]) {
+                            state.completedQuizChapters[dateKey][userId][bookName] = {};
+                        }
+                        
+                        if (!state.chapterScores[dateKey]) {
+                            state.chapterScores[dateKey] = {};
+                        }
+                        if (!state.chapterScores[dateKey][userId]) {
+                            state.chapterScores[dateKey][userId] = {};
+                        }
+                        if (!state.chapterScores[dateKey][userId][bookName]) {
+                            state.chapterScores[dateKey][userId][bookName] = {};
+                        }
+                        
+                        // Mark chapter as completed and store score
+                        state.completedQuizChapters[dateKey][userId][bookName][chapterNum] = true;
+                        state.chapterScores[dateKey][userId][bookName][chapterNum] = record.score;
+                    });
+
+                    console.log('Quiz chapters loaded from new table');
+                    
+                    // Build all-time leaderboard from the new data
+                    const userScoreTotals = {};
+                    
                     data.forEach(record => {
                         if (!userScoreTotals[record.user_id]) {
                             userScoreTotals[record.user_id] = {
@@ -3882,129 +3820,12 @@
                             };
                         }
                         
-                        // Parse chapters_quiz if it's a string (stored as JSON in DB)
-                        let chaptersQuizData = record.chapters_quiz;
-                        if (typeof chaptersQuizData === 'string') {
-                            try {
-                                chaptersQuizData = JSON.parse(chaptersQuizData);
-                            } catch (e) {
-                                console.error('Error parsing chapters_quiz:', e);
-                                chaptersQuizData = {};
-                            }
-                        }
-                        
-                        // Calculate score from chapters_quiz if available, otherwise use record.score
-                        let dailyScore = 0;
-                        let dailyQuestions = 0;
-                        
-                        if (chaptersQuizData && typeof chaptersQuizData === 'object') {
-                            Object.keys(chaptersQuizData).forEach(bookOrChapter => {
-                                const dataValue = chaptersQuizData[bookOrChapter];
-                                
-                                if (typeof dataValue === 'object') {
-                                    // Check if this is a book (nested chapters) or direct chapter with score
-                                    if (dataValue.score !== undefined && dataValue.total_questions !== undefined) {
-                                        // Direct chapter data (old format or nested)
-                                        dailyScore += dataValue.score || 0;
-                                        dailyQuestions += dataValue.total_questions || 0;
-                                    } else {
-                                        // New format: bookName with nested chapters
-                                        Object.keys(dataValue).forEach(chapter => {
-                                            const chapterData = dataValue[chapter];
-                                            dailyScore += chapterData.score || 0;
-                                            dailyQuestions += chapterData.total_questions || 0;
-                                        });
-                                    }
-                                }
-                            });
-                        }
-                        
-                        // If no chapters_quiz score found, use the record.score
-                        if (dailyScore === 0 && record.score) {
-                            dailyScore = record.score;
-                            dailyQuestions = record.total_questions || 0;
-                        }
-                        
-                        userScoreTotals[record.user_id].totalScore += dailyScore;
-                        userScoreTotals[record.user_id].totalQuestions += dailyQuestions;
+                        userScoreTotals[record.user_id].totalScore += record.score || 0;
+                        userScoreTotals[record.user_id].totalQuestions += record.total_questions || 0;
                         userScoreTotals[record.user_id].quizzesCompleted += 1;
-                        
-                        // Restore per-chapter data for ALL dates (not just today), so completion marks persist
-                        const recordDateKey = record.quiz_date;
-                        
-                        if (record.quiz_date === dateKey) {
-                            const userIndex = state.users.findIndex(u => u.id === record.user_id);
-                            if (userIndex !== -1) {
-                                if (!state.users[userIndex].quizScores) {
-                                    state.users[userIndex].quizScores = {};
-                                }
-                                state.users[userIndex].quizScores[dateKey] = {
-                                    score: record.score,
-                                    totalQuestions: record.total_questions
-                                };
-                            }
-                        }
-                        
-                        // Restore per-chapter data for ALL dates (handle both old and new formats)
-                        if (chaptersQuizData && Object.keys(chaptersQuizData).length > 0) {
-                            if (!state.completedQuizChapters[recordDateKey]) {
-                                state.completedQuizChapters[recordDateKey] = {};
-                            }
-                            if (!state.completedQuizChapters[recordDateKey][record.user_id]) {
-                                state.completedQuizChapters[recordDateKey][record.user_id] = {};
-                            }
-                            if (!state.chapterScores[recordDateKey]) {
-                                state.chapterScores[recordDateKey] = {};
-                            }
-                            if (!state.chapterScores[recordDateKey][record.user_id]) {
-                                state.chapterScores[recordDateKey][record.user_id] = {};
-                            }
-                            
-                            Object.keys(chaptersQuizData).forEach(keyName => {
-                                const dataValue = chaptersQuizData[keyName];
-                                
-                                // Check if old format (chapter number key with score) or new format (book name with nested chapters)
-                                const isChapterNumber = !isNaN(parseInt(keyName));
-                                const hasScoreProperty = dataValue && typeof dataValue === 'object' && 'score' in dataValue;
-                                
-                                if (isChapterNumber && hasScoreProperty) {
-                                    // Old format: keyName is chapter, assume Matthew
-                                    const bookName = 'Matthew';
-                                    const chapterNum = parseInt(keyName);
-                                    
-                                    if (!state.completedQuizChapters[recordDateKey][record.user_id][bookName]) {
-                                        state.completedQuizChapters[recordDateKey][record.user_id][bookName] = {};
-                                    }
-                                    if (!state.chapterScores[recordDateKey][record.user_id][bookName]) {
-                                        state.chapterScores[recordDateKey][record.user_id][bookName] = {};
-                                    }
-                                    
-                                    state.completedQuizChapters[recordDateKey][record.user_id][bookName][chapterNum] = true;
-                                    state.chapterScores[recordDateKey][record.user_id][bookName][chapterNum] = dataValue.score;
-                                } else if (!isChapterNumber && typeof dataValue === 'object') {
-                                    // New format: keyName is book name
-                                    const bookName = keyName;
-                                    
-                                    if (!state.completedQuizChapters[recordDateKey][record.user_id][bookName]) {
-                                        state.completedQuizChapters[recordDateKey][record.user_id][bookName] = {};
-                                    }
-                                    if (!state.chapterScores[recordDateKey][record.user_id][bookName]) {
-                                        state.chapterScores[recordDateKey][record.user_id][bookName] = {};
-                                    }
-                                    
-                                    Object.keys(dataValue).forEach(chapter => {
-                                        const chapterNum = parseInt(chapter);
-                                        if (!isNaN(chapterNum) && dataValue[chapter] && typeof dataValue[chapter] === 'object') {
-                                            state.completedQuizChapters[recordDateKey][record.user_id][bookName][chapterNum] = true;
-                                            state.chapterScores[recordDateKey][record.user_id][bookName][chapterNum] = dataValue[chapter].score;
-                                        }
-                                    });
-                                }
-                            });
-                        }
                     });
 
-                    // Build all-time leaderboard from combined scores
+                    // Build all-time leaderboard
                     state.quizLeaderboard = state.users
                         .map(user => {
                             const totals = userScoreTotals[user.id];
@@ -4019,11 +3840,11 @@
                         .sort((a, b) => b.score - a.score)
                         .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
 
-                    // Re-render immediately to show updated leaderboard (for quiz tab and dashboard)
+                    // Re-render immediately
                     render();
                 }
             } catch (error) {
-                console.error('Error loading quiz scores from Supabase:', error);
+                console.error('Error loading quiz chapters from Supabase:', error);
             }
         }
 
@@ -5672,7 +5493,7 @@
                                 <span class="text-xs font-semibold">Notes</span>
                             </button>
                             ${state.quizTabVisible ? `
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadTodayQuizScoresFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'quiz'; loadQuizChaptersFromSupabase(); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'quiz' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="quiz">
                                 <img src="../resources/icons/quiz.png" alt="Quiz" class="w-5 h-5 opacity-70" style="${state.darkMode ? 'filter: invert(1);' : ''}" />
                                 <span class="text-xs font-semibold">Quiz</span>
                             </button>
@@ -6991,6 +6812,8 @@
                 
                 if (state.currentUser) {
                     await loadCompletedPortionsForDate();
+                    // Load quiz chapter results
+                    await loadQuizChaptersFromSupabase();
                 }
                 
                 // Mark initialization as complete
