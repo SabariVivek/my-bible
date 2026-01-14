@@ -4556,7 +4556,27 @@
                                     </div>`;
                             })()}
                         ` : state.dashboardTab === 'notes' ? `
+                            <!-- CHARACTER OF THE WEEK BANNER - DOCKED TO TOP -->
+                            <div class="py-0 mb-4">
+                                <div class="relative ${theme.card} border ${theme.border} rounded-lg p-4 transition-all duration-300 hover:scale-[1.02] shadow-sm">
+                                    <div class="flex items-center justify-center gap-3">
+                                        <img src="../resources/icons/fish.png" alt="Fish" class="w-7 h-7 flex-shrink-0" />
+                                        
+                                        <div class="text-center">
+                                            <span class="${theme.textSecondary} text-xs font-medium uppercase tracking-wider">
+                                                Character of the week
+                                            </span>
+                                            <span class="${theme.textSecondary} mx-2">•</span>
+                                            <span class="${theme.text} text-lg font-bold">
+                                                Jonah
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <!-- NOTES TAB - REVELATION, HEBREW, JOHN AND SERMON ON THE MOUNT -->
+                            
                             <!-- SERMON ON THE MOUNT CARD -->
                             <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32 mb-4">
                                 <img src="../resources/images/sermon-on-the-mount.png" alt="Sermon on the Mount" class="w-full h-full object-cover" style="object-position: center 30%;">
@@ -4570,19 +4590,19 @@
                             </div>
                             
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <a href="../docs/docs.html?context=revelation" class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56 cursor-pointer group">
+                                <a href="../docs/docs.html?context=revelation" class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32 cursor-pointer group">
                                     <img src="../resources/images/revelation.png" alt="The Revelation of Jesus Christ" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity">
                                     <div class="absolute top-4 right-4">
                                         <span class="inline-block px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full transition-colors">Click to Read</span>
                                     </div>
                                 </a>
-                                <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56">
+                                <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56" style="display: none;">
                                     <img src="../resources/images/hebrews.png" alt="Hebrew" class="w-full h-full object-cover">
                                     <div class="absolute top-4 right-4">
                                         <span class="inline-block px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-full transition-colors">Coming soon</span>
                                     </div>
                                 </div>
-                                <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56">
+                                <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56" style="display: none;">
                                     <img src="../resources/images/john.png" alt="John" class="w-full h-full object-cover">
                                     <div class="absolute top-4 right-4">
                                         <span class="inline-block px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-full transition-colors">Coming soon</span>
