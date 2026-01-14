@@ -3008,14 +3008,45 @@
                     };
                 }
 
-                // Build local leaderboard from all users' scores
+                // Build local leaderboard from all users' scores - calculate from all completed chapters
                 state.quizLeaderboard = state.users
-                    .map(user => ({
-                        name: user.name,
-                        score: user.quizScores?.[dateKey]?.score || 0,
-                        total_questions: user.quizScores?.[dateKey]?.totalQuestions || 0
-                    }))
-                    .filter(entry => entry.score > 0 || entry.total_questions > 0)
+                    .map(user => {
+                        // Calculate total score from all chapters completed today by this user
+                        let totalScore = 0;
+                        let totalQuestions = 0;
+                        
+                        if (state.chapterScores[dateKey] && state.chapterScores[dateKey][user.id]) {
+                            const userChapters = state.chapterScores[dateKey][user.id];
+                            // Iterate through all books
+                            Object.keys(userChapters).forEach(book => {
+                                // Iterate through all chapters in each book
+                                Object.keys(userChapters[book]).forEach(chapter => {
+                                    totalScore += userChapters[book][chapter] || 0;
+                                });
+                            });
+                        }
+                        
+                        // Also count total questions from completed chapters
+                        if (state.completedQuizChapters[dateKey] && state.completedQuizChapters[dateKey][user.id]) {
+                            const userCompletedChapters = state.completedQuizChapters[dateKey][user.id];
+                            // Count the number of completed chapters
+                            Object.keys(userCompletedChapters).forEach(book => {
+                                Object.keys(userCompletedChapters[book]).forEach(chapter => {
+                                    if (userCompletedChapters[book][chapter]) {
+                                        // Estimate 10 questions per chapter (standard)
+                                        totalQuestions += 10;
+                                    }
+                                });
+                            });
+                        }
+                        
+                        return {
+                            name: user.name,
+                            score: totalScore,
+                            total_questions: totalQuestions
+                        };
+                    })
+                    .filter(entry => entry.score > 0)
                     .sort((a, b) => b.score - a.score)
                     .map((entry, idx) => ({ ...entry, rank: idx + 1 }));
 
@@ -3060,12 +3091,22 @@
                             completed_at: new Date().toISOString()
                         };
                         
+                        // Calculate total accumulated score from all chapters
+                        let accumulatedScore = 0;
+                        let accumulatedTotalQuestions = 0;
+                        Object.keys(chaptersData).forEach(book => {
+                            Object.keys(chaptersData[book]).forEach(ch => {
+                                accumulatedScore += chaptersData[book][ch].score || 0;
+                                accumulatedTotalQuestions += chaptersData[book][ch].total_questions || 0;
+                            });
+                        });
+                        
                         // Save using the selected family member's ID
                         const quizData = {
                             user_id: state.currentUser.id,
                             quiz_date: dateKey,
-                            score: score,
-                            total_questions: questions.length,
+                            score: accumulatedScore,
+                            total_questions: accumulatedTotalQuestions,
                             chapters_quiz: chaptersData
                         };
                         
