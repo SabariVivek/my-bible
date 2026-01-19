@@ -4433,7 +4433,7 @@
                         const userStats = state.currentUser ? getUserStats(state.currentUser) : null;
                         return (userStats && userStats.daysPending > 0 && (state.dashboardTab === 'my-plan' || state.dashboardTab === 'family')) ? `
                             <div class="py-0">
-                                <div class="p-4 ${state.darkMode ? 'bg-red-900' : 'bg-red-100'}">
+                                <div class="p-4 ${state.darkMode ? 'bg-red-900' : 'bg-red-100'} cursor-pointer transition-all hover:opacity-80" id="pendingBannerElement" onclick="handlePendingBannerClick()">
                                     <div class="flex items-center justify-center gap-3 max-w-7xl mx-auto">
                                         ${icons.clock || '⏱️'}
                                         <p class="font-semibold text-sm ${state.darkMode ? 'text-white' : 'text-gray-900'}">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
@@ -7117,6 +7117,30 @@
             calendarState.currentYear = state.selectedDate.getFullYear();
             calendarState.tempSelectedDate = state.selectedDate;
             updateCalendar();
+        }
+
+        // Pending banner click tracking
+        let pendingBannerClickCount = 0;
+        let pendingBannerClickTimeout = null;
+
+        function handlePendingBannerClick() {
+            pendingBannerClickCount++;
+            
+            // Clear the timeout if it exists
+            if (pendingBannerClickTimeout) {
+                clearTimeout(pendingBannerClickTimeout);
+            }
+            
+            // If 3 clicks are reached, navigate to weekly quiz
+            if (pendingBannerClickCount === 3) {
+                window.location.href = '../weekly-bible-quiz.html';
+                pendingBannerClickCount = 0;
+            } else {
+                // Reset click count if user doesn't click 3 times within 2 seconds
+                pendingBannerClickTimeout = setTimeout(() => {
+                    pendingBannerClickCount = 0;
+                }, 2000);
+            }
         }
     </script>
 </body>
