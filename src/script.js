@@ -72,6 +72,20 @@ const bibleBooks = [
 // Current state
 let currentBook = parseInt(localStorage.getItem('currentBook')) || 39; // Matthew (New Testament starts at index 39)
 let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
+
+// Validate that currentBook is valid (between 0 and total number of books)
+if (currentBook < 0 || currentBook >= bibleBooks.length) {
+    currentBook = 39; // Default to Matthew
+    localStorage.setItem('currentBook', 39);
+}
+
+// Validate that currentChapter is valid for currentBook (important for data consistency on page reload)
+const currentBookData = bibleBooks[currentBook];
+if (currentBookData && currentChapter > currentBookData.chapters) {
+    currentChapter = 1;
+    localStorage.setItem('currentChapter', 1);
+}
+
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
@@ -774,6 +788,7 @@ function initializeBookList() {
     const bookItems = document.querySelectorAll('.book-item');
     bookItems.forEach((item, index) => {
         item.addEventListener('click', () => {
+            // Always load chapter 1 for newly selected book
             loadBook(index, 1);
         });
     });
@@ -10852,9 +10867,3 @@ function navigateToRef(bookFile, chapter, verse) {
         scrollToVerse(verse);
     }, 300);
 }
-
-
-
-
-
-
