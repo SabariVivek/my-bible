@@ -1377,6 +1377,15 @@ body.dark-theme .editor {
 .editor h5 { font-size: 18px; }
 .editor h6 { font-size: 16px; }
 
+@media (max-width: 768px) {
+    .editor h1 { font-size: 20px; line-height: 1.2; }
+    .editor h2 { font-size: 20px; }
+    .editor h3 { font-size: 18px; }
+    .editor h4 { font-size: 16px; }
+    .editor h5 { font-size: 14px; }
+    .editor h6 { font-size: 14px; }
+}
+
 body.dark-theme .editor h1,
 body.dark-theme .editor h2,
 body.dark-theme .editor h3,
