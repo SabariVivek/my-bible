@@ -855,12 +855,21 @@ body.dark-theme .page-content h6 {
     color: #e3e3e3;
 }
 
-.page-content h1 { font-size: 32px; }
-.page-content h2 { font-size: 28px; }
+.page-content h1 { font-size: 24px; line-height: 1.2; }
+.page-content h2 { font-size: 24px; }
 .page-content h3 { font-size: 24px; }
 .page-content h4 { font-size: 20px; }
 .page-content h5 { font-size: 18px; }
 .page-content h6 { font-size: 16px; }
+
+@media (max-width: 768px) {
+    .page-content h1 { font-size: 20px; }
+    .page-content h2 { font-size: 20px; }
+    .page-content h3 { font-size: 18px; }
+    .page-content h4 { font-size: 16px; }
+    .page-content h5 { font-size: 14px; }
+    .page-content h6 { font-size: 14px; }
+}
 
 .page-content p {
     margin-top: 0px;
@@ -1361,8 +1370,8 @@ body.dark-theme .editor {
     margin-bottom: 12px;
 }
 
-.editor h1 { font-size: 32px; }
-.editor h2 { font-size: 28px; }
+.editor h1 { font-size: 24px; line-height: 1.2; }
+.editor h2 { font-size: 24px; }
 .editor h3 { font-size: 24px; }
 .editor h4 { font-size: 20px; }
 .editor h5 { font-size: 18px; }
