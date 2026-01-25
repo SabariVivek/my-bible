@@ -4507,6 +4507,8 @@
                             <!-- Yearly Progress - IN MY PLAN TAB -->
                             ${(() => {
                                 const progress = calculateTimelineProgress();
+                                const otProgress = calculateProgress('old');
+                                const ntProgress = calculateProgress('new');
                                 
                                 // Progress color - yellowish red orange
                                 const progressColor = '#f59e0b'; // amber/orange
@@ -4549,11 +4551,11 @@
                                         <div class="grid grid-cols-2 gap-6">
                                             <div>
                                                 <p class="${state.darkMode ? 'text-gray-400' : 'text-gray-600'} text-xs uppercase tracking-wide mb-1">Old Testament</p>
-                                                <p class="text-xl font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${progress.otChapters}/929</p>
+                                                <p class="text-xl font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${otProgress.read}/${otProgress.total}</p>
                                             </div>
                                             <div>
                                                 <p class="${state.darkMode ? 'text-gray-400' : 'text-gray-600'} text-xs uppercase tracking-wide mb-1">New Testament</p>
-                                                <p class="text-xl font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${progress.ntChapters}/260</p>
+                                                <p class="text-xl font-bold ${state.darkMode ? 'text-gray-100' : 'text-gray-900'}">${ntProgress.read}/${ntProgress.total}</p>
                                             </div>
                                         </div>
                                         </div>
