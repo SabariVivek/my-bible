@@ -4437,10 +4437,10 @@
                         const userStats = state.currentUser ? getUserStats(state.currentUser) : null;
                         return (userStats && userStats.daysPending > 0 && (state.dashboardTab === 'my-plan' || state.dashboardTab === 'family')) ? `
                             <div class="py-0">
-                                <div class="p-4 ${state.darkMode ? 'bg-red-900' : 'bg-red-100'} cursor-pointer transition-all hover:opacity-80" id="pendingBannerElement" onclick="handlePendingBannerClick()">
+                                <div class="p-4 cursor-pointer transition-all hover:opacity-80" id="pendingBannerElement" onclick="handlePendingBannerClick()" style="background-color: ${userStats.daysPending === 1 ? 'rgb(161, 98, 7)' : (state.darkMode ? 'rgb(127, 29, 29)' : 'rgb(254, 226, 226)')};">
                                     <div class="flex items-center justify-center gap-3 max-w-7xl mx-auto">
                                         ${icons.clock || '⏱️'}
-                                        <p class="font-semibold text-sm ${state.darkMode ? 'text-white' : 'text-gray-900'}">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
+                                        <p class="font-semibold text-sm ${userStats.daysPending === 1 ? 'text-white' : (state.darkMode ? 'text-white' : 'text-red-900')}">You have <strong>${userStats.daysPending} day${userStats.daysPending === 1 ? '' : 's'}</strong> pending to read</p>
                                     </div>
                                 </div>
                             </div>
@@ -5402,7 +5402,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="border-t" style="border-color: ${state.darkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)'}; padding: 0.5rem 0;">
-                                                        <p class="text-base font-bold text-white">${player.score}</p>
+                                                        <p class="text-base font-bold ${state.darkMode ? 'text-white' : 'text-gray-900'}">${player.score}</p>
                                                     </div>
                                                 </div>
                                             `;
