@@ -5412,7 +5412,7 @@
                             ` : ''}
 
                             <!-- Top Readers Section (This Year) -->
-                            <div id="topReadersSection" class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
+                            <div id="topReadersSection" class="${theme.card} rounded-xl p-4 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
                                 <div class="flex items-center gap-3 mb-4">
                                     ${icons.trophy || '🏆'}
                                     <h2 class="text-lg font-bold">Current Streaks</h2>
@@ -5448,7 +5448,7 @@
                             </div>
 
                             <!-- Stats Grid -->
-                            <div class="${theme.card} rounded-xl p-6 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
+                            <div class="${theme.card} rounded-xl p-3 border shadow-sm" style="border-width: 1px; border-color: ${state.darkMode ? 'rgb(51 65 85 / var(--tw-border-opacity, 1))' : 'rgb(209 213 219 / var(--tw-border-opacity, 1))'};">
                                 <div class="grid grid-cols-3 gap-6">
                                     <div class="text-center">
                                         <p class="text-3xl font-bold text-green-500 mb-2">${stats.completedCount}</p>
@@ -5467,7 +5467,7 @@
 
                             <!-- Pending Users Section -->
                             ${(state.dashboardTab === 'family' || state.dashboardTab === 'my-plan') && stats.pendingCount > 0 ? `
-                                <div class="pending-users-container rounded-xl p-6 border shadow-sm dark:bg-red-950 dark:border-red-500 bg-red-50 border-red-300">
+                                <div class="pending-users-container rounded-xl p-4 border shadow-sm dark:bg-red-950 dark:border-red-500 bg-red-50 border-red-300">
                                     <div class="flex items-center gap-3 mb-4">
                                         ${icons.clock || '⏱️'}
                                         <h2 class="text-lg font-bold">Pending Users (${stats.pendingCount})</h2>
