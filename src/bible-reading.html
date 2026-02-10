@@ -4722,7 +4722,7 @@
                                 </div>
 
                                 <!-- Cards Container -->
-                                <div class="carousel-container relative overflow-visible">
+                                <div class="carousel-container relative" style=overflow-x:hidden; overflow-y:visible;">
                                     <!-- CARD 1: Verse of the Year -->
                                     <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 0 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 0 ? '0' : state.homeTabCardIndex > 0 ? '-100%' : '100%'});">
                                         <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}">
