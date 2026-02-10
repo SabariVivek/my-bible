@@ -294,6 +294,16 @@
         html.dark-theme .intro-content table tbody tr:hover {
             background-color: #1e293b;
         }
+
+        /* Mirrored background image style */
+        .mirrored-bg {
+            background-position: right center !important;
+            direction: rtl;
+        }
+
+        .mirrored-bg div {
+            direction: ltr;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Supabase Client Library -->
@@ -4725,7 +4735,7 @@
                                 <div class="carousel-container relative" style=overflow-x:hidden; overflow-y:visible;">
                                     <!-- CARD 1: Verse of the Year -->
                                     <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 0 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 0 ? '0' : state.homeTabCardIndex > 0 ? '-100%' : '100%'});">
-                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}">
+                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}" style="background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
                                             <div style="height: 0.25rem;" class="bg-gradient-to-r from-amber-400"></div>
                                             <div class="p-4 relative">
                                                 <div class="flex items-center gap-2 mb-5">
@@ -4734,7 +4744,7 @@
                                                     </div>
                                                     <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Yearly Promise</h2>
                                                 </div>
-                                                <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.yearly?.verse_text || 'மலைகள் விலகினாலும், பர்வதங்கள் நிலைபெயர்ந்தாலும், என் கிருபை உன்னைவிட்டு விலகாமலும், என் சமாதானத்தின் உடன்படிக்கை நிலைபெயராமலும் இருக்கும் என்று, உன்மேல் மனதுருகுகிற கர்த்தர் சொல்லுகிறார்.'}"</p>
+                                                <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.yearly?.verse_text || 'மலைகள் விலகினாலும், பர்வதங்கள் நிலைபெயர்ந்தாலும், என் கிருபை உன்னைவிட்டு விலகாமலும், என் சமாதானத்தின் உடன்படிக்கை நிலைபெயராமலும் இருக்கும் என்று, உன்மேல் மனதுருகுகிற கர்த்தர் சொல்லுகிறார்.'}"</p>
                                                 <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-amber-50 border-amber-200'}">
                                                     <p class="font-semibold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">${cachedVerses.yearly?.reference || 'Isaiah 54:10'}</p>
                                                 </div>
@@ -4745,7 +4755,7 @@
 
                                     <!-- CARD 2: Verse of the Month -->
                                     <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 1 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 1 ? '0' : state.homeTabCardIndex > 1 ? '-100%' : '100%'});">
-                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-blue-600/50' : 'bg-white border-2 border-blue-300'}">
+                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-blue-600/50' : 'bg-white border-2 border-blue-300'}" style="background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
                                             <div style="height: 0.25rem;" class="bg-gradient-to-r from-blue-400"></div>
                                             <div class="p-4 relative">
                                                 <div class="flex items-center gap-2 mb-5">
@@ -4754,7 +4764,7 @@
                                                     </div>
                                                     <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Monthly Promise</h2>
                                                 </div>
-                                                <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.monthly?.verse_text || 'கர்த்தர் என் கன்மலையும், என் கோட்டையும், என் இரட்சகரும், என் தேவனும், நான் நம்பியிருக்கிற என் துருகமும், என் கேடகமும், என் இரட்சணியக் கொம்பும், என் உயர்ந்த அடைக்கலமுமாயிருக்கிறார்.'}"</p>
+                                                <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.monthly?.verse_text || 'கர்த்தர் என் கன்மலையும், என் கோட்டையும், என் இரட்சகரும், என் தேவனும், நான் நம்பியிருக்கிற என் துருகமும், என் கேடகமும், என் இரட்சணியக் கொம்பும், என் உயர்ந்த அடைக்கலமுமாயிருக்கிறார்.'}"</p>
                                                 <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-blue-50 border-blue-200'}">
                                                     <p class="font-semibold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">${cachedVerses.monthly?.reference || 'Psalms 18:10'}</p>
                                                 </div>
@@ -4769,7 +4779,7 @@
                                             <div class="relative w-full cursor-pointer transition-transform duration-700 transform-style-3d" style="transformStyle: preserve-3d; transform: rotateY(${state.scriptureCardFlipped ? '180deg' : '0deg'});" onclick="event.preventDefault(); event.stopPropagation(); toggleScriptureCardFlip();">
                                                 
                                                 <!-- Front Side -->
-                                                <div class="overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden;">
+                                                <div class="overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden; background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
                                                     <div style="height: 0.25rem;" class="bg-gradient-to-r from-rose-400"></div>
                                                     <div class="p-4 relative">
                                                         <div class="flex items-center gap-2 mb-5">
@@ -4778,7 +4788,7 @@
                                                             </div>
                                                             <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Promise - வாக்குத்தத்தம்</h2>
                                                         </div>
-                                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userPromise?.verse_text || 'வேண்டுவதைக் கேட்டுக்கொண்டபடியே தேவன் உங்களுக்குக் கொடுத்திருக்கிறார்.'}"</p>
+                                                        <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userPromise?.verse_text || 'வேண்டுவதைக் கேட்டுக்கொண்டபடியே தேவன் உங்களுக்குக் கொடுத்திருக்கிறார்.'}"</p>
                                                         <div class="flex items-center justify-between">
                                                             <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
                                                                 <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userPromise?.reference || 'Isaiah 54:10'}</p>
@@ -4790,7 +4800,7 @@
                                                 </div>
 
                                                 <!-- Back Side -->
-                                                <div class="absolute top-0 left-0 w-full overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden; transform: rotateY(180deg);">
+                                                <div class="absolute top-0 left-0 w-full overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden; transform: rotateY(180deg); background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
                                                     <div style="height: 0.25rem;" class="bg-gradient-to-r from-rose-400"></div>
                                                     <div class="p-4 relative">
                                                         <div class="flex items-center gap-2 mb-5">
@@ -4799,7 +4809,7 @@
                                                             </div>
                                                             <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Command - கட்டளை</h2>
                                                         </div>
-                                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userCommand?.verse_text || 'உங்கள் பாவங்களை விட்டுவிட்டு, கர்த்தரை நாடுங்கள்.'}"</p>
+                                                        <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userCommand?.verse_text || 'உங்கள் பாவங்களை விட்டுவிட்டு, கர்த்தரை நாடுங்கள்.'}"</p>
                                                         <div class="flex items-center justify-between">
                                                             <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
                                                                 <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userCommand?.reference || 'Isaiah 55:7'}</p>
