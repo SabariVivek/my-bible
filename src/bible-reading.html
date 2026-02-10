@@ -4590,42 +4590,6 @@
                             <!-- HOME TAB - SCRIPTURE CARDS -->
                             <div class="max-w-2xl mx-auto space-y-4">
 
-                                <!-- CARD 1: Verse of the Year -->
-                                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}">
-                                    <div style="height: 0.1rem;" class="bg-gradient-to-r from-amber-400 to-orange-500"></div>
-                                    <div class="p-4 relative">
-                                        <div class="flex items-center gap-2 mb-5">
-                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 shadow-md">
-                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                            </div>
-                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Yearly Promise</h2>
-                                        </div>
-                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.yearly?.verse_text || 'மலைகள் விலகினாலும், பர்வதங்கள் நிலைபெயர்ந்தாலும், என் கிருபை உன்னைவிட்டு விலகாமலும், என் சமாதானத்தின் உடன்படிக்கை நிலைபெயராமலும் இருக்கும் என்று, உன்மேல் மனதுருகுகிற கர்த்தர் சொல்லுகிறார்.'}"</p>
-                                        <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-amber-50 border-amber-200'}">
-                                            <p class="font-semibold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">${cachedVerses.yearly?.reference || 'Isaiah 54:10'}</p>
-                                        </div>
-                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
-                                    </div>
-                                </div>
-
-                                <!-- CARD 2: Verse of the Month -->
-                                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}">
-                                    <div style="height: 0.1rem;" class="bg-gradient-to-r from-blue-400 to-indigo-500"></div>
-                                    <div class="p-4 relative">
-                                        <div class="flex items-center gap-2 mb-5">
-                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-blue-400 to-indigo-500 shadow-md">
-                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5H4v8a2 2 0 002 2h12a2 2 0 002-2V7h-2v1a1 1 0 11-2 0V7h-4v1a1 1 0 11-2 0V7H6v1a1 1 0 11-2 0V7z"></path></svg>
-                                            </div>
-                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Monthly Promise</h2>
-                                        </div>
-                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.monthly?.verse_text || 'கர்த்தர் என் கன்மலையும், என் கோட்டையும், என் இரட்சகரும், என் தேவனும், நான் நம்பியிருக்கிற என் துருகமும், என் கேடகமும், என் இரட்சணியக் கொம்பும், என் உயர்ந்த அடைக்கலமுமாயிருக்கிறார்.'}"</p>
-                                        <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-blue-50 border-blue-200'}">
-                                            <p class="font-semibold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">${cachedVerses.monthly?.reference || 'Psalms 18:10'}</p>
-                                        </div>
-                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
-                                    </div>
-                                </div>
-
                                 <!-- CARD 3: Flippable Card -->
                                 <div class="perspective-1000" id="flippableCard">
                                     <div class="relative w-full cursor-pointer transition-transform duration-700 transform-style-3d" style="transformStyle: preserve-3d; transform: rotateY(${state.scriptureCardFlipped ? '180deg' : '0deg'});" onclick="state.scriptureCardFlipped = !state.scriptureCardFlipped; render();">
@@ -4671,6 +4635,42 @@
                                                 <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+                                <!-- CARD 1: Verse of the Year -->
+                                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}">
+                                    <div style="height: 0.1rem;" class="bg-gradient-to-r from-amber-400 to-orange-500"></div>
+                                    <div class="p-4 relative">
+                                        <div class="flex items-center gap-2 mb-5">
+                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 shadow-md">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                            </div>
+                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Yearly Promise</h2>
+                                        </div>
+                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.yearly?.verse_text || 'மலைகள் விலகினாலும், பர்வதங்கள் நிலைபெயர்ந்தாலும், என் கிருபை உன்னைவிட்டு விலகாமலும், என் சமாதானத்தின் உடன்படிக்கை நிலைபெயராமலும் இருக்கும் என்று, உன்மேல் மனதுருகுகிற கர்த்தர் சொல்லுகிறார்.'}"</p>
+                                        <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-amber-50 border-amber-200'}">
+                                            <p class="font-semibold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">${cachedVerses.yearly?.reference || 'Isaiah 54:10'}</p>
+                                        </div>
+                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                    </div>
+                                </div>
+
+                                <!-- CARD 2: Verse of the Month -->
+                                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}">
+                                    <div style="height: 0.1rem;" class="bg-gradient-to-r from-blue-400 to-indigo-500"></div>
+                                    <div class="p-4 relative">
+                                        <div class="flex items-center gap-2 mb-5">
+                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-blue-400 to-indigo-500 shadow-md">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5H4v8a2 2 0 002 2h12a2 2 0 002-2V7h-2v1a1 1 0 11-2 0V7h-4v1a1 1 0 11-2 0V7H6v1a1 1 0 11-2 0V7z"></path></svg>
+                                            </div>
+                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Monthly Promise</h2>
+                                        </div>
+                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.monthly?.verse_text || 'கர்த்தர் என் கன்மலையும், என் கோட்டையும், என் இரட்சகரும், என் தேவனும், நான் நம்பியிருக்கிற என் துருகமும், என் கேடகமும், என் இரட்சணியக் கொம்பும், என் உயர்ந்த அடைக்கலமுமாயிருக்கிறார்.'}"</p>
+                                        <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-blue-50 border-blue-200'}">
+                                            <p class="font-semibold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">${cachedVerses.monthly?.reference || 'Psalms 18:10'}</p>
+                                        </div>
+                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
                                     </div>
                                 </div>
                             </div>
