@@ -426,6 +426,127 @@ async function subscribeToDailyPortions(onDataChange) {
     return channel;
 }
 
+// Yearly and Monthly Verses
+async function getYearlyVerse(year, language = 'tamil') {
+    const { data, error } = await supabase
+        .from('yearly_monthly_verses')
+        .select('*')
+        .eq('year', year)
+        .is('month', null)  // NULL month means it's a yearly verse
+        .eq('verse_type', 'yearly')
+        .eq('language', language)
+        .single();
+    
+    if (error && error.code !== 'PGRST116') {  // PGRST116 = no rows found
+        throw error;
+    }
+    return data;
+}
+
+async function getMonthlyVerse(year, month, language = 'tamil') {
+    const { data, error } = await supabase
+        .from('yearly_monthly_verses')
+        .select('*')
+        .eq('year', year)
+        .eq('month', month)
+        .eq('verse_type', 'monthly')
+        .eq('language', language)
+        .single();
+    
+    if (error && error.code !== 'PGRST116') {  // PGRST116 = no rows found
+        throw error;
+    }
+    return data;
+}
+
+async function getAllYearlyMonthlyVerses(year, language = 'tamil') {
+    const { data, error } = await supabase
+        .from('yearly_monthly_verses')
+        .select('*')
+        .eq('year', year)
+        .eq('language', language);
+    
+    if (error) throw error;
+    return data;
+}
+
+// User-Specific Promise and Command Verses
+async function getUserPromiseVerse(userId) {
+    const { data, error } = await supabase
+        .from('user_promise_command_verses')
+        .select('*')
+        .eq('user_id', userId)
+        .eq('verse_type', 'promise')
+        .single();
+    
+    if (error && error.code !== 'PGRST116') {  // PGRST116 = no rows found
+        throw error;
+    }
+    return data;
+}
+
+async function getUserCommandVerse(userId) {
+    const { data, error } = await supabase
+        .from('user_promise_command_verses')
+        .select('*')
+        .eq('user_id', userId)
+        .eq('verse_type', 'command')
+        .single();
+    
+    if (error && error.code !== 'PGRST116') {  // PGRST116 = no rows found
+        throw error;
+    }
+    return data;
+}
+
+async function getUserPromiseCommandVerses(userId) {
+    const { data, error } = await supabase
+        .from('user_promise_command_verses')
+        .select('*')
+        .eq('user_id', userId)
+        .order('verse_type');
+    
+    if (error) throw error;
+    return data;
+}
+
+async function addUserVerse(userId, verseData) {
+    const { data, error } = await supabase
+        .from('user_promise_command_verses')
+        .insert([{
+            user_id: userId,
+            verse_text: verseData.verse_text,
+            reference: verseData.reference,
+            verse_type: verseData.verse_type  // 'promise' or 'command'
+        }])
+        .select()
+        .single();
+    
+    if (error) throw error;
+    return data;
+}
+
+async function updateUserVerse(verseId, verseData) {
+    const { data, error } = await supabase
+        .from('user_promise_command_verses')
+        .update(verseData)
+        .eq('id', verseId)
+        .select()
+        .single();
+    
+    if (error) throw error;
+    return data;
+}
+
+async function deleteUserVerse(verseId) {
+    const { error } = await supabase
+        .from('user_promise_command_verses')
+        .delete()
+        .eq('id', verseId);
+    
+    if (error) throw error;
+}
+
 // Cleanup subscriptions
 function unsubscribeAll() {
     activeSubscriptions.forEach(sub => {
@@ -456,6 +577,17 @@ window.BibleReadingDB = {
     markDateAsCompleted,
     markDatesAsCompletedBatch,
     getCompletedDates,
+    // Yearly/Monthly Verses
+    getYearlyVerse,
+    getMonthlyVerse,
+    getAllYearlyMonthlyVerses,
+    // User-Specific Promise/Command Verses
+    getUserPromiseVerse,
+    getUserCommandVerse,
+    getUserPromiseCommandVerses,
+    addUserVerse,
+    updateUserVerse,
+    deleteUserVerse,
     // Summary
     getUserProgressSummary,
     getAllUsersProgressSummary,

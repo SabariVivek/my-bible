@@ -820,6 +820,31 @@
             }
         }
 
+        /* Scripture Cards Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
         /* Confetti Animation */
         .confetti {
             position: fixed;
@@ -2583,6 +2608,10 @@
             { name: 'REVELATION', tamil_name: 'வெளிப்படுத்தல்', chapters: 22 }
         ];
 
+        // Global variables for async operations
+        let loadingAllUsersPromise = null;
+        let dashboardSyncInterval = null;
+
         // State
         let state = {
             darkMode: localStorage.getItem('bibleTrackerTheme') !== 'light',
@@ -2600,7 +2629,7 @@
             showAllUsers: false,  // Track if all users should be shown in dashboard
             loadedUserData: new Set(),  // Track which users have their progress loaded
             userModalError: '',  // Error message for user modal
-            dashboardTab: 'my-plan',  // 'my-plan', 'family', 'notes', or 'quiz' - for tabbed dashboard view
+            dashboardTab: 'home',  // 'home', 'my-plan', 'family', 'notes', or 'quiz' - for tabbed dashboard view
             skipLoadingScreen: false,  // Skip loading screen when switching views
             dashboardStatsLoaded: false,  // Only load dashboard stats once per session
             isInitializing: true,  // Track if app is still initializing
@@ -2618,6 +2647,7 @@
             selectedQuizBook: null,  // Track selected book (Matthew, Mark, etc)
             selectedQuizChapter: null,  // Track selected chapter for quiz
             completedQuizChapters: {},  // Track completed chapters per user per day
+            scriptureCardFlipped: false,  // Track if the flippable scripture card is flipped
             chapterScores: {},  // Track scores for each chapter per user per day
             quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
             showQuizBackConfirmation: false,  // Show confirmation modal when going back from quiz
@@ -3587,9 +3617,110 @@
             }
         }
 
-        // Load all users' progress in background (non-blocking)
-        let loadingAllUsersPromise = null;
-        let dashboardSyncInterval = null;
+        // Load Yearly and Monthly Verses from Supabase
+        let cachedVerses = {
+            yearly: null,
+            monthly: null,
+            userPromise: null,
+            userCommand: null,
+            lastFetch: 0
+        };
+
+        async function loadYearlyMonthlyVerses() {
+            try {
+                const now = Date.now();
+                const currentYear = new Date().getFullYear();
+                const currentMonth = new Date().getMonth() + 1;
+                
+                // Cache for 1 hour (3600000 ms) - only refetch if cache expired or missing
+                if (cachedVerses.lastFetch && (now - cachedVerses.lastFetch < 3600000) && cachedVerses.yearly && cachedVerses.monthly) {
+                    console.log('Using cached verses');
+                    return cachedVerses;
+                }
+                
+                console.log('Fetching verses from Supabase for', currentYear, 'month', currentMonth);
+                
+                // Fetch both yearly/monthly verses and user-specific promise/command verses in parallel
+                const fetchPromises = [
+                    BibleReadingDB.getYearlyVerse(currentYear, 'tamil').catch(err => {
+                        console.warn('Error loading yearly verse:', err);
+                        return null;
+                    }),
+                    BibleReadingDB.getMonthlyVerse(currentYear, currentMonth, 'tamil').catch(err => {
+                        console.warn('Error loading monthly verse:', err);
+                        return null;
+                    })
+                ];
+
+                // Add user-specific verses if user is logged in
+                if (state.currentUser && state.currentUser.id) {
+                    fetchPromises.push(
+                        BibleReadingDB.getUserPromiseVerse(state.currentUser.id).catch(err => {
+                            console.warn('Error loading user promise verse:', err);
+                            return null;
+                        }),
+                        BibleReadingDB.getUserCommandVerse(state.currentUser.id).catch(err => {
+                            console.warn('Error loading user command verse:', err);
+                            return null;
+                        })
+                    );
+                } else {
+                    fetchPromises.push(Promise.resolve(null), Promise.resolve(null));
+                }
+
+                const [yearlyVerse, monthlyVerse, userPromiseVerse, userCommandVerse] = await Promise.all(fetchPromises);
+                
+                console.log('Supabase verses fetched:', { 
+                    yearly: yearlyVerse ? { reference: yearlyVerse.reference, hasText: !!yearlyVerse.verse_text } : null,
+                    monthly: monthlyVerse ? { reference: monthlyVerse.reference, hasText: !!monthlyVerse.verse_text } : null,
+                    userPromise: userPromiseVerse ? { reference: userPromiseVerse.reference, hasText: !!userPromiseVerse.verse_text } : null,
+                    userCommand: userCommandVerse ? { reference: userCommandVerse.reference, hasText: !!userCommandVerse.verse_text } : null
+                });
+                
+                cachedVerses = {
+                    yearly: yearlyVerse,
+                    monthly: monthlyVerse,
+                    userPromise: userPromiseVerse,
+                    userCommand: userCommandVerse,
+                    lastFetch: now
+                };
+                
+                console.log('Verses loaded from Supabase:', { 
+                    yearly: !!yearlyVerse, 
+                    monthly: !!monthlyVerse,
+                    userPromise: !!userPromiseVerse,
+                    userCommand: !!userCommandVerse
+                });
+                
+                // Trigger re-render if dashboard is visible
+                if (state.showDashboard && state.dashboardTab === 'home') {
+                    render();
+                }
+                
+                return cachedVerses;
+            } catch (error) {
+                console.error('Error loading yearly/monthly verses:', error);
+                return cachedVerses;
+            }
+        }
+
+        // Call this in DOMContentLoaded to preload verses
+        const initialLoadVerses = async () => {
+            try {
+                console.log('Starting background verse loading...');
+                await loadYearlyMonthlyVerses();
+                console.log('Background verse loading completed');
+            } catch (error) {
+                console.warn('Background verse loading failed, will use fallback:', error);
+            }
+        };
+
+        // Load verses in background after page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initialLoadVerses);
+        } else {
+            initialLoadVerses();
+        }
 
         // Start periodic sync for dashboard data
         function startDashboardSync() {
@@ -3929,6 +4060,10 @@
                 await loadUserProgress(user);
                 await loadCompletedPortionsForDate();
                 await loadQuizProgress(user);
+                
+                // Clear verse cache and reload user-specific verses
+                cachedVerses.lastFetch = 0;
+                await loadYearlyMonthlyVerses();
                 
                 saveData();
             } finally {
@@ -4451,7 +4586,95 @@
 
                     <div class="dashboard-tabs-content">
                         <div class="max-w-7xl mx-auto px-4 py-6 space-y-6 pb-28">
-                        ${state.dashboardTab === 'my-plan' ? `
+                        ${state.dashboardTab === 'home' ? `
+                            <!-- HOME TAB - SCRIPTURE CARDS -->
+                            <div class="max-w-2xl mx-auto space-y-4">
+
+                                <!-- CARD 1: Verse of the Year -->
+                                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}">
+                                    <div style="height: 0.1rem;" class="bg-gradient-to-r from-amber-400 to-orange-500"></div>
+                                    <div class="p-4 relative">
+                                        <div class="flex items-center gap-2 mb-5">
+                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-amber-400 to-orange-500 shadow-md">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                            </div>
+                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Yearly Promise</h2>
+                                        </div>
+                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.yearly?.verse_text || 'மலைகள் விலகினாலும், பர்வதங்கள் நிலைபெயர்ந்தாலும், என் கிருபை உன்னைவிட்டு விலகாமலும், என் சமாதானத்தின் உடன்படிக்கை நிலைபெயராமலும் இருக்கும் என்று, உன்மேல் மனதுருகுகிற கர்த்தர் சொல்லுகிறார்.'}"</p>
+                                        <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-amber-50 border-amber-200'}">
+                                            <p class="font-semibold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">${cachedVerses.yearly?.reference || 'Isaiah 54:10'}</p>
+                                        </div>
+                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                    </div>
+                                </div>
+
+                                <!-- CARD 2: Verse of the Month -->
+                                <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}">
+                                    <div style="height: 0.1rem;" class="bg-gradient-to-r from-blue-400 to-indigo-500"></div>
+                                    <div class="p-4 relative">
+                                        <div class="flex items-center gap-2 mb-5">
+                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-blue-400 to-indigo-500 shadow-md">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v2h16V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5H4v8a2 2 0 002 2h12a2 2 0 002-2V7h-2v1a1 1 0 11-2 0V7h-4v1a1 1 0 11-2 0V7H6v1a1 1 0 11-2 0V7z"></path></svg>
+                                            </div>
+                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Monthly Promise</h2>
+                                        </div>
+                                        <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.monthly?.verse_text || 'கர்த்தர் என் கன்மலையும், என் கோட்டையும், என் இரட்சகரும், என் தேவனும், நான் நம்பியிருக்கிற என் துருகமும், என் கேடகமும், என் இரட்சணியக் கொம்பும், என் உயர்ந்த அடைக்கலமுமாயிருக்கிறார்.'}"</p>
+                                        <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-blue-50 border-blue-200'}">
+                                            <p class="font-semibold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">${cachedVerses.monthly?.reference || 'Psalms 18:10'}</p>
+                                        </div>
+                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                    </div>
+                                </div>
+
+                                <!-- CARD 3: Flippable Card -->
+                                <div class="perspective-1000" id="flippableCard">
+                                    <div class="relative w-full cursor-pointer transition-transform duration-700 transform-style-3d" style="transformStyle: preserve-3d; transform: rotateY(${state.scriptureCardFlipped ? '180deg' : '0deg'});" onclick="state.scriptureCardFlipped = !state.scriptureCardFlipped; render();">
+                                        
+                                        <!-- Front Side -->
+                                        <div class="overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden;">
+                                            <div style="height: 0.1rem;" class="bg-gradient-to-r from-rose-400 to-pink-500"></div>
+                                            <div class="p-4 relative">
+                                                <div class="flex items-center gap-2 mb-5">
+                                                    <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-rose-400 to-pink-500 shadow-md">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                                                    </div>
+                                                    <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Promise - வாக்குத்தத்தம்</h2>
+                                                </div>
+                                                <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userPromise?.verse_text || 'வேண்டுவதைக் கேட்டுக்கொண்டபடியே தேவன் உங்களுக்குக் கொடுத்திருக்கிறார்.'}"</p>
+                                                <div class="flex items-center justify-between">
+                                                    <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
+                                                        <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userPromise?.reference || 'Isaiah 54:10'}</p>
+                                                    </div>
+                                                    <div class="${state.darkMode ? 'text-slate-400' : 'text-slate-500'} text-xs px-2 py-1 rounded">Tap to flip →</div>
+                                                </div>
+                                                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Back Side -->
+                                        <div class="absolute top-0 left-0 w-full overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden; transform: rotateY(180deg);">
+                                            <div style="height: 0.1rem;" class="bg-gradient-to-r from-rose-400 to-pink-500"></div>
+                                            <div class="p-4 relative">
+                                                <div class="flex items-center gap-2 mb-5">
+                                                    <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-rose-400 to-pink-500 shadow-md">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                                                    </div>
+                                                    <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Command - கட்டளை</h2>
+                                                </div>
+                                                <p class="text-xs leading-relaxed mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userCommand?.verse_text || 'உங்கள் பாவங்களை விட்டுவிட்டு, கர்த்தரை நாடுங்கள்.'}"</p>
+                                                <div class="flex items-center justify-between">
+                                                    <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
+                                                        <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userCommand?.reference || 'Isaiah 55:7'}</p>
+                                                    </div>
+                                                    <div class="${state.darkMode ? 'text-slate-400' : 'text-slate-500'} text-xs px-2 py-1 rounded">← Tap to flip</div>
+                                                </div>
+                                                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ` : state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
                             ${todayReading ? `
                                 <div class="reading-card-container">
@@ -5543,6 +5766,10 @@
                     <!-- Bottom Navigation Bar -->
                     <div class="fixed bottom-0 left-0 right-0 ${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.border} z-40 ${(state.dashboardTab === 'revelation-chapters' || state.dashboardTab === 'revelation-introduction' || state.quizStarted) ? 'hidden' : ''}" style="border-top-width: 1.5px;">
                         <div class="flex items-center justify-between h-16 overflow-hidden">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'home'; cachedVerses.lastFetch = 0; loadYearlyMonthlyVerses().catch(() => {}); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'home' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="home">
+                                <svg class="w-6 h-6 opacity-70" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+                                <span class="text-xs font-semibold">Home</span>
+                            </button>
                             <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'my-plan'; render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'my-plan' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="my-plan">
                                 <img src="../resources/icons/my_plan.png" alt="My Plan" class="w-6 h-6 opacity-70" style="${state.darkMode ? 'filter: invert(1);' : ''}" />
                                 <span class="text-xs font-semibold">My Plan</span>
@@ -6878,6 +7105,9 @@
                     // Load quiz chapter results
                     await loadQuizChaptersFromSupabase();
                 }
+                
+                // Load verses BEFORE first render so they display correctly
+                await loadYearlyMonthlyVerses();
                 
                 // Mark initialization as complete
                 state.isInitializing = false;
