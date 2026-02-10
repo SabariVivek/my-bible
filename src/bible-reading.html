@@ -3631,7 +3631,8 @@
             monthly: null,
             userPromise: null,
             userCommand: null,
-            lastFetch: 0
+            lastFetch: 0,
+            lastUserId: null
         };
 
         async function loadYearlyMonthlyVerses() {
@@ -3639,14 +3640,23 @@
                 const now = Date.now();
                 const currentYear = new Date().getFullYear();
                 const currentMonth = new Date().getMonth() + 1;
+                const currentUserId = state.currentUser?.id;
                 
-                // Cache for 1 hour (3600000 ms) - only refetch if cache expired or missing
-                if (cachedVerses.lastFetch && (now - cachedVerses.lastFetch < 3600000) && cachedVerses.yearly && cachedVerses.monthly) {
-                    console.log('Using cached verses');
+                // Cache for 1 hour (3600000 ms), but always reload if user changed
+                const isCacheValid = cachedVerses.lastFetch && 
+                    (now - cachedVerses.lastFetch < 3600000) && 
+                    cachedVerses.yearly && 
+                    cachedVerses.monthly &&
+                    cachedVerses.userPromise &&
+                    cachedVerses.userCommand &&
+                    cachedVerses.lastUserId === currentUserId;
+                
+                if (isCacheValid) {
+                    console.log('Using cached verses for user', currentUserId);
                     return cachedVerses;
                 }
                 
-                console.log('Fetching verses from Supabase for', currentYear, 'month', currentMonth);
+                console.log('Fetching verses from Supabase for', currentYear, 'month', currentMonth, 'user', currentUserId);
                 
                 // Fetch both yearly/monthly verses and user-specific promise/command verses in parallel
                 const fetchPromises = [
@@ -3661,14 +3671,14 @@
                 ];
 
                 // Add user-specific verses if user is logged in
-                if (state.currentUser && state.currentUser.id) {
+                if (currentUserId) {
                     fetchPromises.push(
-                        BibleReadingDB.getUserPromiseVerse(state.currentUser.id).catch(err => {
-                            console.warn('Error loading user promise verse:', err);
+                        BibleReadingDB.getUserPromiseVerse(currentUserId).catch(err => {
+                            console.warn('Error loading user promise verse for user', currentUserId, ':', err);
                             return null;
                         }),
-                        BibleReadingDB.getUserCommandVerse(state.currentUser.id).catch(err => {
-                            console.warn('Error loading user command verse:', err);
+                        BibleReadingDB.getUserCommandVerse(currentUserId).catch(err => {
+                            console.warn('Error loading user command verse for user', currentUserId, ':', err);
                             return null;
                         })
                     );
@@ -3678,7 +3688,7 @@
 
                 const [yearlyVerse, monthlyVerse, userPromiseVerse, userCommandVerse] = await Promise.all(fetchPromises);
                 
-                console.log('Supabase verses fetched:', { 
+                console.log('Supabase verses fetched for user', currentUserId, ':', { 
                     yearly: yearlyVerse ? { reference: yearlyVerse.reference, hasText: !!yearlyVerse.verse_text } : null,
                     monthly: monthlyVerse ? { reference: monthlyVerse.reference, hasText: !!monthlyVerse.verse_text } : null,
                     userPromise: userPromiseVerse ? { reference: userPromiseVerse.reference, hasText: !!userPromiseVerse.verse_text } : null,
@@ -3690,10 +3700,11 @@
                     monthly: monthlyVerse,
                     userPromise: userPromiseVerse,
                     userCommand: userCommandVerse,
-                    lastFetch: now
+                    lastFetch: now,
+                    lastUserId: currentUserId
                 };
                 
-                console.log('Verses loaded from Supabase:', { 
+                console.log('Verses loaded and cached for user', currentUserId, ':', { 
                     yearly: !!yearlyVerse, 
                     monthly: !!monthlyVerse,
                     userPromise: !!userPromiseVerse,
@@ -3716,7 +3727,10 @@
         const initialLoadVerses = async () => {
             try {
                 console.log('Starting background verse loading...');
-                await loadYearlyMonthlyVerses();
+                // Only load if we have a current user
+                if (state.currentUser && state.currentUser.id) {
+                    await loadYearlyMonthlyVerses();
+                }
                 console.log('Background verse loading completed');
             } catch (error) {
                 console.warn('Background verse loading failed, will use fallback:', error);
@@ -3728,6 +3742,32 @@
             document.addEventListener('DOMContentLoaded', initialLoadVerses);
         } else {
             initialLoadVerses();
+        }
+
+        // Function to ensure verses are loaded for current user
+        async function ensureVersesLoaded() {
+            if (!state.currentUser || !state.currentUser.id) {
+                console.log('No current user, skipping verse load');
+                return;
+            }
+            
+            const userId = state.currentUser.id;
+            console.log('Ensuring verses loaded for user', userId);
+            
+            // Clear cache for this user to force fresh load
+            if (cachedVerses.lastUserId !== userId) {
+                console.log('User changed (was', cachedVerses.lastUserId, 'now', userId, ') - clearing cache');
+                cachedVerses.lastFetch = 0;
+                cachedVerses.lastUserId = null;
+            }
+            
+            // Load verses if not already loaded for this user
+            if (!cachedVerses.userPromise || !cachedVerses.userCommand || cachedVerses.lastUserId !== userId) {
+                console.log('Verses not loaded for user', userId, '- loading now');
+                await loadYearlyMonthlyVerses();
+            } else {
+                console.log('Verses already loaded for user', userId);
+            }
         }
 
         // Start periodic sync for dashboard data
@@ -4069,9 +4109,8 @@
                 await loadCompletedPortionsForDate();
                 await loadQuizProgress(user);
                 
-                // Clear verse cache and reload user-specific verses
-                cachedVerses.lastFetch = 0;
-                await loadYearlyMonthlyVerses();
+                // Ensure verses are loaded for the newly switched user
+                await ensureVersesLoaded();
                 
                 saveData();
             } finally {
@@ -5774,7 +5813,7 @@
                     <!-- Bottom Navigation Bar -->
                     <div class="fixed bottom-0 left-0 right-0 ${state.darkMode ? 'bg-slate-800' : 'bg-gray-100'} ${theme.border} z-40 ${(state.dashboardTab === 'revelation-chapters' || state.dashboardTab === 'revelation-introduction' || state.quizStarted) ? 'hidden' : ''}" style="border-top-width: 1.5px;">
                         <div class="flex items-center justify-between h-16 overflow-hidden">
-                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'home'; cachedVerses.lastFetch = 0; loadYearlyMonthlyVerses().catch(() => {}); render();" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'home' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="home">
+                            <button onclick="state.loadedUserData.clear(); state.dashboardTab = 'home'; ensureVersesLoaded().then(() => render()).catch(() => render());" class="dashboard-tab-button flex-1 flex flex-col items-center justify-center gap-2 h-full transition-colors ${state.dashboardTab === 'home' ? (state.darkMode ? 'bg-slate-700 text-blue-400' : 'bg-gray-200 text-blue-600') : theme.textSecondary}" data-tab="home">
                                 <svg class="w-6 h-6 opacity-70" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
                                 <span class="text-xs font-semibold">Home</span>
                             </button>
@@ -6936,6 +6975,9 @@
                 }
                 
                 // Show dashboard when user is selected and dashboard view is active
+                // Ensure verses are loaded for the current user before rendering
+                await ensureVersesLoaded();
+                
                 app.innerHTML = renderDashboard();
                 // Load intro content if viewing revelation chapter intro
                 if (state.dashboardTab === 'revelation-introduction') {
