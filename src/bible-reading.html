@@ -2657,8 +2657,7 @@
             selectedQuizBook: null,  // Track selected book (Matthew, Mark, etc)
             selectedQuizChapter: null,  // Track selected chapter for quiz
             completedQuizChapters: {},  // Track completed chapters per user per day
-            scriptureCardFlipped: false,  // Track if the flippable scripture card is flipped
-            homeTabCardIndex: 0,  // Track which card is currently shown in the carousel (0=yearly, 1=monthly, 2=promise/command)
+            homeTabCardIndex: 0,  // Track which card is currently shown in the carousel (0=yearly, 1=monthly, 2=promise, 3=command)
             chapterScores: {},  // Track scores for each chapter per user per day
             quizSummaryData: null,  // Store summary data for completed chapter review {questions, userAnswers}
             showQuizBackConfirmation: false,  // Show confirmation modal when going back from quiz
@@ -3628,13 +3627,6 @@
             }
         }
 
-        // Toggle scripture card flip while preserving scroll position
-        async function toggleScriptureCardFlip() {
-            const scrollPos = window.scrollY || window.pageYOffset;
-            state.scriptureCardFlipped = !state.scriptureCardFlipped;
-            await render();
-            window.scrollTo(0, scrollPos);
-        }
 
         // Initialize carousel swipe gestures
         function initCarouselSwipe() {
@@ -3643,11 +3635,8 @@
 
             let touchStartX = 0;
             let touchEndX = 0;
-            let isInFlippable = false;
 
             carouselContainer.addEventListener('touchstart', (e) => {
-                // Check if touch started on the flippable card
-                isInFlippable = e.target.closest('#flippableCard') !== null;
                 touchStartX = e.changedTouches[0].screenX;
             }, false);
 
@@ -3667,17 +3656,13 @@
                 // Only handle carousel swipe if distance is large enough
                 if (Math.abs(diff) < swipeThreshold) return;
 
-                // Allow large swipes even on flippable card, but ignore small swipes on it
-                // (to avoid interfering with card flip)
-                if (isInFlippable && Math.abs(diff) < 70) return;
-
                 if (diff > 0) {
                     // Swiped left - go to next card (wrap to first if at last)
-                    state.homeTabCardIndex = (state.homeTabCardIndex + 1) % 3;
+                    state.homeTabCardIndex = (state.homeTabCardIndex + 1) % 4;
                     render();
                 } else {
                     // Swiped right - go to previous card (wrap to last if at first)
-                    state.homeTabCardIndex = (state.homeTabCardIndex - 1 + 3) % 3;
+                    state.homeTabCardIndex = (state.homeTabCardIndex - 1 + 4) % 4;
                     render();
                 }
             }
@@ -3686,10 +3671,10 @@
             document.addEventListener('keydown', (e) => {
                 if (state.dashboardTab === 'home' && state.showDashboard) {
                     if (e.key === 'ArrowRight') {
-                        state.homeTabCardIndex = (state.homeTabCardIndex + 1) % 3;
+                        state.homeTabCardIndex = (state.homeTabCardIndex + 1) % 4;
                         render();
                     } else if (e.key === 'ArrowLeft') {
-                        state.homeTabCardIndex = (state.homeTabCardIndex - 1 + 3) % 3;
+                        state.homeTabCardIndex = (state.homeTabCardIndex - 1 + 4) % 4;
                         render();
                     }
                 }
@@ -4710,7 +4695,7 @@
                                 <!-- Navigation - Arrows and Dots -->
                                 <div class="flex justify-between items-center gap-4 mb-4">
                                     <!-- Left Arrow Button -->
-                                    <button onclick="state.homeTabCardIndex = (state.homeTabCardIndex - 1 + 3) % 3; render();" class="flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200 ${state.darkMode ? 'bg-slate-700 hover:bg-slate-600 text-slate-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} hover:shadow-lg hover:scale-110 active:scale-95" title="Previous card">
+                                    <button onclick="state.homeTabCardIndex = (state.homeTabCardIndex - 1 + 4) % 4; render();" class="flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200 ${state.darkMode ? 'bg-slate-700 hover:bg-slate-600 text-slate-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} hover:shadow-lg hover:scale-110 active:scale-95" title="Previous card">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
                                         </svg>
@@ -4719,12 +4704,13 @@
                                     <!-- Navigation Dots -->
                                     <div class="flex justify-center items-center gap-3">
                                         <button onclick="state.homeTabCardIndex = 0; render();" class="w-2 h-2 rounded-full ${state.homeTabCardIndex === 0 ? (state.darkMode ? 'bg-amber-500' : 'bg-amber-400') : (state.darkMode ? 'bg-slate-600' : 'bg-gray-300')} transition-all duration-300 hover:scale-125 cursor-pointer shadow-sm" title="Yearly Promise"></button>
-                                        <button onclick="state.homeTabCardIndex = 1; render();" class="w-2 h-2 rounded-full ${state.homeTabCardIndex === 1 ? (state.darkMode ? 'bg-blue-500' : 'bg-blue-400') : (state.darkMode ? 'bg-slate-600' : 'bg-gray-300')} transition-all duration-300 hover:scale-125 cursor-pointer shadow-sm" title="Monthly Promise"></button>
-                                        <button onclick="state.homeTabCardIndex = 2; render();" class="w-2 h-2 rounded-full ${state.homeTabCardIndex === 2 ? (state.darkMode ? 'bg-rose-500' : 'bg-rose-400') : (state.darkMode ? 'bg-slate-600' : 'bg-gray-300')} transition-all duration-300 hover:scale-125 cursor-pointer shadow-sm" title="Promise & Command"></button>
+                                        <button onclick="state.homeTabCardIndex = 1; render();" class="w-2 h-2 rounded-full ${state.homeTabCardIndex === 1 ? (state.darkMode ? 'bg-purple-500' : 'bg-purple-400') : (state.darkMode ? 'bg-slate-600' : 'bg-gray-300')} transition-all duration-300 hover:scale-125 cursor-pointer shadow-sm" title="Monthly Promise"></button>
+                                        <button onclick="state.homeTabCardIndex = 2; render();" class="w-2 h-2 rounded-full ${state.homeTabCardIndex === 2 ? (state.darkMode ? 'bg-rose-500' : 'bg-rose-400') : (state.darkMode ? 'bg-slate-600' : 'bg-gray-300')} transition-all duration-300 hover:scale-125 cursor-pointer shadow-sm" title="Promise"></button>
+                                        <button onclick="state.homeTabCardIndex = 3; render();" class="w-2 h-2 rounded-full ${state.homeTabCardIndex === 3 ? (state.darkMode ? 'bg-green-500' : 'bg-green-400') : (state.darkMode ? 'bg-slate-600' : 'bg-gray-300')} transition-all duration-300 hover:scale-125 cursor-pointer shadow-sm" title="Command"></button>
                                     </div>
                                     
                                     <!-- Right Arrow Button -->
-                                    <button onclick="state.homeTabCardIndex = (state.homeTabCardIndex + 1) % 3; render();" class="flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200 ${state.darkMode ? 'bg-slate-700 hover:bg-slate-600 text-slate-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} hover:shadow-lg hover:scale-110 active:scale-95" title="Next card">
+                                    <button onclick="state.homeTabCardIndex = (state.homeTabCardIndex + 1) % 4; render();" class="flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200 ${state.darkMode ? 'bg-slate-700 hover:bg-slate-600 text-slate-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-700'} hover:shadow-lg hover:scale-110 active:scale-95" title="Next card">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
                                         </svg>
@@ -4732,10 +4718,10 @@
                                 </div>
 
                                 <!-- Cards Container -->
-                                <div class="carousel-container relative" style=overflow-x:hidden; overflow-y:visible;">
+                                <div class="carousel-container relative" style="overflow-x: hidden; overflow-y: visible;">
                                     <!-- CARD 1: Verse of the Year -->
                                     <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 0 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 0 ? '0' : state.homeTabCardIndex > 0 ? '-100%' : '100%'});">
-                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}" background-size: cover; background-position: right center; background-blend-mode: overlay;">
+                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-amber-600/50' : 'bg-white border-2 border-amber-300'}" style="background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
                                             <div style="height: 0.25rem;" class="bg-gradient-to-r from-amber-400"></div>
                                             <div class="p-4 relative">
                                                 <div class="flex items-center gap-2 mb-5">
@@ -4755,70 +4741,60 @@
 
                                     <!-- CARD 2: Verse of the Month -->
                                     <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 1 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 1 ? '0' : state.homeTabCardIndex > 1 ? '-100%' : '100%'});">
-                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-blue-600/50' : 'bg-white border-2 border-blue-300'}" background-size: cover; background-position: right center; background-blend-mode: overlay;">
-                                            <div style="height: 0.25rem;" class="bg-gradient-to-r from-blue-400"></div>
+                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-purple-600/50' : 'bg-white border-2 border-purple-300'}" style="background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
+                                            <div style="height: 0.25rem;" class="bg-gradient-to-r from-purple-400"></div>
                                             <div class="p-4 relative">
                                                 <div class="flex items-center gap-2 mb-5">
-                                                    <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-blue-400 to-indigo-500 shadow-md">
+                                                    <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-purple-400 to-violet-500 shadow-md">
                                                         <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13z"></path></svg>
                                                     </div>
                                                     <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Monthly Promise</h2>
                                                 </div>
                                                 <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.monthly?.verse_text || 'கர்த்தர் என் கன்மலையும், என் கோட்டையும், என் இரட்சகரும், என் தேவனும், நான் நம்பியிருக்கிற என் துருகமும், என் கேடகமும், என் இரட்சணியக் கொம்பும், என் உயர்ந்த அடைக்கலமுமாயிருக்கிறார்.'}"</p>
-                                                <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-blue-50 border-blue-200'}">
-                                                    <p class="font-semibold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">${cachedVerses.monthly?.reference || 'Psalms 18:10'}</p>
+                                                <div class="ml-auto inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-purple-50 border-purple-200'}">
+                                                    <p class="font-semibold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">${cachedVerses.monthly?.reference || 'Psalms 18:10'}</p>
                                                 </div>
-                                                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-purple-400 to-violet-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- CARD 3: Flippable Card -->
+                                    <!-- CARD 3: Promise Card -->
                                     <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 2 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 2 ? '0' : state.homeTabCardIndex > 2 ? '-100%' : '100%'});">
-                                        <div class="perspective-1000" id="flippableCard">
-                                            <div class="relative w-full cursor-pointer transition-transform duration-700 transform-style-3d" style="transformStyle: preserve-3d; transform: rotateY(${state.scriptureCardFlipped ? '180deg' : '0deg'});" onclick="event.preventDefault(); event.stopPropagation(); toggleScriptureCardFlip();">
-                                                
-                                                <!-- Front Side -->
-                                                <div class="overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden; background-size: cover; background-position: right center; background-blend-mode: overlay;">
-                                                    <div style="height: 0.25rem;" class="bg-gradient-to-r from-rose-400"></div>
-                                                    <div class="p-4 relative">
-                                                        <div class="flex items-center gap-2 mb-5">
-                                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-rose-400 to-pink-500 shadow-md">
-                                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
-                                                            </div>
-                                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Promise - வாக்குத்தத்தம்</h2>
-                                                        </div>
-                                                        <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userPromise?.verse_text || 'வேண்டுவதைக் கேட்டுக்கொண்டபடியே தேவன் உங்களுக்குக் கொடுத்திருக்கிறார்.'}"</p>
-                                                        <div class="flex items-center justify-between">
-                                                            <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
-                                                                <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userPromise?.reference || 'Isaiah 54:10'}</p>
-                                                            </div>
-                                                            <div class="${state.darkMode ? 'text-slate-400' : 'text-slate-500'} text-xs px-2 py-1 rounded">Tap to flip →</div>
-                                                        </div>
-                                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
+                                            <div style="height: 0.25rem;" class="bg-gradient-to-r from-rose-400"></div>
+                                            <div class="p-4 relative">
+                                                <div class="flex items-center gap-2 mb-5">
+                                                    <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-rose-400 to-pink-500 shadow-md">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
                                                     </div>
+                                                    <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Promise - வாக்குத்தத்தம்</h2>
                                                 </div>
+                                                <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userPromise?.verse_text || 'வேண்டுவதைக் கேட்டுக்கொண்டபடியே தேவன் உங்களுக்குக் கொடுத்திருக்கிறார்.'}"</p>
+                                                <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
+                                                    <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userPromise?.reference || 'Isaiah 54:10'}</p>
+                                                </div>
+                                                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                                <!-- Back Side -->
-                                                <div class="absolute top-0 left-0 w-full overflow-hidden backface-hidden rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 ${state.darkMode ? 'bg-slate-800 border border-rose-600/50' : 'bg-white border-2 border-rose-300'}" style="backfaceVisibility: hidden; WebkitBackfaceVisibility: hidden; transform: rotateY(180deg); background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
-                                                    <div style="height: 0.25rem;" class="bg-gradient-to-r from-rose-400"></div>
-                                                    <div class="p-4 relative">
-                                                        <div class="flex items-center gap-2 mb-5">
-                                                            <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-rose-400 to-pink-500 shadow-md">
-                                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
-                                                            </div>
-                                                            <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Command - கட்டளை</h2>
-                                                        </div>
-                                                        <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userCommand?.verse_text || 'உங்கள் பாவங்களை விட்டுவிட்டு, கர்த்தரை நாடுங்கள்.'}"</p>
-                                                        <div class="flex items-center justify-between">
-                                                            <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-rose-50 border-rose-200'}">
-                                                                <p class="font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">${cachedVerses.userCommand?.reference || 'Isaiah 55:7'}</p>
-                                                            </div>
-                                                            <div class="${state.darkMode ? 'text-slate-400' : 'text-slate-500'} text-xs px-2 py-1 rounded">← Tap to flip</div>
-                                                        </div>
-                                                        <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
+                                    <!-- CARD 4: Command Card -->
+                                    <div class="transition-all duration-500 ease-out ${state.homeTabCardIndex === 3 ? 'opacity-100 translate-x-0' : 'absolute inset-0 opacity-0 pointer-events-none'}" style="transform: translateX(${state.homeTabCardIndex === 3 ? '0' : state.homeTabCardIndex > 3 ? '-100%' : '100%'});">
+                                        <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 ${state.darkMode ? 'bg-slate-800 border border-green-600/50' : 'bg-white border-2 border-green-300'}" style="background-image: url('../resources/images/background.png'); background-size: cover; background-position: right center; background-blend-mode: overlay;">
+                                            <div style="height: 0.25rem;" class="bg-gradient-to-r from-green-400"></div>
+                                            <div class="p-4 relative">
+                                                <div class="flex items-center gap-2 mb-5">
+                                                    <div style="padding: 0.25rem;" class="rounded-lg bg-gradient-to-br from-green-400 to-emerald-500 shadow-md">
+                                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
                                                     </div>
+                                                    <h2 class="${state.darkMode ? 'text-white' : 'text-slate-600'} text-sm font-semibold">Command - கட்டளை</h2>
                                                 </div>
+                                                <p class="text-xs leading-loose mb-5" style="color: ${state.darkMode ? '#9ca3af' : '#6b7280'};\">"${cachedVerses.userCommand?.verse_text || 'உங்கள் பாவங்களை விட்டுவிட்டு, கர்த்தரை நாடுங்கள்.'}"</p>
+                                                <div class="inline-block px-2 py-1 rounded-full border text-xs ${state.darkMode ? 'bg-slate-700/50 border-slate-600' : 'bg-green-50 border-green-200'}">
+                                                    <p class="font-semibold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">${cachedVerses.userCommand?.reference || 'Isaiah 55:7'}</p>
+                                                </div>
+                                                <div class="absolute -right-8 -bottom-8 w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full transition-transform duration-500 ${state.darkMode ? 'opacity-10' : 'opacity-5'}"></div>
                                             </div>
                                         </div>
                                     </div>
