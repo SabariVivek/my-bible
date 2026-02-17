@@ -330,75 +330,133 @@
 </div>
 
 <script>
-const BASE = 'https://d3owcl6pd5zkqc.cloudfront.net/images/figures/';
 const FALLBACK = 'https://d3owcl6pd5zkqc.cloudfront.net/images/account_nobgrnd.png';
+const BASE = "https://d3owcl6pd5zkqc.cloudfront.net/images/figures/";
 
 const sections = [
+
+  /* =====================================================
+     FEATURED
+  ===================================================== */
   {
     id: 'featured',
     label: 'Featured',
     labelClass: 'label-all',
     lineClass: 'line-all',
     cardClass: 'feat-card',
+
     characters: [
-      { name: 'Jesus',    role: 'Savior of Humanity',       img: 'Jesus_1200x1200.webp',    t: 'NT' },
-      { name: 'Moses',    role: 'Prophet & Lawgiver',       img: 'Moses_1200x1200.webp',    t: 'OT' },
-      { name: 'David',    role: 'King & Psalmist',          img: 'David_1200x1200.webp',    t: 'OT' },
-      { name: 'Mary',     role: 'Mother of Jesus',          img: 'Mary_1200x1200.webp',     t: 'NT' },
-      { name: 'Abraham',  role: 'Father of Nations',        img: 'Abraham_1200x1200.webp',  t: 'OT' },
-      { name: 'Paul',     role: 'Apostle to Gentiles',      img: 'Paul_1200x1200.webp',     t: 'NT' },
-      { name: 'Noah',     role: 'Builder of the Ark',       img: 'Noah_1200x1200.webp',     t: 'OT' },
-      { name: 'Solomon',  role: 'King of Wisdom',           img: 'Solomon_1200x1200.webp',  t: 'OT' },
+      { name: 'Jesus', role: 'Savior of Humanity', img: `Jesus_1200x1200.webp`, t: 'NT' },
+      { name: 'Moses', role: 'Prophet & Lawgiver', img: `Moses_1200x1200.webp`, t: 'OT' },
+      { name: 'David', role: 'King & Psalmist', img: `David_1200x1200.webp`, t: 'OT' },
+      { name: 'Mary', role: 'Mother of Jesus', img: `Mary_1200x1200.webp`, t: 'NT' },
+      { name: 'Abraham', role: 'Father of Nations', img: `Abraham_1200x1200.webp`, t: 'OT' },
+      { name: 'Paul', role: 'Apostle to Gentiles', img: `Paul_1200x1200.webp`, t: 'NT' },
+      { name: 'Noah', role: 'Ark Builder', img: `Noah_1200x1200.webp`, t: 'OT' },
+      { name: 'Solomon', role: 'King of Wisdom', img: `Solomon_1200x1200.webp`, t: 'OT' },
+      { name: 'Peter', role: 'Rock of the Church', img: `Peter_1200x1200.webp`, t: 'NT' },
+      { name: 'Esther', role: 'Queen of Persia', img: `Esther_1200x1200.webp`, t: 'OT' }
     ]
   },
+
+  /* =====================================================
+     OLD TESTAMENT
+  ===================================================== */
   {
     id: 'old-testament',
     label: 'Old Testament',
     labelClass: 'label-ot',
     lineClass: 'line-ot',
     cardClass: 'ot-card',
+
     characters: [
-      { name: 'Adam',     role: 'First Man on Earth',         img: 'Adam_1200x1200.webp',     t: 'OT' },
-      { name: 'Eve',      role: 'Mother of All Living',       img: 'Eve_1200x1200.webp',      t: 'OT' },
-      { name: 'Isaac',    role: 'Son of Abraham',             img: 'Isaac_1200x1200.webp',    t: 'OT' },
-      { name: 'Jacob',    role: 'Father of 12 Tribes',        img: 'Jacob_1200x1200.webp',    t: 'OT' },
-      { name: 'Joseph',   role: 'Interpreter of Dreams',      img: 'Joseph_1200x1200.webp',   t: 'OT' },
-      { name: 'Sarah',    role: 'Mother of Nations',          img: 'Sarah_1200x1200.webp',    t: 'OT' },
-      { name: 'Rachel',   role: 'Beloved Wife of Jacob',      img: 'Rachel_1200x1200.webp',   t: 'OT' },
-      { name: 'Leah',     role: 'First Wife of Jacob',        img: 'Leah_1200x1200.webp',     t: 'OT' },
-      { name: 'Aaron',    role: 'High Priest of Israel',      img: 'Aaron_1200x1200.webp',    t: 'OT' },
-      { name: 'Joshua',   role: 'Conqueror of Canaan',        img: 'Joshua_1200x1200.webp',   t: 'OT' },
-      { name: 'Samson',   role: 'Mighty Warrior of God',      img: 'Samson_1200x1200.webp',   t: 'OT' },
-      { name: 'Samuel',   role: 'Prophet & Judge',            img: 'Samuel_1200x1200.webp',   t: 'OT' },
-      { name: 'Saul',     role: 'First King of Israel',       img: 'Saul_1200x1200.webp',     t: 'OT' },
-      { name: 'Ruth',     role: 'Woman of Loyalty',           img: 'Ruth_1200x1200.webp',     t: 'OT' },
-      { name: 'Elijah',   role: 'Prophet of Fire',            img: 'Elijah_1200x1200.webp',   t: 'OT' },
-      { name: 'Elisha',   role: "God's Miracle Worker",       img: 'Elisha_1200x1200.webp',   t: 'OT' },
-      { name: 'Esther',   role: 'Queen & Savior',             img: 'Esther_1200x1200.webp',   t: 'OT' },
-      { name: 'Daniel',   role: 'Vision & Dream Seer',        img: 'Daniel_1200x1200.webp',   t: 'OT' },
-      { name: 'Jeremiah', role: 'Prophet of Doom & Hope',     img: 'Jeremiah_1200x1200.webp', t: 'OT' },
-      { name: 'Ezekiel',  role: 'Visionary Prophet',          img: 'Ezekiel_1200x1200.webp',  t: 'OT' },
-      { name: 'Miriam',   role: 'Prophetess & Sister',        img: 'Miriam_1200x1200.webp',   t: 'OT' },
-      { name: 'Bathsheba',role: 'Wife of King David',         img: 'Bathsheba_1200x1200.webp',t: 'OT' },
-      { name: 'Jonathan', role: 'Faithful Friend of David',   img: 'Jonathan_1200x1200.webp', t: 'OT' },
+      { name: 'Adam', role: 'First Man', img: `Adam_1200x1200.webp`, t: 'OT' },
+      { name: 'Eve', role: 'First Woman', img: `Eve_1200x1200.webp`, t: 'OT' },
+      { name: 'Isaac', role: 'Son of Promise', img: `Isaac_1200x1200.webp`, t: 'OT' },
+      { name: 'Rebekah', role: 'Wife of Isaac', img: `Rebekah_1200x1200.webp`, t: 'OT' },
+      { name: 'Jacob', role: 'Israel', img: `Jacob_1200x1200.webp`, t: 'OT' },
+      { name: 'Rachel', role: 'Wife of Jacob', img: `Rachel_1200x1200.webp`, t: 'OT' },
+      { name: 'Leah', role: 'Wife of Jacob', img: `Leah_1200x1200.webp`, t: 'OT' },
+      { name: 'Sarah', role: 'Mother of Nations', img: `Sarah_1200x1200.webp`, t: 'OT' },
+      { name: 'Ishmael', role: 'Son of Abraham', img: `Ishmael_1200x1200.webp`, t: 'OT' },
+      { name: 'Lot', role: 'Nephew of Abraham', img: `Lot_1200x1200.webp`, t: 'OT' },
+      { name: 'Joseph', role: 'Governor of Egypt', img: `Joseph_1200x1200.webp`, t: 'OT' },
+      { name: 'Judah', role: 'Tribe of Messiah', img: `Judah_1200x1200.webp`, t: 'OT' },
+      { name: 'Benjamin', role: 'Son of Jacob', img: `Benjamin_1200x1200.webp`, t: 'OT' },
+      { name: 'Levi', role: 'Priestly Tribe', img: `Levi_1200x1200.webp`, t: 'OT' },
+
+      { name: 'Aaron', role: 'High Priest', img: `Aaron_1200x1200.webp`, t: 'OT' },
+      { name: 'Miriam', role: 'Prophetess', img: `Miriam_1200x1200.webp`, t: 'OT' },
+      { name: 'Joshua', role: 'Leader of Israel', img: `Joshua_1200x1200.webp`, t: 'OT' },
+      { name: 'Caleb', role: 'Faithful Spy', img: `Caleb_1200x1200.webp`, t: 'OT' },
+
+      { name: 'Samson', role: 'Judge of Israel', img: `Samson_1200x1200.webp`, t: 'OT' },
+      { name: 'Rahab', role: 'Woman of Faith', img: `Rahab_1200x1200.webp`, t: 'OT' },
+      { name: 'Jephthah', role: 'Judge of Israel', img: `Jephthah_1200x1200.webp`, t: 'OT' },
+      { name: 'Othniel', role: 'First Judge', img: `Othniel_1200x1200.webp`, t: 'OT' },
+
+      { name: 'Ruth', role: 'Ancestor of David', img: `Ruth_1200x1200.webp`, t: 'OT' },
+      { name: 'Naomi', role: 'Mother-in-law of Ruth', img: `Naomi_1200x1200.webp`, t: 'OT' },
+      { name: 'Boaz', role: 'Kinsman Redeemer', img: `Boaz_1200x1200.webp`, t: 'OT' },
+      { name: 'Samuel', role: 'Prophet', img: `Samuel_1200x1200.webp`, t: 'OT' },
+
+      { name: 'Saul', role: 'First King', img: `Saul_1200x1200.webp`, t: 'OT' },
+      { name: 'Jonathan', role: 'Friend of David', img: `Jonathan_1200x1200.webp`, t: 'OT' },
+      { name: 'Bathsheba', role: 'Queen Mother', img: `Bathsheba_1200x1200.webp`, t: 'OT' },
+      { name: 'Jehoshaphat', role: 'King of Judah', img: `Jehoshaphat_1200x1200.webp`, t: 'OT' },
+
+      { name: 'Elijah', role: 'Prophet of Fire', img: `Elijah_1200x1200.webp`, t: 'OT' },
+      { name: 'Elisha', role: 'Prophet', img: `Elisha_1200x1200.webp`, t: 'OT' },
+      { name: 'Jeremiah', role: 'Major Prophet', img: `Jeremiah_1200x1200.webp`, t: 'OT' },
+      { name: 'Ezekiel', role: 'Major Prophet', img: `Ezekiel_1200x1200.webp`, t: 'OT' },
+      { name: 'Daniel', role: 'Prophet', img: `Daniel_1200x1200.webp`, t: 'OT' },
+      { name: 'Hosea', role: 'Minor Prophet', img: `Hosea_1200x1200.webp`, t: 'OT' },
+      { name: 'Amos', role: 'Minor Prophet', img: `Amos_1200x1200.webp`, t: 'OT' },
+      { name: 'Micah', role: 'Minor Prophet', img: `Micah_1200x1200.webp`, t: 'OT' },
+
+      { name: 'Ezra', role: 'Priest and Scribe', img: `Ezra_1200x1200.webp`, t: 'OT' }
     ]
   },
+
+  /* =====================================================
+     NEW TESTAMENT
+  ===================================================== */
   {
     id: 'new-testament',
     label: 'New Testament',
     labelClass: 'label-nt',
     lineClass: 'line-nt',
     cardClass: 'nt-card',
+
     characters: [
-      { name: 'Peter',    role: 'Rock of the Church',       img: 'Peter_1200x1200.webp',    t: 'NT' },
-      { name: 'John',     role: 'The Beloved Disciple',     img: 'John_1200x1200.webp',     t: 'NT' },
-      { name: 'Mark',     role: 'Author of the Gospel',     img: 'Mark_1200x1200.webp',     t: 'NT' },
-      { name: 'Andrew',   role: 'Fisherman & Disciple',     img: 'Andrew_1200x1200.webp',   t: 'NT' },
-      { name: 'Philip',   role: 'One of the 12 Apostles',  img: 'Philip_1200x1200.webp',   t: 'NT' },
-      { name: 'James',    role: 'Apostle & Epistle Writer', img: 'James_1200x1200.webp',    t: 'NT' },
+      { name: 'Elizabeth', role: 'Mother of John the Baptist', img: `Elizabeth_1200x1200.webp`, t: 'NT' },
+      { name: 'Zechariah', role: 'Priest', img: `Zechariah_1200x1200.webp`, t: 'NT' },
+      { name: 'Simeon', role: 'Witness of Christ', img: `Simeon_1200x1200.webp`, t: 'NT' },
+      { name: 'Anna', role: 'Prophetess', img: `Anna_1200x1200.webp`, t: 'NT' },
+
+      { name: 'Andrew', role: 'Apostle', img: `Andrew_1200x1200.webp`, t: 'NT' },
+      { name: 'James', role: 'Apostle', img: `James_1200x1200.webp`, t: 'NT' },
+      { name: 'John', role: 'Beloved Disciple', img: `John_1200x1200.webp`, t: 'NT' },
+      { name: 'Philip', role: 'Apostle', img: `Philip_1200x1200.webp`, t: 'NT' },
+      { name: 'Matthias', role: 'Apostle', img: `Matthias_1200x1200.webp`, t: 'NT' },
+
+      { name: 'Mark', role: 'Gospel Writer', img: `Mark_1200x1200.webp`, t: 'NT' },
+      { name: 'Stephen', role: 'First Martyr', img: `Stephen_1200x1200.webp`, t: 'NT' },
+      { name: 'Titus', role: 'Church Leader', img: `Titus_1200x1200.webp`, t: 'NT' },
+      { name: 'Aquila', role: 'Missionary', img: `Aquila_1200x1200.webp`, t: 'NT' },
+      { name: 'Cornelius', role: 'First Gentile Convert', img: `Cornelius_1200x1200.webp`, t: 'NT' },
+      { name: 'Ananias', role: 'Disciple', img: `Ananias_1200x1200.webp`, t: 'NT' },
+      { name: 'Nicodemus', role: 'Pharisee', img: `Nicodemus_1200x1200.webp`, t: 'NT' },
+      { name: 'Lazarus', role: 'Raised by Jesus', img: `Lazarus_1200x1200.webp`, t: 'NT' },
+      { name: 'Agabus', role: 'Prophet', img: `Agabus_1200x1200.webp`, t: 'NT' },
+      { name: 'Martha', role: 'Sister of Lazarus', img: `Martha_1200x1200.webp`, t: 'NT' },
+      { name: 'Salome', role: 'Follower of Jesus', img: `Salome_1200x1200.webp`, t: 'NT' },
+      { name: 'Priscilla', role: 'Church Leader', img: `Priscilla_1200x1200.webp`, t: 'NT' }
     ]
   }
+
 ];
+
 
 const container = document.getElementById('sections');
 
