@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bible Characters</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0b0f;
+    --card-bg: #181420;
+    --gold: #c8a96e;
+    --gold-light: #e8c98e;
+    --gold-dim: #6a5535;
+    --text: #ede5d8;
+    --muted: #6a6058;
+    --radius: 18px;
+    --section-gap: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 44px 0 56px;
+    font-family: 'Lora', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  /* ── Top Header ── */
+  .top-header {
+    padding: 0 28px 32px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.05s ease forwards;
+  }
+
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.4px;
+    line-height: 1.2;
+  }
+
+  .main-title em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .subtitle {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* ── Section block ── */
+  .section {
+    margin-bottom: var(--section-gap);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .section:nth-of-type(1) { animation-delay: 0.15s; }
+  .section:nth-of-type(2) { animation-delay: 0.30s; }
+  .section:nth-of-type(3) { animation-delay: 0.45s; }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 28px 14px;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .label-ot { color: var(--gold); }
+  .label-nt { color: #7ab8d8; }
+  .label-all { color: #c4a8e0; }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+  }
+
+  .line-ot  { background: linear-gradient(90deg, rgba(200,169,110,0.3), transparent); }
+  .line-nt  { background: linear-gradient(90deg, rgba(122,184,216,0.3), transparent); }
+  .line-all { background: linear-gradient(90deg, rgba(196,168,224,0.3), transparent); }
+
+  .section-count {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: var(--muted);
+  }
+
+  /* ── Scroll row ── */
+  .scroll-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .scroll-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 8px 28px 16px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 28px;
+  }
+
+  .scroll-track .card:first-child {
+    margin-left: 28px;
+  }
+  .scroll-track::-webkit-scrollbar { display: none; }
+
+  .fade-r {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 60px;
+    background: linear-gradient(270deg, var(--bg), transparent);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* ── Card ── */
+  .card {
+    flex-shrink: 0;
+    width: 104px;
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: start;
+    position: relative;
+    transition:
+      transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.75), 0 0 20px rgba(200,169,110,0.05);
+  }
+
+  .card.ot-card:hover { border-color: rgba(200,169,110,0.42); }
+  .card.nt-card:hover { border-color: rgba(122,184,216,0.42); }
+  .card.feat-card:hover { border-color: rgba(196,168,224,0.42); }
+
+  .card:active { transform: translateY(-3px) scale(0.97); transition-duration: 0.1s; }
+
+  /* Gold / blue shimmer line at bottom on hover */
+  .card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 12px; right: 12px;
+    height: 1.5px;
+    border-radius: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+  }
+  .card.ot-card::before   { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .card.nt-card::before   { background: linear-gradient(90deg, transparent, #7ab8d8, transparent); }
+  .card.feat-card::before { background: linear-gradient(90deg, transparent, #c4a8e0, transparent); }
+  .card:hover::before { opacity: 1; }
+
+  /* ── Image ── */
+  .card-img-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+    background: #110e1a;
+  }
+
+  .card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover .card-img-wrap img { transform: scale(1.08); }
+
+  /* Bottom gradient fade on image */
+  .card-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--card-bg) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  /* ── Badge ── */
+  .badge {
+    position: absolute;
+    top: 7px; right: 7px;
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 5;
+    backdrop-filter: blur(8px);
+  }
+
+  .badge-ot   { background: rgba(200,169,110,0.18); color: var(--gold-light); border: 1px solid rgba(200,169,110,0.28); }
+  .badge-nt   { background: rgba(80,140,190,0.20);  color: #9ec8e8;           border: 1px solid rgba(80,140,190,0.30); }
+
+  /* ── Card body ── */
+  .card-body {
+    padding: 8px 10px 12px;
+  }
+
+  .char-name {
+    font-family: 'Cinzel', serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+    letter-spacing: 0.1px;
+  }
+
+  .char-role {
+    font-family: 'Lora', serif;
+    font-size: 8.5px;
+    font-style: italic;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+
+  /* ── Scroll hint ── */
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 28px 0;
+    opacity: 0;
+    animation: fadeUp 0.5s 1s ease forwards;
+  }
+  .hint-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(200,169,110,0.12), transparent); }
+  .hint-text {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-header">
+  <p class="eyebrow">Explore the Scripture</p>
+  <h1 class="main-title">Bible <em>Characters</em></h1>
+  <p class="subtitle">Heroes, prophets, kings & disciples</p>
+</div>
+
+<div id="sections"></div>
+
+<div class="scroll-hint">
+  <div class="hint-line"></div>
+  <span class="hint-text">Scroll to explore</span>
+  <div class="hint-line" style="background:linear-gradient(270deg,rgba(200,169,110,0.12),transparent)"></div>
+</div>
+
+<script>
+const BASE = 'https://d3owcl6pd5zkqc.cloudfront.net/images/figures/';
+const FALLBACK = 'https://d3owcl6pd5zkqc.cloudfront.net/images/account_nobgrnd.png';
+
+const sections = [
+  {
+    id: 'featured',
+    label: 'Featured',
+    labelClass: 'label-all',
+    lineClass: 'line-all',
+    cardClass: 'feat-card',
+    characters: [
+      { name: 'Jesus',    role: 'Savior of Humanity',       img: 'Jesus_1200x1200.webp',    t: 'NT' },
+      { name: 'Moses',    role: 'Prophet & Lawgiver',       img: 'Moses_1200x1200.webp',    t: 'OT' },
+      { name: 'David',    role: 'King & Psalmist',          img: 'David_1200x1200.webp',    t: 'OT' },
+      { name: 'Mary',     role: 'Mother of Jesus',          img: 'Mary_1200x1200.webp',     t: 'NT' },
+      { name: 'Abraham',  role: 'Father of Nations',        img: 'Abraham_1200x1200.webp',  t: 'OT' },
+      { name: 'Paul',     role: 'Apostle to Gentiles',      img: 'Paul_1200x1200.webp',     t: 'NT' },
+      { name: 'Noah',     role: 'Builder of the Ark',       img: 'Noah_1200x1200.webp',     t: 'OT' },
+      { name: 'Solomon',  role: 'King of Wisdom',           img: 'Solomon_1200x1200.webp',  t: 'OT' },
+    ]
+  },
+  {
+    id: 'old-testament',
+    label: 'Old Testament',
+    labelClass: 'label-ot',
+    lineClass: 'line-ot',
+    cardClass: 'ot-card',
+    characters: [
+      { name: 'Adam',     role: 'First Man on Earth',         img: 'Adam_1200x1200.webp',     t: 'OT' },
+      { name: 'Eve',      role: 'Mother of All Living',       img: 'Eve_1200x1200.webp',      t: 'OT' },
+      { name: 'Isaac',    role: 'Son of Abraham',             img: 'Isaac_1200x1200.webp',    t: 'OT' },
+      { name: 'Jacob',    role: 'Father of 12 Tribes',        img: 'Jacob_1200x1200.webp',    t: 'OT' },
+      { name: 'Joseph',   role: 'Interpreter of Dreams',      img: 'Joseph_1200x1200.webp',   t: 'OT' },
+      { name: 'Sarah',    role: 'Mother of Nations',          img: 'Sarah_1200x1200.webp',    t: 'OT' },
+      { name: 'Rachel',   role: 'Beloved Wife of Jacob',      img: 'Rachel_1200x1200.webp',   t: 'OT' },
+      { name: 'Leah',     role: 'First Wife of Jacob',        img: 'Leah_1200x1200.webp',     t: 'OT' },
+      { name: 'Aaron',    role: 'High Priest of Israel',      img: 'Aaron_1200x1200.webp',    t: 'OT' },
+      { name: 'Joshua',   role: 'Conqueror of Canaan',        img: 'Joshua_1200x1200.webp',   t: 'OT' },
+      { name: 'Samson',   role: 'Mighty Warrior of God',      img: 'Samson_1200x1200.webp',   t: 'OT' },
+      { name: 'Samuel',   role: 'Prophet & Judge',            img: 'Samuel_1200x1200.webp',   t: 'OT' },
+      { name: 'Saul',     role: 'First King of Israel',       img: 'Saul_1200x1200.webp',     t: 'OT' },
+      { name: 'Ruth',     role: 'Woman of Loyalty',           img: 'Ruth_1200x1200.webp',     t: 'OT' },
+      { name: 'Elijah',   role: 'Prophet of Fire',            img: 'Elijah_1200x1200.webp',   t: 'OT' },
+      { name: 'Elisha',   role: "God's Miracle Worker",       img: 'Elisha_1200x1200.webp',   t: 'OT' },
+      { name: 'Esther',   role: 'Queen & Savior',             img: 'Esther_1200x1200.webp',   t: 'OT' },
+      { name: 'Daniel',   role: 'Vision & Dream Seer',        img: 'Daniel_1200x1200.webp',   t: 'OT' },
+      { name: 'Jeremiah', role: 'Prophet of Doom & Hope',     img: 'Jeremiah_1200x1200.webp', t: 'OT' },
+      { name: 'Ezekiel',  role: 'Visionary Prophet',          img: 'Ezekiel_1200x1200.webp',  t: 'OT' },
+      { name: 'Miriam',   role: 'Prophetess & Sister',        img: 'Miriam_1200x1200.webp',   t: 'OT' },
+      { name: 'Bathsheba',role: 'Wife of King David',         img: 'Bathsheba_1200x1200.webp',t: 'OT' },
+      { name: 'Jonathan', role: 'Faithful Friend of David',   img: 'Jonathan_1200x1200.webp', t: 'OT' },
+    ]
+  },
+  {
+    id: 'new-testament',
+    label: 'New Testament',
+    labelClass: 'label-nt',
+    lineClass: 'line-nt',
+    cardClass: 'nt-card',
+    characters: [
+      { name: 'Peter',    role: 'Rock of the Church',       img: 'Peter_1200x1200.webp',    t: 'NT' },
+      { name: 'John',     role: 'The Beloved Disciple',     img: 'John_1200x1200.webp',     t: 'NT' },
+      { name: 'Mark',     role: 'Author of the Gospel',     img: 'Mark_1200x1200.webp',     t: 'NT' },
+      { name: 'Andrew',   role: 'Fisherman & Disciple',     img: 'Andrew_1200x1200.webp',   t: 'NT' },
+      { name: 'Philip',   role: 'One of the 12 Apostles',  img: 'Philip_1200x1200.webp',   t: 'NT' },
+      { name: 'James',    role: 'Apostle & Epistle Writer', img: 'James_1200x1200.webp',    t: 'NT' },
+    ]
+  }
+];
+
+const container = document.getElementById('sections');
+
+sections.forEach((sec, si) => {
+  // Section wrapper
+  const section = document.createElement('div');
+  section.className = 'section';
+  section.style.animationDelay = `${0.15 + si * 0.15}s`;
+
+  // Header
+  const header = document.createElement('div');
+  header.className = 'section-header';
+  header.innerHTML = `
+    <span class="section-label ${sec.labelClass}">${sec.label}</span>
+    <div class="section-line ${sec.lineClass}"></div>
+    <span class="section-count">${sec.characters.length} characters</span>
+  `;
+
+  // Scroll row
+  const wrap = document.createElement('div');
+  wrap.className = 'scroll-wrap';
+
+  const track = document.createElement('div');
+  track.className = 'scroll-track';
+
+  sec.characters.forEach((c, ci) => {
+    const card = document.createElement('div');
+    card.className = `card ${sec.cardClass}`;
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(18px)';
+    card.style.animation = `fadeUp 0.5s ${0.05 * ci + 0.2 * si + 0.3}s ease forwards`;
+
+    card.innerHTML = `
+      <div class="card-img-wrap">
+        <img
+          src="${BASE}${c.img}"
+          alt="${c.name}"
+          loading="lazy"
+          onerror="this.src='${FALLBACK}'"
+        />
+        <span class="badge badge-${c.t.toLowerCase()}">${c.t}</span>
+      </div>
+      <div class="card-body">
+        <p class="char-name">${c.name}</p>
+        <p class="char-role">${c.role}</p>
+      </div>
+    `;
+
+    track.appendChild(card);
+  });
+
+  const fadeR = document.createElement('div');
+  fadeR.className = 'fade-r';
+
+  wrap.appendChild(track);
+  wrap.appendChild(fadeR);
+
+  section.appendChild(header);
+  section.appendChild(wrap);
+  container.appendChild(section);
+});
+</script>
+</body>
+</html>
