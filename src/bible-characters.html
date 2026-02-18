@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0d0b0f">
 <title>Bible Characters</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -16,20 +16,10 @@
     --text: #ede5d8;
     --muted: #6a6058;
     --radius: 18px;
-    --section-gap: 20px;
+    --section-gap: 36px;
   }
 
-  * { 
-    margin: 0; padding: 0; box-sizing: border-box;
-    user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: none;
-  }
-
-  img {
-    pointer-events: none;
-  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
     background: var(--bg);
@@ -42,7 +32,6 @@
     overflow-x: hidden;
   }
 
-  /* Grain overlay */
   body::after {
     content: '';
     position: fixed;
@@ -78,10 +67,7 @@
     line-height: 1.2;
   }
 
-  .main-title em {
-    font-style: normal;
-    color: var(--gold);
-  }
+  .main-title em { font-style: normal; color: var(--gold); }
 
   .subtitle {
     font-family: 'Lora', serif;
@@ -118,15 +104,11 @@
     white-space: nowrap;
   }
 
-  .label-ot { color: var(--gold); }
-  .label-nt { color: #7ab8d8; }
+  .label-ot  { color: var(--gold); }
+  .label-nt  { color: #7ab8d8; }
   .label-all { color: #c4a8e0; }
 
-  .section-line {
-    flex: 1;
-    height: 1px;
-  }
-
+  .section-line { flex: 1; height: 1px; }
   .line-ot  { background: linear-gradient(90deg, rgba(200,169,110,0.3), transparent); }
   .line-nt  { background: linear-gradient(90deg, rgba(122,184,216,0.3), transparent); }
   .line-all { background: linear-gradient(90deg, rgba(196,168,224,0.3), transparent); }
@@ -139,10 +121,7 @@
   }
 
   /* ── Scroll row ── */
-  .scroll-wrap {
-    position: relative;
-    width: 100%;
-  }
+  .scroll-wrap { position: relative; width: 100%; }
 
   .scroll-track {
     display: flex;
@@ -156,9 +135,7 @@
     scroll-padding-left: 28px;
   }
 
-  .scroll-track .card:first-child {
-    margin-left: 28px;
-  }
+  .scroll-track .card:first-child { margin-left: 28px; }
   .scroll-track::-webkit-scrollbar { display: none; }
 
   .fade-r {
@@ -181,10 +158,7 @@
     cursor: pointer;
     scroll-snap-align: start;
     position: relative;
-    transition:
-      transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
-      border-color 0.25s ease,
-      box-shadow 0.25s ease;
+    transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
   .card:hover {
@@ -192,13 +166,11 @@
     box-shadow: 0 18px 44px rgba(0,0,0,0.75), 0 0 20px rgba(200,169,110,0.05);
   }
 
-  .card.ot-card:hover { border-color: rgba(200,169,110,0.42); }
-  .card.nt-card:hover { border-color: rgba(122,184,216,0.42); }
+  .card.ot-card:hover   { border-color: rgba(200,169,110,0.42); }
+  .card.nt-card:hover   { border-color: rgba(122,184,216,0.42); }
   .card.feat-card:hover { border-color: rgba(196,168,224,0.42); }
+  .card:active          { transform: translateY(-3px) scale(0.97); transition-duration: 0.1s; }
 
-  .card:active { transform: translateY(-3px) scale(0.97); transition-duration: 0.1s; }
-
-  /* Gold / blue shimmer line at bottom on hover */
   .card::before {
     content: '';
     position: absolute;
@@ -217,15 +189,14 @@
   /* ── Image ── */
   .card-img-wrap {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     overflow: hidden;
     position: relative;
     background: #110e1a;
   }
 
   .card-img-wrap img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     object-position: top center;
     display: block;
@@ -234,7 +205,6 @@
 
   .card:hover .card-img-wrap img { transform: scale(1.08); }
 
-  /* Bottom gradient fade on image */
   .card-img-wrap::after {
     content: '';
     position: absolute;
@@ -258,13 +228,11 @@
     backdrop-filter: blur(8px);
   }
 
-  .badge-ot   { background: rgba(200,169,110,0.18); color: var(--gold-light); border: 1px solid rgba(200,169,110,0.28); }
-  .badge-nt   { background: rgba(80,140,190,0.20);  color: #9ec8e8;           border: 1px solid rgba(80,140,190,0.30); }
+  .badge-ot { background: rgba(200,169,110,0.18); color: var(--gold-light); border: 1px solid rgba(200,169,110,0.28); }
+  .badge-nt { background: rgba(80,140,190,0.20);  color: #9ec8e8;           border: 1px solid rgba(80,140,190,0.30); }
 
   /* ── Card body ── */
-  .card-body {
-    padding: 8px 10px 12px;
-  }
+  .card-body { padding: 8px 10px 12px; }
 
   .char-name {
     font-family: 'Cinzel', serif;
@@ -311,6 +279,463 @@
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  /* ══════════════════════════════════════
+     DETAIL PAGE / OVERLAY
+  ══════════════════════════════════════ */
+  #detail-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  #detail-overlay.open {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  /* Blurred bg */
+  .detail-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(8,6,12,0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* Panel */
+  .detail-panel {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+  }
+  .detail-panel::-webkit-scrollbar { display: none; }
+
+  /* Hero image section */
+  .detail-hero {
+    position: relative;
+    width: 100%;
+    height: 80vw;
+    max-height: 480px;
+    min-height: 280px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #110e1a;
+  }
+
+  .detail-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transform: scale(1.04);
+    transition: transform 0.6s ease;
+  }
+
+  #detail-overlay.open .detail-hero img { transform: scale(1); }
+
+  /* Gradient overlays on hero */
+  .detail-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+      rgba(8,6,12,0.35) 0%,
+      transparent 40%,
+      rgba(8,6,12,0.6) 70%,
+      rgba(8,6,12,1) 100%);
+    z-index: 2;
+  }
+
+  /* Decorative light bloom */
+  .detail-hero::after {
+    content: '';
+    position: absolute;
+    top: -40px; left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,169,110,0.06) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Back button */
+  .detail-back {
+    position: absolute;
+    top: 18px; left: 18px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(232,201,142,0.75);
+    background: rgba(13,11,15,0.55);
+    border: 1px solid rgba(200,169,110,0.18);
+    border-radius: 30px;
+    padding: 7px 14px 7px 10px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .detail-back:hover {
+    color: var(--gold-light);
+    border-color: rgba(200,169,110,0.4);
+    background: rgba(13,11,15,0.78);
+  }
+
+  .detail-back svg { width: 12px; height: 12px; }
+
+  /* Detail content area */
+  .detail-content {
+    flex: 1;
+    padding: 0 26px 60px;
+    margin-top: -18px;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s 0.15s ease, transform 0.4s 0.15s ease;
+  }
+
+  #detail-overlay.open .detail-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Decorative divider */
+  .detail-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .detail-divider-line {
+    flex: 1;
+    height: 1px;
+  }
+
+  .detail-divider-diamond {
+    width: 6px; height: 6px;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* Name & role */
+  .detail-name {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .detail-role {
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Info pills row */
+  .detail-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .pill {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 30px;
+  }
+
+  .pill-gold { color: var(--gold); border-color: rgba(200,169,110,0.5); background: rgba(200,169,110,0.18); }
+  .pill-blue { color: #7ab8d8; border-color: rgba(122,184,216,0.5); background: rgba(122,184,216,0.15); }
+  .pill-purple { color: #b896d6; border-color: rgba(184,150,214,0.5); background: rgba(184,150,214,0.15); }
+  .pill-muted { color: #a89880; border-color: rgba(168,152,128,0.5); background: rgba(168,152,128,0.12); }
+
+  /* Section heading inside detail */
+  .detail-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 10px;
+  }
+
+  /* Bio text */
+  .detail-bio {
+    font-family: 'Lora', serif;
+    font-size: 13.5px;
+    line-height: 1.78;
+    color: rgba(232,225,216,0.82);
+    margin-bottom: 32px;
+  }
+
+  /* Key verses */
+  .verse-card {
+    background: rgba(200,169,110,0.05);
+    border: 1px solid rgba(200,169,110,0.14);
+    border-left: 3px solid var(--gold-dim);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+
+  .verse-text {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 6px;
+  }
+
+  .verse-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* Ornament separator */
+  .ornament {
+    text-align: center;
+    color: var(--gold-dim);
+    font-size: 18px;
+    letter-spacing: 12px;
+    margin: 20px 0;
+    opacity: 0.5;
+  }
+
+  /* ── Loading state ── */
+  .detail-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 60px 28px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .detail-loading.visible { opacity: 1; }
+
+  .loader-ring {
+    width: 36px; height: 36px;
+    border: 2px solid rgba(200,169,110,0.15);
+    border-top-color: var(--gold);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  .loader-text {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── View Toggle Button ── */
+  .view-toggle-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 12px 26px 18px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(13,11,15,0.98) 70%, transparent);
+    pointer-events: none;
+  }
+
+  .view-toggle-wrap.visible { 
+    display: flex;
+    pointer-events: all;
+  }
+
+  .view-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(24,20,32,0.85);
+    border: 1px solid rgba(200,169,110,0.2);
+    border-radius: 30px;
+    padding: 3px;
+    backdrop-filter: blur(12px);
+    cursor: default;
+  }
+
+  .toggle-btn {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 24px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .toggle-btn svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+  .toggle-btn.active {
+    background: rgba(200,169,110,0.15);
+    color: var(--gold-light);
+    border: 1px solid rgba(200,169,110,0.28);
+  }
+
+  /* ── Timeline ── */
+  .timeline-wrap {
+    padding: 0 26px 60px;
+    display: none;
+  }
+
+  .timeline-wrap.visible { display: block; }
+
+  .timeline-header {
+    padding: 0 0 24px;
+    opacity: 0;
+    animation: fadeUp 0.4s 0.15s ease forwards;
+  }
+
+  .timeline-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .timeline-title {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .tl-chapter {
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards;
+  }
+
+  .tl-chapter:nth-of-type(1) { animation-delay: 0.2s; }
+  .tl-chapter:nth-of-type(2) { animation-delay: 0.25s; }
+  .tl-chapter:nth-of-type(3) { animation-delay: 0.3s; }
+  .tl-chapter:nth-of-type(4) { animation-delay: 0.35s; }
+
+  .tl-chapter-title {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  .tl-events {
+    padding-left: 12px;
+    border-left: 1px solid rgba(200,169,110,0.15);
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tl-event {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0 10px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.2s ease;
+    cursor: default;
+  }
+
+  .tl-event:last-child { border-bottom: none; }
+
+  .tl-dot {
+    position: absolute;
+    left: -16px;
+    top: 17px;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1.5px solid var(--gold-dim);
+    flex-shrink: 0;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .tl-event:hover .tl-dot {
+    border-color: var(--gold);
+    background: rgba(200,169,110,0.2);
+  }
+
+  .tl-event-body { flex: 1; }
+
+  .tl-event-name {
+    font-family: 'Lora', serif;
+    font-size: 12.5px;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 5px;
+    transition: color 0.2s;
+  }
+
+  .tl-event:hover .tl-event-name { color: var(--gold-light); }
+
+  .tl-event-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    color: var(--gold-light);
+    text-transform: uppercase;
+  }
+
 </style>
 </head>
 <body>
@@ -329,144 +754,136 @@
   <div class="hint-line" style="background:linear-gradient(270deg,rgba(200,169,110,0.12),transparent)"></div>
 </div>
 
+<!-- ── Detail Overlay ── -->
+<div id="detail-overlay" role="dialog" aria-modal="true">
+  <div class="detail-backdrop" id="detail-backdrop"></div>
+  <div class="detail-panel" id="detail-panel">
+
+    <div class="detail-hero" id="detail-hero">
+      <img id="detail-hero-img" src="" alt="" />
+      <button class="detail-back" id="detail-back" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back
+      </button>
+    </div>
+
+    <!-- View Toggle -->
+    <div class="view-toggle-wrap" id="view-toggle-wrap">
+      <div class="view-toggle">
+        <button class="toggle-btn active" id="btn-overview" onclick="switchView('overview')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          Overview
+        </button>
+        <button class="toggle-btn" id="btn-timeline" onclick="switchView('timeline')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><polyline points="8 8 3 12 8 16"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          Timeline
+        </button>
+      </div>
+    </div>
+
+    <div class="detail-content" id="detail-content">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="timeline-wrap" id="timeline-wrap">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="detail-loading" id="detail-loading">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Loading</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="bible-characters-data.js"></script>
+<script src="bible-characters-timeline.js"></script>
 <script>
-const FALLBACK = 'https://d3owcl6pd5zkqc.cloudfront.net/images/account_nobgrnd.png';
-const BASE = "https://d3owcl6pd5zkqc.cloudfront.net/images/figures/";
+// Bible Characters Data is now loaded from:
+// - bible-characters-data.js (character info)
+// - bible-characters-timeline.js (timeline data by character)
 
-const sections = [
+// ── View switching ──
+let currentView = 'overview';
+let currentChar = null;
+let currentCardClass = null;
 
-  /* =====================================================
-     FEATURED
-  ===================================================== */
-  {
-    id: 'featured',
-    label: 'Featured',
-    labelClass: 'label-all',
-    lineClass: 'line-all',
-    cardClass: 'feat-card',
+const toggleWrap  = document.getElementById('view-toggle-wrap');
+const timelineWrap = document.getElementById('timeline-wrap');
+const btnOverview = document.getElementById('btn-overview');
+const btnTimeline = document.getElementById('btn-timeline');
 
-    characters: [
-      { name: 'Jesus', role: 'Savior of Humanity', img: `Jesus_1200x1200.webp`, t: 'NT' },
-      { name: 'Moses', role: 'Prophet & Lawgiver', img: `Moses_1200x1200.webp`, t: 'OT' },
-      { name: 'David', role: 'King & Psalmist', img: `David_1200x1200.webp`, t: 'OT' },
-      { name: 'Mary', role: 'Mother of Jesus', img: `Mary_1200x1200.webp`, t: 'NT' },
-      { name: 'Abraham', role: 'Father of Nations', img: `Abraham_1200x1200.webp`, t: 'OT' },
-      { name: 'Paul', role: 'Apostle to Gentiles', img: `Paul_1200x1200.webp`, t: 'NT' },
-      { name: 'Noah', role: 'Ark Builder', img: `Noah_1200x1200.webp`, t: 'OT' },
-      { name: 'Solomon', role: 'King of Wisdom', img: `Solomon_1200x1200.webp`, t: 'OT' },
-      { name: 'Peter', role: 'Rock of the Church', img: `Peter_1200x1200.webp`, t: 'NT' },
-      { name: 'Esther', role: 'Queen of Persia', img: `Esther_1200x1200.webp`, t: 'OT' }
-    ]
-  },
+function switchView(view) {
+  currentView = view;
+  if (view === 'timeline') {
+    detailEl.style.display = 'none';
+    timelineWrap.classList.add('visible');
+    btnTimeline.classList.add('active');
+    btnOverview.classList.remove('active');
+    renderTimeline(currentChar);
+  } else {
+    detailEl.style.display = '';
+    timelineWrap.classList.remove('visible');
+    btnOverview.classList.add('active');
+    btnTimeline.classList.remove('active');
+  }
+  document.getElementById('detail-panel').scrollTop = 0;
+}
 
-  /* =====================================================
-     OLD TESTAMENT
-  ===================================================== */
-  {
-    id: 'old-testament',
-    label: 'Old Testament',
-    labelClass: 'label-ot',
-    lineClass: 'line-ot',
-    cardClass: 'ot-card',
-
-    characters: [
-      { name: 'Adam', role: 'First Man', img: `Adam_1200x1200.webp`, t: 'OT' },
-      { name: 'Eve', role: 'First Woman', img: `Eve_1200x1200.webp`, t: 'OT' },
-      { name: 'Isaac', role: 'Son of Promise', img: `Isaac_1200x1200.webp`, t: 'OT' },
-      { name: 'Rebekah', role: 'Wife of Isaac', img: `Rebekah_1200x1200.webp`, t: 'OT' },
-      { name: 'Jacob', role: 'Israel', img: `Jacob_1200x1200.webp`, t: 'OT' },
-      { name: 'Rachel', role: 'Wife of Jacob', img: `Rachel_1200x1200.webp`, t: 'OT' },
-      { name: 'Leah', role: 'Wife of Jacob', img: `Leah_1200x1200.webp`, t: 'OT' },
-      { name: 'Sarah', role: 'Mother of Nations', img: `Sarah_1200x1200.webp`, t: 'OT' },
-      { name: 'Ishmael', role: 'Son of Abraham', img: `Ishmael_1200x1200.webp`, t: 'OT' },
-      { name: 'Lot', role: 'Nephew of Abraham', img: `Lot_1200x1200.webp`, t: 'OT' },
-      { name: 'Joseph', role: 'Governor of Egypt', img: `Joseph_1200x1200.webp`, t: 'OT' },
-      { name: 'Judah', role: 'Tribe of Messiah', img: `Judah_1200x1200.webp`, t: 'OT' },
-      { name: 'Benjamin', role: 'Son of Jacob', img: `Benjamin_1200x1200.webp`, t: 'OT' },
-      { name: 'Levi', role: 'Priestly Tribe', img: `Levi_1200x1200.webp`, t: 'OT' },
-
-      { name: 'Aaron', role: 'High Priest', img: `Aaron_1200x1200.webp`, t: 'OT' },
-      { name: 'Miriam', role: 'Prophetess', img: `Miriam_1200x1200.webp`, t: 'OT' },
-      { name: 'Joshua', role: 'Leader of Israel', img: `Joshua_1200x1200.webp`, t: 'OT' },
-      { name: 'Caleb', role: 'Faithful Spy', img: `Caleb_1200x1200.webp`, t: 'OT' },
-
-      { name: 'Samson', role: 'Judge of Israel', img: `Samson_1200x1200.webp`, t: 'OT' },
-      { name: 'Rahab', role: 'Woman of Faith', img: `Rahab_1200x1200.webp`, t: 'OT' },
-      { name: 'Jephthah', role: 'Judge of Israel', img: `Jephthah_1200x1200.webp`, t: 'OT' },
-      { name: 'Othniel', role: 'First Judge', img: `Othniel_1200x1200.webp`, t: 'OT' },
-
-      { name: 'Ruth', role: 'Ancestor of David', img: `Ruth_1200x1200.webp`, t: 'OT' },
-      { name: 'Naomi', role: 'Mother-in-law of Ruth', img: `Naomi_1200x1200.webp`, t: 'OT' },
-      { name: 'Boaz', role: 'Kinsman Redeemer', img: `Boaz_1200x1200.webp`, t: 'OT' },
-      { name: 'Samuel', role: 'Prophet', img: `Samuel_1200x1200.webp`, t: 'OT' },
-
-      { name: 'Saul', role: 'First King', img: `Saul_1200x1200.webp`, t: 'OT' },
-      { name: 'Jonathan', role: 'Friend of David', img: `Jonathan_1200x1200.webp`, t: 'OT' },
-      { name: 'Bathsheba', role: 'Queen Mother', img: `Bathsheba_1200x1200.webp`, t: 'OT' },
-      { name: 'Jehoshaphat', role: 'King of Judah', img: `Jehoshaphat_1200x1200.webp`, t: 'OT' },
-
-      { name: 'Elijah', role: 'Prophet of Fire', img: `Elijah_1200x1200.webp`, t: 'OT' },
-      { name: 'Elisha', role: 'Prophet', img: `Elisha_1200x1200.webp`, t: 'OT' },
-      { name: 'Jeremiah', role: 'Major Prophet', img: `Jeremiah_1200x1200.webp`, t: 'OT' },
-      { name: 'Ezekiel', role: 'Major Prophet', img: `Ezekiel_1200x1200.webp`, t: 'OT' },
-      { name: 'Daniel', role: 'Prophet', img: `Daniel_1200x1200.webp`, t: 'OT' },
-      { name: 'Hosea', role: 'Minor Prophet', img: `Hosea_1200x1200.webp`, t: 'OT' },
-      { name: 'Amos', role: 'Minor Prophet', img: `Amos_1200x1200.webp`, t: 'OT' },
-      { name: 'Micah', role: 'Minor Prophet', img: `Micah_1200x1200.webp`, t: 'OT' },
-
-      { name: 'Ezra', role: 'Priest and Scribe', img: `Ezra_1200x1200.webp`, t: 'OT' }
-    ]
-  },
-
-  /* =====================================================
-     NEW TESTAMENT
-  ===================================================== */
-  {
-    id: 'new-testament',
-    label: 'New Testament',
-    labelClass: 'label-nt',
-    lineClass: 'line-nt',
-    cardClass: 'nt-card',
-
-    characters: [
-      { name: 'Elizabeth', role: 'Mother of John the Baptist', img: `Elizabeth_1200x1200.webp`, t: 'NT' },
-      { name: 'Zechariah', role: 'Priest', img: `Zechariah_1200x1200.webp`, t: 'NT' },
-      { name: 'Simeon', role: 'Witness of Christ', img: `Simeon_1200x1200.webp`, t: 'NT' },
-      { name: 'Anna', role: 'Prophetess', img: `Anna_1200x1200.webp`, t: 'NT' },
-
-      { name: 'Andrew', role: 'Apostle', img: `Andrew_1200x1200.webp`, t: 'NT' },
-      { name: 'James', role: 'Apostle', img: `James_1200x1200.webp`, t: 'NT' },
-      { name: 'John', role: 'Beloved Disciple', img: `John_1200x1200.webp`, t: 'NT' },
-      { name: 'Philip', role: 'Apostle', img: `Philip_1200x1200.webp`, t: 'NT' },
-      { name: 'Matthias', role: 'Apostle', img: `Matthias_1200x1200.webp`, t: 'NT' },
-
-      { name: 'Mark', role: 'Gospel Writer', img: `Mark_1200x1200.webp`, t: 'NT' },
-      { name: 'Stephen', role: 'First Martyr', img: `Stephen_1200x1200.webp`, t: 'NT' },
-      { name: 'Titus', role: 'Church Leader', img: `Titus_1200x1200.webp`, t: 'NT' },
-      { name: 'Aquila', role: 'Missionary', img: `Aquila_1200x1200.webp`, t: 'NT' },
-      { name: 'Cornelius', role: 'First Gentile Convert', img: `Cornelius_1200x1200.webp`, t: 'NT' },
-      { name: 'Ananias', role: 'Disciple', img: `Ananias_1200x1200.webp`, t: 'NT' },
-      { name: 'Nicodemus', role: 'Pharisee', img: `Nicodemus_1200x1200.webp`, t: 'NT' },
-      { name: 'Lazarus', role: 'Raised by Jesus', img: `Lazarus_1200x1200.webp`, t: 'NT' },
-      { name: 'Agabus', role: 'Prophet', img: `Agabus_1200x1200.webp`, t: 'NT' },
-      { name: 'Martha', role: 'Sister of Lazarus', img: `Martha_1200x1200.webp`, t: 'NT' },
-      { name: 'Salome', role: 'Follower of Jesus', img: `Salome_1200x1200.webp`, t: 'NT' },
-      { name: 'Priscilla', role: 'Church Leader', img: `Priscilla_1200x1200.webp`, t: 'NT' }
-    ]
+function renderTimeline(char) {
+  const data = timelineData[char.name];
+  if (!data) {
+    timelineWrap.innerHTML = `
+      <div class="timeline-header">
+        <p class="timeline-eyebrow">Life Events</p>
+        <h2 class="timeline-title">${char.name}'s Journey</h2>
+      </div>
+      <p style="font-family:'Lora',serif;font-size:13px;color:var(--muted);font-style:italic;padding-bottom:40px;">
+        Timeline data for ${char.name} is being compiled. Check back soon.
+      </p>
+    `;
+    return;
   }
 
-];
+  const chaptersHtml = data.map((ch, ci) => {
+    const eventsHtml = ch.events.map(ev => `
+      <div class="tl-event">
+        <div class="tl-dot"></div>
+        <div class="tl-event-body">
+          <p class="tl-event-name">${ev.name}</p>
+          <p class="tl-event-ref">${ev.ref}</p>
+        </div>
+      </div>
+    `).join('');
 
+    return `
+      <div class="tl-chapter" style="animation-delay:${0.2 + ci * 0.05}s">
+        <p class="tl-chapter-title">${ch.chapter}</p>
+        <div class="tl-events">${eventsHtml}</div>
+      </div>
+    `;
+  }).join('');
 
+  timelineWrap.innerHTML = `
+    <div class="timeline-header">
+      <p class="timeline-eyebrow">Life Events</p>
+      <h2 class="timeline-title">${char.name}'s Journey</h2>
+    </div>
+    ${chaptersHtml}
+  `;
+}
+
+// ── Build list cards ──
 const container = document.getElementById('sections');
 
 sections.forEach((sec, si) => {
-  // Section wrapper
   const section = document.createElement('div');
   section.className = 'section';
   section.style.animationDelay = `${0.15 + si * 0.15}s`;
 
-  // Header
   const header = document.createElement('div');
   header.className = 'section-header';
   header.innerHTML = `
@@ -475,7 +892,6 @@ sections.forEach((sec, si) => {
     <span class="section-count">${sec.characters.length} characters</span>
   `;
 
-  // Scroll row
   const wrap = document.createElement('div');
   wrap.className = 'scroll-wrap';
 
@@ -491,12 +907,7 @@ sections.forEach((sec, si) => {
 
     card.innerHTML = `
       <div class="card-img-wrap">
-        <img
-          src="${BASE}${c.img}"
-          alt="${c.name}"
-          loading="lazy"
-          onerror="this.src='${FALLBACK}'"
-        />
+        <img src="${BASE}${c.img}" alt="${c.name}" loading="lazy" onerror="this.src='${FALLBACK}'" />
         <span class="badge badge-${c.t.toLowerCase()}">${c.t}</span>
       </div>
       <div class="card-body">
@@ -505,6 +916,7 @@ sections.forEach((sec, si) => {
       </div>
     `;
 
+    card.addEventListener('click', () => openDetail(c, sec.cardClass));
     track.appendChild(card);
   });
 
@@ -513,10 +925,125 @@ sections.forEach((sec, si) => {
 
   wrap.appendChild(track);
   wrap.appendChild(fadeR);
-
   section.appendChild(header);
   section.appendChild(wrap);
   container.appendChild(section);
+});
+
+// ── Detail overlay logic ──
+const overlay  = document.getElementById('detail-overlay');
+const heroImg  = document.getElementById('detail-hero-img');
+const detailEl = document.getElementById('detail-content');
+const loadEl   = document.getElementById('detail-loading');
+const backBtn  = document.getElementById('detail-back');
+
+function openDetail(char, cardClass) {
+  const data = characterData[char.name];
+  currentChar = char;
+  currentCardClass = cardClass;
+  currentView = 'overview';
+
+  // Show/hide toggle based on timeline availability
+  if (timelineData[char.name]) {
+    toggleWrap.classList.add('visible');
+  } else {
+    toggleWrap.classList.remove('visible');
+  }
+
+  // Reset view to overview
+  detailEl.style.display = '';
+  timelineWrap.classList.remove('visible');
+  btnOverview.classList.add('active');
+  btnTimeline.classList.remove('active');
+
+  // Reset scroll
+  document.getElementById('detail-panel').scrollTop = 0;
+
+  // Hero image
+  heroImg.src = `${BASE}${char.img}`;
+  heroImg.alt = char.name;
+  heroImg.onerror = () => { heroImg.src = FALLBACK; };
+
+  // Color theme
+  let accentColor, dimColor, lineGrad;
+  if (cardClass === 'nt-card') {
+    accentColor = '#7ab8d8'; dimColor = 'rgba(122,184,216,0.3)';
+    lineGrad = 'linear-gradient(90deg, rgba(122,184,216,0.3), transparent)';
+  } else if (cardClass === 'feat-card') {
+    accentColor = '#c4a8e0'; dimColor = 'rgba(196,168,224,0.3)';
+    lineGrad = 'linear-gradient(90deg, rgba(196,168,224,0.3), transparent)';
+  } else {
+    accentColor = '#c8a96e'; dimColor = 'rgba(200,169,110,0.3)';
+    lineGrad = 'linear-gradient(90deg, rgba(200,169,110,0.3), transparent)';
+  }
+
+  // Build content
+  if (data) {
+    loadEl.classList.remove('visible');
+
+    // Facts pills
+    const factPills = Object.entries(data.facts || {}).map(([k, v]) =>
+      `<span class="pill pill-muted">${k}: ${v}</span>`
+    ).join('');
+
+    // Verses
+    const versesHtml = (data.verses || []).map(v => `
+      <div class="verse-card">
+        <p class="verse-text">"${v.text}"</p>
+        <p class="verse-ref">${v.ref}</p>
+      </div>
+    `).join('');
+
+
+
+    detailEl.innerHTML = `
+      <div class="detail-divider" style="margin-bottom:20px">
+        <div class="detail-divider-line" style="background:${lineGrad}"></div>
+        <div class="detail-divider-diamond" style="background:${accentColor};opacity:0.7"></div>
+        <div class="detail-divider-line" style="background:${lineGrad};transform:rotate(180deg)"></div>
+      </div>
+
+      <h2 class="detail-name">${char.name}</h2>
+      <p class="detail-role">${char.role}</p>
+
+      <div class="detail-pills">${factPills}</div>
+
+      <p class="detail-section-title">Biography</p>
+      <p class="detail-bio">${data.bio}</p>
+
+      ${versesHtml.length ? `
+        <p class="detail-section-title">Key Verses</p>
+        ${versesHtml}
+        <div class="ornament">✦ ✦ ✦</div>
+      ` : ''}
+    `;
+  } else {
+    detailEl.innerHTML = `
+      <div class="detail-divider" style="margin-bottom:20px">
+        <div class="detail-divider-line" style="background:${lineGrad}"></div>
+        <div class="detail-divider-diamond" style="background:${accentColor};opacity:0.7"></div>
+        <div class="detail-divider-line" style="background:${lineGrad};transform:rotate(180deg)"></div>
+      </div>
+      <h2 class="detail-name">${char.name}</h2>
+      <p class="detail-role">${char.role}</p>
+      <p class="detail-bio" style="margin-top:24px">Detailed information about ${char.name} is being compiled. Explore this character's story through Scripture.</p>
+    `;
+  }
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDetail() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+backBtn.addEventListener('click', closeDetail);
+document.getElementById('detail-backdrop').addEventListener('click', closeDetail);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeDetail();
 });
 </script>
 </body>
