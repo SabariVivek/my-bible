@@ -1032,6 +1032,9 @@ function openDetail(char, cardClass) {
 
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  // Push history state to intercept back button
+  history.pushState({ characterDetailOpen: true }, '', window.location.href);
 }
 
 function closeDetail() {
@@ -1044,6 +1047,14 @@ document.getElementById('detail-backdrop').addEventListener('click', closeDetail
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeDetail();
+});
+
+// Handle back button/swipe gesture to close detail overlay
+window.addEventListener('popstate', (event) => {
+  if (overlay.classList.contains('open')) {
+    event.preventDefault();
+    closeDetail();
+  }
 });
 </script>
 </body>
