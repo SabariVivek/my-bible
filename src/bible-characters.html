@@ -19,7 +19,28 @@
     --section-gap: 36px;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  *:active {
+    outline: none;
+  }
+
+  html {
+    -webkit-user-zoom: fixed;
+  }
 
   body {
     background: var(--bg);
@@ -406,13 +427,29 @@
     position: relative;
     z-index: 5;
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s 0.15s ease, transform 0.4s 0.15s ease;
+    transition: opacity 0.4s 0.15s ease;
+  }
+
+  .detail-content.animating {
+    opacity: 0;
+    animation: fadeUp 0.4s 0.15s ease forwards;
+  }
+
+  .detail-content.animating .detail-name,
+  .detail-content.animating .detail-role,
+  .detail-content.animating .detail-pills,
+  .detail-content.animating .detail-divider,
+  .detail-content.animating .detail-section-title,
+  .detail-content.animating .detail-bio,
+  .detail-content.animating .ornament,
+  .detail-content.animating > div {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.4s ease forwards;
   }
 
   #detail-overlay.open .detail-content {
     opacity: 1;
-    transform: translateY(0);
   }
 
   /* Decorative divider */
@@ -820,11 +857,13 @@ function switchView(view) {
   currentView = view;
   if (view === 'timeline') {
     detailEl.style.display = 'none';
+    detailEl.classList.remove('animating');
     timelineWrap.classList.add('visible');
     btnTimeline.classList.add('active');
     btnOverview.classList.remove('active');
     renderTimeline(currentChar);
   } else {
+    detailEl.classList.add('animating');
     detailEl.style.display = '';
     timelineWrap.classList.remove('visible');
     btnOverview.classList.add('active');
@@ -997,35 +1036,57 @@ function openDetail(char, cardClass) {
 
 
     detailEl.innerHTML = `
-      <div class="detail-divider" style="margin-bottom:20px">
+      <h2 class="detail-name" style="animation-delay:0.15s">
+        ${char.name}
+      </h2>
+      <p class="detail-role" style="animation-delay:0.2s">
+        ${char.role}
+      </p>
+
+      <div class="detail-pills" style="animation-delay:0.25s">
+        ${factPills}
+      </div>
+
+      <div class="detail-divider" style="margin:20px 0;animation-delay:0.3s">
         <div class="detail-divider-line" style="background:${lineGrad}"></div>
         <div class="detail-divider-diamond" style="background:${accentColor};opacity:0.7"></div>
         <div class="detail-divider-line" style="background:${lineGrad};transform:rotate(180deg)"></div>
       </div>
 
-      <h2 class="detail-name">${char.name}</h2>
-      <p class="detail-role">${char.role}</p>
+      <p class="detail-section-title" style="animation-delay:0.35s">
+        Biography
+      </p>
+      <p class="detail-bio" style="animation-delay:0.4s">
+        ${data.bio}
+      </p>
 
-      <div class="detail-pills">${factPills}</div>
-
-      <p class="detail-section-title">Biography</p>
-      <p class="detail-bio">${data.bio}</p>
+      <div class="detail-divider" style="margin:20px 0;animation-delay:0.45s">
+        <div class="detail-divider-line" style="background:${lineGrad}"></div>
+        <div class="detail-divider-diamond" style="background:${accentColor};opacity:0.7"></div>
+        <div class="detail-divider-line" style="background:${lineGrad};transform:rotate(180deg)"></div>
+      </div>
 
       ${versesHtml.length ? `
-        <p class="detail-section-title">Key Verses</p>
-        ${versesHtml}
-        <div class="ornament">✦ ✦ ✦</div>
+        <p class="detail-section-title" style="animation-delay:0.5s">
+          Key Verses
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 12px; animation-delay:0.55s">
+          ${versesHtml}
+        </div>
+        <div class="ornament" style="animation-delay:0.6s">✦ ✦ ✦</div>
       ` : ''}
     `;
   } else {
     detailEl.innerHTML = `
-      <div class="detail-divider" style="margin-bottom:20px">
+      <h2 class="detail-name">${char.name}</h2>
+      <p class="detail-role">${char.role}</p>
+
+      <div class="detail-divider" style="margin:20px 0">
         <div class="detail-divider-line" style="background:${lineGrad}"></div>
         <div class="detail-divider-diamond" style="background:${accentColor};opacity:0.7"></div>
         <div class="detail-divider-line" style="background:${lineGrad};transform:rotate(180deg)"></div>
       </div>
-      <h2 class="detail-name">${char.name}</h2>
-      <p class="detail-role">${char.role}</p>
+
       <p class="detail-bio" style="margin-top:24px">Detailed information about ${char.name} is being compiled. Explore this character's story through Scripture.</p>
     `;
   }
