@@ -1624,6 +1624,9 @@ function openDetail(stop, phase) {
 
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
+  
+  // Push history state to handle back gesture
+  history.pushState({ detailOpen: true }, '');
 }
 
 function closeDetail() {
@@ -1634,6 +1637,13 @@ function closeDetail() {
 backBtn.addEventListener('click', closeDetail);
 document.getElementById('detail-backdrop').addEventListener('click', closeDetail);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+// Handle back gesture on mobile - close detail overlay instead of navigating back
+window.addEventListener('popstate', (e) => {
+  if (overlay.classList.contains('open')) {
+    closeDetail();
+  }
+});
 </script>
 </body>
 </html>
