@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journey to Canaan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0b0f;
+    --card-bg: #181420;
+    --gold: #c8a96e;
+    --gold-light: #e8c98e;
+    --gold-dim: #6a5535;
+    --text: #ede5d8;
+    --muted: #6a6058;
+    --sand: #d4b483;
+    --sky: #7ab8d8;
+    --earth: #a07850;
+    --radius: 18px;
+    --section-gap: 15px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 44px 0 56px;
+    font-family: 'Lora', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .top-header {
+    padding: 0 28px 28px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.05s ease forwards;
+  }
+
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.4px;
+    line-height: 1.2;
+  }
+
+  .main-title em { font-style: normal; color: var(--gold); }
+
+  .subtitle {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .journey-stats {
+    display: flex;
+    gap: 0;
+    padding: 0 28px 28px;
+    opacity: 0;
+    animation: fadeUp 0.6s 0.12s ease forwards;
+  }
+
+  .stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 14px 8px;
+    border: 1px solid rgba(200,169,110,0.1);
+    background: rgba(200,169,110,0.04);
+  }
+
+  .stat-item:first-child { border-radius: 12px 0 0 12px; }
+  .stat-item:last-child  { border-radius: 0 12px 12px 0; }
+  .stat-item:not(:last-child) { border-right: none; }
+
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-family: 'Cinzel', serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .section {
+    margin-bottom: var(--section-gap);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 28px 14px;
+    overflow: hidden;
+  }
+
+  .phase-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .section-line { flex: 1; height: 1px; min-width: 8px; flex-shrink: 1; }
+  .section-count {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .phase-egypt   { color: #e8965a; }
+  .phase-sinai   { color: #c8a96e; }
+  .phase-desert  { color: #a07850; }
+  .phase-canaan  { color: #7ab8d8; }
+  .dot-egypt     { background: #e8965a; }
+  .dot-sinai     { background: #c8a96e; }
+  .dot-desert    { background: #a07850; }
+  .dot-canaan    { background: #7ab8d8; }
+  .line-egypt    { background: linear-gradient(90deg, rgba(232,150,90,0.35), transparent); }
+  .line-sinai    { background: linear-gradient(90deg, rgba(200,169,110,0.35), transparent); }
+  .line-desert   { background: linear-gradient(90deg, rgba(160,120,80,0.35), transparent); }
+  .line-canaan   { background: linear-gradient(90deg, rgba(122,184,216,0.35), transparent); }
+
+  .scroll-wrap { 
+    position: relative; 
+    width: calc(100% - 28px);
+    margin-left: 28px;
+  }
+
+  .scroll-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 8px 28px 16px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-track::-webkit-scrollbar { display: none; }
+
+  .fade-r {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 60px;
+    background: linear-gradient(270deg, var(--bg), transparent);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .card {
+    flex-shrink: 0;
+    width: 116px;
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: start;
+    position: relative;
+    transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1), border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 18px 44px rgba(0,0,0,0.75);
+  }
+
+  .card.card-egypt:hover  { border-color: rgba(232,150,90,0.42); }
+  .card.card-sinai:hover  { border-color: rgba(200,169,110,0.42); }
+  .card.card-desert:hover { border-color: rgba(160,120,80,0.42); }
+  .card.card-canaan:hover { border-color: rgba(122,184,216,0.42); }
+  .card:active { transform: translateY(-3px) scale(0.97); transition-duration: 0.1s; }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 12px; right: 12px;
+    height: 1.5px;
+    border-radius: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+  }
+  .card.card-egypt::before  { background: linear-gradient(90deg, transparent, #e8965a, transparent); }
+  .card.card-sinai::before  { background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .card.card-desert::before { background: linear-gradient(90deg, transparent, #a07850, transparent); }
+  .card.card-canaan::before { background: linear-gradient(90deg, transparent, #7ab8d8, transparent); }
+  .card:hover::before { opacity: 1; }
+
+  .card-img-wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    position: relative;
+    background: #110e1a;
+  }
+
+  .card-img-wrap img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover .card-img-wrap img { transform: scale(1.08); }
+
+  .card-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--card-bg) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .stop-badge {
+    position: absolute;
+    top: 7px; left: 7px;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    font-weight: 700;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    backdrop-filter: blur(8px);
+    letter-spacing: 0;
+  }
+
+  .stop-egypt  { background: rgba(232,150,90,0.25); color: #f0b07a; border: 1px solid rgba(232,150,90,0.4); }
+  .stop-sinai  { background: rgba(200,169,110,0.25); color: var(--gold-light); border: 1px solid rgba(200,169,110,0.4); }
+  .stop-desert { background: rgba(160,120,80,0.25); color: #c09060; border: 1px solid rgba(160,120,80,0.4); }
+  .stop-canaan { background: rgba(122,184,216,0.20); color: #9ec8e8; border: 1px solid rgba(122,184,216,0.35); }
+
+  .type-tag {
+    position: absolute;
+    top: 7px; right: 7px;
+    font-family: 'Cinzel', serif;
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    z-index: 5;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.4);
+    color: rgba(232,225,216,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .card-body { padding: 8px 10px 12px; }
+
+  .loc-name {
+    font-family: 'Cinzel', serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+    letter-spacing: 0.1px;
+  }
+
+  .loc-desc {
+    font-family: 'Lora', serif;
+    font-size: 8px;
+    font-style: italic;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+
+  .incidents-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 7px;
+    letter-spacing: 1px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  .incidents-chip::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+  }
+
+  .scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 28px 0;
+    opacity: 0;
+    animation: fadeUp 0.5s 1.2s ease forwards;
+  }
+  .hint-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(200,169,110,0.12), transparent); }
+  .hint-text {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  #detail-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  #detail-overlay.open {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  .detail-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(8,6,12,0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .detail-panel {
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+  }
+  .detail-panel::-webkit-scrollbar { display: none; }
+
+  .detail-hero {
+    position: relative;
+    width: 100%;
+    height: 52vw;
+    max-height: 360px;
+    min-height: 210px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #110e1a;
+  }
+
+  .detail-hero img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.05);
+    transition: transform 0.7s ease;
+  }
+
+  #detail-overlay.open .detail-hero img { transform: scale(1); }
+
+  .detail-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+      rgba(8,6,12,0.4) 0%,
+      transparent 40%,
+      rgba(8,6,12,0.55) 65%,
+      rgba(8,6,12,1) 100%);
+    z-index: 2;
+  }
+
+  .detail-back {
+    position: absolute;
+    top: 18px; left: 18px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(232,201,142,0.75);
+    background: rgba(13,11,15,0.55);
+    border: 1px solid rgba(200,169,110,0.18);
+    border-radius: 30px;
+    padding: 7px 14px 7px 10px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+
+  .detail-back:hover {
+    color: var(--gold-light);
+    border-color: rgba(200,169,110,0.4);
+    background: rgba(13,11,15,0.78);
+  }
+
+  .detail-back svg { width: 12px; height: 12px; }
+
+  .detail-stop-num {
+    position: absolute;
+    bottom: 20px; right: 20px;
+    z-index: 5;
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+  }
+
+  .detail-content {
+    flex: 1;
+    padding: 0 26px 60px;
+    margin-top: -16px;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s 0.15s ease, transform 0.4s 0.15s ease;
+  }
+
+  #detail-overlay.open .detail-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .detail-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .detail-divider-line { flex: 1; height: 1px; }
+  .detail-divider-diamond {
+    width: 6px; height: 6px;
+    border-radius: 1px;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .detail-loc-name {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+
+  .detail-loc-sub {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .detail-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+
+  .pill {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 30px;
+    border: 1px solid;
+  }
+
+  .pill-gold   { color: var(--gold-light); border-color: rgba(200,169,110,0.28); background: rgba(200,169,110,0.08); }
+  .pill-orange { color: #f0b07a; border-color: rgba(232,150,90,0.28); background: rgba(232,150,90,0.08); }
+  .pill-blue   { color: #9ec8e8; border-color: rgba(80,140,190,0.28); background: rgba(80,140,190,0.08); }
+  .pill-earth  { color: #c09060; border-color: rgba(160,120,80,0.28); background: rgba(160,120,80,0.08); }
+  .pill-muted  { color: var(--muted); border-color: rgba(106,96,88,0.28); background: rgba(106,96,88,0.08); }
+
+  .detail-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 10px;
+  }
+
+  .detail-desc {
+    font-family: 'Lora', serif;
+    font-size: 13.5px;
+    line-height: 1.78;
+    color: rgba(232,225,216,0.82);
+    margin-bottom: 28px;
+  }
+
+  .incidents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .incident-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: border-color 0.2s ease;
+  }
+
+  .incident-card:hover { border-color: rgba(200,169,110,0.2); }
+
+  .incident-icon {
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 15px;
+  }
+
+  .incident-body { flex: 1; }
+
+  .incident-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.2px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  .incident-desc {
+    font-family: 'Lora', serif;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .incident-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 1.2px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  .verse-card {
+    background: rgba(200,169,110,0.05);
+    border: 1px solid rgba(200,169,110,0.14);
+    border-left: 3px solid var(--gold-dim);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+
+  .verse-text {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 6px;
+  }
+
+  .verse-ref {
+    font-family: 'Cinzel', serif;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  .ornament {
+    text-align: center;
+    color: var(--gold-dim);
+    font-size: 18px;
+    letter-spacing: 12px;
+    margin: 24px 0;
+    opacity: 0.5;
+  }
+
+  .journey-connector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 28px 16px;
+    opacity: 0;
+    animation: fadeUp 0.5s 0.4s ease forwards;
+  }
+
+  .jc-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-dim); opacity: 0.4; flex-shrink: 0; }
+  .jc-line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(200,169,110,0.15), transparent); }
+  .jc-arrow {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    letter-spacing: 2px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    opacity: 0.5;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-header">
+  <p class="eyebrow">The Exodus & Wilderness</p>
+  <h1 class="main-title">Journey to <em>Canaan</em></h1>
+  <p class="subtitle">From Egypt's bondage to the Promised Land</p>
+</div>
+
+<div class="journey-stats">
+  <div class="stat-item">
+    <span class="stat-num">40</span>
+    <span class="stat-label">Years</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">42</span>
+    <span class="stat-label">Stops</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">600K</span>
+    <span class="stat-label">People</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">250mi</span>
+    <span class="stat-label">Distance</span>
+  </div>
+</div>
+
+<div id="sections"></div>
+
+<div class="scroll-hint">
+  <div class="hint-line"></div>
+  <span class="hint-text">Follow the journey</span>
+  <div class="hint-line" style="background:linear-gradient(270deg,rgba(200,169,110,0.12),transparent)"></div>
+</div>
+
+<div id="detail-overlay" role="dialog" aria-modal="true">
+  <div class="detail-backdrop" id="detail-backdrop"></div>
+  <div class="detail-panel" id="detail-panel">
+    <div class="detail-hero" id="detail-hero">
+      <img id="detail-hero-img" src="" alt="" />
+      <button class="detail-back" id="detail-back" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back
+      </button>
+      <div class="detail-stop-num" id="detail-stop-num"></div>
+    </div>
+    <div class="detail-content" id="detail-content"></div>
+  </div>
+</div>
+
+<script>
+const FALLBACK = 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80';
+
+const phases = [
+  // ═══════════════════════════════════════════════════
+  // PHASE 1: EGYPT — STOPS 1–4
+  // ═══════════════════════════════════════════════════
+  {
+    id: 'egypt',
+    label: 'Egypt — The Departure',
+    phase: 'egypt',
+    stops: [
+      {
+        num: 1,
+        name: 'Goshen',
+        sub: 'Land of Bondage',
+        type: 'Settlement',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+        ref: 'Genesis 47:6 · Exodus 1:11',
+        pills: ['Egypt', 'Settlement', 'Slavery'],
+        desc: `Goshen was the fertile region of northeastern Egypt given to Jacob's family by Pharaoh during Joseph's time as vizier. For four centuries the Israelites lived here, multiplying greatly into a nation of hundreds of thousands. Their prosperity eventually threatened the Egyptians, who subjected them to brutal forced labor, building the store cities of Pithom and Rameses. It was in Goshen that Moses was born, hidden for three months, and set adrift on the Nile.`,
+        incidents: [
+          { icon: '⛓️', title: 'Israelites Enslaved', desc: 'A new Pharaoh who did not know Joseph rose to power and enslaved the Hebrews out of fear of their numbers.', ref: 'Exodus 1:8–14' },
+          { icon: '👶', title: 'Birth & Preservation of Moses', desc: 'Moses was born in Goshen, hidden for three months by his mother Jochebed, then placed in a basket on the Nile.', ref: 'Exodus 2:1–10' },
+          { icon: '🔥', title: 'Ten Plagues Strike Egypt', desc: 'God sent ten devastating plagues upon Egypt — from blood to darkness — culminating in the death of the firstborn.', ref: 'Exodus 7–12' },
+          { icon: '🍖', title: 'The First Passover', desc: 'The Israelites marked their doorposts with lamb\'s blood so the angel of death would pass over their homes.', ref: 'Exodus 12:1–28' },
+        ],
+        verse: { text: 'The Israelites were exceedingly fruitful; they multiplied greatly, increased in numbers and became so numerous that the land was filled with them.', ref: 'Exodus 1:7' }
+      },
+      {
+        num: 2,
+        name: 'Rameses',
+        sub: 'City of Pharaoh · Starting Point',
+        type: 'Departure',
+        img: 'https://images.unsplash.com/photo-1553913861-c0fddf2619ee?w=800&q=80',
+        ref: 'Exodus 12:37 · Numbers 33:3',
+        pills: ['Egypt', 'Departure Point', 'Passover Night'],
+        desc: `Rameses, one of the great store cities built by Hebrew slave labor, was the starting point of the Exodus. On the night of Passover, after the death of Egypt's firstborn, Pharaoh urged the Israelites to leave immediately. Six hundred thousand men — plus women, children, and a mixed multitude — set out from Rameses that night with their unleavened dough, their livestock, and the plunder of Egypt.`,
+        incidents: [
+          { icon: '🌙', title: 'The Great Departure', desc: 'On Passover night, Israel set out from Rameses — 600,000 men on foot, plus women and children, a vast multitude.', ref: 'Exodus 12:37–38' },
+          { icon: '💀', title: 'Death of Egypt\'s Firstborn', desc: 'The tenth plague struck Egypt at midnight; Pharaoh rose up in the night and drove the Israelites out.', ref: 'Exodus 12:29–33' },
+          { icon: '💰', title: 'Plundering of Egypt', desc: 'The Israelites asked their Egyptian neighbors for silver, gold, and clothing — and God caused the Egyptians to give freely.', ref: 'Exodus 12:35–36' },
+        ],
+        verse: { text: 'The Israelites journeyed from Rameses to Sukkoth. There were about six hundred thousand men on foot, besides women and children.', ref: 'Exodus 12:37' }
+      },
+      {
+        num: 3,
+        name: 'Succoth',
+        sub: 'First Camp of Freedom',
+        type: 'Journey',
+        img: '../resources/journey/Succoth.png',
+        ref: 'Exodus 12:37 · Numbers 33:5',
+        pills: ['Egypt Border', 'First Camp', 'Freedom'],
+        desc: `Succoth was Israel's very first camp after leaving Rameses — the first night of freedom after four hundred years of slavery. The name means "booths" or "temporary shelters," fitting for a people newly on the move. Here the people baked their unleavened bread that had no time to rise, and began to grasp that the life they had always known was now behind them forever.`,
+        incidents: [
+          { icon: '🚶', title: 'First Camp of the Free', desc: 'Israel journeyed from Rameses to Succoth, camping for the first time as a free people outside Egypt\'s heart.', ref: 'Numbers 33:5' },
+          { icon: '🍞', title: 'Unleavened Bread Baked', desc: 'The people baked unleavened cakes from the dough they had brought out of Egypt — there was no time for it to rise.', ref: 'Exodus 12:39' },
+        ],
+        verse: { text: 'And they baked unleavened cakes of the dough which they had brought out of Egypt, for it was not leavened, because they were driven out of Egypt and could not wait.', ref: 'Exodus 12:39' }
+      },
+      {
+        num: 4,
+        name: 'Etham',
+        sub: 'Edge of the Wilderness · Pillar of Cloud',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+        ref: 'Exodus 13:20 · Numbers 33:6',
+        pills: ['Wilderness Edge', 'Pillar of Cloud', 'Pillar of Fire'],
+        desc: `Etham was at the edge of the wilderness — the border between the settled world of Egypt and the vast, unknown desert. It was here that the pillar of cloud by day and pillar of fire by night became Israel's constant divine companion and guide. From Etham, God directed Israel to turn back toward Pi-hahiroth, which would seem to trap them — but was in fact the stage for the greatest miracle they had yet seen.`,
+        incidents: [
+          { icon: '☁️', title: 'Pillar of Cloud & Fire Appears', desc: 'The LORD went before them in a pillar of cloud by day and a pillar of fire by night to guide their way.', ref: 'Exodus 13:21–22' },
+          { icon: '↩️', title: 'God Commands a Detour', desc: 'God told Israel to turn back and encamp before Pi-hahiroth — to lure Pharaoh into pursuit and show his power.', ref: 'Exodus 14:1–4' },
+        ],
+        verse: { text: 'By day the LORD went ahead of them in a pillar of cloud to guide them on their way and by night in a pillar of fire to give them light.', ref: 'Exodus 13:21' }
+      },
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════
+  // PHASE 2: RED SEA & SINAI — STOPS 5–14
+  // ═══════════════════════════════════════════════════
+  {
+    id: 'sinai',
+    label: 'Red Sea & Sinai — The Covenant',
+    phase: 'sinai',
+    stops: [
+      {
+        num: 5,
+        name: 'Pi-hahiroth',
+        sub: 'Encampment Before the Sea',
+        type: 'Miracle',
+        img: '../resources/journey/Pi-hahiroth.png',
+        ref: 'Exodus 14:1–3 · Numbers 33:7',
+        pills: ['Red Sea', 'Miracle', 'Pharaoh\'s Pursuit'],
+        desc: `At Pi-hahiroth, flanked by Migdol and Baal-zephon, Israel encamped by the sea. Pharaoh, having changed his mind about releasing Israel, pursued them with six hundred elite chariots and his entire army. The Israelites, terrified, cried out in despair — but it was here that God would perform one of the greatest miracles in all of Scripture, making a way where there seemed to be none.`,
+        incidents: [
+          { icon: '🐴', title: 'Pharaoh Pursues Israel', desc: 'Pharaoh regretted releasing Israel and charged after them with 600 chariots and the full Egyptian army.', ref: 'Exodus 14:5–9' },
+          { icon: '😱', title: 'Israel Cries Out in Terror', desc: 'Seeing the Egyptians approaching, the people cried out to Moses: "Was it because there were no graves in Egypt?"', ref: 'Exodus 14:10–12' },
+          { icon: '☁️', title: 'The Pillar Moved Behind Them', desc: 'The pillar of cloud moved from in front of Israel to behind them, coming between Israel and the Egyptians throughout the night.', ref: 'Exodus 14:19–20' },
+        ],
+        verse: { text: 'Do not be afraid. Stand firm and you will see the deliverance the LORD will bring you today.', ref: 'Exodus 14:13' }
+      },
+      {
+        num: 6,
+        name: 'The Red Sea',
+        sub: 'Parting of the Waters',
+        type: 'Miracle',
+        img: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80',
+        ref: 'Exodus 14:21–31 · Numbers 33:8',
+        pills: ['Red Sea', 'Greatest Miracle', 'Deliverance'],
+        desc: `The crossing of the Red Sea stands as the defining miracle of the Old Testament. Moses stretched out his hand over the sea and God drove it back with a strong east wind all night, making the seabed dry land with walls of water on either side. Israel walked through on dry ground. When the Egyptians pursued them, God threw the army into confusion and at dawn the waters returned — not one Egyptian survived. Israel sang the great Song of Moses.`,
+        incidents: [
+          { icon: '🌊', title: 'The Sea is Parted', desc: 'Moses stretched his hand and God drove back the sea with a powerful east wind all night, creating walls of water on both sides.', ref: 'Exodus 14:21–22' },
+          { icon: '🚶', title: 'Israel Crosses on Dry Ground', desc: 'The Israelites went through the sea on dry ground with the water like a wall on their right and left.', ref: 'Exodus 14:22' },
+          { icon: '⚡', title: 'Egypt\'s Army Destroyed', desc: 'At dawn God threw the Egyptian army into confusion, clogged their chariot wheels, and the returning waters overwhelmed them all.', ref: 'Exodus 14:24–28' },
+          { icon: '🎵', title: 'The Song of Moses', desc: 'Moses and the Israelites sang a great song of triumph to the Lord. Miriam led the women in dance with tambourines.', ref: 'Exodus 15:1–21' },
+        ],
+        verse: { text: 'The LORD is my strength and my defense; he has become my salvation. He is my God, and I will praise him.', ref: 'Exodus 15:2' }
+      },
+      {
+        num: 7,
+        name: 'Wilderness of Shur / Etham',
+        sub: 'Three Days Without Water',
+        type: 'Journey',
+        img: '../resources/journey/Wildernes-of-Shur.png',
+        ref: 'Exodus 15:22 · Numbers 33:8',
+        pills: ['Sinai Desert', 'Three Days', 'No Water'],
+        desc: `After the triumph at the Red Sea, Israel entered the Wilderness of Shur — also called the Wilderness of Etham — and traveled three days without finding water. This rapid transition from miraculous deliverance to desperate thirst would prove a pattern throughout the wilderness journey. The human heart is quick to forget what God has done, and Israel was no exception to this struggle.`,
+        incidents: [
+          { icon: '🏜️', title: 'Three Days Without Water', desc: 'Israel went three days into the Wilderness of Shur and found no water. The joy of deliverance gave way to desperate thirst.', ref: 'Exodus 15:22' },
+        ],
+        verse: { text: 'Then Moses led Israel from the Red Sea and they went into the Desert of Shur. For three days they traveled in the desert without finding water.', ref: 'Exodus 15:22' }
+      },
+      {
+        num: 8,
+        name: 'Marah',
+        sub: 'Bitter Waters Made Sweet',
+        type: 'Provision',
+        img: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
+        ref: 'Exodus 15:23–25 · Numbers 33:8',
+        pills: ['Sinai Peninsula', 'Bitter Water', 'Healing'],
+        desc: `Three days into the desert after crossing the sea, Israel came to Marah — but the water was bitter and undrinkable. The people grumbled against Moses bitterly. God showed Moses a piece of wood; when Moses threw it into the water, the water became sweet. It was here that God established a statute and a test for Israel, promising protection from disease for those who obeyed him.`,
+        incidents: [
+          { icon: '💧', title: 'Bitter Waters of Marah', desc: 'After three days without water, Israel found water at Marah — but could not drink it because it was bitter.', ref: 'Exodus 15:22–24' },
+          { icon: '🪵', title: 'Wood Sweetens the Water', desc: 'God showed Moses a piece of wood. When he threw it into the water, the water became sweet — a miracle of provision.', ref: 'Exodus 15:25' },
+          { icon: '📜', title: 'First Covenant Test', desc: 'God established a statute and a test: obedience would bring protection from Egypt\'s diseases.', ref: 'Exodus 15:25–26' },
+        ],
+        verse: { text: 'If you listen carefully to the LORD your God and do what is right in his eyes, I will not bring on you any of the diseases I brought on the Egyptians.', ref: 'Exodus 15:26' }
+      },
+      {
+        num: 9,
+        name: 'Elim',
+        sub: 'Oasis of Twelve Springs',
+        type: 'Rest',
+        img: '../resources/journey/Elim.png',
+        ref: 'Exodus 15:27 · Numbers 33:9',
+        pills: ['Sinai Peninsula', 'Oasis', 'Rest & Refreshment'],
+        desc: `After the bitterness of Marah, God led Israel to Elim — a beautiful oasis with twelve springs of water and seventy palm trees. The number twelve likely corresponded to the twelve tribes of Israel, the seventy to the seventy elders. Elim stands as a picture of God's grace: after every trial, God has a place of rest and refreshment waiting for his people.`,
+        incidents: [
+          { icon: '🌴', title: 'Twelve Springs and Seventy Palms', desc: 'Israel encamped at Elim, a lush oasis with twelve springs and seventy palm trees — abundant provision in the desert.', ref: 'Exodus 15:27' },
+        ],
+        verse: { text: 'Then they came to Elim, where there were twelve springs and seventy palm trees, and they camped there near the water.', ref: 'Exodus 15:27' }
+      },
+      {
+        num: 10,
+        name: 'Encampment by Red Sea',
+        sub: 'Rest on the Gulf Shore',
+        type: 'Journey',
+        img: '../resources/journey/Encampment by Red Sea.png',
+        ref: 'Numbers 33:10',
+        pills: ['Red Sea Shore', 'Gulf of Suez', 'Campsite'],
+        desc: `Numbers 33 records that Israel encamped by the Red Sea once more — likely the shore of the Gulf of Suez, on the western side of the Sinai Peninsula. This stop provided Israel with coastal water and rest before plunging deeper into the Sinai wilderness. The sight of the sea may have recalled the mighty miracle of their crossing only weeks before.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp by the Red Sea', desc: 'Israel camped by the shore of the Red Sea — a moment of rest between the oasis of Elim and the hard desert ahead.', ref: 'Numbers 33:10' },
+        ],
+        verse: { text: 'They left Elim and camped by the Red Sea.', ref: 'Numbers 33:10' }
+      },
+      {
+        num: 11,
+        name: 'Wilderness of Sin',
+        sub: 'Bread from Heaven Begins',
+        type: 'Provision',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+        ref: 'Exodus 16:1–36 · Numbers 33:11',
+        pills: ['Sinai Desert', 'Manna', 'Quail'],
+        desc: `In the Wilderness of Sin — between Elim and Sinai — the entire Israelite community grumbled against Moses and Aaron, saying they wished they had died in Egypt where at least they had meat and bread. God responded with extravagant provision: quail came in the evening and in the morning the ground was covered with manna — thin flakes as sweet as wafers made with honey. The manna would continue for forty years until they entered Canaan.`,
+        incidents: [
+          { icon: '😤', title: 'Grumbling Against Moses', desc: '"If only we had died in Egypt! There we sat around pots of meat and ate all the food we wanted, but you brought us out to starve."', ref: 'Exodus 16:2–3' },
+          { icon: '🐦', title: 'Quail Sent at Evening', desc: 'That evening quail came and covered the camp — God provided meat for the whole community.', ref: 'Exodus 16:13' },
+          { icon: '✨', title: 'Manna from Heaven', desc: 'In the morning a layer of dew covered the ground; when it evaporated, thin flakes appeared — manna, the bread God provided.', ref: 'Exodus 16:14–15, 31' },
+          { icon: '🪣', title: 'An Omer Kept as Memorial', desc: 'Moses commanded Aaron to store a jar of manna as a testimony for future generations.', ref: 'Exodus 16:33–34' },
+        ],
+        verse: { text: 'The Israelites called the bread manna. It was white like coriander seed and tasted like wafers made with honey.', ref: 'Exodus 16:31' }
+      },
+      {
+        num: 12,
+        name: 'Dophkah',
+        sub: 'Driving of Flocks',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1500382017468-7049b8171e92?w=800&q=80',
+        ref: 'Numbers 33:12',
+        pills: ['Sinai Peninsula', 'Desert Camp', 'Journey'],
+        desc: `Dophkah appears only in the itinerary list of Numbers 33, with no recorded incident. The name may relate to "driving" of flocks or herds, suggesting an area where livestock were driven across difficult terrain. Ancient records indicate this region contained turquoise mining operations worked by Egyptians, which Israel likely passed through as they moved through the central Sinai Peninsula.`,
+        incidents: [
+          { icon: '🐑', title: 'Wilderness Camp at Dophkah', desc: 'Israel camped at Dophkah, a waypoint in the Sinai desert recorded in the full itinerary of Numbers 33.', ref: 'Numbers 33:12' },
+        ],
+        verse: { text: 'They left the Desert of Sin and camped at Dophkah.', ref: 'Numbers 33:12' }
+      },
+      {
+        num: 13,
+        name: 'Alush',
+        sub: 'Desert Campsite',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80',
+        ref: 'Numbers 33:13',
+        pills: ['Sinai Desert', 'Journey', 'Campsite'],
+        desc: `Alush is another station recorded only in Numbers 33's comprehensive itinerary. Some scholars identify it with a location in the Wadi el-Esh or nearby valleys. The journey through these desert wadis would have been grueling — the terrain of the central Sinai is marked by dramatic rocky cliffs, dry riverbeds, and intense heat. Each campsite was a mercy of God to a nation of millions on the move.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Alush', desc: 'Israel camped at Alush, continuing their march through the harsh Sinai wilderness toward the holy mountain.', ref: 'Numbers 33:13' },
+        ],
+        verse: { text: 'They left Dophkah and camped at Alush.', ref: 'Numbers 33:13' }
+      },
+      {
+        num: 14,
+        name: 'Rephidim',
+        sub: 'Water from the Rock · War with Amalek',
+        type: 'Battle',
+        img: '../resources/journey/Rephidim.png',
+        ref: 'Exodus 17:1–16 · Numbers 33:14',
+        pills: ['Sinai Peninsula', 'Miracle', 'First Battle'],
+        desc: `At Rephidim there was no water, and the people quarreled with Moses so severely that he cried out to God, fearing they would stone him. God instructed Moses to strike the rock at Horeb with his staff — water gushed out. Moses named the place Massah and Meribah ("testing" and "quarreling"). Then Amalek attacked Israel at the rear. Joshua fought in the valley while Moses, Aaron, and Hur went to the hilltop. When Moses held up his hands, Israel prevailed; Aaron and Hur held up his hands until sunset, and Joshua overcame Amalek.`,
+        incidents: [
+          { icon: '💧', title: 'Water from the Rock at Horeb', desc: 'Moses struck the rock with his staff before the elders and water gushed out for the whole community to drink.', ref: 'Exodus 17:5–7' },
+          { icon: '⚔️', title: 'Battle with the Amalekites', desc: 'Amalek attacked the rear of the Israelite column. Joshua led the army in the valley while Moses prayed on the hilltop.', ref: 'Exodus 17:8–10' },
+          { icon: '🙌', title: 'Moses\' Hands Held Up', desc: 'When Moses raised his hands, Israel prevailed. Aaron and Hur supported his arms until sunset — Israel defeated Amalek.', ref: 'Exodus 17:11–13' },
+          { icon: '👨‍⚖️', title: 'Jethro\'s Visit & Counsel', desc: 'Moses\' father-in-law Jethro came to meet him, and advised Moses to appoint judges to share the burden of leadership.', ref: 'Exodus 18:1–27' },
+        ],
+        verse: { text: 'The LORD is my banner. The LORD will be at war against the Amalekites from generation to generation.', ref: 'Exodus 17:15–16' }
+      },
+      {
+        num: 15,
+        name: 'Mount Sinai',
+        sub: 'The Ten Commandments · The Covenant · The Tabernacle',
+        type: 'Covenant',
+        img: 'https://images.unsplash.com/photo-1565785755260-af65b86e3ac5?w=800&q=80',
+        ref: 'Exodus 19–34 · Leviticus 1–27 · Numbers 33:15',
+        pills: ['Sinai', 'Covenant', 'Law Given', 'Tabernacle'],
+        desc: `Israel camped at the foot of Mount Sinai for nearly a full year — the most significant stop of the entire journey. Here God descended in fire and thunder, spoke the Ten Commandments, and gave Moses the full Torah on two stone tablets. Moses spent forty days and nights on the mountain twice. During his first absence, the people fashioned the golden calf. Here too God gave the detailed instructions for the Tabernacle — the portable dwelling of God among his people — which was built and filled with divine glory.`,
+        incidents: [
+          { icon: '⛰️', title: 'God Descends on Sinai', desc: 'Mount Sinai was covered in smoke and fire; the whole mountain trembled violently as God descended on it.', ref: 'Exodus 19:18' },
+          { icon: '📜', title: 'The Ten Commandments Given', desc: 'God spoke the Ten Commandments from the fire and smoke, then wrote them on two stone tablets.', ref: 'Exodus 20:1–17; 31:18' },
+          { icon: '🐄', title: 'The Golden Calf', desc: 'While Moses was on the mountain, Aaron made a golden calf from the people\'s jewelry. Moses broke the tablets in grief.', ref: 'Exodus 32:1–20' },
+          { icon: '🏕️', title: 'The Tabernacle Constructed', desc: 'Skilled craftsmen built the Tabernacle exactly as God instructed. When finished, God\'s glory filled the tent.', ref: 'Exodus 35–40' },
+          { icon: '✨', title: 'Moses\' Face Radiant with Glory', desc: 'After meeting with God, Moses\' face shone with such glory that the Israelites were afraid to come near him.', ref: 'Exodus 34:29–35' },
+        ],
+        verse: { text: 'I am the LORD your God, who brought you out of Egypt, out of the land of slavery. You shall have no other gods before me.', ref: 'Exodus 20:2–3' }
+      },
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════
+  // PHASE 3: WILDERNESS WANDERING — STOPS 16–41
+  // ═══════════════════════════════════════════════════
+  {
+    id: 'desert',
+    label: 'Wilderness — 40 Years of Wandering',
+    phase: 'desert',
+    stops: [
+      {
+        num: 16,
+        name: 'Kibroth-hattaavah',
+        sub: 'Graves of Craving · The Quail Judgment',
+        type: 'Judgment',
+        img: '../resources/journey/Kibroth-hattaavah.png',
+        ref: 'Numbers 11:1–35 · Numbers 33:16',
+        pills: ['Wilderness', 'Judgment', 'Craving'],
+        desc: `Kibroth-hattaavah means "graves of craving" — a haunting name earned by Israel's violent complaining for meat. After fire broke out at Taberah, the people again wept for the food of Egypt: cucumbers, melons, garlic, fish. God sent quail in such abundance it was piled three feet deep for miles in all directions. But while the meat was still between their teeth, before it could be swallowed, a severe plague struck those who had craved so desperately. They buried the dead there and named the place the graves of craving.`,
+        incidents: [
+          { icon: '😭', title: 'Israel Craves Egypt\'s Food', desc: 'The people wept and complained: "We remember the fish we ate in Egypt freely, the cucumbers, the melons, the leeks."', ref: 'Numbers 11:4–6' },
+          { icon: '🌪️', title: 'Quail Sent in Abundance', desc: 'God sent quail in such enormous quantities it covered the ground three feet deep for miles around the camp.', ref: 'Numbers 11:31–32' },
+          { icon: '💀', title: 'Plague Strikes the Greedy', desc: 'While the meat was still in their mouths, God\'s anger blazed and a severe plague struck those who craved intensely.', ref: 'Numbers 11:33' },
+        ],
+        verse: { text: 'So they named that place Kibroth-hattaavah, because there they buried the people who had craved other food.', ref: 'Numbers 11:34' }
+      },
+      {
+        num: 17,
+        name: 'Hazeroth',
+        sub: 'Miriam\'s Rebellion Against Moses',
+        type: 'Judgment',
+        img: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80',
+        ref: 'Numbers 12:1–16 · Numbers 33:17',
+        pills: ['Wilderness', 'Miriam', 'Leprosy', 'Moses Defended'],
+        desc: `At Hazeroth, Miriam and Aaron spoke against Moses because of his Cushite wife and challenged his exclusive leadership: "Has the LORD spoken only through Moses? Hasn't he also spoken through us?" God was angry and appeared at the tent of meeting. When the cloud lifted, Miriam was afflicted with leprosy — white as snow. Aaron pleaded with Moses, and Moses cried out to God: "Please, God, heal her!" God agreed but required Miriam to be confined outside the camp for seven days before being brought back in.`,
+        incidents: [
+          { icon: '😤', title: 'Miriam & Aaron Oppose Moses', desc: 'Miriam and Aaron challenged Moses\'s unique authority, questioning why God spoke only through him.', ref: 'Numbers 12:1–2' },
+          { icon: '🗣️', title: 'God Defends Moses', desc: 'God declared Moses uniquely faithful: "With him I speak face to face." God\'s anger burned against Miriam.', ref: 'Numbers 12:6–9' },
+          { icon: '🤒', title: 'Miriam Struck with Leprosy', desc: 'When the cloud lifted, Miriam was leprous — white as snow. Aaron pleaded with Moses, and Moses prayed for her healing.', ref: 'Numbers 12:10–13' },
+          { icon: '⏳', title: 'Seven Days Outside the Camp', desc: 'God required Miriam to be shut outside the camp for seven days. All Israel waited; they did not move on until she was brought back.', ref: 'Numbers 12:14–16' },
+        ],
+        verse: { text: 'Now Moses was a very humble man, more humble than anyone else on the face of the earth.', ref: 'Numbers 12:3' }
+      },
+      {
+        num: 18,
+        name: 'Rithmah',
+        sub: 'First Camp in the Desert of Paran',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&q=80',
+        ref: 'Numbers 33:18',
+        pills: ['Desert of Paran', 'Journey', 'Northern Sinai'],
+        desc: `Rithmah, meaning "broom tree" or "juniper tree," was a campsite in the Desert of Paran as Israel moved northward toward Canaan. The broom tree (Retama) was a common desert shrub that offered shade in the harsh landscape. This same desert region later saw Elijah collapse in exhaustion under a broom tree, where an angel fed him. Israel's camp here preceded the fateful mission to Kadesh Barnea.`,
+        incidents: [
+          { icon: '🌿', title: 'Camp at Rithmah', desc: 'Israel camped at Rithmah in the Desert of Paran, moving northward toward the border of Canaan.', ref: 'Numbers 33:18' },
+        ],
+        verse: { text: 'They left Hazeroth and camped at Rithmah.', ref: 'Numbers 33:18' }
+      },
+      {
+        num: 19,
+        name: 'Rimmon-Perez',
+        sub: 'Pomegranate of the Breach',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+        ref: 'Numbers 33:19',
+        pills: ['Desert', 'Journey', 'Campsite'],
+        desc: `Rimmon-Perez means "pomegranate of the breach" or "pomegranate of the cleft." The name suggests a rocky location with a narrow pass or cleft, possibly a canyon or wadi pass. Like many of the wilderness stations, Rimmon-Perez appears only in the Numbers 33 itinerary — one of many campsites along the long desert route that stretched across the Sinai and Negev regions.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Rimmon-Perez', desc: 'Israel camped at Rimmon-Perez as they made their way through the desert wilderness toward Kadesh.', ref: 'Numbers 33:19' },
+        ],
+        verse: { text: 'They left Rithmah and camped at Rimmon-Perez.', ref: 'Numbers 33:19' }
+      },
+      {
+        num: 20,
+        name: 'Libnah',
+        sub: 'The White Place',
+        type: 'Journey',
+        img: '../resources/journey/Libnah.png',
+        ref: 'Numbers 33:20',
+        pills: ['Desert', 'Journey', 'Campsite'],
+        desc: `Libnah means "whiteness" or "white" — possibly named for white chalk formations, gypsum deposits, or the white desert landscape of this particular area. The Sinai wilderness contains dramatic geological formations including brilliantly white limestone and chalk cliffs. This was one of the campsites on the long northward journey through the desert.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Libnah', desc: 'Israel camped at Libnah, a desert station named for its white-colored terrain or rock formations.', ref: 'Numbers 33:20' },
+        ],
+        verse: { text: 'They left Rimmon-Perez and camped at Libnah.', ref: 'Numbers 33:20' }
+      },
+      {
+        num: 21,
+        name: 'Rissah',
+        sub: 'Dew or Ruin',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1500382017468-7049b8171e92?w=800&q=80',
+        ref: 'Numbers 33:21',
+        pills: ['Desert', 'Journey', 'Campsite'],
+        desc: `Rissah's name may mean "dew" or "ruins" — the exact location is uncertain, but it lies on the route through the Sinai wilderness. The presence of so many unnamed campsites reminds us that for forty years millions of people lived, bore children, grew old, and died in the desert. The Numbers 33 itinerary is in part a memorial to a generation that never reached its destination.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Rissah', desc: 'Israel camped at Rissah — one of dozens of desert stations marking the long wilderness years.', ref: 'Numbers 33:21' },
+        ],
+        verse: { text: 'They left Libnah and camped at Rissah.', ref: 'Numbers 33:21' }
+      },
+      {
+        num: 22,
+        name: 'Kehelathah',
+        sub: 'The Assembly',
+        type: 'Journey',
+        img: '../resources/journey/Kehelathah.png',
+        ref: 'Numbers 33:22',
+        pills: ['Desert', 'Assembly', 'Journey'],
+        desc: `Kehelathah means "assembly" or "gathering place" — suggesting this may have been a significant meeting point, perhaps a wide valley or plain that could accommodate the enormous Israelite community. Israel was not a small band of travelers; they were a nation of perhaps two to three million people, requiring vast camping grounds and careful organization. Kehelathah may have been one of the few locations with sufficient space for all Israel to gather.`,
+        incidents: [
+          { icon: '👥', title: 'Israel Assembles at Kehelathah', desc: 'Israel camped at Kehelathah — meaning "assembly" — a gathering place in the wilderness journey.', ref: 'Numbers 33:22' },
+        ],
+        verse: { text: 'They left Rissah and camped at Kehelathah.', ref: 'Numbers 33:22' }
+      },
+      {
+        num: 23,
+        name: 'Mount Shepher',
+        sub: 'The Beautiful Mountain',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
+        ref: 'Numbers 33:23',
+        pills: ['Mountain', 'Journey', 'Desert'],
+        desc: `Mount Shepher — "beautiful mountain" or "mountain of pleasantness" — was a prominent geographical landmark Israel camped beside. The Sinai Peninsula contains many striking mountain formations; Shepher was likely one that stood out from the desert floor as a notable waypoint. Mountains in the ancient Near East were often considered places where heaven and earth drew near, and Israel had already experienced this truth at Sinai.`,
+        incidents: [
+          { icon: '⛰️', title: 'Camp at Mount Shepher', desc: 'Israel camped at Mount Shepher — the beautiful mountain — a notable landmark in the wilderness journey.', ref: 'Numbers 33:23' },
+        ],
+        verse: { text: 'They left Kehelathah and camped at Mount Shepher.', ref: 'Numbers 33:23' }
+      },
+      {
+        num: 24,
+        name: 'Haradah',
+        sub: 'The Place of Fear or Trembling',
+        type: 'Journey',
+        img: '../resources/journey/Haradah.png',
+        ref: 'Numbers 33:24',
+        pills: ['Desert', 'Wilderness', 'Journey'],
+        desc: `Haradah means "terror," "fear," or "trembling" — a name that evokes the psychological weight of the wilderness experience. The Hebrew root relates to trembling or being startled. Whether this name came from a dramatic natural event, a divine encounter, or the emotional state of Israel at this location is unknown. But it stands as a reminder that the wilderness journey was not merely a physical ordeal — it was a spiritual crucible.`,
+        incidents: [
+          { icon: '😰', title: 'Camp at Haradah', desc: 'Israel camped at Haradah — "the place of trembling" — somewhere in the long wilderness wandering.', ref: 'Numbers 33:24' },
+        ],
+        verse: { text: 'They left Mount Shepher and camped at Haradah.', ref: 'Numbers 33:24' }
+      },
+      {
+        num: 25,
+        name: 'Makheloth',
+        sub: 'Place of Assemblies',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1516251193557-37f08c1b04e7?w=800&q=80',
+        ref: 'Numbers 33:25',
+        pills: ['Desert', 'Assembly', 'Journey'],
+        desc: `Makheloth is closely related to Kehelathah — both names derive from the Hebrew root for "assembly" or "congregation." This may point to another large gathering place, or to the communal nature of Israel's camp life. Throughout the wandering years, the Tabernacle was the center of Israel's community — daily sacrifices, priestly ministry, and God's presence in the cloud continued even in the desert.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Makheloth', desc: 'Israel camped at Makheloth — another "assembly place" in the long forty-year journey.', ref: 'Numbers 33:25' },
+        ],
+        verse: { text: 'They left Haradah and camped at Makheloth.', ref: 'Numbers 33:25' }
+      },
+      {
+        num: 26,
+        name: 'Tahath',
+        sub: 'Below or Station',
+        type: 'Journey',
+        img: '../resources/journey/Tahath.png',
+        ref: 'Numbers 33:26',
+        pills: ['Desert', 'Journey', 'Campsite'],
+        desc: `Tahath means "beneath" or "station" — possibly indicating a low-lying area, a valley, or simply a campsite along the way. Children were born here, elders died here, and the priestly duties continued day after day. The generation that knew Egypt was slowly being replaced by a new generation that had known only the desert — and the manna, and the pillar of cloud, and the voice of God through Moses.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Tahath', desc: 'Israel camped at Tahath — a desert station on the long journey of forty years.', ref: 'Numbers 33:26' },
+        ],
+        verse: { text: 'They left Makheloth and camped at Tahath.', ref: 'Numbers 33:26' }
+      },
+      {
+        num: 27,
+        name: 'Terah',
+        sub: 'Ibex or Station of Delay',
+        type: 'Journey',
+        img: '../resources/journey/Terah.png',
+        ref: 'Numbers 33:27',
+        pills: ['Desert', 'Journey', 'Campsite'],
+        desc: `Terah shares the same name as Abraham's father — and may refer to wild ibex that roamed this desert region, as the Hebrew word can mean "wild goat" or "ibex." The Sinai desert was home to Nubian ibex, hardy mountain goats that could find water and sparse vegetation in the most inhospitable terrain. Israel's wilderness years were characterized by a similar kind of endurance — surviving on daily divine provision.`,
+        incidents: [
+          { icon: '🐐', title: 'Camp at Terah', desc: 'Israel camped at Terah, a desert waypoint along the forty-year route of wandering.', ref: 'Numbers 33:27' },
+        ],
+        verse: { text: 'They left Tahath and camped at Terah.', ref: 'Numbers 33:27' }
+      },
+      {
+        num: 28,
+        name: 'Mithkah',
+        sub: 'Sweetness or Sweet Place',
+        type: 'Journey',
+        img: '../resources/journey/Mithakah.png',
+        ref: 'Numbers 33:28',
+        pills: ['Desert', 'Sweet Water', 'Journey'],
+        desc: `Mithkah means "sweetness" — possibly named for sweet water found at this location, perhaps a spring or well with particularly good water. After so many stories of bitter water and thirsting in the desert, Mithkah's name suggests a moment of gracious provision. Even in the forty years of wandering, God's mercies were new every morning — manna, water, direction, and occasional moments of unexpected sweetness.`,
+        incidents: [
+          { icon: '💧', title: 'Sweet Waters at Mithkah', desc: 'Israel camped at Mithkah — "sweetness" — a place in the desert that offered pleasant water or provision.', ref: 'Numbers 33:28' },
+        ],
+        verse: { text: 'They left Terah and camped at Mithkah.', ref: 'Numbers 33:28' }
+      },
+      {
+        num: 29,
+        name: 'Hashmonah',
+        sub: 'Fatness · Place of Plenty',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1516251193557-37f08c1b04e7?w=800&q=80',
+        ref: 'Numbers 33:29',
+        pills: ['Desert', 'Provision', 'Journey'],
+        desc: `Hashmonah means "fatness" or "a place of plenty" — a name suggesting either natural abundance (perhaps a fertile valley or oasis) or simply a positive memory associated with this camp. The name is related to the Hebrew word for oil and richness. Whether this was a genuinely lush location or a name given in irony or hope, it stands as a reminder that even in the wilderness, Israel was never truly abandoned.`,
+        incidents: [
+          { icon: '🌿', title: 'Camp at Hashmonah', desc: 'Israel camped at Hashmonah — "fatness" — a desert station suggesting some measure of provision.', ref: 'Numbers 33:29' },
+        ],
+        verse: { text: 'They left Mithkah and camped at Hashmonah.', ref: 'Numbers 33:29' }
+      },
+      {
+        num: 30,
+        name: 'Moseroth',
+        sub: 'Chastisements · Near Mount Hor',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
+        ref: 'Numbers 33:30 · Deuteronomy 10:6',
+        pills: ['Edom Border', 'Aaron', 'Priesthood'],
+        desc: `Moseroth means "chastisements" or "bonds." Deuteronomy 10:6 mentions that Aaron died at Moserah — possibly the same location as Moseroth, or very nearby. This is a discrepancy in location names that scholars have debated, but both accounts agree that Aaron's death and the transfer of the high priesthood to his son Eleazar occurred in this region near Mount Hor. The name "chastisements" may reflect the solemn discipline of the wilderness years.`,
+        incidents: [
+          { icon: '⛺', title: 'Camp at Moseroth', desc: 'Israel camped at Moseroth — near the region where Aaron would die and the high priesthood would be transferred.', ref: 'Numbers 33:30' },
+        ],
+        verse: { text: 'The Israelites traveled from the wells of Bene-jaakan to Moserah. There Aaron died and was buried.', ref: 'Deuteronomy 10:6' }
+      },
+      {
+        num: 31,
+        name: 'Bene-jaakan',
+        sub: 'Wells of the Sons of Jaakan',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
+        ref: 'Numbers 33:31 · Deuteronomy 10:6',
+        pills: ['Edom', 'Wells', 'Journey'],
+        desc: `Bene-jaakan means "sons of Jaakan" — the Jaakan were a Horite (Edomite) clan who inhabited this region. The "wells" mentioned in Deuteronomy 10:6 suggest this area had known water sources, likely the wells dug by the Jaakan clan. Traveling in Edomite territory, Israel was moving through lands inhabited by the descendants of Esau — distant relatives, but not allies. Edom had already refused Israel passage through their territory.`,
+        incidents: [
+          { icon: '🪣', title: 'Wells of Bene-jaakan', desc: 'Israel camped at the wells of Bene-jaakan — water sources in Edomite territory along the southern route.', ref: 'Numbers 33:31' },
+        ],
+        verse: { text: 'From there they traveled to Gudgodah and on to Jotbathah, a land with streams of water.', ref: 'Deuteronomy 10:7' }
+      },
+      {
+        num: 32,
+        name: 'Hor-haggidgad',
+        sub: 'Cavern of Gidgad',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80',
+        ref: 'Numbers 33:32 · Deuteronomy 10:7',
+        pills: ['Edom Region', 'Cave Country', 'Journey'],
+        desc: `Hor-haggidgad — "cavern of Gidgad" or "hole of Gidgad" — was a campsite in rocky, cave-pocked terrain. The region around the Arabah (the great rift valley south of the Dead Sea) is characterized by dramatic sandstone cliffs and caves. Deuteronomy 10:7 calls this place "Gudgodah." The Nabataean city of Petra — carved entirely into rose-red sandstone cliffs — is not far from this region, giving a sense of the dramatic landscape.`,
+        incidents: [
+          { icon: '🪨', title: 'Camp at Hor-haggidgad', desc: 'Israel camped at Hor-haggidgad — a cave or cavern region in the rocky wilderness near Edom.', ref: 'Numbers 33:32' },
+        ],
+        verse: { text: 'From Bene-jaakan the Israelites traveled to Hor-haggidgad, and from there to Jotbathah.', ref: 'Numbers 33:32' }
+      },
+      {
+        num: 33,
+        name: 'Jotbathah',
+        sub: 'Land of Brooks',
+        type: 'Rest',
+        img: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80',
+        ref: 'Numbers 33:33 · Deuteronomy 10:7',
+        pills: ['Arabah', 'Water Streams', 'Rest'],
+        desc: `Jotbathah — "pleasantness" or "goodness" — is described in Deuteronomy 10:7 as "a land with streams of water." In the brutal desert environment of the Arabah, a place with running water would have been extraordinarily welcome to the millions of Israelites. This was one of the genuinely pleasant campsites of the wilderness years — a reminder that even in judgment, God provided moments of mercy.`,
+        incidents: [
+          { icon: '💧', title: 'Streams of Water at Jotbathah', desc: 'Israel rested at Jotbathah — described as "a land with streams of water" — a welcome respite in the desert journey.', ref: 'Deuteronomy 10:7' },
+        ],
+        verse: { text: 'From there they traveled to Jotbathah, a land with streams of water.', ref: 'Deuteronomy 10:7' }
+      },
+      {
+        num: 34,
+        name: 'Abronah',
+        sub: 'Passage or Crossing',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+        ref: 'Numbers 33:34',
+        pills: ['Arabah', 'Crossing', 'Journey'],
+        desc: `Abronah means "passage," "crossing," or "ford" — suggesting this campsite was near a significant water crossing or geographical passage. Located in the Arabah (the great desert valley between the Dead Sea and the Red Sea), Abronah may have been near a ford through the Wadi Arabah. Israel was moving steadily southward and then eastward around Edom toward Ezion-geber on the Gulf of Aqaba.`,
+        incidents: [
+          { icon: '🌉', title: 'Camp at Abronah', desc: 'Israel camped at Abronah — a crossing place or ford in the Arabah valley south of the Dead Sea.', ref: 'Numbers 33:34' },
+        ],
+        verse: { text: 'They left Jotbathah and camped at Abronah.', ref: 'Numbers 33:34' }
+      },
+      {
+        num: 35,
+        name: 'Ezion-geber',
+        sub: 'Port on the Gulf of Aqaba',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1559628233-100c798642c8?w=800&q=80',
+        ref: 'Numbers 33:35 · Deuteronomy 2:8',
+        pills: ['Red Sea', 'Gulf of Aqaba', 'Port City'],
+        desc: `Ezion-geber was a significant port city at the northern tip of the Gulf of Aqaba (the eastern arm of the Red Sea). Centuries later, Solomon would build a great fleet of ships here. Israel's presence at Ezion-geber marked the southernmost point of their long detour around Edom. From here they would begin the long journey northward on the eastern side of Edom, heading toward Moab and eventually the plains across from Jericho.`,
+        incidents: [
+          { icon: '⚓', title: 'Port of Ezion-geber', desc: 'Israel camped at Ezion-geber on the Gulf of Aqaba — the southernmost point of their wilderness route.', ref: 'Numbers 33:35' },
+          { icon: '↩️', title: 'Turning Northward at Last', desc: 'From Ezion-geber, Israel began the long journey northward on the east side of Edom toward Moab and Canaan.', ref: 'Deuteronomy 2:8' },
+        ],
+        verse: { text: 'So we passed by our relatives, the descendants of Esau, and turned from the Arabah road from Elath and Ezion-geber.', ref: 'Deuteronomy 2:8' }
+      },
+      {
+        num: 36,
+        name: 'Kadesh (Wilderness of Zin)',
+        sub: 'The Fateful Decision · 40 Years Begin',
+        type: 'Turning Point',
+        img: 'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&q=80',
+        ref: 'Numbers 13–14; 20:1 · Numbers 33:36',
+        pills: ['Negev Desert', 'Turning Point', 'Unbelief', '40 Years'],
+        desc: `Kadesh Barnea is the most tragic location in the entire Exodus narrative — the place where Israel's unbelief cost them a generation. Moses sent twelve spies into Canaan for forty days. Ten returned with a fearful report of giants and fortified cities; only Caleb and Joshua urged trust in God. The people wept, threatened to stone Moses, and talked of returning to Egypt. God's judgment: that generation would wander forty years in the desert until they died. Thirty-eight years later, Israel returned to Kadesh before the final approach to Canaan.`,
+        incidents: [
+          { icon: '🔍', title: 'Twelve Spies Sent into Canaan', desc: 'Moses sent one leader from each tribe to spy out the land of Canaan for forty days.', ref: 'Numbers 13:1–25' },
+          { icon: '😨', title: 'The Faithless Report', desc: '"We seemed like grasshoppers in our own eyes, and we looked the same to them." — Ten spies urged retreat.', ref: 'Numbers 13:31–33' },
+          { icon: '🦁', title: 'Caleb and Joshua\'s Courage', desc: '"We should go up and take possession of the land, for we can certainly do it." — Caleb and Joshua stood alone.', ref: 'Numbers 13:30; 14:6–9' },
+          { icon: '⏳', title: '40 Years of Wandering Decreed', desc: 'God decreed: for forty days of unbelief, forty years of wandering. That entire generation would die in the wilderness.', ref: 'Numbers 14:26–35' },
+          { icon: '💀', title: 'Death of Miriam (38 Years Later)', desc: 'Miriam died and was buried at Kadesh — her death marked the end of the forty-year generation.', ref: 'Numbers 20:1' },
+          { icon: '💧', title: 'Moses Strikes the Rock at Meribah', desc: 'God said to speak to the rock; Moses struck it twice in anger. Water gushed out, but Moses was barred from Canaan.', ref: 'Numbers 20:7–12' },
+        ],
+        verse: { text: 'Not one of you will enter the land I swore with uplifted hand to make your home, except Caleb son of Jephunneh and Joshua son of Nun.', ref: 'Numbers 14:30' }
+      },
+      {
+        num: 37,
+        name: 'Mount Hor',
+        sub: 'Death of Aaron · High Priesthood Transferred',
+        type: 'Transition',
+        img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
+        ref: 'Numbers 20:22–29 · Numbers 33:37',
+        pills: ['Mount Hor', 'Aaron\'s Death', 'Priesthood'],
+        desc: `At Mount Hor, on the border of Edom, God told Moses that Aaron would not enter the Promised Land — the time had come for him to die. Moses, Aaron, and Aaron's son Eleazar ascended the mountain together. Moses removed Aaron's priestly garments and put them on Eleazar. Aaron died there on the mountaintop at 123 years old. All Israel mourned for Aaron thirty days. Eleazar became the new High Priest of Israel — the priesthood passed to the next generation.`,
+        incidents: [
+          { icon: '⛰️', title: 'Aaron Brought to the Mountain', desc: 'God told Moses: take Aaron and Eleazar up Mount Hor. Aaron will die there and will not enter the Promised Land.', ref: 'Numbers 20:23–26' },
+          { icon: '👘', title: 'Priestly Garments Transferred', desc: 'Moses removed Aaron\'s priestly robes and put them on his son Eleazar. The high priesthood passed to the next generation.', ref: 'Numbers 20:28' },
+          { icon: '😢', title: 'Israel Mourns Thirty Days', desc: 'When Aaron died and the whole community saw that he was gone, they mourned for thirty days.', ref: 'Numbers 20:29' },
+          { icon: '⚔️', title: 'Victory over the Canaanite King of Arad', desc: 'When the Canaanite king of Arad attacked Israel and took captives, Israel vowed to destroy his cities — and God gave them victory.', ref: 'Numbers 21:1–3' },
+        ],
+        verse: { text: 'Aaron will be gathered to his people. He will not enter the land I give the Israelites, because both of you rebelled against my command at the waters of Meribah.', ref: 'Numbers 20:24' }
+      },
+      {
+        num: 38,
+        name: 'Zalmonah',
+        sub: 'Bronze Serpent · Journey Around Edom',
+        type: 'Judgment',
+        img: 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80',
+        ref: 'Numbers 21:4–9 · Numbers 33:41',
+        pills: ['Wilderness', 'Bronze Serpent', 'Judgment & Mercy'],
+        desc: `After leaving Mount Hor, Israel began traveling around Edom on a difficult southern route. The people grew impatient and spoke against God and Moses: "Why have you brought us out of Egypt to die in the wilderness? There is no bread! There is no water! And we detest this miserable food!" God sent venomous snakes among the people, and many Israelites died. The people repented and cried for Moses to pray. God told Moses to make a bronze snake and put it on a pole — anyone bitten who looked at it would live. Jesus later cited this as a foreshadowing of his own crucifixion.`,
+        incidents: [
+          { icon: '🐍', title: 'Venomous Snakes Sent Among Israel', desc: 'God sent venomous snakes as judgment for Israel\'s complaint. Many people died from the snake bites.', ref: 'Numbers 21:5–6' },
+          { icon: '🙏', title: 'Israel Repents and Cries Out', desc: '"We sinned when we spoke against the LORD and against you. Pray that the LORD will take the snakes away from us."', ref: 'Numbers 21:7' },
+          { icon: '🐍', title: 'Bronze Serpent on a Pole', desc: 'Moses made a bronze snake; anyone bitten who looked at the bronze serpent lived. Jesus said: "So must the Son of Man be lifted up."', ref: 'Numbers 21:8–9; John 3:14–15' },
+        ],
+        verse: { text: 'Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that everyone who believes may have eternal life in him.', ref: 'John 3:14–15' }
+      },
+      {
+        num: 39,
+        name: 'Punon',
+        sub: 'Copper Mining Region',
+        type: 'Journey',
+        img: '../resources/journey/Punon.png',
+        ref: 'Numbers 33:42',
+        pills: ['Edom', 'Copper Mines', 'Journey'],
+        desc: `Punon was one of the most famous copper-mining regions of the ancient world. The mines at Punon (modern Faynan in Jordan) were worked extensively throughout the Bronze and Iron Ages. Thousands of slaves and workers labored in these mines under brutal conditions. As Israel passed through this region, they would have witnessed the industrial scale of ancient copper production — furnaces, slag heaps, and mine shafts cut into the sandstone cliffs.`,
+        incidents: [
+          { icon: '⛏️', title: 'Copper Mining at Punon', desc: 'Punon was renowned in the ancient Near East as a major source of copper ore — an important metal for tools and weapons.', ref: 'Numbers 33:42' },
+        ],
+        verse: { text: 'They left Zalmonah and camped at Punon.', ref: 'Numbers 33:42' }
+      },
+      {
+        num: 40,
+        name: 'Oboth',
+        sub: 'Approaching Moab · Waters of the Arnon',
+        type: 'Journey',
+        img: '../resources/journey/Oboth.png',
+        ref: 'Numbers 21:10 · Numbers 33:43',
+        pills: ['Moab Border', 'Northeast Turn', 'Journey'],
+        desc: `Oboth was a major waypoint as Israel turned northeastward, leaving the southern desert route and beginning the journey toward the Jordan. At or near Oboth, Israel crossed the Wadi Zered — the brook of the willows — marking the border into Moab's territory. God specifically told Israel not to harass Moab or provoke them to war, as the land of Moab belonged to the descendants of Lot. The wilderness generation was nearly all gone; the new generation was taking over.`,
+        incidents: [
+          { icon: '🧭', title: 'Turning Northeast Toward Jordan', desc: 'From Oboth, Israel turned north and east toward the Jordan River and the eastern plains of Moab.', ref: 'Numbers 21:10–11' },
+          { icon: '🌊', title: 'Crossing the Brook Zered', desc: 'Israel crossed the Wadi Zered — marking the end of 38 years of wandering since Kadesh Barnea.', ref: 'Deuteronomy 2:13–14' },
+        ],
+        verse: { text: 'Now get up and cross the Zered Valley. So we crossed the valley, and thirty-eight years had passed from the time we left Kadesh Barnea.', ref: 'Deuteronomy 2:13–14' }
+      },
+      {
+        num: 41,
+        name: 'Iye-Abarim',
+        sub: 'Ruins of Abarim · Moab Border',
+        type: 'Journey',
+        img: 'https://images.unsplash.com/photo-1500382017468-7049b8171e92?w=800&q=80',
+        ref: 'Numbers 21:11 · Numbers 33:44',
+        pills: ['Wilderness of Moab', 'Abarim Mountains', 'Journey'],
+        desc: `Iye-Abarim means "ruins of Abarim" or "heaps of Abarim" — a reference to the ancient mountainous Abarim region east of the Dead Sea. This campsite was on the eastern border of Moab, facing the rising sun. Israel was close now — the Mountains of Abarim were visible, Canaan was within reach. Here God commanded Moses to speak to the people with the final instructions that would become the book of Deuteronomy.`,
+        incidents: [
+          { icon: '🏛️', title: 'Abarim Region in View', desc: 'Israel camped at Iye-Abarim at the wilderness border of Moab — the Abarim mountains and Canaan beyond were coming into view.', ref: 'Numbers 21:11' },
+          { icon: '⚔️', title: 'Defeat of King Sihon', desc: 'Israel asked Sihon king of the Amorites for passage; he refused and attacked. Israel defeated him and occupied his land.', ref: 'Numbers 21:21–32' },
+          { icon: '⚔️', title: 'Defeat of King Og of Bashan', desc: 'Israel defeated Og king of Bashan — the last of the Rephaites. His iron bedstead was over thirteen feet long.', ref: 'Numbers 21:33–35' },
+        ],
+        verse: { text: 'Israel sent messengers to say to Sihon king of the Amorites: Let us pass through your country... But Sihon would not let Israel pass... So Israel seized his land.', ref: 'Numbers 21:21–25' }
+      },
+      {
+        num: 42,
+        name: 'Plains of Moab',
+        sub: 'Moses\' Final Days · Balaam · Joshua Appointed',
+        type: 'Preparation',
+        img: '../resources/journey/Plains of Moab.png',
+        ref: 'Numbers 22–36 · Deuteronomy 1–34 · Numbers 33:48–50',
+        pills: ['East of Jordan', 'Balaam', 'Moses\' Final Days', 'Deuteronomy'],
+        desc: `On the Plains of Moab, east of the Jordan River, Israel camped for their final period before entering Canaan. King Balak of Moab hired the prophet Balaam to curse Israel — but every time Balaam opened his mouth, God put blessings in it instead. Here Moses gave his three great farewell speeches recorded in Deuteronomy — a summary and renewal of the entire covenant. Moses appointed Joshua as his successor, ascended Mount Nebo to view the Promised Land in its entirety, and died there at 120 years old, his eyes not dimmed nor his strength failed. God himself buried Moses in an unknown grave.`,
+        incidents: [
+          { icon: '🐴', title: 'Balaam\'s Donkey Speaks', desc: 'The angel of the LORD blocked Balaam\'s path; his donkey saw the angel and refused — then the donkey opened its mouth and spoke.', ref: 'Numbers 22:21–35' },
+          { icon: '✨', title: 'Balaam Blesses Instead of Curses', desc: 'Four times Balak brought Balaam to curse Israel; four times God put blessings in Balaam\'s mouth instead of curses.', ref: 'Numbers 23–24' },
+          { icon: '📖', title: 'Moses Gives the Great Deuteronomy Speeches', desc: 'Moses delivered his three great farewell addresses — a review of the law and covenant — to the new generation.', ref: 'Deuteronomy 1–34' },
+          { icon: '👑', title: 'Joshua Appointed as Moses\' Successor', desc: 'Moses laid hands on Joshua before the whole assembly. Joshua was filled with the spirit of wisdom.', ref: 'Deuteronomy 34:9; Numbers 27:18–23' },
+          { icon: '⛰️', title: 'Moses Views Canaan from Nebo', desc: 'Moses climbed Mount Nebo and God showed him the entire Promised Land in all directions — but he could not cross over.', ref: 'Deuteronomy 34:1–4' },
+          { icon: '✝️', title: 'Death of Moses at 120', desc: 'Moses died in Moab, and God himself buried him in a valley — no one knows his burial place to this day.', ref: 'Deuteronomy 34:5–6' },
+        ],
+        verse: { text: 'Since then, no prophet has risen in Israel like Moses, whom the LORD knew face to face.', ref: 'Deuteronomy 34:10' }
+      },
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════
+  // PHASE 4: CANAAN — STOPS 43–45 (Entry & First Victories)
+  // ═══════════════════════════════════════════════════
+  {
+    id: 'canaan',
+    label: 'Canaan — The Promised Land',
+    phase: 'canaan',
+    stops: [
+      {
+        num: 43,
+        name: 'The Jordan River',
+        sub: 'Crossing into the Promised Land',
+        type: 'Miracle',
+        img: 'https://images.unsplash.com/photo-1559628233-100c798642c8?w=800&q=80',
+        ref: 'Joshua 3–4',
+        pills: ['Jordan River', 'Miracle', 'New Beginning'],
+        desc: `Under Joshua's leadership, Israel crossed the Jordan River — at flood stage — on dry ground, exactly as their parents had crossed the Red Sea forty years before. The priests carrying the Ark of the Covenant stepped into the river first; the moment their feet touched the water, the river stopped flowing from upstream. All Israel crossed on dry ground. Twelve stones were taken from the riverbed as a memorial for future generations: "What do these stones mean?"`,
+        incidents: [
+          { icon: '📦', title: 'Ark Carried into the River', desc: 'The priests carried the Ark of the Covenant into the Jordan. The moment their feet touched the water, the river stopped.', ref: 'Joshua 3:15–16' },
+          { icon: '🚶', title: 'All Israel Crosses on Dry Ground', desc: 'The entire nation crossed the Jordan while the priests stood firm in the middle of the river until everyone had passed.', ref: 'Joshua 3:17' },
+          { icon: '🪨', title: 'Twelve Memorial Stones Set Up', desc: 'Joshua set up twelve stones from the Jordan as a perpetual memorial: "What do these stones mean?" for future generations.', ref: 'Joshua 4:1–9' },
+        ],
+        verse: { text: 'This is so that all the peoples of the earth might know that the hand of the LORD is powerful and so that you might always fear the LORD your God.', ref: 'Joshua 4:24' }
+      },
+      {
+        num: 44,
+        name: 'Gilgal',
+        sub: 'Reproach Rolled Away · First Passover in Canaan',
+        type: 'Covenant',
+        img: '../resources/journey/Gilgal.png',
+        ref: 'Joshua 5:1–12',
+        pills: ['Canaan', 'Covenant Renewed', 'Passover', 'Manna Stops'],
+        desc: `At Gilgal, the first camp in Canaan, God commanded Joshua to circumcise all the males born in the wilderness — the covenant sign had not been performed during the forty years of wandering. God said "Today I have rolled away the reproach of Egypt from you." Israel celebrated the Passover — the first in the Promised Land. The very next day the manna stopped; for the first time in forty years, Israel ate the produce of the land of Canaan. The wilderness was over.`,
+        incidents: [
+          { icon: '✂️', title: 'Circumcision Renewed at Gilgal', desc: 'All males born in the wilderness were circumcised. God said: "Today I have rolled away the reproach of Egypt."', ref: 'Joshua 5:2–9' },
+          { icon: '🍷', title: 'First Passover in Canaan', desc: 'Israel celebrated the Passover on the plains of Jericho — the first Passover in the land of promise.', ref: 'Joshua 5:10' },
+          { icon: '✨', title: 'The Manna Ceased', desc: 'The day after Passover, the manna stopped. Israel ate the produce of Canaan for the first time. Forty years of manna ended.', ref: 'Joshua 5:11–12' },
+          { icon: '⚔️', title: 'The Commander of the LORD\'s Army', desc: 'Near Jericho, Joshua encountered a man with a drawn sword — the commander of the LORD\'s army — and worshiped him.', ref: 'Joshua 5:13–15' },
+        ],
+        verse: { text: 'Today I have rolled away the reproach of Egypt from you. So the place has been called Gilgal to this day.', ref: 'Joshua 5:9' }
+      },
+      {
+        num: 45,
+        name: 'Jericho',
+        sub: 'The Walls Come Tumbling Down',
+        type: 'Battle',
+        img: '../resources/journey/Jericho.png',
+        ref: 'Joshua 2; 6:1–27',
+        pills: ['Canaan', 'Battle', 'Miracle Victory', 'Rahab'],
+        desc: `Jericho was a heavily fortified city — the first fortress standing between Israel and the rest of Canaan. God's battle plan was unlike any military strategy: march around the city once a day for six days. On the seventh day, march around seven times, then have the priests blow their trumpets and the people shout. When they did, the walls collapsed and Israel took the city. Only Rahab the prostitute who had hidden the Israelite spies was spared — she and her household became part of Israel, and she became an ancestor of King David and of Jesus Christ.`,
+        incidents: [
+          { icon: '🔍', title: 'Two Spies Sent to Jericho', desc: 'Joshua sent two spies to Jericho. Rahab hid them on her roof and helped them escape, tying a scarlet cord in her window.', ref: 'Joshua 2:1–21' },
+          { icon: '🚶', title: 'Seven Days of Marching', desc: 'Israel marched around Jericho once a day for six days in silence, with the Ark and seven priests blowing trumpets.', ref: 'Joshua 6:1–14' },
+          { icon: '📯', title: 'The Walls Fall Flat', desc: 'On the seventh day they marched seven times. At the long trumpet blast the people shouted — the walls collapsed completely.', ref: 'Joshua 6:15–20' },
+          { icon: '❤️', title: 'Rahab and Her Family Saved', desc: 'Rahab was saved because of the scarlet cord and her faith. She became an ancestor of King David and of Jesus.', ref: 'Joshua 6:22–25; Matthew 1:5' },
+        ],
+        verse: { text: 'When the trumpets sounded, the army shouted, and at the sound of the trumpet, when the men gave a loud shout, the wall collapsed.', ref: 'Joshua 6:20' }
+      },
+    ]
+  },
+];
+
+// ── Build sections ──
+const container = document.getElementById('sections');
+
+phases.forEach((phase, pi) => {
+  const section = document.createElement('div');
+  section.className = 'section';
+  section.style.animationDelay = `${0.18 + pi * 0.15}s`;
+
+  const p = phase.phase;
+  const labelClass  = `phase-${p}`;
+  const dotClass    = `dot-${p}`;
+  const lineClass   = `line-${p}`;
+  const cardClass   = `card-${p}`;
+  const stopClass   = `stop-${p}`;
+
+  const header = document.createElement('div');
+  header.className = 'section-header';
+  header.innerHTML = `
+    <div class="phase-dot ${dotClass}"></div>
+    <span class="section-label ${labelClass}">${phase.label}</span>
+    <div class="section-line ${lineClass}"></div>
+    <span class="section-count">${phase.stops.length} stops</span>
+  `;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'scroll-wrap';
+  const track = document.createElement('div');
+  track.className = 'scroll-track';
+
+  phase.stops.forEach((stop, si) => {
+    const card = document.createElement('div');
+    card.className = `card ${cardClass}`;
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(18px)';
+    card.style.animation = `fadeUp 0.5s ${0.05 * si + 0.2 * pi + 0.32}s ease forwards`;
+
+    card.innerHTML = `
+      <div class="card-img-wrap">
+        <img src="${stop.img}" alt="${stop.name}" loading="lazy" onerror="this.src='${FALLBACK}'" />
+        <div class="stop-badge ${stopClass}">${stop.num}</div>
+        <div class="type-tag">${stop.type}</div>
+      </div>
+      <div class="card-body">
+        <p class="loc-name">${stop.name}</p>
+        <p class="loc-desc">${stop.sub}</p>
+        <p class="incidents-chip">${stop.incidents.length} events</p>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openDetail(stop, p));
+    track.appendChild(card);
+  });
+
+  const fadeR = document.createElement('div');
+  fadeR.className = 'fade-r';
+  wrap.appendChild(track);
+  wrap.appendChild(fadeR);
+
+  section.appendChild(header);
+  section.appendChild(wrap);
+  container.appendChild(section);
+
+  if (pi < phases.length - 1) {
+    const conn = document.createElement('div');
+    conn.className = 'journey-connector';
+    conn.style.animationDelay = `${0.3 + pi * 0.15}s`;
+    conn.innerHTML = `
+      <div class="jc-dot"></div>
+      <div class="jc-line"></div>
+      <span class="jc-arrow">Continue →</span>
+    `;
+    container.appendChild(conn);
+  }
+});
+
+// ── Detail overlay ──
+const overlay   = document.getElementById('detail-overlay');
+const heroImg   = document.getElementById('detail-hero-img');
+const stopNumEl = document.getElementById('detail-stop-num');
+const detailEl  = document.getElementById('detail-content');
+const backBtn   = document.getElementById('detail-back');
+
+const phaseColors = {
+  egypt:  { accent: '#e8965a', line: 'linear-gradient(90deg,rgba(232,150,90,0.3),transparent)', pill: 'pill-orange' },
+  sinai:  { accent: '#c8a96e', line: 'linear-gradient(90deg,rgba(200,169,110,0.3),transparent)', pill: 'pill-gold' },
+  desert: { accent: '#a07850', line: 'linear-gradient(90deg,rgba(160,120,80,0.3),transparent)', pill: 'pill-earth' },
+  canaan: { accent: '#7ab8d8', line: 'linear-gradient(90deg,rgba(122,184,216,0.3),transparent)', pill: 'pill-blue' },
+};
+
+function openDetail(stop, phase) {
+  document.getElementById('detail-panel').scrollTop = 0;
+
+  heroImg.src = stop.img;
+  heroImg.alt = stop.name;
+  heroImg.onerror = () => { heroImg.src = FALLBACK; };
+
+  const pc = phaseColors[phase] || phaseColors.sinai;
+
+  stopNumEl.textContent = `Stop ${stop.num}`;
+  stopNumEl.style.background = `rgba(0,0,0,0.45)`;
+  stopNumEl.style.color = pc.accent;
+  stopNumEl.style.border = `1px solid ${pc.accent}44`;
+  stopNumEl.style.fontFamily = "'Cinzel', serif";
+  stopNumEl.style.fontSize = '8px';
+  stopNumEl.style.letterSpacing = '2px';
+  stopNumEl.style.textTransform = 'uppercase';
+  stopNumEl.style.padding = '4px 12px';
+  stopNumEl.style.borderRadius = '30px';
+  stopNumEl.style.backdropFilter = 'blur(8px)';
+
+  const pills = stop.pills.map(p => `<span class="pill ${pc.pill}">${p}</span>`).join('');
+
+  const incidentsHtml = stop.incidents.map(inc => `
+    <div class="incident-card">
+      <div class="incident-icon" style="background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.06)">${inc.icon}</div>
+      <div class="incident-body">
+        <p class="incident-title">${inc.title}</p>
+        <p class="incident-desc">${inc.desc}</p>
+        <p class="incident-ref">${inc.ref}</p>
+      </div>
+    </div>
+  `).join('');
+
+  detailEl.innerHTML = `
+    <div class="detail-divider">
+      <div class="detail-divider-line" style="background:${pc.line}"></div>
+      <div class="detail-divider-diamond" style="background:${pc.accent};opacity:0.7"></div>
+      <div class="detail-divider-line" style="background:${pc.line};transform:rotate(180deg)"></div>
+    </div>
+
+    <h2 class="detail-loc-name">${stop.name}</h2>
+    <p class="detail-loc-sub">${stop.sub}</p>
+
+    <div class="detail-pills">${pills}</div>
+
+    <p class="detail-section-title">About This Location</p>
+    <p class="detail-desc">${stop.desc}</p>
+
+    <p class="detail-section-title">Events That Took Place Here</p>
+    <div class="incidents-list">${incidentsHtml}</div>
+
+    <div class="ornament">✦ ✦ ✦</div>
+
+    <p class="detail-section-title">Scripture</p>
+    <div class="verse-card">
+      <p class="verse-text">"${stop.verse.text}"</p>
+      <p class="verse-ref">${stop.verse.ref}</p>
+    </div>
+  `;
+
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDetail() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+backBtn.addEventListener('click', closeDetail);
+document.getElementById('detail-backdrop').addEventListener('click', closeDetail);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+</script>
+</body>
+</html>
