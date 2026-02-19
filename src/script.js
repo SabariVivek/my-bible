@@ -1268,7 +1268,25 @@ function displayChapter() {
             // Check for verse header
             const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
             if (header) {
-                html += `<div class="verse-header">${header}</div>`;
+                // Handle both array format (title + subtext) and string format (title only)
+                if (Array.isArray(header)) {
+                    const title = header[0];
+                    const subtext = header[1];
+                    const headerId = `header-${bookName.replace(/\s+/g, '-')}-${currentChapter}-${verseNum}`;
+                    html += `<div class="verse-header ${subtext ? 'collapsible' : ''}">
+                        <div class="verse-header-header">
+                            <button class="verse-header-toggle" data-header-id="${headerId}" style="${subtext ? '' : 'display: none;'}">
+                                <span class="toggle-icon">▶</span>
+                            </button>
+                            <div class="verse-header-title">${title}</div>
+                        </div>`;
+                    if (subtext) {
+                        html += `<div class="verse-header-subtext" id="${headerId}">${subtext}</div>`;
+                    }
+                    html += `</div>`;
+                } else {
+                    html += `<div class="verse-header">${header}</div>`;
+                }
             }
             
             let tamilText = tamilChapterData ? tamilChapterData[verseKey] : '';
@@ -1309,7 +1327,25 @@ function displayChapter() {
             // Check for verse header
             const header = getVerseHeader(bookName, currentChapter, parseInt(verseNum));
             if (header) {
-                html += `<div class="verse-header">${header}</div>`;
+                // Handle both array format (title + subtext) and string format (title only)
+                if (Array.isArray(header)) {
+                    const title = header[0];
+                    const subtext = header[1];
+                    const headerId = `header-${bookName.replace(/\s+/g, '-')}-${currentChapter}-${verseNum}`;
+                    html += `<div class="verse-header ${subtext ? 'collapsible' : ''}">
+                        <div class="verse-header-header">
+                            <button class="verse-header-toggle" data-header-id="${headerId}" style="${subtext ? '' : 'display: none;'}">
+                                <span class="toggle-icon">▶</span>
+                            </button>
+                            <div class="verse-header-title">${title}</div>
+                        </div>`;
+                    if (subtext) {
+                        html += `<div class="verse-header-subtext" id="${headerId}">${subtext}</div>`;
+                    }
+                    html += `</div>`;
+                } else {
+                    html += `<div class="verse-header">${header}</div>`;
+                }
             }
             
             let verseText = chapterData[verseKey];
@@ -1339,6 +1375,9 @@ function displayChapter() {
         });
     }
     contentArea.innerHTML = html;
+    
+    // Setup event listeners for collapsible verse headers
+    setupVerseHeaderToggle();
     
     // Update pin button visibility for current chapter
     updatePinButtonBar();
@@ -9349,6 +9388,94 @@ function unpinVerseFromCurrentChapter(verseNum) {
  */
 function savePinnedVersesToStorage() {
     localStorage.setItem('pinnedVerses', JSON.stringify(pinnedVerses));
+}
+
+/**
+ * Setup event listeners for verse header collapsible toggles
+ */
+function setupVerseHeaderToggle() {
+    const contentArea = document.querySelector('.scripture-text');
+    if (!contentArea) return;
+    
+    // Get all collapsible headers
+    const collapsibleHeaders = contentArea.querySelectorAll('.verse-header.collapsible');
+    
+    collapsibleHeaders.forEach(header => {
+        const toggleBtn = header.querySelector('.verse-header-toggle');
+        
+        if (!toggleBtn) return;
+        
+        // Add click listener to entire header section (including subtext)
+        header.addEventListener('click', function(e) {
+            // Don't trigger if clicking on other interactive elements
+            if (e.target.closest('.verse-actions') || e.target.closest('.cross-ref-icon')) {
+                return;
+            }
+            
+            const headerId = toggleBtn.dataset.headerId;
+            const subtextElement = document.getElementById(headerId);
+            
+            if (!subtextElement) return;
+            
+            const isExpanded = subtextElement.classList.contains('visible');
+            const toggleIcon = toggleBtn.querySelector('.toggle-icon');
+            
+            if (isExpanded) {
+                // Collapse
+                subtextElement.classList.remove('visible');
+                toggleIcon.textContent = '▶';
+            } else {
+                // Expand
+                subtextElement.classList.add('visible');
+                toggleIcon.textContent = '▼';
+            }
+        });
+    });
+    
+    // Setup expand all button
+    setupExpandAllButton();
+}
+
+/**
+ * Setup expand all headers button
+ */
+function setupExpandAllButton() {
+    const expandAllBtn = document.getElementById('expand-all-headers-btn');
+    if (!expandAllBtn) return;
+    
+    expandAllBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const contentArea = document.querySelector('.scripture-text');
+        if (!contentArea) return;
+        
+        const subtexts = contentArea.querySelectorAll('.verse-header-subtext');
+        
+        // Check if all are expanded
+        const allExpanded = Array.from(subtexts).every(subtext => 
+            subtext.classList.contains('visible')
+        );
+        
+        subtexts.forEach(subtext => {
+            const headerId = subtext.id;
+            const toggleBtn = contentArea.querySelector(`[data-header-id="${headerId}"]`);
+            
+            if (toggleBtn) {
+                const toggleIcon = toggleBtn.querySelector('.toggle-icon');
+                
+                if (allExpanded) {
+                    // Collapse all
+                    subtext.classList.remove('visible');
+                    toggleIcon.textContent = '▶';
+                } else {
+                    // Expand all
+                    subtext.classList.add('visible');
+                    toggleIcon.textContent = '▼';
+                }
+            }
+        });
+    });
 }
 
 /**
