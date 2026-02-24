@@ -3809,187 +3809,195 @@ const verseHeaders = {
     // ===========================
 
     // Matthew Chapter 1
-    "Matthew 1:1": ["Introduction to Jesus’ Genealogy", "Jesus Christ, the Son of David, the Son of Abraham."],
-    "Matthew 1:2": ["From Abraham to David", "The royal line begins with Abraham and continues to King David."],
-    "Matthew 1:7": ["From Solomon to the Exile", "The kings of Judah leading to the Babylonian exile."],
-    "Matthew 1:12": ["From the Exile to Jesus Christ", "The family line continues to Joseph, the husband of Mary."],
-    "Matthew 1:17": ["Summary of the Generations", "Fourteen generations from Abraham to David, David to exile, and exile to Christ."],
-    "Matthew 1:18": ["Birth of Jesus Foretold", "Mary conceives by the Holy Spirit; Joseph is told in a dream."],
-    "Matthew 1:22": ["Fulfillment of Prophecy", "The virgin will conceive and bear a Son."],
-    "Matthew 1:24": ["Joseph Obeys and Names Jesus", "Joseph takes Mary as his wife and names the child Jesus."],
+    "Matthew 1:1": ["Genealogy of Jesus Christ", "Matthew begins by showing Jesus’ legal lineage from Abraham through David to Joseph, proving that Jesus is the promised Messiah and rightful King."],
+    "Matthew 1:18": ["Birth of Jesus Christ", "Mary becomes pregnant by the Holy Spirit before marrying Joseph, showing Jesus’ divine origin."],
+    "Matthew 1:19": ["Joseph’s Righteous Response", "Joseph plans to quietly divorce Mary, showing his righteousness and mercy."],
+    "Matthew 1:20": ["Angel Appears to Joseph", "An angel explains that the child is conceived by the Holy Spirit and that Joseph should not fear."],
+    "Matthew 1:21": ["Name Jesus — Savior", "The angel commands Joseph to name Him Jesus, meaning 'The Lord saves,' because He will save people from their sins."],
+    "Matthew 1:22": ["Fulfillment of Prophecy", "Matthew explains this fulfills Isaiah’s prophecy of a virgin giving birth."],
+    "Matthew 1:24": ["Joseph Obeys God", "Joseph obeys the angel, takes Mary as his wife, and accepts responsibility."],
+
 
     // Matthew Chapter 2
-    "Matthew 2:1": "Wise Men Search for the Newborn King",
-    "Matthew 2:3": "Herod Troubled & Prophecy of Bethlehem",
-    "Matthew 2:7": "Herod's Secret Meeting with the Wise Men",
-    "Matthew 2:9": "The Star Leads Them to Jesus — Worship & Gifts",
-    "Matthew 2:12": "Warning in a Dream",
-    "Matthew 2:13": "Flight to Egypt & Prophecy Fulfilled",
-    "Matthew 2:16": "Herod's Massacre of the Children",
-    "Matthew 2:19": "Return from Egypt & Settlement in Nazareth",
+    "Matthew 2:1": ["Wise Men Visit Jesus", "Magi from the East follow a star to worship Jesus, recognizing Him as King."],
+    "Matthew 2:3": ["Herod’s Fear and Plot", "King Herod fears losing power and secretly plans to kill the child."],
+    "Matthew 2:9": ["Star Leads to Jesus", "The star leads the wise men directly to Jesus’ house."],
+    "Matthew 2:11": ["Worship and Gifts", "The wise men worship Jesus and offer gold, frankincense, and myrrh, recognizing His kingship, deity, and future sacrifice."],
+    "Matthew 2:13": ["Escape to Egypt", "Joseph takes Mary and Jesus to Egypt to escape Herod’s plan."],
+    "Matthew 2:16": ["Herod Kills Infants", "Herod orders the killing of boys in Bethlehem, showing his cruelty."],
+    "Matthew 2:19": ["Return to Israel", "After Herod’s death, Joseph brings the family back."],
+    "Matthew 2:23": ["Jesus Called a Nazarene", "Jesus grows up in Nazareth, fulfilling prophecy."],
+
 
     // Matthew Chapter 3
-    "Matthew 3:1": "John the Baptist Begins His Ministry",
-    "Matthew 3:3": "Isaiah's Prophecy About John",
-    "Matthew 3:4": "John's Appearance & Baptizing Ministry",
-    "Matthew 3:7": "John Confronts Religious Leaders",
-    "Matthew 3:11": "The Mighty One Who Will Come",
-    "Matthew 3:13": "Jesus Comes to Be Baptized",
-    "Matthew 3:16": "The Father's Voice & Jesus' Anointing",
+    "Matthew 3:1": ["John the Baptist’s Ministry", "John prepares people for Jesus by preaching repentance."],
+    "Matthew 3:3": ["Fulfillment of Isaiah’s Prophecy", "John fulfills prophecy as the voice preparing the way."],
+    "Matthew 3:7": ["Warning to Pharisees", "John warns religious leaders to truly repent."],
+    "Matthew 3:11": ["Promise of Greater One", "John says Jesus will baptize with Holy Spirit and fire."],
+    "Matthew 3:13": ["Baptism of Jesus", "Jesus is baptized to fulfill righteousness."],
+    "Matthew 3:16": ["Holy Spirit Descends", "Spirit descends like a dove."],
+    "Matthew 3:17": ["God’s Voice from Heaven", "God declares Jesus as His beloved Son."],
+
 
     // Matthew Chapter 4
-    "Matthew 4:1": "Jesus Led into the Wilderness",
-    "Matthew 4:3": "First Temptation — Stones to Bread",
-    "Matthew 4:5": "Second Temptation — Jump from the Temple",
-    "Matthew 4:8": "Third Temptation — Worship for Kingdoms",
-    "Matthew 4:12": "Jesus Begins His Ministry",
-    "Matthew 4:18": "Calling of the First Disciples",
-    "Matthew 4:23": "Teaching, Healing, and Growing Crowds",
+    "Matthew 4:1": ["Temptation of Jesus", "Jesus fasts and resists Satan’s temptations using Scripture."],
+    "Matthew 4:12": ["Jesus Begins Ministry", "Jesus starts preaching repentance."],
+    "Matthew 4:17": ["Message of the Kingdom", "Jesus proclaims that the kingdom of heaven is near."],
+    "Matthew 4:18": ["Calling First Disciples", "Jesus calls fishermen to follow Him."],
+    "Matthew 4:23": ["Teaching and Healing", "Jesus teaches, heals diseases, and demonstrates divine authority."],
+
 
     // Matthew Chapter 5
-    "Matthew 5:1": "Jesus Begins to Teach",
-    "Matthew 5:3": "The Beatitudes",
-    "Matthew 5:13": "Salt of the Earth",
-    "Matthew 5:14": "Light of the World",
-    "Matthew 5:17": "Jesus Fulfills the Law",
-    "Matthew 5:21": "Teaching on Anger",
-    "Matthew 5:27": "Teaching on Adultery",
-    "Matthew 5:31": "Teaching on Divorce",
-    "Matthew 5:33": "Teaching on Oaths",
-    "Matthew 5:38": "Teaching on Retaliation",
-    "Matthew 5:43": "Teaching on Loving Enemies",
+    "Matthew 5:1": ["Sermon on the Mount Begins", "Jesus teaches foundational principles of kingdom life."],
+    "Matthew 5:3": ["Beatitudes — Blessed Are the Poor in Spirit", "Those humble before God receive His kingdom."],
+    "Matthew 5:13": ["Salt of the Earth", "Believers preserve truth and righteousness."],
+    "Matthew 5:14": ["Light of the World", "Believers must shine God’s truth."],
+    "Matthew 5:17": ["Jesus Fulfills the Law", "Jesus fulfills and completes the law."],
+    "Matthew 5:21": ["Anger and Judgment", "Anger leads to spiritual danger."],
+    "Matthew 5:27": ["Adultery of the Heart", "Sin begins in the heart."],
+    "Matthew 5:38": ["Love Your Enemies", "Believers must show radical love."],
+
 
     // Matthew Chapter 6
-    "Matthew 6:1": "Giving in Secret",
-    "Matthew 6:5": "True Prayer and Sincerity",
-    "Matthew 6:9": "The Lord's Prayer",
-    "Matthew 6:14": "Forgiveness",
-    "Matthew 6:16": "Fasting in Secret",
-    "Matthew 6:19": "Treasure in Heaven",
-    "Matthew 6:22": "The Lamp of the Body",
-    "Matthew 6:24": "No One Can Serve Two Masters",
-    "Matthew 6:25": "Do Not Worry — God Provides",
+    "Matthew 6:1": ["Giving to Please God", "Do good deeds for God, not people."],
+    "Matthew 6:5": ["Teaching on Prayer", "Pray sincerely."],
+    "Matthew 6:9": ["The Lord’s Prayer", "Jesus provides model prayer."],
+    "Matthew 6:16": ["Teaching on Fasting", "Fast sincerely."],
+    "Matthew 6:19": ["Treasures in Heaven", "Store eternal treasures."],
+    "Matthew 6:24": ["Cannot Serve Two Masters", "Choose God over wealth."],
+    "Matthew 6:25": ["Do Not Worry", "Trust God’s provision."],
+    "Matthew 6:33": ["Seek First God’s Kingdom", "Prioritize God."],
+
 
     // Matthew Chapter 7
-    "Matthew 7:1": "Do Not Judge Hypocritically",
-    "Matthew 7:6": "Do Not Give What Is Holy to Dogs",
-    "Matthew 7:7": "Ask, Seek, Knock",
-    "Matthew 7:12": "The Golden Rule",
-    "Matthew 7:13": "Narrow and Wide Gates",
-    "Matthew 7:15": "False Prophets Known by Fruit",
-    "Matthew 7:21": "Not Everyone Who Says 'Lord'",
-    "Matthew 7:24": "Wise and Foolish Builders",
-    "Matthew 7:28": "Crowds Amazed at His Authority",
+    "Matthew 7:1": ["Do Not Judge Hypocritically", "Judge yourself first."],
+    "Matthew 7:7": ["Ask, Seek, Knock", "God answers prayer."],
+    "Matthew 7:13": ["Narrow and Wide Gates", "Few choose the path to life."],
+    "Matthew 7:15": ["False Prophets Warning", "Recognize false teachers."],
+    "Matthew 7:21": ["True Obedience Required", "True believers obey God."],
+    "Matthew 7:24": ["Wise and Foolish Builders", "Obedience builds strong faith."],
+
 
     // Matthew Chapter 8
-    "Matthew 8:1": "Healing a Leper",
-    "Matthew 8:5": "Healing the Centurion's Servant",
-    "Matthew 8:14": "Healing Peter's Mother-in-Law",
-    "Matthew 8:18": "The Cost of Discipleship",
-    "Matthew 8:23": "Jesus Calms the Storm",
-    "Matthew 8:28": "Demons Driven into Pigs",
+    "Matthew 8:1": ["Healing of the Leper", "Jesus heals and shows compassion."],
+    "Matthew 8:5": ["Faith of the Centurion", "Jesus praises faith."],
+    "Matthew 8:14": ["Healing Many", "Jesus heals diseases."],
+    "Matthew 8:23": ["Jesus Calms Storm", "Jesus controls nature."],
+    "Matthew 8:28": ["Healing Demon-Possessed Men", "Jesus defeats demons."],
+
 
     // Matthew Chapter 9
-    "Matthew 9:1": "Healing the Paralytic",
-    "Matthew 9:9": "Calling of Matthew",
-    "Matthew 9:14": "Question About Fasting",
-    "Matthew 9:18": "Healing the Woman & Raising the Girl",
-    "Matthew 9:27": "Two Blind Men Healed",
-    "Matthew 9:32": "Mute Demon Cast Out",
-    "Matthew 9:35": "The Harvest Is Plentiful",
+    "Matthew 9:1": ["Healing the Paralytic", "Jesus forgives sins and heals."],
+    "Matthew 9:9": ["Calling of Matthew", "Matthew follows Jesus."],
+    "Matthew 9:18": ["Raising Girl and Healing Woman", "Jesus shows power over sickness and death."],
+    "Matthew 9:27": ["Healing Blind Men", "Jesus restores sight."],
+    "Matthew 9:35": ["Compassion for the Crowds", "Jesus sees spiritual need."],
+    "Matthew 9:37": ["Harvest Is Plentiful", "Workers needed for God’s mission."],
+
 
     // Matthew Chapter 10
-    "Matthew 10:1": "The Twelve Apostles Listed",
-    "Matthew 10:5": "Instructions for Their Mission",
-    "Matthew 10:16": "Warnings of Persecution",
-    "Matthew 10:24": "Fear God, Not Men",
-    "Matthew 10:32": "Confessing Christ & Taking the Cross",
-    "Matthew 10:40": "Rewards for Receiving Disciples",
+    "Matthew 10:1": ["Jesus Sends Twelve Disciples", "Jesus gives authority to disciples."],
+    "Matthew 10:5": ["Instructions for Ministry", "Disciples sent to preach."],
+    "Matthew 10:16": ["Warning of Persecution", "Followers will face opposition."],
+    "Matthew 10:26": ["Fear God, Not People", "Trust God."],
+    "Matthew 10:32": ["Confess Christ Publicly", "Faith must be declared."],
+    "Matthew 10:38": ["Cost of Discipleship", "Follow Jesus fully."],
+    "Matthew 10:40": ["Reward for Receiving Disciples", "Serving God’s people brings reward."],
 
     // Matthew Chapter 11
-    "Matthew 11:1": "Jesus Answers John's Question",
-    "Matthew 11:7": "Jesus' Testimony About John",
-    "Matthew 11:16": "This Generation's Unbelief",
-    "Matthew 11:20": "Woes on Unrepentant Cities",
-    "Matthew 11:25": "Jesus Reveals the Father",
-    "Matthew 11:28": "Come to Me — My Yoke Is Easy",
+    "Matthew 11:1": ["Jesus Answers John’s Question", "John the Baptist, while in prison, sends disciples to ask if Jesus is truly the Messiah. Jesus responds by pointing to His miracles and teachings, showing that He fulfills the prophecies about the Savior."],
+    "Matthew 11:7": ["Jesus’ Testimony About John", "Jesus honors John as the greatest prophet and the messenger sent to prepare the way for Him."],
+    "Matthew 11:16": ["This Generation’s Unbelief", "Jesus compares the people to children who refuse to respond properly, showing their spiritual stubbornness and unbelief."],
+    "Matthew 11:20": ["Woes on Unrepentant Cities", "Jesus rebukes cities that witnessed His miracles but refused to repent, warning of coming judgment."],
+    "Matthew 11:25": ["Jesus Reveals the Father", "Jesus thanks God for revealing truth to the humble rather than the proud."],
+    "Matthew 11:28": ["Come to Me — My Yoke Is Easy", "Jesus invites the weary and burdened to come to Him for rest, promising peace and relief through His gentle leadership."],
+
 
     // Matthew Chapter 12
-    "Matthew 12:1": "Lord of the Sabbath",
-    "Matthew 12:9": "Healing the Withered Hand",
-    "Matthew 12:15": "Gentleness of God's Servant",
-    "Matthew 12:22": "Blasphemy Against the Spirit",
-    "Matthew 12:33": "Tree and Its Fruit",
-    "Matthew 12:38": "The Sign of Jonah",
-    "Matthew 12:43": "Return of an Unclean Spirit",
-    "Matthew 12:46": "Jesus' True Family",
+    "Matthew 12:1": ["Lord of the Sabbath", "Jesus explains that He has authority over the Sabbath and prioritizes mercy over ritual."],
+    "Matthew 12:9": ["Healing the Withered Hand", "Jesus heals a man on the Sabbath, showing compassion and divine authority."],
+    "Matthew 12:15": ["Gentleness of God’s Servant", "Jesus fulfills prophecy as the gentle servant who brings justice without violence."],
+    "Matthew 12:22": ["Blasphemy Against the Spirit", "Jesus warns that rejecting the Holy Spirit’s work is a serious spiritual danger."],
+    "Matthew 12:33": ["Tree and Its Fruit", "Jesus teaches that actions reveal the condition of the heart."],
+    "Matthew 12:38": ["The Sign of Jonah", "Jesus explains that His resurrection will be the ultimate sign."],
+    "Matthew 12:43": ["Return of an Unclean Spirit", "Jesus warns that spiritual emptiness without true transformation leads to worse condition."],
+    "Matthew 12:46": ["Jesus’ True Family", "Jesus teaches that those who obey God are His true family."],
+
 
     // Matthew Chapter 13
-    "Matthew 13:1": "Parable of the Sower",
-    "Matthew 13:10": "Purpose of Parables",
-    "Matthew 13:18": "Explanation of the Sower",
-    "Matthew 13:24": "Parable of the Tares",
-    "Matthew 13:31": "Mustard Seed & Leaven",
-    "Matthew 13:34": "Prophecy About Parables",
-    "Matthew 13:36": "Explanation of the Tares",
-    "Matthew 13:44": "Hidden Treasure",
-    "Matthew 13:45": "Pearl of Great Price",
-    "Matthew 13:47": "Parable of the Net",
-    "Matthew 13:51": "Scribes Trained for the Kingdom",
-    "Matthew 13:53": "Rejection at Nazareth",
+    "Matthew 13:1": ["Parable of the Sower", "Jesus explains how people respond differently to God’s word."],
+    "Matthew 13:10": ["Purpose of Parables", "Parables reveal truth to believers and conceal it from unbelievers."],
+    "Matthew 13:18": ["Explanation of the Sower", "Jesus explains the spiritual meaning of different soils."],
+    "Matthew 13:24": ["Parable of the Tares", "Good and evil coexist until final judgment."],
+    "Matthew 13:31": ["Mustard Seed & Leaven", "God’s kingdom starts small but grows greatly."],
+    "Matthew 13:34": ["Prophecy About Parables", "Jesus fulfills prophecy by teaching in parables."],
+    "Matthew 13:36": ["Explanation of the Tares", "Jesus explains separation of righteous and wicked."],
+    "Matthew 13:44": ["Hidden Treasure", "God’s kingdom is worth everything."],
+    "Matthew 13:45": ["Pearl of Great Price", "Kingdom value surpasses all possessions."],
+    "Matthew 13:47": ["Parable of the Net", "Final judgment separates righteous and wicked."],
+    "Matthew 13:51": ["Scribes Trained for the Kingdom", "True teachers understand both old and new truths."],
+    "Matthew 13:53": ["Rejection at Nazareth", "People reject Jesus due to familiarity."],
+
 
     // Matthew Chapter 14
-    "Matthew 14:1": "Death of John the Baptist",
-    "Matthew 14:13": "Feeding the Five Thousand",
-    "Matthew 14:22": "Jesus Walks on Water",
-    "Matthew 14:34": "Healings at Gennesaret",
+    "Matthew 14:1": ["Death of John the Baptist", "John is executed because of Herod’s pride and corruption."],
+    "Matthew 14:13": ["Feeding the Five Thousand", "Jesus miraculously feeds a large crowd, showing divine provision."],
+    "Matthew 14:22": ["Jesus Walks on Water", "Jesus demonstrates authority over nature and strengthens disciples’ faith."],
+    "Matthew 14:34": ["Healings at Gennesaret", "Many are healed by faith in Jesus."],
+
 
     // Matthew Chapter 15
-    "Matthew 15:1": "Tradition vs God's Commandments",
-    "Matthew 15:10": "What Defiles a Person",
-    "Matthew 15:21": "Faith of the Canaanite Woman",
-    "Matthew 15:29": "Healing Many",
-    "Matthew 15:32": "Feeding the Four Thousand",
+    "Matthew 15:1": ["Tradition vs God’s Commandments", "Jesus rebukes religious leaders for valuing traditions over God’s truth."],
+    "Matthew 15:10": ["What Defiles a Person", "Jesus explains that sin comes from the heart, not external things."],
+    "Matthew 15:21": ["Faith of the Canaanite Woman", "Jesus honors the faith of a Gentile woman and heals her daughter."],
+    "Matthew 15:29": ["Healing Many", "Jesus heals many people, showing compassion."],
+    "Matthew 15:32": ["Feeding the Four Thousand", "Jesus again provides miraculously for people."],
+
 
     // Matthew Chapter 16
-    "Matthew 16:1": "Demand for a Sign",
-    "Matthew 16:5": "Leaven of the Pharisees",
-    "Matthew 16:13": "Peter's Confession",
-    "Matthew 16:21": "Jesus Predicts His Death",
-    "Matthew 16:24": "Take Up Your Cross",
+    "Matthew 16:1": ["Demand for a Sign", "Religious leaders demand proof but refuse to believe."],
+    "Matthew 16:5": ["Leaven of the Pharisees", "Jesus warns against false teachings."],
+    "Matthew 16:13": ["Peter’s Confession", "Peter declares Jesus as Messiah and Son of God."],
+    "Matthew 16:21": ["Jesus Predicts His Death", "Jesus foretells His suffering and resurrection."],
+    "Matthew 16:24": ["Take Up Your Cross", "True disciples must deny themselves."],
+
 
     // Matthew Chapter 17
-    "Matthew 17:1": "The Transfiguration",
-    "Matthew 17:14": "Healing the Demon-Possessed Boy",
-    "Matthew 17:22": "Second Prediction of His Death",
-    "Matthew 17:24": "The Temple Tax",
+    "Matthew 17:1": ["The Transfiguration", "Jesus reveals His divine glory to selected disciples."],
+    "Matthew 17:14": ["Healing the Demon-Possessed Boy", "Jesus heals and shows power over evil."],
+    "Matthew 17:22": ["Second Prediction of His Death", "Jesus again prepares disciples."],
+    "Matthew 17:24": ["The Temple Tax", "Jesus shows His authority and humility."],
+
 
     // Matthew Chapter 18
-    "Matthew 18:1": "Greatest in the Kingdom",
-    "Matthew 18:6": "Woes Against Stumbling",
-    "Matthew 18:10": "The Lost Sheep",
-    "Matthew 18:15": "Correcting a Brother",
-    "Matthew 18:21": "Parable of the Unforgiving Servant",
+    "Matthew 18:1": ["Greatest in the Kingdom", "Humility is greatest in God’s kingdom."],
+    "Matthew 18:6": ["Woes Against Stumbling", "Jesus warns against causing others to sin."],
+    "Matthew 18:10": ["The Lost Sheep", "God values every person."],
+    "Matthew 18:15": ["Correcting a Brother", "Jesus teaches conflict resolution."],
+    "Matthew 18:21": ["Parable of the Unforgiving Servant", "God expects forgiveness."],
+
 
     // Matthew Chapter 19
-    "Matthew 19:1": "Teaching on Marriage and Divorce",
-    "Matthew 19:13": "Jesus Blesses Children",
-    "Matthew 19:16": "The Rich Young Ruler",
-    "Matthew 19:23": "The Difficulty of Riches",
+    "Matthew 19:1": ["Teaching on Marriage and Divorce", "Jesus explains God’s design for marriage."],
+    "Matthew 19:13": ["Jesus Blesses Children", "Children represent kingdom humility."],
+    "Matthew 19:16": ["The Rich Young Ruler", "Wealth can hinder spiritual commitment."],
+    "Matthew 19:23": ["The Difficulty of Riches", "Salvation comes through God."],
+
 
     // Matthew Chapter 20
-    "Matthew 20:1": "Workers in the Vineyard",
-    "Matthew 20:17": "Prediction of His Death",
-    "Matthew 20:20": "Request of James and John's Mother",
-    "Matthew 20:29": "Two Blind Men Healed",
+    "Matthew 20:1": ["Workers in the Vineyard", "God rewards based on grace."],
+    "Matthew 20:17": ["Prediction of His Death", "Jesus foretells crucifixion."],
+    "Matthew 20:20": ["Request of James and John’s Mother", "True greatness is service."],
+    "Matthew 20:29": ["Two Blind Men Healed", "Faith brings healing."],
+
 
     // Matthew Chapter 21
-    "Matthew 21:1": "Triumphal Entry",
-    "Matthew 21:12": "Cleansing the Temple",
-    "Matthew 21:18": "Cursing the Fig Tree",
-    "Matthew 21:23": "Jesus' Authority Questioned",
-    "Matthew 21:28": "Parable of the Two Sons",
-    "Matthew 21:33": "Parable of the Tenants",
+    "Matthew 21:1": ["Triumphal Entry", "Jesus enters Jerusalem as King."],
+    "Matthew 21:12": ["Cleansing the Temple", "Jesus restores temple holiness."],
+    "Matthew 21:18": ["Cursing the Fig Tree", "Symbol of judgment."],
+    "Matthew 21:23": ["Jesus’ Authority Questioned", "Leaders challenge Jesus."],
+    "Matthew 21:28": ["Parable of the Two Sons", "Obedience matters."],
+    "Matthew 21:33": ["Parable of the Tenants", "Warning against rejecting God."],
 
     // Matthew Chapter 22
     "Matthew 22:1": "Parable of the Wedding Feast",
@@ -4210,1134 +4218,1879 @@ const verseHeaders = {
     "Mark 16:20": ["Disciples Preach Everywhere", "The Lord works with them and confirms the message with signs."],
 
     // John Chapter 1
-    "John 1:1": "The Word in the Beginning",
-    "John 1:6": "John the Baptist's Witness",
-    "John 1:14": "The Word Became Flesh",
-    "John 1:19": "John Denies Being the Messiah",
-    "John 1:29": "Behold the Lamb of God",
-    "John 1:35": "First Disciples Follow Jesus",
-    "John 1:43": "Calling of Philip and Nathanael",
+    "John 1:1": ["The Word Was God", "Jesus, the Word, existed in the beginning and is God."],
+    "John 1:4": ["Life and Light of Humanity", "Jesus is the source of life and light."],
+    "John 1:6": ["John the Baptist’s Witness", "John testifies about the coming Messiah."],
+    "John 1:10": ["The World Did Not Recognize Him", "Jesus came but many did not recognize Him."],
+    "John 1:12": ["Children of God Through Faith", "Those who believe become God’s children."],
+    "John 1:14": ["The Word Became Flesh", "Jesus became human and lived among people."],
+    "John 1:19": ["John the Baptist Denies Being the Messiah", "John identifies himself as the messenger."],
+    "John 1:29": ["Behold the Lamb of God", "John declares Jesus as the Lamb who takes away sin."],
+    "John 1:35": ["First Disciples Follow Jesus", "Andrew and another disciple follow Jesus."],
+    "John 1:43": ["Jesus Calls Philip and Nathanael", "Jesus calls more disciples."],
+    "John 1:49": ["Jesus Revealed as Son of God", "Nathanael recognizes Jesus as Son of God."],
+
 
     // John Chapter 2
-    "John 2:1": "Wedding at Cana — Water to Wine",
-    "John 2:13": "Cleansing of the Temple",
-    "John 2:23": "Jesus Knows What Is in Man",
+    "John 2:1": ["Wedding at Cana", "Jesus performs His first miracle turning water into wine."],
+    "John 2:11": ["First Sign Reveals His Glory", "Jesus reveals His glory and disciples believe."],
+    "John 2:13": ["Jesus Cleanses the Temple", "Jesus removes those misusing the temple."],
+    "John 2:18": ["Authority of Jesus Questioned", "Leaders question Jesus’ authority."],
+    "John 2:19": ["Temple Refers to His Body", "Jesus speaks of His resurrection."],
+    "John 2:23": ["Jesus Knows All People", "Jesus understands human hearts."],
+
 
     // John Chapter 3
-    "John 3:1": "Jesus and Nicodemus",
-    "John 3:16": "God's Love for the World",
-    "John 3:22": "John the Baptist Exalts Christ",
-    "John 3:31": "He Who Comes from Above",
+    "John 3:1": ["Nicodemus Visits Jesus", "Nicodemus seeks understanding."],
+    "John 3:3": ["Born Again to See God’s Kingdom", "Spiritual rebirth is required."],
+    "John 3:5": ["Born of Water and Spirit", "Spiritual birth comes from Spirit."],
+    "John 3:14": ["Son of Man Lifted Up", "Jesus refers to His crucifixion."],
+    "John 3:16": ["God’s Love for the World", "God gave His Son for salvation."],
+    "John 3:19": ["Light Came into the World", "People reject light due to sin."],
+    "John 3:22": ["John the Baptist’s Final Testimony", "John confirms Jesus’ greatness."],
+    "John 3:30": ["He Must Increase, I Must Decrease", "Jesus must become greater."],
+
 
     // John Chapter 4
-    "John 4:1": "Jesus Travels Through Samaria",
-    "John 4:7": "Conversation with the Samaritan Woman",
-    "John 4:27": "The Disciples Return — Fields Are White",
-    "John 4:39": "Samaritans Believe",
-    "John 4:43": "Return to Galilee",
-    "John 4:46": "Healing the Official's Son",
+    "John 4:1": ["Jesus and the Samaritan Woman", "Jesus speaks with Samaritan woman."],
+    "John 4:10": ["Living Water Offered", "Jesus offers eternal life."],
+    "John 4:19": ["True Worship Explained", "True worship is in Spirit and truth."],
+    "John 4:25": ["Jesus Reveals Himself as Messiah", "Jesus confirms His identity."],
+    "John 4:39": ["Many Samaritans Believe", "Many believe through testimony."],
+    "John 4:46": ["Healing of Official’s Son", "Jesus heals from distance."],
+
 
     // John Chapter 5
-    "John 5:1": "Healing at the Pool of Bethesda",
-    "John 5:16": "Authority of the Son",
-    "John 5:24": "The Son Gives Life",
-    "John 5:31": "Witnesses to Jesus",
+    "John 5:1": ["Healing at Pool of Bethesda", "Jesus heals disabled man."],
+    "John 5:16": ["Persecution for Healing on Sabbath", "Leaders oppose Jesus."],
+    "John 5:19": ["Jesus Equal with God", "Jesus explains His authority."],
+    "John 5:24": ["Promise of Eternal Life", "Believers receive eternal life."],
+    "John 5:39": ["Scriptures Testify About Jesus", "Scriptures point to Jesus."],
+
 
     // John Chapter 6
-    "John 6:1": "Feeding the Five Thousand",
-    "John 6:16": "Jesus Walks on Water",
-    "John 6:22": "The Bread of Life",
-    "John 6:41": "Jews Complain About Him",
-    "John 6:60": "Many Disciples Turn Back",
+    "John 6:1": ["Feeding the Five Thousand", "Jesus feeds large crowd."],
+    "John 6:16": ["Jesus Walks on Water", "Jesus walks on sea."],
+    "John 6:25": ["Jesus the Bread of Life", "Jesus is spiritual sustenance."],
+    "John 6:35": ["Whoever Believes Will Never Hunger", "Faith satisfies spiritually."],
+    "John 6:53": ["Eat Flesh and Drink Blood", "Symbolizes accepting Christ."],
+    "John 6:66": ["Many Disciples Leave", "Some stop following Jesus."],
+    "John 6:68": ["Peter Confesses Faith", "Peter affirms Jesus’ truth."],
+
 
     // John Chapter 7
-    "John 7:1": "Jesus Goes Secretly to the Feast",
-    "John 7:14": "Teaching in the Temple",
-    "John 7:25": "Is This the Christ?",
-    "John 7:32": "Officers Sent to Arrest Jesus",
-    "John 7:37": "Rivers of Living Water",
-    "John 7:40": "Division Among the People",
-    "John 7:53": "Everyone Goes Home",
+    "John 7:1": ["Jesus at the Feast", "Jesus teaches publicly."],
+    "John 7:16": ["Teaching Comes from God", "Jesus teaches God’s truth."],
+    "John 7:37": ["Promise of Living Water", "Spirit given to believers."],
+    "John 7:40": ["Division About Jesus", "People divided about Him."],
+
 
     // John Chapter 8
-    "John 8:1": "Woman Caught in Adultery",
-    "John 8:12": "I Am the Light of the World",
-    "John 8:21": "Where I Go You Cannot Come",
-    "John 8:31": "Truth Will Set You Free",
-    "John 8:48": "Before Abraham Was, I AM",
+    "John 8:1": ["Woman Caught in Adultery", "Jesus shows mercy."],
+    "John 8:12": ["Jesus the Light of the World", "Jesus brings spiritual light."],
+    "John 8:31": ["Truth Sets You Free", "Truth brings freedom."],
+    "John 8:34": ["Slavery to Sin", "Sin enslaves."],
+    "John 8:51": ["Promise of Eternal Life", "Believers will never see death."],
+    "John 8:58": ["Before Abraham, I Am", "Jesus declares His divinity."],
+
 
     // John Chapter 9
-    "John 9:1": "Healing of the Man Born Blind",
-    "John 9:13": "Investigation by the Pharisees",
-    "John 9:35": "Spiritual Blindness",
+    "John 9:1": ["Healing of Blind Man", "Jesus heals blind man."],
+    "John 9:13": ["Pharisees Investigate", "Leaders question miracle."],
+    "John 9:25": ["Testimony of the Healed Man", "He confirms miracle."],
+    "John 9:35": ["Spiritual Sight and Blindness", "Jesus reveals truth."],
+
 
     // John Chapter 10
-    "John 10:1": "The Sheep and the Shepherd",
-    "John 10:7": "I Am the Good Shepherd",
-    "John 10:22": "At the Feast of Dedication",
-    "John 10:31": "They Try to Stone Jesus Again",
+    "John 10:1": ["The Good Shepherd", "Jesus cares for His sheep."],
+    "John 10:7": ["Jesus the Door", "Jesus provides access to salvation."],
+    "John 10:11": ["Good Shepherd Lays Down Life", "Jesus sacrifices Himself."],
+    "John 10:27": ["Sheep Hear His Voice", "Believers follow Jesus."],
+    "John 10:30": ["I and the Father Are One", "Jesus declares unity with God."],
+
 
     // John Chapter 11
-    "John 11:1": "Death of Lazarus",
-    "John 11:17": "Jesus Arrives in Bethany",
-    "John 11:38": "Lazarus Raised from the Dead",
-    "John 11:45": "Plot to Kill Jesus",
+    "John 11:1": ["Death of Lazarus", "Lazarus becomes ill and dies."],
+    "John 11:21": ["Jesus Comforts Martha", "Jesus brings hope."],
+    "John 11:25": ["Jesus the Resurrection and Life", "Jesus gives eternal life."],
+    "John 11:35": ["Jesus Weeps", "Jesus shows compassion."],
+    "John 11:43": ["Lazarus Raised from Dead", "Jesus raises Lazarus."],
+    "John 11:53": ["Plot to Kill Jesus", "Leaders plan His death."],
+
 
     // John Chapter 12
-    "John 12:1": "Mary Anoints Jesus",
-    "John 12:12": "Triumphal Entry",
-    "John 12:20": "Jesus Predicts His Death",
-    "John 12:37": "Unbelief of the People",
-    "John 12:44": "Jesus' Final Public Appeal",
+    "John 12:1": ["Mary Anoints Jesus", "Mary honors Jesus."],
+    "John 12:12": ["Triumphal Entry", "Jesus enters Jerusalem."],
+    "John 12:23": ["Jesus Predicts Death", "Jesus explains purpose."],
+    "John 12:44": ["Believe in Jesus", "Faith in Jesus is faith in God."],
+
 
     // John Chapter 13
-    "John 13:1": "Jesus Washes the Disciples' Feet",
-    "John 13:18": "Prediction of Judas' Betrayal",
-    "John 13:31": "A New Commandment",
-    "John 13:36": "Prediction of Peter's Denial",
+    "John 13:1": ["Jesus Washes Disciples’ Feet", "Jesus demonstrates humility."],
+    "John 13:12": ["Serve One Another", "Follow Jesus’ example."],
+    "John 13:21": ["Prediction of Betrayal", "Judas will betray Jesus."],
+    "John 13:34": ["New Commandment", "Love one another."],
+
 
     // John Chapter 14
-    "John 14:1": "I Am the Way, the Truth, and the Life",
-    "John 14:8": "He Who Has Seen Me Has Seen the Father",
-    "John 14:15": "Promise of the Holy Spirit",
-    "John 14:19": "Because I Live, You Will Live",
-    "John 14:25": "Peace I Leave with You",
+    "John 14:1": ["Jesus Comforts Disciples", "Trust in Him."],
+    "John 14:6": ["Jesus the Way, Truth, and Life", "Only through Jesus comes salvation."],
+    "John 14:15": ["Promise of Holy Spirit", "Spirit will help believers."],
+    "John 14:27": ["Peace Given by Jesus", "Jesus gives lasting peace."],
+
 
     // John Chapter 15
-    "John 15:1": "I Am the True Vine",
-    "John 15:18": "World's Hatred of Disciples",
-    "John 15:26": "The Spirit Will Testify",
+    "John 15:1": ["Jesus the True Vine", "Believers must remain in Him."],
+    "John 15:5": ["Apart from Me You Can Do Nothing", "Depend on Jesus."],
+    "John 15:9": ["Remain in His Love", "Stay in His love."],
+    "John 15:18": ["World Hates Believers", "Believers may face hatred."],
+
 
     // John Chapter 16
-    "John 16:1": "Work of the Holy Spirit",
-    "John 16:16": "Your Grief Will Turn to Joy",
-    "John 16:25": "Take Heart — I Have Overcome the World",
+    "John 16:1": ["Warning of Persecution", "Believers will suffer."],
+    "John 16:7": ["Spirit Will Come", "Spirit will guide believers."],
+    "John 16:20": ["Sorrow Will Turn to Joy", "Joy after suffering."],
+    "John 16:33": ["Victory Over the World", "Jesus has overcome the world."],
+
 
     // John Chapter 17
-    "John 17:1": "Glorify Your Son",
-    "John 17:6": "Jesus Prays for His Disciples",
-    "John 17:20": "Jesus Prays for All Believers",
+    "John 17:1": ["Jesus Prays for Himself", "Jesus prays before crucifixion."],
+    "John 17:6": ["Jesus Prays for Disciples", "Protection for disciples."],
+    "John 17:20": ["Jesus Prays for All Believers", "Prayer for unity."],
+
 
     // John Chapter 18
-    "John 18:1": "Betrayal and Arrest",
-    "John 18:13": "Jesus Before Annas",
-    "John 18:25": "Peter Denies Jesus",
-    "John 18:28": "Jesus Before Pilate",
+    "John 18:1": ["Jesus Arrested", "Jesus arrested."],
+    "John 18:12": ["Jesus Before High Priest", "Jesus questioned."],
+    "John 18:28": ["Jesus Before Pilate", "Pilate questions Jesus."],
+
 
     // John Chapter 19
-    "John 19:1": "Jesus Presented to the People",
-    "John 19:17": "Crucifixion",
-    "John 19:28": "It Is Finished",
-    "John 19:31": "Side Pierced",
-    "John 19:38": "Burial",
+    "John 19:1": ["Jesus Sentenced", "Jesus sentenced to death."],
+    "John 19:16": ["Crucifixion of Jesus", "Jesus crucified."],
+    "John 19:30": ["Death of Jesus", "Jesus dies."],
+    "John 19:38": ["Burial of Jesus", "Jesus buried."],
+
 
     // John Chapter 20
-    "John 20:1": "The Empty Tomb",
-    "John 20:11": "Jesus Appears to Mary Magdalene",
-    "John 20:19": "Jesus Appears to the Disciples",
-    "John 20:24": "Thomas Believes",
-    "John 20:30": "Purpose of This Gospel",
+    "John 20:1": ["Empty Tomb", "Jesus resurrected."],
+    "John 20:11": ["Jesus Appears to Mary", "Mary sees Jesus."],
+    "John 20:19": ["Jesus Appears to Disciples", "Jesus appears alive."],
+    "John 20:24": ["Jesus Appears to Thomas", "Thomas believes."],
+    "John 20:31": ["Purpose of the Book", "Written to inspire faith."],
+
 
     // John Chapter 21
-    "John 21:1": "Jesus Appears at the Sea of Galilee",
-    "John 21:15": "Jesus Restores Peter",
-    "John 21:20": "Final Testimony and Conclusion",
+    "John 21:1": ["Jesus Appears by Sea", "Jesus appears again."],
+    "John 21:15": ["Jesus Restores Peter", "Peter restored."],
+    "John 21:24": ["Conclusion of John’s Gospel", "Testimony confirmed."],
 
     // Luke Chapter 1
-    "Luke 1:1": "Purpose of Luke's Gospel",
-    "Luke 1:5": "Announcement of John the Baptist's Birth",
-    "Luke 1:26": "Announcement of Jesus' Birth",
-    "Luke 1:39": "Mary Visits Elizabeth",
-    "Luke 1:46": "Mary's Song (The Magnificat)",
-    "Luke 1:57": "Birth of John the Baptist",
-    "Luke 1:67": "Zechariah's Prophecy (Benedictus)",
-    "Luke 1:80": "John Grows and Becomes Strong",
+    "Luke 1:1": ["Purpose of Luke’s Gospel", "Luke explains he carefully investigated everything and writes an orderly account so believers may know the certainty of the truth."],
+    "Luke 1:5": ["Announcement of John the Baptist’s Birth", "Angel Gabriel appears to Zechariah and announces the birth of John, who will prepare people for the Lord."],
+    "Luke 1:26": ["Announcement of Jesus’ Birth", "Gabriel appears to Mary and tells her she will give birth to Jesus, the Son of God, by the Holy Spirit."],
+    "Luke 1:39": ["Mary Visits Elizabeth", "Mary visits Elizabeth, and Elizabeth confirms that Mary carries the promised Messiah."],
+    "Luke 1:46": ["Mary’s Song (The Magnificat)", "Mary praises God for His mercy, power, and faithfulness in choosing her."],
+    "Luke 1:57": ["Birth of John the Baptist", "John is born, and people recognize God’s hand in his life."],
+    "Luke 1:67": ["Zechariah’s Prophecy (Benedictus)", "Zechariah praises God and prophesies that John will prepare the way for the Savior."],
+    "Luke 1:80": ["John Grows and Becomes Strong", "John grows spiritually strong and prepares in the wilderness."],
+
 
     // Luke Chapter 2
-    "Luke 2:1": "Birth of Jesus",
-    "Luke 2:8": "Angels Announce to the Shepherds",
-    "Luke 2:21": "Jesus Circumcised and Named",
-    "Luke 2:22": "Presentation at the Temple",
-    "Luke 2:25": "Simeon's Prophecy",
-    "Luke 2:36": "Anna the Prophetess",
-    "Luke 2:39": "Return to Nazareth",
-    "Luke 2:41": "Boy Jesus in the Temple",
-    "Luke 2:51": "Jesus Grows in Wisdom and Favor",
+    "Luke 2:1": ["Birth of Jesus", "Jesus is born in Bethlehem and laid in a manger because there was no room."],
+    "Luke 2:8": ["Angels Announce to the Shepherds", "Angels announce the birth of the Savior to shepherds, bringing good news."],
+    "Luke 2:21": ["Jesus Circumcised and Named", "Jesus is circumcised and officially given His name."],
+    "Luke 2:22": ["Presentation at the Temple", "Mary and Joseph present Jesus at the temple according to the law."],
+    "Luke 2:25": ["Simeon’s Prophecy", "Simeon recognizes Jesus as the salvation prepared by God."],
+    "Luke 2:36": ["Anna the Prophetess", "Anna confirms Jesus as the Redeemer and praises God."],
+    "Luke 2:39": ["Return to Nazareth", "Jesus’ family returns to Nazareth where He grows."],
+    "Luke 2:41": ["Boy Jesus in the Temple", "At age twelve, Jesus amazes teachers with His understanding."],
+    "Luke 2:51": ["Jesus Grows in Wisdom and Favor", "Jesus grows in wisdom, obedience, and favor with God and people."],
+
 
     // Luke Chapter 3
-    "Luke 3:1": "John the Baptist's Ministry Begins",
-    "Luke 3:7": "John's Call to Repentance",
-    "Luke 3:15": "People Wonder About the Messiah",
-    "Luke 3:19": "John Imprisoned",
-    "Luke 3:21": "Baptism of Jesus",
-    "Luke 3:23": "Genealogy of Jesus",
+    "Luke 3:1": ["John the Baptist’s Ministry Begins", "John begins preaching repentance to prepare people for the Messiah."],
+    "Luke 3:7": ["John’s Call to Repentance", "John warns people to produce fruit that shows repentance."],
+    "Luke 3:15": ["People Wonder About the Messiah", "John clarifies that he is not the Messiah but prepares the way."],
+    "Luke 3:19": ["John Imprisoned", "John rebukes Herod and is imprisoned."],
+    "Luke 3:21": ["Baptism of Jesus", "Jesus is baptized, and the Holy Spirit descends upon Him."],
+    "Luke 3:23": ["Genealogy of Jesus", "Jesus’ lineage is traced back to Adam, showing His human connection."],
+
 
     // Luke Chapter 4
-    "Luke 4:1": "Temptation of Jesus",
-    "Luke 4:14": "Jesus Begins His Galilean Ministry",
-    "Luke 4:16": "Rejected at Nazareth",
-    "Luke 4:31": "Jesus Casts Out an Unclean Spirit",
-    "Luke 4:38": "Healings at Simon's House",
-    "Luke 4:42": "Jesus Preaches in Synagogues",
+    "Luke 4:1": ["Temptation of Jesus", "Jesus resists Satan’s temptations using Scripture."],
+    "Luke 4:14": ["Jesus Begins His Galilean Ministry", "Jesus begins teaching with power."],
+    "Luke 4:16": ["Rejected at Nazareth", "People reject Jesus in His hometown."],
+    "Luke 4:31": ["Jesus Casts Out an Unclean Spirit", "Jesus shows authority over demons."],
+    "Luke 4:38": ["Healings at Simon’s House", "Jesus heals Simon’s mother-in-law and others."],
+    "Luke 4:42": ["Jesus Preaches in Synagogues", "Jesus continues preaching the good news."],
+
 
     // Luke Chapter 5
-    "Luke 5:1": "Calling of Peter, James, and John",
-    "Luke 5:12": "Healing a Leper",
-    "Luke 5:17": "Healing the Paralytic",
-    "Luke 5:27": "Calling of Levi and Teaching on Repentance",
-    "Luke 5:33": "Question About Fasting",
+    "Luke 5:1": ["Calling of Peter, James, and John", "Jesus calls fishermen to follow Him."],
+    "Luke 5:12": ["Healing a Leper", "Jesus heals a man with leprosy."],
+    "Luke 5:17": ["Healing the Paralytic", "Jesus forgives sins and heals the paralyzed man."],
+    "Luke 5:27": ["Calling of Levi and Teaching on Repentance", "Jesus calls Levi and eats with sinners."],
+    "Luke 5:33": ["Question About Fasting", "Jesus explains His mission brings new spiritual reality."],
+
 
     // Luke Chapter 6
-    "Luke 6:1": "Lord of the Sabbath",
-    "Luke 6:6": "Healing the Withered Hand",
-    "Luke 6:12": "Choosing of the Twelve Apostles",
-    "Luke 6:17": "Crowds Seek Jesus",
-    "Luke 6:20": "Beatitudes and Woes",
-    "Luke 6:27": "Love Your Enemies",
-    "Luke 6:37": "Do Not Judge; Remove the Beam",
-    "Luke 6:43": "Tree and Its Fruit",
-    "Luke 6:46": "Wise and Foolish Builders",
+    "Luke 6:1": ["Lord of the Sabbath", "Jesus explains His authority over Sabbath."],
+    "Luke 6:6": ["Healing the Withered Hand", "Jesus heals on Sabbath, showing mercy."],
+    "Luke 6:12": ["Choosing of the Twelve Apostles", "Jesus appoints twelve apostles."],
+    "Luke 6:17": ["Crowds Seek Jesus", "Large crowds come for healing and teaching."],
+    "Luke 6:20": ["Beatitudes and Woes", "Jesus teaches blessings and warnings."],
+    "Luke 6:27": ["Love Your Enemies", "Jesus commands love and mercy."],
+    "Luke 6:37": ["Do Not Judge; Remove the Beam", "Examine yourself before judging others."],
+    "Luke 6:43": ["Tree and Its Fruit", "Character is revealed by actions."],
+    "Luke 6:46": ["Wise and Foolish Builders", "Obedience to Jesus brings strong foundation."],
+
 
     // Luke Chapter 7
-    "Luke 7:1": "Healing the Centurion's Servant",
-    "Luke 7:11": "Raising the Widow's Son",
-    "Luke 7:18": "John the Baptist's Question",
-    "Luke 7:24": "Jesus' Testimony About John",
-    "Luke 7:36": "A Sinful Woman Anoints Jesus",
+    "Luke 7:1": ["Healing the Centurion’s Servant", "Jesus heals through faith."],
+    "Luke 7:11": ["Raising the Widow’s Son", "Jesus raises the dead."],
+    "Luke 7:18": ["John the Baptist’s Question", "Jesus confirms His identity."],
+    "Luke 7:24": ["Jesus’ Testimony About John", "Jesus honors John’s role."],
+    "Luke 7:36": ["A Sinful Woman Anoints Jesus", "Jesus forgives and shows grace."],
+
 
     // Luke Chapter 8
-    "Luke 8:1": "Women Who Followed and Supported Jesus",
-    "Luke 8:4": "Parable of the Sower",
-    "Luke 8:9": "Explanation of the Sower",
-    "Luke 8:16": "Lamp on a Stand",
-    "Luke 8:19": "Jesus' True Family",
-    "Luke 8:22": "Jesus Calms the Storm",
-    "Luke 8:26": "Healing the Demon-Possessed Man",
-    "Luke 8:40": "Healing the Woman & Raising Jairus' Daughter",
+    "Luke 8:1": ["Women Who Followed and Supported Jesus", "Women faithfully support Jesus."],
+    "Luke 8:4": ["Parable of the Sower", "Different responses to God’s word."],
+    "Luke 8:9": ["Explanation of the Sower", "Jesus explains spiritual meaning."],
+    "Luke 8:16": ["Lamp on a Stand", "Truth must be revealed."],
+    "Luke 8:19": ["Jesus’ True Family", "Those who obey God are His family."],
+    "Luke 8:22": ["Jesus Calms the Storm", "Jesus shows authority over nature."],
+    "Luke 8:26": ["Healing the Demon-Possessed Man", "Jesus frees a man from demons."],
+    "Luke 8:40": ["Healing the Woman & Raising Jairus’ Daughter", "Jesus heals and raises the dead."],
+
 
     // Luke Chapter 9
-    "Luke 9:1": "The Twelve Sent Out",
-    "Luke 9:7": "Herod's Perplexity",
-    "Luke 9:10": "Feeding the Five Thousand",
-    "Luke 9:18": "Peter's Confession of Christ",
-    "Luke 9:21": "Jesus Predicts His Death",
-    "Luke 9:23": "Take Up Your Cross",
-    "Luke 9:28": "The Transfiguration",
-    "Luke 9:37": "Healing the Demon-Possessed Boy",
-    "Luke 9:44": "Second Prediction of His Death",
-    "Luke 9:46": "Who Is Greatest?",
-    "Luke 9:49": "Whoever Is Not Against You Is for You",
-    "Luke 9:51": "A Samaritan Village Rejects Jesus",
-    "Luke 9:57": "The Cost of Following Jesus",
+    "Luke 9:1": ["The Twelve Sent Out", "Jesus sends disciples to preach."],
+    "Luke 9:7": ["Herod’s Perplexity", "Herod is confused about Jesus."],
+    "Luke 9:10": ["Feeding the Five Thousand", "Jesus miraculously feeds many."],
+    "Luke 9:18": ["Peter’s Confession of Christ", "Peter declares Jesus is Messiah."],
+    "Luke 9:21": ["Jesus Predicts His Death", "Jesus foretells His suffering."],
+    "Luke 9:23": ["Take Up Your Cross", "True disciples must follow sacrificially."],
+    "Luke 9:28": ["The Transfiguration", "Jesus reveals His glory."],
+    "Luke 9:37": ["Healing the Demon-Possessed Boy", "Jesus shows divine power."],
+    "Luke 9:44": ["Second Prediction of His Death", "Jesus again predicts His death."],
+    "Luke 9:46": ["Who Is Greatest?", "True greatness is humility."],
+    "Luke 9:49": ["Whoever Is Not Against You Is for You", "God works beyond expectations."],
+    "Luke 9:51": ["A Samaritan Village Rejects Jesus", "Jesus continues mission despite rejection."],
+    "Luke 9:57": ["The Cost of Following Jesus", "Following Jesus requires full commitment."],
+
 
     // Luke Chapter 10
-    "Luke 10:1": "Sending of the Seventy-Two",
-    "Luke 10:13": "Woes to the Unrepentant Towns",
-    "Luke 10:17": "Return of the Seventy-Two & Jesus' Joy",
-    "Luke 10:25": "Parable of the Good Samaritan",
-    "Luke 10:38": "Mary and Martha",
+    "Luke 10:1": ["Sending of the Seventy-Two", "Jesus sends more disciples."],
+    "Luke 10:13": ["Woes to the Unrepentant Towns", "Warning to unbelievers."],
+    "Luke 10:17": ["Return of the Seventy-Two & Jesus’ Joy", "Disciples rejoice."],
+    "Luke 10:25": ["Parable of the Good Samaritan", "Love your neighbor."],
+    "Luke 10:38": ["Mary and Martha", "Prioritize spiritual things."],
+
 
     // Luke Chapter 11
-    "Luke 11:1": "The Lord's Prayer",
-    "Luke 11:5": "Ask, Seek, Knock",
-    "Luke 11:14": "Divided Kingdom — Unclean Spirits",
-    "Luke 11:27": "True Blessedness",
-    "Luke 11:29": "The Sign of Jonah",
-    "Luke 11:33": "Lamp of the Body",
-    "Luke 11:37": "Woes to the Pharisees",
-    "Luke 11:45": "Woes to the Lawyers",
+    "Luke 11:1": ["The Lord’s Prayer", "Jesus teaches prayer."],
+    "Luke 11:5": ["Ask, Seek, Knock", "God answers prayer."],
+    "Luke 11:14": ["Divided Kingdom — Unclean Spirits", "Jesus rebukes accusations."],
+    "Luke 11:27": ["True Blessedness", "Blessed are those who obey God."],
+    "Luke 11:29": ["The Sign of Jonah", "Jesus foretells resurrection."],
+    "Luke 11:33": ["Lamp of the Body", "Spiritual clarity important."],
+    "Luke 11:37": ["Woes to the Pharisees", "Jesus rebukes hypocrisy."],
+    "Luke 11:45": ["Woes to the Lawyers", "Warning against false teachers."],
 
-    // Luke Chapter 12
-    "Luke 12:1": "Beware of Hypocrisy and Fear God",
-    "Luke 12:13": "Parable of the Rich Fool",
-    "Luke 12:22": "Do Not Be Anxious",
-    "Luke 12:35": "Watchful Servants",
-    "Luke 12:49": "Jesus Brings Division",
-    "Luke 12:54": "Discern the Times",
 
-    // Luke Chapter 13
-    "Luke 13:1": "Repent or Perish — Parable of the Barren Fig Tree",
-    "Luke 13:10": "Healing a Crippled Woman",
-    "Luke 13:18": "Mustard Seed & Leaven",
-    "Luke 13:22": "The Narrow Door",
-    "Luke 13:31": "Lament Over Jerusalem",
+    // Luke Chapter 12–24
+    // (continuing same detailed format)
 
-    // Luke Chapter 14
-    "Luke 14:1": "Healing on the Sabbath",
-    "Luke 14:7": "Teaching on Humility & Hospitality",
-    "Luke 14:15": "Parable of the Great Banquet",
-    "Luke 14:25": "Cost of Discipleship",
-    "Luke 14:34": "Salt Without Flavor",
+    "Luke 12:1": ["Beware of Hypocrisy and Fear God", "Jesus warns against hypocrisy and teaches to fear God above people."],
+    "Luke 12:13": ["Parable of the Rich Fool", "Jesus warns against greed and trusting wealth instead of God."],
+    "Luke 12:22": ["Do Not Be Anxious", "Jesus teaches to trust God for daily needs."],
+    "Luke 12:35": ["Watchful Servants", "Believers must stay ready for the Lord’s return."],
+    "Luke 12:49": ["Jesus Brings Division", "Following Jesus may bring opposition."],
+    "Luke 12:54": ["Discern the Times", "People must recognize spiritual truth."],
 
-    // Luke Chapter 15
-    "Luke 15:1": "Parable of the Lost Sheep",
-    "Luke 15:8": "Parable of the Lost Coin",
-    "Luke 15:11": "Parable of the Prodigal Son",
+    "Luke 13:1": ["Repent or Perish — Parable of the Barren Fig Tree", "Jesus calls people to repentance before judgment."],
+    "Luke 13:10": ["Healing a Crippled Woman", "Jesus heals and shows compassion."],
+    "Luke 13:18": ["Mustard Seed & Leaven", "God’s kingdom grows powerfully."],
+    "Luke 13:22": ["The Narrow Door", "Only few truly follow God."],
+    "Luke 13:31": ["Lament Over Jerusalem", "Jesus mourns over unbelief."],
 
-    // Luke Chapter 16
-    "Luke 16:1": "Parable of the Unjust Steward",
-    "Luke 16:14": "Warnings to the Pharisees",
-    "Luke 16:19": "Rich Man and Lazarus",
+    "Luke 14:1": ["Healing on the Sabbath", "Jesus heals and teaches mercy."],
+    "Luke 14:7": ["Teaching on Humility & Hospitality", "Humility honored by God."],
+    "Luke 14:15": ["Parable of the Great Banquet", "God invites all to His kingdom."],
+    "Luke 14:25": ["Cost of Discipleship", "Following Jesus requires sacrifice."],
+    "Luke 14:34": ["Salt Without Flavor", "Believers must remain faithful."],
 
-    // Luke Chapter 17
-    "Luke 17:1": "Forgiveness, Faith, and Duty",
-    "Luke 17:11": "Healing of the Ten Lepers",
-    "Luke 17:20": "The Coming of the Kingdom of God",
+    "Luke 15:1": ["Parable of the Lost Sheep", "God seeks lost sinners."],
+    "Luke 15:8": ["Parable of the Lost Coin", "God rejoices when sinners repent."],
+    "Luke 15:11": ["Parable of the Prodigal Son", "God forgives and restores."],
 
-    // Luke Chapter 18
-    "Luke 18:1": "Parable of the Persistent Widow",
-    "Luke 18:9": "Parable of the Pharisee and the Tax Collector",
-    "Luke 18:15": "Jesus Blesses Little Children",
-    "Luke 18:18": "Rich Young Ruler",
-    "Luke 18:31": "Jesus Predicts His Death",
-    "Luke 18:35": "Healing Blind Bartimaeus",
+    "Luke 16:1": ["Parable of the Unjust Steward", "Use worldly resources wisely."],
+    "Luke 16:14": ["Warnings to the Pharisees", "God sees true hearts."],
+    "Luke 16:19": ["Rich Man and Lazarus", "Eternal consequences revealed."],
 
-    // Luke Chapter 19
-    "Luke 19:1": "Zacchaeus",
-    "Luke 19:11": "Parable of the Ten Minas",
-    "Luke 19:28": "Triumphal Entry",
-    "Luke 19:41": "Jesus Weeps Over Jerusalem",
-    "Luke 19:45": "Cleansing the Temple",
+    "Luke 17:1": ["Forgiveness, Faith, and Duty", "Forgive and remain faithful."],
+    "Luke 17:11": ["Healing of the Ten Lepers", "Gratitude honors God."],
+    "Luke 17:20": ["The Coming of the Kingdom of God", "God’s kingdom comes spiritually."],
 
-    // Luke Chapter 20
-    "Luke 20:1": "Authority of Jesus Questioned",
-    "Luke 20:9": "Parable of the Wicked Tenants",
-    "Luke 20:20": "Taxes to Caesar",
-    "Luke 20:27": "Question About the Resurrection",
-    "Luke 20:41": "David Calls the Messiah Lord",
-    "Luke 20:45": "Warning About the Scribes",
+    "Luke 18:1": ["Parable of the Persistent Widow", "Keep praying faithfully."],
+    "Luke 18:9": ["Parable of the Pharisee and the Tax Collector", "Humility brings righteousness."],
+    "Luke 18:15": ["Jesus Blesses Little Children", "Childlike faith required."],
+    "Luke 18:18": ["Rich Young Ruler", "Salvation requires surrender."],
+    "Luke 18:31": ["Jesus Predicts His Death", "Jesus foretells crucifixion."],
+    "Luke 18:35": ["Healing Blind Bartimaeus", "Faith brings healing."],
 
-    // Luke Chapter 21
-    "Luke 21:1": "The Widow's Offering",
-    "Luke 21:5": "Prediction of the Temple's Destruction",
-    "Luke 21:10": "Persecution and Endurance",
-    "Luke 21:20": "Destruction of Jerusalem",
-    "Luke 21:25": "The Coming of the Son of Man",
-    "Luke 21:29": "Lesson of the Fig Tree",
-    "Luke 21:34": "Be Watchful",
+    "Luke 19:1": ["Zacchaeus", "Jesus saves Zacchaeus."],
+    "Luke 19:11": ["Parable of the Ten Minas", "Faithfulness rewarded."],
+    "Luke 19:28": ["Triumphal Entry", "Jesus enters Jerusalem as King."],
+    "Luke 19:41": ["Jesus Weeps Over Jerusalem", "Jesus mourns unbelief."],
+    "Luke 19:45": ["Cleansing the Temple", "Jesus restores true worship."],
 
-    // Luke Chapter 22
-    "Luke 22:1": "Plot to Kill Jesus — Judas Agrees to Betray",
-    "Luke 22:7": "Preparation for Passover",
-    "Luke 22:14": "The Last Supper",
-    "Luke 22:24": "Who Is the Greatest?",
-    "Luke 22:31": "Prediction of Peter's Denial",
-    "Luke 22:35": "Teaching About the Future",
-    "Luke 22:39": "Gethsemane Prayer",
-    "Luke 22:47": "Arrest of Jesus",
-    "Luke 22:54": "Peter Denies Jesus",
-    "Luke 22:63": "Jesus Mocked",
-    "Luke 22:66": "Jesus Before the Council",
+    "Luke 20:1": ["Authority of Jesus Questioned", "Leaders challenge Jesus."],
+    "Luke 20:9": ["Parable of the Wicked Tenants", "Warning of judgment."],
+    "Luke 20:20": ["Taxes to Caesar", "Honor both God and authority."],
+    "Luke 20:27": ["Question About the Resurrection", "Jesus teaches eternal life."],
+    "Luke 20:41": ["David Calls the Messiah Lord", "Messiah greater than David."],
+    "Luke 20:45": ["Warning About the Scribes", "Avoid religious pride."],
 
-    // Luke Chapter 23
-    "Luke 23:1": "Jesus Before Pilate",
-    "Luke 23:6": "Jesus Before Herod",
-    "Luke 23:13": "Pilate Hands Jesus Over",
-    "Luke 23:26": "On the Way to the Cross",
-    "Luke 23:32": "Crucifixion",
-    "Luke 23:44": "Death of Jesus",
-    "Luke 23:50": "Burial of Jesus",
+    "Luke 21:1": ["The Widow’s Offering", "God values sacrificial giving."],
+    "Luke 21:5": ["Prediction of the Temple’s Destruction", "Temple will fall."],
+    "Luke 21:10": ["Persecution and Endurance", "Believers will face trials."],
+    "Luke 21:20": ["Destruction of Jerusalem", "Judgment foretold."],
+    "Luke 21:25": ["The Coming of the Son of Man", "Jesus will return."],
+    "Luke 21:29": ["Lesson of the Fig Tree", "Recognize signs."],
+    "Luke 21:34": ["Be Watchful", "Stay spiritually alert."],
 
-    // Luke Chapter 24
-    "Luke 24:1": "The Empty Tomb — Resurrection",
-    "Luke 24:13": "The Road to Emmaus",
-    "Luke 24:36": "Jesus Appears to His Disciples",
-    "Luke 24:44": "Jesus Opens Their Understanding",
-    "Luke 24:50": "The Ascension of Jesus",
+    "Luke 22:1": ["Plot to Kill Jesus — Judas Agrees to Betray", "Judas betrays Jesus."],
+    "Luke 22:7": ["Preparation for Passover", "Passover prepared."],
+    "Luke 22:14": ["The Last Supper", "Jesus institutes communion."],
+    "Luke 22:24": ["Who Is the Greatest?", "Greatness through service."],
+    "Luke 22:31": ["Prediction of Peter’s Denial", "Peter warned."],
+    "Luke 22:35": ["Teaching About the Future", "Prepare spiritually."],
+    "Luke 22:39": ["Gethsemane Prayer", "Jesus submits to God."],
+    "Luke 22:47": ["Arrest of Jesus", "Jesus arrested."],
+    "Luke 22:54": ["Peter Denies Jesus", "Peter denies Jesus."],
+    "Luke 22:63": ["Jesus Mocked", "Jesus mocked."],
+    "Luke 22:66": ["Jesus Before the Council", "Jesus judged."],
+
+    "Luke 23:1": ["Jesus Before Pilate", "Pilate examines Jesus."],
+    "Luke 23:6": ["Jesus Before Herod", "Herod questions Jesus."],
+    "Luke 23:13": ["Pilate Hands Jesus Over", "Jesus sentenced."],
+    "Luke 23:26": ["On the Way to the Cross", "Jesus carries cross."],
+    "Luke 23:32": ["Crucifixion", "Jesus crucified."],
+    "Luke 23:44": ["Death of Jesus", "Jesus dies."],
+    "Luke 23:50": ["Burial of Jesus", "Jesus buried."],
+
+    "Luke 24:1": ["The Empty Tomb — Resurrection", "Jesus rises from dead."],
+    "Luke 24:13": ["The Road to Emmaus", "Jesus appears."],
+    "Luke 24:36": ["Jesus Appears to His Disciples", "Jesus alive."],
+    "Luke 24:44": ["Jesus Opens Their Understanding", "Scriptures fulfilled."],
+    "Luke 24:50": ["The Ascension of Jesus", "Jesus ascends to heaven."],
 
     // Acts Chapter 1
-    "Acts 1:1": "Introduction — The Risen Christ",
-    "Acts 1:4": "Promise of the Holy Spirit & Ascension",
-    "Acts 1:12": "Return to Jerusalem",
-    "Acts 1:15": "Matthias Chosen to Replace Judas",
+    "Acts 1:1": ["Introduction to the Book of Acts", "Luke explains this continuation of Jesus’ work."],
+    "Acts 1:3": ["Jesus Appears After Resurrection", "Jesus appears for forty days teaching about God’s kingdom."],
+    "Acts 1:4": ["Promise of the Holy Spirit", "Jesus tells disciples to wait for the Holy Spirit."],
+    "Acts 1:6": ["Promise of Power and Witness", "Disciples will receive power and be witnesses worldwide."],
+    "Acts 1:9": ["Ascension of Jesus", "Jesus ascends into heaven."],
+    "Acts 1:12": ["Disciples Pray Together", "Disciples gather in prayer."],
+    "Acts 1:15": ["Matthias Chosen as Apostle", "Matthias replaces Judas."],
 
     // Acts Chapter 2
-    "Acts 2:1": "Pentecost — The Holy Spirit Comes",
-    "Acts 2:14": "Peter Explains the Event",
-    "Acts 2:22": "Peter Declares Jesus as Lord and Messiah",
-    "Acts 2:37": "Three Thousand Added",
-    "Acts 2:42": "Life of the Early Church",
+    "Acts 2:1": ["Coming of the Holy Spirit", "Holy Spirit fills believers at Pentecost."],
+    "Acts 2:5": ["People Hear in Their Own Languages", "Crowds hear in native languages."],
+    "Acts 2:14": ["Peter’s Sermon at Pentecost", "Peter explains Jesus as Messiah."],
+    "Acts 2:37": ["Call to Repentance", "People told to repent and be baptized."],
+    "Acts 2:41": ["Three Thousand Added", "Thousands believe and join church."],
+    "Acts 2:42": ["Fellowship of Believers", "Early church shares fellowship and prayer."],
 
     // Acts Chapter 3
-    "Acts 3:1": "Healing the Lame Beggar",
-    "Acts 3:11": "Peter Attributes the Miracle to Jesus",
-    "Acts 3:17": "Call to Repentance",
+    "Acts 3:1": ["Healing of the Lame Man", "Peter heals a lame man."],
+    "Acts 3:11": ["Peter’s Sermon in the Temple", "Peter preaches about Jesus."],
+    "Acts 3:19": ["Call to Repent", "Repent and receive forgiveness."],
 
     // Acts Chapter 4
-    "Acts 4:1": "Peter and John Arrested — Jesus the Cornerstone",
-    "Acts 4:13": "Commanded Not to Speak in Jesus' Name",
-    "Acts 4:23": "Prayer for Boldness",
-    "Acts 4:32": "Believers Share All Things",
+    "Acts 4:1": ["Peter and John Arrested", "Religious leaders arrest apostles."],
+    "Acts 4:8": ["Peter Speaks Boldly", "Peter declares Jesus as Savior."],
+    "Acts 4:12": ["Salvation Only Through Jesus", "No other name saves."],
+    "Acts 4:23": ["Believers Pray for Boldness", "Church prays for courage."],
+    "Acts 4:32": ["Believers Share Everything", "Church lives in unity."],
 
     // Acts Chapter 5
-    "Acts 5:1": "Ananias and Sapphira",
-    "Acts 5:12": "Signs and Wonders",
-    "Acts 5:17": "Apostles Arrested and Freed",
-    "Acts 5:33": "Gamaliel's Advice and Release",
+    "Acts 5:1": ["Ananias and Sapphira", "They lie and face judgment."],
+    "Acts 5:12": ["Apostles Perform Miracles", "Many signs and wonders occur."],
+    "Acts 5:17": ["Apostles Persecuted", "Leaders arrest apostles."],
+    "Acts 5:29": ["Obey God Rather Than Men", "Peter declares obedience to God."],
+    "Acts 5:41": ["Rejoicing in Suffering", "Apostles rejoice despite persecution."],
 
     // Acts Chapter 6
-    "Acts 6:1": "Seven Chosen to Serve",
-    "Acts 6:8": "Stephen Seized",
+    "Acts 6:1": ["Seven Chosen to Serve", "Seven men appointed to help."],
+    "Acts 6:8": ["Stephen’s Ministry", "Stephen performs miracles."],
+    "Acts 6:12": ["Stephen Arrested", "Stephen falsely accused."],
 
     // Acts Chapter 7
-    "Acts 7:1": "Stephen's Sermon — Israel's History",
-    "Acts 7:54": "The Stoning of Stephen",
+    "Acts 7:1": ["Stephen’s Speech", "Stephen recounts Israel’s history."],
+    "Acts 7:51": ["Accusation Against Leaders", "Stephen rebukes leaders."],
+    "Acts 7:54": ["Stephen’s Martyrdom", "Stephen is stoned."],
+    "Acts 7:55": ["Stephen Sees Jesus", "Stephen sees Jesus in heaven."],
 
     // Acts Chapter 8
-    "Acts 8:1": "Saul Persecutes the Church",
-    "Acts 8:4": "Philip in Samaria",
-    "Acts 8:26": "Philip and the Ethiopian Eunuch",
+    "Acts 8:1": ["Persecution Scatters Church", "Believers spread out."],
+    "Acts 8:5": ["Philip in Samaria", "Philip preaches in Samaria."],
+    "Acts 8:14": ["Holy Spirit Given to Samaritans", "Samaritans receive Spirit."],
+    "Acts 8:26": ["Philip and Ethiopian Official", "Official believes and is baptized."],
 
     // Acts Chapter 9
-    "Acts 9:1": "Saul's Encounter with Jesus",
-    "Acts 9:10": "Saul's Conversion and Baptism",
-    "Acts 9:20": "Saul Preaches in Damascus and Jerusalem",
-    "Acts 9:32": "Peter Heals Aeneas",
-    "Acts 9:36": "Peter Raises Tabitha (Dorcas)",
+    "Acts 9:1": ["Conversion of Saul", "Saul encounters Jesus."],
+    "Acts 9:10": ["Ananias Sent to Saul", "Ananias restores Saul."],
+    "Acts 9:20": ["Saul Preaches Christ", "Saul begins preaching."],
+    "Acts 9:36": ["Peter Raises Tabitha", "Peter raises Tabitha."],
 
     // Acts Chapter 10
-    "Acts 10:1": "Cornelius Receives a Vision",
-    "Acts 10:9": "Peter's Vision",
-    "Acts 10:24": "Peter Meets Cornelius",
-    "Acts 10:34": "Peter's Gospel Message",
-    "Acts 10:44": "Gentiles Receive the Holy Spirit",
+    "Acts 10:1": ["Cornelius’ Vision", "Cornelius receives angelic message."],
+    "Acts 10:9": ["Peter’s Vision", "Peter sees vision from God."],
+    "Acts 10:34": ["God Shows No Favoritism", "Salvation for all."],
+    "Acts 10:44": ["Gentiles Receive Holy Spirit", "Spirit given to Gentiles."],
 
     // Acts Chapter 11
-    "Acts 11:1": "Peter Reports to Jerusalem",
-    "Acts 11:19": "The Church in Antioch",
-    "Acts 11:27": "Prophecy of Famine",
+    "Acts 11:1": ["Peter Explains to Church", "Peter explains Gentile salvation."],
+    "Acts 11:19": ["Church Spreads", "Church grows beyond Jerusalem."],
+    "Acts 11:26": ["Believers Called Christians", "First called Christians in Antioch."],
 
     // Acts Chapter 12
-    "Acts 12:1": "James Killed and Peter Imprisoned",
-    "Acts 12:6": "Peter Rescued from Prison",
-    "Acts 12:20": "Herod's Death",
-    "Acts 12:24": "The Word Continues to Spread",
+    "Acts 12:1": ["Persecution by Herod", "James killed, Peter imprisoned."],
+    "Acts 12:6": ["Peter Freed by Angel", "Angel frees Peter."],
+    "Acts 12:20": ["Death of Herod", "Herod judged by God."],
 
     // Acts Chapter 13
-    "Acts 13:1": "Barnabas and Saul Sent Out",
-    "Acts 13:4": "Preaching in Cyprus",
-    "Acts 13:13": "Paul's Sermon in Pisidian Antioch",
-    "Acts 13:42": "Gentiles Believe; Jews Oppose",
+    "Acts 13:1": ["Barnabas and Saul Sent", "Mission begins."],
+    "Acts 13:6": ["Confrontation with Sorcerer", "Paul rebukes sorcerer."],
+    "Acts 13:16": ["Paul’s Sermon", "Paul preaches Christ."],
+    "Acts 13:48": ["Gentiles Believe", "Many Gentiles believe."],
 
     // Acts Chapter 14
-    "Acts 14:1": "Ministry in Iconium",
-    "Acts 14:8": "Healing in Lystra and Persecution",
-    "Acts 14:21": "Strengthening Churches and Returning to Antioch",
+    "Acts 14:1": ["Preaching in Iconium", "Many believe."],
+    "Acts 14:8": ["Healing in Lystra", "Paul heals lame man."],
+    "Acts 14:19": ["Paul Stoned", "Paul persecuted."],
+    "Acts 14:21": ["Strengthening Churches", "Paul encourages believers."],
 
     // Acts Chapter 15
-    "Acts 15:1": "The Jerusalem Council",
-    "Acts 15:22": "Letter to Gentile Believers",
-    "Acts 15:36": "Paul and Barnabas Part Ways",
+    "Acts 15:1": ["Council at Jerusalem", "Discuss Gentile salvation."],
+    "Acts 15:6": ["Decision of Council", "Gentiles saved by grace."],
+    "Acts 15:22": ["Letter to Gentile Believers", "Council sends letter."],
+    "Acts 15:36": ["Paul and Barnabas Separate", "Mission partners separate."],
 
     // Acts Chapter 16
-    "Acts 16:1": "Timothy Joins Paul",
-    "Acts 16:6": "The Macedonian Call",
-    "Acts 16:11": "Conversion of Lydia",
-    "Acts 16:16": "Paul and Silas Imprisoned — Earthquake",
-    "Acts 16:35": "Release from Prison",
+    "Acts 16:1": ["Timothy Joins Paul", "Timothy joins mission."],
+    "Acts 16:6": ["Vision of Macedonia", "Paul called to Macedonia."],
+    "Acts 16:14": ["Conversion of Lydia", "Lydia believes."],
+    "Acts 16:25": ["Paul and Silas in Prison", "They worship in prison."],
+    "Acts 16:31": ["Jailer Converted", "Jailer believes."],
 
     // Acts Chapter 17
-    "Acts 17:1": "Thessalonica — Message Rejected",
-    "Acts 17:10": "Berea — Message Examined",
-    "Acts 17:16": "Paul in Athens",
-    "Acts 17:22": "Paul's Sermon at the Areopagus",
+    "Acts 17:1": ["Paul in Thessalonica", "Paul preaches."],
+    "Acts 17:10": ["Paul in Berea", "Bereans examine Scripture."],
+    "Acts 17:16": ["Paul in Athens", "Paul addresses philosophers."],
+    "Acts 17:22": ["Sermon at Areopagus", "Paul explains true God."],
 
     // Acts Chapter 18
-    "Acts 18:1": "Paul Meets Aquila and Priscilla",
-    "Acts 18:5": "Opposition and Encouragement in Corinth",
-    "Acts 18:12": "Trial Before Gallio",
-    "Acts 18:18": "Return to Antioch",
-    "Acts 18:24": "Apollos Preaches Boldly",
+    "Acts 18:1": ["Paul in Corinth", "Paul ministers."],
+    "Acts 18:9": ["God Encourages Paul", "God strengthens Paul."],
+    "Acts 18:24": ["Apollos’ Ministry", "Apollos teaches."],
 
     // Acts Chapter 19
-    "Acts 19:1": "Disciples Receive the Holy Spirit",
-    "Acts 19:8": "Ministry in Ephesus",
-    "Acts 19:21": "Riot in Ephesus",
+    "Acts 19:1": ["Paul in Ephesus", "Disciples receive Spirit."],
+    "Acts 19:11": ["Miracles in Ephesus", "God works miracles."],
+    "Acts 19:23": ["Riot in Ephesus", "Opposition arises."],
 
     // Acts Chapter 20
-    "Acts 20:1": "Journey Through Macedonia and Greece",
-    "Acts 20:7": "Eutychus Raised from Death",
-    "Acts 20:13": "Travel to Miletus",
-    "Acts 20:17": "Farewell to Ephesian Elders",
+    "Acts 20:7": ["Paul Raises Eutychus", "Paul raises young man."],
+    "Acts 20:17": ["Paul’s Farewell", "Paul encourages elders."],
+    "Acts 20:24": ["Paul’s Commitment", "Paul faithful to mission."],
 
     // Acts Chapter 21
-    "Acts 21:1": "Journey to Jerusalem",
-    "Acts 21:17": "Paul Visits James in Jerusalem",
-    "Acts 21:27": "Paul Seized in the Temple",
-    "Acts 21:37": "Paul Speaks to the Crowd",
+    "Acts 21:4": ["Warning to Paul", "Paul warned."],
+    "Acts 21:27": ["Paul Arrested", "Paul arrested in temple."],
 
     // Acts Chapter 22
-    "Acts 22:1": "Paul's Defense — His Testimony",
-    "Acts 22:22": "Paul's Roman Citizenship Revealed",
-    "Acts 22:30": "Before the Sanhedrin",
+    "Acts 22:1": ["Paul’s Defense", "Paul shares testimony."],
+    "Acts 22:6": ["Paul’s Conversion Story", "Paul explains conversion."],
 
     // Acts Chapter 23
-    "Acts 23:1": "Paul Before the Council",
-    "Acts 23:11": "The Lord Encourages Paul",
-    "Acts 23:12": "Plot to Kill Paul",
-    "Acts 23:23": "Paul Taken to Felix",
+    "Acts 23:1": ["Paul Before Council", "Paul defends himself."],
+    "Acts 23:11": ["God Encourages Paul", "Paul must testify in Rome."],
 
     // Acts Chapter 24
-    "Acts 24:1": "Accusations Before Felix",
-    "Acts 24:10": "Paul's Defense Before Felix",
-    "Acts 24:24": "Paul Kept in Custody",
+    "Acts 24:1": ["Paul Before Felix", "Paul defends faith."],
+    "Acts 24:25": ["Felix Delays Decision", "Felix delays judgment."],
 
     // Acts Chapter 25
-    "Acts 25:1": "Paul Appeals to Caesar",
-    "Acts 25:13": "King Agrippa Hears the Case",
-    "Acts 25:23": "Paul Brought Before Agrippa",
+    "Acts 25:1": ["Paul Before Festus", "Paul appears before Festus."],
+    "Acts 25:11": ["Paul Appeals to Caesar", "Paul appeals to Caesar."],
 
     // Acts Chapter 26
-    "Acts 26:1": "Paul's Early Life and Persecution",
-    "Acts 26:12": "Paul's Encounter with Christ",
-    "Acts 26:19": "Paul Obeys the Vision",
-    "Acts 26:24": "Agrippa Almost Persuaded",
+    "Acts 26:1": ["Paul Before Agrippa", "Paul shares testimony."],
+    "Acts 26:28": ["Agrippa’s Response", "Agrippa nearly convinced."],
 
     // Acts Chapter 27
-    "Acts 27:1": "Setting Sail for Rome",
-    "Acts 27:13": "Storm at Sea",
-    "Acts 27:21": "Paul's Encouragement",
-    "Acts 27:27": "Shipwreck",
+    "Acts 27:1": ["Paul’s Journey to Rome", "Paul travels by ship."],
+    "Acts 27:13": ["Storm at Sea", "Violent storm."],
+    "Acts 27:22": ["God’s Promise of Safety", "Paul reassures crew."],
+    "Acts 27:44": ["Shipwreck", "All survive shipwreck."],
 
     // Acts Chapter 28
-    "Acts 28:1": "Paul Survives a Snakebite",
-    "Acts 28:7": "Healing on Malta",
-    "Acts 28:11": "Arrival in Rome",
-    "Acts 28:17": "Paul Preaches to Jews in Rome",
-    "Acts 28:30": "Paul's Ministry While Under Guard",
+    "Acts 28:1": ["Paul on Malta", "Paul survives snake bite."],
+    "Acts 28:7": ["Paul Heals Many", "Paul heals islanders."],
+    "Acts 28:16": ["Paul Arrives in Rome", "Paul reaches Rome."],
+    "Acts 28:30": ["Paul Preaches Freely", "Paul continues ministry."],
 
     // Romans Chapter 1
-    "Romans 1:1": "Greeting — Called to Belong to Jesus Christ",
-    "Romans 1:8": "Paul's Desire to Visit Rome",
-    "Romans 1:16": "The Righteous Shall Live by Faith",
-    "Romans 1:18": "God's Wrath Against Ungodliness",
-    "Romans 1:24": "Consequences of Rejecting God",
+    "Romans 1:1": ["Greeting and Introduction", "Paul introduces himself as servant of Christ."],
+    "Romans 1:8": ["Paul’s Desire to Visit Rome", "Paul thanks God for their faith."],
+    "Romans 1:16": ["Power of the Gospel", "The gospel is God’s power for salvation."],
+    "Romans 1:18": ["God’s Wrath Against Sin", "God’s wrath is revealed against ungodliness."],
+    "Romans 1:20": ["God Revealed Through Creation", "God’s nature is seen in creation."],
+    "Romans 1:21": ["Human Rejection of God", "People rejected and dishonored God."],
+    "Romans 1:24": ["God Gave Them Over to Sin", "God allowed them to follow sinful desires."],
 
     // Romans Chapter 2
-    "Romans 2:1": "God's Righteous Judgment",
-    "Romans 2:12": "Judgment According to the Gospel",
-    "Romans 2:17": "Jews and the Law",
-    "Romans 2:25": "True Circumcision Is of the Heart",
+    "Romans 2:1": ["God’s Righteous Judgment", "God judges fairly."],
+    "Romans 2:4": ["God’s Kindness Leads to Repentance", "God’s kindness leads to repentance."],
+    "Romans 2:6": ["God Rewards According to Deeds", "God judges based on actions."],
+    "Romans 2:12": ["Law and Accountability", "All are accountable to God."],
+    "Romans 2:17": ["Warning to the Jews", "Knowing law is not enough."],
+    "Romans 2:28": ["True Circumcision Is Spiritual", "True identity is inward."],
 
     // Romans Chapter 3
-    "Romans 3:1": "God's Faithfulness Despite Human Unbelief",
-    "Romans 3:9": "No One Is Righteous",
-    "Romans 3:21": "Righteousness Through Faith",
-    "Romans 3:27": "Justified by Faith, Not Works",
+    "Romans 3:1": ["Advantage of Being a Jew", "God remains faithful."],
+    "Romans 3:9": ["All Are Under Sin", "Everyone is guilty of sin."],
+    "Romans 3:20": ["Law Cannot Justify", "Law shows sin."],
+    "Romans 3:21": ["Righteousness Through Faith", "God provides righteousness through faith."],
+    "Romans 3:23": ["All Have Sinned", "Everyone falls short of God’s glory."],
+    "Romans 3:24": ["Justified by Grace", "Salvation is God’s gift."],
+    "Romans 3:28": ["Justified by Faith Alone", "Faith brings justification."],
 
     // Romans Chapter 4
-    "Romans 4:1": "Abraham Justified by Faith",
-    "Romans 4:13": "Promise Comes by Faith",
-    "Romans 4:18": "Abraham's Example for Believers",
+    "Romans 4:1": ["Example of Abraham’s Faith", "Abraham justified by faith."],
+    "Romans 4:5": ["Faith Counts as Righteousness", "Faith credited as righteousness."],
+    "Romans 4:9": ["Blessing for All Believers", "Blessing extends to Gentiles."],
+    "Romans 4:13": ["Promise Through Faith", "Promise comes through faith."],
+    "Romans 4:18": ["Abraham’s Strong Faith", "Abraham trusted God."],
 
     // Romans Chapter 5
-    "Romans 5:1": "Peace and Hope Through Faith",
-    "Romans 5:6": "Christ Died for the Ungodly",
-    "Romans 5:12": "Adam and Christ Contrasted",
+    "Romans 5:1": ["Peace with God Through Faith", "Faith brings peace with God."],
+    "Romans 5:3": ["Joy in Suffering", "Suffering builds character."],
+    "Romans 5:6": ["Christ Died for Sinners", "Christ died for the ungodly."],
+    "Romans 5:8": ["God’s Love Demonstrated", "Christ died while we were sinners."],
+    "Romans 5:12": ["Sin Entered Through Adam", "Sin entered through Adam."],
+    "Romans 5:17": ["Grace Through Christ", "Grace brings life."],
 
     // Romans Chapter 6
-    "Romans 6:1": "Dead to Sin, Alive to God",
-    "Romans 6:15": "Slaves to Righteousness, Not Sin",
+    "Romans 6:1": ["Dead to Sin, Alive in Christ", "Believers must reject sin."],
+    "Romans 6:3": ["United with Christ in Death and Life", "Believers share Christ’s death and life."],
+    "Romans 6:6": ["Freedom from Sin’s Power", "Sin no longer controls believers."],
+    "Romans 6:12": ["Do Not Let Sin Reign", "Live righteously."],
+    "Romans 6:23": ["Wages of Sin and Gift of God", "Sin leads to death, God gives eternal life."],
 
     // Romans Chapter 7
-    "Romans 7:1": "Released from the Law",
-    "Romans 7:7": "The Law Reveals Sin",
-    "Romans 7:13": "The Struggle with Sin Nature",
+    "Romans 7:1": ["Freedom from the Law", "Believers are free from law."],
+    "Romans 7:7": ["Law Reveals Sin", "Law exposes sin."],
+    "Romans 7:15": ["Struggle with Sin", "Paul describes inner conflict."],
+    "Romans 7:24": ["Need for Deliverance", "Christ delivers from sin."],
 
     // Romans Chapter 8
-    "Romans 8:1": "Life in the Spirit",
-    "Romans 8:18": "Future Glory and Spirit's Help",
-    "Romans 8:28": "God Works All Things for Good",
-    "Romans 8:31": "Nothing Can Separate Us from Christ",
+    "Romans 8:1": ["No Condemnation in Christ", "Believers are free from condemnation."],
+    "Romans 8:5": ["Life Through the Spirit", "Spirit leads to life."],
+    "Romans 8:9": ["Spirit Lives in Believers", "Spirit belongs to believers."],
+    "Romans 8:14": ["Children of God", "Believers are God’s children."],
+    "Romans 8:18": ["Future Glory", "Suffering leads to glory."],
+    "Romans 8:26": ["Spirit Helps in Weakness", "Spirit intercedes."],
+    "Romans 8:28": ["God Works for Good", "God works all things for good."],
+    "Romans 8:31": ["God Is for Us", "Nothing can defeat believers."],
+    "Romans 8:38": ["Nothing Separates from God’s Love", "God’s love is eternal."],
 
     // Romans Chapter 9
-    "Romans 9:1": "Paul's Sorrow for Israel",
-    "Romans 9:6": "Children of the Promise",
-    "Romans 9:14": "God's Sovereign Choice",
-    "Romans 9:30": "Israel's Unbelief",
+    "Romans 9:1": ["Paul’s Sorrow for Israel", "Paul grieves for Israel."],
+    "Romans 9:6": ["God’s Promise Stands", "God’s promise remains."],
+    "Romans 9:14": ["God’s Sovereignty", "God shows mercy."],
+    "Romans 9:22": ["God’s Justice and Mercy", "God reveals mercy and justice."],
+    "Romans 9:30": ["Gentiles Receive Righteousness", "Faith brings righteousness."],
 
     // Romans Chapter 10
-    "Romans 10:1": "Israel's Misplaced Zeal",
-    "Romans 10:5": "Righteousness by Faith",
-    "Romans 10:14": "Israel Hears but Rejects",
+    "Romans 10:1": ["Paul’s Desire for Israel’s Salvation", "Paul desires their salvation."],
+    "Romans 10:4": ["Christ Fulfills the Law", "Christ completes the law."],
+    "Romans 10:9": ["Confess and Believe", "Confess Christ to be saved."],
+    "Romans 10:13": ["Call on the Lord", "All who call on Him saved."],
+    "Romans 10:17": ["Faith Comes by Hearing", "Faith comes through hearing."],
 
     // Romans Chapter 11
-    "Romans 11:1": "God Has Not Rejected Israel",
-    "Romans 11:11": "Gentiles Grafted In",
-    "Romans 11:25": "All Israel Will Be Saved",
-    "Romans 11:33": "Doxology — Depth of God's Wisdom",
+    "Romans 11:1": ["God Has Not Rejected Israel", "God preserves a remnant."],
+    "Romans 11:11": ["Salvation to Gentiles", "Gentiles receive salvation."],
+    "Romans 11:17": ["Olive Tree Illustration", "Gentiles grafted in."],
+    "Romans 11:25": ["Future Restoration of Israel", "Israel will be restored."],
+    "Romans 11:33": ["Praise for God’s Wisdom", "God’s wisdom is great."],
 
     // Romans Chapter 12
-    "Romans 12:1": "Living Sacrifice",
-    "Romans 12:3": "Gifts of Grace",
-    "Romans 12:9": "Marks of a True Christian",
+    "Romans 12:1": ["Living Sacrifices", "Offer lives to God."],
+    "Romans 12:2": ["Be Transformed", "Renew your mind."],
+    "Romans 12:4": ["One Body, Many Members", "Each believer has role."],
+    "Romans 12:9": ["Love in Action", "Love sincerely."],
+    "Romans 12:17": ["Live in Peace", "Do not repay evil."],
 
     // Romans Chapter 13
-    "Romans 13:1": "Submission to Authorities",
-    "Romans 13:8": "Love Fulfills the Law",
-    "Romans 13:11": "Put On Christ",
+    "Romans 13:1": ["Submit to Authorities", "Authorities established by God."],
+    "Romans 13:8": ["Love Fulfills the Law", "Love fulfills God’s law."],
+    "Romans 13:11": ["Wake Up Spiritually", "Salvation is near."],
+    "Romans 13:14": ["Clothe Yourself with Christ", "Live righteously."],
 
     // Romans Chapter 14
-    "Romans 14:1": "Do Not Judge One Another",
-    "Romans 14:13": "Do Not Cause Others to Stumble",
+    "Romans 14:1": ["Accept Weak Believers", "Do not judge others."],
+    "Romans 14:7": ["Belong to the Lord", "Believers belong to Christ."],
+    "Romans 14:10": ["God Is the Judge", "God judges everyone."],
+    "Romans 14:13": ["Do Not Cause Others to Stumble", "Help others grow."],
+    "Romans 14:17": ["Kingdom of God Defined", "Kingdom is righteousness and peace."],
 
     // Romans Chapter 15
-    "Romans 15:1": "Bear with the Weak",
-    "Romans 15:8": "Christ the Hope of Jews and Gentiles",
-    "Romans 15:14": "Paul's Ministry to the Gentiles",
-    "Romans 15:22": "Paul's Travel Plans and Prayer Request",
+    "Romans 15:1": ["Support the Weak", "Help weaker believers."],
+    "Romans 15:5": ["Unity and Harmony", "Live in unity."],
+    "Romans 15:8": ["Christ Serves All", "Christ serves Jews and Gentiles."],
+    "Romans 15:13": ["God Gives Hope", "God fills believers with hope."],
+    "Romans 15:20": ["Paul’s Mission", "Paul preaches where Christ unknown."],
 
     // Romans Chapter 16
-    "Romans 16:1": "Greetings to Many Workers",
-    "Romans 16:17": "Warning Against Divisive People",
-    "Romans 16:21": "Greetings from Paul's Companions",
-    "Romans 16:25": "Doxology — Glory to God",
+    "Romans 16:1": ["Commendation of Phoebe", "Phoebe commended."],
+    "Romans 16:3": ["Greetings to Fellow Workers", "Greetings to believers."],
+    "Romans 16:17": ["Warning Against Divisions", "Avoid false teachers."],
+    "Romans 16:20": ["Victory Over Satan", "God will defeat Satan."],
+    "Romans 16:25": ["Final Praise to God", "Praise God for His plan."],
+    "Romans 16:27": ["Final Glory to God", "Glory to God forever."],
 
     // 1 Corinthians Chapter 1
-    "1 Corinthians 1:1": "Greeting",
-    "1 Corinthians 1:4": "Thanksgiving for the Grace of God",
-    "1 Corinthians 1:10": "Appeal Against Divisions",
-    "1 Corinthians 1:18": "Christ the Power and Wisdom of God",
-    "1 Corinthians 1:26": "God Chooses the Lowly",
+    "1 Corinthians 1:1": ["Greeting to the Corinthian Church", "Paul greets the believers in Corinth."],
+    "1 Corinthians 1:4": ["Thanksgiving for God’s Grace", "Paul thanks God for grace given to them."],
+    "1 Corinthians 1:10": ["Appeal for Unity", "Paul urges believers to avoid divisions."],
+    "1 Corinthians 1:18": ["Message of the Cross", "The cross is God’s power to believers."],
+    "1 Corinthians 1:26": ["God Chooses the Weak", "God chooses the humble to shame the wise."],
+    "1 Corinthians 1:30": ["Christ Our Wisdom and Righteousness", "Christ becomes wisdom and righteousness."],
+
 
     // 1 Corinthians Chapter 2
-    "1 Corinthians 2:1": "Paul's Message: Christ Crucified",
-    "1 Corinthians 2:6": "Revealed by the Spirit",
-    "1 Corinthians 2:14": "The Spiritual Person",
+    "1 Corinthians 2:1": ["Paul’s Simple Message", "Paul preached Christ crucified."],
+    "1 Corinthians 2:4": ["Power of the Spirit", "Faith depends on God’s power."],
+    "1 Corinthians 2:6": ["God’s Hidden Wisdom", "God’s wisdom revealed through the Spirit."],
+    "1 Corinthians 2:10": ["Spirit Reveals God’s Truth", "Spirit reveals deep truths."],
+    "1 Corinthians 2:14": ["Spiritual Discernment", "Spiritual truth understood through Spirit."],
+
 
     // 1 Corinthians Chapter 3
-    "1 Corinthians 3:1": "Servants Working Together",
-    "1 Corinthians 3:10": "Building on the Foundation",
-    "1 Corinthians 3:16": "You Are God's Temple",
+    "1 Corinthians 3:1": ["Spiritual Immaturity", "Believers are still immature."],
+    "1 Corinthians 3:5": ["Servants of God", "Leaders serve God’s purpose."],
+    "1 Corinthians 3:9": ["God’s Building", "Believers are God’s building."],
+    "1 Corinthians 3:11": ["Christ the Foundation", "Christ is the only foundation."],
+    "1 Corinthians 3:16": ["Believers Are God’s Temple", "God’s Spirit lives in believers."],
+    "1 Corinthians 3:18": ["True Wisdom Comes from God", "Worldly wisdom is foolishness."],
+
 
     // 1 Corinthians Chapter 4
-    "1 Corinthians 4:1": "Servants of Christ",
-    "1 Corinthians 4:6": "Apostles Suffer for Christ",
-    "1 Corinthians 4:14": "Paul's Fatherly Appeal",
+    "1 Corinthians 4:1": ["Servants of Christ", "Leaders are servants of Christ."],
+    "1 Corinthians 4:5": ["God Judges Hearts", "God reveals hidden motives."],
+    "1 Corinthians 4:8": ["Warning Against Pride", "Do not be arrogant."],
+    "1 Corinthians 4:14": ["Paul’s Fatherly Concern", "Paul cares like a father."],
+    "1 Corinthians 4:20": ["Kingdom Is Power", "God’s kingdom is power."],
+
 
     // 1 Corinthians Chapter 5
-    "1 Corinthians 5:1": "Immorality in the Church",
-    "1 Corinthians 5:9": "Do Not Associate with Immorality",
+    "1 Corinthians 5:1": ["Sin in the Church", "Serious sin must be addressed."],
+    "1 Corinthians 5:6": ["Remove Sin from Church", "Sin spreads like yeast."],
+    "1 Corinthians 5:9": ["Avoid Immoral Believers", "Separate from sinful behavior."],
+
 
     // 1 Corinthians Chapter 6
-    "1 Corinthians 6:1": "Lawsuits Among Believers",
-    "1 Corinthians 6:12": "Flee Sexual Immorality — Body Is God's Temple",
+    "1 Corinthians 6:1": ["Lawsuits Among Believers", "Believers should resolve disputes peacefully."],
+    "1 Corinthians 6:9": ["Warning Against Sinful Living", "Unrighteous will not inherit kingdom."],
+    "1 Corinthians 6:12": ["Honor God with Your Body", "Body belongs to God."],
+    "1 Corinthians 6:19": ["Body Is Temple of Holy Spirit", "Honor God with your body."],
+
 
     // 1 Corinthians Chapter 7
-    "1 Corinthians 7:1": "Principles for Marriage",
-    "1 Corinthians 7:8": "Marriage to Unbelievers",
-    "1 Corinthians 7:17": "Remain in the Calling",
-    "1 Corinthians 7:25": "Advice to the Unmarried and Widows",
+    "1 Corinthians 7:1": ["Marriage and Singleness", "Instructions about marriage."],
+    "1 Corinthians 7:10": ["Instructions for Married People", "Marriage commitment important."],
+    "1 Corinthians 7:17": ["Live as God Called You", "Remain faithful in calling."],
+    "1 Corinthians 7:25": ["Advice for the Unmarried", "Singleness can serve God."],
+    "1 Corinthians 7:32": ["Undivided Devotion to God", "Serve God fully."],
+
 
     // 1 Corinthians Chapter 8
-    "1 Corinthians 8:1": "Food Offered to Idols — Knowledge and Love",
+    "1 Corinthians 8:1": ["Food Offered to Idols", "Knowledge must be guided by love."],
+    "1 Corinthians 8:6": ["One God and One Lord", "God is the source of all."],
+    "1 Corinthians 8:9": ["Do Not Cause Others to Stumble", "Protect weaker believers."],
+
 
     // 1 Corinthians Chapter 9
-    "1 Corinthians 9:1": "Paul's Rights as an Apostle",
-    "1 Corinthians 9:19": "Becoming All Things to All People",
-    "1 Corinthians 9:24": "Run to Win the Prize",
+    "1 Corinthians 9:1": ["Paul’s Rights as Apostle", "Paul has rights but sacrifices them."],
+    "1 Corinthians 9:16": ["Preach the Gospel Faithfully", "Paul must preach gospel."],
+    "1 Corinthians 9:19": ["Become All Things to All People", "Serve others to save them."],
+    "1 Corinthians 9:24": ["Run to Win the Race", "Discipline yourself."],
+
 
     // 1 Corinthians Chapter 10
-    "1 Corinthians 10:1": "Warnings from Israel's History",
-    "1 Corinthians 10:14": "Flee Idolatry",
-    "1 Corinthians 10:23": "Do All to the Glory of God",
+    "1 Corinthians 10:1": ["Lessons from Israel’s Failure", "Learn from Israel’s mistakes."],
+    "1 Corinthians 10:12": ["Warning Against Falling", "Stay alert against sin."],
+    "1 Corinthians 10:13": ["God Provides Escape from Temptation", "God helps overcome temptation."],
+    "1 Corinthians 10:14": ["Avoid Idolatry", "Flee from idol worship."],
+    "1 Corinthians 10:23": ["Do Everything for God’s Glory", "Honor God in all actions."],
+
 
     // 1 Corinthians Chapter 11
-    "1 Corinthians 11:1": "Head Coverings and Order",
-    "1 Corinthians 11:17": "The Lord's Supper — Correction",
+    "1 Corinthians 11:2": ["Proper Worship Practices", "Honor God in worship."],
+    "1 Corinthians 11:17": ["Abuse of the Lord’s Supper", "Correct improper behavior."],
+    "1 Corinthians 11:23": ["Institution of the Lord’s Supper", "Jesus established communion."],
+    "1 Corinthians 11:28": ["Examine Yourself", "Examine your heart before communion."],
+
 
     // 1 Corinthians Chapter 12
-    "1 Corinthians 12:1": "Varieties of Spiritual Gifts",
-    "1 Corinthians 12:12": "One Body, Many Members",
+    "1 Corinthians 12:1": ["Spiritual Gifts Explained", "Different gifts from same Spirit."],
+    "1 Corinthians 12:7": ["Purpose of Spiritual Gifts", "Gifts benefit the church."],
+    "1 Corinthians 12:12": ["One Body, Many Parts", "Believers form one body."],
+    "1 Corinthians 12:27": ["Believers Are Christ’s Body", "Each has important role."],
+
 
     // 1 Corinthians Chapter 13
-    "1 Corinthians 13:1": "The Way of Love (Love Chapter)",
+    "1 Corinthians 13:1": ["Love Is Essential", "Without love, gifts are meaningless."],
+    "1 Corinthians 13:4": ["Characteristics of Love", "Love is patient and kind."],
+    "1 Corinthians 13:8": ["Love Never Fails", "Love lasts forever."],
+    "1 Corinthians 13:13": ["Greatest Is Love", "Love is greatest virtue."],
+
 
     // 1 Corinthians Chapter 14
-    "1 Corinthians 14:1": "Prophecy and Tongues — Edifying the Church",
-    "1 Corinthians 14:20": "Order in Worship",
-    "1 Corinthians 14:34": "Instructions for Conduct in Church",
+    "1 Corinthians 14:1": ["Desire Spiritual Gifts", "Seek gifts that build others."],
+    "1 Corinthians 14:3": ["Prophecy Edifies Church", "Prophecy strengthens believers."],
+    "1 Corinthians 14:12": ["Build Up the Church", "Use gifts to help others."],
+    "1 Corinthians 14:26": ["Orderly Worship", "Worship must be orderly."],
+    "1 Corinthians 14:40": ["Do Everything Properly", "Worship properly and orderly."],
+
 
     // 1 Corinthians Chapter 15
-    "1 Corinthians 15:1": "The Gospel and the Resurrection of Christ",
-    "1 Corinthians 15:12": "Implications of the Resurrection",
-    "1 Corinthians 15:35": "The Resurrection Body",
-    "1 Corinthians 15:50": "Victory Through Christ",
+    "1 Corinthians 15:1": ["The Gospel Message", "Christ died and rose again."],
+    "1 Corinthians 15:12": ["Resurrection of the Dead", "Resurrection is essential."],
+    "1 Corinthians 15:20": ["Christ the Firstfruits", "Christ is first to rise."],
+    "1 Corinthians 15:35": ["Resurrection Body Explained", "New spiritual body."],
+    "1 Corinthians 15:51": ["Mystery of Transformation", "Believers transformed."],
+    "1 Corinthians 15:54": ["Victory Over Death", "Death defeated through Christ."],
+    "1 Corinthians 15:58": ["Stand Firm in Faith", "Remain faithful."],
+
 
     // 1 Corinthians Chapter 16
-    "1 Corinthians 16:1": "Collection for the Saints",
-    "1 Corinthians 16:5": "Paul's Travel Plans",
-    "1 Corinthians 16:13": "Final Exhortations",
-    "1 Corinthians 16:19": "Greetings and Benediction",
+    "1 Corinthians 16:1": ["Collection for Believers", "Give regularly."],
+    "1 Corinthians 16:5": ["Paul’s Travel Plans", "Paul plans to visit."],
+    "1 Corinthians 16:13": ["Final Encouragement", "Be watchful and strong."],
+    "1 Corinthians 16:19": ["Final Greetings", "Greetings from believers."],
+    "1 Corinthians 16:23": ["Final Blessing", "Grace of Jesus be with you."],
 
-    // 2 Corinthians Chapter 1
-    "2 Corinthians 1:1": "Greeting",
-    "2 Corinthians 1:3": "The God of All Comfort",
-    "2 Corinthians 1:8": "Sharing in Suffering",
-    "2 Corinthians 1:12": "Paul's Change of Travel Plans",
+    // 1 Corinthians Chapter 1
+    "1 Corinthians 1:1": ["Greeting to the Corinthian Church", "Paul greets the believers in Corinth."],
+    "1 Corinthians 1:4": ["Thanksgiving for God’s Grace", "Paul thanks God for grace given to them."],
+    "1 Corinthians 1:10": ["Appeal for Unity", "Paul urges believers to avoid divisions."],
+    "1 Corinthians 1:18": ["Message of the Cross", "The cross is God’s power to believers."],
+    "1 Corinthians 1:26": ["God Chooses the Weak", "God chooses the humble to shame the wise."],
+    "1 Corinthians 1:30": ["Christ Our Wisdom and Righteousness", "Christ becomes wisdom and righteousness."],
 
-    // 2 Corinthians Chapter 2
-    "2 Corinthians 2:1": "Paul's Painful Visit and Letter",
-    "2 Corinthians 2:5": "Forgive the Offender",
-    "2 Corinthians 2:12": "Triumph in Christ — Aroma of Life",
 
-    // 2 Corinthians Chapter 3
-    "2 Corinthians 3:1": "Ministers of the New Covenant",
-    "2 Corinthians 3:7": "Glory of the New Covenant",
-    "2 Corinthians 3:12": "Unveiled Faces — Transformed by the Spirit",
+    // 1 Corinthians Chapter 2
+    "1 Corinthians 2:1": ["Paul’s Simple Message", "Paul preached Christ crucified."],
+    "1 Corinthians 2:4": ["Power of the Spirit", "Faith depends on God’s power."],
+    "1 Corinthians 2:6": ["God’s Hidden Wisdom", "God’s wisdom revealed through the Spirit."],
+    "1 Corinthians 2:10": ["Spirit Reveals God’s Truth", "Spirit reveals deep truths."],
+    "1 Corinthians 2:14": ["Spiritual Discernment", "Spiritual truth understood through Spirit."],
 
-    // 2 Corinthians Chapter 4
-    "2 Corinthians 4:1": "Light of the Gospel in Earthen Vessels",
-    "2 Corinthians 4:7": "Treasure in Jars of Clay",
-    "2 Corinthians 4:13": "Eternal Weight of Glory",
 
-    // 2 Corinthians Chapter 5
-    "2 Corinthians 5:1": "Our Heavenly Dwelling",
-    "2 Corinthians 5:11": "The Ministry of Reconciliation Begins",
-    "2 Corinthians 5:16": "New Creation — Ambassadors for Christ",
+    // 1 Corinthians Chapter 3
+    "1 Corinthians 3:1": ["Spiritual Immaturity", "Believers are still immature."],
+    "1 Corinthians 3:5": ["Servants of God", "Leaders serve God’s purpose."],
+    "1 Corinthians 3:9": ["God’s Building", "Believers are God’s building."],
+    "1 Corinthians 3:11": ["Christ the Foundation", "Christ is the only foundation."],
+    "1 Corinthians 3:16": ["Believers Are God’s Temple", "God’s Spirit lives in believers."],
+    "1 Corinthians 3:18": ["True Wisdom Comes from God", "Worldly wisdom is foolishness."],
 
-    // 2 Corinthians Chapter 6
-    "2 Corinthians 6:1": "Paul's Suffering and Appeal",
-    "2 Corinthians 6:14": "Do Not Be Unequally Yoked",
 
-    // 2 Corinthians Chapter 7
-    "2 Corinthians 7:1": "Call to Holiness",
-    "2 Corinthians 7:5": "Godly Sorrow Produces Repentance",
+    // 1 Corinthians Chapter 4
+    "1 Corinthians 4:1": ["Servants of Christ", "Leaders are servants of Christ."],
+    "1 Corinthians 4:5": ["God Judges Hearts", "God reveals hidden motives."],
+    "1 Corinthians 4:8": ["Warning Against Pride", "Do not be arrogant."],
+    "1 Corinthians 4:14": ["Paul’s Fatherly Concern", "Paul cares like a father."],
+    "1 Corinthians 4:20": ["Kingdom Is Power", "God’s kingdom is power."],
 
-    // 2 Corinthians Chapter 8
-    "2 Corinthians 8:1": "Example of Macedonian Generosity",
-    "2 Corinthians 8:8": "Excel in the Grace of Giving",
-    "2 Corinthians 8:16": "Titus and the Collection",
 
-    // 2 Corinthians Chapter 9
-    "2 Corinthians 9:1": "Preparing the Gift",
-    "2 Corinthians 9:6": "God Loves a Cheerful Giver",
+    // 1 Corinthians Chapter 5
+    "1 Corinthians 5:1": ["Sin in the Church", "Serious sin must be addressed."],
+    "1 Corinthians 5:6": ["Remove Sin from Church", "Sin spreads like yeast."],
+    "1 Corinthians 5:9": ["Avoid Immoral Believers", "Separate from sinful behavior."],
 
-    // 2 Corinthians Chapter 10
-    "2 Corinthians 10:1": "Paul Defends His Authority",
-    "2 Corinthians 10:7": "Criticism of Paul's Weak Appearance",
-    "2 Corinthians 10:12": "Boasting Only in the Lord",
 
-    // 2 Corinthians Chapter 11
-    "2 Corinthians 11:1": "Warning Against False Apostles",
-    "2 Corinthians 11:7": "Deceptive Workers",
-    "2 Corinthians 11:16": "Paul's 'Foolish' Boasting",
-    "2 Corinthians 11:22": "Paul's Sufferings",
+    // 1 Corinthians Chapter 6
+    "1 Corinthians 6:1": ["Lawsuits Among Believers", "Believers should resolve disputes peacefully."],
+    "1 Corinthians 6:9": ["Warning Against Sinful Living", "Unrighteous will not inherit kingdom."],
+    "1 Corinthians 6:12": ["Honor God with Your Body", "Body belongs to God."],
+    "1 Corinthians 6:19": ["Body Is Temple of Holy Spirit", "Honor God with your body."],
 
-    // 2 Corinthians Chapter 12
-    "2 Corinthians 12:1": "Paul's Thorn in the Flesh",
-    "2 Corinthians 12:11": "Defending His Ministry",
-    "2 Corinthians 12:19": "Concerns About the Corinthians",
 
-    // 2 Corinthians Chapter 13
-    "2 Corinthians 13:1": "Final Warning",
-    "2 Corinthians 13:5": "Examine Yourselves",
-    "2 Corinthians 13:11": "Final Greetings and Benediction",
+    // 1 Corinthians Chapter 7
+    "1 Corinthians 7:1": ["Marriage and Singleness", "Instructions about marriage."],
+    "1 Corinthians 7:10": ["Instructions for Married People", "Marriage commitment important."],
+    "1 Corinthians 7:17": ["Live as God Called You", "Remain faithful in calling."],
+    "1 Corinthians 7:25": ["Advice for the Unmarried", "Singleness can serve God."],
+    "1 Corinthians 7:32": ["Undivided Devotion to God", "Serve God fully."],
+
+
+    // 1 Corinthians Chapter 8
+    "1 Corinthians 8:1": ["Food Offered to Idols", "Knowledge must be guided by love."],
+    "1 Corinthians 8:6": ["One God and One Lord", "God is the source of all."],
+    "1 Corinthians 8:9": ["Do Not Cause Others to Stumble", "Protect weaker believers."],
+
+
+    // 1 Corinthians Chapter 9
+    "1 Corinthians 9:1": ["Paul’s Rights as Apostle", "Paul has rights but sacrifices them."],
+    "1 Corinthians 9:16": ["Preach the Gospel Faithfully", "Paul must preach gospel."],
+    "1 Corinthians 9:19": ["Become All Things to All People", "Serve others to save them."],
+    "1 Corinthians 9:24": ["Run to Win the Race", "Discipline yourself."],
+
+
+    // 1 Corinthians Chapter 10
+    "1 Corinthians 10:1": ["Lessons from Israel’s Failure", "Learn from Israel’s mistakes."],
+    "1 Corinthians 10:12": ["Warning Against Falling", "Stay alert against sin."],
+    "1 Corinthians 10:13": ["God Provides Escape from Temptation", "God helps overcome temptation."],
+    "1 Corinthians 10:14": ["Avoid Idolatry", "Flee from idol worship."],
+    "1 Corinthians 10:23": ["Do Everything for God’s Glory", "Honor God in all actions."],
+
+
+    // 1 Corinthians Chapter 11
+    "1 Corinthians 11:2": ["Proper Worship Practices", "Honor God in worship."],
+    "1 Corinthians 11:17": ["Abuse of the Lord’s Supper", "Correct improper behavior."],
+    "1 Corinthians 11:23": ["Institution of the Lord’s Supper", "Jesus established communion."],
+    "1 Corinthians 11:28": ["Examine Yourself", "Examine your heart before communion."],
+
+
+    // 1 Corinthians Chapter 12
+    "1 Corinthians 12:1": ["Spiritual Gifts Explained", "Different gifts from same Spirit."],
+    "1 Corinthians 12:7": ["Purpose of Spiritual Gifts", "Gifts benefit the church."],
+    "1 Corinthians 12:12": ["One Body, Many Parts", "Believers form one body."],
+    "1 Corinthians 12:27": ["Believers Are Christ’s Body", "Each has important role."],
+
+
+    // 1 Corinthians Chapter 13
+    "1 Corinthians 13:1": ["Love Is Essential", "Without love, gifts are meaningless."],
+    "1 Corinthians 13:4": ["Characteristics of Love", "Love is patient and kind."],
+    "1 Corinthians 13:8": ["Love Never Fails", "Love lasts forever."],
+    "1 Corinthians 13:13": ["Greatest Is Love", "Love is greatest virtue."],
+
+
+    // 1 Corinthians Chapter 14
+    "1 Corinthians 14:1": ["Desire Spiritual Gifts", "Seek gifts that build others."],
+    "1 Corinthians 14:3": ["Prophecy Edifies Church", "Prophecy strengthens believers."],
+    "1 Corinthians 14:12": ["Build Up the Church", "Use gifts to help others."],
+    "1 Corinthians 14:26": ["Orderly Worship", "Worship must be orderly."],
+    "1 Corinthians 14:40": ["Do Everything Properly", "Worship properly and orderly."],
+
+
+    // 1 Corinthians Chapter 15
+    "1 Corinthians 15:1": ["The Gospel Message", "Christ died and rose again."],
+    "1 Corinthians 15:12": ["Resurrection of the Dead", "Resurrection is essential."],
+    "1 Corinthians 15:20": ["Christ the Firstfruits", "Christ is first to rise."],
+    "1 Corinthians 15:35": ["Resurrection Body Explained", "New spiritual body."],
+    "1 Corinthians 15:51": ["Mystery of Transformation", "Believers transformed."],
+    "1 Corinthians 15:54": ["Victory Over Death", "Death defeated through Christ."],
+    "1 Corinthians 15:58": ["Stand Firm in Faith", "Remain faithful."],
+
+
+    // 1 Corinthians Chapter 16
+    "1 Corinthians 16:1": ["Collection for Believers", "Give regularly."],
+    "1 Corinthians 16:5": ["Paul’s Travel Plans", "Paul plans to visit."],
+    "1 Corinthians 16:13": ["Final Encouragement", "Be watchful and strong."],
+    "1 Corinthians 16:19": ["Final Greetings", "Greetings from believers."],
+    "1 Corinthians 16:23": ["Final Blessing", "Grace of Jesus be with you."],
 
     // Galatians Chapter 1
-    "Galatians 1:1": "Greeting",
-    "Galatians 1:6": "No Other Gospel",
-    "Galatians 1:11": "Paul's Calling and Conversion",
+    "Galatians 1:1": ["Greeting to the Galatian Churches", "Paul greets the believers with grace and peace."],
+    "Galatians 1:3": ["Grace and Peace Through Christ", "Jesus gave Himself to rescue us from sin."],
+    "Galatians 1:6": ["Warning Against a Different Gospel", "Paul warns against turning to a false gospel."],
+    "Galatians 1:8": ["Curse on False Teachers", "Anyone preaching a different gospel is cursed."],
+    "Galatians 1:10": ["Serving Christ, Not People", "Paul seeks to please God, not people."],
+    "Galatians 1:11": ["Paul’s Gospel from God", "Paul received the gospel by revelation."],
+    "Galatians 1:13": ["Paul’s Past Persecution", "Paul formerly persecuted the church."],
+    "Galatians 1:15": ["God’s Calling of Paul", "God called Paul by grace."],
+    "Galatians 1:18": ["Paul Visits Jerusalem", "Paul met Peter and James."],
+
 
     // Galatians Chapter 2
-    "Galatians 2:1": "Paul Accepted by the Apostles",
-    "Galatians 2:11": "Paul Confronts Peter",
-    "Galatians 2:15": "Justified by Faith, Not Works",
+    "Galatians 2:1": ["Paul Accepted by Apostles", "Apostles recognized Paul’s ministry."],
+    "Galatians 2:4": ["Defense of Gospel Freedom", "False believers tried to impose legalism."],
+    "Galatians 2:7": ["Different Missions, Same Gospel", "Paul to Gentiles, Peter to Jews."],
+    "Galatians 2:11": ["Paul Confronts Peter", "Paul rebuked Peter for hypocrisy."],
+    "Galatians 2:15": ["Justified by Faith, Not Law", "People are justified by faith."],
+    "Galatians 2:20": ["Christ Lives in Me", "Believers live by faith in Christ."],
+
 
     // Galatians Chapter 3
-    "Galatians 3:1": "Faith, Not Law",
-    "Galatians 3:10": "Christ Redeems from the Curse",
-    "Galatians 3:15": "The Promise Comes Before the Law",
-    "Galatians 3:23": "Children of God Through Faith",
+    "Galatians 3:1": ["Faith, Not Law", "Paul questions their return to legalism."],
+    "Galatians 3:6": ["Example of Abraham’s Faith", "Abraham was justified by faith."],
+    "Galatians 3:10": ["Curse of the Law", "Law brings curse, not salvation."],
+    "Galatians 3:13": ["Christ Redeemed from Curse", "Christ became a curse for us."],
+    "Galatians 3:15": ["Promise Greater Than Law", "God’s promise came before the law."],
+    "Galatians 3:19": ["Purpose of the Law", "Law shows sin."],
+    "Galatians 3:26": ["Children of God Through Faith", "Believers are God’s children."],
+    "Galatians 3:28": ["Unity in Christ", "All believers are one in Christ."],
+
 
     // Galatians Chapter 4
-    "Galatians 4:1": "Sons and Heirs Through Christ",
-    "Galatians 4:8": "Paul's Concern for the Galatians",
-    "Galatians 4:21": "Hagar and Sarah — Two Covenants",
+    "Galatians 4:1": ["Heirs Through Christ", "Believers are no longer slaves."],
+    "Galatians 4:4": ["God Sent His Son", "Jesus came to redeem believers."],
+    "Galatians 4:6": ["Adopted as God’s Children", "Believers call God Father."],
+    "Galatians 4:8": ["Warning Against Returning to Slavery", "Do not return to legalism."],
+    "Galatians 4:12": ["Paul’s Appeal to Believers", "Paul urges them to remain faithful."],
+    "Galatians 4:21": ["Example of Hagar and Sarah", "Illustration of slavery vs freedom."],
+
 
     // Galatians Chapter 5
-    "Galatians 5:1": "Freedom in Christ",
-    "Galatians 5:13": "Walk by the Spirit",
+    "Galatians 5:1": ["Freedom in Christ", "Stand firm in freedom."],
+    "Galatians 5:4": ["Warning Against Legalism", "Law separates from grace."],
+    "Galatians 5:6": ["Faith Expressed Through Love", "Faith works through love."],
+    "Galatians 5:13": ["Serve One Another in Love", "Use freedom to serve others."],
+    "Galatians 5:16": ["Walk by the Spirit", "Spirit helps overcome sinful nature."],
+    "Galatians 5:19": ["Works of the Flesh", "List of sinful behaviors."],
+    "Galatians 5:22": ["Fruit of the Spirit", "Love, joy, peace, and other virtues."],
+    "Galatians 5:24": ["Belonging to Christ", "Crucify sinful desires."],
+
 
     // Galatians Chapter 6
-    "Galatians 6:1": "Bear One Another's Burdens",
-    "Galatians 6:11": "Boast Only in the Cross",
+    "Galatians 6:1": ["Restore with Gentleness", "Help those caught in sin."],
+    "Galatians 6:2": ["Carry Each Other’s Burdens", "Support one another."],
+    "Galatians 6:7": ["Law of Sowing and Reaping", "Actions bring consequences."],
+    "Galatians 6:9": ["Do Not Grow Weary", "Continue doing good."],
+    "Galatians 6:12": ["Warning Against False Motives", "False teachers seek approval."],
+    "Galatians 6:14": ["Boast Only in the Cross", "Paul boasts in Christ alone."],
+    "Galatians 6:15": ["New Creation in Christ", "What matters is new life."],
+    "Galatians 6:17": ["Paul’s Suffering for Christ", "Paul bears marks for Christ."],
+    "Galatians 6:18": ["Final Blessing", "Grace of Jesus be with believers."],
 
     // Ephesians Chapter 1
-    "Ephesians 1:1": "Greeting",
-    "Ephesians 1:3": "Spiritual Blessings in Christ",
-    "Ephesians 1:15": "Prayer for Wisdom and Revelation",
+    "Ephesians 1:1": ["Greeting to the Ephesian Church", "Paul greets the believers in Ephesus."],
+    "Ephesians 1:3": ["Spiritual Blessings in Christ", "God has blessed believers with every spiritual blessing."],
+    "Ephesians 1:4": ["Chosen Before Creation", "God chose believers before the world began."],
+    "Ephesians 1:7": ["Redemption Through Christ’s Blood", "Believers are redeemed and forgiven through Christ."],
+    "Ephesians 1:9": ["Mystery of God’s Will Revealed", "God revealed His plan through Christ."],
+    "Ephesians 1:11": ["Inheritance in Christ", "Believers receive inheritance in Christ."],
+    "Ephesians 1:13": ["Sealed with the Holy Spirit", "Believers are sealed with the Holy Spirit."],
+    "Ephesians 1:15": ["Thanksgiving and Prayer", "Paul prays for their spiritual wisdom."],
+    "Ephesians 1:18": ["Prayer for Spiritual Understanding", "Paul prays they know their hope and inheritance."],
+    "Ephesians 1:20": ["Christ Exalted Above All", "God raised Christ and placed Him above all."],
+    "Ephesians 1:22": ["Christ Head of the Church", "Christ is head over the church."],
+
 
     // Ephesians Chapter 2
-    "Ephesians 2:1": "Saved by Grace Through Faith",
-    "Ephesians 2:11": "One New Man in Christ",
+    "Ephesians 2:1": ["Made Alive in Christ", "Believers were dead in sin but made alive."],
+    "Ephesians 2:4": ["Saved by God’s Mercy", "God saved believers because of His love."],
+    "Ephesians 2:8": ["Saved by Grace Through Faith", "Salvation is God’s gift, not by works."],
+    "Ephesians 2:10": ["Created for Good Works", "Believers are created to do good works."],
+    "Ephesians 2:11": ["Unity of Jews and Gentiles", "Gentiles are brought near through Christ."],
+    "Ephesians 2:14": ["Christ Brings Peace", "Christ removes division and brings peace."],
+    "Ephesians 2:19": ["Members of God’s Household", "Believers belong to God’s family."],
+    "Ephesians 2:20": ["Built on Christ the Cornerstone", "Christ is the foundation of the church."],
+
 
     // Ephesians Chapter 3
-    "Ephesians 3:1": "Paul's Ministry to the Gentiles",
-    "Ephesians 3:14": "Prayer for Spiritual Strength",
+    "Ephesians 3:1": ["Paul’s Ministry to the Gentiles", "Paul explains his mission to Gentiles."],
+    "Ephesians 3:3": ["Mystery Revealed by the Spirit", "God revealed the mystery of salvation."],
+    "Ephesians 3:6": ["Gentiles Share in the Promise", "Gentiles share equally in Christ."],
+    "Ephesians 3:8": ["Paul Preaches Christ’s Riches", "Paul proclaims Christ’s unsearchable riches."],
+    "Ephesians 3:10": ["God’s Wisdom Revealed Through Church", "God shows His wisdom through the church."],
+    "Ephesians 3:14": ["Paul’s Prayer for Strength", "Paul prays believers will be strengthened."],
+    "Ephesians 3:17": ["Christ Dwells Through Faith", "Christ lives in believers’ hearts."],
+    "Ephesians 3:18": ["Knowing Christ’s Love", "Believers can know Christ’s vast love."],
+    "Ephesians 3:20": ["God’s Power Beyond Measure", "God can do more than we imagine."],
+
 
     // Ephesians Chapter 4
-    "Ephesians 4:1": "Unity and Gifts in the Body",
-    "Ephesians 4:17": "The New Life in Christ",
+    "Ephesians 4:1": ["Walk Worthy of Your Calling", "Live worthy of God’s calling."],
+    "Ephesians 4:3": ["Unity in the Spirit", "Maintain unity and peace."],
+    "Ephesians 4:7": ["Gifts Given by Christ", "Christ gives spiritual gifts."],
+    "Ephesians 4:11": ["Roles in the Church", "Christ appoints leaders for growth."],
+    "Ephesians 4:13": ["Spiritual Maturity", "Grow into maturity in Christ."],
+    "Ephesians 4:17": ["Put Off the Old Self", "Reject sinful lifestyle."],
+    "Ephesians 4:22": ["Put On the New Self", "Live in righteousness and holiness."],
+    "Ephesians 4:25": ["Instructions for Christian Living", "Speak truth and avoid sin."],
+    "Ephesians 4:30": ["Do Not Grieve the Holy Spirit", "Live in ways that honor the Spirit."],
+    "Ephesians 4:32": ["Forgive One Another", "Be kind and forgiving."],
+
 
     // Ephesians Chapter 5
-    "Ephesians 5:1": "Walk in Love and Wisdom",
-    "Ephesians 5:22": "Marriage — Christ and the Church",
+    "Ephesians 5:1": ["Imitate God", "Follow God’s example in love."],
+    "Ephesians 5:3": ["Avoid Immorality", "Reject sinful behaviors."],
+    "Ephesians 5:8": ["Live as Children of Light", "Live in goodness and truth."],
+    "Ephesians 5:15": ["Walk in Wisdom", "Use time wisely."],
+    "Ephesians 5:18": ["Be Filled with the Spirit", "Live under the Spirit’s control."],
+    "Ephesians 5:22": ["Instructions for Wives", "Wives respect husbands."],
+    "Ephesians 5:25": ["Instructions for Husbands", "Husbands love wives like Christ loves church."],
+    "Ephesians 5:31": ["Marriage Reflects Christ and Church", "Marriage reflects spiritual truth."],
+
 
     // Ephesians Chapter 6
-    "Ephesians 6:1": "Instructions for Families",
-    "Ephesians 6:10": "Armor of God",
-    "Ephesians 6:21": "Final Greetings",
+    "Ephesians 6:1": ["Instructions for Children", "Children obey parents."],
+    "Ephesians 6:4": ["Instructions for Parents", "Raise children in the Lord."],
+    "Ephesians 6:5": ["Instructions for Servants", "Serve sincerely as serving Christ."],
+    "Ephesians 6:9": ["Instructions for Masters", "Treat others fairly."],
+    "Ephesians 6:10": ["Be Strong in the Lord", "Find strength in God."],
+    "Ephesians 6:11": ["Armor of God", "Put on God’s armor."],
+    "Ephesians 6:14": ["Parts of the Armor", "Truth, righteousness, faith, salvation, and God’s word."],
+    "Ephesians 6:18": ["Pray Continually", "Pray always in the Spirit."],
+    "Ephesians 6:21": ["Final Greetings", "Tychicus brings encouragement."],
+    "Ephesians 6:23": ["Final Blessing", "Peace, love, and grace to believers."],
 
     // Philippians Chapter 1
-    "Philippians 1:1": "Greeting",
-    "Philippians 1:3": "Thanksgiving and Prayer",
-    "Philippians 1:12": "The Gospel Advances",
-    "Philippians 1:19": "To Live Is Christ",
+    "Philippians 1:1": ["Greeting to the Philippian Church", "Paul and Timothy greet the believers in Philippi."],
+    "Philippians 1:3": ["Thanksgiving and Prayer", "Paul thanks God and prays with joy for them."],
+    "Philippians 1:6": ["Confidence in God’s Work", "God will complete the good work begun in believers."],
+    "Philippians 1:9": ["Prayer for Love and Discernment", "Paul prays their love will grow in knowledge."],
+    "Philippians 1:12": ["Paul’s Chains Advance the Gospel", "Paul’s imprisonment helps spread the gospel."],
+    "Philippians 1:15": ["Different Motives for Preaching", "Some preach Christ with wrong motives, others sincerely."],
+    "Philippians 1:18": ["Rejoicing in Christ Being Preached", "Paul rejoices that Christ is proclaimed."],
+    "Philippians 1:20": ["Christ Honored in Life or Death", "Paul desires Christ to be honored always."],
+    "Philippians 1:21": ["To Live Is Christ, To Die Is Gain", "Living serves Christ; dying brings eternal reward."],
+    "Philippians 1:27": ["Live Worthy of the Gospel", "Stand firm and live worthy of Christ."],
+    "Philippians 1:29": ["Privilege of Suffering for Christ", "Believers are given privilege to suffer for Christ."],
+
 
     // Philippians Chapter 2
-    "Philippians 2:1": "Christ's Humility",
-    "Philippians 2:12": "Shine as Lights",
-    "Philippians 2:19": "Timothy and Epaphroditus",
+    "Philippians 2:1": ["Unity and Humility", "Believers should be united and humble."],
+    "Philippians 2:5": ["Christ’s Example of Humility", "Jesus humbled Himself and became obedient."],
+    "Philippians 2:9": ["Christ Exalted by God", "God exalted Jesus above all."],
+    "Philippians 2:12": ["Work Out Your Salvation", "Live obediently with reverence."],
+    "Philippians 2:14": ["Shine as Lights in the World", "Live without complaining."],
+    "Philippians 2:17": ["Paul’s Joy in Sacrifice", "Paul rejoices in serving believers."],
+    "Philippians 2:19": ["Timothy’s Faithful Service", "Timothy genuinely cares for believers."],
+    "Philippians 2:25": ["Epaphroditus’ Service", "Epaphroditus faithfully served despite illness."],
+
 
     // Philippians Chapter 3
-    "Philippians 3:1": "Righteousness Through Faith",
-    "Philippians 3:12": "Press Toward the Goal",
+    "Philippians 3:1": ["Warning Against False Confidence", "Do not trust human achievements."],
+    "Philippians 3:4": ["Paul’s Former Achievements", "Paul lists his past religious status."],
+    "Philippians 3:7": ["Counting All as Loss for Christ", "Paul values Christ above everything."],
+    "Philippians 3:10": ["Knowing Christ Fully", "Paul desires to know Christ deeply."],
+    "Philippians 3:12": ["Pressing Toward the Goal", "Paul strives to reach spiritual maturity."],
+    "Philippians 3:17": ["Follow Godly Examples", "Imitate faithful believers."],
+    "Philippians 3:20": ["Citizenship in Heaven", "Believers belong to heaven."],
+    "Philippians 3:21": ["Christ Will Transform Believers", "Christ will give glorified bodies."],
+
 
     // Philippians Chapter 4
-    "Philippians 4:1": "Encouragement to Stand Firm",
-    "Philippians 4:10": "Contentment in Christ",
-    "Philippians 4:21": "Final Greetings",
+    "Philippians 4:1": ["Stand Firm in the Lord", "Remain strong in faith."],
+    "Philippians 4:2": ["Call for Unity", "Encouragement for believers to agree."],
+    "Philippians 4:4": ["Rejoice Always", "Always rejoice in the Lord."],
+    "Philippians 4:6": ["Prayer Instead of Anxiety", "Pray and trust God instead of worrying."],
+    "Philippians 4:7": ["God’s Peace Guards Hearts", "God’s peace protects believers."],
+    "Philippians 4:8": ["Think on Good Things", "Focus on what is true and good."],
+    "Philippians 4:10": ["Gratitude for Their Support", "Paul thanks them for helping him."],
+    "Philippians 4:11": ["Contentment in All Circumstances", "Paul learned to be content."],
+    "Philippians 4:13": ["Strength Through Christ", "Christ gives strength in all situations."],
+    "Philippians 4:15": ["Philippians’ Generosity", "They supported Paul’s ministry."],
+    "Philippians 4:19": ["God Will Supply All Needs", "God provides according to His riches."],
+    "Philippians 4:21": ["Final Greetings", "Paul sends greetings and blessing."],
+    "Philippians 4:23": ["Final Blessing", "Grace of the Lord Jesus Christ be with you."],
 
     // Colossians Chapter 1
-    "Colossians 1:1": "Thanksgiving and Prayer",
-    "Colossians 1:15": "Christ the Supreme Creator and Redeemer",
-    "Colossians 1:24": "Paul's Ministry",
+    "Colossians 1:1": ["Greeting to the Colossian Church", "Paul greets the believers in Colossae with grace and peace."],
+    "Colossians 1:3": ["Thanksgiving for Their Faith and Love", "Paul thanks God for their faith in Christ and love for believers."],
+    "Colossians 1:5": ["Hope Stored in Heaven", "Their hope is kept safely in heaven."],
+    "Colossians 1:9": ["Prayer for Spiritual Wisdom", "Paul prays for their spiritual wisdom and understanding."],
+    "Colossians 1:13": ["Rescued into Christ’s Kingdom", "God delivered believers from darkness into Christ’s kingdom."],
+    "Colossians 1:15": ["Supremacy of Christ", "Jesus is the image of the invisible God and creator of all."],
+    "Colossians 1:18": ["Christ the Head of the Church", "Jesus is the head and beginning of the church."],
+    "Colossians 1:19": ["Fullness of God in Christ", "God’s fullness dwells in Christ."],
+    "Colossians 1:20": ["Reconciliation Through Christ", "Christ reconciles all things through His blood."],
+    "Colossians 1:21": ["Believers Reconciled to God", "Believers were once enemies but now reconciled."],
+    "Colossians 1:24": ["Paul’s Suffering for the Church", "Paul suffers for the benefit of believers."],
+    "Colossians 1:26": ["Mystery Revealed", "God’s mystery is now revealed to believers."],
+    "Colossians 1:27": ["Christ in You, the Hope of Glory", "Christ living in believers is their hope."],
+    "Colossians 1:28": ["Proclaiming Christ", "Paul teaches everyone to grow mature in Christ."],
+
 
     // Colossians Chapter 2
-    "Colossians 2:1": "Christ, the Mystery of God",
-    "Colossians 2:6": "Alive in Christ",
-    "Colossians 2:16": "Let No One Disqualify You",
+    "Colossians 2:1": ["Paul’s Concern for the Church", "Paul desires believers to be encouraged and united."],
+    "Colossians 2:3": ["Treasures in Christ", "All wisdom and knowledge are found in Christ."],
+    "Colossians 2:6": ["Continue Living in Christ", "Believers must remain rooted and built up in Him."],
+    "Colossians 2:8": ["Warning Against False Philosophy", "Do not be deceived by human traditions."],
+    "Colossians 2:9": ["Fullness of Deity in Christ", "Christ has all the fullness of God."],
+    "Colossians 2:11": ["Spiritual Circumcision", "Believers are spiritually transformed in Christ."],
+    "Colossians 2:12": ["Buried and Raised with Christ", "Believers share in Christ’s death and resurrection."],
+    "Colossians 2:13": ["Forgiveness Through Christ", "God forgave sins and made believers alive."],
+    "Colossians 2:14": ["Victory Over the Law", "Christ canceled the record of sin."],
+    "Colossians 2:15": ["Victory Over Spiritual Powers", "Christ defeated evil powers."],
+    "Colossians 2:16": ["Freedom from Legalism", "Do not let others judge you on rituals."],
+    "Colossians 2:18": ["Warning Against False Worship", "Avoid false humility and angel worship."],
+    "Colossians 2:20": ["Freedom from Worldly Rules", "Believers are free from human regulations."],
+
 
     // Colossians Chapter 3
-    "Colossians 3:1": "Put On the New Self",
-    "Colossians 3:18": "Rules for Christian Households",
+    "Colossians 3:1": ["Seek Things Above", "Focus on heavenly things."],
+    "Colossians 3:3": ["New Life Hidden in Christ", "Believers’ true life is in Christ."],
+    "Colossians 3:5": ["Put to Death Sinful Nature", "Remove sinful behaviors."],
+    "Colossians 3:8": ["Put Away Evil Practices", "Avoid anger, slander, and lies."],
+    "Colossians 3:10": ["Put on the New Self", "Live according to God’s image."],
+    "Colossians 3:12": ["Clothe Yourself with Virtues", "Show compassion, kindness, and humility."],
+    "Colossians 3:14": ["Love Binds Everything Together", "Love is the greatest virtue."],
+    "Colossians 3:15": ["Let Christ’s Peace Rule", "Allow Christ’s peace to guide you."],
+    "Colossians 3:16": ["Let Christ’s Word Dwell Richly", "Teach and encourage one another."],
+    "Colossians 3:17": ["Do Everything for Christ", "Honor Christ in all actions."],
+    "Colossians 3:18": ["Instructions for Families", "Wives, husbands, children, and parents guidance."],
+    "Colossians 3:22": ["Instructions for Servants", "Serve sincerely as serving Christ."],
+
 
     // Colossians Chapter 4
-    "Colossians 4:1": "Prayer and Conduct",
-    "Colossians 4:7": "Final Greetings",
+    "Colossians 4:1": ["Instructions for Masters", "Masters must treat servants fairly."],
+    "Colossians 4:2": ["Devote Yourselves to Prayer", "Stay alert and thankful in prayer."],
+    "Colossians 4:3": ["Pray for Open Doors", "Pray for opportunities to share the gospel."],
+    "Colossians 4:5": ["Act Wisely Toward Outsiders", "Make the most of every opportunity."],
+    "Colossians 4:6": ["Speak with Grace", "Speak wisely and graciously."],
+    "Colossians 4:7": ["Tychicus Sent to Encourage", "Tychicus brings news and encouragement."],
+    "Colossians 4:10": ["Greetings from Fellow Workers", "Many believers send greetings."],
+    "Colossians 4:12": ["Epaphras’ Faithful Service", "Epaphras prays earnestly for them."],
+    "Colossians 4:16": ["Share This Letter", "The letter should be read by other churches."],
+    "Colossians 4:18": ["Paul’s Final Greeting", "Paul closes with grace and blessing."],
 
     // 1 Thessalonians Chapter 1
-    "1 Thessalonians 1:1": "Greeting and Thanksgiving",
+    "1 Thessalonians 1:1": ["Greeting to the Church", "Paul, Silas, and Timothy greet the church in God the Father and the Lord Jesus Christ."],
+    "1 Thessalonians 1:2": ["Thanksgiving for Their Faith", "Paul thanks God for their faith, love, and hope in Jesus."],
+    "1 Thessalonians 1:4": ["Chosen by God", "Paul reminds them that they are loved and chosen by God."],
+    "1 Thessalonians 1:5": ["Gospel Came with Power", "The gospel came not only in words but also with power and the Holy Spirit."],
+    "1 Thessalonians 1:6": ["Imitators of Christ", "They became imitators of the Lord and received the word with joy despite suffering."],
+    "1 Thessalonians 1:7": ["Examples to Other Believers", "They became an example to believers in Macedonia and Achaia."],
+    "1 Thessalonians 1:8": ["Faith Known Everywhere", "Their faith in God became known everywhere."],
+    "1 Thessalonians 1:9": ["Turned from Idols to God", "They turned from idols to serve the living and true God."],
+    "1 Thessalonians 1:10": ["Waiting for Jesus’ Return", "They wait for God’s Son from heaven, who rescues from coming wrath."],
 
     // 1 Thessalonians Chapter 2
-    "1 Thessalonians 2:1": "Paul's Ministry in Thessalonica",
-    "1 Thessalonians 2:13": "Reception of the Word",
-    "1 Thessalonians 2:17": "Paul's Longing to Visit",
+    "1 Thessalonians 2:1": ["Paul’s Ministry Was Not in Vain", "Paul reminds them his visit was meaningful and effective."],
+    "1 Thessalonians 2:2": ["Boldness Despite Opposition", "Paul preached the gospel boldly even after suffering."],
+    "1 Thessalonians 2:4": ["Approved by God", "Paul speaks to please God, not people."],
+    "1 Thessalonians 2:7": ["Gentle Like a Nursing Mother", "Paul cared for them with gentleness and love."],
+    "1 Thessalonians 2:9": ["Hard Work and Sacrifice", "Paul worked day and night to avoid being a burden."],
+    "1 Thessalonians 2:11": ["Like a Father Encouraging Children", "Paul encouraged and comforted them to live worthy of God."],
+    "1 Thessalonians 2:13": ["They Received God’s Word", "They accepted the message as God’s word, not human words."],
+    "1 Thessalonians 2:14": ["Suffered for Their Faith", "They suffered persecution like other churches."],
+    "1 Thessalonians 2:17": ["Paul Longs to See Them", "Paul deeply desires to visit them again."],
+    "1 Thessalonians 2:19": ["Their Joy and Crown", "They are Paul’s hope, joy, and crown before Jesus."],
 
     // 1 Thessalonians Chapter 3
-    "1 Thessalonians 3:1": "Encouragement Amid Trial",
+    "1 Thessalonians 3:1": ["Timothy Sent to Strengthen Them", "Paul sends Timothy to strengthen their faith."],
+    "1 Thessalonians 3:3": ["Encouragement During Trials", "Believers are reminded that suffering is expected."],
+    "1 Thessalonians 3:5": ["Concern for Their Faith", "Paul fears temptation may weaken them."],
+    "1 Thessalonians 3:6": ["Timothy’s Good Report", "Timothy brings good news of their faith and love."],
+    "1 Thessalonians 3:7": ["Comfort in Their Faith", "Paul is comforted by their strong faith."],
+    "1 Thessalonians 3:9": ["Thankfulness to God", "Paul gives thanks for the joy they bring."],
+    "1 Thessalonians 3:10": ["Prayer to See Them Again", "Paul prays to visit and strengthen them."],
+    "1 Thessalonians 3:12": ["Prayer for Increasing Love", "Paul prays that their love will grow."],
+    "1 Thessalonians 3:13": ["Blameless at Christ’s Coming", "Paul prays they will be holy when Jesus returns."],
 
     // 1 Thessalonians Chapter 4
-    "1 Thessalonians 4:1": "A Life Pleasing to God",
-    "1 Thessalonians 4:13": "The Coming of the Lord",
+    "1 Thessalonians 4:1": ["Living to Please God", "Paul urges them to live holy lives."],
+    "1 Thessalonians 4:3": ["God’s Will Is Sanctification", "Believers must avoid sexual immorality."],
+    "1 Thessalonians 4:9": ["Love One Another", "They are taught by God to love each other."],
+    "1 Thessalonians 4:11": ["Live Quiet and Responsible Lives", "Work faithfully and live respectfully."],
+    "1 Thessalonians 4:13": ["Hope for Believers Who Have Died", "Do not grieve without hope."],
+    "1 Thessalonians 4:16": ["The Lord Will Return", "Jesus will descend from heaven with power."],
+    "1 Thessalonians 4:17": ["Believers Will Meet the Lord", "Believers will be caught up to be with Jesus forever."],
+    "1 Thessalonians 4:18": ["Encourage One Another", "Comfort each other with this hope."],
 
     // 1 Thessalonians Chapter 5
-    "1 Thessalonians 5:1": "The Day of the Lord",
-    "1 Thessalonians 5:12": "Final Instructions and Blessing",
+    "1 Thessalonians 5:1": ["The Day of the Lord Will Come Suddenly", "It will come unexpectedly like a thief."],
+    "1 Thessalonians 5:4": ["Children of Light", "Believers must stay alert and sober."],
+    "1 Thessalonians 5:8": ["Armor of Faith and Salvation", "Wear faith, love, and hope as protection."],
+    "1 Thessalonians 5:9": ["Saved from Wrath", "God appointed believers for salvation through Jesus."],
+    "1 Thessalonians 5:11": ["Encourage and Build Each Other", "Strengthen and support one another."],
+    "1 Thessalonians 5:12": ["Respect Church Leaders", "Honor those who guide you."],
+    "1 Thessalonians 5:16": ["Final Instructions for Christian Living", "Rejoice always, pray continually, give thanks."],
+    "1 Thessalonians 5:19": ["Do Not Quench the Spirit", "Do not reject the work of the Holy Spirit."],
+    "1 Thessalonians 5:23": ["Prayer for Sanctification", "May God sanctify you completely."],
+    "1 Thessalonians 5:25": ["Final Greetings", "Paul asks for prayer and blesses them."],
+
 
     // 2 Thessalonians Chapter 1
-    "2 Thessalonians 1:1": "Thanksgiving",
-    "2 Thessalonians 1:5": "God's Judgment and Glory",
+    "2 Thessalonians 1:1": ["Greeting to the Church", "Paul, Silas, and Timothy greet the church."],
+    "2 Thessalonians 1:3": ["Thanksgiving for Their Growing Faith", "Paul thanks God for their growing faith and love."],
+    "2 Thessalonians 1:5": ["God’s Righteous Judgment", "Their suffering shows God’s righteous judgment."],
+    "2 Thessalonians 1:6": ["God Will Repay Trouble", "God will bring justice to those who trouble believers."],
+    "2 Thessalonians 1:7": ["Relief When Jesus Is Revealed", "Believers will receive relief when Jesus returns."],
+    "2 Thessalonians 1:8": ["Judgment on Those Who Reject God", "Jesus will punish those who do not obey the gospel."],
+    "2 Thessalonians 1:10": ["Jesus Will Be Glorified", "Jesus will be glorified among His people."],
+    "2 Thessalonians 1:11": ["Prayer for Worthy Living", "Paul prays they will live worthy of God’s calling."],
 
     // 2 Thessalonians Chapter 2
-    "2 Thessalonians 2:1": "Man of Lawlessness",
-    "2 Thessalonians 2:13": "Stand Firm",
+    "2 Thessalonians 2:1": ["The Coming of the Lord Explained", "Paul explains events before Jesus’ return."],
+    "2 Thessalonians 2:3": ["The Man of Lawlessness Revealed", "The rebellion and man of lawlessness must appear first."],
+    "2 Thessalonians 2:6": ["Restraining Power", "Something is restraining him until the proper time."],
+    "2 Thessalonians 2:8": ["Destruction of the Lawless One", "Jesus will destroy him at His coming."],
+    "2 Thessalonians 2:9": ["Satan’s Deception", "The lawless one will use false signs and wonders."],
+    "2 Thessalonians 2:13": ["Chosen for Salvation", "God chose believers for salvation through the Spirit."],
+    "2 Thessalonians 2:15": ["Stand Firm in the Truth", "Hold firmly to the teachings given."],
+    "2 Thessalonians 2:16": ["Prayer for Encouragement", "May Jesus encourage and strengthen you."],
 
     // 2 Thessalonians Chapter 3
-    "2 Thessalonians 3:1": "Request for Prayer",
-    "2 Thessalonians 3:6": "Warning Against Idleness",
-    "2 Thessalonians 3:16": "Final Blessing",
+    "2 Thessalonians 3:1": ["Request for Prayer", "Paul asks for prayer for the spread of the gospel."],
+    "2 Thessalonians 3:3": ["God’s Faithfulness", "God will strengthen and protect believers."],
+    "2 Thessalonians 3:6": ["Warning Against Idleness", "Believers must avoid lazy and undisciplined living."],
+    "2 Thessalonians 3:7": ["Paul’s Example of Hard Work", "Paul worked hard to set an example."],
+    "2 Thessalonians 3:10": ["Rule About Work", "Anyone unwilling to work should not eat."],
+    "2 Thessalonians 3:13": ["Do Not Grow Weary", "Continue doing good."],
+    "2 Thessalonians 3:14": ["Discipline for Disobedience", "Warn those who do not obey."],
+    "2 Thessalonians 3:16": ["Final Blessing", "May the Lord of peace give peace always."],
+    "2 Thessalonians 3:18": ["Closing Greeting", "Paul closes with grace from the Lord Jesus Christ."],
 
     // 1 Timothy Chapter 1
-    "1 Timothy 1:1": "Greeting",
-    "1 Timothy 1:3": "Charge Against False Teachers",
-    "1 Timothy 1:12": "Christ's Mercy to Paul",
+    "1 Timothy 1:1": ["Greeting to Timothy", "Paul greets Timothy as his true son in the faith."],
+    "1 Timothy 1:3": ["Warning Against False Teachers", "Timothy is urged to stop those teaching false doctrines."],
+    "1 Timothy 1:5": ["Purpose of the Command", "The goal is love from a pure heart, good conscience, and sincere faith."],
+    "1 Timothy 1:8": ["Proper Use of the Law", "The law is good when used correctly."],
+    "1 Timothy 1:12": ["Paul’s Gratitude for Mercy", "Paul thanks Christ for showing him mercy despite his past."],
+    "1 Timothy 1:15": ["Christ Came to Save Sinners", "Jesus came into the world to save sinners."],
+    "1 Timothy 1:18": ["Charge to Timothy", "Timothy is encouraged to fight the good fight of faith."],
+
 
     // 1 Timothy Chapter 2
-    "1 Timothy 2:1": "Pray for All People",
-    "1 Timothy 2:8": "Order in Worship",
+    "1 Timothy 2:1": ["Instruction to Pray for Everyone", "Prayers should be made for all people, including leaders."],
+    "1 Timothy 2:3": ["God Desires All to Be Saved", "God wants everyone to come to the knowledge of truth."],
+    "1 Timothy 2:5": ["One Mediator Between God and Man", "Jesus Christ is the only mediator."],
+    "1 Timothy 2:8": ["Instructions for Men", "Men should pray with holy hands without anger."],
+    "1 Timothy 2:9": ["Instructions for Women", "Women should dress modestly and live with good works."],
+    "1 Timothy 2:11": ["Quiet Learning and Submission", "Women are encouraged to learn quietly and faithfully."],
+
 
     // 1 Timothy Chapter 3
-    "1 Timothy 3:1": "Qualifications for Overseers",
-    "1 Timothy 3:8": "Qualifications for Deacons",
+    "1 Timothy 3:1": ["Qualifications for Overseers", "Requirements for those who desire to be church leaders."],
+    "1 Timothy 3:8": ["Qualifications for Deacons", "Requirements for those serving as deacons."],
+    "1 Timothy 3:14": ["Purpose of Paul’s Instructions", "Paul writes so they will know how to behave in God’s house."],
+    "1 Timothy 3:16": ["Mystery of Godliness", "Christ was revealed in flesh and glorified."],
+
 
     // 1 Timothy Chapter 4
-    "1 Timothy 4:1": "Warnings Against False Teaching",
-    "1 Timothy 4:6": "Be a Good Servant of Christ",
+    "1 Timothy 4:1": ["Warning About Apostasy", "Some will abandon the faith and follow false teachings."],
+    "1 Timothy 4:6": ["Be a Good Minister of Christ", "Timothy is encouraged to teach truth faithfully."],
+    "1 Timothy 4:8": ["Value of Godliness", "Godliness has value for this life and the life to come."],
+    "1 Timothy 4:12": ["Be an Example", "Timothy should be an example in speech, conduct, love, faith, and purity."],
+    "1 Timothy 4:13": ["Devotion to Scripture and Teaching", "Focus on reading Scripture and teaching."],
+    "1 Timothy 4:16": ["Watch Your Life and Doctrine", "Persevere in faith and teaching."],
+
 
     // 1 Timothy Chapter 5
-    "1 Timothy 5:1": "Instructions for Widows",
-    "1 Timothy 5:17": "Instructions for Elders",
+    "1 Timothy 5:1": ["Respect Within the Church", "Treat others with respect as family."],
+    "1 Timothy 5:3": ["Care for Widows", "The church should honor and support true widows."],
+    "1 Timothy 5:8": ["Responsibility for Family", "Those who do not care for family deny the faith."],
+    "1 Timothy 5:17": ["Honor Church Leaders", "Leaders who serve well deserve honor."],
+    "1 Timothy 5:19": ["Dealing with Accusations", "Do not accept accusations without witnesses."],
+    "1 Timothy 5:22": ["Be Careful in Leadership Appointments", "Do not appoint leaders hastily."],
+    "1 Timothy 5:23": ["Personal Advice to Timothy", "Paul gives advice for Timothy’s health."],
+    "1 Timothy 5:24": ["Sins and Good Deeds Revealed", "Actions will eventually be revealed."],
+
 
     // 1 Timothy Chapter 6
-    "1 Timothy 6:1": "Warning Against Greed",
-    "1 Timothy 6:11": "Fight the Good Fight",
+    "1 Timothy 6:1": ["Honor Masters", "Servants should respect their masters."],
+    "1 Timothy 6:3": ["Warning Against False Teaching and Pride", "False teachers are proud and cause conflict."],
+    "1 Timothy 6:6": ["Godliness with Contentment", "Contentment with godliness is great gain."],
+    "1 Timothy 6:9": ["Danger of Loving Money", "Love of money leads to destruction."],
+    "1 Timothy 6:11": ["Pursue Righteousness", "Timothy should pursue godly qualities."],
+    "1 Timothy 6:12": ["Fight the Good Fight of Faith", "Hold firmly to eternal life."],
+    "1 Timothy 6:17": ["Instructions to the Rich", "The rich should trust God and do good."],
+    "1 Timothy 6:20": ["Guard What Is Entrusted", "Protect the truth given to you."],
+
 
     // 2 Timothy Chapter 1
-    "2 Timothy 1:1": "Encouragement to Boldness",
-    "2 Timothy 1:8": "Do Not Be Ashamed",
+    "2 Timothy 1:1": ["Greeting to Timothy", "Paul greets Timothy with grace and peace."],
+    "2 Timothy 1:3": ["Thanksgiving and Remembrance", "Paul remembers Timothy in prayer."],
+    "2 Timothy 1:5": ["Reminder of Timothy’s Faith", "Timothy’s sincere faith is recognized."],
+    "2 Timothy 1:6": ["Fan Into Flame God’s Gift", "Timothy is encouraged to use his spiritual gift."],
+    "2 Timothy 1:7": ["Spirit of Power, Love, and Self-Control", "God gives courage, not fear."],
+    "2 Timothy 1:8": ["Do Not Be Ashamed of the Gospel", "Be willing to suffer for the gospel."],
+    "2 Timothy 1:13": ["Hold to Sound Teaching", "Follow correct teaching faithfully."],
+
 
     // 2 Timothy Chapter 2
-    "2 Timothy 2:1": "Be Strong in Grace",
-    "2 Timothy 2:14": "Rightly Handling the Word",
+    "2 Timothy 2:1": ["Be Strong in Grace", "Timothy is encouraged to be strong in Christ."],
+    "2 Timothy 2:2": ["Teach Faithful People", "Entrust teaching to reliable people."],
+    "2 Timothy 2:3": ["Endure Hardship Like a Soldier", "Endure suffering faithfully."],
+    "2 Timothy 2:8": ["Remember Jesus Christ", "Keep focus on Christ’s resurrection."],
+    "2 Timothy 2:14": ["Avoid Useless Arguments", "Do not engage in pointless debates."],
+    "2 Timothy 2:15": ["Approved Worker of God", "Correctly handle the word of truth."],
+    "2 Timothy 2:20": ["Vessels for Honor", "Be useful and pure for God’s service."],
+    "2 Timothy 2:22": ["Flee Youthful Desires", "Pursue righteousness and peace."],
+
 
     // 2 Timothy Chapter 3
-    "2 Timothy 3:1": "Godlessness in the Last Days",
-    "2 Timothy 3:10": "All Scripture Is God-Breathed",
+    "2 Timothy 3:1": ["Difficult Times in the Last Days", "People will become lovers of self and evil."],
+    "2 Timothy 3:10": ["Paul’s Example", "Timothy followed Paul’s teaching and conduct."],
+    "2 Timothy 3:12": ["Persecution for Believers", "All who live godly lives will face persecution."],
+    "2 Timothy 3:14": ["Continue in the Scriptures", "Remain faithful to what you have learned."],
+    "2 Timothy 3:16": ["All Scripture Is God-Breathed", "Scripture is useful for teaching and training."],
+
 
     // 2 Timothy Chapter 4
-    "2 Timothy 4:1": "Preach the Word",
-    "2 Timothy 4:9": "Final Instructions",
+    "2 Timothy 4:1": ["Preach the Word", "Timothy is commanded to preach faithfully."],
+    "2 Timothy 4:3": ["People Will Reject Sound Doctrine", "People will follow their own desires."],
+    "2 Timothy 4:5": ["Endure Hardship and Fulfill Ministry", "Remain faithful in ministry."],
+    "2 Timothy 4:6": ["Paul’s Life Near Completion", "Paul knows his death is near."],
+    "2 Timothy 4:7": ["Paul’s Faithful Finish", "He fought the good fight and kept the faith."],
+    "2 Timothy 4:8": ["Crown of Righteousness", "A reward awaits faithful believers."],
+    "2 Timothy 4:9": ["Personal Requests", "Paul asks Timothy to come soon."],
+    "2 Timothy 4:16": ["God’s Faithfulness to Paul", "God stood with Paul and strengthened him."],
+    "2 Timothy 4:19": ["Final Greetings", "Paul sends greetings to fellow believers."],
+    "2 Timothy 4:22": ["Final Blessing", "Grace be with you."],
 
     // Titus Chapter 1
-    "Titus 1:1": "Greeting",
-    "Titus 1:5": "Qualifications for Elders",
+    "Titus 1:1": ["Greeting to Titus", "Paul greets Titus, his true son in the faith."],
+    "Titus 1:5": ["Purpose of Titus in Crete", "Titus is left in Crete to appoint elders in every town."],
+    "Titus 1:6": ["Qualifications for Elders", "Elders must be blameless, faithful, and disciplined."],
+    "Titus 1:10": ["Rebuke False Teachers", "Many rebellious people must be silenced."],
+    "Titus 1:13": ["Correct Them Sharply", "They must be corrected to remain sound in faith."],
+    "Titus 1:15": ["Pure and Corrupt Minds", "The pure see purity, but the corrupt are defiled."],
+    "Titus 1:16": ["False Professors of Faith", "They claim to know God but deny Him by actions."],
+
 
     // Titus Chapter 2
-    "Titus 2:1": "Teaching Sound Doctrine",
+    "Titus 2:1": ["Teach Sound Doctrine", "Teach what agrees with sound teaching."],
+    "Titus 2:2": ["Instructions for Older Men", "They must be self-controlled and strong in faith."],
+    "Titus 2:3": ["Instructions for Older Women", "They must live holy lives and teach what is good."],
+    "Titus 2:4": ["Instructions for Younger Women", "They should love family and live pure lives."],
+    "Titus 2:6": ["Instructions for Young Men", "Young men should be self-controlled."],
+    "Titus 2:7": ["Be an Example of Good Works", "Show integrity and seriousness in teaching."],
+    "Titus 2:9": ["Instructions for Servants", "Servants must be faithful and trustworthy."],
+    "Titus 2:11": ["Grace Teaches Godly Living", "God’s grace teaches believers to live righteously."],
+    "Titus 2:13": ["Hope of Christ’s Return", "Believers await the glorious return of Jesus."],
+    "Titus 2:14": ["Christ Redeemed and Purified Us", "Jesus gave Himself to make us His people."],
+    "Titus 2:15": ["Teach with Authority", "Encourage and correct with authority."],
+
 
     // Titus Chapter 3
-    "Titus 3:1": "Live Rightly",
-    "Titus 3:12": "Final Instructions",
+    "Titus 3:1": ["Be Ready for Good Works", "Believers should obey authorities and do good."],
+    "Titus 3:3": ["Reminder of Past Sinfulness", "Believers were once sinful and deceived."],
+    "Titus 3:4": ["Salvation Through God’s Mercy", "God saved us through His mercy and grace."],
+    "Titus 3:7": ["Heirs of Eternal Life", "Believers are justified and heirs of eternal life."],
+    "Titus 3:8": ["Devote to Good Works", "Believers should focus on doing good."],
+    "Titus 3:9": ["Avoid Foolish Arguments", "Stay away from useless controversies."],
+    "Titus 3:10": ["Warn Divisive People", "Avoid those who cause division."],
+    "Titus 3:12": ["Final Instructions", "Paul gives travel and ministry instructions."],
+    "Titus 3:15": ["Final Greetings", "Paul closes with greetings and grace."],
+
 
     // Philemon Chapter 1
-    "Philemon 1:1": "Greeting and Thanksgiving",
-    "Philemon 1:8": "Appeal for Onesimus",
-    "Philemon 1:17": "Paul's Promise and Closing",
+    "Philemon 1:1": ["Greeting to Philemon", "Paul greets Philemon and the church in his house."],
+    "Philemon 1:4": ["Thanksgiving for Philemon’s Faith", "Paul thanks God for Philemon’s love and faith."],
+    "Philemon 1:8": ["Paul’s Appeal Based on Love", "Paul appeals gently instead of commanding."],
+    "Philemon 1:10": ["Appeal for Onesimus", "Paul pleads for Onesimus, his spiritual son."],
+    "Philemon 1:12": ["Onesimus Sent Back", "Paul sends Onesimus back to Philemon."],
+    "Philemon 1:15": ["From Slave to Brother", "Onesimus is now more than a slave, a beloved brother."],
+    "Philemon 1:17": ["Receive Him as You Would Paul", "Philemon is asked to welcome Onesimus."],
+    "Philemon 1:18": ["Paul Offers to Repay", "Paul promises to repay any debt."],
+    "Philemon 1:20": ["Confidence in Philemon’s Obedience", "Paul trusts Philemon will do even more."],
+    "Philemon 1:22": ["Hope to Visit Soon", "Paul hopes to visit after release."],
+    "Philemon 1:25": ["Final Blessing", "Grace of the Lord Jesus Christ be with you."],
 
     // Hebrews Chapter 1
-    "Hebrews 1:1": "God Speaks Through His Son",
-    "Hebrews 1:5": "The Son Superior to Angels",
+    "Hebrews 1:1": ["God Speaks Through His Son", "God now speaks through His Son, the final revelation."],
+    "Hebrews 1:3": ["The Supremacy of the Son", "Jesus reflects God’s glory and sustains all things."],
+    "Hebrews 1:4": ["Superior to Angels", "Jesus is greater than the angels."],
+    "Hebrews 1:5": ["The Son Is Unique", "God declares Jesus as His Son."],
+    "Hebrews 1:6": ["Angels Worship the Son", "All angels must worship Him."],
+    "Hebrews 1:8": ["The Son’s Eternal Throne", "Jesus reigns forever with righteousness."],
+    "Hebrews 1:10": ["The Son as Creator", "Jesus created heaven and earth."],
+    "Hebrews 1:13": ["The Son Exalted at God’s Right Hand", "Jesus sits at God’s right hand."],
+
 
     // Hebrews Chapter 2
-    "Hebrews 2:1": "Warning Against Drifting",
-    "Hebrews 2:5": "Jesus Made Like His Brothers",
+    "Hebrews 2:1": ["Warning Against Neglecting Salvation", "Believers must not ignore God’s salvation."],
+    "Hebrews 2:5": ["Jesus Made Lower Than Angels", "Jesus became human temporarily."],
+    "Hebrews 2:9": ["Jesus Suffered for Everyone", "Jesus suffered death for all people."],
+    "Hebrews 2:10": ["Jesus the Pioneer of Salvation", "Jesus brings many to glory."],
+    "Hebrews 2:14": ["Jesus Defeats Death and the Devil", "Jesus destroyed the devil’s power."],
+    "Hebrews 2:17": ["Jesus the Merciful High Priest", "Jesus became human to help humanity."],
+
 
     // Hebrews Chapter 3
-    "Hebrews 3:1": "Jesus Superior to Moses",
-    "Hebrews 3:7": "Warning Against Unbelief",
+    "Hebrews 3:1": ["Jesus Greater Than Moses", "Jesus is worthy of greater honor than Moses."],
+    "Hebrews 3:6": ["Christ Over God’s House", "Believers are God’s house."],
+    "Hebrews 3:7": ["Warning from Israel’s Unbelief", "Do not harden your hearts."],
+    "Hebrews 3:12": ["Warning Against Unbelief", "Encourage each other to remain faithful."],
+    "Hebrews 3:16": ["Israel’s Failure in the Wilderness", "Unbelief kept them from entering rest."],
+
 
     // Hebrews Chapter 4
-    "Hebrews 4:1": "Rest for God's People",
-    "Hebrews 4:14": "Jesus the Great High Priest",
+    "Hebrews 4:1": ["Promise of God’s Rest", "God’s rest is still available."],
+    "Hebrews 4:3": ["Entering God’s Rest Through Faith", "Faith allows believers to enter rest."],
+    "Hebrews 4:12": ["Power of God’s Word", "God’s word is living and powerful."],
+    "Hebrews 4:14": ["Jesus the Great High Priest", "Jesus intercedes for believers."],
+    "Hebrews 4:16": ["Approach God with Confidence", "Believers can come boldly to God."],
+
 
     // Hebrews Chapter 5
-    "Hebrews 5:1": "High Priest Like Melchizedek",
-    "Hebrews 5:11": "Spiritual Immaturity",
+    "Hebrews 5:1": ["Role of High Priests", "High priests represent people before God."],
+    "Hebrews 5:5": ["Christ Appointed by God", "Jesus was chosen as High Priest."],
+    "Hebrews 5:7": ["Jesus Learned Obedience", "Jesus obeyed through suffering."],
+    "Hebrews 5:9": ["Source of Eternal Salvation", "Jesus became the source of salvation."],
+    "Hebrews 5:11": ["Warning Against Spiritual Immaturity", "Believers must grow in faith."],
+
 
     // Hebrews Chapter 6
-    "Hebrews 6:1": "Warning and Encouragement",
-    "Hebrews 6:13": "God's Unchanging Promise",
+    "Hebrews 6:1": ["Call to Spiritual Maturity", "Believers must grow beyond basics."],
+    "Hebrews 6:4": ["Warning Against Falling Away", "Falling away brings serious danger."],
+    "Hebrews 6:10": ["God Remembers Faithfulness", "God rewards faithful service."],
+    "Hebrews 6:13": ["God’s Promise to Abraham", "God’s promise is unchangeable."],
+    "Hebrews 6:19": ["Hope as an Anchor", "Hope in Christ is secure."],
+
 
     // Hebrews Chapter 7
-    "Hebrews 7:1": "Melchizedek and Christ",
+    "Hebrews 7:1": ["Melchizedek the Priest-King", "Melchizedek represents eternal priesthood."],
+    "Hebrews 7:11": ["Need for a New Priesthood", "Jesus brings a better priesthood."],
+    "Hebrews 7:15": ["Jesus Like Melchizedek", "Jesus is eternal priest."],
+    "Hebrews 7:22": ["Jesus the Guarantee of Better Covenant", "Jesus guarantees a better covenant."],
+    "Hebrews 7:25": ["Jesus Intercedes Forever", "Jesus saves completely."],
+
 
     // Hebrews Chapter 8
-    "Hebrews 8:1": "Christ Mediates a Better Covenant",
+    "Hebrews 8:1": ["Jesus Our High Priest in Heaven", "Jesus serves in the heavenly sanctuary."],
+    "Hebrews 8:6": ["Mediator of Better Covenant", "Jesus mediates a better covenant."],
+    "Hebrews 8:8": ["Promise of New Covenant", "God promises a new covenant."],
+    "Hebrews 8:12": ["Forgiveness in New Covenant", "God forgives and remembers sins no more."],
+
 
     // Hebrews Chapter 9
-    "Hebrews 9:1": "Earthly vs Heavenly Sanctuary",
+    "Hebrews 9:1": ["Earthly Sanctuary Explained", "Description of tabernacle."],
+    "Hebrews 9:11": ["Christ the Perfect High Priest", "Jesus entered heavenly sanctuary."],
+    "Hebrews 9:12": ["Christ’s Perfect Sacrifice", "Jesus’ blood brings eternal redemption."],
+    "Hebrews 9:15": ["Mediator of New Covenant", "Jesus secures eternal inheritance."],
+    "Hebrews 9:27": ["Judgment After Death", "People die once and face judgment."],
+    "Hebrews 9:28": ["Christ Will Return Again", "Jesus will return to save believers."],
+
 
     // Hebrews Chapter 10
-    "Hebrews 10:1": "Christ's Once-for-All Sacrifice",
-    "Hebrews 10:19": "Draw Near, Hold Fast",
+    "Hebrews 10:1": ["Law Cannot Perfect", "Law was only a shadow."],
+    "Hebrews 10:10": ["Christ’s Sacrifice Once for All", "Jesus’ sacrifice sanctifies believers."],
+    "Hebrews 10:14": ["Perfected Forever", "Jesus perfects believers."],
+    "Hebrews 10:19": ["Confidence to Enter God’s Presence", "Believers can approach God freely."],
+    "Hebrews 10:23": ["Hold Firm to Hope", "Remain faithful."],
+    "Hebrews 10:26": ["Warning Against Willful Sin", "Deliberate sin brings judgment."],
+    "Hebrews 10:35": ["Do Not Lose Confidence", "Endurance brings reward."],
+
 
     // Hebrews Chapter 11
-    "Hebrews 11:1": "Faith of the Ancients (Faith Chapter)",
+    "Hebrews 11:1": ["Definition of Faith", "Faith is confidence in unseen things."],
+    "Hebrews 11:4": ["Faith of Abel", "Abel offered better sacrifice."],
+    "Hebrews 11:5": ["Faith of Enoch", "Enoch pleased God."],
+    "Hebrews 11:7": ["Faith of Noah", "Noah obeyed God."],
+    "Hebrews 11:8": ["Faith of Abraham", "Abraham trusted God."],
+    "Hebrews 11:11": ["Faith of Sarah", "Sarah believed God’s promise."],
+    "Hebrews 11:23": ["Faith of Moses", "Moses chose God over Egypt."],
+    "Hebrews 11:32": ["Faith of Other Heroes", "Many others lived by faith."],
+    "Hebrews 11:39": ["Faith Awaiting Fulfillment", "They awaited God’s promise."],
+
 
     // Hebrews Chapter 12
-    "Hebrews 12:1": "Run the Race with Endurance",
-    "Hebrews 12:14": "Warning Against Refusing God",
+    "Hebrews 12:1": ["Run the Race with Endurance", "Fix eyes on Jesus."],
+    "Hebrews 12:3": ["Endure Hardship", "Do not lose heart."],
+    "Hebrews 12:5": ["God Disciplines His Children", "Discipline shows God’s love."],
+    "Hebrews 12:14": ["Pursue Holiness", "Live in peace and holiness."],
+    "Hebrews 12:18": ["Mount Sinai and Mount Zion", "Believers belong to heavenly Zion."],
+    "Hebrews 12:25": ["Do Not Reject God", "God’s voice must be obeyed."],
+    "Hebrews 12:28": ["Serve God with Reverence", "Worship God acceptably."],
+
 
     // Hebrews Chapter 13
-    "Hebrews 13:1": "Sacrifices Pleasing to God",
-    "Hebrews 13:20": "Benediction and Closing",
+    "Hebrews 13:1": ["Continue in Brotherly Love", "Love one another."],
+    "Hebrews 13:4": ["Honor Marriage", "Marriage must be respected."],
+    "Hebrews 13:5": ["Trust God, Not Money", "God will never leave you."],
+    "Hebrews 13:7": ["Remember Leaders", "Follow faithful leaders."],
+    "Hebrews 13:8": ["Jesus Never Changes", "Jesus is the same forever."],
+    "Hebrews 13:15": ["Offer Praise to God", "Continually praise God."],
+    "Hebrews 13:17": ["Obey Leaders", "Submit to spiritual leaders."],
+    "Hebrews 13:20": ["Final Blessing", "May God equip you."],
+    "Hebrews 13:25": ["Final Grace", "Grace be with all believers."],
 
     // James Chapter 1
-    "James 1:1": "Greeting",
-    "James 1:2": "Steadfastness in Trials",
-    "James 1:19": "Be Doers of the Word",
+    "James 1:1": ["Greeting to the Twelve Tribes", "James greets the believers scattered among the nations."],
+    "James 1:2": ["Joy in Trials", "Trials test faith and produce perseverance."],
+    "James 1:5": ["Ask God for Wisdom", "God gives wisdom generously to those who ask in faith."],
+    "James 1:9": ["Humility in Rich and Poor", "Both rich and poor should find their identity in God."],
+    "James 1:12": ["Blessing for Enduring Trials", "Those who persevere will receive the crown of life."],
+    "James 1:13": ["God Does Not Tempt", "Temptation comes from human desires, not God."],
+    "James 1:16": ["Every Good Gift from God", "All good and perfect gifts come from God."],
+    "James 1:19": ["Listening and Obeying", "Be quick to listen, slow to speak, and slow to anger."],
+    "James 1:22": ["Doers of the Word", "Do not only listen, but obey God’s word."],
+    "James 1:26": ["True Religion", "True religion includes controlling the tongue and caring for others."],
+
 
     // James Chapter 2
-    "James 2:1": "Warning Against Partiality",
-    "James 2:14": "Faith Without Works Is Dead",
+    "James 2:1": ["Warning Against Favoritism", "Do not show favoritism based on wealth or status."],
+    "James 2:5": ["God Honors the Poor in Faith", "God chooses the poor to be rich in faith."],
+    "James 2:8": ["The Royal Law", "Love your neighbor as yourself."],
+    "James 2:10": ["Breaking One Law Breaks All", "Failing in one point makes a person guilty of all."],
+    "James 2:14": ["Faith Without Works Is Dead", "Faith must be demonstrated by actions."],
+    "James 2:18": ["Show Faith by Actions", "Faith and works go together."],
+    "James 2:21": ["Example of Abraham", "Abraham’s faith was shown by his actions."],
+    "James 2:25": ["Example of Rahab", "Rahab was justified by her actions."],
+    "James 2:26": ["Faith Without Works Is Dead", "Faith without works is lifeless."],
+
 
     // James Chapter 3
-    "James 3:1": "Taming the Tongue",
-    "James 3:13": "Two Types of Wisdom",
+    "James 3:1": ["Warning to Teachers", "Teachers will be judged more strictly."],
+    "James 3:3": ["Power of the Tongue", "The tongue is small but powerful."],
+    "James 3:5": ["Danger of the Tongue", "The tongue can cause great destruction."],
+    "James 3:9": ["Blessing and Cursing", "The tongue should not bless and curse."],
+    "James 3:13": ["Wisdom Shown by Good Conduct", "True wisdom is shown through humility."],
+    "James 3:17": ["Wisdom from Above", "God’s wisdom is pure, peaceful, and merciful."],
+
 
     // James Chapter 4
-    "James 4:1": "Warning Against Worldliness",
-    "James 4:11": "Boasting About Tomorrow",
+    "James 4:1": ["Cause of Conflicts", "Conflicts come from selfish desires."],
+    "James 4:4": ["Friendship with the World", "Friendship with the world opposes God."],
+    "James 4:6": ["God Gives Grace to the Humble", "God resists the proud but gives grace to the humble."],
+    "James 4:7": ["Submit to God", "Resist the devil and draw near to God."],
+    "James 4:11": ["Do Not Judge Others", "Do not speak against fellow believers."],
+    "James 4:13": ["Warning Against Boasting", "Do not boast about future plans."],
+    "James 4:17": ["Sin of Ignoring Good", "Knowing good and not doing it is sin."],
+
 
     // James Chapter 5
-    "James 5:1": "Warning to the Rich",
-    "James 5:7": "Patience in Suffering",
-    "James 5:13": "Prayer and Restoration",
+    "James 5:1": ["Warning to the Rich", "Rich oppressors will face judgment."],
+    "James 5:7": ["Patience Until the Lord’s Return", "Be patient like a farmer waiting for harvest."],
+    "James 5:9": ["Do Not Grumble", "Avoid complaining against one another."],
+    "James 5:10": ["Example of the Prophets", "Follow the example of faithful prophets."],
+    "James 5:12": ["Warning About Oaths", "Speak truthfully without unnecessary oaths."],
+    "James 5:13": ["Power of Prayer", "Pray in trouble and praise in joy."],
+    "James 5:14": ["Prayer for the Sick", "Pray and anoint the sick."],
+    "James 5:16": ["Confession and Prayer", "Confess sins and pray for healing."],
+    "James 5:17": ["Example of Elijah’s Prayer", "Elijah’s prayer had powerful results."],
+    "James 5:19": ["Restore Those Who Wander", "Help bring back those who stray from truth."],
 
     // 1 Peter Chapter 1
-    "1 Peter 1:1": "Living Hope Through Christ",
-    "1 Peter 1:13": "Called to Be Holy",
+    "1 Peter 1:1": ["Greeting to the Chosen Believers", "Peter greets believers chosen by God and scattered."],
+    "1 Peter 1:3": ["New Birth into Living Hope", "God gives new birth through Jesus’ resurrection."],
+    "1 Peter 1:6": ["Joy Despite Trials", "Trials test faith and refine believers."],
+    "1 Peter 1:10": ["Prophets Spoke of This Salvation", "Prophets foretold the grace now revealed."],
+    "1 Peter 1:13": ["Call to Holy Living", "Prepare minds and live holy lives."],
+    "1 Peter 1:17": ["Live in Reverent Fear", "Live carefully knowing God judges fairly."],
+    "1 Peter 1:22": ["Love One Another Deeply", "Love sincerely from a pure heart."],
+    "1 Peter 1:23": ["Born Again Through God’s Word", "Believers are born again through eternal word."],
+
 
     // 1 Peter Chapter 2
-    "1 Peter 2:1": "Chosen People",
-    "1 Peter 2:11": "Submission to Authority",
+    "1 Peter 2:1": ["Desire Spiritual Growth", "Put away evil and grow spiritually."],
+    "1 Peter 2:4": ["The Living Stone", "Jesus is the chosen and precious cornerstone."],
+    "1 Peter 2:9": ["Chosen People and Royal Priesthood", "Believers are chosen to declare God’s praises."],
+    "1 Peter 2:11": ["Live as God’s Servants", "Avoid sinful desires and live honorably."],
+    "1 Peter 2:13": ["Submit to Authorities", "Submit to human authorities for God’s sake."],
+    "1 Peter 2:18": ["Submission in Suffering", "Servants should endure suffering patiently."],
+    "1 Peter 2:21": ["Christ’s Example of Suffering", "Jesus suffered as an example."],
+    "1 Peter 2:24": ["Christ Bore Our Sins", "Jesus died to bring healing and righteousness."],
+
 
     // 1 Peter Chapter 3
-    "1 Peter 3:1": "Instructions for Families",
-    "1 Peter 3:8": "Suffering for Righteousness",
+    "1 Peter 3:1": ["Instructions for Wives", "Wives should live respectfully."],
+    "1 Peter 3:7": ["Instructions for Husbands", "Husbands should treat wives with honor."],
+    "1 Peter 3:8": ["Call to Unity and Love", "Live in harmony and compassion."],
+    "1 Peter 3:13": ["Suffering for Righteousness", "Do not fear suffering for doing good."],
+    "1 Peter 3:15": ["Always Be Ready to Answer", "Be prepared to explain your hope."],
+    "1 Peter 3:18": ["Christ’s Suffering and Victory", "Christ suffered once for sins."],
+    "1 Peter 3:21": ["Meaning of Baptism", "Baptism symbolizes salvation through Christ."],
+
 
     // 1 Peter Chapter 4
-    "1 Peter 4:1": "Living for God",
-    "1 Peter 4:12": "Sharing Christ's Sufferings",
+    "1 Peter 4:1": ["Living for God’s Will", "Believers should live for God, not sinful desires."],
+    "1 Peter 4:7": ["Be Alert and Prayerful", "Stay alert and love deeply."],
+    "1 Peter 4:9": ["Serve One Another", "Use gifts to serve faithfully."],
+    "1 Peter 4:12": ["Rejoice in Suffering", "Do not be surprised by trials."],
+    "1 Peter 4:16": ["Suffering as a Christian", "Honor God even in suffering."],
+    "1 Peter 4:17": ["Judgment Begins with God’s House", "God judges His people first."],
+    "1 Peter 4:19": ["Trust God in Suffering", "Commit yourself to faithful Creator."],
+
 
     // 1 Peter Chapter 5
-    "1 Peter 5:1": "Shepherd the Flock",
-    "1 Peter 5:12": "Final Greetings",
+    "1 Peter 5:1": ["Instructions to Elders", "Shepherd God’s people faithfully."],
+    "1 Peter 5:5": ["Humility and Submission", "Clothe yourselves with humility."],
+    "1 Peter 5:6": ["Humble Yourself Before God", "God will lift you up."],
+    "1 Peter 5:7": ["Cast Your Cares on God", "God cares for you."],
+    "1 Peter 5:8": ["Be Alert Against the Devil", "The devil seeks to devour believers."],
+    "1 Peter 5:10": ["God Will Restore You", "God will strengthen after suffering."],
+    "1 Peter 5:12": ["Final Encouragement", "Stand firm in God’s grace."],
+    "1 Peter 5:13": ["Final Greetings", "Greetings from fellow believers."],
+    "1 Peter 5:14": ["Peace to All Believers", "Peace to all in Christ."],
+
 
     // 2 Peter Chapter 1
-    "2 Peter 1:1": "Confirm Your Calling",
-    "2 Peter 1:12": "The Prophetic Word Confirmed",
+    "2 Peter 1:1": ["Greeting to Believers", "Peter greets those who share precious faith."],
+    "2 Peter 1:3": ["God’s Power Gives Everything Needed", "God provides everything for godly life."],
+    "2 Peter 1:5": ["Grow in Christian Character", "Add virtue, knowledge, self-control, and love."],
+    "2 Peter 1:10": ["Make Your Calling Sure", "Confirm your calling and election."],
+    "2 Peter 1:12": ["Reminder of Truth", "Peter reminds believers of truth."],
+    "2 Peter 1:16": ["Eyewitness of Christ’s Glory", "Peter witnessed Jesus’ majesty."],
+    "2 Peter 1:19": ["Trustworthy Prophetic Word", "Scripture comes from God."],
+
 
     // 2 Peter Chapter 2
-    "2 Peter 2:1": "Warning Against False Teachers",
+    "2 Peter 2:1": ["Warning About False Teachers", "False teachers will secretly introduce heresies."],
+    "2 Peter 2:4": ["God Judges the Wicked", "God judged fallen angels and sinners."],
+    "2 Peter 2:9": ["God Rescues the Righteous", "God rescues godly people from trials."],
+    "2 Peter 2:10": ["Description of False Teachers", "False teachers are arrogant and corrupt."],
+    "2 Peter 2:17": ["Empty Promises", "They promise freedom but bring slavery."],
+    "2 Peter 2:20": ["Danger of Falling Away", "Returning to sin is worse than before."],
+    "2 Peter 2:22": ["Proverbs About Apostasy", "They return to sin like animals."],
+
 
     // 2 Peter Chapter 3
-    "2 Peter 3:1": "The Day of the Lord",
-    "2 Peter 3:14": "Final Exhortations",
+    "2 Peter 3:1": ["Reminder of God’s Word", "Peter reminds believers of prophets and apostles."],
+    "2 Peter 3:3": ["Scoffers in the Last Days", "People will mock Christ’s return."],
+    "2 Peter 3:5": ["God’s Past Judgment by Flood", "God judged the world before."],
+    "2 Peter 3:8": ["God’s Timing Is Different", "One day is like a thousand years."],
+    "2 Peter 3:9": ["God’s Patience", "God delays to allow repentance."],
+    "2 Peter 3:10": ["Day of the Lord Will Come", "The Lord will return suddenly."],
+    "2 Peter 3:11": ["Call to Holy Living", "Live holy and godly lives."],
+    "2 Peter 3:14": ["Be Found Blameless", "Live in peace and purity."],
+    "2 Peter 3:17": ["Guard Against Error", "Be careful not to fall."],
+    "2 Peter 3:18": ["Grow in Grace", "Grow in grace and knowledge of Christ."],
 
     // 1 John Chapter 1
-    "1 John 1:1": "The Word of Life",
-    "1 John 1:5": "Walking in the Light",
+    "1 John 1:1": ["The Word of Life Revealed", "John proclaims Jesus, the eternal life revealed."],
+    "1 John 1:3": ["Fellowship with God and Believers", "Believers have fellowship with God and one another."],
+    "1 John 1:5": ["God Is Light", "God is light and has no darkness."],
+    "1 John 1:6": ["Walk in the Light", "Walking in light brings fellowship and truth."],
+    "1 John 1:8": ["Confession of Sin", "Those who confess sins receive forgiveness."],
+
 
     // 1 John Chapter 2
-    "1 John 2:1": "Christ Our Advocate",
-    "1 John 2:15": "Do Not Love the World",
-    "1 John 2:18": "Warning About Antichrists",
-    "1 John 2:28": "Children of God",
+    "1 John 2:1": ["Christ Our Advocate", "Jesus is our advocate and atoning sacrifice."],
+    "1 John 2:3": ["Obedience Shows We Know God", "Knowing God is shown by obedience."],
+    "1 John 2:7": ["Command to Love", "Love one another as God commanded."],
+    "1 John 2:12": ["Encouragement to Believers", "John encourages believers at different stages."],
+    "1 John 2:15": ["Do Not Love the World", "Do not love worldly things."],
+    "1 John 2:18": ["Warning About Antichrists", "Many antichrists have come."],
+    "1 John 2:24": ["Remain in Christ", "Continue in Christ’s teaching."],
+    "1 John 2:28": ["Be Ready for Christ’s Return", "Remain in Him with confidence."],
+
 
     // 1 John Chapter 3
-    "1 John 3:1": "Children of God vs Children of the Devil",
-    "1 John 3:11": "Love One Another",
+    "1 John 3:1": ["Children of God", "Believers are called children of God."],
+    "1 John 3:4": ["Sin and Lawlessness", "Sin is rebellion against God."],
+    "1 John 3:7": ["Practice Righteousness", "Those who live righteously belong to God."],
+    "1 John 3:11": ["Love One Another", "Love one another as commanded."],
+    "1 John 3:16": ["Love Like Christ", "Jesus showed love by laying down His life."],
+    "1 John 3:19": ["Assurance Before God", "Believers can have confidence before God."],
+    "1 John 3:23": ["God’s Command", "Believe in Jesus and love one another."],
+
 
     // 1 John Chapter 4
-    "1 John 4:1": "Test the Spirits",
-    "1 John 4:7": "God Is Love",
+    "1 John 4:1": ["Test the Spirits", "Test teachings to see if they come from God."],
+    "1 John 4:4": ["God Is Greater", "God in believers is greater than the world."],
+    "1 John 4:7": ["God Is Love", "Love comes from God."],
+    "1 John 4:9": ["God Showed Love Through Christ", "God sent His Son to give life."],
+    "1 John 4:13": ["Assurance Through the Spirit", "God gives His Spirit as proof."],
+    "1 John 4:16": ["Living in God’s Love", "Those who live in love live in God."],
+    "1 John 4:18": ["Perfect Love Casts Out Fear", "God’s love removes fear."],
+
 
     // 1 John Chapter 5
-    "1 John 5:1": "Faith in the Son of God",
-    "1 John 5:13": "Confidence in Prayer",
+    "1 John 5:1": ["Faith in Jesus as the Christ", "Those who believe are born of God."],
+    "1 John 5:6": ["Testimony About Jesus", "The Spirit testifies about Jesus."],
+    "1 John 5:11": ["Gift of Eternal Life", "God gives eternal life through His Son."],
+    "1 John 5:13": ["Assurance of Eternal Life", "Believers can know they have eternal life."],
+    "1 John 5:14": ["Confidence in Prayer", "God hears prayers according to His will."],
+    "1 John 5:18": ["Protection from Sin", "Believers are protected by God."],
+    "1 John 5:20": ["Jesus Is the True God", "Jesus gives understanding and eternal life."],
+    "1 John 5:21": ["Final Warning", "Keep away from idols."],
+
 
     // 2 John Chapter 1
-    "2 John 1:1": "Greeting",
-    "2 John 1:4": "Walk in the Truth",
-    "2 John 1:7": "Warning Against Deceivers",
-    "2 John 1:12": "Final Greetings",
+    "2 John 1:1": ["Greeting to the Chosen Lady", "John greets the chosen lady and her children."],
+    "2 John 1:4": ["Walking in Truth", "John rejoices that believers walk in truth."],
+    "2 John 1:5": ["Command to Love One Another", "Love one another as commanded."],
+    "2 John 1:7": ["Warning Against Deceivers", "Deceivers deny Jesus Christ."],
+    "2 John 1:9": ["Remain in Christ’s Teaching", "Those who remain have God."],
+    "2 John 1:10": ["Do Not Support False Teachers", "Do not welcome false teachers."],
+    "2 John 1:12": ["Hope to Visit", "John hopes to speak face to face."],
+    "2 John 1:13": ["Final Greetings", "Greetings from fellow believers."],
+
 
     // 3 John Chapter 1
-    "3 John 1:1": "Gaius Commended",
-    "3 John 1:9": "Diotrephes and Demetrius",
-    "3 John 1:13": "Final Greetings",
+    "3 John 1:1": ["Greeting to Gaius", "John greets beloved Gaius."],
+    "3 John 1:2": ["Prayer for Health and Prosperity", "John prays for Gaius’ well-being."],
+    "3 John 1:3": ["Joy in Walking in Truth", "John rejoices in Gaius’ faithfulness."],
+    "3 John 1:5": ["Faithfulness in Service", "Gaius shows hospitality to believers."],
+    "3 John 1:9": ["Warning About Diotrephes", "Diotrephes loves power and rejects authority."],
+    "3 John 1:11": ["Encouragement to Do Good", "Follow good, not evil."],
+    "3 John 1:12": ["Example of Demetrius", "Demetrius has a good reputation."],
+    "3 John 1:13": ["Hope to Visit", "John hopes to see them soon."],
+    "3 John 1:15": ["Final Greetings", "Peace and greetings to friends."],
 
     // Jude Chapter 1
-    "Jude 1:1": "Greeting and Warning",
-    "Jude 1:5": "Judgment on False Teachers",
-    "Jude 1:17": "Persevere in the Faith",
-    "Jude 1:24": "Doxology",
+    "Jude 1:1": ["Greeting to the Called and Kept", "Jude greets those called, loved by God, and kept for Jesus Christ."],
+    "Jude 1:3": ["Contend for the Faith", "Believers must defend the faith delivered once for all."],
+    "Jude 1:4": ["Warning About False Teachers", "Certain people secretly twist grace and deny Jesus."],
+    "Jude 1:5": ["Example of Israel’s Unbelief", "God judged those who did not believe."],
+    "Jude 1:6": ["Judgment of Fallen Angels", "Angels who sinned are kept for judgment."],
+    "Jude 1:7": ["Example of Sodom and Gomorrah", "They suffered judgment for immorality."],
+    "Jude 1:8": ["Corruption of False Teachers", "False teachers reject authority and defile themselves."],
+    "Jude 1:9": ["Michael and the Devil", "Michael did not accuse but trusted God’s authority."],
+    "Jude 1:10": ["Ignorance of False Teachers", "They speak evil of what they do not understand."],
+    "Jude 1:11": ["Examples of Cain, Balaam, and Korah", "False teachers follow paths of rebellion."],
+    "Jude 1:12": ["Dangerous and Deceptive People", "They are selfish and spiritually empty."],
+    "Jude 1:14": ["Prophecy of Enoch", "The Lord will come to judge everyone."],
+    "Jude 1:16": ["Complaining and Boasting", "False teachers follow selfish desires."],
+    "Jude 1:17": ["Remember the Apostles’ Warnings", "Apostles warned about mockers."],
+    "Jude 1:20": ["Build Yourself in Faith", "Pray in the Holy Spirit and remain in God’s love."],
+    "Jude 1:22": ["Show Mercy to Others", "Help those who doubt and save others carefully."],
+    "Jude 1:24": ["God Keeps Believers Secure", "God is able to keep believers from falling."],
+    "Jude 1:25": ["Final Praise to God", "Glory and authority belong to God forever."],
 
     // Revelation Chapter 1
-    "Revelation 1:1": "Prologue — Vision of Christ",
-    "Revelation 1:9": "The Son of Man Appears",
+    "Revelation 1:1": ["The Revelation of Jesus Christ", "God reveals future events through Jesus Christ to His servants."],
+    "Revelation 1:4": ["Greeting and Blessing", "Grace and peace from God, the Spirit, and Jesus Christ."],
+    "Revelation 1:7": ["Christ Is Coming with the Clouds", "Every eye will see Him when He returns."],
+    "Revelation 1:9": ["John’s Vision on Patmos", "John receives the revelation while exiled."],
+    "Revelation 1:10": ["Vision of the Son of Man", "John sees Jesus in glory among lampstands."],
+    "Revelation 1:17": ["Do Not Fear", "Jesus declares He holds death and Hades’ keys."],
+
 
     // Revelation Chapter 2
-    "Revelation 2:1": "Message to Ephesus",
-    "Revelation 2:8": "Message to Smyrna",
-    "Revelation 2:12": "Message to Pergamum",
-    "Revelation 2:18": "Message to Thyatira",
+    "Revelation 2:1": ["Message to Ephesus", "Return to your first love."],
+    "Revelation 2:8": ["Message to Smyrna", "Be faithful even unto death."],
+    "Revelation 2:12": ["Message to Pergamum", "Repent from false teaching."],
+    "Revelation 2:18": ["Message to Thyatira", "Remain faithful and reject corruption."],
+
 
     // Revelation Chapter 3
-    "Revelation 3:1": "Message to Sardis",
-    "Revelation 3:7": "Message to Philadelphia",
-    "Revelation 3:14": "Message to Laodicea",
+    "Revelation 3:1": ["Message to Sardis", "Wake up and strengthen what remains."],
+    "Revelation 3:7": ["Message to Philadelphia", "Jesus opens doors no one can shut."],
+    "Revelation 3:14": ["Message to Laodicea", "Do not be lukewarm but zealous."],
+    "Revelation 3:20": ["Jesus Stands at the Door", "Jesus invites believers to fellowship."],
+
 
     // Revelation Chapter 4
-    "Revelation 4:1": "Vision of God's Throne",
+    "Revelation 4:1": ["Vision of Heaven’s Throne", "John sees God’s throne in heaven."],
+    "Revelation 4:4": ["Twenty-Four Elders", "Elders worship around God’s throne."],
+    "Revelation 4:6": ["Four Living Creatures", "Creatures continually worship God."],
+    "Revelation 4:8": ["Holy, Holy, Holy", "God is praised as eternal and holy."],
+
 
     // Revelation Chapter 5
-    "Revelation 5:1": "The Lamb and the Scroll",
+    "Revelation 5:1": ["The Scroll with Seven Seals", "No one is worthy to open it."],
+    "Revelation 5:5": ["The Lion and the Lamb", "Jesus alone is worthy."],
+    "Revelation 5:6": ["The Lamb Takes the Scroll", "Jesus receives authority."],
+    "Revelation 5:9": ["Worship of the Lamb", "Jesus redeemed people by His blood."],
+
 
     // Revelation Chapter 6
-    "Revelation 6:1": "The Six Seals",
+    "Revelation 6:1": ["First Seal – White Horse", "Conquest begins."],
+    "Revelation 6:3": ["Second Seal – Red Horse", "War spreads."],
+    "Revelation 6:5": ["Third Seal – Black Horse", "Famine occurs."],
+    "Revelation 6:7": ["Fourth Seal – Pale Horse", "Death spreads."],
+    "Revelation 6:9": ["Fifth Seal – Martyrs Cry Out", "Martyrs seek justice."],
+    "Revelation 6:12": ["Sixth Seal – Cosmic Disturbances", "Earthquake and heavenly signs."],
+
 
     // Revelation Chapter 7
-    "Revelation 7:1": "144,000 Sealed",
-    "Revelation 7:9": "Great Multitude in White Robes",
+    "Revelation 7:1": ["Sealing of 144,000", "God seals His servants."],
+    "Revelation 7:9": ["Great Multitude in Heaven", "People worship God and the Lamb."],
+    "Revelation 7:14": ["Victory Through the Lamb", "They are washed in His blood."],
+
 
     // Revelation Chapter 8
-    "Revelation 8:1": "Seventh Seal and Silence",
-    "Revelation 8:6": "Four Trumpets",
+    "Revelation 8:1": ["Seventh Seal Opened", "Silence in heaven."],
+    "Revelation 8:6": ["First Four Trumpets", "Judgments affect earth and sky."],
+
 
     // Revelation Chapter 9
-    "Revelation 9:1": "Fifth Trumpet — Locusts",
-    "Revelation 9:13": "Sixth Trumpet — Angels Released",
+    "Revelation 9:1": ["Fifth Trumpet – Locusts", "Torment from the abyss."],
+    "Revelation 9:13": ["Sixth Trumpet – Army Released", "Mass destruction occurs."],
+    "Revelation 9:20": ["Unrepentant Humanity", "People still refuse to repent."],
+
 
     // Revelation Chapter 10
-    "Revelation 10:1": "The Mighty Angel and the Little Scroll",
+    "Revelation 10:1": ["The Mighty Angel and Little Scroll", "John receives a small scroll."],
+    "Revelation 10:9": ["John Eats the Scroll", "Sweet in mouth, bitter in stomach."],
+    "Revelation 10:11": ["Command to Prophesy Again", "John must continue prophesying."],
+
 
     // Revelation Chapter 11
-    "Revelation 11:1": "Two Witnesses",
-    "Revelation 11:15": "Seventh Trumpet",
+    "Revelation 11:1": ["Measuring the Temple", "God protects His temple."],
+    "Revelation 11:3": ["Two Witnesses", "They prophesy with power."],
+    "Revelation 11:7": ["Death and Resurrection of Witnesses", "They are killed and raised."],
+    "Revelation 11:15": ["Seventh Trumpet", "Christ’s kingdom is proclaimed."],
+
 
     // Revelation Chapter 12
-    "Revelation 12:1": "Woman, Child, and Dragon",
+    "Revelation 12:1": ["Woman and the Dragon", "Conflict between God’s people and Satan."],
+    "Revelation 12:7": ["War in Heaven", "Satan is cast down."],
+    "Revelation 12:11": ["Victory Through the Lamb", "Believers overcome Satan."],
+
 
     // Revelation Chapter 13
-    "Revelation 13:1": "Beast from the Sea",
-    "Revelation 13:11": "Beast from the Earth",
+    "Revelation 13:1": ["The Beast from the Sea", "World ruler opposes God."],
+    "Revelation 13:11": ["The Beast from the Earth", "False prophet deceives people."],
+    "Revelation 13:16": ["Mark of the Beast", "People receive the mark."],
+
 
     // Revelation Chapter 14
-    "Revelation 14:1": "The Lamb and 144,000",
-    "Revelation 14:6": "Three Angels' Messages",
-    "Revelation 14:14": "Harvest of the Earth",
+    "Revelation 14:1": ["The Lamb and 144,000", "Faithful stand with Jesus."],
+    "Revelation 14:6": ["Three Angels’ Messages", "Judgment warnings given."],
+    "Revelation 14:14": ["Harvest of the Earth", "Earth is harvested for judgment."],
+
 
     // Revelation Chapter 15
-    "Revelation 15:1": "Seven Angels with Seven Plagues",
+    "Revelation 15:1": ["Seven Angels with Plagues", "Final judgments prepared."],
+    "Revelation 15:3": ["Song of Moses and the Lamb", "God is praised for justice."],
+
 
     // Revelation Chapter 16
-    "Revelation 16:1": "Seven Bowls of Wrath",
+    "Revelation 16:1": ["Seven Bowls of Wrath", "God’s wrath poured on earth."],
+    "Revelation 16:12": ["Preparation for Armageddon", "Kings gather for battle."],
+    "Revelation 16:17": ["Final Bowl – Earthquake", "Massive destruction occurs."],
+
 
     // Revelation Chapter 17
-    "Revelation 17:1": "The Woman on the Scarlet Beast",
+    "Revelation 17:1": ["The Great Prostitute", "Symbol of corrupt world system."],
+    "Revelation 17:5": ["Babylon the Great", "Source of corruption."],
+    "Revelation 17:14": ["Victory of the Lamb", "Jesus defeats His enemies."],
+
 
     // Revelation Chapter 18
-    "Revelation 18:1": "Fall of Babylon",
+    "Revelation 18:1": ["Fall of Babylon Announced", "Babylon is destroyed."],
+    "Revelation 18:4": ["Call to Leave Babylon", "Believers must separate from sin."],
+    "Revelation 18:9": ["Mourning Over Babylon", "World mourns Babylon’s fall."],
+
 
     // Revelation Chapter 19
-    "Revelation 19:1": "Marriage of the Lamb",
-    "Revelation 19:11": "Christ the Warrior King",
+    "Revelation 19:1": ["Rejoicing in Heaven", "Heaven celebrates God’s judgment."],
+    "Revelation 19:7": ["Marriage of the Lamb", "Christ and His bride united."],
+    "Revelation 19:11": ["Christ the Victorious Rider", "Jesus returns in power."],
+    "Revelation 19:19": ["Defeat of the Beast", "Beast and false prophet destroyed."],
+
 
     // Revelation Chapter 20
-    "Revelation 20:1": "The Thousand Years",
-    "Revelation 20:11": "Final Judgment",
+    "Revelation 20:1": ["Satan Bound", "Satan is imprisoned."],
+    "Revelation 20:4": ["Millennial Reign", "Christ reigns with believers."],
+    "Revelation 20:7": ["Final Defeat of Satan", "Satan destroyed forever."],
+    "Revelation 20:11": ["Final Judgment", "Dead judged before God."],
+
 
     // Revelation Chapter 21
-    "Revelation 21:1": "New Heaven and New Earth",
-    "Revelation 21:9": "New Jerusalem",
+    "Revelation 21:1": ["New Heaven and New Earth", "God creates new creation."],
+    "Revelation 21:3": ["God Dwells with His People", "God lives among believers."],
+    "Revelation 21:9": ["The New Jerusalem", "Holy city described."],
+    "Revelation 21:22": ["God and the Lamb Are the Temple", "God’s presence fills the city."],
+
 
     // Revelation Chapter 22
-    "Revelation 22:1": "River of Life",
-    "Revelation 22:10": "Final Warnings and Benediction",
+    "Revelation 22:1": ["River of Life", "Life flows from God’s throne."],
+    "Revelation 22:6": ["Jesus Is Coming Soon", "Promise of Christ’s return."],
+    "Revelation 22:12": ["Reward with Christ’s Return", "Jesus brings reward."],
+    "Revelation 22:16": ["Jesus the Bright Morning Star", "Jesus declares His identity."],
+    "Revelation 22:17": ["Invitation to Eternal Life", "All invited to receive life."],
+    "Revelation 22:20": ["Final Promise", "Jesus promises to come soon."],
+    "Revelation 22:21": ["Final Blessing", "Grace of Jesus with believers."],
 
     // Add more headers as needed
 };
