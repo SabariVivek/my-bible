@@ -1221,6 +1221,137 @@ function highlightSpecialText(text, language) {
     }
     return text;
 }
+
+// Verse Images Manager
+/**
+ * Convert book name to verse image filename format
+ * Examples: "Genesis" -> "genesis", "I Samuel" -> "i-samuel", "II Corinthians" -> "ii-corinthians"
+ */
+function getVerseImageFilename(bookName, chapter, verse) {
+    const normalized = bookName
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/ï»¿/g, ''); // Remove BOM if present
+    return `${normalized}-${chapter}-${verse}.png`;
+}
+
+/**
+ * Get the full path to a verse image
+ */
+function getVerseImagePath(bookName, chapter, verse) {
+    const filename = getVerseImageFilename(bookName, chapter, verse);
+    return `resources/verse-images/${filename}`;
+}
+
+/**
+ * Check if a verse image exists and return HTML to render it
+ * Returns a Promise that resolves to HTML string (empty if image doesn't exist)
+ */
+function getVerseImageHTML(bookName, chapter, verse) {
+    return new Promise((resolve) => {
+        const imagePath = getVerseImagePath(bookName, chapter, verse);
+        const img = new Image();
+        
+        img.onload = () => {
+            const html = `<div class="verse-image-container">
+                <img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapter}:${verse}" class="verse-image" />
+            </div>`;
+            resolve(html);
+        };
+        
+        img.onerror = () => {
+            resolve(''); // Return empty string if image doesn't exist
+        };
+        
+        img.src = imagePath;
+    });
+}
+
+/**
+ * Batch check multiple verse images and return a map of results
+ * Used during chapter rendering for performance
+ */
+async function getVerseImagesForChapter(bookName, chapterData, chapterNum) {
+    const verseImageCache = {};
+    const verseKeys = Object.keys(chapterData).filter(key => key.startsWith('verse_'));
+    
+    // Create promises for all verses in parallel
+    const promises = verseKeys.map(verseKey => {
+        const verseNum = verseKey.replace('verse_', '');
+        return getVerseImageHTML(bookName, chapterNum, verseNum)
+            .then(html => {
+                verseImageCache[verseNum] = html;
+            });
+    });
+    
+    await Promise.all(promises);
+    return verseImageCache;
+}
+
+/**
+ * Load and insert verse images into the rendered chapter content
+ * This is called after the initial HTML is rendered to inject images asynchronously
+ */
+function loadVerseImages(bookName, chapterNum, contentArea) {
+    // Get all verse containers that were just rendered
+    const verseContainers = contentArea.querySelectorAll('.verse-container');
+    
+    verseContainers.forEach(container => {
+        const verseNum = container.dataset.verse;
+        const imagePath = getVerseImagePath(bookName, chapterNum, verseNum);
+        const uniqueId = `image-${bookName}-${chapterNum}-${verseNum}`.replace(/\s+/g, '-');
+        
+        // Insert skeleton immediately
+        const verseLine = container.querySelector('.verse-line');
+        if (verseLine) {
+            const skeletonHTML = `<div class="verse-image-container" id="${uniqueId}">
+                <div class="image-skeleton"></div>
+            </div>`;
+            verseLine.insertAdjacentHTML('afterbegin', skeletonHTML);
+        }
+        
+        // Check if image exists before loading (suppress 404 console errors)
+        fetch(imagePath, { method: 'HEAD', mode: 'no-cors' })
+            .then(response => {
+                // Image exists, load it
+                const img = new Image();
+                img.onload = () => {
+                    const container = document.getElementById(uniqueId);
+                    if (container) {
+                        container.innerHTML = `<img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapterNum}:${verseNum}" class="verse-image" />`;
+                        
+                        // Add click handler to open viewer
+                        const verseImg = container.querySelector('.verse-image');
+                        if (verseImg) {
+                            verseImg.style.cursor = 'pointer';
+                            verseImg.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                openViewer(imagePath);
+                            });
+                        }
+                    }
+                };
+                
+                img.onerror = () => {
+                    // Silently remove skeleton if load fails
+                    const container = document.getElementById(uniqueId);
+                    if (container) {
+                        container.remove();
+                    }
+                };
+                
+                img.src = imagePath;
+            })
+            .catch(() => {
+                // Image doesn't exist, remove skeleton silently
+                const container = document.getElementById(uniqueId);
+                if (container) {
+                    container.remove();
+                }
+            });
+    });
+}
+
 // Display chapter content
 function displayChapter() {
     const contentArea = document.querySelector('.scripture-text');
@@ -1375,6 +1506,9 @@ function displayChapter() {
         });
     }
     contentArea.innerHTML = html;
+    
+    // Load and display verse images asynchronously
+    loadVerseImages(bookName, currentChapter, contentArea);
     
     // Setup event listeners for collapsible verse headers
     setupVerseHeaderToggle();

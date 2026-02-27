@@ -1063,6 +1063,289 @@
     <script src="src/data/verse-headers.js?cb=20251126003722"></script>
     <script src="src/data/bible-meta.js?cb=20251210006100"></script>
     <script src="src/script.js?cb=20251210007400"></script>
+
+    <!-- Image Viewer Modal -->
+    <style>
+        #viewer {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .95);
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+        }
+
+        #viewer.open {
+            display: flex;
+        }
+
+        .viewer-topbar {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            padding: 0 14px;
+            color: #fff;
+            font-size: 18px;
+            user-select: none;
+            order: 2;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+        }
+
+        .viewer-btn {
+            cursor: pointer;
+            opacity: .8;
+            transition: opacity 0.2s ease;
+        }
+
+        .viewer-btn:hover {
+            opacity: 1;
+        }
+
+        .viewer-stage {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            touch-action: none;
+            order: 1;
+        }
+
+        .viewer-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transform-origin: center;
+            max-width: 100%;
+            max-height: 100%;
+            user-select: none;
+            cursor: grab;
+        }
+
+        .viewer-img:active {
+            cursor: grabbing;
+        }
+
+        .viewer-zoom-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .viewer-zoom-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .viewer-zoom-btn:active {
+            transform: scale(0.95);
+        }
+
+        .viewer-zoom-info {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            min-width: 50px;
+            text-align: center;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .viewer-zoom-info.show {
+            opacity: 1;
+        }
+
+        .viewer-controls-divider {
+            width: 1px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .viewer-close-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 100, 100, 0.2);
+            border: 1.5px solid rgba(255, 100, 100, 0.4);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .viewer-close-btn:hover {
+            background: rgba(255, 100, 100, 0.35);
+            border-color: rgba(255, 100, 100, 0.6);
+        }
+
+        .viewer-close-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+
+    <div id="viewer">
+        <div class="viewer-stage" id="stage">
+            <img id="viewerImg" class="viewer-img">
+        </div>
+        <div class="viewer-topbar">
+            <span class="viewer-zoom-btn" onclick="zoomOut()">−</span>
+            <div class="viewer-zoom-info" id="zoomInfo">100%</div>
+            <span class="viewer-zoom-btn" onclick="zoomIn()">＋</span>
+            <div class="viewer-controls-divider"></div>
+            <span class="viewer-zoom-btn" onclick="resetZoom()" title="Reset zoom">↺</span>
+            <span class="viewer-close-btn" onclick="closeViewer()">✕</span>
+        </div>
+    </div>
+
+    <script>
+        let scale = 1;
+        let posX = 0, posY = 0;
+        let startX = 0, startY = 0;
+        let isDragging = false;
+        let lastTouchDist = 0;
+        const img = document.getElementById('viewerImg');
+        const stage = document.getElementById('stage');
+        const zoomInfo = document.getElementById('zoomInfo');
+
+        function openViewer(imageSrc) {
+            img.src = imageSrc;
+            document.getElementById('viewer').classList.add('open');
+            resetZoom();
+        }
+
+        function closeViewer() {
+            document.getElementById('viewer').classList.remove('open');
+        }
+
+        function updateTransform() {
+            img.style.transform =
+                `translate(calc(-50% + ${posX}px), calc(-50% + ${posY}px)) scale(${scale})`;
+            
+            // Update zoom info display
+            const zoomPercent = Math.round(scale * 100);
+            zoomInfo.textContent = zoomPercent + '%';
+            
+            if (scale > 1) {
+                zoomInfo.classList.add('show');
+            } else {
+                zoomInfo.classList.remove('show');
+            }
+        }
+
+        function zoomIn() {
+            scale *= 1.2;
+            updateTransform();
+        }
+
+        function zoomOut() {
+            scale /= 1.2;
+            updateTransform();
+        }
+
+        function resetZoom() {
+            scale = 1;
+            posX = 0;
+            posY = 0;
+            updateTransform();
+        }
+
+        // Close when clicking outside the image
+        stage.addEventListener('click', e => {
+            if (e.target === stage) {
+                closeViewer();
+            }
+        });
+
+        stage.addEventListener('mousedown', e => {
+            if (scale <= 1) return;
+            isDragging = true;
+            startX = e.clientX - posX;
+            startY = e.clientY - posY;
+        });
+
+        window.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            e.preventDefault();
+            posX = e.clientX - startX;
+            posY = e.clientY - startY;
+            updateTransform();
+        });
+
+        window.addEventListener('mouseup', () => isDragging = false);
+
+        stage.addEventListener('wheel', e => {
+            e.preventDefault();
+            if (e.deltaY < 0) scale *= 1.1;
+            else scale /= 1.1;
+            updateTransform();
+        }, { passive: false });
+
+        stage.addEventListener('dblclick', e => {
+            if (e.target !== img) return;
+            if (scale === 1) scale = 2.5;
+            else resetZoom();
+            updateTransform();
+        });
+
+        stage.addEventListener('touchstart', e => {
+            if (e.touches.length === 2) {
+                lastTouchDist = getDist(e.touches);
+            } else if (e.touches.length === 1 && scale > 1) {
+                startX = e.touches[0].clientX - posX;
+                startY = e.touches[0].clientY - posY;
+            }
+        }, { passive: false });
+
+        stage.addEventListener('touchmove', e => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                const newDist = getDist(e.touches);
+                scale *= newDist / lastTouchDist;
+                lastTouchDist = newDist;
+                updateTransform();
+            } else if (e.touches.length === 1 && scale > 1) {
+                e.preventDefault();
+                posX = e.touches[0].clientX - startX;
+                posY = e.touches[0].clientY - startY;
+                updateTransform();
+            }
+        }, { passive: false });
+
+        function getDist(touches) {
+            return Math.hypot(
+                touches[0].clientX - touches[1].clientX,
+                touches[0].clientY - touches[1].clientY
+            );
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === '+') zoomIn();
+            if (e.key === '-') zoomOut();
+            if (e.key === '0') resetZoom();
+            if (e.key === 'Escape') closeViewer();
+        });
+    </script>
+
     <script>
         // Mobile search button handler
         document.addEventListener('DOMContentLoaded', () => {
