@@ -1245,8 +1245,11 @@ function getVerseImageFilename(bookName, chapter, verse) {
  * Get the full path to a verse image
  */
 function getVerseImagePath(bookName, chapter, verse) {
-    const filename = getVerseImageFilename(bookName, chapter, verse);
-    return `resources/verse-images/${filename}`;
+    const normalized = bookName
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/ï»¿/g, ''); // Remove BOM if present
+    return `resources/verse-images/${normalized}/${chapter}-${verse}.png`;
 }
 
 /**

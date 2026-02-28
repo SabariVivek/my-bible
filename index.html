@@ -38,7 +38,7 @@
     <script src="src/cache-manager.js?cb=20251126003722"></script>
     <script>
         // Apply dark theme class immediately to body for CSS to work
-        if (localStorage.getItem('theme') === 'dark') {
+        if (document.body && localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-theme');
         }
     </script>
