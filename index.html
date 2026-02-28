@@ -1101,6 +1101,8 @@
             order: 2;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+            pointer-events: auto;
+            z-index: 10001;
         }
 
         .viewer-btn {
@@ -1121,6 +1123,8 @@
             user-select: none;
             -webkit-user-select: none;
             order: 1;
+            cursor: pointer;
+            pointer-events: auto;
         }
 
         .viewer-img {
@@ -1133,6 +1137,7 @@
             max-height: 100%;
             user-select: none;
             cursor: grab;
+            pointer-events: auto;
         }
 
         .viewer-img:active {
@@ -1202,6 +1207,8 @@
             justify-content: center;
             transition: all 0.2s ease;
             user-select: none;
+            pointer-events: auto;
+            z-index: 10001;
         }
 
         .viewer-close-btn:hover {
@@ -1277,18 +1284,53 @@
 
         // Close when clicking outside the image
         stage.addEventListener('click', e => {
-            if (e.target === stage) {
-                closeViewer();
+            // Don't close if clicking on the image itself
+            if (e.target === img) {
+                return;
             }
+            // Close if clicking anywhere else on the stage (dark background)
+            closeViewer();
         });
 
-        // Prevent all popstate events that might close the app
-        window.addEventListener('popstate', e => {
-            if (viewerIsOpen) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
+        // Additional handler for clicks directly on viewer div
+        viewer.addEventListener('click', e => {
+            // Close if clicking on the viewer container itself (dark background)
+            // But not on the close button (handled separately by onclick)
+            if (e.target === viewer && viewerIsOpen) {
+                closeViewer();
             }
         }, true);
+
+        // Handle back button/swipe - only prevent when viewer is open
+        window.addEventListener('popstate', e => {
+            // Just track popstate but don't close app when viewer is open
+            if (viewerIsOpen) {
+                // Don't do anything - prevent default navigation
+                return false;
+            }
+            // Allow normal navigation when viewer is closed
+        }, false);
+
+        // Block back swipe gesture when viewer is open
+        document.addEventListener('touchstart', e => {
+            if (viewerIsOpen && e.touches.length === 1) {
+                const touchX = e.touches[0].clientX;
+                // Block swipes from left edge (back swipe) when viewer is open
+                if (touchX < 50) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', e => {
+            if (viewerIsOpen && e.touches.length === 1) {
+                const touchX = e.touches[0].clientX;
+                // Continue blocking left edge swipes
+                if (touchX < 50) {
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
 
         // Keyboard shortcuts for zoom (hidden UI, accessible via keyboard)
         document.addEventListener('keydown', e => {
@@ -1353,7 +1395,10 @@
         }, { passive: false });
 
         stage.addEventListener('touchmove', e => {
-            e.preventDefault();
+            // Only prevent default if we're doing something with the image (pinch or drag)
+            if (e.touches.length === 2 || (e.touches.length === 1 && isDragging && scale > 1)) {
+                e.preventDefault();
+            }
             
             if (e.touches.length === 2) {
                 // Pinch zoom
@@ -1378,30 +1423,29 @@
         stage.addEventListener('touchend', e => {
             isDragging = false;
             lastTouchDist = 0;
-            e.preventDefault();
+            if (e.touches.length === 0) {
+                e.preventDefault();
+            }
         }, { passive: false });
 
-        // Block ALL touch events at document level when viewer is open
+        // Only intercept specific swipe gestures when viewer is open to prevent app navigation
         document.addEventListener('touchstart', e => {
-            if (viewerIsOpen) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
+            // Only prevent default for potential swipe-back gestures at left edge
+            if (viewerIsOpen && e.touches.length === 1) {
+                const touchX = e.touches[0].clientX;
+                if (touchX < 30) {
+                    e.preventDefault();
+                }
             }
-        }, { passive: false, capture: true });
+        }, { passive: false });
 
+        // Prevent scrolling gestures that aren't on the viewer stage
         document.addEventListener('touchmove', e => {
-            if (viewerIsOpen) {
+            // Only prevent if viewer is open and touch is not within stage
+            if (viewerIsOpen && !stage.contains(e.target)) {
                 e.preventDefault();
-                e.stopImmediatePropagation();
             }
-        }, { passive: false, capture: true });
-
-        document.addEventListener('touchend', e => {
-            if (viewerIsOpen) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-            }
-        }, { passive: false, capture: true });
+        }, { passive: false });
     </script>
 
     <script>
