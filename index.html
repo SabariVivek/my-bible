@@ -1226,22 +1226,26 @@
         let posX = 0, posY = 0;
         let startX = 0, startY = 0;
         let isDragging = false;
+        let lastTouchDist = 0;
+        let touchStartX = 0, touchStartY = 0;
         const img = document.getElementById('viewerImg');
         const stage = document.getElementById('stage');
+        const viewer = document.getElementById('viewer');
+        let viewerWasOpen = false;
 
         function openViewer(imageSrc) {
             img.src = imageSrc;
-            document.getElementById('viewer').classList.add('open');
+            viewer.classList.add('open');
+            viewerWasOpen = true;
             // Reset zoom to 100%
             resetZoom();
             // Disable background scrolling
             document.body.style.overflow = 'hidden';
-            // Push viewer state to history
-            history.pushState({ viewer: true }, '', window.location.href);
         }
 
         function closeViewer() {
-            document.getElementById('viewer').classList.remove('open');
+            viewer.classList.remove('open');
+            viewerWasOpen = false;
             // Re-enable background scrolling
             document.body.style.overflow = '';
         }
@@ -1274,12 +1278,13 @@
             }
         });
 
-        // Handle back button for viewer modal
+        // Monitor popstate but only close viewer if it was open
         window.addEventListener('popstate', e => {
-            if (e.state && e.state.viewer) {
+            if (viewerWasOpen) {
                 closeViewer();
+                e.preventDefault();
             }
-        });
+        }, true);
 
         // Keyboard shortcuts for zoom (hidden UI, accessible via keyboard)
         document.addEventListener('keydown', e => {
@@ -1304,23 +1309,71 @@
             updateTransform();
         });
 
-        // Drag when zoomed
+        // Mouse drag when zoomed
         stage.addEventListener('mousedown', e => {
             if (scale <= 1) return;
             isDragging = true;
             startX = e.clientX - posX;
             startY = e.clientY - posY;
+            e.preventDefault();
         });
 
         window.addEventListener('mousemove', e => {
             if (!isDragging) return;
-            e.preventDefault();
             posX = e.clientX - startX;
             posY = e.clientY - startY;
             updateTransform();
         });
 
         window.addEventListener('mouseup', () => isDragging = false);
+
+        // Touch support: pinch-to-zoom and drag-to-pan
+        stage.addEventListener('touchstart', e => {
+            if (e.touches.length === 2) {
+                // Pinch zoom start
+                lastTouchDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+            } else if (e.touches.length === 1 && scale > 1) {
+                // Single finger drag when zoomed
+                isDragging = true;
+                touchStartX = e.touches[0].clientX - posX;
+                touchStartY = e.touches[0].clientY - posY;
+            }
+            e.preventDefault();
+        }, { passive: false });
+
+        stage.addEventListener('touchmove', e => {
+            if (e.touches.length === 2) {
+                // Pinch zoom
+                e.preventDefault();
+                const newDist = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                if (lastTouchDist > 0) {
+                    scale *= newDist / lastTouchDist;
+                    scale = Math.max(1, Math.min(scale, 5)); // Limit zoom between 1x and 5x
+                    updateTransform();
+                }
+                lastTouchDist = newDist;
+            } else if (e.touches.length === 1 && isDragging && scale > 1) {
+                // Single finger drag when zoomed
+                e.preventDefault();
+                posX = e.touches[0].clientX - touchStartX;
+                posY = e.touches[0].clientY - touchStartY;
+                updateTransform();
+            }
+        }, { passive: false });
+
+        stage.addEventListener('touchend', e => {
+            isDragging = false;
+            lastTouchDist = 0;
+            if (e.touches.length === 0) {
+                e.preventDefault();
+            }
+        }, { passive: false });
     </script>
 
     <script>
