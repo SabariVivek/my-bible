@@ -3151,7 +3151,7 @@ function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
     const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
     const hasVisited = localStorage.getItem('hasVisited');
-    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const currentTheme = localStorage.getItem('theme') || 'light';
     
     // Function to update meta theme colors
     function updateMetaTheme(isDark) {
@@ -3165,21 +3165,13 @@ function initializeTheme() {
         }
     }
     
-    // On first visit, deliberately toggle theme from light to dark for initialization
+    // On first visit, keep light theme as default
     if (!hasVisited) {
-        // Start with light theme
+        // Apply light theme
         document.body.classList.remove('dark-theme');
         localStorage.setItem('theme', 'light');
         updateMetaTheme(false);
-        
-        // After a brief moment, toggle to dark theme (initialization toggle effect)
-        setTimeout(() => {
-            document.body.classList.add('dark-theme');
-            localStorage.setItem('theme', 'dark');
-            updateMetaTheme(true);
-            // Mark that user has visited
-            localStorage.setItem('hasVisited', 'true');
-        }, 500);
+        localStorage.setItem('hasVisited', 'true');
     } else {
         // On subsequent visits, apply saved theme
         if (currentTheme === 'dark') {

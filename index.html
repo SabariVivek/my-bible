@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <!-- Default dark theme colors for status bar -->
-    <meta name="theme-color" content="#1e1f22" id="theme-color-meta">
-    <meta name="color-scheme" content="dark" id="color-scheme-meta">
+    <!-- Default light theme colors for status bar -->
+    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
+    <meta name="color-scheme" content="light" id="color-scheme-meta">
     
     <script>
         // Cache busting - get version from localStorage if available, otherwise use timestamp
@@ -38,7 +38,7 @@
     <script src="src/cache-manager.js?cb=20251126003722"></script>
     <script>
         // Apply dark theme class immediately to body for CSS to work
-        if (localStorage.getItem('theme') !== 'light') {
+        if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-theme');
         }
     </script>
