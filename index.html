@@ -4,14 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- Default dark theme colors for status bar -->
+    <meta name="theme-color" content="#1e1f22" id="theme-color-meta">
+    <meta name="color-scheme" content="dark" id="color-scheme-meta">
+    
     <script>
         // Cache busting - get version from localStorage if available, otherwise use timestamp
         window.CACHE_BUSTER = localStorage.getItem('appVersion') || new Date().getTime();
         
-        // Set theme color BEFORE meta tag is parsed
-        const isDarkTheme = localStorage.getItem('theme') === 'dark';
-        document.write('<meta name="theme-color" content="' + (isDarkTheme ? '#1e1f22' : '#ffffff') + '" id="theme-color-meta">');
-        document.write('<meta name="color-scheme" content="' + (isDarkTheme ? 'dark' : 'light') + '" id="color-scheme-meta">');
+        // Update theme color based on localStorage (overrides default if different)
+        const isDarkTheme = localStorage.getItem('theme') !== 'light';
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
+        
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute('content', isDarkTheme ? '#1e1f22' : '#ffffff');
+        }
+        if (colorSchemeMeta) {
+            colorSchemeMeta.setAttribute('content', isDarkTheme ? 'dark' : 'light');
+        }
+        
         // Only load manifest on http/https, not file://
         if (window.location.protocol !== 'file:') {
             document.write('<link rel="manifest" href="manifest.json?cb=' + window.CACHE_BUSTER + '">');
@@ -26,7 +38,7 @@
     <script src="src/cache-manager.js?cb=20251126003722"></script>
     <script>
         // Apply dark theme class immediately
-        if (localStorage.getItem('theme') === 'dark') {
+        if (localStorage.getItem('theme') !== 'light') {
             document.documentElement.classList.add('dark-theme');
         }
     </script>

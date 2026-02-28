@@ -3153,16 +3153,30 @@ function initializeTheme() {
     const hasVisited = localStorage.getItem('hasVisited');
     const currentTheme = localStorage.getItem('theme') || 'dark';
     
+    // Function to update meta theme colors
+    function updateMetaTheme(isDark) {
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', isDark ? '#1e1f22' : '#ffffff');
+        }
+        if (metaColorScheme) {
+            metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
+        }
+    }
+    
     // On first visit, deliberately toggle theme from light to dark for initialization
     if (!hasVisited) {
         // Start with light theme
         document.body.classList.remove('dark-theme');
         localStorage.setItem('theme', 'light');
+        updateMetaTheme(false);
         
         // After a brief moment, toggle to dark theme (initialization toggle effect)
         setTimeout(() => {
             document.body.classList.add('dark-theme');
             localStorage.setItem('theme', 'dark');
+            updateMetaTheme(true);
             // Mark that user has visited
             localStorage.setItem('hasVisited', 'true');
         }, 500);
@@ -3171,9 +3185,11 @@ function initializeTheme() {
         if (currentTheme === 'dark') {
             document.body.classList.add('dark-theme');
             localStorage.setItem('theme', 'dark');
+            updateMetaTheme(true);
         } else {
             document.body.classList.remove('dark-theme');
             localStorage.setItem('theme', 'light');
+            updateMetaTheme(false);
         }
     }
     async function toggleTheme(event) {
