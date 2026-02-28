@@ -3150,9 +3150,10 @@ function closeBottomSheet() {
 function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
     const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
     }
     async function toggleTheme(event) {
         const clickedButton = event.currentTarget;
