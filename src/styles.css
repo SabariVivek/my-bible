@@ -3011,7 +3011,7 @@ body.dark-theme .read-bible-button:hover {
 
 body.dark-theme .top-bar {
     background-color: #202124;
-    border-top: 1px solid #202124;
+    border-top: none;
     border-bottom: 1px solid #3c4043;
 }
 

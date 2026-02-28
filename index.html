@@ -1249,12 +1249,16 @@
         let isDragging = false;
         let lastTouchDist = 0;
         let touchStartX = 0, touchStartY = 0;
+        let scrollPosition = 0;
         const img = document.getElementById('viewerImg');
         const stage = document.getElementById('stage');
         const viewer = document.getElementById('viewer');
         let viewerIsOpen = false;
 
         function openViewer(imageSrc) {
+            // Save current scroll position
+            scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            
             img.src = imageSrc;
             viewer.classList.add('open');
             viewerIsOpen = true;
@@ -1271,6 +1275,8 @@
             // Re-enable background scrolling
             document.body.style.overflow = '';
             document.documentElement.style.overflow = '';
+            // Restore scroll position
+            window.scrollTo(0, scrollPosition);
         }
 
         function updateTransform() {
