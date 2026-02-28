@@ -1329,6 +1329,11 @@
 
         // Touch support: pinch-to-zoom and drag-to-pan
         stage.addEventListener('touchstart', e => {
+            // Always prevent default when viewer is open to block browser swipe-back
+            if (viewer.classList.contains('open')) {
+                e.preventDefault();
+            }
+            
             if (e.touches.length === 2) {
                 // Pinch zoom start
                 lastTouchDist = Math.hypot(
@@ -1341,13 +1346,16 @@
                 touchStartX = e.touches[0].clientX - posX;
                 touchStartY = e.touches[0].clientY - posY;
             }
-            e.preventDefault();
         }, { passive: false });
 
         stage.addEventListener('touchmove', e => {
+            // Always prevent default when viewer is open to block browser swipe-back
+            if (viewer.classList.contains('open')) {
+                e.preventDefault();
+            }
+            
             if (e.touches.length === 2) {
                 // Pinch zoom
-                e.preventDefault();
                 const newDist = Math.hypot(
                     e.touches[0].clientX - e.touches[1].clientX,
                     e.touches[0].clientY - e.touches[1].clientY
@@ -1360,7 +1368,6 @@
                 lastTouchDist = newDist;
             } else if (e.touches.length === 1 && isDragging && scale > 1) {
                 // Single finger drag when zoomed
-                e.preventDefault();
                 posX = e.touches[0].clientX - touchStartX;
                 posY = e.touches[0].clientY - touchStartY;
                 updateTransform();
@@ -1370,7 +1377,27 @@
         stage.addEventListener('touchend', e => {
             isDragging = false;
             lastTouchDist = 0;
-            if (e.touches.length === 0) {
+            // Prevent default to block browser swipe-back
+            if (viewer.classList.contains('open')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // Block browser swipe-back gesture at document level when viewer is open
+        document.addEventListener('touchstart', e => {
+            if (viewer.classList.contains('open') && e.touches.length === 1) {
+                // Allow default only if swipe is not from the left edge (to prevent swipe-back)
+                const touchX = e.touches[0].clientX;
+                if (touchX < 30) {
+                    // Prevent swipe-back at left edge
+                    e.preventDefault();
+                }
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchmove', e => {
+            if (viewer.classList.contains('open')) {
+                // Prevent all scrolling/navigation when viewer is open
                 e.preventDefault();
             }
         }, { passive: false });
