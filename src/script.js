@@ -3150,10 +3150,31 @@ function closeBottomSheet() {
 function initializeTheme() {
     const themeToggle = document.querySelector('.theme-toggle');
     const drawerThemeToggle = document.querySelector('.drawer-theme-toggle');
+    const hasVisited = localStorage.getItem('hasVisited');
     const currentTheme = localStorage.getItem('theme') || 'dark';
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        localStorage.setItem('theme', 'dark');
+    
+    // On first visit, deliberately toggle theme from light to dark for initialization
+    if (!hasVisited) {
+        // Start with light theme
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+        
+        // After a brief moment, toggle to dark theme (initialization toggle effect)
+        setTimeout(() => {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            // Mark that user has visited
+            localStorage.setItem('hasVisited', 'true');
+        }, 500);
+    } else {
+        // On subsequent visits, apply saved theme
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+        }
     }
     async function toggleTheme(event) {
         const clickedButton = event.currentTarget;
