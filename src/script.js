@@ -740,6 +740,12 @@ function initializeMobileDrawer() {
             return;
         }
         
+        // Don't allow swipe to open drawer if image viewer is open
+        const viewer = document.getElementById('viewer');
+        if (viewer && viewer.classList.contains('open')) {
+            return;
+        }
+        
         // Don't allow swipe to open drawer if any bottom sheet is active
         const verseActionsSheet = document.getElementById('verse-actions-bottom-sheet');
         const notesModal = document.getElementById('notes-modal');
@@ -1290,7 +1296,7 @@ async function getVerseImagesForChapter(bookName, chapterData, chapterNum) {
 
 /**
  * Load and insert verse images into the rendered chapter content
- * This is called after the initial HTML is rendered to inject images asynchronously
+ * Only renders containers for images that actually exist
  */
 function loadVerseImages(bookName, chapterNum, contentArea) {
     // Get all verse containers that were just rendered
@@ -1300,55 +1306,66 @@ function loadVerseImages(bookName, chapterNum, contentArea) {
         const verseNum = container.dataset.verse;
         const imagePath = getVerseImagePath(bookName, chapterNum, verseNum);
         const uniqueId = `image-${bookName}-${chapterNum}-${verseNum}`.replace(/\s+/g, '-');
-        
-        // Insert skeleton immediately
         const verseLine = container.querySelector('.verse-line');
-        if (verseLine) {
+        
+        if (!verseLine) return;
+        
+        // First check if image actually exists - use a silent fetch (no-cors mode to prevent CORS errors)
+        const checkImage = document.createElement('img');
+        let imageExists = false;
+        
+        const onImageCheck = () => {
+            if (!imageExists) return; // Already handled as not existing
+            
+            // Image confirmed to exist, now show the loading skeleton
             const skeletonHTML = `<div class="verse-image-container" id="${uniqueId}">
                 <div class="image-skeleton"></div>
             </div>`;
             verseLine.insertAdjacentHTML('afterbegin', skeletonHTML);
-        }
-        
-        // Check if image exists before loading (suppress 404 console errors)
-        fetch(imagePath, { method: 'HEAD', mode: 'no-cors' })
-            .then(response => {
-                // Image exists, load it
-                const img = new Image();
-                img.onload = () => {
-                    const container = document.getElementById(uniqueId);
-                    if (container) {
-                        container.innerHTML = `<img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapterNum}:${verseNum}" class="verse-image" />`;
-                        
-                        // Add click handler to open viewer
-                        const verseImg = container.querySelector('.verse-image');
-                        if (verseImg) {
-                            verseImg.style.cursor = 'pointer';
-                            verseImg.addEventListener('click', (e) => {
-                                e.stopPropagation();
-                                openViewer(imagePath);
-                            });
-                        }
+            
+            // Load the actual image
+            const img = new Image();
+            img.onload = () => {
+                const container = document.getElementById(uniqueId);
+                if (container) {
+                    container.innerHTML = `<img src="${imagePath}" alt="Verse illustration for ${bookName} ${chapterNum}:${verseNum}" class="verse-image" />`;
+                    
+                    // Add click handler to open viewer
+                    const verseImg = container.querySelector('.verse-image');
+                    if (verseImg) {
+                        verseImg.style.cursor = 'pointer';
+                        verseImg.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            openViewer(imagePath);
+                        });
                     }
-                };
-                
-                img.onerror = () => {
-                    // Silently remove skeleton if load fails
-                    const container = document.getElementById(uniqueId);
-                    if (container) {
-                        container.remove();
-                    }
-                };
-                
-                img.src = imagePath;
-            })
-            .catch(() => {
-                // Image doesn't exist, remove skeleton silently
+                }
+            };
+            
+            img.onerror = () => {
+                // Silently remove skeleton if load fails
                 const container = document.getElementById(uniqueId);
                 if (container) {
                     container.remove();
                 }
-            });
+            };
+            
+            img.src = imagePath;
+        };
+        
+        // Check if image exists by attempting to load it
+        checkImage.onload = () => {
+            imageExists = true;
+            onImageCheck();
+        };
+        
+        checkImage.onerror = () => {
+            imageExists = false;
+            // Do nothing - don't render container if image doesn't exist
+        };
+        
+        // Start the check (using a data URL to avoid cors issues)
+        checkImage.src = imagePath;
     });
 }
 
