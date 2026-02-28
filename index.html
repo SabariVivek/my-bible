@@ -1267,6 +1267,10 @@
             // Disable background scrolling
             document.body.style.overflow = 'hidden';
             document.documentElement.style.overflow = 'hidden';
+            
+            // Push a history state for the image viewer
+            // This way, back button will close the image first
+            history.pushState({ type: 'imageViewer', open: true }, '', window.location.href);
         }
 
         function closeViewer() {
@@ -1277,6 +1281,11 @@
             document.documentElement.style.overflow = '';
             // Restore scroll position
             window.scrollTo(0, scrollPosition);
+            
+            // Pop the history state if viewer was open
+            if (history.state && history.state.type === 'imageViewer') {
+                history.back();
+            }
         }
 
         function updateTransform() {
@@ -1319,14 +1328,19 @@
             }
         }, true);
 
-        // Handle back button/swipe - only prevent when viewer is open
+        // Handle back button/swipe - close image first, then allow app navigation
         window.addEventListener('popstate', e => {
-            // Just track popstate but don't close app when viewer is open
+            // If image viewer is open, close it instead of going back
             if (viewerIsOpen) {
-                // Don't do anything - prevent default navigation
-                return false;
+                // Close image without popping history again
+                viewer.classList.remove('open');
+                viewerIsOpen = false;
+                document.body.style.overflow = '';
+                document.documentElement.style.overflow = '';
+                window.scrollTo(0, scrollPosition);
+                // Push state back so back button can work again after image closes
+                history.pushState({ type: 'imageViewer', open: true }, '', window.location.href);
             }
-            // Allow normal navigation when viewer is closed
         }, false);
 
         // Block back swipe gesture when viewer is open
