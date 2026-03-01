@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
+    <meta name="color-scheme" content="light" id="color-scheme-meta">
     <script>
-        // Set theme color BEFORE rendering
-        document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#292a2d' : '#ffffff') + '" id="theme-color-meta">');
-        document.write('<meta name="color-scheme" content="' + (localStorage.getItem('theme') === 'dark' ? 'dark' : 'light') + '" id="color-scheme-meta">');
-    </script>
-    
-    <script>
-        // Cache busting - get version from localStorage if available, otherwise use timestamp
-        window.CACHE_BUSTER = localStorage.getItem('appVersion') || new Date().getTime();
+        // Detect initial theme BEFORE any rendering
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDarkTheme = savedTheme === 'dark' || (savedTheme === null && prefersDark);
         
-        // Update theme color based on localStorage (overrides default if different)
-        const isDarkTheme = localStorage.getItem('theme') !== 'light';
+        // Update meta tags immediately before page renders
         const themeColorMeta = document.querySelector('meta[name="theme-color"]');
         const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
         
@@ -25,6 +22,11 @@
         if (colorSchemeMeta) {
             colorSchemeMeta.setAttribute('content', isDarkTheme ? 'dark' : 'light');
         }
+    </script>
+    
+    <script>
+        // Cache busting - get version from localStorage if available, otherwise use timestamp
+        window.CACHE_BUSTER = localStorage.getItem('appVersion') || new Date().getTime();
         
         // Only load manifest on http/https, not file://
         if (window.location.protocol !== 'file:') {
@@ -39,15 +41,19 @@
     <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
     <!-- Cache Management -->
     <script src="src/cache-manager.js?cb=20251126003722"></script>
-    <script>
-        // Apply dark theme class immediately to body for CSS to work
-        if (document.body && localStorage.getItem('theme') === 'dark') {
-            document.body.classList.add('dark-theme');
-        }
-    </script>
 </head>
 
 <body>
+    <script>
+        // Apply dark theme class immediately to body for CSS to work
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const shouldBeDark = savedTheme === 'dark' || (savedTheme === null && prefersDark);
+        
+        if (shouldBeDark) {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
     <header class="top-bar" id="main-header">
         <div class="logo-container">
             <button class="icon-btn menu-btn mobile-only" aria-label="Menu">
