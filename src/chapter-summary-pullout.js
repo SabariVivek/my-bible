@@ -83,7 +83,7 @@ function initializeChapterSummaryPullout(bookName, chapter) {
         
         <!-- Summary Panel -->
         <div class="chapter-summary-panel" id="chapterSummaryPanel">
-            <div class="chapter-summary-header">Summary</div>
+            <div class="chapter-summary-header">புத்தக சுருக்கம்</div>
             <div class="chapter-summary-content" id="chapterSummaryContent">
                 ${formatSummaryText(summary)}
             </div>
