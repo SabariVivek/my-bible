@@ -4,23 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
-    <meta name="color-scheme" content="light" id="color-scheme-meta">
+    <!-- Default meta tags - will be overridden by script if needed -->
+    <meta name="theme-color" content="#292a2d">
+    <meta name="color-scheme" content="dark">
     <script>
-        // Detect initial theme BEFORE any rendering
+        // Override meta tags based on saved theme or system preference
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const isDarkTheme = savedTheme === 'dark' || (savedTheme === null && prefersDark);
         
-        // Update meta tags immediately before page renders
-        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-        const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
-        
-        if (themeColorMeta) {
-            themeColorMeta.setAttribute('content', isDarkTheme ? '#292a2d' : '#ffffff');
-        }
-        if (colorSchemeMeta) {
-            colorSchemeMeta.setAttribute('content', isDarkTheme ? 'dark' : 'light');
+        // Update meta tags to match theme
+        if (!isDarkTheme) {
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
+            document.querySelector('meta[name="color-scheme"]').setAttribute('content', 'light');
         }
     </script>
     
@@ -46,11 +42,11 @@
 <body>
     <script>
         // Apply dark theme class immediately to body for CSS to work
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const shouldBeDark = savedTheme === 'dark' || (savedTheme === null && prefersDark);
+        const savedThemes = localStorage.getItem('theme');
+        const prefersDarks = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDarkThemes = savedThemes === 'dark' || (savedThemes === null && prefersDarks);
         
-        if (shouldBeDark) {
+        if (isDarkThemes) {
             document.body.classList.add('dark-theme');
         }
     </script>
