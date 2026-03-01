@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <!-- Default light theme colors for status bar -->
-    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
-    <meta name="color-scheme" content="light" id="color-scheme-meta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+        // Set theme color BEFORE rendering
+        document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#1e1f22' : '#ffffff') + '" id="theme-color-meta">');
+        document.write('<meta name="color-scheme" content="' + (localStorage.getItem('theme') === 'dark' ? 'dark' : 'light') + '" id="color-scheme-meta">');
+    </script>
     
     <script>
         // Cache busting - get version from localStorage if available, otherwise use timestamp
