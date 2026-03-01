@@ -71,10 +71,10 @@
 /* Panel scales from bottom-right corner */
 .chapter-summary-panel {
     position: fixed;
-    bottom: 56px;
+    bottom: 60px;
     right: 0;
     width: 92%;
-    height: 76vh;
+    max-height: 76vh;
     background: var(--panel-bg);
     border-top-left-radius: 22px;
     border-left: 1px solid var(--gold-border);
