@@ -2611,8 +2611,6 @@ body.dark-theme .image-skeleton::after {
         left: 0;
         right: 0;
         z-index: 1001;
-        padding-top: max(0.5rem, env(safe-area-inset-top));
-        border-top: 1px solid #ffffff;
     }
 
     /* Adjust main layout to account for fixed header */
@@ -2634,8 +2632,6 @@ body.dark-theme .image-skeleton::after {
         left: 0;
         right: 0;
         z-index: 1001;
-        padding-top: max(0.5rem, env(safe-area-inset-top));
-        border-top: 1px solid #ffffff;
     }
     
     /* Show mobile menu button and drawer header */
