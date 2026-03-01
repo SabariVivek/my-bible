@@ -1,0 +1,172 @@
+/**
+ * CHAPTER SUMMARY PULLOUT STYLES
+ * Exact match to corner-pullouts.html design
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap');
+
+:root {
+    --bg: #0e0e12;
+    --surface: #16161d;
+    --border: rgba(255,255,255,0.08);
+    --text: #f0f0f5;
+    --muted: rgba(240,240,245,0.45);
+    --gold: #fcca6c;
+    --gold-glow: rgba(252,202,108,0.35);
+    --gold-border: rgba(252,202,108,0.2);
+    --panel-bg: #1e1c0f;
+    --nav-bg: #19180c;
+}
+
+.chapter-summary-pullout-container {
+    position: relative;
+    pointer-events: none;
+}
+
+/* Arc trigger - gold triangle at bottom-right, above nav */
+.chapter-summary-arc-trigger {
+    position: fixed;
+    bottom: 60px;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 11;
+    pointer-events: all;
+}
+
+.chapter-summary-arc-shape {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gold);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 8px;
+    box-shadow: -3px -3px 16px var(--gold-glow);
+    transition: filter 0.2s, box-shadow 0.2s;
+}
+
+.chapter-summary-arc-trigger:hover .chapter-summary-arc-shape {
+    filter: brightness(1.12);
+    box-shadow: -5px -5px 22px var(--gold-glow);
+}
+
+.chapter-summary-arc-icon {
+    width: 12px;
+    height: 12px;
+    color: #1a1400;
+    transition: transform 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+    flex-shrink: 0;
+}
+
+.chapter-summary-arc-trigger.open .chapter-summary-arc-icon {
+    transform: rotate(45deg);
+}
+
+/* Panel scales from bottom-right corner */
+.chapter-summary-panel {
+    position: fixed;
+    bottom: 56px;
+    right: 0;
+    width: 92%;
+    height: 76vh;
+    background: var(--panel-bg);
+    border-top-left-radius: 22px;
+    border-left: 1px solid var(--gold-border);
+    border-top: 1px solid var(--gold-border);
+    transform-origin: bottom right;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.38s cubic-bezier(0.34, 1.4, 0.64, 1), opacity 0.22s ease;
+    z-index: 10;
+    padding: 22px 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+}
+
+.chapter-summary-panel.open {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.chapter-summary-header {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 14px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--gold-border);
+    padding-bottom: 10px;
+}
+
+.chapter-summary-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 12px;
+    margin-right: -4px;
+}
+
+.chapter-summary-content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.chapter-summary-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chapter-summary-content::-webkit-scrollbar-thumb {
+    background: var(--gold-border);
+    border-radius: 3px;
+}
+
+.chapter-summary-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(240, 240, 245, 0.75);
+}
+
+/* Overlay */
+.chapter-summary-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 9;
+}
+
+.chapter-summary-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Light theme adjustment */
+body.light-theme {
+    --bg: #ffffff;
+    --surface: #f5f5f5;
+    --border: rgba(0, 0, 0, 0.08);
+    --text: #1a1a1a;
+    --muted: rgba(0, 0, 0, 0.45);
+    --gold: #b28b46;
+    --gold-glow: rgba(178, 139, 70, 0.35);
+    --gold-border: rgba(178, 139, 70, 0.2);
+    --panel-bg: #faf8f0;
+    --nav-bg: #f0ede0;
+}
+
+/* Prevent scrolling when panel is open */
+body.summary-panel-open {
+    overflow: hidden;
+}

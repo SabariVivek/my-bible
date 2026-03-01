@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Corner Pullout Design</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0e0e12;
+    --surface: #16161d;
+    --border: rgba(255,255,255,0.08);
+    --text: #f0f0f5;
+    --muted: rgba(240,240,245,0.45);
+    --gold: #fcca6c;
+    --gold-glow: rgba(252,202,108,0.35);
+    --gold-border: rgba(252,202,108,0.2);
+    --panel-bg: #1e1c0f;
+    --nav-bg: #19180c;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gold), #f09030);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    margin-top: -8px;
+  }
+
+  .demo-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  /* Phone frame */
+  .phone {
+    width: 280px;
+    aspect-ratio: 9/19;
+    background: var(--surface);
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(252,202,108,0.06);
+  }
+
+  .screen-bg {
+    width: 100%;
+    height: 100%;
+    background: var(--surface);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .screen-noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  /* Notch */
+  .notch {
+    position: absolute;
+    top: 14px; left: 50%;
+    transform: translateX(-50%);
+    width: 80px; height: 22px;
+    background: var(--bg);
+    border-radius: 14px;
+    z-index: 20;
+  }
+
+  /* Fake screen content */
+  .fake-content {
+    padding: 56px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  .fake-line {
+    height: 9px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.06);
+  }
+  .fake-line.short { width: 50%; }
+  .fake-line.med   { width: 75%; }
+  .fake-line.full  { width: 100%; }
+  .fake-block {
+    height: 36px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    margin-top: 6px;
+  }
+  .fake-block2 {
+    height: 24px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+    margin-top: 4px;
+  }
+
+  /* Bottom nav bar */
+  .bottom-nav {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 56px;
+    background: var(--nav-bg);
+    border-top: 1px solid var(--gold-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 14px;
+    z-index: 6;
+  }
+  .nav-icon {
+    width: 24px; height: 24px;
+    border-radius: 7px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  /* Small triangle arc trigger — bottom-right, above nav */
+  .arc-trigger {
+    position: absolute;
+    bottom: 56px; right: 0;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .arc-shape {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gold);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 8px;
+    box-shadow: -3px -3px 16px var(--gold-glow);
+    transition: filter 0.2s, box-shadow 0.2s;
+  }
+  .arc-trigger:hover .arc-shape {
+    filter: brightness(1.12);
+    box-shadow: -5px -5px 22px var(--gold-glow);
+  }
+  .arc-icon {
+    width: 12px; height: 12px;
+    color: #1a1400;
+    transition: transform 0.35s cubic-bezier(0.34,1.2,0.64,1);
+    flex-shrink: 0;
+  }
+  .arc-trigger.open .arc-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Panel scales from bottom-right corner */
+  .panel {
+    position: absolute;
+    bottom: 56px; right: 0;
+    width: 92%;
+    height: 76%;
+    background: var(--panel-bg);
+    border-top-left-radius: 22px;
+    border-left: 1px solid var(--gold-border);
+    border-top: 1px solid var(--gold-border);
+    transform-origin: bottom right;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.38s cubic-bezier(0.34,1.4,0.64,1), opacity 0.22s ease;
+    z-index: 10;
+    padding: 22px 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel.open {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .panel-header {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 14px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--gold-border);
+    padding-bottom: 10px;
+  }
+  .panel-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 12px;
+    margin-right: -4px;
+  }
+  .panel-content::-webkit-scrollbar { width: 3px; }
+  .panel-content::-webkit-scrollbar-track { background: transparent; }
+  .panel-content::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 3px; }
+  .panel-content p {
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: rgba(240,240,245,0.75);
+  }
+
+  /* Overlay */
+  .overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 9;
+  }
+  .overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+  }
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .legend-text { font-size: 0.72rem; color: var(--muted); }
+
+  .instruction-tag {
+    display: inline-block;
+    background: rgba(252,202,108,0.08);
+    border: 1px solid rgba(252,202,108,0.2);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.68rem;
+    color: var(--gold);
+    letter-spacing: 0.03em;
+  }
+
+  .card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Corner Pullout Design</h1>
+<p class="subtitle">Bottom-right arc · scales panel above nav bar</p>
+
+<div class="card-wrap">
+  <div class="demo-label">Design 02 — Bottom-Right Arc</div>
+
+  <div class="phone">
+    <div class="screen-bg">
+      <div class="screen-noise"></div>
+      <div class="notch"></div>
+
+      <div class="fake-content">
+        <div class="fake-line full"></div>
+        <div class="fake-line med"></div>
+        <div class="fake-line short"></div>
+        <div class="fake-block"></div>
+        <div class="fake-line full"></div>
+        <div class="fake-line med"></div>
+        <div class="fake-block2"></div>
+        <div class="fake-line short"></div>
+      </div>
+
+      <div class="overlay" id="overlay"></div>
+
+      <!-- Panel scales from bottom-right -->
+      <div class="panel" id="panel">
+        <div class="panel-header">Summary</div>
+        <div class="panel-content">
+          <p>God told Jonah to go to the city of Nineveh and warn the people about their evil ways. But Jonah did not want to obey God. He ran away and got on a ship going in the opposite direction.</p>
+          <p>While they were sailing, God sent a strong storm. The storm was so bad that the sailors were afraid the ship would break. They prayed to their gods and threw their goods into the sea to make the ship lighter. Jonah was sleeping during all this.</p>
+          <p>When the sailors found out that Jonah was running away from God, Jonah told them the storm was happening because of him. He told them to throw him into the sea so the storm would stop. At first, they did not want to do it, but finally they threw him overboard. Immediately, the sea became calm.</p>
+          <p>The sailors then feared the Lord and offered a sacrifice to Him. God sent a big fish to swallow Jonah, and he stayed inside the fish for three days and three nights.</p>
+        </div>
+      </div>
+
+      <!-- Small triangle trigger -->
+      <div class="arc-trigger" id="trigger" onclick="togglePanel()">
+        <div class="arc-shape">
+          <svg class="arc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round">
+            <line x1="12" y1="5" x2="12" y2="19"/>
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Bottom nav bar -->
+      <div class="bottom-nav">
+        <div class="nav-icon"></div>
+        <div class="nav-icon"></div>
+        <div class="nav-icon"></div>
+        <div class="nav-icon"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-dot"></div>
+    <div class="legend-text">Scales open from bottom-right corner</div>
+  </div>
+  <span class="instruction-tag">Tap the gold corner ↘</span>
+</div>
+
+<script>
+  function togglePanel() {
+    const panel   = document.getElementById('panel');
+    const trigger = document.getElementById('trigger');
+    const overlay = document.getElementById('overlay');
+    const isOpen  = panel.classList.contains('open');
+
+    if (isOpen) {
+      panel.classList.remove('open');
+      trigger.classList.remove('open');
+      overlay.classList.remove('visible');
+    } else {
+      panel.classList.add('open');
+      trigger.classList.add('open');
+      overlay.classList.add('visible');
+    }
+  }
+
+  document.getElementById('overlay').addEventListener('click', () => {
+    document.getElementById('panel').classList.remove('open');
+    document.getElementById('trigger').classList.remove('open');
+    document.getElementById('overlay').classList.remove('visible');
+  });
+</script>
+</body>
+</html>

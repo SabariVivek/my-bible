@@ -1736,6 +1736,12 @@ function displayChapter() {
     // Initialize pinned verses and update button visibility
     initializePinnedVerses();
     updatePinButtonBar();
+    
+    // Initialize chapter summary pullout (only if summary exists)
+    console.log(`[DISPLAY-CHAPTER] Calling pullout init for ${bibleBooks[currentBook].name} ${currentChapter}`);
+    if (typeof initializeChapterSummaryPullout === 'function') {
+        initializeChapterSummaryPullout(bibleBooks[currentBook].name, String(currentChapter));
+    }
 }
 
 // Initialize cross-reference display with click handler
