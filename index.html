@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <script>
         // Set theme color BEFORE rendering
-        document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#1e1f22' : '#ffffff') + '" id="theme-color-meta">');
+        document.write('<meta name="theme-color" content="' + (localStorage.getItem('theme') === 'dark' ? '#292a2d' : '#ffffff') + '" id="theme-color-meta">');
         document.write('<meta name="color-scheme" content="' + (localStorage.getItem('theme') === 'dark' ? 'dark' : 'light') + '" id="color-scheme-meta">');
     </script>
     
@@ -20,7 +20,7 @@
         const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
         
         if (themeColorMeta) {
-            themeColorMeta.setAttribute('content', isDarkTheme ? '#1e1f22' : '#ffffff');
+            themeColorMeta.setAttribute('content', isDarkTheme ? '#292a2d' : '#ffffff');
         }
         if (colorSchemeMeta) {
             colorSchemeMeta.setAttribute('content', isDarkTheme ? 'dark' : 'light');
