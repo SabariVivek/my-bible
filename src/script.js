@@ -3718,6 +3718,7 @@ function initializeSearch() {
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
         const chapterHeader = document.getElementById('mobile-chapter-header');
+        const chapterSummaryPullout = document.getElementById('chapter-summary-pullout-container');
         // Add active class to search buttons
         if (searchBtn) searchBtn.classList.add('active');
         if (searchBtnMobile) searchBtnMobile.classList.add('active');
@@ -3734,6 +3735,8 @@ function initializeSearch() {
         versesColumn.style.display = 'none';
         if (bottomNav) bottomNav.style.display = 'none';
         if (chapterHeader) chapterHeader.style.display = 'none';
+        // Hide chapter summary arc shape on search page
+        if (chapterSummaryPullout) chapterSummaryPullout.style.display = 'none';
         searchInput.focus();
     }
     function closeSearch() {
@@ -3743,6 +3746,7 @@ function initializeSearch() {
         const versesColumn = document.querySelector('.verses-column');
         const bottomNav = document.querySelector('.bottom-nav');
         const chapterHeader = document.getElementById('mobile-chapter-header');
+        const chapterSummaryPullout = document.getElementById('chapter-summary-pullout-container');
         // Remove active class from search buttons
         if (searchBtn) searchBtn.classList.remove('active');
         if (searchBtnMobile) searchBtnMobile.classList.remove('active');
@@ -3760,6 +3764,8 @@ function initializeSearch() {
         versesColumn.style.display = 'flex';
         if (bottomNav) bottomNav.style.display = 'flex';
         if (chapterHeader) chapterHeader.style.display = 'block';
+        // Show chapter summary arc shape when returning to bible page
+        if (chapterSummaryPullout) chapterSummaryPullout.style.display = '';
         // Don't clear search input, filters, or results - preserve them
         // Track navigation back to bible page
         navigateToBiblePage();
