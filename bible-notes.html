@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bible Notes – Tamil</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  /* ── Light theme ── */
+  :root,
+  [data-theme="light"] {
+    --bg: #fdf8f0;
+    --paper: #fffef9;
+    --ink: #1a1208;
+    --ink-muted: #7a6040;
+    --accent: #8b4513;
+    --accent-light: #c07840;
+    --gold: #c9973c;
+    --note-border: #e8c96a;
+    --highlight-word: rgba(201,151,60,0.28);
+    --highlight-word-hover: rgba(201,151,60,0.48);
+    --highlight-sentence: rgba(139,69,19,0.10);
+    --highlight-sentence-hover: rgba(139,69,19,0.20);
+    --sentence-dash: rgba(139,69,19,0.38);
+    --dot-color: #c9973c;
+    --shadow: 0 2px 20px rgba(139,69,19,0.10);
+    --panel-bg: #fff9ee;
+    --divider: rgba(201,151,60,0.14);
+    --margin-line: rgba(201,151,60,0.22);
+    --overlay-bg: rgba(26,18,8,0.32);
+    --toggle-bg: #ede0c8;
+    --toggle-icon: #8b4513;
+    --page-border: rgba(201,151,60,0.18);
+  }
+
+  /* ── Dark theme ── */
+  [data-theme="dark"] {
+    --bg: #0f0e0b;
+    --paper: #1a1710;
+    --ink: #e8dfc8;
+    --ink-muted: #8a7f68;
+    --accent: #d4a96a;
+    --accent-light: #c09050;
+    --gold: #c9973c;
+    --note-border: #5a4820;
+    --highlight-word: rgba(201,151,60,0.22);
+    --highlight-word-hover: rgba(201,151,60,0.38);
+    --highlight-sentence: rgba(201,151,60,0.10);
+    --highlight-sentence-hover: rgba(201,151,60,0.20);
+    --sentence-dash: rgba(201,151,60,0.45);
+    --dot-color: #c9973c;
+    --shadow: 0 2px 28px rgba(0,0,0,0.55);
+    --panel-bg: #1e1b12;
+    --divider: rgba(201,151,60,0.10);
+    --margin-line: rgba(201,151,60,0.14);
+    --overlay-bg: rgba(0,0,0,0.60);
+    --toggle-bg: #2c2718;
+    --toggle-icon: #c9973c;
+    --page-border: rgba(201,151,60,0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { transition: background 0.35s, color 0.35s; }
+
+  body {
+    background: var(--bg);
+    font-family: 'Lato', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px 80px;
+    transition: background 0.35s, color 0.35s;
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .book-ref {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    transition: color 0.35s;
+  }
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .chapter-nav {
+    font-size: 0.78rem;
+    color: var(--accent-light);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.35s;
+  }
+
+  /* ── Theme toggle ── */
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--toggle-bg);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.35s, transform 0.2s;
+    flex-shrink: 0;
+  }
+  .theme-toggle:hover { transform: scale(1.1); }
+  .theme-toggle svg { transition: transform 0.4s; }
+  .theme-toggle:active svg { transform: rotate(30deg); }
+
+  .icon-sun, .icon-moon { transition: opacity 0.3s, transform 0.3s; }
+  [data-theme="light"] .icon-moon { display: none; }
+  [data-theme="dark"]  .icon-sun  { display: none; }
+
+  /* ── Page card ── */
+  .page {
+    background: var(--paper);
+    width: 100%;
+    max-width: 480px;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--page-border);
+    padding: 32px 28px 28px;
+    position: relative;
+    transition: background 0.35s, box-shadow 0.35s, border-color 0.35s;
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    left: 52px;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: var(--margin-line);
+    transition: background 0.35s;
+  }
+
+  /* ── Verse ── */
+  .verse {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--divider);
+    position: relative;
+    transition: border-color 0.35s;
+  }
+  .verse:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .verse-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold);
+    min-width: 22px;
+    padding-top: 3px;
+    text-align: right;
+    line-height: 1;
+    transition: color 0.35s;
+  }
+
+  .verse-body {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--ink);
+    font-weight: 300;
+    position: relative;
+    transition: color 0.35s, border-color 0.35s;
+  }
+
+  .verse.has-verse-note .verse-body {
+    border-left: 3px solid var(--gold);
+    padding-left: 10px;
+    margin-left: -13px;
+  }
+
+  /* ── Word note ── */
+  .word-note {
+    position: relative;
+    cursor: pointer;
+    background: var(--highlight-word);
+    border-radius: 3px;
+    padding: 1px 3px;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+  .word-note::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--dot-color);
+    transition: background 0.35s;
+  }
+  .word-note:hover { background: var(--highlight-word-hover); }
+
+  /* ── Sentence note ── */
+  .sentence-note {
+    cursor: pointer;
+    background: var(--highlight-sentence);
+    border-radius: 3px;
+    padding: 1px 3px;
+    border-bottom: 2px dashed var(--sentence-dash);
+    transition: background 0.2s, border-color 0.35s;
+    display: inline;
+  }
+  .sentence-note:hover { background: var(--highlight-sentence-hover); }
+
+  /* ── Verse note icon ── */
+  .verse-note-icon {
+    position: absolute;
+    right: -8px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--gold);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(201,151,60,0.4);
+    transition: transform 0.15s, background 0.35s;
+  }
+  .verse-note-icon:hover { transform: scale(1.12); }
+
+  /* ── Note panel ── */
+  .note-panel {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--panel-bg);
+    border-top: 2px solid var(--note-border);
+    border-radius: 20px 20px 0 0;
+    padding: 20px 24px 44px;
+    box-shadow: 0 -6px 32px rgba(0,0,0,0.22);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(.4,0,.2,1), background 0.35s, border-color 0.35s;
+    z-index: 100;
+  }
+  .note-panel.open { transform: translateY(0); }
+
+  .note-panel-handle {
+    width: 36px; height: 4px;
+    background: var(--note-border);
+    border-radius: 2px;
+    margin: 0 auto 18px;
+    transition: background 0.35s;
+  }
+
+  .note-panel-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 8px;
+    transition: color 0.35s;
+  }
+  .note-panel-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 2px solid var(--gold);
+    line-height: 1.55;
+    transition: color 0.35s, border-color 0.35s;
+  }
+  .note-panel-text {
+    font-size: 0.95rem;
+    line-height: 1.72;
+    color: var(--ink);
+    font-weight: 300;
+    transition: color 0.35s;
+  }
+  .note-close {
+    position: absolute;
+    top: 18px; right: 20px;
+    background: none; border: none;
+    font-size: 1.1rem;
+    color: var(--accent-light);
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.35s;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    transition: color 0.35s;
+  }
+  .legend-word {
+    width: 14px; height: 14px;
+    background: var(--highlight-word);
+    border-radius: 3px;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.35s;
+  }
+  .legend-word::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 50%;
+    transform: translateX(-50%);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--dot-color);
+  }
+  .legend-sentence {
+    width: 26px; height: 10px;
+    border-bottom: 2px dashed var(--sentence-dash);
+    flex-shrink: 0;
+    transition: border-color 0.35s;
+  }
+  .legend-verse {
+    width: 14px; height: 14px;
+    background: var(--gold);
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ── Overlay ── */
+  .overlay {
+    position: fixed; inset: 0;
+    background: var(--overlay-bg);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.32s;
+    z-index: 99;
+  }
+  .overlay.show { opacity: 1; pointer-events: all; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="book-ref">யோவான் 3</div>
+  <div class="topbar-right">
+    <div class="chapter-nav">&#9664; அதிகாரம் 3 &#9654;</div>
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+      <!-- Sun icon -->
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b4513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <!-- Moon icon -->
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9973c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="verse has-verse-note" id="v16">
+    <div class="verse-num">16</div>
+    <div class="verse-body">
+      <span class="word-note" data-note-id="n1">தேவன்</span>
+      இவ்வுலகத்தை அவர் தம்முடைய
+      <span class="sentence-note" data-note-id="n2">ஒரே பேறான குமாரனை அனுப்பினார்</span>,
+      அவரை
+      <span class="word-note" data-note-id="n3">விசுவாசிக்கிறவன்</span>
+      எவனும் கெட்டுப்போகாமல் நித்தியஜீவனை அடையும்படிக்கு நேசித்தார்.
+      <div class="verse-note-icon" data-note-id="n4">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M2 1h6v6L5 9 2 7V1z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="verse" id="v17">
+    <div class="verse-num">17</div>
+    <div class="verse-body">
+      ஏனென்றால் தேவன்
+      <span class="sentence-note" data-note-id="n5">உலகத்தை ஆக்கினைக்குள்ளாக்க குமாரனை அனுப்பவில்லை</span>,
+      அவராலே உலகம் இரட்சிக்கப்படும்படிக்கே அனுப்பினார்.
+    </div>
+  </div>
+
+  <div class="verse" id="v18">
+    <div class="verse-num">18</div>
+    <div class="verse-body">
+      அவரை விசுவாசிக்கிறவன்
+      <span class="word-note" data-note-id="n6">ஆக்கினைத்தீர்ப்பு</span>
+      க்குள்ளாகான்; விசுவாசியாதவனோ ஆக்கினைத்தீர்ப்பு அடைந்தவனாயிருக்கிறான்.
+    </div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-word"></div> சொல் குறிப்பு</div>
+  <div class="legend-item"><div class="legend-sentence"></div> வாக்கிய குறிப்பு</div>
+  <div class="legend-item"><div class="legend-verse"></div> வசன குறிப்பு</div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="note-panel" id="notePanel">
+  <div class="note-panel-handle"></div>
+  <button class="note-close" id="noteClose">&#x2715;</button>
+  <div class="note-panel-label" id="noteLabel"></div>
+  <div class="note-panel-quote" id="noteQuote"></div>
+  <div class="note-panel-text" id="noteText"></div>
+</div>
+
+<script>
+  var notes = {
+    n1: { type: 'word',     quote: 'தேவன்',                                              text: 'தேவன் என்ற சொல் எபிரேயத்தில் Elohim என்று வருகிறது — பன்மை வடிவம், திரியேக தெய்வீகத்தை சுட்டும்.' },
+    n2: { type: 'sentence', quote: 'ஒரே பேறான குமாரனை அனுப்பினார்',                     text: 'இந்த வாக்கியம் இரட்சிப்பின் திட்டத்தை சுருக்கமாக விளக்குகிறது. ஒரே பேறான என்பது தனித்துவமான தெய்வீக மகனை குறிக்கிறது.' },
+    n3: { type: 'word',     quote: 'விசுவாசிக்கிறவன்',                                   text: 'கிரேக்கத்தில் pisteuon — தொடர்ந்து விசுவாசிக்கிறவன் என்ற நிலையான செயலை குறிக்கும் வார்த்தை.' },
+    n4: { type: 'verse',    quote: 'யோவான் 3:16',                                        text: 'இந்த வசனம் சுவிசேஷத்தின் சாரம் என்று அழைக்கப்படுகிறது. மூன்று பெரிய உண்மைகள் — தேவனின் அன்பு, கிரிஸ்துவின் அனுப்புதல், மற்றும் விசுவாசத்தின் அழைப்பு — ஒரே வாக்கியத்தில் வருகின்றன.' },
+    n5: { type: 'sentence', quote: 'உலகத்தை ஆக்கினைக்குள்ளாக்க குமாரனை அனுப்பவில்லை', text: 'இது இயேசுவின் முதல் வருகையின் நோக்கம் — தண்டிக்க அல்ல, மீட்க. நியாயத்தீர்ப்பு இரண்டாம் வருகையில் நிகழும்.' },
+    n6: { type: 'word',     quote: 'ஆக்கினைத்தீர்ப்பு',                                 text: 'கிரேக்கத்தில் krino — பிரிவு செய்தல், தீர்ப்பு வழங்குதல். இது ஒளியை நிராகரிக்கும் தேர்வின் விளைவு, தண்டனை அல்ல.' }
+  };
+
+  var labelMap = { word: 'சொல் குறிப்பு', sentence: 'வாக்கிய குறிப்பு', verse: 'வசன குறிப்பு' };
+
+  var panel   = document.getElementById('notePanel');
+  var overlay = document.getElementById('overlay');
+
+  function openNote(id) {
+    var note = notes[id];
+    if (!note) return;
+    document.getElementById('noteLabel').textContent = labelMap[note.type];
+    document.getElementById('noteQuote').textContent = note.quote;
+    document.getElementById('noteText').textContent  = note.text;
+    panel.classList.add('open');
+    overlay.classList.add('show');
+  }
+
+  function closeNote() {
+    panel.classList.remove('open');
+    overlay.classList.remove('show');
+  }
+
+  document.querySelectorAll('[data-note-id]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.stopPropagation();
+      openNote(el.getAttribute('data-note-id'));
+    });
+  });
+
+  document.getElementById('noteClose').addEventListener('click', closeNote);
+  overlay.addEventListener('click', closeNote);
+
+  // ── Theme toggle ──
+  var html   = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+
+  // Honour system preference on first load
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    html.setAttribute('data-theme', 'dark');
+  }
+
+  toggle.addEventListener('click', function() {
+    var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+  });
+</script>
+</body>
+</html>
