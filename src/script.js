@@ -69,6 +69,9 @@ const bibleBooks = [
     { name: 'Jude', shortName: 'Jude', tamilName: 'யூதா', tamilShortName: 'யூதா', file: 'jude', testament: 'new', chapters: 1 },
     { name: 'Revelation', shortName: 'Rev', tamilName: 'வெளிப்படுத்தல்', tamilShortName: 'வெளி', file: 'revelation', testament: 'new', chapters: 22 }
 ];
+// Expose bibleBooks to window for access in other scripts
+window.bibleBooks = bibleBooks;
+
 // Current state
 let currentBook = parseInt(localStorage.getItem('currentBook')) || 39; // Matthew (New Testament starts at index 39)
 let currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;

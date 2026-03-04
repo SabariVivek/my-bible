@@ -34,7 +34,6 @@
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="stylesheet" href="src/styles.css?cb=20251210006000">
-    <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
     <!-- Cache Management -->
     <script src="src/cache-manager.js?cb=20251126003722"></script>
 </head>
@@ -155,6 +154,9 @@
             </button>
         </div>
     </header>
+
+    <!-- K-DOT Design Panel -->
+    <div class="k-dot" id="k-dot" onclick="openKDotHTML()" style="display: none;"></div>
 
     <!-- Search Bar (shown below header when active) -->
     <div id="search-bar" class="search-bar" style="display: none;">
@@ -1081,7 +1083,6 @@
     <script src="src/data/bible-meta.js?cb=20251210006100"></script>
     <script src="src/data/short-summary.js?cb=20260301210232"></script>
     <script src="src/script.js?cb=20251210007400"></script>
-    <script src="src/chapter-summary-pullout.js?cb=20260301210232"></script>
 
     <!-- Image Viewer Modal -->
     <style>
@@ -1237,6 +1238,30 @@
 
         .viewer-close-btn:active {
             transform: scale(0.95);
+        }
+
+        /* ═══════════════════════════════════════════
+           K-DOT DESIGN — Pulsing dot trigger
+           ═══════════════════════════════════════════ */
+
+        .k-dot {
+            position: fixed;
+            top: 95px; right: 20px;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: #4a90e2;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: 0 0 0 0 rgba(74,144,226,0.5);
+            animation: k-pulse 2.2s ease-in-out infinite;
+            transition: transform 0.2s;
+        }
+        .k-dot:hover { transform: scale(1.3); }
+
+        @keyframes k-pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(74,144,226,0.5); }
+            60%  { box-shadow: 0 0 0 10px rgba(74,144,226,0); }
+            100% { box-shadow: 0 0 0 0 rgba(74,144,226,0); }
         }
     </style>
 
@@ -1490,6 +1515,11 @@
     <script>
         // Mobile search button handler
         document.addEventListener('DOMContentLoaded', () => {
+            console.log('[K-DOT] ==== DOMContentLoaded ====');
+            console.log('[K-DOT] k-dot element exists:', !!document.getElementById('k-dot'));
+            console.log('[K-DOT] current-chapter element exists:', !!document.querySelector('.current-chapter'));
+            console.log('[K-DOT] window.bibleBooks available:', !!window.bibleBooks);
+            
             const searchBtnMobile = document.getElementById('search-btn-mobile');
             const searchBtn = document.getElementById('search-btn');
             if (searchBtnMobile && searchBtn) {
@@ -1497,7 +1527,139 @@
                     searchBtn.click();
                 });
             }
+
+            // Initialize k-dot visibility on page load
+            console.log('[K-DOT] Calling initial updateKDotVisibility...');
+            setTimeout(updateKDotVisibility, 500);
         });
+
+        // K-DOT click handler - directly opens HTML file
+        function openKDotHTML() {
+            const currentBook = parseInt(localStorage.getItem('currentBook')) || 0;
+            const currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
+            
+            if (currentBook === undefined || currentChapter === undefined) {
+                console.log('[K-DOT] Missing currentBook or currentChapter');
+                return;
+            }
+            
+            const book = window.bibleBooks?.[currentBook];
+            if (!book) {
+                console.log('[K-DOT] Book not found at index', currentBook);
+                return;
+            }
+
+            // Determine testament folder
+            let testament = 'old-testament';
+            if (currentBook >= 40) { // New Testament starts at Matthew (book 40)
+                testament = 'new-testament';
+            }
+
+            // Convert Roman numerals to Arabic numerals and spaces to hyphens for file path
+            const bookNameForFile = book.name
+                .replace(/^III\s/, '3-')
+                .replace(/^II\s/, '2-')
+                .replace(/^I\s/, '1-')
+                .replace(/\s/g, '-');
+
+            // Construct the HTML file path
+            const htmlPath = `resources/html/${testament}/${bookNameForFile}-${currentChapter}.html`;
+            
+            // Open the HTML file in the SAME tab
+            window.location.href = htmlPath;
+        }
+
+        // Update k-dot visibility based on current chapter
+        function updateKDotVisibility() {
+            const kDot = document.getElementById('k-dot');
+            if (!kDot) {
+                return;
+            }
+
+            // Wait for bibleBooks to be loaded from script.js
+            if (!window.bibleBooks || !Array.isArray(window.bibleBooks)) {
+                setTimeout(updateKDotVisibility, 100);
+                return;
+            }
+
+            // Read from localStorage instead of window variables
+            const currentBook = parseInt(localStorage.getItem('currentBook')) || 0;
+            const currentChapter = parseInt(localStorage.getItem('currentChapter')) || 1;
+
+            if (currentBook === undefined || currentChapter === undefined) {
+                kDot.style.display = 'none';
+                return;
+            }
+
+            const book = window.bibleBooks?.[currentBook];
+            
+            if (!book) {
+                kDot.style.display = 'none';
+                return;
+            }
+
+            // Determine testament folder
+            let testament = 'old-testament';
+            if (currentBook >= 40) { // New Testament starts at Matthew
+                testament = 'new-testament';
+            }
+
+            // Convert Roman numerals to Arabic numerals and spaces to hyphens for file path
+            let bookNameForFile = book.name;
+            
+            bookNameForFile = bookNameForFile.replace(/^III\s/, '3-');
+            bookNameForFile = bookNameForFile.replace(/^II\s/, '2-');
+            bookNameForFile = bookNameForFile.replace(/^I\s/, '1-');
+            bookNameForFile = bookNameForFile.replace(/\s/g, '-');
+
+            // Construct the HTML file path
+            const htmlPath = `resources/html/${testament}/${bookNameForFile}-${currentChapter}.html`;
+            
+            // Use fetch to check if file exists
+            fetch(htmlPath, { method: 'HEAD', mode: 'no-cors' })
+                .then(response => {
+                    // With no-cors mode, we can't check status, so assume file exists if we get here
+                    if (response.type === 'opaque' || response.ok) {
+                        kDot.style.display = 'block';
+                    } else {
+                        kDot.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    // Try GET method as fallback
+                    fetch(htmlPath)
+                        .then(resp => {
+                            if (resp.ok) {
+                                kDot.style.display = 'block';
+                            } else {
+                                kDot.style.display = 'none';
+                            }
+                        })
+                        .catch(err => {
+                            kDot.style.display = 'none';
+                        });
+                });
+        }
+
+        // Call updateKDotVisibility whenever chapter changes
+        // Use MutationObserver to watch for chapter changes
+        const currentChapterElement = document.querySelector('.current-chapter');
+        if (currentChapterElement) {
+            const observer = new MutationObserver(() => {
+                setTimeout(updateKDotVisibility, 100);
+            });
+            observer.observe(currentChapterElement, {
+                childList: true,
+                subtree: true,
+                characterData: true
+            });
+        }
+
+        // Also call it periodically in case chapter updates don't trigger mutations
+        setInterval(() => {
+            // Always try to update visibility
+            updateKDotVisibility();
+        }, 500);
     </script>
 </body>
 
