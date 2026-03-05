@@ -1921,6 +1921,81 @@
                 opacity: 1;
             }
         }
+
+        /* Notes Card Styles */
+        .notes-card {
+            opacity: 1;
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reference Badge */
+        .reference-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .reference-badge-dark {
+            background: rgba(232, 220, 200, 0.15);
+            color: #d4af8f;
+            border: 1px solid rgba(232, 220, 200, 0.3);
+        }
+
+        .reference-badge-light {
+            background: rgba(212, 175, 143, 0.15);
+            color: #8b6f47;
+            border: 1px solid rgba(212, 175, 143, 0.3);
+        }
+
+        /* Theme-aware card backgrounds */
+        .notes-card-content {
+            border-radius: 12px;
+            padding: 16px;
+            min-height: 80px;
+            display: block;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .notes-card-content-dark {
+            background: rgb(30 41 59 / var(--tw-bg-opacity, 1));
+            border: 1px solid rgba(232, 220, 200, 0.15);
+            color: #e8dcc8;
+        }
+
+        .notes-card-content-light {
+            background: #ffffff;
+            border: 1px solid rgba(212, 175, 143, 0.3);
+            color: #2c2417;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .notes-card {
+            margin-bottom: 16px;
+        }
+
+        .notes-card .notes-card-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        html.dark-theme .notes-card .notes-card-content-dark:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+            border-color: rgba(232, 220, 200, 0.25);
+        }
     </style>
 </head>
 
@@ -2640,7 +2715,7 @@
             showAllUsers: false,  // Track if all users should be shown in dashboard
             loadedUserData: new Set(),  // Track which users have their progress loaded
             userModalError: '',  // Error message for user modal
-            dashboardTab: 'home',  // 'home', 'my-plan', 'family', 'notes', or 'quiz' - for tabbed dashboard view
+            dashboardTab: 'my-plan',  // 'home', 'my-plan', 'family', 'notes', or 'quiz' - for tabbed dashboard view
             skipLoadingScreen: false,  // Skip loading screen when switching views
             dashboardStatsLoaded: false,  // Only load dashboard stats once per session
             isInitializing: true,  // Track if app is still initializing
@@ -3639,7 +3714,7 @@
 
             carouselContainer.addEventListener('touchstart', (e) => {
                 touchStartX = e.changedTouches[0].screenX;
-            }, false);
+            }, { passive: true });
 
             carouselContainer.addEventListener('touchend', (e) => {
                 if (e.changedTouches && e.changedTouches.length > 0) {
@@ -3648,7 +3723,7 @@
                     touchEndX = e.touches[0].screenX;
                 }
                 handleSwipe();
-            }, false);
+            }, { passive: true });
 
             function handleSwipe() {
                 const swipeThreshold = 50; // minimum distance in pixels
@@ -4801,104 +4876,6 @@
                                 </div>
                             </div>
 
-                            <!-- BIBLE CHARACTERS CARD -->
-                            <div class="max-w-2xl mx-auto mt-6">
-                                <div onclick="window.location.href='bible-characters.html'" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 hover:shadow-2xl" style="background: rgb(30 41 59 / var(--tw-bg-opacity, 1)); border: 1px solid rgba(200,169,110,0.18); min-height: 140px;">
-                                    <!-- Gold shimmer line at top -->
-                                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #c8a96e, transparent);"></div>
-                                    
-                                    <div class="p-5 relative" style="z-index: 2;">
-                                        <!-- Header row -->
-                                        <div class="flex items-center gap-3 mb-4">
-                                            <div style="padding: 6px; border-radius: 10px; background: linear-gradient(135deg, #c8a96e, #8b6914);" class="shadow-md">
-                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                                            </div>
-                                            <div style="flex: 1;">
-                                                <p style="font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #6a5535; margin-bottom: 2px;">Explore the Scripture</p>
-                                                <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; color: #ede5d8; letter-spacing: 0.3px;">Bible <span style='color: #c8a96e;'>Characters</span></h3>
-                                            </div>
-                                            <div style="color: #6a5535; transition: transform 0.3s ease;" class="group-hover:translate-x-1">
-                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Character thumbnails row -->
-                                        <div class="flex items-center gap-2 mb-3">
-                                            ${['Jesus', 'Moses', 'David', 'Mary', 'Abraham', 'Paul'].map((name, i) => `
-                                                <div style="width: 36px; height: 36px; border-radius: 50%; overflow: hidden; border: 1.5px solid rgba(200,169,110,0.35); flex-shrink: 0; background: #110e1a; transition: transform 0.3s ease, border-color 0.3s ease;" class="group-hover:border-amber-500/60" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-                                                    <img src="https://d3owcl6pd5zkqc.cloudfront.net/images/figures/${name}_1200x1200.webp" alt="${name}" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;" loading="lazy" onerror="this.src='https://d3owcl6pd5zkqc.cloudfront.net/images/account_nobgrnd.png'" />
-                                                </div>
-                                            `).join('')}
-                                            <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(200,169,110,0.08); border: 1.5px dashed rgba(200,169,110,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                                <span style="font-family: 'Cinzel', serif; font-size: 8px; color: #6a5535; font-weight: 600;">30+</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Subtitle -->
-                                        <p style="font-family: 'Lora', Georgia, serif; font-size: 11px; font-style: italic; color: #6a6058;">Heroes, prophets, kings & disciples</p>
-                                    </div>
-                                    
-                                    <!-- Decorative gold circle -->
-                                    <div class="absolute -right-10 -bottom-10 w-28 h-28 rounded-full transition-transform duration-500 group-hover:scale-110" style="background: radial-gradient(circle, rgba(200,169,110,0.08), transparent 70%);"></div>
-                                    
-                                    <!-- Grain overlay -->
-                                    <div style="position: absolute; inset: 0; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E\"); pointer-events: none; border-radius: 16px;"></div>
-                                </div>
-                            </div>
-
-                            <!-- JOURNEY TO CANAAN CARD -->
-                            <div class="max-w-2xl mx-auto mt-6">
-                                <div onclick="window.location.href='journey-to-canaan.html'" class="group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 hover:shadow-2xl" style="background: rgb(30 41 59 / var(--tw-bg-opacity, 1)); border: 1px solid rgba(200,169,110,0.18); min-height: 160px;">
-                                    <!-- Gold shimmer line at top -->
-                                    <div style="height: 2px; background: linear-gradient(90deg, transparent, #c8a96e, transparent);"></div>
-                                    
-                                    <div class="p-5 relative" style="z-index: 2;">
-                                        <!-- Header row -->
-                                        <div class="flex items-center gap-3 mb-4">
-                                            <div style="padding: 6px; border-radius: 10px; background: linear-gradient(135deg, #c8a96e, #8b6914);" class="shadow-md">
-                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.54 3.45 8.27 7.75 8.88v2.85h2.5v-2.85C17.15 20.27 22 16.54 22 12c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/></svg>
-                                            </div>
-                                            <div style="flex: 1;">
-                                                <p style="font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #6a5535; margin-bottom: 2px;">The Exodus & Wilderness</p>
-                                                <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; color: #ede5d8; letter-spacing: 0.3px;">Journey to <span style='color: #c8a96e;'>Canaan</span></h3>
-                                            </div>
-                                            <div style="color: #6a5535; transition: transform 0.3s ease;" class="group-hover:translate-x-1">
-                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Stats row -->
-                                        <div class="grid grid-cols-4 gap-2 mb-3">
-                                            <div style="text-align: center; padding: 8px; border-radius: 8px; background: rgba(200,169,110,0.08);">
-                                                <p style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 2px;">40</p>
-                                                <p style="font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #6a5535;">Years</p>
-                                            </div>
-                                            <div style="text-align: center; padding: 8px; border-radius: 8px; background: rgba(200,169,110,0.08);">
-                                                <p style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 2px;">42</p>
-                                                <p style="font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #6a5535;">Stops</p>
-                                            </div>
-                                            <div style="text-align: center; padding: 8px; border-radius: 8px; background: rgba(200,169,110,0.08);">
-                                                <p style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 2px;">600K</p>
-                                                <p style="font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #6a5535;">People</p>
-                                            </div>
-                                            <div style="text-align: center; padding: 8px; border-radius: 8px; background: rgba(200,169,110,0.08);">
-                                                <p style="font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; color: #c8a96e; margin-bottom: 2px;">250mi</p>
-                                                <p style="font-family: 'Cinzel', serif; font-size: 7px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #6a5535;">Distance</p>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Subtitle -->
-                                        <p style="font-family: 'Lora', Georgia, serif; font-size: 11px; font-style: italic; color: #6a6058;">From Egypt's bondage to the Promised Land</p>
-                                    </div>
-                                    
-                                    <!-- Decorative gold circle -->
-                                    <div class="absolute -right-10 -bottom-10 w-28 h-28 rounded-full transition-transform duration-500 group-hover:scale-110" style="background: radial-gradient(circle, rgba(200,169,110,0.08), transparent 70%);"></div>
-                                    
-                                    <!-- Grain overlay -->
-                                    <div style="position: absolute; inset: 0; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E\"); pointer-events: none; border-radius: 16px;"></div>
-                                </div>
-                            </div>
-
                         ` : state.dashboardTab === 'my-plan' ? `
                             <!-- MY PLAN TAB -->
                             ${todayReading ? `
@@ -5014,57 +4991,53 @@
                                     </div>`;
                             })()}
                         ` : state.dashboardTab === 'notes' ? `
-                            <!-- CHARACTER OF THE WEEK BANNER - DOCKED TO TOP -->
-                            <div class="py-0 mb-4">
-                                <div class="relative ${theme.card} border ${theme.border} rounded-lg p-4 transition-all duration-300 hover:scale-[1.02] shadow-sm">
-                                    <div class="flex items-center justify-center gap-3">
-                                        <img src="../resources/icons/fish.png" alt="Fish" class="w-7 h-7 flex-shrink-0" />
-                                        
-                                        <div class="text-center">
-                                            <span class="${theme.textSecondary} text-xs font-medium uppercase tracking-wider">
-                                                Character of the week
-                                            </span>
-                                            <span class="${theme.textSecondary} mx-2">•</span>
-                                            <span class="${theme.text} text-lg font-bold">
-                                                Jonah
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- NOTES TAB - REVELATION, HEBREW, JOHN AND SERMON ON THE MOUNT -->
-                            
-                            <!-- SERMON ON THE MOUNT CARD -->
-                            <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32 mb-4">
-                                <img src="../resources/images/sermon-on-the-mount.png" alt="Sermon on the Mount" class="w-full h-full object-cover" style="object-position: center 30%;">
-                                <div class="absolute top-0 left-0 p-3">
-                                    <p class="text-xs font-semibold" style="background: linear-gradient(135deg, #8B0000 0%, #2F4F4F 50%, #1C1C1C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-shadow: none;">மலைப்பிரசங்கம்</p>
-                                    <p class="text-black text-[10px]" style="text-shadow: 0px 1px 2px rgba(255,255,255,0.5); line-height: 2.2;">Matthew 5 - 7</p>
-                                </div>
-                                <div class="absolute bottom-2 right-2">
-                                    <img src="../resources/images/coming-soon.png" alt="Coming soon" class="h-16 w-auto">
-                                </div>
-                            </div>
-                            
-                            <div class="grid grid-cols-1 gap-4">
-                                <a href="../docs/docs.html?context=revelation" class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-32 cursor-pointer group">
-                                    <img src="../resources/images/revelation.png" alt="The Revelation of Jesus Christ" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity">
-                                    <div class="absolute top-4 right-4">
-                                        <span class="inline-block px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-full transition-colors">Click to Read</span>
-                                    </div>
-                                </a>
-                                <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56" style="display: none;">
-                                    <img src="../resources/images/hebrews.png" alt="Hebrew" class="w-full h-full object-cover">
-                                    <div class="absolute top-4 right-4">
-                                        <span class="inline-block px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-full transition-colors">Coming soon</span>
-                                    </div>
-                                </div>
-                                <div class="relative rounded-xl overflow-hidden border ${theme.border} shadow-sm h-56" style="display: none;">
-                                    <img src="../resources/images/john.png" alt="John" class="w-full h-full object-cover">
-                                    <div class="absolute top-4 right-4">
-                                        <span class="inline-block px-3 py-1 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-full transition-colors">Coming soon</span>
-                                    </div>
+                            <!-- NOTES TAB CONTENT -->
+                            <div id="notesCardsContainer" style="width: 100%;">
+                                <!-- Real cards -->
+                                <div class="notesCardsWrapper" style="display: block;">
+                                    ${(() => {
+                                        const isDarkMode = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
+                                        return `
+                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                                                <div onclick="window.location.href='bible-characters.html'" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px;">
+                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Bible Characters</h3>
+                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Explore biblical figures, their stories and lessons</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                                                <div onclick="window.location.href='journey-to-canaan.html'" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px;">
+                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Journey to Canaan</h3>
+                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Explore the journey of faith and obedience</p>
+                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Genesis 12:1 – Joshua 6:25</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                                                <a href="../docs/docs.html?context=revelation" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
+                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">The Revelation of Jesus Christ</h3>
+                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Understanding the end times and Christ's return</p>
+                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Revelation 1 - 22</div>
+                                                </a>
+                                            </div>
+
+                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                                                <a href="../resources/html/Sermon%20on%20the%20Mount.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
+                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Sermon on the Mount</h3>
+                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">Jesus' foundational teachings on the kingdom</p>
+                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">Matthew 5 - 7</div>
+                                                </a>
+                                            </div>
+
+                                            <div class="notes-card" style="margin-bottom: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                                                <a href="../resources/html/Amaziah%20-%20Victory%2C%20Pride%20and%20Defeat.html" class="notes-card-content notes-card-content-${isDarkMode}" style="cursor: pointer; transition: all 0.3s; border-radius: 12px; padding: 16px; min-height: 80px; display: block; text-decoration: none; color: inherit;">
+                                                    <h3 style="font-family: 'Cinzel', serif; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; margin-top: 0; text-transform: none !important; font-variant-caps: normal !important; background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Amaziah: Victory, Pride and Defeat</h3>
+                                                    <p style="font-family: 'Lora', Georgia, serif; font-size: 12px; margin: 0; opacity: 0.8;">A king's story of faith, pride, and consequences</p>
+                                                    <div class="reference-badge reference-badge-${isDarkMode}" style="display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-top: 8px;">2 Chronicles 25</div>
+                                                </a>
+                                            </div>
+                                        `;
+                                    })()}
                                 </div>
                             </div>
                         ` : state.dashboardTab === 'revelation-chapters' ? `
