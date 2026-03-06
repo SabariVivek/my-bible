@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#212121">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Gideon: Faith, Fear & Victory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&family=Söhne+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #212121;
+      --text: #ececec;
+      --divider: #3d3d3d;
+      --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text); 
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    /* ── Section ── */
+    .section {
+      padding: 26px 0 20px;
+      border-bottom: 1px solid var(--divider);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.03s; }
+    .section:nth-child(2)  { animation-delay: 0.06s; }
+    .section:nth-child(3)  { animation-delay: 0.09s; }
+    .section:nth-child(4)  { animation-delay: 0.12s; }
+    .section:nth-child(5)  { animation-delay: 0.15s; }
+    .section:nth-child(6)  { animation-delay: 0.18s; }
+    .section:nth-child(7)  { animation-delay: 0.21s; }
+    .section:nth-child(8)  { animation-delay: 0.24s; }
+    .section:nth-child(9)  { animation-delay: 0.27s; }
+    .section:nth-child(10) { animation-delay: 0.30s; }
+    .section:nth-child(11) { animation-delay: 0.33s; }
+    .section:nth-child(12) { animation-delay: 0.36s; }
+    .section:nth-child(13) { animation-delay: 0.39s; }
+    .section:nth-child(14) { animation-delay: 0.42s; }
+    .section:nth-child(15) { animation-delay: 0.45s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap {
+      padding: 24px 0 20px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .verse-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .badge-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8e8ea0;
+      align-self: center;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Heading ── */
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fbfbfb;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px dotted #726b64;
+      display: table;
+    }
+
+    /* ── Section ref badge ── */
+    .section-ref {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* ── Number icon in heading ── */
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #b8834a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sub-question ── */
+    .section-question {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+
+    /* ── Body paragraphs ── */
+    .section p {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #b8834a;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(180, 175, 190, 0.08);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    blockquote p { margin-bottom: 6px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .section ul {
+      margin: 6px 0 10px 20px;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Highlight classes ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+
+    /* ── Lessons box ── */
+    .lesson-card {
+      background: rgba(167, 139, 250, 0.06);
+      border: 1px solid rgba(167, 139, 250, 0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .lesson-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-bottom: 4px;
+    }
+    .lesson-desc {
+      font-size: 0.87rem;
+      color: #b0b0b0;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">Gideon: Faith, Fear & Victory</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Judges 6–8</span>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>Israel Turns Away From God Again</h2>
+    <div><span class="section-ref">Judges 6:1–6</span></div>
+    <p>After some years of peace, the people of Israel again began to do <span class="action">evil</span> in the sight of God. They started worshipping <span class="obj">idols</span> and forgot the Lord.</p>
+    <p>Because of this, God allowed the <span class="name">Midianites</span> to rule over Israel for <span class="num">seven years</span>. The Midianites were very cruel to Israel.</p>
+    <p class="section-question">What they did:</p>
+    <ul>
+      <li>Every year when the Israelites planted crops, the <span class="name">Midianites</span> came like a swarm of locusts</li>
+      <li>They brought huge numbers of people and animals</li>
+      <li>They <span class="action">destroyed</span> crops and stole food</li>
+      <li>They left nothing for the Israelites to eat</li>
+    </ul>
+    <p class="section-question">Because of this oppression:</p>
+    <ul>
+      <li>Israelites hid in mountain caves and strongholds</li>
+      <li>They were extremely poor and afraid</li>
+    </ul>
+    <p>Finally, the Israelites cried out to God for help.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>God Sends a Prophet to Explain the Problem</h2>
+    <div><span class="section-ref">Judges 6:7–10</span></div>
+    <p>Before delivering them, God sent a prophet to remind Israel why this was happening.</p>
+    <p class="section-question">The prophet told them:</p>
+    <ul>
+      <li>God had rescued them from <span class="place">Egypt</span></li>
+      <li>God had given them the land of <span class="place">Canaan</span></li>
+      <li>God had commanded them not to worship the gods of the Amorites</li>
+      <li>But Israel did not obey</li>
+    </ul>
+    <p>So the prophet reminded them that their suffering was the result of their disobedience.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>The Angel of the Lord Appears to Gideon</h2>
+    <div><span class="section-ref">Judges 6:11–24</span></div>
+    <p>One day, <span class="name">Gideon</span> was secretly threshing wheat in a winepress. Normally wheat was threshed in an open place, but <span class="name">Gideon</span> hid because he was afraid the <span class="name">Midianites</span> would steal the grain.</p>
+    <p>Suddenly, the Angel of the Lord appeared to him and said:</p>
+    <blockquote>
+      <p>"The Lord is with you, mighty warrior."</p>
+    </blockquote>
+    <p><span class="name">Gideon</span> was confused and replied:</p>
+    <blockquote>
+      <p>If the Lord is with us, why are all these troubles happening? Where are the miracles our fathers told us about? It seems the Lord has abandoned us.</p>
+    </blockquote>
+    <p>Then the Lord told him:</p>
+    <blockquote>
+      <p>"Go in the strength you have and save Israel from <span class="place">Midian</span>. I am sending you."</p>
+    </blockquote>
+    <p><span class="name">Gideon</span> was shocked — his clan was the weakest in the tribe of <span class="place">Manasseh</span>, and he was the least important in his family. But God promised:</p>
+    <blockquote>
+      <p>"I will be with you. You will defeat the <span class="name">Midianites</span> as if they were one man."</p>
+    </blockquote>
+    <p class="section-question">Gideon Asks for a Sign</p>
+    <p><span class="name">Gideon</span> prepared an offering — a young goat, unleavened bread, and broth — and placed them on a rock. The angel touched the offering with his <span class="obj">staff</span>. Fire suddenly came out of the rock and <span class="action">burned</span> the offering. Then the angel disappeared.</p>
+    <p><span class="name">Gideon</span> realized he had seen the Angel of the Lord and was afraid. But God told him:</p>
+    <blockquote>
+      <p>"Peace. Do not be afraid. You will not die."</p>
+    </blockquote>
+    <p><span class="name">Gideon</span> built an <span class="obj">altar</span> there and called it <em>"The Lord Is Peace."</em></p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>Gideon Destroys the Altar of Baal</h2>
+    <div><span class="section-ref">Judges 6:25–32</span></div>
+    <p>That night God gave <span class="name">Gideon</span> his first mission:</p>
+    <ul>
+      <li>Tear down his father's altar of <span class="obj">Baal</span></li>
+      <li>Cut down the <span class="obj">Asherah pole</span> beside it</li>
+      <li>Build a proper altar to the Lord</li>
+      <li>Offer a bull as sacrifice using the wood from the <span class="obj">Asherah pole</span></li>
+    </ul>
+    <p><span class="name">Gideon</span> obeyed, but he was afraid of the townspeople, so he did it at night with <span class="num">ten</span> servants.</p>
+    <p class="section-question">The Town Gets Angry</p>
+    <p>In the morning, the people saw that the altar of <span class="obj">Baal</span> was destroyed and a new altar to the Lord was built. They demanded <span class="name">Gideon</span> be killed. But his father <span class="name">Joash</span> defended him:</p>
+    <blockquote>
+      <p>"If Baal is really a god, let him defend himself!"</p>
+    </blockquote>
+    <p>After that, <span class="name">Gideon</span> received the nickname <span class="name">Jerubbaal</span>, meaning <em>"Let Baal fight against him."</em></p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>The Spirit of the Lord Comes on Gideon</h2>
+    <div><span class="section-ref">Judges 6:33–35</span></div>
+    <p>Soon the enemy armies gathered again. The <span class="name">Midianites</span>, <span class="name">Amalekites</span>, and other eastern peoples crossed the <span class="place">Jordan River</span> and camped in the <span class="place">Valley of Jezreel</span>.</p>
+    <p>Then the Spirit of the Lord came upon <span class="name">Gideon</span>. He blew a <span class="obj">trumpet</span> to call people to battle. Men from several tribes joined him:</p>
+    <ul>
+      <li><span class="place">Manasseh</span></li>
+      <li><span class="place">Asher</span></li>
+      <li><span class="place">Zebulun</span></li>
+      <li><span class="place">Naphtali</span></li>
+    </ul>
+    <p>An army began to gather.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>Gideon Asks for the Sign of the Fleece</h2>
+    <div><span class="section-ref">Judges 6:36–40</span></div>
+    <p>Even though <span class="name">Gideon</span> believed God, he still wanted reassurance. He asked God for a sign using a <span class="obj">fleece of wool</span>.</p>
+    <p class="section-question">First Sign</p>
+    <blockquote>
+      <p>If you will save Israel through me, make the fleece wet with dew but keep the ground dry.</p>
+    </blockquote>
+    <p>In the morning, the fleece was so wet <span class="name">Gideon</span> squeezed out a bowl of water — and the ground was dry.</p>
+    <p class="section-question">Second Sign</p>
+    <blockquote>
+      <p>Let the fleece be dry. Let the ground be covered with dew.</p>
+    </blockquote>
+    <p>The next morning the fleece was dry and the ground was wet with dew. This confirmed to <span class="name">Gideon</span> that God truly planned to deliver Israel through him.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>God Reduces Gideon's Army</h2>
+    <div><span class="section-ref">Judges 7:1–8</span></div>
+    <p><span class="name">Gideon</span> gathered <span class="num">32,000</span> soldiers. But God said:</p>
+    <blockquote>
+      <p>"You have too many men. If Israel wins, they will think they saved themselves."</p>
+    </blockquote>
+    <p class="section-question">First Reduction</p>
+    <p>Anyone who was afraid could go home. <span class="num">22,000</span> men left. Only <span class="num">10,000</span> remained.</p>
+    <p class="section-question">Second Reduction</p>
+    <p>God tested them at a river. The men drank water in two ways:</p>
+    <ul>
+      <li>Some knelt down and drank normally</li>
+      <li>Others scooped water with their hands while staying alert</li>
+    </ul>
+    <p>Only <span class="num">300</span> men drank with their hands. God chose these <span class="num">300</span> men. The remaining <span class="num">9,700</span> men were sent home.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>Gideon Sneaks Into the Enemy Camp</h2>
+    <div><span class="section-ref">Judges 7:9–15</span></div>
+    <p>That night God told <span class="name">Gideon</span>:</p>
+    <blockquote>
+      <p>"Go down to the enemy camp and listen."</p>
+    </blockquote>
+    <p><span class="name">Gideon</span> went with his servant <span class="name">Purah</span>. They heard a <span class="name">Midianite</span> soldier telling a dream:</p>
+    <blockquote>
+      <p>A loaf of barley bread rolled into the camp. It struck a tent and knocked it down.</p>
+    </blockquote>
+    <p>Another soldier explained:</p>
+    <blockquote>
+      <p>"This is the sword of <span class="name">Gideon</span>. God has given <span class="place">Midian</span> into his hand."</p>
+    </blockquote>
+    <p>When <span class="name">Gideon</span> heard this, he worshipped God. Then he returned to his army with confidence.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>The Battle of the 300 Men</h2>
+    <div><span class="section-ref">Judges 7:16–25</span></div>
+    <p><span class="name">Gideon</span> divided the <span class="num">300</span> men into <span class="num">three</span> groups. Each man carried:</p>
+    <ul>
+      <li>A <span class="obj">trumpet</span></li>
+      <li>An empty <span class="obj">jar</span></li>
+      <li>A <span class="obj">torch</span> inside the jar</li>
+    </ul>
+    <p>At midnight they surrounded the enemy camp. <span class="name">Gideon</span> gave the signal. The soldiers blew their <span class="obj">trumpets</span>, <span class="action">broke</span> their <span class="obj">jars</span>, raised their <span class="obj">torches</span>, and shouted:</p>
+    <blockquote>
+      <p>"A sword for the Lord and for Gideon!"</p>
+    </blockquote>
+    <p>The <span class="name">Midianite</span> camp woke up in panic. Because of confusion and darkness, the Midianites began fighting each other. Many ran away.</p>
+    <p>Israel chased them and captured two <span class="name">Midianite</span> leaders:</p>
+    <ul>
+      <li><span class="name">Oreb</span></li>
+      <li><span class="name">Zeeb</span></li>
+    </ul>
+    <p>They were defeated.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">10</span>Gideon Confronts the Tribe of Ephraim</h2>
+    <div><span class="section-ref">Judges 8:1–3</span></div>
+    <p>After the battle, the tribe of <span class="place">Ephraim</span> became angry. They complained:</p>
+    <blockquote>
+      <p>"Why didn't you call us earlier to fight?"</p>
+    </blockquote>
+    <p><span class="name">Gideon</span> answered them wisely and peacefully. He praised them by saying their victories were greater than his. This calmed their anger.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">11</span>Gideon Pursues the Remaining Kings</h2>
+    <div><span class="section-ref">Judges 8:4–21</span></div>
+    <p><span class="name">Gideon</span> and his <span class="num">300</span> tired soldiers continued chasing the enemy kings <span class="name">Zebah</span> and <span class="name">Zalmunna</span>. On the way they asked two Israelite towns for food:</p>
+    <ul>
+      <li><span class="place">Succoth</span></li>
+      <li><span class="place">Penuel</span></li>
+    </ul>
+    <p>But both towns refused to help because they were afraid of <span class="place">Midian</span>. <span class="name">Gideon</span> warned them he would punish them later.</p>
+    <p>Eventually <span class="name">Gideon</span> captured the two kings. Then he returned and punished the towns that refused help. Finally, <span class="name">Gideon</span> executed the enemy kings.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">12</span>Israel Wants Gideon to Become King</h2>
+    <div><span class="section-ref">Judges 8:22–23</span></div>
+    <p>After the victory, the Israelites said to <span class="name">Gideon</span>:</p>
+    <blockquote>
+      <p>"Rule over us — you, your son, and your grandson."</p>
+    </blockquote>
+    <p>They wanted to make <span class="name">Gideon</span> their king. But <span class="name">Gideon</span> refused and said:</p>
+    <blockquote>
+      <p>"I will not rule over you. The Lord will rule over you."</p>
+    </blockquote>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">13</span>Gideon Makes a Golden Ephod</h2>
+    <div><span class="section-ref">Judges 8:24–27</span></div>
+    <p><span class="name">Gideon</span> asked the soldiers to give him <span class="obj">gold</span> earrings taken from the enemy. He used the gold to make an <span class="obj">ephod</span> (a religious garment or object). He placed it in his hometown <span class="place">Ophrah</span>.</p>
+    <p>Unfortunately, the people began to treat the <span class="obj">ephod</span> like an idol. Israel again turned away from God. Even <span class="name">Gideon</span>'s family became involved in this mistake.</p>
+  </div>
+
+  <!-- 14 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">14</span>The Last Years of Gideon</h2>
+    <div><span class="section-ref">Judges 8:28–35</span></div>
+    <p>After <span class="place">Midian</span> was defeated, the land had peace for <span class="num">40 years</span>. <span class="name">Gideon</span> lived in his home. He had many wives, <span class="num">70</span> sons, and a son named <span class="name">Abimelech</span> through a concubine.</p>
+    <p>When <span class="name">Gideon</span> died, Israel again turned to idol worship. They forgot the Lord. They also forgot the good <span class="name">Gideon</span> had done for them.</p>
+  </div>
+
+  <!-- 15 Lessons -->
+  <div class="section">
+    <h2 class="section-title">Main Lessons From Gideon's Story</h2>
+
+    <div class="lesson-card">
+      <div class="lesson-title">God can use weak people</div>
+      <div class="lesson-desc">Gideon thought he was the weakest, but God chose him.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">Victory comes from God, not numbers</div>
+      <div class="lesson-desc">300 men defeated a huge army.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">God patiently strengthens weak faith</div>
+      <div class="lesson-desc">Gideon asked for signs, and God helped him.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">Success can still lead to new spiritual dangers</div>
+      <div class="lesson-desc">The ephod later became an idol.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">People often forget God's help quickly</div>
+      <div class="lesson-desc">After Gideon died, Israel forgot the Lord again.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
