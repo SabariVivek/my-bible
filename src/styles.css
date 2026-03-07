@@ -1948,7 +1948,7 @@ body.dark-theme .mobile-chapter-header {
     overflow: hidden;
     transition: opacity 0.3s ease, max-height 0.3s ease;
     letter-spacing: 0.2px;
-    line-height: 1.5;
+    line-height: 2;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
