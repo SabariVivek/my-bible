@@ -1256,6 +1256,10 @@ body.dark-theme .search-bar .filter-btn.active::after {
     transition: all 0.3s ease;
 }
 
+.theme-toggle {
+    position: relative;  /* Add this */
+}
+
 /* Minimal indicator - small underline that persists */
 .theme-toggle::after {
     content: '';
