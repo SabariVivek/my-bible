@@ -1898,10 +1898,6 @@ body.dark-theme .mobile-chapter-header {
     user-select: none;
 }
 
-.verse-header-header:hover {
-    background-color: rgba(76, 175, 80, 0.08);
-}
-
 .verse-header-toggle {
     background: none;
     border: none;
