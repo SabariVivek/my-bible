@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <!-- Default meta tags - will be overridden by script if needed -->
     <meta name="theme-color" content="#292a2d">
     <meta name="color-scheme" content="dark">
@@ -12,18 +13,18 @@
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const isDarkTheme = savedTheme === 'dark' || (savedTheme === null && prefersDark);
-        
+
         // Update meta tags to match theme
         if (!isDarkTheme) {
             document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff');
             document.querySelector('meta[name="color-scheme"]').setAttribute('content', 'light');
         }
     </script>
-    
+
     <script>
         // Cache busting - get version from localStorage if available, otherwise use timestamp
         window.CACHE_BUSTER = localStorage.getItem('appVersion') || new Date().getTime();
-        
+
         // Only load manifest on http/https, not file://
         if (window.location.protocol !== 'file:') {
             document.write('<link rel="manifest" href="manifest.json?cb=' + window.CACHE_BUSTER + '">');
@@ -45,7 +46,7 @@
         const savedThemes = localStorage.getItem('theme');
         const prefersDarks = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const isDarkThemes = savedThemes === 'dark' || (savedThemes === null && prefersDarks);
-        
+
         if (isDarkThemes) {
             document.body.classList.add('dark-theme');
         }
@@ -82,27 +83,34 @@
             <!-- Secret icon (hidden by default) -->
             <button id="secret-icon" class="icon-btn secret-icon" aria-label="Secret" style="display: none;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="none">
-                    <path d="M12 2 L15 9 L22 10 L17 15 L18 22 L12 18 L6 22 L7 15 L2 10 L9 9 Z" fill="#FFD700" stroke="#b28b46" stroke-width="1"/>
+                    <path d="M12 2 L15 9 L22 10 L17 15 L18 22 L12 18 L6 22 L7 15 L2 10 L9 9 Z" fill="#FFD700"
+                        stroke="#b28b46" stroke-width="1" />
                 </svg>
             </button>
             <!-- Admin toggle button (hidden by default) -->
-            <button id="admin-toggle" class="icon-btn admin-toggle" aria-label="Admin Mode" style="display: none;" title="Admin Mode">
+            <button id="admin-toggle" class="icon-btn admin-toggle" aria-label="Admin Mode" style="display: none;"
+                title="Admin Mode">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    <path class="admin-check" d="M9 12l2 2 4-4" style="display: none;"/>
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <path class="admin-check" d="M9 12l2 2 4-4" style="display: none;" />
                 </svg>
             </button>
             <!-- Preload Progress Indicator -->
-            <div id="preload-indicator" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: white; padding: 12px 24px; border-radius: 8px; z-index: 10000; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+            <div id="preload-indicator"
+                style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); color: white; padding: 12px 24px; border-radius: 8px; z-index: 10000; font-size: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
                 <div style="display: flex; align-items: center; gap: 12px;">
-                    <div style="width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                    <div
+                        style="width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite;">
+                    </div>
                     <span id="preload-text">Downloading Bible...</span>
                     <span id="preload-progress">0/66</span>
                 </div>
             </div>
             <!-- Read Bible button (desktop only, shown on home page) -->
-            <button id="read-bible-nav-btn" class="icon-btn read-bible-nav-btn desktop-only" aria-label="Read Bible" title="Read Bible">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <button id="read-bible-nav-btn" class="icon-btn read-bible-nav-btn desktop-only" aria-label="Read Bible"
+                title="Read Bible">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
@@ -306,23 +314,26 @@
             </div>
             <div class="note-viewer-header">
                 <span class="note-viewer-ref" id="note-viewer-ref"></span>
-                
+
                 <!-- Single Title (shown when tabs are hidden) -->
                 <div class="note-viewer-single-title" id="note-viewer-single-title" style="display: none;"></div>
-                
+
                 <!-- Segmented Control in Header -->
                 <div class="note-viewer-tabs">
-                    <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')" title="Note">
+                    <button class="note-viewer-tab active" data-tab="note" onclick="switchNoteViewerTab('note')"
+                        title="Note">
                         <img src="resources/icons/note.png" alt="Note" class="note-viewer-tab-icon">
                     </button>
-                    <button class="note-viewer-tab" data-tab="references" onclick="switchNoteViewerTab('references')" style="display: none;" title="References">
-                        <svg class="note-viewer-tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <button class="note-viewer-tab" data-tab="references" onclick="switchNoteViewerTab('references')"
+                        style="display: none;" title="References">
+                        <svg class="note-viewer-tab-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
                             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                             <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                         </svg>
                     </button>
                 </div>
-                
+
                 <button class="note-viewer-close-btn" id="note-viewer-close-btn" title="Close">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -330,7 +341,7 @@
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Tab Content -->
             <div class="note-viewer-tab-content active" id="note-tab-content">
                 <div class="note-viewer-section">
@@ -340,17 +351,18 @@
                     Edit
                 </button>
             </div>
-            
+
             <div class="note-viewer-tab-content" id="references-tab-content">
                 <div class="note-viewer-references-content" id="note-viewer-references-content"></div>
-                <button class="note-viewer-add-ref-btn" id="note-viewer-add-ref-btn" title="Add Reference" onclick="showAddReferenceDialog()">
+                <button class="note-viewer-add-ref-btn" id="note-viewer-add-ref-btn" title="Add Reference"
+                    onclick="showAddReferenceDialog()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="12" y1="5" x2="12" y2="19"></line>
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
                 </button>
             </div>
-            
+
             <div class="note-viewer-footer">
             </div>
         </div>
@@ -374,9 +386,12 @@
                 </button>
             </div>
             <div class="passage-modal-lang-buttons">
-                <button class="passage-lang-btn active" data-lang="english" onclick="switchNotePassageLanguage('english')">English</button>
-                <button class="passage-lang-btn" data-lang="tamil" onclick="switchNotePassageLanguage('tamil')">Tamil</button>
-                <button class="passage-lang-btn" data-lang="dual" onclick="switchNotePassageLanguage('dual')">Both</button>
+                <button class="passage-lang-btn active" data-lang="english"
+                    onclick="switchNotePassageLanguage('english')">English</button>
+                <button class="passage-lang-btn" data-lang="tamil"
+                    onclick="switchNotePassageLanguage('tamil')">Tamil</button>
+                <button class="passage-lang-btn" data-lang="dual"
+                    onclick="switchNotePassageLanguage('dual')">Both</button>
             </div>
             <div class="passage-modal-content" id="notePassageContent">
                 <p>Loading passage...</p>
@@ -421,12 +436,13 @@
                                 <option value="" disabled>Select Verse</option>
                             </select>
                         </div>
-                        <button class="add-ref-add-verse-btn" id="add-ref-add-verse-btn" type="button" disabled>Add Verse</button>
+                        <button class="add-ref-add-verse-btn" id="add-ref-add-verse-btn" type="button" disabled>Add
+                            Verse</button>
                     </div>
                 </div>
                 <div class="add-ref-verses-chips" id="add-ref-verses-chips"></div>
             </div>
-            
+
             <!-- Section showing existing references -->
             <div class="add-ref-existing-refs" id="add-ref-existing-refs">
                 <div class="add-ref-existing-label">Current References:</div>
@@ -446,7 +462,7 @@
             <div class="notes-sheet-handle" id="notes-sheet-drag-handle">
                 <div class="notes-handle-bar"></div>
             </div>
-            
+
             <div class="notes-modal-header">
                 <h3>Add Note</h3>
                 <button class="notes-modal-close-btn" aria-label="Close">
@@ -457,18 +473,19 @@
                     </svg>
                 </button>
             </div>
-            
+
             <div class="notes-modal-content" id="notes-modal-content">
                 <div class="notes-verse-ref-wrapper">
                     <div class="notes-verse-ref" id="notes-verse-ref"></div>
                 </div>
-                <div id="notes-textarea" class="notes-textarea" contenteditable="true" data-placeholder="Type your note here..."></div>
+                <div id="notes-textarea" class="notes-textarea" contenteditable="true"
+                    data-placeholder="Type your note here..."></div>
                 <div class="notes-modal-actions">
                     <button id="delete-note-btn" class="notes-btn-delete" style="display: none;">Delete</button>
                     <button id="save-note-btn" class="notes-btn-save">Save Note</button>
                 </div>
             </div>
-            
+
             <!-- Loading Overlay -->
             <div class="notes-loading" id="notes-loading">
                 <div class="notes-spinner"></div>
@@ -483,31 +500,44 @@
             <div class="bookmark-color-sheet-handle" id="bookmark-color-sheet-handle">
                 <div class="bookmark-color-handle-bar"></div>
             </div>
-            
+
             <div class="bookmark-color-sheet-header">
                 <h3>Select Bookmark Color</h3>
                 <button class="bookmark-color-close-btn" id="bookmark-color-close-btn" aria-label="Close">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
                         <line x1="18" y1="6" x2="6" y2="18"></line>
                         <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
-            
+
             <div class="bookmark-color-sheet-content" id="bookmark-color-sheet-content">
                 <div class="bookmark-color-options-grid">
-                    <button class="bookmark-color-option" data-color="burgundy" style="background: #78aaff !important;" title="Blue"></button>
-                    <button class="bookmark-color-option" data-color="forest" style="background: #e6c45a !important;" title="Gold"></button>
-                    <button class="bookmark-color-option" data-color="navy" style="background: #72e6a4 !important;" title="Mint"></button>
-                    <button class="bookmark-color-option" data-color="amber" style="background: #ff8fc1 !important;" title="Rose"></button>
-                    <button class="bookmark-color-option" data-color="violet" style="background: #ff9a54 !important;" title="Orange"></button>
-                    <button class="bookmark-color-option" data-color="teal" style="background: #b38aff !important;" title="Purple"></button>
-                    <button class="bookmark-color-option" data-color="rust" style="background: #5ed0d9 !important;" title="Teal"></button>
-                    <button class="bookmark-color-option" data-color="olive" style="background: #ff7a7a !important;" title="Red"></button>
-                    <button class="bookmark-color-option" data-color="indigo" style="background: #b4c76f !important;" title="Olive"></button>
-                    <button class="bookmark-color-option" data-color="slate" style="background: #9d9d9d !important;" title="Grey"></button>
-                    <button class="bookmark-color-option" data-color="yellow" style="background: #78aaff !important;" title="Blue"></button>
-                    <button class="bookmark-color-option" data-color="green" style="background: #e6c45a !important;" title="Gold"></button>
+                    <button class="bookmark-color-option" data-color="burgundy" style="background: #78aaff !important;"
+                        title="Blue"></button>
+                    <button class="bookmark-color-option" data-color="forest" style="background: #e6c45a !important;"
+                        title="Gold"></button>
+                    <button class="bookmark-color-option" data-color="navy" style="background: #72e6a4 !important;"
+                        title="Mint"></button>
+                    <button class="bookmark-color-option" data-color="amber" style="background: #ff8fc1 !important;"
+                        title="Rose"></button>
+                    <button class="bookmark-color-option" data-color="violet" style="background: #ff9a54 !important;"
+                        title="Orange"></button>
+                    <button class="bookmark-color-option" data-color="teal" style="background: #b38aff !important;"
+                        title="Purple"></button>
+                    <button class="bookmark-color-option" data-color="rust" style="background: #5ed0d9 !important;"
+                        title="Teal"></button>
+                    <button class="bookmark-color-option" data-color="olive" style="background: #ff7a7a !important;"
+                        title="Red"></button>
+                    <button class="bookmark-color-option" data-color="indigo" style="background: #b4c76f !important;"
+                        title="Olive"></button>
+                    <button class="bookmark-color-option" data-color="slate" style="background: #9d9d9d !important;"
+                        title="Grey"></button>
+                    <button class="bookmark-color-option" data-color="yellow" style="background: #78aaff !important;"
+                        title="Blue"></button>
+                    <button class="bookmark-color-option" data-color="green" style="background: #e6c45a !important;"
+                        title="Gold"></button>
                 </div>
             </div>
         </div>
@@ -516,7 +546,8 @@
     <!-- Voice Command Status -->
     <div id="voice-status" class="voice-status" style="display: none;">
         <div class="voice-status-content">
-            <svg class="voice-status-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="voice-status-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
                 <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
                 <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                 <line x1="12" y1="19" x2="12" y2="23"></line>
@@ -568,6 +599,13 @@
                 </button>
             </div>
         </div>
+
+        <style>
+            .u-glow {
+                border-left: 3px solid #ffd700;
+                padding-left: 8px;
+            }
+        </style>
 
         <!-- Left Sidebar - Books -->
         <aside class="books-sidebar">
@@ -689,7 +727,7 @@
                 <span class="book-name">Malachi</span>
             </div>
             <div class="book-item">
-                <span class="book-name">Matthew</span>
+                <span class="book-name u-glow">Matthew</span>
             </div>
             <div class="book-item">
                 <span class="book-name">Mark</span>
@@ -862,12 +900,13 @@
                 <div class="mobile-chapter-number-wrapper">
                     <div class="mobile-chapter-number"></div>
                     <span class="mobile-verse-count-badge" id="mobile-verse-count-badge"></span>
-                    <button class="expand-all-headers-btn" id="expand-all-headers-btn" title="Expand/collapse all headers">
+                    <button class="expand-all-headers-btn" id="expand-all-headers-btn"
+                        title="Expand/collapse all headers">
                         <span class="expand-all-icon">⇅</span>
                     </button>
                 </div>
             </div>
-            
+
             <div class="scripture-text" id="scripture-text"></div>
         </main>
     </div>
@@ -903,8 +942,9 @@
             <span class="option-name">Character Study</span>
         </div>
         <div class="right-menu-item" id="right-life-of-jesus-option">
-            <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2v20M5 8h14"/>
+            <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2v20M5 8h14" />
             </svg>
             <span class="option-name">Life of Jesus</span>
         </div>
@@ -923,7 +963,8 @@
         <div class="summary-drawer-header">
             <h3 class="summary-drawer-title">Chapter Summary</h3>
             <button class="close-summary-btn" id="close-summary-btn" aria-label="Close">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
@@ -949,8 +990,8 @@
             <!-- Home Options Card -->
             <div class="home-options-card" id="home-options-card">
                 <div class="home-option" data-action="summary">
-                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                         <polyline points="14 2 14 8 20 8" />
                         <line x1="16" y1="13" x2="8" y2="13" />
@@ -960,16 +1001,16 @@
                     <span>Chapter Summary</span>
                 </div>
                 <div class="home-option" data-action="timeline">
-                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10" />
                         <polyline points="12 6 12 12 16 14" />
                     </svg>
                     <span>Chapter Timeline</span>
                 </div>
                 <div class="home-option" data-action="characters">
-                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="option-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -978,7 +1019,7 @@
                     <span>Chapter Characters</span>
                 </div>
             </div>
-            
+
             <button class="nav-btn home-btn" aria-label="Home" style="display: none;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -1002,13 +1043,15 @@
         </button>
 
         <button id="voice-btn" class="nav-btn voice-btn" aria-label="Voice Command" title="Voice Command">
-            <svg class="mic-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="mic-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
                 <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                 <line x1="12" y1="19" x2="12" y2="23"></line>
                 <line x1="8" y1="23" x2="16" y2="23"></line>
             </svg>
-            <svg class="mic-listening-icon" width="20" height="20" viewBox="0 0 24 24" fill="#ff4444" stroke="#ff4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <svg class="mic-listening-icon" width="20" height="20" viewBox="0 0 24 24" fill="#ff4444" stroke="#ff4444"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
                 <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
                 <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                 <line x1="12" y1="19" x2="12" y2="23"></line>
@@ -1031,7 +1074,8 @@
     <div id="bible-reading-page" class="bible-reading-page" style="display: none;">
         <header class="bible-reading-header">
             <button id="exit-bible-reading" class="icon-btn exit-btn" aria-label="Exit">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <line x1="19" y1="12" x2="5" y2="12"></line>
                     <polyline points="12 19 5 12 12 5"></polyline>
                 </svg>
@@ -1050,30 +1094,34 @@
         <div class="cross-ref-sheet-header detail-header" id="cross-ref-detail-header">
             <h2 class="cross-ref-sheet-title">Cross References</h2>
             <button class="cross-ref-detail-close-btn" id="cross-ref-detail-close-btn" aria-label="Close">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    style="width: 100%; height: 100%;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
-        
+
         <div class="cross-ref-language-buttons">
-            <button class="cross-ref-lang-btn" data-lang="tamil" onclick="switchCrossRefLanguage('tamil')">Tamil</button>
-            <button class="cross-ref-lang-btn active" data-lang="english" onclick="switchCrossRefLanguage('english')">English</button>
+            <button class="cross-ref-lang-btn" data-lang="tamil"
+                onclick="switchCrossRefLanguage('tamil')">Tamil</button>
+            <button class="cross-ref-lang-btn active" data-lang="english"
+                onclick="switchCrossRefLanguage('english')">English</button>
             <button class="cross-ref-lang-btn" data-lang="dual" onclick="switchCrossRefLanguage('dual')">Both</button>
         </div>
-        
+
         <div class="cross-ref-sheet-content" id="cross-ref-detail-content"></div>
     </div>
 
     <!-- Bundled Bible Data (loads all books) -->
     <script src="data/bible/bible-data-loader.js?cb=20251126003722"></script>
-    
+
     <!-- Supabase Client Library (Local for Offline Support) -->
     <script src="src/lib/supabase.js?cb=20251126003722"></script>
-    
+
     <!-- Supabase Integrations -->
     <script src="src/lib/supabase-pinned-verses.js?cb=20251126003722"></script>
-    
+
     <script src="config/config.js?cb=20251126003722"></script>
     <script src="src/bible-data-manager.js?cb=20251126003722"></script>
     <script src="src/voice-command.js?cb=20251126003722"></script>
@@ -1265,7 +1313,7 @@
         function openViewer(imageSrc) {
             // Save current scroll position
             scrollPosition = window.scrollY || document.documentElement.scrollTop;
-            
+
             img.src = imageSrc;
             viewer.classList.add('open');
             viewerIsOpen = true;
@@ -1274,7 +1322,7 @@
             // Disable background scrolling
             document.body.style.overflow = 'hidden';
             document.documentElement.style.overflow = 'hidden';
-            
+
             // Push a history state for the image viewer
             // This way, back button will close the image first
             history.pushState({ type: 'imageViewer', open: true }, '', window.location.href);
@@ -1288,7 +1336,7 @@
             document.documentElement.style.overflow = '';
             // Restore scroll position
             window.scrollTo(0, scrollPosition);
-            
+
             // Pop the history state if viewer was open
             if (history.state && history.state.type === 'imageViewer') {
                 history.back();
@@ -1438,7 +1486,7 @@
             if (e.touches.length === 2 || (e.touches.length === 1 && isDragging && scale > 1)) {
                 e.preventDefault();
             }
-            
+
             if (e.touches.length === 2) {
                 // Pinch zoom
                 const newDist = Math.hypot(
