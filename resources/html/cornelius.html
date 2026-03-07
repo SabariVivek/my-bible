@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#212121">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>The Story of Cornelius</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&family=Söhne+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #212121;
+      --text: #ececec;
+      --divider: #3d3d3d;
+      --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background-color: #212121;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .section {
+      padding: 26px 0 20px;
+      border-bottom: 1px solid var(--divider);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.03s; }
+    .section:nth-child(2)  { animation-delay: 0.06s; }
+    .section:nth-child(3)  { animation-delay: 0.09s; }
+    .section:nth-child(4)  { animation-delay: 0.12s; }
+    .section:nth-child(5)  { animation-delay: 0.15s; }
+    .section:nth-child(6)  { animation-delay: 0.18s; }
+    .section:nth-child(7)  { animation-delay: 0.21s; }
+    .section:nth-child(8)  { animation-delay: 0.24s; }
+    .section:nth-child(9)  { animation-delay: 0.27s; }
+    .section:nth-child(10) { animation-delay: 0.30s; }
+    .section:nth-child(11) { animation-delay: 0.33s; }
+    .section:nth-child(12) { animation-delay: 0.36s; }
+    .section:nth-child(13) { animation-delay: 0.39s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap {
+      padding: 24px 0 20px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .verse-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .badge-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8e8ea0;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Heading ── */
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fbfbfb;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px dotted #726b64;
+      display: table;
+    }
+
+    .section-ref {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #b8834a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sub-question ── */
+    .section-question {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+
+    /* ── Body ── */
+    .section p {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #b8834a;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(180, 175, 190, 0.08);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    blockquote p { margin-bottom: 6px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .section ul {
+      margin: 6px 0 10px 20px;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Profile card (Cornelius intro) ── */
+    .profile-card {
+      background: rgba(251, 191, 36, 0.05);
+      border: 1px solid rgba(251, 191, 36, 0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .profile-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      color: #d4d4d4;
+      margin-bottom: 6px;
+    }
+    .profile-row:last-child { margin-bottom: 0; }
+    .profile-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .profile-row strong { color: #fbbf24; font-weight: 600; margin-right: 4px; }
+
+    /* ── Vision sheet items ── */
+    .sheet-items {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 12px;
+      flex-wrap: wrap;
+    }
+    .sheet-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(52, 211, 153, 0.07);
+      border: 1px solid rgba(52, 211, 153, 0.18);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      color: #34d399;
+      font-weight: 500;
+    }
+    .sheet-item span { font-size: 1rem; }
+
+    /* ── Lesson cards ── */
+    .lesson-card {
+      background: rgba(167, 139, 250, 0.06);
+      border: 1px solid rgba(167, 139, 250, 0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .lesson-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-bottom: 4px;
+    }
+    .lesson-desc {
+      font-size: 0.87rem;
+      color: #b0b0b0;
+    }
+
+    /* ── Summary cards ── */
+    .summary-card {
+      background: rgba(34, 211, 238, 0.05);
+      border: 1px solid rgba(34, 211, 238, 0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      font-size: 0.93rem;
+      color: #d4d4d4;
+      line-height: 1.6;
+    }
+    .summary-card::before {
+      content: '→';
+      color: #22d3ee;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">Cornelius: Salvation Comes to the Gentiles</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Acts 10</span>
+      <span class="badge">Acts 11</span>
+    </div>
+    <p style="margin-top:14px; font-size:0.9rem; color:#a0a0a0; line-height:1.6;">This story is very important because it shows how God opened the way of salvation to the <strong style="color:#ececec">Gentiles</strong> (non-Jews). The events are told step by step in simple English.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>Who Was Cornelius?</h2>
+    <p><span class="name">Cornelius</span> lived in <span class="place">Caesarea</span>. He was a Roman centurion — a Roman army officer in charge of about <span class="num">100</span> soldiers. Even though he was not Jewish (a Gentile, meaning non-Jew), he was a good and God-fearing man.</p>
+    <div class="profile-card">
+      <div class="profile-row"><span class="profile-icon">🙏</span><div><strong>Prayer</strong>He prayed to God regularly</div></div>
+      <div class="profile-row"><span class="profile-icon">💛</span><div><strong>Generosity</strong>He gave money to help poor people</div></div>
+      <div class="profile-row"><span class="profile-icon">🏠</span><div><strong>Household</strong>His whole family also respected God</div></div>
+      <div class="profile-row"><span class="profile-icon">✝️</span><div><strong>Faith</strong>He believed in God but had not yet heard the full gospel about Jesus</div></div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>Cornelius Receives a Vision</h2>
+    <div><span class="section-ref">Acts 10:1–8</span></div>
+    <p>One day around <span class="num">3 PM</span>, <span class="name">Cornelius</span> was praying. Suddenly an angel of God appeared and called his name:</p>
+    <blockquote>
+      <p>"Cornelius!"</p>
+    </blockquote>
+    <p><span class="name">Cornelius</span> became afraid and asked: <em style="color:#d4d4d4">"What is it, Lord?"</em> The angel told him:</p>
+    <blockquote>
+      <p>Your prayers have been heard by God. Your help to the poor has been remembered by God.</p>
+    </blockquote>
+    <p class="section-question">Instructions from the angel:</p>
+    <ul>
+      <li>Send men to the city of <span class="place">Joppa</span></li>
+      <li>Find a man named <span class="name">Simon Peter</span></li>
+      <li>He is staying with <span class="name">Simon the tanner</span>, whose house is near the sea</li>
+      <li>Bring <span class="name">Peter</span> to your house</li>
+    </ul>
+    <p><span class="name">Cornelius</span> immediately obeyed. He sent two servants and one soldier who respected God to travel to <span class="place">Joppa</span>.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>Peter Receives a Vision from God</h2>
+    <div><span class="section-ref">Acts 10:9–16</span></div>
+    <p>While <span class="name">Cornelius</span>' men were traveling, something important happened to <span class="name">Peter</span>. Around noon he went to the roof of the house to pray. While praying he became very hungry — then he fell into a vision.</p>
+    <p class="section-question">What Peter saw:</p>
+    <p>The sky opened and something like a large <span class="obj">sheet</span> came down from heaven, tied at the four corners. Inside were many animals:</p>
+    <div class="sheet-items">
+      <div class="sheet-item"><span>🦁</span> Wild animals</div>
+      <div class="sheet-item"><span>🦎</span> Reptiles</div>
+      <div class="sheet-item"><span>🐦</span> Birds</div>
+    </div>
+    <p>Many of these were considered <em style="color:#d4d4d4">unclean</em> according to Jewish law. Then a voice said:</p>
+    <blockquote>
+      <p>"Peter, get up. Kill and eat."</p>
+    </blockquote>
+    <p><span class="name">Peter</span> refused: <em style="color:#d4d4d4">"No, Lord! I have never eaten anything unclean."</em> But the voice replied:</p>
+    <blockquote>
+      <p>"What God has made clean, do not call unclean."</p>
+    </blockquote>
+    <p>This happened <span class="num">three</span> times. Then the sheet went back into heaven. <span class="name">Peter</span> was confused and wondered what the vision meant.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>Cornelius' Men Arrive</h2>
+    <div><span class="section-ref">Acts 10:17–23</span></div>
+    <p>At that moment, the men sent by <span class="name">Cornelius</span> arrived at the house. The Holy Spirit spoke to <span class="name">Peter</span>:</p>
+    <blockquote>
+      <p>Three men are looking for you. Go with them. Do not doubt.</p>
+    </blockquote>
+    <p><span class="name">Peter</span> went down and met the men. They explained everything — <span class="name">Cornelius</span> is a righteous man, an angel told him to bring you to his house, he wants to hear your message.</p>
+    <p><span class="name">Peter</span> invited them to stay the night. The next day he traveled with them to <span class="place">Caesarea</span>.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>Peter Meets Cornelius</h2>
+    <div><span class="section-ref">Acts 10:24–29</span></div>
+    <p>When <span class="name">Peter</span> arrived at <span class="name">Cornelius</span>' house, <span class="name">Cornelius</span> <span class="action">fell</span> at <span class="name">Peter</span>'s feet and tried to worship him. But <span class="name">Peter</span> stopped him:</p>
+    <blockquote>
+      <p>"Stand up! I am also a man."</p>
+    </blockquote>
+    <p><span class="name">Peter</span> then told everyone something important. Normally, Jews did not associate with Gentiles. But <span class="name">Peter</span> said:</p>
+    <blockquote>
+      <p>"God has shown me that I should not call any person unclean."</p>
+    </blockquote>
+    <p>This was the meaning of the vision of the animals. God was teaching <span class="name">Peter</span> that the gospel is for all people.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>Cornelius Explains His Vision</h2>
+    <div><span class="section-ref">Acts 10:30–33</span></div>
+    <p><span class="name">Cornelius</span> explained what happened <span class="num">four days</span> earlier — he was praying, an angel appeared, and told him to send for <span class="name">Peter</span>. Then he said:</p>
+    <blockquote>
+      <p>"We are all here in the presence of God to listen to what the Lord has commanded you to say."</p>
+    </blockquote>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>Peter Preaches the Gospel</h2>
+    <div><span class="section-ref">Acts 10:34–43</span></div>
+    <p><span class="name">Peter</span> began preaching about <span class="name">Jesus Christ</span>:</p>
+    <blockquote>
+      <p>God does not show favoritism. Anyone who fears God and does what is right is accepted by Him.</p>
+    </blockquote>
+    <p class="section-question">The gospel message Peter shared:</p>
+    <ul>
+      <li><span class="name">Jesus</span> preached peace and performed miracles</li>
+      <li><span class="name">Jesus</span> healed many people</li>
+      <li><span class="name">Jesus</span> was <span class="action">crucified</span> on a cross</li>
+      <li>God <span class="action">raised</span> Him from the dead on the <span class="num">third</span> day</li>
+      <li><span class="name">Jesus</span> appeared to witnesses after His resurrection</li>
+      <li>Everyone who believes in <span class="name">Jesus</span> receives forgiveness of sins</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>The Holy Spirit Comes on the Gentiles</h2>
+    <div><span class="section-ref">Acts 10:44–46</span></div>
+    <p>While <span class="name">Peter</span> was still speaking, something amazing happened — the Holy Spirit came upon everyone listening.</p>
+    <p>The Jewish believers who came with <span class="name">Peter</span> were shocked, because the Gentiles also received the Holy Spirit. They began:</p>
+    <ul>
+      <li>Speaking in other languages</li>
+      <li>Praising God</li>
+    </ul>
+    <p>This showed clearly that God accepted the Gentiles.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>Cornelius and His Household Are Baptized</h2>
+    <div><span class="section-ref">Acts 10:47–48</span></div>
+    <p>After seeing this, <span class="name">Peter</span> said:</p>
+    <blockquote>
+      <p>"Can anyone stop these people from being baptized?"</p>
+    </blockquote>
+    <p>Since they received the Holy Spirit just like the Jewish believers, <span class="name">Peter</span> commanded that they be baptized in the name of <span class="name">Jesus Christ</span>. <span class="name">Cornelius</span> and his whole household became believers. They asked <span class="name">Peter</span> to stay with them for several days.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">10</span>Peter Explains the Event to the Church</h2>
+    <div><span class="section-ref">Acts 11:1–18</span></div>
+    <p>When <span class="name">Peter</span> returned to <span class="place">Jerusalem</span>, some Jewish believers questioned him about why he went into the house of Gentiles. <span class="name">Peter</span> carefully explained everything:</p>
+    <ul>
+      <li>The vision of the sheet</li>
+      <li>The angel appearing to <span class="name">Cornelius</span></li>
+      <li>The Holy Spirit coming upon the Gentiles</li>
+    </ul>
+    <p>Then <span class="name">Peter</span> said:</p>
+    <blockquote>
+      <p>"If God gave them the same gift He gave us when we believed in the Lord Jesus Christ, who was I to oppose God?"</p>
+    </blockquote>
+    <p>After hearing this, the believers praised God and said:</p>
+    <blockquote>
+      <p>"God has also granted repentance to the Gentiles."</p>
+    </blockquote>
+  </div>
+
+  <!-- 11 Lessons -->
+  <div class="section">
+    <h2 class="section-title">Important Lessons From the Story</h2>
+
+    <div class="lesson-card">
+      <div class="lesson-title">1. The gospel is for everyone</div>
+      <div class="lesson-desc">Salvation is not only for Jews — it is for all nations and all people.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">2. God sees sincere hearts</div>
+      <div class="lesson-desc">Cornelius sincerely sought God through prayer and kindness. God responded to his heart.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">3. God changes human traditions</div>
+      <div class="lesson-desc">Peter learned that God does not show favoritism. People from every nation can come to God.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">4. The Holy Spirit confirms God's acceptance</div>
+      <div class="lesson-desc">When the Holy Spirit came on Cornelius' house, it proved that Gentiles were fully accepted by God.</div>
+    </div>
+  </div>
+
+  <!-- 12 Summary -->
+  <div class="section">
+    <h2 class="section-title">Simple Summary</h2>
+    <div class="summary-card"><span class="name">Cornelius</span> was a Roman officer who feared God and prayed regularly.</div>
+    <div class="summary-card">God sent an angel telling him to invite <span class="name">Peter</span>.</div>
+    <div class="summary-card">At the same time, God gave <span class="name">Peter</span> a vision teaching that no person is unclean.</div>
+    <div class="summary-card"><span class="name">Peter</span> came to <span class="name">Cornelius</span>' house and preached about <span class="name">Jesus</span>.</div>
+    <div class="summary-card">The Holy Spirit came upon the Gentiles, and they were baptized.</div>
+    <div class="summary-card">This event showed that salvation through <span class="name">Jesus</span> is for all people, not only Jews.</div>
+  </div>
+
+</div>
+</body>
+</html>

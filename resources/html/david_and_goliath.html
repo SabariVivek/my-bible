@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#212121">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>David and Goliath</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&family=Söhne+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #212121;
+      --text: #ececec;
+      --divider: #3d3d3d;
+      --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background-color: #212121;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .section {
+      padding: 26px 0 20px;
+      border-bottom: 1px solid var(--divider);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.02s; }
+    .section:nth-child(2)  { animation-delay: 0.04s; }
+    .section:nth-child(3)  { animation-delay: 0.06s; }
+    .section:nth-child(4)  { animation-delay: 0.08s; }
+    .section:nth-child(5)  { animation-delay: 0.10s; }
+    .section:nth-child(6)  { animation-delay: 0.12s; }
+    .section:nth-child(7)  { animation-delay: 0.14s; }
+    .section:nth-child(8)  { animation-delay: 0.16s; }
+    .section:nth-child(9)  { animation-delay: 0.18s; }
+    .section:nth-child(10) { animation-delay: 0.20s; }
+    .section:nth-child(11) { animation-delay: 0.22s; }
+    .section:nth-child(12) { animation-delay: 0.24s; }
+    .section:nth-child(13) { animation-delay: 0.26s; }
+    .section:nth-child(14) { animation-delay: 0.28s; }
+    .section:nth-child(15) { animation-delay: 0.30s; }
+    .section:nth-child(16) { animation-delay: 0.32s; }
+    .section:nth-child(17) { animation-delay: 0.34s; }
+    .section:nth-child(18) { animation-delay: 0.36s; }
+    .section:nth-child(19) { animation-delay: 0.38s; }
+    .section:nth-child(20) { animation-delay: 0.40s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap {
+      padding: 24px 0 20px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .verse-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .badge-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8e8ea0;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Heading ── */
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fbfbfb;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px dotted #726b64;
+      display: table;
+    }
+
+    .section-ref {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #b8834a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sub-question ── */
+    .section-question {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+
+    /* ── Body ── */
+    .section p {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #b8834a;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(180, 175, 190, 0.08);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    blockquote p { margin-bottom: 6px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .section ul {
+      margin: 6px 0 10px 20px;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Goliath armor grid ── */
+    .armor-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin: 10px 0 12px;
+    }
+    .armor-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.15);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.92rem;
+      color: #d4d4d4;
+    }
+    .armor-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .armor-label { font-weight: 600; color: #fb7185; margin-right: 5px; }
+
+    /* ── Rewards list ── */
+    .reward-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin: 10px 0 12px;
+    }
+    .reward-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(34, 211, 238, 0.05);
+      border: 1px solid rgba(34, 211, 238, 0.13);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.92rem;
+      color: #d4d4d4;
+    }
+    .reward-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+    /* ── Five stones section banner ── */
+    .stones-banner {
+      background: linear-gradient(90deg, rgba(196,181,253,0.10) 0%, rgba(34,211,238,0.06) 100%);
+      border: 1px solid rgba(196,181,253,0.20);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .stones-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .stones-title { font-size: 1rem; font-weight: 600; color: #fbfbfb; margin-bottom: 2px; }
+    .stones-sub { font-size: 0.78rem; color: #8e8ea0; }
+
+    /* ── Stone reason cards ── */
+    .stone-card {
+      background: rgba(167, 139, 250, 0.06);
+      border: 1px solid rgba(167, 139, 250, 0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .stone-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background: #a78bfa;
+      color: #1a0a2e;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    .stone-title { font-size: 0.9rem; font-weight: 600; color: #a78bfa; margin-bottom: 5px; }
+    .stone-desc { font-size: 0.87rem; color: #b0b0b0; line-height: 1.6; }
+    .stone-desc ul { margin: 5px 0 0 16px; }
+    .stone-desc ul li { margin-bottom: 4px; }
+
+    /* ── Faith balance card ── */
+    .balance-card {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .balance-half {
+      flex: 1;
+      background: rgba(52, 211, 153, 0.06);
+      border: 1px solid rgba(52, 211, 153, 0.15);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.87rem;
+      color: #d4d4d4;
+      text-align: center;
+    }
+    .balance-half-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #34d399;
+      margin-bottom: 4px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── Summary stones row ── */
+    .stones-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 10px;
+    }
+    .stone-summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      color: #d4d4d4;
+    }
+    .stone-summary-num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #a78bfa;
+      background: rgba(167,139,250,0.12);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Lesson card ── */
+    .lesson-card {
+      background: rgba(167, 139, 250, 0.06);
+      border: 1px solid rgba(167, 139, 250, 0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .lesson-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-bottom: 4px;
+    }
+    .lesson-desc { font-size: 0.87rem; color: #b0b0b0; }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">David and Goliath</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">1 Samuel 17</span>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>The War Between Israel and the Philistines</h2>
+    <p>At that time, the nation of <span class="place">Israel</span> was ruled by <span class="name">King Saul</span>. The Israelites were often at war with their enemies, especially the <span class="name">Philistines</span>.</p>
+    <p>One day the armies of <span class="place">Israel</span> and the <span class="name">Philistines</span> gathered for battle.</p>
+    <ul>
+      <li>The <span class="name">Philistines</span> camped on one hill</li>
+      <li>The Israelites camped on another hill</li>
+      <li>Between them was a valley called the <span class="place">Valley of Elah</span></li>
+    </ul>
+    <p>Both armies stood ready for battle, but no one started fighting.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>The Giant Warrior – Goliath</h2>
+    <p>From the <span class="name">Philistine</span> army came a champion warrior named <span class="name">Goliath</span>. <span class="name">Goliath</span> was enormous in size. The Bible describes him in detail:</p>
+    <div class="armor-grid">
+      <div class="armor-item"><span class="armor-icon">📏</span><div><span class="armor-label">Height</span>about six cubits and a span — around <span class="num">9 feet / 2.7 meters</span></div></div>
+      <div class="armor-item"><span class="armor-icon">⛑️</span><div><span class="armor-label">Helmet</span>bronze helmet on his head</div></div>
+      <div class="armor-item"><span class="armor-icon">🛡️</span><div><span class="armor-label">Coat of armor</span>weighed about <span class="num">5,000 shekels</span> of bronze</div></div>
+      <div class="armor-item"><span class="armor-icon">🦵</span><div><span class="armor-label">Leg armor</span>bronze armor covered his legs</div></div>
+      <div class="armor-item"><span class="armor-icon">🗡️</span><div><span class="armor-label">Javelin</span>a bronze javelin hung on his back</div></div>
+      <div class="armor-item"><span class="armor-icon">⚔️</span><div><span class="armor-label">Spear</span>very large like a weaver's beam — iron tip alone weighed about <span class="num">600 shekels</span></div></div>
+      <div class="armor-item"><span class="armor-icon">🧑‍🤝‍🧑</span><div><span class="armor-label">Shield bearer</span>a soldier carrying a shield walked before him</div></div>
+    </div>
+    <p><span class="name">Goliath</span> stepped forward and shouted to the army of <span class="place">Israel</span>:</p>
+    <blockquote>
+      <p>"Why do you come out to fight? Choose one man to come down and fight me!"</p>
+    </blockquote>
+    <p>He challenged them:</p>
+    <ul>
+      <li>If the Israelite soldier defeated him, the <span class="name">Philistines</span> would serve <span class="place">Israel</span></li>
+      <li>But if <span class="name">Goliath</span> defeated the man, <span class="place">Israel</span> would serve the <span class="name">Philistines</span></li>
+    </ul>
+    <p>He then shouted proudly:</p>
+    <blockquote>
+      <p>"I defy the armies of Israel today! Give me a man to fight!"</p>
+    </blockquote>
+    <p>When <span class="name">King Saul</span> and the Israelites heard this, they became very afraid.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>Goliath's Daily Challenge</h2>
+    <p>For <span class="num">40 days</span>, morning and evening, <span class="name">Goliath</span> came out and repeated the same challenge. Every time the Israelites heard him shouting, they ran away in fear. No one was brave enough to fight him.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>David Comes to the Battlefield</h2>
+    <p>At that time, there was a young shepherd boy named <span class="name">David</span>, the son of <span class="name">Jesse</span> from <span class="place">Bethlehem</span>. <span class="name">David</span> had <span class="num">seven</span> brothers, and his three oldest brothers were soldiers in <span class="name">Saul</span>'s army:</p>
+    <ul>
+      <li><span class="name">Eliab</span></li>
+      <li><span class="name">Abinadab</span></li>
+      <li><span class="name">Shammah</span></li>
+    </ul>
+    <p><span class="name">David</span> was the youngest son. He usually stayed at home taking care of his father's sheep.</p>
+    <p>One day <span class="name">Jesse</span> told <span class="name">David</span>:</p>
+    <blockquote>
+      <p>"Take this roasted grain and these ten loaves of bread to your brothers. Also take these ten cheeses to the commander of their unit. See how your brothers are doing and bring back news."</p>
+    </blockquote>
+    <p>So early in the morning <span class="name">David</span> left the sheep with another shepherd and went to the battlefield.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>David Hears Goliath</h2>
+    <p>When <span class="name">David</span> arrived, the armies were standing in battle formation shouting war cries. Just then <span class="name">Goliath</span> came out again and shouted his usual challenge. <span class="name">David</span> heard the giant mocking <span class="place">Israel</span> and insulting the living God.</p>
+    <p>The soldiers told <span class="name">David</span>: <em style="color:#d4d4d4">"This giant comes every day. Whoever kills him will receive great rewards from the king."</em></p>
+    <p class="section-question">The rewards included:</p>
+    <div class="reward-list">
+      <div class="reward-item"><span class="reward-icon">💰</span> Great riches</div>
+      <div class="reward-item"><span class="reward-icon">👑</span> The king's daughter in marriage</div>
+      <div class="reward-item"><span class="reward-icon">📜</span> His family being free from taxes in Israel</div>
+    </div>
+    <p><span class="name">David</span> asked the soldiers again about the reward. His oldest brother <span class="name">Eliab</span> became angry with him and said:</p>
+    <blockquote>
+      <p>"Why have you come here? Who did you leave those few sheep with in the wilderness? I know your pride — you came only to watch the battle!"</p>
+    </blockquote>
+    <p>But <span class="name">David</span> replied calmly:</p>
+    <blockquote>
+      <p>"What have I done now? I was only asking a question."</p>
+    </blockquote>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>David Speaks to King Saul</h2>
+    <p>Eventually <span class="name">David</span>'s words were reported to <span class="name">King Saul</span>, and <span class="name">Saul</span> called for him. <span class="name">David</span> said to <span class="name">Saul</span>:</p>
+    <blockquote>
+      <p>"Do not let anyone lose heart because of this Philistine. Your servant will go and fight him."</p>
+    </blockquote>
+    <p><span class="name">Saul</span> looked at <span class="name">David</span> and said:</p>
+    <blockquote>
+      <p>"You cannot fight him. You are only a boy, and he has been a warrior since his youth."</p>
+    </blockquote>
+    <p>But <span class="name">David</span> answered:</p>
+    <blockquote>
+      <p>"When I was taking care of my father's sheep, a lion or a bear sometimes came and carried off a sheep."</p>
+    </blockquote>
+    <p><span class="name">David</span> continued:</p>
+    <blockquote>
+      <p>"I chased it, struck it, and rescued the sheep. If the animal attacked me, I grabbed its hair, struck it, and killed it."</p>
+    </blockquote>
+    <p>Then <span class="name">David</span> said something powerful:</p>
+    <blockquote>
+      <p>"The Lord who delivered me from the paw of the lion and the bear will deliver me from this Philistine."</p>
+    </blockquote>
+    <p><span class="name">Saul</span> finally said:</p>
+    <blockquote>
+      <p>"Go, and the Lord be with you."</p>
+    </blockquote>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>David Refuses Saul's Armor</h2>
+    <p><span class="name">Saul</span> gave <span class="name">David</span> his own armor:</p>
+    <ul>
+      <li>A <span class="obj">bronze helmet</span></li>
+      <li>A <span class="obj">coat of armor</span></li>
+      <li>A <span class="obj">sword</span></li>
+    </ul>
+    <p><span class="name">David</span> tried to walk in them, but he was not used to them. So <span class="name">David</span> said:</p>
+    <blockquote>
+      <p>"I cannot fight with these. I am not used to them."</p>
+    </blockquote>
+    <p>He removed the armor.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>David's Simple Weapons</h2>
+    <p>Instead, <span class="name">David</span> took:</p>
+    <ul>
+      <li>His <span class="obj">shepherd's staff</span></li>
+      <li>His <span class="obj">sling</span></li>
+      <li><span class="num">Five</span> smooth <span class="obj">stones</span> from a stream</li>
+    </ul>
+    <p>He put the stones in his <span class="obj">shepherd's bag</span> and walked toward the giant.</p>
+  </div>
+
+  <!-- WHY FIVE STONES — inserted here in the middle -->
+  <div class="section">
+    <div class="stones-banner">
+      <div class="stones-icon">🪨</div>
+      <div>
+        <div class="stones-title">Why Did David Pick Five Stones?</div>
+        <div class="stones-sub">1 Samuel 17:40 — A closer look</div>
+      </div>
+    </div>
+    <p>The Bible says <span class="name">David</span> picked <span class="num">five</span> smooth stones from the stream (<em style="color:#d4d4d4">1 Samuel 17:40</em>). The Bible does not directly explain why the number was five, but there are a few simple and commonly understood reasons.</p>
+
+    <div class="stone-card">
+      <div class="stone-title"><span class="stone-num">1</span>In Case the First Stone Missed</div>
+      <div class="stone-desc">
+        The simplest reason is practical preparation. <span class="name">David</span> knew he was going into battle, so he took extra stones as backup.
+        <ul>
+          <li>If the first stone missed, he could try again</li>
+          <li>A sling could shoot stones very quickly</li>
+          <li>Having several stones was normal for a sling fighter</li>
+        </ul>
+        So <span class="name">David</span> was prepared, not careless.
+      </div>
+    </div>
+
+    <div class="stone-card">
+      <div class="stone-title"><span class="stone-num">2</span>Goliath Had Brothers</div>
+      <div class="stone-desc">
+        Later in the Bible we learn that <span class="name">Goliath</span> had four other giant relatives.
+        <ul>
+          <li>📖 Second Book of Samuel 21:15–22</li>
+          <li>📖 First Book of Chronicles 20:4–8</li>
+        </ul>
+        Some Bible teachers think <span class="name">David</span> may have taken <span class="num">five</span> stones because there were five giants in that family (<span class="name">Goliath</span> + four relatives). So if others attacked, he was ready. However, the Bible does not clearly say this was the reason.
+      </div>
+    </div>
+
+    <div class="stone-card">
+      <div class="stone-title"><span class="stone-num">3</span>David Was Prepared but Trusted God</div>
+      <div class="stone-desc">
+        <span class="name">David</span> trusted God completely, but he still prepared for the battle. He did not say: <em>"God will do everything, so I will bring nothing."</em> Instead he took his <span class="obj">sling</span>, took <span class="num">five</span> stones, and went forward trusting God. This shows a good balance:
+      </div>
+    </div>
+
+    <div class="balance-card">
+      <div class="balance-half">
+        <div class="balance-half-title">Faith in God</div>
+        Trusted the Lord completely for victory
+      </div>
+      <div class="balance-half">
+        <div class="balance-half-title">Wise Preparation</div>
+        Brought his sling and five stones ready
+      </div>
+    </div>
+
+    <p class="section-question">David picked five stones because:</p>
+    <div class="stones-summary">
+      <div class="stone-summary-item"><div class="stone-summary-num">1</div><div>He wanted extra stones in case he missed</div></div>
+      <div class="stone-summary-item"><div class="stone-summary-num">2</div><div>Some think it relates to Goliath's giant relatives</div></div>
+      <div class="stone-summary-item"><div class="stone-summary-num">3</div><div>It shows David prepared well but trusted God for victory</div></div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>Goliath Mocks David</h2>
+    <p>When <span class="name">Goliath</span> saw <span class="name">David</span> coming toward him, he was insulted. <span class="name">David</span> looked very young and had no armor. <span class="name">Goliath</span> said:</p>
+    <blockquote>
+      <p>"Am I a dog that you come at me with sticks?"</p>
+    </blockquote>
+    <p>He cursed <span class="name">David</span> by his gods and shouted:</p>
+    <blockquote>
+      <p>"Come here, and I will give your flesh to the birds and the wild animals!"</p>
+    </blockquote>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">10</span>David's Powerful Reply</h2>
+    <p><span class="name">David</span> answered <span class="name">Goliath</span> with faith and courage:</p>
+    <blockquote>
+      <p>"You come against me with sword, spear, and javelin, but I come against you in the name of the Lord Almighty, the God of the armies of Israel, whom you have defied."</p>
+    </blockquote>
+    <p><span class="name">David</span> continued:</p>
+    <blockquote>
+      <p>"Today the Lord will deliver you into my hands. I will strike you down and cut off your head. Then the whole world will know that there is a God in Israel."</p>
+    </blockquote>
+    <p>He also said:</p>
+    <blockquote>
+      <p>"The battle belongs to the Lord."</p>
+    </blockquote>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">11</span>The Battle</h2>
+    <p>As <span class="name">Goliath</span> moved closer to attack, <span class="name">David</span> <span class="action">ran quickly</span> toward the battle line. He reached into his bag, took out a <span class="obj">stone</span>, placed it in his <span class="obj">sling</span>, and swung it.</p>
+    <p>The stone flew through the air and <span class="action">struck</span> <span class="name">Goliath</span> on the forehead. The stone <span class="action">sank</span> into his forehead, and the giant <span class="action">fell face down</span> on the ground.</p>
+    <p><span class="name">David</span> defeated <span class="name">Goliath</span> without a sword. Then <span class="name">David</span> ran to <span class="name">Goliath</span>, took the giant's own <span class="obj">sword</span>, and <span class="action">cut off</span> his head.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">12</span>The Philistines Run Away</h2>
+    <p>When the <span class="name">Philistine</span> army saw their champion was dead, they became afraid and <span class="action">ran away</span>. The Israelite army shouted loudly and <span class="action">chased</span> the <span class="name">Philistines</span>. They defeated them and plundered their camp.</p>
+    <p><span class="name">David</span> took <span class="name">Goliath</span>'s head and later placed the giant's <span class="obj">weapons</span> in his own tent.</p>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">13</span>Saul Asks About David</h2>
+    <p>After the battle, <span class="name">King Saul</span> asked: <em style="color:#d4d4d4">"Whose son is this young man?"</em> <span class="name">David</span> was brought before <span class="name">Saul</span>, still holding <span class="name">Goliath</span>'s head. <span class="name">David</span> answered:</p>
+    <blockquote>
+      <p>"I am the son of your servant Jesse of Bethlehem."</p>
+    </blockquote>
+    <p>This victory made <span class="name">David</span> famous throughout <span class="place">Israel</span>.</p>
+  </div>
+
+  <!-- Lesson -->
+  <div class="section">
+    <h2 class="section-title">Important Lesson from the Story</h2>
+    <div class="lesson-card">
+      <div class="lesson-title">God does not look at size, strength, or weapons</div>
+      <div class="lesson-desc">God gives victory to those who trust Him. David's faith was stronger than Goliath's strength.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

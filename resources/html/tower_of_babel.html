@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#212121">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Tower of Babel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&family=Söhne+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #212121;
+      --text: #ececec;
+      --divider: #3d3d3d;
+      --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background-color: #212121;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .section {
+      padding: 26px 0 20px;
+      border-bottom: 1px solid var(--divider);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.03s; }
+    .section:nth-child(2)  { animation-delay: 0.06s; }
+    .section:nth-child(3)  { animation-delay: 0.09s; }
+    .section:nth-child(4)  { animation-delay: 0.12s; }
+    .section:nth-child(5)  { animation-delay: 0.15s; }
+    .section:nth-child(6)  { animation-delay: 0.18s; }
+    .section:nth-child(7)  { animation-delay: 0.21s; }
+    .section:nth-child(8)  { animation-delay: 0.24s; }
+    .section:nth-child(9)  { animation-delay: 0.27s; }
+    .section:nth-child(10) { animation-delay: 0.30s; }
+    .section:nth-child(11) { animation-delay: 0.33s; }
+    .section:nth-child(12) { animation-delay: 0.36s; }
+    .section:nth-child(13) { animation-delay: 0.39s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap {
+      padding: 24px 0 20px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .verse-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .badge-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8e8ea0;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Heading ── */
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fbfbfb;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px dotted #726b64;
+      display: table;
+    }
+
+    .section-ref {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #b8834a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sub-question ── */
+    .section-question {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+
+    /* ── Body ── */
+    .section p {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #b8834a;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(180, 175, 190, 0.08);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    blockquote p { margin-bottom: 6px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+    .bq-ref {
+      display: block;
+      font-size: 0.72rem;
+      color: #d4a574;
+      font-style: normal;
+      margin-top: 6px;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      width: fit-content;
+    }
+
+    /* ── Lists ── */
+    .section ul {
+      margin: 6px 0 10px 20px;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Goals / materials cards ── */
+    .goal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .goal-card {
+      background: rgba(251, 113, 133, 0.06);
+      border: 1px solid rgba(251, 113, 133, 0.16);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.88rem;
+      color: #d4d4d4;
+    }
+    .goal-icon { font-size: 1.2rem; margin-bottom: 5px; }
+    .goal-label { font-weight: 600; color: #fb7185; font-size: 0.85rem; }
+
+    /* ── Materials row ── */
+    .material-row {
+      display: flex;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .material-card {
+      flex: 1;
+      background: rgba(52, 211, 153, 0.06);
+      border: 1px solid rgba(52, 211, 153, 0.15);
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-align: center;
+      font-size: 0.88rem;
+    }
+    .material-icon { font-size: 1.3rem; margin-bottom: 4px; }
+    .material-label { font-weight: 600; color: #34d399; display: block; margin-bottom: 2px; }
+    .material-desc { color: #a0a0a0; font-size: 0.8rem; }
+
+    /* ── Construction breakdown card ── */
+    .chaos-card {
+      background: rgba(239, 68, 68, 0.05);
+      border: 1px solid rgba(239, 68, 68, 0.14);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 10px 0 12px;
+    }
+    .chaos-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #ef4444;
+      margin-bottom: 8px;
+    }
+    .chaos-card ul { margin: 0 0 0 16px; }
+
+    /* ── Lesson cards ── */
+    .lesson-card {
+      background: rgba(167, 139, 250, 0.06);
+      border: 1px solid rgba(167, 139, 250, 0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .lesson-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      background: #a78bfa;
+      color: #1a0a2e;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    .lesson-title { font-size: 0.9rem; font-weight: 600; color: #a78bfa; margin-bottom: 4px; }
+    .lesson-desc { font-size: 0.87rem; color: #b0b0b0; }
+
+    /* ── Summary cards ── */
+    .summary-card {
+      background: rgba(34, 211, 238, 0.05);
+      border: 1px solid rgba(34, 211, 238, 0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      font-size: 0.93rem;
+      color: #d4d4d4;
+      line-height: 1.6;
+    }
+    .summary-card::before {
+      content: '→';
+      color: #22d3ee;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">Tower of Babel: Pride, Unity & Confusion</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Genesis 11:1–9</span>
+    </div>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>The Whole World Had One Language</h2>
+    <div><span class="section-ref">Genesis 11:1</span></div>
+    <p>After the flood in the time of <span class="name">Noah</span>'s descendants, people multiplied and began spreading across the earth. At that time everyone spoke the same language.</p>
+    <p>Because they spoke the same language, people could easily understand each other and work together. The Bible says:</p>
+    <blockquote>
+      <p>"The whole earth had one language and one speech."</p>
+      <span class="bq-ref">Genesis 11:1</span>
+    </blockquote>
+    <p>This unity gave people the ability to plan and build large projects together.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>People Settled in the Land of Shinar</h2>
+    <div><span class="section-ref">Genesis 11:2</span></div>
+    <p>As people migrated eastward, they came to a large plain in the land of <span class="place">Shinar</span> (an area later connected with <span class="place">Babylon</span> in <span class="place">Mesopotamia</span>). They decided to settle there instead of spreading throughout the earth.</p>
+    <p>This decision is important because earlier God had commanded humanity to:</p>
+    <ul>
+      <li>Fill the earth</li>
+      <li>Spread out across the world</li>
+    </ul>
+    <p>But instead, they chose to stay together in one place.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>The Plan to Build a Great City and Tower</h2>
+    <div><span class="section-ref">Genesis 11:3–4</span></div>
+    <p>The people spoke to each other and made a plan:</p>
+    <blockquote>
+      <p>"Come, let us make bricks and bake them thoroughly."</p>
+    </blockquote>
+    <p>Instead of stones, they used:</p>
+    <div class="material-row">
+      <div class="material-card">
+        <div class="material-icon">🧱</div>
+        <span class="material-label">Bricks</span>
+        <span class="material-desc">for building</span>
+      </div>
+      <div class="material-card">
+        <div class="material-icon">🖤</div>
+        <span class="material-label">Bitumen</span>
+        <span class="material-desc">tar / asphalt for mortar</span>
+      </div>
+    </div>
+    <p>Then they said something very important:</p>
+    <blockquote>
+      <p>"Come, let us build ourselves a city and a tower whose top reaches to heaven, and let us make a name for ourselves; otherwise we will be scattered over the face of the whole earth."</p>
+      <span class="bq-ref">Genesis 11:4</span>
+    </blockquote>
+    <p class="section-question">Their goals were:</p>
+    <div class="goal-grid">
+      <div class="goal-card"><div class="goal-icon">🏙️</div><div class="goal-label">Build a city</div></div>
+      <div class="goal-card"><div class="goal-icon">🗼</div><div class="goal-label">Build a huge tower reaching toward heaven</div></div>
+      <div class="goal-card"><div class="goal-icon">🏆</div><div class="goal-label">Make a famous name for themselves</div></div>
+      <div class="goal-card"><div class="goal-icon">🚫</div><div class="goal-label">Avoid being scattered across the earth</div></div>
+    </div>
+    <p>This shows human pride and self-glory.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>The Tower They Built</h2>
+    <p>The tower was likely similar to a <em style="color:#d4d4d4">ziggurat</em> — a tall stepped temple structure common in ancient <span class="place">Mesopotamia</span>. The tower symbolized:</p>
+    <ul>
+      <li>Human pride</li>
+      <li>Human unity without God</li>
+      <li>Desire to reach heaven by human effort</li>
+    </ul>
+    <p>Instead of honoring God, they wanted to glorify themselves.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>God Comes Down to See the City</h2>
+    <div><span class="section-ref">Genesis 11:5</span></div>
+    <p>The Bible says something interesting:</p>
+    <blockquote>
+      <p>"The Lord came down to see the city and the tower which the children of men built."</p>
+      <span class="bq-ref">Genesis 11:5</span>
+    </blockquote>
+    <p>This does not mean God could not see from heaven. It simply shows God examining what humanity was doing.</p>
+    <p class="section-question">God saw:</p>
+    <ul>
+      <li>Their unity</li>
+      <li>Their pride</li>
+      <li>Their rebellion against His command</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>God's Concern About Human Unity in Evil</h2>
+    <div><span class="section-ref">Genesis 11:6</span></div>
+    <p>God said:</p>
+    <blockquote>
+      <p>"Indeed the people are one and they all have one language, and this is what they begin to do; now nothing that they propose will be withheld from them."</p>
+      <span class="bq-ref">Genesis 11:6</span>
+    </blockquote>
+    <p>God recognized that:</p>
+    <ul>
+      <li>When people unite in pride and rebellion, they can do great evil</li>
+      <li>Their unity could lead to greater rebellion against God</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>God Confuses Their Language</h2>
+    <div><span class="section-ref">Genesis 11:7</span></div>
+    <p>So God decided to stop the project. God said:</p>
+    <blockquote>
+      <p>"Come, let Us go down and confuse their language, so that they may not understand one another's speech."</p>
+      <span class="bq-ref">Genesis 11:7</span>
+    </blockquote>
+    <p>Suddenly something miraculous happened:</p>
+    <ul>
+      <li>People started speaking different languages</li>
+      <li>Workers could no longer understand each other</li>
+      <li>Communication completely broke down</li>
+    </ul>
+    <div class="chaos-card">
+      <div class="chaos-label">Imagine a construction site where:</div>
+      <ul>
+        <li>One person speaks one language</li>
+        <li>Another speaks something different</li>
+        <li>No one understands instructions</li>
+      </ul>
+    </div>
+    <p>The project could not continue.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>The People Are Scattered Across the Earth</h2>
+    <div><span class="section-ref">Genesis 11:8</span></div>
+    <p>Because they could no longer communicate:</p>
+    <ul>
+      <li>The building stopped</li>
+      <li>People separated into groups based on their language</li>
+      <li>These groups <span class="action">spread</span> across the entire earth</li>
+    </ul>
+    <p>This fulfilled God's earlier command for humans to fill the earth.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>The City Was Called Babel</h2>
+    <div><span class="section-ref">Genesis 11:9</span></div>
+    <p>The place was called <span class="place">Babel</span>. The Bible explains why:</p>
+    <blockquote>
+      <p>"Because there the Lord confused the language of all the earth."</p>
+      <span class="bq-ref">Genesis 11:9</span>
+    </blockquote>
+    <p>The word <strong style="color:#fbbf24">Babel</strong> is related to confusion. From that moment:</p>
+    <ul>
+      <li>Many languages existed</li>
+      <li>Nations began forming</li>
+      <li>People spread throughout the world</li>
+    </ul>
+  </div>
+
+  <!-- Lessons -->
+  <div class="section">
+    <h2 class="section-title">Key Lessons from the Tower of Babel</h2>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">1</span>Human Pride</div>
+      <div class="lesson-desc">The people wanted to make a name for themselves instead of honoring God.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">2</span>Disobedience to God</div>
+      <div class="lesson-desc">God told humans to fill the earth, but they tried to stay together and resist His plan.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">3</span>Unity Without God Leads to Trouble</div>
+      <div class="lesson-desc">Unity is powerful, but when used for rebellion, it leads to sin.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title"><span class="lesson-num">4</span>God Is Sovereign</div>
+      <div class="lesson-desc">God can stop human plans at any moment.</div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <h2 class="section-title">Short Summary</h2>
+    <div class="summary-card">After the flood, all people spoke one language.</div>
+    <div class="summary-card">They settled in <span class="place">Shinar</span> and built a city and a tower to make a name for themselves.</div>
+    <div class="summary-card">God saw their pride and <span class="action">confused</span> their language.</div>
+    <div class="summary-card">People could not understand each other.</div>
+    <div class="summary-card">They stopped building and <span class="action">scattered</span> across the earth.</div>
+    <div class="summary-card">The place was called <span class="place">Babel</span>.</div>
+  </div>
+
+</div>
+</body>
+</html>

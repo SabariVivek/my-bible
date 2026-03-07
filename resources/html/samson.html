@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#212121">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>The Story of Samson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Söhne:wght@400;500;600&family=Söhne+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #212121;
+      --text: #ececec;
+      --divider: #3d3d3d;
+      --font: 'Söhne', 'ui-sans-serif', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      background-color: #212121;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    .page {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .section {
+      padding: 26px 0 20px;
+      border-bottom: 1px solid var(--divider);
+      animation: fadeUp 0.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section:nth-child(1)  { animation-delay: 0.02s; }
+    .section:nth-child(2)  { animation-delay: 0.04s; }
+    .section:nth-child(3)  { animation-delay: 0.06s; }
+    .section:nth-child(4)  { animation-delay: 0.08s; }
+    .section:nth-child(5)  { animation-delay: 0.10s; }
+    .section:nth-child(6)  { animation-delay: 0.12s; }
+    .section:nth-child(7)  { animation-delay: 0.14s; }
+    .section:nth-child(8)  { animation-delay: 0.16s; }
+    .section:nth-child(9)  { animation-delay: 0.18s; }
+    .section:nth-child(10) { animation-delay: 0.20s; }
+    .section:nth-child(11) { animation-delay: 0.22s; }
+    .section:nth-child(12) { animation-delay: 0.24s; }
+    .section:nth-child(13) { animation-delay: 0.26s; }
+    .section:nth-child(14) { animation-delay: 0.28s; }
+    .section:nth-child(15) { animation-delay: 0.30s; }
+    .section:nth-child(16) { animation-delay: 0.32s; }
+    .section:nth-child(17) { animation-delay: 0.34s; }
+    .section:nth-child(18) { animation-delay: 0.36s; }
+    .section:nth-child(19) { animation-delay: 0.38s; }
+    .section:nth-child(20) { animation-delay: 0.40s; }
+    .section:nth-child(21) { animation-delay: 0.42s; }
+    .section:nth-child(22) { animation-delay: 0.44s; }
+    .section:nth-child(23) { animation-delay: 0.46s; }
+    .section:nth-child(24) { animation-delay: 0.48s; }
+    .section:nth-child(25) { animation-delay: 0.50s; }
+    .section:nth-child(26) { animation-delay: 0.52s; }
+    .section:nth-child(27) { animation-delay: 0.54s; }
+    .section:nth-child(28) { animation-delay: 0.56s; }
+    .section:nth-child(29) { animation-delay: 0.58s; }
+    .section:nth-child(30) { animation-delay: 0.60s; }
+
+    /* ── Page Title ── */
+    .page-title-wrap {
+      padding: 24px 0 20px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .page-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fbfbfb 0%, #a78bfa 60%, #22d3ee 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .verse-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .badge-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8e8ea0;
+    }
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 3px 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Section Heading ── */
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #fbfbfb;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px dotted #726b64;
+      display: table;
+    }
+
+    .section-ref {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: #d4a574;
+      background: transparent;
+      border: 1px solid #b8834a;
+      border-radius: 20px;
+      padding: 1px 8px;
+      letter-spacing: 0.02em;
+      margin-top: 6px;
+      margin-bottom: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #b8834a;
+      color: #1a1208;
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sub-question ── */
+    .section-question {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 10px;
+      letter-spacing: 0.01em;
+      display: inline-block;
+    }
+
+    /* ── Body ── */
+    .section p {
+      color: var(--text);
+      margin-bottom: 10px;
+      font-size: 0.97rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Blockquote ── */
+    blockquote {
+      border-left: 3px solid #b8834a;
+      margin: 12px 0;
+      padding: 10px 14px;
+      background: rgba(180, 175, 190, 0.08);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #d4d4d4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    blockquote p { margin-bottom: 6px; color: inherit; font-size: inherit; }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .section ul {
+      margin: 6px 0 10px 20px;
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+    .section ul li { margin-bottom: 5px; }
+
+    /* ── Nazirite rules card ── */
+    .rule-card {
+      background: rgba(34, 211, 238, 0.05);
+      border: 1px solid rgba(34, 211, 238, 0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    .rule-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #22d3ee;
+      margin-bottom: 8px;
+    }
+    .rule-card ul {
+      margin: 0 0 0 16px;
+    }
+
+    /* ── False-answers list (Delilah) ── */
+    .attempt-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(251, 113, 133, 0.06);
+      border: 1px solid rgba(251, 113, 133, 0.15);
+      border-radius: 8px;
+      padding: 9px 12px;
+      margin-bottom: 8px;
+      font-size: 0.93rem;
+      color: #d4d4d4;
+    }
+    .attempt-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fb7185;
+      background: rgba(251,113,133,0.12);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Lesson cards ── */
+    .lesson-card {
+      background: rgba(167, 139, 250, 0.06);
+      border: 1px solid rgba(167, 139, 250, 0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+    }
+    .lesson-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #a78bfa;
+      margin-bottom: 4px;
+    }
+    .lesson-desc {
+      font-size: 0.87rem;
+      color: #b0b0b0;
+    }
+
+    /* ── Highlights ── */
+    .num    { color: #ef4444; font-weight: 600; }
+    .place  { color: #fbbf24; font-weight: 500; }
+    .obj    { color: #34d399; font-weight: 500; }
+    .action { color: #fb7185; font-weight: 600; }
+    .name   { color: #c4b5fd; font-weight: 500; }
+    .harsh  { color: #ef4444; font-weight: 500; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-title-wrap">
+    <h1 class="page-title">Samson: Strength, Weakness & Redemption</h1>
+    <div class="verse-badges">
+      <span class="badge-label">REF</span>
+      <span class="badge">Judges 13–16</span>
+    </div>
+    <p style="margin-top:14px; font-size:0.9rem; color:#a0a0a0; line-height:1.6;">This story tells how God raised a man with extraordinary strength to deliver <strong style="color:#ececec">Israel</strong> from the <strong style="color:#ececec">Philistines</strong>, but also shows how Samson's personal weaknesses led to his downfall.</p>
+
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">1</span>Israel Oppressed by the Philistines</h2>
+    <div><span class="section-ref">Judges 13:1</span></div>
+    <p>The story begins during a time when the Israelites again turned away from God. Because of their disobedience, God allowed the <span class="name">Philistines</span> to rule over <span class="place">Israel</span>. This oppression lasted <span class="num">40 years</span>. During this time, God planned to raise a deliverer.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">2</span>The Angel Announces Samson's Birth</h2>
+    <div><span class="section-ref">Judges 13:2–7</span></div>
+    <p>In the town of <span class="place">Zorah</span>, there lived a man named <span class="name">Manoah</span> and his wife.</p>
+    <p class="section-question">Important detail:</p>
+    <p><span class="name">Manoah</span>'s wife could not have children.</p>
+    <p>One day the Angel of the Lord appeared to her and told her she would give birth to a special son. The angel gave strict instructions:</p>
+    <div class="rule-card">
+      <div class="rule-label">Nazirite Vow — from birth</div>
+      <ul>
+        <li>She must not drink wine or strong drink</li>
+        <li>She must not eat anything unclean</li>
+        <li>The child would be a Nazirite dedicated to God from birth</li>
+        <li>No <span class="obj">razor</span> must touch his head</li>
+        <li>He would begin to deliver <span class="place">Israel</span> from the <span class="name">Philistines</span></li>
+      </ul>
+    </div>
+    <p>A Nazirite vow meant a life dedicated to God.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">3</span>Manoah Asks for Guidance</h2>
+    <div><span class="section-ref">Judges 13:8–14</span></div>
+    <p>When <span class="name">Manoah</span> heard about this visitor, he prayed:</p>
+    <blockquote>
+      <p>"Lord, please let the man of God come again and teach us how to raise the child."</p>
+    </blockquote>
+    <p>God answered the prayer. The angel appeared again to <span class="name">Manoah</span>'s wife. She quickly ran and brought <span class="name">Manoah</span>. <span class="name">Manoah</span> asked: <em style="color:#d4d4d4">"How should we raise this child?"</em> The angel repeated the instructions — the boy must be holy to God from birth.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">4</span>The Angel Reveals God's Power</h2>
+    <div><span class="section-ref">Judges 13:15–23</span></div>
+    <p><span class="name">Manoah</span> offered to prepare food for the angel. But the angel said:</p>
+    <blockquote>
+      <p>"If you offer something, offer it to the Lord."</p>
+    </blockquote>
+    <p>So <span class="name">Manoah</span> prepared a burnt offering. As the flame rose from the <span class="obj">altar</span>, the Angel of the Lord <span class="action">went up in the flame</span>. <span class="name">Manoah</span> and his wife fell to the ground in fear.</p>
+    <p><span class="name">Manoah</span> said: <em style="color:#d4d4d4">"We will surely die, because we have seen God!"</em> But his wife wisely replied — if God wanted to kill them, He would not have accepted the offering or given them this promise.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">5</span>Samson Is Born</h2>
+    <div><span class="section-ref">Judges 13:24–25</span></div>
+    <p>Soon the woman gave birth to a son. They named him <span class="name">Samson</span>. The Bible says the child grew, the Lord blessed him, and the Spirit of the Lord began to move him. This happened between the towns of <span class="place">Zorah</span> and <span class="place">Eshtaol</span>.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">6</span>Samson Wants a Philistine Wife</h2>
+    <div><span class="section-ref">Judges 14:1–4</span></div>
+    <p>When <span class="name">Samson</span> grew older, he traveled to <span class="place">Timnah</span>. There he saw a <span class="name">Philistine</span> woman and wanted to marry her. He told his parents: <em style="color:#d4d4d4">"Get her for me as my wife."</em></p>
+    <p>His parents objected and asked: <em style="color:#d4d4d4">"Why marry a Philistine woman? Aren't there women among our people?"</em> But they did not know that God was using this situation to begin conflict with the <span class="name">Philistines</span>.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">7</span>Samson Kills a Lion</h2>
+    <div><span class="section-ref">Judges 14:5–6</span></div>
+    <p>While traveling to <span class="place">Timnah</span> with his parents, a young lion suddenly <span class="action">attacked</span> <span class="name">Samson</span>. Then the Spirit of the Lord came powerfully upon him. <span class="name">Samson</span> <span class="action">tore the lion apart</span> with his bare hands. He told no one about this.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">8</span>Honey in the Lion's Carcass</h2>
+    <div><span class="section-ref">Judges 14:8–9</span></div>
+    <p>Later, <span class="name">Samson</span> returned to marry the woman. He passed by the place where he killed the lion. Inside the lion's dead body, bees had made a hive and there was <span class="obj">honey</span>. <span class="name">Samson</span> scooped out the honey, ate it while walking, and gave some to his parents — but he did not tell them it came from the lion's body. This was technically against the Nazirite purity rules.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">9</span>Samson's Wedding Feast and the Riddle</h2>
+    <div><span class="section-ref">Judges 14:10–14</span></div>
+    <p><span class="name">Samson</span> held a wedding feast. At the feast, <span class="num">30</span> Philistine men were chosen to accompany him. <span class="name">Samson</span> proposed a riddle:</p>
+    <blockquote>
+      <p>"Out of the eater came something to eat. Out of the strong came something sweet."</p>
+    </blockquote>
+    <p>He promised: if they solved it in <span class="num">7 days</span>, he would give them <span class="num">30 garments</span>. If they failed, they must give him <span class="num">30 garments</span>. The riddle referred to the lion and the honey.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">10</span>The Philistines Pressure Samson's Wife</h2>
+    <div><span class="section-ref">Judges 14:15–18</span></div>
+    <p>The <span class="name">Philistine</span> men could not solve the riddle. So they threatened <span class="name">Samson</span>'s wife:</p>
+    <blockquote>
+      <p>"If you do not find out the answer, we will burn you and your family."</p>
+    </blockquote>
+    <p>She cried to <span class="name">Samson</span> repeatedly until he finally told her. She then told the <span class="name">Philistine</span> men. On the seventh day they answered:</p>
+    <blockquote>
+      <p>"What is sweeter than honey? What is stronger than a lion?"</p>
+    </blockquote>
+    <p><span class="name">Samson</span> realised they cheated and said:</p>
+    <blockquote>
+      <p>"If you had not plowed with my heifer, you would not have solved my riddle."</p>
+    </blockquote>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">11</span>Samson Kills 30 Philistines</h2>
+    <div><span class="section-ref">Judges 14:19</span></div>
+    <p>The Spirit of the Lord came upon <span class="name">Samson</span>. He went to <span class="place">Ashkelon</span>. There he <span class="action">killed</span> <span class="num">30</span> Philistine men, took their clothing, and gave them to the men who solved the riddle. Then he returned home in anger. His wife was given to another man.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">12</span>Samson Burns Philistine Fields</h2>
+    <div><span class="section-ref">Judges 15:1–5</span></div>
+    <p>Later <span class="name">Samson</span> returned to visit his wife. But her father said: <em style="color:#d4d4d4">"I gave her to your companion."</em> Instead he offered <span class="name">Samson</span> her younger sister. <span class="name">Samson</span> became furious.</p>
+    <p>He captured <span class="num">300 foxes</span>, tied their tails together, and placed <span class="obj">torches</span> between them. He released them into the <span class="name">Philistine</span> fields. The foxes burned:</p>
+    <ul>
+      <li><span class="obj">Grain</span></li>
+      <li><span class="obj">Vineyards</span></li>
+      <li><span class="obj">Olive groves</span></li>
+    </ul>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">13</span>Philistines Burn Samson's Wife</h2>
+    <div><span class="section-ref">Judges 15:6</span></div>
+    <p>The <span class="name">Philistines</span> asked: <em style="color:#d4d4d4">"Who did this?"</em> When they learned it was <span class="name">Samson</span>, they <span class="action">burned</span> his wife and her father to death. This fulfilled the threat they made earlier.</p>
+  </div>
+
+  <!-- 14 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">14</span>Samson Slaughters Many Philistines</h2>
+    <div><span class="section-ref">Judges 15:7–8</span></div>
+    <p><span class="name">Samson</span> said: <em style="color:#d4d4d4">"Since you acted like this, I will take revenge."</em> He <span class="action">attacked</span> them violently and <span class="action">killed</span> many of them. Then he went to live in a cave at the Rock of <span class="place">Etam</span>.</p>
+  </div>
+
+  <!-- 15 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">15</span>Samson Kills 1,000 Men with a Donkey's Jawbone</h2>
+    <div><span class="section-ref">Judges 15:9–17</span></div>
+    <p>The <span class="name">Philistines</span> came to capture <span class="name">Samson</span> and camped in <span class="place">Lehi</span>. <span class="num">3,000</span> men from <span class="place">Judah</span> went to <span class="name">Samson</span> and said: <em style="color:#d4d4d4">"Don't you know the Philistines rule over us?"</em> They tied him up to deliver him.</p>
+    <p>But when <span class="name">Samson</span> arrived, the Spirit of the Lord came upon him again. The ropes <span class="action">broke</span> like burnt threads. He found the <span class="obj">jawbone of a donkey</span>. With it he <span class="action">killed</span> <span class="num">1,000</span> Philistine men. <span class="name">Samson</span> then declared:</p>
+    <blockquote>
+      <p>"With a donkey's jawbone I have made donkeys of them."</p>
+    </blockquote>
+  </div>
+
+  <!-- 16 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">16</span>God Provides Water</h2>
+    <div><span class="section-ref">Judges 15:18–20</span></div>
+    <p>After the battle <span class="name">Samson</span> became extremely thirsty. He cried out to God:</p>
+    <blockquote>
+      <p>"Will I now die of thirst?"</p>
+    </blockquote>
+    <p>God miraculously opened a <span class="obj">spring</span>. <span class="name">Samson</span> drank and regained strength. He judged <span class="place">Israel</span> <span class="num">20 years</span> during the Philistine oppression.</p>
+  </div>
+
+  <!-- 17 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">17</span>Samson in Gaza</h2>
+    <div><span class="section-ref">Judges 16:1–3</span></div>
+    <p><span class="name">Samson</span> later visited <span class="place">Gaza</span>. The <span class="name">Philistines</span> surrounded the city gates to capture him. But <span class="name">Samson</span> woke up at midnight. He <span class="action">pulled up</span> the city <span class="obj">gates</span> and <span class="action">carried</span> them to the top of a hill near <span class="place">Hebron</span>. This demonstrated his incredible strength.</p>
+  </div>
+
+  <!-- 18 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">18</span>Samson and Delilah</h2>
+    <div><span class="section-ref">Judges 16:4–5</span></div>
+    <p>Later <span class="name">Samson</span> fell in love with a woman named <span class="name">Delilah</span>. The <span class="name">Philistine</span> rulers offered her <span class="num">1,100 pieces of silver</span> each if she discovered the secret of <span class="name">Samson</span>'s strength. She agreed.</p>
+  </div>
+
+  <!-- 19 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">19</span>Delilah Tries to Discover the Secret</h2>
+    <div><span class="section-ref">Judges 16:6–14</span></div>
+    <p><span class="name">Delilah</span> repeatedly asked <span class="name">Samson</span>: <em style="color:#d4d4d4">"Tell me the secret of your strength."</em> <span class="name">Samson</span> gave false answers <span class="num">three</span> times. Each time she tested him by calling: <em style="color:#d4d4d4">"Samson! The Philistines are upon you!"</em> But he easily broke free.</p>
+
+    <div class="attempt-card">
+      <div class="attempt-num">1</div>
+      <div>Tie me with <span class="num">seven</span> fresh <span class="obj">bowstrings</span></div>
+    </div>
+    <div class="attempt-card">
+      <div class="attempt-num">2</div>
+      <div>Tie me with new <span class="obj">ropes</span></div>
+    </div>
+    <div class="attempt-card">
+      <div class="attempt-num">3</div>
+      <div>Weave my <span class="obj">hair</span> into a loom</div>
+    </div>
+  </div>
+
+  <!-- 20 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">20</span>Samson Reveals His Secret</h2>
+    <div><span class="section-ref">Judges 16:15–17</span></div>
+    <p><span class="name">Delilah</span> kept pressuring him daily. Finally <span class="name">Samson</span> told the truth:</p>
+    <ul>
+      <li>He had been a Nazirite to God from birth</li>
+      <li>His hair had never been cut</li>
+      <li>If shaved, his strength would leave him</li>
+    </ul>
+  </div>
+
+  <!-- 21 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">21</span>Samson Is Captured</h2>
+    <div><span class="section-ref">Judges 16:18–21</span></div>
+    <p><span class="name">Delilah</span> <span class="action">cut</span> his <span class="obj">hair</span> while he slept. When the <span class="name">Philistines</span> attacked, <span class="name">Samson</span> tried to escape. But the Bible says:</p>
+    <blockquote>
+      <p>"He did not know that the Lord had left him."</p>
+    </blockquote>
+    <p>The <span class="name">Philistines</span> captured him. They <span class="action">gouged out</span> his eyes, put him in <span class="obj">chains</span>, and forced him to grind grain in prison.</p>
+  </div>
+
+  <!-- 22 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">22</span>Samson's Hair Begins to Grow</h2>
+    <div><span class="section-ref">Judges 16:22</span></div>
+    <p>But the Bible quietly notes something important: his <span class="obj">hair</span> began to grow again.</p>
+  </div>
+
+  <!-- 23 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">23</span>The Philistines Celebrate</h2>
+    <div><span class="section-ref">Judges 16:23–25</span></div>
+    <p>The <span class="name">Philistines</span> held a great celebration to their god <span class="name">Dagon</span>. They believed their god had defeated <span class="name">Samson</span>. They brought <span class="name">Samson</span> into the temple to entertain them. Thousands were gathered on the roof.</p>
+  </div>
+
+  <!-- 24 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">24</span>Samson's Final Prayer</h2>
+    <div><span class="section-ref">Judges 16:26–28</span></div>
+    <p><span class="name">Samson</span> asked the servant boy: <em style="color:#d4d4d4">"Let me lean against the pillars holding the temple."</em> Then <span class="name">Samson</span> prayed:</p>
+    <blockquote>
+      <p>"Sovereign Lord, remember me. Strengthen me just once more."</p>
+    </blockquote>
+  </div>
+
+  <!-- 25 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">25</span>Samson Destroys the Temple</h2>
+    <div><span class="section-ref">Judges 16:29–30</span></div>
+    <p><span class="name">Samson</span> placed his hands on the two central <span class="obj">pillars</span>. He <span class="action">pushed</span> with all his strength. The temple <span class="action">collapsed</span>. Thousands of <span class="name">Philistines</span> died. The Bible says:</p>
+    <blockquote>
+      <p>Samson killed more people in his death than in his life.</p>
+    </blockquote>
+  </div>
+
+  <!-- 26 -->
+  <div class="section">
+    <h2 class="section-title"><span class="section-num">26</span>Samson's Burial</h2>
+    <div><span class="section-ref">Judges 16:31</span></div>
+    <p>His family came and carried his body back. They <span class="action">buried</span> him between <span class="place">Zorah</span> and <span class="place">Eshtaol</span> in his father's tomb. <span class="name">Samson</span> had judged <span class="place">Israel</span> <span class="num">20 years</span>.</p>
+  </div>
+
+  <!-- Lessons -->
+  <div class="section">
+    <h2 class="section-title">Main Lessons from Samson's Story</h2>
+
+    <div class="lesson-card">
+      <div class="lesson-title">God can use imperfect people</div>
+      <div class="lesson-desc">Samson had great strength but lacked self-control. God still worked through him.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">Disobedience weakens a person spiritually</div>
+      <div class="lesson-desc">Each compromise with the Nazirite vow brought Samson closer to defeat.</div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lesson-title">God still listens when we sincerely pray</div>
+      <div class="lesson-desc">Even after all his failures, God answered Samson's final prayer and restored his strength.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
