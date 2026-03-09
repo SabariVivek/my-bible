@@ -1776,9 +1776,8 @@ function updateMobileChapterHeader() {
         // Update author banner if present
         if (authorBanner && window.bibleAuthors) {
             const authorNameEl = document.getElementById('author-name');
-            const authorInitialEl = document.getElementById('author-initial');
+            const authorInitialEl = document.getElementById('author-initial'); // optional
             const authorEraEl = document.getElementById('author-era');
-            const authorTypeEl = document.getElementById('author-type');
 
             // Normalize book name to match keys in bibleAuthors.js
             let authorKey = book.name;
@@ -1793,26 +1792,29 @@ function updateMobileChapterHeader() {
                 const authorName = authorInfo.author || 'Unknown';
                 const era = authorInfo.era || '';
 
-                if (authorNameEl && authorInitialEl) {
+                if (authorNameEl) {
                     authorNameEl.textContent = authorName;
+                }
+                if (authorInitialEl) {
                     authorInitialEl.textContent = authorName.charAt(0).toUpperCase();
                 }
 
                 if (authorEraEl && era) {
                     authorEraEl.textContent = era;
                 }
-            } else if (authorNameEl && authorInitialEl) {
+            } else {
                 const fallbackName = typeof authorInfo === 'string' ? authorInfo : 'Unknown';
-                authorNameEl.textContent = fallbackName;
-                authorInitialEl.textContent = fallbackName.charAt(0).toUpperCase();
+                if (authorNameEl) {
+                    authorNameEl.textContent = fallbackName;
+                }
+                if (authorInitialEl) {
+                    authorInitialEl.textContent = fallbackName.charAt(0).toUpperCase();
+                }
                 if (authorEraEl) {
                     authorEraEl.textContent = '';
                 }
             }
 
-            if (authorTypeEl) {
-                authorTypeEl.textContent = book.testament === 'old' ? 'Book' : 'Epistle';
-            }
         }
     }
 }

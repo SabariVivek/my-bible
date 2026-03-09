@@ -167,12 +167,10 @@
     <!-- Author Banner (docked under top bar, full-width) -->
     <div class="author-banner" id="author-banner">
         <div class="ab-cap">
-            <div class="ab-dot" id="author-initial">P</div>
             <span class="ab-name" id="author-name">Paul</span>
         </div>
         <div class="ab-sep"></div>
         <span class="ab-era" id="author-era">~62 AD</span>
-        <span class="ab-type" id="author-type">Epistle</span>
     </div>
 
     <!-- Search Bar (shown below header when active) -->
@@ -621,10 +619,13 @@
             .author-banner {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: 8px;
                 padding: 9px 18px;
                 background: var(--author-banner-bg, #292a2d);
                 border-top: none;
+                border-bottom: 1px solid var(--author-banner-border, #3c4043);
+                background: linear-gradient(90deg, rgba(76, 175, 80, 0.1) 0%, transparent 100%);
             }
 
             .author-banner .ab-cap {
@@ -634,7 +635,7 @@
                 background: var(--author-cap-bg, #202124);
                 border: 1px solid var(--author-cap-border, #3c4043);
                 border-radius: 20px;
-                padding: 4px 12px 4px 6px;
+                padding: 6px 12px 6px 12px;
             }
 
             .author-banner .ab-dot {
@@ -654,7 +655,7 @@
             }
 
             .author-banner .ab-name {
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 600;
                 color: var(--author-name-color, #afb2b8);
                 font-family: sans-serif;
@@ -673,19 +674,6 @@
                 font-family: sans-serif;
             }
 
-            .author-banner .ab-type {
-                margin-left: auto;
-                font-size: 10px;
-                border-radius: 5px;
-                padding: 3px 10px;
-                font-family: sans-serif;
-                flex-shrink: 0;
-                background: rgba(180, 83, 9, 0.15);
-                border-color: rgba(180, 83, 9, 0.4);
-                color: #b45309;
-                border: 1px solid;
-            }
-
             /* Light theme overrides */
             body:not(.dark-theme) .author-banner {
                 --author-banner-bg: #f2f2f2;
@@ -698,15 +686,8 @@
             }
 
             body:not(.dark-theme) .author-banner .ab-dot {
-                background: #b45309;
+                background: #92400e;
                 /* light theme dot */
-            }
-
-            body:not(.dark-theme) .author-banner .ab-type {
-                background: rgba(180, 83, 9, 0.15);
-                border-color: rgba(180, 83, 9, 0.4);
-                color: #b45309;
-                border: 1px solid;
             }
         </style>
 

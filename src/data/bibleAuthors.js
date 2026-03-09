@@ -7,8 +7,8 @@ window.bibleAuthors = {
     Deuteronomy: { author: "Moses", era: "~ 1446 – 1406 BC" },
 
     Joshua: { author: "Joshua", era: "~ 1400 – 1370 BC" },
-    Judges: { author: "Samuel (traditionally)", era: "~ 1050 – 1000 BC" },
-    Ruth: { author: "Samuel (traditionally)", era: "~ 1010 – 970 BC" },
+    Judges: { author: "Samuel", era: "~ 1050 – 1000 BC" },
+    Ruth: { author: "Samuel", era: "~ 1010 – 970 BC" },
 
     "1 Samuel": { author: "Samuel, Gad, Nathan", era: "~ 1105 – 970 BC" },
     "2 Samuel": { author: "Gad, Nathan", era: "~ 1010 – 970 BC" },
