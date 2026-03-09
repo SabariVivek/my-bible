@@ -4826,11 +4826,22 @@ const verseHeaders = {
     "Acts 4:32": ["Believers Share Everything", "Church lives in unity."],
 
     // Acts Chapter 5
-    "Acts 5:1": ["Ananias and Sapphira", "They lie and face judgment."],
-    "Acts 5:12": ["Apostles Perform Miracles", "Many signs and wonders occur."],
-    "Acts 5:17": ["Apostles Persecuted", "Leaders arrest apostles."],
-    "Acts 5:29": ["Obey God Rather Than Men", "Peter declares obedience to God."],
-    "Acts 5:41": ["Rejoicing in Suffering", "Apostles rejoice despite persecution."],
+    "Acts 5:1": ["Ananias and Sapphira's Deception", "Ananias and Sapphira sell property but secretly keep part of the money while pretending to give the full amount to the apostles."],
+    "Acts 5:3": ["Peter Confronts Ananias", "Peter exposes Ananias for lying to the Holy Spirit about the money from the sale."],
+    "Acts 5:5": ["Death of Ananias", "Ananias falls down and dies, and great fear comes upon all who hear about it."],
+    "Acts 5:7": ["Sapphira's Deception", "Sapphira enters later and repeats the same lie about the money."],
+    "Acts 5:9": ["Death of Sapphira", "Peter rebukes her, and she also falls down dead, bringing fear upon the whole church."],
+    "Acts 5:12": ["Apostles Perform Many Signs", "Through the apostles many miracles and signs are done among the people."],
+    "Acts 5:17": ["Apostles Arrested by the High Priest", "The high priest and the Sadducees arrest the apostles out of jealousy."],
+    "Acts 5:19": ["Angel Frees the Apostles", "During the night an angel of the Lord opens the prison doors and tells them to continue preaching."],
+    "Acts 5:21": ["Apostles Teach in the Temple", "The apostles return to the temple and continue teaching the people."],
+    "Acts 5:27": ["Apostles Before the Council", "The apostles are brought before the Sanhedrin and questioned about preaching in Jesus' name."],
+    "Acts 5:29": ["Obey God Rather Than Men", "Peter declares that they must obey God rather than human authorities."],
+    "Acts 5:33": ["Council Plans to Kill the Apostles", "The council becomes furious and wants to put the apostles to death."],
+    "Acts 5:34": ["Gamaliel's Wise Counsel", "Gamaliel advises the council to leave the apostles alone because if their work is from God it cannot be stopped."],
+    "Acts 5:40": ["Apostles Beaten and Released", "The apostles are flogged and ordered not to speak in Jesus' name, then released."],
+    "Acts 5:41": ["Apostles Rejoice in Suffering", "They rejoice that they were counted worthy to suffer for the name of Jesus."],
+    "Acts 5:42": ["The Gospel Continues to Spread", "Every day in the temple and from house to house they continue teaching and proclaiming Jesus as the Christ."],
 
     // Acts Chapter 6
     "Acts 6:1": ["Seven Chosen to Serve", "Seven men appointed to help."],
