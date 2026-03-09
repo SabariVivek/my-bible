@@ -700,6 +700,11 @@ body.dark-theme .book-loader {
     body:has(.search-bar[style*="display: flex"]) .search-bar {
         top: 0;
     }
+
+    /* Hide author banner when search is active */
+    body:has(.search-bar[style*="display: flex"]) .author-banner {
+        display: none !important;
+    }
 }
 
 .search-bar .back-btn {
@@ -2612,9 +2617,16 @@ body.dark-theme .image-skeleton::after {
         z-index: 1001;
     }
 
-    /* Adjust main layout to account for fixed header */
-    .main-layout {
+    /* Author banner directly under fixed top bar */
+    .author-banner {
         margin-top: calc(60px + env(safe-area-inset-top));
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Adjust main layout to account for fixed header and banner */
+    .main-layout {
+        margin-top: 0;
         height: calc(100vh - 60px - env(safe-area-inset-top));
     }
 }
@@ -2631,6 +2643,13 @@ body.dark-theme .image-skeleton::after {
         left: 0;
         right: 0;
         z-index: 1001;
+    }
+
+    /* Author banner directly under fixed top bar */
+    .author-banner {
+        margin-top: calc(60px + env(safe-area-inset-top));
+        position: relative;
+        z-index: 1000;
     }
     
     /* Show mobile menu button and drawer header */
@@ -2658,6 +2677,7 @@ body.dark-theme .image-skeleton::after {
         flex-direction: row;
         height: auto;
         min-height: calc(100vh - 60px - env(safe-area-inset-top));
+        margin-top: 0;
         overflow: visible;
         background-color: rgb(248, 249, 250);
     }
@@ -3012,7 +3032,7 @@ body.dark-theme .read-bible-button:hover {
 }
 
 body.dark-theme .top-bar {
-    background-color: #292a2d;
+    background-color: #1e1f22;
     border-bottom: 1px solid #3c4043;
 }
 

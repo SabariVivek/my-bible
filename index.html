@@ -164,6 +164,17 @@
         </div>
     </header>
 
+    <!-- Author Banner (docked under top bar, full-width) -->
+    <div class="author-banner" id="author-banner">
+        <div class="ab-cap">
+            <div class="ab-dot">P</div>
+            <span class="ab-name">Paul</span>
+        </div>
+        <div class="ab-sep"></div>
+        <span class="ab-era">~62 AD</span>
+        <span class="ab-type">Epistle</span>
+    </div>
+
     <!-- Search Bar (shown below header when active) -->
     <div id="search-bar" class="search-bar" style="display: none;">
         <button id="back-from-search" class="icon-btn back-btn" aria-label="Back">
@@ -604,6 +615,90 @@
             .u-glow {
                 border-left: 3px solid #f59e0b;
                 padding-left: 8px;
+            }
+
+            /* Author Banner — Design 5 */
+            .author-banner {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 9px 18px;
+                background: var(--author-banner-bg, #292a2d);
+                border-top: none;
+            }
+
+            .author-banner .ab-cap {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                background: var(--author-cap-bg, #202124);
+                border: 1px solid var(--author-cap-border, #3c4043);
+                border-radius: 20px;
+                padding: 4px 12px 4px 6px;
+            }
+
+            .author-banner .ab-dot {
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background: #16a34a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 11px;
+                font-weight: 700;
+                color: #fff;
+                flex-shrink: 0;
+                font-family: sans-serif;
+            }
+
+            .author-banner .ab-name {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--author-name-color, #e8eaed);
+                font-family: sans-serif;
+            }
+
+            .author-banner .ab-sep {
+                width: 1px;
+                height: 16px;
+                background: var(--author-sep-color, #3c4043);
+                flex-shrink: 0;
+            }
+
+            .author-banner .ab-era {
+                font-size: 11px;
+                color: var(--author-era-color, #9aa0a6);
+                font-family: sans-serif;
+            }
+
+            .author-banner .ab-type {
+                margin-left: auto;
+                font-size: 10px;
+                background: rgba(129, 199, 132, 0.12);
+                border: 1px solid rgba(129, 199, 132, 0.5);
+                color: #a5d6a7;
+                border-radius: 5px;
+                padding: 3px 10px;
+                font-family: sans-serif;
+                flex-shrink: 0;
+            }
+
+            /* Light theme overrides */
+            body:not(.dark-theme) .author-banner {
+                --author-banner-bg: #f2f2f2;
+                --author-banner-border: #e0e0e0;
+                --author-cap-bg: #fff;
+                --author-cap-border: #ddd;
+                --author-name-color: #333;
+                --author-sep-color: #ddd;
+                --author-era-color: #777;
+            }
+
+            body:not(.dark-theme) .author-banner .ab-type {
+                background: rgba(21, 128, 61, 0.10);
+                border-color: rgba(21, 128, 61, 0.35);
+                color: #15803d;
             }
         </style>
 
