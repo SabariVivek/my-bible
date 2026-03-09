@@ -394,7 +394,6 @@ body.dark-theme .book-loader {
     flex-shrink: 0;
     z-index: 100;
     box-sizing: border-box;
-    min-height: 60px;
 }
 
 .logo-container {
@@ -709,6 +708,15 @@ body.dark-theme .book-loader {
     /* Extra top padding only when search results are active */
     .content-area:has(.search-results.active) {
         padding-top: 30px !important;
+    }
+}
+
+/* Desktop-only: lift side columns slightly to reduce top gap after banner change */
+@media (min-width: 769px) {
+    .books-sidebar,
+    .chapters-column,
+    .verses-column {
+        /* margin-top: -4px; */
     }
 }
 
@@ -2624,7 +2632,7 @@ body.dark-theme .image-skeleton::after {
 
     /* Author banner directly under fixed top bar */
     .author-banner {
-        margin-top: calc(60px + env(safe-area-inset-top));
+        margin-top: calc(55px + env(safe-area-inset-top));
         position: relative;
         z-index: 1000;
     }
@@ -2652,7 +2660,7 @@ body.dark-theme .image-skeleton::after {
 
     /* Author banner directly under fixed top bar */
     .author-banner {
-        margin-top: calc(60px + env(safe-area-inset-top));
+        margin-top: calc(55px + env(safe-area-inset-top));
         position: relative;
         z-index: 1000;
     }

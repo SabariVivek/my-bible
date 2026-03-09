@@ -689,6 +689,14 @@
                 background: #92400e;
                 /* light theme dot */
             }
+
+            /* Desktop-only alignment to match bottom nav/content area */
+            @media (min-width: 769px) {
+                .author-banner {
+                    margin-left: 0px; /* same offset as bottom-nav left */
+                    margin-right: 0;
+                }
+            }
         </style>
 
         <!-- Left Sidebar - Books -->
