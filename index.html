@@ -167,12 +167,12 @@
     <!-- Author Banner (docked under top bar, full-width) -->
     <div class="author-banner" id="author-banner">
         <div class="ab-cap">
-            <div class="ab-dot">P</div>
-            <span class="ab-name">Paul</span>
+            <div class="ab-dot" id="author-initial">P</div>
+            <span class="ab-name" id="author-name">Paul</span>
         </div>
         <div class="ab-sep"></div>
-        <span class="ab-era">~62 AD</span>
-        <span class="ab-type">Epistle</span>
+        <span class="ab-era" id="author-era">~62 AD</span>
+        <span class="ab-type" id="author-type">Epistle</span>
     </div>
 
     <!-- Search Bar (shown below header when active) -->
@@ -641,7 +641,8 @@
                 width: 22px;
                 height: 22px;
                 border-radius: 50%;
-                background: #16a34a;
+                background: #b45309;
+                /* dark theme dot */
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -655,7 +656,7 @@
             .author-banner .ab-name {
                 font-size: 14px;
                 font-weight: 600;
-                color: var(--author-name-color, #e8eaed);
+                color: var(--author-name-color, #afb2b8);
                 font-family: sans-serif;
             }
 
@@ -675,13 +676,14 @@
             .author-banner .ab-type {
                 margin-left: auto;
                 font-size: 10px;
-                background: rgba(129, 199, 132, 0.12);
-                border: 1px solid rgba(129, 199, 132, 0.5);
-                color: #a5d6a7;
                 border-radius: 5px;
                 padding: 3px 10px;
                 font-family: sans-serif;
                 flex-shrink: 0;
+                background: rgba(180, 83, 9, 0.15);
+                border-color: rgba(180, 83, 9, 0.4);
+                color: #b45309;
+                border: 1px solid;
             }
 
             /* Light theme overrides */
@@ -695,10 +697,16 @@
                 --author-era-color: #777;
             }
 
+            body:not(.dark-theme) .author-banner .ab-dot {
+                background: #b45309;
+                /* light theme dot */
+            }
+
             body:not(.dark-theme) .author-banner .ab-type {
-                background: rgba(21, 128, 61, 0.10);
-                border-color: rgba(21, 128, 61, 0.35);
-                color: #15803d;
+                background: rgba(180, 83, 9, 0.15);
+                border-color: rgba(180, 83, 9, 0.4);
+                color: #b45309;
+                border: 1px solid;
             }
         </style>
 
@@ -1222,6 +1230,7 @@
     <script src="src/voice-command.js?cb=20251126003722"></script>
     <script src="src/data/verse-headers.js?cb=20251126003722"></script>
     <script src="src/data/bible-meta.js?cb=20251210006100"></script>
+    <script src="src/data/bibleAuthors.js?cb=20260309000100"></script>
     <script src="src/data/short-summary.js?cb=20260301210232"></script>
     <script src="src/script.js?cb=20251210007400"></script>
     <script src="src/chapter-summary-pullout.js?cb=20260301210232"></script>

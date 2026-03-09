@@ -1757,6 +1757,7 @@ function initializeCrossReferenceSwipe() {
 // Update mobile chapter header
 function updateMobileChapterHeader() {
     const mobileHeader = document.getElementById('mobile-chapter-header');
+    const authorBanner = document.getElementById('author-banner');
     if (!mobileHeader) return;
     const book = bibleBooks[currentBook];
     const titleElement = mobileHeader.querySelector('.mobile-chapter-title');
@@ -1771,6 +1772,48 @@ function updateMobileChapterHeader() {
         }
         titleElement.textContent = bookName;
         numberElement.textContent = currentChapter;
+
+        // Update author banner if present
+        if (authorBanner && window.bibleAuthors) {
+            const authorNameEl = document.getElementById('author-name');
+            const authorInitialEl = document.getElementById('author-initial');
+            const authorEraEl = document.getElementById('author-era');
+            const authorTypeEl = document.getElementById('author-type');
+
+            // Normalize book name to match keys in bibleAuthors.js
+            let authorKey = book.name;
+            authorKey = authorKey
+                .replace(/^I\s+/, '1 ')
+                .replace(/^II\s+/, '2 ')
+                .replace(/^III\s+/, '3 ');
+
+            const authorInfo = window.bibleAuthors[authorKey];
+
+            if (authorInfo && typeof authorInfo === 'object') {
+                const authorName = authorInfo.author || 'Unknown';
+                const era = authorInfo.era || '';
+
+                if (authorNameEl && authorInitialEl) {
+                    authorNameEl.textContent = authorName;
+                    authorInitialEl.textContent = authorName.charAt(0).toUpperCase();
+                }
+
+                if (authorEraEl && era) {
+                    authorEraEl.textContent = era;
+                }
+            } else if (authorNameEl && authorInitialEl) {
+                const fallbackName = typeof authorInfo === 'string' ? authorInfo : 'Unknown';
+                authorNameEl.textContent = fallbackName;
+                authorInitialEl.textContent = fallbackName.charAt(0).toUpperCase();
+                if (authorEraEl) {
+                    authorEraEl.textContent = '';
+                }
+            }
+
+            if (authorTypeEl) {
+                authorTypeEl.textContent = book.testament === 'old' ? 'Book' : 'Epistle';
+            }
+        }
     }
 }
 

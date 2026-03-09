@@ -705,6 +705,11 @@ body.dark-theme .book-loader {
     body:has(.search-bar[style*="display: flex"]) .author-banner {
         display: none !important;
     }
+
+    /* Extra top padding only when search results are active */
+    .content-area:has(.search-results.active) {
+        padding-top: 30px !important;
+    }
 }
 
 .search-bar .back-btn {
