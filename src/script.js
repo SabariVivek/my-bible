@@ -151,14 +151,28 @@ function updateSettingsFooterVisibility() {
     const panel = document.getElementById('right-settings-panel');
     if (!panel) return;
     const footer = panel.querySelector('.settings-footer');
-    if (!footer) return;
+    const headerSaveIcon = document.getElementById('settings-save-icon-btn');
+    const headerCancelIcon = document.getElementById('settings-cancel-icon-btn');
+
     if (!settingsPanelOriginalState) {
-        footer.style.display = 'none';
+        if (footer) footer.style.display = 'none';
+        if (headerSaveIcon) headerSaveIcon.style.display = 'none';
+        if (headerCancelIcon) headerCancelIcon.style.display = 'none';
         return;
     }
+
     const current = getCurrentSettingsSnapshot();
     const changed = !areSettingsEqual(settingsPanelOriginalState, current);
-    footer.style.display = changed ? 'flex' : 'none';
+
+    if (footer) {
+        footer.style.display = changed ? 'flex' : 'none';
+    }
+    if (headerSaveIcon) {
+        headerSaveIcon.style.display = changed ? 'flex' : 'none';
+    }
+    if (headerCancelIcon) {
+        headerCancelIcon.style.display = changed ? 'flex' : 'none';
+    }
 }
 
 // Supabase configuration for user_settings (same project as other Supabase usage)
@@ -189,6 +203,7 @@ async function saveUserSettingsToSupabase() {
             (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
 
         const payload = {
+            user_id: userId,
             theme: themeVal,
             language: langSegVal,
             english_text_color: colorVal,
@@ -202,34 +217,20 @@ async function saveUserSettingsToSupabase() {
             notes_feature: !!uiSettings.notesFeature
         };
 
-        // Use PATCH with user_id filter so we update the existing row
-        // If no row exists yet, fall back to creating one with POST.
-        let response = await fetch(
-            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?user_id=eq.${encodeURIComponent(userId)}`,
+        // Upsert by user_id so both existing and new users are handled
+        await fetch(
+            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?on_conflict=user_id`,
             {
-                method: 'PATCH',
-                headers: {
-                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
-                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            }
-        );
-
-        if (response.status === 404 || response.status === 406) {
-            // No existing row – create one
-            const createPayload = { user_id: userId, ...payload };
-            await fetch(`${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings`, {
                 method: 'POST',
                 headers: {
                     'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
                     'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Prefer': 'resolution=merge-duplicates'
                 },
-                body: JSON.stringify(createPayload)
-            });
-        }
+                body: JSON.stringify(payload)
+            }
+        );
     } catch (e) {
         // Fail silently – localStorage still keeps settings
     }
@@ -901,11 +902,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set current user avatar in the top bar if available
     try {
         const avatarEl = document.getElementById('current-user-avatar');
+        const rightMenuBtn = document.getElementById('right-menu-btn');
         if (avatarEl) {
             const userId = localStorage.getItem('currentUserId');
             const userName = localStorage.getItem('currentUserName') || '';
             const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
-            if (userId || isGuest) {
+
+            // For guest users: hide avatar and right menu button
+            if (isGuest) {
+                avatarEl.style.display = 'none';
+                if (rightMenuBtn) rightMenuBtn.style.display = 'none';
+            } else if (userId) {
                 avatarEl.style.display = 'block';
                 avatarEl.title = userName || 'Current user';
                 if (userName) {
@@ -916,9 +923,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     avatarEl.style.backgroundImage = '';
                 }
+                if (rightMenuBtn) rightMenuBtn.style.display = '';
             } else {
                 avatarEl.style.display = 'none';
+                if (rightMenuBtn) rightMenuBtn.style.display = '';
             }
+        } else if (rightMenuBtn) {
+            // Ensure right menu is visible by default when avatar not present
+            rightMenuBtn.style.display = '';
         }
     } catch (e) {
         // Fail silently if anything goes wrong
@@ -984,9 +996,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightPrayersOption = document.getElementById('right-prayers-option');
     const isMobile = window.innerWidth <= 768;
     let isFadingOut = false; // Flag to prevent re-showing during fade
-    
-    // Always show right-menu-btn (the button that opens right sidebar)
-    if (rightMenuBtn) rightMenuBtn.style.display = 'flex';
+
+    const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
+
+    // Show/hide right-menu-btn (the button that opens right sidebar)
+    if (rightMenuBtn) {
+        rightMenuBtn.style.display = isGuestUser ? 'none' : 'flex';
+    }
     
     // Always show public menu items (not admin-only)
     if (bibleReadingOption) bibleReadingOption.style.display = 'flex';
@@ -4740,8 +4756,8 @@ function initializeRightSettingsPanel() {
     const settingsPanel = document.getElementById('right-settings-panel');
     const closeBtn = document.getElementById('right-settings-close-btn');
     const backBtn = document.getElementById('right-settings-back-btn');
-    const saveBtn = document.getElementById('settings-save-btn');
-    const cancelBtn = document.getElementById('settings-cancel-btn');
+    const saveIconBtn = document.getElementById('settings-save-icon-btn');
+    const cancelIconBtn = document.getElementById('settings-cancel-icon-btn');
     console.log('[MyBible] initializeRightSettingsPanel called', {
         hasSettingsOption: !!settingsOption,
         hasSettingsPanel: !!settingsPanel,
@@ -4842,115 +4858,119 @@ function initializeRightSettingsPanel() {
         });
     }
 
-    // Save button explicitly persists current settings and closes panel
-    if (saveBtn) {
-        saveBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
+    // Shared Save handler: persists current settings and closes panel
+    function handleSettingsSave(event) {
+        if (event) event.stopPropagation();
+        try {
+            if (typeof saveUserSettingsToSupabase === 'function') {
+                saveUserSettingsToSupabase().catch(() => {});
+            }
+        } catch (e) {}
+        settingsPanelOriginalState = null;
+        updateSettingsFooterVisibility();
+        settingsPanel.classList.remove('active');
+        settingsPanel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        console.log('[MyBible] settings panel closed via Save');
+    }
+
+    // Shared Cancel handler: reverts to snapshot and closes panel
+    function handleSettingsCancel(event) {
+        if (event) event.stopPropagation();
+        if (settingsPanelOriginalState) {
             try {
+                const snap = settingsPanelOriginalState;
+                // Theme
+                if (snap.theme === 'dark' || snap.theme === 'light') {
+                    const wantDark = snap.theme === 'dark';
+                    const currentlyDark = document.body.classList.contains('dark-theme');
+                    if (wantDark && !currentlyDark) {
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                    } else if (!wantDark && currentlyDark) {
+                        document.body.classList.remove('dark-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                    localStorage.setItem('settingsTheme', snap.theme);
+                    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                    const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                    if (metaThemeColor) {
+                        metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+                    }
+                    if (metaColorScheme) {
+                        metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                    }
+                }
+
+                // Language
+                if (snap.language) {
+                    const langVal = snap.language;
+                    const selectedLang = langVal === 'en' ? 'english' : (langVal === 'ta' ? 'tamil' : 'both');
+                    currentLanguage = selectedLang;
+                    localStorage.setItem('currentLanguage', selectedLang);
+                    localStorage.setItem('settingsLanguage', langVal);
+                    if (typeof updateBookNames === 'function') {
+                        updateBookNames();
+                    }
+                    if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                        loadBook(currentBook, currentChapter);
+                    }
+                }
+
+                // English text color
+                if (snap.englishColor) {
+                    englishTextColor = snap.englishColor;
+                    localStorage.setItem('englishTextColor', englishTextColor);
+                    localStorage.setItem('settingsEnglishColor', englishTextColor);
+                    if (currentLanguage === 'both') {
+                        if (typeof displayChapter === 'function') {
+                            displayChapter();
+                        }
+                        if (typeof applyAllNoteDisplays === 'function') {
+                            applyAllNoteDisplays();
+                        }
+                    }
+                }
+
+                // UI toggles
+                if (snap.uiSettings) {
+                    uiSettings = { ...DEFAULT_UI_SETTINGS, ...snap.uiSettings };
+                    localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+                    if (typeof applyUiSettingsToDocument === 'function') {
+                        applyUiSettingsToDocument();
+                    }
+                }
+
+                // Admin mode
+                if (Object.prototype.hasOwnProperty.call(snap, 'isAdmin')) {
+                    localStorage.setItem('isAdmin', snap.isAdmin ? 'true' : 'false');
+                    if (typeof updateAdminUI === 'function') {
+                        updateAdminUI();
+                    }
+                    setSettingsAdminUiFromState();
+                }
+
+                // Persist reverted settings to Supabase so remote matches local
                 if (typeof saveUserSettingsToSupabase === 'function') {
                     saveUserSettingsToSupabase().catch(() => {});
                 }
-            } catch (e) {}
-            settingsPanelOriginalState = null;
-            updateSettingsFooterVisibility();
-            settingsPanel.classList.remove('active');
-            settingsPanel.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            console.log('[MyBible] settings panel closed via Save button');
-        });
+            } catch (e) {
+            }
+        }
+        settingsPanelOriginalState = null;
+        updateSettingsFooterVisibility();
+        settingsPanel.classList.remove('active');
+        settingsPanel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        console.log('[MyBible] settings panel closed via Cancel (reverted changes)');
     }
 
-    // Cancel button reverts to the snapshot taken when panel was opened
-    if (cancelBtn) {
-        cancelBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
-            if (settingsPanelOriginalState) {
-                try {
-                    const snap = settingsPanelOriginalState;
-                    // Theme
-                    if (snap.theme === 'dark' || snap.theme === 'light') {
-                        const wantDark = snap.theme === 'dark';
-                        const currentlyDark = document.body.classList.contains('dark-theme');
-                        if (wantDark && !currentlyDark) {
-                            document.body.classList.add('dark-theme');
-                            localStorage.setItem('theme', 'dark');
-                        } else if (!wantDark && currentlyDark) {
-                            document.body.classList.remove('dark-theme');
-                            localStorage.setItem('theme', 'light');
-                        }
-                        localStorage.setItem('settingsTheme', snap.theme);
-                        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-                        const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
-                        if (metaThemeColor) {
-                            metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
-                        }
-                        if (metaColorScheme) {
-                            metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
-                        }
-                    }
-
-                    // Language
-                    if (snap.language) {
-                        const langVal = snap.language;
-                        const selectedLang = langVal === 'en' ? 'english' : (langVal === 'ta' ? 'tamil' : 'both');
-                        currentLanguage = selectedLang;
-                        localStorage.setItem('currentLanguage', selectedLang);
-                        localStorage.setItem('settingsLanguage', langVal);
-                        if (typeof updateBookNames === 'function') {
-                            updateBookNames();
-                        }
-                        if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
-                            loadBook(currentBook, currentChapter);
-                        }
-                    }
-
-                    // English text color
-                    if (snap.englishColor) {
-                        englishTextColor = snap.englishColor;
-                        localStorage.setItem('englishTextColor', englishTextColor);
-                        localStorage.setItem('settingsEnglishColor', englishTextColor);
-                        if (currentLanguage === 'both') {
-                            if (typeof displayChapter === 'function') {
-                                displayChapter();
-                            }
-                            if (typeof applyAllNoteDisplays === 'function') {
-                                applyAllNoteDisplays();
-                            }
-                        }
-                    }
-
-                    // UI toggles
-                    if (snap.uiSettings) {
-                        uiSettings = { ...DEFAULT_UI_SETTINGS, ...snap.uiSettings };
-                        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
-                        if (typeof applyUiSettingsToDocument === 'function') {
-                            applyUiSettingsToDocument();
-                        }
-                    }
-
-                    // Admin mode
-                    if (Object.prototype.hasOwnProperty.call(snap, 'isAdmin')) {
-                        localStorage.setItem('isAdmin', snap.isAdmin ? 'true' : 'false');
-                        if (typeof updateAdminUI === 'function') {
-                            updateAdminUI();
-                        }
-                        setSettingsAdminUiFromState();
-                    }
-
-                    // Persist reverted settings to Supabase so remote matches local
-                    if (typeof saveUserSettingsToSupabase === 'function') {
-                        saveUserSettingsToSupabase().catch(() => {});
-                    }
-                } catch (e) {
-                }
-            }
-            settingsPanelOriginalState = null;
-            updateSettingsFooterVisibility();
-            settingsPanel.classList.remove('active');
-            settingsPanel.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            console.log('[MyBible] settings panel closed via Cancel button (reverted changes)');
-        });
+    // Attach handlers to header icon buttons
+    if (saveIconBtn) {
+        saveIconBtn.addEventListener('click', handleSettingsSave);
+    }
+    if (cancelIconBtn) {
+        cancelIconBtn.addEventListener('click', handleSettingsCancel);
     }
     // Close when clicking outside the panel
     document.addEventListener('click', (event) => {
@@ -9535,11 +9555,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightSermonOption = document.getElementById('right-sermon-option');
     const rightPrayersOption = document.getElementById('right-prayers-option');
     const rightCultOption = document.getElementById('right-cult-option');
+    const isGuestUser = localStorage.getItem('currentUserIsGuest') === 'true';
     // Initialize right sidebar (hidden by default)
     if (rightSidebar) {
         rightSidebar.classList.add('hidden');
     }
-    // Right menu button is always visible (no admin check needed)
+    // Hide right menu completely for guest users
+    if (isGuestUser && rightMenuBtn) {
+        rightMenuBtn.style.display = 'none';
+        return;
+    }
     // Toggle right sidebar
     if (rightMenuBtn && rightSidebar) {
         rightMenuBtn.addEventListener('click', (e) => {
