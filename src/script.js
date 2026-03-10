@@ -4543,6 +4543,17 @@ function initializeRightSettingsPanel() {
         });
         // Sync admin toggle UI
         setSettingsAdminUiFromState();
+        // Close right sidebar drawer if open
+        const rightSidebar = document.querySelector('.right-sidebar');
+        if (rightSidebar) {
+            rightSidebar.classList.add('hidden');
+            rightSidebar.classList.remove('drawer-open');
+        }
+        // Always scroll settings page to top when opening
+        const settingsBody = settingsPanel.querySelector('.settings-body');
+        if (settingsBody) {
+            settingsBody.scrollTop = 0;
+        }
         settingsPanel.classList.add('active');
         settingsPanel.setAttribute('aria-hidden', 'false');
         // Disable background page scroll while settings is open
