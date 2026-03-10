@@ -215,9 +215,6 @@ select option { background: var(--surface); color: var(--text); }
   height: 44px;
   border-radius: 50%;
   background-color: var(--green);
-  background-image: url('resources/profile/users.png');
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,7 +424,18 @@ select option { background: var(--surface); color: var(--text); }
 
     const prev = document.getElementById('userPreview');
     const btn  = document.getElementById('signinBtn');
+    const avatar = document.getElementById('uAvatar');
     document.getElementById('uAvatar').textContent = name ? name.trim().charAt(0).toUpperCase() : '';
+    if (avatar) {
+      if (name) {
+        const fileKey = name.trim().toLowerCase();
+        avatar.style.backgroundImage = `url('resources/profile/${fileKey}.png')`;
+        avatar.style.backgroundSize = 'cover';
+        avatar.style.backgroundPosition = 'center';
+      } else {
+        avatar.style.backgroundImage = '';
+      }
+    }
     document.getElementById('uName').textContent   = name || '';
     prev.classList.toggle('visible', !!name);
     btn.disabled = !id;
