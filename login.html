@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#1a1a1a">
 <title>My Bible – Sign In</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <script>
@@ -12,7 +13,17 @@
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    const theme = isDark ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Keep Android status/notification bar color in sync
+    let metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (!metaTheme) {
+      metaTheme = document.createElement('meta');
+      metaTheme.name = 'theme-color';
+      document.head.appendChild(metaTheme);
+    }
+    metaTheme.setAttribute('content', theme === 'dark' ? '#1a1a1a' : '#f0f2f7');
   } catch (e) {
     // Fallback to dark if anything goes wrong
     document.documentElement.setAttribute('data-theme', 'dark');
@@ -177,7 +188,7 @@ select {
   border-radius: 13px;
   border: 1.5px solid var(--border);
   background: var(--input-bg);
-  color: var(--text);
+  color: #8a8a8a;
   font-family: 'Lato', sans-serif;
   font-size: 15px; font-weight: 600;
   appearance: none; -webkit-appearance: none;
