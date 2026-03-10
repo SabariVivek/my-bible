@@ -1843,6 +1843,27 @@ body.hide-author-details #author-banner {
     stroke: #f08264;
 }
 
+.right-settings-panel .icon-memory {
+    background: rgba(52,168,83,0.10);
+}
+.right-settings-panel .icon-memory svg {
+    stroke: #34a853;
+}
+
+.right-settings-panel .icon-bookmark {
+    background: rgba(58,126,245,0.10);
+}
+.right-settings-panel .icon-bookmark svg {
+    stroke: #3a7ef5;
+}
+
+.right-settings-panel .icon-notes {
+    background: rgba(255,160,50,0.10);
+}
+.right-settings-panel .icon-notes svg {
+    stroke: #ff9800;
+}
+
 .right-settings-panel .settings-row-text {
     font-size: 15px;
     font-weight: 400;

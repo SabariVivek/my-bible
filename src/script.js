@@ -95,7 +95,10 @@ const DEFAULT_UI_SETTINGS = {
     shortSummary: true,
     bibleReading: true,
     verseHeading: true,
-    authorDetails: true
+    authorDetails: true,
+    memoryVerse: true,
+    bookmark: true,
+    notesFeature: true
 };
 let uiSettings = (() => {
     try {
@@ -449,6 +452,16 @@ function initializeHistoryManagement() {
     history.replaceState({ page: 'bible' }, '', window.location.href);
     // Handle browser back button
     window.addEventListener('popstate', (event) => {
+        // If settings panel is open, close it instead of exiting app
+        const settingsPanel = document.getElementById('right-settings-panel');
+        if (settingsPanel && settingsPanel.classList.contains('active')) {
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            isOnBiblePage = true;
+            currentPage = 'bible';
+            history.replaceState({ page: 'bible' }, '', window.location.href);
+            return;
+        }
         // Check if prayers sheet is open
         const prayersFrame = document.querySelector('iframe[src="src/prayers.html"]');
         if (prayersFrame) {
@@ -486,6 +499,7 @@ function navigateToBiblePage() {
     const searchModal = document.querySelector('.search-modal');
     const summaryDrawer = document.querySelector('.summary-drawer');
     const notesModal = document.querySelector('.notes-modal');
+    const settingsPanel = document.getElementById('right-settings-panel');
     if (searchModal && searchModal.classList.contains('active')) {
         searchModal.classList.remove('active');
     }
@@ -494,6 +508,10 @@ function navigateToBiblePage() {
     }
     if (notesModal && notesModal.style.display === 'flex') {
         notesModal.style.display = 'none';
+    }
+    if (settingsPanel && settingsPanel.classList.contains('active')) {
+        settingsPanel.classList.remove('active');
+        settingsPanel.setAttribute('aria-hidden', 'true');
     }
     isOnBiblePage = true;
     currentPage = 'bible';
@@ -4481,6 +4499,10 @@ function initializeRightSettingsPanel() {
     settingsOption.addEventListener('click', (event) => {
         event.stopPropagation();
         console.log('[MyBible] right-settings-option clicked');
+        // Add to history so Android back returns to Bible instead of closing app
+        try {
+            navigateToPage('settings');
+        } catch (e) {}
         // Sync theme segment
         const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
         const themeSegBtns = document.querySelectorAll('#settings-theme-segment .settings-seg-btn');
