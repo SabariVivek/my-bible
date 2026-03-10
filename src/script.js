@@ -3212,7 +3212,7 @@ function initializeTheme() {
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
         if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', isDark ? '#1e1f22' : '#ffffff');
+            metaThemeColor.setAttribute('content', isDark ? '#292a2d' : '#ffffff');
         }
         if (metaColorScheme) {
             metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
@@ -3253,7 +3253,7 @@ function initializeTheme() {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#292a2d' : '#ffffff');
             }
             if (metaColorScheme) {
                 metaColorScheme.setAttribute('content', theme);
@@ -3269,7 +3269,7 @@ function initializeTheme() {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#292a2d' : '#ffffff');
             }
             if (metaColorScheme) {
                 metaColorScheme.setAttribute('content', theme);
