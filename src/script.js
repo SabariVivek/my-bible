@@ -112,6 +112,55 @@ let uiSettings = (() => {
     }
 })();
 
+// Snapshot of settings when the right settings panel is opened
+let settingsPanelOriginalState = null;
+
+function getCurrentSettingsSnapshot() {
+    try {
+        const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
+        const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
+        return {
+            theme: themeSegVal,
+            language: langSegVal,
+            englishColor: colorVal,
+            uiSettings: { ...uiSettings },
+            isAdmin: typeof isAdmin === 'function' ? isAdmin() : false
+        };
+    } catch (e) {
+        return null;
+    }
+}
+
+function areSettingsEqual(a, b) {
+    if (!a || !b) return true;
+    if (a.theme !== b.theme) return false;
+    if (a.language !== b.language) return false;
+    if (a.englishColor !== b.englishColor) return false;
+    if (!!a.isAdmin !== !!b.isAdmin) return false;
+    const keys = Object.keys(DEFAULT_UI_SETTINGS);
+    for (const key of keys) {
+        if (!!(a.uiSettings && a.uiSettings[key]) !== !!(b.uiSettings && b.uiSettings[key])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function updateSettingsFooterVisibility() {
+    const panel = document.getElementById('right-settings-panel');
+    if (!panel) return;
+    const footer = panel.querySelector('.settings-footer');
+    if (!footer) return;
+    if (!settingsPanelOriginalState) {
+        footer.style.display = 'none';
+        return;
+    }
+    const current = getCurrentSettingsSnapshot();
+    const changed = !areSettingsEqual(settingsPanelOriginalState, current);
+    footer.style.display = changed ? 'flex' : 'none';
+}
+
 // Supabase configuration for user_settings (same project as other Supabase usage)
 const SUPABASE_SETTINGS_CONFIG = {
     url: 'https://encjogfdbrfcatvytpir.supabase.co',
@@ -140,7 +189,6 @@ async function saveUserSettingsToSupabase() {
             (typeof englishTextColor !== 'undefined' ? englishTextColor : 'default');
 
         const payload = {
-            user_id: userId,
             theme: themeVal,
             language: langSegVal,
             english_text_color: colorVal,
@@ -154,16 +202,34 @@ async function saveUserSettingsToSupabase() {
             notes_feature: !!uiSettings.notesFeature
         };
 
-        await fetch(`${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings`, {
-            method: 'POST',
-            headers: {
-                'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
-                'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
-                'Content-Type': 'application/json',
-                'Prefer': 'resolution=merge-duplicates'
-            },
-            body: JSON.stringify(payload)
-        });
+        // Use PATCH with user_id filter so we update the existing row
+        // If no row exists yet, fall back to creating one with POST.
+        let response = await fetch(
+            `${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings?user_id=eq.${encodeURIComponent(userId)}`,
+            {
+                method: 'PATCH',
+                headers: {
+                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            }
+        );
+
+        if (response.status === 404 || response.status === 406) {
+            // No existing row – create one
+            const createPayload = { user_id: userId, ...payload };
+            await fetch(`${SUPABASE_SETTINGS_CONFIG.url}/rest/v1/user_settings`, {
+                method: 'POST',
+                headers: {
+                    'apikey': SUPABASE_SETTINGS_CONFIG.anonKey,
+                    'Authorization': `Bearer ${SUPABASE_SETTINGS_CONFIG.anonKey}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(createPayload)
+            });
+        }
     } catch (e) {
         // Fail silently – localStorage still keeps settings
     }
@@ -498,11 +564,9 @@ function settingsSelectSeg(groupId, btn) {
             }).catch(() => {});
         }
     }
-    // Persist segment state
+    // Persist segment state (locally) and mark panel as dirty
     localStorage.setItem('settingsTheme', btn.dataset.val);
-    if (typeof saveUserSettingsToSupabase === 'function') {
-        saveUserSettingsToSupabase().catch(() => {});
-    }
+    updateSettingsFooterVisibility();
 }
 function settingsSelectLang(btn) {
     const group = document.getElementById('settings-lang-segment');
@@ -529,11 +593,9 @@ function settingsSelectLang(btn) {
     if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
         loadBook(currentBook, currentChapter);
     }
-    // Persist language segment value
+    // Persist language segment value (locally) and mark panel as dirty
     localStorage.setItem('settingsLanguage', btn.dataset.val);
-    if (typeof saveUserSettingsToSupabase === 'function') {
-        saveUserSettingsToSupabase().catch(() => {});
-    }
+    updateSettingsFooterVisibility();
 }
 function settingsSelectColor(el) {
     const container = el.closest('.settings-color-swatches');
@@ -561,9 +623,7 @@ function settingsSelectColor(el) {
             applyUiSettingsToDocument();
         }
     }
-    if (typeof saveUserSettingsToSupabase === 'function') {
-        saveUserSettingsToSupabase().catch(() => {});
-    }
+    updateSettingsFooterVisibility();
 }
 function settingsToggleRow(row, options = {}) {
     const toggle = row.querySelector('.settings-toggle');
@@ -580,9 +640,7 @@ function settingsToggleRow(row, options = {}) {
         if (typeof applyUiSettingsToDocument === 'function') {
             applyUiSettingsToDocument();
         }
-        if (typeof saveUserSettingsToSupabase === 'function') {
-            saveUserSettingsToSupabase().catch(() => {});
-        }
+        updateSettingsFooterVisibility();
     }
 }
 
@@ -603,6 +661,7 @@ function settingsHandleAdminToggle() {
         localStorage.setItem('isAdmin', 'false');
         updateAdminUI();
         setSettingsAdminUiFromState();
+        updateSettingsFooterVisibility();
         return;
     }
     openAdminPasswordModal(() => {
@@ -622,6 +681,7 @@ function settingsHandleAdminToggle() {
         updateAdminUI();
         if (typeof showAdminNotification === 'function') showAdminNotification();
         setSettingsAdminUiFromState();
+        updateSettingsFooterVisibility();
     });
 }
 // Unused stubs from previous admin modal (kept for markup safety)
@@ -4680,6 +4740,8 @@ function initializeRightSettingsPanel() {
     const settingsPanel = document.getElementById('right-settings-panel');
     const closeBtn = document.getElementById('right-settings-close-btn');
     const backBtn = document.getElementById('right-settings-back-btn');
+    const saveBtn = document.getElementById('settings-save-btn');
+    const cancelBtn = document.getElementById('settings-cancel-btn');
     console.log('[MyBible] initializeRightSettingsPanel called', {
         hasSettingsOption: !!settingsOption,
         hasSettingsPanel: !!settingsPanel,
@@ -4694,6 +4756,13 @@ function initializeRightSettingsPanel() {
         try {
             navigateToPage('settings');
         } catch (e) {}
+        // Capture original state so Cancel can revert
+        try {
+            settingsPanelOriginalState = getCurrentSettingsSnapshot();
+        } catch (e) {
+            settingsPanelOriginalState = null;
+        }
+
         // Sync theme segment
         const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
         const themeSegBtns = document.querySelectorAll('#settings-theme-segment .settings-seg-btn');
@@ -4749,6 +4818,8 @@ function initializeRightSettingsPanel() {
         settingsPanel.setAttribute('aria-hidden', 'false');
         // Disable background page scroll while settings is open
         document.body.style.overflow = 'hidden';
+        // When first opened, buttons should be hidden until something changes
+        updateSettingsFooterVisibility();
         console.log('[MyBible] settings panel opened, classes:', settingsPanel.className);
     });
     // Close button
@@ -4768,6 +4839,117 @@ function initializeRightSettingsPanel() {
             settingsPanel.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
             console.log('[MyBible] settings panel closed via back button');
+        });
+    }
+
+    // Save button explicitly persists current settings and closes panel
+    if (saveBtn) {
+        saveBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            try {
+                if (typeof saveUserSettingsToSupabase === 'function') {
+                    saveUserSettingsToSupabase().catch(() => {});
+                }
+            } catch (e) {}
+            settingsPanelOriginalState = null;
+            updateSettingsFooterVisibility();
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            console.log('[MyBible] settings panel closed via Save button');
+        });
+    }
+
+    // Cancel button reverts to the snapshot taken when panel was opened
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            if (settingsPanelOriginalState) {
+                try {
+                    const snap = settingsPanelOriginalState;
+                    // Theme
+                    if (snap.theme === 'dark' || snap.theme === 'light') {
+                        const wantDark = snap.theme === 'dark';
+                        const currentlyDark = document.body.classList.contains('dark-theme');
+                        if (wantDark && !currentlyDark) {
+                            document.body.classList.add('dark-theme');
+                            localStorage.setItem('theme', 'dark');
+                        } else if (!wantDark && currentlyDark) {
+                            document.body.classList.remove('dark-theme');
+                            localStorage.setItem('theme', 'light');
+                        }
+                        localStorage.setItem('settingsTheme', snap.theme);
+                        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                        const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                        if (metaThemeColor) {
+                            metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+                        }
+                        if (metaColorScheme) {
+                            metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                        }
+                    }
+
+                    // Language
+                    if (snap.language) {
+                        const langVal = snap.language;
+                        const selectedLang = langVal === 'en' ? 'english' : (langVal === 'ta' ? 'tamil' : 'both');
+                        currentLanguage = selectedLang;
+                        localStorage.setItem('currentLanguage', selectedLang);
+                        localStorage.setItem('settingsLanguage', langVal);
+                        if (typeof updateBookNames === 'function') {
+                            updateBookNames();
+                        }
+                        if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                            loadBook(currentBook, currentChapter);
+                        }
+                    }
+
+                    // English text color
+                    if (snap.englishColor) {
+                        englishTextColor = snap.englishColor;
+                        localStorage.setItem('englishTextColor', englishTextColor);
+                        localStorage.setItem('settingsEnglishColor', englishTextColor);
+                        if (currentLanguage === 'both') {
+                            if (typeof displayChapter === 'function') {
+                                displayChapter();
+                            }
+                            if (typeof applyAllNoteDisplays === 'function') {
+                                applyAllNoteDisplays();
+                            }
+                        }
+                    }
+
+                    // UI toggles
+                    if (snap.uiSettings) {
+                        uiSettings = { ...DEFAULT_UI_SETTINGS, ...snap.uiSettings };
+                        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+                        if (typeof applyUiSettingsToDocument === 'function') {
+                            applyUiSettingsToDocument();
+                        }
+                    }
+
+                    // Admin mode
+                    if (Object.prototype.hasOwnProperty.call(snap, 'isAdmin')) {
+                        localStorage.setItem('isAdmin', snap.isAdmin ? 'true' : 'false');
+                        if (typeof updateAdminUI === 'function') {
+                            updateAdminUI();
+                        }
+                        setSettingsAdminUiFromState();
+                    }
+
+                    // Persist reverted settings to Supabase so remote matches local
+                    if (typeof saveUserSettingsToSupabase === 'function') {
+                        saveUserSettingsToSupabase().catch(() => {});
+                    }
+                } catch (e) {
+                }
+            }
+            settingsPanelOriginalState = null;
+            updateSettingsFooterVisibility();
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            console.log('[MyBible] settings panel closed via Cancel button (reverted changes)');
         });
     }
     // Close when clicking outside the panel

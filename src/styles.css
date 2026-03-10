@@ -1643,7 +1643,7 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
     position: fixed;
     top: 60px;
     right: 0;
-    width: 260px;
+    width: 450px;
     max-width: 90vw;
     height: calc(100vh - 60px);
     background-color: #ffffff;
@@ -1656,7 +1656,6 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
-    border-radius: 12px 0 0 12px;
 }
 
 .right-settings-panel {
@@ -1671,6 +1670,8 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
     background: #1e1f22;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .right-settings-panel .settings-phone-wrap::before {
@@ -1695,7 +1696,7 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
 .right-settings-panel .settings-header {
     position: relative;
     z-index: 1;
-    padding: 56px 24px 20px;
+    padding: 24px 24px 20px;
     display: flex;
     align-items: center;
     gap: 14px;
@@ -1754,7 +1755,68 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
     flex-direction: column;
     gap: 22px;
     overflow-y: auto;
-    height: calc(100% - 96px);
+    flex: 1;
+}
+
+.right-settings-panel .settings-footer {
+    position: relative;
+    z-index: 1;
+    padding: 12px 18px 18px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1));
+}
+
+.right-settings-panel .settings-footer-btn {
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.right-settings-panel .settings-footer-btn:active {
+    transform: scale(0.97);
+}
+
+.right-settings-panel .settings-footer-cancel {
+    background: transparent;
+    color: #e3e3e3;
+}
+
+.right-settings-panel .settings-footer-cancel:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.right-settings-panel .settings-footer-save {
+    background: #c9a84c;
+    color: #121212;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.right-settings-panel .settings-footer-save:hover {
+    background: #dfb957;
+}
+
+@media (max-width: 768px) {
+    .right-settings-panel .settings-footer {
+        padding: 10px 14px 14px;
+        justify-content: center;
+    }
+
+    .right-settings-panel .settings-footer-btn {
+        flex: 1;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+/* Light theme overrides for footer background */
+body:not(.dark-theme) .right-settings-panel .settings-footer {
+    background: linear-gradient(to top, rgba(243, 243, 243, 0.95), rgba(243, 243, 243, 0.5));
 }
 
 .right-settings-panel .settings-section-label {
