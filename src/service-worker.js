@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Cache version is automatically updated with build timestamp
-const BUILD_TIMESTAMP = '20260309221446';
+const BUILD_TIMESTAMP = '20260310130948';
 const CACHE_VERSION = `v6-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
@@ -128,6 +128,8 @@ self.addEventListener('fetch', (event) => {
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="theme-color" content="#292a2d">
+            <meta name="color-scheme" content="dark">
             <title>No Internet Connection</title>
             <style>
               body {
@@ -138,14 +140,14 @@ self.addEventListener('fetch', (event) => {
                 align-items: center;
                 justify-content: center;
                 min-height: 100vh;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: #121316;
               }
               .container {
                 text-align: center;
                 padding: 40px 20px;
-                background: white;
+                background: #1c1d21;
                 border-radius: 20px;
-                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.45);
                 max-width: 400px;
                 margin: 20px;
               }
@@ -154,18 +156,18 @@ self.addEventListener('fetch', (event) => {
                 margin-bottom: 20px;
               }
               h1 {
-                color: #333;
+                color: #f2f3f5;
                 font-size: 24px;
                 margin: 0 0 10px 0;
               }
               p {
-                color: #666;
+                color: rgba(242,243,245,0.8);
                 font-size: 16px;
                 line-height: 1.6;
                 margin: 0 0 30px 0;
               }
               button {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: #2d2f36;
                 color: white;
                 border: none;
                 padding: 15px 40px;
@@ -173,7 +175,7 @@ self.addEventListener('fetch', (event) => {
                 border-radius: 30px;
                 cursor: pointer;
                 font-weight: 600;
-                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.35);
                 transition: transform 0.2s;
               }
               button:active {
