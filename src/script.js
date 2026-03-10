@@ -677,23 +677,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Set current user avatar in the top bar if available
     try {
-        const chipEl = document.querySelector('.current-user-chip');
         const avatarEl = document.getElementById('current-user-avatar');
-        if (chipEl && avatarEl) {
+        if (avatarEl) {
             const userId = localStorage.getItem('currentUserId');
             const userName = localStorage.getItem('currentUserName') || '';
             const isGuest = localStorage.getItem('currentUserIsGuest') === 'true';
             if (userId || isGuest) {
-                chipEl.style.display = 'flex';
-                chipEl.title = userName || 'Current user';
+                avatarEl.style.display = 'block';
+                avatarEl.title = userName || 'Current user';
                 if (userName) {
                     const fileKey = userName.trim().toLowerCase();
                     avatarEl.style.backgroundImage = `url('resources/profiles/${fileKey}.png')`;
                     avatarEl.style.backgroundSize = 'cover';
                     avatarEl.style.backgroundPosition = 'center';
+                } else {
+                    avatarEl.style.backgroundImage = '';
                 }
             } else {
-                chipEl.style.display = 'none';
+                avatarEl.style.display = 'none';
             }
         }
     } catch (e) {

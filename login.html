@@ -211,6 +211,9 @@ select option { background: var(--surface); color: var(--text); }
 .user-preview.visible { display: flex; }
 
 .u-avatar {
+  background-image: url('resources/profile/users.png');
+  background-size: cover;
+  background-position: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -429,7 +432,7 @@ select option { background: var(--surface); color: var(--text); }
     if (avatar) {
       if (name) {
         const fileKey = name.trim().toLowerCase();
-        avatar.style.backgroundImage = `url('resources/profile/${fileKey}.png')`;
+        avatar.style.backgroundImage = `url('resources/profiles/${fileKey}.png')`;
         avatar.style.backgroundSize = 'cover';
         avatar.style.backgroundPosition = 'center';
       } else {
