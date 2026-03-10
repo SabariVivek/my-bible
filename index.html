@@ -1146,25 +1146,21 @@
                             <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
                         </div>
 
-                        <div class="settings-row" data-setting="bookmark" onclick="settingsToggleRow(this)">
+                        <div class="settings-row" id="settingsAdminRow" onclick="settingsHandleAdminToggle(this)">
                             <div class="settings-row-left">
-                                <div class="settings-row-icon icon-bookmark">
-                                    <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                                <div class="settings-row-icon icon-admin">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
                                 </div>
-                                <span class="settings-row-text">Bookmark</span>
+                                <div class="settings-row-text">Admin Mode</div>
                             </div>
-                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                            <div class="settings-admin-actions">
+                                <span class="settings-admin-badge" id="settingsAdminBadge">OFF</span>
+                                <button class="settings-toggle" id="settingsAdminToggle" onclick="event.stopPropagation();settingsHandleAdminToggle(document.getElementById('settingsAdminRow'))"></button>
+                            </div>
                         </div>
 
-                        <div class="settings-row" data-setting="notesFeature" onclick="settingsToggleRow(this)">
-                            <div class="settings-row-left">
-                                <div class="settings-row-icon icon-notes">
-                                    <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-                                </div>
-                                <span class="settings-row-text">Notes</span>
-                            </div>
-                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
-                        </div>
                     </div>
                 </div>
             </div>

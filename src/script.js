@@ -90,6 +90,7 @@ let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
 // UI settings for settings panel (persisted)
+const ADMIN_PASSWORD = '030593'; // 6-digit password
 const DEFAULT_UI_SETTINGS = {
     images: true,
     shortSummary: true,
@@ -111,12 +112,94 @@ let uiSettings = (() => {
     }
 })();
 
+function openAdminPasswordModal(onSuccess) {
+    // Create password modal (reuse existing admin-password-modal markup/styles)
+    const existing = document.getElementById('admin-password-modal');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.className = 'admin-password-modal';
+    modal.id = 'admin-password-modal';
+    modal.innerHTML = `
+        <div class="admin-password-modal-content">
+            <div class="admin-password-header">
+                <h2>Admin Access</h2>
+                <button class="admin-password-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="admin-password-body">
+                <p>Enter 6-digit password to enable admin mode</p>
+                <input type="password" id="admin-password-input" class="admin-password-input" placeholder="••••••" maxlength="6" inputmode="numeric" />
+                <div class="admin-password-error" id="admin-password-error" style="display: none;">Incorrect password</div>
+            </div>
+            <div class="admin-password-footer">
+                <button class="admin-password-cancel-btn">Cancel</button>
+                <button class="admin-password-submit-btn">Submit</button>
+            </div>
+        </div>
+        <div class="admin-password-overlay"></div>
+    `;
+    document.body.appendChild(modal);
+
+    const input = modal.querySelector('#admin-password-input');
+    const errorDiv = modal.querySelector('#admin-password-error');
+    const closeBtn = modal.querySelector('.admin-password-close');
+    const cancelBtn = modal.querySelector('.admin-password-cancel-btn');
+    const submitBtn = modal.querySelector('.admin-password-submit-btn');
+    const overlay = modal.querySelector('.admin-password-overlay');
+
+    setTimeout(() => input.focus(), 100);
+
+    function closeModal() {
+        modal.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(() => modal.remove(), 300);
+    }
+
+    function handleSubmit() {
+        const password = input.value;
+        if (password === ADMIN_PASSWORD) {
+            closeModal();
+            try {
+                if (typeof onSuccess === 'function') onSuccess();
+            } catch (e) {}
+        } else {
+            errorDiv.style.display = 'block';
+            input.value = '';
+            input.focus();
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 3000);
+        }
+    }
+
+    submitBtn.addEventListener('click', handleSubmit);
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleSubmit();
+    });
+    closeBtn.addEventListener('click', closeModal);
+    cancelBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+}
+
+function setSettingsAdminUiFromState() {
+    const badge = document.getElementById('settingsAdminBadge');
+    const toggle = document.getElementById('settingsAdminToggle');
+    const enabled = isAdmin();
+    if (badge) {
+        badge.textContent = enabled ? 'ON' : 'OFF';
+        badge.classList.toggle('enabled', enabled);
+    }
+    if (toggle) {
+        toggle.classList.toggle('on', enabled);
+    }
+}
+
 function applyUiSettingsToDocument() {
     // CSS-driven toggles so async inserts are also covered
     document.body.classList.toggle('hide-verse-images', !uiSettings.images);
     document.body.classList.toggle('hide-short-summary', !uiSettings.shortSummary);
     document.body.classList.toggle('hide-verse-heading', !uiSettings.verseHeading);
     document.body.classList.toggle('hide-author-details', !uiSettings.authorDetails);
+    document.body.classList.toggle('hide-memory-verse', !uiSettings.memoryVerse);
 
     // Images: show/hide verse-image-container
     const imageContainers = document.querySelectorAll('.verse-image-container');
@@ -139,6 +222,11 @@ function applyUiSettingsToDocument() {
         // Keep layout space reserved: hide visually but don't collapse
         authorBanner.style.visibility = uiSettings.authorDetails ? '' : 'hidden';
         authorBanner.style.pointerEvents = uiSettings.authorDetails ? '' : 'none';
+    }
+    // Bible Reading: show/hide Bible Reading option in right sidebar
+    const bibleReadingOption = document.getElementById('bible-reading-option');
+    if (bibleReadingOption) {
+        bibleReadingOption.style.display = uiSettings.bibleReading ? 'flex' : 'none';
     }
 }
 let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
@@ -209,7 +297,7 @@ function settingsSelectSeg(groupId, btn) {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', wantDark ? '#292a2d' : '#ffffff');
+                metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
             }
             if (metaColorScheme) {
                 metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
@@ -227,7 +315,7 @@ function settingsSelectSeg(groupId, btn) {
                 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
                 const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
                 if (metaThemeColor) {
-                    metaThemeColor.setAttribute('content', wantDark ? '#292a2d' : '#ffffff');
+                    metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
                 }
                 if (metaColorScheme) {
                     metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
@@ -343,6 +431,41 @@ function settingsToggleSwitch(event, toggleEl) {
         settingsToggleRow(row, { skipToggleClass: true });
     }
 }
+
+// Settings: Administrator
+function settingsHandleAdminToggle() {
+    // Always start OFF; enabling requires password
+    if (isAdmin()) {
+        // Disable without password
+        localStorage.setItem('isAdmin', 'false');
+        updateAdminUI();
+        setSettingsAdminUiFromState();
+        return;
+    }
+    openAdminPasswordModal(() => {
+        // Enable admin mode (same effect as existing activateAdminMode)
+        const adminToggle = document.getElementById('admin-toggle');
+        const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
+        const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile) {
+            if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        } else {
+            if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
+            if (adminToggle) adminToggle.style.display = 'flex';
+        }
+        localStorage.setItem('isAdmin', 'true');
+        updateAdminUI();
+        if (typeof showAdminNotification === 'function') showAdminNotification();
+        setSettingsAdminUiFromState();
+    });
+}
+// Unused stubs from previous admin modal (kept for markup safety)
+function settingsCloseAdminModal() {}
+function settingsOnAdminPinInput() {}
+function settingsOnAdminPinKey() {}
+function settingsSubmitAdminPin() {}
 // Helper function to check if a chapter has any memory verses
 function chapterHasMemoryVerses(bookName, chapter) {
     if (typeof window.memoryVerses === 'undefined') return false;
@@ -457,6 +580,7 @@ function initializeHistoryManagement() {
         if (settingsPanel && settingsPanel.classList.contains('active')) {
             settingsPanel.classList.remove('active');
             settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
             isOnBiblePage = true;
             currentPage = 'bible';
             history.replaceState({ page: 'bible' }, '', window.location.href);
@@ -512,6 +636,7 @@ function navigateToBiblePage() {
     if (settingsPanel && settingsPanel.classList.contains('active')) {
         settingsPanel.classList.remove('active');
         settingsPanel.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
     }
     isOnBiblePage = true;
     currentPage = 'bible';
@@ -3449,7 +3574,7 @@ function initializeTheme() {
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
         if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', isDark ? '#292a2d' : '#ffffff');
+            metaThemeColor.setAttribute('content', isDark ? '#1e1f22' : '#ffffff');
         }
         if (metaColorScheme) {
             metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
@@ -3490,7 +3615,7 @@ function initializeTheme() {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', theme === 'dark' ? '#292a2d' : '#ffffff');
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
             }
             if (metaColorScheme) {
                 metaColorScheme.setAttribute('content', theme);
@@ -3506,7 +3631,7 @@ function initializeTheme() {
             const metaThemeColor = document.querySelector('meta[name="theme-color"]');
             const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
             if (metaThemeColor) {
-                metaThemeColor.setAttribute('content', theme === 'dark' ? '#292a2d' : '#ffffff');
+                metaThemeColor.setAttribute('content', theme === 'dark' ? '#1e1f22' : '#ffffff');
             }
             if (metaColorScheme) {
                 metaColorScheme.setAttribute('content', theme);
@@ -4298,132 +4423,7 @@ function initializeSearch() {
 function initializeSiteTitle() {
     const siteTitle = document.querySelector('.site-title');
     const secretIcon = document.getElementById('secret-icon');
-    let clickCount = 0;
-    let clickTimer = null;
-    const CLICKS_REQUIRED = 5;
-    const CLICK_TIMEOUT = 3000; // 3 seconds between clicks
-    const ADMIN_PASSWORD = '030593'; // 6-digit password
-    
-    if (siteTitle) {
-        // Handle click - track consecutive clicks
-        siteTitle.addEventListener('click', handleLogoClick);
-        
-        function handleLogoClick() {
-            // Don't trigger if admin mode is already active
-            if (isAdmin()) {
-                return;
-            }
-            
-            clickCount++;
-            
-            // Reset click count after timeout
-            if (clickTimer) {
-                clearTimeout(clickTimer);
-            }
-            clickTimer = setTimeout(() => {
-                clickCount = 0;
-            }, CLICK_TIMEOUT);
-            
-            // Check if 5 clicks reached
-            if (clickCount >= CLICKS_REQUIRED) {
-                clickCount = 0;
-                clearTimeout(clickTimer);
-                showPasswordModal();
-            }
-        }
-        
-        function showPasswordModal() {
-            // Create password modal
-            const modal = document.createElement('div');
-            modal.className = 'admin-password-modal';
-            modal.id = 'admin-password-modal';
-            modal.innerHTML = `
-                <div class="admin-password-modal-content">
-                    <div class="admin-password-header">
-                        <h2>Admin Access</h2>
-                        <button class="admin-password-close" aria-label="Close">&times;</button>
-                    </div>
-                    <div class="admin-password-body">
-                        <p>Enter 6-digit password to enable admin mode</p>
-                        <input type="password" id="admin-password-input" class="admin-password-input" placeholder="••••••" maxlength="6" inputmode="numeric" />
-                        <div class="admin-password-error" id="admin-password-error" style="display: none;">Incorrect password</div>
-                    </div>
-                    <div class="admin-password-footer">
-                        <button class="admin-password-cancel-btn">Cancel</button>
-                        <button class="admin-password-submit-btn">Submit</button>
-                    </div>
-                </div>
-                <div class="admin-password-overlay"></div>
-            `;
-            
-            document.body.appendChild(modal);
-            
-            const input = modal.querySelector('#admin-password-input');
-            const errorDiv = modal.querySelector('#admin-password-error');
-            const closeBtn = modal.querySelector('.admin-password-close');
-            const cancelBtn = modal.querySelector('.admin-password-cancel-btn');
-            const submitBtn = modal.querySelector('.admin-password-submit-btn');
-            const overlay = modal.querySelector('.admin-password-overlay');
-            
-            // Focus on input
-            setTimeout(() => input.focus(), 100);
-            
-            // Handle submit
-            function handleSubmit() {
-                const password = input.value;
-                if (password === ADMIN_PASSWORD) {
-                    // Correct password
-                    activateAdminMode();
-                    closeModal();
-                } else {
-                    // Wrong password
-                    errorDiv.style.display = 'block';
-                    input.value = '';
-                    input.focus();
-                    setTimeout(() => {
-                        errorDiv.style.display = 'none';
-                    }, 3000);
-                }
-            }
-            
-            function closeModal() {
-                modal.style.animation = 'fadeOut 0.3s ease';
-                setTimeout(() => modal.remove(), 300);
-            }
-            
-            // Event listeners
-            submitBtn.addEventListener('click', handleSubmit);
-            input.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') handleSubmit();
-            });
-            closeBtn.addEventListener('click', closeModal);
-            cancelBtn.addEventListener('click', closeModal);
-            overlay.addEventListener('click', closeModal);
-        }
-        
-        function activateAdminMode() {
-            const adminToggle = document.getElementById('admin-toggle');
-            const mobileAdminMenuWrapper = document.getElementById('mobile-admin-menu-wrapper');
-            const desktopAdminMenuWrapper = document.getElementById('desktop-admin-menu-wrapper');
-            const isMobile = window.innerWidth <= 768;
-            
-            // Show appropriate admin UI based on device
-            if (isMobile) {
-                // On mobile, show admin menu wrapper and toggle
-                if (mobileAdminMenuWrapper) mobileAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-                if (adminToggle) adminToggle.style.display = 'flex';
-            } else {
-                // On desktop, show admin menu wrapper and toggle
-                if (desktopAdminMenuWrapper) desktopAdminMenuWrapper.style.setProperty('display', 'block', 'important');
-                if (adminToggle) adminToggle.style.display = 'flex';
-            }
-            
-            // Activate admin mode
-            localStorage.setItem('isAdmin', 'true');
-            updateAdminUI();
-            showAdminNotification();
-        }
-    }
+    // Disable old 5-click admin activation on site title.
     
     // Add click handler for secret icon
     if (secretIcon) {
@@ -4541,8 +4541,12 @@ function initializeRightSettingsPanel() {
             const shouldBeOn = key && Object.prototype.hasOwnProperty.call(uiSettings, key) ? !!uiSettings[key] : true;
             toggle.classList.toggle('on', shouldBeOn);
         });
+        // Sync admin toggle UI
+        setSettingsAdminUiFromState();
         settingsPanel.classList.add('active');
         settingsPanel.setAttribute('aria-hidden', 'false');
+        // Disable background page scroll while settings is open
+        document.body.style.overflow = 'hidden';
         console.log('[MyBible] settings panel opened, classes:', settingsPanel.className);
     });
     // Close button
@@ -4551,6 +4555,7 @@ function initializeRightSettingsPanel() {
             event.stopPropagation();
             settingsPanel.classList.remove('active');
             settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
             console.log('[MyBible] settings panel closed via close button');
         });
     }
@@ -4559,6 +4564,7 @@ function initializeRightSettingsPanel() {
             event.stopPropagation();
             settingsPanel.classList.remove('active');
             settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
             console.log('[MyBible] settings panel closed via back button');
         });
     }
@@ -4568,9 +4574,13 @@ function initializeRightSettingsPanel() {
         const rightSidebar = document.querySelector('.right-sidebar');
         const clickedInsideSidebar = rightSidebar && rightSidebar.contains(event.target);
         const clickedInsidePanel = settingsPanel.contains(event.target);
-        if (!clickedInsidePanel && !clickedInsideSidebar) {
+        // If admin password modal is open, ignore clicks inside it so settings stays open
+        const adminModal = document.querySelector('.admin-password-modal');
+        const clickedInsideAdminModal = adminModal && adminModal.contains(event.target);
+        if (!clickedInsidePanel && !clickedInsideSidebar && !clickedInsideAdminModal) {
             settingsPanel.classList.remove('active');
             settingsPanel.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
             console.log('[MyBible] settings panel closed via outside click');
         }
     });

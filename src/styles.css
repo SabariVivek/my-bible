@@ -420,6 +420,10 @@ body.dark-theme .book-loader {
     font-family: Merriweather, serif;
     cursor: pointer;
     user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header-controls {
@@ -1583,6 +1587,33 @@ body.hide-author-details #author-banner {
     visibility: hidden !important;
     pointer-events: none !important;
 }
+body.hide-memory-verse .book-item.has-memory-verse .book-name::after,
+body.hide-memory-verse .book-item.has-memory-verse .book-name .english-name::after {
+    content: none !important;
+}
+body.hide-memory-verse .verses-column .number-item.has-memory-verse,
+body.hide-memory-verse .verses-column .number-item.has-memory-verse.active,
+body.hide-memory-verse .chapters-column .number-item.has-memory-verse,
+body.hide-memory-verse .chapters-column .number-item.has-memory-verse.active {
+    color: inherit !important;
+    font-weight: 400 !important;
+}
+/* Main verse list: remove memory-verse badge styling */
+body.hide-memory-verse .verse-line.memory-verse .v-num,
+body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
+    display: inline !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    font-weight: bold !important;
+    font-size: 0.875rem !important;
+    opacity: 1 !important;
+    animation: none !important;
+}
 
 /* Right Settings Panel (overlay above right sidebar) */
 .right-settings-panel {
@@ -1780,6 +1811,21 @@ body.hide-author-details #author-banner {
     background: #2a2b2f;
 }
 
+/* Softer interaction states for settings rows */
+body.dark-theme .right-settings-panel .settings-row:hover {
+    background: #26272b;
+}
+body.dark-theme .right-settings-panel .settings-row:active {
+    background: #2f3035;
+}
+
+body:not(.dark-theme) .right-settings-panel .settings-row:hover {
+    background: rgba(60,64,67,0.06);
+}
+body:not(.dark-theme) .right-settings-panel .settings-row:active {
+    background: rgba(60,64,67,0.10);
+}
+
 .right-settings-panel .settings-row-left {
     display: flex;
     align-items: center;
@@ -1863,6 +1909,45 @@ body.hide-author-details #author-banner {
 .right-settings-panel .icon-notes svg {
     stroke: #ff9800;
 }
+
+.right-settings-panel .icon-admin {
+    background: rgba(239,68,68,0.10);
+}
+.right-settings-panel .icon-admin svg {
+    stroke: #ef4444;
+}
+
+.right-settings-panel .settings-admin-subtext {
+    font-size: 11px;
+    color: rgba(227,227,227,0.75);
+    margin-top: 2px;
+}
+body:not(.dark-theme) .right-settings-panel .settings-admin-subtext {
+    color: rgba(122,125,138,1);
+}
+
+.right-settings-panel .settings-admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-settings-panel .settings-admin-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: rgba(239,68,68,0.12);
+    color: #ef4444;
+    flex-shrink: 0;
+}
+.right-settings-panel .settings-admin-badge.enabled {
+    background: rgba(52,168,83,0.12);
+    color: #34a853;
+}
+
+/* Settings admin modal (scoped, UI only) */
 
 .right-settings-panel .settings-row-text {
     font-size: 15px;
@@ -11286,7 +11371,8 @@ body.dark-theme .passage-modal-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10000;
+    /* Above right-settings-panel (12050) */
+    z-index: 13000;
 }
 
 .admin-password-overlay {
@@ -11308,7 +11394,7 @@ body.dark-theme .passage-modal-content {
     width: 90%;
     overflow: hidden;
     animation: slideUp 0.3s ease;
-    z-index: 10001;
+    z-index: 13001;
 }
 
 body.dark-theme .admin-password-modal-content {

@@ -5,8 +5,8 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#292a2d",
-  "theme_color": "#292a2d",
+  "background_color": "#1e1f22",
+  "theme_color": "#1e1f22",
   "orientation": "portrait",
   "icons": [
     {
@@ -28,6 +28,6 @@
     "lifestyle"
   ],
   "screenshots": [],
-  "version": "20260310132810",
-  "last_updated": "2026-03-10T07:58:10.646Z"
+  "version": "20260310160629",
+  "last_updated": "2026-03-10T10:36:29.233Z"
 }

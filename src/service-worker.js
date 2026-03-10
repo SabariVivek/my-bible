@@ -1,6 +1,6 @@
 // Service worker for PWA with Supabase API caching
 // IMPORTANT: Cache version is automatically updated with build timestamp
-const BUILD_TIMESTAMP = '20260310132810';
+const BUILD_TIMESTAMP = '20260310160629';
 const CACHE_VERSION = `v6-${BUILD_TIMESTAMP}`;
 const CACHE_NAME = `my-bible-${CACHE_VERSION}`;
 const API_CACHE_NAME = `my-bible-api-${CACHE_VERSION}`;
@@ -128,7 +128,7 @@ self.addEventListener('fetch', (event) => {
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="theme-color" content="#292a2d">
+            <meta name="theme-color" content="#1e1f22">
             <meta name="color-scheme" content="dark">
             <title>No Internet Connection</title>
             <style>
