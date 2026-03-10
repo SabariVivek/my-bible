@@ -35,6 +35,7 @@
     <link rel="icon" type="image/png" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="apple-touch-icon" href="resources/icons/bible.png?cb=20251126003722">
     <link rel="stylesheet" href="src/styles.css?cb=20251210006000">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/chapter-summary-pullout.css?cb=20260301210232">
     <!-- Cache Management -->
     <script src="src/cache-manager.js?cb=20251126003722"></script>
@@ -131,34 +132,6 @@
                     stroke-linecap="round">
                     <circle cx="11" cy="11" r="7"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-            </button>
-            <button class="icon-btn lang-btn" aria-label="Language">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path
-                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                    </path>
-                </svg>
-            </button>
-            <button class="icon-btn theme-toggle" aria-label="Toggle theme">
-                <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="5" />
-                    <line x1="12" y1="1" x2="12" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="23" />
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                    <line x1="1" y1="12" x2="3" y2="12" />
-                    <line x1="21" y1="12" x2="23" y2="12" />
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                </svg>
-                <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
-                    style="display: none;">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                 </svg>
             </button>
         </div>
@@ -1048,9 +1021,117 @@
             <span class="option-icon" style="font-size: 20px;">🙏</span>
             <span class="option-name">Prayers</span>
         </div>
-        <div class="right-menu-item" id="right-sermon-option">
+        <div class="right-menu-item" id="right-settings-option">
             <span class="option-icon" style="font-size: 20px;">⚙️</span>
             <span class="option-name">Settings</span>
+        </div>
+    </aside>
+
+    <!-- Right Sidebar Settings Panel -->
+    <aside class="right-settings-panel" id="right-settings-panel" aria-hidden="true">
+        <div class="settings-phone-wrap">
+            <div class="settings-theme-preview"></div>
+
+            <div class="settings-header">
+                <button class="settings-header-back" id="right-settings-back-btn" aria-label="Close settings">
+                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div class="settings-header-title">
+                    Settings
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="settings-body">
+                <!-- THEME -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Theme</div>
+                    <div class="settings-segment" id="settings-theme-segment">
+                        <button class="settings-seg-btn active" data-val="dark" onclick="settingsSelectSeg('settings-theme-segment', this)">Dark</button>
+                        <button class="settings-seg-btn" data-val="light" onclick="settingsSelectSeg('settings-theme-segment', this)">Light</button>
+                    </div>
+                </div>
+
+                <!-- LANGUAGE -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Language</div>
+                    <div class="settings-segment settings-lang" id="settings-lang-segment">
+                        <button class="settings-seg-btn active" data-val="en" onclick="settingsSelectLang(this)">English</button>
+                        <button class="settings-seg-btn" data-val="ta" onclick="settingsSelectLang(this)">Tamil</button>
+                        <button class="settings-seg-btn" data-val="both" onclick="settingsSelectLang(this)">Both</button>
+                    </div>
+
+                    <!-- English text color — shown only when Both is selected -->
+                    <div class="settings-color-panel" id="settings-color-panel">
+                        <div class="settings-card settings-color-card">
+                            <div class="settings-color-row">
+                                <span class="settings-color-row-label">English Text Color</span>
+                                <div class="settings-color-swatches">
+                                    <div class="settings-swatch grey selected" onclick="settingsSelectColor(this)"></div>
+                                    <div class="settings-swatch blue" onclick="settingsSelectColor(this)"></div>
+                                    <div class="settings-swatch red" onclick="settingsSelectColor(this)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DISPLAY OPTIONS -->
+                <div class="settings-section">
+                    <div class="settings-section-label">Display Options</div>
+                    <div class="settings-card">
+                        <div class="settings-row" data-setting="images" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-images">
+                                    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                </div>
+                                <span class="settings-row-text">Images</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="shortSummary" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-summary">
+                                    <svg viewBox="0 0 24 24"><line x1="21" y1="10" x2="7" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="7" y2="18"/></svg>
+                                </div>
+                                <span class="settings-row-text">Short Summary</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="bibleReading" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-bible">
+                                    <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                </div>
+                                <span class="settings-row-text">Bible Reading</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="verseHeading" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-verse">
+                                    <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h12M3 18h8"/><path d="M18 14l3 3-3 3"/></svg>
+                                </div>
+                                <span class="settings-row-text">Verse Heading</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+
+                        <div class="settings-row" data-setting="authorDetails" onclick="settingsToggleRow(this)">
+                            <div class="settings-row-left">
+                                <div class="settings-row-icon icon-author">
+                                    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                </div>
+                                <span class="settings-row-text">Author Details</span>
+                            </div>
+                            <button class="settings-toggle on" onclick="settingsToggleSwitch(event, this)"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </aside>
 

@@ -89,6 +89,55 @@ if (currentBookData && currentChapter > currentBookData.chapters) {
 let currentData = null;
 let currentTamilData = null; // For storing Tamil data when "Both" is selected
 let currentLanguage = localStorage.getItem('currentLanguage') || 'tamil'; // 'english' or 'tamil' or 'both'
+// UI settings for settings panel (persisted)
+const DEFAULT_UI_SETTINGS = {
+    images: true,
+    shortSummary: true,
+    bibleReading: true,
+    verseHeading: true,
+    authorDetails: true
+};
+let uiSettings = (() => {
+    try {
+        const raw = localStorage.getItem('uiSettings');
+        if (!raw) return { ...DEFAULT_UI_SETTINGS };
+        const parsed = JSON.parse(raw);
+        return { ...DEFAULT_UI_SETTINGS, ...parsed };
+    } catch (e) {
+        return { ...DEFAULT_UI_SETTINGS };
+    }
+})();
+
+function applyUiSettingsToDocument() {
+    // CSS-driven toggles so async inserts are also covered
+    document.body.classList.toggle('hide-verse-images', !uiSettings.images);
+    document.body.classList.toggle('hide-short-summary', !uiSettings.shortSummary);
+    document.body.classList.toggle('hide-verse-heading', !uiSettings.verseHeading);
+    document.body.classList.toggle('hide-author-details', !uiSettings.authorDetails);
+
+    // Images: show/hide verse-image-container
+    const imageContainers = document.querySelectorAll('.verse-image-container');
+    imageContainers.forEach(el => {
+        el.style.display = uiSettings.images ? '' : 'none';
+    });
+    // Short Summary: show/hide chapter-summary-arc-trigger
+    const summaryTrigger = document.querySelector('.chapter-summary-arc-trigger');
+    if (summaryTrigger) {
+        summaryTrigger.style.display = uiSettings.shortSummary ? '' : 'none';
+    }
+    // Verse Heading: show/hide all verse-header elements
+    const verseHeaders = document.querySelectorAll('.verse-header');
+    verseHeaders.forEach(el => {
+        el.style.display = uiSettings.verseHeading ? '' : 'none';
+    });
+    // Author Details: show/hide author-banner
+    const authorBanner = document.getElementById('author-banner');
+    if (authorBanner) {
+        // Keep layout space reserved: hide visually but don't collapse
+        authorBanner.style.visibility = uiSettings.authorDetails ? '' : 'hidden';
+        authorBanner.style.pointerEvents = uiSettings.authorDetails ? '' : 'none';
+    }
+}
 let englishTextColor = localStorage.getItem('englishTextColor') || 'default'; // 'default', 'blue' or 'red'
 let hasUserInteracted = localStorage.getItem('hasUserInteracted') === 'true'; // Track if user has selected a verse
 // Preloaded verse data cache for references
@@ -127,6 +176,107 @@ function bookHasMemoryVerses(bookName) {
         const normalizedMemBook = normalizeBookName(book);
         return normalizedMemBook === normalizedBookName;
     });
+}
+// Settings panel UI helpers (local only, no app state changes yet)
+function settingsSelectSeg(groupId, btn) {
+    const group = document.getElementById(groupId);
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Apply theme without closing the settings panel
+    if (groupId === 'settings-theme-segment') {
+        const desired = btn.dataset.val === 'dark' ? 'dark' : 'light';
+        const isDark = desired === 'dark';
+        const currentlyDark = document.body.classList.contains('dark-theme');
+        if (isDark !== currentlyDark) {
+            if (isDark) {
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+            const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+            if (metaThemeColor) {
+                metaThemeColor.setAttribute('content', isDark ? '#292a2d' : '#ffffff');
+            }
+            if (metaColorScheme) {
+                metaColorScheme.setAttribute('content', isDark ? 'dark' : 'light');
+            }
+        }
+    }
+    // Persist segment state
+    localStorage.setItem('settingsTheme', btn.dataset.val);
+}
+function settingsSelectLang(btn) {
+    const group = document.getElementById('settings-lang-segment');
+    if (!group) return;
+    group.querySelectorAll('.settings-seg-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const panel = document.getElementById('settings-color-panel');
+    if (panel) {
+        if (btn.dataset.val === 'both') {
+            panel.classList.add('visible');
+        } else {
+            panel.classList.remove('visible');
+        }
+    }
+    // Sync language with existing language bottom sheet behavior
+    const val = btn.dataset.val;
+    const selectedLang = val === 'en' ? 'english' : (val === 'ta' ? 'tamil' : 'both');
+    currentLanguage = selectedLang;
+    localStorage.setItem('currentLanguage', selectedLang);
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    // For non-both languages, reload current book/chapter like the sheet does
+    if (selectedLang !== 'both' && typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+        loadBook(currentBook, currentChapter);
+    }
+    // Persist language segment value
+    localStorage.setItem('settingsLanguage', btn.dataset.val);
+}
+function settingsSelectColor(el) {
+    const container = el.closest('.settings-color-swatches');
+    if (!container) return;
+    container.querySelectorAll('.settings-swatch').forEach(d => d.classList.remove('selected'));
+    el.classList.add('selected');
+    // Mirror bottom sheet color behavior
+    const color = el.classList.contains('blue') ? 'blue' :
+                  el.classList.contains('red') ? 'red' : 'default';
+    englishTextColor = color;
+    localStorage.setItem('englishTextColor', color);
+    if (typeof updateBookNames === 'function') {
+        updateBookNames();
+    }
+    localStorage.setItem('settingsEnglishColor', color);
+}
+function settingsToggleRow(row, options = {}) {
+    const toggle = row.querySelector('.settings-toggle');
+    if (toggle) {
+        if (!options.skipToggleClass) {
+            toggle.classList.toggle('on');
+        }
+        const isOn = toggle.classList.contains('on');
+        const key = row.dataset.setting;
+        if (key && Object.prototype.hasOwnProperty.call(uiSettings, key)) {
+            uiSettings[key] = isOn;
+        }
+        localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+        if (typeof applyUiSettingsToDocument === 'function') {
+            applyUiSettingsToDocument();
+        }
+    }
+}
+
+function settingsToggleSwitch(event, toggleEl) {
+    event.stopPropagation();
+    toggleEl.classList.toggle('on');
+    const row = toggleEl.closest('.settings-row');
+    if (row) {
+        settingsToggleRow(row, { skipToggleClass: true });
+    }
 }
 // Helper function to check if a chapter has any memory verses
 function chapterHasMemoryVerses(bookName, chapter) {
@@ -294,6 +444,7 @@ function navigateToPage(pageName) {
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('[MyBible] DOMContentLoaded main init');
     // Check online status on load (silent)
     updateOnlineStatus();
     // Request persistent storage to prevent data deletion
@@ -350,6 +501,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSummaryDrawer();
     initializeScrollbarBehavior();
     initializeNotesModal();
+    console.log('[MyBible] Initializing right settings panel');
+    initializeRightSettingsPanel();
+    // Apply persisted UI settings to initial document
+    applyUiSettingsToDocument();
     loadNotesFromSupabase(); // Load shared notes from Supabase
     // Load memory verses from Supabase
     loadMemoryVersesFromSupabase();
@@ -987,6 +1142,8 @@ async function updateUI() {
     displayChapter();
     applyAllNoteDisplays();
     updateDrawerContent();
+    // Apply persisted UI settings (images, headings, summary, author banner)
+    applyUiSettingsToDocument();
     
     // Preload notes and references for current chapter in background
     preloadChapterNotesAndReferences();
@@ -4244,6 +4401,94 @@ function initializeHomeOptions() {
                     break;
             }
         });
+    });
+}
+// Initialize right sidebar settings panel
+function initializeRightSettingsPanel() {
+    const settingsOption = document.getElementById('right-settings-option');
+    const settingsPanel = document.getElementById('right-settings-panel');
+    const closeBtn = document.getElementById('right-settings-close-btn');
+    const backBtn = document.getElementById('right-settings-back-btn');
+    console.log('[MyBible] initializeRightSettingsPanel called', {
+        hasSettingsOption: !!settingsOption,
+        hasSettingsPanel: !!settingsPanel,
+        hasCloseBtn: !!closeBtn
+    });
+    if (!settingsOption || !settingsPanel) return;
+    // Open settings panel when clicking the right settings option
+    settingsOption.addEventListener('click', (event) => {
+        event.stopPropagation();
+        console.log('[MyBible] right-settings-option clicked');
+        // Sync theme segment
+        const themeSegVal = localStorage.getItem('settingsTheme') || (document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        const themeSegBtns = document.querySelectorAll('#settings-theme-segment .settings-seg-btn');
+        themeSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === themeSegVal);
+        });
+        // Sync language segment
+        const langSegVal = localStorage.getItem('settingsLanguage') || (currentLanguage === 'both' ? 'both' : currentLanguage === 'english' ? 'en' : 'ta');
+        const langSegBtns = document.querySelectorAll('#settings-lang-segment .settings-seg-btn');
+        langSegBtns.forEach(b => {
+            b.classList.toggle('active', b.dataset.val === langSegVal);
+        });
+        // Sync English color swatch
+        const colorVal = localStorage.getItem('settingsEnglishColor') || englishTextColor || 'default';
+        const colorSwatches = document.querySelectorAll('#settings-color-panel .settings-swatch');
+        colorSwatches.forEach(sw => {
+            const swColor = sw.classList.contains('blue') ? 'blue' :
+                            sw.classList.contains('red') ? 'red' : 'default';
+            sw.classList.toggle('selected', swColor === colorVal);
+        });
+        // Show/hide color panel based on current language val
+        const colorPanel = document.getElementById('settings-color-panel');
+        if (colorPanel) {
+            if (langSegVal === 'both') {
+                colorPanel.classList.add('visible');
+            } else {
+                colorPanel.classList.remove('visible');
+            }
+        }
+        // Sync toggle rows from uiSettings
+        const rows = settingsPanel.querySelectorAll('.settings-row');
+        rows.forEach(row => {
+            const toggle = row.querySelector('.settings-toggle');
+            if (!toggle) return;
+            const key = row.dataset.setting;
+            const shouldBeOn = key && Object.prototype.hasOwnProperty.call(uiSettings, key) ? !!uiSettings[key] : true;
+            toggle.classList.toggle('on', shouldBeOn);
+        });
+        settingsPanel.classList.add('active');
+        settingsPanel.setAttribute('aria-hidden', 'false');
+        console.log('[MyBible] settings panel opened, classes:', settingsPanel.className);
+    });
+    // Close button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            console.log('[MyBible] settings panel closed via close button');
+        });
+    }
+    if (backBtn) {
+        backBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            console.log('[MyBible] settings panel closed via back button');
+        });
+    }
+    // Close when clicking outside the panel
+    document.addEventListener('click', (event) => {
+        if (!settingsPanel.classList.contains('active')) return;
+        const rightSidebar = document.querySelector('.right-sidebar');
+        const clickedInsideSidebar = rightSidebar && rightSidebar.contains(event.target);
+        const clickedInsidePanel = settingsPanel.contains(event.target);
+        if (!clickedInsidePanel && !clickedInsideSidebar) {
+            settingsPanel.classList.remove('active');
+            settingsPanel.setAttribute('aria-hidden', 'true');
+            console.log('[MyBible] settings panel closed via outside click');
+        }
     });
 }
 // Restore UI elements after leaving home page
