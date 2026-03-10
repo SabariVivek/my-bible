@@ -175,6 +175,40 @@ function updateSettingsFooterVisibility() {
     }
 }
 
+function settingsHasUnsavedChanges() {
+    if (!settingsPanelOriginalState) return false;
+    const current = getCurrentSettingsSnapshot();
+    return !areSettingsEqual(settingsPanelOriginalState, current);
+}
+
+let pendingSettingsDiscardConfirm = null;
+let pendingSettingsDiscardCancel = null;
+
+function openSettingsDiscardDialog(onConfirm, onCancel) {
+    if (!settingsHasUnsavedChanges()) {
+        if (typeof onConfirm === 'function') onConfirm();
+        return;
+    }
+    const overlay = document.getElementById('settings-discard-overlay');
+    const confirmBtn = document.getElementById('settings-discard-confirm-btn');
+    const cancelBtn = document.getElementById('settings-discard-cancel-btn');
+    if (!overlay || !confirmBtn || !cancelBtn) {
+        // Fallback: just confirm immediately if dialog is missing
+        if (typeof onConfirm === 'function') onConfirm();
+        return;
+    }
+    pendingSettingsDiscardConfirm = onConfirm || null;
+    pendingSettingsDiscardCancel = onCancel || null;
+    overlay.style.display = 'flex';
+}
+
+function closeSettingsDiscardDialog() {
+    const overlay = document.getElementById('settings-discard-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
+}
+
 // Supabase configuration for user_settings (same project as other Supabase usage)
 const SUPABASE_SETTINGS_CONFIG = {
     url: 'https://encjogfdbrfcatvytpir.supabase.co',
@@ -800,15 +834,101 @@ function initializeHistoryManagement() {
     history.replaceState({ page: 'bible' }, '', window.location.href);
     // Handle browser back button
     window.addEventListener('popstate', (event) => {
-        // If settings panel is open, close it instead of exiting app
+        // If settings panel is open, confirm before closing instead of exiting app
         const settingsPanel = document.getElementById('right-settings-panel');
         if (settingsPanel && settingsPanel.classList.contains('active')) {
-            settingsPanel.classList.remove('active');
-            settingsPanel.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            isOnBiblePage = true;
-            currentPage = 'bible';
-            history.replaceState({ page: 'bible' }, '', window.location.href);
+            openSettingsDiscardDialog(
+                () => {
+                    // Revert changes, then close panel and go back to bible page
+                    try {
+                        const snap = settingsPanelOriginalState;
+                        if (snap) {
+                            // Theme
+                            if (snap.theme === 'dark' || snap.theme === 'light') {
+                                const wantDark = snap.theme === 'dark';
+                                const currentlyDark = document.body.classList.contains('dark-theme');
+                                if (wantDark && !currentlyDark) {
+                                    document.body.classList.add('dark-theme');
+                                    localStorage.setItem('theme', 'dark');
+                                } else if (!wantDark && currentlyDark) {
+                                    document.body.classList.remove('dark-theme');
+                                    localStorage.setItem('theme', 'light');
+                                }
+                                localStorage.setItem('settingsTheme', snap.theme);
+                                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                                const metaColorScheme = document.querySelector('meta[name="color-scheme"]');
+                                if (metaThemeColor) {
+                                    metaThemeColor.setAttribute('content', wantDark ? '#1e1f22' : '#ffffff');
+                                }
+                                if (metaColorScheme) {
+                                    metaColorScheme.setAttribute('content', wantDark ? 'dark' : 'light');
+                                }
+                            }
+                            // Language
+                            if (snap.language) {
+                                const langVal = snap.language;
+                                const selectedLang = langVal === 'en' ? 'english' : (langVal === 'ta' ? 'tamil' : 'both');
+                                currentLanguage = selectedLang;
+                                localStorage.setItem('currentLanguage', selectedLang);
+                                localStorage.setItem('settingsLanguage', langVal);
+                                if (typeof updateBookNames === 'function') {
+                                    updateBookNames();
+                                }
+                                if (typeof loadBook === 'function' && typeof currentBook !== 'undefined' && typeof currentChapter !== 'undefined') {
+                                    loadBook(currentBook, currentChapter);
+                                }
+                            }
+                            // English text color
+                            if (snap.englishColor) {
+                                englishTextColor = snap.englishColor;
+                                localStorage.setItem('englishTextColor', englishTextColor);
+                                localStorage.setItem('settingsEnglishColor', englishTextColor);
+                                if (currentLanguage === 'both') {
+                                    if (typeof displayChapter === 'function') {
+                                        displayChapter();
+                                    }
+                                    if (typeof applyAllNoteDisplays === 'function') {
+                                        applyAllNoteDisplays();
+                                    }
+                                }
+                            }
+                            // UI toggles
+                            if (snap.uiSettings) {
+                                uiSettings = { ...DEFAULT_UI_SETTINGS, ...snap.uiSettings };
+                                localStorage.setItem('uiSettings', JSON.stringify(uiSettings));
+                                if (typeof applyUiSettingsToDocument === 'function') {
+                                    applyUiSettingsToDocument();
+                                }
+                            }
+                            // Admin mode
+                            if (Object.prototype.hasOwnProperty.call(snap, 'isAdmin')) {
+                                localStorage.setItem('isAdmin', snap.isAdmin ? 'true' : 'false');
+                                if (typeof updateAdminUI === 'function') {
+                                    updateAdminUI();
+                                }
+                                setSettingsAdminUiFromState();
+                            }
+                            // Persist reverted settings to Supabase
+                            if (typeof saveUserSettingsToSupabase === 'function') {
+                                saveUserSettingsToSupabase().catch(() => {});
+                            }
+                        }
+                    } catch (e) {
+                    }
+                    settingsPanelOriginalState = null;
+                    updateSettingsFooterVisibility();
+                    settingsPanel.classList.remove('active');
+                    settingsPanel.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                    isOnBiblePage = true;
+                    currentPage = 'bible';
+                    history.replaceState({ page: 'bible' }, '', window.location.href);
+                },
+                () => {
+                    // User chose to stay; immediately push state back so history remains consistent
+                    history.pushState({ page: 'settings' }, '', window.location.href);
+                }
+            );
             return;
         }
         // Check if prayers sheet is open
@@ -4844,19 +4964,21 @@ function initializeRightSettingsPanel() {
     if (closeBtn) {
         closeBtn.addEventListener('click', (event) => {
             event.stopPropagation();
-            settingsPanel.classList.remove('active');
-            settingsPanel.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            console.log('[MyBible] settings panel closed via close button');
+            openSettingsDiscardDialog(() => {
+                // Treat Discard as full cancel (revert changes then close)
+                handleSettingsCancel();
+                console.log('[MyBible] settings panel closed via close button (discard)');
+            });
         });
     }
     if (backBtn) {
         backBtn.addEventListener('click', (event) => {
             event.stopPropagation();
-            settingsPanel.classList.remove('active');
-            settingsPanel.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-            console.log('[MyBible] settings panel closed via back button');
+            openSettingsDiscardDialog(() => {
+                // Treat Discard as full cancel (revert changes then close)
+                handleSettingsCancel();
+                console.log('[MyBible] settings panel closed via back button (discard)');
+            });
         });
     }
 
@@ -4973,6 +5095,43 @@ function initializeRightSettingsPanel() {
     }
     if (cancelIconBtn) {
         cancelIconBtn.addEventListener('click', handleSettingsCancel);
+    }
+
+    // Attach handlers for discard confirmation modal
+    const discardOverlay = document.getElementById('settings-discard-overlay');
+    const discardConfirmBtn = document.getElementById('settings-discard-confirm-btn');
+    const discardCancelBtn = document.getElementById('settings-discard-cancel-btn');
+    if (discardOverlay && discardConfirmBtn && discardCancelBtn) {
+        discardConfirmBtn.addEventListener('click', () => {
+            closeSettingsDiscardDialog();
+            if (typeof pendingSettingsDiscardConfirm === 'function') {
+                const fn = pendingSettingsDiscardConfirm;
+                pendingSettingsDiscardConfirm = null;
+                pendingSettingsDiscardCancel = null;
+                fn();
+            }
+        });
+        discardCancelBtn.addEventListener('click', () => {
+            closeSettingsDiscardDialog();
+            if (typeof pendingSettingsDiscardCancel === 'function') {
+                const fn = pendingSettingsDiscardCancel;
+                pendingSettingsDiscardConfirm = null;
+                pendingSettingsDiscardCancel = null;
+                fn();
+            }
+        });
+        // Clicking outside modal closes dialog but keeps editing
+        discardOverlay.addEventListener('click', (event) => {
+            if (event.target === discardOverlay) {
+                closeSettingsDiscardDialog();
+                if (typeof pendingSettingsDiscardCancel === 'function') {
+                    const fn = pendingSettingsDiscardCancel;
+                    pendingSettingsDiscardConfirm = null;
+                    pendingSettingsDiscardCancel = null;
+                    fn();
+                }
+            }
+        });
     }
     // Close when clicking outside the panel
     document.addEventListener('click', (event) => {

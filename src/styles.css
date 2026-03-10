@@ -1610,6 +1610,16 @@ body.hide-author-details #author-banner {
     visibility: hidden !important;
     pointer-events: none !important;
 }
+
+/* Hide author banner on non-mobile (desktop/tablet) – overrides all other rules */
+@media (min-width: 769px) {
+    #author-banner,
+    body.hide-author-details #author-banner {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+}
 body.hide-memory-verse .book-item.has-memory-verse .book-name::after,
 body.hide-memory-verse .book-item.has-memory-verse .book-name .english-name::after {
     content: none !important;
@@ -1641,7 +1651,7 @@ body.hide-memory-verse body.dark-theme .verse-line.memory-verse .v-num {
 /* Right Settings Panel (overlay above right sidebar) */
 .right-settings-panel {
     position: fixed;
-    top: 60px;
+    top: 56px;
     right: 0;
     width: 450px;
     max-width: 90vw;
@@ -1921,6 +1931,103 @@ body:not(.dark-theme) .right-settings-panel .settings-footer {
     border: 1px solid rgba(255,255,255,0.06);
     border-radius: 14px;
     overflow: hidden;
+}
+
+/* Settings discard confirmation modal */
+.settings-discard-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 2000;
+}
+
+.settings-discard-modal {
+    width: 100%;
+    max-width: 320px;
+    background: #202124;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+    padding: 18px 18px 14px;
+}
+
+.settings-discard-title {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+}
+
+.settings-discard-text {
+    font-size: 13px;
+    color: #b0b3b8;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.settings-discard-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.settings-discard-btn {
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    background: transparent;
+    color: #e3e3e3;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.08s ease;
+}
+
+.settings-discard-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.settings-discard-btn.primary {
+    background: #ef4444;
+    border-color: rgba(239, 68, 68, 0.8);
+    color: #fff;
+}
+
+.settings-discard-btn.primary:hover {
+    background: #dc2626;
+}
+
+.settings-discard-btn:active {
+    transform: scale(0.96);
+}
+
+body:not(.dark-theme) .settings-discard-modal {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+body:not(.dark-theme) .settings-discard-text {
+    color: #4b5563;
+}
+
+body:not(.dark-theme) .settings-discard-btn {
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #111827;
+}
+
+body:not(.dark-theme) .settings-discard-btn.secondary:hover {
+    background: rgba(15, 23, 42, 0.04);
+}
+
+body:not(.dark-theme) .settings-discard-btn.primary {
+    background: #ef4444;
+    border-color: rgba(239, 68, 68, 0.85);
+    color: #ffffff;
 }
 
 .right-settings-panel .settings-segment {
